@@ -1,0 +1,20 @@
+{
+  "product": {
+    "productCode": "21428P2",
+    "productUrl": "https://www.viator.com/tours/Miami/Everglades-Tour-from-Miami-with-Transportation/d662-21428P2",
+    "title": "Everglades Tour from Miami with Transportation",
+    "description": "Explore the Florida Everglades from Miami with round-trip transportation.",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "media": {
+      "images": []
+    },
+    "highlights": [
+      "Round-trip transportation from Miami",
+      "Everglades airboat experience"
+    ],
+    "priceFrom": "$69.00"
+  }
+}

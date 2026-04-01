@@ -1,0 +1,20 @@
+{
+  "product": {
+    "productCode": "8836P1",
+    "productUrl": "https://www.viator.com/tours/Miami/Sightseeing-Cruise-of-Biscayne-Bay/d662-8836P1",
+    "title": "Sightseeing Cruise of Biscayne Bay",
+    "description": "Relax on a narrated sightseeing cruise through Biscayne Bay.",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "media": {
+      "images": []
+    },
+    "highlights": [
+      "Narrated bay cruise",
+      "Waterfront skyline and mansion views"
+    ],
+    "priceFrom": "$32.00"
+  }
+}
