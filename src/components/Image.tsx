@@ -19,6 +19,8 @@ export default function Image({
   onError,
   onLoad,
   decoding = "async",
+  referrerPolicy = "no-referrer",
+  crossOrigin = "anonymous",
   ...props
 }: ImageProps) {
   const [location] = useLocation();
@@ -80,6 +82,8 @@ export default function Image({
     <img
       src={currentSrc}
       decoding={decoding}
+      referrerPolicy={referrerPolicy}
+      crossOrigin={crossOrigin}
       onError={handleError}
       onLoad={handleLoad}
       {...props}

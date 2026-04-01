@@ -223,6 +223,10 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             <img
               src={resolvedHeroUrl}
               alt={tour.title}
+              referrerPolicy="no-referrer"
+              crossOrigin="anonymous"
+              loading="eager"
+              decoding="async"
               className="h-80 w-full rounded-3xl object-cover shadow-2xl md:h-[440px]"
             />
           ) : null}
