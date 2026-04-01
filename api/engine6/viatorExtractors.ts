@@ -21,6 +21,8 @@ export type Engine6DiagnosticsPaths = {
   heroFallbackTriggered: boolean;
   heroCandidatesPresent: boolean;
   heroCandidateCount: number;
+  heroCandidateCountBeforeFiltering: number;
+  heroCandidateCountAfterFiltering: number;
   heroPlaceholderFallbackReason: string | null;
   captionPrecedenceApplied: boolean;
   candidateFamilyIdentityDeterminable: boolean;
@@ -37,6 +39,10 @@ export type Engine6DiagnosticsPaths = {
     candidateSourceProductUrl: string | null;
     fieldPath: string | null;
   }>;
+  heroSourceProductCode: string | null;
+  heroSourceProductUrl: string | null;
+  heroSourceFieldPath: string | null;
+  heroHost: string | null;
   productUrlFieldPath: string | null;
   ratingFieldPath: string | null;
   reviewCountFieldPath: string | null;
@@ -456,18 +462,15 @@ const resolveImageCollectionHeroCandidates = (
   return candidates;
 };
 
-const resolveRootImages = (product: RecordLike): HeroImageResult[] =>
-  resolveImageCollectionHeroCandidates(product.images, ["images"], "api-gallery");
-
 const withHeroScope = (
   hero: HeroImageResult,
   productCode: string | null,
   sourceProductUrl: string | null
 ): Engine6HeroCandidate => ({
   ...hero,
-  fieldPath: hero.path,
-  candidateProductCode: productCode,
-  candidateSourceProductUrl: sourceProductUrl,
+  sourceFieldPath: hero.path,
+  sourceProductCode: productCode,
+  sourceProductUrl,
 });
 
 const extractPlaybookHeroCandidates = ({
@@ -489,33 +492,6 @@ const extractPlaybookHeroCandidates = ({
   candidates.push(
     ...mediaHeroes.map(hero => withHeroScope(hero, productCode, sourceProductUrl))
   );
-
-  const rootHeroes = resolveRootImages(product);
-  candidates.push(
-    ...rootHeroes.map(hero => withHeroScope(hero, productCode, sourceProductUrl))
-  );
-
-  for (const [path, value] of [
-    ["product.imageUrl", product.imageUrl],
-    ["product.thumbnailHiResURL", product.thumbnailHiResURL],
-    ["product.thumbnailURL", product.thumbnailURL],
-  ] as const) {
-    const url = asImageUrl(value);
-    if (!url) {
-      continue;
-    }
-
-    candidates.push({
-      url,
-      sourceType: "api-gallery",
-      candidateProductCode: productCode,
-      candidateSourceProductUrl: sourceProductUrl,
-      fieldPath: path,
-      variantPath: path.replace(/\.url$/, ""),
-      width: null,
-      height: null,
-    });
-  }
 
   return candidates;
 };
@@ -1068,6 +1044,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroFallbackTriggered: false,
     heroCandidatesPresent: false,
     heroCandidateCount: 0,
+    heroCandidateCountBeforeFiltering: 0,
+    heroCandidateCountAfterFiltering: 0,
     heroPlaceholderFallbackReason: null,
     captionPrecedenceApplied: false,
     candidateFamilyIdentityDeterminable: false,
@@ -1077,6 +1055,10 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       schema: false,
     },
     rejectedForeignHeroCandidates: [],
+    heroSourceProductCode: null,
+    heroSourceProductUrl: null,
+    heroSourceFieldPath: null,
+    heroHost: null,
     productUrlFieldPath: null,
     ratingFieldPath: null,
     reviewCountFieldPath: null,
@@ -1129,6 +1111,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   });
   diagnostics.heroCandidatesPresent = heroCandidates.length > 0;
   diagnostics.heroCandidateCount = heroCandidates.length;
+  diagnostics.heroCandidateCountBeforeFiltering = heroCandidates.length;
+  diagnostics.heroCandidateCountAfterFiltering = heroDecision.finalCandidate ? 1 : 0;
   diagnostics.heroImageFieldPath = heroDecision.finalCandidate?.fieldPath ?? null;
   diagnostics.heroVariantFieldPath = heroDecision.finalCandidate?.variantPath ?? null;
   diagnostics.selectedHeroWidth = heroDecision.finalCandidate?.width ?? null;
@@ -1156,6 +1140,13 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     schema: Boolean(heroDecision.heroUrl),
   };
   diagnostics.rejectedForeignHeroCandidates = heroDecision.rejectedForeignCandidates;
+  diagnostics.heroSourceProductCode =
+    heroDecision.finalCandidate?.sourceProductCode ?? null;
+  diagnostics.heroSourceProductUrl =
+    heroDecision.finalCandidate?.sourceProductUrl ?? null;
+  diagnostics.heroSourceFieldPath =
+    heroDecision.finalCandidate?.sourceFieldPath ?? null;
+  diagnostics.heroHost = heroDecision.finalCandidate?.host ?? null;
 
   const price = extractPlaybookPrice(product);
   diagnostics.commercialPriceFieldPath = price.path;

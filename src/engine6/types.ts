@@ -52,6 +52,8 @@ export type Engine6TourDiagnostics = {
   heroFallbackTriggered: boolean;
   heroCandidatesPresent: boolean;
   heroCandidateCount: number;
+  heroCandidateCountBeforeFiltering: number;
+  heroCandidateCountAfterFiltering: number;
   heroPlaceholderFallbackReason: string | null;
   captionPrecedenceApplied: boolean;
   candidateFamilyIdentityDeterminable: boolean;
@@ -61,6 +63,10 @@ export type Engine6TourDiagnostics = {
     schema: boolean;
   };
   rejectedForeignHeroCandidates: Engine6RejectedHeroCandidate[];
+  heroSourceProductCode: string | null;
+  heroSourceProductUrl: string | null;
+  heroSourceFieldPath: string | null;
+  heroHost: string | null;
   productUrlFieldPath: string | null;
   bookingUrlSource: string;
   ratingFieldPath: string | null;

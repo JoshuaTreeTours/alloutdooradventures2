@@ -1,0 +1,38 @@
+{
+  "product": {
+    "productCode": "35834P1",
+    "productUrl": "https://www.viator.com/tours/Miami/Miami-Speedboat-Sightseeing-Tour/d662-35834P1",
+    "title": "Miami Speedboat Sightseeing Tour",
+    "description": "Zip along Biscayne Bay on a guided sightseeing speedboat route.",
+    "location": { "city": "Miami", "state": "Florida" },
+    "priceFrom": "$45.00",
+    "reviews": { "combinedAverageRating": 4.5, "totalReviews": 912 },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/01/miami-speedboat-hero.jpg",
+              "width": 1600,
+              "height": 1066
+            }
+          }
+        }
+      ]
+    },
+    "images": [
+      {
+        "url": "https://dynamic-media.tacdn.com/media/photo-o/ff/ff/ff/foreign-tour.jpg",
+        "isCover": true
+      }
+    ],
+    "imageUrl": "https://dynamic-media.tacdn.com/media/photo-o/ee/ee/ee/foreign-primary.jpg",
+    "highlights": ["Cruise past celebrity mansions", "High-speed views of the Miami skyline"],
+    "logistics": { "start": "Miami Beach Marina" },
+    "itineraryItems": [
+      { "pointOfInterestLocation": { "name": "Biscayne Bay" }, "description": "Fast-paced sightseeing route.", "duration": "45 minutes" }
+    ],
+    "additionalInfo": ["Check in 30 minutes before departure"]
+  }
+}

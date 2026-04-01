@@ -63,7 +63,7 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).extracted.heroImageUrl).not.toContain("/hero.jpg");
   });
 
-  it("keeps Yosemite product-owned media-cdn.tripadvisor hero from bundled payload", async () => {
+  it("falls back when bundled payload lacks product.media.images candidates", async () => {
     const req = { method: "GET", query: { productCode: "36001P1" } };
     const res = createRes();
 
@@ -73,18 +73,15 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).source).toBe("bundled-fallback");
     expect((res.body as any).diagnostics).toEqual(
       expect.objectContaining({
-        heroSourceType: "api-gallery",
-        heroCandidatesPresent: true,
-        heroCandidateCount: 1,
-        finalHeroUrl:
-          "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg",
-        heroFallbackTriggered: false,
-        heroPlaceholderFallbackReason: null,
+        heroSourceType: "approved-placeholder",
+        heroCandidatesPresent: false,
+        heroCandidateCount: 0,
+        finalHeroUrl: null,
+        heroFallbackTriggered: true,
+        heroPlaceholderFallbackReason: "no-candidates",
       })
     );
-    expect((res.body as any).extracted.heroImageUrl).toBe(
-      "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg"
-    );
+    expect((res.body as any).extracted.heroImageUrl).toBeNull();
   });
 
   it("returns the normalized live envelope with product-scoped hero diagnostics", async () => {
@@ -295,5 +292,44 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).extracted.heroImageUrl).toBe(
       "https://media.tacdn.com/media/attractions-splice-spp-360x240/0a/29/a2/f4.jpg"
     );
+  });
+
+  it("ignores non-product root image pools and only trusts product.media.images", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () =>
+        JSON.stringify({
+          product: {
+            productCode: "ROOT1",
+            productUrl: "https://www.viator.com/tours/Miami/Root-Pool-Test/d662-ROOT1",
+            title: "Root Pool Test",
+            imageUrl: "https://dynamic-media.tacdn.com/media/photo-o/ff/00/foreign.jpg",
+            images: [
+              {
+                url: "https://dynamic-media.tacdn.com/media/photo-o/ff/11/foreign-array.jpg",
+              },
+            ],
+            thumbnailURL:
+              "https://dynamic-media.tacdn.com/media/photo-o/ff/22/foreign-thumb.jpg",
+            priceFrom: "$10.00",
+            location: { city: "Miami", state: "Florida" },
+          },
+        }),
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "ROOT1" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).diagnostics.heroCandidatesPresent).toBe(false);
+    expect((res.body as any).diagnostics.heroCandidateCountBeforeFiltering).toBe(0);
+    expect((res.body as any).diagnostics.heroFallbackTriggered).toBe(true);
+    expect((res.body as any).extracted.heroImageUrl).toBeNull();
   });
 });

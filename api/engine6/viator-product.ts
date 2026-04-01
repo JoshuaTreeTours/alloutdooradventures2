@@ -58,6 +58,8 @@ const buildDiagnostics = (
   heroFallbackTriggered: false,
   heroCandidatesPresent: false,
   heroCandidateCount: 0,
+  heroCandidateCountBeforeFiltering: 0,
+  heroCandidateCountAfterFiltering: 0,
   heroPlaceholderFallbackReason: null as string | null,
   captionPrecedenceApplied: false,
   candidateFamilyIdentityDeterminable: false,
@@ -74,6 +76,10 @@ const buildDiagnostics = (
     candidateSourceProductUrl: string | null;
     fieldPath: string | null;
   }>,
+  heroSourceProductCode: null as string | null,
+  heroSourceProductUrl: null as string | null,
+  heroSourceFieldPath: null as string | null,
+  heroHost: null as string | null,
   productUrlFieldPath: null as string | null,
   bookingUrlSource: "generated:viator-search-product-code" as const,
   ratingFieldPath: null as string | null,
@@ -214,14 +220,14 @@ const toHeroCandidates = (args: {
     {
       url: heroUrl,
       sourceType: args.extraction.diagnostics.heroSourceType,
-      candidateProductCode:
+      sourceProductCode:
         typeof args.extraction.product?.productCode === "string"
           ? args.extraction.product.productCode
           : args.extraction.extracted.productUrl
             ? args.productCode
             : null,
-      candidateSourceProductUrl: args.extraction.extracted.productUrl,
-      fieldPath: args.extraction.diagnostics.heroImageFieldPath,
+      sourceProductUrl: args.extraction.extracted.productUrl,
+      sourceFieldPath: args.extraction.diagnostics.heroImageFieldPath,
       variantPath: args.extraction.diagnostics.heroVariantFieldPath,
       width: args.extraction.diagnostics.selectedHeroWidth,
       height: args.extraction.diagnostics.selectedHeroHeight,
@@ -298,6 +304,8 @@ const applyResolvedHero = (args: {
       heroSourceType: heroDecision.heroSourceType,
       heroCandidatesPresent: providedCandidates.length > 0,
       heroCandidateCount: providedCandidates.length,
+      heroCandidateCountBeforeFiltering: providedCandidates.length,
+      heroCandidateCountAfterFiltering: heroDecision.finalCandidate ? 1 : 0,
       heroPlaceholderFallbackReason: fallbackReason,
       finalHeroUrl: heroDecision.heroUrl,
       heroFallbackTriggered: heroDecision.fallbackTriggered,
@@ -310,6 +318,10 @@ const applyResolvedHero = (args: {
         schema: Boolean(heroDecision.heroUrl),
       },
       rejectedForeignHeroCandidates: heroDecision.rejectedForeignCandidates,
+      heroSourceProductCode: heroDecision.finalCandidate?.sourceProductCode ?? null,
+      heroSourceProductUrl: heroDecision.finalCandidate?.sourceProductUrl ?? null,
+      heroSourceFieldPath: heroDecision.finalCandidate?.sourceFieldPath ?? null,
+      heroHost: heroDecision.finalCandidate?.host ?? null,
     },
   };
 };

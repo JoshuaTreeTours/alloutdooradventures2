@@ -209,6 +209,10 @@ export const mapViatorToEngine6Tour = (
       heroFallbackTriggered: payload.diagnostics.heroFallbackTriggered,
       heroCandidatesPresent: payload.diagnostics.heroCandidatesPresent,
       heroCandidateCount: payload.diagnostics.heroCandidateCount,
+      heroCandidateCountBeforeFiltering:
+        payload.diagnostics.heroCandidateCountBeforeFiltering,
+      heroCandidateCountAfterFiltering:
+        payload.diagnostics.heroCandidateCountAfterFiltering,
       heroPlaceholderFallbackReason:
         payload.diagnostics.heroPlaceholderFallbackReason,
       captionPrecedenceApplied: payload.diagnostics.captionPrecedenceApplied,
@@ -217,6 +221,10 @@ export const mapViatorToEngine6Tour = (
       heroSurfaceParity: payload.diagnostics.heroSurfaceParity,
       rejectedForeignHeroCandidates:
         payload.diagnostics.rejectedForeignHeroCandidates,
+      heroSourceProductCode: payload.diagnostics.heroSourceProductCode,
+      heroSourceProductUrl: payload.diagnostics.heroSourceProductUrl,
+      heroSourceFieldPath: payload.diagnostics.heroSourceFieldPath,
+      heroHost: payload.diagnostics.heroHost,
       productUrlFieldPath: payload.diagnostics.productUrlFieldPath,
       bookingUrlSource:
         payload.diagnostics.productUrlFieldPath ??
