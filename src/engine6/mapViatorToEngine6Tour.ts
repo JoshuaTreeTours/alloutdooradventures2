@@ -84,6 +84,30 @@ export const mapViatorToEngine6Tour = (
     !payload.extracted.heroImageUrl.includes("/images/hiking-hero.jpg")
       ? payload.extracted.heroImageUrl
       : null;
+  const strictResolvedHero =
+    finalHeroImageUrl &&
+    payload.diagnostics.heroSourceProductCode &&
+    payload.diagnostics.heroSourceProductUrl &&
+    payload.diagnostics.heroSourceFieldPath &&
+    payload.diagnostics.heroHost &&
+    payload.diagnostics.heroSourceFieldPath.startsWith("product.media.images") &&
+    payload.diagnostics.heroSourceProductCode.toUpperCase() ===
+      payload.rawProductCode.toUpperCase() &&
+    payload.diagnostics.finalHeroUrl === finalHeroImageUrl
+      ? {
+          url: finalHeroImageUrl,
+          sourceProductCode: payload.diagnostics.heroSourceProductCode,
+          sourceProductUrl: payload.diagnostics.heroSourceProductUrl,
+          sourceFieldPath: payload.diagnostics.heroSourceFieldPath,
+          host: payload.diagnostics.heroHost,
+        }
+      : null;
+
+  if (!strictResolvedHero) {
+    throw new Error(
+      `Engine6 strict hero contract violation for ${payload.rawProductCode}: resolved hero must be exact-product product.media.images with full provenance`
+    );
+  }
   const overviewText = cleanEngine6Description(
     payload.extracted.overviewText ?? ""
   );
@@ -165,8 +189,9 @@ export const mapViatorToEngine6Tour = (
     metaDescription,
     city,
     state,
-    resolvedImageUrl: finalHeroImageUrl,
-    heroImageUrl: finalHeroImageUrl,
+    resolvedImageUrl: strictResolvedHero.url,
+    heroImageUrl: strictResolvedHero.url,
+    resolvedHero: strictResolvedHero,
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: formattedStartingPrice ?? "Check latest price",
     aggregateRating,

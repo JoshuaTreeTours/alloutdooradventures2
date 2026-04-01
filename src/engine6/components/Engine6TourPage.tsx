@@ -79,6 +79,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     tour.categoryLabel ?? formatEngine6CategoryLabel(tour.primaryCategory);
   const seo = buildEngine6Seo(tour);
   const schema = buildEngine6SchemaGraph(tour);
+  const resolvedHeroUrl = tour.resolvedHero?.url ?? tour.heroImageUrl;
   const hasPrice = Boolean(tour.priceFormatted);
   const hasRating =
     typeof tour.aggregateRating === "number" &&
@@ -218,9 +219,9 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             </a>
           </div>
 
-          {tour.heroImageUrl ? (
+          {resolvedHeroUrl ? (
             <img
-              src={tour.heroImageUrl}
+              src={resolvedHeroUrl}
               alt={tour.title}
               className="h-80 w-full rounded-3xl object-cover shadow-2xl md:h-[440px]"
             />

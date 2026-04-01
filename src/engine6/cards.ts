@@ -33,7 +33,7 @@ const buildCardDescription = (tour: Engine6Tour) => {
 };
 
 export const toEngine6Card = (tour: Engine6Tour): Engine6Card => ({
-  imageUrl: tour.heroImageUrl,
+  imageUrl: tour.resolvedHero?.url ?? tour.heroImageUrl ?? "",
   title: tour.title,
   locationLabel: `${tour.city}, ${tour.state}`,
   ratingLabel:

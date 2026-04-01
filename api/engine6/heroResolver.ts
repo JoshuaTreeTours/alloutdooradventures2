@@ -34,6 +34,7 @@ export type Engine6RejectedHeroCandidate = {
     | "foreign-product-url"
     | "missing-product-scope"
     | "missing-source-field-path"
+    | "non-product-source"
     | "unverified-product-scope"
     | "invalid-url"
     | "static-hero-disallowed"
@@ -334,6 +335,12 @@ export const resolveProductScopedHero = ({
     if (!candidateSourceFieldPath) {
       rejectedForeignCandidates.push(
         toRejectedCandidate(candidate, "missing-source-field-path")
+      );
+      continue;
+    }
+    if (!candidateSourceFieldPath.startsWith("product.media.images")) {
+      rejectedForeignCandidates.push(
+        toRejectedCandidate(candidate, "non-product-source")
       );
       continue;
     }

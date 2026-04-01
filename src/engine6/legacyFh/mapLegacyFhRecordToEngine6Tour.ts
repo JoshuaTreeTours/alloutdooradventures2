@@ -73,6 +73,7 @@ export const mapLegacyFhRecordToEngine6Tour = (
     state: state || "State",
     resolvedImageUrl: record.heroImageUrl,
     heroImageUrl: record.heroImageUrl ?? "",
+    resolvedHero: null,
     priceAmount: resolvedPriceAmount,
     priceFormatted: resolvedPriceLabel,
     aggregateRating: resolvedAggregateRating,

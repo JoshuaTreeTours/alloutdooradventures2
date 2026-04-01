@@ -310,6 +310,28 @@ const applyResolvedHero = (args: {
   };
 };
 
+const getStrictHeroViolationReason = (args: {
+  productCode: string;
+  extractedHeroUrl: string | null;
+  diagnostics: ReturnType<typeof buildDiagnostics>;
+}) => {
+  const { productCode, extractedHeroUrl, diagnostics } = args;
+  if (!extractedHeroUrl) return "null resolved hero";
+  if (!diagnostics.heroSourceProductCode) return "missing provenance";
+  if (!diagnostics.heroSourceProductUrl) return "missing provenance";
+  if (!diagnostics.heroSourceFieldPath) return "missing provenance";
+  if (diagnostics.heroSourceProductCode.toUpperCase() !== productCode.toUpperCase()) {
+    return "mismatched productCode";
+  }
+  if (!diagnostics.heroSourceFieldPath.startsWith("product.media.images")) {
+    return "non-product source";
+  }
+  if (diagnostics.finalHeroUrl !== extractedHeroUrl) {
+    return "null resolved hero";
+  }
+  return null;
+};
+
 const respondWithBundledFallback = (
   res: any,
   productCode: string,
@@ -327,6 +349,22 @@ const respondWithBundledFallback = (
   Object.assign(diagnostics, merged.diagnostics, {
     source: "bundled-fallback",
   });
+  const strictHeroViolationReason = getStrictHeroViolationReason({
+    productCode,
+    extractedHeroUrl: merged.extracted.heroImageUrl,
+    diagnostics,
+  });
+  if (strictHeroViolationReason) {
+    respondWithErrorEnvelope(res, {
+      statusCode: 422,
+      source: "bundled-fallback",
+      diagnostics,
+      productCode,
+      error: "Engine6 strict exact-product hero validation failed",
+      details: strictHeroViolationReason,
+    });
+    return;
+  }
 
   respondWithNormalizedEnvelope(res, {
     statusCode: 200,
@@ -534,6 +572,22 @@ export default async function handler(req: any, res: any) {
   Object.assign(diagnostics, extracted.diagnostics, {
     source: "live-api",
   });
+  const strictHeroViolationReason = getStrictHeroViolationReason({
+    productCode,
+    extractedHeroUrl: extracted.extracted.heroImageUrl,
+    diagnostics,
+  });
+  if (strictHeroViolationReason) {
+    respondWithErrorEnvelope(res, {
+      statusCode: 422,
+      source: "live-api",
+      diagnostics,
+      productCode,
+      error: "Engine6 strict exact-product hero validation failed",
+      details: strictHeroViolationReason,
+    });
+    return;
+  }
 
   respondWithNormalizedEnvelope(res, {
     statusCode: 200,

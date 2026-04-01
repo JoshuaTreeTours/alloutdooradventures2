@@ -138,6 +138,15 @@ export type Engine6Tour = {
   state: string;
   resolvedImageUrl: string | null;
   heroImageUrl: string | null;
+  resolvedHero:
+    | {
+        url: string;
+        sourceProductCode: string;
+        sourceProductUrl: string;
+        sourceFieldPath: string;
+        host: string;
+      }
+    | null;
   priceAmount: number | null;
   priceFormatted: string;
   aggregateRating: number | null;
