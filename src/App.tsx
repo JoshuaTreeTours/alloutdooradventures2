@@ -84,6 +84,15 @@ import {
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
+  ENGINE6_MIAMI_EVERGLADES_TRANSPORT_ROUTE,
+  ENGINE6_MIAMI_EVERGLADES_AIRBOAT_ROUTE,
+  ENGINE6_MIAMI_SPEEDBOAT_SIGHTSEEING_ROUTE,
+  ENGINE6_MIAMI_SPEEDBOAT_ROUTE,
+  ENGINE6_MIAMI_MILLIONAIRES_ROW_ISLQUESS_ROUTE,
+  ENGINE6_MIAMI_MILLIONAIRES_ROW_120303P9_ROUTE,
+  ENGINE6_MIAMI_BISCAYNE_CRUISE_ROUTE,
+  ENGINE6_MIAMI_LITTLE_HAVANA_FOOD_ROUTE,
+  ENGINE6_MIAMI_LITTLE_HAVANA_CULTURAL_ROUTE,
 } from "./engine6/routes";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
 
@@ -263,6 +272,42 @@ export default function App() {
         />
         <Route
           path={ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_MIAMI_EVERGLADES_TRANSPORT_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_MIAMI_EVERGLADES_AIRBOAT_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_MIAMI_SPEEDBOAT_SIGHTSEEING_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_MIAMI_SPEEDBOAT_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_MIAMI_MILLIONAIRES_ROW_ISLQUESS_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_MIAMI_MILLIONAIRES_ROW_120303P9_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_MIAMI_BISCAYNE_CRUISE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_MIAMI_LITTLE_HAVANA_FOOD_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_MIAMI_LITTLE_HAVANA_CULTURAL_ROUTE}
           component={Engine6SpecimenRoute}
         />
 
