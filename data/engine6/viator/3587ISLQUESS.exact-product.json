@@ -1,0 +1,45 @@
+{
+  "product": {
+    "productCode": "3587ISLQUESS",
+    "title": "Millionaires Row Cruise",
+    "productUrl": "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-3587ISLQUESS",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "media": {
+      "images": [
+        {
+          "url": "https://cdn.filestackcontent.com/FMHcQJl8R96FkChrMB9p",
+          "variants": [
+            {
+              "url": "https://cdn.filestackcontent.com/FMHcQJl8R96FkChrMB9p",
+              "width": 1200,
+              "height": 800
+            }
+          ],
+          "isCover": true
+        }
+      ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      }
+    },
+    "description": {
+      "text": "Explore Millionaires Row Cruise with local guides in Miami."
+    },
+    "highlights": [
+      "Guided experience",
+      "Top Miami sights"
+    ],
+    "meetingPoint": {
+      "description": "Millionaire's Row"
+    },
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 120
+    }
+  }
+}

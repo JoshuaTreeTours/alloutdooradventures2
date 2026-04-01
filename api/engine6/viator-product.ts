@@ -58,7 +58,11 @@ const buildDiagnostics = (
   heroFallbackTriggered: false,
   heroCandidatesPresent: false,
   heroCandidateCount: 0,
+  heroCandidateCountAfterFiltering: 0,
   heroPlaceholderFallbackReason: null as string | null,
+  heroSourceProductCode: null as string | null,
+  heroSourceProductUrl: null as string | null,
+  heroHost: null as string | null,
   captionPrecedenceApplied: false,
   candidateFamilyIdentityDeterminable: false,
   heroSurfaceParity: {
@@ -298,9 +302,18 @@ const applyResolvedHero = (args: {
       heroSourceType: heroDecision.heroSourceType,
       heroCandidatesPresent: providedCandidates.length > 0,
       heroCandidateCount: providedCandidates.length,
+      heroCandidateCountAfterFiltering:
+        providedCandidates.length - heroDecision.rejectedForeignCandidates.length,
       heroPlaceholderFallbackReason: fallbackReason,
       finalHeroUrl: heroDecision.heroUrl,
       heroFallbackTriggered: heroDecision.fallbackTriggered,
+      heroSourceProductCode:
+        heroDecision.finalCandidate?.candidateProductCode ?? null,
+      heroSourceProductUrl:
+        heroDecision.finalCandidate?.candidateSourceProductUrl ?? null,
+      heroHost: heroDecision.finalCandidate?.url
+        ? new URL(heroDecision.finalCandidate.url).hostname
+        : null,
       captionPrecedenceApplied: heroDecision.captionPrecedenceApplied,
       candidateFamilyIdentityDeterminable:
         heroDecision.candidateFamilyIdentityDeterminable,

@@ -1,0 +1,45 @@
+{
+  "product": {
+    "productCode": "8836P1",
+    "title": "Sightseeing Cruise of Biscayne Bay",
+    "productUrl": "https://www.viator.com/tours/Miami/Sightseeing-Cruise-of-Biscayne-Bay/d662-8836P1",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/0e/f4/10.jpg",
+          "variants": [
+            {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/0e/f4/10.jpg",
+              "width": 1200,
+              "height": 800
+            }
+          ],
+          "isCover": true
+        }
+      ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      }
+    },
+    "description": {
+      "text": "Explore Sightseeing Cruise of Biscayne Bay with local guides in Miami."
+    },
+    "highlights": [
+      "Guided experience",
+      "Top Miami sights"
+    ],
+    "meetingPoint": {
+      "description": "Biscayne Bay"
+    },
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 120
+    }
+  }
+}

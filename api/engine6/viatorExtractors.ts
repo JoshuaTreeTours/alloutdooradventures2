@@ -21,7 +21,11 @@ export type Engine6DiagnosticsPaths = {
   heroFallbackTriggered: boolean;
   heroCandidatesPresent: boolean;
   heroCandidateCount: number;
+  heroCandidateCountAfterFiltering: number;
   heroPlaceholderFallbackReason: string | null;
+  heroSourceProductCode: string | null;
+  heroSourceProductUrl: string | null;
+  heroHost: string | null;
   captionPrecedenceApplied: boolean;
   candidateFamilyIdentityDeterminable: boolean;
   heroSurfaceParity: {
@@ -456,9 +460,6 @@ const resolveImageCollectionHeroCandidates = (
   return candidates;
 };
 
-const resolveRootImages = (product: RecordLike): HeroImageResult[] =>
-  resolveImageCollectionHeroCandidates(product.images, ["images"], "api-gallery");
-
 const withHeroScope = (
   hero: HeroImageResult,
   productCode: string | null,
@@ -489,33 +490,6 @@ const extractPlaybookHeroCandidates = ({
   candidates.push(
     ...mediaHeroes.map(hero => withHeroScope(hero, productCode, sourceProductUrl))
   );
-
-  const rootHeroes = resolveRootImages(product);
-  candidates.push(
-    ...rootHeroes.map(hero => withHeroScope(hero, productCode, sourceProductUrl))
-  );
-
-  for (const [path, value] of [
-    ["product.imageUrl", product.imageUrl],
-    ["product.thumbnailHiResURL", product.thumbnailHiResURL],
-    ["product.thumbnailURL", product.thumbnailURL],
-  ] as const) {
-    const url = asImageUrl(value);
-    if (!url) {
-      continue;
-    }
-
-    candidates.push({
-      url,
-      sourceType: "api-gallery",
-      candidateProductCode: productCode,
-      candidateSourceProductUrl: sourceProductUrl,
-      fieldPath: path,
-      variantPath: path.replace(/\.url$/, ""),
-      width: null,
-      height: null,
-    });
-  }
 
   return candidates;
 };
@@ -1068,7 +1042,11 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroFallbackTriggered: false,
     heroCandidatesPresent: false,
     heroCandidateCount: 0,
+    heroCandidateCountAfterFiltering: 0,
     heroPlaceholderFallbackReason: null,
+    heroSourceProductCode: null,
+    heroSourceProductUrl: null,
+    heroHost: null,
     captionPrecedenceApplied: false,
     candidateFamilyIdentityDeterminable: false,
     heroSurfaceParity: {
@@ -1129,6 +1107,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   });
   diagnostics.heroCandidatesPresent = heroCandidates.length > 0;
   diagnostics.heroCandidateCount = heroCandidates.length;
+  diagnostics.heroCandidateCountAfterFiltering =
+    heroCandidates.length - heroDecision.rejectedForeignCandidates.length;
   diagnostics.heroImageFieldPath = heroDecision.finalCandidate?.fieldPath ?? null;
   diagnostics.heroVariantFieldPath = heroDecision.finalCandidate?.variantPath ?? null;
   diagnostics.selectedHeroWidth = heroDecision.finalCandidate?.width ?? null;
@@ -1146,6 +1126,13 @@ export const extractEngine6Product = (rawPayload: unknown) => {
             .map(candidate => candidate.reason)
             .join(",")}`
         : "hero-unresolved"
+    : null;
+  diagnostics.heroSourceProductCode =
+    heroDecision.finalCandidate?.candidateProductCode ?? null;
+  diagnostics.heroSourceProductUrl =
+    heroDecision.finalCandidate?.candidateSourceProductUrl ?? null;
+  diagnostics.heroHost = heroDecision.finalCandidate?.url
+    ? new URL(heroDecision.finalCandidate.url).hostname
     : null;
   diagnostics.captionPrecedenceApplied = heroDecision.captionPrecedenceApplied;
   diagnostics.candidateFamilyIdentityDeterminable =
