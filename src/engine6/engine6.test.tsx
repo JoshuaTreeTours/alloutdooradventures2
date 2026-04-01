@@ -1705,8 +1705,10 @@ describe("engine6 image parity guardrails", () => {
         city: "Las Vegas",
         citySlug: "las-vegas",
       },
-      resolvedImageUrl: "https://cdn.example.com/hero-canonical.jpg",
-      heroImage: "https://cdn.example.com/hero-canonical.jpg",
+      resolvedImageUrl:
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1100&h=800&s=1",
+      heroImage:
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1100&h=800&s=1",
       primaryImageUrl: "https://cdn.example.com/legacy-primary.jpg",
       galleryImages: ["https://cdn.example.com/gallery-first.jpg"],
       badges: {},
@@ -1723,17 +1725,17 @@ describe("engine6 image parity guardrails", () => {
       />
     );
     expect(html).toContain(
-      'data-card-image-src="https://cdn.example.com/hero-canonical.jpg"'
+      'data-card-image-src="https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1100&amp;h=800&amp;s=1"'
     );
     expect(html).toContain(
-      'data-hero-image-src="https://cdn.example.com/hero-canonical.jpg"'
+      'data-hero-image-src="https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1100&amp;h=800&amp;s=1"'
     );
     expect(html).not.toContain("legacy-primary.jpg");
     expect(html).not.toContain("gallery-first.jpg");
     expect(html).not.toContain("/images/hiking-hero.jpg");
   });
 
-  it("renders no image when Engine6 resolvedImageUrl is absent", () => {
+  it("renders neutral placeholder when Engine6 resolvedImageUrl is absent", () => {
     const tour = {
       id: "engine6-placeholder-test",
       engine: "engine6",
@@ -1761,7 +1763,8 @@ describe("engine6 image parity guardrails", () => {
         href="/destinations/nevada/las-vegas/tours/engine6-placeholder-test"
       />
     );
-    expect(html).toContain('data-card-image-src=""');
+    expect(html).toContain('data-card-image-src="/images/hiking-hero.jpg"');
+    expect(html).not.toContain('data-card-image-src="/hero.jpg"');
   });
 
   it("regression: engine6 cards never emit blank or unusable image src", () => {
@@ -1798,9 +1801,45 @@ describe("engine6 image parity guardrails", () => {
           href="/destinations/alaska/anchorage/tours/engine6-invalid-image-test"
         />
       );
-      expect(html).toContain('data-card-image-src=""');
+      expect(html).toContain(
+        'data-card-image-src="/images/hiking-hero.jpg"'
+      );
       expect(html).not.toContain('data-card-image-src="   "');
+      expect(html).not.toContain('data-card-image-src="/hero.jpg"');
     }
+  });
+
+  it("never reuses the rejected Engine6 URL as card fallback", () => {
+    const html = renderToString(
+      <TourCard
+        tour={{
+          id: "engine6-rejected-fallback-reuse",
+          engine: "engine6",
+          productCode: "REJIMG",
+          slug: "engine6-rejected-fallback-reuse",
+          title: "Rejected Fallback Reuse",
+          destination: {
+            country: "United States",
+            state: "Arizona",
+            stateSlug: "arizona",
+            city: "Phoenix",
+            citySlug: "phoenix",
+          },
+          heroImage: "/images/hiking-hero.jpg",
+          badges: {},
+          activitySlugs: ["hiking"],
+          bookingProvider: "viator",
+          bookingUrl: "https://www.viator.com/search/REJIMG",
+          longDescription: "Rejected URL reuse guardrail",
+        }}
+        href="/destinations/arizona/phoenix/tours/engine6-rejected-fallback-reuse"
+      />
+    );
+
+    expect(html).toContain('data-hero-image-src=""');
+    expect(html).toContain('data-card-image-src="/images/cycling-hero.jpg"');
+    expect(html).not.toContain('data-card-image-src="/images/hiking-hero.jpg"');
+    expect(html).not.toContain('data-card-image-src="/hero.jpg"');
   });
 });
 
