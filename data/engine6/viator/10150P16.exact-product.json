@@ -1,0 +1,96 @@
+{
+  "product": {
+    "productCode": "10150P16",
+    "title": "Miami Raccoon Island Adventure",
+    "productUrl": "https://www.viator.com/tours/Miami/Miami-Raccoon-Island-Adventure/d662-10150P16",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 99,
+        "fromPriceFormatted": "$99.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 12
+    },
+    "description": "Explore Biscayne Bay on a family-friendly wildlife cruise to Raccoon Island near Miami. Cruise routes include shoreline views, opportunities to spot marine wildlife, and an island stop where guests can explore and enjoy shallow-water swim time.",
+    "highlights": [
+      "Shared wildlife cruise through Biscayne Bay",
+      "Island stop at Raccoon Island with optional guided walk",
+      "Possible sightings include raccoons, dolphins, and manatees",
+      "Swim stop in shallow water with floating mat access",
+      "Scenic pass by Indian Creek Island"
+    ],
+    "duration": "3 hours 30 minutes",
+    "meetingPoint": {
+      "name": "Aqua Party Boat - Pier 3, Venetian Marina",
+      "description": "1635 N Bayshore Dr, Miami, FL"
+    },
+    "itineraryItems": [
+      {
+        "title": "Biscayne Bay cruise",
+        "description": "Depart Venetian Marina and cruise through Biscayne Bay while viewing Miami shoreline scenery.",
+        "duration": "1 hour"
+      },
+      {
+        "title": "Raccoon Island stop",
+        "description": "Step ashore for optional guided wildlife viewing and beach time.",
+        "duration": "1 hour 15 minutes"
+      },
+      {
+        "title": "Indian Creek Island pass-by",
+        "description": "Cruise past Indian Creek Island on the return route.",
+        "duration": "pass by"
+      }
+    ],
+    "included": [
+      "Scenic wildlife boat cruise",
+      "Licensed captain and crew",
+      "Optional guided island walk",
+      "Swim stop with floats",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Arrive about 20 minutes before departure",
+      "Paid and free parking options are available near Venetian Marina",
+      "Public transportation options are nearby"
+    ],
+    "faqs": [
+      {
+        "question": "Where does the tour depart from?",
+        "answer": "The meeting point is Aqua Party Boat at Pier 3, Venetian Marina, 1635 N Bayshore Dr in Miami."
+      },
+      {
+        "question": "How long is the Raccoon Island adventure?",
+        "answer": "The listed tour duration is approximately 3 hours 30 minutes."
+      },
+      {
+        "question": "What wildlife might be seen on the route?",
+        "answer": "The route may include opportunities to spot raccoons on the island plus dolphins and manatees in Biscayne Bay."
+      },
+      {
+        "question": "Is there time to swim?",
+        "answer": "Yes. The experience includes a shallow-water swim stop with floating mats."
+      }
+    ],
+    "categories": [
+      "Cruises & Sailing",
+      "Boat Tours",
+      "Wildlife Watching"
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/17/15/6f/71.jpg",
+          "width": 720,
+          "height": 480,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}
