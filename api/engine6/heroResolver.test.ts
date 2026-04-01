@@ -19,7 +19,7 @@ describe("engine6 hero resolver", () => {
         },
         {
           url: "/images/hiking-hero.jpg",
-          sourceType: "approved-placeholder",
+          sourceType: "none",
         },
       ],
     });
@@ -58,8 +58,8 @@ describe("engine6 hero resolver", () => {
     });
 
     expect(resolved.heroUrl).toBeNull();
-    expect(resolved.heroSourceType).toBe("approved-placeholder");
-    expect(resolved.heroQualityClassification).toBe("placeholder");
+    expect(resolved.heroSourceType).toBe("none");
+    expect(resolved.heroQualityClassification).toBe("none");
     expect(resolved.fallbackTriggered).toBe(true);
     expect(resolved.rejectedForeignCandidates).toEqual(
       expect.arrayContaining([
@@ -333,7 +333,7 @@ describe("engine6 hero resolver", () => {
     });
 
     expect(resolved.heroUrl).toBeNull();
-    expect(resolved.heroQualityClassification).toBe("placeholder");
+    expect(resolved.heroQualityClassification).toBe("none");
     expect(resolved.rejectedForeignCandidates).toEqual(
       expect.arrayContaining([
         expect.objectContaining({

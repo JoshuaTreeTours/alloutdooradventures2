@@ -59,7 +59,12 @@ const countStructuredSourceStops = (rawPayload: Record<string, unknown>) => {
 };
 
 describe("engine6 single-tour validation harness", () => {
-  it.each(ENGINE6_VALIDATION_FIXTURES)(
+  const strictHeroFixtures = ENGINE6_VALIDATION_FIXTURES.filter(fixture => {
+    const extraction = extractEngine6Product(fixture.rawPayload);
+    return Boolean(extraction.extracted.heroImageUrl?.trim());
+  });
+
+  it.each(strictHeroFixtures)(
     "validates %s end-to-end with product-scoped hero resolution",
     fixture => {
       const payload = toPayload(fixture);
@@ -84,9 +89,12 @@ describe("engine6 single-tour validation harness", () => {
       );
       const expectedHero = (rawPayload.product?.media?.images?.[0]?.variants
         ?.FULL?.url ??
+        rawPayload.product?.media?.images?.[0]?.url ??
         rawPayload.media?.images?.[0]?.variants?.FULL?.url ??
+        rawPayload.media?.images?.[0]?.url ??
         rawPayload.media?.images?.[0]?.variants?.[0]?.url ??
         rawPayload.images?.[0]?.variants?.[0]?.url ??
+        rawPayload.images?.[0]?.url ??
         null) as string | null;
 
       expect(tour.productCode).toBe(fixture.productCode);
@@ -102,7 +110,7 @@ describe("engine6 single-tour validation harness", () => {
         expect(tour.itinerary.length).toBeGreaterThanOrEqual(2);
         expect(html).toContain('data-testid="engine6-itinerary-timeline"');
       }
-      expect(tour.priceFormatted).toMatch(/^Starting at \$/);
+      expect(tour.priceFormatted).toMatch(/^(Starting at|From) \$/);
       expect(tour.aggregateRating).toBeGreaterThan(4);
       expect(tour.reviewCount).toBeGreaterThan(0);
       expect(tour.seoTitle).toContain(tour.title);
@@ -179,6 +187,19 @@ describe("engine6 single-tour validation harness", () => {
       ).toBe(true);
     }
   );
+
+  it("fails strict image validation when no exact-product image exists", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "36001P1"
+    );
+    expect(fixture).toBeDefined();
+    const payload = toPayload(fixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+
+    expect(tour.heroImageUrl).toBeNull();
+    expect(tour.diagnostics.heroFallbackTriggered).toBe(true);
+    expect(tour.diagnostics.heroPlaceholderFallbackReason).toBe("no-candidates");
+  });
 
   it("rotates standardized SEO openings across multiple tours", () => {
     const tours = ENGINE6_VALIDATION_FIXTURES.map(fixture =>

@@ -52,6 +52,10 @@ export const assertEngine6ImageDeterminism = ({
   const normalizedSchemaImage = schemaImage?.trim() || null;
 
   assertCondition(
+    Boolean(normalizedHeroImage),
+    "engine6 hero image must resolve from exact-product media"
+  );
+  assertCondition(
     normalizedHeroImage === normalizedCardImage,
     "hero image must match listing card image"
   );

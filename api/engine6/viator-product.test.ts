@@ -73,7 +73,7 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).source).toBe("bundled-fallback");
     expect((res.body as any).diagnostics).toEqual(
       expect.objectContaining({
-        heroSourceType: "approved-placeholder",
+        heroSourceType: "none",
         heroCandidatesPresent: false,
         heroCandidateCount: 0,
         finalHeroUrl: null,
@@ -249,7 +249,7 @@ describe("/api/engine6/viator-product", () => {
     expect(res.statusCode).toBe(200);
     expect((res.body as any).extracted.heroImageUrl).toBeNull();
     expect((res.body as any).diagnostics.heroSourceType).toBe(
-      "approved-placeholder"
+      "none"
     );
     expect((res.body as any).diagnostics.heroFallbackTriggered).toBe(true);
     expect((res.body as any).diagnostics.heroCandidatesPresent).toBe(false);

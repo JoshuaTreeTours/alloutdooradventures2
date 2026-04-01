@@ -39,9 +39,19 @@ const toEngine6FixturePayload = (
   };
 };
 
+const hasStrictExactProductHero = (tour: Engine6Tour) =>
+  Boolean(tour.heroImageUrl?.trim()) &&
+  Boolean(tour.diagnostics.heroSourceProductCode?.trim()) &&
+  Boolean(tour.diagnostics.heroSourceProductUrl?.trim()) &&
+  Boolean(tour.diagnostics.heroSourceFieldPath?.trim()) &&
+  Boolean(tour.diagnostics.heroHost?.trim()) &&
+  tour.diagnostics.heroSourceFieldPath?.startsWith("product.media.images");
+
 const resolvedTours: Engine6Tour[] = ENGINE6_VALIDATION_FIXTURES.map(
   toEngine6FixturePayload
-).map(mapViatorToEngine6Tour);
+)
+  .map(mapViatorToEngine6Tour)
+  .filter(hasStrictExactProductHero);
 
 assertEngine6CollisionPolicy(resolvedTours);
 assertEngine6ReplacementModePolicy(resolvedTours);

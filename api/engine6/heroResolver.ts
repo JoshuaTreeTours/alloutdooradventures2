@@ -1,15 +1,13 @@
-export const ENGINE6_APPROVED_PLACEHOLDER_IMAGE = "/images/hiking-hero.jpg";
-
 export type Engine6HeroSourceType =
   | "api-primary"
   | "api-gallery"
-  | "approved-placeholder";
+  | "none";
 
 export type Engine6HeroQualityClassification =
   | "caption"
   | "product-media"
   | "splice"
-  | "placeholder";
+  | "none";
 
 export type Engine6HeroCandidate = {
   url: string;
@@ -123,9 +121,6 @@ const isSpliceHeroUrl = (value: string) =>
 const getHeroQualityClassification = (
   candidate: Pick<Engine6HeroCandidate, "sourceType" | "url">
 ): Engine6HeroQualityClassification => {
-  if (candidate.sourceType === "approved-placeholder") {
-    return "placeholder";
-  }
   if (isCaptionHeroUrl(candidate.url)) {
     return "caption";
   }
@@ -140,7 +135,7 @@ const getQualityRank = (candidate: Engine6HeroCandidate) => {
   if (quality === "product-media") return 0;
   if (quality === "splice") return 1;
   if (quality === "caption") return 2;
-  return 3;
+  return 4;
 };
 
 const extractCandidateFamilyKey = (value: string): string | null => {
@@ -308,10 +303,6 @@ export const resolveProductScopedHero = ({
       continue;
     }
 
-    if (candidate.sourceType === "approved-placeholder") {
-      continue;
-    }
-
     if (!isValidHttpImageUrl(candidate.url)) {
       rejectedForeignCandidates.push(
         toRejectedCandidate(candidate, "invalid-url")
@@ -449,8 +440,8 @@ export const resolveProductScopedHero = ({
 
   return {
     heroUrl: null,
-    heroSourceType: "approved-placeholder",
-    heroQualityClassification: "placeholder",
+    heroSourceType: "none",
+    heroQualityClassification: "none",
     fallbackTriggered: true,
     finalCandidate: null,
     rejectedForeignCandidates,

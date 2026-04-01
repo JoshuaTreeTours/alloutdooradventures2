@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import { TOUR_FALLBACK_HERO_IMAGE } from "../utils/hero";
 
 import type { Tour } from "../data/tours.types";
 import { getActivityLabelFromSlug } from "../data/activityLabels";
@@ -148,11 +147,11 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.engine === "engine4"
       ? tour.heroImage?.trim() || "/hero.jpg"
       : tour.engine === "engine6"
-        ? tour.heroImage?.trim() || TOUR_FALLBACK_HERO_IMAGE
+        ? tour.heroImage?.trim() || ""
         : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
   const fallbackImage =
     tour.engine === "engine6"
-      ? TOUR_FALLBACK_HERO_IMAGE
+      ? cardImage
       : "/hero.jpg";
   const renderedTagPills =
     tour.tagPills?.map(tag =>
