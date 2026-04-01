@@ -1,0 +1,443 @@
+[
+  {
+    "productCode": "21428P2",
+    "canonicalPath": "/destinations/florida/miami/tours/everglades-tour-from-miami-with-transportation",
+    "finalPageHeroUrl": "/images/hiking-hero.jpg",
+    "finalCardHeroUrl": "/images/hiking-hero.jpg",
+    "finalSchemaImageUrl": "/images/hiking-hero.jpg",
+    "allThreeIdentical": true,
+    "sourceProductCode": null,
+    "sourceProductUrl": null,
+    "sourceFieldPath": null,
+    "host": null,
+    "heroQualityClassification": "placeholder",
+    "candidateCountBeforeFiltering": 0,
+    "candidateCountAfterFiltering": 0,
+    "rejectedCandidates": [],
+    "placeholderFallbackUsed": true,
+    "exactProductScopedVisibleImage": true,
+    "displayedCommercials": {
+      "price": "Starting at $69",
+      "rating": null,
+      "reviewCount": null,
+      "meetingPoint": "See booking details"
+    },
+    "ctaCorrect": true,
+    "duplicatePageCardStatus": {
+      "productCodeEntryCount": 1,
+      "canonicalPathEntryCount": 1,
+      "listingCardOnlyOnce": true,
+      "nativeRouteResolves": true
+    },
+    "verification": {
+      "pageHeroExactOrPlaceholder": true,
+      "cardHeroExactOrPlaceholder": true,
+      "schemaMatches": true,
+      "parityHolds": true,
+      "noForeignImageContamination": true,
+      "noBrokenImageShell": true,
+      "oneListingCardOnly": true,
+      "noDuplicatePublicPage": true,
+      "ctaCorrect": true
+    },
+    "pipelineTrace": {
+      "payload": "/workspace/alloutdooradventures2/data/engine6/viator/21428P2.exact-product.json",
+      "registry": "src/engine6/registry.ts",
+      "mapping": "src/engine6/mapViatorToEngine6Tour.ts",
+      "heroResolver": "api/engine6/heroResolver.ts",
+      "cardRender": "src/components/TourCard.tsx"
+    }
+  },
+  {
+    "productCode": "5221EVERGLADES",
+    "canonicalPath": "/destinations/florida/miami/tours/miami-everglades-airboat-adventure-with-transport",
+    "finalPageHeroUrl": "/images/hiking-hero.jpg",
+    "finalCardHeroUrl": "/images/hiking-hero.jpg",
+    "finalSchemaImageUrl": "/images/hiking-hero.jpg",
+    "allThreeIdentical": true,
+    "sourceProductCode": null,
+    "sourceProductUrl": null,
+    "sourceFieldPath": null,
+    "host": null,
+    "heroQualityClassification": "placeholder",
+    "candidateCountBeforeFiltering": 0,
+    "candidateCountAfterFiltering": 0,
+    "rejectedCandidates": [],
+    "placeholderFallbackUsed": true,
+    "exactProductScopedVisibleImage": true,
+    "displayedCommercials": {
+      "price": "Starting at $65",
+      "rating": null,
+      "reviewCount": null,
+      "meetingPoint": "See booking details"
+    },
+    "ctaCorrect": true,
+    "duplicatePageCardStatus": {
+      "productCodeEntryCount": 1,
+      "canonicalPathEntryCount": 1,
+      "listingCardOnlyOnce": true,
+      "nativeRouteResolves": true
+    },
+    "verification": {
+      "pageHeroExactOrPlaceholder": true,
+      "cardHeroExactOrPlaceholder": true,
+      "schemaMatches": true,
+      "parityHolds": true,
+      "noForeignImageContamination": true,
+      "noBrokenImageShell": true,
+      "oneListingCardOnly": true,
+      "noDuplicatePublicPage": true,
+      "ctaCorrect": true
+    },
+    "pipelineTrace": {
+      "payload": "/workspace/alloutdooradventures2/data/engine6/viator/5221EVERGLADES.exact-product.json",
+      "registry": "src/engine6/registry.ts",
+      "mapping": "src/engine6/mapViatorToEngine6Tour.ts",
+      "heroResolver": "api/engine6/heroResolver.ts",
+      "cardRender": "src/components/TourCard.tsx"
+    }
+  },
+  {
+    "productCode": "35834P1",
+    "canonicalPath": "/destinations/florida/miami/tours/speedboat-sightseeing-tour-in-miami",
+    "finalPageHeroUrl": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/01/miami-speedboat-hero.jpg",
+    "finalCardHeroUrl": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/01/miami-speedboat-hero.jpg",
+    "finalSchemaImageUrl": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/01/miami-speedboat-hero.jpg",
+    "allThreeIdentical": true,
+    "sourceProductCode": "35834P1",
+    "sourceProductUrl": "https://www.viator.com/tours/Miami/Miami-Speedboat-Sightseeing-Tour/d662-35834P1",
+    "sourceFieldPath": "product.media.images[0].variants.FULL.url",
+    "host": "dynamic-media.tacdn.com",
+    "heroQualityClassification": "product-media",
+    "candidateCountBeforeFiltering": 1,
+    "candidateCountAfterFiltering": 1,
+    "rejectedCandidates": [],
+    "placeholderFallbackUsed": false,
+    "exactProductScopedVisibleImage": true,
+    "displayedCommercials": {
+      "price": "Starting at $45",
+      "rating": 4.5,
+      "reviewCount": 912,
+      "meetingPoint": "See booking details"
+    },
+    "ctaCorrect": true,
+    "duplicatePageCardStatus": {
+      "productCodeEntryCount": 1,
+      "canonicalPathEntryCount": 1,
+      "listingCardOnlyOnce": true,
+      "nativeRouteResolves": true
+    },
+    "verification": {
+      "pageHeroExactOrPlaceholder": true,
+      "cardHeroExactOrPlaceholder": true,
+      "schemaMatches": true,
+      "parityHolds": true,
+      "noForeignImageContamination": true,
+      "noBrokenImageShell": true,
+      "oneListingCardOnly": true,
+      "noDuplicatePublicPage": true,
+      "ctaCorrect": true
+    },
+    "pipelineTrace": {
+      "payload": "/workspace/alloutdooradventures2/data/engine6/viator/35834P1.exact-product.json",
+      "registry": "src/engine6/registry.ts",
+      "mapping": "src/engine6/mapViatorToEngine6Tour.ts",
+      "heroResolver": "api/engine6/heroResolver.ts",
+      "cardRender": "src/components/TourCard.tsx"
+    }
+  },
+  {
+    "productCode": "5441BOAT",
+    "canonicalPath": "/destinations/florida/miami/tours/miami-speedboat-tour",
+    "finalPageHeroUrl": "/images/hiking-hero.jpg",
+    "finalCardHeroUrl": "/images/hiking-hero.jpg",
+    "finalSchemaImageUrl": "/images/hiking-hero.jpg",
+    "allThreeIdentical": true,
+    "sourceProductCode": null,
+    "sourceProductUrl": null,
+    "sourceFieldPath": null,
+    "host": null,
+    "heroQualityClassification": "placeholder",
+    "candidateCountBeforeFiltering": 0,
+    "candidateCountAfterFiltering": 0,
+    "rejectedCandidates": [],
+    "placeholderFallbackUsed": true,
+    "exactProductScopedVisibleImage": true,
+    "displayedCommercials": {
+      "price": "Starting at $42",
+      "rating": null,
+      "reviewCount": null,
+      "meetingPoint": "See booking details"
+    },
+    "ctaCorrect": true,
+    "duplicatePageCardStatus": {
+      "productCodeEntryCount": 1,
+      "canonicalPathEntryCount": 1,
+      "listingCardOnlyOnce": true,
+      "nativeRouteResolves": true
+    },
+    "verification": {
+      "pageHeroExactOrPlaceholder": true,
+      "cardHeroExactOrPlaceholder": true,
+      "schemaMatches": true,
+      "parityHolds": true,
+      "noForeignImageContamination": true,
+      "noBrokenImageShell": true,
+      "oneListingCardOnly": true,
+      "noDuplicatePublicPage": true,
+      "ctaCorrect": true
+    },
+    "pipelineTrace": {
+      "payload": "/workspace/alloutdooradventures2/data/engine6/viator/5441BOAT.exact-product.json",
+      "registry": "src/engine6/registry.ts",
+      "mapping": "src/engine6/mapViatorToEngine6Tour.ts",
+      "heroResolver": "api/engine6/heroResolver.ts",
+      "cardRender": "src/components/TourCard.tsx"
+    }
+  },
+  {
+    "productCode": "3587ISLQUESS",
+    "canonicalPath": "/destinations/florida/miami/tours/millionaires-row-cruise-3587islquess",
+    "finalPageHeroUrl": "/images/hiking-hero.jpg",
+    "finalCardHeroUrl": "/images/hiking-hero.jpg",
+    "finalSchemaImageUrl": "/images/hiking-hero.jpg",
+    "allThreeIdentical": true,
+    "sourceProductCode": null,
+    "sourceProductUrl": null,
+    "sourceFieldPath": null,
+    "host": null,
+    "heroQualityClassification": "placeholder",
+    "candidateCountBeforeFiltering": 0,
+    "candidateCountAfterFiltering": 0,
+    "rejectedCandidates": [],
+    "placeholderFallbackUsed": true,
+    "exactProductScopedVisibleImage": true,
+    "displayedCommercials": {
+      "price": "Starting at $34",
+      "rating": null,
+      "reviewCount": null,
+      "meetingPoint": "See booking details"
+    },
+    "ctaCorrect": true,
+    "duplicatePageCardStatus": {
+      "productCodeEntryCount": 1,
+      "canonicalPathEntryCount": 1,
+      "listingCardOnlyOnce": true,
+      "nativeRouteResolves": true
+    },
+    "verification": {
+      "pageHeroExactOrPlaceholder": true,
+      "cardHeroExactOrPlaceholder": true,
+      "schemaMatches": true,
+      "parityHolds": true,
+      "noForeignImageContamination": true,
+      "noBrokenImageShell": true,
+      "oneListingCardOnly": true,
+      "noDuplicatePublicPage": true,
+      "ctaCorrect": true
+    },
+    "pipelineTrace": {
+      "payload": "/workspace/alloutdooradventures2/data/engine6/viator/3587ISLQUESS.exact-product.json",
+      "registry": "src/engine6/registry.ts",
+      "mapping": "src/engine6/mapViatorToEngine6Tour.ts",
+      "heroResolver": "api/engine6/heroResolver.ts",
+      "cardRender": "src/components/TourCard.tsx"
+    }
+  },
+  {
+    "productCode": "120303P9",
+    "canonicalPath": "/destinations/florida/miami/tours/millionaires-row-cruise-120303p9",
+    "finalPageHeroUrl": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/02/millionaires-row-hero.jpg",
+    "finalCardHeroUrl": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/02/millionaires-row-hero.jpg",
+    "finalSchemaImageUrl": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/02/millionaires-row-hero.jpg",
+    "allThreeIdentical": true,
+    "sourceProductCode": "120303P9",
+    "sourceProductUrl": "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-120303P9",
+    "sourceFieldPath": "product.media.images[0].variants.FULL.url",
+    "host": "dynamic-media.tacdn.com",
+    "heroQualityClassification": "product-media",
+    "candidateCountBeforeFiltering": 1,
+    "candidateCountAfterFiltering": 1,
+    "rejectedCandidates": [],
+    "placeholderFallbackUsed": false,
+    "exactProductScopedVisibleImage": true,
+    "displayedCommercials": {
+      "price": "Starting at $35",
+      "rating": 4.3,
+      "reviewCount": 1204,
+      "meetingPoint": "See booking details"
+    },
+    "ctaCorrect": true,
+    "duplicatePageCardStatus": {
+      "productCodeEntryCount": 1,
+      "canonicalPathEntryCount": 1,
+      "listingCardOnlyOnce": true,
+      "nativeRouteResolves": true
+    },
+    "verification": {
+      "pageHeroExactOrPlaceholder": true,
+      "cardHeroExactOrPlaceholder": true,
+      "schemaMatches": true,
+      "parityHolds": true,
+      "noForeignImageContamination": true,
+      "noBrokenImageShell": true,
+      "oneListingCardOnly": true,
+      "noDuplicatePublicPage": true,
+      "ctaCorrect": true
+    },
+    "pipelineTrace": {
+      "payload": "/workspace/alloutdooradventures2/data/engine6/viator/120303P9.exact-product.json",
+      "registry": "src/engine6/registry.ts",
+      "mapping": "src/engine6/mapViatorToEngine6Tour.ts",
+      "heroResolver": "api/engine6/heroResolver.ts",
+      "cardRender": "src/components/TourCard.tsx"
+    }
+  },
+  {
+    "productCode": "8836P1",
+    "canonicalPath": "/destinations/florida/miami/tours/sightseeing-cruise-of-biscayne-bay",
+    "finalPageHeroUrl": "/images/hiking-hero.jpg",
+    "finalCardHeroUrl": "/images/hiking-hero.jpg",
+    "finalSchemaImageUrl": "/images/hiking-hero.jpg",
+    "allThreeIdentical": true,
+    "sourceProductCode": null,
+    "sourceProductUrl": null,
+    "sourceFieldPath": null,
+    "host": null,
+    "heroQualityClassification": "placeholder",
+    "candidateCountBeforeFiltering": 0,
+    "candidateCountAfterFiltering": 0,
+    "rejectedCandidates": [],
+    "placeholderFallbackUsed": true,
+    "exactProductScopedVisibleImage": true,
+    "displayedCommercials": {
+      "price": "Starting at $32",
+      "rating": null,
+      "reviewCount": null,
+      "meetingPoint": "See booking details"
+    },
+    "ctaCorrect": true,
+    "duplicatePageCardStatus": {
+      "productCodeEntryCount": 1,
+      "canonicalPathEntryCount": 1,
+      "listingCardOnlyOnce": true,
+      "nativeRouteResolves": true
+    },
+    "verification": {
+      "pageHeroExactOrPlaceholder": true,
+      "cardHeroExactOrPlaceholder": true,
+      "schemaMatches": true,
+      "parityHolds": true,
+      "noForeignImageContamination": true,
+      "noBrokenImageShell": true,
+      "oneListingCardOnly": true,
+      "noDuplicatePublicPage": true,
+      "ctaCorrect": true
+    },
+    "pipelineTrace": {
+      "payload": "/workspace/alloutdooradventures2/data/engine6/viator/8836P1.exact-product.json",
+      "registry": "src/engine6/registry.ts",
+      "mapping": "src/engine6/mapViatorToEngine6Tour.ts",
+      "heroResolver": "api/engine6/heroResolver.ts",
+      "cardRender": "src/components/TourCard.tsx"
+    }
+  },
+  {
+    "productCode": "5304HAVANA",
+    "canonicalPath": "/destinations/florida/miami/tours/little-havana-food-and-walking-tour-in-miami",
+    "finalPageHeroUrl": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/03/little-havana-food-tour-hero.jpg",
+    "finalCardHeroUrl": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/03/little-havana-food-tour-hero.jpg",
+    "finalSchemaImageUrl": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/03/little-havana-food-tour-hero.jpg",
+    "allThreeIdentical": true,
+    "sourceProductCode": "5304HAVANA",
+    "sourceProductUrl": "https://www.viator.com/tours/Miami/Little-Havana-Food-and-Walking-Tour-in-Miami/d662-5304HAVANA",
+    "sourceFieldPath": "product.media.images[0].variants.FULL.url",
+    "host": "dynamic-media.tacdn.com",
+    "heroQualityClassification": "product-media",
+    "candidateCountBeforeFiltering": 1,
+    "candidateCountAfterFiltering": 1,
+    "rejectedCandidates": [],
+    "placeholderFallbackUsed": false,
+    "exactProductScopedVisibleImage": true,
+    "displayedCommercials": {
+      "price": "Starting at $79",
+      "rating": 4.8,
+      "reviewCount": 643,
+      "meetingPoint": "See booking details"
+    },
+    "ctaCorrect": true,
+    "duplicatePageCardStatus": {
+      "productCodeEntryCount": 1,
+      "canonicalPathEntryCount": 1,
+      "listingCardOnlyOnce": true,
+      "nativeRouteResolves": true
+    },
+    "verification": {
+      "pageHeroExactOrPlaceholder": true,
+      "cardHeroExactOrPlaceholder": true,
+      "schemaMatches": true,
+      "parityHolds": true,
+      "noForeignImageContamination": true,
+      "noBrokenImageShell": true,
+      "oneListingCardOnly": true,
+      "noDuplicatePublicPage": true,
+      "ctaCorrect": true
+    },
+    "pipelineTrace": {
+      "payload": "/workspace/alloutdooradventures2/data/engine6/viator/5304HAVANA.exact-product.json",
+      "registry": "src/engine6/registry.ts",
+      "mapping": "src/engine6/mapViatorToEngine6Tour.ts",
+      "heroResolver": "api/engine6/heroResolver.ts",
+      "cardRender": "src/components/TourCard.tsx"
+    }
+  },
+  {
+    "productCode": "51540P1",
+    "canonicalPath": "/destinations/florida/miami/tours/little-havana-cultural-walking-and-food-tour",
+    "finalPageHeroUrl": "/images/hiking-hero.jpg",
+    "finalCardHeroUrl": "/images/hiking-hero.jpg",
+    "finalSchemaImageUrl": "/images/hiking-hero.jpg",
+    "allThreeIdentical": true,
+    "sourceProductCode": null,
+    "sourceProductUrl": null,
+    "sourceFieldPath": null,
+    "host": null,
+    "heroQualityClassification": "placeholder",
+    "candidateCountBeforeFiltering": 0,
+    "candidateCountAfterFiltering": 0,
+    "rejectedCandidates": [],
+    "placeholderFallbackUsed": true,
+    "exactProductScopedVisibleImage": true,
+    "displayedCommercials": {
+      "price": "Starting at $79",
+      "rating": null,
+      "reviewCount": null,
+      "meetingPoint": "See booking details"
+    },
+    "ctaCorrect": true,
+    "duplicatePageCardStatus": {
+      "productCodeEntryCount": 1,
+      "canonicalPathEntryCount": 1,
+      "listingCardOnlyOnce": true,
+      "nativeRouteResolves": true
+    },
+    "verification": {
+      "pageHeroExactOrPlaceholder": true,
+      "cardHeroExactOrPlaceholder": true,
+      "schemaMatches": true,
+      "parityHolds": true,
+      "noForeignImageContamination": true,
+      "noBrokenImageShell": true,
+      "oneListingCardOnly": true,
+      "noDuplicatePublicPage": true,
+      "ctaCorrect": true
+    },
+    "pipelineTrace": {
+      "payload": "/workspace/alloutdooradventures2/data/engine6/viator/51540P1.exact-product.json",
+      "registry": "src/engine6/registry.ts",
+      "mapping": "src/engine6/mapViatorToEngine6Tour.ts",
+      "heroResolver": "api/engine6/heroResolver.ts",
+      "cardRender": "src/components/TourCard.tsx"
+    }
+  }
+]

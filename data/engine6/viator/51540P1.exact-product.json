@@ -1,0 +1,20 @@
+{
+  "product": {
+    "productCode": "51540P1",
+    "productUrl": "https://www.viator.com/tours/Miami/Little-Havana-Cultural-Walking-and-Food-Tour/d662-51540P1",
+    "title": "Little Havana Cultural Walking and Food Tour",
+    "description": "Walk through Little Havana with local cultural stories and food tastings.",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "media": {
+      "images": []
+    },
+    "highlights": [
+      "Guided neighborhood walk",
+      "Signature Cuban food tastings"
+    ],
+    "priceFrom": "$79.00"
+  }
+}

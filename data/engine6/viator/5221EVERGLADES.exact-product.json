@@ -1,0 +1,20 @@
+{
+  "product": {
+    "productCode": "5221EVERGLADES",
+    "productUrl": "https://www.viator.com/tours/Miami/Miami-Everglades-Airboat-Adventure-with-Transport/d662-5221EVERGLADES",
+    "title": "Miami Everglades Airboat Adventure with Transport",
+    "description": "Ride an airboat through Everglades wetlands with Miami transport included.",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "media": {
+      "images": []
+    },
+    "highlights": [
+      "Airboat wildlife views",
+      "Convenient Miami pickup"
+    ],
+    "priceFrom": "$65.00"
+  }
+}

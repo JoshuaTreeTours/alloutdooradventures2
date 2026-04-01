@@ -9,6 +9,7 @@ import {
   formatEngine6CategoryLabel,
 } from "./seo";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
+import { TOUR_FALLBACK_HERO_IMAGE } from "../utils/hero";
 
 const ENGINE6_OPENING_PATTERNS = [
   "Join one of the best experiences in %CITY% with this %TOUR_TYPE%.",
@@ -166,7 +167,7 @@ export const mapViatorToEngine6Tour = (
     city,
     state,
     resolvedImageUrl: finalHeroImageUrl,
-    heroImageUrl: finalHeroImageUrl ?? "",
+    heroImageUrl: finalHeroImageUrl ?? TOUR_FALLBACK_HERO_IMAGE,
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: formattedStartingPrice ?? "Check latest price",
     aggregateRating,

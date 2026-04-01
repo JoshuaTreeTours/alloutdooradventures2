@@ -1,0 +1,20 @@
+{
+  "product": {
+    "productCode": "3587ISLQUESS",
+    "productUrl": "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-3587ISLQUESS",
+    "title": "Millionaires Row Cruise",
+    "description": "Cruise Biscayne Bay and pass celebrity homes along Millionaires Row.",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "media": {
+      "images": []
+    },
+    "highlights": [
+      "Biscayne Bay sightseeing",
+      "Narrated celebrity homes cruise"
+    ],
+    "priceFrom": "$34.00"
+  }
+}

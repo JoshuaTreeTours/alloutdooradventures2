@@ -1,0 +1,20 @@
+{
+  "product": {
+    "productCode": "5441BOAT",
+    "productUrl": "https://www.viator.com/tours/Miami/Miami-Speedboat-Tour/d662-5441BOAT",
+    "title": "Miami Speedboat Tour",
+    "description": "See Biscayne Bay landmarks on a high-speed sightseeing ride.",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "media": {
+      "images": []
+    },
+    "highlights": [
+      "Fast-paced bay cruise",
+      "Miami skyline viewpoints"
+    ],
+    "priceFrom": "$42.00"
+  }
+}
