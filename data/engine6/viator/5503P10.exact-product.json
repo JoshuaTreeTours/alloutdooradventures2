@@ -1,0 +1,87 @@
+{
+  "product": {
+    "productCode": "5503P10",
+    "title": "Parasailing with Miami Watersports",
+    "productUrl": "https://www.viator.com/tours/Miami/Parasailing-with-Miami-Watersports/d662-5503P10",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 99,
+        "fromPriceFormatted": "$99.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.2,
+      "totalReviews": 449
+    },
+    "description": "Soar above Biscayne Bay on a parasailing outing that combines skyline views with a guided safety-first launch. This Miami watersports experience is designed for first-time flyers and repeat adventurers alike, with equipment and briefing included before takeoff.",
+    "highlights": [
+      "Parasail over Biscayne Bay for open-water and skyline views",
+      "Beginner-friendly experience with professional crew guidance",
+      "All core parasailing gear and safety equipment are included",
+      "Optional add-ons may be available at check-in"
+    ],
+    "meetingPoint": {
+      "name": "Miami Watersports",
+      "description": "3400 Pan American Dr Pier 9, Miami, FL 33133, USA"
+    },
+    "itineraryItems": [
+      {
+        "title": "Check-in and safety briefing",
+        "description": "Meet the crew, complete check-in, and review parasailing safety procedures before boarding.",
+        "duration": "20 minutes"
+      },
+      {
+        "title": "Biscayne Bay parasailing flight",
+        "description": "Launch from the boat for panoramic views of Miami and the bay during your parasailing flight window.",
+        "duration": "5-10 minutes"
+      },
+      {
+        "title": "Return cruise",
+        "description": "Enjoy a short return ride back to the marina after flight operations conclude.",
+        "duration": "30 minutes"
+      }
+    ],
+    "additionalInfo": [
+      "Not recommended for travelers with back problems or pregnant travelers",
+      "Bring valid government ID or passport for check-in",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "Where does the parasailing tour depart from?",
+        "answer": "The meeting point is Miami Watersports at 3400 Pan American Dr Pier 9 in Miami."
+      },
+      {
+        "question": "Is prior parasailing experience required?",
+        "answer": "No. The tour is suitable for beginners and includes a full safety briefing and gear."
+      },
+      {
+        "question": "How long is the parasailing portion?",
+        "answer": "The flight segment is typically around 5 to 10 minutes, with a longer total boat experience."
+      },
+      {
+        "question": "What should guests bring?",
+        "answer": "Bring a valid photo ID and wear comfortable clothing appropriate for on-water activities."
+      }
+    ],
+    "categories": [
+      "Water Sports",
+      "Adventure Tours",
+      "Parasailing"
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/db/e5/e7.jpg",
+          "width": 674,
+          "height": 446,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}

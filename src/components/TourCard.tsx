@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { TOUR_FALLBACK_HERO_IMAGE } from "../utils/hero";
 
 import type { Tour } from "../data/tours.types";
 import { getActivityLabelFromSlug } from "../data/activityLabels";
@@ -121,6 +122,25 @@ function getCardBlurb(tour: Tour): string {
   return `${snippet.trim()}…`;
 }
 
+const isEngine6TrustedMediaHost = (value: string) => {
+  try {
+    const parsed = new URL(value);
+    const host = parsed.hostname.toLowerCase();
+    return (
+      host === "cdn.filestackcontent.com" ||
+      host === "www.filepicker.io" ||
+      host === "dynamic-media.tacdn.com" ||
+      host === "media.tacdn.com" ||
+      host === "media-cdn.tripadvisor.com" ||
+      host === "dynamic-media-cdn.tripadvisor.com" ||
+      (host.includes("media") && host.endsWith(".tacdn.com")) ||
+      (host.includes("media") && host.endsWith(".tripadvisor.com"))
+    );
+  } catch {
+    return false;
+  }
+};
+
 function resolveEngine6CanonicalCardImage(value: string | undefined): string {
   const normalized = value?.trim() ?? "";
   if (!normalized) {
@@ -133,6 +153,9 @@ function resolveEngine6CanonicalCardImage(value: string | undefined): string {
     normalized.includes("/hero.jpg") ||
     normalized.includes("/images/hiking-hero.jpg")
   ) {
+    return "";
+  }
+  if (!isEngine6TrustedMediaHost(normalized)) {
     return "";
   }
   return normalized;
@@ -168,11 +191,11 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.engine === "engine4"
       ? tour.heroImage?.trim() || "/hero.jpg"
       : tour.engine === "engine6"
-        ? engine6CanonicalImage
+        ? engine6CanonicalImage || TOUR_FALLBACK_HERO_IMAGE
         : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
   const fallbackImage =
     tour.engine === "engine6"
-      ? cardImage
+      ? TOUR_FALLBACK_HERO_IMAGE
       : "/hero.jpg";
   const renderedTagPills =
     tour.tagPills?.map(tag =>
