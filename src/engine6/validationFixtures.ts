@@ -24,6 +24,8 @@ import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-pr
 import specimen5503p10Payload from "../../data/engine6/viator/5503P10.exact-product.json";
 
 import specimen5865p8Payload from "../../data/engine6/viator/5865P8.exact-product.json";
+import specimen438341p2Payload from "../../data/engine6/viator/438341P2.exact-product.json";
+
 export type Engine6ValidationFixture = {
   productCode: string;
   publicUrl: string;
@@ -48,6 +50,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Miami/Parasailing-with-Miami-Watersports/d662-5503P10",
     rawPayload: specimen5503p10Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "438341P2",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Sightseeing-tour-or-party-on-a-Monterey-32ft/d662-438341P2",
+    rawPayload: specimen438341p2Payload as Record<string, unknown>,
   },
   {
     productCode: "5865P8",
