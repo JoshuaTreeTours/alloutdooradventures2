@@ -1,4 +1,8 @@
 import type { Tour } from "../data/tours.types";
+import {
+  formatEngine6PriceLabel,
+  getEngine6CommercialSnapshot,
+} from "./commercial";
 import { toEngine6Card } from "./cards";
 import { legacyFhMigratedTours } from "./legacyFh/registry";
 import { ENGINE6_SPECIMEN_PRODUCT_CODE } from "./routes";
@@ -8,10 +12,11 @@ import type { Engine6Tour } from "./types";
 const ENGINE6_CANONICAL_TOUR_PATH =
   /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/;
 
-const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
+export const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
   const [, stateSlug = "", citySlug = "", slug = ""] =
     ENGINE6_CANONICAL_TOUR_PATH.exec(tour.canonicalPath) ?? [];
   const card = toEngine6Card(tour);
+  const commercial = getEngine6CommercialSnapshot(tour);
 
   return {
     id: `engine6-${tour.productCode}`,
@@ -33,11 +38,11 @@ const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
     resolvedImageUrl: tour.heroImageUrl || null,
     primaryImageUrl: tour.heroImageUrl,
     badges: {
-      rating: tour.aggregateRating ?? undefined,
-      reviewCount: tour.reviewCount ?? undefined,
-      priceFrom: tour.priceFormatted,
+      rating: commercial.rating ?? undefined,
+      reviewCount: commercial.reviewCount ?? undefined,
+      priceFrom: formatEngine6PriceLabel(commercial.priceAmount) ?? undefined,
     },
-    startingPrice: tour.priceAmount ?? undefined,
+    startingPrice: commercial.priceAmount ?? undefined,
     currency: "USD",
     tagPills: tour.categoryLabel ? [tour.categoryLabel] : undefined,
     activitySlugs: ["bike-tours"],

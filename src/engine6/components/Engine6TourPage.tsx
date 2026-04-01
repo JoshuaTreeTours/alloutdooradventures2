@@ -3,8 +3,11 @@ import React, { type ReactNode, useMemo } from "react";
 import Seo from "../../components/Seo";
 import TourCard from "../../components/TourCard";
 import { getToursByCityUnified } from "../../data/tours";
-import { formatEngine6AggregateRating } from "../rating";
 import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
+import {
+  formatEngine6PriceLabel,
+  getEngine6CommercialSnapshot,
+} from "../commercial";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
 import type { Engine6Tour } from "../types";
@@ -41,14 +44,13 @@ const buildEngine6Breadcrumbs = (tour: Engine6Tour) => {
 };
 
 const RatingSummary = ({
-  aggregateRating,
+  rating,
   reviewCount,
 }: {
-  aggregateRating: number | null;
-  reviewCount: number | null;
+  rating: number;
+  reviewCount: number;
 }) => {
-  const ratingLabel = formatEngine6AggregateRating(aggregateRating) ?? "N/A";
-  const totalReviews = reviewCount ?? 0;
+  const ratingLabel = rating.toFixed(1);
 
   return (
     <div className="space-y-2" data-testid="engine6-rating-summary">
@@ -68,7 +70,7 @@ const RatingSummary = ({
         ))}
       </div>
       <p className="text-sm font-semibold text-white">
-        {ratingLabel} rating • {totalReviews} reviews
+        {ratingLabel} rating • {reviewCount} reviews
       </p>
     </div>
   );
@@ -79,10 +81,11 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     tour.categoryLabel ?? formatEngine6CategoryLabel(tour.primaryCategory);
   const seo = buildEngine6Seo(tour);
   const schema = buildEngine6SchemaGraph(tour);
-  const hasPrice = Boolean(tour.priceFormatted);
+  const commercial = getEngine6CommercialSnapshot(tour);
+  const hasPrice = typeof commercial.priceAmount === "number";
   const hasRating =
-    typeof tour.aggregateRating === "number" &&
-    typeof tour.reviewCount === "number";
+    typeof commercial.rating === "number" &&
+    typeof commercial.reviewCount === "number";
   const hasMeetingPoint = Boolean(tour.meetingPointText?.trim());
   const hasDuration = Boolean(tour.durationText?.trim());
   const breadcrumbs = buildEngine6Breadcrumbs(tour);
@@ -182,13 +185,13 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                 <div className="space-y-4">
                   {hasPrice ? (
                     <p>
-                      <strong>Price:</strong> {tour.priceFormatted}
+                      <strong>Price:</strong> {formatEngine6PriceLabel(commercial.priceAmount)}
                     </p>
                   ) : null}
                   {hasRating ? (
                     <RatingSummary
-                      aggregateRating={tour.aggregateRating}
-                      reviewCount={tour.reviewCount}
+                      rating={commercial.rating!}
+                      reviewCount={commercial.reviewCount!}
                     />
                   ) : null}
                 </div>

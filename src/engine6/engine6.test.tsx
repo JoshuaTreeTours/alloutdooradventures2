@@ -463,7 +463,7 @@ describe("engine6 mapping/cards/page", () => {
       "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1?pid=P00290915&mcid=42383&medium=link"
     );
     expect(card.title).toContain("Santa Barbara Vineyard");
-    expect(surfaces.city[0].priceLabel).toBe("Starting at $199");
+    expect(surfaces.city[0].priceLabel).toBe("From $199");
     expect(tour.primaryCategory).toBe("bike-tour");
     expect(tour.categoryLabel).toBe("Bike Tour");
     expect(tour.metaDescription.length).toBeLessThanOrEqual(160);
@@ -1464,8 +1464,8 @@ describe("engine6 listing surfaces", () => {
 
     expect(card.imageUrl).toBe(ENGINE6_63657P1_CARD_IMAGE_URL);
     expect(card.locationLabel).toBe("Santa Barbara, California");
-    expect(card.priceLabel).toBe("Starting at $199");
-    expect(card.ratingLabel).toBe("4.9 (177)");
+    expect(card.priceLabel).toBe("From $199");
+    expect(card.ratingLabel).toBe("4.9 (177 reviews)");
   });
 });
 

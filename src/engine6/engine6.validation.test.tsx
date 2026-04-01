@@ -3,6 +3,7 @@ import { renderToString } from "react-dom/server";
 
 import Engine6TourPage from "./components/Engine6TourPage";
 import { toEngine6Card } from "./cards";
+import { formatEngine6PriceLabel } from "./commercial";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import { buildEngine6ValidationReport } from "./validation";
@@ -124,7 +125,10 @@ describe("engine6 single-tour validation harness", () => {
       expect(html).toContain(
         `src="${tour.heroImageUrl.replace(/&/g, "&amp;")}"`
       );
-      expect(html).toContain(tour.priceFormatted);
+      const priceLabel = formatEngine6PriceLabel(tour.priceAmount);
+      if (priceLabel) {
+        expect(html).toContain(priceLabel);
+      }
       expect(html).toContain(tour.bookingUrl.replace(/&/g, "&amp;"));
       expect(html).not.toContain(">ENGINE6<");
       expect(html).not.toContain("img.test");
