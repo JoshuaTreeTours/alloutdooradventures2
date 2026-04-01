@@ -1,0 +1,71 @@
+{
+  "product": {
+    "productCode": "3587ISLQUESS",
+    "productUrl": "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-3587ISLQUESS",
+    "title": "Millionaire’s Row Cruise",
+    "description": "Cruise past waterfront mansions and Miami skyline landmarks with live narration on Biscayne Bay.",
+    "location": { "city": "Miami", "state": "Florida" },
+    "priceFrom": "$34.99",
+    "duration": "1 hour 30 minutes",
+    "reviews": { "combinedAverageRating": 4.4, "totalReviews": 1812 },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/02/millionaires-row-cruise-hero.jpg",
+              "width": 1600,
+              "height": 1066
+            }
+          }
+        },
+        {
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/04/millionaires-row-cruise-secondary.jpg",
+              "width": 1400,
+              "height": 933
+            }
+          }
+        }
+      ]
+    },
+    "imageUrl": "https://dynamic-media.tacdn.com/media/photo-o/ff/00/00/foreign-primary-miami.jpg",
+    "images": [
+      {
+        "url": "https://dynamic-media.tacdn.com/media/photo-o/ff/00/01/foreign-listing-card.jpg",
+        "isCover": true
+      }
+    ],
+    "highlights": [
+      "See Star Island and waterfront celebrity homes",
+      "Enjoy Biscayne Bay skyline views from the water",
+      "Hear route narration from onboard guides"
+    ],
+    "inclusions": ["Sightseeing cruise", "Onboard narration"],
+    "meetingPoint": { "description": "Bayside Marketplace, Downtown Miami" },
+    "itineraryItems": [
+      {
+        "pointOfInterestLocation": { "name": "Biscayne Bay" },
+        "description": "Cruise route with skyline and mansion views.",
+        "duration": "1 hour 30 minutes"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long is the cruise?",
+        "answer": "The listed cruise duration is about 1 hour and 30 minutes."
+      },
+      {
+        "question": "Where does this tour depart from?",
+        "answer": "Departure is from Bayside Marketplace in Downtown Miami."
+      },
+      {
+        "question": "Is narration included?",
+        "answer": "Yes, the tour includes onboard sightseeing narration."
+      }
+    ],
+    "additionalInfo": ["Arrive 30 minutes before departure"]
+  }
+}

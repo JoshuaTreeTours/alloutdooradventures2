@@ -19,6 +19,9 @@ import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-prod
 import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-product.json";
 import specimen383300p6Payload from "../../data/engine6/viator/383300P6.exact-product.json";
 import specimen10150p16Payload from "../../data/engine6/viator/10150P16.exact-product.json";
+import specimen35834p1Payload from "../../data/engine6/viator/35834P1.exact-product.json";
+import specimen3587islquessPayload from "../../data/engine6/viator/3587ISLQUESS.exact-product.json";
+import specimen5304havanaPayload from "../../data/engine6/viator/5304HAVANA.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -34,6 +37,24 @@ export type Engine6ValidationFixture = {
 };
 
 export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
+  {
+    productCode: "35834P1",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Miami-Speedboat-Sightseeing-Tour/d662-35834P1",
+    rawPayload: specimen35834p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "3587ISLQUESS",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-3587ISLQUESS",
+    rawPayload: specimen3587islquessPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "5304HAVANA",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Little-Havana-Food-and-Walking-Tour-in-Miami/d662-5304HAVANA",
+    rawPayload: specimen5304havanaPayload as Record<string, unknown>,
+  },
   {
     productCode: "8836P2",
     publicUrl:
