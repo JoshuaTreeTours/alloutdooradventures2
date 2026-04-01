@@ -33,7 +33,9 @@ export type Engine6RejectedHeroCandidate = {
     | "unverified-product-scope"
     | "invalid-url"
     | "static-hero-disallowed"
-    | "untrusted-media-host";
+    | "untrusted-media-host"
+    | "missing-field-path"
+    | "non-product-media-path";
   candidateProductCode: string | null;
   candidateSourceProductUrl: string | null;
   fieldPath: string | null;
@@ -123,9 +125,9 @@ const getHeroQualityClassification = (
 
 const getQualityRank = (candidate: Engine6HeroCandidate) => {
   const quality = getHeroQualityClassification(candidate);
-  if (quality === "product-media") return 0;
-  if (quality === "splice") return 1;
-  if (quality === "caption") return 2;
+  if (quality === "caption") return 0;
+  if (quality === "product-media") return 1;
+  if (quality === "splice") return 2;
   return 3;
 };
 
@@ -322,6 +324,19 @@ export const resolveProductScopedHero = ({
       );
       continue;
     }
+    const fieldPath = candidate.fieldPath?.trim() ?? "";
+    if (!fieldPath) {
+      rejectedForeignCandidates.push(
+        toRejectedCandidate(candidate, "missing-field-path")
+      );
+      continue;
+    }
+    if (!fieldPath.startsWith("product.media.images[")) {
+      rejectedForeignCandidates.push(
+        toRejectedCandidate(candidate, "non-product-media-path")
+      );
+      continue;
+    }
 
     if (
       normalizedCurrentProductCode &&
@@ -417,7 +432,7 @@ export const resolveProductScopedHero = ({
   }
 
   return {
-    heroUrl: null,
+    heroUrl: ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
     heroSourceType: "approved-placeholder",
     heroQualityClassification: "placeholder",
     fallbackTriggered: true,

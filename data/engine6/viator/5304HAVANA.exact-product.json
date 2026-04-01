@@ -1,0 +1,45 @@
+{
+  "product": {
+    "productCode": "5304HAVANA",
+    "title": "Little Havana Food and Walking Tour in Miami",
+    "productUrl": "https://www.viator.com/tours/Miami/Little-Havana-Food-and-Walking-Tour-in-Miami/d662-5304HAVANA",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/db/e5/e7.jpg",
+          "variants": [
+            {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/db/e5/e7.jpg",
+              "width": 1200,
+              "height": 800
+            }
+          ],
+          "isCover": true
+        }
+      ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      }
+    },
+    "description": {
+      "text": "Explore Little Havana Food and Walking Tour in Miami with local guides in Miami."
+    },
+    "highlights": [
+      "Guided experience",
+      "Top Miami sights"
+    ],
+    "meetingPoint": {
+      "description": "Little Havana"
+    },
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 120
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "product": {
+    "productCode": "5221EVERGLADES",
+    "title": "Miami Everglades Airboat Adventure with Transport",
+    "productUrl": "https://www.viator.com/tours/Miami/Miami-Everglades-Airboat-Adventure-with-Transport/d662-5221EVERGLADES",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-360x240/0e/8f/b9/96.jpg",
+          "variants": [
+            {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-360x240/0e/8f/b9/96.jpg",
+              "width": 1200,
+              "height": 800
+            }
+          ],
+          "isCover": true
+        }
+      ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      }
+    },
+    "description": {
+      "text": "Explore Miami Everglades Airboat Adventure with Transport with local guides in Miami."
+    },
+    "highlights": [
+      "Guided experience",
+      "Top Miami sights"
+    ],
+    "meetingPoint": {
+      "description": "Everglades National Park"
+    },
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 120
+    }
+  }
+}

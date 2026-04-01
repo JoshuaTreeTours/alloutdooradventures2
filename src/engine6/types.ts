@@ -52,7 +52,11 @@ export type Engine6TourDiagnostics = {
   heroFallbackTriggered: boolean;
   heroCandidatesPresent: boolean;
   heroCandidateCount: number;
+  heroCandidateCountAfterFiltering: number;
   heroPlaceholderFallbackReason: string | null;
+  heroSourceProductCode: string | null;
+  heroSourceProductUrl: string | null;
+  heroHost: string | null;
   captionPrecedenceApplied: boolean;
   candidateFamilyIdentityDeterminable: boolean;
   heroSurfaceParity: {

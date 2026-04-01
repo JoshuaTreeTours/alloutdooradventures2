@@ -1,0 +1,45 @@
+{
+  "product": {
+    "productCode": "35834P1",
+    "title": "Speedboat Sightseeing Tour in Miami",
+    "productUrl": "https://www.viator.com/tours/Miami/Speedboat-Sightseeing-Tour-in-Miami/d662-35834P1",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg?w=700&h=500&s=1",
+          "variants": [
+            {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg?w=700&h=500&s=1",
+              "width": 1200,
+              "height": 800
+            }
+          ],
+          "isCover": true
+        }
+      ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      }
+    },
+    "description": {
+      "text": "Explore Speedboat Sightseeing Tour in Miami with local guides in Miami."
+    },
+    "highlights": [
+      "Guided experience",
+      "Top Miami sights"
+    ],
+    "meetingPoint": {
+      "description": "Biscayne Bay"
+    },
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 120
+    }
+  }
+}
