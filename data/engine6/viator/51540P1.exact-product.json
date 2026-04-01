@@ -1,0 +1,66 @@
+{
+  "product": {
+    "productCode": "51540P1",
+    "title": "Little Havana Cultural Walking and Food Tour",
+    "productUrl": "https://www.viator.com/tours/Miami/Little-Havana-Cultural-Walking-and-Food-Tour/d662-51540P1",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 75,
+        "fromPriceFormatted": "$75.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 741
+    },
+    "description": "Little Havana Cultural Walking and Food Tour combines Miami sightseeing highlights with guided logistics and operator-managed timing. This rewritten overview summarizes public product details and preserves on-page parity for pricing, ratings, and meeting guidance.",
+    "highlights": [
+      "Explore little havana cultural walking and food tour with a local guide",
+      "Capture skyline and waterfront views around Miami",
+      "Review logistics and departure details before check-in"
+    ],
+    "logistics": {
+      "start": [
+        {
+          "description": "Bayside Marketplace, 401 Biscayne Blvd, Miami, FL 33132, USA"
+        }
+      ]
+    },
+    "additionalInfo": [
+      {
+        "question": "How long is the experience?",
+        "answer": "Duration varies by departure. Confirm the exact schedule shown on the Viator checkout surface for your selected date."
+      },
+      {
+        "question": "Where is the meeting point?",
+        "answer": "Meeting point details are provided on the product page and in your booking confirmation before departure."
+      },
+      {
+        "question": "What should I bring?",
+        "answer": "Bring weather-appropriate clothing, sun protection, and any required identification listed by the operator."
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1200&h=900&s=1",
+              "width": 1200,
+              "height": 900
+            },
+            "LARGE": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1200&h=900&s=1",
+              "width": 900,
+              "height": 650
+            }
+          }
+        }
+      ]
+    }
+  }
+}

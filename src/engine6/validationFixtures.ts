@@ -22,6 +22,15 @@ import specimen383300p6Payload from "../../data/engine6/viator/383300P6.exact-pr
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
 import specimen5503p10Payload from "../../data/engine6/viator/5503P10.exact-product.json";
+import specimen21428p2Payload from "../../data/engine6/viator/21428P2.exact-product.json";
+import specimen5221evergladesPayload from "../../data/engine6/viator/5221EVERGLADES.exact-product.json";
+import specimen35834p1Payload from "../../data/engine6/viator/35834P1.exact-product.json";
+import specimen5441boatPayload from "../../data/engine6/viator/5441BOAT.exact-product.json";
+import specimen3587islquessPayload from "../../data/engine6/viator/3587ISLQUESS.exact-product.json";
+import specimen120303p9Payload from "../../data/engine6/viator/120303P9.exact-product.json";
+import specimen8836p1Payload from "../../data/engine6/viator/8836P1.exact-product.json";
+import specimen5304havanaPayload from "../../data/engine6/viator/5304HAVANA.exact-product.json";
+import specimen51540p1Payload from "../../data/engine6/viator/51540P1.exact-product.json";
 
 import specimen5865p8Payload from "../../data/engine6/viator/5865P8.exact-product.json";
 export type Engine6ValidationFixture = {
@@ -31,6 +40,59 @@ export type Engine6ValidationFixture = {
 };
 
 export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
+  {
+    productCode: "21428P2",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Everglades-Tour-from-Miami-with-Transportation/d662-21428P2",
+    rawPayload: specimen21428p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5221EVERGLADES",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Miami-Everglades-Airboat-Adventure-with-Transport/d662-5221EVERGLADES",
+    rawPayload: specimen5221evergladesPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "35834P1",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Speedboat-Sightseeing-Tour-in-Miami/d662-35834P1",
+    rawPayload: specimen35834p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5441BOAT",
+    publicUrl: "https://www.viator.com/tours/Miami/Miami-Speedboat-Tour/d662-5441BOAT",
+    rawPayload: specimen5441boatPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "3587ISLQUESS",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-3587ISLQUESS",
+    rawPayload: specimen3587islquessPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "120303P9",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-120303P9",
+    rawPayload: specimen120303p9Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "8836P1",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Sightseeing-Cruise-of-Biscayne-Bay/d662-8836P1",
+    rawPayload: specimen8836p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5304HAVANA",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Little-Havana-Food-and-Walking-Tour-in-Miami/d662-5304HAVANA",
+    rawPayload: specimen5304havanaPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "51540P1",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Little-Havana-Cultural-Walking-and-Food-Tour/d662-51540P1",
+    rawPayload: specimen51540p1Payload as Record<string, unknown>,
+  },
   {
     productCode: "8836P2",
     publicUrl:

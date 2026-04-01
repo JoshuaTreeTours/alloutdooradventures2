@@ -32,6 +32,8 @@ export type Engine6SpecimenDebug = {
   heroVariantFieldPath: string | null;
   selectedHeroWidth: number | null;
   selectedHeroHeight: number | null;
+  selectedHeroSourceProductCode: string | null;
+  selectedHeroSourceProductUrl: string | null;
   imageSourceUsed: string | null;
   fallbackTriggered: boolean | null;
   rejectedForeignHeroCandidates: Array<{
@@ -95,6 +97,8 @@ export const buildInitialEngine6SpecimenDebug = (
   heroVariantFieldPath: null,
   selectedHeroWidth: null,
   selectedHeroHeight: null,
+  selectedHeroSourceProductCode: null,
+  selectedHeroSourceProductUrl: null,
   imageSourceUsed: null,
   fallbackTriggered: null,
   rejectedForeignHeroCandidates: [],
@@ -251,6 +255,22 @@ export const resolveEngine6SpecimenResponse = ({
         .selectedHeroHeight === "number"
         ? ((payload.diagnostics as Record<string, unknown>)
             .selectedHeroHeight as number)
+        : null,
+    selectedHeroSourceProductCode:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .selectedHeroSourceProductCode === "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .selectedHeroSourceProductCode as string)
+        : null,
+    selectedHeroSourceProductUrl:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .selectedHeroSourceProductUrl === "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .selectedHeroSourceProductUrl as string)
         : null,
     heroSourceType:
       typeof payload.diagnostics === "object" &&
