@@ -1,6 +1,5 @@
 import { renderToString } from "react-dom/server";
 
-import { ENGINE6_APPROVED_PLACEHOLDER_IMAGE } from "../../api/engine6/heroResolver";
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 import { getStateCityOptions } from "../data/stateCityOptions";
 import {
@@ -153,13 +152,26 @@ export const validateEngine6CreationContract = ({
   if (hasValidResolvedHero && tour.heroImageUrl !== resolvedPrimaryHero) {
     violations.push("resolved Engine6 hero is not used as winning hero");
   }
+  if (!tour.heroImageUrl?.trim()) {
+    violations.push("resolved Engine6 hero is missing");
+  }
+  if (!tour.diagnostics.heroSourceProductCode?.trim()) {
+    violations.push("hero provenance missing sourceProductCode");
+  }
+  if (!tour.diagnostics.heroSourceProductUrl?.trim()) {
+    violations.push("hero provenance missing sourceProductUrl");
+  }
+  if (!tour.diagnostics.heroSourceFieldPath?.trim()) {
+    violations.push("hero provenance missing sourceFieldPath");
+  }
+  if (!tour.diagnostics.heroHost?.trim()) {
+    violations.push("hero provenance missing host");
+  }
   if (
-    hasValidResolvedHero &&
-    tour.heroImageUrl === ENGINE6_APPROVED_PLACEHOLDER_IMAGE
+    tour.diagnostics.heroSourceFieldPath &&
+    !tour.diagnostics.heroSourceFieldPath.startsWith("product.media.images")
   ) {
-    violations.push(
-      "placeholder hero used even though a valid resolved hero exists"
-    );
+    violations.push("hero provenance field path must be product.media.images");
   }
 
   if (card.imageUrl !== tour.heroImageUrl) {

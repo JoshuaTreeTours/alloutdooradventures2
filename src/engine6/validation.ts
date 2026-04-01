@@ -99,7 +99,7 @@ export const buildEngine6ValidationReport = (
     card.href === tour.pagePath &&
     card.imageUrl === tour.heroImageUrl &&
     !card.href.includes("east-zion-top-of-the-world-jeep-tour") &&
-    !card.imageUrl.includes("img.test");
+    !(card.imageUrl ?? "").includes("img.test");
   const bookingAttributionIsValid = tour.bookingUrl.startsWith("/destinations/")
     ? tour.bookingUrl.endsWith("/book")
     : tour.bookingUrl.startsWith(fixture.publicUrl) &&

@@ -399,7 +399,7 @@ const collectRecordVariants = (
 const resolveImageCollectionHeroCandidates = (
   images: unknown,
   basePathPrefix: PathSegment[],
-  sourceType: Exclude<Engine6HeroSourceType, "approved-placeholder">
+  sourceType: Exclude<Engine6HeroSourceType, "none">
 ): HeroImageResult[] => {
   if (!Array.isArray(images)) {
     return [];
@@ -1037,9 +1037,9 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroVariantFieldPath: null,
     selectedHeroWidth: null,
     selectedHeroHeight: null,
-    imageSourceUsed: "approved-placeholder",
-    heroSourceType: "approved-placeholder",
-    heroQualityClassification: "placeholder",
+    imageSourceUsed: "none",
+    heroSourceType: "none",
+    heroQualityClassification: "none",
     finalHeroUrl: null,
     heroFallbackTriggered: false,
     heroCandidatesPresent: false,

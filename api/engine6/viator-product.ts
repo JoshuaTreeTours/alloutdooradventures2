@@ -51,9 +51,9 @@ const buildDiagnostics = (
   heroVariantFieldPath: null as string | null,
   selectedHeroWidth: null as number | null,
   selectedHeroHeight: null as number | null,
-  imageSourceUsed: "approved-placeholder" as const,
-  heroSourceType: "approved-placeholder" as const,
-  heroQualityClassification: "placeholder" as const,
+  imageSourceUsed: "none" as const,
+  heroSourceType: "none" as const,
+  heroQualityClassification: "none" as const,
   finalHeroUrl: null as string | null,
   heroFallbackTriggered: false,
   heroCandidatesPresent: false,
@@ -70,7 +70,7 @@ const buildDiagnostics = (
   },
   rejectedForeignHeroCandidates: [] as Array<{
     url: string;
-    sourceType: "api-primary" | "api-gallery" | "approved-placeholder";
+    sourceType: "api-primary" | "api-gallery" | "none";
     reason: string;
     candidateProductCode: string | null;
     candidateSourceProductUrl: string | null;
@@ -260,25 +260,9 @@ const applyResolvedHero = (args: {
       args.baseExtraction.extracted.productUrl ??
       args.fallbackHeroExtraction?.extracted.productUrl ??
       args.preferredHeroExtraction?.extracted.productUrl,
-    candidates: [
-      ...preferredCandidates.filter(
-        candidate => candidate.sourceType !== "approved-placeholder"
-      ),
-      ...fallbackCandidates.filter(
-        candidate => candidate.sourceType !== "approved-placeholder"
-      ),
-      ...preferredCandidates.filter(
-        candidate => candidate.sourceType === "approved-placeholder"
-      ),
-      ...fallbackCandidates.filter(
-        candidate => candidate.sourceType === "approved-placeholder"
-      ),
-    ],
+    candidates: [...preferredCandidates, ...fallbackCandidates],
   });
-  const providedCandidates = [
-    ...preferredCandidates,
-    ...fallbackCandidates,
-  ].filter(candidate => candidate.sourceType !== "approved-placeholder");
+  const providedCandidates = [...preferredCandidates, ...fallbackCandidates];
   const fallbackReason = heroDecision.fallbackTriggered
     ? providedCandidates.length === 0
       ? "no-candidates"

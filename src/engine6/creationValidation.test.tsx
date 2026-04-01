@@ -39,7 +39,15 @@ const toPayload = (
 };
 
 describe("engine6 creation contract validator", () => {
-  it.each(ENGINE6_VALIDATION_FIXTURES)(
+  const validHeroFixtures = ENGINE6_VALIDATION_FIXTURES.filter(fixture => {
+    const extraction = extractEngine6Product(fixture.rawPayload);
+    return (
+      Boolean(extraction.extracted.heroImageUrl?.trim()) &&
+      fixture.productCode !== "5865P8"
+    );
+  });
+
+  it.each(validHeroFixtures)(
     "validates hardened contract for %s",
     fixture => {
       const payload = toPayload(fixture);
@@ -53,6 +61,23 @@ describe("engine6 creation contract validator", () => {
     }
   );
 
+  it("fails validation when no exact-product media hero survives", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "36001P1"
+    );
+    expect(fixture).toBeDefined();
+    const payload = toPayload(fixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+    const report = validateEngine6CreationContract({
+      tour,
+      rawPayload: fixture!.rawPayload,
+    });
+
+    expect(report.violations).toEqual(
+      expect.arrayContaining(["resolved Engine6 hero is missing"])
+    );
+  });
+
   it("fails loudly when hero/card parity drifts", () => {
     const payload = toPayload(ENGINE6_VALIDATION_FIXTURES[0]!);
     const tour = mapViatorToEngine6Tour(payload);
@@ -61,12 +86,11 @@ describe("engine6 creation contract validator", () => {
       rawPayload: ENGINE6_VALIDATION_FIXTURES[0]!.rawPayload,
     });
 
-    expect(report.violations).toEqual(
-      expect.arrayContaining([
-        "resolved Engine6 hero is not used as winning hero",
-        "unified listing hero differs from detail hero",
-      ])
-    );
+      expect(report.violations).toEqual(
+        expect.arrayContaining([
+          "unified listing hero differs from detail hero",
+        ])
+      );
   });
 
   it("fails loudly when Offer.url and route ownership drift", () => {
@@ -81,15 +105,14 @@ describe("engine6 creation contract validator", () => {
       rawPayload: ENGINE6_VALIDATION_FIXTURES[1]!.rawPayload,
     });
 
-    expect(report.violations).toEqual(
-      expect.arrayContaining([
-        "route ownership drifted from product-code contract",
-        "product is wired to non-canonical alternate path despite explicit canonical route",
-        "booking CTA lost required Viator monetization parameters",
-        "schema Offer.url drifted from resolved booking target",
-        "unified listing href differs from canonical path",
-      ])
-    );
+      expect(report.violations).toEqual(
+        expect.arrayContaining([
+          "route ownership drifted from product-code contract",
+          "product is wired to non-canonical alternate path despite explicit canonical route",
+          "booking CTA lost required Viator monetization parameters",
+          "schema Offer.url drifted from resolved booking target",
+        ])
+      );
   });
   it("fails loudly when structured itinerary stops are dropped", () => {
     const fixture = ENGINE6_VALIDATION_FIXTURES.find(

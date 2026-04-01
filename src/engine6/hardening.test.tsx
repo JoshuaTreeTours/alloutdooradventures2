@@ -62,10 +62,10 @@ describe("engine6 hardening guards", () => {
         cardImage: "",
         schemaImage: undefined,
       })
-    ).not.toThrow();
+    ).toThrow(/must resolve from exact-product media/i);
     expect(() =>
       assertEngine6ImageDeterminism({
-        heroImage: "",
+        heroImage: "https://cdn.viator.com/hero.jpg",
         cardImage: "https://cdn.viator.com/other.jpg",
         schemaImage: undefined,
       })
