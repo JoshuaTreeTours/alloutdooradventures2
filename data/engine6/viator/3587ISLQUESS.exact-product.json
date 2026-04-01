@@ -23,14 +23,14 @@
           "isCover": true,
           "variants": {
             "FULL": {
-              "url": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/02/millionaires-row-hero.jpg",
-              "width": 1500,
-              "height": 1000
+              "url": "https://www.filepicker.io/api/file/uC6eNRvDSXmFXzotTTGk",
+              "width": 2048,
+              "height": 1365
             },
             "LARGE": {
-              "url": "https://dynamic-media.tacdn.com/media/photo-w/2c/12/aa/02/millionaires-row-hero.jpg",
-              "width": 800,
-              "height": 533
+              "url": "https://www.filepicker.io/api/file/uC6eNRvDSXmFXzotTTGk",
+              "width": 1024,
+              "height": 683
             }
           }
         },
@@ -38,9 +38,9 @@
           "isCover": false,
           "variants": {
             "FULL": {
-              "url": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/03/millionaires-row-views.jpg",
-              "width": 1400,
-              "height": 933
+              "url": "https://cdn.filestackcontent.com/x3s6r9FHTKO8TAc98xcw",
+              "width": 1920,
+              "height": 1280
             }
           }
         }
