@@ -1,6 +1,7 @@
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { resolveEngine6PathForProductCode } from "./routes";
+import { ENGINE6_APPROVED_PLACEHOLDER_IMAGE } from "../../api/engine6/heroResolver";
 import {
   buildEngine6CanonicalPath,
   buildEngine6MetaDescription,
@@ -166,7 +167,7 @@ export const mapViatorToEngine6Tour = (
     city,
     state,
     resolvedImageUrl: finalHeroImageUrl,
-    heroImageUrl: finalHeroImageUrl ?? "",
+    heroImageUrl: finalHeroImageUrl ?? ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: formattedStartingPrice ?? "Check latest price",
     aggregateRating,

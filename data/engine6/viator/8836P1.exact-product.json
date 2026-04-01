@@ -1,0 +1,75 @@
+{
+  "product": {
+    "productCode": "8836P1",
+    "title": "Biscayne Bay Sightseeing Cruise",
+    "productUrl": "https://www.viator.com/tours/Miami/Sightseeing-Cruise-of-Biscayne-Bay/d662-8836P1",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": null,
+        "fromPriceFormatted": null
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": null,
+      "totalReviews": null
+    },
+    "description": "Sail Biscayne Bay for close-up views of Miami's skyline, islands, and waterfront estates.",
+    "highlights": [
+      "Engine6 overview rewritten for Biscayne Bay Sightseeing Cruise",
+      "Canonical Miami route with direct Viator booking CTA",
+      "Hero-image parity enforced across page, card, and schema"
+    ],
+    "meetingPoint": {
+      "name": "Meeting point",
+      "description": "Downtown Miami waterfront departure point"
+    },
+    "itineraryItems": [
+      {
+        "title": "Bayside departure",
+        "description": "Board at the Bayside area and depart with a narrated introduction to the route.",
+        "duration": "15 minutes"
+      },
+      {
+        "title": "Celebrity homes and skyline cruise",
+        "description": "Pass by Star Island, Venetian Islands, and major waterfront viewpoints.",
+        "duration": "50 minutes"
+      },
+      {
+        "title": "Return to meeting point",
+        "description": "Cruise back to the original departure pier.",
+        "duration": "15 minutes"
+      }
+    ],
+    "additionalInfo": [
+      "Check-in is typically 30 minutes before departure",
+      "This activity generally operates in most weather conditions",
+      "Ages 21+ are required to consume alcohol"
+    ],
+    "faqs": [
+      {
+        "question": "How do I book this tour?",
+        "answer": "Use the Book on Viator button on this page to complete purchase on Viator."
+      },
+      {
+        "question": "Where is the meeting point?",
+        "answer": "Downtown Miami waterfront departure point"
+      },
+      {
+        "question": "What should I bring?",
+        "answer": "Bring weather-appropriate clothing and review voucher instructions before departure."
+      }
+    ],
+    "categories": [
+      "Cruises & Sailing",
+      "Sightseeing Cruises",
+      "Family-Friendly"
+    ],
+    "media": {
+      "images": []
+    }
+  }
+}
