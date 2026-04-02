@@ -100,7 +100,7 @@ describe("engine6 hero resolver", () => {
     expect(resolved.fallbackTriggered).toBe(false);
   });
 
-  it("applies caption precedence only within a determinable matching family", () => {
+  it("applies strict caption precedence for same-product candidates", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "63657P1",
       currentSourceProductUrl:
@@ -139,7 +139,7 @@ describe("engine6 hero resolver", () => {
     expect(resolved.fallbackTriggered).toBe(false);
   });
 
-  it("does not allow cross-family caption to override stronger same-product media", () => {
+  it("allows caption to override splice media under strict precedence", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "447234P3",
       currentSourceProductUrl:
@@ -151,7 +151,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "447234P3",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/San-Diego/Joshua-Tree-National-Park-Day-Trip-from-San-Diego/d736-447234P3",
-          fieldPath: "product.media.images[0].variants.FULL.url",
+          fieldPath: "product.media.images[0].variants.CAPTION.url",
           width: 720,
           height: 480,
         },
@@ -169,14 +169,14 @@ describe("engine6 hero resolver", () => {
     });
 
     expect(resolved.heroUrl).toBe(
-      "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg"
+      "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/32/94/08/b8/caption.jpg"
     );
-    expect(resolved.heroQualityClassification).toBe("splice");
-    expect(resolved.captionPrecedenceApplied).toBe(false);
+    expect(resolved.heroQualityClassification).toBe("caption");
+    expect(resolved.captionPrecedenceApplied).toBe(true);
     expect(resolved.candidateFamilyIdentityDeterminable).toBe(true);
   });
 
-  it("normalizes TACDN media URLs to high-resolution variants where possible", () => {
+  it("does not synthesize alternate media URLs", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "SUNSET1",
       currentSourceProductUrl:
@@ -194,7 +194,7 @@ describe("engine6 hero resolver", () => {
     });
 
     expect(resolved.heroUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg?foo=bar"
+      "https://dynamic-media.tacdn.com/media/photo-s/1a/2b/3c/4d.jpg?foo=bar"
     );
   });
 

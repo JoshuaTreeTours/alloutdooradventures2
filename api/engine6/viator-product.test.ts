@@ -160,7 +160,7 @@ describe("/api/engine6/viator-product", () => {
         imageSourceUsed: "api-primary",
         heroSourceType: "api-primary",
         heroCandidatesPresent: true,
-        heroCandidateCount: 1,
+        heroCandidateCount: 2,
         finalHeroUrl:
           "https://media.tacdn.com/media/attractions-content--1x-1/0f/56/92/caption.jpg",
         heroFallbackTriggered: false,

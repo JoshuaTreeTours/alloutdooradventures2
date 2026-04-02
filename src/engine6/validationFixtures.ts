@@ -9,6 +9,7 @@ import specimen411138Payload from "../../data/engine6/viator/411138P3.exact-prod
 import specimen53474Payload from "../../data/engine6/viator/53474P8.exact-product.json";
 import specimen233384Payload from "../../data/engine6/viator/233384P2.exact-product.json";
 import specimen414460Payload from "../../data/engine6/viator/414460P1.exact-product.json";
+import specimen120303p9Payload from "../../data/engine6/viator/120303P9.exact-product.json";
 import specimen3156Payload from "../../data/engine6/viator/3156P13.exact-product.json";
 import specimen3097sdzsp2visitPayload from "../../data/engine6/viator/3097SDZSP_2VISIT.exact-product.json";
 import specimen447234p3Payload from "../../data/engine6/viator/447234P3.exact-product.json";
@@ -57,6 +58,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Miami/Sightseeing-tour-or-party-on-a-Monterey-32ft/d662-438341P2",
     rawPayload: specimen438341p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "120303P9",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-120303P9",
+    rawPayload: specimen120303p9Payload as Record<string, unknown>,
   },
   {
     productCode: "5865P8",
