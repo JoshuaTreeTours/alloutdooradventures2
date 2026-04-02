@@ -103,7 +103,8 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
       const matchesProductCode =
         Boolean(tour.productCode) &&
         Boolean(entry.tour.productCode) &&
-        entry.tour.productCode?.toUpperCase() === tour.productCode.toUpperCase();
+        entry.tour.productCode?.toUpperCase() ===
+          tour.productCode.toUpperCase();
       const matchesSlug = entry.tour.slug === currentSlug;
 
       return !matchesProductCode && !matchesSlug;
@@ -138,10 +139,17 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             >
               <ol className="flex flex-wrap items-center gap-2">
                 {breadcrumbs.map((crumb, index) => (
-                  <li key={crumb.href} className="inline-flex items-center gap-2">
+                  <li
+                    key={crumb.href}
+                    className="inline-flex items-center gap-2"
+                  >
                     <a
                       href={crumb.href}
-                      aria-label={index === 2 ? `${crumb.label} Tours & Activities` : crumb.label}
+                      aria-label={
+                        index === 2
+                          ? `${crumb.label} Tours & Activities`
+                          : crumb.label
+                      }
                       className="transition hover:text-white hover:underline"
                     >
                       {crumb.label}
@@ -396,6 +404,20 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
         <section
           className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-700"
           data-testid="engine6-debug-diagnostics"
+          data-engine="engine6"
+          data-product-code={tour.productCode}
+          data-hero-source="api.photos"
+          data-hero-variant={tour.diagnostics.heroQualityClassification}
+          data-hero-size={`${tour.diagnostics.selectedHeroWidth ?? 0}x${tour.diagnostics.selectedHeroHeight ?? 0}`}
+          data-hero-url={tour.diagnostics.finalHeroUrl ?? ""}
+          data-content-status={
+            tour.overviewText &&
+            tour.highlights.length > 0 &&
+            tour.itinerary.length > 0 &&
+            tour.faqs.length > 0
+              ? "complete"
+              : "partial"
+          }
           aria-label="Engine6 diagnostics"
         >
           <p>
@@ -403,7 +425,8 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             {tour.diagnostics.heroSourceType}
           </p>
           <p>
-            <strong>Final hero URL:</strong> {tour.diagnostics.finalHeroUrl ?? "none"}
+            <strong>Final hero URL:</strong>{" "}
+            {tour.diagnostics.finalHeroUrl ?? "none"}
           </p>
           <p>
             <strong>Fallback fired:</strong>{" "}
@@ -431,7 +454,9 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </p>
           <p>
             <strong>Candidate family determinable:</strong>{" "}
-            {tour.diagnostics.candidateFamilyIdentityDeterminable ? "yes" : "no"}
+            {tour.diagnostics.candidateFamilyIdentityDeterminable
+              ? "yes"
+              : "no"}
           </p>
           <p>
             <strong>Hero parity (page/card/schema):</strong>{" "}

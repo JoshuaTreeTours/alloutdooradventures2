@@ -63,6 +63,10 @@ export const ENGINE6_FORT_LAUDERDALE_EBIKE_PRODUCT_CODE = "383300P6";
 export const ENGINE6_FORT_LAUDERDALE_EBIKE_ROUTE =
   "/destinations/florida/fort-lauderdale/tours/guided-electric-bike-tours-of-greater-fort-lauderdale";
 
+export const ENGINE6_FORT_LAUDERDALE_REEF_SNORKEL_PADDLE_PRODUCT_CODE =
+  "89173P8";
+export const ENGINE6_FORT_LAUDERDALE_REEF_SNORKEL_PADDLE_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/reef-and-snorkel-paddle-tour-89173p8";
 
 export const ENGINE6_MIAMI_PARASAILING_PRODUCT_CODE = "5503P10";
 export const ENGINE6_MIAMI_PARASAILING_ROUTE =
@@ -109,7 +113,10 @@ const ENGINE6_OVERLAP_REPLACEMENT_BY_PRODUCT_CODE: Record<
   string,
   Engine6OverlapReplacementConfig
 > = Object.fromEntries(
-  ENGINE6_OVERLAP_REPLACEMENT_CONFIGS.map(config => [config.productCode, config])
+  ENGINE6_OVERLAP_REPLACEMENT_CONFIGS.map(config => [
+    config.productCode,
+    config,
+  ])
 );
 
 const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
@@ -157,6 +164,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_FORT_LAUDERDALE_EBIKE_ROUTE,
     ENGINE6_FORT_LAUDERDALE_EBIKE_PRODUCT_CODE,
   ],
+  [
+    ENGINE6_FORT_LAUDERDALE_REEF_SNORKEL_PADDLE_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_REEF_SNORKEL_PADDLE_PRODUCT_CODE,
+  ],
   [ENGINE6_MIAMI_PARASAILING_ROUTE, ENGINE6_MIAMI_PARASAILING_PRODUCT_CODE],
   [ENGINE6_MIAMI_HELICOPTER_ROUTE, ENGINE6_MIAMI_HELICOPTER_PRODUCT_CODE],
   [
@@ -197,4 +208,5 @@ export const resolveEngine6OverlapReplacement = (productCode: string) =>
 export const isEngine6CanonicalPath = (path: string) =>
   Boolean(resolveEngine6ProductCodeForPath(path));
 
-export const engine6OverlapReplacementConfigs = ENGINE6_OVERLAP_REPLACEMENT_CONFIGS;
+export const engine6OverlapReplacementConfigs =
+  ENGINE6_OVERLAP_REPLACEMENT_CONFIGS;

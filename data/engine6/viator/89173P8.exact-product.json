@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "89173P8",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Reef-and-Snorkel-Paddle-Tour/d660-89173P8",
+    "title": "Reef Snorkel & Ocean Paddle Adventure in Fort Lauderdale Beach",
+    "description": {
+      "text": "South Florida is home to colorful marine life and reef systems just offshore, and this small-group experience combines paddleboarding with guided snorkeling so you can enjoy both. After a quick orientation, paddle out with your guide, learn how to spot coral habitats and local fish, and then snorkel above reef sections in calm coastal water. Your guide shares ecosystem context throughout and captures complimentary photos so you can stay focused on the water. This relaxed outing is ideal for travelers who want a hands-on ocean activity with instruction, wildlife interpretation, and plenty of time to explore Lauderdale-By-The-Sea from the water."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "priceFrom": "$115.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 43
+    },
+    "duration": "2 hours 30 minutes",
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/10/8d/2e/caption.jpg?w=700&h=500&s=1",
+          "variants": [
+            {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/10/8d/2e/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          ]
+        }
+      ]
+    },
+    "highlights": [
+      "Explore Florida’s marine life on a small-group paddle and snorkel tour",
+      "Learn reef and marine ecosystem context from your guide while on the water",
+      "All core paddleboarding and snorkeling equipment is provided",
+      "Receive complimentary photos from your guide after the experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "4244 El Mar Dr, Lauderdale-By-The-Sea, FL 33308, USA. After booking, call to confirm snorkel conditions and final start details before arrival."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Lauderdale-By-The-Sea",
+        "description": "Begin with orientation and launch from the beach area near Lauderdale-By-The-Sea."
+      },
+      {
+        "title": "Lauderdale-By-The-Sea Visitor Center",
+        "description": "Paddle along the shoreline while your guide shares local coastal context and reef conditions."
+      },
+      {
+        "title": "Anglin's Fishing Pier",
+        "description": "Navigate near the pier zone and look for reef fish and changing water color over coral sections."
+      },
+      {
+        "title": "Beach Pavilion",
+        "description": "Complete the guided paddle and snorkel loop and return to the beach meeting area."
+      }
+    ],
+    "inclusions": [
+      "All required paddleboard and snorkeling equipment",
+      "Complimentary guide photos",
+      "Snorkeling gear"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Wheelchair accessible",
+      "Stroller accessible",
+      "Service animals allowed",
+      "Near public transportation",
+      "Most travelers can participate",
+      "Maximum of 10 travelers"
+    ],
+    "faqs": [
+      {
+        "question": "Where is the meeting point for the tour?",
+        "answer": "Meet at 4244 El Mar Dr, Lauderdale-By-The-Sea, FL 33308. Contact the operator after booking to confirm start details and conditions."
+      },
+      {
+        "question": "How long does the reef and snorkel paddle tour last?",
+        "answer": "The experience lasts about 2 hours 30 minutes, including guided paddle and snorkel time."
+      },
+      {
+        "question": "Is equipment included?",
+        "answer": "Yes. Paddleboard and snorkeling equipment are included, and complimentary photos are provided by the guide."
+      },
+      {
+        "question": "Is this tour suitable for most travelers?",
+        "answer": "The tour is designed for most travelers and runs in a small-group format, with a maximum of 10 participants."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Snorkeling Tours"
+      },
+      {
+        "label": "Paddleboarding"
+      }
+    ]
+  }
+}
