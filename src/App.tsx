@@ -70,6 +70,7 @@ import {
   ENGINE6_ANTELOPE_ROUTE,
   ENGINE6_CATALINA_ROUTE,
   ENGINE6_EMERALD_CAVE_ROUTE,
+  ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_ANCHORAGE_PRIVATE_ROUTE,
   ENGINE6_ANCHORAGE_SUNSET_ROUTE,
@@ -263,6 +264,10 @@ export default function App() {
         />
         <Route
           path={ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE}
           component={Engine6SpecimenRoute}
         />
 
