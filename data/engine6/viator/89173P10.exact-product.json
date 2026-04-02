@@ -24,12 +24,22 @@
     "media": {
       "images": [
         {
-          "url": "https://dynamic-media.tacdn.com/media/photo-o/15/34/8d/c0/caption.jpg?w=700&h=500&s=1",
+          "url": "https://dynamic-media.tacdn.com/media/attractions-splice-spp-1440x960/15/34/8d/c0.jpg",
           "variants": [
             {
-              "url": "https://dynamic-media.tacdn.com/media/photo-o/15/34/8d/c0/caption.jpg?w=700&h=500&s=1",
-              "width": 700,
-              "height": 500
+              "url": "https://dynamic-media.tacdn.com/media/attractions-splice-spp-355x237/15/34/8d/c0.jpg",
+              "width": 355,
+              "height": 237
+            },
+            {
+              "url": "https://dynamic-media.tacdn.com/media/attractions-splice-spp-674x446/15/34/8d/c0.jpg",
+              "width": 674,
+              "height": 446
+            },
+            {
+              "url": "https://dynamic-media.tacdn.com/media/attractions-splice-spp-1440x960/15/34/8d/c0.jpg",
+              "width": 1440,
+              "height": 960
             }
           ]
         }
