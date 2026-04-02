@@ -79,7 +79,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     tour.categoryLabel ?? formatEngine6CategoryLabel(tour.primaryCategory);
   const seo = buildEngine6Seo(tour);
   const schema = buildEngine6SchemaGraph(tour);
-  const resolvedHeroUrl = tour.resolvedHero?.url ?? tour.heroImageUrl;
+  const resolvedHeroUrl = tour.resolvedHero?.url;
   const hasPrice = Boolean(tour.priceFormatted);
   const hasRating =
     typeof tour.aggregateRating === "number" &&

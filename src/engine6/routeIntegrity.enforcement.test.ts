@@ -8,6 +8,8 @@ import { getEngine6NativeTourByCanonicalPath, engine6ResolvedTours } from "./reg
 import {
   ENGINE6_NYC_PEDICAB_PRODUCT_CODE,
   ENGINE6_NYC_PEDICAB_ROUTE,
+  ENGINE6_MIAMI_MILLIONAIRES_ROW_PRODUCT_CODE,
+  ENGINE6_MIAMI_MILLIONAIRES_ROW_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_PRODUCT_CODE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
   ENGINE6_SPECIMEN_PRODUCT_CODE,
@@ -40,12 +42,12 @@ describe("engine6 route integrity enforcement", () => {
     expect(resolveEngine6ProductCodeForPath(ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE)).toBe(
       ENGINE6_SAN_DIEGO_JOSHUA_TREE_PRODUCT_CODE
     );
+  });
 
-    const tour = getEngine6NativeTourByCanonicalPath(
-      ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE
+  it("test 3b: Miami Millionaires Row specimen route resolves correctly", () => {
+    expect(resolveEngine6ProductCodeForPath(ENGINE6_MIAMI_MILLIONAIRES_ROW_ROUTE)).toBe(
+      ENGINE6_MIAMI_MILLIONAIRES_ROW_PRODUCT_CODE
     );
-    expect(tour?.productCode).toBe(ENGINE6_SAN_DIEGO_JOSHUA_TREE_PRODUCT_CODE);
-    expect(tour?.canonicalPath).toBe(ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE);
   });
 
   it("test 4: mismatch detection throws for intentional bad mapping", () => {

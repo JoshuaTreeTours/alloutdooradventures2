@@ -313,31 +313,11 @@ const emptyExtracted = (): Engine6Extracted => ({
   categories: [],
 });
 
-const rankVariants = (
-  variants: RankedImageVariant[]
-): RankedImageVariant | null => {
-  const ranked = [...variants].sort((a, b) => {
-    if (b.area !== a.area) {
-      return b.area - a.area;
-    }
-    if ((b.width ?? 0) !== (a.width ?? 0)) {
-      return (b.width ?? 0) - (a.width ?? 0);
-    }
-    return (b.height ?? 0) - (a.height ?? 0);
-  });
-
-  return ranked[0] ?? null;
-};
-
 const collectArrayVariants = (
   image: RecordLike,
   basePath: PathSegment[]
 ): RankedImageVariant[] => {
-  const variantsRaw = Array.isArray(image.variants)
-    ? image.variants
-    : Array.isArray(image.sizes)
-      ? image.sizes
-      : [];
+  const variantsRaw = Array.isArray(image.variants) ? image.variants : [];
 
   return variantsRaw
     .map((value, index) => ({ value, index }))
@@ -421,41 +401,28 @@ const resolveImageCollectionHeroCandidates = (
     if (!image) continue;
 
     const basePath = [...basePathPrefix, entry.index];
-    const selectedVariant = rankVariants([
+    const rankedVariants = [
       ...collectRecordVariants(image, basePath),
       ...collectArrayVariants(image, basePath),
-    ]);
+    ].sort((a, b) => {
+      if (b.area !== a.area) return b.area - a.area;
+      if ((b.width ?? 0) !== (a.width ?? 0)) return (b.width ?? 0) - (a.width ?? 0);
+      return (b.height ?? 0) - (a.height ?? 0);
+    });
 
-    if (selectedVariant) {
-      candidates.push({
-        url: selectedVariant.url,
-        path: selectedVariant.path,
-        variantPath: selectedVariant.variantPath,
-        width: selectedVariant.width,
-        height: selectedVariant.height,
-        sourceType,
-      });
+    if (rankedVariants.length > 0) {
+      for (const variant of rankedVariants) {
+        candidates.push({
+          url: variant.url,
+          path: variant.path,
+          variantPath: variant.variantPath,
+          width: variant.width,
+          height: variant.height,
+          sourceType,
+          isLive: true,
+        });
+      }
       continue;
-    }
-
-    const directUrl =
-      asImageUrl(image.url) ??
-      asImageUrl(image.src) ??
-      asImageUrl(image.imageUrl);
-    if (directUrl) {
-      const directPath = asImageUrl(image.url)
-        ? formatFieldPath([...basePath, "url"])
-        : asImageUrl(image.src)
-          ? formatFieldPath([...basePath, "src"])
-          : formatFieldPath([...basePath, "imageUrl"]);
-      candidates.push({
-        url: directUrl,
-        path: directPath,
-        variantPath: formatFieldPath(basePath),
-        width: parseLooseNumber(image.width),
-        height: parseLooseNumber(image.height),
-        sourceType,
-      });
     }
   }
 

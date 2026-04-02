@@ -1,10 +1,6 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
-import {
-  resolveProductScopedHero,
-  type Engine6HeroCandidate,
-} from "./heroResolver.js";
 import { extractEngine6Product } from "./viatorExtractors.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
@@ -143,7 +139,7 @@ const safeExtractEngine6Product = (payload: unknown) => {
   } catch {
     return {
       extracted: EMPTY_EXTRACTED_PRODUCT,
-      heroCandidates: [] as Engine6HeroCandidate[],
+      heroCandidates: [],
       diagnostics: buildDiagnostics("live-api", false),
       product: null,
     };
@@ -203,113 +199,6 @@ const respondWithErrorEnvelope = (
     ...(args.details ? { details: args.details } : {}),
   });
 
-const toHeroCandidates = (args: {
-  extraction: ReturnType<typeof extractEngine6Product>;
-  productCode: string;
-}): Engine6HeroCandidate[] => {
-  if (Array.isArray(args.extraction.heroCandidates)) {
-    return args.extraction.heroCandidates;
-  }
-
-  const heroUrl = args.extraction.extracted.heroImageUrl;
-  if (!heroUrl) {
-    return [];
-  }
-
-  return [
-    {
-      url: heroUrl,
-      sourceType: args.extraction.diagnostics.heroSourceType,
-      sourceProductCode:
-        typeof args.extraction.product?.productCode === "string"
-          ? args.extraction.product.productCode
-          : args.extraction.extracted.productUrl
-            ? args.productCode
-            : null,
-      sourceProductUrl: args.extraction.extracted.productUrl,
-      sourceFieldPath: args.extraction.diagnostics.heroImageFieldPath,
-      variantPath: args.extraction.diagnostics.heroVariantFieldPath,
-      width: args.extraction.diagnostics.selectedHeroWidth,
-      height: args.extraction.diagnostics.selectedHeroHeight,
-    },
-  ];
-};
-
-const applyResolvedHero = (args: {
-  productCode: string;
-  baseExtraction: ReturnType<typeof extractEngine6Product>;
-  preferredHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
-  fallbackHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
-}) => {
-  const preferredCandidates = args.preferredHeroExtraction
-    ? toHeroCandidates({
-        extraction: args.preferredHeroExtraction,
-        productCode: args.productCode,
-      })
-    : [];
-  const fallbackCandidates = args.fallbackHeroExtraction
-    ? toHeroCandidates({
-        extraction: args.fallbackHeroExtraction,
-        productCode: args.productCode,
-      })
-    : [];
-
-  const heroDecision = resolveProductScopedHero({
-    currentProductCode: args.productCode,
-    currentSourceProductUrl:
-      args.baseExtraction.extracted.productUrl ??
-      args.fallbackHeroExtraction?.extracted.productUrl ??
-      args.preferredHeroExtraction?.extracted.productUrl,
-    candidates: [...preferredCandidates, ...fallbackCandidates],
-  });
-  const providedCandidates = [...preferredCandidates, ...fallbackCandidates];
-  const fallbackReason = heroDecision.fallbackTriggered
-    ? providedCandidates.length === 0
-      ? "no-candidates"
-      : heroDecision.rejectedForeignCandidates.length > 0
-        ? `all-candidates-rejected:${heroDecision.rejectedForeignCandidates
-            .map(candidate => candidate.reason)
-            .join(",")}`
-        : "hero-unresolved"
-    : null;
-
-  return {
-    extracted: {
-      ...args.baseExtraction.extracted,
-      heroImageUrl: heroDecision.heroUrl,
-    },
-    diagnostics: {
-      ...args.baseExtraction.diagnostics,
-      heroImageFieldPath: heroDecision.finalCandidate?.fieldPath ?? null,
-      heroVariantFieldPath: heroDecision.finalCandidate?.variantPath ?? null,
-      selectedHeroWidth: heroDecision.finalCandidate?.width ?? null,
-      selectedHeroHeight: heroDecision.finalCandidate?.height ?? null,
-      imageSourceUsed: heroDecision.heroSourceType,
-      heroSourceType: heroDecision.heroSourceType,
-      heroCandidatesPresent: providedCandidates.length > 0,
-      heroCandidateCount: providedCandidates.length,
-      heroCandidateCountBeforeFiltering: providedCandidates.length,
-      heroCandidateCountAfterFiltering: heroDecision.finalCandidate ? 1 : 0,
-      heroPlaceholderFallbackReason: fallbackReason,
-      finalHeroUrl: heroDecision.heroUrl,
-      heroFallbackTriggered: heroDecision.fallbackTriggered,
-      captionPrecedenceApplied: heroDecision.captionPrecedenceApplied,
-      candidateFamilyIdentityDeterminable:
-        heroDecision.candidateFamilyIdentityDeterminable,
-      heroSurfaceParity: {
-        page: Boolean(heroDecision.heroUrl),
-        card: Boolean(heroDecision.heroUrl),
-        schema: Boolean(heroDecision.heroUrl),
-      },
-      rejectedForeignHeroCandidates: heroDecision.rejectedForeignCandidates,
-      heroSourceProductCode: heroDecision.finalCandidate?.sourceProductCode ?? null,
-      heroSourceProductUrl: heroDecision.finalCandidate?.sourceProductUrl ?? null,
-      heroSourceFieldPath: heroDecision.finalCandidate?.sourceFieldPath ?? null,
-      heroHost: heroDecision.finalCandidate?.host ?? null,
-    },
-  };
-};
-
 const getStrictHeroViolationReason = (args: {
   productCode: string;
   extractedHeroUrl: string | null;
@@ -337,21 +226,15 @@ const respondWithBundledFallback = (
   productCode: string,
   bundledPayload: Record<string, unknown>,
   diagnostics: ReturnType<typeof buildDiagnostics>,
-  liveExtraction?: ReturnType<typeof extractEngine6Product> | null
+  _liveExtraction?: ReturnType<typeof extractEngine6Product> | null
 ) => {
   const bundledExtraction = safeExtractEngine6Product(bundledPayload);
-  const merged = applyResolvedHero({
-    productCode,
-    baseExtraction: bundledExtraction,
-    preferredHeroExtraction: liveExtraction,
-    fallbackHeroExtraction: bundledExtraction,
-  });
-  Object.assign(diagnostics, merged.diagnostics, {
+  Object.assign(diagnostics, bundledExtraction.diagnostics, {
     source: "bundled-fallback",
   });
   const strictHeroViolationReason = getStrictHeroViolationReason({
     productCode,
-    extractedHeroUrl: merged.extracted.heroImageUrl,
+    extractedHeroUrl: bundledExtraction.extracted.heroImageUrl,
     diagnostics,
   });
   if (strictHeroViolationReason) {
@@ -372,7 +255,7 @@ const respondWithBundledFallback = (
     diagnostics,
     productCode,
     rawProduct: bundledExtraction.product,
-    extracted: merged.extracted,
+    extracted: bundledExtraction.extracted,
     headers: {
       "Cache-Control": "public, s-maxage=300, stale-while-revalidate=1800",
       "X-Engine6-Source": "bundled-exact-product-payload",

@@ -84,6 +84,7 @@ import {
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
+  ENGINE6_MIAMI_MILLIONAIRES_ROW_ROUTE,
 } from "./engine6/routes";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
 
@@ -263,6 +264,10 @@ export default function App() {
         />
         <Route
           path={ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_MIAMI_MILLIONAIRES_ROW_ROUTE}
           component={Engine6SpecimenRoute}
         />
 

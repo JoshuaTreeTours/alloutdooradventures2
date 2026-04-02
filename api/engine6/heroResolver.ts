@@ -1,7 +1,4 @@
-export type Engine6HeroSourceType =
-  | "api-primary"
-  | "api-gallery"
-  | "none";
+export type Engine6HeroSourceType = "api-primary" | "api-gallery" | "none";
 
 export type Engine6HeroQualityClassification =
   | "caption"
@@ -23,7 +20,7 @@ export type Engine6HeroCandidate = {
   variantPath?: string | null;
   width?: number | null;
   height?: number | null;
-  familyKey?: string | null;
+  isLive?: boolean;
 };
 
 export type Engine6RejectedHeroCandidate = {
@@ -35,10 +32,9 @@ export type Engine6RejectedHeroCandidate = {
     | "missing-product-scope"
     | "missing-source-field-path"
     | "non-product-source"
-    | "unverified-product-scope"
     | "invalid-url"
-    | "static-hero-disallowed"
-    | "untrusted-media-host";
+    | "untrusted-media-host"
+    | "not-live";
   candidateProductCode: string | null;
   candidateSourceProductUrl: string | null;
   fieldPath: string | null;
@@ -55,177 +51,14 @@ export type Engine6ResolvedHero = {
   candidateFamilyIdentityDeterminable: boolean;
 };
 
-const getEffectiveWidth = (candidate: Engine6HeroCandidate) => {
-  if (typeof candidate.width === "number" && Number.isFinite(candidate.width)) {
-    return candidate.width;
-  }
-
-  const match = candidate.url.match(/(\d{2,5})x(\d{2,5})/);
-  if (!match) {
-    return 0;
-  }
-
-  const width = Number(match[1]);
-  return Number.isFinite(width) ? width : 0;
-};
-
-const getEffectiveHeight = (candidate: Engine6HeroCandidate) => {
-  if (typeof candidate.height === "number" && Number.isFinite(candidate.height)) {
-    return candidate.height;
-  }
-
-  const match = candidate.url.match(/(\d{2,5})x(\d{2,5})/);
-  if (!match) {
-    return 0;
-  }
-
-  const height = Number(match[2]);
-  return Number.isFinite(height) ? height : 0;
-};
-
-const normalizeHeroMediaUrl = (value: string) => {
-  try {
-    const parsed = new URL(value);
-    const host = parsed.hostname.toLowerCase();
-    const isTacdnOrTripadvisorHost =
-      host.endsWith(".tacdn.com") ||
-      host.endsWith(".tripadvisor.com") ||
-      host === "tacdn.com" ||
-      host === "tripadvisor.com";
-
-    if (isTacdnOrTripadvisorHost) {
-      parsed.pathname = parsed.pathname
-        .replace(/\/photo-s\//i, "/photo-o/")
-        .replace(/\/+$/, "");
-      parsed.hash = "";
-    }
-
-    return parsed.toString();
-  } catch {
-    return value;
-  }
-};
-
-const extractHost = (value: string): string | null => {
-  try {
-    return new URL(value).hostname.toLowerCase();
-  } catch {
-    return null;
-  }
-};
-
-const isCaptionHeroUrl = (value: string) => /\/caption\.jpg(?:$|[?#])/i.test(value);
-
-const isSpliceHeroUrl = (value: string) =>
-  /\/attractions-splice-spp-(?:\d+x\d+)\//i.test(value);
-
-const getHeroQualityClassification = (
-  candidate: Pick<Engine6HeroCandidate, "sourceType" | "url">
-): Engine6HeroQualityClassification => {
-  if (isCaptionHeroUrl(candidate.url)) {
-    return "caption";
-  }
-  if (isSpliceHeroUrl(candidate.url)) {
-    return "splice";
-  }
-  return "product-media";
-};
-
-const getQualityRank = (candidate: Engine6HeroCandidate) => {
-  const quality = getHeroQualityClassification(candidate);
-  if (quality === "product-media") return 0;
-  if (quality === "splice") return 1;
-  if (quality === "caption") return 2;
-  return 4;
-};
-
-const extractCandidateFamilyKey = (value: string): string | null => {
-  try {
-    const parsed = new URL(value);
-    const host = parsed.hostname.toLowerCase();
-    const normalizedPath = parsed.pathname
-      .toLowerCase()
-      .replace(/\/+$/, "")
-      .replace(/attractions-splice-spp-\d+x\d+/g, "attractions-splice-spp");
-    const segments = normalizedPath.split("/").filter(Boolean);
-    if (segments.length < 2) {
-      return null;
-    }
-
-    const last = segments[segments.length - 1] ?? "";
-    if (/\.(?:jpg|jpeg|png|webp|avif)$/i.test(last)) {
-      segments.pop();
-    }
-
-    const familyPath = segments.join("/");
-    return familyPath ? `${host}/${familyPath}` : null;
-  } catch {
-    return null;
-  }
-};
-
-const hasCaptionPrecedence = (a: Engine6HeroCandidate, b: Engine6HeroCandidate) => {
-  const aIsCaption = getHeroQualityClassification(a) === "caption";
-  const bIsCaption = getHeroQualityClassification(b) === "caption";
-  if (aIsCaption === bIsCaption) {
-    return 0;
-  }
-
-  const aFamily = a.familyKey ?? extractCandidateFamilyKey(a.url);
-  const bFamily = b.familyKey ?? extractCandidateFamilyKey(b.url);
-  if (!aFamily || !bFamily || aFamily !== bFamily) {
-    return 0;
-  }
-
-  return aIsCaption ? -1 : 1;
-};
-
-const rankHeroCandidates = (candidates: Engine6HeroCandidate[]) =>
-  [...candidates].sort((a, b) => {
-    const captionWithinFamily = hasCaptionPrecedence(a, b);
-    if (captionWithinFamily !== 0) {
-      return captionWithinFamily;
-    }
-
-    const aQualityRank = getQualityRank(a);
-    const bQualityRank = getQualityRank(b);
-    const aWidth = getEffectiveWidth(a);
-    const bWidth = getEffectiveWidth(b);
-    const aHeight = getEffectiveHeight(a);
-    const bHeight = getEffectiveHeight(b);
-    const aArea = aWidth * aHeight;
-    const bArea = bWidth * bHeight;
-    const aPreferredWidthBucket = aWidth >= 1000 ? 2 : aWidth >= 800 ? 1 : 0;
-    const bPreferredWidthBucket = bWidth >= 1000 ? 2 : bWidth >= 800 ? 1 : 0;
-    if (aQualityRank !== bQualityRank) {
-      return aQualityRank - bQualityRank;
-    }
-
-    if (bPreferredWidthBucket !== aPreferredWidthBucket) {
-      return bPreferredWidthBucket - aPreferredWidthBucket;
-    }
-    if (bWidth !== aWidth) {
-      return bWidth - aWidth;
-    }
-    if (bArea !== aArea) {
-      return bArea - aArea;
-    }
-    return bHeight - aHeight;
-  });
-
 const normalizeProductCode = (value: string | null | undefined) => {
   const normalized = value?.trim().toUpperCase() ?? "";
-  return normalized.length > 0 ? normalized : null;
+  return normalized || null;
 };
 
-export const normalizeEngine6SourceProductUrl = (
-  value: string | null | undefined
-) => {
+export const normalizeEngine6SourceProductUrl = (value: string | null | undefined) => {
   const normalized = value?.trim();
-  if (!normalized) {
-    return null;
-  }
-
+  if (!normalized) return null;
   try {
     const parsed = new URL(normalized);
     parsed.hash = "";
@@ -237,21 +70,15 @@ export const normalizeEngine6SourceProductUrl = (
   }
 };
 
-const isStaticHeroDisallowed = (value: string) => /(^|\/)hero\.jpg(?:$|[?#])/i.test(value);
-
-const isValidHttpImageUrl = (value: string) => {
-  try {
-    const parsed = new URL(value);
-    return parsed.protocol === "http:" || parsed.protocol === "https:";
-  } catch {
-    return false;
-  }
+const getHeroQualityClassification = (url: string): Engine6HeroQualityClassification => {
+  if (/\/caption\.jpg(?:$|[?#])/i.test(url)) return "caption";
+  if (/\/attractions-splice-spp-(?:\d+x\d+)\//i.test(url)) return "splice";
+  return "product-media";
 };
 
 const isTrustedViatorMediaHost = (value: string) => {
   try {
-    const parsed = new URL(value);
-    const host = parsed.hostname.toLowerCase();
+    const host = new URL(value).hostname.toLowerCase();
     return (
       host === "cdn.filestackcontent.com" ||
       host === "www.filepicker.io" ||
@@ -274,14 +101,16 @@ const toRejectedCandidate = (
   url: candidate.url,
   sourceType: candidate.sourceType,
   reason,
-  candidateProductCode: normalizeProductCode(
-    candidate.sourceProductCode ?? candidate.candidateProductCode
-  ),
-  candidateSourceProductUrl: normalizeEngine6SourceProductUrl(
-    candidate.sourceProductUrl ?? candidate.candidateSourceProductUrl
-  ),
+  candidateProductCode: normalizeProductCode(candidate.sourceProductCode),
+  candidateSourceProductUrl: normalizeEngine6SourceProductUrl(candidate.sourceProductUrl),
   fieldPath: candidate.sourceFieldPath ?? candidate.fieldPath ?? null,
 });
+
+const precedenceRank = (quality: Engine6HeroQualityClassification) => {
+  if (quality === "caption") return 0;
+  if (quality === "product-media") return 1;
+  return 2;
+};
 
 export const resolveProductScopedHero = ({
   currentProductCode,
@@ -292,167 +121,86 @@ export const resolveProductScopedHero = ({
   currentSourceProductUrl?: string | null;
   candidates: Engine6HeroCandidate[];
 }): Engine6ResolvedHero => {
-  const normalizedCurrentProductCode = normalizeProductCode(currentProductCode);
-  const normalizedCurrentSourceProductUrl = normalizeEngine6SourceProductUrl(
-    currentSourceProductUrl
-  );
+  const currentCode = normalizeProductCode(currentProductCode);
+  const currentUrl = normalizeEngine6SourceProductUrl(currentSourceProductUrl);
   const rejectedForeignCandidates: Engine6RejectedHeroCandidate[] = [];
-  const validCandidates: Engine6HeroCandidate[] = [];
+  const eligible: Engine6HeroCandidate[] = [];
 
   for (const candidate of candidates) {
-    if (!candidate?.url) {
+    if (!candidate?.url || !/^https?:\/\//i.test(candidate.url)) {
+      rejectedForeignCandidates.push(toRejectedCandidate(candidate, "invalid-url"));
       continue;
     }
+    const sourceCode = normalizeProductCode(candidate.sourceProductCode);
+    const sourceUrl = normalizeEngine6SourceProductUrl(candidate.sourceProductUrl);
+    const sourceFieldPath = candidate.sourceFieldPath ?? candidate.fieldPath ?? null;
 
-    if (!isValidHttpImageUrl(candidate.url)) {
-      rejectedForeignCandidates.push(
-        toRejectedCandidate(candidate, "invalid-url")
-      );
+    if (!sourceCode || !sourceUrl) {
+      rejectedForeignCandidates.push(toRejectedCandidate(candidate, "missing-product-scope"));
       continue;
     }
-
-    if (isStaticHeroDisallowed(candidate.url)) {
-      rejectedForeignCandidates.push(
-        toRejectedCandidate(candidate, "static-hero-disallowed")
-      );
+    if (sourceCode !== currentCode) {
+      rejectedForeignCandidates.push(toRejectedCandidate(candidate, "foreign-product-code"));
       continue;
     }
-    const candidateProductCode = normalizeProductCode(
-      candidate.sourceProductCode ?? candidate.candidateProductCode
-    );
-    const candidateSourceProductUrl = normalizeEngine6SourceProductUrl(
-      candidate.sourceProductUrl ?? candidate.candidateSourceProductUrl
-    );
-    const candidateSourceFieldPath =
-      candidate.sourceFieldPath ?? candidate.fieldPath ?? null;
-
-    if (!candidateProductCode && !candidateSourceProductUrl) {
-      rejectedForeignCandidates.push(
-        toRejectedCandidate(candidate, "missing-product-scope")
-      );
+    if (sourceUrl !== currentUrl) {
+      rejectedForeignCandidates.push(toRejectedCandidate(candidate, "foreign-product-url"));
       continue;
     }
-    if (!candidateSourceFieldPath) {
-      rejectedForeignCandidates.push(
-        toRejectedCandidate(candidate, "missing-source-field-path")
-      );
+    if (!sourceFieldPath) {
+      rejectedForeignCandidates.push(toRejectedCandidate(candidate, "missing-source-field-path"));
       continue;
     }
-    if (!candidateSourceFieldPath.startsWith("product.media.images")) {
-      rejectedForeignCandidates.push(
-        toRejectedCandidate(candidate, "non-product-source")
-      );
-      continue;
-    }
-
-    if (
-      normalizedCurrentProductCode &&
-      candidateProductCode &&
-      normalizedCurrentProductCode !== candidateProductCode
-    ) {
-      rejectedForeignCandidates.push(
-        toRejectedCandidate(candidate, "foreign-product-code")
-      );
-      continue;
-    }
-
-    if (
-      normalizedCurrentSourceProductUrl &&
-      candidateSourceProductUrl &&
-      normalizedCurrentSourceProductUrl !== candidateSourceProductUrl
-    ) {
-      rejectedForeignCandidates.push(
-        toRejectedCandidate(candidate, "foreign-product-url")
-      );
-      continue;
-    }
-
-    const verifiedByProductCode =
-      normalizedCurrentProductCode &&
-      candidateProductCode &&
-      normalizedCurrentProductCode === candidateProductCode;
-    const verifiedByProductUrl =
-      normalizedCurrentSourceProductUrl &&
-      candidateSourceProductUrl &&
-      normalizedCurrentSourceProductUrl === candidateSourceProductUrl;
-
-    if (!verifiedByProductCode && !verifiedByProductUrl) {
-      rejectedForeignCandidates.push(
-        toRejectedCandidate(candidate, "unverified-product-scope")
-      );
+    if (!sourceFieldPath.startsWith("product.media.images")) {
+      rejectedForeignCandidates.push(toRejectedCandidate(candidate, "non-product-source"));
       continue;
     }
     if (!isTrustedViatorMediaHost(candidate.url)) {
-      rejectedForeignCandidates.push(
-        toRejectedCandidate(candidate, "untrusted-media-host")
-      );
+      rejectedForeignCandidates.push(toRejectedCandidate(candidate, "untrusted-media-host"));
+      continue;
+    }
+    if (candidate.isLive !== true) {
+      rejectedForeignCandidates.push(toRejectedCandidate(candidate, "not-live"));
       continue;
     }
 
-    validCandidates.push({
+    const quality = candidate.qualityClassification ?? getHeroQualityClassification(candidate.url);
+    eligible.push({
       ...candidate,
-      sourceProductCode: candidateProductCode,
-      sourceProductUrl: candidateSourceProductUrl,
-      sourceFieldPath: candidateSourceFieldPath,
-      host: candidate.host ?? extractHost(candidate.url),
-      qualityClassification:
-        candidate.qualityClassification ?? getHeroQualityClassification(candidate),
-      candidateProductCode,
-      candidateSourceProductUrl,
-      fieldPath: candidateSourceFieldPath,
-      familyKey: candidate.familyKey ?? extractCandidateFamilyKey(candidate.url),
+      sourceProductCode: sourceCode,
+      sourceProductUrl: sourceUrl,
+      sourceFieldPath,
+      host: candidate.host ?? new URL(candidate.url).hostname.toLowerCase(),
+      qualityClassification: quality,
+      fieldPath: sourceFieldPath,
     });
   }
 
-  if (validCandidates.length > 0) {
-    const selectedCandidate = rankHeroCandidates(validCandidates)[0]!;
-    const normalizedUrl = normalizeHeroMediaUrl(selectedCandidate.url);
-    const selectedFamilyKey =
-      selectedCandidate.familyKey ?? extractCandidateFamilyKey(selectedCandidate.url);
-    const candidateFamilyIdentityDeterminable = validCandidates.some(
-      candidate => (candidate.familyKey ?? extractCandidateFamilyKey(candidate.url)) !== null
-    );
-    const captionPrecedenceApplied = validCandidates.some(candidate => {
-      if (candidate === selectedCandidate) {
-        return false;
-      }
-      const selectedIsCaption =
-        getHeroQualityClassification(selectedCandidate) === "caption";
-      const candidateIsCaption = getHeroQualityClassification(candidate) === "caption";
-      if (!selectedIsCaption || candidateIsCaption) {
-        return false;
-      }
-      const candidateFamily =
-        candidate.familyKey ?? extractCandidateFamilyKey(candidate.url);
-      return Boolean(selectedFamilyKey && candidateFamily && selectedFamilyKey === candidateFamily);
-    });
+  const winner = [...eligible].sort(
+    (a, b) => precedenceRank(a.qualityClassification!) - precedenceRank(b.qualityClassification!)
+  )[0];
 
+  if (!winner) {
     return {
-      heroUrl: normalizedUrl,
-      heroSourceType: selectedCandidate.sourceType,
-      heroQualityClassification: getHeroQualityClassification(selectedCandidate),
-      fallbackTriggered: false,
-      finalCandidate: {
-        ...selectedCandidate,
-        url: normalizedUrl,
-        familyKey: selectedFamilyKey,
-        width: selectedCandidate.width ?? getEffectiveWidth(selectedCandidate),
-        height: selectedCandidate.height ?? getEffectiveHeight(selectedCandidate),
-      },
+      heroUrl: null,
+      heroSourceType: "none",
+      heroQualityClassification: "none",
+      fallbackTriggered: true,
+      finalCandidate: null,
       rejectedForeignCandidates,
-      captionPrecedenceApplied,
-      candidateFamilyIdentityDeterminable,
+      captionPrecedenceApplied: false,
+      candidateFamilyIdentityDeterminable: false,
     };
   }
 
   return {
-    heroUrl: null,
-    heroSourceType: "none",
-    heroQualityClassification: "none",
-    fallbackTriggered: true,
-    finalCandidate: null,
+    heroUrl: winner.url,
+    heroSourceType: winner.sourceType,
+    heroQualityClassification: winner.qualityClassification!,
+    fallbackTriggered: false,
+    finalCandidate: winner,
     rejectedForeignCandidates,
-    captionPrecedenceApplied: false,
+    captionPrecedenceApplied: winner.qualityClassification === "caption",
     candidateFamilyIdentityDeterminable: false,
   };
 };
