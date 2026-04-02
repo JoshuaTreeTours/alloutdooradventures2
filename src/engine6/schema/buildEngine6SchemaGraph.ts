@@ -35,7 +35,7 @@ const buildCityAwareSchemaName = ({
 };
 
 export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
-  const resolvedHeroUrl = tour.resolvedHero?.url ?? tour.heroImageUrl ?? undefined;
+  const resolvedHeroUrl = tour.resolvedHero?.url ?? undefined;
   const canonicalUrl = buildCanonicalUrl(tour.canonicalPath);
   const affiliateUrl = tour.bookingUrl;
   const offerUrl =

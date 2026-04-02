@@ -434,6 +434,7 @@ const resolveImageCollectionHeroCandidates = (
         width: selectedVariant.width,
         height: selectedVariant.height,
         sourceType,
+        isLive: true,
       });
       continue;
     }
@@ -455,6 +456,7 @@ const resolveImageCollectionHeroCandidates = (
         width: parseLooseNumber(image.width),
         height: parseLooseNumber(image.height),
         sourceType,
+        isLive: true,
       });
     }
   }

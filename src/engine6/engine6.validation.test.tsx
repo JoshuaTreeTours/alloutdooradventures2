@@ -188,21 +188,55 @@ describe("engine6 single-tour validation harness", () => {
     }
   );
 
-  it("fails strict image validation when no exact-product image exists", () => {
+  it("fails specimen mapping when no valid same-product live candidate exists", () => {
     const fixture = ENGINE6_VALIDATION_FIXTURES.find(
       entry => entry.productCode === "36001P1"
     );
     expect(fixture).toBeDefined();
     const payload = toPayload(fixture!);
-    const tour = mapViatorToEngine6Tour(payload);
+    expect(() => mapViatorToEngine6Tour(payload)).toThrow(
+      /strict hero contract violation/i
+    );
+  });
 
-    expect(tour.heroImageUrl).toBeNull();
-    expect(tour.diagnostics.heroFallbackTriggered).toBe(true);
-    expect(tour.diagnostics.heroPlaceholderFallbackReason).toBe("no-candidates");
+  it("keeps engine6 free of default hero fallback paths", () => {
+    const fixture = strictHeroFixtures[0];
+    expect(fixture).toBeDefined();
+    const tour = mapViatorToEngine6Tour(toPayload(fixture!));
+
+    expect(tour.heroImageUrl).not.toContain("/hero.jpg");
+    expect(tour.heroImageUrl).not.toContain("/images/hiking-hero.jpg");
+    expect(tour.heroImageUrl).not.toContain("/images/cycling-hero.jpg");
+    expect(tour.diagnostics.heroPlaceholderFallbackReason).toBeNull();
+  });
+
+  it("locks parity across page/card/schema and prevents TourCard substitution", () => {
+    const fixture = strictHeroFixtures[0];
+    expect(fixture).toBeDefined();
+    const tour = mapViatorToEngine6Tour(toPayload(fixture!));
+    const card = toEngine6Card(tour);
+    const html = renderToString(<Engine6TourPage tour={tour} />);
+    const schema = buildEngine6SchemaGraph(tour);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const product = graph.find(node => node["@type"] === "Product") as
+      | Record<string, unknown>
+      | undefined;
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as
+      | Record<string, unknown>
+      | undefined;
+
+    expect(tour.resolvedHero).toBeTruthy();
+    expect(card.imageUrl).toBe(tour.resolvedHero?.url);
+    expect(card.imageUrl).toBe(tour.heroImageUrl);
+    expect(html).toContain(
+      `src=\"${tour.resolvedHero!.url.replace(/&/g, "&amp;")}\"`
+    );
+    expect(product?.image).toBe(tour.resolvedHero?.url);
+    expect(trip?.image).toBe(tour.resolvedHero?.url);
   });
 
   it("rotates standardized SEO openings across multiple tours", () => {
-    const tours = ENGINE6_VALIDATION_FIXTURES.map(fixture =>
+    const tours = strictHeroFixtures.map(fixture =>
       mapViatorToEngine6Tour(toPayload(fixture))
     );
     const openings = tours.map(tour =>
@@ -214,11 +248,11 @@ describe("engine6 single-tour validation harness", () => {
   });
 
   it("emits a compact validation report for each Engine6 tour fixture", () => {
-    const reports = ENGINE6_VALIDATION_FIXTURES.map(
+    const reports = strictHeroFixtures.map(
       buildEngine6ValidationReport
     );
 
-    expect(reports).toHaveLength(ENGINE6_VALIDATION_FIXTURES.length);
+    expect(reports).toHaveLength(strictHeroFixtures.length);
     expect(reports.every(report => report.cardRenderSucceeded)).toBe(true);
     expect(reports.every(report => report.pageRenderSucceeded)).toBe(true);
     expect(
