@@ -11,6 +11,8 @@ const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
     "https://www.viator.com/tours/Las-Vegas/Antelope-Canyon-Horseshoe-Bend-Day-Tour-from-Las-Vegas/d684-60136P1",
   "411138P3":
     "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3",
+  "89173P8":
+    "https://www.viator.com/tours/Fort-Lauderdale/Reef-and-Snorkel-Paddle-Tour/d660-89173P8",
 };
 
 const FALLBACK_ENGINE6_VIATOR_SEARCH_URL = "https://www.viator.com/search";
@@ -51,7 +53,8 @@ export const buildEngine6ViatorBookingUrl = (
   productCode: string,
   preferredUrl: string | null = null
 ): string => {
-  const canonicalUrl = ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE[productCode];
+  const canonicalUrl =
+    ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE[productCode];
   const url =
     normalizePreferredViatorUrl(preferredUrl) ??
     (canonicalUrl ? new URL(canonicalUrl) : null) ??
