@@ -80,13 +80,9 @@
       "images": [
         {
           "isCover": true,
-          "variants": {
-            "FULL": {
-              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/d8/6b/8c.jpg",
-              "width": 674,
-              "height": 446
-            }
-          }
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/23/33/84/p2/brooklyn-bridge-bike.jpg",
+          "width": 674,
+          "height": 446
         }
       ]
     }

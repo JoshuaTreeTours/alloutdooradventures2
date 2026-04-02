@@ -76,13 +76,9 @@
       "images": [
         {
           "isCover": true,
-          "variants": {
-            "FULL": {
-              "url": "https://cdn.filestackcontent.com/x3s6r9FHTKO8TAc98xcw",
-              "width": 1200,
-              "height": 800
-            }
-          }
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/greenbelt-source.jpg",
+          "width": 1200,
+          "height": 800
         }
       ]
     }

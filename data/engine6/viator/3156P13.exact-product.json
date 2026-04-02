@@ -56,13 +56,9 @@
       "images": [
         {
           "isCover": true,
-          "variants": {
-            "FULL": {
-              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0c/10/74/6e.jpg",
-              "width": 720,
-              "height": 480
-            }
-          }
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/31/56/p1/3/classic-manhattan-ebike.jpg",
+          "width": 720,
+          "height": 480
         }
       ]
     },
