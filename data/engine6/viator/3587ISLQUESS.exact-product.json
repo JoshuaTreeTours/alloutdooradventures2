@@ -1,0 +1,75 @@
+{
+  "product": {
+    "productCode": "3587ISLQUESS",
+    "title": "Miami Millionaires Row Cruise",
+    "productUrl": "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-3587ISLQUESS?pid=P00290915&mcid=42383&medium=link",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 35,
+        "fromPriceFormatted": "$35.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.1,
+      "totalReviews": 827
+    },
+    "description": "Experience Miami's signature vibe by water on this city sightseeing cruise through Biscayne Bay. Cruise past the Port of Miami, Fisher Island, and Millionaire's Row for views of celebrity homes and the downtown skyline.",
+    "highlights": [
+      "See Miami from the water on a Biscayne Bay sightseeing cruise.",
+      "View celebrity homes and private islands on Millionaire's Row.",
+      "Enjoy skyline views featuring the Port of Miami and Fisher Island."
+    ],
+    "inclusions": [
+      "A fully narrated 90-minute bilingual sightseeing tour.",
+      "Spectacular views of Biscayne Bay, the Miami Skyline, Fisher Island, and Millionaire's Row.",
+      "Restroom on board and an air-conditioned indoor area."
+    ],
+    "meetingPoint": {
+      "description": "Ticket booth at Bayside Marketplace, 401 Biscayne Boulevard, Miami, FL 33132."
+    },
+    "itinerary": {
+      "duration": "1 hour 30 minutes"
+    },
+    "additionalInfo": [
+      "Confirmation will be received at time of booking.",
+      "Wheelchair and stroller accessible.",
+      "This tour/activity will have a maximum of 120 travelers."
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Miami Millionaires Row Cruise?",
+        "answer": "The sightseeing cruise is approximately 1 hour 30 minutes."
+      },
+      {
+        "question": "Where is the meeting point for this cruise?",
+        "answer": "Boarding voucher exchange is at the ticket booth in Bayside Marketplace, 401 Biscayne Boulevard, Miami, FL 33132."
+      },
+      {
+        "question": "What landmarks does the cruise pass?",
+        "answer": "The route highlights Biscayne Bay views with the Miami skyline, Port of Miami, Fisher Island, and Millionaire's Row homes."
+      },
+      {
+        "question": "What is included on board?",
+        "answer": "The cruise includes a fully narrated bilingual sightseeing experience with onboard restroom access and an air-conditioned area."
+      }
+    ],
+    "categories": [
+      "Day Cruises",
+      "Boat Tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-content--1x-1/15/31/9f/2f.jpg",
+          "width": 674,
+          "height": 446,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}
