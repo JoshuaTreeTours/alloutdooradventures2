@@ -313,22 +313,6 @@ const emptyExtracted = (): Engine6Extracted => ({
   categories: [],
 });
 
-const rankVariants = (
-  variants: RankedImageVariant[]
-): RankedImageVariant | null => {
-  const ranked = [...variants].sort((a, b) => {
-    if (b.area !== a.area) {
-      return b.area - a.area;
-    }
-    if ((b.width ?? 0) !== (a.width ?? 0)) {
-      return (b.width ?? 0) - (a.width ?? 0);
-    }
-    return (b.height ?? 0) - (a.height ?? 0);
-  });
-
-  return ranked[0] ?? null;
-};
-
 const collectArrayVariants = (
   image: RecordLike,
   basePath: PathSegment[]
@@ -421,21 +405,31 @@ const resolveImageCollectionHeroCandidates = (
     if (!image) continue;
 
     const basePath = [...basePathPrefix, entry.index];
-    const selectedVariant = rankVariants([
+    const discoveredVariants = [
       ...collectRecordVariants(image, basePath),
       ...collectArrayVariants(image, basePath),
-    ]);
+    ];
 
-    if (selectedVariant) {
-      candidates.push({
-        url: selectedVariant.url,
-        path: selectedVariant.path,
-        variantPath: selectedVariant.variantPath,
-        width: selectedVariant.width,
-        height: selectedVariant.height,
-        sourceType,
+    if (discoveredVariants.length > 0) {
+      const sortedVariants = [...discoveredVariants].sort((a, b) => {
+        if (b.area !== a.area) {
+          return b.area - a.area;
+        }
+        if ((b.width ?? 0) !== (a.width ?? 0)) {
+          return (b.width ?? 0) - (a.width ?? 0);
+        }
+        return (b.height ?? 0) - (a.height ?? 0);
       });
-      continue;
+      for (const selectedVariant of sortedVariants) {
+        candidates.push({
+          url: selectedVariant.url,
+          path: selectedVariant.path,
+          variantPath: selectedVariant.variantPath,
+          width: selectedVariant.width,
+          height: selectedVariant.height,
+          sourceType,
+        });
+      }
     }
 
     const directUrl =

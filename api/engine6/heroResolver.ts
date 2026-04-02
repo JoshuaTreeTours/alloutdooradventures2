@@ -83,29 +83,6 @@ const getEffectiveHeight = (candidate: Engine6HeroCandidate) => {
   return Number.isFinite(height) ? height : 0;
 };
 
-const normalizeHeroMediaUrl = (value: string) => {
-  try {
-    const parsed = new URL(value);
-    const host = parsed.hostname.toLowerCase();
-    const isTacdnOrTripadvisorHost =
-      host.endsWith(".tacdn.com") ||
-      host.endsWith(".tripadvisor.com") ||
-      host === "tacdn.com" ||
-      host === "tripadvisor.com";
-
-    if (isTacdnOrTripadvisorHost) {
-      parsed.pathname = parsed.pathname
-        .replace(/\/photo-s\//i, "/photo-o/")
-        .replace(/\/+$/, "");
-      parsed.hash = "";
-    }
-
-    return parsed.toString();
-  } catch {
-    return value;
-  }
-};
-
 const extractHost = (value: string): string | null => {
   try {
     return new URL(value).hostname.toLowerCase();
@@ -133,9 +110,9 @@ const getHeroQualityClassification = (
 
 const getQualityRank = (candidate: Engine6HeroCandidate) => {
   const quality = getHeroQualityClassification(candidate);
-  if (quality === "product-media") return 0;
-  if (quality === "splice") return 1;
-  if (quality === "caption") return 2;
+  if (quality === "caption") return 0;
+  if (quality === "product-media") return 1;
+  if (quality === "splice") return 2;
   return 4;
 };
 
@@ -164,29 +141,8 @@ const extractCandidateFamilyKey = (value: string): string | null => {
   }
 };
 
-const hasCaptionPrecedence = (a: Engine6HeroCandidate, b: Engine6HeroCandidate) => {
-  const aIsCaption = getHeroQualityClassification(a) === "caption";
-  const bIsCaption = getHeroQualityClassification(b) === "caption";
-  if (aIsCaption === bIsCaption) {
-    return 0;
-  }
-
-  const aFamily = a.familyKey ?? extractCandidateFamilyKey(a.url);
-  const bFamily = b.familyKey ?? extractCandidateFamilyKey(b.url);
-  if (!aFamily || !bFamily || aFamily !== bFamily) {
-    return 0;
-  }
-
-  return aIsCaption ? -1 : 1;
-};
-
 const rankHeroCandidates = (candidates: Engine6HeroCandidate[]) =>
   [...candidates].sort((a, b) => {
-    const captionWithinFamily = hasCaptionPrecedence(a, b);
-    if (captionWithinFamily !== 0) {
-      return captionWithinFamily;
-    }
-
     const aQualityRank = getQualityRank(a);
     const bQualityRank = getQualityRank(b);
     const aWidth = getEffectiveWidth(a);
@@ -406,26 +362,17 @@ export const resolveProductScopedHero = ({
 
   if (validCandidates.length > 0) {
     const selectedCandidate = rankHeroCandidates(validCandidates)[0]!;
-    const normalizedUrl = normalizeHeroMediaUrl(selectedCandidate.url);
+    const normalizedUrl = selectedCandidate.url;
     const selectedFamilyKey =
       selectedCandidate.familyKey ?? extractCandidateFamilyKey(selectedCandidate.url);
     const candidateFamilyIdentityDeterminable = validCandidates.some(
       candidate => (candidate.familyKey ?? extractCandidateFamilyKey(candidate.url)) !== null
     );
-    const captionPrecedenceApplied = validCandidates.some(candidate => {
-      if (candidate === selectedCandidate) {
-        return false;
-      }
-      const selectedIsCaption =
-        getHeroQualityClassification(selectedCandidate) === "caption";
-      const candidateIsCaption = getHeroQualityClassification(candidate) === "caption";
-      if (!selectedIsCaption || candidateIsCaption) {
-        return false;
-      }
-      const candidateFamily =
-        candidate.familyKey ?? extractCandidateFamilyKey(candidate.url);
-      return Boolean(selectedFamilyKey && candidateFamily && selectedFamilyKey === candidateFamily);
-    });
+    const captionPrecedenceApplied =
+      getHeroQualityClassification(selectedCandidate) === "caption" &&
+      validCandidates.some(
+        candidate => getHeroQualityClassification(candidate) !== "caption"
+      );
 
     return {
       heroUrl: normalizedUrl,
