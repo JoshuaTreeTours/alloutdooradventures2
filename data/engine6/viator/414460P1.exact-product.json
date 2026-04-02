@@ -26,13 +26,9 @@
     "images": [
       {
         "isCover": true,
-        "variants": {
-          "FULL": {
-            "url": "https://www.filepicker.io/api/file/uC6eNRvDSXmFXzotTTGk",
-            "width": 900,
-            "height": 600
-          }
-        }
+        "url": "https://dynamic-media.tacdn.com/media/photo-o/34/14/46/01/central-park-pedicab.jpg",
+        "width": 900,
+        "height": 600
       }
     ]
   },

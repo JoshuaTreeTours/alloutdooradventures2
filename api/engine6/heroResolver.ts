@@ -38,7 +38,8 @@ export type Engine6RejectedHeroCandidate = {
     | "unverified-product-scope"
     | "invalid-url"
     | "static-hero-disallowed"
-    | "untrusted-media-host";
+    | "untrusted-media-host"
+    | "non-product-photo-lineage";
   candidateProductCode: string | null;
   candidateSourceProductUrl: string | null;
   fieldPath: string | null;
@@ -252,18 +253,39 @@ const isTrustedViatorMediaHost = (value: string) => {
   try {
     const parsed = new URL(value);
     const host = parsed.hostname.toLowerCase();
-    return (
-      host === "cdn.filestackcontent.com" ||
-      host === "www.filepicker.io" ||
-      host === "dynamic-media.tacdn.com" ||
-      host === "media.tacdn.com" ||
-      host === "media-cdn.tripadvisor.com" ||
-      host === "dynamic-media-cdn.tripadvisor.com" ||
-      (host.includes("media") && host.endsWith(".tacdn.com")) ||
-      (host.includes("media") && host.endsWith(".tripadvisor.com"))
-    );
+    return host === "dynamic-media.tacdn.com";
   } catch {
     return false;
+  }
+};
+
+const isProductPhotoOLineagePath = (value: string) => {
+  try {
+    const parsed = new URL(value);
+    return parsed.pathname.toLowerCase().includes("/media/photo-o/");
+  } catch {
+    return false;
+  }
+};
+
+const toCaptionUrlFromPhotoOLineage = (value: string): string | null => {
+  try {
+    const parsed = new URL(value);
+    if (!isProductPhotoOLineagePath(value)) {
+      return null;
+    }
+
+    const pathSegments = parsed.pathname.split("/");
+    if (pathSegments.length < 2) {
+      return null;
+    }
+    pathSegments[pathSegments.length - 1] = "caption.jpg";
+    parsed.pathname = pathSegments.join("/");
+    parsed.search = "?w=700&h=500&s=1";
+    parsed.hash = "";
+    return parsed.toString();
+  } catch {
+    return null;
   }
 };
 
@@ -388,6 +410,12 @@ export const resolveProductScopedHero = ({
       );
       continue;
     }
+    if (!isProductPhotoOLineagePath(candidate.url)) {
+      rejectedForeignCandidates.push(
+        toRejectedCandidate(candidate, "non-product-photo-lineage")
+      );
+      continue;
+    }
 
     validCandidates.push({
       ...candidate,
@@ -406,7 +434,23 @@ export const resolveProductScopedHero = ({
 
   if (validCandidates.length > 0) {
     const selectedCandidate = rankHeroCandidates(validCandidates)[0]!;
-    const normalizedUrl = normalizeHeroMediaUrl(selectedCandidate.url);
+    const captionUrl = toCaptionUrlFromPhotoOLineage(selectedCandidate.url);
+    if (!captionUrl) {
+      return {
+        heroUrl: null,
+        heroSourceType: "none",
+        heroQualityClassification: "none",
+        fallbackTriggered: true,
+        finalCandidate: null,
+        rejectedForeignCandidates: [
+          ...rejectedForeignCandidates,
+          toRejectedCandidate(selectedCandidate, "non-product-photo-lineage"),
+        ],
+        captionPrecedenceApplied: false,
+        candidateFamilyIdentityDeterminable: false,
+      };
+    }
+    const normalizedUrl = normalizeHeroMediaUrl(captionUrl);
     const selectedFamilyKey =
       selectedCandidate.familyKey ?? extractCandidateFamilyKey(selectedCandidate.url);
     const candidateFamilyIdentityDeterminable = validCandidates.some(

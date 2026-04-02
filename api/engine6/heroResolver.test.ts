@@ -3,19 +3,19 @@ import { describe, expect, it } from "vitest";
 import { resolveProductScopedHero } from "./heroResolver";
 
 describe("engine6 hero resolver", () => {
-  it("accepts the current product primary API image before any placeholder", () => {
+  it("accepts only dynamic-media TACDN candidates", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "63657P1",
       currentSourceProductUrl:
         "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
       candidates: [
         {
-          url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg",
+          url: "https://dynamic-media.tacdn.com/media/photo-o/0f/56/92/6e/caption.jpg?w=700&h=500&s=1",
           sourceType: "api-primary",
           candidateProductCode: "63657P1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
-          fieldPath: "product.media.images[0].variants.FULL.url",
+          fieldPath: "product.media.images[0].url",
         },
         {
           url: "/images/hiking-hero.jpg",
@@ -25,10 +25,10 @@ describe("engine6 hero resolver", () => {
     });
 
     expect(resolved.heroUrl).toBe(
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg"
+      "https://dynamic-media.tacdn.com/media/photo-o/0f/56/92/6e/caption.jpg?w=700&h=500&s=1"
     );
     expect(resolved.heroSourceType).toBe("api-primary");
-    expect(resolved.heroQualityClassification).toBe("splice");
+    expect(resolved.heroQualityClassification).toBe("caption");
     expect(resolved.fallbackTriggered).toBe(false);
   });
 
@@ -75,7 +75,7 @@ describe("engine6 hero resolver", () => {
     );
   });
 
-  it("accepts product-owned media hosts across Viator/Tripadvisor variants", () => {
+  it("rejects non-dynamic-media TACDN hosts", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "36001P1",
       currentSourceProductUrl:
@@ -92,12 +92,9 @@ describe("engine6 hero resolver", () => {
       ],
     });
 
-    expect(resolved.heroUrl).toBe(
-      "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg"
-    );
-    expect(resolved.heroSourceType).toBe("api-primary");
-    expect(resolved.heroQualityClassification).toBe("splice");
-    expect(resolved.fallbackTriggered).toBe(false);
+    expect(resolved.heroUrl).toBeNull();
+    expect(resolved.heroSourceType).toBe("none");
+    expect(resolved.fallbackTriggered).toBe(true);
   });
 
   it("applies caption precedence only within a determinable matching family", () => {
@@ -139,7 +136,7 @@ describe("engine6 hero resolver", () => {
     expect(resolved.fallbackTriggered).toBe(false);
   });
 
-  it("does not allow cross-family caption to override stronger same-product media", () => {
+  it("does not allow non-dynamic-media splice paths", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "447234P3",
       currentSourceProductUrl:
@@ -168,15 +165,11 @@ describe("engine6 hero resolver", () => {
       ],
     });
 
-    expect(resolved.heroUrl).toBe(
-      "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg"
-    );
-    expect(resolved.heroQualityClassification).toBe("splice");
-    expect(resolved.captionPrecedenceApplied).toBe(false);
-    expect(resolved.candidateFamilyIdentityDeterminable).toBe(true);
+    expect(resolved.heroUrl).toBeNull();
+    expect(resolved.fallbackTriggered).toBe(true);
   });
 
-  it("normalizes TACDN media URLs to high-resolution variants where possible", () => {
+  it("rejects dynamic-media TACDN URLs that are not /media/photo-o/ lineage", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "SUNSET1",
       currentSourceProductUrl:
@@ -193,8 +186,13 @@ describe("engine6 hero resolver", () => {
       ],
     });
 
-    expect(resolved.heroUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg?foo=bar"
+    expect(resolved.heroUrl).toBeNull();
+    expect(resolved.rejectedForeignCandidates).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          reason: "non-product-photo-lineage",
+        }),
+      ])
     );
   });
 
@@ -253,7 +251,7 @@ describe("engine6 hero resolver", () => {
     });
 
     expect(resolved.heroUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg"
+      "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/caption.jpg?w=700&h=500&s=1"
     );
     expect(resolved.heroQualityClassification).toBe("product-media");
     expect(resolved.fallbackTriggered).toBe(false);
@@ -286,13 +284,13 @@ describe("engine6 hero resolver", () => {
     });
 
     expect(resolved.heroUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/9a/8b/7c/6d.jpg?w=1600&h=1066&s=1"
+      "https://dynamic-media.tacdn.com/media/photo-o/9a/8b/7c/caption.jpg?w=700&h=500&s=1"
     );
     expect(resolved.heroQualityClassification).toBe("product-media");
     expect(resolved.fallbackTriggered).toBe(false);
   });
 
-  it("uses same-product splice media when no better same-product media exists", () => {
+  it("rejects same-product splice media when host is not dynamic-media TACDN", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "SPLICE1",
       currentSourceProductUrl:
@@ -311,9 +309,9 @@ describe("engine6 hero resolver", () => {
       ],
     });
 
-    expect(resolved.heroUrl).toContain("/attractions-splice-spp-674x446/");
-    expect(resolved.heroQualityClassification).toBe("splice");
-    expect(resolved.fallbackTriggered).toBe(false);
+    expect(resolved.heroUrl).toBeNull();
+    expect(resolved.heroQualityClassification).toBe("none");
+    expect(resolved.fallbackTriggered).toBe(true);
   });
 
   it("rejects malformed URLs and falls back to placeholder classification", () => {
