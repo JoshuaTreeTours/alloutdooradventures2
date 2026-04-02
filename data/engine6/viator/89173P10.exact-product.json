@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "89173P10",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10",
+    "title": "Fort Lauderdale’s Tropical Kayak Tour and Island Adventure",
+    "description": {
+      "text": "Explore Fort Lauderdale’s quieter waterways with a local guide on this private kayak experience through Wilton Manors. Paddle through scenic canals and hidden mangrove-lined sections while your guide shares local ecology and neighborhood context. This relaxed route is designed for travelers who want an approachable outdoor adventure with personalized pacing and opportunities to ask questions along the way."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 99,
+        "fromPriceFormatted": "$99.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 44
+    },
+    "duration": "2 hours",
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/15/34/8d/c0/caption.jpg?w=700&h=500&s=1",
+          "variants": [
+            {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/15/34/8d/c0/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          ]
+        }
+      ]
+    },
+    "highlights": [
+      "Private guided kayak tour with flexible pacing and local commentary",
+      "Paddle through scenic Wilton Manors waterways and hidden mangroves",
+      "Skip crowded tourist corridors and discover quieter nature pockets",
+      "Great option for visitors who want active sightseeing with a guide"
+    ],
+    "inclusions": [
+      "Guided kayak tour",
+      "Single kayak reservation setup",
+      "Option to request paddleboards or tandem kayaks for groups"
+    ],
+    "exclusions": [
+      "Food and drinks",
+      "Hotel pickup and drop-off",
+      "Gratuities"
+    ],
+    "meetingPoint": {
+      "description": "2520 N Federal Hwy, Fort Lauderdale, FL 33305, USA. Across from Ruth’s Chris Steak House and next to Amayapapaya."
+    },
+    "itinerary": [
+      {
+        "title": "Wilton Manors",
+        "description": "Paddle through sheltered waterways with your guide and look for local wildlife in quieter canal zones.",
+        "duration": "2 hours"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is this a private tour?",
+        "answer": "Yes. This is a private guided kayaking experience for your booking group."
+      },
+      {
+        "question": "Where do we meet?",
+        "answer": "Meet at 2520 N Federal Hwy in Fort Lauderdale, across from Ruth’s Chris Steak House."
+      },
+      {
+        "question": "How long is the activity?",
+        "answer": "The tour duration is about 2 hours, including guided paddling through Wilton Manors waterways."
+      },
+      {
+        "question": "Can we request different equipment?",
+        "answer": "Yes. The operator can offer paddleboards or tandem kayaks for two or more guests when requested."
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Service animals allowed",
+      "Near public transportation",
+      "Most travelers can participate",
+      "Maximum of 12 travelers"
+    ],
+    "categories": [
+      {
+        "label": "Kayaking Tours"
+      },
+      {
+        "label": "Private and Luxury"
+      }
+    ]
+  }
+}
