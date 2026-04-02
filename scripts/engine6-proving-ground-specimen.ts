@@ -4,6 +4,10 @@ import path from "node:path";
 import { extractEngine6Product } from "../api/engine6/viatorExtractors";
 import { toEngine6Card } from "../src/engine6/cards";
 import { mapViatorToEngine6Tour } from "../src/engine6/mapViatorToEngine6Tour";
+import {
+  ENGINE6_MIAMI_MILLIONAIRES_ROW_ROUTE,
+  resolveEngine6ProductCodeForPath,
+} from "../src/engine6/routes";
 import { buildEngine6SchemaGraph } from "../src/engine6/schema/buildEngine6SchemaGraph";
 
 const PRODUCT_CODE = "3587ISLQUESS";
@@ -49,12 +53,20 @@ const envelope = {
 };
 
 let canonicalRoute: string | null = null;
+let previewUrl: string | null = `http://localhost:4173${ENGINE6_MIAMI_MILLIONAIRES_ROW_ROUTE}`;
 let finalPageHeroUrl: string | null = null;
 let finalCardHeroUrl: string | null = null;
 let finalSchemaImageUrl: string | null = null;
 let allThreeIdentical = false;
 let validationPassed = false;
 let failureReason: string | null = null;
+let pageRenderProof = false;
+let cardRenderProof = false;
+
+const routeWiringProductCode = resolveEngine6ProductCodeForPath(
+  ENGINE6_MIAMI_MILLIONAIRES_ROW_ROUTE
+);
+const routeWiringPassed = routeWiringProductCode === PRODUCT_CODE;
 
 try {
   const tour = mapViatorToEngine6Tour(envelope);
@@ -62,9 +74,12 @@ try {
   const schema = buildEngine6SchemaGraph(tour);
 
   canonicalRoute = tour.canonicalPath;
+  previewUrl = `http://localhost:4173${canonicalRoute}`;
   finalPageHeroUrl = tour.resolvedHero?.url ?? null;
   finalCardHeroUrl = card.imageUrl || null;
   finalSchemaImageUrl = getSchemaImage(schema);
+  pageRenderProof = Boolean(tour.title && canonicalRoute && finalPageHeroUrl);
+  cardRenderProof = Boolean(card.title && card.href && card.imageUrl);
   allThreeIdentical =
     Boolean(finalPageHeroUrl) &&
     finalPageHeroUrl === finalCardHeroUrl &&
@@ -76,9 +91,15 @@ try {
 
 const report = {
   productCode: PRODUCT_CODE,
+  routeWiringPassed,
+  routeWiringProductCode,
+  configuredCanonicalRoute: ENGINE6_MIAMI_MILLIONAIRES_ROW_ROUTE,
   validationPassed,
   failureReason,
   canonicalRoute,
+  previewUrl,
+  pageRenderProof,
+  cardRenderProof,
   finalPageHeroUrl,
   finalCardHeroUrl,
   finalSchemaImageUrl,
