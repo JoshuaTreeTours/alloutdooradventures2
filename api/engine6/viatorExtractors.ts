@@ -317,11 +317,7 @@ const collectArrayVariants = (
   image: RecordLike,
   basePath: PathSegment[]
 ): RankedImageVariant[] => {
-  const variantsRaw = Array.isArray(image.variants)
-    ? image.variants
-    : Array.isArray(image.sizes)
-      ? image.sizes
-      : [];
+  const variantsRaw = Array.isArray(image.variants) ? image.variants : [];
 
   return variantsRaw
     .map((value, index) => ({ value, index }))
@@ -427,27 +423,6 @@ const resolveImageCollectionHeroCandidates = (
         });
       }
       continue;
-    }
-
-    const directUrl =
-      asImageUrl(image.url) ??
-      asImageUrl(image.src) ??
-      asImageUrl(image.imageUrl);
-    if (directUrl) {
-      const directPath = asImageUrl(image.url)
-        ? formatFieldPath([...basePath, "url"])
-        : asImageUrl(image.src)
-          ? formatFieldPath([...basePath, "src"])
-          : formatFieldPath([...basePath, "imageUrl"]);
-      candidates.push({
-        url: directUrl,
-        path: directPath,
-        variantPath: formatFieldPath(basePath),
-        width: parseLooseNumber(image.width),
-        height: parseLooseNumber(image.height),
-        sourceType,
-        isLive: true,
-      });
     }
   }
 

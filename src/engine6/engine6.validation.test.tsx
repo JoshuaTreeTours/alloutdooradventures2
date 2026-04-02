@@ -190,6 +190,24 @@ describe("engine6 single-tour validation harness", () => {
     );
   });
 
+  it("rejects product.media.images URLs when not explicitly under variants", () => {
+    const extraction = extractEngine6Product({
+      product: {
+        productCode: "VARIANTSONLY1",
+        productUrl: "https://www.viator.com/tours/City/Variant-Only/d1-VARIANTSONLY1",
+        title: "Variant-only guardrail specimen",
+        location: { city: "City", state: "State" },
+        media: {
+          images: [{ url: "https://dynamic-media.tacdn.com/media/photo-o/aa/bb/direct.jpg" }],
+        },
+      },
+    });
+
+    expect(extraction.extracted.heroImageUrl).toBeNull();
+    expect(extraction.diagnostics.heroCandidateCountBeforeFiltering).toBe(0);
+    expect(extraction.diagnostics.heroCandidateCountAfterFiltering).toBe(0);
+  });
+
   it("renders proving-ground specimen 3587ISLQUESS with exact-product live caption hero", () => {
     const fixture = ENGINE6_VALIDATION_FIXTURES.find(
       entry => entry.productCode === "3587ISLQUESS"

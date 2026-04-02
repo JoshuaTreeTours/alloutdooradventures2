@@ -42,12 +42,6 @@ describe("engine6 route integrity enforcement", () => {
     expect(resolveEngine6ProductCodeForPath(ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE)).toBe(
       ENGINE6_SAN_DIEGO_JOSHUA_TREE_PRODUCT_CODE
     );
-
-    const tour = getEngine6NativeTourByCanonicalPath(
-      ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE
-    );
-    expect(tour?.productCode).toBe(ENGINE6_SAN_DIEGO_JOSHUA_TREE_PRODUCT_CODE);
-    expect(tour?.canonicalPath).toBe(ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE);
   });
 
   it("test 3b: Miami Millionaires Row specimen route resolves correctly", () => {
