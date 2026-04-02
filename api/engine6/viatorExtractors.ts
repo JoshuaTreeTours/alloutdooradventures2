@@ -107,14 +107,6 @@ type HeroImageResult = Omit<Engine6HeroCandidate, "fieldPath"> & {
   variantPath: string;
 };
 
-type RankedImageVariant = {
-  url: string;
-  path: string;
-  variantPath: string;
-  width: number | null;
-  height: number | null;
-  area: number;
-};
 
 type PriceResult = {
   amount: number | null;
@@ -313,89 +305,6 @@ const emptyExtracted = (): Engine6Extracted => ({
   categories: [],
 });
 
-const rankVariants = (
-  variants: RankedImageVariant[]
-): RankedImageVariant | null => {
-  const ranked = [...variants].sort((a, b) => {
-    if (b.area !== a.area) {
-      return b.area - a.area;
-    }
-    if ((b.width ?? 0) !== (a.width ?? 0)) {
-      return (b.width ?? 0) - (a.width ?? 0);
-    }
-    return (b.height ?? 0) - (a.height ?? 0);
-  });
-
-  return ranked[0] ?? null;
-};
-
-const collectArrayVariants = (
-  image: RecordLike,
-  basePath: PathSegment[]
-): RankedImageVariant[] => {
-  const variantsRaw = Array.isArray(image.variants)
-    ? image.variants
-    : Array.isArray(image.sizes)
-      ? image.sizes
-      : [];
-
-  return variantsRaw
-    .map((value, index) => ({ value, index }))
-    .map(entry => {
-      const variant = asRecord(entry.value);
-      const url =
-        asImageUrl(variant?.url) ??
-        asImageUrl(variant?.src) ??
-        asImageUrl(variant?.imageUrl);
-      if (!url) {
-        return null;
-      }
-
-      const width = parseLooseNumber(variant?.width);
-      const height = parseLooseNumber(variant?.height);
-      return {
-        url,
-        path: formatFieldPath([...basePath, "variants", entry.index, "url"]),
-        variantPath: formatFieldPath([...basePath, "variants", entry.index]),
-        width,
-        height,
-        area: (width ?? 0) * (height ?? 0),
-      } satisfies RankedImageVariant;
-    })
-    .filter((entry): entry is RankedImageVariant => Boolean(entry));
-};
-
-const collectRecordVariants = (
-  image: RecordLike,
-  basePath: PathSegment[]
-): RankedImageVariant[] => {
-  const variants = asRecord(image.variants);
-  if (!variants) {
-    return [];
-  }
-
-  return Object.entries(variants)
-    .map(([variantKey, rawVariant]) => {
-      const variant = asRecord(rawVariant);
-      const url = asImageUrl(variant?.url);
-      if (!url) {
-        return null;
-      }
-
-      const width = parseLooseNumber(variant?.width);
-      const height = parseLooseNumber(variant?.height);
-      return {
-        url,
-        path: formatFieldPath([...basePath, "variants", variantKey, "url"]),
-        variantPath: formatFieldPath([...basePath, "variants", variantKey]),
-        width,
-        height,
-        area: (width ?? 0) * (height ?? 0),
-      } satisfies RankedImageVariant;
-    })
-    .filter((entry): entry is RankedImageVariant => Boolean(entry));
-};
-
 const resolveImageCollectionHeroCandidates = (
   images: unknown,
   basePathPrefix: PathSegment[],
@@ -421,22 +330,6 @@ const resolveImageCollectionHeroCandidates = (
     if (!image) continue;
 
     const basePath = [...basePathPrefix, entry.index];
-    const selectedVariant = rankVariants([
-      ...collectRecordVariants(image, basePath),
-      ...collectArrayVariants(image, basePath),
-    ]);
-
-    if (selectedVariant) {
-      candidates.push({
-        url: selectedVariant.url,
-        path: selectedVariant.path,
-        variantPath: selectedVariant.variantPath,
-        width: selectedVariant.width,
-        height: selectedVariant.height,
-        sourceType,
-      });
-      continue;
-    }
 
     const directUrl =
       asImageUrl(image.url) ??

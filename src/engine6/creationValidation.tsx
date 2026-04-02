@@ -119,28 +119,21 @@ export const validateEngine6CreationContract = ({
     (extracted.product as Record<string, unknown>)?.media as
       | {
           images?: Array<{
-            variants?:
-              | Record<string, { url?: string }>
-              | Array<{ url?: string }>;
+            url?: string;
+            src?: string;
+            imageUrl?: string;
           }>;
         }
       | undefined
   )?.images?.[0] ?? null) as {
-    variants?: Record<string, { url?: string }> | Array<{ url?: string }>;
+    url?: string;
+    src?: string;
+    imageUrl?: string;
   } | null;
-  const variantRecord =
-    firstImage && firstImage.variants && !Array.isArray(firstImage.variants)
-      ? firstImage.variants
-      : null;
-  const variantList =
-    firstImage && Array.isArray(firstImage.variants)
-      ? firstImage.variants
-      : null;
   const resolvedPrimaryHero =
-    variantRecord?.FULL?.url ??
-    variantRecord?.LARGE?.url ??
-    variantRecord?.MEDIUM?.url ??
-    variantList?.[0]?.url ??
+    firstImage?.url ??
+    firstImage?.src ??
+    firstImage?.imageUrl ??
     null;
   const hasValidResolvedHero =
     typeof resolvedPrimaryHero === "string" &&
