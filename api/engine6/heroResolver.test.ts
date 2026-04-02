@@ -6,6 +6,30 @@ const currentProductCode = "P100";
 const currentSourceProductUrl = "https://www.viator.com/tours/City/Tour/d1-P100";
 
 describe("engine6 hero resolver constitution", () => {
+  it("accepts same-product dynamic-media.tacdn.com caption variant", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "3587ISLQUESS",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-3587ISLQUESS?pid=P00290915&mcid=42383&medium=link",
+      candidates: [
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/2f/d8/33/d9/caption.jpg?w=700&h=500&s=1",
+          sourceType: "api-primary",
+          sourceProductCode: "3587ISLQUESS",
+          sourceProductUrl:
+            "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-3587ISLQUESS?pid=P00290915&mcid=42383&medium=link",
+          sourceFieldPath: "product.media.images[0].variants.CAPTION.url",
+          isLive: true,
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/d8/33/d9/caption.jpg?w=700&h=500&s=1"
+    );
+    expect(resolved.heroQualityClassification).toBe("caption");
+  });
+
   it("same-product live caption beats same-product live full", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode,

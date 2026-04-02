@@ -83,19 +83,10 @@ describe("engine6 single-tour validation harness", () => {
       const webPage = graph.find(node => node["@type"] === "WebPage") as
         | Record<string, unknown>
         | undefined;
-      const rawPayload = fixture.rawPayload as any;
       const parentCityToursPath = buildEngine6ParentCityToursPath(
         tour.canonicalPath
       );
-      const expectedHero = (rawPayload.product?.media?.images?.[0]?.variants
-        ?.FULL?.url ??
-        rawPayload.product?.media?.images?.[0]?.url ??
-        rawPayload.media?.images?.[0]?.variants?.FULL?.url ??
-        rawPayload.media?.images?.[0]?.url ??
-        rawPayload.media?.images?.[0]?.variants?.[0]?.url ??
-        rawPayload.images?.[0]?.variants?.[0]?.url ??
-        rawPayload.images?.[0]?.url ??
-        null) as string | null;
+      const expectedHero = payload.extracted.heroImageUrl;
 
       expect(tour.productCode).toBe(fixture.productCode);
       expect(tour.heroImageUrl).toBe(expectedHero);
@@ -199,7 +190,7 @@ describe("engine6 single-tour validation harness", () => {
     );
   });
 
-  it("fails proving-ground specimen 3587ISLQUESS cleanly with no substitution", () => {
+  it("renders proving-ground specimen 3587ISLQUESS with exact-product live caption hero", () => {
     const fixture = ENGINE6_VALIDATION_FIXTURES.find(
       entry => entry.productCode === "3587ISLQUESS"
     );
@@ -210,9 +201,20 @@ describe("engine6 single-tour validation harness", () => {
     expect(payload.extracted.productUrl).toContain("medium=link");
     expect(payload.extracted.productUrl).not.toContain("/book");
     expect(payload.extracted.productUrl).not.toContain("/search");
-    expect(() => mapViatorToEngine6Tour(payload)).toThrow(
-      /strict hero contract violation/i
+    const tour = mapViatorToEngine6Tour(payload);
+    const card = toEngine6Card(tour);
+    const schema = buildEngine6SchemaGraph(tour);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const product = graph.find(node => node["@type"] === "Product") as
+      | Record<string, unknown>
+      | undefined;
+
+    expect(tour.heroImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/d8/33/d9/caption.jpg?w=700&h=500&s=1"
     );
+    expect(card.imageUrl).toBe(tour.heroImageUrl);
+    expect(product?.image).toBe(tour.heroImageUrl);
+    expect(tour.diagnostics.heroQualityClassification).toBe("caption");
   });
 
   it("keeps engine6 free of default hero fallback paths", () => {

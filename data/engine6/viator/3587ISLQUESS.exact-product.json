@@ -21,10 +21,20 @@
         {
           "isCover": true,
           "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/d8/33/d9/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            },
             "FULL": {
-              "url": "https://example.com/3587ISLQUESS-cover.jpg",
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/d8/33/d9/full.jpg?w=1280&h=720&s=1",
               "width": 1280,
               "height": 720
+            },
+            "LARGE": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-720x480/2f/d8/33/d9.jpg",
+              "width": 720,
+              "height": 480
             }
           }
         }
