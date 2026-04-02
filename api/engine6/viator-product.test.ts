@@ -37,10 +37,7 @@ describe("/api/engine6/viator-product", () => {
 
     await handler(req, res);
 
-    expect(res.statusCode).toBe(200);
-    expect(res.headers["X-Engine6-Source"]).toBe(
-      "bundled-exact-product-payload"
-    );
+    expect(res.statusCode).toBe(422);
     expect((res.body as any).source).toBe("bundled-fallback");
     expect((res.body as any).diagnostics).toEqual(
       expect.objectContaining({
@@ -48,19 +45,15 @@ describe("/api/engine6/viator-product", () => {
         hasViatorApiKey: false,
         attemptedLiveFetch: false,
         usedBundledFallbackBecause: "missing-api-key",
-        heroSourceType: "api-primary",
-        heroCandidatesPresent: true,
-        heroCandidateCount: 1,
-        finalHeroUrl:
-          "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg",
-        heroFallbackTriggered: false,
-        heroPlaceholderFallbackReason: null,
+        heroSourceType: "none",
+        heroCandidatesPresent: false,
+        heroCandidateCount: 0,
+        finalHeroUrl: null,
+        heroFallbackTriggered: true,
+        heroPlaceholderFallbackReason: "no-candidates",
       })
     );
-    expect((res.body as any).extracted.heroImageUrl).toBe(
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg"
-    );
-    expect((res.body as any).extracted.heroImageUrl).not.toContain("/hero.jpg");
+    expect((res.body as any).extracted.heroImageUrl).toBeNull();
   });
 
   it("falls back when bundled payload lacks product.media.images candidates", async () => {
@@ -119,18 +112,7 @@ describe("/api/engine6/viator-product", () => {
               images: [
                 {
                   isCover: true,
-                  variants: {
-                    FULL: {
-                      url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg",
-                      width: 674,
-                      height: 446,
-                    },
-                    CAPTION: {
-                      url: "https://media.tacdn.com/media/attractions-content--1x-1/0f/56/92/caption.jpg",
-                      width: 1200,
-                      height: 900,
-                    },
-                  },
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/source.jpg",
                 },
               ],
             },
@@ -155,25 +137,23 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).source).toBe("live-api");
     expect((res.body as any).diagnostics).toEqual(
       expect.objectContaining({
-        heroImageFieldPath: "product.media.images[0].variants.CAPTION.url",
-        heroVariantFieldPath: "product.media.images[0].variants.CAPTION",
+        heroImageFieldPath: "product.media.images[0].url",
+        heroVariantFieldPath: "product.media.images[0]",
         imageSourceUsed: "api-primary",
         heroSourceType: "api-primary",
         heroCandidatesPresent: true,
         heroCandidateCount: 1,
         finalHeroUrl:
-          "https://media.tacdn.com/media/attractions-content--1x-1/0f/56/92/caption.jpg",
+          "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg?w=700&h=500&s=1",
         heroFallbackTriggered: false,
         heroPlaceholderFallbackReason: null,
         rejectedForeignHeroCandidates: [],
       })
     );
     expect((res.body as any).extracted.heroImageUrl).toBe(
-      "https://media.tacdn.com/media/attractions-content--1x-1/0f/56/92/caption.jpg"
+      "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg?w=700&h=500&s=1"
     );
-    expect((res.body as any).diagnostics.selectedHeroWidth).toBeGreaterThanOrEqual(
-      800
-    );
+    expect((res.body as any).diagnostics.selectedHeroWidth).toBe(0);
   });
 
   it("rejects a foreign live hero candidate and keeps the bundled product-scoped hero", async () => {
@@ -195,13 +175,7 @@ describe("/api/engine6/viator-product", () => {
               images: [
                 {
                   isCover: true,
-                  variants: {
-                    FULL: {
-                      url: "https://cdn.example.com/foreign-sibling-tour.jpg",
-                      width: 1200,
-                      height: 800,
-                    },
-                  },
+                  url: "https://cdn.example.com/foreign-sibling-tour.jpg",
                 },
               ],
             },
@@ -214,14 +188,12 @@ describe("/api/engine6/viator-product", () => {
 
     await handler(req, res);
 
-    expect(res.statusCode).toBe(200);
+    expect(res.statusCode).toBe(422);
     expect((res.body as any).source).toBe("bundled-fallback");
-    expect((res.body as any).diagnostics.finalHeroUrl).toBe(
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg"
-    );
-    expect((res.body as any).diagnostics.heroSourceType).toBe("api-primary");
-    expect((res.body as any).diagnostics.heroFallbackTriggered).toBe(false);
-    expect((res.body as any).extracted.heroImageUrl).not.toContain("/hero.jpg");
+    expect((res.body as any).diagnostics.finalHeroUrl).toBeNull();
+    expect((res.body as any).diagnostics.heroSourceType).toBe("none");
+    expect((res.body as any).diagnostics.heroFallbackTriggered).toBe(true);
+    expect((res.body as any).extracted.heroImageUrl).toBeNull();
   });
 
   it("returns no image only when the product has no valid API hero", async () => {
@@ -285,21 +257,17 @@ describe("/api/engine6/viator-product", () => {
     );
   });
 
-  it("keeps exact-product splice hero when splice is the only same-product candidate", async () => {
+  it("fails when bundled payload only provides non-dynamic-media splice candidate", async () => {
     const req = { method: "GET", query: { productCode: "26719P8" } };
     const res = createRes();
 
     await handler(req, res);
 
-    expect(res.statusCode).toBe(200);
+    expect(res.statusCode).toBe(422);
     expect((res.body as any).source).toBe("bundled-fallback");
-    expect((res.body as any).diagnostics.heroQualityClassification).toBe("splice");
-    expect((res.body as any).diagnostics.heroCandidateCount).toBeGreaterThanOrEqual(
-      1
-    );
-    expect((res.body as any).extracted.heroImageUrl).toBe(
-      "https://media.tacdn.com/media/attractions-splice-spp-360x240/0a/29/a2/f4.jpg"
-    );
+    expect((res.body as any).diagnostics.heroQualityClassification).toBe("none");
+    expect((res.body as any).diagnostics.heroFallbackTriggered).toBe(true);
+    expect((res.body as any).extracted.heroImageUrl).toBeNull();
   });
 
   it("ignores non-product root image pools and only trusts product.media.images", async () => {
@@ -343,5 +311,63 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).diagnostics.heroCandidateCountBeforeFiltering).toBe(0);
     expect((res.body as any).diagnostics.heroFallbackTriggered).toBe(true);
     expect((res.body as any).extracted.heroImageUrl).toBeNull();
+  });
+
+  it("accepts only /media/photo-o/ lineage and rejects splice/photo-s while keeping hero parity", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () =>
+        JSON.stringify({
+          product: {
+            productCode: "LINEAGE1",
+            productUrl: "https://www.viator.com/tours/City/Lineage-Test/d1-LINEAGE1",
+            title: "Lineage Test",
+            media: {
+              images: [
+                {
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/aa/bb/cc/dd/source.jpg",
+                },
+                {
+                  url: "https://dynamic-media.tacdn.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg",
+                },
+                {
+                  url: "https://dynamic-media.tacdn.com/media/photo-s/11/22/33/44.jpg",
+                },
+              ],
+            },
+          },
+        }),
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "LINEAGE1" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).extracted.heroImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/aa/bb/cc/dd/caption.jpg?w=700&h=500&s=1"
+    );
+    expect((res.body as any).diagnostics.heroSurfaceParity).toEqual({
+      page: true,
+      card: true,
+      schema: true,
+    });
+    expect((res.body as any).diagnostics.rejectedForeignHeroCandidates).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          url: "https://dynamic-media.tacdn.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg",
+          reason: "non-product-photo-lineage",
+        }),
+        expect.objectContaining({
+          url: "https://dynamic-media.tacdn.com/media/photo-s/11/22/33/44.jpg",
+          reason: "non-product-photo-lineage",
+        }),
+      ])
+    );
   });
 });
