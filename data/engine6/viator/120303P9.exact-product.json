@@ -12,6 +12,11 @@
         {
           "isCover": true,
           "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/02/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            },
             "FULL": {
               "url": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/02/millionaires-row-hero.jpg",
               "width": 1500,

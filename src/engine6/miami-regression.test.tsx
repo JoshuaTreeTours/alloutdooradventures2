@@ -48,4 +48,13 @@ describe("engine6 miami regression guard", () => {
       expect(tour.diagnostics.heroSurfaceParity.schema).toBe(true);
     }
   });
+
+  it("uses Viator TACDN 700x500 caption hero for Millionaires Row", () => {
+    const tour = engine6ResolvedTours.find(entry => entry.productCode === "120303P9");
+    expect(tour).toBeDefined();
+    expect(tour?.heroImageUrl).toContain("dynamic-media.tacdn.com");
+    expect(tour?.heroImageUrl).toContain("caption.jpg");
+    expect(tour?.heroImageUrl).toContain("w=700");
+    expect(tour?.heroImageUrl).toContain("h=500");
+  });
 });

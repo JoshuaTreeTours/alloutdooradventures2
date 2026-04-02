@@ -88,7 +88,8 @@ describe("engine6 single-tour validation harness", () => {
         tour.canonicalPath
       );
       const expectedHero = (rawPayload.product?.media?.images?.[0]?.variants
-        ?.FULL?.url ??
+        ?.CAPTION?.url ??
+        rawPayload.product?.media?.images?.[0]?.variants?.FULL?.url ??
         rawPayload.product?.media?.images?.[0]?.url ??
         rawPayload.media?.images?.[0]?.variants?.FULL?.url ??
         rawPayload.media?.images?.[0]?.url ??
