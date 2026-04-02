@@ -31,6 +31,10 @@ export type Engine6DiagnosticsPaths = {
     card: boolean;
     schema: boolean;
   };
+  activeProductCode: string | null;
+  resolvedHeroUrl: string | null;
+  rejectedForeignCandidateCount: number;
+  rejectedForeignCandidateExamples: string[];
   rejectedForeignHeroCandidates: Array<{
     url: string;
     sourceType: Engine6HeroSourceType;
@@ -1054,6 +1058,10 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       card: false,
       schema: false,
     },
+    activeProductCode: null,
+    resolvedHeroUrl: null,
+    rejectedForeignCandidateCount: 0,
+    rejectedForeignCandidateExamples: [],
     rejectedForeignHeroCandidates: [],
     heroSourceProductCode: null,
     heroSourceProductUrl: null,
@@ -1139,6 +1147,14 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     card: Boolean(heroDecision.heroUrl),
     schema: Boolean(heroDecision.heroUrl),
   };
+  diagnostics.activeProductCode = productCode ?? null;
+  diagnostics.resolvedHeroUrl = heroDecision.heroUrl;
+  diagnostics.rejectedForeignCandidateCount =
+    heroDecision.rejectedForeignCandidates.length;
+  diagnostics.rejectedForeignCandidateExamples =
+    heroDecision.rejectedForeignCandidates
+      .slice(0, 3)
+      .map(candidate => `${candidate.reason}:${candidate.url}`);
   diagnostics.rejectedForeignHeroCandidates = heroDecision.rejectedForeignCandidates;
   diagnostics.heroSourceProductCode =
     heroDecision.finalCandidate?.sourceProductCode ?? null;

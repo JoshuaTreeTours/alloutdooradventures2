@@ -302,6 +302,34 @@ describe("/api/engine6/viator-product", () => {
     );
   });
 
+  it("keeps hero/card/schema parity and emits same-product diagnostics", async () => {
+    const req = { method: "GET", query: { productCode: "63657P1" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).diagnostics.activeProductCode).toBe("63657P1");
+    expect((res.body as any).diagnostics.resolvedHeroUrl).toBe(
+      (res.body as any).extracted.heroImageUrl
+    );
+    expect((res.body as any).diagnostics.finalHeroUrl).toBe(
+      (res.body as any).extracted.heroImageUrl
+    );
+    expect((res.body as any).diagnostics.heroSurfaceParity).toEqual({
+      page: true,
+      card: true,
+      schema: true,
+    });
+    expect((res.body as any).diagnostics.heroSourceProductCode).toBe("63657P1");
+    expect((res.body as any).diagnostics.rejectedForeignCandidateCount).toBe(
+      (res.body as any).diagnostics.rejectedForeignHeroCandidates.length
+    );
+    expect(
+      Array.isArray((res.body as any).diagnostics.rejectedForeignCandidateExamples)
+    ).toBe(true);
+  });
+
   it("ignores non-product root image pools and only trusts product.media.images", async () => {
     process.env.VIATOR_API_KEY = "server-key";
 
