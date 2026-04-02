@@ -62,6 +62,12 @@ let validationPassed = false;
 let failureReason: string | null = null;
 let pageRenderProof = false;
 let cardRenderProof = false;
+let overviewLength = 0;
+let itineraryCount = 0;
+let faqCount = 0;
+let meetingPointText: string | null = null;
+let highlightsCount = 0;
+let includedCount = 0;
 
 const routeWiringProductCode = resolveEngine6ProductCodeForPath(
   ENGINE6_MIAMI_MILLIONAIRES_ROW_ROUTE
@@ -78,6 +84,12 @@ try {
   finalPageHeroUrl = tour.resolvedHero?.url ?? null;
   finalCardHeroUrl = card.imageUrl || null;
   finalSchemaImageUrl = getSchemaImage(schema);
+  overviewLength = tour.overviewText?.length ?? 0;
+  itineraryCount = tour.itinerary.length;
+  faqCount = tour.faqs.length;
+  meetingPointText = tour.meetingPointText ?? null;
+  highlightsCount = tour.highlights.length;
+  includedCount = tour.included.length;
   pageRenderProof = Boolean(tour.title && canonicalRoute && finalPageHeroUrl);
   cardRenderProof = Boolean(card.title && card.href && card.imageUrl);
   allThreeIdentical =
@@ -104,6 +116,12 @@ const report = {
   finalCardHeroUrl,
   finalSchemaImageUrl,
   allThreeIdentical,
+  overviewLength,
+  itineraryCount,
+  faqCount,
+  meetingPointText,
+  highlightsCount,
+  includedCount,
   sourceProductCode: extraction.diagnostics.heroSourceProductCode,
   sourceProductUrl: extraction.diagnostics.heroSourceProductUrl,
   sourceFieldPath: extraction.diagnostics.heroSourceFieldPath,

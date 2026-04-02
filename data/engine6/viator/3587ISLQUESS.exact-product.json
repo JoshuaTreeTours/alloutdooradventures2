@@ -41,7 +41,65 @@
       ]
     },
     "description": {
-      "text": "Cruise through Miami's famous waterfront mansions and skyline views."
-    }
+      "text": "Experience a fully narrated sightseeing cruise through Miami's Biscayne Bay and Millionaires' Row. You will pass celebrity homes, island neighborhoods, and skyline landmarks with live commentary from the onboard guide. This two-level vessel offers shaded seating, open-air views, and a relaxed pace for photo stops and waterfront storytelling."
+    },
+    "highlights": [
+      "Narrated Biscayne Bay cruise with Millionaires' Row mansion views",
+      "Open-air upper deck and climate-friendly shaded lower seating",
+      "See Fisher Island, Star Island, and Miami skyline landmarks",
+      "Great for first-time visitors and families seeking a relaxed tour"
+    ],
+    "inclusions": [
+      "90-minute sightseeing cruise",
+      "Live bilingual narration",
+      "Access to both decks"
+    ],
+    "additionalInfo": [
+      "Please arrive 30 minutes before departure for boarding.",
+      "Children must be accompanied by an adult.",
+      "Tour operates in most weather conditions."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Bayside Marketplace, 401 Biscayne Blvd, Miami, FL 33132. Check in at the dockside ticket booth."
+      }
+    },
+    "itinerarySummary": "Cruise through Biscayne Bay and past Millionaires' Row, with narration highlighting celebrity estates and city history.",
+    "itineraryItems": [
+      {
+        "title": "Bayside Marketplace Departure",
+        "description": "Board your sightseeing vessel and get oriented before departure.",
+        "duration": "15 minutes"
+      },
+      {
+        "title": "Biscayne Bay Skyline Cruise",
+        "description": "Enjoy panoramic views of Downtown Miami and Brickell waterfront towers.",
+        "duration": "30 minutes"
+      },
+      {
+        "title": "Millionaires' Row",
+        "description": "Pass iconic waterfront mansions and hear stories about celebrity residents.",
+        "duration": "30 minutes"
+      },
+      {
+        "title": "Return to Bayside",
+        "description": "Wrap up with final photo opportunities on the return leg.",
+        "duration": "15 minutes"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is this tour suitable for children?",
+        "answer": "Yes. The cruise is family-friendly and welcomes children with adult supervision."
+      },
+      {
+        "question": "Are food and drinks available onboard?",
+        "answer": "Light snacks and drinks are typically available for purchase depending on departure."
+      },
+      {
+        "question": "Where is the meeting point?",
+        "answer": "Meet at Bayside Marketplace, 401 Biscayne Blvd, Miami, FL 33132."
+      }
+    ]
   }
 }

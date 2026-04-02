@@ -233,6 +233,12 @@ describe("engine6 single-tour validation harness", () => {
     expect(card.imageUrl).toBe(tour.heroImageUrl);
     expect(product?.image).toBe(tour.heroImageUrl);
     expect(tour.diagnostics.heroQualityClassification).toBe("caption");
+    expect((tour.overviewText ?? "").length).toBeGreaterThan(180);
+    expect(tour.itinerary.length).toBeGreaterThanOrEqual(4);
+    expect(tour.faqs.length).toBeGreaterThanOrEqual(3);
+    expect((tour.meetingPointText ?? "").toLowerCase()).toContain("bayside");
+    expect(tour.highlights.length).toBeGreaterThanOrEqual(4);
+    expect(tour.included.length).toBeGreaterThanOrEqual(3);
   });
 
   it("keeps engine6 free of default hero fallback paths", () => {
