@@ -199,6 +199,22 @@ describe("engine6 single-tour validation harness", () => {
     );
   });
 
+  it("fails proving-ground specimen 3587ISLQUESS cleanly with no substitution", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "3587ISLQUESS"
+    );
+    expect(fixture).toBeDefined();
+    const payload = toPayload(fixture!);
+    expect(payload.extracted.productUrl).toContain("pid=P00290915");
+    expect(payload.extracted.productUrl).toContain("mcid=42383");
+    expect(payload.extracted.productUrl).toContain("medium=link");
+    expect(payload.extracted.productUrl).not.toContain("/book");
+    expect(payload.extracted.productUrl).not.toContain("/search");
+    expect(() => mapViatorToEngine6Tour(payload)).toThrow(
+      /strict hero contract violation/i
+    );
+  });
+
   it("keeps engine6 free of default hero fallback paths", () => {
     const fixture = strictHeroFixtures[0];
     expect(fixture).toBeDefined();

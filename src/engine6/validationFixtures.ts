@@ -23,6 +23,7 @@ import specimen10150p16Payload from "../../data/engine6/viator/10150P16.exact-pr
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
 import specimen5503p10Payload from "../../data/engine6/viator/5503P10.exact-product.json";
+import specimen3587islquessPayload from "../../data/engine6/viator/3587ISLQUESS.exact-product.json";
 
 import specimen5865p8Payload from "../../data/engine6/viator/5865P8.exact-product.json";
 import specimen438341p2Payload from "../../data/engine6/viator/438341P2.exact-product.json";
@@ -51,6 +52,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Miami/Parasailing-with-Miami-Watersports/d662-5503P10",
     rawPayload: specimen5503p10Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "3587ISLQUESS",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-3587ISLQUESS?pid=P00290915&mcid=42383&medium=link",
+    rawPayload: specimen3587islquessPayload as Record<string, unknown>,
   },
   {
     productCode: "438341P2",

@@ -1,0 +1,37 @@
+{
+  "product": {
+    "productCode": "3587ISLQUESS",
+    "productUrl": "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-3587ISLQUESS?pid=P00290915&mcid=42383&medium=link",
+    "title": "Millionaires' Row Cruise",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 35
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 120
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://example.com/3587ISLQUESS-cover.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      ]
+    },
+    "description": {
+      "text": "Cruise through Miami's famous waterfront mansions and skyline views."
+    }
+  }
+}
