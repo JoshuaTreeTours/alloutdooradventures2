@@ -3,6 +3,7 @@ import React, { type ReactNode, useMemo } from "react";
 import Seo from "../../components/Seo";
 import TourCard from "../../components/TourCard";
 import { getToursByCityUnified } from "../../data/tours";
+import Engine6DebugPanel from "./Engine6DebugPanel";
 import { formatEngine6AggregateRating } from "../rating";
 import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
@@ -74,6 +75,9 @@ const RatingSummary = ({
 };
 
 export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
+  const SHOW_ENGINE6_DEBUG =
+    process.env.NODE_ENV !== "production" &&
+    process.env.NEXT_PUBLIC_ENGINE6_DEBUG === "true";
   const categoryLabel =
     tour.categoryLabel ?? formatEngine6CategoryLabel(tour.primaryCategory);
   const seo = buildEngine6Seo(tour);
@@ -400,6 +404,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             </div>
           </section>
         ) : null}
+        {SHOW_ENGINE6_DEBUG && <Engine6DebugPanel tour={tour} />}
         {parentCityToursPath ? (
           <div className="mt-8 text-center" data-testid="engine6-back-to-tours">
             <a
