@@ -30,6 +30,7 @@ import {
   ENGINE6_ANCHORAGE_PRIVATE_ROUTE,
   ENGINE6_ANCHORAGE_SUNSET_ROUTE,
   ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
+  ENGINE6_FORT_LAUDERDALE_BAHAMAS_FERRY_ROUTE,
   ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE,
   ENGINE6_FORT_LAUDERDALE_EVERGLADES_AIRBOAT_ROUTE,
   ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_ROUTE,
@@ -38,6 +39,7 @@ import {
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_PARAGON_ROUTE,
+  ENGINE6_MIAMI_PIRATE_BOAT_ROUTE,
   ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
   ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
@@ -465,6 +467,79 @@ describe("engine6 aggregate rating normalization", () => {
 });
 
 describe("engine6 mapping/cards/page", () => {
+  it("hides Engine6 debug diagnostics by default across Miami, Fort Lauderdale, and Bahamas-paragon routes", () => {
+    const previousNodeEnv = process.env.NODE_ENV;
+    const previousDebugFlag = process.env.NEXT_PUBLIC_ENGINE6_DEBUG;
+
+    process.env.NODE_ENV = "production";
+    delete process.env.NEXT_PUBLIC_ENGINE6_DEBUG;
+
+    const targetRoutes = [
+      ENGINE6_MIAMI_PIRATE_BOAT_ROUTE,
+      ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE,
+      ENGINE6_FORT_LAUDERDALE_BAHAMAS_FERRY_ROUTE,
+    ];
+
+    try {
+      for (const route of targetRoutes) {
+        const tour = engine6ResolvedTours.find(entry => entry.canonicalPath === route);
+        expect(tour, `Expected engine6 tour for route ${route}`).toBeDefined();
+
+        const html = renderToString(<Engine6TourPage tour={tour!} />);
+
+        expect(html).not.toContain('data-testid="engine6-debug-diagnostics"');
+        expect(html).not.toContain("Resolved hero source");
+        expect(html).not.toContain("Final hero URL");
+        expect(html).toContain('data-testid="engine6-breadcrumbs"');
+        expect(html).toContain('data-testid="engine6-bottom-cta"');
+      }
+    } finally {
+      if (previousNodeEnv === undefined) {
+        delete process.env.NODE_ENV;
+      } else {
+        process.env.NODE_ENV = previousNodeEnv;
+      }
+
+      if (previousDebugFlag === undefined) {
+        delete process.env.NEXT_PUBLIC_ENGINE6_DEBUG;
+      } else {
+        process.env.NEXT_PUBLIC_ENGINE6_DEBUG = previousDebugFlag;
+      }
+    }
+  });
+
+  it("shows Engine6 debug diagnostics only when NEXT_PUBLIC_ENGINE6_DEBUG=true in non-production", () => {
+    const previousNodeEnv = process.env.NODE_ENV;
+    const previousDebugFlag = process.env.NEXT_PUBLIC_ENGINE6_DEBUG;
+
+    process.env.NODE_ENV = "development";
+    process.env.NEXT_PUBLIC_ENGINE6_DEBUG = "true";
+
+    try {
+      const tour = engine6ResolvedTours.find(
+        entry => entry.canonicalPath === ENGINE6_MIAMI_PIRATE_BOAT_ROUTE
+      );
+      expect(tour).toBeDefined();
+
+      const html = renderToString(<Engine6TourPage tour={tour!} />);
+      expect(html).toContain('data-testid="engine6-debug-diagnostics"');
+      expect(html).toContain("Resolved hero source");
+      expect(html).toContain("Final CTA URL");
+    } finally {
+      if (previousNodeEnv === undefined) {
+        delete process.env.NODE_ENV;
+      } else {
+        process.env.NODE_ENV = previousNodeEnv;
+      }
+
+      if (previousDebugFlag === undefined) {
+        delete process.env.NEXT_PUBLIC_ENGINE6_DEBUG;
+      } else {
+        process.env.NEXT_PUBLIC_ENGINE6_DEBUG = previousDebugFlag;
+      }
+    }
+  });
+
   it("renders the clean Santa Barbara specimen with the API-scoped hero", () => {
     const tour = mapViatorToEngine6Tour(specimenApiPayload);
 
