@@ -1,0 +1,49 @@
+{
+  "product": {
+    "productCode": "408277P4",
+    "title": "Real Extreme Off Road ATV Miami (driver license required)",
+    "productUrl": "https://www.viator.com/tours/Miami/Real-Extreme-Off-Road-ATV-Miami-driver-license-required/d662-408277P4",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 89,
+        "fromPriceFormatted": "$89.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 19
+    },
+    "description": "Take on Miami's off-road terrain with an extreme ATV experience designed for licensed drivers looking for a high-energy ride.",
+    "highlights": [
+      "Off-road ATV action near Miami",
+      "Adventure-focused route for thrill seekers",
+      "Driver license required for participation"
+    ],
+    "duration": "1 hour",
+    "meetingPoint": {
+      "description": "Check your confirmation voucher for the exact meeting address."
+    },
+    "included": ["ATV experience", "Basic safety orientation"],
+    "additionalInfo": ["Valid driver license required"],
+    "faqs": [
+      {
+        "question": "Do I need a driver license?",
+        "answer": "Yes, a valid driver license is required."
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/d5/a1/f0/caption.jpg?w=700&h=500&s=1",
+          "width": 700,
+          "height": 500
+        }
+      ]
+    }
+  }
+}

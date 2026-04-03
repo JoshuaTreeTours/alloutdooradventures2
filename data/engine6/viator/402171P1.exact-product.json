@@ -1,0 +1,48 @@
+{
+  "product": {
+    "productCode": "402171P1",
+    "title": "Miami Excursions Luxury Experience Private",
+    "productUrl": "https://www.viator.com/tours/Miami/Miami-Excursions-Luxury-Experience-Private/d662-402171P1",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 499,
+        "fromPriceFormatted": "$499.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 7
+    },
+    "description": "Upgrade your Miami outing with a private luxury excursion tailored for small groups seeking comfort, flexibility, and a premium local experience.",
+    "highlights": [
+      "Private luxury-format Miami experience",
+      "Flexible pacing with personalized attention",
+      "Ideal for couples, families, or small private groups"
+    ],
+    "duration": "4 hours",
+    "meetingPoint": {
+      "description": "Exact meeting location is shared after booking confirmation."
+    },
+    "included": ["Private experience", "Guide/host service"],
+    "faqs": [
+      {
+        "question": "Is this a private tour?",
+        "answer": "Yes, this experience is operated as a private excursion."
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/18/82/caption.jpg?w=700&h=500&s=1",
+          "width": 700,
+          "height": 500
+        }
+      ]
+    }
+  }
+}

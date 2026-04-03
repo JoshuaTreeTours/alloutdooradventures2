@@ -67,7 +67,8 @@ export const ENGINE6_FORT_LAUDERDALE_REEF_SNORKEL_PADDLE_PRODUCT_CODE =
   "89173P8";
 export const ENGINE6_FORT_LAUDERDALE_REEF_SNORKEL_PADDLE_ROUTE =
   "/destinations/florida/fort-lauderdale/tours/reef-and-snorkel-paddle-tour-89173p8";
-export const ENGINE6_FORT_LAUDERDALE_EVERGLADES_AIRBOAT_PRODUCT_CODE = "76145P2";
+export const ENGINE6_FORT_LAUDERDALE_EVERGLADES_AIRBOAT_PRODUCT_CODE =
+  "76145P2";
 export const ENGINE6_FORT_LAUDERDALE_EVERGLADES_AIRBOAT_ROUTE =
   "/destinations/florida/fort-lauderdale/tours/authentic-private-everglades-airboat-tour-76145p2";
 export const ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_PRODUCT_CODE = "5559561P1";
@@ -79,8 +80,7 @@ export const ENGINE6_FORT_LAUDERDALE_BIG_GAME_FISHING_ROUTE =
 export const ENGINE6_FORT_LAUDERDALE_BAHAMAS_FERRY_PRODUCT_CODE = "6331BAHA";
 export const ENGINE6_FORT_LAUDERDALE_BAHAMAS_FERRY_ROUTE =
   "/destinations/florida/fort-lauderdale/tours/bahamas-day-escape-by-ferry-6331baha";
-export const ENGINE6_FORT_LAUDERDALE_VENICE_OF_AMERICA_PRODUCT_CODE =
-  "57834P1";
+export const ENGINE6_FORT_LAUDERDALE_VENICE_OF_AMERICA_PRODUCT_CODE = "57834P1";
 export const ENGINE6_FORT_LAUDERDALE_VENICE_OF_AMERICA_ROUTE =
   "/destinations/florida/fort-lauderdale/tours/venice-of-america-fort-lauderdale-cruise";
 export const ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_PRODUCT_CODE = "89173P10";
@@ -106,6 +106,24 @@ export const ENGINE6_MIAMI_RACCOON_ISLAND_ROUTE =
 export const ENGINE6_MIAMI_BISCAYNE_BAY_JET_SKI_PRODUCT_CODE = "7943P1";
 export const ENGINE6_MIAMI_BISCAYNE_BAY_JET_SKI_ROUTE =
   "/destinations/florida/miami/tours/miami-biscayne-bay-jet-ski-tour";
+export const ENGINE6_MIAMI_3_DAYS_AMAZING_PRODUCT_CODE = "214880P12";
+export const ENGINE6_MIAMI_3_DAYS_AMAZING_ROUTE =
+  "/destinations/florida/miami/tours/3-days-amazing-tour-in-miami";
+export const ENGINE6_MIAMI_EVERGLADES_TO_KEYS_PRODUCT_CODE = "44152P18";
+export const ENGINE6_MIAMI_EVERGLADES_TO_KEYS_ROUTE =
+  "/destinations/florida/miami/tours/everglades-to-keys-floridas-ultimate-national-parks-expedition";
+export const ENGINE6_MIAMI_LUXURY_EXPERIENCE_PRIVATE_PRODUCT_CODE = "402171P1";
+export const ENGINE6_MIAMI_LUXURY_EXPERIENCE_PRIVATE_ROUTE =
+  "/destinations/florida/miami/tours/miami-excursions-luxury-experience-private";
+export const ENGINE6_MIAMI_EXTREME_OFF_ROAD_ATV_PRODUCT_CODE = "408277P4";
+export const ENGINE6_MIAMI_EXTREME_OFF_ROAD_ATV_ROUTE =
+  "/destinations/florida/miami/tours/real-extreme-off-road-atv-miami-driver-license-required";
+export const ENGINE6_MIAMI_ALL_INCLUDED_COMBO_PRODUCT_CODE = "5503P21";
+export const ENGINE6_MIAMI_ALL_INCLUDED_COMBO_ROUTE =
+  "/destinations/florida/miami/tours/all-included-combo-with-miami-watersports";
+export const ENGINE6_MIAMI_SUP_KAYAK_WILDLIFE_PRODUCT_CODE = "342209P4";
+export const ENGINE6_MIAMI_SUP_KAYAK_WILDLIFE_ROUTE =
+  "/destinations/florida/miami/tours/sup-kayak-wildlife-exploration-through-mangrove-jungle";
 
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
@@ -228,6 +246,30 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_MIAMI_BISCAYNE_BAY_JET_SKI_ROUTE,
     ENGINE6_MIAMI_BISCAYNE_BAY_JET_SKI_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MIAMI_3_DAYS_AMAZING_ROUTE,
+    ENGINE6_MIAMI_3_DAYS_AMAZING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MIAMI_EVERGLADES_TO_KEYS_ROUTE,
+    ENGINE6_MIAMI_EVERGLADES_TO_KEYS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MIAMI_LUXURY_EXPERIENCE_PRIVATE_ROUTE,
+    ENGINE6_MIAMI_LUXURY_EXPERIENCE_PRIVATE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MIAMI_EXTREME_OFF_ROAD_ATV_ROUTE,
+    ENGINE6_MIAMI_EXTREME_OFF_ROAD_ATV_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MIAMI_ALL_INCLUDED_COMBO_ROUTE,
+    ENGINE6_MIAMI_ALL_INCLUDED_COMBO_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MIAMI_SUP_KAYAK_WILDLIFE_ROUTE,
+    ENGINE6_MIAMI_SUP_KAYAK_WILDLIFE_PRODUCT_CODE,
   ],
 ] as const;
 

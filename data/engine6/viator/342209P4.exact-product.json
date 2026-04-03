@@ -1,0 +1,48 @@
+{
+  "product": {
+    "productCode": "342209P4",
+    "title": "SUP / Kayak Wildlife exploration through mangrove jungle",
+    "productUrl": "https://www.viator.com/tours/Miami/SUP-Kayak-Wildlife-exploration-through-mangrove-jungle/d662-342209P4",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 69,
+        "fromPriceFormatted": "$69.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 28
+    },
+    "description": "Paddle through a mangrove jungle environment on a wildlife-focused SUP or kayak route near Miami. This eco-style outing emphasizes nature, calm water exploration, and local habitat discovery.",
+    "highlights": [
+      "Choose SUP or kayak for mangrove exploration",
+      "Look for local wildlife in a natural setting",
+      "Great option for outdoor and eco-adventure travelers"
+    ],
+    "duration": "2 hours",
+    "meetingPoint": {
+      "description": "Final launch location and arrival guidance are provided in your voucher."
+    },
+    "included": ["SUP or kayak equipment", "Safety briefing"],
+    "faqs": [
+      {
+        "question": "What can I use on this tour?",
+        "answer": "You can participate using a stand-up paddleboard or a kayak."
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/02/c0/caption.jpg?w=700&h=500&s=1",
+          "width": 700,
+          "height": 500
+        }
+      ]
+    }
+  }
+}
