@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "6331BAHA",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Bahamas-Ferry-Day-Trip-from-Miami-with-Transport/d660-6331BAHA",
+    "title": "FROM FLORIDA: Bahamas Day Escape By Ferry",
+    "description": {
+      "text": "Escape to paradise with a day trip to the Bahamas, home to more than 700 islands in the Atlantic. Depart from Port Everglades in Fort Lauderdale and ride a high-speed ferry to either Bimini Island or Grand Bahama. Spend the afternoon enjoying beaches, island atmosphere, and optional activities before returning to Florida the same day."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "priceFrom": "$284.05",
+    "reviews": {
+      "combinedAverageRating": 3.1,
+      "totalReviews": 53
+    },
+    "duration": "12 hours (approx.)",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/e8/37/a1.jpg",
+              "width": 674,
+              "height": 446
+            },
+            "THUMBNAIL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-210x118/15/e8/37/a1.jpg",
+              "width": 210,
+              "height": 118
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy a round-trip ferry ride to the Bahamas with a guaranteed seat",
+      "Spend an afternoon on Bimini Island or Grand Bahama Island",
+      "Relax on warm-water beaches with turquoise ocean views",
+      "All port fees and taxes are included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Port Everglades, 1850 Eller Dr, Fort Lauderdale, FL 33316, USA. Arrive early for check-in and customs processing."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Check-in at Port Everglades",
+        "description": "Meet at Port Everglades in Fort Lauderdale, complete check-in, and board the ferry."
+      },
+      {
+        "title": "Ferry crossing to the Bahamas",
+        "description": "Cruise to Bimini Island or Grand Bahama with onboard seating and amenities."
+      },
+      {
+        "title": "Free time on the island",
+        "description": "Enjoy about 5 to 6 hours onshore for beaches, dining, and optional activities."
+      },
+      {
+        "title": "Return sailing to Florida",
+        "description": "Board the ferry in the evening and return to Port Everglades."
+      }
+    ],
+    "inclusions": [
+      "Round-trip ferry transportation",
+      "Guaranteed seat on ferry",
+      "All port fees and taxes"
+    ],
+    "additionalInfo": [
+      "Non-refundable booking policy applies",
+      "Pickup may be available depending on booking option",
+      "Activities on the island are optional and not included"
+    ],
+    "faqs": [
+      {
+        "question": "Where does the ferry depart?",
+        "answer": "The departure point is Port Everglades at 1850 Eller Dr, Fort Lauderdale, FL 33316."
+      },
+      {
+        "question": "How long is the tour?",
+        "answer": "The full experience is approximately 12 hours, including ferry time and island free time."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "Your fare includes round-trip ferry transportation, a guaranteed seat, and all listed port fees and taxes."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Ferry Services"
+      }
+    ]
+  }
+}

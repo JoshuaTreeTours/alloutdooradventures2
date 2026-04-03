@@ -470,12 +470,23 @@ const withHeroScope = (
   hero: HeroImageResult,
   productCode: string | null,
   sourceProductUrl: string | null
-): Engine6HeroCandidate => ({
-  ...hero,
-  sourceFieldPath: hero.path,
-  sourceProductCode: productCode,
-  sourceProductUrl,
-});
+): Engine6HeroCandidate => {
+  const normalizeHeroPath = (path: string) =>
+    path
+    .replace(/^product\.product\./, "product.")
+    .replace(/^media\./, "product.media.");
+  const normalizedSourceFieldPath = normalizeHeroPath(hero.path);
+  const normalizedVariantPath = normalizeHeroPath(hero.variantPath);
+
+  return {
+    ...hero,
+    path: normalizedSourceFieldPath,
+    variantPath: normalizedVariantPath,
+    sourceFieldPath: normalizedSourceFieldPath,
+    sourceProductCode: productCode,
+    sourceProductUrl,
+  };
+};
 
 const extractPlaybookHeroCandidates = ({
   product,
@@ -490,7 +501,7 @@ const extractPlaybookHeroCandidates = ({
 
   const mediaHeroes = resolveImageCollectionHeroCandidates(
     readPath(product, ["media", "images"]),
-    ["media", "images"],
+    ["product", "media", "images"],
     "api-primary"
   );
   candidates.push(

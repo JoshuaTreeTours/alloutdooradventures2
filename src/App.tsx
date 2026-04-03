@@ -74,6 +74,7 @@ import {
   ENGINE6_ANCHORAGE_PRIVATE_ROUTE,
   ENGINE6_ANCHORAGE_SUNSET_ROUTE,
   ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
+  ENGINE6_FORT_LAUDERDALE_BAHAMAS_FERRY_ROUTE,
   ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE,
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
@@ -263,6 +264,10 @@ export default function App() {
         />
         <Route
           path={ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_FORT_LAUDERDALE_BAHAMAS_FERRY_ROUTE}
           component={Engine6SpecimenRoute}
         />
 
