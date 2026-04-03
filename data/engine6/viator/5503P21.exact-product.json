@@ -1,0 +1,48 @@
+{
+  "product": {
+    "productCode": "5503P21",
+    "title": "All Included Combo with Miami Watersports",
+    "productUrl": "https://www.viator.com/tours/Miami/All-Included-Combo-with-Miami-Watersports/d662-5503P21",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 139.99,
+        "fromPriceFormatted": "$139.99"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 44
+    },
+    "description": "Bundle multiple Miami water activities in one combo package with a convenient all-included format designed for active travelers.",
+    "highlights": [
+      "Combo-style watersports package in Miami",
+      "All-included format for easier planning",
+      "Great option for visitors wanting multiple activities in one day"
+    ],
+    "duration": "3 hours",
+    "meetingPoint": {
+      "description": "Operator meeting instructions are sent after booking."
+    },
+    "included": ["Combo watersports experience", "Required safety gear"],
+    "faqs": [
+      {
+        "question": "What is this experience?",
+        "answer": "It is an all-included combo package with Miami Watersports."
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/c4/d6/25/caption.jpg?w=700&h=500&s=1",
+          "width": 700,
+          "height": 500
+        }
+      ]
+    }
+  }
+}

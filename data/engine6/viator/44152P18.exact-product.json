@@ -1,0 +1,62 @@
+{
+  "product": {
+    "productCode": "44152P18",
+    "title": "Everglades to Keys: Florida's Ultimate National Parks Expedition",
+    "productUrl": "https://www.viator.com/tours/Miami/Everglades-to-Keys-Floridas-Ultimate-National-Parks-Expedition/d662-44152P18",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 385,
+        "fromPriceFormatted": "$385.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 13
+    },
+    "description": "Travel from Miami through South Florida's unique ecosystems on an expedition-style day that connects the Everglades region and the Florida Keys. This route blends wildlife, scenery, and nature-focused stops.",
+    "highlights": [
+      "National parks-focused Florida adventure from Miami",
+      "Visit multiple natural landscapes in one itinerary",
+      "Great for wildlife and nature enthusiasts"
+    ],
+    "duration": "12 hours",
+    "meetingPoint": {
+      "description": "Downtown Miami pickup details are provided before departure."
+    },
+    "itineraryItems": [
+      {
+        "title": "Depart Miami",
+        "description": "Begin with a guided transfer toward South Florida parks."
+      },
+      {
+        "title": "Everglades region exploration",
+        "description": "Experience wetlands and wildlife viewing opportunities."
+      },
+      {
+        "title": "Florida Keys segment",
+        "description": "Continue south for coastal scenery and nature interpretation."
+      }
+    ],
+    "included": ["Guided transportation", "Park-focused touring"],
+    "faqs": [
+      {
+        "question": "What kind of tour is this?",
+        "answer": "It is a full-day expedition connecting the Everglades and the Keys."
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/31/7e/f0/b8/caption.jpg?w=700&h=500&s=1",
+          "width": 700,
+          "height": 500
+        }
+      ]
+    }
+  }
+}

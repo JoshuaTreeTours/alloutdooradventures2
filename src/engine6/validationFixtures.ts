@@ -29,6 +29,12 @@ import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-produc
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
 import specimen5503p10Payload from "../../data/engine6/viator/5503P10.exact-product.json";
 import specimen7943p1Payload from "../../data/engine6/viator/7943P1.exact-product.json";
+import specimen214880p12Payload from "../../data/engine6/viator/214880P12.exact-product.json";
+import specimen44152p18Payload from "../../data/engine6/viator/44152P18.exact-product.json";
+import specimen402171p1Payload from "../../data/engine6/viator/402171P1.exact-product.json";
+import specimen408277p4Payload from "../../data/engine6/viator/408277P4.exact-product.json";
+import specimen5503p21Payload from "../../data/engine6/viator/5503P21.exact-product.json";
+import specimen342209p4Payload from "../../data/engine6/viator/342209P4.exact-product.json";
 
 import specimen5865p8Payload from "../../data/engine6/viator/5865P8.exact-product.json";
 import specimen89173p8Payload from "../../data/engine6/viator/89173P8.exact-product.json";
@@ -71,6 +77,42 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Miami/Sightseeing-tour-or-party-on-a-Monterey-32ft/d662-438341P2",
     rawPayload: specimen438341p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "214880P12",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/3-days-amazing-tour-in-Miami/d662-214880P12",
+    rawPayload: specimen214880p12Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "44152P18",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Everglades-to-Keys-Floridas-Ultimate-National-Parks-Expedition/d662-44152P18",
+    rawPayload: specimen44152p18Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "402171P1",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Miami-Excursions-Luxury-Experience-Private/d662-402171P1",
+    rawPayload: specimen402171p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "408277P4",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Real-Extreme-Off-Road-ATV-Miami-driver-license-required/d662-408277P4",
+    rawPayload: specimen408277p4Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5503P21",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/All-Included-Combo-with-Miami-Watersports/d662-5503P21",
+    rawPayload: specimen5503p21Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "342209P4",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/SUP-Kayak-Wildlife-exploration-through-mangrove-jungle/d662-342209P4",
+    rawPayload: specimen342209p4Payload as Record<string, unknown>,
   },
   {
     productCode: "5865P8",

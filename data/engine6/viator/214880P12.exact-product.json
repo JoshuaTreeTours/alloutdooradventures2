@@ -1,0 +1,70 @@
+{
+  "product": {
+    "productCode": "214880P12",
+    "title": "3 Days Amazing Tour in Miami",
+    "productUrl": "https://www.viator.com/tours/Miami/3-days-amazing-tour-in-Miami/d662-214880P12",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 1799,
+        "fromPriceFormatted": "$1,799.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 2
+    },
+    "description": "Discover Miami over three days with a curated mix of city highlights, beach time, and local culture. This multi-day format is designed for travelers who want to see the essentials without rushing.",
+    "highlights": [
+      "Three-day guided Miami experience",
+      "Explore neighborhoods, waterfronts, and cultural hotspots",
+      "Ideal option for first-time Miami visitors"
+    ],
+    "duration": "3 days",
+    "meetingPoint": {
+      "description": "Meeting details are provided after booking confirmation."
+    },
+    "itineraryItems": [
+      {
+        "title": "Day 1 - Miami introduction",
+        "description": "Orientation and city exploration."
+      },
+      {
+        "title": "Day 2 - Coastal and cultural stops",
+        "description": "Visit waterfront areas and major landmarks."
+      },
+      {
+        "title": "Day 3 - Final discoveries",
+        "description": "Wrap up with free time and guided recommendations."
+      }
+    ],
+    "included": ["Guided touring", "Planned multi-day itinerary"],
+    "additionalInfo": [
+      "Bring comfortable walking shoes",
+      "Itinerary order may vary"
+    ],
+    "faqs": [
+      {
+        "question": "How long is this tour?",
+        "answer": "The experience runs across 3 days."
+      },
+      {
+        "question": "Where is the meeting point?",
+        "answer": "Final meeting instructions are sent after booking."
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/31/48/19/09/caption.jpg?w=700&h=500&s=1",
+          "width": 700,
+          "height": 500
+        }
+      ]
+    }
+  }
+}
