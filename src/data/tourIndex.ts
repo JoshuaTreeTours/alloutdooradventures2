@@ -1,4 +1,5 @@
 import { EUROPE_COUNTRIES, US_STATES, slugify } from "./tourCatalog";
+import { isEngine6OnlyCity } from "./tours";
 import { tours } from "./tours";
 import type { Tour } from "./tours.types";
 
@@ -107,10 +108,19 @@ const getToursForPlace = (place: GuidePlace): Tour[] => {
     }
 
     if (place.regionType === "state") {
-      return tour.destination.stateSlug === place.parentSlug && isUsStateTour(tour);
+      return (
+        tour.destination.stateSlug === place.parentSlug &&
+        isUsStateTour(tour) &&
+        (!isEngine6OnlyCity(place.parentSlug, place.slug) ||
+          tour.engine === "engine6")
+      );
     }
 
-    return getCountryFromTour(tour)?.slug === place.parentSlug;
+    return (
+      getCountryFromTour(tour)?.slug === place.parentSlug &&
+      (!isEngine6OnlyCity(tour.destination.stateSlug, place.slug) ||
+        tour.engine === "engine6")
+    );
   });
 };
 

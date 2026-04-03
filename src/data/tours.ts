@@ -240,6 +240,14 @@ const getEngine2ToursForLocation = (stateSlug: string, citySlug?: string) => {
 const getCanonicalCityTourPath = (tour: Tour) =>
   `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`;
 
+const ENGINE6_ONLY_CITY_KEYS = new Set([
+  "florida/miami",
+  "florida/fort-lauderdale",
+]);
+
+export const isEngine6OnlyCity = (stateSlug: string, citySlug: string) =>
+  ENGINE6_ONLY_CITY_KEYS.has(`${stateSlug}/${citySlug}`);
+
 function engineRank(tour: Tour) {
   if (tour.engine === "engine6") {
     return 5;
@@ -302,7 +310,9 @@ export const getToursByCity = (stateSlug: string, citySlug: string) =>
         tour.destination.citySlug === citySlug
     ),
     ...getEngine2ToursForLocation(stateSlug, citySlug),
-  ]);
+  ]).filter(tour =>
+    isEngine6OnlyCity(stateSlug, citySlug) ? tour.engine === "engine6" : true
+  );
 
 export const getTourBySlugs = (
   stateSlug: string,
@@ -467,6 +477,13 @@ export const getToursByCityUnified = (
   stateSlug: string,
   citySlug: string
 ): UnifiedCityTour[] => {
+  if (isEngine6OnlyCity(stateSlug, citySlug)) {
+    const engine6OnlyTours = getToursByCity(stateSlug, citySlug).map(
+      toUnifiedEngine1Tour
+    );
+    return dedupeUnifiedCityTours(engine6OnlyTours);
+  }
+
   const engine1Tours = getToursByCity(stateSlug, citySlug).map(
     toUnifiedEngine1Tour
   );

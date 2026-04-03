@@ -167,3 +167,40 @@ describe("engine6 canonical slug winner dedupe", () => {
     expect(city[0]?.engine).toBe("engine6");
   });
 });
+
+describe("Miami and Fort Lauderdale Engine6-only listing surfaces", () => {
+  it("returns only Engine6 tours for Miami city cards/listings", () => {
+    const miamiTours = getToursByCity("florida", "miami");
+    expect(miamiTours.length).toBeGreaterThan(0);
+    expect(miamiTours.every(tour => tour.engine === "engine6")).toBe(true);
+    expect(miamiTours.some(tour => tour.productCode === "7943P1")).toBe(true);
+  });
+
+  it("returns only Engine6 tours for Fort Lauderdale city cards/listings", () => {
+    const fortLauderdaleTours = getToursByCity("florida", "fort-lauderdale");
+    expect(fortLauderdaleTours.length).toBeGreaterThan(0);
+    expect(
+      fortLauderdaleTours.every(tour => tour.engine === "engine6")
+    ).toBe(true);
+    expect(
+      fortLauderdaleTours.some(tour => tour.productCode === "6331BAHA")
+    ).toBe(true);
+  });
+
+  it("returns only Engine6 entries for Miami and Fort Lauderdale unified grids", () => {
+    const miamiUnified = getToursByCityUnified("florida", "miami");
+    const fortLauderdaleUnified = getToursByCityUnified(
+      "florida",
+      "fort-lauderdale"
+    );
+
+    expect(miamiUnified.length).toBeGreaterThan(0);
+    expect(fortLauderdaleUnified.length).toBeGreaterThan(0);
+    expect(miamiUnified.every(entry => entry.tour.engine === "engine6")).toBe(
+      true
+    );
+    expect(
+      fortLauderdaleUnified.every(entry => entry.tour.engine === "engine6")
+    ).toBe(true);
+  });
+});
