@@ -133,9 +133,9 @@ const getHeroQualityClassification = (
 
 const getQualityRank = (candidate: Engine6HeroCandidate) => {
   const quality = getHeroQualityClassification(candidate);
-  if (quality === "product-media") return 0;
-  if (quality === "splice") return 1;
-  if (quality === "caption") return 2;
+  if (quality === "caption") return 0;
+  if (quality === "product-media") return 1;
+  if (quality === "splice") return 2;
   return 4;
 };
 

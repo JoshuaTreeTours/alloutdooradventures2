@@ -139,7 +139,7 @@ describe("engine6 hero resolver", () => {
     expect(resolved.fallbackTriggered).toBe(false);
   });
 
-  it("does not allow cross-family caption to override stronger same-product media", () => {
+  it("prefers same-product caption over other same-product media regardless of family", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "447234P3",
       currentSourceProductUrl:
@@ -169,9 +169,9 @@ describe("engine6 hero resolver", () => {
     });
 
     expect(resolved.heroUrl).toBe(
-      "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg"
+      "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/32/94/08/b8/caption.jpg"
     );
-    expect(resolved.heroQualityClassification).toBe("splice");
+    expect(resolved.heroQualityClassification).toBe("caption");
     expect(resolved.captionPrecedenceApplied).toBe(false);
     expect(resolved.candidateFamilyIdentityDeterminable).toBe(true);
   });
@@ -366,5 +366,66 @@ describe("engine6 hero resolver", () => {
         }),
       ])
     );
+  });
+
+  it("rejects foreign candidates before ranking when mixed products are provided", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "PRODA1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/City/Product-A/d1-PRODA1",
+      candidates: [
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/aa/bb/cc/caption.jpg?w=700&h=500&s=1",
+          sourceType: "api-gallery",
+          candidateProductCode: "PRODB2",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/City/Product-B/d1-PRODB2",
+          fieldPath: "product.media.images[0].variants.CAPTION.url",
+        },
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/11/22/33/44.jpg?w=1200&h=800&s=1",
+          sourceType: "api-primary",
+          candidateProductCode: "PRODA1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/City/Product-A/d1-PRODA1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/11/22/33/44.jpg?w=1200&h=800&s=1"
+    );
+    expect(resolved.rejectedForeignCandidates).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          reason: "foreign-product-code",
+          candidateProductCode: "PRODB2",
+        }),
+      ])
+    );
+  });
+
+  it("never fabricates caption URLs or rewrites image family paths", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "NOMUT1",
+      currentSourceProductUrl: "https://www.viator.com/tours/City/Tour/d1-NOMUT1",
+      candidates: [
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg?w=1200&h=800&s=1",
+          sourceType: "api-primary",
+          candidateProductCode: "NOMUT1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/City/Tour/d1-NOMUT1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg?w=1200&h=800&s=1"
+    );
+    expect(resolved.heroUrl).not.toContain("caption.jpg");
+    expect(resolved.heroUrl).not.toContain("/hero.jpg");
   });
 });

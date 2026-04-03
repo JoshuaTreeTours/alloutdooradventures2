@@ -18,6 +18,7 @@ import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-prod
 import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-product.json";
 import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-product.json";
 import specimen383300p6Payload from "../../data/engine6/viator/383300P6.exact-product.json";
+import specimen6331bahaPayload from "../../data/engine6/viator/6331BAHA.exact-product.json";
 import specimen10150p16Payload from "../../data/engine6/viator/10150P16.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
@@ -190,6 +191,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Fort-Lauderdale/Guided-Electric-Bike-Tours-of-Greater-Fort-Lauderdale/d660-383300P6",
     rawPayload: specimen383300p6Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "6331BAHA",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Bahamas-Ferry-Day-Trip-from-Miami-with-Transport/d660-6331BAHA",
+    rawPayload: specimen6331bahaPayload as Record<string, unknown>,
   },
   {
     productCode: "10150P16",

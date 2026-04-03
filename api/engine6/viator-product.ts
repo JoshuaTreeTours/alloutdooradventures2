@@ -68,6 +68,10 @@ const buildDiagnostics = (
     card: false,
     schema: false,
   },
+  activeProductCode: null as string | null,
+  resolvedHeroUrl: null as string | null,
+  rejectedForeignCandidateCount: 0,
+  rejectedForeignCandidateExamples: [] as string[],
   rejectedForeignHeroCandidates: [] as Array<{
     url: string;
     sourceType: "api-primary" | "api-gallery" | "none";
@@ -301,6 +305,13 @@ const applyResolvedHero = (args: {
         card: Boolean(heroDecision.heroUrl),
         schema: Boolean(heroDecision.heroUrl),
       },
+      activeProductCode: args.productCode,
+      resolvedHeroUrl: heroDecision.heroUrl,
+      rejectedForeignCandidateCount:
+        heroDecision.rejectedForeignCandidates.length,
+      rejectedForeignCandidateExamples: heroDecision.rejectedForeignCandidates
+        .slice(0, 3)
+        .map(candidate => `${candidate.reason}:${candidate.url}`),
       rejectedForeignHeroCandidates: heroDecision.rejectedForeignCandidates,
       heroSourceProductCode: heroDecision.finalCandidate?.sourceProductCode ?? null,
       heroSourceProductUrl: heroDecision.finalCandidate?.sourceProductUrl ?? null,

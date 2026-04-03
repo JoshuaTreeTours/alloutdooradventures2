@@ -31,6 +31,10 @@ export type Engine6DiagnosticsPaths = {
     card: boolean;
     schema: boolean;
   };
+  activeProductCode: string | null;
+  resolvedHeroUrl: string | null;
+  rejectedForeignCandidateCount: number;
+  rejectedForeignCandidateExamples: string[];
   rejectedForeignHeroCandidates: Array<{
     url: string;
     sourceType: Engine6HeroSourceType;
@@ -313,22 +317,6 @@ const emptyExtracted = (): Engine6Extracted => ({
   categories: [],
 });
 
-const rankVariants = (
-  variants: RankedImageVariant[]
-): RankedImageVariant | null => {
-  const ranked = [...variants].sort((a, b) => {
-    if (b.area !== a.area) {
-      return b.area - a.area;
-    }
-    if ((b.width ?? 0) !== (a.width ?? 0)) {
-      return (b.width ?? 0) - (a.width ?? 0);
-    }
-    return (b.height ?? 0) - (a.height ?? 0);
-  });
-
-  return ranked[0] ?? null;
-};
-
 const collectArrayVariants = (
   image: RecordLike,
   basePath: PathSegment[]
@@ -421,28 +409,42 @@ const resolveImageCollectionHeroCandidates = (
     if (!image) continue;
 
     const basePath = [...basePathPrefix, entry.index];
-    const selectedVariant = rankVariants([
+    const imageVariants = [
       ...collectRecordVariants(image, basePath),
       ...collectArrayVariants(image, basePath),
-    ]);
+    ].sort((a, b) => {
+      if (b.area !== a.area) {
+        return b.area - a.area;
+      }
+      if ((b.width ?? 0) !== (a.width ?? 0)) {
+        return (b.width ?? 0) - (a.width ?? 0);
+      }
+      return (b.height ?? 0) - (a.height ?? 0);
+    });
 
-    if (selectedVariant) {
-      candidates.push({
-        url: selectedVariant.url,
-        path: selectedVariant.path,
-        variantPath: selectedVariant.variantPath,
-        width: selectedVariant.width,
-        height: selectedVariant.height,
-        sourceType,
-      });
-      continue;
+    if (imageVariants.length > 0) {
+      const seenImageVariantUrls = new Set<string>();
+      for (const variant of imageVariants) {
+        if (seenImageVariantUrls.has(variant.url)) {
+          continue;
+        }
+        seenImageVariantUrls.add(variant.url);
+        candidates.push({
+          url: variant.url,
+          path: variant.path,
+          variantPath: variant.variantPath,
+          width: variant.width,
+          height: variant.height,
+          sourceType,
+        });
+      }
     }
 
     const directUrl =
       asImageUrl(image.url) ??
       asImageUrl(image.src) ??
       asImageUrl(image.imageUrl);
-    if (directUrl) {
+    if (directUrl && !imageVariants.some(variant => variant.url === directUrl)) {
       const directPath = asImageUrl(image.url)
         ? formatFieldPath([...basePath, "url"])
         : asImageUrl(image.src)
@@ -466,12 +468,23 @@ const withHeroScope = (
   hero: HeroImageResult,
   productCode: string | null,
   sourceProductUrl: string | null
-): Engine6HeroCandidate => ({
-  ...hero,
-  sourceFieldPath: hero.path,
-  sourceProductCode: productCode,
-  sourceProductUrl,
-});
+): Engine6HeroCandidate => {
+  const normalizeHeroPath = (path: string) =>
+    path
+    .replace(/^product\.product\./, "product.")
+    .replace(/^media\./, "product.media.");
+  const normalizedSourceFieldPath = normalizeHeroPath(hero.path);
+  const normalizedVariantPath = normalizeHeroPath(hero.variantPath);
+
+  return {
+    ...hero,
+    path: normalizedSourceFieldPath,
+    variantPath: normalizedVariantPath,
+    sourceFieldPath: normalizedSourceFieldPath,
+    sourceProductCode: productCode,
+    sourceProductUrl,
+  };
+};
 
 const extractPlaybookHeroCandidates = ({
   product,
@@ -486,7 +499,7 @@ const extractPlaybookHeroCandidates = ({
 
   const mediaHeroes = resolveImageCollectionHeroCandidates(
     readPath(product, ["media", "images"]),
-    ["media", "images"],
+    ["product", "media", "images"],
     "api-primary"
   );
   candidates.push(
@@ -1054,6 +1067,10 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       card: false,
       schema: false,
     },
+    activeProductCode: null,
+    resolvedHeroUrl: null,
+    rejectedForeignCandidateCount: 0,
+    rejectedForeignCandidateExamples: [],
     rejectedForeignHeroCandidates: [],
     heroSourceProductCode: null,
     heroSourceProductUrl: null,
@@ -1139,6 +1156,14 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     card: Boolean(heroDecision.heroUrl),
     schema: Boolean(heroDecision.heroUrl),
   };
+  diagnostics.activeProductCode = productCode ?? null;
+  diagnostics.resolvedHeroUrl = heroDecision.heroUrl;
+  diagnostics.rejectedForeignCandidateCount =
+    heroDecision.rejectedForeignCandidates.length;
+  diagnostics.rejectedForeignCandidateExamples =
+    heroDecision.rejectedForeignCandidates
+      .slice(0, 3)
+      .map(candidate => `${candidate.reason}:${candidate.url}`);
   diagnostics.rejectedForeignHeroCandidates = heroDecision.rejectedForeignCandidates;
   diagnostics.heroSourceProductCode =
     heroDecision.finalCandidate?.sourceProductCode ?? null;
