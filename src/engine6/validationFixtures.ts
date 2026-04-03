@@ -20,6 +20,8 @@ import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-pr
 import specimen383300p6Payload from "../../data/engine6/viator/383300P6.exact-product.json";
 import specimen6331bahaPayload from "../../data/engine6/viator/6331BAHA.exact-product.json";
 import specimen10150p16Payload from "../../data/engine6/viator/10150P16.exact-product.json";
+import specimen57834p1Payload from "../../data/engine6/viator/57834P1.exact-product.json";
+import specimen118958p5Payload from "../../data/engine6/viator/118958P5.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -204,6 +206,18 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Fort-Lauderdale/Bahamas-Ferry-Day-Trip-from-Miami-with-Transport/d660-6331BAHA",
     rawPayload: specimen6331bahaPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "57834P1",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Venice-of-America-Fort-Lauderdale-Cruise/d660-57834P1",
+    rawPayload: specimen57834p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "118958P5",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/4-hour-Drift-Fishing/d660-118958P5",
+    rawPayload: specimen118958p5Payload as Record<string, unknown>,
   },
   {
     productCode: "10150P16",
