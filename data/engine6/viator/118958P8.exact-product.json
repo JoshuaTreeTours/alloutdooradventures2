@@ -1,0 +1,78 @@
+{
+  "product": {
+    "productCode": "118958P8",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/4-Hour-Shared-Big-Game-Fishing/d660-118958P8",
+    "title": "4 Hour Shared Big Game Fishing",
+    "description": {
+      "text": "Head offshore from Fort Lauderdale for a shared deep-sea fishing trip targeting seasonal big game species with support from an experienced crew."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "priceFrom": "$89.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 37
+    },
+    "duration": "4 hours (approx.)",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/cd/26/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            },
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/cd/26/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Shared deep-sea fishing trip from Fort Lauderdale",
+      "Crew support with gear setup and bait prep",
+      "Target seasonal game fish in offshore waters",
+      "Half-day format ideal for busy travel itineraries"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meeting and dock details are provided at booking."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Board and depart",
+        "description": "Meet at the marina, board the vessel, and head offshore."
+      },
+      {
+        "title": "Big game fishing session",
+        "description": "Fish likely hotspots with guidance from the onboard crew."
+      },
+      {
+        "title": "Return to harbor",
+        "description": "Cruise back to Fort Lauderdale marina after your fishing window."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long is this fishing trip?",
+        "answer": "This is a 4-hour shared big game fishing experience."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Fishing Charters"
+      },
+      {
+        "label": "Water Activities"
+      }
+    ]
+  }
+}

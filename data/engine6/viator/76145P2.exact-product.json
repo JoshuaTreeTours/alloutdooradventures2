@@ -1,0 +1,82 @@
+{
+  "product": {
+    "productCode": "76145P2",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Authentic-Private-Everglades-Airboat-Tour/d660-76145P2",
+    "title": "Authentic Private Everglades Airboat Tour",
+    "description": {
+      "text": "Glide through the Florida Everglades on a private airboat ride near Fort Lauderdale, with time to spot wildlife and learn about the unique wetland ecosystem from your captain guide."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "priceFrom": "$95.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 24
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/15/16/f1/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            },
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/15/16/f1/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private airboat experience through Everglades waterways",
+      "Great chance to spot local wildlife and birds",
+      "Personalized commentary from your local captain",
+      "Easy day trip format from Fort Lauderdale"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meeting point details are shared after booking confirmation."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Meet your captain",
+        "description": "Arrive at the departure point and receive a short safety briefing."
+      },
+      {
+        "title": "Private airboat ride",
+        "description": "Cruise deep into the Everglades with a private guide and narrated wildlife viewing."
+      },
+      {
+        "title": "Return to dock",
+        "description": "Head back to the launch area and wrap up your experience."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is this a private tour?",
+        "answer": "Yes, the airboat is reserved for your private group."
+      },
+      {
+        "question": "How long is the experience?",
+        "answer": "The experience lasts about 1 hour and 30 minutes."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Airboat Tours"
+      },
+      {
+        "label": "Nature and Wildlife"
+      }
+    ]
+  }
+}

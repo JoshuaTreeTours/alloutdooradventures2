@@ -31,6 +31,9 @@ import {
   ENGINE6_ANCHORAGE_SUNSET_ROUTE,
   ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
   ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE,
+  ENGINE6_FORT_LAUDERDALE_EVERGLADES_AIRBOAT_ROUTE,
+  ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_ROUTE,
+  ENGINE6_FORT_LAUDERDALE_BIG_GAME_FISHING_ROUTE,
   ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE,
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
@@ -705,6 +708,100 @@ describe("engine6 listing surfaces", () => {
     );
   });
 
+
+  it("adds 76145P2, 5559561P1, and 118958P8 to Florida and Fort Lauderdale listing sources", () => {
+    const floridaTours = getToursByState("florida");
+    const fortLauderdaleTours = getToursByCity("florida", "fort-lauderdale");
+    for (const productCode of ["76145P2", "5559561P1", "118958P8"]) {
+      expect(floridaTours.some(tour => tour.productCode === productCode)).toBe(
+        true
+      );
+      expect(
+        fortLauderdaleTours.some(tour => tour.productCode === productCode)
+      ).toBe(true);
+    }
+  });
+
+  it("keeps exact hero/card/cta parity for 76145P2, 5559561P1, and 118958P8", () => {
+    const expectations = [
+      {
+        productCode: "76145P2",
+        route: ENGINE6_FORT_LAUDERDALE_EVERGLADES_AIRBOAT_ROUTE,
+        hero:
+          "https://dynamic-media.tacdn.com/media/photo-o/2f/15/16/f1/caption.jpg?w=1100&h=800&s=1",
+        cta: "https://www.viator.com/tours/Fort-Lauderdale/Authentic-Private-Everglades-Airboat-Tour/d660-76145P2?pid=P00290915&mcid=42383&medium=link",
+      },
+      {
+        productCode: "5559561P1",
+        route: ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_ROUTE,
+        hero:
+          "https://dynamic-media.tacdn.com/media/photo-o/2e/d1/7c/59/caption.jpg?w=700&h=500&s=1",
+        cta: "https://www.viator.com/tours/Fort-Lauderdale/JetCar-Fort-Lauderdale-Rental/d660-5559561P1?pid=P00290915&mcid=42383&medium=link",
+      },
+      {
+        productCode: "118958P8",
+        route: ENGINE6_FORT_LAUDERDALE_BIG_GAME_FISHING_ROUTE,
+        hero:
+          "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/cd/26/caption.jpg?w=1100&h=800&s=1",
+        cta: "https://www.viator.com/tours/Fort-Lauderdale/4-Hour-Shared-Big-Game-Fishing/d660-118958P8?pid=P00290915&mcid=42383&medium=link",
+      },
+    ] as const;
+
+    for (const expectation of expectations) {
+      const tour = engine6ResolvedTours.find(
+        item => item.productCode === expectation.productCode
+      );
+      expect(tour).toBeDefined();
+      expect(tour?.canonicalPath).toBe(expectation.route);
+      expect(tour?.heroImageUrl).toBe(expectation.hero);
+      expect(tour?.resolvedImageUrl).toBe(expectation.hero);
+      expect(tour?.resolvedHero?.url).toBe(expectation.hero);
+      expect(tour?.bookingUrl).toBe(expectation.cta);
+
+      const listingTour = getToursByCity("florida", "fort-lauderdale").find(
+        item => item.productCode === expectation.productCode
+      );
+      expect(listingTour?.heroImage).toBe(expectation.hero);
+      expect(listingTour?.primaryImageUrl).toBe(expectation.hero);
+      expect(listingTour?.bookingUrl).toBe(expectation.cta);
+
+      const schema = buildEngine6SchemaGraph(tour!);
+      const graph = schema["@graph"] as Array<Record<string, unknown>>;
+      const webpage = graph.find(node => node["@type"] === "WebPage");
+      const trip = graph.find(node => node["@type"] === "TouristTrip");
+      const product = graph.find(node => node["@type"] === "Product");
+      const breadcrumb = graph.find(node => node["@type"] === "BreadcrumbList") as
+        | Record<string, unknown>
+        | undefined;
+      expect((webpage as { image?: string } | undefined)?.image).toBe(
+        expectation.hero
+      );
+      expect((trip as { image?: string } | undefined)?.image).toBe(
+        expectation.hero
+      );
+      expect((product as { image?: string } | undefined)?.image).toBe(
+        expectation.hero
+      );
+      expect(breadcrumb).toBeDefined();
+      expect(
+        (breadcrumb?.itemListElement as Array<{ name: string }>).map(
+          item => item.name
+        )
+      ).toEqual(["Destinations", "Florida", "Fort Lauderdale", tour!.title]);
+
+      const html = renderToString(<Engine6TourPage tour={tour!} />);
+      expect(html).toContain("Destinations");
+      expect(html).toContain("Florida");
+      expect(html).toContain("Fort Lauderdale");
+      expect(html).toContain(tour!.title);
+      expect(html).toContain(
+        `href="${tour!.bookingUrl.replaceAll("&", "&amp;")}"`
+      );
+      expect(html).toContain(
+        `src="${expectation.hero.replaceAll("&", "&amp;")}"`
+      );
+    }
+  });
   it("adds 32779P2 to California and Avalon listing sources (not Los Angeles listing)", () => {
     const californiaTours = getToursByState("california");
     const avalonTours = getToursByCity("california", "avalon");

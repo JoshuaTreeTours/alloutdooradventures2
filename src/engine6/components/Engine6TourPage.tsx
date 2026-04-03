@@ -36,7 +36,6 @@ const buildEngine6Breadcrumbs = (tour: Engine6Tour) => {
     { label: "Destinations", href: "/destinations" },
     { label: tour.state, href: `/destinations/${stateSlug}` },
     { label: tour.city, href: parentCityToursPath },
-    { label: "Tour", href: tour.canonicalPath },
   ];
 };
 
