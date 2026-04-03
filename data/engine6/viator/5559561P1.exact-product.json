@@ -1,0 +1,74 @@
+{
+  "product": {
+    "productCode": "5559561P1",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/JetCar-Fort-Lauderdale-Rental/d660-5559561P1",
+    "title": "JetCar Fort Lauderdale Rental",
+    "description": {
+      "text": "Drive a JetCar-inspired watercraft around Fort Lauderdale waterways for a high-energy sightseeing and photo-ready experience on the water."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "priceFrom": "$199.00",
+    "reviews": {
+      "combinedAverageRating": 5.0,
+      "totalReviews": 11
+    },
+    "duration": "1 hour (approx.)",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/d1/7c/59/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            },
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/d1/7c/59/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Rent a JetCar-style watercraft in Fort Lauderdale",
+      "Cruise local waterways with skyline and marina views",
+      "Great for social content and unique on-water photos",
+      "All required safety gear is provided"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Departure details are provided after booking confirmation."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Check in and safety orientation",
+        "description": "Meet staff, review operation guidance, and get fitted with safety equipment."
+      },
+      {
+        "title": "JetCar rental ride",
+        "description": "Enjoy your JetCar rental time on designated Fort Lauderdale waterways."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do I need prior JetCar experience?",
+        "answer": "No prior experience is required; staff provide operating instructions."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Water Sports"
+      },
+      {
+        "label": "Self-guided Rentals"
+      }
+    ]
+  }
+}
