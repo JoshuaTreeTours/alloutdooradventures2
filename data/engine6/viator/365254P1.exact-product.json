@@ -73,13 +73,19 @@
     "media": {
       "images": [
         {
-          "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/caption.jpg",
-          "isCover": true
-        },
-        {
-          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg",
-          "width": 720,
-          "height": 480
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/3f/ea/73/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            },
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/3f/ea/73.jpg?w=1600&h=1066&s=1",
+              "width": 1600,
+              "height": 1066
+            }
+          }
         }
       ]
     }
