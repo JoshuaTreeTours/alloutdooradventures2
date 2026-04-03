@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "57834P1",
+    "title": "VENICE OF AMERICA TOUR!! Best of Fort Lauderdale over 30 years!!!",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Venice-of-America-Fort-Lauderdale-Cruise/d660-57834P1",
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 29.99,
+        "fromPriceFormatted": "$29.99"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 2101
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "description": {
+      "text": "Harken back to yesteryear on a fun Fort Lauderdale sightseeing cruise aboard the Carrie B paddlewheeler. Sail past yachts, mansions, and cruise ships along the New River, Intracoastal Waterway, and Port Everglades. Spend time on the open sun deck, sit outside under a canopy, or in air-conditioned comfort on the main deck. The captain narrates the tour and a full-service bar and light snacks are available to purchase."
+    },
+    "highlights": [
+      "Board the Carrie B paddlewheeler to cruise the Venice of America",
+      "Choose from several departure times to fit your schedule",
+      "Cruise the New River, Intracoastal Waterway, and Port Everglades",
+      "Visit the full bar as your captain narrates the tour"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Carrie B Cruises, 440 N New River Dr E, Fort Lauderdale, FL 33301, USA. Closest parking is about a half block away at SE 4th Street and Financial Plaza."
+      },
+      "end": {
+        "description": "This activity ends back at the meeting point."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Carrie B Cruises",
+        "description": "1 hour 30 minutes • Admission Ticket Free"
+      },
+      {
+        "title": "Stranahan House",
+        "description": "Pass by"
+      },
+      {
+        "title": "Riverside Hotel Fort Lauderdale",
+        "description": "Pass by"
+      },
+      {
+        "title": "Colee Hammock Park",
+        "description": "Pass by"
+      }
+    ],
+    "included": [
+      "Cruise"
+    ],
+    "additionalInfo": [
+      "Hotel pickup and drop-off is not included",
+      "Snacks and drinks are available for purchase from the onboard full-service bar",
+      "Wheelchair accessible",
+      "Stroller accessible",
+      "Service animals allowed",
+      "Most travelers can participate",
+      "This tour/activity will have a maximum of 100 travelers"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the cruise?",
+        "answer": "The sightseeing cruise lasts approximately 1 hour and 30 minutes."
+      },
+      {
+        "question": "Where is the meeting point?",
+        "answer": "Meet at Carrie B Cruises, 440 N New River Dr E, Fort Lauderdale, FL 33301, USA."
+      },
+      {
+        "question": "Are restrooms available onboard?",
+        "answer": "Yes, restroom facilities are available onboard the vessel."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Cruises"
+      },
+      {
+        "label": "Water Tours"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/d3/9d/58.jpg",
+              "width": 674,
+              "height": 446
+            },
+            "THUMBNAIL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-210x118/12/d3/9d/58.jpg",
+              "width": 210,
+              "height": 118
+            }
+          }
+        }
+      ]
+    }
+  }
+}
