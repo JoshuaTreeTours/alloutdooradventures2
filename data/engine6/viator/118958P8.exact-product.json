@@ -1,0 +1,91 @@
+{
+  "product": {
+    "productCode": "118958P8",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/4-Hour-Shared-Big-Game-Fishing/d660-118958P8",
+    "title": "4 Hour Shared Big Game Fishing",
+    "description": {
+      "text": "Head offshore from Fort Lauderdale for a shared big game fishing trip with crew support and equipment ready onboard. Target seasonal species in productive Atlantic waters and enjoy a half-day fishing adventure suitable for beginners and experienced anglers."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "priceFrom": "$85.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 37
+    },
+    "duration": "4 hours (approx.)",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/cd/26/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Join a shared offshore fishing trip from Fort Lauderdale",
+      "Fish with experienced crew support and local knowledge",
+      "Use onboard rods, reels, and tackle",
+      "Great half-day option for groups and solo travelers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Fort Lauderdale marina prior to departure. Boarding instructions and exact location are provided after booking."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Check-in at marina",
+        "description": "Arrive, check in, and board the fishing vessel."
+      },
+      {
+        "title": "Cruise to offshore fishing grounds",
+        "description": "Travel to active fishing areas selected by the captain."
+      },
+      {
+        "title": "Shared big game fishing session",
+        "description": "Fish with provided gear and assistance from the crew."
+      }
+    ],
+    "inclusions": [
+      "Shared fishing charter",
+      "Fishing equipment and tackle",
+      "Captain and crew assistance"
+    ],
+    "additionalInfo": [
+      "Catch is seasonal and not guaranteed",
+      "Bring sun protection and non-slip footwear",
+      "Check in early to ensure on-time departure"
+    ],
+    "faqs": [
+      {
+        "question": "Is this trip suitable for beginners?",
+        "answer": "Yes, beginners are welcome and crew assist with setup and technique."
+      },
+      {
+        "question": "How long is the fishing trip?",
+        "answer": "The shared charter runs approximately 4 hours."
+      },
+      {
+        "question": "Is fishing gear included?",
+        "answer": "Yes, rods, reels, and tackle are included."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Fishing Charters"
+      },
+      {
+        "label": "Water Sports"
+      }
+    ]
+  }
+}

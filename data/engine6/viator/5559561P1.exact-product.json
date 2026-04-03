@@ -1,0 +1,91 @@
+{
+  "product": {
+    "productCode": "5559561P1",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/JetCar-Fort-Lauderdale-Rental/d660-5559561P1",
+    "title": "JetCar Fort Lauderdale Rental",
+    "description": {
+      "text": "Drive a unique JetCar on the waterways of Fort Lauderdale during this guided rental experience. Cruise scenic channels with pre-departure orientation and safety instruction, and enjoy a fun water activity close to downtown and coastal neighborhoods."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "priceFrom": "$199.00",
+    "reviews": {
+      "combinedAverageRating": 5.0,
+      "totalReviews": 11
+    },
+    "duration": "1 hour (approx.)",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/d1/7c/59/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Pilot a JetCar watercraft on Fort Lauderdale waterways",
+      "Receive safety orientation before departure",
+      "Capture social-ready photos during the ride",
+      "Great option for visitors seeking a unique water activity"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Fort Lauderdale marina departure point. Check-in instructions and exact meeting details are provided after booking."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Arrival and check-in",
+        "description": "Meet staff and complete waiver and safety orientation."
+      },
+      {
+        "title": "JetCar on-water session",
+        "description": "Enjoy your timed JetCar rental route with guidance from staff."
+      },
+      {
+        "title": "Return and wrap-up",
+        "description": "Dock at the marina and receive post-ride assistance."
+      }
+    ],
+    "inclusions": [
+      "JetCar rental session",
+      "Safety briefing",
+      "Required life jackets and equipment"
+    ],
+    "additionalInfo": [
+      "Driver age/license requirements may apply",
+      "Experience is weather dependent",
+      "Arrive early for check-in and onboarding"
+    ],
+    "faqs": [
+      {
+        "question": "Do I need prior JetCar experience?",
+        "answer": "No prior experience is required. Staff provide a safety and controls orientation before departure."
+      },
+      {
+        "question": "How long is the rental?",
+        "answer": "The on-water experience is approximately 1 hour."
+      },
+      {
+        "question": "Is safety gear included?",
+        "answer": "Yes, life jackets and required safety equipment are included."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Water Sports"
+      },
+      {
+        "label": "Rentals"
+      }
+    ]
+  }
+}
