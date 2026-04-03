@@ -30,6 +30,9 @@ import {
   ENGINE6_ANCHORAGE_PRIVATE_ROUTE,
   ENGINE6_ANCHORAGE_SUNSET_ROUTE,
   ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
+  ENGINE6_FORT_LAUDERDALE_PRIVATE_EVERGLADES_AIRBOAT_ROUTE,
+  ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_ROUTE,
+  ENGINE6_FORT_LAUDERDALE_SHARED_BIG_GAME_FISHING_ROUTE,
   ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE,
   ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE,
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
@@ -450,6 +453,33 @@ describe("engine6 Viator booking URLs", () => {
       "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10?pid=P00290915&mcid=42383&medium=link"
     );
   });
+
+  it("uses canonical affiliate Viator URLs for 76145P2, 5559561P1, and 118958P8", () => {
+    expect(
+      buildEngine6ViatorBookingUrl(
+        "76145P2",
+        "https://www.viator.com/tours/Fort-Lauderdale/Authentic-Private-Everglades-Airboat-Tour/d660-76145P2"
+      )
+    ).toBe(
+      "https://www.viator.com/tours/Fort-Lauderdale/Authentic-Private-Everglades-Airboat-Tour/d660-76145P2?pid=P00290915&mcid=42383&medium=link"
+    );
+    expect(
+      buildEngine6ViatorBookingUrl(
+        "5559561P1",
+        "https://www.viator.com/tours/Fort-Lauderdale/JetCar-Fort-Lauderdale-Rental/d660-5559561P1"
+      )
+    ).toBe(
+      "https://www.viator.com/tours/Fort-Lauderdale/JetCar-Fort-Lauderdale-Rental/d660-5559561P1?pid=P00290915&mcid=42383&medium=link"
+    );
+    expect(
+      buildEngine6ViatorBookingUrl(
+        "118958P8",
+        "https://www.viator.com/tours/Fort-Lauderdale/4-Hour-Shared-Big-Game-Fishing/d660-118958P8"
+      )
+    ).toBe(
+      "https://www.viator.com/tours/Fort-Lauderdale/4-Hour-Shared-Big-Game-Fishing/d660-118958P8?pid=P00290915&mcid=42383&medium=link"
+    );
+  });
 });
 
 describe("engine6 aggregate rating normalization", () => {
@@ -689,6 +719,29 @@ describe("engine6 listing surfaces", () => {
     ).toBe(true);
   });
 
+  it("adds 76145P2, 5559561P1, and 118958P8 to Florida and Fort Lauderdale listing sources", () => {
+    const floridaTours = getToursByState("florida");
+    const fortLauderdaleTours = getToursByCity("florida", "fort-lauderdale");
+    expect(floridaTours.some(tour => tour.productCode === "76145P2")).toBe(
+      true
+    );
+    expect(floridaTours.some(tour => tour.productCode === "5559561P1")).toBe(
+      true
+    );
+    expect(floridaTours.some(tour => tour.productCode === "118958P8")).toBe(
+      true
+    );
+    expect(
+      fortLauderdaleTours.some(tour => tour.productCode === "76145P2")
+    ).toBe(true);
+    expect(
+      fortLauderdaleTours.some(tour => tour.productCode === "5559561P1")
+    ).toBe(true);
+    expect(
+      fortLauderdaleTours.some(tour => tour.productCode === "118958P8")
+    ).toBe(true);
+  });
+
   it("keeps exact hero parity for 89173P10 and maps to the Fort Lauderdale canonical route", () => {
     const kayakTour = engine6ResolvedTours.find(
       tour => tour.productCode === "89173P10"
@@ -702,6 +755,81 @@ describe("engine6 listing surfaces", () => {
     );
     expect(kayakTour?.bookingUrl).toBe(
       "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10?pid=P00290915&mcid=42383&medium=link"
+    );
+  });
+
+  it("keeps exact supplied hero and CTA parity for the three new Fort Lauderdale tours", () => {
+    const privateAirboat = engine6ResolvedTours.find(
+      tour => tour.productCode === "76145P2"
+    );
+    const jetcarRental = engine6ResolvedTours.find(
+      tour => tour.productCode === "5559561P1"
+    );
+    const bigGameFishing = engine6ResolvedTours.find(
+      tour => tour.productCode === "118958P8"
+    );
+
+    expect(privateAirboat?.canonicalPath).toBe(
+      ENGINE6_FORT_LAUDERDALE_PRIVATE_EVERGLADES_AIRBOAT_ROUTE
+    );
+    expect(jetcarRental?.canonicalPath).toBe(
+      ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_ROUTE
+    );
+    expect(bigGameFishing?.canonicalPath).toBe(
+      ENGINE6_FORT_LAUDERDALE_SHARED_BIG_GAME_FISHING_ROUTE
+    );
+
+    expect(privateAirboat?.heroImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/15/16/f1/caption.jpg?w=1100&h=800&s=1"
+    );
+    expect(jetcarRental?.heroImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/d1/7c/59/caption.jpg?w=700&h=500&s=1"
+    );
+    expect(bigGameFishing?.heroImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/cd/26/caption.jpg?w=1100&h=800&s=1"
+    );
+
+    expect(privateAirboat?.bookingUrl).toBe(
+      "https://www.viator.com/tours/Fort-Lauderdale/Authentic-Private-Everglades-Airboat-Tour/d660-76145P2?pid=P00290915&mcid=42383&medium=link"
+    );
+    expect(jetcarRental?.bookingUrl).toBe(
+      "https://www.viator.com/tours/Fort-Lauderdale/JetCar-Fort-Lauderdale-Rental/d660-5559561P1?pid=P00290915&mcid=42383&medium=link"
+    );
+    expect(bigGameFishing?.bookingUrl).toBe(
+      "https://www.viator.com/tours/Fort-Lauderdale/4-Hour-Shared-Big-Game-Fishing/d660-118958P8?pid=P00290915&mcid=42383&medium=link"
+    );
+  });
+
+  it("wires city card entries for the three new Fort Lauderdale tours with exact hero parity", () => {
+    const cityUnified = getToursByCityUnified("florida", "fort-lauderdale");
+
+    const assertCityCard = (
+      productCode: string,
+      expectedHref: string,
+      expectedHero: string
+    ) => {
+      const entry = cityUnified.find(tour => tour.tour.productCode === productCode);
+      expect(entry).toBeDefined();
+      expect(entry?.href).toBe(expectedHref);
+      expect(entry?.tour.heroImage).toBe(expectedHero);
+      expect(entry?.tour.primaryImageUrl).toBe(expectedHero);
+      expect(entry?.tour.resolvedImageUrl).toBe(expectedHero);
+    };
+
+    assertCityCard(
+      "76145P2",
+      ENGINE6_FORT_LAUDERDALE_PRIVATE_EVERGLADES_AIRBOAT_ROUTE,
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/15/16/f1/caption.jpg?w=1100&h=800&s=1"
+    );
+    assertCityCard(
+      "5559561P1",
+      ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_ROUTE,
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/d1/7c/59/caption.jpg?w=700&h=500&s=1"
+    );
+    assertCityCard(
+      "118958P8",
+      ENGINE6_FORT_LAUDERDALE_SHARED_BIG_GAME_FISHING_ROUTE,
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/cd/26/caption.jpg?w=1100&h=800&s=1"
     );
   });
 

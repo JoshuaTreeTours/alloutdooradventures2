@@ -1,0 +1,91 @@
+{
+  "product": {
+    "productCode": "76145P2",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Authentic-Private-Everglades-Airboat-Tour/d660-76145P2",
+    "title": "Authentic Private Everglades Airboat Tour",
+    "description": {
+      "text": "Explore Florida's Everglades on a private airboat tour designed for small groups seeking a personalized wildlife experience. Glide through sawgrass marshes with a local captain, watch for alligators and native birds, and learn about the ecosystem at a relaxed pace."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "priceFrom": "$119.00",
+    "reviews": {
+      "combinedAverageRating": 5.0,
+      "totalReviews": 16
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/15/16/f1/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private airboat experience for your party only",
+      "Spot alligators, turtles, and native birdlife in the Everglades",
+      "Learn from a local captain about wetlands ecology and conservation",
+      "Convenient Fort Lauderdale departure for a half-day adventure"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain at the designated Everglades launch location near Fort Lauderdale. Full meeting details are provided after booking."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Meet your private captain",
+        "description": "Check in at the launch point and review safety guidance before departure."
+      },
+      {
+        "title": "Private airboat ride through the wetlands",
+        "description": "Cruise across the marsh while your guide points out wildlife and habitat zones."
+      },
+      {
+        "title": "Wildlife spotting and photo stops",
+        "description": "Pause in scenic areas for photos and sightings of Everglades species."
+      }
+    ],
+    "inclusions": [
+      "Private airboat tour",
+      "Professional local captain/guide",
+      "Safety briefing and required equipment"
+    ],
+    "additionalInfo": [
+      "Tour duration may vary slightly due to weather and water conditions",
+      "Wear comfortable clothes suitable for outdoor conditions",
+      "Children must be accompanied by an adult"
+    ],
+    "faqs": [
+      {
+        "question": "Is this tour private?",
+        "answer": "Yes. The airboat is reserved for your booking party only."
+      },
+      {
+        "question": "How long is the experience?",
+        "answer": "The tour is approximately 1 hour 30 minutes, including check-in and on-water time."
+      },
+      {
+        "question": "What wildlife might we see?",
+        "answer": "Sightings can include alligators, turtles, wading birds, and other Everglades wildlife."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Airboat Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ]
+  }
+}

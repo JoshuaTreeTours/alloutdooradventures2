@@ -20,6 +20,9 @@ import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-pr
 import specimen383300p6Payload from "../../data/engine6/viator/383300P6.exact-product.json";
 import specimen6331bahaPayload from "../../data/engine6/viator/6331BAHA.exact-product.json";
 import specimen57834p1Payload from "../../data/engine6/viator/57834P1.exact-product.json";
+import specimen76145p2Payload from "../../data/engine6/viator/76145P2.exact-product.json";
+import specimen5559561p1Payload from "../../data/engine6/viator/5559561P1.exact-product.json";
+import specimen118958p8Payload from "../../data/engine6/viator/118958P8.exact-product.json";
 import specimen10150p16Payload from "../../data/engine6/viator/10150P16.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
@@ -218,6 +221,24 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Fort-Lauderdale/Venice-of-America-Fort-Lauderdale-Cruise/d660-57834P1",
     rawPayload: specimen57834p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "76145P2",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Authentic-Private-Everglades-Airboat-Tour/d660-76145P2",
+    rawPayload: specimen76145p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5559561P1",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/JetCar-Fort-Lauderdale-Rental/d660-5559561P1",
+    rawPayload: specimen5559561p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "118958P8",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/4-Hour-Shared-Big-Game-Fishing/d660-118958P8",
+    rawPayload: specimen118958p8Payload as Record<string, unknown>,
   },
   {
     productCode: "10150P16",
