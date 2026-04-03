@@ -63,6 +63,8 @@ const buildDiagnostics = (
   heroPlaceholderFallbackReason: null as string | null,
   captionPrecedenceApplied: false,
   candidateFamilyIdentityDeterminable: false,
+  existenceValidationRejectedCount: 0,
+  fallbackToNextCandidateTriggered: false,
   heroSurfaceParity: {
     page: false,
     card: false,
@@ -300,6 +302,10 @@ const applyResolvedHero = (args: {
       captionPrecedenceApplied: heroDecision.captionPrecedenceApplied,
       candidateFamilyIdentityDeterminable:
         heroDecision.candidateFamilyIdentityDeterminable,
+      existenceValidationRejectedCount:
+        heroDecision.existenceValidationRejectedCount,
+      fallbackToNextCandidateTriggered:
+        heroDecision.fallbackToNextCandidateTriggered,
       heroSurfaceParity: {
         page: Boolean(heroDecision.heroUrl),
         card: Boolean(heroDecision.heroUrl),

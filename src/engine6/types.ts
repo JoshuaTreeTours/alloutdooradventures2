@@ -57,6 +57,8 @@ export type Engine6TourDiagnostics = {
   heroPlaceholderFallbackReason: string | null;
   captionPrecedenceApplied: boolean;
   candidateFamilyIdentityDeterminable: boolean;
+  existenceValidationRejectedCount: number;
+  fallbackToNextCandidateTriggered: boolean;
   heroSurfaceParity: {
     page: boolean;
     card: boolean;

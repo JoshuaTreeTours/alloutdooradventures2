@@ -428,4 +428,43 @@ describe("engine6 hero resolver", () => {
     expect(resolved.heroUrl).not.toContain("caption.jpg");
     expect(resolved.heroUrl).not.toContain("/hero.jpg");
   });
+
+  it("rejects unusable top-ranked candidates and falls back to the next usable same-product candidate", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "365254P1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/Miami/Miami-Jet-Ski-Rental/d662-365254P1",
+      candidates: [
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/aa/bb/cc/caption.jpg",
+          sourceType: "api-gallery",
+          candidateProductCode: "365254P1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Miami/Miami-Jet-Ski-Rental/d662-365254P1",
+          fieldPath: "product.media.images[0].variants.CAPTION.url",
+        },
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/10/20/30/40.jpg?w=1600&h=900&s=1",
+          sourceType: "api-primary",
+          candidateProductCode: "365254P1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Miami/Miami-Jet-Ski-Rental/d662-365254P1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/10/20/30/40.jpg?w=1600&h=900&s=1"
+    );
+    expect(resolved.fallbackToNextCandidateTriggered).toBe(true);
+    expect(resolved.existenceValidationRejectedCount).toBe(1);
+    expect(resolved.rejectedForeignCandidates).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          reason: "unusable-image-candidate",
+        }),
+      ])
+    );
+  });
 });

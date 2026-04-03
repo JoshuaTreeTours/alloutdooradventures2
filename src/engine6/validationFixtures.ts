@@ -20,6 +20,7 @@ import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-pr
 import specimen383300p6Payload from "../../data/engine6/viator/383300P6.exact-product.json";
 import specimen6331bahaPayload from "../../data/engine6/viator/6331BAHA.exact-product.json";
 import specimen10150p16Payload from "../../data/engine6/viator/10150P16.exact-product.json";
+import specimen365254p1Payload from "../../data/engine6/viator/365254P1.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -203,5 +204,11 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Miami/Miami-Raccoon-Island-Adventure/d662-10150P16",
     rawPayload: specimen10150p16Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "365254P1",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Miami-Jet-Ski-Rental/d662-365254P1",
+    rawPayload: specimen365254p1Payload as Record<string, unknown>,
   },
 ];
