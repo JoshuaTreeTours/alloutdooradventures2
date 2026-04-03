@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "89173P10",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10",
+    "title": "Fort Lauderdale's Tropical Kayak Tour and Island Adventure",
+    "description": {
+      "text": "Paddle a tropical waterway route in Fort Lauderdale on a guided kayak outing that blends easy instruction, mangrove scenery, and island-style stops. Launch with a quick orientation, settle into a comfortable paddling rhythm, and follow your guide through calm canals and nature corridors where local wildlife is often spotted. This small-group experience focuses on kayaking and nature interpretation, with route pacing designed for both first-time and experienced paddlers."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "priceFrom": "$69.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 187
+    },
+    "duration": "2 hours 30 minutes",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/31/61/7e/5f/caption.jpg?w=1400&h=1000&s=1",
+              "width": 674,
+              "height": 446
+            },
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/31/61/7e/5f/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            },
+            "THUMBNAIL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-210x118/31/61/7e/59.jpg",
+              "width": 210,
+              "height": 118
+            }
+          }
+        },
+        {
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/31/61/7e/64.jpg?w=1200&h=800&s=1",
+              "width": 1200,
+              "height": 800
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided tropical kayak route through calm Fort Lauderdale waterways",
+      "Small-group pacing with instruction suitable for new and experienced paddlers",
+      "Mangrove and island scenery with opportunities to spot local wildlife",
+      "A nature-focused outing that keeps the experience centered on paddling"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Fort Lauderdale launch point details are shared after booking confirmation. Arrive early for check-in and paddle orientation."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Meet and kayak orientation",
+        "description": "Check in with your guide, review safety basics, and get fitted with kayaking gear."
+      },
+      {
+        "title": "Paddle through tropical canals",
+        "description": "Follow a guided route through calm waterways and mangrove-lined sections."
+      },
+      {
+        "title": "Island and nature interpretation",
+        "description": "Pause at scenic points while your guide shares local ecology and waterway history."
+      },
+      {
+        "title": "Return paddle to launch",
+        "description": "Complete the loop and return to the original launch area."
+      }
+    ],
+    "inclusions": [
+      "Kayak and paddle",
+      "Life jacket",
+      "Guided tropical waterway route"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Most travelers can participate",
+      "Bring water, sun protection, and clothes suitable for paddling"
+    ],
+    "faqs": [
+      {
+        "question": "What activity is this tour focused on?",
+        "answer": "This experience is centered on guided kayaking through tropical waterways in Fort Lauderdale."
+      },
+      {
+        "question": "How long is the tour?",
+        "answer": "The tropical kayak tour lasts approximately 2 hours 30 minutes."
+      },
+      {
+        "question": "Is this suitable for beginners?",
+        "answer": "Yes, the tour includes an orientation and is paced for both first-time and experienced paddlers."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Kayaking Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ]
+  }
+}
