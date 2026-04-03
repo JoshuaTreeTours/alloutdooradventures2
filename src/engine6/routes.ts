@@ -87,6 +87,9 @@ export const ENGINE6_MIAMI_PIRATE_BOAT_ROUTE =
 export const ENGINE6_MIAMI_RACCOON_ISLAND_PRODUCT_CODE = "10150P16";
 export const ENGINE6_MIAMI_RACCOON_ISLAND_ROUTE =
   "/destinations/florida/miami/tours/miami-raccoon-island-adventure";
+export const ENGINE6_MIAMI_BISCAYNE_BAY_JET_SKI_PRODUCT_CODE = "7943P1";
+export const ENGINE6_MIAMI_BISCAYNE_BAY_JET_SKI_ROUTE =
+  "/destinations/florida/miami/tours/miami-biscayne-bay-jet-ski-tour";
 
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
@@ -185,6 +188,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_MIAMI_RACCOON_ISLAND_ROUTE,
     ENGINE6_MIAMI_RACCOON_ISLAND_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MIAMI_BISCAYNE_BAY_JET_SKI_ROUTE,
+    ENGINE6_MIAMI_BISCAYNE_BAY_JET_SKI_PRODUCT_CODE,
   ],
 ] as const;
 

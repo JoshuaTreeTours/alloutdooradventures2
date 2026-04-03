@@ -1,0 +1,78 @@
+{
+  "product": {
+    "productCode": "7943P1",
+    "title": "Miami Biscayne Bay Jet Ski Tour",
+    "productUrl": "https://www.viator.com/tours/Miami/Biscayne-Bay-Jet-Ski-Tour/d662-7943P1",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 159.99,
+        "fromPriceFormatted": "$159.99"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 213
+    },
+    "description": "See the sights of Miami from the water during this Jet Ski tour along Biscayne Bay. Travel the waters of Biscayne Bay and enjoy the view of Miami’s breathtaking waterfront. See the sun-splashed downtown Miami skyline, the mansions of the rich and famous, the Venetian Islands, the Port of Miami, Miami Beach, and more. Along the way, look for dolphins, manta rays, sea turtles, manatees, and other ocean wildlife.",
+    "highlights": [
+      "Enjoy a Jet Ski tour along Miami’s Biscayne Bay",
+      "Choose from multiple departure times throughout the day",
+      "Experience stunning waterfront views from your Jet Ski",
+      "Jet Ski rental and life jacket included"
+    ],
+    "duration": "1 hour",
+    "meetingPoint": {
+      "name": "Meeting point",
+      "description": "3301 Rickenbacker Cswy, Key Biscayne, FL 33149, USA"
+    },
+    "itineraryItems": [
+      {
+        "title": "Biscayne Bay Jet Ski route",
+        "description": "Ride either toward Downtown Miami for skyline views or toward Miami Beach to see celebrity homes.",
+        "duration": "1 hour"
+      }
+    ],
+    "included": [
+      "Life Jacket",
+      "Fuel",
+      "Jet Ski rental"
+    ],
+    "additionalInfo": [
+      "Temporary boating license may be required and is not included",
+      "This activity ends back at the meeting point"
+    ],
+    "faqs": [
+      {
+        "question": "Where does the Jet Ski tour meet?",
+        "answer": "The meeting point is 3301 Rickenbacker Cswy, Key Biscayne, FL 33149, USA."
+      },
+      {
+        "question": "How long is the tour?",
+        "answer": "The experience duration is approximately 1 hour."
+      },
+      {
+        "question": "What is included?",
+        "answer": "Life jacket, fuel, and Jet Ski rental are included."
+      }
+    ],
+    "categories": [
+      "Water Sports",
+      "Jet Boat Rentals",
+      "Adventure Tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/14/cb/79.jpg",
+          "width": 674,
+          "height": 446,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}
