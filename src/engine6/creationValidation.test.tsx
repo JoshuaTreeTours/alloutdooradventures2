@@ -78,6 +78,22 @@ describe("engine6 creation contract validator", () => {
     );
   });
 
+  it("keeps Miami 365254P1 on its own caption family and rejects Yosemite splice drift", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "365254P1"
+    );
+    expect(fixture).toBeDefined();
+
+    const payload = toPayload(fixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+
+    expect(tour.heroImageUrl).toContain("/caption.jpg");
+    expect(tour.diagnostics.heroQualityClassification).toBe("caption");
+    expect(tour.heroImageUrl).not.toBe(
+      "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg"
+    );
+  });
+
   it("fails loudly when hero/card parity drifts", () => {
     const payload = toPayload(ENGINE6_VALIDATION_FIXTURES[0]!);
     const tour = mapViatorToEngine6Tour(payload);

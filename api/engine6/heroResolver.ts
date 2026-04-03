@@ -37,6 +37,7 @@ export type Engine6RejectedHeroCandidate = {
     | "non-product-source"
     | "unverified-product-scope"
     | "invalid-url"
+    | "unusable-image-candidate"
     | "static-hero-disallowed"
     | "untrusted-media-host";
   candidateProductCode: string | null;
@@ -53,6 +54,8 @@ export type Engine6ResolvedHero = {
   rejectedForeignCandidates: Engine6RejectedHeroCandidate[];
   captionPrecedenceApplied: boolean;
   candidateFamilyIdentityDeterminable: boolean;
+  existenceValidationRejectedCount: number;
+  fallbackToNextCandidateTriggered: boolean;
 };
 
 const getEffectiveWidth = (candidate: Engine6HeroCandidate) => {
@@ -267,6 +270,36 @@ const isTrustedViatorMediaHost = (value: string) => {
   }
 };
 
+const isLikelyUsableImageCandidate = (candidate: Engine6HeroCandidate) => {
+  try {
+    const parsed = new URL(candidate.url);
+    const host = parsed.hostname.toLowerCase();
+    const pathname = parsed.pathname.toLowerCase();
+    const search = parsed.search.toLowerCase();
+
+    const hasImageExtension = /\.(?:jpg|jpeg|png|webp|avif)$/i.test(pathname);
+    if (!hasImageExtension) {
+      return false;
+    }
+
+    if (host.includes("dynamic-media.tacdn.com")) {
+      const isCaption = pathname.endsWith("/caption.jpg");
+      const hasDimensionParams =
+        search.includes("w=") || search.includes("width=");
+      const hasStructuredVariantPath = /\/r\/[a-z0-9/]+\/caption\.jpg$/i.test(
+        pathname
+      );
+      if (isCaption && !hasDimensionParams && !hasStructuredVariantPath) {
+        return false;
+      }
+    }
+
+    return true;
+  } catch {
+    return false;
+  }
+};
+
 const toRejectedCandidate = (
   candidate: Engine6HeroCandidate,
   reason: Engine6RejectedHeroCandidate["reason"]
@@ -405,7 +438,34 @@ export const resolveProductScopedHero = ({
   }
 
   if (validCandidates.length > 0) {
-    const selectedCandidate = rankHeroCandidates(validCandidates)[0]!;
+    const rankedCandidates = rankHeroCandidates(validCandidates);
+    let selectedCandidate: Engine6HeroCandidate | null = null;
+
+    for (const candidate of rankedCandidates) {
+      if (isLikelyUsableImageCandidate(candidate)) {
+        selectedCandidate = candidate;
+        break;
+      }
+      rejectedForeignCandidates.push(
+        toRejectedCandidate(candidate, "unusable-image-candidate")
+      );
+    }
+
+    if (!selectedCandidate) {
+      return {
+        heroUrl: null,
+        heroSourceType: "none",
+        heroQualityClassification: "none",
+        fallbackTriggered: true,
+        finalCandidate: null,
+        rejectedForeignCandidates,
+        captionPrecedenceApplied: false,
+        candidateFamilyIdentityDeterminable: false,
+        existenceValidationRejectedCount: rankedCandidates.length,
+        fallbackToNextCandidateTriggered: false,
+      };
+    }
+
     const normalizedUrl = normalizeHeroMediaUrl(selectedCandidate.url);
     const selectedFamilyKey =
       selectedCandidate.familyKey ?? extractCandidateFamilyKey(selectedCandidate.url);
@@ -442,6 +502,11 @@ export const resolveProductScopedHero = ({
       rejectedForeignCandidates,
       captionPrecedenceApplied,
       candidateFamilyIdentityDeterminable,
+      existenceValidationRejectedCount: rankedCandidates.filter(
+        candidate => !isLikelyUsableImageCandidate(candidate)
+      ).length,
+      fallbackToNextCandidateTriggered:
+        rankedCandidates.length > 1 && rankedCandidates[0] !== selectedCandidate,
     };
   }
 
@@ -454,5 +519,7 @@ export const resolveProductScopedHero = ({
     rejectedForeignCandidates,
     captionPrecedenceApplied: false,
     candidateFamilyIdentityDeterminable: false,
+    existenceValidationRejectedCount: 0,
+    fallbackToNextCandidateTriggered: false,
   };
 };

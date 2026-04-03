@@ -243,6 +243,10 @@ export const mapViatorToEngine6Tour = (
       captionPrecedenceApplied: payload.diagnostics.captionPrecedenceApplied,
       candidateFamilyIdentityDeterminable:
         payload.diagnostics.candidateFamilyIdentityDeterminable,
+      existenceValidationRejectedCount:
+        payload.diagnostics.existenceValidationRejectedCount,
+      fallbackToNextCandidateTriggered:
+        payload.diagnostics.fallbackToNextCandidateTriggered,
       heroSurfaceParity: payload.diagnostics.heroSurfaceParity,
       rejectedForeignHeroCandidates:
         payload.diagnostics.rejectedForeignHeroCandidates,

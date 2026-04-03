@@ -26,6 +26,8 @@ export type Engine6DiagnosticsPaths = {
   heroPlaceholderFallbackReason: string | null;
   captionPrecedenceApplied: boolean;
   candidateFamilyIdentityDeterminable: boolean;
+  existenceValidationRejectedCount: number;
+  fallbackToNextCandidateTriggered: boolean;
   heroSurfaceParity: {
     page: boolean;
     card: boolean;
@@ -478,7 +480,6 @@ const withHeroScope = (
 
   return {
     ...hero,
-    path: normalizedSourceFieldPath,
     variantPath: normalizedVariantPath,
     sourceFieldPath: normalizedSourceFieldPath,
     sourceProductCode: productCode,
@@ -1062,6 +1063,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroPlaceholderFallbackReason: null,
     captionPrecedenceApplied: false,
     candidateFamilyIdentityDeterminable: false,
+    existenceValidationRejectedCount: 0,
+    fallbackToNextCandidateTriggered: false,
     heroSurfaceParity: {
       page: false,
       card: false,
@@ -1151,6 +1154,10 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.captionPrecedenceApplied = heroDecision.captionPrecedenceApplied;
   diagnostics.candidateFamilyIdentityDeterminable =
     heroDecision.candidateFamilyIdentityDeterminable;
+  diagnostics.existenceValidationRejectedCount =
+    heroDecision.existenceValidationRejectedCount;
+  diagnostics.fallbackToNextCandidateTriggered =
+    heroDecision.fallbackToNextCandidateTriggered;
   diagnostics.heroSurfaceParity = {
     page: Boolean(heroDecision.heroUrl),
     card: Boolean(heroDecision.heroUrl),

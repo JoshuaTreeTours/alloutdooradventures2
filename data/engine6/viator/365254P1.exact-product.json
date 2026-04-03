@@ -1,0 +1,93 @@
+{
+  "product": {
+    "productCode": "365254P1",
+    "title": "Miami Jet Ski Rental",
+    "productUrl": "https://www.viator.com/tours/Miami/Miami-Jet-Ski-Rental/d662-365254P1",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 150,
+        "fromPriceFormatted": "$150.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 18
+    },
+    "description": "Experience Miami from the water with a guided jet ski rental session designed for first-time and experienced riders. After a brief safety orientation, guests head into Biscayne Bay to ride with skyline views and open-water stretches.",
+    "highlights": [
+      "Guided jet ski experience in Biscayne Bay",
+      "Safety briefing and operating instructions included",
+      "Views of the Miami skyline from the water",
+      "Great option for first-time and returning riders"
+    ],
+    "duration": "1 hour",
+    "meetingPoint": {
+      "name": "Miami Beach Marina",
+      "description": "300 Alton Rd, Miami Beach, FL"
+    },
+    "itineraryItems": [
+      {
+        "title": "Safety check-in and briefing",
+        "description": "Meet staff, complete check-in, and review safety/ride instructions.",
+        "duration": "15 minutes"
+      },
+      {
+        "title": "Guided jet ski ride",
+        "description": "Ride through designated zones with views of Miami and Biscayne Bay.",
+        "duration": "45 minutes"
+      }
+    ],
+    "included": [
+      "Jet ski rental session",
+      "Guide and safety briefing",
+      "Required life vest"
+    ],
+    "additionalInfo": [
+      "Arrive 20 to 30 minutes before your scheduled departure",
+      "Bring a valid photo ID",
+      "Weather and water conditions can affect departure timing"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the jet ski rental experience?",
+        "answer": "The on-water guided session is about 45 minutes with additional time for check-in and the safety briefing."
+      },
+      {
+        "question": "Where is the meeting point?",
+        "answer": "The listed meeting point is Miami Beach Marina at 300 Alton Rd, Miami Beach, Florida."
+      },
+      {
+        "question": "Is prior jet ski experience required?",
+        "answer": "No. The experience includes a pre-ride orientation and safety instructions."
+      }
+    ],
+    "categories": [
+      "Water Sports",
+      "Jet Skiing",
+      "Adventure"
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/3f/ea/73/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            },
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/3f/ea/73.jpg?w=1600&h=1066&s=1",
+              "width": 1600,
+              "height": 1066
+            }
+          }
+        }
+      ]
+    }
+  }
+}
