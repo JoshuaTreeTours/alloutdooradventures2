@@ -1,7 +1,4 @@
-export type Engine6HeroSourceType =
-  | "api-primary"
-  | "api-gallery"
-  | "none";
+export type Engine6HeroSourceType = "api-primary" | "api-gallery" | "none";
 
 export type Engine6HeroQualityClassification =
   | "caption"
@@ -70,7 +67,10 @@ const getEffectiveWidth = (candidate: Engine6HeroCandidate) => {
 };
 
 const getEffectiveHeight = (candidate: Engine6HeroCandidate) => {
-  if (typeof candidate.height === "number" && Number.isFinite(candidate.height)) {
+  if (
+    typeof candidate.height === "number" &&
+    Number.isFinite(candidate.height)
+  ) {
     return candidate.height;
   }
 
@@ -84,8 +84,24 @@ const getEffectiveHeight = (candidate: Engine6HeroCandidate) => {
 };
 
 const normalizeHeroMediaUrl = (value: string) => {
+  const stripTrailingGarbage = (raw: string) => {
+    let next = raw.trim();
+    let previous = "";
+
+    while (next !== previous) {
+      previous = next;
+      next = next
+        .replace(/(?:%20)+$/gi, "")
+        .replace(/[(),]+$/g, "")
+        .replace(/\s+$/g, "")
+        .replace(/,+$/g, "");
+    }
+
+    return next;
+  };
+
   try {
-    const parsed = new URL(value);
+    const parsed = new URL(stripTrailingGarbage(value));
     const host = parsed.hostname.toLowerCase();
     const isTacdnOrTripadvisorHost =
       host.endsWith(".tacdn.com") ||
@@ -102,7 +118,34 @@ const normalizeHeroMediaUrl = (value: string) => {
 
     return parsed.toString();
   } catch {
-    return value;
+    return stripTrailingGarbage(value);
+  }
+};
+
+const hasMalformedHeroTail = (value: string) => {
+  if (/%20/i.test(value)) return true;
+  if (/[()]/.test(value)) return true;
+  if (/\s$/.test(value)) return true;
+  if (/,(\s*)$/.test(value)) return true;
+  if (!/\.(?:jpg|jpeg|png|webp|avif)(?:$|[?#])/i.test(value)) return true;
+
+  try {
+    const parsed = new URL(value);
+    const hasQuery = parsed.search.length > 1;
+    if (!hasQuery) {
+      return false;
+    }
+
+    const width = parsed.searchParams.get("w");
+    const height = parsed.searchParams.get("h");
+    const scale = parsed.searchParams.get("s");
+    const hasValidWidth = width ? /^\d{2,5}$/.test(width) : true;
+    const hasValidHeight = height ? /^\d{2,5}$/.test(height) : true;
+    const hasValidScale = scale ? /^\d+$/.test(scale) : true;
+
+    return !hasValidWidth || !hasValidHeight || !hasValidScale;
+  } catch {
+    return true;
   }
 };
 
@@ -114,7 +157,8 @@ const extractHost = (value: string): string | null => {
   }
 };
 
-const isCaptionHeroUrl = (value: string) => /\/caption\.jpg(?:$|[?#])/i.test(value);
+const isCaptionHeroUrl = (value: string) =>
+  /\/caption\.jpg(?:$|[?#])/i.test(value);
 
 const isSpliceHeroUrl = (value: string) =>
   /\/attractions-splice-spp-(?:\d+x\d+)\//i.test(value);
@@ -164,7 +208,10 @@ const extractCandidateFamilyKey = (value: string): string | null => {
   }
 };
 
-const hasCaptionPrecedence = (a: Engine6HeroCandidate, b: Engine6HeroCandidate) => {
+const hasCaptionPrecedence = (
+  a: Engine6HeroCandidate,
+  b: Engine6HeroCandidate
+) => {
   const aIsCaption = getHeroQualityClassification(a) === "caption";
   const bIsCaption = getHeroQualityClassification(b) === "caption";
   if (aIsCaption === bIsCaption) {
@@ -237,7 +284,8 @@ export const normalizeEngine6SourceProductUrl = (
   }
 };
 
-const isStaticHeroDisallowed = (value: string) => /(^|\/)hero\.jpg(?:$|[?#])/i.test(value);
+const isStaticHeroDisallowed = (value: string) =>
+  /(^|\/)hero\.jpg(?:$|[?#])/i.test(value);
 
 const isValidHttpImageUrl = (value: string) => {
   try {
@@ -396,21 +444,31 @@ export const resolveProductScopedHero = ({
       sourceFieldPath: candidateSourceFieldPath,
       host: candidate.host ?? extractHost(candidate.url),
       qualityClassification:
-        candidate.qualityClassification ?? getHeroQualityClassification(candidate),
+        candidate.qualityClassification ??
+        getHeroQualityClassification(candidate),
       candidateProductCode,
       candidateSourceProductUrl,
       fieldPath: candidateSourceFieldPath,
-      familyKey: candidate.familyKey ?? extractCandidateFamilyKey(candidate.url),
+      familyKey:
+        candidate.familyKey ?? extractCandidateFamilyKey(candidate.url),
     });
   }
 
   if (validCandidates.length > 0) {
     const selectedCandidate = rankHeroCandidates(validCandidates)[0]!;
     const normalizedUrl = normalizeHeroMediaUrl(selectedCandidate.url);
+    if (hasMalformedHeroTail(normalizedUrl)) {
+      throw new Error(
+        `Engine6 hero URL sanitation failed: malformed final hero URL ${normalizedUrl}`
+      );
+    }
     const selectedFamilyKey =
-      selectedCandidate.familyKey ?? extractCandidateFamilyKey(selectedCandidate.url);
+      selectedCandidate.familyKey ??
+      extractCandidateFamilyKey(selectedCandidate.url);
     const candidateFamilyIdentityDeterminable = validCandidates.some(
-      candidate => (candidate.familyKey ?? extractCandidateFamilyKey(candidate.url)) !== null
+      candidate =>
+        (candidate.familyKey ?? extractCandidateFamilyKey(candidate.url)) !==
+        null
     );
     const captionPrecedenceApplied = validCandidates.some(candidate => {
       if (candidate === selectedCandidate) {
@@ -418,26 +476,33 @@ export const resolveProductScopedHero = ({
       }
       const selectedIsCaption =
         getHeroQualityClassification(selectedCandidate) === "caption";
-      const candidateIsCaption = getHeroQualityClassification(candidate) === "caption";
+      const candidateIsCaption =
+        getHeroQualityClassification(candidate) === "caption";
       if (!selectedIsCaption || candidateIsCaption) {
         return false;
       }
       const candidateFamily =
         candidate.familyKey ?? extractCandidateFamilyKey(candidate.url);
-      return Boolean(selectedFamilyKey && candidateFamily && selectedFamilyKey === candidateFamily);
+      return Boolean(
+        selectedFamilyKey &&
+        candidateFamily &&
+        selectedFamilyKey === candidateFamily
+      );
     });
 
     return {
       heroUrl: normalizedUrl,
       heroSourceType: selectedCandidate.sourceType,
-      heroQualityClassification: getHeroQualityClassification(selectedCandidate),
+      heroQualityClassification:
+        getHeroQualityClassification(selectedCandidate),
       fallbackTriggered: false,
       finalCandidate: {
         ...selectedCandidate,
         url: normalizedUrl,
         familyKey: selectedFamilyKey,
         width: selectedCandidate.width ?? getEffectiveWidth(selectedCandidate),
-        height: selectedCandidate.height ?? getEffectiveHeight(selectedCandidate),
+        height:
+          selectedCandidate.height ?? getEffectiveHeight(selectedCandidate),
       },
       rejectedForeignCandidates,
       captionPrecedenceApplied,

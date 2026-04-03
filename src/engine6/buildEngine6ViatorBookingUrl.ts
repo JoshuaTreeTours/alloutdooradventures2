@@ -13,6 +13,8 @@ const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
     "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3",
   "89173P8":
     "https://www.viator.com/tours/Fort-Lauderdale/Reef-and-Snorkel-Paddle-Tour/d660-89173P8",
+  "89173P10":
+    "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10",
 };
 
 const FALLBACK_ENGINE6_VIATOR_SEARCH_URL = "https://www.viator.com/search";
@@ -47,6 +49,16 @@ export const resolveEngine6OfferUrl = (
   }
 
   return parsed.toString();
+};
+
+export const extractViatorProductCodeFromUrl = (url: string): string | null => {
+  try {
+    const parsed = new URL(url);
+    const match = parsed.pathname.match(/-([A-Z0-9_]+)$/i);
+    return match?.[1]?.toUpperCase() ?? null;
+  } catch {
+    return null;
+  }
 };
 
 export const buildEngine6ViatorBookingUrl = (

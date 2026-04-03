@@ -1,4 +1,7 @@
-import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
+import {
+  buildEngine6ViatorBookingUrl,
+  extractViatorProductCodeFromUrl,
+} from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { resolveEngine6PathForProductCode } from "./routes";
 import {
@@ -90,7 +93,9 @@ export const mapViatorToEngine6Tour = (
     payload.diagnostics.heroSourceProductUrl &&
     payload.diagnostics.heroSourceFieldPath &&
     payload.diagnostics.heroHost &&
-    payload.diagnostics.heroSourceFieldPath.startsWith("product.media.images") &&
+    payload.diagnostics.heroSourceFieldPath.startsWith(
+      "product.media.images"
+    ) &&
     payload.diagnostics.heroSourceProductCode.toUpperCase() ===
       payload.rawProductCode.toUpperCase() &&
     payload.diagnostics.finalHeroUrl === finalHeroImageUrl
@@ -157,6 +162,23 @@ export const mapViatorToEngine6Tour = (
     payload.rawProductCode,
     payload.extracted.productUrl
   );
+  const bookingUrlProductCode = extractViatorProductCodeFromUrl(bookingUrl);
+  if (
+    !bookingUrlProductCode ||
+    bookingUrlProductCode.toUpperCase() !== payload.rawProductCode.toUpperCase()
+  ) {
+    throw new Error(
+      `Engine6 strict CTA contract violation for ${payload.rawProductCode}: booking URL must resolve to exact-product code`
+    );
+  }
+  if (
+    payload.rawProductCode.toUpperCase() === "89173P10" &&
+    payload.diagnostics.rejectedForeignCandidateCount > 0
+  ) {
+    throw new Error(
+      `Engine6 strict hero isolation violation for ${payload.rawProductCode}: foreign hero candidates were detected`
+    );
+  }
   const ctaOwner = "viator";
   const fallbackFieldNames = [
     !payload.extracted.title ? "title" : null,

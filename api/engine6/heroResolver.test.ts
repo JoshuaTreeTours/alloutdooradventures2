@@ -198,6 +198,29 @@ describe("engine6 hero resolver", () => {
     );
   });
 
+  it("sanitizes trailing encoded garbage from final TACDN caption URLs", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "89173P10",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10",
+      candidates: [
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/31/61/7e/5f/caption.jpg?w=1400&h=1000&s=1%20(",
+          sourceType: "api-primary",
+          candidateProductCode: "89173P10",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10",
+          fieldPath: "product.media.images[0].variants.CAPTION.url",
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/31/61/7e/5f/caption.jpg?w=1400&h=1000&s=1"
+    );
+    expect(resolved.fallbackTriggered).toBe(false);
+  });
+
   it("rejects untrusted hosts even when the candidate appears product-scoped", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "63657P1",
@@ -270,7 +293,8 @@ describe("engine6 hero resolver", () => {
   it("uses same-product non-splice product media when caption is unavailable", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "MEDIA1",
-      currentSourceProductUrl: "https://www.viator.com/tours/City/Tour/d1-MEDIA1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/City/Tour/d1-MEDIA1",
       candidates: [
         {
           url: "https://dynamic-media.tacdn.com/media/photo-o/9a/8b/7c/6d.jpg?w=1600&h=1066&s=1",
@@ -319,7 +343,8 @@ describe("engine6 hero resolver", () => {
   it("rejects malformed URLs and falls back to placeholder classification", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "BADURL1",
-      currentSourceProductUrl: "https://www.viator.com/tours/City/Bad-Url/d1-BADURL1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/City/Bad-Url/d1-BADURL1",
       candidates: [
         {
           url: "not-a-url",
@@ -347,13 +372,15 @@ describe("engine6 hero resolver", () => {
   it("rejects candidates missing source field path provenance", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "PATH1",
-      currentSourceProductUrl: "https://www.viator.com/tours/City/With-Path/d1-PATH1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/City/With-Path/d1-PATH1",
       candidates: [
         {
           url: "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/pathless.jpg",
           sourceType: "api-primary",
           sourceProductCode: "PATH1",
-          sourceProductUrl: "https://www.viator.com/tours/City/With-Path/d1-PATH1",
+          sourceProductUrl:
+            "https://www.viator.com/tours/City/With-Path/d1-PATH1",
         },
       ],
     });
@@ -409,7 +436,8 @@ describe("engine6 hero resolver", () => {
   it("never fabricates caption URLs or rewrites image family paths", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "NOMUT1",
-      currentSourceProductUrl: "https://www.viator.com/tours/City/Tour/d1-NOMUT1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/City/Tour/d1-NOMUT1",
       candidates: [
         {
           url: "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg?w=1200&h=800&s=1",
