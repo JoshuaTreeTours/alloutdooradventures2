@@ -242,7 +242,7 @@ describe("engine6 hero resolver", () => {
           fieldPath: "product.media.images[0].variants.FULL.url",
         },
         {
-          url: "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg",
+          url: "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg?w=1200&h=800&s=1",
           sourceType: "api-primary",
           candidateProductCode: "SUNSET1",
           candidateSourceProductUrl:
@@ -253,7 +253,7 @@ describe("engine6 hero resolver", () => {
     });
 
     expect(resolved.heroUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg"
+      "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg?w=1200&h=800&s=1"
     );
     expect(resolved.heroQualityClassification).toBe("product-media");
     expect(resolved.fallbackTriggered).toBe(false);
@@ -262,6 +262,49 @@ describe("engine6 hero resolver", () => {
         expect.objectContaining({
           url: "https://images.example.com/broken.jpg",
           reason: "untrusted-media-host",
+        }),
+      ])
+    );
+  });
+
+  it("rejects likely dead tacdn base media URLs and falls through to next ranked candidate", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "88157P1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/Fort-Lauderdale/SEABOB-Snorkel-Reef-Tour-Fort-Lauderdale/d660-88157P1",
+      candidates: [
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/2f/33/b1/12/seabob-reef-tour.jpg",
+          sourceType: "api-primary",
+          candidateProductCode: "88157P1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Fort-Lauderdale/SEABOB-Snorkel-Reef-Tour-Fort-Lauderdale/d660-88157P1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
+          width: 1200,
+          height: 800,
+        },
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/2f/33/b1/14/attractions-splice-spp-674x446.jpg",
+          sourceType: "api-primary",
+          candidateProductCode: "88157P1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Fort-Lauderdale/SEABOB-Snorkel-Reef-Tour-Fort-Lauderdale/d660-88157P1",
+          fieldPath: "product.media.images[1].variants.FULL.url",
+          width: 674,
+          height: 446,
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/33/b1/14/attractions-splice-spp-674x446.jpg"
+    );
+    expect(resolved.heroQualityClassification).toBe("splice");
+    expect(resolved.rejectedForeignCandidates).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          url: "https://dynamic-media.tacdn.com/media/photo-o/2f/33/b1/12/seabob-reef-tour.jpg",
+          reason: "unresolvable-url",
         }),
       ])
     );

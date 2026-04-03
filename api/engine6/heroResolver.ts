@@ -37,6 +37,7 @@ export type Engine6RejectedHeroCandidate = {
     | "non-product-source"
     | "unverified-product-scope"
     | "invalid-url"
+    | "unresolvable-url"
     | "static-hero-disallowed"
     | "untrusted-media-host";
   candidateProductCode: string | null;
@@ -117,7 +118,7 @@ const extractHost = (value: string): string | null => {
 const isCaptionHeroUrl = (value: string) => /\/caption\.jpg(?:$|[?#])/i.test(value);
 
 const isSpliceHeroUrl = (value: string) =>
-  /\/attractions-splice-spp-(?:\d+x\d+)\//i.test(value);
+  /\/attractions-splice-spp-(?:\d+x\d+)(?:\/|\.jpg(?:$|[?#]))/i.test(value);
 
 const getHeroQualityClassification = (
   candidate: Pick<Engine6HeroCandidate, "sourceType" | "url">
@@ -267,6 +268,56 @@ const isTrustedViatorMediaHost = (value: string) => {
   }
 };
 
+const isLikelyResolvableHeroUrl = (value: string) => {
+  try {
+    const parsed = new URL(value);
+    const host = parsed.hostname.toLowerCase();
+    const path = parsed.pathname.toLowerCase();
+    const hasQuery = parsed.search.length > 1;
+    const isTacdnOrTripadvisorMediaHost =
+      host === "dynamic-media.tacdn.com" ||
+      host === "media.tacdn.com" ||
+      host === "media-cdn.tripadvisor.com" ||
+      host === "dynamic-media-cdn.tripadvisor.com" ||
+      (host.includes("media") && host.endsWith(".tacdn.com")) ||
+      (host.includes("media") && host.endsWith(".tripadvisor.com"));
+
+    const isCaption = isCaptionHeroUrl(value);
+    const isSplice = isSpliceHeroUrl(value);
+    if (isCaption || isSplice) {
+      return true;
+    }
+
+    if (!isTacdnOrTripadvisorMediaHost) {
+      return true;
+    }
+
+    const hasVariantSizingHint =
+      hasQuery &&
+      (parsed.searchParams.has("w") ||
+        parsed.searchParams.has("h") ||
+        parsed.searchParams.has("s"));
+    if (hasVariantSizingHint) {
+      return true;
+    }
+
+    const hasVariantDirectory =
+      path.includes("/photo-o/") ||
+      path.includes("/photo-s/") ||
+      path.includes("/attractions-splice-spp-");
+
+    // Reject bare tacdn/tripadvisor media filenames without caption/splice
+    // or variant query params. These are frequently dead links in production.
+    if (hasVariantDirectory && !hasQuery && /\.(?:jpe?g|png|webp|avif)$/i.test(path)) {
+      return false;
+    }
+
+    return true;
+  } catch {
+    return false;
+  }
+};
+
 const toRejectedCandidate = (
   candidate: Engine6HeroCandidate,
   reason: Engine6RejectedHeroCandidate["reason"]
@@ -405,7 +456,35 @@ export const resolveProductScopedHero = ({
   }
 
   if (validCandidates.length > 0) {
-    const selectedCandidate = rankHeroCandidates(validCandidates)[0]!;
+    const rankedCandidates = rankHeroCandidates(validCandidates);
+    const selectedCandidate = rankedCandidates.find(candidate =>
+      isLikelyResolvableHeroUrl(candidate.url)
+    );
+
+    for (const candidate of rankedCandidates) {
+      if (!isLikelyResolvableHeroUrl(candidate.url)) {
+        rejectedForeignCandidates.push(
+          toRejectedCandidate(candidate, "unresolvable-url")
+        );
+      }
+      if (candidate === selectedCandidate) {
+        break;
+      }
+    }
+
+    if (!selectedCandidate) {
+      return {
+        heroUrl: null,
+        heroSourceType: "none",
+        heroQualityClassification: "none",
+        fallbackTriggered: true,
+        finalCandidate: null,
+        rejectedForeignCandidates,
+        captionPrecedenceApplied: false,
+        candidateFamilyIdentityDeterminable: false,
+      };
+    }
+
     const normalizedUrl = normalizeHeroMediaUrl(selectedCandidate.url);
     const selectedFamilyKey =
       selectedCandidate.familyKey ?? extractCandidateFamilyKey(selectedCandidate.url);
