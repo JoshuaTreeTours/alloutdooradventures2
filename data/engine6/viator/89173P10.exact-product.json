@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "89173P10",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10",
+    "title": "Fort Lauderdale Tropical Kayak Tour and Island Adventure",
+    "description": "Paddle through calm South Florida waterways on a guided tropical kayak adventure in Fort Lauderdale. This small-group outing combines easy coastal paddling with a stop on a scenic island area where your guide shares local ecosystem insights.",
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "priceFrom": "$69.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 52
+    },
+    "duration": "2 hours 30 minutes",
+    "media": {
+      "images": [
+        {
+          "imageSource": "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/e5/f4/caption.jpg?w=700&h=500&s=1",
+          "variants": [
+            {
+              "height": 500,
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/e5/f4/caption.jpg?w=700&h=500&s=1",
+              "width": 700
+            }
+          ]
+        }
+      ]
+    },
+    "highlights": [
+      "Guided tropical kayak tour in Fort Lauderdale with a small group",
+      "Explore scenic waterways and island sections at a relaxed pace",
+      "Learn about local wildlife and coastal habitat from your guide",
+      "Kayak and paddling gear included for a straightforward launch"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Fort Lauderdale Beach area launch point. Exact check-in details are provided after booking confirmation."
+      }
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterestLocation": {
+          "locationName": "Launch and Safety Briefing"
+        },
+        "description": "Meet your guide, fit equipment, and review route and safety basics before entering the water.",
+        "duration": "20 minutes",
+        "admissionIncluded": true
+      },
+      {
+        "pointOfInterestLocation": {
+          "locationName": "Tropical Waterway Paddle"
+        },
+        "description": "Paddle through calm channels while your guide points out coastal features and marine habitats.",
+        "duration": "70 minutes",
+        "admissionIncluded": true
+      },
+      {
+        "pointOfInterestLocation": {
+          "locationName": "Island Adventure Stop"
+        },
+        "description": "Pause in an island area to stretch, take photos, and hear local nature and history commentary.",
+        "duration": "30 minutes",
+        "admissionIncluded": true
+      },
+      {
+        "pointOfInterestLocation": {
+          "locationName": "Return Paddle"
+        },
+        "description": "Paddle back to the launch while your guide answers questions and shares final recommendations.",
+        "duration": "30 minutes",
+        "admissionIncluded": true
+      }
+    ],
+    "inclusions": [
+      "Kayak and paddle",
+      "Safety gear",
+      "Guide"
+    ],
+    "additionalInfo": [
+      "Moderate physical activity is expected",
+      "Bring sun protection and water",
+      "Tour timing may vary with weather and water conditions"
+    ],
+    "faqs": [
+      {
+        "question": "Do I need kayaking experience?",
+        "answer": "No prior kayaking experience is required for most guests. Your guide provides a full briefing before launch."
+      },
+      {
+        "question": "What should I bring?",
+        "answer": "Bring sun protection, water, and clothing suitable for light paddling conditions."
+      }
+    ],
+    "categories": [
+      "Outdoor Activities",
+      "On the Water",
+      "Kayaking Tours"
+    ]
+  }
+}

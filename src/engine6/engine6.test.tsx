@@ -30,6 +30,7 @@ import {
   ENGINE6_ANCHORAGE_PRIVATE_ROUTE,
   ENGINE6_ANCHORAGE_SUNSET_ROUTE,
   ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
+  ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE,
   ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE,
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
@@ -438,6 +439,17 @@ describe("engine6 Viator booking URLs", () => {
       "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3?pid=P00290915&mcid=42383&medium=link"
     );
   });
+
+  it("uses the canonical 89173P10 Viator product URL with affiliate params", () => {
+    expect(
+      buildEngine6ViatorBookingUrl(
+        "89173P10",
+        "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10"
+      )
+    ).toBe(
+      "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10?pid=P00290915&mcid=42383&medium=link"
+    );
+  });
 });
 
 describe("engine6 aggregate rating normalization", () => {
@@ -663,6 +675,33 @@ describe("engine6 listing surfaces", () => {
     expect(nevadaTours.some(tour => tour.productCode === "5119P13")).toBe(true);
     expect(lasVegasTours.some(tour => tour.productCode === "5119P13")).toBe(
       true
+    );
+  });
+
+  it("adds 89173P10 to Florida and Fort Lauderdale listing sources", () => {
+    const floridaTours = getToursByState("florida");
+    const fortLauderdaleTours = getToursByCity("florida", "fort-lauderdale");
+    expect(floridaTours.some(tour => tour.productCode === "89173P10")).toBe(
+      true
+    );
+    expect(
+      fortLauderdaleTours.some(tour => tour.productCode === "89173P10")
+    ).toBe(true);
+  });
+
+  it("keeps exact hero parity for 89173P10 and maps to the Fort Lauderdale canonical route", () => {
+    const kayakTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "89173P10"
+    );
+    expect(kayakTour).toBeDefined();
+    expect(kayakTour?.canonicalPath).toBe(
+      ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE
+    );
+    expect(kayakTour?.heroImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/e5/f4/caption.jpg?w=700&h=500&s=1"
+    );
+    expect(kayakTour?.bookingUrl).toBe(
+      "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10?pid=P00290915&mcid=42383&medium=link"
     );
   });
 
