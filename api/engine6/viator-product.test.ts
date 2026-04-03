@@ -160,7 +160,7 @@ describe("/api/engine6/viator-product", () => {
         imageSourceUsed: "api-primary",
         heroSourceType: "api-primary",
         heroCandidatesPresent: true,
-        heroCandidateCount: 1,
+        heroCandidateCount: 2,
         finalHeroUrl:
           "https://media.tacdn.com/media/attractions-content--1x-1/0f/56/92/caption.jpg",
         heroFallbackTriggered: false,
@@ -299,6 +299,22 @@ describe("/api/engine6/viator-product", () => {
     );
     expect((res.body as any).extracted.heroImageUrl).toBe(
       "https://media.tacdn.com/media/attractions-splice-spp-360x240/0a/29/a2/f4.jpg"
+    );
+  });
+
+  it("selects same-product caption for 6331BAHA when caption and splice candidates coexist", async () => {
+    const req = { method: "GET", query: { productCode: "6331BAHA" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).source).toBe("bundled-fallback");
+    expect((res.body as any).diagnostics.heroQualityClassification).toBe("caption");
+    expect((res.body as any).diagnostics.heroSourceProductCode).toBe("6331BAHA");
+    expect((res.body as any).diagnostics.rejectedForeignCandidateCount).toBe(0);
+    expect((res.body as any).extracted.heroImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/30/7a/ae/ce/caption.jpg?w=1400&h=1000&s=1"
     );
   });
 
