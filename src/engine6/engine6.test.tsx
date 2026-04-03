@@ -800,6 +800,39 @@ describe("engine6 listing surfaces", () => {
     );
   });
 
+  it("wires city card entries for the three new Fort Lauderdale tours with exact hero parity", () => {
+    const cityUnified = getToursByCityUnified("florida", "fort-lauderdale");
+
+    const assertCityCard = (
+      productCode: string,
+      expectedHref: string,
+      expectedHero: string
+    ) => {
+      const entry = cityUnified.find(tour => tour.tour.productCode === productCode);
+      expect(entry).toBeDefined();
+      expect(entry?.href).toBe(expectedHref);
+      expect(entry?.tour.heroImage).toBe(expectedHero);
+      expect(entry?.tour.primaryImageUrl).toBe(expectedHero);
+      expect(entry?.tour.resolvedImageUrl).toBe(expectedHero);
+    };
+
+    assertCityCard(
+      "76145P2",
+      ENGINE6_FORT_LAUDERDALE_PRIVATE_EVERGLADES_AIRBOAT_ROUTE,
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/15/16/f1/caption.jpg?w=1100&h=800&s=1"
+    );
+    assertCityCard(
+      "5559561P1",
+      ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_ROUTE,
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/d1/7c/59/caption.jpg?w=700&h=500&s=1"
+    );
+    assertCityCard(
+      "118958P8",
+      ENGINE6_FORT_LAUDERDALE_SHARED_BIG_GAME_FISHING_ROUTE,
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/cd/26/caption.jpg?w=1100&h=800&s=1"
+    );
+  });
+
   it("adds 32779P2 to California and Avalon listing sources (not Los Angeles listing)", () => {
     const californiaTours = getToursByState("california");
     const avalonTours = getToursByCity("california", "avalon");
