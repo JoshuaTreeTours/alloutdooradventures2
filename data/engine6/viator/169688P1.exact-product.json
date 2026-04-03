@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "169688P1",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Seven-Isles-of-Fort-Lauderdale-Kayak-Tour/d660-169688P1",
+    "title": "Seven Isles of Fort Lauderdale Kayak Tour",
+    "description": {
+      "text": "Paddle through the scenic Seven Isles neighborhood of Fort Lauderdale on a guided kayaking experience designed for all levels. Follow calm residential waterways and hidden canals lined with tropical landscaping and waterfront estates while your guide shares local stories about the area. This small-group outing includes core paddling equipment and safety orientation before launch, making it a relaxed way to explore the city from the water. Ideal for travelers who want light adventure, neighborhood sightseeing, and a slower-paced outdoor activity close to Las Olas and downtown Fort Lauderdale."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "priceFrom": "$55.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 64
+    },
+    "duration": "2 hours",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/22/aa/91/caption.jpg?w=1000&h=750&s=1",
+              "width": 1000,
+              "height": 750
+            },
+            "SMALL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-s/2f/22/aa/91/caption.jpg?w=400&h=300&s=1",
+              "width": 400,
+              "height": 300
+            }
+          }
+        },
+        {
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/22/aa/91/attractions-splice-spp-674x446.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided kayak route through Fort Lauderdale's Seven Isles waterways",
+      "Small-group format with local commentary and safety briefing",
+      "Suitable for beginners and casual paddlers",
+      "Explore quiet canals and waterfront neighborhoods near Las Olas"
+    ],
+    "logistics": {
+      "start": {
+        "description": "954 SE 4th St, Fort Lauderdale, FL 33301, USA. Arrive 15 minutes early for check-in and paddling orientation."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Launch and Safety Briefing",
+        "description": "Meet your guide, get fitted for equipment, and review route and paddling basics before departure."
+      },
+      {
+        "title": "Seven Isles Canals",
+        "description": "Paddle through calm residential waterways and hear commentary about local architecture and boating culture."
+      },
+      {
+        "title": "Waterfront Sightseeing Loop",
+        "description": "Continue through connected canals with frequent stops for photos and local area context."
+      },
+      {
+        "title": "Return to Launch",
+        "description": "Complete the loop and return to the starting point to finish the experience."
+      }
+    ],
+    "inclusions": [
+      "Kayak and paddle",
+      "Life jacket",
+      "Guide and route briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Service animals allowed",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "Where does the Seven Isles kayak tour start?",
+        "answer": "The listed meeting area is 954 SE 4th St in Fort Lauderdale. Verify final launch details after booking."
+      },
+      {
+        "question": "How long is the tour?",
+        "answer": "The guided paddle experience is approximately 2 hours."
+      },
+      {
+        "question": "Do I need prior kayaking experience?",
+        "answer": "No. The tour is beginner-friendly and includes a safety and paddling orientation."
+      },
+      {
+        "question": "Is equipment included?",
+        "answer": "Yes. A kayak, paddle, and life jacket are included."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Kayaking Tours"
+      },
+      {
+        "label": "Water Sports"
+      }
+    ]
+  }
+}

@@ -13,6 +13,10 @@ const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
     "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3",
   "89173P8":
     "https://www.viator.com/tours/Fort-Lauderdale/Reef-and-Snorkel-Paddle-Tour/d660-89173P8",
+  "169688P1":
+    "https://www.viator.com/tours/Fort-Lauderdale/Seven-Isles-of-Fort-Lauderdale-Kayak-Tour/d660-169688P1",
+  "88157P1":
+    "https://www.viator.com/tours/Fort-Lauderdale/SEABOB-Snorkel-Reef-Tour-Fort-Lauderdale/d660-88157P1",
 };
 
 const FALLBACK_ENGINE6_VIATOR_SEARCH_URL = "https://www.viator.com/search";

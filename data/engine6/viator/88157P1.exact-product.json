@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "88157P1",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/SEABOB-Snorkel-Reef-Tour-Fort-Lauderdale/d660-88157P1",
+    "title": "SEABOB Snorkel Reef Tour in Fort Lauderdale",
+    "description": {
+      "text": "Experience Fort Lauderdale's nearshore reef with a guided SEABOB and snorkeling tour that combines marine-life viewing with high-energy propulsion in the water. After orientation and equipment setup, follow your guide to reef zones where you can alternate between surface snorkeling and SEABOB-assisted exploration. The experience is designed for confident swimmers who want to cover more water than a traditional snorkel outing while still learning about local reef habitats. This small-group adventure includes core snorkeling gear and safety supervision throughout the session."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "priceFrom": "$189.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 29
+    },
+    "duration": "1 hour 30 minutes",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/33/b1/12/seabob-reef-tour.jpg",
+              "width": 1200,
+              "height": 800
+            },
+            "SMALL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-s/2f/33/b1/12/seabob-reef-tour.jpg",
+              "width": 600,
+              "height": 400
+            }
+          }
+        },
+        {
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/33/b1/14/attractions-splice-spp-674x446.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided SEABOB and snorkel experience over Fort Lauderdale reef areas",
+      "Cover more water than standard snorkeling with motorized in-water propulsion",
+      "Small-group format with briefing and safety oversight",
+      "Snorkeling gear included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "401 N Birch Rd, Fort Lauderdale, FL 33304, USA. Please arrive early to check in and complete safety orientation."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Check-In and Equipment Setup",
+        "description": "Meet your guide, review safety procedures, and get fitted with snorkel equipment and SEABOB controls."
+      },
+      {
+        "title": "Nearshore Reef Exploration",
+        "description": "Enter the water and follow your guide along reef sections while alternating snorkeling and SEABOB travel."
+      },
+      {
+        "title": "Marine-Life Viewing",
+        "description": "Pause in selected reef zones to observe fish and coral habitats with commentary from your guide."
+      },
+      {
+        "title": "Return to Shore",
+        "description": "Complete the guided route and return to the launch area for wrap-up."
+      }
+    ],
+    "inclusions": [
+      "SEABOB use",
+      "Snorkeling equipment",
+      "Guide and safety briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not recommended for travelers with serious medical conditions",
+      "Most travelers can participate",
+      "A moderate level of physical fitness is recommended"
+    ],
+    "faqs": [
+      {
+        "question": "Where is the meeting point for the SEABOB snorkel tour?",
+        "answer": "The listed meeting point is 401 N Birch Rd, Fort Lauderdale, FL 33304. Confirm exact instructions after booking."
+      },
+      {
+        "question": "How long is the tour?",
+        "answer": "The total experience is approximately 1 hour 30 minutes."
+      },
+      {
+        "question": "What is included?",
+        "answer": "SEABOB use, snorkeling equipment, and guided supervision are included."
+      },
+      {
+        "question": "Who is this activity best for?",
+        "answer": "The activity is best for confident swimmers seeking an active reef tour in a small-group format."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Snorkeling Tours"
+      },
+      {
+        "label": "Water Sports"
+      }
+    ]
+  }
+}
