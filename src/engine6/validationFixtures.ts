@@ -29,6 +29,7 @@ import specimen7943p1Payload from "../../data/engine6/viator/7943P1.exact-produc
 
 import specimen5865p8Payload from "../../data/engine6/viator/5865P8.exact-product.json";
 import specimen89173p8Payload from "../../data/engine6/viator/89173P8.exact-product.json";
+import specimen89173p10Payload from "../../data/engine6/viator/89173P10.exact-product.json";
 import specimen438341p2Payload from "../../data/engine6/viator/438341P2.exact-product.json";
 
 export type Engine6ValidationFixture = {
@@ -217,5 +218,11 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Miami/Miami-Raccoon-Island-Adventure/d662-10150P16",
     rawPayload: specimen10150p16Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "89173P10",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10",
+    rawPayload: specimen89173p10Payload as Record<string, unknown>,
   },
 ];

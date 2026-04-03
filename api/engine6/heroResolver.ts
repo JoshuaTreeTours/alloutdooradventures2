@@ -213,6 +213,50 @@ const rankHeroCandidates = (candidates: Engine6HeroCandidate[]) =>
     return bHeight - aHeight;
   });
 
+const ENGINE6_ACTIVITY_MISMATCH_DEMOTED_URLS_BY_PRODUCT_CODE: Record<
+  string,
+  Set<string>
+> = {
+  "89173P10": new Set([
+    "https://dynamic-media.tacdn.com/media/photo-o/2f/10/8d/2e/caption.jpg?w=700&h=500&s=1",
+  ]),
+};
+
+const getActivityMismatchPenalty = (
+  productCode: string | null,
+  candidate: Engine6HeroCandidate
+) => {
+  if (!productCode) {
+    return 0;
+  }
+
+  const demotedUrls =
+    ENGINE6_ACTIVITY_MISMATCH_DEMOTED_URLS_BY_PRODUCT_CODE[productCode];
+  if (!demotedUrls) {
+    return 0;
+  }
+
+  return demotedUrls.has(candidate.url) ? 100 : 0;
+};
+
+const rankHeroCandidatesWithActivityRelevance = (
+  candidates: Engine6HeroCandidate[],
+  productCode: string | null
+) => {
+  const baseRanking = rankHeroCandidates(candidates);
+
+  return [...baseRanking].sort((a, b) => {
+    const penaltyDiff =
+      getActivityMismatchPenalty(productCode, a) -
+      getActivityMismatchPenalty(productCode, b);
+    if (penaltyDiff !== 0) {
+      return penaltyDiff;
+    }
+
+    return baseRanking.indexOf(a) - baseRanking.indexOf(b);
+  });
+};
+
 const normalizeProductCode = (value: string | null | undefined) => {
   const normalized = value?.trim().toUpperCase() ?? "";
   return normalized.length > 0 ? normalized : null;
@@ -405,7 +449,10 @@ export const resolveProductScopedHero = ({
   }
 
   if (validCandidates.length > 0) {
-    const selectedCandidate = rankHeroCandidates(validCandidates)[0]!;
+    const selectedCandidate = rankHeroCandidatesWithActivityRelevance(
+      validCandidates,
+      normalizedCurrentProductCode
+    )[0]!;
     const normalizedUrl = normalizeHeroMediaUrl(selectedCandidate.url);
     const selectedFamilyKey =
       selectedCandidate.familyKey ?? extractCandidateFamilyKey(selectedCandidate.url);

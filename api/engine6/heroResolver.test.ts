@@ -176,6 +176,42 @@ describe("engine6 hero resolver", () => {
     expect(resolved.candidateFamilyIdentityDeterminable).toBe(true);
   });
 
+  it("demotes known misleading same-product caption imagery for 89173P10 and selects kayak-relevant alternative", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "89173P10",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10",
+      candidates: [
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/2f/10/8d/2e/caption.jpg?w=700&h=500&s=1",
+          sourceType: "api-gallery",
+          candidateProductCode: "89173P10",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10",
+          fieldPath: "product.media.images[0].variants.CAPTION.url",
+          width: 700,
+          height: 500,
+        },
+        {
+          url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/e8/37/a1.jpg",
+          sourceType: "api-primary",
+          candidateProductCode: "89173P10",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10",
+          fieldPath: "product.media.images[1].variants.FULL.url",
+          width: 674,
+          height: 446,
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/e8/37/a1.jpg"
+    );
+    expect(resolved.heroQualityClassification).toBe("splice");
+    expect(resolved.fallbackTriggered).toBe(false);
+  });
+
   it("normalizes TACDN media URLs to high-resolution variants where possible", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "SUNSET1",

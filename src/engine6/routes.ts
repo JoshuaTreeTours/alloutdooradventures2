@@ -67,6 +67,10 @@ export const ENGINE6_FORT_LAUDERDALE_REEF_SNORKEL_PADDLE_PRODUCT_CODE =
   "89173P8";
 export const ENGINE6_FORT_LAUDERDALE_REEF_SNORKEL_PADDLE_ROUTE =
   "/destinations/florida/fort-lauderdale/tours/reef-and-snorkel-paddle-tour-89173p8";
+export const ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_PRODUCT_CODE =
+  "89173P10";
+export const ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/fort-lauderdales-tropical-kayak-tour-and-island-adventure-89173p10";
 export const ENGINE6_FORT_LAUDERDALE_BAHAMAS_FERRY_PRODUCT_CODE = "6331BAHA";
 export const ENGINE6_FORT_LAUDERDALE_BAHAMAS_FERRY_ROUTE =
   "/destinations/florida/fort-lauderdale/tours/bahamas-day-escape-by-ferry-6331baha";
@@ -177,6 +181,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_FORT_LAUDERDALE_REEF_SNORKEL_PADDLE_ROUTE,
     ENGINE6_FORT_LAUDERDALE_REEF_SNORKEL_PADDLE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_PRODUCT_CODE,
   ],
   [
     ENGINE6_FORT_LAUDERDALE_BAHAMAS_FERRY_ROUTE,
