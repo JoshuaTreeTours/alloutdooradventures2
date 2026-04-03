@@ -10,7 +10,6 @@ import SeeAllToursBubble from "../components/guides/SeeAllToursBubble";
 import GuideThingsMap from "../components/maps/GuideThingsMap";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import {
-  getToursByCity,
   getToursByCityUnified,
   getToursByState,
 } from "../data/tours";
@@ -64,14 +63,14 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
     : { primary: guide.hero.subheadline, secondary: "" };
   const urlPath = `/${guide.slug.replace(/^\/+/, "")}`;
   const sameAs = getValidSameAsLinks(guide);
-  const tours = guide.tours.citySlug
-    ? getToursByCity(guide.tours.stateSlug, guide.tours.citySlug)
-    : getToursByState(guide.tours.stateSlug);
-  const featuredTours = tours.slice(0, guide.tours.limit ?? 6);
   const allCityTours =
     guide.tours.stateSlug && guide.tours.citySlug
       ? getToursByCityUnified(guide.tours.stateSlug, guide.tours.citySlug)
       : [];
+  const tours = guide.tours.citySlug
+    ? allCityTours.map(entry => entry.tour)
+    : getToursByState(guide.tours.stateSlug);
+  const featuredTours = tours.slice(0, guide.tours.limit ?? 6);
   const mappedThingsLimit = isTier2 ? 5 : 8;
   const mappedThings = guide.thingsToDo.slice(0, mappedThingsLimit);
   const wikiExtractFallback = (
