@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "57834P1",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Venice-of-America-Fort-Lauderdale-Cruise/d660-57834P1",
+    "title": "Venice of America Fort Lauderdale Cruise",
+    "description": {
+      "text": "Cruise Fort Lauderdale’s scenic waterways and see mansions, yachts, and city highlights from the water. This relaxing sightseeing cruise offers live narration and broad views of the Intracoastal Waterway while staying close to central Fort Lauderdale."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "priceFrom": "$31.00",
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 1678
+    },
+    "duration": "90 minutes (approx.)",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/aa/3d.jpg",
+              "width": 674,
+              "height": 446
+            },
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2a/f4/91/08/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            },
+            "THUMBNAIL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-210x118/0b/27/aa/3d.jpg",
+              "width": 210,
+              "height": 118
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See Fort Lauderdale from the Intracoastal Waterway",
+      "Cruise past waterfront mansions and luxury yachts",
+      "Enjoy narrated sightseeing with open-air views",
+      "Great orientation activity for first-time visitors"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Departs from downtown Fort Lauderdale waterfront. Arrival details are provided on your ticket confirmation."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Boarding and departure",
+        "description": "Meet at the designated dock and board your sightseeing vessel."
+      },
+      {
+        "title": "Intracoastal cruise",
+        "description": "Travel through Fort Lauderdale’s canals with views of homes, marinas, and city landmarks."
+      },
+      {
+        "title": "Return to departure dock",
+        "description": "Complete the cruise at the original waterfront meeting point."
+      }
+    ],
+    "inclusions": [
+      "Sightseeing cruise",
+      "Live narration",
+      "All required fees and taxes"
+    ],
+    "additionalInfo": [
+      "Bring sun protection and water",
+      "Seating is first-come, first-served unless otherwise noted",
+      "Departure times can vary by season"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Fort Lauderdale cruise?",
+        "answer": "The cruise lasts about 90 minutes."
+      },
+      {
+        "question": "Is this a narrated sightseeing tour?",
+        "answer": "Yes, the experience typically includes onboard narration about local highlights and waterfront neighborhoods."
+      },
+      {
+        "question": "What should I bring?",
+        "answer": "Comfortable clothing, sunglasses, and sun protection are recommended for daytime departures."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Sightseeing Cruises"
+      }
+    ]
+  }
+}

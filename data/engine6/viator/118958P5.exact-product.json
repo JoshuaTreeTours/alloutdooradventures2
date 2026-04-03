@@ -1,0 +1,96 @@
+{
+  "product": {
+    "productCode": "118958P5",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/4-hour-Drift-Fishing/d660-118958P5",
+    "title": "4-hour Drift Fishing in Fort Lauderdale",
+    "description": {
+      "text": "Spend four hours offshore with a Fort Lauderdale drift fishing trip designed for mixed experience levels. Fish local reef and coastal waters with crew support, then return to shore with practical guidance on tackle and technique."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "priceFrom": "$86.00",
+    "reviews": {
+      "combinedAverageRating": 4.2,
+      "totalReviews": 329
+    },
+    "duration": "4 hours (approx.)",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/3b/71/21.jpg",
+              "width": 674,
+              "height": 446
+            },
+            "THUMBNAIL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-210x118/0f/3b/71/21.jpg",
+              "width": 210,
+              "height": 118
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "4-hour drift fishing charter from Fort Lauderdale",
+      "Target seasonal reef and pelagic species",
+      "Crew assistance for beginners and casual anglers",
+      "Morning and afternoon departures available"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Departs from Fort Lauderdale marina area. Exact check-in location and timing appear on your booking confirmation."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Check-in and boarding",
+        "description": "Arrive at the marina, check in with crew, and board your fishing vessel."
+      },
+      {
+        "title": "Offshore drift fishing session",
+        "description": "Fish local waters with drift setups while crew provides guidance."
+      },
+      {
+        "title": "Return to marina",
+        "description": "Cruise back to the departure point after the scheduled fishing window."
+      }
+    ],
+    "inclusions": [
+      "Fishing charter",
+      "Onboard crew support",
+      "Applicable taxes and fees"
+    ],
+    "additionalInfo": [
+      "Bring weather-appropriate clothing and non-slip footwear",
+      "Motion-sickness preparation is recommended for sensitive travelers",
+      "Catch limits and seasonal rules follow local regulations"
+    ],
+    "faqs": [
+      {
+        "question": "Do I need fishing experience?",
+        "answer": "No, this trip is suitable for beginners and experienced anglers."
+      },
+      {
+        "question": "How long is the charter?",
+        "answer": "The trip duration is approximately four hours."
+      },
+      {
+        "question": "Where do we depart from?",
+        "answer": "Departure is from the Fort Lauderdale marina area listed on your confirmation details."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Fishing Charters"
+      },
+      {
+        "label": "Water Activities"
+      }
+    ]
+  }
+}
