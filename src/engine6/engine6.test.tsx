@@ -34,10 +34,12 @@ import {
   ENGINE6_FORT_LAUDERDALE_EVERGLADES_AIRBOAT_ROUTE,
   ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_ROUTE,
   ENGINE6_FORT_LAUDERDALE_BIG_GAME_FISHING_ROUTE,
+  ENGINE6_FORT_LAUDERDALE_BAHAMAS_FERRY_ROUTE,
   ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE,
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_PARAGON_ROUTE,
+  ENGINE6_MIAMI_PIRATE_BOAT_ROUTE,
   ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
   ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
@@ -554,6 +556,29 @@ describe("engine6 mapping/cards/page", () => {
     expect(resolved.tour?.resolvedImageUrl).toBeNull();
     expect(html).not.toContain("/hero.jpg");
     expect(html).not.toContain("/images/hiking-hero.jpg");
+  });
+
+  it("does not render visible diagnostics on Miami, Fort Lauderdale, or Bahamas-paragon engine6 pages", () => {
+    const targetRoutes = [
+      ENGINE6_MIAMI_PIRATE_BOAT_ROUTE,
+      ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE,
+      ENGINE6_FORT_LAUDERDALE_BAHAMAS_FERRY_ROUTE,
+    ];
+
+    for (const route of targetRoutes) {
+      const tour = engine6ResolvedTours.find(entry => entry.canonicalPath === route);
+      expect(tour, `Expected engine6 tour for route ${route}`).toBeDefined();
+
+      const html = renderToString(<Engine6TourPage tour={tour!} />);
+      expect(html).not.toContain("Resolved hero source");
+      expect(html).not.toContain("Final hero URL");
+      expect(html).not.toContain("Fallback fired");
+      expect(html).not.toContain("Hero candidate count");
+      expect(html).not.toContain("Final CTA URL");
+      expect(html).not.toContain("Offer URL");
+      expect(html).toContain('data-testid="engine6-breadcrumbs"');
+      expect(html).toContain('data-testid="engine6-bottom-cta"');
+    }
   });
 });
 
