@@ -1,0 +1,28 @@
+{
+  "product": {
+    "productCode": "18421P22",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Private-Sunset-Helicopter-Tour-around-Manhattan/d687-18421P22",
+    "title": "Private Sunset Helicopter Tour around Manhattan",
+    "description": {
+      "text": "Private sunset helicopter tour around Manhattan in New York City."
+    },
+    "location": {
+      "city": "New York City",
+      "state": "New York"
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/2c/35/f2/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}

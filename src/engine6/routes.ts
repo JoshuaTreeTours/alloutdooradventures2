@@ -56,6 +56,9 @@ export const ENGINE6_NYC_PHILADELPHIA_AMISH_ROUTE =
 export const ENGINE6_NYC_MET_PRIVATE_TOUR_PRODUCT_CODE = "43656P1";
 export const ENGINE6_NYC_MET_PRIVATE_TOUR_ROUTE =
   "/destinations/new-york/new-york/tours/private-tour-of-the-metropolitan-museum-of-art-in-new-york-city";
+export const ENGINE6_NYC_PRIVATE_SUNSET_HELICOPTER_PRODUCT_CODE = "18421P22";
+export const ENGINE6_NYC_PRIVATE_SUNSET_HELICOPTER_ROUTE =
+  "/destinations/new-york/new-york/tours/private-sunset-helicopter-tour-around-manhattan";
 export const ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE = "3097SDZSP_2VISIT";
 export const ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-zoo-and-safari-park-2-visit-pass-ticket";
@@ -216,6 +219,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_NYC_MET_PRIVATE_TOUR_ROUTE,
     ENGINE6_NYC_MET_PRIVATE_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_PRIVATE_SUNSET_HELICOPTER_ROUTE,
+    ENGINE6_NYC_PRIVATE_SUNSET_HELICOPTER_PRODUCT_CODE,
   ],
   [ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE, ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE],
   [
