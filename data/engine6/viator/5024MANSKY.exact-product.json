@@ -1,0 +1,161 @@
+{
+  "product": {
+    "productCode": "5024MANSKY",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Manhattan-Sky-Tour-New-York-Helicopter-Flight/d687-5024MANSKY",
+    "title": "Manhattan Sky Tour: New York Helicopter Flight",
+    "description": {
+      "text": "Take to the air for a compact helicopter sightseeing flight above Manhattan and New York Harbor. This route is designed for travelers who want a high-impact skyline experience in a short window, with aerial views of headline landmarks and live pilot commentary that helps orient first-time and repeat visitors alike."
+    },
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "pricing": {
+      "fromPrice": 279,
+      "fromPriceFormatted": "$279.00",
+      "summary": {
+        "fromPrice": 279,
+        "fromPriceFormatted": "$279.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 1842
+    },
+    "duration": "18 minutes (approx.)",
+    "highlights": [
+      "Helicopter sightseeing flight focused on Manhattan skyline landmarks",
+      "Aerial perspective on New York Harbor features including the Statue of Liberty",
+      "Pilot-led route commentary during the flight",
+      "Time-efficient way to add a bucket-list NYC experience to a packed itinerary"
+    ],
+    "inclusions": [
+      "Shared helicopter flight",
+      "Pilot commentary",
+      "Safety briefing before takeoff"
+    ],
+    "exclusions": [
+      "Hotel pickup and drop-off",
+      "Gratuities",
+      "Heliport and security fees where applicable"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Departs from Downtown Manhattan Heliport, 6 East River Piers, New York, NY 10004. Exact check-in and manifest instructions are provided after booking."
+      }
+    },
+    "itinerarySummary": "Check in at the Downtown Manhattan Heliport, complete preflight safety and manifest procedures, then depart on a Manhattan skyline flight that traces Lower Manhattan and New York Harbor landmarks before running northbound over the skyline corridor and returning to the heliport.",
+    "itineraryItems": [
+      {
+        "title": "Downtown Manhattan Heliport check-in",
+        "description": "Arrive, present valid photo ID, and complete security and manifest procedures before boarding.",
+        "duration": "30 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Governors Island",
+        "stopType": "pass-by",
+        "description": "After takeoff, pass the south harbor edge with views toward Governors Island and New York Harbor traffic lanes.",
+        "duration": "Pass by",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "Statue of Liberty",
+        "stopType": "pass-by",
+        "description": "A signature fly-by view of the Statue of Liberty from above New York Harbor.",
+        "duration": "Pass by",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "Ellis Island",
+        "stopType": "pass-by",
+        "description": "Continue across the harbor corridor for aerial views of Ellis Island and the former immigration station complex.",
+        "duration": "Pass by",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "One World Trade Center",
+        "stopType": "pass-by",
+        "description": "Track back toward Lower Manhattan for skyline views anchored by One World Trade Center.",
+        "duration": "Pass by",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "Empire State Building",
+        "stopType": "pass-by",
+        "description": "Follow the Midtown skyline corridor with aerial perspective on the Empire State Building district.",
+        "duration": "Pass by",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "Chrysler Building",
+        "stopType": "pass-by",
+        "description": "See the Chrysler Building and adjacent Midtown East towers as the flight continues northbound.",
+        "duration": "Pass by",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "Central Park",
+        "stopType": "pass-by",
+        "description": "Weather and air-traffic permitting, the route reaches the southern edge of Central Park before turning back downtown.",
+        "duration": "Pass by",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "Manhattan skyline helicopter flight return leg",
+        "stopType": "stop",
+        "description": "Return south over the Manhattan skyline and descend back to the Downtown Manhattan Heliport.",
+        "duration": "18 minutes",
+        "admissionNote": "Admission Ticket Included"
+      }
+    ],
+    "additionalInfo": [
+      "All passengers must present government-issued photo ID",
+      "Passenger and cabin weight limits apply and are verified by the operator",
+      "Flights are weather dependent and may be rescheduled for safety",
+      "Arrive early to allow time for check-in and security screening"
+    ],
+    "qAndA": {
+      "items": [
+        {
+          "question": "Where does the Manhattan Sky Tour depart from?",
+          "answer": "This helicopter tour departs from the Downtown Manhattan Heliport at 6 East River Piers in Lower Manhattan."
+        },
+        {
+          "question": "How long is the helicopter portion of the experience?",
+          "answer": "The in-air sightseeing segment is approximately 18 minutes, with extra time needed for check-in and safety procedures."
+        },
+        {
+          "question": "What happens if weather conditions are not flyable?",
+          "answer": "The operator may reschedule the flight or provide a refund according to the booking terms when weather prevents safe operations."
+        }
+      ]
+    },
+    "categories": [
+      {
+        "name": "Air Tours"
+      },
+      {
+        "name": "Helicopter Tours"
+      },
+      {
+        "name": "Sightseeing Tours"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/59/0a/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            }
+          }
+        }
+      ]
+    }
+  }
+}
