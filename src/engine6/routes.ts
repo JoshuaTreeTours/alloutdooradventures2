@@ -56,6 +56,31 @@ export const ENGINE6_NYC_PHILADELPHIA_AMISH_ROUTE =
 export const ENGINE6_NYC_MET_PRIVATE_TOUR_PRODUCT_CODE = "43656P1";
 export const ENGINE6_NYC_MET_PRIVATE_TOUR_ROUTE =
   "/destinations/new-york/new-york/tours/private-tour-of-the-metropolitan-museum-of-art-in-new-york-city";
+export const ENGINE6_NYC_PRIVATE_CENTRAL_PARK_BIKE_PRODUCT_CODE = "5557P48";
+export const ENGINE6_NYC_PRIVATE_CENTRAL_PARK_BIKE_ROUTE =
+  "/destinations/new-york/new-york/tours/private-central-park-bike-tour-in-new-york";
+export const ENGINE6_NYC_COMPLETE_BROOKLYN_BICYCLE_PRODUCT_CODE = "64327P2";
+export const ENGINE6_NYC_COMPLETE_BROOKLYN_BICYCLE_ROUTE =
+  "/destinations/new-york/brooklyn/tours/brooklyn-neighborhoods-half-day-small-group-bike-tour";
+export const ENGINE6_NYC_GUIDED_BROOKLYN_BRIDGE_BIKE_PRODUCT_CODE = "37907P2";
+export const ENGINE6_NYC_GUIDED_BROOKLYN_BRIDGE_BIKE_ROUTE =
+  "/destinations/new-york/new-york/tours/guided-e-bike-tour-of-central-park";
+export const ENGINE6_NYC_CENTRAL_PARK_BIKE_TOUR_PRODUCT_CODE = "5557CENTRAL";
+export const ENGINE6_NYC_CENTRAL_PARK_BIKE_TOUR_ROUTE =
+  "/destinations/new-york/new-york/tours/central-park-nyc-highlights-small-group-bike-tour";
+export const ENGINE6_NYC_GUIDED_CENTRAL_PARK_BIKE_PRODUCT_CODE = "7274P7";
+export const ENGINE6_NYC_GUIDED_CENTRAL_PARK_BIKE_ROUTE =
+  "/destinations/new-york/new-york/tours/guided-bike-tour-of-central-park-new-york-city";
+export const ENGINE6_NYC_SMALL_GROUP_CENTRAL_PARK_BIKE_PRODUCT_CODE =
+  "3156BIKE04";
+export const ENGINE6_NYC_SMALL_GROUP_CENTRAL_PARK_BIKE_ROUTE =
+  "/destinations/new-york/new-york/tours/inside-central-park-bike-tour";
+export const ENGINE6_NYC_BEST_OF_CENTRAL_PARK_BIKE_PRODUCT_CODE = "50343P2";
+export const ENGINE6_NYC_BEST_OF_CENTRAL_PARK_BIKE_ROUTE =
+  "/destinations/new-york/new-york/tours/best-of-central-park-bike-tour";
+export const ENGINE6_NYC_BIKE_TOUR_WITH_LOCAL_PRODUCT_CODE = "37907P13";
+export const ENGINE6_NYC_BIKE_TOUR_WITH_LOCAL_ROUTE =
+  "/destinations/new-york/new-york/tours/guided-bike-tour-of-central-park";
 export const ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE = "3097SDZSP_2VISIT";
 export const ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-zoo-and-safari-park-2-visit-pass-ticket";
@@ -216,6 +241,38 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_NYC_MET_PRIVATE_TOUR_ROUTE,
     ENGINE6_NYC_MET_PRIVATE_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_PRIVATE_CENTRAL_PARK_BIKE_ROUTE,
+    ENGINE6_NYC_PRIVATE_CENTRAL_PARK_BIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_COMPLETE_BROOKLYN_BICYCLE_ROUTE,
+    ENGINE6_NYC_COMPLETE_BROOKLYN_BICYCLE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_GUIDED_BROOKLYN_BRIDGE_BIKE_ROUTE,
+    ENGINE6_NYC_GUIDED_BROOKLYN_BRIDGE_BIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_CENTRAL_PARK_BIKE_TOUR_ROUTE,
+    ENGINE6_NYC_CENTRAL_PARK_BIKE_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_GUIDED_CENTRAL_PARK_BIKE_ROUTE,
+    ENGINE6_NYC_GUIDED_CENTRAL_PARK_BIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_SMALL_GROUP_CENTRAL_PARK_BIKE_ROUTE,
+    ENGINE6_NYC_SMALL_GROUP_CENTRAL_PARK_BIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_BEST_OF_CENTRAL_PARK_BIKE_ROUTE,
+    ENGINE6_NYC_BEST_OF_CENTRAL_PARK_BIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_BIKE_TOUR_WITH_LOCAL_ROUTE,
+    ENGINE6_NYC_BIKE_TOUR_WITH_LOCAL_PRODUCT_CODE,
   ],
   [ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE, ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE],
   [

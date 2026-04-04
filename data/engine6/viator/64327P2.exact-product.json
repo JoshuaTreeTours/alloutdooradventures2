@@ -1,0 +1,69 @@
+{
+  "productCode": "64327P2",
+  "productUrl": "https://www.viator.com/tours/Brooklyn/Complete-Brooklyn-Bicycle-Tour/d22371-64327P2",
+  "title": "Brooklyn Neighborhoods Half-Day Small-Group Bike Tour",
+  "description": {
+    "text": "Ride Brooklyn with a small group and cover neighborhoods including Dumbo, Park Slope, and Brooklyn Heights before planned stops in Prospect Park, Raaka Chocolate, and Widow Jane Distillery."
+  },
+  "highlights": [
+    "Bike",
+    "Helmet",
+    "Tour Guide",
+    "Snacks"
+  ],
+  "location": {
+    "city": "Brooklyn",
+    "state": "New York"
+  },
+  "priceFrom": 98.0,
+  "media": {
+    "images": [
+      {
+        "isCover": true,
+        "variants": {
+          "FULL": {
+            "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/63/f8/caption.jpg?w=700&h=500&s=1",
+            "width": 700,
+            "height": 500
+          }
+        }
+      }
+    ]
+  },
+  "reviews": {
+    "combinedAverageRating": 4.9,
+    "totalReviews": 139
+  },
+  "duration": {
+    "fixedDurationInMinutes": 120,
+    "readableDuration": "3 to 4 hours"
+  },
+  "logistics": {
+    "start": {
+      "description": "1 Carlton Ave, Brooklyn, NY 11205, USA. Lockaway Self Storage gate entrance; guide meets guests for bike fitting."
+    }
+  },
+  "inclusions": [
+    "Bike",
+    "Helmet",
+    "Tour Guide",
+    "Snacks"
+  ],
+  "itineraryItems": [
+    {
+      "title": "Prospect Park",
+      "duration": "25 minutes",
+      "admissionNote": "Admission Ticket Included"
+    },
+    {
+      "title": "Raaka Chocolate",
+      "duration": "20 minutes",
+      "admissionNote": "Admission Ticket Included"
+    },
+    {
+      "title": "Widow Jane Distillery",
+      "duration": "20 minutes",
+      "admissionNote": "Admission Ticket Included"
+    }
+  ]
+}

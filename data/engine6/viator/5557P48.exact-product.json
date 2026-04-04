@@ -1,0 +1,82 @@
+{
+  "productCode": "5557P48",
+  "productUrl": "https://www.viator.com/tours/New-York-City/Private-Central-Park-Bike-Tour/d687-5557P48",
+  "title": "Private Central Park Bike Tour in New York",
+  "description": {
+    "text": "Central Park is one of New York\u2019s most iconic attractions, but knowing where to find the highlights in this sprawling green space can be tough. Let a guide lead the way and discover corners of the park that you might otherwise miss on a private bike tour that allows you to pedal at your own pace."
+  },
+  "highlights": [
+    "Use of bicycle",
+    "Helmet (Mandatory)",
+    "Map"
+  ],
+  "location": {
+    "city": "New York City",
+    "state": "New York"
+  },
+  "priceFrom": 326.62,
+  "media": {
+    "images": [
+      {
+        "isCover": true,
+        "variants": {
+          "FULL": {
+            "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/c3/2d/b6/caption.jpg?w=700&h=500&s=1",
+            "width": 700,
+            "height": 500
+          }
+        }
+      }
+    ]
+  },
+  "reviews": {
+    "combinedAverageRating": 5.0,
+    "totalReviews": 2
+  },
+  "duration": {
+    "fixedDurationInMinutes": 120,
+    "readableDuration": "2 hours (approx.)"
+  },
+  "logistics": {
+    "start": {
+      "description": "56 W 56th St, New York, NY 10019, USA. Please meet at Unlimited Biking Central Park at 56 W 56th Street between 5th and 6th avenue."
+    }
+  },
+  "inclusions": [
+    "Use of bicycle",
+    "Helmet (Mandatory)",
+    "Map"
+  ],
+  "itineraryItems": [
+    {
+      "title": "Wollman Rink",
+      "duration": "20 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Central Park Carousel",
+      "duration": "15 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Bethesda Terrace",
+      "duration": "30 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Swedish Cottage Marionette Theatre",
+      "duration": "15 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Shakespeare Garden",
+      "duration": "20 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Strawberry Fields",
+      "duration": "20 minutes",
+      "admissionNote": "Admission Ticket Free"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "productCode": "37907P2",
+  "productUrl": "https://www.viator.com/tours/New-York-City/Guided-Bicycle-Tour-of-Brooklyn-Bridge/d687-37907P2",
+  "title": "Guided E-Bike Tour of Central Park",
+  "description": {
+    "text": "Cover Central Park by e-bike with a guide, including Bethesda Fountain, Cleopatra\u2019s Needle, Belvedere Castle, the Jacqueline Kennedy Onassis Reservoir, and Strawberry Fields."
+  },
+  "highlights": [
+    "2-hour, guided bike tour",
+    "Bicycle insurance",
+    "Free NYC bike map upon request",
+    "Free bicycle helmet upon request"
+  ],
+  "location": {
+    "city": "New York City",
+    "state": "New York"
+  },
+  "priceFrom": 59.0,
+  "media": {
+    "images": [
+      {
+        "isCover": true,
+        "variants": {
+          "FULL": {
+            "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/5f/aa/caption.jpg?w=700&h=500&s=1",
+            "width": 700,
+            "height": 500
+          }
+        }
+      }
+    ]
+  },
+  "reviews": {
+    "combinedAverageRating": 5.0,
+    "totalReviews": 6
+  },
+  "duration": {
+    "fixedDurationInMinutes": 120,
+    "readableDuration": "2 hours (approx.)"
+  },
+  "logistics": {
+    "start": {
+      "description": "203 W 58th St, New York, NY 10019, USA. BIKERENTNYC flagship store."
+    }
+  },
+  "inclusions": [
+    "2-hour, guided bike tour",
+    "Bicycle insurance",
+    "Free NYC bike map upon request",
+    "Free bicycle helmet upon request"
+  ],
+  "itineraryItems": [
+    {
+      "title": "Central Park",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Bethesda Fountain",
+      "duration": "15 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Jacqueline Kennedy Onassis Reservoir",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Belvedere Castle",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Strawberry Fields, John Lennon Memorial",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    }
+  ]
+}

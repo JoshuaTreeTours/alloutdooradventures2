@@ -1,0 +1,92 @@
+{
+  "productCode": "3156BIKE04",
+  "productUrl": "https://www.viator.com/tours/New-York-City/Small-Group-Central-Park-Bike-Tour/d687-3156BIKE04",
+  "title": "Inside Central Park Bike Tour",
+  "description": {
+    "text": "Ride Central Park\u2019s 3.5-square-mile landscape with a guide, including Strawberry Fields, Shakespeare Garden, Bethesda Fountain, the Dakota, Cleopatra\u2019s Needle, and the Reservoir."
+  },
+  "highlights": [
+    "Small-group bike tour",
+    "Bike rental and helmet",
+    "Bike Bag"
+  ],
+  "location": {
+    "city": "New York City",
+    "state": "New York"
+  },
+  "priceFrom": 48.0,
+  "media": {
+    "images": [
+      {
+        "isCover": true,
+        "variants": {
+          "FULL": {
+            "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/62/9c/caption.jpg?w=700&h=500&s=1",
+            "width": 700,
+            "height": 500
+          }
+        }
+      }
+    ]
+  },
+  "reviews": {
+    "combinedAverageRating": 4.5,
+    "totalReviews": 169
+  },
+  "duration": {
+    "fixedDurationInMinutes": 120,
+    "readableDuration": "2 hours (approx.)"
+  },
+  "logistics": {
+    "start": {
+      "description": "56 W 56th St, New York, NY 10019, USA. Unlimited Biking sign between 5th and 6th Avenues."
+    }
+  },
+  "inclusions": [
+    "Small-group bike tour",
+    "Bike rental and helmet",
+    "Bike Bag"
+  ],
+  "itineraryItems": [
+    {
+      "title": "Central Park",
+      "duration": "2 hours",
+      "admissionNote": "Admission Ticket Included"
+    },
+    {
+      "title": "Strawberry Fields",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Shakespeare Garden",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Bethesda Fountain",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Not Included"
+    },
+    {
+      "title": "The Dakota",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Cleopatra's Needle",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Swedish Cottage Marionette Theatre",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Not Included"
+    },
+    {
+      "title": "Jacqueline Kennedy Onassis Reservoir",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Not Included"
+    }
+  ]
+}
