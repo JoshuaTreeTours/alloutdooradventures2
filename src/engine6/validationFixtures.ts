@@ -46,6 +46,7 @@ import specimen5865p8Payload from "../../data/engine6/viator/5865P8.exact-produc
 import specimen89173p8Payload from "../../data/engine6/viator/89173P8.exact-product.json";
 import specimen89173p10Payload from "../../data/engine6/viator/89173P10.exact-product.json";
 import specimen438341p2Payload from "../../data/engine6/viator/438341P2.exact-product.json";
+import specimen5024manskyPayload from "../../data/engine6/viator/5024MANSKY.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -83,6 +84,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Miami/Sightseeing-tour-or-party-on-a-Monterey-32ft/d662-438341P2",
     rawPayload: specimen438341p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5024MANSKY",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Manhattan-Sky-Tour-New-York-Helicopter-Flight/d687-5024MANSKY",
+    rawPayload: specimen5024manskyPayload as Record<string, unknown>,
   },
   {
     productCode: "214880P12",
