@@ -57,4 +57,25 @@ describe("extractEngine6Product itinerary fidelity", () => {
     );
     expect(result.diagnostics.itinerarySourceUsed).toBe("product.itinerary.days");
   });
+
+  it("uses itinerary summary fallback only when no structured stops exist", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "NO-STOPS-1",
+        title: "Summary-only itinerary example",
+        location: { city: "New York", state: "New York" },
+        itineraryItems: [],
+        itinerary: { items: [] },
+        itinerarySummary:
+          "Depart Manhattan, enjoy skyline views, and return to the departure point.",
+      },
+    });
+
+    expect(result.extracted.itinerary).toEqual([]);
+    expect(result.extracted.itinerarySummaryText).toContain("Depart Manhattan");
+    expect(result.diagnostics.itinerarySourceUsed).toBeNull();
+    expect(result.diagnostics.itinerarySummaryFieldPath).toBe(
+      "product.itinerarySummary"
+    );
+  });
 });

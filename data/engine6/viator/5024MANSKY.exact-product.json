@@ -18,6 +18,51 @@
       "Guided experience in New York City",
       "Advance booking recommended"
     ],
+    "itinerary": {
+      "days": [
+        {
+          "items": [
+            {
+              "pointOfInterestLocation": {
+                "locationName": "Statue of Liberty (Pass By)"
+              },
+              "isPassBy": true,
+              "duration": "2 minutes",
+              "description": "Aerial pass by with close views from the helicopter route."
+            },
+            {
+              "pointOfInterestLocation": {
+                "locationName": "Ellis Island (Pass By)"
+              },
+              "isPassBy": true,
+              "duration": "1 minute"
+            },
+            {
+              "pointOfInterestLocation": {
+                "locationName": "One World Trade Center"
+              },
+              "description": "Fly past Lower Manhattan skyline landmarks.",
+              "duration": "2 minutes"
+            },
+            {
+              "pointOfInterestLocation": {
+                "locationName": "Empire State Building (Pass By)"
+              },
+              "isPassBy": true,
+              "duration": "1 minute"
+            },
+            {
+              "pointOfInterestLocation": {
+                "locationName": "Central Park (Pass By)"
+              },
+              "isPassBy": true,
+              "duration": "2 minutes",
+              "admissionIncluded": false
+            }
+          ]
+        }
+      ]
+    },
     "itinerarySummary": "Take a helicopter flight over Manhattan for skyline and landmark views from above.",
     "categories": [
       "sightseeing-tours"

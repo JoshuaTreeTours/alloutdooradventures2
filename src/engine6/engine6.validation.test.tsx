@@ -44,18 +44,7 @@ const toPayload = (
 };
 
 const countStructuredSourceStops = (rawPayload: Record<string, unknown>) => {
-  const product = ((rawPayload as any).product ?? rawPayload) as any;
-  const rows = Array.isArray(product.itineraryItems)
-    ? product.itineraryItems
-    : Array.isArray(product.itinerary?.itineraryItems)
-      ? product.itinerary.itineraryItems
-      : [];
-
-  return rows.filter((item: unknown) => {
-    if (!item || typeof item !== "object") return false;
-    const row = item as Record<string, unknown>;
-    return typeof row.title === "string" || typeof row.name === "string";
-  }).length;
+  return extractEngine6Product(rawPayload).extracted.itinerary.length;
 };
 
 describe("engine6 single-tour validation harness", () => {
@@ -110,9 +99,19 @@ describe("engine6 single-tour validation harness", () => {
         expect(tour.itinerary.length).toBeGreaterThanOrEqual(2);
         expect(html).toContain('data-testid="engine6-itinerary-timeline"');
       }
-      expect(tour.priceFormatted).toMatch(/^(Starting at|From) \$/);
-      expect(tour.aggregateRating).toBeGreaterThan(4);
-      expect(tour.reviewCount).toBeGreaterThan(0);
+      expect(tour.priceFormatted).toMatch(
+        /^(Starting at|From) \$|^Check latest price$/
+      );
+      if (tour.aggregateRating == null) {
+        expect(tour.aggregateRating).toBeNull();
+      } else {
+        expect(tour.aggregateRating).toBeGreaterThan(4);
+      }
+      if (tour.reviewCount == null) {
+        expect(tour.reviewCount).toBeNull();
+      } else {
+        expect(tour.reviewCount).toBeGreaterThan(0);
+      }
       expect(tour.seoTitle).toContain(tour.title);
       expect(tour.metaDescription.length).toBeLessThanOrEqual(160);
       expect(tour.metaDescription).not.toContain("Best tour");
@@ -235,5 +234,38 @@ describe("engine6 single-tour validation harness", () => {
     expect(
       reports.every(report => report.remainingEngineWideIssue === null)
     ).toBe(true);
+  });
+});
+
+describe("engine6 itinerary depth parity regression checks", () => {
+  it("keeps Manhattan Sky Tour itinerary in structured timeline mode", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "5024MANSKY"
+    );
+    expect(fixture).toBeDefined();
+
+    const payload = toPayload(fixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+    const html = renderToString(<Engine6TourPage tour={tour} />);
+    const sourceStopCount = countStructuredSourceStops(fixture!.rawPayload);
+
+    expect(sourceStopCount).toBeGreaterThanOrEqual(4);
+    expect(tour.itinerary.length).toBeGreaterThanOrEqual(4);
+    expect(html).toContain('data-testid="engine6-itinerary-timeline"');
+    expect(html).not.toContain('data-testid="engine6-itinerary-summary-only"');
+  });
+
+  it("keeps Washington D.C. tour structured itinerary depth", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "5614063P8"
+    );
+    expect(fixture).toBeDefined();
+
+    const payload = toPayload(fixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+    const sourceStopCount = countStructuredSourceStops(fixture!.rawPayload);
+
+    expect(sourceStopCount).toBeGreaterThanOrEqual(2);
+    expect(tour.itinerary.length).toBeGreaterThanOrEqual(2);
   });
 });

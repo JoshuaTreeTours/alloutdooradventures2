@@ -26,27 +26,10 @@ const parseStateCitySlug = (canonicalPath: string) => {
   return { stateSlug, citySlug, slug };
 };
 
-const structuredStopCountFromPayload = (
+const extractStructuredStopsFromPayload = (
   rawPayload: Record<string, unknown>
 ) => {
-  const product = (rawPayload.product ?? rawPayload) as Record<string, unknown>;
-  const itineraryItems = Array.isArray(product.itineraryItems)
-    ? (product.itineraryItems as unknown[])
-    : Array.isArray(
-          (product.itinerary as Record<string, unknown> | undefined)
-            ?.itineraryItems
-        )
-      ? ((product.itinerary as Record<string, unknown>)
-          .itineraryItems as unknown[])
-      : [];
-
-  return itineraryItems.filter(item => {
-    if (!item || typeof item !== "object") {
-      return false;
-    }
-    const row = item as Record<string, unknown>;
-    return typeof row.title === "string" || typeof row.name === "string";
-  }).length;
+  return extractEngine6Product(rawPayload).extracted.itinerary;
 };
 
 const withFilteredToursHtml = (stateSlug: string, citySlug: string) => {
@@ -322,7 +305,15 @@ export const validateEngine6CreationContract = ({
     }
   }
 
-  const structuredStopCount = structuredStopCountFromPayload(rawPayload);
+  const structuredStopsFromSource = extractStructuredStopsFromPayload(rawPayload);
+  const structuredStopCount = structuredStopsFromSource.length;
+  const sourcePassByCount = structuredStopsFromSource.filter(
+    item => item.stopType === "pass-by"
+  ).length;
+  const renderedPassByCount = tour.itinerary.filter(
+    item => item.stopType === "pass-by"
+  ).length;
+
   if (
     tour.itinerary.length >= 2 &&
     !pageHtml.includes('data-testid="engine6-itinerary-timeline"')
@@ -334,8 +325,27 @@ export const validateEngine6CreationContract = ({
       "structured itinerary was dropped despite reliable source stop data"
     );
   }
+  if (structuredStopCount >= 3 && tour.itinerary.length <= 1) {
+    violations.push(
+      "itinerary depth parity failed: rich structured source collapsed to a shallow rendered itinerary"
+    );
+  }
   if (
-    tour.itinerary.length < 2 &&
+    structuredStopCount >= 4 &&
+    tour.itinerary.length > 0 &&
+    tour.itinerary.length / structuredStopCount < 0.5
+  ) {
+    violations.push(
+      "itinerary depth parity failed: rendered stop count is materially below structured source stop count"
+    );
+  }
+  if (sourcePassByCount > 0 && renderedPassByCount === 0) {
+    violations.push(
+      "itinerary depth parity failed: pass-by labels were dropped from structured source itinerary"
+    );
+  }
+  if (
+    tour.itinerary.length === 0 &&
     structuredStopCount > 0 &&
     pageHtml.includes('data-testid="engine6-itinerary-timeline"')
   ) {
@@ -344,7 +354,7 @@ export const validateEngine6CreationContract = ({
     );
   }
   if (
-    tour.itinerary.length < 2 &&
+    tour.itinerary.length === 0 &&
     tour.itinerarySummaryText &&
     !pageHtml.includes('data-testid="engine6-itinerary-summary-only"')
   ) {
