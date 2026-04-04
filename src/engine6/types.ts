@@ -1,5 +1,6 @@
 export type Engine6ItineraryItem = {
   title: string;
+  stopType?: "stop" | "pass-by";
   description?: string;
   duration?: string;
   admissionNote?: string;

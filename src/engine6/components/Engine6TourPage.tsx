@@ -46,9 +46,12 @@ const normalizeItinerarySummaryBlocks = (summary: string) => {
 
 const getItineraryStopType = (item: {
   title: string;
+  stopType?: "stop" | "pass-by";
   description?: string;
   admissionNote?: string;
 }) => {
+  if (item.stopType === "pass-by") return "Pass by";
+  if (item.stopType === "stop") return "Stop";
   const text = [item.title, item.description ?? "", item.admissionNote ?? ""]
     .join(" ")
     .toLowerCase();
