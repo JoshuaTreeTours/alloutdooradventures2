@@ -1,0 +1,85 @@
+{
+  "product": {
+    "productCode": "5614063P8",
+    "productUrl": "https://www.viator.com/tours/New-York/Washington-D-C-Tour-from-New-York/d5560-5614063P8",
+    "title": "Washington D.C. Tour from New York",
+    "description": "Take a full-day guided tour from New York to Washington, D.C. to see major landmarks including the White House area, Capitol Hill, and key memorials, with roundtrip transportation included.",
+    "location": {
+      "city": "New York",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$139.00",
+    "reviews": {
+      "combinedAverageRating": "4.4",
+      "totalReviews": "958"
+    },
+    "duration": "15 hours (approx.)",
+    "highlights": [
+      "Day trip from New York to Washington, D.C.",
+      "See iconic U.S. government and memorial landmarks",
+      "Travel with a guide and coordinated itinerary",
+      "Roundtrip transportation included"
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Roundtrip transportation",
+      "Landmark photo stops"
+    ],
+    "exclusions": [
+      "Food and drinks",
+      "Optional gratuities"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Departure from Manhattan. Detailed meeting instructions are provided after booking."
+      }
+    },
+    "itinerarySummary": "Depart New York in the morning and travel to Washington, D.C. for guided stops around major monuments and government districts before returning to New York.",
+    "itineraryItems": [
+      {
+        "title": "Departure from New York",
+        "duration": "30 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Washington, D.C. Landmarks",
+        "duration": "5 hours",
+        "admissionNote": "Admission Ticket Free"
+      }
+    ],
+    "additionalInfo": [
+      "Long day with extended travel time",
+      "Comfortable shoes recommended",
+      "Most travelers can participate"
+    ],
+    "faq": [
+      {
+        "question": "Is this tour roundtrip from New York?",
+        "answer": "Yes, roundtrip transportation from New York is included."
+      }
+    ],
+    "categories": [
+      {
+        "name": "Day Trips"
+      },
+      {
+        "name": "Bus Tours"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/31/ce/4d/ec/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "product": {
+    "productCode": "62527P11",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Niagara-Falls-in-One-Day-from-New-York-City/d687-62527P11",
+    "title": "Niagara Falls in One Day from New York City",
+    "description": "Visit Niagara Falls on a full-day guided trip from New York City with roundtrip transportation, scenic viewpoints, and free time to explore one of North America's most iconic natural attractions.",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$169.00",
+    "reviews": {
+      "combinedAverageRating": "4.5",
+      "totalReviews": "1,842"
+    },
+    "duration": "19 hours (approx.)",
+    "highlights": [
+      "Travel from New York City to Niagara Falls and back in one day",
+      "Enjoy guided commentary and coordinated logistics",
+      "See major viewpoints and capture classic Niagara photos",
+      "Roundtrip transportation is included"
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Roundtrip transportation",
+      "Free time at Niagara Falls"
+    ],
+    "exclusions": [
+      "Food and drinks",
+      "Optional gratuities"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meeting point in Midtown Manhattan. Exact departure details are provided after booking."
+      }
+    },
+    "itinerarySummary": "Depart New York City early and travel north to Niagara Falls with your guide. Spend time at key viewing areas and enjoy free time before returning to Manhattan in the evening.",
+    "itineraryItems": [
+      {
+        "title": "Midtown Manhattan Departure",
+        "duration": "30 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Niagara Falls",
+        "duration": "4 hours",
+        "admissionNote": "Admission Ticket Included"
+      }
+    ],
+    "additionalInfo": [
+      "Not wheelchair accessible",
+      "Infants must sit on laps",
+      "Most travelers can participate"
+    ],
+    "faq": [
+      {
+        "question": "Is this a roundtrip day trip from New York City?",
+        "answer": "Yes, this experience includes same-day roundtrip transportation from New York City."
+      }
+    ],
+    "categories": [
+      {
+        "name": "Day Trips"
+      },
+      {
+        "name": "Bus Tours"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/80/0c/f2/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            }
+          }
+        }
+      ]
+    }
+  }
+}
