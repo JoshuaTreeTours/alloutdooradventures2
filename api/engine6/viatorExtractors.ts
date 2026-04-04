@@ -73,6 +73,7 @@ export type Engine6ExtractedFaq = {
 
 export type Engine6ExtractedItineraryItem = {
   title: string;
+  stopType?: "stop" | "pass-by";
   description?: string;
   duration?: string;
   admissionNote?: string;
@@ -195,6 +196,15 @@ const asNonEmptyString = (value: unknown): string | null => {
 
   const normalized = stripHtml(value);
   return normalized.length > 0 ? normalized : null;
+};
+
+const asBoolean = (value: unknown): boolean | null => {
+  if (typeof value === "boolean") return value;
+  const normalized = asNonEmptyString(value)?.toLowerCase();
+  if (!normalized) return null;
+  if (["true", "yes", "1"].includes(normalized)) return true;
+  if (["false", "no", "0"].includes(normalized)) return false;
+  return null;
 };
 
 const parseLooseNumber = (value: unknown): number | null => {
@@ -709,10 +719,27 @@ const normalizeSingleItineraryItem = (
   row: RecordLike
 ): Engine6ExtractedItineraryItem | null => {
   const pointOfInterest = asRecord(row.pointOfInterest);
+  const pointOfInterestLocation = asRecord(row.pointOfInterestLocation);
   const stop = asRecord(row.stop);
   const location = asRecord(row.location);
+  const stopTypeRaw =
+    asNonEmptyString(row.stopType) ??
+    asNonEmptyString(row.activityType) ??
+    asNonEmptyString(stop?.type);
+  const isPassByFlag =
+    asBoolean(row.isPassBy) ??
+    asBoolean(row.passBy) ??
+    asBoolean(row.passByWithoutStopping) ??
+    false;
+  const isPassByFromType = /pass[\s_-]?by/i.test(stopTypeRaw ?? "");
+
+  const locationTitle =
+    asNonEmptyString(pointOfInterestLocation?.locationName) ??
+    asNonEmptyString(pointOfInterestLocation?.title) ??
+    asNonEmptyString(pointOfInterestLocation?.name);
 
   const title =
+    locationTitle ??
     asNonEmptyString(row.title) ??
     asNonEmptyString(row.name) ??
     asNonEmptyString(row.label) ??
@@ -723,6 +750,9 @@ const normalizeSingleItineraryItem = (
     asNonEmptyString(location?.name);
 
   if (!title) return null;
+  const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
+  const isPassByFromTitle =
+    /\bpass(?:\s|-)?by\b/i.test(title) && cleanedTitle.length > 0;
 
   const description =
     asNonEmptyString(row.description) ??
@@ -738,7 +768,12 @@ const normalizeSingleItineraryItem = (
     asNonEmptyString(row.ticketNote) ??
     asNonEmptyString(row.ticketInfo) ??
     asNonEmptyString(row.inclusion) ??
-    asNonEmptyString(row.inclusions);
+    asNonEmptyString(row.inclusions) ??
+    (asBoolean(row.admissionIncluded) === true
+      ? "Admission Included"
+      : asBoolean(row.admissionIncluded) === false
+        ? "Admission Not Included"
+        : null);
   const admissionNoteFromDescription =
     description && /admission ticket/i.test(description)
       ? description
@@ -755,9 +790,12 @@ const normalizeSingleItineraryItem = (
     admissionNoteFromDescription && description === admissionNoteFromDescription
       ? undefined
       : description;
+  const stopType =
+    isPassByFlag || isPassByFromType || isPassByFromTitle ? "pass-by" : "stop";
 
   return {
-    title,
+    title: cleanedTitle || title,
+    stopType,
     ...(descriptionWithoutAdmission
       ? { description: descriptionWithoutAdmission }
       : {}),
@@ -767,14 +805,44 @@ const normalizeSingleItineraryItem = (
 };
 
 const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
+  const collectNestedStopRows = (value: unknown): unknown[] => {
+    if (!value) return [];
+    if (Array.isArray(value)) {
+      return value.flatMap(item => collectNestedStopRows(item));
+    }
+    const row = asRecord(value);
+    if (!row) return [];
+    const looksLikeStopRow =
+      asNonEmptyString(row.title) ||
+      asNonEmptyString(row.name) ||
+      asNonEmptyString(row.label) ||
+      asRecord(row.pointOfInterestLocation) ||
+      asRecord(row.pointOfInterest) ||
+      asRecord(row.stop) ||
+      asRecord(row.location);
+
+    const nested = [
+      row.itineraryItems,
+      row.items,
+      row.stops,
+      row.locations,
+      row.dayItems,
+      row.activities,
+      row.pointsOfInterest,
+      row.points,
+      row.dayPlans,
+      row.days,
+      row.itineraryDays,
+    ];
+
+    const nestedRows = nested.flatMap(item => collectNestedStopRows(item));
+    return looksLikeStopRow ? [row, ...nestedRows] : nestedRows;
+  };
+
   const normalizeItinerary = (
     value: unknown
   ): Engine6ExtractedItineraryItem[] => {
-    const rows = Array.isArray(value)
-      ? value
-      : Array.isArray(asRecord(value)?.itineraryItems)
-        ? (asRecord(value)?.itineraryItems as unknown[])
-        : [];
+    const rows = collectNestedStopRows(value);
 
     if (!Array.isArray(rows)) {
       return [];
@@ -791,7 +859,11 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
   for (const path of [
     ["itineraryItems"],
     ["itinerary", "itineraryItems"],
+    ["itinerary", "items"],
     ["itinerary", "stops"],
+    ["itinerary", "days"],
+    ["itinerary", "dayPlans"],
+    ["itinerary", "itineraryDays"],
     ["itinerary", "locations"],
     ["itinerary"],
     ["whatToExpect", "items"],

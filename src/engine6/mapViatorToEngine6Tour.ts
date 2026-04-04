@@ -70,6 +70,116 @@ const buildEngine6OpeningSentence = ({
     .replace("%TOUR_TYPE%", safeTourType);
 };
 
+const toSentence = (value: string) => {
+  const trimmed = value.trim().replace(/\s+/g, " ");
+  if (!trimmed) return "";
+  return /[.!?]$/.test(trimmed) ? trimmed : `${trimmed}.`;
+};
+
+const countWords = (value: string) =>
+  value
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean).length;
+
+const stripMarketingLanguage = (value: string) =>
+  value
+    .replace(/\bonce in a lifetime\b/gi, "")
+    .replace(/\btrip of a lifetime\b/gi, "")
+    .replace(/\bmust-?do\b/gi, "notable")
+    .replace(/\bbucket list\b/gi, "popular");
+
+const buildAuthoritativeOverview = ({
+  title,
+  city,
+  state,
+  categoryLabel,
+  durationText,
+  highlights,
+  itinerary,
+  meetingPointText,
+  sourceOverview,
+}: {
+  title: string;
+  city: string;
+  state: string;
+  categoryLabel: string | null;
+  durationText: string | null;
+  highlights: string[];
+  itinerary: Array<{ title: string }>;
+  meetingPointText: string | null;
+  sourceOverview: string;
+}) => {
+  const normalizedLocation = `${city}, ${state}`;
+  const activityLabel =
+    categoryLabel?.toLowerCase().replace(/\s+tour$/i, " tour") ??
+    "guided tour";
+  const highlightText = highlights
+    .slice(0, 3)
+    .map(item => item.replace(/\.$/, "").trim())
+    .filter(Boolean)
+    .join(", ");
+  const stopText = itinerary
+    .slice(0, 3)
+    .map(stop => stop.title.replace(/\.$/, "").trim())
+    .filter(Boolean)
+    .join(", ");
+  const sourceSnippet = stripMarketingLanguage(sourceOverview)
+    .replace(/\s+/g, " ")
+    .split(/(?<=[.!?])\s+/)
+    .slice(0, 2)
+    .join(" ")
+    .trim();
+
+  const opening = toSentence(
+    `${title} is a ${activityLabel} in ${normalizedLocation} focused on efficient access to key sights and local context`
+  );
+  const middleA = toSentence(
+    [
+      highlightText
+        ? `Expect a route that covers ${highlightText}`
+        : "The experience combines signature landmarks with practical local insights",
+      stopText ? `with scheduled stops such as ${stopText}` : "",
+    ]
+      .filter(Boolean)
+      .join(" ")
+  );
+  const logistics = toSentence(
+    [
+      "The format is guided and follows a structured itinerary",
+      durationText ? `with a typical duration of ${durationText}` : "",
+      meetingPointText ? `and departure details centered on ${meetingPointText}` : "",
+    ]
+      .filter(Boolean)
+      .join(" ")
+  );
+  const closer = toSentence(
+    "It is best for first-time visitors, time-conscious travelers, and small groups that want clear pacing without sacrificing major highlights"
+  );
+
+  const parts = [opening, middleA, logistics, sourceSnippet, closer].filter(Boolean);
+  const withLimit = () => {
+    const limited: string[] = [];
+    for (const part of parts) {
+      const next = [...limited, part].join(" ");
+      if (countWords(next) > 120) break;
+      limited.push(part);
+    }
+    return limited.join(" ");
+  };
+
+  let summary = withLimit();
+  if (countWords(summary) < 90) {
+    const expansion = toSentence(
+      `This ${city} tour is designed for travelers who want reliable logistics and substantive interpretation at each phase of the outing`
+    );
+    const expanded = `${summary} ${expansion}`.trim();
+    summary = countWords(expanded) <= 120 ? expanded : summary;
+  }
+
+  return summary;
+};
+
 export const mapViatorToEngine6Tour = (
   payload: Engine6ApiResponse
 ): Engine6Tour => {
@@ -108,7 +218,7 @@ export const mapViatorToEngine6Tour = (
       `Engine6 strict hero contract violation for ${payload.rawProductCode}: resolved hero must be exact-product product.media.images with full provenance`
     );
   }
-  const overviewText = cleanEngine6Description(
+  const sourceOverviewText = cleanEngine6Description(
     payload.extracted.overviewText ?? ""
   );
   const highlights = payload.extracted.highlights ?? [];
@@ -172,11 +282,22 @@ export const mapViatorToEngine6Tour = (
     /per\s+group|private/i.test(payload.extracted.priceFormatted)
       ? payload.extracted.priceFormatted
       : typeof payload.extracted.priceAmount === "number"
-        ? `Starting at $${payload.extracted.priceAmount.toFixed(0)}`
-        : payload.extracted.priceFormatted?.replace(
+      ? `Starting at $${payload.extracted.priceAmount.toFixed(0)}`
+      : payload.extracted.priceFormatted?.replace(
             /^From\s+/i,
             "Starting at "
           );
+  const overviewText = buildAuthoritativeOverview({
+    title,
+    city,
+    state,
+    categoryLabel,
+    durationText: null,
+    highlights,
+    itinerary,
+    meetingPointText: payload.extracted.meetingPointText ?? null,
+    sourceOverview: sourceOverviewText,
+  });
 
   return {
     productCode: payload.rawProductCode,

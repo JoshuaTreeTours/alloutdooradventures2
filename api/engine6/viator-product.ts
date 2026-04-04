@@ -123,6 +123,7 @@ const EMPTY_EXTRACTED_PRODUCT = {
   highlights: [] as string[],
   itinerary: [] as Array<{
     title: string;
+    stopType?: "stop" | "pass-by";
     description?: string;
     duration?: string;
     admissionNote?: string;

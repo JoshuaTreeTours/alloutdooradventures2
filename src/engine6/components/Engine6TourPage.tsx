@@ -26,6 +26,38 @@ const ContentSection = ({
   </section>
 );
 
+const normalizeItinerarySummaryBlocks = (summary: string) => {
+  const clean = summary.replace(/\s+/g, " ").trim();
+  if (!clean) return [];
+  const chunks = clean
+    .split(/(?<=[.!?])\s+(?=[A-Z0-9])/)
+    .map(chunk => chunk.trim())
+    .filter(Boolean);
+  if (chunks.length <= 1) return [clean];
+
+  const targetBlocks = Math.max(2, Math.min(5, chunks.length));
+  const chunkSize = Math.ceil(chunks.length / targetBlocks);
+  const blocks: string[] = [];
+  for (let index = 0; index < chunks.length; index += chunkSize) {
+    blocks.push(chunks.slice(index, index + chunkSize).join(" "));
+  }
+  return blocks.slice(0, 5);
+};
+
+const getItineraryStopType = (item: {
+  title: string;
+  stopType?: "stop" | "pass-by";
+  description?: string;
+  admissionNote?: string;
+}) => {
+  if (item.stopType === "pass-by") return "Pass by";
+  if (item.stopType === "stop") return "Stop";
+  const text = [item.title, item.description ?? "", item.admissionNote ?? ""]
+    .join(" ")
+    .toLowerCase();
+  return /\bpass(?:\s|-)?by\b/.test(text) ? "Pass by" : "Stop";
+};
+
 const buildEngine6Breadcrumbs = (tour: Engine6Tour) => {
   const pathSegments = tour.canonicalPath.split("/").filter(Boolean);
   const stateSlug = pathSegments[1] ?? "";
@@ -281,7 +313,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </ContentSection>
         ) : null}
 
-        {tour.itinerary.length >= 2 ? (
+        {tour.itinerary.length > 0 ? (
           <ContentSection title="Itinerary">
             <ul className="space-y-4" data-testid="engine6-itinerary-timeline">
               {tour.itinerary.map((item, index) => (
@@ -290,9 +322,14 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                   className="rounded-xl border border-green-100 bg-green-50/60 p-5"
                 >
                   <div className="flex flex-wrap items-start justify-between gap-2">
-                    <p className="text-lg font-semibold text-green-900">
-                      {item.title}
-                    </p>
+                    <div className="space-y-2">
+                      <span className="inline-flex rounded-full border border-green-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-green-800">
+                        {getItineraryStopType(item)}
+                      </span>
+                      <p className="text-lg font-semibold text-green-900">
+                        {item.title}
+                      </p>
+                    </div>
                     {item.duration ? (
                       <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-800">
                         {item.duration}
@@ -316,10 +353,24 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
         ) : tour.itinerarySummaryText ? (
           <ContentSection title="Itinerary summary">
             <div
-              className="rounded-xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-900"
+              className="rounded-xl border border-amber-200 bg-amber-50 p-5"
               data-testid="engine6-itinerary-summary-only"
             >
-              {tour.itinerarySummaryText}
+              <ul className="space-y-3">
+                {normalizeItinerarySummaryBlocks(tour.itinerarySummaryText).map(
+                  (segment, index) => (
+                    <li
+                      key={`${segment.slice(0, 32)}-${index}`}
+                      className="rounded-lg bg-white/70 p-3 text-sm leading-6 text-amber-900"
+                    >
+                      <p className="text-xs font-semibold uppercase tracking-wide text-amber-700">
+                        Stop {index + 1}
+                      </p>
+                      <p>{segment}</p>
+                    </li>
+                  )
+                )}
+              </ul>
             </div>
           </ContentSection>
         ) : null}
