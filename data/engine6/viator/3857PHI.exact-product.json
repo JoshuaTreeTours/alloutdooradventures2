@@ -1,0 +1,85 @@
+{
+  "product": {
+    "productCode": "3857PHI",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Philadelphia-and-Amish-Country-Day-Trip-from-New-York/d687-3857PHI",
+    "title": "Philadelphia and Amish Country Day Trip from New York",
+    "description": "Travel from New York City to Philadelphia and Pennsylvania Amish Country on a guided day trip that combines history, culture, and small-town scenery.",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$169.00",
+    "reviews": {
+      "combinedAverageRating": "4.3",
+      "totalReviews": "1,126"
+    },
+    "duration": "13 hours (approx.)",
+    "highlights": [
+      "Visit historic highlights in Philadelphia",
+      "Continue to Pennsylvania Amish Country",
+      "Guided commentary throughout the day",
+      "Roundtrip transportation from New York City"
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Roundtrip transportation",
+      "Sightseeing stops"
+    ],
+    "exclusions": [
+      "Food and drinks",
+      "Optional gratuities"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Departure from Midtown Manhattan. Exact check-in details provided after booking."
+      }
+    },
+    "itinerarySummary": "Leave New York City for a full-day excursion through Philadelphia and Amish Country, with guided orientation and time at key stops before returning in the evening.",
+    "itineraryItems": [
+      {
+        "title": "Philadelphia",
+        "duration": "3 hours",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Amish Country",
+        "duration": "2 hours",
+        "admissionNote": "Admission Ticket Free"
+      }
+    ],
+    "additionalInfo": [
+      "Not wheelchair accessible",
+      "Long travel day",
+      "Most travelers can participate"
+    ],
+    "faq": [
+      {
+        "question": "Does this trip return to New York City the same day?",
+        "answer": "Yes, this is a same-day roundtrip tour from New York City."
+      }
+    ],
+    "categories": [
+      {
+        "name": "Day Trips"
+      },
+      {
+        "name": "Historical Tours"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/c3/3b/4f/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}

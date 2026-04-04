@@ -41,6 +41,21 @@ export const ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE =
 export const ENGINE6_NYC_ONE_DAY_SIGHTSEEING_PRODUCT_CODE = "7081NYCDAY";
 export const ENGINE6_NYC_ONE_DAY_SIGHTSEEING_ROUTE =
   "/destinations/new-york/new-york/tours/new-york-in-one-day-guided-sightseeing-tour";
+export const ENGINE6_NYC_NIAGARA_DAY_TRIP_PRODUCT_CODE = "62527P11";
+export const ENGINE6_NYC_NIAGARA_DAY_TRIP_ROUTE =
+  "/destinations/new-york/new-york/tours/niagara-falls-in-one-day-from-new-york-city";
+export const ENGINE6_NYC_STATUE_LIBERTY_ELLIS_PRODUCT_CODE = "5250LIBERTYELLIS";
+export const ENGINE6_NYC_STATUE_LIBERTY_ELLIS_ROUTE =
+  "/destinations/new-york/new-york/tours/statue-of-liberty-and-ellis-island-guided-tour";
+export const ENGINE6_NYC_WASHINGTON_DC_PRODUCT_CODE = "5614063P8";
+export const ENGINE6_NYC_WASHINGTON_DC_ROUTE =
+  "/destinations/new-york/new-york/tours/washington-d-c-tour-from-new-york";
+export const ENGINE6_NYC_PHILADELPHIA_AMISH_PRODUCT_CODE = "3857PHI";
+export const ENGINE6_NYC_PHILADELPHIA_AMISH_ROUTE =
+  "/destinations/new-york/new-york/tours/philadelphia-and-amish-country-day-trip-from-new-york";
+export const ENGINE6_NYC_MET_PRIVATE_TOUR_PRODUCT_CODE = "43656P1";
+export const ENGINE6_NYC_MET_PRIVATE_TOUR_ROUTE =
+  "/destinations/new-york/new-york/tours/private-tour-of-the-metropolitan-museum-of-art-in-new-york-city";
 export const ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE = "3097SDZSP_2VISIT";
 export const ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-zoo-and-safari-park-2-visit-pass-ticket";
@@ -181,6 +196,26 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_NYC_ONE_DAY_SIGHTSEEING_ROUTE,
     ENGINE6_NYC_ONE_DAY_SIGHTSEEING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_NIAGARA_DAY_TRIP_ROUTE,
+    ENGINE6_NYC_NIAGARA_DAY_TRIP_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_STATUE_LIBERTY_ELLIS_ROUTE,
+    ENGINE6_NYC_STATUE_LIBERTY_ELLIS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_WASHINGTON_DC_ROUTE,
+    ENGINE6_NYC_WASHINGTON_DC_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_PHILADELPHIA_AMISH_ROUTE,
+    ENGINE6_NYC_PHILADELPHIA_AMISH_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_MET_PRIVATE_TOUR_ROUTE,
+    ENGINE6_NYC_MET_PRIVATE_TOUR_PRODUCT_CODE,
   ],
   [ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE, ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE],
   [

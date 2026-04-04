@@ -11,6 +11,11 @@ import specimen233384Payload from "../../data/engine6/viator/233384P2.exact-prod
 import specimen414460Payload from "../../data/engine6/viator/414460P1.exact-product.json";
 import specimen7081nycdayPayload from "../../data/engine6/viator/7081NYCDAY.exact-product.json";
 import specimen3156Payload from "../../data/engine6/viator/3156P13.exact-product.json";
+import specimen62527p11Payload from "../../data/engine6/viator/62527P11.exact-product.json";
+import specimen5250libertyellisPayload from "../../data/engine6/viator/5250LIBERTYELLIS.exact-product.json";
+import specimen5614063p8Payload from "../../data/engine6/viator/5614063P8.exact-product.json";
+import specimen3857phiPayload from "../../data/engine6/viator/3857PHI.exact-product.json";
+import specimen43656p1Payload from "../../data/engine6/viator/43656P1.exact-product.json";
 import specimen3097sdzsp2visitPayload from "../../data/engine6/viator/3097SDZSP_2VISIT.exact-product.json";
 import specimen447234p3Payload from "../../data/engine6/viator/447234P3.exact-product.json";
 import specimen5584233p1Payload from "../../data/engine6/viator/5584233P1.exact-product.json";
@@ -204,6 +209,36 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/New-York-in-One-Day-Guided-Sightseeing-Tour/d687-7081NYCDAY",
     rawPayload: specimen7081nycdayPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "62527P11",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Niagara-Falls-in-One-Day-from-New-York-City/d687-62527P11",
+    rawPayload: specimen62527p11Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5250LIBERTYELLIS",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Statue-of-Liberty-and-Ellis-Island-Guided-Tour/d687-5250LIBERTYELLIS",
+    rawPayload: specimen5250libertyellisPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "5614063P8",
+    publicUrl:
+      "https://www.viator.com/tours/New-York/Washington-D-C-Tour-from-New-York/d5560-5614063P8",
+    rawPayload: specimen5614063p8Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "3857PHI",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Philadelphia-and-Amish-Country-Day-Trip-from-New-York/d687-3857PHI",
+    rawPayload: specimen3857phiPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "43656P1",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Private-Tour-of-the-Metropolitan-Museum-of-Art-in-New-York-City/d687-43656P1",
+    rawPayload: specimen43656p1Payload as Record<string, unknown>,
   },
   {
     productCode: "3156P13",

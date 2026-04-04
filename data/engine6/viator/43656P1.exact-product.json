@@ -1,0 +1,79 @@
+{
+  "product": {
+    "productCode": "43656P1",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Private-Tour-of-the-Metropolitan-Museum-of-Art-in-New-York-City/d687-43656P1",
+    "title": "Private Tour of the Metropolitan Museum of Art in New York City",
+    "description": "Discover the Metropolitan Museum of Art with a private guide who tailors the visit to your interests, helping you navigate one of the world's premier museum collections.",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$290.00",
+    "reviews": {
+      "combinedAverageRating": "4.8",
+      "totalReviews": "412"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "highlights": [
+      "Private guided experience at The Met",
+      "Customized pacing and focus based on your interests",
+      "Ideal for first-time and returning museum visitors",
+      "Learn context behind key works and collections"
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Museum tour planning support"
+    ],
+    "exclusions": [
+      "Museum admission ticket unless selected",
+      "Food and drinks"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet near The Metropolitan Museum of Art entrance on Fifth Avenue. Confirmation includes exact instructions."
+      }
+    },
+    "itinerarySummary": "Meet your private guide at The Met and explore selected galleries and masterpieces with commentary adapted to your interests and pace.",
+    "itineraryItems": [
+      {
+        "title": "The Metropolitan Museum of Art",
+        "duration": "2 hours 30 minutes",
+        "admissionNote": "Admission Ticket Not Included"
+      }
+    ],
+    "additionalInfo": [
+      "Private tour",
+      "Wheelchair accessible areas available",
+      "Most travelers can participate"
+    ],
+    "faq": [
+      {
+        "question": "Is this a private tour?",
+        "answer": "Yes, this experience is operated as a private guided tour."
+      }
+    ],
+    "categories": [
+      {
+        "name": "Museum Tickets & Passes"
+      },
+      {
+        "name": "Cultural Tours"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/67/c4/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}

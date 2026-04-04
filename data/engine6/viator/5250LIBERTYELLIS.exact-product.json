@@ -1,0 +1,90 @@
+{
+  "product": {
+    "productCode": "5250LIBERTYELLIS",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Statue-of-Liberty-and-Ellis-Island-Guided-Tour/d687-5250LIBERTYELLIS",
+    "title": "Statue of Liberty and Ellis Island Guided Tour",
+    "description": "Explore two of New York Harbor's most important landmarks with a guided tour that includes ferry access, historical context, and time to discover Liberty Island and Ellis Island.",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$79.00",
+    "reviews": {
+      "combinedAverageRating": "4.6",
+      "totalReviews": "3,102"
+    },
+    "duration": "4 hours (approx.)",
+    "highlights": [
+      "Guided visit to Liberty Island and Ellis Island",
+      "Roundtrip ferry transportation included",
+      "Learn immigration and NYC history from your guide",
+      "Great orientation for first-time visitors"
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Roundtrip ferry tickets",
+      "Guided walking tour"
+    ],
+    "exclusions": [
+      "Food and drinks",
+      "Hotel pickup and drop-off"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meeting point near Battery Park in Lower Manhattan. Exact instructions provided after booking."
+      }
+    },
+    "itinerarySummary": "Meet your guide in Lower Manhattan, board the ferry to Liberty Island for guided commentary, then continue to Ellis Island to learn about the immigration experience before returning by ferry.",
+    "itineraryItems": [
+      {
+        "title": "Battery Park",
+        "duration": "30 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Liberty Island",
+        "duration": "1 hour 30 minutes",
+        "admissionNote": "Admission Ticket Included"
+      },
+      {
+        "title": "Ellis Island",
+        "duration": "1 hour 30 minutes",
+        "admissionNote": "Admission Ticket Included"
+      }
+    ],
+    "additionalInfo": [
+      "Operates in most weather conditions",
+      "Comfortable shoes recommended",
+      "Most travelers can participate"
+    ],
+    "faq": [
+      {
+        "question": "Are ferry tickets included?",
+        "answer": "Yes, roundtrip ferry transportation to Liberty and Ellis Islands is included."
+      }
+    ],
+    "categories": [
+      {
+        "name": "Historical Tours"
+      },
+      {
+        "name": "Sightseeing Tours"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/60/ed/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            }
+          }
+        }
+      ]
+    }
+  }
+}
