@@ -2,8 +2,8 @@ import { describe, expect, it } from "vitest";
 
 import { getTopToursForPlace } from "./tourIndex";
 
-describe("guide top tours for Engine6-only Florida cities", () => {
-  it("keeps Miami top tours Engine6-only", () => {
+describe("guide top tours prioritize Engine6 first", () => {
+  it("keeps Miami top tours Engine6-first", () => {
     const topTours = getTopToursForPlace(
       {
         type: "city",
@@ -17,10 +17,10 @@ describe("guide top tours for Engine6-only Florida cities", () => {
     );
 
     expect(topTours.length).toBeGreaterThan(0);
-    expect(topTours.every(tour => tour.engine === "engine6")).toBe(true);
+    expect(topTours[0]?.engine).toBe("engine6");
   });
 
-  it("keeps Fort Lauderdale top tours Engine6-only", () => {
+  it("keeps Fort Lauderdale top tours Engine6-first", () => {
     const topTours = getTopToursForPlace(
       {
         type: "city",
@@ -34,10 +34,10 @@ describe("guide top tours for Engine6-only Florida cities", () => {
     );
 
     expect(topTours.length).toBeGreaterThan(0);
-    expect(topTours.every(tour => tour.engine === "engine6")).toBe(true);
+    expect(topTours[0]?.engine).toBe("engine6");
   });
 
-  it("does not change non-target cities", () => {
+  it("fills New York top 10 from Engine6 first and only falls back after Engine6", () => {
     const newYorkTopTours = getTopToursForPlace(
       {
         type: "city",
@@ -51,6 +51,25 @@ describe("guide top tours for Engine6-only Florida cities", () => {
     );
 
     expect(newYorkTopTours.length).toBeGreaterThan(0);
-    expect(newYorkTopTours.some(tour => tour.engine !== "engine6")).toBe(true);
+    const firstNonEngine6Index = newYorkTopTours.findIndex(
+      tour => tour.engine !== "engine6"
+    );
+
+    if (firstNonEngine6Index > -1) {
+      expect(
+        newYorkTopTours.slice(0, firstNonEngine6Index).every(
+          tour => tour.engine === "engine6"
+        )
+      ).toBe(true);
+      expect(
+        newYorkTopTours.slice(firstNonEngine6Index).some(
+          tour => tour.engine !== "engine6"
+        )
+      ).toBe(true);
+    } else {
+      expect(newYorkTopTours.every(tour => tour.engine === "engine6")).toBe(
+        true
+      );
+    }
   });
 });

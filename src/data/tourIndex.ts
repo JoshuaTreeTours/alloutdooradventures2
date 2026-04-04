@@ -1,5 +1,5 @@
 import { EUROPE_COUNTRIES, US_STATES, slugify } from "./tourCatalog";
-import { isEngine6OnlyCity } from "./tours";
+import { prioritizeEngine6Tours } from "./tours";
 import { tours } from "./tours";
 import type { Tour } from "./tours.types";
 
@@ -108,19 +108,10 @@ const getToursForPlace = (place: GuidePlace): Tour[] => {
     }
 
     if (place.regionType === "state") {
-      return (
-        tour.destination.stateSlug === place.parentSlug &&
-        isUsStateTour(tour) &&
-        (!isEngine6OnlyCity(place.parentSlug, place.slug) ||
-          tour.engine === "engine6")
-      );
+      return tour.destination.stateSlug === place.parentSlug && isUsStateTour(tour);
     }
 
-    return (
-      getCountryFromTour(tour)?.slug === place.parentSlug &&
-      (!isEngine6OnlyCity(tour.destination.stateSlug, place.slug) ||
-        tour.engine === "engine6")
-    );
+    return getCountryFromTour(tour)?.slug === place.parentSlug;
   });
 };
 
@@ -179,7 +170,7 @@ export const getTopToursForPlace = (
   const filteredTours = activitySlug
     ? toursForPlace.filter((tour) => matchesActivity(tour, activitySlug))
     : toursForPlace;
-  const sortedTours = [...filteredTours].sort(compareTours);
+  const sortedTours = prioritizeEngine6Tours([...filteredTours].sort(compareTours));
   const limit = Math.min(sortedTours.length, max);
   if (sortedTours.length <= min) {
     return sortedTours;

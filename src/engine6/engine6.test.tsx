@@ -1545,6 +1545,27 @@ describe("engine6 listing surfaces", () => {
     expect(html).not.toContain('src="undefined"');
   });
 
+  it("renders New York City tour cards with Engine6 entries before non-Engine6 entries", () => {
+    const unified = getToursByCityUnified("new-york", "new-york");
+    const firstEngine6 = unified.find(entry => entry.tour.engine === "engine6");
+    const firstNonEngine6 = unified.find(entry => entry.tour.engine !== "engine6");
+
+    expect(firstEngine6).toBeDefined();
+    expect(firstNonEngine6).toBeDefined();
+
+    const html = renderToString(
+      <CityToursIndexRoute
+        params={{ stateSlug: "new-york", citySlug: "new-york" }}
+      />
+    );
+    const engine6HrefIndex = html.indexOf(firstEngine6!.href);
+    const nonEngine6HrefIndex = html.indexOf(firstNonEngine6!.href);
+
+    expect(engine6HrefIndex).toBeGreaterThan(-1);
+    expect(nonEngine6HrefIndex).toBeGreaterThan(-1);
+    expect(engine6HrefIndex).toBeLessThan(nonEngine6HrefIndex);
+  });
+
   it("regression: every Engine6 listing card image stays identical to its detail hero", () => {
     for (const tour of engine6ResolvedTours) {
       const card = toEngine6Card(tour);
