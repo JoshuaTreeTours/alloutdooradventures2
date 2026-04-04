@@ -45,7 +45,7 @@
         "description": "Departs from Downtown Manhattan Heliport, 6 East River Piers, New York, NY 10004. Exact check-in and manifest instructions are provided after booking."
       }
     },
-    "itinerarySummary": "Check in at the Downtown Manhattan Heliport, complete the preflight safety process, and board for a Manhattan skyline helicopter route that highlights Lower Manhattan, New York Harbor, and major landmark corridors before returning to base.",
+    "itinerarySummary": "Check in at the Downtown Manhattan Heliport, complete preflight safety and manifest procedures, then depart on a Manhattan skyline flight that traces Lower Manhattan and New York Harbor landmarks before running northbound over the skyline corridor and returning to the heliport.",
     "itineraryItems": [
       {
         "title": "Downtown Manhattan Heliport check-in",
@@ -54,8 +54,58 @@
         "admissionNote": "Admission Ticket Free"
       },
       {
-        "title": "Manhattan skyline helicopter flight",
-        "description": "Lift off from Lower Manhattan and follow a sightseeing route over Manhattan and New York Harbor with commentary from your pilot.",
+        "title": "Governors Island",
+        "stopType": "pass-by",
+        "description": "After takeoff, pass the south harbor edge with views toward Governors Island and New York Harbor traffic lanes.",
+        "duration": "Pass by",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "Statue of Liberty",
+        "stopType": "pass-by",
+        "description": "A signature fly-by view of the Statue of Liberty from above New York Harbor.",
+        "duration": "Pass by",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "Ellis Island",
+        "stopType": "pass-by",
+        "description": "Continue across the harbor corridor for aerial views of Ellis Island and the former immigration station complex.",
+        "duration": "Pass by",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "One World Trade Center",
+        "stopType": "pass-by",
+        "description": "Track back toward Lower Manhattan for skyline views anchored by One World Trade Center.",
+        "duration": "Pass by",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "Empire State Building",
+        "stopType": "pass-by",
+        "description": "Follow the Midtown skyline corridor with aerial perspective on the Empire State Building district.",
+        "duration": "Pass by",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "Chrysler Building",
+        "stopType": "pass-by",
+        "description": "See the Chrysler Building and adjacent Midtown East towers as the flight continues northbound.",
+        "duration": "Pass by",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "Central Park",
+        "stopType": "pass-by",
+        "description": "Weather and air-traffic permitting, the route reaches the southern edge of Central Park before turning back downtown.",
+        "duration": "Pass by",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "Manhattan skyline helicopter flight return leg",
+        "stopType": "stop",
+        "description": "Return south over the Manhattan skyline and descend back to the Downtown Manhattan Heliport.",
         "duration": "18 minutes",
         "admissionNote": "Admission Ticket Included"
       }
