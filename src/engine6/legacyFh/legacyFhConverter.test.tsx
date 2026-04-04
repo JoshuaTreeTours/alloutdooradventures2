@@ -7,13 +7,20 @@ import {
   CENTRAL_PARK_BIKE_TOURS_PUBLIC_PATH,
   centralParkBikeToursMigratedRecord,
 } from "./fixtures/centralParkBikeTours";
+import {
+  FORT_LAUDERDALE_EBIKE_PUBLIC_PATH,
+  fortLauderdaleEBikeMigratedRecord,
+} from "./fixtures/fortLauderdaleEBike";
 import { mapLegacyFhRecordToEngine6Tour } from "./mapLegacyFhRecordToEngine6Tour";
 import { getLegacyFhMigratedTourBySlugs } from "./registry";
 import CityTourDetailRoute from "../../pages/destinations/states/tours/CityTourDetailRoute";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
-import { getTourBySlugs } from "../../data/tours";
+import { getTourBySlugs, getToursByCityUnified } from "../../data/tours";
 
 describe("legacy FH -> Engine6 converter", () => {
+  const FORT_LAUDERDALE_EBIKE_SPECIMEN_PRODUCT_CODE = "383300P4";
+  const SAN_DIEGO_WHALE_SPECIMEN_PRODUCT_CODE = "5144WHALE";
+
   it("extracts stable fields from legacy public + book HTML fixtures", () => {
     const record = extractLegacyFhProductRecord({
       slug: "central-park-bike-tours-16628",
@@ -198,6 +205,35 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(tour.diagnostics.viatorCommercialFieldsUsed).toBe(false);
   });
 
+  it("falls back per commercial field when confident Viator match is partial", () => {
+    const tour = mapLegacyFhRecordToEngine6Tour({
+      ...centralParkBikeToursMigratedRecord,
+      matchedViatorCommercial: {
+        productCode: FORT_LAUDERDALE_EBIKE_SPECIMEN_PRODUCT_CODE,
+        confidenceSignals: {
+          productCodeMatched: true,
+        },
+        priceAmount: 61,
+        aggregateRating: null,
+        reviewCount: null,
+      },
+    });
+
+    expect(tour.priceAmount).toBe(61);
+    expect(tour.aggregateRating).toBe(4.3);
+    expect(tour.reviewCount).toBe(390);
+    expect(tour.ownership.routeOwner).toBe("fareharbor");
+    expect(tour.ownership.ctaOwner).toBe("fareharbor");
+    expect(tour.ownership.presentationOwner).toBe("engine6");
+    expect(tour.ownership.commercialOwner).toBe("viator");
+    expect(tour.ownership.commercialFallbackReason).toBe("none");
+    expect(tour.diagnostics.commercialPriceFieldPath).toContain(
+      FORT_LAUDERDALE_EBIKE_SPECIMEN_PRODUCT_CODE
+    );
+    expect(tour.diagnostics.ratingFieldPath).toBe("legacy.rating");
+    expect(tour.diagnostics.reviewCountFieldPath).toBe("legacy.reviewCount");
+  });
+
   it("enforces /book preservation for migrated records", () => {
     expect(() =>
       mapLegacyFhRecordToEngine6Tour({
@@ -277,5 +313,115 @@ describe("legacy FH -> Engine6 converter", () => {
     ).toBe(
       (aggregateRatingNode as { "@id"?: string } | undefined)?.["@id"]
     );
+  });
+
+  it("keeps deduped FH canonical routes as a single public page with listing/page/schema parity", () => {
+    const migratedTour = getLegacyFhMigratedTourBySlugs(
+      "new-york",
+      "new-york",
+      "central-park-bike-tours-16628"
+    );
+    expect(migratedTour).toBeTruthy();
+
+    const listingTour = getTourBySlugs(
+      "new-york",
+      "new-york",
+      "central-park-bike-tours-16628"
+    );
+    expect(listingTour?.engine).toBe("engine6");
+    expect(listingTour?.slug).toBe("central-park-bike-tours-16628");
+
+    const schema = buildEngine6SchemaGraph(migratedTour!);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const productNode = graph.find(node => node["@type"] === "Product") as
+      | { image?: string | string[] }
+      | undefined;
+    const offerNode = graph.find(node => node["@type"] === "Offer") as
+      | { price?: number }
+      | undefined;
+    const aggregateRatingNode = graph.find(
+      node => node["@type"] === "AggregateRating"
+    ) as
+      | {
+          ratingValue?: number;
+          reviewCount?: number;
+        }
+      | undefined;
+
+    const schemaImage = Array.isArray(productNode?.image)
+      ? productNode?.image[0]
+      : productNode?.image;
+
+    expect(listingTour?.heroImage).toBe(migratedTour?.heroImageUrl);
+    expect(schemaImage).toBe(migratedTour?.heroImageUrl);
+    expect(listingTour?.startingPrice).toBe(offerNode?.price);
+    expect(migratedTour?.aggregateRating).toBe(aggregateRatingNode?.ratingValue);
+    expect(migratedTour?.reviewCount).toBe(aggregateRatingNode?.reviewCount);
+
+    const unifiedEntries = getToursByCityUnified("new-york", "new-york").filter(
+      entry => entry.href === CENTRAL_PARK_BIKE_TOURS_PUBLIC_PATH
+    );
+    expect(unifiedEntries).toHaveLength(1);
+  });
+
+  it("supports strict confident-match policy for explicit specimen product codes without hardcoded overrides", () => {
+    const fortLauderdaleTour = mapLegacyFhRecordToEngine6Tour({
+      ...centralParkBikeToursMigratedRecord,
+      matchedViatorCommercial: {
+        productCode: FORT_LAUDERDALE_EBIKE_SPECIMEN_PRODUCT_CODE,
+        confidenceSignals: {
+          titleSimilarity: 0.51,
+          meetingPointMatched: true,
+          priceWithinDelta: true,
+        },
+        priceAmount: 89,
+        aggregateRating: 4.8,
+        reviewCount: 1200,
+      },
+    });
+
+    const sanDiegoWhaleTour = mapLegacyFhRecordToEngine6Tour({
+      ...centralParkBikeToursMigratedRecord,
+      matchedViatorCommercial: {
+        productCode: SAN_DIEGO_WHALE_SPECIMEN_PRODUCT_CODE,
+        confidenceSignals: {
+          titleSimilarity: 0.52,
+          meetingPointMatched: true,
+          priceWithinDelta: true,
+        },
+        priceAmount: 72,
+        aggregateRating: 4.6,
+        reviewCount: 2400,
+      },
+    });
+
+    expect(fortLauderdaleTour.diagnostics.commercialConfidenceReason).toBe(
+      "high-confidence-heuristic"
+    );
+    expect(sanDiegoWhaleTour.diagnostics.commercialConfidenceReason).toBe(
+      "high-confidence-heuristic"
+    );
+    expect(fortLauderdaleTour.ownership.routeOwner).toBe("fareharbor");
+    expect(sanDiegoWhaleTour.ownership.routeOwner).toBe("fareharbor");
+    expect(fortLauderdaleTour.ownership.ctaOwner).toBe("fareharbor");
+    expect(sanDiegoWhaleTour.ownership.ctaOwner).toBe("fareharbor");
+  });
+
+  it("includes deduped Fort Lauderdale canonical survivor exactly once in city unified listing", () => {
+    const tour = mapLegacyFhRecordToEngine6Tour(fortLauderdaleEBikeMigratedRecord);
+    expect(tour.canonicalPath).toBe(FORT_LAUDERDALE_EBIKE_PUBLIC_PATH);
+    expect(tour.ownership.routeOwner).toBe("fareharbor");
+    expect(tour.ownership.ctaOwner).toBe("fareharbor");
+    expect(tour.ownership.presentationOwner).toBe("engine6");
+    expect(tour.ownership.commercialOwner).toBe("viator");
+
+    const cityUnified = getToursByCityUnified("florida", "fort-lauderdale");
+    const canonicalMatches = cityUnified.filter(
+      entry => entry.href === FORT_LAUDERDALE_EBIKE_PUBLIC_PATH
+    );
+
+    expect(canonicalMatches).toHaveLength(1);
+    expect(canonicalMatches[0]?.tour.engine).toBe("engine6");
+    expect(canonicalMatches[0]?.tour.bookingProvider).toBe("fareharbor");
   });
 });

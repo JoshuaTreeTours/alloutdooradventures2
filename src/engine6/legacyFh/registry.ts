@@ -1,10 +1,12 @@
 import type { Engine6Tour } from "../types";
 import { centralParkBikeToursMigratedRecord } from "./fixtures/centralParkBikeTours";
+import { fortLauderdaleEBikeMigratedRecord } from "./fixtures/fortLauderdaleEBike";
 import { mapLegacyFhRecordToEngine6Tour } from "./mapLegacyFhRecordToEngine6Tour";
 import type { LegacyFhMigratedProductRecord } from "./types";
 
 export const legacyFhMigratedProductRecords: LegacyFhMigratedProductRecord[] = [
   centralParkBikeToursMigratedRecord,
+  fortLauderdaleEBikeMigratedRecord,
 ];
 
 export const legacyFhMigratedTours: Engine6Tour[] =

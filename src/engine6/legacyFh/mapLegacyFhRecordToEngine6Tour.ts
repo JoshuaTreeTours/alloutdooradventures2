@@ -1,5 +1,5 @@
 import type { Engine6Tour } from "../types";
-import { resolveLegacyFhCommercialConfidenceReason } from "./commercialConfidence";
+import { resolveLegacyFhDedupeConstitution } from "../dedupeConstitution";
 import type { LegacyFhMigratedProductRecord } from "./types";
 
 export const mapLegacyFhRecordToEngine6Tour = (
@@ -29,29 +29,11 @@ export const mapLegacyFhRecordToEngine6Tour = (
     ...(record.cancellationSummary ? [record.cancellationSummary] : []),
     ...record.exclusions.map(item => `Not included: ${item}`),
   ];
-  const commercialConfidenceReason =
-    record.matchedViatorCommercial?.confidenceReason ??
-    resolveLegacyFhCommercialConfidenceReason(
-      record.matchedViatorCommercial?.confidenceSignals
-    );
-  const shouldUseMatchedViatorCommercial =
-    commercialConfidenceReason !== "no-confident-match";
-  const hasViatorCommercialValues =
-    typeof record.matchedViatorCommercial?.priceAmount === "number" ||
-    typeof record.matchedViatorCommercial?.aggregateRating === "number" ||
-    typeof record.matchedViatorCommercial?.reviewCount === "number";
-  const shouldUseViatorCommercial =
-    shouldUseMatchedViatorCommercial && hasViatorCommercialValues;
-  const resolvedPriceAmount = shouldUseViatorCommercial
-    ? record.matchedViatorCommercial?.priceAmount ?? null
-    : record.priceSnapshot.amount;
-  const resolvedAggregateRating = shouldUseViatorCommercial
-    ? record.matchedViatorCommercial?.aggregateRating ?? null
-    : record.ratingSnapshot.rating;
-  const resolvedReviewCount = shouldUseViatorCommercial
-    ? record.matchedViatorCommercial?.reviewCount ?? null
-    : record.ratingSnapshot.reviewCount;
-  const resolvedPriceLabel = shouldUseViatorCommercial
+  const dedupeResolution = resolveLegacyFhDedupeConstitution(record);
+  const resolvedPriceAmount = dedupeResolution.commercial.priceAmount;
+  const resolvedAggregateRating = dedupeResolution.commercial.aggregateRating;
+  const resolvedReviewCount = dedupeResolution.commercial.reviewCount;
+  const resolvedPriceLabel = dedupeResolution.diagnostics.viatorCommercialFieldsUsed
     ? typeof resolvedPriceAmount === "number"
       ? `Starting at $${resolvedPriceAmount.toFixed(0)}`
       : "Check latest price"
@@ -96,26 +78,14 @@ export const mapLegacyFhRecordToEngine6Tour = (
     pagePath: record.canonicalPath,
     canonicalPath: record.canonicalPath,
     bookingUrl: record.bookingPath,
-    ownership: {
-      routeOwner: "fareharbor",
-      ctaOwner: "fareharbor",
-      presentationOwner: "engine6",
-      commercialOwner: shouldUseViatorCommercial ? "viator" : "fareharbor",
-      commercialFallbackReason: shouldUseViatorCommercial
-        ? "none"
-        : shouldUseMatchedViatorCommercial
-          ? "viator-commercial-unavailable"
-          : "no-confident-viator-match",
-    },
+    ownership: dedupeResolution.ownership,
     diagnostics: {
       source: "legacy-fh-migrated",
-      commercialConfidenceReason,
-      viatorCommercialFieldsUsed: shouldUseViatorCommercial,
-      commercialSourceWinner: shouldUseViatorCommercial ? "viator" : "fareharbor",
-      commercialPriceFieldPath: shouldUseViatorCommercial
-        ? `matchedViatorCommercial.priceAmount:${record.matchedViatorCommercial?.productCode ?? "unknown"}`
-        : "legacy.price",
-      commercialPriceRawValue: shouldUseViatorCommercial
+      commercialConfidenceReason: dedupeResolution.diagnostics.commercialConfidenceReason,
+      viatorCommercialFieldsUsed: dedupeResolution.diagnostics.viatorCommercialFieldsUsed,
+      commercialSourceWinner: dedupeResolution.diagnostics.commercialSourceWinner,
+      commercialPriceFieldPath: dedupeResolution.diagnostics.commercialPriceFieldPath,
+      commercialPriceRawValue: dedupeResolution.diagnostics.viatorCommercialFieldsUsed
         ? resolvedPriceAmount
         : record.priceSnapshot.label,
       priceSourceUsed: "fallback",
@@ -141,12 +111,8 @@ export const mapLegacyFhRecordToEngine6Tour = (
       rejectedForeignHeroCandidates: [],
       productUrlFieldPath: null,
       bookingUrlSource: "legacy.bookingPath",
-      ratingFieldPath: shouldUseViatorCommercial
-        ? `matchedViatorCommercial.aggregateRating:${record.matchedViatorCommercial?.productCode ?? "unknown"}`
-        : "legacy.rating",
-      reviewCountFieldPath: shouldUseViatorCommercial
-        ? `matchedViatorCommercial.reviewCount:${record.matchedViatorCommercial?.productCode ?? "unknown"}`
-        : "legacy.reviewCount",
+      ratingFieldPath: dedupeResolution.diagnostics.ratingFieldPath,
+      reviewCountFieldPath: dedupeResolution.diagnostics.reviewCountFieldPath,
       overviewFieldPath: "legacy.overview",
       highlightsFieldPath: "legacy.highlights",
       meetingPointFieldPath: "legacy.meeting",
