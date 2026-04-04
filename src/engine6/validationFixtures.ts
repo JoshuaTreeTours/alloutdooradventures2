@@ -11,6 +11,14 @@ import specimen233384Payload from "../../data/engine6/viator/233384P2.exact-prod
 import specimen414460Payload from "../../data/engine6/viator/414460P1.exact-product.json";
 import specimen7081nycdayPayload from "../../data/engine6/viator/7081NYCDAY.exact-product.json";
 import specimen3156Payload from "../../data/engine6/viator/3156P13.exact-product.json";
+import specimen5557p48Payload from "../../data/engine6/viator/5557P48.exact-product.json";
+import specimen64327p2Payload from "../../data/engine6/viator/64327P2.exact-product.json";
+import specimen37907p2Payload from "../../data/engine6/viator/37907P2.exact-product.json";
+import specimen5557p8Payload from "../../data/engine6/viator/5557P8.exact-product.json";
+import specimen5024manskyPayload from "../../data/engine6/viator/5024MANSKY.exact-product.json";
+import specimen122012p5Payload from "../../data/engine6/viator/122012P5.exact-product.json";
+import specimen418361p3Payload from "../../data/engine6/viator/418361P3.exact-product.json";
+import specimen5042nycbatPayload from "../../data/engine6/viator/5042NYCBAT.exact-product.json";
 import specimen62527p11Payload from "../../data/engine6/viator/62527P11.exact-product.json";
 import specimen5250libertyellisPayload from "../../data/engine6/viator/5250LIBERTYELLIS.exact-product.json";
 import specimen5614063p8Payload from "../../data/engine6/viator/5614063P8.exact-product.json";
@@ -209,6 +217,54 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/New-York-in-One-Day-Guided-Sightseeing-Tour/d687-7081NYCDAY",
     rawPayload: specimen7081nycdayPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "5557P48",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Private-Central-Park-Bike-Tour/d687-5557P48",
+    rawPayload: specimen5557p48Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "64327P2",
+    publicUrl:
+      "https://www.viator.com/tours/Brooklyn/Complete-Brooklyn-Bicycle-Tour/d22371-64327P2",
+    rawPayload: specimen64327p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "37907P2",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Guided-Bicycle-Tour-of-Brooklyn-Bridge/d687-37907P2",
+    rawPayload: specimen37907p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5557P8",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Brooklyn-Bridge-Guided-Bike-Tour/d687-5557P8",
+    rawPayload: specimen5557p8Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5024MANSKY",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Manhattan-Sky-Tour-New-York-Helicopter-Flight/d687-5024MANSKY",
+    rawPayload: specimen5024manskyPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "122012P5",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Manhattan-Midtown-Pedicab-Tour/d687-122012P5",
+    rawPayload: specimen122012p5Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "418361P3",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/New-York-City-Dinner-Cruise-with-Live-Music/d687-418361P3",
+    rawPayload: specimen418361p3Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5042NYCBAT",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Bateaux-New-York-Dinner-Cruise/d687-5042NYCBAT",
+    rawPayload: specimen5042nycbatPayload as Record<string, unknown>,
   },
   {
     productCode: "62527P11",

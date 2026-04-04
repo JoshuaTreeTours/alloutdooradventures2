@@ -1,0 +1,38 @@
+{
+  "product": {
+    "productCode": "5042NYCBAT",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Bateaux-New-York-Dinner-Cruise/d687-5042NYCBAT",
+    "title": "Bateaux New York Dinner Cruise",
+    "description": "Sail aboard a Bateaux dinner cruise in New York with dining and panoramic city views.",
+    "location": {
+      "city": "New York City",
+      "state": "New York"
+    },
+    "logistics": {
+      "start": {
+        "description": "Chelsea Piers, New York, NY, USA"
+      }
+    },
+    "highlights": [
+      "Bateaux New York Dinner Cruise",
+      "Guided experience in New York City",
+      "Advance booking recommended"
+    ],
+    "itinerarySummary": "Sail aboard a Bateaux dinner cruise in New York with dining and panoramic city views.",
+    "categories": [
+      "sightseeing-tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/c3/3b/bf/caption.jpg?w=700&h=500&s=1"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -136,6 +136,55 @@ describe("engine6 creation contract validator", () => {
     );
   });
 
+  it("fails itinerary depth parity when rich source stops collapse to a single rendered stop", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "5024MANSKY"
+    );
+    expect(fixture).toBeDefined();
+
+    const payload = toPayload(fixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+    expect(tour.itinerary.length).toBeGreaterThanOrEqual(4);
+
+    const report = validateEngine6CreationContract({
+      tour: { ...tour, itinerary: [tour.itinerary[0]!], itinerarySummaryText: null },
+      rawPayload: fixture!.rawPayload,
+    });
+
+    expect(report.violations).toEqual(
+      expect.arrayContaining([
+        "itinerary depth parity failed: rich structured source collapsed to a shallow rendered itinerary",
+        "itinerary depth parity failed: rendered stop count is materially below structured source stop count",
+      ])
+    );
+  });
+
+  it("fails itinerary depth parity when pass-by labels are dropped", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "5024MANSKY"
+    );
+    expect(fixture).toBeDefined();
+
+    const payload = toPayload(fixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+
+    const withoutPassBy = tour.itinerary.map(item => ({
+      ...item,
+      stopType: "stop" as const,
+    }));
+
+    const report = validateEngine6CreationContract({
+      tour: { ...tour, itinerary: withoutPassBy },
+      rawPayload: fixture!.rawPayload,
+    });
+
+    expect(report.violations).toEqual(
+      expect.arrayContaining([
+        "itinerary depth parity failed: pass-by labels were dropped from structured source itinerary",
+      ])
+    );
+  });
+
   it("passes itinerary validation when source structured stops are absent and itinerary is absent", () => {
     const payload = toPayload(ENGINE6_VALIDATION_FIXTURES[0]!);
     const tour = mapViatorToEngine6Tour(payload);

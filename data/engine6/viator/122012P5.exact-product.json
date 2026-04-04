@@ -1,0 +1,38 @@
+{
+  "product": {
+    "productCode": "122012P5",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Manhattan-Midtown-Pedicab-Tour/d687-122012P5",
+    "title": "Manhattan Midtown Pedicab Tour",
+    "description": "See Midtown Manhattan from a pedicab with a local guide and route commentary.",
+    "location": {
+      "city": "New York City",
+      "state": "New York"
+    },
+    "logistics": {
+      "start": {
+        "description": "Midtown Manhattan, New York, NY, USA"
+      }
+    },
+    "highlights": [
+      "Manhattan Midtown Pedicab Tour",
+      "Guided experience in New York City",
+      "Advance booking recommended"
+    ],
+    "itinerarySummary": "See Midtown Manhattan from a pedicab with a local guide and route commentary.",
+    "categories": [
+      "sightseeing-tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/31/68/66/36/caption.jpg?w=700&h=500&s=1"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -56,6 +56,31 @@ export const ENGINE6_NYC_PHILADELPHIA_AMISH_ROUTE =
 export const ENGINE6_NYC_MET_PRIVATE_TOUR_PRODUCT_CODE = "43656P1";
 export const ENGINE6_NYC_MET_PRIVATE_TOUR_ROUTE =
   "/destinations/new-york/new-york/tours/private-tour-of-the-metropolitan-museum-of-art-in-new-york-city";
+export const ENGINE6_NYC_PRIVATE_CENTRAL_PARK_BIKE_PRODUCT_CODE = "5557P48";
+export const ENGINE6_NYC_PRIVATE_CENTRAL_PARK_BIKE_ROUTE =
+  "/destinations/new-york/new-york/tours/private-central-park-bike-tour";
+export const ENGINE6_BROOKLYN_COMPLETE_BICYCLE_PRODUCT_CODE = "64327P2";
+export const ENGINE6_BROOKLYN_COMPLETE_BICYCLE_ROUTE =
+  "/destinations/new-york/brooklyn/tours/complete-brooklyn-bicycle-tour";
+export const ENGINE6_NYC_GUIDED_BROOKLYN_BRIDGE_BICYCLE_PRODUCT_CODE =
+  "37907P2";
+export const ENGINE6_NYC_GUIDED_BROOKLYN_BRIDGE_BICYCLE_ROUTE =
+  "/destinations/new-york/new-york/tours/guided-bicycle-tour-of-brooklyn-bridge";
+export const ENGINE6_NYC_BROOKLYN_BRIDGE_GUIDED_BIKE_PRODUCT_CODE = "5557P8";
+export const ENGINE6_NYC_BROOKLYN_BRIDGE_GUIDED_BIKE_ROUTE =
+  "/destinations/new-york/new-york/tours/brooklyn-bridge-guided-bike-tour";
+export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_PRODUCT_CODE = "5024MANSKY";
+export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_ROUTE =
+  "/destinations/new-york/new-york/tours/manhattan-sky-tour-new-york-helicopter-flight";
+export const ENGINE6_NYC_MANHATTAN_MIDTOWN_PEDICAB_PRODUCT_CODE = "122012P5";
+export const ENGINE6_NYC_MANHATTAN_MIDTOWN_PEDICAB_ROUTE =
+  "/destinations/new-york/new-york/tours/manhattan-midtown-pedicab-tour";
+export const ENGINE6_NYC_DINNER_CRUISE_LIVE_MUSIC_PRODUCT_CODE = "418361P3";
+export const ENGINE6_NYC_DINNER_CRUISE_LIVE_MUSIC_ROUTE =
+  "/destinations/new-york/new-york/tours/new-york-city-dinner-cruise-with-live-music";
+export const ENGINE6_NYC_BATEAUX_DINNER_CRUISE_PRODUCT_CODE = "5042NYCBAT";
+export const ENGINE6_NYC_BATEAUX_DINNER_CRUISE_ROUTE =
+  "/destinations/new-york/new-york/tours/bateaux-new-york-dinner-cruise";
 export const ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE = "3097SDZSP_2VISIT";
 export const ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-zoo-and-safari-park-2-visit-pass-ticket";
@@ -216,6 +241,38 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_NYC_MET_PRIVATE_TOUR_ROUTE,
     ENGINE6_NYC_MET_PRIVATE_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_PRIVATE_CENTRAL_PARK_BIKE_ROUTE,
+    ENGINE6_NYC_PRIVATE_CENTRAL_PARK_BIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BROOKLYN_COMPLETE_BICYCLE_ROUTE,
+    ENGINE6_BROOKLYN_COMPLETE_BICYCLE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_GUIDED_BROOKLYN_BRIDGE_BICYCLE_ROUTE,
+    ENGINE6_NYC_GUIDED_BROOKLYN_BRIDGE_BICYCLE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_BROOKLYN_BRIDGE_GUIDED_BIKE_ROUTE,
+    ENGINE6_NYC_BROOKLYN_BRIDGE_GUIDED_BIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_ROUTE,
+    ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_MANHATTAN_MIDTOWN_PEDICAB_ROUTE,
+    ENGINE6_NYC_MANHATTAN_MIDTOWN_PEDICAB_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_DINNER_CRUISE_LIVE_MUSIC_ROUTE,
+    ENGINE6_NYC_DINNER_CRUISE_LIVE_MUSIC_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_BATEAUX_DINNER_CRUISE_ROUTE,
+    ENGINE6_NYC_BATEAUX_DINNER_CRUISE_PRODUCT_CODE,
   ],
   [ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE, ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE],
   [

@@ -1,0 +1,38 @@
+{
+  "product": {
+    "productCode": "64327P2",
+    "productUrl": "https://www.viator.com/tours/Brooklyn/Complete-Brooklyn-Bicycle-Tour/d22371-64327P2",
+    "title": "Complete Brooklyn Bicycle Tour",
+    "description": "Explore Brooklyn neighborhoods and waterfront viewpoints on a guided bicycle route.",
+    "location": {
+      "city": "Brooklyn",
+      "state": "New York"
+    },
+    "logistics": {
+      "start": {
+        "description": "Brooklyn, New York, NY, USA"
+      }
+    },
+    "highlights": [
+      "Complete Brooklyn Bicycle Tour",
+      "Guided experience in Brooklyn",
+      "Advance booking recommended"
+    ],
+    "itinerarySummary": "Explore Brooklyn neighborhoods and waterfront viewpoints on a guided bicycle route.",
+    "categories": [
+      "sightseeing-tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/63/f8/caption.jpg?w=700&h=500&s=1"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "product": {
+    "productCode": "5557P48",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Private-Central-Park-Bike-Tour/d687-5557P48",
+    "title": "Private Central Park Bike Tour",
+    "description": "Pedal through Central Park with a private guide and flexible pacing that fits your group.",
+    "location": {
+      "city": "New York City",
+      "state": "New York"
+    },
+    "logistics": {
+      "start": {
+        "description": "Central Park, New York, NY, USA"
+      }
+    },
+    "highlights": [
+      "Private Central Park Bike Tour",
+      "Guided experience in New York City",
+      "Advance booking recommended"
+    ],
+    "itinerarySummary": "Pedal through Central Park with a private guide and flexible pacing that fits your group.",
+    "categories": [
+      "sightseeing-tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/c3/2d/b6/caption.jpg?w=700&h=500&s=1"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

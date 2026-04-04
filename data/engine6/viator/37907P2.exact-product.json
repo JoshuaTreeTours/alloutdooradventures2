@@ -1,0 +1,38 @@
+{
+  "product": {
+    "productCode": "37907P2",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Guided-Bicycle-Tour-of-Brooklyn-Bridge/d687-37907P2",
+    "title": "Guided Bicycle Tour of Brooklyn Bridge",
+    "description": "Ride across the Brooklyn Bridge with a guide and continue along nearby city landmarks.",
+    "location": {
+      "city": "New York City",
+      "state": "New York"
+    },
+    "logistics": {
+      "start": {
+        "description": "Manhattan, New York, NY, USA"
+      }
+    },
+    "highlights": [
+      "Guided Bicycle Tour of Brooklyn Bridge",
+      "Guided experience in New York City",
+      "Advance booking recommended"
+    ],
+    "itinerarySummary": "Ride across the Brooklyn Bridge with a guide and continue along nearby city landmarks.",
+    "categories": [
+      "sightseeing-tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/c3/34/a5/caption.jpg?w=700&h=500&s=1"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
