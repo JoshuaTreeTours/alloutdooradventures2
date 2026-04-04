@@ -1,0 +1,120 @@
+{
+  "productCode": "7274P7",
+  "productUrl": "https://www.viator.com/tours/New-York-City/Guided-Bike-Tour-of-Central-Park/d687-7274P7",
+  "title": "Guided Bike Tour of Central Park New York City",
+  "description": {
+    "text": "Pedal Central Park with a guide on a small-group route that links Columbus Circle, the Literary Walk, Belvedere Castle, Bow Bridge, Cherry Hill, Strawberry Fields, and Sheep Meadow."
+  },
+  "highlights": [
+    "2-Hour guided bike tour",
+    "Rental(s) included",
+    "Free bike helmet - on request",
+    "Free bike lock - on request"
+  ],
+  "location": {
+    "city": "New York City",
+    "state": "New York"
+  },
+  "priceFrom": 44.0,
+  "media": {
+    "images": [
+      {
+        "isCover": true,
+        "variants": {
+          "FULL": {
+            "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/61/44/caption.jpg?w=700&h=500&s=1",
+            "width": 700,
+            "height": 500
+          }
+        }
+      }
+    ]
+  },
+  "reviews": {
+    "combinedAverageRating": 4.3,
+    "totalReviews": 538
+  },
+  "duration": {
+    "fixedDurationInMinutes": 120,
+    "readableDuration": "2 hours (approx.)"
+  },
+  "logistics": {
+    "start": {
+      "description": "203 W 58th St, New York, NY 10019, USA. Bike Rent NYC shop."
+    }
+  },
+  "inclusions": [
+    "2-Hour guided bike tour",
+    "Rental(s) included",
+    "Free bike helmet - on request",
+    "Free bike lock - on request",
+    "Free NYC bike map - on request"
+  ],
+  "itineraryItems": [
+    {
+      "title": "Columbus Circle",
+      "duration": "5 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Gar Pond",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "The Mall and Literary Walk",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "NYC Horse Carriage Tours",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Conservatory Water",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Conservatory Garden",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "The Great Lawn",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Belvedere Castle",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "The Ramble",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Bow Bridge",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Cherry Hill",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Strawberry Fields",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Sheep Meadow",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    }
+  ]
+}

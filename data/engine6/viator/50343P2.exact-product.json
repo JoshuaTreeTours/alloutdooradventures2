@@ -1,0 +1,95 @@
+{
+  "productCode": "50343P2",
+  "productUrl": "https://www.viator.com/tours/New-York-City/Central-Park-5-Star-Guided-Bike-Tour/d687-50343P2",
+  "title": "Best of Central Park Bike Tour",
+  "description": {
+    "text": "Cycle Central Park at an easy pace with a 5-star guide, visiting Belvedere Castle, the Reservoir, Cherry Hill, and Strawberry Fields on a short-format route for time-limited travelers."
+  },
+  "highlights": [
+    "5-Star Guide",
+    "All Fees and Taxes",
+    "Use of bicycle",
+    "Helmet"
+  ],
+  "location": {
+    "city": "New York City",
+    "state": "New York"
+  },
+  "priceFrom": 55.0,
+  "media": {
+    "images": [
+      {
+        "isCover": true,
+        "variants": {
+          "FULL": {
+            "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/60/f3/caption.jpg?w=700&h=500&s=1",
+            "width": 700,
+            "height": 500
+          }
+        }
+      }
+    ]
+  },
+  "reviews": {
+    "combinedAverageRating": 4.6,
+    "totalReviews": 302
+  },
+  "duration": {
+    "fixedDurationInMinutes": 120,
+    "readableDuration": "2 hours (approx.)"
+  },
+  "logistics": {
+    "start": {
+      "description": "870 7th Ave, New York, NY 10019, USA. 7th Avenue between 56th and 55th Street."
+    }
+  },
+  "inclusions": [
+    "5-Star Guide",
+    "All Fees and Taxes",
+    "Use of bicycle",
+    "Helmet",
+    "Central Park Map"
+  ],
+  "itineraryItems": [
+    {
+      "title": "Fancy Apple Bike & Scooter Rentals and Tours at Central Park",
+      "duration": "15 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Central Park South & 7th Avenue",
+      "duration": "5 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "The Dairy Visitor Center and Gift Shop",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "NYC Horse Carriage Tours",
+      "duration": "15 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Belvedere Castle",
+      "duration": "20 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Jacqueline Kennedy Onassis Reservoir",
+      "duration": "5 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Cherry Hill",
+      "duration": "15 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Strawberry Fields",
+      "duration": "15 minutes",
+      "admissionNote": "Admission Ticket Free"
+    }
+  ]
+}

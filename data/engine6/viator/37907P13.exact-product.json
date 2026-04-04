@@ -1,0 +1,84 @@
+{
+  "productCode": "37907P13",
+  "productUrl": "https://www.viator.com/tours/New-York-City/Central-Park-Bike-Tour-With-A-Local/d687-37907P13",
+  "title": "Guided Bike Tour Of Central Park",
+  "description": {
+    "text": "Get active on a small-group Central Park bike tour with a live guide, map, and stops at Bethesda Fountain, Cleopatra\u2019s Needle, the Jacqueline Kennedy Onassis Reservoir, and Strawberry Fields."
+  },
+  "highlights": [
+    "Use of bicycle",
+    "Live guide",
+    "Helmet",
+    "Map of Central Park"
+  ],
+  "location": {
+    "city": "New York City",
+    "state": "New York"
+  },
+  "priceFrom": 49.0,
+  "media": {
+    "images": [
+      {
+        "isCover": true,
+        "variants": {
+          "FULL": {
+            "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/5e/7a/caption.jpg?w=700&h=500&s=1",
+            "width": 700,
+            "height": 500
+          }
+        }
+      }
+    ]
+  },
+  "reviews": {
+    "combinedAverageRating": 4.4,
+    "totalReviews": 40
+  },
+  "duration": {
+    "fixedDurationInMinutes": 120,
+    "readableDuration": "2 hours (approx.)"
+  },
+  "logistics": {
+    "start": {
+      "description": "203 W 58th St, New York, NY 10019, USA. Bike Rent NYC flagship storefront near 58th Street and 7th Avenue."
+    }
+  },
+  "inclusions": [
+    "Use of bicycle",
+    "Live guide",
+    "Helmet",
+    "Map of Central Park"
+  ],
+  "itineraryItems": [
+    {
+      "title": "Bethesda Fountain",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Central Park",
+      "duration": "5 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Central Park North segment",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Cleopatra's Needle",
+      "duration": "5 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Jacqueline Kennedy Onassis Reservoir",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    },
+    {
+      "title": "Strawberry Fields, John Lennon Memorial",
+      "duration": "10 minutes",
+      "admissionNote": "Admission Ticket Free"
+    }
+  ]
+}

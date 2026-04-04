@@ -46,6 +46,14 @@ import specimen5865p8Payload from "../../data/engine6/viator/5865P8.exact-produc
 import specimen89173p8Payload from "../../data/engine6/viator/89173P8.exact-product.json";
 import specimen89173p10Payload from "../../data/engine6/viator/89173P10.exact-product.json";
 import specimen438341p2Payload from "../../data/engine6/viator/438341P2.exact-product.json";
+import specimen5557p48Payload from "../../data/engine6/viator/5557P48.exact-product.json";
+import specimen64327p2Payload from "../../data/engine6/viator/64327P2.exact-product.json";
+import specimen37907p2Payload from "../../data/engine6/viator/37907P2.exact-product.json";
+import specimen5557centralPayload from "../../data/engine6/viator/5557CENTRAL.exact-product.json";
+import specimen7274p7Payload from "../../data/engine6/viator/7274P7.exact-product.json";
+import specimen3156bike04Payload from "../../data/engine6/viator/3156BIKE04.exact-product.json";
+import specimen50343p2Payload from "../../data/engine6/viator/50343P2.exact-product.json";
+import specimen37907p13Payload from "../../data/engine6/viator/37907P13.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -54,6 +62,54 @@ export type Engine6ValidationFixture = {
 };
 
 export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
+  {
+    productCode: "5557P48",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Private-Central-Park-Bike-Tour/d687-5557P48",
+    rawPayload: specimen5557p48Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "64327P2",
+    publicUrl:
+      "https://www.viator.com/tours/Brooklyn/Complete-Brooklyn-Bicycle-Tour/d22371-64327P2",
+    rawPayload: specimen64327p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "37907P2",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Guided-Bicycle-Tour-of-Brooklyn-Bridge/d687-37907P2",
+    rawPayload: specimen37907p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5557CENTRAL",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Central-Park-Bike-Tour/d687-5557CENTRAL",
+    rawPayload: specimen5557centralPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "7274P7",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Guided-Bike-Tour-of-Central-Park/d687-7274P7",
+    rawPayload: specimen7274p7Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "3156BIKE04",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Small-Group-Central-Park-Bike-Tour/d687-3156BIKE04",
+    rawPayload: specimen3156bike04Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "50343P2",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Central-Park-5-Star-Guided-Bike-Tour/d687-50343P2",
+    rawPayload: specimen50343p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "37907P13",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Central-Park-Bike-Tour-With-A-Local/d687-37907P13",
+    rawPayload: specimen37907p13Payload as Record<string, unknown>,
+  },
   {
     productCode: "8836P2",
     publicUrl:
