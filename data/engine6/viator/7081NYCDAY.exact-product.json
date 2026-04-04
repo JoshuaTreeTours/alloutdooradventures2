@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "7081NYCDAY",
+    "productUrl": "https://www.viator.com/tours/New-York-City/New-York-in-One-Day-Guided-Sightseeing-Tour/d687-7081NYCDAY",
+    "title": "New York in One Day Guided Sightseeing Tour",
+    "description": "Make the most of your time in New York City by taking a tour that includes transportation. Take a bus ride past the 9/11 Memorial, Central Park, Rockefeller Center, and more. Then hop aboard the Staten Island Ferry to see the Statue of Liberty and Ellis Island.",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$99.00",
+    "reviews": {
+      "combinedAverageRating": "4.8",
+      "totalReviews": "13,313"
+    },
+    "duration": "6 hours (approx.)",
+    "highlights": [
+      "A perfect introduction for first-time visitors to New York City",
+      "Hear informative commentary on the history and people that shaped NYC",
+      "Tickets for a ride on the Staten Island Ferry are included",
+      "See major highlights on a bus tour, without having to sort out transportation"
+    ],
+    "inclusions": [
+      "Expert Local Tour Guide Narrative",
+      "Bottled Water on Buses",
+      "The Staten Island Ferry",
+      "Gratuities"
+    ],
+    "exclusions": [
+      "Hotel pickup and drop-off not included",
+      "Lunch"
+    ],
+    "logistics": {
+      "start": {
+        "description": "770 7th Ave, New York, NY 10019, USA. Departure/End Point: 7th Avenue, between 50th & 51st Streets (middle of the block) in Manhattan. Please arrive 20 - 25 minutes before tour departure time for a timely check in."
+      }
+    },
+    "itinerarySummary": "Start your comprehensive New York City tour in Midtown Manhattan at a convenient check-in location. Board a climate-controlled bus to begin a journey packed with iconic sights. Drive through Times Square, stop at Central Park and Rockefeller Center, continue along Fifth Avenue, break at Gansevoort Liberty Market, visit the 9/11 Memorial, and conclude with a Staten Island Ferry ride with views of the Statue of Liberty and Ellis Island.",
+    "itineraryItems": [
+      {
+        "title": "Central Park",
+        "duration": "20 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Rockefeller Center",
+        "duration": "20 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Fifth Avenue",
+        "duration": "20 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Gansevoort Liberty Market",
+        "duration": "45 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "The National 9/11 Memorial & Museum",
+        "duration": "20 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "New York Harbor",
+        "duration": "1 hour",
+        "admissionNote": "Admission Ticket Free"
+      }
+    ],
+    "additionalInfo": [
+      "Not wheelchair accessible",
+      "Stroller accessible",
+      "Service animals allowed",
+      "Near public transportation",
+      "Infants must sit on laps",
+      "Not recommended for travelers with back problems",
+      "Not recommended for pregnant travelers",
+      "No heart problems or other serious medical conditions",
+      "Travelers should have a moderate physical fitness level"
+    ],
+    "faq": [
+      {
+        "question": "What is the cancellation policy?",
+        "answer": "You can cancel up to 24 hours in advance of the experience for a full refund."
+      },
+      {
+        "question": "Where does the tour start and end?",
+        "answer": "The tour departs from 770 7th Ave in Manhattan and ends back at the meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "name": "Bus Tours"
+      },
+      {
+        "name": "City Tours"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/c4/8b/0e/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
