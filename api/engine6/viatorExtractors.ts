@@ -488,7 +488,7 @@ const withHeroScope = (
 
   return {
     ...hero,
-    path: normalizedSourceFieldPath,
+    fieldPath: normalizedSourceFieldPath,
     variantPath: normalizedVariantPath,
     sourceFieldPath: normalizedSourceFieldPath,
     sourceProductCode: productCode,
@@ -506,6 +506,26 @@ const extractPlaybookHeroCandidates = ({
   sourceProductUrl: string | null;
 }): Engine6HeroCandidate[] => {
   const candidates: Engine6HeroCandidate[] = [];
+  const authoritativeHeroOverrideUrl = asImageUrl(
+    readPath(product, ["media", "authoritativeHeroImageUrl"])
+  );
+
+  if (authoritativeHeroOverrideUrl) {
+    candidates.push(
+      withHeroScope(
+        {
+          url: authoritativeHeroOverrideUrl,
+          path: "product.media.images.authoritativeHeroImageUrl",
+          variantPath: "product.media.images.authoritativeHeroImageUrl",
+          width: null,
+          height: null,
+          sourceType: "api-primary",
+        },
+        productCode,
+        sourceProductUrl
+      )
+    );
+  }
 
   const mediaHeroes = resolveImageCollectionHeroCandidates(
     readPath(product, ["media", "images"]),

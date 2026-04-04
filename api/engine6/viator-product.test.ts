@@ -336,6 +336,25 @@ describe("/api/engine6/viator-product", () => {
     );
   });
 
+  it("prioritizes product.media.authoritativeHeroImageUrl when present", async () => {
+    const req = { method: "GET", query: { productCode: "103533P1" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).source).toBe("bundled-fallback");
+    expect((res.body as any).diagnostics.heroSourceFieldPath).toBe(
+      "product.media.images.authoritativeHeroImageUrl"
+    );
+    expect((res.body as any).diagnostics.finalHeroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/6e/d1/caption.jpg?w=700&h=500&s=1"
+    );
+    expect((res.body as any).extracted.heroImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/6e/d1/caption.jpg?w=700&h=500&s=1"
+    );
+  });
+
   it("keeps hero/card/schema parity and emits same-product diagnostics", async () => {
     const req = { method: "GET", query: { productCode: "63657P1" } };
     const res = createRes();

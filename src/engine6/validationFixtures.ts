@@ -16,6 +16,7 @@ import specimen5250libertyellisPayload from "../../data/engine6/viator/5250LIBER
 import specimen5614063p8Payload from "../../data/engine6/viator/5614063P8.exact-product.json";
 import specimen3857phiPayload from "../../data/engine6/viator/3857PHI.exact-product.json";
 import specimen43656p1Payload from "../../data/engine6/viator/43656P1.exact-product.json";
+import specimen103533p1Payload from "../../data/engine6/viator/103533P1.exact-product.json";
 import specimen3097sdzsp2visitPayload from "../../data/engine6/viator/3097SDZSP_2VISIT.exact-product.json";
 import specimen447234p3Payload from "../../data/engine6/viator/447234P3.exact-product.json";
 import specimen5584233p1Payload from "../../data/engine6/viator/5584233P1.exact-product.json";
@@ -246,6 +247,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/Private-Tour-of-the-Metropolitan-Museum-of-Art-in-New-York-City/d687-43656P1",
     rawPayload: specimen43656p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "103533P1",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/New-York-Media-Boat-Adventure-Sightseeing-Tour/d687-103533P1",
+    rawPayload: specimen103533p1Payload as Record<string, unknown>,
   },
   {
     productCode: "3156P13",

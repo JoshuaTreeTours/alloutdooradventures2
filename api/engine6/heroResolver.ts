@@ -283,6 +283,9 @@ const toRejectedCandidate = (
   fieldPath: candidate.sourceFieldPath ?? candidate.fieldPath ?? null,
 });
 
+const isAuthoritativeHeroOverrideCandidate = (candidate: Engine6HeroCandidate) =>
+  Boolean(candidate.sourceFieldPath?.includes("authoritativeHeroImageUrl"));
+
 export const resolveProductScopedHero = ({
   currentProductCode,
   currentSourceProductUrl,
@@ -405,7 +408,9 @@ export const resolveProductScopedHero = ({
   }
 
   if (validCandidates.length > 0) {
-    const selectedCandidate = rankHeroCandidates(validCandidates)[0]!;
+    const selectedCandidate =
+      validCandidates.find(isAuthoritativeHeroOverrideCandidate) ??
+      rankHeroCandidates(validCandidates)[0]!;
     const normalizedUrl = normalizeHeroMediaUrl(selectedCandidate.url);
     const selectedFamilyKey =
       selectedCandidate.familyKey ?? extractCandidateFamilyKey(selectedCandidate.url);
