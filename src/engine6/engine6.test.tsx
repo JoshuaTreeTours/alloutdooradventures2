@@ -1830,6 +1830,7 @@ describe("engine6 image parity guardrails", () => {
     "411138P3",
     "414460P1",
     "3156P13",
+    "103533P1",
   ])(
     "keeps detail, city card, filtered card, and related slider engine6 cards aligned for %s",
     productCode => {

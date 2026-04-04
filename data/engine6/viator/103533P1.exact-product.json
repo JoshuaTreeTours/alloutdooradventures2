@@ -1,0 +1,27 @@
+{
+  "product": {
+    "productCode": "103533P1",
+    "productUrl": "https://www.viator.com/tours/New-York-City/New-York-Media-Boat-Adventure-Sightseeing-Tour/d687-103533P1",
+    "title": "New York Media Boat Adventure Sightseeing Tour",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "media": {
+      "authoritativeHeroImageUrl": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/6e/d1/caption.jpg?w=700&h=500&s=1",
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/6e/d1/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
