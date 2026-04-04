@@ -1,0 +1,38 @@
+{
+  "product": {
+    "productCode": "5557P8",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Brooklyn-Bridge-Guided-Bike-Tour/d687-5557P8",
+    "title": "Brooklyn Bridge Guided Bike Tour",
+    "description": "Join a guided Brooklyn Bridge bike outing designed to cover major waterfront viewpoints efficiently.",
+    "location": {
+      "city": "New York City",
+      "state": "New York"
+    },
+    "logistics": {
+      "start": {
+        "description": "Lower Manhattan, New York, NY, USA"
+      }
+    },
+    "highlights": [
+      "Brooklyn Bridge Guided Bike Tour",
+      "Guided experience in New York City",
+      "Advance booking recommended"
+    ],
+    "itinerarySummary": "Join a guided Brooklyn Bridge bike outing designed to cover major waterfront viewpoints efficiently.",
+    "categories": [
+      "sightseeing-tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/6b/d3/caption.jpg?w=700&h=500&s=1"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

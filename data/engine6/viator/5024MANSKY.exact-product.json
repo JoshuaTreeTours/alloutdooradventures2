@@ -1,0 +1,38 @@
+{
+  "product": {
+    "productCode": "5024MANSKY",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Manhattan-Sky-Tour-New-York-Helicopter-Flight/d687-5024MANSKY",
+    "title": "Manhattan Sky Tour New York Helicopter Flight",
+    "description": "Take a helicopter flight over Manhattan for skyline and landmark views from above.",
+    "location": {
+      "city": "New York City",
+      "state": "New York"
+    },
+    "logistics": {
+      "start": {
+        "description": "Downtown Manhattan Heliport, New York, NY, USA"
+      }
+    },
+    "highlights": [
+      "Manhattan Sky Tour New York Helicopter Flight",
+      "Guided experience in New York City",
+      "Advance booking recommended"
+    ],
+    "itinerarySummary": "Take a helicopter flight over Manhattan for skyline and landmark views from above.",
+    "categories": [
+      "sightseeing-tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/70/74/caption.jpg?w=700&h=500&s=1"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "product": {
+    "productCode": "418361P3",
+    "productUrl": "https://www.viator.com/tours/New-York-City/New-York-City-Dinner-Cruise-with-Live-Music/d687-418361P3",
+    "title": "New York City Dinner Cruise with Live Music",
+    "description": "Enjoy an evening dinner cruise in New York City with live music and skyline views.",
+    "location": {
+      "city": "New York City",
+      "state": "New York"
+    },
+    "logistics": {
+      "start": {
+        "description": "Pier 61, New York, NY, USA"
+      }
+    },
+    "highlights": [
+      "New York City Dinner Cruise with Live Music",
+      "Guided experience in New York City",
+      "Advance booking recommended"
+    ],
+    "itinerarySummary": "Enjoy an evening dinner cruise in New York City with live music and skyline views.",
+    "categories": [
+      "sightseeing-tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/30/81/03/ec/caption.jpg?w=700&h=500&s=1"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -78,7 +78,15 @@ import {
   ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE,
   ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE,
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
+  ENGINE6_NYC_BROOKLYN_BRIDGE_GUIDED_BIKE_ROUTE,
+  ENGINE6_NYC_BATEAUX_DINNER_CRUISE_ROUTE,
+  ENGINE6_NYC_DINNER_CRUISE_LIVE_MUSIC_ROUTE,
+  ENGINE6_NYC_GUIDED_BROOKLYN_BRIDGE_BICYCLE_ROUTE,
+  ENGINE6_NYC_MANHATTAN_MIDTOWN_PEDICAB_ROUTE,
+  ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
+  ENGINE6_NYC_PRIVATE_CENTRAL_PARK_BIKE_ROUTE,
+  ENGINE6_BROOKLYN_COMPLETE_BICYCLE_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
   ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
   ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
@@ -245,6 +253,38 @@ export default function App() {
         />
         <Route
           path={ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_NYC_PRIVATE_CENTRAL_PARK_BIKE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_BROOKLYN_COMPLETE_BICYCLE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_NYC_GUIDED_BROOKLYN_BRIDGE_BICYCLE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_NYC_BROOKLYN_BRIDGE_GUIDED_BIKE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_NYC_MANHATTAN_MIDTOWN_PEDICAB_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_NYC_DINNER_CRUISE_LIVE_MUSIC_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_NYC_BATEAUX_DINNER_CRUISE_ROUTE}
           component={Engine6SpecimenRoute}
         />
         <Route
