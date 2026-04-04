@@ -12,6 +12,8 @@
       "country": "USA"
     },
     "pricing": {
+      "fromPrice": 279,
+      "fromPriceFormatted": "$279.00",
       "summary": {
         "fromPrice": 279,
         "fromPriceFormatted": "$279.00"
