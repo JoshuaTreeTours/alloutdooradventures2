@@ -10,6 +10,9 @@
       "city": "New York City",
       "state": "New York"
     },
+    "rating": 4.8,
+    "reviewCount": 4255,
+    "startingPrice": 2570,
     "media": {
       "images": [
         {

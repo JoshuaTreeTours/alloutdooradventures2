@@ -539,6 +539,7 @@ const extractProductUrl = (product: RecordLike) => {
 
 const extractPlaybookPrice = (product: RecordLike): PriceResult => {
   const amountPaths: PathSegment[][] = [
+    ["startingPrice"],
     ["pricing", "summary", "fromPrice"],
     ["pricingSummary", "fromPrice"],
     ["pricing", "fromPrice"],
