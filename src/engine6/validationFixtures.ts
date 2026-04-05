@@ -48,6 +48,8 @@ import specimen89173p10Payload from "../../data/engine6/viator/89173P10.exact-pr
 import specimen438341p2Payload from "../../data/engine6/viator/438341P2.exact-product.json";
 import specimen5024manskyPayload from "../../data/engine6/viator/5024MANSKY.exact-product.json";
 import specimen103533p1Payload from "../../data/engine6/viator/103533P1.exact-product.json";
+import specimen315439p1Payload from "../../data/engine6/viator/315439P1.exact-product.json";
+import specimen5625914p1Payload from "../../data/engine6/viator/5625914P1.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -91,6 +93,18 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/Manhattan-Sky-Tour-New-York-Helicopter-Flight/d687-5024MANSKY",
     rawPayload: specimen5024manskyPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "315439P1",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Horse-and-Carriage-Rides-through-Central-Park-NYC/d687-315439P1",
+    rawPayload: specimen315439p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5625914P1",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Beyond-The-City-Little-Stony-Point/d687-5625914P1",
+    rawPayload: specimen5625914p1Payload as Record<string, unknown>,
   },
   {
     productCode: "103533P1",

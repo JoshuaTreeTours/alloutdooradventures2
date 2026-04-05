@@ -1,0 +1,34 @@
+{
+  "product": {
+    "productCode": "315439P1",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Horse-and-Carriage-Rides-through-Central-Park-NYC/d687-315439P1",
+    "title": "Horse and Carriage Rides through Central Park NYC",
+    "description": "Horse and carriage sightseeing experience through Central Park in New York City.",
+    "location": {
+      "city": "New York City",
+      "state": "New York"
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/6a/2d/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "categories": [
+      {
+        "label": "Horseback Riding"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ]
+  }
+}
