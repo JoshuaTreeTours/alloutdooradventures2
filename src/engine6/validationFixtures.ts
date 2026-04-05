@@ -47,6 +47,7 @@ import specimen89173p8Payload from "../../data/engine6/viator/89173P8.exact-prod
 import specimen89173p10Payload from "../../data/engine6/viator/89173P10.exact-product.json";
 import specimen438341p2Payload from "../../data/engine6/viator/438341P2.exact-product.json";
 import specimen5024manskyPayload from "../../data/engine6/viator/5024MANSKY.exact-product.json";
+import specimen103533p1Payload from "../../data/engine6/viator/103533P1.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -90,6 +91,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/Manhattan-Sky-Tour-New-York-Helicopter-Flight/d687-5024MANSKY",
     rawPayload: specimen5024manskyPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "103533P1",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/New-York-Media-Boat-Adventure-Sightseeing-Tour/d687-103533P1",
+    rawPayload: specimen103533p1Payload as Record<string, unknown>,
   },
   {
     productCode: "214880P12",
