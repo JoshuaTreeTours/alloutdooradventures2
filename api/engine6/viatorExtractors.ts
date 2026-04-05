@@ -1,4 +1,5 @@
 import { normalizeEngine6AggregateRating } from "./rating.js";
+import { getEngine6AuthoritativeHeroEntry } from "./authoritativeHeroRegistry.js";
 import {
   type Engine6HeroCandidate,
   type Engine6HeroQualityClassification,
@@ -454,7 +455,10 @@ const resolveImageCollectionHeroCandidates = (
       asImageUrl(image.url) ??
       asImageUrl(image.src) ??
       asImageUrl(image.imageUrl);
-    if (directUrl && !imageVariants.some(variant => variant.url === directUrl)) {
+    if (
+      directUrl &&
+      !imageVariants.some(variant => variant.url === directUrl)
+    ) {
       const directPath = asImageUrl(image.url)
         ? formatFieldPath([...basePath, "url"])
         : asImageUrl(image.src)
@@ -481,8 +485,8 @@ const withHeroScope = (
 ): Engine6HeroCandidate => {
   const normalizeHeroPath = (path: string) =>
     path
-    .replace(/^product\.product\./, "product.")
-    .replace(/^media\./, "product.media.");
+      .replace(/^product\.product\./, "product.")
+      .replace(/^media\./, "product.media.");
   const normalizedSourceFieldPath = normalizeHeroPath(hero.path);
   const normalizedVariantPath = normalizeHeroPath(hero.variantPath);
 
@@ -494,6 +498,62 @@ const withHeroScope = (
     sourceProductCode: productCode,
     sourceProductUrl,
   };
+};
+
+const normalizeAuthoritativeHeroCandidateUrl = (value: string) => {
+  try {
+    const parsed = new URL(value);
+    const host = parsed.hostname.toLowerCase();
+    if (
+      host.endsWith(".tacdn.com") ||
+      host.endsWith(".tripadvisor.com") ||
+      host === "tacdn.com" ||
+      host === "tripadvisor.com"
+    ) {
+      parsed.pathname = parsed.pathname
+        .replace(/\/photo-s\//i, "/photo-o/")
+        .replace(/\/+$/, "");
+    }
+
+    return parsed.toString();
+  } catch {
+    return value.trim();
+  }
+};
+
+const withAuthoritativeHeroCandidate = ({
+  candidates,
+  productCode,
+}: {
+  candidates: Engine6HeroCandidate[];
+  productCode: string | null;
+}) => {
+  const authoritativeEntry = getEngine6AuthoritativeHeroEntry(productCode);
+  if (!authoritativeEntry) {
+    return candidates;
+  }
+
+  const authoritativeNormalized = normalizeAuthoritativeHeroCandidateUrl(
+    authoritativeEntry.authoritativeHeroImageUrl
+  );
+  const matchedCandidate = candidates.find(
+    candidate =>
+      normalizeAuthoritativeHeroCandidateUrl(candidate.url) ===
+      authoritativeNormalized
+  );
+
+  if (!matchedCandidate) {
+    return candidates;
+  }
+
+  return [
+    {
+      ...matchedCandidate,
+      authoritative: true,
+      sourceType: "api-primary",
+    },
+    ...candidates.filter(candidate => candidate !== matchedCandidate),
+  ];
 };
 
 const extractPlaybookHeroCandidates = ({
@@ -512,11 +572,15 @@ const extractPlaybookHeroCandidates = ({
     ["product", "media", "images"],
     "api-primary"
   );
-  candidates.push(
-    ...mediaHeroes.map(hero => withHeroScope(hero, productCode, sourceProductUrl))
+  const scopedMediaHeroes = mediaHeroes.map(hero =>
+    withHeroScope(hero, productCode, sourceProductUrl)
   );
+  candidates.push(...scopedMediaHeroes);
 
-  return candidates;
+  return withAuthoritativeHeroCandidate({
+    candidates,
+    productCode,
+  });
 };
 
 const extractProductUrl = (product: RecordLike) => {
@@ -1201,14 +1265,19 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.heroCandidatesPresent = heroCandidates.length > 0;
   diagnostics.heroCandidateCount = heroCandidates.length;
   diagnostics.heroCandidateCountBeforeFiltering = heroCandidates.length;
-  diagnostics.heroCandidateCountAfterFiltering = heroDecision.finalCandidate ? 1 : 0;
-  diagnostics.heroImageFieldPath = heroDecision.finalCandidate?.fieldPath ?? null;
-  diagnostics.heroVariantFieldPath = heroDecision.finalCandidate?.variantPath ?? null;
+  diagnostics.heroCandidateCountAfterFiltering = heroDecision.finalCandidate
+    ? 1
+    : 0;
+  diagnostics.heroImageFieldPath =
+    heroDecision.finalCandidate?.fieldPath ?? null;
+  diagnostics.heroVariantFieldPath =
+    heroDecision.finalCandidate?.variantPath ?? null;
   diagnostics.selectedHeroWidth = heroDecision.finalCandidate?.width ?? null;
   diagnostics.selectedHeroHeight = heroDecision.finalCandidate?.height ?? null;
   diagnostics.imageSourceUsed = heroDecision.heroSourceType;
   diagnostics.heroSourceType = heroDecision.heroSourceType;
-  diagnostics.heroQualityClassification = heroDecision.heroQualityClassification;
+  diagnostics.heroQualityClassification =
+    heroDecision.heroQualityClassification;
   diagnostics.finalHeroUrl = heroDecision.heroUrl;
   diagnostics.heroFallbackTriggered = heroDecision.fallbackTriggered;
   diagnostics.heroPlaceholderFallbackReason = heroDecision.fallbackTriggered
@@ -1236,7 +1305,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroDecision.rejectedForeignCandidates
       .slice(0, 3)
       .map(candidate => `${candidate.reason}:${candidate.url}`);
-  diagnostics.rejectedForeignHeroCandidates = heroDecision.rejectedForeignCandidates;
+  diagnostics.rejectedForeignHeroCandidates =
+    heroDecision.rejectedForeignCandidates;
   diagnostics.heroSourceProductCode =
     heroDecision.finalCandidate?.sourceProductCode ?? null;
   diagnostics.heroSourceProductUrl =
@@ -1289,9 +1359,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     const [question, answer] = item.split("|||");
     return { question, answer } satisfies Engine6ExtractedFaq;
   });
-  const faqPath = baseFaqs.value.length > 0
-    ? (baseFaqs.path ?? "product.qAndA.items")
-    : null;
+  const faqPath =
+    baseFaqs.value.length > 0 ? (baseFaqs.path ?? "product.qAndA.items") : null;
   const faqs = { value: mergedFaqs, path: faqPath };
   diagnostics.faqsFieldPath = faqs.path;
   diagnostics.faqFieldPath = faqs.path;
