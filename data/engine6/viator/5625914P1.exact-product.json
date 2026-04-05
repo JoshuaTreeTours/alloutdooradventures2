@@ -1,0 +1,49 @@
+{
+  "product": {
+    "productCode": "5625914P1",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Beyond-The-City-Little-Stony-Point/d687-5625914P1",
+    "title": "Beyond The City: Little Stony Point",
+    "description": {
+      "text": "Leave the city for a guided Little Stony Point outing with a structured day plan, local orientation, and return logistics coordinated by the operator."
+    },
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "pricing": {
+      "summary": {
+        "fromPriceFormatted": "Check latest price"
+      }
+    },
+    "highlights": [
+      "Guided day outing from New York City to Little Stony Point",
+      "Managed transport and pacing for a city-to-outdoors experience",
+      "Suitable for travelers who want a structured nature day trip"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meeting point and departure timing are provided by the operator after booking confirmation."
+      }
+    },
+    "itinerarySummary": "Daily flow can vary based on weather, trail access, and operator safety requirements.",
+    "additionalInfo": [
+      "Plan details are finalized by the operator before departure.",
+      "Itinerary timing may be adjusted for weather and seasonal conditions."
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/32/0c/e8/fe/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
