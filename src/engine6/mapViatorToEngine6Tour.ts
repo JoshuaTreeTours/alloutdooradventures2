@@ -224,6 +224,8 @@ export const mapViatorToEngine6Tour = (
   const highlights = payload.extracted.highlights ?? [];
   const itinerary = payload.extracted.itinerary ?? [];
   const itinerarySummaryText = payload.extracted.itinerarySummaryText ?? null;
+  const durationText =
+    itinerary.find(item => Boolean(item.duration?.trim()))?.duration ?? null;
   const faqs = payload.extracted.faqs ?? [];
   const included = payload.extracted.included ?? [];
   const requirements = payload.extracted.requirements ?? [];
@@ -319,6 +321,7 @@ export const mapViatorToEngine6Tour = (
     reviewCount: payload.extracted.reviewCount,
     meetingPointText:
       payload.extracted.meetingPointText ?? "See booking details",
+    durationText,
     overviewText: overviewText || null,
     highlights,
     itinerary,

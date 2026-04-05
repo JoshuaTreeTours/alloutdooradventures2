@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "3587ISLQUESS",
+    "productUrl": "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-3587ISLQUESS",
+    "title": "Millionaire's Row Cruise",
+    "description": "Sail through Biscayne Bay on a narrated bilingual sightseeing cruise showcasing the Miami skyline, Port of Miami, Fisher Island, and celebrity estates along Millionaire's Row. This approximately 1 hour 30 minute cruise includes a comfortable vessel setup with an air-conditioned interior lounge, onboard restroom, and premium cash bar service.",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 35
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.3,
+      "totalReviews": 1204
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://www.filepicker.io/api/file/uC6eNRvDSXmFXzotTTGk",
+              "width": 2048,
+              "height": 1365
+            },
+            "LARGE": {
+              "url": "https://www.filepicker.io/api/file/uC6eNRvDSXmFXzotTTGk",
+              "width": 1024,
+              "height": 683
+            }
+          }
+        },
+        {
+          "isCover": false,
+          "variants": {
+            "FULL": {
+              "url": "https://cdn.filestackcontent.com/x3s6r9FHTKO8TAc98xcw",
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Narrated bilingual Biscayne Bay sightseeing cruise",
+      "Views of the Miami skyline, Port of Miami, Fisher Island, Biscayne Bay, and Millionaire's Row homes",
+      "Air-conditioned interior seating and onboard restroom",
+      "Premium cash bar available onboard"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Bayside Marketplace, 401 Biscayne Blvd, Miami, FL 33132, USA"
+      }
+    },
+    "meetingPoint": {
+      "name": "Bayside Marketplace",
+      "description": "Bayside Marketplace, 401 Biscayne Blvd, Miami, FL 33132, USA"
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterestLocation": {
+          "name": "Biscayne Bay"
+        },
+        "description": "Depart from Bayside Marketplace for a narrated sightseeing route on Biscayne Bay.",
+        "duration": "1 hour 30 minutes"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Millionaire's Row"
+        },
+        "description": "Cruise past celebrity and historic waterfront homes with skyline views.",
+        "duration": "1 hour 30 minutes"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Millionaire's Row Cruise?",
+        "answer": "The sightseeing cruise lasts approximately 1 hour 30 minutes."
+      },
+      {
+        "question": "Where is the meeting point?",
+        "answer": "Board at Bayside Marketplace, 401 Biscayne Blvd, Miami, FL 33132, USA."
+      },
+      {
+        "question": "What will we see on the cruise?",
+        "answer": "The route features Biscayne Bay views including the Miami skyline, Port of Miami, Fisher Island, and Millionaire's Row homes."
+      },
+      {
+        "question": "Is narration available in more than one language?",
+        "answer": "Yes, this cruise includes bilingual narration."
+      },
+      {
+        "question": "Are there onboard amenities?",
+        "answer": "The vessel includes an air-conditioned room, restroom, and a premium cash bar."
+      }
+    ],
+    "additionalInfo": [
+      "Boarding opens before departure time; arrive early with your mobile or printed confirmation.",
+      "Redemption is completed at check-in before boarding at Bayside Marketplace."
+    ]
+  }
+}
