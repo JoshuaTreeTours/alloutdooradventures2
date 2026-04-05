@@ -1,0 +1,140 @@
+{
+  "product": {
+    "productCode": "103533P1",
+    "productUrl": "https://www.viator.com/tours/New-York-City/New-York-Media-Boat-Adventure-Sightseeing-Tour/d687-103533P1",
+    "title": "Manhattan Adventure Sightseeing Boat Tour - from Chelsea Piers",
+    "description": "Capture New York City’s landmarks from the water on this custom Manhattan sightseeing tour designed for photographers and tourists, departing from Midtown. Sail past famous sights such as the Statue of Liberty, the Brooklyn Bridge, and the Manhattan skyline, with plenty of stops for perfect photo opportunities. Enjoy expert narration from the captain as you explore the Hudson River and New York Harbor from unique vantage points.",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$99.00",
+    "reviews": {
+      "combinedAverageRating": "5.0",
+      "totalReviews": "692"
+    },
+    "duration": "1 hour (approx.)",
+    "highlights": [
+      "Take in skyline views from the Hudson, East River, and Upper Bay",
+      "Sail past landmarks: Statue of Liberty, Ellis Island, and Freedom Tower",
+      "Cruise under the Brooklyn and Manhattan Bridges for photo stops",
+      "Get waterfront views of Little Island, Hudson Yards, and Governors Island"
+    ],
+    "inclusions": [
+      "Local taxes",
+      "TripAdvisor Experiences brokerage fee",
+      "U.S. Coast Guard licensed Captain",
+      "Landing and facility fees"
+    ],
+    "exclusions": ["Tour-guide/Captain gratuities are not included"],
+    "logistics": {
+      "start": {
+        "description": "New York Media Boat / Adventure Sightseeing Tours, 59 Chelsea Piers, New York, NY 10281, USA. CHELSEA PIERS / PIER 59 -- MIDTOWN. We will meet you by the dock booth on the left/south side of the golf center at CHELSEA PIERS MARINA at Pier 59. The entrance to the marina is on 11th Ave (West Side Highway) across from W17th Street."
+      },
+      "end": {
+        "description": "This activity ends back at the meeting point."
+      }
+    },
+    "itinerarySummary": "Experience New York City from a new vantage point on an exclusive 12-person media boat tour, traditionally used by news photographers. Departing from Chelsea Piers Marina, your journey navigates the Hudson River under the guidance of a U.S. Coast Guard licensed captain. This intimate tour offers unparalleled views of downtown and midtown Manhattan with iconic landmarks and skyline vistas from the water.",
+    "itineraryItems": [
+      {
+        "title": "Little Island",
+        "duration": "1 minute",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Financial District",
+        "duration": "2 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Battery Park City",
+        "duration": "2 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Brooklyn Bridge",
+        "duration": "5 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Governors Island",
+        "duration": "2 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Statue of Liberty",
+        "description": "Pass By"
+      },
+      {
+        "title": "Ellis Island",
+        "description": "Pass By"
+      },
+      {
+        "title": "New Jersey",
+        "duration": "2 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Hudson Yards",
+        "duration": "3 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Manhattan Bridge",
+        "duration": "2 minutes",
+        "admissionNote": "Admission Ticket Free"
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Not recommended for pregnant travelers",
+      "Our tours run with a minimum of 4 passengers",
+      "Stroller accessible",
+      "Minimum age is 4 years; minors must be accompanied by an adult",
+      "Adult pricing applies to all passengers",
+      "Service animals allowed",
+      "Refunds will not be issued if tour/activity is missed due to your late arrival",
+      "Near public transportation",
+      "No high heels; flat shoes only",
+      "Recommended: Bring sunglasses and your camera",
+      "Not recommended for travelers with back problems",
+      "Most travelers can participate",
+      "This tour/activity will have a maximum of 12 travelers"
+    ],
+    "faq": [
+      {
+        "question": "What is the cancellation policy?",
+        "answer": "You can cancel up to 24 hours in advance of the experience for a full refund."
+      },
+      {
+        "question": "Where does this tour start?",
+        "answer": "The meeting point is New York Media Boat / Adventure Sightseeing Tours at 59 Chelsea Piers, New York, NY 10281, USA."
+      }
+    ],
+    "categories": [
+      {
+        "name": "Day Cruises"
+      },
+      {
+        "name": "Sightseeing Cruises"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/6e/d1/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
