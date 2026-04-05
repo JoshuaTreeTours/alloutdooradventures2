@@ -56,6 +56,13 @@ export const ENGINE6_NYC_PHILADELPHIA_AMISH_ROUTE =
 export const ENGINE6_NYC_MET_PRIVATE_TOUR_PRODUCT_CODE = "43656P1";
 export const ENGINE6_NYC_MET_PRIVATE_TOUR_ROUTE =
   "/destinations/new-york/new-york/tours/private-tour-of-the-metropolitan-museum-of-art-in-new-york-city";
+export const ENGINE6_NYC_HORSE_CARRIAGE_CENTRAL_PARK_PRODUCT_CODE = "315439P1";
+export const ENGINE6_NYC_HORSE_CARRIAGE_CENTRAL_PARK_ROUTE =
+  "/destinations/new-york/new-york/tours/horse-and-carriage-rides-through-central-park-nyc";
+export const ENGINE6_NYC_BEYOND_CITY_LITTLE_STONY_POINT_PRODUCT_CODE =
+  "5625914P1";
+export const ENGINE6_NYC_BEYOND_CITY_LITTLE_STONY_POINT_ROUTE =
+  "/destinations/new-york/new-york/tours/beyond-the-city-little-stony-point";
 export const ENGINE6_NYC_MEDIA_BOAT_PRODUCT_CODE = "103533P1";
 export const ENGINE6_NYC_MEDIA_BOAT_ROUTE =
   "/destinations/new-york/new-york/tours/manhattan-adventure-sightseeing-boat-tour-from-chelsea-piers-103533p1";
@@ -225,6 +232,14 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_PRODUCT_CODE,
   ],
   [ENGINE6_NYC_MEDIA_BOAT_ROUTE, ENGINE6_NYC_MEDIA_BOAT_PRODUCT_CODE],
+  [
+    ENGINE6_NYC_HORSE_CARRIAGE_CENTRAL_PARK_ROUTE,
+    ENGINE6_NYC_HORSE_CARRIAGE_CENTRAL_PARK_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_BEYOND_CITY_LITTLE_STONY_POINT_ROUTE,
+    ENGINE6_NYC_BEYOND_CITY_LITTLE_STONY_POINT_PRODUCT_CODE,
+  ],
   [ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE, ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE],
   [
     ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
