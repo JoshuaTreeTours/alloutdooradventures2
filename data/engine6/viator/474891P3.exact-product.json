@@ -1,0 +1,126 @@
+{
+  "product": {
+    "productCode": "474891P3",
+    "productUrl": "https://www.viator.com/tours/New-York-City/New-York-City-Private-Walking-Tour-with-a-Local-Guide/d687-474891P3",
+    "title": "New York City Private Walking Tour with a Local",
+    "description": "You could explore Manhattan on your own—but a guided walking tour makes finding (and learning about) the sights so much easier. On this flexible tour, choose a duration and itinerary that work best for your schedule, and explore with just your private guide for company. Look forward to experiencing the energy of Times Square, relaxing in Bryant Park, exploring media history at Rockefeller Center, and much more.",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$42.94",
+    "reviews": {
+      "combinedAverageRating": "5.0",
+      "totalReviews": "1"
+    },
+    "duration": "2 to 6 hours (approx.)",
+    "highlights": [
+      "Exploring on foot makes it easy to soak up the city’s lively atmosphere",
+      "Discover many of Manhattan’s best-known sights, all in a single trip",
+      "This private tour offers a more personalized sightseeing experience",
+      "Your guide reveals insider New York City sights and stories along the way"
+    ],
+    "inclusions": [
+      "Flexible itinerary",
+      "Local discovery guide (Rahe)",
+      "Private tour"
+    ],
+    "exclusions": [
+      "Tickets to out of plan attractions",
+      "Food and drinks",
+      "Personal expenses",
+      "Tips and gratuities (optional)",
+      "Transportation to/from attractions"
+    ],
+    "logistics": {
+      "start": {
+        "description": "You will meet the local discovery guide at The Red Steps at Duffy Square (7th Ave & W 47th St, New York, NY 10036)",
+        "name": "Father Duffy Square"
+      },
+      "end": {
+        "description": "This activity ends back at the meeting point."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Times Square",
+        "stopType": "stop",
+        "duration": "15 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Rockefeller Center",
+        "stopType": "stop",
+        "duration": "20 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "St. Patrick's Cathedral",
+        "stopType": "stop",
+        "duration": "10 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "New York Public Library - Stephen A. Schwarzman Building",
+        "stopType": "stop",
+        "duration": "20 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Bryant Park",
+        "stopType": "stop",
+        "duration": "15 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Grand Central Terminal",
+        "stopType": "stop",
+        "duration": "20 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Chrysler Building",
+        "stopType": "stop",
+        "duration": "5 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Fifth Avenue",
+        "stopType": "stop",
+        "duration": "20 minutes",
+        "admissionNote": "Admission Ticket Free"
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not recommended for travelers with back problems",
+      "Not recommended for pregnant travelers",
+      "Near public transportation",
+      "Stroller accessible",
+      "Transportation is wheelchair accessible",
+      "Wheelchair accessible",
+      "Most travelers can participate",
+      "This is a private tour/activity. Only your group will participate"
+    ],
+    "faq": [],
+    "categories": [
+      "Walking tour",
+      "Private tour"
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/5b/05/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}

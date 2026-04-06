@@ -50,6 +50,7 @@ import specimen5024manskyPayload from "../../data/engine6/viator/5024MANSKY.exac
 import specimen103533p1Payload from "../../data/engine6/viator/103533P1.exact-product.json";
 import specimen6288p29Payload from "../../data/engine6/viator/6288P29.exact-product.json";
 import specimen122012p17Payload from "../../data/engine6/viator/122012P17.exact-product.json";
+import specimen474891p3Payload from "../../data/engine6/viator/474891P3.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -111,6 +112,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/Half-Day-Best-of-NYC-Bus-Tour/d687-122012P17",
     rawPayload: specimen122012p17Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "474891P3",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/New-York-City-Private-Walking-Tour-with-a-Local-Guide/d687-474891P3",
+    rawPayload: specimen474891p3Payload as Record<string, unknown>,
   },
   {
     productCode: "214880P12",
