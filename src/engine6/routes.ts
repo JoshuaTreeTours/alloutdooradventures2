@@ -62,6 +62,9 @@ export const ENGINE6_NYC_MEDIA_BOAT_ROUTE =
 export const ENGINE6_NYC_BOUTIQUE_YACHT_CRUISE_PRODUCT_CODE = "6288P29";
 export const ENGINE6_NYC_BOUTIQUE_YACHT_CRUISE_ROUTE =
   "/destinations/new-york/new-york/tours/new-york-city-sunset-or-daytime-sightseeing-cruise";
+export const ENGINE6_NYC_HALF_DAY_BUS_HIGHLIGHTS_PRODUCT_CODE = "122012P17";
+export const ENGINE6_NYC_HALF_DAY_BUS_HIGHLIGHTS_ROUTE =
+  "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights";
 export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_PRODUCT_CODE = "5024MANSKY";
 export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_ROUTE =
   "/destinations/new-york/new-york/tours/manhattan-sky-tour-new-york-helicopter-flight";
@@ -231,6 +234,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_NYC_BOUTIQUE_YACHT_CRUISE_ROUTE,
     ENGINE6_NYC_BOUTIQUE_YACHT_CRUISE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_HALF_DAY_BUS_HIGHLIGHTS_ROUTE,
+    ENGINE6_NYC_HALF_DAY_BUS_HIGHLIGHTS_PRODUCT_CODE,
   ],
   [ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE, ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE],
   [

@@ -1,0 +1,193 @@
+{
+  "product": {
+    "productCode": "122012P17",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Half-Day-Best-of-NYC-Bus-Tour/d687-122012P17",
+    "title": "Half-Day Bus Tour of NYC Top Highlights",
+    "description": "This tour is a great pick for time-tight travelers looking to check off some of New York’s best bits in half a day. Set off in a climate-controlled luxury bus and listen to stories about local landmarks from your guide. Photo stops along the route showcase views of top sights, including the Brooklyn Bridge and Rockefeller Center—all with plenty of time to capture memorable shots.",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$60.00",
+    "reviews": {
+      "combinedAverageRating": "4.9",
+      "totalReviews": "1900"
+    },
+    "duration": "4 hours (approx.)",
+    "highlights": [
+      "This tour is perfect for first-time or time-pressed New York visitors",
+      "No need to walk between sites: Ride in a luxury bus",
+      "Learn as you ride: Guide commentary is provided",
+      "Check off multiple neighborhoods, including SoHo and Chinatown",
+      "Includes photo stops along the way"
+    ],
+    "inclusions": [
+      "Professional Local Tour Guide",
+      "4 Photo Stops at Top Sights",
+      "Luxury Climate-Controlled Bus",
+      "Hotel Pickup/Drop-Off"
+    ],
+    "exclusions": [],
+    "logistics": {
+      "start": {
+        "description": "822 8th Ave, New York, NY 10019, USA. Please meet on 8th Avenue between West 49th and West 50th Streets, across from World Wide Plaza."
+      },
+      "end": {
+        "description": "This activity ends back at the meeting point."
+      }
+    },
+    "itinerarySummary": "Half-day guided bus route through Midtown and Lower Manhattan with multiple pass-by landmarks and timed photo-stop visits.",
+    "itineraryItems": [
+      {
+        "title": "Midtown",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Central Park",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Lincoln Center Theater",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "The Dakota",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Upper East Side",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "St. Patrick's Cathedral",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Rockefeller Center",
+        "stopType": "stop",
+        "duration": "15 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Empire State Building",
+        "stopType": "stop",
+        "duration": "10 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Flatiron Building",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Washington Square Arch",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "SoHo",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Chinatown",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Trinity Church NYC",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Financial District",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Charging Bull",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Brooklyn Bridge",
+        "stopType": "stop",
+        "duration": "15 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Battery Park",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Statue of Liberty",
+        "stopType": "stop",
+        "duration": "10 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "9/11 Memorial Pools",
+        "stopType": "stop",
+        "duration": "15 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Little Island",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Chelsea Piers Sports & Entertainment Complex",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Hudson Yards",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Stroller accessible",
+      "Near public transportation",
+      "Most travelers can participate",
+      "Bathrooms available at photo-stops",
+      "This tour/activity will have a maximum of 35 travelers"
+    ],
+    "faq": [
+      {
+        "question": "What is the cancellation policy?",
+        "answer": "You can cancel up to 24 hours in advance of the experience for a full refund."
+      }
+    ],
+    "categories": [
+      {
+        "name": "Half-day Tours"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/32/4b/68/f5/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
