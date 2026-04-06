@@ -10,6 +10,7 @@ import {
   assertEngine6NoCanonicalSlugCollisions,
   assertEngine6RequestedPathMatchesResolvedTour,
 } from "./routeIntegrity";
+import { ENGINE6_CONFIGURED_PRODUCT_CODES } from "./routes";
 
 const toEngine6FixturePayload = (
   fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
@@ -47,7 +48,33 @@ const hasStrictExactProductHero = (tour: Engine6Tour) =>
   Boolean(tour.diagnostics.heroHost?.trim()) &&
   tour.diagnostics.heroSourceFieldPath?.startsWith("product.media.images");
 
-const tryMapFixtureToTour = (
+const fixtureByProductCode = new Map(
+  ENGINE6_VALIDATION_FIXTURES.map(fixture => [fixture.productCode, fixture])
+);
+
+const missingFixtureProductCodes = ENGINE6_CONFIGURED_PRODUCT_CODES.filter(
+  productCode => !fixtureByProductCode.has(productCode)
+);
+
+if (missingFixtureProductCodes.length > 0) {
+  throw new Error(
+    `Engine6 exact-product fixture missing for configured products: ${missingFixtureProductCodes.join(
+      ", "
+    )}`
+  );
+}
+
+const configuredFixtures = ENGINE6_CONFIGURED_PRODUCT_CODES.map(productCode => {
+  const fixture = fixtureByProductCode.get(productCode);
+  if (!fixture) {
+    throw new Error(
+      `Engine6 fixture lookup failed unexpectedly for ${productCode}`
+    );
+  }
+  return fixture;
+});
+
+const tryResolveTour = (
   fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
 ) => {
   try {
@@ -57,9 +84,8 @@ const tryMapFixtureToTour = (
   }
 };
 
-const resolvedTours: Engine6Tour[] = ENGINE6_VALIDATION_FIXTURES.map(
-  tryMapFixtureToTour
-)
+const resolvedTours: Engine6Tour[] = configuredFixtures
+  .map(tryResolveTour)
   .filter((tour): tour is Engine6Tour => Boolean(tour))
   .filter(hasStrictExactProductHero);
 

@@ -142,6 +142,9 @@ export const validateEngine6CreationContract = ({
     variantRecord?.MEDIUM?.url ??
     variantList?.[0]?.url ??
     null;
+  const renderedItineraryItemCount = (
+    pageHtml.match(/data-testid="engine6-itinerary-item"/g) ?? []
+  ).length;
   const hasValidResolvedHero =
     typeof resolvedPrimaryHero === "string" &&
     resolvedPrimaryHero.startsWith("http") &&
@@ -176,6 +179,9 @@ export const validateEngine6CreationContract = ({
 
   if (card.imageUrl !== tour.heroImageUrl) {
     violations.push("detail hero and card hero diverged");
+  }
+  if (tour.resolvedHero?.url && tour.heroImageUrl !== tour.resolvedHero.url) {
+    violations.push("page/card/schema must use the same resolved hero object");
   }
 
   const expectedPath = resolveEngine6PathForProductCode(tour.productCode);
@@ -258,6 +264,64 @@ export const validateEngine6CreationContract = ({
     ) {
       violations.push("/tours filtered surface image differs from detail hero");
     }
+  }
+
+  const extractedFields = extracted.extracted;
+  if (extractedFields.title?.trim() && !tour.title.trim()) {
+    violations.push("title missing despite API title");
+  }
+  if (extractedFields.city?.trim() && !tour.city.trim()) {
+    violations.push("city missing despite API city");
+  }
+  if (extractedFields.state?.trim() && !tour.state.trim()) {
+    violations.push("state missing despite API state");
+  }
+  if (extractedFields.overviewText?.trim() && !tour.overviewText?.trim()) {
+    violations.push("overview missing despite API overview");
+  }
+  if (extractedFields.highlights.length > 0 && tour.highlights.length === 0) {
+    violations.push("highlights missing despite API highlights");
+  }
+  if (extractedFields.included.length > 0 && tour.included.length === 0) {
+    violations.push("included section missing despite API included content");
+  }
+  if (
+    extractedFields.requirements.length > 0 &&
+    tour.requirements.length === 0
+  ) {
+    violations.push("requirements missing despite API requirements");
+  }
+  if (extractedFields.faqs.length > 0 && tour.faqs.length === 0) {
+    violations.push("faqs missing despite API faqs");
+  }
+  if (extractedFields.priceFormatted?.trim() && !tour.priceFormatted.trim()) {
+    violations.push("price missing despite API price");
+  }
+  if (
+    extractedFields.meetingPointText?.trim() &&
+    !tour.meetingPointText.trim()
+  ) {
+    violations.push("meeting point missing despite API meeting point");
+  }
+
+  if (
+    extractedFields.priceFormatted?.trim() &&
+    !pageHtml.includes("<strong>Price:</strong>")
+  ) {
+    violations.push("above-fold price missing despite API price");
+  }
+  if (
+    typeof extractedFields.aggregateRating === "number" &&
+    typeof extractedFields.reviewCount === "number" &&
+    !pageHtml.includes('data-testid="engine6-rating-summary"')
+  ) {
+    violations.push("above-fold rating/review count missing despite API values");
+  }
+  if (
+    extractedFields.meetingPointText?.trim() &&
+    !pageHtml.includes("<strong>Meeting point:</strong>")
+  ) {
+    violations.push("above-fold meeting point missing despite API meeting point");
   }
 
   if (parentCityToursPath) {
@@ -343,6 +407,26 @@ export const validateEngine6CreationContract = ({
       "timeline rendered without sufficient structured stop data"
     );
   }
+  if (structuredStopCount > 0 && renderedItineraryItemCount !== tour.itinerary.length) {
+    violations.push("itinerary length parity mismatch between mapped and rendered stops");
+  }
+  if (
+    extractedFields.itinerary.length > 0 &&
+    tour.itinerary.some(
+      (item, index) =>
+        extractedFields.itinerary[index] &&
+        (Boolean(extractedFields.itinerary[index]?.stopType) !==
+          Boolean(item.stopType) ||
+          Boolean(extractedFields.itinerary[index]?.duration) !==
+            Boolean(item.duration) ||
+          Boolean(extractedFields.itinerary[index]?.admissionNote) !==
+            Boolean(item.admissionNote))
+    )
+  ) {
+    violations.push(
+      "itinerary field depth mismatch (stopType/duration/admission) between API extraction and rendered tour object"
+    );
+  }
   if (
     tour.itinerary.length < 2 &&
     tour.itinerarySummaryText &&
@@ -399,6 +483,24 @@ export const validateEngine6CreationContract = ({
   }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(String(offerRecord?.priceValidUntil ?? ""))) {
     violations.push("Offer.priceValidUntil missing or invalid");
+  }
+  if (
+    typeof tour.aggregateRating === "number" &&
+    typeof tour.reviewCount === "number" &&
+    !/^★\s+\d(?:\.\d)?\s+\(\d+\)$/.test(card.ratingLabel)
+  ) {
+    violations.push("city card rating label missing ★ rating (count) format");
+  }
+  if (typeof tour.priceAmount === "number" && !/^From \$/.test(card.priceLabel)) {
+    violations.push("city card price label missing From $price format");
+  }
+  if (card.imageUrl !== tour.resolvedHero?.url) {
+    violations.push("card hero did not use authoritative resolved hero");
+  }
+  if (
+    (product as { image?: string } | undefined)?.image !== tour.resolvedHero?.url
+  ) {
+    violations.push("schema hero did not use authoritative resolved hero");
   }
 
   return { violations };

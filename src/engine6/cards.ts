@@ -38,9 +38,12 @@ export const toEngine6Card = (tour: Engine6Tour): Engine6Card => ({
   locationLabel: `${tour.city}, ${tour.state}`,
   ratingLabel:
     tour.aggregateRating && tour.reviewCount
-      ? `${formatEngine6AggregateRating(tour.aggregateRating)} (${tour.reviewCount})`
+      ? `★ ${formatEngine6AggregateRating(tour.aggregateRating)} (${tour.reviewCount})`
       : "No ratings yet",
-  priceLabel: tour.priceFormatted,
+  priceLabel:
+    typeof tour.priceAmount === "number"
+      ? `From $${tour.priceAmount.toFixed(0)}`
+      : tour.priceFormatted,
   description: buildCardDescription(tour),
   href: tour.canonicalPath,
 });
