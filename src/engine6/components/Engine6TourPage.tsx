@@ -320,6 +320,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                 <li
                   key={`${item.title}-${index}`}
                   className="rounded-xl border border-green-100 bg-green-50/60 p-5"
+                  data-testid="engine6-itinerary-item"
                 >
                   <div className="flex flex-wrap items-start justify-between gap-2">
                     <div className="space-y-2">

@@ -41,6 +41,10 @@ if (!isPreview && exists("scripts/generate-sitemap.mjs")) {
 
 run("vite build");
 
+if (isPreview) {
+  run("tsx scripts/verify-engine6-preview.ts");
+}
+
 if (!isPreview && exists("scripts/run-prerender.mjs")) {
   run("node scripts/run-prerender.mjs");
 } else {

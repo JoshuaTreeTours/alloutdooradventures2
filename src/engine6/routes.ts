@@ -344,6 +344,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   ],
 ] as const;
 
+export const ENGINE6_CONFIGURED_PRODUCT_CODES = [
+  ...new Set(ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES.map(([, productCode]) => productCode)),
+];
+
 const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> =
   Object.fromEntries(ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES);
 
