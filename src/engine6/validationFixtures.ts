@@ -48,11 +48,13 @@ import specimen89173p10Payload from "../../data/engine6/viator/89173P10.exact-pr
 import specimen438341p2Payload from "../../data/engine6/viator/438341P2.exact-product.json";
 import specimen5024manskyPayload from "../../data/engine6/viator/5024MANSKY.exact-product.json";
 import specimen103533p1Payload from "../../data/engine6/viator/103533P1.exact-product.json";
+import specimen2396amnhPayload from "../../data/engine6/viator/2396AMNH.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
   publicUrl: string;
   rawPayload: Record<string, unknown>;
+  authoritativeHeroImageUrl?: string;
 };
 
 export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
@@ -97,6 +99,14 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/New-York-Media-Boat-Adventure-Sightseeing-Tour/d687-103533P1",
     rawPayload: specimen103533p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "2396AMNH",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/American-Museum-of-Natural-History/d687-2396AMNH",
+    rawPayload: specimen2396amnhPayload as Record<string, unknown>,
+    authoritativeHeroImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/5a/2c/caption.jpg?w=700&h=500&s=1",
   },
   {
     productCode: "214880P12",

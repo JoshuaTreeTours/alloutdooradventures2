@@ -1,5 +1,6 @@
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
+import { applyEngine6AuthoritativeHero } from "./authoritativeHero";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures";
 import {
@@ -16,7 +17,7 @@ const toEngine6FixturePayload = (
 ): Engine6ApiResponse => {
   const extraction = extractEngine6Product(fixture.rawPayload);
 
-  return {
+  const payload: Engine6ApiResponse = {
     source: "bundled-fallback",
     rawProductCode: fixture.productCode,
     rawProduct: extraction.product,
@@ -37,6 +38,11 @@ const toEngine6FixturePayload = (
     },
     extracted: extraction.extracted,
   };
+
+  return applyEngine6AuthoritativeHero(
+    payload,
+    fixture.authoritativeHeroImageUrl
+  );
 };
 
 const hasStrictExactProductHero = (tour: Engine6Tour) =>

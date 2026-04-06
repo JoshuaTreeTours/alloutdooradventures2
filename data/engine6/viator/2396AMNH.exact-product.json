@@ -1,0 +1,29 @@
+{
+  "product": {
+    "productCode": "2396AMNH",
+    "productUrl": "https://www.viator.com/tours/New-York-City/American-Museum-of-Natural-History/d687-2396AMNH",
+    "title": "American Museum of Natural History",
+    "description": {
+      "text": "Visit the American Museum of Natural History in New York City with a prebooked Viator product page listing and onsite entry instructions provided at checkout."
+    },
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/5a/2c/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
