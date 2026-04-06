@@ -17,6 +17,7 @@ import type { Engine6ValidationFixture } from "./validationFixtures";
 export type Engine6ValidationReport = {
   productCode: string;
   route: string;
+  contentTier: "FULL_PARAGON" | "STANDARD" | "LIGHT";
   liveApiFetchSucceeded: boolean;
   pageRenderSucceeded: boolean;
   cardRenderSucceeded: boolean;
@@ -110,6 +111,7 @@ export const buildEngine6ValidationReport = (
   return {
     productCode: fixture.productCode,
     route: tour.pagePath,
+    contentTier: tour.contentTier,
     liveApiFetchSucceeded: false,
     pageRenderSucceeded,
     cardRenderSucceeded,

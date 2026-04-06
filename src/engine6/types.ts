@@ -128,6 +128,8 @@ export type Engine6CategorySlug =
   | "wildlife"
   | "water";
 
+export type Engine6ContentTier = "FULL_PARAGON" | "STANDARD" | "LIGHT";
+
 export type Engine6Tour = {
   productCode: string;
   title: string;
@@ -168,6 +170,7 @@ export type Engine6Tour = {
   canonicalPath: string;
   bookingUrl: string;
   ownership: Engine6OwnershipPolicy;
+  contentTier: Engine6ContentTier;
   diagnostics: Engine6TourDiagnostics;
 };
 

@@ -267,6 +267,7 @@ export const validateEngine6CreationContract = ({
   }
 
   const extractedFields = extracted.extracted;
+  const isFullParagon = tour.contentTier === "FULL_PARAGON";
   if (extractedFields.title?.trim() && !tour.title.trim()) {
     violations.push("title missing despite API title");
   }
@@ -276,10 +277,10 @@ export const validateEngine6CreationContract = ({
   if (extractedFields.state?.trim() && !tour.state.trim()) {
     violations.push("state missing despite API state");
   }
-  if (extractedFields.overviewText?.trim() && !tour.overviewText?.trim()) {
+  if (isFullParagon && extractedFields.overviewText?.trim() && !tour.overviewText?.trim()) {
     violations.push("overview missing despite API overview");
   }
-  if (extractedFields.highlights.length > 0 && tour.highlights.length === 0) {
+  if (isFullParagon && extractedFields.highlights.length > 0 && tour.highlights.length === 0) {
     violations.push("highlights missing despite API highlights");
   }
   if (extractedFields.included.length > 0 && tour.included.length === 0) {
@@ -291,7 +292,7 @@ export const validateEngine6CreationContract = ({
   ) {
     violations.push("requirements missing despite API requirements");
   }
-  if (extractedFields.faqs.length > 0 && tour.faqs.length === 0) {
+  if (isFullParagon && extractedFields.faqs.length > 0 && tour.faqs.length === 0) {
     violations.push("faqs missing despite API faqs");
   }
   if (extractedFields.priceFormatted?.trim() && !tour.priceFormatted.trim()) {
@@ -305,12 +306,14 @@ export const validateEngine6CreationContract = ({
   }
 
   if (
+    isFullParagon &&
     extractedFields.priceFormatted?.trim() &&
     !pageHtml.includes("<strong>Price:</strong>")
   ) {
     violations.push("above-fold price missing despite API price");
   }
   if (
+    isFullParagon &&
     typeof extractedFields.aggregateRating === "number" &&
     typeof extractedFields.reviewCount === "number" &&
     !pageHtml.includes('data-testid="engine6-rating-summary"')
@@ -318,6 +321,7 @@ export const validateEngine6CreationContract = ({
     violations.push("above-fold rating/review count missing despite API values");
   }
   if (
+    isFullParagon &&
     extractedFields.meetingPointText?.trim() &&
     !pageHtml.includes("<strong>Meeting point:</strong>")
   ) {
@@ -388,17 +392,19 @@ export const validateEngine6CreationContract = ({
 
   const structuredStopCount = structuredStopCountFromPayload(rawPayload);
   if (
+    isFullParagon &&
     tour.itinerary.length >= 2 &&
     !pageHtml.includes('data-testid="engine6-itinerary-timeline"')
   ) {
     violations.push("structured itinerary degraded from timeline rendering");
   }
-  if (structuredStopCount >= 2 && tour.itinerary.length < 2) {
+  if (isFullParagon && structuredStopCount >= 2 && tour.itinerary.length < 2) {
     violations.push(
       "structured itinerary was dropped despite reliable source stop data"
     );
   }
   if (
+    isFullParagon &&
     tour.itinerary.length < 2 &&
     structuredStopCount > 0 &&
     pageHtml.includes('data-testid="engine6-itinerary-timeline"')
@@ -407,10 +413,15 @@ export const validateEngine6CreationContract = ({
       "timeline rendered without sufficient structured stop data"
     );
   }
-  if (structuredStopCount > 0 && renderedItineraryItemCount !== tour.itinerary.length) {
+  if (
+    isFullParagon &&
+    structuredStopCount > 0 &&
+    renderedItineraryItemCount !== tour.itinerary.length
+  ) {
     violations.push("itinerary length parity mismatch between mapped and rendered stops");
   }
   if (
+    isFullParagon &&
     extractedFields.itinerary.length > 0 &&
     tour.itinerary.some(
       (item, index) =>
@@ -428,6 +439,7 @@ export const validateEngine6CreationContract = ({
     );
   }
   if (
+    isFullParagon &&
     tour.itinerary.length < 2 &&
     tour.itinerarySummaryText &&
     !pageHtml.includes('data-testid="engine6-itinerary-summary-only"')
@@ -440,14 +452,14 @@ export const validateEngine6CreationContract = ({
   const tripNode = graph.find(node => node["@type"] === "TouristTrip") as
     | { itinerary?: unknown }
     | undefined;
-  if (tour.itinerary.length >= 2 && !tripNode?.itinerary) {
+  if (isFullParagon && tour.itinerary.length >= 2 && !tripNode?.itinerary) {
     violations.push("schema itinerary missing while visible itinerary is present");
   }
-  if (tour.itinerary.length < 2 && tripNode?.itinerary) {
+  if (isFullParagon && tour.itinerary.length < 2 && tripNode?.itinerary) {
     violations.push("schema itinerary present while visible itinerary is absent");
   }
 
-  if (tour.faqs.length > 0) {
+  if (isFullParagon && tour.faqs.length > 0) {
     if (!faqPage) {
       violations.push("FAQ schema missing while FAQs are visible");
     } else {

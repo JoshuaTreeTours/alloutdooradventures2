@@ -96,6 +96,7 @@ export const mapLegacyFhRecordToEngine6Tour = (
     pagePath: record.canonicalPath,
     canonicalPath: record.canonicalPath,
     bookingUrl: record.bookingPath,
+    contentTier: "STANDARD",
     ownership: {
       routeOwner: "fareharbor",
       ctaOwner: "fareharbor",
