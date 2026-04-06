@@ -1,0 +1,26 @@
+{
+  "product": {
+    "productCode": "62527P9",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Boroughs-Tour-Harlem-Bronx-Queens-Brooklyn-and-Coney-Island/d687-62527P9",
+    "title": "Boroughs Tour Harlem Bronx Queens Brooklyn and Coney Island",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/62/f0/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "product": {
+    "productCode": "5515296P1",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Epicurean-Odyssey-A-Gourmet-Bus-Tour-Through-New-York-City/d687-5515296P1",
+    "title": "Epicurean Odyssey: A Gourmet Bus Tour Through New York City",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/31/82/40/bc/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}

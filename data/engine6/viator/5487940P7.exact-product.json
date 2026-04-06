@@ -1,0 +1,30 @@
+{
+  "product": {
+    "productCode": "5487940P7",
+    "productUrl": "https://www.viator.com/tours/New-York-City/NYC-Guided-Cart-Tour-Manhattan-Landmarks-Celebs-and-Hidden-Gems/d687-5487940P7",
+    "title": "New York City Manhattan Landmarks Guided Small-Group Tour by Cart",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "reviews": {
+      "combinedAverageRating": "4.3",
+      "totalReviews": "22"
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/32/2d/b1/b1/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}

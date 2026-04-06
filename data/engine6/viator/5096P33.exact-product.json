@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "5096P33",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Big-Bus-Tours-New-York-Empire-State-Building/d687-5096P33",
+    "title": "New York City Hop-On Hop-Off Bus and Empire State Building Tour",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "highlights": [
+      "Digital audio commentary and Wi-Fi onboard for an enhanced tour",
+      "Hop-on hop-off bus helps you get your bearings in NYC"
+    ],
+    "inclusions": [
+      "Entry to Empire State Building 86th floor",
+      "Big Bus 48-hour Hop-on Hop-off Tour on Downtown & Uptown Loops",
+      "Statue of Liberty Ferry (if option selected)",
+      "Digital commentary aboard hop-on hop-off tour",
+      "Wi-Fi on board",
+      "Big Bus app for route information and live bus tracking"
+    ],
+    "exclusions": [
+      "Hotel pickup and drop-off"
+    ],
+    "logistics": {
+      "start": {
+        "description": "You may start this tour at any of the stops listed."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Explore Downtown (Red Route)",
+        "stopType": "stop",
+        "duration": "1 hour 30 minutes"
+      },
+      {
+        "title": "M&M'S New York",
+        "stopType": "stop"
+      },
+      {
+        "title": "Times Square",
+        "stopType": "stop"
+      },
+      {
+        "title": "Empire State Building",
+        "stopType": "stop"
+      },
+      {
+        "title": "Flatiron Building",
+        "stopType": "stop"
+      },
+      {
+        "title": "SoHo",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chinatown",
+        "stopType": "stop"
+      },
+      {
+        "title": "Brooklyn Bridge",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wall Street",
+        "stopType": "stop"
+      },
+      {
+        "title": "Statue of Liberty",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "World Trade Center",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hudson Yards",
+        "stopType": "stop"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/85/f4/71/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}

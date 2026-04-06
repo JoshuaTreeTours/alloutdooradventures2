@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "26697P1",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Tour-of-the-Secrets-of-Grand-Central-Terminal/d687-26697P1",
+    "title": "Secrets of Grand Central Station Walking Tour New York City",
+    "description": "Millions of travelers pass through New York City's Grand Central Terminal, but most never discover the secrets behind its elegant architecture. This small-group tour reveals the origins and evolution of the Beaux Arts train station from its heyday to disrepair and restoration. Spot detail and design quirks; and hear stories of its past that will give you a deeper understanding of the landmark building than you could get alone.",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "reviews": {
+      "combinedAverageRating": "4.9",
+      "totalReviews": "1856"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "highlights": [
+      "Discover the secrets of Grand Central Terminal from your guide",
+      "Learn about detail and design features not obvious to untrained eyes",
+      "Uncover surprising gems and historical tales you may not experience otherwise",
+      "Enjoy a tour capped at 15 that's ideal for history and architecture buffs"
+    ],
+    "inclusions": [
+      "Guided walking tour led by a local New Yorker",
+      "Ear pieces provided to each guests, ensuring everyone hears the guide perfectly, even from a distance",
+      "Gratuities"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Grand Central Terminal, 89 E 42nd St, New York, NY 10017, USA. The tour starts in front of Track 29, inside Grand Central Terminal's main concourse."
+      },
+      "end": {
+        "description": "This activity ends back at the meeting point."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Grand Central Terminal",
+        "stopType": "stop",
+        "duration": "1 hour 30 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Midtown",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "MetLife Building",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Chrysler Building",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Campbell Apartment",
+        "stopType": "stop",
+        "duration": "5 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Grand Central Market",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Graybar Electric Building (Graybar Rats)",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "New York City",
+        "stopType": "stop",
+        "duration": "1 hour 30 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Manhattan Skyline",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Wheelchair accessible",
+      "Stroller accessible",
+      "Service animals allowed",
+      "Near public transportation",
+      "Transportation is wheelchair accessible"
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/78/f0/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}

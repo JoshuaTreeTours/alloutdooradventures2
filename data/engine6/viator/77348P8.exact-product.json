@@ -1,0 +1,39 @@
+{
+  "product": {
+    "productCode": "77348P8",
+    "productUrl": "https://www.viator.com/tours/New-York-City/American-Dream-One-Day-Dreamworks-Waterpark-Pass-Bundle/d687-77348P8",
+    "title": "New York City American Dream 4-in-1 Attractions Pass",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$109.00",
+    "reviews": {
+      "combinedAverageRating": "3.5",
+      "totalReviews": "2"
+    },
+    "additionalInfo": [
+      "Guests between 36\u201d and 42\u201d may enjoy the 6 slides in Penguins Frozen Fun Zone and 3 slides in KungFu Panda Temple of Awesomeness Play Structure.",
+      "Guests between 42\u201d and 48\u201d may enjoy all children\u2019s play activities/slides, and 5 other family slides with a supervising companion.",
+      "Guests under 36\u201d may enjoy the Lazy River, Wave Pool, and features on the KungFu Panda Temple of Awesomeness Play Structure.",
+      "Proper swim attire is required.",
+      "Pets are not permitted in DreamWorks Water Park.",
+      "Outside food and beverages are not permitted in DreamWorks Water Park."
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/84/33/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            }
+          }
+        }
+      ]
+    }
+  }
+}

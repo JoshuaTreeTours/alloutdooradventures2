@@ -71,6 +71,27 @@ export const ENGINE6_NYC_PRIVATE_WALKING_TOUR_ROUTE =
 export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_PRODUCT_CODE = "5024MANSKY";
 export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_ROUTE =
   "/destinations/new-york/new-york/tours/manhattan-sky-tour-new-york-helicopter-flight";
+export const ENGINE6_NYC_GRAND_CENTRAL_SECRETS_PRODUCT_CODE = "26697P1";
+export const ENGINE6_NYC_GRAND_CENTRAL_SECRETS_ROUTE =
+  "/destinations/new-york/new-york/tours/secrets-of-grand-central-station-walking-tour-new-york-city";
+export const ENGINE6_NYC_911_MEMORIAL_MUSEUM_PRODUCT_CODE = "7195SEPT11";
+export const ENGINE6_NYC_911_MEMORIAL_MUSEUM_ROUTE =
+  "/destinations/new-york/new-york/tours/9-11-memorial-museum-admission-ticket";
+export const ENGINE6_NYC_AMERICAN_DREAM_4IN1_PRODUCT_CODE = "77348P8";
+export const ENGINE6_NYC_AMERICAN_DREAM_4IN1_ROUTE =
+  "/destinations/new-york/new-york/tours/american-dream-one-day-fun-day-dreamworks-waterpark-4-in-1-pass";
+export const ENGINE6_NYC_BIG_BUS_EMPIRE_STATE_PRODUCT_CODE = "5096P33";
+export const ENGINE6_NYC_BIG_BUS_EMPIRE_STATE_ROUTE =
+  "/destinations/new-york/new-york/tours/hop-on-hop-off-bus-and-empire-state-building-tour";
+export const ENGINE6_NYC_BUSTRONOME_GOURMET_PRODUCT_CODE = "5515296P1";
+export const ENGINE6_NYC_BUSTRONOME_GOURMET_ROUTE =
+  "/destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus";
+export const ENGINE6_NYC_BOROUGHS_TOUR_PRODUCT_CODE = "62527P9";
+export const ENGINE6_NYC_BOROUGHS_TOUR_ROUTE =
+  "/destinations/new-york/new-york/tours/new-york-city-boroughs-small-group-or-private-tour";
+export const ENGINE6_NYC_MANHATTAN_CART_TOUR_PRODUCT_CODE = "5487940P7";
+export const ENGINE6_NYC_MANHATTAN_CART_TOUR_ROUTE =
+  "/destinations/new-york/new-york/tours/manhattan-landmarks-guided-small-group-tour-by-cart";
 export const ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE = "3097SDZSP_2VISIT";
 export const ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-zoo-and-safari-park-2-visit-pass-ticket";
@@ -245,6 +266,31 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_NYC_PRIVATE_WALKING_TOUR_ROUTE,
     ENGINE6_NYC_PRIVATE_WALKING_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_GRAND_CENTRAL_SECRETS_ROUTE,
+    ENGINE6_NYC_GRAND_CENTRAL_SECRETS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_911_MEMORIAL_MUSEUM_ROUTE,
+    ENGINE6_NYC_911_MEMORIAL_MUSEUM_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_AMERICAN_DREAM_4IN1_ROUTE,
+    ENGINE6_NYC_AMERICAN_DREAM_4IN1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_BIG_BUS_EMPIRE_STATE_ROUTE,
+    ENGINE6_NYC_BIG_BUS_EMPIRE_STATE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_BUSTRONOME_GOURMET_ROUTE,
+    ENGINE6_NYC_BUSTRONOME_GOURMET_PRODUCT_CODE,
+  ],
+  [ENGINE6_NYC_BOROUGHS_TOUR_ROUTE, ENGINE6_NYC_BOROUGHS_TOUR_PRODUCT_CODE],
+  [
+    ENGINE6_NYC_MANHATTAN_CART_TOUR_ROUTE,
+    ENGINE6_NYC_MANHATTAN_CART_TOUR_PRODUCT_CODE,
   ],
   [ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE, ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE],
   [

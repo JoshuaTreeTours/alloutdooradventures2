@@ -1,0 +1,26 @@
+{
+  "product": {
+    "productCode": "7195SEPT11",
+    "productUrl": "https://www.viator.com/tours/New-York-City/9-11-Memorial-Museum-Admission/d687-7195SEPT11",
+    "title": "New York City 9/11 Memorial Museum Timed Admission Ticket",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/73/a0/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
