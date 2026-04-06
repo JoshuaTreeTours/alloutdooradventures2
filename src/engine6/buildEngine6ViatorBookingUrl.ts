@@ -15,6 +15,8 @@ const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
     "https://www.viator.com/tours/Fort-Lauderdale/Reef-and-Snorkel-Paddle-Tour/d660-89173P8",
   "5024MANSKY":
     "https://www.viator.com/tours/New-York-City/Manhattan-Sky-Tour-New-York-Helicopter-Flight/d687-5024MANSKY",
+  "2396AMNH":
+    "https://www.viator.com/tours/New-York-City/American-Museum-of-Natural-History/d687-2396AMNH",
 };
 
 const FALLBACK_ENGINE6_VIATOR_SEARCH_URL = "https://www.viator.com/search";
