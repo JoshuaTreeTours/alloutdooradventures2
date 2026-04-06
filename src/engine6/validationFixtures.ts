@@ -48,6 +48,7 @@ import specimen89173p10Payload from "../../data/engine6/viator/89173P10.exact-pr
 import specimen438341p2Payload from "../../data/engine6/viator/438341P2.exact-product.json";
 import specimen5024manskyPayload from "../../data/engine6/viator/5024MANSKY.exact-product.json";
 import specimen103533p1Payload from "../../data/engine6/viator/103533P1.exact-product.json";
+import specimen6288p29Payload from "../../data/engine6/viator/6288P29.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -97,6 +98,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/New-York-Media-Boat-Adventure-Sightseeing-Tour/d687-103533P1",
     rawPayload: specimen103533p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "6288P29",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Sightseeing-Cruise-on-Boutique-Yacht/d687-6288P29",
+    rawPayload: specimen6288p29Payload as Record<string, unknown>,
   },
   {
     productCode: "214880P12",
