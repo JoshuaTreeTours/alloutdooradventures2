@@ -59,6 +59,9 @@ export const ENGINE6_NYC_MET_PRIVATE_TOUR_ROUTE =
 export const ENGINE6_NYC_MEDIA_BOAT_PRODUCT_CODE = "103533P1";
 export const ENGINE6_NYC_MEDIA_BOAT_ROUTE =
   "/destinations/new-york/new-york/tours/manhattan-adventure-sightseeing-boat-tour-from-chelsea-piers-103533p1";
+export const ENGINE6_NYC_BOUTIQUE_YACHT_CRUISE_PRODUCT_CODE = "6288P29";
+export const ENGINE6_NYC_BOUTIQUE_YACHT_CRUISE_ROUTE =
+  "/destinations/new-york/new-york/tours/new-york-city-sunset-or-daytime-sightseeing-cruise";
 export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_PRODUCT_CODE = "5024MANSKY";
 export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_ROUTE =
   "/destinations/new-york/new-york/tours/manhattan-sky-tour-new-york-helicopter-flight";
@@ -225,6 +228,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_PRODUCT_CODE,
   ],
   [ENGINE6_NYC_MEDIA_BOAT_ROUTE, ENGINE6_NYC_MEDIA_BOAT_PRODUCT_CODE],
+  [
+    ENGINE6_NYC_BOUTIQUE_YACHT_CRUISE_ROUTE,
+    ENGINE6_NYC_BOUTIQUE_YACHT_CRUISE_PRODUCT_CODE,
+  ],
   [ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE, ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE],
   [
     ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,

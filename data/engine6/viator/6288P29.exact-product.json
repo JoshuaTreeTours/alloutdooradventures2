@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "6288P29",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Sightseeing-Cruise-on-Boutique-Yacht/d687-6288P29",
+    "title": "New York City Sunset or Daytime Sightseeing Cruise",
+    "description": "Set sail on a 1950s-style yacht for an unforgettable 90-minute sightseeing cruise around New York Harbor. Enjoy stunning sunset views of Manhattan’s skyline, the Statue of Liberty, and other iconic landmarks. Relax on the open bow or covered outdoor deck while sipping a complimentary beverage and nibbling on light hors d'oeuvres. Capture breathtaking photos of New York's most famous landmarks and enjoy this scenic adventure with friends and family.",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$60.08",
+    "reviews": {
+      "combinedAverageRating": "4.9",
+      "totalReviews": "56"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "highlights": [
+      "Cruise along the Hudson River for sweeping views of Manhattan's skyline",
+      "Get up-close views of the Statue of Liberty from the water",
+      "Enjoy a relaxing ambiance on a vintage 1950s-style yacht",
+      "One complimentary beverage and light hors d'oeuvres included"
+    ],
+    "inclusions": [
+      "One complimentary beverage included",
+      "90-minute New York Sightseeing Cruise"
+    ],
+    "exclusions": [
+      "Gratuities (recommended for Captain and crew)",
+      "Additional beverages available for purchase by credit card"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Classic Harbor Line, 62 Chelsea Piers Pier 62, New York, NY 10011, USA. The boat departs from and returns to Chelsea Piers, on Pier 62, which is located at the northern end of the Chelsea Piers Complex. Our ticket booth is located on the water just steps from our dock. Please check in at the Classic Harbor Line ticket booth upon arrival."
+      },
+      "end": {
+        "description": "This activity ends back at the meeting point."
+      }
+    },
+    "itinerarySummary": "Cruise New York Harbor aboard a boutique yacht with skyline views and landmark pass-bys including One World Trade Center, Governors Island, Ellis Island, and the Statue of Liberty.",
+    "itineraryItems": [
+      {
+        "title": "Hudson River",
+        "description": "Pass By"
+      },
+      {
+        "title": "One World Trade Center",
+        "description": "Pass By"
+      },
+      {
+        "title": "Governors Island National Monument",
+        "description": "Pass By"
+      },
+      {
+        "title": "Ellis Island",
+        "description": "Pass By"
+      },
+      {
+        "title": "Statue of Liberty",
+        "description": "Pass By"
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Service animals allowed",
+      "Near public transportation",
+      "Most travelers can participate",
+      "Please arrive 15-20 minutes early! Boarding begins promptly 5 minutes prior to scheduled departure time. The boat will not come back for late arrivals",
+      "Operates in all weather conditions, please dress appropriately",
+      "Only animals that perform a manual task to assist a person are permitted aboard. Emotional support animals and pets are not permitted",
+      "Please let us know in advance if assistance is required for boarding",
+      "Bring a photo ID that matches the name listed on the reservation",
+      "Large group bookings are not permitted. Multiple bookings are subject to added fees or cancellation by operator",
+      "Guests are not permitted to bring aboard alcohol",
+      "This tour/activity will have a maximum of 28 travelers"
+    ],
+    "faq": [
+      {
+        "question": "What is the cancellation policy?",
+        "answer": "You can cancel up to 24 hours in advance of the experience for a full refund."
+      },
+      {
+        "question": "Where does this tour start?",
+        "answer": "The meeting point is Classic Harbor Line, 62 Chelsea Piers Pier 62, New York, NY 10011, USA."
+      }
+    ],
+    "categories": [
+      {
+        "name": "Day Cruises"
+      },
+      {
+        "name": "Sightseeing Cruises"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/5c/62/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            }
+          }
+        }
+      ]
+    }
+  }
+}
