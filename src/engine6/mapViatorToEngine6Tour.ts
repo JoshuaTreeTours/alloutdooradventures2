@@ -1,5 +1,6 @@
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
+import { formatEngine6StartingPriceLabel } from "./priceDisplay";
 import { resolveEngine6PathForProductCode } from "./routes";
 import {
   buildEngine6CanonicalPath,
@@ -81,16 +82,6 @@ const countWords = (value: string) =>
     .trim()
     .split(/\s+/)
     .filter(Boolean).length;
-
-const formatUsdStartingPrice = (amount: number) => {
-  const hasCents = Math.round(amount * 100) % 100 !== 0;
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    minimumFractionDigits: hasCents ? 2 : 0,
-    maximumFractionDigits: hasCents ? 2 : 0,
-  }).format(amount);
-};
 
 const stripMarketingLanguage = (value: string) =>
   value
@@ -287,22 +278,15 @@ export const mapViatorToEngine6Tour = (
     !payload.extracted.meetingPointText ? "meetingPointText" : null,
   ].filter((value): value is string => Boolean(value));
 
-  const formattedStartingPrice =
-    payload.extracted.priceFormatted &&
-    /per\s+group|private/i.test(payload.extracted.priceFormatted)
-      ? payload.extracted.priceFormatted
-      : typeof payload.extracted.priceAmount === "number"
-      ? `Starting at ${formatUsdStartingPrice(payload.extracted.priceAmount)}`
-      : payload.extracted.priceFormatted?.replace(
-            /^From\s+/i,
-            "Starting at "
-          );
+  const formattedStartingPrice = formatEngine6StartingPriceLabel(
+    payload.extracted.priceAmount
+  );
   const overviewText = buildAuthoritativeOverview({
     title,
     city,
     state,
     categoryLabel,
-    durationText: null,
+    durationText: payload.extracted.durationText ?? null,
     highlights,
     itinerary,
     meetingPointText: payload.extracted.meetingPointText ?? null,
@@ -324,11 +308,10 @@ export const mapViatorToEngine6Tour = (
     heroImageUrl: strictResolvedHero.url,
     resolvedHero: strictResolvedHero,
     priceAmount: payload.extracted.priceAmount,
-    priceFormatted: formattedStartingPrice ?? "Check latest price",
+    priceFormatted: formattedStartingPrice,
     aggregateRating,
     reviewCount: payload.extracted.reviewCount,
-    meetingPointText:
-      payload.extracted.meetingPointText ?? "See booking details",
+    meetingPointText: payload.extracted.meetingPointText ?? "See booking details",
     overviewText: overviewText || null,
     highlights,
     itinerary,

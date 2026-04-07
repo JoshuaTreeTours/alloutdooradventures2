@@ -22,6 +22,13 @@ export default function Engine6DebugPanel({ tour }: { tour: Engine6Tour }) {
       aria-label="Engine6 diagnostics"
     >
       <p>
+        <strong>Source product ID:</strong> {tour.productCode}
+      </p>
+      <p>
+        <strong>Source product URL:</strong>{" "}
+        {tour.diagnostics.heroSourceProductUrl ?? "none"}
+      </p>
+      <p>
         <strong>Resolved hero source:</strong> {tour.diagnostics.heroSourceType}
       </p>
       <p>
@@ -72,6 +79,17 @@ export default function Engine6DebugPanel({ tour }: { tour: Engine6Tour }) {
       <p>
         <strong>Price field path:</strong>{" "}
         {tour.diagnostics.commercialPriceFieldPath ?? "none"}
+      </p>
+      <p>
+        <strong>Raw API price value:</strong>{" "}
+        {tour.diagnostics.commercialPriceRawValue ?? "none"}
+      </p>
+      <p>
+        <strong>Displayed price:</strong> {tour.priceFormatted}
+      </p>
+      <p>
+        <strong>Used price fallback:</strong>{" "}
+        {tour.diagnostics.priceSourceUsed === "fallback" ? "yes" : "no"}
       </p>
       <p>
         <strong>Rating field path:</strong>{" "}

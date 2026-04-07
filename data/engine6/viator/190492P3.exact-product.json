@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "190492P3",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Zion-and-Bryce-Canyon-Small-Group-Tour-from-Las-Vegas/d684-190492P3",
+    "title": "Zion and Bryce Canyon Small Group Tour from Las Vegas",
+    "description": "Travel from Las Vegas on a full-day guided tour to two iconic Utah parks. Explore Bryce Canyon's amphitheater viewpoints and continue to Zion National Park for dramatic canyon scenery, interpretive guidance, and photo stops before returning to Las Vegas the same day.",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 199.0,
+        "fromPriceFormatted": "$199.00"
+      }
+    },
+    "duration": "13 hours",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 214
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/ce/d0/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit both Bryce Canyon National Park and Zion National Park in one day from Las Vegas.",
+      "Travel in a small group format with guided commentary and scheduled scenic stops.",
+      "See Bryce Canyon hoodoo viewpoints and Zion's canyon corridor on a single itinerary.",
+      "Round-trip Las Vegas transfer and park logistics are handled for a streamlined day trip."
+    ],
+    "inclusions": [
+      "Round-trip transportation from select Las Vegas pickup points",
+      "Professional driver-guide",
+      "National park entry fees",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Select Las Vegas hotel pickup points are available. Exact pickup location and time are confirmed after booking.",
+      "This is a long day trip; wear comfortable walking shoes and weather-appropriate layers.",
+      "Bring sun protection and a refillable water bottle for desert conditions."
+    ],
+    "meetingPoint": {
+      "description": "Pickup is offered from selected Las Vegas Strip and Downtown hotel points with staggered morning departure windows. Final pickup assignment is provided on booking confirmation and may vary by hotel access restrictions.",
+      "name": "Las Vegas pickup points"
+    },
+    "itineraryItems": [
+      {
+        "title": "Las Vegas Departure",
+        "description": "Early departure from Las Vegas with guided route briefing and comfort stop planning.",
+        "duration": "2 hours"
+      },
+      {
+        "title": "Bryce Canyon National Park",
+        "description": "Arrive at Bryce Canyon for overlooks of the hoodoo amphitheater and guided orientation.",
+        "duration": "2 hours 30 minutes",
+        "admissionNote": "Admission included"
+      },
+      {
+        "title": "Scenic transfer to Zion National Park",
+        "description": "Continue through southern Utah scenery with narration and planned viewpoints en route.",
+        "duration": "1 hour 30 minutes"
+      },
+      {
+        "title": "Zion National Park",
+        "description": "Explore key Zion viewpoints and canyon landmarks with time for photos and short walks.",
+        "duration": "2 hours 30 minutes",
+        "admissionNote": "Admission included"
+      },
+      {
+        "title": "Return to Las Vegas",
+        "description": "Evening return transfer to Las Vegas pickup locations.",
+        "duration": "4 hours"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is hotel pickup included?",
+        "answer": "Pickup is available from select Las Vegas points. Confirm your assigned location and time after booking."
+      },
+      {
+        "question": "How long is the tour?",
+        "answer": "The experience is a full-day trip of approximately 13 hours including transfers."
+      }
+    ],
+    "categories": [
+      "Day Trips",
+      "National Parks"
+    ]
+  }
+}
