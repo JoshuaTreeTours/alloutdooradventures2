@@ -53,6 +53,7 @@ import specimen122012p17Payload from "../../data/engine6/viator/122012P17.exact-
 import specimen474891p3Payload from "../../data/engine6/viator/474891P3.exact-product.json";
 import specimen5515296p1Payload from "../../data/engine6/viator/5515296P1.exact-product.json";
 import specimen428219p6Payload from "../../data/engine6/viator/428219P6.exact-product.json";
+import specimen77348p8Payload from "../../data/engine6/viator/77348P8.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -132,6 +133,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/Chinatown-and-Little-Italy-Food-Tour/d687-428219P6",
     rawPayload: specimen428219p6Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "77348P8",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/American-Dream-One-Day-Dreamworks-Waterpark-Pass-Bundle/d687-77348P8",
+    rawPayload: specimen77348p8Payload as Record<string, unknown>,
   },
   {
     productCode: "214880P12",

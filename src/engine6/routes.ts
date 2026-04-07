@@ -75,6 +75,9 @@ export const ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_PRODUCT_CODE =
   "428219P6";
 export const ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_ROUTE =
   "/destinations/new-york/new-york/tours/chinatown-and-little-italy-food-tour-428219p6";
+export const ENGINE6_NYC_AMERICAN_DREAM_BUNDLE_PRODUCT_CODE = "77348P8";
+export const ENGINE6_NYC_AMERICAN_DREAM_BUNDLE_ROUTE =
+  "/destinations/new-york/new-york/tours/american-dream-one-day-fun-day-dreamworks-waterpark-4-in-1-pass";
 export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_PRODUCT_CODE = "5024MANSKY";
 export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_ROUTE =
   "/destinations/new-york/new-york/tours/manhattan-sky-tour-new-york-helicopter-flight";
@@ -260,6 +263,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_ROUTE,
     ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_AMERICAN_DREAM_BUNDLE_ROUTE,
+    ENGINE6_NYC_AMERICAN_DREAM_BUNDLE_PRODUCT_CODE,
   ],
   [ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE, ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE],
   [
