@@ -1,0 +1,79 @@
+{
+  "product": {
+    "productCode": "3533RRC",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-Luxury-Tour-Trekker-Experience/d684-3533RRC",
+    "title": "Red Rock Canyon Luxury Tour Trekker Experience",
+    "description": "Travel in premium Trekker-style comfort from Las Vegas to Red Rock Canyon with a luxury-forward format focused on scenic access and expert interpretation. The route follows the conservation area's signature loop and major geological overlooks so travelers get both elevated comfort and meaningful desert context.",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": "$139.00",
+    "duration": "4 hours",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 66
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/f0/2e/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Luxury Trekker vehicle format with guide-led interpretation.",
+      "Drive the Red Rock Canyon Scenic Loop with curated stops.",
+      "See layered sandstone geology and Mojave vistas just outside Las Vegas."
+    ],
+    "meetingPoint": {
+      "address": "Las Vegas hotel pickup corridor (final pickup details confirmed by operator)."
+    },
+    "itineraryItems": [
+      {
+        "title": "Luxury Trekker Pickup in Las Vegas",
+        "description": "Board a premium Trekker vehicle and review the day's route, safety notes, and geology focus.",
+        "duration": "30 minutes",
+        "admissionNote": "Free admission"
+      },
+      {
+        "title": "Red Rock Canyon Scenic Loop",
+        "description": "Travel the scenic loop road with guided interpretation of Aztec Sandstone, faulting, and Mojave ecology.",
+        "duration": "90 minutes",
+        "admissionNote": "Admission ticket included"
+      },
+      {
+        "title": "Calico Hills / Overlook Stop",
+        "description": "Pause for panoramic views and short walks to appreciate layered red formations.",
+        "duration": "40 minutes",
+        "admissionNote": "Admission ticket included"
+      },
+      {
+        "title": "Visitor Area and Return",
+        "description": "Complete the circuit with final photo opportunities before returning to Las Vegas.",
+        "duration": "60 minutes",
+        "admissionNote": "Admission ticket included"
+      }
+    ],
+    "inclusions": [
+      "Luxury Trekker transport",
+      "Guide commentary",
+      "Red Rock Canyon entry"
+    ],
+    "additionalInfo": [
+      "Comfortable walking shoes recommended"
+    ],
+    "categories": [
+      {
+        "name": "Luxury Tours"
+      }
+    ]
+  }
+}

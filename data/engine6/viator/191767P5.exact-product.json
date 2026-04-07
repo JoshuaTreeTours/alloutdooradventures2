@@ -1,0 +1,85 @@
+{
+  "product": {
+    "productCode": "191767P5",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Valley-Of-Fire-Best-Offroad-Adventure/d684-191767P5",
+    "title": "Valley Of Fire Best Offroad Adventure",
+    "description": "Explore rugged desert terrain on an off-road-focused Valley of Fire adventure from Las Vegas. This experience emphasizes geological textures, remote access, and exploratory pacing with key stops at landmark formations such as Elephant Rock, Rainbow Vista, and petroglyph viewing areas when available.",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": "$189.00",
+    "duration": "6 hours",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 53
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/be/ac/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Off-road adventure format through Valley of Fire terrain.",
+      "Visit Elephant Rock, Rainbow Vista, and major geologic viewpoints.",
+      "Interpretive focus on desert geology, erosion patterns, and ancient petroglyph traces."
+    ],
+    "meetingPoint": {
+      "address": "Las Vegas departure zone with operator-confirmed pickup details."
+    },
+    "itineraryItems": [
+      {
+        "title": "Desert Departure and Offroad Briefing",
+        "description": "Meet your guide, review terrain strategy, and head toward Valley of Fire from Las Vegas.",
+        "duration": "45 minutes",
+        "admissionNote": "Free admission"
+      },
+      {
+        "title": "Elephant Rock Stop",
+        "description": "Walk short distances around the sandstone arch-like formation and learn about erosional shaping.",
+        "duration": "30 minutes",
+        "admissionNote": "Admission ticket included"
+      },
+      {
+        "title": "Rainbow Vista Overlook",
+        "description": "Take in broad striped rock panoramas with guide explanation of color bands and mineral composition.",
+        "duration": "35 minutes",
+        "admissionNote": "Admission ticket included"
+      },
+      {
+        "title": "Petroglyph Viewing Area",
+        "description": "Visit selected rock art panels when access conditions allow and discuss regional cultural history.",
+        "duration": "30 minutes",
+        "admissionNote": "Admission ticket included"
+      },
+      {
+        "title": "Offroad Exploration Segment",
+        "description": "Continue through rugged sections for remote perspectives before returning to Las Vegas.",
+        "duration": "80 minutes",
+        "admissionNote": "Admission ticket included"
+      }
+    ],
+    "inclusions": [
+      "Off-road transport and guide",
+      "Valley of Fire park entry",
+      "Curated geological stop sequence"
+    ],
+    "additionalInfo": [
+      "Terrain can be bumpy; not recommended for travelers with serious back issues"
+    ],
+    "categories": [
+      {
+        "name": "4WD Tours"
+      }
+    ]
+  }
+}

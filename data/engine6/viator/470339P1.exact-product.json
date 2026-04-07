@@ -1,0 +1,86 @@
+{
+  "product": {
+    "productCode": "470339P1",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Giant-Shopping-Cart-Limo-Ride-in-Las-Vegas/d684-470339P1",
+    "title": "Giant Shopping Cart Limo Ride in Las Vegas",
+    "description": "Ride Las Vegas in a giant shopping cart limo designed for fun photo moments and novelty group energy. Cruise iconic Strip corridors with your guide while passing Bellagio Fountains, the Welcome to Fabulous Las Vegas Sign, and other neon-heavy landmarks that define the city skyline.",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": "$49.00",
+    "duration": "1 hour 30 minutes",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 41
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/c5/05/9d/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ride the Las Vegas Strip in a giant shopping-cart-shaped limousine.",
+      "Pass Bellagio Fountains, major resort fronts, and the Welcome to Fabulous Las Vegas sign.",
+      "Guided novelty experience focused on fun city views and group photos."
+    ],
+    "meetingPoint": {
+      "address": "Las Vegas Strip pickup area (exact hotel zone confirmed after booking)."
+    },
+    "itineraryItems": [
+      {
+        "title": "Las Vegas Strip Departure",
+        "description": "Meet your guide and board the giant shopping cart limo for safety orientation and route briefing.",
+        "duration": "15 minutes",
+        "admissionNote": "Free admission"
+      },
+      {
+        "title": "Bellagio Fountains Corridor",
+        "description": "Cruise past Bellagio and surrounding mega-resorts while your guide points out iconic Strip landmarks.",
+        "duration": "30 minutes",
+        "admissionNote": "Free admission"
+      },
+      {
+        "title": "Welcome to Fabulous Las Vegas Sign",
+        "description": "Stop for classic sign photos and short commentary on Vegas history and pop-culture identity.",
+        "duration": "20 minutes",
+        "admissionNote": "Free admission"
+      },
+      {
+        "title": "South Strip Return Loop",
+        "description": "Continue the novelty ride through major casino corridors before drop-off.",
+        "duration": "25 minutes",
+        "admissionNote": "Free admission"
+      }
+    ],
+    "inclusions": [
+      "Guided giant shopping cart limo ride",
+      "Driver-guide commentary",
+      "Photo stops at major landmarks"
+    ],
+    "additionalInfo": [
+      "Not wheelchair accessible",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "Is this a regular city tour bus?",
+        "answer": "No. This is a novelty giant shopping cart limo ride built around fun Strip cruising and photo moments."
+      }
+    ],
+    "categories": [
+      {
+        "name": "Sightseeing Tours"
+      }
+    ]
+  }
+}
