@@ -1,0 +1,126 @@
+{
+  "product": {
+    "productCode": "3533P14",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-with-Rocky-Gap-4x4-Adventure/d684-3533P14",
+    "title": "Red Rock Canyon with Rocky Gap 4x4 Adventure",
+    "description": "Travel from Las Vegas into Red Rock Canyon and continue into the Rocky Gap backcountry for a route that blends scenic interpretation with technical 4x4 terrain. The itinerary emphasizes key sandstone viewpoints, geology context, and the rougher Rocky Gap section that distinguishes this trip from standard scenic-drive alternatives.",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": "$149.00",
+    "duration": "4 hours",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 921
+    },
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/f0/a9/caption.jpg?w=700&h=500&s=1",
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/f0/a9/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Combined Red Rock Canyon sightseeing and Rocky Gap 4x4 route in one guided outing.",
+      "Geology-focused commentary on Aztec sandstone layers and desert erosion patterns.",
+      "Multiple scenic pullouts for named viewpoints and photo stops.",
+      "Small-group pacing with dedicated off-road segment beyond standard scenic loops."
+    ],
+    "inclusions": [
+      "4x4 transportation",
+      "Professional guide",
+      "Park entry fees",
+      "Bottled water"
+    ],
+    "exclusions": [
+      "Guide gratuity (optional)",
+      "Meals"
+    ],
+    "additionalInfo": [
+      "Terrain can be bumpy during the Rocky Gap segment.",
+      "Bring sun protection and weather-appropriate layers.",
+      "Pickup timing depends on selected departure and hotel access restrictions.",
+      "Not recommended for travelers with back injuries."
+    ],
+    "meetingAndPickup": {
+      "meetingPoint": {
+        "description": "Pickup available at select Las Vegas Strip hotels with exact pickup points and times confirmed after booking.",
+        "name": "Select Las Vegas Strip hotel pickup points"
+      }
+    },
+    "itinerary": {
+      "days": [
+        {
+          "dayTitle": "Departure and entry",
+          "items": [
+            {
+              "title": "Las Vegas pickup and departure",
+              "description": "Depart from your assigned Las Vegas pickup point and travel toward the Red Rock Canyon area.",
+              "duration": "45 minutes"
+            },
+            {
+              "title": "Red Rock Canyon Scenic Loop entry",
+              "description": "Enter the conservation area and begin guided narration on Mojave Desert ecology and sandstone geology.",
+              "duration": "20 minutes"
+            }
+          ]
+        },
+        {
+          "dayTitle": "Red Rock Canyon viewpoints",
+          "items": [
+            {
+              "title": "Calico Hills overview",
+              "description": "Stop for views of layered red and cream sandstone formations and fault-line tilting patterns.",
+              "duration": "20 minutes"
+            },
+            {
+              "title": "High Point Overlook",
+              "description": "Pause at one of the scenic loop's broadest lookouts for photos over the Red Rock escarpment.",
+              "duration": "15 minutes"
+            },
+            {
+              "title": "Willow Springs area",
+              "description": "Interpretive stop focused on native plants, petroglyph context, and desert adaptation.",
+              "duration": "20 minutes"
+            }
+          ]
+        },
+        {
+          "dayTitle": "Rocky Gap 4x4 segment",
+          "items": [
+            {
+              "title": "Rocky Gap trailhead",
+              "description": "Transition from paved scenic roads to rougher 4x4 terrain with guide-led speed management.",
+              "duration": "15 minutes"
+            },
+            {
+              "title": "Rocky Gap wash and ledge route",
+              "description": "Navigate uneven wash crossings and rocky shelves that define the dedicated off-road section.",
+              "duration": "35 minutes"
+            },
+            {
+              "title": "Return toward Las Vegas",
+              "description": "Exit Rocky Gap and transfer back to Las Vegas pickup areas.",
+              "duration": "50 minutes"
+            }
+          ]
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Does this tour include both Red Rock Canyon and Rocky Gap?",
+        "answer": "Yes. The route includes scenic Red Rock Canyon viewpoints plus a separate Rocky Gap 4x4 terrain segment."
+      }
+    ],
+    "categories": ["4WD Tours", "Nature and Wildlife Tours"]
+  }
+}

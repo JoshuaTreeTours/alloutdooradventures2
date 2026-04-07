@@ -22,6 +22,8 @@ export type Engine6SpecimenDebug = {
   itineraryFieldPath: string | null;
   itineraryItemCount: number | null;
   itinerarySourceUsed: string | null;
+  itineraryStructuredSourceUsed: boolean | null;
+  itineraryFallbackSummaryUsed: boolean | null;
   faqsFieldPath: string | null;
   faqCount: number | null;
   faqSourceUsed: string | null;
@@ -85,6 +87,8 @@ export const buildInitialEngine6SpecimenDebug = (
   itineraryFieldPath: null,
   itineraryItemCount: null,
   itinerarySourceUsed: null,
+  itineraryStructuredSourceUsed: null,
+  itineraryFallbackSummaryUsed: null,
   faqsFieldPath: null,
   faqCount: null,
   faqSourceUsed: null,
@@ -196,6 +200,22 @@ export const resolveEngine6SpecimenResponse = ({
         .itinerarySourceUsed === "string"
         ? ((payload.diagnostics as Record<string, unknown>)
             .itinerarySourceUsed as string)
+        : null,
+    itineraryStructuredSourceUsed:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .itineraryStructuredSourceUsed === "boolean"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .itineraryStructuredSourceUsed as boolean)
+        : null,
+    itineraryFallbackSummaryUsed:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .itineraryFallbackSummaryUsed === "boolean"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .itineraryFallbackSummaryUsed as boolean)
         : null,
     faqsFieldPath:
       typeof payload.diagnostics === "object" &&
@@ -523,8 +543,32 @@ const Engine6SpecimenDiagnostics = ({
             <dd>{debug.itinerarySourceUsed ?? "none"}</dd>
           </div>
           <div>
+            <dt className="font-medium text-slate-900">
+              Structured itinerary found
+            </dt>
+            <dd>
+              {debug.itineraryStructuredSourceUsed === null
+                ? "unknown"
+                : debug.itineraryStructuredSourceUsed
+                  ? "yes"
+                  : "no"}
+            </dd>
+          </div>
+          <div>
             <dt className="font-medium text-slate-900">Itinerary count</dt>
             <dd>{debug.itineraryItemCount ?? 0}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">
+              Fallback summary mode
+            </dt>
+            <dd>
+              {debug.itineraryFallbackSummaryUsed === null
+                ? "unknown"
+                : debug.itineraryFallbackSummaryUsed
+                  ? "yes"
+                  : "no"}
+            </dd>
           </div>
           <div>
             <dt className="font-medium text-slate-900">FAQs path</dt>

@@ -1,6 +1,7 @@
 export type Engine6ItineraryItem = {
   title: string;
   stopType?: "stop" | "pass-by";
+  sectionLabel?: string;
   description?: string;
   duration?: string;
   admissionNote?: string;
@@ -81,6 +82,8 @@ export type Engine6TourDiagnostics = {
   itineraryFieldPath: string | null;
   itineraryItemCount: number;
   itinerarySourceUsed: string | null;
+  itineraryStructuredSourceUsed?: boolean;
+  itineraryFallbackSummaryUsed?: boolean;
   itinerarySummaryFieldPath?: string | null;
   faqsFieldPath: string | null;
   faqFieldPath: string | null;

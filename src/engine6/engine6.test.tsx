@@ -143,15 +143,24 @@ const countStructuredSourceStops = (
   rawPayload: Record<string, unknown>
 ): number => {
   const payload = rawPayload as Record<string, unknown>;
+  const itinerary = payload.itinerary as Record<string, unknown> | undefined;
   const itineraryItems = Array.isArray(payload.itineraryItems)
     ? (payload.itineraryItems as unknown[])
-    : Array.isArray(
-          (payload.itinerary as Record<string, unknown> | undefined)
-            ?.itineraryItems
-        )
-      ? ((payload.itinerary as Record<string, unknown>)
-          .itineraryItems as unknown[])
-      : [];
+    : Array.isArray(itinerary?.itineraryItems)
+      ? (itinerary.itineraryItems as unknown[])
+      : Array.isArray(itinerary?.items)
+        ? (itinerary.items as unknown[])
+        : Array.isArray(itinerary?.days)
+          ? (itinerary.days as unknown[]).flatMap(day => {
+              if (!day || typeof day !== "object") return [];
+              const row = day as Record<string, unknown>;
+              return Array.isArray(row.items)
+                ? (row.items as unknown[])
+                : Array.isArray(row.stops)
+                  ? (row.stops as unknown[])
+                  : [];
+            })
+          : [];
 
   return itineraryItems.filter(item => {
     if (!item || typeof item !== "object") {
@@ -341,6 +350,44 @@ describe("engine6 extractor", () => {
         }),
       ])
     );
+  });
+
+  it("prefers structured day itinerary fields and preserves section labels", () => {
+    const extracted = extractEngine6Product({
+      product: {
+        productCode: "DAYTEST1",
+        productUrl: "https://www.viator.com/tours/Test/d1-DAYTEST1",
+        title: "Structured itinerary test",
+        media: specimenProductPayload.product.media,
+        itinerary: {
+          days: [
+            {
+              dayTitle: "Day 1",
+              items: [
+                { title: "Stop A", description: "A details" },
+                { title: "Stop B", description: "B details" },
+              ],
+            },
+            {
+              dayTitle: "Day 2",
+              items: [{ title: "Stop C", description: "C details" }],
+            },
+          ],
+        },
+        itinerarySummary: "Generic summary should not be primary when days exist.",
+      },
+    });
+
+    expect(extracted.diagnostics.itineraryFieldPath).toBe("product.itinerary.days");
+    expect(extracted.diagnostics.itineraryStructuredSourceUsed).toBe(true);
+    expect(extracted.diagnostics.itineraryFallbackSummaryUsed).toBe(false);
+    expect(extracted.extracted.itinerary.map(item => item.title)).toEqual([
+      "Stop A",
+      "Stop B",
+      "Stop C",
+    ]);
+    expect(extracted.extracted.itinerary[0]?.sectionLabel).toBe("Day 1");
+    expect(extracted.extracted.itinerary[2]?.sectionLabel).toBe("Day 2");
   });
 
   it("renders no image only when product API imagery is absent", () => {

@@ -315,41 +315,53 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
 
         {tour.itinerary.length > 0 ? (
           <ContentSection title="Itinerary">
-            <ul className="space-y-4" data-testid="engine6-itinerary-timeline">
-              {tour.itinerary.map((item, index) => (
-                <li
-                  key={`${item.title}-${index}`}
-                  className="rounded-xl border border-green-100 bg-green-50/60 p-5"
-                  data-testid="engine6-itinerary-item"
-                >
-                  <div className="flex flex-wrap items-start justify-between gap-2">
-                    <div className="space-y-2">
-                      <span className="inline-flex rounded-full border border-green-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-green-800">
-                        {getItineraryStopType(item)}
-                      </span>
-                      <p className="text-lg font-semibold text-green-900">
-                        {item.title}
+            <div data-testid="engine6-itinerary-timeline" className="space-y-6">
+              {tour.itinerary.map((item, index) => {
+                const shouldRenderSectionLabel =
+                  Boolean(item.sectionLabel) &&
+                  item.sectionLabel !== tour.itinerary[index - 1]?.sectionLabel;
+
+                return (
+                  <div key={`${item.title}-${index}`} className="space-y-3">
+                    {shouldRenderSectionLabel ? (
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-green-700">
+                        {item.sectionLabel}
                       </p>
-                    </div>
-                    {item.duration ? (
-                      <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-800">
-                        {item.duration}
-                      </span>
                     ) : null}
+                    <div
+                      className="rounded-xl border border-green-100 bg-green-50/60 p-5"
+                      data-testid="engine6-itinerary-item"
+                    >
+                      <div className="flex flex-wrap items-start justify-between gap-2">
+                        <div className="space-y-2">
+                          <span className="inline-flex rounded-full border border-green-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-green-800">
+                            {getItineraryStopType(item)}
+                          </span>
+                          <p className="text-lg font-semibold text-green-900">
+                            {item.title}
+                          </p>
+                        </div>
+                        {item.duration ? (
+                          <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-800">
+                            {item.duration}
+                          </span>
+                        ) : null}
+                      </div>
+                      {item.description ? (
+                        <p className="mt-3 text-sm leading-6 text-slate-700">
+                          {item.description}
+                        </p>
+                      ) : null}
+                      {item.admissionNote ? (
+                        <p className="mt-3 inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-800">
+                          {item.admissionNote}
+                        </p>
+                      ) : null}
+                    </div>
                   </div>
-                  {item.description ? (
-                    <p className="mt-3 text-sm leading-6 text-slate-700">
-                      {item.description}
-                    </p>
-                  ) : null}
-                  {item.admissionNote ? (
-                    <p className="mt-3 inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-800">
-                      {item.admissionNote}
-                    </p>
-                  ) : null}
-                </li>
-              ))}
-            </ul>
+                );
+              })}
+            </div>
           </ContentSection>
         ) : tour.itinerarySummaryText ? (
           <ContentSection title="Itinerary summary">

@@ -1,4 +1,5 @@
 import type { Engine6Tour } from "../types";
+import { formatEngine6StartingPriceLabel } from "../priceDisplay";
 import { resolveLegacyFhCommercialConfidenceReason } from "./commercialConfidence";
 import type { LegacyFhMigratedProductRecord } from "./types";
 
@@ -12,7 +13,8 @@ export const mapLegacyFhRecordToEngine6Tour = (
   }
 
   const [, stateSlug = "", citySlug = ""] =
-    /^\/destinations\/([^/]+)\/([^/]+)\/tours\//.exec(record.canonicalPath) ?? [];
+    /^\/destinations\/([^/]+)\/([^/]+)\/tours\//.exec(record.canonicalPath) ??
+    [];
   const city = citySlug
     .split("-")
     .map(part => part.charAt(0).toUpperCase() + part.slice(1))
@@ -43,32 +45,31 @@ export const mapLegacyFhRecordToEngine6Tour = (
   const shouldUseViatorCommercial =
     shouldUseMatchedViatorCommercial && hasViatorCommercialValues;
   const resolvedPriceAmount = shouldUseViatorCommercial
-    ? record.matchedViatorCommercial?.priceAmount ?? null
+    ? (record.matchedViatorCommercial?.priceAmount ?? null)
     : record.priceSnapshot.amount;
   const resolvedAggregateRating = shouldUseViatorCommercial
-    ? record.matchedViatorCommercial?.aggregateRating ?? null
+    ? (record.matchedViatorCommercial?.aggregateRating ?? null)
     : record.ratingSnapshot.rating;
   const resolvedReviewCount = shouldUseViatorCommercial
-    ? record.matchedViatorCommercial?.reviewCount ?? null
+    ? (record.matchedViatorCommercial?.reviewCount ?? null)
     : record.ratingSnapshot.reviewCount;
   const resolvedPriceLabel = shouldUseViatorCommercial
-    ? typeof resolvedPriceAmount === "number"
-      ? `Starting at $${resolvedPriceAmount.toFixed(0)}`
-      : "Check latest price"
-    : record.priceSnapshot.label ??
-      (typeof record.priceSnapshot.amount === "number"
-        ? `Starting at $${record.priceSnapshot.amount.toFixed(0)}`
-        : "Check latest price");
+    ? formatEngine6StartingPriceLabel(resolvedPriceAmount)
+    : typeof record.priceSnapshot.amount === "number"
+      ? formatEngine6StartingPriceLabel(record.priceSnapshot.amount)
+      : "Check latest price";
 
   return {
     productCode: `fh-${record.slug}`,
     title: record.title,
     seoTitle: `${record.title} | ${record.sourceType.replaceAll("_", " ")}`,
     seoDescription:
-      overviewText?.slice(0, 155) ?? `Book ${record.title} in ${city} with local guides.`,
+      overviewText?.slice(0, 155) ??
+      `Book ${record.title} in ${city} with local guides.`,
     description: overviewText ?? record.title,
     metaDescription:
-      overviewText?.slice(0, 155) ?? `Book ${record.title} in ${city} with local guides.`,
+      overviewText?.slice(0, 155) ??
+      `Book ${record.title} in ${city} with local guides.`,
     city: city || "Destination",
     state: state || "State",
     resolvedImageUrl: record.heroImageUrl,
@@ -111,7 +112,9 @@ export const mapLegacyFhRecordToEngine6Tour = (
       source: "legacy-fh-migrated",
       commercialConfidenceReason,
       viatorCommercialFieldsUsed: shouldUseViatorCommercial,
-      commercialSourceWinner: shouldUseViatorCommercial ? "viator" : "fareharbor",
+      commercialSourceWinner: shouldUseViatorCommercial
+        ? "viator"
+        : "fareharbor",
       commercialPriceFieldPath: shouldUseViatorCommercial
         ? `matchedViatorCommercial.priceAmount:${record.matchedViatorCommercial?.productCode ?? "unknown"}`
         : "legacy.price",

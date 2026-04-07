@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "13920P12",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Off-Road-Las-Vegas/d684-13920P12",
+    "title": "Off Road Las Vegas Tour",
+    "description": "Leave pavement behind on a guided off-road route in the Las Vegas desert with pre-ride orientation, terrain briefings, and staged scenic stops. This experience focuses on technical trail variety including sandy washes, rocky ledges, and open desert sections while maintaining a guide-led pace appropriate for mixed experience levels.",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": "$189.50",
+    "duration": "4 hours",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 497
+    },
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/c5/13/caption.jpg?w=700&h=500&s=1",
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/c5/13/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guide-led off-road route through Las Vegas desert terrain with changing surface conditions.",
+      "Pre-ride safety and equipment briefing before entering technical trail zones.",
+      "Route includes washes, rocky rises, and panoramic ridge viewpoints.",
+      "Pacing and staging support for mixed rider experience levels."
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Safety orientation and trail briefing",
+      "Off-road vehicle experience",
+      "Helmet and required safety gear"
+    ],
+    "exclusions": [
+      "Optional gratuities",
+      "Food and personal purchases"
+    ],
+    "additionalInfo": [
+      "Closed-toe shoes are required.",
+      "Bring sun protection and water for desert conditions.",
+      "Driver-license requirements vary by selected vehicle option.",
+      "Minimum participant age and height restrictions may apply by vehicle class."
+    ],
+    "meetingAndPickup": {
+      "meetingPoint": {
+        "description": "Meeting point details are provided after booking; select Las Vegas pickup locations may be available depending on option.",
+        "name": "Las Vegas off-road staging area"
+      }
+    },
+    "itinerary": {
+      "days": [
+        {
+          "dayTitle": "Orientation and setup",
+          "items": [
+            {
+              "title": "Basecamp check-in",
+              "description": "Arrive at the staging area, complete waiver check-in, and get fitted for required safety gear.",
+              "duration": "20 minutes"
+            },
+            {
+              "title": "Safety briefing and controls walkthrough",
+              "description": "Guide covers hand signals, convoy spacing, throttle/brake control, and trail etiquette before departure.",
+              "duration": "20 minutes"
+            }
+          ]
+        },
+        {
+          "dayTitle": "Desert route segment",
+          "items": [
+            {
+              "title": "Sandy wash approach",
+              "description": "Start through broad wash terrain to practice steering and traction in soft surface conditions.",
+              "duration": "35 minutes"
+            },
+            {
+              "title": "Rock garden and ledge section",
+              "description": "Progress to technical rocky terrain with slow-speed guide support through uneven ledges.",
+              "duration": "30 minutes"
+            },
+            {
+              "title": "High-desert ridgeline overlook",
+              "description": "Pause at elevated viewpoints for photos and terrain interpretation before descending.",
+              "duration": "20 minutes"
+            },
+            {
+              "title": "Open desert return loop",
+              "description": "Finish with a faster-paced open section back toward base, adjusted for group comfort.",
+              "duration": "35 minutes"
+            }
+          ]
+        },
+        {
+          "dayTitle": "Wrap-up",
+          "items": [
+            {
+              "title": "Vehicle return and debrief",
+              "description": "Return equipment, review route highlights, and receive post-ride recommendations.",
+              "duration": "20 minutes"
+            }
+          ]
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Is this suitable for first-time off-road riders?",
+        "answer": "Yes. The experience starts with a safety and controls briefing, and the guide adjusts pacing to group comfort."
+      }
+    ],
+    "categories": ["4WD Tours", "Adventure Tours"]
+  }
+}

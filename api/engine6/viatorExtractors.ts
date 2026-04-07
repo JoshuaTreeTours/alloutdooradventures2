@@ -57,6 +57,8 @@ export type Engine6DiagnosticsPaths = {
   itineraryFieldPath: string | null;
   itineraryItemCount: number;
   itinerarySourceUsed: string | null;
+  itineraryStructuredSourceUsed?: boolean;
+  itineraryFallbackSummaryUsed?: boolean;
   itinerarySummaryFieldPath: string | null;
   meetingPointFieldPath: string | null;
   meetingPointRawText: string | null;
@@ -77,6 +79,7 @@ export type Engine6ExtractedFaq = {
 export type Engine6ExtractedItineraryItem = {
   title: string;
   stopType?: "stop" | "pass-by";
+  sectionLabel?: string;
   description?: string;
   duration?: string;
   admissionNote?: string;
@@ -139,6 +142,7 @@ type NumericResult = {
 type ItineraryResult = {
   value: Engine6ExtractedItineraryItem[];
   path: string;
+  structuredSourceUsed: boolean;
 };
 
 const asRecord = (value: unknown): RecordLike | null =>
@@ -830,13 +834,29 @@ const normalizeSingleItineraryItem = (
 };
 
 const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
-  const collectNestedStopRows = (value: unknown): unknown[] => {
+  const collectNestedStopRows = (
+    value: unknown,
+    inheritedSectionLabel?: string
+  ): Array<{ row: RecordLike; sectionLabel: string | null }> => {
     if (!value) return [];
     if (Array.isArray(value)) {
-      return value.flatMap(item => collectNestedStopRows(item));
+      return value.flatMap(item =>
+        collectNestedStopRows(item, inheritedSectionLabel)
+      );
     }
+
     const row = asRecord(value);
     if (!row) return [];
+
+    const sectionLabel =
+      asNonEmptyString(row.dayTitle) ??
+      asNonEmptyString(row.dayLabel) ??
+      asNonEmptyString(row.dayName) ??
+      asNonEmptyString(row.sectionTitle) ??
+      asNonEmptyString(row.segmentTitle) ??
+      inheritedSectionLabel ??
+      null;
+
     const looksLikeStopRow =
       asNonEmptyString(row.title) ||
       asNonEmptyString(row.name) ||
@@ -860,28 +880,52 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
       row.itineraryDays,
     ];
 
-    const nestedRows = nested.flatMap(item => collectNestedStopRows(item));
-    return looksLikeStopRow ? [row, ...nestedRows] : nestedRows;
+    const nestedRows = nested.flatMap(item =>
+      collectNestedStopRows(item, sectionLabel ?? inheritedSectionLabel)
+    );
+
+    if (!looksLikeStopRow) {
+      return nestedRows;
+    }
+
+    return [{ row, sectionLabel: inheritedSectionLabel ?? null }, ...nestedRows];
   };
 
   const normalizeItinerary = (
     value: unknown
   ): Engine6ExtractedItineraryItem[] => {
     const rows = collectNestedStopRows(value);
-
     if (!Array.isArray(rows)) {
       return [];
     }
 
+    const seen = new Set<string>();
     return rows
       .map(item => {
-        const row = asRecord(item);
-        return row ? normalizeSingleItineraryItem(row) : null;
+        const parsed = normalizeSingleItineraryItem(item.row);
+        if (!parsed) return null;
+
+        const dedupeKey = [
+          parsed.title.toLowerCase(),
+          (parsed.description ?? "").toLowerCase(),
+          (parsed.duration ?? "").toLowerCase(),
+          parsed.stopType ?? "stop",
+          (item.sectionLabel ?? "").toLowerCase(),
+        ].join("|");
+
+        if (seen.has(dedupeKey)) {
+          return null;
+        }
+        seen.add(dedupeKey);
+
+        return item.sectionLabel
+          ? { ...parsed, sectionLabel: item.sectionLabel }
+          : parsed;
       })
       .filter((item): item is Engine6ExtractedItineraryItem => Boolean(item));
   };
 
-  for (const path of [
+  const structuredPaths: PathSegment[][] = [
     ["itineraryItems"],
     ["itinerary", "itineraryItems"],
     ["itinerary", "items"],
@@ -890,17 +934,41 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
     ["itinerary", "dayPlans"],
     ["itinerary", "itineraryDays"],
     ["itinerary", "locations"],
-    ["itinerary"],
     ["whatToExpect", "items"],
     ["whatToExpect", "stops"],
-  ] as PathSegment[][]) {
+    ["whatToExpect", "days"],
+    ["whatToExpect", "itineraryDays"],
+    ["structuredItinerary", "days"],
+    ["structuredItinerary", "items"],
+  ];
+
+  for (const path of structuredPaths) {
     const value = normalizeItinerary(readPath(product, path));
     if (value.length > 0) {
-      return { value, path: formatFieldPath(path) };
+      return {
+        value,
+        path: formatFieldPath(path),
+        structuredSourceUsed: true,
+      };
     }
   }
 
-  return { value: [], path: "product.itineraryItems" };
+  for (const path of [["itinerary"], ["whatToExpect"]] as PathSegment[][]) {
+    const value = normalizeItinerary(readPath(product, path));
+    if (value.length > 0) {
+      return {
+        value,
+        path: formatFieldPath(path),
+        structuredSourceUsed: false,
+      };
+    }
+  }
+
+  return {
+    value: [],
+    path: "product.itineraryItems",
+    structuredSourceUsed: false,
+  };
 };
 
 const extractItinerarySummary = (product: RecordLike) => {
@@ -956,6 +1024,14 @@ const extractMeetingPoint = (product: RecordLike) => {
     {
       value: asRecord(asRecord(product.logistics)?.start)?.description,
       path: "product.logistics.start.description",
+    },
+    {
+      value: asRecord(asRecord(product.meetingAndPickup)?.meetingPoint)?.description,
+      path: "product.meetingAndPickup.meetingPoint.description",
+    },
+    {
+      value: asRecord(asRecord(product.meetingAndPickup)?.meetingPoint)?.name,
+      path: "product.meetingAndPickup.meetingPoint.name",
     },
     {
       value: asRecord(product.meetingPoint)?.description,
@@ -1227,6 +1303,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     itineraryFieldPath: null,
     itineraryItemCount: 0,
     itinerarySourceUsed: null,
+    itineraryStructuredSourceUsed: false,
+    itineraryFallbackSummaryUsed: false,
     itinerarySummaryFieldPath: null,
     meetingPointFieldPath: null,
     meetingPointRawText: null,
@@ -1350,9 +1428,13 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.itineraryItemCount = itinerary.value.length;
   diagnostics.itinerarySourceUsed =
     itinerary.value.length > 0 ? itinerary.path : null;
+  diagnostics.itineraryStructuredSourceUsed =
+    itinerary.value.length > 0 && itinerary.structuredSourceUsed;
 
   const itinerarySummary = extractItinerarySummary(product);
   diagnostics.itinerarySummaryFieldPath = itinerarySummary.path;
+  diagnostics.itineraryFallbackSummaryUsed =
+    itinerary.value.length === 0 && Boolean(itinerarySummary.value);
 
   const requirements = extractRequirements(product);
   diagnostics.requirementsFieldPath = requirements.path;
