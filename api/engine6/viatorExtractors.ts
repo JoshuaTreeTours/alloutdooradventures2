@@ -234,6 +234,17 @@ const parseLooseNumber = (value: unknown): number | null => {
 };
 
 const parsePriceAmount = (value: unknown): number | null => {
+  const objectValue = asRecord(value);
+  if (objectValue) {
+    const nestedAmount =
+      parsePriceAmount(objectValue.amount) ??
+      parsePriceAmount(objectValue.fromPrice) ??
+      parsePriceAmount(objectValue.value);
+    if (nestedAmount !== null) {
+      return nestedAmount;
+    }
+  }
+
   if (typeof value === "number" && Number.isFinite(value) && value > 0) {
     return value;
   }
