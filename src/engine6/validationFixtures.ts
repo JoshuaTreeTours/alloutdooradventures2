@@ -51,6 +51,7 @@ import specimen103533p1Payload from "../../data/engine6/viator/103533P1.exact-pr
 import specimen6288p29Payload from "../../data/engine6/viator/6288P29.exact-product.json";
 import specimen122012p17Payload from "../../data/engine6/viator/122012P17.exact-product.json";
 import specimen474891p3Payload from "../../data/engine6/viator/474891P3.exact-product.json";
+import specimen5515296p1Payload from "../../data/engine6/viator/5515296P1.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -118,6 +119,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/New-York-City-Private-Walking-Tour-with-a-Local-Guide/d687-474891P3",
     rawPayload: specimen474891p3Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5515296P1",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Epicurean-Odyssey-A-Gourmet-Bus-Tour-Through-New-York-City/d687-5515296P1",
+    rawPayload: specimen5515296p1Payload as Record<string, unknown>,
   },
   {
     productCode: "214880P12",

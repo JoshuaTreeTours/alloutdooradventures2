@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "5515296P1",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Epicurean-Odyssey-A-Gourmet-Bus-Tour-Through-New-York-City/d687-5515296P1",
+    "title": "NYC Bustronome Gourmet Sightseeing Lunch Panoramic Bus",
+    "description": "Savor a gourmet multi-course menu aboard a glass-roofed double-decker bus while taking in breathtaking views of New York’s most iconic landmarks. A unique blend of fine dining and sightseeing.",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$80.00",
+    "reviews": {
+      "combinedAverageRating": "4.7",
+      "totalReviews": "22"
+    },
+    "duration": "1 hour 30 minutes",
+    "highlights": [
+      "See itinerary"
+    ],
+    "inclusions": [
+      "4 Course Lunch",
+      "Tour",
+      "Audio guide English, Spanish, Korean",
+      "Written guide English, Spanish, French, Korean, Mandarin, Japanese"
+    ],
+    "exclusions": [
+      "Drinks",
+      "Gratuity",
+      "No Alcohol served"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Broadway and w 58, Broadway &, W 58th St, New York, NY 10019, USA"
+      },
+      "end": {
+        "description": "This activity ends back at the meeting point."
+      }
+    },
+    "itinerarySummary": "Start at Broadway & W 58th St, pass by major Midtown and Uptown landmarks, and return to the starting point.",
+    "itineraryItems": [
+      {
+        "title": "Times Square",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "St. Patrick's Cathedral",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Madison Avenue",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "United Nations Headquarters",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Columbus Circle",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Solomon R. Guggenheim Museum",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      },
+      {
+        "title": "Central Park",
+        "stopType": "pass-by",
+        "description": "Pass By"
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Wheelchair accessible",
+      "Service animals allowed",
+      "Near public transportation",
+      "Most travelers can participate",
+      "This tour/activity will have a maximum of 38 travelers"
+    ],
+    "faq": [
+      {
+        "question": "What is the cancellation policy?",
+        "answer": "This experience is non-refundable and cannot be changed for any reason. If you cancel or ask for an amendment, the amount you paid will not be refunded."
+      }
+    ],
+    "categories": [
+      {
+        "name": "Bus Tours"
+      },
+      {
+        "name": "Food & Drink"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/31/82/40/bc/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
