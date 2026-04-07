@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "5713SUNB",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Lower-East-Side-Food-and-Culture-Tour/d687-5713SUNB",
+    "title": "Lower East Side Food Tour: Iconic Eats & the American Dream",
+    "description": "Discover the rich cultural tapestry of New York's Lower East Side on this small-group tour. Sample delicious snacks while learning about the diverse ethnical groups that have shaped this historic neighborhood. From the iconic Lower East Side, China Town to Little Italy; Chinese dumplings to Italian pizza, enjoy fascinating insights as you eat your way around the LES.",
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$79.00",
+    "reviews": {
+      "combinedAverageRating": "4.8",
+      "totalReviews": "1038"
+    },
+    "duration": "3 hours (approx.)",
+    "highlights": [
+      "Sample some classic NYC foods (Chinese dumplings, knish, empanada, and artisanal cheeses)",
+      "See the Lower East Side, Chinatown, and Little Italy up close on a walking tour",
+      "Stroll through bustling markets, narrow alleyways, and hidden corners while hearing stories of struggle, resilience, and the American Dream on a small-group tour",
+      "Leave the navigation to your guide and avoid getting lost in NYC"
+    ],
+    "inclusions": [
+      "Sample four iconic NYC dishes (may include dumplings, pizza, knish, empanada, and more)",
+      "Stroll through the Lower East Side, Chinatown & Little Italy",
+      "See historic NYC sites, including 100-year-old bakeries, churches, and neighborhood landmarks",
+      "Explore stories and cultural heritage that shaped these famous neighborhoods",
+      "Follow a friendly local English-speaking guide who’s passionate about food and history",
+      "Get insider tips on what else to eat, see, and experience during your stay in New York"
+    ],
+    "exclusions": [
+      "Gratuities",
+      "Drinks and additional food"
+    ],
+    "logistics": {
+      "start": {
+        "description": "26 Canal St (Little Canal Cafe) In front of Little Canal Café, 26 Canal St, New York, NY 10002, United States."
+      },
+      "end": {
+        "description": "Your tour ends in the heart of the Lower East Side neighborhood (New York, NY 10002)."
+      }
+    },
+    "itinerarySummary": "Today, the Lower East Side is crammed with bars, clubs, and trendy restaurants. But if you know where to look, you can find very edible remnants of its intriguing past.",
+    "itineraryItems": [
+      {
+        "title": "Little Canal",
+        "duration": "5 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "New York City Supreme Court",
+        "duration": "5 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Columbus Park",
+        "duration": "5 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Chinatown",
+        "duration": "20 minutes",
+        "admissionNote": "Admission Ticket Free"
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Stroller accessible",
+      "Service animals allowed",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faq": [
+      {
+        "question": "What is the cancellation policy?",
+        "answer": "For a full refund, cancel at least 24 hours in advance of the start date of the experience."
+      }
+    ],
+    "categories": [
+      {
+        "name": "Food & Drink"
+      },
+      {
+        "name": "Walking Tours"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/c3/37/9d/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
