@@ -1,0 +1,79 @@
+{
+  "product": {
+    "productCode": "7079RREBIKE",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-Electric-Bike-Tour/d684-7079RREBIKE",
+    "title": "Red Rock Canyon Electric Bike Tour",
+    "description": {
+      "text": "Explore the Red Rock Canyon National Conservation Area on a guided electric bike tour from Las Vegas. Ride portions of the scenic loop with support from your guide while stopping at overlooks to learn about Mojave Desert geology, wildlife, and conservation."
+    },
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": 129,
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 214
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/ef/8a/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided electric bike experience through Red Rock Canyon.",
+      "Ride scenic sections with desert and canyon viewpoints.",
+      "Learn about local geology and Mojave ecology from your guide."
+    ],
+    "meetingPoint": {
+      "description": "Hotel pickup from select Las Vegas Strip and Downtown locations may be available; exact confirmation is provided by the operator after booking."
+    },
+    "itineraryItems": [
+      {
+        "title": "Las Vegas pickup and bike setup",
+        "description": "Meet your guide, complete safety briefing, and get fitted for your e-bike before departure.",
+        "duration": "30 minutes",
+        "admissionNote": "Free admission"
+      },
+      {
+        "title": "Red Rock Canyon Scenic Drive route",
+        "description": "Ride guided segments near the Scenic Drive corridor with regular stops for photos and interpretation.",
+        "duration": "2 hours",
+        "admissionNote": "Admission ticket included"
+      },
+      {
+        "title": "Overlook and geology stops",
+        "description": "Pause at viewpoints to discuss sandstone formations, desert habitat, and conservation area highlights.",
+        "duration": "60 minutes",
+        "admissionNote": "Admission ticket included"
+      }
+    ],
+    "inclusions": [
+      "Use of electric bike",
+      "Helmet",
+      "Guide",
+      "National Conservation Area entry fees"
+    ],
+    "exclusions": ["Gratuities"],
+    "additionalInfo": [
+      "Travelers should have a moderate physical fitness level",
+      "Closed-toe shoes recommended",
+      "Not recommended for travelers with serious mobility limitations"
+    ],
+    "categories": [
+      "Bike Tours",
+      "Outdoor Activities",
+      "Nature and Wildlife Tours"
+    ]
+  }
+}

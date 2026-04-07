@@ -24,15 +24,17 @@ export const ENGINE6_LAS_VEGAS_OFF_ROAD_ROUTE =
 export const ENGINE6_LAS_VEGAS_SHOPPING_CART_LIMO_PRODUCT_CODE = "470339P1";
 export const ENGINE6_LAS_VEGAS_SHOPPING_CART_LIMO_ROUTE =
   "/destinations/nevada/las-vegas/tours/giant-shopping-cart-limo-ride-in-las-vegas";
-export const ENGINE6_LAS_VEGAS_SPHERE_GUIDED_DRIVING_PRODUCT_CODE =
-  "398496P5";
+export const ENGINE6_LAS_VEGAS_SPHERE_GUIDED_DRIVING_PRODUCT_CODE = "398496P5";
 export const ENGINE6_LAS_VEGAS_SPHERE_GUIDED_DRIVING_ROUTE =
   "/destinations/nevada/las-vegas/tours/mgm-sphere-guided-driving-tour";
+
+export const ENGINE6_LAS_VEGAS_RED_ROCK_EBIKE_PRODUCT_CODE = "7079RREBIKE";
+export const ENGINE6_LAS_VEGAS_RED_ROCK_EBIKE_ROUTE =
+  "/destinations/nevada/las-vegas/tours/red-rock-canyon-electric-bike-tour";
 export const ENGINE6_LAS_VEGAS_RED_ROCK_TREKKER_PRODUCT_CODE = "3533RRC";
 export const ENGINE6_LAS_VEGAS_RED_ROCK_TREKKER_ROUTE =
   "/destinations/nevada/las-vegas/tours/red-rock-canyon-luxury-tour-trekker-experience";
-export const ENGINE6_LAS_VEGAS_VALLEY_OF_FIRE_OFFROAD_PRODUCT_CODE =
-  "191767P5";
+export const ENGINE6_LAS_VEGAS_VALLEY_OF_FIRE_OFFROAD_PRODUCT_CODE = "191767P5";
 export const ENGINE6_LAS_VEGAS_VALLEY_OF_FIRE_OFFROAD_ROUTE =
   "/destinations/nevada/las-vegas/tours/valley-of-fire-best-offroad-adventure";
 
@@ -257,6 +259,11 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_LAS_VEGAS_SPHERE_GUIDED_DRIVING_ROUTE,
     ENGINE6_LAS_VEGAS_SPHERE_GUIDED_DRIVING_PRODUCT_CODE,
+  ],
+
+  [
+    ENGINE6_LAS_VEGAS_RED_ROCK_EBIKE_ROUTE,
+    ENGINE6_LAS_VEGAS_RED_ROCK_EBIKE_PRODUCT_CODE,
   ],
   [
     ENGINE6_LAS_VEGAS_RED_ROCK_TREKKER_ROUTE,
