@@ -1,5 +1,6 @@
 import specimen63657Payload from "../../data/engine6/viator/63657P1.exact-product.json";
 import specimen5119Payload from "../../data/engine6/viator/5119P13.exact-product.json";
+import specimen18262p1Payload from "../../data/engine6/viator/18262P1.exact-product.json";
 import specimen32779Payload from "../../data/engine6/viator/32779P2.exact-product.json";
 import specimen60136Payload from "../../data/engine6/viator/60136P1.exact-product.json";
 import specimen26719Payload from "../../data/engine6/viator/26719P8.exact-product.json";
@@ -205,6 +206,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Las-Vegas/Grand-Canyon-West-6-in-1-Tour-with-Helicopter-and-Landing/d684-5119P13",
     rawPayload: specimen5119Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "18262P1",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Grand-Canyon-National-Park-Bus-Tour/d684-18262P1",
+    rawPayload: specimen18262p1Payload as Record<string, unknown>,
   },
   {
     productCode: "32779P2",

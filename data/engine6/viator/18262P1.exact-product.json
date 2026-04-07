@@ -1,0 +1,137 @@
+{
+  "product": {
+    "productCode": "18262P1",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Grand-Canyon-National-Park-Bus-Tour/d684-18262P1",
+    "title": "Grand Canyon National Park South Rim Bus Tour from Las Vegas",
+    "description": {
+      "text": "Escape the bustle of Las Vegas and experience the natural beauty of the Grand Canyon's South Rim in just one day on this bus tour. Stop along the way at Boulder City, Kingman, and Seligman, before arriving at Grand Canyon National Park, where you can take in the views from Mather Point, Hopi House, and the Bright Angel Lodge, among others."
+    },
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada",
+      "country": "USA"
+    },
+    "pricing": {
+      "fromPrice": 169,
+      "fromPriceFormatted": "$169.00",
+      "summary": {
+        "fromPrice": 169,
+        "fromPriceFormatted": "$169.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 3087
+    },
+    "duration": "15 to 16 hours (approx.)",
+    "highlights": [
+      "Check off the highlights of the Grand Canyon's South Rim without the hassle of driving",
+      "Listen to informative commentary from your guide",
+      "Option to have breakfast, lunch, or both meals included",
+      "Includes pickup and drop-off from select Las Vegas Strip hotels"
+    ],
+    "inclusions": [
+      "Professionally Trained Separate Step-On Tour Guide",
+      "Hotel pick-up and drop off at select locations",
+      "Restroom on board",
+      "Admission Fees",
+      "Safety Focused Bus Driver - No Driver Guides",
+      "Bottled water",
+      "Air-conditioned vehicle",
+      "Optional walking tour (if option not selected)"
+    ],
+    "exclusions": [
+      "Entrance fee - Additional National Park Entrance Fee (Non-U.S. Residents Only) USD 100.00 per person"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pick-up from the following locations: •South Point: (Tour Bus Lobby, East Entrance, Outside Valet) •Cancun: (Tour Busy Lobby, Main Entrance) •Excalibur: (Tour Bus Lobby/Bus Rotunda, South Side of Property) •Alexis Park: (Left of the Main Entrance) •Hard Rock: (Tour Bus Lobby, Main Entrance, Next to Valet) •The Orleans: (Tour Bus Lobby, East Entrance, Next to Valet) •Polo Towers: (Tour Busy Lobby, Main Entrance) •Planet Hollywood: (Tour Bus Lobby, Lower Level) •Gold Coast: (East Entrance, Outside Valet) •Aria: (Tour Bus Lobby, Lower Level) •Waldorf Astoria: (Tour Bus Lobby, Next to Valet) •The Cosmopolitan of Las Vegas: (Tour Bus Lobby, Main Entrance) •Bally's: (Tour Bus Lobby, North Entrance Facing Flamingo Rd.) •Caesars Palace: (Tour Bus Lobby, Main Entrance) •Palazzo/Venetian: (Lower Level, Tour Pickup Area- Sands Expo Center/Ground Transportation) •Treasure Island: (Tour Bus Lobby at Siren's Cove, South Side of Property) •Wynn/Encore: (Bus Loop) / (Bus Pickup Stand, Main Entrance) •Trump Hotel: (Tour Bus Lobby, Main Entrance) •Circus Circus:(Tour Bus Lobby, Main Front Entrance near the Circus Circus sign) •Westgate: (Tour Bus Lobby, East Entrance off of Joe Brown Blvd.) •Stratosphere: (Tour Bus Lobby, North Entrance by the Buffet) •Golden Nugget: (Tour Bus Lobby on 1st St., West Entrance, Across from Parking Garage) Other hotel pickups may be available for larger groups."
+      },
+      "end": {
+        "description": "Returns to Las Vegas Strip hotels after a scenic drive past the Las Vegas Strip."
+      }
+    },
+    "itinerarySummary": "Your tour starts with pickups from select Las Vegas Strip hotels. Onboard amenities include air-conditioning and a restroom, ensuring a comfortable ride. The journey is enriched with lively commentary from your guide, and begins with a stop in Boulder City—with the option to choose a tour package that includes a hot breakfast. Travel through historic Kingman—a main stop on Route 66—as well as Seligman, before getting to the highlight of the day—the South Rim of the Grand Canyon National Park. Marvel at the Grand Canyon's vast expanse, with options to independently explore landmarks such as Mather Point, Hopi House, Bright Angel Lodge, and more. The trip includes an option to include breakfast, lunch, and a break at Boulder City before finishing with a scenic drive past the glittering Las Vegas Strip.",
+    "itineraryItems": [
+      {
+        "title": "Boulder City",
+        "duration": "2 hours 15 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Kingman",
+        "duration": "1 hour 30 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Seligman",
+        "duration": "1 hour 30 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Grand Canyon National Park",
+        "duration": "3 hours",
+        "admissionNote": "Admission Ticket Included",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mather Point",
+        "duration": "2 hours",
+        "admissionNote": "Admission Ticket Included",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hopi House",
+        "duration": "15 minutes",
+        "admissionNote": "Admission Ticket Included",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bright Angel Point",
+        "duration": "1 hour",
+        "admissionNote": "Admission Ticket Included",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boulder City",
+        "duration": "2 hours 45 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "The Las Vegas Strip",
+        "duration": "1 hour 30 minutes",
+        "admissionNote": "Admission Ticket Free",
+        "stopType": "pass-by"
+      }
+    ],
+    "requirements": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Stroller accessible",
+      "Service animals allowed",
+      "Infants must sit on laps",
+      "Infant seats available",
+      "Most travelers can participate",
+      "Adult pricing applies to all travelers as the price is based on seat occupancy",
+      "We do allow for regular sized backpacks that can fit underneath your seats. NO suitcases, or luggage is permitted.",
+      "Passengers must inform the tour guide upon first entering the tour bus of the total number of NON-U.S. RESIDENTS in their party. They may also text or email our office ahead of time to inform us of the total number of NON-U.S. RESIDENTS in their party. Additionally, ALL passengers may be asked by the National Park Service to show proof of citizenship or residency. Acceptable documents include US Passport, State issued ID, or permanent residency card.",
+      "Failure to inform the tour guide that you are not a U.S. CITIZEN/RESIDENT or failure to provide proof of residency to the National Park Service upon request will make you fully responsible for any consequences such as fines, being trespassed by the park, or being denied entry to the National Park. Passengers being denied entry will not be allowed to stay on the bus because the bus will be entering the park. You will be fully responsible for any and all consequences.",
+      "Please Note: National Park fees may apply for international visitors. If applicable, this fee is collected in-destination and not at the time of booking.",
+      "This tour/activity will have a maximum of 77 travelers"
+    ],
+    "media": {
+      "images": [
+        {
+          "imageSource": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/c6/18/caption.jpg?w=1100&h=800&s=1",
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/c6/18/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            }
+          }
+        }
+      ]
+    }
+  }
+}
