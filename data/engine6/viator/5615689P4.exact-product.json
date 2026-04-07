@@ -1,0 +1,48 @@
+{
+  "product": {
+    "productCode": "5615689P4",
+    "title": "Arts District E-Bike Tour",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Arts-District-E-Bike-Tour/d684-5615689P4",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "description": "Urban-focused e-bike tour centered on Las Vegas Arts District streets, murals, and local culture.",
+    "highlights": [
+      "Explore downtown Las Vegas Arts District by e-bike",
+      "Urban neighborhood character, murals, and creative spaces",
+      "City-culture emphasis rather than canyon terrain"
+    ],
+    "meetingPoint": {
+      "description": "Downtown meeting details are shared by the operator before departure."
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterest": "Las Vegas Arts District",
+        "description": "Guided ride through the district's streets and public art areas."
+      }
+    ],
+    "inclusions": [
+      "Electric bike",
+      "Helmet",
+      "Guide"
+    ],
+    "additionalInfo": [
+      "Urban guided tour"
+    ],
+    "categories": [
+      { "label": "City Tours" },
+      { "label": "E-Bike Tours" }
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/31/bc/28/94/caption.jpg?w=700&h=500&s=1",
+          "width": 700,
+          "height": 500,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "product": {
+    "productCode": "354611P1",
+    "title": "Historical Railroad Trail eBike Tour",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Historical-Railroad-Trail-eBike-Tour/d684-354611P1",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "description": "Guided e-bike tour focused on the Historic Railroad Trail corridor near Las Vegas.",
+    "highlights": [
+      "Historic Railroad Trail focus",
+      "Guided e-bike pacing with interpretive context",
+      "Distinct from Red Rock canyon-road products"
+    ],
+    "meetingPoint": {
+      "description": "Meeting and start details are provided by the operator after booking."
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterest": "Historic Railroad Trail",
+        "description": "Ride along the historic rail-grade trail alignment with guide commentary."
+      }
+    ],
+    "inclusions": [
+      "Electric bike",
+      "Helmet",
+      "Guide"
+    ],
+    "additionalInfo": [
+      "Guided heritage-oriented trail tour"
+    ],
+    "categories": [
+      { "label": "Historical Tours" },
+      { "label": "E-Bike Tours" }
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/b8/5b/caption.jpg?w=700&h=500&s=1",
+          "width": 700,
+          "height": 500,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}

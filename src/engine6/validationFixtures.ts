@@ -9,6 +9,13 @@ import specimen470339p1Payload from "../../data/engine6/viator/470339P1.exact-pr
 import specimen398496p5Payload from "../../data/engine6/viator/398496P5.exact-product.json";
 import specimen3533rrcPayload from "../../data/engine6/viator/3533RRC.exact-product.json";
 import specimen191767p5Payload from "../../data/engine6/viator/191767P5.exact-product.json";
+import specimen7079rrebikePayload from "../../data/engine6/viator/7079RREBIKE.exact-product.json";
+import specimen5109p6Payload from "../../data/engine6/viator/5109P6.exact-product.json";
+import specimen436985p2Payload from "../../data/engine6/viator/436985P2.exact-product.json";
+import specimen60124p1Payload from "../../data/engine6/viator/60124P1.exact-product.json";
+import specimen354611p1Payload from "../../data/engine6/viator/354611P1.exact-product.json";
+import specimen5615689p4Payload from "../../data/engine6/viator/5615689P4.exact-product.json";
+import specimen5109cy003Payload from "../../data/engine6/viator/5109_CY003.exact-product.json";
 import specimen32779Payload from "../../data/engine6/viator/32779P2.exact-product.json";
 import specimen60136Payload from "../../data/engine6/viator/60136P1.exact-product.json";
 import specimen26719Payload from "../../data/engine6/viator/26719P8.exact-product.json";
@@ -268,6 +275,48 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Las-Vegas/Valley-Of-Fire-Best-Offroad-Adventure/d684-191767P5",
     rawPayload: specimen191767p5Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "7079RREBIKE",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-Electric-Bike-Tour/d684-7079RREBIKE",
+    rawPayload: specimen7079rrebikePayload as Record<string, unknown>,
+  },
+  {
+    productCode: "5109P6",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Electric-Bike-Tour-of-Red-Rock-Canyon/d684-5109P6",
+    rawPayload: specimen5109p6Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "436985P2",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Las-Vegas-Electric-Bike-Rental-4-Hour-Self-Guided-Tour/d684-436985P2",
+    rawPayload: specimen436985p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "60124P1",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-Self-Guided-Electric-Bike-Tour/d684-60124P1",
+    rawPayload: specimen60124p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "354611P1",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Historical-Railroad-Trail-eBike-Tour/d684-354611P1",
+    rawPayload: specimen354611p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5615689P4",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Arts-District-E-Bike-Tour/d684-5615689P4",
+    rawPayload: specimen5615689p4Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5109_CY003",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Guided-Mountain-Bike-Tour-of-Mustang-Trail-in-Red-Rock-Canyon/d684-5109_CY003",
+    rawPayload: specimen5109cy003Payload as Record<string, unknown>,
   },
   {
     productCode: "32779P2",
