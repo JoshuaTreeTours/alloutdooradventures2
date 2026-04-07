@@ -76,6 +76,13 @@ import {
   ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
   ENGINE6_FORT_LAUDERDALE_BAHAMAS_FERRY_ROUTE,
   ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE,
+  ENGINE6_LAS_VEGAS_ARTS_DISTRICT_EBIKE_ROUTE,
+  ENGINE6_LAS_VEGAS_EBIKE_RENTAL_SELF_GUIDED_ROUTE,
+  ENGINE6_LAS_VEGAS_HISTORICAL_RAILROAD_EBIKE_ROUTE,
+  ENGINE6_LAS_VEGAS_MUSTANG_TRAIL_MTB_ROUTE,
+  ENGINE6_LAS_VEGAS_RED_ROCK_EBIKE_GUIDED_ROUTE,
+  ENGINE6_LAS_VEGAS_RED_ROCK_EBIKE_OPERATOR_ROUTE,
+  ENGINE6_LAS_VEGAS_RED_ROCK_SELF_GUIDED_EBIKE_ROUTE,
   ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE,
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
@@ -278,6 +285,34 @@ export default function App() {
         />
         <Route
           path={ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_LAS_VEGAS_RED_ROCK_EBIKE_GUIDED_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_LAS_VEGAS_RED_ROCK_EBIKE_OPERATOR_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_LAS_VEGAS_EBIKE_RENTAL_SELF_GUIDED_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_LAS_VEGAS_RED_ROCK_SELF_GUIDED_EBIKE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_LAS_VEGAS_HISTORICAL_RAILROAD_EBIKE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_LAS_VEGAS_ARTS_DISTRICT_EBIKE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_LAS_VEGAS_MUSTANG_TRAIL_MTB_ROUTE}
           component={Engine6SpecimenRoute}
         />
 

@@ -1,0 +1,53 @@
+{
+  "product": {
+    "productCode": "7079RREBIKE",
+    "title": "Red Rock Canyon Electric Bike Tour",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-Electric-Bike-Tour/d684-7079RREBIKE",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "description": "Guided electric-bike ride from Las Vegas into Red Rock Canyon with a focus on the scenic conservation area route.",
+    "highlights": [
+      "Guided Red Rock Canyon electric bike experience",
+      "Scenic ride through desert canyon landscapes",
+      "Designed for visitors who want active sightseeing near Las Vegas"
+    ],
+    "meetingPoint": {
+      "description": "Las Vegas meeting location is confirmed by the operator after booking."
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterest": "Red Rock Canyon National Conservation Area",
+        "description": "Guided ride on a scenic canyon route with interpretation from your guide."
+      },
+      {
+        "pointOfInterest": "Scenic Route",
+        "description": "Ride through signature Red Rock desert viewpoints and geologic formations."
+      }
+    ],
+    "inclusions": [
+      "Electric bike",
+      "Helmet",
+      "Guide"
+    ],
+    "additionalInfo": [
+      "Guided tour format",
+      "Operator confirms start logistics after booking"
+    ],
+    "categories": [
+      { "label": "E-Bike Tours" },
+      { "label": "Red Rock Canyon Tours" }
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/ec/89/caption.jpg?w=700&h=500&s=1",
+          "width": 700,
+          "height": 500,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}

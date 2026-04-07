@@ -1,0 +1,49 @@
+{
+  "product": {
+    "productCode": "60124P1",
+    "title": "Red Rock Canyon Self Guided Electric Bike Tour",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-Self-Guided-Electric-Bike-Tour/d684-60124P1",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "description": "Self-guided electric-bike experience for Red Rock Canyon with rider-led pacing and route autonomy.",
+    "highlights": [
+      "Self-guided Red Rock Canyon e-bike experience",
+      "Flexible pacing compared with guided group tours",
+      "Built for independent riders"
+    ],
+    "meetingPoint": {
+      "description": "Las Vegas bike handoff and route orientation details are provided by the operator."
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterest": "Red Rock Canyon Scenic Area",
+        "description": "Suggested self-guided riding area with scenic desert viewpoints."
+      }
+    ],
+    "inclusions": [
+      "Electric bike",
+      "Helmet",
+      "Route orientation"
+    ],
+    "additionalInfo": [
+      "Self-guided experience",
+      "Riders manage their own route timing"
+    ],
+    "categories": [
+      { "label": "Self-Guided Tours" },
+      { "label": "E-Bike Tours" }
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/e0/3f/caption.jpg?w=1100&h=800&s=1",
+          "width": 1100,
+          "height": 800,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}

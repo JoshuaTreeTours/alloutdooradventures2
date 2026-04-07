@@ -1,0 +1,49 @@
+{
+  "product": {
+    "productCode": "5109_CY003",
+    "title": "Guided Mountain Bike Tour of Mustang Trail in Red Rock Canyon",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Guided-Mountain-Bike-Tour-of-Mustang-Trail-in-Red-Rock-Canyon/d684-5109_CY003",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "description": "Guided mountain-bike ride on Mustang Trail terrain in Red Rock Canyon for riders seeking trail-focused sport.",
+    "highlights": [
+      "Guided mountain-bike experience on Mustang Trail",
+      "Trail-riding identity distinct from paved scenic e-bike touring",
+      "Sport-forward Red Rock outing"
+    ],
+    "meetingPoint": {
+      "description": "Meeting instructions and trail start logistics are provided by the operator after booking."
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterest": "Mustang Trail",
+        "description": "Ride guided trail segments in Red Rock Canyon terrain with technical coaching as needed."
+      }
+    ],
+    "inclusions": [
+      "Bike",
+      "Helmet",
+      "Guide"
+    ],
+    "additionalInfo": [
+      "Mountain-bike trail format",
+      "Terrain and difficulty vary with conditions"
+    ],
+    "categories": [
+      { "label": "Mountain Bike Tours" },
+      { "label": "Adventure Tours" }
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/b6/f7/caption.jpg?w=700&h=500&s=1",
+          "width": 700,
+          "height": 500,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}

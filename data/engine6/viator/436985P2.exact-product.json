@@ -1,0 +1,43 @@
+{
+  "product": {
+    "productCode": "436985P2",
+    "title": "Las Vegas Electric Bike Rental 4 Hour Self Guided Tour",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Las-Vegas-Electric-Bike-Rental-4-Hour-Self-Guided-Tour/d684-436985P2",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "description": "Four-hour electric bike rental designed for independent, self-guided exploration from Las Vegas.",
+    "highlights": [
+      "4-hour e-bike rental format",
+      "Self-guided ride with independent pacing",
+      "Not a guide-led group itinerary"
+    ],
+    "meetingPoint": {
+      "description": "Pickup location and handoff instructions are provided after booking."
+    },
+    "itineraryItems": [],
+    "included": [
+      "Electric bike rental",
+      "Helmet"
+    ],
+    "additionalInfo": [
+      "Self-guided rental product",
+      "Riders choose their own route"
+    ],
+    "categories": [
+      { "label": "Bike Rentals" },
+      { "label": "Self-Guided Tours" }
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/c5/05/ad/caption.jpg?w=700&h=500&s=1",
+          "width": 700,
+          "height": 500,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}
