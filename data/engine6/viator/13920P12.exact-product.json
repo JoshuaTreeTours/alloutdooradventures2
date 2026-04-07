@@ -1,0 +1,71 @@
+{
+  "product": {
+    "productCode": "13920P12",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Off-Road-Las-Vegas/d684-13920P12",
+    "title": "Off Road Las Vegas Tour",
+    "description": "Trade the casino corridor for desert terrain on this Off Road Las Vegas Tour. The route focuses on rugged trails and open Nevada backcountry, giving travelers a direct off-road experience with guide support and a strong desert-adventure profile.",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": "$189.50",
+    "duration": "4 hours",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 497
+    },
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/c5/13/caption.jpg?w=700&h=500&s=1",
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/c5/13/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided off-road adventure through Las Vegas-area desert trails",
+      "Rugged route built around dirt tracks and open terrain",
+      "Guide-led safety and route briefing before departure",
+      "Photo opportunities at scenic desert overlooks"
+    ],
+    "inclusions": ["Guide", "Safety briefing", "Off-road vehicle experience"],
+    "additionalInfo": [
+      "Closed-toe shoes are recommended.",
+      "This tour operates in desert conditions; hydrate before departure.",
+      "Driver-license requirements vary by selected option."
+    ],
+    "meetingPoint": {
+      "description": "Meeting point details are provided after booking; select Las Vegas pickup locations may be available depending on option."
+    },
+    "itineraryItems": [
+      {
+        "title": "Desert base check-in",
+        "description": "Arrive for orientation, route briefing, and equipment prep.",
+        "duration": "30 minutes"
+      },
+      {
+        "title": "Off-road trail session",
+        "description": "Follow your guide onto rugged terrain featuring climbs, washes, and open desert sections.",
+        "duration": "2 hours"
+      },
+      {
+        "title": "Scenic stop",
+        "description": "Pause for photos and trail-side interpretation.",
+        "duration": "20 minutes"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is this a beginner-friendly off-road experience?",
+        "answer": "The operator provides a safety briefing and guided pacing suitable for many first-time off-road participants."
+      }
+    ],
+    "categories": ["4WD Tours", "Adventure Tours"]
+  }
+}

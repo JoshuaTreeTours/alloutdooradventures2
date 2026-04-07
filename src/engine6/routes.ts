@@ -12,6 +12,16 @@ export const ENGINE6_LAS_VEGAS_ZION_BRYCE_PRODUCT_CODE = "190492P3";
 export const ENGINE6_LAS_VEGAS_ZION_BRYCE_ROUTE =
   "/destinations/nevada/las-vegas/tours/zion-and-bryce-canyon-small-group-tour-from-las-vegas";
 
+export const ENGINE6_LAS_VEGAS_RED_ROCK_ROCKY_GAP_PRODUCT_CODE = "3533P14";
+export const ENGINE6_LAS_VEGAS_RED_ROCK_ROCKY_GAP_ROUTE =
+  "/destinations/nevada/las-vegas/tours/red-rock-canyon-with-rocky-gap-4x4-adventure";
+export const ENGINE6_LAS_VEGAS_HELICOPTER_NIGHT_VIP_PRODUCT_CODE = "5516ST5";
+export const ENGINE6_LAS_VEGAS_HELICOPTER_NIGHT_VIP_ROUTE =
+  "/destinations/nevada/las-vegas/tours/deluxe-las-vegas-helicopter-night-flight-with-vip-transportation";
+export const ENGINE6_LAS_VEGAS_OFF_ROAD_PRODUCT_CODE = "13920P12";
+export const ENGINE6_LAS_VEGAS_OFF_ROAD_ROUTE =
+  "/destinations/nevada/las-vegas/tours/off-road-las-vegas-tour";
+
 export const ENGINE6_CATALINA_PRODUCT_CODE = "32779P2";
 
 export const ENGINE6_ANTELOPE_PRODUCT_CODE = "60136P1";
@@ -77,8 +87,7 @@ export const ENGINE6_NYC_PRIVATE_WALKING_TOUR_ROUTE =
 export const ENGINE6_NYC_BUSTRONOME_GOURMET_BUS_PRODUCT_CODE = "5515296P1";
 export const ENGINE6_NYC_BUSTRONOME_GOURMET_BUS_ROUTE =
   "/destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus";
-export const ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_PRODUCT_CODE =
-  "428219P6";
+export const ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_PRODUCT_CODE = "428219P6";
 export const ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_ROUTE =
   "/destinations/new-york/new-york/tours/chinatown-and-little-italy-food-tour-428219p6";
 export const ENGINE6_NYC_AMERICAN_DREAM_BUNDLE_PRODUCT_CODE = "77348P8";
@@ -218,6 +227,15 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_LAS_VEGAS_ZION_BRYCE_ROUTE,
     ENGINE6_LAS_VEGAS_ZION_BRYCE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LAS_VEGAS_HELICOPTER_NIGHT_VIP_ROUTE,
+    ENGINE6_LAS_VEGAS_HELICOPTER_NIGHT_VIP_PRODUCT_CODE,
+  ],
+  [ENGINE6_LAS_VEGAS_OFF_ROAD_ROUTE, ENGINE6_LAS_VEGAS_OFF_ROAD_PRODUCT_CODE],
+  [
+    ENGINE6_LAS_VEGAS_RED_ROCK_ROCKY_GAP_ROUTE,
+    ENGINE6_LAS_VEGAS_RED_ROCK_ROCKY_GAP_PRODUCT_CODE,
   ],
   [ENGINE6_CATALINA_ROUTE, ENGINE6_CATALINA_PRODUCT_CODE],
   [ENGINE6_ANTELOPE_ROUTE, ENGINE6_ANTELOPE_PRODUCT_CODE],
@@ -381,7 +399,9 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
 ] as const;
 
 export const ENGINE6_CONFIGURED_PRODUCT_CODES = [
-  ...new Set(ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES.map(([, productCode]) => productCode)),
+  ...new Set(
+    ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES.map(([, productCode]) => productCode)
+  ),
 ];
 
 const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> =

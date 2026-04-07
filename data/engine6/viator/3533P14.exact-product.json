@@ -1,0 +1,73 @@
+{
+  "product": {
+    "productCode": "3533P14",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-with-Rocky-Gap-4x4-Adventure/d684-3533P14",
+    "title": "Red Rock Canyon with Rocky Gap 4x4 Adventure",
+    "description": "Explore Red Rock Canyon and continue into the Rocky Gap corridor on a purpose-built 4x4 route from Las Vegas. This outing combines classic Red Rock scenery with a more technical Rocky Gap segment for travelers seeking a canyon + 4x4 identity rather than a standard scenic transfer.",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": "$149.00",
+    "duration": "4 hours",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 921
+    },
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/f0/a9/caption.jpg?w=700&h=500&s=1",
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/f0/a9/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "4x4 route through Red Rock Canyon and Rocky Gap",
+      "Interpretation on geology and desert ecosystems",
+      "Scenic photo stops with layered red sandstone views",
+      "Round-trip logistics from Las Vegas area"
+    ],
+    "inclusions": ["4x4 transportation", "Guide", "Park entry fees"],
+    "additionalInfo": [
+      "Terrain can be bumpy on the Rocky Gap segment.",
+      "Bring sun protection and water.",
+      "Pickup timing depends on your selected departure."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup available at select Las Vegas Strip hotels with exact pickup points and times confirmed after booking."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Las Vegas departure",
+        "description": "Depart the city and travel toward Red Rock Canyon.",
+        "duration": "45 minutes"
+      },
+      {
+        "title": "Red Rock Canyon scenic route",
+        "description": "Travel through key overlooks and geological formations in the conservation area.",
+        "duration": "1 hour 30 minutes"
+      },
+      {
+        "title": "Rocky Gap 4x4 segment",
+        "description": "Continue on rougher 4x4 trails for the dedicated Rocky Gap adventure section.",
+        "duration": "1 hour"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does this include both Red Rock Canyon and Rocky Gap?",
+        "answer": "Yes, the itinerary includes Red Rock Canyon sightseeing and a separate Rocky Gap 4x4 segment."
+      }
+    ],
+    "categories": ["4WD Tours", "Nature and Wildlife Tours"]
+  }
+}
