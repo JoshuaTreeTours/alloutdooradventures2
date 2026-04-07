@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "6029_4DAYPARK",
+    "productUrl": "https://www.viator.com/tours/Jackson/4-Day-Yellowstone-and-Grand-Teton-National-Parks-Wildlife-Adventure/d51006-6029_4DAYPARK",
+    "title": "Yellowstone and Grand Teton 4 Day 3 Night Wildlife Adventure",
+    "description": "Researching the perfect Yellowstone itinerary can be a bit overwhelming, and sometimes it’s best to allow the pros to piece together the trip. On this exceptional 4-day tour of Grand Teton and Yellowstone national parks, your guide does that for you. Experience the park’s best sights like Old Faithful and spot a wide range of wildlife at times when they are out on the move.",
+    "location": {
+      "city": "Jackson Hole",
+      "state": "Wyoming"
+    },
+    "priceFrom": {
+      "amount": 3199,
+      "currency": "USD"
+    },
+    "duration": "4 days (approx.)",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 250
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/30/e3/34/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "4-day wildlife tour of Grand Teton and Yellowstone national parks",
+      "Spot moose, bison and elk in Grand Teton, and bears and wolves in Yellowstone",
+      "Visit Old Faithful, Mammoth Hot Springs and more in Yellowstone",
+      "Learn about the history, geology and abundant wildlife of both parks",
+      "Accommodation, breakfast, entrance fees, and transfers included"
+    ],
+    "inclusions": [
+      "3 nights of accommodations",
+      "Naturalist guide",
+      "Hotel pickup and drop-off in Jackson, Wyoming",
+      "Transport by coach",
+      "Snacks, water, and soda provided throughout tour",
+      "Use of binoculars for each guest and scope for group to share",
+      "National Park entrance fee (only for residents of the United States)",
+      "Breakfast (3)",
+      "Additional food and drinks excluded",
+      "Guide gratuity excluded (suggested at 10-15% of tour price)"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup offered. Pickup point: 49'Er Inn & Suites, 330 W Pearl Ave, Jackson, WY 83001-9161. Confirm start time with local provider in advance."
+      },
+      "pickup": {
+        "description": "We meet guests at the 49'er Inn and Suites (or a similar star-rated hotel in the Jackson Hole area booked by BrushBuck) where first-night lodging is set up."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Day 1: Grand Teton National Park Dusk Adventure",
+        "description": "Mormon Row Historic District; Grand Teton National Park; T.A. Moulton Barn.",
+        "duration": "1 day"
+      },
+      {
+        "title": "Day 2: Grand Teton & Yellowstone Wildlife and the Grand Canyon of Yellowstone",
+        "description": "Oxbow Bend; Jackson Lake; West Thumb Geyser Basin; Yellowstone Lake (Pass By); Hayden Valley; Grand Canyon of the Yellowstone.",
+        "duration": "1 day"
+      },
+      {
+        "title": "Day 3: Buffalo Bill Cody Museum, Yellowstone Wildlife & Scenic Upper Loop Adventure",
+        "description": "Buffalo Bill Center of the West; Chief Joseph Scenic Byway; Lamar Valley.",
+        "duration": "1 day"
+      },
+      {
+        "title": "Day 4: Wildlife Viewing in the American Serengeti, Mammoth Hot Springs, and Old Faithful Geyser",
+        "description": "Lamar Valley; Old Faithful; Old Faithful Inn; Mammoth Hot Springs; Roosevelt Arch; Snake River Overlook; Fountain Paint Pot.",
+        "duration": "1 day"
+      }
+    ],
+    "additionalInfo": [
+      "Important: A hotel stay within the parks is not guaranteed for bookings made within 30 days of travel; accommodations may be outside the park.",
+      "No children 5 years and younger.",
+      "A small amount of walking is involved.",
+      "Not wheelchair accessible.",
+      "Service animals allowed.",
+      "Most travelers can participate.",
+      "Maximum of 10 travelers."
+    ],
+    "categories": [
+      {
+        "label": "Multi-day Tours"
+      },
+      {
+        "label": "Wildlife Watching"
+      },
+      {
+        "label": "National Parks"
+      }
+    ]
+  }
+}
