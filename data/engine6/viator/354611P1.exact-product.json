@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "354611P1",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Historical-Railroad-Trail-eBike-Tour/d684-354611P1",
+    "title": "Historical Railroad Trail eBike Tour",
+    "description": {
+      "text": "The Historic Railroad Trail is a beautiful route next to Lake Mead, which finishes at the Hoover Dam. Instead of hiking, explore this beautiful scenery with less effort by going on a guided e-bike tour. All the equipment you need is provided, including an electric bike, eye protection, and a helmet."
+    },
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": 139,
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 112
+    },
+    "media": {
+      "images": [
+        {
+          "variants": [
+            {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b6/b8/5b/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          ]
+        }
+      ]
+    },
+    "highlights": [
+      "Cycle along the Historic Railroad Trail toward Hoover Dam with a guide.",
+      "Includes e-bike, helmet, eye protection, snacks, and bottled water.",
+      "Multiple departure times and optional hotel pickup for eligible groups.",
+      "Small-group format capped at four travelers."
+    ],
+    "inclusions": [
+      "Use of bicycle",
+      "Helmet (REQUIRED)",
+      "Air-conditioned vehicle",
+      "Hotel pick-up and drop off (for groups of 2+ only)",
+      "Bottled water",
+      "Goggles (upon request)",
+      "Power Plant Tour not included"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Service animals allowed",
+      "Not recommended for pregnant travelers",
+      "Travelers should have a moderate physical fitness level",
+      "1 person/bike, 1-4 people/group",
+      "Maximum weight: 275 lbs",
+      "Height range: 5'1\" - 6'4\"",
+      "eBikes have full throttle and pedal assist",
+      "Guests must be 16 years or older to participate",
+      "Please, no flip flops or sandals",
+      "Not recommended for beginner bicyclists"
+    ],
+    "meetingPoint": {
+      "name": "Lakeshore Drive",
+      "description": "Lakeshore Dr, Nevada 89005, USA. For groups of 1, please reach out prior to booking to confirm availability. Meet 15 minutes prior to start time in the Lake Mead Visitor parking lot."
+    },
+    "itineraryItems": [
+      {
+        "title": "Hemenway Park",
+        "description": "Start with a brief stop and orientation near Boulder City.",
+        "duration": "10 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Lake Mead Visitor Center",
+        "description": "Ride through the Lake Mead area before continuing to the rail corridor.",
+        "duration": "15 minutes",
+        "admissionNote": "Admission Ticket Included"
+      },
+      {
+        "title": "Historic Railroad Trail",
+        "description": "Follow the rail corridor route toward Hoover Dam with tunnels and lake views.",
+        "duration": "1 hour",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Hoover Dam",
+        "description": "Arrive at Hoover Dam with time for guided context and photos.",
+        "duration": "30 minutes",
+        "admissionNote": "Admission Ticket Not Included"
+      }
+    ],
+    "categories": [
+      "Bike Tours",
+      "Outdoor Activities",
+      "Half-day Tours",
+      "Historical Tours"
+    ]
+  }
+}
