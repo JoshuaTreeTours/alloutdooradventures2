@@ -5,6 +5,10 @@ import specimen190492p3Payload from "../../data/engine6/viator/190492P3.exact-pr
 import specimen5516st5Payload from "../../data/engine6/viator/5516ST5.exact-product.json";
 import specimen13920p12Payload from "../../data/engine6/viator/13920P12.exact-product.json";
 import specimen3533p14Payload from "../../data/engine6/viator/3533P14.exact-product.json";
+import specimen470339p1Payload from "../../data/engine6/viator/470339P1.exact-product.json";
+import specimen398496p5Payload from "../../data/engine6/viator/398496P5.exact-product.json";
+import specimen3533rrcPayload from "../../data/engine6/viator/3533RRC.exact-product.json";
+import specimen191767p5Payload from "../../data/engine6/viator/191767P5.exact-product.json";
 import specimen32779Payload from "../../data/engine6/viator/32779P2.exact-product.json";
 import specimen60136Payload from "../../data/engine6/viator/60136P1.exact-product.json";
 import specimen26719Payload from "../../data/engine6/viator/26719P8.exact-product.json";
@@ -240,6 +244,30 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-with-Rocky-Gap-4x4-Adventure/d684-3533P14",
     rawPayload: specimen3533p14Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "470339P1",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Giant-Shopping-Cart-Limo-Ride-in-Las-Vegas/d684-470339P1",
+    rawPayload: specimen470339p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "398496P5",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/MGM-Sphere-Guided-Driving-Tour/d684-398496P5",
+    rawPayload: specimen398496p5Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "3533RRC",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-Luxury-Tour-Trekker-Experience/d684-3533RRC",
+    rawPayload: specimen3533rrcPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "191767P5",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Valley-Of-Fire-Best-Offroad-Adventure/d684-191767P5",
+    rawPayload: specimen191767p5Payload as Record<string, unknown>,
   },
   {
     productCode: "32779P2",

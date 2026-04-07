@@ -1,0 +1,79 @@
+{
+  "product": {
+    "productCode": "398496P5",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/MGM-Sphere-Guided-Driving-Tour/d684-398496P5",
+    "title": "MGM Sphere Guided Driving Tour",
+    "description": "See one of Las Vegas's newest headline attractions from a guided driving perspective that connects the Sphere with wider Strip context. This route combines major boulevard highlights with live guide narration so travelers can understand architecture, entertainment districts, and how the Sphere fits the modern Vegas skyline.",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": "$69.00",
+    "duration": "2 hours",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 28
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/32/5b/c7/c2/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided driving tour centered on the Sphere and modern Strip evolution.",
+      "Cover major Las Vegas Boulevard resort zones with commentary.",
+      "Designed for visitors who want orientation plus landmark context."
+    ],
+    "meetingPoint": {
+      "address": "Central Strip meeting zone (operator confirms exact pickup point)."
+    },
+    "itineraryItems": [
+      {
+        "title": "Strip Orientation Departure",
+        "description": "Meet your guide and begin a narrated drive introducing major Las Vegas resort districts.",
+        "duration": "20 minutes",
+        "admissionNote": "Free admission"
+      },
+      {
+        "title": "Sphere Exterior Viewpoints",
+        "description": "Approach the Sphere from multiple vantage points for scale, design, and engineering commentary.",
+        "duration": "35 minutes",
+        "admissionNote": "Free admission"
+      },
+      {
+        "title": "Resort Corridor Highlights",
+        "description": "Continue through key Strip stretches including major casino and entertainment landmarks.",
+        "duration": "40 minutes",
+        "admissionNote": "Free admission"
+      },
+      {
+        "title": "Guided Return Segment",
+        "description": "Wrap with skyline perspective and practical orientation tips before drop-off.",
+        "duration": "25 minutes",
+        "admissionNote": "Free admission"
+      }
+    ],
+    "inclusions": [
+      "Guided driving experience",
+      "Live route commentary",
+      "Sphere-focused city orientation"
+    ],
+    "additionalInfo": [
+      "Most travelers can participate"
+    ],
+    "categories": [
+      {
+        "name": "City Tours"
+      }
+    ]
+  }
+}
