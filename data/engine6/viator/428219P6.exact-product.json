@@ -1,0 +1,125 @@
+{
+  "product": {
+    "productCode": "428219P6",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Chinatown-and-Little-Italy-Food-Tour/d687-428219P6",
+    "title": "Chinatown and Little Italy Food Tour | Tasty Tours NYC",
+    "description": "Come hungry to this walking tour of Chinatown and Little Italy. Explore these two neighborhoods with a guide and sample a range of authentic foods such as pan fried dumplings, roasted pork buns, Hong Kong style sponge cakes, sweet Thai tea, pizza, handmade gnocchi, and cannoli. Enrich yourself while you fill your belly–you’ll learn about the two neighborhoods’ distinct histories and landmarks.",
+    "highlights": [
+      "Instead of a single meal, try several of the city’s best foods in one sitting",
+      "Discover unassuming food spots that are difficult to find on your own",
+      "Private and small-group tour option offer a more personal experience",
+      "Choice of morning or afternoon tour times to suit your schedule"
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Lunch",
+      "Gratuities"
+    ],
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$89.00",
+    "reviews": {
+      "combinedAverageRating": "4.9",
+      "totalReviews": "254"
+    },
+    "logistics": {
+      "start": {
+        "description": "Tasty Dumpling, 42 Mulberry St, New York, NY 10013, USA. We'll start our tour at Tasty Dumpling. Your tour guide will meet you outside the front of the store."
+      },
+      "end": {
+        "description": "Eileen's Special Cheesecake, 17 Cleveland Pl, New York, NY 10012, USA. Our tour will finish at Eileen's Special Cheesecake and your guide will assist you with directions to ensure a safe journey home."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Tasty Dumpling",
+        "duration": "10 minutes",
+        "admission": "Free"
+      },
+      {
+        "title": "Mosco Street",
+        "duration": "10 minutes",
+        "admission": "Free"
+      },
+      {
+        "title": "Mei Lai Wah",
+        "duration": "10 minutes",
+        "admission": "Free"
+      },
+      {
+        "title": "Doyers Street",
+        "duration": "10 minutes",
+        "admission": "Free"
+      },
+      {
+        "title": "Spongies Cafe",
+        "duration": "15 minutes",
+        "admission": "Free"
+      },
+      {
+        "title": "Little Italy Sign",
+        "duration": "10 minutes",
+        "admission": "Free"
+      },
+      {
+        "title": "Piemonte Ravioli",
+        "duration": "10 minutes",
+        "admission": "Free"
+      },
+      {
+        "title": "Mulberry Street Bar",
+        "duration": "5 minutes",
+        "admission": "Free"
+      },
+      {
+        "title": "Audrey Hepburn Mural",
+        "duration": "5 minutes",
+        "admission": "Free"
+      },
+      {
+        "title": "Nolita Pizza",
+        "duration": "20 minutes",
+        "admission": "Free"
+      },
+      {
+        "title": "Eileen's Special Cheesecake",
+        "duration": "15 minutes",
+        "admission": "Free"
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Stroller accessible",
+      "Service animals allowed",
+      "Near public transportation",
+      "Most travelers can participate",
+      "This tour is not suitable for some dietary restrictions including vegan, celiac and nut allergies.",
+      "By booking this tour, you agree to the Tasty Tours NYC Terms and Conditions available on our website.",
+      "This tour/activity will have a maximum of 15 travelers"
+    ],
+    "faq": [
+      {
+        "question": "What is the cancellation policy?",
+        "answer": "You can cancel up to 24 hours in advance of the experience for a full refund."
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/31/96/86/e6/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            }
+          }
+        }
+      ]
+    }
+  }
+}

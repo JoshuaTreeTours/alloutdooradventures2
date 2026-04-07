@@ -52,6 +52,7 @@ import specimen6288p29Payload from "../../data/engine6/viator/6288P29.exact-prod
 import specimen122012p17Payload from "../../data/engine6/viator/122012P17.exact-product.json";
 import specimen474891p3Payload from "../../data/engine6/viator/474891P3.exact-product.json";
 import specimen5515296p1Payload from "../../data/engine6/viator/5515296P1.exact-product.json";
+import specimen428219p6Payload from "../../data/engine6/viator/428219P6.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -125,6 +126,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/Epicurean-Odyssey-A-Gourmet-Bus-Tour-Through-New-York-City/d687-5515296P1",
     rawPayload: specimen5515296p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "428219P6",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Chinatown-and-Little-Italy-Food-Tour/d687-428219P6",
+    rawPayload: specimen428219p6Payload as Record<string, unknown>,
   },
   {
     productCode: "214880P12",
