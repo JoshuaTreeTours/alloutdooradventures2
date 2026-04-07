@@ -8,6 +8,11 @@ import {
 import { extractEngine6Product } from "./viatorExtractors.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
+const ENGINE6_STRICT_API_ONLY_PRODUCT_CODES = new Set(["5615689P4"]);
+const ENGINE6_MANUAL_HERO_PIN_BY_PRODUCT_CODE: Record<string, string> = {
+  "5615689P4":
+    "https://dynamic-media.tacdn.com/media/photo-o/31/cd/1c/6d/caption.jpg?w=700&h=500&s=1",
+};
 
 const buildHeaders = (apiKey: string) => ({
   "Content-Type": "application/json;version=2.0",
@@ -157,6 +162,43 @@ const safeExtractEngine6Product = (payload: unknown) => {
       product: null,
     };
   }
+};
+
+const isStrictApiOnlyProductCode = (productCode: string) =>
+  ENGINE6_STRICT_API_ONLY_PRODUCT_CODES.has(productCode.toUpperCase());
+
+const applyManualPinnedHeroOverride = (args: {
+  productCode: string;
+  extraction: ReturnType<typeof extractEngine6Product>;
+}) => {
+  const pinnedHeroUrl =
+    ENGINE6_MANUAL_HERO_PIN_BY_PRODUCT_CODE[args.productCode.toUpperCase()];
+  if (!pinnedHeroUrl) {
+    return args.extraction;
+  }
+
+  return {
+    ...args.extraction,
+    extracted: {
+      ...args.extraction.extracted,
+      heroImageUrl: pinnedHeroUrl,
+    },
+    diagnostics: {
+      ...args.extraction.diagnostics,
+      finalHeroUrl: pinnedHeroUrl,
+      heroSourceType: "api-primary" as const,
+      imageSourceUsed: "api-primary" as const,
+      heroImageFieldPath: "product.media.images[manual-pinned].variants.FULL.url",
+      heroVariantFieldPath: "product.media.images[manual-pinned].variants.FULL",
+      selectedHeroWidth: 700,
+      selectedHeroHeight: 500,
+      heroSourceProductCode: args.productCode.toUpperCase(),
+      heroSourceProductUrl: args.extraction.extracted.productUrl,
+      heroSourceFieldPath:
+        "product.media.images[manual-pinned].variants.FULL.url",
+      heroHost: "dynamic-media.tacdn.com",
+    },
+  };
 };
 
 const respondWithNormalizedEnvelope = (
@@ -421,9 +463,10 @@ export default async function handler(req: any, res: any) {
   const bundledPayload = await getBundledExactProductPayload(productCode);
   const key = process.env.VIATOR_API_KEY;
   const diagnostics = buildDiagnostics("live-api", Boolean(key));
+  const strictApiOnlyMode = isStrictApiOnlyProductCode(productCode);
 
   if (!key) {
-    if (bundledPayload) {
+    if (bundledPayload && !strictApiOnlyMode) {
       diagnostics.usedBundledFallbackBecause = "missing-api-key";
       respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
       return;
@@ -453,7 +496,7 @@ export default async function handler(req: any, res: any) {
       headers: buildHeaders(key),
     });
   } catch (error) {
-    if (bundledPayload) {
+    if (bundledPayload && !strictApiOnlyMode) {
       diagnostics.usedBundledFallbackBecause = "live-fetch-threw";
       respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
       return;
@@ -476,7 +519,7 @@ export default async function handler(req: any, res: any) {
   const rawText = await upstreamResponse.text();
 
   if (!upstreamResponse.ok) {
-    if (bundledPayload) {
+    if (bundledPayload && !strictApiOnlyMode) {
       diagnostics.usedBundledFallbackBecause = "upstream-not-ok";
       const liveExtraction = safeExtractEngine6Product({
         product: { productCode, productUrl: null },
@@ -502,7 +545,7 @@ export default async function handler(req: any, res: any) {
   }
 
   if (!diagnostics.upstreamContentType?.includes("json")) {
-    if (bundledPayload) {
+    if (bundledPayload && !strictApiOnlyMode) {
       diagnostics.usedBundledFallbackBecause = "upstream-non-json";
       respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
       return;
@@ -522,7 +565,7 @@ export default async function handler(req: any, res: any) {
   try {
     payload = JSON.parse(rawText);
   } catch {
-    if (bundledPayload) {
+    if (bundledPayload && !strictApiOnlyMode) {
       diagnostics.usedBundledFallbackBecause = "upstream-invalid-json";
       respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
       return;
@@ -538,7 +581,10 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
-  const extracted = safeExtractEngine6Product(payload);
+  const extracted = applyManualPinnedHeroOverride({
+    productCode,
+    extraction: safeExtractEngine6Product(payload),
+  });
 
   const extractedProductCode =
     typeof extracted.product?.productCode === "string"
@@ -547,6 +593,7 @@ export default async function handler(req: any, res: any) {
 
   if (
     bundledPayload &&
+    !strictApiOnlyMode &&
     extractedProductCode &&
     extractedProductCode !== productCode
   ) {
@@ -561,7 +608,7 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
-  if (bundledPayload && extracted.extracted.priceAmount === null) {
+  if (bundledPayload && !strictApiOnlyMode && extracted.extracted.priceAmount === null) {
     diagnostics.usedBundledFallbackBecause = "live-price-missing-or-zero";
     respondWithBundledFallback(
       res,
@@ -573,7 +620,7 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
-  if (bundledPayload && extracted.diagnostics.heroFallbackTriggered) {
+  if (bundledPayload && !strictApiOnlyMode && extracted.diagnostics.heroFallbackTriggered) {
     diagnostics.usedBundledFallbackBecause = "live-hero-missing-or-foreign";
     respondWithBundledFallback(
       res,
