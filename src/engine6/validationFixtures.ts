@@ -12,6 +12,7 @@ import specimen7079rrebikePayload from "../../data/engine6/viator/7079RREBIKE.ex
 import specimen191767p5Payload from "../../data/engine6/viator/191767P5.exact-product.json";
 import specimen32779Payload from "../../data/engine6/viator/32779P2.exact-product.json";
 import specimen60136Payload from "../../data/engine6/viator/60136P1.exact-product.json";
+import specimen60294dayparkPayload from "../../data/engine6/viator/6029_4DAYPARK.exact-product.json";
 import specimen26719Payload from "../../data/engine6/viator/26719P8.exact-product.json";
 import specimen354611p1Payload from "../../data/engine6/viator/354611P1.exact-product.json";
 import specimen36001Payload from "../../data/engine6/viator/36001P1.exact-product.json";
@@ -289,6 +290,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Las-Vegas/Antelope-Canyon-Horseshoe-Bend-Day-Tour-from-Las-Vegas/d684-60136P1",
     rawPayload: specimen60136Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "6029_4DAYPARK",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/4-Day-Yellowstone-and-Grand-Teton-National-Parks-Wildlife-Adventure/d51006-6029_4DAYPARK",
+    rawPayload: specimen60294dayparkPayload as Record<string, unknown>,
   },
   {
     productCode: "26719P8",

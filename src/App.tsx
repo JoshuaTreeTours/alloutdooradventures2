@@ -87,6 +87,7 @@ import {
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
+  ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_ROUTE,
 } from "./engine6/routes";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
 
@@ -224,6 +225,10 @@ export default function App() {
           component={Engine6SpecimenRoute}
         />
         <Route path={ENGINE6_YOSEMITE_ROUTE} component={Engine6SpecimenRoute} />
+        <Route
+          path={ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
         <Route
           path={ENGINE6_ANCHORAGE_PRIVATE_ROUTE}
           component={Engine6SpecimenRoute}
