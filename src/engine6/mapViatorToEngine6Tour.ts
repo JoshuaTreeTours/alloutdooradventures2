@@ -376,6 +376,10 @@ export const mapViatorToEngine6Tour = (
       itineraryFieldPath: payload.diagnostics.itineraryFieldPath,
       itineraryItemCount: payload.diagnostics.itineraryItemCount,
       itinerarySourceUsed: payload.diagnostics.itinerarySourceUsed,
+      itineraryStructuredSourceUsed:
+        payload.diagnostics.itineraryStructuredSourceUsed,
+      itineraryFallbackSummaryUsed:
+        payload.diagnostics.itineraryFallbackSummaryUsed,
       itinerarySummaryFieldPath:
         payload.diagnostics.itinerarySummaryFieldPath ?? null,
       faqsFieldPath: payload.diagnostics.faqsFieldPath,

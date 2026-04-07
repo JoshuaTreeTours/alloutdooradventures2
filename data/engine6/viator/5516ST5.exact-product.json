@@ -3,7 +3,7 @@
     "productCode": "5516ST5",
     "productUrl": "https://www.viator.com/tours/Las-Vegas/Deluxe-Las-Vegas-Helicopter-Night-Flight-with-VIP-Transportation/d684-5516ST5",
     "title": "Deluxe Las Vegas Helicopter Night Flight with VIP Transportation",
-    "description": "See the Las Vegas Strip from the air on a nighttime helicopter flight designed for travelers who want premium logistics and a skyline-first perspective. This deluxe option includes VIP transportation and a narrated route over the Strip's signature landmarks, including the Bellagio fountains, Allegiant Stadium, and Downtown's Fremont Street corridor.",
+    "description": "This premium night helicopter experience combines VIP ground transfers with aerial coverage of the brightest Las Vegas Strip landmarks. After a coordinated hotel pickup window, guests check in at the terminal, complete a short safety briefing, and board for a narrated night route over the Bellagio fountains, Allegiant Stadium, the High Roller, and Downtown's Fremont Street corridor before return transport.",
     "location": {
       "city": "Las Vegas",
       "state": "Nevada"
@@ -29,51 +29,95 @@
       ]
     },
     "highlights": [
-      "Night helicopter flight over the illuminated Las Vegas Strip",
-      "VIP hotel transportation for a smoother preflight experience",
-      "Aerial views of Bellagio fountains, High Roller, and Fremont Street",
-      "Live pilot narration focused on major landmarks"
+      "Deluxe Las Vegas Strip night helicopter route with narration from an experienced pilot.",
+      "VIP round-trip transportation from select Las Vegas Strip and Downtown hotels.",
+      "Aerial coverage includes Bellagio fountains, MSG Sphere area, High Roller, Allegiant Stadium, and Fremont Street lights.",
+      "Preflight safety orientation and terminal check-in support included."
     ],
     "inclusions": [
       "Round-trip VIP transportation from select Las Vegas hotels",
-      "Helicopter flight",
-      "Pilot/guide commentary"
+      "Helicopter flight over the Las Vegas Strip",
+      "Pilot commentary during flight",
+      "All local taxes and terminal fees"
+    ],
+    "exclusions": [
+      "Pilot gratuity (optional)",
+      "Food and beverages"
     ],
     "additionalInfo": [
-      "All passengers must present a valid photo ID.",
-      "Flight routes may vary by air-traffic control restrictions.",
-      "Guests should reconfirm pickup details after booking."
+      "All passengers 18+ must present a valid government-issued photo ID at check-in.",
+      "Passengers are weighed at check-in to support FAA-compliant seat balancing.",
+      "Flight route may be adjusted for weather or FAA air-traffic restrictions.",
+      "Hotel pickup assignment and window are confirmed after booking."
     ],
-    "logistics": {
-      "start": {
-        "description": "Hotel pickup and drop-off are available from select Las Vegas Strip and Downtown properties; pickup windows vary by hotel and flight time."
+    "meetingAndPickup": {
+      "meetingPoint": {
+        "description": "Hotel pickup and drop-off are available from select Las Vegas Strip and Downtown properties; pickup windows vary by hotel and flight time.",
+        "name": "Select Las Vegas hotel pickup points"
       }
     },
-    "itineraryItems": [
-      {
-        "title": "VIP pickup in Las Vegas",
-        "description": "Begin with coordinated pickup from select hotels before transfer to the terminal.",
-        "duration": "45 minutes"
-      },
-      {
-        "title": "Las Vegas Strip helicopter flight",
-        "description": "Fly over the Strip at night with views of resorts, attractions, and the downtown glow.",
-        "duration": "15 minutes"
-      },
-      {
-        "title": "Return transfer",
-        "description": "After landing, return to your original pickup zone.",
-        "duration": "45 minutes"
-      }
-    ],
+    "itinerary": {
+      "days": [
+        {
+          "dayTitle": "Preflight and transfer",
+          "items": [
+            {
+              "title": "VIP hotel pickup and transfer",
+              "description": "Driver pickup from your confirmed Las Vegas hotel point and transfer to the helicopter terminal.",
+              "duration": "45 minutes"
+            },
+            {
+              "title": "Terminal check-in and safety briefing",
+              "description": "Check in, complete passenger weighing, and attend the pilot-led safety orientation before boarding.",
+              "duration": "20 minutes"
+            }
+          ]
+        },
+        {
+          "dayTitle": "Las Vegas night flight",
+          "items": [
+            {
+              "title": "Bellagio Fountains and central Strip",
+              "description": "Lift off over the Las Vegas Strip with clear nighttime views of Bellagio fountains and surrounding mega-resorts.",
+              "duration": "5 minutes"
+            },
+            {
+              "title": "MSG Sphere, High Roller, and LINQ district",
+              "description": "Continue northbound over the High Roller corridor and the bright entertainment zone around the Sphere.",
+              "duration": "4 minutes"
+            },
+            {
+              "title": "Allegiant Stadium and south Strip arc",
+              "description": "Bank across the south Strip skyline including Allegiant Stadium and major resort complexes.",
+              "duration": "3 minutes"
+            },
+            {
+              "title": "Downtown Fremont Street Experience",
+              "description": "Final leg crosses Downtown Las Vegas for elevated views of Fremont Street's illuminated canopy.",
+              "duration": "3 minutes"
+            }
+          ]
+        },
+        {
+          "dayTitle": "Post-flight return",
+          "items": [
+            {
+              "title": "Return to terminal and VIP drop-off",
+              "description": "Disembark and board return transfer to your original pickup zone.",
+              "duration": "45 minutes"
+            }
+          ]
+        }
+      ]
+    },
     "faqs": [
       {
-        "question": "How long is the helicopter flight itself?",
-        "answer": "The air segment is approximately 12 to 15 minutes, with total experience time around 3 hours including transfers."
+        "question": "How long is the helicopter portion of the experience?",
+        "answer": "The flight segment is typically around 12 to 15 minutes, with total experience time around 3 hours including transfers and check-in."
       },
       {
         "question": "Is hotel pickup included?",
-        "answer": "Yes, VIP transportation is included from select Las Vegas pickup points."
+        "answer": "Yes. VIP transportation is included from select Las Vegas pickup points confirmed after booking."
       }
     ],
     "categories": ["Helicopter Tours", "Night Tours"]
