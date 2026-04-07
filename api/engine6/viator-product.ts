@@ -119,6 +119,7 @@ const EMPTY_EXTRACTED_PRODUCT = {
   productUrl: null,
   priceAmount: null,
   priceFormatted: null,
+  durationText: null,
   aggregateRating: null,
   reviewCount: null,
   meetingPointText: null,

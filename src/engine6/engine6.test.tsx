@@ -232,7 +232,7 @@ const specimenApiPayload = {
     productUrl:
       "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
     priceAmount: 199,
-    priceFormatted: "From $199",
+    priceFormatted: "Starting at $199",
     aggregateRating: 4.9,
     reviewCount: 177,
     meetingPointText:
@@ -307,7 +307,7 @@ describe("engine6 extractor", () => {
     expect(extracted.diagnostics.heroFallbackTriggered).toBe(false);
     expect(extracted.diagnostics.rejectedForeignHeroCandidates).toEqual([]);
     expect(extracted.extracted.priceAmount).toBe(199);
-    expect(extracted.extracted.priceFormatted).toBe("From $199");
+    expect(extracted.extracted.priceFormatted).toBe("Starting at $199");
     expect(extracted.diagnostics.commercialPriceFieldPath).toBe(
       "product.priceFrom"
     );
@@ -1100,9 +1100,7 @@ describe("engine6 listing surfaces", () => {
       "/tours/San-Diego/Day-Trip-to-Joshua-Tree-National-Park-from-San-Diego/d736-447234P3"
     );
     expect(engine6Entry?.tour.bookingUrl).not.toContain("/search/");
-    expect(engine6Entry?.tour.badges?.priceFrom).toBe(
-      "From $995 per group (up to 4)"
-    );
+    expect(engine6Entry?.tour.badges?.priceFrom).toBe("Starting at $995");
 
     const detailTour = engine6ResolvedTours.find(
       tour => tour.productCode === "447234P3"
@@ -1119,7 +1117,7 @@ describe("engine6 listing surfaces", () => {
     expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(false);
     const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
     expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
-    expect(detailHtml).toContain("per group (up to 4)");
+    expect(detailHtml).toContain("Starting at $995");
     expect(detailHtml).toContain(
       `src="${ENGINE6_447234P3_EXPECTED_HERO_URL}"`
     );
@@ -1136,7 +1134,7 @@ describe("engine6 listing surfaces", () => {
       | Record<string, unknown>
       | undefined;
     expect(offerNode?.price).toBe(995);
-    expect(offerNode?.description).toBe("From $995 per group (up to 4)");
+    expect(offerNode?.description).toBe("Starting at $995");
     expect(tripNode?.image).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
   });
 

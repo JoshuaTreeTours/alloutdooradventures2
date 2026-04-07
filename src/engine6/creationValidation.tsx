@@ -469,12 +469,7 @@ export const validateEngine6CreationContract = ({
   }
   if (
     tour.priceFormatted &&
-    !(
-      tour.priceFormatted.startsWith("Starting at $") ||
-      /^From \$\d+(?:\.\d+)? per group(?: \(up to \d+\))?$/i.test(
-        tour.priceFormatted
-      )
-    )
+    !tour.priceFormatted.startsWith("Starting at $")
   ) {
     violations.push("visible price label lost Starting at minimum-price copy");
   }
@@ -491,8 +486,11 @@ export const validateEngine6CreationContract = ({
   ) {
     violations.push("city card rating label missing ★ rating (count) format");
   }
-  if (typeof tour.priceAmount === "number" && !/^From \$/.test(card.priceLabel)) {
-    violations.push("city card price label missing From $price format");
+  if (
+    typeof tour.priceAmount === "number" &&
+    !/^Starting at \$/.test(card.priceLabel)
+  ) {
+    violations.push("city card price label missing Starting at $price format");
   }
   if (card.imageUrl !== tour.resolvedHero?.url) {
     violations.push("card hero did not use authoritative resolved hero");

@@ -1,6 +1,7 @@
 import specimen63657Payload from "../../data/engine6/viator/63657P1.exact-product.json";
 import specimen5119Payload from "../../data/engine6/viator/5119P13.exact-product.json";
 import specimen5602p25Payload from "../../data/engine6/viator/5602P25.exact-product.json";
+import specimen190492p3Payload from "../../data/engine6/viator/190492P3.exact-product.json";
 import specimen32779Payload from "../../data/engine6/viator/32779P2.exact-product.json";
 import specimen60136Payload from "../../data/engine6/viator/60136P1.exact-product.json";
 import specimen26719Payload from "../../data/engine6/viator/26719P8.exact-product.json";
@@ -212,6 +213,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Las-Vegas/WESTERN-NATIONAL-PARKS-7-DAY-EXPLORER-Camping/d684-5602P25",
     rawPayload: specimen5602p25Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "190492P3",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Zion-and-Bryce-Canyon-Small-Group-Tour-from-Las-Vegas/d684-190492P3",
+    rawPayload: specimen190492p3Payload as Record<string, unknown>,
   },
   {
     productCode: "32779P2",

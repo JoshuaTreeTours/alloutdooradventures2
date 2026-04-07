@@ -191,6 +191,7 @@ export type Engine6ApiResponse = {
     priceFormatted: string | null;
     aggregateRating: number | null;
     reviewCount: number | null;
+    durationText?: string | null;
     meetingPointText: string | null;
     overviewText: string | null;
     highlights: string[];

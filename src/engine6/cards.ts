@@ -1,4 +1,5 @@
 import { formatEngine6AggregateRating } from "./rating";
+import { formatEngine6StartingPriceLabel } from "./priceDisplay";
 import { formatEngine6CategoryLabel } from "./seo";
 import type { Engine6Tour } from "./types";
 
@@ -42,7 +43,7 @@ export const toEngine6Card = (tour: Engine6Tour): Engine6Card => ({
       : "No ratings yet",
   priceLabel:
     typeof tour.priceAmount === "number"
-      ? `From $${tour.priceAmount.toFixed(0)}`
+      ? formatEngine6StartingPriceLabel(tour.priceAmount)
       : tour.priceFormatted,
   description: buildCardDescription(tour),
   href: tour.canonicalPath,

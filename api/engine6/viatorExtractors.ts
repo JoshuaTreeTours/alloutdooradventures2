@@ -92,6 +92,7 @@ export type Engine6Extracted = {
   productUrl: string | null;
   priceAmount: number | null;
   priceFormatted: string | null;
+  durationText: string | null;
   aggregateRating: number | null;
   reviewCount: number | null;
   meetingPointText: string | null;
@@ -327,6 +328,7 @@ const emptyExtracted = (): Engine6Extracted => ({
   productUrl: null,
   priceAmount: null,
   priceFormatted: null,
+  durationText: null,
   aggregateRating: null,
   reviewCount: null,
   meetingPointText: null,
@@ -622,26 +624,36 @@ const extractPlaybookPrice = (product: RecordLike): PriceResult => {
   };
 };
 
-const buildPriceLabel = ({
-  amount,
-  rawValue,
-}: {
-  amount: number | null;
-  rawValue: string | number | null;
-}) => {
+const buildPriceLabel = ({ amount }: { amount: number | null }) => {
   if (amount === null) {
     return null;
   }
+  const hasCents = Math.round(amount * 100) % 100 !== 0;
+  const formatted = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: hasCents ? 2 : 0,
+    maximumFractionDigits: hasCents ? 2 : 0,
+  }).format(amount);
+  return `Starting at ${formatted}`;
+};
 
-  const rawText =
-    typeof rawValue === "string" ? rawValue.toLowerCase().trim() : "";
-  const upToMatch = rawText.match(/\(up to [^)]+\)/i)?.[0] ?? "";
-
-  if (rawText.includes("per group")) {
-    return `From $${amount.toFixed(0)} per group${upToMatch ? ` ${upToMatch}` : ""}`;
+const extractDuration = (product: RecordLike) => {
+  for (const path of [
+    ["duration"],
+    ["durationText"],
+    ["durationFixed"],
+    ["durationSummary"],
+    ["durationInfo", "durationText"],
+    ["durationInfo", "label"],
+  ] as PathSegment[][]) {
+    const value = asNonEmptyString(readPath(product, path));
+    if (value) {
+      return { value, path: formatFieldPath(path) };
+    }
   }
 
-  return `From $${amount.toFixed(0)}`;
+  return { value: null as string | null, path: null as string | null };
 };
 
 const extractPlaybookRating = (product: RecordLike): NumericResult => {
@@ -1316,6 +1328,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
 
   const reviewCount = extractPlaybookReviewCount(product);
   diagnostics.reviewCountFieldPath = reviewCount.path;
+  const duration = extractDuration(product);
 
   const meetingPoint = extractMeetingPoint(product);
   diagnostics.meetingPointFieldPath = meetingPoint.path;
@@ -1394,10 +1407,10 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       priceAmount: price.amount,
       priceFormatted: buildPriceLabel({
         amount: price.amount,
-        rawValue: price.rawValue,
       }),
       aggregateRating: normalizedAggregateRating,
       reviewCount: reviewCount.value,
+      durationText: duration.value,
       meetingPointText: meetingPoint.value,
       overviewText: overview.value,
       highlights: highlights.value,
