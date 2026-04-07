@@ -7,6 +7,7 @@ import specimen13920p12Payload from "../../data/engine6/viator/13920P12.exact-pr
 import specimen3533p14Payload from "../../data/engine6/viator/3533P14.exact-product.json";
 import specimen470339p1Payload from "../../data/engine6/viator/470339P1.exact-product.json";
 import specimen398496p5Payload from "../../data/engine6/viator/398496P5.exact-product.json";
+import specimen5615689p4Payload from "../../data/engine6/viator/5615689P4.exact-product.json";
 import specimen3533rrcPayload from "../../data/engine6/viator/3533RRC.exact-product.json";
 import specimen7079rrebikePayload from "../../data/engine6/viator/7079RREBIKE.exact-product.json";
 import specimen191767p5Payload from "../../data/engine6/viator/191767P5.exact-product.json";
@@ -258,6 +259,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Las-Vegas/MGM-Sphere-Guided-Driving-Tour/d684-398496P5",
     rawPayload: specimen398496p5Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5615689P4",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Arts-District-E-Bike-Tour/d684-5615689P4",
+    rawPayload: specimen5615689p4Payload as Record<string, unknown>,
   },
 
   {
