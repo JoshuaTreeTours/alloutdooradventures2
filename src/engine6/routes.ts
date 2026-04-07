@@ -71,6 +71,10 @@ export const ENGINE6_NYC_PRIVATE_WALKING_TOUR_ROUTE =
 export const ENGINE6_NYC_BUSTRONOME_GOURMET_BUS_PRODUCT_CODE = "5515296P1";
 export const ENGINE6_NYC_BUSTRONOME_GOURMET_BUS_ROUTE =
   "/destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus";
+export const ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_PRODUCT_CODE =
+  "428219P6";
+export const ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_ROUTE =
+  "/destinations/new-york/new-york/tours/chinatown-and-little-italy-food-tour-428219p6";
 export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_PRODUCT_CODE = "5024MANSKY";
 export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_ROUTE =
   "/destinations/new-york/new-york/tours/manhattan-sky-tour-new-york-helicopter-flight";
@@ -252,6 +256,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_NYC_BUSTRONOME_GOURMET_BUS_ROUTE,
     ENGINE6_NYC_BUSTRONOME_GOURMET_BUS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_ROUTE,
+    ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_PRODUCT_CODE,
   ],
   [ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE, ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE],
   [
