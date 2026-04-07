@@ -59,6 +59,9 @@ export type Engine6DiagnosticsPaths = {
   itinerarySourceUsed: string | null;
   itinerarySummaryFieldPath: string | null;
   meetingPointFieldPath: string | null;
+  meetingPointRawText: string | null;
+  meetingPointSummaryApplied: boolean;
+  meetingPointSummaryReason: string | null;
   faqsFieldPath: string | null;
   faqFieldPath: string | null;
   faqCount: number;
@@ -231,6 +234,17 @@ const parseLooseNumber = (value: unknown): number | null => {
 };
 
 const parsePriceAmount = (value: unknown): number | null => {
+  const objectValue = asRecord(value);
+  if (objectValue) {
+    const nestedAmount =
+      parsePriceAmount(objectValue.amount) ??
+      parsePriceAmount(objectValue.fromPrice) ??
+      parsePriceAmount(objectValue.value);
+    if (nestedAmount !== null) {
+      return nestedAmount;
+    }
+  }
+
   if (typeof value === "number" && Number.isFinite(value) && value > 0) {
     return value;
   }
@@ -488,7 +502,6 @@ const withHeroScope = (
 
   return {
     ...hero,
-    path: normalizedSourceFieldPath,
     variantPath: normalizedVariantPath,
     sourceFieldPath: normalizedSourceFieldPath,
     sourceProductCode: productCode,
@@ -896,6 +909,37 @@ const extractItinerarySummary = (product: RecordLike) => {
 };
 
 const extractMeetingPoint = (product: RecordLike) => {
+  const summarizeMeetingPoint = (value: string) => {
+    const compact = value.replace(/\s+/g, " ").trim();
+    if (!compact) {
+      return {
+        value: null as string | null,
+        summaryApplied: false,
+        reason: null as string | null,
+      };
+    }
+
+    if (/\bhotel pickup\b/i.test(compact)) {
+      return {
+        value: "Hotel pickup offered",
+        summaryApplied: true,
+        reason: "hotel-pickup-detected",
+      };
+    }
+
+    const lineCount = compact.split(/\s*[;\n|•]\s*/).filter(Boolean).length;
+    const isOverflow = compact.length > 110 || lineCount > 3;
+    if (isOverflow) {
+      return {
+        value: "Select Las Vegas pickup points available",
+        summaryApplied: true,
+        reason: "long-pickup-overflow",
+      };
+    }
+
+    return { value: compact, summaryApplied: false, reason: null as string | null };
+  };
+
   for (const candidate of [
     {
       value: asRecord(asRecord(product.logistics)?.start)?.description,
@@ -910,13 +954,26 @@ const extractMeetingPoint = (product: RecordLike) => {
       path: "product.meetingPoint.name",
     },
   ]) {
-    const value = asNonEmptyString(candidate.value);
-    if (value) {
-      return { value, path: candidate.path };
+    const rawValue = asNonEmptyString(candidate.value);
+    if (rawValue) {
+      const summarized = summarizeMeetingPoint(rawValue);
+      return {
+        value: summarized.value,
+        rawValue,
+        path: candidate.path,
+        summaryApplied: summarized.summaryApplied,
+        summaryReason: summarized.reason,
+      };
     }
   }
 
-  return { value: null, path: null as string | null };
+  return {
+    value: null,
+    rawValue: null,
+    path: null as string | null,
+    summaryApplied: false,
+    summaryReason: null as string | null,
+  };
 };
 
 const extractFaqs = (product: RecordLike) => {
@@ -1160,6 +1217,9 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     itinerarySourceUsed: null,
     itinerarySummaryFieldPath: null,
     meetingPointFieldPath: null,
+    meetingPointRawText: null,
+    meetingPointSummaryApplied: false,
+    meetingPointSummaryReason: null,
     faqsFieldPath: null,
     faqFieldPath: null,
     faqCount: 0,
@@ -1259,6 +1319,9 @@ export const extractEngine6Product = (rawPayload: unknown) => {
 
   const meetingPoint = extractMeetingPoint(product);
   diagnostics.meetingPointFieldPath = meetingPoint.path;
+  diagnostics.meetingPointRawText = meetingPoint.rawValue;
+  diagnostics.meetingPointSummaryApplied = meetingPoint.summaryApplied;
+  diagnostics.meetingPointSummaryReason = meetingPoint.summaryReason;
 
   const overview = extractOverview(product);
   diagnostics.overviewFieldPath = overview.path;

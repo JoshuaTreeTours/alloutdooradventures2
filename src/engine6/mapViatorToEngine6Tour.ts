@@ -82,6 +82,16 @@ const countWords = (value: string) =>
     .split(/\s+/)
     .filter(Boolean).length;
 
+const formatUsdStartingPrice = (amount: number) => {
+  const hasCents = Math.round(amount * 100) % 100 !== 0;
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: hasCents ? 2 : 0,
+    maximumFractionDigits: hasCents ? 2 : 0,
+  }).format(amount);
+};
+
 const stripMarketingLanguage = (value: string) =>
   value
     .replace(/\bonce in a lifetime\b/gi, "")
@@ -282,7 +292,7 @@ export const mapViatorToEngine6Tour = (
     /per\s+group|private/i.test(payload.extracted.priceFormatted)
       ? payload.extracted.priceFormatted
       : typeof payload.extracted.priceAmount === "number"
-      ? `Starting at $${payload.extracted.priceAmount.toFixed(0)}`
+      ? `Starting at ${formatUsdStartingPrice(payload.extracted.priceAmount)}`
       : payload.extracted.priceFormatted?.replace(
             /^From\s+/i,
             "Starting at "
