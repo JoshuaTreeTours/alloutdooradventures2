@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "77348P8",
+    "productUrl": "https://www.viator.com/tours/New-York-City/American-Dream-One-Day-Dreamworks-Waterpark-Pass-Bundle/d687-77348P8",
+    "title": "American Dream One Day Fun Day Dreamworks Waterpark 4-in-1 Pass",
+    "description": {
+      "text": "Enjoy a fun and interactive day at American Dream Mall just across the river from Manhattan in New Jersey. There, you'll have passes to do four incredible activities, museums, and theme parks for a fun-filled day, maximizing your time and money. Get wet at DreamWorks Water Park, take a swing at Blacklight Mini Golf, make your way through the Mirror Maze, and take amazing photos at TiLT Museum."
+    },
+    "location": {
+      "city": "New York City",
+      "state": "New York",
+      "country": "USA"
+    },
+    "pricing": {
+      "fromPrice": 109,
+      "fromPriceFormatted": "$109.00",
+      "summary": {
+        "fromPrice": 109,
+        "fromPriceFormatted": "$109.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 3.5,
+      "totalReviews": 2
+    },
+    "duration": "1 day (approx.)",
+    "highlights": [
+      "Escape Manhattan and spend an immersive day at American Dream",
+      "Passes to four interactive attractions are included",
+      "Pre-paid tickets ensure entry to all four attractions any time during opening hours",
+      "Have four unique experiences in one memorable day, on your own schedule"
+    ],
+    "inclusions": [
+      "All Access Pass to DreamWorks Water Park",
+      "Ticket to Blacklight Mini Golf",
+      "Ticket to Mirror Maze",
+      "Ticket to TiLT Museum"
+    ],
+    "exclusions": [
+      "Food and drinks (available to purchase)",
+      "Parking ($5 per day)"
+    ],
+    "logistics": {
+      "start": {
+        "description": "DreamWorks Water Park at American Dream, 1 American Dream Way, East Rutherford, NJ 07073"
+      }
+    },
+    "itinerarySummary": "Spend one day at American Dream using one bundle pass for DreamWorks Water Park, Blacklight Mini Golf, TiLT Museum, and Mirror Maze.",
+    "itineraryItems": [
+      {
+        "title": "DreamWorks Water Park at American Dream",
+        "description": "Visit DreamWorks Water Park with all-access admission.",
+        "duration": "4 hours",
+        "admissionNote": "Admission Ticket Included"
+      },
+      {
+        "title": "Blacklight Mini Golf at American Dream",
+        "description": "Play a round of Blacklight Mini Golf at American Dream.",
+        "duration": "1 hour",
+        "admissionNote": "Admission Ticket Included"
+      },
+      {
+        "title": "Tilt Museum",
+        "description": "Explore the TiLT Museum photo attraction.",
+        "duration": "1 hour",
+        "admissionNote": "Admission Ticket Included"
+      },
+      {
+        "title": "Mirror Maze at American Dream",
+        "description": "Navigate the Mirror Maze experience.",
+        "duration": "1 hour",
+        "admissionNote": "Admission Ticket Included"
+      }
+    ],
+    "requirements": [
+      "Confirmation will be received within 48 hours of booking, subject to availability",
+      "Not wheelchair accessible",
+      "Most travelers can participate",
+      "Children under the age of 14 must be accompanied by a supervising companion",
+      "Proper swim attire is required",
+      "Outside food and beverages are not permitted in DreamWorks Water Park"
+    ],
+    "media": {
+      "images": [
+        {
+          "imageSource": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/84/33/caption.jpg?w=1400&h=1000&s=1",
+          "variants": [
+            {
+              "height": 1000,
+              "width": 1400,
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b8/84/33/caption.jpg?w=1400&h=1000&s=1"
+            }
+          ]
+        }
+      ]
+    },
+    "bookingInfo": {
+      "cancellationPolicy": "You can cancel up to 24 hours in advance of the experience for a full refund."
+    },
+    "tags": [
+      "Attractions & Museums",
+      "Museum Tickets & Passes"
+    ]
+  }
+}
