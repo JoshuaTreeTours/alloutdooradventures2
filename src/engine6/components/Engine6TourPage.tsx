@@ -147,6 +147,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
   }, [tour.canonicalPath, tour.productCode]);
   const showRelatedTours = relatedTours.length >= 2;
   const isExternalBookingUrl = /^https?:\/\//i.test(tour.bookingUrl);
+  const isLightTier = tour.contentTier === "LIGHT";
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -283,7 +284,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </ContentSection>
         ) : null}
 
-        {tour.highlights.length > 0 ? (
+        {!isLightTier && tour.highlights.length > 0 ? (
           <ContentSection title="Highlights">
             <ul className="grid gap-3 md:grid-cols-2">
               {tour.highlights.map((highlight, index) => (
@@ -313,7 +314,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </ContentSection>
         ) : null}
 
-        {tour.itinerary.length > 0 ? (
+        {!isLightTier && tour.itinerary.length > 0 ? (
           <ContentSection title="Itinerary">
             <ul className="space-y-4" data-testid="engine6-itinerary-timeline">
               {tour.itinerary.map((item, index) => (
@@ -351,7 +352,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
               ))}
             </ul>
           </ContentSection>
-        ) : tour.itinerarySummaryText ? (
+        ) : !isLightTier && tour.itinerarySummaryText ? (
           <ContentSection title="Itinerary summary">
             <div
               className="rounded-xl border border-amber-200 bg-amber-50 p-5"
@@ -376,7 +377,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </ContentSection>
         ) : null}
 
-        {tour.faqs.length > 0 ? (
+        {!isLightTier && tour.faqs.length > 0 ? (
           <ContentSection title="FAQs">
             <div className="space-y-3">
               {tour.faqs.map((faq, index) => (
@@ -396,7 +397,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </ContentSection>
         ) : null}
 
-        {tour.requirements.length > 0 ? (
+        {!isLightTier && tour.requirements.length > 0 ? (
           <ContentSection title="Additional info">
             <ul className="space-y-3">
               {tour.requirements.map((item, index) => (

@@ -1,6 +1,7 @@
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { resolveEngine6PathForProductCode } from "./routes";
+import { classifyEngine6ContentTier } from "./contentTier";
 import {
   buildEngine6CanonicalPath,
   buildEngine6MetaDescription,
@@ -183,6 +184,7 @@ const buildAuthoritativeOverview = ({
 export const mapViatorToEngine6Tour = (
   payload: Engine6ApiResponse
 ): Engine6Tour => {
+  const contentTier = classifyEngine6ContentTier(payload);
   const title =
     payload.extracted.title ?? `Outdoor Adventure ${payload.rawProductCode}`;
   const city = payload.extracted.city ?? "Destination";
@@ -332,6 +334,7 @@ export const mapViatorToEngine6Tour = (
     pagePath: canonicalPath,
     canonicalPath,
     bookingUrl,
+    contentTier,
     ownership: {
       routeOwner: ctaOwner,
       ctaOwner,

@@ -51,6 +51,13 @@ import specimen103533p1Payload from "../../data/engine6/viator/103533P1.exact-pr
 import specimen6288p29Payload from "../../data/engine6/viator/6288P29.exact-product.json";
 import specimen122012p17Payload from "../../data/engine6/viator/122012P17.exact-product.json";
 import specimen474891p3Payload from "../../data/engine6/viator/474891P3.exact-product.json";
+import specimen26697p1Payload from "../../data/engine6/viator/26697P1.exact-product.json";
+import specimen7195sept11Payload from "../../data/engine6/viator/7195SEPT11.exact-product.json";
+import specimen77348p8Payload from "../../data/engine6/viator/77348P8.exact-product.json";
+import specimen5096p33Payload from "../../data/engine6/viator/5096P33.exact-product.json";
+import specimen5515296p1Payload from "../../data/engine6/viator/5515296P1.exact-product.json";
+import specimen62527p9Payload from "../../data/engine6/viator/62527P9.exact-product.json";
+import specimen5487940p7Payload from "../../data/engine6/viator/5487940P7.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -118,6 +125,48 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/New-York-City-Private-Walking-Tour-with-a-Local-Guide/d687-474891P3",
     rawPayload: specimen474891p3Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "26697P1",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Tour-of-the-Secrets-of-Grand-Central-Terminal/d687-26697P1",
+    rawPayload: specimen26697p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "7195SEPT11",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/9-11-Memorial-Museum-Admission/d687-7195SEPT11",
+    rawPayload: specimen7195sept11Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "77348P8",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/American-Dream-One-Day-Dreamworks-Waterpark-Pass-Bundle/d687-77348P8",
+    rawPayload: specimen77348p8Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5096P33",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Big-Bus-Tours-New-York-Empire-State-Building/d687-5096P33",
+    rawPayload: specimen5096p33Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5515296P1",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Epicurean-Odyssey-A-Gourmet-Bus-Tour-Through-New-York-City/d687-5515296P1",
+    rawPayload: specimen5515296p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "62527P9",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Boroughs-Tour-Harlem-Bronx-Queens-Brooklyn-and-Coney-Island/d687-62527P9",
+    rawPayload: specimen62527p9Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5487940P7",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/NYC-Guided-Cart-Tour-Manhattan-Landmarks-Celebs-and-Hidden-Gems/d687-5487940P7",
+    rawPayload: specimen5487940p7Payload as Record<string, unknown>,
   },
   {
     productCode: "214880P12",

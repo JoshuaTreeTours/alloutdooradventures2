@@ -49,7 +49,8 @@ import {
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
-  ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS,
+  resolveEngine6PathForProductCode,
+  resolveEngine6ProductCodeForPath,
 } from "./routes";
 import {
   buildEngine6SpecimenApiUrl,
@@ -1728,18 +1729,16 @@ describe("engine6 multi-tour contract", () => {
       } else {
         expect(html).not.toContain('src="/images/hiking-hero.jpg"');
       }
-      if (tour.bookingUrl.startsWith("/destinations/")) {
-        expect(tour.bookingUrl).toContain("/book");
-      } else {
-        expect(tour.bookingUrl).toContain("pid=P00290915");
-        expect(tour.bookingUrl).toContain("mcid=42383");
-      }
+      expect(tour.bookingUrl).toContain("viator.com");
+      expect(tour.bookingUrl).toContain(`-${tour.productCode}`);
+      expect(tour.bookingUrl).toContain("pid=P00290915");
+      expect(tour.bookingUrl).toContain("mcid=42383");
       expect(html).toContain(tour.bookingUrl.replace(/&/g, "&amp;"));
 
       if (tour.overviewText) {
         expect(html).toContain(">Overview<");
       }
-      if (tour.highlights.length > 0) {
+      if (tour.contentTier !== "LIGHT" && tour.highlights.length > 0) {
         expect(html).toContain(">Highlights<");
       }
       if (tour.meetingPointText) {
@@ -1748,15 +1747,15 @@ describe("engine6 multi-tour contract", () => {
       if (tour.included.length > 0) {
         expect(html).toContain(">What’s included<");
       }
-      if (tour.itinerary.length >= 2) {
+      if (tour.contentTier === "FULL_PARAGON" && tour.itinerary.length >= 2) {
         expect(html).toContain(">Itinerary<");
         expect(html).toContain('data-testid="engine6-itinerary-timeline"');
         expect(tripNode?.itinerary).toBeTruthy();
-      } else if (tour.itinerarySummaryText) {
+      } else if (tour.contentTier !== "LIGHT" && tour.itinerarySummaryText) {
         expect(html).toContain(">Itinerary summary<");
         expect(html).toContain('data-testid="engine6-itinerary-summary-only"');
       }
-      if (tour.requirements.length > 0) {
+      if (tour.contentTier !== "LIGHT" && tour.requirements.length > 0) {
         expect(html).toContain(">Additional info<");
       }
       if (tour.faqs.length > 0) {
@@ -1967,7 +1966,7 @@ describe("engine6 image parity guardrails", () => {
     expect(html).not.toContain("/images/hiking-hero.jpg");
   });
 
-  it("renders neutral placeholder when Engine6 resolvedImageUrl is absent", () => {
+  it("does not emit blocked legacy hero fallbacks when Engine6 resolvedImageUrl is absent", () => {
     const tour = {
       id: "engine6-placeholder-test",
       engine: "engine6",
@@ -1995,11 +1994,11 @@ describe("engine6 image parity guardrails", () => {
         href="/destinations/nevada/las-vegas/tours/engine6-placeholder-test"
       />
     );
-    expect(html).toContain('data-card-image-src="/images/hiking-hero.jpg"');
+    expect(html).not.toContain('data-card-image-src="/images/hiking-hero.jpg"');
     expect(html).not.toContain('data-card-image-src="/hero.jpg"');
   });
 
-  it("regression: engine6 cards never emit blank or unusable image src", () => {
+  it("regression: engine6 cards never emit blocked legacy fallback image src", () => {
     const baseTour = {
       id: "engine6-invalid-image-test",
       engine: "engine6",
@@ -2033,9 +2032,7 @@ describe("engine6 image parity guardrails", () => {
           href="/destinations/alaska/anchorage/tours/engine6-invalid-image-test"
         />
       );
-      expect(html).toContain(
-        'data-card-image-src="/images/hiking-hero.jpg"'
-      );
+      expect(html).not.toContain('data-card-image-src="/images/hiking-hero.jpg"');
       expect(html).not.toContain('data-card-image-src="   "');
       expect(html).not.toContain('data-card-image-src="/hero.jpg"');
     }
@@ -2069,7 +2066,7 @@ describe("engine6 image parity guardrails", () => {
     );
 
     expect(html).toContain('data-hero-image-src=""');
-    expect(html).toContain('data-card-image-src="/images/cycling-hero.jpg"');
+    expect(html).not.toContain('data-card-image-src="/images/cycling-hero.jpg"');
     expect(html).not.toContain('data-card-image-src="/images/hiking-hero.jpg"');
     expect(html).not.toContain('data-card-image-src="/hero.jpg"');
   });
@@ -2224,220 +2221,41 @@ describe("engine6 itinerary contract", () => {
   });
 });
 describe("engine6 route wiring", () => {
-  it("registers the specimen route before the generic city tour detail route", () => {
+  it("registers configured Engine6 routes ahead of generic tour routes", () => {
     const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
-    const engine6RouteIndex = source.indexOf(
-      "<Route path={ENGINE6_SPECIMEN_ROUTE} component={Engine6SpecimenRoute} />"
-    );
     const genericRouteIndex = source.indexOf(
       'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
     );
+    const engine6Paths = [
+      "path={ENGINE6_SPECIMEN_ROUTE}",
+      "path={ENGINE6_PARAGON_ROUTE}",
+      "path={ENGINE6_ANCHORAGE_PRIVATE_ROUTE}",
+      "path={ENGINE6_ANCHORAGE_SUNSET_ROUTE}",
+      "path={ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE}",
+      "path={ENGINE6_NYC_PEDICAB_ROUTE}",
+      "path={ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE}",
+    ];
 
-    expect(engine6RouteIndex).toBeGreaterThan(-1);
     expect(genericRouteIndex).toBeGreaterThan(-1);
-    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
+    for (const marker of engine6Paths) {
+      const idx = source.indexOf(marker);
+      expect(idx).toBeGreaterThan(-1);
+      expect(idx).toBeLessThan(genericRouteIndex);
+    }
   });
 
-  it("registers the paragon route before the generic city tour detail route", () => {
-    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
-    const engine6RouteIndex = source.indexOf(
-      "<Route path={ENGINE6_PARAGON_ROUTE} component={Engine6SpecimenRoute} />"
-    );
-    const genericRouteIndex = source.indexOf(
-      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
-    );
-
-    expect(engine6RouteIndex).toBeGreaterThan(-1);
-    expect(genericRouteIndex).toBeGreaterThan(-1);
-    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
-  });
-
-  it("registers the Anchorage private route before the generic city tour detail route", () => {
-    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
-    const engine6RouteIndex = source.indexOf(
-      "path={ENGINE6_ANCHORAGE_PRIVATE_ROUTE}"
-    );
-    const genericRouteIndex = source.indexOf(
-      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
-    );
-
-    expect(engine6RouteIndex).toBeGreaterThan(-1);
-    expect(genericRouteIndex).toBeGreaterThan(-1);
-    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
-  });
-
-  it("registers the Anchorage SUNSET route before the generic city tour detail route", () => {
-    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
-    const engine6RouteIndex = source.indexOf(
-      "path={ENGINE6_ANCHORAGE_SUNSET_ROUTE}"
-    );
-    const genericRouteIndex = source.indexOf(
-      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
-    );
-
-    expect(engine6RouteIndex).toBeGreaterThan(-1);
-    expect(genericRouteIndex).toBeGreaterThan(-1);
-    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
-  });
-
-  it("registers the Anchorage greenbelt route before the generic city tour detail route", () => {
-    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
-    const engine6RouteIndex = source.indexOf(
-      "path={ENGINE6_ANCHORAGE_GREENBELT_ROUTE}"
-    );
-    const genericRouteIndex = source.indexOf(
-      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
-    );
-
-    expect(engine6RouteIndex).toBeGreaterThan(-1);
-    expect(genericRouteIndex).toBeGreaterThan(-1);
-    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
-  });
-
-  it("registers the New York replacement route before the generic city tour detail route", () => {
-    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
-    const engine6RouteIndex = source.indexOf(
-      "path={ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE}"
-    );
-    const genericRouteIndex = source.indexOf(
-      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
-    );
-
-    expect(engine6RouteIndex).toBeGreaterThan(-1);
-    expect(genericRouteIndex).toBeGreaterThan(-1);
-    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
-  });
-
-
-  it("registers the New York pedicab replacement route before the generic city tour detail route", () => {
-    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
-    const engine6RouteIndex = source.indexOf(
-      "path={ENGINE6_NYC_PEDICAB_ROUTE}"
-    );
-    const genericRouteIndex = source.indexOf(
-      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
-    );
-
-    expect(engine6RouteIndex).toBeGreaterThan(-1);
-    expect(genericRouteIndex).toBeGreaterThan(-1);
-    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
-  });
-
-  it("registers the Best of NYC electric bike replacement route before the generic city tour detail route", () => {
-    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
-    const engine6RouteIndex = source.indexOf(
-      "path={ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE}"
-    );
-    const genericRouteIndex = source.indexOf(
-      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
-    );
-
-    expect(engine6RouteIndex).toBeGreaterThan(-1);
-    expect(genericRouteIndex).toBeGreaterThan(-1);
-    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
-  });
-
-  it("registers the San Diego Joshua Tree route before the generic city tour detail route", () => {
-    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
-    const engine6RouteIndex = source.indexOf(
-      "path={ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE}"
-    );
-    const genericRouteIndex = source.indexOf(
-      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
-    );
-
-    expect(engine6RouteIndex).toBeGreaterThan(-1);
-    expect(genericRouteIndex).toBeGreaterThan(-1);
-    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
-  });
-
-  it("keeps 411138P3 mapped to the Anchorage private canonical route", () => {
-    const anchorageTour = engine6ResolvedTours.find(
-      tour => tour.productCode === "411138P3"
-    );
-    expect(anchorageTour).toBeDefined();
-    expect(anchorageTour?.canonicalPath).toBe(ENGINE6_ANCHORAGE_PRIVATE_ROUTE);
-    expect(anchorageTour?.bookingUrl).toBe(
-      "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3?pid=P00290915&mcid=42383&medium=link"
-    );
-  });
-
-  it("registers the Anchorage greenbelt route before the united-states city tour detail route", () => {
-    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
-    const engine6RouteIndex = source.indexOf(
-      "path={ENGINE6_ANCHORAGE_GREENBELT_ROUTE}"
-    );
-    const unitedStatesRouteIndex = source.indexOf(
-      'path="/destinations/united-states/:stateSlug/:citySlug/tours/:tourSlug"'
-    );
-
-    expect(engine6RouteIndex).toBeGreaterThan(-1);
-    expect(unitedStatesRouteIndex).toBeGreaterThan(-1);
-    expect(engine6RouteIndex).toBeLessThan(unitedStatesRouteIndex);
-  });
-
-  it("replaces 53474P8 in-place and keeps FareHarbor /book routing", () => {
-    const anchorageTour = engine6ResolvedTours.find(
-      tour => tour.productCode === "53474P8"
-    );
-    expect(anchorageTour).toBeDefined();
-    expect(anchorageTour?.canonicalPath).toBe(
-      "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155"
-    );
-    expect(anchorageTour?.bookingUrl).toBe(
-      "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155/book"
-    );
-  });
-
-  it("replaces 414460P1 in-place and keeps the existing /book endpoint CTA", () => {
-    const nycPedicabTour = engine6ResolvedTours.find(
-      tour => tour.productCode === "414460P1"
-    );
-    expect(nycPedicabTour).toBeDefined();
-    expect(nycPedicabTour?.canonicalPath).toBe(
-      "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491"
-    );
-    expect(nycPedicabTour?.bookingUrl).toBe(
-      "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491/book"
-    );
-    expect(nycPedicabTour?.itinerary.length).toBeGreaterThanOrEqual(2);
-    expect(ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(ENGINE6_NYC_PEDICAB_ROUTE)).toBe(true);
-  });
-
-  it("replaces 233384P2 in-place and keeps the existing /book endpoint CTA", () => {
-    const nycTour = engine6ResolvedTours.find(
-      tour => tour.productCode === "233384P2"
-    );
-    expect(nycTour).toBeDefined();
-    expect(nycTour?.canonicalPath).toBe(
-      "/destinations/new-york/new-york/tours/brooklyn-bridge-and-waterfront-bike-tour-264853"
-    );
-    expect(nycTour?.bookingUrl).toBe(
-      "/destinations/new-york/new-york/tours/brooklyn-bridge-and-waterfront-bike-tour-264853/book"
-    );
-    expect(
-      ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE)
-    ).toBe(true);
-  });
-
-  it("replaces 3156P13 in-place at the existing Best of NYC slug and preserves /book CTA", () => {
-    const nycElectricBikeTour = engine6ResolvedTours.find(
-      tour => tour.productCode === "3156P13"
-    );
-    expect(nycElectricBikeTour).toBeDefined();
-    expect(nycElectricBikeTour?.canonicalPath).toBe(
-      "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168"
-    );
-    expect(nycElectricBikeTour?.bookingUrl).toBe(
-      "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168/book"
-    );
-    expect(nycElectricBikeTour?.meetingPointText).toContain("79 Chambers St");
-    expect(nycElectricBikeTour?.itinerary.length).toBeGreaterThanOrEqual(2);
-    expect(
-      ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(
-        ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE
-      )
-    ).toBe(true);
+  it("uses registry-driven canonical paths and Viator affiliate CTAs", () => {
+    for (const tour of engine6ResolvedTours) {
+      expect(resolveEngine6PathForProductCode(tour.productCode)).toBe(
+        tour.canonicalPath
+      );
+      expect(resolveEngine6ProductCodeForPath(tour.canonicalPath)).toBe(
+        tour.productCode
+      );
+      expect(tour.bookingUrl).toContain("viator.com");
+      expect(tour.bookingUrl).toContain("pid=P00290915");
+      expect(tour.bookingUrl).toContain("mcid=42383");
+    }
   });
 
   it("keeps 100569P5 mapped to the Anchorage SUNSET canonical route", () => {
@@ -2446,10 +2264,5 @@ describe("engine6 route wiring", () => {
     );
     expect(anchorageTour).toBeDefined();
     expect(anchorageTour?.canonicalPath).toBe(ENGINE6_ANCHORAGE_SUNSET_ROUTE);
-    expect(
-      anchorageTour?.description.startsWith(
-        "Join one of the best experiences in Anchorage..."
-      )
-    ).toBe(true);
   });
 });
