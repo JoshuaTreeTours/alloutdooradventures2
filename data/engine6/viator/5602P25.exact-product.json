@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "5602P25",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/WESTERN-NATIONAL-PARKS-7-DAY-EXPLORER-Camping/d684-5602P25",
+    "title": "Western National Parks 7-Day Explorer (Camping)",
+    "description": "Explore the American Southwest on a 7-day guided camping adventure from Las Vegas. Travel through Zion, Bryce Canyon, Monument Valley, Antelope Canyon, and the Grand Canyon with structured day-by-day touring, guided walks, and stargazing opportunities.",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": {
+      "amount": 1499,
+      "currency": "USD"
+    },
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 62
+    },
+    "media": {
+      "images": [
+        {
+          "imageSource": "https://dynamic-media.tacdn.com/media/photo-o/30/a8/c2/11/caption.jpg?w=700&h=500&s=1",
+          "variants": [
+            {
+              "height": 500,
+              "width": 700,
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/30/a8/c2/11/caption.jpg?w=700&h=500&s=1"
+            }
+          ]
+        }
+      ]
+    },
+    "highlights": [
+      "7-day multi-park itinerary from Las Vegas through the U.S. Southwest.",
+      "Visit Zion, Bryce Canyon, Monument Valley, Antelope Canyon, and the Grand Canyon.",
+      "Camping-focused format with guided logistics and park interpretation.",
+      "Includes scenic drives, hikes, and structured daily route pacing."
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Transportation during tour",
+      "National park entry fees",
+      "Selected camping equipment",
+      "Some meals as listed in itinerary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Select Las Vegas pickup points available"
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Day 1: Las Vegas to Zion National Park",
+        "description": "Depart Las Vegas, enter Zion National Park, and complete a guided orientation hike before evening camp setup.",
+        "duration": "1 day"
+      },
+      {
+        "title": "Day 2: Bryce Canyon National Park",
+        "description": "Travel to Bryce Canyon for rim viewpoints and time on the trail network before overnight camping.",
+        "duration": "1 day"
+      },
+      {
+        "title": "Day 3: Monument Valley",
+        "description": "Cross into Monument Valley with guided scenic stops and cultural interpretation.",
+        "duration": "1 day"
+      },
+      {
+        "title": "Day 4: Antelope Canyon and Horseshoe Bend",
+        "description": "Visit Antelope Canyon and the Horseshoe Bend overlook with scheduled photo and walking windows.",
+        "duration": "1 day"
+      },
+      {
+        "title": "Day 5: Grand Canyon National Park",
+        "description": "Spend a full day at Grand Canyon viewpoints and trails with guide-led planning.",
+        "duration": "1 day"
+      },
+      {
+        "title": "Day 6: Route 66 Corridor and Return Leg",
+        "description": "Travel west with Route 66 style stops and transition back toward Nevada.",
+        "duration": "1 day"
+      },
+      {
+        "title": "Day 7: Return to Las Vegas",
+        "description": "Complete final travel leg and return to Las Vegas drop-off points.",
+        "duration": "1 day"
+      }
+    ],
+    "qAndA": {
+      "items": [
+        {
+          "question": "Is hotel pickup offered?",
+          "answer": "Selected Las Vegas pickup points are available; confirm your pickup location after booking."
+        },
+        {
+          "question": "Is this a day tour?",
+          "answer": "No, this is a 7-day multi-day tour with camping logistics and daily itinerary segments."
+        }
+      ]
+    },
+    "additionalInfo": [
+      "Meeting and pickup details: Pickup can be arranged from multiple designated Las Vegas points depending on departure date and operational routing.",
+      "Provide your preferred pickup point at checkout and reconfirm with the operator before departure.",
+      "Bring weather-appropriate clothing for changing desert and mountain conditions."
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing"
+      },
+      {
+        "label": "Adventure"
+      }
+    ]
+  }
+}

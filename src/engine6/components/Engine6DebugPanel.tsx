@@ -28,6 +28,14 @@ export default function Engine6DebugPanel({ tour }: { tour: Engine6Tour }) {
         <strong>Final hero URL:</strong> {tour.diagnostics.finalHeroUrl ?? "none"}
       </p>
       <p>
+        <strong>Hero source product code:</strong>{" "}
+        {tour.diagnostics.heroSourceProductCode ?? "none"}
+      </p>
+      <p>
+        <strong>Hero source product URL:</strong>{" "}
+        {tour.diagnostics.heroSourceProductUrl ?? "none"}
+      </p>
+      <p>
         <strong>Fallback fired:</strong>{" "}
         {tour.diagnostics.heroFallbackTriggered ? "yes" : "no"}
       </p>
@@ -62,10 +70,37 @@ export default function Engine6DebugPanel({ tour }: { tour: Engine6Tour }) {
           : "no"}
       </p>
       <p>
+        <strong>Price field path:</strong>{" "}
+        {tour.diagnostics.commercialPriceFieldPath ?? "none"}
+      </p>
+      <p>
+        <strong>Rating field path:</strong>{" "}
+        {tour.diagnostics.ratingFieldPath ?? "none"}
+      </p>
+      <p>
+        <strong>Review count field path:</strong>{" "}
+        {tour.diagnostics.reviewCountFieldPath ?? "none"}
+      </p>
+      <p>
+        <strong>Meeting summary field path:</strong>{" "}
+        {tour.diagnostics.meetingPointFieldPath ?? "none"}
+      </p>
+      <p>
+        <strong>Meeting summary applied:</strong>{" "}
+        {tour.diagnostics.meetingPointSummaryApplied ? "yes" : "no"}
+      </p>
+      <p>
+        <strong>Meeting summary reason:</strong>{" "}
+        {tour.diagnostics.meetingPointSummaryReason ?? "n/a"}
+      </p>
+      <p>
         <strong>Final CTA URL:</strong> {tour.bookingUrl}
       </p>
       <p>
         <strong>Offer URL:</strong> {tour.bookingUrl}
+      </p>
+      <p>
+        <strong>Route path:</strong> {tour.canonicalPath}
       </p>
     </section>
   );
