@@ -10,6 +10,7 @@ import specimen398496p5Payload from "../../data/engine6/viator/398496P5.exact-pr
 import specimen3533rrcPayload from "../../data/engine6/viator/3533RRC.exact-product.json";
 import specimen7079rrebikePayload from "../../data/engine6/viator/7079RREBIKE.exact-product.json";
 import specimen191767p5Payload from "../../data/engine6/viator/191767P5.exact-product.json";
+import specimen132218p394Payload from "../../data/engine6/viator/132218P394.exact-product.json";
 import specimen32779Payload from "../../data/engine6/viator/32779P2.exact-product.json";
 import specimen60136Payload from "../../data/engine6/viator/60136P1.exact-product.json";
 import specimen60294dayparkPayload from "../../data/engine6/viator/6029_4DAYPARK.exact-product.json";
@@ -289,6 +290,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-Luxury-Tour-Trekker-Experience/d684-3533RRC",
     rawPayload: specimen3533rrcPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "132218P394",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Small-Group-Valley-of-Fire-Half-Day-Hiking-Tour-from-Las-Vegas/d684-132218P394",
+    rawPayload: specimen132218p394Payload as Record<string, unknown>,
   },
   {
     productCode: "191767P5",
