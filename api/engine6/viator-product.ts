@@ -6,8 +6,7 @@ import {
   type Engine6HeroCandidate,
 } from "./heroResolver.js";
 import { extractEngine6Product } from "./viatorExtractors.js";
-
-const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
+import { resolveViatorApiKey, resolveViatorBaseUrl } from "../viator/runtimeConfig";
 
 const buildHeaders = (apiKey: string) => ({
   "Content-Type": "application/json;version=2.0",
@@ -419,7 +418,7 @@ export default async function handler(req: any, res: any) {
   }
 
   const bundledPayload = await getBundledExactProductPayload(productCode);
-  const key = process.env.VIATOR_API_KEY;
+  const key = resolveViatorApiKey();
   const diagnostics = buildDiagnostics("live-api", Boolean(key));
 
   if (!key) {
@@ -438,11 +437,8 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
-  const baseUrl =
-    process.env.VIATOR_API_BASE_URL ||
-    process.env.VIATOR_BASE_URL ||
-    DEFAULT_VIATOR_BASE_URL;
-  const requestUrl = `${baseUrl.replace(/\/$/, "")}/products/${encodeURIComponent(productCode)}`;
+  const baseUrl = resolveViatorBaseUrl();
+  const requestUrl = `${baseUrl}/products/${encodeURIComponent(productCode)}`;
 
   diagnostics.attemptedLiveFetch = true;
 

@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 
 import { fetchViator } from "./client";
+import { resolveViatorApiKey } from "./runtimeConfig";
 
 const CACHE_MAX_AGE = 60 * 60 * 24;
 
@@ -31,7 +32,7 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const apiKey = process.env.VIATOR_API_KEY;
+    const apiKey = resolveViatorApiKey();
     const data = apiKey
       ? await fetchViator(apiKey, "/taxonomy/tags", { method: "GET" })
       : await readLocalTagsCache();

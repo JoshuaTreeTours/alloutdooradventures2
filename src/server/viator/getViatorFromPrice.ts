@@ -1,3 +1,5 @@
+import { resolveViatorApiKey, resolveViatorBaseUrl } from "../../../api/viator/runtimeConfig";
+
 type CurrencyCode = "USD";
 
 type ViatorFromPrice = {
@@ -10,7 +12,6 @@ type CacheEntry = {
   value: ViatorFromPrice | null;
 };
 
-const DEFAULT_API_BASE_URL = "https://api.viator.com/partner";
 const DEFAULT_TTL_SECONDS = 86_400;
 const TIMEOUT_MS = 800;
 
@@ -109,12 +110,12 @@ const fetchViatorFromPrice = async (
   productCode: string,
   currency: CurrencyCode
 ): Promise<ViatorFromPrice | null> => {
-  const apiKey = process.env.VIATOR_API_KEY;
+  const apiKey = resolveViatorApiKey();
   if (!apiKey) {
     return null;
   }
 
-  const baseUrl = process.env.VIATOR_API_BASE_URL ?? DEFAULT_API_BASE_URL;
+  const baseUrl = resolveViatorBaseUrl();
 
   const nextWeek = new Date();
   nextWeek.setUTCDate(nextWeek.getUTCDate() + 7);
