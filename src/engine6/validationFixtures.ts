@@ -68,13 +68,29 @@ import specimen5515296p1Payload from "../../data/engine6/viator/5515296P1.exact-
 import specimen428219p6Payload from "../../data/engine6/viator/428219P6.exact-product.json";
 import specimen77348p8Payload from "../../data/engine6/viator/77348P8.exact-product.json";
 
+import {
+  ENGINE6_SOURCE_OF_TRUTH_API_DRIVEN,
+  assertEngine6FixtureSourceOfTruth,
+  type Engine6SourceOfTruthMode,
+} from "./sourceOfTruthPolicy";
+
 export type Engine6ValidationFixture = {
   productCode: string;
   publicUrl: string;
   rawPayload: Record<string, unknown>;
+  sourceOfTruth: {
+    mode: Engine6SourceOfTruthMode;
+    deterministicHeroReference?: {
+      strategy: "viator-product-media-first";
+      fieldPathPrefix: "product.media.images";
+    };
+    authoredNonHeroContent?: Record<string, unknown>;
+  };
 };
 
-export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
+const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
+  Omit<Engine6ValidationFixture, "sourceOfTruth">
+> = [
   {
     productCode: "8836P2",
     publicUrl:
@@ -479,3 +495,19 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     rawPayload: specimen10150p16Payload as Record<string, unknown>,
   },
 ];
+
+export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] =
+  RAW_ENGINE6_VALIDATION_FIXTURES.map(fixture => ({
+    ...fixture,
+    sourceOfTruth: {
+      mode: ENGINE6_SOURCE_OF_TRUTH_API_DRIVEN,
+      deterministicHeroReference: {
+        strategy: "viator-product-media-first",
+        fieldPathPrefix: "product.media.images",
+      },
+    },
+  }));
+
+for (const fixture of ENGINE6_VALIDATION_FIXTURES) {
+  assertEngine6FixtureSourceOfTruth(fixture);
+}

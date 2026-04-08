@@ -7,6 +7,7 @@ import { toEngine6Card } from "./cards";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import { formatEngine6AggregateRating } from "./rating";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
+import { assertEngine6FixtureSourceOfTruth } from "./sourceOfTruthPolicy";
 import type { Engine6ApiResponse } from "./types";
 import type { Engine6ValidationFixture } from "./validationFixtures";
 
@@ -49,6 +50,7 @@ export type Engine6ValidationReport = {
 export const buildEngine6ValidationReport = (
   fixture: Engine6ValidationFixture
 ): Engine6ValidationReport => {
+  assertEngine6FixtureSourceOfTruth(fixture);
   const extraction = extractEngine6Product(fixture.rawPayload);
   const payload: Engine6ApiResponse = {
     source: "live-api",
