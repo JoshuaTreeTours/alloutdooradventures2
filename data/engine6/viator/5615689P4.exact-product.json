@@ -1,0 +1,124 @@
+{
+  "product": {
+    "productCode": "5615689P4",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Arts-District-E-Bike-Tour/d684-5615689P4",
+    "title": "Arts District E Bike Tour",
+    "description": "Guided e-bike tour through central Las Vegas featuring the 18b Arts District, murals, and iconic city landmarks.",
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": 119,
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 2
+    },
+    "duration": "1 hour 45 minutes (approx.)",
+    "highlights": [
+      "Discover the 18b Arts District and local Las Vegas culture on a guided e-bike ride.",
+      "Ride with a personal tour guide and included safety gear.",
+      "Visit major Las Vegas landmarks including The STRAT, Gold & Silver Pawn Shop, and Gateway Arches.",
+      "Private activity format with return to the original meeting point."
+    ],
+    "inclusions": [
+      "Personal Tour Guide",
+      "E-Bike",
+      "Safety Gear",
+      "Transportation to & from the meeting point"
+    ],
+    "exclusions": [],
+    "logistics": {
+      "redemption": {
+        "description": "Please meet your tour guide in the rideshare pickup area. He or she will have e-bikes present with them as well."
+      },
+      "start": [
+        {
+          "name": "The STRAT Hotel, Casino & Tower",
+          "description": "2000 Las Vegas Blvd S, Las Vegas, NV 89104, USA"
+        }
+      ],
+      "end": {
+        "description": "This activity ends back at the meeting point."
+      }
+    },
+    "itinerarySummary": "Urban e-bike tour through Las Vegas landmarks and the Arts District.",
+    "itineraryItems": [
+      {
+        "title": "The STRAT Casino",
+        "duration": "15 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "18b The Las Vegas Arts District",
+        "description": "Pass By",
+        "admissionNote": "Pass By"
+      },
+      {
+        "title": "Gold & Silver Pawn Shop",
+        "duration": "15 minutes",
+        "admissionNote": "Admission Ticket Not Included"
+      },
+      {
+        "title": "Las Vegas Boulevard Gateway Arches",
+        "duration": "10 minutes",
+        "admissionNote": "Admission Ticket Included"
+      },
+      {
+        "title": "A Little White Chapel",
+        "duration": "10 minutes",
+        "admissionNote": "Admission Ticket Free"
+      },
+      {
+        "title": "Chapel Of The Flowers",
+        "description": "Pass By",
+        "admissionNote": "Pass By"
+      },
+      {
+        "title": "Las Vegas Boulevard Gateway Arches",
+        "duration": "10 minutes",
+        "admissionNote": "Admission Ticket Free"
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Not recommended for travelers with back problems",
+      "Not recommended for pregnant travelers",
+      "No heart problems or other serious medical conditions",
+      "Most travelers can participate",
+      "Not recommended for travelers with physical and or psychological disabilities that prevent travelers from safely operating a E-bike",
+      "Not recommended for travelers with physical and or psychological disabilities that prevent travelers from safely operating a E-scooter",
+      "This is a private tour/activity. Only your group will participate"
+    ],
+    "faq": [],
+    "categories": [
+      "E-Bike Tours",
+      "Bike Tours",
+      "Mountain Bike Tours",
+      "City Tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "variants": [
+            {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/31/cd/1c/6d/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          ]
+        }
+      ]
+    },
+    "meetingAndPickup": {
+      "meetingPoint": {
+        "name": "The STRAT Hotel, Casino & Tower",
+        "description": "2000 Las Vegas Blvd S, Las Vegas, NV 89104, USA. Please meet your tour guide in the rideshare pickup area. He or she will have e-bikes present with them as well."
+      },
+      "endPoint": {
+        "description": "This activity ends back at the meeting point."
+      }
+    }
+  }
+}

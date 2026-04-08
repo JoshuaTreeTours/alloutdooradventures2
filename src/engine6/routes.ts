@@ -49,6 +49,9 @@ export const ENGINE6_EMERALD_CAVE_ROUTE =
 export const ENGINE6_HISTORICAL_RAILROAD_EBIKE_PRODUCT_CODE = "354611P1";
 export const ENGINE6_HISTORICAL_RAILROAD_EBIKE_ROUTE =
   "/destinations/nevada/las-vegas/tours/historical-railroad-trail-ebike-tour";
+export const ENGINE6_LAS_VEGAS_ARTS_DISTRICT_EBIKE_PRODUCT_CODE = "5615689P4";
+export const ENGINE6_LAS_VEGAS_ARTS_DISTRICT_EBIKE_ROUTE =
+  "/destinations/nevada/las-vegas/tours/arts-district-e-bike-tour";
 export const ENGINE6_CATALINA_ROUTE =
   "/destinations/california/avalon/tours/yellow-semi-submarine-tour-of-catalina-island-from-avalon";
 
@@ -287,6 +290,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_HISTORICAL_RAILROAD_EBIKE_ROUTE,
     ENGINE6_HISTORICAL_RAILROAD_EBIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LAS_VEGAS_ARTS_DISTRICT_EBIKE_ROUTE,
+    ENGINE6_LAS_VEGAS_ARTS_DISTRICT_EBIKE_PRODUCT_CODE,
   ],
   [ENGINE6_YOSEMITE_ROUTE, ENGINE6_YOSEMITE_PRODUCT_CODE],
   [

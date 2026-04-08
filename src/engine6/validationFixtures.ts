@@ -15,6 +15,7 @@ import specimen60136Payload from "../../data/engine6/viator/60136P1.exact-produc
 import specimen60294dayparkPayload from "../../data/engine6/viator/6029_4DAYPARK.exact-product.json";
 import specimen26719Payload from "../../data/engine6/viator/26719P8.exact-product.json";
 import specimen354611p1Payload from "../../data/engine6/viator/354611P1.exact-product.json";
+import specimen5615689p4Payload from "../../data/engine6/viator/5615689P4.exact-product.json";
 import specimen36001Payload from "../../data/engine6/viator/36001P1.exact-product.json";
 import specimen100569Payload from "../../data/engine6/viator/100569P5.exact-product.json";
 import specimen411138Payload from "../../data/engine6/viator/411138P3.exact-product.json";
@@ -308,6 +309,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Las-Vegas/Historical-Railroad-Trail-eBike-Tour/d684-354611P1",
     rawPayload: specimen354611p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5615689P4",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Arts-District-E-Bike-Tour/d684-5615689P4",
+    rawPayload: specimen5615689p4Payload as Record<string, unknown>,
   },
   {
     productCode: "36001P1",
