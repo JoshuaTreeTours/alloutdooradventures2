@@ -1,4 +1,5 @@
 import { fetchViator } from "./client";
+import { resolveViatorApiKey } from "./runtimeConfig";
 
 type ViatorSearchRequest = {
   destinationId: number;
@@ -14,7 +15,7 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
-  const apiKey = process.env.VIATOR_API_KEY;
+  const apiKey = resolveViatorApiKey();
   if (!apiKey) {
     res.status(500).json({ error: "VIATOR_API_KEY is not configured" });
     return;
