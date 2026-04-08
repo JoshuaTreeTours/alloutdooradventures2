@@ -16,7 +16,9 @@ import {
 } from "./routeIntegrity";
 import { resolveEngine6PathForProductCode } from "./routes";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
+import { assertEngine6FixtureSourceOfTruth } from "./sourceOfTruthPolicy";
 import type { Engine6Tour } from "./types";
+import type { Engine6ValidationFixture } from "./validationFixtures";
 
 const parseStateCitySlug = (canonicalPath: string) => {
   const [, stateSlug = "", citySlug = "", slug = ""] =
@@ -90,10 +92,15 @@ const withFilteredToursHtml = (stateSlug: string, citySlug: string) => {
 export const validateEngine6CreationContract = ({
   tour,
   rawPayload,
+  fixture,
 }: {
   tour: Engine6Tour;
   rawPayload: Record<string, unknown>;
+  fixture?: Engine6ValidationFixture;
 }) => {
+  if (fixture) {
+    assertEngine6FixtureSourceOfTruth(fixture);
+  }
   const violations: string[] = [];
   const { stateSlug, citySlug, slug } = parseStateCitySlug(tour.canonicalPath);
   const { violations: canonicalRouteViolations, parentCityToursPath } =

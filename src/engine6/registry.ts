@@ -1,5 +1,6 @@
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
+import { assertEngine6FixtureSourceOfTruth } from "./sourceOfTruthPolicy";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures";
 import {
@@ -15,6 +16,7 @@ import { ENGINE6_CONFIGURED_PRODUCT_CODES } from "./routes";
 const toEngine6FixturePayload = (
   fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
 ): Engine6ApiResponse => {
+  assertEngine6FixtureSourceOfTruth(fixture);
   const extraction = extractEngine6Product(fixture.rawPayload);
 
   return {
