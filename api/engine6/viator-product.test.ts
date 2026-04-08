@@ -1,5 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
+import { createTourFromViatorProduct } from "./viator-product";
 import handler from "./viator-product";
 
 const createRes = () => {
@@ -405,5 +406,40 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).diagnostics.heroCandidateCountBeforeFiltering).toBe(0);
     expect((res.body as any).diagnostics.heroFallbackTriggered).toBe(true);
     expect((res.body as any).extracted.heroImageUrl).toBeNull();
+  });
+
+  it("createTourFromViatorProduct enforces hero/card/og/schema parity", async () => {
+    const payload = {
+      product: {
+        productCode: "PARITY1",
+        productUrl: "https://www.viator.com/tours/City/Parity/d1-PARITY1",
+        title: "Parity Tour",
+        priceFrom: "$100.00",
+        media: {
+          images: [
+            {
+              variants: {
+                CAPTION: {
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/78/caption.jpg?w=700&h=500&s=1",
+                  width: 1400,
+                  height: 1000,
+                },
+                FULL: {
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/78.jpg?w=1200&h=800&s=1",
+                  width: 1200,
+                  height: 800,
+                },
+              },
+            },
+          ],
+        },
+      },
+    };
+
+    const created = await createTourFromViatorProduct("PARITY1", payload);
+    expect(created.resolvedHeroUrl).toBe(created.cardImageUrl);
+    expect(created.resolvedHeroUrl).toBe(created.ogImageUrl);
+    expect(created.resolvedHeroUrl).toBe(created.schemaImageUrl);
+    expect(created.bookingUrl).toBe(payload.product.productUrl);
   });
 });

@@ -1,9 +1,10 @@
 import { normalizeEngine6AggregateRating } from "./rating.js";
 import {
+  extractEngine6HeroCandidatesFromProductPayload,
   type Engine6HeroCandidate,
   type Engine6HeroQualityClassification,
   type Engine6HeroSourceType,
-  resolveProductScopedHero,
+  resolveHero,
 } from "./heroResolver.js";
 
 export type Engine6DiagnosticsPaths = {
@@ -1338,16 +1339,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   const productUrl = extractProductUrl(product);
   diagnostics.productUrlFieldPath = productUrl.path;
 
-  const heroCandidates = extractPlaybookHeroCandidates({
-    product,
-    productCode,
-    sourceProductUrl: productUrl.value,
-  });
-  const heroDecision = resolveProductScopedHero({
-    currentProductCode: productCode,
-    currentSourceProductUrl: productUrl.value,
-    candidates: heroCandidates,
-  });
+  const heroCandidates = extractEngine6HeroCandidatesFromProductPayload({ product });
+  const heroDecision = resolveHero({ product });
   diagnostics.heroCandidatesPresent = heroCandidates.length > 0;
   diagnostics.heroCandidateCount = heroCandidates.length;
   diagnostics.heroCandidateCountBeforeFiltering = heroCandidates.length;

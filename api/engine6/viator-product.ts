@@ -2,8 +2,8 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 
 import {
-  resolveProductScopedHero,
   type Engine6HeroCandidate,
+  resolveHeroWithCache,
 } from "./heroResolver.js";
 import { extractEngine6Product } from "./viatorExtractors.js";
 
@@ -212,66 +212,42 @@ const respondWithErrorEnvelope = (
     ...(args.details ? { details: args.details } : {}),
   });
 
-const toHeroCandidates = (args: {
-  extraction: ReturnType<typeof extractEngine6Product>;
-  productCode: string;
-}): Engine6HeroCandidate[] => {
-  if (Array.isArray(args.extraction.heroCandidates)) {
-    return args.extraction.heroCandidates;
-  }
+export const createTourFromViatorProduct = async (
+  productCode: string,
+  productPayload: unknown
+) => {
+  const extraction = safeExtractEngine6Product(productPayload);
+  const merged = await applyResolvedHero({
+    productCode,
+    productPayload,
+    baseExtraction: extraction,
+  });
 
-  const heroUrl = args.extraction.extracted.heroImageUrl;
-  if (!heroUrl) {
-    return [];
-  }
-
-  return [
-    {
-      url: heroUrl,
-      sourceType: args.extraction.diagnostics.heroSourceType,
-      sourceProductCode:
-        typeof args.extraction.product?.productCode === "string"
-          ? args.extraction.product.productCode
-          : args.extraction.extracted.productUrl
-            ? args.productCode
-            : null,
-      sourceProductUrl: args.extraction.extracted.productUrl,
-      sourceFieldPath: args.extraction.diagnostics.heroImageFieldPath,
-      variantPath: args.extraction.diagnostics.heroVariantFieldPath,
-      width: args.extraction.diagnostics.selectedHeroWidth,
-      height: args.extraction.diagnostics.selectedHeroHeight,
-    },
-  ];
+  return {
+    productCode,
+    productUrl: merged.extracted.productUrl,
+    resolvedHeroUrl: merged.extracted.heroImageUrl,
+    heroSourceType: merged.diagnostics.heroSourceType,
+    bookingUrl: merged.extracted.productUrl,
+    cardImageUrl: merged.extracted.heroImageUrl,
+    ogImageUrl: merged.extracted.heroImageUrl,
+    schemaImageUrl: merged.extracted.heroImageUrl,
+    extracted: merged.extracted,
+    diagnostics: merged.diagnostics,
+  };
 };
 
-const applyResolvedHero = (args: {
+const applyResolvedHero = async (args: {
   productCode: string;
+  productPayload: unknown;
   baseExtraction: ReturnType<typeof extractEngine6Product>;
-  preferredHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
-  fallbackHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
 }) => {
-  const preferredCandidates = args.preferredHeroExtraction
-    ? toHeroCandidates({
-        extraction: args.preferredHeroExtraction,
-        productCode: args.productCode,
-      })
-    : [];
-  const fallbackCandidates = args.fallbackHeroExtraction
-    ? toHeroCandidates({
-        extraction: args.fallbackHeroExtraction,
-        productCode: args.productCode,
-      })
-    : [];
-
-  const heroDecision = resolveProductScopedHero({
-    currentProductCode: args.productCode,
-    currentSourceProductUrl:
-      args.baseExtraction.extracted.productUrl ??
-      args.fallbackHeroExtraction?.extracted.productUrl ??
-      args.preferredHeroExtraction?.extracted.productUrl,
-    candidates: [...preferredCandidates, ...fallbackCandidates],
+  const heroDecision = await resolveHeroWithCache({
+    productPayload: args.productPayload,
   });
-  const providedCandidates = [...preferredCandidates, ...fallbackCandidates];
+  const providedCandidates = Array.isArray(args.baseExtraction.heroCandidates)
+    ? args.baseExtraction.heroCandidates
+    : ([] as Engine6HeroCandidate[]);
   const fallbackReason = heroDecision.fallbackTriggered
     ? providedCandidates.length === 0
       ? "no-candidates"
@@ -320,8 +296,14 @@ const applyResolvedHero = (args: {
       rejectedForeignHeroCandidates: heroDecision.rejectedForeignCandidates,
       heroSourceProductCode: heroDecision.finalCandidate?.sourceProductCode ?? null,
       heroSourceProductUrl: heroDecision.finalCandidate?.sourceProductUrl ?? null,
-      heroSourceFieldPath: heroDecision.finalCandidate?.sourceFieldPath ?? null,
-      heroHost: heroDecision.finalCandidate?.host ?? null,
+      heroSourceFieldPath:
+        heroDecision.finalCandidate?.sourceFieldPath ??
+        heroDecision.finalCandidate?.fieldPath ??
+        null,
+      heroHost:
+        heroDecision.finalCandidate?.sourceHost ??
+        heroDecision.finalCandidate?.host ??
+        null,
     },
   };
 };
@@ -348,19 +330,18 @@ const getStrictHeroViolationReason = (args: {
   return null;
 };
 
-const respondWithBundledFallback = (
+const respondWithBundledFallback = async (
   res: any,
   productCode: string,
   bundledPayload: Record<string, unknown>,
   diagnostics: ReturnType<typeof buildDiagnostics>,
-  liveExtraction?: ReturnType<typeof extractEngine6Product> | null
+  _liveExtraction?: ReturnType<typeof extractEngine6Product> | null
 ) => {
   const bundledExtraction = safeExtractEngine6Product(bundledPayload);
-  const merged = applyResolvedHero({
+  const merged = await applyResolvedHero({
     productCode,
+    productPayload: bundledPayload,
     baseExtraction: bundledExtraction,
-    preferredHeroExtraction: liveExtraction,
-    fallbackHeroExtraction: bundledExtraction,
   });
   Object.assign(diagnostics, merged.diagnostics, {
     source: "bundled-fallback",
@@ -425,7 +406,7 @@ export default async function handler(req: any, res: any) {
   if (!key) {
     if (bundledPayload) {
       diagnostics.usedBundledFallbackBecause = "missing-api-key";
-      respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
+      await respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
       return;
     }
 
@@ -455,7 +436,7 @@ export default async function handler(req: any, res: any) {
   } catch (error) {
     if (bundledPayload) {
       diagnostics.usedBundledFallbackBecause = "live-fetch-threw";
-      respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
+      await respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
       return;
     }
 
@@ -481,7 +462,7 @@ export default async function handler(req: any, res: any) {
       const liveExtraction = safeExtractEngine6Product({
         product: { productCode, productUrl: null },
       });
-      respondWithBundledFallback(
+      await respondWithBundledFallback(
         res,
         productCode,
         bundledPayload,
@@ -504,7 +485,7 @@ export default async function handler(req: any, res: any) {
   if (!diagnostics.upstreamContentType?.includes("json")) {
     if (bundledPayload) {
       diagnostics.usedBundledFallbackBecause = "upstream-non-json";
-      respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
+      await respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
       return;
     }
 
@@ -524,7 +505,7 @@ export default async function handler(req: any, res: any) {
   } catch {
     if (bundledPayload) {
       diagnostics.usedBundledFallbackBecause = "upstream-invalid-json";
-      respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
+      await respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
       return;
     }
 
@@ -551,7 +532,7 @@ export default async function handler(req: any, res: any) {
     extractedProductCode !== productCode
   ) {
     diagnostics.usedBundledFallbackBecause = "live-product-code-mismatch";
-    respondWithBundledFallback(
+    await respondWithBundledFallback(
       res,
       productCode,
       bundledPayload,
@@ -563,7 +544,7 @@ export default async function handler(req: any, res: any) {
 
   if (bundledPayload && extracted.extracted.priceAmount === null) {
     diagnostics.usedBundledFallbackBecause = "live-price-missing-or-zero";
-    respondWithBundledFallback(
+    await respondWithBundledFallback(
       res,
       productCode,
       bundledPayload,
@@ -575,7 +556,7 @@ export default async function handler(req: any, res: any) {
 
   if (bundledPayload && extracted.diagnostics.heroFallbackTriggered) {
     diagnostics.usedBundledFallbackBecause = "live-hero-missing-or-foreign";
-    respondWithBundledFallback(
+    await respondWithBundledFallback(
       res,
       productCode,
       bundledPayload,
@@ -585,12 +566,18 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
-  Object.assign(diagnostics, extracted.diagnostics, {
+  const liveMerged = await applyResolvedHero({
+    productCode,
+    productPayload: payload,
+    baseExtraction: extracted,
+  });
+
+  Object.assign(diagnostics, liveMerged.diagnostics, {
     source: "live-api",
   });
   const strictHeroViolationReason = getStrictHeroViolationReason({
     productCode,
-    extractedHeroUrl: extracted.extracted.heroImageUrl,
+    extractedHeroUrl: liveMerged.extracted.heroImageUrl,
     diagnostics,
   });
   if (strictHeroViolationReason) {
@@ -611,7 +598,7 @@ export default async function handler(req: any, res: any) {
     diagnostics,
     productCode,
     rawProduct: extracted.product,
-    extracted: extracted.extracted,
+    extracted: liveMerged.extracted,
     headers: {
       "Cache-Control": "public, s-maxage=300, stale-while-revalidate=1800",
       "X-Engine6-Source": "live-api",
