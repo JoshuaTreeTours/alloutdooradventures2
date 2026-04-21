@@ -45,6 +45,8 @@ import specimen57834p1Payload from "../../data/engine6/viator/57834P1.exact-prod
 import specimen10150p16Payload from "../../data/engine6/viator/10150P16.exact-product.json";
 import specimen6400p7Payload from "../../data/engine6/viator/6400P7.exact-product.json";
 import specimen3885grindelzurPayload from "../../data/engine6/viator/3885GRINDEL_ZUR.exact-product.json";
+import specimen12729paraglidePayload from "../../data/engine6/viator/12729PARAGLIDE.exact-product.json";
+import specimen64859p2Payload from "../../data/engine6/viator/64859P2.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -507,6 +509,18 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Zurich/Interlaken-and-Grindelwald-Day-Trip-from-Zurich/d577-3885GRINDEL_ZUR",
     rawPayload: specimen3885grindelzurPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "12729PARAGLIDE",
+    publicUrl:
+      "https://www.viator.com/tours/Interlaken/Paragliding-Experience-from-Interlaken/d5011-12729PARAGLIDE",
+    rawPayload: specimen12729paraglidePayload as Record<string, unknown>,
+  },
+  {
+    productCode: "64859P2",
+    publicUrl:
+      "https://www.viator.com/tours/Interlaken/Kayak-Tour-of-the-Turquoise-Lake-Brienz/d5011-64859P2",
+    rawPayload: specimen64859p2Payload as Record<string, unknown>,
   },
 ];
 

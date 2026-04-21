@@ -213,6 +213,12 @@ export const ENGINE6_ZURICH_INTERLAKEN_GRINDELWALD_PRODUCT_CODE =
   "3885GRINDEL_ZUR";
 export const ENGINE6_ZURICH_INTERLAKEN_GRINDELWALD_ROUTE =
   "/destinations/switzerland/zurich/tours/interlaken-and-grindelwald-day-trip-from-zurich";
+export const ENGINE6_INTERLAKEN_PARAGLIDE_PRODUCT_CODE = "12729PARAGLIDE";
+export const ENGINE6_INTERLAKEN_PARAGLIDE_ROUTE =
+  "/destinations/switzerland/interlaken/tours/paragliding-experience-from-interlaken";
+export const ENGINE6_INTERLAKEN_LAKE_BRIENZ_KAYAK_PRODUCT_CODE = "64859P2";
+export const ENGINE6_INTERLAKEN_LAKE_BRIENZ_KAYAK_ROUTE =
+  "/destinations/switzerland/interlaken/tours/kayak-tour-of-the-turquoise-lake-brienz";
 export const ENGINE6_LUCERNE_SHORT_CATAMARAN_PRODUCT_CODE = "6400P7";
 export const ENGINE6_LUCERNE_SHORT_CATAMARAN_ROUTE =
   "/destinations/switzerland/lucerne/tours/short-catamaran-cruise-on-lake-lucerne";
@@ -470,6 +476,11 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_ZURICH_INTERLAKEN_GRINDELWALD_ROUTE,
     ENGINE6_ZURICH_INTERLAKEN_GRINDELWALD_PRODUCT_CODE,
+  ],
+  [ENGINE6_INTERLAKEN_PARAGLIDE_ROUTE, ENGINE6_INTERLAKEN_PARAGLIDE_PRODUCT_CODE],
+  [
+    ENGINE6_INTERLAKEN_LAKE_BRIENZ_KAYAK_ROUTE,
+    ENGINE6_INTERLAKEN_LAKE_BRIENZ_KAYAK_PRODUCT_CODE,
   ],
 ] as const;
 
