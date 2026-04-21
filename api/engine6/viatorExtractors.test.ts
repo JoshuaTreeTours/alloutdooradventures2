@@ -167,4 +167,25 @@ describe("extractEngine6Product itinerary fidelity", () => {
       "Enjoy some leisure time exploring charming lakeside promenades and local cafes before departure"
     );
   });
+
+  it("prefers location.country when state is absent and infers city from logistics text", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "3885SW303BS",
+        title: "Mount Titlis Day Tour from Zurich",
+        location: { country: "Switzerland" },
+        logistics: {
+          start: [
+            {
+              description:
+                "The official departure point for all tours departing from Zurich is Sihlquai Bus Station.",
+            },
+          ],
+        },
+      },
+    });
+
+    expect(result.extracted.city).toBe("Zurich");
+    expect(result.extracted.state).toBe("Switzerland");
+  });
 });

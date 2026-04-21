@@ -181,13 +181,44 @@ const buildAuthoritativeOverview = ({
   return summary;
 };
 
+const ENGINE6_CANONICAL_PATH_PATTERN =
+  /^\/destinations\/([^/]+)\/([^/]+)\/tours\/[^/]+$/;
+
+const slugToLabel = (slug: string) =>
+  slug
+    .split("-")
+    .filter(Boolean)
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+
 export const mapViatorToEngine6Tour = (
   payload: Engine6ApiResponse
 ): Engine6Tour => {
   const title =
     payload.extracted.title ?? `Outdoor Adventure ${payload.rawProductCode}`;
-  const city = payload.extracted.city ?? "Destination";
-  const state = payload.extracted.state ?? "USA";
+  const generatedCanonicalPath = buildEngine6CanonicalPath({
+    state: payload.extracted.state ?? "destination",
+    city: payload.extracted.city ?? "destination",
+    title,
+  });
+  const canonicalPath =
+    resolveEngine6PathForProductCode(payload.rawProductCode) ??
+    generatedCanonicalPath;
+  const [, routeStateSlug = "", routeCitySlug = ""] =
+    ENGINE6_CANONICAL_PATH_PATTERN.exec(canonicalPath) ?? [];
+  const city = payload.extracted.city ?? slugToLabel(routeCitySlug) ?? "Destination";
+  const state =
+    payload.extracted.state ?? slugToLabel(routeStateSlug) ?? "Destination";
+
+  if (!payload.extracted.city || !payload.extracted.state) {
+    console.warn("[engine6-location] missing explicit location fields", {
+      productCode: payload.rawProductCode,
+      extractedCity: payload.extracted.city,
+      extractedState: payload.extracted.state,
+      fallbackCity: city,
+      fallbackState: state,
+    });
+  }
   const finalHeroImageUrl =
     typeof payload.extracted.heroImageUrl === "string" &&
     /^https?:\/\//i.test(payload.extracted.heroImageUrl) &&
@@ -232,14 +263,6 @@ export const mapViatorToEngine6Tour = (
   const primaryCategory =
     payload.extracted.primaryCategory ?? categories[0] ?? null;
   const categoryLabel = formatEngine6CategoryLabel(primaryCategory);
-  const generatedCanonicalPath = buildEngine6CanonicalPath({
-    state,
-    city,
-    title,
-  });
-  const canonicalPath =
-    resolveEngine6PathForProductCode(payload.rawProductCode) ??
-    generatedCanonicalPath;
   const rawDescription =
     payload.extracted.overviewText ??
     payload.extracted.seoDescription ??
