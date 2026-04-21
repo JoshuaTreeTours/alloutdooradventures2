@@ -87,4 +87,60 @@ describe("extractEngine6Product itinerary fidelity", () => {
     );
     expect(result.extracted.durationText).toBe("1 hour");
   });
+
+  it("extracts price, itinerary stops, and meeting context from logistics-array payloads", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "3885GRINDEL_ZUR",
+        title: "Grindelwald, Interlaken & Lauterbrunnen Day Trip from Zurich",
+        location: { city: "Zurich", state: "Switzerland" },
+        description:
+          "Travel from Zurich on a fully guided day trip to the Swiss villages of Grindelwald, Interlaken, and Lauterbrunnen.",
+        pricingInfo: {
+          summary: { fromPriceFormatted: "From $123.00" },
+        },
+        logistics: {
+          start: [
+            {
+              description:
+                "The official departure point for all tours departing from Zurich is Sihlquai Bus Station, near Zurich main train station.",
+            },
+          ],
+        },
+        itinerary: {
+          itineraryItems: [
+            {
+              description:
+                "Begin your journey in Zurich as you board a comfortable coach.",
+              passByWithoutStopping: true,
+            },
+            {
+              description:
+                "Arrive in Interlaken, where you'll enjoy some leisure time.",
+              passByWithoutStopping: false,
+            },
+            {
+              description:
+                "Next, continue to Grindelwald for alpine free time.",
+              passByWithoutStopping: false,
+            },
+            {
+              description:
+                "Final stop: Lauterbrunnen with views of the waterfalls.",
+              passByWithoutStopping: false,
+            },
+          ],
+        },
+      },
+    });
+
+    expect(result.extracted.priceAmount).toBe(123);
+    expect(result.extracted.priceFormatted).toBe("Starting at $123");
+    expect(result.extracted.itinerary.length).toBeGreaterThanOrEqual(3);
+    expect(result.extracted.itinerary[0]?.title).toBeTruthy();
+    expect(result.extracted.meetingPointText).toContain("Zurich");
+    expect(result.diagnostics.meetingPointFieldPath).toBe(
+      "product.logistics.start[0].description"
+    );
+  });
 });

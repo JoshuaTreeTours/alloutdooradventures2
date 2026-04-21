@@ -697,6 +697,26 @@ const extractPlaybookPrice = (product: RecordLike): PriceResult => {
     };
   }
 
+  const legacyPriceCandidates = [
+    parsePriceAmount(readPath(product, ["pricingInfo", "price", "fromPrice"])),
+    parsePriceAmount(readPath(product, ["pricingInfo", "price", "amount"])),
+    parsePriceAmount(
+      readPath(product, ["productOptions", 0, "pricingInfo", "price", "fromPrice"])
+    ),
+    parsePriceAmount(
+      readPath(product, ["productOptions", 0, "pricingInfo", "price", "amount"])
+    ),
+  ].filter((value): value is number => value !== null && value > 0);
+
+  if (legacyPriceCandidates.length > 0) {
+    const min = Math.min(...legacyPriceCandidates);
+    return {
+      amount: min,
+      path: "product.pricingInfo|product.productOptions[*].pricingInfo",
+      rawValue: min,
+    };
+  }
+
   return {
     amount: null,
     path: null,
@@ -862,6 +882,22 @@ const normalizeSingleItineraryItem = (
     asNonEmptyString(pointOfInterestLocation?.locationName) ??
     asNonEmptyString(pointOfInterestLocation?.title) ??
     asNonEmptyString(pointOfInterestLocation?.name);
+  const inferredTitleFromDescription = (() => {
+    const descriptionText = asNonEmptyString(row.description);
+    if (!descriptionText) return null;
+
+    const firstSentence = descriptionText.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
+    if (!firstSentence) return null;
+
+    const locationPattern =
+      /\b(?:arrive in|continue to|final stop[:\s]+|visit|return to|journey in)\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,5})/;
+    const match = firstSentence.match(locationPattern);
+    if (match?.[1]) {
+      return match[1].replace(/[.,:;]+$/, "").trim();
+    }
+
+    return firstSentence.slice(0, 60).replace(/[.,:;]+$/, "").trim() || null;
+  })();
 
   const title =
     locationTitle ??
@@ -872,7 +908,8 @@ const normalizeSingleItineraryItem = (
     asNonEmptyString(pointOfInterest?.name) ??
     asNonEmptyString(stop?.name) ??
     asNonEmptyString(stop?.title) ??
-    asNonEmptyString(location?.name);
+    asNonEmptyString(location?.name) ??
+    inferredTitleFromDescription;
 
   if (!title) return null;
   const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
@@ -957,6 +994,7 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
       asNonEmptyString(row.title) ||
       asNonEmptyString(row.name) ||
       asNonEmptyString(row.label) ||
+      asNonEmptyString(row.description) ||
       asRecord(row.pointOfInterestLocation) ||
       asRecord(row.pointOfInterest) ||
       asRecord(row.stop) ||
@@ -1104,10 +1142,11 @@ const extractMeetingPoint = (product: RecordLike) => {
     }
 
     const lineCount = compact.split(/\s*[;\n|•]\s*/).filter(Boolean).length;
-    const isOverflow = compact.length > 110 || lineCount > 3;
+    const isOverflow = compact.length > 140 || lineCount > 3;
     if (isOverflow) {
+      const firstSentence = compact.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
       return {
-        value: "Select Las Vegas pickup points available",
+        value: firstSentence || compact.slice(0, 137).trimEnd() + "...",
         summaryApplied: true,
         reason: "long-pickup-overflow",
       };
@@ -1118,8 +1157,12 @@ const extractMeetingPoint = (product: RecordLike) => {
 
   for (const candidate of [
     {
-      value: asRecord(asRecord(product.logistics)?.start)?.description,
-      path: "product.logistics.start.description",
+      value:
+        asRecord(asRecord(product.logistics)?.start)?.description ??
+        (Array.isArray(asRecord(product.logistics)?.start)
+          ? asRecord(asRecord(product.logistics)?.start?.[0])?.description
+          : null),
+      path: "product.logistics.start[0].description",
     },
     {
       value: asRecord(asRecord(product.meetingAndPickup)?.meetingPoint)?.description,
@@ -1147,6 +1190,41 @@ const extractMeetingPoint = (product: RecordLike) => {
         path: candidate.path,
         summaryApplied: summarized.summaryApplied,
         summaryReason: summarized.reason,
+      };
+    }
+  }
+
+  const itineraryItems = readPath(product, ["itinerary", "itineraryItems"]);
+  if (Array.isArray(itineraryItems)) {
+    const firstItem = asRecord(itineraryItems[0]);
+    const inferredFromFirstStop =
+      asNonEmptyString(firstItem?.description) ??
+      asNonEmptyString(firstItem?.title) ??
+      asNonEmptyString(firstItem?.name);
+    if (inferredFromFirstStop) {
+      const summarized = summarizeMeetingPoint(inferredFromFirstStop);
+      return {
+        value: summarized.value,
+        rawValue: inferredFromFirstStop,
+        path: "product.itinerary.itineraryItems[0]",
+        summaryApplied: summarized.summaryApplied,
+        summaryReason: "fallback:first-itinerary-item",
+      };
+    }
+  }
+
+  const overviewFallback =
+    asNonEmptyString(asRecord(product.description)?.text) ??
+    asNonEmptyString(product.description);
+  if (overviewFallback) {
+    const firstSentence = overviewFallback.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
+    if (firstSentence) {
+      return {
+        value: firstSentence,
+        rawValue: overviewFallback,
+        path: "product.description",
+        summaryApplied: true,
+        summaryReason: "fallback:description-opening",
       };
     }
   }
