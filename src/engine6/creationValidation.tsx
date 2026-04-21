@@ -503,14 +503,14 @@ export const validateEngine6CreationContract = ({
     | { price?: number; priceCurrency?: string; priceValidUntil?: string }
     | undefined;
   if (tour.priceAmount != null && offerRecord?.price !== tour.priceAmount) {
-    violations.push("Offer.price diverged from Starting at minimum price");
+    violations.push("Offer.price diverged from minimum price label");
   }
   if (
     typeof tour.priceAmount === "number" &&
     Number.isFinite(tour.priceAmount) &&
-    !tour.priceFormatted.startsWith("Starting at $")
+    !tour.priceFormatted.startsWith("From $")
   ) {
-    violations.push("visible price label lost Starting at minimum-price copy");
+    violations.push("visible price label lost From minimum-price copy");
   }
   if (offerRecord?.priceCurrency !== "USD") {
     violations.push("Offer.priceCurrency missing or invalid");
@@ -527,9 +527,9 @@ export const validateEngine6CreationContract = ({
   }
   if (
     typeof tour.priceAmount === "number" &&
-    !/^Starting at \$/.test(card.priceLabel)
+    !/^From \$/.test(card.priceLabel)
   ) {
-    violations.push("city card price label missing Starting at $price format");
+    violations.push("city card price label missing From $price format");
   }
   if (card.imageUrl !== tour.resolvedHero?.url) {
     violations.push("card hero did not use authoritative resolved hero");

@@ -241,7 +241,7 @@ const specimenApiPayload = {
     productUrl:
       "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
     priceAmount: 199,
-    priceFormatted: "Starting at $199",
+    priceFormatted: "From $199",
     aggregateRating: 4.9,
     reviewCount: 177,
     meetingPointText:
@@ -316,7 +316,7 @@ describe("engine6 extractor", () => {
     expect(extracted.diagnostics.heroFallbackTriggered).toBe(false);
     expect(extracted.diagnostics.rejectedForeignHeroCandidates).toEqual([]);
     expect(extracted.extracted.priceAmount).toBe(199);
-    expect(extracted.extracted.priceFormatted).toBe("Starting at $199");
+    expect(extracted.extracted.priceFormatted).toBe("From $199");
     expect(extracted.diagnostics.commercialPriceFieldPath).toBe(
       "product.priceFrom"
     );
@@ -595,12 +595,12 @@ describe("engine6 mapping/cards/page", () => {
     const html = renderToString(<Engine6TourPage tour={tour} />);
 
     expect(tour.productCode).toBe("63657P1");
-    expect(tour.priceFormatted).toBe("Starting at $199");
+    expect(tour.priceFormatted).toBe("From $199");
     expect(tour.bookingUrl).toBe(
       "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1?pid=P00290915&mcid=42383&medium=link"
     );
     expect(card.title).toContain("Santa Barbara Vineyard");
-    expect(surfaces.city[0].priceLabel).toBe("Starting at $199");
+    expect(surfaces.city[0].priceLabel).toBe("From $199");
     expect(tour.primaryCategory).toBe("bike-tour");
     expect(tour.categoryLabel).toBe("Bike Tour");
     expect(tour.metaDescription.length).toBeLessThanOrEqual(160);
@@ -1034,7 +1034,7 @@ describe("engine6 listing surfaces", () => {
 
     expect(engine6Entry).toBeDefined();
     expect(engine6Entry?.href).toBe(ENGINE6_SPECIMEN_ROUTE);
-    expect(engine6Entry?.tour.badges?.priceFrom).toBe("Starting at $199");
+    expect(engine6Entry?.tour.badges?.priceFrom).toBe("From $199");
     expect(engine6Entry?.tour.badges?.rating).toBe(4.9);
     expect(engine6Entry?.tour.badges?.reviewCount).toBe(177);
   });
@@ -1074,7 +1074,7 @@ describe("engine6 listing surfaces", () => {
     expect(engine6Entry?.tour.heroImage).toBe(
       engine6Entry?.tour.primaryImageUrl
     );
-    expect(engine6Entry?.tour.badges?.priceFrom).toMatch(/^Starting at \$/);
+    expect(engine6Entry?.tour.badges?.priceFrom).toMatch(/^From \$/);
     expect(engine6Entry?.tour.badges?.rating).toBeGreaterThan(4);
     expect(engine6Entry?.tour.badges?.reviewCount).toBeGreaterThan(100);
   });
@@ -1092,7 +1092,7 @@ describe("engine6 listing surfaces", () => {
     expect(engine6Entry?.tour.heroImage).toBe(
       engine6Entry?.tour.primaryImageUrl
     );
-    expect(engine6Entry?.tour.badges?.priceFrom).toBe("Starting at $53");
+    expect(engine6Entry?.tour.badges?.priceFrom).toBe("From $53");
   });
 
   it("routes and renders 3097SDZSP_2VISIT in San Diego with canonical affiliate CTA and image parity", () => {
@@ -1147,7 +1147,7 @@ describe("engine6 listing surfaces", () => {
       "/tours/San-Diego/Day-Trip-to-Joshua-Tree-National-Park-from-San-Diego/d736-447234P3"
     );
     expect(engine6Entry?.tour.bookingUrl).not.toContain("/search/");
-    expect(engine6Entry?.tour.badges?.priceFrom).toBe("Starting at $995");
+    expect(engine6Entry?.tour.badges?.priceFrom).toBe("From $995");
 
     const detailTour = engine6ResolvedTours.find(
       tour => tour.productCode === "447234P3"
@@ -1164,7 +1164,7 @@ describe("engine6 listing surfaces", () => {
     expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(false);
     const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
     expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
-    expect(detailHtml).toContain("Starting at $995");
+    expect(detailHtml).toContain("From $995");
     expect(detailHtml).toContain(
       `src="${ENGINE6_447234P3_EXPECTED_HERO_URL}"`
     );
@@ -1181,7 +1181,7 @@ describe("engine6 listing surfaces", () => {
       | Record<string, unknown>
       | undefined;
     expect(offerNode?.price).toBe(995);
-    expect(offerNode?.description).toBe("Starting at $995");
+    expect(offerNode?.description).toBe("From $995");
     expect(tripNode?.image).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
   });
 
@@ -1211,7 +1211,7 @@ describe("engine6 listing surfaces", () => {
       "https://www.viator.com/tours/San-Diego/Spectacular-Sunset-Sailing/d736-5584233P1?pid=P00290915&mcid=42383&medium=link"
     );
     expect(engine6Entry?.tour.bookingUrl).not.toContain("/search/");
-    expect(engine6Entry?.tour.badges?.priceFrom).toBe("Starting at $120");
+    expect(engine6Entry?.tour.badges?.priceFrom).toBe("From $120");
     expect(engine6Entry?.tour.badges?.rating).toBe(5);
     expect(engine6Entry?.tour.badges?.reviewCount).toBe(22);
 
@@ -1245,7 +1245,7 @@ describe("engine6 listing surfaces", () => {
       | Record<string, unknown>
       | undefined;
     expect(offerNode?.price).toBe(120);
-    expect(offerNode?.description).toBe("Starting at $120");
+    expect(offerNode?.description).toBe("From $120");
     expect(tripNode?.image).toBe(ENGINE6_5584233P1_EXPECTED_HERO_URL);
   });
 
@@ -1273,7 +1273,7 @@ describe("engine6 listing surfaces", () => {
       "https://www.viator.com/tours/Palm-Springs/Mountain-Sunrise-Hike-and-Meditation/d648-327321P1?pid=P00290915&mcid=42383&medium=link"
     );
     expect(engine6Entry?.tour.bookingUrl).not.toContain("/search/");
-    expect(engine6Entry?.tour.badges?.priceFrom).toBe("Starting at $108");
+    expect(engine6Entry?.tour.badges?.priceFrom).toBe("From $108");
     expect(engine6Entry?.tour.badges?.rating).toBe(5);
     expect(engine6Entry?.tour.badges?.reviewCount).toBe(92);
 
@@ -1572,7 +1572,7 @@ describe("engine6 listing surfaces", () => {
     expect(entry?.href).toBe(ENGINE6_EMERALD_CAVE_ROUTE);
     expect(entry?.tour.heroImage).toBe(emeraldTour?.heroImageUrl);
     expect(entry?.tour.primaryImageUrl).toBe(emeraldTour?.heroImageUrl);
-    expect(entry?.tour.badges?.priceFrom).toBe("Starting at $109");
+    expect(entry?.tour.badges?.priceFrom).toBe("From $109");
     expect(entry?.tour.badges?.rating).toBe(4.9);
     expect(entry?.tour.badges?.reviewCount).toBe(5060);
   });
@@ -1741,7 +1741,7 @@ describe("engine6 listing surfaces", () => {
 
     expect(card.imageUrl).toBe(ENGINE6_63657P1_CARD_IMAGE_URL);
     expect(card.locationLabel).toBe("Santa Barbara, California");
-    expect(card.priceLabel).toBe("Starting at $199");
+    expect(card.priceLabel).toBe("From $199");
     expect(card.ratingLabel).toBe("4.9 (177)");
   });
 });

@@ -110,7 +110,11 @@ describe("engine6 single-tour validation harness", () => {
         expect(tour.itinerary.length).toBeGreaterThanOrEqual(2);
         expect(html).toContain('data-testid="engine6-itinerary-timeline"');
       }
-      expect(tour.priceFormatted).toMatch(/^Starting at \$/);
+      if (typeof tour.priceAmount === "number") {
+        expect(tour.priceFormatted).toMatch(/^From \$/);
+      } else {
+        expect(tour.priceFormatted).toBe("Check latest price");
+      }
       expect(tour.aggregateRating).toBeGreaterThan(4);
       expect(tour.reviewCount).toBeGreaterThan(0);
       expect(tour.seoTitle).toContain(tour.title);

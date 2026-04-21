@@ -824,7 +824,7 @@ const buildPriceLabel = ({ amount }: { amount: number | null }) => {
     minimumFractionDigits: hasCents ? 2 : 0,
     maximumFractionDigits: hasCents ? 2 : 0,
   }).format(amount);
-  return `Starting at ${formatted}`;
+  return `From ${formatted}`;
 };
 
 const extractDuration = (product: RecordLike) => {
