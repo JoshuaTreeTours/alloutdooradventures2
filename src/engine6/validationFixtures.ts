@@ -46,6 +46,7 @@ import specimen10150p16Payload from "../../data/engine6/viator/10150P16.exact-pr
 import specimen6400p7Payload from "../../data/engine6/viator/6400P7.exact-product.json";
 import specimen3885grindelzurPayload from "../../data/engine6/viator/3885GRINDEL_ZUR.exact-product.json";
 import specimen3885sw303bsPayload from "../../data/engine6/viator/3885SW303BS.exact-product.json";
+import specimen5553984p5Payload from "../../data/engine6/viator/5553984P5.exact-product.json";
 import specimen12729paraglidePayload from "../../data/engine6/viator/12729PARAGLIDE.exact-product.json";
 import specimen64859p2Payload from "../../data/engine6/viator/64859P2.exact-product.json";
 import specimen26095p3Payload from "../../data/engine6/viator/26095P3.exact-product.json";
@@ -517,6 +518,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Zurich/Mount-Titlis-Day-Tour-from-Zurich/d577-3885SW303BS",
     rawPayload: specimen3885sw303bsPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "5553984P5",
+    publicUrl:
+      "https://www.viator.com/tours/Zurich/Exclusive-Zurich-tour-old-town-Lake-Zurich-cruise-and-Lindt-Museum/d577-5553984P5",
+    rawPayload: specimen5553984p5Payload as Record<string, unknown>,
   },
   {
     productCode: "12729PARAGLIDE",
