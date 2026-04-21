@@ -80,7 +80,7 @@ describe("engine6 production rules lightweight validations", () => {
       expect(card.ratingLabel).toMatch(/^★\s+\d(?:\.\d)?\s+\(\d+\)$/);
     }
     if (typeof tour.priceAmount === "number") {
-      expect(card.priceLabel).toMatch(/^From \$/);
+      expect(card.priceLabel).toMatch(/^Starting at \$/);
     }
   });
 
