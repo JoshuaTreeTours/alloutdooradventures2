@@ -43,6 +43,7 @@ import specimen118958p8Payload from "../../data/engine6/viator/118958P8.exact-pr
 import specimen6331bahaPayload from "../../data/engine6/viator/6331BAHA.exact-product.json";
 import specimen57834p1Payload from "../../data/engine6/viator/57834P1.exact-product.json";
 import specimen10150p16Payload from "../../data/engine6/viator/10150P16.exact-product.json";
+import specimen6400p7Payload from "../../data/engine6/viator/6400P7.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -493,6 +494,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Miami/Miami-Raccoon-Island-Adventure/d662-10150P16",
     rawPayload: specimen10150p16Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "6400P7",
+    publicUrl:
+      "https://www.viator.com/tours/Lucerne/Short-Catamaran-Cruise-on-Lake-Lucerne/d576-6400P7",
+    rawPayload: specimen6400p7Payload as Record<string, unknown>,
   },
 ];
 

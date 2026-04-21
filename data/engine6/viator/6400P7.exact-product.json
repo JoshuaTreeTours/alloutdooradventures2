@@ -1,0 +1,83 @@
+{
+  "product": {
+    "productCode": "6400P7",
+    "productUrl": "https://www.viator.com/tours/Lucerne/Short-Catamaran-Cruise-on-Lake-Lucerne/d576-6400P7?mcid=42383&pid=P00290915&medium=api&api_version=2.0",
+    "title": "Lake Lucerne 1-Hour Catamaran Cruise",
+    "description": {
+      "text": "Sometimes there simply isn't enough time to spend an entire day on magnificent Lake Lucerne, but for those moments we are pleased to offer convenient short cruises. These still allow you to enjoy the best of the lake and get a feel for the fantastic mountain landscape in the heart of the Swiss Alps. We recommend the round-trip journey from Lucerne to Kehrsiten-Bürgenstock and back aboard our elegant catamaran. Just stay on the ship when it docks at the Kehrsiten-Bürgenstock pier, for the immediate return to Lucerne.\nSnacks and drinks can be purchased at a vending machine on board."
+    },
+    "location": {
+      "city": "Lucerne",
+      "state": "Switzerland"
+    },
+    "duration": "60 minutes",
+    "reviews": {
+      "combinedAverageRating": 3.7383177,
+      "totalReviews": 107
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/11/b2/f1/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [],
+    "logistics": {
+      "start": {
+        "description": "Pier 3 is located in front of KKL Lucerne."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Enjoy the best of the lake Lucerne and",
+        "description": "Enjoy the best of the lake Lucerne and get a feel for the fantastic mountain landscape in the heart of the Swiss Alps on this cruise. We recommend the round-trip journey from Lucerne to Kehrsiten-Bürgenstock and back aboard our elegant catamaran. Just stay on the ship when it docks at the Kehrsiten-Bürgenstock pier, for the immediate return to Lucerne.",
+        "admission": "NOT_APPLICABLE"
+      }
+    ],
+    "itinerarySummary": "Enjoy the best of the lake Lucerne and get a feel for the fantastic mountain landscape in the heart of the Swiss Alps on this cruise. We recommend the round-trip journey from Lucerne to Kehrsiten-Bürgenstock and back aboard our elegant catamaran. Just stay on the ship when it docks at the Kehrsiten-Bürgenstock pier, for the immediate return to Lucerne.",
+    "inclusions": [
+      "WiFi on board",
+      "1-hour catamaran cruise"
+    ],
+    "exclusions": [
+      "Drinks and snacks (available for purchase onboard)",
+      "NO Audioguide or guide"
+    ],
+    "additionalInfo": [
+      "Wheelchair accessible",
+      "Infants and small children can ride in a pram or stroller",
+      "Service animals allowed",
+      "Public transportation options are available nearby",
+      "Transportation options are wheelchair accessible",
+      "Suitable for all physical fitness levels"
+    ],
+    "tags": [
+      "20204",
+      "367661",
+      "21729",
+      "367654",
+      "21860",
+      "22143",
+      "11903",
+      "367652",
+      "11885",
+      "367659",
+      "11938",
+      "20255",
+      "367653"
+    ]
+  },
+  "sourceMeta": {
+    "fetchedFrom": "https://api.viator.com/partner/products/6400P7",
+    "fetchedAt": "2026-04-21T16:36:30.778Z",
+    "sourceSchema": "viator-v2-product"
+  }
+}

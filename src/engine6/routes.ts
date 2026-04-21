@@ -208,6 +208,9 @@ export const ENGINE6_MIAMI_ALL_INCLUDED_COMBO_ROUTE =
 export const ENGINE6_MIAMI_SUP_KAYAK_WILDLIFE_PRODUCT_CODE = "342209P4";
 export const ENGINE6_MIAMI_SUP_KAYAK_WILDLIFE_ROUTE =
   "/destinations/florida/miami/tours/sup-kayak-wildlife-exploration-through-mangrove-jungle";
+export const ENGINE6_LUCERNE_SHORT_CATAMARAN_PRODUCT_CODE = "6400P7";
+export const ENGINE6_LUCERNE_SHORT_CATAMARAN_ROUTE =
+  "/destinations/switzerland/lucerne/tours/short-catamaran-cruise-on-lake-lucerne";
 
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
@@ -454,6 +457,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_MIAMI_SUP_KAYAK_WILDLIFE_ROUTE,
     ENGINE6_MIAMI_SUP_KAYAK_WILDLIFE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LUCERNE_SHORT_CATAMARAN_ROUTE,
+    ENGINE6_LUCERNE_SHORT_CATAMARAN_PRODUCT_CODE,
   ],
 ] as const;
 
