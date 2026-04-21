@@ -81,7 +81,7 @@ describe("extractEngine6Product itinerary fidelity", () => {
     });
 
     expect(result.extracted.priceAmount).toBe(39.5);
-    expect(result.extracted.priceFormatted).toBe("Starting at $39.50");
+    expect(result.extracted.priceFormatted).toBe("From $39.50");
     expect(result.diagnostics.commercialPriceFieldPath).toContain(
       "product.pricingInfo"
     );
@@ -135,7 +135,7 @@ describe("extractEngine6Product itinerary fidelity", () => {
     });
 
     expect(result.extracted.priceAmount).toBe(123);
-    expect(result.extracted.priceFormatted).toBe("Starting at $123");
+    expect(result.extracted.priceFormatted).toBe("From $123.00");
     expect(result.extracted.itinerary.length).toBeGreaterThanOrEqual(3);
     expect(result.extracted.itinerary[0]?.title).toBeTruthy();
     expect(result.extracted.meetingPointText).toContain("Zurich");
