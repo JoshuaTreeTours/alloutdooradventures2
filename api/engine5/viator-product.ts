@@ -7,8 +7,8 @@ import {
   extractViatorReviewCount,
   extractViatorItinerary,
 } from "../../src/engine5/viator/extractors";
-import { resolveViatorApiKey, resolveViatorBaseUrl } from "../viator/runtimeConfig";
 
+const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 const ENGINE5_EXACT_PAYLOAD_PRODUCT_CODE = "132218P209";
 const ENGINE5_BRIDGE_PRODUCT_CODE = "421920P2";
 
@@ -95,7 +95,7 @@ export default async function handler(req: any, res: any) {
   const bundledPayload = await getBundledExactProductPayload(productCode);
   const isBridgeProduct = productCode === ENGINE5_BRIDGE_PRODUCT_CODE;
 
-  const key = resolveViatorApiKey();
+  const key = process.env.VIATOR_API_KEY;
   const bridgeDiagnostics = buildInitialBridgeDiagnostics(Boolean(key));
 
   if (!key && bundledPayload) {
@@ -113,7 +113,7 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
-  const baseUrl = resolveViatorBaseUrl();
+  const baseUrl = process.env.VIATOR_BASE_URL ?? DEFAULT_VIATOR_BASE_URL;
 
   try {
     bridgeDiagnostics.attemptedLiveFetch = true;

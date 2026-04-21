@@ -41,8 +41,7 @@
     "guides:enrich-city-facts": "node scripts/enrich-guides-about.ts",
     "guides:resolve-images": "tsx scripts/resolve-guide-landmark-images.ts",
     "verify:prerender": "PRERENDER=1 CI=true node scripts/run-prerender.mjs && tsx scripts/verify-palm-springs-34849.ts",
-    "test:schema-tour-diff": "tsx scripts/schema-diff-tour.ts",
-    "validate:engine6:live-api": "tsx scripts/engine6-live-api-validation.ts"
+    "test:schema-tour-diff": "tsx scripts/schema-diff-tour.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
