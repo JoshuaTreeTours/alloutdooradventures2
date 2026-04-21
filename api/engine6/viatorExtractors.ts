@@ -597,58 +597,93 @@ const extractProductUrl = (product: RecordLike) => {
 };
 
 const extractPlaybookPrice = (product: RecordLike): PriceResult => {
-  const amountPaths: PathSegment[][] = [
-    ["pricing", "summary", "fromPrice"],
-    ["pricingSummary", "fromPrice"],
-    ["pricing", "fromPrice"],
-    ["price", "fromPrice"],
-    ["fromPrice"],
-    ["priceFrom"],
-    ["bookableItems", 0, "pricingSummary", "fromPrice"],
-    ["bookableItems", 0, "pricing", "summary", "fromPrice"],
-    ["bookableItems", 0, "price", "fromPrice"],
-    ["bookingOptions", 0, "price", "fromPrice"],
-    ["bookingOptions", 0, "price", "amount"],
-    [
-      "bookableItems",
-      0,
-      "seasonalPricingRecords",
-      0,
-      "pricingDetails",
-      0,
-      "price",
-      "original",
-      "recommendedRetailPrice",
-    ],
-    [
-      "bookableItems",
-      0,
-      "seasonalPricingRecords",
-      0,
-      "pricingDetails",
-      0,
-      "price",
-      "partnerNetPrice",
-    ],
-    ["pricingInfo", "summary", "fromPrice"],
-    ["pricingInfo", "fromPrice"],
-    ["productOptions", 0, "pricing", "summary", "fromPrice"],
-    ["productOptions", 0, "pricing", "fromPrice"],
-    ["productOptions", 0, "price", "fromPrice"],
-    ["productOptions", 0, "price", "amount"],
-  ];
+  const collectPathCandidates = (
+    paths: PathSegment[][]
+  ): Array<{ amount: number; path: string; rawValue: unknown }> =>
+    paths
+      .map(path => {
+        const raw = readPath(product, path);
+        const amount = parsePriceAmount(raw);
+        return {
+          amount,
+          path: formatFieldPath(path),
+          rawValue:
+            typeof raw === "string" || typeof raw === "number" ? raw : amount,
+        };
+      })
+      .filter(
+        (
+          candidate
+        ): candidate is { amount: number; path: string; rawValue: unknown } =>
+          candidate.amount !== null && Number.isFinite(candidate.amount) && candidate.amount > 0
+      );
 
-  for (const path of amountPaths) {
-    const raw = readPath(product, path);
-    const amount = parsePriceAmount(raw);
-    if (amount !== null) {
-      return {
-        amount,
-        path: formatFieldPath(path),
-        rawValue:
-          typeof raw === "string" || typeof raw === "number" ? raw : amount,
-      };
+  const selectLowestCandidate = (
+    candidates: Array<{ amount: number; path: string; rawValue: unknown }>
+  ): PriceResult | null => {
+    if (candidates.length === 0) {
+      return null;
     }
+    const selected = [...candidates].sort((a, b) => a.amount - b.amount)[0];
+    return {
+      amount: selected.amount,
+      path: selected.path,
+      rawValue: selected.rawValue,
+    };
+  };
+
+  const primaryCandidate = selectLowestCandidate(
+    collectPathCandidates([["pricing", "summary", "fromPrice"]])
+  );
+  if (primaryCandidate) {
+    return primaryCandidate;
+  }
+
+  const fallbackCandidate = selectLowestCandidate(
+    collectPathCandidates([
+      ["pricingInfo", "fromPrice"],
+      ["pricingInfo", "price"],
+      ["pricingInfo", "amount"],
+      ["pricingInfo", "summary", "fromPrice"],
+      ["pricingSummary", "fromPrice"],
+      ["pricing", "fromPrice"],
+      ["price", "fromPrice"],
+      ["fromPrice"],
+      ["priceFrom"],
+      ["bookableItems", 0, "pricingSummary", "fromPrice"],
+      ["bookableItems", 0, "pricing", "summary", "fromPrice"],
+      ["bookableItems", 0, "price", "fromPrice"],
+      ["bookingOptions", 0, "price", "fromPrice"],
+      ["bookingOptions", 0, "price", "amount"],
+      [
+        "bookableItems",
+        0,
+        "seasonalPricingRecords",
+        0,
+        "pricingDetails",
+        0,
+        "price",
+        "original",
+        "recommendedRetailPrice",
+      ],
+      [
+        "bookableItems",
+        0,
+        "seasonalPricingRecords",
+        0,
+        "pricingDetails",
+        0,
+        "price",
+        "partnerNetPrice",
+      ],
+      ["productOptions", 0, "pricing", "summary", "fromPrice"],
+      ["productOptions", 0, "pricing", "fromPrice"],
+      ["productOptions", 0, "price", "fromPrice"],
+      ["productOptions", 0, "price", "amount"],
+    ])
+  );
+  if (fallbackCandidate) {
+    return fallbackCandidate;
   }
 
   for (const path of [
@@ -726,7 +761,21 @@ const extractPlaybookPrice = (product: RecordLike): PriceResult => {
     .flatMap(candidate =>
       collectNumericPriceCandidates(candidate.root, candidate.path)
     )
-    .filter(candidate => Number.isFinite(candidate.amount) && candidate.amount > 0)
+    .filter(candidate => {
+      const pathLc = candidate.path.toLowerCase();
+      if (!Number.isFinite(candidate.amount) || candidate.amount <= 0) {
+        return false;
+      }
+      if (
+        pathLc.includes("total") ||
+        pathLc.includes("tax") ||
+        pathLc.includes("fee") ||
+        pathLc.includes("surcharge")
+      ) {
+        return false;
+      }
+      return true;
+    })
     .sort((a, b) => a.amount - b.amount)[0];
 
   if (subtreeCandidate) {

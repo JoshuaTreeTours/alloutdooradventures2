@@ -188,4 +188,49 @@ describe("extractEngine6Product itinerary fidelity", () => {
     expect(result.extracted.city).toBe("Zurich");
     expect(result.extracted.state).toBe("Switzerland");
   });
+
+  it("falls back to pricingInfo.price when pricing.summary.fromPrice is missing", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "3885SW303BS",
+        title: "Mount Titlis Day Tour from Zurich",
+        location: { city: "Zurich", country: "Switzerland" },
+        pricingInfo: {
+          type: "PER_PERSON",
+          price: "$241.82",
+        },
+      },
+    });
+
+    expect(result.extracted.priceAmount).toBe(241.82);
+    expect(result.extracted.priceFormatted).toBe("Starting at $241.82");
+    expect(result.diagnostics.commercialPriceFieldPath).toBe(
+      "product.pricingInfo.price"
+    );
+  });
+
+  it("keeps primary pricing.summary.fromPrice precedence over fallback fields", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "PRIMARY_PRICE_WINS",
+        title: "Primary price precedence test",
+        location: { city: "Zurich", country: "Switzerland" },
+        pricing: {
+          summary: {
+            fromPrice: 199,
+          },
+        },
+        pricingInfo: {
+          fromPrice: 149,
+          price: 129,
+          amount: 125,
+        },
+      },
+    });
+
+    expect(result.extracted.priceAmount).toBe(199);
+    expect(result.diagnostics.commercialPriceFieldPath).toBe(
+      "product.pricing.summary.fromPrice"
+    );
+  });
 });
