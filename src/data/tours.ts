@@ -360,7 +360,9 @@ export const getToursByActivity = (activitySlug: string) =>
   });
 
 export const getTourDetailPath = (tour: Tour) =>
-  `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`;
+  tour.destination.stateSlug === "switzerland" || tour.engine === "engine6"
+    ? getCityTourDetailPath(tour)
+    : `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`;
 
 export const getCityTourDetailPath = (tour: Tour) =>
   `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`;

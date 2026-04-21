@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   getLegacyTourBySlugs,
   getTourBySlugs,
+  getTourDetailPath,
   getToursByCity,
   getToursByCityUnified,
   tours,
@@ -246,6 +247,19 @@ describe("Engine6-first discovery ordering", () => {
 
 
 describe("Switzerland Engine6 discovery propagation", () => {
+  it("uses destination-style canonical URLs for all Switzerland tour cards", () => {
+    const switzerlandTours = tours.filter(
+      tour => tour.destination.stateSlug === "switzerland"
+    );
+
+    expect(switzerlandTours.length).toBeGreaterThan(0);
+    expect(
+      switzerlandTours.every(tour =>
+        getTourDetailPath(tour).startsWith("/destinations/switzerland/")
+      )
+    ).toBe(true);
+  });
+
   it("indexes Engine6 Switzerland tours as international (non-US) inventory", () => {
     const swissEngine6Tours = tours.filter(
       tour => tour.engine === "engine6" && tour.destination.stateSlug === "switzerland"

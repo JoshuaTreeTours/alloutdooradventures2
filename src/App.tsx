@@ -88,6 +88,11 @@ import {
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
   ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_ROUTE,
+  ENGINE6_ZURICH_INTERLAKEN_GRINDELWALD_ROUTE,
+  ENGINE6_INTERLAKEN_PARAGLIDE_ROUTE,
+  ENGINE6_INTERLAKEN_LAKE_BRIENZ_KAYAK_ROUTE,
+  ENGINE6_INTERLAKEN_LAUTERBRUNNEN_EBIKE_ROUTE,
+  ENGINE6_LUCERNE_SHORT_CATAMARAN_ROUTE,
 } from "./engine6/routes";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
 
@@ -131,6 +136,19 @@ const MexicoCityBookSlugRedirect = ({
 }: MexicoCityToursSlugRedirectProps) => (
   <RouteRedirect
     to={`/destinations/mexico/ciudad-de-mexico/tours/${params.tourSlug}/book`}
+  />
+);
+
+type SwissLegacyTourRedirectProps = {
+  params: {
+    citySlug: string;
+    slug: string;
+  };
+};
+
+const SwissLegacyTourRedirect = ({ params }: SwissLegacyTourRedirectProps) => (
+  <RouteRedirect
+    to={`/destinations/switzerland/${params.citySlug}/tours/${params.slug}`}
   />
 );
 
@@ -283,6 +301,26 @@ export default function App() {
         />
         <Route
           path={ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_ZURICH_INTERLAKEN_GRINDELWALD_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_INTERLAKEN_PARAGLIDE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_INTERLAKEN_LAKE_BRIENZ_KAYAK_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_INTERLAKEN_LAUTERBRUNNEN_EBIKE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_LUCERNE_SHORT_CATAMARAN_ROUTE}
           component={Engine6SpecimenRoute}
         />
 
@@ -449,6 +487,10 @@ export default function App() {
         <Route
           path="/tours/:tourSlug/book"
           component={FlagstaffTourBookingRoute}
+        />
+        <Route
+          path="/tours/switzerland/:citySlug/:slug"
+          component={SwissLegacyTourRedirect}
         />
         <Route path="/tours/:tourSlug" component={FlagstaffTourDetailRoute} />
         <Route

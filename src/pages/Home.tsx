@@ -269,7 +269,7 @@ const FEATURED_BEST_SELLING_TOURS: FeaturedTourEntry[] = [
   },
   {
     href:
-      "https://www.alloutdooradventures.com/tours/switzerland/interlaken/grand-tour-of-interlaken-617564",
+      "https://www.alloutdooradventures.com/destinations/switzerland/interlaken/tours/grand-tour-of-interlaken-617564",
     tour: {
       id: "alpinbikes-617564",
       slug: "grand-tour-of-interlaken-617564",

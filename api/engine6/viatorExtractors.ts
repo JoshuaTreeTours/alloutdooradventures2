@@ -896,7 +896,7 @@ const normalizeSingleItineraryItem = (
       return match[1].replace(/[.,:;]+$/, "").trim();
     }
 
-    return firstSentence.slice(0, 60).replace(/[.,:;]+$/, "").trim() || null;
+    return firstSentence.replace(/[.,:;]+$/, "").trim() || null;
   })();
 
   const title =

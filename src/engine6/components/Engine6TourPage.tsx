@@ -333,11 +333,11 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                       data-testid="engine6-itinerary-item"
                     >
                       <div className="flex flex-wrap items-start justify-between gap-2">
-                        <div className="space-y-2">
+                        <div className="min-w-0 flex-1 space-y-2">
                           <span className="inline-flex rounded-full border border-green-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-green-800">
                             {getItineraryStopType(item)}
                           </span>
-                          <p className="text-lg font-semibold text-green-900">
+                          <p className="whitespace-normal break-words text-lg font-semibold leading-snug text-green-900">
                             {item.title}
                           </p>
                         </div>

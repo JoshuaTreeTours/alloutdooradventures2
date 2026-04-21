@@ -138,9 +138,33 @@ describe("extractEngine6Product itinerary fidelity", () => {
     expect(result.extracted.priceFormatted).toBe("Starting at $123");
     expect(result.extracted.itinerary.length).toBeGreaterThanOrEqual(3);
     expect(result.extracted.itinerary[0]?.title).toBeTruthy();
+    expect(result.extracted.itinerary[1]?.title).toBeTruthy();
+    expect(result.extracted.itinerary[2]?.title).toBeTruthy();
     expect(result.extracted.meetingPointText).toContain("Zurich");
     expect(result.diagnostics.meetingPointFieldPath).toBe(
       "product.logistics.start[0].description"
+    );
+  });
+
+  it("does not truncate inferred itinerary titles derived from long description text", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "LONGTITLE1",
+        title: "Long title itinerary test",
+        location: { city: "Interlaken", state: "Switzerland" },
+        itinerary: {
+          itineraryItems: [
+            {
+              description:
+                "Enjoy some leisure time exploring charming lakeside promenades and local cafes before departure.",
+            },
+          ],
+        },
+      },
+    });
+
+    expect(result.extracted.itinerary[0]?.title).toBe(
+      "Enjoy some leisure time exploring charming lakeside promenades and local cafes before departure"
     );
   });
 });
