@@ -20,7 +20,7 @@ Every new Engine6 specimen must inherit these behaviors without custom branching
 - **Collision guard:** legacy route collision must throw unless explicitly configured in `ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS`.
 - **Itinerary rendering:** timeline rendering only when structured stop data exists; summary-only itinerary must render explicitly and visually distinct.
 - **FAQ parity:** FAQ schema must match visible FAQ entries.
-- **Price contract:** price is "Starting at" minimum price, kept aligned between UI copy and schema (`price`, `priceCurrency`, `priceValidUntil`).
+- **Price contract:** price is "From" minimum price, kept aligned between UI copy and schema (`price`, `priceCurrency`, `priceValidUntil`).
 
 ## Forbidden patterns
 
