@@ -1,5 +1,4 @@
 import { fetchViator } from "../../../api/viator/client";
-import { resolveViatorApiKey } from "../../../api/viator/runtimeConfig";
 import { engine4ViatorApiFallbackByProductCode } from "../data/viatorTours";
 import type { Engine4ViatorApiTour } from "../types";
 import { resolveViatorPrimaryImage } from "./resolveViatorPrimaryImage";
@@ -197,7 +196,7 @@ export const getEngine4ViatorTourData = async (
   }
 
   const fallbackTour = engine4ViatorApiFallbackByProductCode[normalizedCode];
-  const apiKey = resolveViatorApiKey();
+  const apiKey = process.env.VIATOR_API_KEY;
   if (!apiKey) {
     logApiFetch(
       `[engine4-viator-api] product=${normalizedCode} attempted=false succeeded=false fallbackUsed=true reason=no_api_key`
