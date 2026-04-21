@@ -51,6 +51,29 @@ const structuredStopCountFromPayload = (
   }).length;
 };
 
+const parseDurationMinutes = (value: string | null | undefined) => {
+  if (!value) return null;
+  const compact = value.toLowerCase();
+  const hourMatch = compact.match(/(\d+(?:\.\d+)?)\s*hour/);
+  const minuteMatch = compact.match(/(\d+)\s*min/);
+  const hours = hourMatch ? Number(hourMatch[1]) : 0;
+  const minutes = minuteMatch ? Number(minuteMatch[1]) : 0;
+  const total = Math.round(hours * 60 + minutes);
+  return Number.isFinite(total) && total > 0 ? total : null;
+};
+
+const isSimpleExperienceProfile = (tour: Engine6Tour) => {
+  const durationMinutes = parseDurationMinutes(tour.durationText ?? null);
+  const title = tour.title.toLowerCase();
+  const category = (tour.primaryCategory ?? "").toString().toLowerCase();
+  const simpleKeyword =
+    /\b(short|cruise|catamaran|ferry|ride|sightseeing|boat|panoramic|scenic)\b/.test(
+      `${title} ${category}`
+    );
+  const shortDuration = durationMinutes !== null ? durationMinutes <= 120 : false;
+  return simpleKeyword || shortDuration;
+};
+
 const withFilteredToursHtml = (stateSlug: string, citySlug: string) => {
   const previousWindow = (globalThis as { window?: Window }).window;
   const previousLocation = (
@@ -394,6 +417,12 @@ export const validateEngine6CreationContract = ({
   }
 
   const structuredStopCount = structuredStopCountFromPayload(rawPayload);
+  const simpleItineraryEligible =
+    isSimpleExperienceProfile(tour) &&
+    structuredStopCount <= 1 &&
+    (tour.itinerary.length >= 1 ||
+      Boolean(tour.itinerarySummaryText?.trim()) ||
+      Boolean(tour.meetingPointText?.trim()));
   if (
     tour.itinerary.length >= 2 &&
     !pageHtml.includes('data-testid="engine6-itinerary-timeline"')
@@ -408,7 +437,8 @@ export const validateEngine6CreationContract = ({
   if (
     tour.itinerary.length < 2 &&
     structuredStopCount > 0 &&
-    pageHtml.includes('data-testid="engine6-itinerary-timeline"')
+    pageHtml.includes('data-testid="engine6-itinerary-timeline"') &&
+    !simpleItineraryEligible
   ) {
     violations.push(
       "timeline rendered without sufficient structured stop data"
@@ -437,7 +467,8 @@ export const validateEngine6CreationContract = ({
   if (
     tour.itinerary.length < 2 &&
     tour.itinerarySummaryText &&
-    !pageHtml.includes('data-testid="engine6-itinerary-summary-only"')
+    !pageHtml.includes('data-testid="engine6-itinerary-summary-only"') &&
+    !simpleItineraryEligible
   ) {
     violations.push(
       "summary-only itinerary missing explicit summary rendering"
@@ -475,7 +506,8 @@ export const validateEngine6CreationContract = ({
     violations.push("Offer.price diverged from Starting at minimum price");
   }
   if (
-    tour.priceFormatted &&
+    typeof tour.priceAmount === "number" &&
+    Number.isFinite(tour.priceAmount) &&
     !tour.priceFormatted.startsWith("Starting at $")
   ) {
     violations.push("visible price label lost Starting at minimum-price copy");
@@ -508,5 +540,14 @@ export const validateEngine6CreationContract = ({
     violations.push("schema hero did not use authoritative resolved hero");
   }
 
-  return { violations };
+  return {
+    violations,
+    diagnostics: {
+      priceNormalizationFieldPath: tour.diagnostics.commercialPriceFieldPath,
+      simpleItineraryAcceptanceApplied: simpleItineraryEligible,
+      simpleItineraryAcceptanceReason: simpleItineraryEligible
+        ? "simple-experience-profile-with-valid-compact-itinerary-context"
+        : null,
+    },
+  };
 };

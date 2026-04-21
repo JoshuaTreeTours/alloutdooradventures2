@@ -590,6 +590,12 @@ const extractPlaybookPrice = (product: RecordLike): PriceResult => {
       "price",
       "partnerNetPrice",
     ],
+    ["pricingInfo", "summary", "fromPrice"],
+    ["pricingInfo", "fromPrice"],
+    ["productOptions", 0, "pricing", "summary", "fromPrice"],
+    ["productOptions", 0, "pricing", "fromPrice"],
+    ["productOptions", 0, "price", "fromPrice"],
+    ["productOptions", 0, "price", "amount"],
   ];
 
   for (const path of amountPaths) {
@@ -608,6 +614,8 @@ const extractPlaybookPrice = (product: RecordLike): PriceResult => {
   for (const path of [
     ["pricing", "summary", "fromPriceFormatted"],
     ["pricingSummary", "fromPriceFormatted"],
+    ["pricingInfo", "summary", "fromPriceFormatted"],
+    ["pricingInfo", "fromPriceFormatted"],
   ] as PathSegment[][]) {
     const raw = readPath(product, path);
     const amount = parsePriceAmount(raw);
@@ -619,6 +627,74 @@ const extractPlaybookPrice = (product: RecordLike): PriceResult => {
           typeof raw === "string" || typeof raw === "number" ? raw : amount,
       };
     }
+  }
+
+  const pricingSubtreeCandidates: Array<{
+    root: unknown;
+    path: string;
+  }> = [
+    { root: product.pricingInfo, path: "product.pricingInfo" },
+    { root: product.productOptions, path: "product.productOptions" },
+    { root: product.bookableItems, path: "product.bookableItems" },
+    { root: product.bookingOptions, path: "product.bookingOptions" },
+  ];
+
+  const collectNumericPriceCandidates = (
+    root: unknown,
+    basePath: string,
+    depth = 0
+  ): Array<{ amount: number; path: string }> => {
+    if (depth > 5) {
+      return [];
+    }
+
+    if (Array.isArray(root)) {
+      return root.flatMap((item, index) =>
+        collectNumericPriceCandidates(item, `${basePath}[${index}]`, depth + 1)
+      );
+    }
+
+    const row = asRecord(root);
+    if (!row) {
+      return [];
+    }
+
+    const priceCandidates: Array<{ amount: number; path: string }> = [];
+    for (const [key, value] of Object.entries(row)) {
+      const keyLc = key.toLowerCase();
+      const isLikelyPriceField =
+        keyLc.includes("price") ||
+        keyLc.includes("amount") ||
+        keyLc.includes("fare");
+
+      if (isLikelyPriceField) {
+        const parsed = parsePriceAmount(value);
+        if (parsed !== null) {
+          priceCandidates.push({ amount: parsed, path: `${basePath}.${key}` });
+        }
+      }
+
+      priceCandidates.push(
+        ...collectNumericPriceCandidates(value, `${basePath}.${key}`, depth + 1)
+      );
+    }
+
+    return priceCandidates;
+  };
+
+  const subtreeCandidate = pricingSubtreeCandidates
+    .flatMap(candidate =>
+      collectNumericPriceCandidates(candidate.root, candidate.path)
+    )
+    .filter(candidate => Number.isFinite(candidate.amount) && candidate.amount > 0)
+    .sort((a, b) => a.amount - b.amount)[0];
+
+  if (subtreeCandidate) {
+    return {
+      amount: subtreeCandidate.amount,
+      path: subtreeCandidate.path,
+      rawValue: subtreeCandidate.amount,
+    };
   }
 
   return {
@@ -650,11 +726,31 @@ const extractDuration = (product: RecordLike) => {
     ["durationSummary"],
     ["durationInfo", "durationText"],
     ["durationInfo", "label"],
+    ["itinerary", "duration", "formattedDuration"],
+    ["itinerary", "duration", "durationText"],
   ] as PathSegment[][]) {
     const value = asNonEmptyString(readPath(product, path));
     if (value) {
       return { value, path: formatFieldPath(path) };
     }
+  }
+
+  const fixedMinutes = parseLooseNumber(
+    readPath(product, ["itinerary", "duration", "fixedDurationInMinutes"])
+  );
+  if (fixedMinutes !== null && fixedMinutes > 0) {
+    const minutes = Math.trunc(fixedMinutes);
+    if (minutes % 60 === 0) {
+      const hours = minutes / 60;
+      return {
+        value: `${hours} ${hours === 1 ? "hour" : "hours"}`,
+        path: "product.itinerary.duration.fixedDurationInMinutes",
+      };
+    }
+    return {
+      value: `${minutes} minutes`,
+      path: "product.itinerary.duration.fixedDurationInMinutes",
+    };
   }
 
   return { value: null as string | null, path: null as string | null };

@@ -210,4 +210,25 @@ describe("engine6 creation contract validator", () => {
     );
   });
 
+  it("allows compact simple-itinerary products to pass without rich multi-stop requirements", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "6400P7"
+    );
+    expect(fixture).toBeDefined();
+    const payload = toPayload(fixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+    const report = validateEngine6CreationContract({
+      tour,
+      rawPayload: fixture!.rawPayload,
+    });
+
+    expect(report.violations).not.toEqual(
+      expect.arrayContaining([
+        "timeline rendered without sufficient structured stop data",
+        "summary-only itinerary missing explicit summary rendering",
+      ])
+    );
+    expect((report as { diagnostics?: { simpleItineraryAcceptanceApplied?: boolean } }).diagnostics?.simpleItineraryAcceptanceApplied).toBe(true);
+  });
+
 });
