@@ -1,4 +1,5 @@
 import type { Tour } from "../data/tours.types";
+import { isUSStateName } from "../constants/usStates";
 import { toEngine6Card } from "./cards";
 import { legacyFhMigratedTours } from "./legacyFh/registry";
 import { ENGINE6_SPECIMEN_PRODUCT_CODE } from "./routes";
@@ -7,6 +8,14 @@ import type { Engine6Tour } from "./types";
 
 const ENGINE6_CANONICAL_TOUR_PATH =
   /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/;
+
+const resolveEngine6ListingCountry = (tour: Engine6Tour, stateSlug: string) => {
+  if (isUSStateName(tour.state) || stateSlug === "united-states") {
+    return "United States";
+  }
+
+  return tour.state;
+};
 
 const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
   const [, stateSlug = "", citySlug = "", slug = ""] =
@@ -23,7 +32,7 @@ const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
     categories: tour.categories,
     primaryCategory: tour.primaryCategory ?? undefined,
     destination: {
-      country: "United States",
+      country: resolveEngine6ListingCountry(tour, stateSlug),
       state: tour.state,
       stateSlug,
       city: tour.city,
