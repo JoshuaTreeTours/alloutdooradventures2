@@ -106,6 +106,12 @@ describe("mapViatorToEngine6Tour location normalization", () => {
     expect(tour.state).toBe("Switzerland");
     expect(tour.city).toBe("Zurich");
     expect(tour.state).not.toBe("USA");
+    expect(tour.overviewText).toContain("full-day guided excursion");
+    expect(tour.overviewText).toContain("Zurich, Switzerland");
+    expect(tour.overviewText).toContain("Lucerne");
+    expect(tour.overviewText).toContain("Mount Titlis");
+    expect(tour.overviewText).not.toContain("USA");
+    expect(tour.overviewText).not.toContain("Destination");
 
     warnSpy.mockRestore();
   });
