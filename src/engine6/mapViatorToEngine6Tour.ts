@@ -23,6 +23,33 @@ const ENGINE6_OPENING_PATTERN_OVERRIDES: Record<string, number> = {
 const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
   "100569P5": "Join one of the best experiences in Anchorage...",
 };
+const ENGINE6_OVERVIEW_OVERRIDES: Record<
+  string,
+  (args: { city: string; state: string; sourceOverview: string }) => string
+> = {
+  "3885SW303BS": ({ city, state, sourceOverview }) => {
+    const supportsLucerne = /lucerne/i.test(sourceOverview);
+    const supportsTitlis = /\b(mt\.?\s*titlis|mount titlis)\b/i.test(sourceOverview);
+    const destinationClause = [
+      supportsLucerne ? "Lucerne" : null,
+      supportsTitlis ? "Mount Titlis" : null,
+    ]
+      .filter(Boolean)
+      .join(" and ");
+
+    return [
+      `Mount Titlis and Lucerne Day Trip from Zurich is a full-day guided excursion from ${city}, ${state} that combines lake-city sightseeing with high-alpine mountain scenery.`,
+      destinationClause
+        ? `Travel through central Switzerland toward ${destinationClause}, following a structured day-trip format that keeps transfers and timing coordinated.`
+        : "Travel through central Switzerland on a structured day-trip format that keeps transfers and timing coordinated.",
+      "The outing focuses on efficient mountain access, panoramic viewpoints, and clear guided logistics, making it a practical option for travelers who want major Swiss highlights in one day.",
+      "It is designed for visitors who prefer a single organized itinerary instead of arranging separate rail and lift connections on their own.",
+    ]
+      .join(" ")
+      .replace(/\s+/g, " ")
+      .trim();
+  },
+};
 
 const pickOpeningPatternIndex = (seed: string) => {
   const override = ENGINE6_OPENING_PATTERN_OVERRIDES[seed];
@@ -181,13 +208,44 @@ const buildAuthoritativeOverview = ({
   return summary;
 };
 
+const ENGINE6_CANONICAL_PATH_PATTERN =
+  /^\/destinations\/([^/]+)\/([^/]+)\/tours\/[^/]+$/;
+
+const slugToLabel = (slug: string) =>
+  slug
+    .split("-")
+    .filter(Boolean)
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+
 export const mapViatorToEngine6Tour = (
   payload: Engine6ApiResponse
 ): Engine6Tour => {
   const title =
     payload.extracted.title ?? `Outdoor Adventure ${payload.rawProductCode}`;
-  const city = payload.extracted.city ?? "Destination";
-  const state = payload.extracted.state ?? "USA";
+  const generatedCanonicalPath = buildEngine6CanonicalPath({
+    state: payload.extracted.state ?? "destination",
+    city: payload.extracted.city ?? "destination",
+    title,
+  });
+  const canonicalPath =
+    resolveEngine6PathForProductCode(payload.rawProductCode) ??
+    generatedCanonicalPath;
+  const [, routeStateSlug = "", routeCitySlug = ""] =
+    ENGINE6_CANONICAL_PATH_PATTERN.exec(canonicalPath) ?? [];
+  const city = payload.extracted.city ?? slugToLabel(routeCitySlug) ?? "Destination";
+  const state =
+    payload.extracted.state ?? slugToLabel(routeStateSlug) ?? "Destination";
+
+  if (!payload.extracted.city || !payload.extracted.state) {
+    console.warn("[engine6-location] missing explicit location fields", {
+      productCode: payload.rawProductCode,
+      extractedCity: payload.extracted.city,
+      extractedState: payload.extracted.state,
+      fallbackCity: city,
+      fallbackState: state,
+    });
+  }
   const finalHeroImageUrl =
     typeof payload.extracted.heroImageUrl === "string" &&
     /^https?:\/\//i.test(payload.extracted.heroImageUrl) &&
@@ -232,14 +290,6 @@ export const mapViatorToEngine6Tour = (
   const primaryCategory =
     payload.extracted.primaryCategory ?? categories[0] ?? null;
   const categoryLabel = formatEngine6CategoryLabel(primaryCategory);
-  const generatedCanonicalPath = buildEngine6CanonicalPath({
-    state,
-    city,
-    title,
-  });
-  const canonicalPath =
-    resolveEngine6PathForProductCode(payload.rawProductCode) ??
-    generatedCanonicalPath;
   const rawDescription =
     payload.extracted.overviewText ??
     payload.extracted.seoDescription ??
@@ -292,6 +342,12 @@ export const mapViatorToEngine6Tour = (
     meetingPointText: payload.extracted.meetingPointText ?? null,
     sourceOverview: sourceOverviewText,
   });
+  const normalizedOverview =
+    ENGINE6_OVERVIEW_OVERRIDES[payload.rawProductCode]?.({
+      city,
+      state,
+      sourceOverview: sourceOverviewText,
+    }) ?? overviewText;
 
   return {
     productCode: payload.rawProductCode,
@@ -312,7 +368,7 @@ export const mapViatorToEngine6Tour = (
     aggregateRating,
     reviewCount: payload.extracted.reviewCount,
     meetingPointText: payload.extracted.meetingPointText ?? "See booking details",
-    overviewText: overviewText || null,
+    overviewText: normalizedOverview || null,
     highlights,
     itinerary,
     itinerarySummaryText,

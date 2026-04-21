@@ -284,6 +284,46 @@ const asHttpUrl = (value: unknown): string | null => {
 
 const asImageUrl = (value: unknown): string | null => asHttpUrl(value);
 
+const LOCATION_CITY_PATTERNS = [
+  /\bdeparting from\s+([A-Z][A-Za-zÀ-ÖØ-öø-ÿ' -]{1,60}?)(?=\s+(?:to|is|at)\b|,|\.)/i,
+  /\bfrom\s+([A-Z][A-Za-zÀ-ÖØ-öø-ÿ' -]{1,60}?)(?=\s+(?:to|is|at)\b|,|\.)/i,
+];
+
+const LOCATION_COUNTRY_PATTERNS = [/\b(Switzerland|United States|USA|Canada|Mexico)\b/i];
+
+const normalizeLocationToken = (value: string) =>
+  value
+    .trim()
+    .replace(/\s+/g, " ")
+    .replace(/[.,;:!?]+$/, "");
+
+const inferCityFromText = (text: string | null) => {
+  if (!text) return null;
+  for (const pattern of LOCATION_CITY_PATTERNS) {
+    const match = text.match(pattern);
+    if (!match?.[1]) continue;
+    const normalized = normalizeLocationToken(match[1]);
+    if (normalized.length >= 2) {
+      return normalized;
+    }
+  }
+  return null;
+};
+
+const inferCountryFromText = (text: string | null) => {
+  if (!text) return null;
+  for (const pattern of LOCATION_COUNTRY_PATTERNS) {
+    const match = text.match(pattern);
+    const token = match?.[1];
+    if (!token) continue;
+    if (/^usa$/i.test(token)) {
+      return "United States";
+    }
+    return normalizeLocationToken(token);
+  }
+  return null;
+};
+
 const asViatorProductUrl = (value: unknown): string | null => {
   const url = asHttpUrl(value);
   if (!url) {
@@ -1502,12 +1542,51 @@ export const extractEngine6Product = (rawPayload: unknown) => {
 
   const productCode = asNonEmptyString(product.productCode);
   const title = asNonEmptyString(product.title);
+  const productLocation = asRecord(product.location);
+  const productLocationAddress = asRecord(productLocation?.address);
+  const productDestinations = Array.isArray(product.destinations)
+    ? product.destinations
+    : [];
+  const firstDestination = asRecord(productDestinations[0]);
+  const logisticsStartDescription = asNonEmptyString(
+    asRecord((asRecord(product.logistics)?.start as unknown[] | undefined)?.[0])
+      ?.description
+  );
+  const itineraryItems = Array.isArray(asRecord(product.itinerary)?.itineraryItems)
+    ? (asRecord(product.itinerary)?.itineraryItems as unknown[])
+    : [];
+  const itineraryStartDescription = asNonEmptyString(
+    asRecord(itineraryItems[0])?.description
+  );
+  const locationTextSources = [
+    title,
+    asNonEmptyString(product.description),
+    logisticsStartDescription,
+    itineraryStartDescription,
+  ];
+
+  const inferredCityFromText = locationTextSources
+    .map(inferCityFromText)
+    .find(Boolean);
+  const inferredCountryFromText = locationTextSources
+    .map(inferCountryFromText)
+    .find(Boolean);
+
   const city =
-    asNonEmptyString(asRecord(product.location)?.city) ??
-    asNonEmptyString(asRecord(asRecord(product.location)?.address)?.city);
+    asNonEmptyString(productLocation?.city) ??
+    asNonEmptyString(productLocationAddress?.city) ??
+    asNonEmptyString(firstDestination?.city) ??
+    inferredCityFromText ??
+    null;
   const state =
-    asNonEmptyString(asRecord(product.location)?.state) ??
-    asNonEmptyString(asRecord(asRecord(product.location)?.address)?.state);
+    asNonEmptyString(productLocation?.state) ??
+    asNonEmptyString(productLocation?.country) ??
+    asNonEmptyString(productLocationAddress?.state) ??
+    asNonEmptyString(productLocationAddress?.country) ??
+    asNonEmptyString(firstDestination?.state) ??
+    asNonEmptyString(firstDestination?.country) ??
+    inferredCountryFromText ??
+    null;
 
   const productUrl = extractProductUrl(product);
   diagnostics.productUrlFieldPath = productUrl.path;
