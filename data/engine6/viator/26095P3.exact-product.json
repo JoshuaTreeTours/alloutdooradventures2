@@ -1,0 +1,147 @@
+{
+  "product": {
+    "status": "ACTIVE",
+    "productCode": "26095P3",
+    "language": "en",
+    "title": "Lauterbrunnen and Trummelbach Waterfalls E-bike Tour Swiss Picnic",
+    "productUrl": "https://www.viator.com/tours/Interlaken/6-hours-guided-e-bike-tour-to-Lauterbrunnen-Valley-of-the-72-waterfalls-incl-Swiss-picnic/d5011-26095P3",
+    "location": {
+      "city": "Interlaken",
+      "state": "Switzerland"
+    },
+    "pricingInfo": {
+      "summary": {
+        "fromPrice": 331,
+        "fromPriceFormatted": "CHF 331.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 217
+    },
+    "media": {
+      "images": [
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "isCover": true,
+          "variants": [
+            {
+              "height": 500,
+              "width": 700,
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/32/ac/d3/8a/caption.jpg?w=700&h=500&s=1"
+            }
+          ]
+        }
+      ]
+    },
+    "overview": "Soak up the scenery of the Swiss Alps on this e-bike tour of Lauterbrunnen Valley. Aided by a motor-powered electric bike, pedal your way through the Valley of the 72 waterfalls, passing tranquil forest trails, sweeping gorges and traditional alpine villages. Stop along the way to admire the glacial waters of Luetschine River, walk behind Staubbach waterfall and marvel at the mighty Trummelbach falls, then finish your adventure with a delicious picnic lunch of Swiss specialties.",
+    "highlights": [
+      "Glide through forests, gorges and valleys on an easy-to-pedal electric bike",
+      "Marvel at natural wonders like Staubbach Waterfall and Trummelbach Falls",
+      "Tuck into a Swiss mountain picnic with regional specialties",
+      "Small-group format helps keep the ride personalized"
+    ],
+    "meetingAndPickup": {
+      "meetingPoint": {
+        "name": "Flying Wheels Interlaken",
+        "description": "Hoeheweg 133, 3800 Interlaken, Switzerland"
+      }
+    },
+    "itinerary": {
+      "description": "Begin at the Interlaken bike shop, get fitted for your e-bike and helmet, and ride with your guide toward Lauterbrunnen through the Valley of 72 Waterfalls before returning to Interlaken.",
+      "itineraryItems": [
+        {
+          "pointOfInterest": {
+            "title": "Interlaken City Switzerland"
+          },
+          "description": "Meet at the bike shop for orientation and gear setup before departure.",
+          "duration": {
+            "fixedDurationInMinutes": 15
+          },
+          "passByWithoutStopping": false
+        },
+        {
+          "pointOfInterest": {
+            "title": "Kirche Gsteig"
+          },
+          "description": "Ride through historic surroundings and pause for views.",
+          "duration": {
+            "fixedDurationInMinutes": 10
+          },
+          "passByWithoutStopping": false
+        },
+        {
+          "pointOfInterest": {
+            "title": "Lauterbrunnen Valley Waterfalls"
+          },
+          "description": "Cycle through the Lauterbrunnen Valley and follow the Luetschine River.",
+          "passByWithoutStopping": false
+        },
+        {
+          "pointOfInterest": {
+            "title": "Staubbach Waterfall"
+          },
+          "description": "Stop at Staubbach Falls and view the waterfall up close.",
+          "duration": {
+            "fixedDurationInMinutes": 15
+          },
+          "passByWithoutStopping": false
+        },
+        {
+          "pointOfInterest": {
+            "title": "Lauterbrunnen Valley Waterfalls"
+          },
+          "description": "Continue exploring the valley's trails and mountain scenery.",
+          "duration": {
+            "fixedDurationInMinutes": 45
+          },
+          "passByWithoutStopping": false
+        },
+        {
+          "pointOfInterest": {
+            "title": "Trummelbach Falls"
+          },
+          "description": "Visit the interior glacier-fed Trummelbach Falls.",
+          "duration": {
+            "fixedDurationInMinutes": 45
+          },
+          "passByWithoutStopping": false
+        },
+        {
+          "pointOfInterest": {
+            "title": "Lake Brienz"
+          },
+          "description": "Final short stop on Lake Brienz before the ride back.",
+          "duration": {
+            "fixedDurationInMinutes": 10
+          },
+          "passByWithoutStopping": false
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Can this tour run in bad weather?",
+        "answer": "The tour operates in light rain with rain gear provided. In case of heavy rain, the tour is cancelled free of charge."
+      },
+      {
+        "question": "Is there a rider weight limit for the e-bikes?",
+        "answer": "Yes. The maximum rider weight for the e-bike is 110 kgs / 240 lbs."
+      },
+      {
+        "question": "How many travelers are in each group?",
+        "answer": "This tour/activity will have a maximum of 12 travelers."
+      }
+    ],
+    "additionalInfo": [
+      "Operates in light rain; heavy rain cancellations are free of charge.",
+      "Maximum e-bike rider weight is 110 kgs / 240 lbs.",
+      "Maximum group size is 12 travelers."
+    ],
+    "inclusions": [
+      "Swiss mountain picnic",
+      "Helmet",
+      "Entry fee to Trummelbach Falls"
+    ]
+  }
+}
