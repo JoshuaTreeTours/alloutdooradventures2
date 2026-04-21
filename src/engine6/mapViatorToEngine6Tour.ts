@@ -24,6 +24,8 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
   "100569P5": "Join one of the best experiences in Anchorage...",
 };
 
+const STRICT_API_DRIVEN_PRODUCT_CODES = new Set(["3885GRINDEL_ZUR"]);
+
 const pickOpeningPatternIndex = (seed: string) => {
   const override = ENGINE6_OPENING_PATTERN_OVERRIDES[seed];
   if (typeof override === "number") {
@@ -219,6 +221,9 @@ export const mapViatorToEngine6Tour = (
       `Engine6 strict hero contract violation for ${payload.rawProductCode}: resolved hero must be exact-product product.media.images with full provenance`
     );
   }
+  const strictApiDriven = STRICT_API_DRIVEN_PRODUCT_CODES.has(
+    payload.rawProductCode.toUpperCase()
+  );
   const sourceOverviewText = cleanEngine6Description(
     payload.extracted.overviewText ?? ""
   );
@@ -255,9 +260,9 @@ export const mapViatorToEngine6Tour = (
     ENGINE6_OPENING_SENTENCE_OVERRIDES[payload.rawProductCode] ??
     openingSentence;
   const descriptionBody = cleanedDescription.replace(/\s+/g, " ").trim();
-  const description = [enforcedOpeningSentence, descriptionBody]
-    .filter(Boolean)
-    .join(" ");
+  const description = strictApiDriven
+    ? descriptionBody
+    : [enforcedOpeningSentence, descriptionBody].filter(Boolean).join(" ");
   const metaDescription = buildEngine6MetaDescription(
     payload.extracted.seoDescription ?? description
   );
@@ -281,17 +286,19 @@ export const mapViatorToEngine6Tour = (
   const formattedStartingPrice = formatEngine6StartingPriceLabel(
     payload.extracted.priceAmount
   );
-  const overviewText = buildAuthoritativeOverview({
-    title,
-    city,
-    state,
-    categoryLabel,
-    durationText: payload.extracted.durationText ?? null,
-    highlights,
-    itinerary,
-    meetingPointText: payload.extracted.meetingPointText ?? null,
-    sourceOverview: sourceOverviewText,
-  });
+  const overviewText = strictApiDriven
+    ? sourceOverviewText || null
+    : buildAuthoritativeOverview({
+        title,
+        city,
+        state,
+        categoryLabel,
+        durationText: payload.extracted.durationText ?? null,
+        highlights,
+        itinerary,
+        meetingPointText: payload.extracted.meetingPointText ?? null,
+        sourceOverview: sourceOverviewText,
+      });
 
   return {
     productCode: payload.rawProductCode,
