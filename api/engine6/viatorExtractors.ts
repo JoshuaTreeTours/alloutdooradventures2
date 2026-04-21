@@ -10,6 +10,10 @@ export type Engine6DiagnosticsPaths = {
   commercialPriceFieldPath: string | null;
   commercialPriceRawValue: string | number | null;
   priceSourceUsed: "live-price" | "fallback";
+  hasAnyViablePriceCandidate: boolean;
+  viablePriceCandidateFieldPaths: string[];
+  priceIntegrityViolation: boolean;
+  extractionFailure: boolean;
   heroImageFieldPath: string | null;
   heroVariantFieldPath: string | null;
   selectedHeroWidth: number | null;
@@ -143,6 +147,11 @@ type ItineraryResult = {
   value: Engine6ExtractedItineraryItem[];
   path: string;
   structuredSourceUsed: boolean;
+};
+
+type ViablePriceDetectionResult = {
+  hasAnyViablePriceCandidate: boolean;
+  detectedFieldPaths: string[];
 };
 
 const asRecord = (value: unknown): RecordLike | null =>
@@ -810,6 +819,29 @@ const extractPlaybookPrice = (product: RecordLike): PriceResult => {
     amount: null,
     path: null,
     rawValue: null,
+  };
+};
+
+const detectViableViatorCommercialPriceCandidates = (
+  product: RecordLike
+): ViablePriceDetectionResult => {
+  const candidatePaths = [
+    ["pricing", "summary", "fromPrice"],
+    ["pricingInfo", "fromPrice"],
+    ["pricingInfo", "price"],
+    ["pricingInfo", "amount"],
+  ] as PathSegment[][];
+
+  const detectedFieldPaths = candidatePaths
+    .filter(path => {
+      const amount = parsePriceAmount(readPath(product, path));
+      return amount !== null && amount > 0;
+    })
+    .map(path => formatFieldPath(path));
+
+  return {
+    hasAnyViablePriceCandidate: detectedFieldPaths.length > 0,
+    detectedFieldPaths,
   };
 };
 
@@ -1526,6 +1558,10 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     commercialPriceFieldPath: null,
     commercialPriceRawValue: null,
     priceSourceUsed: "fallback",
+    hasAnyViablePriceCandidate: false,
+    viablePriceCandidateFieldPaths: [],
+    priceIntegrityViolation: false,
+    extractionFailure: false,
     heroImageFieldPath: null,
     heroVariantFieldPath: null,
     selectedHeroWidth: null,
@@ -1697,11 +1733,29 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroDecision.finalCandidate?.sourceFieldPath ?? null;
   diagnostics.heroHost = heroDecision.finalCandidate?.host ?? null;
 
+  const viablePriceDetection = detectViableViatorCommercialPriceCandidates(product);
+  diagnostics.hasAnyViablePriceCandidate =
+    viablePriceDetection.hasAnyViablePriceCandidate;
+  diagnostics.viablePriceCandidateFieldPaths =
+    viablePriceDetection.detectedFieldPaths;
+
   const price = extractPlaybookPrice(product);
   diagnostics.commercialPriceFieldPath = price.path;
   diagnostics.commercialPriceRawValue = price.rawValue;
   diagnostics.priceSourceUsed =
     price.amount !== null ? "live-price" : "fallback";
+  if (viablePriceDetection.hasAnyViablePriceCandidate && price.amount === null) {
+    diagnostics.priceIntegrityViolation = true;
+    diagnostics.extractionFailure = true;
+    console.warn(
+      "Engine6 pricing integrity violation: viable price exists but not extracted",
+      {
+        productCode,
+        detectedFields: viablePriceDetection.detectedFieldPaths,
+        commercialPriceFieldPath: diagnostics.commercialPriceFieldPath,
+      }
+    );
+  }
 
   const rating = extractPlaybookRating(product);
   diagnostics.ratingFieldPath = rating.path;
