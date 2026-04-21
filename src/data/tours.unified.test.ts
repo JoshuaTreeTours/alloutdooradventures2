@@ -5,8 +5,11 @@ import {
   getTourBySlugs,
   getToursByCity,
   getToursByCityUnified,
+  tours,
 } from "./tours";
 import { engine6ResolvedTours } from "../engine6/registry";
+import { getGuideCountryBySlug } from "./guideData";
+import { countriesWithTours, toursByCountry } from "./europeIndex";
 import { engine6OverlapReplacementConfigs } from "../engine6/routes";
 
 describe("getToursByCityUnified Palm Springs dedupe", () => {
@@ -236,6 +239,49 @@ describe("Engine6-first discovery ordering", () => {
     expect(
       newYorkUnified.slice(firstNonEngine6Index).some(
         entry => entry.tour.engine !== "engine6"
+      )
+    ).toBe(true);
+  });
+});
+
+
+describe("Switzerland Engine6 discovery propagation", () => {
+  it("indexes Engine6 Switzerland tours as international (non-US) inventory", () => {
+    const swissEngine6Tours = tours.filter(
+      tour => tour.engine === "engine6" && tour.destination.stateSlug === "switzerland"
+    );
+
+    expect(swissEngine6Tours.length).toBeGreaterThan(0);
+    expect(
+      swissEngine6Tours.every(tour => tour.destination.country === "Switzerland")
+    ).toBe(true);
+  });
+
+  it("exposes Switzerland country/city guide discovery for both Interlaken and Zurich", () => {
+    const countryGuide = getGuideCountryBySlug("switzerland");
+
+    expect(countryGuide).toBeDefined();
+    const citySlugs = new Set(countryGuide?.cities.map(city => city.slug));
+    expect(citySlugs.has("interlaken")).toBe(true);
+    expect(citySlugs.has("zurich")).toBe(true);
+  });
+
+  it("includes Switzerland Engine6 inventory in Europe destination discovery index", () => {
+    const switzerlandSummary = countriesWithTours.find(
+      country => country.slug === "switzerland"
+    );
+    const switzerlandTours = toursByCountry.switzerland ?? [];
+
+    expect(switzerlandSummary).toBeDefined();
+    expect(switzerlandTours.length).toBeGreaterThan(0);
+    expect(
+      switzerlandTours.some(
+        tour => tour.engine === "engine6" && tour.destination.citySlug === "zurich"
+      )
+    ).toBe(true);
+    expect(
+      switzerlandTours.some(
+        tour => tour.engine === "engine6" && tour.destination.citySlug === "interlaken"
       )
     ).toBe(true);
   });

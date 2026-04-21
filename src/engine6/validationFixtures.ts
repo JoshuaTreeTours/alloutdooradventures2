@@ -47,6 +47,7 @@ import specimen6400p7Payload from "../../data/engine6/viator/6400P7.exact-produc
 import specimen3885grindelzurPayload from "../../data/engine6/viator/3885GRINDEL_ZUR.exact-product.json";
 import specimen12729paraglidePayload from "../../data/engine6/viator/12729PARAGLIDE.exact-product.json";
 import specimen64859p2Payload from "../../data/engine6/viator/64859P2.exact-product.json";
+import specimen26095p3Payload from "../../data/engine6/viator/26095P3.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -521,6 +522,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Interlaken/Kayak-Tour-of-the-Turquoise-Lake-Brienz/d5011-64859P2",
     rawPayload: specimen64859p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "26095P3",
+    publicUrl:
+      "https://www.viator.com/tours/Interlaken/6-hours-guided-e-bike-tour-to-Lauterbrunnen-Valley-of-the-72-waterfalls-incl-Swiss-picnic/d5011-26095P3",
+    rawPayload: specimen26095p3Payload as Record<string, unknown>,
   },
 ];
 
