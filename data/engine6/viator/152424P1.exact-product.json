@@ -1,0 +1,91 @@
+{
+  "product": {
+    "productCode": "152424P1",
+    "productUrl": "https://www.viator.com/tours/San-Francisco/Muir-Woods-and-Sausalito-Tour/d651-152424P1",
+    "title": "Muir Woods and Sausalito Small-Group Tour",
+    "description": {
+      "text": "Half-day small-group tour from San Francisco to Muir Woods National Monument and Sausalito with transport over the Golden Gate Bridge. The itinerary includes a short scenic stop, independent time among redwoods, and free time on the Sausalito waterfront before returning to San Francisco."
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California"
+    },
+    "priceFrom": "$99.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 765
+    },
+    "duration": "5 hours",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/15/e2/caption.jpg?w=1100&h=800&s=1",
+              "width": 1100,
+              "height": 800
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Cross the Golden Gate Bridge with bay and skyline views",
+      "Visit Muir Woods National Monument with included entry",
+      "Free time to walk redwood trails and visitor areas",
+      "Explore Sausalito waterfront shops, cafes, and marina views",
+      "Small-group format in a luxury air-conditioned Mercedes Sprinter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Selected San Francisco meeting points (commonly 488 Post St or Pier 33, based on departure option)."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Golden Gate Bridge (pass-by)",
+        "description": "Cross the bridge en route to Marin County with commentary on Bay landmarks.",
+        "duration": "Pass by"
+      },
+      {
+        "title": "Vista Point",
+        "description": "Brief stop for photos of the Golden Gate Bridge, San Francisco skyline, and Alcatraz views.",
+        "duration": "10 minutes"
+      },
+      {
+        "title": "Muir Woods National Monument",
+        "description": "Independent time to walk marked redwood trails and visitor areas in the monument.",
+        "duration": "1 hour 15 minutes"
+      },
+      {
+        "title": "Sausalito Boardwalk",
+        "description": "Free time along Sausalito's waterfront district for shops, cafes, and marina scenery.",
+        "duration": "1 hour"
+      },
+      {
+        "title": "Marin Headlands (pass-by)",
+        "description": "Return route passes coastal headlands with additional bay perspectives.",
+        "duration": "Pass by"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Where does this tour meet?",
+        "answer": "Pickup is at selected San Francisco meeting points depending on the departure option; common points include 488 Post St and Pier 33."
+      },
+      {
+        "question": "How long is the experience?",
+        "answer": "The listed duration is about 5 hours."
+      },
+      {
+        "question": "Is cancellation available?",
+        "answer": "Yes. Free cancellation is available up to 24 hours before the experience starts."
+      }
+    ],
+    "additionalInfo": [
+      "Free cancellation up to 24 hours in advance.",
+      "Maximum group size is 14 travelers."
+    ]
+  }
+}

@@ -17,6 +17,7 @@ import specimen26719Payload from "../../data/engine6/viator/26719P8.exact-produc
 import specimen354611p1Payload from "../../data/engine6/viator/354611P1.exact-product.json";
 import specimen5615689p4Payload from "../../data/engine6/viator/5615689P4.exact-product.json";
 import specimen36001Payload from "../../data/engine6/viator/36001P1.exact-product.json";
+import specimen152424p1Payload from "../../data/engine6/viator/152424P1.exact-product.json";
 import specimen100569Payload from "../../data/engine6/viator/100569P5.exact-product.json";
 import specimen411138Payload from "../../data/engine6/viator/411138P3.exact-product.json";
 import specimen53474Payload from "../../data/engine6/viator/53474P8.exact-product.json";
@@ -344,6 +345,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/San-Francisco/Yosemite-In-A-Day-Tour-from-San-Francisco/d651-36001P1",
     rawPayload: specimen36001Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "152424P1",
+    publicUrl:
+      "https://www.viator.com/tours/San-Francisco/Muir-Woods-and-Sausalito-Tour/d651-152424P1",
+    rawPayload: specimen152424p1Payload as Record<string, unknown>,
   },
   {
     productCode: "100569P5",
