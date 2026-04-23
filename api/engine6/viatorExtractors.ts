@@ -206,6 +206,14 @@ const stripHtml = (value: string) =>
     .replace(/[ \t]+/g, " ")
     .trim();
 
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
 const asNonEmptyString = (value: unknown): string | null => {
   if (typeof value !== "string") {
     return null;
@@ -298,7 +306,9 @@ const LOCATION_CITY_PATTERNS = [
   /\bfrom\s+([A-Z][A-Za-zÀ-ÖØ-öø-ÿ' -]{1,60}?)(?=\s+(?:to|is|at)\b|,|\.)/i,
 ];
 
-const LOCATION_COUNTRY_PATTERNS = [/\b(Switzerland|United States|USA|Canada|Mexico)\b/i];
+const LOCATION_COUNTRY_PATTERNS = [
+  /\b(Switzerland|United States|USA|Canada|Mexico)\b/i,
+];
 
 const normalizeLocationToken = (value: string) =>
   value
@@ -361,6 +371,75 @@ const dedupeStrings = (values: Array<string | null | undefined>) => {
   }
 
   return deduped;
+};
+
+const ITINERARY_FILLER_PATTERN =
+  /\b(?:you will|you'll|enjoy|experience|discover|delight in|get to|have the chance to)\b/gi;
+
+const normalizeStopTitle = (sentence: string, index: number) => {
+  const words = sentence
+    .replace(/[^\wÀ-ÖØ-öø-ÿ' -]/g, " ")
+    .split(/\s+/)
+    .map(word => word.trim())
+    .filter(Boolean);
+
+  const titleWords = words.slice(0, 8);
+  if (titleWords.length >= 5) {
+    return titleWords.join(" ");
+  }
+
+  const fallback = `Itinerary stop ${index + 1}`;
+  return titleWords.length > 0 ? `${titleWords.join(" ")} overview` : fallback;
+};
+
+const truncateWords = (value: string, maxWords: number) => {
+  const words = value.split(/\s+/).filter(Boolean);
+  if (words.length <= maxWords) return value;
+  return `${words.slice(0, maxWords).join(" ")}.`;
+};
+
+const summarizeItineraryToHtmlStops = (rawValue: string) => {
+  const clean = stripHtml(rawValue)
+    .replace(ITINERARY_FILLER_PATTERN, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+  if (!clean) return null;
+
+  const sentences = clean
+    .split(/(?<=[.!?])\s+/)
+    .map(sentence => sentence.trim())
+    .filter(Boolean);
+  if (sentences.length === 0) return null;
+
+  const targetStopCount = Math.max(3, Math.min(5, sentences.length));
+  const sentenceChunkSize = Math.ceil(sentences.length / targetStopCount);
+  const stops = Array.from({ length: targetStopCount }, (_, index) => {
+    const start = index * sentenceChunkSize;
+    const chunk = sentences
+      .slice(start, start + sentenceChunkSize)
+      .join(" ")
+      .trim();
+    return chunk;
+  }).filter(Boolean);
+
+  if (stops.length === 0) return null;
+
+  const normalizedStops = stops.slice(0, 5).map((stopText, index) => {
+    const compact = truncateWords(stopText, 40);
+    return {
+      title: normalizeStopTitle(compact, index),
+      summary: compact,
+    };
+  });
+
+  return normalizedStops
+    .map(
+      stop =>
+        `<div class="itinerary-stop"><h3>${escapeHtml(stop.title)}</h3><p>${escapeHtml(
+          stop.summary
+        )}</p></div>`
+    )
+    .join("");
 };
 
 const firstParagraph = (value: string | null) =>
@@ -523,7 +602,10 @@ const resolveImageCollectionHeroCandidates = (
       asImageUrl(image.url) ??
       asImageUrl(image.src) ??
       asImageUrl(image.imageUrl);
-    if (directUrl && !imageVariants.some(variant => variant.url === directUrl)) {
+    if (
+      directUrl &&
+      !imageVariants.some(variant => variant.url === directUrl)
+    ) {
       const directPath = asImageUrl(image.url)
         ? formatFieldPath([...basePath, "url"])
         : asImageUrl(image.src)
@@ -550,8 +632,8 @@ const withHeroScope = (
 ): Engine6HeroCandidate => {
   const normalizeHeroPath = (path: string) =>
     path
-    .replace(/^product\.product\./, "product.")
-    .replace(/^media\./, "product.media.");
+      .replace(/^product\.product\./, "product.")
+      .replace(/^media\./, "product.media.");
   const normalizedSourceFieldPath = normalizeHeroPath(hero.path);
   const normalizedVariantPath = normalizeHeroPath(hero.variantPath);
 
@@ -581,7 +663,9 @@ const extractPlaybookHeroCandidates = ({
     "api-primary"
   );
   candidates.push(
-    ...mediaHeroes.map(hero => withHeroScope(hero, productCode, sourceProductUrl))
+    ...mediaHeroes.map(hero =>
+      withHeroScope(hero, productCode, sourceProductUrl)
+    )
   );
 
   return candidates;
@@ -624,7 +708,9 @@ const extractPlaybookPrice = (product: RecordLike): PriceResult => {
         (
           candidate
         ): candidate is { amount: number; path: string; rawValue: unknown } =>
-          candidate.amount !== null && Number.isFinite(candidate.amount) && candidate.amount > 0
+          candidate.amount !== null &&
+          Number.isFinite(candidate.amount) &&
+          candidate.amount > 0
       );
 
   const selectLowestCandidate = (
@@ -799,7 +885,13 @@ const extractPlaybookPrice = (product: RecordLike): PriceResult => {
     parsePriceAmount(readPath(product, ["pricingInfo", "price", "fromPrice"])),
     parsePriceAmount(readPath(product, ["pricingInfo", "price", "amount"])),
     parsePriceAmount(
-      readPath(product, ["productOptions", 0, "pricingInfo", "price", "fromPrice"])
+      readPath(product, [
+        "productOptions",
+        0,
+        "pricingInfo",
+        "price",
+        "fromPrice",
+      ])
     ),
     parsePriceAmount(
       readPath(product, ["productOptions", 0, "pricingInfo", "price", "amount"])
@@ -1007,7 +1099,8 @@ const normalizeSingleItineraryItem = (
     const descriptionText = asNonEmptyString(row.description);
     if (!descriptionText) return null;
 
-    const firstSentence = descriptionText.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
+    const firstSentence =
+      descriptionText.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
     if (!firstSentence) return null;
 
     const locationPattern =
@@ -1143,7 +1236,10 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
       return nestedRows;
     }
 
-    return [{ row, sectionLabel: inheritedSectionLabel ?? null }, ...nestedRows];
+    return [
+      { row, sectionLabel: inheritedSectionLabel ?? null },
+      ...nestedRows,
+    ];
   };
 
   const normalizeItinerary = (
@@ -1236,7 +1332,10 @@ const extractItinerarySummary = (product: RecordLike) => {
   ] as PathSegment[][]) {
     const value = asNonEmptyString(readPath(product, path));
     if (value) {
-      return { value, path: formatFieldPath(path) };
+      return {
+        value: summarizeItineraryToHtmlStops(value) ?? value,
+        path: formatFieldPath(path),
+      };
     }
   }
 
@@ -1273,7 +1372,11 @@ const extractMeetingPoint = (product: RecordLike) => {
       };
     }
 
-    return { value: compact, summaryApplied: false, reason: null as string | null };
+    return {
+      value: compact,
+      summaryApplied: false,
+      reason: null as string | null,
+    };
   };
 
   for (const candidate of [
@@ -1286,7 +1389,8 @@ const extractMeetingPoint = (product: RecordLike) => {
       path: "product.logistics.start[0].description",
     },
     {
-      value: asRecord(asRecord(product.meetingAndPickup)?.meetingPoint)?.description,
+      value: asRecord(asRecord(product.meetingAndPickup)?.meetingPoint)
+        ?.description,
       path: "product.meetingAndPickup.meetingPoint.description",
     },
     {
@@ -1338,7 +1442,8 @@ const extractMeetingPoint = (product: RecordLike) => {
     asNonEmptyString(asRecord(product.description)?.text) ??
     asNonEmptyString(product.description);
   if (overviewFallback) {
-    const firstSentence = overviewFallback.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
+    const firstSentence =
+      overviewFallback.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
     if (firstSentence) {
       return {
         value: firstSentence,
@@ -1637,7 +1742,9 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     asRecord((asRecord(product.logistics)?.start as unknown[] | undefined)?.[0])
       ?.description
   );
-  const itineraryItems = Array.isArray(asRecord(product.itinerary)?.itineraryItems)
+  const itineraryItems = Array.isArray(
+    asRecord(product.itinerary)?.itineraryItems
+  )
     ? (asRecord(product.itinerary)?.itineraryItems as unknown[])
     : [];
   const itineraryStartDescription = asNonEmptyString(
@@ -1689,14 +1796,19 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.heroCandidatesPresent = heroCandidates.length > 0;
   diagnostics.heroCandidateCount = heroCandidates.length;
   diagnostics.heroCandidateCountBeforeFiltering = heroCandidates.length;
-  diagnostics.heroCandidateCountAfterFiltering = heroDecision.finalCandidate ? 1 : 0;
-  diagnostics.heroImageFieldPath = heroDecision.finalCandidate?.fieldPath ?? null;
-  diagnostics.heroVariantFieldPath = heroDecision.finalCandidate?.variantPath ?? null;
+  diagnostics.heroCandidateCountAfterFiltering = heroDecision.finalCandidate
+    ? 1
+    : 0;
+  diagnostics.heroImageFieldPath =
+    heroDecision.finalCandidate?.fieldPath ?? null;
+  diagnostics.heroVariantFieldPath =
+    heroDecision.finalCandidate?.variantPath ?? null;
   diagnostics.selectedHeroWidth = heroDecision.finalCandidate?.width ?? null;
   diagnostics.selectedHeroHeight = heroDecision.finalCandidate?.height ?? null;
   diagnostics.imageSourceUsed = heroDecision.heroSourceType;
   diagnostics.heroSourceType = heroDecision.heroSourceType;
-  diagnostics.heroQualityClassification = heroDecision.heroQualityClassification;
+  diagnostics.heroQualityClassification =
+    heroDecision.heroQualityClassification;
   diagnostics.finalHeroUrl = heroDecision.heroUrl;
   diagnostics.heroFallbackTriggered = heroDecision.fallbackTriggered;
   diagnostics.heroPlaceholderFallbackReason = heroDecision.fallbackTriggered
@@ -1724,7 +1836,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroDecision.rejectedForeignCandidates
       .slice(0, 3)
       .map(candidate => `${candidate.reason}:${candidate.url}`);
-  diagnostics.rejectedForeignHeroCandidates = heroDecision.rejectedForeignCandidates;
+  diagnostics.rejectedForeignHeroCandidates =
+    heroDecision.rejectedForeignCandidates;
   diagnostics.heroSourceProductCode =
     heroDecision.finalCandidate?.sourceProductCode ?? null;
   diagnostics.heroSourceProductUrl =
@@ -1733,7 +1846,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroDecision.finalCandidate?.sourceFieldPath ?? null;
   diagnostics.heroHost = heroDecision.finalCandidate?.host ?? null;
 
-  const viablePriceDetection = detectViableViatorCommercialPriceCandidates(product);
+  const viablePriceDetection =
+    detectViableViatorCommercialPriceCandidates(product);
   diagnostics.hasAnyViablePriceCandidate =
     viablePriceDetection.hasAnyViablePriceCandidate;
   diagnostics.viablePriceCandidateFieldPaths =
@@ -1744,7 +1858,10 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.commercialPriceRawValue = price.rawValue;
   diagnostics.priceSourceUsed =
     price.amount !== null ? "live-price" : "fallback";
-  if (viablePriceDetection.hasAnyViablePriceCandidate && price.amount === null) {
+  if (
+    viablePriceDetection.hasAnyViablePriceCandidate &&
+    price.amount === null
+  ) {
     diagnostics.priceIntegrityViolation = true;
     diagnostics.extractionFailure = true;
     console.warn(
@@ -1803,9 +1920,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     const [question, answer] = item.split("|||");
     return { question, answer } satisfies Engine6ExtractedFaq;
   });
-  const faqPath = baseFaqs.value.length > 0
-    ? (baseFaqs.path ?? "product.qAndA.items")
-    : null;
+  const faqPath =
+    baseFaqs.value.length > 0 ? (baseFaqs.path ?? "product.qAndA.items") : null;
   const faqs = { value: mergedFaqs, path: faqPath };
   diagnostics.faqsFieldPath = faqs.path;
   diagnostics.faqFieldPath = faqs.path;

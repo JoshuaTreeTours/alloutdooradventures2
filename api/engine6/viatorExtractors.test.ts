@@ -55,7 +55,9 @@ describe("extractEngine6Product itinerary fidelity", () => {
         admissionNote: "Admission Ticket Free",
       })
     );
-    expect(result.diagnostics.itinerarySourceUsed).toBe("product.itinerary.days");
+    expect(result.diagnostics.itinerarySourceUsed).toBe(
+      "product.itinerary.days"
+    );
   });
 
   it("normalizes alternate Viator price and duration shapes", () => {
@@ -232,5 +234,24 @@ describe("extractEngine6Product itinerary fidelity", () => {
     expect(result.diagnostics.commercialPriceFieldPath).toBe(
       "product.pricing.summary.fromPrice"
     );
+  });
+
+  it("rewrites itinerary summary into 3-5 itinerary-stop html blocks", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "SUMMARY_ONLY_1",
+        title: "Summary-only itinerary product",
+        location: { city: "Las Vegas", state: "Nevada" },
+        itinerarySummary:
+          "Depart Las Vegas for Hoover Dam and the Arizona overlook. You will enjoy views of Lake Mead before driving toward Boulder City. Experience historic downtown Boulder City with a guide. Return via the Mojave Desert scenic corridor.",
+      },
+    });
+
+    expect(result.extracted.itinerary).toEqual([]);
+    expect(result.extracted.itinerarySummaryText).toContain(
+      'class="itinerary-stop"'
+    );
+    expect(result.extracted.itinerarySummaryText).not.toContain("you will");
+    expect(result.extracted.itinerarySummaryText).not.toContain("Experience");
   });
 });

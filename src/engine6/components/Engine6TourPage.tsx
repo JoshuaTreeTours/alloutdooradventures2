@@ -44,6 +44,29 @@ const normalizeItinerarySummaryBlocks = (summary: string) => {
   return blocks.slice(0, 5);
 };
 
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
+const toItineraryStopHtml = (summary: string) => {
+  if (/\bitinerary-stop\b/.test(summary)) {
+    return summary;
+  }
+
+  return normalizeItinerarySummaryBlocks(summary)
+    .map(
+      (segment, index) =>
+        `<div class="itinerary-stop"><h3>Stop ${index + 1}</h3><p>${escapeHtml(
+          segment
+        )}</p></div>`
+    )
+    .join("");
+};
+
 const getItineraryStopType = (item: {
   title: string;
   stopType?: "stop" | "pass-by";
@@ -369,21 +392,12 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
               className="rounded-xl border border-amber-200 bg-amber-50 p-5"
               data-testid="engine6-itinerary-summary-only"
             >
-              <ul className="space-y-3">
-                {normalizeItinerarySummaryBlocks(tour.itinerarySummaryText).map(
-                  (segment, index) => (
-                    <li
-                      key={`${segment.slice(0, 32)}-${index}`}
-                      className="rounded-lg bg-white/70 p-3 text-sm leading-6 text-amber-900"
-                    >
-                      <p className="text-xs font-semibold uppercase tracking-wide text-amber-700">
-                        Stop {index + 1}
-                      </p>
-                      <p>{segment}</p>
-                    </li>
-                  )
-                )}
-              </ul>
+              <div
+                className="[&_.itinerary-stop]:mb-3 [&_.itinerary-stop]:rounded-lg [&_.itinerary-stop]:bg-white/70 [&_.itinerary-stop]:p-3 [&_.itinerary-stop_h3]:text-xs [&_.itinerary-stop_h3]:font-semibold [&_.itinerary-stop_h3]:uppercase [&_.itinerary-stop_h3]:tracking-wide [&_.itinerary-stop_h3]:text-amber-700 [&_.itinerary-stop_p]:text-sm [&_.itinerary-stop_p]:leading-6 [&_.itinerary-stop_p]:text-amber-900"
+                dangerouslySetInnerHTML={{
+                  __html: toItineraryStopHtml(tour.itinerarySummaryText),
+                }}
+              />
             </div>
           </ContentSection>
         ) : null}
