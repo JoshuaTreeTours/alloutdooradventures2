@@ -56,6 +56,7 @@ import { getEngine4TourBySlugs } from "../../../../engine4/routing";
 import { getLegacyFhMigratedTourBySlugs } from "../../../../engine6/legacyFh/registry";
 import Engine6TourPage from "../../../../engine6/components/Engine6TourPage";
 import { getEngine6NativeTourByCanonicalPath } from "../../../../engine6/registry";
+import { isExcludedProductCode } from "../../../../data/excludedProductCodes";
 import { isEngine6CanonicalPath } from "../../../../engine6/routes";
 import { buildEngine6SchemaGraph } from "../../../../engine6/schema/buildEngine6SchemaGraph";
 import {
@@ -180,6 +181,20 @@ export default function CityTourDetailRoute({
   const isFHPilotEnabled =
     typeof process !== "undefined" &&
     process.env.ENABLE_FH_CONTENT_PILOT_PALM_SPRINGS === "true";
+
+  const routeProductCode = params.tourSlug.split("-").at(-1)?.toUpperCase() ?? null;
+
+  if (isExcludedProductCode(routeProductCode)) {
+    return (
+      <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
+        <h1 className="text-2xl font-semibold">Tour not found</h1>
+        <p className="mt-4 text-sm text-[#405040]">
+          We couldn’t find that tour. Head back to the tours list to keep
+          exploring.
+        </p>
+      </main>
+    );
+  }
 
   if (isRemovedTourSlug(params.tourSlug)) {
     return (

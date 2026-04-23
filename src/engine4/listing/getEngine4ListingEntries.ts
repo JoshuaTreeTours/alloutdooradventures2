@@ -5,6 +5,7 @@ import {
   engine4ViatorTours,
 } from "../data/viatorTours";
 import { mapViatorToEngine4Tour } from "../viator/mapViatorToEngine4Tour";
+import { isExcludedProductCode } from "../../data/excludedProductCodes";
 
 type Engine4ListingEntry = {
   tour: Tour;
@@ -19,7 +20,8 @@ export const getEngine4ListingEntries = (
     .filter(
       tour =>
         tour.destination.stateSlug === stateSlug &&
-        tour.destination.citySlug === citySlug
+        tour.destination.citySlug === citySlug &&
+        !isExcludedProductCode(tour.productCode)
     )
     .map(record => {
       const vm = mapViatorToEngine4Tour({

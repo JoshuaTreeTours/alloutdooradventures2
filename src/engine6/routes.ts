@@ -1,3 +1,5 @@
+import { isExcludedProductCode } from "../data/excludedProductCodes";
+
 export const ENGINE6_SPECIMEN_PRODUCT_CODE = "63657P1";
 export const ENGINE6_SPECIMEN_ROUTE =
   "/destinations/california/santa-barbara/tours/santa-barbara-vineyard-to-table-taste-tour-by-e-bike";
@@ -504,26 +506,30 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   ],
 ] as const;
 
-export const ENGINE6_CONFIGURED_PRODUCT_CODES = [
-  ...new Set(
-    ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES.map(([, productCode]) => productCode)
-  ),
-];
+const ENGINE6_ACTIVE_ROUTE_PRODUCT_CODE_ENTRIES =
+  ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES.filter(([, productCode]) =>
+    !isExcludedProductCode(productCode)
+  );
+
+export const ENGINE6_CONFIGURED_PRODUCT_CODES = Array.from(
+  new Set(
+    ENGINE6_ACTIVE_ROUTE_PRODUCT_CODE_ENTRIES.map(([, productCode]) => productCode)
+  )
+);
 
 const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> =
-  Object.fromEntries(ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES);
+  Object.fromEntries(ENGINE6_ACTIVE_ROUTE_PRODUCT_CODE_ENTRIES);
 
 const ENGINE6_PATH_BY_PRODUCT_CODE: Record<string, string> = Object.fromEntries(
-  ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES.map(([path, productCode]) => [
+  ENGINE6_ACTIVE_ROUTE_PRODUCT_CODE_ENTRIES.map(([path, productCode]) => [
     productCode,
     path,
   ])
 );
 
-export const ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS = new Set<string>([
-  ENGINE6_YOSEMITE_ROUTE,
-  ...ENGINE6_OVERLAP_REPLACEMENT_CONFIGS.map(config => config.canonicalPath),
-]);
+export const ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS = new Set<string>(
+  ENGINE6_OVERLAP_REPLACEMENT_CONFIGS.map(config => config.canonicalPath)
+);
 
 export const resolveEngine6ProductCodeForPath = (path: string) =>
   ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH[path] ?? null;

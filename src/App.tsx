@@ -86,7 +86,6 @@ import {
   ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
-  ENGINE6_YOSEMITE_ROUTE,
   ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_ROUTE,
   ENGINE6_ZURICH_INTERLAKEN_GRINDELWALD_ROUTE,
   ENGINE6_INTERLAKEN_PARAGLIDE_ROUTE,
@@ -242,7 +241,6 @@ export default function App() {
           path={ENGINE6_EMERALD_CAVE_ROUTE}
           component={Engine6SpecimenRoute}
         />
-        <Route path={ENGINE6_YOSEMITE_ROUTE} component={Engine6SpecimenRoute} />
         <Route
           path={ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_ROUTE}
           component={Engine6SpecimenRoute}
