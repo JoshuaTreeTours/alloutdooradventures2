@@ -286,6 +286,15 @@ describe("extractEngine6Product itinerary fidelity", () => {
     expect(result.extracted.itinerarySummaryText).not.toContain(
       "Return via the Mojave Desert scenic corridor"
     );
+    expect(result.extracted.itinerarySummaryText).not.toContain(
+      "covers the segment"
+    );
+    expect(result.extracted.itinerarySummaryText).not.toContain(
+      "route continuity"
+    );
+    expect(result.extracted.itinerarySummaryText).not.toContain(
+      "location context"
+    );
     expect(result.extracted.itinerarySummaryText).toContain("data-stop-type=");
   });
 });

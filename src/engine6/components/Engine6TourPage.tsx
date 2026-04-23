@@ -70,7 +70,15 @@ const toItineraryStopHtml = (summary: string) => {
       segment.match(
         /\b([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*(?:\s+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*){0,2})\b/
       )?.[1] ?? `City Segment ${index + 1}`;
-    return `${location} provides route positioning and landmark context in the itinerary sequence.`;
+    const noun =
+      /\b(Park|Station|Bridge|Museum|Cathedral|Avenue|Street|Hill)\b/i.test(
+        segment
+      )
+        ? (segment.match(
+            /\b(Park|Station|Bridge|Museum|Cathedral|Avenue|Street|Hill)\b/i
+          )?.[1] ?? "landmark")
+        : "landmark";
+    return `Pass ${location}, a notable ${noun.toLowerCase()} stop within the city itinerary.`;
   };
 
   return normalizeItinerarySummaryBlocks(summary)

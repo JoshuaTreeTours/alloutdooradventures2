@@ -464,19 +464,34 @@ const buildStopSummary = (
   stopType: "pass-by" | "stop" | "visit" | "cruise",
   parentContext?: string | null
 ) => {
-  const purpose =
-    stopType === "cruise"
-      ? "water-route orientation"
-      : stopType === "visit"
-        ? "on-site landmark context"
-        : stopType === "pass-by"
-          ? "route continuity and location context"
-          : "city-sequence orientation";
+  const inferNoun = () => {
+    const text = `${place} ${feature}`.toLowerCase();
+    if (/\bpark\b/.test(text)) return "park";
+    if (/\bstation|terminal\b/.test(text)) return "station";
+    if (/\bbridge\b/.test(text)) return "bridge";
+    if (/\bmuseum|gallery\b/.test(text)) return "museum";
+    if (/\bcathedral|church|temple|basilica\b/.test(text)) return "landmark";
+    if (/\bavenue|street|boulevard|road\b/.test(text)) return "street corridor";
+    if (/\bhill|overlook|viewpoint|summit\b/.test(text)) return "viewpoint";
+    if (/\blake|river|harbor|bay|waterfront\b/.test(text)) return "waterfront";
+    if (/\bold town|downtown|midtown|district|center\b/.test(text))
+      return "district";
+    return "landmark";
+  };
+  const noun = inferNoun();
   const contextPlace = parentContext
     ? inferStopPlace(parentContext, 0).replace(/\s+/g, " ")
     : null;
+  const action =
+    stopType === "pass-by"
+      ? "Pass"
+      : stopType === "cruise"
+        ? "Cruise through"
+        : stopType === "visit"
+          ? "Visit"
+          : "Stop at";
   return truncateWords(
-    `${place} covers the ${feature.toLowerCase()} portion of the route. This segment provides ${purpose}${contextPlace ? ` within ${contextPlace}` : ""}.`,
+    `${action} ${place}, a notable ${noun}${contextPlace ? ` in ${contextPlace}` : ""}. This stop highlights local geography and landmark significance.`,
     28
   );
 };
