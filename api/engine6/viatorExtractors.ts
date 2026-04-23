@@ -473,28 +473,75 @@ const summarizeItineraryToHtmlStops = (rawValue: string) => {
   );
   if (dedupedStops.length === 0) return null;
 
+  const inferFeature = (value: string) => {
+    const text = value.toLowerCase();
+    if (/\b(museum|gallery|exhibit)\b/.test(text)) return "Museum Visit";
+    if (/\b(cathedral|church|basilica|temple)\b/.test(text))
+      return "Historic Landmark Stop";
+    if (/\b(lake|river|harbor|bay|waterfront)\b/.test(text))
+      return "Waterfront Segment";
+    if (/\b(old town|historic center|city center|downtown)\b/.test(text))
+      return "Old Town Walk";
+    if (/\b(viewpoint|hill|overlook|summit)\b/.test(text))
+      return "Viewpoint Stop";
+    if (/\b(station|terminal|railway)\b/.test(text))
+      return "Transit Corridor Pass-By";
+    if (/\b(bridge|dam)\b/.test(text)) return "Landmark Photo Stop";
+    if (/\b(cruise|boat|sail|ferry)\b/.test(text)) return "Cruise Segment";
+    return "City Highlights Stop";
+  };
+
+  const inferPlace = (value: string, index: number) => {
+    const match =
+      value.match(
+        /\b([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*(?:\s+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*){0,3})\b/
+      )?.[1] ?? null;
+    const normalized = (match ?? `City Segment ${index + 1}`)
+      .replace(/\b(Railway main station|Main station)\b/gi, "Main Station")
+      .replace(/\b(Zürich)\b/g, "Zurich")
+      .replace(/\s+/g, " ")
+      .trim();
+    return normalized;
+  };
+
+  const buildSummary = (
+    place: string,
+    feature: string,
+    stopType: "pass-by" | "stop" | "visit" | "cruise"
+  ) => {
+    const purpose =
+      stopType === "cruise"
+        ? "water-route orientation"
+        : stopType === "visit"
+          ? "on-site landmark context"
+          : stopType === "pass-by"
+            ? "route continuity and location context"
+            : "city-sequence orientation";
+    return truncateWords(
+      `${place} covers the ${feature.toLowerCase()} portion of the route. This segment provides ${purpose} before the next stop.`,
+      30
+    );
+  };
+
   const normalizedStops = dedupedStops.slice(0, 5).map((stopText, index) => {
-    const compact = truncateWords(stopText, 32);
-    const stopType = inferSummaryStopType(compact);
-    return {
-      title: normalizeStopTitle(compact, index),
-      summary: compact,
-      stopType,
-    };
+    const stopType = inferSummaryStopType(stopText);
+    const place = inferPlace(stopText, index);
+    const feature = inferFeature(stopText);
+    const title = normalizeStopTitle(`${place} ${feature}`, index);
+    const summary = buildSummary(place, feature, stopType);
+    return { title, summary, stopType };
   });
 
   while (normalizedStops.length < 3) {
     const seed = normalizedStops[normalizedStops.length - 1] ?? {
-      title: "City Center Route Stop",
-      summary: clean,
+      title: "City Center Highlights Stop",
+      summary:
+        "City Center covers the route sequence and landmark context before the next itinerary segment.",
       stopType: "stop" as const,
     };
     normalizedStops.push({
-      title: normalizeStopTitle(
-        `${seed.summary} segment ${normalizedStops.length + 1}`,
-        normalizedStops.length
-      ),
-      summary: truncateWords(seed.summary, 32),
+      title: normalizeStopTitle(seed.title, normalizedStops.length),
+      summary: truncateWords(seed.summary, 30),
       stopType: seed.stopType,
     });
   }

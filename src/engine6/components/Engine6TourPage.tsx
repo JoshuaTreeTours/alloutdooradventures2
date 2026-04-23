@@ -58,12 +58,19 @@ const toItineraryStopHtml = (summary: string) => {
   }
 
   const buildFallbackTitle = (segment: string, index: number) => {
-    const words = segment
-      .replace(/[^\wÀ-ÖØ-öø-ÿ' -]/g, " ")
-      .split(/\s+/)
-      .filter(Boolean);
-    const lead = words.slice(0, 3).join(" ") || `Route segment ${index + 1}`;
-    return `${lead} route detail stop`.split(/\s+/).slice(0, 8).join(" ");
+    const location =
+      segment.match(
+        /\b([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*(?:\s+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*){0,2})\b/
+      )?.[1] ?? `City Segment ${index + 1}`;
+    return `${location} route context stop`.split(/\s+/).slice(0, 8).join(" ");
+  };
+
+  const buildFallbackSummary = (segment: string, index: number) => {
+    const location =
+      segment.match(
+        /\b([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*(?:\s+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*){0,2})\b/
+      )?.[1] ?? `City Segment ${index + 1}`;
+    return `${location} provides route positioning and landmark context in the itinerary sequence.`;
   };
 
   return normalizeItinerarySummaryBlocks(summary)
@@ -71,7 +78,7 @@ const toItineraryStopHtml = (summary: string) => {
       (segment, index) =>
         `<div class="itinerary-stop" data-stop-type="stop"><h3>${escapeHtml(
           buildFallbackTitle(segment, index)
-        )}</h3><p>${escapeHtml(segment)}</p></div>`
+        )}</h3><p>${escapeHtml(buildFallbackSummary(segment, index))}</p></div>`
     )
     .join("");
 };

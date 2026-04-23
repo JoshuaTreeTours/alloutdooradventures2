@@ -270,10 +270,13 @@ describe("extractEngine6Product itinerary fidelity", () => {
     for (const description of descriptions) {
       const text = description.replace(/<\/?p>/g, "");
       const wordCount = text.split(/\s+/).filter(Boolean).length;
-      expect(wordCount).toBeLessThanOrEqual(40);
+      expect(wordCount).toBeLessThanOrEqual(30);
     }
     expect(result.extracted.itinerarySummaryText).not.toContain("you will");
     expect(result.extracted.itinerarySummaryText).not.toContain("Experience");
+    expect(result.extracted.itinerarySummaryText).not.toContain(
+      "Return via the Mojave Desert scenic corridor"
+    );
     expect(result.extracted.itinerarySummaryText).toContain("data-stop-type=");
   });
 });
