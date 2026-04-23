@@ -421,7 +421,6 @@ export const validateEngine6CreationContract = ({
     isSimpleExperienceProfile(tour) &&
     structuredStopCount <= 1 &&
     (tour.itinerary.length >= 1 ||
-      Boolean(tour.itinerarySummaryText?.trim()) ||
       Boolean(tour.meetingPointText?.trim()));
   if (
     tour.itinerary.length >= 2 &&
@@ -464,17 +463,6 @@ export const validateEngine6CreationContract = ({
       "itinerary field depth mismatch (stopType/duration/admission) between API extraction and rendered tour object"
     );
   }
-  if (
-    tour.itinerary.length < 2 &&
-    tour.itinerarySummaryText &&
-    !pageHtml.includes('data-testid="engine6-itinerary-summary-only"') &&
-    !simpleItineraryEligible
-  ) {
-    violations.push(
-      "summary-only itinerary missing explicit summary rendering"
-    );
-  }
-
   const tripNode = graph.find(node => node["@type"] === "TouristTrip") as
     | { itinerary?: unknown }
     | undefined;

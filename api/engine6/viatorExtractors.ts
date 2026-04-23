@@ -1026,7 +1026,7 @@ const normalizeSingleItineraryItem = (
       return match[1].replace(/[.,:;]+$/, "").trim();
     }
 
-    return firstSentence.replace(/[.,:;]+$/, "").trim() || null;
+    return null;
   })();
 
   const title =

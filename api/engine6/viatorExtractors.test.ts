@@ -136,17 +136,23 @@ describe("extractEngine6Product itinerary fidelity", () => {
 
     expect(result.extracted.priceAmount).toBe(123);
     expect(result.extracted.priceFormatted).toBe("From $123");
-    expect(result.extracted.itinerary.length).toBeGreaterThanOrEqual(3);
+    expect(result.extracted.itinerary.length).toBeGreaterThanOrEqual(2);
     expect(result.extracted.itinerary[0]?.title).toBeTruthy();
     expect(result.extracted.itinerary[1]?.title).toBeTruthy();
-    expect(result.extracted.itinerary[2]?.title).toBeTruthy();
+    const renderedItineraryText = result.extracted.itinerary
+      .map(item => `${item.title} ${item.description ?? ""}`)
+      .join(" ");
+    expect(renderedItineraryText).not.toMatch(/Begin your journey/i);
+    expect(renderedItineraryText).not.toMatch(/you'?ll enjoy/i);
+    expect(renderedItineraryText).not.toMatch(/your guide will/i);
+    expect(renderedItineraryText).not.toMatch(/postcard-perfect/i);
     expect(result.extracted.meetingPointText).toContain("Zurich");
     expect(result.diagnostics.meetingPointFieldPath).toBe(
       "product.logistics.start[0].description"
     );
   });
 
-  it("does not truncate inferred itinerary titles derived from long description text", () => {
+  it("omits weak inferred itinerary titles derived only from supplier prose", () => {
     const result = extractEngine6Product({
       product: {
         productCode: "LONGTITLE1",
@@ -163,9 +169,7 @@ describe("extractEngine6Product itinerary fidelity", () => {
       },
     });
 
-    expect(result.extracted.itinerary[0]?.title).toBe(
-      "Enjoy some leisure time exploring charming lakeside promenades and local cafes before departure"
-    );
+    expect(result.extracted.itinerary).toEqual([]);
   });
 
   it("prefers location.country when state is absent and infers city from logistics text", () => {

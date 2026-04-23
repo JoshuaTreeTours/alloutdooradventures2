@@ -225,7 +225,6 @@ describe("engine6 creation contract validator", () => {
     expect(report.violations).not.toEqual(
       expect.arrayContaining([
         "timeline rendered without sufficient structured stop data",
-        "summary-only itinerary missing explicit summary rendering",
       ])
     );
     expect((report as { diagnostics?: { simpleItineraryAcceptanceApplied?: boolean } }).diagnostics?.simpleItineraryAcceptanceApplied).toBe(true);
