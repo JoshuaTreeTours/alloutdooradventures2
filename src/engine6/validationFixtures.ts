@@ -17,6 +17,7 @@ import specimen26719Payload from "../../data/engine6/viator/26719P8.exact-produc
 import specimen354611p1Payload from "../../data/engine6/viator/354611P1.exact-product.json";
 import specimen5615689p4Payload from "../../data/engine6/viator/5615689P4.exact-product.json";
 import specimen36001Payload from "../../data/engine6/viator/36001P1.exact-product.json";
+import specimen36001p14Payload from "../../data/engine6/viator/36001P14.exact-product.json";
 import specimen152424p1Payload from "../../data/engine6/viator/152424P1.exact-product.json";
 import specimen23068p2Payload from "../../data/engine6/viator/23068P2.exact-product.json";
 import specimen2660sfowinPayload from "../../data/engine6/viator/2660SFOWIN.exact-product.json";
@@ -347,6 +348,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/San-Francisco/Yosemite-In-A-Day-Tour-from-San-Francisco/d651-36001P1",
     rawPayload: specimen36001Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "36001P14",
+    publicUrl:
+      "https://www.viator.com/tours/San-Francisco/Big-Sur-Monterey-and-Carmel-Tour-From-San-Francisco/d651-36001P14",
+    rawPayload: specimen36001p14Payload as Record<string, unknown>,
   },
   {
     productCode: "152424P1",
