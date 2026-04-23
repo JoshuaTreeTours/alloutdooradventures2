@@ -149,6 +149,15 @@ type ItineraryResult = {
   structuredSourceUsed: boolean;
 };
 
+type Engine6RawItineraryCandidate = {
+  title?: string | null;
+  stopType?: string | null;
+  description?: string | null;
+  duration?: string | null;
+  admissionNote?: string | null;
+  sectionLabel?: string | null;
+};
+
 type ViablePriceDetectionResult = {
   hasAnyViablePriceCandidate: boolean;
   detectedFieldPaths: string[];
@@ -983,7 +992,7 @@ const extractHighlights = (product: RecordLike) => {
 
 const normalizeSingleItineraryItem = (
   row: RecordLike
-): Engine6ExtractedItineraryItem | null => {
+): Engine6RawItineraryCandidate | null => {
   const pointOfInterest = asRecord(row.pointOfInterest);
   const pointOfInterestLocation = asRecord(row.pointOfInterestLocation);
   const stop = asRecord(row.stop);
@@ -1084,7 +1093,102 @@ const normalizeSingleItineraryItem = (
       : {}),
     ...(duration ? { duration } : {}),
     ...(admissionNote ? { admissionNote } : {}),
-  } satisfies Engine6ExtractedItineraryItem;
+  } satisfies Engine6RawItineraryCandidate;
+};
+
+const ENGINE6_ITINERARY_BANNED_TITLE_PATTERNS = [
+  /\bsegment route stop\b/i,
+  /\broute stop\b/i,
+  /\bwaterfront segment\b/i,
+  /^(our|with|this)\b/i,
+];
+
+const ENGINE6_ITINERARY_BANNED_DESCRIPTION_PATTERNS = [
+  /\broute continuity\b/i,
+  /\blocation context\b/i,
+  /\bcovers?\s+the\s+segment\b/i,
+  /\btake you on a journey\b/i,
+  /\byou will\b/i,
+  /\bexpert guide\b/i,
+];
+
+const sanitizeItineraryTitle = (value: string | null | undefined) => {
+  const normalized = asNonEmptyString(value)?.replace(/\s+/g, " ").trim() ?? null;
+  if (!normalized) return null;
+  const stripped = normalized
+    .replace(/\b(pass\s*by)\b/gi, "")
+    .replace(/[^\p{L}\p{N}\s'&/-]+/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!stripped) return null;
+  if (ENGINE6_ITINERARY_BANNED_TITLE_PATTERNS.some(pattern => pattern.test(stripped))) {
+    return null;
+  }
+  return stripped;
+};
+
+const hasGroundedPlaceSignal = (title: string) => {
+  if (/\b(segment|route|continuity|context)\b/i.test(title)) return false;
+  return /[A-Za-z]{3,}/.test(title);
+};
+
+const buildNormalizedItineraryDescription = (
+  title: string,
+  stopType: "stop" | "pass-by"
+) => {
+  if (stopType === "pass-by") {
+    return `Pass ${title} during the route.`;
+  }
+  return `Stop at ${title} during the tour.`;
+};
+
+export const normalizeEngine6Itinerary = (
+  items: Engine6RawItineraryCandidate[]
+): Engine6ExtractedItineraryItem[] => {
+  const normalized = items
+    .map(item => {
+      const title = sanitizeItineraryTitle(item.title);
+      if (!title || !hasGroundedPlaceSignal(title)) {
+        return null;
+      }
+
+      const stopType: "stop" | "pass-by" =
+        typeof item.stopType === "string" && /pass[\s_-]?by/i.test(item.stopType)
+          ? "pass-by"
+          : "stop";
+      const sourceDescription = asNonEmptyString(item.description);
+      const description =
+        sourceDescription &&
+        !ENGINE6_ITINERARY_BANNED_DESCRIPTION_PATTERNS.some(pattern =>
+          pattern.test(sourceDescription)
+        )
+          ? buildNormalizedItineraryDescription(title, stopType)
+          : buildNormalizedItineraryDescription(title, stopType);
+
+      const admissionNote = asNonEmptyString(item.admissionNote) ?? undefined;
+      const duration = asNonEmptyString(item.duration) ?? undefined;
+      const sectionLabel = asNonEmptyString(item.sectionLabel) ?? undefined;
+
+      return {
+        title,
+        stopType,
+        description,
+        ...(duration ? { duration } : {}),
+        ...(admissionNote ? { admissionNote } : {}),
+        ...(sectionLabel ? { sectionLabel } : {}),
+      } satisfies Engine6ExtractedItineraryItem;
+    })
+    .filter((item): item is Engine6ExtractedItineraryItem => Boolean(item));
+
+  const deduped: Engine6ExtractedItineraryItem[] = [];
+  const seen = new Set<string>();
+  for (const item of normalized) {
+    const key = `${item.title.toLowerCase()}|${item.stopType}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    deduped.push(item);
+  }
+  return deduped;
 };
 
 const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
@@ -1154,30 +1258,15 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
       return [];
     }
 
-    const seen = new Set<string>();
-    return rows
+    return normalizeEngine6Itinerary(
+      rows
       .map(item => {
         const parsed = normalizeSingleItineraryItem(item.row);
         if (!parsed) return null;
-
-        const dedupeKey = [
-          parsed.title.toLowerCase(),
-          (parsed.description ?? "").toLowerCase(),
-          (parsed.duration ?? "").toLowerCase(),
-          parsed.stopType ?? "stop",
-          (item.sectionLabel ?? "").toLowerCase(),
-        ].join("|");
-
-        if (seen.has(dedupeKey)) {
-          return null;
-        }
-        seen.add(dedupeKey);
-
-        return item.sectionLabel
-          ? { ...parsed, sectionLabel: item.sectionLabel }
-          : parsed;
+        return item.sectionLabel ? { ...parsed, sectionLabel: item.sectionLabel } : parsed;
       })
-      .filter((item): item is Engine6ExtractedItineraryItem => Boolean(item));
+      .filter((item): item is Engine6RawItineraryCandidate => Boolean(item))
+    );
   };
 
   const structuredPaths: PathSegment[][] = [
@@ -1214,6 +1303,45 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
       return {
         value,
         path: formatFieldPath(path),
+        structuredSourceUsed: false,
+      };
+    }
+  }
+
+  const summaryFallbackSources: Array<{ value: unknown; path: PathSegment[] }> = [
+    { value: readPath(product, ["itinerarySummary"]), path: ["itinerarySummary"] },
+    { value: readPath(product, ["itinerary", "summary"]), path: ["itinerary", "summary"] },
+    {
+      value: readPath(product, ["whatToExpect", "description"]),
+      path: ["whatToExpect", "description"],
+    },
+    { value: readPath(product, ["description", "text"]), path: ["description", "text"] },
+    { value: readPath(product, ["description"]), path: ["description"] },
+  ];
+
+  for (const source of summaryFallbackSources) {
+    const text = asNonEmptyString(source.value);
+    if (!text) continue;
+    const candidates = text
+      .split(/\n+|(?<=[.!?])\s+/)
+      .map(segment => segment.trim())
+      .filter(Boolean)
+      .map(segment => {
+        const namedPlace =
+          segment.match(
+            /\b(?:pass(?:\s+by)?|stop(?:\s+at)?|visit|explore|continue to|arrive in|cruise on)\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-/]*(?:\s+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-/]*){0,5})/i
+          )?.[1] ?? null;
+        return {
+          title: namedPlace ?? segment.split(",")[0] ?? null,
+          stopType: /\bpass(?:\s+by)?\b/i.test(segment) ? "pass-by" : "stop",
+          description: segment,
+        } satisfies Engine6RawItineraryCandidate;
+      });
+    const normalized = normalizeEngine6Itinerary(candidates);
+    if (normalized.length > 0) {
+      return {
+        value: normalized,
+        path: formatFieldPath(source.path),
         structuredSourceUsed: false,
       };
     }
