@@ -374,30 +374,52 @@ const dedupeStrings = (values: Array<string | null | undefined>) => {
 };
 
 const ITINERARY_FILLER_PATTERN =
-  /\b(?:you will|you'll|enjoy|experience|your guide|discover|delight in|get to|have the chance to|perfect for|unforgettable)\b/gi;
+  /\b(?:you will|you'll|enjoy|experience|your guide|expert guide|fluent in your chosen language|take you on a journey|discover|delight in|get to|have the chance to|perfect for|unforgettable|renowned|must-visit|don't miss|fascinating history|bustling hub of activity)\b/gi;
+
+const inferSummaryStopType = (
+  value: string
+): "pass-by" | "stop" | "visit" | "cruise" => {
+  const text = value.toLowerCase();
+  if (/\b(pass[\s-]?by|drive by|drive past)\b/.test(text)) return "pass-by";
+  if (/\b(cruise|boat|sail|ferry|lake crossing)\b/.test(text)) return "cruise";
+  if (
+    /\b(visit|museum|cathedral|church|gallery|market|plaza|square)\b/.test(text)
+  )
+    return "visit";
+  return "stop";
+};
 
 const normalizeStopTitle = (sentence: string, index: number) => {
-  const normalizedSentence = sentence
+  const compact = sentence.replace(/\s+/g, " ").trim();
+  const locationMatch =
+    compact.match(
+      /\b(?:at|to|in|from|through|toward|towards|near)\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*(?:\s+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*){0,4})/
+    )?.[1] ??
+    compact.match(
+      /\b([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*(?:\s+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*){0,4})\b/
+    )?.[1] ??
+    null;
+
+  const place = (locationMatch ?? `Route segment ${index + 1}`)
     .replace(/[^\wÀ-ÖØ-öø-ÿ' -]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
-  const words = normalizedSentence.split(/\s+/).filter(Boolean);
-  const keywordCandidates = words.filter(word => /^[A-ZÀ-ÖØ-Ý]/.test(word));
-  const primaryKeyword = keywordCandidates.slice(0, 2).join(" ").trim();
-  const defaultLead = primaryKeyword || `Route segment ${index + 1}`;
-  const titleWords = [
-    ...defaultLead.split(/\s+/),
-    "landmark",
-    "and",
-    "feature",
-    "stop",
-  ].slice(0, 8);
+  const stopType = inferSummaryStopType(compact);
+  const contextWord =
+    stopType === "cruise"
+      ? "Cruise Segment"
+      : stopType === "pass-by"
+        ? "Pass-By Segment"
+        : stopType === "visit"
+          ? "Visit Stop"
+          : "Route Stop";
+  const combined = `${place} ${contextWord}`.trim();
+  const words = combined.split(/\s+/).filter(Boolean).slice(0, 8);
 
-  if (titleWords.length < 5) {
-    titleWords.push("overview");
+  if (words.length < 4) {
+    words.push("City", "Highlights");
   }
-
-  return titleWords.slice(0, 8).join(" ");
+  return words.slice(0, 8).join(" ");
 };
 
 const truncateWords = (value: string, maxWords: number) => {
@@ -409,6 +431,7 @@ const truncateWords = (value: string, maxWords: number) => {
 const summarizeItineraryToHtmlStops = (rawValue: string) => {
   const clean = stripHtml(rawValue)
     .replace(ITINERARY_FILLER_PATTERN, "")
+    .replace(/\b(?:the|a|an)\s+(?:famous|iconic|beautiful|stunning)\b/gi, "")
     .replace(/\s{2,}/g, " ")
     .trim();
   if (!clean) return null;
@@ -427,7 +450,7 @@ const summarizeItineraryToHtmlStops = (rawValue: string) => {
   if (clausePool.length === 0) return null;
 
   const targetStopCount = Math.min(5, Math.max(3, clausePool.length));
-  const stops = Array.from({ length: targetStopCount }, (_, index) => {
+  const clusteredStops = Array.from({ length: targetStopCount }, (_, index) => {
     const bucket: string[] = [];
     for (
       let cursor = index;
@@ -440,22 +463,48 @@ const summarizeItineraryToHtmlStops = (rawValue: string) => {
     return chunk || clausePool[index % clausePool.length] || clean;
   }).filter(Boolean);
 
-  if (stops.length === 0) return null;
+  const dedupedStops = dedupeStrings(
+    clusteredStops.map(stop =>
+      stop
+        .replace(/\b(old town|historic center|city center)\b/gi, "old town")
+        .replace(/\s+/g, " ")
+        .trim()
+    )
+  );
+  if (dedupedStops.length === 0) return null;
 
-  const normalizedStops = stops.slice(0, 5).map((stopText, index) => {
-    const compact = truncateWords(stopText, 40);
+  const normalizedStops = dedupedStops.slice(0, 5).map((stopText, index) => {
+    const compact = truncateWords(stopText, 32);
+    const stopType = inferSummaryStopType(compact);
     return {
       title: normalizeStopTitle(compact, index),
       summary: compact,
+      stopType,
     };
   });
+
+  while (normalizedStops.length < 3) {
+    const seed = normalizedStops[normalizedStops.length - 1] ?? {
+      title: "City Center Route Stop",
+      summary: clean,
+      stopType: "stop" as const,
+    };
+    normalizedStops.push({
+      title: normalizeStopTitle(
+        `${seed.summary} segment ${normalizedStops.length + 1}`,
+        normalizedStops.length
+      ),
+      summary: truncateWords(seed.summary, 32),
+      stopType: seed.stopType,
+    });
+  }
 
   return normalizedStops
     .map(
       stop =>
-        `<div class="itinerary-stop"><h3>${escapeHtml(stop.title)}</h3><p>${escapeHtml(
-          stop.summary
-        )}</p></div>`
+        `<div class="itinerary-stop" data-stop-type="${stop.stopType}"><h3>${escapeHtml(
+          stop.title
+        )}</h3><p>${escapeHtml(stop.summary)}</p></div>`
     )
     .join("");
 };

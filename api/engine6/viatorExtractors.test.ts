@@ -262,10 +262,18 @@ describe("extractEngine6Product itinerary fidelity", () => {
     for (const title of titles) {
       const text = title.replace(/<\/?h3>/g, "");
       const wordCount = text.split(/\s+/).filter(Boolean).length;
-      expect(wordCount).toBeGreaterThanOrEqual(5);
+      expect(wordCount).toBeGreaterThanOrEqual(4);
       expect(wordCount).toBeLessThanOrEqual(8);
+    }
+    const descriptions =
+      result.extracted.itinerarySummaryText?.match(/<p>(.*?)<\/p>/g) ?? [];
+    for (const description of descriptions) {
+      const text = description.replace(/<\/?p>/g, "");
+      const wordCount = text.split(/\s+/).filter(Boolean).length;
+      expect(wordCount).toBeLessThanOrEqual(40);
     }
     expect(result.extracted.itinerarySummaryText).not.toContain("you will");
     expect(result.extracted.itinerarySummaryText).not.toContain("Experience");
+    expect(result.extracted.itinerarySummaryText).toContain("data-stop-type=");
   });
 });

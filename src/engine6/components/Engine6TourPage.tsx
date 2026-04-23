@@ -57,12 +57,21 @@ const toItineraryStopHtml = (summary: string) => {
     return summary;
   }
 
+  const buildFallbackTitle = (segment: string, index: number) => {
+    const words = segment
+      .replace(/[^\wÀ-ÖØ-öø-ÿ' -]/g, " ")
+      .split(/\s+/)
+      .filter(Boolean);
+    const lead = words.slice(0, 3).join(" ") || `Route segment ${index + 1}`;
+    return `${lead} route detail stop`.split(/\s+/).slice(0, 8).join(" ");
+  };
+
   return normalizeItinerarySummaryBlocks(summary)
     .map(
       (segment, index) =>
-        `<div class="itinerary-stop"><h3>Route segment ${
-          index + 1
-        } landmark feature stop</h3><p>${escapeHtml(segment)}</p></div>`
+        `<div class="itinerary-stop" data-stop-type="stop"><h3>${escapeHtml(
+          buildFallbackTitle(segment, index)
+        )}</h3><p>${escapeHtml(segment)}</p></div>`
     )
     .join("");
 };
