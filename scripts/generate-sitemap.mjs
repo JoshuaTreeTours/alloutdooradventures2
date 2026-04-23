@@ -12,6 +12,12 @@ const BASE_URL = (
 const MAX_URLS_PER_SITEMAP = 50000;
 const MIN_TOUR_URL_COUNT = 50;
 
+const EXCLUDED_PRODUCT_CODES = ["36001P1"];
+const EXCLUDED_TOUR_PATH_TOKENS = [
+  ...EXCLUDED_PRODUCT_CODES.map((code) => code.toLowerCase()),
+  "yosemite-in-a-day-tour-from-san-francisco",
+];
+
 const ensurePath = (value) => {
   if (!value) {
     return null;
@@ -37,6 +43,11 @@ const ensurePath = (value) => {
 const addUrl = (set, value) => {
   const normalized = ensurePath(value);
   if (!normalized) {
+    return;
+  }
+
+  const normalizedLower = normalized.toLowerCase();
+  if (EXCLUDED_TOUR_PATH_TOKENS.some((token) => normalizedLower.includes(token))) {
     return;
   }
 

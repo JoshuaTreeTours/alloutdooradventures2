@@ -5,6 +5,7 @@ import {
   engine4ViatorTours,
 } from "./data/viatorTours";
 import { mapViatorToEngine4Tour } from "./viator/mapViatorToEngine4Tour";
+import { isExcludedProductCode } from "../data/excludedProductCodes";
 
 export const getEngine4TourBySlugs = (
   stateSlug: string,
@@ -13,7 +14,9 @@ export const getEngine4TourBySlugs = (
 ): Engine2Tour | null => {
   const path = `/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`;
   const record = engine4ViatorTours.find(
-    tour => buildEngine4TourPath(tour) === path
+    tour =>
+      buildEngine4TourPath(tour) === path &&
+      !isExcludedProductCode(tour.productCode)
   );
 
   if (!record) {

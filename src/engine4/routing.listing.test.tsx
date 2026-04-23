@@ -136,14 +136,11 @@ describe("Engine4 Aspen routing/listing", () => {
     );
   });
 
-  it("builds the 36001P1 route and exposes it in San Francisco listing", () => {
+  it("excludes 36001P1 from San Francisco listing and route resolution", () => {
     const entries = getEngine4ListingEntries("california", "san-francisco");
     const target = entries.find(entry => entry.tour.productCode === "36001P1");
 
-    expect(target).toBeDefined();
-    expect(target?.href).toBe(
-      "/destinations/california/san-francisco/tours/yosemite-in-a-day-tour-from-san-francisco-36001p1"
-    );
+    expect(target).toBeUndefined();
 
     const routed = getEngine4TourBySlugs(
       "california",
@@ -151,7 +148,7 @@ describe("Engine4 Aspen routing/listing", () => {
       "yosemite-in-a-day-tour-from-san-francisco-36001p1"
     );
 
-    expect(routed?.id).toBe("36001P1");
+    expect(routed).toBeNull();
   });
 
   it("builds the 335698P13 route and exposes it in Joshua Tree listing", () => {

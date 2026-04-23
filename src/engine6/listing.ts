@@ -1,4 +1,5 @@
 import type { Tour } from "../data/tours.types";
+import { isExcludedProductCode } from "../data/excludedProductCodes";
 import { isUSStateName } from "../constants/usStates";
 import { toEngine6Card } from "./cards";
 import { legacyFhMigratedTours } from "./legacyFh/registry";
@@ -81,4 +82,6 @@ const dedupeEngine6ToursByCanonicalPath = (tours: Engine6Tour[]) => {
 export const engine6ListingTours: Tour[] = dedupeEngine6ToursByCanonicalPath([
   ...engine6ResolvedTours,
   ...legacyFhMigratedTours,
-]).map(toEngine6ListingTour);
+])
+  .filter(tour => !isExcludedProductCode(tour.productCode))
+  .map(toEngine6ListingTour);
