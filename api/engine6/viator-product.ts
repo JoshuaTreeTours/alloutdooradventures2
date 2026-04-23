@@ -360,18 +360,51 @@ const respondWithBundledFallback = (
   liveExtraction?: ReturnType<typeof extractEngine6Product> | null
 ) => {
   const bundledExtraction = safeExtractEngine6Product(bundledPayload);
+  const dynamicExtraction = liveExtraction?.extracted ?? null;
   const merged = applyResolvedHero({
     productCode,
     baseExtraction: bundledExtraction,
     preferredHeroExtraction: liveExtraction,
     fallbackHeroExtraction: bundledExtraction,
   });
+  const mergedWithLiveDynamicFields = dynamicExtraction
+    ? {
+        ...merged,
+        extracted: {
+          ...merged.extracted,
+          priceAmount:
+            typeof dynamicExtraction.priceAmount === "number"
+              ? dynamicExtraction.priceAmount
+              : merged.extracted.priceAmount,
+          priceFormatted:
+            typeof dynamicExtraction.priceFormatted === "string"
+              ? dynamicExtraction.priceFormatted
+              : merged.extracted.priceFormatted,
+          aggregateRating:
+            typeof dynamicExtraction.aggregateRating === "number"
+              ? dynamicExtraction.aggregateRating
+              : merged.extracted.aggregateRating,
+          reviewCount:
+            typeof dynamicExtraction.reviewCount === "number"
+              ? dynamicExtraction.reviewCount
+              : merged.extracted.reviewCount,
+          durationText:
+            typeof dynamicExtraction.durationText === "string"
+              ? dynamicExtraction.durationText
+              : merged.extracted.durationText,
+          meetingPointText:
+            typeof dynamicExtraction.meetingPointText === "string"
+              ? dynamicExtraction.meetingPointText
+              : merged.extracted.meetingPointText,
+        },
+      }
+    : merged;
   Object.assign(diagnostics, merged.diagnostics, {
     source: "bundled-fallback",
   });
   const strictHeroViolationReason = getStrictHeroViolationReason({
     productCode,
-    extractedHeroUrl: merged.extracted.heroImageUrl,
+    extractedHeroUrl: mergedWithLiveDynamicFields.extracted.heroImageUrl,
     diagnostics,
   });
   if (strictHeroViolationReason) {
@@ -392,7 +425,7 @@ const respondWithBundledFallback = (
     diagnostics,
     productCode,
     rawProduct: bundledExtraction.product,
-    extracted: merged.extracted,
+    extracted: mergedWithLiveDynamicFields.extracted,
     headers: {
       "Cache-Control": "public, s-maxage=300, stale-while-revalidate=1800",
       "X-Engine6-Source": "bundled-exact-product-payload",

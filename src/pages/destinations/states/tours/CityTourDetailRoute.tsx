@@ -56,6 +56,7 @@ import { getEngine4TourBySlugs } from "../../../../engine4/routing";
 import { getLegacyFhMigratedTourBySlugs } from "../../../../engine6/legacyFh/registry";
 import Engine6TourPage from "../../../../engine6/components/Engine6TourPage";
 import { getEngine6NativeTourByCanonicalPath } from "../../../../engine6/registry";
+import type { Engine6ApiResponse, Engine6Tour } from "../../../../engine6/types";
 import { isExcludedProductCode } from "../../../../data/excludedProductCodes";
 import { isEngine6CanonicalPath } from "../../../../engine6/routes";
 import { buildEngine6SchemaGraph } from "../../../../engine6/schema/buildEngine6SchemaGraph";
@@ -108,6 +109,20 @@ export default function CityTourDetailRoute({
     useState<Engine4ViatorApiTour>();
   const [strictBridgeSource, setStrictBridgeSource] =
     useState<Engine4BridgeRuntimeSource>();
+  const [liveEngine6DynamicByProductCode, setLiveEngine6DynamicByProductCode] =
+    useState<
+      Record<
+        string,
+        {
+          priceAmount: number | null;
+          priceFormatted: string | null;
+          aggregateRating: number | null;
+          reviewCount: number | null;
+          durationText: string | null;
+          meetingPointText: string | null;
+        }
+      >
+    >({});
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -220,7 +235,84 @@ export default function CityTourDetailRoute({
     params.tourSlug
   );
 
+  useEffect(() => {
+    if (typeof window === "undefined" || !nativeEngine6Tour?.productCode) {
+      return;
+    }
+
+    let cancelled = false;
+    const productCode = nativeEngine6Tour.productCode;
+
+    fetch(`/api/engine6/viator-product?productCode=${encodeURIComponent(productCode)}`)
+      .then(async response => {
+        if (!response.ok) {
+          return null;
+        }
+        const payload = (await response.json()) as Partial<Engine6ApiResponse>;
+        const extracted = payload?.extracted;
+        if (!extracted) return null;
+        return {
+          priceAmount:
+            typeof extracted.priceAmount === "number" ? extracted.priceAmount : null,
+          priceFormatted:
+            typeof extracted.priceFormatted === "string"
+              ? extracted.priceFormatted
+              : null,
+          aggregateRating:
+            typeof extracted.aggregateRating === "number"
+              ? extracted.aggregateRating
+              : null,
+          reviewCount:
+            typeof extracted.reviewCount === "number" ? extracted.reviewCount : null,
+          durationText:
+            typeof extracted.durationText === "string" ? extracted.durationText : null,
+          meetingPointText:
+            typeof extracted.meetingPointText === "string"
+              ? extracted.meetingPointText
+              : null,
+        };
+      })
+      .then(dynamicFields => {
+        if (cancelled || !dynamicFields) return;
+        setLiveEngine6DynamicByProductCode(previous => ({
+          ...previous,
+          [productCode]: dynamicFields,
+        }));
+      })
+      .catch(() => {
+        // Keep fixture values when live API enrichment is unavailable.
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [nativeEngine6Tour?.productCode]);
+
   if (nativeEngine6Tour) {
+    const liveDynamic = liveEngine6DynamicByProductCode[nativeEngine6Tour.productCode];
+    const resolvedEngine6Tour: Engine6Tour = liveDynamic
+      ? {
+          ...nativeEngine6Tour,
+          priceAmount:
+            liveDynamic.priceAmount !== null
+              ? liveDynamic.priceAmount
+              : nativeEngine6Tour.priceAmount,
+          priceFormatted:
+            liveDynamic.priceFormatted ?? nativeEngine6Tour.priceFormatted,
+          aggregateRating:
+            liveDynamic.aggregateRating !== null
+              ? liveDynamic.aggregateRating
+              : nativeEngine6Tour.aggregateRating,
+          reviewCount:
+            liveDynamic.reviewCount !== null
+              ? liveDynamic.reviewCount
+              : nativeEngine6Tour.reviewCount,
+          durationText: liveDynamic.durationText ?? nativeEngine6Tour.durationText,
+          meetingPointText:
+            liveDynamic.meetingPointText ?? nativeEngine6Tour.meetingPointText,
+        }
+      : nativeEngine6Tour;
+
     assertEngine6RendererSupremacy({
       tourEngine: "engine6",
       renderer: "engine6",
@@ -236,7 +328,7 @@ export default function CityTourDetailRoute({
       ctaUrl: nativeEngine6Tour.bookingUrl,
     });
 
-    const schema = buildEngine6SchemaGraph(nativeEngine6Tour);
+    const schema = buildEngine6SchemaGraph(resolvedEngine6Tour);
     const graph = schema["@graph"] as Array<Record<string, unknown>>;
     const product = graph.find(node => node["@type"] === "Product");
     const schemaImage = (
@@ -251,11 +343,11 @@ export default function CityTourDetailRoute({
       cardImage:
         nativeTourListingEntry?.engine === "engine6"
           ? nativeTourListingEntry.heroImage
-          : nativeEngine6Tour.heroImageUrl,
+          : resolvedEngine6Tour.heroImageUrl,
       schemaImage: primarySchemaImage,
     });
 
-    return <Engine6TourPage tour={nativeEngine6Tour} />;
+    return <Engine6TourPage tour={resolvedEngine6Tour} />;
   }
 
   if (migratedLegacyEngine6Tour) {

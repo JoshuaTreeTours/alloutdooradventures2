@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "36001P14",
+    "productUrl": "https://www.viator.com/tours/San-Francisco/Big-Sur-Monterey-and-Carmel-Tour-From-San-Francisco/d651-36001P14",
+    "title": "Big Sur Monterey and Carmel Tour From San Francisco",
+    "description": "This full-day coastal route links Monterey Bay, Carmel-by-the-Sea, and Big Sur from a San Francisco departure. The itinerary follows Highway 1 and 17-Mile Drive corridors where conditions permit, with scheduled pauses for photos, shoreline viewpoints, and short town walks. Travelers cover key Pacific coast landmarks in one organized day without self-driving the full distance.",
+    "location": {
+      "city": "San Francisco",
+      "state": "California",
+      "country": "USA"
+    },
+    "priceFrom": "$190.85",
+    "reviews": {
+      "combinedAverageRating": "4.5",
+      "totalReviews": "34"
+    },
+    "duration": "12 hours (approx.)",
+    "highlights": [
+      "Day trip from San Francisco covering Monterey, Carmel, and Big Sur",
+      "Pacific coast sightseeing with Highway 1 segments when road conditions allow",
+      "Time in Monterey waterfront areas and Cannery Row district",
+      "Stop in Carmel-by-the-Sea for independent walking and photos",
+      "Scenic Big Sur viewpoints included in route planning"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hilton San Francisco Union Square, 333 O'Farrell St, San Francisco, CA 94102, USA"
+      },
+      "end": {
+        "description": "Returns to the original departure area in San Francisco."
+      }
+    },
+    "itinerarySummary": "Long coastal day trip from San Francisco with organized sightseeing stops across Monterey, Carmel, and Big Sur viewpoints.",
+    "itineraryItems": [
+      {
+        "title": "Pacific Coast Highway",
+        "description": "Scenic drive segment with narrated coastal context.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Monterey",
+        "description": "Stop for waterfront orientation and free time in the historic bay district.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cannery Row",
+        "description": "Pass-by through Monterey's former sardine district and shoreline corridor.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "17-Mile Drive",
+        "description": "Coastal pass-by route featuring Pebble Beach-area viewpoints when open.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Carmel-by-the-Sea",
+        "description": "Stop for independent walk time around downtown streets and beach viewpoints.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Big Sur",
+        "description": "Stop at selected coastal overlooks for photos and landscape viewing.",
+        "stopType": "stop"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How long is this tour?",
+        "answer": "The planned duration is about 12 hours, including road time and scheduled stops."
+      },
+      {
+        "question": "Where is the meeting point?",
+        "answer": "Departure is set for Hilton San Francisco Union Square at 333 O'Farrell St, San Francisco."
+      }
+    ],
+    "categories": [
+      {
+        "name": "Day Trips"
+      },
+      {
+        "name": "Bus Tours"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/32/61/6c/fa/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
