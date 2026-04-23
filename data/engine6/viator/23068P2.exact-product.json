@@ -1,0 +1,87 @@
+{
+  "product": {
+    "productCode": "23068P2",
+    "productUrl": "https://www.viator.com/tours/San-Francisco/San-Francisco-Love-Tour/d651-23068P2",
+    "title": "San Francisco Love Tour",
+    "description": {
+      "text": "Small-group city tour of San Francisco in a vintage Volkswagen bus with stops at major neighborhoods and viewpoints. The route covers waterfront and hilltop locations with short commentary and photo breaks."
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California"
+    },
+    "priceFrom": "$79.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1900
+    },
+    "duration": "2 hours",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/0c/3e/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ride in a vintage Volkswagen bus",
+      "City route focused on key San Francisco districts",
+      "Photo stops at selected viewpoints"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meeting point in San Francisco provided after booking confirmation."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Fisherman's Wharf",
+        "stopType": "PASS_BY",
+        "description": "Pass through the waterfront district near historic piers.",
+        "duration": "Pass by"
+      },
+      {
+        "title": "Palace of Fine Arts Theatre",
+        "description": "Short photo stop at the lagoon and colonnade.",
+        "duration": "10 minutes"
+      },
+      {
+        "title": "Crissy Field",
+        "description": "Stop for Golden Gate Bridge and bay views.",
+        "duration": "10 minutes"
+      },
+      {
+        "title": "Lombard Street",
+        "stopType": "PASS_BY",
+        "description": "Pass by the curved hill section of Lombard Street.",
+        "duration": "Pass by"
+      },
+      {
+        "title": "Painted Ladies",
+        "description": "Photo stop with Alamo Square skyline views.",
+        "duration": "10 minutes"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long is the tour?",
+        "answer": "The listed duration is about 2 hours."
+      },
+      {
+        "question": "Where is the meeting point?",
+        "answer": "The meeting location is in San Francisco and is provided with booking details."
+      }
+    ],
+    "additionalInfo": [
+      "Mobile ticket accepted.",
+      "Small-group format."
+    ]
+  }
+}
