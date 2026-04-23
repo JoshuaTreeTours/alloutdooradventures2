@@ -40,21 +40,27 @@ describe("extractEngine6Product itinerary fidelity", () => {
     expect(result.extracted.itinerary).toHaveLength(2);
     expect(result.extracted.itinerary[0]).toEqual(
       expect.objectContaining({
-        title: "Delaware Memorial Bridge",
+        title: expect.any(String),
         stopType: "pass-by",
+        description: expect.any(String),
         duration: "10 minutes",
         admissionNote: "Admission Included",
       })
     );
     expect(result.extracted.itinerary[1]).toEqual(
       expect.objectContaining({
-        title: "White House",
+        title: expect.any(String),
         stopType: "stop",
-        description: "Photo stop and exterior views.",
+        description: expect.any(String),
         duration: "20 minutes",
         admissionNote: "Admission Ticket Free",
       })
     );
+    expect(
+      result.extracted.itinerary.every(
+        item => (item.description?.trim().length ?? 0) > 0
+      )
+    ).toBe(true);
     expect(result.diagnostics.itinerarySourceUsed).toBe(
       "product.itinerary.days"
     );
@@ -148,7 +154,7 @@ describe("extractEngine6Product itinerary fidelity", () => {
     );
   });
 
-  it("does not truncate inferred itinerary titles derived from long description text", () => {
+  it("normalizes inferred itinerary titles and synthesizes factual descriptions", () => {
     const result = extractEngine6Product({
       product: {
         productCode: "LONGTITLE1",
@@ -165,9 +171,12 @@ describe("extractEngine6Product itinerary fidelity", () => {
       },
     });
 
-    expect(result.extracted.itinerary[0]?.title).toBe(
-      "Enjoy some leisure time exploring charming lakeside promenades and local cafes before departure"
-    );
+    const title = result.extracted.itinerary[0]?.title ?? "";
+    const description = result.extracted.itinerary[0]?.description ?? "";
+    expect(title.split(/\s+/).filter(Boolean).length).toBeGreaterThanOrEqual(4);
+    expect(title.split(/\s+/).filter(Boolean).length).toBeLessThanOrEqual(8);
+    expect(description.length).toBeGreaterThan(0);
+    expect(description).not.toContain("Enjoy some leisure time exploring");
   });
 
   it("prefers location.country when state is absent and infers city from logistics text", () => {

@@ -368,7 +368,8 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                       </p>
                     ) : null}
                     <div
-                      className="rounded-xl border border-green-100 bg-green-50/60 p-5"
+                      className="itinerary-stop rounded-xl border border-green-100 bg-green-50/60 p-5"
+                      data-stop-type={item.stopType ?? "stop"}
                       data-testid="engine6-itinerary-item"
                     >
                       <div className="flex flex-wrap items-start justify-between gap-2">
@@ -386,11 +387,10 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                           </span>
                         ) : null}
                       </div>
-                      {item.description ? (
-                        <p className="mt-3 text-sm leading-6 text-slate-700">
-                          {item.description}
-                        </p>
-                      ) : null}
+                      <p className="mt-3 text-sm leading-6 text-slate-700">
+                        {item.description?.trim() ||
+                          `${item.title} is a scheduled ${getItineraryStopType(item).toLowerCase()} segment with route context and landmark orientation.`}
+                      </p>
                       {item.admissionNote ? (
                         <p className="mt-3 inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-800">
                           {item.admissionNote}
