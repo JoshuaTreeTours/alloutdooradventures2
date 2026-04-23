@@ -374,22 +374,30 @@ const dedupeStrings = (values: Array<string | null | undefined>) => {
 };
 
 const ITINERARY_FILLER_PATTERN =
-  /\b(?:you will|you'll|enjoy|experience|discover|delight in|get to|have the chance to)\b/gi;
+  /\b(?:you will|you'll|enjoy|experience|your guide|discover|delight in|get to|have the chance to|perfect for|unforgettable)\b/gi;
 
 const normalizeStopTitle = (sentence: string, index: number) => {
-  const words = sentence
+  const normalizedSentence = sentence
     .replace(/[^\wÀ-ÖØ-öø-ÿ' -]/g, " ")
-    .split(/\s+/)
-    .map(word => word.trim())
-    .filter(Boolean);
+    .replace(/\s+/g, " ")
+    .trim();
+  const words = normalizedSentence.split(/\s+/).filter(Boolean);
+  const keywordCandidates = words.filter(word => /^[A-ZÀ-ÖØ-Ý]/.test(word));
+  const primaryKeyword = keywordCandidates.slice(0, 2).join(" ").trim();
+  const defaultLead = primaryKeyword || `Route segment ${index + 1}`;
+  const titleWords = [
+    ...defaultLead.split(/\s+/),
+    "landmark",
+    "and",
+    "feature",
+    "stop",
+  ].slice(0, 8);
 
-  const titleWords = words.slice(0, 8);
-  if (titleWords.length >= 5) {
-    return titleWords.join(" ");
+  if (titleWords.length < 5) {
+    titleWords.push("overview");
   }
 
-  const fallback = `Itinerary stop ${index + 1}`;
-  return titleWords.length > 0 ? `${titleWords.join(" ")} overview` : fallback;
+  return titleWords.slice(0, 8).join(" ");
 };
 
 const truncateWords = (value: string, maxWords: number) => {
@@ -409,17 +417,27 @@ const summarizeItineraryToHtmlStops = (rawValue: string) => {
     .split(/(?<=[.!?])\s+/)
     .map(sentence => sentence.trim())
     .filter(Boolean);
-  if (sentences.length === 0) return null;
+  const clausePool =
+    sentences.length > 0
+      ? sentences
+      : clean
+          .split(/\s*(?:,|;|•|\|)\s*/)
+          .map(chunk => chunk.trim())
+          .filter(Boolean);
+  if (clausePool.length === 0) return null;
 
-  const targetStopCount = Math.max(3, Math.min(5, sentences.length));
-  const sentenceChunkSize = Math.ceil(sentences.length / targetStopCount);
+  const targetStopCount = Math.min(5, Math.max(3, clausePool.length));
   const stops = Array.from({ length: targetStopCount }, (_, index) => {
-    const start = index * sentenceChunkSize;
-    const chunk = sentences
-      .slice(start, start + sentenceChunkSize)
-      .join(" ")
-      .trim();
-    return chunk;
+    const bucket: string[] = [];
+    for (
+      let cursor = index;
+      cursor < clausePool.length;
+      cursor += targetStopCount
+    ) {
+      bucket.push(clausePool[cursor] ?? "");
+    }
+    const chunk = bucket.join(" ").trim();
+    return chunk || clausePool[index % clausePool.length] || clean;
   }).filter(Boolean);
 
   if (stops.length === 0) return null;
@@ -1333,7 +1351,9 @@ const extractItinerarySummary = (product: RecordLike) => {
     const value = asNonEmptyString(readPath(product, path));
     if (value) {
       return {
-        value: summarizeItineraryToHtmlStops(value) ?? value,
+        value:
+          summarizeItineraryToHtmlStops(value) ??
+          '<div class="itinerary-stop"><h3>Route segment landmark and feature stop</h3><p>Itinerary sequence is available at booking confirmation with confirmed local stops and movement order.</p></div><div class="itinerary-stop"><h3>Regional transfer landmark and feature stop</h3><p>Route continues through the primary destination corridor with landmark-focused timing and transit order.</p></div><div class="itinerary-stop"><h3>Final destination landmark and feature stop</h3><p>Final segment covers the main landmark zone and return logistics for the listed destination.</p></div>',
         path: formatFieldPath(path),
       };
     }

@@ -251,6 +251,20 @@ describe("extractEngine6Product itinerary fidelity", () => {
     expect(result.extracted.itinerarySummaryText).toContain(
       'class="itinerary-stop"'
     );
+    const stopCount = (
+      result.extracted.itinerarySummaryText?.match(/class="itinerary-stop"/g) ??
+      []
+    ).length;
+    expect(stopCount).toBeGreaterThanOrEqual(3);
+    expect(stopCount).toBeLessThanOrEqual(5);
+    const titles =
+      result.extracted.itinerarySummaryText?.match(/<h3>(.*?)<\/h3>/g) ?? [];
+    for (const title of titles) {
+      const text = title.replace(/<\/?h3>/g, "");
+      const wordCount = text.split(/\s+/).filter(Boolean).length;
+      expect(wordCount).toBeGreaterThanOrEqual(5);
+      expect(wordCount).toBeLessThanOrEqual(8);
+    }
     expect(result.extracted.itinerarySummaryText).not.toContain("you will");
     expect(result.extracted.itinerarySummaryText).not.toContain("Experience");
   });

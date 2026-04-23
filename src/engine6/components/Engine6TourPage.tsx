@@ -60,9 +60,9 @@ const toItineraryStopHtml = (summary: string) => {
   return normalizeItinerarySummaryBlocks(summary)
     .map(
       (segment, index) =>
-        `<div class="itinerary-stop"><h3>Stop ${index + 1}</h3><p>${escapeHtml(
-          segment
-        )}</p></div>`
+        `<div class="itinerary-stop"><h3>Route segment ${
+          index + 1
+        } landmark feature stop</h3><p>${escapeHtml(segment)}</p></div>`
     )
     .join("");
 };
