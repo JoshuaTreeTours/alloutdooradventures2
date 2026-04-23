@@ -1,0 +1,81 @@
+{
+  "product": {
+    "productCode": "2660SFOWIN",
+    "productUrl": "https://www.viator.com/tours/San-Francisco/Napa-and-Sonoma-Wine-Country-Tour/d651-2660SFOWIN",
+    "title": "Napa and Sonoma Wine Country Tour",
+    "description": {
+      "text": "Full-day coach tour from San Francisco to Napa Valley and Sonoma Valley with scheduled winery visits. The route crosses the Golden Gate Bridge and includes tasting stops plus time in Sonoma Plaza before returning to San Francisco."
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California"
+    },
+    "priceFrom": "$129.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 4200
+    },
+    "duration": "8 to 9 hours",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/20/96/d2/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Round-trip wine country day trip from San Francisco",
+      "Visits in both Napa Valley and Sonoma Valley",
+      "Free time in Sonoma Plaza"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Departure from selected San Francisco pickup points."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Golden Gate Bridge",
+        "stopType": "PASS_BY",
+        "description": "Cross the bridge northbound on the way to wine country.",
+        "duration": "Pass by"
+      },
+      {
+        "title": "Napa Valley",
+        "description": "Winery tasting stop in Napa Valley.",
+        "duration": "1 hour"
+      },
+      {
+        "title": "Sonoma Valley",
+        "description": "Winery tasting stop in Sonoma Valley.",
+        "duration": "1 hour"
+      },
+      {
+        "title": "Sonoma Plaza",
+        "description": "Free time for lunch and independent walking in the plaza area.",
+        "duration": "1 hour"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long is the tour?",
+        "answer": "The listed duration is about 8 to 9 hours."
+      },
+      {
+        "question": "Where does the tour start?",
+        "answer": "The departure point is at selected San Francisco pickup locations."
+      }
+    ],
+    "additionalInfo": [
+      "Full-day itinerary.",
+      "Winery tasting stops included in route plan."
+    ]
+  }
+}
