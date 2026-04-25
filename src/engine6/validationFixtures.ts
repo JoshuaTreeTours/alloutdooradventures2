@@ -40,6 +40,7 @@ import specimen327321p1Payload from "../../data/engine6/viator/327321P1.exact-pr
 import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-product.json";
 import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-product.json";
 import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-product.json";
+import specimen5598628p3Payload from "../../data/engine6/viator/5598628P3.exact-product.json";
 import specimen383300p6Payload from "../../data/engine6/viator/383300P6.exact-product.json";
 import specimen76145p2Payload from "../../data/engine6/viator/76145P2.exact-product.json";
 import specimen5559561p1Payload from "../../data/engine6/viator/5559561P1.exact-product.json";
@@ -480,6 +481,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/San-Diego/Half-Day-4x4-Adventure/d736-173946P1",
     rawPayload: specimen173946p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5598628P3",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/San-Diego-Classic-Sail-Charter-Private-3-Hour-Experience/d736-5598628P3",
+    rawPayload: specimen5598628p3Payload as Record<string, unknown>,
   },
   {
     productCode: "327321P1",
