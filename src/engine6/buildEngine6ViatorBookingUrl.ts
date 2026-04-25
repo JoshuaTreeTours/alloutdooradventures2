@@ -66,9 +66,15 @@ export const buildEngine6ViatorBookingUrl = (
       `${FALLBACK_ENGINE6_VIATOR_SEARCH_URL}/${encodeURIComponent(productCode)}`
     );
 
-  url.searchParams.set("pid", ENGINE6_VIATOR_AFFILIATE_PARAMS.pid);
-  url.searchParams.set("mcid", ENGINE6_VIATOR_AFFILIATE_PARAMS.mcid);
-  url.searchParams.set("medium", ENGINE6_VIATOR_AFFILIATE_PARAMS.medium);
+  if (!url.searchParams.get("pid")) {
+    url.searchParams.set("pid", ENGINE6_VIATOR_AFFILIATE_PARAMS.pid);
+  }
+  if (!url.searchParams.get("mcid")) {
+    url.searchParams.set("mcid", ENGINE6_VIATOR_AFFILIATE_PARAMS.mcid);
+  }
+  if (!url.searchParams.get("medium")) {
+    url.searchParams.set("medium", ENGINE6_VIATOR_AFFILIATE_PARAMS.medium);
+  }
 
   return url.toString();
 };

@@ -154,6 +154,9 @@ export const ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE =
 export const ENGINE6_SAN_DIEGO_HALF_DAY_4X4_PRODUCT_CODE = "173946P1";
 export const ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE =
   "/destinations/california/san-diego/tours/half-day-4x4-adventure";
+export const ENGINE6_SAN_DIEGO_CLASSIC_SAIL_CHARTER_PRODUCT_CODE = "5598628P3";
+export const ENGINE6_SAN_DIEGO_CLASSIC_SAIL_CHARTER_ROUTE =
+  "/destinations/california/san-diego/tours/san-diego-bay-sail-aboard-a-french-yacht-beer-and-wine-included";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE = "327321P1";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE =
   "/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs";
@@ -433,6 +436,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
     ENGINE6_SAN_DIEGO_HALF_DAY_4X4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_DIEGO_CLASSIC_SAIL_CHARTER_ROUTE,
+    ENGINE6_SAN_DIEGO_CLASSIC_SAIL_CHARTER_PRODUCT_CODE,
   ],
   [
     ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
