@@ -105,9 +105,9 @@ export const buildEngine6ValidationReport = (
   const bookingAttributionIsValid = tour.bookingUrl.startsWith("/destinations/")
     ? tour.bookingUrl.endsWith("/book")
     : tour.bookingUrl.startsWith(fixture.publicUrl) &&
-      tour.bookingUrl.includes("pid=") &&
-      tour.bookingUrl.includes("mcid=") &&
-      (tour.bookingUrl.includes("medium=") || tour.bookingUrl.includes("currency="));
+      tour.bookingUrl.includes("pid=P00290915") &&
+      tour.bookingUrl.includes("mcid=42383") &&
+      tour.bookingUrl.includes("medium=link");
 
   return {
     productCode: fixture.productCode,

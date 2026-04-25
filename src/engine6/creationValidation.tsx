@@ -234,8 +234,8 @@ export const validateEngine6CreationContract = ({
   const hasInternalBookingPath = tour.bookingUrl.startsWith("/destinations/");
   if (
     !hasInternalBookingPath &&
-    (!tour.bookingUrl.includes("pid=") ||
-      !tour.bookingUrl.includes("mcid="))
+    (!tour.bookingUrl.includes("pid=P00290915") ||
+      !tour.bookingUrl.includes("mcid=42383"))
   ) {
     violations.push("booking CTA lost required Viator monetization parameters");
   }
