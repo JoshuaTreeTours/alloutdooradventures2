@@ -206,6 +206,14 @@ const stripHtml = (value: string) =>
     .replace(/[ \t]+/g, " ")
     .trim();
 
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
 const asNonEmptyString = (value: unknown): string | null => {
   if (typeof value !== "string") {
     return null;
@@ -298,7 +306,9 @@ const LOCATION_CITY_PATTERNS = [
   /\bfrom\s+([A-Z][A-Za-zÀ-ÖØ-öø-ÿ' -]{1,60}?)(?=\s+(?:to|is|at)\b|,|\.)/i,
 ];
 
-const LOCATION_COUNTRY_PATTERNS = [/\b(Switzerland|United States|USA|Canada|Mexico)\b/i];
+const LOCATION_COUNTRY_PATTERNS = [
+  /\b(Switzerland|United States|USA|Canada|Mexico)\b/i,
+];
 
 const normalizeLocationToken = (value: string) =>
   value
@@ -361,6 +371,244 @@ const dedupeStrings = (values: Array<string | null | undefined>) => {
   }
 
   return deduped;
+};
+
+const ITINERARY_FILLER_PATTERN =
+  /\b(?:you will|you'll|enjoy|experience|your guide|expert guide|fluent in your chosen language|take you on a journey|discover|delight in|get to|have the chance to|perfect for|unforgettable|renowned|must-visit|don't miss|fascinating history|bustling hub of activity)\b/gi;
+
+const inferSummaryStopType = (
+  value: string
+): "pass-by" | "stop" | "visit" | "cruise" => {
+  const text = value.toLowerCase();
+  if (/\b(pass[\s-]?by|drive by|drive past)\b/.test(text)) return "pass-by";
+  if (/\b(cruise|boat|sail|ferry|lake crossing)\b/.test(text)) return "cruise";
+  if (
+    /\b(visit|museum|cathedral|church|gallery|market|plaza|square)\b/.test(text)
+  )
+    return "visit";
+  return "stop";
+};
+
+const normalizeStopTitle = (sentence: string, index: number) => {
+  const compact = sentence.replace(/\s+/g, " ").trim();
+  const locationMatch =
+    compact.match(
+      /\b(?:at|to|in|from|through|toward|towards|near)\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*(?:\s+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*){0,4})/
+    )?.[1] ??
+    compact.match(
+      /\b([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*(?:\s+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*){0,4})\b/
+    )?.[1] ??
+    null;
+
+  const place = (locationMatch ?? `Route segment ${index + 1}`)
+    .replace(/[^\wÀ-ÖØ-öø-ÿ' -]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const stopType = inferSummaryStopType(compact);
+  const contextWord =
+    stopType === "cruise"
+      ? "Cruise Segment"
+      : stopType === "pass-by"
+        ? "Pass-By Segment"
+        : stopType === "visit"
+          ? "Visit Stop"
+          : "Route Stop";
+  const combined = `${place} ${contextWord}`.trim();
+  const words = combined.split(/\s+/).filter(Boolean).slice(0, 8);
+
+  if (words.length < 4) {
+    words.push("City", "Highlights");
+  }
+  return words.slice(0, 8).join(" ");
+};
+
+const truncateWords = (value: string, maxWords: number) => {
+  const words = value.split(/\s+/).filter(Boolean);
+  if (words.length <= maxWords) return value;
+  return `${words.slice(0, maxWords).join(" ")}.`;
+};
+
+const inferStopFeature = (value: string) => {
+  const text = value.toLowerCase();
+  if (/\b(museum|gallery|exhibit)\b/.test(text)) return "Museum Visit";
+  if (/\b(cathedral|church|basilica|temple)\b/.test(text))
+    return "Historic Landmark Stop";
+  if (/\b(lake|river|harbor|bay|waterfront)\b/.test(text))
+    return "Waterfront Segment";
+  if (/\b(old town|historic center|city center|downtown)\b/.test(text))
+    return "Old Town Walk";
+  if (/\b(viewpoint|hill|overlook|summit)\b/.test(text))
+    return "Viewpoint Stop";
+  if (/\b(station|terminal|railway)\b/.test(text))
+    return "Transit Corridor Pass-By";
+  if (/\b(bridge|dam)\b/.test(text)) return "Landmark Photo Stop";
+  if (/\b(cruise|boat|sail|ferry)\b/.test(text)) return "Cruise Segment";
+  return "City Highlights Stop";
+};
+
+const inferStopPlace = (value: string, index: number) => {
+  const match =
+    value.match(
+      /\b([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*(?:\s+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&-]*){0,3})\b/
+    )?.[1] ?? null;
+  return (match ?? `City Segment ${index + 1}`)
+    .replace(/\b(Railway main station|Main station)\b/gi, "Main Station")
+    .replace(/\b(Zürich)\b/g, "Zurich")
+    .replace(/\s+/g, " ")
+    .trim();
+};
+
+const buildStopSummary = (
+  place: string,
+  feature: string,
+  stopType: "pass-by" | "stop" | "visit" | "cruise",
+  parentContext?: string | null
+) => {
+  const inferNoun = () => {
+    const text = `${place} ${feature}`.toLowerCase();
+    if (/\bpark\b/.test(text)) return "park";
+    if (/\bstation|terminal\b/.test(text)) return "station";
+    if (/\bbridge\b/.test(text)) return "bridge";
+    if (/\bmuseum|gallery\b/.test(text)) return "museum";
+    if (/\bcathedral|church|temple|basilica\b/.test(text)) return "landmark";
+    if (/\bavenue|street|boulevard|road\b/.test(text)) return "street corridor";
+    if (/\bhill|overlook|viewpoint|summit\b/.test(text)) return "viewpoint";
+    if (/\blake|river|harbor|bay|waterfront\b/.test(text)) return "waterfront";
+    if (/\bold town|downtown|midtown|district|center\b/.test(text))
+      return "district";
+    return "landmark";
+  };
+  const noun = inferNoun();
+  const contextPlace = parentContext
+    ? inferStopPlace(parentContext, 0).replace(/\s+/g, " ")
+    : null;
+  const action =
+    stopType === "pass-by"
+      ? "Pass"
+      : stopType === "cruise"
+        ? "Cruise through"
+        : stopType === "visit"
+          ? "Visit"
+          : "Stop at";
+  return truncateWords(
+    `${action} ${place}, a notable ${noun}${contextPlace ? ` in ${contextPlace}` : ""}. This stop highlights local geography and landmark significance.`,
+    28
+  );
+};
+
+const normalizeUnifiedItineraryItems = (
+  items: Engine6ExtractedItineraryItem[],
+  parentContext?: string | null
+): Engine6ExtractedItineraryItem[] => {
+  return items.map((item, index) => {
+    const sourceText = [
+      item.title,
+      item.description ?? "",
+      item.sectionLabel ?? "",
+      parentContext ?? "",
+    ]
+      .join(" ")
+      .replace(ITINERARY_FILLER_PATTERN, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    const stopType = inferSummaryStopType(
+      `${item.stopType ?? ""} ${sourceText}`.trim()
+    );
+    const place = inferStopPlace(sourceText, index);
+    const feature = inferStopFeature(sourceText);
+    const title = normalizeStopTitle(`${place} ${feature}`, index);
+    const description = buildStopSummary(
+      place,
+      feature,
+      stopType,
+      parentContext
+    );
+
+    return {
+      ...item,
+      title,
+      stopType,
+      description,
+    };
+  });
+};
+
+const summarizeItineraryToHtmlStops = (rawValue: string) => {
+  const clean = stripHtml(rawValue)
+    .replace(ITINERARY_FILLER_PATTERN, "")
+    .replace(/\b(?:the|a|an)\s+(?:famous|iconic|beautiful|stunning)\b/gi, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+  if (!clean) return null;
+
+  const sentences = clean
+    .split(/(?<=[.!?])\s+/)
+    .map(sentence => sentence.trim())
+    .filter(Boolean);
+  const clausePool =
+    sentences.length > 0
+      ? sentences
+      : clean
+          .split(/\s*(?:,|;|•|\|)\s*/)
+          .map(chunk => chunk.trim())
+          .filter(Boolean);
+  if (clausePool.length === 0) return null;
+
+  const targetStopCount = Math.min(5, Math.max(3, clausePool.length));
+  const clusteredStops = Array.from({ length: targetStopCount }, (_, index) => {
+    const bucket: string[] = [];
+    for (
+      let cursor = index;
+      cursor < clausePool.length;
+      cursor += targetStopCount
+    ) {
+      bucket.push(clausePool[cursor] ?? "");
+    }
+    const chunk = bucket.join(" ").trim();
+    return chunk || clausePool[index % clausePool.length] || clean;
+  }).filter(Boolean);
+
+  const dedupedStops = dedupeStrings(
+    clusteredStops.map(stop =>
+      stop
+        .replace(/\b(old town|historic center|city center)\b/gi, "old town")
+        .replace(/\s+/g, " ")
+        .trim()
+    )
+  );
+  if (dedupedStops.length === 0) return null;
+
+  const normalizedStops = dedupedStops.slice(0, 5).map((stopText, index) => {
+    const stopType = inferSummaryStopType(stopText);
+    const place = inferStopPlace(stopText, index);
+    const feature = inferStopFeature(stopText);
+    const title = normalizeStopTitle(`${place} ${feature}`, index);
+    const summary = buildStopSummary(place, feature, stopType, clean);
+    return { title, summary, stopType };
+  });
+
+  while (normalizedStops.length < 3) {
+    const seed = normalizedStops[normalizedStops.length - 1] ?? {
+      title: "City Center Highlights Stop",
+      summary:
+        "City Center covers the route sequence and landmark context before the next itinerary segment.",
+      stopType: "stop" as const,
+    };
+    normalizedStops.push({
+      title: normalizeStopTitle(seed.title, normalizedStops.length),
+      summary: truncateWords(seed.summary, 28),
+      stopType: seed.stopType,
+    });
+  }
+
+  return normalizedStops
+    .map(
+      stop =>
+        `<div class="itinerary-stop" data-stop-type="${stop.stopType}"><h3>${escapeHtml(
+          stop.title
+        )}</h3><p>${escapeHtml(stop.summary)}</p></div>`
+    )
+    .join("");
 };
 
 const firstParagraph = (value: string | null) =>
@@ -523,7 +771,10 @@ const resolveImageCollectionHeroCandidates = (
       asImageUrl(image.url) ??
       asImageUrl(image.src) ??
       asImageUrl(image.imageUrl);
-    if (directUrl && !imageVariants.some(variant => variant.url === directUrl)) {
+    if (
+      directUrl &&
+      !imageVariants.some(variant => variant.url === directUrl)
+    ) {
       const directPath = asImageUrl(image.url)
         ? formatFieldPath([...basePath, "url"])
         : asImageUrl(image.src)
@@ -550,8 +801,8 @@ const withHeroScope = (
 ): Engine6HeroCandidate => {
   const normalizeHeroPath = (path: string) =>
     path
-    .replace(/^product\.product\./, "product.")
-    .replace(/^media\./, "product.media.");
+      .replace(/^product\.product\./, "product.")
+      .replace(/^media\./, "product.media.");
   const normalizedSourceFieldPath = normalizeHeroPath(hero.path);
   const normalizedVariantPath = normalizeHeroPath(hero.variantPath);
 
@@ -581,7 +832,9 @@ const extractPlaybookHeroCandidates = ({
     "api-primary"
   );
   candidates.push(
-    ...mediaHeroes.map(hero => withHeroScope(hero, productCode, sourceProductUrl))
+    ...mediaHeroes.map(hero =>
+      withHeroScope(hero, productCode, sourceProductUrl)
+    )
   );
 
   return candidates;
@@ -624,7 +877,9 @@ const extractPlaybookPrice = (product: RecordLike): PriceResult => {
         (
           candidate
         ): candidate is { amount: number; path: string; rawValue: unknown } =>
-          candidate.amount !== null && Number.isFinite(candidate.amount) && candidate.amount > 0
+          candidate.amount !== null &&
+          Number.isFinite(candidate.amount) &&
+          candidate.amount > 0
       );
 
   const selectLowestCandidate = (
@@ -799,7 +1054,13 @@ const extractPlaybookPrice = (product: RecordLike): PriceResult => {
     parsePriceAmount(readPath(product, ["pricingInfo", "price", "fromPrice"])),
     parsePriceAmount(readPath(product, ["pricingInfo", "price", "amount"])),
     parsePriceAmount(
-      readPath(product, ["productOptions", 0, "pricingInfo", "price", "fromPrice"])
+      readPath(product, [
+        "productOptions",
+        0,
+        "pricingInfo",
+        "price",
+        "fromPrice",
+      ])
     ),
     parsePriceAmount(
       readPath(product, ["productOptions", 0, "pricingInfo", "price", "amount"])
@@ -1007,7 +1268,8 @@ const normalizeSingleItineraryItem = (
     const descriptionText = asNonEmptyString(row.description);
     if (!descriptionText) return null;
 
-    const firstSentence = descriptionText.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
+    const firstSentence =
+      descriptionText.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
     if (!firstSentence) return null;
 
     const locationPattern =
@@ -1143,7 +1405,10 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
       return nestedRows;
     }
 
-    return [{ row, sectionLabel: inheritedSectionLabel ?? null }, ...nestedRows];
+    return [
+      { row, sectionLabel: inheritedSectionLabel ?? null },
+      ...nestedRows,
+    ];
   };
 
   const normalizeItinerary = (
@@ -1236,7 +1501,12 @@ const extractItinerarySummary = (product: RecordLike) => {
   ] as PathSegment[][]) {
     const value = asNonEmptyString(readPath(product, path));
     if (value) {
-      return { value, path: formatFieldPath(path) };
+      return {
+        value:
+          summarizeItineraryToHtmlStops(value) ??
+          '<div class="itinerary-stop"><h3>Route segment landmark and feature stop</h3><p>Itinerary sequence is available at booking confirmation with confirmed local stops and movement order.</p></div><div class="itinerary-stop"><h3>Regional transfer landmark and feature stop</h3><p>Route continues through the primary destination corridor with landmark-focused timing and transit order.</p></div><div class="itinerary-stop"><h3>Final destination landmark and feature stop</h3><p>Final segment covers the main landmark zone and return logistics for the listed destination.</p></div>',
+        path: formatFieldPath(path),
+      };
     }
   }
 
@@ -1273,7 +1543,11 @@ const extractMeetingPoint = (product: RecordLike) => {
       };
     }
 
-    return { value: compact, summaryApplied: false, reason: null as string | null };
+    return {
+      value: compact,
+      summaryApplied: false,
+      reason: null as string | null,
+    };
   };
 
   for (const candidate of [
@@ -1286,7 +1560,8 @@ const extractMeetingPoint = (product: RecordLike) => {
       path: "product.logistics.start[0].description",
     },
     {
-      value: asRecord(asRecord(product.meetingAndPickup)?.meetingPoint)?.description,
+      value: asRecord(asRecord(product.meetingAndPickup)?.meetingPoint)
+        ?.description,
       path: "product.meetingAndPickup.meetingPoint.description",
     },
     {
@@ -1338,7 +1613,8 @@ const extractMeetingPoint = (product: RecordLike) => {
     asNonEmptyString(asRecord(product.description)?.text) ??
     asNonEmptyString(product.description);
   if (overviewFallback) {
-    const firstSentence = overviewFallback.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
+    const firstSentence =
+      overviewFallback.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
     if (firstSentence) {
       return {
         value: firstSentence,
@@ -1637,7 +1913,9 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     asRecord((asRecord(product.logistics)?.start as unknown[] | undefined)?.[0])
       ?.description
   );
-  const itineraryItems = Array.isArray(asRecord(product.itinerary)?.itineraryItems)
+  const itineraryItems = Array.isArray(
+    asRecord(product.itinerary)?.itineraryItems
+  )
     ? (asRecord(product.itinerary)?.itineraryItems as unknown[])
     : [];
   const itineraryStartDescription = asNonEmptyString(
@@ -1689,14 +1967,19 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.heroCandidatesPresent = heroCandidates.length > 0;
   diagnostics.heroCandidateCount = heroCandidates.length;
   diagnostics.heroCandidateCountBeforeFiltering = heroCandidates.length;
-  diagnostics.heroCandidateCountAfterFiltering = heroDecision.finalCandidate ? 1 : 0;
-  diagnostics.heroImageFieldPath = heroDecision.finalCandidate?.fieldPath ?? null;
-  diagnostics.heroVariantFieldPath = heroDecision.finalCandidate?.variantPath ?? null;
+  diagnostics.heroCandidateCountAfterFiltering = heroDecision.finalCandidate
+    ? 1
+    : 0;
+  diagnostics.heroImageFieldPath =
+    heroDecision.finalCandidate?.fieldPath ?? null;
+  diagnostics.heroVariantFieldPath =
+    heroDecision.finalCandidate?.variantPath ?? null;
   diagnostics.selectedHeroWidth = heroDecision.finalCandidate?.width ?? null;
   diagnostics.selectedHeroHeight = heroDecision.finalCandidate?.height ?? null;
   diagnostics.imageSourceUsed = heroDecision.heroSourceType;
   diagnostics.heroSourceType = heroDecision.heroSourceType;
-  diagnostics.heroQualityClassification = heroDecision.heroQualityClassification;
+  diagnostics.heroQualityClassification =
+    heroDecision.heroQualityClassification;
   diagnostics.finalHeroUrl = heroDecision.heroUrl;
   diagnostics.heroFallbackTriggered = heroDecision.fallbackTriggered;
   diagnostics.heroPlaceholderFallbackReason = heroDecision.fallbackTriggered
@@ -1724,7 +2007,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroDecision.rejectedForeignCandidates
       .slice(0, 3)
       .map(candidate => `${candidate.reason}:${candidate.url}`);
-  diagnostics.rejectedForeignHeroCandidates = heroDecision.rejectedForeignCandidates;
+  diagnostics.rejectedForeignHeroCandidates =
+    heroDecision.rejectedForeignCandidates;
   diagnostics.heroSourceProductCode =
     heroDecision.finalCandidate?.sourceProductCode ?? null;
   diagnostics.heroSourceProductUrl =
@@ -1733,7 +2017,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroDecision.finalCandidate?.sourceFieldPath ?? null;
   diagnostics.heroHost = heroDecision.finalCandidate?.host ?? null;
 
-  const viablePriceDetection = detectViableViatorCommercialPriceCandidates(product);
+  const viablePriceDetection =
+    detectViableViatorCommercialPriceCandidates(product);
   diagnostics.hasAnyViablePriceCandidate =
     viablePriceDetection.hasAnyViablePriceCandidate;
   diagnostics.viablePriceCandidateFieldPaths =
@@ -1744,7 +2029,10 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.commercialPriceRawValue = price.rawValue;
   diagnostics.priceSourceUsed =
     price.amount !== null ? "live-price" : "fallback";
-  if (viablePriceDetection.hasAnyViablePriceCandidate && price.amount === null) {
+  if (
+    viablePriceDetection.hasAnyViablePriceCandidate &&
+    price.amount === null
+  ) {
     diagnostics.priceIntegrityViolation = true;
     diagnostics.extractionFailure = true;
     console.warn(
@@ -1780,17 +2068,23 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     : null;
 
   const itinerary = extractPlaybookItinerary(product);
+  const normalizedItinerary = normalizeUnifiedItineraryItems(
+    itinerary.value,
+    asNonEmptyString(product.title) ??
+      asNonEmptyString(product.description) ??
+      null
+  );
   diagnostics.itineraryFieldPath = itinerary.path;
-  diagnostics.itineraryItemCount = itinerary.value.length;
+  diagnostics.itineraryItemCount = normalizedItinerary.length;
   diagnostics.itinerarySourceUsed =
-    itinerary.value.length > 0 ? itinerary.path : null;
+    normalizedItinerary.length > 0 ? itinerary.path : null;
   diagnostics.itineraryStructuredSourceUsed =
-    itinerary.value.length > 0 && itinerary.structuredSourceUsed;
+    normalizedItinerary.length > 0 && itinerary.structuredSourceUsed;
 
   const itinerarySummary = extractItinerarySummary(product);
   diagnostics.itinerarySummaryFieldPath = itinerarySummary.path;
   diagnostics.itineraryFallbackSummaryUsed =
-    itinerary.value.length === 0 && Boolean(itinerarySummary.value);
+    normalizedItinerary.length === 0 && Boolean(itinerarySummary.value);
 
   const requirements = extractRequirements(product);
   diagnostics.requirementsFieldPath = requirements.path;
@@ -1803,9 +2097,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     const [question, answer] = item.split("|||");
     return { question, answer } satisfies Engine6ExtractedFaq;
   });
-  const faqPath = baseFaqs.value.length > 0
-    ? (baseFaqs.path ?? "product.qAndA.items")
-    : null;
+  const faqPath =
+    baseFaqs.value.length > 0 ? (baseFaqs.path ?? "product.qAndA.items") : null;
   const faqs = { value: mergedFaqs, path: faqPath };
   diagnostics.faqsFieldPath = faqs.path;
   diagnostics.faqFieldPath = faqs.path;
@@ -1852,7 +2145,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       meetingPointText: meetingPoint.value,
       overviewText: overview.value,
       highlights: highlights.value,
-      itinerary: itinerary.value,
+      itinerary: normalizedItinerary,
       itinerarySummaryText: itinerarySummary.value,
       faqs: faqs.value,
       included: included.value,

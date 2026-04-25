@@ -40,22 +40,30 @@ describe("extractEngine6Product itinerary fidelity", () => {
     expect(result.extracted.itinerary).toHaveLength(2);
     expect(result.extracted.itinerary[0]).toEqual(
       expect.objectContaining({
-        title: "Delaware Memorial Bridge",
+        title: expect.any(String),
         stopType: "pass-by",
+        description: expect.any(String),
         duration: "10 minutes",
         admissionNote: "Admission Included",
       })
     );
     expect(result.extracted.itinerary[1]).toEqual(
       expect.objectContaining({
-        title: "White House",
+        title: expect.any(String),
         stopType: "stop",
-        description: "Photo stop and exterior views.",
+        description: expect.any(String),
         duration: "20 minutes",
         admissionNote: "Admission Ticket Free",
       })
     );
-    expect(result.diagnostics.itinerarySourceUsed).toBe("product.itinerary.days");
+    expect(
+      result.extracted.itinerary.every(
+        item => (item.description?.trim().length ?? 0) > 0
+      )
+    ).toBe(true);
+    expect(result.diagnostics.itinerarySourceUsed).toBe(
+      "product.itinerary.days"
+    );
   });
 
   it("normalizes alternate Viator price and duration shapes", () => {
@@ -146,7 +154,7 @@ describe("extractEngine6Product itinerary fidelity", () => {
     );
   });
 
-  it("does not truncate inferred itinerary titles derived from long description text", () => {
+  it("normalizes inferred itinerary titles and synthesizes factual descriptions", () => {
     const result = extractEngine6Product({
       product: {
         productCode: "LONGTITLE1",
@@ -163,9 +171,12 @@ describe("extractEngine6Product itinerary fidelity", () => {
       },
     });
 
-    expect(result.extracted.itinerary[0]?.title).toBe(
-      "Enjoy some leisure time exploring charming lakeside promenades and local cafes before departure"
-    );
+    const title = result.extracted.itinerary[0]?.title ?? "";
+    const description = result.extracted.itinerary[0]?.description ?? "";
+    expect(title.split(/\s+/).filter(Boolean).length).toBeGreaterThanOrEqual(4);
+    expect(title.split(/\s+/).filter(Boolean).length).toBeLessThanOrEqual(8);
+    expect(description.length).toBeGreaterThan(0);
+    expect(description).not.toContain("Enjoy some leisure time exploring");
   });
 
   it("prefers location.country when state is absent and infers city from logistics text", () => {
@@ -232,5 +243,58 @@ describe("extractEngine6Product itinerary fidelity", () => {
     expect(result.diagnostics.commercialPriceFieldPath).toBe(
       "product.pricing.summary.fromPrice"
     );
+  });
+
+  it("rewrites itinerary summary into 3-5 itinerary-stop html blocks", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "SUMMARY_ONLY_1",
+        title: "Summary-only itinerary product",
+        location: { city: "Las Vegas", state: "Nevada" },
+        itinerarySummary:
+          "Depart Las Vegas for Hoover Dam and the Arizona overlook. You will enjoy views of Lake Mead before driving toward Boulder City. Experience historic downtown Boulder City with a guide. Return via the Mojave Desert scenic corridor.",
+      },
+    });
+
+    expect(result.extracted.itinerary).toEqual([]);
+    expect(result.extracted.itinerarySummaryText).toContain(
+      'class="itinerary-stop"'
+    );
+    const stopCount = (
+      result.extracted.itinerarySummaryText?.match(/class="itinerary-stop"/g) ??
+      []
+    ).length;
+    expect(stopCount).toBeGreaterThanOrEqual(3);
+    expect(stopCount).toBeLessThanOrEqual(5);
+    const titles =
+      result.extracted.itinerarySummaryText?.match(/<h3>(.*?)<\/h3>/g) ?? [];
+    for (const title of titles) {
+      const text = title.replace(/<\/?h3>/g, "");
+      const wordCount = text.split(/\s+/).filter(Boolean).length;
+      expect(wordCount).toBeGreaterThanOrEqual(4);
+      expect(wordCount).toBeLessThanOrEqual(8);
+    }
+    const descriptions =
+      result.extracted.itinerarySummaryText?.match(/<p>(.*?)<\/p>/g) ?? [];
+    for (const description of descriptions) {
+      const text = description.replace(/<\/?p>/g, "");
+      const wordCount = text.split(/\s+/).filter(Boolean).length;
+      expect(wordCount).toBeLessThanOrEqual(30);
+    }
+    expect(result.extracted.itinerarySummaryText).not.toContain("you will");
+    expect(result.extracted.itinerarySummaryText).not.toContain("Experience");
+    expect(result.extracted.itinerarySummaryText).not.toContain(
+      "Return via the Mojave Desert scenic corridor"
+    );
+    expect(result.extracted.itinerarySummaryText).not.toContain(
+      "covers the segment"
+    );
+    expect(result.extracted.itinerarySummaryText).not.toContain(
+      "route continuity"
+    );
+    expect(result.extracted.itinerarySummaryText).not.toContain(
+      "location context"
+    );
+    expect(result.extracted.itinerarySummaryText).toContain("data-stop-type=");
   });
 });
