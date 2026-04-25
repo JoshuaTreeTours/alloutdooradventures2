@@ -35,14 +35,38 @@
       }
     },
     "itineraryItems": [
-      { "title": "Coronado Bridge" },
-      { "title": "Coronado Island" },
-      { "title": "Seaport Village" },
-      { "title": "Point Loma" },
-      { "title": "Sunset Cliffs Natural Park" },
-      { "title": "Chicano Park" },
-      { "title": "Shelter Island" },
-      { "title": "Waterfront Park Downtown San Diego" }
+      {
+        "title": "Coronado Bridge",
+        "description": "Cruise beneath Coronado Bridge and take in wide skyline views of downtown San Diego from the water."
+      },
+      {
+        "title": "Coronado Island",
+        "description": "Sail along Coronado Island for classic harbor panoramas and a relaxed view of the shoreline."
+      },
+      {
+        "title": "Seaport Village",
+        "description": "Pass Seaport Village and enjoy views of the waterfront shops, marina traffic, and bayside boardwalk activity."
+      },
+      {
+        "title": "Point Loma",
+        "description": "Glide past Point Loma where the bay entrance opens to coastal scenery and dramatic cliffs."
+      },
+      {
+        "title": "Sunset Cliffs Natural Park",
+        "description": "Take in the rugged coastline near Sunset Cliffs, with sea cave formations and Pacific swells shaping the bluffs."
+      },
+      {
+        "title": "Chicano Park",
+        "description": "See the Chicano Park area from the water as your route traces iconic bridge spans and urban shoreline views."
+      },
+      {
+        "title": "Shelter Island",
+        "description": "Sail by Shelter Island to spot marina rows, sailboats, and harborfront neighborhoods."
+      },
+      {
+        "title": "Waterfront Park Downtown San Diego",
+        "description": "Finish near Waterfront Park with open views toward downtown towers, piers, and active waterfront promenades."
+      }
     ],
     "inclusions": [
       "Polaroid Camera & Film",

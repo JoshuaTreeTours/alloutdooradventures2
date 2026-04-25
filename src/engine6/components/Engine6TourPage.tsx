@@ -58,11 +58,18 @@ const getItineraryStopType = (item: {
   return /\bpass(?:\s|-)?by\b/.test(text) ? "Pass by" : "Stop";
 };
 
-const splitFirstSentence = (value: string) => {
+const splitFirstSentenceByPeriod = (value: string) => {
   const normalized = value.replace(/\s+/g, " ").trim();
   if (!normalized) return "";
-  const firstSentenceMatch = normalized.match(/.+?[.!?](?=\s|$)/);
-  return (firstSentenceMatch?.[0] ?? normalized).trim();
+  const segments = normalized
+    .split(".")
+    .map(segment => segment.trim())
+    .filter(Boolean);
+
+  if (segments.length === 0) return "";
+  const first = segments[0] ?? "";
+  if (!first) return "";
+  return `${first}.`;
 };
 
 const truncateSentence = (value: string, maxLength = 170) => {
@@ -77,7 +84,7 @@ const truncateSentence = (value: string, maxLength = 170) => {
   return `${output}…`;
 };
 
-const buildItineraryStopDescription = (
+const build5598628P3ItineraryStopDescription = (
   item: {
     title: string;
     stopType?: "stop" | "pass-by";
@@ -88,7 +95,7 @@ const buildItineraryStopDescription = (
 ) => {
   const fromApi = item.description?.trim();
   if (fromApi) {
-    return truncateSentence(splitFirstSentence(fromApi));
+    return truncateSentence(splitFirstSentenceByPeriod(fromApi));
   }
 
   const stopType = getItineraryStopType(item);
@@ -361,10 +368,10 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                 const shouldRenderSectionLabel =
                   Boolean(item.sectionLabel) &&
                   item.sectionLabel !== tour.itinerary[index - 1]?.sectionLabel;
-                const itineraryDescription = buildItineraryStopDescription(
-                  item,
-                  tour.city
-                );
+                const itineraryDescription =
+                  tour.productCode === "5598628P3"
+                    ? build5598628P3ItineraryStopDescription(item, tour.city)
+                    : item.description?.trim() ?? "";
 
                 return (
                   <div key={`${item.title}-${index}`} className="space-y-3">
@@ -392,9 +399,11 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                           </span>
                         ) : null}
                       </div>
-                      <p className="mt-3 text-sm leading-6 text-slate-700">
-                        {itineraryDescription}
-                      </p>
+                      {itineraryDescription ? (
+                        <p className="mt-3 text-sm leading-6 text-slate-700">
+                          {itineraryDescription}
+                        </p>
+                      ) : null}
                       {item.admissionNote ? (
                         <p className="mt-3 inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-800">
                           {item.admissionNote}
