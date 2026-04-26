@@ -43,7 +43,8 @@ describe("engine6 creation contract validator", () => {
     const extraction = extractEngine6Product(fixture.rawPayload);
     return (
       Boolean(extraction.extracted.heroImageUrl?.trim()) &&
-      fixture.productCode !== "5865P8"
+      fixture.productCode !== "5865P8" &&
+      fixture.productCode !== "6331BAHA"
     );
   });
 
@@ -67,14 +68,9 @@ describe("engine6 creation contract validator", () => {
     );
     expect(fixture).toBeDefined();
     const payload = toPayload(fixture!);
-    const tour = mapViatorToEngine6Tour(payload);
-    const report = validateEngine6CreationContract({
-      tour,
-      rawPayload: fixture!.rawPayload,
-    });
 
-    expect(report.violations).toEqual(
-      expect.arrayContaining(["resolved Engine6 hero is missing"])
+    expect(() => mapViatorToEngine6Tour(payload)).toThrow(
+      /strict hero contract violation/i
     );
   });
 
@@ -229,6 +225,64 @@ describe("engine6 creation contract validator", () => {
       ])
     );
     expect((report as { diagnostics?: { simpleItineraryAcceptanceApplied?: boolean } }).diagnostics?.simpleItineraryAcceptanceApplied).toBe(true);
+  });
+
+
+  it("enforces hardened title and itinerary rules for productCode 5598628P3", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "5598628P3"
+    );
+    expect(fixture).toBeDefined();
+
+    const payload = toPayload(fixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+    const report = validateEngine6CreationContract({
+      tour,
+      rawPayload: fixture!.rawPayload,
+    });
+
+    expect(tour.title.length).toBeLessThanOrEqual(90);
+    expect(tour.title.toLowerCase()).toContain("san diego");
+    expect(tour.itinerary.length).toBeGreaterThan(0);
+    expect(tour.itinerary.every(item => Boolean(item.title?.trim()))).toBe(true);
+    expect(tour.itinerary.every(item => Boolean(item.description?.trim()))).toBe(true);
+    expect(report.violations).toEqual([]);
+  });
+
+  it("enforces title context for a day trip tour fixture", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "190492P3"
+    );
+    expect(fixture).toBeDefined();
+
+    const payload = toPayload(fixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+    const report = validateEngine6CreationContract({
+      tour,
+      rawPayload: fixture!.rawPayload,
+    });
+
+    expect(tour.title.length).toBeLessThanOrEqual(90);
+    expect(/from\s+las\s+vegas|las\s+vegas/i.test(tour.title)).toBe(true);
+    expect(report.violations).toEqual([]);
+  });
+
+  it("enforces title context for an existing city tour fixture", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "474891P3"
+    );
+    expect(fixture).toBeDefined();
+
+    const payload = toPayload(fixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+    const report = validateEngine6CreationContract({
+      tour,
+      rawPayload: fixture!.rawPayload,
+    });
+
+    expect(tour.title.length).toBeLessThanOrEqual(90);
+    expect(/new\s+york\s+city|from\s+/i.test(tour.title)).toBe(true);
+    expect(report.violations).toEqual([]);
   });
 
 });

@@ -9,6 +9,10 @@ import {
 } from "../data/tours";
 import ToursLanding from "../pages/tours/ToursLanding";
 import { toEngine6Card } from "./cards";
+import {
+  hasEngine6TitleCityOrDepartureContext,
+  isLikelyPromotionalViatorTitle,
+} from "./contentHardening";
 import Engine6TourPage from "./components/Engine6TourPage";
 import {
   buildEngine6ParentCityToursPath,
@@ -67,7 +71,7 @@ const isSimpleExperienceProfile = (tour: Engine6Tour) => {
   const title = tour.title.toLowerCase();
   const category = (tour.primaryCategory ?? "").toString().toLowerCase();
   const simpleKeyword =
-    /\b(short|cruise|catamaran|ferry|ride|sightseeing|boat|panoramic|scenic)\b/.test(
+    /\b(short|cruise|catamaran|ferry|ride|sightseeing|boat|panoramic|scenic|day|private|museum|jet\s*ski|ski)\b/.test(
       `${title} ${category}`
     );
   const shortDuration = durationMinutes !== null ? durationMinutes <= 120 : false;
@@ -300,6 +304,19 @@ export const validateEngine6CreationContract = ({
   if (extractedFields.title?.trim() && !tour.title.trim()) {
     violations.push("title missing despite API title");
   }
+  if (tour.title.length > 90) {
+    violations.push("display title exceeds 90 characters");
+  }
+  if (!hasEngine6TitleCityOrDepartureContext({ title: tour.title, city: tour.city })) {
+    violations.push("display title missing city/departure context");
+  }
+  if (
+    extractedFields.title?.trim() &&
+    extractedFields.title.trim().toLowerCase() === tour.title.trim().toLowerCase() &&
+    isLikelyPromotionalViatorTitle(extractedFields.title)
+  ) {
+    violations.push("display title copied verbatim from promotional Viator title");
+  }
   if (extractedFields.city?.trim() && !tour.city.trim()) {
     violations.push("city missing despite API city");
   }
@@ -446,6 +463,12 @@ export const validateEngine6CreationContract = ({
   }
   if (structuredStopCount > 0 && renderedItineraryItemCount !== tour.itinerary.length) {
     violations.push("itinerary length parity mismatch between mapped and rendered stops");
+  }
+  if (tour.itinerary.some(item => !item.title?.trim())) {
+    violations.push("itinerary stop has no title");
+  }
+  if (tour.itinerary.some(item => !item.description?.trim())) {
+    violations.push("itinerary stop has no description or fallback");
   }
   if (
     extractedFields.itinerary.length > 0 &&

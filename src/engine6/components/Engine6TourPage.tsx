@@ -8,6 +8,7 @@ import { formatEngine6AggregateRating } from "../rating";
 import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
+import { buildEngine6ItineraryStopDescription } from "../contentHardening";
 import type { Engine6Tour } from "../types";
 
 const BOOK_CTA_CLASSES =
@@ -56,54 +57,6 @@ const getItineraryStopType = (item: {
     .join(" ")
     .toLowerCase();
   return /\bpass(?:\s|-)?by\b/.test(text) ? "Pass by" : "Stop";
-};
-
-const splitFirstSentenceByPeriod = (value: string) => {
-  const normalized = value.replace(/\s+/g, " ").trim();
-  if (!normalized) return "";
-  const segments = normalized
-    .split(".")
-    .map(segment => segment.trim())
-    .filter(Boolean);
-
-  if (segments.length === 0) return "";
-  const first = segments[0] ?? "";
-  if (!first) return "";
-  return `${first}.`;
-};
-
-const truncateSentence = (value: string, maxLength = 170) => {
-  const normalized = value.replace(/\s+/g, " ").trim();
-  if (normalized.length <= maxLength) return normalized;
-  const truncated = normalized.slice(0, maxLength - 1);
-  const withoutTrailingPartialWord = truncated.replace(/\s+\S*$/, "").trim();
-  const output =
-    withoutTrailingPartialWord.length >= 120
-      ? withoutTrailingPartialWord
-      : truncated.trim();
-  return `${output}…`;
-};
-
-const build5598628P3ItineraryStopDescription = (
-  item: {
-    title: string;
-    stopType?: "stop" | "pass-by";
-    description?: string;
-    admissionNote?: string;
-  },
-  city: string
-) => {
-  const fromApi = item.description?.trim();
-  if (fromApi) {
-    return truncateSentence(splitFirstSentenceByPeriod(fromApi));
-  }
-
-  const stopType = getItineraryStopType(item);
-  if (stopType === "Pass by") {
-    return `Pass by ${item.title} and take in the surrounding scenery.`;
-  }
-
-  return `Enjoy views of ${item.title} as you continue through ${city}.`;
 };
 
 const buildEngine6Breadcrumbs = (tour: Engine6Tour) => {
@@ -368,10 +321,9 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                 const shouldRenderSectionLabel =
                   Boolean(item.sectionLabel) &&
                   item.sectionLabel !== tour.itinerary[index - 1]?.sectionLabel;
-                const itineraryDescription =
-                  tour.productCode === "5598628P3"
-                    ? build5598628P3ItineraryStopDescription(item, tour.city)
-                    : item.description?.trim() ?? "";
+                const itineraryDescription = buildEngine6ItineraryStopDescription({
+                  item,
+                });
 
                 return (
                   <div key={`${item.title}-${index}`} className="space-y-3">
@@ -399,11 +351,9 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                           </span>
                         ) : null}
                       </div>
-                      {itineraryDescription ? (
-                        <p className="mt-3 text-sm leading-6 text-slate-700">
-                          {itineraryDescription}
-                        </p>
-                      ) : null}
+                      <p className="mt-3 text-sm leading-6 text-slate-700">
+                        {itineraryDescription}
+                      </p>
                       {item.admissionNote ? (
                         <p className="mt-3 inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-800">
                           {item.admissionNote}

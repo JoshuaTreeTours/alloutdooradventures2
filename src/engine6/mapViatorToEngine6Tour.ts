@@ -3,6 +3,10 @@ import { normalizeEngine6AggregateRating } from "./rating";
 import { formatEngine6StartingPriceLabel } from "./priceDisplay";
 import { resolveEngine6PathForProductCode } from "./routes";
 import {
+  buildEngine6DisplayTitle,
+  buildEngine6ItineraryStopDescription,
+} from "./contentHardening";
+import {
   buildEngine6CanonicalPath,
   buildEngine6MetaDescription,
   buildEngine6SeoTitle,
@@ -221,12 +225,12 @@ const slugToLabel = (slug: string) =>
 export const mapViatorToEngine6Tour = (
   payload: Engine6ApiResponse
 ): Engine6Tour => {
-  const title =
+  const rawTitle =
     payload.extracted.title ?? `Outdoor Adventure ${payload.rawProductCode}`;
   const generatedCanonicalPath = buildEngine6CanonicalPath({
     state: payload.extracted.state ?? "destination",
     city: payload.extracted.city ?? "destination",
-    title,
+    title: rawTitle,
   });
   const canonicalPath =
     resolveEngine6PathForProductCode(payload.rawProductCode) ??
@@ -246,6 +250,12 @@ export const mapViatorToEngine6Tour = (
       fallbackState: state,
     });
   }
+  const title = buildEngine6DisplayTitle({
+    rawTitle,
+    city,
+    durationText: payload.extracted.durationText ?? null,
+  });
+
   const finalHeroImageUrl =
     typeof payload.extracted.heroImageUrl === "string" &&
     /^https?:\/\//i.test(payload.extracted.heroImageUrl) &&
@@ -281,7 +291,18 @@ export const mapViatorToEngine6Tour = (
     payload.extracted.overviewText ?? ""
   );
   const highlights = payload.extracted.highlights ?? [];
-  const itinerary = payload.extracted.itinerary ?? [];
+  const itinerary = (payload.extracted.itinerary ?? [])
+    .map(item => {
+      const title = item.title?.trim();
+      if (!title) return null;
+
+      return {
+        ...item,
+        title,
+        description: buildEngine6ItineraryStopDescription({ item: { ...item, title } }),
+      };
+    })
+    .filter((item): item is { title: string; stopType?: "stop" | "pass-by"; sectionLabel?: string; description?: string; duration?: string; admissionNote?: string } => Boolean(item));
   const itinerarySummaryText = payload.extracted.itinerarySummaryText ?? null;
   const faqs = payload.extracted.faqs ?? [];
   const included = payload.extracted.included ?? [];
