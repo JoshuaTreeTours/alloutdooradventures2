@@ -36,7 +36,7 @@ const STOP_CONTEXT_RULES: Array<{ pattern: RegExp; context: string }> = [
   { pattern: /\bcliffs?\b/i, context: "coastal cliffs and wide ocean outlooks" },
 ];
 
-const VARIED_OPENERS = ["Cruise past", "See", "Glide by", "Take in", "View"] as const;
+const VARIED_OPENERS = ["Cruise past", "Glide by", "See", "Pass", "View"] as const;
 
 const normalizeWhitespace = (value: string) => value.replace(/\s+/g, " ").trim();
 
@@ -167,6 +167,11 @@ const withLengthControl = (value: string) => {
   return ensureSentence(shortened);
 };
 
+const toContextDetail = (context: string | null, stopTitle: string) => {
+  if (context) return context;
+  return `${stopTitle} with local waterfront and skyline context`;
+};
+
 const buildContextEnhancedSentence = ({
   stopTitle,
   opener,
@@ -174,9 +179,8 @@ const buildContextEnhancedSentence = ({
   stopTitle: string;
   opener: string;
 }) => {
-  const context = inferStopContext(stopTitle);
-  const detail = context ?? `${stopTitle} along the route`;
-  return withLengthControl(`${opener} ${stopTitle} and note ${detail} as the route continues`);
+  const detail = toContextDetail(inferStopContext(stopTitle), stopTitle);
+  return withLengthControl(`${opener} ${stopTitle}, ${detail}.`);
 };
 
 export const buildEngine6DisplayTitle = ({
@@ -277,9 +281,26 @@ export const buildEngine6ItineraryDescriptions = ({
     return count + (isNearDuplicate(sentence, previous) ? 1 : 0);
   }, 0);
 
+  const structureCounts = generated.reduce<Record<string, number>>((acc, sentence) => {
+    const normalized = normalizeWhitespace(sentence).toLowerCase();
+    const opening = VARIED_OPENERS.find(prefix =>
+      normalized.startsWith(prefix.toLowerCase())
+    ) ?? "other";
+    const hasComma = normalized.includes(",") ? "comma" : "plain";
+    const signature = `${opening}:${hasComma}`;
+    acc[signature] = (acc[signature] ?? 0) + 1;
+    return acc;
+  }, {});
+  const repeatedStructureCount = Math.max(0, ...Object.values(structureCounts));
+
   if (nearDuplicateCount > 2) {
     duplicateWarnings.push(
       `engine6-itinerary-warning: ${nearDuplicateCount} itinerary descriptions are near-identical`
+    );
+  }
+  if (repeatedStructureCount >= 3) {
+    duplicateWarnings.push(
+      `engine6-itinerary-warning: ${repeatedStructureCount} stops share similar sentence structure`
     );
   }
 

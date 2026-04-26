@@ -34,4 +34,21 @@ describe("engine6 itinerary hardening", () => {
     expect(descriptions[0]).not.toEqual(descriptions[1]);
     expect(descriptions[1]).not.toEqual(descriptions[2]);
   });
+
+  it("avoids mechanical connectors and filler endings", () => {
+    const result = buildEngine6ItineraryDescriptions({
+      itinerary: [
+        { title: "Liberty Island", description: "Take in the surrounding scenery." },
+        { title: "Ellis Island", description: "Enjoy the views." },
+        { title: "Battery Park", description: "Pass by and see the area." },
+      ],
+    });
+
+    for (const item of result.itinerary) {
+      const text = item.description ?? "";
+      expect(text).not.toMatch(/and note|and take in|and enjoy|and see/i);
+      expect(text).not.toMatch(/as the route continues|along the way|during the tour/i);
+    }
+  });
+
 });
