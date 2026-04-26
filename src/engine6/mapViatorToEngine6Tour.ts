@@ -4,7 +4,7 @@ import { formatEngine6StartingPriceLabel } from "./priceDisplay";
 import { resolveEngine6PathForProductCode } from "./routes";
 import {
   buildEngine6DisplayTitle,
-  buildEngine6ItineraryStopDescription,
+  buildEngine6ItineraryDescriptions,
 } from "./contentHardening";
 import {
   buildEngine6CanonicalPath,
@@ -291,18 +291,23 @@ export const mapViatorToEngine6Tour = (
     payload.extracted.overviewText ?? ""
   );
   const highlights = payload.extracted.highlights ?? [];
-  const itinerary = (payload.extracted.itinerary ?? [])
+  const rawItinerary = (payload.extracted.itinerary ?? [])
     .map(item => {
       const title = item.title?.trim();
       if (!title) return null;
-
-      return {
-        ...item,
-        title,
-        description: buildEngine6ItineraryStopDescription({ item: { ...item, title } }),
-      };
+      return { ...item, title };
     })
     .filter((item): item is { title: string; stopType?: "stop" | "pass-by"; sectionLabel?: string; description?: string; duration?: string; admissionNote?: string } => Boolean(item));
+  const itineraryHardening = buildEngine6ItineraryDescriptions({
+    itinerary: rawItinerary,
+  });
+  const itinerary = itineraryHardening.itinerary;
+  if (itineraryHardening.warnings.length > 0) {
+    console.warn("[engine6-itinerary-hardening]", {
+      productCode: payload.rawProductCode,
+      warnings: itineraryHardening.warnings,
+    });
+  }
   const itinerarySummaryText = payload.extracted.itinerarySummaryText ?? null;
   const faqs = payload.extracted.faqs ?? [];
   const included = payload.extracted.included ?? [];

@@ -21,6 +21,23 @@ const TITLE_TYPE_PATTERNS: Array<{ pattern: RegExp; label: string }> = [
   { pattern: /\btour\b/i, label: "Tour" },
 ];
 
+const GENERIC_ITINERARY_PHRASES = [
+  /take in the surrounding scenery/i,
+  /enjoy the views?/i,
+  /pass by and see/i,
+] as const;
+
+const STOP_CONTEXT_RULES: Array<{ pattern: RegExp; context: string }> = [
+  { pattern: /\bliberty\b/i, context: "the Statue of Liberty and the harbor approaches" },
+  { pattern: /\bellis\b/i, context: "Ellis Island and its immigration history" },
+  { pattern: /\bbattery\s*park\b/i, context: "Battery Park's waterfront paths and harbor views" },
+  { pattern: /\bbridge\b/i, context: "the bridge engineering and skyline framing" },
+  { pattern: /\bvillage\b/i, context: "village streets with shops, marinas, and local activity" },
+  { pattern: /\bcliffs?\b/i, context: "coastal cliffs and wide ocean outlooks" },
+];
+
+const VARIED_OPENERS = ["Cruise past", "See", "Glide by", "Take in", "View"] as const;
+
 const normalizeWhitespace = (value: string) => value.replace(/\s+/g, " ").trim();
 
 const removePromoWords = (value: string) => {
@@ -35,7 +52,9 @@ const trimSentenceWithoutMidWordCut = (value: string, maxLength: number) => {
   const normalized = normalizeWhitespace(value);
   if (normalized.length <= maxLength) return normalized;
 
-  const punctuationSlice = normalized.slice(0, maxLength).match(/^(.+[.!?])\s*[^.!?]*$/);
+  const punctuationSlice = normalized
+    .slice(0, maxLength)
+    .match(/^(.+[.!?])\s*[^.!?]*$/);
   if (punctuationSlice?.[1]) {
     return punctuationSlice[1].trim();
   }
@@ -87,9 +106,7 @@ const findDeparturePhrase = (title: string) => {
 const titleHasCityContext = (title: string, city: string) => {
   const normalizedTitle = title.toLowerCase();
   const normalizedCity = city.toLowerCase();
-  return (
-    normalizedTitle.includes(normalizedCity) || /\bfrom\s+[a-z]/i.test(title)
-  );
+  return normalizedTitle.includes(normalizedCity) || /\bfrom\s+[a-z]/i.test(title);
 };
 
 const titleHasType = (title: string) =>
@@ -102,6 +119,64 @@ const inferTypeLabel = (title: string) => {
     if (entry.pattern.test(title)) return entry.label;
   }
   return "Tour";
+};
+
+const descriptionIsWeak = (value: string) =>
+  GENERIC_ITINERARY_PHRASES.some(pattern => pattern.test(value));
+
+const inferStopContext = (stopTitle: string) => {
+  for (const rule of STOP_CONTEXT_RULES) {
+    if (rule.pattern.test(stopTitle)) return rule.context;
+  }
+  return null;
+};
+
+const ensureSentence = (value: string) => {
+  const normalized = normalizeWhitespace(value);
+  if (!normalized) return "";
+  return /[.!?]$/.test(normalized) ? normalized : `${normalized}.`;
+};
+
+const normalizeForSimilarity = (value: string) =>
+  normalizeWhitespace(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .replace(/\b(pass|by|enjoy|views?|take|in|the|and|to|of|a|an)\b/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const similarityScore = (a: string, b: string) => {
+  const aTokens = new Set(normalizeForSimilarity(a).split(" ").filter(Boolean));
+  const bTokens = new Set(normalizeForSimilarity(b).split(" ").filter(Boolean));
+  if (aTokens.size === 0 || bTokens.size === 0) return 0;
+  let overlap = 0;
+  for (const token of aTokens) {
+    if (bTokens.has(token)) overlap += 1;
+  }
+  return overlap / Math.max(aTokens.size, bTokens.size);
+};
+
+const isNearDuplicate = (value: string, existing: string[]) =>
+  existing.some(item => similarityScore(value, item) >= 0.78);
+
+const withLengthControl = (value: string) => {
+  const sentence = ensureSentence(value);
+  if (!sentence) return sentence;
+  if (sentence.length <= 180) return sentence;
+  const shortened = trimSentenceWithoutMidWordCut(sentence, 180);
+  return ensureSentence(shortened);
+};
+
+const buildContextEnhancedSentence = ({
+  stopTitle,
+  opener,
+}: {
+  stopTitle: string;
+  opener: string;
+}) => {
+  const context = inferStopContext(stopTitle);
+  const detail = context ?? `${stopTitle} along the route`;
+  return withLengthControl(`${opener} ${stopTitle} and note ${detail} as the route continues`);
 };
 
 export const buildEngine6DisplayTitle = ({
@@ -161,17 +236,64 @@ export const buildEngine6DisplayTitle = ({
 export const isLikelyPromotionalViatorTitle = (title: string) =>
   PROMOTIONAL_TITLE_PATTERNS.some(pattern => pattern.test(title));
 
+export const buildEngine6ItineraryDescriptions = ({
+  itinerary,
+}: {
+  itinerary: Engine6ItineraryItem[];
+}) => {
+  const generated: string[] = [];
+  const duplicateWarnings: string[] = [];
+
+  const withDescriptions = itinerary.map((item, index) => {
+    const title = normalizeWhitespace(item.title ?? "");
+    const apiSentence = item.description
+      ? extractFirstCompleteSentence(item.description)
+      : "";
+    const shouldEnhance = !apiSentence || descriptionIsWeak(apiSentence);
+
+    let candidate = apiSentence;
+    if (shouldEnhance) {
+      const opener = VARIED_OPENERS[index % VARIED_OPENERS.length] ?? "See";
+      candidate = buildContextEnhancedSentence({ stopTitle: title, opener });
+    }
+
+    if (isNearDuplicate(candidate, generated)) {
+      const opener = VARIED_OPENERS[(index + 2) % VARIED_OPENERS.length] ?? "View";
+      candidate = buildContextEnhancedSentence({ stopTitle: title, opener });
+    }
+
+    candidate = withLengthControl(candidate);
+    generated.push(candidate);
+
+    return {
+      ...item,
+      title,
+      description: candidate,
+    };
+  });
+
+  const nearDuplicateCount = generated.reduce((count, sentence, index) => {
+    const previous = generated.slice(0, index);
+    return count + (isNearDuplicate(sentence, previous) ? 1 : 0);
+  }, 0);
+
+  if (nearDuplicateCount > 2) {
+    duplicateWarnings.push(
+      `engine6-itinerary-warning: ${nearDuplicateCount} itinerary descriptions are near-identical`
+    );
+  }
+
+  return { itinerary: withDescriptions, warnings: duplicateWarnings };
+};
+
 export const buildEngine6ItineraryStopDescription = ({
   item,
 }: {
   item: Pick<Engine6ItineraryItem, "title" | "description" | "stopType">;
 }) => {
-  const fromApi = item.description ? extractFirstCompleteSentence(item.description) : "";
-  if (fromApi) {
-    return fromApi;
-  }
-
-  return `Pass by ${item.title} and take in the surrounding scenery.`;
+  const description = normalizeWhitespace(item.description ?? "");
+  if (description) return ensureSentence(description);
+  return ensureSentence(`Pass by ${item.title} and continue along the route`);
 };
 
 export const hasEngine6TitleCityOrDepartureContext = ({
