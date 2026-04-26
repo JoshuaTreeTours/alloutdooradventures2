@@ -48,7 +48,23 @@ describe("engine6 itinerary hardening", () => {
       const text = item.description ?? "";
       expect(text).not.toMatch(/and note|and take in|and enjoy|and see/i);
       expect(text).not.toMatch(/as the route continues|along the way|during the tour/i);
+      expect(text.length).toBeGreaterThanOrEqual(80);
     }
+  });
+
+  it("flags validation warnings for short/generic/repeated-name output", () => {
+    const result = buildEngine6ItineraryDescriptions({
+      itinerary: [{ title: "Bridge", description: "Enjoy the views." }],
+    });
+
+    const text = result.itinerary[0]?.description ?? "";
+    expect(text).not.toMatch(/enjoy the views/i);
+    expect(result.warnings.some(item => item.includes("generic phrasing"))).toBe(
+      false
+    );
+    expect(result.warnings.some(item => item.includes("stop name repeated"))).toBe(
+      false
+    );
   });
 
 });

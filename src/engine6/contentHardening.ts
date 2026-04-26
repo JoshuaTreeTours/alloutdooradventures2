@@ -28,15 +28,22 @@ const GENERIC_ITINERARY_PHRASES = [
 ] as const;
 
 const STOP_CONTEXT_RULES: Array<{ pattern: RegExp; context: string }> = [
-  { pattern: /\bliberty\b/i, context: "the Statue of Liberty and the harbor approaches" },
-  { pattern: /\bellis\b/i, context: "Ellis Island and its immigration history" },
-  { pattern: /\bbattery\s*park\b/i, context: "Battery Park's waterfront paths and harbor views" },
-  { pattern: /\bbridge\b/i, context: "the bridge engineering and skyline framing" },
-  { pattern: /\bvillage\b/i, context: "village streets with shops, marinas, and local activity" },
-  { pattern: /\bcliffs?\b/i, context: "coastal cliffs and wide ocean outlooks" },
+  { pattern: /\bliberty\b/i, context: "the Statue of Liberty rising above New York Harbor" },
+  { pattern: /\bellis\b/i, context: "the immigration gateway that welcomed millions of arrivals" },
+  { pattern: /\bbattery\s*park\b/i, context: "a historic waterfront park with open harbor sightlines" },
+  { pattern: /\bbridge\b/i, context: "major steelwork framing skyline and river crossings" },
+  { pattern: /\bvillage\b/i, context: "compact streets lined with shops, marinas, and local activity" },
+  { pattern: /\bcliffs?\b/i, context: "dramatic coastal cliffs with wide ocean outlooks" },
 ];
 
 const VARIED_OPENERS = ["Cruise past", "Glide by", "See", "Pass", "View"] as const;
+const FORBIDDEN_GENERIC_PHRASES = [
+  /take in the scenery/i,
+  /enjoy the views?/i,
+  /as the tour continues/i,
+  /local context/i,
+  /surrounding area/i,
+] as const;
 
 const normalizeWhitespace = (value: string) => value.replace(/\s+/g, " ").trim();
 
@@ -122,7 +129,8 @@ const inferTypeLabel = (title: string) => {
 };
 
 const descriptionIsWeak = (value: string) =>
-  GENERIC_ITINERARY_PHRASES.some(pattern => pattern.test(value));
+  GENERIC_ITINERARY_PHRASES.some(pattern => pattern.test(value)) ||
+  FORBIDDEN_GENERIC_PHRASES.some(pattern => pattern.test(value));
 
 const inferStopContext = (stopTitle: string) => {
   for (const rule of STOP_CONTEXT_RULES) {
@@ -167,9 +175,9 @@ const withLengthControl = (value: string) => {
   return ensureSentence(shortened);
 };
 
-const toContextDetail = (context: string | null, stopTitle: string) => {
+const toContextDetail = (context: string | null) => {
   if (context) return context;
-  return `${stopTitle} with local waterfront and skyline context`;
+  return "a recognizable landmark with clear visual significance";
 };
 
 const buildContextEnhancedSentence = ({
@@ -179,8 +187,22 @@ const buildContextEnhancedSentence = ({
   stopTitle: string;
   opener: string;
 }) => {
-  const detail = toContextDetail(inferStopContext(stopTitle), stopTitle);
+  const detail = toContextDetail(inferStopContext(stopTitle));
   return withLengthControl(`${opener} ${stopTitle}, ${detail}.`);
+};
+
+const countStopNameOccurrences = (description: string, stopTitle: string) => {
+  const normalizedTitle = normalizeWhitespace(stopTitle).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  if (!normalizedTitle) return 0;
+  const matches = description.match(new RegExp(normalizedTitle, "gi"));
+  return matches?.length ?? 0;
+};
+
+const expandToMicroStoryLength = (description: string) => {
+  const normalized = ensureSentence(description);
+  if (normalized.length >= 110) return normalized;
+  const extension = "with clear views of defining architecture and waterfront movement.";
+  return withLengthControl(`${normalized.replace(/[.!?]$/, "")}, ${extension}`);
 };
 
 export const buildEngine6DisplayTitle = ({
@@ -247,6 +269,7 @@ export const buildEngine6ItineraryDescriptions = ({
 }) => {
   const generated: string[] = [];
   const duplicateWarnings: string[] = [];
+  const validationWarnings: string[] = [];
 
   const withDescriptions = itinerary.map((item, index) => {
     const title = normalizeWhitespace(item.title ?? "");
@@ -266,7 +289,23 @@ export const buildEngine6ItineraryDescriptions = ({
       candidate = buildContextEnhancedSentence({ stopTitle: title, opener });
     }
 
-    candidate = withLengthControl(candidate);
+    candidate = expandToMicroStoryLength(withLengthControl(candidate));
+    const stopNameCount = countStopNameOccurrences(candidate, title);
+    if (stopNameCount > 1) {
+      validationWarnings.push(
+        `engine6-itinerary-warning: stop name repeated in description for "${title}"`
+      );
+    }
+    if (candidate.length < 80) {
+      validationWarnings.push(
+        `engine6-itinerary-warning: short description (${candidate.length}) for "${title}"`
+      );
+    }
+    if (descriptionIsWeak(candidate)) {
+      validationWarnings.push(
+        `engine6-itinerary-warning: generic phrasing detected for "${title}"`
+      );
+    }
     generated.push(candidate);
 
     return {
@@ -304,7 +343,10 @@ export const buildEngine6ItineraryDescriptions = ({
     );
   }
 
-  return { itinerary: withDescriptions, warnings: duplicateWarnings };
+  return {
+    itinerary: withDescriptions,
+    warnings: [...duplicateWarnings, ...validationWarnings],
+  };
 };
 
 export const buildEngine6ItineraryStopDescription = ({
