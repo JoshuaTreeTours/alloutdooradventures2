@@ -40,6 +40,7 @@ import specimen327321p1Payload from "../../data/engine6/viator/327321P1.exact-pr
 import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-product.json";
 import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-product.json";
 import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-product.json";
+import specimen191303p1Payload from "../../data/engine6/viator/191303P1.exact-product.json";
 import specimen5598628p3Payload from "../../data/engine6/viator/5598628P3.exact-product.json";
 import specimen383300p6Payload from "../../data/engine6/viator/383300P6.exact-product.json";
 import specimen76145p2Payload from "../../data/engine6/viator/76145P2.exact-product.json";
@@ -481,6 +482,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/San-Diego/Half-Day-4x4-Adventure/d736-173946P1",
     rawPayload: specimen173946p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "191303P1",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/Fat-Woody-Beach-Cruiser-Experience-Electric-Bicycle-Tour/d736-191303P1",
+    rawPayload: specimen191303p1Payload as Record<string, unknown>,
   },
   {
     productCode: "5598628P3",
