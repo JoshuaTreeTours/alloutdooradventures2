@@ -27,6 +27,8 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
   string,
   (args: { city: string; state: string; sourceOverview: string }) => string
 > = {
+  "191303P1": () =>
+    "This guided electric-bike tour explores Coronado Island in a small group of up to six travelers using custom Fat Woody beach cruisers. Riders roll past the Glorietta Bay Promenade, Coronado Beach, and Coronado Ferry Landing while a local guide shares Coronado history, manages route pacing, and helps capture photos along the way. Bikes include an integrated speaker system for beach tunes, and each guest receives a color-matched helmet plus bottled water. The 3-hour format is designed for confident riders who want scenic waterfront coverage, light storytelling, and a relaxed but structured coastal loop near San Diego.",
   "3885SW303BS": ({ city, state, sourceOverview }) => {
     const supportsLucerne = /lucerne/i.test(sourceOverview);
     const supportsTitlis = /\b(mt\.?\s*titlis|mount titlis)\b/i.test(sourceOverview);

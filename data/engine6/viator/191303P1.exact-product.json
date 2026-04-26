@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "191303P1",
+    "productUrl": "https://www.viator.com/tours/San-Diego/Fat-Woody-Beach-Cruiser-Experience-Electric-Bicycle-Tour/d736-191303P1",
+    "title": "San Diego Electric Bike Tour of Coronado (Small-Group Beach Cruiser Experience)",
+    "description": {
+      "text": "Explore Coronado Island on a guided electric bike tour aboard custom Fat Woody beach cruisers. Cruise the Glorietta Bay Promenade, Coronado Beach, and Coronado Ferry Landing while your guide shares local history, takes photos, and keeps the pace comfortable for a small group. Each rider gets a color-matched helmet, bottled water, and a bike with an integrated speaker system for beach tunes along the route."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California",
+      "country": "United States"
+    },
+    "priceFrom": 89,
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 54
+    },
+    "duration": "3 hours",
+    "media": {
+      "images": [
+        {
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ee/ad/7f/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            },
+            "LARGE": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ee/ad/7f/caption.jpg?w=1000&h=714&s=1",
+              "width": 1000,
+              "height": 714
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ride custom Fat Woody electric beach cruisers through Coronado.",
+      "Enjoy a guided small-group tour with a local host.",
+      "See Coronado Beach, Glorietta Bay Promenade, and Coronado Ferry Landing.",
+      "Listen to beach tunes through the integrated speaker system.",
+      "Includes bottled water and a color-matched helmet."
+    ],
+    "logistics": {
+      "start": {
+        "description": "2000 Mullinex Dr, Coronado, CA 92118, USA"
+      }
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "ref": "30511",
+            "name": "Coronado Island"
+          }
+        },
+        "description": "Ride a guided loop around Coronado Island, including the Glorietta Bay Promenade, Coronado Beach, and Coronado Ferry Landing, with time for photos and local history along the way."
+      }
+    ],
+    "inclusions": [
+      "Use of custom Fat Woody electric beach cruiser",
+      "Color-matched helmet",
+      "Bottled water",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Riders must be proficient bicycle riders.",
+      "Not recommended for novice riders.",
+      "Recommended age is 13+ with parent or guardian.",
+      "Recommended rider height is 5'2\" and taller; smaller e-bikes may be available.",
+      "Maximum rider weight is 250 lbs.",
+      "Maximum of 6 travelers.",
+      "Mobile ticket.",
+      "Tour is offered in English.",
+      "Free cancellation up to 24 hours before the experience starts (local time)."
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Coronado electric bike tour?",
+        "answer": "The tour duration is approximately 3 hours."
+      },
+      {
+        "question": "Where is the meeting point?",
+        "answer": "Meet at 2000 Mullinex Dr, Coronado, CA 92118, USA."
+      },
+      {
+        "question": "How many travelers are in each group?",
+        "answer": "The small-group format is limited to a maximum of 6 travelers."
+      },
+      {
+        "question": "What should riders know before booking?",
+        "answer": "Participants should be proficient bicycle riders. This tour is not recommended for novice riders."
+      },
+      {
+        "question": "Can I cancel if my plans change?",
+        "answer": "Yes. Free cancellation is available up to 24 hours before the experience starts, local time."
+      }
+    ],
+    "categories": [
+      "Bike Tours",
+      "E-Bike Tours"
+    ]
+  }
+}

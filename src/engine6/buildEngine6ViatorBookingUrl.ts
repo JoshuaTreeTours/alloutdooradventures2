@@ -4,6 +4,19 @@ const ENGINE6_VIATOR_AFFILIATE_PARAMS = {
   medium: "link",
 } as const;
 
+const ENGINE6_VIATOR_AFFILIATE_OVERRIDES: Record<
+  string,
+  Partial<Record<"pid" | "uid" | "mcid" | "currency" | "medium", string>>
+> = {
+  "191303P1": {
+    pid: "P00290915",
+    uid: "U00174482",
+    mcid: "58086",
+    currency: "USD",
+    medium: "link",
+  },
+};
+
 const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
   "63657P1":
     "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
@@ -66,9 +79,15 @@ export const buildEngine6ViatorBookingUrl = (
       `${FALLBACK_ENGINE6_VIATOR_SEARCH_URL}/${encodeURIComponent(productCode)}`
     );
 
-  url.searchParams.set("pid", ENGINE6_VIATOR_AFFILIATE_PARAMS.pid);
-  url.searchParams.set("mcid", ENGINE6_VIATOR_AFFILIATE_PARAMS.mcid);
-  url.searchParams.set("medium", ENGINE6_VIATOR_AFFILIATE_PARAMS.medium);
+  const affiliateParams = {
+    ...ENGINE6_VIATOR_AFFILIATE_PARAMS,
+    ...(ENGINE6_VIATOR_AFFILIATE_OVERRIDES[productCode] ?? {}),
+  };
+  Object.entries(affiliateParams).forEach(([key, value]) => {
+    if (value?.trim()) {
+      url.searchParams.set(key, value);
+    }
+  });
 
   return url.toString();
 };
