@@ -29,9 +29,13 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
 > = {
   "191303P1": () =>
     "This guided electric-bike tour explores Coronado Island in a small group of up to six travelers using custom Fat Woody beach cruisers. Riders roll past the Glorietta Bay Promenade, Coronado Beach, and Coronado Ferry Landing while a local guide shares Coronado history, manages route pacing, and helps capture photos along the way. Bikes include an integrated speaker system for beach tunes, and each guest receives a color-matched helmet plus bottled water. The 3-hour format is designed for confident riders who want scenic waterfront coverage, light storytelling, and a relaxed but structured coastal loop near San Diego.",
+  "69764P1": () =>
+    "This 3-hour whale watching cruise from San Diego follows the local coastline for seasonal marine-life viewing and open-ocean scenery. Depending on conditions, sightings can include whales, dolphins, and seabirds while your crew shares practical context about local waters and wildlife behavior, including naturalist or captain commentary when offered onboard. The route is paced as a classic coastal outing with clear logistics and broad photo opportunities from the boat. It is a strong fit for families, couples, and first-time visitors who want a dependable San Diego ocean activity centered on wildlife and views.",
   "3885SW303BS": ({ city, state, sourceOverview }) => {
     const supportsLucerne = /lucerne/i.test(sourceOverview);
-    const supportsTitlis = /\b(mt\.?\s*titlis|mount titlis)\b/i.test(sourceOverview);
+    const supportsTitlis = /\b(mt\.?\s*titlis|mount titlis)\b/i.test(
+      sourceOverview
+    );
     const destinationClause = [
       supportsLucerne ? "Lucerne" : null,
       supportsTitlis ? "Mount Titlis" : null,
@@ -107,10 +111,7 @@ const toSentence = (value: string) => {
 };
 
 const countWords = (value: string) =>
-  value
-    .trim()
-    .split(/\s+/)
-    .filter(Boolean).length;
+  value.trim().split(/\s+/).filter(Boolean).length;
 
 const stripMarketingLanguage = (value: string) =>
   value
@@ -142,8 +143,7 @@ const buildAuthoritativeOverview = ({
 }) => {
   const normalizedLocation = `${city}, ${state}`;
   const activityLabel =
-    categoryLabel?.toLowerCase().replace(/\s+tour$/i, " tour") ??
-    "guided tour";
+    categoryLabel?.toLowerCase().replace(/\s+tour$/i, " tour") ?? "guided tour";
   const highlightText = highlights
     .slice(0, 3)
     .map(item => item.replace(/\.$/, "").trim())
@@ -178,7 +178,9 @@ const buildAuthoritativeOverview = ({
     [
       "The format is guided and follows a structured itinerary",
       durationText ? `with a typical duration of ${durationText}` : "",
-      meetingPointText ? `and departure details centered on ${meetingPointText}` : "",
+      meetingPointText
+        ? `and departure details centered on ${meetingPointText}`
+        : "",
     ]
       .filter(Boolean)
       .join(" ")
@@ -187,7 +189,9 @@ const buildAuthoritativeOverview = ({
     "It is best for first-time visitors, time-conscious travelers, and small groups that want clear pacing without sacrificing major highlights"
   );
 
-  const parts = [opening, middleA, logistics, sourceSnippet, closer].filter(Boolean);
+  const parts = [opening, middleA, logistics, sourceSnippet, closer].filter(
+    Boolean
+  );
   const withLimit = () => {
     const limited: string[] = [];
     for (const part of parts) {
@@ -235,7 +239,8 @@ export const mapViatorToEngine6Tour = (
     generatedCanonicalPath;
   const [, routeStateSlug = "", routeCitySlug = ""] =
     ENGINE6_CANONICAL_PATH_PATTERN.exec(canonicalPath) ?? [];
-  const city = payload.extracted.city ?? slugToLabel(routeCitySlug) ?? "Destination";
+  const city =
+    payload.extracted.city ?? slugToLabel(routeCitySlug) ?? "Destination";
   const state =
     payload.extracted.state ?? slugToLabel(routeStateSlug) ?? "Destination";
 
@@ -261,7 +266,9 @@ export const mapViatorToEngine6Tour = (
     payload.diagnostics.heroSourceProductUrl &&
     payload.diagnostics.heroSourceFieldPath &&
     payload.diagnostics.heroHost &&
-    payload.diagnostics.heroSourceFieldPath.startsWith("product.media.images") &&
+    payload.diagnostics.heroSourceFieldPath.startsWith(
+      "product.media.images"
+    ) &&
     payload.diagnostics.heroSourceProductCode.toUpperCase() ===
       payload.rawProductCode.toUpperCase() &&
     payload.diagnostics.finalHeroUrl === finalHeroImageUrl
@@ -369,7 +376,9 @@ export const mapViatorToEngine6Tour = (
     priceFormatted: formattedStartingPrice,
     aggregateRating,
     reviewCount: payload.extracted.reviewCount,
-    meetingPointText: payload.extracted.meetingPointText ?? "See booking details",
+    durationText: payload.extracted.durationText ?? null,
+    meetingPointText:
+      payload.extracted.meetingPointText ?? "See booking details",
     overviewText: normalizedOverview || null,
     highlights,
     itinerary,

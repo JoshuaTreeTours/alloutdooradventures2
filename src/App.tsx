@@ -83,6 +83,7 @@ import {
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
   ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
   ENGINE6_SAN_DIEGO_CLASSIC_SAIL_CHARTER_ROUTE,
+  ENGINE6_SAN_DIEGO_WHALE_WATCHING_ROUTE,
   ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
   ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
@@ -296,6 +297,10 @@ export default function App() {
         />
         <Route
           path={ENGINE6_SAN_DIEGO_CLASSIC_SAIL_CHARTER_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_SAN_DIEGO_WHALE_WATCHING_ROUTE}
           component={Engine6SpecimenRoute}
         />
         <Route
