@@ -43,6 +43,7 @@ import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-pr
 import specimen191303p1Payload from "../../data/engine6/viator/191303P1.exact-product.json";
 import specimen5598628p3Payload from "../../data/engine6/viator/5598628P3.exact-product.json";
 import specimen69764p1Payload from "../../data/engine6/viator/69764P1.exact-product.json";
+import specimen146931p4Payload from "../../data/engine6/viator/146931P4.exact-product.json";
 import specimen383300p6Payload from "../../data/engine6/viator/383300P6.exact-product.json";
 import specimen76145p2Payload from "../../data/engine6/viator/76145P2.exact-product.json";
 import specimen5559561p1Payload from "../../data/engine6/viator/5559561P1.exact-product.json";
@@ -501,6 +502,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/San-Diego/3-Hour-Whale-Watching/d736-69764P1",
     rawPayload: specimen69764p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "146931P4",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/La-Jolla-Tour/d736-146931P4",
+    rawPayload: specimen146931p4Payload as Record<string, unknown>,
   },
   {
     productCode: "327321P1",

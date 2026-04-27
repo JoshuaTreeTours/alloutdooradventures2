@@ -22,6 +22,13 @@ const ENGINE6_VIATOR_AFFILIATE_OVERRIDES: Record<
     currency: "USD",
     medium: "link",
   },
+  "146931P4": {
+    pid: "P00290915",
+    uid: "U00174482",
+    mcid: "58086",
+    currency: "USD",
+    medium: "link",
+  },
 };
 
 const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
@@ -39,6 +46,8 @@ const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
     "https://www.viator.com/tours/New-York-City/Manhattan-Sky-Tour-New-York-Helicopter-Flight/d687-5024MANSKY",
   "69764P1":
     "https://www.viator.com/tours/San-Diego/3-Hour-Whale-Watching/d736-69764P1",
+  "146931P4":
+    "https://www.viator.com/tours/San-Diego/La-Jolla-Tour/d736-146931P4",
 };
 
 const FALLBACK_ENGINE6_VIATOR_SEARCH_URL = "https://www.viator.com/search";
