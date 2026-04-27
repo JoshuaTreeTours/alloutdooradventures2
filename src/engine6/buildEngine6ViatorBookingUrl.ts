@@ -51,6 +51,16 @@ const ENGINE6_VIATOR_AFFILIATE_OVERRIDES: Record<
     mcid: "58086",
     medium: "link",
   },
+  "388361P1": {
+    pid: "P00058975",
+    mcid: "58086",
+    medium: "link",
+  },
+  "28758P1": {
+    pid: "P00058975",
+    mcid: "58086",
+    medium: "link",
+  },
 };
 
 const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
