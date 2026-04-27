@@ -44,6 +44,7 @@ import specimen191303p1Payload from "../../data/engine6/viator/191303P1.exact-pr
 import specimen5598628p3Payload from "../../data/engine6/viator/5598628P3.exact-product.json";
 import specimen69764p1Payload from "../../data/engine6/viator/69764P1.exact-product.json";
 import specimen18125p5Payload from "../../data/engine6/viator/18125P5.exact-product.json";
+import specimen5046prtsanseaPayload from "../../data/engine6/viator/5046PRTSANSEA.exact-product.json";
 import specimen383300p6Payload from "../../data/engine6/viator/383300P6.exact-product.json";
 import specimen76145p2Payload from "../../data/engine6/viator/76145P2.exact-product.json";
 import specimen5559561p1Payload from "../../data/engine6/viator/5559561P1.exact-product.json";
@@ -508,6 +509,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/San-Diego/Private-Balboa-Park-Segway-Tour/d736-18125P5",
     rawPayload: specimen18125p5Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5046PRTSANSEA",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/San-Diego-Shore-Excursion-San-Diego-Seal-Tour/d736-5046PRTSANSEA",
+    rawPayload: specimen5046prtsanseaPayload as Record<string, unknown>,
   },
   {
     productCode: "327321P1",
