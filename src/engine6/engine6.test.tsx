@@ -138,7 +138,7 @@ const ENGINE6_21165P1_EXPECTED_HERO_URL =
 const ENGINE6_31015P9_EXPECTED_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-360x240/0a/b2/7b/e3.jpg";
 const ENGINE6_173946P1_EXPECTED_HERO_URL =
-  "https://media.tacdn.com/media/attractions-splice-spp-360x240/0e/8f/b9/96.jpg";
+  "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/15/f7/caption.jpg?w=1400&h=1000&s=1";
 const ENGINE6_18125P5_EXPECTED_HERO_URL =
   "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/15/dc/caption.jpg?w=700&h=500&s=1";
 
@@ -1344,7 +1344,7 @@ describe("engine6 listing surfaces", () => {
       "173946P1": {
         route: ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
         hero: ENGINE6_173946P1_EXPECTED_HERO_URL,
-        cta: "https://www.viator.com/tours/San-Diego/Half-Day-4x4-Adventure/d736-173946P1?pid=P00290915&mcid=42383&medium=link",
+        cta: "https://www.viator.com/tours/San-Diego/Half-Day-4x4-Adventure/d736-173946P1?pid=P00290915&mcid=58086&medium=link&uid=U00174482&currency=USD",
       },
       "18125P5": {
         route: ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_ROUTE,
