@@ -169,6 +169,9 @@ export const ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_ROUTE =
 export const ENGINE6_SAN_DIEGO_HARBOR_DINNER_CRUISE_PRODUCT_CODE = "5144_C0004";
 export const ENGINE6_SAN_DIEGO_HARBOR_DINNER_CRUISE_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-harbor-dinner-cruise-5144_C0004";
+export const ENGINE6_SAN_DIEGO_SEAL_TOUR_PRODUCT_CODE = "5046PRTSANSEA";
+export const ENGINE6_SAN_DIEGO_SEAL_TOUR_ROUTE =
+  "/destinations/california/san-diego/tours/san-diego-seal-tour-5046PRTSANSEA";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE = "327321P1";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE =
   "/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs";
@@ -469,6 +472,8 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SAN_DIEGO_HARBOR_DINNER_CRUISE_ROUTE,
     ENGINE6_SAN_DIEGO_HARBOR_DINNER_CRUISE_PRODUCT_CODE,
+    ENGINE6_SAN_DIEGO_SEAL_TOUR_ROUTE,
+    ENGINE6_SAN_DIEGO_SEAL_TOUR_PRODUCT_CODE,
   ],
   [
     ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
