@@ -1,0 +1,60 @@
+{
+  "product": {
+    "productCode": "28758P1",
+    "productUrl": "https://www.viator.com/tours/San-Diego/Border-Tours-Tijuana-Mexico-from-San-diego/d736-28758P1",
+    "title": "Crossing Borders: Tijuana Day Trip from San Diego",
+    "description": "Explore Tijuana, Mexico, without getting lost on this day trip from San Diego, a great choice for first-time visitors. Start this Tijuana full-day tour by meeting up with your guide and small group in San Diego. Once you meet up, your guide helps your group with border crossing into Mexico before you set off exploring Tijuana by foot.",
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": 73,
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 624
+    },
+    "duration": {
+      "fixedDurationInMinutes": 360
+    },
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/1e/5d/caption.jpg?w=700&h=500&s=1"
+        }
+      ]
+    },
+    "highlights": [
+      "Visit Tijuana with a guide to help you find your way around",
+      "Round-trip transfers from San Diego are included",
+      "Free tacos, beer, and water are provided",
+      "Small group sizes keep this tour intimate"
+    ],
+    "logistics": {
+      "start": "727 E San Ysidro Blvd, San Diego, CA 92173, USA",
+      "end": "Retorno Sentri, Rtno Sentri, Cuauhtemoc, 22010 Tijuana, B.C., Mexico"
+    },
+    "itineraryItems": [
+      {
+        "description": "Head south of the border to experience the attractions and culture of Tijuana with this small-group day trip from San Diego, ideal for first-time visitors to the border city."
+      },
+      {
+        "description": "You'll have a guide with you to show you as you eat and shop your way through the city, all on foot."
+      },
+      {
+        "description": "Explore iconic historical places in town, including markets, bars, and cathedral, while learning about the food, culture and history of Tijuana."
+      }
+    ],
+    "inclusions": [
+      "Food tasting",
+      "Lunch",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Not wheelchair accessible",
+      "Service animals allowed",
+      "Near public transportation",
+      "Passport is required",
+      "This tour/activity will have a maximum of 12 travelers"
+    ]
+  }
+}

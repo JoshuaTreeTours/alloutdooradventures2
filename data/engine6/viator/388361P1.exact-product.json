@@ -1,0 +1,92 @@
+{
+  "product": {
+    "productCode": "388361P1",
+    "productUrl": "https://www.viator.com/tours/San-Diego/sailing-chartered-experience-harbor-tour/d736-388361P1",
+    "title": "Deluxe Sunset & Day Sail Small Group",
+    "description": "Experience the beauty of the San Diego coastline on a peaceful sunset sailing tour, avoiding the crowds at popular viewing spots. Relax aboard your vessel as you take in stunning sunset views, along with possible sightings of dolphins, vibrant seabirds, and sea lions. Along the way, enjoy scenic views of the Coronado Bridge, Point Loma, and San Diego Bay.",
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": 119,
+    "reviews": {
+      "combinedAverageRating": 5.0,
+      "totalReviews": 203
+    },
+    "duration": {
+      "fixedDurationInMinutes": 150
+    },
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/30/9f/1e/e2/caption.jpg?w=700&h=500&s=1"
+        }
+      ]
+    },
+    "highlights": [
+      "Perfect way to get San Diego sunset shots",
+      "Small-group experience, capped at six travelers",
+      "Enjoy onboard drinks—including soft and alcoholic drinks",
+      "Learn about local marine life from your crew"
+    ],
+    "logistics": {
+      "start": "955 Harbor Island Dr, San Diego, CA 92101, USA",
+      "end": "This activity ends back at the meeting point."
+    },
+    "itineraryItems": [
+      {
+        "description": "San Diego (Pass By)"
+      },
+      {
+        "description": "Maritime Museum of San Diego (Pass By)"
+      },
+      {
+        "description": "San Diego Convention Center (Pass By)"
+      },
+      {
+        "description": "San Diego Bay Walk (Pass By)"
+      },
+      {
+        "description": "Cabrillo National Monument (Pass By)"
+      },
+      {
+        "description": "Coronado (Pass By)"
+      },
+      {
+        "description": "Coronado Island (Pass By)"
+      },
+      {
+        "description": "Shelter Island (Pass By)"
+      },
+      {
+        "description": "Coronado Bridge (Pass By)"
+      },
+      {
+        "description": "The Embarcadero (Pass By)"
+      },
+      {
+        "description": "The Rady Shell At Jacobs Park (Pass By)"
+      },
+      {
+        "description": "Seaport Village (Pass By)"
+      },
+      {
+        "description": "USS Midway Museum (Pass By)"
+      }
+    ],
+    "inclusions": [
+      "Alcoholic Beverages",
+      "Soda/Pop",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Not wheelchair accessible",
+      "Stroller accessible",
+      "Near public transportation",
+      "Infants must sit on laps",
+      "No heart problems or other serious medical conditions",
+      "Most travelers can participate",
+      "This tour/activity will have a maximum of 6 travelers"
+    ]
+  }
+}
