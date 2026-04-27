@@ -160,6 +160,9 @@ export const ENGINE6_SAN_DIEGO_CORONADO_EBIKE_ROUTE =
 export const ENGINE6_SAN_DIEGO_CLASSIC_SAIL_CHARTER_PRODUCT_CODE = "5598628P3";
 export const ENGINE6_SAN_DIEGO_CLASSIC_SAIL_CHARTER_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-bay-sail-aboard-a-french-yacht-beer-and-wine-included";
+export const ENGINE6_SAN_DIEGO_WHALE_WATCHING_PRODUCT_CODE = "69764P1";
+export const ENGINE6_SAN_DIEGO_WHALE_WATCHING_ROUTE =
+  "/destinations/california/san-diego/tours/san-diego-whale-watching-cruise-3-hour-coastal-wildlife-tour";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE = "327321P1";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE =
   "/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs";
@@ -234,7 +237,8 @@ export const ENGINE6_ZURICH_INTERLAKEN_GRINDELWALD_PRODUCT_CODE =
 export const ENGINE6_ZURICH_INTERLAKEN_GRINDELWALD_ROUTE =
   "/destinations/switzerland/zurich/tours/interlaken-and-grindelwald-day-trip-from-zurich";
 
-export const ENGINE6_ZURICH_EXCLUSIVE_OLD_TOWN_CRUISE_LINDT_PRODUCT_CODE = "5553984P5";
+export const ENGINE6_ZURICH_EXCLUSIVE_OLD_TOWN_CRUISE_LINDT_PRODUCT_CODE =
+  "5553984P5";
 export const ENGINE6_ZURICH_EXCLUSIVE_OLD_TOWN_CRUISE_LINDT_ROUTE =
   "/destinations/switzerland/zurich/tours/exclusive-zurich-tour-old-town-lake-zurich-cruise-and-lindt-museum";
 export const ENGINE6_ZURICH_MOUNT_TITLIS_PRODUCT_CODE = "3885SW303BS";
@@ -449,6 +453,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_SAN_DIEGO_CLASSIC_SAIL_CHARTER_PRODUCT_CODE,
   ],
   [
+    ENGINE6_SAN_DIEGO_WHALE_WATCHING_ROUTE,
+    ENGINE6_SAN_DIEGO_WHALE_WATCHING_PRODUCT_CODE,
+  ],
+  [
     ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
     ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE,
   ],
@@ -537,7 +545,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_ZURICH_EXCLUSIVE_OLD_TOWN_CRUISE_LINDT_ROUTE,
     ENGINE6_ZURICH_EXCLUSIVE_OLD_TOWN_CRUISE_LINDT_PRODUCT_CODE,
   ],
-  [ENGINE6_INTERLAKEN_PARAGLIDE_ROUTE, ENGINE6_INTERLAKEN_PARAGLIDE_PRODUCT_CODE],
+  [
+    ENGINE6_INTERLAKEN_PARAGLIDE_ROUTE,
+    ENGINE6_INTERLAKEN_PARAGLIDE_PRODUCT_CODE,
+  ],
   [
     ENGINE6_INTERLAKEN_LAKE_BRIENZ_KAYAK_ROUTE,
     ENGINE6_INTERLAKEN_LAKE_BRIENZ_KAYAK_PRODUCT_CODE,
@@ -549,13 +560,15 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
 ] as const;
 
 const ENGINE6_ACTIVE_ROUTE_PRODUCT_CODE_ENTRIES =
-  ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES.filter(([, productCode]) =>
-    !isExcludedProductCode(productCode)
+  ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES.filter(
+    ([, productCode]) => !isExcludedProductCode(productCode)
   );
 
 export const ENGINE6_CONFIGURED_PRODUCT_CODES = Array.from(
   new Set(
-    ENGINE6_ACTIVE_ROUTE_PRODUCT_CODE_ENTRIES.map(([, productCode]) => productCode)
+    ENGINE6_ACTIVE_ROUTE_PRODUCT_CODE_ENTRIES.map(
+      ([, productCode]) => productCode
+    )
   )
 );
 

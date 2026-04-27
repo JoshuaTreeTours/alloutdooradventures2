@@ -1,0 +1,91 @@
+{
+  "product": {
+    "productCode": "69764P1",
+    "productUrl": "https://www.viator.com/tours/San-Diego/3-Hour-Whale-Watching/d736-69764P1",
+    "title": "San Diego Whale Watching Cruise (3-Hour Coastal Wildlife Tour)",
+    "description": "This 3-hour whale watching cruise from San Diego takes you along the local coastline to look for marine wildlife and broad Pacific views. Conditions vary by season, but sightings can include whales, dolphins, seabirds, and other coastal species while you cruise offshore waters with city and shoreline scenery in the background. Onboard naturalist or captain commentary shares context on migration patterns, behavior, and local marine habitats when available. The format is straightforward and family-friendly, making it a strong fit for couples, groups, and visitors seeking a classic San Diego ocean activity.",
+    "location": {
+      "city": "San Diego",
+      "state": "California",
+      "country": "United States"
+    },
+    "priceFrom": 68,
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 412
+    },
+    "duration": "3 hours",
+    "media": {
+      "images": [
+        {
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/16/99/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            },
+            "LARGE": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/16/99/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "3-hour whale watching cruise from San Diego.",
+      "Look for whales, dolphins, and other marine wildlife.",
+      "Enjoy coastal views and open-ocean scenery from the water.",
+      "Learn about local marine life from onboard naturalist or captain commentary when provided.",
+      "Great visual, family-friendly ocean experience for visitors."
+    ],
+    "logistics": {
+      "start": [
+        "Boarding and departure from the San Diego waterfront meeting location provided on your ticket."
+      ]
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "ref": "736",
+            "name": "San Diego Bay"
+          }
+        },
+        "description": "Depart from San Diego Bay and cruise into coastal waters while your crew outlines the route, safety details, and expected marine life conditions for the day."
+      },
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "ref": "736",
+            "name": "Pacific Coastline"
+          }
+        },
+        "description": "Follow the San Diego coastline to scan for whales, dolphins, and seabirds while taking in ocean views and seasonal wildlife activity."
+      }
+    ],
+    "inclusions": [
+      "3-hour whale watching cruise",
+      "Live onboard commentary from naturalist or captain when available"
+    ],
+    "additionalInfo": [
+      "This is a shared group cruise experience.",
+      "Food and drinks are not included unless explicitly stated at booking.",
+      "Transportation to and from the departure point is not included.",
+      "Wildlife sightings vary by season and are not guaranteed.",
+      "Check your ticket terms for cancellation and cut-off policy details."
+    ],
+    "faqs": [
+      {
+        "question": "How long is the San Diego whale watching cruise?",
+        "answer": "The cruise duration is approximately 3 hours on the water."
+      },
+      {
+        "question": "What wildlife might we see?",
+        "answer": "Depending on season and conditions, sightings can include whales, dolphins, seabirds, and other marine life."
+      }
+    ],
+    "categories": ["on-the-water", "wildlife"]
+  }
+}
