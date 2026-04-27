@@ -29,6 +29,13 @@ const ENGINE6_VIATOR_AFFILIATE_OVERRIDES: Record<
     currency: "USD",
     medium: "link",
   },
+  "173946P1": {
+    pid: "P00290915",
+    uid: "U00174482",
+    mcid: "58086",
+    currency: "USD",
+    medium: "link",
+  },
 };
 
 const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
