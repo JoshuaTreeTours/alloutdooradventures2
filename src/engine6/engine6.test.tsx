@@ -43,6 +43,7 @@ import {
   ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
   ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
+  ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_ROUTE,
   ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
   ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
   ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE,
@@ -138,6 +139,8 @@ const ENGINE6_31015P9_EXPECTED_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-360x240/0a/b2/7b/e3.jpg";
 const ENGINE6_173946P1_EXPECTED_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-360x240/0e/8f/b9/96.jpg";
+const ENGINE6_18125P5_EXPECTED_HERO_URL =
+  "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/15/dc/caption.jpg?w=700&h=500&s=1";
 
 const countStructuredSourceStops = (
   rawPayload: Record<string, unknown>
@@ -1343,6 +1346,11 @@ describe("engine6 listing surfaces", () => {
         hero: ENGINE6_173946P1_EXPECTED_HERO_URL,
         cta: "https://www.viator.com/tours/San-Diego/Half-Day-4x4-Adventure/d736-173946P1?pid=P00290915&mcid=42383&medium=link",
       },
+      "18125P5": {
+        route: ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_ROUTE,
+        hero: ENGINE6_18125P5_EXPECTED_HERO_URL,
+        cta: "https://www.viator.com/tours/San-Diego/Private-Balboa-Park-Segway-Tour/d736-18125P5?pid=P00290915&mcid=58086&medium=link&uid=U00174482&currency=USD",
+      },
     } as const;
 
     const cityUnified = getToursByCityUnified("california", "san-diego");
@@ -1391,7 +1399,7 @@ describe("engine6 listing surfaces", () => {
       const tour = engine6ResolvedTours.find(entry => entry.productCode === productCode);
       return tour?.heroImageUrl;
     });
-    expect(new Set(heroes).size).toBe(3);
+    expect(new Set(heroes).size).toBe(4);
   });
 
   it("renders an Other Tours slider below bottom CTA with unified listing cards", () => {

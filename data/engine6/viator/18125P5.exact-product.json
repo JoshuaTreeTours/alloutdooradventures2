@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "18125P5",
+    "productUrl": "https://www.viator.com/tours/San-Diego/Private-Balboa-Park-Segway-Tour/d736-18125P5",
+    "title": "San Diego Private Balboa Park Segway Tour",
+    "description": {
+      "text": "Explore Balboa Park on a private guided Segway tour designed for visitors who want to cover more ground than walking while still getting context from a local guide. Glide through one of San Diego's signature cultural districts to see gardens, museum exteriors, Spanish Colonial Revival architecture, and major park landmarks. The private format allows a more personalized pace with commentary tailored to your group. This tour is a strong fit for travelers who want a fun, efficient overview of Balboa Park in a single outing."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California",
+      "country": "United States"
+    },
+    "priceFrom": 149,
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 28
+    },
+    "duration": "2 hours",
+    "media": {
+      "images": [
+        {
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/15/dc/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            },
+            "LARGE": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/15/dc/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private guided Segway tour of Balboa Park.",
+      "See gardens, museums, and Spanish Colonial Revival architecture.",
+      "Cover more ground than a walking tour.",
+      "Enjoy a personalized experience with your guide.",
+      "Great introduction to one of San Diego's most famous landmarks."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide near Balboa Park for orientation and Segway safety training before departure."
+      }
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "ref": "736",
+            "name": "Balboa Park"
+          }
+        },
+        "description": "Glide through Balboa Park with your private guide as you cover key plazas, gardens, and landmark buildings efficiently."
+      },
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "ref": "736",
+            "name": "Spanish Village Art Center"
+          }
+        },
+        "description": "Pass the Spanish Village Art Center to see colorful courtyards and artist studios that reflect the park's creative side."
+      },
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "ref": "736",
+            "name": "Alcazar Garden"
+          }
+        },
+        "description": "Roll by Alcazar Garden for a quick look at patterned landscaping and architecture inspired by Spanish design traditions."
+      }
+    ],
+    "inclusions": [
+      "Private Segway tour",
+      "Guide",
+      "Segway orientation and safety instruction",
+      "Helmet"
+    ],
+    "additionalInfo": [
+      "Most travelers can participate with basic balance and mobility.",
+      "This is a private tour, so only your group will participate.",
+      "Arrive early for check-in and mandatory safety orientation.",
+      "Check your booking confirmation for final meeting details and policy terms."
+    ],
+    "faqs": [
+      {
+        "question": "Is this Balboa Park Segway tour private?",
+        "answer": "Yes. This experience is run as a private tour for your group with a dedicated guide."
+      },
+      {
+        "question": "How does a Segway tour compare with walking Balboa Park?",
+        "answer": "The Segway format helps you cover more of Balboa Park in less time while still stopping for commentary and photos."
+      },
+      {
+        "question": "What kinds of landmarks are typically seen on the route?",
+        "answer": "Routes typically focus on Balboa Park highlights such as gardens, museum exteriors, plazas, and notable Spanish Colonial Revival architecture."
+      },
+      {
+        "question": "Do we get a safety orientation before starting?",
+        "answer": "Yes. The experience includes a Segway orientation and safety briefing before the guided portion begins."
+      },
+      {
+        "question": "Who is this tour best for?",
+        "answer": "It is a good fit for visitors who want a fun, efficient overview of Balboa Park with personalized guiding."
+      }
+    ],
+    "categories": [
+      "private",
+      "historical-tours",
+      "city-tours"
+    ]
+  }
+}
