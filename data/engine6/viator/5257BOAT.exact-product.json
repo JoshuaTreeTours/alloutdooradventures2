@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "5257BOAT",
+    "productUrl": "https://www.viator.com/tours/San-Diego/San-Diego-Harbor-Speed-Boat-Adventure/d736-5257BOAT",
+    "title": "San Diego Harbor Speed Boat Adventure",
+    "description": "Experience the thrill of driving a speedboat\u2014and enjoy a new way to sightsee\u2014on this two-in-one San Diego Harbor tour. Learn the basics of boating from your guide before following their boat around the harbor, cruising past highlights such as the USS Midway, Coronado Bridge, the San Diego Maritime Museum, and more. Discover the stories behind the landmarks via the on-board, two-way communication system, and stop for photo ops.",
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": 119,
+    "pricing": {
+      "summary": {
+        "fromPrice": 119
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 736
+    },
+    "duration": {
+      "fixedDurationInMinutes": 120
+    },
+    "media": {
+      "images": [
+        {
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/18/b9/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            },
+            "LARGE": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/18/b9/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "logistics": {
+      "start": [
+        "Cabrillo Isle Marina - Check in at the office located in suite 205"
+      ]
+    },
+    "itinerarySummary": "After making your own way to the Cabrillo Isle Marina in San Diego Harbor, your guide welcomes you to your speed boat adventure. Start off with a safety briefing, followed by a lesson on hand signals and boating rules. You navigate on your own F13 speedboat for the entirety of the tour, following the lead of your guide who sets the pace in a different boat. Your boat is equipped with a two-way communication system that allows you to hear your guide throughout the tour. Set out on your roughly 13-mile (20-kilometer) spin around the San Diego Harbor, which includes several stops for photo ops and a closer look at points of interest throughout the harbor. Enjoy close views of US Navy ships and aircraft carriers such as the USS Midway. See the Star of India, one of several historic ships berthed at the San Diego Maritime Museum. Also pass the Coronado Bridge, Seaport Village, the cruise ship terminal, and be rewarded with excellent views of the downtown skyline. This tour ends back at the original departure point.",
+    "itineraryItems": [
+      {
+        "pointOfInterestLocation": {
+          "name": "San Diego Speed Boat Adventures"
+        },
+        "duration": "2 hours",
+        "admissionIncluded": true,
+        "description": "2 hours \u2022 Admission Ticket Included"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Point Loma"
+        },
+        "passByWithoutStopping": true,
+        "description": "Point Loma (Pass By)"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Coronado Island"
+        },
+        "passByWithoutStopping": true,
+        "description": "Coronado Island (Pass By)"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "USS Midway Museum"
+        },
+        "passByWithoutStopping": true,
+        "description": "USS Midway Museum (Pass By)"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Maritime Museum of San Diego"
+        },
+        "passByWithoutStopping": true,
+        "description": "Maritime Museum of San Diego (Pass By)"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "San Diego Bay Walk"
+        },
+        "passByWithoutStopping": true,
+        "description": "San Diego Bay Walk (Pass By)"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Coronado Bridge"
+        },
+        "passByWithoutStopping": true,
+        "description": "Coronado Bridge (Pass By)"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Cabrillo National Monument"
+        },
+        "passByWithoutStopping": true,
+        "description": "Cabrillo National Monument (Pass By)"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Maritime Museum of San Diego"
+        },
+        "passByWithoutStopping": true,
+        "description": "Maritime Museum of San Diego (Pass By)"
+      }
+    ]
+  }
+}

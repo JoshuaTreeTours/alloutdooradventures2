@@ -169,6 +169,13 @@ export const ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_ROUTE =
 export const ENGINE6_SAN_DIEGO_SEAL_TOUR_PRODUCT_CODE = "5046PRTSANSEA";
 export const ENGINE6_SAN_DIEGO_SEAL_TOUR_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-seal-tour-5046PRTSANSEA";
+export const ENGINE6_SAN_DIEGO_FINEST_CITY_TOUR_PRODUCT_CODE = "424070P1";
+export const ENGINE6_SAN_DIEGO_FINEST_CITY_TOUR_ROUTE =
+  "/destinations/california/san-diego/tours/san-diego-finest-city-tour-424070P1";
+export const ENGINE6_SAN_DIEGO_HARBOR_SPEED_BOAT_ADVENTURE_PRODUCT_CODE =
+  "5257BOAT";
+export const ENGINE6_SAN_DIEGO_HARBOR_SPEED_BOAT_ADVENTURE_ROUTE =
+  "/destinations/california/san-diego/tours/san-diego-harbor-speed-boat-adventure-5257BOAT";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE = "327321P1";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE =
   "/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs";
@@ -469,6 +476,14 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SAN_DIEGO_SEAL_TOUR_ROUTE,
     ENGINE6_SAN_DIEGO_SEAL_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_DIEGO_FINEST_CITY_TOUR_ROUTE,
+    ENGINE6_SAN_DIEGO_FINEST_CITY_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_DIEGO_HARBOR_SPEED_BOAT_ADVENTURE_ROUTE,
+    ENGINE6_SAN_DIEGO_HARBOR_SPEED_BOAT_ADVENTURE_PRODUCT_CODE,
   ],
   [
     ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,

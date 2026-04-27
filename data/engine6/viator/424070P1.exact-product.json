@@ -1,0 +1,133 @@
+{
+  "product": {
+    "productCode": "424070P1",
+    "productUrl": "https://www.viator.com/tours/San-Diego/San-Diego-Finest-City-Tour-and-Small-Group-Sightseeing/d736-424070P1",
+    "title": "San Diego: The Most Extensive City & Beach Tour",
+    "description": "Get more out of limited time in San Diego by going on a tour that helps you check off multiple highlights, including city and beach locations. As you set off on a scenic drive, a guide helps you get the most out of your trip with live narration and video footage too. Stops along the way include the historic Hotel Del Coronado, the Coronado Bridge, and La Jolla Cove.",
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": 99,
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 205
+    },
+    "duration": {
+      "fixedDurationInMinutes": 330
+    },
+    "media": {
+      "images": [
+        {
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/1c/48/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            },
+            "LARGE": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/1c/48/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "logistics": {
+      "start": [
+        "Pick up is in front of the BANK OF AMERICA building on 655 West Broadway and Kettner by the bus stop, across the street from Santa Fe Depot. Bus will pull up between 9 45 AM and 10 AM. The tour starts at 10 AM. Paid parking at Bank of America building or behind Santa Fe Depot."
+      ]
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterestLocation": {
+          "name": "Santa Fe Depot"
+        },
+        "duration": "1 minute",
+        "admissionIncluded": true,
+        "description": "1 minute \u2022 Admission Ticket Free"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Gaslamp Quarter"
+        },
+        "passByWithoutStopping": true,
+        "description": "Gaslamp Quarter (Pass By)"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Little Italy"
+        },
+        "passByWithoutStopping": true,
+        "description": "Little Italy (Pass By)"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Coronado Bridge"
+        },
+        "passByWithoutStopping": true,
+        "description": "Coronado Bridge (Pass By)"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Coronado"
+        },
+        "duration": "50 minutes",
+        "admissionIncluded": true,
+        "description": "50 minutes \u2022 Admission Ticket Free"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "La Jolla Cove"
+        },
+        "duration": "30 minutes",
+        "admissionIncluded": true,
+        "description": "30 minutes \u2022 Admission Ticket Free"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Mt. Soledad National Veterans Memorial"
+        },
+        "passByWithoutStopping": true,
+        "description": "Mt. Soledad National Veterans Memorial (Pass By)"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Balboa Park"
+        },
+        "duration": "50 minutes",
+        "admissionIncluded": true,
+        "description": "50 minutes \u2022 Admission Ticket Free"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Old Town San Diego"
+        },
+        "duration": "45 minutes",
+        "admissionIncluded": true,
+        "description": "45 minutes \u2022 Admission Ticket Free"
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Santa Fe Depot"
+        },
+        "duration": "1 minute",
+        "admissionIncluded": true,
+        "description": "1 minute \u2022 Admission Ticket Free"
+      }
+    ],
+    "itinerarySummary": "Santa Fe Depot; Gaslamp Quarter (Pass By); Little Italy (Pass By); Coronado Bridge (Pass By); Coronado; La Jolla Cove; Mt. Soledad National Veterans Memorial (Pass By); Balboa Park; Old Town San Diego; Santa Fe Depot.",
+    "highlights": [
+      "Discover the best of San Diego on this guided tour",
+      "Small-group tour, capped at 14 people",
+      "See different neighborhoods, including Little Italy",
+      "Learn about the history of local sights"
+    ]
+  }
+}
