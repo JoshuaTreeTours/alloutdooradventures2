@@ -163,6 +163,9 @@ export const ENGINE6_SAN_DIEGO_CLASSIC_SAIL_CHARTER_ROUTE =
 export const ENGINE6_SAN_DIEGO_WHALE_WATCHING_PRODUCT_CODE = "69764P1";
 export const ENGINE6_SAN_DIEGO_WHALE_WATCHING_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-whale-watching-cruise-3-hour-coastal-wildlife-tour";
+export const ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_PRODUCT_CODE = "18125P5";
+export const ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_ROUTE =
+  "/destinations/california/san-diego/tours/san-diego-private-balboa-park-segway-tour";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE = "327321P1";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE =
   "/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs";
@@ -455,6 +458,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SAN_DIEGO_WHALE_WATCHING_ROUTE,
     ENGINE6_SAN_DIEGO_WHALE_WATCHING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_ROUTE,
+    ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_PRODUCT_CODE,
   ],
   [
     ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
