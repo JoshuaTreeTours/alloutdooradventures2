@@ -50,76 +50,80 @@
           "name": "Santa Fe Depot"
         },
         "duration": "1 minute",
-        "admissionIncluded": true,
-        "description": "1 minute \u2022 Admission Ticket Free"
+        "admissionIncluded": "NOT_APPLICABLE",
+        "description": "Pick up is in front of the Bank of America building on 655 West Broadway by the bus stop, across the street from Santa Fe Depot. \n\nPick up at Cruise Ship Terminal is only when we have cruise passengers."
       },
       {
         "pointOfInterestLocation": {
           "name": "Gaslamp Quarter"
         },
         "passByWithoutStopping": true,
-        "description": "Gaslamp Quarter (Pass By)"
+        "admissionIncluded": "NOT_APPLICABLE",
+        "description": "We visit the historic Gaslamp District and learn about the history of Alonzo Horton and New Town."
       },
       {
         "pointOfInterestLocation": {
           "name": "Little Italy"
         },
         "passByWithoutStopping": true,
-        "description": "Little Italy (Pass By)"
+        "admissionIncluded": "NOT_APPLICABLE",
+        "description": "Mama MIa! We drive by the largest Little Italy in America."
       },
       {
         "pointOfInterestLocation": {
           "name": "Coronado Bridge"
         },
         "passByWithoutStopping": true,
-        "description": "Coronado Bridge (Pass By)"
+        "admissionIncluded": "NOT_APPLICABLE",
+        "description": "We take a ride over the San Diego-Coronado Bay Bridge. Witness spectacular views of the San Diego skyline and Coronado."
       },
       {
         "pointOfInterestLocation": {
           "name": "Coronado"
         },
         "duration": "50 minutes",
-        "admissionIncluded": true,
-        "description": "50 minutes \u2022 Admission Ticket Free"
+        "admissionIncluded": "NOT_APPLICABLE",
+        "description": "Discover a great view of Downtown skyline from Ferry Landing and the elegant Hotel Del Coronado, a true historic landmark dating back to 1888. Get some lunch on Orange Avenue, take a stroll on the beach. There is a 50 minute stop in Coronado, the Crown City."
       },
       {
         "pointOfInterestLocation": {
           "name": "La Jolla Cove"
         },
         "duration": "30 minutes",
-        "admissionIncluded": true,
-        "description": "30 minutes \u2022 Admission Ticket Free"
+        "admissionIncluded": "NOT_APPLICABLE",
+        "description": "One of the most popular attractions in San Diego. See the seals in their natural habitat. Breath the cool ocean air and explore beautiful La Jolla Cove. There is a 30 minute stop here."
       },
       {
         "pointOfInterestLocation": {
           "name": "Mt. Soledad National Veterans Memorial"
         },
         "passByWithoutStopping": true,
-        "description": "Mt. Soledad National Veterans Memorial (Pass By)"
+        "admissionIncluded": "NOT_APPLICABLE",
+        "description": "Honor our fallen soldiers and see spectacular views of San Diego."
       },
       {
         "pointOfInterestLocation": {
           "name": "Balboa Park"
         },
         "duration": "50 minutes",
-        "admissionIncluded": true,
-        "description": "50 minutes \u2022 Admission Ticket Free"
+        "admissionIncluded": "NOT_APPLICABLE",
+        "description": "Take a walk in San Diego's green paradise, the incredible Balboa Park. Home to the famous San Diego Zoo & site of the 1915 Panama California Exposition. The park is also bustling with museums and landmarks. There is a 45 minute stop for you to discover the beauty of this park."
       },
       {
         "pointOfInterestLocation": {
           "name": "Old Town San Diego"
         },
         "duration": "45 minutes",
-        "admissionIncluded": true,
-        "description": "45 minutes \u2022 Admission Ticket Free"
+        "admissionIncluded": "NOT_APPLICABLE",
+        "description": "Discover San Diego's roots in Old Town, the birthplace of California. Go back in time as you walk through the historic area and some of its emblematic buildings including the haunted Whaley's House and Casa De Estudillo from 1827."
       },
       {
         "pointOfInterestLocation": {
           "name": "Santa Fe Depot"
         },
         "duration": "1 minute",
-        "admissionIncluded": true,
-        "description": "1 minute \u2022 Admission Ticket Free"
+        "admissionIncluded": "NOT_APPLICABLE",
+        "description": "Santa Fe Depot is our drop off point."
       }
     ],
     "itinerarySummary": "Santa Fe Depot; Gaslamp Quarter (Pass By); Little Italy (Pass By); Coronado Bridge (Pass By); Coronado; La Jolla Cove; Mt. Soledad National Veterans Memorial (Pass By); Balboa Park; Old Town San Diego; Santa Fe Depot.",
