@@ -43,6 +43,7 @@ import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-pr
 import specimen191303p1Payload from "../../data/engine6/viator/191303P1.exact-product.json";
 import specimen5598628p3Payload from "../../data/engine6/viator/5598628P3.exact-product.json";
 import specimen69764p1Payload from "../../data/engine6/viator/69764P1.exact-product.json";
+import specimen146931p4Payload from "../../data/engine6/viator/146931P4.exact-product.json";
 import specimen18125p5Payload from "../../data/engine6/viator/18125P5.exact-product.json";
 import specimen5046prtsanseaPayload from "../../data/engine6/viator/5046PRTSANSEA.exact-product.json";
 import specimen424070p1Payload from "../../data/engine6/viator/424070P1.exact-product.json";
@@ -509,6 +510,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     rawPayload: specimen69764p1Payload as Record<string, unknown>,
   },
   {
+    productCode: "146931P4",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/La-Jolla-Tour/d736-146931P4",
+    rawPayload: specimen146931p4Payload as Record<string, unknown>,
     productCode: "18125P5",
     publicUrl:
       "https://www.viator.com/tours/San-Diego/Private-Balboa-Park-Segway-Tour/d736-18125P5",

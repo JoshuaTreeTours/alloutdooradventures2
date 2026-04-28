@@ -1,0 +1,131 @@
+{
+  "product": {
+    "productCode": "146931P4",
+    "productUrl": "https://www.viator.com/tours/San-Diego/La-Jolla-Tour/d736-146931P4",
+    "title": "San Diego La Jolla Tour",
+    "description": {
+      "text": "Discover coastal San Diego on a guided La Jolla tour with a private driver-guide and scenic stops across one of the city’s most iconic shoreline neighborhoods. The route features oceanfront overlooks, dramatic cliffs, and beach viewpoints, including time around La Jolla Cove and other local landmarks listed in the itinerary. With flexible pickup in the La Jolla area and guided narration through helmet audio, this experience is a practical fit for visitors who want an easy, scenic coastal outing without navigating on their own."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California",
+      "country": "United States"
+    },
+    "priceFrom": 305,
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 8
+    },
+    "duration": "2 to 4 hours",
+    "media": {
+      "images": [
+        {
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/19/ac/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            },
+            "LARGE": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/19/ac/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided tour of La Jolla with private driver-guide service.",
+      "See coastal cliffs, beaches, and broad Pacific Ocean views.",
+      "Visit key La Jolla viewpoints including La Jolla Cove and Mt. Soledad.",
+      "Easy way to experience one of San Diego’s most scenic coastal neighborhoods.",
+      "Local guide context is shared through in-helmet HD audio."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Westfield UTC, 4545 La Jolla Village Dr Ste E-25, San Diego, CA 92122, USA"
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Geisel Library",
+        "description": "Start with a brief guided stop near Geisel Library for architecture views and orientation before heading to the coast.",
+        "duration": "20 minutes",
+        "admission": {
+          "included": true
+        }
+      },
+      {
+        "title": "Torrey Pines Gliderport",
+        "description": "Pause at Torrey Pines Gliderport for elevated coastal panoramas above the beach and ocean.",
+        "duration": "20 minutes",
+        "admission": {
+          "included": true
+        }
+      },
+      {
+        "title": "La Jolla Shores Park",
+        "passByWithoutStopping": true,
+        "description": "Pass by La Jolla Shores Park to take in the shoreline and beach scene along the route."
+      },
+      {
+        "title": "La Jolla Cove",
+        "description": "Spend the main touring segment around La Jolla Cove to experience signature ocean views and seaside scenery.",
+        "duration": "3 hours",
+        "admission": {
+          "included": true
+        }
+      },
+      {
+        "title": "Mt. Soledad National Veterans Memorial",
+        "description": "Stop at Mt. Soledad for a final high vantage point over La Jolla and greater San Diego.",
+        "duration": "15 minutes",
+        "admission": {
+          "included": true
+        }
+      }
+    ],
+    "inclusions": [
+      "DOT approved open-face helmet",
+      "Bottled water",
+      "Private transportation",
+      "HD audio Bluetooth helmet system",
+      "Local guide"
+    ],
+    "exclusions": [
+      "Gratuities"
+    ],
+    "additionalInfo": [
+      "Pickup and drop-off available in La Jolla and surrounding neighborhoods within about a 5-mile radius.",
+      "Not wheelchair accessible.",
+      "Service animals allowed.",
+      "Near public transportation.",
+      "Not recommended for travelers with back problems.",
+      "Not recommended for pregnant travelers.",
+      "No heart problems or other serious medical conditions.",
+      "Most travelers can participate.",
+      "Private tour/activity; only your group will participate.",
+      "Free cancellation up to 24 hours before the experience starts (local time).",
+      "Check the booking calendar for current date and start-time availability."
+    ],
+    "faqs": [
+      {
+        "question": "Where does the tour meet?",
+        "answer": "Meet at Westfield UTC, 4545 La Jolla Village Dr Ste E-25, San Diego, CA 92122, USA, or request eligible pickup."
+      },
+      {
+        "question": "How long is the San Diego La Jolla Tour?",
+        "answer": "The experience typically runs about 2 to 4 hours, depending on the selected option and pacing."
+      },
+      {
+        "question": "Can I cancel if my plans change?",
+        "answer": "Yes. Free cancellation is available up to 24 hours before the experience starts, local time."
+      }
+    ],
+    "categories": [
+      "Sidecar Tours",
+      "Private Sightseeing Tours"
+    ]
+  }
+}

@@ -163,6 +163,9 @@ export const ENGINE6_SAN_DIEGO_CLASSIC_SAIL_CHARTER_ROUTE =
 export const ENGINE6_SAN_DIEGO_WHALE_WATCHING_PRODUCT_CODE = "69764P1";
 export const ENGINE6_SAN_DIEGO_WHALE_WATCHING_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-whale-watching-cruise-3-hour-coastal-wildlife-tour";
+export const ENGINE6_SAN_DIEGO_LA_JOLLA_TOUR_PRODUCT_CODE = "146931P4";
+export const ENGINE6_SAN_DIEGO_LA_JOLLA_TOUR_ROUTE =
+  "/destinations/california/san-diego/tours/san-diego-la-jolla-tour";
 export const ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_PRODUCT_CODE = "18125P5";
 export const ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-private-balboa-park-segway-tour";
@@ -477,6 +480,8 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_SAN_DIEGO_WHALE_WATCHING_PRODUCT_CODE,
   ],
   [
+    ENGINE6_SAN_DIEGO_LA_JOLLA_TOUR_ROUTE,
+    ENGINE6_SAN_DIEGO_LA_JOLLA_TOUR_PRODUCT_CODE,
     ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_ROUTE,
     ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_PRODUCT_CODE,
   ],
