@@ -1,0 +1,1245 @@
+{
+  "product": {
+    "status": "ACTIVE",
+    "productCode": "5096P30",
+    "language": "en",
+    "createdAt": "2014-04-01T07:00:00Z",
+    "lastUpdatedAt": "2026-04-24T23:37:58Z",
+    "title": "Los Angeles: Hop-on Hop-off Sightseeing Tour by Open-top Bus",
+    "ticketInfo": {
+      "ticketTypes": [
+        "MOBILE_ONLY"
+      ],
+      "ticketTypeDescription": "Mobile or paper ticket accepted",
+      "ticketsPerBooking": "ONE_PER_BOOKING",
+      "ticketsPerBookingDescription": "One per booking"
+    },
+    "pricingInfo": {
+      "type": "PER_PERSON",
+      "ageBands": [
+        {
+          "ageBand": "CHILD",
+          "startAge": 3,
+          "endAge": 12,
+          "minTravelersPerBooking": 0,
+          "maxTravelersPerBooking": 15
+        },
+        {
+          "ageBand": "ADULT",
+          "startAge": 13,
+          "endAge": 99,
+          "minTravelersPerBooking": 1,
+          "maxTravelersPerBooking": 15
+        }
+      ]
+    },
+    "images": [
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": true,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/15/71/5b/43.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/15/71/5b/43.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/15/71/5b/43.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/15/71/5b/43.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/15/71/5b/43.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/15/71/5b/43.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/15/71/5b/43.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/15/71/5b/43.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/15/71/5b/43.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/15/71/5b/43.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "Explore Los Angeles with Big Bus",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/69/94/db.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/69/94/db.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/69/94/db.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/69/94/db.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/69/94/db.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/69/94/db.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/69/94/db.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/69/94/db.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/69/94/db.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/69/94/db.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/15/71/5b/45.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/15/71/5b/45.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/15/71/5b/45.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/15/71/5b/45.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/15/71/5b/45.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/15/71/5b/45.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/15/71/5b/45.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/15/71/5b/45.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/15/71/5b/45.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/15/71/5b/45.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "Explore Santa Monica Beach",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/69/8b/fa.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/69/8b/fa.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/69/8b/fa.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/69/8b/fa.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/69/8b/fa.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/69/8b/fa.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/69/8b/fa.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/69/8b/fa.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/69/8b/fa.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/69/8b/fa.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/15/71/5b/44.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/15/71/5b/44.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/15/71/5b/44.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/15/71/5b/44.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/15/71/5b/44.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/15/71/5b/44.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/15/71/5b/44.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/15/71/5b/44.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/15/71/5b/44.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/15/71/5b/44.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/7c/7b/f3.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/7c/7b/f3.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/7c/7b/f3.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/7c/7b/f3.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/7c/7b/f3.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/7c/7b/f3.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/7c/7b/f3.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/7c/7b/f3.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/7c/7b/f3.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/7c/7b/f3.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/7c/7b/e3.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/7c/7b/e3.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/7c/7b/e3.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/7c/7b/e3.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/7c/7b/e3.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/7c/7b/e3.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/7c/7b/e3.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/7c/7b/e3.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/7c/7b/e3.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/7c/7b/e3.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/7e/7b/fd.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/7e/7b/fd.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/7e/7b/fd.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/7e/7b/fd.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/7e/7b/fd.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/7e/7b/fd.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/7e/7b/fd.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/7e/7b/fd.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/7e/7b/fd.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/7e/7b/fd.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/7e/7b/f0.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/7e/7b/f0.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/7e/7b/f0.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/7e/7b/f0.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/7e/7b/f0.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/7e/7b/f0.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/7e/7b/f0.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/7e/7b/f0.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/7e/7b/f0.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/7e/7b/f0.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/7c/7b/f4.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/7c/7b/f4.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/7c/7b/f4.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/7c/7b/f4.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/7c/7b/f4.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/7c/7b/f4.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/7c/7b/f4.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/7c/7b/f4.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/7c/7b/f4.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/7c/7b/f4.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "Celebrity Homes & Lifestyle Tour",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/15/71/5b/21.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/15/71/5b/21.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/15/71/5b/21.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/15/71/5b/21.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/15/71/5b/21.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/15/71/5b/21.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/15/71/5b/21.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/15/71/5b/21.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/15/71/5b/21.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/15/71/5b/21.jpg"
+          }
+        ]
+      }
+    ],
+    "logistics": {
+      "redemption": {
+        "redemptionType": "NONE",
+        "specialInstructions": "Two ways to activate tickets:\n\n1. Download and open the Big Bus app. Tap \"Add Booking\" and enter your booking reference. On the day of travel, open your ticket and press \"Activate\" then show your activated ticket to the driver at any stop along the route. Plus, use the app for route information and live bus tracking. \n\n2. Redeem voucher and activate with Big Bus staff at Stop #1 - Big Bus Visitor Center Hollywood (6763 Hollywood Boulevard), or with any driver at any stop along the route. \n"
+      }
+    },
+    "timeZone": "America/Los_Angeles",
+    "description": "Explore the Glitz and Glamour of Hollywood and the laid-back sunshine of the Pacific coast as you explore Los Angeles with Big Bus. Enjoy the views, discover the history, and learn all the stories behind the city made famous for story-telling from our multi-language recorded commentary.",
+    "inclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Digital commentary with earbuds provided"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "30-min TCL Chinese Theatre Walking Tour (if option selected)"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "24/48/72-hour Hop-on Hop-off Sightseeing Tour"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Open-top Double-decker Bus"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "2 Routes - Hollywood Loop and Beach Loop to Santa Monica"
+      }
+    ],
+    "exclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Hotel pickup and drop-off"
+      }
+    ],
+    "additionalInfo": [
+      {
+        "type": "WHEELCHAIR_ACCESSIBLE",
+        "description": "Wheelchair accessible"
+      },
+      {
+        "type": "STROLLER_ACCESSIBLE",
+        "description": "Infants and small children can ride in a pram or stroller"
+      },
+      {
+        "type": "PETS_WELCOME",
+        "description": "Service animals allowed"
+      },
+      {
+        "type": "INFANTS_MUST_SIT_ON_LAPS",
+        "description": "Infants are required to sit on an adult\u2019s lap"
+      },
+      {
+        "type": "PHYSICAL_EASY",
+        "description": "Suitable for all physical fitness levels"
+      },
+      {
+        "type": "OTHER",
+        "description": "Wheelchair accessible, must call 24 hours ahead for arrangements"
+      },
+      {
+        "type": "OTHER",
+        "description": "Show your voucher to a member of the Big Bus staff at any of the stops along your route to redeem."
+      },
+      {
+        "type": "OTHER",
+        "description": "Guests may activate tickets via Big Bus app or in person with staff at Stop #1"
+      }
+    ],
+    "cancellationPolicy": {
+      "type": "STANDARD",
+      "description": "For a full refund, cancel at least 24 hours before the scheduled departure time.",
+      "cancelIfBadWeather": false,
+      "cancelIfInsufficientTravelers": false,
+      "refundEligibility": [
+        {
+          "dayRangeMin": 1,
+          "percentageRefundable": 100
+        },
+        {
+          "dayRangeMin": 0,
+          "dayRangeMax": 1,
+          "percentageRefundable": 0
+        }
+      ]
+    },
+    "bookingConfirmationSettings": {
+      "bookingCutoffType": "START_TIME",
+      "bookingCutoffInMinutes": 0,
+      "confirmationType": "INSTANT"
+    },
+    "bookingRequirements": {
+      "minTravelersPerBooking": 1,
+      "maxTravelersPerBooking": 15,
+      "requiresAdultForBooking": true
+    },
+    "languageGuides": [
+      {
+        "type": "AUDIO",
+        "language": "cmn",
+        "legacyGuide": "cmn/SERVICE_AUDIO"
+      },
+      {
+        "type": "AUDIO",
+        "language": "en",
+        "legacyGuide": "en/SERVICE_AUDIO"
+      },
+      {
+        "type": "AUDIO",
+        "language": "es",
+        "legacyGuide": "es/SERVICE_AUDIO"
+      }
+    ],
+    "bookingQuestions": [
+      "SPECIAL_REQUIREMENTS"
+    ],
+    "tags": [
+      11938,
+      367659,
+      367654,
+      12075,
+      11930,
+      367652,
+      367653,
+      12011,
+      12058,
+      367661
+    ],
+    "destinations": [
+      {
+        "ref": "645",
+        "primary": true
+      }
+    ],
+    "itinerary": {
+      "itineraryType": "HOP_ON_HOP_OFF",
+      "skipTheLine": false,
+      "privateTour": false,
+      "routes": [
+        {
+          "operatingSchedule": "Hollywood Loop departs Stop #1 - Big Bus Welcome Center at 6763 Hollywood Blvd every 30-45 minutes from 10:00 am - 4:30 pm.\n\nDownload the free Big Bus app for city information and live bus tracking.",
+          "duration": {
+            "fixedDurationInMinutes": 120
+          },
+          "name": "Hollywood Loop",
+          "stops": [
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5PBK+DxtHnHYDvmNUEy48LUeiMWelElAVwNXWaFCtWBG"
+              },
+              "description": "Stop 1 - Big Bus Welcome Center"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5JohkGWffO7hsDgMkkUdQChtyK0UiQjRe6/Wz5Lq8oew"
+              },
+              "description": "Stop 2 - TCL Chinese Theatre (in front of theatre)"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5FdSYq3I8+90dw0EglBiE+clUwkIvR4Z5x/jl5Oe0iXV"
+              },
+              "description": "Stop 3 - Guitar Center \u201cRock Walk\u201d (in front of Guitar Center)"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5B6VgZHdaq/A09roL8WHc1uRmcnv+eEk2tBdgKB5Td/A"
+              },
+              "description": "Stop 4 - The Comedy Store (in front of the Comedy Store)"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5DaEV0mEiOOHVU6QqRK9OE5bBepBtXYbwqZj2vw3kES4"
+              },
+              "description": "Stop 5 - Sunset Plaza"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5H7fWqRFlprL1gkPBL5M7VMXWkAROQhFwmNX0Vrs+0kw"
+              },
+              "description": "Stop 6 - West Hollywood"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5OxuR8cjLiPpnNTAl99mhtGHEDXFd2wsvsCyRL+jt7o+"
+              },
+              "description": "Stop 7 - Beverly Gardens Park (between Cannon Dr and Crescent Dr)"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5EuDM/XdEj5SLv9y6rGhabppgN/BKWwIodotFU5vvOdV"
+              },
+              "description": "Stop 8 - Beverly Center (bus stop outside Macy's Men)"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-RaYlfRSLaIsd0SlazqDQkwWvE6RmYowcu2eU4ViK58XR7sK5nfWZOx6j8VLUQhpRoEXIOyAJ9yzgkCfWURfa0TT0OstO0B1vU2IeYaBTlRM08w4iPj4kNmVtKwpaBzCXnMD4POIMr8tNuOENkUfHnnzHhtVxC/SXb6SwgU6CXuvzJnt9XzD+BwWle5lkPRar"
+              },
+              "description": "Stop 9 - Museum Row"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5HuUn9r4qFbJToDqGHSUg+igmmQk7ZHijJyLfkQhPqSC"
+              },
+              "description": "Stop 10 - Farmers Market / The Grove"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-RaYlfRSLaIsd0SlazqDQk2FbBEK21vRELT2BVfCw4sK/Aqx2h9QiFgcblrnmxcUjcQA5DdIyDybxXxKMDMuezMTiB6csMRpbfypcKegzxU3nsZjyfl23psB8z0rtQ9+J2b3DMhCKKqQa1l2N0McBIBYY/MZRN39OAozJP3LK9j4="
+              },
+              "description": "Stop 11 - Melrose District"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5BM9UqfiahOKPY92jnDdt9p+rO6bWF4w9PTjwtpCP8w4"
+              },
+              "description": "Stop 12 - Paramount Studios (N Gower St & Camerford St)"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5BwfjmddE9tKn92abVKEAEbh9n6f2OrFHsCdWu6AdnWH"
+              },
+              "description": "Stop 13 - Hollywood and Vine"
+            }
+          ],
+          "pointsOfInterest": [
+            {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyArQqkGuvUjltVU1sJfHK00="
+              },
+              "attractionId": 1038
+            },
+            {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyP2wMf4M050VmxDkyq23dg4="
+              },
+              "attractionId": 8228
+            },
+            {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyOMjJoJKjRoyySUcyqXd5Lk="
+              },
+              "attractionId": 8112
+            },
+            {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyC+pbZDEnGsddNpON0ebWkQ="
+              },
+              "attractionId": 1040
+            }
+          ]
+        },
+        {
+          "operatingSchedule": "Daily Departures - \nStop 6 \"Beverly Gardens Park\" - 10:30am / 11:30am / 1:00pm / 2:00pm / 3:15pm / 4:15pm\n\nStop 16 \"Santa Monica Pier\" - 11:00am / 12:00pm / 1:30pm / 2:30pm / 3:45pm\n\n*Please keep in mind these are estimated times as we do not have control over unforeseen circumstances (traffics, accidents, road closures, etc.)*",
+          "duration": {
+            "fixedDurationInMinutes": 100
+          },
+          "name": "Beach Shuttle",
+          "stops": [
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5OxuR8cjLiPpnNTAl99mhtGHEDXFd2wsvsCyRL+jt7o+"
+              },
+              "description": "Stop 7 - Beverly Gardens Park (Between Cannon & Cresent)"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5OgqfVUbHYFeVamCBPxL9yd+xROKMwxW4S4jko9c2At6"
+              },
+              "description": "Stop 16 - Santa Monica Pier"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5DItZMfWPI60QZYDFgR7o3QkDDeFPeZw9QhCTqaqCcPO"
+              },
+              "description": "Stop 17 - Santa Monica Beach"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5Noa8SUe+nFfyW+WZjdHfuGu2CrKsV6CKPaPF+TK88A/"
+              },
+              "description": "Stop 18- Venice Boardwalk"
+            },
+            {
+              "stopLocation": {
+                "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5GWhBCA2QA8TVRQGGi3dXfc4gdEuab8d6cuT2bgvgceY"
+              },
+              "description": "Stop 19 - Main Street"
+            }
+          ],
+          "pointsOfInterest": [
+            {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyJkIdDigUauLTgm7m4DvIww="
+              }
+            },
+            {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyPehVg/Xae/dBmVgP+y1udM="
+              }
+            },
+            {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyPIVrlXljde5LEtZM6m2uCQ="
+              },
+              "attractionId": 1044
+            }
+          ]
+        }
+      ],
+      "duration": {
+        "variableDurationFromMinutes": 100,
+        "variableDurationToMinutes": 120
+      }
+    },
+    "productOptions": [
+      {
+        "productOptionCode": "TG7",
+        "description": "Duration: 2 days: Hop on and off at convenient stops around LA and enjoy digital audio commentary while aboard.<br/>Chinese Theatre Walking Tour: 30-minute VIP walking tour of the TCL Chinese Theatre<br/>Hollywood Loop and Beach Loop",
+        "title": "48hr Ticket & Chinese Theater ",
+        "languageGuides": [
+          {
+            "type": "AUDIO",
+            "language": "es",
+            "legacyGuide": "es/SERVICE_AUDIO"
+          },
+          {
+            "type": "AUDIO",
+            "language": "en",
+            "legacyGuide": "en/SERVICE_AUDIO"
+          },
+          {
+            "type": "AUDIO",
+            "language": "cmn",
+            "legacyGuide": "cmn/SERVICE_AUDIO"
+          }
+        ]
+      },
+      {
+        "productOptionCode": "TG8",
+        "description": "Duration: 3 days: Hop on and off at convenient stops around LA and enjoy digital audio commentary while aboard.\n<br/>TCL Chinese Theatre : 30-minute VIP walking tour of this famous icon<br/>Hollywood Loop and Beach Loops",
+        "title": "72hr Ticket & Chinese Theater ",
+        "languageGuides": [
+          {
+            "type": "AUDIO",
+            "language": "es",
+            "legacyGuide": "es/SERVICE_AUDIO"
+          },
+          {
+            "type": "AUDIO",
+            "language": "en",
+            "legacyGuide": "en/SERVICE_AUDIO"
+          },
+          {
+            "type": "AUDIO",
+            "language": "cmn",
+            "legacyGuide": "cmn/SERVICE_AUDIO"
+          }
+        ]
+      },
+      {
+        "productOptionCode": "TG6",
+        "description": "Duration: 1 day: Hop on and off at convenient stops around LA and enjoy digital audio commentary while aboard.<br/>Hollywood Loop and Beach Loop: Explore LA, Hollywood, Santa Monica, and more",
+        "title": "24-Hour Ticket",
+        "languageGuides": [
+          {
+            "type": "AUDIO",
+            "language": "es",
+            "legacyGuide": "es/SERVICE_AUDIO"
+          },
+          {
+            "type": "AUDIO",
+            "language": "en",
+            "legacyGuide": "en/SERVICE_AUDIO"
+          },
+          {
+            "type": "AUDIO",
+            "language": "cmn",
+            "legacyGuide": "cmn/SERVICE_AUDIO"
+          }
+        ]
+      }
+    ],
+    "translationInfo": {
+      "containsMachineTranslatedText": false,
+      "translationSource": "ORIGINAL"
+    },
+    "supplier": {
+      "name": "Big Bus Tours - USA",
+      "reference": "SUPPLIER-IeatCu+8jgd0k9/NqKXaYQ=="
+    },
+    "productUrl": "https://www.viator.com/tours/Los-Angeles/Big-Bus-Los-Angeles-Hop-on-Hop-off-Tour/d645-5096P30?mcid=42383&pid=P00290915&medium=api&api_version=2.0",
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 22
+            },
+            {
+              "rating": 2.0,
+              "count": 11
+            },
+            {
+              "rating": 3.0,
+              "count": 15
+            },
+            {
+              "rating": 4.0,
+              "count": 21
+            },
+            {
+              "rating": 5.0,
+              "count": 24
+            }
+          ],
+          "totalCount": 93,
+          "averageRating": 3.2
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 92
+            },
+            {
+              "rating": 2.0,
+              "count": 47
+            },
+            {
+              "rating": 3.0,
+              "count": 59
+            },
+            {
+              "rating": 4.0,
+              "count": 78
+            },
+            {
+              "rating": 5.0,
+              "count": 200
+            }
+          ],
+          "totalCount": 476,
+          "averageRating": 3.5
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 114
+        },
+        {
+          "rating": 2.0,
+          "count": 58
+        },
+        {
+          "rating": 3.0,
+          "count": 74
+        },
+        {
+          "rating": 4.0,
+          "count": 99
+        },
+        {
+          "rating": 5.0,
+          "count": 224
+        }
+      ],
+      "totalReviews": 569,
+      "combinedAverageRating": 3.4586995
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/44/d2/21/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterestLocation": {
+          "name": "Big Bus Welcome Center (Hollywood Blvd)"
+        },
+        "description": "Begin your journey at the main departure point on Hollywood Boulevard where buses run frequently throughout the day.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "TCL Chinese Theatre"
+        },
+        "description": "Pass one of Hollywood\u2019s most iconic landmarks, famous for its celebrity handprints and historic premieres.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Rockwalk / Guitar Center"
+        },
+        "description": "See the Rockwalk, a tribute to legendary musicians located at the famous Guitar Center.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "The Comedy Store"
+        },
+        "description": "Cruise by the legendary Sunset Strip venue known for launching the careers of top comedians.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Sunset Plaza"
+        },
+        "description": "Enjoy views of this upscale shopping and dining district along the Sunset Strip.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "West Hollywood"
+        },
+        "description": "Travel through the heart of West Hollywood, known for its nightlife, culture, and celebrity hotspots.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Beverly Gardens Park"
+        },
+        "description": "Stop near the famous Beverly Hills sign and landscaped gardens in this well-known city park.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Beverly Center"
+        },
+        "description": "Visit one of LA\u2019s premier shopping destinations featuring high-end retail stores.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Museum Row"
+        },
+        "description": "Pass through a major cultural corridor home to museums like LACMA and the Petersen Automotive Museum.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "The Grove / Farmers Market"
+        },
+        "description": "Explore a popular outdoor shopping and dining destination next to the historic Original Farmers Market.",
+        "passByWithoutStopping": false
+      }
+    ]
+  }
+}

@@ -70,6 +70,9 @@ import specimen106439p1Payload from "../../data/engine6/viator/106439P1.exact-pr
 import specimen170119p1Payload from "../../data/engine6/viator/170119P1.exact-product.json";
 import specimen47235p1Payload from "../../data/engine6/viator/47235P1.exact-product.json";
 import specimen2030unientryPayload from "../../data/engine6/viator/2030UNIENTRY.exact-product.json";
+import specimen5096p30Payload from "../../data/engine6/viator/5096P30.exact-product.json";
+import specimen67760p2Payload from "../../data/engine6/viator/67760P2.exact-product.json";
+import specimen32779p6Payload from "../../data/engine6/viator/32779P6.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -685,6 +688,33 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Anaheim-and-Buena-Park/Universal-Studios-Hollywood-General-Admission-Ticket/d797-2030UNIENTRY",
     rawPayload: specimen2030unientryPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "5096P30",
+    publicUrl:
+      "https://www.viator.com/tours/Los-Angeles/Big-Bus-Los-Angeles-Hop-on-Hop-off-Tour/d645-5096P30",
+    rawPayload: specimen5096p30Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "67760P2",
+    publicUrl:
+      "https://www.viator.com/tours/Los-Angeles/Tour-of-Los-Angeles-Hollywood-Beverly-Hills-Santa-Monica-Beach-Grand-Tour-LA/d645-67760P2",
+    rawPayload: specimen67760p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "32779P6",
+    publicUrl:
+      "https://www.viator.com/tours/Los-Angeles/2-hour-Inside-Adventure-Tour-on-Catalina-Island/d645-32779P6",
+    rawPayload: specimen32779p6Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
   },
 ];
 
