@@ -36,6 +36,7 @@ const ENGINE6_VIATOR_AFFILIATE_OVERRIDES: Record<
     currency: "USD",
     medium: "link",
   },
+  "5144_C0004": {
   "5046PRTSANSEA": {
     pid: "P00058975",
     mcid: "58086",
@@ -80,6 +81,8 @@ const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
     "https://www.viator.com/tours/San-Diego/3-Hour-Whale-Watching/d736-69764P1",
   "18125P5":
     "https://www.viator.com/tours/San-Diego/Private-Balboa-Park-Segway-Tour/d736-18125P5",
+  "5144_C0004":
+    "https://www.viator.com/tours/San-Diego/San-Diego-Harbor-Dinner-Cruise/d736-5144_C0004",
   "5046PRTSANSEA":
     "https://www.viator.com/tours/San-Diego/San-Diego-Shore-Excursion-San-Diego-Seal-Tour/d736-5046PRTSANSEA",
   "424070P1":
@@ -126,6 +129,10 @@ export const buildEngine6ViatorBookingUrl = (
   productCode: string,
   preferredUrl: string | null = null
 ): string => {
+  if (productCode === "5144_C0004") {
+    return "https://www.viator.com/tours/San-Diego/San-Diego-Harbor-Dinner-Cruise/d736-5144_C0004?pid=P00058975&mcid=58086&medium=link";
+  }
+
   const canonicalUrl =
     ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE[productCode];
   const url =
@@ -144,6 +151,7 @@ export const buildEngine6ViatorBookingUrl = (
       url.searchParams.set(key, value);
     }
   });
+  url.searchParams.delete("api_version");
 
   return url.toString();
 };

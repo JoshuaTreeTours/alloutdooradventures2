@@ -1,0 +1,1136 @@
+{
+  "product": {
+    "status": "ACTIVE",
+    "productCode": "5144_C0004",
+    "language": "en",
+    "createdAt": "2009-11-06T08:00:00Z",
+    "lastUpdatedAt": "2026-04-22T09:06:49Z",
+    "title": "San Diego Harbor Dinner Cruise",
+    "ticketInfo": {
+      "ticketTypes": [
+        "MOBILE_ONLY"
+      ],
+      "ticketTypeDescription": "Mobile or paper ticket accepted",
+      "ticketsPerBooking": "ONE_PER_BOOKING",
+      "ticketsPerBookingDescription": "One per booking"
+    },
+    "pricingInfo": {
+      "type": "PER_PERSON",
+      "ageBands": [
+        {
+          "ageBand": "INFANT",
+          "startAge": 0,
+          "endAge": 3,
+          "minTravelersPerBooking": 0,
+          "maxTravelersPerBooking": 10
+        },
+        {
+          "ageBand": "CHILD",
+          "startAge": 4,
+          "endAge": 12,
+          "minTravelersPerBooking": 0,
+          "maxTravelersPerBooking": 10
+        },
+        {
+          "ageBand": "ADULT",
+          "startAge": 13,
+          "endAge": 99,
+          "minTravelersPerBooking": 1,
+          "maxTravelersPerBooking": 10
+        }
+      ]
+    },
+    "images": [
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": true,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/9e/cc/c3.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/9e/cc/c3.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/9e/cc/c3.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/9e/cc/c3.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/9e/cc/c3.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/9e/cc/c3.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/9e/cc/c3.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/9e/cc/c3.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/9e/cc/c3.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/9e/cc/c3.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/3b/66/54.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/3b/66/54.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/3b/66/54.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/3b/66/54.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/3b/66/54.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/3b/66/54.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/3b/66/54.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/3b/66/54.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/3b/66/54.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/3b/66/54.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/9e/cc/c5.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/9e/cc/c5.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/9e/cc/c5.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/9e/cc/c5.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/9e/cc/c5.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/9e/cc/c5.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/9e/cc/c5.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/9e/cc/c5.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/9e/cc/c5.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/9e/cc/c5.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/09/8e/b1/9f.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/09/8e/b1/9f.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/09/8e/b1/9f.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/8e/b1/9f.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/09/8e/b1/9f.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/09/8e/b1/9f.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/8e/b1/9f.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/8e/b1/9f.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/09/8e/b1/9f.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/09/8e/b1/9f.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0a/e7/1c/05.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0a/e7/1c/05.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0a/e7/1c/05.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0a/e7/1c/05.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0a/e7/1c/05.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0a/e7/1c/05.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/e7/1c/05.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/e7/1c/05.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0a/e7/1c/05.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0a/e7/1c/05.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/7c/b8/2f.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/7c/b8/2f.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/7c/b8/2f.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/7c/b8/2f.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/7c/b8/2f.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/7c/b8/2f.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/7c/b8/2f.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/7c/b8/2f.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/7c/b8/2f.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/7c/b8/2f.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/9e/cc/bf.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/9e/cc/bf.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/9e/cc/bf.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/9e/cc/bf.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/9e/cc/bf.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/9e/cc/bf.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/9e/cc/bf.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/9e/cc/bf.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/9e/cc/bf.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/9e/cc/bf.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/9e/cc/93.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/9e/cc/93.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/9e/cc/93.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/9e/cc/93.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/9e/cc/93.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/9e/cc/93.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/9e/cc/93.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/9e/cc/93.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/9e/cc/93.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/9e/cc/93.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/7c/b8/31.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/7c/b8/31.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/7c/b8/31.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/7c/b8/31.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/7c/b8/31.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/7c/b8/31.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/7c/b8/31.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/7c/b8/31.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/7c/b8/31.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/7c/b8/31.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0a/e7/1b/cb.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0a/e7/1b/cb.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0a/e7/1b/cb.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0a/e7/1b/cb.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0a/e7/1b/cb.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0a/e7/1b/cb.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/e7/1b/cb.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/e7/1b/cb.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0a/e7/1b/cb.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0a/e7/1b/cb.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/9e/cc/ac.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/9e/cc/ac.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/9e/cc/ac.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/9e/cc/ac.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/9e/cc/ac.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/9e/cc/ac.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/9e/cc/ac.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/9e/cc/ac.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/9e/cc/ac.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/9e/cc/ac.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/bc/eb/0b.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/bc/eb/0b.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/bc/eb/0b.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/bc/eb/0b.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/bc/eb/0b.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/bc/eb/0b.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/bc/eb/0b.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/bc/eb/0b.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/bc/eb/0b.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/bc/eb/0b.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/9e/cc/af.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/9e/cc/af.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/9e/cc/af.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/9e/cc/af.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/9e/cc/af.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/9e/cc/af.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/9e/cc/af.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/9e/cc/af.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/9e/cc/af.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/9e/cc/af.jpg"
+          }
+        ]
+      }
+    ],
+    "logistics": {
+      "start": [
+        {
+          "location": {
+            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5HXbr45D0bWZ2rOkES9dK9ipowe4vfjKpc5nCPXmsnhU"
+          },
+          "description": "Flagship ticket booth"
+        }
+      ],
+      "end": [
+        {
+          "location": {
+            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5HXbr45D0bWZ2rOkES9dK9ipowe4vfjKpc5nCPXmsnhU"
+          },
+          "description": "Flagship ticket booth"
+        }
+      ],
+      "redemption": {
+        "redemptionType": "NONE",
+        "specialInstructions": "\u2022 Please note: boarding is 30-minutes prior to departure time\n \u2022 If you did not advise of your meal choice at the time of booking, you MUST call Flagship Cruises as soon as possible. 619 234 4111 ext. 0\n \u2022 Dress code is smart casual\nOpening hours are: 08:00 - 06:30 Monday to Sunday\n\n"
+      },
+      "travelerPickup": {
+        "pickupOptionType": "MEET_EVERYONE_AT_START_POINT",
+        "allowCustomTravelerPickup": false
+      }
+    },
+    "timeZone": "America/Los_Angeles",
+    "description": "Enjoy a 2.5-hour cruise aboard one of San Diego's finest dining vessels. Spend the evening in luxury as you dine on a gourmet dinner , sip on a complimentary cocktail and enjoy the music throughout the night. Upgrade your dinner cruise to include an unlimited bar ($40)option and don't forget your camera \u2013 this cruise features 25 scenic miles (40 km) of San Diego's magnificent skyline. Dining is inside. Don't forget to bring a jacket for after sunset.",
+    "inclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Unlimited bar ($40 if option selected)"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Complimentary welcome drink"
+      },
+      {
+        "category": "FOOD_AND_DRINK",
+        "categoryDescription": "Food and drink",
+        "type": "DINNER",
+        "typeDescription": "Dinner",
+        "description": "Dinner"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Indoor Dining"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "2.5-hour dinner cruise"
+      }
+    ],
+    "exclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Hotel pickup and drop-off"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Souvenir photos (available for purchase, approximately USD $25)"
+      }
+    ],
+    "additionalInfo": [
+      {
+        "type": "WHEELCHAIR_ACCESSIBLE",
+        "description": "Wheelchair accessible"
+      },
+      {
+        "type": "STROLLER_ACCESSIBLE",
+        "description": "Infants and small children can ride in a pram or stroller"
+      },
+      {
+        "type": "PETS_WELCOME",
+        "description": "Service animals allowed"
+      },
+      {
+        "type": "PUBLIC_TRANSPORTATION_NEARBY",
+        "description": "Public transportation options are available nearby"
+      },
+      {
+        "type": "INFANT_SEATS_AVAILABLE",
+        "description": "Specialized infant seats are available"
+      },
+      {
+        "type": "PHYSICAL_EASY",
+        "description": "Suitable for all physical fitness levels"
+      },
+      {
+        "type": "OTHER",
+        "description": "Must be 21 years or older to choose the open bar option"
+      },
+      {
+        "type": "OTHER",
+        "description": "Please advise any specific dietary requirements at time of booking. The local operator can accommodate most dietary needs including but not limited to gluten-free, vegan and vegetarian"
+      },
+      {
+        "type": "OTHER",
+        "description": "Dress code is smart casual"
+      },
+      {
+        "type": "OTHER",
+        "description": "Please note: boarding is 30-minutes prior to departure time"
+      },
+      {
+        "type": "OTHER",
+        "description": "Please provide contact information (i.e cell phone) for the local operator to be able to reach you in case of changes to boarding or yacht"
+      },
+      {
+        "type": "OTHER",
+        "description": "Indoor dining"
+      },
+      {
+        "type": "OTHER",
+        "description": "Some ships only have restrooms either up or down a flight of steps, call ext. 0 for more info"
+      }
+    ],
+    "cancellationPolicy": {
+      "type": "STANDARD",
+      "description": "For a full refund, cancel at least 24 hours before the scheduled departure time.",
+      "cancelIfBadWeather": true,
+      "cancelIfInsufficientTravelers": true,
+      "refundEligibility": [
+        {
+          "dayRangeMin": 1,
+          "percentageRefundable": 100
+        },
+        {
+          "dayRangeMin": 0,
+          "dayRangeMax": 1,
+          "percentageRefundable": 0
+        }
+      ]
+    },
+    "bookingConfirmationSettings": {
+      "bookingCutoffType": "START_TIME",
+      "bookingCutoffInMinutes": 0,
+      "confirmationType": "MANUAL"
+    },
+    "bookingRequirements": {
+      "minTravelersPerBooking": 1,
+      "maxTravelersPerBooking": 10,
+      "requiresAdultForBooking": true
+    },
+    "languageGuides": [
+      {
+        "type": "GUIDE",
+        "language": "en",
+        "legacyGuide": "en/SERVICE_GUIDE"
+      }
+    ],
+    "bookingQuestions": [
+      "AGEBAND",
+      "FULL_NAMES_FIRST",
+      "FULL_NAMES_LAST",
+      "SPECIAL_REQUIREMENTS"
+    ],
+    "tags": [
+      11929,
+      367652,
+      367653,
+      20255,
+      367661,
+      11965,
+      21911,
+      11938,
+      11887,
+      12057,
+      367654,
+      21971
+    ],
+    "destinations": [
+      {
+        "ref": "736",
+        "primary": true
+      }
+    ],
+    "itinerary": {
+      "itineraryType": "STANDARD",
+      "skipTheLine": false,
+      "privateTour": false,
+      "maxTravelersInSharedTour": 80,
+      "duration": {
+        "fixedDurationInMinutes": 180
+      },
+      "itineraryItems": [
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5PsBzjihOCvVF9f+NwI+GAh6UBaQGwHD1lWZ+OGEKvUm"
+            }
+          },
+          "duration": {
+            "fixedDurationInMinutes": 180
+          },
+          "passByWithoutStopping": false,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "990 N Harbor Drive San Diego CA 92101\nEnjoy breathtaking view of the beautiful San Diego Bay including downtown San Diego, Midway ship, Coronado Island, Coronado military base, Coronado bridge, cruise ship terminal and many more!"
+        },
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyGLQwd76SI0ORfbcDQEedWQ="
+            },
+            "attractionId": 11072
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "We are located North side of the USS Midway Museum."
+        }
+      ]
+    },
+    "productOptions": [
+      {
+        "productOptionCode": "DC700PM",
+        "description": "Dinner Cruise: Gourmet dinner ",
+        "title": "Thursday/Friday Dinner Cruise",
+        "languageGuides": [
+          {
+            "type": "GUIDE",
+            "language": "en",
+            "legacyGuide": "en/SERVICE_GUIDE"
+          }
+        ]
+      },
+      {
+        "productOptionCode": "PRC",
+        "description": "Sunday Dinner on the Bay: Sunday Dinner Cruise ",
+        "title": "Sunday Dinner Cruise",
+        "languageGuides": [
+          {
+            "type": "GUIDE",
+            "language": "en",
+            "legacyGuide": "en/SERVICE_GUIDE"
+          }
+        ]
+      },
+      {
+        "productOptionCode": "TG1",
+        "description": "",
+        "title": "Saturday Dinner Cruise",
+        "languageGuides": [
+          {
+            "type": "GUIDE",
+            "language": "en",
+            "legacyGuide": "en/SERVICE_GUIDE"
+          }
+        ]
+      }
+    ],
+    "translationInfo": {
+      "containsMachineTranslatedText": false,
+      "translationSource": "ORIGINAL"
+    },
+    "supplier": {
+      "name": "Flagship Cruises  Events",
+      "reference": "SUPPLIER-az6zL8ureRhQW17XbJWROw=="
+    },
+    "productUrl": "https://www.viator.com/tours/San-Diego/San-Diego-Harbor-Dinner-Cruise/d736-5144_C0004?mcid=42383&pid=P00290915&medium=api&api_version=2.0",
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "totalCount": 836,
+          "averageRating": 4.3
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "totalCount": 429,
+          "averageRating": 3.9
+        }
+      ],
+      "totalReviews": 1265,
+      "combinedAverageRating": 4.1225295
+    },
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/1a/b5/caption.jpg?w=700&h=500&s=1"
+        },
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/9e/cc/c3.jpg"
+        },
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/3b/66/54.jpg"
+        },
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/9e/cc/c5.jpg"
+        },
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/8e/b1/9f.jpg"
+        },
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/e7/1c/05.jpg"
+        },
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/7c/b8/2f.jpg"
+        },
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/9e/cc/bf.jpg"
+        },
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/9e/cc/93.jpg"
+        },
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/7c/b8/31.jpg"
+        },
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/e7/1b/cb.jpg"
+        },
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/9e/cc/ac.jpg"
+        },
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/bc/eb/0b.jpg"
+        },
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/9e/cc/af.jpg"
+        }
+      ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 125.7
+      },
+      "currency": "USD"
+    },
+    "priceFrom": 125.7,
+    "duration": {
+      "fixedDurationInMinutes": 180
+    }
+  }
+}
