@@ -26,6 +26,12 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
     "Explore Los Angeles on a private full-day sightseeing tour with hotel pickup, a comfortable air-conditioned vehicle, and stops at Venice Beach, Santa Monica Pier, Beverly Hills, Hollywood, and the Hollywood Sign.",
   "15131P4":
     "Fly above Los Angeles on a private helicopter tour with sweeping aerial views of Hollywood, downtown Los Angeles, and the city’s most recognizable landmarks.",
+  "148509P1":
+    "Go behind the scenes of Hollywood filmmaking on a guided Warner Bros. Studio Tour featuring working backlots, sound stages, and iconic sets from major films and TV shows.",
+  "106439P1":
+    "See the homes of celebrities and iconic landmarks on a guided sightseeing tour through Hollywood, Beverly Hills, and the Sunset Strip.",
+  "170119P1":
+    "Explore Los Angeles in a single day on a guided tour covering Hollywood, Beverly Hills, Santa Monica, and coastal highlights with multiple photo stops.",
 };
 const ENGINE6_OVERVIEW_OVERRIDES: Record<
   string,
