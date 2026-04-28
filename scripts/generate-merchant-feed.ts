@@ -4,6 +4,7 @@ import path from "node:path";
 import {
   DEFAULT_CURRENCY,
   DEFAULT_IMAGE_URL,
+  PRICE_FLOOR_USD,
 } from "../src/constants/merchantDefaults";
 import { tours } from "../src/data/tours";
 import { slugify } from "../src/utils/slugify";
@@ -26,6 +27,10 @@ const OUTPUT_HEADERS = [
   "availability",
   "price",
   "condition",
+  "brand",
+  "average_rating",
+  "rating_count",
+  "review_count",
 ] as const;
 
 type OutputHeader = (typeof OUTPUT_HEADERS)[number];
@@ -37,7 +42,8 @@ type ProductImageRecord = {
 };
 
 const DOMAIN = "https://www.alloutdooradventures.com";
-const DEFAULT_AVAILABILITY = "in_stock";
+const DEFAULT_AVAILABILITY = "in stock";
+const DEFAULT_BRAND = "All Outdoor Adventures";
 
 const parseCsv = (content: string): CsvRecord[] => {
   const normalized = content.replace(/^\uFEFF/, "").replace(/\r\n/g, "\n");
@@ -153,6 +159,30 @@ const isValidHttpUrl = (value: unknown): value is string => {
   }
 };
 
+const normalizeMerchantPrice = (value: string) => {
+  const parsed = parsePrice(value);
+  const normalizedAmount =
+    parsed === null ? PRICE_FLOOR_USD : applyPriceFloor(parsed);
+  return formatMerchantPrice(normalizedAmount, DEFAULT_CURRENCY);
+};
+
+const normalizeAverageRating = (value: unknown) => {
+  if (value === null || value === undefined) {
+    return "";
+  }
+
+  const parsed =
+    typeof value === "number"
+      ? value
+      : Number.parseFloat(String(value).trim());
+
+  if (!Number.isFinite(parsed)) {
+    return "";
+  }
+
+  return parsed.toFixed(1);
+};
+
 const getProductMap = () => {
   const products = new Map<string, ProductImageRecord>();
 
@@ -192,7 +222,9 @@ const main = async () => {
     const rawPrice = parsePrice(row.price);
     const finalPrice = applyPriceFloor(rawPrice);
     const currency = row.currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
-    const price = formatMerchantPrice(finalPrice, currency);
+    const price = normalizeMerchantPrice(
+      formatMerchantPrice(finalPrice, currency)
+    );
 
     if (rawPrice === null || finalPrice !== rawPrice) {
       warningCount += 1;
@@ -256,6 +288,10 @@ const main = async () => {
       availability,
       price,
       condition: "new",
+      brand: DEFAULT_BRAND,
+      average_rating: normalizeAverageRating(row.ratingValue),
+      rating_count: row.ratingCount?.trim() || "",
+      review_count: row.ratingCount?.trim() || "",
     });
   }
 

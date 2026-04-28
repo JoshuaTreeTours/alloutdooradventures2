@@ -28,6 +28,7 @@
     "sync:fareharbor:force": "tsx scripts/syncTourEnrichmentFromFareHarbor.ts --force",
     "generate:tour-descriptions": "tsx scripts/generateTourDescriptions.ts",
     "gen:merchant": "tsx scripts/generate-merchant-feed.ts",
+    "validate:merchant": "tsx scripts/validate-merchant-feed.ts",
     "gen:feeds": "tsx scripts/generate-tour-enrichment.ts && tsx scripts/generate-merchant-feed.ts",
     "publish:merchant": "bash scripts/publish-merchant-feed.sh",
     "test:engine2:smoke": "tsx scripts/engine2/smokeTestCaliforniaRoutes.ts",
