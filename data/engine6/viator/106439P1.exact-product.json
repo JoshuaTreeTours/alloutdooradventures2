@@ -1351,7 +1351,7 @@
           },
           "passByWithoutStopping": false,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "Rodeo drive is the shopping and dining area of the rich and famous."
+          "description": "Rodeo Drive is a Beverly Hills corridor known for luxury shopping and upscale dining."
         },
         {
           "pointOfInterestLocation": {
@@ -1362,7 +1362,7 @@
           },
           "passByWithoutStopping": true,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "Photo friendly section of Rodeo Drive, directly across from The Beverly Wilshire Hotel."
+          "description": "This section of Rodeo Drive offers a common photo spot near the Beverly Wilshire Hotel."
         },
         {
           "pointOfInterestLocation": {
@@ -1376,7 +1376,7 @@
           },
           "passByWithoutStopping": false,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "1928 mansion known as a filming location for hundreds of films and TV shows."
+          "description": "Greystone Mansion, built in 1928, has been used as a location in many film and TV productions."
         },
         {
           "pointOfInterestLocation": {
@@ -1386,7 +1386,7 @@
           },
           "passByWithoutStopping": true,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "A Beverly Hills city park, across from the Beverly Hills Hotel, and location of a famous celebrity scandal."
+          "description": "Beverly Gardens Park sits opposite the Beverly Hills Hotel and is tied to a well-known celebrity incident."
         },
         {
           "pointOfInterestLocation": {
@@ -1400,7 +1400,7 @@
           },
           "passByWithoutStopping": false,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "The Sunset Strip is home to restaurants, rock n roll clubs, celebrity hangouts, and scandals."
+          "description": "The Sunset Strip is lined with restaurants, music venues, and nightlife spots tied to entertainment history."
         },
         {
           "pointOfInterestLocation": {
@@ -1410,7 +1410,7 @@
           },
           "passByWithoutStopping": true,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "A beautiful city park 1 block from Rodeo Drive"
+          "description": "This stop visits a landscaped city park located one block from Rodeo Drive."
         },
         {
           "pointOfInterestLocation": {
@@ -1420,7 +1420,7 @@
           },
           "passByWithoutStopping": true,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "Location of The City of Beverly Hills local offices, including The Beverly Hills Police Dept."
+          "description": "Here you pass Beverly Hills civic offices, including the Beverly Hills Police Department."
         },
         {
           "pointOfInterestLocation": {
@@ -1430,7 +1430,7 @@
           },
           "passByWithoutStopping": true,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "This tour covers the commercial Golden Triangle, and the residential Platinum Triangle."
+          "description": "The route covers both the commercial Golden Triangle and the nearby residential Platinum Triangle."
         },
         {
           "pointOfInterestLocation": {
@@ -1441,7 +1441,7 @@
           },
           "passByWithoutStopping": true,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "The most famous street in all of Los Angeles that travels through multiple cities."
+          "description": "The tour follows a major Los Angeles boulevard that runs across several municipalities."
         },
         {
           "pointOfInterestLocation": {
@@ -1455,7 +1455,7 @@
           },
           "passByWithoutStopping": false,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "The celebrity homes tour covers the Hollywood Hills, Beverly Hills, Holmby Hills and Bel Air."
+          "description": "The homes segment travels through the Hollywood Hills, Beverly Hills, Holmby Hills, and Bel Air."
         },
         {
           "pointOfInterestLocation": {
@@ -1465,7 +1465,7 @@
           },
           "passByWithoutStopping": true,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "Built in 1912, it's the hotel that put Beverly Hills on the map."
+          "description": "Opened in 1912, this landmark hotel played a major role in establishing Beverly Hills as a destination."
         },
         {
           "pointOfInterestLocation": {
@@ -1475,7 +1475,7 @@
           },
           "passByWithoutStopping": true,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "The Beverly Wilshire Hotel is also known as the \"Pretty Woman\" hotel."
+          "description": "The Beverly Wilshire is widely recognized as the hotel featured in Pretty Woman."
         }
       ]
     },
@@ -1513,23 +1513,23 @@
           "provider": "VIATOR",
           "reviewCounts": [
             {
-              "rating": 1.0,
+              "rating": 1,
               "count": 0
             },
             {
-              "rating": 2.0,
+              "rating": 2,
               "count": 0
             },
             {
-              "rating": 3.0,
+              "rating": 3,
               "count": 1
             },
             {
-              "rating": 4.0,
+              "rating": 4,
               "count": 1
             },
             {
-              "rating": 5.0,
+              "rating": 5,
               "count": 32
             }
           ],
@@ -1540,23 +1540,23 @@
           "provider": "TRIPADVISOR",
           "reviewCounts": [
             {
-              "rating": 1.0,
+              "rating": 1,
               "count": 0
             },
             {
-              "rating": 2.0,
+              "rating": 2,
               "count": 0
             },
             {
-              "rating": 3.0,
+              "rating": 3,
               "count": 0
             },
             {
-              "rating": 4.0,
+              "rating": 4,
               "count": 1
             },
             {
-              "rating": 5.0,
+              "rating": 5,
               "count": 7
             }
           ],
@@ -1566,23 +1566,23 @@
       ],
       "reviewCountTotals": [
         {
-          "rating": 1.0,
+          "rating": 1,
           "count": 0
         },
         {
-          "rating": 2.0,
+          "rating": 2,
           "count": 0
         },
         {
-          "rating": 3.0,
+          "rating": 3,
           "count": 1
         },
         {
-          "rating": 4.0,
+          "rating": 4,
           "count": 2
         },
         {
-          "rating": 5.0,
+          "rating": 5,
           "count": 39
         }
       ],
@@ -2633,7 +2633,7 @@
     },
     "pricing": {
       "summary": {
-        "fromPrice": 195.0,
+        "fromPrice": 195,
         "fromPriceFormatted": "$195.00"
       }
     }

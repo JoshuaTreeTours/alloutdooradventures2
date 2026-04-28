@@ -5804,7 +5804,7 @@
           },
           "passByWithoutStopping": false,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "Pacific ocean views! This is end of Route 66 and one of the most famous landmarks in the city. No trip to L.A. is complete without visiting the iconic Pier! This bustling wooden wharf is the place to be, with its eateries, shops, roller coasters, giant Ferris wheels, and other rides. Enjoy the breathtaking views of the California Coast. \n\n(Please know timing of attractions can be rearrange based on your interests)"
+          "description": "Stop at Santa Monica Pier for Pacific views at the western end of Route 66 and one of LA's best-known landmarks."
         },
         {
           "pointOfInterestLocation": {
@@ -5818,7 +5818,7 @@
           },
           "passByWithoutStopping": false,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "See and enjoy the most iconic beach in L.A. from Muscle Beach to street art to its unique characters. Venice Beach is home to skate parks and the birthplace of surfing. Thousands of YouTubers in Venice record their life in Los Angeles."
+          "description": "Visit Venice Beach to see Muscle Beach, skate areas, street art, and the neighborhood's distinct boardwalk culture."
         },
         {
           "pointOfInterestLocation": {
@@ -5829,7 +5829,7 @@
           },
           "passByWithoutStopping": true,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "See the Venice Canals, a charming, historic neighborhood of narrow waterways lined with pedestrian bridges, lush landscaping, and picturesque homes that evoke the feel of a tranquil, European-inspired oasis."
+          "description": "See the historic Venice Canals neighborhood with narrow waterways, pedestrian bridges, and homes along the paths."
         },
         {
           "pointOfInterestLocation": {
@@ -5842,7 +5842,7 @@
           },
           "passByWithoutStopping": false,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "Drive by one of the most expensive neighborhood in Los Angeles and the world. We will take you to the heart of Beverly Hills, and we will drive by the Four Seasons Hotel, formerly known as the Beverly Wilshire Hotel (Pretty Woman was filmed here). Then we will drive north on Rodeo Drive, the epicenter of luxury, fashion and lifestyle, where the rich and famous do their shopping."
+          "description": "Drive through Beverly Hills and along portions of Rodeo Drive in one of the city's most expensive residential areas."
         },
         {
           "pointOfInterestLocation": {
@@ -5856,7 +5856,7 @@
           },
           "passByWithoutStopping": false,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "With over 40 different places to eat, the Farmers Market is ideal to grab some food and enjoy the amazing weather our city offers. Be on the lookout, you never know if a celebrity is eating next to you."
+          "description": "Break at the Original Farmers Market, which offers dozens of food options and open-air seating."
         },
         {
           "pointOfInterestLocation": {
@@ -5870,7 +5870,7 @@
           },
           "passByWithoutStopping": false,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "The Grove is a popular fashion, shopping, dinning and lifestyle destination with the best mix of retail, restaurants and entertainment in Los Angeles. Celebrities are seen here all the time, from JLo to Ty Burrell!"
+          "description": "Stop at The Grove, a major Los Angeles shopping and dining complex next to the Farmers Market."
         },
         {
           "pointOfInterestLocation": {
@@ -5884,7 +5884,7 @@
           },
           "passByWithoutStopping": false,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "This landmark welcomes you with over 2600 stars embedded in the sidewalks of Hollywood Blvd. You will also see the TCL Chinese Theatre, the Dolby Theatre, and lots of interesting Angelenos!"
+          "description": "Walk Hollywood Boulevard to view the Walk of Fame, TCL Chinese Theatre, and nearby historic cinema landmarks."
         },
         {
           "pointOfInterestLocation": {
@@ -5898,7 +5898,7 @@
           },
           "passByWithoutStopping": false,
           "admissionIncluded": "NOT_APPLICABLE",
-          "description": "The most iconic sign in the world, featured in over 500 films! We will take you to the closest spot not offered by any group tours as the city has strict laws on the vehicles allowed. Do not miss the best picture of your trip to Los Angeles!"
+          "description": "Finish at a close public viewpoint of the Hollywood Sign, a location frequently used in film imagery."
         }
       ]
     },
@@ -5936,23 +5936,23 @@
           "provider": "VIATOR",
           "reviewCounts": [
             {
-              "rating": 1.0,
+              "rating": 1,
               "count": 0
             },
             {
-              "rating": 2.0,
+              "rating": 2,
               "count": 0
             },
             {
-              "rating": 3.0,
+              "rating": 3,
               "count": 1
             },
             {
-              "rating": 4.0,
+              "rating": 4,
               "count": 0
             },
             {
-              "rating": 5.0,
+              "rating": 5,
               "count": 27
             }
           ],
@@ -5963,49 +5963,49 @@
           "provider": "TRIPADVISOR",
           "reviewCounts": [
             {
-              "rating": 1.0,
+              "rating": 1,
               "count": 0
             },
             {
-              "rating": 2.0,
+              "rating": 2,
               "count": 0
             },
             {
-              "rating": 3.0,
+              "rating": 3,
               "count": 0
             },
             {
-              "rating": 4.0,
+              "rating": 4,
               "count": 1
             },
             {
-              "rating": 5.0,
+              "rating": 5,
               "count": 106
             }
           ],
           "totalCount": 107,
-          "averageRating": 5.0
+          "averageRating": 5
         }
       ],
       "reviewCountTotals": [
         {
-          "rating": 1.0,
+          "rating": 1,
           "count": 0
         },
         {
-          "rating": 2.0,
+          "rating": 2,
           "count": 0
         },
         {
-          "rating": 3.0,
+          "rating": 3,
           "count": 1
         },
         {
-          "rating": 4.0,
+          "rating": 4,
           "count": 1
         },
         {
-          "rating": 5.0,
+          "rating": 5,
           "count": 133
         }
       ],
@@ -8253,7 +8253,7 @@
     },
     "pricing": {
       "summary": {
-        "fromPrice": 999.0,
+        "fromPrice": 999,
         "fromPriceFormatted": "$999.00"
       }
     }

@@ -1157,7 +1157,7 @@
       }
     },
     "timeZone": "America/Los_Angeles",
-    "description": "Our Studio Tour brings you closer than ever to the entertainment you love. You\u2019ll explore one of the busiest working studios in Los Angeles with one of our expert Tour Guides.\n\nExplore iconic backlot sets and sound stages. Learn how movie magic comes to life at Stage 48: Script to Screen, from classic Hollywood costumes to green-screen technology used to create special effects. \n\nDine in our expanded Central Perk Caf\u00e9 and shop in our Friends Boutique, complete with costumes from the hit show on display.\n\nThe Grand Finale lets you step into the movies with recreated sets from the DC Universe where you can encounter Superheroes and Super-Villains. Then swish and flick your way through Harry Potter and Fantastic Beasts and be sorted by the enchanted sorting hat.",
+    "description": "Our Studio Tour brings you closer than ever to the entertainment you love. You’ll explore one of the busiest working studios in Los Angeles with one of our expert Tour Guides.\n\nExplore iconic backlot sets and sound stages. Learn how movie magic comes to life at Stage 48: Script to Screen, from classic Hollywood costumes to green-screen technology used to create special effects. \n\nDine in our expanded Central Perk Café and shop in our Friends Boutique, complete with costumes from the hit show on display.\n\nThe Grand Finale lets you step into the movies with recreated sets from the DC Universe where you can encounter Superheroes and Super-Villains. Then swish and flick your way through Harry Potter and Fantastic Beasts and be sorted by the enchanted sorting hat.",
     "inclusions": [
       {
         "category": "OTHER",
@@ -1308,7 +1308,7 @@
           },
           "passByWithoutStopping": false,
           "admissionIncluded": "YES",
-          "description": "You\u2019ll never see Hollywood the same way again as you explore the working sets and actual sound stages where the biggest names in entertainment made history. From Friends to Batman and beyond, Warner Bros. Studio Tour Hollywood takes you behind the lens for a revealing look at how the magic of Hollywood is made. Your knowledgeable Tour Guide will take you through the over 100-year-old backlot streets and sound stages. You\u2019ll stop at Stage 48: Script to Screen, an interactive sound stage where you can learn about the production process of a film or TV show, sit on the couch at Central Perk on the actual set of Friends, become Hobbit-sized at our forced perspective special effect table, soar above Hogwarts on a broomstick and much more. The grand finale, \u201cAction and Magic Made Here,\u201d allows you to step into the DC and Harry Potter movies and interact with iconic props, costumes, and recreated sets."
+          "description": "Tour working Warner Bros. backlots, sound stages, and exhibit spaces to see how film and television productions are made."
         }
       ]
     },
@@ -1365,23 +1365,23 @@
           "provider": "VIATOR",
           "reviewCounts": [
             {
-              "rating": 1.0,
+              "rating": 1,
               "count": 23
             },
             {
-              "rating": 2.0,
+              "rating": 2,
               "count": 25
             },
             {
-              "rating": 3.0,
+              "rating": 3,
               "count": 78
             },
             {
-              "rating": 4.0,
+              "rating": 4,
               "count": 120
             },
             {
-              "rating": 5.0,
+              "rating": 5,
               "count": 901
             }
           ],
@@ -1392,23 +1392,23 @@
           "provider": "TRIPADVISOR",
           "reviewCounts": [
             {
-              "rating": 1.0,
+              "rating": 1,
               "count": 94
             },
             {
-              "rating": 2.0,
+              "rating": 2,
               "count": 101
             },
             {
-              "rating": 3.0,
+              "rating": 3,
               "count": 228
             },
             {
-              "rating": 4.0,
+              "rating": 4,
               "count": 619
             },
             {
-              "rating": 5.0,
+              "rating": 5,
               "count": 3192
             }
           ],
@@ -1418,23 +1418,23 @@
       ],
       "reviewCountTotals": [
         {
-          "rating": 1.0,
+          "rating": 1,
           "count": 117
         },
         {
-          "rating": 2.0,
+          "rating": 2,
           "count": 126
         },
         {
-          "rating": 3.0,
+          "rating": 3,
           "count": 306
         },
         {
-          "rating": 4.0,
+          "rating": 4,
           "count": 739
         },
         {
-          "rating": 5.0,
+          "rating": 5,
           "count": 4093
         }
       ],
@@ -2542,7 +2542,7 @@
     },
     "pricing": {
       "summary": {
-        "fromPrice": 76.0,
+        "fromPrice": 76,
         "fromPriceFormatted": "$76.00"
       }
     }
