@@ -1,0 +1,785 @@
+{
+  "product": {
+    "status": "ACTIVE",
+    "productCode": "32779P6",
+    "language": "en",
+    "createdAt": "2022-04-13T20:12:57.512161Z",
+    "lastUpdatedAt": "2026-04-28T08:13:07Z",
+    "title": "Catalina Island 2-Hour Insider Adventure Tour",
+    "ticketInfo": {
+      "ticketTypes": [
+        "MOBILE_ONLY"
+      ],
+      "ticketTypeDescription": "Mobile or paper ticket accepted",
+      "ticketsPerBooking": "ONE_PER_BOOKING",
+      "ticketsPerBookingDescription": "One per booking"
+    },
+    "pricingInfo": {
+      "type": "PER_PERSON",
+      "ageBands": [
+        {
+          "ageBand": "CHILD",
+          "startAge": 5,
+          "endAge": 11,
+          "minTravelersPerBooking": 0,
+          "maxTravelersPerBooking": 15
+        },
+        {
+          "ageBand": "ADULT",
+          "startAge": 12,
+          "endAge": 99,
+          "minTravelersPerBooking": 1,
+          "maxTravelersPerBooking": 15
+        }
+      ]
+    },
+    "images": [
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": true,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0e/9a/1a/2a.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0e/9a/1a/2a.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0e/9a/1a/2a.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0e/9a/1a/2a.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0e/9a/1a/2a.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0e/9a/1a/2a.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0e/9a/1a/2a.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0e/9a/1a/2a.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0e/9a/1a/2a.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0e/9a/1a/2a.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0e/9a/1a/1c.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0e/9a/1a/1c.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0e/9a/1a/1c.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0e/9a/1a/1c.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0e/9a/1a/1c.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0e/9a/1a/1c.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0e/9a/1a/1c.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0e/9a/1a/1c.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0e/9a/1a/1c.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0e/9a/1a/1c.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/13/70/37/ae.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/13/70/37/ae.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/13/70/37/ae.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/13/70/37/ae.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/13/70/37/ae.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/13/70/37/ae.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/13/70/37/ae.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/70/37/ae.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/13/70/37/ae.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/13/70/37/ae.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/12/3e/69/10.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/12/3e/69/10.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/12/3e/69/10.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/12/3e/69/10.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/12/3e/69/10.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/12/3e/69/10.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/3e/69/10.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/3e/69/10.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/12/3e/69/10.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/12/3e/69/10.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0e/9a/1a/28.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0e/9a/1a/28.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0e/9a/1a/28.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0e/9a/1a/28.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0e/9a/1a/28.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0e/9a/1a/28.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0e/9a/1a/28.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0e/9a/1a/28.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0e/9a/1a/28.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0e/9a/1a/28.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/12/3e/69/0f.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/12/3e/69/0f.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/12/3e/69/0f.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/12/3e/69/0f.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/12/3e/69/0f.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/12/3e/69/0f.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/3e/69/0f.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/3e/69/0f.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/12/3e/69/0f.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/12/3e/69/0f.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/13/70/31/5b.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/13/70/31/5b.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/13/70/31/5b.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/13/70/31/5b.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/13/70/31/5b.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/13/70/31/5b.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/13/70/31/5b.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/70/31/5b.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/13/70/31/5b.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/13/70/31/5b.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/13/70/5c/11.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/13/70/5c/11.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/13/70/5c/11.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/13/70/5c/11.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/13/70/5c/11.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/13/70/5c/11.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/13/70/5c/11.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/70/5c/11.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/13/70/5c/11.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/13/70/5c/11.jpg"
+          }
+        ]
+      }
+    ],
+    "logistics": {
+      "start": [
+        {
+          "location": {
+            "ref": "LOC-RaYlfRSLaIsd0SlazqDQk5EJzGYTCLvgs3ygdhHU8rdE0Va+riOXG5W0e0I6QwUwUTEeq/aLFOsalmSGJMoCvRujQGKZEvtj8Z0vq66q5cj82LK+CjCmG5AObHqn5kvD0WhkTe5dFdVu6yk7EZF+C0yyIxbLdyHwUJsxhCpgKhrmJ7/q3zGvlgvgkaLxZtW/"
+          },
+          "description": "In the Catalina Cabrillo Mole, building located where ferries dock. Across from Catalina Express offices & same building as day lockers. There is a Welcome To Catalina statue in front, walk about 50 feet past. If you go through Mole building & reach the parking lot you gone a little too far. "
+        }
+      ],
+      "end": [
+        {
+          "location": {
+            "ref": "LOC-RaYlfRSLaIsd0SlazqDQk5EJzGYTCLvgs3ygdhHU8rdE0Va+riOXG5W0e0I6QwUwUTEeq/aLFOsalmSGJMoCvRujQGKZEvtj8Z0vq66q5cj82LK+CjCmG5AObHqn5kvD0WhkTe5dFdVu6yk7EZF+C0yyIxbLdyHwUJsxhCpgKhrmJ7/q3zGvlgvgkaLxZtW/"
+          },
+          "description": "In the Catalina Cabrillo Mole, building located where ferries dock. Across from Catalina Express offices & same building as day lockers. There is a Welcome To Catalina statue in front, walk about 50 feet past. If you go through Mole building & reach the parking lot you gone a little too far. "
+        }
+      ],
+      "redemption": {
+        "redemptionType": "DIFFERENT_LOCATION",
+        "locations": [
+          {
+            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5LE31KbpH9c+6uoc3ViegvfOMhKYFxQhTgaqD9TgPx0l"
+          }
+        ],
+        "specialInstructions": "Find us on the Ferry Dock, across from the Catalina Express booth. Check in at the Catalina Adventure Tours window\u2014our ride boards just behind it!"
+      },
+      "travelerPickup": {
+        "pickupOptionType": "MEET_EVERYONE_AT_START_POINT",
+        "allowCustomTravelerPickup": false
+      }
+    },
+    "timeZone": "America/Los_Angeles",
+    "description": "Spectacular canyons, a scenic coastline, and an unspoiled countryside alive with native plants and wildlife will take your breath away on this two-hour guided eco-land excursion. As you venture ten miles into the rugged interior, you will view the protected side of Catalina Island seldom seen by most visitors. Naturalist onboard enriches experience with wildlife and inside knowledge of the areas visiting during the tour.",
+    "inclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Tour on custom built safari vehicle designed for amazing viewing in comfort."
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Onboard naturalist providing wildlife and historic details throughout the tour."
+      }
+    ],
+    "exclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Travel To Catalina Island is not included. Transportation needed by Ferry to Island."
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Transportation needed by Ferry to Island -Catalina Express or Newport Flyer to get to Island."
+      }
+    ],
+    "additionalInfo": [
+      {
+        "type": "PHYSICAL_EASY",
+        "description": "Suitable for all physical fitness levels"
+      },
+      {
+        "type": "OTHER",
+        "description": "You MUST arrive 15 minutes prior to boarding to check in. We leave promptly at the scheduled time and cannot wait. When booking travel to the island please make sure to give enough time from arrival to island to get to tour departure location."
+      },
+      {
+        "type": "OTHER",
+        "description": "We are located on Catalina Island, You must secure transportation to the island to take the tour. There are no refunds if you miss the tour."
+      },
+      {
+        "type": "OTHER",
+        "description": "TRAVEL TO CATALINA IS NOT INCLUDED. Transportation needed by Ferry to Island."
+      },
+      {
+        "type": "OTHER",
+        "description": "Children Under 5 will not be able to participate in the tour."
+      }
+    ],
+    "cancellationPolicy": {
+      "type": "STANDARD",
+      "description": "For a full refund, cancel at least 24 hours before the scheduled departure time.",
+      "cancelIfBadWeather": true,
+      "cancelIfInsufficientTravelers": false,
+      "refundEligibility": [
+        {
+          "dayRangeMin": 1,
+          "percentageRefundable": 100
+        },
+        {
+          "dayRangeMin": 0,
+          "dayRangeMax": 1,
+          "percentageRefundable": 0
+        }
+      ]
+    },
+    "bookingConfirmationSettings": {
+      "bookingCutoffType": "START_TIME",
+      "bookingCutoffInMinutes": 120,
+      "confirmationType": "INSTANT"
+    },
+    "bookingRequirements": {
+      "minTravelersPerBooking": 1,
+      "maxTravelersPerBooking": 15,
+      "requiresAdultForBooking": true
+    },
+    "languageGuides": [
+      {
+        "type": "GUIDE",
+        "language": "en",
+        "legacyGuide": "en/SERVICE_GUIDE"
+      }
+    ],
+    "bookingQuestions": [
+      "AGEBAND",
+      "FULL_NAMES_FIRST",
+      "FULL_NAMES_LAST",
+      "SPECIAL_REQUIREMENTS"
+    ],
+    "tags": [
+      11938,
+      367659,
+      22046,
+      22143,
+      11928,
+      11930,
+      367653,
+      367654,
+      367661,
+      21972,
+      367652
+    ],
+    "destinations": [
+      {
+        "ref": "645",
+        "primary": true
+      },
+      {
+        "ref": "24024",
+        "primary": false
+      }
+    ],
+    "itinerary": {
+      "itineraryType": "STANDARD",
+      "skipTheLine": false,
+      "privateTour": false,
+      "maxTravelersInSharedTour": 21,
+      "duration": {
+        "fixedDurationInMinutes": 120
+      },
+      "itineraryItems": [
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyCuGYyM9Nn3XpbH9JFkT47Y="
+            }
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "As you venture ten miles into the rugged interior, you will view the protected side of Catalina Island seldom seen by most visitors. Have the chance to encounter wildlife such as bison, deer, bald eagles, ravens, or even the Catalina Island fox.\nThere is a photo opportunity around every turn as we climb to the Airport-in-the-Sky. At this stop, visit the Nature Center and peer down at one of Catalina\u2019s original Native American gathering sites. The fee to the Catalina Island Conservancy directly supports the preservation of the animals, endangered species, and endemic plants on Catalina Island.\nTours leave from The Cabrillo Mole.\n**we highly suggest you secure transportation to Catalina island prior to booking tour to confirm you can get to the tour as the boat to the island sells out quickly. \nCatalina Express or Newport Flyer for your transportation needs."
+        }
+      ]
+    },
+    "productOptions": [
+      {
+        "productOptionCode": "TG1",
+        "description": "",
+        "title": "2 hour Inside Adventure Tour on Catalina Island",
+        "languageGuides": [
+          {
+            "type": "GUIDE",
+            "language": "en",
+            "legacyGuide": "en/SERVICE_GUIDE"
+          }
+        ]
+      }
+    ],
+    "translationInfo": {
+      "containsMachineTranslatedText": false,
+      "translationSource": "ORIGINAL"
+    },
+    "supplier": {
+      "name": "Catalina Adventure Tours",
+      "reference": "SUPPLIER-oi6qsosQVBPlK2YkZk9bUA=="
+    },
+    "productUrl": "https://www.viator.com/tours/Los-Angeles/2-hour-Inside-Adventure-Tour-on-Catalina-Island/d645-32779P6?mcid=42383&pid=P00290915&medium=api&api_version=2.0",
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 13
+            },
+            {
+              "rating": 2.0,
+              "count": 10
+            },
+            {
+              "rating": 3.0,
+              "count": 18
+            },
+            {
+              "rating": 4.0,
+              "count": 46
+            },
+            {
+              "rating": 5.0,
+              "count": 173
+            }
+          ],
+          "totalCount": 260,
+          "averageRating": 4.4
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 14
+            },
+            {
+              "rating": 2.0,
+              "count": 3
+            },
+            {
+              "rating": 3.0,
+              "count": 11
+            },
+            {
+              "rating": 4.0,
+              "count": 13
+            },
+            {
+              "rating": 5.0,
+              "count": 95
+            }
+          ],
+          "totalCount": 136,
+          "averageRating": 4.3
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 27
+        },
+        {
+          "rating": 2.0,
+          "count": 13
+        },
+        {
+          "rating": 3.0,
+          "count": 29
+        },
+        {
+          "rating": 4.0,
+          "count": 59
+        },
+        {
+          "rating": 5.0,
+          "count": 268
+        }
+      ],
+      "totalReviews": 396,
+      "combinedAverageRating": 4.3333335
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/1a/bd/bf/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}

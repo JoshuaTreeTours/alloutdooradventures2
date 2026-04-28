@@ -242,6 +242,28 @@ const slugToLabel = (slug: string) =>
     .map(part => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
 
+const ENGINE6_NEW_BUILD_ORIGINAL_ITINERARY_PRODUCT_CODES = new Set([
+  "5096P30",
+  "67760P2",
+  "32779P6",
+]);
+
+const rewriteItineraryDescriptionToSingleSentence = (
+  item: NonNullable<Engine6ApiResponse["extracted"]["itinerary"]>[number]
+) => {
+  const title = item.title?.trim() || "This stop";
+  const duration = item.duration?.trim();
+  const admission = item.admissionNote?.trim();
+  const stopTypeLabel = item.stopType === "pass-by" ? "pass-by" : "guided stop";
+
+  const details = [duration ? `for about ${duration}` : null, admission]
+    .filter(Boolean)
+    .join("; ");
+
+  const coreSentence = `${title} is a ${stopTypeLabel} featuring key local highlights and photo opportunities`;
+  return details ? `${coreSentence} (${details}).` : `${coreSentence}.`;
+};
+
 export const mapViatorToEngine6Tour = (
   payload: Engine6ApiResponse
 ): Engine6Tour => {
@@ -308,7 +330,22 @@ export const mapViatorToEngine6Tour = (
     payload.extracted.overviewText ?? ""
   );
   const highlights = payload.extracted.highlights ?? [];
-  const itinerary = payload.extracted.itinerary ?? [];
+  const itinerary =
+    payload.extracted.itinerary?.map(item =>
+      ENGINE6_NEW_BUILD_ORIGINAL_ITINERARY_PRODUCT_CODES.has(
+        payload.rawProductCode
+      )
+        ? {
+            ...item,
+            ...(item.description
+              ? {
+                  description:
+                    rewriteItineraryDescriptionToSingleSentence(item),
+                }
+              : {}),
+          }
+        : item
+    ) ?? [];
   const itinerarySummaryText = payload.extracted.itinerarySummaryText ?? null;
   const faqs = payload.extracted.faqs ?? [];
   const included = payload.extracted.included ?? [];
