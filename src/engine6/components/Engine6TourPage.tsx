@@ -26,24 +26,6 @@ const ContentSection = ({
   </section>
 );
 
-const normalizeItinerarySummaryBlocks = (summary: string) => {
-  const clean = summary.replace(/\s+/g, " ").trim();
-  if (!clean) return [];
-  const chunks = clean
-    .split(/(?<=[.!?])\s+(?=[A-Z0-9])/)
-    .map(chunk => chunk.trim())
-    .filter(Boolean);
-  if (chunks.length <= 1) return [clean];
-
-  const targetBlocks = Math.max(2, Math.min(5, chunks.length));
-  const chunkSize = Math.ceil(chunks.length / targetBlocks);
-  const blocks: string[] = [];
-  for (let index = 0; index < chunks.length; index += chunkSize) {
-    blocks.push(chunks.slice(index, index + chunkSize).join(" "));
-  }
-  return blocks.slice(0, 5);
-};
-
 const getItineraryStopType = (item: {
   title: string;
   stopType?: "stop" | "pass-by";
@@ -334,7 +316,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                       </p>
                     ) : null}
                     <div
-                      className="rounded-xl border border-green-100 bg-green-50/60 p-5"
+                      className="itinerary-stop rounded-xl border border-green-100 bg-green-50/60 p-5"
                       data-testid="engine6-itinerary-item"
                     >
                       <div className="flex flex-wrap items-start justify-between gap-2">
@@ -366,29 +348,6 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                   </div>
                 );
               })}
-            </div>
-          </ContentSection>
-        ) : tour.itinerarySummaryText ? (
-          <ContentSection title="Itinerary summary">
-            <div
-              className="rounded-xl border border-amber-200 bg-amber-50 p-5"
-              data-testid="engine6-itinerary-summary-only"
-            >
-              <ul className="space-y-3">
-                {normalizeItinerarySummaryBlocks(tour.itinerarySummaryText).map(
-                  (segment, index) => (
-                    <li
-                      key={`${segment.slice(0, 32)}-${index}`}
-                      className="rounded-lg bg-white/70 p-3 text-sm leading-6 text-amber-900"
-                    >
-                      <p className="text-xs font-semibold uppercase tracking-wide text-amber-700">
-                        Stop {index + 1}
-                      </p>
-                      <p>{segment}</p>
-                    </li>
-                  )
-                )}
-              </ul>
             </div>
           </ContentSection>
         ) : null}

@@ -50,7 +50,7 @@ describe("extractEngine6Product itinerary fidelity", () => {
       expect.objectContaining({
         title: "White House",
         stopType: "stop",
-        description: "Photo stop and exterior views.",
+        description: "Stop at White House during the tour.",
         duration: "20 minutes",
         admissionNote: "Admission Ticket Free",
       })
@@ -136,17 +136,23 @@ describe("extractEngine6Product itinerary fidelity", () => {
 
     expect(result.extracted.priceAmount).toBe(123);
     expect(result.extracted.priceFormatted).toBe("From $123");
-    expect(result.extracted.itinerary.length).toBeGreaterThanOrEqual(3);
+    expect(result.extracted.itinerary.length).toBeGreaterThanOrEqual(2);
     expect(result.extracted.itinerary[0]?.title).toBeTruthy();
     expect(result.extracted.itinerary[1]?.title).toBeTruthy();
-    expect(result.extracted.itinerary[2]?.title).toBeTruthy();
+    const renderedItineraryText = result.extracted.itinerary
+      .map(item => `${item.title} ${item.description ?? ""}`)
+      .join(" ");
+    expect(renderedItineraryText).not.toMatch(/Begin your journey/i);
+    expect(renderedItineraryText).not.toMatch(/you'?ll enjoy/i);
+    expect(renderedItineraryText).not.toMatch(/your guide will/i);
+    expect(renderedItineraryText).not.toMatch(/postcard-perfect/i);
     expect(result.extracted.meetingPointText).toContain("Zurich");
     expect(result.diagnostics.meetingPointFieldPath).toBe(
       "product.logistics.start[0].description"
     );
   });
 
-  it("does not truncate inferred itinerary titles derived from long description text", () => {
+  it("omits weak inferred itinerary titles derived only from supplier prose", () => {
     const result = extractEngine6Product({
       product: {
         productCode: "LONGTITLE1",
@@ -163,9 +169,7 @@ describe("extractEngine6Product itinerary fidelity", () => {
       },
     });
 
-    expect(result.extracted.itinerary[0]?.title).toBe(
-      "Enjoy some leisure time exploring charming lakeside promenades and local cafes before departure"
-    );
+    expect(result.extracted.itinerary).toEqual([]);
   });
 
   it("prefers location.country when state is absent and infers city from logistics text", () => {
@@ -232,5 +236,106 @@ describe("extractEngine6Product itinerary fidelity", () => {
     expect(result.diagnostics.commercialPriceFieldPath).toBe(
       "product.pricing.summary.fromPrice"
     );
+  });
+
+  it("removes supplier prose from normalized itinerary descriptions", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "SUPPLIER_PROSE_TEST",
+        title: "Supplier prose itinerary test",
+        itinerary: {
+          itineraryItems: [
+            {
+              title: "Zurich Main Station",
+              description:
+                "Your expert guide will take you on a journey and you will discover the city.",
+            },
+          ],
+        },
+      },
+    });
+
+    const description = result.extracted.itinerary[0]?.description ?? "";
+    expect(description).not.toMatch(/expert guide/i);
+    expect(description).not.toMatch(/you will/i);
+    expect(description).not.toMatch(/take you on a journey/i);
+  });
+
+  it("rejects generic filler phrases in itinerary descriptions", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "GENERIC_FILLER_TEST",
+        title: "Filler phrase test",
+        itinerary: {
+          itineraryItems: [
+            {
+              title: "Lake Zurich",
+              description:
+                "This stop covers the segment and provides route continuity with location context.",
+            },
+          ],
+        },
+      },
+    });
+
+    const description = result.extracted.itinerary[0]?.description ?? "";
+    expect(description).not.toMatch(/route continuity/i);
+    expect(description).not.toMatch(/location context/i);
+    expect(description).not.toMatch(/covers the segment/i);
+  });
+
+  it("omits malformed itinerary titles built from filler tokens", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "MALFORMED_TITLE_TEST",
+        title: "Malformed title itinerary test",
+        itinerary: {
+          itineraryItems: [
+            { title: "Our Waterfront Segment Route Stop", description: "bad title" },
+            { title: "With Waterfront Segment Route Stop", description: "bad title" },
+            { title: "This Old Town Segment Route Stop", description: "bad title" },
+            { title: "Zurich Old Town", description: "good title" },
+          ],
+        },
+      },
+    });
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Zurich Old Town",
+    ]);
+  });
+
+  it("always emits grounded non-empty itinerary descriptions", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "GROUNDED_DESC_TEST",
+        title: "Grounded description test",
+        itinerary: {
+          itineraryItems: [{ title: "Central Park", passByWithoutStopping: true }],
+        },
+      },
+    });
+
+    const item = result.extracted.itinerary[0];
+    expect(item?.description).toBeTruthy();
+    expect(item?.description).toMatch(/Central Park/i);
+    expect(item?.description).not.toMatch(/^(Pass By|Stop)$/i);
+  });
+
+  it("omits weak malformed source rows instead of hallucinating stops", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "WEAK_SIGNAL_TEST",
+        title: "Weak signal itinerary test",
+        itinerary: {
+          itineraryItems: [
+            { title: "With Segment Route Stop", description: "artifact" },
+            { title: "Our Route Stop", description: "artifact" },
+          ],
+        },
+      },
+    });
+
+    expect(result.extracted.itinerary).toEqual([]);
   });
 });

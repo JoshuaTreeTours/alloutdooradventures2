@@ -954,9 +954,6 @@ describe("engine6 listing surfaces", () => {
     if ((vegasTour?.itinerary.length ?? 0) >= 2) {
       expect(html).toContain(">Itinerary<");
       expect(html).toContain('data-testid="engine6-itinerary-timeline"');
-    } else if (vegasTour?.itinerarySummaryText) {
-      expect(html).toContain(">Itinerary summary<");
-      expect(html).toContain('data-testid="engine6-itinerary-summary-only"');
     } else {
       expect(html).not.toContain(">Itinerary<");
     }
@@ -992,9 +989,6 @@ describe("engine6 listing surfaces", () => {
     if ((catalinaTour?.itinerary.length ?? 0) >= 2) {
       expect(html).toContain(">Itinerary<");
       expect(html).toContain('data-testid="engine6-itinerary-timeline"');
-    } else if (catalinaTour?.itinerarySummaryText) {
-      expect(html).toContain(">Itinerary summary<");
-      expect(html).toContain('data-testid="engine6-itinerary-summary-only"');
     } else {
       expect(html).not.toContain(">Itinerary<");
     }
@@ -1805,9 +1799,6 @@ describe("engine6 multi-tour contract", () => {
         expect(html).toContain(">Itinerary<");
         expect(html).toContain('data-testid="engine6-itinerary-timeline"');
         expect(tripNode?.itinerary).toBeTruthy();
-      } else if (tour.itinerarySummaryText) {
-        expect(html).toContain(">Itinerary summary<");
-        expect(html).toContain('data-testid="engine6-itinerary-summary-only"');
       }
       if (tour.requirements.length > 0) {
         expect(html).toContain(">Additional info<");
@@ -2264,7 +2255,7 @@ describe("engine6 itinerary contract", () => {
     ]);
   });
 
-  it("renders summary-only itinerary style when structured stops are absent", () => {
+  it("does not render itinerary when structured stops are absent", () => {
     const tour = {
       ...engine6ResolvedTours[0]!,
       itinerary: [],
@@ -2272,8 +2263,8 @@ describe("engine6 itinerary contract", () => {
     };
 
     const html = renderToString(<Engine6TourPage tour={tour} />);
-    expect(html).toContain('data-testid="engine6-itinerary-summary-only"');
     expect(html).not.toContain('data-testid="engine6-itinerary-timeline"');
+    expect(html).not.toContain('data-testid="engine6-itinerary-summary-only"');
   });
 });
 describe("engine6 route wiring", () => {
