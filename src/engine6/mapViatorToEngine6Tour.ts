@@ -248,9 +248,32 @@ const ENGINE6_NEW_BUILD_ORIGINAL_ITINERARY_PRODUCT_CODES = new Set([
   "32779P6",
 ]);
 
+const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
+  "67760P2": [
+    "Stroll Santa Monica Pier for ocean panoramas, lively boardwalk energy, and easy access to nearby shopping streets.",
+    "Sample Los Angeles food options with time to browse popular retail spots such as The Grove.",
+    "Take in close-up Hollywood Sign views while exploring science-focused exhibits and hilltop city vistas.",
+    "Walk Hollywood’s iconic theater district, including landmark venues and classic Walk of Fame photo moments.",
+  ],
+  "32779P6": [
+    "Travel deep into Catalina’s interior for sweeping island viewpoints and frequent wildlife sightings across protected terrain.",
+  ],
+};
+
 const rewriteItineraryDescriptionToSingleSentence = (
-  item: NonNullable<Engine6ApiResponse["extracted"]["itinerary"]>[number]
+  args: {
+    productCode: string;
+    item: NonNullable<Engine6ApiResponse["extracted"]["itinerary"]>[number];
+    index: number;
+  }
 ) => {
+  const override =
+    ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES[args.productCode]?.[args.index];
+  if (override) {
+    return override;
+  }
+
+  const { item } = args;
   const title = item.title?.trim() || "This stop";
   const duration = item.duration?.trim();
   const admission = item.admissionNote?.trim();
@@ -331,7 +354,7 @@ export const mapViatorToEngine6Tour = (
   );
   const highlights = payload.extracted.highlights ?? [];
   const itinerary =
-    payload.extracted.itinerary?.map(item =>
+    payload.extracted.itinerary?.map((item, index) =>
       ENGINE6_NEW_BUILD_ORIGINAL_ITINERARY_PRODUCT_CODES.has(
         payload.rawProductCode
       )
@@ -340,7 +363,11 @@ export const mapViatorToEngine6Tour = (
             ...(item.description
               ? {
                   description:
-                    rewriteItineraryDescriptionToSingleSentence(item),
+                    rewriteItineraryDescriptionToSingleSentence({
+                      productCode: payload.rawProductCode,
+                      item,
+                      index,
+                    }),
                 }
               : {}),
           }
