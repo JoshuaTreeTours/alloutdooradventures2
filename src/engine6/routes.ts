@@ -112,7 +112,7 @@ export const ENGINE6_LOS_ANGELES_CATALINA_INSIDE_ADVENTURE_ROUTE =
 export const ENGINE6_LOS_ANGELES_GREATER_PRIVATE_DAY_TRIP_PRODUCT_CODE =
   "70058P145";
 export const ENGINE6_LOS_ANGELES_GREATER_PRIVATE_DAY_TRIP_ROUTE =
-  "/destinations/california/los-angeles/tours/hollywood-beverly-hills-and-los-angeles-private-tour-70058P145";
+  "/destinations/california/los-angeles/tours/greater-los-angeles-private-day-trip-from-los-angeles-70058P145";
 export const ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_PRODUCT_CODE =
   "6029_4DAYPARK";
 export const ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_ROUTE =
