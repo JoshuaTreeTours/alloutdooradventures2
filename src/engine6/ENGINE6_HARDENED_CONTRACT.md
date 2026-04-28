@@ -8,7 +8,7 @@ Every new Engine6 specimen must inherit these behaviors without custom branching
 
 - **Hero parity:** detail hero, city/state listing card hero, `/tours?state=...&city=...` card hero, and related slider card hero must be identical.
 - **Hero winner policy:** if a resolved Engine6 hero exists, it must win. Placeholder/hiking hero is only allowed when no valid hero exists.
-- **CTA policy:** CTA must use the resolved booking target and preserve current monetized Viator query params (`pid`, `mcid`, `medium`).
+- **CTA policy:** CTA must use the resolved booking target and preserve current monetized Viator query params (`pid`, `uid`, `mcid`, `medium`, `currency`).
 - **Schema URL split:**
   - `Product.url` = local AOA canonical URL.
   - `Offer.url` = booking URL.

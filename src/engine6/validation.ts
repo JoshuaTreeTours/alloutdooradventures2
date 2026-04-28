@@ -106,8 +106,10 @@ export const buildEngine6ValidationReport = (
     ? tour.bookingUrl.endsWith("/book")
     : tour.bookingUrl.startsWith(fixture.publicUrl) &&
       tour.bookingUrl.includes("pid=P00290915") &&
-      tour.bookingUrl.includes("mcid=42383") &&
-      tour.bookingUrl.includes("medium=link");
+      tour.bookingUrl.includes("uid=U00174482") &&
+      tour.bookingUrl.includes("mcid=58086") &&
+      tour.bookingUrl.includes("medium=link") &&
+      tour.bookingUrl.includes("currency=USD");
 
   return {
     productCode: fixture.productCode,

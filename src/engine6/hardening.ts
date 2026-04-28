@@ -80,7 +80,11 @@ export const assertEngine6CtaIntegrity = ({
   ctaUrl: string;
 }) => {
   assertCondition(ctaOwner === "viator", "engine6 routes must use Viator CTA ownership");
-  assertCondition(ctaUrl.includes("pid="), "cta URL must include affiliate pid parameter");
+  assertCondition(ctaUrl.includes("pid=P00290915"), "cta URL must include affiliate pid parameter");
+  assertCondition(ctaUrl.includes("uid=U00174482"), "cta URL must include affiliate uid parameter");
+  assertCondition(ctaUrl.includes("mcid=58086"), "cta URL must include affiliate mcid parameter");
+  assertCondition(ctaUrl.includes("medium=link"), "cta URL must include medium=link parameter");
+  assertCondition(ctaUrl.includes("currency=USD"), "cta URL must include currency=USD parameter");
   assertCondition(!ctaUrl.includes("/search/"), "cta URL cannot point to a search page");
 };
 

@@ -485,13 +485,13 @@ describe("engine6 meta descriptions", () => {
 describe("engine6 Viator booking URLs", () => {
   it("uses the canonical Santa Barbara Viator detail URL when no preferred product URL is available", () => {
     expect(buildEngine6ViatorBookingUrl("63657P1")).toBe(
-      "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1?pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD"
     );
   });
 
   it("uses the canonical Anchorage product URL for 411138P3 with affiliate params", () => {
     expect(buildEngine6ViatorBookingUrl("411138P3", null)).toBe(
-      "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3?pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD"
     );
   });
 
@@ -502,7 +502,7 @@ describe("engine6 Viator booking URLs", () => {
         "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10"
       )
     ).toBe(
-      "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10?pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD"
     );
   });
 });
@@ -600,7 +600,7 @@ describe("engine6 mapping/cards/page", () => {
     expect(tour.productCode).toBe("63657P1");
     expect(tour.priceFormatted).toBe("From $199");
     expect(tour.bookingUrl).toBe(
-      "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1?pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD"
     );
     expect(card.title).toContain("Santa Barbara Vineyard");
     expect(surfaces.city[0].priceLabel).toBe("From $199");
@@ -829,7 +829,7 @@ describe("engine6 listing surfaces", () => {
       "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/e5/f4/caption.jpg?w=700&h=500&s=1"
     );
     expect(kayakTour?.bookingUrl).toBe(
-      "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10?pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/tours/Fort-Lauderdale/Fort-Lauderdales-Tropical-Kayak-Tour-and-Island-Adventure/d660-89173P10?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD"
     );
   });
 
@@ -854,21 +854,21 @@ describe("engine6 listing surfaces", () => {
         route: ENGINE6_FORT_LAUDERDALE_EVERGLADES_AIRBOAT_ROUTE,
         hero:
           "https://dynamic-media.tacdn.com/media/photo-o/2f/15/16/f1/caption.jpg?w=1100&h=800&s=1",
-        cta: "https://www.viator.com/tours/Fort-Lauderdale/Authentic-Private-Everglades-Airboat-Tour/d660-76145P2?pid=P00290915&mcid=42383&medium=link",
+        cta: "https://www.viator.com/tours/Fort-Lauderdale/Authentic-Private-Everglades-Airboat-Tour/d660-76145P2?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD",
       },
       {
         productCode: "5559561P1",
         route: ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_ROUTE,
         hero:
           "https://dynamic-media.tacdn.com/media/photo-o/2e/d1/7c/59/caption.jpg?w=700&h=500&s=1",
-        cta: "https://www.viator.com/tours/Fort-Lauderdale/JetCar-Fort-Lauderdale-Rental/d660-5559561P1?pid=P00290915&mcid=42383&medium=link",
+        cta: "https://www.viator.com/tours/Fort-Lauderdale/JetCar-Fort-Lauderdale-Rental/d660-5559561P1?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD",
       },
       {
         productCode: "118958P8",
         route: ENGINE6_FORT_LAUDERDALE_BIG_GAME_FISHING_ROUTE,
         hero:
           "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/cd/26/caption.jpg?w=1100&h=800&s=1",
-        cta: "https://www.viator.com/tours/Fort-Lauderdale/4-Hour-Shared-Big-Game-Fishing/d660-118958P8?pid=P00290915&mcid=42383&medium=link",
+        cta: "https://www.viator.com/tours/Fort-Lauderdale/4-Hour-Shared-Big-Game-Fishing/d660-118958P8?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD",
       },
     ] as const;
 
@@ -1024,7 +1024,7 @@ describe("engine6 listing surfaces", () => {
       ENGINE6_63657P1_CARD_IMAGE_URL
     );
     expect(engine6Entry?.tour.bookingUrl).toBe(
-      "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1?pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD"
     );
   });
 
@@ -1211,7 +1211,7 @@ describe("engine6 listing surfaces", () => {
       "/images/hiking-hero.jpg"
     );
     expect(engine6Entry?.tour.bookingUrl).toBe(
-      "https://www.viator.com/tours/San-Diego/Spectacular-Sunset-Sailing/d736-5584233P1?pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/tours/San-Diego/Spectacular-Sunset-Sailing/d736-5584233P1?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD"
     );
     expect(engine6Entry?.tour.bookingUrl).not.toContain("/search/");
     expect(engine6Entry?.tour.badges?.priceFrom).toBe("From $120");
@@ -1273,7 +1273,7 @@ describe("engine6 listing surfaces", () => {
       "/images/hiking-hero.jpg"
     );
     expect(engine6Entry?.tour.bookingUrl).toBe(
-      "https://www.viator.com/tours/Palm-Springs/Mountain-Sunrise-Hike-and-Meditation/d648-327321P1?pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/tours/Palm-Springs/Mountain-Sunrise-Hike-and-Meditation/d648-327321P1?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD"
     );
     expect(engine6Entry?.tour.bookingUrl).not.toContain("/search/");
     expect(engine6Entry?.tour.badges?.priceFrom).toBe("From $108");
@@ -1323,7 +1323,7 @@ describe("engine6 listing surfaces", () => {
       "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs"
     );
     expect(offerNode?.url).toBe(
-      "https://www.viator.com/tours/Palm-Springs/Mountain-Sunrise-Hike-and-Meditation/d648-327321P1?pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/tours/Palm-Springs/Mountain-Sunrise-Hike-and-Meditation/d648-327321P1?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD"
     );
     expect(Array.isArray(faqNode?.mainEntity)).toBe(true);
     expect((faqNode?.mainEntity as unknown[]).length).toBe(5);
@@ -1334,12 +1334,12 @@ describe("engine6 listing surfaces", () => {
       "21165P1": {
         route: ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
         hero: ENGINE6_21165P1_EXPECTED_HERO_URL,
-        cta: "https://www.viator.com/tours/San-Diego/Original-Sea-Cave-Kayak-Tour/d736-21165P1?pid=P00290915&mcid=42383&medium=link",
+        cta: "https://www.viator.com/tours/San-Diego/Original-Sea-Cave-Kayak-Tour/d736-21165P1?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD",
       },
       "31015P9": {
         route: ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
         hero: ENGINE6_31015P9_EXPECTED_HERO_URL,
-        cta: "https://www.viator.com/tours/San-Diego/Private-Sailing-Charter-on-San-Diego-Bay/d736-31015P9?pid=P00290915&mcid=42383&medium=link",
+        cta: "https://www.viator.com/tours/San-Diego/Private-Sailing-Charter-on-San-Diego-Bay/d736-31015P9?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD",
       },
       "173946P1": {
         route: ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
@@ -1565,7 +1565,7 @@ describe("engine6 listing surfaces", () => {
     expect(emeraldTour?.included.length).toBeGreaterThan(0);
     expect(emeraldTour?.requirements.length).toBeGreaterThan(0);
     expect(emeraldTour?.bookingUrl).toBe(
-      "https://www.viator.com/tours/Las-Vegas/Emerald-Cave-Kayaking-Tour/d684-26719P8?pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/tours/Las-Vegas/Emerald-Cave-Kayaking-Tour/d684-26719P8?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD"
     );
 
     const detailHtml = renderToString(<Engine6TourPage tour={emeraldTour!} />);
@@ -1785,7 +1785,7 @@ describe("engine6 multi-tour contract", () => {
         expect(tour.bookingUrl).toContain("/book");
       } else {
         expect(tour.bookingUrl).toContain("pid=P00290915");
-        expect(tour.bookingUrl).toContain("mcid=42383");
+        expect(tour.bookingUrl).toContain("mcid=58086");
       }
       expect(html).toContain(tour.bookingUrl.replace(/&/g, "&amp;"));
 
@@ -2411,7 +2411,7 @@ describe("engine6 route wiring", () => {
     expect(anchorageTour).toBeDefined();
     expect(anchorageTour?.canonicalPath).toBe(ENGINE6_ANCHORAGE_PRIVATE_ROUTE);
     expect(anchorageTour?.bookingUrl).toBe(
-      "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3?pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD"
     );
   });
 

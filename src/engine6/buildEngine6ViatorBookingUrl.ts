@@ -1,41 +1,15 @@
 const ENGINE6_VIATOR_AFFILIATE_PARAMS = {
   pid: "P00290915",
-  mcid: "42383",
+  uid: "U00174482",
+  mcid: "58086",
   medium: "link",
+  currency: "USD",
 } as const;
 
 const ENGINE6_VIATOR_AFFILIATE_OVERRIDES: Record<
   string,
   Partial<Record<"pid" | "uid" | "mcid" | "currency" | "medium", string>>
 > = {
-  "191303P1": {
-    pid: "P00290915",
-    uid: "U00174482",
-    mcid: "58086",
-    currency: "USD",
-    medium: "link",
-  },
-  "69764P1": {
-    pid: "P00290915",
-    uid: "U00174482",
-    mcid: "58086",
-    currency: "USD",
-    medium: "link",
-  },
-  "18125P5": {
-    pid: "P00290915",
-    uid: "U00174482",
-    mcid: "58086",
-    currency: "USD",
-    medium: "link",
-  },
-  "173946P1": {
-    pid: "P00290915",
-    uid: "U00174482",
-    mcid: "58086",
-    currency: "USD",
-    medium: "link",
-  },
   "5046PRTSANSEA": {
     pid: "P00058975",
     mcid: "58086",
