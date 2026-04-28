@@ -19,6 +19,7 @@ Every new Engine6 specimen must inherit these behaviors without custom branching
 - **Related tours source:** related section must use same-city unified inventory and exclude current tour by product code and slug.
 - **Collision guard:** legacy route collision must throw unless explicitly configured in `ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS`.
 - **Itinerary rendering:** timeline rendering only when structured stop data exists; summary-only itinerary must render explicitly and visually distinct.
+- **New-build itinerary originality rule:** for newly created Engine6 tours only, itinerary stop order/structure must remain Viator-authored while each stop description is rewritten as one concise factual sentence (no verbatim copy or generic filler); existing Engine6 tours must not be retro-edited to satisfy this rule.
 - **FAQ parity:** FAQ schema must match visible FAQ entries.
 - **Price contract:** price is "From" minimum price, kept aligned between UI copy and schema (`price`, `priceCurrency`, `priceValidUntil`).
 
@@ -30,6 +31,7 @@ The following are forbidden in Engine6 work:
 - Alternate image override paths that bypass resolved Engine6 hero.
 - Legacy route coexistence without explicit replacement declaration.
 - Silent fallback from structured itinerary to fake timeline behavior.
+- For new builds, copying Viator itinerary descriptions verbatim or using generic placeholder stop descriptions.
 
 ## Pre-merge requirements for Engine6 changes
 
