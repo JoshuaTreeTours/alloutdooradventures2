@@ -77,13 +77,13 @@ describe("engine6 hardening guards", () => {
       assertEngine6CtaIntegrity({
         ctaOwner: "viator",
         ctaUrl:
-          "https://www.viator.com/tours/San-Diego/Tour/d736-3097SDZSP_2VISIT?pid=P00290915&mcid=42383&medium=link",
+          "https://www.viator.com/tours/San-Diego/Tour/d736-3097SDZSP_2VISIT?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD",
       })
     ).not.toThrow();
     expect(() =>
       assertEngine6CtaIntegrity({
         ctaOwner: "viator",
-        ctaUrl: "https://www.viator.com/search/all?pid=P00290915",
+        ctaUrl: "https://www.viator.com/search/all?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD",
       })
     ).toThrow(/search/i);
     expect(() =>

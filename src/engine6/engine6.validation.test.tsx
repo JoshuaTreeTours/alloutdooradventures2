@@ -124,7 +124,7 @@ describe("engine6 single-tour validation harness", () => {
         expect(tour.bookingUrl).toContain("/book");
       } else {
         expect(tour.bookingUrl).toContain("pid=P00290915");
-        expect(tour.bookingUrl).toContain("mcid=42383");
+        expect(tour.bookingUrl).toContain("mcid=58086");
         expect(tour.bookingUrl).toContain("medium=link");
         expect(tour.bookingUrl.startsWith(fixture.publicUrl)).toBe(true);
       }
