@@ -231,4 +231,64 @@ describe("engine6 creation contract validator", () => {
     expect((report as { diagnostics?: { simpleItineraryAcceptanceApplied?: boolean } }).diagnostics?.simpleItineraryAcceptanceApplied).toBe(true);
   });
 
+  it("fails new-build originality validation when itinerary descriptions copy source text", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "63657P1"
+    );
+    expect(fixture).toBeDefined();
+    const payload = toPayload(fixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+    expect(tour.itinerary.length).toBeGreaterThan(0);
+    const sourceItems = (
+      (fixture!.rawPayload as { product?: { itineraryItems?: Array<{ description?: string }> } })
+        .product?.itineraryItems ?? []
+    ).map(item => item.description ?? "");
+
+    const report = validateEngine6CreationContract({
+      tour: {
+        ...tour,
+        itinerary: tour.itinerary.map((item, index) => ({
+          ...item,
+          description: sourceItems[index] ?? item.description,
+        })),
+      },
+      rawPayload: fixture!.rawPayload,
+      fixture: {
+        ...fixture!,
+        validationRules: { itineraryOriginalityForNewBuilds: true },
+      },
+    });
+
+    expect(report.violations.join(" ")).toContain(
+      "description matches Viator text"
+    );
+  });
+
+  it("fails new-build originality validation for generic itinerary descriptions", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "63657P1"
+    );
+    expect(fixture).toBeDefined();
+    const payload = toPayload(fixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+    expect(tour.itinerary.length).toBeGreaterThan(0);
+
+    const report = validateEngine6CreationContract({
+      tour: {
+        ...tour,
+        itinerary: tour.itinerary.map(item => ({
+          ...item,
+          description: "Visit this location.",
+        })),
+      },
+      rawPayload: fixture!.rawPayload,
+      fixture: {
+        ...fixture!,
+        validationRules: { itineraryOriginalityForNewBuilds: true },
+      },
+    });
+
+    expect(report.violations.join(" ")).toContain("description is generic");
+  });
+
 });

@@ -51,6 +51,65 @@ const structuredStopCountFromPayload = (
   }).length;
 };
 
+type SourceItineraryStop = {
+  title: string;
+  description: string | null;
+};
+
+const normalizeComparisonText = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/[^\p{L}\p{N}\s]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const isGenericItineraryDescription = (value: string) => {
+  const normalized = normalizeComparisonText(value);
+  return [
+    "visit this location",
+    "visit this stop",
+    "explore this location",
+    "enjoy this stop",
+    "see this location",
+    "stop here",
+  ].includes(normalized);
+};
+
+const getSourceItineraryStops = (
+  rawPayload: Record<string, unknown>
+): SourceItineraryStop[] => {
+  const product = (rawPayload.product ?? rawPayload) as Record<string, unknown>;
+  const itineraryItems = Array.isArray(product.itineraryItems)
+    ? (product.itineraryItems as unknown[])
+    : Array.isArray(
+          (product.itinerary as Record<string, unknown> | undefined)
+            ?.itineraryItems
+        )
+      ? ((product.itinerary as Record<string, unknown>)
+          .itineraryItems as unknown[])
+      : [];
+
+  return itineraryItems
+    .map(item => {
+      if (!item || typeof item !== "object") return null;
+      const row = item as Record<string, unknown>;
+      const title =
+        (typeof row.title === "string" && row.title.trim()) ||
+        (typeof row.name === "string" && row.name.trim()) ||
+        (typeof row.label === "string" && row.label.trim()) ||
+        "";
+      if (!title) return null;
+      const description =
+        typeof row.description === "string" && row.description.trim().length > 0
+          ? row.description.trim()
+          : null;
+      return { title, description } satisfies SourceItineraryStop;
+    })
+    .filter((item): item is SourceItineraryStop => Boolean(item));
+};
+
 const parseDurationMinutes = (value: string | null | undefined) => {
   if (!value) return null;
   const compact = value.toLowerCase();
@@ -473,6 +532,54 @@ export const validateEngine6CreationContract = ({
     violations.push(
       "summary-only itinerary missing explicit summary rendering"
     );
+  }
+
+  if (fixture?.validationRules?.itineraryOriginalityForNewBuilds) {
+    const sourceStops = getSourceItineraryStops(rawPayload);
+    if (sourceStops.length !== tour.itinerary.length) {
+      violations.push(
+        "new-build itinerary originality validation failed: itinerary was reduced or simplified versus Viator source stops"
+      );
+    }
+
+    sourceStops.forEach((sourceStop, index) => {
+      const targetStop = tour.itinerary[index];
+      if (!targetStop) return;
+
+      const targetDescription = targetStop.description?.trim() ?? "";
+      const sourceDescription = sourceStop.description?.trim() ?? null;
+
+      if (sourceDescription && !targetDescription) {
+        violations.push(
+          `new-build itinerary originality validation failed: stop ${index + 1} (${sourceStop.title}) is missing a rewritten description despite source context`
+        );
+      }
+      if (sourceDescription && targetDescription) {
+        if (
+          normalizeComparisonText(sourceDescription) ===
+          normalizeComparisonText(targetDescription)
+        ) {
+          violations.push(
+            `new-build itinerary originality validation failed: stop ${index + 1} (${sourceStop.title}) description matches Viator text`
+          );
+        }
+        const sentenceCount =
+          targetDescription
+            .split(/(?<=[.!?])\s+/)
+            .map(part => part.trim())
+            .filter(Boolean).length || 1;
+        if (sentenceCount !== 1) {
+          violations.push(
+            `new-build itinerary originality validation failed: stop ${index + 1} (${sourceStop.title}) description must be exactly one concise sentence`
+          );
+        }
+      }
+      if (targetDescription && isGenericItineraryDescription(targetDescription)) {
+        violations.push(
+          `new-build itinerary originality validation failed: stop ${index + 1} (${sourceStop.title}) description is generic`
+        );
+      }
+    });
   }
 
   const tripNode = graph.find(node => node["@type"] === "TouristTrip") as

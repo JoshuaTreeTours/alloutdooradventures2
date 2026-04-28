@@ -111,6 +111,9 @@ export type Engine6ValidationFixture = {
     };
     authoredNonHeroContent?: Record<string, unknown>;
   };
+  validationRules?: {
+    itineraryOriginalityForNewBuilds?: boolean;
+  };
 };
 
 const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
