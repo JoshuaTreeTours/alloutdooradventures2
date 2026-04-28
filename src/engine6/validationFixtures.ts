@@ -73,6 +73,10 @@ import specimen2030unientryPayload from "../../data/engine6/viator/2030UNIENTRY.
 import specimen5096p30Payload from "../../data/engine6/viator/5096P30.exact-product.json";
 import specimen67760p2Payload from "../../data/engine6/viator/67760P2.exact-product.json";
 import specimen32779p6Payload from "../../data/engine6/viator/32779P6.exact-product.json";
+import specimen5569la1dayPayload from "../../data/engine6/viator/5569LA1DAY.exact-product.json";
+import specimen5569hikePayload from "../../data/engine6/viator/5569HIKE.exact-product.json";
+import specimen5569comboPayload from "../../data/engine6/viator/5569COMBO.exact-product.json";
+import specimen46280p6Payload from "../../data/engine6/viator/46280P6.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -712,6 +716,42 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Los-Angeles/2-hour-Inside-Adventure-Tour-on-Catalina-Island/d645-32779P6",
     rawPayload: specimen32779p6Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5569LA1DAY",
+    publicUrl:
+      "https://www.viator.com/tours/Los-Angeles/The-Ultimate-Los-Angeles-Bike-Tour/d645-5569LA1DAY",
+    rawPayload: specimen5569la1dayPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5569HIKE",
+    publicUrl:
+      "https://www.viator.com/tours/Los-Angeles/Hollywood-Hills-Hiking-Tour-in-Los-Angeles/d645-5569HIKE",
+    rawPayload: specimen5569hikePayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5569COMBO",
+    publicUrl:
+      "https://www.viator.com/tours/Los-Angeles/Hollywood-Bike-Adventure/d645-5569COMBO",
+    rawPayload: specimen5569comboPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "46280P6",
+    publicUrl:
+      "https://www.viator.com/tours/Los-Angeles/Private-Luxurious-Tour-of-Los-Angeles/d645-46280P6",
+    rawPayload: specimen46280p6Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
