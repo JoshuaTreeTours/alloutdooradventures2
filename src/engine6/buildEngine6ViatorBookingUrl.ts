@@ -60,6 +60,10 @@ const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
     "https://www.viator.com/tours/San-Diego/San-Diego-Finest-City-Tour-and-Small-Group-Sightseeing/d736-424070P1",
   "5257BOAT":
     "https://www.viator.com/tours/San-Diego/San-Diego-Harbor-Speed-Boat-Adventure/d736-5257BOAT",
+  "47235P1":
+    "https://www.viator.com/tours/Los-Angeles/Full-Day-Iconic-Sights-of-Los-Angeles-Tour/d645-47235P1",
+  "2030UNIENTRY":
+    "https://www.viator.com/tours/Anaheim-and-Buena-Park/Universal-Studios-Hollywood-General-Admission-Ticket/d797-2030UNIENTRY",
 };
 
 const FALLBACK_ENGINE6_VIATOR_SEARCH_URL = "https://www.viator.com/search";
