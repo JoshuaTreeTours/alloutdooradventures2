@@ -22,6 +22,10 @@ const ENGINE6_OPENING_PATTERN_OVERRIDES: Record<string, number> = {
 };
 const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
   "100569P5": "Join one of the best experiences in Anchorage...",
+  "365892P1":
+    "Explore Los Angeles on a private full-day sightseeing tour with hotel pickup, a comfortable air-conditioned vehicle, and stops at Venice Beach, Santa Monica Pier, Beverly Hills, Hollywood, and the Hollywood Sign.",
+  "15131P4":
+    "Fly above Los Angeles on a private helicopter tour with sweeping aerial views of Hollywood, downtown Los Angeles, and the city’s most recognizable landmarks.",
 };
 const ENGINE6_OVERVIEW_OVERRIDES: Record<
   string,

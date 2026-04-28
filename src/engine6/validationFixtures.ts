@@ -63,6 +63,8 @@ import specimen5553984p5Payload from "../../data/engine6/viator/5553984P5.exact-
 import specimen12729paraglidePayload from "../../data/engine6/viator/12729PARAGLIDE.exact-product.json";
 import specimen64859p2Payload from "../../data/engine6/viator/64859P2.exact-product.json";
 import specimen26095p3Payload from "../../data/engine6/viator/26095P3.exact-product.json";
+import specimen365892p1Payload from "../../data/engine6/viator/365892P1.exact-product.json";
+import specimen15131p4Payload from "../../data/engine6/viator/15131P4.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -633,6 +635,18 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Interlaken/6-hours-guided-e-bike-tour-to-Lauterbrunnen-Valley-of-the-72-waterfalls-incl-Swiss-picnic/d5011-26095P3",
     rawPayload: specimen26095p3Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "365892P1",
+    publicUrl:
+      "https://www.viator.com/tours/Los-Angeles/Private-tour-guide-LA/d645-365892P1",
+    rawPayload: specimen365892p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "15131P4",
+    publicUrl:
+      "https://www.viator.com/tours/Los-Angeles/Hollywood-Private-Helicopter-Tour/d645-15131P4",
+    rawPayload: specimen15131p4Payload as Record<string, unknown>,
   },
 ];
 
