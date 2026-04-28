@@ -27,11 +27,15 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
   "15131P4":
     "Fly above Los Angeles on a private helicopter tour with sweeping aerial views of Hollywood, downtown Los Angeles, and the city’s most recognizable landmarks.",
   "148509P1":
-    "Go behind the scenes of Hollywood filmmaking on a guided Warner Bros. Studio Tour featuring working backlots, sound stages, and iconic sets from major films and TV shows.",
+    "Go behind the scenes of Hollywood filmmaking on a guided Warner Bros. Studio Tour featuring working backlots, sound stages, and iconic film and TV sets.",
   "106439P1":
     "See the homes of celebrities and iconic landmarks on a guided sightseeing tour through Hollywood, Beverly Hills, and the Sunset Strip.",
   "170119P1":
     "Explore Los Angeles in a single day on a guided tour covering Hollywood, Beverly Hills, Santa Monica, and coastal highlights with multiple photo stops.",
+  "47235P1":
+    "See the most famous highlights of Los Angeles in one day, including Hollywood, Beverly Hills, Santa Monica, and Venice Beach with guided stops along the way.",
+  "2030UNIENTRY":
+    "Enjoy a full day at Universal Studios Hollywood with access to thrilling rides, immersive movie-themed attractions, and behind-the-scenes studio experiences.",
 };
 const ENGINE6_OVERVIEW_OVERRIDES: Record<
   string,

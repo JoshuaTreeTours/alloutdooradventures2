@@ -68,6 +68,8 @@ import specimen15131p4Payload from "../../data/engine6/viator/15131P4.exact-prod
 import specimen148509p1Payload from "../../data/engine6/viator/148509P1.exact-product.json";
 import specimen106439p1Payload from "../../data/engine6/viator/106439P1.exact-product.json";
 import specimen170119p1Payload from "../../data/engine6/viator/170119P1.exact-product.json";
+import specimen47235p1Payload from "../../data/engine6/viator/47235P1.exact-product.json";
+import specimen2030unientryPayload from "../../data/engine6/viator/2030UNIENTRY.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -671,6 +673,18 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Los-Angeles/Full-Day-Most-Iconic-sights-of-L-A-Hollywood-Beverly-Hills-and-Beach-area/d645-170119P1",
     rawPayload: specimen170119p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "47235P1",
+    publicUrl:
+      "https://www.viator.com/tours/Los-Angeles/Full-Day-Iconic-Sights-of-Los-Angeles-Tour/d645-47235P1",
+    rawPayload: specimen47235p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "2030UNIENTRY",
+    publicUrl:
+      "https://www.viator.com/tours/Anaheim-and-Buena-Park/Universal-Studios-Hollywood-General-Admission-Ticket/d797-2030UNIENTRY",
+    rawPayload: specimen2030unientryPayload as Record<string, unknown>,
   },
 ];
 
