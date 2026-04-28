@@ -1,0 +1,869 @@
+{
+  "product": {
+    "status": "ACTIVE",
+    "productCode": "15131P4",
+    "language": "en",
+    "createdAt": "2015-08-25T07:00:00Z",
+    "lastUpdatedAt": "2026-04-28T05:19:36Z",
+    "title": "Downtown LA Lights: Your Private Sunset and Night Helicopter Tour",
+    "ticketInfo": {
+      "ticketTypes": [
+        "MOBILE_ONLY"
+      ],
+      "ticketTypeDescription": "Mobile or paper ticket accepted",
+      "ticketsPerBooking": "ONE_PER_BOOKING",
+      "ticketsPerBookingDescription": "One per booking"
+    },
+    "pricingInfo": {
+      "type": "PER_PERSON",
+      "ageBands": [
+        {
+          "ageBand": "ADULT",
+          "startAge": 0,
+          "endAge": 99,
+          "minTravelersPerBooking": 0,
+          "maxTravelersPerBooking": 3
+        }
+      ]
+    },
+    "images": [
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": true,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/12/3f/4d/bf.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/12/3f/4d/bf.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/12/3f/4d/bf.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/12/3f/4d/bf.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/12/3f/4d/bf.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/12/3f/4d/bf.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/3f/4d/bf.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/3f/4d/bf.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/12/3f/4d/bf.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/12/3f/4d/bf.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/12/3f/4a/89.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/12/3f/4a/89.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/12/3f/4a/89.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/12/3f/4a/89.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/12/3f/4a/89.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/12/3f/4a/89.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/3f/4a/89.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/3f/4a/89.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/12/3f/4a/89.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/12/3f/4a/89.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0f/31/1c/0b.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0f/31/1c/0b.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0f/31/1c/0b.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0f/31/1c/0b.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0f/31/1c/0b.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0f/31/1c/0b.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0f/31/1c/0b.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0f/31/1c/0b.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0f/31/1c/0b.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0f/31/1c/0b.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0f/31/16/c9.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0f/31/16/c9.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0f/31/16/c9.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0f/31/16/c9.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0f/31/16/c9.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0f/31/16/c9.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0f/31/16/c9.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0f/31/16/c9.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0f/31/16/c9.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0f/31/16/c9.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/12/3f/4a/7f.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/12/3f/4a/7f.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/12/3f/4a/7f.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/12/3f/4a/7f.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/12/3f/4a/7f.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/12/3f/4a/7f.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/3f/4a/7f.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/3f/4a/7f.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/12/3f/4a/7f.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/12/3f/4a/7f.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/12/3f/4a/b9.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/12/3f/4a/b9.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/12/3f/4a/b9.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/12/3f/4a/b9.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/12/3f/4a/b9.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/12/3f/4a/b9.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/3f/4a/b9.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/3f/4a/b9.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/12/3f/4a/b9.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/12/3f/4a/b9.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/12/3f/a0/77.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/12/3f/a0/77.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/12/3f/a0/77.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/12/3f/a0/77.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/12/3f/a0/77.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/12/3f/a0/77.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/3f/a0/77.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/3f/a0/77.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/12/3f/a0/77.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/12/3f/a0/77.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/12/3f/4a/bb.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/12/3f/4a/bb.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/12/3f/4a/bb.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/12/3f/4a/bb.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/12/3f/4a/bb.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/12/3f/4a/bb.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/3f/4a/bb.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/3f/4a/bb.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/12/3f/4a/bb.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/12/3f/4a/bb.jpg"
+          }
+        ]
+      }
+    ],
+    "logistics": {
+      "start": [
+        {
+          "location": {
+            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5Nu5/8T+dHhfdY0xobt2MGX5Y99TaJTFNnYRb5VBWxQ1"
+          },
+          "description": "We are located at the end of the private two-lane road, Airflite Way. Parking is available anywhere in the lot. Please feel free to enter our lobby and have a seat. One of our staff will be with you shortly. If arriving outside of normal hours, please call us to let someone know you are here."
+        }
+      ],
+      "end": [
+        {
+          "location": {
+            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5Nu5/8T+dHhfdY0xobt2MGX5Y99TaJTFNnYRb5VBWxQ1"
+          },
+          "description": "We are located at the end of the private two-lane road, Airflite Way. Parking is available anywhere in the lot. Please feel free to enter our lobby and have a seat. One of our staff will be with you shortly. If arriving outside of normal hours, please call us to let someone know you are here."
+        }
+      ],
+      "redemption": {
+        "redemptionType": "NONE",
+        "specialInstructions": "What Do I Need to Know?\nPlease arrive at least 15 minutes before your scheduled flight to allow for paperwork and a safety briefing. Late arrivals may face shortened flight times or a $100 re-booking fee.\nTips for pilots and staff are not included in the tour cost and are given at your discretion.\nThere are no specific dress code requirements for passengers on one of our scenic tours.\nFor individuals who have purchased an introductory demo flight, please wear closed-toed shoes.\n\nCheck-in Process\nPlease ensure you have a valid Government Photo ID matching the booking details.\n\nImportant Notes\nFor safety reasons, we reserve the right to refuse service to any passenger who is showing signs of intoxication. In such cases, refunds will not be provided.\nIn the case of adverse weather or FAA restrictions, tour routes may need to be adjusted. In the case of these conditions, Anthelion Helicopters will inform you with as much notice as possible of any changes and offer a flight reschedule at no additional charge."
+      },
+      "travelerPickup": {
+        "pickupOptionType": "MEET_EVERYONE_AT_START_POINT",
+        "allowCustomTravelerPickup": false
+      }
+    },
+    "timeZone": "America/Los_Angeles",
+    "description": {
+      "text": "Sunset, dusk and nighttime are three incredible times to see Downtown Los Angeles and its surroundings. Incredible lights and sunsets abound will make your journey one to remember! LA sunsets with the iconic downtown LA skyline are a view that you'll never forget as you may even see the Hollywood sign and a complete panorama of LA on clear sunsets. See the massive US Bank Building, the home of the Lakers, the Disney Concert Hall, LA Live and many other cool sites as you travel it comfort. Be sure to bring your camera!"
+    },
+    "inclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Headsets to hear the guide clearly"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Private Tour"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Live commentary on board"
+      },
+      {
+        "category": "FEES_AND_TAXES",
+        "categoryDescription": "Fees",
+        "type": "FUEL_SURCHARGE",
+        "typeDescription": "Surcharges on fuel",
+        "description": "Fuel surcharge"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "All, taxes, fees and airport charges"
+      }
+    ],
+    "exclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Gratuities"
+      }
+    ],
+    "additionalInfo": [
+      {
+        "type": "STROLLER_ACCESSIBLE",
+        "description": "Infants and small children can ride in a pram or stroller"
+      },
+      {
+        "type": "PUBLIC_TRANSPORTATION_NEARBY",
+        "description": "Public transportation options are available nearby"
+      },
+      {
+        "type": "INFANTS_MUST_SIT_ON_LAPS",
+        "description": "Infants are required to sit on an adult\u2019s lap"
+      },
+      {
+        "type": "NO_HEART_PROBLEMS",
+        "description": "Not recommended for travelers with poor cardiovascular health"
+      },
+      {
+        "type": "PHYSICAL_EASY",
+        "description": "Suitable for all physical fitness levels"
+      },
+      {
+        "type": "OTHER",
+        "description": "A minimum of 2 people per booking is required, maximum of 3 passengers"
+      },
+      {
+        "type": "OTHER",
+        "description": "Children must be accompanied by an adult"
+      },
+      {
+        "type": "OTHER",
+        "description": "Check In Process - please arrive 15 minutes prior to flight for proper check-in. If a customer arrives late the tour/activity may be cut short or you can reschedule for another date"
+      },
+      {
+        "type": "OTHER",
+        "description": "Flight Etiquette- We ask all customers to please understand that though your flight is meant to be fun and exciting, safety is always Anthelion Helicopters' first priority. For this reason, we do not allow: Drunk and/or high customers, screaming and/or arguing in the helicopter, Removing seatbelts, attempting to stand or stick out arms and legs whilst in the helicopter, or speaking over the Pilot. Please know that should the pilot feel that the flight has become unsafe due to customer conditions, the pilot has the right to end the tour early. In this event, we will NOT be able to provide a refund or accommodation for the shortened flight"
+      },
+      {
+        "type": "OTHER",
+        "description": "Per FAA Regulation, should customers arrive inebriated, they will NOT be allowed to fly. We will NOT provide a refund should you choose to cancel, but you may rebook your tour to another date."
+      },
+      {
+        "type": "OTHER",
+        "description": "Weight Limitation Policy - Our R44 Tour Helicopter seat limit is 300 lb and the group limit must be under 580 lb. Our R22 limit is 220 lb. Customers who are over the weight limit upon weight verification on arrival will NOT be allowed to fly and will NOT be eligible for a refund. You may reschedule for another date"
+      },
+      {
+        "type": "OTHER",
+        "description": "Liability waiver must be signed on arrival. Failure to sign the waiver will result in your tour being cancelled. If you choose not to fly due to not signing the waiver you will not be eligible for a refund."
+      }
+    ],
+    "cancellationPolicy": {
+      "type": "STANDARD",
+      "description": "For a full refund, cancel at least 24 hours before the scheduled departure time.",
+      "cancelIfBadWeather": true,
+      "cancelIfInsufficientTravelers": false,
+      "refundEligibility": [
+        {
+          "dayRangeMin": 1,
+          "percentageRefundable": 100
+        },
+        {
+          "dayRangeMin": 0,
+          "dayRangeMax": 1,
+          "percentageRefundable": 0
+        }
+      ]
+    },
+    "bookingConfirmationSettings": {
+      "bookingCutoffType": "START_TIME",
+      "bookingCutoffInMinutes": 120,
+      "confirmationType": "INSTANT"
+    },
+    "bookingRequirements": {
+      "minTravelersPerBooking": 1,
+      "maxTravelersPerBooking": 3,
+      "requiresAdultForBooking": false
+    },
+    "languageGuides": [
+      {
+        "type": "GUIDE",
+        "language": "en",
+        "legacyGuide": "en/SERVICE_GUIDE"
+      }
+    ],
+    "bookingQuestions": [
+      "AGEBAND",
+      "FULL_NAMES_FIRST",
+      "FULL_NAMES_LAST",
+      "SPECIAL_REQUIREMENTS",
+      "WEIGHT"
+    ],
+    "tags": [
+      21972,
+      367659,
+      11938,
+      367654,
+      12026,
+      367653,
+      367652,
+      11939,
+      11941,
+      367661
+    ],
+    "destinations": [
+      {
+        "ref": "645",
+        "primary": true
+      },
+      {
+        "ref": "5409",
+        "primary": false
+      }
+    ],
+    "itinerary": {
+      "itineraryType": "STANDARD",
+      "skipTheLine": false,
+      "privateTour": true,
+      "duration": {
+        "fixedDurationInMinutes": 35
+      },
+      "itineraryItems": [
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyFKuLylO4XdRt+THpGOjjxU="
+            },
+            "locationName": "Downtown Los Angeles"
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "View of Downtown LA"
+        },
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyIS4whRFVzaC7aXFwWbKCGg="
+            },
+            "attractionId": 8258,
+            "locationName": "Dodger Stadium"
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "View of Dodger Stadium"
+        },
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyFscdYj51Qj2+4MtkIraFiM="
+            },
+            "locationName": "Walt Disney Concert Hall"
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "Lit up at night and at sunset this iconic building looks incredible!"
+        },
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyHG8NuPCvGXLfotow5bfusw="
+            },
+            "attractionId": 4011,
+            "locationName": "Crypto.com Arena"
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "Home of the Lakers and Clippers, now called Crypto arena...."
+        },
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyH2Wbf1w0RuTOuI/hsnbAVg="
+            },
+            "attractionId": 22767,
+            "locationName": "University of Southern California"
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "One of the most famous private colleges in the United States from the air!"
+        }
+      ]
+    },
+    "productOptions": [
+      {
+        "productOptionCode": "TG1",
+        "description": "",
+        "title": "Downtown LA Lights",
+        "languageGuides": [
+          {
+            "type": "GUIDE",
+            "language": "en",
+            "legacyGuide": "en/SERVICE_GUIDE"
+          }
+        ]
+      }
+    ],
+    "translationInfo": {
+      "containsMachineTranslatedText": false,
+      "translationSource": "ORIGINAL"
+    },
+    "supplier": {
+      "name": "Anthelion Helicopters",
+      "reference": "SUPPLIER-gkx+8epGgkkixj/20VvTAA=="
+    },
+    "productUrl": "https://www.viator.com/tours/Los-Angeles/Hollywood-Private-Helicopter-Tour/d645-15131P4?mcid=42383&pid=P00290915&medium=api&api_version=2.0",
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 0
+            },
+            {
+              "rating": 2.0,
+              "count": 0
+            },
+            {
+              "rating": 3.0,
+              "count": 1
+            },
+            {
+              "rating": 4.0,
+              "count": 1
+            },
+            {
+              "rating": 5.0,
+              "count": 36
+            }
+          ],
+          "totalCount": 38,
+          "averageRating": 4.9
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 0
+            },
+            {
+              "rating": 2.0,
+              "count": 0
+            },
+            {
+              "rating": 3.0,
+              "count": 0
+            },
+            {
+              "rating": 4.0,
+              "count": 1
+            },
+            {
+              "rating": 5.0,
+              "count": 6
+            }
+          ],
+          "totalCount": 7,
+          "averageRating": 4.9
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 0
+        },
+        {
+          "rating": 2.0,
+          "count": 0
+        },
+        {
+          "rating": 3.0,
+          "count": 1
+        },
+        {
+          "rating": 4.0,
+          "count": 2
+        },
+        {
+          "rating": 5.0,
+          "count": 42
+        }
+      ],
+      "totalReviews": 45,
+      "combinedAverageRating": 4.911111
+    },
+    "location": {
+      "city": "Los Angeles",
+      "state": "California"
+    },
+    "priceFrom": "$285.00",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ce/9b/4a/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
