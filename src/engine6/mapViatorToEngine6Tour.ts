@@ -249,6 +249,18 @@ const ENGINE6_NEW_BUILD_ORIGINAL_ITINERARY_PRODUCT_CODES = new Set([
 ]);
 
 const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
+  "5096P30": [
+    "Begin your sightseeing loop on Hollywood Boulevard at the Big Bus Welcome Center, where departures run throughout the day.",
+    "Pass the TCL Chinese Theatre to see one of Hollywood’s signature landmarks with its famous celebrity handprints.",
+    "See the Rockwalk at Guitar Center, a Sunset Strip tribute honoring influential musicians.",
+    "Cruise past The Comedy Store, the iconic club that helped launch generations of stand-up talent.",
+    "Take in Sunset Plaza’s upscale mix of boutiques, restaurants, and classic Sunset Strip views.",
+    "Ride through West Hollywood’s high-energy district known for nightlife, culture, and celebrity hotspots.",
+    "Stop near Beverly Gardens Park for Beverly Hills sign photos and manicured garden views.",
+    "Visit Beverly Center, one of Los Angeles’s best-known destinations for premium retail shopping.",
+    "Pass Museum Row, a major LA arts corridor anchored by museums such as LACMA and the Petersen Automotive Museum.",
+    "Explore The Grove and the Original Farmers Market for open-air shopping, dining, and local food favorites.",
+  ],
   "67760P2": [
     "Stroll Santa Monica Pier for ocean panoramas, lively boardwalk energy, and easy access to nearby shopping streets.",
     "Sample Los Angeles food options with time to browse popular retail spots such as The Grove.",

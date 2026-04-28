@@ -1168,6 +1168,78 @@
           }
         }
       ]
-    }
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterestLocation": {
+          "name": "Big Bus Welcome Center (Hollywood Blvd)"
+        },
+        "description": "Begin your journey at the main departure point on Hollywood Boulevard where buses run frequently throughout the day.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "TCL Chinese Theatre"
+        },
+        "description": "Pass one of Hollywood\u2019s most iconic landmarks, famous for its celebrity handprints and historic premieres.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Rockwalk / Guitar Center"
+        },
+        "description": "See the Rockwalk, a tribute to legendary musicians located at the famous Guitar Center.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "The Comedy Store"
+        },
+        "description": "Cruise by the legendary Sunset Strip venue known for launching the careers of top comedians.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Sunset Plaza"
+        },
+        "description": "Enjoy views of this upscale shopping and dining district along the Sunset Strip.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "West Hollywood"
+        },
+        "description": "Travel through the heart of West Hollywood, known for its nightlife, culture, and celebrity hotspots.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Beverly Gardens Park"
+        },
+        "description": "Stop near the famous Beverly Hills sign and landscaped gardens in this well-known city park.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Beverly Center"
+        },
+        "description": "Visit one of LA\u2019s premier shopping destinations featuring high-end retail stores.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "Museum Row"
+        },
+        "description": "Pass through a major cultural corridor home to museums like LACMA and the Petersen Automotive Museum.",
+        "passByWithoutStopping": false
+      },
+      {
+        "pointOfInterestLocation": {
+          "name": "The Grove / Farmers Market"
+        },
+        "description": "Explore a popular outdoor shopping and dining destination next to the historic Original Farmers Market.",
+        "passByWithoutStopping": false
+      }
+    ]
   }
 }
