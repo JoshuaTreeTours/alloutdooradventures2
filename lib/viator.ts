@@ -1,35 +1,7 @@
 const BASE_URL = process.env.VIATOR_BASE_URL || "https://api.viator.com/partner";
-const DEFAULT_TIMEOUT_MS = 25_000;
-
 type CurlResult = {
   status: number;
   body: string;
-};
-
-const buildHeaders = (apiKey: string) => ({
-  Accept: "application/json;version=2.0",
-  "Accept-Language": "en-US",
-  "exp-api-key": apiKey,
-});
-
-const isNetworkFailure = (error: unknown) => {
-  const message = error instanceof Error ? error.message : String(error);
-  return /ENETUNREACH|EHOSTUNREACH|ECONNRESET|ECONNREFUSED|ETIMEDOUT|EAI_AGAIN/i.test(message);
-};
-
-const fetchWithTimeout = async (url: string, apiKey: string, timeoutMs = DEFAULT_TIMEOUT_MS) => {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), timeoutMs);
-
-  try {
-    return await fetch(url, {
-      method: "GET",
-      headers: buildHeaders(apiKey),
-      signal: controller.signal,
-    });
-  } finally {
-    clearTimeout(timeout);
-  }
 };
 
 export async function fetchViatorWithCurl(
@@ -98,25 +70,14 @@ export async function fetchViatorProduct(productCode: string) {
   }
 
   const url = `${BASE_URL}/products/${productCode}`;
-
   try {
-    const response = await fetchWithTimeout(url, apiKey);
-    if (!response.ok) {
-      const body = await response.text();
-      throw new Error(`Viator API error ${response.status}: ${body.slice(0, 500)}`);
+    console.log("USING CURL FETCH PATH");
+    const { status, body } = await fetchViatorWithCurl(url, apiKey);
+    if (status < 200 || status >= 300) {
+      throw new Error(`Viator API error ${status}: ${body.slice(0, 500)}`);
     }
-    return await response.json();
+    return JSON.parse(body);
   } catch (error) {
-    const isVercel = process.env.VERCEL === "1";
-    if (!isVercel && isNetworkFailure(error)) {
-      console.log("USING CURL FETCH PATH");
-      const { status, body } = await fetchViatorWithCurl(url, apiKey);
-      if (status < 200 || status >= 300) {
-        throw new Error(`Viator API error ${status}: ${body.slice(0, 500)}`);
-      }
-      return JSON.parse(body);
-    }
-
     const message = error instanceof Error ? error.message : String(error);
     console.error("Viator product fetch exception", { url, message });
     throw new Error(`Viator fetch failed for ${url}: ${message}`);
