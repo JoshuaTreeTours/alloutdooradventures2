@@ -3,6 +3,7 @@ import path from "node:path";
 
 import { categorizeTags } from "./viator/categorizer";
 import type { TourRegistryEntry } from "../src/data/tourRegistry";
+import { fetchViatorWithCurl } from "../lib/viator";
 
 const VIATOR_BASE_URL = "https://api.viator.com/partner";
 
@@ -47,34 +48,22 @@ const getApiKey = () => {
   return apiKey;
 };
 
-const buildHeaders = (apiKey: string) => ({
-  "Content-Type": "application/json;version=2.0",
-  Accept: "application/json;version=2.0",
-  "Accept-Language": "en-US",
-  "exp-api-key": apiKey,
-});
-
 const viatorFetch = async <T>(
   apiKey: string,
   endpoint: string,
-  options: RequestInit = {}
+  options: { method?: "GET" | "POST"; body?: string } = {}
 ): Promise<T> => {
-  const response = await fetch(`${VIATOR_BASE_URL}${endpoint}`, {
-    ...options,
-    headers: {
-      ...buildHeaders(apiKey),
-      ...options.headers,
-    },
-  });
+  const { status, body } = await fetchViatorWithCurl(
+    `${VIATOR_BASE_URL}${endpoint}`,
+    apiKey,
+    options
+  );
 
-  if (!response.ok) {
-    const errorBody = await response.text();
-    throw new Error(
-      `Viator API error ${response.status}: ${response.statusText} - ${errorBody}`
-    );
+  if (status < 200 || status >= 300) {
+    throw new Error(`Viator API error ${status} - ${body}`);
   }
 
-  return (await response.json()) as T;
+  return JSON.parse(body) as T;
 };
 
 const slugify = (value: string) =>
