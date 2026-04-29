@@ -97,6 +97,7 @@ import specimen474891p3Payload from "../../data/engine6/viator/474891P3.exact-pr
 import specimen5515296p1Payload from "../../data/engine6/viator/5515296P1.exact-product.json";
 import specimen428219p6Payload from "../../data/engine6/viator/428219P6.exact-product.json";
 import specimen77348p8Payload from "../../data/engine6/viator/77348P8.exact-product.json";
+import specimen5569hikePayload from "../../data/engine6/viator/5569HIKE.exact-product.json";
 
 import {
   ENGINE6_SOURCE_OF_TRUTH_API_DRIVEN,
@@ -201,6 +202,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/New-York-City/American-Dream-One-Day-Dreamworks-Waterpark-Pass-Bundle/d687-77348P8",
     rawPayload: specimen77348p8Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5569HIKE",
+    publicUrl:
+      "https://www.viator.com/tours/Los-Angeles/Hollywood-Hills-Hiking-Tour-in-Los-Angeles/d645-5569HIKE",
+    rawPayload: specimen5569hikePayload as Record<string, unknown>,
   },
   {
     productCode: "214880P12",
