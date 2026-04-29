@@ -1,6 +1,6 @@
 const BASE_URL =
   process.env.VIATOR_BASE_URL ||
-  "https://api.sandbox.viator.com/partner";
+  "https://api.viator.com/partner";
 
 export async function fetchViatorProduct(productCode: string) {
   if (!process.env.VIATOR_API_KEY) {
