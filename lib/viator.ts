@@ -1,4 +1,4 @@
-import { lookup } from "node:dns/promises";
+import { execFile } from "node:child_process";
 
 const BASE_URL =
   process.env.VIATOR_BASE_URL ||
@@ -10,57 +10,35 @@ export async function fetchViatorProduct(productCode: string) {
   }
 
   const url = `${BASE_URL}/products/${productCode}`;
-  const controller = new AbortController();
-  const timeoutMs = 25_000;
-  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
-
-  let dnsResolved: boolean | null = null;
 
   try {
-    const hostname = new URL(url).hostname;
-    await lookup(hostname);
-    dnsResolved = true;
-  } catch {
-    dnsResolved = false;
-  }
-
-  try {
-    const response = await fetch(url, {
-      signal: controller.signal,
-      headers: {
-        Accept: "application/json;version=2.0",
-        "exp-api-key": process.env.VIATOR_API_KEY,
-        "Accept-Language": "en-US",
-      },
-    });
-
-    if (!response.ok) {
-      console.error("Viator product fetch failed", {
-        url,
-        dnsResolved,
-        status: response.status,
-      });
-      throw new Error(
-        `Viator API error: ${response.status} ${response.statusText}`
-      );
-    }
-
-    return response.json();
-  } catch (error) {
-    const status =
-      error && typeof error === "object" && "status" in error
-        ? (error as { status?: unknown }).status
-        : undefined;
-
-    console.error("Viator product fetch exception", {
+    const stdout = await new Promise<string>((resolve, reject) => {
+      execFile("curl", [
+      "--silent",
+      "--show-error",
+      "--fail-with-body",
+      "--max-time",
+      "25",
+      "-H",
+      "Accept: application/json;version=2.0",
+      "-H",
+      "Accept-Language: en-US",
+      "-H",
+      `exp-api-key: ${process.env.VIATOR_API_KEY}`,
       url,
-      dnsResolved,
-      status,
-      message: error instanceof Error ? error.message : String(error),
+      ], (execError, out) => {
+        if (execError) {
+          reject(execError);
+          return;
+        }
+        resolve(out);
+      });
     });
 
-    throw error;
-  } finally {
-    clearTimeout(timeoutId);
+    return JSON.parse(stdout);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.error("Viator product fetch exception", { url, message });
+    throw new Error(`Viator curl fetch failed for ${url}: ${message}`);
   }
 }
