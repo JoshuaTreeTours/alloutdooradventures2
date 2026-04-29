@@ -107,6 +107,10 @@ export const ENGINE6_LOS_ANGELES_GRAND_TOUR_ROUTE =
   "/destinations/california/los-angeles/tours/tour-of-los-angeles-hollywood-beverly-hills-santa-monica-beach-grand-tour-la-67760P2";
 export const ENGINE6_LOS_ANGELES_CATALINA_INSIDE_ADVENTURE_PRODUCT_CODE =
   "32779P6";
+export const ENGINE6_LOS_ANGELES_HOLLYWOOD_HILLS_HIKING_PRODUCT_CODE =
+  "5569HIKE";
+export const ENGINE6_LOS_ANGELES_HOLLYWOOD_HILLS_HIKING_ROUTE =
+  "/destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles";
 export const ENGINE6_LOS_ANGELES_CATALINA_INSIDE_ADVENTURE_ROUTE =
   "/destinations/california/los-angeles/tours/2-hour-inside-adventure-tour-on-catalina-island-32779P6";
 export const ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_PRODUCT_CODE =
@@ -453,6 +457,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_LOS_ANGELES_CATALINA_INSIDE_ADVENTURE_ROUTE,
     ENGINE6_LOS_ANGELES_CATALINA_INSIDE_ADVENTURE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LOS_ANGELES_HOLLYWOOD_HILLS_HIKING_ROUTE,
+    ENGINE6_LOS_ANGELES_HOLLYWOOD_HILLS_HIKING_PRODUCT_CODE,
   ],
   [
     ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_ROUTE,

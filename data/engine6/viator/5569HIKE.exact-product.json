@@ -1928,7 +1928,7 @@
       ],
       "redemption": {
         "redemptionType": "NONE",
-        "specialInstructions": "Guests must bring water \n\nPlease call or email with any further questions, and check out our updated COVID-19 policies: https://bikesandhikesla.com/covid-update/\n\nOn the day of your tour:\nPLEASE ARRIVE 15 MINUTES BEFORE YOUR TOUR FOR CHECK-IN. The tour departs promptly at your scheduled time and we can not wait for latecomers as there are other guests joining the experience as well. Phone: +1 323-796-8555.Email info@bikeshikes.com\n\nThis is LA, there is ALWAYS traffic, so please plan ahead and arrive early. \n\nParking is available at the Greek Theater, and is limited. Please read all signs. If you are not driving, we highly suggest using a ride share service such as Uber or Lyft to transport you to/from the meeting point. \n\nGuides accept cash or payment apps for gratuity.\n\nWHAT TO BRING:\n• Comfortable shirt and shorts/pants\n• Jacket, windbreaker, or sweatshirt (check the weather)\n• Closed-toe shoes with good treads\n• Sunscreen/Sunglasses/Hat\n• Don’t forget your camera! Please tag us on Instagram @bikesandhikesla"
+        "specialInstructions": "Guests must bring water \n\nPlease call or email with any further questions, and check out our updated COVID-19 policies: https://bikesandhikesla.com/covid-update/\n\nOn the day of your tour:\nPLEASE ARRIVE 15 MINUTES BEFORE YOUR TOUR FOR CHECK-IN. The tour departs promptly at your scheduled time and we can not wait for latecomers as there are other guests joining the experience as well. Phone: +1 323-796-8555.Email info@bikeshikes.com\n\nThis is LA, there is ALWAYS traffic, so please plan ahead and arrive early. \n\nParking is available at the Greek Theater, and is limited. Please read all signs. If you are not driving, we highly suggest using a ride share service such as Uber or Lyft to transport you to/from the meeting point. \n\nGuides accept cash or payment apps for gratuity.\n\nWHAT TO BRING:\n\u2022 Comfortable shirt and shorts/pants\n\u2022 Jacket, windbreaker, or sweatshirt (check the weather)\n\u2022 Closed-toe shoes with good treads\n\u2022 Sunscreen/Sunglasses/Hat\n\u2022 Don\u2019t forget your camera! Please tag us on Instagram @bikesandhikesla"
       },
       "travelerPickup": {
         "pickupOptionType": "MEET_EVERYONE_AT_START_POINT",
@@ -1936,7 +1936,7 @@
       }
     },
     "timeZone": "America/Los_Angeles",
-    "description": "Reach the highest peak in Griffith Park with Bikes and Hikes LA Tours, a TripAdvisor Traveler's Choice!\n\nThis popular and family-friendkly 3.5 mile (5.6 km) walk through Griffith Park showcases incredible views for your 2025 vacation.\n\nYou'll make multiple stops along the way to the Griffith Observatory to capture the most spectacular Instagram and TikTok photos in LA (and you'll see the Hollywood Sign along the way, too!)\n\nThis Hollywood Hills Tour wraps up with an exclusive insider tour of the iconic Griffith Observatory, the most famous filming location in Los Angeles. See a better price on this tour elsewhere? Call us and we'll match it! \n\nHighlights:\nHollywood Sign\nGriffith Park Observatory Insider Tour\nGreek Theatre\nMount Hollywood\nThe Best Views in LA: Downtown, Silver Lake, Century City, and more!\nFamous Film Locations\nInsider anecdotes and tips from your expert local guide\nPicture-perfect Instagram opportunities\n…and much more!",
+    "description": "Reach the highest peak in Griffith Park with Bikes and Hikes LA Tours, a TripAdvisor Traveler's Choice!\n\nThis popular and family-friendkly 3.5 mile (5.6 km) walk through Griffith Park showcases incredible views for your 2025 vacation.\n\nYou'll make multiple stops along the way to the Griffith Observatory to capture the most spectacular Instagram and TikTok photos in LA (and you'll see the Hollywood Sign along the way, too!)\n\nThis Hollywood Hills Tour wraps up with an exclusive insider tour of the iconic Griffith Observatory, the most famous filming location in Los Angeles. See a better price on this tour elsewhere? Call us and we'll match it! \n\nHighlights:\nHollywood Sign\nGriffith Park Observatory Insider Tour\nGreek Theatre\nMount Hollywood\nThe Best Views in LA: Downtown, Silver Lake, Century City, and more!\nFamous Film Locations\nInsider anecdotes and tips from your expert local guide\nPicture-perfect Instagram opportunities\n\u2026and much more!",
     "inclusions": [
       {
         "category": "OTHER",
@@ -2027,11 +2027,11 @@
       },
       {
         "type": "OTHER",
-        "description": "We’ll be walking 3.5 miles (5.6 km) along what is widely considered to be an easy to moderate Hollywood Sign hiking trail"
+        "description": "We\u2019ll be walking 3.5 miles (5.6 km) along what is widely considered to be an easy to moderate Hollywood Sign hiking trail"
       },
       {
         "type": "OTHER",
-        "description": "If you don't see your preferred time listed, Bikes and Hikes LA offers flexible private and group tour options—reach out to learn more."
+        "description": "If you don't see your preferred time listed, Bikes and Hikes LA offers flexible private and group tour options\u2014reach out to learn more."
       },
       {
         "type": "OTHER",
@@ -2477,6 +2477,16 @@
       ],
       "totalReviews": 1023,
       "combinedAverageRating": 4.9081135
+    },
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/d2/8b/caption.jpg?w=1100&h=800&s=1",
+          "width": 1100,
+          "height": 800,
+          "isCover": true
+        }
+      ]
     }
   }
 }
