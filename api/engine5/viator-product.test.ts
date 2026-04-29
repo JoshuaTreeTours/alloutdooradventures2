@@ -31,8 +31,8 @@ describe("/api/engine5/viator-product", () => {
     delete process.env.VIATOR_BASE_URL;
   });
 
-  it("returns bundled exact payload for 132218P209 when key is missing", async () => {
-    const req = { method: "GET", query: { productCode: "132218P209" } };
+  it("returns bundled exact payload for 421920P2 when key is missing", async () => {
+    const req = { method: "GET", query: { productCode: "421920P2" } };
     const res = createRes();
 
     await handler(req, res);
@@ -41,7 +41,7 @@ describe("/api/engine5/viator-product", () => {
     expect(res.headers["X-Engine5-Source"]).toBe(
       "bundled-exact-product-payload"
     );
-    expect((res.body as any).product.productCode).toBe("132218P209");
+    expect((res.body as any).product.productCode).toBe("421920P2");
   });
 
 

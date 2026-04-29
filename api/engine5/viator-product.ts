@@ -7,7 +7,6 @@ import {
   extractViatorReviewCount,
   extractViatorItinerary,
 } from "../../src/engine5/viator/extractors";
-import { fetchViatorWithCurl } from "../../lib/viator";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 const ENGINE5_EXACT_PAYLOAD_PRODUCT_CODE = "132218P209";
@@ -21,6 +20,13 @@ type BridgeDiagnostics = {
   upstreamOk: boolean | null;
   usedBundledFallbackBecause: string;
 };
+
+const buildHeaders = (apiKey: string) => ({
+  "Content-Type": "application/json;version=2.0",
+  Accept: "application/json;version=2.0",
+  "Accept-Language": "en-US",
+  "exp-api-key": apiKey,
+});
 
 const getBundledExactProductPayload = async (productCode: string) => {
   if (
@@ -111,33 +117,37 @@ export default async function handler(req: any, res: any) {
 
   try {
     bridgeDiagnostics.attemptedLiveFetch = true;
-    const { status, body: responseBody } = await fetchViatorWithCurl(`${baseUrl}/products/${productCode}`, key);
+    const response = await fetch(`${baseUrl}/products/${productCode}`, {
+      method: "GET",
+      headers: buildHeaders(key),
+    });
 
-    bridgeDiagnostics.upstreamStatus = status;
-    bridgeDiagnostics.upstreamOk = status >= 200 && status < 300;
-    bridgeDiagnostics.upstreamContentType = "application/json";
+    bridgeDiagnostics.upstreamStatus = response.status;
+    bridgeDiagnostics.upstreamOk = response.ok;
+    bridgeDiagnostics.upstreamContentType = response.headers.get("content-type");
 
-    if (status < 200 || status >= 300) {
+    if (!response.ok) {
       if (bundledPayload && isBridgeProduct) {
         bridgeDiagnostics.usedBundledFallbackBecause = "upstream-not-ok";
         respondWithBundledPayload(res, bundledPayload, {
           source: "bundled-fallback",
           reason: "upstream-not-ok",
-          status,
-          statusText: "curl-upstream-error",
+          status: response.status,
+          statusText: response.statusText,
           ...bridgeDiagnostics,
         });
         return;
       }
 
-      res.status(status).json({
-        error: `Viator API error ${status}: curl-upstream-error`,
-        details: responseBody,
+      const body = await response.text();
+      res.status(response.status).json({
+        error: `Viator API error ${response.status}: ${response.statusText}`,
+        details: body,
       });
       return;
     }
 
-    const rawBody = responseBody;
+    const rawBody = await response.text();
     let payload: Record<string, unknown>;
 
     try {
