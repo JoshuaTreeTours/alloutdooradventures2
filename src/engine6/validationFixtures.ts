@@ -73,6 +73,7 @@ import specimen2030unientryPayload from "../../data/engine6/viator/2030UNIENTRY.
 import specimen5096p30Payload from "../../data/engine6/viator/5096P30.exact-product.json";
 import specimen67760p2Payload from "../../data/engine6/viator/67760P2.exact-product.json";
 import specimen32779p6Payload from "../../data/engine6/viator/32779P6.exact-product.json";
+import specimen70058p145Payload from "../../data/engine6/viator/70058P145.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -719,6 +720,15 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Los-Angeles/2-hour-Inside-Adventure-Tour-on-Catalina-Island/d645-32779P6",
     rawPayload: specimen32779p6Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "70058P145",
+    publicUrl:
+      "https://www.viator.com/tours/Los-Angeles/Greater-Los-Angeles-Private-Day-Trip-From-Los-Angeles/d645-70058P145",
+    rawPayload: specimen70058p145Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
