@@ -92,33 +92,30 @@ export async function fetchViatorWithCurl(
 }
 
 export async function fetchViatorProduct(productCode: string) {
+  const url = `${BASE_URL}/products/${productCode}`;
   const apiKey = process.env.VIATOR_API_KEY;
   if (!apiKey) {
     throw new Error("VIATOR_API_KEY not configured");
   }
 
-  const url = `${BASE_URL}/products/${productCode}`;
+  const headers = {
+    Accept: "application/json;version=2.0",
+    "Accept-Language": "en-US",
+    "exp-api-key": apiKey,
+  };
 
   try {
-    const response = await fetchWithTimeout(url, apiKey);
-    if (!response.ok) {
-      const body = await response.text();
-      throw new Error(`Viator API error ${response.status}: ${body.slice(0, 500)}`);
+    const res = await fetch(url, { headers });
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}`);
     }
-    return await response.json();
-  } catch (error) {
-    const isVercel = process.env.VERCEL === "1";
-    if (!isVercel && isNetworkFailure(error)) {
-      console.log("USING CURL FETCH PATH");
-      const { status, body } = await fetchViatorWithCurl(url, apiKey);
-      if (status < 200 || status >= 300) {
-        throw new Error(`Viator API error ${status}: ${body.slice(0, 500)}`);
-      }
-      return JSON.parse(body);
+    return await res.json();
+  } catch (fetchErr) {
+    console.warn("fetch failed, falling back to curl");
+    const { status, body } = await fetchViatorWithCurl(url, apiKey);
+    if (status < 200 || status >= 300) {
+      throw new Error(`Viator API error ${status}: ${body.slice(0, 500)}`);
     }
-
-    const message = error instanceof Error ? error.message : String(error);
-    console.error("Viator product fetch exception", { url, message });
-    throw new Error(`Viator fetch failed for ${url}: ${message}`);
+    return JSON.parse(body);
   }
 }
