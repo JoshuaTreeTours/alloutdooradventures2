@@ -2,56 +2,65 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 const ORIGINAL_ENV = { ...process.env };
 
-const execFileMock = vi.fn();
-
-vi.mock("node:child_process", () => ({
-  execFile: execFileMock,
-}));
-
 beforeEach(() => {
   vi.resetModules();
   vi.restoreAllMocks();
   process.env = { ...ORIGINAL_ENV };
   process.env.VIATOR_API_KEY = "test-key";
-  execFileMock.mockReset();
-  execFileMock.mockImplementation((_: string, __: string[], cb: Function) =>
-    cb(null, '{"ok":true}', "")
-  );
 });
 
-describe("fetchViatorProduct base URL defaults", () => {
-  it("uses production Viator API URL by default", async () => {
+describe("fetchViatorProduct runtime strategy", () => {
+  it("uses production Viator API URL by default (not sandbox)", async () => {
     delete process.env.VIATOR_BASE_URL;
+    const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: async () => ({ ok: true }),
+    } as Response);
 
     const { fetchViatorProduct } = await import("./viator");
     await fetchViatorProduct("2335P1");
 
-    expect(execFileMock).toHaveBeenCalledWith(
-      "curl",
-      expect.arrayContaining([
-        "https://api.viator.com/partner/products/2335P1",
-      ]),
-      expect.any(Function)
+    expect(fetchSpy).toHaveBeenCalledWith(
+      "https://api.viator.com/partner/products/2335P1",
+      expect.any(Object)
     );
-
-    const curlArgs = execFileMock.mock.calls[0][1] as string[];
-    expect(curlArgs).not.toContain(
-      "https://api.sandbox.viator.com/partner/products/2335P1"
+    expect(fetchSpy).not.toHaveBeenCalledWith(
+      expect.stringContaining("api.sandbox.viator.com"),
+      expect.anything()
     );
   });
 
-  it("honors VIATOR_BASE_URL override when provided", async () => {
-    process.env.VIATOR_BASE_URL = "https://api.viator.test/partner";
+  it("uses fetch as primary in Vercel runtime", async () => {
+    process.env.VERCEL = "1";
+    const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: async () => ({ ok: true }),
+    } as Response);
 
-    const { fetchViatorProduct } = await import("./viator");
+    const { fetchViatorProduct, fetchViatorWithCurl } = await import("./viator");
+    const curlSpy = vi.spyOn({ fetchViatorWithCurl }, "fetchViatorWithCurl");
+
     await fetchViatorProduct("2335P1");
 
-    expect(execFileMock).toHaveBeenCalledWith(
-      "curl",
-      expect.arrayContaining([
-        "https://api.viator.test/partner/products/2335P1",
-      ]),
-      expect.any(Function)
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+    expect(curlSpy).not.toHaveBeenCalled();
+  });
+
+  it("falls back to curl outside Vercel after ENETUNREACH fetch failure", async () => {
+    const fetchSpy = vi.spyOn(globalThis, "fetch").mockRejectedValue(new Error("connect ENETUNREACH"));
+
+    const execFileMock = vi.fn((_: string, __: string[], cb: Function) =>
+      cb(null, '{"productCode":"2335P1"}\n__CURL_STATUS__:200', "")
     );
+    vi.doMock("node:child_process", () => ({ execFile: execFileMock }));
+
+    const { fetchViatorProduct } = await import("./viator");
+    const result = await fetchViatorProduct("2335P1");
+
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+    expect(execFileMock).toHaveBeenCalledTimes(1);
+    expect(result).toEqual({ productCode: "2335P1" });
   });
 });

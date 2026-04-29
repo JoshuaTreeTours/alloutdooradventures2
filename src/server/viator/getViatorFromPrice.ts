@@ -1,3 +1,5 @@
+import { fetchViatorWithCurl } from "../../../lib/viator";
+
 type CurrencyCode = "USD";
 
 type ViatorFromPrice = {
@@ -12,7 +14,7 @@ type CacheEntry = {
 
 const DEFAULT_API_BASE_URL = "https://api.viator.com/partner";
 const DEFAULT_TTL_SECONDS = 86_400;
-const TIMEOUT_MS = 800;
+const TIMEOUT_SECONDS = 1;
 
 const memoryCache = new Map<string, CacheEntry>();
 
@@ -21,13 +23,6 @@ const resolveTtlMs = () => {
   const ttlSeconds = Number.isFinite(raw) && raw > 0 ? raw : DEFAULT_TTL_SECONDS;
   return ttlSeconds * 1000;
 };
-
-const buildHeaders = (apiKey: string) => ({
-  "Content-Type": "application/json;version=2.0",
-  Accept: "application/json;version=2.0",
-  "Accept-Language": "en-US",
-  "exp-api-key": apiKey,
-});
 
 const extractCandidatePrice = (payload: unknown): number | null => {
   const candidates: unknown[] = [];
@@ -119,27 +114,27 @@ const fetchViatorFromPrice = async (
   const nextWeek = new Date();
   nextWeek.setUTCDate(nextWeek.getUTCDate() + 7);
 
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
-
   try {
-    const response = await fetch(`${baseUrl}/availability/schedules/search`, {
-      method: "POST",
-      headers: buildHeaders(apiKey),
-      body: JSON.stringify({
-        productCode,
-        currency,
-        travelDate: formatDate(nextWeek),
-        paxMix: [{ ageBand: "ADULT", numberOfTravelers: 1 }],
-      }),
-      signal: controller.signal,
-    });
+    const { status, body } = await fetchViatorWithCurl(
+      `${baseUrl}/availability/schedules/search`,
+      apiKey,
+      {
+        method: "POST",
+        timeoutSeconds: TIMEOUT_SECONDS,
+        body: JSON.stringify({
+          productCode,
+          currency,
+          travelDate: formatDate(nextWeek),
+          paxMix: [{ ageBand: "ADULT", numberOfTravelers: 1 }],
+        }),
+      }
+    );
 
-    if (!response.ok) {
+    if (status < 200 || status >= 300) {
       return null;
     }
 
-    const payload = (await response.json()) as unknown;
+    const payload = JSON.parse(body) as unknown;
     const price = extractCandidatePrice(payload);
 
     if (!price || !Number.isFinite(price) || price <= 0) {
@@ -149,8 +144,6 @@ const fetchViatorFromPrice = async (
     return { price, currency };
   } catch {
     return null;
-  } finally {
-    clearTimeout(timeout);
   }
 };
 

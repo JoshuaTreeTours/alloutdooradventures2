@@ -1,31 +1,26 @@
-const VIATOR_BASE_URL = "https://api.viator.com/partner";
+import { fetchViatorWithCurl } from "../../lib/viator";
 
-const buildHeaders = (apiKey: string) => ({
-  "Content-Type": "application/json;version=2.0",
-  Accept: "application/json;version=2.0",
-  "Accept-Language": "en-US",
-  "exp-api-key": apiKey,
-});
+const VIATOR_BASE_URL = "https://api.viator.com/partner";
 
 export const fetchViator = async <T>(
   apiKey: string,
   endpoint: string,
-  options: RequestInit = {}
+  options: { method?: "GET" | "POST"; body?: string } = {}
 ): Promise<T> => {
-  const response = await fetch(`${VIATOR_BASE_URL}${endpoint}`, {
-    ...options,
-    headers: {
-      ...buildHeaders(apiKey),
-      ...options.headers,
-    },
-  });
+  const { status, body } = await fetchViatorWithCurl(
+    `${VIATOR_BASE_URL}${endpoint}`,
+    apiKey,
+    {
+      method: options.method,
+      body: options.body,
+    }
+  );
 
-  if (!response.ok) {
-    const errorBody = await response.text();
+  if (status < 200 || status >= 300) {
     throw new Error(
-      `Viator API error ${response.status}: ${response.statusText} - ${errorBody}`
+      `Viator API error ${status} - ${body}`
     );
   }
 
-  return (await response.json()) as T;
+  return JSON.parse(body) as T;
 };
