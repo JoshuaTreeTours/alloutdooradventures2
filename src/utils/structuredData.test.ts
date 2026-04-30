@@ -3,6 +3,7 @@ import { afterEach, describe, expect, it } from "vitest";
 import {
   SITE_BRAND_ID,
   SITE_ORGANIZATION_ID,
+  SITE_POSTAL_ADDRESS,
   SITE_WEBSITE_ID,
   buildTourProductNodeId,
   buildTourProductStructuredData,
@@ -47,22 +48,22 @@ describe("global structured data graph", () => {
     expect(nodes[0]).toMatchObject({
       "@type": "Organization",
       "@id": SITE_ORGANIZATION_ID,
-      name: "All Outdoor Adventures",
-      legalName: "Outdoor Adventures, Inc.",
+      name: "Outdoor Adventures, Inc.",
       url: "https://www.alloutdooradventures.com",
       logo: "https://www.alloutdooradventures.com/images/Logo.png",
       telephone: "+1-855-314-8687",
+      address: SITE_POSTAL_ADDRESS,
     });
 
     expect(nodes[1]).toMatchObject({
       "@type": ["Organization", "TravelAgency"],
       "@id": SITE_BRAND_ID,
       name: "All Outdoor Adventures",
-      legalName: "Outdoor Adventures, Inc.",
       url: "https://www.alloutdooradventures.com",
       logo: "https://www.alloutdooradventures.com/images/Logo.png",
       telephone: "+1-855-314-8687",
       parentOrganization: { "@id": SITE_ORGANIZATION_ID },
+      address: SITE_POSTAL_ADDRESS,
       areaServed: [{ "@type": "GeoShape", name: "Worldwide" }],
     });
 
@@ -76,16 +77,27 @@ describe("global structured data graph", () => {
     });
   });
 
-  it("does not emit local-business signals or address on org/brand", () => {
+  it("includes a shared Las Vegas postal address on org/brand", () => {
+    const serialized = JSON.stringify(getSiteStructuredDataNodes());
+    expect(serialized).toContain('"address"');
+    expect(serialized).toContain("732 S 6th St, Ste N");
+    expect(nodesWithAddress(getSiteStructuredDataNodes())).toBe(true);
+  });
+
+  it("does not emit local-business-only fields on org/brand", () => {
     const serialized = JSON.stringify(getSiteStructuredDataNodes());
     expect(serialized).not.toContain("LocalBusiness");
-    expect(serialized).not.toContain('"address"');
     expect(serialized).not.toContain('"geo"');
     expect(serialized).not.toContain('"hasMap"');
     expect(serialized).not.toContain('"openingHours"');
     expect(serialized).not.toContain('"priceRange"');
   });
 });
+
+const nodesWithAddress = (nodes: ReturnType<typeof getSiteStructuredDataNodes>) =>
+  [0, 1].every(index =>
+    JSON.stringify(nodes[index]?.address) === JSON.stringify(SITE_POSTAL_ADDRESS)
+  );
 
 describe("tour product/trip schema safety", () => {
   afterEach(() => {

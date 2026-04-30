@@ -4,6 +4,7 @@ import {
   getPriceValidUntil,
   SITE_BRAND_ID,
   SITE_ORGANIZATION_ID,
+  SITE_POSTAL_ADDRESS,
   SITE_WEBSITE_ID,
 } from "../../utils/structuredData";
 import { cleanImageUrls, toSchemaImageValue } from "../../utils/cleanImageUrls";
@@ -111,6 +112,7 @@ export const buildEngine3SchemaGraph = (
       "@id": SITE_ORGANIZATION_ID,
       name: "All Outdoor Adventures",
       url: "https://www.alloutdooradventures.com",
+      address: SITE_POSTAL_ADDRESS,
     },
     {
       "@type": ["Organization", "TravelAgency"],
@@ -119,6 +121,7 @@ export const buildEngine3SchemaGraph = (
       legalName: "Outdoor Adventures, Inc.",
       url: "https://www.alloutdooradventures.com",
       parentOrganization: { "@id": SITE_ORGANIZATION_ID },
+      address: SITE_POSTAL_ADDRESS,
     },
     {
       "@type": "WebPage",

@@ -29,6 +29,14 @@ export const SITE_ORGANIZATION_ID = `${SITE_URL}/#org`;
 export const SITE_BRAND_ID = `${SITE_URL}/#brand`;
 export const SITE_WEBSITE_ID = `${SITE_URL}/#website`;
 export const SITE_AGENCY_ID = SITE_BRAND_ID;
+export const SITE_POSTAL_ADDRESS = {
+  "@type": "PostalAddress",
+  streetAddress: "732 S 6th St, Ste N",
+  addressLocality: "Las Vegas",
+  addressRegion: "NV",
+  postalCode: "89101",
+  addressCountry: "US",
+} as const;
 export const PRICING_RELIABLE_DEFAULT = false;
 
 const ORGANIZATION_NAME = "Outdoor Adventures, Inc.";
@@ -214,6 +222,7 @@ export const getSiteStructuredDataNodes = () => {
         "https://www.facebook.com/alloutdooradventuresonline/",
         "https://www.linkedin.com/company/all-outdoor-adventures/",
       ],
+      address: SITE_POSTAL_ADDRESS,
     },
     {
       "@type": ["Organization", "TravelAgency"],
@@ -229,6 +238,7 @@ export const getSiteStructuredDataNodes = () => {
       parentOrganization: {
         "@id": SITE_ORGANIZATION_ID,
       },
+      address: SITE_POSTAL_ADDRESS,
       areaServed: [
         {
           "@type": "GeoShape",
