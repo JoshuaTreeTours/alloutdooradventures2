@@ -38,6 +38,15 @@ export const SITE_POSTAL_ADDRESS = {
   addressCountry: "US",
 } as const;
 export const PRICING_RELIABLE_DEFAULT = false;
+export const SITE_CUSTOMER_SUPPORT_CONTACT_POINT = [
+  {
+    "@type": "ContactPoint",
+    telephone: "+1-855-314-8687",
+    contactType: "customer support",
+    areaServed: "US",
+    availableLanguage: "English",
+  },
+] as const;
 
 const ORGANIZATION_NAME = "Outdoor Adventures, Inc.";
 
@@ -218,6 +227,7 @@ export const getSiteStructuredDataNodes = () => {
       url: SITE_URL,
       logo: logoUrl,
       telephone: "+1-855-314-8687",
+      contactPoint: SITE_CUSTOMER_SUPPORT_CONTACT_POINT,
       sameAs: [
         "https://www.facebook.com/alloutdooradventuresonline/",
         "https://www.linkedin.com/company/all-outdoor-adventures/",
@@ -231,6 +241,7 @@ export const getSiteStructuredDataNodes = () => {
       url: SITE_URL,
       logo: logoUrl,
       telephone: "+1-855-314-8687",
+      contactPoint: SITE_CUSTOMER_SUPPORT_CONTACT_POINT,
       sameAs: [
         "https://www.facebook.com/alloutdooradventuresonline/",
         "https://www.linkedin.com/company/all-outdoor-adventures/",

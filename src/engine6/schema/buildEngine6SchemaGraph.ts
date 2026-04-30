@@ -1,8 +1,8 @@
 import { buildCanonicalUrl } from "../../utils/seo";
 import {
+  getSiteStructuredDataNodes,
   SITE_BRAND_ID,
   SITE_ORGANIZATION_ID,
-  SITE_POSTAL_ADDRESS,
   SITE_WEBSITE_ID,
   getPriceValidUntil,
 } from "../../utils/structuredData";
@@ -11,8 +11,6 @@ import { resolveEngine6OfferUrl } from "../buildEngine6ViatorBookingUrl";
 import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import { formatEngine6CategoryLabel } from "../seo";
 import type { Engine6Tour } from "../types";
-
-const ORGANIZATION_NAME = "Outdoor Adventures, Inc.";
 
 const includesTerm = (source: string, term: string) =>
   source.toLowerCase().includes(term.trim().toLowerCase());
@@ -119,6 +117,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
           })),
         }
       : undefined;
+  const siteNodes = getSiteStructuredDataNodes();
 
   const webpageNode = {
     "@type": "WebPage",
@@ -175,26 +174,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
           },
         ],
       },
-      {
-        "@type": "Organization",
-        "@id": SITE_ORGANIZATION_ID,
-        name: ORGANIZATION_NAME,
-        url: buildCanonicalUrl("/"),
-        address: SITE_POSTAL_ADDRESS,
-      },
-      {
-        "@type": "Brand",
-        "@id": SITE_BRAND_ID,
-        name: SITE_BRAND_NAME,
-        address: SITE_POSTAL_ADDRESS,
-      },
-      {
-        "@type": "WebSite",
-        "@id": SITE_WEBSITE_ID,
-        url: buildCanonicalUrl("/"),
-        name: SITE_BRAND_NAME,
-        publisher: { "@id": SITE_ORGANIZATION_ID },
-      },
+      ...siteNodes,
       webpageNode,
       {
         "@type": "Place",

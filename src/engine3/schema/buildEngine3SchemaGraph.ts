@@ -1,10 +1,10 @@
 import {
   buildBreadcrumbList,
   buildReserveActionStructuredData,
+  getSiteStructuredDataNodes,
   getPriceValidUntil,
   SITE_BRAND_ID,
   SITE_ORGANIZATION_ID,
-  SITE_POSTAL_ADDRESS,
   SITE_WEBSITE_ID,
 } from "../../utils/structuredData";
 import { cleanImageUrls, toSchemaImageValue } from "../../utils/cleanImageUrls";
@@ -107,22 +107,7 @@ export const buildEngine3SchemaGraph = (
       };
 
   const graph: Record<string, unknown>[] = [
-    {
-      "@type": "Organization",
-      "@id": SITE_ORGANIZATION_ID,
-      name: "All Outdoor Adventures",
-      url: "https://www.alloutdooradventures.com",
-      address: SITE_POSTAL_ADDRESS,
-    },
-    {
-      "@type": ["Organization", "TravelAgency"],
-      "@id": SITE_BRAND_ID,
-      name: "All Outdoor Adventures",
-      legalName: "Outdoor Adventures, Inc.",
-      url: "https://www.alloutdooradventures.com",
-      parentOrganization: { "@id": SITE_ORGANIZATION_ID },
-      address: SITE_POSTAL_ADDRESS,
-    },
+    ...getSiteStructuredDataNodes(),
     {
       "@type": "WebPage",
       "@id": webpageId,
