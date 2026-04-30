@@ -16,14 +16,14 @@ export default function Footer() {
                 loading="lazy"
               />
               <div>
-                <p className="text-lg font-semibold">{SITE_BRAND_NAME}</p>
+                <p className="text-lg font-semibold">All Outdoor Adventures</p>
                 <p className="text-sm text-white/85">
-                  Curated outdoor experiences around the world.
+                  All Outdoor Adventures is operated by Outdoor Adventures, Inc. We offer tours and activities, some of which are operated by independent third-party providers.
                 </p>
               </div>
             </div>
             <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-              Outdoor Adventures, Inc. — Founded in 1999
+              Outdoor Adventures, Inc. — Las Vegas, Nevada
             </p>
           </div>
         </div>
@@ -147,7 +147,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/faqs">
-                  <a className="transition hover:text-white">FAQ</a>
+                  <a className="transition hover:text-white">Cancellation / Refund Policy</a>
                 </Link>
               </li>
               <li>
@@ -172,6 +172,10 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+
+        <div className="mt-8 rounded-2xl border border-white/15 bg-white/10 p-5 text-sm leading-relaxed text-white/90">
+          All Outdoor Adventures is operated by Outdoor Adventures, Inc. We offer tours and activities, some of which are operated by independent third-party providers.
         </div>
 
         <div className="mt-10 rounded-2xl border border-white/15 bg-white/10 p-6 md:flex md:items-center md:justify-between">

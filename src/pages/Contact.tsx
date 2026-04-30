@@ -181,13 +181,24 @@ export default function Contact() {
           Contact {SITE_BRAND_NAME}
         </h1>
         <p className="mt-4 text-sm text-[#405040] md:text-base">
-          {SITE_BRAND_NAME} is a service business offering curated tours and
-          custom journeys worldwide.
+          <strong>Business/Operator:</strong> Outdoor Adventures, Inc.
+          <br />
+          <strong>Website/Brand:</strong> All Outdoor Adventures
+          <br />
+          <strong>Location:</strong> Las Vegas, Nevada
         </p>
         <p className="mt-4 text-sm text-[#405040] md:text-base">
-          We design custom journeys, private group experiences, and multi-day
-          adventures tailored to your pace and interests. Tell us what you&apos;re
-          dreaming about, and we&apos;ll build a plan around it.
+          All Outdoor Adventures lists and sells tours and activities. Some
+          tours are operated directly by our partners or independent third-party
+          tour operators.
+        </p>
+        <p className="mt-4 text-sm text-[#405040] md:text-base">
+          For specific booking questions, please use the operator or
+          booking-platform contact details on your confirmation.
+        </p>
+        <p className="mt-4 text-sm text-[#405040] md:text-base">
+          For website, partnership, or listing questions, contact Outdoor
+          Adventures, Inc. using the form below.
         </p>
 
         <section className="mt-10 rounded-3xl border border-black/5 bg-white/70 p-6 shadow-sm md:p-8">

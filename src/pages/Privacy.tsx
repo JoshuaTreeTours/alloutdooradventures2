@@ -10,6 +10,9 @@ export default function Privacy() {
         Privacy at {SITE_BRAND_NAME}
       </h1>
       <p className="mt-4 text-sm text-[#405040] md:text-base">
+        All Outdoor Adventures is operated by Outdoor Adventures, Inc. Some tours and activities listed on this website are provided by independent third-party tour operators. Product pages include tour-specific details, meeting points, cancellation rules, and booking information.
+      </p>
+      <p className="mt-4 text-sm text-[#405040] md:text-base">
         We respect your privacy and handle your information with care. This
         policy explains what we collect, how we use it, and the choices you
         have when planning outdoor experiences with us.

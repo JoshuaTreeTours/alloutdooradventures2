@@ -94,17 +94,29 @@ export const buildEngine3SchemaGraph = (
     input.tour.heroImageUrl,
   ]);
 
+  const operatorName = trim(input.tour.operatorName);
+  const providerEntity = operatorName
+    ? {
+        "@type": "Organization",
+        name: operatorName,
+      }
+    : {
+        "@type": "Organization",
+        name: "Independent third-party tour operator",
+      };
+
   const graph: Record<string, unknown>[] = [
     {
       "@type": "Organization",
       "@id": SITE_ORGANIZATION_ID,
-      name: "Outdoor Adventures, Inc.",
+      name: "All Outdoor Adventures",
       url: "https://www.alloutdooradventures.com",
     },
     {
       "@type": ["Organization", "TravelAgency"],
       "@id": SITE_BRAND_ID,
       name: "All Outdoor Adventures",
+      legalName: "Outdoor Adventures, Inc.",
       url: "https://www.alloutdooradventures.com",
       parentOrganization: { "@id": SITE_ORGANIZATION_ID },
     },
@@ -148,7 +160,7 @@ export const buildEngine3SchemaGraph = (
     ...(toSchemaImageValue(images) ? { image: toSchemaImageValue(images) } : {}),
     brand: { "@id": SITE_BRAND_ID },
     seller: { "@id": SITE_ORGANIZATION_ID },
-    provider: { "@id": SITE_ORGANIZATION_ID },
+    provider: providerEntity,
     ...(offerNode ? { offers: offerNode } : {}),
     mainEntityOfPage: { "@id": webpageId },
   };
@@ -177,7 +189,7 @@ export const buildEngine3SchemaGraph = (
     url: canonicalUrl,
     ...(description ? { description } : {}),
     ...(toSchemaImageValue(images) ? { image: toSchemaImageValue(images) } : {}),
-    provider: { "@id": SITE_ORGANIZATION_ID },
+    provider: providerEntity,
     ...(offerNode ? { offers: offerNode } : {}),
     mainEntityOfPage: { "@id": webpageId },
   };
