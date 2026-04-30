@@ -115,8 +115,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/destinations/states/california/cities/santa-barbara/tours">
-                  <a className="transition hover:text-white">Santa Barbara Tours</a>
+                <Link href="/destinations/states/nevada/cities/las-vegas/tours">
+                  <a className="transition hover:text-white">Las Vegas Tours</a>
                 </Link>
               </li>
               <li>

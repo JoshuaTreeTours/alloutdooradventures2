@@ -111,6 +111,14 @@ export const buildEngine3SchemaGraph = (
       "@id": SITE_ORGANIZATION_ID,
       name: "All Outdoor Adventures",
       url: "https://www.alloutdooradventures.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "732 S 6th St, Ste N",
+        addressLocality: "Las Vegas",
+        addressRegion: "NV",
+        postalCode: "89101",
+        addressCountry: "US",
+      },
     },
     {
       "@type": ["Organization", "TravelAgency"],
@@ -118,6 +126,14 @@ export const buildEngine3SchemaGraph = (
       name: "All Outdoor Adventures",
       legalName: "Outdoor Adventures, Inc.",
       url: "https://www.alloutdooradventures.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "732 S 6th St, Ste N",
+        addressLocality: "Las Vegas",
+        addressRegion: "NV",
+        postalCode: "89101",
+        addressCountry: "US",
+      },
       parentOrganization: { "@id": SITE_ORGANIZATION_ID },
     },
     {
