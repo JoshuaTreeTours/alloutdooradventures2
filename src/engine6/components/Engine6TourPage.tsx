@@ -252,6 +252,13 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
               </div>
             </div>
 
+            <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90">
+              <span className="block">Operated by a trusted local provider.</span>
+              <span className="block font-medium">
+                Book with confidence through All Outdoor Adventures.
+              </span>
+            </p>
+
             <a
               href={tour.bookingUrl}
               target={isExternalBookingUrl ? "_blank" : undefined}

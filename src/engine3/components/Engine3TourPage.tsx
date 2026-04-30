@@ -238,10 +238,11 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
               {tour.duration}
             </p>
           ) : null}
-          <p className="mt-4 max-w-3xl text-sm text-white/90">
-            This tour may be operated by an independent third-party provider.
-            Outdoor Adventures, Inc. helps travelers discover and book this
-            experience.
+          <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90">
+            <span className="block">Operated by a trusted local provider.</span>
+            <span className="block font-medium">
+              Book with confidence through All Outdoor Adventures.
+            </span>
           </p>
           {safeBookingUrl ? (
             <div className="mt-6">
