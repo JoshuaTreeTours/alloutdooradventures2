@@ -178,6 +178,9 @@ export default function Faqs() {
               <h2 className="text-xl font-semibold text-[#1f2a1f] md:text-2xl">
                 Returns &amp; Refund Policy
               </h2>
+              <p className="mt-4 text-sm text-[#405040]">
+                All Outdoor Adventures is operated by Outdoor Adventures, Inc. Some tours and activities listed on this website are provided by independent third-party tour operators. Product pages include tour-specific details, meeting points, cancellation rules, and booking information.
+              </p>
               <div className="mt-6 rounded-2xl border border-black/5 bg-white p-5">
                 <p className="text-sm text-[#405040]">
                   Outdoor Adventures, Inc. sells tour experiences and activity

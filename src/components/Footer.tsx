@@ -147,7 +147,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/faqs">
-                  <a className="transition hover:text-white">FAQ</a>
+                  <a className="transition hover:text-white">Cancellation / Refund Policy</a>
                 </Link>
               </li>
               <li>

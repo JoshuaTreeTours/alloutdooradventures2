@@ -94,6 +94,17 @@ export const buildEngine3SchemaGraph = (
     input.tour.heroImageUrl,
   ]);
 
+  const operatorName = trim(input.tour.operatorName);
+  const providerEntity = operatorName
+    ? {
+        "@type": "Organization",
+        name: operatorName,
+      }
+    : {
+        "@type": "Organization",
+        name: "Independent third-party tour operator",
+      };
+
   const graph: Record<string, unknown>[] = [
     {
       "@type": "Organization",
@@ -149,7 +160,7 @@ export const buildEngine3SchemaGraph = (
     ...(toSchemaImageValue(images) ? { image: toSchemaImageValue(images) } : {}),
     brand: { "@id": SITE_BRAND_ID },
     seller: { "@id": SITE_ORGANIZATION_ID },
-    provider: { "@id": SITE_BRAND_ID },
+    provider: providerEntity,
     ...(offerNode ? { offers: offerNode } : {}),
     mainEntityOfPage: { "@id": webpageId },
   };
@@ -178,7 +189,7 @@ export const buildEngine3SchemaGraph = (
     url: canonicalUrl,
     ...(description ? { description } : {}),
     ...(toSchemaImageValue(images) ? { image: toSchemaImageValue(images) } : {}),
-    provider: { "@id": SITE_BRAND_ID },
+    provider: providerEntity,
     ...(offerNode ? { offers: offerNode } : {}),
     mainEntityOfPage: { "@id": webpageId },
   };

@@ -10,6 +10,9 @@ export default function Terms() {
         Site Terms &amp; Conditions
       </h1>
       <p className="mt-4 text-sm text-[#405040] md:text-base">
+        All Outdoor Adventures is operated by Outdoor Adventures, Inc. Some tours and activities listed on this website are provided by independent third-party tour operators. Product pages include tour-specific details, meeting points, cancellation rules, and booking information.
+      </p>
+      <p className="mt-4 text-sm text-[#405040] md:text-base">
         By using {SITE_BRAND_NAME}, you agree to the terms below. These terms
         help keep our site safe and clarify how bookings with partners work.
       </p>
