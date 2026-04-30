@@ -180,6 +180,20 @@ export default function Contact() {
         <h1 className="mt-3 text-3xl font-semibold md:text-4xl">
           Contact {SITE_BRAND_NAME}
         </h1>
+        <div className="mt-4">
+          <p className="text-xs uppercase tracking-wide text-[#7a8a6b]">
+            Customer Support
+          </p>
+          <p className="text-sm text-[#405040] md:text-base">
+            Open daily 8:00 AM – 5:00 PM PST
+          </p>
+          <p className="mt-1 text-lg font-semibold text-[#1f2a1f]">
+            <a href="tel:+18553148687" className="hover:underline">
+              (855) 314-8687
+            </a>
+          </p>
+        </div>
+
         <p className="mt-4 text-sm text-[#405040] md:text-base">
           <strong>Business/Operator:</strong> Outdoor Adventures, Inc.
           <br />
