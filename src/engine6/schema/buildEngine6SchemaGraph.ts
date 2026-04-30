@@ -2,6 +2,7 @@ import { buildCanonicalUrl } from "../../utils/seo";
 import {
   SITE_BRAND_ID,
   SITE_ORGANIZATION_ID,
+  SITE_POSTAL_ADDRESS,
   SITE_WEBSITE_ID,
   getPriceValidUntil,
 } from "../../utils/structuredData";
@@ -179,11 +180,13 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
         "@id": SITE_ORGANIZATION_ID,
         name: ORGANIZATION_NAME,
         url: buildCanonicalUrl("/"),
+        address: SITE_POSTAL_ADDRESS,
       },
       {
         "@type": "Brand",
         "@id": SITE_BRAND_ID,
         name: SITE_BRAND_NAME,
+        address: SITE_POSTAL_ADDRESS,
       },
       {
         "@type": "WebSite",
