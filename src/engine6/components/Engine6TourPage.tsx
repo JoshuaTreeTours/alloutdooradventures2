@@ -1,6 +1,7 @@
 import React, { type ReactNode, useMemo } from "react";
 
 import Seo from "../../components/Seo";
+import { useStructuredData } from "../../components/StructuredDataProvider";
 import TourCard from "../../components/TourCard";
 import { getToursByCityUnified } from "../../data/tours";
 import Engine6DebugPanel from "./Engine6DebugPanel";
@@ -114,6 +115,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     tour.categoryLabel ?? formatEngine6CategoryLabel(tour.primaryCategory);
   const seo = buildEngine6Seo(tour);
   const schema = buildEngine6SchemaGraph(tour);
+  const schemaGraph = schema["@graph"] as Array<Record<string, unknown>>;
   const resolvedHeroUrl = tour.resolvedHero?.url ?? tour.heroImageUrl;
   const hasPrice = Boolean(tour.priceFormatted);
   const hasRating =
@@ -147,6 +149,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
   }, [tour.canonicalPath, tour.productCode]);
   const showRelatedTours = relatedTours.length >= 2;
   const isExternalBookingUrl = /^https?:\/\//i.test(tour.bookingUrl);
+  useStructuredData(schemaGraph);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -155,11 +158,6 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
         description={seo.description}
         url={seo.url}
         image={seo.image}
-      />
-      <script
-        id="structured-data-engine6-viator"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <section
         className="bg-[#2f4a2f] text-white"
