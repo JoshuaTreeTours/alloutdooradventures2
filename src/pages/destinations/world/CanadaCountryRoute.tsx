@@ -47,7 +47,7 @@ export default function CanadaCountryRoute() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-12">
       <Seo
-        title="Canada Tours | All Outdoor Adventures"
+        title="Canada Tours | Outdoor Adventures, Inc."
         description="Explore Canada tours by province and city."
       />
       <h1 className="text-3xl font-semibold">Canada tours</h1>

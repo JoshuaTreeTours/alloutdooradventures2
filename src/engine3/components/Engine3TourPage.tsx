@@ -10,6 +10,7 @@ import { resolveEngine3ViatorHero } from "../utils/resolveEngine3ViatorHero";
 import type { Engine3TourViewModel } from "../types";
 import { extractViatorProductCode } from "../../utils/viator/extractViatorProductCode";
 import { normalizeStructuredData } from "../../utils/structuredData";
+import { MARKETPLACE_DISCLOSURE } from "../../utils/site";
 import {
   getViatorFromPrice,
   peekViatorFromPriceCache,
@@ -238,6 +239,9 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
               {tour.duration}
             </p>
           ) : null}
+          <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90">
+            {MARKETPLACE_DISCLOSURE}
+          </p>
           {safeBookingUrl ? (
             <div className="mt-6">
               <a

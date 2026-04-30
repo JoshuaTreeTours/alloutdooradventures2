@@ -57,7 +57,7 @@ export default function StateToursTemplate({
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
-        title={`${state.name} Tours & Outdoor Adventures | All Outdoor Adventures`}
+        title={`${state.name} Tours & Outdoor Adventures | Outdoor Adventures, Inc.`}
         description={`Browse tours and outdoor adventures across ${state.name}, from local activities and guided experiences to scenic day trips and regional excursions.`}
       />
       <section className="relative overflow-hidden bg-[#2f4a2f]">

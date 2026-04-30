@@ -24,10 +24,17 @@ export default function About() {
         <h1 className="mt-3 text-3xl font-semibold md:text-4xl">
           About {SITE_BRAND_NAME}
         </h1>
-        <p className="mt-4 text-sm text-[#405040] md:text-base">
-          {SITE_BRAND_NAME} connects travelers with curated tours, destination
-          guides, and multi-day itineraries built for explorers.
-        </p>
+        <section className="mt-6 rounded-2xl border border-black/5 bg-white/70 p-5">
+          <h2 className="text-lg font-semibold text-[#2f4a2f]">Who We Are</h2>
+          <p className="mt-3 text-sm text-[#405040] md:text-base">
+            All Outdoor Adventures is the public-facing travel and tour
+            marketplace operated by Outdoor Adventures, Inc. Our website helps
+            customers discover and book outdoor tours, city tours, sightseeing
+            experiences, and activities. Some tours are provided by independent
+            third-party operators, and each product page should be read for
+            specific provider, meeting point, cancellation, and booking details.
+          </p>
+        </section>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link href="/tours">
             <a className="rounded-full border border-[#2f4a2f]/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
