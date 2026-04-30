@@ -17,9 +17,6 @@ export default function Footer() {
               />
               <div>
                 <p className="text-lg font-semibold">All Outdoor Adventures</p>
-                <p className="text-sm text-white/85">
-                  All Outdoor Adventures is operated by Outdoor Adventures, Inc. We offer tours and activities, some of which are operated by independent third-party providers.
-                </p>
               </div>
             </div>
             <p className="text-xs uppercase tracking-[0.3em] text-white/70">
