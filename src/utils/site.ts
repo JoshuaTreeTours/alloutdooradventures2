@@ -1,1 +1,1 @@
-export const SITE_BRAND_NAME = "Outdoor Adventures, Inc.";
+export const SITE_BRAND_NAME = "All Outdoor Adventures";

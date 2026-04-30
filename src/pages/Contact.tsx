@@ -181,10 +181,16 @@ export default function Contact() {
           Contact {SITE_BRAND_NAME}
         </h1>
         <p className="mt-4 text-sm text-[#405040] md:text-base">
-          <strong>Business name:</strong> Outdoor Adventures, Inc.
+          <strong>Business/Operator:</strong> Outdoor Adventures, Inc.
           <br />
-          <strong>Business type:</strong> Tour marketplace / travel affiliate
-          platform.
+          <strong>Website/Brand:</strong> All Outdoor Adventures
+          <br />
+          <strong>Location:</strong> Las Vegas, Nevada
+        </p>
+        <p className="mt-4 text-sm text-[#405040] md:text-base">
+          All Outdoor Adventures lists and sells tours and activities. Some
+          tours are operated directly by our partners or independent third-party
+          tour operators.
         </p>
         <p className="mt-4 text-sm text-[#405040] md:text-base">
           For specific booking questions, please use the operator or
