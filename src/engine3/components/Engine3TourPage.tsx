@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 
+import { MARKETPLACE_DISCLOSURE } from "../../constants/marketplaceDisclosure";
 import Seo from "../../components/Seo";
 import ParagonMetaRow from "../../components/tours/ParagonMetaRow";
 import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
@@ -239,9 +240,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
             </p>
           ) : null}
           <p className="mt-4 max-w-3xl text-sm text-white/90">
-            This tour may be operated by an independent third-party provider.
-            Outdoor Adventures, Inc. helps travelers discover and book this
-            experience.
+            {MARKETPLACE_DISCLOSURE}
           </p>
           {safeBookingUrl ? (
             <div className="mt-6">

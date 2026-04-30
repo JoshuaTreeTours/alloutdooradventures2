@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Link } from "wouter";
 
+import { MARKETPLACE_DISCLOSURE } from "../../constants/marketplaceDisclosure";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
@@ -245,9 +246,7 @@ export default function Engine2TourPage({
             />
           ) : null}
           <p className="mt-4 max-w-3xl text-sm text-white/90">
-            This tour may be operated by an independent third-party provider.
-            Outdoor Adventures, Inc. helps travelers discover and book this
-            experience.
+            {MARKETPLACE_DISCLOSURE}
           </p>
           <div className="mt-6 flex gap-3">
             {isViatorTour ? (
