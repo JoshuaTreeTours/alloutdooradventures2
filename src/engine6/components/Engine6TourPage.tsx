@@ -7,6 +7,7 @@ import Engine6DebugPanel from "./Engine6DebugPanel";
 import { formatEngine6AggregateRating } from "../rating";
 import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
+import { MARKETPLACE_DISCLOSURE } from "../../utils/site";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
 import type { Engine6Tour } from "../types";
 
@@ -251,6 +252,10 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                 </div>
               </div>
             </div>
+
+            <p className="mt-4 text-sm leading-6 text-white/85">
+              {MARKETPLACE_DISCLOSURE}
+            </p>
 
             <a
               href={tour.bookingUrl}

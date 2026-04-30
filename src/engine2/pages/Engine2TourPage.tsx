@@ -11,6 +11,7 @@ import { buildEngine2Seo } from "../seo/buildEngine2Seo";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import TourRating from "../components/TourRating";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
+import { MARKETPLACE_DISCLOSURE } from "../../utils/site";
 import {
   getPalmSpringsOverrideContent,
   getPalmSpringsPilotContent,
@@ -244,10 +245,8 @@ export default function Engine2TourPage({
               reviewCount={viatorReviewCount}
             />
           ) : null}
-          <p className="mt-4 max-w-3xl text-sm text-white/90">
-            This tour may be operated by an independent third-party provider.
-            Outdoor Adventures, Inc. helps travelers discover and book this
-            experience.
+          <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90">
+            {MARKETPLACE_DISCLOSURE}
           </p>
           <div className="mt-6 flex gap-3">
             {isViatorTour ? (
