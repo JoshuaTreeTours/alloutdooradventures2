@@ -174,10 +174,6 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 rounded-2xl border border-white/15 bg-white/10 p-5 text-sm leading-relaxed text-white/90">
-          All Outdoor Adventures is operated by Outdoor Adventures, Inc. We offer tours and activities, some of which are operated by independent third-party providers.
-        </div>
-
         <div className="mt-10 rounded-2xl border border-white/15 bg-white/10 p-6 md:flex md:items-center md:justify-between">
           <div className="space-y-2">
             <p className="text-base font-semibold text-white">
