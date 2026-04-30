@@ -773,13 +773,16 @@ const main = async () => {
   };
 
   const urls = await readSitemapUrls();
-  if (!urls.length) {
+  const urlsToRender = new Set(urls);
+  urlsToRender.add(buildCanonicalUrl("/"));
+
+  if (!urlsToRender.size) {
     await writeSchemaMissingGeoReport();
     return;
   }
 
   const tourDescriptionCounts = new Map();
-  for (const url of urls) {
+  for (const url of urlsToRender) {
     const pathname = normalizePathname(new URL(url).pathname);
     const segments = pathname.split("/").filter(Boolean);
     if (segments[0] !== "tours" || segments.length !== 4) {
@@ -806,7 +809,7 @@ const main = async () => {
 
   const routeFailures = [];
 
-  for (const url of urls) {
+  for (const url of urlsToRender) {
     const pathname = new URL(url).pathname;
     try {
     const normalizedPathname = normalizePathname(pathname);
