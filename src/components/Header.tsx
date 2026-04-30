@@ -72,6 +72,9 @@ export default function Header() {
             <Link href="/about">
               <a className="hover:text-[#1f2a1f]">About</a>
             </Link>
+            <Link href="/contact">
+              <a className="hover:text-[#1f2a1f]">Contact</a>
+            </Link>
           </nav>
 
           <div className="flex items-center gap-3">
@@ -174,6 +177,11 @@ export default function Header() {
               <Link href="/about">
                 <a onClick={closeMobileMenu} className="font-medium text-[#1f2a1f]">
                   About
+                </a>
+              </Link>
+              <Link href="/contact">
+                <a onClick={closeMobileMenu} className="font-medium text-[#1f2a1f]">
+                  Contact
                 </a>
               </Link>
               <Link href="/tours">
