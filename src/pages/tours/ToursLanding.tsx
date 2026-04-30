@@ -375,7 +375,7 @@ export default function ToursLanding() {
 
     if (selectedState) {
       return {
-        title: `${selectedState.name} Tours & Outdoor Adventures | All Outdoor Adventures`,
+        title: `${selectedState.name} Tours & Outdoor Adventures | Outdoor Adventures, Inc.`,
         h1: `${selectedState.name} Tours & Outdoor Adventures`,
         intro: `Browse tours and outdoor adventures across ${selectedState.name}, from local activities and guided experiences to scenic day trips and regional excursions.`,
       };
@@ -383,14 +383,14 @@ export default function ToursLanding() {
 
     if (selectedCountry) {
       return {
-        title: `${selectedCountry} Tours & Activities | All Outdoor Adventures`,
+        title: `${selectedCountry} Tours & Activities | Outdoor Adventures, Inc.`,
         h1: `${selectedCountry} Tours & Activities`,
         intro: `Browse tours and activities across ${selectedCountry}, from city experiences and cultural outings to outdoor adventures and day trips.`,
       };
     }
 
     return {
-      title: "Find Tours & Outdoor Adventures | All Outdoor Adventures",
+      title: "Find Tours & Outdoor Adventures | Outdoor Adventures, Inc.",
       h1: "Find Tours & Outdoor Adventures",
       intro:
         "Browse tours and outdoor adventures by state, city, or country to find experiences that fit your destination and travel style.",

@@ -9,7 +9,7 @@ const RETURN_POLICY_SCHEMA_ID = "merchant-return-policy-schema";
 const RETURN_POLICY_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "MerchantReturnPolicy",
-  name: "All Outdoor Adventures Return Policy",
+  name: "Outdoor Adventures, Inc. Return Policy",
   url: "https://www.alloutdooradventures.com/faqs",
   returnPolicyCategory:
     "https://schema.org/MerchantReturnFiniteReturnWindow",
@@ -180,7 +180,7 @@ export default function Faqs() {
               </h2>
               <div className="mt-6 rounded-2xl border border-black/5 bg-white p-5">
                 <p className="text-sm text-[#405040]">
-                  All Outdoor Adventures sells tour experiences and activity
+                  Outdoor Adventures, Inc. sells tour experiences and activity
                   bookings.
                 </p>
                 <p className="mt-3 text-sm text-[#405040]">

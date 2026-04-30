@@ -10,7 +10,7 @@ export default function RemovedTourGone({ cityToursPath }: RemovedTourGoneProps)
   return (
     <>
       <Seo
-        title="Tour no longer available | All Outdoor Adventures"
+        title="Tour no longer available | Outdoor Adventures, Inc."
         description="This tour is no longer available."
         robots="noindex,nofollow"
         googlebot="noindex,nofollow"

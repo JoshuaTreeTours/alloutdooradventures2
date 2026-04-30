@@ -16,14 +16,14 @@ export default function Footer() {
                 loading="lazy"
               />
               <div>
-                <p className="text-lg font-semibold">{SITE_BRAND_NAME}</p>
+                <p className="text-lg font-semibold">Outdoor Adventures, Inc.</p>
                 <p className="text-sm text-white/85">
-                  Curated outdoor experiences around the world.
+                  U.S.-based tour marketplace and travel affiliate platform.
                 </p>
               </div>
             </div>
             <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-              Outdoor Adventures, Inc. — Founded in 1999
+              Outdoor Adventures, Inc. — Las Vegas, Nevada — alloutdooradventures.com
             </p>
           </div>
         </div>
@@ -172,6 +172,14 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+
+        <div className="mt-8 rounded-2xl border border-white/15 bg-white/10 p-5 text-sm leading-relaxed text-white/90">
+          Outdoor Adventures, Inc. markets and sells tours and activities
+          operated by independent third-party providers. We are not the direct
+          operator of every tour listed on this website. Tour details, pricing,
+          availability, and fulfillment are provided by the applicable tour
+          operator or booking partner.
         </div>
 
         <div className="mt-10 rounded-2xl border border-white/15 bg-white/10 p-6 md:flex md:items-center md:justify-between">

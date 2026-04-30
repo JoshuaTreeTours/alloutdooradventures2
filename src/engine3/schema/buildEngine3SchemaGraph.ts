@@ -104,7 +104,7 @@ export const buildEngine3SchemaGraph = (
     {
       "@type": ["Organization", "TravelAgency"],
       "@id": SITE_BRAND_ID,
-      name: "All Outdoor Adventures",
+      name: "Outdoor Adventures, Inc.",
       url: "https://www.alloutdooradventures.com",
       parentOrganization: { "@id": SITE_ORGANIZATION_ID },
     },

@@ -56,7 +56,7 @@ describe("global structured data graph", () => {
     expect(nodes[1]).toMatchObject({
       "@type": ["Organization", "TravelAgency"],
       "@id": SITE_BRAND_ID,
-      name: "All Outdoor Adventures",
+      name: "Outdoor Adventures, Inc.",
       url: "https://www.alloutdooradventures.com",
       logo: "https://www.alloutdooradventures.com/images/Logo.png",
       telephone: "+1-855-314-8687",
@@ -68,7 +68,7 @@ describe("global structured data graph", () => {
       "@type": "WebSite",
       "@id": SITE_WEBSITE_ID,
       url: "https://www.alloutdooradventures.com",
-      name: "All Outdoor Adventures",
+      name: "Outdoor Adventures, Inc.",
       publisher: { "@id": SITE_ORGANIZATION_ID },
       about: { "@id": SITE_BRAND_ID },
     });

@@ -25,8 +25,13 @@ export default function About() {
           About {SITE_BRAND_NAME}
         </h1>
         <p className="mt-4 text-sm text-[#405040] md:text-base">
-          {SITE_BRAND_NAME} connects travelers with curated tours, destination
-          guides, and multi-day itineraries built for explorers.
+          Outdoor Adventures, Inc. is a U.S.-based travel marketplace that
+          helps travelers discover and book tours and activities.
+        </p>
+        <p className="mt-4 text-sm text-[#405040] md:text-base">
+          Many experiences listed on this site are operated by independent
+          third-party providers. Outdoor Adventures, Inc. does not directly
+          operate every listed tour.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link href="/tours">
