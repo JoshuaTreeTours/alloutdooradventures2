@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 
-import { MARKETPLACE_DISCLOSURE } from "../../constants/marketplaceDisclosure";
 import Seo from "../../components/Seo";
 import ParagonMetaRow from "../../components/tours/ParagonMetaRow";
 import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
@@ -239,8 +238,11 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
               {tour.duration}
             </p>
           ) : null}
-          <p className="mt-4 max-w-3xl text-sm text-white/90">
-            {MARKETPLACE_DISCLOSURE}
+          <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90">
+            <span className="block">Operated by a trusted local provider.</span>
+            <span className="block font-medium">
+              Book with confidence through All Outdoor Adventures.
+            </span>
           </p>
           {safeBookingUrl ? (
             <div className="mt-6">

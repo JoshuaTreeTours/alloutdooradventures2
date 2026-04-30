@@ -1,7 +1,6 @@
 import React, { type ReactNode, useMemo } from "react";
 
 import Seo from "../../components/Seo";
-import { MARKETPLACE_DISCLOSURE } from "../../constants/marketplaceDisclosure";
 import TourCard from "../../components/TourCard";
 import { getToursByCityUnified } from "../../data/tours";
 import Engine6DebugPanel from "./Engine6DebugPanel";
@@ -254,7 +253,10 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             </div>
 
             <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90">
-              {MARKETPLACE_DISCLOSURE}
+              <span className="block">Operated by a trusted local provider.</span>
+              <span className="block font-medium">
+                Book with confidence through All Outdoor Adventures.
+              </span>
             </p>
 
             <a

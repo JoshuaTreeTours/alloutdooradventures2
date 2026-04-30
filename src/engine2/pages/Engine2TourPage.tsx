@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import { Link } from "wouter";
 
-import { MARKETPLACE_DISCLOSURE } from "../../constants/marketplaceDisclosure";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
@@ -245,8 +244,11 @@ export default function Engine2TourPage({
               reviewCount={viatorReviewCount}
             />
           ) : null}
-          <p className="mt-4 max-w-3xl text-sm text-white/90">
-            {MARKETPLACE_DISCLOSURE}
+          <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90">
+            <span className="block">Operated by a trusted local provider.</span>
+            <span className="block font-medium">
+              Book with confidence through All Outdoor Adventures.
+            </span>
           </p>
           <div className="mt-6 flex gap-3">
             {isViatorTour ? (
