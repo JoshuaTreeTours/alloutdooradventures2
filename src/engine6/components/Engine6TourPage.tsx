@@ -251,10 +251,8 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             </div>
 
             <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90">
-              <span className="block">Operated by a trusted local provider.</span>
-              <span className="block font-medium">
-                Book with confidence through All Outdoor Adventures.
-              </span>
+              <span className="block">This tour is operated by an independent third-party provider.</span>
+              <span className="block">All Outdoor Adventures is a marketplace that connects travelers with local tour operators.</span>
             </p>
 
             <a
@@ -263,7 +261,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
               rel={isExternalBookingUrl ? "noreferrer" : undefined}
               className={`mt-6 ${BOOK_CTA_CLASSES}`}
             >
-              Book now
+              Check availability
             </a>
           </div>
 
@@ -453,7 +451,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             rel={isExternalBookingUrl ? "noreferrer" : undefined}
             className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1f4d36] transition hover:bg-green-50"
           >
-            Book now
+            Check availability
           </a>
         </section>
 

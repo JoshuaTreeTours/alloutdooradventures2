@@ -1,2 +1,2 @@
 export const MARKETPLACE_DISCLOSURE =
-  "Operated by a trusted local provider. Book with confidence through All Outdoor Adventures.";
+  "This tour is operated by an independent third-party provider. All Outdoor Adventures is a marketplace that connects travelers with local tour operators.";

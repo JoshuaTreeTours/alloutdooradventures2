@@ -32,7 +32,7 @@ export default function About() {
             customers discover and book outdoor tours, city tours, sightseeing
             experiences, and activities. Some tours are provided by independent
             third-party operators, and each product page should be read for
-            specific provider, meeting point, cancellation, and booking details.
+            specific provider, meeting point, cancellation, and booking details. All Outdoor Adventures does not operate most tours directly. Each experience is fulfilled by the local provider listed on the product page.
           </p>
         </section>
         <div className="mt-8 flex flex-wrap gap-3">
