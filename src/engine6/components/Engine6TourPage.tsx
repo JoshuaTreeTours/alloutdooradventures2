@@ -253,8 +253,6 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90">
               <span className="block">This tour is operated by an independent third-party provider.</span>
               <span className="block">All Outdoor Adventures is a marketplace that connects travelers with local tour operators.</span>
-              <span className="block">The listed provider operates this experience. All Outdoor Adventures facilitates discovery and booking.</span>
-              <span className="block italic">Top tours selected based on traveler reviews.</span>
             </p>
 
             <a
