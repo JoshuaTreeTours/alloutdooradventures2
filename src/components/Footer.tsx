@@ -172,7 +172,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 rounded-2xl border border-white/15 bg-white/10 p-5 text-sm leading-relaxed text-white/90">
-          All Outdoor Adventures is operated by Outdoor Adventures, Inc. We offer tours and activities, some of which are operated by independent third-party providers.
+          All Outdoor Adventures is a tour marketplace operated by Outdoor Adventures, Inc. Most experiences are operated by independent third-party providers, with select experiences operated directly by Outdoor Adventures, Inc., as identified on each tour page. Tours are displayed based on traveler reviews, ratings, and availability.
         </div>
 
         <div className="mt-10 rounded-2xl border border-white/15 bg-white/10 p-6 md:flex md:items-center md:justify-between">
