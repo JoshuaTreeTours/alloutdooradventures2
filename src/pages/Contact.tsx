@@ -202,9 +202,9 @@ export default function Contact() {
           <strong>Location:</strong> Las Vegas, Nevada
         </p>
         <p className="mt-4 text-sm text-[#405040] md:text-base">
-          All Outdoor Adventures lists and sells tours and activities. Some
-          tours are operated directly by our partners or independent third-party
-          tour operators.
+          All Outdoor Adventures lists and facilitates bookings for tours and activities. Some
+          tours are operated by independent third-party providers unless
+          otherwise specified.
         </p>
         <p className="mt-4 text-sm text-[#405040] md:text-base">
           For specific booking questions, please use the operator or
