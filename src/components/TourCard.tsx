@@ -139,7 +139,9 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.startingPrice,
     tour.currency
   );
+  const isEngine6Tour = tour.engine === "engine6";
   const hasRating =
+    isEngine6Tour &&
     !tour.suppressReviews &&
     typeof tour.badges.rating === "number" &&
     typeof tour.badges.reviewCount === "number";
