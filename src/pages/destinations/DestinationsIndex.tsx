@@ -19,29 +19,28 @@ const regionOrder = ["West", "Northeast", "Deep South"];
 export default function DestinationsIndex() {
   const seo = getStaticPageSeo("/destinations");
   const guideStateLookup = new Map(
-    getGuideStates().map((state) => [state.slug, state]),
+    getGuideStates().map(state => [state.slug, state])
   );
   const guideCityLimit = 6;
 
-  const destinationsByRegion = destinations.reduce<Record<string, typeof destinations>>(
-    (accumulator, destination) => {
-      const region = destination.region ?? "Other";
-      accumulator[region] = accumulator[region] ?? [];
-      accumulator[region].push(destination);
-      return accumulator;
-    },
-    {},
-  );
+  const destinationsByRegion = destinations.reduce<
+    Record<string, typeof destinations>
+  >((accumulator, destination) => {
+    const region = destination.region ?? "Other";
+    accumulator[region] = accumulator[region] ?? [];
+    accumulator[region].push(destination);
+    return accumulator;
+  }, {});
 
-  const rockyMountainStates = destinations.filter((destination) =>
-    ["montana", "colorado"].includes(destination.stateSlug),
+  const rockyMountainStates = destinations.filter(destination =>
+    ["montana", "colorado"].includes(destination.stateSlug)
   );
   const guideHighlights = Array.from(guideStateLookup.values()).slice(0, 10);
   const tourStates = [...destinations]
     .sort((a, b) => a.name.localeCompare(b.name))
     .slice(0, 10);
 
-  const europeDestinationCards = countriesWithTours.map((country) => ({
+  const europeDestinationCards = countriesWithTours.map(country => ({
     name: country.name,
     stateSlug: country.slug,
     description: `${country.tourCount} tours available`,
@@ -64,8 +63,11 @@ export default function DestinationsIndex() {
           Available Guides in {stateName}
         </p>
         <div className="mt-4 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
-          {visibleCities.map((city) => (
-            <Link key={`${stateSlug}-${city.slug}`} href={`/guides/us/${stateSlug}/${city.slug}`}>
+          {visibleCities.map(city => (
+            <Link
+              key={`${stateSlug}-${city.slug}`}
+              href={`/guides/us/${stateSlug}/${city.slug}`}
+            >
               <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
                 {city.name} guide
               </a>
@@ -75,7 +77,9 @@ export default function DestinationsIndex() {
         <div className="mb-1 mt-6">
           <Link href={`/guides/us/${stateSlug}`}>
             <a className="text-sm font-semibold text-[#2f4a2f] underline underline-offset-4">
-              {hasMoreGuides ? `View all ${stateName} guides` : `${stateName} travel guide`}
+              {hasMoreGuides
+                ? `View all ${stateName} guides`
+                : `${stateName} travel guide`}
             </a>
           </Link>
         </div>
@@ -102,9 +106,10 @@ export default function DestinationsIndex() {
             Explore U.S. outdoor destinations
           </h1>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[#405040] md:text-base">
-            Explore our curated destinations across the American West, Northeast,
-            and Deep South. Each state is packed with signature landscapes, iconic
-            trails, and local favorites ready for your next adventure.
+            Explore our curated destinations across the American West,
+            Northeast, and Deep South. Each state is packed with signature
+            landscapes, iconic trails, and local favorites ready for your next
+            adventure.
           </p>
         </section>
 
@@ -121,7 +126,7 @@ export default function DestinationsIndex() {
                 Start with a state guide or drill into city-specific planning.
               </p>
               <div className="mt-5 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
-                {guideHighlights.map((state) => (
+                {guideHighlights.map(state => (
                   <Link key={state.slug} href={`/guides/us/${state.slug}`}>
                     <a className="rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition hover:bg-[#f0f4ee]">
                       {state.name} guide
@@ -148,8 +153,11 @@ export default function DestinationsIndex() {
                 Jump into state tour hubs or browse the full tour index.
               </p>
               <div className="mt-5 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
-                {tourStates.map((state) => (
-                  <Link key={state.stateSlug} href={`/destinations/states/${state.stateSlug}`}>
+                {tourStates.map(state => (
+                  <Link
+                    key={state.stateSlug}
+                    href={`/destinations/states/${state.stateSlug}`}
+                  >
                     <a className="rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition hover:bg-[#f0f4ee]">
                       {state.name} tours
                     </a>
@@ -167,7 +175,7 @@ export default function DestinationsIndex() {
           </div>
         </section>
 
-        <section className="mt-16 space-y-16" aria-label="States">
+        <section className="mt-16 flow-root space-y-16" aria-label="States">
           {rockyMountainStates.length ? (
             <div className="border-t border-[#d6decf] pt-8 first:border-t-0 first:pt-0">
               <div className="mb-6 text-center">
@@ -178,9 +186,12 @@ export default function DestinationsIndex() {
                   Featured Rocky Mountain States
                 </h2>
               </div>
-              <div className="grid gap-8 md:grid-cols-2">
-                {rockyMountainStates.map((state) => (
-                  <div key={`rocky-mountain-${state.name}`} className="space-y-4">
+              <div className="grid items-start gap-8 md:grid-cols-2">
+                {rockyMountainStates.map(state => (
+                  <div
+                    key={`rocky-mountain-${state.name}`}
+                    className="flex flex-col gap-4"
+                  >
                     <DestinationCard
                       destination={state}
                       ctaLabel="Discover"
@@ -195,9 +206,12 @@ export default function DestinationsIndex() {
           ) : null}
 
           {regionOrder
-            .filter((region) => destinationsByRegion[region]?.length)
-            .map((region) => (
-              <div key={region} className="border-t border-[#d6decf] pt-8">
+            .filter(region => destinationsByRegion[region]?.length)
+            .map(region => (
+              <div
+                key={region}
+                className="clear-both border-t border-[#d6decf] pt-10"
+              >
                 <div className="mb-6 text-center">
                   <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
                     {getRegionLabel(region)}
@@ -206,9 +220,12 @@ export default function DestinationsIndex() {
                     {getRegionLabel(region)} destinations
                   </h2>
                 </div>
-                <div className="grid gap-8">
-                  {destinationsByRegion[region].map((state) => (
-                    <div key={`${region}-${state.name}`} className="space-y-4">
+                <div className="grid items-start gap-8">
+                  {destinationsByRegion[region].map(state => (
+                    <div
+                      key={`${region}-${state.name}`}
+                      className="flex flex-col gap-4"
+                    >
                       <DestinationCard
                         destination={state}
                         ctaLabel="View adventures"
@@ -223,7 +240,10 @@ export default function DestinationsIndex() {
             ))}
         </section>
 
-        <section className="mt-16 space-y-10 border-t border-[#d6decf] pt-10" aria-label="International destinations">
+        <section
+          className="mt-16 space-y-10 border-t border-[#d6decf] pt-10"
+          aria-label="International destinations"
+        >
           <div className="text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
               International
@@ -232,8 +252,8 @@ export default function DestinationsIndex() {
               Explore global destinations
             </h2>
             <p className="mx-auto mt-3 max-w-3xl text-sm text-[#405040] md:text-base">
-              Preview upcoming country hubs to inspire your next adventure beyond
-              the United States.
+              Preview upcoming country hubs to inspire your next adventure
+              beyond the United States.
             </p>
           </div>
 
@@ -248,7 +268,7 @@ export default function DestinationsIndex() {
                 </h3>
               </div>
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {europeDestinationCards.map((country) => (
+                {europeDestinationCards.map(country => (
                   <DestinationCard
                     key={country.stateSlug}
                     destination={country}
@@ -274,7 +294,7 @@ export default function DestinationsIndex() {
                 regions.
               </p>
               <ul className="mt-4 grid gap-2 text-sm text-[#2f4a2f] sm:grid-cols-2 lg:grid-cols-3">
-                {WORLD_DESTINATIONS.map((destination) => (
+                {WORLD_DESTINATIONS.map(destination => (
                   <li key={destination}>
                     <a
                       className="flex items-center gap-2 rounded-full border border-[#d6decf] px-4 py-2 transition hover:border-[#2f4a2f] hover:text-[#1f2a1f]"

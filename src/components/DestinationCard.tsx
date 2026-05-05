@@ -23,14 +23,14 @@ export default function DestinationCard({
   const hasImage = Boolean(trimmedImage);
   const description =
     descriptionVariant === "featured"
-      ? destination.featuredDescription ?? destination.description
+      ? (destination.featuredDescription ?? destination.description)
       : destination.description;
   const HeadingTag = headingLevel;
 
   if (descriptionVariant === "featured") {
     return (
       <Link href={destination.href}>
-        <a className="group flex h-full flex-col overflow-hidden rounded-xl border border-[#e1e5dc] bg-white shadow-sm transition hover:shadow-md md:flex-row">
+        <a className="group flex flex-col overflow-hidden rounded-xl border border-[#e1e5dc] bg-white shadow-sm transition hover:shadow-md md:flex-row">
           <div
             className={`relative h-56 w-full flex-shrink-0 md:h-60 md:w-72 lg:w-80 ${
               hasImage ? "" : "bg-[#b8a693]"
@@ -46,12 +46,14 @@ export default function DestinationCard({
               />
             ) : null}
           </div>
-          <div className="flex flex-1 flex-col justify-between gap-4 p-6 text-[#243424]">
+          <div className="flex flex-1 flex-col gap-5 p-5 text-[#243424] sm:p-6">
             <div>
               <HeadingTag className="text-xl font-semibold text-[#2f4a2f]">
                 {destination.name}
               </HeadingTag>
-              <p className="mt-3 text-sm text-[#405040]">{description}</p>
+              <p className="mt-3 text-sm leading-relaxed text-[#405040]">
+                {description}
+              </p>
             </div>
             <div className="flex flex-wrap items-center gap-3">
               {!hasImage ? (
@@ -71,12 +73,8 @@ export default function DestinationCard({
 
   return (
     <Link href={destination.href}>
-      <a className="group relative h-48 overflow-hidden rounded-xl sm:h-56 ...">
-        <div
-          className={`absolute inset-0 ${
-            hasImage ? "" : "bg-[#b8a693]"
-          }`}
-        >
+      <a className="group relative block min-h-48 overflow-hidden rounded-xl sm:min-h-56">
+        <div className={`absolute inset-0 ${hasImage ? "" : "bg-[#b8a693]"}`}>
           {hasImage ? (
             <Image
               src={trimmedImage ?? ""}
@@ -88,7 +86,7 @@ export default function DestinationCard({
           ) : null}
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-        <div className="relative flex h-48 flex-col justify-end p-6 text-white sm:h-56">
+        <div className="relative flex min-h-48 flex-col justify-end p-5 text-white sm:min-h-56 sm:p-6">
           <HeadingTag className="text-xl font-semibold">
             {destination.name}
           </HeadingTag>
