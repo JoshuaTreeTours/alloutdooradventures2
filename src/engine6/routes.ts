@@ -181,6 +181,10 @@ export const ENGINE6_NYC_AMERICAN_DREAM_BUNDLE_ROUTE =
 export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_PRODUCT_CODE = "5024MANSKY";
 export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_ROUTE =
   "/destinations/new-york/new-york/tours/manhattan-sky-tour-new-york-helicopter-flight";
+export const ENGINE6_SAN_DIEGO_SUNDAY_BRUNCH_CRUISE_PRODUCT_CODE = "5144BRUNCH";
+export const ENGINE6_SAN_DIEGO_SUNDAY_BRUNCH_CRUISE_ROUTE =
+  "/destinations/california/san-diego/tours/san-diego-sunday-brunch-cruise";
+
 export const ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE = "3097SDZSP_2VISIT";
 export const ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-zoo-and-safari-park-2-visit-pass-ticket";
@@ -535,6 +539,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_NYC_AMERICAN_DREAM_BUNDLE_ROUTE,
     ENGINE6_NYC_AMERICAN_DREAM_BUNDLE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_DIEGO_SUNDAY_BRUNCH_CRUISE_ROUTE,
+    ENGINE6_SAN_DIEGO_SUNDAY_BRUNCH_CRUISE_PRODUCT_CODE,
   ],
   [ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE, ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE],
   [

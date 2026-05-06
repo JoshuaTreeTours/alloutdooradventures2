@@ -98,6 +98,7 @@ import specimen122012p17Payload from "../../data/engine6/viator/122012P17.exact-
 import specimen474891p3Payload from "../../data/engine6/viator/474891P3.exact-product.json";
 import specimen5515296p1Payload from "../../data/engine6/viator/5515296P1.exact-product.json";
 import specimen428219p6Payload from "../../data/engine6/viator/428219P6.exact-product.json";
+import specimen5144brunchPayload from "../../data/engine6/viator/5144BRUNCH.exact-product.json";
 import specimen77348p8Payload from "../../data/engine6/viator/77348P8.exact-product.json";
 import specimen5569hikePayload from "../../data/engine6/viator/5569HIKE.exact-product.json";
 
@@ -475,6 +476,15 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/New-York-City/Electric-Bike-Tour-Classic-Manhattan-and-more/d687-3156P13",
     rawPayload: specimen3156Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5144BRUNCH",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/San-Diego-Sunday-Brunch-Cruise/d736-5144BRUNCH",
+    rawPayload: specimen5144brunchPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
   },
   {
     productCode: "3097SDZSP_2VISIT",
