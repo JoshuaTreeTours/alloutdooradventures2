@@ -264,6 +264,13 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
   "32779P6": [
     "Travel deep into Catalina’s interior for sweeping island viewpoints and frequent wildlife sightings across protected terrain.",
   ],
+  "5144BRUNCH": [
+    "Settle into a relaxed bay cruise with live onboard ambiance, skyline views, and a polished Sunday brunch setting.",
+    "Cruise beneath the Coronado Bridge past Seaport Village and the USS Midway along San Diego’s iconic waterfront corridor.",
+    "Watch downtown skyline views broaden from the dining deck as the yacht glides through central harbor waters.",
+    "Take in open-water panoramas while brunch service and live entertainment continue throughout the sailing.",
+    "Pass naval installations, Shelter Island marinas, and Cabrillo’s coastal point on the scenic return across San Diego Bay.",
+  ],
 };
 
 const rewriteItineraryDescriptionToSingleSentence = (
