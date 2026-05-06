@@ -134,7 +134,7 @@ const ENGINE6_5584233P1_EXPECTED_HERO_URL =
 const ENGINE6_327321P1_EXPECTED_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/07/b0/bc.jpg";
 const ENGINE6_21165P1_EXPECTED_HERO_URL =
-  "https://media.tacdn.com/media/attractions-splice-spp-360x240/0c/00/fa/45.jpg";
+  "https://dynamic-media.tacdn.com/media/photo-o/2f/19/65/61/caption.jpg?w=700&h=500&s=1";
 const ENGINE6_31015P9_EXPECTED_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-360x240/0a/b2/7b/e3.jpg";
 const ENGINE6_173946P1_EXPECTED_HERO_URL =

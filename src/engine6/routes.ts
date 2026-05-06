@@ -192,7 +192,7 @@ export const ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE =
   "/destinations/california/san-diego/tours/spectacular-sunset-sail-on-san-diego-bay";
 export const ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_PRODUCT_CODE = "21165P1";
 export const ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE =
-  "/destinations/california/san-diego/tours/original-sea-cave-kayak-tour";
+  "/destinations/california/san-diego/tours/la-jolla-sea-cave-kayak-adventure";
 export const ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_PRODUCT_CODE = "31015P9";
 export const ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE =
   "/destinations/california/san-diego/tours/private-sailing-charter-san-diego-bay";
