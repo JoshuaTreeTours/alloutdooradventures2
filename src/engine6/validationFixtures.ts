@@ -48,6 +48,7 @@ import specimen5046prtsanseaPayload from "../../data/engine6/viator/5046PRTSANSE
 import specimen424070p1Payload from "../../data/engine6/viator/424070P1.exact-product.json";
 import specimen5257boatPayload from "../../data/engine6/viator/5257BOAT.exact-product.json";
 import specimen388361p1Payload from "../../data/engine6/viator/388361P1.exact-product.json";
+import specimen37126p9Payload from "../../data/engine6/viator/37126P9.exact-product.json";
 import specimen28758p1Payload from "../../data/engine6/viator/28758P1.exact-product.json";
 import specimen383300p6Payload from "../../data/engine6/viator/383300P6.exact-product.json";
 import specimen76145p2Payload from "../../data/engine6/viator/76145P2.exact-product.json";
@@ -558,6 +559,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/San-Diego/sailing-chartered-experience-harbor-tour/d736-388361P1",
     rawPayload: specimen388361p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "37126P9",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/Day-Sail-on-San-Diego-Bay/d736-37126P9",
+    rawPayload: specimen37126p9Payload as Record<string, unknown>,
   },
   {
     productCode: "28758P1",
