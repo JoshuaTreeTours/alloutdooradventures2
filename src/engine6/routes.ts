@@ -225,6 +225,9 @@ export const ENGINE6_SAN_DIEGO_SAILING_CHARTERED_EXPERIENCE_PRODUCT_CODE =
   "388361P1";
 export const ENGINE6_SAN_DIEGO_SAILING_CHARTERED_EXPERIENCE_ROUTE =
   "/destinations/california/san-diego/tours/sailing-chartered-experience-harbor-tour-388361P1";
+export const ENGINE6_SAN_DIEGO_BAY_DAY_SAIL_PRODUCT_CODE = "37126P9";
+export const ENGINE6_SAN_DIEGO_BAY_DAY_SAIL_ROUTE =
+  "/destinations/california/san-diego/tours/san-diego-bay-day-sail";
 export const ENGINE6_SAN_DIEGO_TIJUANA_BORDER_TOUR_PRODUCT_CODE = "28758P1";
 export const ENGINE6_SAN_DIEGO_TIJUANA_BORDER_TOUR_ROUTE =
   "/destinations/california/san-diego/tours/tijuana-mexico-border-tour-from-san-diego-28758P1";
@@ -585,6 +588,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SAN_DIEGO_SAILING_CHARTERED_EXPERIENCE_ROUTE,
     ENGINE6_SAN_DIEGO_SAILING_CHARTERED_EXPERIENCE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_DIEGO_BAY_DAY_SAIL_ROUTE,
+    ENGINE6_SAN_DIEGO_BAY_DAY_SAIL_PRODUCT_CODE,
   ],
   [
     ENGINE6_SAN_DIEGO_TIJUANA_BORDER_TOUR_ROUTE,
