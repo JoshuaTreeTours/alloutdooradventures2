@@ -242,12 +242,6 @@ const slugToLabel = (slug: string) =>
     .map(part => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
 
-const ENGINE6_NEW_BUILD_ORIGINAL_ITINERARY_PRODUCT_CODES = new Set([
-  "5096P30",
-  "67760P2",
-  "32779P6",
-]);
-
 const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
   "5096P30": [
     "Begin your sightseeing loop on Hollywood Boulevard at the Big Bus Welcome Center, where departures run throughout the day.",
@@ -289,14 +283,42 @@ const rewriteItineraryDescriptionToSingleSentence = (
   const title = item.title?.trim() || "This stop";
   const duration = item.duration?.trim();
   const admission = item.admissionNote?.trim();
-  const stopTypeLabel = item.stopType === "pass-by" ? "pass-by" : "guided stop";
+  const sourceDescription = item.description?.trim() ?? "";
+  const cleanedSource = sourceDescription
+    .replace(/\s+/g, " ")
+    .replace(/\([^)]*\)/g, " ")
+    .replace(/\b(you will|you'll|we will|we'll)\b/gi, "")
+    .replace(/\b(enjoy|discover|experience|visit|explore)\b/gi, "")
+    .trim();
+  const contentHint =
+    cleanedSource
+      .split(/[.!?]/)
+      .map(part => part.trim())
+      .find(Boolean)
+      ?.split(",")
+      .map(part => part.trim())
+      .find(Boolean) ?? "";
+  const curatedHint = contentHint
+    .replace(/^to\s+/i, "")
+    .replace(/\bthe\b/gi, "the")
+    .replace(/^[a-z]/, m => m.toUpperCase())
+    .trim();
 
-  const details = [duration ? `for about ${duration}` : null, admission]
-    .filter(Boolean)
-    .join("; ");
+  const structureLead =
+    item.stopType === "pass-by"
+      ? "Pass key landmarks"
+      : "Spend time at this stop";
+  const focusClause = curatedHint
+    ? `with a focus on ${curatedHint.replace(/[.!?]+$/, "")}`
+    : "with guided local context and clear sightseeing orientation";
+  const durationClause = duration ? ` over ${duration}` : "";
+  const admissionClause = admission ? `; ${admission}` : "";
 
-  const coreSentence = `${title} is a ${stopTypeLabel} featuring key local highlights and photo opportunities`;
-  return details ? `${coreSentence} (${details}).` : `${coreSentence}.`;
+  return `${structureLead}${durationClause} ${focusClause}${admissionClause}.`
+    .replace(/\s+/g, " ")
+    .replace(/\s+([;,.])/g, "$1")
+    .replace(/\.\./g, ".")
+    .trim();
 };
 
 export const mapViatorToEngine6Tour = (
@@ -366,25 +388,18 @@ export const mapViatorToEngine6Tour = (
   );
   const highlights = payload.extracted.highlights ?? [];
   const itinerary =
-    payload.extracted.itinerary?.map((item, index) =>
-      ENGINE6_NEW_BUILD_ORIGINAL_ITINERARY_PRODUCT_CODES.has(
-        payload.rawProductCode
-      )
+    payload.extracted.itinerary?.map((item, index) => ({
+      ...item,
+      ...(item.description
         ? {
-            ...item,
-            ...(item.description
-              ? {
-                  description:
-                    rewriteItineraryDescriptionToSingleSentence({
-                      productCode: payload.rawProductCode,
-                      item,
-                      index,
-                    }),
-                }
-              : {}),
+            description: rewriteItineraryDescriptionToSingleSentence({
+              productCode: payload.rawProductCode,
+              item,
+              index,
+            }),
           }
-        : item
-    ) ?? [];
+        : {}),
+    })) ?? [];
   const itinerarySummaryText = payload.extracted.itinerarySummaryText ?? null;
   const faqs = payload.extracted.faqs ?? [];
   const included = payload.extracted.included ?? [];
