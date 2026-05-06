@@ -264,6 +264,13 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
   "32779P6": [
     "Travel deep into Catalina’s interior for sweeping island viewpoints and frequent wildlife sightings across protected terrain.",
   ],
+  "5144BRUNCH": [
+    "Settle into a relaxed bay cruise with live onboard ambiance, skyline views, and a polished Sunday brunch setting.",
+    "Cruise beneath the Coronado Bridge past Seaport Village and the USS Midway along San Diego’s iconic waterfront corridor.",
+    "Watch downtown skyline views broaden from the dining deck as the yacht glides through central harbor waters.",
+    "Take in open-water panoramas while brunch service and live entertainment continue throughout the sailing.",
+    "Pass naval installations, Shelter Island marinas, and Cabrillo’s coastal point on the scenic return across San Diego Bay.",
+  ],
 };
 
 const rewriteItineraryDescriptionToSingleSentence = (
@@ -288,33 +295,49 @@ const rewriteItineraryDescriptionToSingleSentence = (
     .replace(/\s+/g, " ")
     .replace(/\([^)]*\)/g, " ")
     .replace(/\b(you will|you'll|we will|we'll)\b/gi, "")
-    .replace(/\b(enjoy|discover|experience|visit|explore)\b/gi, "")
     .trim();
-  const contentHint =
+  const sourceSentence =
     cleanedSource
       .split(/[.!?]/)
       .map(part => part.trim())
-      .find(Boolean)
-      ?.split(",")
-      .map(part => part.trim())
       .find(Boolean) ?? "";
-  const curatedHint = contentHint
-    .replace(/^to\s+/i, "")
-    .replace(/\bthe\b/gi, "the")
+  const normalizedTitle = title.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const normalizedSentence = sourceSentence
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+  const repeatsTitle =
+    normalizedTitle.length > 0 &&
+    normalizedSentence.length > 0 &&
+    (normalizedSentence === normalizedTitle ||
+      normalizedSentence.includes(normalizedTitle));
+  const polishedSourceSentence = sourceSentence
+    .replace(/^(enjoy|experience|discover|visit|explore|see)\s+/i, "")
+    .replace(/^take in\s+/i, "")
+    .replace(/^check out\s+/i, "")
+    .replace(/^pass(?: by)?\s+/i, "")
+    .replace(/^you(?:'ll| will)\s+/i, "")
     .replace(/^[a-z]/, m => m.toUpperCase())
+    .replace(/[;:,]\s*$/, "")
     .trim();
 
-  const structureLead =
-    item.stopType === "pass-by"
-      ? "Pass key landmarks"
-      : "Spend time at this stop";
-  const focusClause = curatedHint
-    ? `with a focus on ${curatedHint.replace(/[.!?]+$/, "")}`
-    : "with guided local context and clear sightseeing orientation";
   const durationClause = duration ? ` over ${duration}` : "";
   const admissionClause = admission ? `; ${admission}` : "";
 
-  return `${structureLead}${durationClause} ${focusClause}${admissionClause}.`
+  if (polishedSourceSentence && !repeatsTitle) {
+    return `${polishedSourceSentence}${admissionClause}.`
+      .replace(/\s+/g, " ")
+      .replace(/\s+([;,.])/g, "$1")
+      .replace(/\.\./g, ".")
+      .trim();
+  }
+
+  const fallbackLead =
+    item.stopType === "pass-by"
+      ? "Continue along the route with clear views of key waterfront and city landmarks"
+      : "Settle into a guided sightseeing segment with broad local views and destination context";
+
+  return `${fallbackLead}${durationClause}${admissionClause}.`
     .replace(/\s+/g, " ")
     .replace(/\s+([;,.])/g, "$1")
     .replace(/\.\./g, ".")

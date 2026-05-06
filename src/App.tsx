@@ -81,6 +81,7 @@ import {
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
+  ENGINE6_SAN_DIEGO_SUNDAY_BRUNCH_CRUISE_ROUTE,
   ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
   ENGINE6_SAN_DIEGO_CLASSIC_SAIL_CHARTER_ROUTE,
   ENGINE6_SAN_DIEGO_WHALE_WATCHING_ROUTE,
@@ -273,6 +274,10 @@ export default function App() {
         />
         <Route
           path={ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_SAN_DIEGO_SUNDAY_BRUNCH_CRUISE_ROUTE}
           component={Engine6SpecimenRoute}
         />
         <Route
