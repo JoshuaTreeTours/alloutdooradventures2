@@ -849,12 +849,11 @@ const buildPriceLabel = ({ amount }: { amount: number | null }) => {
   if (amount === null) {
     return null;
   }
-  const hasCents = Math.round(amount * 100) % 100 !== 0;
   const formatted = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
-    minimumFractionDigits: hasCents ? 2 : 0,
-    maximumFractionDigits: hasCents ? 2 : 0,
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
   }).format(amount);
   return `From ${formatted}`;
 };
