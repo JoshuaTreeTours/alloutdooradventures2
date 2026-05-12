@@ -215,7 +215,7 @@ export const ENGINE6_SAN_DIEGO_WHALE_WATCHING_ROUTE =
 export const ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_PRODUCT_CODE = "18125P5";
 export const ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-private-balboa-park-segway-tour";
-export const ENGINE6_SAN_DIEGO_SEAL_TOUR_PRODUCT_CODE = "5046PRTSANSEA";
+export const ENGINE6_SAN_DIEGO_SEAL_TOUR_PRODUCT_CODE = "5046SAN_SEA";
 export const ENGINE6_SAN_DIEGO_SEAL_TOUR_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-seal-tour-5046PRTSANSEA";
 export const ENGINE6_SAN_DIEGO_FINEST_CITY_TOUR_PRODUCT_CODE = "424070P1";

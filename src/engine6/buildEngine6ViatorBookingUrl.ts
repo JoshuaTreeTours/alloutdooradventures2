@@ -10,7 +10,7 @@ const ENGINE6_VIATOR_AFFILIATE_OVERRIDES: Record<
   string,
   Partial<Record<"pid" | "uid" | "mcid" | "currency" | "medium", string>>
 > = {
-  "5046PRTSANSEA": {
+  "5046SAN_SEA": {
     pid: "P00058975",
     mcid: "58086",
     medium: "link",
@@ -54,8 +54,8 @@ const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
     "https://www.viator.com/tours/San-Diego/3-Hour-Whale-Watching/d736-69764P1",
   "18125P5":
     "https://www.viator.com/tours/San-Diego/Private-Balboa-Park-Segway-Tour/d736-18125P5",
-  "5046PRTSANSEA":
-    "https://www.viator.com/tours/San-Diego/San-Diego-Shore-Excursion-San-Diego-Seal-Tour/d736-5046PRTSANSEA",
+  "5046SAN_SEA":
+    "https://www.viator.com/tours/San-Diego/San-Diego-Seal-Tour/d736-5046SAN_SEA",
   "424070P1":
     "https://www.viator.com/tours/San-Diego/San-Diego-Finest-City-Tour-and-Small-Group-Sightseeing/d736-424070P1",
   "5257BOAT":

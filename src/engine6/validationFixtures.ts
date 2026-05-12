@@ -44,7 +44,7 @@ import specimen191303p1Payload from "../../data/engine6/viator/191303P1.exact-pr
 import specimen5598628p3Payload from "../../data/engine6/viator/5598628P3.exact-product.json";
 import specimen69764p1Payload from "../../data/engine6/viator/69764P1.exact-product.json";
 import specimen18125p5Payload from "../../data/engine6/viator/18125P5.exact-product.json";
-import specimen5046prtsanseaPayload from "../../data/engine6/viator/5046PRTSANSEA.exact-product.json";
+import specimen5046prtsanseaPayload from "../../data/engine6/viator/5046SAN_SEA.exact-product.json";
 import specimen424070p1Payload from "../../data/engine6/viator/424070P1.exact-product.json";
 import specimen5257boatPayload from "../../data/engine6/viator/5257BOAT.exact-product.json";
 import specimen388361p1Payload from "../../data/engine6/viator/388361P1.exact-product.json";
@@ -547,9 +547,9 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     rawPayload: specimen18125p5Payload as Record<string, unknown>,
   },
   {
-    productCode: "5046PRTSANSEA",
+    productCode: "5046SAN_SEA",
     publicUrl:
-      "https://www.viator.com/tours/San-Diego/San-Diego-Shore-Excursion-San-Diego-Seal-Tour/d736-5046PRTSANSEA",
+      "https://www.viator.com/tours/San-Diego/San-Diego-Seal-Tour/d736-5046SAN_SEA",
     rawPayload: specimen5046prtsanseaPayload as Record<string, unknown>,
   },
   {

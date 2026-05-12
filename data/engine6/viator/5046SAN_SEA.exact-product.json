@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "5046SAN_SEA",
+    "productUrl": "https://www.viator.com/tours/San-Diego/San-Diego-Seal-Tour/d736-5046SAN_SEA",
+    "title": "San Diego Seal Tour",
+    "description": "While you’re in port in San Diego, explore the city by both land and sea on the San Diego Seal Tour. On an amphibious vehicle that travels on land and in water, you’ll spend this independent shore excursion driving along the waterfront and splashing into San Diego Bay. It’s a fun-filled adventure for the whole family.",
+    "location": {
+      "city": "San Diego",
+      "state": "California",
+      "country": "United States"
+    },
+    "priceFrom": 55.59,
+    "pricing": {
+      "summary": {
+        "fromPrice": 55.59
+      },
+      "currency": "USD"
+    },
+    "reviews": {
+      "combinedAverageRating": 4.8315215,
+      "totalReviews": 184
+    },
+    "duration": "1 hour 45 minutes",
+    "media": {
+      "images": [
+        {
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/1e/ad/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            },
+            "LARGE": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/1e/ad/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Wheelchair accessible",
+      "Infants and small children can ride in a pram or stroller",
+      "Service animals allowed",
+      "Public transportation options are available nearby",
+      "Transportation options are wheelchair accessible",
+      "All areas and surfaces are wheelchair accessible",
+      "Suitable for all physical fitness levels",
+      "Confirmation for this tour will be received at time of booking",
+      "Tour departs from Seaport Village",
+      "Emotional support animals and Pets are not allowed on the tour"
+    ],
+    "logistics": {
+      "start": [
+        "Seaport Village is a 10 minute walk from the cruise port. 825 W. Harbor Blvd. next to the Bay Company retail store in Seaport Village. Check in 30 minutes required prior to tour time. "
+      ]
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyFUJE3o1W7AkbLVOToT4SkQ="
+          }
+        },
+        "duration": {
+          "fixedDurationInMinutes": 90
+        },
+        "passByWithoutStopping": false,
+        "admissionIncluded": "NOT_APPLICABLE",
+        "description": "This 90-minute shore excursion is a fantastic way to see the best of the Bay and San Diego during your limited time in port. On an amphibious vehicle that drives both on land and in water, you’ll depart from Seaport Village, located on Harbor Drive at the Embarcadero. \n\nAs you travel along the beautiful bay by land, you will hear stories of early sailors and the history of the bay. You also will learn about the importance of the military in San Diego, home to several US Navy and US Marine stations. Pass by San Diego International Airport, dedicated to aviator Charles Lindbergh, just one of the many people you will hear about on your San Diego Seal Tour.\n\nThen, you will splash down into San Diego Bay, where you begin the water portion of the journey. As the seal boat travels through the Bay, keep your eyes peeled for a chance encounter with a California brown pelican. A cruise through Mission Bay provides views of SeaWorld, Hospitaltiy Point and Vacation Isle. Quivira Basin is a playground for seals and sea lions, so don’t look away from the water for a second!\n\nYou will head back and land and return to your starting point via Harbor Drive, passing the Maritime Museum and cruise ship terminal along the way.\n\nTour route is subject to change without notice due to weather or traffic conditions.\n\nPlease note: \n\nThis excursion is located within a 5-minute walk to the cruise port, so you determine the time you return to your ship in San Diego port. Please allow yourself ample time to enjoy the excursion and ensure your timely return to the port. This excursion is not covered by our worry-free policy."
+      }
+    ],
+    "itinerarySummary": "While you’re in port in San Diego, explore the city by both land and sea on the San Diego Seal Tour. On an amphibious vehicle that travels on land and in water, you’ll spend this independent shore excursion driving along the waterfront and splashing into San Diego Bay. It’s a fun-filled adventure for the whole family.",
+    "inclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "1 hour 30 minute narrated tour"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "All taxes"
+      }
+    ],
+    "additionalInfo": [
+      "Wheelchair accessible",
+      "Infants and small children can ride in a pram or stroller",
+      "Service animals allowed",
+      "Public transportation options are available nearby",
+      "Transportation options are wheelchair accessible",
+      "All areas and surfaces are wheelchair accessible",
+      "Suitable for all physical fitness levels",
+      "Confirmation for this tour will be received at time of booking",
+      "Tour departs from Seaport Village",
+      "Emotional support animals and Pets are not allowed on the tour"
+    ],
+    "faqs": []
+  }
+}
