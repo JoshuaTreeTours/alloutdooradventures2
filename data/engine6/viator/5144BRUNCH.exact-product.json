@@ -59,7 +59,7 @@
       ],
       "redemption": {
         "redemptionType": "NONE",
-        "specialInstructions": "• Please note: boarding is 30-minutes prior to departure time at 990 N. Harbor Drive San Diego CA, 92101\n • Dress code is smart casual \nAll dining is inside. You are welcome to walk around the outside decks."
+        "specialInstructions": "\u2022 Please note: boarding is 30-minutes prior to departure time at 990 N. Harbor Drive San Diego CA, 92101\n \u2022 Dress code is smart casual \nAll dining is inside. You are welcome to walk around the outside decks."
       },
       "travelerPickup": {
         "pickupOptionType": "MEET_EVERYONE_AT_START_POINT",
@@ -67,7 +67,7 @@
       }
     },
     "timeZone": "America/Los_Angeles",
-    "description": "Make the most of your weekend with a 2-hour brunch cruise through San Diego Bay. Capture prime views of the city skyline and harbor from a luxury yacht, and round out your morning bliss with bottomless mimosas and our brunch menu service includes breakfast favorites, vegetarian options, and so much more. Indoor seating. Listen to our live entertainment as the attentive crew constantly top off your glass. Shouldn’t weekends always be like this?",
+    "description": "Make the most of your weekend with a 2-hour brunch cruise through San Diego Bay. Capture prime views of the city skyline and harbor from a luxury yacht, and round out your morning bliss with bottomless mimosas and our brunch menu service includes breakfast favorites, vegetarian options, and so much more. Indoor seating. Listen to our live entertainment as the attentive crew constantly top off your glass. Shouldn\u2019t weekends always be like this?",
     "inclusions": [
       {
         "category": "OTHER",
@@ -1206,6 +1206,12 @@
           ]
         }
       ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 125.6,
+        "currency": "USD"
+      }
     }
   }
 }
