@@ -37,6 +37,7 @@ import CountryGuideRoute from "./pages/guides/CountryGuideRoute";
 import CityGuideWorldRoute from "./pages/guides/CityGuideWorldRoute";
 import ParisGuideRoute from "./pages/guides/ParisGuideRoute";
 import Faqs from "./pages/Faqs";
+import RefundPolicy from "./pages/RefundPolicy";
 import Journeys from "./pages/Journeys";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -470,6 +471,7 @@ export default function App() {
           component={CountryGuideRoute}
         />
         <Route path="/faqs" component={Faqs} />
+        <Route path="/refund-policy" component={RefundPolicy} />
         <Route path="/faq" component={FaqRedirect} />
         <Route path="/contact-us" component={ContactRedirect} />
         <Route path="/custom-tour" component={ContactRedirect} />

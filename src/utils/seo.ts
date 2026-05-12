@@ -30,6 +30,11 @@ export const STATIC_PAGE_SEO: Record<string, StaticSeoEntry> = {
     description:
       "Get answers about booking, cancellations, and tour logistics so you can plan your outdoor adventure with confidence.",
   },
+  "/refund-policy": {
+    title: `Refund & Cancellation Policy | ${SITE_BRAND_NAME}`,
+    description:
+      "Review the All Outdoor Adventures refund and cancellation policy for guided tours, cruises, sightseeing experiences, and activity bookings.",
+  },
   "/contact": {
     title: `Contact | ${SITE_BRAND_NAME}`,
     description:
