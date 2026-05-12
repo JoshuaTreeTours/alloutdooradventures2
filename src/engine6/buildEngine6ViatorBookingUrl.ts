@@ -15,6 +15,11 @@ const ENGINE6_VIATOR_AFFILIATE_OVERRIDES: Record<
     mcid: "58086",
     medium: "link",
   },
+  "5046PRTSANSEA": {
+    pid: "P00058975",
+    mcid: "58086",
+    medium: "link",
+  },
   "424070P1": {
     pid: "P00058975",
     mcid: "58086",
@@ -55,6 +60,8 @@ const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
   "18125P5":
     "https://www.viator.com/tours/San-Diego/Private-Balboa-Park-Segway-Tour/d736-18125P5",
   "5046SAN_SEA":
+    "https://www.viator.com/tours/San-Diego/San-Diego-Seal-Tour/d736-5046SAN_SEA",
+  "5046PRTSANSEA":
     "https://www.viator.com/tours/San-Diego/San-Diego-Seal-Tour/d736-5046SAN_SEA",
   "424070P1":
     "https://www.viator.com/tours/San-Diego/San-Diego-Finest-City-Tour-and-Small-Group-Sightseeing/d736-424070P1",
