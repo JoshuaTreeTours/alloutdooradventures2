@@ -6,20 +6,30 @@
     "description": "Explore Tijuana, Mexico, without getting lost on this day trip from San Diego, a great choice for first-time visitors. Start this Tijuana full-day tour by meeting up with your guide and small group in San Diego. Once you meet up, your guide helps your group with border crossing into Mexico before you set off exploring Tijuana by foot.",
     "location": {
       "city": "San Diego",
-      "state": "California"
+      "state": "California",
+      "country": "United States"
     },
     "priceFrom": 73,
     "reviews": {
       "combinedAverageRating": 4.7,
       "totalReviews": 624
     },
-    "duration": {
-      "fixedDurationInMinutes": 360
-    },
+    "duration": "6 hours",
     "media": {
       "images": [
         {
-          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/1e/5d/caption.jpg?w=700&h=500&s=1"
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/1e/5d/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            },
+            "LARGE": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ed/1e/5d/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
         }
       ]
     },
