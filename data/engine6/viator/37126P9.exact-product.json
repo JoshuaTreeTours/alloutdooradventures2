@@ -38,7 +38,9 @@
           "minTravelersPerBooking": 1,
           "maxTravelersPerBooking": 6
         }
-      ]
+      ],
+      "fromPrice": 125,
+      "price": "$125.00"
     },
     "images": [
       {
@@ -2857,6 +2859,12 @@
           "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ee/aa/c1/caption.jpg?w=700&h=500&s=1"
         }
       ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 125,
+        "fromPriceFormatted": "From $125.00"
+      }
     }
   }
 }
