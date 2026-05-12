@@ -88,6 +88,7 @@ import {
   ENGINE6_SAN_DIEGO_WHALE_WATCHING_ROUTE,
   ENGINE6_SAN_DIEGO_SEAL_TOUR_ROUTE,
   ENGINE6_SAN_DIEGO_FINEST_CITY_TOUR_ROUTE,
+  ENGINE6_SAN_DIEGO_HARBOR_SPEED_BOAT_ADVENTURE_ROUTE,
   ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
   ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
@@ -317,6 +318,10 @@ export default function App() {
         />
         <Route
           path={ENGINE6_SAN_DIEGO_FINEST_CITY_TOUR_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_SAN_DIEGO_HARBOR_SPEED_BOAT_ADVENTURE_ROUTE}
           component={Engine6SpecimenRoute}
         />
         <Route
