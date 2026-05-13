@@ -1,14 +1,41 @@
 import { mkdir, readdir, readFile, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { tsImport } from 'tsx/esm/api';
 
 const distDir = path.resolve('dist');
 const templatePath = path.join(distDir, 'index.html');
+const SITE = 'https://www.alloutdooradventures.com';
 
 const buildOutputPath = (pathname) => {
   if (!pathname || pathname === '/') return templatePath;
   const normalized = pathname.replace(/^\/+|\/+$/g, '');
   if (path.extname(normalized)) return path.join(distDir, normalized);
   return path.join(distDir, normalized, 'index.html');
+};
+
+const setTagContent = (html, pattern, replacement) =>
+  pattern.test(html) ? html.replace(pattern, replacement) : html;
+
+const setMetaByAttr = (html, attr, name, value) => {
+  const re = new RegExp(`<meta[^>]*${attr}=["']${name}["'][^>]*>`, 'i');
+  return html.replace(re, `<meta ${attr}="${name}" content="${value}" />`);
+};
+
+const applySeo = (html, { title, description, url, image }) => {
+  let out = html;
+  out = setTagContent(out, /<title[^>]*>[\s\S]*?<\/title>/i, `<title>${title}</title>`);
+  out = setMetaByAttr(out, 'name', 'description', description);
+  out = setMetaByAttr(out, 'property', 'og:title', title);
+  out = setMetaByAttr(out, 'property', 'og:description', description);
+  out = setMetaByAttr(out, 'property', 'og:url', url);
+  out = setMetaByAttr(out, 'property', 'og:image', image);
+  out = setMetaByAttr(out, 'name', 'twitter:title', title);
+  out = setMetaByAttr(out, 'name', 'twitter:description', description);
+  out = setMetaByAttr(out, 'name', 'twitter:image', image);
+  out = out.replace(/<link[^>]*rel=["']canonical["'][^>]*>/i, `<link rel="canonical" href="${url}" />`);
+  const ld = `<script id="structured-data" type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebPage', url, name: title, description, image }).replace(/</g,'\\u003c')}</script>`;
+  out = out.replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/i, ld);
+  return out;
 };
 
 const files = (await readdir(distDir)).filter(f => f.startsWith('sitemap') && f.endsWith('.xml'));
@@ -22,30 +49,33 @@ for (const file of files) {
 }
 
 const template = await readFile(templatePath, 'utf8');
+const engine6Registry = await tsImport('../src/engine6/registry.ts', import.meta.url);
+const engine6SeoMod = await tsImport('../src/engine6/seo.ts', import.meta.url);
+const engine6Tours = Array.isArray(engine6Registry.engine6ResolvedTours) ? engine6Registry.engine6ResolvedTours : [];
+const buildEngine6Seo = engine6SeoMod.buildEngine6Seo;
+const seoByPath = new Map(engine6Tours.map(t => [t.canonicalPath, buildEngine6Seo(t)]));
 
 const expandedPathnames = new Set();
-for (const url of urls) {
-  const rawPathname = new URL(url).pathname;
-  const match = rawPathname.match(/^\/tours\/([^/]+)\/([^/]+)\/([^/]+)$/);
-  if (match) {
-    const [, state, city, slug] = match;
-    expandedPathnames.add(`/destinations/${state}/${city}/tours/${slug}`);
-    expandedPathnames.add(`/destinations/${state}/${city}/tours/${slug}/book`);
-    continue;
-  }
-  expandedPathnames.add(rawPathname);
-}
+for (const url of urls) expandedPathnames.add(new URL(url).pathname);
 
 let created = 0;
 for (const pathname of expandedPathnames) {
   const outputPath = buildOutputPath(pathname);
   if (outputPath === templatePath) continue;
-  try {
-    const s = await stat(outputPath);
-    if (s.isFile()) continue;
-  } catch {}
+  let exists = false;
+  try { const s = await stat(outputPath); exists = s.isFile(); } catch {}
+  if (exists) continue;
   await mkdir(path.dirname(outputPath), { recursive: true });
-  await writeFile(outputPath, template, 'utf8');
+  const engine6Seo = seoByPath.get(pathname);
+  const html = engine6Seo
+    ? applySeo(template, {
+        title: engine6Seo.title,
+        description: engine6Seo.description,
+        url: `${SITE}${engine6Seo.url}`,
+        image: engine6Seo.image,
+      })
+    : template;
+  await writeFile(outputPath, html, 'utf8');
   created += 1;
 }
 

@@ -63,6 +63,10 @@ if (exists("scripts/ensure-prerendered-route-files.mjs")) {
   run("node scripts/ensure-prerendered-route-files.mjs");
 }
 
+if (exists("scripts/verify-engine6-route-seo.mjs")) {
+  run("node scripts/verify-engine6-route-seo.mjs");
+}
+
 if (exists("scripts/verify-no-seo-placeholders.mjs")) {
   run("node scripts/verify-no-seo-placeholders.mjs");
 }
