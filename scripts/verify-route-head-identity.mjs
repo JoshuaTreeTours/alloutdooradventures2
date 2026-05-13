@@ -21,7 +21,9 @@ for(const file of files){
   const ld=(html.match(/<script[^>]*application\/ld\+json[^>]*>([\s\S]*?)<\/script>/i)||[])[1]||'';
   if(route!=='/' && t===homeTitle) failures.push(`${route}:home-title`);
   if(route!=='/' && c===homeCanonical) failures.push(`${route}:home-canonical`);
+  if(route!=='/' && og===homeCanonical) failures.push(`${route}:home-og-url`);
   if(c && og && c!==og) failures.push(`${route}:og-mismatch`);
+  if(route!=='/' && ld && ld.includes(homeCanonical)) failures.push(`${route}:jsonld-home-url`);
   if(c && ld && !ld.includes(c)) failures.push(`${route}:jsonld-url-mismatch`);
   if(html.includes('__SEO_')) failures.push(`${route}:placeholder`);
 }

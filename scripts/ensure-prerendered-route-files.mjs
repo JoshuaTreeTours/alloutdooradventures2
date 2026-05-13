@@ -18,13 +18,51 @@ const titleCase = value => value.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUp
 const buildGenericRouteSeo = (pathname) => {
   if (!pathname || pathname === '/') return null;
 
+  if (pathname === '/guides') {
+    return {
+      title: 'Travel Guides | All Outdoor Adventures',
+      description: 'Explore destination travel guides, outdoor adventures, attractions, and curated experiences across top locations.',
+      url: `${SITE}${pathname}`,
+      image: `${SITE}/hero.jpg`,
+    };
+  }
+
+  const guidesState = /^\/guides\/us\/([^/]+)$/.exec(pathname);
+  if (guidesState) {
+    const state = titleCase(guidesState[1]);
+    return {
+      title: `${state} Travel Guides | All Outdoor Adventures`,
+      description: `Explore travel guides, attractions, outdoor activities, and local experiences throughout ${state}.`,
+      url: `${SITE}${pathname}`,
+      image: `${SITE}/hero.jpg`,
+    };
+  }
+
+  if (pathname === '/guides/us') {
+    return {
+      title: 'United States Travel Guides | All Outdoor Adventures',
+      description: 'Explore destination travel guides, attractions, outdoor activities, and local experiences across the United States.',
+      url: `${SITE}${pathname}`,
+      image: `${SITE}/hero.jpg`,
+    };
+  }
+
+  const staticPageSeo = {
+    '/faqs': ['FAQs | All Outdoor Adventures', 'Find answers about tours, bookings, planning, and outdoor adventure travel with All Outdoor Adventures.'],
+    '/about': ['About | All Outdoor Adventures', 'Learn about All Outdoor Adventures and how we curate outdoor tours, experiences, and destination guides.'],
+    '/contact': ['Contact | All Outdoor Adventures', 'Contact All Outdoor Adventures for help with tours, destination planning, and travel experiences.'],
+  };
+  if (staticPageSeo[pathname]) {
+    return { title: staticPageSeo[pathname][0], description: staticPageSeo[pathname][1], url: `${SITE}${pathname}`, image: `${SITE}/hero.jpg` };
+  }
+
   const guidesCity = /^\/guides\/us\/([^/]+)\/([^/]+)$/.exec(pathname);
   if (guidesCity) {
     const state = titleCase(guidesCity[1]);
     const city = titleCase(guidesCity[2]);
     return {
       title: `${city} Travel Guide | All Outdoor Adventures`,
-      description: `Explore travel guides, outdoor activities, tours, neighborhoods, and local experiences in ${city}, ${state}.`,
+      description: `Explore travel guides, attractions, outdoor activities, neighborhoods, food experiences, and local adventures in ${city}, ${state}.`,
       url: `${SITE}${pathname}`,
       image: `${SITE}/hero.jpg`,
     };
@@ -35,7 +73,7 @@ const buildGenericRouteSeo = (pathname) => {
     const state = titleCase(destinationState[1]);
     return {
       title: `${state} Destinations | All Outdoor Adventures`,
-      description: `Discover outdoor adventures, tours, and travel destinations throughout ${state}.`,
+      description: `Discover tours, outdoor adventures, attractions, and travel destinations throughout ${state}.`,
       url: `${SITE}${pathname}`,
       image: `${SITE}/hero.jpg`,
     };
@@ -71,7 +109,7 @@ const buildGenericRouteSeo = (pathname) => {
   if (pathname === '/destinations') {
     return {
       title: 'Destinations | All Outdoor Adventures',
-      description: 'Browse destination guides and outdoor tours by state and city.',
+      description: 'Browse outdoor adventure destinations, tours, activities, and experiences throughout the United States.',
       url: `${SITE}${pathname}`,
       image: `${SITE}/hero.jpg`,
     };
