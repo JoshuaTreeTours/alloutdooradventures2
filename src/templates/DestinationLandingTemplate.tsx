@@ -26,10 +26,10 @@ export default function DestinationLandingTemplate({
   tours,
 }: DestinationLandingTemplateProps) {
   const paragraphs = state.longDescription.split("\n\n");
-  const title = `${state.name} ${SITE_BRAND_NAME} | Tours & Destinations`;
+  const title = `${state.name} Tours & Outdoor Destinations | ${SITE_BRAND_NAME}`;
   const description = buildMetaDescription(
-    state.intro,
-    `Explore ${state.name} tours, cities, and outdoor experiences curated by local experts.`
+    `Discover ${state.name} tours, outdoor adventures, attractions, travel guides, and local experiences.`,
+    state.intro
   );
   const fallbackHeroImage =
     resolveHeroImageForRoute({
