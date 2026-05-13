@@ -85,6 +85,11 @@ const buildCanonicalTourPath = (tour, catalogModule) => {
       tour?.url,
   );
   if (canonicalPath && canonicalPath !== "/") {
+    const legacyMatch = canonicalPath.match(/^\/tours\/([^/]+)\/([^/]+)\/([^/]+)\/?$/);
+    if (legacyMatch) {
+      const [, stateSlug, citySlug, slug] = legacyMatch;
+      return `/destinations/${stateSlug}/${citySlug}/tours/${slug}`;
+    }
     return canonicalPath;
   }
 
@@ -112,7 +117,7 @@ const buildCanonicalTourPath = (tour, catalogModule) => {
     return null;
   }
 
-  return `/tours/${stateSlug}/${citySlug}/${slug}`;
+  return `/destinations/${stateSlug}/${citySlug}/tours/${slug}`;
 };
 
 const listUsGuideCitiesByState = async () => {
@@ -650,6 +655,16 @@ const buildSitemap = async () => {
     console.warn("Unable to import Engine2 tours for sitemap; continuing with fallback parsing.", error?.message || error);
   }
 
+  let engine6Tours = [];
+  try {
+    const engine6Module = await tsImport("../src/engine6/registry.ts", import.meta.url);
+    engine6Tours = Array.isArray(engine6Module.engine6ResolvedTours)
+      ? engine6Module.engine6ResolvedTours
+      : [];
+  } catch (error) {
+    console.warn("Unable to import Engine6 tours for sitemap; continuing without Engine6 sitemap entries.", error?.message || error);
+  }
+
   const pages = new Set();
   const toursUrls = new Set();
   const cityUrls = new Set();
@@ -745,6 +760,17 @@ const buildSitemap = async () => {
     addUrl(toursUrls, tourPath);
   });
 
+  engine6Tours.forEach((tour) => {
+    const tourPath = buildCanonicalTourPath(tour, catalogModule);
+    if (!tourPath) {
+      console.warn(
+        `Skipping Engine6 tour sitemap URL (missing route fields): ${getTourIdentifier(tour, tour?.productCode ?? "unknown")}`,
+      );
+      return;
+    }
+    addUrl(toursUrls, tourPath);
+  });
+
   if (!engine2Tours.length) {
     const [mexicoFallbackTours, hawaiiFallbackTours, amsterdamFallbackTours] = await Promise.all([
       buildMexicoSitemapFallbackTours(catalogModule),
@@ -752,7 +778,8 @@ const buildSitemap = async () => {
       buildAmsterdamSitemapFallbackTours(catalogModule),
     ]);
     [...mexicoFallbackTours, ...hawaiiFallbackTours, ...amsterdamFallbackTours].forEach((tour) => {
-      addUrl(toursUrls, tour.seo.canonicalPath);
+      const tourPath = buildCanonicalTourPath(tour, catalogModule);
+      if (tourPath) addUrl(toursUrls, tourPath);
     });
   }
   if (Array.isArray(flagstaffModule.flagstaffTours)) {

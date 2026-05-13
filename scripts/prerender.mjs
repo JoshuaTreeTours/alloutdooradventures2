@@ -206,7 +206,10 @@ const readSitemapUrls = async () => {
     const locPattern = /<loc>(.*?)<\/loc>/g;
     let match = locPattern.exec(contents);
     while (match) {
-      urls.add(match[1]);
+      const loc = match[1];
+      if (!/\.xml$/i.test(loc)) {
+        urls.add(loc);
+      }
       match = locPattern.exec(contents);
     }
   }
@@ -672,6 +675,8 @@ const main = async () => {
     engine2DataModule,
     engine2SeoModule,
     engine2SchemaModule,
+    engine6RegistryModule,
+    engine6SeoModule,
   ] = await Promise.all([
     safeImport("../src/utils/structuredData.ts", "structuredData"),
     safeImport("../src/data/tourPaths.ts", "tourPaths"),
@@ -679,6 +684,8 @@ const main = async () => {
     safeImport("../src/engine2/data/loadEngine2.ts", "engine2Data"),
     safeImport("../src/engine2/seo/buildEngine2Seo.ts", "engine2Seo"),
     safeImport("../src/engine2/schema/buildSchemaGraph.ts", "engine2Schema"),
+    safeImport("../src/engine6/registry.ts", "engine6Registry"),
+    safeImport("../src/engine6/seo.ts", "engine6Seo"),
   ]);
 
   const tours = Array.isArray(toursGeneratedModule.toursGenerated)
@@ -745,6 +752,10 @@ const main = async () => {
   const getEngine2TourByPath = engine2DataModule?.getEngine2TourByPath ?? null;
   const buildEngine2Seo = engine2SeoModule?.buildEngine2Seo ?? null;
   const buildEngine2SchemaGraph = engine2SchemaModule?.buildSchemaGraph ?? null;
+  const engine6ResolvedTours = Array.isArray(engine6RegistryModule?.engine6ResolvedTours)
+    ? engine6RegistryModule.engine6ResolvedTours
+    : [];
+  const buildEngine6Seo = engine6SeoModule?.buildEngine6Seo ?? null;
 
   resetMissingGeoFallbackReport?.();
 
@@ -830,6 +841,11 @@ const main = async () => {
       : null;
     const engine2Seo =
       engine2Tour && buildEngine2Seo ? buildEngine2Seo(engine2Tour) : null;
+    const engine6Tour = engine6ResolvedTours.find(
+      tour => tour.canonicalPath === basePathname
+    ) ?? null;
+    const engine6Seo =
+      engine6Tour && buildEngine6Seo ? buildEngine6Seo(engine6Tour) : null;
 
     let tourForSeo = null;
     let stateForHero = null;
@@ -1234,6 +1250,17 @@ const main = async () => {
       }
     }
   }
+
+  // Ensure the deploy root fallback is never shipped with unresolved SEO tokens.
+  // Even if route discovery changes, homepage defaults must always be materialized.
+  const homepageSeo = {
+    title: DEFAULT_SEO.title,
+    description: DEFAULT_SEO.description,
+    url: buildCanonicalUrl("/"),
+    type: DEFAULT_SEO.type,
+    image: buildImageUrl(DEFAULT_SEO.image),
+  };
+  await writeFile(templatePath, replaceMeta(template, homepageSeo), "utf8");
 
   const findUrl = predicate =>
     urls.find(url => predicate(normalizePathname(new URL(url).pathname)));
