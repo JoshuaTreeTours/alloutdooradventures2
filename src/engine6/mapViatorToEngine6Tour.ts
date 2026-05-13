@@ -359,10 +359,10 @@ export const mapViatorToEngine6Tour = (
     generatedCanonicalPath;
   const [, routeStateSlug = "", routeCitySlug = ""] =
     ENGINE6_CANONICAL_PATH_PATTERN.exec(canonicalPath) ?? [];
-  const city =
-    payload.extracted.city ?? slugToLabel(routeCitySlug) ?? "Destination";
-  const state =
-    payload.extracted.state ?? slugToLabel(routeStateSlug) ?? "Destination";
+  const routeCityLabel = slugToLabel(routeCitySlug) ?? null;
+  const routeStateLabel = slugToLabel(routeStateSlug) ?? null;
+  const city = routeCityLabel ?? payload.extracted.city ?? "Destination";
+  const state = routeStateLabel ?? payload.extracted.state ?? "Destination";
 
   if (!payload.extracted.city || !payload.extracted.state) {
     console.warn("[engine6-location] missing explicit location fields", {
