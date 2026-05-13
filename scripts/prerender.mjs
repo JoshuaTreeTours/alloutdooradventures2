@@ -1238,6 +1238,17 @@ const main = async () => {
     }
   }
 
+  // Ensure the deploy root fallback is never shipped with unresolved SEO tokens.
+  // Even if route discovery changes, homepage defaults must always be materialized.
+  const homepageSeo = {
+    title: DEFAULT_SEO.title,
+    description: DEFAULT_SEO.description,
+    url: buildCanonicalUrl("/"),
+    type: DEFAULT_SEO.type,
+    image: buildImageUrl(DEFAULT_SEO.image),
+  };
+  await writeFile(templatePath, replaceMeta(template, homepageSeo), "utf8");
+
   const findUrl = predicate =>
     urls.find(url => predicate(normalizePathname(new URL(url).pathname)));
 
