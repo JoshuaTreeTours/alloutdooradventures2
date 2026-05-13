@@ -36,7 +36,7 @@ export const STATIC_PAGE_SEO: Record<string, StaticSeoEntry> = {
       "Review the All Outdoor Adventures refund and cancellation policy for guided tours, cruises, sightseeing experiences, and activity bookings.",
   },
   "/contact": {
-    title: `Contact ${SITE_BRAND_NAME} | Tours & Support`,
+    title: `Contact ${SITE_BRAND_NAME}`,
     description:
       "Contact All Outdoor Adventures for tour support, booking questions, partnerships, and curated travel experience inquiries.",
   },
