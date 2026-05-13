@@ -20,6 +20,20 @@ const setMetaByAttr = (html, attr, name, value) => {
   return html.replace(re, `<meta ${attr}="${name}" content="${value}" />`);
 };
 
+
+const buildGenericRouteSeo = (pathname) => {
+  if (pathname === '/' || pathname === '') return null;
+  const segments = pathname.replace(/^\/+|\/+$/g, '').split('/').filter(Boolean);
+  if (!segments.length) return null;
+  const label = segments.map(titleCase).join(' / ');
+  return {
+    title: `${label} | All Outdoor Adventures`,
+    description: `Explore ${label} with All Outdoor Adventures.`,
+    url: `${SITE}${pathname}`,
+    image: `${SITE}/hero.jpg`,
+  };
+};
+
 const applySeo = (html, { title, description, url, image }) => {
   let out = html.replace(/<title[^>]*>[\s\S]*?<\/title>/i, `<title>${title}</title>`);
   out = setMetaByAttr(out, 'name', 'description', description);
@@ -85,7 +99,7 @@ for (const pathname of paths) {
           ? { title: `${titleCase(stateMatch[1])} Outdoor Destinations & Tours`, description: `Explore outdoor destinations, city guides, and tours across ${titleCase(stateMatch[1])}.`, url: `${SITE}${pathname}`, image: `${SITE}/hero.jpg` }
           : pathname === '/destinations'
             ? { title: 'Destinations | All Outdoor Adventures', description: 'Browse destination guides and outdoor tours by state and city.', url: `${SITE}${pathname}`, image: `${SITE}/hero.jpg` }
-            : null;
+            : buildGenericRouteSeo(pathname);
 
   await writeFile(outputPath, routeSeo ? applySeo(template, routeSeo) : template, 'utf8');
   created += 1;
