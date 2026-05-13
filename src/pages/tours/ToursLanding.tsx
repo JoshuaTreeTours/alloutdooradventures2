@@ -367,9 +367,9 @@ export default function ToursLanding() {
 
     if (selectedCity) {
       return {
-        title: `Best Tours in ${selectedCity.name} | Outdoor Adventures`,
+        title: `Top Tours in ${selectedCity.name} | All Outdoor Adventures`,
         h1: `Best Tours in ${selectedCity.name}`,
-        intro: `Explore tours and outdoor adventures in ${selectedCity.name}, ${selectedState?.name ?? "United States"}. From San Andreas Fault jeep tours and desert hiking experiences to scenic excursions and small-group adventures, these tours make it easy to discover the landscapes and natural history of the region.`,
+        intro: `Browse top-rated tours, outdoor adventures, cruises, and local experiences in ${selectedCity.name}, ${selectedState?.name ?? "United States"}.`,
       };
     }
 
