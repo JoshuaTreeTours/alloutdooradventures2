@@ -67,6 +67,10 @@ if (exists("scripts/verify-engine6-route-seo.mjs")) {
   run("node scripts/verify-engine6-route-seo.mjs");
 }
 
+if (exists("scripts/verify-destination-route-seo.mjs")) {
+  run("node scripts/verify-destination-route-seo.mjs");
+}
+
 if (exists("scripts/verify-no-seo-placeholders.mjs")) {
   run("node scripts/verify-no-seo-placeholders.mjs");
 }
