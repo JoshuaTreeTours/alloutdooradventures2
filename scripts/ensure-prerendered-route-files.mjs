@@ -178,7 +178,13 @@ let created = 0;
 for (const pathname of paths) {
   const outputPath = buildOutputPath(pathname);
   if (outputPath === templatePath) continue;
-  try { const s = await stat(outputPath); if (s.isFile()) continue; } catch {}
+  let existingHtml = null;
+  try {
+    const s = await stat(outputPath);
+    if (s.isFile()) {
+      existingHtml = await readFile(outputPath, 'utf8');
+    }
+  } catch {}
   await mkdir(path.dirname(outputPath), { recursive: true });
 
   const detailSeo = seoByPath.get(pathname);
@@ -186,7 +192,12 @@ for (const pathname of paths) {
     ? { title: detailSeo.title, description: detailSeo.description, url: `${SITE}${detailSeo.url}`, image: detailSeo.image }
     : buildGenericRouteSeo(pathname);
 
-  await writeFile(outputPath, routeSeo ? applySeo(template, routeSeo) : template, 'utf8');
+  if (!routeSeo && existingHtml) {
+    continue;
+  }
+
+  const sourceHtml = existingHtml ?? template;
+  await writeFile(outputPath, routeSeo ? applySeo(sourceHtml, routeSeo) : template, 'utf8');
   created += 1;
 }
 

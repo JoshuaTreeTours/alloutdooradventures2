@@ -27,5 +27,9 @@ for(const file of files){
   if(c && ld && !ld.includes(c)) failures.push(`${route}:jsonld-url-mismatch`);
   if(html.includes('__SEO_')) failures.push(`${route}:placeholder`);
 }
-if(failures.length){console.error('[verify-route-head-identity]\n'+failures.slice(0,200).join('\n'));process.exit(1);} 
+if(failures.length){
+  console.error('[verify-route-head-identity]');
+  failures.slice(0,200).forEach(f=>console.error(f));
+  process.exit(1);
+} 
 console.log(`[verify-route-head-identity] verified ${files.length} route files.`);
