@@ -15,14 +15,68 @@ const buildOutputPath = (pathname) => {
 
 const titleCase = value => value.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 
-const setMetaByAttr = (html, attr, name, value) => {
-  const re = new RegExp(`<meta[^>]*${attr}=["']${name}["'][^>]*>`, 'i');
-  return html.replace(re, `<meta ${attr}="${name}" content="${value}" />`);
-};
-
-
 const buildGenericRouteSeo = (pathname) => {
-  if (pathname === '/' || pathname === '') return null;
+  if (!pathname || pathname === '/') return null;
+
+  const guidesCity = /^\/guides\/us\/([^/]+)\/([^/]+)$/.exec(pathname);
+  if (guidesCity) {
+    const state = titleCase(guidesCity[1]);
+    const city = titleCase(guidesCity[2]);
+    return {
+      title: `${city} Travel Guide | All Outdoor Adventures`,
+      description: `Explore travel guides, outdoor activities, tours, neighborhoods, and local experiences in ${city}, ${state}.`,
+      url: `${SITE}${pathname}`,
+      image: `${SITE}/hero.jpg`,
+    };
+  }
+
+  const destinationState = /^\/destinations\/([^/]+)$/.exec(pathname);
+  if (destinationState) {
+    const state = titleCase(destinationState[1]);
+    return {
+      title: `${state} Destinations | All Outdoor Adventures`,
+      description: `Discover outdoor adventures, tours, and travel destinations throughout ${state}.`,
+      url: `${SITE}${pathname}`,
+      image: `${SITE}/hero.jpg`,
+    };
+  }
+
+  const cityTours = /^\/destinations\/([^/]+)\/([^/]+)\/tours$/.exec(pathname);
+  if (cityTours) {
+    const state = titleCase(cityTours[1]);
+    const city = titleCase(cityTours[2]);
+    const description = city.toLowerCase() === 'san francisco'
+      ? `Discover sightseeing tours, cruises, food experiences, outdoor adventures, and attractions in ${city}.`
+      : `Explore top-rated tours, outdoor adventures, cruises, attractions, and experiences in ${city}, ${state}.`;
+    return {
+      title: `${city} Tours & Activities | All Outdoor Adventures`,
+      description,
+      url: `${SITE}${pathname}`,
+      image: `${SITE}/hero.jpg`,
+    };
+  }
+
+  const cityPage = /^\/destinations\/([^/]+)\/([^/]+)$/.exec(pathname);
+  if (cityPage) {
+    const state = titleCase(cityPage[1]);
+    const city = titleCase(cityPage[2]);
+    return {
+      title: `${city}, ${state} Outdoor Guide | All Outdoor Adventures`,
+      description: `Discover outdoor adventures, things to do, and travel experiences in ${city}, ${state}.`,
+      url: `${SITE}${pathname}`,
+      image: `${SITE}/hero.jpg`,
+    };
+  }
+
+  if (pathname === '/destinations') {
+    return {
+      title: 'Destinations | All Outdoor Adventures',
+      description: 'Browse destination guides and outdoor tours by state and city.',
+      url: `${SITE}${pathname}`,
+      image: `${SITE}/hero.jpg`,
+    };
+  }
+
   const segments = pathname.replace(/^\/+|\/+$/g, '').split('/').filter(Boolean);
   if (!segments.length) return null;
   const label = segments.map(titleCase).join(' / ');
@@ -32,6 +86,11 @@ const buildGenericRouteSeo = (pathname) => {
     url: `${SITE}${pathname}`,
     image: `${SITE}/hero.jpg`,
   };
+};
+
+const setMetaByAttr = (html, attr, name, value) => {
+  const re = new RegExp(`<meta[^>]*${attr}=["']${name}["'][^>]*>`, 'i');
+  return html.replace(re, `<meta ${attr}="${name}" content="${value}" />`);
 };
 
 const applySeo = (html, { title, description, url, image }) => {
@@ -85,21 +144,9 @@ for (const pathname of paths) {
   await mkdir(path.dirname(outputPath), { recursive: true });
 
   const detailSeo = seoByPath.get(pathname);
-  const listMatch = /^\/destinations\/([^/]+)\/([^/]+)\/tours$/.exec(pathname);
-  const cityMatch = /^\/destinations\/([^/]+)\/([^/]+)$/.exec(pathname);
-  const stateMatch = /^\/destinations\/([^/]+)$/.exec(pathname);
-
   const routeSeo = detailSeo
     ? { title: detailSeo.title, description: detailSeo.description, url: `${SITE}${detailSeo.url}`, image: detailSeo.image }
-    : listMatch
-      ? { title: `${titleCase(listMatch[2])} Tours & Activities`, description: `Explore outdoor tours and activities in ${titleCase(listMatch[2])} with All Outdoor Adventures.`, url: `${SITE}${pathname}`, image: `${SITE}/hero.jpg` }
-      : cityMatch
-        ? { title: `${titleCase(cityMatch[2])}, ${titleCase(cityMatch[1])} Outdoor Guide`, description: `Discover outdoor adventures, things to do, and tours in ${titleCase(cityMatch[2])}, ${titleCase(cityMatch[1])}.`, url: `${SITE}${pathname}`, image: `${SITE}/hero.jpg` }
-        : stateMatch
-          ? { title: `${titleCase(stateMatch[1])} Outdoor Destinations & Tours`, description: `Explore outdoor destinations, city guides, and tours across ${titleCase(stateMatch[1])}.`, url: `${SITE}${pathname}`, image: `${SITE}/hero.jpg` }
-          : pathname === '/destinations'
-            ? { title: 'Destinations | All Outdoor Adventures', description: 'Browse destination guides and outdoor tours by state and city.', url: `${SITE}${pathname}`, image: `${SITE}/hero.jpg` }
-            : buildGenericRouteSeo(pathname);
+    : buildGenericRouteSeo(pathname);
 
   await writeFile(outputPath, routeSeo ? applySeo(template, routeSeo) : template, 'utf8');
   created += 1;
