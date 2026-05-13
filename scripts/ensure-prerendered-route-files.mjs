@@ -33,8 +33,12 @@ const applySeo = (html, { title, description, url, image }) => {
   out = setMetaByAttr(out, 'name', 'twitter:description', description);
   out = setMetaByAttr(out, 'name', 'twitter:image', image);
   out = out.replace(/<link[^>]*rel=["']canonical["'][^>]*>/i, `<link rel="canonical" href="${url}" />`);
-  const ld = `<script id="structured-data" type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebPage', url, name: title, description, image }).replace(/</g,'\\u003c')}</script>`;
-  out = out.replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/i, ld);
+  const ld = `<script id="structured-data" type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebPage', '@id': url, url, name: title, description, image }).replace(/</g,'\\u003c')}</script>`;
+  if (/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/i.test(out)) {
+    out = out.replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/i, ld);
+  } else {
+    out = out.replace('</head>', `${ld}</head>`);
+  }
   return out;
 };
 
@@ -57,6 +61,7 @@ const seoByPath = new Map(engine6Tours.map(t => [t.canonicalPath, buildEngine6Se
 
 const expandedPathnames = new Set();
 for (const url of urls) expandedPathnames.add(new URL(url).pathname);
+for (const tour of engine6Tours) expandedPathnames.add(tour.canonicalPath);
 
 let created = 0;
 for (const pathname of expandedPathnames) {

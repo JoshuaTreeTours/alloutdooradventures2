@@ -15,12 +15,13 @@ const failures = [];
 for (const tour of tours.slice(0, 2000)) {
   const p = path.join(dist, tour.canonicalPath.replace(/^\//,''), 'index.html');
   let html;
-  try { html = await readFile(p, 'utf8'); } catch { continue; }
+  try { html = await readFile(p, 'utf8'); } catch { failures.push(`${tour.canonicalPath}:missing-file`); continue; }
   const seo = buildEngine6Seo(tour);
   const expectedUrl = `https://www.alloutdooradventures.com${tour.canonicalPath}`;
   if (!html.includes(`<title>${seo.title}</title>`) || html.includes(`<title>${HOME_TITLE}</title>`)) failures.push(`${tour.canonicalPath}:title`);
   if (!html.includes(`rel="canonical" href="${expectedUrl}"`) || html.includes(`rel="canonical" href="${HOME_CANONICAL}"`)) failures.push(`${tour.canonicalPath}:canonical`);
-  if (!html.includes(`property="og:url" content="${expectedUrl}"`)) failures.push(`${tour.canonicalPath}:og:url`);
+  if (!html.includes(`property=\"og:url\" content=\"${expectedUrl}\"`)) failures.push(`${tour.canonicalPath}:og:url`);
+  if (!html.includes('application/ld+json') || !html.includes(expectedUrl)) failures.push(`${tour.canonicalPath}:jsonld`);
 }
 
 if (failures.length) {
