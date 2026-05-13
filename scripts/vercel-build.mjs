@@ -59,6 +59,10 @@ if (exists("scripts/fix-root-index-seo.mjs")) {
   run("node scripts/fix-root-index-seo.mjs");
 }
 
+if (exists("scripts/ensure-prerendered-route-files.mjs")) {
+  run("node scripts/ensure-prerendered-route-files.mjs");
+}
+
 if (exists("scripts/verify-no-seo-placeholders.mjs")) {
   run("node scripts/verify-no-seo-placeholders.mjs");
 }
