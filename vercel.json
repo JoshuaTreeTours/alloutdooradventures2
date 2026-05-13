@@ -343,10 +343,6 @@
         }
       ],
       "destination": "/api/og?path=/destinations/:state/:rest*/tours/:slug*"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }

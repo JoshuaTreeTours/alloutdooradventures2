@@ -20,13 +20,17 @@ function exists(path) {
 BUILD FLOW
 
 preview:
-  vite only (fast, reliable)
+  vite
+  prerender
 
 production:
   enrichment
   sitemap
   vite
   prerender
+
+all envs:
+  seo placeholder artifact verification
 */
 
 if (!isPreview && exists("scripts/generate-tour-enrichment.mjs")) {
@@ -35,18 +39,22 @@ if (!isPreview && exists("scripts/generate-tour-enrichment.mjs")) {
   console.log("Skipping tour enrichment.");
 }
 
-if (!isPreview && exists("scripts/generate-sitemap.mjs")) {
-  run("node scripts/generate-sitemap.mjs");
-}
-
 run("vite build");
+
+if (exists("scripts/generate-sitemap.mjs")) {
+  run("SITEMAP_WRITE=1 node scripts/generate-sitemap.mjs");
+}
 
 if (isPreview) {
   run("tsx scripts/verify-engine6-preview.ts");
 }
 
-if (!isPreview && exists("scripts/run-prerender.mjs")) {
+if (exists("scripts/run-prerender.mjs")) {
   run("node scripts/run-prerender.mjs");
 } else {
   console.log("Skipping prerender.");
+}
+
+if (exists("scripts/verify-no-seo-placeholders.mjs")) {
+  run("node scripts/verify-no-seo-placeholders.mjs");
 }

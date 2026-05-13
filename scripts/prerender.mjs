@@ -206,7 +206,10 @@ const readSitemapUrls = async () => {
     const locPattern = /<loc>(.*?)<\/loc>/g;
     let match = locPattern.exec(contents);
     while (match) {
-      urls.add(match[1]);
+      const loc = match[1];
+      if (!/\.xml$/i.test(loc)) {
+        urls.add(loc);
+      }
       match = locPattern.exec(contents);
     }
   }
