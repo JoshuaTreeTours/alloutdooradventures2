@@ -606,29 +606,35 @@ const extractProductUrl = (product: RecordLike) => {
 };
 
 const extractPlaybookPrice = (product: RecordLike): PriceResult => {
+  type PriceCandidate = { amount: number | null; path: string; rawValue: string | number | null };
+  type ValidPriceCandidate = { amount: number; path: string; rawValue: string | number | null };
+
   const collectPathCandidates = (
     paths: PathSegment[][]
-  ): Array<{ amount: number; path: string; rawValue: unknown }> =>
+  ): ValidPriceCandidate[] =>
     paths
       .map(path => {
         const raw = readPath(product, path);
         const amount = parsePriceAmount(raw);
-        return {
+        const candidate: PriceCandidate = {
           amount,
           path: formatFieldPath(path),
           rawValue:
-            typeof raw === "string" || typeof raw === "number" ? raw : amount,
+            typeof raw === "string" || typeof raw === "number"
+              ? raw
+              : typeof amount === "number"
+                ? amount
+                : null,
         };
+        return candidate;
       })
       .filter(
-        (
-          candidate
-        ): candidate is { amount: number; path: string; rawValue: unknown } =>
+        (candidate): candidate is ValidPriceCandidate =>
           candidate.amount !== null && Number.isFinite(candidate.amount) && candidate.amount > 0
       );
 
   const selectLowestCandidate = (
-    candidates: Array<{ amount: number; path: string; rawValue: unknown }>
+    candidates: ValidPriceCandidate[]
   ): PriceResult | null => {
     if (candidates.length === 0) {
       return null;
@@ -1277,11 +1283,13 @@ const extractMeetingPoint = (product: RecordLike) => {
 
   for (const candidate of [
     {
-      value:
-        asRecord(asRecord(product.logistics)?.start)?.description ??
-        (Array.isArray(asRecord(product.logistics)?.start)
-          ? asRecord(asRecord(product.logistics)?.start?.[0])?.description
-          : null),
+      value: (() => {
+        const logisticsStart = asRecord(product.logistics)?.start;
+        if (Array.isArray(logisticsStart)) {
+          return asRecord(logisticsStart[0])?.description ?? null;
+        }
+        return asRecord(logisticsStart)?.description ?? null;
+      })(),
       path: "product.logistics.start[0].description",
     },
     {
