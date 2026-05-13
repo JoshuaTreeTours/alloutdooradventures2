@@ -367,9 +367,9 @@ export default function ToursLanding() {
 
     if (selectedCity) {
       return {
-        title: `${selectedCity.name} Tours & Activities | All Outdoor Adventures`,
+        title: `Top Tours in ${selectedCity.name} | All Outdoor Adventures`,
         h1: `Best Tours in ${selectedCity.name}`,
-        intro: `Browse ${selectedCity.name} tours, outdoor adventures, cruises, attractions, and local experiences from trusted tour providers.`,
+        intro: `Browse top-rated tours, outdoor adventures, cruises, and local experiences in ${selectedCity.name}, ${selectedState?.name ?? "United States"}.`,
       };
     }
 
@@ -396,6 +396,14 @@ export default function ToursLanding() {
         "Browse tours and outdoor adventures by state, city, or country to find experiences that fit your destination and travel style.",
     };
   }, [inventoryType, selectedCity, selectedCountry, selectedState]);
+
+  const seoUrl = useMemo(() => {
+    if (selectedState && selectedCity) {
+      return `/destinations/${selectedState.slug}/${selectedCity.slug}/tours`;
+    }
+
+    return seo?.url;
+  }, [seo?.url, selectedCity, selectedState]);
 
   const cityGuideRecord = useMemo(() => {
     if (!selectedState || !selectedCity) {
@@ -518,7 +526,7 @@ export default function ToursLanding() {
         <Seo
           title={pageContent.title}
           description={pageContent.intro}
-          url={seo.url}
+          url={seoUrl}
           image={seo.image}
         />
       ) : null}
