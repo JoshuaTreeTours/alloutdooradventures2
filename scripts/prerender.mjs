@@ -632,6 +632,85 @@ const verifyPrerenderedPage = async ({
   }
 };
 
+
+const collectHtmlFiles = async dir => {
+  const entries = await readdir(dir, { withFileTypes: true });
+  const files = [];
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...(await collectHtmlFiles(fullPath)));
+      continue;
+    }
+    if (entry.isFile() && entry.name.endsWith('.html')) {
+      files.push(fullPath);
+    }
+  }
+  return files;
+};
+
+const assertNoUnresolvedSeoPlaceholders = async () => {
+  const htmlFiles = await collectHtmlFiles(distDir);
+  const failures = [];
+
+  for (const file of htmlFiles) {
+    const html = await readFile(file, 'utf8');
+    const matches = html.match(/__SEO_[A-Z0-9_]+__/g);
+    if (matches?.length) {
+      failures.push({
+        file: path.relative(distDir, file) || 'index.html',
+        tokens: Array.from(new Set(matches)).sort(),
+      });
+    }
+  }
+
+  if (failures.length) {
+    const details = failures
+      .map(({ file, tokens }) => `${file}: ${tokens.join(', ')}`)
+      .join("\n");
+    throw new Error(
+      `[prerender] Unresolved SEO placeholders detected in dist HTML:\n${details}`
+    );
+  }
+};
+
+const parseStructuredDataFromHtml = html => {
+  const match = html.match(
+    /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/i
+  );
+  if (!match?.[1]) {
+    return null;
+  }
+
+  try {
+    return JSON.parse(match[1]);
+  } catch {
+    return null;
+  }
+};
+
+const getBreadcrumbLastItemUrl = structuredData => {
+  const graph = Array.isArray(structuredData?.['@graph'])
+    ? structuredData['@graph']
+    : [];
+  const breadcrumb = graph.find(node => node?.['@type'] === 'BreadcrumbList');
+  const list = Array.isArray(breadcrumb?.itemListElement)
+    ? breadcrumb.itemListElement
+    : [];
+  const last = list[list.length - 1];
+  return last?.item ?? null;
+};
+
+const getWebPageNode = structuredData => {
+  const graph = Array.isArray(structuredData?.['@graph'])
+    ? structuredData['@graph']
+    : [];
+  return graph.find(node => {
+    const type = node?.['@type'];
+    return type === 'WebPage' || (Array.isArray(type) && type.includes('WebPage'));
+  });
+};
+
 const safeImport = async (importPath, label) => {
   try {
     return await tsImport(importPath, import.meta.url);
@@ -1326,6 +1405,54 @@ const main = async () => {
   }
 
   await writeSchemaMissingGeoReport();
+
+  const requiredVerificationPaths = [
+    '/',
+    '/guides',
+    '/guides/us/california/san-francisco',
+    '/guides/us/california/napa',
+    '/destinations',
+    '/destinations/california/san-diego/tours',
+    '/destinations/california/san-diego/tours/sample-tour',
+    '/tours',
+    '/about',
+    '/contact',
+  ];
+
+  for (const requiredPath of requiredVerificationPaths) {
+    const routeUrl = buildCanonicalUrl(requiredPath);
+    if (!urlsToRender.has(routeUrl)) {
+      continue;
+    }
+    const htmlPath = buildOutputPath(requiredPath).outputPath;
+    const html = await readFile(htmlPath, 'utf8');
+    const canonicalHref = extractAttribute(findTag(html, 'link', 'rel', 'canonical'), 'href');
+    const ogUrl = extractAttribute(findTag(html, 'meta', 'property', 'og:url'), 'content');
+    const structuredData = parseStructuredDataFromHtml(html);
+    const webPage = getWebPageNode(structuredData);
+    const webPageUrl = webPage?.url ?? null;
+    const webPageId = webPage?.['@id'] ?? null;
+    const breadcrumbLastItem = getBreadcrumbLastItemUrl(structuredData);
+
+    const expectedCanonical = buildCanonicalUrl(requiredPath);
+    const expectedWebPageId = `${expectedCanonical}#webpage`;
+
+    const expectedSitemapLoc = urls.includes(expectedCanonical) ? expectedCanonical : null;
+
+    const mismatches = [];
+    if (canonicalHref !== expectedCanonical) mismatches.push(`canonical=${canonicalHref ?? 'missing'}`);
+    if (ogUrl !== expectedCanonical) mismatches.push(`og:url=${ogUrl ?? 'missing'}`);
+    if (webPageUrl && webPageUrl !== expectedCanonical) mismatches.push(`WebPage.url=${webPageUrl}`);
+    if (webPageId && webPageId !== expectedWebPageId) mismatches.push(`WebPage.@id=${webPageId}`);
+    if (breadcrumbLastItem && breadcrumbLastItem !== expectedCanonical) mismatches.push(`breadcrumb=${breadcrumbLastItem}`);
+    if (expectedSitemapLoc && expectedSitemapLoc !== expectedCanonical) mismatches.push(`sitemap.loc=${expectedSitemapLoc}`);
+
+    if (mismatches.length) {
+      throw new Error(`[prerender] Canonical alignment failed for ${requiredPath}: ${mismatches.join(', ')}`);
+    }
+  }
+
+  await assertNoUnresolvedSeoPlaceholders();
 
   for (const target of verificationTargets) {
     if (!target.url) {
