@@ -58,10 +58,16 @@ const engine6SeoMod = await tsImport('../src/engine6/seo.ts', import.meta.url);
 const engine6Tours = Array.isArray(engine6Registry.engine6ResolvedTours) ? engine6Registry.engine6ResolvedTours : [];
 const buildEngine6Seo = engine6SeoMod.buildEngine6Seo;
 const seoByPath = new Map(engine6Tours.map(t => [t.canonicalPath, buildEngine6Seo(t)]));
+const engine6ListingPaths = new Set();
 
 const expandedPathnames = new Set();
 for (const url of urls) expandedPathnames.add(new URL(url).pathname);
-for (const tour of engine6Tours) expandedPathnames.add(tour.canonicalPath);
+for (const tour of engine6Tours) {
+  expandedPathnames.add(tour.canonicalPath);
+  const listing = tour.canonicalPath.match(/^\/destinations\/([^/]+)\/([^/]+)\/tours\/[^/]+$/);
+  if (listing) engine6ListingPaths.add(`/destinations/${listing[1]}/${listing[2]}/tours`);
+}
+for (const listingPath of engine6ListingPaths) expandedPathnames.add(listingPath);
 
 let created = 0;
 for (const pathname of expandedPathnames) {
@@ -72,6 +78,15 @@ for (const pathname of expandedPathnames) {
   if (exists) continue;
   await mkdir(path.dirname(outputPath), { recursive: true });
   const engine6Seo = seoByPath.get(pathname);
+  const listingMatch = pathname.match(/^\/destinations\/([^/]+)\/([^/]+)\/tours$/);
+  const listingSeo = listingMatch
+    ? {
+        title: `${listingMatch[2].replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())} Tours & Activities`,
+        description: `Explore outdoor tours and activities in ${listingMatch[2].replace(/-/g, " ")} with All Outdoor Adventures.`,
+        url: `${SITE}${pathname}`,
+        image: `${SITE}/hero.jpg`,
+      }
+    : null;
   const html = engine6Seo
     ? applySeo(template, {
         title: engine6Seo.title,
@@ -79,7 +94,9 @@ for (const pathname of expandedPathnames) {
         url: `${SITE}${engine6Seo.url}`,
         image: engine6Seo.image,
       })
-    : template;
+    : listingSeo
+      ? applySeo(template, listingSeo)
+      : template;
   await writeFile(outputPath, html, 'utf8');
   created += 1;
 }
