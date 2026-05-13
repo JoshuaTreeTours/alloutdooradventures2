@@ -25,14 +25,15 @@ const template = await readFile(templatePath, 'utf8');
 
 const expandedPathnames = new Set();
 for (const url of urls) {
-  const pathname = new URL(url).pathname;
-  expandedPathnames.add(pathname);
-  const match = pathname.match(/^\/tours\/([^/]+)\/([^/]+)\/([^/]+)$/);
+  const rawPathname = new URL(url).pathname;
+  const match = rawPathname.match(/^\/tours\/([^/]+)\/([^/]+)\/([^/]+)$/);
   if (match) {
     const [, state, city, slug] = match;
     expandedPathnames.add(`/destinations/${state}/${city}/tours/${slug}`);
     expandedPathnames.add(`/destinations/${state}/${city}/tours/${slug}/book`);
+    continue;
   }
+  expandedPathnames.add(rawPathname);
 }
 
 let created = 0;
