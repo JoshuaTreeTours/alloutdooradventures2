@@ -55,8 +55,8 @@ export default function CanadaCityRoute({ params }: Props) {
   return (
     <main className="mx-auto max-w-6xl px-6 py-12">
       <Seo
-        title={`${city}, ${provinceName} Tours | Canada`}
-        description={`Explore tours in ${city}, ${provinceName}.`}
+        title={`${city} Tours & Activities | Canada`}
+        description={`Find tours in ${city}, ${provinceName}, including outdoor adventures, attractions, and guided experiences matched to your travel plans.`}
       />
       <h1 className="text-3xl font-semibold">{city} tours</h1>
       <section className="mt-8">

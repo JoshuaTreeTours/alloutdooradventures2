@@ -63,7 +63,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
     ? buildCityGuideIntroParagraphs(guide.city)
     : { primary: guide.hero.subheadline, secondary: "" };
   const seoDescription = guide.city
-    ? `Explore ${guide.city} travel guides, outdoor activities, attractions, and curated local experiences.`
+    ? `Plan your ${guide.city} trip with travel tips, top attractions, outdoor activities, and curated local experiences.`
     : guide.overview[0];
   const urlPath = `/${guide.slug.replace(/^\/+/, "")}`;
   const sameAs = getValidSameAsLinks(guide);

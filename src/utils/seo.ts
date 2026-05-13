@@ -53,7 +53,7 @@ export const STATIC_PAGE_SEO: Record<string, StaticSeoEntry> = {
   "/guides": {
     title: `Travel Guides | ${SITE_BRAND_NAME}`,
     description:
-      "Explore travel guides, outdoor activities, attractions, and curated local experiences across top adventure destinations.",
+      "Plan trips with destination travel guides, attractions, outdoor activities, and local experiences across top adventure spots.",
   },
   "/guides/us": {
     title: `US Guides | ${SITE_BRAND_NAME}`,
@@ -77,7 +77,7 @@ export const STATIC_PAGE_SEO: Record<string, StaticSeoEntry> = {
   },
   "/about": {
     title: `About ${SITE_BRAND_NAME} | Tours & Travel Guides`,
-    description: `Learn about All Outdoor Adventures, a marketplace for outdoor tours, travel guides, activities, and curated local experiences.`,
+    description: `Learn how All Outdoor Adventures helps travelers compare trusted tours, use practical guides, and book memorable outdoor experiences.`,
   },
 };
 
@@ -109,7 +109,7 @@ export const buildMetaDescription = (
 
   if (composed.length < minLength) {
     composed =
-      `${composed} Explore curated tours, local guides, and outdoor experiences.`.trim();
+      `${composed} Discover curated tours, local guides, and outdoor experiences.`.trim();
   }
 
   return clampDescription(composed);

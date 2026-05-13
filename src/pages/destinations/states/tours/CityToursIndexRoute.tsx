@@ -140,8 +140,8 @@ export default function CityToursIndexRoute({
     ? buildCategoryH1({ city: cityLabel, activity: activityLabel })
     : `All Tours in ${cityLabel}`;
   const pageIntro = isUsCityRoute
-    ? `Explore ${cityLabel} tours, activities, outdoor adventures, attractions, and curated local experiences.`
-    : `Explore tours and activities in ${cityLabel}, ${regionLabel}. From guided city experiences and cultural outings to day trips and outdoor adventures, these tours help travelers discover the destination with ease.`;
+    ? `Browse ${cityLabel} tours, activities, outdoor adventures, attractions, and curated local experiences from trusted providers.`
+    : `Find tours and activities in ${cityLabel}, ${regionLabel}, including guided city experiences, day trips, and outdoor adventures tailored to your travel plans.`;
   const guideRecord =
     isUsCityRoute && !state.isFallback
       ? getGuideRecord(state.slug, city.slug)
