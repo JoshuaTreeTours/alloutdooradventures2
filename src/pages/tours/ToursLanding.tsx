@@ -397,14 +397,6 @@ export default function ToursLanding() {
     };
   }, [inventoryType, selectedCity, selectedCountry, selectedState]);
 
-  const seoUrl = useMemo(() => {
-    if (selectedState && selectedCity) {
-      return `/destinations/${selectedState.slug}/${selectedCity.slug}/tours`;
-    }
-
-    return seo?.url;
-  }, [seo?.url, selectedCity, selectedState]);
-
   const cityGuideRecord = useMemo(() => {
     if (!selectedState || !selectedCity) {
       return null;
@@ -526,7 +518,7 @@ export default function ToursLanding() {
         <Seo
           title={pageContent.title}
           description={pageContent.intro}
-          url={seoUrl}
+          url={seo.url}
           image={seo.image}
         />
       ) : null}
