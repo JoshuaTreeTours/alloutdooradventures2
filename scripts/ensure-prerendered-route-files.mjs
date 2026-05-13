@@ -15,6 +15,10 @@ const buildOutputPath = (pathname) => {
 
 const titleCase = value => value.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 
+const isTemporarilyExcludedRoute = (pathname) =>
+  pathname.startsWith('/destinations/california/perris/tours/');
+
+
 const buildGenericRouteSeo = (pathname) => {
   if (!pathname || pathname === '/') return null;
 
@@ -180,6 +184,8 @@ for (const tour of engine6Tours) {
 
 let created = 0;
 for (const pathname of paths) {
+  // TODO: temporary exclusion pending Perris artifact identity cleanup.
+  if (isTemporarilyExcludedRoute(pathname)) continue;
   const outputPath = buildOutputPath(pathname);
   if (outputPath === templatePath) continue;
   let existingHtml = null;
