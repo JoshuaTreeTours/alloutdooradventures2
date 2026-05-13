@@ -85,6 +85,11 @@ const buildCanonicalTourPath = (tour, catalogModule) => {
       tour?.url,
   );
   if (canonicalPath && canonicalPath !== "/") {
+    const legacyMatch = canonicalPath.match(/^\/tours\/([^/]+)\/([^/]+)\/([^/]+)\/?$/);
+    if (legacyMatch) {
+      const [, stateSlug, citySlug, slug] = legacyMatch;
+      return `/destinations/${stateSlug}/${citySlug}/tours/${slug}`;
+    }
     return canonicalPath;
   }
 
@@ -112,7 +117,7 @@ const buildCanonicalTourPath = (tour, catalogModule) => {
     return null;
   }
 
-  return `/tours/${stateSlug}/${citySlug}/${slug}`;
+  return `/destinations/${stateSlug}/${citySlug}/tours/${slug}`;
 };
 
 const listUsGuideCitiesByState = async () => {
@@ -752,7 +757,8 @@ const buildSitemap = async () => {
       buildAmsterdamSitemapFallbackTours(catalogModule),
     ]);
     [...mexicoFallbackTours, ...hawaiiFallbackTours, ...amsterdamFallbackTours].forEach((tour) => {
-      addUrl(toursUrls, tour.seo.canonicalPath);
+      const tourPath = buildCanonicalTourPath(tour, catalogModule);
+      if (tourPath) addUrl(toursUrls, tourPath);
     });
   }
   if (Array.isArray(flagstaffModule.flagstaffTours)) {
