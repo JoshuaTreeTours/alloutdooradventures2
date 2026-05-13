@@ -142,20 +142,12 @@ const applySeo = (html, { title, description, url, image }) => {
   out = setMetaByAttr(out, 'name', 'twitter:description', description);
   out = setMetaByAttr(out, 'name', 'twitter:image', image);
   out = out.replace(/<link[^>]*rel=["']canonical["'][^>]*>/i, `<link rel="canonical" href="${url}" />`);
+
+  // Remove all pre-existing JSON-LD blocks on non-home routes to prevent stale homepage identity leaks.
+  out = out.replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, '');
+
   const ld = `<script id="structured-data" type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebPage', '@id': url, url, name: title, description, image }).replace(/</g, '\\u003c')}</script>`;
-  if (/application\/ld\+json/i.test(out)) {
-    out = out.replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, script => {
-      // Preserve non-WebPage schema blocks, but normalize any WebPage identity to route URL.
-      if (/@type"\s*:\s*"WebPage"|@type\s*"?\s*:\s*"WebPage"|"@type"\s*:\s*"WebPage"/i.test(script) || /"WebPage"/i.test(script)) {
-        return ld;
-      }
-      return script
-        .replace(/https:\/\/www\.alloutdooradventures\.com\//g, url)
-        .replace(/https:\/\/www\.alloutdooradventures\.com(?="|\s|,|})/g, url);
-    });
-  } else {
-    out = out.replace('</head>', `${ld}</head>`);
-  }
+  out = out.replace('</head>', `${ld}</head>`);
   return out;
 };
 
