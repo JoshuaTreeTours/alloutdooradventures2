@@ -8,7 +8,6 @@ function run(cmd) {
 
 const VERCEL_ENV = (process.env.VERCEL_ENV || "").toLowerCase();
 const isPreview = VERCEL_ENV === "preview";
-const isProd = VERCEL_ENV === "production";
 
 console.log("VERCEL_ENV:", VERCEL_ENV);
 
@@ -19,11 +18,8 @@ function exists(path) {
 /*
 BUILD FLOW
 
-preview:
-  vite only (fast, reliable)
-
-production:
-  enrichment
+preview/production:
+  enrichment (production only)
   sitemap
   vite
   prerender
@@ -35,7 +31,7 @@ if (!isPreview && exists("scripts/generate-tour-enrichment.mjs")) {
   console.log("Skipping tour enrichment.");
 }
 
-if (!isPreview && exists("scripts/generate-sitemap.mjs")) {
+if (exists("scripts/generate-sitemap.mjs")) {
   run("node scripts/generate-sitemap.mjs");
 }
 
@@ -45,7 +41,7 @@ if (isPreview) {
   run("tsx scripts/verify-engine6-preview.ts");
 }
 
-if (!isPreview && exists("scripts/run-prerender.mjs")) {
+if (exists("scripts/run-prerender.mjs")) {
   run("node scripts/run-prerender.mjs");
 } else {
   console.log("Skipping prerender.");
