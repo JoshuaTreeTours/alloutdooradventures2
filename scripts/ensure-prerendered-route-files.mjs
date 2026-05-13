@@ -1,4 +1,4 @@
-import { mkdir, readdir, readFile, rm, stat, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, readFile, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { tsImport } from 'tsx/esm/api';
 
@@ -15,50 +15,8 @@ const buildOutputPath = (pathname) => {
 
 const titleCase = value => value.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 
-const isTemporarilyExcludedRoute = (pathname) =>
-  pathname.startsWith('/destinations/california/perris/tours/');
-
-
 const buildGenericRouteSeo = (pathname) => {
   if (!pathname || pathname === '/') return null;
-
-  if (pathname === '/guides') {
-    return {
-      title: 'Travel Guides | All Outdoor Adventures',
-      description: 'Explore destination travel guides, outdoor adventures, attractions, and curated experiences across top locations.',
-      url: `${SITE}${pathname}`,
-      image: `${SITE}/hero.jpg`,
-    };
-  }
-
-  const guidesState = /^\/guides\/us\/([^/]+)$/.exec(pathname);
-  if (guidesState) {
-    const state = titleCase(guidesState[1]);
-    return {
-      title: `${state} Travel Guides | All Outdoor Adventures`,
-      description: `Explore travel guides, attractions, outdoor activities, and local experiences throughout ${state}.`,
-      url: `${SITE}${pathname}`,
-      image: `${SITE}/hero.jpg`,
-    };
-  }
-
-  if (pathname === '/guides/us') {
-    return {
-      title: 'United States Travel Guides | All Outdoor Adventures',
-      description: 'Explore destination travel guides, attractions, outdoor activities, and local experiences across the United States.',
-      url: `${SITE}${pathname}`,
-      image: `${SITE}/hero.jpg`,
-    };
-  }
-
-  const staticPageSeo = {
-    '/faqs': ['FAQs | All Outdoor Adventures', 'Find answers about tours, bookings, planning, and outdoor adventure travel with All Outdoor Adventures.'],
-    '/about': ['About | All Outdoor Adventures', 'Learn about All Outdoor Adventures and how we curate outdoor tours, experiences, and destination guides.'],
-    '/contact': ['Contact | All Outdoor Adventures', 'Contact All Outdoor Adventures for help with tours, destination planning, and travel experiences.'],
-  };
-  if (staticPageSeo[pathname]) {
-    return { title: staticPageSeo[pathname][0], description: staticPageSeo[pathname][1], url: `${SITE}${pathname}`, image: `${SITE}/hero.jpg` };
-  }
 
   const guidesCity = /^\/guides\/us\/([^/]+)\/([^/]+)$/.exec(pathname);
   if (guidesCity) {
@@ -66,7 +24,7 @@ const buildGenericRouteSeo = (pathname) => {
     const city = titleCase(guidesCity[2]);
     return {
       title: `${city} Travel Guide | All Outdoor Adventures`,
-      description: `Explore travel guides, attractions, outdoor activities, neighborhoods, food experiences, and local adventures in ${city}, ${state}.`,
+      description: `Explore travel guides, outdoor activities, tours, neighborhoods, and local experiences in ${city}, ${state}.`,
       url: `${SITE}${pathname}`,
       image: `${SITE}/hero.jpg`,
     };
@@ -77,7 +35,7 @@ const buildGenericRouteSeo = (pathname) => {
     const state = titleCase(destinationState[1]);
     return {
       title: `${state} Destinations | All Outdoor Adventures`,
-      description: `Discover tours, outdoor adventures, attractions, and travel destinations throughout ${state}.`,
+      description: `Discover outdoor adventures, tours, and travel destinations throughout ${state}.`,
       url: `${SITE}${pathname}`,
       image: `${SITE}/hero.jpg`,
     };
@@ -113,7 +71,7 @@ const buildGenericRouteSeo = (pathname) => {
   if (pathname === '/destinations') {
     return {
       title: 'Destinations | All Outdoor Adventures',
-      description: 'Browse outdoor adventure destinations, tours, activities, and experiences throughout the United States.',
+      description: 'Browse destination guides and outdoor tours by state and city.',
       url: `${SITE}${pathname}`,
       image: `${SITE}/hero.jpg`,
     };
@@ -146,12 +104,8 @@ const applySeo = (html, { title, description, url, image }) => {
   out = setMetaByAttr(out, 'name', 'twitter:description', description);
   out = setMetaByAttr(out, 'name', 'twitter:image', image);
   out = out.replace(/<link[^>]*rel=["']canonical["'][^>]*>/i, `<link rel="canonical" href="${url}" />`);
-
-  // Remove all pre-existing JSON-LD blocks on non-home routes to prevent stale homepage identity leaks.
-  out = out.replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, '');
-
   const ld = `<script id="structured-data" type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebPage', '@id': url, url, name: title, description, image }).replace(/</g, '\\u003c')}</script>`;
-  out = out.replace('</head>', `${ld}</head>`);
+  out = /application\/ld\+json/i.test(out) ? out.replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/i, ld) : out.replace('</head>', `${ld}</head>`);
   return out;
 };
 
@@ -183,29 +137,10 @@ for (const tour of engine6Tours) {
 }
 
 let created = 0;
-
-let excludedCount = 0;
 for (const pathname of paths) {
-  if (!isTemporarilyExcludedRoute(pathname)) continue;
-  const outputPath = buildOutputPath(pathname);
-  try {
-    await rm(outputPath, { force: true });
-    excludedCount += 1;
-  } catch {}
-}
-
-for (const pathname of paths) {
-  // TODO: temporary exclusion pending Perris artifact identity cleanup.
-  if (isTemporarilyExcludedRoute(pathname)) continue;
   const outputPath = buildOutputPath(pathname);
   if (outputPath === templatePath) continue;
-  let existingHtml = null;
-  try {
-    const s = await stat(outputPath);
-    if (s.isFile()) {
-      existingHtml = await readFile(outputPath, 'utf8');
-    }
-  } catch {}
+  try { const s = await stat(outputPath); if (s.isFile()) continue; } catch {}
   await mkdir(path.dirname(outputPath), { recursive: true });
 
   const detailSeo = seoByPath.get(pathname);
@@ -213,14 +148,8 @@ for (const pathname of paths) {
     ? { title: detailSeo.title, description: detailSeo.description, url: `${SITE}${detailSeo.url}`, image: detailSeo.image }
     : buildGenericRouteSeo(pathname);
 
-  if (!routeSeo && existingHtml) {
-    continue;
-  }
-
-  const sourceHtml = existingHtml ?? template;
-  await writeFile(outputPath, routeSeo ? applySeo(sourceHtml, routeSeo) : template, 'utf8');
+  await writeFile(outputPath, routeSeo ? applySeo(template, routeSeo) : template, 'utf8');
   created += 1;
 }
 
-console.log(`[ensure-prerendered-route-files] excluded Perris routes: ${excludedCount}`);
-console.log(`[ensure-prerendered-route-files] created/updated route files: ${created}`);
+console.log(`[ensure-prerendered-route-files] created ${created} missing HTML files from sitemap URLs.`);

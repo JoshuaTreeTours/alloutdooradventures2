@@ -16,7 +16,6 @@ const EXCLUDED_PRODUCT_CODES = ["36001P1"];
 const EXCLUDED_TOUR_PATH_TOKENS = [
   ...EXCLUDED_PRODUCT_CODES.map((code) => code.toLowerCase()),
   "yosemite-in-a-day-tour-from-san-francisco",
-  "/destinations/california/perris/tours/",
 ];
 
 const ensurePath = (value) => {
