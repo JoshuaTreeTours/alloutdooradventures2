@@ -30,9 +30,12 @@ for(const file of files){
   if(c && ld && !ld.includes(c)) failures.push(`${route}:jsonld-url-mismatch`);
   if(html.includes('__SEO_')) failures.push(`${route}:placeholder`);
 }
-if(failures.length){
-  console.error('[verify-route-head-identity]');
-  failures.slice(0,200).forEach(f=>console.error(f));
+const remaining = failures.length;
+console.log(`[verify-route-head-identity] excluded Perris routes count: ${files.filter(file=>{const rel='/' + path.relative(dist,path.dirname(file)).replace(/\\/g,'/').replace(/(^|\/)index$/,'');const route=rel==='/'?'/':rel;return isTemporarilyExcludedRoute(route);}).length}`);
+console.log(`[verify-route-head-identity] remaining verifier failures: ${remaining}`);
+if(remaining){
+  console.error('[verify-route-head-identity] first 10 failures:');
+  failures.slice(0,10).forEach(f=>console.error(f));
   process.exit(1);
-} 
+}
 console.log(`[verify-route-head-identity] verified ${files.length} route files.`);

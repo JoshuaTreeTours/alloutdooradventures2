@@ -1,4 +1,4 @@
-import { mkdir, readdir, readFile, stat, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, readFile, rm, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { tsImport } from 'tsx/esm/api';
 
@@ -183,6 +183,17 @@ for (const tour of engine6Tours) {
 }
 
 let created = 0;
+
+let excludedCount = 0;
+for (const pathname of paths) {
+  if (!isTemporarilyExcludedRoute(pathname)) continue;
+  const outputPath = buildOutputPath(pathname);
+  try {
+    await rm(outputPath, { force: true });
+    excludedCount += 1;
+  } catch {}
+}
+
 for (const pathname of paths) {
   // TODO: temporary exclusion pending Perris artifact identity cleanup.
   if (isTemporarilyExcludedRoute(pathname)) continue;
@@ -211,4 +222,5 @@ for (const pathname of paths) {
   created += 1;
 }
 
-console.log(`[ensure-prerendered-route-files] created ${created} missing HTML files from sitemap URLs.`);
+console.log(`[ensure-prerendered-route-files] excluded Perris routes: ${excludedCount}`);
+console.log(`[ensure-prerendered-route-files] created/updated route files: ${created}`);
