@@ -8,8 +8,8 @@ import { SITE_BRAND_NAME } from "./site";
 export const SITE_URL = "https://www.alloutdooradventures.com";
 
 export const DEFAULT_SEO = {
-  title: `${SITE_BRAND_NAME} | Curated Tours & Experiences Worldwide`,
-  description: `Discover unforgettable outdoor adventures across the United States and beyond. From national park tours and desert safaris to sailing, hiking, and wildlife experiences, ${SITE_BRAND_NAME} curates the world’s best outdoor tours in one place.`,
+  title: `${SITE_BRAND_NAME} | Outdoor Tours, Activities & Travel Guides`,
+  description: `Discover outdoor tours, activities, travel guides, and curated local experiences across the United States and top adventure destinations worldwide.`,
   url: `${SITE_URL}/`,
   type: "website",
   image: "/hero.jpg",
@@ -28,7 +28,7 @@ export const STATIC_PAGE_SEO: Record<string, StaticSeoEntry> = {
   "/faqs": {
     title: `FAQs | ${SITE_BRAND_NAME}`,
     description:
-      "Get answers about booking, cancellations, and tour logistics so you can plan your outdoor adventure with confidence.",
+      "Get answers to common questions about booking, cancellations, policies, and tour logistics so you can plan with confidence.",
   },
   "/refund-policy": {
     title: `Refund & Cancellation Policy | ${SITE_BRAND_NAME}`,
@@ -36,9 +36,9 @@ export const STATIC_PAGE_SEO: Record<string, StaticSeoEntry> = {
       "Review the All Outdoor Adventures refund and cancellation policy for guided tours, cruises, sightseeing experiences, and activity bookings.",
   },
   "/contact": {
-    title: `Contact | ${SITE_BRAND_NAME}`,
+    title: `Contact ${SITE_BRAND_NAME} | Tours & Support`,
     description:
-      "Connect with our travel team to plan custom journeys, private group experiences, and curated outdoor tours.",
+      "Contact All Outdoor Adventures for tour support, booking questions, partnerships, and curated travel experience inquiries.",
   },
   "/tours": {
     title: `Tours | ${SITE_BRAND_NAME}`,
@@ -46,14 +46,14 @@ export const STATIC_PAGE_SEO: Record<string, StaticSeoEntry> = {
       "Navigate outdoor destinations by country or state and jump straight to local guides and tours.",
   },
   "/destinations": {
-    title: `Destinations | ${SITE_BRAND_NAME}`,
+    title: `Outdoor Adventure Destinations | ${SITE_BRAND_NAME}`,
     description:
-      "Explore curated outdoor destinations across the U.S. and preview upcoming international tour hubs.",
+      "Browse outdoor adventure destinations, tours, activities, and travel experiences across the United States.",
   },
   "/guides": {
-    title: `Guides | ${SITE_BRAND_NAME}`,
+    title: `Travel Guides | ${SITE_BRAND_NAME}`,
     description:
-      "Discover destination guides with expert insights to help you plan your next outdoor escape.",
+      "Explore travel guides, outdoor activities, attractions, and curated local experiences across top adventure destinations.",
   },
   "/guides/us": {
     title: `US Guides | ${SITE_BRAND_NAME}`,
@@ -76,8 +76,8 @@ export const STATIC_PAGE_SEO: Record<string, StaticSeoEntry> = {
       "Plan multi-day journeys and custom itineraries built around iconic landscapes and local expertise.",
   },
   "/about": {
-    title: `About | ${SITE_BRAND_NAME}`,
-    description: `Learn about the team behind ${SITE_BRAND_NAME} and our mission to curate unforgettable experiences.`,
+    title: `About ${SITE_BRAND_NAME} | Tours & Travel Guides`,
+    description: `Learn about All Outdoor Adventures, a marketplace for outdoor tours, travel guides, activities, and curated local experiences.`,
   },
 };
 

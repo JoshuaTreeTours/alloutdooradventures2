@@ -24,9 +24,6 @@ const pickCity = (tour: TourLike) => clean(tour.destination?.city) || "Unknown";
 
 const pickState = (tour: TourLike) => clean(tour.destination?.state) || "Unknown";
 
-
-const pickId = (tour: TourLike) => clean(tour.id) || clean(tour.partnerId) || "Unknown";
-
 const getTourSlugFromPath = (pathname: string) => {
   const normalized = pathname.split("?")[0].split("#")[0].replace(/\/+$/, "");
   const match = normalized.match(/\/tours\/([^/]+)\/book$/);
@@ -46,7 +43,7 @@ const buildTitle = (tour: TourLike) =>
   buildProductSeoTitle({ city: pickCity(tour), productName: pickTourName(tour) });
 
 const buildDescription = (tour: TourLike) =>
-  `Guided Tour — ${pickTourName(tour)} (${pickCity(tour)}, ${pickState(tour)}) · ID ${pickId(tour)}`;
+  `Explore ${pickTourName(tour)} in ${pickCity(tour)}, ${pickState(tour)} with trip details, highlights, and booking information.`;
 
 export const getCanonicalFromBookingPath = (pathname: string) => {
   const slugId = getTourSlugFromPath(pathname);

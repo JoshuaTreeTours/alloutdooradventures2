@@ -135,12 +135,12 @@ export default function CityToursIndexRoute({
   const activityLabel = getActivityLabelFromSlug(activityFilter ?? undefined);
   const pageTitle = activityFilter
     ? buildCategorySeoTitle({ city: cityLabel, activity: activityLabel })
-    : `All Tours in ${cityLabel} | Outdoor Adventures`;
+    : `${cityLabel} Tours & Activities | Outdoor Adventures`;
   const pageH1 = activityFilter
     ? buildCategoryH1({ city: cityLabel, activity: activityLabel })
     : `All Tours in ${cityLabel}`;
   const pageIntro = isUsCityRoute
-    ? `Explore tours and outdoor adventures in ${cityLabel}, ${regionLabel}. From guided local experiences and scenic outings to small-group activities and destination highlights, these tours make it easy to discover the area.`
+    ? `Explore ${cityLabel} tours, activities, outdoor adventures, attractions, and curated local experiences.`
     : `Explore tours and activities in ${cityLabel}, ${regionLabel}. From guided city experiences and cultural outings to day trips and outdoor adventures, these tours help travelers discover the destination with ease.`;
   const guideRecord =
     isUsCityRoute && !state.isFallback
