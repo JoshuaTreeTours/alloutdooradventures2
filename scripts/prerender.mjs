@@ -786,6 +786,11 @@ const main = async () => {
   const urls = await readSitemapUrls();
   const urlsToRender = new Set(urls);
   urlsToRender.add(buildCanonicalUrl("/"));
+  for (const tour of engine6ResolvedTours) {
+    if (tour?.canonicalPath) {
+      urlsToRender.add(buildCanonicalUrl(tour.canonicalPath));
+    }
+  }
 
   if (!urlsToRender.size) {
     await writeSchemaMissingGeoReport();
