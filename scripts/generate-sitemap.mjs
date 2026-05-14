@@ -17,6 +17,7 @@ const EXCLUDED_TOUR_PATH_TOKENS = [
   ...EXCLUDED_PRODUCT_CODES.map((code) => code.toLowerCase()),
   "yosemite-in-a-day-tour-from-san-francisco",
 ];
+const BAD_SEO_URL_TOKENS = ["__SEO", "SEO_CANONICAL", "__SEO_CANONICAL__", "/undefined", "/null"];
 const LEGACY_SOFT_404_TOUR_PATH_PATTERNS = [
   /\/tours\/[^/]+\/[^/]+\/[^/]*-legacy-[^/]*-\d+\/?$/i,
   /\/destinations\/[^/]+\/[^/]+\/tours\/[^/]*-legacy-[^/]*-\d+\/?$/i,
@@ -55,6 +56,11 @@ const addUrl = (set, value) => {
   }
 
   const normalizedLower = normalized.toLowerCase();
+  if (BAD_SEO_URL_TOKENS.some((token) => normalized.includes(token))) {
+    excludedUrlStats.tokenMatches += 1;
+    return;
+  }
+
   if (EXCLUDED_TOUR_PATH_TOKENS.some((token) => normalizedLower.includes(token))) {
     excludedUrlStats.tokenMatches += 1;
     return;

@@ -120,10 +120,40 @@ const replaceMeta = (html, seo) => {
 
 const STRUCTURED_DATA_SCRIPT_ID = "structured-data";
 
+const BAD_SEO_URL_TOKENS = ["__SEO", "SEO_CANONICAL", "__SEO_CANONICAL__", "/undefined", "/null"];
+
+const hasBadSeoUrlToken = value =>
+  typeof value === "string" && BAD_SEO_URL_TOKENS.some(token => value.includes(token));
+
+const sanitizeUrlEmission = (value, fallbackUrl) => {
+  if (typeof value !== "string") {
+    return value;
+  }
+  return hasBadSeoUrlToken(value) ? fallbackUrl : value;
+};
+
+const sanitizeStructuredDataUrlEmissions = (node, fallbackUrl) => {
+  if (typeof node === "string") {
+    return sanitizeUrlEmission(node, fallbackUrl);
+  }
+  if (Array.isArray(node)) {
+    return node.map(value => sanitizeStructuredDataUrlEmissions(value, fallbackUrl));
+  }
+  if (!node || typeof node !== "object") {
+    return node;
+  }
+  return Object.fromEntries(
+    Object.entries(node).map(([key, value]) => [
+      key,
+      sanitizeStructuredDataUrlEmissions(value, fallbackUrl),
+    ])
+  );
+};
+
 const replaceStructuredData = (html, structuredData) => {
   const scriptTag = structuredData
     ? `<script id="${STRUCTURED_DATA_SCRIPT_ID}" type="application/ld+json">${escapeScriptJson(
-        JSON.stringify(structuredData)
+        JSON.stringify(sanitizeStructuredDataUrlEmissions(structuredData, BASE_URL))
       )}</script>`
     : "";
   const scriptPattern =
@@ -1021,6 +1051,10 @@ const main = async () => {
       seo.image = resolvedHeroImage;
     }
 
+    const fallbackCanonicalUrl = buildCanonicalUrl(
+      isBookingRoute ? normalizedPathname : basePathname
+    );
+    seo.url = sanitizeUrlEmission(seo.url, fallbackCanonicalUrl);
     const canonicalUrl = seo.url;
     let structuredData = null;
 
