@@ -109,10 +109,22 @@ const applySeo = (html, { title, description, url, image }) => {
   return out;
 };
 
-const files = (await readdir(distDir)).filter(f => f.startsWith('sitemap') && f.endsWith('.xml'));
+const loadSitemapFiles = async (rootDir) => {
+  try {
+    return (await readdir(rootDir)).filter(f => f.startsWith('sitemap') && f.endsWith('.xml'));
+  } catch {
+    return [];
+  }
+};
+
+const sitemapFilesInDist = await loadSitemapFiles(distDir);
+const publicDir = path.resolve('public');
+const sitemapSourceDir = sitemapFilesInDist.length ? distDir : publicDir;
+const sitemapFiles = sitemapFilesInDist.length ? sitemapFilesInDist : await loadSitemapFiles(publicDir);
+
 const urls = new Set();
-for (const file of files) {
-  const xml = await readFile(path.join(distDir, file), 'utf8');
+for (const file of sitemapFiles) {
+  const xml = await readFile(path.join(sitemapSourceDir, file), 'utf8');
   for (const match of xml.matchAll(/<loc>(.*?)<\/loc>/g)) {
     if (!/\.xml$/i.test(match[1])) urls.add(match[1]);
   }
@@ -152,4 +164,4 @@ for (const pathname of paths) {
   created += 1;
 }
 
-console.log(`[ensure-prerendered-route-files] created ${created} missing HTML files from sitemap URLs.`);
+console.log(`[ensure-prerendered-route-files] created ${created} missing HTML files from ${sitemapFiles.length} sitemap file(s) in ${sitemapSourceDir}.`);
