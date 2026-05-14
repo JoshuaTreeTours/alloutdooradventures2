@@ -16,6 +16,10 @@ const EXCLUDED_PRODUCT_CODES = ["36001P1"];
 const EXCLUDED_TOUR_PATH_TOKENS = [
   ...EXCLUDED_PRODUCT_CODES.map((code) => code.toLowerCase()),
   "yosemite-in-a-day-tour-from-san-francisco",
+  "__seo",
+  "seo_canonical",
+  "undefined",
+  "null",
 ];
 const LEGACY_SOFT_404_TOUR_PATH_PATTERNS = [
   /\/tours\/[^/]+\/[^/]+\/[^/]*-legacy-[^/]*-\d+\/?$/i,
@@ -24,6 +28,7 @@ const LEGACY_SOFT_404_TOUR_PATH_PATTERNS = [
 const excludedUrlStats = {
   tokenMatches: 0,
   legacySoft404Matches: 0,
+  malformedPlaceholderMatches: 0,
 };
 
 const ensurePath = (value) => {
@@ -57,6 +62,14 @@ const addUrl = (set, value) => {
   const normalizedLower = normalized.toLowerCase();
   if (EXCLUDED_TOUR_PATH_TOKENS.some((token) => normalizedLower.includes(token))) {
     excludedUrlStats.tokenMatches += 1;
+    if (
+      normalizedLower.includes("__seo") ||
+      normalizedLower.includes("seo_canonical") ||
+      normalizedLower.includes("undefined") ||
+      normalizedLower.includes("null")
+    ) {
+      excludedUrlStats.malformedPlaceholderMatches += 1;
+    }
     return;
   }
 
@@ -1063,7 +1076,7 @@ const run = async () => {
   const excludedUrlCount =
     excludedUrlStats.tokenMatches + excludedUrlStats.legacySoft404Matches;
   console.log(
-    `[sitemap] excluded ${excludedUrlCount} URL emissions using ${excludedPatternCount} denylist patterns/tokens (${excludedUrlStats.tokenMatches} token matches, ${excludedUrlStats.legacySoft404Matches} legacy soft-404 matches).`,
+    `[sitemap] excluded ${excludedUrlCount} URL emissions using ${excludedPatternCount} denylist patterns/tokens (${excludedUrlStats.tokenMatches} token matches, ${excludedUrlStats.legacySoft404Matches} legacy soft-404 matches, ${excludedUrlStats.malformedPlaceholderMatches} malformed SEO placeholder matches).`,
   );
 
   if (!shouldWrite) {

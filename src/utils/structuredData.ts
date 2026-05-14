@@ -5,7 +5,12 @@ import {
 import { applyPriceFloor } from "./merchantPricing";
 import { filterHeroImages } from "./hero";
 import { cleanImageUrls, toSchemaImageValue } from "./cleanImageUrls";
-import { buildCanonicalUrl, buildImageUrl, SITE_URL } from "./seo";
+import {
+  buildCanonicalUrl,
+  buildImageUrl,
+  hasMalformedSeoUrlToken,
+  SITE_URL,
+} from "./seo";
 import { SITE_BRAND_NAME } from "./site";
 import { resolveUsState } from "./geo/usStates";
 import {
@@ -61,10 +66,17 @@ const toAbsoluteUrl = (value: string) => {
   if (!value) {
     return value;
   }
-  if (value.startsWith("http")) {
-    return value;
+
+  const trimmed = value.trim();
+  if (!trimmed || hasMalformedSeoUrlToken(trimmed)) {
+    return "";
   }
-  return buildCanonicalUrl(value);
+
+  if (trimmed.startsWith("http")) {
+    return trimmed;
+  }
+
+  return buildCanonicalUrl(trimmed);
 };
 
 const stripEmptyValues = (value: StructuredDataValue): StructuredDataValue => {
