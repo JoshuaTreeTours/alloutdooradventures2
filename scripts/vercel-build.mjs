@@ -41,10 +41,6 @@ if (!isPreview && exists("scripts/generate-tour-enrichment.mjs")) {
 
 run("vite build");
 
-if (exists("scripts/generate-sitemap.mjs")) {
-  run("SITEMAP_WRITE=1 node scripts/generate-sitemap.mjs");
-}
-
 if (isPreview) {
   run("tsx scripts/verify-engine6-preview.ts");
 }
@@ -61,6 +57,10 @@ if (exists("scripts/fix-root-index-seo.mjs")) {
 
 if (exists("scripts/ensure-prerendered-route-files.mjs")) {
   run("node scripts/ensure-prerendered-route-files.mjs");
+}
+
+if (exists("scripts/generate-sitemap.mjs")) {
+  run("SITEMAP_WRITE=1 node scripts/generate-sitemap.mjs");
 }
 
 if (exists("scripts/verify-engine6-route-seo.mjs")) {

@@ -17,6 +17,7 @@ const EXCLUDED_TOUR_PATH_TOKENS = [
   ...EXCLUDED_PRODUCT_CODES.map((code) => code.toLowerCase()),
   "yosemite-in-a-day-tour-from-san-francisco",
 ];
+const BAD_SEO_URL_TOKENS = ["__SEO", "SEO_CANONICAL", "__SEO_CANONICAL__", "/undefined", "/null"];
 const LEGACY_SOFT_404_TOUR_PATH_PATTERNS = [
   /\/tours\/[^/]+\/[^/]+\/[^/]*-legacy-[^/]*-\d+\/?$/i,
   /\/destinations\/[^/]+\/[^/]+\/tours\/[^/]*-legacy-[^/]*-\d+\/?$/i,
@@ -55,6 +56,11 @@ const addUrl = (set, value) => {
   }
 
   const normalizedLower = normalized.toLowerCase();
+  if (BAD_SEO_URL_TOKENS.some((token) => normalized.includes(token))) {
+    excludedUrlStats.tokenMatches += 1;
+    return;
+  }
+
   if (EXCLUDED_TOUR_PATH_TOKENS.some((token) => normalizedLower.includes(token))) {
     excludedUrlStats.tokenMatches += 1;
     return;
@@ -66,6 +72,45 @@ const addUrl = (set, value) => {
   }
 
   set.add(normalized);
+};
+
+const listPublishedTourPathsFromDist = async () => {
+  const distRoot = path.resolve(__dirname, "../dist/destinations");
+  const publishedPaths = new Set();
+  try {
+    const stateDirs = await readdir(distRoot, { withFileTypes: true });
+    for (const stateDir of stateDirs) {
+      if (!stateDir.isDirectory()) continue;
+      const statePath = path.join(distRoot, stateDir.name);
+      const cityDirs = await readdir(statePath, { withFileTypes: true });
+      for (const cityDir of cityDirs) {
+        if (!cityDir.isDirectory()) continue;
+        const toursDir = path.join(statePath, cityDir.name, "tours");
+        let tourDirs = [];
+        try {
+          tourDirs = await readdir(toursDir, { withFileTypes: true });
+        } catch {
+          continue;
+        }
+        for (const tourDir of tourDirs) {
+          if (!tourDir.isDirectory()) continue;
+          const htmlPath = path.join(toursDir, tourDir.name, "index.html");
+          try {
+            const html = await readFile(htmlPath, "utf8");
+            if (html.includes("404") && html.includes("Vercel")) continue;
+            publishedPaths.add(
+              `/destinations/${stateDir.name}/${cityDir.name}/tours/${tourDir.name}`
+            );
+          } catch {
+            continue;
+          }
+        }
+      }
+    }
+  } catch {
+    return publishedPaths;
+  }
+  return publishedPaths;
 };
 
 const safeSlugify = (catalogModule, value) => {
@@ -646,6 +691,8 @@ const buildAmsterdamSitemapFallbackTours = async (catalogModule) => {
 };
 
 const buildSitemap = async () => {
+  const publishedTourPaths = await listPublishedTourPathsFromDist();
+  const enforcePublishedTourPaths = publishedTourPaths.size > 0;
   const destinationsModule = await tsImport(
     "../src/data/destinations.ts",
     import.meta.url,
@@ -760,6 +807,9 @@ const buildSitemap = async () => {
       );
       return;
     }
+    if (enforcePublishedTourPaths && !publishedTourPaths.has(tourPath)) {
+      return;
+    }
     addUrl(toursUrls, tourPath);
   });
 
@@ -769,6 +819,9 @@ const buildSitemap = async () => {
       console.warn(
         `Skipping Engine2 tour sitemap URL (missing route fields): ${getTourIdentifier(tour)}`,
       );
+      return;
+    }
+    if (enforcePublishedTourPaths && !publishedTourPaths.has(tourPath)) {
       return;
     }
     addUrl(toursUrls, tourPath);
@@ -782,6 +835,9 @@ const buildSitemap = async () => {
       );
       return;
     }
+    if (enforcePublishedTourPaths && !publishedTourPaths.has(tourPath)) {
+      return;
+    }
     addUrl(toursUrls, tourPath);
   });
 
@@ -793,7 +849,9 @@ const buildSitemap = async () => {
     ]);
     [...mexicoFallbackTours, ...hawaiiFallbackTours, ...amsterdamFallbackTours].forEach((tour) => {
       const tourPath = buildCanonicalTourPath(tour, catalogModule);
-      if (tourPath) addUrl(toursUrls, tourPath);
+      if (!tourPath) return;
+      if (enforcePublishedTourPaths && !publishedTourPaths.has(tourPath)) return;
+      addUrl(toursUrls, tourPath);
     });
   }
   if (Array.isArray(flagstaffModule.flagstaffTours)) {
@@ -801,10 +859,16 @@ const buildSitemap = async () => {
       const legacyPath = ensurePath(flagstaffModule.getFlagstaffTourDetailPath(tour));
       const canonicalPath = buildCanonicalTourPath(tour, catalogModule);
       if (canonicalPath) {
+        if (enforcePublishedTourPaths && !publishedTourPaths.has(canonicalPath)) {
+          return;
+        }
         addUrl(toursUrls, canonicalPath);
         return;
       }
       if (legacyPath) {
+        if (enforcePublishedTourPaths && !publishedTourPaths.has(legacyPath)) {
+          return;
+        }
         addUrl(toursUrls, legacyPath);
         return;
       }
