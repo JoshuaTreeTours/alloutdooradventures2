@@ -18,6 +18,8 @@ const EXCLUDED_TOUR_PATH_TOKENS = [
   "yosemite-in-a-day-tour-from-san-francisco",
 ];
 
+const MALFORMED_PATH_TOKEN = /(__seo|seo_canonical|undefined|null|placeholder|canonical\/canonical|-canonical-canonical)/i;
+
 const ensurePath = (value) => {
   if (!value) {
     return null;
@@ -37,7 +39,11 @@ const ensurePath = (value) => {
     }
   }
 
-  return trimmed.startsWith("/") ? trimmed : `/${trimmed}`;
+  const normalized = trimmed.startsWith("/") ? trimmed : `/${trimmed}`;
+  if (MALFORMED_PATH_TOKEN.test(normalized)) {
+    return null;
+  }
+  return normalized;
 };
 
 const addUrl = (set, value) => {
@@ -784,14 +790,9 @@ const buildSitemap = async () => {
   }
   if (Array.isArray(flagstaffModule.flagstaffTours)) {
     flagstaffModule.flagstaffTours.forEach((tour) => {
-      const legacyPath = ensurePath(flagstaffModule.getFlagstaffTourDetailPath(tour));
       const canonicalPath = buildCanonicalTourPath(tour, catalogModule);
       if (canonicalPath) {
         addUrl(toursUrls, canonicalPath);
-        return;
-      }
-      if (legacyPath) {
-        addUrl(toursUrls, legacyPath);
         return;
       }
       console.warn(

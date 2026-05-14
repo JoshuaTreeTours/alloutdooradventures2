@@ -4,6 +4,7 @@ import {
   extractVariantLabel,
 } from "./tourDescription";
 import { SITE_BRAND_NAME } from "./site";
+import { hasMalformedUrlToken } from "./urlGuards";
 
 export const SITE_URL = "https://www.alloutdooradventures.com";
 
@@ -153,15 +154,16 @@ export const buildTourMetaDescription = (
 };
 
 export const buildCanonicalUrl = (path: string) => {
-  if (!path) {
-    return DEFAULT_SEO.url;
-  }
+  if (!path) return DEFAULT_SEO.url;
+
+  if (hasMalformedUrlToken(path)) return DEFAULT_SEO.url;
 
   if (path.startsWith("http")) {
-    return path;
+    return hasMalformedUrlToken(path) ? DEFAULT_SEO.url : path;
   }
 
   const normalized = path.startsWith("/") ? path : `/${path}`;
+  if (hasMalformedUrlToken(normalized)) return DEFAULT_SEO.url;
 
   return `${SITE_URL}${normalized}`;
 };

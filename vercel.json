@@ -66,6 +66,11 @@
   ],
   "redirects": [
     {
+      "source": "/tours/:stateSlug/:citySlug/:tourSlug",
+      "destination": "/destinations/:stateSlug/:citySlug/tours/:tourSlug",
+      "permanent": true
+    },
+    {
       "source": "/guides/us/hawaii/paia",
       "destination": "/guides/us/hawaii",
       "permanent": true
@@ -284,6 +289,10 @@
     {
       "source": "/robots.txt",
       "destination": "/robots.txt"
+    },
+    {
+      "source": "/tours/:stateSlug/:citySlug/:tourSlug((?i).*(?:__seo|seo_canonical|undefined|null|placeholder).*)",
+      "destination": "/api/not-found"
     },
     {
       "source": "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849",
