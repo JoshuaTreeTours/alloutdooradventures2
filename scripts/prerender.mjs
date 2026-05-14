@@ -124,6 +124,7 @@ const BAD_SEO_URL_TOKENS = ["__SEO", "SEO_CANONICAL", "__SEO_CANONICAL__", "/und
 
 const hasBadSeoUrlToken = value =>
   typeof value === "string" && BAD_SEO_URL_TOKENS.some(token => value.includes(token));
+const isMalformedSeoUrlEmission = hasBadSeoUrlToken;
 
 const sanitizeUrlEmission = (value, fallbackUrl) => {
   if (typeof value !== "string") {
@@ -816,6 +817,19 @@ const main = async () => {
   const urls = await readSitemapUrls();
   const urlsToRender = new Set(urls);
   urlsToRender.add(buildCanonicalUrl("/"));
+  for (const tour of tours) {
+    const canonicalPath = tour?.seo?.canonicalPath || tour?.canonicalPath;
+    if (!canonicalPath || isMalformedSeoUrlEmission(canonicalPath)) {
+      continue;
+    }
+    urlsToRender.add(buildCanonicalUrl(canonicalPath));
+  }
+  for (const tour of engine6ResolvedTours) {
+    if (!tour?.canonicalPath || isMalformedSeoUrlEmission(tour.canonicalPath)) {
+      continue;
+    }
+    urlsToRender.add(buildCanonicalUrl(tour.canonicalPath));
+  }
 
   if (!urlsToRender.size) {
     await writeSchemaMissingGeoReport();
