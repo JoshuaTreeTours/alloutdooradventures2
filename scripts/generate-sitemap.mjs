@@ -17,6 +17,14 @@ const EXCLUDED_TOUR_PATH_TOKENS = [
   ...EXCLUDED_PRODUCT_CODES.map((code) => code.toLowerCase()),
   "yosemite-in-a-day-tour-from-san-francisco",
 ];
+const LEGACY_SOFT_404_TOUR_PATH_PATTERNS = [
+  /\/tours\/[^/]+\/[^/]+\/[^/]*-legacy-[^/]*-\d+\/?$/i,
+  /\/destinations\/[^/]+\/[^/]+\/tours\/[^/]*-legacy-[^/]*-\d+\/?$/i,
+];
+const excludedUrlStats = {
+  tokenMatches: 0,
+  legacySoft404Matches: 0,
+};
 
 const ensurePath = (value) => {
   if (!value) {
@@ -48,6 +56,12 @@ const addUrl = (set, value) => {
 
   const normalizedLower = normalized.toLowerCase();
   if (EXCLUDED_TOUR_PATH_TOKENS.some((token) => normalizedLower.includes(token))) {
+    excludedUrlStats.tokenMatches += 1;
+    return;
+  }
+
+  if (LEGACY_SOFT_404_TOUR_PATH_PATTERNS.some((pattern) => pattern.test(normalized))) {
+    excludedUrlStats.legacySoft404Matches += 1;
     return;
   }
 
@@ -1043,6 +1057,14 @@ const run = async () => {
       `sitemap-tours.xml must contain at least ${MIN_TOUR_URL_COUNT} tour URLs (found ${tourUrlCount})`,
     );
   }
+
+  const excludedPatternCount =
+    EXCLUDED_TOUR_PATH_TOKENS.length + LEGACY_SOFT_404_TOUR_PATH_PATTERNS.length;
+  const excludedUrlCount =
+    excludedUrlStats.tokenMatches + excludedUrlStats.legacySoft404Matches;
+  console.log(
+    `[sitemap] excluded ${excludedUrlCount} URL emissions using ${excludedPatternCount} denylist patterns/tokens (${excludedUrlStats.tokenMatches} token matches, ${excludedUrlStats.legacySoft404Matches} legacy soft-404 matches).`,
+  );
 
   if (!shouldWrite) {
     console.log("SITEMAP_WRITE is not set to 1; skipping XML file writes.");
