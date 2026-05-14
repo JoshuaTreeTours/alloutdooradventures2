@@ -16,10 +16,13 @@ const EXCLUDED_PRODUCT_CODES = ["36001P1"];
 const EXCLUDED_TOUR_PATH_TOKENS = [
   ...EXCLUDED_PRODUCT_CODES.map((code) => code.toLowerCase()),
   "yosemite-in-a-day-tour-from-san-francisco",
-  "__seo",
-  "seo_canonical",
-  "undefined",
-  "null",
+];
+
+const MALFORMED_SEO_PLACEHOLDER_PATTERNS = [
+  /__seo/i,
+  /seo_canonical/i,
+  /(?:^|[^a-z0-9])undefined(?:[^a-z0-9]|$)/i,
+  /(?:^|[^a-z0-9])null(?:[^a-z0-9]|$)/i,
 ];
 const LEGACY_SOFT_404_TOUR_PATH_PATTERNS = [
   /\/tours\/[^/]+\/[^/]+\/[^/]*-legacy-[^/]*-\d+\/?$/i,
@@ -60,16 +63,14 @@ const addUrl = (set, value) => {
   }
 
   const normalizedLower = normalized.toLowerCase();
+
+  if (MALFORMED_SEO_PLACEHOLDER_PATTERNS.some((pattern) => pattern.test(normalized))) {
+    excludedUrlStats.malformedPlaceholderMatches += 1;
+    return;
+  }
+
   if (EXCLUDED_TOUR_PATH_TOKENS.some((token) => normalizedLower.includes(token))) {
     excludedUrlStats.tokenMatches += 1;
-    if (
-      normalizedLower.includes("__seo") ||
-      normalizedLower.includes("seo_canonical") ||
-      normalizedLower.includes("undefined") ||
-      normalizedLower.includes("null")
-    ) {
-      excludedUrlStats.malformedPlaceholderMatches += 1;
-    }
     return;
   }
 
@@ -1072,7 +1073,9 @@ const run = async () => {
   }
 
   const excludedPatternCount =
-    EXCLUDED_TOUR_PATH_TOKENS.length + LEGACY_SOFT_404_TOUR_PATH_PATTERNS.length;
+    EXCLUDED_TOUR_PATH_TOKENS.length +
+    LEGACY_SOFT_404_TOUR_PATH_PATTERNS.length +
+    MALFORMED_SEO_PLACEHOLDER_PATTERNS.length;
   const excludedUrlCount =
     excludedUrlStats.tokenMatches + excludedUrlStats.legacySoft404Matches;
   console.log(
