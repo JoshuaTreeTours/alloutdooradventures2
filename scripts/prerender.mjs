@@ -161,6 +161,7 @@ const replaceMeta = (html, seo) => {
 };
 
 const STRUCTURED_DATA_SCRIPT_ID = "structured-data";
+const DEFAULT_CANONICAL_URL = "https://www.alloutdooradventures.com/";
 
 const replaceStructuredData = (html, structuredData) => {
   const scriptTag = structuredData
@@ -179,6 +180,43 @@ const replaceStructuredData = (html, structuredData) => {
   }
 
   return html.replace("</head>", `${scriptTag}</head>`);
+};
+
+const readStructuredDataWebPageFallback = structuredData => {
+  if (!structuredData || typeof structuredData !== "object") {
+    return null;
+  }
+
+  const graph = Array.isArray(structuredData["@graph"])
+    ? structuredData["@graph"]
+    : [];
+  const webPageNode = graph.find(node => {
+    if (!node || typeof node !== "object") {
+      return false;
+    }
+    const nodeType = node["@type"];
+    return Array.isArray(nodeType)
+      ? nodeType.includes("WebPage")
+      : nodeType === "WebPage";
+  });
+
+  if (!webPageNode || typeof webPageNode !== "object") {
+    return null;
+  }
+
+  const name =
+    typeof webPageNode.name === "string" ? webPageNode.name.trim() : "";
+  const description =
+    typeof webPageNode.description === "string"
+      ? webPageNode.description.trim()
+      : "";
+  const url = typeof webPageNode.url === "string" ? webPageNode.url.trim() : "";
+
+  if (!name && !description && !url) {
+    return null;
+  }
+
+  return { name, description, url };
 };
 
 const buildOutputPath = pathname => {
@@ -719,6 +757,7 @@ const main = async () => {
     engine2SchemaModule,
     engine6RegistryModule,
     engine6SeoModule,
+    tourMetaModule,
   ] = await Promise.all([
     safeImport("../src/utils/structuredData.ts", "structuredData"),
     safeImport("../src/data/tourPaths.ts", "tourPaths"),
@@ -728,6 +767,7 @@ const main = async () => {
     safeImport("../src/engine2/schema/buildSchemaGraph.ts", "engine2Schema"),
     safeImport("../src/engine6/registry.ts", "engine6Registry"),
     safeImport("../src/engine6/seo.ts", "engine6Seo"),
+    safeImport("../src/lib/tourMeta.ts", "tourMeta"),
   ]);
 
   const tours = Array.isArray(toursGeneratedModule.toursGenerated)
@@ -798,6 +838,7 @@ const main = async () => {
     ? engine6RegistryModule.engine6ResolvedTours
     : [];
   const buildEngine6Seo = engine6SeoModule?.buildEngine6Seo ?? null;
+  const buildLegacyTourMeta = tourMetaModule?.buildTourMeta ?? null;
 
   resetMissingGeoFallbackReport?.();
 
@@ -960,12 +1001,20 @@ const main = async () => {
         );
         seo.url = buildCanonicalUrl(normalizedPathname);
       } else {
-        seo.title = `${tourForSeo.title} | ${destinationLabel} Outdoor Tour`;
-        seo.description = buildTourMetaDescription(tourForSeo, {
-          isDuplicate: isTourDescriptionDuplicate(tourForSeo),
-          diagnosticsLabel: `prerender:${tourForSeo.id}`,
-        });
-        seo.url = buildCanonicalUrl(basePathname);
+        const canonicalUrl = buildCanonicalUrl(basePathname);
+        if (buildLegacyTourMeta) {
+          const meta = buildLegacyTourMeta(tourForSeo, canonicalUrl);
+          seo.title = meta.title;
+          seo.description = meta.description;
+          seo.url = meta.canonical;
+        } else {
+          seo.title = `${tourForSeo.title} | ${destinationLabel} Outdoor Tour`;
+          seo.description = buildTourMetaDescription(tourForSeo, {
+            isDuplicate: isTourDescriptionDuplicate(tourForSeo),
+            diagnosticsLabel: `prerender:${tourForSeo.id}`,
+          });
+          seo.url = canonicalUrl;
+        }
       }
     } else {
       const staticSeo = getStaticPageSeo(pathname);
@@ -1265,6 +1314,24 @@ const main = async () => {
         "@context": "https://schema.org",
         "@graph": [...baseStructuredDataNodes, ...structuredDataNodes],
       });
+    }
+
+    const webPageSeoFallback = readStructuredDataWebPageFallback(structuredData);
+    const isDefaultHeadFallback =
+      seo.title === DEFAULT_SEO.title ||
+      seo.description === DEFAULT_SEO.description ||
+      seo.url === DEFAULT_CANONICAL_URL;
+
+    if (webPageSeoFallback && isDefaultHeadFallback) {
+      if (webPageSeoFallback.name) {
+        seo.title = webPageSeoFallback.name;
+      }
+      if (webPageSeoFallback.description) {
+        seo.description = webPageSeoFallback.description;
+      }
+      if (webPageSeoFallback.url) {
+        seo.url = webPageSeoFallback.url;
+      }
     }
 
     const { outputPath, shouldWrite } = buildOutputPath(pathname);
