@@ -874,6 +874,15 @@ const main = async () => {
       urlsToRender.add(buildCanonicalUrl(tour.canonicalPath));
     }
   }
+  for (const tour of tours) {
+    if (
+      tour?.destination?.stateSlug &&
+      tour?.destination?.citySlug &&
+      tour?.slug
+    ) {
+      urlsToRender.add(buildCanonicalUrl(getCityTourDetailPath(tour)));
+    }
+  }
 
   if (!urlsToRender.size) {
     await writeSchemaMissingGeoReport();
