@@ -8,6 +8,8 @@ const __dirname = path.dirname(__filename);
 
 const distDir = path.resolve(__dirname, "../dist");
 const templatePath = path.join(distDir, "index.html");
+const DOLPHIN_TARGET_PATH =
+  "/destinations/florida/santa-rosa-beach/tours/dolphin-cruise-614529";
 
 const escapeAttribute = value =>
   value.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
@@ -266,6 +268,25 @@ const ensurePrerenderedFile = async pathname => {
   } catch {
     return false;
   }
+};
+
+const collectHtmlFiles = async rootDir => {
+  const files = [];
+  const walk = async dir => {
+    const entries = await readdir(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        await walk(fullPath);
+        continue;
+      }
+      if (entry.isFile() && entry.name === "index.html") {
+        files.push(fullPath);
+      }
+    }
+  };
+  await walk(rootDir);
+  return files;
 };
 
 const readSitemapUrls = async () => {
@@ -910,6 +931,16 @@ const main = async () => {
     tourDescriptionCounts.set(key, (tourDescriptionCounts.get(key) ?? 0) + 1);
   }
 
+  const dolphinTargetUrl = buildCanonicalUrl(DOLPHIN_TARGET_PATH);
+  const dolphinInSitemap = urls.some(
+    url => normalizePathname(new URL(url).pathname) === DOLPHIN_TARGET_PATH
+  );
+  const dolphinInRenderSet = urlsToRender.has(dolphinTargetUrl);
+  const dolphinOutputPath = buildOutputPath(DOLPHIN_TARGET_PATH).outputPath;
+  console.info(
+    `[prerender:diagnostic] target=${DOLPHIN_TARGET_PATH} inSitemap=${dolphinInSitemap} inUrlsToRender=${dolphinInRenderSet} output=${dolphinOutputPath}`
+  );
+
   const isTourDescriptionDuplicate = tour => {
     const key = normalizeDescriptionForDedupe(extractTourBaseDescription(tour));
     return key ? (tourDescriptionCounts.get(key) ?? 0) > 1 : false;
@@ -1475,6 +1506,14 @@ const main = async () => {
     });
   }
 
+  const dolphinPrerendered = await ensurePrerenderedFile(DOLPHIN_TARGET_PATH);
+  if (!dolphinPrerendered) {
+    routeFailures.push({
+      route: DOLPHIN_TARGET_PATH,
+      error: new Error("Missing prerendered Dolphin Cruise HTML output."),
+    });
+  }
+
   await writeSchemaMissingGeoReport();
 
   for (const target of verificationTargets) {
@@ -1507,6 +1546,34 @@ const main = async () => {
         console.error(error);
       }
     }
+  }
+
+  const destinationsDir = path.join(distDir, "destinations");
+  try {
+    const destinationHtmlFiles = await collectHtmlFiles(destinationsDir);
+    const homepageCanonical = buildCanonicalUrl("/");
+    for (const file of destinationHtmlFiles) {
+      if (!/[/\\]tours[/\\][^/\\]+[/\\]index\.html$/.test(file)) {
+        continue;
+      }
+      const html = await readFile(file, "utf8");
+      if (html.includes(`rel="canonical" href="${homepageCanonical}"`)) {
+        routeFailures.push({
+          route: file.replace(`${distDir}${path.sep}`, ""),
+          error: new Error(
+            "Destination tour page contains homepage canonical."
+          ),
+        });
+      }
+    }
+  } catch (error) {
+    routeFailures.push({
+      route: "/destinations/**/tours/**",
+      error:
+        error instanceof Error
+          ? error
+          : new Error("Failed destination tour canonical audit."),
+    });
   }
 
   if (routeFailures.length) {
