@@ -8,6 +8,8 @@ const __dirname = path.dirname(__filename);
 
 const distDir = path.resolve(__dirname, "../dist");
 const templatePath = path.join(distDir, "index.html");
+const DOLPHIN_ROUTE_PATH =
+  "/destinations/florida/santa-rosa-beach/tours/dolphin-cruise-614529";
 
 const escapeAttribute = value =>
   value.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
@@ -833,6 +835,25 @@ const main = async () => {
       urlsToRender.add(buildCanonicalUrl(tour.canonicalPath));
     }
   }
+  for (const tour of tours) {
+    const stateSlug = tour?.destination?.stateSlug;
+    const citySlug = tour?.destination?.citySlug;
+    const slug = tour?.slug;
+    if (stateSlug && citySlug && slug) {
+      urlsToRender.add(
+        buildCanonicalUrl(`/destinations/${stateSlug}/${citySlug}/tours/${slug}`)
+      );
+    }
+  }
+
+  const dolphinRouteUrl = buildCanonicalUrl(DOLPHIN_ROUTE_PATH);
+  console.log(
+    `[prerender][diag] dolphin in urlsToRender: ${urlsToRender.has(dolphinRouteUrl)} (${dolphinRouteUrl})`
+  );
+  const dolphinOutputTarget = buildOutputPath(DOLPHIN_ROUTE_PATH).outputPath;
+  console.log(
+    `[prerender][diag] dolphin output path target: ${dolphinOutputTarget}`
+  );
 
   if (!urlsToRender.size) {
     await writeSchemaMissingGeoReport();
@@ -1308,6 +1329,12 @@ const main = async () => {
     image: buildImageUrl(DEFAULT_SEO.image),
   };
   await writeFile(templatePath, replaceMeta(template, homepageSeo), "utf8");
+
+  const dolphinOutputFile = buildOutputPath(DOLPHIN_ROUTE_PATH).outputPath;
+  const dolphinExists = await ensurePrerenderedFile(DOLPHIN_ROUTE_PATH);
+  console.log(
+    `[prerender][diag] dolphin output exists after prerender: ${dolphinExists} (${dolphinOutputFile})`
+  );
 
   const findUrl = predicate =>
     urls.find(url => predicate(normalizePathname(new URL(url).pathname)));
