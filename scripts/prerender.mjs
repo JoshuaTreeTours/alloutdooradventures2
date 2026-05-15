@@ -202,6 +202,8 @@ const buildOutputPath = pathname => {
   };
 };
 
+const DOLPHIN_ROUTE = "/destinations/florida/santa-rosa-beach/tours/dolphin-cruise-614529";
+
 const ensureDirectory = async dir => {
   try {
     const stats = await stat(dir);

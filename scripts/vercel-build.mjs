@@ -75,6 +75,10 @@ if (exists("scripts/verify-route-head-identity.mjs")) {
   run("node scripts/verify-route-head-identity.mjs");
 }
 
+if (exists("scripts/verify-destination-tour-canonical.mjs")) {
+  run("node scripts/verify-destination-tour-canonical.mjs");
+}
+
 if (exists("scripts/verify-no-seo-placeholders.mjs")) {
   run("node scripts/verify-no-seo-placeholders.mjs");
 }

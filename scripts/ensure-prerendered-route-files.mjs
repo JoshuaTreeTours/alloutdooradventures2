@@ -126,8 +126,18 @@ const seoByPath = new Map(engine6Tours.map(t => [t.canonicalPath, engine6SeoMod.
 
 const paths = new Set(['/destinations']);
 for (const url of urls) paths.add(new URL(url).pathname);
+for (const pathname of Array.from(paths)) {
+  const legacyTourMatch = /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)$/.exec(pathname);
+  if (legacyTourMatch) {
+    paths.add(`/destinations/${legacyTourMatch[1]}/${legacyTourMatch[2]}/tours/${legacyTourMatch[3]}`);
+  }
+}
 for (const tour of engine6Tours) {
   paths.add(tour.canonicalPath);
+  const legacyTourMatch = /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)$/.exec(tour.canonicalPath);
+  if (legacyTourMatch) {
+    paths.add(`/destinations/${legacyTourMatch[1]}/${legacyTourMatch[2]}/tours/${legacyTourMatch[3]}`);
+  }
   const m = /^\/destinations\/([^/]+)\/([^/]+)\/tours\/[^/]+$/.exec(tour.canonicalPath);
   if (m) {
     paths.add(`/destinations/${m[1]}`);
@@ -149,6 +159,9 @@ for (const pathname of paths) {
     : buildGenericRouteSeo(pathname);
 
   await writeFile(outputPath, routeSeo ? applySeo(template, routeSeo) : template, 'utf8');
+  if (pathname === "/destinations/florida/santa-rosa-beach/tours/dolphin-cruise-614529") {
+    console.log(`[ensure-prerendered-route-files] Dolphin output path: ${outputPath}`);
+  }
   created += 1;
 }
 

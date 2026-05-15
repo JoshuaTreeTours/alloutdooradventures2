@@ -345,6 +345,10 @@
       "destination": "/api/og?path=/destinations/:state/:rest*/tours/:slug*"
     },
     {
+      "source": "/destinations/:state/:city/tours/:slug",
+      "destination": "/destinations/:state/:city/tours/:slug/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
