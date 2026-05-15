@@ -14,6 +14,48 @@ const escapeAttribute = value =>
 
 const escapeScriptJson = value => value.replace(/</g, "\\u003c");
 
+const MALFORMED_URL_TOKEN_PATTERN = /__SEO(?:_[A-Z0-9_]+)?__/gi;
+const MALFORMED_URL_SEGMENT_PATTERN = /(?:^|\/)(?:undefined|null)(?=\/|$)/gi;
+
+const sanitizeFinalSeoUrl = value => {
+  if (typeof value !== "string") {
+    return "";
+  }
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return "";
+  }
+  const withoutTokens = trimmed.replace(MALFORMED_URL_TOKEN_PATTERN, "");
+  const collapsed = withoutTokens.replace(/\/{2,}/g, "/");
+  const withoutMalformedSegments = collapsed.replace(
+    MALFORMED_URL_SEGMENT_PATTERN,
+    ""
+  );
+  const normalized = withoutMalformedSegments.replace(/\/{2,}/g, "/");
+  return normalized.endsWith("/") && normalized.length > 1
+    ? normalized.slice(0, -1)
+    : normalized;
+};
+
+const sanitizeStructuredDataUrls = node => {
+  if (Array.isArray(node)) {
+    return node.map(sanitizeStructuredDataUrls);
+  }
+  if (node && typeof node === "object") {
+    const next = {};
+    for (const [key, value] of Object.entries(node)) {
+      const looksLikeUrlField =
+        key === "@id" || key.toLowerCase().includes("url");
+      next[key] =
+        typeof value === "string" && looksLikeUrlField
+          ? sanitizeFinalSeoUrl(value)
+          : sanitizeStructuredDataUrls(value);
+    }
+    return next;
+  }
+  return node;
+};
+
 const toTitleCase = value =>
   value
     .split("-")
@@ -101,9 +143,9 @@ const ensureTemplatePlaceholders = template => {
 const replaceMeta = (html, seo) => {
   const title = escapeAttribute(seo.title);
   const description = escapeAttribute(seo.description);
-  const url = escapeAttribute(seo.url);
+  const url = escapeAttribute(sanitizeFinalSeoUrl(seo.url));
   const type = escapeAttribute(seo.type);
-  const image = escapeAttribute(seo.image);
+  const image = escapeAttribute(sanitizeFinalSeoUrl(seo.image));
 
   return html
     .replaceAll("__SEO_TITLE__", title)
@@ -123,7 +165,7 @@ const STRUCTURED_DATA_SCRIPT_ID = "structured-data";
 const replaceStructuredData = (html, structuredData) => {
   const scriptTag = structuredData
     ? `<script id="${STRUCTURED_DATA_SCRIPT_ID}" type="application/ld+json">${escapeScriptJson(
-        JSON.stringify(structuredData)
+        JSON.stringify(sanitizeStructuredDataUrls(structuredData))
       )}</script>`
     : "";
   const scriptPattern =
