@@ -25,6 +25,7 @@ import CityRoute from "./pages/destinations/states/CityRoute";
 import CityToursIndexRoute from "./pages/destinations/states/tours/CityToursIndexRoute";
 import CityTourDetailRoute from "./pages/destinations/states/tours/CityTourDetailRoute";
 import CityTourBookingRoute from "./pages/destinations/states/tours/CityTourBookingRoute";
+import Engine3ViatorTourRoute from "./pages/destinations/states/tours/Engine3ViatorTourRoute";
 import StateToursRoute from "./pages/destinations/states/tours/StateToursRoute";
 import ToursLanding from "./pages/tours/ToursLanding";
 import ToursCatalog from "./pages/ToursCatalog";
@@ -368,6 +369,10 @@ export default function App() {
           component={CityTourBookingRoute}
         />
         <Route
+          path="/destinations/states/:stateSlug/cities/:citySlug/tours/:tourSlug-:viatorProductCode"
+          component={Engine3ViatorTourRoute}
+        />
+        <Route
           path="/destinations/states/:stateSlug/cities/:citySlug/tours/:tourSlug"
           component={CityTourDetailRoute}
         />
@@ -382,6 +387,10 @@ export default function App() {
         <Route
           path="/destinations/united-states/:stateSlug/:citySlug/tours/:tourSlug/book"
           component={CityTourBookingRoute}
+        />
+        <Route
+          path="/destinations/united-states/:stateSlug/:citySlug/tours/:tourSlug-:viatorProductCode"
+          component={Engine3ViatorTourRoute}
         />
         <Route
           path="/destinations/united-states/:stateSlug/:citySlug/tours/:tourSlug"
@@ -422,6 +431,10 @@ export default function App() {
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
           component={CityTourBookingRoute}
+        />
+        <Route
+          path="/destinations/:stateSlug/:citySlug/tours/:tourSlug-:viatorProductCode"
+          component={Engine3ViatorTourRoute}
         />
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"
