@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 
 import Seo from "../../components/Seo";
 import ParagonMetaRow from "../../components/tours/ParagonMetaRow";
@@ -19,7 +19,38 @@ type Engine3TourPageProps = {
   tour: Engine3TourViewModel;
 };
 
-const EXTERNAL_CTA_REL = "nofollow sponsored noopener noreferrer";
+const EXTERNAL_CTA_REL = "sponsored nofollow noopener";
+
+function ViatorAvailabilityCta({ href }: { href: string }) {
+  const [isOpening, setIsOpening] = useState(false);
+
+  return (
+    <div>
+      <a
+        href={href}
+        target="_blank"
+        rel={EXTERNAL_CTA_REL}
+        onClick={() => setIsOpening(true)}
+        className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+      >
+        Check availability
+      </a>
+      {isOpening ? (
+        <p
+          className="mt-2 text-sm font-medium text-[#2f4a2f]"
+          aria-live="polite"
+        >
+          Opening secure Viator booking page…
+        </p>
+      ) : null}
+      <p className="mt-2 max-w-md text-xs leading-5 text-[#405040]">
+        Booking opens on Viator, our secure travel partner. Some availability
+        pages may take a few seconds to load.
+      </p>
+    </div>
+  );
+}
+
 const POSTER_CHILD_PATHS = new Set([
   "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
   "/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15",
@@ -239,19 +270,17 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
             </p>
           ) : null}
           <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90">
-            <span className="block">This tour is operated by an independent third-party provider.</span>
-            <span className="block">All Outdoor Adventures is a marketplace that connects travelers with local tour operators.</span>
+            <span className="block">
+              This tour is operated by an independent third-party provider.
+            </span>
+            <span className="block">
+              All Outdoor Adventures is a marketplace that connects travelers
+              with local tour operators.
+            </span>
           </p>
           {safeBookingUrl ? (
             <div className="mt-6">
-              <a
-                href={safeBookingUrl}
-                target="_blank"
-                rel={EXTERNAL_CTA_REL}
-                className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
-              >
-                Book This Tour
-              </a>
+              <ViatorAvailabilityCta href={safeBookingUrl} />
             </div>
           ) : null}
         </div>
@@ -368,14 +397,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
 
         {safeBookingUrl ? (
           <div className="mt-10">
-            <a
-              href={safeBookingUrl}
-              target="_blank"
-              rel={EXTERNAL_CTA_REL}
-              className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
-            >
-              Book This Tour
-            </a>
+            <ViatorAvailabilityCta href={safeBookingUrl} />
           </div>
         ) : null}
       </section>

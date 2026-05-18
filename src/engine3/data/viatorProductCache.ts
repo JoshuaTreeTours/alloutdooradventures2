@@ -54,7 +54,7 @@ export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
   },
   "2335P1": {
     sourceUrl:
-      "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1?pid=P00058975&uid=U00174482&mcid=58086&currency=USD",
+      "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1?mcid=58086&pid=P00290915&medium=link&api_version=2.0&uid=U00174482&currency=USD",
     productCode: "2335P1",
     title: "San Andreas Fault Jeep Tour from Palm Springs",
     supplierImage: "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",

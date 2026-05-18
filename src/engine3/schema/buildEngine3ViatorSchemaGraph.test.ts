@@ -22,7 +22,7 @@ const baseTour: Engine3TourViewModel = {
   canonicalPath:
     "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
   bookingUrl:
-    "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1?pid=P00290915&mcid=42383&medium=link",
+    "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1?mcid=58086&pid=P00290915&medium=link&api_version=2.0&uid=U00174482&currency=USD",
   primaryImageUrl: "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
   priceFrom: "USD 175",
   priceCurrency: "USD",
@@ -96,7 +96,7 @@ describe("buildEngine3SchemaGraph paragon parity", () => {
 
     const offer = product?.offers as Record<string, unknown> | undefined;
     expect(offer?.url).toContain("pid=P00290915");
-    expect(offer?.url).toContain("mcid=42383");
+    expect(offer?.url).toContain("mcid=58086");
     expect(offer?.url).toContain("medium=link");
 
     expect(trip?.itinerary).toEqual({
@@ -128,11 +128,16 @@ describe("buildEngine3SchemaGraph paragon parity", () => {
       affiliateBookingUrl: baseTour.bookingUrl,
       breadcrumbs: [
         { name: "Tours", url: "/tours" },
-        { name: "Joshua Tree Hummer Adventure from Palm Desert", url: canonicalUrl },
+        {
+          name: "Joshua Tree Hummer Adventure from Palm Desert",
+          url: canonicalUrl,
+        },
       ],
     });
 
     expect(nodes.find(node => node["@type"] === "FAQPage")).toBeUndefined();
-    expect(nodes.find(node => node["@id"] === `${canonicalUrl}#itinerary`)).toBeUndefined();
+    expect(
+      nodes.find(node => node["@id"] === `${canonicalUrl}#itinerary`)
+    ).toBeUndefined();
   });
 });

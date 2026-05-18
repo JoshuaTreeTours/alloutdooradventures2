@@ -37,8 +37,16 @@ describe("Engine3TourPage", () => {
     expect(html).toContain("/tours?state=california&amp;city=palm-springs");
     expect(html).not.toContain("palm%20springs");
     expect(html).toContain("pid=P00290915");
-    expect(html).toContain("mcid=42383");
+    expect(html).toContain("mcid=58086");
     expect(html).toContain("medium=link");
+    expect(html).toContain("api_version=2.0");
+    expect(html).toContain("uid=U00174482");
+    expect(html).toContain("currency=USD");
+    expect(html).toContain('rel="sponsored nofollow noopener"');
+    expect(html).toContain(
+      "Booking opens on Viator, our secure travel partner. Some availability"
+    );
+    expect(html).not.toContain("window.location");
   });
 
   it("renders hero before the Overview section", () => {
@@ -94,7 +102,7 @@ describe("Engine3TourPage", () => {
       />
     );
 
-    expect(html).toContain("Book This Tour");
+    expect(html).toContain("Check availability");
     expect(html).toContain('href="not-a-valid-url"');
   });
 

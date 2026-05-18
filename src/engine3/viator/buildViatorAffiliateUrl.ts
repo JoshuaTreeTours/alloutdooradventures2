@@ -1,6 +1,11 @@
-const AFFILIATE_PID = "P00290915";
-const AFFILIATE_MCID = "42383";
-const AFFILIATE_MEDIUM = "link";
+const VIATOR_AFFILIATE_PARAMS = [
+  ["mcid", "58086"],
+  ["pid", "P00290915"],
+  ["medium", "link"],
+  ["api_version", "2.0"],
+  ["uid", "U00174482"],
+  ["currency", "USD"],
+] as const;
 
 const isViatorHost = (hostname: string): boolean =>
   hostname === "viator.com" || hostname.endsWith(".viator.com");
@@ -27,9 +32,13 @@ export const buildViatorAffiliateUrl = (inputUrl: string): string | null => {
       url.hostname = "www.viator.com";
     }
 
-    url.searchParams.set("pid", AFFILIATE_PID);
-    url.searchParams.set("mcid", AFFILIATE_MCID);
-    url.searchParams.set("medium", AFFILIATE_MEDIUM);
+    for (const [key] of VIATOR_AFFILIATE_PARAMS) {
+      url.searchParams.delete(key);
+    }
+
+    for (const [key, value] of VIATOR_AFFILIATE_PARAMS) {
+      url.searchParams.append(key, value);
+    }
 
     return url.toString();
   } catch {

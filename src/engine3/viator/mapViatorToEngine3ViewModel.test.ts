@@ -70,8 +70,11 @@ describe("mapViatorToEngine3ViewModel", () => {
     expect(viewModel.primaryImageUrl).toBe(LOCKED_HERO_URL_6740);
     expect(viewModel.heroImageUrl).toBe(LOCKED_HERO_URL_6740);
     expect(viewModel.bookingUrl).toContain("pid=P00290915");
-    expect(viewModel.bookingUrl).toContain("mcid=42383");
+    expect(viewModel.bookingUrl).toContain("mcid=58086");
     expect(viewModel.bookingUrl).toContain("medium=link");
+    expect(viewModel.bookingUrl).toContain("api_version=2.0");
+    expect(viewModel.bookingUrl).toContain("uid=U00174482");
+    expect(viewModel.bookingUrl).toContain("currency=USD");
   });
 
   it("keeps San Andreas 2335P1 hero deterministic and defined", () => {
@@ -165,7 +168,9 @@ describe("mapViatorToEngine3ViewModel", () => {
       exclusions: ["Gratuities", "Gratuities"],
     });
 
-    expect(viewModel.overview).toContain("Joshua Tree Hummer Adventure from Palm Desert");
+    expect(viewModel.overview).toContain(
+      "Joshua Tree Hummer Adventure from Palm Desert"
+    );
     expect(viewModel.overview?.split(/\s+/).length).toBeGreaterThanOrEqual(100);
     expect(viewModel.highlights).toEqual([
       "Drive through desert washes",

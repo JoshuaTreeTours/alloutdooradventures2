@@ -11,7 +11,7 @@ describe("buildViatorAffiliateUrl", () => {
     });
 
     expect(url).toBe(
-      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE?pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE?mcid=58086&pid=P00290915&medium=link&api_version=2.0&uid=U00174482&currency=USD"
     );
   });
 
@@ -23,11 +23,13 @@ describe("buildViatorAffiliateUrl", () => {
     });
 
     expect(url).toBe(
-      "https://www.viator.com/tours/Palm-Springs/San-Andreas/d648-2335P1?foo=bar&pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/tours/Palm-Springs/San-Andreas/d648-2335P1?foo=bar&mcid=58086&pid=P00290915&medium=link&api_version=2.0&uid=U00174482&currency=USD"
     );
   });
 
   it("returns null when no URL candidate exists", () => {
-    expect(buildViatorAffiliateUrl({ baseUrl: null, fallbackUrl: undefined })).toBeNull();
+    expect(
+      buildViatorAffiliateUrl({ baseUrl: null, fallbackUrl: undefined })
+    ).toBeNull();
   });
 });
