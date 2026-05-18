@@ -249,6 +249,10 @@ export const ENGINE6_PALM_SPRINGS_EARTHQUAKE_CANYON_DOWNHILL_BIKE_PRODUCT_CODE =
   "3351P13";
 export const ENGINE6_PALM_SPRINGS_EARTHQUAKE_CANYON_DOWNHILL_BIKE_ROUTE =
   "/destinations/california/palm-springs/tours/earthquake-canyon-express-downhill-bicycle-adventure-3351p13";
+export const ENGINE6_PALM_SPRINGS_INDIAN_CANYONS_BIKE_HIKE_PRODUCT_CODE =
+  "3351P15";
+export const ENGINE6_PALM_SPRINGS_INDIAN_CANYONS_BIKE_HIKE_ROUTE =
+  "/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15";
 export const ENGINE6_FORT_LAUDERDALE_EBIKE_PRODUCT_CODE = "383300P6";
 export const ENGINE6_FORT_LAUDERDALE_EBIKE_ROUTE =
   "/destinations/florida/fort-lauderdale/tours/guided-electric-bike-tours-of-greater-fort-lauderdale";
@@ -631,6 +635,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_PALM_SPRINGS_EARTHQUAKE_CANYON_DOWNHILL_BIKE_ROUTE,
     ENGINE6_PALM_SPRINGS_EARTHQUAKE_CANYON_DOWNHILL_BIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PALM_SPRINGS_INDIAN_CANYONS_BIKE_HIKE_ROUTE,
+    ENGINE6_PALM_SPRINGS_INDIAN_CANYONS_BIKE_HIKE_PRODUCT_CODE,
   ],
   [
     ENGINE6_FORT_LAUDERDALE_EBIKE_ROUTE,

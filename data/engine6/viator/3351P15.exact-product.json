@@ -1,0 +1,78 @@
+{
+  "product": {
+    "productCode": "3351P15",
+    "productUrl": "https://www.viator.com/tours/Palm-Springs/Palm-Springs-Indian-Canyons-Bike-and-Hike/d648-3351P15",
+    "title": "Palm Springs Indian Canyons Bike and Hike",
+    "description": {
+      "text": "Explore the Indian Canyons area on a guided bike-and-hike adventure from Palm Springs. This active outing combines cycling and short guided walking segments through canyon landscapes, desert scenery, and native palm oasis terrain while your guide manages route pacing and logistics."
+    },
+    "highlights": [
+      "Guided bike-and-hike format in the Indian Canyons area near Palm Springs",
+      "Combines cycling segments with on-foot trail exploration",
+      "Focus on canyon landscapes, desert scenery, and native palm oasis settings"
+    ],
+    "additionalInfo": [
+      {
+        "type": "ADDITIONALINFO",
+        "description": "Confirmation will be received at time of booking"
+      }
+    ],
+    "inclusions": [
+      {
+        "description": "Professional guide"
+      },
+      {
+        "description": "Bike and helmet"
+      }
+    ],
+    "exclusions": [
+      {
+        "description": "Guide gratuities"
+      }
+    ],
+    "location": {
+      "city": "Palm Springs",
+      "state": "California"
+    },
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 216
+    },
+    "logistics": {
+      "start": {
+        "description": "1590 S Palm Canyon Dr, Palm Springs, CA 92264, USA"
+      },
+      "duration": {
+        "fixedDurationInMinutes": 300
+      }
+    },
+    "bookingQuestions": [],
+    "cancellationPolicy": {
+      "description": "For a full refund, cancel at least 24 hours in advance of the start date of the experience."
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterestLocation": {
+          "name": "Indian Canyons"
+        },
+        "description": "Ride and hike with your guide through canyon terrain and desert palm groves.",
+        "durationInMinutes": 240
+      }
+    ],
+    "priceFrom": 149,
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/39/12/13/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
