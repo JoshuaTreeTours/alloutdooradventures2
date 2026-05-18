@@ -24,10 +24,7 @@ import {
   getFlagstaffTourSlug,
 } from "../../../../data/flagstaffTours";
 import { getExpandedTourDescription } from "../../../../data/tourNarratives";
-import {
-  filterHeroImages,
-  resolveHeroImageForRoute,
-} from "../../../../utils/hero";
+import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import { buildTourMeta } from "../../../../lib/tourMeta";
 import {
   buildBreadcrumbList,
@@ -494,10 +491,7 @@ export default function CityTourDetailRoute({
       route: canonicalUrl,
       tour,
     }) ?? undefined;
-  const baseStructuredImages = filterHeroImages(
-    [heroImage, ...(tour?.galleryImages ?? [])],
-    "product"
-  );
+  const baseStructuredImages = heroImage ? [heroImage] : [];
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
   const seoDescription = tour
     ? buildTourMeta(tour, canonicalUrl).description
@@ -541,12 +535,7 @@ export default function CityTourDetailRoute({
       })
     : null;
 
-  const structuredImages = filterHeroImages(
-    hardenedTemplate?.schemaImages?.length
-      ? hardenedTemplate.schemaImages
-      : baseStructuredImages,
-    "product"
-  );
+  const structuredImages = baseStructuredImages;
 
   const structuredDataNodes = useMemo(() => {
     if (!tour || !canonicalUrl) {

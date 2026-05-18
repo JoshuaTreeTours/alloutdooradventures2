@@ -6,6 +6,7 @@ import {
   isImageInCityTour,
   resolveCityHeroImage,
   resolveHeroImageForRoute,
+  resolveTourHeroImage,
 } from "./hero";
 import { buildImageUrl } from "./seo";
 
@@ -67,8 +68,6 @@ describe("resolveCityHeroImage", () => {
     expect(image).toBe(buildImageUrl(CITY_NEUTRAL_BRAND_IMAGE));
   });
 
-
-
   it("rejects malformed city hero URLs and falls back to the neutral brand image", () => {
     const image = resolveCityHeroImage({
       citySlug: "las-vegas",
@@ -128,8 +127,8 @@ describe("isImageInCityTour", () => {
           stateSlug: "california",
           countryCode: "US",
         },
-        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" },
-      ),
+        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" }
+      )
     ).toBe(true);
 
     expect(
@@ -139,22 +138,20 @@ describe("isImageInCityTour", () => {
           tourCitySlug: "joshua-tree",
           citySlug: "joshua-tree",
         },
-        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" },
-      ),
+        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" }
+      )
     ).toBe(false);
 
     expect(
       isImageInCityTour(
         { src: "https://cdn.example.com/unbound.jpg" },
-        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" },
-      ),
+        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" }
+      )
     ).toBe(false);
   });
 });
 
 describe("resolveHeroImageForRoute city hub", () => {
-
-
   it("keeps city hub and city tours routes on the exact same hero URL", () => {
     const cityTours = [
       {
@@ -191,8 +188,15 @@ describe("resolveHeroImageForRoute city hub", () => {
   it("uses same city-tour resolver for destination city routes", () => {
     const image = resolveHeroImageForRoute({
       route: "/destinations/states/california/cities/joshua-tree",
-      city: { slug: "joshua-tree", stateSlug: "california", heroImages: [HOME_HERO_IMAGE] },
-      state: { heroImage: "https://cdn.example.com/california-state.jpg", slug: "california" },
+      city: {
+        slug: "joshua-tree",
+        stateSlug: "california",
+        heroImages: [HOME_HERO_IMAGE],
+      },
+      state: {
+        heroImage: "https://cdn.example.com/california-state.jpg",
+        slug: "california",
+      },
       cityTours: [
         {
           id: "jt-city",
@@ -210,5 +214,45 @@ describe("resolveHeroImageForRoute city hub", () => {
 
     expect(image).toBe("https://cdn.example.com/joshua-tree-city-tour.jpg");
     expect(image).not.toContain("canoe-hero");
+  });
+});
+
+describe("legacy tour hero normalization", () => {
+  const tacdnCaption =
+    "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1";
+  const spliceImage =
+    "https://media.tacdn.com/media/attractions-splice-spp-360x240/11/8a/ad/05.jpg";
+
+  it("prefers TACDN caption URLs from the tour image set", () => {
+    expect(
+      resolveTourHeroImage({
+        heroImage: spliceImage,
+        primaryImageUrl: tacdnCaption,
+        galleryImages: [spliceImage],
+      })
+    ).toBe(tacdnCaption);
+  });
+
+  it("removes generic hero fallbacks instead of fabricating a product image", () => {
+    expect(
+      resolveTourHeroImage({
+        heroImage: "/hero.jpg",
+        primaryImageUrl: "https://www.alloutdooradventures.com/hero.jpg",
+        galleryImages: ["/images/hiking-hero.jpg"],
+      })
+    ).toBeUndefined();
+  });
+
+  it("uses the same normalized image for legacy detail route SEO and page hero", () => {
+    const resolved = resolveHeroImageForRoute({
+      route: "/destinations/california/palm-springs/tours/example",
+      tour: {
+        heroImage: spliceImage,
+        primaryImageUrl: tacdnCaption,
+        galleryImages: [spliceImage],
+      },
+    });
+
+    expect(resolved).toBe(tacdnCaption);
   });
 });

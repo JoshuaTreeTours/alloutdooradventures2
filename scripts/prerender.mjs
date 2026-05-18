@@ -1066,7 +1066,9 @@ const main = async () => {
         })
       : null;
 
-    if (resolvedHeroImage && !engine2Seo) {
+    if (tourForSeo && !engine2Seo) {
+      seo.image = resolvedHeroImage ?? "";
+    } else if (resolvedHeroImage && !engine2Seo) {
       seo.image = resolvedHeroImage;
     }
 
@@ -1222,12 +1224,8 @@ const main = async () => {
           })
         );
       } else if (tourForStructuredData && bookingUrl && canBuildTourNodes) {
-        const heroImage =
-          resolvedHeroImage ?? buildImageUrl(tourForStructuredData.heroImage);
-        const structuredImages = [
-          heroImage,
-          ...(tourForStructuredData.galleryImages ?? []),
-        ].filter(Boolean);
+        const heroImage = resolvedHeroImage ?? null;
+        const structuredImages = heroImage ? [heroImage] : [];
         structuredDataNodes.push(
           buildWebPageStructuredData({
             url: canonicalUrl,

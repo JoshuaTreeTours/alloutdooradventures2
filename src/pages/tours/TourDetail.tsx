@@ -18,7 +18,7 @@ import {
   getExpandedTourDescription,
   getTourHighlights,
 } from "../../data/tourNarratives";
-import { filterHeroImages, resolveHeroImageForRoute } from "../../utils/hero";
+import { resolveHeroImageForRoute } from "../../utils/hero";
 import { buildTourMetaDescription } from "../../utils/seo";
 import { SITE_URL } from "../../utils/seo";
 import {
@@ -36,10 +36,7 @@ import {
   ENABLE_TOUR_SCHEMA_V1,
 } from "../../schema/buildTourSchemaGraph";
 import { buildTourMeta } from "../../lib/tourMeta";
-import {
-  DEFAULT_IMAGE_URL,
-  PRICE_MIN_THRESHOLD_USD,
-} from "../../constants/merchantDefaults";
+import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { applyPriceFloor } from "../../utils/merchantPricing";
 import { fetchFareHarborHtml } from "../../utils/fh/fetchFareHarborHtml";
 import { parseFareHarborHtml } from "../../utils/fh/parseFareHarborHtml";
@@ -65,11 +62,7 @@ export default function TourDetail({ params }: TourDetailProps) {
       route: detailUrl,
       tour,
     }) ?? undefined;
-  const finalHeroImage = heroImage ?? DEFAULT_IMAGE_URL;
-  const structuredImages = filterHeroImages(
-    [heroImage, ...(tour?.galleryImages ?? [])],
-    "product"
-  );
+  const structuredImages = heroImage ? [heroImage] : [];
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
   const metaDescription = tour
     ? buildTourMetaDescription(tour, {
@@ -94,7 +87,7 @@ export default function TourDetail({ params }: TourDetailProps) {
           url: detailUrl,
           pageName: tour.title,
           pageDescription: metaDescription ?? "",
-          heroImage: finalHeroImage,
+          heroImage,
           derivedImages: structuredImages,
           place: {
             city: tour.destination.city,
@@ -133,7 +126,7 @@ export default function TourDetail({ params }: TourDetailProps) {
             url: detailUrl,
             name: tour.title,
             description: metaDescription,
-            image: finalHeroImage,
+            image: heroImage,
             mainEntityId: productNodeId,
           }),
           buildTourProductStructuredData({
@@ -162,7 +155,7 @@ export default function TourDetail({ params }: TourDetailProps) {
   }, [
     bookingUrl,
     detailUrl,
-    finalHeroImage,
+    heroImage,
     metaDescription,
     structuredImages,
     tour,
@@ -213,7 +206,7 @@ export default function TourDetail({ params }: TourDetailProps) {
         title={tourMeta.title}
         description={tourMeta.description}
         url={tourMeta.canonical}
-        image={finalHeroImage}
+        image={heroImage ?? null}
         robots={tourMeta.robots}
         googlebot={tourMeta.googlebot}
       />
@@ -232,10 +225,10 @@ export default function TourDetail({ params }: TourDetailProps) {
         <div className="mt-6 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-5">
             <div className="overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
-              {finalHeroImage ? (
+              {heroImage ? (
                 <Image
-                  src={finalHeroImage}
-                  fallbackSrc={finalHeroImage}
+                  src={heroImage}
+                  fallbackSrc={heroImage}
                   alt={tour.title}
                   className="h-72 w-full object-cover"
                 />
