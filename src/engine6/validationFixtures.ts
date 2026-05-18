@@ -37,6 +37,7 @@ import specimen3097sdzsp2visitPayload from "../../data/engine6/viator/3097SDZSP_
 import specimen447234p3Payload from "../../data/engine6/viator/447234P3.exact-product.json";
 import specimen5584233p1Payload from "../../data/engine6/viator/5584233P1.exact-product.json";
 import specimen327321p1Payload from "../../data/engine6/viator/327321P1.exact-product.json";
+import specimen6740jtreePayload from "../../data/engine6/viator/6740JTREE.exact-product.json";
 import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-product.json";
 import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-product.json";
 import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-product.json";
@@ -587,6 +588,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Palm-Springs/Mountain-Sunrise-Hike-and-Meditation/d648-327321P1",
     rawPayload: specimen327321p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "6740JTREE",
+    publicUrl:
+      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE",
+    rawPayload: specimen6740jtreePayload as Record<string, unknown>,
   },
   {
     productCode: "383300P6",

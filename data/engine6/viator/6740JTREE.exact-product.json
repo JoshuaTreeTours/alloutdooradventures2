@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "6740JTREE",
+    "productUrl": "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE",
+    "title": "Joshua Tree Open Air Hummer Adventure",
+    "description": {
+      "text": "Experience Joshua Tree National Park from the open air aboard a custom Hummer built for desert touring. This guided small-group adventure travels from the Greater Palm Springs area into one of California’s most iconic national parks, where dramatic rock formations, Joshua tree forests, rugged desert valleys, and wide Mojave views define the landscape.\n\nWith pickup and departure options available from Palm Desert, Palm Springs, and Yucca Valley, the tour is designed for convenient access from across the Coachella Valley and High Desert. Along the way, your guide shares insight into the park’s geology, desert ecology, wildlife, and cultural history while making time for scenic viewpoints and photo stops, including highlights such as Joshua Tree National Park, Keys View, Barker Dam Trail, and Cap Rock Trail.\n\nThe open-air Hummer format gives guests a more immersive way to experience the desert than a traditional bus or enclosed vehicle, with elevated views, fresh desert air, and a close connection to the terrain throughout the journey."
+    },
+    "location": {
+      "city": "Palm Springs",
+      "state": "California"
+    },
+    "duration": "3 to 5 hours approx.",
+    "priceFrom": "From $179.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 453
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/32/c4/c9/17/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ride through Joshua Tree National Park in an open-air Hummer.",
+      "See dramatic rock formations and desert landscapes with guide commentary.",
+      "Stop at scenic viewpoints for photos and interpretation.",
+      "Small-group format for a more personal experience."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Multiple pickup and departure options are available from the Greater Palm Springs area, including Palm Desert, Palm Springs, and Yucca Valley."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Joshua Tree National Park",
+        "description": "Begin the adventure with travel into Joshua Tree National Park aboard an open-air Hummer, with guided narration and scenic desert views along the way.",
+        "duration": "3 hours"
+      },
+      {
+        "title": "Keys View",
+        "description": "Stop at one of the park’s most famous overlooks, where clear days can reveal views across the Coachella Valley, the Salton Sea, and toward Mexico.",
+        "duration": "15 minutes"
+      },
+      {
+        "title": "Barker Dam Trail",
+        "description": "Enjoy an optional walk through a classic Joshua Tree landscape featuring monzogranite rock formations, desert plants, and historic desert scenery.",
+        "duration": "45 minutes"
+      },
+      {
+        "title": "Cap Rock Trail",
+        "description": "Visit one of Joshua Tree’s most photographed rock formation areas, with a short optional walk among dramatic boulders and desert terrain.",
+        "duration": "30 minutes"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Open-air Hummer transportation",
+      "Bottled water"
+    ],
+    "exclusions": [
+      "Gratuities",
+      "Hotel pickup and drop-off unless selected"
+    ],
+    "additionalInfo": [
+      "Not wheelchair accessible.",
+      "Children must be accompanied by an adult.",
+      "Operates in most weather conditions; dress appropriately.",
+      "Cancellation policy: cancel at least 48 hours in advance for a full refund."
+    ],
+    "faqs": [
+      {
+        "question": "Where does the tour depart from?",
+        "answer": "Multiple pickup and departure options are available from the Greater Palm Springs area, including Palm Desert, Palm Springs, and Yucca Valley."
+      },
+      {
+        "question": "How long is the experience?",
+        "answer": "The Hummer adventure is approximately 3 to 5 hours."
+      },
+      {
+        "question": "What is included?",
+        "answer": "Your booking includes a professional guide, open-air Hummer transportation, and bottled water."
+      },
+      {
+        "question": "Is the tour suitable for all travelers?",
+        "answer": "Most travelers can participate, but the tour is not wheelchair accessible."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ]
+  }
+}

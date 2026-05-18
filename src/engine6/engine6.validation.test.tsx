@@ -217,6 +217,47 @@ describe("engine6 single-tour validation harness", () => {
     expect(uniqueOpenings.size).toBeGreaterThanOrEqual(3);
   });
 
+  it("keeps 6740JTREE non-hero commercial/trip fields API-derived from extracted payload", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "6740JTREE"
+    );
+    expect(fixture).toBeDefined();
+
+    const payload = toPayload(fixture!);
+    const extracted = payload.extracted;
+    const tour = mapViatorToEngine6Tour(payload);
+
+    expect(tour.title).toBe(extracted.title);
+    expect(tour.priceAmount).toBe(extracted.priceAmount);
+    expect(tour.priceFormatted).toBe(`From $${extracted.priceAmount!.toFixed(2)}`);
+    expect(tour.aggregateRating).toBe(extracted.aggregateRating);
+    expect(tour.reviewCount).toBe(extracted.reviewCount);
+    expect(tour.durationText).toBe(extracted.durationText);
+    expect(tour.meetingPointText).toBe(extracted.meetingPointText);
+    expect(tour.included).toEqual(extracted.included);
+    expect(tour.requirements).toEqual(extracted.requirements);
+
+    expect(tour.itinerary.map(item => item.title)).toEqual(
+      (extracted.itinerary ?? []).map(item => item.title)
+    );
+    expect(tour.itinerary.map(item => item.duration ?? null)).toEqual(
+      (extracted.itinerary ?? []).map(item => item.duration ?? null)
+    );
+    expect(tour.itinerary.every(item => Boolean(item.description?.trim()))).toBe(true);
+
+    expect(tour.diagnostics.commercialPriceFieldPath).toBe("product.priceFrom");
+    expect(tour.diagnostics.ratingFieldPath).toBe(
+      "product.reviews.combinedAverageRating"
+    );
+    expect(tour.diagnostics.reviewCountFieldPath).toBe(
+      "product.reviews.totalReviews"
+    );
+    expect(tour.diagnostics.itineraryFieldPath).toBe("product.itineraryItems");
+    expect(tour.diagnostics.meetingPointFieldPath).toMatch(
+      /^product\.logistics\.start(?:\[0\])?\.description$/
+    );
+  });
+
   it("emits a compact validation report for each Engine6 tour fixture", () => {
     const reports = ENGINE6_VALIDATION_FIXTURES.map(
       buildEngine6ValidationReport
