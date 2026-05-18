@@ -1,0 +1,135 @@
+{
+  "product": {
+    "productCode": "3351P13",
+    "productUrl": "https://www.viator.com/tours/Palm-Springs/Earthquake-Canyon-Express-Downhill-Bike-Adventure/d648-3351P13?mcid=42383&pid=P00290915&medium=api&api_version=2.0",
+    "title": "Earthquake Canyon Express Downhill Bicycle Adventure",
+    "description": {
+      "text": "A paved road, downhill bicycle tour through a Federally protected Wilderness zone along the San Andreas Fault. Riders will be treated to magnificent vistas of the wide open Colorado Desert, enter a tortured badlands canyon, then finish off with views of the Santa Rosa Mountains and ride through the agricultural fields of the Eastern Coachella Valley. Age limit is 12 years old. This is a group tour.\nThis activity has a 2 person requirement for the tour to run. If you are a single rider, please call first."
+    },
+    "highlights": [],
+    "additionalInfo": [
+      "Not recommended for travelers with spinal injuries",
+      "Not recommended for travelers with poor cardiovascular health",
+      "Suitable for all physical fitness levels",
+      "Children must be accompanied by an adult",
+      "Do you have any physical limitations or food allergies we should be aware of?"
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Bottled water",
+      "Use of bicycle",
+      "Driver/guide",
+      "Snacks",
+      "Use of helmet",
+      "Live commentary on board"
+    ],
+    "exclusions": [
+      "Gratuities"
+    ],
+    "location": {},
+    "reviews": {
+      "combinedAverageRating": 4.9067163,
+      "totalReviews": 268
+    },
+    "logistics": {
+      "start": {
+        "description": null
+      }
+    },
+    "bookingQuestions": [
+      "AGEBAND",
+      "FULL_NAMES_FIRST",
+      "FULL_NAMES_LAST",
+      "HEIGHT",
+      "SPECIAL_REQUIREMENTS"
+    ],
+    "cancellationPolicy": {
+      "type": "STANDARD",
+      "description": "For a full refund, cancel at least 24 hours before the scheduled departure time.",
+      "cancelIfBadWeather": true,
+      "cancelIfInsufficientTravelers": true,
+      "refundEligibility": [
+        {
+          "dayRangeMin": 1,
+          "percentageRefundable": 100
+        },
+        {
+          "dayRangeMin": 0,
+          "dayRangeMax": 1,
+          "percentageRefundable": 0
+        }
+      ]
+    },
+    "itineraryItems": [
+      {
+        "title": "The route cuts through the heart of the San Andreas Fault in the Meccacopia Wilderness just outside of Mecca, CA",
+        "description": "The route cuts through the heart of the San Andreas Fault in the Meccacopia Wilderness just outside of Mecca, CA",
+        "duration": ""
+      },
+      {
+        "title": "Magnificent views of the Salton Sea as guests round the last corner coming out of the canyon",
+        "description": "Magnificent views of the Salton Sea as guests round the last corner coming out of the canyon",
+        "duration": ""
+      }
+    ],
+    "priceFrom": "$169.00",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        },
+        {
+          "isCover": true,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        }
+      ]
+    }
+  }
+}

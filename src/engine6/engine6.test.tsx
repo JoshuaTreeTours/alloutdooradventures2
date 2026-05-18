@@ -41,6 +41,7 @@ import {
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_MIAMI_PIRATE_BOAT_ROUTE,
   ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
+  ENGINE6_PALM_SPRINGS_EARTHQUAKE_CANYON_DOWNHILL_BIKE_ROUTE,
   ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
   ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_ROUTE,
@@ -133,6 +134,8 @@ const ENGINE6_5584233P1_EXPECTED_HERO_URL =
   "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg?w=700&h=500&s=1";
 const ENGINE6_327321P1_EXPECTED_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/07/b0/bc.jpg";
+const ENGINE6_3351P13_EXPECTED_HERO_URL =
+  "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=700&h=500&s=1";
 const ENGINE6_21165P1_EXPECTED_HERO_URL =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/19/65/61/caption.jpg?w=700&h=500&s=1";
 const ENGINE6_31015P9_EXPECTED_HERO_URL =
@@ -1327,6 +1330,60 @@ describe("engine6 listing surfaces", () => {
     );
     expect(Array.isArray(faqNode?.mainEntity)).toBe(true);
     expect((faqNode?.mainEntity as unknown[]).length).toBe(5);
+  });
+
+  it("rebuilds 3351P13 in place with Engine6 route, exact hero parity, and schema parity", () => {
+    const unifiedTours = getToursByCityUnified("california", "palm-springs");
+    const matchingEntries = unifiedTours.filter(
+      entry => entry.tour.productCode === "3351P13"
+    );
+    expect(matchingEntries).toHaveLength(1);
+    expect(matchingEntries[0]?.href).toBe(
+      ENGINE6_PALM_SPRINGS_EARTHQUAKE_CANYON_DOWNHILL_BIKE_ROUTE
+    );
+    expect(matchingEntries[0]?.tour.heroImage).toBe(
+      ENGINE6_3351P13_EXPECTED_HERO_URL
+    );
+
+    const detailTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "3351P13"
+    );
+    expect(detailTour?.heroImageUrl).toBe(ENGINE6_3351P13_EXPECTED_HERO_URL);
+    expect(detailTour?.canonicalPath).toBe(
+      ENGINE6_PALM_SPRINGS_EARTHQUAKE_CANYON_DOWNHILL_BIKE_ROUTE
+    );
+    expect(detailTour?.priceAmount).toBe(169);
+    expect(detailTour?.priceFormatted).toBe("From $169.00");
+
+    const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
+    expect(detailHtml).toContain(
+      ENGINE6_3351P13_EXPECTED_HERO_URL.replaceAll("&", "&amp;")
+    );
+    expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
+    expect(detailHtml).toContain(
+      'href="/destinations/california/palm-springs/tours"'
+    );
+    expect(detailHtml).toContain("<strong>Price:</strong>");
+    expect(detailHtml).toContain("From $169.00");
+    expect(detailHtml).not.toContain("Check latest price");
+
+    const schema = buildEngine6SchemaGraph(detailTour!);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const webpageNode = graph.find(node => node["@type"] === "WebPage") as
+      | Record<string, unknown>
+      | undefined;
+    const productNode = graph.find(node => node["@type"] === "Product") as
+      | Record<string, unknown>
+      | undefined;
+    const offerNode = graph.find(node => node["@type"] === "Offer") as
+      | Record<string, unknown>
+      | undefined;
+    expect(webpageNode?.image).toBe(ENGINE6_3351P13_EXPECTED_HERO_URL);
+    expect(productNode?.image).toBe(ENGINE6_3351P13_EXPECTED_HERO_URL);
+    expect(productNode?.offers).toBeDefined();
+    expect(productNode?.aggregateRating).toBeDefined();
+    expect(offerNode?.price).toBe(169);
+    expect(detailTour?.itinerary.length).toBeGreaterThan(0);
   });
 
   it("routes and renders new San Diego engine6 specimens with hero parity, direct affiliate CTA, and schema URL separation", () => {
