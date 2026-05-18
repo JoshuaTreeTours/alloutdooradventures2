@@ -238,6 +238,9 @@ export const ENGINE6_SAN_DIEGO_TIJUANA_BORDER_TOUR_ROUTE =
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE = "327321P1";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE =
   "/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs";
+export const ENGINE6_PALM_SPRINGS_JOSHUA_TREE_HUMMER_PRODUCT_CODE = "6740JTREE";
+export const ENGINE6_PALM_SPRINGS_JOSHUA_TREE_HUMMER_ROUTE =
+  "/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree";
 export const ENGINE6_FORT_LAUDERDALE_EBIKE_PRODUCT_CODE = "383300P6";
 export const ENGINE6_FORT_LAUDERDALE_EBIKE_ROUTE =
   "/destinations/florida/fort-lauderdale/tours/guided-electric-bike-tours-of-greater-fort-lauderdale";
@@ -608,6 +611,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
     ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PALM_SPRINGS_JOSHUA_TREE_HUMMER_ROUTE,
+    ENGINE6_PALM_SPRINGS_JOSHUA_TREE_HUMMER_PRODUCT_CODE,
   ],
   [
     ENGINE6_FORT_LAUDERDALE_EBIKE_ROUTE,

@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "6740JTREE",
+    "productUrl": "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE",
+    "title": "Joshua Tree Hummer Adventure from Palm Desert",
+    "description": {
+      "text": "Experience Joshua Tree National Park aboard an open-air Hummer on a guided desert adventure from Palm Desert. Travel through iconic Mojave scenery while your guide shares insights on geology, wildlife, and the region's history. Stops include panoramic viewpoints and signature rock formations for photos and interpretation."
+    },
+    "location": {
+      "city": "Palm Springs",
+      "state": "California"
+    },
+    "duration": "3 hours",
+    "priceFrom": "From $199.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 642
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/32/c4/c9/17/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ride through Joshua Tree National Park in an open-air Hummer.",
+      "See dramatic rock formations and desert landscapes with guide commentary.",
+      "Stop at scenic viewpoints for photos and interpretation.",
+      "Small-group format for a more personal experience."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Palm Desert, California, USA"
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Palm Desert departure",
+        "description": "Meet your guide and board the open-air Hummer for departure toward Joshua Tree National Park."
+      },
+      {
+        "title": "Joshua Tree National Park exploration",
+        "description": "Travel between key viewpoints and landmark rock formations with narration on local geology and ecology.",
+        "duration": "2 hours"
+      },
+      {
+        "title": "Scenic photo stops",
+        "description": "Pause at panoramic overlooks to photograph Joshua trees and desert terrain.",
+        "duration": "30 minutes"
+      },
+      {
+        "title": "Return to Palm Desert",
+        "description": "Return drive to the original meeting area in Palm Desert.",
+        "duration": "30 minutes"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Open-air Hummer transportation",
+      "Bottled water"
+    ],
+    "exclusions": [
+      "Gratuities",
+      "Hotel pickup and drop-off unless selected"
+    ],
+    "additionalInfo": [
+      "Not wheelchair accessible.",
+      "Children must be accompanied by an adult.",
+      "Operates in most weather conditions; dress appropriately.",
+      "Cancellation policy: cancel at least 48 hours in advance for a full refund."
+    ],
+    "faqs": [
+      {
+        "question": "Where does the tour depart from?",
+        "answer": "The tour departs from Palm Desert, California."
+      },
+      {
+        "question": "How long is the experience?",
+        "answer": "The Hummer adventure is approximately 3 hours."
+      },
+      {
+        "question": "What is included?",
+        "answer": "Your booking includes a professional guide, open-air Hummer transportation, and bottled water."
+      },
+      {
+        "question": "Is the tour suitable for all travelers?",
+        "answer": "Most travelers can participate, but the tour is not wheelchair accessible."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ]
+  }
+}
