@@ -8,6 +8,8 @@ const __dirname = path.dirname(__filename);
 
 const distDir = path.resolve(__dirname, "../dist");
 const templatePath = path.join(distDir, "index.html");
+const DOLPHIN_TARGET_PATH =
+  "/destinations/florida/santa-rosa-beach/tours/dolphin-cruise-614529";
 
 const escapeAttribute = value =>
   value.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
@@ -161,6 +163,7 @@ const replaceMeta = (html, seo) => {
 };
 
 const STRUCTURED_DATA_SCRIPT_ID = "structured-data";
+const DEFAULT_CANONICAL_URL = "https://www.alloutdooradventures.com/";
 
 const replaceStructuredData = (html, structuredData) => {
   const scriptTag = structuredData
@@ -179,6 +182,43 @@ const replaceStructuredData = (html, structuredData) => {
   }
 
   return html.replace("</head>", `${scriptTag}</head>`);
+};
+
+const readStructuredDataWebPageFallback = structuredData => {
+  if (!structuredData || typeof structuredData !== "object") {
+    return null;
+  }
+
+  const graph = Array.isArray(structuredData["@graph"])
+    ? structuredData["@graph"]
+    : [];
+  const webPageNode = graph.find(node => {
+    if (!node || typeof node !== "object") {
+      return false;
+    }
+    const nodeType = node["@type"];
+    return Array.isArray(nodeType)
+      ? nodeType.includes("WebPage")
+      : nodeType === "WebPage";
+  });
+
+  if (!webPageNode || typeof webPageNode !== "object") {
+    return null;
+  }
+
+  const name =
+    typeof webPageNode.name === "string" ? webPageNode.name.trim() : "";
+  const description =
+    typeof webPageNode.description === "string"
+      ? webPageNode.description.trim()
+      : "";
+  const url = typeof webPageNode.url === "string" ? webPageNode.url.trim() : "";
+
+  if (!name && !description && !url) {
+    return null;
+  }
+
+  return { name, description, url };
 };
 
 const buildOutputPath = pathname => {
@@ -230,6 +270,25 @@ const ensurePrerenderedFile = async pathname => {
   } catch {
     return false;
   }
+};
+
+const collectHtmlFiles = async rootDir => {
+  const files = [];
+  const walk = async dir => {
+    const entries = await readdir(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        await walk(fullPath);
+        continue;
+      }
+      if (entry.isFile() && entry.name === "index.html") {
+        files.push(fullPath);
+      }
+    }
+  };
+  await walk(rootDir);
+  return files;
 };
 
 const readSitemapUrls = async () => {
@@ -721,6 +780,7 @@ const main = async () => {
     engine2SchemaModule,
     engine6RegistryModule,
     engine6SeoModule,
+    tourMetaModule,
   ] = await Promise.all([
     safeImport("../src/utils/structuredData.ts", "structuredData"),
     safeImport("../src/data/tourPaths.ts", "tourPaths"),
@@ -730,6 +790,7 @@ const main = async () => {
     safeImport("../src/engine2/schema/buildSchemaGraph.ts", "engine2Schema"),
     safeImport("../src/engine6/registry.ts", "engine6Registry"),
     safeImport("../src/engine6/seo.ts", "engine6Seo"),
+    safeImport("../src/lib/tourMeta.ts", "tourMeta"),
   ]);
 
   const tours = Array.isArray(toursGeneratedModule.toursGenerated)
@@ -800,6 +861,7 @@ const main = async () => {
     ? engine6RegistryModule.engine6ResolvedTours
     : [];
   const buildEngine6Seo = engine6SeoModule?.buildEngine6Seo ?? null;
+  const buildLegacyTourMeta = tourMetaModule?.buildTourMeta ?? null;
 
   resetMissingGeoFallbackReport?.();
 
@@ -835,6 +897,15 @@ const main = async () => {
       urlsToRender.add(buildCanonicalUrl(tour.canonicalPath));
     }
   }
+  for (const tour of tours) {
+    if (
+      tour?.destination?.stateSlug &&
+      tour?.destination?.citySlug &&
+      tour?.slug
+    ) {
+      urlsToRender.add(buildCanonicalUrl(getCityTourDetailPath(tour)));
+    }
+  }
 
   if (!urlsToRender.size) {
     await writeSchemaMissingGeoReport();
@@ -861,6 +932,16 @@ const main = async () => {
 
     tourDescriptionCounts.set(key, (tourDescriptionCounts.get(key) ?? 0) + 1);
   }
+
+  const dolphinTargetUrl = buildCanonicalUrl(DOLPHIN_TARGET_PATH);
+  const dolphinInSitemap = urls.some(
+    url => normalizePathname(new URL(url).pathname) === DOLPHIN_TARGET_PATH
+  );
+  const dolphinInRenderSet = urlsToRender.has(dolphinTargetUrl);
+  const dolphinOutputPath = buildOutputPath(DOLPHIN_TARGET_PATH).outputPath;
+  console.info(
+    `[prerender:diagnostic] target=${DOLPHIN_TARGET_PATH} inSitemap=${dolphinInSitemap} inUrlsToRender=${dolphinInRenderSet} output=${dolphinOutputPath}`
+  );
 
   const isTourDescriptionDuplicate = tour => {
     const key = normalizeDescriptionForDedupe(extractTourBaseDescription(tour));
@@ -962,12 +1043,20 @@ const main = async () => {
         );
         seo.url = buildCanonicalUrl(normalizedPathname);
       } else {
-        seo.title = `${tourForSeo.title} | ${destinationLabel} Outdoor Tour`;
-        seo.description = buildTourMetaDescription(tourForSeo, {
-          isDuplicate: isTourDescriptionDuplicate(tourForSeo),
-          diagnosticsLabel: `prerender:${tourForSeo.id}`,
-        });
-        seo.url = buildCanonicalUrl(basePathname);
+        const canonicalUrl = buildCanonicalUrl(basePathname);
+        if (buildLegacyTourMeta) {
+          const meta = buildLegacyTourMeta(tourForSeo, canonicalUrl);
+          seo.title = meta.title;
+          seo.description = meta.description;
+          seo.url = meta.canonical;
+        } else {
+          seo.title = `${tourForSeo.title} | ${destinationLabel} Outdoor Tour`;
+          seo.description = buildTourMetaDescription(tourForSeo, {
+            isDuplicate: isTourDescriptionDuplicate(tourForSeo),
+            diagnosticsLabel: `prerender:${tourForSeo.id}`,
+          });
+          seo.url = canonicalUrl;
+        }
       }
     } else {
       const staticSeo = getStaticPageSeo(pathname);
@@ -1269,6 +1358,24 @@ const main = async () => {
       });
     }
 
+    const webPageSeoFallback = readStructuredDataWebPageFallback(structuredData);
+    const isDefaultHeadFallback =
+      seo.title === DEFAULT_SEO.title ||
+      seo.description === DEFAULT_SEO.description ||
+      seo.url === DEFAULT_CANONICAL_URL;
+
+    if (webPageSeoFallback && isDefaultHeadFallback) {
+      if (webPageSeoFallback.name) {
+        seo.title = webPageSeoFallback.name;
+      }
+      if (webPageSeoFallback.description) {
+        seo.description = webPageSeoFallback.description;
+      }
+      if (webPageSeoFallback.url) {
+        seo.url = webPageSeoFallback.url;
+      }
+    }
+
     const { outputPath, shouldWrite } = buildOutputPath(pathname);
 
     if (!shouldWrite || path.basename(outputPath) !== "index.html") {
@@ -1401,6 +1508,14 @@ const main = async () => {
     });
   }
 
+  const dolphinPrerendered = await ensurePrerenderedFile(DOLPHIN_TARGET_PATH);
+  if (!dolphinPrerendered) {
+    routeFailures.push({
+      route: DOLPHIN_TARGET_PATH,
+      error: new Error("Missing prerendered Dolphin Cruise HTML output."),
+    });
+  }
+
   await writeSchemaMissingGeoReport();
 
   for (const target of verificationTargets) {
@@ -1433,6 +1548,34 @@ const main = async () => {
         console.error(error);
       }
     }
+  }
+
+  const destinationsDir = path.join(distDir, "destinations");
+  try {
+    const destinationHtmlFiles = await collectHtmlFiles(destinationsDir);
+    const homepageCanonical = buildCanonicalUrl("/");
+    for (const file of destinationHtmlFiles) {
+      if (!/[/\\]tours[/\\][^/\\]+[/\\]index\.html$/.test(file)) {
+        continue;
+      }
+      const html = await readFile(file, "utf8");
+      if (html.includes(`rel="canonical" href="${homepageCanonical}"`)) {
+        routeFailures.push({
+          route: file.replace(`${distDir}${path.sep}`, ""),
+          error: new Error(
+            "Destination tour page contains homepage canonical."
+          ),
+        });
+      }
+    }
+  } catch (error) {
+    routeFailures.push({
+      route: "/destinations/**/tours/**",
+      error:
+        error instanceof Error
+          ? error
+          : new Error("Failed destination tour canonical audit."),
+    });
   }
 
   if (routeFailures.length) {
