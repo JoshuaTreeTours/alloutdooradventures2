@@ -39,6 +39,7 @@ import specimen5584233p1Payload from "../../data/engine6/viator/5584233P1.exact-
 import specimen327321p1Payload from "../../data/engine6/viator/327321P1.exact-product.json";
 import specimen6740jtreePayload from "../../data/engine6/viator/6740JTREE.exact-product.json";
 import specimen2335p1Payload from "../../data/engine6/viator/2335P1.exact-product.json";
+import specimen3351p13Payload from "../../data/engine6/viator/3351P13.exact-product.json";
 import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-product.json";
 import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-product.json";
 import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-product.json";
@@ -601,6 +602,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1",
     rawPayload: specimen2335p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "3351P13",
+    publicUrl:
+      "https://www.viator.com/tours/Palm-Springs/Earthquake-Canyon-Express-Downhill-Bike-Adventure/d648-3351P13",
+    rawPayload: specimen3351p13Payload as Record<string, unknown>,
   },
   {
     productCode: "383300P6",
