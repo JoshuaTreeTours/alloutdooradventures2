@@ -1,8 +1,11 @@
-const AFFILIATE_PARAMS = {
-  pid: "P00290915",
-  mcid: "42383",
-  medium: "link",
-} as const;
+const AFFILIATE_PARAMS = [
+  ["mcid", "58086"],
+  ["pid", "P00290915"],
+  ["medium", "link"],
+  ["api_version", "2.0"],
+  ["uid", "U00174482"],
+  ["currency", "USD"],
+] as const;
 
 const hasCanonicalViatorPath = (url: string): boolean => /\/d\d+-/i.test(url);
 
@@ -11,7 +14,9 @@ export function buildViatorAffiliateUrl(args: {
   fallbackUrl?: string | null;
 }): string | null {
   const candidate =
-    (args.baseUrl && hasCanonicalViatorPath(args.baseUrl) ? args.baseUrl : null) ||
+    (args.baseUrl && hasCanonicalViatorPath(args.baseUrl)
+      ? args.baseUrl
+      : null) ||
     (args.fallbackUrl && hasCanonicalViatorPath(args.fallbackUrl)
       ? args.fallbackUrl
       : null) ||
@@ -25,13 +30,16 @@ export function buildViatorAffiliateUrl(args: {
   try {
     const url = new URL(candidate);
 
-    url.searchParams.set("pid", AFFILIATE_PARAMS.pid);
-    url.searchParams.set("mcid", AFFILIATE_PARAMS.mcid);
-    url.searchParams.set("medium", AFFILIATE_PARAMS.medium);
+    for (const [key] of AFFILIATE_PARAMS) {
+      url.searchParams.delete(key);
+    }
+
+    for (const [key, value] of AFFILIATE_PARAMS) {
+      url.searchParams.append(key, value);
+    }
 
     return url.toString();
   } catch {
     return candidate;
   }
 }
-

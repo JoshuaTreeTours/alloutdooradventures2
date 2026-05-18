@@ -1,4 +1,4 @@
-import React, { type ReactNode, useMemo } from "react";
+import React, { type ReactNode, useMemo, useState } from "react";
 
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
@@ -13,6 +13,53 @@ import type { Engine6Tour } from "../types";
 
 const BOOK_CTA_CLASSES =
   "inline-flex rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]";
+
+const EXTERNAL_BOOKING_REL = "sponsored nofollow noopener";
+
+function Engine6BookingCta({
+  href,
+  isExternal,
+  className,
+  noteClassName = "mt-2 max-w-md text-xs leading-5 text-[#405040]",
+  feedbackClassName = "mt-2 text-sm font-medium text-[#2f4a2f]",
+}: {
+  href: string;
+  isExternal: boolean;
+  className: string;
+  noteClassName?: string;
+  feedbackClassName?: string;
+}) {
+  const [isOpening, setIsOpening] = useState(false);
+
+  return (
+    <div>
+      <a
+        href={href}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? EXTERNAL_BOOKING_REL : undefined}
+        onClick={() => {
+          if (isExternal) {
+            setIsOpening(true);
+          }
+        }}
+        className={className}
+      >
+        Check availability
+      </a>
+      {isOpening ? (
+        <p className={feedbackClassName} aria-live="polite">
+          Opening secure Viator booking page…
+        </p>
+      ) : null}
+      {isExternal ? (
+        <p className={noteClassName}>
+          Booking opens on Viator, our secure travel partner. Some availability
+          pages may take a few seconds to load.
+        </p>
+      ) : null}
+    </div>
+  );
+}
 
 const ContentSection = ({
   title,
@@ -251,18 +298,24 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             </div>
 
             <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90">
-              <span className="block">This tour is operated by an independent third-party provider.</span>
-              <span className="block">All Outdoor Adventures is a marketplace that connects travelers with local tour operators.</span>
+              <span className="block">
+                This tour is operated by an independent third-party provider.
+              </span>
+              <span className="block">
+                All Outdoor Adventures is a marketplace that connects travelers
+                with local tour operators.
+              </span>
             </p>
 
-            <a
-              href={tour.bookingUrl}
-              target={isExternalBookingUrl ? "_blank" : undefined}
-              rel={isExternalBookingUrl ? "noreferrer" : undefined}
-              className={`mt-6 ${BOOK_CTA_CLASSES}`}
-            >
-              Check availability
-            </a>
+            <div className="mt-6">
+              <Engine6BookingCta
+                href={tour.bookingUrl}
+                isExternal={isExternalBookingUrl}
+                className={BOOK_CTA_CLASSES}
+                feedbackClassName="mt-2 text-sm font-medium text-white"
+                noteClassName="mt-2 max-w-md text-xs leading-5 text-white/85"
+              />
+            </div>
           </div>
 
           {resolvedHeroUrl ? (
@@ -445,14 +498,15 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             Secure your spot, confirm the latest availability, and review final
             departure details before checkout.
           </p>
-          <a
-            href={tour.bookingUrl}
-            target={isExternalBookingUrl ? "_blank" : undefined}
-            rel={isExternalBookingUrl ? "noreferrer" : undefined}
-            className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1f4d36] transition hover:bg-green-50"
-          >
-            Check availability
-          </a>
+          <div className="mt-6 flex justify-center">
+            <Engine6BookingCta
+              href={tour.bookingUrl}
+              isExternal={isExternalBookingUrl}
+              className="inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1f4d36] transition hover:bg-green-50"
+              feedbackClassName="mt-2 text-sm font-medium text-white"
+              noteClassName="mx-auto mt-2 max-w-md text-xs leading-5 text-green-100"
+            />
+          </div>
         </section>
 
         {showRelatedTours ? (

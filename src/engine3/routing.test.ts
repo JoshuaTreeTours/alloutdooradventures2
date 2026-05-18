@@ -21,7 +21,7 @@ describe("getEngine3TourBySlugs", () => {
     expect(tour?.images.hero).toBe(LOCKED_HERO_URL);
     expect(tour?.seo.ogImage).toBe(LOCKED_HERO_URL);
     expect(tour?.bookingUrl).toContain("pid=P00290915");
-    expect(tour?.bookingUrl).toContain("mcid=42383");
+    expect(tour?.bookingUrl).toContain("mcid=58086");
     expect(tour?.bookingUrl).toContain("medium=link");
   });
 
@@ -33,6 +33,9 @@ describe("getEngine3TourBySlugs", () => {
     );
 
     expect(tour?.id).toBe("2335P1");
+    expect(tour?.bookingUrl).toBe(
+      "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1?mcid=58086&pid=P00290915&medium=link&api_version=2.0&uid=U00174482&currency=USD"
+    );
     expect(tour?.images.hero).toBeTruthy();
     expect(tour?.images.gallery?.length).toBeGreaterThanOrEqual(1);
   });
