@@ -33,7 +33,7 @@ export default function EditorialSpotlight({
           </h2>
           <p className="text-sm text-[#405040] md:text-base">{description}</p>
           <ul className="mt-3 space-y-2 text-sm text-[#405040]">
-            {bullets.map((bullet) => (
+            {bullets.map(bullet => (
               <li key={bullet} className="flex items-start gap-2">
                 <span className="mt-1 h-2 w-2 rounded-full bg-[#2f4a2f]" />
                 <span>{bullet}</span>
@@ -51,7 +51,7 @@ export default function EditorialSpotlight({
         <div className="relative min-h-[260px] overflow-hidden rounded-2xl border border-black/10 bg-white/70 shadow-sm">
           <Image
             src={image}
-            fallbackSrc="/hero.jpg"
+            fallbackSrc={image}
             alt=""
             className="h-full w-full object-cover"
           />

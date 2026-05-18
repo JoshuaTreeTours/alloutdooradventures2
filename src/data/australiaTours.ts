@@ -151,7 +151,7 @@ const buildTourFromRow = (row: CsvRow): Tour | null => {
   const bookingWidgetUrl = bookingWidgetSource
     ? normalizeFareharborUrl(bookingWidgetSource) ?? bookingWidgetSource
     : undefined;
-  const heroImage = sanitizeText(row.image_url) || "/hero.jpg";
+  const heroImage = sanitizeText(row.image_url);
   const tags = splitTags(row.tags);
   const { activitySlugs, primaryCategory } = resolveActivitySlugs(itemName, tags);
   const likelyToSellOut =

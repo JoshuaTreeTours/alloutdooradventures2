@@ -11,7 +11,7 @@ import type { StateDestination } from "../data/destinations";
 import type { Tour } from "../data/tours.types";
 import { getTourDetailPath, getToursByCityUnified } from "../data/tours";
 import { pickBestHeroImageFromTours } from "../utils/heroImage";
-import { resolveHeroImageForRoute } from "../utils/hero";
+import { resolveHeroImageForRoute, resolveTourHeroImage } from "../utils/hero";
 import { SITE_BRAND_NAME } from "../utils/site";
 import { buildMetaDescription } from "../utils/seo";
 import { buildBreadcrumbList, buildItemList } from "../utils/structuredData";
@@ -77,11 +77,14 @@ export default function DestinationLandingTemplate({
       { name: "Destinations", url: "/destinations" },
       { name: state.name, url: `/destinations/${state.slug}` },
     ]);
-    const itemListItems = tours.map(tour => ({
-      name: tour.title,
-      url: getTourDetailPath(tour),
-      image: tour.heroImage ? [tour.heroImage] : undefined,
-    }));
+    const itemListItems = tours.map(tour => {
+      const image = resolveTourHeroImage(tour);
+      return {
+        name: tour.title,
+        url: getTourDetailPath(tour),
+        image: image ? [image] : undefined,
+      };
+    });
     const nodes = [breadcrumbs];
     if (itemListItems.length) {
       nodes.push(buildItemList(itemListItems));

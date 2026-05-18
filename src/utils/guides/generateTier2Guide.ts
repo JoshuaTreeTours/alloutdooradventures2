@@ -55,7 +55,7 @@ export const generateTier2Guide = async (
     city: cityName,
     slug: `guides/us/${stateSlug}/${citySlug}`,
     hero: {
-      image: hero?.imageUrl ?? "/hero.jpg",
+      image: hero?.imageUrl ?? "",
       alt: hero?.alt ?? `${cityName}, ${state.name} travel skyline`,
       headline: buildCityGuideH1(cityName),
       subheadline: `Plan a focused ${cityName} trip with practical highlights, local context, and easy tour connections.`,

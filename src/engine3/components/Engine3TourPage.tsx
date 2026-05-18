@@ -2,7 +2,6 @@ import { useMemo, useState } from "react";
 
 import Seo from "../../components/Seo";
 import ParagonMetaRow from "../../components/tours/ParagonMetaRow";
-import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { buildEngine3SchemaGraph } from "../schema/buildEngine3SchemaGraph";
 import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
@@ -127,7 +126,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     primaryImageUrl: tour.primaryImageUrl,
     heroImageOverrideUrl: tour.heroImageOverrideUrl,
   });
-  const heroUrl = viatorHeroUrl ?? DEFAULT_ENGINE3_HERO_IMAGE_URL;
+  const heroUrl = viatorHeroUrl ?? null;
 
   const breadcrumbItems = buildEngine3BreadcrumbItems({
     title: tour.title,
@@ -179,7 +178,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
             canonicalUrl,
             title: tour.title,
             description: pageDescription,
-            image: heroUrl,
+            image: heroUrl ?? undefined,
           },
           route: {
             pathname:

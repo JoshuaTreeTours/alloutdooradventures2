@@ -23,7 +23,10 @@ import {
   buildCategorySeoTitle,
 } from "../../../../lib/seo/titleBuilder";
 import { isRentalTour } from "../../../../utils/isRentalTour";
-import { resolveHeroImageForRoute } from "../../../../utils/hero";
+import {
+  resolveHeroImageForRoute,
+  resolveTourHeroImage,
+} from "../../../../utils/hero";
 import {
   buildBreadcrumbList,
   buildItemList,
@@ -102,11 +105,14 @@ export default function CityToursIndexRoute({
       { name: city.name, url: cityHref },
       { name: "Tours", url: toursHref },
     ]);
-    const itemListItems = filteredTours.map(entry => ({
-      name: entry.tour.title,
-      url: entry.href,
-      image: entry.tour.heroImage ? [entry.tour.heroImage] : undefined,
-    }));
+    const itemListItems = filteredTours.map(entry => {
+      const image = resolveTourHeroImage(entry.tour);
+      return {
+        name: entry.tour.title,
+        url: entry.href,
+        image: image ? [image] : undefined,
+      };
+    });
     const nodes = [breadcrumbs];
     if (itemListItems.length) {
       nodes.push(buildItemList(itemListItems));
@@ -201,7 +207,7 @@ export default function CityToursIndexRoute({
           {heroImage ? (
             <Image
               src={heroImage}
-              fallbackSrc="/hero.jpg"
+              fallbackSrc={heroImage}
               alt={`${city.name} hero`}
               className="h-64 w-full object-cover md:h-80"
             />

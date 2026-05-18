@@ -36,7 +36,7 @@ const buildFallbackCity = ({
     lng: Number.isFinite(lng) ? (lng as number) : Number.NaN,
     shortDescription: `Guided adventures, local trails, and outdoor experiences around ${cityName}.`,
     intro: `${cityName} is a strong basecamp for ${activityList} in ${stateName}.`,
-    heroImages: ["/hero.jpg"],
+    heroImages: [],
     activityTags: activityTags.length ? activityTags : ["cycling", "hiking", "canoeing"],
     whereItIs: [
       `${cityName} sits within ${stateName}, giving travelers access to scenic routes, waterways, and trailheads close to town.`,
@@ -100,7 +100,7 @@ const buildFallbackState = (
   slug: stateSlug,
   name: stateName,
   description: `Outdoor experiences across ${stateName}.`,
-  heroImage: "/hero.jpg",
+  heroImage: "",
   region: "Featured destination",
   intro: `Plan multi-activity getaways across ${stateName} with guided tours and local experts.`,
   longDescription: `${stateName} delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in ${stateName} will highlight its local specialties so travelers can book with confidence.`,

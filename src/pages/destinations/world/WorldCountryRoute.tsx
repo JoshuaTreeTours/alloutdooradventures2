@@ -12,7 +12,7 @@ import {
   worldToursByCountry,
 } from "../../../data/worldIndex";
 import { getTourDetailPath } from "../../../data/tours";
-import { resolveHeroImage } from "../../../utils/hero";
+import { resolveHeroImage, resolveTourHeroImage } from "../../../utils/hero";
 import { SITE_BRAND_NAME } from "../../../utils/site";
 import { buildMetaDescription } from "../../../utils/seo";
 import {
@@ -74,11 +74,14 @@ export default function WorldCountryRoute({ params }: WorldCountryRouteProps) {
       { name: "Destinations", url: "/destinations" },
       { name: country.name, url: `/destinations/world/${country.slug}` },
     ]);
-    const itemListItems = filteredTours.map(tour => ({
-      name: tour.title,
-      url: getTourDetailPath(tour),
-      image: tour.heroImage ? [tour.heroImage] : undefined,
-    }));
+    const itemListItems = filteredTours.map(tour => {
+      const image = resolveTourHeroImage(tour);
+      return {
+        name: tour.title,
+        url: getTourDetailPath(tour),
+        image: image ? [image] : undefined,
+      };
+    });
     const nodes = [breadcrumbs];
     if (itemListItems.length) {
       nodes.push(buildItemList(itemListItems));

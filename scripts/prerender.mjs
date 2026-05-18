@@ -646,29 +646,10 @@ const verifyPrerenderedPage = async ({
 
   const ogImageTag = findTag(html, "meta", "property", "og:image");
   const ogImageValue = extractAttribute(ogImageTag, "content");
-  if (!ogImageValue) {
-    logVerificationFailure({
-      label,
-      url: expectedUrl,
-      assertion: "og:image",
-      details: "Missing og:image content.",
-    });
-    throw new Error("Prerender verification failed.");
-  }
-
   const twitterImageTag = findTag(html, "meta", "name", "twitter:image");
   const twitterImageValue = extractAttribute(twitterImageTag, "content");
-  if (!twitterImageValue) {
-    logVerificationFailure({
-      label,
-      url: expectedUrl,
-      assertion: "twitter:image",
-      details: "Missing twitter:image content.",
-    });
-    throw new Error("Prerender verification failed.");
-  }
 
-  if (ogImageValue !== twitterImageValue) {
+  if ((ogImageValue ?? "") !== (twitterImageValue ?? "")) {
     logVerificationFailure({
       label,
       url: expectedUrl,

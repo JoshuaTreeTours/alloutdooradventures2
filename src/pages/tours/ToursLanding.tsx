@@ -52,7 +52,6 @@ const resolveCity = (stateSlug: string, citySlug: string | null) => {
   );
 };
 
-
 export const resolveToursLandingInitialSelection = (search: string) => {
   const params = new URLSearchParams(search);
   const stateSlug = params.get("state") ?? "";
@@ -121,7 +120,7 @@ export default function ToursLanding() {
         slug: stateSlug,
         name: stateName,
         description: `Outdoor experiences across ${stateName}.`,
-        heroImage: "/hero.jpg",
+        heroImage: "",
         region: "Featured destination",
         intro: `${stateName} is a strong basecamp for guided adventures.`,
         longDescription: `${stateName} features growing Engine2 inventory.`,
@@ -133,8 +132,12 @@ export default function ToursLanding() {
 
     return [...bySlug.values()].sort((a, b) => a.name.localeCompare(b.name));
   }, []);
-  const [selectedStateSlug, setSelectedStateSlug] = useState(initialSelection.stateSlug);
-  const [selectedCitySlug, setSelectedCitySlug] = useState(initialSelection.citySlug);
+  const [selectedStateSlug, setSelectedStateSlug] = useState(
+    initialSelection.stateSlug
+  );
+  const [selectedCitySlug, setSelectedCitySlug] = useState(
+    initialSelection.citySlug
+  );
   const [selectedCountry, setSelectedCountry] = useState("");
   const [
     selectedInternationalProvinceSlug,

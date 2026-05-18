@@ -9,9 +9,9 @@ export type HeroPageType =
 import { buildImageUrl } from "./seo";
 
 export const HOME_HERO_IMAGE = "/hero.jpg";
-export const TOUR_FALLBACK_HERO_IMAGE = "/images/hiking-hero.jpg";
-export const GUIDE_FALLBACK_HERO_IMAGE = "/images/cycling-hero.jpg";
-export const DESTINATION_FALLBACK_HERO_IMAGE = "/images/canoe-hero.jpg";
+export const TOUR_FALLBACK_HERO_IMAGE = undefined;
+export const GUIDE_FALLBACK_HERO_IMAGE = undefined;
+export const DESTINATION_FALLBACK_HERO_IMAGE = undefined;
 export const CITY_NEUTRAL_BRAND_IMAGE = "/logo.svg";
 
 export type HeroRouteContext = {
@@ -406,7 +406,7 @@ export const resolveHeroImageForRoute = ({
   const isHome = isHomeRoute(normalizedRoute);
 
   if (isHome) {
-    return buildImageUrl(HOME_HERO_IMAGE);
+    return null;
   }
 
   let resolvedImage: string | undefined;

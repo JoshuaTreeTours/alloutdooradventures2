@@ -47,7 +47,9 @@ export default function CanadaCityRoute({ params }: Props) {
       tours.map(t => ({
         name: t.name,
         url: t.seo.canonicalPath,
-        image: [t.images.hero || t.seo.ogImage],
+        image: getTourCardImage(t)
+          ? [getTourCardImage(t) as string]
+          : undefined,
       }))
     ),
   ]);

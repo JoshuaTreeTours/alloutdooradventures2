@@ -76,9 +76,7 @@ const extractProducts = (response: ViatorSearchResponse) =>
   response.products ?? response.data ?? response.items ?? [];
 
 const resolveImage = (product: ViatorProduct) =>
-  product.images?.[0]?.variants?.[0]?.url ||
-  product.images?.[0]?.url ||
-  "/hero.jpg";
+  product.images?.[0]?.variants?.[0]?.url || product.images?.[0]?.url || "";
 
 const resolveTitle = (product: ViatorProduct) =>
   product.productTitle || product.title || "Untitled Tour";
@@ -88,7 +86,7 @@ const resolveDescription = (product: ViatorProduct) =>
 
 const resolveTagIds = (product: ViatorProduct) =>
   product.tagIds ??
-  product.tags?.map((tag) => tag.tagId ?? 0).filter(Boolean) ??
+  product.tags?.map(tag => tag.tagId ?? 0).filter(Boolean) ??
   [];
 
 const resolveOutboundUrl = (product: ViatorProduct, slug: string) =>
@@ -143,7 +141,7 @@ const run = async () => {
 
   const products = extractProducts(searchResponse);
 
-  const tours = products.map((product) => {
+  const tours = products.map(product => {
     const title = resolveTitle(product);
     const slug = slugify(title);
     const tagIds = resolveTagIds(product);
@@ -167,7 +165,7 @@ const run = async () => {
   );
 };
 
-run().catch((error) => {
+run().catch(error => {
   console.error(error);
   process.exit(1);
 });

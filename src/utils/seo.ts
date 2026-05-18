@@ -12,7 +12,7 @@ export const DEFAULT_SEO = {
   description: `Discover outdoor tours, activities, travel guides, and curated local experiences across the United States and top adventure destinations worldwide.`,
   url: `${SITE_URL}/`,
   type: "website",
-  image: "/hero.jpg",
+  image: null,
 } as const;
 
 type StaticSeoEntry = {
@@ -166,9 +166,9 @@ export const buildCanonicalUrl = (path: string) => {
   return `${SITE_URL}${normalized}`;
 };
 
-export const buildImageUrl = (image?: string) => {
+export const buildImageUrl = (image?: string | null) => {
   if (!image) {
-    return buildCanonicalUrl(DEFAULT_SEO.image);
+    return "";
   }
 
   if (image.startsWith("http")) {
@@ -201,7 +201,7 @@ export const getStaticPageSeo = (pathname: string) => {
     description: entry.description,
     url: buildCanonicalUrl(normalized),
     type: DEFAULT_SEO.type,
-    image: buildImageUrl(entry.image ?? DEFAULT_SEO.image),
+    image: entry.image ? buildImageUrl(entry.image) : null,
     ...(entry.imageAlt ? { imageAlt: entry.imageAlt } : {}),
     ...(entry.ogImage ? { ogImage: buildImageUrl(entry.ogImage) } : {}),
     ...(entry.twitterImage

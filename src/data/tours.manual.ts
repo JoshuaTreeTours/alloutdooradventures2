@@ -681,7 +681,8 @@ export const manualTours: Tour[] = [
   {
     id: "hollywoodhikes-471721",
     slug: "the-official-hollywood-sign-walking-tour-in-los-angeles-free-waters-471721",
-    title: "The Official Hollywood Sign Walking Tour in Los Angeles-Free Waters!",
+    title:
+      "The Official Hollywood Sign Walking Tour in Los Angeles-Free Waters!",
     operator: "Hollywood Hikes, LLC",
     categories: ["detours"],
     primaryCategory: "detours",
@@ -712,7 +713,8 @@ export const manualTours: Tour[] = [
   {
     id: "hollywoodhikes-471726",
     slug: "the-official-hollywood-sign-express-walking-tour-in-los-angeles-free-waters-471726",
-    title: "The Official Hollywood Sign Express Walking Tour in Los Angeles-Free Waters!",
+    title:
+      "The Official Hollywood Sign Express Walking Tour in Los Angeles-Free Waters!",
     operator: "Hollywood Hikes, LLC",
     categories: ["detours"],
     primaryCategory: "detours",
@@ -785,8 +787,8 @@ export const manualTours: Tour[] = [
       lat: -118.242643,
       lng: 34.054908,
     },
-    heroImage: "/hero.jpg",
-    galleryImages: ["/hero.jpg"],
+    heroImage: "",
+    galleryImages: [],
     badges: {
       tagline: "Sightseeing Tour",
     },

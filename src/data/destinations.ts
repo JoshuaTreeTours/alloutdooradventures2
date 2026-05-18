@@ -3186,7 +3186,11 @@ const mississippiState: StateDestination = {
         "Use Bay Saint Louis as a coastal base for relaxed sightseeing.",
       ],
       nearby: ["Gulfport", "Biloxi", "Pass Christian"],
-      bestFor: ["Boat sightseeing", "Coastal day trips", "Relaxed outdoor pacing"],
+      bestFor: [
+        "Boat sightseeing",
+        "Coastal day trips",
+        "Relaxed outdoor pacing",
+      ],
       logistics: [
         "Arrive early for parking and marina check-in.",
         "Bring sun protection and light layers for wind on the water.",
@@ -3371,7 +3375,7 @@ const minnesotaState: StateDestination = {
         "Lake Superior gateway for shoreline hikes and scenic tours.",
       intro:
         "Duluth anchors North Shore adventures with quick access to lake views, forest trails, and day-trip routes.",
-      heroImages: ["/hero.jpg"],
+      heroImages: [],
       activityTags: ["hiking", "scenic-drives", "waterfront"],
       whereItIs: [
         "Duluth sits at the western tip of Lake Superior, serving as a launch point for North Shore itineraries.",

@@ -704,7 +704,7 @@ export const northeastStates: StateDestination[] = [
         "intro": "Brookline is a strong basecamp for hiking in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/jAgnMeSXTiuFpknUYUOl",
-          "/hero.jpg"
+          ""
         ],
         "activityTags": [
           "hiking"
@@ -1240,7 +1240,7 @@ export const northeastStates: StateDestination[] = [
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Somerville.",
         "intro": "Somerville is a strong basecamp for hiking in Massachusetts.",
         "heroImages": [
-          "/hero.jpg"
+          ""
         ],
         "activityTags": [
           "hiking"
@@ -1984,7 +1984,7 @@ export const northeastStates: StateDestination[] = [
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Montauk.",
         "intro": "Montauk is a strong basecamp for hiking in New York.",
         "heroImages": [
-          "/hero.jpg"
+          ""
         ],
         "activityTags": [
           "hiking"
@@ -2793,7 +2793,7 @@ export const northeastStates: StateDestination[] = [
         "intro": "Wallington is a strong basecamp for hiking in New Jersey.",
         "heroImages": [
           "https://cdn.filestackcontent.com/KvdwVvwbTXaxykw1XbjA",
-          "/hero.jpg"
+          ""
         ],
         "activityTags": [
           "hiking"
@@ -3119,7 +3119,7 @@ export const northeastStates: StateDestination[] = [
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Middletown Township.",
         "intro": "Middletown Township is a strong basecamp for canoeing in New Jersey.",
         "heroImages": [
-          "/hero.jpg"
+          ""
         ],
         "activityTags": [
           "canoeing"
@@ -5301,7 +5301,7 @@ export const northeastStates: StateDestination[] = [
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Bethlehem.",
         "intro": "Bethlehem is a strong basecamp for hiking in Pennsylvania.",
         "heroImages": [
-          "/hero.jpg"
+          ""
         ],
         "activityTags": [
           "hiking"

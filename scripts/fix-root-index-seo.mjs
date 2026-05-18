@@ -22,7 +22,7 @@ const replacements = {
 let image = null;
 const ogImage = html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i)?.[1] || '';
 if (ogImage && !ogImage.includes('__SEO_')) image = ogImage;
-if (!image) image = 'https://www.alloutdooradventures.com/hero.jpg';
+if (!image) image = '';
 replacements['__SEO_OG_IMAGE__'] = image;
 replacements['__SEO_TWITTER_IMAGE__'] = image;
 

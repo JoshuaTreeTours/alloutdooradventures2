@@ -10,21 +10,25 @@ type HeroProps = {
 
 export default function Hero({
   title = "Explore the High Sierra",
-  subtitle =
-    "Granite peaks, alpine lakes, and legendary trails make this a dream basecamp.",
-  imageUrl = "/hero.jpg",
+  subtitle = "Granite peaks, alpine lakes, and legendary trails make this a dream basecamp.",
+  imageUrl = "",
   ctaLabel = "View Experiences",
   ctaHref = "/tours",
 }: HeroProps) {
   return (
-    <section className="relative mx-auto max-w-[1400px] px-6 pt-6" aria-label="Hero">
+    <section
+      className="relative mx-auto max-w-[1400px] px-6 pt-6"
+      aria-label="Hero"
+    >
       <div className="relative overflow-hidden rounded-none md:rounded-md">
-        <Image
-          src={imageUrl}
-          fallbackSrc={imageUrl}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        {imageUrl ? (
+          <Image
+            src={imageUrl}
+            fallbackSrc={imageUrl}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : null}
         <div className="absolute inset-0 bg-black/35" />
         <div className="relative px-6 py-28 md:px-16 md:py-44 text-center text-white">
           <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">

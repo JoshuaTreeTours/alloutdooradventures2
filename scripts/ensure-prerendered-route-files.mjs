@@ -26,7 +26,7 @@ const buildGenericRouteSeo = (pathname) => {
       title: `${city} Travel Guide | All Outdoor Adventures`,
       description: `Explore travel guides, outdoor activities, tours, neighborhoods, and local experiences in ${city}, ${state}.`,
       url: `${SITE}${pathname}`,
-      image: `${SITE}/hero.jpg`,
+      image: ``,
     };
   }
 
@@ -37,7 +37,7 @@ const buildGenericRouteSeo = (pathname) => {
       title: `${state} Destinations | All Outdoor Adventures`,
       description: `Discover outdoor adventures, tours, and travel destinations throughout ${state}.`,
       url: `${SITE}${pathname}`,
-      image: `${SITE}/hero.jpg`,
+      image: ``,
     };
   }
 
@@ -52,7 +52,7 @@ const buildGenericRouteSeo = (pathname) => {
       title: `${city} Tours & Activities | All Outdoor Adventures`,
       description,
       url: `${SITE}${pathname}`,
-      image: `${SITE}/hero.jpg`,
+      image: ``,
     };
   }
 
@@ -64,7 +64,7 @@ const buildGenericRouteSeo = (pathname) => {
       title: `${city}, ${state} Outdoor Guide | All Outdoor Adventures`,
       description: `Discover outdoor adventures, things to do, and travel experiences in ${city}, ${state}.`,
       url: `${SITE}${pathname}`,
-      image: `${SITE}/hero.jpg`,
+      image: ``,
     };
   }
 
@@ -73,7 +73,7 @@ const buildGenericRouteSeo = (pathname) => {
       title: 'Destinations | All Outdoor Adventures',
       description: 'Browse destination guides and outdoor tours by state and city.',
       url: `${SITE}${pathname}`,
-      image: `${SITE}/hero.jpg`,
+      image: ``,
     };
   }
 
@@ -84,7 +84,7 @@ const buildGenericRouteSeo = (pathname) => {
     title: `${label} | All Outdoor Adventures`,
     description: `Explore ${label} with All Outdoor Adventures.`,
     url: `${SITE}${pathname}`,
-    image: `${SITE}/hero.jpg`,
+    image: ``,
   };
 };
 
@@ -104,7 +104,9 @@ const applySeo = (html, { title, description, url, image }) => {
   out = setMetaByAttr(out, 'name', 'twitter:description', description);
   out = setMetaByAttr(out, 'name', 'twitter:image', image);
   out = out.replace(/<link[^>]*rel=["']canonical["'][^>]*>/i, `<link rel="canonical" href="${url}" />`);
-  const ld = `<script id="structured-data" type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebPage', '@id': url, url, name: title, description, image }).replace(/</g, '\\u003c')}</script>`;
+  const structuredData = { '@context': 'https://schema.org', '@type': 'WebPage', '@id': url, url, name: title, description };
+  if (image) structuredData.image = image;
+  const ld = `<script id="structured-data" type="application/ld+json">${JSON.stringify(structuredData).replace(/</g, '\\u003c')}</script>`;
   out = /application\/ld\+json/i.test(out) ? out.replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/i, ld) : out.replace('</head>', `${ld}</head>`);
   return out;
 };

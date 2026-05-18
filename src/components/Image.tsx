@@ -6,7 +6,7 @@ import type {
 import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
 
-const DEFAULT_FALLBACK = "/hero.jpg";
+const DEFAULT_FALLBACK = "";
 
 type ImageProps = Omit<ComponentPropsWithoutRef<"img">, "src"> & {
   src: string;
@@ -35,7 +35,7 @@ export default function Image({
 
   const logImageEvent = (
     event: SyntheticEvent<HTMLImageElement, Event>,
-    status: "load" | "error",
+    status: "load" | "error"
   ) => {
     const target = event.currentTarget;
     const details = {
@@ -60,9 +60,9 @@ export default function Image({
     }
   };
 
-  const handleError: ReactEventHandler<HTMLImageElement> = (event) => {
+  const handleError: ReactEventHandler<HTMLImageElement> = event => {
     logImageEvent(event, "error");
-    if (currentSrc === fallbackSrc) {
+    if (!fallbackSrc || currentSrc === fallbackSrc) {
       return;
     }
 
@@ -71,7 +71,7 @@ export default function Image({
     onError?.(event);
   };
 
-  const handleLoad: ReactEventHandler<HTMLImageElement> = (event) => {
+  const handleLoad: ReactEventHandler<HTMLImageElement> = event => {
     logImageEvent(event, "load");
     onLoad?.(event);
   };

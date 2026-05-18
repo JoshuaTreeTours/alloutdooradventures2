@@ -1,9 +1,7 @@
 import type { Tour } from "../data/tours.types";
-import {
-  DEFAULT_CURRENCY,
-} from "../constants/merchantDefaults";
+import { DEFAULT_CURRENCY } from "../constants/merchantDefaults";
 import { applyPriceFloor } from "./merchantPricing";
-import { filterHeroImages } from "./hero";
+import { filterHeroImages, resolveTourHeroImage } from "./hero";
 import { cleanImageUrls, toSchemaImageValue } from "./cleanImageUrls";
 import { buildCanonicalUrl, buildImageUrl, SITE_URL } from "./seo";
 import { SITE_BRAND_NAME } from "./site";
@@ -555,12 +553,13 @@ export const buildTourProductStructuredData = ({
   ratingsVisible?: boolean;
 }) => {
   const resolvedImages = filterHeroImages(
-    images ?? [tour.heroImage, ...(tour.galleryImages ?? [])],
+    images ?? [resolveTourHeroImage(tour)],
     "product"
   );
   const schemaImages = cleanImageUrls(resolvedImages);
   const canonicalProductUrl = resolveCanonicalProductUrl(detailUrl);
-  const resolvedProductNodeId = productNodeId ?? buildTourProductNodeId(tour.id);
+  const resolvedProductNodeId =
+    productNodeId ?? buildTourProductNodeId(tour.id);
   const offerUrl = resolveOfferUrl({
     canonicalUrl: canonicalProductUrl,
     partnerBookingUrl: bookingUrl,
@@ -644,12 +643,13 @@ export const buildTourTripStructuredData = ({
   ratingsVisible?: boolean;
 }) => {
   const resolvedImages = filterHeroImages(
-    images ?? [tour.heroImage, ...(tour.galleryImages ?? [])],
+    images ?? [resolveTourHeroImage(tour)],
     "product"
   );
   const schemaImages = cleanImageUrls(resolvedImages);
   const canonicalProductUrl = resolveCanonicalProductUrl(detailUrl);
-  const resolvedProductNodeId = productNodeId ?? buildTourProductNodeId(tour.id);
+  const resolvedProductNodeId =
+    productNodeId ?? buildTourProductNodeId(tour.id);
   const offerUrl = resolveOfferUrl({
     canonicalUrl: canonicalProductUrl,
     partnerBookingUrl: bookingUrl,
