@@ -191,6 +191,10 @@ export const ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE =
 export const ENGINE6_SAN_DIEGO_JOSHUA_TREE_PRODUCT_CODE = "447234P3";
 export const ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE =
   "/destinations/california/san-diego/tours/joshua-tree-national-park-day-trip-from-san-diego";
+export const ENGINE6_PALM_SPRINGS_SAN_ANDREAS_FAULT_JEEP_PRODUCT_CODE =
+  "2335P1";
+export const ENGINE6_PALM_SPRINGS_SAN_ANDREAS_FAULT_JEEP_ROUTE =
+  "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1";
 export const ENGINE6_SAN_DIEGO_SUNSET_SAILING_PRODUCT_CODE = "5584233P1";
 export const ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE =
   "/destinations/california/san-diego/tours/spectacular-sunset-sail-on-san-diego-bay";
@@ -551,6 +555,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
     ENGINE6_SAN_DIEGO_JOSHUA_TREE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PALM_SPRINGS_SAN_ANDREAS_FAULT_JEEP_ROUTE,
+    ENGINE6_PALM_SPRINGS_SAN_ANDREAS_FAULT_JEEP_PRODUCT_CODE,
   ],
   [
     ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE,
