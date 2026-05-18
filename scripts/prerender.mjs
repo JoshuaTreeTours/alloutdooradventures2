@@ -742,8 +742,6 @@ const main = async () => {
         tour.destination.citySlug === citySlug &&
         tour.slug === tourSlug
     );
-  const getTourDetailPath = tour =>
-    `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`;
   const getCityTourDetailPath = tour =>
     `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`;
 

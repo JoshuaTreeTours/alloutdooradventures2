@@ -56,13 +56,13 @@ import DetoursTours from "./pages/tours/activities/DetoursTours";
 import HikingTours from "./pages/tours/activities/HikingTours";
 import MultiDayTours from "./pages/tours/activities/MultiDayTours";
 import CanoeingTours from "./pages/tours/activities/CanoeingTours";
-import TourDetail from "./pages/tours/TourDetail";
 import ActivityStateTours from "./pages/tours/ActivityStateTours";
 import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
 import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
 import Engine5ProofListingRoute from "./pages/engine5/Engine5ProofListingRoute";
 import Engine5ProofTourPage from "./engine5/components/Engine5ProofTourPage";
 import Engine6SpecimenRoute from "./pages/engine6/Engine6SpecimenRoute";
+import NotFoundPage from "./pages/NotFoundPage";
 import {
   ENGINE5_PROOF_LISTING_PATH,
   ENGINE5_PROOF_TOUR_ROUTE_PATTERN,
@@ -533,12 +533,8 @@ export default function App() {
           component={SwissLegacyTourRedirect}
         />
         <Route path="/tours/:tourSlug" component={FlagstaffTourDetailRoute} />
-        <Route
-          path="/tours/:stateSlug/:citySlug/:slug"
-          component={TourDetail}
-        />
 
-        <Route>Not Found</Route>
+        <Route component={NotFoundPage} />
       </Switch>
       <Footer />
     </>
