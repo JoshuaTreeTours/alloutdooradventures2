@@ -83,6 +83,13 @@ export const STATIC_PAGE_SEO: Record<string, StaticSeoEntry> = {
 
 const normalizeText = (text: string) => text.replace(/\s+/g, " ").trim();
 
+const MALFORMED_SEO_URL_TOKENS = ["__seo", "seo_canonical", "undefined", "null"];
+
+export const hasMalformedSeoUrlToken = (value: string) => {
+  const normalized = value.trim().toLowerCase();
+  return MALFORMED_SEO_URL_TOKENS.some((token) => normalized.includes(token));
+};
+
 const clampDescription = (text: string, maxLength = 160) => {
   if (text.length <= maxLength) {
     return text;
@@ -157,11 +164,19 @@ export const buildCanonicalUrl = (path: string) => {
     return DEFAULT_SEO.url;
   }
 
-  if (path.startsWith("http")) {
-    return path;
+  const trimmed = path.trim();
+  if (!trimmed || hasMalformedSeoUrlToken(trimmed)) {
+    return DEFAULT_SEO.url;
   }
 
-  const normalized = path.startsWith("/") ? path : `/${path}`;
+  if (trimmed.startsWith("http")) {
+    return trimmed;
+  }
+
+  const normalized = trimmed.startsWith("/") ? trimmed : `/${trimmed}`;
+  if (hasMalformedSeoUrlToken(normalized)) {
+    return DEFAULT_SEO.url;
+  }
 
   return `${SITE_URL}${normalized}`;
 };
