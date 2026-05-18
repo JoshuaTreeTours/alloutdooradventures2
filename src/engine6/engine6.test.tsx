@@ -1355,10 +1355,12 @@ describe("engine6 listing surfaces", () => {
 
     const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
     expect(detailHtml).toContain(
-      ENGINE6_PALM_SPRINGS_EARTHQUAKE_CANYON_DOWNHILL_BIKE_ROUTE
+      ENGINE6_3351P13_EXPECTED_HERO_URL.replaceAll("&", "&amp;")
     );
-    expect(detailHtml).toContain(ENGINE6_3351P13_EXPECTED_HERO_URL);
     expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
+    expect(detailHtml).toContain(
+      'href="/destinations/california/palm-springs/tours"'
+    );
 
     const schema = buildEngine6SchemaGraph(detailTour!);
     const graph = schema["@graph"] as Array<Record<string, unknown>>;
