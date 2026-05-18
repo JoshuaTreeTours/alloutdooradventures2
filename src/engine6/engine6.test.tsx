@@ -1352,6 +1352,8 @@ describe("engine6 listing surfaces", () => {
     expect(detailTour?.canonicalPath).toBe(
       ENGINE6_PALM_SPRINGS_EARTHQUAKE_CANYON_DOWNHILL_BIKE_ROUTE
     );
+    expect(detailTour?.priceAmount).toBe(169);
+    expect(detailTour?.priceFormatted).toBe("From $169.00");
 
     const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
     expect(detailHtml).toContain(
@@ -1361,6 +1363,9 @@ describe("engine6 listing surfaces", () => {
     expect(detailHtml).toContain(
       'href="/destinations/california/palm-springs/tours"'
     );
+    expect(detailHtml).toContain("<strong>Price:</strong>");
+    expect(detailHtml).toContain("From $169.00");
+    expect(detailHtml).not.toContain("Check latest price");
 
     const schema = buildEngine6SchemaGraph(detailTour!);
     const graph = schema["@graph"] as Array<Record<string, unknown>>;
@@ -1370,10 +1375,14 @@ describe("engine6 listing surfaces", () => {
     const productNode = graph.find(node => node["@type"] === "Product") as
       | Record<string, unknown>
       | undefined;
+    const offerNode = graph.find(node => node["@type"] === "Offer") as
+      | Record<string, unknown>
+      | undefined;
     expect(webpageNode?.image).toBe(ENGINE6_3351P13_EXPECTED_HERO_URL);
     expect(productNode?.image).toBe(ENGINE6_3351P13_EXPECTED_HERO_URL);
     expect(productNode?.offers).toBeDefined();
     expect(productNode?.aggregateRating).toBeDefined();
+    expect(offerNode?.price).toBe(169);
     expect(detailTour?.itinerary.length).toBeGreaterThan(0);
   });
 
