@@ -42,6 +42,7 @@ import {
   ENGINE6_MIAMI_PIRATE_BOAT_ROUTE,
   ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
   ENGINE6_PALM_SPRINGS_EARTHQUAKE_CANYON_DOWNHILL_BIKE_ROUTE,
+  ENGINE6_PALM_SPRINGS_INDIAN_CANYONS_BIKE_HIKE_ROUTE,
   ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
   ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_ROUTE,
@@ -136,6 +137,8 @@ const ENGINE6_327321P1_EXPECTED_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/07/b0/bc.jpg";
 const ENGINE6_3351P13_EXPECTED_HERO_URL =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=700&h=500&s=1";
+const ENGINE6_3351P15_EXPECTED_HERO_URL =
+  "https://dynamic-media.tacdn.com/media/photo-o/2f/39/12/13/caption.jpg?w=700&h=500&s=1";
 const ENGINE6_21165P1_EXPECTED_HERO_URL =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/19/65/61/caption.jpg?w=700&h=500&s=1";
 const ENGINE6_31015P9_EXPECTED_HERO_URL =
@@ -1384,6 +1387,39 @@ describe("engine6 listing surfaces", () => {
     expect(productNode?.aggregateRating).toBeDefined();
     expect(offerNode?.price).toBe(169);
     expect(detailTour?.itinerary.length).toBeGreaterThan(0);
+  });
+
+
+
+  it("rebuilds 3351P15 in place with API-derived price/reviews and deterministic hero parity", () => {
+    const unifiedTours = getToursByCityUnified("california", "palm-springs");
+    const entry = unifiedTours.find(item => item.tour.productCode === "3351P15");
+    expect(entry?.href).toBe(ENGINE6_PALM_SPRINGS_INDIAN_CANYONS_BIKE_HIKE_ROUTE);
+    expect(entry?.tour.heroImage).toBe(ENGINE6_3351P15_EXPECTED_HERO_URL);
+    expect(entry?.tour.badges?.priceFrom).toBe("From $149.00");
+    expect(entry?.tour.badges?.rating).toBe(4.5);
+    expect(entry?.tour.badges?.reviewCount).toBe(216);
+
+    const detailTour = engine6ResolvedTours.find(tour => tour.productCode === "3351P15");
+    expect(detailTour?.priceAmount).toBe(149);
+    expect(detailTour?.priceFormatted).toBe("From $149.00");
+    expect(detailTour?.reviewCount).toBe(216);
+    expect(detailTour?.heroImageUrl).toBe(ENGINE6_3351P15_EXPECTED_HERO_URL);
+    expect(detailTour?.canonicalPath).toBe(ENGINE6_PALM_SPRINGS_INDIAN_CANYONS_BIKE_HIKE_ROUTE);
+
+    const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
+    expect(detailHtml).toContain("From $149.00");
+    expect(detailHtml).not.toContain("Check latest price");
+
+    const schema = buildEngine6SchemaGraph(detailTour!);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const productNode = graph.find(node => node["@type"] === "Product") as Record<string, unknown>;
+    const offerNode = graph.find(node => node["@type"] === "Offer") as Record<string, unknown>;
+    const aggregate = productNode?.aggregateRating as Record<string, unknown>;
+    expect(productNode?.image).toBe(ENGINE6_3351P15_EXPECTED_HERO_URL);
+    expect(offerNode?.price).toBe(149);
+    expect(aggregate?.ratingValue).toBe(4.5);
+    expect(aggregate?.reviewCount).toBe(216);
   });
 
   it("routes and renders new San Diego engine6 specimens with hero parity, direct affiliate CTA, and schema URL separation", () => {
