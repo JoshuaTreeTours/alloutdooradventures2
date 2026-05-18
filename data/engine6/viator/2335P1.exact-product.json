@@ -1363,6 +1363,13 @@
           }
         }
       ]
+    },
+    "priceFrom": 175.0,
+    "pricing": {
+      "summary": {
+        "fromPrice": 175.0,
+        "fromPriceFormatted": "From $175.00"
+      }
     }
   }
 }

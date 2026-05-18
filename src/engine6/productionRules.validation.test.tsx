@@ -103,4 +103,29 @@ describe("engine6 production rules lightweight validations", () => {
     expect(product?.image).toBe(tour.resolvedHero?.url);
     expect(trip?.image).toBe(tour.resolvedHero?.url);
   });
+
+  it("keeps 2335P1 price/API/schema parity and never falls back to check-latest copy", () => {
+    const palmSpringsFixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "2335P1"
+    );
+    expect(palmSpringsFixture).toBeDefined();
+
+    const payload = toPayload(palmSpringsFixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+    const graph = buildEngine6SchemaGraph(tour)["@graph"] as Array<Record<string, unknown>>;
+    const productNode = graph.find(node => node["@type"] === "Product") as
+      | Record<string, unknown>
+      | undefined;
+    const offerRef = productNode?.offers as Record<string, unknown> | undefined;
+    const offerNode = graph.find(
+      node => node["@id"] === offerRef?.["@id"] && node["@type"] === "Offer"
+    ) as Record<string, unknown> | undefined;
+
+    expect(payload.extracted.priceAmount).toBe(175);
+    expect(payload.extracted.priceFormatted).toBe("From $175.00");
+    expect(tour.priceAmount).toBe(175);
+    expect(tour.priceFormatted).toBe("From $175.00");
+    expect(tour.priceFormatted).not.toBe("Check latest price");
+    expect(offerNode?.price).toBe(175);
+  });
 });
