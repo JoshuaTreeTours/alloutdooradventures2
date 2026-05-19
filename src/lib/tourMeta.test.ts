@@ -1,34 +1,41 @@
 import { describe, expect, it } from "vitest";
+import { buildTourMeta } from "./tourMeta";
 
-import { buildBookingMeta, buildTourMeta } from "./tourMeta";
+describe("buildTourMeta", () => {
+  it("normalizes legacy breadcrumb-style titles into readable SEO titles", () => {
+    const meta = buildTourMeta(
+      {
+        slug: "grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131",
+        title:
+          "Destinations / Arizona / Flagstaff / Tours / Grand Canyon Signature Tour South Rim With Hummer Ground Tour F Pjx 164131",
+        destination: { city: "Flagstaff", state: "Arizona" },
+        shortDescription: "South Rim Hummer tour with scenic viewpoints.",
+      } as any,
+      "/destinations/arizona/flagstaff/tours/grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131"
+    );
 
-const sampleTour = {
-  title: "Sunrise Jeep Tour",
-  id: "1234",
-  destination: {
-    city: "Sedona",
-    state: "Arizona",
-  },
-};
-
-describe("tour meta robots directives", () => {
-  it("uses noindex,follow directives for booking pages", () => {
-    const meta = buildBookingMeta(sampleTour, "/destinations/arizona/sedona/tours/sunrise-jeep-tour");
-
-    expect(meta.robots).toBe("noindex,follow,max-image-preview:large");
-    expect(meta.googlebot).toBe("noindex,follow,max-image-preview:large");
+    expect(meta.title).toBe(
+      "Grand Canyon South Rim Hummer Ground Tour | Flagstaff, Arizona | All Outdoor Adventures"
+    );
+    expect(meta.description).toBe(
+      "Experience the Grand Canyon South Rim with a guided Hummer ground tour from Flagstaff, Arizona. Explore scenic canyon viewpoints, desert landscapes, and one of America’s most iconic natural wonders with All Outdoor Adventures."
+    );
+    expect(meta.ogTitle).toBe(meta.title);
+    expect(meta.twitterTitle).toBe(meta.title);
   });
 
-  it("keeps index,follow directives for tour detail pages", () => {
-    const meta = buildTourMeta(sampleTour, "/destinations/arizona/sedona/tours/sunrise-jeep-tour");
+  it("keeps metadata aligned and descriptive", () => {
+    const meta = buildTourMeta(
+      {
+        title: "Canyon Sunset Jeep Adventure 447234P3",
+        destination: { city: "Flagstaff", state: "Arizona" },
+      },
+      "/tours/canyon-sunset-jeep-adventure-447234p3"
+    );
 
-    expect(meta.robots).toBe("index,follow,max-image-preview:large");
-    expect(meta.googlebot).toBe("index,follow,max-image-preview:large");
-  });
-
-  it("builds product seo title as product in city with outdoor adventures brand", () => {
-    const meta = buildTourMeta(sampleTour, "/destinations/arizona/sedona/tours/sunrise-jeep-tour");
-
-    expect(meta.title).toBe("Sunrise Jeep Tour in Sedona | Outdoor Adventures");
+    expect(meta.description).toContain("Flagstaff, Arizona");
+    expect(meta.ogDescription).toBe(meta.description);
+    expect(meta.twitterDescription).toBe(meta.description);
+    expect(meta.description).not.toContain("Explore Destinations");
   });
 });

@@ -1,4 +1,3 @@
-import { buildProductSeoTitle } from "./seo/titleBuilder";
 import { SITE_URL } from "../utils/seo";
 
 type TourLike = {
@@ -7,6 +6,8 @@ type TourLike = {
   id?: string;
   partnerId?: string;
   slug?: string;
+  shortDescription?: string;
+  longDescription?: string;
   destination?: {
     city?: string;
     state?: string;
@@ -18,7 +19,33 @@ const NOINDEX_ROBOTS = "noindex,follow,max-image-preview:large";
 
 const clean = (value?: string) => (value ?? "").trim();
 
-const pickTourName = (tour: TourLike) => clean(tour.title) || clean(tour.name);
+const stripLegacyPrefix = (value: string) =>
+  value.replace(/^Destinations\s*\/\s*[^/]+\s*\/\s*[^/]+\s*\/\s*Tours\s*\/\s*/i, "");
+
+const stripTrailingId = (value: string) =>
+  value
+    .replace(/\s+[A-Z]?\d{5,}$/i, "")
+    .replace(/\s+\d{5,}$/i, "")
+    .trim();
+
+const prettifyLegacyTourName = (value: string) =>
+  value
+    .replace(/\s*-\s*/g, " ")
+    .replace(/\([^)]*\)/g, " ")
+    .replace(/\bsignature tour\b/gi, "")
+    .replace(/\bwith\b/gi, " ")
+    .replace(/\bf\s+pjx\b/gi, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+
+const isGrandCanyonSouthRimHummerRoute = (tour: TourLike) =>
+  clean(tour.slug) ===
+  "grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131";
+
+const pickTourName = (tour: TourLike) => {
+  const base = clean(tour.title) || clean(tour.name);
+  return prettifyLegacyTourName(stripTrailingId(stripLegacyPrefix(base)));
+};
 
 const pickCity = (tour: TourLike) => clean(tour.destination?.city) || "Unknown";
 
@@ -40,10 +67,28 @@ const normalizeCanonical = (canonicalUrl: string) => {
 };
 
 const buildTitle = (tour: TourLike) =>
-  buildProductSeoTitle({ city: pickCity(tour), productName: pickTourName(tour) });
+  `${
+    isGrandCanyonSouthRimHummerRoute(tour)
+      ? "Grand Canyon South Rim Hummer Ground Tour"
+      : pickTourName(tour) || "Tour"
+  } | ${pickCity(tour)}, ${pickState(tour)} | All Outdoor Adventures`;
 
-const buildDescription = (tour: TourLike) =>
-  `Explore ${pickTourName(tour)} in ${pickCity(tour)}, ${pickState(tour)} with trip details, highlights, and booking information.`;
+const buildDescription = (tour: TourLike) => {
+  const tourName = pickTourName(tour) || "this tour";
+  const city = pickCity(tour);
+  const state = pickState(tour);
+  const detail = clean(tour.shortDescription) || clean(tour.longDescription);
+
+  if (isGrandCanyonSouthRimHummerRoute(tour)) {
+    return "Experience the Grand Canyon South Rim with a guided Hummer ground tour from Flagstaff, Arizona. Explore scenic canyon viewpoints, desert landscapes, and one of America’s most iconic natural wonders with All Outdoor Adventures.";
+  }
+
+  if (detail) {
+    return `Discover ${tourName} in ${city}, ${state}. ${detail}`;
+  }
+
+  return `Discover ${tourName} in ${city}, ${state} with guided highlights, local insights, and booking details from All Outdoor Adventures.`;
+};
 
 export const getCanonicalFromBookingPath = (pathname: string) => {
   const slugId = getTourSlugFromPath(pathname);

@@ -88,41 +88,10 @@ const buildGenericRouteSeo = (pathname) => {
   };
 };
 
-const setMetaByAttr = (html, attr, name, value) => {
-  const re = new RegExp(`<meta[^>]*${attr}=["']${name}["'][^>]*>`, 'i');
-  return html.replace(re, `<meta ${attr}="${name}" content="${value}" />`);
-};
-
-const removeMetaByAttr = (html, attr, name) => {
-  const re = new RegExp(`<meta[^>]*${attr}=["']${name}["'][^>]*>\\s*`, 'i');
-  return html.replace(re, '');
-};
-
-const applySeo = (html, { title, description, url, image }) => {
-  let out = html.replace(/<title[^>]*>[\s\S]*?<\/title>/i, `<title>${title}</title>`);
-  out = setMetaByAttr(out, 'name', 'description', description);
-  out = setMetaByAttr(out, 'property', 'og:title', title);
-  out = setMetaByAttr(out, 'property', 'og:description', description);
-  out = setMetaByAttr(out, 'property', 'og:url', url);
-  if (image) {
-    out = setMetaByAttr(out, 'property', 'og:image', image);
-  } else {
-    out = removeMetaByAttr(out, 'property', 'og:image');
-  }
-  out = setMetaByAttr(out, 'name', 'twitter:title', title);
-  out = setMetaByAttr(out, 'name', 'twitter:description', description);
-  if (image) {
-    out = setMetaByAttr(out, 'name', 'twitter:image', image);
-  } else {
-    out = removeMetaByAttr(out, 'name', 'twitter:image');
-  }
-  out = out.replace(/<link[^>]*rel=["']canonical["'][^>]*>/i, `<link rel="canonical" href="${url}" />`);
-  const structuredData = { '@context': 'https://schema.org', '@type': 'WebPage', '@id': url, url, name: title, description };
-  if (image) structuredData.image = image;
-  const ld = `<script id="structured-data" type="application/ld+json">${JSON.stringify(structuredData).replace(/</g, '\\u003c')}</script>`;
-  out = /application\/ld\+json/i.test(out) ? out.replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/i, ld) : out.replace('</head>', `${ld}</head>`);
-  return out;
-};
+const fallbackSeoEmitterModule = await tsImport('../src/lib/fallbackSeoEmitter.ts', import.meta.url);
+const applySeo = fallbackSeoEmitterModule.applyRouteSeo;
+const isLegacyTourDetailPath = fallbackSeoEmitterModule.isLegacyTourDetailPath;
+const buildLegacyTourRouteFallbackSeo = fallbackSeoEmitterModule.buildLegacyTourRouteFallbackSeo;
 
 const files = (await readdir(distDir)).filter(f => f.startsWith('sitemap') && f.endsWith('.xml'));
 const urls = new Set();
@@ -136,7 +105,14 @@ for (const file of files) {
 const template = await readFile(templatePath, 'utf8');
 const engine6Registry = await tsImport('../src/engine6/registry.ts', import.meta.url);
 const engine6SeoMod = await tsImport('../src/engine6/seo.ts', import.meta.url);
+const toursModule = await tsImport('../src/data/tours.generated.ts', import.meta.url);
+const flagstaffToursModule = await tsImport('../src/data/flagstaffTours.ts', import.meta.url);
+const tourSeoModule = await tsImport('../src/lib/tourSeo.ts', import.meta.url);
+const legacyRouteSeoModule = await tsImport('../src/lib/legacyRouteSeo.ts', import.meta.url);
 const engine6Tours = Array.isArray(engine6Registry.engine6ResolvedTours) ? engine6Registry.engine6ResolvedTours : [];
+const toursGenerated = Array.isArray(toursModule.toursGenerated) ? toursModule.toursGenerated : [];
+const flagstaffTours = Array.isArray(flagstaffToursModule.flagstaffTours) ? flagstaffToursModule.flagstaffTours : [];
+const tours = [...toursGenerated, ...flagstaffTours];
 const seoByPath = new Map(engine6Tours.map(t => [t.canonicalPath, engine6SeoMod.buildEngine6Seo(t)]));
 
 const paths = new Set(['/destinations']);
@@ -169,9 +145,19 @@ for (const pathname of paths) {
   await mkdir(path.dirname(outputPath), { recursive: true });
 
   const detailSeo = seoByPath.get(pathname);
+  const legacySeo = legacyRouteSeoModule.buildLegacyTourRouteSeo({
+    pathname,
+    tours,
+    buildTourMetaFn: tourSeoModule.buildTourMeta,
+    buildBookingMetaFn: tourSeoModule.buildBookingMeta,
+    site: SITE,
+  });
   const routeSeo = detailSeo
     ? { title: detailSeo.title, description: detailSeo.description, url: `${SITE}${detailSeo.url}`, image: detailSeo.image }
-    : buildGenericRouteSeo(pathname);
+    : legacySeo ??
+      (isLegacyTourDetailPath(pathname)
+        ? buildLegacyTourRouteFallbackSeo({ pathname, site: SITE })
+        : buildGenericRouteSeo(pathname));
 
   await writeFile(outputPath, routeSeo ? applySeo(template, routeSeo) : template, 'utf8');
   if (pathname === "/destinations/florida/santa-rosa-beach/tours/dolphin-cruise-614529") {
