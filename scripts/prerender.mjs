@@ -711,6 +711,7 @@ const main = async () => {
     engine2SchemaModule,
     engine6RegistryModule,
     engine6SeoModule,
+    tourSeoModule,
   ] = await Promise.all([
     safeImport("../src/utils/structuredData.ts", "structuredData"),
     safeImport("../src/data/tourPaths.ts", "tourPaths"),
@@ -720,6 +721,7 @@ const main = async () => {
     safeImport("../src/engine2/schema/buildSchemaGraph.ts", "engine2Schema"),
     safeImport("../src/engine6/registry.ts", "engine6Registry"),
     safeImport("../src/engine6/seo.ts", "engine6Seo"),
+    safeImport("../src/lib/tourSeo.ts", "tourSeo"),
   ]);
 
   const tours = Array.isArray(toursGeneratedModule.toursGenerated)
@@ -791,6 +793,8 @@ const main = async () => {
     ? engine6RegistryModule.engine6ResolvedTours
     : [];
   const buildEngine6Seo = engine6SeoModule?.buildEngine6Seo ?? null;
+  const buildTourMeta = tourSeoModule?.buildTourMeta ?? null;
+  const buildBookingMeta = tourSeoModule?.buildBookingMeta ?? null;
 
   resetMissingGeoFallbackReport?.();
 
@@ -938,27 +942,39 @@ const main = async () => {
         : engine2Seo.canonical;
       seo.image = engine2Seo.og.image;
     } else if (tourForSeo) {
-      const regionLabel =
-        tourForSeo.destination.state || tourForSeo.destination.country || "";
-      const destinationLabel = regionLabel
-        ? `${tourForSeo.destination.city}, ${regionLabel}`
-        : tourForSeo.destination.city;
-      if (isBookingRoute) {
-        seo.title = `${tourForSeo.title} Booking | ${siteBrandName}`;
-        seo.description = buildMetaDescription(
-          `Reserve ${tourForSeo.title} in ${destinationLabel}.`,
-          tourForSeo.shortDescription ??
-            tourForSeo.badges?.tagline ??
-            tourForSeo.longDescription
-        );
-        seo.url = buildCanonicalUrl(normalizedPathname);
+      if (isBookingRoute && buildBookingMeta) {
+        const bookingMeta = buildBookingMeta(tourForSeo, buildCanonicalUrl(normalizedPathname));
+        seo.title = bookingMeta.title;
+        seo.description = bookingMeta.description;
+        seo.url = bookingMeta.canonical;
+      } else if (!isBookingRoute && buildTourMeta) {
+        const tourMeta = buildTourMeta(tourForSeo, buildCanonicalUrl(basePathname));
+        seo.title = tourMeta.title;
+        seo.description = tourMeta.description;
+        seo.url = tourMeta.canonical;
       } else {
-        seo.title = `${tourForSeo.title} | ${destinationLabel} Outdoor Tour`;
-        seo.description = buildTourMetaDescription(tourForSeo, {
-          isDuplicate: isTourDescriptionDuplicate(tourForSeo),
-          diagnosticsLabel: `prerender:${tourForSeo.id}`,
-        });
-        seo.url = buildCanonicalUrl(basePathname);
+        const regionLabel =
+          tourForSeo.destination.state || tourForSeo.destination.country || "";
+        const destinationLabel = regionLabel
+          ? `${tourForSeo.destination.city}, ${regionLabel}`
+          : tourForSeo.destination.city;
+        if (isBookingRoute) {
+          seo.title = `${tourForSeo.title} Booking | ${siteBrandName}`;
+          seo.description = buildMetaDescription(
+            `Reserve ${tourForSeo.title} in ${destinationLabel}.`,
+            tourForSeo.shortDescription ??
+              tourForSeo.badges?.tagline ??
+              tourForSeo.longDescription
+          );
+          seo.url = buildCanonicalUrl(normalizedPathname);
+        } else {
+          seo.title = `${tourForSeo.title} | ${destinationLabel} Outdoor Tour`;
+          seo.description = buildTourMetaDescription(tourForSeo, {
+            isDuplicate: isTourDescriptionDuplicate(tourForSeo),
+            diagnosticsLabel: `prerender:${tourForSeo.id}`,
+          });
+          seo.url = buildCanonicalUrl(basePathname);
+        }
       }
     } else {
       const staticSeo = getStaticPageSeo(pathname);

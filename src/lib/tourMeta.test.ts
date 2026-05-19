@@ -14,7 +14,7 @@ describe("buildTourMeta", () => {
     );
 
     expect(meta.title).toBe(
-      "Grand Canyon Signature Tour South Rim With Hummer Ground Tour F Pjx | Flagstaff, Arizona | All Outdoor Adventures"
+      "Grand Canyon South Rim Hummer Ground Tour | Flagstaff, Arizona | All Outdoor Adventures"
     );
     expect(meta.ogTitle).toBe(meta.title);
     expect(meta.twitterTitle).toBe(meta.title);

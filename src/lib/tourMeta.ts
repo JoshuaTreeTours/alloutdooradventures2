@@ -28,9 +28,17 @@ const stripTrailingId = (value: string) =>
     .replace(/\s+\d{5,}$/i, "")
     .trim();
 
+const prettifyLegacyTourName = (value: string) =>
+  value
+    .replace(/\bsignature tour\b/gi, "")
+    .replace(/\bwith\b/gi, " ")
+    .replace(/\bf\s+pjx\b/gi, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+
 const pickTourName = (tour: TourLike) => {
   const base = clean(tour.title) || clean(tour.name);
-  return stripTrailingId(stripLegacyPrefix(base));
+  return prettifyLegacyTourName(stripTrailingId(stripLegacyPrefix(base)));
 };
 
 const pickCity = (tour: TourLike) => clean(tour.destination?.city) || "Unknown";
