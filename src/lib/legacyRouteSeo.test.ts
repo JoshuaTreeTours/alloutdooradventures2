@@ -157,6 +157,44 @@ describe("buildLegacyTourRouteSeo", () => {
     expect(html).not.toContain('/hero.jpg');
         fareHarborHtml:
           '<div data-state="{&quot;image_url&quot;:&quot;https:\\/\\/cdn.filestackcontent.com\\/aZUPC7t8QGa8BCbOn48Y&quot;}"></div>',
+  it("traces azure seas image parity from normalized tour feed to SEO object to emitted HTML", () => {
+    const tour = {
+      slug: "coastal-cruise-azure-seas-4241",
+      title: "Coastal Cruise Azure Seas",
+      destination: { stateSlug: "california", citySlug: "santa-barbara", city: "Santa Barbara", state: "California" },
+      heroImage: "/hero.jpg",
+    } as any;
+
+    const seo = buildLegacyTourRouteSeo({
+      pathname: "/destinations/california/santa-barbara/tours/coastal-cruise-azure-seas-4241",
+      site: "https://www.alloutdooradventures.com",
+      buildTourMetaFn: buildTourMeta,
+      tours: [tour],
+    });
+
+    // normalized feed object assertions
+    expect(tour.heroImage).toBe("https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS");
+    expect(tour.image).toBe("https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS");
+    expect(tour.galleryImages).toEqual([
+      "https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS",
+    ]);
+
+    // SEO object assertion
+    expect(seo).toMatchObject({
+      image: "https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS",
+    });
+
+    // final HTML assertions
+    const html = applyRouteSeo(
+      '<!doctype html><html><head><title>Default</title><meta name="description" content="d" /><meta property="og:title" content="d" /><meta property="og:description" content="d" /><meta property="og:url" content="d" /><meta property="og:image" content="/hero.jpg" /><meta name="twitter:title" content="d" /><meta name="twitter:description" content="d" /><meta name="twitter:image" content="/hero.jpg" /><link rel="canonical" href="https://example.com" /></head><body></body></html>',
+      seo as any
+    );
+    expect(html).toContain('property="og:image" content="https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"');
+    expect(html).toContain('name="twitter:image" content="https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"');
+    expect(html).toContain('"image":"https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"');
+    expect(html).not.toContain('/hero.jpg');
+  });
+
       },
       {
         slug: "grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131",

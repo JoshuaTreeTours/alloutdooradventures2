@@ -138,11 +138,12 @@ const applyLegacyImageRepairToTour = (
   if (!resolvedImage) return;
   tour.heroImage = resolvedImage;
   tour.image = resolvedImage;
-  if (Array.isArray(tour.galleryImages)) {
-    if (!tour.galleryImages.includes(resolvedImage)) {
-      tour.galleryImages = [resolvedImage, ...tour.galleryImages.filter(Boolean)];
-    }
+  const gallery = Array.isArray(tour.galleryImages) ? tour.galleryImages.filter(Boolean) : [];
+  if (!gallery.includes(resolvedImage)) {
+    tour.galleryImages = [resolvedImage, ...gallery];
+    return;
   }
+  tour.galleryImages = gallery;
 };
 
 export const auditLegacyTourRouteImages = (tours: Array<Tour & Record<string, unknown>>) => {
