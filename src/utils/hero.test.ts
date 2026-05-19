@@ -191,6 +191,14 @@ describe("isImageInCityTour", () => {
   });
 });
 
+describe("resolveHeroImageForRoute homepage", () => {
+  it("allows the root hero only for the homepage route", () => {
+    expect(resolveHeroImageForRoute({ route: "/" })).toBe(
+      buildImageUrl(HOME_HERO_IMAGE)
+    );
+  });
+});
+
 describe("resolveHeroImageForRoute city hub", () => {
   it("keeps city hub and city tours routes on the exact same hero URL", () => {
     const cityTours = [

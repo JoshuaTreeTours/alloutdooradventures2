@@ -741,6 +741,7 @@ const main = async () => {
     flagstaffModule;
   const {
     DEFAULT_SEO,
+    ROOT_OG_IMAGE,
     buildMetaDescription,
     buildTourMetaDescription,
     buildCanonicalUrl,
@@ -1295,7 +1296,7 @@ const main = async () => {
     description: DEFAULT_SEO.description,
     url: buildCanonicalUrl("/"),
     type: DEFAULT_SEO.type,
-    image: buildImageUrl(DEFAULT_SEO.image),
+    image: buildImageUrl(ROOT_OG_IMAGE),
   };
   await writeFile(templatePath, replaceMeta(template, homepageSeo), "utf8");
 

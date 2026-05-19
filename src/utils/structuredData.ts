@@ -3,7 +3,12 @@ import { DEFAULT_CURRENCY } from "../constants/merchantDefaults";
 import { applyPriceFloor } from "./merchantPricing";
 import { filterHeroImages, resolveTourHeroImage } from "./hero";
 import { cleanImageUrls, toSchemaImageValue } from "./cleanImageUrls";
-import { buildCanonicalUrl, buildImageUrl, SITE_URL } from "./seo";
+import {
+  buildCanonicalUrl,
+  buildImageUrl,
+  ROOT_OG_IMAGE,
+  SITE_URL,
+} from "./seo";
 import { SITE_BRAND_NAME } from "./site";
 import { resolveUsState } from "./geo/usStates";
 import {
@@ -214,8 +219,13 @@ export const dedupeGraphNodesById = (nodes: unknown[]): unknown[] => {
   });
 };
 
-export const getSiteStructuredDataNodes = () => {
+export const getSiteStructuredDataNodes = ({
+  includeRootImage = false,
+}: { includeRootImage?: boolean } = {}) => {
   const logoUrl = buildImageUrl("/images/Logo.png");
+  const organizationImageFields = includeRootImage
+    ? { image: buildImageUrl(ROOT_OG_IMAGE) }
+    : {};
 
   return [
     {
@@ -224,6 +234,7 @@ export const getSiteStructuredDataNodes = () => {
       name: ORGANIZATION_NAME,
       url: SITE_URL,
       logo: logoUrl,
+      ...organizationImageFields,
       telephone: "+1-855-314-8687",
       contactPoint: SITE_CUSTOMER_SUPPORT_CONTACT_POINT,
       sameAs: [
@@ -238,6 +249,7 @@ export const getSiteStructuredDataNodes = () => {
       name: SITE_BRAND_NAME,
       url: SITE_URL,
       logo: logoUrl,
+      ...organizationImageFields,
       telephone: "+1-855-314-8687",
       contactPoint: SITE_CUSTOMER_SUPPORT_CONTACT_POINT,
       sameAs: [

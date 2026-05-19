@@ -18,9 +18,9 @@ import type { Tour } from "../data/tours.types";
 import { worldCountriesWithTours } from "../data/worldIndex";
 import { canonicalHref, getStateGuidePath } from "../utils/guidePaths";
 import { SITE_BRAND_NAME } from "../utils/site";
-import { DEFAULT_SEO } from "../utils/seo";
+import { DEFAULT_SEO, ROOT_OG_IMAGE } from "../utils/seo";
 
-const HERO_IMAGE_URL = "";
+const HERO_IMAGE_URL = ROOT_OG_IMAGE;
 
 const HERO_ACTIVITY_SPOTLIGHTS = [
   {
@@ -541,6 +541,7 @@ export default function Home() {
         title={DEFAULT_SEO.title}
         description={DEFAULT_SEO.description}
         url="/"
+        image={ROOT_OG_IMAGE}
       />
       <main>
         {/* HERO */}

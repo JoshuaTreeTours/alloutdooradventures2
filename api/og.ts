@@ -1,5 +1,7 @@
 export const config = { runtime: "edge" };
 
+const ROOT_OG_IMAGE = "/hero.jpg";
+
 function htmlEscape(str: string) {
   return str
     .replaceAll("&", "&amp;")
@@ -41,6 +43,16 @@ function parseTourPath(path: string): ParsedTourPath | null {
 }
 
 function getStaticOgMeta(path: string, origin: string): OgMeta | null {
+  if (path === "/") {
+    return {
+      title: "All Outdoor Adventures | Tours, Guides & Outdoor Experiences",
+      description:
+        "Discover outdoor tours, travel guides, and curated adventure experiences across top destinations with All Outdoor Adventures.",
+      canonical: `${origin}/`,
+      image: `${origin}${ROOT_OG_IMAGE}`,
+    };
+  }
+
   const map: Record<string, Omit<OgMeta, "canonical">> = {
     "/destinations/oregon/portland/tours/gorge-ous-sunset-multnomah-falls-waterfall-tour-from-portland-462223":
       {

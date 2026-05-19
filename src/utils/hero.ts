@@ -406,7 +406,7 @@ export const resolveHeroImageForRoute = ({
   const isHome = isHomeRoute(normalizedRoute);
 
   if (isHome) {
-    return null;
+    return buildImageUrl(HOME_HERO_IMAGE);
   }
 
   let resolvedImage: string | undefined;

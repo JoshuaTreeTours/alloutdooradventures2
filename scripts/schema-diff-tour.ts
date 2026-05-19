@@ -203,7 +203,7 @@ const legacyTour: Tour = {
     citySlug: "san-diego",
     country: "United States",
   },
-  heroImage: "https://example.com/hero.jpg",
+  heroImage: "https://example.com/product-photo.jpg",
   galleryImages: ["https://example.com/gallery.jpg"],
   badges: {
     duration: "2 hours",
