@@ -8,6 +8,7 @@ type Tour = {
   heroImage?: string | null;
   galleryImages?: string[] | null;
   image?: string | null;
+  image_url?: string | null;
 };
 
 type MetaBuilder = typeof buildTourMeta;
@@ -108,11 +109,15 @@ const extractFirstLegacyMarkupImage = (
 };
 
 const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>) => {
-  const primary = normalizeCandidateImage(resolveTourHeroImage(tour as any) ?? tour.heroImage ?? null);
+  const cardImage =
+    normalizeCandidateImage(tour.heroImage ?? null) ??
+    normalizeCandidateImage(tour.image ?? null) ??
+    normalizeCandidateImage(tour.image_url ?? null);
+
+  const primary = normalizeCandidateImage(resolveTourHeroImage(tour as any) ?? cardImage ?? null);
   if (primary) return primary;
 
-  const normalizedPayloadImage = normalizeCandidateImage(tour.image ?? null);
-  if (normalizedPayloadImage) return normalizedPayloadImage;
+  if (cardImage) return cardImage;
 
   for (const image of tour.galleryImages ?? []) {
     const normalized = normalizeCandidateImage(image);

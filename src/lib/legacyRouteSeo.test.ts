@@ -11,6 +11,12 @@ const pathname =
   "/destinations/arizona/flagstaff/tours/grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131";
 
 describe("buildLegacyTourRouteSeo", () => {
+  const assertImageParity = (html: string, expected: string) => {
+    expect(html).toContain(`property="og:image" content="${expected}"`);
+    expect(html).toContain(`name="twitter:image" content="${expected}"`);
+    expect(html).toContain(`"image":"${expected}"`);
+    expect(html).not.toContain('/hero.jpg');
+  };
   it("uses buildTourMeta output for legacy destination detail routes", () => {
     const seo = buildLegacyTourRouteSeo({
       pathname,
@@ -61,15 +67,10 @@ describe("buildLegacyTourRouteSeo", () => {
       seo as any
     );
 
-    expect(html).toContain('property="og:image" content="https://cdn.filestackcontent.com/aZUPC7t8QGa8BCbOn48Y"');
-    expect(html).toContain('name="twitter:image" content="https://cdn.filestackcontent.com/aZUPC7t8QGa8BCbOn48Y"');
-    expect(html).toContain('"image":"https://cdn.filestackcontent.com/aZUPC7t8QGa8BCbOn48Y"');
+    assertImageParity(html, "https://cdn.filestackcontent.com/aZUPC7t8QGa8BCbOn48Y");
   });
 
-  it("extracts first visible image from legacy markup variants", () => {
-    const seo = buildLegacyTourRouteSeo({
-      pathname,
-      site: "https://www.alloutdooradventures.com",
+    assertImageParity(html, "https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS");
       buildTourMetaFn: buildTourMeta,
       tours: [
         {
@@ -151,10 +152,60 @@ describe("buildLegacyTourRouteSeo", () => {
       '<!doctype html><html><head><title>Default</title><meta name="description" content="d" /><meta property="og:title" content="d" /><meta property="og:description" content="d" /><meta property="og:url" content="d" /><meta property="og:image" content="/hero.jpg" /><meta name="twitter:title" content="d" /><meta name="twitter:description" content="d" /><meta name="twitter:image" content="/hero.jpg" /><link rel="canonical" href="https://example.com" /></head><body></body></html>',
       seo as any
     );
-    expect(html).toContain('property="og:image" content="https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"');
-    expect(html).toContain('name="twitter:image" content="https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"');
-    expect(html).toContain('"image":"https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"');
-    expect(html).not.toContain('/hero.jpg');
+    assertImageParity(html, "https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS");
+  });
+
+  it("uses stable card image source as canonical image across Grand Canyon/Joshua Tree/SF routes", () => {
+    const fixtures = [
+      {
+        pathname: "/destinations/arizona/flagstaff/tours/grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131",
+        slug: "grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131",
+        citySlug: "flagstaff",
+        stateSlug: "arizona",
+        expected: "https://cdn.example.com/grand-canyon-card.jpg",
+      },
+      {
+        pathname: "/destinations/california/joshua-tree/tours/joshua-tree-hike-climb-10001",
+        slug: "joshua-tree-hike-climb-10001",
+        citySlug: "joshua-tree",
+        stateSlug: "california",
+        expected: "https://cdn.example.com/joshua-tree-card.jpg",
+      },
+      {
+        pathname: "/destinations/california/san-francisco/tours/san-francisco-sunset-tour-10002",
+        slug: "san-francisco-sunset-tour-10002",
+        citySlug: "san-francisco",
+        stateSlug: "california",
+        expected: "https://cdn.example.com/sf-sunset-card.jpg",
+      },
+    ];
+
+    for (const fixture of fixtures) {
+      const tour = {
+        slug: fixture.slug,
+        title: fixture.slug,
+        destination: { stateSlug: fixture.stateSlug, citySlug: fixture.citySlug, city: "X", state: "Y" },
+        heroImage: fixture.expected,
+        image: fixture.expected,
+      } as any;
+
+      const seo = buildLegacyTourRouteSeo({
+        pathname: fixture.pathname,
+        site: "https://www.alloutdooradventures.com",
+        buildTourMetaFn: buildTourMeta,
+        tours: [tour],
+      });
+      expect(seo?.image).toBe(fixture.expected);
+      expect(tour.heroImage).toBe(fixture.expected);
+      expect(tour.galleryImages?.[0]).toBe(fixture.expected);
+
+      const html = applyRouteSeo(
+        `<!doctype html><html><head><title>Default</title><meta name="description" content="d" /><meta property="og:title" content="d" /><meta property="og:description" content="d" /><meta property="og:url" content="d" /><meta property="og:image" content="/hero.jpg" /><meta name="twitter:title" content="d" /><meta name="twitter:description" content="d" /><meta name="twitter:image" content="/hero.jpg" /><link rel="canonical" href="https://example.com" /></head><body><img src="${fixture.expected}" alt="card" /></body></html>`,
+        seo as any
+      );
+      assertImageParity(html, fixture.expected);
+      expect(html).toContain(`<img src="${fixture.expected}" alt="card" />`);
+    }
         fareHarborHtml:
           '<div data-state="{&quot;image_url&quot;:&quot;https:\\/\\/cdn.filestackcontent.com\\/aZUPC7t8QGa8BCbOn48Y&quot;}"></div>',
   it("traces azure seas image parity from normalized tour feed to SEO object to emitted HTML", () => {
