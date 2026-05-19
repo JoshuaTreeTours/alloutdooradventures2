@@ -53,18 +53,20 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(record.meetingInfo).toBe("56 W 56th St, New York, NY 10019");
   });
 
-  it("uses deterministic hero selection priority", () => {
+  it("uses the first visible product-page image as canonical hero identity", () => {
     const record = extractLegacyFhProductRecord({
       slug: "central-park-bike-tours-16628",
       canonicalPath: CENTRAL_PARK_BIKE_TOURS_PUBLIC_PATH,
       bookingPath: CENTRAL_PARK_BIKE_TOURS_BOOK_PATH,
       operator: "Unlimited Biking",
       publicHtml:
-        "<main><h1>Central Park Bike Tours</h1><img src=\"https://cdn.example.com/z-bike-action.jpg\" /><img src=\"https://cdn.example.com/a-cover-primary.jpg\" /><img src=\"https://cdn.example.com/m-gallery.jpg\" /></main>",
+        "<main><h1>Central Park Bike Tours</h1><img src=\"https://cdn.example.com/visible-first.jpg\" /><img src=\"https://cdn.example.com/alternate-second.jpg\" /></main>",
+      bookingHtml:
+        "<main><meta property=\"og:image\" content=\"https://cdn.example.com/meta-different.jpg\" /></main>",
       fallback: { title: "Central Park Bike Tours" },
     });
 
-    expect(record.heroImageUrl).toBe("https://cdn.example.com/a-cover-primary.jpg");
+    expect(record.heroImageUrl).toBe("https://cdn.example.com/visible-first.jpg");
   });
 
   it("normalizes the migrated specimen into a reusable record", () => {

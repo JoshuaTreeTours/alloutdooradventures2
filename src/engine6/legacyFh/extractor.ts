@@ -125,22 +125,12 @@ const parseDuration = (sourceHtml: string) => {
   return durationText?.trim() ?? null;
 };
 
-const selectDeterministicHeroImage = (images: string[]) => {
-  const preferredPrimary = images.find(url =>
-    /(cover|primary|hero|main)/i.test(url)
-  );
-  if (preferredPrimary) {
-    return preferredPrimary;
+const selectCanonicalProductImage = (productPageImages: string[], galleryImages: string[]) => {
+  if (productPageImages.length > 0) {
+    return productPageImages[0];
   }
 
-  const preferredAction = images.find(url =>
-    /(bike|cycling|action|ride|trail|scenic)/i.test(url)
-  );
-  if (preferredAction) {
-    return preferredAction;
-  }
-
-  return images[0] ?? null;
+  return galleryImages[0] ?? null;
 };
 
 export const extractLegacyFhProductRecord = (
@@ -156,7 +146,14 @@ export const extractLegacyFhProductRecord = (
     /<meta[^>]*property=["']og:image["'][^>]*content=["']([^"']+)["'][^>]*>/i
   );
 
+  const productPageImages = dedupeUrls(
+    Array.from(input.publicHtml.matchAll(/<img[^>]*src=["']([^"']+)["'][^>]*>/gi)).map(
+      match => match[1]?.trim() ?? null
+    )
+  ).filter(url => /^https?:\/\//i.test(url));
+
   const imageCandidates = [
+    ...productPageImages,
     heroImageFromMeta,
     ...Array.from(sourceHtml.matchAll(/<img[^>]*src=["']([^"']+)["'][^>]*>/gi)).map(
       match => match[1]?.trim() ?? null
@@ -170,7 +167,7 @@ export const extractLegacyFhProductRecord = (
   );
 
   const heroImageUrl =
-    selectDeterministicHeroImage(galleryImages) ??
+    selectCanonicalProductImage(productPageImages, galleryImages) ??
     input.fallback.heroImageUrl ??
     heroImageFromMeta;
 
