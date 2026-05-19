@@ -26,6 +26,7 @@ import {
   getGuideStates as getGuideStateSlugsFromRegistry,
 } from "../utils/guides/guideRegistry";
 import { buildCityGuideIntroParagraphs } from "../utils/guides/cityGuideTitles";
+import { isGenericHeroFallbackImage } from "../utils/hero";
 
 export type GuideCitySummary = {
   name: string;
@@ -180,33 +181,42 @@ const engine2CountryCityIndex = engine2Tours.reduce<
   return index;
 }, new Map());
 
-const toEngine2GuideTour = (tour: Engine2Tour): Tour => ({
-  id: `engine2-guide-${tour.id}`,
-  slug: tour.slug,
-  title: tour.name,
-  operator: tour.provider.name,
-  categories: ["adventure"],
-  primaryCategory: "adventure",
-  destination: {
-    country: tour.geo.country,
-    state: tour.geo.country,
-    stateSlug: slugify(tour.geo.country),
-    city: tour.geo.city,
-    citySlug: tour.sourceCitySlug || slugify(tour.geo.city),
-    lat: tour.geo.lat ?? undefined,
-    lng: tour.geo.lng ?? undefined,
-  },
-  heroImage: tour.images.hero || tour.seo.ogImage || "/hero.jpg",
-  galleryImages: [tour.images.hero || tour.seo.ogImage || "/hero.jpg"],
-  badges: {
-    tagline: "Tour",
-  },
-  activitySlugs: ["adventure"],
-  bookingProvider: "fareharbor",
-  bookingUrl: tour.booking.bookingUrl,
-  bookingWidgetUrl: tour.booking.bookingUrl,
-  longDescription: tour.content.experienceText || tour.seo.description,
-});
+const resolveEngine2GuideTourImage = (tour: Engine2Tour) => {
+  const image = tour.images.hero || tour.seo.ogImage || undefined;
+  return image && !isGenericHeroFallbackImage(image) ? image : undefined;
+};
+
+const toEngine2GuideTour = (tour: Engine2Tour): Tour => {
+  const image = resolveEngine2GuideTourImage(tour);
+
+  return {
+    id: `engine2-guide-${tour.id}`,
+    slug: tour.slug,
+    title: tour.name,
+    operator: tour.provider.name,
+    categories: ["adventure"],
+    primaryCategory: "adventure",
+    destination: {
+      country: tour.geo.country,
+      state: tour.geo.country,
+      stateSlug: slugify(tour.geo.country),
+      city: tour.geo.city,
+      citySlug: tour.sourceCitySlug || slugify(tour.geo.city),
+      lat: tour.geo.lat ?? undefined,
+      lng: tour.geo.lng ?? undefined,
+    },
+    heroImage: image ?? "",
+    galleryImages: image ? [image] : [],
+    badges: {
+      tagline: "Tour",
+    },
+    activitySlugs: ["adventure"],
+    bookingProvider: "fareharbor",
+    bookingUrl: tour.booking.bookingUrl,
+    bookingWidgetUrl: tour.booking.bookingUrl,
+    longDescription: tour.content.experienceText || tour.seo.description,
+  };
+};
 
 const engine2InternationalGuideTours = engine2Tours
   .filter(tour => {

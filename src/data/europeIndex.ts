@@ -2,6 +2,7 @@ import { getAllEngine2Tours } from "../engine2/data/loadEngine2";
 import { EUROPE_COUNTRIES, slugify } from "./tourCatalog";
 import type { Tour } from "./tours.types";
 import { tours } from "./tours";
+import { resolveTourHeroImage } from "../utils/hero";
 
 export type EuropeCountrySummary = {
   name: string;
@@ -9,10 +10,6 @@ export type EuropeCountrySummary = {
   tourCount: number;
   image: string;
 };
-
-const EUROPE_FALLBACK_IMAGE = "/hero.jpg";
-
-export const getEuropeFallbackImage = () => EUROPE_FALLBACK_IMAGE;
 
 const europeCountrySlugs = new Set(EUROPE_COUNTRIES.map((country) => slugify(country)));
 
@@ -79,9 +76,9 @@ export const countriesWithTours: EuropeCountrySummary[] = Array.from(
       slug,
       tourCount: fallbackCount + engine2Count,
       image:
-        fallbackTours[0]?.heroImage ||
+        resolveTourHeroImage(fallbackTours[0]) ||
         engine2EuropeImageByCountry.get(slug) ||
-        getEuropeFallbackImage(),
+        "",
     };
   })
   .filter((country) => country.tourCount > 0)

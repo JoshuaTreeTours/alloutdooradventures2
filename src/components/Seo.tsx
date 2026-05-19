@@ -13,7 +13,10 @@ type SeoProps = {
   googlebot?: string;
 };
 
-const upsertMetaTag = (selector: string, attributes: Record<string, string>) => {
+const upsertMetaTag = (
+  selector: string,
+  attributes: Record<string, string>
+) => {
   let element = document.head.querySelector<HTMLMetaElement>(selector);
 
   if (!element) {
@@ -28,7 +31,7 @@ const upsertMetaTag = (selector: string, attributes: Record<string, string>) => 
 
 const upsertLinkTag = (
   selector: string,
-  attributes: Record<string, string>,
+  attributes: Record<string, string>
 ) => {
   let element = document.head.querySelector<HTMLLinkElement>(selector);
 
@@ -42,12 +45,16 @@ const upsertLinkTag = (
   });
 };
 
+const removeMetaTag = (selector: string) => {
+  document.head.querySelector<HTMLMetaElement>(selector)?.remove();
+};
+
 export default function Seo({
   title = DEFAULT_SEO.title,
   description = DEFAULT_SEO.description,
   url,
   type = DEFAULT_SEO.type,
-  image = DEFAULT_SEO.image,
+  image = null,
   robots = "index,follow,max-image-preview:large",
   googlebot = "index,follow,max-image-preview:large",
 }: SeoProps) {
@@ -58,59 +65,75 @@ export default function Seo({
   useLayoutEffect(() => {
     document.title = title;
 
-    upsertMetaTag("meta[name=\"description\"]", {
+    upsertMetaTag('meta[name="description"]', {
       name: "description",
       content: description,
     });
-    upsertMetaTag("meta[property=\"og:title\"]", {
+    upsertMetaTag('meta[property="og:title"]', {
       property: "og:title",
       content: title,
     });
-    upsertMetaTag("meta[property=\"og:description\"]", {
+    upsertMetaTag('meta[property="og:description"]', {
       property: "og:description",
       content: description,
     });
-    upsertMetaTag("meta[property=\"og:type\"]", {
+    upsertMetaTag('meta[property="og:type"]', {
       property: "og:type",
       content: type,
     });
-    upsertMetaTag("meta[property=\"og:url\"]", {
+    upsertMetaTag('meta[property="og:url"]', {
       property: "og:url",
       content: canonicalUrl,
     });
-    upsertMetaTag("meta[property=\"og:image\"]", {
-      property: "og:image",
-      content: resolvedImage,
-    });
-    upsertMetaTag("meta[name=\"twitter:card\"]", {
+    if (resolvedImage) {
+      upsertMetaTag('meta[property="og:image"]', {
+        property: "og:image",
+        content: resolvedImage,
+      });
+    } else {
+      removeMetaTag('meta[property="og:image"]');
+    }
+    upsertMetaTag('meta[name="twitter:card"]', {
       name: "twitter:card",
       content: "summary_large_image",
     });
-    upsertMetaTag("meta[name=\"twitter:title\"]", {
+    upsertMetaTag('meta[name="twitter:title"]', {
       name: "twitter:title",
       content: title,
     });
-    upsertMetaTag("meta[name=\"twitter:description\"]", {
+    upsertMetaTag('meta[name="twitter:description"]', {
       name: "twitter:description",
       content: description,
     });
-    upsertMetaTag("meta[name=\"twitter:image\"]", {
-      name: "twitter:image",
-      content: resolvedImage,
-    });
-    upsertMetaTag("meta[name=\"robots\"]", {
+    if (resolvedImage) {
+      upsertMetaTag('meta[name="twitter:image"]', {
+        name: "twitter:image",
+        content: resolvedImage,
+      });
+    } else {
+      removeMetaTag('meta[name="twitter:image"]');
+    }
+    upsertMetaTag('meta[name="robots"]', {
       name: "robots",
       content: robots,
     });
-    upsertMetaTag("meta[name=\"googlebot\"]", {
+    upsertMetaTag('meta[name="googlebot"]', {
       name: "googlebot",
       content: googlebot,
     });
-    upsertLinkTag("link[rel=\"canonical\"]", {
+    upsertLinkTag('link[rel="canonical"]', {
       rel: "canonical",
       href: canonicalUrl,
     });
-  }, [canonicalUrl, description, googlebot, resolvedImage, robots, title, type]);
+  }, [
+    canonicalUrl,
+    description,
+    googlebot,
+    resolvedImage,
+    robots,
+    title,
+    type,
+  ]);
 
   return null;
 }

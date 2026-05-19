@@ -18,9 +18,9 @@ import type { Tour } from "../data/tours.types";
 import { worldCountriesWithTours } from "../data/worldIndex";
 import { canonicalHref, getStateGuidePath } from "../utils/guidePaths";
 import { SITE_BRAND_NAME } from "../utils/site";
-import { DEFAULT_SEO } from "../utils/seo";
+import { DEFAULT_SEO, ROOT_OG_IMAGE } from "../utils/seo";
 
-const HERO_IMAGE_URL = "/hero.jpg"; // Put your hero image in /public/hero.jpg
+const HERO_IMAGE_URL = ROOT_OG_IMAGE;
 
 const HERO_ACTIVITY_SPOTLIGHTS = [
   {
@@ -541,6 +541,7 @@ export default function Home() {
         title={DEFAULT_SEO.title}
         description={DEFAULT_SEO.description}
         url="/"
+        image={ROOT_OG_IMAGE}
       />
       <main>
         {/* HERO */}
@@ -550,12 +551,14 @@ export default function Home() {
         >
           <div className="relative min-h-[80vh] overflow-hidden rounded-none md:min-h-[70vh] md:rounded-md">
             {/* Background image */}
-            <Image
-              src={HERO_IMAGE_URL}
-              fallbackSrc="/hero.jpg"
-              alt=""
-              className="absolute inset-0 h-full w-full object-cover brightness-110 saturate-110"
-            />
+            {HERO_IMAGE_URL ? (
+              <Image
+                src={HERO_IMAGE_URL}
+                fallbackSrc={HERO_IMAGE_URL}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover brightness-110 saturate-110"
+              />
+            ) : null}
 
             {/* Light overlay for readable text */}
             <div className="absolute inset-0 bg-black/20" />
@@ -634,7 +637,7 @@ export default function Home() {
                   <div className="relative h-44">
                     <Image
                       src={activity.image}
-                      fallbackSrc="/hero.jpg"
+                      fallbackSrc={activity.image}
                       alt={activity.title}
                       className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                     />

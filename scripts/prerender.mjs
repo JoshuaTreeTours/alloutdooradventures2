@@ -147,7 +147,7 @@ const replaceMeta = (html, seo) => {
   const type = escapeAttribute(seo.type);
   const image = escapeAttribute(sanitizeFinalSeoUrl(seo.image));
 
-  return html
+  let output = html
     .replaceAll("__SEO_TITLE__", title)
     .replaceAll("__SEO_DESCRIPTION__", description)
     .replaceAll("__SEO_CANONICAL__", url)
@@ -158,6 +158,15 @@ const replaceMeta = (html, seo) => {
     .replaceAll("__SEO_TWITTER_TITLE__", title)
     .replaceAll("__SEO_TWITTER_DESCRIPTION__", description)
     .replaceAll("__SEO_TWITTER_IMAGE__", image);
+
+  if (!image) {
+    output = output.replace(
+      /<meta[^>]+(?:property=["']og:image["']|name=["']twitter:image["'])[^>]*>\s*/gi,
+      ""
+    );
+  }
+
+  return output;
 };
 
 const STRUCTURED_DATA_SCRIPT_ID = "structured-data";
@@ -646,29 +655,10 @@ const verifyPrerenderedPage = async ({
 
   const ogImageTag = findTag(html, "meta", "property", "og:image");
   const ogImageValue = extractAttribute(ogImageTag, "content");
-  if (!ogImageValue) {
-    logVerificationFailure({
-      label,
-      url: expectedUrl,
-      assertion: "og:image",
-      details: "Missing og:image content.",
-    });
-    throw new Error("Prerender verification failed.");
-  }
-
   const twitterImageTag = findTag(html, "meta", "name", "twitter:image");
   const twitterImageValue = extractAttribute(twitterImageTag, "content");
-  if (!twitterImageValue) {
-    logVerificationFailure({
-      label,
-      url: expectedUrl,
-      assertion: "twitter:image",
-      details: "Missing twitter:image content.",
-    });
-    throw new Error("Prerender verification failed.");
-  }
 
-  if (ogImageValue !== twitterImageValue) {
+  if ((ogImageValue ?? "") !== (twitterImageValue ?? "")) {
     logVerificationFailure({
       label,
       url: expectedUrl,
@@ -751,6 +741,7 @@ const main = async () => {
     flagstaffModule;
   const {
     DEFAULT_SEO,
+    ROOT_OG_IMAGE,
     buildMetaDescription,
     buildTourMetaDescription,
     buildCanonicalUrl,
@@ -1066,7 +1057,9 @@ const main = async () => {
         })
       : null;
 
-    if (resolvedHeroImage && !engine2Seo) {
+    if (tourForSeo && !engine2Seo) {
+      seo.image = resolvedHeroImage ?? "";
+    } else if (resolvedHeroImage && !engine2Seo) {
       seo.image = resolvedHeroImage;
     }
 
@@ -1222,12 +1215,8 @@ const main = async () => {
           })
         );
       } else if (tourForStructuredData && bookingUrl && canBuildTourNodes) {
-        const heroImage =
-          resolvedHeroImage ?? buildImageUrl(tourForStructuredData.heroImage);
-        const structuredImages = [
-          heroImage,
-          ...(tourForStructuredData.galleryImages ?? []),
-        ].filter(Boolean);
+        const heroImage = resolvedHeroImage ?? null;
+        const structuredImages = heroImage ? [heroImage] : [];
         structuredDataNodes.push(
           buildWebPageStructuredData({
             url: canonicalUrl,
@@ -1307,7 +1296,7 @@ const main = async () => {
     description: DEFAULT_SEO.description,
     url: buildCanonicalUrl("/"),
     type: DEFAULT_SEO.type,
-    image: buildImageUrl(DEFAULT_SEO.image),
+    image: buildImageUrl(ROOT_OG_IMAGE),
   };
   await writeFile(templatePath, replaceMeta(template, homepageSeo), "utf8");
 

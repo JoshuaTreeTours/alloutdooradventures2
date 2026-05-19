@@ -39,7 +39,7 @@ export default function DestinationCard({
             {hasImage ? (
               <Image
                 src={trimmedImage ?? ""}
-                fallbackSrc="/hero.jpg"
+                fallbackSrc={trimmedImage ?? ""}
                 alt=""
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -78,7 +78,7 @@ export default function DestinationCard({
           {hasImage ? (
             <Image
               src={trimmedImage ?? ""}
-              fallbackSrc="/hero.jpg"
+              fallbackSrc={trimmedImage ?? ""}
               alt=""
               loading="lazy"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

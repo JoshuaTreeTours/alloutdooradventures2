@@ -37,13 +37,13 @@ export default function CollectionGrid({
         </p>
       </div>
       <div className="mt-10 grid gap-6 md:grid-cols-3">
-        {items.map((item) => (
+        {items.map(item => (
           <Link key={item.title} href={item.href}>
             <a className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/80 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
               <div className="relative h-48">
                 <Image
                   src={item.image}
-                  fallbackSrc="/hero.jpg"
+                  fallbackSrc={item.image}
                   alt=""
                   className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                 />

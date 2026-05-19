@@ -33,14 +33,15 @@ export const getEngine3TourBySlugs = (
   }
 
   const normalizedContent = normalizeViatorTourContent({ productData });
-  const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
-    productCode: entry.viator.productCode,
-    imageCandidates: [
-      ...(productData?.imageCandidates ?? []),
-      productData?.supplierImage,
-    ].filter((value): value is string => typeof value === "string"),
-    fallbackImageUrl: productData?.supplierImage,
-  });
+  const { primaryImageUrl, secondaryImageUrl, gallery } =
+    resolveEngine3PrimaryImage({
+      productCode: entry.viator.productCode,
+      imageCandidates: [
+        ...(productData?.imageCandidates ?? []),
+        productData?.supplierImage,
+      ].filter((value): value is string => typeof value === "string"),
+      fallbackImageUrl: productData?.supplierImage,
+    });
 
   return {
     id: entry.viator.productCode,
@@ -68,7 +69,8 @@ export const getEngine3TourBySlugs = (
       ogImage: primaryImageUrl ?? "",
     },
     content: {
-      experienceText: normalizedContent.overview ?? productData?.description ?? "",
+      experienceText:
+        normalizedContent.overview ?? productData?.description ?? "",
       overview: normalizedContent.overview,
       highlights: normalizedContent.highlights,
       inclusions: normalizedContent.inclusions,
@@ -87,11 +89,12 @@ export const getEngine3TourBySlugs = (
       duration: productData?.duration,
     },
     images: {
-      hero: primaryImageUrl,
+      hero: primaryImageUrl ?? null,
       gallery: Array.from(
         new Set(
           [primaryImageUrl, secondaryImageUrl, ...gallery].filter(
-            (value): value is string => typeof value === "string" && value.length > 0
+            (value): value is string =>
+              typeof value === "string" && value.length > 0
           )
         )
       ),

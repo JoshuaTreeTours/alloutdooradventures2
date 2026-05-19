@@ -9,9 +9,9 @@ export type HeroPageType =
 import { buildImageUrl } from "./seo";
 
 export const HOME_HERO_IMAGE = "/hero.jpg";
-export const TOUR_FALLBACK_HERO_IMAGE = "/images/hiking-hero.jpg";
-export const GUIDE_FALLBACK_HERO_IMAGE = "/images/cycling-hero.jpg";
-export const DESTINATION_FALLBACK_HERO_IMAGE = "/images/canoe-hero.jpg";
+export const TOUR_FALLBACK_HERO_IMAGE = undefined;
+export const GUIDE_FALLBACK_HERO_IMAGE = undefined;
+export const DESTINATION_FALLBACK_HERO_IMAGE = undefined;
 export const CITY_NEUTRAL_BRAND_IMAGE = "/logo.svg";
 
 export type HeroRouteContext = {
@@ -19,6 +19,8 @@ export type HeroRouteContext = {
   params?: Record<string, string | undefined>;
   tour?: {
     heroImage?: string;
+    primaryImageUrl?: string;
+    resolvedImageUrl?: string | null;
     galleryImages?: string[];
   } | null;
   guide?: {
@@ -77,12 +79,13 @@ type CityTourImageCandidate = {
   isActivityDefault?: boolean;
 };
 
-const normalizeHeroImage = (image?: string) => (image ?? "").trim();
+export const normalizeHeroImage = (image?: string | null) =>
+  (image ?? "").trim();
 
 const normalizeCountryCode = (value?: string) =>
   value ? value.trim().toUpperCase() : undefined;
 
-const isHomeHeroImage = (image?: string) => {
+export const isHomeHeroImage = (image?: string | null) => {
   const normalized = normalizeHeroImage(image);
   if (!normalized) {
     return false;
@@ -94,7 +97,7 @@ const isHomeHeroImage = (image?: string) => {
 const isHttpImageUrl = (value?: string) =>
   typeof value === "string" && /^https?:\/\//i.test(value.trim());
 
-const isActivityDefaultImage = (image?: string) => {
+export const isActivityDefaultImage = (image?: string | null) => {
   const normalized = normalizeHeroImage(image);
   if (!normalized) {
     return false;
@@ -107,23 +110,62 @@ const isActivityDefaultImage = (image?: string) => {
     "/images/hiking-hero.jpg",
     "/images/hiking-hero2.jpg",
     "/images/hiking-hero3.jpg",
-  ].some((blocked) => normalized === blocked || normalized.endsWith(blocked));
+  ].some(blocked => normalized === blocked || normalized.endsWith(blocked));
+};
+
+export const isGenericHeroFallbackImage = (image?: string | null) => {
+  const normalized = normalizeHeroImage(image);
+  if (!normalized) {
+    return false;
+  }
+
+  return isHomeHeroImage(normalized) || isActivityDefaultImage(normalized);
+};
+
+const isTacdnCaptionImage = (image?: string | null) => {
+  const normalized = normalizeHeroImage(image).toLowerCase();
+  return (
+    normalized.includes("tacdn.com/") &&
+    normalized.includes("/caption.") &&
+    /^https?:\/\//.test(normalized)
+  );
+};
+
+export const resolveTourHeroImage = (
+  tour?: HeroRouteContext["tour"] | null
+): string | undefined => {
+  if (!tour) {
+    return undefined;
+  }
+
+  const candidates = [
+    tour.heroImage,
+    tour.primaryImageUrl,
+    tour.resolvedImageUrl ?? undefined,
+    ...(tour.galleryImages ?? []),
+  ]
+    .map(image => normalizeHeroImage(image))
+    .filter(Boolean)
+    .filter((image, index, list) => list.indexOf(image) === index)
+    .filter(image => !isGenericHeroFallbackImage(image));
+
+  return candidates.find(image => isTacdnCaptionImage(image)) ?? candidates[0];
 };
 
 export const filterHeroImages = (
   images: Array<string | undefined>,
-  pageType: HeroPageType,
+  pageType: HeroPageType
 ) => {
   const uniqueImages = images
-    .map((image) => normalizeHeroImage(image))
-    .filter((image) => Boolean(image))
+    .map(image => normalizeHeroImage(image))
+    .filter(image => Boolean(image))
     .filter((image, index, list) => list.indexOf(image) === index);
 
   if (pageType === "home") {
     return uniqueImages;
   }
 
-  return uniqueImages.filter((image) => !isHomeHeroImage(image));
+  return uniqueImages.filter(image => !isHomeHeroImage(image));
 };
 
 export const resolveHeroImage = ({
@@ -141,7 +183,7 @@ export const resolveHeroImage = ({
 
 export const isImageInCityTour = (
   image: CityTourImageCandidate | undefined,
-  cityCtx: CityRouteContext,
+  cityCtx: CityRouteContext
 ) => {
   if (!image?.src || image.isActivityDefault) {
     return false;
@@ -180,12 +222,14 @@ export const isImageInCityTour = (
     return false;
   }
 
-  return Boolean(image.tourCitySlug === citySlug || image.citySlug === citySlug);
+  return Boolean(
+    image.tourCitySlug === citySlug || image.citySlug === citySlug
+  );
 };
 
 const compareCityTours = (
   a: NonNullable<HeroRouteContext["cityTours"]>[number],
-  b: NonNullable<HeroRouteContext["cityTours"]>[number],
+  b: NonNullable<HeroRouteContext["cityTours"]>[number]
 ) => {
   const reviewA = a.badges?.reviewCount ?? 0;
   const reviewB = b.badges?.reviewCount ?? 0;
@@ -258,7 +302,7 @@ const isTourDetailRoute = (pathname: string) => {
     /^\/tours\/[^/]+$/.test(normalized) ||
     /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+$/.test(normalized) ||
     /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+$/.test(
-      normalized,
+      normalized
     )
   );
 };
@@ -288,7 +332,7 @@ const isHomeHeroResolved = (image?: string) => {
 
 const resolveGuidePageType = (
   pathname: string,
-  guideType?: "state" | "country" | "city",
+  guideType?: "state" | "country" | "city"
 ): HeroPageType => {
   if (guideType === "city") {
     return "city";
@@ -309,10 +353,13 @@ const resolveGuidePageType = (
 const resolveCityContextFromRoute = (
   route: string,
   city?: HeroRouteContext["city"],
-  state?: HeroRouteContext["state"],
+  state?: HeroRouteContext["state"]
 ) => {
   const normalizedRoute = normalizePathname(route);
-  const segments = normalizedRoute.replace(/^\//, "").split("/").filter(Boolean);
+  const segments = normalizedRoute
+    .replace(/^\//, "")
+    .split("/")
+    .filter(Boolean);
 
   let routeCitySlug: string | undefined;
   let routeStateSlug: string | undefined;
@@ -364,11 +411,15 @@ export const resolveHeroImageForRoute = ({
 
   let resolvedImage: string | undefined;
 
-  if (isBookingRoute(normalizedRoute) || isTourDetailRoute(normalizedRoute) || tour) {
+  if (
+    isBookingRoute(normalizedRoute) ||
+    isTourDetailRoute(normalizedRoute) ||
+    tour
+  ) {
     resolvedImage = resolveHeroImage({
       pageType: "product",
-      primary: tour?.heroImage ?? tour?.galleryImages?.[0],
-      fallbacks: [TOUR_FALLBACK_HERO_IMAGE],
+      primary: resolveTourHeroImage(tour),
+      fallbacks: [],
     });
   } else if (isGuideRoute(normalizedRoute) || guide) {
     const isCityGuidePage =
@@ -385,9 +436,18 @@ export const resolveHeroImageForRoute = ({
     resolvedImage = resolveHeroImage({
       pageType: resolveGuidePageType(normalizedRoute, guide?.type),
       primary: guide?.guideImages?.[0]?.src ?? undefined,
-      fallbacks: [city?.heroImages?.[0], state?.heroImage, GUIDE_FALLBACK_HERO_IMAGE],
+      fallbacks: [
+        city?.heroImages?.[0],
+        state?.heroImage,
+        GUIDE_FALLBACK_HERO_IMAGE,
+      ],
     });
-  } else if (isDestinationRoute(normalizedRoute) || state || city || destination) {
+  } else if (
+    isDestinationRoute(normalizedRoute) ||
+    state ||
+    city ||
+    destination
+  ) {
     const pageType: HeroPageType = city
       ? "city"
       : state
@@ -404,8 +464,12 @@ export const resolveHeroImageForRoute = ({
     }
     resolvedImage = resolveHeroImage({
       pageType,
-      primary: city?.heroImages?.[0] ?? state?.heroImage ?? destination?.heroImage,
-      fallbacks: [city ? state?.heroImage : undefined, DESTINATION_FALLBACK_HERO_IMAGE],
+      primary:
+        city?.heroImages?.[0] ?? state?.heroImage ?? destination?.heroImage,
+      fallbacks: [
+        city ? state?.heroImage : undefined,
+        DESTINATION_FALLBACK_HERO_IMAGE,
+      ],
     });
   } else {
     resolvedImage = resolveHeroImage({
@@ -424,7 +488,7 @@ export const resolveHeroImageForRoute = ({
   ) {
     console.warn(
       "[hero] Resolved /hero.jpg for non-home route.",
-      JSON.stringify({ route: normalizedRoute, params }),
+      JSON.stringify({ route: normalizedRoute, params })
     );
   }
 

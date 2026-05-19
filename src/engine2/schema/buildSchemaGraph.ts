@@ -15,10 +15,7 @@ import {
 } from "../../schema/buildTourSchemaGraph";
 import type { Engine2Tour } from "../data/loadEngine2";
 import type { Engine2Seo } from "../seo/buildEngine2Seo";
-import {
-  DEFAULT_CURRENCY,
-  DEFAULT_IMAGE_URL,
-} from "../../constants/merchantDefaults";
+import { DEFAULT_CURRENCY } from "../../constants/merchantDefaults";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import type { AOAEnrichedTourContent } from "../../utils/fh/transformFareHarborToAOAContent";
 import type { TourRewriteV3_1 } from "../../utils/fh/transformToAOAContent";
@@ -112,9 +109,7 @@ export const buildSchemaGraph = (
   const tripId = `${seo.canonical}#trip`;
   const imageGallery = normalizeStringArray(tour.images.gallery);
   const isViatorTour = tour.bookingProvider === "viator";
-  const effectiveHeroImage = isViatorTour
-    ? (tour.images.hero ?? undefined)
-    : tour.images.hero || DEFAULT_IMAGE_URL;
+  const effectiveHeroImage = tour.images.hero || undefined;
   const fallbackPrice = applyPriceFloor(
     parsePrice(tour.pricing?.price ?? null)
   );

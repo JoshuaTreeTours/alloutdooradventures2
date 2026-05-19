@@ -1,5 +1,7 @@
 export const config = { runtime: "edge" };
 
+const ROOT_OG_IMAGE = "/hero.jpg";
+
 function htmlEscape(str: string) {
   return str
     .replaceAll("&", "&amp;")
@@ -12,7 +14,7 @@ type OgMeta = {
   title: string;
   description: string;
   canonical: string;
-  image: string;
+  image?: string | null;
 };
 
 type ParsedTourPath = {
@@ -24,12 +26,14 @@ function toTitleCaseSlug(slug: string) {
   return slug
     .split("-")
     .filter(Boolean)
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
 }
 
 function parseTourPath(path: string): ParsedTourPath | null {
-  const match = path.match(/^\/destinations\/([a-z0-9-]+)\/(.+)\/tours\/([^/?#]+)\/?$/i);
+  const match = path.match(
+    /^\/destinations\/([a-z0-9-]+)\/(.+)\/tours\/([^/?#]+)\/?$/i
+  );
   if (!match) return null;
 
   return {
@@ -39,29 +43,41 @@ function parseTourPath(path: string): ParsedTourPath | null {
 }
 
 function getStaticOgMeta(path: string, origin: string): OgMeta | null {
+  if (path === "/") {
+    return {
+      title: "All Outdoor Adventures | Tours, Guides & Outdoor Experiences",
+      description:
+        "Discover outdoor tours, travel guides, and curated adventure experiences across top destinations with All Outdoor Adventures.",
+      canonical: `${origin}/`,
+      image: `${origin}${ROOT_OG_IMAGE}`,
+    };
+  }
+
   const map: Record<string, Omit<OgMeta, "canonical">> = {
-    "/destinations/oregon/portland/tours/gorge-ous-sunset-multnomah-falls-waterfall-tour-from-portland-462223": {
-      title:
-        "Gorge-ous Sunset Multnomah Falls Waterfall Tour from Portland | Portland, Oregon Outdoor Tour",
-      description:
-        "Guided Tour – Gorge-ous Sunset Multnomah Falls Waterfall Tour from Portland (Portland, Oregon).",
-      image: "https://cdn.filestackcontent.com/Tr5TrDymQNOHOJPRAoGF",
-    },
+    "/destinations/oregon/portland/tours/gorge-ous-sunset-multnomah-falls-waterfall-tour-from-portland-462223":
+      {
+        title:
+          "Gorge-ous Sunset Multnomah Falls Waterfall Tour from Portland | Portland, Oregon Outdoor Tour",
+        description:
+          "Guided Tour – Gorge-ous Sunset Multnomah Falls Waterfall Tour from Portland (Portland, Oregon).",
+        image: "https://cdn.filestackcontent.com/Tr5TrDymQNOHOJPRAoGF",
+      },
 
-    "/destinations/arizona/flagstaff/tours/boulder-e-bike-art-and-nature-tour-628917": {
-      title: "Boulder E-Bike Art & Nature Tour | Flagstaff Outdoor Adventure",
-      description:
-        "Explore trails, art, and nature in Flagstaff on a guided e-bike experience with curated stops.",
-      image: `${origin}/hero.jpg`,
-    },
+    "/destinations/arizona/flagstaff/tours/boulder-e-bike-art-and-nature-tour-628917":
+      {
+        title: "Boulder E-Bike Art & Nature Tour | Flagstaff Outdoor Adventure",
+        description:
+          "Explore trails, art, and nature in Flagstaff on a guided e-bike experience with curated stops.",
+        image: null,
+      },
 
-    "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-2335p1": {
-      title: "San Andreas Fault Jeep Tour | Palm Springs Desert Adventure",
-      description:
-        "Off-road jeep tour through the legendary San Andreas Fault zone with professional desert guides.",
-      image: `${origin}/hero.jpg`,
-    },
-
+    "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-2335p1":
+      {
+        title: "San Andreas Fault Jeep Tour | Palm Springs Desert Adventure",
+        description:
+          "Off-road jeep tour through the legendary San Andreas Fault zone with professional desert guides.",
+        image: null,
+      },
   };
 
   const hit = map[path];
@@ -83,7 +99,7 @@ function getStaticOgMeta(path: string, origin: string): OgMeta | null {
     title: `All Outdoor Adventures | ${stateName} Tour`,
     description: `${stateName} tour on All Outdoor Adventures.`,
     canonical: `${origin}${parsed.canonicalPath}`,
-    image: `${origin}/hero.jpg`,
+    image: null,
   };
 }
 
@@ -101,7 +117,7 @@ export default async function handler(req: Request) {
   const title = htmlEscape(meta.title);
   const description = htmlEscape(meta.description);
   const canonical = htmlEscape(meta.canonical);
-  const image = htmlEscape(meta.image);
+  const image = meta.image ? htmlEscape(meta.image) : "";
 
   const html = `<!doctype html>
 <html lang="en">
@@ -116,12 +132,12 @@ export default async function handler(req: Request) {
 <meta property="og:url" content="${canonical}" />
 <meta property="og:title" content="${title}" />
 <meta property="og:description" content="${description}" />
-<meta property="og:image" content="${image}" />
+${image ? `<meta property="og:image" content="${image}" />` : ""}
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="${title}" />
 <meta name="twitter:description" content="${description}" />
-<meta name="twitter:image" content="${image}" />
+${image ? `<meta name="twitter:image" content="${image}" />` : ""}
 </head>
 <body></body>
 </html>`;

@@ -6,7 +6,7 @@ import type { Engine2Tour } from "./loadEngine2";
 
 const clean = (value?: string) => (value ?? "").trim();
 
-const HAWAII_PLACEHOLDER_IMAGE = "/hero.jpg";
+const HAWAII_PLACEHOLDER_IMAGE = "";
 
 const toTitleCase = (value: string) =>
   value
@@ -55,7 +55,9 @@ export const getEngine2HawaiiTours = (): Engine2Tour[] => {
         const citySlug = clean(row.citySlug) || slugify(cityName) || "hawaii";
         const slugBase = clean(row.slug) || slugify(name);
         if (!slugBase) {
-          console.warn(`[hawaii-engine2] skipping row ${id}: missing slug/title`);
+          console.warn(
+            `[hawaii-engine2] skipping row ${id}: missing slug/title`
+          );
           continue;
         }
 
@@ -92,8 +94,7 @@ export const getEngine2HawaiiTours = (): Engine2Tour[] => {
           },
           seo: {
             title: `${name} | Hawaii Tour`,
-            description:
-              `Book ${name} in Hawaii. Compare guided tours and outdoor experiences and reserve online.`,
+            description: `Book ${name} in Hawaii. Compare guided tours and outdoor experiences and reserve online.`,
             canonicalPath,
             ogImage: primaryImage,
           },

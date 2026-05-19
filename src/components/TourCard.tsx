@@ -5,6 +5,7 @@ import { getActivityLabelFromSlug } from "../data/activityLabels";
 import { getTourDetailPath } from "../data/tours";
 import { formatStartingPrice } from "../lib/pricing";
 import { buildRentalDescription } from "../templates/rentalDescription";
+import { resolveTourHeroImage } from "../utils/hero";
 import { isRentalTour } from "../utils/isRentalTour";
 import Image from "./Image";
 
@@ -140,21 +141,18 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.currency
   );
   const isEngine6Tour = tour.engine === "engine6";
+  const rating = tour.badges.rating;
+  const reviewCount = tour.badges.reviewCount;
   const hasRating =
     isEngine6Tour &&
     !tour.suppressReviews &&
-    typeof tour.badges.rating === "number" &&
-    typeof tour.badges.reviewCount === "number";
+    typeof rating === "number" &&
+    typeof reviewCount === "number";
   const cardImage =
-    tour.engine === "engine4"
-      ? tour.heroImage?.trim() || "/hero.jpg"
-      : tour.engine === "engine6"
-        ? tour.heroImage?.trim() || ""
-        : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
-  const fallbackImage =
     tour.engine === "engine6"
-      ? cardImage
-      : "/hero.jpg";
+      ? tour.heroImage?.trim() || ""
+      : (resolveTourHeroImage(tour) ?? "");
+  const fallbackImage = cardImage;
   const renderedTagPills =
     tour.tagPills?.map(tag =>
       tour.engine === "engine6" && tag.toUpperCase() === "ENGINE6"
@@ -166,20 +164,18 @@ export default function TourCard({ tour, href }: TourCardProps) {
     <article
       className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm"
       data-card-image-src={cardImage}
-      data-hero-image-src={
-        tour.engine === "engine6"
-          ? tour.heroImage?.trim() || ""
-          : tour.heroImage?.trim() || ""
-      }
+      data-hero-image-src={cardImage}
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-black/5">
-        <Image
-          src={cardImage}
-          fallbackSrc={fallbackImage}
-          alt={tour.title}
-          loading="lazy"
-          className="h-full w-full object-cover"
-        />
+        {cardImage ? (
+          <Image
+            src={cardImage}
+            fallbackSrc={fallbackImage}
+            alt={tour.title}
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
+        ) : null}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
         {isRental ? (
           <div className="absolute left-3 top-3 flex flex-wrap items-center gap-2">
@@ -227,8 +223,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
           ) : null}
           {hasRating ? (
             <p className="mt-3 text-sm font-medium text-[#2f4a2f]">
-              ★ {tour.badges.rating.toFixed(1)} ({tour.badges.reviewCount}{" "}
-              reviews)
+              ★ {rating?.toFixed(1)} ({reviewCount} reviews)
             </p>
           ) : null}
           {startingPriceLabel ? (

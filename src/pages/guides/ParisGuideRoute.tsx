@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { getEngine2ParisTours } from "../../engine2/data/parisTours";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
+import { isGenericHeroFallbackImage } from "../../utils/hero";
 import {
   buildCityGuideDisplayTitle,
   buildCityGuideH1,
@@ -176,7 +177,12 @@ export default function ParisGuideRoute() {
           </div>
           <div className="mt-4 flex gap-4 overflow-x-auto pb-3">
             {topParisTours.map(tour => {
-              const image = tour.images.hero || tour.seo.ogImage || "/hero.jpg";
+              const rawImage =
+                tour.images.hero || tour.seo.ogImage || undefined;
+              const image =
+                rawImage && !isGenericHeroFallbackImage(rawImage)
+                  ? rawImage
+                  : undefined;
 
               return (
                 <article
@@ -184,13 +190,15 @@ export default function ParisGuideRoute() {
                   className="min-w-[260px] max-w-[260px] overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
                 >
                   <div className="relative h-40 w-full overflow-hidden bg-black/5">
-                    <Image
-                      src={image}
-                      fallbackSrc="/hero.jpg"
-                      alt={tour.name}
-                      className="h-full w-full object-cover"
-                      loading="lazy"
-                    />
+                    {image ? (
+                      <Image
+                        src={image}
+                        fallbackSrc={image}
+                        alt={tour.name}
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                      />
+                    ) : null}
                   </div>
                   <div className="p-4">
                     <p className="text-xs uppercase tracking-[0.16em] text-[#7a8a6b]">

@@ -19,12 +19,9 @@ import {
   getFlagstaffTourSlug,
 } from "../../data/flagstaffTours";
 import { formatStartingPrice } from "../../lib/pricing";
-import {
-  DEFAULT_IMAGE_URL,
-  PRICE_MIN_THRESHOLD_USD,
-} from "../../constants/merchantDefaults";
+import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { applyPriceFloor } from "../../utils/merchantPricing";
-import { filterHeroImages, resolveHeroImageForRoute } from "../../utils/hero";
+import { resolveHeroImageForRoute } from "../../utils/hero";
 import { buildMetaDescription } from "../../utils/seo";
 import {
   buildBreadcrumbList,
@@ -73,11 +70,7 @@ export default function FlagstaffTourDetailRoute({
       route: detailUrl,
       tour,
     }) ?? undefined;
-  const finalHeroImage = heroImage ?? DEFAULT_IMAGE_URL;
-  const structuredImages = filterHeroImages(
-    [heroImage, ...(tour?.galleryImages ?? [])],
-    "product"
-  );
+  const structuredImages = heroImage ? [heroImage] : [];
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
@@ -102,7 +95,7 @@ export default function FlagstaffTourDetailRoute({
           url: detailUrl,
           pageName: tour.title,
           pageDescription: metaDescription ?? productDescription ?? "",
-          heroImage: finalHeroImage,
+          heroImage,
           derivedImages: structuredImages,
           place: {
             city: tour.destination.city,
@@ -141,7 +134,7 @@ export default function FlagstaffTourDetailRoute({
             url: detailUrl,
             name: tour.title,
             description: metaDescription,
-            image: finalHeroImage,
+            image: heroImage,
           }),
           buildTourProductStructuredData({
             tour,
@@ -172,7 +165,7 @@ export default function FlagstaffTourDetailRoute({
     city.name,
     cityHref,
     detailUrl,
-    finalHeroImage,
+    heroImage,
     metaDescription,
     productDescription,
     state.name,
@@ -231,7 +224,7 @@ export default function FlagstaffTourDetailRoute({
         title={title}
         description={description}
         url={detailUrl}
-        image={finalHeroImage}
+        image={heroImage ?? null}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
@@ -303,10 +296,10 @@ export default function FlagstaffTourDetailRoute({
         <div className="grid gap-8 md:grid-cols-[2fr_1fr]">
           <div>
             <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-              {finalHeroImage ? (
+              {heroImage ? (
                 <Image
-                  src={finalHeroImage}
-                  fallbackSrc={finalHeroImage}
+                  src={heroImage}
+                  fallbackSrc={heroImage}
                   alt={tour.title}
                   className="h-64 w-full object-cover md:h-80"
                 />

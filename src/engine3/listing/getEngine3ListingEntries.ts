@@ -42,14 +42,15 @@ export const getEngine3ListingEntries = (
         return null;
       }
 
-      const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
-        productCode,
-        imageCandidates: [
-          ...(productData?.imageCandidates ?? []),
-          productData?.supplierImage,
-        ].filter((value): value is string => typeof value === "string"),
-        fallbackImageUrl: productData?.supplierImage,
-      });
+      const { primaryImageUrl, secondaryImageUrl, gallery } =
+        resolveEngine3PrimaryImage({
+          productCode,
+          imageCandidates: [
+            ...(productData?.imageCandidates ?? []),
+            productData?.supplierImage,
+          ].filter((value): value is string => typeof value === "string"),
+          fallbackImageUrl: productData?.supplierImage,
+        });
       const href = buildEngine3TourPath(tour);
 
       return {
@@ -73,7 +74,7 @@ export const getEngine3ListingEntries = (
             lat: productData?.latitude,
             lng: productData?.longitude,
           },
-          heroImage: primaryImageUrl,
+          heroImage: primaryImageUrl ?? "",
           primaryImageUrl,
           galleryImages: Array.from(
             new Set(

@@ -7,7 +7,7 @@ import TourCard from "../components/TourCard";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import type { StateDestination } from "../data/destinations";
 import { getCityTourDetailPath, getToursByState } from "../data/tours";
-import { resolveHeroImageForRoute } from "../utils/hero";
+import { resolveHeroImageForRoute, resolveTourHeroImage } from "../utils/hero";
 import { buildBreadcrumbList, buildItemList } from "../utils/structuredData";
 
 const FILTER_OPTIONS = [
@@ -40,11 +40,14 @@ export default function StateToursTemplate({
       { name: "Destinations", url: "/destinations" },
       { name: state.name, url: `/destinations/states/${state.slug}` },
     ]);
-    const itemListItems = filteredTours.map(tour => ({
-      name: tour.title,
-      url: getCityTourDetailPath(tour),
-      image: tour.heroImage ? [tour.heroImage] : undefined,
-    }));
+    const itemListItems = filteredTours.map(tour => {
+      const image = resolveTourHeroImage(tour);
+      return {
+        name: tour.title,
+        url: getCityTourDetailPath(tour),
+        image: image ? [image] : undefined,
+      };
+    });
     const nodes = [breadcrumbs];
     if (itemListItems.length) {
       nodes.push(buildItemList(itemListItems));

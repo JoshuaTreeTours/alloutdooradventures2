@@ -82,11 +82,15 @@ export const StructuredDataProvider = ({
 
   useEffect(() => {
     const pageNodes = nodes?.length ? nodes : [];
-    const baseNodes = includesSiteNodes(pageNodes) ? [] : getSiteStructuredDataNodes();
     const canonicalUrl =
       document.head
         .querySelector<HTMLLinkElement>("link[rel=\"canonical\"]")
         ?.getAttribute("href") ?? buildCanonicalUrl(location ?? "/");
+    const baseNodes = includesSiteNodes(pageNodes)
+      ? []
+      : getSiteStructuredDataNodes({
+          includeRootImage: canonicalUrl === buildCanonicalUrl("/"),
+        });
     const description =
       document.head
         .querySelector<HTMLMetaElement>("meta[name=\"description\"]")

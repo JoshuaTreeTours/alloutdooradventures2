@@ -18,6 +18,7 @@ import {
   resolveOfferUrl,
 } from "./structuredData";
 import type { Tour } from "../data/tours.types";
+import { buildImageUrl, ROOT_OG_IMAGE } from "./seo";
 
 const baseTour: Tour = {
   id: "tour-1",
@@ -77,6 +78,21 @@ describe("global structured data graph", () => {
     });
   });
 
+  it("only includes the root hero on explicit organization-level metadata", () => {
+    const [defaultOrgNode, defaultBrandNode] = getSiteStructuredDataNodes();
+    const [rootOrgNode, rootBrandNode, webSiteNode] =
+      getSiteStructuredDataNodes({
+        includeRootImage: true,
+      });
+    const image = buildImageUrl(ROOT_OG_IMAGE);
+
+    expect(defaultOrgNode).not.toHaveProperty("image");
+    expect(defaultBrandNode).not.toHaveProperty("image");
+    expect(rootOrgNode.image).toBe(image);
+    expect(rootBrandNode.image).toBe(image);
+    expect(webSiteNode).not.toHaveProperty("image");
+  });
+
   it("includes a shared Las Vegas postal address on org/brand", () => {
     const serialized = JSON.stringify(getSiteStructuredDataNodes());
     expect(serialized).toContain('"address"');
@@ -94,9 +110,13 @@ describe("global structured data graph", () => {
   });
 });
 
-const nodesWithAddress = (nodes: ReturnType<typeof getSiteStructuredDataNodes>) =>
-  [0, 1].every(index =>
-    JSON.stringify(nodes[index]?.address) === JSON.stringify(SITE_POSTAL_ADDRESS)
+const nodesWithAddress = (
+  nodes: ReturnType<typeof getSiteStructuredDataNodes>
+) =>
+  [0, 1].every(
+    index =>
+      JSON.stringify(nodes[index]?.address) ===
+      JSON.stringify(SITE_POSTAL_ADDRESS)
   );
 
 describe("tour product/trip schema safety", () => {
@@ -163,7 +183,6 @@ describe("tour product/trip schema safety", () => {
       },
     });
   });
-
 
   it("emits a single cleaned hero image and omits the default placeholder", () => {
     const product = buildTourProductStructuredData({

@@ -6,8 +6,7 @@ import Seo from "../components/Seo";
 import { getTourBookingPath, getTourDetailPath, tours } from "../data/tours";
 import type { Tour } from "../data/tours.types";
 import { getStaticPageSeo } from "../utils/seo";
-
-const JOURNEYS_FALLBACK_IMAGE = "/hero.jpg";
+import { resolveTourHeroImage } from "../utils/hero";
 
 const durationBuckets = [
   { label: "2–3 days", value: "2-3" },
@@ -65,7 +64,9 @@ const getTourDurationDays = (tour: Tour) => {
     }
   }
 
-  if (multiDayTriggers.some((trigger) => tour.title.toLowerCase().includes(trigger))) {
+  if (
+    multiDayTriggers.some(trigger => tour.title.toLowerCase().includes(trigger))
+  ) {
     return 2;
   }
 
@@ -82,15 +83,16 @@ const isMultiDayTour = (tour: Tour, durationDays?: number) => {
     return false;
   }
 
-  return multiDayTriggers.some((trigger) => combined.includes(trigger));
+  return multiDayTriggers.some(trigger => combined.includes(trigger));
 };
 
 const getCarouselImages = (tour: Tour) => {
-  const images = [tour.heroImage, ...(tour.galleryImages ?? [])]
+  const heroImage = resolveTourHeroImage(tour);
+  const images = [heroImage]
     .filter((image): image is string => Boolean(image))
     .filter((image, index, array) => array.indexOf(image) === index);
 
-  return images.length ? images : [JOURNEYS_FALLBACK_IMAGE];
+  return images;
 };
 
 type JourneyCardProps = {
@@ -109,15 +111,18 @@ const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
   const detailHref = getTourDetailPath(tour);
   const bookingHref = getTourBookingPath(tour);
 
+  const hasImages = images.length > 0;
   const hasMultipleImages = images.length > 1;
-  const displayedIndex = ((activeImage % images.length) + images.length) % images.length;
+  const displayedIndex = hasImages
+    ? ((activeImage % images.length) + images.length) % images.length
+    : 0;
 
   const handleNext = () => {
-    setActiveImage((previous) => (previous + 1) % images.length);
+    setActiveImage(previous => (previous + 1) % images.length);
   };
 
   const handlePrevious = () => {
-    setActiveImage((previous) => (previous - 1 + images.length) % images.length);
+    setActiveImage(previous => (previous - 1 + images.length) % images.length);
   };
 
   return (
@@ -129,13 +134,15 @@ const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
         />
       </Link>
       <div className="relative h-56 w-full overflow-hidden bg-black/5 sm:h-64">
-        <Image
-          src={images[displayedIndex]}
-          fallbackSrc={JOURNEYS_FALLBACK_IMAGE}
-          alt={tour.title}
-          loading="lazy"
-          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-        />
+        {hasImages ? (
+          <Image
+            src={images[displayedIndex]}
+            fallbackSrc={images[displayedIndex]}
+            alt={tour.title}
+            loading="lazy"
+            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          />
+        ) : null}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
         {durationDays ? (
           <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
@@ -197,7 +204,7 @@ export default function Journeys() {
 
   const multiDayTours = useMemo(() => {
     return tours
-      .map((tour) => {
+      .map(tour => {
         const durationDays = getTourDurationDays(tour);
         return {
           tour,
@@ -237,11 +244,17 @@ export default function Journeys() {
           return false;
         }
 
-        if (selectedDuration === "2-3" && (durationDays < 2 || durationDays > 3)) {
+        if (
+          selectedDuration === "2-3" &&
+          (durationDays < 2 || durationDays > 3)
+        ) {
           return false;
         }
 
-        if (selectedDuration === "4-7" && (durationDays < 4 || durationDays > 7)) {
+        if (
+          selectedDuration === "4-7" &&
+          (durationDays < 4 || durationDays > 7)
+        ) {
           return false;
         }
 
@@ -286,9 +299,9 @@ export default function Journeys() {
           Multi-day tours
         </h1>
         <p className="mt-4 max-w-3xl text-sm text-[#405040] md:text-base">
-          Browse our curated list of multi-day tours spanning the US and international
-          destinations. Use the search tools to find the perfect itinerary by location,
-          duration, or tour name.
+          Browse our curated list of multi-day tours spanning the US and
+          international destinations. Use the search tools to find the perfect
+          itinerary by location, duration, or tour name.
         </p>
 
         <section className="mt-10 rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm">
@@ -298,7 +311,7 @@ export default function Journeys() {
               <input
                 type="search"
                 value={searchTerm}
-                onChange={(event) => setSearchTerm(event.target.value)}
+                onChange={event => setSearchTerm(event.target.value)}
                 placeholder="Search multi-day tours by location or name…"
                 className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-normal text-[#1f2a1f] shadow-sm focus:border-[#2f4a2f] focus:outline-none"
               />
@@ -307,11 +320,11 @@ export default function Journeys() {
               Region
               <select
                 value={selectedRegion}
-                onChange={(event) => setSelectedRegion(event.target.value)}
+                onChange={event => setSelectedRegion(event.target.value)}
                 className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-normal text-[#1f2a1f] shadow-sm focus:border-[#2f4a2f] focus:outline-none"
               >
                 <option value="all">All regions</option>
-                {regionOptions.map((region) => (
+                {regionOptions.map(region => (
                   <option key={region} value={region}>
                     {region}
                   </option>
@@ -322,11 +335,11 @@ export default function Journeys() {
               Duration
               <select
                 value={selectedDuration}
-                onChange={(event) => setSelectedDuration(event.target.value)}
+                onChange={event => setSelectedDuration(event.target.value)}
                 className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-normal text-[#1f2a1f] shadow-sm focus:border-[#2f4a2f] focus:outline-none"
               >
                 <option value="all">All durations</option>
-                {durationBuckets.map((bucket) => (
+                {durationBuckets.map(bucket => (
                   <option key={bucket.value} value={bucket.value}>
                     {bucket.label}
                   </option>
@@ -335,7 +348,8 @@ export default function Journeys() {
             </label>
           </div>
           <p className="mt-4 text-sm text-[#405040]">
-            Showing {filteredTours.length} multi-day tour{filteredTours.length === 1 ? "" : "s"}.
+            Showing {filteredTours.length} multi-day tour
+            {filteredTours.length === 1 ? "" : "s"}.
           </p>
         </section>
 
@@ -354,8 +368,8 @@ export default function Journeys() {
             Design a journey that’s entirely yours
           </h2>
           <p className="mt-3 text-sm text-[#405040]">
-            Tell us what you have in mind and we’ll craft a custom multi-day itinerary
-            with the right pace, lodging, and adventure mix.
+            Tell us what you have in mind and we’ll craft a custom multi-day
+            itinerary with the right pace, lodging, and adventure mix.
           </p>
           <div className="mt-6 flex justify-center">
             <Link href="/contact">

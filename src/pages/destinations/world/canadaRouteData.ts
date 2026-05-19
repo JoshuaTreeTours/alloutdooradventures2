@@ -1,5 +1,6 @@
 import { getActivityLabelFromSlug } from "../../../data/activityLabels";
 import type { Engine2Tour } from "../../../engine2/data/loadEngine2";
+import { isGenericHeroFallbackImage } from "../../../utils/hero";
 
 export type CanadaActivityGroup = {
   slug: string;
@@ -34,8 +35,11 @@ export const getTourActivityLabels = (tour: Engine2Tour): string[] =>
     .map(slug => getActivityLabelFromSlug(slug) ?? slug.replace(/-/g, " "))
     .slice(0, 3);
 
-export const getTourCardImage = (tour: Engine2Tour): string | null =>
-  tour.images.hero || tour.seo.ogImage || tour.images.gallery[0] || null;
+export const getTourCardImage = (tour: Engine2Tour): string | null => {
+  const image =
+    tour.images.hero || tour.seo.ogImage || tour.images.gallery[0] || null;
+  return image && !isGenericHeroFallbackImage(image) ? image : null;
+};
 
 export const buildCanadaActivityGroups = (
   tours: Engine2Tour[]
@@ -43,7 +47,7 @@ export const buildCanadaActivityGroups = (
   const grouped = new Map<string, { count: number; image: string | null }>();
 
   tours.forEach(tour => {
-    const image = tour.images.hero || tour.seo.ogImage || null;
+    const image = getTourCardImage(tour);
     const slugs = getTourActivitySlugs(tour);
     slugs.forEach(slug => {
       const current = grouped.get(slug);

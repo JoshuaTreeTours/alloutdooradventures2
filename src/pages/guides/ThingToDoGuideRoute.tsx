@@ -4,6 +4,7 @@ import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
 import { resolveThingPage } from "../../utils/guides/thingPages";
 import { buildBreadcrumbList } from "../../utils/structuredData";
+import { isGenericHeroFallbackImage } from "../../utils/hero";
 
 type ThingToDoGuideRouteProps = {
   params: {
@@ -59,13 +60,17 @@ export default function ThingToDoGuideRoute({
     },
   ]);
 
+  const heroImage = isGenericHeroFallbackImage(guide.hero.image)
+    ? null
+    : guide.hero.image;
+
   return (
     <main className="bg-[#f6f1e8] px-6 py-14 text-[#1f2a1f]">
       <Seo
         title={title}
         description={description}
         url={pagePath}
-        image={guide.hero.image}
+        image={heroImage}
       />
 
       <article className="mx-auto max-w-4xl rounded-3xl border border-black/10 bg-white/80 p-8 shadow-sm md:p-10">

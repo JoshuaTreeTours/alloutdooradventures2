@@ -20,7 +20,7 @@ const OUTPUT_PATH = path.resolve("src/data/tours.generated.ts");
 const NORTHEAST_OUTPUT_PATH = path.resolve("src/data/northeast.generated.ts");
 const DEEP_SOUTH_OUTPUT_PATH = path.resolve("src/data/deepSouth.generated.ts");
 const IMPORT_REPORT_PATH = path.resolve("data/import-audit.json");
-const PLACEHOLDER_IMAGE = "/hero.jpg";
+const PLACEHOLDER_IMAGE = "";
 const CATEGORY_FILES = [
   { filename: "cycling2.csv", activitySlug: "cycling" },
   {

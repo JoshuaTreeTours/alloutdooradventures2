@@ -634,7 +634,7 @@ export const deepSouthStates: StateDestination[] = [
         "intro": "Christiana is a strong basecamp for hiking in Tennessee.",
         "heroImages": [
           "https://cdn.filestackcontent.com/eobhfnd9SRe2UE0cJVVf",
-          "/hero.jpg",
+          "",
           "https://cdn.filestackcontent.com/lIiKvUlCRjmOgXjwVxqc"
         ],
         "activityTags": [

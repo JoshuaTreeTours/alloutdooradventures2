@@ -117,7 +117,7 @@ const buildTourFromRow = (row: CsvRow, activitySlug: string): Tour | null => {
   const bookingWidgetUrl = bookingWidgetSource
     ? normalizeFareharborUrl(bookingWidgetSource) ?? bookingWidgetSource
     : undefined;
-  const heroImage = sanitizeText(row.image_url) || "/hero.jpg";
+  const heroImage = sanitizeText(row.image_url);
   const tags = splitTags(row.tags);
   const badgeLabel = ACTIVITY_BADGES[activitySlug] ?? "Tour";
 
