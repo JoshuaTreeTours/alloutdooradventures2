@@ -5,6 +5,7 @@ describe("buildTourMeta", () => {
   it("normalizes legacy breadcrumb-style titles into readable SEO titles", () => {
     const meta = buildTourMeta(
       {
+        slug: "grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131",
         title:
           "Destinations / Arizona / Flagstaff / Tours / Grand Canyon Signature Tour South Rim With Hummer Ground Tour F Pjx 164131",
         destination: { city: "Flagstaff", state: "Arizona" },
@@ -15,6 +16,9 @@ describe("buildTourMeta", () => {
 
     expect(meta.title).toBe(
       "Grand Canyon South Rim Hummer Ground Tour | Flagstaff, Arizona | All Outdoor Adventures"
+    );
+    expect(meta.description).toBe(
+      "Experience the Grand Canyon South Rim with a guided Hummer ground tour from Flagstaff, Arizona. Explore scenic canyon viewpoints, desert landscapes, and one of America’s most iconic natural wonders with All Outdoor Adventures."
     );
     expect(meta.ogTitle).toBe(meta.title);
     expect(meta.twitterTitle).toBe(meta.title);
