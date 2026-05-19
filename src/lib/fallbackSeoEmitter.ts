@@ -43,3 +43,32 @@ export const applyRouteSeo = (
 
 export const isLegacyTourDetailPath = (pathname: string) =>
   /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+\/?$/.test(pathname);
+
+const toTitleCase = (value: string) =>
+  value
+    .split("-")
+    .filter(Boolean)
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+
+export const buildLegacyTourRouteFallbackSeo = ({
+  pathname,
+  site,
+}: {
+  pathname: string;
+  site: string;
+}) => {
+  const match =
+    /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/.exec(pathname);
+  if (!match) return null;
+  const [, stateSlug, citySlug, tourSlug] = match;
+  const state = toTitleCase(stateSlug);
+  const city = toTitleCase(citySlug);
+  const tour = toTitleCase(tourSlug.replace(/-\d+$/g, ""));
+  return {
+    title: `${tour} | ${city}, ${state} | All Outdoor Adventures`,
+    description: `Explore ${tour} in ${city}, ${state} with All Outdoor Adventures.`,
+    url: `${site}${pathname}`,
+    image: "",
+  };
+};

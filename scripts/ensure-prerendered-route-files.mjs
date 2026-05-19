@@ -91,6 +91,7 @@ const buildGenericRouteSeo = (pathname) => {
 const fallbackSeoEmitterModule = await tsImport('../src/lib/fallbackSeoEmitter.ts', import.meta.url);
 const applySeo = fallbackSeoEmitterModule.applyRouteSeo;
 const isLegacyTourDetailPath = fallbackSeoEmitterModule.isLegacyTourDetailPath;
+const buildLegacyTourRouteFallbackSeo = fallbackSeoEmitterModule.buildLegacyTourRouteFallbackSeo;
 
 const files = (await readdir(distDir)).filter(f => f.startsWith('sitemap') && f.endsWith('.xml'));
 const urls = new Set();
@@ -153,7 +154,10 @@ for (const pathname of paths) {
   });
   const routeSeo = detailSeo
     ? { title: detailSeo.title, description: detailSeo.description, url: `${SITE}${detailSeo.url}`, image: detailSeo.image }
-    : legacySeo ?? (isLegacyTourDetailPath(pathname) ? null : buildGenericRouteSeo(pathname));
+    : legacySeo ??
+      (isLegacyTourDetailPath(pathname)
+        ? buildLegacyTourRouteFallbackSeo({ pathname, site: SITE })
+        : buildGenericRouteSeo(pathname));
 
   await writeFile(outputPath, routeSeo ? applySeo(template, routeSeo) : template, 'utf8');
   if (pathname === "/destinations/florida/santa-rosa-beach/tours/dolphin-cruise-614529") {
