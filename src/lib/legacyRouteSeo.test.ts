@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { buildLegacyTourRouteSeo } from "./legacyRouteSeo";
 import { buildTourMeta } from "./tourMeta";
+import { applyRouteSeo } from "./fallbackSeoEmitter";
 
 const pathname =
   "/destinations/arizona/flagstaff/tours/grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131";
@@ -44,12 +45,21 @@ describe("buildLegacyTourRouteSeo", () => {
           heroImage: "/hero.jpg",
           galleryImages: ["https://cdn.filestackcontent.com/aZUPC7t8QGa8BCbOn48Y"],
           fareHarborHtml:
-            '<div class="slide" style="background-image:url(https://cdn.filestackcontent.com/aZUPC7t8QGa8BCbOn48Y)"></div>',
+            '<div data-state="{&quot;image_url&quot;:&quot;https:\\/\\/cdn.filestackcontent.com\\/aZUPC7t8QGa8BCbOn48Y&quot;}"><img data-flickity-lazyload="https://cdn.filestackcontent.com/aZUPC7t8QGa8BCbOn48Y" /></div>',
         } as any,
       ],
     });
 
     expect(seo?.image).toBe("https://cdn.filestackcontent.com/aZUPC7t8QGa8BCbOn48Y");
+
+    const html = applyRouteSeo(
+      '<!doctype html><html><head><title>Default</title><meta name="description" content="d" /><meta property="og:title" content="d" /><meta property="og:description" content="d" /><meta property="og:url" content="d" /><meta property="og:image" content="/hero.jpg" /><meta name="twitter:title" content="d" /><meta name="twitter:description" content="d" /><meta name="twitter:image" content="/hero.jpg" /><link rel="canonical" href="https://example.com" /></head><body></body></html>',
+      seo as any
+    );
+
+    expect(html).toContain('property="og:image" content="https://cdn.filestackcontent.com/aZUPC7t8QGa8BCbOn48Y"');
+    expect(html).toContain('name="twitter:image" content="https://cdn.filestackcontent.com/aZUPC7t8QGa8BCbOn48Y"');
+    expect(html).toContain('"image":"https://cdn.filestackcontent.com/aZUPC7t8QGa8BCbOn48Y"');
   });
 
   it("extracts first visible image from legacy markup variants", () => {

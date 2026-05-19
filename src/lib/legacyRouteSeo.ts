@@ -17,6 +17,20 @@ const LEGACY_DETAIL_RE =
 
 const FORBIDDEN_TOUR_ROUTE_IMAGES = new Set(["/hero.jpg"]);
 
+type LegacyImageCandidateLog = {
+  type:
+    | "img[src]"
+    | "data-src"
+    | "data-lazy-src"
+    | "srcset"
+    | "background-image"
+    | "json-blobs"
+    | "filestack"
+    | "data-flickity-lazyload";
+  raw: string;
+  normalized: string | null;
+};
+
 const normalizeCandidateImage = (value: unknown): string | null => {
   if (typeof value !== "string") return null;
   const trimmed = value.trim();
@@ -30,23 +44,30 @@ const normalizeCandidateImage = (value: unknown): string | null => {
   return canonical;
 };
 
-const extractFirstLegacyMarkupImage = (raw: string): string | null => {
-  const patterns = [
-    /<img[^>]*\ssrc=["']([^"']+)["'][^>]*>/i,
-    /<img[^>]*\sdata-src=["']([^"']+)["'][^>]*>/i,
-    /<img[^>]*\sdata-lazy-src=["']([^"']+)["'][^>]*>/i,
-    /<img[^>]*\ssrcset=["']([^"']+)["'][^>]*>/i,
-    /background-image\s*:\s*url\(([^)]+)\)/i,
-    /https?:\/\/cdn\.filestackcontent\.com\/[A-Za-z0-9][^\s"')<]*/i,
+const extractFirstLegacyMarkupImage = (
+  raw: string,
+  candidateLog?: LegacyImageCandidateLog[]
+): string | null => {
+  const patterns: Array<{ type: LegacyImageCandidateLog["type"]; re: RegExp }> = [
+    { type: "img[src]", re: /<img[^>]*\ssrc=["']([^"']+)["'][^>]*>/i },
+    { type: "data-src", re: /<img[^>]*\sdata-src=["']([^"']+)["'][^>]*>/i },
+    { type: "data-lazy-src", re: /<img[^>]*\sdata-lazy-src=["']([^"']+)["'][^>]*>/i },
+    { type: "data-flickity-lazyload", re: /<img[^>]*\sdata-flickity-lazyload=["']([^"']+)["'][^>]*>/i },
+    { type: "srcset", re: /<img[^>]*\ssrcset=["']([^"']+)["'][^>]*>/i },
+    { type: "background-image", re: /background-image\s*:\s*url\(([^)]+)\)/i },
+    { type: "json-blobs", re: /["'](?:image|image_url|heroImage|feature_image|url)["']\s*[:=]\s*["'](https?:\\?\/\\?\/[^"']+)["']/i },
+    { type: "filestack", re: /https?:\\?\/\\?\/cdn\.filestackcontent\.com\\?\/[A-Za-z0-9][^\s"')<]*/i },
   ];
 
-  for (const pattern of patterns) {
-    const match = pattern.exec(raw);
+  for (const { type, re } of patterns) {
+    const match = re.exec(raw);
     const candidate = match?.[1] ?? match?.[0];
     if (!candidate) continue;
-    const srcsetFirst = candidate.split(",")[0]?.trim().split(/\s+/)[0];
+    const decoded = candidate.replace(/\\\//g, "/");
+    const srcsetFirst = decoded.split(",")[0]?.trim().split(/\s+/)[0];
     const cleaned = srcsetFirst?.replace(/^['"]|['"]$/g, "");
     const normalized = normalizeCandidateImage(cleaned);
+    candidateLog?.push({ type, raw: candidate, normalized });
     if (normalized) return normalized;
   }
 
@@ -69,6 +90,17 @@ const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>) => {
   }
 
   return "";
+};
+
+export const debugLegacyTourRouteImageCandidates = (
+  tour: Tour & Record<string, unknown>
+) => {
+  const candidateLog: LegacyImageCandidateLog[] = [];
+  for (const value of Object.values(tour)) {
+    if (typeof value !== "string") continue;
+    extractFirstLegacyMarkupImage(value, candidateLog);
+  }
+  return candidateLog;
 };
 
 export const buildLegacyTourRouteSeo = ({
