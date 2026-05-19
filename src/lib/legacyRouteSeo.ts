@@ -44,34 +44,61 @@ const normalizeCandidateImage = (value: unknown): string | null => {
   return canonical;
 };
 
+const decodeHtmlEntities = (value: string): string =>
+  value
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'")
+    .replace(/&amp;/gi, "&")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&nbsp;/gi, " ");
+
+const extractUrlFromSrcset = (value: string): string | null => {
+  const first = value.split(",")[0]?.trim();
+  if (!first) return null;
+  return first.split(/\s+/)[0] ?? null;
+};
+
 const extractFirstLegacyMarkupImage = (
   raw: string,
-  candidateLog?: LegacyImageCandidateLog[]
+  candidateLog?: LegacyImageCandidateLog[],
+  collectAllCandidates = false
 ): string | null => {
+  const text = decodeHtmlEntities(raw);
   const patterns: Array<{ type: LegacyImageCandidateLog["type"]; re: RegExp }> = [
-    { type: "img[src]", re: /<img[^>]*\ssrc=["']([^"']+)["'][^>]*>/i },
-    { type: "data-src", re: /<img[^>]*\sdata-src=["']([^"']+)["'][^>]*>/i },
-    { type: "data-lazy-src", re: /<img[^>]*\sdata-lazy-src=["']([^"']+)["'][^>]*>/i },
-    { type: "data-flickity-lazyload", re: /<img[^>]*\sdata-flickity-lazyload=["']([^"']+)["'][^>]*>/i },
-    { type: "srcset", re: /<img[^>]*\ssrcset=["']([^"']+)["'][^>]*>/i },
-    { type: "background-image", re: /background-image\s*:\s*url\(([^)]+)\)/i },
-    { type: "json-blobs", re: /["'](?:image|image_url|heroImage|feature_image|url)["']\s*[:=]\s*["'](https?:\\?\/\\?\/[^"']+)["']/i },
-    { type: "filestack", re: /https?:\\?\/\\?\/cdn\.filestackcontent\.com\\?\/[A-Za-z0-9][^\s"')<]*/i },
+    { type: "img[src]", re: /<img[^>]*\ssrc=["']([^"']+)["'][^>]*>/gi },
+    { type: "data-src", re: /<img[^>]*\sdata-src=["']([^"']+)["'][^>]*>/gi },
+    { type: "data-lazy-src", re: /<img[^>]*\sdata-lazy-src=["']([^"']+)["'][^>]*>/gi },
+    { type: "data-flickity-lazyload", re: /<img[^>]*\sdata-flickity-lazyload=["']([^"']+)["'][^>]*>/gi },
+    { type: "srcset", re: /<img[^>]*\ssrcset=["']([^"']+)["'][^>]*>/gi },
+    { type: "background-image", re: /background-image\s*:\s*url\(([^)]+)\)/gi },
+    { type: "json-blobs", re: /["'](?:image|image_url|heroImage|feature_image|url)["']\s*[:=]\s*["'](https?:\\?\/\\?\/[^"']+)["']/gi },
+    { type: "filestack", re: /https?:\\?\/\\?\/cdn\.filestackcontent\.com\\?\/[A-Za-z0-9][^\s"')<]*/gi },
   ];
 
+  type MatchCandidate = { index: number; type: LegacyImageCandidateLog["type"]; raw: string };
+  const matches: MatchCandidate[] = [];
+
   for (const { type, re } of patterns) {
-    const match = re.exec(raw);
-    const candidate = match?.[1] ?? match?.[0];
-    if (!candidate) continue;
-    const decoded = candidate.replace(/\\\//g, "/");
-    const srcsetFirst = decoded.split(",")[0]?.trim().split(/\s+/)[0];
-    const cleaned = srcsetFirst?.replace(/^['"]|['"]$/g, "");
-    const normalized = normalizeCandidateImage(cleaned);
-    candidateLog?.push({ type, raw: candidate, normalized });
-    if (normalized) return normalized;
+    for (const match of text.matchAll(re)) {
+      const candidate = match[1] ?? match[0];
+      if (!candidate) continue;
+      matches.push({ index: match.index ?? Number.MAX_SAFE_INTEGER, type, raw: candidate });
+    }
   }
 
-  return null;
+  matches.sort((a, b) => a.index - b.index);
+
+  for (const item of matches) {
+    const decoded = item.raw.replace(/\\\//g, "/");
+    const maybeSrcset = item.type === "srcset" ? extractUrlFromSrcset(decoded) : decoded;
+    const cleaned = maybeSrcset?.replace(/^['"]|['"]$/g, "").trim() ?? null;
+    const normalized = normalizeCandidateImage(cleaned);
+    candidateLog?.push({ type: item.type, raw: item.raw, normalized });
+    if (normalized && !collectAllCandidates) return normalized;
+  }
+
+  return candidateLog?.find(entry => entry.normalized)?.normalized ?? null;
 };
 
 const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>) => {
@@ -98,7 +125,7 @@ export const debugLegacyTourRouteImageCandidates = (
   const candidateLog: LegacyImageCandidateLog[] = [];
   for (const value of Object.values(tour)) {
     if (typeof value !== "string") continue;
-    extractFirstLegacyMarkupImage(value, candidateLog);
+    extractFirstLegacyMarkupImage(value, candidateLog, true);
   }
   return candidateLog;
 };

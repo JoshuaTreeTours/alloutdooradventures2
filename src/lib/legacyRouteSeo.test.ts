@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { buildLegacyTourRouteSeo } from "./legacyRouteSeo";
+import {
+  buildLegacyTourRouteSeo,
+  debugLegacyTourRouteImageCandidates,
+} from "./legacyRouteSeo";
 import { buildTourMeta } from "./tourMeta";
 import { applyRouteSeo } from "./fallbackSeoEmitter";
 
@@ -80,5 +83,38 @@ describe("buildLegacyTourRouteSeo", () => {
     });
 
     expect(seo?.image).toBe("https://cdn.filestackcontent.com/LvqjIQRrSo63cY2G0z9X");
+  });
+
+  it("extracts Santa Barbara legacy image from escaped JSON and preserves first visible product-page candidate", () => {
+    const tour = {
+      slug: "coastal-adventure-449804",
+      title: "Coastal Adventure",
+      destination: {
+        stateSlug: "california",
+        citySlug: "santa-barbara",
+        city: "Santa Barbara",
+        state: "California",
+      },
+      heroImage: "/hero.jpg",
+      fareHarborHtml:
+        '<section><img src="/hero.jpg" /><div data-state="{&quot;image_url&quot;:&quot;https:\\/\\/cdn.filestackcontent.com\\/SB_ESCAPED_IMAGE&quot;,&quot;gallery&quot;:[{&quot;url&quot;:&quot;https:\\/\\/cdn.filestackcontent.com\\/SB_SECONDARY_IMAGE&quot;}]}" style="background-image:url(https://cdn.filestackcontent.com/SB_BACKGROUND_IMAGE)"></div></section>',
+    } as any;
+
+    const seo = buildLegacyTourRouteSeo({
+      pathname:
+        "/destinations/california/santa-barbara/tours/coastal-adventure-449804",
+      site: "https://www.alloutdooradventures.com",
+      buildTourMetaFn: buildTourMeta,
+      tours: [tour],
+    });
+
+    const candidates = debugLegacyTourRouteImageCandidates(tour);
+
+    expect(candidates.map(c => c.type)).toContain("img[src]");
+    expect(candidates.map(c => c.type)).toContain("json-blobs");
+    expect(candidates.map(c => c.type)).toContain("background-image");
+    expect(candidates.map(c => c.type)).toContain("filestack");
+    expect(candidates[0]?.type).toBe("img[src]");
+    expect(seo?.image).toBe("https://cdn.filestackcontent.com/SB_ESCAPED_IMAGE");
   });
 });
