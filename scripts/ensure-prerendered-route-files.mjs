@@ -93,16 +93,29 @@ const setMetaByAttr = (html, attr, name, value) => {
   return html.replace(re, `<meta ${attr}="${name}" content="${value}" />`);
 };
 
+const removeMetaByAttr = (html, attr, name) => {
+  const re = new RegExp(`<meta[^>]*${attr}=["']${name}["'][^>]*>\\s*`, 'i');
+  return html.replace(re, '');
+};
+
 const applySeo = (html, { title, description, url, image }) => {
   let out = html.replace(/<title[^>]*>[\s\S]*?<\/title>/i, `<title>${title}</title>`);
   out = setMetaByAttr(out, 'name', 'description', description);
   out = setMetaByAttr(out, 'property', 'og:title', title);
   out = setMetaByAttr(out, 'property', 'og:description', description);
   out = setMetaByAttr(out, 'property', 'og:url', url);
-  out = setMetaByAttr(out, 'property', 'og:image', image);
+  if (image) {
+    out = setMetaByAttr(out, 'property', 'og:image', image);
+  } else {
+    out = removeMetaByAttr(out, 'property', 'og:image');
+  }
   out = setMetaByAttr(out, 'name', 'twitter:title', title);
   out = setMetaByAttr(out, 'name', 'twitter:description', description);
-  out = setMetaByAttr(out, 'name', 'twitter:image', image);
+  if (image) {
+    out = setMetaByAttr(out, 'name', 'twitter:image', image);
+  } else {
+    out = removeMetaByAttr(out, 'name', 'twitter:image');
+  }
   out = out.replace(/<link[^>]*rel=["']canonical["'][^>]*>/i, `<link rel="canonical" href="${url}" />`);
   const structuredData = { '@context': 'https://schema.org', '@type': 'WebPage', '@id': url, url, name: title, description };
   if (image) structuredData.image = image;

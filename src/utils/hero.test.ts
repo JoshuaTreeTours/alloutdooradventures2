@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 
+import { buildTourSchemaGraph } from "../schema/buildTourSchemaGraph";
 import {
   CITY_NEUTRAL_BRAND_IMAGE,
   HOME_HERO_IMAGE,
@@ -9,6 +10,45 @@ import {
   resolveTourHeroImage,
 } from "./hero";
 import { buildImageUrl } from "./seo";
+
+const buildLegacyTourSchema = (heroImage: string | null) =>
+  buildTourSchemaGraph({
+    url: "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/example",
+    pageName: "Example Tour",
+    pageDescription: "A real product tour page.",
+    heroImage,
+    derivedImages: heroImage ? [heroImage] : [],
+    place: {
+      city: "Palm Springs",
+      region: "California",
+      countryCode: "US",
+    },
+    product: {
+      id: "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/example#product",
+      name: "Example Tour",
+      description: "A real product tour page.",
+      category: "Tours",
+    },
+    trip: {
+      id: "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/example#trip",
+      name: "Example Tour",
+      description: "A real product tour page.",
+      suppressFallbackItinerary: true,
+    },
+    offers: {
+      url: "https://www.example.com/book",
+      price: "100",
+      priceCurrency: "USD",
+    },
+    brandOrgIds: {
+      orgId: "https://www.alloutdooradventures.com/#organization",
+      brandId: "https://www.alloutdooradventures.com/#brand",
+      websiteId: "https://www.alloutdooradventures.com/#website",
+    },
+  });
+
+const findSchemaNode = (graph: any, type: string) =>
+  graph["@graph"].find((node: any) => node["@type"] === type);
 
 describe("resolveCityHeroImage", () => {
   it("prefers a city-bound tour hero image", () => {
@@ -254,5 +294,61 @@ describe("legacy tour hero normalization", () => {
     });
 
     expect(resolved).toBe(tacdnCaption);
+  });
+
+  it("uses the visible product hero for all legacy metadata contexts when no TACDN caption exists", () => {
+    const visibleHero = "https://cdn.example.com/visible-product-hero.jpg";
+    const providerImage = "https://cdn.example.com/provider-product-image.jpg";
+    const resolved = resolveHeroImageForRoute({
+      route: "/destinations/california/palm-springs/tours/example",
+      tour: {
+        heroImage: visibleHero,
+        primaryImageUrl: providerImage,
+        galleryImages: [providerImage],
+      },
+    });
+
+    const ogImage = resolved ? buildImageUrl(resolved) : "";
+    const twitterImage = resolved ? buildImageUrl(resolved) : "";
+    const schema = buildLegacyTourSchema(resolved);
+    const webpage = findSchemaNode(schema, "WebPage");
+    const product = findSchemaNode(schema, "Product");
+    const trip = findSchemaNode(schema, "TouristTrip");
+
+    expect(resolved).toBe(visibleHero);
+    expect(ogImage).toBe(visibleHero);
+    expect(twitterImage).toBe(visibleHero);
+    expect(webpage.image).toBe(visibleHero);
+    expect(webpage.primaryImageOfPage.url).toBe(visibleHero);
+    expect(product.image).toBe(visibleHero);
+    expect(trip.image).toBe(visibleHero);
+    expect(JSON.stringify(schema)).not.toContain("/hero.jpg");
+  });
+
+  it("emits no social or schema image when no real product hero exists", () => {
+    const resolved = resolveHeroImageForRoute({
+      route: "/destinations/california/palm-springs/tours/example",
+      tour: {
+        heroImage: "/hero.jpg",
+        primaryImageUrl: "https://www.alloutdooradventures.com/hero.jpg",
+        galleryImages: ["/images/canoe-hero.jpg"],
+      },
+    });
+
+    const ogImage = resolved ? buildImageUrl(resolved) : "";
+    const twitterImage = resolved ? buildImageUrl(resolved) : "";
+    const schema = buildLegacyTourSchema(resolved);
+    const webpage = findSchemaNode(schema, "WebPage");
+    const product = findSchemaNode(schema, "Product");
+    const trip = findSchemaNode(schema, "TouristTrip");
+
+    expect(resolved).toBeNull();
+    expect(ogImage).toBe("");
+    expect(twitterImage).toBe("");
+    expect(webpage).not.toHaveProperty("image");
+    expect(webpage).not.toHaveProperty("primaryImageOfPage");
+    expect(product).not.toHaveProperty("image");
+    expect(trip).not.toHaveProperty("image");
+    expect(JSON.stringify(schema)).not.toContain("/hero.jpg");
   });
 });

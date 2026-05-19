@@ -147,7 +147,7 @@ const replaceMeta = (html, seo) => {
   const type = escapeAttribute(seo.type);
   const image = escapeAttribute(sanitizeFinalSeoUrl(seo.image));
 
-  return html
+  let output = html
     .replaceAll("__SEO_TITLE__", title)
     .replaceAll("__SEO_DESCRIPTION__", description)
     .replaceAll("__SEO_CANONICAL__", url)
@@ -158,6 +158,15 @@ const replaceMeta = (html, seo) => {
     .replaceAll("__SEO_TWITTER_TITLE__", title)
     .replaceAll("__SEO_TWITTER_DESCRIPTION__", description)
     .replaceAll("__SEO_TWITTER_IMAGE__", image);
+
+  if (!image) {
+    output = output.replace(
+      /<meta[^>]+(?:property=["']og:image["']|name=["']twitter:image["'])[^>]*>\s*/gi,
+      ""
+    );
+  }
+
+  return output;
 };
 
 const STRUCTURED_DATA_SCRIPT_ID = "structured-data";

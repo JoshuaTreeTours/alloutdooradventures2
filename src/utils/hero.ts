@@ -139,9 +139,9 @@ export const resolveTourHeroImage = (
   }
 
   const candidates = [
+    tour.heroImage,
     tour.primaryImageUrl,
     tour.resolvedImageUrl ?? undefined,
-    tour.heroImage,
     ...(tour.galleryImages ?? []),
   ]
     .map(image => normalizeHeroImage(image))

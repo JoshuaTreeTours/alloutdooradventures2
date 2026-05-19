@@ -45,6 +45,10 @@ const upsertLinkTag = (
   });
 };
 
+const removeMetaTag = (selector: string) => {
+  document.head.querySelector<HTMLMetaElement>(selector)?.remove();
+};
+
 export default function Seo({
   title = DEFAULT_SEO.title,
   description = DEFAULT_SEO.description,
@@ -81,10 +85,14 @@ export default function Seo({
       property: "og:url",
       content: canonicalUrl,
     });
-    upsertMetaTag('meta[property="og:image"]', {
-      property: "og:image",
-      content: resolvedImage,
-    });
+    if (resolvedImage) {
+      upsertMetaTag('meta[property="og:image"]', {
+        property: "og:image",
+        content: resolvedImage,
+      });
+    } else {
+      removeMetaTag('meta[property="og:image"]');
+    }
     upsertMetaTag('meta[name="twitter:card"]', {
       name: "twitter:card",
       content: "summary_large_image",
@@ -97,10 +105,14 @@ export default function Seo({
       name: "twitter:description",
       content: description,
     });
-    upsertMetaTag('meta[name="twitter:image"]', {
-      name: "twitter:image",
-      content: resolvedImage,
-    });
+    if (resolvedImage) {
+      upsertMetaTag('meta[name="twitter:image"]', {
+        name: "twitter:image",
+        content: resolvedImage,
+      });
+    } else {
+      removeMetaTag('meta[name="twitter:image"]');
+    }
     upsertMetaTag('meta[name="robots"]', {
       name: "robots",
       content: robots,
