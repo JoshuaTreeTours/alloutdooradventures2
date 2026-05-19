@@ -25,6 +25,7 @@ import { assertUniqueByCanonicalPath } from "../engine6/hardening";
 import {
   suppressLegacyFareHarborTour,
 } from "../engine6/replacementMode";
+import { resolveTourHeroImage } from "../utils/hero";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -200,12 +201,43 @@ const legacyTours: Tour[] = [
     })
   );
 
+const normalizeLegacyTourCardImage = (tour: Tour): Tour => {
+  const canonicalImage = resolveTourHeroImage(tour);
+  if (!canonicalImage) {
+    return tour;
+  }
+  const gallery = [canonicalImage, ...(tour.galleryImages ?? [])].filter(
+    (image, index, list) => image && list.indexOf(image) === index
+  );
+  return {
+    ...tour,
+    heroImage: canonicalImage,
+    primaryImageUrl: canonicalImage,
+    resolvedImageUrl: canonicalImage,
+    galleryImages: gallery,
+  };
+};
+
+const normalizedLegacyTours = legacyTours.map(normalizeLegacyTourCardImage);
+
 export const getLegacyTourBySlugs = (
   stateSlug: string,
   citySlug: string,
   tourSlug: string
 ) =>
   legacyTours.find(
+    tour =>
+      tour.destination.stateSlug === stateSlug &&
+      tour.destination.citySlug === citySlug &&
+      tour.slug === tourSlug
+  );
+
+export const getNormalizedLegacyTourBySlugs = (
+  stateSlug: string,
+  citySlug: string,
+  tourSlug: string
+) =>
+  normalizedLegacyTours.find(
     tour =>
       tour.destination.stateSlug === stateSlug &&
       tour.destination.citySlug === citySlug &&
