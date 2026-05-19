@@ -138,6 +138,10 @@ for (const tour of engine6Tours) {
 }
 
 let created = 0;
+const AZURE_TRACE_PATHNAME = "/destinations/california/santa-barbara/tours/coastal-cruise-azure-seas-4241";
+const AZURE_TRACE_SLUG = "coastal-cruise-azure-seas-4241";
+const AZURE_TRACE_IMAGE = "https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS";
+
 for (const pathname of paths) {
   const outputPath = buildOutputPath(pathname);
   if (outputPath === templatePath) continue;
@@ -145,6 +149,15 @@ for (const pathname of paths) {
   await mkdir(path.dirname(outputPath), { recursive: true });
 
   const detailSeo = seoByPath.get(pathname);
+  const azureTourPre = pathname === AZURE_TRACE_PATHNAME
+    ? tours.find(t => t.slug === AZURE_TRACE_SLUG)
+    : null;
+  const heroImageBeforeRepair = azureTourPre?.heroImage ?? null;
+  const imageBeforeRepair = azureTourPre?.image ?? null;
+  const galleryImagesBeforeRepair = Array.isArray(azureTourPre?.galleryImages)
+    ? [...azureTourPre.galleryImages]
+    : null;
+
   const legacySeo = legacyRouteSeoModule.buildLegacyTourRouteSeo({
     pathname,
     tours,
@@ -159,6 +172,10 @@ for (const pathname of paths) {
         ? buildLegacyTourRouteFallbackSeo({ pathname, site: SITE })
         : buildGenericRouteSeo(pathname));
 
+  const azureTour = pathname === AZURE_TRACE_PATHNAME
+    ? tours.find(t => t.slug === AZURE_TRACE_SLUG)
+    : null;
+
   if (
     isLegacyTourDetailPath(pathname) &&
     routeSeo &&
@@ -169,7 +186,41 @@ for (const pathname of paths) {
     console.log(`LEGACY_IMAGE_MISSING_FINAL\n${pathname}`);
   }
 
-  await writeFile(outputPath, routeSeo ? applySeo(template, routeSeo) : template, 'utf8');
+  const finalHtml = routeSeo ? applySeo(template, routeSeo) : template;
+
+  if (pathname === AZURE_TRACE_PATHNAME) {
+    const heroImageAfterRepair = azureTour?.heroImage ?? null;
+    const imageAfterRepair = azureTour?.image ?? null;
+    const galleryImagesAfterRepair = Array.isArray(azureTour?.galleryImages)
+      ? [...azureTour.galleryImages]
+      : null;
+
+    const trace = {
+      pathname,
+      slug: azureTour?.slug ?? null,
+      productCode: azureTour?.productCode ?? null,
+      normalizedTourFound: Boolean(azureTour),
+      repairMapHit:
+        routeSeo?.image === AZURE_TRACE_IMAGE ||
+        heroImageAfterRepair === AZURE_TRACE_IMAGE ||
+        imageAfterRepair === AZURE_TRACE_IMAGE,
+      repairMapKeyUsed: azureTour?.slug === AZURE_TRACE_SLUG ? AZURE_TRACE_SLUG : null,
+      heroImageBeforeRepair,
+      imageBeforeRepair,
+      galleryImagesBeforeRepair,
+      heroImageAfterRepair,
+      imageAfterRepair,
+      galleryImagesAfterRepair,
+      buildLegacyTourRouteSeoImage: legacySeo?.image ?? null,
+      routeSeoImageBeforeApplyRouteSeo: routeSeo?.image ?? null,
+      finalHtmlHasOgImage: finalHtml.includes('property="og:image"'),
+      finalHtmlHasTwitterImage: finalHtml.includes('name="twitter:image"'),
+      finalHtmlHasSchemaImage: /"image"\s*:\s*"https?:\/\//.test(finalHtml),
+    };
+    console.log(`AZURE_TRACE ${JSON.stringify(trace)}`);
+  }
+
+  await writeFile(outputPath, finalHtml, 'utf8');
   if (pathname === "/destinations/florida/santa-rosa-beach/tours/dolphin-cruise-614529") {
     console.log(`[ensure-prerendered-route-files] Dolphin output path: ${outputPath}`);
   }
