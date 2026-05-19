@@ -108,11 +108,11 @@ const extractFirstLegacyMarkupImage = (
 };
 
 const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>) => {
-  const routeRepair = normalizeCandidateImage(LEGACY_IMAGE_REPAIR_MAP[tour.slug]);
-  if (routeRepair) return routeRepair;
-
   const primary = normalizeCandidateImage(resolveTourHeroImage(tour as any) ?? tour.heroImage ?? null);
   if (primary) return primary;
+
+  const normalizedPayloadImage = normalizeCandidateImage(tour.image ?? null);
+  if (normalizedPayloadImage) return normalizedPayloadImage;
 
   for (const image of tour.galleryImages ?? []) {
     const normalized = normalizeCandidateImage(image);
@@ -124,6 +124,9 @@ const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>) => {
     const extracted = extractFirstLegacyMarkupImage(value);
     if (extracted) return extracted;
   }
+
+  const routeRepair = normalizeCandidateImage(LEGACY_IMAGE_REPAIR_MAP[tour.slug]);
+  if (routeRepair) return routeRepair;
 
   return "";
 };

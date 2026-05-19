@@ -166,7 +166,7 @@ for (const pathname of paths) {
     routeSeo.url &&
     !routeSeo.image
   ) {
-    console.log(`LEGACY_IMAGE_MISSING:\n${pathname}`);
+    console.log(`LEGACY_IMAGE_MISSING_FINAL\n${pathname}`);
   }
 
   await writeFile(outputPath, routeSeo ? applySeo(template, routeSeo) : template, 'utf8');
