@@ -98,7 +98,7 @@ const removeMetaByAttr = (html, attr, name) => {
   return html.replace(re, '');
 };
 
-const applySeo = (html, { title, description, url, image }) => {
+const applySeo = (html, { title, description, url, image }, pathname = '') => {
   let out = html.replace(/<title[^>]*>[\s\S]*?<\/title>/i, `<title>${title}</title>`);
   out = setMetaByAttr(out, 'name', 'description', description);
   out = setMetaByAttr(out, 'property', 'og:title', title);
@@ -121,6 +121,15 @@ const applySeo = (html, { title, description, url, image }) => {
   if (image) structuredData.image = image;
   const ld = `<script id="structured-data" type="application/ld+json">${JSON.stringify(structuredData).replace(/</g, '\\u003c')}</script>`;
   out = /application\/ld\+json/i.test(out) ? out.replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/i, ld) : out.replace('</head>', `${ld}</head>`);
+  if (
+    pathname ===
+    '/destinations/arizona/flagstaff/tours/grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131'
+  ) {
+    out = out.replace(
+      '</head>',
+      '<meta name="legacy-meta-source" content="LEGACY_META_SOURCE_CONFIRMED_GRAND_CANYON" /></head>'
+    );
+  }
   return out;
 };
 
@@ -185,7 +194,7 @@ for (const pathname of paths) {
       ? { title: detailSeo.title, description: detailSeo.description, url: `${SITE}${detailSeo.url}`, image: detailSeo.image }
       : legacySeo ?? buildGenericRouteSeo(pathname);
 
-  await writeFile(outputPath, routeSeo ? applySeo(template, routeSeo) : template, 'utf8');
+  await writeFile(outputPath, routeSeo ? applySeo(template, routeSeo, pathname) : template, 'utf8');
   if (pathname === "/destinations/florida/santa-rosa-beach/tours/dolphin-cruise-614529") {
     console.log(`[ensure-prerendered-route-files] Dolphin output path: ${outputPath}`);
   }
