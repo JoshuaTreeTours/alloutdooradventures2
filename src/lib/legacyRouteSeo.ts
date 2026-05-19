@@ -7,6 +7,7 @@ type Tour = {
   destination: { stateSlug: string; citySlug: string };
   heroImage?: string | null;
   galleryImages?: string[] | null;
+  image?: string | null;
 };
 
 type MetaBuilder = typeof buildTourMeta;
@@ -16,6 +17,11 @@ const LEGACY_DETAIL_RE =
   /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/;
 
 const FORBIDDEN_TOUR_ROUTE_IMAGES = new Set(["/hero.jpg"]);
+
+const LEGACY_IMAGE_REPAIR_MAP: Record<string, string> = {
+  "coastal-cruise-azure-seas-4241":
+    "https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS",
+};
 
 type LegacyImageCandidateLog = {
   type:
@@ -102,6 +108,9 @@ const extractFirstLegacyMarkupImage = (
 };
 
 const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>) => {
+  const routeRepair = normalizeCandidateImage(LEGACY_IMAGE_REPAIR_MAP[tour.slug]);
+  if (routeRepair) return routeRepair;
+
   const primary = normalizeCandidateImage(resolveTourHeroImage(tour as any) ?? tour.heroImage ?? null);
   if (primary) return primary;
 
@@ -117,6 +126,41 @@ const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>) => {
   }
 
   return "";
+};
+
+const applyLegacyImageRepairToTour = (
+  tour: Tour & Record<string, unknown>,
+  resolvedImage: string
+) => {
+  if (!resolvedImage) return;
+  tour.heroImage = resolvedImage;
+  tour.image = resolvedImage;
+  if (Array.isArray(tour.galleryImages)) {
+    if (!tour.galleryImages.includes(resolvedImage)) {
+      tour.galleryImages = [resolvedImage, ...tour.galleryImages.filter(Boolean)];
+    }
+  }
+};
+
+export const auditLegacyTourRouteImages = (tours: Array<Tour & Record<string, unknown>>) => {
+  return tours.map(tour => {
+    const candidates = debugLegacyTourRouteImageCandidates(tour);
+    const resolvedImage = resolveLegacyTourRouteImage(tour);
+    const hasStructuredImageData =
+      candidates.some(c => c.normalized) || Boolean(LEGACY_IMAGE_REPAIR_MAP[tour.slug]);
+    const hasPrimaryFields =
+      Boolean(normalizeCandidateImage(tour.heroImage ?? null)) ||
+      Boolean((tour.galleryImages ?? []).some(value => normalizeCandidateImage(value))) ||
+      Boolean(normalizeCandidateImage(tour.image ?? null));
+    return {
+      slug: tour.slug,
+      resolvedImage,
+      missingResolvedImage: !resolvedImage,
+      hasStructuredImageData,
+      jsonMissingImageFields: hasStructuredImageData && !hasPrimaryFields,
+      candidateTypes: candidates.map(c => c.type),
+    };
+  });
 };
 
 export const debugLegacyTourRouteImageCandidates = (
@@ -158,10 +202,13 @@ export const buildLegacyTourRouteSeo = ({
   const canonical = `${site}${pathname}`;
   const meta = buildTourMetaFn(tour as any, canonical);
 
+  const image = resolveLegacyTourRouteImage(tour as Tour & Record<string, unknown>);
+  applyLegacyImageRepairToTour(tour as Tour & Record<string, unknown>, image);
+
   return {
     title: meta.title,
     description: meta.description,
     url: meta.canonical,
-    image: resolveLegacyTourRouteImage(tour as Tour & Record<string, unknown>),
+    image,
   };
 };

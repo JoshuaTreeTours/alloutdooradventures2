@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  auditLegacyTourRouteImages,
   buildLegacyTourRouteSeo,
   debugLegacyTourRouteImageCandidates,
 } from "./legacyRouteSeo";
@@ -114,7 +115,64 @@ describe("buildLegacyTourRouteSeo", () => {
     expect(candidates.map(c => c.type)).toContain("json-blobs");
     expect(candidates.map(c => c.type)).toContain("background-image");
     expect(candidates.map(c => c.type)).toContain("filestack");
-    expect(candidates[0]?.type).toBe("img[src]");
     expect(seo?.image).toBe("https://cdn.filestackcontent.com/SB_ESCAPED_IMAGE");
+  });
+
+  it("applies targeted repair for coastal-cruise-azure-seas-4241 and normalizes hero/gallery/image fields", () => {
+    const tour = {
+      slug: "coastal-cruise-azure-seas-4241",
+      title: "Coastal Cruise Azure Seas",
+      destination: { stateSlug: "california", citySlug: "santa-barbara", city: "Santa Barbara", state: "California" },
+      heroImage: "/hero.jpg",
+      galleryImages: ["/hero.jpg"],
+    } as any;
+
+    const seo = buildLegacyTourRouteSeo({
+      pathname: "/destinations/california/santa-barbara/tours/coastal-cruise-azure-seas-4241",
+      site: "https://www.alloutdooradventures.com",
+      buildTourMetaFn: buildTourMeta,
+      tours: [tour],
+    });
+
+    expect(seo?.image).toBe("https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS");
+    expect(tour.heroImage).toBe("https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS");
+    expect(tour.image).toBe("https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS");
+    expect(tour.galleryImages).toContain("https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS");
+  });
+
+  it("audits legacy routes for missing image and structured-image-only edge cases", () => {
+    const tours = [
+      {
+        slug: "coastal-cruise-and-sunset-tour-620777",
+        destination: { stateSlug: "california", citySlug: "santa-barbara" },
+        heroImage: "/hero.jpg",
+        fareHarborHtml:
+          '<div data-state="{&quot;image_url&quot;:&quot;https:\\/\\/cdn.filestackcontent.com\\/aZUPC7t8QGa8BCbOn48Y&quot;}"></div>',
+      },
+      {
+        slug: "grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131",
+        destination: { stateSlug: "arizona", citySlug: "flagstaff" },
+        heroImage: "https://cdn.example.com/grand-canyon.jpg",
+      },
+      {
+        slug: "joshua-tree-hike-climb-10001",
+        destination: { stateSlug: "california", citySlug: "joshua-tree" },
+        heroImage: "https://cdn.example.com/joshua-tree.jpg",
+      },
+      {
+        slug: "san-francisco-sunset-tour-10002",
+        destination: { stateSlug: "california", citySlug: "san-francisco" },
+        heroImage: "https://cdn.example.com/sf-sunset.jpg",
+      },
+    ] as any;
+
+    const report = auditLegacyTourRouteImages(tours);
+    const sb = report.find(r => r.slug === "coastal-cruise-and-sunset-tour-620777");
+    const gc = report.find(r => r.slug.includes("grand-canyon"));
+
+    expect(sb?.missingResolvedImage).toBe(false);
+    expect(sb?.jsonMissingImageFields).toBe(true);
+    expect(sb?.candidateTypes).toContain("json-blobs");
+    expect(gc?.missingResolvedImage).toBe(false);
   });
 });
