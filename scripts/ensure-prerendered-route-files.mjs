@@ -159,6 +159,16 @@ for (const pathname of paths) {
         ? buildLegacyTourRouteFallbackSeo({ pathname, site: SITE })
         : buildGenericRouteSeo(pathname));
 
+  if (
+    isLegacyTourDetailPath(pathname) &&
+    routeSeo &&
+    routeSeo.title &&
+    routeSeo.url &&
+    !routeSeo.image
+  ) {
+    console.log(`LEGACY_IMAGE_MISSING:\n${pathname}`);
+  }
+
   await writeFile(outputPath, routeSeo ? applySeo(template, routeSeo) : template, 'utf8');
   if (pathname === "/destinations/florida/santa-rosa-beach/tours/dolphin-cruise-614529") {
     console.log(`[ensure-prerendered-route-files] Dolphin output path: ${outputPath}`);
