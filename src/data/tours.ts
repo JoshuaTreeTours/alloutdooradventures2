@@ -18,6 +18,7 @@ import {
 } from "../utils/tourDescription";
 import { slugify } from "../utils/slugify";
 import { isTourRemoved } from "../utils/tours/isTourRemoved";
+import { getTourIdFromSlug } from "../utils/tours/isTourRemoved";
 import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEntries";
 import { getEngine4ListingEntries } from "../engine4/listing/getEngine4ListingEntries";
 import { engine6ListingTours } from "../engine6/listing";
@@ -41,6 +42,19 @@ const isValidListingHeroImage = (url?: string | null) => {
   const normalized = value.toLowerCase();
   if (INVALID_HERO_IMAGE_PATTERNS.some(pattern => normalized.includes(pattern))) return false;
   return /^https?:\/\//.test(value) || value.startsWith("/");
+};
+
+const isSuppressedPublicTour = (tour: Tour) => {
+  const fallbackId = getTourIdFromSlug(tour.slug);
+  const fareHarborItemId = getEngine1FareHarborItemId(tour);
+  const derivedTourId = fareHarborItemId ?? fallbackId;
+
+  return (
+    isTourRemoved({
+      tourId: derivedTourId,
+      operatorName: tour.operator,
+    }) || !isValidListingHeroImage(tour.heroImage)
+  );
 };
 const MULTI_DAY_PATTERN =
   /\b(?:([2-9]|[1-9]\d)\s*[- ]?day|([2-9]|[1-9]\d)\s*days|multi-?day|overnight|package|expedition|itinerary)\b/i;
@@ -347,7 +361,7 @@ export const getToursByState = (stateSlug: string) =>
     dedupeToursByCanonicalPath([
       ...tours.filter(tour => tour.destination.stateSlug === stateSlug),
       ...getEngine2ToursForLocation(stateSlug),
-    ]).filter(tour => isValidListingHeroImage(tour.heroImage))
+    ]).filter(tour => !isSuppressedPublicTour(tour))
   );
 
 export const getToursByCity = (stateSlug: string, citySlug: string) =>
@@ -359,7 +373,7 @@ export const getToursByCity = (stateSlug: string, citySlug: string) =>
           tour.destination.citySlug === citySlug
       ),
       ...getEngine2ToursForLocation(stateSlug, citySlug),
-    ]).filter(tour => isValidListingHeroImage(tour.heroImage))
+    ]).filter(tour => !isSuppressedPublicTour(tour))
   );
 
 export const getTourBySlugs = (
@@ -376,7 +390,7 @@ export const getTourBySlugs = (
 
 export const getToursByActivity = (activitySlug: string) =>
   tours.filter(tour => {
-    if (!isValidListingHeroImage(tour.heroImage)) {
+    if (isSuppressedPublicTour(tour)) {
       return false;
     }
     if (activitySlug === "hiking") {
@@ -532,8 +546,8 @@ export const getToursByCityUnified = (
     const engine6OnlyTours = getToursByCity(stateSlug, citySlug).map(
       toUnifiedEngine1Tour
     );
-    return dedupeUnifiedCityTours(engine6OnlyTours).filter(entry =>
-      isValidListingHeroImage(entry.tour.heroImage)
+    return dedupeUnifiedCityTours(engine6OnlyTours).filter(
+      entry => !isSuppressedPublicTour(entry.tour)
     );
   }
 
@@ -557,7 +571,7 @@ export const getToursByCityUnified = (
       ...engine2Tours,
       ...engine4Tours,
       ...engine1Tours.filter(entry => entry.tour.engine !== "engine6"),
-    ]).filter(entry => isValidListingHeroImage(entry.tour.heroImage));
+    ]).filter(entry => !isSuppressedPublicTour(entry.tour));
   }
 
   const engine2Tours =
@@ -574,7 +588,7 @@ export const getToursByCityUnified = (
     ...engine3Tours,
     ...engine4Tours,
     ...engine1Tours.filter(entry => entry.tour.engine !== "engine6"),
-  ]).filter(entry => isValidListingHeroImage(entry.tour.heroImage));
+  ]).filter(entry => !isSuppressedPublicTour(entry.tour));
 };
 
 export const getAffiliateDisclosure = (tour: Tour) =>
