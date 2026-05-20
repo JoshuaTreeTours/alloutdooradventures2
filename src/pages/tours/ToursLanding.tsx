@@ -33,6 +33,24 @@ import {
   MEXICO_COUNTRY_NAME,
 } from "./internationalSelectorData";
 
+const normalizeOptionSlug = (value: string) => slugify(value.trim());
+
+const dedupeAndSortOptions = <T extends { slug: string; name: string }>(
+  options: T[]
+) => {
+  const bySlug = new Map<string, T>();
+  options.forEach(option => {
+    const normalizedSlug = normalizeOptionSlug(option.slug || option.name);
+    if (!normalizedSlug || bySlug.has(normalizedSlug)) {
+      return;
+    }
+    bySlug.set(normalizedSlug, { ...option, slug: normalizedSlug });
+  });
+  return Array.from(bySlug.values()).sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+};
+
 const resolveState = (stateSlug: string | null) => {
   if (!stateSlug) {
     return null;
@@ -167,7 +185,7 @@ export default function ToursLanding() {
       return [];
     }
 
-    return getStateCityOptions(selectedState.slug);
+    return dedupeAndSortOptions(getStateCityOptions(selectedState.slug));
   }, [selectedState]);
 
   const selectedCity = useMemo(() => {
@@ -232,28 +250,37 @@ export default function ToursLanding() {
   );
 
   const usStateOptions = useMemo(
-    () => sortedStates.filter(state => isUSStateName(state.name)),
+    () =>
+      dedupeAndSortOptions(
+        sortedStates
+          .filter(state => isUSStateName(state.name))
+          .map(state => ({ slug: state.slug, name: state.name }))
+      ),
     [sortedStates]
   );
 
   const countryOptions = useMemo(
     () =>
-      buildInternationalCountryOptions(
-        [...internationalTours, ...internationalEngine2AsTours],
-        mexicoTours
-      ),
+      dedupeAndSortOptions(
+        buildInternationalCountryOptions(
+          [...internationalTours, ...internationalEngine2AsTours],
+          mexicoTours
+        ).map(country => ({ slug: slugify(country), name: country }))
+      ).map(option => option.name),
     [internationalTours, internationalEngine2AsTours, mexicoTours]
   );
 
   const internationalCities = useMemo(
     () =>
-      buildInternationalCityOptions({
-        selectedCountry,
-        selectedCanadaProvinceSlug: selectedInternationalProvinceSlug,
-        internationalTours: [...internationalTours, ...internationalEngine2AsTours],
-        canadaProvinces,
-        mexicoTours,
-      }),
+      dedupeAndSortOptions(
+        buildInternationalCityOptions({
+          selectedCountry,
+          selectedCanadaProvinceSlug: selectedInternationalProvinceSlug,
+          internationalTours: [...internationalTours, ...internationalEngine2AsTours],
+          canadaProvinces,
+          mexicoTours,
+        }).map(city => ({ ...city, slug: city.slug || slugify(city.name) }))
+      ),
     [
       canadaProvinces,
       internationalTours,

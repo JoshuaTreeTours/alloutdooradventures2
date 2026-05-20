@@ -9,6 +9,7 @@ import { getAllEngine2Tours } from "../engine2/data/loadEngine2";
 import { isTourRemoved } from "../utils/tours/isTourRemoved";
 import { getStaticPageSeo } from "../utils/seo";
 import { resolveTourHeroImage } from "../utils/hero";
+import { slugify } from "../utils/slugify";
 
 const durationBuckets = [
   { label: "2–3 days", value: "2-3" },
@@ -261,16 +262,19 @@ export default function Journeys() {
   }, [engine2InternationalTours]);
 
   const regionOptions = useMemo(() => {
-    const uniqueRegions = new Set<string>();
+    const uniqueRegions = new Map<string, string>();
 
     multiDayTours.forEach(({ tour }) => {
       const region = getJourneyRegion(tour);
-      if (region) {
-        uniqueRegions.add(region);
+      const normalized = slugify(region || "");
+      if (region && normalized && !uniqueRegions.has(normalized)) {
+        uniqueRegions.set(normalized, region);
       }
     });
 
-    return Array.from(uniqueRegions).sort((a, b) => a.localeCompare(b));
+    return Array.from(uniqueRegions.values()).sort((a, b) =>
+      a.localeCompare(b)
+    );
   }, [multiDayTours]);
 
   const filteredTours = useMemo(() => {
