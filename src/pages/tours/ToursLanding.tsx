@@ -33,6 +33,21 @@ import {
   MEXICO_COUNTRY_NAME,
 } from "./internationalSelectorData";
 
+
+const normalizeOptionValue = (value: string) => slugify(value.trim().toLowerCase());
+
+const dedupeByNormalizedValue = <T extends { slug: string }>(options: T[]) => {
+  const seen = new Set<string>();
+  return options.filter(option => {
+    const normalized = normalizeOptionValue(option.slug);
+    if (!normalized || seen.has(normalized)) {
+      return false;
+    }
+    seen.add(normalized);
+    return true;
+  });
+};
+
 const resolveState = (stateSlug: string | null) => {
   if (!stateSlug) {
     return null;
@@ -558,7 +573,7 @@ export default function ToursLanding() {
                 onChange={event => handleStateChange(event.target.value)}
               >
                 <option value="">Select a state</option>
-                {usStateOptions.map(state => (
+                {dedupeByNormalizedValue(usStateOptions).map(state => (
                   <option key={state.slug} value={state.slug}>
                     {state.name}
                   </option>
@@ -577,7 +592,7 @@ export default function ToursLanding() {
                 <option value="">
                   {selectedStateSlug ? "Select a city" : "Select a state first"}
                 </option>
-                {cityOptions.map(city => (
+                {dedupeByNormalizedValue(cityOptions).map(city => (
                   <option key={city.slug} value={city.slug}>
                     {city.name}
                   </option>
@@ -632,9 +647,9 @@ export default function ToursLanding() {
                   onChange={event => handleCountryChange(event.target.value)}
                 >
                   <option value="">Select a country</option>
-                  {countryOptions.map(country => (
-                    <option key={country} value={country}>
-                      {country}
+                  {dedupeByNormalizedValue(countryOptions.map(country => ({ slug: country, name: country }))).map(country => (
+                    <option key={country.slug} value={country.slug}>
+                      {country.name}
                     </option>
                   ))}
                 </select>
@@ -688,7 +703,7 @@ export default function ToursLanding() {
                         ? "Select a province first"
                         : "Select a city"}
                   </option>
-                  {internationalCities.map(city => (
+                  {dedupeByNormalizedValue(internationalCities).map(city => (
                     <option key={city.slug} value={city.slug}>
                       {city.name}
                     </option>

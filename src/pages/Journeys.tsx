@@ -7,6 +7,7 @@ import { getTourBookingPath, getTourDetailPath, tours } from "../data/tours";
 import type { Tour } from "../data/tours.types";
 import { getStaticPageSeo } from "../utils/seo";
 import { resolveTourHeroImage } from "../utils/hero";
+import { slugify } from "../utils/slugify";
 
 const durationBuckets = [
   { label: "2–3 days", value: "2-3" },
@@ -15,6 +16,7 @@ const durationBuckets = [
 ];
 
 const multiDayTriggers = ["multi-day", "multi day", "overnight"];
+const normalizeOptionValue = (value: string) => slugify(value.trim().toLowerCase());
 
 const extractDurationDays = (text?: string) => {
   if (!text) {
@@ -324,11 +326,21 @@ export default function Journeys() {
                 className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-normal text-[#1f2a1f] shadow-sm focus:border-[#2f4a2f] focus:outline-none"
               >
                 <option value="all">All regions</option>
-                {regionOptions.map(region => (
+                {regionOptions
+                  .filter((region, index, array) => {
+                    const normalized = normalizeOptionValue(region);
+                    return (
+                      normalized.length > 0 &&
+                      array.findIndex(
+                        item => normalizeOptionValue(item) === normalized
+                      ) === index
+                    );
+                  })
+                  .map(region => (
                   <option key={region} value={region}>
                     {region}
                   </option>
-                ))}
+                  ))}
               </select>
             </label>
             <label className="flex flex-1 flex-col gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">

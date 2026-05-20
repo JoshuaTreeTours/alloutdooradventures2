@@ -18,6 +18,7 @@ import {
 } from "../utils/tourDescription";
 import { slugify } from "../utils/slugify";
 import { isTourRemoved } from "../utils/tours/isTourRemoved";
+import { resolveTourHeroImage } from "../utils/hero";
 import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEntries";
 import { getEngine4ListingEntries } from "../engine4/listing/getEngine4ListingEntries";
 import { engine6ListingTours } from "../engine6/listing";
@@ -146,6 +147,47 @@ const engine6CanonicalTourPaths = engine6ListingTours.map(
 // Sunset Flight; Durango Half-Day Raft Trip; Jeep Wrangler Rental Seats 5 (4 Door);
 // Durango Snowdown Fight.
 
+const SUPPRESSED_PRODUCT_IDS = new Set(["301378", "301379"]);
+
+const INVALID_HERO_PATTERNS = ["placeholder", "no-image", "default-image"];
+
+const hasValidPublicCardHero = (tour: Tour) => {
+  const hero = resolveTourHeroImage(tour)?.trim() ?? "";
+  if (!hero) {
+    return false;
+  }
+  const normalized = hero.toLowerCase();
+  return !INVALID_HERO_PATTERNS.some(pattern => normalized.includes(pattern));
+};
+
+const remapMisclassifiedAfricaTours = (tour: Tour): Tour => {
+  const cityByProductId: Record<string, { country: string; city: string }> = {
+    "517077": { country: "Kenya", city: "Nairobi" },
+    "517088": { country: "Madagascar", city: "Antananarivo" },
+    "517079": { country: "Ethiopia", city: "Addis Ababa" },
+    "517094": { country: "Tanzania", city: "Zanzibar" },
+    "520051": { country: "Tanzania", city: "Arusha" },
+  };
+  const productId = getEngine1FareHarborItemId(tour);
+  const mapped = cityByProductId[productId];
+  if (!mapped) {
+    return tour;
+  }
+  return {
+    ...tour,
+    activityType: "Multi-Day",
+    activitySlugs: Array.from(new Set([...tour.activitySlugs, "multi-day"])),
+    destination: {
+      ...tour.destination,
+      country: mapped.country,
+      state: mapped.country,
+      stateSlug: slugify(mapped.country),
+      city: mapped.city,
+      citySlug: slugify(mapped.city),
+    },
+  };
+};
+
 export const tours: Tour[] = [
   ...toursGenerated,
   ...manualTours,
@@ -172,7 +214,10 @@ export const tours: Tour[] = [
         country: tour.destination.country || "United States",
       },
     })
-  );
+  )
+  .map(remapMisclassifiedAfricaTours)
+  .filter(tour => !SUPPRESSED_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour)))
+  .filter(hasValidPublicCardHero);
 
 
 const legacyTours: Tour[] = [
@@ -198,7 +243,11 @@ const legacyTours: Tour[] = [
         country: tour.destination.country || "United States",
       },
     })
-  );
+  )
+  .map(remapMisclassifiedAfricaTours)
+  .filter(tour => !SUPPRESSED_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour)))
+  .filter(hasValidPublicCardHero);
+
 
 export const getLegacyTourBySlugs = (
   stateSlug: string,
