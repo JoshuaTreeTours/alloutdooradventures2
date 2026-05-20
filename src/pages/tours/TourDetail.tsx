@@ -40,6 +40,8 @@ import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { applyPriceFloor } from "../../utils/merchantPricing";
 import { fetchFareHarborHtml } from "../../utils/fh/fetchFareHarborHtml";
 import { parseFareHarborHtml } from "../../utils/fh/parseFareHarborHtml";
+import RemovedTourGone from "../RemovedTourGone";
+import { isRemovedTourSlug } from "../../utils/tours/isTourRemoved";
 
 type TourDetailProps = {
   params: {
@@ -50,6 +52,12 @@ type TourDetailProps = {
 };
 
 export default function TourDetail({ params }: TourDetailProps) {
+  if (isRemovedTourSlug(params.slug)) {
+    return (
+      <RemovedTourGone cityToursPath={`/destinations/${params.stateSlug}/${params.citySlug}/tours`} />
+    );
+  }
+
   const tour = getTourBySlugs(params.stateSlug, params.citySlug, params.slug);
   const state = tour ? getStateBySlug(tour.destination.stateSlug) : null;
   const city =
