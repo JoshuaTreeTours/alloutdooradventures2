@@ -5,6 +5,8 @@ import Image from "../components/Image";
 import Seo from "../components/Seo";
 import { getTourBookingPath, getTourDetailPath, tours } from "../data/tours";
 import type { Tour } from "../data/tours.types";
+import { getAllEngine2Tours } from "../engine2/data/loadEngine2";
+import { isTourRemoved } from "../utils/tours/isTourRemoved";
 import { getStaticPageSeo } from "../utils/seo";
 import { resolveTourHeroImage } from "../utils/hero";
 
@@ -84,6 +86,13 @@ const isMultiDayTour = (tour: Tour, durationDays?: number) => {
   }
 
   return multiDayTriggers.some(trigger => combined.includes(trigger));
+};
+
+const getJourneyRegion = (tour: Tour) => {
+  if (tour.destination.country && tour.destination.country !== "United States") {
+    return tour.destination.country;
+  }
+  return tour.destination.state || tour.destination.country || "";
 };
 
 const getCarouselImages = (tour: Tour) => {
@@ -202,8 +211,44 @@ export default function Journeys() {
   const [selectedRegion, setSelectedRegion] = useState("all");
   const [selectedDuration, setSelectedDuration] = useState("all");
 
+  const engine2InternationalTours = useMemo<Tour[]>(
+    () =>
+      getAllEngine2Tours()
+        .filter(t => t.geo.country !== "United States")
+        .filter(t => !isTourRemoved({ tourId: t.id, operatorName: t.provider.name }))
+        .map(t => ({
+          id: `journeys-engine2-${t.id}`,
+          slug: t.slug,
+          title: t.name,
+          destination: {
+            country: t.geo.country,
+            state: t.geo.region || t.geo.country,
+            stateSlug: t.sourceCountrySlug ?? t.geo.country.toLowerCase().replace(/\s+/g, "-"),
+            city: t.geo.city,
+            citySlug: t.sourceCitySlug,
+            lat: t.geo.lat ?? undefined,
+            lng: t.geo.lng ?? undefined,
+          },
+          heroImage: t.images.hero ?? "",
+          badges: { duration: t.content.duration },
+          activitySlugs: ["adventure", "multiday-tours"],
+          categories: ["adventure", "multiday-tours"],
+          bookingProvider: t.bookingProvider ?? "fareharbor",
+          bookingUrl: t.booking.bookingUrl,
+          longDescription: t.content.experienceText,
+          operator: t.provider.name,
+        }))
+        .filter(t => Boolean(t.heroImage?.trim())),
+    []
+  );
+
   const multiDayTours = useMemo(() => {
-    return tours
+    const dedupedTours = new Map<string, Tour>();
+    [...tours, ...engine2InternationalTours].forEach(tour => {
+      const key = `${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`;
+      if (!dedupedTours.has(key)) dedupedTours.set(key, tour);
+    });
+    return [...dedupedTours.values()]
       .map(tour => {
         const durationDays = getTourDurationDays(tour);
         return {
@@ -213,13 +258,13 @@ export default function Journeys() {
         };
       })
       .filter(({ isMultiDay }) => isMultiDay);
-  }, []);
+  }, [engine2InternationalTours]);
 
   const regionOptions = useMemo(() => {
     const uniqueRegions = new Set<string>();
 
     multiDayTours.forEach(({ tour }) => {
-      const region = tour.destination.state || tour.destination.country;
+      const region = getJourneyRegion(tour);
       if (region) {
         uniqueRegions.add(region);
       }
@@ -233,7 +278,7 @@ export default function Journeys() {
 
     return multiDayTours.filter(({ tour, durationDays }) => {
       if (selectedRegion !== "all") {
-        const region = tour.destination.state || tour.destination.country;
+        const region = getJourneyRegion(tour);
         if (region !== selectedRegion) {
           return false;
         }
