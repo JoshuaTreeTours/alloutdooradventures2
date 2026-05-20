@@ -12,10 +12,12 @@ const BASE_URL = (
 const MAX_URLS_PER_SITEMAP = 50000;
 const MIN_TOUR_URL_COUNT = 50;
 
-const EXCLUDED_PRODUCT_CODES = ["36001P1"];
+const EXCLUDED_PRODUCT_CODES = ["36001P1", "301378", "301379"];
 const EXCLUDED_TOUR_PATH_TOKENS = [
   ...EXCLUDED_PRODUCT_CODES.map((code) => code.toLowerCase()),
   "yosemite-in-a-day-tour-from-san-francisco",
+  "intermediate-singletrack-mountain-biking-clinic-301378",
+  "private-mtb-lesson-301379",
 ];
 const LEGACY_SOFT_404_TOUR_PATH_PATTERNS = [
   /\/tours\/[^/]+\/[^/]+\/[^/]*-legacy-[^/]*-\d+\/?$/i,
