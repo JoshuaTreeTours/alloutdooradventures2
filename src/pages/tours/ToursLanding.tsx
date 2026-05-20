@@ -201,6 +201,31 @@ export default function ToursLanding() {
     []
   );
 
+  const internationalEngine2AsTours = useMemo<Tour[]>(
+    () =>
+      internationalEngine2Tours.map(tour => ({
+        id: tour.id,
+        slug: tour.slug,
+        title: tour.name,
+        destination: {
+          state: tour.geo.region || tour.geo.country,
+          stateSlug: tour.sourceCountrySlug || slugify(tour.geo.country),
+          city: tour.geo.city,
+          citySlug: tour.sourceCitySlug,
+          country: tour.geo.country,
+          lat: tour.geo.lat ?? undefined,
+          lng: tour.geo.lng ?? undefined,
+        },
+        heroImage: tour.images.hero ?? "",
+        badges: {},
+        activitySlugs: ["adventure"],
+        bookingProvider: tour.bookingProvider ?? "fareharbor",
+        bookingUrl: tour.booking.bookingUrl,
+        longDescription: tour.content.experienceText,
+      })),
+    [internationalEngine2Tours]
+  );
+
   const europeCountrySlugSet = useMemo(
     () => new Set(EUROPE_COUNTRIES.map(country => slugify(country))),
     []
@@ -212,8 +237,12 @@ export default function ToursLanding() {
   );
 
   const countryOptions = useMemo(
-    () => buildInternationalCountryOptions(internationalTours, mexicoTours),
-    [internationalTours, mexicoTours]
+    () =>
+      buildInternationalCountryOptions(
+        [...internationalTours, ...internationalEngine2AsTours],
+        mexicoTours
+      ),
+    [internationalTours, internationalEngine2AsTours, mexicoTours]
   );
 
   const internationalCities = useMemo(
@@ -221,13 +250,14 @@ export default function ToursLanding() {
       buildInternationalCityOptions({
         selectedCountry,
         selectedCanadaProvinceSlug: selectedInternationalProvinceSlug,
-        internationalTours,
+        internationalTours: [...internationalTours, ...internationalEngine2AsTours],
         canadaProvinces,
         mexicoTours,
       }),
     [
       canadaProvinces,
       internationalTours,
+      internationalEngine2AsTours,
       selectedCountry,
       selectedInternationalProvinceSlug,
       mexicoTours,
