@@ -51,6 +51,16 @@ const dedupeAndSortOptions = <T extends { slug: string; name: string }>(
   );
 };
 
+const dedupeForRender = <T extends { value: string; label: string }>(options: T[]) =>
+  Array.from(
+    new Map(
+      options.map(option => [
+        normalizeOptionSlug(option.value || option.label),
+        option,
+      ])
+    ).values()
+  );
+
 const resolveState = (stateSlug: string | null) => {
   if (!stateSlug) {
     return null;
@@ -403,6 +413,41 @@ export default function ToursLanding() {
     return match?.name ?? selectedInternationalCity;
   }, [internationalCities, selectedInternationalCity]);
 
+  const renderStateOptions = useMemo(
+    () =>
+      dedupeForRender(
+        usStateOptions.map(state => ({ value: state.slug, label: state.name }))
+      ),
+    [usStateOptions]
+  );
+
+  const renderCityOptions = useMemo(
+    () =>
+      dedupeForRender(
+        cityOptions.map(city => ({ value: city.slug, label: city.name }))
+      ),
+    [cityOptions]
+  );
+
+  const renderCountryOptions = useMemo(
+    () =>
+      dedupeForRender(
+        countryOptions.map(country => ({ value: slugify(country), label: country }))
+      ),
+    [countryOptions]
+  );
+
+  const renderInternationalCityOptions = useMemo(
+    () =>
+      dedupeForRender(
+        internationalCities.map(city => ({
+          value: city.slug || slugify(city.name),
+          label: city.name,
+        }))
+      ),
+    [internationalCities]
+  );
+
   const displayedTours =
     inventoryType === "rentals"
       ? filteredTours.filter(entry => isRentalTour(entry.tour))
@@ -615,9 +660,9 @@ export default function ToursLanding() {
                 onChange={event => handleStateChange(event.target.value)}
               >
                 <option value="">Select a state</option>
-                {usStateOptions.map(state => (
-                  <option key={state.slug} value={state.slug}>
-                    {state.name}
+                {renderStateOptions.map(state => (
+                  <option key={state.value} value={state.value}>
+                    {state.label}
                   </option>
                 ))}
               </select>
@@ -634,9 +679,9 @@ export default function ToursLanding() {
                 <option value="">
                   {selectedStateSlug ? "Select a city" : "Select a state first"}
                 </option>
-                {cityOptions.map(city => (
-                  <option key={city.slug} value={city.slug}>
-                    {city.name}
+                {renderCityOptions.map(city => (
+                  <option key={city.value} value={city.value}>
+                    {city.label}
                   </option>
                 ))}
               </select>
@@ -689,9 +734,9 @@ export default function ToursLanding() {
                   onChange={event => handleCountryChange(event.target.value)}
                 >
                   <option value="">Select a country</option>
-                  {countryOptions.map(country => (
-                    <option key={country} value={country}>
-                      {country}
+                  {renderCountryOptions.map(country => (
+                    <option key={country.value} value={country.label}>
+                      {country.label}
                     </option>
                   ))}
                 </select>
@@ -745,9 +790,9 @@ export default function ToursLanding() {
                         ? "Select a province first"
                         : "Select a city"}
                   </option>
-                  {internationalCities.map(city => (
-                    <option key={city.slug} value={city.slug}>
-                      {city.name}
+                  {renderInternationalCityOptions.map(city => (
+                    <option key={city.value} value={city.value}>
+                      {city.label}
                     </option>
                   ))}
                 </select>
