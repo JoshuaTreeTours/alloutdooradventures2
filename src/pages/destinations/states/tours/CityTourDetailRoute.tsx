@@ -85,6 +85,7 @@ import { applyEngine1Template } from "../../../../utils/tours/applyEngine1Harden
 import { fetchFareHarborHtml } from "../../../../utils/fh/fetchFareHarborHtml";
 import { parseFareHarborHtml } from "../../../../utils/fh/parseFareHarborHtml";
 import { formatStartingPrice } from "../../../../lib/pricing";
+import { filterContaminatedRelatedTours } from "../../../../lib/filterContaminatedRelatedTours";
 import RemovedTourGone from "../../../RemovedTourGone";
 import { extractViatorProductCode } from "../../../../utils/viator/extractViatorProductCode";
 import {
@@ -741,13 +742,13 @@ export default function CityTourDetailRoute({
 
   const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
   const seoMeta = buildTourMeta(tour, canonicalUrl);
-  const relatedTours = (
+  const relatedTours = filterContaminatedRelatedTours((
     isFlagstaff ? flagstaffTours : getToursByCity(state.slug, city.slug)
   ).filter(item =>
     isFlagstaff
       ? getFlagstaffTourSlug(item) !== tourSlug
       : item.slug !== tour.slug
-  );
+  ));
   const disclosure = getAffiliateDisclosure(tour);
   const fareHarborHeroStartingPrice =
     fareHarborParsed?.priceAdult ?? fareHarborParsed?.priceChild;
