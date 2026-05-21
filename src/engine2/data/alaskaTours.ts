@@ -5,6 +5,16 @@ import type { Engine2Tour } from "./loadEngine2";
 import { alaskaRows } from "./alaska.rows";
 
 const clean = (value?: string) => (value ?? "").trim();
+const AFRICA_DESTINATIONS_BY_ITEM_ID: Record<
+  string,
+  { country: string; city: string }
+> = {
+  "517077": { country: "Kenya", city: "Nairobi" },
+  "517088": { country: "Madagascar", city: "Antananarivo" },
+  "517079": { country: "Ethiopia", city: "Addis Ababa" },
+  "517094": { country: "Tanzania", city: "Zanzibar" },
+  "520051": { country: "Tanzania", city: "Arusha" },
+};
 
 const toTitleCase = (value: string) =>
   value
@@ -14,10 +24,7 @@ const toTitleCase = (value: string) =>
     .join(" ");
 
 const getCityFromLocation = (location?: string) => {
-  const parts = clean(location)
-    .split("/")
-    .map(clean)
-    .filter(Boolean);
+  const parts = clean(location).split("/").map(clean).filter(Boolean);
   return parts[parts.length - 1] ?? "";
 };
 
@@ -50,7 +57,11 @@ export const loadAlaskaEngine2Tours = (): Engine2Tour[] => {
   for (const row of alaskaRows) {
     const id = clean(row.id);
     const name = clean(row.title);
-    const cityRaw = clean(row.city) || getCityFromLocation(row.location);
+    const africaDestination = AFRICA_DESTINATIONS_BY_ITEM_ID[id];
+    const cityRaw =
+      africaDestination?.city ||
+      clean(row.city) ||
+      getCityFromLocation(row.location);
 
     if (!id || !name) {
       console.warn("Skipping Alaska row with missing id/title", row);
@@ -58,31 +69,39 @@ export const loadAlaskaEngine2Tours = (): Engine2Tour[] => {
     }
 
     if (!cityRaw) {
-      console.warn(`Alaska row ${id} missing city/location, using state-level fallback route`);
+      console.warn(
+        `Alaska row ${id} missing city/location, using state-level fallback route`
+      );
     }
 
     const citySlug = slugify(cityRaw);
     const slugBase = clean(row.slug) || slugify(name);
     const slug = `${slugBase}-${id}`;
+    const countryName = africaDestination?.country ?? "United States";
+    const regionName = africaDestination?.country ?? "Alaska";
+    const countrySlug = slugify(countryName);
     const canonicalPath = citySlug
-      ? `/destinations/united-states/alaska/${citySlug}/tours/${slug}`
-      : `/destinations/united-states/alaska/tours/${slug}`;
+      ? `/destinations/world/${countrySlug}/${citySlug}/tours/${slug}`
+      : `/destinations/world/${countrySlug}/tours/${slug}`;
     const primaryImage = clean(row.image) || ENGINE2_DEFAULT_IMAGE;
     const providerName = clean(row.operator) || "Unknown provider";
-    const cityName = cityRaw ? toTitleCase(cityRaw) : "Alaska";
+    const cityName = cityRaw ? toTitleCase(cityRaw) : regionName;
     const copy = buildTourCopy({
       name,
       provider: providerName,
       city: cityName,
-      region: "Alaska",
+      region: regionName,
     });
-    const coords = parseLatLng(clean(row.location_lat), clean(row.location_long));
+    const coords = parseLatLng(
+      clean(row.location_lat),
+      clean(row.location_long)
+    );
 
     byId.set(id, {
       id: `alaska-${id}`,
       sourceDatasetKey: "alaska",
-      sourceCountrySlug: "united-states",
-      sourceCitySlug: citySlug || "alaska",
+      sourceCountrySlug: countrySlug,
+      sourceCitySlug: citySlug || countrySlug,
       slug,
       name,
       provider: {
@@ -90,14 +109,14 @@ export const loadAlaskaEngine2Tours = (): Engine2Tour[] => {
         shortName: "",
       },
       geo: {
-        country: "United States",
-        region: "Alaska",
+        country: countryName,
+        region: regionName,
         city: cityName,
         lat: coords.lat,
         lng: coords.lng,
       },
       seo: {
-        title: `${name} | ${cityName}, Alaska Tour`,
+        title: `${name} | ${cityName}, ${regionName} Tour`,
         description: copy.metaDescription,
         canonicalPath,
         ogImage: primaryImage,

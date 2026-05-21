@@ -17,15 +17,8 @@ const durationBuckets = [
 ];
 
 const multiDayTriggers = ["multi-day", "multi day", "overnight"];
-const normalizeOptionValue = (value: string) => slugify(value.trim().toLowerCase());
-const AFRICA_ENGINE2_MAP: Record<string, { country: string; city: string }> = {
-  "517077": { country: "Kenya", city: "Nairobi" },
-  "517088": { country: "Madagascar", city: "Antananarivo" },
-  "517079": { country: "Ethiopia", city: "Addis Ababa" },
-  "517094": { country: "Tanzania", city: "Zanzibar" },
-  "520051": { country: "Tanzania", city: "Arusha" },
-};
-
+const normalizeOptionValue = (value: string) =>
+  slugify(value.trim().toLowerCase());
 const extractDurationDays = (text?: string) => {
   if (!text) {
     return undefined;
@@ -214,26 +207,22 @@ export default function Journeys() {
 
   const allJourneyCandidates = useMemo(() => {
     const engine2International = getAllEngine2Tours()
+      .filter(tour => tour.geo.country !== "United States")
       .map(tour => ({
-        tour,
-        mapped: AFRICA_ENGINE2_MAP[tour.id],
-      }))
-      .filter(({ tour, mapped }) => (mapped?.country ?? tour.geo.country) !== "United States")
-      .map(tour => ({
-        id: `engine2-${tour.tour.id}`,
-        slug: tour.tour.slug,
-        title: tour.tour.name,
+        id: `engine2-${tour.id}`,
+        slug: tour.slug,
+        title: tour.name,
         destination: {
-          city: tour.mapped?.city ?? tour.tour.geo.city,
-          state: tour.mapped?.country ?? tour.tour.geo.country,
-          country: tour.mapped?.country ?? tour.tour.geo.country,
-          citySlug: slugify(tour.mapped?.city ?? tour.tour.sourceCitySlug),
-          stateSlug: slugify(tour.mapped?.country ?? tour.tour.geo.country),
+          city: tour.geo.city,
+          state: tour.geo.country,
+          country: tour.geo.country,
+          citySlug: slugify(tour.sourceCitySlug || tour.geo.city),
+          stateSlug: slugify(tour.geo.country),
         },
-        heroImage: tour.tour.images.hero ?? "",
+        heroImage: tour.images.hero ?? "",
         badges: {},
         bookingProvider: "fareharbor" as const,
-        bookingUrl: tour.tour.booking.bookingUrl,
+        bookingUrl: tour.booking.bookingUrl,
         activitySlugs: ["adventure", "multi-day"],
       })) as Tour[];
     return [...tours, ...engine2International];
@@ -372,9 +361,9 @@ export default function Journeys() {
                     );
                   })
                   .map(region => (
-                  <option key={region} value={region}>
-                    {region}
-                  </option>
+                    <option key={region} value={region}>
+                      {region}
+                    </option>
                   ))}
               </select>
             </label>
