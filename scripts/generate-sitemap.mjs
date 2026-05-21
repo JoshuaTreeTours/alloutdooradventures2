@@ -12,7 +12,7 @@ const BASE_URL = (
 const MAX_URLS_PER_SITEMAP = 50000;
 const MIN_TOUR_URL_COUNT = 50;
 
-const EXCLUDED_PRODUCT_CODES = ["36001P1"];
+const EXCLUDED_PRODUCT_CODES = ["36001P1", "517077", "517088", "517079", "517094", "520051"];
 const EXCLUDED_TOUR_PATH_TOKENS = [
   ...EXCLUDED_PRODUCT_CODES.map((code) => code.toLowerCase()),
   "yosemite-in-a-day-tour-from-san-francisco",
@@ -650,6 +650,10 @@ const buildAmsterdamSitemapFallbackTours = async (catalogModule) => {
 };
 
 const buildSitemap = async () => {
+  const contaminatedToursModule = await tsImport(
+    "../src/data/contaminatedTours.ts",
+    import.meta.url,
+  );
   const destinationsModule = await tsImport(
     "../src/data/destinations.ts",
     import.meta.url,
@@ -663,6 +667,10 @@ const buildSitemap = async () => {
     import.meta.url,
   );
   const tours = await buildTourSummaries(catalogModule);
+  const contaminatedRoutePaths = Array.isArray(contaminatedToursModule.contaminatedRoutePaths)
+    ? contaminatedToursModule.contaminatedRoutePaths
+    : [];
+  contaminatedRoutePaths.forEach((path) => EXCLUDED_TOUR_PATH_TOKENS.push(String(path).toLowerCase()));
   let engine2Tours = [];
   try {
     const engine2Module = await tsImport("../src/engine2/data/loadEngine2.ts", import.meta.url);
