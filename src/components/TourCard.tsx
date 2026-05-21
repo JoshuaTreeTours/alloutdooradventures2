@@ -7,6 +7,7 @@ import { formatStartingPrice } from "../lib/pricing";
 import { buildRentalDescription } from "../templates/rentalDescription";
 import { resolveTourHeroImage } from "../utils/hero";
 import { isRentalTour } from "../utils/isRentalTour";
+import { isHardDeletedLegacyTour } from "../utils/tours/hardDeleteLegacyTours";
 import Image from "./Image";
 
 type TourCardProps = {
@@ -135,7 +136,12 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.bookingUrl?.match(/\/items\/(\d+)/)?.[1] ?? tour.id.replace(/^engine2-/, "");
   if (
     CONTAMINATED_TOUR_IDS.has(fareHarborId) ||
-    CONTAMINATED_TOUR_PATHS.has(detailHref)
+    CONTAMINATED_TOUR_PATHS.has(detailHref) ||
+    isHardDeletedLegacyTour({
+      productId: fareHarborId,
+      slug: tour.slug,
+      canonicalPath: detailHref,
+    })
   ) {
     return null;
   }

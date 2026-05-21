@@ -26,6 +26,7 @@ import { getEngine2ParisTours } from "./parisTours";
 import { isTourRemoved } from "../../utils/tours/isTourRemoved";
 import { detectRental } from "../../utils/detectRental";
 import { buildRentalDescription } from "../../templates/rentalDescription";
+import { isHardDeletedLegacyTour } from "../../utils/tours/hardDeleteLegacyTours";
 
 export type Engine2Tour = {
   id: string;
@@ -130,6 +131,16 @@ const mergeEngine2Tours = (datasets: Engine2Tour[][]) => {
 
   for (const tours of datasets) {
     for (const tour of tours) {
+      if (
+        isHardDeletedLegacyTour({
+          productId: tour.id,
+          slug: tour.slug,
+          canonicalPath: tour.seo?.canonicalPath,
+        })
+      ) {
+        continue;
+      }
+
       if (
         byTourId.has(tour.id) ||
         byCanonicalPath.has(tour.seo.canonicalPath)
