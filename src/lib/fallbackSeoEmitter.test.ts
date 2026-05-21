@@ -14,6 +14,11 @@ describe("fallbackSeoEmitter", () => {
         "/destinations/arizona/flagstaff/tours/grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131"
       )
     ).toBe(true);
+    expect(
+      isLegacyTourDetailPath(
+        "/tours/oregon/portland/2-hour-mt-hood-waterfall-tour-50340"
+      )
+    ).toBe(true);
   });
 
   it("writes normalized meta and keeps image fields for valid legacy tours", () => {

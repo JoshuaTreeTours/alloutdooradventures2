@@ -42,7 +42,8 @@ export const applyRouteSeo = (
 };
 
 export const isLegacyTourDetailPath = (pathname: string) =>
-  /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+\/?$/.test(pathname);
+  /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+\/?$/.test(pathname) ||
+  /^\/tours\/[^/]+\/[^/]+\/[^/]+\/?$/.test(pathname);
 
 const toTitleCase = (value: string) =>
   value
@@ -59,7 +60,8 @@ export const buildLegacyTourRouteFallbackSeo = ({
   site: string;
 }) => {
   const match =
-    /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/.exec(pathname);
+    /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/.exec(pathname) ??
+    /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)\/?$/.exec(pathname);
   if (!match) return null;
   const [, stateSlug, citySlug, tourSlug] = match;
   const state = toTitleCase(stateSlug);

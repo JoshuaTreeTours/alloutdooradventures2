@@ -81,4 +81,40 @@ describe("buildLegacyTourRouteSeo", () => {
 
     expect(seo?.image).toBe("https://cdn.filestackcontent.com/LvqjIQRrSo63cY2G0z9X");
   });
+
+  it("uses card/feed image as canonical source across both legacy route families", () => {
+    const tours = [
+      {
+        slug: "coastal-cruise-azure-seas-4241",
+        title: "Coastal Cruise Azure Seas",
+        destination: { stateSlug: "california", citySlug: "santa-barbara", city: "Santa Barbara", state: "California" },
+        heroImage: "/hero.jpg",
+        primaryImageUrl: "https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS",
+        galleryImages: ["https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"],
+      },
+    ] as any[];
+    const destinationSeo = buildLegacyTourRouteSeo({
+      pathname: "/destinations/california/santa-barbara/tours/coastal-cruise-azure-seas-4241",
+      site: "https://www.alloutdooradventures.com",
+      buildTourMetaFn: buildTourMeta,
+      tours,
+    });
+    const oldSeo = buildLegacyTourRouteSeo({
+      pathname: "/tours/california/santa-barbara/coastal-cruise-azure-seas-4241",
+      site: "https://www.alloutdooradventures.com",
+      buildTourMetaFn: buildTourMeta,
+      tours,
+    });
+
+    expect(destinationSeo?.image).toBe("https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS");
+    expect(oldSeo?.image).toBe("https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS");
+
+    const html = applyRouteSeo(
+      '<!doctype html><html><head><title>Default</title><meta name="description" content="d" /><meta property="og:title" content="d" /><meta property="og:description" content="d" /><meta property="og:url" content="d" /><meta property="og:image" content="/hero.jpg" /><meta name="twitter:title" content="d" /><meta name="twitter:description" content="d" /><meta name="twitter:image" content="/hero.jpg" /><link rel="canonical" href="https://example.com" /></head><body></body></html>',
+      destinationSeo as any
+    );
+    expect(html).toContain('property="og:image" content="https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"');
+    expect(html).toContain('name="twitter:image" content="https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"');
+    expect(html).toContain('"image":"https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"');
+  });
 });

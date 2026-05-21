@@ -105,14 +105,11 @@ for (const file of files) {
 const template = await readFile(templatePath, 'utf8');
 const engine6Registry = await tsImport('../src/engine6/registry.ts', import.meta.url);
 const engine6SeoMod = await tsImport('../src/engine6/seo.ts', import.meta.url);
-const toursModule = await tsImport('../src/data/tours.generated.ts', import.meta.url);
-const flagstaffToursModule = await tsImport('../src/data/flagstaffTours.ts', import.meta.url);
+const toursModule = await tsImport('../src/data/tours.ts', import.meta.url);
 const tourSeoModule = await tsImport('../src/lib/tourSeo.ts', import.meta.url);
 const legacyRouteSeoModule = await tsImport('../src/lib/legacyRouteSeo.ts', import.meta.url);
 const engine6Tours = Array.isArray(engine6Registry.engine6ResolvedTours) ? engine6Registry.engine6ResolvedTours : [];
-const toursGenerated = Array.isArray(toursModule.toursGenerated) ? toursModule.toursGenerated : [];
-const flagstaffTours = Array.isArray(flagstaffToursModule.flagstaffTours) ? flagstaffToursModule.flagstaffTours : [];
-const tours = [...toursGenerated, ...flagstaffTours];
+const tours = Array.isArray(toursModule.tours) ? toursModule.tours : [];
 const seoByPath = new Map(engine6Tours.map(t => [t.canonicalPath, engine6SeoMod.buildEngine6Seo(t)]));
 
 const paths = new Set(['/destinations']);
@@ -158,6 +155,19 @@ for (const pathname of paths) {
       (isLegacyTourDetailPath(pathname)
         ? buildLegacyTourRouteFallbackSeo({ pathname, site: SITE })
         : buildGenericRouteSeo(pathname));
+
+  if (pathname === "/destinations/california/santa-barbara/tours/coastal-cruise-azure-seas-4241") {
+    const normalizedTour = tours.find(
+      tour =>
+        tour?.destination?.stateSlug === "california" &&
+        tour?.destination?.citySlug === "santa-barbara" &&
+        tour?.slug === "coastal-cruise-azure-seas-4241"
+    );
+    console.log("[legacy-image-debug] normalizedTour.heroImage", typeof normalizedTour?.heroImage, JSON.stringify(normalizedTour?.heroImage ?? null));
+    console.log("[legacy-image-debug] normalizedTour.image", typeof normalizedTour?.image, JSON.stringify(normalizedTour?.image ?? null));
+    console.log("[legacy-image-debug] routeSeo.image", typeof routeSeo?.image, JSON.stringify(routeSeo?.image ?? null));
+    console.log("[legacy-image-debug] applyRouteSeo.input.image", typeof routeSeo?.image, JSON.stringify(routeSeo?.image ?? null));
+  }
 
   await writeFile(outputPath, routeSeo ? applySeo(template, routeSeo) : template, 'utf8');
   if (pathname === "/destinations/florida/santa-rosa-beach/tours/dolphin-cruise-614529") {

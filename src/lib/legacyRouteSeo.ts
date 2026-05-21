@@ -14,6 +14,7 @@ type BookingBuilder = typeof buildBookingMeta;
 
 const LEGACY_DETAIL_RE =
   /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/;
+const LEGACY_OLD_DETAIL_RE = /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)\/?$/;
 
 const FORBIDDEN_TOUR_ROUTE_IMAGES = new Set(["/hero.jpg"]);
 
@@ -116,7 +117,7 @@ export const buildLegacyTourRouteSeo = ({
   buildBookingMetaFn?: BookingBuilder;
   site: string;
 }) => {
-  const detailMatch = pathname.match(LEGACY_DETAIL_RE);
+  const detailMatch = pathname.match(LEGACY_DETAIL_RE) ?? pathname.match(LEGACY_OLD_DETAIL_RE);
   if (!detailMatch) return null;
 
   const [, stateSlug, citySlug, tourSlug] = detailMatch;
