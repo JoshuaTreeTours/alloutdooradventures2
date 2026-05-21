@@ -18,7 +18,6 @@ import {
 } from "../utils/tourDescription";
 import { slugify } from "../utils/slugify";
 import { isTourRemoved } from "../utils/tours/isTourRemoved";
-import { resolveTourHeroImage } from "../utils/hero";
 import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEntries";
 import { getEngine4ListingEntries } from "../engine4/listing/getEngine4ListingEntries";
 import { engine6ListingTours } from "../engine6/listing";
@@ -26,6 +25,11 @@ import { assertUniqueByCanonicalPath } from "../engine6/hardening";
 import {
   suppressLegacyFareHarborTour,
 } from "../engine6/replacementMode";
+import {
+  getPublicSuppressionProductId,
+  isHardSuppressedProduct,
+  isPubliclyListableTour,
+} from "../utils/tours/publicSuppression";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -147,7 +151,6 @@ const engine6CanonicalTourPaths = engine6ListingTours.map(
 // Sunset Flight; Durango Half-Day Raft Trip; Jeep Wrangler Rental Seats 5 (4 Door);
 // Durango Snowdown Fight.
 
-const SUPPRESSED_PRODUCT_IDS = new Set(["301378", "301379"]);
 const CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS = new Set([
   "517077",
   "517088",
@@ -161,17 +164,6 @@ const FORCE_EXCLUDED_ANCHORAGE_TITLES = new Set([
   "8-Day Zanzibar - The Spice Island, Mangroves and Stonetown",
   "9 Days Across the Savannah of Tanzania",
 ]);
-
-const INVALID_HERO_PATTERNS = ["placeholder", "no-image", "default-image"];
-
-const hasValidPublicCardHero = (tour: Tour) => {
-  const hero = resolveTourHeroImage(tour)?.trim() ?? "";
-  if (!hero) {
-    return false;
-  }
-  const normalized = hero.toLowerCase();
-  return !INVALID_HERO_PATTERNS.some(pattern => normalized.includes(pattern));
-};
 
 const remapMisclassifiedAfricaTours = (tour: Tour): Tour => {
   const cityByProductId: Record<string, { country: string; city: string }> = {
@@ -246,14 +238,14 @@ export const tours: Tour[] = [
     })
   )
   .map(remapMisclassifiedAfricaTours)
-  .filter(tour => !SUPPRESSED_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour)))
+  .filter(tour => !isHardSuppressedProduct(tour))
   .filter(
     tour =>
       !CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS.has(
         getEngine1FareHarborItemId(tour)
       )
   )
-  .filter(hasValidPublicCardHero);
+  .filter(isPubliclyListableTour);
 
 
 const legacyTours: Tour[] = [
@@ -281,14 +273,14 @@ const legacyTours: Tour[] = [
     })
   )
   .map(remapMisclassifiedAfricaTours)
-  .filter(tour => !SUPPRESSED_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour)))
+  .filter(tour => !isHardSuppressedProduct(tour))
   .filter(
     tour =>
       !CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS.has(
         getEngine1FareHarborItemId(tour)
       )
   )
-  .filter(hasValidPublicCardHero);
+  .filter(isPubliclyListableTour);
 
 
 export const getLegacyTourBySlugs = (
@@ -325,7 +317,9 @@ const getEngine2ToursForLocation = (stateSlug: string, citySlug?: string) => {
     ? getEngine2ToursByStateSlug(stateSlug, citySlug)
     : getEngine2ToursByStateSlug(stateSlug);
 
-  return engine2Tours.map(toEngine2ListingTour);
+  return engine2Tours
+    .map(toEngine2ListingTour)
+    .filter(isPubliclyListableTour);
 };
 
 const getCanonicalCityTourPath = (tour: Tour) =>
@@ -539,10 +533,10 @@ const isValidForPublicCityListing = (
   stateSlug: string,
   citySlug: string
 ) => {
-  const itemId = getEngine1FareHarborItemId(entry.tour) ?? entry.tour.id;
-  if (SUPPRESSED_PRODUCT_IDS.has(itemId.replace(/^engine2-/, ""))) {
+  if (!isPubliclyListableTour(entry.tour) || isHardSuppressedProduct(entry.tour)) {
     return false;
   }
+  const itemId = getPublicSuppressionProductId(entry.tour);
   if (
     CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS.has(
       itemId.replace(/^engine2-/, "")
@@ -651,9 +645,9 @@ export const getToursByCityUnified = (
   );
 
   if (stateSlug !== "california") {
-    const engine2Tours = getEngine2ToursByStateSlug(stateSlug, citySlug).map(
-      toUnifiedEngine2Tour
-    );
+    const engine2Tours = getEngine2ToursByStateSlug(stateSlug, citySlug)
+      .map(toUnifiedEngine2Tour)
+      .filter(entry => isPubliclyListableTour(entry.tour));
     return dedupeUnifiedCityTours([
       ...engine1Tours.filter(entry => entry.tour.engine === "engine6"),
       ...engine2Tours,
@@ -662,8 +656,9 @@ export const getToursByCityUnified = (
     ]).filter(entry => isValidForPublicCityListing(entry, stateSlug, citySlug));
   }
 
-  const engine2Tours =
-    getEngine2ToursBySourceCity(citySlug).map(toUnifiedEngine2Tour);
+  const engine2Tours = getEngine2ToursBySourceCity(citySlug)
+    .map(toUnifiedEngine2Tour)
+    .filter(entry => isPubliclyListableTour(entry.tour));
   const engine3Tours = getEngine3ListingEntries(stateSlug, citySlug).map(
     entry => ({
       tour: entry.tour,
