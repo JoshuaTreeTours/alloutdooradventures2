@@ -13,6 +13,7 @@ import {
 import {
   getAffiliateDisclosure,
   getCityTourDetailPath,
+  isLegacyAfricaSuppressedFromPublicDiscovery,
   getTourBookingPath,
   getToursByCity,
   getTourBySlugs,
@@ -733,7 +734,8 @@ export default function CityTourDetailRoute({
   ).filter(item =>
     isFlagstaff
       ? getFlagstaffTourSlug(item) !== tourSlug
-      : item.slug !== tour.slug
+      : item.slug !== tour.slug &&
+        !isLegacyAfricaSuppressedFromPublicDiscovery(item)
   );
   const disclosure = getAffiliateDisclosure(tour);
   const fareHarborHeroStartingPrice =

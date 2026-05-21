@@ -13,6 +13,7 @@ import {
 import {
   getAffiliateDisclosure,
   getCityTourDetailPath,
+  isLegacyAfricaSuppressedFromPublicDiscovery,
   getTourBookingPath,
   getTourBySlugs,
   getLegacyTourBySlugs,
@@ -281,7 +282,10 @@ export default function CityTourBookingRoute({
 
   const relatedTours = (
     isFlagstaff ? flagstaffTours : getToursByCity(state.slug, city.slug)
-  ).filter(item => item.slug !== tour.slug);
+  ).filter(
+    item =>
+      item.slug !== tour.slug && !isLegacyAfricaSuppressedFromPublicDiscovery(item)
+  );
   return (
     <>
       <Seo
