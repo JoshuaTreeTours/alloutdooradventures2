@@ -78,4 +78,14 @@ describe("legacy wrapper SEO scoped repairs", () => {
     expect(html).toContain(`"image":"${expectedImage}"`);
     expect(html).not.toContain("/hero.jpg");
   });
+
+  it("prioritizes scoped legacy resolver over static map for in-scope Portland tour pages", () => {
+    const path =
+      "/destinations/oregon/portland/tours/gorge-ous-sunset-multnomah-falls-waterfall-tour-from-portland-462223";
+    const meta = getStaticOgMeta(path, ORIGIN);
+    expect(meta).not.toBeNull();
+    expect(meta?.canonical).toBe(`${ORIGIN}${path}`);
+    expect(meta?.image).toBeTruthy();
+    expect(meta?.image).not.toContain("/hero.jpg");
+  });
 });

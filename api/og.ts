@@ -90,10 +90,13 @@ function resolveScopedLegacyTourMeta(path: string, origin: string): OgMeta | nul
         title: `${oregonMatch!.item_name} | Portland, Oregon | All Outdoor Adventures`,
         description: `${oregonMatch!.item_name} in Portland, Oregon with ${oregonMatch!.company_name}.`,
       };
-  const candidateImage = tour
+  const visibleTourImage = tour
     ? tour.heroImage || tour.galleryImages?.[0] || null
     : oregonMatch?.image_url || null;
-  const image = candidateImage && !candidateImage.includes("/hero.jpg") ? candidateImage : null;
+  const image =
+    visibleTourImage && !visibleTourImage.includes("/hero.jpg")
+      ? visibleTourImage
+      : null;
 
   return {
     title: meta.title,
@@ -141,6 +144,9 @@ export function getStaticOgMeta(path: string, origin: string): OgMeta | null {
       },
   };
 
+  const scopedLegacy = resolveScopedLegacyTourMeta(path, origin);
+  if (scopedLegacy) return scopedLegacy;
+
   const hit = map[path];
   if (hit) {
     return {
@@ -150,9 +156,6 @@ export function getStaticOgMeta(path: string, origin: string): OgMeta | null {
       image: hit.image,
     };
   }
-
-  const scopedLegacy = resolveScopedLegacyTourMeta(path, origin);
-  if (scopedLegacy) return scopedLegacy;
 
   const parsed = parseTourPath(path);
   if (!parsed) return null;
