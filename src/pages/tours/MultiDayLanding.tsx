@@ -7,6 +7,7 @@ import { countriesWithTours } from "../../data/europeIndex";
 import { tours } from "../../data/tours";
 import type { Tour } from "../../data/tours.types";
 import { US_STATES, slugify } from "../../data/tourCatalog";
+import { getAllEngine2Tours } from "../../engine2/data/loadEngine2";
 
 const multiDayTriggers = ["multi-day", "multi day", "overnight"];
 
@@ -85,16 +86,73 @@ const getTourRegionSlug = (tour: Tour) =>
 const getTourRegionName = (tour: Tour) =>
   tour.destination.country || tour.destination.state || "Unknown";
 
+const AFRICA_COUNTRY_SLUGS = new Set([
+  "kenya",
+  "tanzania",
+  "ethiopia",
+  "madagascar",
+]);
+const AFRICA_ENGINE2_MAP: Record<string, { country: string; city: string }> = {
+  "517077": { country: "Kenya", city: "Nairobi" },
+  "517088": { country: "Madagascar", city: "Antananarivo" },
+  "517079": { country: "Ethiopia", city: "Addis Ababa" },
+  "517094": { country: "Tanzania", city: "Zanzibar" },
+  "520051": { country: "Tanzania", city: "Arusha" },
+};
+
+type RegionOption = { slug: string; name: string };
+
+const normalizeOptionValue = (value: string) => slugify(value.trim().toLowerCase());
+
+const dedupeAndSortOptions = (options: RegionOption[]) => {
+  const byNormalized = new Map<string, RegionOption>();
+  options.forEach((option) => {
+    const normalized = normalizeOptionValue(option.slug || option.name);
+    if (!normalized || byNormalized.has(normalized)) {
+      return;
+    }
+    byNormalized.set(normalized, {
+      slug: option.slug,
+      name: option.name.trim(),
+    });
+  });
+  return Array.from(byNormalized.values()).sort((a, b) =>
+    a.name.localeCompare(b.name),
+  );
+};
+
 export default function MultiDayLanding() {
   const [selectedState, setSelectedState] = useState("");
   const [selectedEurope, setSelectedEurope] = useState("");
+  const [selectedAfrica, setSelectedAfrica] = useState("");
   const [selectedWorld, setSelectedWorld] = useState("");
 
   const multiDayTours = useMemo(
-    () =>
-      tours.filter((tour) =>
+    () => {
+      const engine2International = getAllEngine2Tours()
+        .map((tour) => ({ tour, mapped: AFRICA_ENGINE2_MAP[tour.id] }))
+        .filter(({ tour, mapped }) => (mapped?.country ?? tour.geo.country) !== "United States")
+        .map((tour) => ({
+          id: `engine2-${tour.tour.id}`,
+          slug: tour.tour.slug,
+          title: tour.tour.name,
+          destination: {
+            city: tour.mapped?.city ?? tour.tour.geo.city,
+            state: tour.mapped?.country ?? tour.tour.geo.country,
+            country: tour.mapped?.country ?? tour.tour.geo.country,
+            citySlug: slugify(tour.mapped?.city ?? tour.tour.sourceCitySlug),
+            stateSlug: slugify(tour.mapped?.country ?? tour.tour.geo.country),
+          },
+          heroImage: tour.tour.images.hero ?? "",
+          badges: {},
+          bookingProvider: "fareharbor" as const,
+          bookingUrl: tour.tour.booking.bookingUrl,
+          activitySlugs: ["adventure", "multi-day"],
+        })) as Tour[];
+      return [...tours, ...engine2International].filter((tour) =>
         isMultiDayTour(tour, getTourDurationDays(tour)),
-      ),
+      );
+    },
     [],
   );
   const usStateMap = useMemo(
@@ -115,12 +173,13 @@ export default function MultiDayLanding() {
       }
     });
 
-    return Array.from(slugs)
+    return dedupeAndSortOptions(
+      Array.from(slugs)
       .map((slug) => ({
         slug,
         name: usStateMap.get(slug) ?? slug,
       }))
-      .sort((a, b) => a.name.localeCompare(b.name));
+    );
   }, [multiDayTours, usStateMap]);
 
   const europeOptions = useMemo(() => {
@@ -132,19 +191,42 @@ export default function MultiDayLanding() {
       }
     });
 
-    return Array.from(slugs)
+    return dedupeAndSortOptions(
+      Array.from(slugs)
       .map((slug) => ({
         slug,
         name: europeMap.get(slug) ?? slug,
       }))
-      .sort((a, b) => a.name.localeCompare(b.name));
+    );
   }, [multiDayTours, europeMap]);
+
+  const africaOptions = useMemo(() => {
+    const destinationMap = new Map<string, string>();
+    multiDayTours.forEach((tour) => {
+      const slug = getTourRegionSlug(tour);
+      if (!AFRICA_COUNTRY_SLUGS.has(slug)) {
+        return;
+      }
+      if (!destinationMap.has(slug)) {
+        destinationMap.set(slug, getTourRegionName(tour));
+      }
+    });
+    return dedupeAndSortOptions(
+      Array.from(destinationMap.entries()).map(([slug, name]) => ({
+        slug,
+        name,
+      })),
+    );
+  }, [multiDayTours]);
 
   const worldOptions = useMemo(() => {
     const destinationMap = new Map<string, string>();
     multiDayTours.forEach((tour) => {
       const slug = getTourRegionSlug(tour);
-      if (usStateMap.has(slug) || europeMap.has(slug)) {
+      if (usStateMap.has(slug) || europeMap.has(slug) || AFRICA_COUNTRY_SLUGS.has(slug)) {
+        return;
+      }
+      if (slug === "united-states" || (tour.destination.country || "").toLowerCase() === "united states") {
         return;
       }
       if (!destinationMap.has(slug)) {
@@ -152,12 +234,12 @@ export default function MultiDayLanding() {
       }
     });
 
-    return Array.from(destinationMap.entries())
-      .map(([slug, name]) => ({ slug, name }))
-      .sort((a, b) => a.name.localeCompare(b.name));
+    return dedupeAndSortOptions(
+      Array.from(destinationMap.entries()).map(([slug, name]) => ({ slug, name })),
+    );
   }, [multiDayTours, europeMap, usStateMap]);
 
-  const selectedSlug = selectedState || selectedEurope || selectedWorld;
+  const selectedSlug = selectedState || selectedEurope || selectedAfrica || selectedWorld;
   const filteredTours = useMemo(() => {
     if (!selectedSlug) {
       return [];
@@ -170,6 +252,7 @@ export default function MultiDayLanding() {
   const selectedLabel =
     usOptions.find((option) => option.slug === selectedState)?.name ||
     europeOptions.find((option) => option.slug === selectedEurope)?.name ||
+    africaOptions.find((option) => option.slug === selectedAfrica)?.name ||
     worldOptions.find((option) => option.slug === selectedWorld)?.name;
 
   const hasSelection = Boolean(selectedSlug);
@@ -177,6 +260,7 @@ export default function MultiDayLanding() {
   const clearSelection = () => {
     setSelectedState("");
     setSelectedEurope("");
+    setSelectedAfrica("");
     setSelectedWorld("");
   };
 
@@ -200,7 +284,8 @@ export default function MultiDayLanding() {
         </Link>
       </div>
 
-      <section className="mt-12 grid gap-6 lg:grid-cols-3">
+      <section className="mt-12 grid gap-6 lg:grid-cols-4">
+        {usOptions.length > 0 ? (
         <div className="rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]">
             United States
@@ -221,11 +306,14 @@ export default function MultiDayLanding() {
               onSelect={(slug) => {
                 setSelectedState(slug);
                 setSelectedEurope("");
+                setSelectedAfrica("");
                 setSelectedWorld("");
               }}
             />
           </div>
         </div>
+        ) : null}
+        {europeOptions.length > 0 ? (
         <div className="rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]">
             Europe
@@ -247,11 +335,43 @@ export default function MultiDayLanding() {
               onSelect={(slug) => {
                 setSelectedEurope(slug);
                 setSelectedState("");
+                setSelectedAfrica("");
                 setSelectedWorld("");
               }}
             />
           </div>
         </div>
+        ) : null}
+        {africaOptions.length > 0 ? (
+        <div className="rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]">
+            Africa
+          </p>
+          <h2 className="mt-3 text-lg font-semibold text-[#2f4a2f]">
+            African destinations
+          </h2>
+          <p className="mt-3 text-sm text-[#405040]">
+            Select an African country with multi-day tour availability.
+          </p>
+          <div className="mt-6">
+            <RegionDropdownButton
+              label="Select a country…"
+              options={africaOptions}
+              selectedName={
+                africaOptions.find((option) => option.slug === selectedAfrica)
+                  ?.name
+              }
+              onSelect={(slug) => {
+                setSelectedAfrica(slug);
+                setSelectedState("");
+                setSelectedEurope("");
+                setSelectedWorld("");
+              }}
+            />
+          </div>
+        </div>
+        ) : null}
+        {worldOptions.length > 0 ? (
         <div className="rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]">
             Worldwide
@@ -274,10 +394,12 @@ export default function MultiDayLanding() {
                 setSelectedWorld(slug);
                 setSelectedState("");
                 setSelectedEurope("");
+                setSelectedAfrica("");
               }}
             />
           </div>
         </div>
+        ) : null}
       </section>
 
       <section className="mt-8 rounded-2xl border border-black/10 bg-white/70 p-6 text-sm text-[#405040]">

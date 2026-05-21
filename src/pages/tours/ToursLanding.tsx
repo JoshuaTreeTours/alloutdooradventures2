@@ -33,6 +33,28 @@ import {
   MEXICO_COUNTRY_NAME,
 } from "./internationalSelectorData";
 
+
+const normalizeOptionValue = (value: string) => slugify(value.trim().toLowerCase());
+const AFRICA_ENGINE2_MAP: Record<string, { country: string; city: string }> = {
+  "517077": { country: "Kenya", city: "Nairobi" },
+  "517088": { country: "Madagascar", city: "Antananarivo" },
+  "517079": { country: "Ethiopia", city: "Addis Ababa" },
+  "517094": { country: "Tanzania", city: "Zanzibar" },
+  "520051": { country: "Tanzania", city: "Arusha" },
+};
+
+const dedupeByNormalizedValue = <T extends { slug: string }>(options: T[]) => {
+  const seen = new Set<string>();
+  return options.filter(option => {
+    const normalized = normalizeOptionValue(option.slug);
+    if (!normalized || seen.has(normalized)) {
+      return false;
+    }
+    seen.add(normalized);
+    return true;
+  });
+};
+
 const resolveState = (stateSlug: string | null) => {
   if (!stateSlug) {
     return null;
@@ -192,12 +214,23 @@ export default function ToursLanding() {
 
   const internationalEngine2Tours = useMemo(
     () =>
-      getAllEngine2Tours().filter(
-        tour =>
-          tour.geo.country !== "United States" &&
-          tour.sourceCountrySlug !== "canada" &&
-          tour.sourceCountrySlug !== "mexico"
-      ),
+      getAllEngine2Tours()
+        .map(tour => ({ tour, mapped: AFRICA_ENGINE2_MAP[tour.id] }))
+        .filter(
+          ({ tour, mapped }) =>
+            (mapped?.country ?? tour.geo.country) !== "United States" &&
+            tour.sourceCountrySlug !== "canada" &&
+            tour.sourceCountrySlug !== "mexico"
+        )
+        .map(({ tour, mapped }) => ({
+          ...tour,
+          geo: {
+            ...tour.geo,
+            country: mapped?.country ?? tour.geo.country,
+            city: mapped?.city ?? tour.geo.city,
+          },
+          sourceCitySlug: slugify(mapped?.city ?? tour.sourceCitySlug),
+        })),
     []
   );
 
@@ -212,25 +245,38 @@ export default function ToursLanding() {
   );
 
   const countryOptions = useMemo(
-    () => buildInternationalCountryOptions(internationalTours, mexicoTours),
-    [internationalTours, mexicoTours]
+    () =>
+      buildInternationalCountryOptions(internationalTours, mexicoTours).concat(
+        internationalEngine2Tours.map(tour => tour.geo.country)
+      ),
+    [internationalTours, mexicoTours, internationalEngine2Tours]
   );
 
   const internationalCities = useMemo(
-    () =>
+    () => {
+      const cities =
       buildInternationalCityOptions({
         selectedCountry,
         selectedCanadaProvinceSlug: selectedInternationalProvinceSlug,
         internationalTours,
         canadaProvinces,
         mexicoTours,
-      }),
+      });
+      if (!selectedCountry) {
+        return cities;
+      }
+      const engine2Cities = internationalEngine2Tours
+        .filter(tour => tour.geo.country === selectedCountry)
+        .map(tour => ({ slug: tour.sourceCitySlug, name: tour.geo.city }));
+      return [...cities, ...engine2Cities];
+    },
     [
       canadaProvinces,
       internationalTours,
       selectedCountry,
       selectedInternationalProvinceSlug,
       mexicoTours,
+      internationalEngine2Tours,
     ]
   );
 
@@ -558,7 +604,7 @@ export default function ToursLanding() {
                 onChange={event => handleStateChange(event.target.value)}
               >
                 <option value="">Select a state</option>
-                {usStateOptions.map(state => (
+                {dedupeByNormalizedValue(usStateOptions).map(state => (
                   <option key={state.slug} value={state.slug}>
                     {state.name}
                   </option>
@@ -577,7 +623,7 @@ export default function ToursLanding() {
                 <option value="">
                   {selectedStateSlug ? "Select a city" : "Select a state first"}
                 </option>
-                {cityOptions.map(city => (
+                {dedupeByNormalizedValue(cityOptions).map(city => (
                   <option key={city.slug} value={city.slug}>
                     {city.name}
                   </option>
@@ -632,9 +678,9 @@ export default function ToursLanding() {
                   onChange={event => handleCountryChange(event.target.value)}
                 >
                   <option value="">Select a country</option>
-                  {countryOptions.map(country => (
-                    <option key={country} value={country}>
-                      {country}
+                  {dedupeByNormalizedValue(countryOptions.map(country => ({ slug: country, name: country }))).map(country => (
+                    <option key={country.slug} value={country.slug}>
+                      {country.name}
                     </option>
                   ))}
                 </select>
@@ -688,7 +734,7 @@ export default function ToursLanding() {
                         ? "Select a province first"
                         : "Select a city"}
                   </option>
-                  {internationalCities.map(city => (
+                  {dedupeByNormalizedValue(internationalCities).map(city => (
                     <option key={city.slug} value={city.slug}>
                       {city.name}
                     </option>

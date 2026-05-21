@@ -7,6 +7,8 @@ import { getTourBookingPath, getTourDetailPath, tours } from "../data/tours";
 import type { Tour } from "../data/tours.types";
 import { getStaticPageSeo } from "../utils/seo";
 import { resolveTourHeroImage } from "../utils/hero";
+import { slugify } from "../utils/slugify";
+import { getAllEngine2Tours } from "../engine2/data/loadEngine2";
 
 const durationBuckets = [
   { label: "2–3 days", value: "2-3" },
@@ -15,6 +17,14 @@ const durationBuckets = [
 ];
 
 const multiDayTriggers = ["multi-day", "multi day", "overnight"];
+const normalizeOptionValue = (value: string) => slugify(value.trim().toLowerCase());
+const AFRICA_ENGINE2_MAP: Record<string, { country: string; city: string }> = {
+  "517077": { country: "Kenya", city: "Nairobi" },
+  "517088": { country: "Madagascar", city: "Antananarivo" },
+  "517079": { country: "Ethiopia", city: "Addis Ababa" },
+  "517094": { country: "Tanzania", city: "Zanzibar" },
+  "520051": { country: "Tanzania", city: "Arusha" },
+};
 
 const extractDurationDays = (text?: string) => {
   if (!text) {
@@ -202,8 +212,35 @@ export default function Journeys() {
   const [selectedRegion, setSelectedRegion] = useState("all");
   const [selectedDuration, setSelectedDuration] = useState("all");
 
+  const allJourneyCandidates = useMemo(() => {
+    const engine2International = getAllEngine2Tours()
+      .map(tour => ({
+        tour,
+        mapped: AFRICA_ENGINE2_MAP[tour.id],
+      }))
+      .filter(({ tour, mapped }) => (mapped?.country ?? tour.geo.country) !== "United States")
+      .map(tour => ({
+        id: `engine2-${tour.tour.id}`,
+        slug: tour.tour.slug,
+        title: tour.tour.name,
+        destination: {
+          city: tour.mapped?.city ?? tour.tour.geo.city,
+          state: tour.mapped?.country ?? tour.tour.geo.country,
+          country: tour.mapped?.country ?? tour.tour.geo.country,
+          citySlug: slugify(tour.mapped?.city ?? tour.tour.sourceCitySlug),
+          stateSlug: slugify(tour.mapped?.country ?? tour.tour.geo.country),
+        },
+        heroImage: tour.tour.images.hero ?? "",
+        badges: {},
+        bookingProvider: "fareharbor" as const,
+        bookingUrl: tour.tour.booking.bookingUrl,
+        activitySlugs: ["adventure", "multi-day"],
+      })) as Tour[];
+    return [...tours, ...engine2International];
+  }, []);
+
   const multiDayTours = useMemo(() => {
-    return tours
+    return allJourneyCandidates
       .map(tour => {
         const durationDays = getTourDurationDays(tour);
         return {
@@ -213,7 +250,7 @@ export default function Journeys() {
         };
       })
       .filter(({ isMultiDay }) => isMultiDay);
-  }, []);
+  }, [allJourneyCandidates]);
 
   const regionOptions = useMemo(() => {
     const uniqueRegions = new Set<string>();
@@ -324,11 +361,21 @@ export default function Journeys() {
                 className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-normal text-[#1f2a1f] shadow-sm focus:border-[#2f4a2f] focus:outline-none"
               >
                 <option value="all">All regions</option>
-                {regionOptions.map(region => (
+                {regionOptions
+                  .filter((region, index, array) => {
+                    const normalized = normalizeOptionValue(region);
+                    return (
+                      normalized.length > 0 &&
+                      array.findIndex(
+                        item => normalizeOptionValue(item) === normalized
+                      ) === index
+                    );
+                  })
+                  .map(region => (
                   <option key={region} value={region}>
                     {region}
                   </option>
-                ))}
+                  ))}
               </select>
             </label>
             <label className="flex flex-1 flex-col gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">

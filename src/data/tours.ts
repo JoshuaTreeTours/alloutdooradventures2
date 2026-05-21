@@ -18,6 +18,7 @@ import {
 } from "../utils/tourDescription";
 import { slugify } from "../utils/slugify";
 import { isTourRemoved } from "../utils/tours/isTourRemoved";
+import { resolveTourHeroImage } from "../utils/hero";
 import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEntries";
 import { getEngine4ListingEntries } from "../engine4/listing/getEngine4ListingEntries";
 import { engine6ListingTours } from "../engine6/listing";
@@ -146,6 +147,79 @@ const engine6CanonicalTourPaths = engine6ListingTours.map(
 // Sunset Flight; Durango Half-Day Raft Trip; Jeep Wrangler Rental Seats 5 (4 Door);
 // Durango Snowdown Fight.
 
+const SUPPRESSED_PRODUCT_IDS = new Set(["301378", "301379"]);
+const FORCE_EXCLUDED_ANCHORAGE_TITLES = new Set([
+  "14-Day Kenyan Tribes, Conservation and Animals",
+  "16-Day Madagascar Palaces, Parks, Lemurs, and Baobabs",
+  "19-Day Tribes and Rock Hewn Churches of Ethiopia",
+  "8-Day Zanzibar - The Spice Island, Mangroves and Stonetown",
+  "9 Days Across the Savannah of Tanzania",
+]);
+
+const INVALID_HERO_PATTERNS = ["placeholder", "no-image", "default-image"];
+
+const hasValidPublicCardHero = (tour: Tour) => {
+  const hero = resolveTourHeroImage(tour)?.trim() ?? "";
+  if (!hero) {
+    return false;
+  }
+  const normalized = hero.toLowerCase();
+  return !INVALID_HERO_PATTERNS.some(pattern => normalized.includes(pattern));
+};
+
+const remapMisclassifiedAfricaTours = (tour: Tour): Tour => {
+  const cityByProductId: Record<string, { country: string; city: string }> = {
+    "517077": { country: "Kenya", city: "Nairobi" },
+    "517088": { country: "Madagascar", city: "Antananarivo" },
+    "517079": { country: "Ethiopia", city: "Addis Ababa" },
+    "517094": { country: "Tanzania", city: "Zanzibar" },
+    "520051": { country: "Tanzania", city: "Arusha" },
+  };
+  const productId = getEngine1FareHarborItemId(tour);
+  const mapped = cityByProductId[productId];
+  if (!mapped) {
+    return tour;
+  }
+  return {
+    ...tour,
+    activityType: "Multi-Day",
+    activitySlugs: Array.from(new Set([...tour.activitySlugs, "multi-day"])),
+    destination: {
+      ...tour.destination,
+      country: mapped.country,
+      state: mapped.country,
+      stateSlug: slugify(mapped.country),
+      city: mapped.city,
+      citySlug: slugify(mapped.city),
+    },
+  };
+};
+
+const remapMisclassifiedAfricaByProductId = (
+  productId: string | null,
+  destination: Tour["destination"]
+) => {
+  const cityByProductId: Record<string, { country: string; city: string }> = {
+    "517077": { country: "Kenya", city: "Nairobi" },
+    "517088": { country: "Madagascar", city: "Antananarivo" },
+    "517079": { country: "Ethiopia", city: "Addis Ababa" },
+    "517094": { country: "Tanzania", city: "Zanzibar" },
+    "520051": { country: "Tanzania", city: "Arusha" },
+  };
+  const mapped = productId ? cityByProductId[productId] : undefined;
+  if (!mapped) {
+    return destination;
+  }
+  return {
+    ...destination,
+    country: mapped.country,
+    state: mapped.country,
+    stateSlug: slugify(mapped.country),
+    city: mapped.city,
+    citySlug: slugify(mapped.city),
+  };
+};
+
 export const tours: Tour[] = [
   ...toursGenerated,
   ...manualTours,
@@ -172,7 +246,10 @@ export const tours: Tour[] = [
         country: tour.destination.country || "United States",
       },
     })
-  );
+  )
+  .map(remapMisclassifiedAfricaTours)
+  .filter(tour => !SUPPRESSED_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour)))
+  .filter(hasValidPublicCardHero);
 
 
 const legacyTours: Tour[] = [
@@ -198,7 +275,11 @@ const legacyTours: Tour[] = [
         country: tour.destination.country || "United States",
       },
     })
-  );
+  )
+  .map(remapMisclassifiedAfricaTours)
+  .filter(tour => !SUPPRESSED_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour)))
+  .filter(hasValidPublicCardHero);
+
 
 export const getLegacyTourBySlugs = (
   stateSlug: string,
@@ -405,6 +486,15 @@ const getEngine2StateSlug = (tour: Engine2Tour) => {
 
 const toEngine2ListingTour = (tour: Engine2Tour): Tour => {
   const isRental = tour.type === "rental";
+  const remappedDestination = remapMisclassifiedAfricaByProductId(tour.id, {
+    country: tour.geo.country || "United States",
+    state: tour.geo.region,
+    stateSlug: getEngine2StateSlug(tour),
+    city: tour.geo.city,
+    citySlug: tour.sourceCitySlug,
+    lat: tour.geo.lat ?? undefined,
+    lng: tour.geo.lng ?? undefined,
+  });
 
   return {
     id: `engine2-${tour.id}`,
@@ -417,24 +507,48 @@ const toEngine2ListingTour = (tour: Engine2Tour): Tour => {
     operator: tour.provider.name,
     categories: isRental ? ["adventure", "rentals"] : ["adventure"],
     primaryCategory: isRental ? "rentals" : "adventure",
-    destination: {
-      country: tour.geo.country || "United States",
-      state: tour.geo.region,
-      stateSlug: getEngine2StateSlug(tour),
-      city: tour.geo.city,
-      citySlug: tour.sourceCitySlug,
-      lat: tour.geo.lat ?? undefined,
-      lng: tour.geo.lng ?? undefined,
-    },
+    destination: remappedDestination,
     heroImage: tour.images.hero ?? "",
     primaryImageUrl: tour.images.hero ?? undefined,
     galleryImages: tour.images.gallery,
     badges: {},
-    activitySlugs: isRental ? ["adventure", "rentals"] : ["adventure"],
+    activitySlugs:
+      remappedDestination.country !== "United States"
+        ? ["adventure", "multi-day"]
+        : isRental
+          ? ["adventure", "rentals"]
+          : ["adventure"],
     bookingProvider: tour.bookingProvider ?? "fareharbor",
     bookingUrl: tour.booking.bookingUrl,
     longDescription: tour.content.experienceText,
   };
+};
+
+const isValidForPublicCityListing = (
+  entry: UnifiedCityTour,
+  stateSlug: string,
+  citySlug: string
+) => {
+  const itemId = getEngine1FareHarborItemId(entry.tour) ?? entry.tour.id;
+  if (SUPPRESSED_PRODUCT_IDS.has(itemId.replace(/^engine2-/, ""))) {
+    return false;
+  }
+  if (
+    stateSlug === "alaska" &&
+    citySlug === "anchorage" &&
+    FORCE_EXCLUDED_ANCHORAGE_TITLES.has(entry.tour.title)
+  ) {
+    return false;
+  }
+  if (stateSlug === "alaska" && citySlug === "anchorage") {
+    return (
+      entry.tour.destination.stateSlug === "alaska" &&
+      entry.tour.destination.citySlug === "anchorage" &&
+      (entry.tour.destination.state || "").toLowerCase() === "alaska" &&
+      (entry.tour.destination.city || "").toLowerCase() === "anchorage"
+    );
+  }
+  return true;
 };
 
 const toUnifiedEngine2Tour = (tour: Engine2Tour): UnifiedCityTour => ({
@@ -528,7 +642,7 @@ export const getToursByCityUnified = (
       ...engine2Tours,
       ...engine4Tours,
       ...engine1Tours.filter(entry => entry.tour.engine !== "engine6"),
-    ]);
+    ]).filter(entry => isValidForPublicCityListing(entry, stateSlug, citySlug));
   }
 
   const engine2Tours =
@@ -545,7 +659,7 @@ export const getToursByCityUnified = (
     ...engine3Tours,
     ...engine4Tours,
     ...engine1Tours.filter(entry => entry.tour.engine !== "engine6"),
-  ]);
+  ]).filter(entry => isValidForPublicCityListing(entry, stateSlug, citySlug));
 };
 
 export const getAffiliateDisclosure = (tour: Tour) =>
