@@ -16,6 +16,10 @@ const EXCLUDED_PRODUCT_CODES = ["36001P1"];
 const EXCLUDED_TOUR_PATH_TOKENS = [
   ...EXCLUDED_PRODUCT_CODES.map((code) => code.toLowerCase()),
   "yosemite-in-a-day-tour-from-san-francisco",
+  "/destinations/california/palm-springs/tours/joshua-tree-national-park-tour-34897",
+  "/destinations/california/palm-springs/tours/joshua-tree-national-park-tour-34897/book",
+  "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849/book",
+  "/destinations/california/palm-springs/tours/shared-indian-canyons-hiking-tour-by-jeep-574370",
 ];
 const LEGACY_SOFT_404_TOUR_PATH_PATTERNS = [
   /\/tours\/[^/]+\/[^/]+\/[^/]*-legacy-[^/]*-\d+\/?$/i,
