@@ -1,3 +1,7 @@
+import { getLegacyTourBySlugs } from "../data/tours";
+import { resolveTourHeroImage } from "../utils/hero";
+import { buildImageUrl } from "../utils/seo";
+
 export const applyRouteSeo = (
   html: string,
   { title, description, url, image }: { title: string; description: string; url: string; image?: string }
@@ -121,10 +125,13 @@ export const buildLegacyTourRouteFallbackSeo = ({
   const state = toTitleCase(stateSlug);
   const city = toTitleCase(citySlug);
   const tour = toTitleCase(tourSlug.replace(/-\d+$/g, ""));
+  const legacyTour = getLegacyTourBySlugs(stateSlug, citySlug, tourSlug);
+  const tourImage = legacyTour ? resolveTourHeroImage(legacyTour) : undefined;
+
   return {
     title: `${tour} | ${city}, ${state} | All Outdoor Adventures`,
     description: `Explore ${tour} in ${city}, ${state} with All Outdoor Adventures.`,
     url: `${site}${pathname}`,
-    image: "",
+    image: tourImage ? buildImageUrl(tourImage) : "",
   };
 };
