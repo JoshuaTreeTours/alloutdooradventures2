@@ -11,7 +11,17 @@ type TourLike = {
   destination?: {
     city?: string;
     state?: string;
+    country?: string;
   };
+  categories?: string[];
+  primaryCategory?: string;
+  activityType?: string;
+  activitySlugs?: string[];
+  badges?: {
+    duration?: string;
+  };
+  operator?: string;
+  engine?: string;
 };
 
 const INDEX_ROBOTS = "index,follow,max-image-preview:large";
@@ -51,6 +61,30 @@ const pickCity = (tour: TourLike) => clean(tour.destination?.city) || "Unknown";
 
 const pickState = (tour: TourLike) => clean(tour.destination?.state) || "Unknown";
 
+const pickCountry = (tour: TourLike) => clean(tour.destination?.country) || pickState(tour);
+
+const isInternationalLegacyTourRoute = (tour: TourLike, canonicalUrl: string) => {
+  const rawCountry = clean(tour.destination?.country);
+  const country = rawCountry.toLowerCase();
+  const isInternational = !!rawCountry && country !== "united states" && country !== "usa";
+  const isLegacyRoute =
+    /\/tours\/[^/]+\/[^/]+\/[^/]+\/?$/i.test(canonicalUrl) ||
+    /\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+\/?$/i.test(canonicalUrl);
+  return isInternational && isLegacyRoute && tour.engine !== "engine6";
+};
+
+const pickActivityType = (tour: TourLike) => {
+  const raw =
+    clean(tour.activityType) ||
+    clean(tour.primaryCategory) ||
+    clean(tour.categories?.[0]) ||
+    clean(tour.activitySlugs?.[0]);
+  return raw ? raw.replace(/[-_]/g, " ").replace(/\s+/g, " ").trim().toLowerCase() : "";
+};
+
+const withLengthCap = (value: string, max: number) =>
+  value.length <= max ? value : `${value.slice(0, Math.max(0, max - 1)).trimEnd()}…`;
+
 const getTourSlugFromPath = (pathname: string) => {
   const normalized = pathname.split("?")[0].split("#")[0].replace(/\/+$/, "");
   const match = normalized.match(/\/tours\/([^/]+)\/book$/);
@@ -66,21 +100,44 @@ const normalizeCanonical = (canonicalUrl: string) => {
   return `${SITE_URL}${path}`;
 };
 
-const buildTitle = (tour: TourLike) =>
-  `${
+const buildTitle = (tour: TourLike, canonicalUrl: string) => {
+  if (isInternationalLegacyTourRoute(tour, canonicalUrl)) {
+    return `${pickTourName(tour) || "Tour"} | ${pickCity(tour)}, ${pickCountry(tour)} Tour`;
+  }
+
+  return `${
     isGrandCanyonSouthRimHummerRoute(tour)
       ? "Grand Canyon South Rim Hummer Ground Tour"
       : pickTourName(tour) || "Tour"
   } | ${pickCity(tour)}, ${pickState(tour)} | All Outdoor Adventures`;
+};
 
-const buildDescription = (tour: TourLike) => {
+const buildDescription = (tour: TourLike, canonicalUrl: string) => {
   const tourName = pickTourName(tour) || "this tour";
   const city = pickCity(tour);
   const state = pickState(tour);
+  const country = pickCountry(tour);
   const detail = clean(tour.shortDescription) || clean(tour.longDescription);
 
   if (isGrandCanyonSouthRimHummerRoute(tour)) {
     return "Experience the Grand Canyon South Rim with a guided Hummer ground tour from Flagstaff, Arizona. Explore scenic canyon viewpoints, desert landscapes, and one of America’s most iconic natural wonders with All Outdoor Adventures.";
+  }
+
+  if (isInternationalLegacyTourRoute(tour, canonicalUrl)) {
+    const activity = pickActivityType(tour);
+    const duration = clean(tour.badges?.duration);
+    const operator = clean(tour.operator);
+    const pieces = [
+      `Discover ${tourName} in ${city}, ${country}`,
+      activity ? `on a guided ${activity} experience` : "with a guided outdoor experience",
+      duration ? `${duration} duration` : "",
+      operator ? `with ${operator}` : "",
+    ].filter(Boolean);
+    const base = `${pieces.join(" ")}.`;
+    if (detail) {
+      return withLengthCap(`${base} ${detail}`, 160);
+    }
+    return withLengthCap(`${base} Flexible booking for travelers seeking local highlights.`, 160);
   }
 
   if (detail) {
@@ -96,8 +153,8 @@ export const getCanonicalFromBookingPath = (pathname: string) => {
 };
 
 export function buildTourMeta(tour: TourLike, canonicalUrl: string) {
-  const title = buildTitle(tour);
-  const description = buildDescription(tour);
+  const title = buildTitle(tour, canonicalUrl);
+  const description = buildDescription(tour, canonicalUrl);
   const canonical = normalizeCanonical(canonicalUrl);
 
   return {
@@ -114,8 +171,8 @@ export function buildTourMeta(tour: TourLike, canonicalUrl: string) {
 }
 
 export function buildBookingMeta(tour: TourLike, canonicalUrl: string) {
-  const title = buildTitle(tour);
-  const description = buildDescription(tour);
+  const title = buildTitle(tour, canonicalUrl);
+  const description = buildDescription(tour, canonicalUrl);
   const canonical = normalizeCanonical(canonicalUrl);
 
   return {

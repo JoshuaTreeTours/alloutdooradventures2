@@ -38,4 +38,28 @@ describe("buildTourMeta", () => {
     expect(meta.twitterDescription).toBe(meta.description);
     expect(meta.description).not.toContain("Explore Destinations");
   });
+
+  it("builds cleaner international legacy titles and richer descriptions", () => {
+    const meta = buildTourMeta(
+      {
+        title: "Rome Twilight Food Walk 998877",
+        destination: {
+          city: "Rome",
+          state: "Italy",
+          country: "Italy",
+        },
+        primaryCategory: "Food Tour",
+        badges: { duration: "3 hours" },
+        operator: "Evening Walks Co.",
+        shortDescription: "Taste Roman classics while exploring historic neighborhoods.",
+      } as any,
+      "/destinations/italy/rome/tours/rome-twilight-food-walk-998877"
+    );
+
+    expect(meta.title).toBe("Rome Twilight Food Walk | Rome, Italy Tour");
+    expect(meta.description).toContain("Discover Rome Twilight Food Walk in Rome, Italy");
+    expect(meta.description.length).toBeLessThanOrEqual(160);
+    expect(meta.description).toContain("3 hours");
+    expect(meta.description).toContain("Evening Walks Co.");
+  });
 });
