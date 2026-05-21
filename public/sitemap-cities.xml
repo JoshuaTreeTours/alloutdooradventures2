@@ -634,6 +634,8 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/states/california/cities/santa-barbara/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/california/cities/yosemite</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/california/cities/yosemite/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/colorado/cities/aspen</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/colorado/cities/aspen/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/colorado/cities/boulder</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/colorado/cities/boulder/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/colorado/cities/colorado-springs</loc><priority>0.6</priority></url>
@@ -964,6 +966,10 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/states/minnesota/cities/duluth/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/minnesota/cities/minneapolis</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/minnesota/cities/minneapolis/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/mississippi/cities/bay-saint-louis</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/mississippi/cities/bay-saint-louis/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/mississippi/cities/natchez</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/mississippi/cities/natchez/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/montana/cities/bozeman</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/montana/cities/bozeman/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/montana/cities/missoula</loc><priority>0.6</priority></url>
