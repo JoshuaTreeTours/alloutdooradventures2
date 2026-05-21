@@ -33,16 +33,25 @@ import {
   MEXICO_COUNTRY_NAME,
 } from "./internationalSelectorData";
 
-
-const normalizeOptionValue = (value: string) => slugify(value.trim().toLowerCase());
-const AFRICA_ENGINE2_MAP: Record<string, { country: string; city: string }> = {
-  "517077": { country: "Kenya", city: "Nairobi" },
-  "517088": { country: "Madagascar", city: "Antananarivo" },
-  "517079": { country: "Ethiopia", city: "Addis Ababa" },
-  "517094": { country: "Tanzania", city: "Zanzibar" },
-  "520051": { country: "Tanzania", city: "Arusha" },
-};
-
+const normalizeOptionValue = (value: string) =>
+  slugify(value.trim().toLowerCase());
+const normalizeOptionKey = (value: string) =>
+  slugify(
+    String(value || "")
+      .trim()
+      .toLowerCase()
+  );
+const dedupeOptions = <T extends { value?: string; label?: string }>(
+  options: T[]
+) =>
+  Array.from(
+    new Map(
+      options.map(option => [
+        normalizeOptionKey(option.value || option.label || ""),
+        option,
+      ])
+    ).values()
+  );
 const dedupeByNormalizedValue = <T extends { slug: string }>(options: T[]) => {
   const seen = new Set<string>();
   return options.filter(option => {
@@ -53,6 +62,12 @@ const dedupeByNormalizedValue = <T extends { slug: string }>(options: T[]) => {
     seen.add(normalized);
     return true;
   });
+};
+const getStableTourKey = (tour: Tour) => {
+  const itemId = tour.bookingUrl.match(/\/items\/(\d+)/)?.[1];
+  if (itemId) return `fh:${itemId}`;
+  if (tour.productCode) return `viator:${tour.productCode}`;
+  return `tour:${tour.id}`;
 };
 
 const resolveState = (stateSlug: string | null) => {
@@ -214,23 +229,12 @@ export default function ToursLanding() {
 
   const internationalEngine2Tours = useMemo(
     () =>
-      getAllEngine2Tours()
-        .map(tour => ({ tour, mapped: AFRICA_ENGINE2_MAP[tour.id] }))
-        .filter(
-          ({ tour, mapped }) =>
-            (mapped?.country ?? tour.geo.country) !== "United States" &&
-            tour.sourceCountrySlug !== "canada" &&
-            tour.sourceCountrySlug !== "mexico"
-        )
-        .map(({ tour, mapped }) => ({
-          ...tour,
-          geo: {
-            ...tour.geo,
-            country: mapped?.country ?? tour.geo.country,
-            city: mapped?.city ?? tour.geo.city,
-          },
-          sourceCitySlug: slugify(mapped?.city ?? tour.sourceCitySlug),
-        })),
+      getAllEngine2Tours().filter(
+        tour =>
+          tour.geo.country !== "United States" &&
+          tour.sourceCountrySlug !== "canada" &&
+          tour.sourceCountrySlug !== "mexico"
+      ),
     []
   );
 
@@ -243,6 +247,16 @@ export default function ToursLanding() {
     () => sortedStates.filter(state => isUSStateName(state.name)),
     [sortedStates]
   );
+  const usStateSelectOptions = useMemo(
+    () =>
+      dedupeOptions(
+        usStateOptions.map(state => ({
+          value: state.slug,
+          label: state.name,
+        }))
+      ),
+    [usStateOptions]
+  );
 
   const countryOptions = useMemo(
     () =>
@@ -252,33 +266,29 @@ export default function ToursLanding() {
     [internationalTours, mexicoTours, internationalEngine2Tours]
   );
 
-  const internationalCities = useMemo(
-    () => {
-      const cities =
-      buildInternationalCityOptions({
-        selectedCountry,
-        selectedCanadaProvinceSlug: selectedInternationalProvinceSlug,
-        internationalTours,
-        canadaProvinces,
-        mexicoTours,
-      });
-      if (!selectedCountry) {
-        return cities;
-      }
-      const engine2Cities = internationalEngine2Tours
-        .filter(tour => tour.geo.country === selectedCountry)
-        .map(tour => ({ slug: tour.sourceCitySlug, name: tour.geo.city }));
-      return [...cities, ...engine2Cities];
-    },
-    [
-      canadaProvinces,
-      internationalTours,
+  const internationalCities = useMemo(() => {
+    const cities = buildInternationalCityOptions({
       selectedCountry,
-      selectedInternationalProvinceSlug,
+      selectedCanadaProvinceSlug: selectedInternationalProvinceSlug,
+      internationalTours,
+      canadaProvinces,
       mexicoTours,
-      internationalEngine2Tours,
-    ]
-  );
+    });
+    if (!selectedCountry) {
+      return cities;
+    }
+    const engine2Cities = internationalEngine2Tours
+      .filter(tour => tour.geo.country === selectedCountry)
+      .map(tour => ({ slug: tour.sourceCitySlug, name: tour.geo.city }));
+    return [...cities, ...engine2Cities];
+  }, [
+    canadaProvinces,
+    internationalTours,
+    selectedCountry,
+    selectedInternationalProvinceSlug,
+    mexicoTours,
+    internationalEngine2Tours,
+  ]);
 
   const filteredTours = useMemo(() => {
     let nextTours: Array<{ tour: Tour; href: string }> = [];
@@ -375,7 +385,11 @@ export default function ToursLanding() {
       }
     }
 
-    return nextTours;
+    const deduped = new Map<string, { tour: Tour; href: string }>();
+    nextTours.forEach(entry =>
+      deduped.set(getStableTourKey(entry.tour), entry)
+    );
+    return [...deduped.values()];
   }, [
     selectedCitySlug,
     selectedCountry,
@@ -604,9 +618,9 @@ export default function ToursLanding() {
                 onChange={event => handleStateChange(event.target.value)}
               >
                 <option value="">Select a state</option>
-                {dedupeByNormalizedValue(usStateOptions).map(state => (
-                  <option key={state.slug} value={state.slug}>
-                    {state.name}
+                {usStateSelectOptions.map(state => (
+                  <option key={state.value} value={state.value}>
+                    {state.label}
                   </option>
                 ))}
               </select>
@@ -678,7 +692,12 @@ export default function ToursLanding() {
                   onChange={event => handleCountryChange(event.target.value)}
                 >
                   <option value="">Select a country</option>
-                  {dedupeByNormalizedValue(countryOptions.map(country => ({ slug: country, name: country }))).map(country => (
+                  {dedupeByNormalizedValue(
+                    countryOptions.map(country => ({
+                      slug: country,
+                      name: country,
+                    }))
+                  ).map(country => (
                     <option key={country.slug} value={country.slug}>
                       {country.name}
                     </option>

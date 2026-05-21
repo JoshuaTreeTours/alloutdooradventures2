@@ -23,9 +23,7 @@ import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEn
 import { getEngine4ListingEntries } from "../engine4/listing/getEngine4ListingEntries";
 import { engine6ListingTours } from "../engine6/listing";
 import { assertUniqueByCanonicalPath } from "../engine6/hardening";
-import {
-  suppressLegacyFareHarborTour,
-} from "../engine6/replacementMode";
+import { suppressLegacyFareHarborTour } from "../engine6/replacementMode";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -229,14 +227,15 @@ export const tours: Tour[] = [
   ...australiaTours,
   ...engine6ListingTours,
 ]
-  .filter(tour =>
-    !suppressLegacyFareHarborTour(tour, engine6CanonicalTourPaths)
+  .filter(
+    tour => !suppressLegacyFareHarborTour(tour, engine6CanonicalTourPaths)
   )
-  .filter(tour =>
-    !isTourRemoved({
-      tourId: getEngine1FareHarborItemId(tour),
-      operatorName: tour.operator,
-    })
+  .filter(
+    tour =>
+      !isTourRemoved({
+        tourId: getEngine1FareHarborItemId(tour),
+        operatorName: tour.operator,
+      })
   )
   .map(tour =>
     applyTourPricing({
@@ -250,7 +249,6 @@ export const tours: Tour[] = [
   .map(remapMisclassifiedAfricaTours)
   .filter(tour => !SUPPRESSED_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour)))
   .filter(hasValidPublicCardHero);
-
 
 const legacyTours: Tour[] = [
   ...toursGenerated,
@@ -279,7 +277,6 @@ const legacyTours: Tour[] = [
   .map(remapMisclassifiedAfricaTours)
   .filter(tour => !SUPPRESSED_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour)))
   .filter(hasValidPublicCardHero);
-
 
 export const getLegacyTourBySlugs = (
   stateSlug: string,
@@ -551,16 +548,15 @@ const isValidForPublicCityListing = (
   return true;
 };
 
-const toUnifiedEngine2Tour = (tour: Engine2Tour): UnifiedCityTour => ({
-  tour: toEngine2ListingTour(tour),
-  href: tour.seo.canonicalPath,
-});
+const toUnifiedEngine2Tour = (tour: Engine2Tour): UnifiedCityTour => {
+  const listingTour = toEngine2ListingTour(tour);
+  return {
+    tour: listingTour,
+    href: getCityTourDetailPath(listingTour),
+  };
+};
 
 const getDedupeKey = (entry: UnifiedCityTour) => {
-  if (entry.href.startsWith("/destinations/")) {
-    return `canonical:${entry.href}`;
-  }
-
   if (entry.tour.productCode) {
     return `viator:${entry.tour.productCode.toUpperCase()}`;
   }
@@ -569,6 +565,10 @@ const getDedupeKey = (entry: UnifiedCityTour) => {
 
   if (itemId) {
     return `${entry.tour.bookingProvider}:${itemId}`;
+  }
+
+  if (entry.href.startsWith("/destinations/")) {
+    return `canonical:${entry.href}`;
   }
 
   return `${entry.href}::${entry.tour.id}`;
@@ -622,9 +622,9 @@ export const getToursByCityUnified = (
     return dedupeUnifiedCityTours(engine6OnlyTours);
   }
 
-  const engine1Tours = getToursByCity(stateSlug, citySlug).map(
-    toUnifiedEngine1Tour
-  );
+  const engine1Tours = getToursByCity(stateSlug, citySlug)
+    .filter(tour => tour.engine !== "engine2")
+    .map(toUnifiedEngine1Tour);
 
   const engine4Tours = getEngine4ListingEntries(stateSlug, citySlug).map(
     entry => ({

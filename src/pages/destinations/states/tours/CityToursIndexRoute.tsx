@@ -63,11 +63,22 @@ export default function CityToursIndexRoute({
           }))
         : getToursByCityUnified(state.slug, city.slug)
       : [];
+  const dedupedTours = useMemo(() => {
+    const byKey = new Map<string, (typeof tours)[number]>();
+    tours.forEach(entry => {
+      const itemId = entry.tour.bookingUrl.match(/\/items\/(\d+)/)?.[1];
+      const key = itemId || entry.tour.productCode || entry.tour.id;
+      byKey.set(String(key), entry);
+    });
+    return [...byKey.values()];
+  }, [tours]);
   const activityFilter =
     typeof window !== "undefined"
       ? new URLSearchParams(window.location.search).get("activity")
       : null;
-  const toursWithImages = tours.filter(entry => hasValidTourImage(entry.tour));
+  const toursWithImages = dedupedTours.filter(entry =>
+    hasValidTourImage(entry.tour)
+  );
   const toursOnlyWithImages = toursWithImages.filter(
     entry => !isRentalTour(entry.tour)
   );
@@ -93,7 +104,7 @@ export default function CityToursIndexRoute({
       route: toursHref,
       state,
       city,
-      cityTours: tours.map(entry => entry.tour),
+      cityTours: dedupedTours.map(entry => entry.tour),
     }) ?? undefined;
   const structuredDataNodes = useMemo(() => {
     if (!state || !city) {
@@ -118,7 +129,15 @@ export default function CityToursIndexRoute({
       nodes.push(buildItemList(itemListItems));
     }
     return nodes;
-  }, [city, cityHref, filteredTours, state, stateHref, toursHref]);
+  }, [
+    city,
+    cityHref,
+    dedupedTours,
+    filteredTours,
+    state,
+    stateHref,
+    toursHref,
+  ]);
 
   useStructuredData(structuredDataNodes);
 

@@ -273,6 +273,9 @@ export const getEngine2TourBySlug = (
   tourSlug: string
 ) =>
   getEngine2TourByPath(
+    `/destinations/world/${stateSlug}/${citySlug}/tours/${tourSlug}`
+  ) ??
+  getEngine2TourByPath(
     `/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`
   ) ??
   getEngine2TourByPath(
@@ -336,6 +339,9 @@ export const getEngine2ToursByStateSlug = (
   stateSlug: string,
   citySlug?: string
 ): Engine2Tour[] => {
+  const worldBase = citySlug
+    ? `/destinations/world/${stateSlug}/${citySlug}/tours/`
+    : `/destinations/world/${stateSlug}/`;
   const directBase = citySlug
     ? `/destinations/${stateSlug}/${citySlug}/tours/`
     : `/destinations/${stateSlug}/`;
@@ -346,14 +352,18 @@ export const getEngine2ToursByStateSlug = (
   return engine2Tours.filter(tour => {
     const path = tour.seo.canonicalPath;
     if (citySlug) {
-      return path.startsWith(directBase) || path.startsWith(usBase);
+      return (
+        path.startsWith(worldBase) ||
+        path.startsWith(directBase) ||
+        path.startsWith(usBase) ||
+        (tour.sourceCountrySlug === stateSlug && tour.sourceCitySlug === citySlug)
+      );
     }
 
-    const isStatePath = path.startsWith(directBase) || path.startsWith(usBase);
-    return (
-      isStatePath &&
-      path.includes("/tours/") &&
-      !path.startsWith("/destinations/world/")
-    );
+    const isStatePath =
+      path.startsWith(worldBase) ||
+      path.startsWith(directBase) ||
+      path.startsWith(usBase);
+    return isStatePath && path.includes("/tours/");
   });
 };
