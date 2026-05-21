@@ -4,6 +4,13 @@ import { buildTourCopy } from "../content/templates/buildTourCopy";
 import type { Engine2Tour } from "./loadEngine2";
 import { alaskaRows } from "./alaska.rows";
 
+const BLOCKED_ALASKA_PRODUCT_IDS = new Set([
+  "517077",
+  "517088",
+  "517079",
+  "520051",
+]);
+
 const clean = (value?: string) => (value ?? "").trim();
 
 const toTitleCase = (value: string) =>
@@ -49,6 +56,9 @@ export const loadAlaskaEngine2Tours = (): Engine2Tour[] => {
 
   for (const row of alaskaRows) {
     const id = clean(row.id);
+    if (BLOCKED_ALASKA_PRODUCT_IDS.has(id)) {
+      continue;
+    }
     const name = clean(row.title);
     const cityRaw = clean(row.city) || getCityFromLocation(row.location);
 

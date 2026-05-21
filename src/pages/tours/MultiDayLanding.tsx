@@ -93,11 +93,7 @@ const AFRICA_COUNTRY_SLUGS = new Set([
   "madagascar",
 ]);
 const AFRICA_ENGINE2_MAP: Record<string, { country: string; city: string }> = {
-  "517077": { country: "Kenya", city: "Nairobi" },
-  "517088": { country: "Madagascar", city: "Antananarivo" },
-  "517079": { country: "Ethiopia", city: "Addis Ababa" },
   "517094": { country: "Tanzania", city: "Zanzibar" },
-  "520051": { country: "Tanzania", city: "Arusha" },
 };
 
 type RegionOption = { slug: string; name: string };

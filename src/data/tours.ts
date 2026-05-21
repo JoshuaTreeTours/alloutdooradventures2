@@ -148,6 +148,12 @@ const engine6CanonicalTourPaths = engine6ListingTours.map(
 // Durango Snowdown Fight.
 
 const SUPPRESSED_PRODUCT_IDS = new Set(["301378", "301379"]);
+const CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS = new Set([
+  "517077",
+  "517088",
+  "517079",
+  "520051",
+]);
 const FORCE_EXCLUDED_ANCHORAGE_TITLES = new Set([
   "14-Day Kenyan Tribes, Conservation and Animals",
   "16-Day Madagascar Palaces, Parks, Lemurs, and Baobabs",
@@ -169,11 +175,7 @@ const hasValidPublicCardHero = (tour: Tour) => {
 
 const remapMisclassifiedAfricaTours = (tour: Tour): Tour => {
   const cityByProductId: Record<string, { country: string; city: string }> = {
-    "517077": { country: "Kenya", city: "Nairobi" },
-    "517088": { country: "Madagascar", city: "Antananarivo" },
-    "517079": { country: "Ethiopia", city: "Addis Ababa" },
     "517094": { country: "Tanzania", city: "Zanzibar" },
-    "520051": { country: "Tanzania", city: "Arusha" },
   };
   const productId = getEngine1FareHarborItemId(tour);
   const mapped = cityByProductId[productId];
@@ -200,11 +202,7 @@ const remapMisclassifiedAfricaByProductId = (
   destination: Tour["destination"]
 ) => {
   const cityByProductId: Record<string, { country: string; city: string }> = {
-    "517077": { country: "Kenya", city: "Nairobi" },
-    "517088": { country: "Madagascar", city: "Antananarivo" },
-    "517079": { country: "Ethiopia", city: "Addis Ababa" },
     "517094": { country: "Tanzania", city: "Zanzibar" },
-    "520051": { country: "Tanzania", city: "Arusha" },
   };
   const mapped = productId ? cityByProductId[productId] : undefined;
   if (!mapped) {
@@ -249,6 +247,12 @@ export const tours: Tour[] = [
   )
   .map(remapMisclassifiedAfricaTours)
   .filter(tour => !SUPPRESSED_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour)))
+  .filter(
+    tour =>
+      !CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS.has(
+        getEngine1FareHarborItemId(tour)
+      )
+  )
   .filter(hasValidPublicCardHero);
 
 
@@ -278,6 +282,12 @@ const legacyTours: Tour[] = [
   )
   .map(remapMisclassifiedAfricaTours)
   .filter(tour => !SUPPRESSED_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour)))
+  .filter(
+    tour =>
+      !CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS.has(
+        getEngine1FareHarborItemId(tour)
+      )
+  )
   .filter(hasValidPublicCardHero);
 
 
@@ -531,6 +541,13 @@ const isValidForPublicCityListing = (
 ) => {
   const itemId = getEngine1FareHarborItemId(entry.tour) ?? entry.tour.id;
   if (SUPPRESSED_PRODUCT_IDS.has(itemId.replace(/^engine2-/, ""))) {
+    return false;
+  }
+  if (
+    CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS.has(
+      itemId.replace(/^engine2-/, "")
+    )
+  ) {
     return false;
   }
   if (
