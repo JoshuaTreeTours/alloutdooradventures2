@@ -138,8 +138,13 @@ export const getFallbackStateBySlug = (stateSlug: string) => {
 
   const engine2StateTours = getAllEngine2Tours().filter(
     tour =>
+      tour.seo.canonicalPath.startsWith(`/destinations/world/${stateSlug}/`) ||
       tour.seo.canonicalPath.startsWith(`/destinations/${stateSlug}/`) ||
-      tour.seo.canonicalPath.startsWith(`/destinations/united-states/${stateSlug}/`)
+      tour.seo.canonicalPath.startsWith(
+        `/destinations/united-states/${stateSlug}/`
+      ) ||
+      tour.sourceCountrySlug === stateSlug ||
+      slugify(tour.geo.country) === stateSlug
   );
 
   if (!stateTours.length && !engine2StateTours.length) {
@@ -151,7 +156,9 @@ export const getFallbackStateBySlug = (stateSlug: string) => {
   }
 
   const engine2CountryMatch = engine2StateTours.find(
-    tour => tour.sourceCountrySlug === stateSlug || slugify(tour.geo.country) === stateSlug
+    tour =>
+      tour.sourceCountrySlug === stateSlug ||
+      slugify(tour.geo.country) === stateSlug
   );
   const stateName =
     stateTours[0]?.destination.state ??
@@ -184,13 +191,24 @@ export const getFallbackCityBySlugs = (
   );
   const engine2CityTours = getAllEngine2Tours().filter(
     tour =>
-      (tour.seo.canonicalPath.startsWith(`/destinations/${stateSlug}/${citySlug}/tours/`) ||
+      (tour.seo.canonicalPath.startsWith(
+        `/destinations/world/${stateSlug}/${citySlug}/tours/`
+      ) ||
+        tour.seo.canonicalPath.startsWith(
+          `/destinations/${stateSlug}/${citySlug}/tours/`
+        ) ||
         tour.seo.canonicalPath.startsWith(
           `/destinations/united-states/${stateSlug}/${citySlug}/tours/`
         )) ||
+      tour.seo.canonicalPath ===
+        `/destinations/world/${stateSlug}/tours/${tour.slug}` ||
       tour.seo.canonicalPath === `/destinations/${stateSlug}/tours/${tour.slug}` ||
       tour.seo.canonicalPath ===
-        `/destinations/united-states/${stateSlug}/tours/${tour.slug}`
+        `/destinations/united-states/${stateSlug}/tours/${tour.slug}` ||
+      (tour.sourceCountrySlug === stateSlug &&
+        tour.sourceCitySlug === citySlug) ||
+      (slugify(tour.geo.country) === stateSlug &&
+        slugify(tour.geo.city) === citySlug)
   );
 
   if (!cityTours.length && !engine2CityTours.length) {
