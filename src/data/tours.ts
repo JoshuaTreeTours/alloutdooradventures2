@@ -18,6 +18,7 @@ import {
 } from "../utils/tourDescription";
 import { slugify } from "../utils/slugify";
 import { isTourRemoved } from "../utils/tours/isTourRemoved";
+import { isHardDeletedLegacyTour } from "../utils/tours/hardDeleteLegacyTours";
 import { resolveTourHeroImage } from "../utils/hero";
 import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEntries";
 import { getEngine4ListingEntries } from "../engine4/listing/getEngine4ListingEntries";
@@ -147,7 +148,6 @@ const engine6CanonicalTourPaths = engine6ListingTours.map(
 // Sunset Flight; Durango Half-Day Raft Trip; Jeep Wrangler Rental Seats 5 (4 Door);
 // Durango Snowdown Fight.
 
-const SUPPRESSED_PRODUCT_IDS = new Set(["301378", "301379"]);
 const CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS = new Set([
   "517077",
   "517088",
@@ -246,7 +246,14 @@ export const tours: Tour[] = [
     })
   )
   .map(remapMisclassifiedAfricaTours)
-  .filter(tour => !SUPPRESSED_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour)))
+    .filter(
+    tour =>
+      !isHardDeletedLegacyTour({
+        productId: getEngine1FareHarborItemId(tour),
+        slug: tour.slug,
+        canonicalPath: `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`,
+      })
+  )
   .filter(
     tour =>
       !CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS.has(
@@ -281,7 +288,14 @@ const legacyTours: Tour[] = [
     })
   )
   .map(remapMisclassifiedAfricaTours)
-  .filter(tour => !SUPPRESSED_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour)))
+    .filter(
+    tour =>
+      !isHardDeletedLegacyTour({
+        productId: getEngine1FareHarborItemId(tour),
+        slug: tour.slug,
+        canonicalPath: `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`,
+      })
+  )
   .filter(
     tour =>
       !CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS.has(
@@ -540,7 +554,13 @@ const isValidForPublicCityListing = (
   citySlug: string
 ) => {
   const itemId = getEngine1FareHarborItemId(entry.tour) ?? entry.tour.id;
-  if (SUPPRESSED_PRODUCT_IDS.has(itemId.replace(/^engine2-/, ""))) {
+  if (
+    isHardDeletedLegacyTour({
+      productId: itemId,
+      slug: entry.tour.slug,
+      canonicalPath: entry.href,
+    })
+  ) {
     return false;
   }
   if (

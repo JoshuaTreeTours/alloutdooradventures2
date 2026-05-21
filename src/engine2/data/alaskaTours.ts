@@ -9,6 +9,8 @@ const BLOCKED_ALASKA_PRODUCT_IDS = new Set([
   "517088",
   "517079",
   "520051",
+  "301378",
+  "301379",
 ]);
 
 const clean = (value?: string) => (value ?? "").trim();
