@@ -21,6 +21,8 @@ import { isTourRemoved } from "../utils/tours/isTourRemoved";
 import {
   isContaminatedTourRecord,
   isContaminatedPath,
+  isContaminatedProductId,
+  isContaminatedTitle,
 } from "./contaminatedTours";
 import { resolveTourHeroImage } from "../utils/hero";
 import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEntries";
@@ -413,7 +415,12 @@ export const getToursByState = (stateSlug: string) =>
     dedupeToursByCanonicalPath([
       ...tours.filter(tour => tour.destination.stateSlug === stateSlug),
       ...getEngine2ToursForLocation(stateSlug),
-    ])
+    ]).filter(
+      tour =>
+        !isContaminatedProductId(
+          tour.productCode ?? getEngine1FareHarborItemId(tour) ?? null
+        ) && !isContaminatedTitle(tour.title)
+    )
   );
 
 export const getToursByCity = (stateSlug: string, citySlug: string) =>
@@ -425,7 +432,12 @@ export const getToursByCity = (stateSlug: string, citySlug: string) =>
           tour.destination.citySlug === citySlug
       ),
       ...getEngine2ToursForLocation(stateSlug, citySlug),
-    ])
+    ]).filter(
+      tour =>
+        !isContaminatedProductId(
+          tour.productCode ?? getEngine1FareHarborItemId(tour) ?? null
+        ) && !isContaminatedTitle(tour.title)
+    )
   );
 
 export const getTourBySlugs = (

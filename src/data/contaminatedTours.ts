@@ -56,3 +56,5 @@ export const isContaminatedTourRecord = (input: {
   isContaminatedProductId(input.productId) ||
   isContaminatedSlug(input.slug) ||
   isContaminatedTitle(input.title);
+
+export const contaminatedProductIds = CONTAMINATED_PRODUCT_IDS;
