@@ -85,9 +85,38 @@ const getTourRegionSlug = (tour: Tour) =>
 const getTourRegionName = (tour: Tour) =>
   tour.destination.country || tour.destination.state || "Unknown";
 
+const AFRICA_COUNTRY_SLUGS = new Set([
+  "kenya",
+  "tanzania",
+  "ethiopia",
+  "madagascar",
+]);
+
+type RegionOption = { slug: string; name: string };
+
+const normalizeOptionValue = (value: string) => slugify(value.trim().toLowerCase());
+
+const dedupeAndSortOptions = (options: RegionOption[]) => {
+  const byNormalized = new Map<string, RegionOption>();
+  options.forEach((option) => {
+    const normalized = normalizeOptionValue(option.slug || option.name);
+    if (!normalized || byNormalized.has(normalized)) {
+      return;
+    }
+    byNormalized.set(normalized, {
+      slug: option.slug,
+      name: option.name.trim(),
+    });
+  });
+  return Array.from(byNormalized.values()).sort((a, b) =>
+    a.name.localeCompare(b.name),
+  );
+};
+
 export default function MultiDayLanding() {
   const [selectedState, setSelectedState] = useState("");
   const [selectedEurope, setSelectedEurope] = useState("");
+  const [selectedAfrica, setSelectedAfrica] = useState("");
   const [selectedWorld, setSelectedWorld] = useState("");
 
   const multiDayTours = useMemo(
@@ -115,12 +144,13 @@ export default function MultiDayLanding() {
       }
     });
 
-    return Array.from(slugs)
+    return dedupeAndSortOptions(
+      Array.from(slugs)
       .map((slug) => ({
         slug,
         name: usStateMap.get(slug) ?? slug,
       }))
-      .sort((a, b) => a.name.localeCompare(b.name));
+    );
   }, [multiDayTours, usStateMap]);
 
   const europeOptions = useMemo(() => {
@@ -132,19 +162,42 @@ export default function MultiDayLanding() {
       }
     });
 
-    return Array.from(slugs)
+    return dedupeAndSortOptions(
+      Array.from(slugs)
       .map((slug) => ({
         slug,
         name: europeMap.get(slug) ?? slug,
       }))
-      .sort((a, b) => a.name.localeCompare(b.name));
+    );
   }, [multiDayTours, europeMap]);
+
+  const africaOptions = useMemo(() => {
+    const destinationMap = new Map<string, string>();
+    multiDayTours.forEach((tour) => {
+      const slug = getTourRegionSlug(tour);
+      if (!AFRICA_COUNTRY_SLUGS.has(slug)) {
+        return;
+      }
+      if (!destinationMap.has(slug)) {
+        destinationMap.set(slug, getTourRegionName(tour));
+      }
+    });
+    return dedupeAndSortOptions(
+      Array.from(destinationMap.entries()).map(([slug, name]) => ({
+        slug,
+        name,
+      })),
+    );
+  }, [multiDayTours]);
 
   const worldOptions = useMemo(() => {
     const destinationMap = new Map<string, string>();
     multiDayTours.forEach((tour) => {
       const slug = getTourRegionSlug(tour);
-      if (usStateMap.has(slug) || europeMap.has(slug)) {
+      if (usStateMap.has(slug) || europeMap.has(slug) || AFRICA_COUNTRY_SLUGS.has(slug)) {
+        return;
+      }
+      if (slug === "united-states" || (tour.destination.country || "").toLowerCase() === "united states") {
         return;
       }
       if (!destinationMap.has(slug)) {
@@ -152,12 +205,12 @@ export default function MultiDayLanding() {
       }
     });
 
-    return Array.from(destinationMap.entries())
-      .map(([slug, name]) => ({ slug, name }))
-      .sort((a, b) => a.name.localeCompare(b.name));
+    return dedupeAndSortOptions(
+      Array.from(destinationMap.entries()).map(([slug, name]) => ({ slug, name })),
+    );
   }, [multiDayTours, europeMap, usStateMap]);
 
-  const selectedSlug = selectedState || selectedEurope || selectedWorld;
+  const selectedSlug = selectedState || selectedEurope || selectedAfrica || selectedWorld;
   const filteredTours = useMemo(() => {
     if (!selectedSlug) {
       return [];
@@ -170,6 +223,7 @@ export default function MultiDayLanding() {
   const selectedLabel =
     usOptions.find((option) => option.slug === selectedState)?.name ||
     europeOptions.find((option) => option.slug === selectedEurope)?.name ||
+    africaOptions.find((option) => option.slug === selectedAfrica)?.name ||
     worldOptions.find((option) => option.slug === selectedWorld)?.name;
 
   const hasSelection = Boolean(selectedSlug);
@@ -177,6 +231,7 @@ export default function MultiDayLanding() {
   const clearSelection = () => {
     setSelectedState("");
     setSelectedEurope("");
+    setSelectedAfrica("");
     setSelectedWorld("");
   };
 
@@ -200,7 +255,8 @@ export default function MultiDayLanding() {
         </Link>
       </div>
 
-      <section className="mt-12 grid gap-6 lg:grid-cols-3">
+      <section className="mt-12 grid gap-6 lg:grid-cols-4">
+        {usOptions.length > 0 ? (
         <div className="rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]">
             United States
@@ -221,11 +277,14 @@ export default function MultiDayLanding() {
               onSelect={(slug) => {
                 setSelectedState(slug);
                 setSelectedEurope("");
+                setSelectedAfrica("");
                 setSelectedWorld("");
               }}
             />
           </div>
         </div>
+        ) : null}
+        {europeOptions.length > 0 ? (
         <div className="rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]">
             Europe
@@ -247,11 +306,43 @@ export default function MultiDayLanding() {
               onSelect={(slug) => {
                 setSelectedEurope(slug);
                 setSelectedState("");
+                setSelectedAfrica("");
                 setSelectedWorld("");
               }}
             />
           </div>
         </div>
+        ) : null}
+        {africaOptions.length > 0 ? (
+        <div className="rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]">
+            Africa
+          </p>
+          <h2 className="mt-3 text-lg font-semibold text-[#2f4a2f]">
+            African destinations
+          </h2>
+          <p className="mt-3 text-sm text-[#405040]">
+            Select an African country with multi-day tour availability.
+          </p>
+          <div className="mt-6">
+            <RegionDropdownButton
+              label="Select a country…"
+              options={africaOptions}
+              selectedName={
+                africaOptions.find((option) => option.slug === selectedAfrica)
+                  ?.name
+              }
+              onSelect={(slug) => {
+                setSelectedAfrica(slug);
+                setSelectedState("");
+                setSelectedEurope("");
+                setSelectedWorld("");
+              }}
+            />
+          </div>
+        </div>
+        ) : null}
+        {worldOptions.length > 0 ? (
         <div className="rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]">
             Worldwide
@@ -274,10 +365,12 @@ export default function MultiDayLanding() {
                 setSelectedWorld(slug);
                 setSelectedState("");
                 setSelectedEurope("");
+                setSelectedAfrica("");
               }}
             />
           </div>
         </div>
+        ) : null}
       </section>
 
       <section className="mt-8 rounded-2xl border border-black/10 bg-white/70 p-6 text-sm text-[#405040]">
