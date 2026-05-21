@@ -39,7 +39,11 @@ import {
   buildWebPageStructuredData,
 } from "../../../../utils/structuredData";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
-import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
+import {
+  getAllEngine2Tours,
+  getEngine2TourBySlug,
+} from "../../../../engine2/data/loadEngine2";
+import { slugify } from "../../../../utils/slugify";
 import Engine2TourBookingPage from "../../../../engine2/pages/Engine2TourBookingPage";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
 import RemovedTourGone from "../../../RemovedTourGone";
@@ -69,8 +73,26 @@ export default function CityTourBookingRoute({
     params.tourSlug
   );
 
-  if (engine2Tour) {
-    return <Engine2TourBookingPage tour={engine2Tour} />;
+  const normalizedEngine2Tour =
+    engine2Tour ??
+    getAllEngine2Tours().find(tour => {
+      if (tour.slug !== params.tourSlug) {
+        return false;
+      }
+
+      const countrySlug = tour.sourceCountrySlug || slugify(tour.geo.country);
+      const citySlug = tour.sourceCitySlug || slugify(tour.geo.city);
+
+      return countrySlug === params.stateSlug && citySlug === params.citySlug;
+    }) ??
+    getAllEngine2Tours().find(
+      tour =>
+        tour.seo.canonicalPath ===
+        `/destinations/world/${params.stateSlug}/${params.citySlug}/tours/${params.tourSlug}`
+    );
+
+  if (normalizedEngine2Tour) {
+    return <Engine2TourBookingPage tour={normalizedEngine2Tour} />;
   }
 
   const state =
