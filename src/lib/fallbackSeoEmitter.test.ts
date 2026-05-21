@@ -4,6 +4,7 @@ import {
   buildLegacyTourRouteFallbackSeo,
   isLegacyTourDetailPath,
 } from "./fallbackSeoEmitter";
+import { tours } from "../data/tours";
 
 const TEMPLATE = `<!doctype html><html><head><title>Default</title><meta name="description" content="d" /><meta property="og:title" content="d" /><meta property="og:description" content="d" /><meta property="og:url" content="d" /><meta property="og:image" content="/hero.jpg" /><meta name="twitter:title" content="d" /><meta name="twitter:description" content="d" /><meta name="twitter:image" content="/hero.jpg" /><link rel="canonical" href="https://example.com" /></head><body></body></html>`;
 
@@ -82,5 +83,26 @@ describe("fallbackSeoEmitter", () => {
     expect(kachemak?.url).toBe(
       "https://www.alloutdooradventures.com/destinations/alaska/homer/tours/kachemak-bay-state-park-wilderness-hiking-17390"
     );
+  });
+
+  it("uses legacy international visible tour image for /tours country-city-slug fallback metadata", () => {
+    const internationalLegacyTour = tours.find(
+      tour =>
+        tour.engine !== "engine6" &&
+        (tour.destination.country ?? "United States") !== "United States" &&
+        !tour.heroImage.endsWith("/hero.jpg")
+    );
+
+    expect(internationalLegacyTour).toBeTruthy();
+
+    const pathname = `/tours/${internationalLegacyTour!.destination.stateSlug}/${internationalLegacyTour!.destination.citySlug}/${internationalLegacyTour!.slug}`;
+    const fallback = buildLegacyTourRouteFallbackSeo({
+      pathname,
+      site: "https://www.alloutdooradventures.com",
+    });
+
+    expect(fallback?.image).toBeTruthy();
+    expect(fallback?.image).not.toContain("/hero.jpg");
+    expect(fallback?.url).toBe(`https://www.alloutdooradventures.com${pathname}`);
   });
 });
