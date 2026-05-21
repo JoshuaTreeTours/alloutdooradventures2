@@ -34,6 +34,34 @@ describe("fallbackSeoEmitter", () => {
     expect(html).toContain('"image":"https://cdn.filestackcontent.com/LvqjIQRrSo63cY2G0z9X"');
   });
 
+  it("adds og/twitter image tags when legacy template is missing them", () => {
+    const noImageTemplate = `<!doctype html><html><head><title>Default</title><meta name="description" content="d" /><meta property="og:title" content="d" /><meta property="og:description" content="d" /><meta property="og:url" content="d" /><meta name="twitter:title" content="d" /><meta name="twitter:description" content="d" /><link rel="canonical" href="https://example.com" /></head><body></body></html>`;
+    const html = applyRouteSeo(noImageTemplate, {
+      title: "Sample Tour",
+      description: "Sample description",
+      url: "https://www.alloutdooradventures.com/destinations/sample/tours/sample-tour",
+      image: "https://cdn.filestackcontent.com/sample-hero",
+    });
+
+    expect(html).toContain('property="og:image" content="https://cdn.filestackcontent.com/sample-hero"');
+    expect(html).toContain('name="twitter:image" content="https://cdn.filestackcontent.com/sample-hero"');
+  });
+
+  it("fills missing schema image on existing WebPage/Product/TouristTrip nodes", () => {
+    const withExistingGraph = `<!doctype html><html><head><title>Default</title><meta name="description" content="d" /><meta property="og:title" content="d" /><meta property="og:description" content="d" /><meta property="og:url" content="d" /><meta name="twitter:title" content="d" /><meta name="twitter:description" content="d" /><link rel="canonical" href="https://example.com" /><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"x"},{"@type":"Product","name":"p","image":""},{"@type":"TouristTrip","name":"t"}]}</script></head><body></body></html>`;
+    const image = "https://cdn.filestackcontent.com/hero-graph";
+    const html = applyRouteSeo(withExistingGraph, {
+      title: "Sample Tour",
+      description: "Sample description",
+      url: "https://www.alloutdooradventures.com/destinations/sample/tours/sample-tour",
+      image,
+    });
+
+    expect(html).toContain(`"@type":"WebPage","name":"x","image":"${image}"`);
+    expect(html).toContain(`"@type":"Product","name":"p","image":"${image}"`);
+    expect(html).toContain(`"@type":"TouristTrip","name":"t","image":"${image}"`);
+  });
+
   it("builds non-home fallback SEO for unresolved Alaska tour routes", () => {
     const harding = buildLegacyTourRouteFallbackSeo({
       pathname:

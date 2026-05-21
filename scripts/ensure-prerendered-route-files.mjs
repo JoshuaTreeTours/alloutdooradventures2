@@ -109,6 +109,7 @@ const toursModule = await tsImport('../src/data/tours.generated.ts', import.meta
 const flagstaffToursModule = await tsImport('../src/data/flagstaffTours.ts', import.meta.url);
 const tourSeoModule = await tsImport('../src/lib/tourSeo.ts', import.meta.url);
 const legacyRouteSeoModule = await tsImport('../src/lib/legacyRouteSeo.ts', import.meta.url);
+const legacyRoutePathsModule = await tsImport('../src/lib/legacyRoutePaths.ts', import.meta.url);
 const engine6Tours = Array.isArray(engine6Registry.engine6ResolvedTours) ? engine6Registry.engine6ResolvedTours : [];
 const toursGenerated = Array.isArray(toursModule.toursGenerated) ? toursModule.toursGenerated : [];
 const flagstaffTours = Array.isArray(flagstaffToursModule.flagstaffTours) ? flagstaffToursModule.flagstaffTours : [];
@@ -117,6 +118,9 @@ const seoByPath = new Map(engine6Tours.map(t => [t.canonicalPath, engine6SeoMod.
 
 const paths = new Set(['/destinations']);
 for (const url of urls) paths.add(new URL(url).pathname);
+for (const tourPath of legacyRoutePathsModule.buildLegacyTourPathsFromTours(toursGenerated)) {
+  paths.add(tourPath);
+}
 for (const pathname of Array.from(paths)) {
   const legacyTourMatch = /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)$/.exec(pathname);
   if (legacyTourMatch) {

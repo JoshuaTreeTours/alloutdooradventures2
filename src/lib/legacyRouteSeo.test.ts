@@ -81,4 +81,44 @@ describe("buildLegacyTourRouteSeo", () => {
 
     expect(seo?.image).toBe("https://cdn.filestackcontent.com/LvqjIQRrSo63cY2G0z9X");
   });
+
+  it("resolves legacy /tours/{state}/{city}/{slug} routes by product id when slug text drifts", () => {
+    const routePath =
+      "/tours/wyoming/jackson/the-lewis-and-clark-explorer-pack-trip-5-days-4-nights-456492";
+    const image = "https://cdn.filestackcontent.com/RlWQ7xV7TuEstvgXiUaN";
+    const seo = buildLegacyTourRouteSeo({
+      pathname: routePath,
+      site: "https://www.alloutdooradventures.com",
+      buildTourMetaFn: buildTourMeta,
+      tours: [
+        {
+          id: "456492",
+          slug: "lewis-clark-explorer-pack-trip-456492",
+          title: "The Lewis & Clark Explorer Pack Trip",
+          destination: {
+            stateSlug: "wyoming",
+            citySlug: "jackson",
+            city: "Jackson",
+            state: "Wyoming",
+          },
+          heroImage: image,
+        } as any,
+      ],
+    });
+
+    expect(seo?.url).toBe(`https://www.alloutdooradventures.com${routePath}`);
+    expect(seo?.title.toLowerCase()).toContain("lewis");
+    expect(seo?.description.toLowerCase()).toContain("jackson");
+    expect(seo?.image).toBe(image);
+
+    const html = applyRouteSeo(
+      '<!doctype html><html><head><title>Default</title><meta name="description" content="d" /><meta property="og:title" content="d" /><meta property="og:description" content="d" /><meta property="og:url" content="d" /><meta name="twitter:title" content="d" /><meta name="twitter:description" content="d" /><link rel="canonical" href="https://example.com" /></head><body></body></html>',
+      seo as any
+    );
+
+    expect(html).toContain('property="og:image" content="https://cdn.filestackcontent.com/RlWQ7xV7TuEstvgXiUaN"');
+    expect(html).toContain('name="twitter:image" content="https://cdn.filestackcontent.com/RlWQ7xV7TuEstvgXiUaN"');
+    expect(html).toContain('"image":"https://cdn.filestackcontent.com/RlWQ7xV7TuEstvgXiUaN"');
+    expect(html).toContain(`rel="canonical" href="https://www.alloutdooradventures.com${routePath}"`);
+  });
 });

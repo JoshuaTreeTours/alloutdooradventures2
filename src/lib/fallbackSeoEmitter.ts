@@ -4,7 +4,10 @@ export const applyRouteSeo = (
 ) => {
   const setMetaByAttr = (input: string, attr: string, name: string, value: string) => {
     const re = new RegExp(`<meta[^>]*${attr}=["']${name}["'][^>]*>`, "i");
-    return input.replace(re, `<meta ${attr}="${name}" content="${value}" />`);
+    if (re.test(input)) {
+      return input.replace(re, `<meta ${attr}="${name}" content="${value}" />`);
+    }
+    return input.replace("</head>", `<meta ${attr}="${name}" content="${value}" /></head>`);
   };
   const removeMetaByAttr = (input: string, attr: string, name: string) => {
     const re = new RegExp(`<meta[^>]*${attr}=["']${name}["'][^>]*>\\s*`, "i");
@@ -36,13 +39,65 @@ export const applyRouteSeo = (
   };
   if (image) structuredData.image = image;
   const ld = `<script id="structured-data" type="application/ld+json">${JSON.stringify(structuredData).replace(/</g, "\\u003c")}</script>`;
-  return /application\/ld\+json/i.test(out)
-    ? out.replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/i, ld)
-    : out.replace("</head>", `${ld}</head>`);
+
+  const ldScriptRe = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/i;
+  const existingLdMatch = out.match(ldScriptRe);
+  if (!existingLdMatch) {
+    return out.replace("</head>", `${ld}</head>`);
+  }
+
+  const rawJson = existingLdMatch[1]?.trim();
+  if (!rawJson) {
+    return out.replace(ldScriptRe, ld);
+  }
+
+  try {
+    const parsed = JSON.parse(rawJson) as Record<string, unknown>;
+    const ensureImage = (node: Record<string, unknown>) => {
+      if (!image) {
+        return node;
+      }
+      const nodeType = node["@type"];
+      const isTargetType =
+        nodeType === "WebPage" || nodeType === "Product" || nodeType === "TouristTrip";
+      if (!isTargetType) {
+        return node;
+      }
+
+      const existingImage = node.image;
+      const hasImage =
+        (typeof existingImage === "string" && existingImage.trim().length > 0) ||
+        (Array.isArray(existingImage) && existingImage.length > 0);
+      if (!hasImage) {
+        node.image = image;
+      }
+      return node;
+    };
+
+    let updated: Record<string, unknown> = { ...parsed };
+    if (Array.isArray(parsed["@graph"])) {
+      updated = {
+        ...parsed,
+        "@graph": parsed["@graph"].map(node =>
+          node && typeof node === "object"
+            ? ensureImage({ ...(node as Record<string, unknown>) })
+            : node
+        ),
+      };
+    } else {
+      updated = ensureImage({ ...parsed });
+    }
+
+    const nextLd = `<script id="structured-data" type="application/ld+json">${JSON.stringify(updated).replace(/</g, "\\u003c")}</script>`;
+    return out.replace(ldScriptRe, nextLd);
+  } catch {
+    return out.replace(ldScriptRe, ld);
+  }
 };
 
 export const isLegacyTourDetailPath = (pathname: string) =>
-  /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+\/?$/.test(pathname);
+  /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+\/?$/.test(pathname) ||
+  /^\/tours\/[^/]+\/[^/]+\/[^/]+\/?$/.test(pathname);
 
 const toTitleCase = (value: string) =>
   value
@@ -59,7 +114,8 @@ export const buildLegacyTourRouteFallbackSeo = ({
   site: string;
 }) => {
   const match =
-    /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/.exec(pathname);
+    /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/.exec(pathname) ??
+    /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)\/?$/.exec(pathname);
   if (!match) return null;
   const [, stateSlug, citySlug, tourSlug] = match;
   const state = toTitleCase(stateSlug);
