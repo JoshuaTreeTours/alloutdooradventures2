@@ -300,3 +300,30 @@ describe("Switzerland Engine6 discovery propagation", () => {
     ).toBe(true);
   });
 });
+
+describe("Anchorage no-hero hard suppression", () => {
+  it("removes hard-suppressed Anchorage product IDs from city and unified inventories", () => {
+    const anchored = getToursByCity("alaska", "anchorage");
+    const unified = getToursByCityUnified("alaska", "anchorage");
+
+    const hasSuppressedId = (bookingUrl: string) =>
+      /\/items\/(301378|301379)/.test(bookingUrl);
+
+    expect(anchored.some(tour => hasSuppressedId(tour.bookingUrl))).toBe(false);
+    expect(unified.some(entry => hasSuppressedId(entry.tour.bookingUrl))).toBe(false);
+  });
+
+  it("returns Tour not found for hard-suppressed direct slugs", () => {
+    expect(
+      getTourBySlugs(
+        "alaska",
+        "anchorage",
+        "intermediate-singletrack-mountain-biking-clinic-301378"
+      )
+    ).toBeUndefined();
+
+    expect(
+      getTourBySlugs("alaska", "anchorage", "private-mtb-lesson-301379")
+    ).toBeUndefined();
+  });
+});
