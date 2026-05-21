@@ -35,6 +35,23 @@ import {
 
 const normalizeOptionValue = (value: string) =>
   slugify(value.trim().toLowerCase());
+const normalizeOptionKey = (value: string) =>
+  slugify(
+    String(value || "")
+      .trim()
+      .toLowerCase()
+  );
+const dedupeOptions = <T extends { value?: string; label?: string }>(
+  options: T[]
+) =>
+  Array.from(
+    new Map(
+      options.map(option => [
+        normalizeOptionKey(option.value || option.label || ""),
+        option,
+      ])
+    ).values()
+  );
 const dedupeByNormalizedValue = <T extends { slug: string }>(options: T[]) => {
   const seen = new Set<string>();
   return options.filter(option => {
@@ -229,6 +246,16 @@ export default function ToursLanding() {
   const usStateOptions = useMemo(
     () => sortedStates.filter(state => isUSStateName(state.name)),
     [sortedStates]
+  );
+  const usStateSelectOptions = useMemo(
+    () =>
+      dedupeOptions(
+        usStateOptions.map(state => ({
+          value: state.slug,
+          label: state.name,
+        }))
+      ),
+    [usStateOptions]
   );
 
   const countryOptions = useMemo(
@@ -591,9 +618,9 @@ export default function ToursLanding() {
                 onChange={event => handleStateChange(event.target.value)}
               >
                 <option value="">Select a state</option>
-                {dedupeByNormalizedValue(usStateOptions).map(state => (
-                  <option key={state.slug} value={state.slug}>
-                    {state.name}
+                {usStateSelectOptions.map(state => (
+                  <option key={state.value} value={state.value}>
+                    {state.label}
                   </option>
                 ))}
               </select>
