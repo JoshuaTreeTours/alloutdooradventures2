@@ -13,6 +13,13 @@ type TourCardProps = {
   tour: Tour;
   href?: string;
 };
+const CONTAMINATED_TOUR_IDS = new Set(["517077", "517088", "517079", "520051"]);
+const CONTAMINATED_TOUR_PATHS = new Set([
+  "/destinations/united-states/alaska/anchorage/tours/14-day-kenyan-tribes-conservation-and-animals-517077",
+  "/destinations/united-states/alaska/anchorage/tours/16-day-madagascar-palaces-parks-lemurs-and-baobabs-517088",
+  "/destinations/united-states/alaska/anchorage/tours/19-day-tribes-and-rock-hewn-churches-of-ethiopia-517079",
+  "/destinations/united-states/alaska/anchorage/tours/9-days-across-the-savannah-of-tanzania-520051",
+]);
 
 const CARD_BLURB_MAX_CHARS = 150;
 const ENGINE4_OVERVIEW_SNIPPET_MAX_CHARS = 140;
@@ -124,6 +131,14 @@ function getCardBlurb(tour: Tour): string {
 
 export default function TourCard({ tour, href }: TourCardProps) {
   const detailHref = href ?? getTourDetailPath(tour);
+  const fareHarborId =
+    tour.bookingUrl?.match(/\/items\/(\d+)/)?.[1] ?? tour.id.replace(/^engine2-/, "");
+  if (
+    CONTAMINATED_TOUR_IDS.has(fareHarborId) ||
+    CONTAMINATED_TOUR_PATHS.has(detailHref)
+  ) {
+    return null;
+  }
   const isRental = isRentalTour(tour);
   const blurb = getCardBlurb(tour);
   const categorySource =
