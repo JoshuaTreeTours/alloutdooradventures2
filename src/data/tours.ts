@@ -149,6 +149,21 @@ const engine6CanonicalTourPaths = engine6ListingTours.map(
 
 const SUPPRESSED_PRODUCT_IDS = new Set(["301378", "301379"]);
 const INVALID_HERO_PATTERNS = ["placeholder", "no-image", "default-image"];
+const SUPPRESSED_LEGACY_AFRICA_PRODUCT_IDS = new Set([
+  "517077",
+  "517088",
+  "517079",
+  "517094",
+  "520051",
+]);
+
+const SUPPRESSED_LEGACY_AFRICA_TITLES = new Set([
+  "14-Day Kenyan Tribes, Conservation and Animals",
+  "16-Day Madagascar Palaces, Parks, Lemurs, and Baobabs",
+  "19-Day Tribes and Rock Hewn Churches of Ethiopia",
+  "8-Day Zanzibar - The Spice Island, Mangroves and Stonetown",
+  "9 Days Across the Savannah of Tanzania",
+]);
 
 const AFRICA_SUPPRESSION_COUNTRIES = new Set([
   "kenya",
@@ -174,8 +189,12 @@ export const isLegacyAfricaSuppressedFromPublicDiscovery = (tour: Tour) => {
   const country = (tour.destination.country ?? "").trim().toLowerCase();
   const state = (tour.destination.state ?? "").trim().toLowerCase();
   const stateSlug = (tour.destination.stateSlug ?? "").trim().toLowerCase();
+  const productId =
+    getEngine1FareHarborItemId(tour) ?? tour.id.replace(/^engine2-/, "");
 
   return (
+    SUPPRESSED_LEGACY_AFRICA_PRODUCT_IDS.has(productId) ||
+    SUPPRESSED_LEGACY_AFRICA_TITLES.has(tour.title) ||
     AFRICA_SUPPRESSION_COUNTRIES.has(country) ||
     country === "africa" ||
     state === "africa" ||
@@ -431,7 +450,7 @@ export const getToursByState = (stateSlug: string) =>
     dedupeToursByCanonicalPath([
       ...tours.filter(tour => tour.destination.stateSlug === stateSlug),
       ...getEngine2ToursForLocation(stateSlug),
-    ])
+    ]).filter(tour => !isLegacyAfricaSuppressedFromPublicDiscovery(tour))
   );
 
 export const getToursByCity = (stateSlug: string, citySlug: string) =>
@@ -443,7 +462,7 @@ export const getToursByCity = (stateSlug: string, citySlug: string) =>
           tour.destination.citySlug === citySlug
       ),
       ...getEngine2ToursForLocation(stateSlug, citySlug),
-    ])
+    ]).filter(tour => !isLegacyAfricaSuppressedFromPublicDiscovery(tour))
   );
 
 export const getTourBySlugs = (
@@ -459,7 +478,7 @@ export const getTourBySlugs = (
   );
 
 export const getToursByActivity = (activitySlug: string) =>
-  tours.filter(tour => {
+  tours.filter(tour => !isLegacyAfricaSuppressedFromPublicDiscovery(tour)).filter(tour => {
     if (activitySlug === "hiking") {
       return tour.primaryCategory === "hiking";
     }
@@ -558,6 +577,9 @@ const isValidForPublicCityListing = (
 ) => {
   const itemId = getEngine1FareHarborItemId(entry.tour) ?? entry.tour.id;
   if (SUPPRESSED_PRODUCT_IDS.has(itemId.replace(/^engine2-/, ""))) {
+    return false;
+  }
+  if (isLegacyAfricaSuppressedFromPublicDiscovery(entry.tour)) {
     return false;
   }
   if (stateSlug === "alaska" && citySlug === "anchorage") {

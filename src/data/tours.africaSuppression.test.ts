@@ -50,6 +50,16 @@ describe("legacy/non-Engine6 Africa suppression", () => {
     expect(
       isLegacyAfricaSuppressedFromPublicDiscovery({
         ...baseTour,
+        title: "14-Day Kenyan Tribes, Conservation and Animals",
+        id: "engine2-517077",
+        engine: "engine2",
+        destination: { ...baseTour.destination, country: "United States" },
+      })
+    ).toBe(true);
+
+    expect(
+      isLegacyAfricaSuppressedFromPublicDiscovery({
+        ...baseTour,
         engine: "engine6",
         destination: { ...baseTour.destination, country: "Kenya" },
       })
