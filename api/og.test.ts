@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getStaticOgMeta } from "./og";
+import handler, { getStaticOgMeta } from "./og";
 
 const ORIGIN = "https://www.alloutdooradventures.com";
 
@@ -58,5 +58,24 @@ describe("legacy wrapper SEO scoped repairs", () => {
       expect(meta?.image).not.toContain("/hero.jpg");
       expect(meta?.canonical).toContain("/destinations/");
     }
+  });
+
+  it("emits matching og/twitter/json-ld image tags for Santa Barbara regression route", async () => {
+    const path =
+      "/destinations/california/santa-barbara/tours/coastal-cruise-azure-seas-4241";
+    const expectedImage = "https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS";
+    const req = new Request(
+      `${ORIGIN}/api/og?path=${encodeURIComponent(path)}`
+    );
+    const response = await handler(req);
+    const html = await response.text();
+    expect(html).toContain(
+      `<meta property="og:image" content="${expectedImage}" />`
+    );
+    expect(html).toContain(
+      `<meta name="twitter:image" content="${expectedImage}" />`
+    );
+    expect(html).toContain(`"image":"${expectedImage}"`);
+    expect(html).not.toContain("/hero.jpg");
   });
 });

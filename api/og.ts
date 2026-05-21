@@ -66,6 +66,10 @@ function slugFromPath(path: string) {
   return parts[parts.length - 1] ?? "";
 }
 
+function jsonLdEscape(str: string) {
+  return str.replaceAll("</script>", "<\\/script>");
+}
+
 function resolveScopedLegacyTourMeta(path: string, origin: string): OgMeta | null {
   if (!isScopedLegacyTourPath(path)) return null;
   const slug = slugFromPath(path);
@@ -89,10 +93,7 @@ function resolveScopedLegacyTourMeta(path: string, origin: string): OgMeta | nul
   const candidateImage = tour
     ? tour.heroImage || tour.galleryImages?.[0] || null
     : oregonMatch?.image_url || null;
-  const image =
-    candidateImage && !candidateImage.includes("/hero.jpg")
-      ? candidateImage
-      : null;
+  const image = candidateImage && !candidateImage.includes("/hero.jpg") ? candidateImage : null;
 
   return {
     title: meta.title,
@@ -180,7 +181,18 @@ export default async function handler(req: Request) {
   const title = htmlEscape(meta.title);
   const description = htmlEscape(meta.description);
   const canonical = htmlEscape(meta.canonical);
-  const image = meta.image ? htmlEscape(meta.image) : "";
+  const rawImage = meta.image ?? "";
+  const image = rawImage ? htmlEscape(rawImage) : "";
+  const jsonLd =
+    rawImage
+      ? jsonLdEscape(
+          JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            image: rawImage,
+          })
+        )
+      : "";
 
   const html = `<!doctype html>
 <html lang="en">
@@ -203,7 +215,7 @@ ${image ? `<meta property="og:image" content="${image}" />` : ""}
 ${image ? `<meta name="twitter:image" content="${image}" />` : ""}
 </head>
 <body>
-${image ? `<script type="application/ld+json">${htmlEscape(JSON.stringify({ "@context": "https://schema.org", "@type": "WebPage", image }))}</script>` : ""}
+${jsonLd ? `<script type="application/ld+json">${jsonLd}</script>` : ""}
 </body>
 </html>`;
 
