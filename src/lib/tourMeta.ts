@@ -63,14 +63,17 @@ const pickState = (tour: TourLike) => clean(tour.destination?.state) || "Unknown
 
 const pickCountry = (tour: TourLike) => clean(tour.destination?.country) || pickState(tour);
 
+const isLegacyNonEngine6Route = (tour: TourLike, canonicalUrl: string) =>
+  (
+    /\/tours\/[^/]+\/[^/]+\/[^/]+\/?$/i.test(canonicalUrl) ||
+    /\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+\/?$/i.test(canonicalUrl)
+  ) && tour.engine !== "engine6";
+
 const isInternationalLegacyTourRoute = (tour: TourLike, canonicalUrl: string) => {
   const rawCountry = clean(tour.destination?.country);
   const country = rawCountry.toLowerCase();
   const isInternational = !!rawCountry && country !== "united states" && country !== "usa";
-  const isLegacyRoute =
-    /\/tours\/[^/]+\/[^/]+\/[^/]+\/?$/i.test(canonicalUrl) ||
-    /\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+\/?$/i.test(canonicalUrl);
-  return isInternational && isLegacyRoute && tour.engine !== "engine6";
+  return isInternational && isLegacyNonEngine6Route(tour, canonicalUrl);
 };
 
 const pickActivityType = (tour: TourLike) => {
@@ -84,6 +87,19 @@ const pickActivityType = (tour: TourLike) => {
 
 const withLengthCap = (value: string, max: number) =>
   value.length <= max ? value : `${value.slice(0, Math.max(0, max - 1)).trimEnd()}…`;
+
+
+const CITY_TONE: Record<string, string> = {
+  "santa barbara": "coastal views and wine-country flavor",
+  portland: "riverfront neighborhoods and Pacific Northwest character",
+  flagstaff: "high-desert scenery and Grand Canyon access",
+  anchorage: "glacier landscapes and Alaska wildlife moments",
+};
+
+const firstSentence = (value: string) => {
+  const sentence = value.match(/^[^.?!]+[.?!]?/)?.[0] ?? value;
+  return sentence.trim();
+};
 
 const getTourSlugFromPath = (pathname: string) => {
   const normalized = pathname.split("?")[0].split("#")[0].replace(/\/+$/, "");
@@ -138,6 +154,18 @@ const buildDescription = (tour: TourLike, canonicalUrl: string) => {
       return withLengthCap(`${base} ${detail}`, 160);
     }
     return withLengthCap(`${base} Flexible booking for travelers seeking local highlights.`, 160);
+  }
+
+  if (isLegacyNonEngine6Route(tour, canonicalUrl)) {
+    const activity = pickActivityType(tour) || "outdoor";
+    const duration = clean(tour.badges?.duration);
+    const tone = CITY_TONE[city.toLowerCase()];
+    const opener = `Experience ${tourName} in ${city}, ${state} with a guided ${activity} outing`;
+    const context = tone ? ` featuring ${tone}` : "";
+    const durationText = duration ? ` and a ${duration} pace` : "";
+    const fallback = `${opener}${context}${durationText}.`;
+    if (!detail) return withLengthCap(fallback, 165);
+    return withLengthCap(`${fallback} ${firstSentence(detail)}`, 165);
   }
 
   if (detail) {
