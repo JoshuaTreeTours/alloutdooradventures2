@@ -82,7 +82,7 @@ describe("buildLegacyTourRouteSeo", () => {
     expect(seo?.image).toBe("https://cdn.filestackcontent.com/LvqjIQRrSo63cY2G0z9X");
   });
 
-  it("resolves legacy /tours/{state}/{city}/{slug} routes with tour-specific SEO payload", () => {
+  it("resolves legacy /tours/{state}/{city}/{slug} routes by product id when slug text drifts", () => {
     const routePath =
       "/tours/wyoming/jackson/the-lewis-and-clark-explorer-pack-trip-5-days-4-nights-456492";
     const image = "https://cdn.filestackcontent.com/RlWQ7xV7TuEstvgXiUaN";
@@ -92,8 +92,9 @@ describe("buildLegacyTourRouteSeo", () => {
       buildTourMetaFn: buildTourMeta,
       tours: [
         {
-          slug: "the-lewis-and-clark-explorer-pack-trip-5-days-4-nights-456492",
-          title: "The Lewis & Clark Explorer Pack Trip 5 Days 4 Nights",
+          id: "456492",
+          slug: "lewis-clark-explorer-pack-trip-456492",
+          title: "The Lewis & Clark Explorer Pack Trip",
           destination: {
             stateSlug: "wyoming",
             citySlug: "jackson",

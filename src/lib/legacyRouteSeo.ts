@@ -3,6 +3,7 @@ import { resolveTourHeroImage } from "../utils/hero";
 import type { buildBookingMeta, buildTourMeta } from "./tourMeta";
 
 type Tour = {
+  id?: string | number;
   slug: string;
   destination: { stateSlug: string; citySlug: string };
   heroImage?: string | null;
@@ -124,12 +125,31 @@ export const buildLegacyTourRouteSeo = ({
   if (!detailMatch) return null;
 
   const [, stateSlug, citySlug, tourSlug] = detailMatch;
+  const routeProductIdMatch = /-(\d+)$/i.exec(tourSlug);
+  const routeProductId = routeProductIdMatch?.[1] ?? null;
   const tour = tours.find(
     t =>
       t.destination.stateSlug === stateSlug &&
       t.destination.citySlug === citySlug &&
       t.slug === tourSlug
-  );
+  ) ??
+    (routeProductId
+      ? tours.find(t => {
+          if (
+            t.destination.stateSlug !== stateSlug ||
+            t.destination.citySlug !== citySlug
+          ) {
+            return false;
+          }
+
+          const slugProductId = /-(\d+)$/i.exec(t.slug)?.[1];
+          const tourId =
+            typeof t.id === "number" || typeof t.id === "string"
+              ? String(t.id)
+              : null;
+          return slugProductId === routeProductId || tourId === routeProductId;
+        })
+      : null);
   if (!tour) return null;
 
   const canonical = `${site}${pathname}`;
