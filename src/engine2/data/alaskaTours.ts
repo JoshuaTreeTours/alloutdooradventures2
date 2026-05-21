@@ -81,8 +81,8 @@ export const loadAlaskaEngine2Tours = (): Engine2Tour[] => {
     const regionName = africaDestination?.country ?? "Alaska";
     const countrySlug = slugify(countryName);
     const canonicalPath = citySlug
-      ? `/destinations/world/${countrySlug}/${citySlug}/tours/${slug}`
-      : `/destinations/world/${countrySlug}/tours/${slug}`;
+      ? `/destinations/${countrySlug}/${citySlug}/tours/${slug}`
+      : `/destinations/${countrySlug}/tours/${slug}`;
     const primaryImage = clean(row.image) || ENGINE2_DEFAULT_IMAGE;
     const providerName = clean(row.operator) || "Unknown provider";
     const cityName = cityRaw ? toTitleCase(cityRaw) : regionName;
