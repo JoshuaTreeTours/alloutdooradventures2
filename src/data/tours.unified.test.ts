@@ -300,3 +300,26 @@ describe("Switzerland Engine6 discovery propagation", () => {
     ).toBe(true);
   });
 });
+
+describe("contaminated Africa legacy hard-removal", () => {
+  it("removes known contaminated product IDs from Anchorage city + unified inventories", () => {
+    const blocked = ["517077", "517088", "517079", "517094", "520051"];
+    const cityTours = getToursByCity("alaska", "anchorage");
+    const unifiedTours = getToursByCityUnified("alaska", "anchorage");
+
+    const cityProductIds = cityTours.map(
+      tour => tour.productCode ?? tour.bookingUrl.match(/\/items\/(\d+)/)?.[1] ?? ""
+    );
+    const unifiedProductIds = unifiedTours.map(
+      entry =>
+        entry.tour.productCode ??
+        entry.tour.bookingUrl.match(/\/items\/(\d+)/)?.[1] ??
+        ""
+    );
+
+    for (const id of blocked) {
+      expect(cityProductIds).not.toContain(id);
+      expect(unifiedProductIds).not.toContain(id);
+    }
+  });
+});

@@ -6,6 +6,7 @@ import { getTourDetailPath } from "../data/tours";
 import { formatStartingPrice } from "../lib/pricing";
 import { buildRentalDescription } from "../templates/rentalDescription";
 import { resolveTourHeroImage } from "../utils/hero";
+import { isContaminatedRelatedTour } from "../lib/filterContaminatedRelatedTours";
 import { isRentalTour } from "../utils/isRentalTour";
 import Image from "./Image";
 
@@ -123,6 +124,9 @@ function getCardBlurb(tour: Tour): string {
 }
 
 export default function TourCard({ tour, href }: TourCardProps) {
+  if (isContaminatedRelatedTour(tour)) {
+    return null;
+  }
   const detailHref = href ?? getTourDetailPath(tour);
   const isRental = isRentalTour(tour);
   const blurb = getCardBlurb(tour);

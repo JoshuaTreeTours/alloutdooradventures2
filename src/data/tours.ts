@@ -18,6 +18,12 @@ import {
 } from "../utils/tourDescription";
 import { slugify } from "../utils/slugify";
 import { isTourRemoved } from "../utils/tours/isTourRemoved";
+import {
+  isContaminatedTourRecord,
+  isContaminatedPath,
+  isContaminatedProductId,
+  isContaminatedTitle,
+} from "./contaminatedTours";
 import { resolveTourHeroImage } from "../utils/hero";
 import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEntries";
 import { getEngine4ListingEntries } from "../engine4/listing/getEngine4ListingEntries";
@@ -148,13 +154,6 @@ const engine6CanonicalTourPaths = engine6ListingTours.map(
 // Durango Snowdown Fight.
 
 const SUPPRESSED_PRODUCT_IDS = new Set(["301378", "301379"]);
-const FORCE_EXCLUDED_ANCHORAGE_TITLES = new Set([
-  "14-Day Kenyan Tribes, Conservation and Animals",
-  "16-Day Madagascar Palaces, Parks, Lemurs, and Baobabs",
-  "19-Day Tribes and Rock Hewn Churches of Ethiopia",
-  "8-Day Zanzibar - The Spice Island, Mangroves and Stonetown",
-  "9 Days Across the Savannah of Tanzania",
-]);
 
 const INVALID_HERO_PATTERNS = ["placeholder", "no-image", "default-image"];
 
@@ -249,6 +248,12 @@ export const tours: Tour[] = [
   )
   .map(remapMisclassifiedAfricaTours)
   .filter(tour => !SUPPRESSED_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour)))
+  .filter(tour => !isContaminatedTourRecord({
+    canonicalPath: `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`,
+    productId: getEngine1FareHarborItemId(tour),
+    slug: tour.slug,
+    title: tour.title,
+  }))
   .filter(hasValidPublicCardHero);
 
 
@@ -278,6 +283,12 @@ const legacyTours: Tour[] = [
   )
   .map(remapMisclassifiedAfricaTours)
   .filter(tour => !SUPPRESSED_PRODUCT_IDS.has(getEngine1FareHarborItemId(tour)))
+  .filter(tour => !isContaminatedTourRecord({
+    canonicalPath: `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`,
+    productId: getEngine1FareHarborItemId(tour),
+    slug: tour.slug,
+    title: tour.title,
+  }))
   .filter(hasValidPublicCardHero);
 
 
@@ -404,7 +415,12 @@ export const getToursByState = (stateSlug: string) =>
     dedupeToursByCanonicalPath([
       ...tours.filter(tour => tour.destination.stateSlug === stateSlug),
       ...getEngine2ToursForLocation(stateSlug),
-    ])
+    ]).filter(
+      tour =>
+        !isContaminatedProductId(
+          tour.productCode ?? getEngine1FareHarborItemId(tour) ?? null
+        ) && !isContaminatedTitle(tour.title)
+    )
   );
 
 export const getToursByCity = (stateSlug: string, citySlug: string) =>
@@ -416,7 +432,12 @@ export const getToursByCity = (stateSlug: string, citySlug: string) =>
           tour.destination.citySlug === citySlug
       ),
       ...getEngine2ToursForLocation(stateSlug, citySlug),
-    ])
+    ]).filter(
+      tour =>
+        !isContaminatedProductId(
+          tour.productCode ?? getEngine1FareHarborItemId(tour) ?? null
+        ) && !isContaminatedTitle(tour.title)
+    )
   );
 
 export const getTourBySlugs = (
@@ -533,11 +554,12 @@ const isValidForPublicCityListing = (
   if (SUPPRESSED_PRODUCT_IDS.has(itemId.replace(/^engine2-/, ""))) {
     return false;
   }
-  if (
-    stateSlug === "alaska" &&
-    citySlug === "anchorage" &&
-    FORCE_EXCLUDED_ANCHORAGE_TITLES.has(entry.tour.title)
-  ) {
+  if (isContaminatedPath(entry.href) || isContaminatedTourRecord({
+    canonicalPath: entry.href,
+    productId: itemId.replace(/^engine2-/, ""),
+    slug: entry.tour.slug,
+    title: entry.tour.title,
+  })) {
     return false;
   }
   if (stateSlug === "alaska" && citySlug === "anchorage") {

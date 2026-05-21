@@ -55,6 +55,7 @@ import Engine6TourPage from "../../../../engine6/components/Engine6TourPage";
 import { getEngine6NativeTourByCanonicalPath } from "../../../../engine6/registry";
 import type { Engine6ApiResponse, Engine6Tour } from "../../../../engine6/types";
 import { isExcludedProductCode } from "../../../../data/excludedProductCodes";
+import { isContaminatedPath } from "../../../../data/contaminatedTours";
 import { isEngine6CanonicalPath } from "../../../../engine6/routes";
 import { buildEngine6SchemaGraph } from "../../../../engine6/schema/buildEngine6SchemaGraph";
 import {
@@ -84,6 +85,7 @@ import { applyEngine1Template } from "../../../../utils/tours/applyEngine1Harden
 import { fetchFareHarborHtml } from "../../../../utils/fh/fetchFareHarborHtml";
 import { parseFareHarborHtml } from "../../../../utils/fh/parseFareHarborHtml";
 import { formatStartingPrice } from "../../../../lib/pricing";
+import { filterContaminatedRelatedTours } from "../../../../lib/filterContaminatedRelatedTours";
 import RemovedTourGone from "../../../RemovedTourGone";
 import { extractViatorProductCode } from "../../../../utils/viator/extractViatorProductCode";
 import {
@@ -218,6 +220,18 @@ export default function CityTourDetailRoute({
 
   const requestedPath =
     `/destinations/${params.stateSlug}/${params.citySlug}/tours/${params.tourSlug}`;
+
+  if (isContaminatedPath(requestedPath)) {
+    return (
+      <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
+        <h1 className="text-2xl font-semibold">Tour not found</h1>
+        <p className="mt-4 text-sm text-[#405040]">
+          We couldn’t find that tour. Head back to the tours list to keep
+          exploring.
+        </p>
+      </main>
+    );
+  }
 
   const migratedLegacyEngine6Tour = getLegacyFhMigratedTourBySlugs(
     params.stateSlug,
@@ -728,13 +742,13 @@ export default function CityTourDetailRoute({
 
   const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
   const seoMeta = buildTourMeta(tour, canonicalUrl);
-  const relatedTours = (
+  const relatedTours = filterContaminatedRelatedTours((
     isFlagstaff ? flagstaffTours : getToursByCity(state.slug, city.slug)
   ).filter(item =>
     isFlagstaff
       ? getFlagstaffTourSlug(item) !== tourSlug
       : item.slug !== tour.slug
-  );
+  ));
   const disclosure = getAffiliateDisclosure(tour);
   const fareHarborHeroStartingPrice =
     fareHarborParsed?.priceAdult ?? fareHarborParsed?.priceChild;
