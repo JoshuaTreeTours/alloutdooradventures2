@@ -51,11 +51,14 @@
     "media": {
       "images": [
         {
-          "imageVariants": [
-            {
-              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/5f/b2/caption.jpg?w=700&h=500&s=1"
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/5f/b2/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
             }
-          ]
+          }
         }
       ]
     }
