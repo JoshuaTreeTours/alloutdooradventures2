@@ -41,7 +41,7 @@ import {
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_MIAMI_PIRATE_BOAT_ROUTE,
   ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
-  ENGINE6_PALM_SPRINGS_EARTHQUAKE_CANYON_DOWNHILL_BIKE_ROUTE,
+  ENGINE6_JOSHUA_TREE_HALF_DAY_SMALL_GROUP_ROUTE,
   ENGINE6_PALM_SPRINGS_INDIAN_CANYONS_BIKE_HIKE_ROUTE,
   ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
@@ -135,8 +135,8 @@ const ENGINE6_5584233P1_EXPECTED_HERO_URL =
   "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg?w=700&h=500&s=1";
 const ENGINE6_327321P1_EXPECTED_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/07/b0/bc.jpg";
-const ENGINE6_3351P13_EXPECTED_HERO_URL =
-  "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=700&h=500&s=1";
+const ENGINE6_335698P7_EXPECTED_HERO_URL =
+  "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/5f/b2/caption.jpg?w=700&h=500&s=1";
 const ENGINE6_3351P15_EXPECTED_HERO_URL =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/39/12/13/caption.jpg?w=700&h=500&s=1";
 const ENGINE6_21165P1_EXPECTED_HERO_URL =
@@ -1259,7 +1259,7 @@ describe("engine6 listing surfaces", () => {
   });
 
   it("routes and renders 327321P1 in Palm Springs with direct affiliate CTA, image parity, and no gallery", () => {
-    const unifiedTours = getToursByCityUnified("california", "palm-springs");
+    const unifiedTours = getToursByCityUnified("california", "joshua-tree");
     const matchingEntries = unifiedTours.filter(
       entry => entry.tour.productCode === "327321P1"
     );
@@ -1335,39 +1335,42 @@ describe("engine6 listing surfaces", () => {
     expect((faqNode?.mainEntity as unknown[]).length).toBe(5);
   });
 
-  it("rebuilds 3351P13 in place with Engine6 route, exact hero parity, and schema parity", () => {
-    const unifiedTours = getToursByCityUnified("california", "palm-springs");
+  it("rebuilds 335698P7 in place with Engine6 route, exact hero parity, and schema parity", () => {
+    const unifiedTours = getToursByCityUnified("california", "joshua-tree");
     const matchingEntries = unifiedTours.filter(
-      entry => entry.tour.productCode === "3351P13"
+      entry => entry.tour.productCode === "335698P7"
     );
     expect(matchingEntries).toHaveLength(1);
     expect(matchingEntries[0]?.href).toBe(
-      ENGINE6_PALM_SPRINGS_EARTHQUAKE_CANYON_DOWNHILL_BIKE_ROUTE
+      ENGINE6_JOSHUA_TREE_HALF_DAY_SMALL_GROUP_ROUTE
     );
     expect(matchingEntries[0]?.tour.heroImage).toBe(
-      ENGINE6_3351P13_EXPECTED_HERO_URL
+      ENGINE6_335698P7_EXPECTED_HERO_URL
     );
 
     const detailTour = engine6ResolvedTours.find(
-      tour => tour.productCode === "3351P13"
+      tour => tour.productCode === "335698P7"
     );
-    expect(detailTour?.heroImageUrl).toBe(ENGINE6_3351P13_EXPECTED_HERO_URL);
+    expect(detailTour?.heroImageUrl).toBe(ENGINE6_335698P7_EXPECTED_HERO_URL);
     expect(detailTour?.canonicalPath).toBe(
-      ENGINE6_PALM_SPRINGS_EARTHQUAKE_CANYON_DOWNHILL_BIKE_ROUTE
+      ENGINE6_JOSHUA_TREE_HALF_DAY_SMALL_GROUP_ROUTE
     );
-    expect(detailTour?.priceAmount).toBe(169);
-    expect(detailTour?.priceFormatted).toBe("From $169.00");
+    expect(detailTour?.priceAmount).toBe(99);
+    expect(detailTour?.priceFormatted).toBe("From $99.00");
+
+    expect(detailTour?.bookingUrl).toContain("/d648-335698P7");
+    expect(detailTour?.bookingUrl).toContain("pid=P00290915");
 
     const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
     expect(detailHtml).toContain(
-      ENGINE6_3351P13_EXPECTED_HERO_URL.replaceAll("&", "&amp;")
+      ENGINE6_335698P7_EXPECTED_HERO_URL.replaceAll("&", "&amp;")
     );
     expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
     expect(detailHtml).toContain(
-      'href="/destinations/california/palm-springs/tours"'
+      'href="/destinations/california/joshua-tree/tours"'
     );
     expect(detailHtml).toContain("<strong>Price:</strong>");
-    expect(detailHtml).toContain("From $169.00");
+    expect(detailHtml).toContain("From $99.00");
     expect(detailHtml).not.toContain("Check latest price");
 
     const schema = buildEngine6SchemaGraph(detailTour!);
@@ -1381,18 +1384,18 @@ describe("engine6 listing surfaces", () => {
     const offerNode = graph.find(node => node["@type"] === "Offer") as
       | Record<string, unknown>
       | undefined;
-    expect(webpageNode?.image).toBe(ENGINE6_3351P13_EXPECTED_HERO_URL);
-    expect(productNode?.image).toBe(ENGINE6_3351P13_EXPECTED_HERO_URL);
+    expect(webpageNode?.image).toBe(ENGINE6_335698P7_EXPECTED_HERO_URL);
+    expect(productNode?.image).toBe(ENGINE6_335698P7_EXPECTED_HERO_URL);
     expect(productNode?.offers).toBeDefined();
     expect(productNode?.aggregateRating).toBeDefined();
-    expect(offerNode?.price).toBe(169);
+    expect(offerNode?.price).toBe(99);
     expect(detailTour?.itinerary.length).toBeGreaterThan(0);
   });
 
 
 
   it("rebuilds 3351P15 in place with API-derived price/reviews and deterministic hero parity", () => {
-    const unifiedTours = getToursByCityUnified("california", "palm-springs");
+    const unifiedTours = getToursByCityUnified("california", "joshua-tree");
     const entry = unifiedTours.find(item => item.tour.productCode === "3351P15");
     expect(entry?.href).toBe(ENGINE6_PALM_SPRINGS_INDIAN_CANYONS_BIKE_HIKE_ROUTE);
     expect(entry?.tour.heroImage).toBe(ENGINE6_3351P15_EXPECTED_HERO_URL);
