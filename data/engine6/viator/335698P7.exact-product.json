@@ -2,9 +2,9 @@
   "product": {
     "productCode": "335698P7",
     "productUrl": "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Sunset-Tour/d648-335698P7",
-    "title": "Joshua Tree National Park Half-Day Small-Group Guided Tour",
+    "title": "Joshua Tree National Park Sightseeing Adventure Tour",
     "description": {
-      "text": "A paved road, downhill bicycle tour through a Federally protected Wilderness zone along the San Andreas Fault. Riders will be treated to magnificent vistas of the wide open Colorado Desert, enter a tortured badlands canyon, then finish off with views of the Santa Rosa Mountains and ride through the agricultural fields of the Eastern Coachella Valley. Age limit is 12 years old. This is a group tour.\nThis activity has a 2 person requirement for the tour to run. If you are a single rider, please call first."
+      "text": "Explore Joshua Tree National Park on a small-group guided sightseeing adventure designed to cover major viewpoints efficiently. Travel with a local guide between park highlights, stop for short interpretive walks, and learn about desert geology, plants, and wildlife while enjoying broad scenic vistas. This half-day format is ideal for travelers who want a structured, informative experience without self-driving in the park."
     },
     "highlights": [],
     "additionalInfo": [
@@ -15,16 +15,15 @@
       "Do you have any physical limitations or food allergies we should be aware of?"
     ],
     "inclusions": [
-      "Professional guide",
+      "Private transportation",
+      "Air-conditioned vehicle",
+      "Professional tour guide",
       "Bottled water",
-      "Use of bicycle",
-      "Driver/guide",
-      "Snacks",
-      "Use of helmet",
-      "Live commentary on board"
+      "Light snacks"
     ],
     "exclusions": [
-      "Gratuities"
+      "National Park entrance fee (pass accepted, otherwise per-person park fee applies)",
+      "Guide gratuities"
     ],
     "location": {
       "city": "Joshua Tree",
@@ -65,14 +64,56 @@
     },
     "itineraryItems": [
       {
-        "title": "The route cuts through the heart of the San Andreas Fault in the Meccacopia Wilderness just outside of Mecca, CA",
-        "description": "The route cuts through the heart of the San Andreas Fault in the Meccacopia Wilderness just outside of Mecca, CA",
-        "duration": ""
+        "pointOfInterestLocation": {
+          "location": {
+            "lat": 34.134728,
+            "lng": -116.313066
+          },
+          "fullName": "Joshua Tree Visitor Center"
+        },
+        "description": "Meet your guide in Joshua Tree and start with a short orientation before entering the park corridor.",
+        "duration": {
+          "fixedDurationInMinutes": 20
+        }
       },
       {
-        "title": "Magnificent views of the Salton Sea as guests round the last corner coming out of the canyon",
-        "description": "Magnificent views of the Salton Sea as guests round the last corner coming out of the canyon",
-        "duration": ""
+        "pointOfInterestLocation": {
+          "location": {
+            "lat": 34.011286,
+            "lng": -116.166868
+          },
+          "fullName": "Joshua Tree National Park Scenic Stops"
+        },
+        "description": "Drive between signature rock formations and Joshua tree groves, with multiple photo and interpretation stops selected for current conditions.",
+        "duration": {
+          "fixedDurationInMinutes": 120
+        }
+      },
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "lat": 33.9226,
+            "lng": -116.1739
+          },
+          "fullName": "Panoramic Viewpoint"
+        },
+        "description": "Pause at an elevated overlook to take in expansive desert basin views and late-day light across the landscape.",
+        "duration": {
+          "fixedDurationInMinutes": 30
+        }
+      },
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "lat": 34.134728,
+            "lng": -116.313066
+          },
+          "fullName": "Return to Joshua Tree"
+        },
+        "description": "Return to the Joshua Tree area after a compact, guide-led sightseeing circuit through key park zones.",
+        "duration": {
+          "fixedDurationInMinutes": 20
+        }
       }
     ],
     "priceFrom": "$169.00",
