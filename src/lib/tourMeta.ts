@@ -101,8 +101,12 @@ const normalizeCanonical = (canonicalUrl: string) => {
 };
 
 const buildTitle = (tour: TourLike, canonicalUrl: string) => {
+  if (tour.engine === "engine6") {
+    return `${pickTourName(tour) || "Tour"} | ${pickCity(tour)}, ${pickState(tour)} | All Outdoor Adventures`;
+  }
+
   if (isInternationalLegacyTourRoute(tour, canonicalUrl)) {
-    return `${pickTourName(tour) || "Tour"} | ${pickCity(tour)}, ${pickCountry(tour)} Tour`;
+    return `${pickTourName(tour) || "Tour"} | ${pickCity(tour)}, ${pickCountry(tour)} | All Outdoor Adventures`;
   }
 
   return `${
@@ -123,28 +127,67 @@ const buildDescription = (tour: TourLike, canonicalUrl: string) => {
     return "Experience the Grand Canyon South Rim with a guided Hummer ground tour from Flagstaff, Arizona. Explore scenic canyon viewpoints, desert landscapes, and one of America’s most iconic natural wonders with All Outdoor Adventures.";
   }
 
+  if (tour.engine === "engine6") {
+    if (detail) {
+      return withLengthCap(`Explore ${tourName} in ${city}, ${state}. ${detail}`, 155);
+    }
+    return withLengthCap(
+      `Experience ${tourName} in ${city}, ${state} with local highlights and easy booking with All Outdoor Adventures.`,
+      155
+    );
+  }
+
   if (isInternationalLegacyTourRoute(tour, canonicalUrl)) {
     const activity = pickActivityType(tour);
     const duration = clean(tour.badges?.duration);
     const operator = clean(tour.operator);
+    const templates = [
+      `Explore ${tourName} in ${city}, ${country}`,
+      `Experience ${tourName} in ${city}, ${country}`,
+      `Join ${tourName} in ${city}, ${country}`,
+      `Enjoy ${tourName} in ${city}, ${country}`,
+    ];
+    const templateIndex = (clean(tour.id).length + clean(tour.slug).length) % templates.length;
     const pieces = [
-      `Discover ${tourName} in ${city}, ${country}`,
-      activity ? `on a guided ${activity} experience` : "with a guided outdoor experience",
-      duration ? `${duration} duration` : "",
+      templates[templateIndex],
+      activity ? `for a ${activity} outing` : "for a memorable local outing",
+      duration ? `${duration}` : "",
       operator ? `with ${operator}` : "",
     ].filter(Boolean);
     const base = `${pieces.join(" ")}.`;
     if (detail) {
-      return withLengthCap(`${base} ${detail}`, 160);
+      return withLengthCap(`${base} ${detail}`, 155);
     }
-    return withLengthCap(`${base} Flexible booking for travelers seeking local highlights.`, 160);
+    return withLengthCap(`${base} Plan a scenic stop with local insight and flexible booking.`, 155);
   }
+
+  const templates = [
+    `Explore ${tourName} in ${city}, ${state}.`,
+    `Experience ${tourName} in ${city}, ${state}.`,
+    `Join ${tourName} in ${city}, ${state}.`,
+    `Enjoy ${tourName} in ${city}, ${state}.`,
+    `Ride into ${city}, ${state} on ${tourName}.`,
+    `Discover ${tourName} across ${city}, ${state}.`,
+  ];
+  const templateIndex = (clean(tour.id).length + clean(tour.slug).length) % templates.length;
+  const activity = pickActivityType(tour);
+  const duration = clean(tour.badges?.duration);
+  const operator = clean(tour.operator);
+  const qualifier = [activity, duration, operator ? `with ${operator}` : ""]
+    .filter(Boolean)
+    .join(" • ");
 
   if (detail) {
-    return `Discover ${tourName} in ${city}, ${state}. ${detail}`;
+    return withLengthCap(
+      `${templates[templateIndex]}${qualifier ? ` ${qualifier}.` : ""} ${detail}`,
+      155
+    );
   }
 
-  return `Discover ${tourName} in ${city}, ${state} with guided highlights, local insights, and booking details from All Outdoor Adventures.`;
+  return withLengthCap(
+    `${templates[templateIndex]}${qualifier ? ` ${qualifier}.` : ""} Plan your outing with All Outdoor Adventures.`,
+    155
+  );
 };
 
 export const getCanonicalFromBookingPath = (pathname: string) => {
