@@ -188,4 +188,60 @@ describe("buildLegacyTourRouteSeo", () => {
     expect(html).not.toContain("/hero.jpg");
   });
 
+  it("resolves Santa Barbara legacy route under /destinations/united-states/... and uses visible solo image", () => {
+    const routePath =
+      "/destinations/united-states/california/santa-barbara/tours/full-day-island-cruise-620790";
+    const image = "https://cdn.filestackcontent.com/santa-barbara-island-620790";
+
+    const seo = buildLegacyTourRouteSeo({
+      pathname: routePath,
+      site: "https://www.alloutdooradventures.com",
+      buildTourMetaFn: buildTourMeta,
+      tours: [
+        {
+          id: "620790",
+          slug: "full-day-island-cruise-620790",
+          title: "Full-Day Island Cruise",
+          destination: { stateSlug: "california", citySlug: "santa-barbara", city: "Santa Barbara", state: "California" },
+          heroImage: "/hero.jpg",
+          fareHarborHtml: `<section><img src="${image}" /></section>`,
+        } as any,
+      ],
+    });
+
+    expect(seo?.url).toBe(`https://www.alloutdooradventures.com${routePath}`);
+    expect(seo?.image).toBe(image);
+  });
+
+  it("omits image metadata when Santa Barbara legacy route has no valid solo tour image", () => {
+    const routePath =
+      "/tours/california/santa-barbara/santa-barbara-harbor-and-waterfront-tour-449817";
+
+    const seo = buildLegacyTourRouteSeo({
+      pathname: routePath,
+      site: "https://www.alloutdooradventures.com",
+      buildTourMetaFn: buildTourMeta,
+      tours: [
+        {
+          id: "449817",
+          slug: "santa-barbara-harbor-and-waterfront-tour-449817",
+          title: "Santa Barbara Harbor & Waterfront Tour",
+          destination: { stateSlug: "california", citySlug: "santa-barbara", city: "Santa Barbara", state: "California" },
+          heroImage: "/hero.jpg",
+        } as any,
+      ],
+    });
+
+    expect(seo?.image).toBe("");
+
+    const html = applyRouteSeo(
+      '<!doctype html><html><head><title>Default</title><meta name="description" content="d" /><meta property="og:title" content="d" /><meta property="og:description" content="d" /><meta property="og:url" content="d" /><meta property="og:image" content="/hero.jpg" /><meta name="twitter:title" content="d" /><meta name="twitter:description" content="d" /><meta name="twitter:image" content="/hero.jpg" /><link rel="canonical" href="https://example.com" /></head><body></body></html>',
+      seo as any
+    );
+
+    expect(html).not.toContain('property="og:image"');
+    expect(html).not.toContain('name="twitter:image"');
+    expect(html).not.toContain('"image":"/hero.jpg"');
+  });
+
 });

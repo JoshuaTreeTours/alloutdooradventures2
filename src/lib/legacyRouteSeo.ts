@@ -17,6 +17,7 @@ type BookingBuilder = typeof buildBookingMeta;
 
 const LEGACY_DETAIL_RES = [
   /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/,
+  /^\/destinations\/([^/]+)\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/,
   /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)\/?$/,
 ];
 
@@ -152,7 +153,11 @@ export const buildLegacyTourRouteSeo = ({
   );
   if (!detailMatch) return null;
 
-  const [, stateSlug, citySlug, tourSlug] = detailMatch;
+  const routeGroups = detailMatch.slice(1);
+  const [stateSlug, citySlug, tourSlug] =
+    routeGroups.length === 4
+      ? [routeGroups[1], routeGroups[2], routeGroups[3]]
+      : [routeGroups[0], routeGroups[1], routeGroups[2]];
   const normalize = (value: string | undefined | null) =>
     (value ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
   const routeState = normalize(stateSlug);
