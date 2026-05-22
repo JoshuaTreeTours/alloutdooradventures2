@@ -143,4 +143,49 @@ describe("buildLegacyTourRouteSeo", () => {
     expect(html).toContain('"image":"https://cdn.filestackcontent.com/RlWQ7xV7TuEstvgXiUaN"');
     expect(html).toContain(`rel="canonical" href="https://www.alloutdooradventures.com${routePath}"`);
   });
+
+  it("recovers unresolved fossil destination route by product id with city/state fallback", () => {
+    const routePath =
+      "/destinations/alaska/anchorage/tours/anchors-and-rappelling-101-women-s-climbing-clinic-547955";
+    const image = "https://cdn.filestackcontent.com/anchorage-climbing-547955";
+
+    const seo = buildLegacyTourRouteSeo({
+      pathname: routePath,
+      site: "https://www.alloutdooradventures.com",
+      buildTourMetaFn: buildTourMeta,
+      tours: [
+        {
+          id: "547955",
+          slug: "women-s-climbing-clinic-547955",
+          title: "Women’s Climbing Clinic",
+          destination: {
+            stateSlug: "ak",
+            citySlug: "anchorage-ak",
+            state: "Alaska",
+            city: "Anchorage",
+          },
+          heroImage: image,
+        } as any,
+      ],
+    });
+
+    expect(seo?.url).toBe(`https://www.alloutdooradventures.com${routePath}`);
+    expect(seo?.title.toLowerCase()).toContain("anchorage");
+    expect(seo?.description.toLowerCase()).toContain("alaska");
+    expect(seo?.image).toBe(image);
+
+    const html = applyRouteSeo(
+      '<!doctype html><html><head><title>Default</title><meta name="description" content="d" /><meta property="og:title" content="d" /><meta property="og:description" content="d" /><meta property="og:url" content="d" /><meta property="og:image" content="https://www.alloutdooradventures.com/hero.jpg" /><meta name="twitter:title" content="d" /><meta name="twitter:description" content="d" /><meta name="twitter:image" content="https://www.alloutdooradventures.com/hero.jpg" /><link rel="canonical" href="https://www.alloutdooradventures.com/" /></head><body></body></html>',
+      seo as any
+    );
+
+    expect(html).toContain(`rel="canonical" href="https://www.alloutdooradventures.com${routePath}"`);
+    expect(html).toContain(`property="og:url" content="https://www.alloutdooradventures.com${routePath}"`);
+    expect(html).toContain(`property="og:image" content="${image}"`);
+    expect(html).toContain(`name="twitter:image" content="${image}"`);
+    expect(html).toContain(`"image":"${image}"`);
+    expect(html).not.toContain(`rel="canonical" href="https://www.alloutdooradventures.com/"`);
+    expect(html).not.toContain("/hero.jpg");
+  });
+
 });
