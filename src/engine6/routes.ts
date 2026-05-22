@@ -242,9 +242,9 @@ export const ENGINE6_SAN_DIEGO_TIJUANA_BORDER_TOUR_ROUTE =
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE = "327321P1";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE =
   "/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs";
-export const ENGINE6_PALM_SPRINGS_JOSHUA_TREE_HUMMER_PRODUCT_CODE = "6740JTREE";
-export const ENGINE6_PALM_SPRINGS_JOSHUA_TREE_HUMMER_ROUTE =
-  "/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree";
+export const ENGINE6_JOSHUA_TREE_SCENIC_PRODUCT_CODE = "6740P7";
+export const ENGINE6_JOSHUA_TREE_SCENIC_ROUTE =
+  "/destinations/california/joshua-tree/tours/joshua-tree-scenic-tour-6740p7";
 
 export const ENGINE6_JOSHUA_TREE_FULL_DAY_HIKE_PRODUCT_CODE = "237571P2";
 export const ENGINE6_JOSHUA_TREE_FULL_DAY_HIKE_ROUTE =
@@ -373,6 +373,10 @@ const ENGINE6_OVERLAP_REPLACEMENT_CONFIGS: Engine6OverlapReplacementConfig[] = [
   {
     productCode: ENGINE6_JOSHUA_TREE_FULL_DAY_HIKE_PRODUCT_CODE,
     canonicalPath: ENGINE6_JOSHUA_TREE_FULL_DAY_HIKE_ROUTE,
+  },
+  {
+    productCode: ENGINE6_JOSHUA_TREE_SCENIC_PRODUCT_CODE,
+    canonicalPath: ENGINE6_JOSHUA_TREE_SCENIC_ROUTE,
   },
 ];
 
@@ -637,8 +641,8 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE,
   ],
   [
-    ENGINE6_PALM_SPRINGS_JOSHUA_TREE_HUMMER_ROUTE,
-    ENGINE6_PALM_SPRINGS_JOSHUA_TREE_HUMMER_PRODUCT_CODE,
+    ENGINE6_JOSHUA_TREE_SCENIC_ROUTE,
+    ENGINE6_JOSHUA_TREE_SCENIC_PRODUCT_CODE,
   ],
   [
     ENGINE6_JOSHUA_TREE_FULL_DAY_HIKE_ROUTE,

@@ -37,7 +37,7 @@ import specimen3097sdzsp2visitPayload from "../../data/engine6/viator/3097SDZSP_
 import specimen447234p3Payload from "../../data/engine6/viator/447234P3.exact-product.json";
 import specimen5584233p1Payload from "../../data/engine6/viator/5584233P1.exact-product.json";
 import specimen327321p1Payload from "../../data/engine6/viator/327321P1.exact-product.json";
-import specimen6740jtreePayload from "../../data/engine6/viator/6740JTREE.exact-product.json";
+import specimen6740p7Payload from "../../data/engine6/viator/6740P7.exact-product.json";
 import specimen2335p1Payload from "../../data/engine6/viator/2335P1.exact-product.json";
 import specimen335698p7Payload from "../../data/engine6/viator/335698P7.exact-product.json";
 import specimen3351p15Payload from "../../data/engine6/viator/3351P15.exact-product.json";
@@ -594,10 +594,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     rawPayload: specimen327321p1Payload as Record<string, unknown>,
   },
   {
-    productCode: "6740JTREE",
+    productCode: "6740P7",
     publicUrl:
-      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE",
-    rawPayload: specimen6740jtreePayload as Record<string, unknown>,
+      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7",
+    rawPayload: specimen6740p7Payload as Record<string, unknown>,
   },
   {
     productCode: "2335P1",
