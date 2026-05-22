@@ -130,7 +130,7 @@ const findImageInUnknown = (value: unknown, seen = new Set<unknown>()): string |
 
   return null;
 };
-const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>) => {
+export const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>) => {
   const directCandidates = [
     resolveTourHeroImage(tour as any),
     tour.heroImage,

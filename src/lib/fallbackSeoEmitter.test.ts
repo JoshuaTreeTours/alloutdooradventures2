@@ -90,6 +90,22 @@ describe("fallbackSeoEmitter", () => {
     expect(html).toContain(`"@type":"TouristTrip","name":"t","image":"${image}"`);
   });
 
+
+  it("uses exact visible solo image for Santa Barbara coastal-cruise-azure-seas-4241 fallback", () => {
+    const pathname = "/destinations/california/santa-barbara/tours/coastal-cruise-azure-seas-4241";
+    const fallback = buildLegacyTourRouteFallbackSeo({
+      pathname,
+      site: "https://www.alloutdooradventures.com",
+    });
+
+    expect(fallback?.image).toBe("https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS");
+
+    const html = applyRouteSeo(TEMPLATE, fallback as any);
+    expect(html).toContain('property="og:image" content="https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"');
+    expect(html).toContain('name="twitter:image" content="https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"');
+    expect(html).toContain('"image":"https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"');
+    expect(html).not.toContain('/hero.jpg');
+  });
   it("builds non-home fallback SEO for unresolved Alaska tour routes", () => {
     const harding = buildLegacyTourRouteFallbackSeo({
       pathname:

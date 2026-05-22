@@ -1,6 +1,7 @@
 import { getLegacyTourBySlugs } from "../data/tours";
 import { resolveTourHeroImage } from "../utils/hero";
 import { buildImageUrl } from "../utils/seo";
+import { resolveLegacyTourRouteImage } from "./legacyRouteSeo";
 
 export const applyRouteSeo = (
   html: string,
@@ -133,12 +134,17 @@ export const buildLegacyTourRouteFallbackSeo = ({
   const city = toTitleCase(citySlug);
   const tour = toTitleCase(tourSlug.replace(/-\d+$/g, ""));
   const legacyTour = getLegacyTourBySlugs(stateSlug, citySlug, tourSlug);
-  const tourImage = legacyTour ? resolveTourHeroImage(legacyTour) : undefined;
+  const isSantaBarbaraLegacy = stateSlug === "california" && citySlug === "santa-barbara";
+  const tourImage = legacyTour
+    ? isSantaBarbaraLegacy
+      ? resolveLegacyTourRouteImage(legacyTour as Record<string, unknown>)
+      : buildImageUrl(resolveTourHeroImage(legacyTour))
+    : "";
 
   return {
     title: `${tour} | ${city}, ${state} | All Outdoor Adventures`,
     description: `Explore ${tour} in ${city}, ${state} with All Outdoor Adventures.`,
     url: `${site}${pathname}`,
-    image: tourImage ? buildImageUrl(tourImage) : "",
+    image: tourImage || "",
   };
 };
