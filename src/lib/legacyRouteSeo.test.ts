@@ -188,4 +188,75 @@ describe("buildLegacyTourRouteSeo", () => {
     expect(html).not.toContain("/hero.jpg");
   });
 
+  it("resolves Santa Barbara legacy route under /destinations/united-states/... and uses visible solo image", () => {
+    const routePath =
+      "/destinations/united-states/california/santa-barbara/tours/full-day-island-cruise-620790";
+    const image = "https://cdn.filestackcontent.com/santa-barbara-island-620790";
+
+    const seo = buildLegacyTourRouteSeo({
+      pathname: routePath,
+      site: "https://www.alloutdooradventures.com",
+      buildTourMetaFn: buildTourMeta,
+      tours: [
+        {
+          id: "620790",
+          slug: "full-day-island-cruise-620790",
+          title: "Full-Day Island Cruise",
+          destination: { stateSlug: "california", citySlug: "santa-barbara", city: "Santa Barbara", state: "California" },
+          heroImage: "/hero.jpg",
+          fareHarborHtml: `<section><img src="${image}" /></section>`,
+        } as any,
+      ],
+    });
+
+    expect(seo?.url).toBe(`https://www.alloutdooradventures.com${routePath}`);
+    expect(seo?.image).toBe(image);
+  });
+
+  it("emits matching og/twitter/json-ld image for Santa Barbara legacy route shapes when visible image exists", () => {
+    const cases = [
+      "/destinations/california/santa-barbara/tours/coastal-cruise-azure-seas-4241",
+      "/destinations/california/santa-barbara/tours/lourinh-wine-tasting-tour---3-wines-611821",
+      "/destinations/california/santa-barbara/tours/full-day-island-cruise-620790",
+      "/destinations/california/santa-barbara/tours/santa-barbara-harbor-and-waterfront-tour-449817",
+      "/destinations/united-states/california/santa-barbara/tours/full-day-island-cruise-620790",
+      "/tours/california/santa-barbara/santa-barbara-harbor-and-waterfront-tour-449817",
+    ];
+
+    for (const routePath of cases) {
+      const id = /-(\d+)$/i.exec(routePath)?.[1] ?? "4241";
+      const image = `https://cdn.filestackcontent.com/santa-barbara-visible-${id}`;
+      const slug = routePath.split("/").filter(Boolean).at(-1) as string;
+
+      const seo = buildLegacyTourRouteSeo({
+        pathname: routePath,
+        site: "https://www.alloutdooradventures.com",
+        buildTourMetaFn: buildTourMeta,
+        tours: [
+          {
+            id,
+            slug,
+            title: `Santa Barbara Tour ${id}`,
+            destination: { stateSlug: "california", citySlug: "santa-barbara", city: "Santa Barbara", state: "California" },
+            heroImage: "/hero.jpg",
+            fareHarborData: { product: { image_url: image } },
+          } as any,
+        ],
+      });
+
+      expect(seo?.image).toBe(image);
+
+      const html = applyRouteSeo(
+        '<!doctype html><html><head><title>Default</title><meta name="description" content="d" /><meta property="og:title" content="d" /><meta property="og:description" content="d" /><meta property="og:url" content="d" /><meta property="og:image" content="/hero.jpg" /><meta name="twitter:title" content="d" /><meta name="twitter:description" content="d" /><meta name="twitter:image" content="/hero.jpg" /><link rel="canonical" href="https://example.com" /></head><body></body></html>',
+        seo as any
+      );
+
+      expect(html).toContain(`property="og:image" content="${image}"`);
+      expect(html).toContain(`name="twitter:image" content="${image}"`);
+      expect(html).toContain(`"image":"${image}"`);
+      expect(html).not.toContain('/hero.jpg');
+    }
+  });
+
+
 });

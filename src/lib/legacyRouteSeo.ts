@@ -17,6 +17,7 @@ type BookingBuilder = typeof buildBookingMeta;
 
 const LEGACY_DETAIL_RES = [
   /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/,
+  /^\/destinations\/([^/]+)\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/,
   /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)\/?$/,
 ];
 
@@ -40,8 +41,14 @@ const normalizeCandidateImage = (value: unknown): string | null => {
   if (typeof value !== "string") return null;
   const trimmed = value.trim();
   if (!trimmed) return null;
+  if (/[<>]/.test(trimmed)) return null;
   if (/^\/hero\.jpg$/i.test(trimmed)) return null;
   if (/^https?:\/\/www\.alloutdooradventures\.com\/hero\.jpg$/i.test(trimmed)) return null;
+  const looksLikeImage =
+    /^data:image\//i.test(trimmed) ||
+    /cdn\.filestackcontent\.com|filepicker\.io/i.test(trimmed) ||
+    /\.(?:jpe?g|png|webp|avif|gif|bmp|svg)(?:[?#].*)?$/i.test(trimmed);
+  if (!looksLikeImage) return null;
   const canonical = buildImageUrl(trimmed);
   if (!canonical || FORBIDDEN_TOUR_ROUTE_IMAGES.has(canonical.toLowerCase())) {
     return null;
@@ -79,7 +86,51 @@ const extractFirstLegacyMarkupImage = (
   return null;
 };
 
-const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>) => {
+
+const findImageInUnknown = (value: unknown, seen = new Set<unknown>()): string | null => {
+  if (typeof value === "string") {
+    return normalizeCandidateImage(value) ?? extractFirstLegacyMarkupImage(value);
+  }
+
+  if (!value || typeof value !== "object") return null;
+  if (seen.has(value)) return null;
+  seen.add(value);
+
+  if (Array.isArray(value)) {
+    for (const item of value) {
+      const found = findImageInUnknown(item, seen);
+      if (found) return found;
+    }
+    return null;
+  }
+
+  const obj = value as Record<string, unknown>;
+  const prioritizedKeys = [
+    "image",
+    "image_url",
+    "heroImage",
+    "primaryImage",
+    "primaryImageUrl",
+    "cardImage",
+    "listingImage",
+    "schemaImage",
+    "src",
+    "url",
+  ];
+
+  for (const key of prioritizedKeys) {
+    const found = findImageInUnknown(obj[key], seen);
+    if (found) return found;
+  }
+
+  for (const child of Object.values(obj)) {
+    const found = findImageInUnknown(child, seen);
+    if (found) return found;
+  }
+
+  return null;
+};
+export const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>) => {
   const directCandidates = [
     resolveTourHeroImage(tour as any),
     tour.heroImage,
@@ -114,11 +165,8 @@ const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>) => {
     }
   }
 
-  for (const value of Object.values(tour)) {
-    if (typeof value !== "string") continue;
-    const extracted = extractFirstLegacyMarkupImage(value);
-    if (extracted) return extracted;
-  }
+  const nestedImage = findImageInUnknown(tour);
+  if (nestedImage) return nestedImage;
 
   return "";
 };
@@ -152,7 +200,11 @@ export const buildLegacyTourRouteSeo = ({
   );
   if (!detailMatch) return null;
 
-  const [, stateSlug, citySlug, tourSlug] = detailMatch;
+  const routeGroups = detailMatch.slice(1);
+  const [stateSlug, citySlug, tourSlug] =
+    routeGroups.length === 4
+      ? [routeGroups[1], routeGroups[2], routeGroups[3]]
+      : [routeGroups[0], routeGroups[1], routeGroups[2]];
   const normalize = (value: string | undefined | null) =>
     (value ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
   const routeState = normalize(stateSlug);

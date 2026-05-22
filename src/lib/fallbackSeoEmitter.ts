@@ -1,6 +1,7 @@
 import { getLegacyTourBySlugs } from "../data/tours";
 import { resolveTourHeroImage } from "../utils/hero";
 import { buildImageUrl } from "../utils/seo";
+import { resolveLegacyTourRouteImage } from "./legacyRouteSeo";
 
 export const applyRouteSeo = (
   html: string,
@@ -101,6 +102,7 @@ export const applyRouteSeo = (
 
 export const isLegacyTourDetailPath = (pathname: string) =>
   /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+\/?$/.test(pathname) ||
+  /^\/destinations\/[^/]+\/[^/]+\/[^/]+\/tours\/[^/]+\/?$/.test(pathname) ||
   /^\/tours\/[^/]+\/[^/]+\/[^/]+\/?$/.test(pathname);
 
 const toTitleCase = (value: string) =>
@@ -119,19 +121,30 @@ export const buildLegacyTourRouteFallbackSeo = ({
 }) => {
   const match =
     /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/.exec(pathname) ??
+    /^\/destinations\/([^/]+)\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/.exec(pathname) ??
     /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)\/?$/.exec(pathname);
   if (!match) return null;
-  const [, stateSlug, citySlug, tourSlug] = match;
+
+  const routeGroups = match.slice(1);
+  const [stateSlug, citySlug, tourSlug] =
+    routeGroups.length === 4
+      ? [routeGroups[1], routeGroups[2], routeGroups[3]]
+      : [routeGroups[0], routeGroups[1], routeGroups[2]];
   const state = toTitleCase(stateSlug);
   const city = toTitleCase(citySlug);
   const tour = toTitleCase(tourSlug.replace(/-\d+$/g, ""));
   const legacyTour = getLegacyTourBySlugs(stateSlug, citySlug, tourSlug);
-  const tourImage = legacyTour ? resolveTourHeroImage(legacyTour) : undefined;
+  const isSantaBarbaraLegacy = stateSlug === "california" && citySlug === "santa-barbara";
+  const tourImage = legacyTour
+    ? isSantaBarbaraLegacy
+      ? resolveLegacyTourRouteImage(legacyTour as Record<string, unknown>)
+      : buildImageUrl(resolveTourHeroImage(legacyTour))
+    : "";
 
   return {
     title: `${tour} | ${city}, ${state} | All Outdoor Adventures`,
     description: `Explore ${tour} in ${city}, ${state} with All Outdoor Adventures.`,
     url: `${site}${pathname}`,
-    image: tourImage ? buildImageUrl(tourImage) : "",
+    image: tourImage || "",
   };
 };
