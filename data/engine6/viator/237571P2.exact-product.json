@@ -1,0 +1,61 @@
+{
+  "product": {
+    "productCode": "237571P2",
+    "productUrl": "https://www.viator.com/tours/Palm-Springs/Full-Day-Hike-in-Joshua-Tree-National-Park/d648-237571P2",
+    "title": "Full-Day Hike in Joshua Tree National Park",
+    "description": {
+      "text": "Spend a full day on foot inside Joshua Tree National Park with a guide who tailors the hiking rhythm to your group and trail conditions. Starting from the Palm Springs area, this hike-first experience focuses on desert trail travel through Joshua tree groves, granite formations, and expansive high-desert scenery rather than a quick drive-through overview. Along the way, your guide shares practical insight into the park\u2019s geology, flora, and wildlife while pacing breaks for water, photos, and route adjustments. The atmosphere is immersive and active, with steady movement, quiet trail sections, and time to appreciate the textures and scale of the Mojave landscape. It is a strong option for travelers who want a guided Joshua Tree day that feels personal, outdoors-focused, and grounded in the terrain."
+    },
+    "highlights": [
+      "Full-day guided hiking experience inside Joshua Tree National Park",
+      "Guide-led interpretation of geology, desert plants, and wildlife",
+      "Customizable pacing and route feel based on group comfort"
+    ],
+    "location": {
+      "startingPoint": {
+        "address": "Palm Springs, California"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 5.0,
+      "totalReviews": 3
+    },
+    "priceFrom": 199.0,
+    "itineraryItems": [
+      {
+        "title": "Palm Springs Area Departure",
+        "description": "Meet in the Palm Springs area and head toward Joshua Tree National Park for a full-day guided hiking plan.",
+        "duration": "45 minutes"
+      },
+      {
+        "title": "Joshua Tree National Park Trail Hiking",
+        "description": "Hike guided desert trails through Joshua tree groves and monzogranite formations, with route choices adjusted to the group\u2019s pace and conditions.",
+        "duration": "4 hours"
+      },
+      {
+        "title": "Scenic Park Breaks and Interpretation Stops",
+        "description": "Pause at scenic sections of Joshua Tree National Park for photos, hydration, and guide commentary on geology, flora, and fauna.",
+        "duration": "1 hour"
+      },
+      {
+        "title": "Return to Palm Springs Area",
+        "description": "Wrap up the day with the return transfer after completing the guided hike inside the park.",
+        "duration": "45 minutes"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/38/ec/b7/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
