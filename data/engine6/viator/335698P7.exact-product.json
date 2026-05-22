@@ -4,15 +4,15 @@
     "productUrl": "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Sunset-Tour/d648-335698P7",
     "title": "Joshua Tree National Park Sightseeing Adventure Tour",
     "description": {
-      "text": "Explore Joshua Tree National Park on a small-group guided sightseeing adventure designed to cover major viewpoints efficiently. Travel with a local guide between park highlights, stop for short interpretive walks, and learn about desert geology, plants, and wildlife while enjoying broad scenic vistas. This half-day format is ideal for travelers who want a structured, informative experience without self-driving in the park."
+      "text": "See Joshua Tree National Park at its most cinematic on a relaxed small-group tour timed for late-day light. Travel by vehicle through the park\u2019s dramatic desert landscapes, where sculpted boulders, twisting Joshua trees, and wide-open basins create some of Southern California\u2019s most memorable scenery. Along the way, your guide leads short, easy walks and well-chosen viewpoint stops so you can experience the park up close without committing to a strenuous hike.\n\nThe route typically includes signature areas such as Hidden Valley, Keys View, and the Cap Rock\u2013Skull Rock corridor, with flexibility for conditions and timing. As afternoon shifts toward golden hour, the colors across the rocks and desert floor become especially striking\u2014ideal for photography and quiet moments alike. It\u2019s an excellent choice for travelers who want a thoughtful Joshua Tree guided tour that blends comfort, storytelling, and the park\u2019s essential highlights."
     },
     "highlights": [],
     "additionalInfo": [
-      "Not recommended for travelers with spinal injuries",
-      "Not recommended for travelers with poor cardiovascular health",
-      "Suitable for all physical fitness levels",
-      "Children must be accompanied by an adult",
-      "Do you have any physical limitations or food allergies we should be aware of?"
+      "This is a small-group guided experience.",
+      "Expect brief, optional walks at select stops on mostly uneven natural surfaces.",
+      "Bring sun protection, water, and layered clothing for shifting desert temperatures.",
+      "Children must be accompanied by an adult.",
+      "Share mobility needs in advance so the guide can help tailor stop pacing when possible."
     ],
     "inclusions": [
       "Private transportation",
@@ -66,38 +66,12 @@
       {
         "pointOfInterestLocation": {
           "location": {
-            "lat": 34.134728,
-            "lng": -116.313066
+            "lat": 34.0219,
+            "lng": -116.1686
           },
-          "fullName": "Joshua Tree Visitor Center"
+          "fullName": "Quail Springs Area"
         },
-        "description": "Meet your guide in Joshua Tree and start with a short orientation before entering the park corridor.",
-        "duration": {
-          "fixedDurationInMinutes": 20
-        }
-      },
-      {
-        "pointOfInterestLocation": {
-          "location": {
-            "lat": 34.011286,
-            "lng": -116.166868
-          },
-          "fullName": "Joshua Tree National Park Scenic Stops"
-        },
-        "description": "Drive between signature rock formations and Joshua tree groves, with multiple photo and interpretation stops selected for current conditions.",
-        "duration": {
-          "fixedDurationInMinutes": 120
-        }
-      },
-      {
-        "pointOfInterestLocation": {
-          "location": {
-            "lat": 33.9226,
-            "lng": -116.1739
-          },
-          "fullName": "Panoramic Viewpoint"
-        },
-        "description": "Pause at an elevated overlook to take in expansive desert basin views and late-day light across the landscape.",
+        "description": "Begin near Quail Springs, where the high desert opens into broad valleys framed by granite outcrops and Joshua tree groves. Your guide introduces the landscape and sets the tone for the afternoon route.",
         "duration": {
           "fixedDurationInMinutes": 30
         }
@@ -105,14 +79,53 @@
       {
         "pointOfInterestLocation": {
           "location": {
-            "lat": 34.134728,
-            "lng": -116.313066
+            "lat": 34.0129,
+            "lng": -116.1663
           },
-          "fullName": "Return to Joshua Tree"
+          "fullName": "Hidden Valley"
         },
-        "description": "Return to the Joshua Tree area after a compact, guide-led sightseeing circuit through key park zones.",
+        "description": "Continue to Hidden Valley for a short interpretive stop among massive rock formations. This sheltered basin offers one of the park\u2019s most iconic combinations of trail access, geology, and desert flora.",
         "duration": {
-          "fixedDurationInMinutes": 20
+          "fixedDurationInMinutes": 45
+        }
+      },
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "lat": 33.9227,
+            "lng": -116.1761
+          },
+          "fullName": "Keys View Overlook"
+        },
+        "description": "Climb to Keys View for sweeping panoramas over the Coachella Valley, distant mountain ranges, and the vast desert floor. It\u2019s a natural pause for photos and orientation to the region.",
+        "duration": {
+          "fixedDurationInMinutes": 35
+        }
+      },
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "lat": 34.0252,
+            "lng": -116.0593
+          },
+          "fullName": "Cap Rock and Skull Rock Region"
+        },
+        "description": "Explore the Cap Rock and Skull Rock corridor, where wind-shaped granite and dense Joshua tree stands create classic park scenery. Short stops here highlight textures, light, and unusual desert forms.",
+        "duration": {
+          "fixedDurationInMinutes": 40
+        }
+      },
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "lat": 34.0006,
+            "lng": -116.1218
+          },
+          "fullName": "Scenic Pullouts and Sunset Viewpoints"
+        },
+        "description": "Finish with scenic pullouts selected for sunset conditions. As golden light moves across boulders and cholla flats, you\u2019ll have time to take in the atmosphere before returning from the park.",
+        "duration": {
+          "fixedDurationInMinutes": 30
         }
       }
     ],
