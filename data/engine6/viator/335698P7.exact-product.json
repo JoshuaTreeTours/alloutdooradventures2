@@ -1,0 +1,192 @@
+{
+  "product": {
+    "productCode": "335698P7",
+    "productUrl": "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Sunset-Tour/d648-335698P7",
+    "title": "Joshua Tree National Park Half-Day Small-Group Guided Tour",
+    "description": {
+      "text": "Joshua Tree National Park Half-Day Small-Group Guided Tour offers a relaxed and scenic way to experience some of the park\u2019s most iconic landscapes without the need for strenuous hiking or complicated planning. Travel through Joshua Tree\u2019s high desert with a knowledgeable guide while exploring towering rock formations, winding Joshua tree forests, and expansive desert vistas shaped by millions of years of geology.\n\nDesigned for visitors who want to experience the highlights of Joshua Tree National Park in just a half day, this small-group tour includes several scenic stops and short optional walks along the route. Possible highlights include the granite boulder fields near Quail Springs, the dramatic rock formations of Hidden Valley, and panoramic views from Keys View overlooking the Coachella Valley and surrounding mountain ranges.\n\nAs the desert light shifts toward late afternoon, the landscape takes on a quieter and more atmospheric character that makes this tour especially rewarding for sightseeing, photography, and first-time visitors to Joshua Tree."
+    },
+    "highlights": [],
+    "additionalInfo": [
+      "This is a small-group guided experience.",
+      "Expect brief, optional walks at select stops on mostly uneven natural surfaces.",
+      "Bring sun protection, water, and layered clothing for shifting desert temperatures.",
+      "Children must be accompanied by an adult.",
+      "Share mobility needs in advance so the guide can help tailor stop pacing when possible."
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Air-conditioned vehicle",
+      "Professional tour guide",
+      "Bottled water",
+      "Light snacks"
+    ],
+    "exclusions": [
+      "National Park entrance fee (pass accepted, otherwise per-person park fee applies)",
+      "Guide gratuities"
+    ],
+    "location": {
+      "city": "Joshua Tree",
+      "state": "California"
+    },
+    "reviews": {
+      "combinedAverageRating": 4.9067163,
+      "totalReviews": 268
+    },
+    "logistics": {
+      "start": {
+        "description": null
+      }
+    },
+    "bookingQuestions": [
+      "AGEBAND",
+      "FULL_NAMES_FIRST",
+      "FULL_NAMES_LAST",
+      "HEIGHT",
+      "SPECIAL_REQUIREMENTS"
+    ],
+    "cancellationPolicy": {
+      "type": "STANDARD",
+      "description": "For a full refund, cancel at least 24 hours before the scheduled departure time.",
+      "cancelIfBadWeather": true,
+      "cancelIfInsufficientTravelers": true,
+      "refundEligibility": [
+        {
+          "dayRangeMin": 1,
+          "percentageRefundable": 100
+        },
+        {
+          "dayRangeMin": 0,
+          "dayRangeMax": 1,
+          "percentageRefundable": 0
+        }
+      ]
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "lat": 34.0219,
+            "lng": -116.1686
+          },
+          "fullName": "Quail Springs Area"
+        },
+        "description": "Begin near Quail Springs, where the high desert opens into broad valleys framed by granite outcrops and Joshua tree groves. Your guide introduces the landscape and sets the tone for the afternoon route.",
+        "duration": {
+          "fixedDurationInMinutes": 30
+        }
+      },
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "lat": 34.0129,
+            "lng": -116.1663
+          },
+          "fullName": "Hidden Valley"
+        },
+        "description": "Continue to Hidden Valley for a short interpretive stop among massive rock formations. This sheltered basin offers one of the park\u2019s most iconic combinations of trail access, geology, and desert flora.",
+        "duration": {
+          "fixedDurationInMinutes": 45
+        }
+      },
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "lat": 33.9227,
+            "lng": -116.1761
+          },
+          "fullName": "Keys View Overlook"
+        },
+        "description": "Climb to Keys View for sweeping panoramas over the Coachella Valley, distant mountain ranges, and the vast desert floor. It\u2019s a natural pause for photos and orientation to the region.",
+        "duration": {
+          "fixedDurationInMinutes": 35
+        }
+      },
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "lat": 34.0252,
+            "lng": -116.0593
+          },
+          "fullName": "Cap Rock and Skull Rock Region"
+        },
+        "description": "Explore the Cap Rock and Skull Rock corridor, where wind-shaped granite and dense Joshua tree stands create classic park scenery. Short stops here highlight textures, light, and unusual desert forms.",
+        "duration": {
+          "fixedDurationInMinutes": 40
+        }
+      },
+      {
+        "pointOfInterestLocation": {
+          "location": {
+            "lat": 34.0006,
+            "lng": -116.1218
+          },
+          "fullName": "Scenic Pullouts and Sunset Viewpoints"
+        },
+        "description": "Finish with scenic pullouts selected for sunset conditions. As golden light moves across boulders and cholla flats, you\u2019ll have time to take in the atmosphere before returning from the park.",
+        "duration": {
+          "fixedDurationInMinutes": 30
+        }
+      }
+    ],
+    "priceFrom": "$99.00",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/5f/b2/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        },
+        {
+          "isCover": true,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        },
+        {
+          "isCover": false,
+          "variants": {}
+        }
+      ]
+    }
+  }
+}

@@ -41,6 +41,7 @@ import specimen6740jtreePayload from "../../data/engine6/viator/6740JTREE.exact-
 import specimen2335p1Payload from "../../data/engine6/viator/2335P1.exact-product.json";
 import specimen3351p13Payload from "../../data/engine6/viator/3351P13.exact-product.json";
 import specimen3351p15Payload from "../../data/engine6/viator/3351P15.exact-product.json";
+import specimen335698p7Payload from "../../data/engine6/viator/335698P7.exact-product.json";
 import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-product.json";
 import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-product.json";
 import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-product.json";
@@ -609,6 +610,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Palm-Springs/Earthquake-Canyon-Express-Downhill-Bike-Adventure/d648-3351P13",
     rawPayload: specimen3351p13Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "335698P7",
+    publicUrl:
+      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Sunset-Tour/d648-335698P7",
+    rawPayload: specimen335698p7Payload as Record<string, unknown>,
   },
   {
     productCode: "3351P15",

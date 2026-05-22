@@ -69,6 +69,8 @@ const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
     "https://www.viator.com/tours/San-Diego/San-Diego-Harbor-Speed-Boat-Adventure/d736-5257BOAT",
   "47235P1":
     "https://www.viator.com/tours/Los-Angeles/Full-Day-Iconic-Sights-of-Los-Angeles-Tour/d645-47235P1",
+  "335698P7":
+    "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Sunset-Tour/d648-335698P7",
   "2030UNIENTRY":
     "https://www.viator.com/tours/Anaheim-and-Buena-Park/Universal-Studios-Hollywood-General-Admission-Ticket/d797-2030UNIENTRY",
 };
