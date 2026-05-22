@@ -1355,8 +1355,11 @@ describe("engine6 listing surfaces", () => {
     expect(detailTour?.canonicalPath).toBe(
       ENGINE6_JOSHUA_TREE_HALF_DAY_SMALL_GROUP_ROUTE
     );
-    expect(detailTour?.priceAmount).toBe(169);
-    expect(detailTour?.priceFormatted).toBe("From $169.00");
+    expect(detailTour?.priceAmount).toBe(99);
+    expect(detailTour?.priceFormatted).toBe("From $99.00");
+
+    expect(detailTour?.bookingUrl).toContain("/d648-335698P7");
+    expect(detailTour?.bookingUrl).toContain("pid=P00290915");
 
     const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
     expect(detailHtml).toContain(
@@ -1367,7 +1370,7 @@ describe("engine6 listing surfaces", () => {
       'href="/destinations/california/joshua-tree/tours"'
     );
     expect(detailHtml).toContain("<strong>Price:</strong>");
-    expect(detailHtml).toContain("From $169.00");
+    expect(detailHtml).toContain("From $99.00");
     expect(detailHtml).not.toContain("Check latest price");
 
     const schema = buildEngine6SchemaGraph(detailTour!);
@@ -1385,7 +1388,7 @@ describe("engine6 listing surfaces", () => {
     expect(productNode?.image).toBe(ENGINE6_335698P7_EXPECTED_HERO_URL);
     expect(productNode?.offers).toBeDefined();
     expect(productNode?.aggregateRating).toBeDefined();
-    expect(offerNode?.price).toBe(169);
+    expect(offerNode?.price).toBe(99);
     expect(detailTour?.itinerary.length).toBeGreaterThan(0);
   });
 
