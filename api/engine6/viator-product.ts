@@ -16,6 +16,46 @@ const buildHeaders = (apiKey: string) => ({
   "exp-api-key": apiKey,
 });
 
+const extractAvailabilitySummaryPrice = (payload: unknown): number | null => {
+  if (!payload || typeof payload !== "object") {
+    return null;
+  }
+
+  const summary = (payload as Record<string, unknown>).summary;
+  if (!summary || typeof summary !== "object") {
+    return null;
+  }
+
+  const fromPrice = (summary as Record<string, unknown>).fromPrice;
+  if (typeof fromPrice !== "number" || !Number.isFinite(fromPrice) || fromPrice <= 0) {
+    return null;
+  }
+
+  return fromPrice;
+};
+
+const fetchAvailabilitySummaryPrice = async (args: {
+  apiKey: string;
+  baseUrl: string;
+  productCode: string;
+}): Promise<number | null> => {
+  const url = `${args.baseUrl}/availability/schedules/${encodeURIComponent(args.productCode)}?currency=USD`;
+  const response = await fetch(url, {
+    headers: buildHeaders(args.apiKey),
+  });
+  if (!response.ok) {
+    return null;
+  }
+
+  const contentType = String(response.headers.get("content-type") ?? "").toLowerCase();
+  if (!contentType.includes("json")) {
+    return null;
+  }
+
+  const payload = (await response.json()) as unknown;
+  return extractAvailabilitySummaryPrice(payload);
+};
+
 const getBundledExactProductPayload = async (productCode: string) => {
   const payloadPath = path.join(
     process.cwd(),
@@ -576,10 +616,30 @@ export default async function handler(req: any, res: any) {
   }
 
   const extracted = safeExtractEngine6Product(payload);
+  const normalizedBaseUrl = baseUrl.replace(/\/$/, "");
+  const liveAvailabilityPrice =
+    extracted.extracted.priceAmount === null
+      ? await fetchAvailabilitySummaryPrice({
+          apiKey: key,
+          baseUrl: normalizedBaseUrl,
+          productCode,
+        })
+      : null;
+  const extractedWithAvailabilityPrice =
+    typeof liveAvailabilityPrice === "number"
+      ? {
+          ...extracted,
+          extracted: {
+            ...extracted.extracted,
+            priceAmount: liveAvailabilityPrice,
+            priceFormatted: `From $${liveAvailabilityPrice.toFixed(2)}`,
+          },
+        }
+      : extracted;
 
   const extractedProductCode =
-    typeof extracted.product?.productCode === "string"
-      ? extracted.product.productCode.trim().toUpperCase()
+    typeof extractedWithAvailabilityPrice.product?.productCode === "string"
+      ? extractedWithAvailabilityPrice.product.productCode.trim().toUpperCase()
       : null;
 
   if (
@@ -593,41 +653,41 @@ export default async function handler(req: any, res: any) {
       productCode,
       bundledPayload,
       diagnostics,
-      extracted
+      extractedWithAvailabilityPrice
     );
     return;
   }
 
-  if (bundledPayload && extracted.extracted.priceAmount === null) {
+  if (bundledPayload && extractedWithAvailabilityPrice.extracted.priceAmount === null) {
     diagnostics.usedBundledFallbackBecause = "live-price-missing-or-zero";
     respondWithBundledFallback(
       res,
       productCode,
       bundledPayload,
       diagnostics,
-      extracted
+      extractedWithAvailabilityPrice
     );
     return;
   }
 
-  if (bundledPayload && extracted.diagnostics.heroFallbackTriggered) {
+  if (bundledPayload && extractedWithAvailabilityPrice.diagnostics.heroFallbackTriggered) {
     diagnostics.usedBundledFallbackBecause = "live-hero-missing-or-foreign";
     respondWithBundledFallback(
       res,
       productCode,
       bundledPayload,
       diagnostics,
-      extracted
+      extractedWithAvailabilityPrice
     );
     return;
   }
 
-  Object.assign(diagnostics, extracted.diagnostics, {
+  Object.assign(diagnostics, extractedWithAvailabilityPrice.diagnostics, {
     source: "live-api",
   });
   const strictHeroViolationReason = getStrictHeroViolationReason({
     productCode,
-    extractedHeroUrl: extracted.extracted.heroImageUrl,
+    extractedHeroUrl: extractedWithAvailabilityPrice.extracted.heroImageUrl,
     diagnostics,
   });
   if (strictHeroViolationReason) {
@@ -647,8 +707,8 @@ export default async function handler(req: any, res: any) {
     source: "live-api",
     diagnostics,
     productCode,
-    rawProduct: extracted.product,
-    extracted: extracted.extracted,
+    rawProduct: extractedWithAvailabilityPrice.product,
+    extracted: extractedWithAvailabilityPrice.extracted,
     headers: {
       "Cache-Control": "public, s-maxage=300, stale-while-revalidate=1800",
       "X-Engine6-Source": "live-api",
