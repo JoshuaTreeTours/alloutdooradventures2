@@ -5,7 +5,7 @@ import type { buildBookingMeta, buildTourMeta } from "./tourMeta";
 type Tour = {
   id?: string | number;
   slug: string;
-  destination: { stateSlug: string; citySlug: string };
+  destination: { stateSlug: string; citySlug: string; state?: string; city?: string };
   heroImage?: string | null;
   galleryImages?: string[] | null;
   primaryImage?: string | null;
@@ -153,31 +153,35 @@ export const buildLegacyTourRouteSeo = ({
   if (!detailMatch) return null;
 
   const [, stateSlug, citySlug, tourSlug] = detailMatch;
+  const normalize = (value: string | undefined | null) =>
+    (value ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  const routeState = normalize(stateSlug);
+  const routeCity = normalize(citySlug);
   const routeProductIdMatch = /-(\d+)$/i.exec(tourSlug);
   const routeProductId = routeProductIdMatch?.[1] ?? null;
-  const tour = tours.find(
-    t =>
-      t.destination.stateSlug === stateSlug &&
-      t.destination.citySlug === citySlug &&
-      t.slug === tourSlug
-  ) ??
-    (routeProductId
-      ? tours.find(t => {
-          if (
-            t.destination.stateSlug !== stateSlug ||
-            t.destination.citySlug !== citySlug
-          ) {
-            return false;
-          }
 
-          const slugProductId = /-(\d+)$/i.exec(t.slug)?.[1];
-          const tourId =
-            typeof t.id === "number" || typeof t.id === "string"
-              ? String(t.id)
-              : null;
-          return slugProductId === routeProductId || tourId === routeProductId;
-        })
-      : null);
+  const hasMatchingDestination = (tour: Tour) =>
+    normalize(tour.destination.stateSlug) === routeState &&
+    normalize(tour.destination.citySlug) === routeCity;
+
+  const hasMatchingNamedDestination = (tour: Tour) =>
+    normalize(tour.destination.state) === routeState &&
+    normalize(tour.destination.city) === routeCity;
+
+  const isMatchingProductId = (tour: Tour) => {
+    if (!routeProductId) return false;
+    const slugProductId = /-(\d+)$/i.exec(tour.slug)?.[1];
+    const tourId =
+      typeof tour.id === "number" || typeof tour.id === "string"
+        ? String(tour.id)
+        : null;
+    return slugProductId === routeProductId || tourId === routeProductId;
+  };
+
+  const tour =
+    tours.find(t => hasMatchingDestination(t) && t.slug === tourSlug) ??
+    tours.find(t => hasMatchingDestination(t) && isMatchingProductId(t)) ??
+    tours.find(t => isMatchingProductId(t) && hasMatchingNamedDestination(t));
   if (!tour) return null;
 
   const canonical = `${site}${pathname}`;
