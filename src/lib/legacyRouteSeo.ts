@@ -8,6 +8,8 @@ type Tour = {
   destination: { stateSlug: string; citySlug: string };
   heroImage?: string | null;
   galleryImages?: string[] | null;
+  primaryImage?: string | null;
+  image?: string | null;
 };
 
 type MetaBuilder = typeof buildTourMeta;
@@ -78,12 +80,38 @@ const extractFirstLegacyMarkupImage = (
 };
 
 const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>) => {
-  const primary = normalizeCandidateImage(resolveTourHeroImage(tour as any) ?? tour.heroImage ?? null);
-  if (primary) return primary;
+  const directCandidates = [
+    resolveTourHeroImage(tour as any),
+    tour.heroImage,
+    tour.primaryImage,
+    tour.image,
+    (tour as any).primaryImageUrl,
+    (tour as any).cardImage,
+    (tour as any).listingImage,
+    (tour as any).schemaImage,
+  ];
 
-  for (const image of tour.galleryImages ?? []) {
-    const normalized = normalizeCandidateImage(image);
+  for (const candidate of directCandidates) {
+    const normalized = normalizeCandidateImage(candidate);
     if (normalized) return normalized;
+  }
+
+  const payloadImageCollections = [
+    tour.galleryImages,
+    (tour as any).images,
+    (tour as any).imageUrls,
+    (tour as any).listingImages,
+    (tour as any).media,
+  ];
+
+  for (const collection of payloadImageCollections) {
+    if (!Array.isArray(collection)) continue;
+    for (const image of collection) {
+      const normalized = normalizeCandidateImage(
+        typeof image === "string" ? image : (image as any)?.url ?? (image as any)?.src
+      );
+      if (normalized) return normalized;
+    }
   }
 
   for (const value of Object.values(tour)) {

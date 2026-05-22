@@ -30,7 +30,10 @@ const NOINDEX_ROBOTS = "noindex,follow,max-image-preview:large";
 const clean = (value?: string) => (value ?? "").trim();
 
 const stripLegacyPrefix = (value: string) =>
-  value.replace(/^Destinations\s*\/\s*[^/]+\s*\/\s*[^/]+\s*\/\s*Tours\s*\/\s*/i, "");
+  value
+    .replace(/^Destinations\s*\/\s*[^/]+\s*\/\s*[^/]+\s*\/\s*Tours\s*\/\s*/i, "")
+    .replace(/\bHome\s*[:|/-]\s*/gi, "")
+    .replace(/\s*\|\s*All Outdoor Adventures$/i, "");
 
 const stripTrailingId = (value: string) =>
   value
@@ -46,6 +49,7 @@ const prettifyLegacyTourName = (value: string) =>
     .replace(/\bwith\b/gi, " ")
     .replace(/\bf\s+pjx\b/gi, "")
     .replace(/\s{2,}/g, " ")
+    .replace(/^[-:|\s]+|[-:|\s]+$/g, "")
     .trim();
 
 const isGrandCanyonSouthRimHummerRoute = (tour: TourLike) =>
@@ -132,7 +136,7 @@ const buildDescription = (tour: TourLike, canonicalUrl: string) => {
       return withLengthCap(`Explore ${tourName} in ${city}, ${state}. ${detail}`, 155);
     }
     return withLengthCap(
-      `Experience ${tourName} in ${city}, ${state} with local highlights and easy booking with All Outdoor Adventures.`,
+      `Experience ${tourName} in ${city}, ${state} with destination highlights, local context, and flexible planning through All Outdoor Adventures.`,
       155
     );
   }
@@ -158,7 +162,7 @@ const buildDescription = (tour: TourLike, canonicalUrl: string) => {
     if (detail) {
       return withLengthCap(`${base} ${detail}`, 155);
     }
-    return withLengthCap(`${base} Plan a scenic stop with local insight and flexible booking.`, 155);
+    return withLengthCap(`${base} Discover destination highlights, local atmosphere, and easy planning for your trip.`, 155);
   }
 
   const templates = [
@@ -185,7 +189,7 @@ const buildDescription = (tour: TourLike, canonicalUrl: string) => {
   }
 
   return withLengthCap(
-    `${templates[templateIndex]}${qualifier ? ` ${qualifier}.` : ""} Plan your outing with All Outdoor Adventures.`,
+    `${templates[templateIndex]}${qualifier ? ` ${qualifier}.` : ""} Discover key sights, local flavor, and straightforward trip planning with All Outdoor Adventures.`,
     155
   );
 };
