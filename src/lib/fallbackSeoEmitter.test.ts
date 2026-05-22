@@ -17,6 +17,33 @@ describe("fallbackSeoEmitter", () => {
     ).toBe(true);
   });
 
+
+  it("identifies /destinations/united-states/... legacy detail paths", () => {
+    expect(
+      isLegacyTourDetailPath(
+        "/destinations/united-states/california/santa-barbara/tours/coastal-cruise-azure-seas-4241"
+      )
+    ).toBe(true);
+  });
+
+  it("injects og/twitter/json-ld image for Santa Barbara united-states legacy route when seo.image exists", () => {
+    const route =
+      "https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/coastal-cruise-azure-seas-4241";
+    const image = "https://cdn.filestackcontent.com/santa-barbara-visible-4241";
+    const noImageTemplate = `<!doctype html><html><head><title>Default</title><meta name="description" content="d" /><meta property="og:title" content="d" /><meta property="og:description" content="d" /><meta property="og:url" content="d" /><meta name="twitter:title" content="d" /><meta name="twitter:description" content="d" /><link rel="canonical" href="https://example.com" /><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"x"}</script></head><body></body></html>`;
+
+    const html = applyRouteSeo(noImageTemplate, {
+      title: "Coastal Cruise Azure Seas | Santa Barbara, California | All Outdoor Adventures",
+      description: "d",
+      url: route,
+      image,
+    });
+
+    expect(html).toContain(`property="og:image" content="${image}"`);
+    expect(html).toContain(`name="twitter:image" content="${image}"`);
+    expect(html).toContain(`"image":"${image}"`);
+    expect(html).not.toContain('/hero.jpg');
+  });
   it("writes normalized meta and keeps image fields for valid legacy tours", () => {
     const html = applyRouteSeo(TEMPLATE, {
       title:

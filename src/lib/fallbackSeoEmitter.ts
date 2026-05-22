@@ -101,6 +101,7 @@ export const applyRouteSeo = (
 
 export const isLegacyTourDetailPath = (pathname: string) =>
   /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+\/?$/.test(pathname) ||
+  /^\/destinations\/[^/]+\/[^/]+\/[^/]+\/tours\/[^/]+\/?$/.test(pathname) ||
   /^\/tours\/[^/]+\/[^/]+\/[^/]+\/?$/.test(pathname);
 
 const toTitleCase = (value: string) =>
@@ -119,9 +120,15 @@ export const buildLegacyTourRouteFallbackSeo = ({
 }) => {
   const match =
     /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/.exec(pathname) ??
+    /^\/destinations\/([^/]+)\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/.exec(pathname) ??
     /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)\/?$/.exec(pathname);
   if (!match) return null;
-  const [, stateSlug, citySlug, tourSlug] = match;
+
+  const routeGroups = match.slice(1);
+  const [stateSlug, citySlug, tourSlug] =
+    routeGroups.length === 4
+      ? [routeGroups[1], routeGroups[2], routeGroups[3]]
+      : [routeGroups[0], routeGroups[1], routeGroups[2]];
   const state = toTitleCase(stateSlug);
   const city = toTitleCase(citySlug);
   const tour = toTitleCase(tourSlug.replace(/-\d+$/g, ""));
