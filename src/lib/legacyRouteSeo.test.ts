@@ -62,6 +62,28 @@ describe("buildLegacyTourRouteSeo", () => {
     expect(html).toContain('"image":"https://cdn.filestackcontent.com/aZUPC7t8QGa8BCbOn48Y"');
   });
 
+
+  it("recovers tour-specific image from listing/card/schema fields before markup fallback", () => {
+    const seo = buildLegacyTourRouteSeo({
+      pathname,
+      site: "https://www.alloutdooradventures.com",
+      buildTourMetaFn: buildTourMeta,
+      tours: [
+        {
+          slug: "grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131",
+          title: "Grand Canyon Signature Tour",
+          destination: { stateSlug: "arizona", citySlug: "flagstaff", city: "Flagstaff", state: "Arizona" },
+          heroImage: "/hero.jpg",
+          cardImage: "https://cdn.filestackcontent.com/card-specific-image",
+          listingImage: "https://cdn.filestackcontent.com/listing-specific-image",
+          schemaImage: "https://cdn.filestackcontent.com/schema-specific-image",
+        } as any,
+      ],
+    });
+
+    expect(seo?.image).toBe("https://cdn.filestackcontent.com/card-specific-image");
+  });
+
   it("extracts first visible image from legacy markup variants", () => {
     const seo = buildLegacyTourRouteSeo({
       pathname,
