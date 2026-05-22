@@ -41,6 +41,7 @@ import specimen6740jtreePayload from "../../data/engine6/viator/6740JTREE.exact-
 import specimen2335p1Payload from "../../data/engine6/viator/2335P1.exact-product.json";
 import specimen335698p7Payload from "../../data/engine6/viator/335698P7.exact-product.json";
 import specimen3351p15Payload from "../../data/engine6/viator/3351P15.exact-product.json";
+import specimen237571p2Payload from "../../data/engine6/viator/237571P2.exact-product.json";
 import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-product.json";
 import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-product.json";
 import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-product.json";
@@ -615,6 +616,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Palm-Springs/Palm-Springs-Indian-Canyons-Bike-and-Hike/d648-3351P15",
     rawPayload: specimen3351p15Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "237571P2",
+    publicUrl:
+      "https://www.viator.com/tours/Palm-Springs/Full-Day-Hike-in-Joshua-Tree-National-Park/d648-237571P2",
+    rawPayload: specimen237571p2Payload as Record<string, unknown>,
   },
   {
     productCode: "383300P6",

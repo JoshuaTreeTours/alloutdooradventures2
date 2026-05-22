@@ -76,7 +76,10 @@ export const assertEngine6ReplacementModePolicy = (
     }
 
 
-    if (!LEGACY_TOUR_PATHS.has(config.canonicalPath)) {
+    if (
+      !LEGACY_TOUR_PATHS.has(config.canonicalPath) &&
+      !LEGACY_ENGINE4_PATHS.has(config.canonicalPath)
+    ) {
       throw new Error(
         `Engine6 replacement mode requires a known legacy page, but none was found for ${config.canonicalPath}`
       );
