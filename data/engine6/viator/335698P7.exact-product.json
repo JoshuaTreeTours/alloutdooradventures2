@@ -1,0 +1,63 @@
+{
+  "product": {
+    "productCode": "335698P7",
+    "productUrl": "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Sunset-Tour/d648-335698P7",
+    "title": "Joshua Tree National Park Half-Day Small-Group Guided Tour",
+    "description": {
+      "text": "Joshua Tree National Park Half-Day Small-Group Guided Tour gives visitors an easy, scenic way to experience the park’s signature landscapes without planning the route themselves. Travel with a guide through high-desert terrain shaped by granite boulders, open valleys, Joshua tree groves, and wide desert views.\n\nThis small-group tour is built for travelers who want the highlights of Joshua Tree National Park in a comfortable half-day format. Along the way, stop for short optional walks, scenic viewpoints, and photo opportunities while learning about the park’s geology, desert plants, wildlife, and history.\n\nPossible highlights include the boulder fields near Quail Springs, the rock corridors of Hidden Valley, the sweeping overlook at Keys View, and classic Joshua Tree scenery near Cap Rock or Skull Rock. It is a strong fit for first-time visitors, photographers, and anyone who wants a guided park overview without a full-day hiking commitment."
+    },
+    "highlights": [
+      "Explore Joshua Tree with a guide in a half-day format",
+      "Stop at major viewpoints and short-walk areas",
+      "Photograph signature boulder landscapes and desert vistas"
+    ],
+    "location": {
+      "startingPoint": {
+        "address": "Palm Springs, California"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 120
+    },
+    "priceFrom": 169.0,
+    "itineraryItems": [
+      {
+        "title": "Quail Springs Boulder Fields",
+        "description": "Begin near Quail Springs, where broad boulder fields and Joshua tree groves introduce the park’s classic high-desert terrain.",
+        "duration": "30 minutes"
+      },
+      {
+        "title": "Hidden Valley Rock Corridor",
+        "description": "Continue to Hidden Valley for a guided stop among towering granite formations with time for a short optional walk and photos.",
+        "duration": "40 minutes"
+      },
+      {
+        "title": "Keys View Overlook",
+        "description": "Visit Keys View for sweeping vistas across the Coachella Valley, San Andreas Rift Zone, and distant mountain ranges on clear days.",
+        "duration": "25 minutes"
+      },
+      {
+        "title": "Cap Rock or Skull Rock Stop",
+        "description": "Pause at either Cap Rock or Skull Rock to experience another iconic section of Joshua Tree and capture close-up desert scenery.",
+        "duration": "30 minutes"
+      },
+      {
+        "title": "Scenic Pullouts and Sunset Viewpoints",
+        "description": "Wrap up with additional scenic pullouts timed for changing late-day light, ideal for final photos and broad desert panoramas.",
+        "duration": "30 minutes"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "imageVariants": [
+            {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/5f/b2/caption.jpg?w=700&h=500&s=1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
