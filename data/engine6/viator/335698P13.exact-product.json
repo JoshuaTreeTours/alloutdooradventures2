@@ -1,0 +1,61 @@
+{
+  "product": {
+    "productCode": "335698P13",
+    "productUrl": "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13",
+    "title": "Rock Scrambling Adventures in Joshua Tree National Park",
+    "description": {
+      "text": "Rock Scrambling Adventures in Joshua Tree National Park is a guided, small-group outing designed for active travelers who want to move through the park’s granite landscapes on foot. Instead of technical rope climbing, the experience focuses on coached scrambling across boulders, slabs, and natural rock corridors at a pace set by the group. As you travel through Joshua Tree National Park, your guide shares practical insight into local geology, desert ecology, and how weather and erosion shaped these formations over time. The route balances challenge and approachability, with regular stops for photos and wide desert views. It is a strong fit for visitors who want a hands-on outdoor adventure that goes beyond scenic driving and introduces the park through movement, terrain, and guided exploration."
+    },
+    "highlights": [
+      "Guided rock scrambling over granite formations in Joshua Tree National Park",
+      "Small-group format with route coaching and pacing support",
+      "Desert geology and landscape interpretation from your guide"
+    ],
+    "location": {
+      "startingPoint": {
+        "address": "Palm Springs, California"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 4
+    },
+    "priceFrom": 199.0,
+    "itineraryItems": [
+      {
+        "title": "Joshua Tree National Park Entry and Orientation",
+        "description": "Meet your guide, review the day’s route, and enter Joshua Tree National Park for a quick terrain and safety orientation before starting the scrambling sections.",
+        "duration": "30 minutes"
+      },
+      {
+        "title": "Granite Boulder Scrambling Zone",
+        "description": "Tackle guided rock-scrambling lines across large granite formations, with technique coaching on foot placement, route choice, and efficient movement.",
+        "duration": "2 hours"
+      },
+      {
+        "title": "Scenic Desert Viewpoints",
+        "description": "Pause at elevated viewpoints to take in open desert basins, Joshua tree forests, and layered mountain backdrops while your guide explains local geology.",
+        "duration": "45 minutes"
+      },
+      {
+        "title": "Additional Rock Features and Return",
+        "description": "Continue to a second scrambling area with varied boulder textures and natural corridors, then wrap up and return after final photo stops.",
+        "duration": "1 hour 45 minutes"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
