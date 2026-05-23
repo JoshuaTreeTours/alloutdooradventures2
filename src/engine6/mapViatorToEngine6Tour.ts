@@ -177,9 +177,6 @@ const buildAuthoritativeOverview = ({
   const cleanedSourceOverview = stripMarketingLanguage(sourceOverview)
     .replace(/\s+/g, " ")
     .trim();
-  if (countWords(cleanedSourceOverview) >= 100) {
-    return cleanedSourceOverview;
-  }
   const highlightText = highlights
     .slice(0, 3)
     .map(item => item.replace(/\.$/, "").trim())
@@ -190,21 +187,20 @@ const buildAuthoritativeOverview = ({
     .map(stop => stop.title.replace(/\.$/, "").trim())
     .filter(Boolean)
     .join(", ");
-  const sourceSnippet = stripMarketingLanguage(sourceOverview)
-    .replace(/\s+/g, " ")
+  const sourceSnippet = cleanedSourceOverview
     .split(/(?<=[.!?])\s+/)
     .slice(0, 2)
     .join(" ")
     .trim();
 
   const opening = toSentence(
-    `${title} is a ${activityLabel} in ${normalizedLocation} focused on local context and a clearly guided experience`
+    `Set in ${normalizedLocation}, ${title} is a ${activityLabel} built around a guide-led experience and practical local context`
   );
   const middleA = toSentence(
     [
       highlightText
-        ? `Expect a route that covers ${highlightText}`
-        : "The experience combines signature landmarks with practical local insights",
+        ? `During the outing, you can expect activities such as ${highlightText}`
+        : "The experience blends local interpretation with hands-on activity",
       stopText ? `with scheduled stops such as ${stopText}` : "",
     ]
       .filter(Boolean)
@@ -222,7 +218,7 @@ const buildAuthoritativeOverview = ({
       .join(" ")
   );
   const closer = toSentence(
-    "It is best for first-time visitors, time-conscious travelers, and small groups that want clear pacing without sacrificing major highlights"
+    `Overall, this ${city} experience balances clear guidance, real destination context, and a relaxed pace suited to small groups`
   );
 
   const parts = [opening, middleA, logistics, sourceSnippet, closer].filter(
@@ -232,19 +228,19 @@ const buildAuthoritativeOverview = ({
     const limited: string[] = [];
     for (const part of parts) {
       const next = [...limited, part].join(" ");
-      if (countWords(next) > 120) break;
+      if (countWords(next) > 150) break;
       limited.push(part);
     }
     return limited.join(" ");
   };
 
   let summary = withLimit();
-  if (countWords(summary) < 90) {
+  if (countWords(summary) < 100) {
     const expansion = toSentence(
-      `This ${city} tour is designed for travelers who want reliable logistics and substantive interpretation at each phase of the outing`
+      `Expect accurate location details, on-the-ground orientation, and enough flexibility to enjoy each stop without feeling rushed`
     );
     const expanded = `${summary} ${expansion}`.trim();
-    summary = countWords(expanded) <= 120 ? expanded : summary;
+    summary = countWords(expanded) <= 150 ? expanded : summary;
   }
 
   return summary;
