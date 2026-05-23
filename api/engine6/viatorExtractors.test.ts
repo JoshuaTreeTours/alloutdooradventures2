@@ -28,4 +28,24 @@ describe("extractEngine6Product operatorReviews mapping", () => {
       "product.operatorReviews.totalReviews"
     );
   });
+
+  it("prefers normalized reviews/operatorReviews counts over top-level zero reviewCount", () => {
+    const payload = {
+      product: {
+        productCode: "335698P13",
+        reviewCount: 0,
+        reviews: { totalReviews: 86, combinedAverageRating: 5 },
+        operatorReviews: { totalReviews: 86, combinedAverageRating: 5 },
+      },
+    };
+
+    const result = extractEngine6Product(payload as Record<string, unknown>);
+
+    expect(result.extracted.reviewCount).toBe(86);
+    expect(result.extracted.aggregateRating).toBe(5);
+    expect(result.diagnostics.reviewCountFieldPath).toBe(
+      "product.reviews.totalReviews"
+    );
+  });
+
 });

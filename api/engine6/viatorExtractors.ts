@@ -898,13 +898,13 @@ const extractDuration = (product: RecordLike) => {
 
 const extractPlaybookRating = (product: RecordLike): NumericResult => {
   for (const path of [
-    ["rating"],
-    ["averageRating"],
-    ["reviewSummary", "averageRating"],
     ["reviews", "combinedAverageRating"],
     ["reviews", "averageRating"],
     ["operatorReviews", "combinedAverageRating"],
     ["operatorReviews", "averageRating"],
+    ["rating"],
+    ["averageRating"],
+    ["reviewSummary", "averageRating"],
   ] as PathSegment[][]) {
     const value = parseLooseNumber(readPath(product, path));
     if (value !== null && value > 0) {
@@ -916,20 +916,28 @@ const extractPlaybookRating = (product: RecordLike): NumericResult => {
 };
 
 const extractPlaybookReviewCount = (product: RecordLike): NumericResult => {
-  for (const path of [
-    ["reviewCount"],
-    ["reviewSummary", "totalReviews"],
+  const prioritizedPaths = [
     ["reviews", "totalReviews"],
+    ["reviews", "operatorReviewCount"],
     ["reviews", "count"],
     ["reviews", "reviewCount"],
     ["operatorReviews", "totalReviews"],
+    ["operatorReviews", "operatorReviewCount"],
     ["operatorReviews", "count"],
     ["operatorReviews", "reviewCount"],
-  ] as PathSegment[][]) {
+    ["reviewSummary", "totalReviews"],
+  ] as PathSegment[][];
+
+  for (const path of prioritizedPaths) {
     const value = parseLooseNumber(readPath(product, path));
-    if (value !== null && value >= 0) {
+    if (value !== null && value > 0) {
       return { value: Math.trunc(value), path: formatFieldPath(path) };
     }
+  }
+
+  const fallbackTopLevel = parseLooseNumber(readPath(product, ["reviewCount"]));
+  if (fallbackTopLevel !== null && fallbackTopLevel > 0) {
+    return { value: Math.trunc(fallbackTopLevel), path: "product.reviewCount" };
   }
 
   return { value: null, path: null };
