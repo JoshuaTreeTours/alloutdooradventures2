@@ -47,6 +47,8 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
     "Explore one of the Coachella Valley’s defining geologic landscapes on this guided off-road Jeep tour into the San Andreas Fault zone near Palm Springs. The route travels through desert canyons and washes shaped by active tectonic forces, where your naturalist guide interprets fault movement, earthquake geology, and the landforms that reveal how the valley evolved over time. Along the way, you experience rugged terrain and wide desert vistas while learning how climate, erosion, and plate dynamics interact across this section of Southern California. Designed as a destination-first geology adventure rather than a standard city sightseeing loop, this small-group experience combines outdoor exploration with clear scientific context in one of the region’s most consequential fault environments.",
   "335698P7": () =>
     "Joshua Tree National Park Half-Day Small-Group Guided Tour gives visitors an easy, scenic way to experience the park’s signature landscapes without planning the route themselves. Travel with a guide through high-desert terrain shaped by granite boulders, open valleys, Joshua tree groves, and wide desert views. This small-group tour is built for travelers who want the highlights of Joshua Tree National Park in a comfortable half-day format. Along the way, stop for short optional walks, scenic viewpoints, and photo opportunities while learning about the park’s geology, desert plants, wildlife, and history. Possible highlights include the boulder fields near Quail Springs, the rock corridors of Hidden Valley, the sweeping overlook at Keys View, and classic Joshua Tree scenery near Cap Rock or Skull Rock. It is a strong fit for first-time visitors, photographers, and anyone who wants a guided park overview without a full-day hiking commitment.",
+  "335698P13": () =>
+    "Rock Scrambling Adventures in Joshua Tree National Park is a guided small-group experience built for active travelers who want to explore the park by moving over granite formations rather than just viewing them from the road. With route coaching from your guide, you scramble across boulder fields and natural rock features while learning how Joshua Tree National Park's desert geology and ecology shape the landscape. The outing emphasizes hands-on outdoor movement, varied terrain, and scenic rest stops with broad Mojave views. It is a strong fit for adventurous beginners and intermediate hikers seeking a more physical way to experience Joshua Tree National Park in a structured, guide-led format.",
   "3351P15": () =>
     "Explore Indian Canyons on a guided bike-and-hike experience from Palm Springs that combines cycling sections with on-foot trail segments through canyon corridors and desert scenery. The route emphasizes the area’s canyon landscape, native palm oasis setting, and the broader Coachella Valley desert environment while logistics and pacing are managed by your guide. As an active, structured outing, it is a practical choice for travelers who want a single experience that blends sightseeing, light interpretation of local desert ecology and geology, and hands-on outdoor movement.",
   "191303P1": () =>
@@ -497,6 +499,16 @@ export const mapViatorToEngine6Tour = (
       state,
       sourceOverview: sourceOverviewText,
     }) ?? overviewText;
+
+
+  if (payload.rawProductCode === "335698P13") {
+    const requiredReviewCount = 86;
+    if (payload.extracted.reviewCount !== requiredReviewCount) {
+      throw new Error(
+        `Engine6 hard-fail: 335698P13 must render ${requiredReviewCount} reviews above the fold; received ${payload.extracted.reviewCount ?? "null"}`
+      );
+    }
+  }
 
   return {
     productCode: payload.rawProductCode,
