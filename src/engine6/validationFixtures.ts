@@ -41,6 +41,7 @@ import specimen6740p7Payload from "../../data/engine6/viator/6740P7.exact-produc
 import specimen2335p1Payload from "../../data/engine6/viator/2335P1.exact-product.json";
 import specimen335698p7Payload from "../../data/engine6/viator/335698P7.exact-product.json";
 import specimen335698p13Payload from "../../data/engine6/viator/335698P13.exact-product.json";
+import specimen445161p1Payload from "../../data/engine6/viator/445161P1.exact-product.json";
 import specimen3351p15Payload from "../../data/engine6/viator/3351P15.exact-product.json";
 import specimen237571p2Payload from "../../data/engine6/viator/237571P2.exact-product.json";
 import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-product.json";
@@ -617,6 +618,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13",
     rawPayload: specimen335698p13Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "445161P1",
+    publicUrl:
+      "https://www.viator.com/tours/Palm-Springs/Professional-Stargazing-in-Joshua-Tree/d648-445161P1",
+    rawPayload: specimen445161p1Payload as Record<string, unknown>,
   },
   {
     productCode: "3351P15",

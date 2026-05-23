@@ -1,0 +1,91 @@
+{
+  "product": {
+    "productCode": "445161P1",
+    "productUrl": "https://www.viator.com/tours/Palm-Springs/Professional-Stargazing-in-Joshua-Tree/d648-445161P1",
+    "title": "Professional Stargazing in Joshua Tree",
+    "description": {
+      "text": "Spend a relaxed evening under Joshua Tree’s famously dark desert skies with a small-group stargazing experience led by an astronomy guide. After meeting your host, head to a low-light viewing area where the night opens up with bright constellations and seasonal celestial targets. You’ll use professional telescopes to observe planets, star clusters, nebulae, and other deep-sky objects based on visibility and time of year, while your guide explains what you’re seeing in simple, engaging terms. The pace is unhurried, with time to ask questions, settle into the quiet atmosphere, and enjoy the vast desert horizon after sunset. It’s an approachable way to experience the park at night, whether you’re brand-new to astronomy or already love looking up." 
+    },
+    "location": {
+      "city": "Joshua Tree",
+      "state": "California"
+    },
+    "priceFrom": "$175.00",
+    "reviews": {
+      "combinedAverageRating": 5.0,
+      "totalReviews": 12
+    },
+    "duration": "2 hours (approx.)",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/21/da/54/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group stargazing in Joshua Tree with a professional guide",
+      "Telescope viewing of seasonal planets, constellations, and deep-sky objects",
+      "Learn basic astronomy and night-sky orientation in plain language",
+      "Experience calm desert conditions away from city light pollution"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Joshua Tree, CA 92252, USA. Exact meeting details are provided after booking."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Meet in Joshua Tree",
+        "description": "Check in with your guide at the designated Joshua Tree meeting point shortly before sunset."
+      },
+      {
+        "title": "Desert night-sky orientation",
+        "description": "Get a short introduction to sky conditions, visible constellations, and the evening’s observing plan."
+      },
+      {
+        "title": "Guided telescope session",
+        "description": "Use professional telescopes to view planets, star clusters, nebulae, and other deep-sky features based on seasonal visibility."
+      },
+      {
+        "title": "Constellation storytelling and Q&A",
+        "description": "Enjoy a relaxed discussion on astronomy, navigation, and sky interpretation while continuing naked-eye and telescope viewing."
+      }
+    ],
+    "inclusions": [
+      "Professional astronomy guide",
+      "Telescope equipment",
+      "Small-group experience"
+    ],
+    "additionalInfo": [
+      "Operates in most weather, but visibility depends on cloud cover",
+      "Wear layers for cooler desert evening temperatures",
+      "Seasonal celestial targets vary throughout the year"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the stargazing experience?",
+        "answer": "The experience lasts approximately 2 hours."
+      },
+      {
+        "question": "What can we see through the telescopes?",
+        "answer": "Depending on season and sky conditions, you may view planets, constellations, and deep-sky objects like nebulae and star clusters."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "Stargazing"
+      }
+    ]
+  }
+}
