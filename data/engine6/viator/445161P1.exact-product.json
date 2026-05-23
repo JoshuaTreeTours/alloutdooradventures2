@@ -1,0 +1,91 @@
+{
+  "product": {
+    "productCode": "445161P1",
+    "productUrl": "https://www.viator.com/tours/Palm-Springs/Professional-Stargazing-in-Joshua-Tree/d648-445161P1",
+    "title": "Professional Stargazing in Joshua Tree",
+    "description": {
+      "text": "Spend an evening beneath the dark desert skies of Joshua Tree on a guided stargazing experience designed for both beginners and longtime astronomy enthusiasts. Far from the glow of city lights, Joshua Tree National Park offers exceptional night-sky visibility, creating ideal conditions for observing constellations, planets, star clusters, and seasonal celestial events. Your guide helps interpret the sky using laser pointers and professionally prepared telescopes, making it easy to understand what you are seeing without the frustration of complicated equipment setup. Throughout the session, guests can move between telescope viewing and relaxed naked-eye observation while learning about astronomy, navigation, and the unique conditions that make the high desert one of Southern California’s best stargazing locations. The experience combines science, storytelling, and the quiet atmosphere of the desert after dark into a memorable nighttime adventure near Palm Springs and Joshua Tree." 
+    },
+    "location": {
+      "city": "Joshua Tree",
+      "state": "California"
+    },
+    "priceFrom": "$175.00",
+    "reviews": {
+      "combinedAverageRating": 5.0,
+      "totalReviews": 12
+    },
+    "duration": "2 hours (approx.)",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/21/da/54/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group stargazing in Joshua Tree with a professional guide",
+      "Telescope viewing of seasonal planets, constellations, and deep-sky objects",
+      "Learn basic astronomy and night-sky orientation in plain language",
+      "Experience calm desert conditions away from city light pollution"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Joshua Tree, CA 92252, USA. Exact meeting details are provided after booking."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Meet in Joshua Tree",
+        "description": "Check in with your guide at the designated Joshua Tree meeting point shortly before sunset."
+      },
+      {
+        "title": "Desert night-sky orientation",
+        "description": "Get a short introduction to sky conditions, visible constellations, and the evening’s observing plan."
+      },
+      {
+        "title": "Guided telescope session",
+        "description": "Use professional telescopes to view planets, star clusters, nebulae, and other deep-sky features based on seasonal visibility."
+      },
+      {
+        "title": "Constellation storytelling and Q&A",
+        "description": "Enjoy a relaxed discussion on astronomy, navigation, and sky interpretation while continuing naked-eye and telescope viewing."
+      }
+    ],
+    "inclusions": [
+      "Professional astronomy guide",
+      "Telescope equipment",
+      "Small-group experience"
+    ],
+    "additionalInfo": [
+      "Operates in most weather, but visibility depends on cloud cover",
+      "Wear layers for cooler desert evening temperatures",
+      "Seasonal celestial targets vary throughout the year"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the stargazing experience?",
+        "answer": "The experience lasts approximately 2 hours."
+      },
+      {
+        "question": "What can we see through the telescopes?",
+        "answer": "Depending on season and sky conditions, you may view planets, constellations, and deep-sky objects like nebulae and star clusters."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "Stargazing"
+      }
+    ]
+  }
+}
