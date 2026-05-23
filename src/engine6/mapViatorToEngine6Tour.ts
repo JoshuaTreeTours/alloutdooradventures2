@@ -174,6 +174,12 @@ const buildAuthoritativeOverview = ({
   const normalizedLocation = `${city}, ${state}`;
   const activityLabel =
     categoryLabel?.toLowerCase().replace(/\s+tour$/i, " tour") ?? "guided tour";
+  const cleanedSourceOverview = stripMarketingLanguage(sourceOverview)
+    .replace(/\s+/g, " ")
+    .trim();
+  if (countWords(cleanedSourceOverview) >= 100) {
+    return cleanedSourceOverview;
+  }
   const highlightText = highlights
     .slice(0, 3)
     .map(item => item.replace(/\.$/, "").trim())
@@ -192,7 +198,7 @@ const buildAuthoritativeOverview = ({
     .trim();
 
   const opening = toSentence(
-    `${title} is a ${activityLabel} in ${normalizedLocation} focused on efficient access to key sights and local context`
+    `${title} is a ${activityLabel} in ${normalizedLocation} focused on local context and a clearly guided experience`
   );
   const middleA = toSentence(
     [
