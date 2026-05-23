@@ -500,6 +500,16 @@ export const mapViatorToEngine6Tour = (
       sourceOverview: sourceOverviewText,
     }) ?? overviewText;
 
+
+  if (payload.rawProductCode === "335698P13") {
+    const requiredReviewCount = 86;
+    if (payload.extracted.reviewCount !== requiredReviewCount) {
+      throw new Error(
+        `Engine6 hard-fail: 335698P13 must render ${requiredReviewCount} reviews above the fold; received ${payload.extracted.reviewCount ?? "null"}`
+      );
+    }
+  }
+
   return {
     productCode: payload.rawProductCode,
     title,
