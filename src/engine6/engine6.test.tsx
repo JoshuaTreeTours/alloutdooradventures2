@@ -1393,6 +1393,30 @@ describe("engine6 listing surfaces", () => {
   });
 
 
+  it("keeps 335698P13 review counts aligned across listing, detail hero, and schema aggregate rating", () => {
+    const unifiedTours = getToursByCityUnified("california", "joshua-tree");
+    const entry = unifiedTours.find(item => item.tour.productCode === "335698P13");
+
+    expect(entry).toBeDefined();
+    expect(entry?.tour.badges?.rating).toBe(5);
+    expect(entry?.tour.badges?.reviewCount).toBe(86);
+
+    const detailTour = engine6ResolvedTours.find(tour => tour.productCode === "335698P13");
+    expect(detailTour).toBeDefined();
+    expect(detailTour?.aggregateRating).toBe(5);
+    expect(detailTour?.reviewCount).toBe(86);
+
+    const schema = buildEngine6SchemaGraph(detailTour!);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const aggregateNode = graph.find(node => node["@type"] === "AggregateRating") as
+      | Record<string, unknown>
+      | undefined;
+    expect(aggregateNode).toBeDefined();
+    expect(aggregateNode?.ratingValue).toBe(5);
+    expect(aggregateNode?.reviewCount).toBe(86);
+  });
+
+
 
   it("rebuilds 3351P15 in place with API-derived price/reviews and deterministic hero parity", () => {
     const unifiedTours = getToursByCityUnified("california", "joshua-tree");
