@@ -486,7 +486,7 @@ export const mapViatorToEngine6Tour = (
   const formattedStartingPrice = formatEngine6StartingPriceLabel(
     payload.extracted.priceAmount
   );
-  const overviewText = buildAuthoritativeOverview({
+  const synthesizedOverview = buildAuthoritativeOverview({
     title,
     city,
     state,
@@ -497,12 +497,13 @@ export const mapViatorToEngine6Tour = (
     meetingPointText: payload.extracted.meetingPointText ?? null,
     sourceOverview: sourceOverviewText,
   });
+  const overriddenOverview = ENGINE6_OVERVIEW_OVERRIDES[payload.rawProductCode]?.({
+    city,
+    state,
+    sourceOverview: sourceOverviewText,
+  });
   const normalizedOverview =
-    ENGINE6_OVERVIEW_OVERRIDES[payload.rawProductCode]?.({
-      city,
-      state,
-      sourceOverview: sourceOverviewText,
-    }) ?? overviewText;
+    sourceOverviewText || overriddenOverview || synthesizedOverview;
 
 
   if (payload.rawProductCode === "335698P13") {
