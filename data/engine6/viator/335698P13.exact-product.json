@@ -16,9 +16,9 @@
         "address": "Palm Springs, California"
       }
     },
-    "reviews": {
+    "operatorReviews": {
       "combinedAverageRating": 5,
-      "totalReviews": 4
+      "totalReviews": 86
     },
     "priceFrom": 199.0,
     "itineraryItems": [

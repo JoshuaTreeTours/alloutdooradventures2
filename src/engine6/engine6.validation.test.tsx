@@ -258,6 +258,8 @@ describe("engine6 single-tour validation harness", () => {
     );
   });
 
+
+
   it("emits a compact validation report for each Engine6 tour fixture", () => {
     const reports = ENGINE6_VALIDATION_FIXTURES.map(
       buildEngine6ValidationReport

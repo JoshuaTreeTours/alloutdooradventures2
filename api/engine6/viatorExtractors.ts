@@ -903,6 +903,8 @@ const extractPlaybookRating = (product: RecordLike): NumericResult => {
     ["reviewSummary", "averageRating"],
     ["reviews", "combinedAverageRating"],
     ["reviews", "averageRating"],
+    ["operatorReviews", "combinedAverageRating"],
+    ["operatorReviews", "averageRating"],
   ] as PathSegment[][]) {
     const value = parseLooseNumber(readPath(product, path));
     if (value !== null && value > 0) {
@@ -920,6 +922,9 @@ const extractPlaybookReviewCount = (product: RecordLike): NumericResult => {
     ["reviews", "totalReviews"],
     ["reviews", "count"],
     ["reviews", "reviewCount"],
+    ["operatorReviews", "totalReviews"],
+    ["operatorReviews", "count"],
+    ["operatorReviews", "reviewCount"],
   ] as PathSegment[][]) {
     const value = parseLooseNumber(readPath(product, path));
     if (value !== null && value >= 0) {
