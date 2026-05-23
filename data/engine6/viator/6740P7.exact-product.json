@@ -1,9 +1,9 @@
 {
   "product": {
     "productCode": "6740P7",
-    "productUrl": "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7?pid=P00290915&mcid=42383&medium=api&api_version=2.0",
-    "title": "Joshua Tree Backroads Hummer H2 Tour",
-    "description": "This Joshua Tree Scenic Tour explores the high-desert landscapes between Palm Springs and Joshua Tree National Park in a rugged Hummer H2 with a local guide. Instead of a simple drive-through, the route focuses on backroads access, scenic pullouts, and short interpretive stops where you can photograph rock formations, Joshua tree groves, and open valley panoramas. You\u2019ll hear practical context on desert geology, plants, and wildlife while traveling in a small-group format designed for comfort and visibility. The itinerary can include key viewpoints and photo locations around the park corridor, making this a strong choice for first-time visitors who want a guided overview, desert storytelling, and a memorable off-pavement perspective near Palm Springs.",
+    "productUrl": "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-National-Park-Scenic-Tour-Rated-1/d648-6740P7?pid=P00290915&mcid=42383&medium=api&api_version=2.0",
+    "title": "Joshua Tree National Park Scenic Tour | Rated #1",
+    "description": "This Joshua Tree Scenic Tour gives guests a guided, backroads-focused way to experience the national park from Palm Springs without the pressure of planning every turn. Travel in a rugged Hummer H2 or Adventure Van with a guide who links major desert landmarks to useful context on geology, ecology, and regional history. The day is structured around scenic drive segments plus regular stops for photos and short walks, so you get close to the landscape rather than only viewing it from the road. Compared with ordinary self-drive sightseeing, the format combines easier logistics, local interpretation, and access to route choices that feel more immersive and less rushed. It suits first-time Joshua Tree visitors, couples, families with older kids, and photographers who want a comfortable pace with strong scenery and clear storytelling throughout the outing.",
     "location": {
       "city": "Joshua Tree",
       "state": "California"
@@ -20,17 +20,17 @@
           "isCover": true,
           "variants": {
             "FULL": {
-              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/ae/5d/caption.jpg?w=1400&h=1000&s=1",
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg",
               "width": 1400,
               "height": 1000
             }
           },
-          "caption": "Joshua Tree Scenic Tour Hummer H2 through desert backroads"
+          "caption": "Joshua Tree National Park Scenic Tour desert landscape"
         }
       ]
     },
     "highlights": [
-      "Ride through Joshua Tree National Park in an open-air Hummer.",
+      "Ride through Joshua Tree National Park in a rugged tour vehicle.",
       "See dramatic rock formations and desert landscapes with guide commentary.",
       "Stop at scenic viewpoints for photos and interpretation.",
       "Small-group format for a more personal experience."
@@ -43,7 +43,7 @@
     "itineraryItems": [
       {
         "title": "Joshua Tree National Park",
-        "description": "Begin the adventure with travel into Joshua Tree National Park aboard an open-air Hummer, with guided narration and scenic desert views along the way.",
+        "description": "Begin the adventure with travel into Joshua Tree National Park with guided narration and scenic desert views along the way.",
         "duration": "3 hours"
       },
       {
@@ -64,7 +64,7 @@
     ],
     "inclusions": [
       "Professional guide",
-      "Open-air Hummer transportation",
+      "Adventure Van transportation",
       "Bottled water"
     ],
     "exclusions": [
@@ -84,11 +84,11 @@
       },
       {
         "question": "How long is the experience?",
-        "answer": "The Hummer adventure is approximately 3 to 5 hours."
+        "answer": "The scenic adventure is approximately 3 to 5 hours."
       },
       {
         "question": "What is included?",
-        "answer": "Your booking includes a professional guide, open-air Hummer transportation, and bottled water."
+        "answer": "Your booking includes a professional guide, Adventure Van transportation, and bottled water."
       },
       {
         "question": "Is the tour suitable for all travelers?",
