@@ -1,5 +1,8 @@
 import { describe, it, expect } from "vitest";
-import { mergeEngine6LiveFieldsIntoTour } from "./liveProductFields";
+import {
+  mergeEngine6LiveCommercialFieldsIntoCardEntry,
+  mergeEngine6LiveFieldsIntoTour,
+} from "./liveProductFields";
 import type { Tour } from "../data/tours.types";
 
 const makeEngine6Tour = (overrides: Partial<Tour> = {}): Tour => ({
@@ -66,5 +69,37 @@ describe("mergeEngine6LiveFieldsIntoTour", () => {
     expect(merged.badges.priceFrom).toBe("From $175.00");
     expect(merged.badges.rating).toBe(4.9);
     expect(merged.badges.reviewCount).toBe(310);
+  });
+});
+
+describe("mergeEngine6LiveCommercialFieldsIntoCardEntry", () => {
+  it("preserves card identity and image fields while hydrating commercial values", () => {
+    const base = {
+      href: "/destinations/states/california/cities/joshua-tree/tours/scenic-tour-6740p7",
+      tour: makeEngine6Tour({
+        productCode: "6740P7",
+        heroImage: "https://images.viator.com/canonical/6740P7.jpg",
+        canonicalUrl:
+          "/destinations/states/california/cities/joshua-tree/tours/scenic-tour-6740p7",
+      }),
+    };
+
+    const merged = mergeEngine6LiveCommercialFieldsIntoCardEntry(base, {
+      priceAmount: 127.2,
+      priceFormatted: "From $127.20",
+      aggregateRating: 4.7,
+      reviewCount: 556,
+      durationText: "6 hours",
+    });
+
+    expect(merged.href).toBe(base.href);
+    expect(merged.tour.productCode).toBe(base.tour.productCode);
+    expect(merged.tour.title).toBe(base.tour.title);
+    expect(merged.tour.slug).toBe(base.tour.slug);
+    expect(merged.tour.heroImage).toBe(base.tour.heroImage);
+    expect(merged.tour.badges.priceFrom).toBe("From $127.20");
+    expect(merged.tour.badges.rating).toBe(4.7);
+    expect(merged.tour.badges.reviewCount).toBe(556);
+    expect(merged.tour.badges.duration).toBe("6 hours");
   });
 });

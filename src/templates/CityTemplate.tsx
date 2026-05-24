@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Link } from "wouter";
 
@@ -21,6 +21,11 @@ import { getFlagstaffTourDetailPath } from "../data/flagstaffTours";
 import { filterHeroImages, resolveHeroImageForRoute } from "../utils/hero";
 import { SITE_BRAND_NAME } from "../utils/site";
 import { buildMetaDescription } from "../utils/seo";
+import {
+  fetchEngine6LiveProductFields,
+  mergeEngine6LiveCommercialFieldsIntoCardEntry,
+  type Engine6LiveProductFields,
+} from "../engine6/liveProductFields";
 
 type CityTemplateProps = {
   state: StateDestination;
@@ -169,6 +174,54 @@ export default function CityTemplate({
     },
     { min: 3, max: 6 },
   );
+  const [liveEngine6DynamicByProductCode, setLiveEngine6DynamicByProductCode] =
+    useState<Record<string, Engine6LiveProductFields>>({});
+  const topTourEntries = useMemo(() => topTours.map(tour => ({ tour })), [topTours]);
+  const topEngine6ProductCodes = useMemo(
+    () =>
+      topTours
+        .filter(tour => tour.engine === "engine6" && Boolean(tour.productCode))
+        .map(tour => tour.productCode),
+    [topTours]
+  );
+  useEffect(() => {
+    let cancelled = false;
+
+    Promise.all(
+      topEngine6ProductCodes.map(async productCode => {
+        const fields = await fetchEngine6LiveProductFields(productCode);
+        if (!fields) return null;
+        return [productCode, fields] as const;
+      })
+    )
+      .then(results => {
+        if (cancelled) return;
+        const next: Record<string, Engine6LiveProductFields> = {};
+        for (const item of results) {
+          if (item) next[item[0]] = item[1];
+        }
+        if (Object.keys(next).length) {
+          setLiveEngine6DynamicByProductCode(previous => ({ ...previous, ...next }));
+        }
+      })
+      .catch(() => {});
+
+    return () => {
+      cancelled = true;
+    };
+  }, [topEngine6ProductCodes]);
+  const hydratedTopTours = useMemo(
+    () =>
+      topTourEntries.map(entry =>
+        mergeEngine6LiveCommercialFieldsIntoCardEntry(
+          entry,
+          entry.tour.productCode
+            ? liveEngine6DynamicByProductCode[entry.tour.productCode]
+            : undefined
+        )
+      ),
+    [liveEngine6DynamicByProductCode, topTourEntries]
+  );
   const title = `${city.name}, ${state.name} ${SITE_BRAND_NAME} | Tours & City Guide`;
   const description = buildMetaDescription(
     city.shortDescription,
@@ -312,7 +365,7 @@ export default function CityTemplate({
                 Compare top-rated experiences and browse live availability.
               </p>
               <div className="mt-6 grid gap-5 md:grid-cols-2">
-                {topTours.map((tour) => (
+                {hydratedTopTours.map(({ tour }) => (
                   <TourCard
                     key={tour.id}
                     tour={tour}
