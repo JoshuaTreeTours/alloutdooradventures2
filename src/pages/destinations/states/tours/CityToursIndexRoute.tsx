@@ -17,7 +17,11 @@ import {
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
 import { hasValidTourImage } from "../../../../lib/hasValidTourImage";
-import { mergeEngine6LiveFieldsIntoTour, type Engine6LiveProductFields } from "../../../../engine6/liveProductFields";
+import {
+  fetchEngine6LiveProductFields,
+  mergeEngine6LiveFieldsIntoTour,
+  type Engine6LiveProductFields,
+} from "../../../../engine6/liveProductFields";
 import { getGuideRecord } from "../../../../utils/guides/guideRegistry";
 import {
   buildCategoryH1,
@@ -55,7 +59,7 @@ export default function CityToursIndexRoute({
   const isFlagstaff = Boolean(
     state && city && state.slug === "arizona" && city.slug === "flagstaff"
   );
-  const tours =
+  const tours = useMemo(() =>
     state && city
       ? isFlagstaff
         ? flagstaffTours.map(tour => ({
@@ -63,35 +67,27 @@ export default function CityToursIndexRoute({
             href: getFlagstaffTourDetailPath(tour),
           }))
         : getToursByCityUnified(state.slug, city.slug)
-      : [];
+      : []
+  , [state, city, isFlagstaff]);
 
   const [liveEngine6DynamicByProductCode, setLiveEngine6DynamicByProductCode] =
     useState<Record<string, Engine6LiveProductFields>>({});
 
-  useEffect(() => {
-    let cancelled = false;
-    const engine6ProductCodes = tours
+  const engine6ProductCodes = useMemo(() =>
+    tours
       .map(entry => entry.tour)
       .filter(tour => tour.engine === "engine6" && !!tour.productCode)
-      .map(tour => tour.productCode);
+      .map(tour => tour.productCode)
+  , [tours]);
+
+  useEffect(() => {
+    let cancelled = false;
 
     Promise.all(
       engine6ProductCodes.map(async productCode => {
-        const response = await fetch(
-          `/api/engine6/viator-product?productCode=${encodeURIComponent(productCode)}`
-        );
-        if (!response.ok) return null;
-        const payload = await response.json();
-        const extracted = payload?.extracted;
-        if (!extracted) return null;
-        return [productCode, {
-          priceAmount: typeof extracted.priceAmount === "number" ? extracted.priceAmount : null,
-          priceFormatted: typeof extracted.priceFormatted === "string" ? extracted.priceFormatted : null,
-          aggregateRating: typeof extracted.aggregateRating === "number" ? extracted.aggregateRating : null,
-          reviewCount: typeof extracted.reviewCount === "number" ? extracted.reviewCount : null,
-          durationText: typeof extracted.durationText === "string" ? extracted.durationText : null,
-          meetingPointText: typeof extracted.meetingPointText === "string" ? extracted.meetingPointText : null,
-        } as Engine6LiveProductFields] as const;
+        const fields = await fetchEngine6LiveProductFields(productCode);
+        if (!fields) return null;
+        return [productCode, fields] as const;
       })
     )
       .then(results => {
@@ -109,7 +105,7 @@ export default function CityToursIndexRoute({
     return () => {
       cancelled = true;
     };
-  }, [tours]);
+  }, [engine6ProductCodes]);
 
   const hydratedTours = tours.map(entry => ({
     ...entry,

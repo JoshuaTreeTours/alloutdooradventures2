@@ -45,3 +45,28 @@ export const mergeEngine6LiveFieldsIntoTour = (
     },
   };
 };
+
+
+export const fetchEngine6LiveProductFields = async (
+  productCode: string,
+  fetcher: typeof fetch = fetch
+): Promise<Engine6LiveProductFields | null> => {
+  const response = await fetcher(
+    `/api/engine6/viator-product?productCode=${encodeURIComponent(productCode)}`
+  );
+  if (!response.ok) return null;
+  const payload = await response.json();
+  const extracted = payload?.extracted;
+  if (!extracted) return null;
+  return {
+    priceAmount: typeof extracted.priceAmount === "number" ? extracted.priceAmount : null,
+    priceFormatted:
+      typeof extracted.priceFormatted === "string" ? extracted.priceFormatted : null,
+    aggregateRating:
+      typeof extracted.aggregateRating === "number" ? extracted.aggregateRating : null,
+    reviewCount: typeof extracted.reviewCount === "number" ? extracted.reviewCount : null,
+    durationText: typeof extracted.durationText === "string" ? extracted.durationText : null,
+    meetingPointText:
+      typeof extracted.meetingPointText === "string" ? extracted.meetingPointText : null,
+  };
+};
