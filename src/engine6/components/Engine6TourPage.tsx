@@ -12,7 +12,6 @@ import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
 import type { Engine6Tour } from "../types";
 import {
   fetchEngine6LiveProductFields,
-  mergeEngine6LiveFieldsIntoTour,
   type Engine6LiveProductFields,
 } from "../liveProductFields";
 
@@ -159,6 +158,48 @@ const RatingSummary = ({
   );
 };
 
+export const hydrateRelatedTourCommercialFields = (
+  entry: { tour: import("../../data/tours.types").Tour; href: string },
+  liveFields?: Partial<Engine6LiveProductFields>
+) => {
+  const baseTour = entry.tour;
+  if (baseTour.engine !== "engine6" || !liveFields) {
+    return entry;
+  }
+
+  const priceAmount =
+    typeof liveFields.priceAmount === "number" ? liveFields.priceAmount : null;
+  const priceFormatted =
+    typeof liveFields.priceFormatted === "string"
+      ? liveFields.priceFormatted.trim()
+      : "";
+
+  return {
+    ...entry,
+    tour: {
+      ...baseTour,
+      startingPrice: priceAmount ?? baseTour.startingPrice,
+      badges: {
+        ...baseTour.badges,
+        rating:
+          typeof liveFields.aggregateRating === "number"
+            ? liveFields.aggregateRating
+            : baseTour.badges.rating,
+        reviewCount:
+          typeof liveFields.reviewCount === "number"
+            ? liveFields.reviewCount
+            : baseTour.badges.reviewCount,
+        priceFrom: priceFormatted || baseTour.badges.priceFrom,
+        duration:
+          typeof liveFields.durationText === "string" &&
+          liveFields.durationText.trim()
+            ? liveFields.durationText
+            : baseTour.badges.duration,
+      },
+    },
+  };
+};
+
 export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
   const SHOW_ENGINE6_DEBUG =
     process.env.NODE_ENV !== "production" &&
@@ -245,16 +286,14 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
   }, [relatedEngine6ProductCodes]);
   const hydratedRelatedTours = useMemo(
     () =>
-      relatedTours.map(entry => ({
-        ...entry,
-        tour:
-          entry.tour.engine === "engine6" && entry.tour.productCode
-            ? mergeEngine6LiveFieldsIntoTour(
-                entry.tour,
-                liveEngine6DynamicByProductCode[entry.tour.productCode]
-              )
-            : entry.tour,
-      })),
+      relatedTours.map(entry =>
+        entry.tour.engine === "engine6" && entry.tour.productCode
+          ? hydrateRelatedTourCommercialFields(
+              entry,
+              liveEngine6DynamicByProductCode[entry.tour.productCode]
+            )
+          : entry
+      ),
     [liveEngine6DynamicByProductCode, relatedTours]
   );
   const showRelatedTours = hydratedRelatedTours.length >= 2;
