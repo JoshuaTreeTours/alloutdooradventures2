@@ -11,7 +11,9 @@ import {
   getToursByCityUnified,
   getToursByState,
 } from "../data/tours";
-import Engine6TourPage from "./components/Engine6TourPage";
+import Engine6TourPage, {
+  hydrateRelatedTourCommercialFields,
+} from "./components/Engine6TourPage";
 import ToursLanding from "../pages/tours/ToursLanding";
 import CityToursIndexRoute from "../pages/destinations/states/tours/CityToursIndexRoute";
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
@@ -1549,6 +1551,51 @@ describe("engine6 listing surfaces", () => {
         expect(html).not.toContain('data-testid="engine6-related-tours"');
       }
     }
+  });
+
+  it("keeps related card route identity stable while hydrating only commercial fields", () => {
+    const scenarios = ["63657P1", "5119P13", "32779P2"]
+      .map(code => getRelatedToursForSpecimen(code))
+      .filter(
+        candidate =>
+          candidate.relatedTours.find(
+            entry => entry.tour.engine === "engine6" && entry.tour.productCode
+          ) !== undefined
+      );
+    expect(scenarios.length).toBeGreaterThan(0);
+    const { tour, relatedTours } = scenarios[0]!;
+    const related = relatedTours.find(
+      entry => entry.tour.engine === "engine6" && entry.tour.productCode
+    )!;
+
+    const hydrated = hydrateRelatedTourCommercialFields(related, {
+      priceAmount: 987,
+      priceFormatted: "From $987.00",
+      aggregateRating: 4.9,
+      reviewCount: 321,
+      durationText: "9 hours",
+      meetingPointText: "Ignored for cards",
+    });
+
+    expect(hydrated.href).toBe(related.href);
+    expect(hydrated.tour.productCode).toBe(related.tour.productCode);
+    expect(hydrated.tour.title).toBe(related.tour.title);
+    expect(hydrated.tour.slug).toBe(related.tour.slug);
+    expect(hydrated.tour.heroImage).toBe(related.tour.heroImage);
+    expect(hydrated.tour.startingPrice).toBe(987);
+    expect(hydrated.tour.badges.priceFrom).toBe("From $987.00");
+    expect(hydrated.tour.badges.rating).toBe(4.9);
+    expect(hydrated.tour.badges.reviewCount).toBe(321);
+    expect(hydrated.tour.badges.duration).toBe("9 hours");
+
+    const relatedCardHtml = renderToString(
+      <TourCard tour={hydrated.tour} href={hydrated.href} />
+    );
+    expect(relatedCardHtml).toContain(`href="${hydrated.href}"`);
+    expect(relatedCardHtml).toContain(hydrated.tour.title);
+
+    const detailHtml = renderToString(<Engine6TourPage tour={tour} />);
+    expect(detailHtml).toContain(`href="${hydrated.href}"`);
   });
 
   it("uses the exact same resolved hero for Vegas detail page, city listing card, and filtered tours card", () => {
