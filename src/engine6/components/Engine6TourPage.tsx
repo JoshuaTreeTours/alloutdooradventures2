@@ -626,7 +626,11 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                   key={`${entry.href}-${entry.tour.id}`}
                   className="w-[82vw] max-w-sm shrink-0 snap-start md:w-[360px]"
                 >
-                  <TourCard tour={entry.tour} href={entry.href} />
+                  <TourCard
+                    tour={entry.tour}
+                    href={entry.href}
+                    forceDocumentNavigation
+                  />
                 </div>
               ))}
             </div>
