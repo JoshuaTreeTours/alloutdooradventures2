@@ -50,4 +50,54 @@ describe("engine6 city listing parity regression", () => {
     (globalThis as { window?: Window }).window = previousWindow;
     (globalThis as { location?: Location }).location = previousLocation;
   });
+
+  it("hydrates San Francisco related-tour card render with live Engine6 values", async () => {
+    const previousWindow = (globalThis as { window?: Window }).window;
+    const previousLocation = (globalThis as { location?: Location }).location;
+    (globalThis as { window?: Window }).window = {
+      location: { pathname: "/destinations/california/san-francisco/tours", search: "" },
+      history: { pushState: () => undefined },
+    } as unknown as Window;
+    (globalThis as { location?: Location }).location =
+      (globalThis as { window?: Window }).window!.location as unknown as Location;
+    const relatedEntry = getToursByCityUnified("california", "san-francisco").find(
+      entry => entry.tour.engine === "engine6" && entry.tour.productCode === "36001P14"
+    );
+    expect(relatedEntry).toBeDefined();
+
+    const fields = await fetchEngine6LiveProductFields(
+      "36001P14",
+      (async () =>
+        ({
+          ok: true,
+          json: async () => ({
+            extracted: {
+              priceAmount: 219,
+              priceFormatted: "From $219.00",
+              aggregateRating: 4.7,
+              reviewCount: 1880,
+              durationText: "14 hours",
+              meetingPointText: "San Francisco",
+            },
+          }),
+        }) as Response) as typeof fetch
+    );
+
+    const hydrated = mergeEngine6LiveFieldsIntoTour(
+      relatedEntry!.tour,
+      fields ?? undefined
+    );
+    const html = renderToString(
+      <TourCard tour={hydrated} href={relatedEntry!.href} />
+    );
+
+    expect(html).toContain("$219");
+    expect(html).toContain("1880");
+    expect(html).toContain("4.7");
+    expect(html).toContain(relatedEntry!.href);
+    expect(html).toContain((relatedEntry!.tour.heroImage ?? "").replaceAll("&", "&amp;"));
+
+    (globalThis as { window?: Window }).window = previousWindow;
+    (globalThis as { location?: Location }).location = previousLocation;
+  });
 });
