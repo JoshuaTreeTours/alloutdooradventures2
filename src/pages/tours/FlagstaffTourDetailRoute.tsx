@@ -382,6 +382,7 @@ export default function FlagstaffTourDetailRoute({
                 <TourCard
                   key={related.slug}
                   tour={related}
+                  forceDocumentNavigation
                   href={getFlagstaffTourDetailPath(related)}
                 />
               ))}
