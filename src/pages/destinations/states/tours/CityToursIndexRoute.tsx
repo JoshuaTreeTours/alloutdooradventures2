@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
@@ -17,6 +17,11 @@ import {
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
 import { hasValidTourImage } from "../../../../lib/hasValidTourImage";
+import {
+  fetchEngine6LiveProductFields,
+  mergeEngine6LiveFieldsIntoTour,
+  type Engine6LiveProductFields,
+} from "../../../../engine6/liveProductFields";
 import { getGuideRecord } from "../../../../utils/guides/guideRegistry";
 import {
   buildCategoryH1,
@@ -54,7 +59,7 @@ export default function CityToursIndexRoute({
   const isFlagstaff = Boolean(
     state && city && state.slug === "arizona" && city.slug === "flagstaff"
   );
-  const tours =
+  const tours = useMemo(() =>
     state && city
       ? isFlagstaff
         ? flagstaffTours.map(tour => ({
@@ -62,12 +67,62 @@ export default function CityToursIndexRoute({
             href: getFlagstaffTourDetailPath(tour),
           }))
         : getToursByCityUnified(state.slug, city.slug)
-      : [];
+      : []
+  , [state, city, isFlagstaff]);
+
+  const [liveEngine6DynamicByProductCode, setLiveEngine6DynamicByProductCode] =
+    useState<Record<string, Engine6LiveProductFields>>({});
+
+  const engine6ProductCodes = useMemo(() =>
+    tours
+      .map(entry => entry.tour)
+      .filter(tour => tour.engine === "engine6" && !!tour.productCode)
+      .map(tour => tour.productCode)
+  , [tours]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    Promise.all(
+      engine6ProductCodes.map(async productCode => {
+        const fields = await fetchEngine6LiveProductFields(productCode);
+        if (!fields) return null;
+        return [productCode, fields] as const;
+      })
+    )
+      .then(results => {
+        if (cancelled) return;
+        const next: Record<string, Engine6LiveProductFields> = {};
+        for (const item of results) {
+          if (item) next[item[0]] = item[1];
+        }
+        if (Object.keys(next).length) {
+          setLiveEngine6DynamicByProductCode(previous => ({ ...previous, ...next }));
+        }
+      })
+      .catch(() => {});
+
+    return () => {
+      cancelled = true;
+    };
+  }, [engine6ProductCodes]);
+
+  const hydratedTours = tours.map(entry => ({
+    ...entry,
+    tour:
+      entry.tour.engine === "engine6" && entry.tour.productCode
+        ? mergeEngine6LiveFieldsIntoTour(
+            entry.tour,
+            liveEngine6DynamicByProductCode[entry.tour.productCode]
+          )
+        : entry.tour,
+  }));
+
   const activityFilter =
     typeof window !== "undefined"
       ? new URLSearchParams(window.location.search).get("activity")
       : null;
-  const toursWithImages = tours.filter(entry => hasValidTourImage(entry.tour));
+  const toursWithImages = hydratedTours.filter(entry => hasValidTourImage(entry.tour));
   const toursOnlyWithImages = toursWithImages.filter(
     entry => !isRentalTour(entry.tour)
   );
@@ -93,7 +148,7 @@ export default function CityToursIndexRoute({
       route: toursHref,
       state,
       city,
-      cityTours: tours.map(entry => entry.tour),
+      cityTours: hydratedTours.map(entry => entry.tour),
     }) ?? undefined;
   const structuredDataNodes = useMemo(() => {
     if (!state || !city) {

@@ -606,29 +606,35 @@ const extractProductUrl = (product: RecordLike) => {
 };
 
 const extractPlaybookPrice = (product: RecordLike): PriceResult => {
+  type NormalizedRawPriceValue = string | number | null;
+  type PricePathCandidate = {
+    amount: number;
+    path: string;
+    rawValue: NormalizedRawPriceValue;
+  };
+
   const collectPathCandidates = (
     paths: PathSegment[][]
-  ): Array<{ amount: number; path: string; rawValue: unknown }> =>
+  ): PricePathCandidate[] =>
     paths
       .map(path => {
         const raw = readPath(product, path);
         const amount = parsePriceAmount(raw);
+        const rawValue: NormalizedRawPriceValue =
+          typeof raw === "string" || typeof raw === "number" ? raw : amount;
         return {
           amount,
           path: formatFieldPath(path),
-          rawValue:
-            typeof raw === "string" || typeof raw === "number" ? raw : amount,
+          rawValue,
         };
       })
       .filter(
-        (
-          candidate
-        ): candidate is { amount: number; path: string; rawValue: unknown } =>
+        (candidate): candidate is PricePathCandidate =>
           candidate.amount !== null && Number.isFinite(candidate.amount) && candidate.amount > 0
       );
 
   const selectLowestCandidate = (
-    candidates: Array<{ amount: number; path: string; rawValue: unknown }>
+    candidates: PricePathCandidate[]
   ): PriceResult | null => {
     if (candidates.length === 0) {
       return null;
@@ -1288,13 +1294,19 @@ const extractMeetingPoint = (product: RecordLike) => {
     return { value: compact, summaryApplied: false, reason: null as string | null };
   };
 
+  const logistics = asRecord(product.logistics);
+  const logisticsStart = logistics?.start;
+  const logisticsStartObject = asRecord(logisticsStart);
+  const logisticsStartArrayFirst = Array.isArray(logisticsStart)
+    ? asRecord(logisticsStart[0])
+    : null;
+
   for (const candidate of [
     {
       value:
-        asRecord(asRecord(product.logistics)?.start)?.description ??
-        (Array.isArray(asRecord(product.logistics)?.start)
-          ? asRecord(asRecord(product.logistics)?.start?.[0])?.description
-          : null),
+        logisticsStartObject?.description ??
+        logisticsStartArrayFirst?.description ??
+        null,
       path: "product.logistics.start[0].description",
     },
     {

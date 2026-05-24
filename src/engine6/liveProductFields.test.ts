@@ -1,0 +1,70 @@
+import { describe, it, expect } from "vitest";
+import { mergeEngine6LiveFieldsIntoTour } from "./liveProductFields";
+import type { Tour } from "../data/tours.types";
+
+const makeEngine6Tour = (overrides: Partial<Tour> = {}): Tour => ({
+  id: "engine6-2660SFOWIN",
+  engine: "engine6",
+  productCode: "2660SFOWIN",
+  slug: "napa-and-sonoma-wine-country-tour-2660sfowin",
+  title: "Napa and Sonoma Wine Country Tour",
+  shortDescription: "Wine country day trip",
+  categories: ["sightseeing-tour"],
+  destination: {
+    country: "United States",
+    state: "California",
+    stateSlug: "california",
+    city: "San Francisco",
+    citySlug: "san-francisco",
+  },
+  heroImage: "https://example.com/hero.jpg",
+  badges: {
+    rating: 4.5,
+    reviewCount: 4200,
+    priceFrom: "From $129.00",
+  },
+  startingPrice: 129,
+  currency: "USD",
+  activitySlugs: ["bike-tours"],
+  bookingProvider: "viator",
+  ...overrides,
+});
+
+describe("mergeEngine6LiveFieldsIntoTour", () => {
+  it("applies live api parity for Napa/Sonoma city cards", () => {
+    const merged = mergeEngine6LiveFieldsIntoTour(makeEngine6Tour(), {
+      priceAmount: 156.75,
+      priceFormatted: "From $156.75",
+      aggregateRating: 4.3,
+      reviewCount: 4512,
+      durationText: "9 hours",
+      meetingPointText: "Union Square",
+    });
+
+    expect(merged.startingPrice).toBe(156.75);
+    expect(merged.badges.priceFrom).toBe("From $156.75");
+    expect(merged.badges.rating).toBe(4.3);
+    expect(merged.badges.reviewCount).toBe(4512);
+  });
+
+  it("preserves Joshua Tree fallback values when live fields are missing", () => {
+    const merged = mergeEngine6LiveFieldsIntoTour(
+      makeEngine6Tour({
+        productCode: "445161P1",
+        title: "Professional Stargazing in Joshua Tree",
+        badges: {
+          rating: 4.9,
+          reviewCount: 310,
+          priceFrom: "From $175.00",
+        },
+        startingPrice: 175,
+      }),
+      { priceAmount: null, reviewCount: null, aggregateRating: null }
+    );
+
+    expect(merged.startingPrice).toBe(175);
+    expect(merged.badges.priceFrom).toBe("From $175.00");
+    expect(merged.badges.rating).toBe(4.9);
+    expect(merged.badges.reviewCount).toBe(310);
+  });
+});

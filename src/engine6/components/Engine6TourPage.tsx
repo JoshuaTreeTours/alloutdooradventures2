@@ -1,4 +1,4 @@
-import React, { type ReactNode, useMemo, useState } from "react";
+import React, { type ReactNode, useEffect, useMemo, useState } from "react";
 
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
@@ -10,6 +10,11 @@ import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
 import type { Engine6Tour } from "../types";
+import {
+  fetchEngine6LiveProductFields,
+  mergeEngine6LiveFieldsIntoTour,
+  type Engine6LiveProductFields,
+} from "../liveProductFields";
 
 const BOOK_CTA_CLASSES =
   "inline-flex rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]";
@@ -194,7 +199,65 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
       return !matchesProductCode && !matchesSlug;
     });
   }, [tour.canonicalPath, tour.productCode]);
-  const showRelatedTours = relatedTours.length >= 2;
+  const [liveEngine6DynamicByProductCode, setLiveEngine6DynamicByProductCode] =
+    useState<Record<string, Engine6LiveProductFields>>({});
+  const relatedEngine6ProductCodes = useMemo(
+    () =>
+      relatedTours
+        .map(entry => entry.tour)
+        .filter(
+          candidate => candidate.engine === "engine6" && Boolean(candidate.productCode)
+        )
+        .map(candidate => candidate.productCode),
+    [relatedTours]
+  );
+  useEffect(() => {
+    let cancelled = false;
+    if (relatedEngine6ProductCodes.length === 0) {
+      return () => {
+        cancelled = true;
+      };
+    }
+
+    Promise.all(
+      relatedEngine6ProductCodes.map(async productCode => {
+        const fields = await fetchEngine6LiveProductFields(productCode);
+        if (!fields) return null;
+        return [productCode, fields] as const;
+      })
+    )
+      .then(results => {
+        if (cancelled) return;
+        const next: Record<string, Engine6LiveProductFields> = {};
+        for (const result of results) {
+          if (!result) continue;
+          next[result[0]] = result[1];
+        }
+        if (Object.keys(next).length > 0) {
+          setLiveEngine6DynamicByProductCode(previous => ({ ...previous, ...next }));
+        }
+      })
+      .catch(() => {});
+
+    return () => {
+      cancelled = true;
+    };
+  }, [relatedEngine6ProductCodes]);
+  const hydratedRelatedTours = useMemo(
+    () =>
+      relatedTours.map(entry => ({
+        ...entry,
+        tour:
+          entry.tour.engine === "engine6" && entry.tour.productCode
+            ? mergeEngine6LiveFieldsIntoTour(
+                entry.tour,
+                liveEngine6DynamicByProductCode[entry.tour.productCode]
+              )
+            : entry.tour,
+      })),
+    [liveEngine6DynamicByProductCode, relatedTours]
+  );
+  const showRelatedTours = hydratedRelatedTours.length >= 2;
   const isExternalBookingUrl = /^https?:\/\//i.test(tour.bookingUrl);
   useStructuredData(schemaGraph);
 
@@ -519,7 +582,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
               Other Tours in {tour.city}
             </h2>
             <div className="mt-4 -mx-1 flex snap-x snap-mandatory gap-5 overflow-x-auto px-1 pb-4">
-              {relatedTours.map(entry => (
+              {hydratedRelatedTours.map(entry => (
                 <div
                   key={`${entry.href}-${entry.tour.id}`}
                   className="w-[82vw] max-w-sm shrink-0 snap-start md:w-[360px]"

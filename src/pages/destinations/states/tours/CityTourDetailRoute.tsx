@@ -57,6 +57,7 @@ import type { Engine6ApiResponse, Engine6Tour } from "../../../../engine6/types"
 import { isExcludedProductCode } from "../../../../data/excludedProductCodes";
 import { isEngine6CanonicalPath } from "../../../../engine6/routes";
 import { buildEngine6SchemaGraph } from "../../../../engine6/schema/buildEngine6SchemaGraph";
+import { mergeEngine6LiveFieldsIntoTour } from "../../../../engine6/liveProductFields";
 import {
   assertEngine6CtaIntegrity,
   assertEngine6DataSource,
@@ -729,7 +730,16 @@ export default function CityTourDetailRoute({
   const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
   const seoMeta = buildTourMeta(tour, canonicalUrl);
   const relatedTours = (
-    isFlagstaff ? flagstaffTours : getToursByCity(state.slug, city.slug)
+    isFlagstaff
+      ? flagstaffTours
+      : getToursByCity(state.slug, city.slug).map(item =>
+          item.engine === "engine6" && item.productCode
+            ? mergeEngine6LiveFieldsIntoTour(
+                item,
+                liveEngine6DynamicByProductCode[item.productCode]
+              )
+            : item
+        )
   ).filter(item =>
     isFlagstaff
       ? getFlagstaffTourSlug(item) !== tourSlug
