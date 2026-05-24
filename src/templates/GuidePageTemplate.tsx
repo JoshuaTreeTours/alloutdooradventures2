@@ -1,4 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
+import {
+  fetchEngine6LiveProductFields,
+  mergeEngine6LiveFieldsIntoTour,
+  type Engine6LiveProductFields,
+} from "../engine6/liveProductFields";
 import useEmblaCarousel from "embla-carousel-react";
 import { Link } from "wouter";
 
@@ -75,6 +80,70 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
     guide.tours.stateSlug && guide.tours.citySlug
       ? getToursByCityUnified(guide.tours.stateSlug, guide.tours.citySlug)
       : [];
+  const [liveEngine6DynamicByProductCode, setLiveEngine6DynamicByProductCode] = useState<
+    Record<string, Engine6LiveProductFields>
+  >({});
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const engine6ProductCodes = Array.from(
+      new Set(
+        allCityTours
+          .filter(entry => entry.tour.engine === "engine6" && entry.tour.productCode)
+          .map(entry => entry.tour.productCode as string)
+      )
+    );
+
+    if (!engine6ProductCodes.length) {
+      return;
+    }
+
+    let cancelled = false;
+
+    (async () => {
+      const settled = await Promise.all(
+        engine6ProductCodes.map(async productCode => ({
+          productCode,
+          fields: await fetchEngine6LiveProductFields(productCode),
+        }))
+      );
+
+      if (cancelled) return;
+
+      setLiveEngine6DynamicByProductCode(prev => {
+        const next = { ...prev };
+        for (const item of settled) {
+          if (item.fields) {
+            next[item.productCode] = item.fields;
+          }
+        }
+        return next;
+      });
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [allCityTours]);
+
+  const hydratedAllCityTours = useMemo(
+    () =>
+      allCityTours.map(entry => ({
+        ...entry,
+        tour:
+          entry.tour.engine === "engine6" && entry.tour.productCode
+            ? mergeEngine6LiveFieldsIntoTour(
+                entry.tour,
+                liveEngine6DynamicByProductCode[entry.tour.productCode]
+              )
+            : entry.tour,
+      })),
+    [allCityTours, liveEngine6DynamicByProductCode]
+  );
+
   const mappedThingsLimit = isTier2 ? 5 : 8;
   const mappedThings = guide.thingsToDo.slice(0, mappedThingsLimit);
   const wikiExtractFallback = (
@@ -372,7 +441,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
             cityName={guide.city ?? place}
             citySlug={guide.tours.citySlug}
             stateSlug={guide.tours.stateSlug}
-            tours={allCityTours}
+            tours={hydratedAllCityTours}
           />
         ) : null}
       </section>
