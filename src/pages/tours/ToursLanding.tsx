@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import Seo from "../../components/Seo";
 import TourCard from "../../components/TourCard";
@@ -26,6 +26,11 @@ import { getGuideRecord } from "../../utils/guides/guideRegistry";
 import { EUROPE_COUNTRIES } from "../../data/tourCatalog";
 import { isRentalTour } from "../../utils/isRentalTour";
 import {
+  fetchEngine6LiveProductFields,
+  mergeEngine6LiveFieldsIntoTour,
+  type Engine6LiveProductFields,
+} from "../../engine6/liveProductFields";
+import {
   buildInternationalCityOptions,
   buildInternationalCountryOptions,
   CANADA_COUNTRY_NAME,
@@ -38,6 +43,21 @@ const normalizeOptionValue = (value: string) => slugify(value.trim().toLowerCase
 const AFRICA_ENGINE2_MAP: Record<string, { country: string; city: string }> = {
   "517094": { country: "Tanzania", city: "Zanzibar" },
 };
+
+export const hydrateEngine6ListingEntries = (
+  entries: Array<{ tour: Tour; href: string }>,
+  liveByProductCode: Record<string, Engine6LiveProductFields>
+): Array<{ tour: Tour; href: string }> =>
+  entries.map(entry => ({
+    ...entry,
+    tour:
+      entry.tour.engine === "engine6" && entry.tour.productCode
+        ? mergeEngine6LiveFieldsIntoTour(
+            entry.tour,
+            liveByProductCode[entry.tour.productCode]
+          )
+        : entry.tour,
+  }));
 
 const dedupeByNormalizedValue = <T extends { slug: string }>(options: T[]) => {
   const seen = new Set<string>();
@@ -388,10 +408,57 @@ export default function ToursLanding() {
     return match?.name ?? selectedInternationalCity;
   }, [internationalCities, selectedInternationalCity]);
 
+  const [liveEngine6DynamicByProductCode, setLiveEngine6DynamicByProductCode] =
+    useState<Record<string, Engine6LiveProductFields>>({});
+  const filteredEngine6ProductCodes = useMemo(
+    () =>
+      filteredTours
+        .map(entry => entry.tour)
+        .filter(tour => tour.engine === "engine6" && Boolean(tour.productCode))
+        .map(tour => tour.productCode),
+    [filteredTours]
+  );
+  useEffect(() => {
+    let cancelled = false;
+    if (filteredEngine6ProductCodes.length === 0) {
+      return () => {
+        cancelled = true;
+      };
+    }
+
+    Promise.all(
+      filteredEngine6ProductCodes.map(async productCode => {
+        const fields = await fetchEngine6LiveProductFields(productCode);
+        if (!fields) return null;
+        return [productCode, fields] as const;
+      })
+    )
+      .then(results => {
+        if (cancelled) return;
+        const next: Record<string, Engine6LiveProductFields> = {};
+        for (const result of results) {
+          if (!result) continue;
+          next[result[0]] = result[1];
+        }
+        if (Object.keys(next).length > 0) {
+          setLiveEngine6DynamicByProductCode(previous => ({ ...previous, ...next }));
+        }
+      })
+      .catch(() => {});
+
+    return () => {
+      cancelled = true;
+    };
+  }, [filteredEngine6ProductCodes]);
+  const hydratedFilteredTours = useMemo(
+    () => hydrateEngine6ListingEntries(filteredTours, liveEngine6DynamicByProductCode),
+    [filteredTours, liveEngine6DynamicByProductCode]
+  );
+
   const displayedTours =
     inventoryType === "rentals"
-      ? filteredTours.filter(entry => isRentalTour(entry.tour))
-      : filteredTours.filter(entry => !isRentalTour(entry.tour));
+      ? hydratedFilteredTours.filter(entry => isRentalTour(entry.tour))
+      : hydratedFilteredTours.filter(entry => !isRentalTour(entry.tour));
   const selectedPlaceLabel =
     selectedCountry && selectedInternationalCity
       ? selectedInternationalCityLabel
