@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
@@ -17,6 +17,7 @@ import {
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
 import { hasValidTourImage } from "../../../../lib/hasValidTourImage";
+import { mergeEngine6LiveFieldsIntoTour, type Engine6LiveProductFields } from "../../../../engine6/liveProductFields";
 import { getGuideRecord } from "../../../../utils/guides/guideRegistry";
 import {
   buildCategoryH1,
@@ -63,11 +64,69 @@ export default function CityToursIndexRoute({
           }))
         : getToursByCityUnified(state.slug, city.slug)
       : [];
+
+  const [liveEngine6DynamicByProductCode, setLiveEngine6DynamicByProductCode] =
+    useState<Record<string, Engine6LiveProductFields>>({});
+
+  useEffect(() => {
+    let cancelled = false;
+    const engine6ProductCodes = tours
+      .map(entry => entry.tour)
+      .filter(tour => tour.engine === "engine6" && !!tour.productCode)
+      .map(tour => tour.productCode);
+
+    Promise.all(
+      engine6ProductCodes.map(async productCode => {
+        const response = await fetch(
+          `/api/engine6/viator-product?productCode=${encodeURIComponent(productCode)}`
+        );
+        if (!response.ok) return null;
+        const payload = await response.json();
+        const extracted = payload?.extracted;
+        if (!extracted) return null;
+        return [productCode, {
+          priceAmount: typeof extracted.priceAmount === "number" ? extracted.priceAmount : null,
+          priceFormatted: typeof extracted.priceFormatted === "string" ? extracted.priceFormatted : null,
+          aggregateRating: typeof extracted.aggregateRating === "number" ? extracted.aggregateRating : null,
+          reviewCount: typeof extracted.reviewCount === "number" ? extracted.reviewCount : null,
+          durationText: typeof extracted.durationText === "string" ? extracted.durationText : null,
+          meetingPointText: typeof extracted.meetingPointText === "string" ? extracted.meetingPointText : null,
+        } as Engine6LiveProductFields] as const;
+      })
+    )
+      .then(results => {
+        if (cancelled) return;
+        const next: Record<string, Engine6LiveProductFields> = {};
+        for (const item of results) {
+          if (item) next[item[0]] = item[1];
+        }
+        if (Object.keys(next).length) {
+          setLiveEngine6DynamicByProductCode(previous => ({ ...previous, ...next }));
+        }
+      })
+      .catch(() => {});
+
+    return () => {
+      cancelled = true;
+    };
+  }, [tours]);
+
+  const hydratedTours = tours.map(entry => ({
+    ...entry,
+    tour:
+      entry.tour.engine === "engine6" && entry.tour.productCode
+        ? mergeEngine6LiveFieldsIntoTour(
+            entry.tour,
+            liveEngine6DynamicByProductCode[entry.tour.productCode]
+          )
+        : entry.tour,
+  }));
+
   const activityFilter =
     typeof window !== "undefined"
       ? new URLSearchParams(window.location.search).get("activity")
       : null;
-  const toursWithImages = tours.filter(entry => hasValidTourImage(entry.tour));
+  const toursWithImages = hydratedTours.filter(entry => hasValidTourImage(entry.tour));
   const toursOnlyWithImages = toursWithImages.filter(
     entry => !isRentalTour(entry.tour)
   );
