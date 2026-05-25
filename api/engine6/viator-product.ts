@@ -203,6 +203,65 @@ const safeExtractEngine6Product = (payload: unknown) => {
   }
 };
 
+const extractJsonLdRatingFields = (html: string) => {
+  const scripts = Array.from(
+    html.matchAll(
+      /<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi
+    )
+  );
+  for (const match of scripts) {
+    const body = match[1]?.trim();
+    if (!body) continue;
+    try {
+      const parsed = JSON.parse(body) as unknown;
+      const candidates = Array.isArray(parsed)
+        ? parsed
+        : [parsed, (parsed as Record<string, unknown>)?.["@graph"]].flat();
+      for (const node of candidates) {
+        if (!node || typeof node !== "object") continue;
+        const aggregate = (node as Record<string, unknown>).aggregateRating;
+        if (!aggregate || typeof aggregate !== "object") continue;
+        const ratingRaw = (aggregate as Record<string, unknown>).ratingValue;
+        const countRaw = (aggregate as Record<string, unknown>).reviewCount;
+        const rating = Number(ratingRaw);
+        const reviewCount = Number(countRaw);
+        if (
+          Number.isFinite(rating) &&
+          rating > 0 &&
+          Number.isFinite(reviewCount) &&
+          reviewCount > 0
+        ) {
+          return {
+            aggregateRating: rating,
+            reviewCount: Math.trunc(reviewCount),
+          };
+        }
+      }
+    } catch {
+      continue;
+    }
+  }
+  return null;
+};
+
+const fetchViatorPageRatingFallback = async (productUrl: string) => {
+  try {
+    const response = await fetch(productUrl, {
+      headers: {
+        "Accept-Language": "en-US,en;q=0.9",
+        Accept: "text/html",
+      },
+    });
+    if (!response.ok) return null;
+    const contentType = String(response.headers.get("content-type") ?? "").toLowerCase();
+    if (!contentType.includes("text/html")) return null;
+    const html = await response.text();
+    return extractJsonLdRatingFields(html);
+  } catch {
+    return null;
+  }
+};
+
 const respondWithNormalizedEnvelope = (
   res: any,
   args: {
@@ -439,38 +498,75 @@ const respondWithBundledFallback = (
         },
       }
     : merged;
+  const mergedWithLiveDynamicFieldsAndRatingFallbackPromise =
+    applyRatingFallbackFromProductPage({
+      extracted: mergedWithLiveDynamicFields.extracted,
+      rawProduct: bundledExtraction.product,
+    });
   Object.assign(diagnostics, merged.diagnostics, {
     source: "bundled-fallback",
   });
-  const strictHeroViolationReason = getStrictHeroViolationReason({
-    productCode,
-    extractedHeroUrl: mergedWithLiveDynamicFields.extracted.heroImageUrl,
-    diagnostics,
-  });
-  if (strictHeroViolationReason) {
-    respondWithErrorEnvelope(res, {
-      statusCode: 422,
-      source: "bundled-fallback",
-      diagnostics,
-      productCode,
-      error: "Engine6 strict exact-product hero validation failed",
-      details: strictHeroViolationReason,
-    });
-    return;
-  }
+  mergedWithLiveDynamicFieldsAndRatingFallbackPromise.then(
+    mergedWithLiveDynamicFieldsAndRatingFallback => {
+      const strictHeroViolationReason = getStrictHeroViolationReason({
+        productCode,
+        extractedHeroUrl: mergedWithLiveDynamicFieldsAndRatingFallback.heroImageUrl,
+        diagnostics,
+      });
+      if (strictHeroViolationReason) {
+        respondWithErrorEnvelope(res, {
+          statusCode: 422,
+          source: "bundled-fallback",
+          diagnostics,
+          productCode,
+          error: "Engine6 strict exact-product hero validation failed",
+          details: strictHeroViolationReason,
+        });
+        return;
+      }
 
-  respondWithNormalizedEnvelope(res, {
-    statusCode: 200,
-    source: "bundled-fallback",
-    diagnostics,
-    productCode,
-    rawProduct: bundledExtraction.product,
-    extracted: mergedWithLiveDynamicFields.extracted,
-    headers: {
-      "Cache-Control": "public, s-maxage=300, stale-while-revalidate=1800",
-      "X-Engine6-Source": "bundled-exact-product-payload",
-    },
-  });
+      respondWithNormalizedEnvelope(res, {
+        statusCode: 200,
+        source: "bundled-fallback",
+        diagnostics,
+        productCode,
+        rawProduct: bundledExtraction.product,
+        extracted: mergedWithLiveDynamicFieldsAndRatingFallback,
+        headers: {
+          "Cache-Control": "public, s-maxage=300, stale-while-revalidate=1800",
+          "X-Engine6-Source": "bundled-exact-product-payload",
+        },
+      });
+    }
+  );
+};
+
+const applyRatingFallbackFromProductPage = async (args: {
+  extracted: ReturnType<typeof extractEngine6Product>["extracted"];
+  rawProduct: Record<string, unknown> | null;
+}) => {
+  if (
+    typeof args.extracted.aggregateRating === "number" &&
+    typeof args.extracted.reviewCount === "number" &&
+    args.extracted.reviewCount > 0
+  ) {
+    return args.extracted;
+  }
+  const productUrl = args.extracted.productUrl;
+  if (!productUrl) return args.extracted;
+  const fallback = await fetchViatorPageRatingFallback(productUrl);
+  if (!fallback) return args.extracted;
+  return {
+    ...args.extracted,
+    aggregateRating:
+      typeof args.extracted.aggregateRating === "number"
+        ? args.extracted.aggregateRating
+        : fallback.aggregateRating,
+    reviewCount:
+      typeof args.extracted.reviewCount === "number" && args.extracted.reviewCount > 0
+        ? args.extracted.reviewCount
+        : fallback.reviewCount,
+  };
 };
 
 export default async function handler(req: any, res: any) {
@@ -685,9 +781,13 @@ export default async function handler(req: any, res: any) {
   Object.assign(diagnostics, extractedWithAvailabilityPrice.diagnostics, {
     source: "live-api",
   });
+  const extractedWithRatingFallback = await applyRatingFallbackFromProductPage({
+    extracted: extractedWithAvailabilityPrice.extracted,
+    rawProduct: extractedWithAvailabilityPrice.product,
+  });
   const strictHeroViolationReason = getStrictHeroViolationReason({
     productCode,
-    extractedHeroUrl: extractedWithAvailabilityPrice.extracted.heroImageUrl,
+    extractedHeroUrl: extractedWithRatingFallback.heroImageUrl,
     diagnostics,
   });
   if (strictHeroViolationReason) {
@@ -708,7 +808,7 @@ export default async function handler(req: any, res: any) {
     diagnostics,
     productCode,
     rawProduct: extractedWithAvailabilityPrice.product,
-    extracted: extractedWithAvailabilityPrice.extracted,
+    extracted: extractedWithRatingFallback,
     headers: {
       "Cache-Control": "public, s-maxage=300, stale-while-revalidate=1800",
       "X-Engine6-Source": "live-api",

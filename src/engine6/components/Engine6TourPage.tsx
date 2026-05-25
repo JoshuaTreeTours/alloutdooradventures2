@@ -211,9 +211,21 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
   const schemaGraph = schema["@graph"] as Array<Record<string, unknown>>;
   const resolvedHeroUrl = tour.resolvedHero?.url ?? tour.heroImageUrl;
   const hasPrice = Boolean(tour.priceFormatted);
+  const resolvedAggregateRating =
+    typeof tour.aggregateRating === "number"
+      ? tour.aggregateRating
+      : typeof tour.badges.rating === "number"
+        ? tour.badges.rating
+        : null;
+  const resolvedReviewCount =
+    typeof tour.reviewCount === "number"
+      ? tour.reviewCount
+      : typeof tour.badges.reviewCount === "number"
+        ? tour.badges.reviewCount
+        : null;
   const hasRating =
-    typeof tour.aggregateRating === "number" &&
-    typeof tour.reviewCount === "number";
+    typeof resolvedAggregateRating === "number" &&
+    typeof resolvedReviewCount === "number";
   const hasMeetingPoint = Boolean(tour.meetingPointText?.trim());
   const hasDuration = Boolean(tour.durationText?.trim());
   const breadcrumbs = buildEngine6Breadcrumbs(tour);
@@ -378,8 +390,8 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                   ) : null}
                   {hasRating ? (
                     <RatingSummary
-                      aggregateRating={tour.aggregateRating}
-                      reviewCount={tour.reviewCount}
+                      aggregateRating={resolvedAggregateRating}
+                      reviewCount={resolvedReviewCount}
                     />
                   ) : null}
                 </div>
