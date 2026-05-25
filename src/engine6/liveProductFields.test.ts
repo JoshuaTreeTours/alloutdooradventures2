@@ -67,4 +67,39 @@ describe("mergeEngine6LiveFieldsIntoTour", () => {
     expect(merged.badges.rating).toBe(4.9);
     expect(merged.badges.reviewCount).toBe(310);
   });
+
+  it("hydrates Santa Barbara trolley guide-card price from formatted live field when amount is null", () => {
+    const merged = mergeEngine6LiveFieldsIntoTour(
+      makeEngine6Tour({
+        productCode: "163975P1",
+        slug: "santa-barbara-trolley-tour",
+        title: "Santa Barbara Trolley Tour",
+        destination: {
+          country: "United States",
+          state: "California",
+          stateSlug: "california",
+          city: "Santa Barbara",
+          citySlug: "santa-barbara",
+        },
+        badges: {
+          rating: 4.6,
+          reviewCount: 836,
+          priceFrom: "Check latest price",
+        },
+        startingPrice: undefined,
+      }),
+      {
+        priceAmount: null,
+        priceFormatted: "From $74.00",
+        aggregateRating: 4.6,
+        reviewCount: 836,
+        durationText: "1 hour 30 minutes",
+      }
+    );
+
+    expect(merged.startingPrice).toBe(74);
+    expect(merged.badges.priceFrom).toBe("From $74.00");
+    expect(merged.badges.rating).toBe(4.6);
+    expect(merged.badges.reviewCount).toBe(836);
+  });
 });
