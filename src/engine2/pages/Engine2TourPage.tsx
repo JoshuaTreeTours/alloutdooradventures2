@@ -6,11 +6,17 @@ import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
 import { ENGINE2_DEFAULT_IMAGE } from "../config/destinations";
 import { getAllEngine2Tours, type Engine2Tour } from "../data/loadEngine2";
+import {
+  getCityTourDetailPath,
+  getToursByCity,
+  sortRelatedToursForLegacyPage,
+} from "../../data/tours";
 import { buildSchemaGraph } from "../schema/buildSchemaGraph";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import TourRating from "../components/TourRating";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
+import { resolveTourHeroImage } from "../../utils/hero";
 import {
   getPalmSpringsOverrideContent,
   getPalmSpringsPilotContent,
@@ -184,14 +190,40 @@ export default function Engine2TourPage({
     ]
   );
 
-  const relatedTours = useMemo(
-    () =>
-      getAllEngine2Tours().filter(
-        item =>
-          item.slug !== tour.slug && item.sourceCitySlug === tour.sourceCitySlug
-      ),
-    [tour.slug, tour.sourceCitySlug]
-  );
+  const relatedTours = useMemo(() => {
+    const canonicalParts = tour.seo.canonicalPath.split("/").filter(Boolean);
+    const stateSlug = canonicalParts[1];
+    const citySlug = canonicalParts[2];
+
+    if (!stateSlug || !citySlug) {
+      return getAllEngine2Tours()
+        .filter(
+          item =>
+            item.slug !== tour.slug && item.sourceCitySlug === tour.sourceCitySlug
+        )
+        .map(item => ({
+          slug: item.slug,
+          href: item.seo.canonicalPath,
+          name: item.name,
+          city: item.geo.city,
+          region: item.geo.region,
+          heroImage: item.images.hero || ENGINE2_DEFAULT_IMAGE,
+        }));
+    }
+
+    return sortRelatedToursForLegacyPage(
+      getToursByCity(stateSlug, citySlug).filter(item => item.slug !== tour.slug),
+      stateSlug,
+      citySlug
+    ).map(item => ({
+      slug: item.slug,
+      href: getCityTourDetailPath(item),
+      name: item.title,
+      city: item.destination.city,
+      region: item.destination.state,
+      heroImage: resolveTourHeroImage(item) || ENGINE2_DEFAULT_IMAGE,
+    }));
+  }, [tour.seo.canonicalPath, tour.slug, tour.sourceCitySlug]);
 
   useStructuredData(structuredDataNodes);
 
@@ -688,21 +720,18 @@ export default function Engine2TourPage({
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {relatedTours.map(related => {
-                const relatedHeroImage =
-                  related.images.hero || ENGINE2_DEFAULT_IMAGE;
-
                 return (
-                  <Link key={related.slug} href={related.seo.canonicalPath}>
+                  <Link key={related.slug} href={related.href}>
                     <a className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
                       <Image
-                        src={relatedHeroImage}
-                        fallbackSrc={relatedHeroImage}
+                        src={related.heroImage}
+                        fallbackSrc={related.heroImage}
                         alt={related.name}
                         className="h-44 w-full object-cover"
                       />
                       <div className="p-4">
                         <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                          {related.geo.city}, {related.geo.region}
+                          {related.city}, {related.region}
                         </p>
                         <h3 className="mt-2 text-base font-semibold text-[#1f2a1f]">
                           {related.name}
