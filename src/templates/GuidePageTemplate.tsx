@@ -1,4 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
+import {
+  fetchEngine6LiveProductFields,
+  mergeEngine6LiveFieldsIntoTour,
+  type Engine6LiveProductFields,
+} from "../engine6/liveProductFields";
 import useEmblaCarousel from "embla-carousel-react";
 import { Link } from "wouter";
 
@@ -71,6 +76,64 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
     ? getToursByCity(guide.tours.stateSlug, guide.tours.citySlug)
     : getToursByState(guide.tours.stateSlug);
   const featuredTours = tours.slice(0, guide.tours.limit ?? 6);
+  const [liveEngine6DynamicByProductCode, setLiveEngine6DynamicByProductCode] =
+    useState<Record<string, Engine6LiveProductFields>>({});
+  const engine6FeaturedTourProductCodes = useMemo(
+    () =>
+      Array.from(
+        new Set(
+          featuredTours
+            .filter(tour => tour.engine === "engine6" && !!tour.productCode)
+            .map(tour => tour.productCode)
+            .filter((productCode): productCode is string => Boolean(productCode))
+        )
+      ),
+    [featuredTours]
+  );
+
+  const hydratedFeaturedTours = useMemo(
+    () =>
+      featuredTours.map(tour =>
+        tour.engine === "engine6" && tour.productCode
+          ? mergeEngine6LiveFieldsIntoTour(
+              tour,
+              liveEngine6DynamicByProductCode[tour.productCode]
+            )
+          : tour
+      ),
+    [featuredTours, liveEngine6DynamicByProductCode]
+  );
+
+  useEffect(() => {
+    if (engine6FeaturedTourProductCodes.length === 0) {
+      return;
+    }
+    let cancelled = false;
+
+    Promise.all(
+      engine6FeaturedTourProductCodes.map(async productCode => {
+        const fields = await fetchEngine6LiveProductFields(productCode);
+        if (!fields) return null;
+        return [productCode, fields] as const;
+      })
+    )
+      .then(results => {
+        if (cancelled) return;
+        const next: Record<string, Engine6LiveProductFields> = {};
+        for (const item of results) {
+          if (item) next[item[0]] = item[1];
+        }
+        if (Object.keys(next).length > 0) {
+          setLiveEngine6DynamicByProductCode(previous => ({ ...previous, ...next }));
+        }
+      })
+      .catch(() => {});
+
+    return () => {
+      cancelled = true;
+    };
+  }, [engine6FeaturedTourProductCodes]);
+
   const allCityTours =
     guide.tours.stateSlug && guide.tours.citySlug
       ? getToursByCityUnified(guide.tours.stateSlug, guide.tours.citySlug)
@@ -235,7 +298,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           <Section title="Top Tours">
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex gap-4">
-                {featuredTours.map(tour => (
+                {hydratedFeaturedTours.map(tour => (
                   <div
                     key={tour.id}
                     className="min-w-0 flex-[0_0_85%] md:flex-[0_0_50%] lg:flex-[0_0_33%]"
