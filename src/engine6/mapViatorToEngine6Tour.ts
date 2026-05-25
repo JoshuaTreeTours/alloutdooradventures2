@@ -542,7 +542,7 @@ export const mapViatorToEngine6Tour = (
     sourceOverview: sourceOverviewText,
   });
   const normalizedOverview =
-    sourceOverviewText || overriddenOverview || synthesizedOverview;
+    overriddenOverview || sourceOverviewText || synthesizedOverview;
 
 
   if (payload.rawProductCode === "335698P13") {
