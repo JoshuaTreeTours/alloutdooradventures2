@@ -3,6 +3,7 @@ import specimen163975p1Payload from "../../data/engine6/viator/163975P1.exact-pr
 import specimen447486p2Payload from "../../data/engine6/viator/447486P2.exact-product.json";
 import specimen117409p1Payload from "../../data/engine6/viator/117409P1.exact-product.json";
 import specimen421920p3Payload from "../../data/engine6/viator/421920P3.exact-product.json";
+import specimen7270p10Payload from "../../data/engine6/viator/7270P10.exact-product.json";
 import specimen5119Payload from "../../data/engine6/viator/5119P13.exact-product.json";
 import specimen5602p25Payload from "../../data/engine6/viator/5602P25.exact-product.json";
 import specimen190492p3Payload from "../../data/engine6/viator/190492P3.exact-product.json";
@@ -171,6 +172,15 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Santa-Barbara/Challenging-Adventure-Course-Trek-in-the-Santa-Ynez-Valley/d4372-421920P3",
     rawPayload: specimen421920p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "7270P10",
+    publicUrl:
+      "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Sunset-Kayak-Tour/d4372-7270P10",
+    rawPayload: specimen7270p10Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

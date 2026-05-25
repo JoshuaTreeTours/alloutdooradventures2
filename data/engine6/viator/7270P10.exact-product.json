@@ -1,0 +1,1229 @@
+{
+  "product": {
+    "status": "ACTIVE",
+    "productCode": "7270P10",
+    "language": "en",
+    "createdAt": "2016-05-26T07:00:00Z",
+    "lastUpdatedAt": "2026-05-23T21:46:12Z",
+    "title": "Sunset Kayak Tour in Santa Barbara Harbor (2 Hours)",
+    "ticketInfo": {
+      "ticketTypes": [
+        "MOBILE_ONLY"
+      ],
+      "ticketTypeDescription": "Mobile or paper ticket accepted",
+      "ticketsPerBooking": "ONE_PER_BOOKING",
+      "ticketsPerBookingDescription": "One per booking"
+    },
+    "pricingInfo": {
+      "type": "PER_PERSON",
+      "ageBands": [
+        {
+          "ageBand": "CHILD",
+          "startAge": 5,
+          "endAge": 12,
+          "minTravelersPerBooking": 0,
+          "maxTravelersPerBooking": 15
+        },
+        {
+          "ageBand": "ADULT",
+          "startAge": 13,
+          "endAge": 99,
+          "minTravelersPerBooking": 1,
+          "maxTravelersPerBooking": 15
+        }
+      ]
+    },
+    "images": [
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "Kayaking at sunset",
+        "isCover": true,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0d/b1/8e/b8.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0d/b1/8e/b8.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0d/b1/8e/b8.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0d/b1/8e/b8.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0d/b1/8e/b8.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0d/b1/8e/b8.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0d/b1/8e/b8.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/b8.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0d/b1/8e/b8.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0d/b1/8e/b8.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "Nothing better than a Santa Barbara sunset on the water",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0d/b1/8e/dd.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0d/b1/8e/dd.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0d/b1/8e/dd.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0d/b1/8e/dd.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0d/b1/8e/dd.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0d/b1/8e/dd.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0d/b1/8e/dd.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/dd.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0d/b1/8e/dd.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0d/b1/8e/dd.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "Happy kayaker",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0d/b1/8e/d8.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0d/b1/8e/d8.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0d/b1/8e/d8.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0d/b1/8e/d8.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0d/b1/8e/d8.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0d/b1/8e/d8.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0d/b1/8e/d8.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/d8.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0d/b1/8e/d8.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0d/b1/8e/d8.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "Saying hello to our sea lion friends!",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0d/b1/8e/e3.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0d/b1/8e/e3.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0d/b1/8e/e3.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0d/b1/8e/e3.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0d/b1/8e/e3.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0d/b1/8e/e3.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0d/b1/8e/e3.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/e3.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0d/b1/8e/e3.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0d/b1/8e/e3.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "A great date night on the water <3",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0d/b1/8e/da.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0d/b1/8e/da.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0d/b1/8e/da.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0d/b1/8e/da.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0d/b1/8e/da.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0d/b1/8e/da.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0d/b1/8e/da.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/da.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0d/b1/8e/da.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0d/b1/8e/da.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "The reflection on the water is beautiful :)",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0d/b1/8e/e0.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0d/b1/8e/e0.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0d/b1/8e/e0.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0d/b1/8e/e0.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0d/b1/8e/e0.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0d/b1/8e/e0.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0d/b1/8e/e0.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/e0.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0d/b1/8e/e0.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0d/b1/8e/e0.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "Meet your guide at the boat launch",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/6f/ef/d9.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/6f/ef/d9.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/6f/ef/d9.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/6f/ef/d9.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/6f/ef/d9.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/6f/ef/d9.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/6f/ef/d9.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/6f/ef/d9.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/6f/ef/d9.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/6f/ef/d9.jpg"
+          }
+        ]
+      }
+    ],
+    "logistics": {
+      "start": [
+        {
+          "location": {
+            "ref": "LOC-RaYlfRSLaIsd0SlazqDQk+x3lOpQ+7BMZyzKaY4MVCZG6GwXqpY2uMdxmu/Ha/SVIVbqyFxZY3SqQGsFQKZbcXdWrVSnGbIDdljOf70fOzwtAwCJ/Av8obX1eJnJfFV6tK2T6kGStPt6JOcRV2MSwa8gFKO9pp6R7Fp1RVd5Brs="
+          },
+          "description": "Enter the harbor at\u00a0Harbor Way.\u00a0Turn left and enter at the kiosk. Continue in the direction of the wharf. Follow the signs to the boat launch area. We will meet you at the boat ramp located at the end of the harbor r\u00a0parking lot (next to West Beach). Look for your guide with the kayaks."
+        }
+      ],
+      "end": [
+        {
+          "location": {
+            "ref": "LOC-RaYlfRSLaIsd0SlazqDQk+x3lOpQ+7BMZyzKaY4MVCZG6GwXqpY2uMdxmu/Ha/SVIVbqyFxZY3SqQGsFQKZbcXdWrVSnGbIDdljOf70fOzwtAwCJ/Av8obX1eJnJfFV6tK2T6kGStPt6JOcRV2MSwa8gFKO9pp6R7Fp1RVd5Brs="
+          },
+          "description": "Enter the harbor at\u00a0Harbor Way.\u00a0Turn left and enter at the kiosk. Continue in the direction of the wharf. Follow the signs to the boat launch area. We will meet you at the boat ramp located at the end of the harbor r\u00a0parking lot (next to West Beach). Look for your guide with the kayaks."
+        }
+      ],
+      "redemption": {
+        "redemptionType": "NONE",
+        "specialInstructions": "What you will need:\n \u2022 Sun Screen (SPF 30 or higher).\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \n \u2022 A hat with a brim. \n \u2022 Sunglasses\u00a0with a neck strap\u00a0such as \"Chums\" or \u201cCroakies\u201d \n \u2022 1-quart (or greater)\u00a0water bottle filled with water -\u00a0please help us reduce our environmental footprint by bringing a re-usable bottle. \n \u2022 Wet shoes\u00a0such as \"Tevas\" or \"Aqua Socks\" or an old pair of tennies. \n \u2022 Swim suit or swim trunks \n \u2022 Sweatshirt \n \u2022 A beach towel \n \u2022 Waterproof camera (recyclable).(optional) \n \u2022 Polyester shirt or other synthetic clothing (layering). (optional) \n\nMinimum numbers apply.\u00a0There is a possibility of cancellation after confirmation if there is not enough passengers to meet requirements. In the event of this occurring, you will be offered an alternative or full refund\u00a0\u00a0 \n"
+      },
+      "travelerPickup": {
+        "pickupOptionType": "MEET_EVERYONE_AT_START_POINT",
+        "allowCustomTravelerPickup": false
+      }
+    },
+    "timeZone": "America/Los_Angeles",
+    "description": "Join us for a relaxing sunset ocean kayak tour. This is a great way to end your day. We\u2019ll enjoy 2-hours together on the water exploring the Santa Barbara harbor & shoreline as the sun sets, creating a gorgeous backdrop of the city and the Santa Ynez Mountain range. This tour is fun and affordable for the whole family! Plus, it\u2019s great for all sea kayaking skill levels including beginners to advanced.",
+    "inclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "All associated kayaking gear (wet suit, PFD, helmet, paddle, etc."
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Spectacular views of Santa Barbara"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Knowledgeable guide and discussion of natural history/marine ecology"
+      }
+    ],
+    "exclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Personal expenses"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Parking is $2.00 per hour, maximum $12.00 per car."
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Gratuity for your guide(s) - While optional it is very much appreciated and to be given at your discretion in return for their leadership, expertise, and professionalism.You can tip the guide in cash or via credit card at the end of your tour as you feel appropriate."
+      }
+    ],
+    "additionalInfo": [
+      {
+        "type": "WHEELCHAIR_ACCESSIBLE",
+        "description": "Wheelchair accessible"
+      },
+      {
+        "type": "PUBLIC_TRANSPORTATION_NEARBY",
+        "description": "Public transportation options are available nearby"
+      },
+      {
+        "type": "NO_HEART_PROBLEMS",
+        "description": "Not recommended for travelers with poor cardiovascular health"
+      },
+      {
+        "type": "PHYSICAL_EASY",
+        "description": "Suitable for all physical fitness levels"
+      },
+      {
+        "type": "OTHER",
+        "description": "PLEASE NOTE: The start time changes throughout the year and is approximately 2 hours prior to sunset. Please call our office for confirmation of your meet time."
+      },
+      {
+        "type": "OTHER",
+        "description": "If your contact number is international please include your email address in the comment section."
+      },
+      {
+        "type": "OTHER",
+        "description": "Minimum numbers apply. Our kayak tours require a minimum of 2 participants to run. There is a possibility of cancellation after confirmation if there are not enough passengers to meet requirements. In the event of this occurring, you will be offered an alternative or full refund."
+      },
+      {
+        "type": "OTHER",
+        "description": "If you are a single traveler, please feel free to call our office to confirm availability"
+      },
+      {
+        "type": "OTHER",
+        "description": "Children under 5 are not permitted. Children under 12 must be accompanied by an adult in a double kayak."
+      },
+      {
+        "type": "OTHER",
+        "description": "Although we offer dry bags to help keep gear dry, everything that comes on the kayaking trip runs the risk of getting wet. We therefore recommend that you only bring personal gear that can get wet or damp during the trip. Items that must stay dry such as cameras or other electronic devices, change of clothes or personal belongings should stay in your vehicle."
+      },
+      {
+        "type": "OTHER",
+        "description": "Sun Screen (SPF 30 or higher)."
+      },
+      {
+        "type": "OTHER",
+        "description": "A hat with a brim."
+      },
+      {
+        "type": "OTHER",
+        "description": "Sunglasses with a neck strap such as \"Chums\" or \u201cCroakies\u201d"
+      },
+      {
+        "type": "OTHER",
+        "description": "1-quart (or greater) water bottle filled with water - please help us reduce our environmental footprint by bringing a re-usable bottle."
+      },
+      {
+        "type": "OTHER",
+        "description": "Wet shoes such as \"Tevas\" or \"Aqua Socks\" or an old pair of tennies."
+      },
+      {
+        "type": "OTHER",
+        "description": "Swim suit or swim trunks"
+      },
+      {
+        "type": "OTHER",
+        "description": "Sweatshirt"
+      },
+      {
+        "type": "OTHER",
+        "description": "A beach towel"
+      },
+      {
+        "type": "OTHER",
+        "description": "Waterproof camera (recyclable).(optional)"
+      },
+      {
+        "type": "OTHER",
+        "description": "Polyester shirt or other synthetic clothing (layering). (optional)"
+      },
+      {
+        "type": "OTHER",
+        "description": "Double kayaks are automatically provided. Singles are available for odd number parties. Guests over 230lbs will be provided a single kayak."
+      },
+      {
+        "type": "OTHER",
+        "description": "Guests under 18 years of age MUST have a parent or legal guardian sign their release forms. If you need this paperwork sent to you ahead of time, please contact our office."
+      },
+      {
+        "type": "OTHER",
+        "description": "Santa Barbara Adventure Company . Channel Islands Adventure Company . 805-884-WAVE (805-884-9283)"
+      }
+    ],
+    "cancellationPolicy": {
+      "type": "STANDARD",
+      "description": "For a full refund, cancel at least 24 hours before the scheduled departure time.",
+      "cancelIfBadWeather": true,
+      "cancelIfInsufficientTravelers": true,
+      "refundEligibility": [
+        {
+          "dayRangeMin": 1,
+          "percentageRefundable": 100
+        },
+        {
+          "dayRangeMin": 0,
+          "dayRangeMax": 1,
+          "percentageRefundable": 0
+        }
+      ]
+    },
+    "bookingConfirmationSettings": {
+      "bookingCutoffType": "START_TIME",
+      "bookingCutoffInMinutes": 480,
+      "confirmationType": "INSTANT_THEN_MANUAL",
+      "manualConfirmationPeriod": 1440
+    },
+    "bookingRequirements": {
+      "minTravelersPerBooking": 1,
+      "maxTravelersPerBooking": 15,
+      "requiresAdultForBooking": true
+    },
+    "languageGuides": [
+      {
+        "type": "GUIDE",
+        "language": "en",
+        "legacyGuide": "en/SERVICE_GUIDE"
+      }
+    ],
+    "bookingQuestions": [
+      "AGEBAND",
+      "FULL_NAMES_FIRST",
+      "FULL_NAMES_LAST",
+      "HEIGHT",
+      "SPECIAL_REQUIREMENTS",
+      "WEIGHT"
+    ],
+    "tags": [
+      367661,
+      21442,
+      21860,
+      12047,
+      367666,
+      21972
+    ],
+    "destinations": [
+      {
+        "ref": "4372",
+        "primary": true
+      }
+    ],
+    "itinerary": {
+      "itineraryType": "ACTIVITY",
+      "skipTheLine": false,
+      "privateTour": false,
+      "maxTravelersInSharedTour": 10,
+      "duration": {
+        "fixedDurationInMinutes": 120
+      },
+      "pointsOfInterest": [
+        {
+          "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyFb5E12sAe7t8OwlMGimapM="
+        },
+        {
+          "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyOxjGTTA/m1Z5G5uPgh7YVc="
+        }
+      ],
+      "activityInfo": {
+        "location": {
+          "ref": "LOC-RaYlfRSLaIsd0SlazqDQk+x3lOpQ+7BMZyzKaY4MVCZG6GwXqpY2uMdxmu/Ha/SVIVbqyFxZY3SqQGsFQKZbcXdWrVSnGbIDdljOf70fOzwtAwCJ/Av8obX1eJnJfFV6tK2T6kGStPt6JOcRV2MSwa8gFKO9pp6R7Fp1RVd5Brs="
+        },
+        "description": "Start by getting outfitted with paddle jackets, PFDs, a paddle, and a kayak. Your guide provides a paddling demonstration and safety talk, then makes sure you are comfortable in your boat. Set out on the water from the boat launch and paddle through the harbor, passing other boats, the historic wharf, under the pier, and along the beach. Along the way, look for wildlife like harbor seals, sea lions, brown pelicans, sea stars, cormorants, and seagulls. Expect to paddle approximately one to two miles (1.5\u20133 km) along the coast before returning to the boat dock where your tour ends."
+      }
+    },
+    "productOptions": [
+      {
+        "productOptionCode": "DEFAULT",
+        "description": "",
+        "title": "Sunset Kayak Tour in Santa Barbara Harbor (2 Hours)",
+        "languageGuides": [
+          {
+            "type": "GUIDE",
+            "language": "en",
+            "legacyGuide": "en/SERVICE_GUIDE"
+          }
+        ]
+      }
+    ],
+    "translationInfo": {
+      "containsMachineTranslatedText": false,
+      "translationSource": "ORIGINAL"
+    },
+    "supplier": {
+      "name": "Santa Barbara Adventure Company",
+      "reference": "SUPPLIER-LvZgp7lOW2wh4vxaMngf+g=="
+    },
+    "productUrl": "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Sunset-Kayak-Tour/d4372-7270P10",
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1,
+              "count": 0
+            },
+            {
+              "rating": 2,
+              "count": 1
+            },
+            {
+              "rating": 3,
+              "count": 1
+            },
+            {
+              "rating": 4,
+              "count": 0
+            },
+            {
+              "rating": 5,
+              "count": 25
+            }
+          ],
+          "totalCount": 27,
+          "averageRating": 4.8
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1,
+              "count": 0
+            },
+            {
+              "rating": 2,
+              "count": 0
+            },
+            {
+              "rating": 3,
+              "count": 1
+            },
+            {
+              "rating": 4,
+              "count": 1
+            },
+            {
+              "rating": 5,
+              "count": 38
+            }
+          ],
+          "totalCount": 40,
+          "averageRating": 4.9
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1,
+          "count": 0
+        },
+        {
+          "rating": 2,
+          "count": 1
+        },
+        {
+          "rating": 3,
+          "count": 2
+        },
+        {
+          "rating": 4,
+          "count": 1
+        },
+        {
+          "rating": 5,
+          "count": 63
+        }
+      ],
+      "totalReviews": 67,
+      "combinedAverageRating": 4.880597
+    },
+    "media": {
+      "images": [
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "caption": "Kayaking at sunset",
+          "isCover": true,
+          "variants": {
+            "100x100": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0d/b1/8e/b8.jpg",
+              "width": 100,
+              "height": 100
+            },
+            "200x200": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0d/b1/8e/b8.jpg",
+              "width": 200,
+              "height": 200
+            },
+            "400x400": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0d/b1/8e/b8.jpg",
+              "width": 400,
+              "height": 400
+            },
+            "360x240": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0d/b1/8e/b8.jpg",
+              "width": 360,
+              "height": 240
+            },
+            "480x320": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0d/b1/8e/b8.jpg",
+              "width": 480,
+              "height": 320
+            },
+            "540x360": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0d/b1/8e/b8.jpg",
+              "width": 540,
+              "height": 360
+            },
+            "674x446": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0d/b1/8e/b8.jpg",
+              "width": 674,
+              "height": 446
+            },
+            "720x480": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/b8.jpg",
+              "width": 720,
+              "height": 480
+            },
+            "210x118": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0d/b1/8e/b8.jpg",
+              "width": 210,
+              "height": 118
+            },
+            "75x75": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0d/b1/8e/b8.jpg",
+              "width": 75,
+              "height": 75
+            },
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/39/1d/4b/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        },
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "caption": "Nothing better than a Santa Barbara sunset on the water",
+          "isCover": false,
+          "variants": {
+            "100x100": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0d/b1/8e/dd.jpg",
+              "width": 100,
+              "height": 100
+            },
+            "200x200": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0d/b1/8e/dd.jpg",
+              "width": 200,
+              "height": 200
+            },
+            "400x400": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0d/b1/8e/dd.jpg",
+              "width": 400,
+              "height": 400
+            },
+            "360x240": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0d/b1/8e/dd.jpg",
+              "width": 360,
+              "height": 240
+            },
+            "480x320": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0d/b1/8e/dd.jpg",
+              "width": 480,
+              "height": 320
+            },
+            "540x360": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0d/b1/8e/dd.jpg",
+              "width": 540,
+              "height": 360
+            },
+            "674x446": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0d/b1/8e/dd.jpg",
+              "width": 674,
+              "height": 446
+            },
+            "720x480": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/dd.jpg",
+              "width": 720,
+              "height": 480
+            },
+            "210x118": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0d/b1/8e/dd.jpg",
+              "width": 210,
+              "height": 118
+            },
+            "75x75": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0d/b1/8e/dd.jpg",
+              "width": 75,
+              "height": 75
+            },
+            "FULL": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/dd.jpg",
+              "width": 720,
+              "height": 480
+            }
+          }
+        },
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "caption": "Happy kayaker",
+          "isCover": false,
+          "variants": {
+            "100x100": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0d/b1/8e/d8.jpg",
+              "width": 100,
+              "height": 100
+            },
+            "200x200": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0d/b1/8e/d8.jpg",
+              "width": 200,
+              "height": 200
+            },
+            "400x400": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0d/b1/8e/d8.jpg",
+              "width": 400,
+              "height": 400
+            },
+            "360x240": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0d/b1/8e/d8.jpg",
+              "width": 360,
+              "height": 240
+            },
+            "480x320": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0d/b1/8e/d8.jpg",
+              "width": 480,
+              "height": 320
+            },
+            "540x360": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0d/b1/8e/d8.jpg",
+              "width": 540,
+              "height": 360
+            },
+            "674x446": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0d/b1/8e/d8.jpg",
+              "width": 674,
+              "height": 446
+            },
+            "720x480": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/d8.jpg",
+              "width": 720,
+              "height": 480
+            },
+            "210x118": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0d/b1/8e/d8.jpg",
+              "width": 210,
+              "height": 118
+            },
+            "75x75": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0d/b1/8e/d8.jpg",
+              "width": 75,
+              "height": 75
+            },
+            "FULL": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/d8.jpg",
+              "width": 720,
+              "height": 480
+            }
+          }
+        },
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "caption": "Saying hello to our sea lion friends!",
+          "isCover": false,
+          "variants": {
+            "100x100": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0d/b1/8e/e3.jpg",
+              "width": 100,
+              "height": 100
+            },
+            "200x200": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0d/b1/8e/e3.jpg",
+              "width": 200,
+              "height": 200
+            },
+            "400x400": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0d/b1/8e/e3.jpg",
+              "width": 400,
+              "height": 400
+            },
+            "360x240": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0d/b1/8e/e3.jpg",
+              "width": 360,
+              "height": 240
+            },
+            "480x320": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0d/b1/8e/e3.jpg",
+              "width": 480,
+              "height": 320
+            },
+            "540x360": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0d/b1/8e/e3.jpg",
+              "width": 540,
+              "height": 360
+            },
+            "674x446": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0d/b1/8e/e3.jpg",
+              "width": 674,
+              "height": 446
+            },
+            "720x480": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/e3.jpg",
+              "width": 720,
+              "height": 480
+            },
+            "210x118": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0d/b1/8e/e3.jpg",
+              "width": 210,
+              "height": 118
+            },
+            "75x75": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0d/b1/8e/e3.jpg",
+              "width": 75,
+              "height": 75
+            },
+            "FULL": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/e3.jpg",
+              "width": 720,
+              "height": 480
+            }
+          }
+        },
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "caption": "A great date night on the water <3",
+          "isCover": false,
+          "variants": {
+            "100x100": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0d/b1/8e/da.jpg",
+              "width": 100,
+              "height": 100
+            },
+            "200x200": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0d/b1/8e/da.jpg",
+              "width": 200,
+              "height": 200
+            },
+            "400x400": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0d/b1/8e/da.jpg",
+              "width": 400,
+              "height": 400
+            },
+            "360x240": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0d/b1/8e/da.jpg",
+              "width": 360,
+              "height": 240
+            },
+            "480x320": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0d/b1/8e/da.jpg",
+              "width": 480,
+              "height": 320
+            },
+            "540x360": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0d/b1/8e/da.jpg",
+              "width": 540,
+              "height": 360
+            },
+            "674x446": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0d/b1/8e/da.jpg",
+              "width": 674,
+              "height": 446
+            },
+            "720x480": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/da.jpg",
+              "width": 720,
+              "height": 480
+            },
+            "210x118": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0d/b1/8e/da.jpg",
+              "width": 210,
+              "height": 118
+            },
+            "75x75": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0d/b1/8e/da.jpg",
+              "width": 75,
+              "height": 75
+            },
+            "FULL": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/da.jpg",
+              "width": 720,
+              "height": 480
+            }
+          }
+        },
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "caption": "The reflection on the water is beautiful :)",
+          "isCover": false,
+          "variants": {
+            "100x100": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0d/b1/8e/e0.jpg",
+              "width": 100,
+              "height": 100
+            },
+            "200x200": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0d/b1/8e/e0.jpg",
+              "width": 200,
+              "height": 200
+            },
+            "400x400": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0d/b1/8e/e0.jpg",
+              "width": 400,
+              "height": 400
+            },
+            "360x240": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0d/b1/8e/e0.jpg",
+              "width": 360,
+              "height": 240
+            },
+            "480x320": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0d/b1/8e/e0.jpg",
+              "width": 480,
+              "height": 320
+            },
+            "540x360": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0d/b1/8e/e0.jpg",
+              "width": 540,
+              "height": 360
+            },
+            "674x446": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0d/b1/8e/e0.jpg",
+              "width": 674,
+              "height": 446
+            },
+            "720x480": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/e0.jpg",
+              "width": 720,
+              "height": 480
+            },
+            "210x118": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0d/b1/8e/e0.jpg",
+              "width": 210,
+              "height": 118
+            },
+            "75x75": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0d/b1/8e/e0.jpg",
+              "width": 75,
+              "height": 75
+            },
+            "FULL": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0d/b1/8e/e0.jpg",
+              "width": 720,
+              "height": 480
+            }
+          }
+        },
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "caption": "Meet your guide at the boat launch",
+          "isCover": false,
+          "variants": {
+            "100x100": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/6f/ef/d9.jpg",
+              "width": 100,
+              "height": 100
+            },
+            "200x200": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/6f/ef/d9.jpg",
+              "width": 200,
+              "height": 200
+            },
+            "400x400": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/6f/ef/d9.jpg",
+              "width": 400,
+              "height": 400
+            },
+            "360x240": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/6f/ef/d9.jpg",
+              "width": 360,
+              "height": 240
+            },
+            "480x320": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/6f/ef/d9.jpg",
+              "width": 480,
+              "height": 320
+            },
+            "540x360": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/6f/ef/d9.jpg",
+              "width": 540,
+              "height": 360
+            },
+            "674x446": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/6f/ef/d9.jpg",
+              "width": 674,
+              "height": 446
+            },
+            "720x480": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/6f/ef/d9.jpg",
+              "width": 720,
+              "height": 480
+            },
+            "210x118": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/6f/ef/d9.jpg",
+              "width": 210,
+              "height": 118
+            },
+            "75x75": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/6f/ef/d9.jpg",
+              "width": 75,
+              "height": 75
+            },
+            "FULL": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/6f/ef/d9.jpg",
+              "width": 720,
+              "height": 480
+            }
+          }
+        }
+      ]
+    }
+  }
+}
