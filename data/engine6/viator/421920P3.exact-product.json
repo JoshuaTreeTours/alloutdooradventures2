@@ -1,0 +1,350 @@
+{
+  "product": {
+    "status": "ACTIVE",
+    "productCode": "421920P3",
+    "language": "en",
+    "createdAt": "2019-06-14T20:55:36.959223Z",
+    "lastUpdatedAt": "2026-05-23T07:40:26Z",
+    "title": "Challenging Adventure Course Trek in the Santa Ynez Valley",
+    "ticketInfo": {
+      "ticketTypes": [
+        "MOBILE_ONLY"
+      ],
+      "ticketTypeDescription": "Mobile or paper ticket accepted",
+      "ticketsPerBooking": "ONE_PER_BOOKING",
+      "ticketsPerBookingDescription": "One per booking"
+    },
+    "pricingInfo": {
+      "type": "PER_PERSON",
+      "ageBands": [
+        {
+          "ageBand": "CHILD",
+          "startAge": 0,
+          "endAge": 12,
+          "minTravelersPerBooking": 0,
+          "maxTravelersPerBooking": 4
+        },
+        {
+          "ageBand": "ADULT",
+          "startAge": 13,
+          "endAge": 100,
+          "minTravelersPerBooking": 1,
+          "maxTravelersPerBooking": 4
+        }
+      ],
+      "summary": {
+        "fromPrice": 45.0,
+        "fromPriceBeforeDiscount": null,
+        "formattedFromPrice": "US$45.00"
+      }
+    },
+    "logistics": {
+      "start": [
+        {
+          "location": {
+            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5DdotqLtbX6aiKonFRK4Ve1O7vCbuQXuf4T2xyWhTG5P"
+          },
+          "description": "Meeting point details are provided after booking for the adventure-course departure in the Santa Ynez Valley area. Arrive early for check-in, safety overview, and gear/prep instructions before the trek begins."
+        }
+      ],
+      "end": [
+        {
+          "location": {
+            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5DdotqLtbX6aiKonFRK4Ve1O7vCbuQXuf4T2xyWhTG5P"
+          },
+          "description": "Departs Thursday - Monday at 1 Garden st. \nDeparture times are 10:00am, 12:00pm and 2:00pm. "
+        }
+      ],
+      "redemption": {
+        "redemptionType": "NONE",
+        "specialInstructions": "If wheelchair assistants is needed, please call our office 48 hours in advance (805) 965-0353. "
+      },
+      "travelerPickup": {
+        "pickupOptionType": "MEET_EVERYONE_AT_START_POINT",
+        "allowCustomTravelerPickup": false
+      }
+    },
+    "timeZone": "America/Los_Angeles",
+    "description": "Take on a physically active adventure course trek in the Santa Ynez Valley, a scenic wine-country landscape just beyond Santa Barbara. This experience is built for travelers who want a challenging outdoor session with guided pacing, clear safety direction, and terrain-focused movement. Expect an athletic route with elevation changes, uneven natural surfaces, and a steady effort level from start to finish.",
+    "inclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Guided adventure-course trek"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Safety orientation"
+      }
+    ],
+    "exclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Food and drinks"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Hotel pickup and drop-off"
+      }
+    ],
+    "additionalInfo": [
+      {
+        "type": "PHYSICAL_CHALLENGING",
+        "description": "A strong fitness level is recommended for this challenging route."
+      },
+      {
+        "type": "PUBLIC_TRANSPORTATION_NEARBY",
+        "description": "Public transportation options may be available near meeting areas."
+      },
+      {
+        "type": "PETS_WELCOME",
+        "description": "Service animals allowed."
+      }
+    ],
+    "cancellationPolicy": {
+      "type": "ALL_SALES_FINAL",
+      "description": "All sales are final. No refund is available for cancellations.",
+      "cancelIfBadWeather": true,
+      "cancelIfInsufficientTravelers": false,
+      "refundEligibility": [
+        {
+          "dayRangeMin": 0,
+          "percentageRefundable": 0
+        }
+      ]
+    },
+    "bookingConfirmationSettings": {
+      "bookingCutoffType": "START_TIME",
+      "bookingCutoffInMinutes": 60,
+      "confirmationType": "MANUAL"
+    },
+    "bookingRequirements": {
+      "minTravelersPerBooking": 1,
+      "maxTravelersPerBooking": 4,
+      "requiresAdultForBooking": true
+    },
+    "languageGuides": [
+      {
+        "type": "GUIDE",
+        "language": "en",
+        "legacyGuide": "en/SERVICE_GUIDE"
+      }
+    ],
+    "bookingQuestions": [
+      "AGEBAND",
+      "FULL_NAMES_FIRST",
+      "FULL_NAMES_LAST",
+      "SPECIAL_REQUIREMENTS"
+    ],
+    "tags": [
+      367661,
+      367652,
+      367664,
+      11938,
+      20250,
+      21860,
+      367651,
+      367653,
+      367654,
+      22143
+    ],
+    "destinations": [
+      {
+        "ref": "4372",
+        "primary": true
+      }
+    ],
+    "itinerary": {
+      "itineraryType": "STANDARD",
+      "skipTheLine": false,
+      "privateTour": false,
+      "maxTravelersInSharedTour": 4,
+      "duration": {
+        "fixedDurationInMinutes": 90
+      },
+      "itineraryItems": [
+        {
+          "description": "Meet your guide, review route conditions, and receive a safety briefing focused on challenging terrain movement and pacing.",
+          "passByWithoutStopping": false,
+          "admissionIncluded": "YES",
+          "title": "Check-in and safety briefing"
+        },
+        {
+          "description": "Follow a guided route through Santa Ynez Valley terrain with sustained uphill/downhill sections and technical footing where applicable.",
+          "passByWithoutStopping": false,
+          "admissionIncluded": "YES",
+          "title": "Guided adventure-course trek"
+        },
+        {
+          "description": "Pause at major lookouts for photos and orientation while guides interpret landscape features and route progression.",
+          "passByWithoutStopping": false,
+          "admissionIncluded": "YES",
+          "title": "Scenic ridge and valley viewpoints"
+        },
+        {
+          "description": "Complete the last segment of the course and return to the finish point with cooldown and wrap-up guidance.",
+          "passByWithoutStopping": false,
+          "admissionIncluded": "YES",
+          "title": "Final stretch and return"
+        }
+      ]
+    },
+    "productOptions": [
+      {
+        "productOptionCode": "ADV_TREK",
+        "description": "Guided challenging adventure-course trek in Santa Ynez Valley.",
+        "title": "Adventure Course Trek",
+        "languageGuides": [
+          {
+            "type": "GUIDE",
+            "language": "en",
+            "legacyGuide": "en/SERVICE_GUIDE"
+          }
+        ]
+      }
+    ],
+    "translationInfo": {
+      "containsMachineTranslatedText": false,
+      "translationSource": "ORIGINAL"
+    },
+    "supplier": {
+      "name": "Santa Ynez Valley Adventure Guides",
+      "reference": "SUPPLIER-421920P3"
+    },
+    "productUrl": "https://www.viator.com/tours/Santa-Barbara/Challenging-Adventure-Course-Trek-in-the-Santa-Ynez-Valley/d4372-421920P3",
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1,
+              "count": 15
+            },
+            {
+              "rating": 2,
+              "count": 8
+            },
+            {
+              "rating": 3,
+              "count": 16
+            },
+            {
+              "rating": 4,
+              "count": 52
+            },
+            {
+              "rating": 5,
+              "count": 280
+            }
+          ],
+          "totalCount": 371,
+          "averageRating": 4.5
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1,
+              "count": 17
+            },
+            {
+              "rating": 2,
+              "count": 3
+            },
+            {
+              "rating": 3,
+              "count": 25
+            },
+            {
+              "rating": 4,
+              "count": 68
+            },
+            {
+              "rating": 5,
+              "count": 352
+            }
+          ],
+          "totalCount": 465,
+          "averageRating": 4.6
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1,
+          "count": 32
+        },
+        {
+          "rating": 2,
+          "count": 11
+        },
+        {
+          "rating": 3,
+          "count": 41
+        },
+        {
+          "rating": 4,
+          "count": 120
+        },
+        {
+          "rating": 5,
+          "count": 632
+        }
+      ],
+      "totalReviews": 159,
+      "combinedAverageRating": 5.0
+    },
+    "media": {
+      "images": [
+        {
+          "imageSource": "EXTERNAL",
+          "caption": "Challenging Adventure Course Trek in the Santa Ynez Valley",
+          "isCover": true,
+          "variants": {
+            "caption": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/30/70/e1/78/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            },
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/30/70/e1/78/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            },
+            "LARGE": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/30/70/e1/78/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            }
+          }
+        }
+      ],
+      "heroImage": "https://dynamic-media.tacdn.com/media/photo-o/30/70/e1/78/caption.jpg?w=1400&h=1000&s=1"
+    },
+    "faqs": [
+      {
+        "question": "How strenuous is this trek?",
+        "answer": "This is a challenging, active outdoor experience that includes sustained movement and uneven terrain."
+      },
+      {
+        "question": "Who is this adventure best for?",
+        "answer": "It is best for travelers comfortable with physically demanding activity and variable trail conditions."
+      },
+      {
+        "question": "Where does the tour operate?",
+        "answer": "The trek operates in the Santa Ynez Valley area near Santa Barbara, with exact meeting details sent after booking."
+      }
+    ]
+  }
+}
