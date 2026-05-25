@@ -17,6 +17,7 @@ import {
   getTourBySlugs,
   getLegacyTourBySlugs,
   getToursByCity,
+  sortRelatedToursForLegacyPage,
 } from "../../../../data/tours";
 import {
   flagstaffTours,
@@ -279,9 +280,13 @@ export default function CityTourBookingRoute({
     return () => window.clearTimeout(timeout);
   }, [attributedWidgetUrl, embedStatus]);
 
-  const relatedTours = (
-    isFlagstaff ? flagstaffTours : getToursByCity(state.slug, city.slug)
-  ).filter(item => item.slug !== tour.slug);
+  const relatedTours = sortRelatedToursForLegacyPage(
+    (isFlagstaff ? flagstaffTours : getToursByCity(state.slug, city.slug)).filter(
+      item => item.slug !== tour.slug
+    ),
+    state.slug,
+    city.slug
+  );
   return (
     <>
       <Seo
