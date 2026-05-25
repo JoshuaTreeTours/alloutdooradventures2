@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import TourCard from "../../components/TourCard";
 import Seo from "../../components/Seo";
 import RatingStars from "./RatingStars";
-import { getEngine4ListingEntries } from "../listing/getEngine4ListingEntries";
+import { getToursByCityUnified } from "../../data/tours";
 import { buildEngine4ViatorSchemaGraph } from "../schema/buildEngine4ViatorSchemaGraph";
 import type { Engine4TourViewModel } from "../types";
 
@@ -40,12 +40,37 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const hasWhatToExpect = hasText(tour.content.whatToExpect);
   const destinationStatePath = `/destinations/${tour.destination.stateSlug}`;
   const destinationCityPath = `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}`;
-  const moreTours = getEngine4ListingEntries(
+  const moreTours = getToursByCityUnified(
     tour.destination.stateSlug,
     tour.destination.citySlug
   )
-    .filter(entry => entry.tour.productCode !== tour.productCode)
+    .filter(entry => {
+      if (entry.href === tour.canonicalPath) {
+        return false;
+      }
+      if (entry.tour.slug === tour.slug) {
+        return false;
+      }
+      if (
+        tour.productCode &&
+        entry.tour.productCode?.toUpperCase() === tour.productCode.toUpperCase()
+      ) {
+        return false;
+      }
+      return true;
+    })
     .slice(0, 6);
+
+  if (process.env.NODE_ENV !== "production") {
+    const engine6Count = moreTours.filter(entry => entry.tour.engine === "engine6").length;
+    console.info("[legacy-more-tours][engine4]", {
+      city: `${tour.destination.stateSlug}/${tour.destination.citySlug}`,
+      currentSlug: tour.slug,
+      finalCount: moreTours.length,
+      engine6Count,
+      engines: moreTours.map(entry => entry.tour.engine),
+    });
+  }
 
   if (
     process.env.NODE_ENV === "development" ||

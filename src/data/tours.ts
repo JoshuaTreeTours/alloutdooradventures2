@@ -350,30 +350,41 @@ const ENGINE6_ONLY_CITY_KEYS = new Set<string>();
 export const isEngine6OnlyCity = (stateSlug: string, citySlug: string) =>
   ENGINE6_ONLY_CITY_KEYS.has(`${stateSlug}/${citySlug}`);
 
-const prioritizeEngine6Entries = <T>(
+const prioritizeEngineOrderEntries = <T>(
   entries: T[],
   getTour: (entry: T) => Tour
 ) => {
-  const engine6: T[] = [];
-  const nonEngine6: T[] = [];
+  const byRank = new Map<number, T[]>();
 
   for (const entry of entries) {
-    if (getTour(entry).engine === "engine6") {
-      engine6.push(entry);
+    const rank = engineRank(getTour(entry));
+    const bucket = byRank.get(rank);
+
+    if (bucket) {
+      bucket.push(entry);
       continue;
     }
 
-    nonEngine6.push(entry);
+    byRank.set(rank, [entry]);
   }
 
-  return [...engine6, ...nonEngine6];
+  const ordered: T[] = [];
+
+  for (const rank of [5, 4, 3, 2, 1]) {
+    const bucket = byRank.get(rank);
+    if (bucket) {
+      ordered.push(...bucket);
+    }
+  }
+
+  return ordered;
 };
 
 export const prioritizeEngine6Tours = (entries: Tour[]) =>
-  prioritizeEngine6Entries(entries, entry => entry);
+  prioritizeEngineOrderEntries(entries, entry => entry);
 
 const prioritizeEngine6UnifiedTours = (entries: UnifiedCityTour[]) =>
-  prioritizeEngine6Entries(entries, entry => entry.tour);
+  prioritizeEngineOrderEntries(entries, entry => entry.tour);
 
 function engineRank(tour: Tour) {
   if (tour.engine === "engine6") {
