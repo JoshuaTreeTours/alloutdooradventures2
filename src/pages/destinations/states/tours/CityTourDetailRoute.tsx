@@ -987,6 +987,7 @@ export default function CityTourDetailRoute({
                 <TourCard
                   key={related.slug}
                   tour={related}
+                  forceDocumentNavigation
                   href={
                     isFlagstaff
                       ? getFlagstaffTourDetailPath(related)

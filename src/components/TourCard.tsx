@@ -13,6 +13,7 @@ import Image from "./Image";
 type TourCardProps = {
   tour: Tour;
   href?: string;
+  forceDocumentNavigation?: boolean;
 };
 const CONTAMINATED_TOUR_IDS = new Set(["517077", "517088", "517079", "520051"]);
 const CONTAMINATED_TOUR_PATHS = new Set([
@@ -130,7 +131,11 @@ function getCardBlurb(tour: Tour): string {
   return `${snippet.trim()}…`;
 }
 
-export default function TourCard({ tour, href }: TourCardProps) {
+export default function TourCard({
+  tour,
+  href,
+  forceDocumentNavigation = false,
+}: TourCardProps) {
   const detailHref = href ?? getTourDetailPath(tour);
   const fareHarborId =
     tour.bookingUrl?.match(/\/items\/(\d+)/)?.[1] ?? tour.id.replace(/^engine2-/, "");
@@ -254,11 +259,20 @@ export default function TourCard({ tour, href }: TourCardProps) {
           ) : null}
         </div>
         <div className="mt-auto">
-          <Link href={detailHref}>
-            <a className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
+          {forceDocumentNavigation ? (
+            <a
+              href={detailHref}
+              className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+            >
               {isRental ? "View Rental" : "View Tour"}
             </a>
-          </Link>
+          ) : (
+            <Link href={detailHref}>
+              <a className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
+                {isRental ? "View Rental" : "View Tour"}
+              </a>
+            </Link>
+          )}
         </div>
       </div>
     </article>
