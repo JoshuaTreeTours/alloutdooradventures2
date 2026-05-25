@@ -5,10 +5,11 @@ import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
 import { ENGINE2_DEFAULT_IMAGE } from "../config/destinations";
-import { getAllEngine2Tours, type Engine2Tour } from "../data/loadEngine2";
+import { type Engine2Tour } from "../data/loadEngine2";
 import { buildSchemaGraph } from "../schema/buildSchemaGraph";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
+import { getToursByCityUnified } from "../../data/tours";
 import TourRating from "../components/TourRating";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import {
@@ -24,6 +25,13 @@ type Engine2TourPageProps = {
 };
 
 const EXTERNAL_CTA_REL = "nofollow sponsored noopener noreferrer";
+
+const getStateCitySlugsFromCanonicalPath = (canonicalPath: string) => {
+  const parts = canonicalPath.split("/").filter(Boolean);
+  const stateSlug = parts[1] ?? "";
+  const citySlug = parts[2] ?? "";
+  return { stateSlug, citySlug };
+};
 
 const normalizeStringArray = (value: unknown) => {
   if (!Array.isArray(value)) {
@@ -184,14 +192,40 @@ export default function Engine2TourPage({
     ]
   );
 
-  const relatedTours = useMemo(
-    () =>
-      getAllEngine2Tours().filter(
-        item =>
-          item.slug !== tour.slug && item.sourceCitySlug === tour.sourceCitySlug
-      ),
-    [tour.slug, tour.sourceCitySlug]
-  );
+  const relatedTours = useMemo(() => {
+    const normalizedCurrentProductCode = tour.id?.trim().toUpperCase();
+    const { stateSlug, citySlug } = getStateCitySlugsFromCanonicalPath(normalizedTour.seo.canonicalPath);
+    const related = getToursByCityUnified(stateSlug, citySlug)
+      .filter(entry => {
+        if (entry.href === normalizedTour.seo.canonicalPath) {
+          return false;
+        }
+        if (entry.tour.slug === normalizedTour.slug) {
+          return false;
+        }
+        if (
+          normalizedCurrentProductCode &&
+          entry.tour.productCode?.trim().toUpperCase() === normalizedCurrentProductCode
+        ) {
+          return false;
+        }
+        return true;
+      })
+      .slice(0, 6);
+
+    if (process.env.NODE_ENV !== "production") {
+      const engine6Count = related.filter(entry => entry.tour.engine === "engine6").length;
+      console.info("[legacy-more-tours][engine2]", {
+        city: normalizedTour.sourceCitySlug,
+        currentSlug: normalizedTour.slug,
+        finalCount: related.length,
+        engine6Count,
+        engines: related.map(entry => entry.tour.engine),
+      });
+    }
+
+    return related;
+  }, [normalizedTour]);
 
   useStructuredData(structuredDataNodes);
 
@@ -687,25 +721,26 @@ export default function Engine2TourPage({
               More tours in {tour.geo.city}
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {relatedTours.map(related => {
+              {relatedTours.map(entry => {
+                const related = entry.tour;
                 const relatedHeroImage =
-                  related.images.hero || ENGINE2_DEFAULT_IMAGE;
+                  related.primaryImageUrl || related.heroImage || ENGINE2_DEFAULT_IMAGE;
 
                 return (
-                  <Link key={related.slug} href={related.seo.canonicalPath}>
+                  <Link key={entry.href} href={entry.href}>
                     <a className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
                       <Image
                         src={relatedHeroImage}
                         fallbackSrc={relatedHeroImage}
-                        alt={related.name}
+                        alt={related.title}
                         className="h-44 w-full object-cover"
                       />
                       <div className="p-4">
                         <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                          {related.geo.city}, {related.geo.region}
+                          {related.destination.city}, {related.destination.state}
                         </p>
                         <h3 className="mt-2 text-base font-semibold text-[#1f2a1f]">
-                          {related.name}
+                          {related.title}
                         </h3>
                       </div>
                     </a>
