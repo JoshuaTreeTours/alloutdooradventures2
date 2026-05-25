@@ -17,6 +17,10 @@ export const ENGINE6_CHALLENGING_ADVENTURE_COURSE_TREK_PRODUCT_CODE =
 export const ENGINE6_CHALLENGING_ADVENTURE_COURSE_TREK_ROUTE =
   "/destinations/california/santa-barbara/tours/challenging-adventure-course-trek-in-the-santa-ynez-valley";
 
+export const ENGINE6_SANTA_BARBARA_SOAR_PRODUCT_CODE = "331438P1";
+export const ENGINE6_SANTA_BARBARA_SOAR_ROUTE =
+  "/destinations/california/santa-barbara/tours/soar-above-beautiful-santa-barbara";
+
 export const ENGINE6_SANTA_BARBARA_SUNSET_KAYAK_PRODUCT_CODE = "7270P10";
 export const ENGINE6_SANTA_BARBARA_SUNSET_KAYAK_ROUTE =
   "/destinations/california/santa-barbara/tours/santa-barbara-sunset-kayak-tour";
@@ -428,6 +432,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_SANTA_BARBARA_HAPPY_HOUR_YACHT_PRODUCT_CODE,
   ],
   [ENGINE6_SANTA_YNEZ_VALLEY_ROUTE, ENGINE6_SANTA_YNEZ_VALLEY_PRODUCT_CODE],
+  [
+    ENGINE6_SANTA_BARBARA_SOAR_ROUTE,
+    ENGINE6_SANTA_BARBARA_SOAR_PRODUCT_CODE,
+  ],
   [
     ENGINE6_SANTA_BARBARA_SUNSET_KAYAK_ROUTE,
     ENGINE6_SANTA_BARBARA_SUNSET_KAYAK_PRODUCT_CODE,
