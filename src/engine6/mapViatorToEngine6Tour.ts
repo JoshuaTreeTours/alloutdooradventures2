@@ -38,6 +38,8 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
     "Enjoy a full day at Universal Studios Hollywood with access to thrilling rides, immersive movie-themed attractions, and behind-the-scenes studio experiences.",
   "163975P1":
     "Settle into Santa Barbara’s coastal rhythm on a guided trolley tour that links landmark neighborhoods, beaches, and historic architecture in one easy loop.",
+  "117409P1":
+    "Head beyond the coast on a guided Santa Ynez Valley day trip focused on wine-country towns, vineyard landscapes, and relaxed tasting stops.",
 };
 const ENGINE6_OVERVIEW_OVERRIDES: Record<
   string,
@@ -89,6 +91,8 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
   },
   "163975P1": () =>
     "Santa Barbara Trolley Tour is a relaxed city overview that pairs coastal scenery with historic landmarks in a comfortable, open-air style ride. As the trolley rolls through town, you pass waterfront icons like Stearns Wharf and East Beach, continue by the Andrée Clark Bird Refuge and Butterfly Beach, and take in the city’s Spanish-influenced architecture around the courthouse and El Presidio district. The route also includes a dedicated stop at Old Mission Santa Barbara, where you have about 10 minutes to look around before rejoining the tour. Along the way, your guide adds practical local context on neighborhoods, history, and daily life, so the experience feels more personal than a standard transfer. It’s an easy way to understand Santa Barbara’s scenic, coastal, and historic character early in your visit.",
+  "117409P1": () =>
+    "Santa Ynez Valley Tour is a full-day wine-country outing from Santa Barbara that trades shoreline views for inland ranchland, vineyard slopes, and small-town main streets. The route usually follows Highway 154 over San Marcos Pass into the Santa Ynez Valley, then moves between tasting stops in communities such as Solvang, Los Olivos, and Santa Ynez depending on the day’s winery lineup. Your guide handles driving and timing, so you can focus on scenery, local wine styles, and a relaxed pace between pours. Expect a social small-group format with structured stops, practical destination context, and enough free moments to browse tasting rooms or village blocks. It’s an easy way to experience one of Santa Barbara County’s best-known wine regions without self-driving logistics.",
 };
 
 const pickOpeningPatternIndex = (seed: string) => {
@@ -271,6 +275,14 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Pass the Santa Barbara County Courthouse to admire its Spanish Colonial Revival design and one of downtown’s signature civic landmarks.",
     "Ride by El Presidio de Santa Barbara State Historic Park, where preserved adobe-era structures reflect the city’s early colonial roots.",
     "Finish along the Santa Barbara waterfront with marina views, palm-lined promenades, and a final sweep of the coast.",
+  ],
+  "117409P1": [
+    "Leave Santa Barbara and climb over San Marcos Pass on Highway 154, where coastal terrain gives way to ranchlands and vineyard valleys.",
+    "Arrive in Santa Ynez Valley wine country for guided tasting-stop rotations based on the day’s participating wineries.",
+    "Spend time in Solvang to explore Danish-style streets, local shops, and tasting rooms between winery visits.",
+    "Continue through Los Olivos for small-town wine-country atmosphere and additional tasting opportunities when scheduled.",
+    "Travel through Santa Ynez with route commentary on valley history, agriculture, and regional winemaking styles.",
+    "Return to Santa Barbara with a final scenic drive back over the pass after the day’s tasting itinerary wraps.",
   ],
   "5096P30": [
     "Begin your sightseeing loop on Hollywood Boulevard at the Big Bus Welcome Center, where departures run throughout the day.",
