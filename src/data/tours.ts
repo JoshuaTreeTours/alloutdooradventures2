@@ -375,6 +375,49 @@ export const prioritizeEngine6Tours = (entries: Tour[]) =>
 const prioritizeEngine6UnifiedTours = (entries: UnifiedCityTour[]) =>
   prioritizeEngine6Entries(entries, entry => entry.tour);
 
+const SANTA_BARBARA_ENGINE6_PRIORITY_TITLES = [
+  "Santa Barbara Trolley Tour",
+  "Santa Ynez Valley Tour",
+  "Santa Barbara Happy Hour on a Yacht",
+  "Challenging Adventure Course Trek in the Santa Ynez Valley",
+  "Santa Barbara Sunset Kayak Tour",
+  "Soar Above Beautiful Santa Barbara",
+];
+
+const getLegacyRelatedTourOrderScore = (
+  tour: Tour,
+  stateSlug: string,
+  citySlug: string
+) => {
+  if (tour.engine === "engine6") {
+    if (stateSlug === "california" && citySlug === "santa-barbara") {
+      const priorityIndex = SANTA_BARBARA_ENGINE6_PRIORITY_TITLES.indexOf(
+        tour.title
+      );
+      return priorityIndex === -1 ? 100 : priorityIndex;
+    }
+    return 1000;
+  }
+
+  return 2000;
+};
+
+export const sortRelatedToursForLegacyPage = (
+  entries: Tour[],
+  stateSlug: string,
+  citySlug: string
+) =>
+  [...entries].sort((a, b) => {
+    const scoreA = getLegacyRelatedTourOrderScore(a, stateSlug, citySlug);
+    const scoreB = getLegacyRelatedTourOrderScore(b, stateSlug, citySlug);
+
+    if (scoreA !== scoreB) {
+      return scoreA - scoreB;
+    }
+
+    return 0;
+  });
+
 function engineRank(tour: Tour) {
   if (tour.engine === "engine6") {
     return 5;

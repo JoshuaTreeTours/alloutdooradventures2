@@ -16,6 +16,7 @@ import {
   getTourBookingPath,
   getToursByCity,
   getTourBySlugs,
+  sortRelatedToursForLegacyPage,
 } from "../../../../data/tours";
 import {
   flagstaffTours,
@@ -729,21 +730,25 @@ export default function CityTourDetailRoute({
 
   const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
   const seoMeta = buildTourMeta(tour, canonicalUrl);
-  const relatedTours = (
-    isFlagstaff
-      ? flagstaffTours
-      : getToursByCity(state.slug, city.slug).map(item =>
-          item.engine === "engine6" && item.productCode
-            ? mergeEngine6LiveFieldsIntoTour(
-                item,
-                liveEngine6DynamicByProductCode[item.productCode]
-              )
-            : item
-        )
-  ).filter(item =>
-    isFlagstaff
-      ? getFlagstaffTourSlug(item) !== tourSlug
-      : item.slug !== tour.slug
+  const relatedTours = sortRelatedToursForLegacyPage(
+    (
+      isFlagstaff
+        ? flagstaffTours
+        : getToursByCity(state.slug, city.slug).map(item =>
+            item.engine === "engine6" && item.productCode
+              ? mergeEngine6LiveFieldsIntoTour(
+                  item,
+                  liveEngine6DynamicByProductCode[item.productCode]
+                )
+              : item
+          )
+    ).filter(item =>
+      isFlagstaff
+        ? getFlagstaffTourSlug(item) !== tourSlug
+        : item.slug !== tour.slug
+    ),
+    state.slug,
+    city.slug
   );
   const disclosure = getAffiliateDisclosure(tour);
   const fareHarborHeroStartingPrice =
