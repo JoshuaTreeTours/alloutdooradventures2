@@ -318,14 +318,20 @@ export default function GuideInternalLinks({
     useState<Record<string, Engine6LiveProductFields>>({});
   const engine6TopTourProductCodes = useMemo(
     () =>
-      topTours
-        .filter(tour => tour.engine === "engine6" && !!tour.productCode)
-        .map(tour => tour.productCode),
+      Array.from(
+        new Set(
+          topTours
+            .filter(tour => tour.engine === "engine6" && !!tour.productCode)
+            .map(tour => tour.productCode)
+        )
+      ),
     [topTours]
   );
 
   useEffect(() => {
-    if (engine6TopTourProductCodes.length === 0) return;
+    if (variant !== "top-tours" || engine6TopTourProductCodes.length === 0) {
+      return;
+    }
     let cancelled = false;
 
     Promise.all(
@@ -350,7 +356,7 @@ export default function GuideInternalLinks({
     return () => {
       cancelled = true;
     };
-  }, [engine6TopTourProductCodes]);
+  }, [engine6TopTourProductCodes, variant]);
 
   const hydratedTopTours = useMemo(
     () =>
