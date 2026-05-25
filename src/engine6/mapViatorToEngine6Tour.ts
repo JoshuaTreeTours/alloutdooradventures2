@@ -151,6 +151,83 @@ const toSentence = (value: string) => {
 const countWords = (value: string) =>
   value.trim().split(/\s+/).filter(Boolean).length;
 
+const normalizedTokenSet = (value: string) =>
+  new Set(
+    value
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, " ")
+      .split(/\s+/)
+      .filter(token => token.length >= 4)
+  );
+
+const buildOverviewFallbackProse = ({
+  city,
+  state,
+  durationText,
+  categoryLabel,
+  meetingPointText,
+}: {
+  city: string;
+  state: string;
+  durationText: string | null;
+  categoryLabel: string | null;
+  meetingPointText: string | null;
+}) =>
+  [
+    `This guided experience in ${city}, ${state} is designed as a clear, destination-first outing with a steady pace and practical on-the-ground context.`,
+    `Instead of rushing through disconnected checkpoints, the route is organized to keep transitions smooth while giving you time to absorb the setting and ask questions.`,
+    durationText
+      ? `Most departures run about ${durationText}, which is long enough to cover core highlights without turning the day into an overpacked marathon.`
+      : "The schedule is structured to cover core highlights without feeling overpacked or rushed.",
+    categoryLabel
+      ? `As a ${categoryLabel.toLowerCase()}, it emphasizes guided interpretation, reliable logistics, and a consistent flow from start to finish.`
+      : "It emphasizes guided interpretation, reliable logistics, and a consistent flow from start to finish.",
+    meetingPointText
+      ? `Meeting details are centered on ${meetingPointText}, helping travelers start with clear orientation before the main experience begins.`
+      : "You get straightforward coordination details in advance so arrival and departure are easy to manage.",
+  ]
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const passesEngine6OverviewQuality = ({
+  generatedOverview,
+  sourceOverview,
+}: {
+  generatedOverview: string;
+  sourceOverview: string;
+}) => {
+  const normalized = generatedOverview.replace(/\s+/g, " ").trim();
+  const words = countWords(normalized);
+  if (words < 100 || words > 150) return false;
+  if (/(activities such as|scheduled stops such as)/i.test(normalized)) {
+    return false;
+  }
+  if (
+    /(overall,\s*this|the format is guided and follows a structured itinerary|expect accurate location details)/i.test(
+      normalized
+    )
+  ) {
+    return false;
+  }
+  if (/, [^,.]{1,30}, [^,.]{1,30}, [^,.]{1,30}, [^,.]{1,30}/.test(normalized)) {
+    return false;
+  }
+
+  const generatedTokens = normalizedTokenSet(normalized);
+  const sourceTokens = normalizedTokenSet(sourceOverview);
+  if (generatedTokens.size && sourceTokens.size) {
+    let overlapCount = 0;
+    for (const token of generatedTokens) {
+      if (sourceTokens.has(token)) overlapCount += 1;
+    }
+    const overlapRatio = overlapCount / generatedTokens.size;
+    if (overlapRatio >= 0.55) return false;
+  }
+
+  return true;
+};
+
 const stripMarketingLanguage = (value: string) =>
   value
     .replace(/\bonce in a lifetime\b/gi, "")
@@ -195,25 +272,20 @@ const buildAuthoritativeOverview = ({
     .map(stop => stop.title.replace(/\.$/, "").trim())
     .filter(Boolean)
     .join(", ");
-  const sourceSnippet = cleanedSourceOverview
-    .split(/(?<=[.!?])\s+/)
-    .slice(0, 2)
-    .join(" ")
-    .trim();
 
   const opening = toSentence(
     `Set in ${normalizedLocation}, ${title} is a ${activityLabel} built around a guide-led experience and practical local context`
   );
   const middleA = toSentence(
-    [
-      highlightText
-        ? `During the outing, you can expect activities such as ${highlightText}`
-        : "The experience blends local interpretation with hands-on activity",
-      stopText ? `with scheduled stops such as ${stopText}` : "",
-    ]
-      .filter(Boolean)
-      .join(" ")
+    highlightText
+      ? `Along the route, guides focus on key moments including ${highlightText}`
+      : "The experience blends local interpretation with hands-on activity and destination context"
   );
+  const middleB = stopText
+    ? toSentence(
+        `Stops are sequenced around ${stopText}, giving the day a logical flow instead of a rushed checklist`
+      )
+    : "";
   const logistics = toSentence(
     [
       "The format is guided and follows a structured itinerary",
@@ -226,10 +298,10 @@ const buildAuthoritativeOverview = ({
       .join(" ")
   );
   const closer = toSentence(
-    `Overall, this ${city} experience balances clear guidance, real destination context, and a relaxed pace suited to small groups`
+    `This ${city} experience balances clear guidance, real destination context, and a relaxed pace suited to small groups`
   );
 
-  const parts = [opening, middleA, logistics, sourceSnippet, closer].filter(
+  const parts = [opening, middleA, middleB, logistics, cleanedSourceOverview ? toSentence(`Guides draw from local context to explain how each segment fits the destination, so the day feels connected rather than generic`) : "", closer].filter(
     Boolean
   );
   const withLimit = () => {
@@ -529,8 +601,20 @@ export const mapViatorToEngine6Tour = (
     state,
     sourceOverview: sourceOverviewText,
   });
-  const normalizedOverview =
-    sourceOverviewText || overriddenOverview || synthesizedOverview;
+  const normalizedOverview = overriddenOverview
+    ? overriddenOverview
+    : passesEngine6OverviewQuality({
+        generatedOverview: synthesizedOverview,
+        sourceOverview: sourceOverviewText,
+      })
+      ? synthesizedOverview
+      : buildOverviewFallbackProse({
+          city,
+          state,
+          durationText: payload.extracted.durationText ?? null,
+          categoryLabel,
+          meetingPointText: payload.extracted.meetingPointText ?? null,
+        });
 
 
   if (payload.rawProductCode === "335698P13") {
