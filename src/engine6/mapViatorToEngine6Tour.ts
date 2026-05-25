@@ -36,6 +36,8 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
     "See the most famous highlights of Los Angeles in one day, including Hollywood, Beverly Hills, Santa Monica, and Venice Beach with guided stops along the way.",
   "2030UNIENTRY":
     "Enjoy a full day at Universal Studios Hollywood with access to thrilling rides, immersive movie-themed attractions, and behind-the-scenes studio experiences.",
+  "163975P1":
+    "Settle into Santa Barbara’s coastal rhythm on a guided trolley tour that links landmark neighborhoods, beaches, and historic architecture in one easy loop.",
 };
 const ENGINE6_OVERVIEW_OVERRIDES: Record<
   string,
@@ -85,6 +87,8 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
       .replace(/\s+/g, " ")
       .trim();
   },
+  "163975P1": () =>
+    "Santa Barbara Trolley Tour is a relaxed city overview that pairs coastal scenery with historic landmarks in a comfortable, open-air style ride. As the trolley rolls through town, you pass waterfront icons like Stearns Wharf and East Beach, continue by the Andrée Clark Bird Refuge and Butterfly Beach, and take in the city’s Spanish-influenced architecture around the courthouse and El Presidio district. The route also includes a dedicated stop at Old Mission Santa Barbara, where you have about 10 minutes to look around before rejoining the tour. Along the way, your guide adds practical local context on neighborhoods, history, and daily life, so the experience feels more personal than a standard transfer. It’s an easy way to understand Santa Barbara’s scenic, coastal, and historic character early in your visit.",
 };
 
 const pickOpeningPatternIndex = (seed: string) => {
@@ -257,6 +261,17 @@ const slugToLabel = (slug: string) =>
     .join(" ");
 
 const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
+  "163975P1": [
+    "Roll past Stearns Wharf for broad harbor views, fishing-pier history, and a classic first look at Santa Barbara’s shoreline.",
+    "Continue along East Beach, where palms, volleyball courts, and mountain-meets-ocean scenery define the city’s laid-back coastal mood.",
+    "Pass the Andrée Clark Bird Refuge to see lagoon habitat, walking paths, and one of the quieter nature pockets near the waterfront.",
+    "Glide by Butterfly Beach, a scenic Montecito stretch known for calm surf, ocean light, and postcard-worthy coastal homes.",
+    "Travel past the Santa Barbara Museum of Natural History, a longtime local institution set near native landscape and oak-lined grounds.",
+    "Stop at Old Mission Santa Barbara for about 10 minutes to view the landmark church and grounds; admission ticket is not included.",
+    "Pass the Santa Barbara County Courthouse to admire its Spanish Colonial Revival design and one of downtown’s signature civic landmarks.",
+    "Ride by El Presidio de Santa Barbara State Historic Park, where preserved adobe-era structures reflect the city’s early colonial roots.",
+    "Finish along the Santa Barbara waterfront with marina views, palm-lined promenades, and a final sweep of the coast.",
+  ],
   "5096P30": [
     "Begin your sightseeing loop on Hollywood Boulevard at the Big Bus Welcome Center, where departures run throughout the day.",
     "Pass the TCL Chinese Theatre to see one of Hollywood’s signature landmarks with its famous celebrity handprints.",

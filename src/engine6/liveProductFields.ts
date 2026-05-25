@@ -9,6 +9,12 @@ export type Engine6LiveProductFields = {
   meetingPointText: string | null;
 };
 
+const parsePriceFromFormatted = (value: string | null | undefined): number | null => {
+  if (!value) return null;
+  const parsed = Number.parseFloat(value.replace(/[^\d.]/g, ""));
+  return Number.isFinite(parsed) ? parsed : null;
+};
+
 export const mergeEngine6LiveFieldsIntoTour = (
   tour: Tour,
   liveFields?: Partial<Engine6LiveProductFields>
@@ -23,10 +29,18 @@ export const mergeEngine6LiveFieldsIntoTour = (
     typeof liveFields.priceFormatted === "string"
       ? liveFields.priceFormatted.trim()
       : "";
+  const parsedFromFormatted = parsePriceFromFormatted(priceFormatted);
+  const resolvedStartingPrice =
+    priceAmount ?? parsedFromFormatted ?? tour.startingPrice ?? undefined;
+  const resolvedPriceBadge =
+    priceFormatted ||
+    (typeof resolvedStartingPrice === "number"
+      ? `From $${resolvedStartingPrice.toFixed(2)}`
+      : tour.badges.priceFrom);
 
   return {
     ...tour,
-    startingPrice: priceAmount ?? tour.startingPrice,
+    startingPrice: resolvedStartingPrice,
     badges: {
       ...tour.badges,
       rating:
@@ -37,7 +51,7 @@ export const mergeEngine6LiveFieldsIntoTour = (
         typeof liveFields.reviewCount === "number"
           ? liveFields.reviewCount
           : tour.badges.reviewCount,
-      priceFrom: priceFormatted || tour.badges.priceFrom,
+      priceFrom: resolvedPriceBadge,
       duration:
         typeof liveFields.durationText === "string" && liveFields.durationText.trim()
           ? liveFields.durationText

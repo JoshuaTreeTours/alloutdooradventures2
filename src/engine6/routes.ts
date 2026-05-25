@@ -3,6 +3,9 @@ import { isExcludedProductCode } from "../data/excludedProductCodes";
 export const ENGINE6_SPECIMEN_PRODUCT_CODE = "63657P1";
 export const ENGINE6_SPECIMEN_ROUTE =
   "/destinations/california/santa-barbara/tours/santa-barbara-vineyard-to-table-taste-tour-by-e-bike";
+export const ENGINE6_SANTA_BARBARA_TROLLEY_PRODUCT_CODE = "163975P1";
+export const ENGINE6_SANTA_BARBARA_TROLLEY_ROUTE =
+  "/destinations/california/santa-barbara/tours/santa-barbara-trolley-tour";
 
 export const ENGINE6_PARAGON_PRODUCT_CODE = "5119P13";
 export const ENGINE6_PARAGON_ROUTE =
@@ -402,6 +405,10 @@ const ENGINE6_OVERLAP_REPLACEMENT_BY_PRODUCT_CODE: Record<
 
 const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [ENGINE6_SPECIMEN_ROUTE, ENGINE6_SPECIMEN_PRODUCT_CODE],
+  [
+    ENGINE6_SANTA_BARBARA_TROLLEY_ROUTE,
+    ENGINE6_SANTA_BARBARA_TROLLEY_PRODUCT_CODE,
+  ],
   [ENGINE6_PARAGON_ROUTE, ENGINE6_PARAGON_PRODUCT_CODE],
   [
     ENGINE6_LAS_VEGAS_WESTERN_PARKS_ROUTE,

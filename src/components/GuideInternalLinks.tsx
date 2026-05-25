@@ -1,4 +1,4 @@
-import type { ChangeEvent } from "react";
+import { useEffect, useMemo, useState, type ChangeEvent } from "react";
 import { Link } from "wouter";
 
 import { getActivityLabelFromSlug } from "../data/activityLabels";
@@ -16,6 +16,11 @@ import {
   isEuropeCountrySlug,
 } from "../data/tourIndex";
 import { slugify } from "../data/tourCatalog";
+import {
+  fetchEngine6LiveProductFields,
+  mergeEngine6LiveFieldsIntoTour,
+  type Engine6LiveProductFields,
+} from "../engine6/liveProductFields";
 import { hasUsGuide } from "../utils/guides/guideIndex";
 import TourCard from "./TourCard";
 
@@ -293,6 +298,12 @@ const buildNearbyLinks = (guide: GuideContent): GuideLink[] => {
   }));
 };
 
+const parsePriceFromBadge = (priceFrom?: string) => {
+  if (!priceFrom) return null;
+  const numeric = Number.parseFloat(priceFrom.replace(/[^\d.]/g, ""));
+  return Number.isFinite(numeric) ? numeric : null;
+};
+
 export default function GuideInternalLinks({
   guide,
   variant,
@@ -303,6 +314,71 @@ export default function GuideInternalLinks({
   const areaLinks = buildAreaLinks(guide);
   const nearbyLinks = buildNearbyLinks(guide);
   const topTours = getTopToursForPlace(place, { min: 3, max: 8 });
+  const [liveEngine6DynamicByProductCode, setLiveEngine6DynamicByProductCode] =
+    useState<Record<string, Engine6LiveProductFields>>({});
+  const engine6TopTourProductCodes = useMemo(
+    () =>
+      Array.from(
+        new Set(
+          topTours
+            .filter(tour => tour.engine === "engine6" && !!tour.productCode)
+            .map(tour => tour.productCode)
+        )
+      ),
+    [topTours]
+  );
+
+  useEffect(() => {
+    if (variant !== "top-tours" || engine6TopTourProductCodes.length === 0) {
+      return;
+    }
+    let cancelled = false;
+
+    Promise.all(
+      engine6TopTourProductCodes.map(async productCode => {
+        const fields = await fetchEngine6LiveProductFields(productCode);
+        if (!fields) return null;
+        return [productCode, fields] as const;
+      })
+    )
+      .then(results => {
+        if (cancelled) return;
+        const next: Record<string, Engine6LiveProductFields> = {};
+        for (const item of results) {
+          if (item) next[item[0]] = item[1];
+        }
+        if (Object.keys(next).length > 0) {
+          setLiveEngine6DynamicByProductCode(previous => ({ ...previous, ...next }));
+        }
+      })
+      .catch(() => {});
+
+    return () => {
+      cancelled = true;
+    };
+  }, [engine6TopTourProductCodes, variant]);
+
+  const hydratedTopTours = useMemo(
+    () =>
+      topTours.map(tour =>
+        tour.engine === "engine6" && tour.productCode
+          ? (() => {
+              const merged = mergeEngine6LiveFieldsIntoTour(
+                tour,
+                liveEngine6DynamicByProductCode[tour.productCode]
+              );
+              if (typeof merged.startingPrice === "number") {
+                return merged;
+              }
+              const parsedBadgePrice = parsePriceFromBadge(merged.badges.priceFrom);
+              return parsedBadgePrice !== null
+                ? { ...merged, startingPrice: parsedBadgePrice }
+                : merged;
+            })()
+          : tour
+      ),
+    [liveEngine6DynamicByProductCode, topTours]
+  );
 
   if (variant === "intro") {
     const introLinks = primaryLinks.slice(0, 3);
@@ -425,7 +501,7 @@ export default function GuideInternalLinks({
           {tourTitle}
         </h2>
         <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {topTours.map(tour => (
+          {hydratedTopTours.map(tour => (
             <TourCard
               key={tour.id}
               tour={tour}
