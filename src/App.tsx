@@ -95,6 +95,7 @@ import {
   ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
   ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
+  ENGINE6_SANTA_BARBARA_SOAR_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_ROUTE,
   ENGINE6_ZURICH_INTERLAKEN_GRINDELWALD_ROUTE,
@@ -244,6 +245,10 @@ export default function App() {
         />
 
         <Route path={ENGINE6_SPECIMEN_ROUTE} component={Engine6SpecimenRoute} />
+        <Route
+          path={ENGINE6_SANTA_BARBARA_SOAR_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
         <Route path={ENGINE6_PARAGON_ROUTE} component={Engine6SpecimenRoute} />
         <Route path={ENGINE6_CATALINA_ROUTE} component={Engine6SpecimenRoute} />
         <Route path={ENGINE6_ANTELOPE_ROUTE} component={Engine6SpecimenRoute} />
