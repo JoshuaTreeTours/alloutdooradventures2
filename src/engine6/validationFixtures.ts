@@ -1,6 +1,7 @@
 import specimen63657Payload from "../../data/engine6/viator/63657P1.exact-product.json";
 import specimen163975p1Payload from "../../data/engine6/viator/163975P1.exact-product.json";
 import specimen447486p2Payload from "../../data/engine6/viator/447486P2.exact-product.json";
+import specimen447486p4Payload from "../../data/engine6/viator/447486P4.exact-product.json";
 import specimen117409p1Payload from "../../data/engine6/viator/117409P1.exact-product.json";
 import specimen421920p3Payload from "../../data/engine6/viator/421920P3.exact-product.json";
 import specimen7270p10Payload from "../../data/engine6/viator/7270P10.exact-product.json";
@@ -155,6 +156,15 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Happy-Hour-on-a-Yacht/d4372-447486P2",
     rawPayload: specimen447486p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "447486P4",
+    publicUrl:
+      "https://www.viator.com/tours/Santa-Barbara/Private-Harbor-Cruise-on-Electric-Boat-in-Santa-Barbara/d4372-447486P4",
+    rawPayload: specimen447486p4Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
