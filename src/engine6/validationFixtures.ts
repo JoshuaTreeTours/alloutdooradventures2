@@ -1,5 +1,6 @@
 import specimen63657Payload from "../../data/engine6/viator/63657P1.exact-product.json";
 import specimen163975p1Payload from "../../data/engine6/viator/163975P1.exact-product.json";
+import specimen117409p1Payload from "../../data/engine6/viator/117409P1.exact-product.json";
 import specimen5119Payload from "../../data/engine6/viator/5119P13.exact-product.json";
 import specimen5602p25Payload from "../../data/engine6/viator/5602P25.exact-product.json";
 import specimen190492p3Payload from "../../data/engine6/viator/190492P3.exact-product.json";
@@ -141,6 +142,15 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Trolley-Tour/d4372-163975P1",
     rawPayload: specimen163975p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "117409P1",
+    publicUrl:
+      "https://www.viator.com/tours/Santa-Barbara/Santa-Ynez-Valley-Tour/d4372-117409P1",
+    rawPayload: specimen117409p1Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
