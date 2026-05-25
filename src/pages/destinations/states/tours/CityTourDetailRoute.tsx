@@ -57,7 +57,10 @@ import type { Engine6ApiResponse, Engine6Tour } from "../../../../engine6/types"
 import { isExcludedProductCode } from "../../../../data/excludedProductCodes";
 import { isEngine6CanonicalPath } from "../../../../engine6/routes";
 import { buildEngine6SchemaGraph } from "../../../../engine6/schema/buildEngine6SchemaGraph";
-import { mergeEngine6LiveFieldsIntoTour } from "../../../../engine6/liveProductFields";
+import {
+  fetchEngine6LiveProductFields,
+  mergeEngine6LiveFieldsIntoTour,
+} from "../../../../engine6/liveProductFields";
 import {
   assertEngine6CtaIntegrity,
   assertEngine6DataSource,
@@ -234,57 +237,49 @@ export default function CityTourDetailRoute({
   );
 
   useEffect(() => {
-    if (typeof window === "undefined" || !nativeEngine6Tour?.productCode) {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const engine6ProductCodes = Array.from(
+      new Set(
+        getToursByCity(params.stateSlug, params.citySlug)
+          .filter(item => item.engine === "engine6" && item.productCode)
+          .map(item => item.productCode as string)
+      )
+    );
+
+    if (!engine6ProductCodes.length) {
       return;
     }
 
     let cancelled = false;
-    const productCode = nativeEngine6Tour.productCode;
 
-    fetch(`/api/engine6/viator-product?productCode=${encodeURIComponent(productCode)}`)
-      .then(async response => {
-        if (!response.ok) {
-          return null;
+    (async () => {
+      const settled = await Promise.all(
+        engine6ProductCodes.map(async productCode => ({
+          productCode,
+          fields: await fetchEngine6LiveProductFields(productCode),
+        }))
+      );
+
+      if (cancelled) return;
+
+      setLiveEngine6DynamicByProductCode(prev => {
+        const next = { ...prev };
+        for (const item of settled) {
+          if (item.fields) {
+            next[item.productCode] = item.fields;
+          }
         }
-        const payload = (await response.json()) as Partial<Engine6ApiResponse>;
-        const extracted = payload?.extracted;
-        if (!extracted) return null;
-        return {
-          priceAmount:
-            typeof extracted.priceAmount === "number" ? extracted.priceAmount : null,
-          priceFormatted:
-            typeof extracted.priceFormatted === "string"
-              ? extracted.priceFormatted
-              : null,
-          aggregateRating:
-            typeof extracted.aggregateRating === "number"
-              ? extracted.aggregateRating
-              : null,
-          reviewCount:
-            typeof extracted.reviewCount === "number" ? extracted.reviewCount : null,
-          durationText:
-            typeof extracted.durationText === "string" ? extracted.durationText : null,
-          meetingPointText:
-            typeof extracted.meetingPointText === "string"
-              ? extracted.meetingPointText
-              : null,
-        };
-      })
-      .then(dynamicFields => {
-        if (cancelled || !dynamicFields) return;
-        setLiveEngine6DynamicByProductCode(previous => ({
-          ...previous,
-          [productCode]: dynamicFields,
-        }));
-      })
-      .catch(() => {
-        // Keep fixture values when live API enrichment is unavailable.
+        return next;
       });
+    })();
 
     return () => {
       cancelled = true;
     };
-  }, [nativeEngine6Tour?.productCode]);
+  }, [params.citySlug, params.stateSlug]);
 
   if (nativeEngine6Tour) {
     const liveDynamic = liveEngine6DynamicByProductCode[nativeEngine6Tour.productCode];

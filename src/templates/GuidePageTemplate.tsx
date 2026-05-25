@@ -1,4 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
+import {
+  fetchEngine6LiveProductFields,
+  mergeEngine6LiveFieldsIntoTour,
+  type Engine6LiveProductFields,
+} from "../engine6/liveProductFields";
 import useEmblaCarousel from "embla-carousel-react";
 import { Link } from "wouter";
 
@@ -70,11 +75,82 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
   const tours = guide.tours.citySlug
     ? getToursByCity(guide.tours.stateSlug, guide.tours.citySlug)
     : getToursByState(guide.tours.stateSlug);
-  const featuredTours = tours.slice(0, guide.tours.limit ?? 6);
   const allCityTours =
     guide.tours.stateSlug && guide.tours.citySlug
       ? getToursByCityUnified(guide.tours.stateSlug, guide.tours.citySlug)
       : [];
+  const [liveEngine6DynamicByProductCode, setLiveEngine6DynamicByProductCode] = useState<
+    Record<string, Engine6LiveProductFields>
+  >({});
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const engine6ProductCodes = Array.from(
+      new Set(
+        allCityTours
+          .filter(entry => entry.tour.engine === "engine6" && entry.tour.productCode)
+          .map(entry => entry.tour.productCode as string)
+      )
+    );
+
+    if (!engine6ProductCodes.length) {
+      return;
+    }
+
+    let cancelled = false;
+
+    (async () => {
+      const settled = await Promise.all(
+        engine6ProductCodes.map(async productCode => ({
+          productCode,
+          fields: await fetchEngine6LiveProductFields(productCode),
+        }))
+      );
+
+      if (cancelled) return;
+
+      setLiveEngine6DynamicByProductCode(prev => {
+        const next = { ...prev };
+        for (const item of settled) {
+          if (item.fields) {
+            next[item.productCode] = item.fields;
+          }
+        }
+        return next;
+      });
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [allCityTours]);
+
+  const hydratedAllCityTours = useMemo(
+    () =>
+      allCityTours.map(entry => ({
+        ...entry,
+        tour:
+          entry.tour.engine === "engine6" && entry.tour.productCode
+            ? mergeEngine6LiveFieldsIntoTour(
+                entry.tour,
+                liveEngine6DynamicByProductCode[entry.tour.productCode]
+              )
+            : entry.tour,
+      })),
+    [allCityTours, liveEngine6DynamicByProductCode]
+  );
+
+  const featuredTourEntries = useMemo(
+    () =>
+      (guide.tours.stateSlug && guide.tours.citySlug
+        ? hydratedAllCityTours
+        : tours.map(tour => ({ tour, href: undefined } as { tour: (typeof tours)[number]; href?: string })))
+        .slice(0, guide.tours.limit ?? 6),
+    [guide.tours.citySlug, guide.tours.limit, guide.tours.stateSlug, hydratedAllCityTours, tours]
+  );
   const mappedThingsLimit = isTier2 ? 5 : 8;
   const mappedThings = guide.thingsToDo.slice(0, mappedThingsLimit);
   const wikiExtractFallback = (
@@ -231,16 +307,16 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           </ul>
         </Section>
 
-        {!isTier2 && featuredTours.length ? (
+        {!isTier2 && featuredTourEntries.length ? (
           <Section title="Top Tours">
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex gap-4">
-                {featuredTours.map(tour => (
+                {featuredTourEntries.map(({ tour, href }) => (
                   <div
                     key={tour.id}
                     className="min-w-0 flex-[0_0_85%] md:flex-[0_0_50%] lg:flex-[0_0_33%]"
                   >
-                    <TourCard tour={tour} />
+                    <TourCard tour={tour} href={href} />
                   </div>
                 ))}
               </div>
@@ -372,7 +448,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
             cityName={guide.city ?? place}
             citySlug={guide.tours.citySlug}
             stateSlug={guide.tours.stateSlug}
-            tours={allCityTours}
+            tours={hydratedAllCityTours}
           />
         ) : null}
       </section>
