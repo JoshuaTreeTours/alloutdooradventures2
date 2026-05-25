@@ -38,6 +38,8 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
     "Enjoy a full day at Universal Studios Hollywood with access to thrilling rides, immersive movie-themed attractions, and behind-the-scenes studio experiences.",
   "163975P1":
     "Settle into Santa Barbara’s coastal rhythm on a guided trolley tour that links landmark neighborhoods, beaches, and historic architecture in one easy loop.",
+  "447486P2":
+    "Sail Santa Barbara’s waterfront on a happy-hour yacht cruise with coastal views, relaxed onboard seating, and a social golden-hour atmosphere.",
   "117409P1":
     "Head beyond the coast on a guided Santa Ynez Valley day trip focused on wine-country towns, vineyard landscapes, and relaxed tasting stops.",
 };
@@ -91,6 +93,8 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
   },
   "163975P1": () =>
     "Santa Barbara Trolley Tour is a relaxed city overview that pairs coastal scenery with historic landmarks in a comfortable, open-air style ride. As the trolley rolls through town, you pass waterfront icons like Stearns Wharf and East Beach, continue by the Andrée Clark Bird Refuge and Butterfly Beach, and take in the city’s Spanish-influenced architecture around the courthouse and El Presidio district. The route also includes a dedicated stop at Old Mission Santa Barbara, where you have about 10 minutes to look around before rejoining the tour. Along the way, your guide adds practical local context on neighborhoods, history, and daily life, so the experience feels more personal than a standard transfer. It’s an easy way to understand Santa Barbara’s scenic, coastal, and historic character early in your visit.",
+  "447486P2": () =>
+    "Santa Barbara Happy Hour on a Yacht is a harbor-focused cruise that shifts the experience from city streets to open water during golden hour. You board near Santa Barbara Harbor and settle into a relaxed social setting as the yacht cruises along the waterfront with broad views of the coastline, marina activity, and mountain backdrop. Instead of stop-and-go land sightseeing, the format emphasizes steady sailing, fresh ocean air, and time to unwind with your group while the captain navigates calm coastal routes. Expect a polished but casual vibe designed around conversation, photos, and sunset light across the American Riviera. It’s an easy way to experience Santa Barbara from the water in a short, memorable happy-hour window.",
   "117409P1": () =>
     "Santa Ynez Valley Tour is a full-day wine-country outing from Santa Barbara that trades shoreline views for inland ranchland, vineyard slopes, and small-town main streets. The route usually follows Highway 154 over San Marcos Pass into the Santa Ynez Valley, then moves between tasting stops in communities such as Solvang, Los Olivos, and Santa Ynez depending on the day’s winery lineup. Your guide handles driving and timing, so you can focus on scenery, local wine styles, and a relaxed pace between pours. Expect a social small-group format with structured stops, practical destination context, and enough free moments to browse tasting rooms or village blocks. It’s an easy way to experience one of Santa Barbara County’s best-known wine regions without self-driving logistics.",
 };
@@ -283,6 +287,14 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Continue through Los Olivos for small-town wine-country atmosphere and additional tasting opportunities when scheduled.",
     "Travel through Santa Ynez with route commentary on valley history, agriculture, and regional winemaking styles.",
     "Return to Santa Barbara with a final scenic drive back over the pass after the day’s tasting itinerary wraps.",
+  ],
+  "447486P2": [
+    "Board near Santa Barbara Harbor and get oriented for a relaxed happy-hour yacht cruise along the American Riviera waterfront.",
+    "Cruise past harbor slips and working marina activity as the captain guides the yacht toward open-water coastal views.",
+    "Take in Stearns Wharf and shoreline landmarks from offshore, with a water-level perspective that differs from land-based tours.",
+    "Settle into golden-hour sailing with broad views of the Santa Ynez Mountains rising behind the city and coast.",
+    "Enjoy the social onboard atmosphere with time for conversation, photos, and ocean breezes while the yacht maintains a smooth pace.",
+    "Return to harbor as sunset colors build over the channel, finishing with a final pass of Santa Barbara’s waterfront skyline.",
   ],
   "5096P30": [
     "Begin your sightseeing loop on Hollywood Boulevard at the Big Bus Welcome Center, where departures run throughout the day.",
