@@ -1,0 +1,736 @@
+{
+  "product": {
+    "status": "ACTIVE",
+    "productCode": "447486P2",
+    "language": "en",
+    "createdAt": "2019-06-14T20:55:36.959223Z",
+    "lastUpdatedAt": "2026-05-23T07:40:26Z",
+    "title": "Santa Barbara Happy Hour on a Yacht",
+    "ticketInfo": {
+      "ticketTypes": [
+        "MOBILE_ONLY"
+      ],
+      "ticketTypeDescription": "Mobile or paper ticket accepted",
+      "ticketsPerBooking": "ONE_PER_BOOKING",
+      "ticketsPerBookingDescription": "One per booking"
+    },
+    "pricingInfo": {
+      "type": "PER_PERSON",
+      "ageBands": [
+        {
+          "ageBand": "CHILD",
+          "startAge": 0,
+          "endAge": 12,
+          "minTravelersPerBooking": 0,
+          "maxTravelersPerBooking": 4
+        },
+        {
+          "ageBand": "ADULT",
+          "startAge": 13,
+          "endAge": 100,
+          "minTravelersPerBooking": 1,
+          "maxTravelersPerBooking": 4
+        }
+      ]
+    },
+    "logistics": {
+      "start": [
+        {
+          "location": {
+            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5DdotqLtbX6aiKonFRK4Ve1O7vCbuQXuf4T2xyWhTG5P"
+          },
+          "description": "Departs Thursday - Monday at 1 Garden st. \nDeparture times are 10:00am, 12:00pm and 2:00pm. "
+        }
+      ],
+      "end": [
+        {
+          "location": {
+            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5DdotqLtbX6aiKonFRK4Ve1O7vCbuQXuf4T2xyWhTG5P"
+          },
+          "description": "Departs Thursday - Monday at 1 Garden st. \nDeparture times are 10:00am, 12:00pm and 2:00pm. "
+        }
+      ],
+      "redemption": {
+        "redemptionType": "NONE",
+        "specialInstructions": "If wheelchair assistants is needed, please call our office 48 hours in advance (805) 965-0353. "
+      },
+      "travelerPickup": {
+        "pickupOptionType": "MEET_EVERYONE_AT_START_POINT",
+        "allowCustomTravelerPickup": false
+      }
+    },
+    "timeZone": "America/Los_Angeles",
+    "description": "All Aboard Santa Barbara\u2019s Original & Longest Running Trolley Tour and Charter Services\n\nSee the American Riviera in 90 minutes \n\nSanta Barbara sightseeing at its finest on the original, fully narrated Santa Barbara Trolley Tour. For 30 years, we've been providing trolley tours in the Santa Barbara community. Join us as we visit local hot spots such as the Santa Barbara Courthouse, Santa Barbara Zoo, Museum of Natural History, the historic Santa Barbara Mission, and more, all fully narrated by our energetic and knowledgeable tour guides! Our pick up location is only a 10 minute walk from Stearns Wharf, at 1 Garden St.",
+    "inclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Narrated Tour"
+      }
+    ],
+    "exclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Food and Drinks"
+      }
+    ],
+    "additionalInfo": [
+      {
+        "type": "STROLLER_ACCESSIBLE",
+        "description": "Infants and small children can ride in a pram or stroller"
+      },
+      {
+        "type": "PETS_WELCOME",
+        "description": "Service animals allowed"
+      },
+      {
+        "type": "PUBLIC_TRANSPORTATION_NEARBY",
+        "description": "Public transportation options are available nearby"
+      },
+      {
+        "type": "INFANTS_MUST_SIT_ON_LAPS",
+        "description": "Infants are required to sit on an adult\u2019s lap"
+      },
+      {
+        "type": "PHYSICAL_EASY",
+        "description": "Suitable for all physical fitness levels"
+      }
+    ],
+    "cancellationPolicy": {
+      "type": "ALL_SALES_FINAL",
+      "description": "All sales are final. No refund is available for cancellations.",
+      "cancelIfBadWeather": true,
+      "cancelIfInsufficientTravelers": false,
+      "refundEligibility": [
+        {
+          "dayRangeMin": 0,
+          "percentageRefundable": 0
+        }
+      ]
+    },
+    "bookingConfirmationSettings": {
+      "bookingCutoffType": "START_TIME",
+      "bookingCutoffInMinutes": 60,
+      "confirmationType": "MANUAL"
+    },
+    "bookingRequirements": {
+      "minTravelersPerBooking": 1,
+      "maxTravelersPerBooking": 4,
+      "requiresAdultForBooking": true
+    },
+    "languageGuides": [
+      {
+        "type": "GUIDE",
+        "language": "en",
+        "legacyGuide": "en/SERVICE_GUIDE"
+      }
+    ],
+    "bookingQuestions": [
+      "AGEBAND",
+      "FULL_NAMES_FIRST",
+      "FULL_NAMES_LAST",
+      "SPECIAL_REQUIREMENTS"
+    ],
+    "tags": [
+      367661,
+      367652,
+      367664,
+      11938,
+      20250,
+      21860,
+      367651,
+      367653,
+      367654,
+      22143
+    ],
+    "destinations": [
+      {
+        "ref": "4372",
+        "primary": true
+      }
+    ],
+    "itinerary": {
+      "itineraryType": "STANDARD",
+      "skipTheLine": false,
+      "privateTour": false,
+      "maxTravelersInSharedTour": 4,
+      "duration": {
+        "fixedDurationInMinutes": 90
+      },
+      "itineraryItems": [
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyFb5E12sAe7t8OwlMGimapM="
+            },
+            "attractionId": 9493
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "Enjoy the seaside sights and sounds of Stearns Wharf, one of Santa Barbara\u2019s most iconic landmarks. Named for builder John P. Stearns and located at the end of State Street, it is California\u2019s oldest working wharf and the perfect spot to soak up the sun, salty breezes and stunning views of the impossibly blue Pacific. The Wharf was completed in 1872 and served the passengers and freight shipping needs of California\u2019s south coast for more than 25 years. Today it\u2019s one of Santa Barbara\u2019s most visited attractions and a mainstay of the Waterfront district."
+        },
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyDDopyS6jQglGfFCDusLbxg="
+            }
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "East Beach is a favorite spot for locals for volleyball (including pro tournaments), skating, paddle sports, art shows and just plain relaxing. It also has a great panoramic view of the Santa Barbara mountains."
+        },
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyCQJAL0y3pA6vchYXPEFwWU="
+            }
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "Andr\u00e9e Clark Bird Refuge is a 42-acre open space park that includes a 29-acre lake that is an artificially modified estuary that supports brackish wetlands. Three islands are located in the lake. The park provides passive recreation opportunities such as bird watching, hiking, and biking. Boating and fishing are prohibited, as is feeding the wildlife. The Bird Refuge is a scenic resource with views to and from scenic highways (East Cabrillo Boulevard and Highway 101) and provides a view of aquatic and terrestrial habitats."
+        },
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyGjpGppBpyBSbPdJzHOyFss="
+            },
+            "attractionId": 18957
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "Located in the chic and laid-back village of Montecito, Butterfly Beach is a favorite among Santa Barbara locals. The beach\u2019s pristine shoreline is ideal for swimming, surfing and sunbathing, and its unique east-west orientation makes for some truly spectacular sunrises AND sunsets. Spend the better part of your day lounging with a good book, or venture into the ocean and take on the waves in a kayak. Keep your eyes peeled and you might even see a star or two\u2014Montecito is home to several celebs. Whatever activities you include in your day by the sea, Butterfly Beach is the perfect setting."
+        },
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyEoC/A6Ld/fZ89Qq5nJO9aM="
+            },
+            "attractionId": 9487
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "The Santa Barbara Museum of Natural History has a rich history dating back to 1876. Exhibits and collections change throughout the year to educate and entertain children and adults alike. Make sure to check out the iconic 73-foot Blue Whale skeleton displayed out front!"
+        },
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyGZzysRVZ8uFXOVZISPAsI4="
+            },
+            "attractionId": 9482
+          },
+          "duration": {
+            "fixedDurationInMinutes": 10
+          },
+          "passByWithoutStopping": false,
+          "admissionIncluded": "NO",
+          "description": "Old Mission Santa Barbara is a community of many parts, but one spirit. The Mission has served as a gathering place and spiritual home for many since its establishment in 1786. Today the Mission operations include a museum, gift shop, cemetery and mausoleum, and several historic gardens, as well as being the home to a community of Franciscan Friars on about 15 acres. The Mission is also home base for Saint Barbara Parish, which operates under the Archdiocese of Los Angeles, the Santa B\u00e1rbara Mission Archive-Library, a separate Franciscan-sponsored non-profit, and a Novitiate which provides the first year of education for Friars in training from across the United States."
+        },
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyE26ZFqUAODe+Y3RGDN2qcs="
+            },
+            "attractionId": 9485
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "or a firsthand look at one of the country\u2019s most beautiful public buildings, look no further than the Santa Barbara County Courthouse. Designed in the Spanish-Colonial style and completed in 1929, the fully operational Courthouse is an iconic Santa Barbara landmark with its distinctive four-faced clock tower, red tile roofs, elegant arches and verdant sunken garden and grounds. Through the self-guided tours, visitors can get a visual history lesson from the elaborate hand-painted murals, marvel at ornate wrought-iron chandeliers and climb to the top of the clock tower for an incredible panoramic view of Santa Barbara and beyond."
+        },
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyEojTAG2L0PaqmC0LcR7feI="
+            }
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "Located in downtown Santa Barbara, El Presidio de Santa B\u00e1rbara State Historic Park (El Presidio SHP) is a 5 1/2-acre park that preserves the site of the last Spanish fortress, or presidio, founded in Alta (Upper) California in 1782. Two of the fort\u2018s original adobe buildings still exist and are open to the public \u2014 El Cuartel and the Ca\u00f1edo Adobe."
+        },
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyOxjGTTA/m1Z5G5uPgh7YVc="
+            },
+            "attractionId": 9488
+          },
+          "passByWithoutStopping": true,
+          "admissionIncluded": "NOT_APPLICABLE",
+          "description": "At Santa Barbara Harbor you will find interesting stores, delicious seafood restaurants and the occasional celebrity yacht. Naturally sheltered by mountains and islands on a southward facing coastline, it is one of the best harbors in the world."
+        }
+      ]
+    },
+    "productOptions": [
+      {
+        "productOptionCode": "TG4",
+        "description": "",
+        "title": "Trolley Tour",
+        "languageGuides": [
+          {
+            "type": "GUIDE",
+            "language": "en",
+            "legacyGuide": "en/SERVICE_GUIDE"
+          }
+        ]
+      }
+    ],
+    "translationInfo": {
+      "containsMachineTranslatedText": false,
+      "translationSource": "ORIGINAL"
+    },
+    "supplier": {
+      "name": "Santa Barbara Trolley Tours",
+      "reference": "SUPPLIER-EUrnRLEVFV9Efw7dJs6O9w=="
+    },
+    "productUrl": "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Happy-Hour-on-a-Yacht/d4372-447486P2?mcid=42383&pid=P00290915&medium=api&api_version=2.0",
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1,
+              "count": 15
+            },
+            {
+              "rating": 2,
+              "count": 8
+            },
+            {
+              "rating": 3,
+              "count": 16
+            },
+            {
+              "rating": 4,
+              "count": 52
+            },
+            {
+              "rating": 5,
+              "count": 280
+            }
+          ],
+          "totalCount": 371,
+          "averageRating": 4.5
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1,
+              "count": 17
+            },
+            {
+              "rating": 2,
+              "count": 3
+            },
+            {
+              "rating": 3,
+              "count": 25
+            },
+            {
+              "rating": 4,
+              "count": 68
+            },
+            {
+              "rating": 5,
+              "count": 352
+            }
+          ],
+          "totalCount": 465,
+          "averageRating": 4.6
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1,
+          "count": 32
+        },
+        {
+          "rating": 2,
+          "count": 11
+        },
+        {
+          "rating": 3,
+          "count": 41
+        },
+        {
+          "rating": 4,
+          "count": 120
+        },
+        {
+          "rating": 5,
+          "count": 632
+        }
+      ],
+      "totalReviews": 836,
+      "combinedAverageRating": 4.5657897
+    },
+    "media": {
+      "images": [
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "caption": "",
+          "isCover": true,
+          "variants": {
+            "CAPTION": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/31/49/f0/a5/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1100,
+              "height": 800
+            },
+            "FULL": {
+              "height": 1000,
+              "width": 1400,
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/31/49/f0/a5/caption.jpg?w=1400&h=1000&s=1"
+            }
+          }
+        },
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "caption": "",
+          "isCover": false,
+          "variants": [
+            {
+              "height": 100,
+              "width": 100,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/a3/25/3c.jpg"
+            },
+            {
+              "height": 200,
+              "width": 200,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/a3/25/3c.jpg"
+            },
+            {
+              "height": 400,
+              "width": 400,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/a3/25/3c.jpg"
+            },
+            {
+              "height": 240,
+              "width": 360,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/a3/25/3c.jpg"
+            },
+            {
+              "height": 320,
+              "width": 480,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/a3/25/3c.jpg"
+            },
+            {
+              "height": 360,
+              "width": 540,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/a3/25/3c.jpg"
+            },
+            {
+              "height": 446,
+              "width": 674,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/a3/25/3c.jpg"
+            },
+            {
+              "height": 480,
+              "width": 720,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/a3/25/3c.jpg"
+            },
+            {
+              "height": 118,
+              "width": 210,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/a3/25/3c.jpg"
+            },
+            {
+              "height": 75,
+              "width": 75,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/a3/25/3c.jpg"
+            }
+          ]
+        },
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "caption": "",
+          "isCover": false,
+          "variants": [
+            {
+              "height": 100,
+              "width": 100,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/a4/c0/7c.jpg"
+            },
+            {
+              "height": 200,
+              "width": 200,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/a4/c0/7c.jpg"
+            },
+            {
+              "height": 400,
+              "width": 400,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/a4/c0/7c.jpg"
+            },
+            {
+              "height": 240,
+              "width": 360,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/a4/c0/7c.jpg"
+            },
+            {
+              "height": 320,
+              "width": 480,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/a4/c0/7c.jpg"
+            },
+            {
+              "height": 360,
+              "width": 540,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/a4/c0/7c.jpg"
+            },
+            {
+              "height": 446,
+              "width": 674,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/a4/c0/7c.jpg"
+            },
+            {
+              "height": 480,
+              "width": 720,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/a4/c0/7c.jpg"
+            },
+            {
+              "height": 118,
+              "width": 210,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/a4/c0/7c.jpg"
+            },
+            {
+              "height": 75,
+              "width": 75,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/a4/c0/7c.jpg"
+            }
+          ]
+        },
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "caption": "",
+          "isCover": false,
+          "variants": [
+            {
+              "height": 100,
+              "width": 100,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/a4/c0/dc.jpg"
+            },
+            {
+              "height": 200,
+              "width": 200,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/a4/c0/dc.jpg"
+            },
+            {
+              "height": 400,
+              "width": 400,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/a4/c0/dc.jpg"
+            },
+            {
+              "height": 240,
+              "width": 360,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/a4/c0/dc.jpg"
+            },
+            {
+              "height": 320,
+              "width": 480,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/a4/c0/dc.jpg"
+            },
+            {
+              "height": 360,
+              "width": 540,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/a4/c0/dc.jpg"
+            },
+            {
+              "height": 446,
+              "width": 674,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/a4/c0/dc.jpg"
+            },
+            {
+              "height": 480,
+              "width": 720,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/a4/c0/dc.jpg"
+            },
+            {
+              "height": 118,
+              "width": 210,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/a4/c0/dc.jpg"
+            },
+            {
+              "height": 75,
+              "width": 75,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/a4/c0/dc.jpg"
+            }
+          ]
+        },
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "caption": "",
+          "isCover": false,
+          "variants": [
+            {
+              "height": 100,
+              "width": 100,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/a4/c0/e2.jpg"
+            },
+            {
+              "height": 200,
+              "width": 200,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/a4/c0/e2.jpg"
+            },
+            {
+              "height": 400,
+              "width": 400,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/a4/c0/e2.jpg"
+            },
+            {
+              "height": 240,
+              "width": 360,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/a4/c0/e2.jpg"
+            },
+            {
+              "height": 320,
+              "width": 480,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/a4/c0/e2.jpg"
+            },
+            {
+              "height": 360,
+              "width": 540,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/a4/c0/e2.jpg"
+            },
+            {
+              "height": 446,
+              "width": 674,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/a4/c0/e2.jpg"
+            },
+            {
+              "height": 480,
+              "width": 720,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/a4/c0/e2.jpg"
+            },
+            {
+              "height": 118,
+              "width": 210,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/a4/c0/e2.jpg"
+            },
+            {
+              "height": 75,
+              "width": 75,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/a4/c0/e2.jpg"
+            }
+          ]
+        },
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "caption": "",
+          "isCover": false,
+          "variants": [
+            {
+              "height": 100,
+              "width": 100,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/09/94/b2/e9.jpg"
+            },
+            {
+              "height": 200,
+              "width": 200,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/09/94/b2/e9.jpg"
+            },
+            {
+              "height": 400,
+              "width": 400,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/09/94/b2/e9.jpg"
+            },
+            {
+              "height": 240,
+              "width": 360,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/94/b2/e9.jpg"
+            },
+            {
+              "height": 320,
+              "width": 480,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/09/94/b2/e9.jpg"
+            },
+            {
+              "height": 360,
+              "width": 540,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/09/94/b2/e9.jpg"
+            },
+            {
+              "height": 446,
+              "width": 674,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/94/b2/e9.jpg"
+            },
+            {
+              "height": 480,
+              "width": 720,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/94/b2/e9.jpg"
+            },
+            {
+              "height": 118,
+              "width": 210,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/09/94/b2/e9.jpg"
+            },
+            {
+              "height": 75,
+              "width": 75,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/09/94/b2/e9.jpg"
+            }
+          ]
+        },
+        {
+          "imageSource": "SUPPLIER_PROVIDED",
+          "caption": "",
+          "isCover": false,
+          "variants": [
+            {
+              "height": 100,
+              "width": 100,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/09/94/b5/bb.jpg"
+            },
+            {
+              "height": 200,
+              "width": 200,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/09/94/b5/bb.jpg"
+            },
+            {
+              "height": 400,
+              "width": 400,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/09/94/b5/bb.jpg"
+            },
+            {
+              "height": 240,
+              "width": 360,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/94/b5/bb.jpg"
+            },
+            {
+              "height": 320,
+              "width": 480,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/09/94/b5/bb.jpg"
+            },
+            {
+              "height": 360,
+              "width": 540,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/09/94/b5/bb.jpg"
+            },
+            {
+              "height": 446,
+              "width": 674,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/94/b5/bb.jpg"
+            },
+            {
+              "height": 480,
+              "width": 720,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/94/b5/bb.jpg"
+            },
+            {
+              "height": 118,
+              "width": 210,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/09/94/b5/bb.jpg"
+            },
+            {
+              "height": 75,
+              "width": 75,
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/09/94/b5/bb.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
