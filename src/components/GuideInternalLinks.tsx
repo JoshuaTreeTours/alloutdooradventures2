@@ -298,6 +298,12 @@ const buildNearbyLinks = (guide: GuideContent): GuideLink[] => {
   }));
 };
 
+const parsePriceFromBadge = (priceFrom?: string) => {
+  if (!priceFrom) return null;
+  const numeric = Number.parseFloat(priceFrom.replace(/[^\d.]/g, ""));
+  return Number.isFinite(numeric) ? numeric : null;
+};
+
 export default function GuideInternalLinks({
   guide,
   variant,
@@ -350,10 +356,19 @@ export default function GuideInternalLinks({
     () =>
       topTours.map(tour =>
         tour.engine === "engine6" && tour.productCode
-          ? mergeEngine6LiveFieldsIntoTour(
-              tour,
-              liveEngine6DynamicByProductCode[tour.productCode]
-            )
+          ? (() => {
+              const merged = mergeEngine6LiveFieldsIntoTour(
+                tour,
+                liveEngine6DynamicByProductCode[tour.productCode]
+              );
+              if (typeof merged.startingPrice === "number") {
+                return merged;
+              }
+              const parsedBadgePrice = parsePriceFromBadge(merged.badges.priceFrom);
+              return parsedBadgePrice !== null
+                ? { ...merged, startingPrice: parsedBadgePrice }
+                : merged;
+            })()
           : tour
       ),
     [liveEngine6DynamicByProductCode, topTours]
