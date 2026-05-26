@@ -1,4 +1,11 @@
-import React, { type ReactNode, useEffect, useMemo, useState } from "react";
+import React, {
+  type ReactNode,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
@@ -202,6 +209,7 @@ export const hydrateRelatedTourCommercialFields = (
 };
 
 export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
+  const relatedToursScrollerRef = useRef<HTMLDivElement | null>(null);
   const SHOW_ENGINE6_DEBUG =
     process.env.NODE_ENV !== "production" &&
     process.env.NEXT_PUBLIC_ENGINE6_DEBUG === "true";
@@ -298,6 +306,14 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
       ),
     [liveEngine6DynamicByProductCode, relatedTours]
   );
+
+  const scrollRelatedToursByDirection = useCallback((direction: "prev" | "next") => {
+    const scroller = relatedToursScrollerRef.current;
+    if (!scroller) return;
+    const scrollAmount = Math.max(280, Math.round(scroller.clientWidth * 0.85));
+    const signedAmount = direction === "next" ? scrollAmount : -scrollAmount;
+    scroller.scrollBy({ left: signedAmount, behavior: "smooth" });
+  }, []);
   const showRelatedTours = hydratedRelatedTours.length >= 2;
   const isExternalBookingUrl = /^https?:\/\//i.test(tour.bookingUrl);
   useStructuredData(schemaGraph);
@@ -622,19 +638,40 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             <h2 className="text-2xl font-semibold text-green-900">
               Other Tours in {tour.city}
             </h2>
-            <div className="mt-4 -mx-1 flex snap-x snap-mandatory gap-5 overflow-x-auto px-1 pb-4">
-              {hydratedRelatedTours.map(entry => (
-                <div
-                  key={`${entry.href}-${entry.tour.id}`}
-                  className="w-[82vw] max-w-sm shrink-0 snap-start md:w-[360px]"
-                >
-                  <TourCard
-                    tour={entry.tour}
-                    href={entry.href}
-                    forceDocumentNavigation
-                  />
-                </div>
-              ))}
+            <div className="relative mt-4">
+              <button
+                type="button"
+                aria-label={`Scroll other ${tour.city} tours left`}
+                className="absolute left-0 top-1/2 z-10 hidden h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-green-200 bg-white/95 text-2xl font-bold text-green-900 shadow-lg transition hover:bg-green-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-700 md:flex"
+                onClick={() => scrollRelatedToursByDirection("prev")}
+              >
+                <span aria-hidden="true">‹</span>
+              </button>
+              <button
+                type="button"
+                aria-label={`Scroll other ${tour.city} tours right`}
+                className="absolute right-0 top-1/2 z-10 hidden h-11 w-11 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-green-200 bg-white/95 text-2xl font-bold text-green-900 shadow-lg transition hover:bg-green-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-700 md:flex"
+                onClick={() => scrollRelatedToursByDirection("next")}
+              >
+                <span aria-hidden="true">›</span>
+              </button>
+              <div
+                ref={relatedToursScrollerRef}
+                className="-mx-1 flex snap-x snap-mandatory gap-5 overflow-x-auto px-1 pb-4"
+              >
+                {hydratedRelatedTours.map(entry => (
+                  <div
+                    key={`${entry.href}-${entry.tour.id}`}
+                    className="w-[82vw] max-w-sm shrink-0 snap-start md:w-[360px]"
+                  >
+                    <TourCard
+                      tour={entry.tour}
+                      href={entry.href}
+                      forceDocumentNavigation
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
         ) : null}
