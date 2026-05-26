@@ -289,12 +289,11 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Return to Santa Barbara with a final scenic drive back over the pass after the day’s tasting itinerary wraps.",
   ],
   "447486P2": [
-    "Board near Santa Barbara Harbor and get oriented for a relaxed happy-hour yacht cruise along the American Riviera waterfront.",
-    "Cruise past harbor slips and working marina activity as the captain guides the yacht toward open-water coastal views.",
-    "Take in Stearns Wharf and shoreline landmarks from offshore, with a water-level perspective that differs from land-based tours.",
-    "Settle into golden-hour sailing with broad views of the Santa Ynez Mountains rising behind the city and coast.",
-    "Enjoy the social onboard atmosphere with time for conversation, photos, and ocean breezes while the yacht maintains a smooth pace.",
-    "Return to harbor as sunset colors build over the channel, finishing with a final pass of Santa Barbara’s waterfront skyline.",
+    "Depart from Santa Barbara Harbor and settle in for a relaxed happy-hour yacht cruise.",
+    "Glide past Stearns Wharf for classic waterfront views from the water.",
+    "Cruise along East Beach and the Santa Barbara coastline with open-ocean breezes.",
+    "Take in channel and mountain sunset views as golden-hour light builds offshore.",
+    "Return to Santa Barbara Harbor to finish the coastal yacht experience.",
   ],
   "5096P30": [
     "Begin your sightseeing loop on Hollywood Boulevard at the Big Bus Welcome Center, where departures run throughout the day.",
