@@ -1,4 +1,10 @@
-import React, { type ReactNode, useEffect, useMemo, useState } from "react";
+import React, {
+  type ReactNode,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
@@ -220,6 +226,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
   const breadcrumbs = buildEngine6Breadcrumbs(tour);
   const parentCityToursPath =
     buildEngine6ParentCityToursPath(tour.canonicalPath) ?? breadcrumbs[2]?.href;
+  const relatedToursScrollerRef = useRef<HTMLDivElement | null>(null);
   const displaySections = buildEngine6DisplaySections(tour.highlights, tour.requirements);
   const relatedTours = useMemo(() => {
     const [, stateSlug = "", citySlug = "", currentSlug = ""] =
@@ -299,6 +306,13 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     [liveEngine6DynamicByProductCode, relatedTours]
   );
   const showRelatedTours = hydratedRelatedTours.length >= 2;
+  const scrollRelatedToursByViewport = (direction: "previous" | "next") => {
+    const scroller = relatedToursScrollerRef.current;
+    if (!scroller) return;
+    const offset = Math.max(scroller.clientWidth * 0.85, 280);
+    const signedOffset = direction === "next" ? offset : -offset;
+    scroller.scrollBy({ left: signedOffset, behavior: "smooth" });
+  };
   const isExternalBookingUrl = /^https?:\/\//i.test(tour.bookingUrl);
   useStructuredData(schemaGraph);
 
@@ -622,19 +636,44 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             <h2 className="text-2xl font-semibold text-green-900">
               Other Tours in {tour.city}
             </h2>
-            <div className="mt-4 -mx-1 flex snap-x snap-mandatory gap-5 overflow-x-auto px-1 pb-4">
-              {hydratedRelatedTours.map(entry => (
-                <div
-                  key={`${entry.href}-${entry.tour.id}`}
-                  className="w-[82vw] max-w-sm shrink-0 snap-start md:w-[360px]"
-                >
-                  <TourCard
-                    tour={entry.tour}
-                    href={entry.href}
-                    forceDocumentNavigation
-                  />
-                </div>
-              ))}
+            <div className="relative mt-4">
+              <button
+                type="button"
+                aria-label={`Scroll other ${tour.city} tours left`}
+                onClick={() => scrollRelatedToursByViewport("previous")}
+                className="absolute left-0 top-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 rounded-full border border-green-800/70 bg-white/95 p-2 text-green-900 shadow-md transition hover:bg-green-50 md:inline-flex"
+              >
+                <span aria-hidden="true" className="text-xl leading-none">
+                  ←
+                </span>
+              </button>
+              <div
+                ref={relatedToursScrollerRef}
+                className="-mx-1 flex snap-x snap-mandatory gap-5 overflow-x-auto px-1 pb-4"
+              >
+                {hydratedRelatedTours.map(entry => (
+                  <div
+                    key={`${entry.href}-${entry.tour.id}`}
+                    className="w-[82vw] max-w-sm shrink-0 snap-start md:w-[360px]"
+                  >
+                    <TourCard
+                      tour={entry.tour}
+                      href={entry.href}
+                      forceDocumentNavigation
+                    />
+                  </div>
+                ))}
+              </div>
+              <button
+                type="button"
+                aria-label={`Scroll other ${tour.city} tours right`}
+                onClick={() => scrollRelatedToursByViewport("next")}
+                className="absolute right-0 top-1/2 z-10 hidden translate-x-1/2 -translate-y-1/2 rounded-full border border-green-800/70 bg-white/95 p-2 text-green-900 shadow-md transition hover:bg-green-50 md:inline-flex"
+              >
+                <span aria-hidden="true" className="text-xl leading-none">
+                  →
+                </span>
+              </button>
             </div>
           </section>
         ) : null}
