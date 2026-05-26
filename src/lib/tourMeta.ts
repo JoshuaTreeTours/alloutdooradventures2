@@ -22,6 +22,7 @@ type TourLike = {
   };
   operator?: string;
   engine?: string;
+  productCode?: string;
 };
 
 const INDEX_ROBOTS = "index,follow,max-image-preview:large";
@@ -102,6 +103,16 @@ const normalizeCanonical = (canonicalUrl: string) => {
 
   const path = canonicalUrl.startsWith("/") ? canonicalUrl : `/${canonicalUrl}`;
   return `${SITE_URL}${path}`;
+};
+
+const isEngine6Yosemite415653P2 = (tour: TourLike) => {
+  const productCode = clean(tour.productCode).toUpperCase();
+  const id = clean(tour.id).toUpperCase();
+  const slug = clean(tour.slug).toUpperCase();
+  return (
+    tour.engine === "engine6" &&
+    (productCode === "415653P2" || id === "415653P2" || slug.includes("415653P2"))
+  );
 };
 
 const buildTitle = (tour: TourLike, canonicalUrl: string) => {
@@ -200,6 +211,26 @@ export const getCanonicalFromBookingPath = (pathname: string) => {
 };
 
 export function buildTourMeta(tour: TourLike, canonicalUrl: string) {
+  if (isEngine6Yosemite415653P2(tour)) {
+    const title =
+      "Yosemite National Park & Giant Sequoias Private Tour from San Francisco";
+    const description =
+      "Explore Yosemite National Park from San Francisco on a private tour featuring giant sequoias, Glacier Point views, waterfalls, granite cliffs, and scenic Sierra Nevada landscapes.";
+    const canonical = normalizeCanonical(canonicalUrl);
+
+    return {
+      title,
+      description,
+      ogTitle: title,
+      ogDescription: description,
+      twitterTitle: title,
+      twitterDescription: description,
+      robots: INDEX_ROBOTS,
+      googlebot: INDEX_ROBOTS,
+      canonical,
+    };
+  }
+
   const title = buildTitle(tour, canonicalUrl);
   const description = buildDescription(tour, canonicalUrl);
   const canonical = normalizeCanonical(canonicalUrl);
