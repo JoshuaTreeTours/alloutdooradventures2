@@ -95,7 +95,7 @@ export const ENGINE6_YOSEMITE_ROUTE =
   "/destinations/california/san-francisco/tours/yosemite-in-a-day-tour-from-san-francisco-36001p1";
 export const ENGINE6_YOSEMITE_SEQUOIAS_GLACIER_POINT_PRODUCT_CODE = "415653P2";
 export const ENGINE6_YOSEMITE_SEQUOIAS_GLACIER_POINT_ROUTE =
-  "/destinations/california/yosemite-national-park/tours/yosemite-sequoias-glacier-point-and-more-5-person-epic-adventure-415653P2";
+  "/destinations/california/san-francisco/tours/yosemite-sequoias-glacier-point-and-more-5-person-epic-adventure-415653P2";
 export const ENGINE6_BIG_SUR_MONTEREY_CARMEL_PRODUCT_CODE = "36001P14";
 export const ENGINE6_BIG_SUR_MONTEREY_CARMEL_ROUTE =
   "/destinations/california/san-francisco/tours/big-sur-monterey-and-carmel-tour-from-san-francisco";
