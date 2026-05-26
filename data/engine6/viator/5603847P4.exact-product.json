@@ -1,0 +1,636 @@
+{
+  "product": {
+    "status": "ACTIVE",
+    "productCode": "5603847P4",
+    "language": "en",
+    "createdAt": "2026-05-01T21:47:20.131654Z",
+    "lastUpdatedAt": "2026-05-18T21:37:17Z",
+    "title": "Santa Barbara Stargazing Tour with PhD Student Guide",
+    "ticketInfo": {
+      "ticketTypes": [
+        "MOBILE_ONLY"
+      ],
+      "ticketTypeDescription": "Mobile or paper ticket accepted",
+      "ticketsPerBooking": "ONE_PER_BOOKING",
+      "ticketsPerBookingDescription": "One per booking"
+    },
+    "pricingInfo": {
+      "type": "PER_PERSON",
+      "ageBands": [
+        {
+          "ageBand": "ADULT",
+          "startAge": 10,
+          "endAge": 100,
+          "minTravelersPerBooking": 0,
+          "maxTravelersPerBooking": 10
+        }
+      ]
+    },
+    "images": [
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": true,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/r/33/15/c5/47/caption.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/r/33/15/c5/47/caption.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/r/33/15/c5/47/caption.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/r/33/15/c5/47/caption.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/r/33/15/c5/47/caption.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/r/33/15/c5/47/caption.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/r/33/15/c5/47/caption.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/33/15/c5/47/caption.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/r/33/15/c5/47/caption.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/r/33/15/c5/47/caption.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/r/33/15/c5/48/caption.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/r/33/15/c5/48/caption.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/r/33/15/c5/48/caption.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/r/33/15/c5/48/caption.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/r/33/15/c5/48/caption.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/r/33/15/c5/48/caption.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/r/33/15/c5/48/caption.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/33/15/c5/48/caption.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/r/33/15/c5/48/caption.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/r/33/15/c5/48/caption.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/r/33/15/c5/49/caption.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/r/33/15/c5/49/caption.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/r/33/15/c5/49/caption.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/r/33/15/c5/49/caption.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/r/33/15/c5/49/caption.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/r/33/15/c5/49/caption.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/r/33/15/c5/49/caption.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/33/15/c5/49/caption.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/r/33/15/c5/49/caption.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/r/33/15/c5/49/caption.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/r/33/15/c5/4a/caption.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/r/33/15/c5/4a/caption.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/r/33/15/c5/4a/caption.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/r/33/15/c5/4a/caption.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/r/33/15/c5/4a/caption.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/r/33/15/c5/4a/caption.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/r/33/15/c5/4a/caption.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/33/15/c5/4a/caption.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/r/33/15/c5/4a/caption.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/r/33/15/c5/4a/caption.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/r/33/15/c5/4b/caption.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/r/33/15/c5/4b/caption.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/r/33/15/c5/4b/caption.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/r/33/15/c5/4b/caption.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/r/33/15/c5/4b/caption.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/r/33/15/c5/4b/caption.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/r/33/15/c5/4b/caption.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/33/15/c5/4b/caption.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/r/33/15/c5/4b/caption.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/r/33/15/c5/4b/caption.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/r/33/15/c5/4d/caption.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/r/33/15/c5/4d/caption.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/r/33/15/c5/4d/caption.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/r/33/15/c5/4d/caption.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/r/33/15/c5/4d/caption.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/r/33/15/c5/4d/caption.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/r/33/15/c5/4d/caption.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/33/15/c5/4d/caption.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/r/33/15/c5/4d/caption.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/r/33/15/c5/4d/caption.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/r/33/15/c5/54/caption.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/r/33/15/c5/54/caption.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/r/33/15/c5/54/caption.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/r/33/15/c5/54/caption.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/r/33/15/c5/54/caption.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/r/33/15/c5/54/caption.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/r/33/15/c5/54/caption.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/33/15/c5/54/caption.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/r/33/15/c5/54/caption.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/r/33/15/c5/54/caption.jpg"
+          }
+        ]
+      }
+    ],
+    "logistics": {
+      "start": [
+        {
+          "location": {
+            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5Kt3ddUxt7uiq27RnJQ6ME9hJiBE1+emOB864KUsAkYk"
+          },
+          "description": "We'll meet at the Amtrak Station. Look for the gray Alta Vista Tours Sprinter van parked adjacent to the station building, inside the parking lot. Parking is available on nearby streets or in the Amtrak station lot for a small fee. Please arrive 10 minutes early.\n"
+        }
+      ],
+      "end": [
+        {
+          "location": {
+            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5Kt3ddUxt7uiq27RnJQ6ME9hJiBE1+emOB864KUsAkYk"
+          },
+          "description": "We'll meet at the Amtrak Station. Look for the gray Alta Vista Tours Sprinter van parked adjacent to the station building, inside the parking lot. Parking is available on nearby streets or in the Amtrak station lot for a small fee. Please arrive 10 minutes early.\n"
+        }
+      ],
+      "redemption": {
+        "redemptionType": "NONE"
+      },
+      "travelerPickup": {
+        "pickupOptionType": "MEET_EVERYONE_AT_START_POINT",
+        "allowCustomTravelerPickup": false
+      }
+    },
+    "timeZone": "America/Los_Angeles",
+    "description": "Experience the night sky with a PhD-level astronomy guide who brings the cosmos to life through storytelling and expert insight.\n\nEscape the city lights and experience Santa Barbara\u2019s night sky on a PhD-led stargazing tour. Travel to a dark sky location where your astronomy guide brings the cosmos to life through telescope viewing and storytelling. View planets, stars, nebulae, and galaxies through a high-powered telescope with guided explanations. Enjoy a comfortable, small-group experience with luxury transportation, hot drinks, and warm gear provided.",
+    "inclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "PhD student guide"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Transportation via Mercedes Sprinter"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "High-powered telescope viewing"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Blankets, jackets, and cold-weather gear"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Complimentary hot drinks"
+      }
+    ],
+    "exclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Guide gratuities"
+      }
+    ],
+    "additionalInfo": [
+      {
+        "type": "PETS_WELCOME",
+        "description": "Service animals allowed"
+      },
+      {
+        "type": "PUBLIC_TRANSPORTATION_NEARBY",
+        "description": "Public transportation options are available nearby"
+      },
+      {
+        "type": "PHYSICAL_EASY",
+        "description": "Suitable for all physical fitness levels"
+      }
+    ],
+    "cancellationPolicy": {
+      "type": "STANDARD",
+      "description": "For a full refund, cancel at least 24 hours before the scheduled departure time.",
+      "cancelIfBadWeather": true,
+      "cancelIfInsufficientTravelers": false,
+      "refundEligibility": [
+        {
+          "dayRangeMin": 1,
+          "percentageRefundable": 100
+        },
+        {
+          "dayRangeMin": 0,
+          "dayRangeMax": 1,
+          "percentageRefundable": 0
+        }
+      ]
+    },
+    "bookingConfirmationSettings": {
+      "bookingCutoffType": "START_TIME",
+      "bookingCutoffInMinutes": 180,
+      "confirmationType": "INSTANT"
+    },
+    "bookingRequirements": {
+      "minTravelersPerBooking": 1,
+      "maxTravelersPerBooking": 10,
+      "requiresAdultForBooking": false
+    },
+    "languageGuides": [
+      {
+        "type": "GUIDE",
+        "language": "en",
+        "legacyGuide": "en/SERVICE_GUIDE"
+      }
+    ],
+    "bookingQuestions": [
+      "AGEBAND",
+      "FULL_NAMES_FIRST",
+      "FULL_NAMES_LAST",
+      "SPECIAL_REQUIREMENTS"
+    ],
+    "tags": [
+      12057,
+      11938,
+      21736,
+      367661,
+      11929,
+      11930,
+      21860
+    ],
+    "destinations": [
+      {
+        "ref": "4372",
+        "primary": true
+      }
+    ],
+    "itinerary": {
+      "itineraryType": "STANDARD",
+      "skipTheLine": false,
+      "privateTour": false,
+      "maxTravelersInSharedTour": 10,
+      "duration": {
+        "fixedDurationInMinutes": 180
+      },
+      "itineraryItems": [
+        {
+          "pointOfInterestLocation": {
+            "location": {
+              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyCC94mbaRBzecSJjshxk1tA="
+            }
+          },
+          "duration": {
+            "fixedDurationInMinutes": 120
+          },
+          "passByWithoutStopping": false,
+          "admissionIncluded": "YES",
+          "description": "Escape the city lights and experience Santa Barbara\u2019s night sky on a PhD-led stargazing tour. Travel to a dark sky location, often Lake Cachuma, where your astronomy guide brings the cosmos to life through telescope viewing and storytelling.\n\n\u00b7PhD-guided stargazing experience\n\u00b7High-powered telescope viewing\n\u00b7Dark sky location away from city lights\n\u00b7Transportation included\n\u00b7Complimentary hot drinks\n\u00b7Blankets and warm gear provided"
+        }
+      ]
+    },
+    "productOptions": [
+      {
+        "productOptionCode": "TG1",
+        "description": "",
+        "title": "Santa Barbara Stargazing Tour with PhD Student Guide",
+        "languageGuides": [
+          {
+            "type": "GUIDE",
+            "language": "en",
+            "legacyGuide": "en/SERVICE_GUIDE"
+          }
+        ]
+      }
+    ],
+    "translationInfo": {
+      "containsMachineTranslatedText": false,
+      "translationSource": "ORIGINAL"
+    },
+    "supplier": {
+      "name": "Alta Vista Tours",
+      "reference": "SUPPLIER-/nwAJyFQStDnxxcRsYKNkQ=="
+    },
+    "productUrl": "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Stargazing-Tour-with-PhD-Student-Guide/d4372-5603847P4?mcid=42383&pid=P00290915&medium=api&api_version=2.0",
+    "reviews": {
+      "totalReviews": 0
+    },
+    "media": {
+      "images": [
+        {
+          "variants": [
+            {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/33/15/c5/47/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
