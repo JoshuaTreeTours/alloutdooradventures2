@@ -325,6 +325,44 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
   ],
 };
 
+const ENGINE6_ITINERARY_ITEM_OVERRIDES: Record<
+  string,
+  Array<{ title: string; description: string; stopType: "pass-by" | "stop" }>
+> = {
+  "447486P2": [
+    {
+      title: "Santa Barbara Harbor departure",
+      description:
+        "Depart from Santa Barbara Harbor and settle in for a relaxed happy-hour yacht cruise.",
+      stopType: "stop",
+    },
+    {
+      title: "Stearns Wharf waterfront views",
+      description:
+        "Glide past Stearns Wharf for classic waterfront views from the water.",
+      stopType: "pass-by",
+    },
+    {
+      title: "East Beach coastline views",
+      description:
+        "Cruise along East Beach and the Santa Barbara coastline with open-ocean breezes.",
+      stopType: "pass-by",
+    },
+    {
+      title: "Channel and mountain sunset views",
+      description:
+        "Take in channel and mountain sunset views as golden-hour light builds offshore.",
+      stopType: "pass-by",
+    },
+    {
+      title: "Return to Santa Barbara Harbor",
+      description:
+        "Return to Santa Barbara Harbor to finish the coastal yacht experience.",
+      stopType: "stop",
+    },
+  ],
+};
+
 const rewriteItineraryDescriptionToSingleSentence = (
   args: {
     productCode: string;
@@ -462,19 +500,28 @@ export const mapViatorToEngine6Tour = (
     payload.extracted.overviewText ?? ""
   );
   const highlights = payload.extracted.highlights ?? [];
-  const itinerary =
-    payload.extracted.itinerary?.map((item, index) => ({
-      ...item,
-      ...(item.description
-        ? {
-            description: rewriteItineraryDescriptionToSingleSentence({
-              productCode: payload.rawProductCode,
-              item,
-              index,
-            }),
-          }
-        : {}),
-    })) ?? [];
+  const itineraryOverride =
+    ENGINE6_ITINERARY_ITEM_OVERRIDES[payload.rawProductCode] ?? null;
+  const itinerary = itineraryOverride
+    ? itineraryOverride.map(item => ({
+        title: item.title,
+        description: item.description,
+        stopType: item.stopType,
+        duration: null,
+        admissionNote: null,
+      }))
+    : payload.extracted.itinerary?.map((item, index) => ({
+        ...item,
+        ...(item.description
+          ? {
+              description: rewriteItineraryDescriptionToSingleSentence({
+                productCode: payload.rawProductCode,
+                item,
+                index,
+              }),
+            }
+          : {}),
+      })) ?? [];
   const itinerarySummaryText = payload.extracted.itinerarySummaryText ?? null;
   const faqs = payload.extracted.faqs ?? [];
   const included = payload.extracted.included ?? [];
