@@ -43,6 +43,11 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
   "117409P1":
     "Head beyond the coast on a guided Santa Ynez Valley day trip focused on wine-country towns, vineyard landscapes, and relaxed tasting stops.",
 };
+const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
+  "447486P2":
+    "Santa Barbara Happy Hour on a Yacht is a relaxing 90-minute cruise along the Santa Barbara waterfront, offering coastal views, fresh ocean air, and a social golden-hour atmosphere. Departing near Santa Barbara Harbor, this boat tour trades city streets for open water, marina scenery, shoreline views, and the Santa Ynez Mountain backdrop. Guests can unwind onboard while the captain cruises calm coastal routes past the harbor, Stearns Wharf, East Beach, and the Santa Barbara coastline.",
+};
+
 const ENGINE6_OVERVIEW_OVERRIDES: Record<
   string,
   (args: { city: string; state: string; sourceOverview: string }) => string
@@ -94,7 +99,7 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
   "163975P1": () =>
     "Santa Barbara Trolley Tour is a relaxed city overview that pairs coastal scenery with historic landmarks in a comfortable, open-air style ride. As the trolley rolls through town, you pass waterfront icons like Stearns Wharf and East Beach, continue by the Andrée Clark Bird Refuge and Butterfly Beach, and take in the city’s Spanish-influenced architecture around the courthouse and El Presidio district. The route also includes a dedicated stop at Old Mission Santa Barbara, where you have about 10 minutes to look around before rejoining the tour. Along the way, your guide adds practical local context on neighborhoods, history, and daily life, so the experience feels more personal than a standard transfer. It’s an easy way to understand Santa Barbara’s scenic, coastal, and historic character early in your visit.",
   "447486P2": () =>
-    "Santa Barbara Happy Hour on a Yacht is a harbor-focused cruise that shifts the experience from city streets to open water during golden hour. You board near Santa Barbara Harbor and settle into a relaxed social setting as the yacht cruises along the waterfront with broad views of the coastline, marina activity, and mountain backdrop. Instead of stop-and-go land sightseeing, the format emphasizes steady sailing, fresh ocean air, and time to unwind with your group while the captain navigates calm coastal routes. Expect a polished but casual vibe designed around conversation, photos, and sunset light across the American Riviera. It’s an easy way to experience Santa Barbara from the water in a short, memorable happy-hour window.",
+    "Santa Barbara Happy Hour on a Yacht is a relaxing 90-minute cruise along the Santa Barbara waterfront, offering coastal views, fresh ocean air, and a social golden-hour atmosphere. Departing near Santa Barbara Harbor, this boat tour trades city streets for open water, marina scenery, shoreline views, and the Santa Ynez Mountain backdrop. Guests can unwind onboard while the captain cruises calm coastal routes past the harbor, Stearns Wharf, East Beach, and the Santa Barbara coastline.",
   "117409P1": () =>
     "Santa Ynez Valley Tour is a full-day wine-country outing from Santa Barbara that trades shoreline views for inland ranchland, vineyard slopes, and small-town main streets. The route usually follows Highway 154 over San Marcos Pass into the Santa Ynez Valley, then moves between tasting stops in communities such as Solvang, Los Olivos, and Santa Ynez depending on the day’s winery lineup. Your guide handles driving and timing, so you can focus on scenery, local wine styles, and a relaxed pace between pours. Expect a social small-group format with structured stops, practical destination context, and enough free moments to browse tasting rooms or village blocks. It’s an easy way to experience one of Santa Barbara County’s best-known wine regions without self-driving logistics.",
 };
@@ -545,12 +550,13 @@ export const mapViatorToEngine6Tour = (
     ENGINE6_OPENING_SENTENCE_OVERRIDES[payload.rawProductCode] ??
     openingSentence;
   const descriptionBody = cleanedDescription.replace(/\s+/g, " ").trim();
-  const description = [enforcedOpeningSentence, descriptionBody]
-    .filter(Boolean)
-    .join(" ");
-  const metaDescription = buildEngine6MetaDescription(
-    payload.extracted.seoDescription ?? description
-  );
+  const descriptionOverride = ENGINE6_DESCRIPTION_OVERRIDES[payload.rawProductCode];
+  const description =
+    descriptionOverride ??
+    [enforcedOpeningSentence, descriptionBody].filter(Boolean).join(" ");
+  const metaDescription = descriptionOverride
+    ? descriptionOverride
+    : buildEngine6MetaDescription(payload.extracted.seoDescription ?? description);
   const aggregateRating = normalizeEngine6AggregateRating(
     payload.extracted.aggregateRating
   );
