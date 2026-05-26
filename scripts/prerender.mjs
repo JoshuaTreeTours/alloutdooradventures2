@@ -941,6 +941,11 @@ const main = async () => {
         ? buildCanonicalUrl(normalizedPathname)
         : engine2Seo.canonical;
       seo.image = engine2Seo.og.image;
+    } else if (engine6Seo && !isBookingRoute) {
+      seo.title = engine6Seo.title;
+      seo.description = engine6Seo.description;
+      seo.url = buildCanonicalUrl(basePathname);
+      seo.image = engine6Seo.image || seo.image;
     } else if (tourForSeo) {
       if (isBookingRoute && buildBookingMeta) {
         const bookingMeta = buildBookingMeta(tourForSeo, buildCanonicalUrl(normalizedPathname));
