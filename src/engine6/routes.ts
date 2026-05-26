@@ -29,6 +29,10 @@ export const ENGINE6_SANTA_BARBARA_PHD_STARGAZING_PRODUCT_CODE = "5603847P4";
 export const ENGINE6_SANTA_BARBARA_PHD_STARGAZING_ROUTE =
   "/destinations/california/santa-barbara/tours/santa-barbara-stargazing-tour-with-phd-student-guide-5603847P4";
 
+export const ENGINE6_SANTA_BARBARA_PRIVATE_SURF_LESSON_PRODUCT_CODE = "5753P14";
+export const ENGINE6_SANTA_BARBARA_PRIVATE_SURF_LESSON_ROUTE =
+  "/destinations/california/santa-barbara/tours/private-two-person-surf-lesson-in-santa-barbara-5753P14";
+
 export const ENGINE6_SANTA_BARBARA_SUNSET_KAYAK_PRODUCT_CODE = "7270P10";
 export const ENGINE6_SANTA_BARBARA_SUNSET_KAYAK_ROUTE =
   "/destinations/california/santa-barbara/tours/santa-barbara-sunset-kayak-tour";
@@ -455,6 +459,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SANTA_BARBARA_PHD_STARGAZING_ROUTE,
     ENGINE6_SANTA_BARBARA_PHD_STARGAZING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SANTA_BARBARA_PRIVATE_SURF_LESSON_ROUTE,
+    ENGINE6_SANTA_BARBARA_PRIVATE_SURF_LESSON_PRODUCT_CODE,
   ],
   [
     ENGINE6_CHALLENGING_ADVENTURE_COURSE_TREK_ROUTE,
