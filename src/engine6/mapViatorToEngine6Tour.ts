@@ -289,12 +289,11 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Return to Santa Barbara with a final scenic drive back over the pass after the day’s tasting itinerary wraps.",
   ],
   "447486P2": [
-    "Board near Santa Barbara Harbor and get oriented for a relaxed happy-hour yacht cruise along the American Riviera waterfront.",
-    "Cruise past harbor slips and working marina activity as the captain guides the yacht toward open-water coastal views.",
-    "Take in Stearns Wharf and shoreline landmarks from offshore, with a water-level perspective that differs from land-based tours.",
-    "Settle into golden-hour sailing with broad views of the Santa Ynez Mountains rising behind the city and coast.",
-    "Enjoy the social onboard atmosphere with time for conversation, photos, and ocean breezes while the yacht maintains a smooth pace.",
-    "Return to harbor as sunset colors build over the channel, finishing with a final pass of Santa Barbara’s waterfront skyline.",
+    "Depart from Santa Barbara Harbor and settle in for a relaxed happy-hour yacht cruise.",
+    "Glide past Stearns Wharf for classic waterfront views from the water.",
+    "Cruise along East Beach and the Santa Barbara coastline with open-ocean breezes.",
+    "Take in channel and mountain sunset views as golden-hour light builds offshore.",
+    "Return to Santa Barbara Harbor to finish the coastal yacht experience.",
   ],
   "5096P30": [
     "Begin your sightseeing loop on Hollywood Boulevard at the Big Bus Welcome Center, where departures run throughout the day.",
@@ -323,6 +322,44 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Watch downtown skyline views broaden from the dining deck as the yacht glides through central harbor waters.",
     "Take in open-water panoramas while brunch service and live entertainment continue throughout the sailing.",
     "Pass naval installations, Shelter Island marinas, and Cabrillo’s coastal point on the scenic return across San Diego Bay.",
+  ],
+};
+
+const ENGINE6_ITINERARY_ITEM_OVERRIDES: Record<
+  string,
+  Array<{ title: string; description: string; stopType: "pass-by" | "stop" }>
+> = {
+  "447486P2": [
+    {
+      title: "Santa Barbara Harbor departure",
+      description:
+        "Depart from Santa Barbara Harbor and settle in for a relaxed happy-hour yacht cruise.",
+      stopType: "stop",
+    },
+    {
+      title: "Stearns Wharf waterfront views",
+      description:
+        "Glide past Stearns Wharf for classic waterfront views from the water.",
+      stopType: "pass-by",
+    },
+    {
+      title: "East Beach coastline views",
+      description:
+        "Cruise along East Beach and the Santa Barbara coastline with open-ocean breezes.",
+      stopType: "pass-by",
+    },
+    {
+      title: "Channel and mountain sunset views",
+      description:
+        "Take in channel and mountain sunset views as golden-hour light builds offshore.",
+      stopType: "pass-by",
+    },
+    {
+      title: "Return to Santa Barbara Harbor",
+      description:
+        "Return to Santa Barbara Harbor to finish the coastal yacht experience.",
+      stopType: "stop",
+    },
   ],
 };
 
@@ -463,19 +500,28 @@ export const mapViatorToEngine6Tour = (
     payload.extracted.overviewText ?? ""
   );
   const highlights = payload.extracted.highlights ?? [];
-  const itinerary =
-    payload.extracted.itinerary?.map((item, index) => ({
-      ...item,
-      ...(item.description
-        ? {
-            description: rewriteItineraryDescriptionToSingleSentence({
-              productCode: payload.rawProductCode,
-              item,
-              index,
-            }),
-          }
-        : {}),
-    })) ?? [];
+  const itineraryOverride =
+    ENGINE6_ITINERARY_ITEM_OVERRIDES[payload.rawProductCode] ?? null;
+  const itinerary = itineraryOverride
+    ? itineraryOverride.map(item => ({
+        title: item.title,
+        description: item.description,
+        stopType: item.stopType,
+        duration: null,
+        admissionNote: null,
+      }))
+    : payload.extracted.itinerary?.map((item, index) => ({
+        ...item,
+        ...(item.description
+          ? {
+              description: rewriteItineraryDescriptionToSingleSentence({
+                productCode: payload.rawProductCode,
+                item,
+                index,
+              }),
+            }
+          : {}),
+      })) ?? [];
   const itinerarySummaryText = payload.extracted.itinerarySummaryText ?? null;
   const faqs = payload.extracted.faqs ?? [];
   const included = payload.extracted.included ?? [];
