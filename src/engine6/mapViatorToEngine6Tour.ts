@@ -47,6 +47,14 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "447486P2":
     "Santa Barbara Happy Hour on a Yacht is a relaxing 90-minute cruise along the Santa Barbara waterfront, offering coastal views, fresh ocean air, and a social golden-hour atmosphere. Departing near Santa Barbara Harbor, this boat tour trades city streets for open water, marina scenery, shoreline views, and the Santa Ynez Mountain backdrop. Guests can unwind onboard while the captain cruises calm coastal routes past the harbor, Stearns Wharf, East Beach, and the Santa Barbara coastline.",
 };
+const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
+  "415653P2":
+    "Yosemite National Park & Giant Sequoias Private Tour from San Francisco",
+};
+const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
+  "415653P2":
+    "Explore Yosemite National Park from San Francisco on a private tour featuring giant sequoias, Glacier Point views, waterfalls, granite cliffs, and scenic Sierra Nevada landscapes.",
+};
 
 const ENGINE6_OVERVIEW_OVERRIDES: Record<
   string,
@@ -554,9 +562,13 @@ export const mapViatorToEngine6Tour = (
   const description =
     descriptionOverride ??
     [enforcedOpeningSentence, descriptionBody].filter(Boolean).join(" ");
-  const metaDescription = descriptionOverride
-    ? descriptionOverride
-    : buildEngine6MetaDescription(payload.extracted.seoDescription ?? description);
+  const metaDescriptionOverride =
+    ENGINE6_META_DESCRIPTION_OVERRIDES[payload.rawProductCode];
+  const metaDescription = metaDescriptionOverride
+    ? metaDescriptionOverride
+    : descriptionOverride
+      ? descriptionOverride
+      : buildEngine6MetaDescription(payload.extracted.seoDescription ?? description);
   const aggregateRating = normalizeEngine6AggregateRating(
     payload.extracted.aggregateRating
   );
@@ -610,6 +622,7 @@ export const mapViatorToEngine6Tour = (
     productCode: payload.rawProductCode,
     title,
     seoTitle:
+      ENGINE6_SEO_TITLE_OVERRIDES[payload.rawProductCode] ??
       payload.extracted.seoTitle ??
       buildEngine6SeoTitle({ title, city, state }),
     seoDescription: metaDescription,
