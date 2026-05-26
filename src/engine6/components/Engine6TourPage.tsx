@@ -9,6 +9,7 @@ import { formatEngine6AggregateRating } from "../rating";
 import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
+import { buildEngine6DisplaySections } from "../displaySections";
 import type { Engine6Tour } from "../types";
 import {
   fetchEngine6LiveProductFields,
@@ -219,6 +220,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
   const breadcrumbs = buildEngine6Breadcrumbs(tour);
   const parentCityToursPath =
     buildEngine6ParentCityToursPath(tour.canonicalPath) ?? breadcrumbs[2]?.href;
+  const displaySections = buildEngine6DisplaySections(tour.highlights, tour.requirements);
   const relatedTours = useMemo(() => {
     const [, stateSlug = "", citySlug = "", currentSlug = ""] =
       /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
@@ -441,10 +443,10 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </ContentSection>
         ) : null}
 
-        {tour.highlights.length > 0 ? (
+        {displaySections.highlights.length > 0 ? (
           <ContentSection title="Highlights">
             <ul className="grid gap-3 md:grid-cols-2">
-              {tour.highlights.map((highlight, index) => (
+              {displaySections.highlights.map((highlight, index) => (
                 <li
                   key={`${highlight.slice(0, 32)}-${index}`}
                   className="rounded-xl border border-green-100 bg-green-50 p-4 text-sm leading-6 text-green-950"
@@ -571,10 +573,10 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </ContentSection>
         ) : null}
 
-        {tour.requirements.length > 0 ? (
+        {displaySections.additionalInfo.length > 0 ? (
           <ContentSection title="Additional info">
             <ul className="space-y-3">
-              {tour.requirements.map((item, index) => (
+              {displaySections.additionalInfo.map((item, index) => (
                 <li
                   key={`${item.slice(0, 32)}-${index}`}
                   className="rounded-xl border border-green-100 bg-green-50/60 p-4 text-sm leading-6 text-slate-700"
