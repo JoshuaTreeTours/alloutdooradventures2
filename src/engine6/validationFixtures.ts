@@ -7,6 +7,7 @@ import specimen421920p3Payload from "../../data/engine6/viator/421920P3.exact-pr
 import specimen7270p10Payload from "../../data/engine6/viator/7270P10.exact-product.json";
 import specimen331438p1Payload from "../../data/engine6/viator/331438P1.exact-product.json";
 import specimen5603847p4Payload from "../../data/engine6/viator/5603847P4.exact-product.json";
+import specimen5753p14Payload from "../../data/engine6/viator/5753P14.exact-product.json";
 import specimen5119Payload from "../../data/engine6/viator/5119P13.exact-product.json";
 import specimen5602p25Payload from "../../data/engine6/viator/5602P25.exact-product.json";
 import specimen190492p3Payload from "../../data/engine6/viator/190492P3.exact-product.json";
@@ -211,6 +212,15 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Stargazing-Tour-with-PhD-Student-Guide/d4372-5603847P4",
     rawPayload: specimen5603847p4Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5753P14",
+    publicUrl:
+      "https://www.viator.com/tours/Santa-Barbara/Private-Two-Person-Surf-Lesson-in-Santa-Barbara/d4372-5753P14",
+    rawPayload: specimen5753p14Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

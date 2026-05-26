@@ -1,0 +1,760 @@
+{
+  "product": {
+    "status": "ACTIVE",
+    "productCode": "5753P14",
+    "language": "en",
+    "createdAt": "2020-02-18T17:58:09.008277Z",
+    "lastUpdatedAt": "2026-05-19T12:29:56Z",
+    "title": "Private Surf Lesson with Instructor, Board, & Wetsuit",
+    "ticketInfo": {
+      "ticketTypes": [
+        "MOBILE_ONLY"
+      ],
+      "ticketTypeDescription": "Mobile or paper ticket accepted",
+      "ticketsPerBooking": "ONE_PER_BOOKING",
+      "ticketsPerBookingDescription": "One per booking"
+    },
+    "pricingInfo": {
+      "type": "PER_PERSON",
+      "ageBands": [
+        {
+          "ageBand": "CHILD",
+          "startAge": 5,
+          "endAge": 8,
+          "minTravelersPerBooking": 0,
+          "maxTravelersPerBooking": 15
+        },
+        {
+          "ageBand": "YOUTH",
+          "startAge": 9,
+          "endAge": 11,
+          "minTravelersPerBooking": 0,
+          "maxTravelersPerBooking": 0
+        },
+        {
+          "ageBand": "ADULT",
+          "startAge": 12,
+          "endAge": 54,
+          "minTravelersPerBooking": 0,
+          "maxTravelersPerBooking": 15
+        },
+        {
+          "ageBand": "SENIOR",
+          "startAge": 55,
+          "endAge": 99,
+          "minTravelersPerBooking": 0,
+          "maxTravelersPerBooking": 0
+        }
+      ]
+    },
+    "images": [
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": true,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0a/7c/90/d2.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0a/7c/90/d2.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0a/7c/90/d2.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0a/7c/90/d2.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0a/7c/90/d2.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0a/7c/90/d2.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/7c/90/d2.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/7c/90/d2.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0a/7c/90/d2.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0a/7c/90/d2.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0a/74/9d/f5.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0a/74/9d/f5.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0a/74/9d/f5.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0a/74/9d/f5.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0a/74/9d/f5.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0a/74/9d/f5.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/74/9d/f5.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/74/9d/f5.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0a/74/9d/f5.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0a/74/9d/f5.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0a/7c/90/47.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0a/7c/90/47.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0a/7c/90/47.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0a/7c/90/47.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0a/7c/90/47.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0a/7c/90/47.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/7c/90/47.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/7c/90/47.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0a/7c/90/47.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0a/7c/90/47.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0a/7c/90/cf.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0a/7c/90/cf.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0a/7c/90/cf.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0a/7c/90/cf.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0a/7c/90/cf.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0a/7c/90/cf.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/7c/90/cf.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/7c/90/cf.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0a/7c/90/cf.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0a/7c/90/cf.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0a/7c/90/de.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0a/7c/90/de.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0a/7c/90/de.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0a/7c/90/de.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0a/7c/90/de.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0a/7c/90/de.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/7c/90/de.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/7c/90/de.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0a/7c/90/de.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0a/7c/90/de.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0a/7c/91/2d.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0a/7c/91/2d.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0a/7c/91/2d.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0a/7c/91/2d.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0a/7c/91/2d.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0a/7c/91/2d.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/7c/91/2d.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/7c/91/2d.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0a/7c/91/2d.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0a/7c/91/2d.jpg"
+          }
+        ]
+      },
+      {
+        "imageSource": "SUPPLIER_PROVIDED",
+        "caption": "",
+        "isCover": false,
+        "variants": [
+          {
+            "height": 100,
+            "width": 100,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0a/7c/91/85.jpg"
+          },
+          {
+            "height": 200,
+            "width": 200,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0a/7c/91/85.jpg"
+          },
+          {
+            "height": 400,
+            "width": 400,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0a/7c/91/85.jpg"
+          },
+          {
+            "height": 240,
+            "width": 360,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0a/7c/91/85.jpg"
+          },
+          {
+            "height": 320,
+            "width": 480,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0a/7c/91/85.jpg"
+          },
+          {
+            "height": 360,
+            "width": 540,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0a/7c/91/85.jpg"
+          },
+          {
+            "height": 446,
+            "width": 674,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/7c/91/85.jpg"
+          },
+          {
+            "height": 480,
+            "width": 720,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/7c/91/85.jpg"
+          },
+          {
+            "height": 118,
+            "width": 210,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0a/7c/91/85.jpg"
+          },
+          {
+            "height": 75,
+            "width": 75,
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0a/7c/91/85.jpg"
+          }
+        ]
+      }
+    ],
+    "logistics": {
+      "start": [
+        {
+          "location": {
+            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5IiORFCIr0BYu5/LPV+INAfFzbG4T7OlycUNwrdgUC5x"
+          },
+          "description": "IMPORTANT: The directions above are NOT accurate for your meeting point. You will be meeting your instructor at the beach, which will be a 15-25 minute drive south of Santa Barbara. You will be emailed about the exact location AFTER you book your lesson. Thank you!"
+        }
+      ],
+      "end": [
+        {
+          "location": {
+            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5IiORFCIr0BYu5/LPV+INAfFzbG4T7OlycUNwrdgUC5x"
+          },
+          "description": "IMPORTANT: The directions above are NOT accurate for your meeting point. You will be meeting your instructor at the beach, which will be a 15-25 minute drive south of Santa Barbara. You will be emailed about the exact location AFTER you book your lesson. Thank you!"
+        }
+      ],
+      "redemption": {
+        "redemptionType": "NONE"
+      },
+      "travelerPickup": {
+        "pickupOptionType": "MEET_EVERYONE_AT_START_POINT",
+        "allowCustomTravelerPickup": false
+      }
+    },
+    "timeZone": "America/Los_Angeles",
+    "description": "Learn to surf in beautiful Santa Barbara! Your expert instructor will teach you how to stand up on your board and ride the perfect wave, offering tips on balance while ensuring your safety. All skill levels are welcome, and equipment rental is included. This Southern California city offers great outdoor activities like surfing year-round.",
+    "inclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Use of equipment (surfboard, wetsuit)"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Expert instructor"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "1.5-hour lesson"
+      }
+    ],
+    "exclusions": [
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Hotel pickup and drop-off"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Gratuities"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Food and drink"
+      },
+      {
+        "category": "OTHER",
+        "categoryDescription": "Other",
+        "type": "OTHER",
+        "typeDescription": "Other",
+        "otherDescription": "Towels"
+      }
+    ],
+    "additionalInfo": [
+      {
+        "type": "STROLLER_ACCESSIBLE",
+        "description": "Infants and small children can ride in a pram or stroller"
+      },
+      {
+        "type": "PETS_WELCOME",
+        "description": "Service animals allowed"
+      },
+      {
+        "type": "PUBLIC_TRANSPORTATION_NEARBY",
+        "description": "Public transportation options are available nearby"
+      },
+      {
+        "type": "NO_BACK_PROBLEMS",
+        "description": "Not recommended for travelers with spinal injuries"
+      },
+      {
+        "type": "PHYSICAL_EASY",
+        "description": "Suitable for all physical fitness levels"
+      },
+      {
+        "type": "OTHER",
+        "description": "All participants MUST be able to swim"
+      }
+    ],
+    "cancellationPolicy": {
+      "type": "STANDARD",
+      "description": "For a full refund, cancel at least 24 hours before the scheduled departure time.",
+      "cancelIfBadWeather": true,
+      "cancelIfInsufficientTravelers": false,
+      "refundEligibility": [
+        {
+          "dayRangeMin": 1,
+          "percentageRefundable": 100
+        },
+        {
+          "dayRangeMin": 0,
+          "dayRangeMax": 1,
+          "percentageRefundable": 0
+        }
+      ]
+    },
+    "bookingConfirmationSettings": {
+      "bookingCutoffType": "START_TIME",
+      "bookingCutoffInMinutes": 1440,
+      "confirmationType": "INSTANT"
+    },
+    "bookingRequirements": {
+      "minTravelersPerBooking": 1,
+      "maxTravelersPerBooking": 15,
+      "requiresAdultForBooking": false
+    },
+    "languageGuides": [
+      {
+        "type": "GUIDE",
+        "language": "en",
+        "legacyGuide": "en/SERVICE_GUIDE"
+      }
+    ],
+    "bookingQuestions": [
+      "AGEBAND",
+      "FULL_NAMES_FIRST",
+      "FULL_NAMES_LAST",
+      "HEIGHT",
+      "SPECIAL_REQUIREMENTS",
+      "WEIGHT"
+    ],
+    "tags": [
+      21972,
+      22083,
+      367661,
+      20757,
+      21442,
+      12048,
+      367664
+    ],
+    "destinations": [
+      {
+        "ref": "4372",
+        "primary": true
+      }
+    ],
+    "itinerary": {
+      "itineraryType": "ACTIVITY",
+      "skipTheLine": false,
+      "privateTour": true,
+      "duration": {
+        "fixedDurationInMinutes": 90
+      },
+      "activityInfo": {
+        "location": {
+          "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5IVeR0BYW+YuK7NwbJ5Uv9T3zEnIGgtE6Exre3/oYNK2"
+        },
+        "description": "You'll want to prepare to drive 25-30 mintues south of Santa Barbara for the best possible surfing experience. You'll meet your instructor at our surf van located at the beach where you'll get suited up in a wetsuit, grab a long board, and walk to the sand for beach instruction. After some brief teaching on surf safety, etiquette, and technique we'll rush into the ocean to catch you some waves! Your instructor will be coaching you and pushing you into waves to make the experience a memory that will last!\n\nOur lessons are private so you or your group will have their own instructor and personalized experience.\n\nThe majority of our lessons are for first timers which is why our lessons include: a surfboard, wetsuit, and 90 minutes of private instruction. Typically, lessons are taught at beaches with a sandy bottom and gentle waves just a few miles south of Santa Barbara. \n\nPlease note: You must know how to swim in order to surf with us. There is a high probability that you won't have to swim during your lesson but as a safety precaution, we ask that everyone surfing with us knows how to swim.\n\nPlease note that gratuities are not included in the cost of the lesson."
+      }
+    },
+    "productOptions": [
+      {
+        "productOptionCode": "TG6",
+        "description": "1:00 pm Surf Lesson",
+        "title": "1:00 pm Surf Lesson",
+        "languageGuides": [
+          {
+            "type": "GUIDE",
+            "language": "en",
+            "legacyGuide": "en/SERVICE_GUIDE"
+          }
+        ]
+      },
+      {
+        "productOptionCode": "TG4",
+        "description": "9:00 am Surf Lesson",
+        "title": "9:00 am Surf Lesson",
+        "languageGuides": [
+          {
+            "type": "GUIDE",
+            "language": "en",
+            "legacyGuide": "en/SERVICE_GUIDE"
+          }
+        ]
+      }
+    ],
+    "translationInfo": {
+      "containsMachineTranslatedText": false,
+      "translationSource": "ORIGINAL"
+    },
+    "supplier": {
+      "name": "Cal Coast Adventures",
+      "reference": "SUPPLIER-D/ESKbcxdW6Jsvw+E0E/wQ=="
+    },
+    "productUrl": "https://www.viator.com/tours/Santa-Barbara/Private-Two-Person-Surf-Lesson-in-Santa-Barbara/d4372-5753P14?mcid=42383&pid=P00290915&medium=api&api_version=2.0",
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1,
+              "count": 0
+            },
+            {
+              "rating": 2,
+              "count": 0
+            },
+            {
+              "rating": 3,
+              "count": 0
+            },
+            {
+              "rating": 4,
+              "count": 0
+            },
+            {
+              "rating": 5,
+              "count": 1
+            }
+          ],
+          "totalCount": 1,
+          "averageRating": 5
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1,
+              "count": 0
+            },
+            {
+              "rating": 2,
+              "count": 0
+            },
+            {
+              "rating": 3,
+              "count": 0
+            },
+            {
+              "rating": 4,
+              "count": 1
+            },
+            {
+              "rating": 5,
+              "count": 95
+            }
+          ],
+          "totalCount": 96,
+          "averageRating": 5
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1,
+          "count": 0
+        },
+        {
+          "rating": 2,
+          "count": 0
+        },
+        {
+          "rating": 3,
+          "count": 0
+        },
+        {
+          "rating": 4,
+          "count": 1
+        },
+        {
+          "rating": 5,
+          "count": 96
+        }
+      ],
+      "totalReviews": 97,
+      "combinedAverageRating": 4.989691
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a8/a9/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    }
+  }
+}
