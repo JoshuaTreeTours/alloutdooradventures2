@@ -923,12 +923,12 @@ const extractPlaybookRating = (product: RecordLike): NumericResult => {
 
 const extractPlaybookReviewCount = (product: RecordLike): NumericResult => {
   const prioritizedPaths = [
-    ["reviews", "totalReviews"],
     ["reviews", "operatorReviewCount"],
+    ["reviews", "totalReviews"],
     ["reviews", "count"],
     ["reviews", "reviewCount"],
-    ["operatorReviews", "totalReviews"],
     ["operatorReviews", "operatorReviewCount"],
+    ["operatorReviews", "totalReviews"],
     ["operatorReviews", "count"],
     ["operatorReviews", "reviewCount"],
     ["reviewSummary", "totalReviews"],
