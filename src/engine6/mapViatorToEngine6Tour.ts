@@ -43,6 +43,15 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
   "117409P1":
     "Head beyond the coast on a guided Santa Ynez Valley day trip focused on wine-country towns, vineyard landscapes, and relaxed tasting stops.",
 };
+
+const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
+  "415653P2": "Private Yosemite & Giant Sequoias Tour from San Francisco",
+};
+
+const ENGINE6_SEO_DESCRIPTION_OVERRIDES: Record<string, string> = {
+  "415653P2":
+    "Explore Yosemite National Park from San Francisco on a private tour featuring giant sequoias, Glacier Point views, waterfalls, granite cliffs, and Sierra scenery.",
+};
 const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "447486P2":
     "Santa Barbara Happy Hour on a Yacht is a relaxing 90-minute cruise along the Santa Barbara waterfront, offering coastal views, fresh ocean air, and a social golden-hour atmosphere. Departing near Santa Barbara Harbor, this boat tour trades city streets for open water, marina scenery, shoreline views, and the Santa Ynez Mountain backdrop. Guests can unwind onboard while the captain cruises calm coastal routes past the harbor, Stearns Wharf, East Beach, and the Santa Barbara coastline.",
@@ -554,12 +563,18 @@ export const mapViatorToEngine6Tour = (
   const description =
     descriptionOverride ??
     [enforcedOpeningSentence, descriptionBody].filter(Boolean).join(" ");
-  const metaDescription = buildEngine6SeoDescription({
+  const computedMetaDescription = buildEngine6SeoDescription({
     title,
     city,
     categoryLabel,
     sourceDescription: descriptionOverride ?? payload.extracted.seoDescription ?? description,
   });
+  const metaDescription =
+    ENGINE6_SEO_DESCRIPTION_OVERRIDES[payload.rawProductCode] ??
+    computedMetaDescription;
+  const seoTitle =
+    ENGINE6_SEO_TITLE_OVERRIDES[payload.rawProductCode] ??
+    buildEngine6SeoTitle({ title, city, state });
   const aggregateRating = normalizeEngine6AggregateRating(
     payload.extracted.aggregateRating
   );
@@ -612,7 +627,7 @@ export const mapViatorToEngine6Tour = (
   return {
     productCode: payload.rawProductCode,
     title,
-    seoTitle: buildEngine6SeoTitle({ title, city, state }),
+    seoTitle,
     seoDescription: metaDescription,
     description,
     metaDescription,

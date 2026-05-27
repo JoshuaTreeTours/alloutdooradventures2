@@ -27,6 +27,7 @@ import specimen354611p1Payload from "../../data/engine6/viator/354611P1.exact-pr
 import specimen5615689p4Payload from "../../data/engine6/viator/5615689P4.exact-product.json";
 import specimen36001Payload from "../../data/engine6/viator/36001P1.exact-product.json";
 import specimen36001p14Payload from "../../data/engine6/viator/36001P14.exact-product.json";
+import specimen415653p2Payload from "../../data/engine6/viator/415653P2.exact-product.json";
 import specimen152424p1Payload from "../../data/engine6/viator/152424P1.exact-product.json";
 import specimen23068p2Payload from "../../data/engine6/viator/23068P2.exact-product.json";
 import specimen2660sfowinPayload from "../../data/engine6/viator/2660SFOWIN.exact-product.json";
@@ -483,6 +484,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/San-Francisco/Big-Sur-Monterey-and-Carmel-Tour-From-San-Francisco/d651-36001P14",
     rawPayload: specimen36001p14Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "415653P2",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-Sequoias-Glacier-Point-and-More-5-Person-Epic-Adventure/d5265-415653P2",
+    rawPayload: specimen415653p2Payload as Record<string, unknown>,
   },
   {
     productCode: "152424P1",

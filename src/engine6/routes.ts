@@ -94,6 +94,9 @@ export const ENGINE6_YOSEMITE_PRODUCT_CODE = "36001P1";
 export const ENGINE6_YOSEMITE_ROUTE =
   "/destinations/california/san-francisco/tours/yosemite-in-a-day-tour-from-san-francisco-36001p1";
 export const ENGINE6_BIG_SUR_MONTEREY_CARMEL_PRODUCT_CODE = "36001P14";
+export const ENGINE6_YOSEMITE_SEQUOIAS_PRIVATE_PRODUCT_CODE = "415653P2";
+export const ENGINE6_YOSEMITE_SEQUOIAS_PRIVATE_ROUTE =
+  "/destinations/california/san-francisco/tours/yosemite-sequoias-glacier-point-and-more-5-person-epic-adventure-415653P2";
 export const ENGINE6_BIG_SUR_MONTEREY_CARMEL_ROUTE =
   "/destinations/california/san-francisco/tours/big-sur-monterey-and-carmel-tour-from-san-francisco";
 export const ENGINE6_MUIR_WOODS_SAUSALITO_PRODUCT_CODE = "152424P1";
@@ -519,6 +522,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_LAS_VEGAS_ARTS_DISTRICT_EBIKE_PRODUCT_CODE,
   ],
   [ENGINE6_YOSEMITE_ROUTE, ENGINE6_YOSEMITE_PRODUCT_CODE],
+  [
+    ENGINE6_YOSEMITE_SEQUOIAS_PRIVATE_ROUTE,
+    ENGINE6_YOSEMITE_SEQUOIAS_PRIVATE_PRODUCT_CODE,
+  ],
   [
     ENGINE6_BIG_SUR_MONTEREY_CARMEL_ROUTE,
     ENGINE6_BIG_SUR_MONTEREY_CARMEL_PRODUCT_CODE,
