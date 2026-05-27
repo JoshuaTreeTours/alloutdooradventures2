@@ -2,20 +2,20 @@
   "product": {
     "productCode": "415653P2",
     "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-Sequoias-Glacier-Point-and-More-5-Person-Epic-Adventure/d5265-415653P2",
-    "title": "Yosemite, Sequoias, Glacier Point and More - 5 Person Epic Adventure",
+    "title": "Yosemite National Park & Sequoias Private Tour from San Francisco",
     "description": {
-      "text": "Explore Yosemite National Park from San Francisco on a private tour featuring giant sequoias, Glacier Point views, waterfalls, granite cliffs, and Sierra scenery."
+      "text": "Discover the highlights of Yosemite Park in just one day with this hassle-free private tour from San Francisco. Travel by SUV or minivan and soak up the scenery on the drive to the park. At the park, see the top highlights such as the Mariposa Grove of Giant Sequoias, Glacier Point, Tunnel View, Bridalveil Falls, Valley View, and more."
     },
     "location": {
       "city": "San Francisco",
       "state": "California"
     },
-    "priceFrom": "$0.00",
+    "priceFrom": null,
     "reviews": {
-      "combinedAverageRating": 0,
-      "totalReviews": 0
+      "combinedAverageRating": 5,
+      "totalReviews": 64
     },
-    "duration": "Full day",
+    "duration": null,
     "media": {
       "images": [
         {
@@ -30,36 +30,39 @@
         }
       ]
     },
-    "highlights": [
-      "Private Yosemite day trip from San Francisco",
-      "View giant sequoias and Glacier Point scenery",
-      "See Yosemite waterfalls, granite cliffs, and Sierra landscapes"
-    ],
+    "highlights": [],
     "logistics": {
       "start": {
-        "description": "San Francisco meeting details provided after booking."
+        "description": "Pick-up at your San Francisco hotel."
       }
     },
     "itineraryItems": [
       {
-        "title": "Yosemite National Park",
-        "description": "Explore Yosemite Valley viewpoints, waterfalls, and granite cliffs.",
-        "duration": "Varies"
+        "title": "Tuolumne Grove of Giant Sequoias",
+        "duration": "1 hour 30 minutes",
+        "admission": {
+          "isIncluded": true
+        }
       },
       {
         "title": "Glacier Point",
-        "description": "Take in elevated valley and High Sierra views from Glacier Point when accessible.",
-        "duration": "Varies"
+        "duration": "15 minutes",
+        "admission": {
+          "isIncluded": true
+        }
       },
       {
-        "title": "Giant Sequoias",
-        "description": "Visit giant sequoia groves during the Yosemite experience.",
-        "duration": "Varies"
+        "title": "Bridalveil Fall",
+        "duration": "30 minutes",
+        "admission": {
+          "isIncluded": true
+        }
       }
     ],
-    "additionalInfo": [
-      "Private tour format.",
-      "Mobile ticket accepted."
+    "inclusions": [
+      "Bottled water",
+      "Soda/Pop",
+      "Admission Included"
     ]
   }
 }
