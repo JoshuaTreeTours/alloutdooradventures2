@@ -19,7 +19,13 @@ import CityToursIndexRoute from "../pages/destinations/states/tours/CityToursInd
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
-import { buildEngine6MetaDescription, buildMetaDescription } from "./seo";
+import {
+  buildEngine6MetaDescription,
+  buildEngine6SeoDescription,
+  buildEngine6SeoTitle,
+  buildMetaDescription,
+  isEngine6OperationalFiller,
+} from "./seo";
 import { buildEngine6CardSurfaces, toEngine6Card } from "./cards";
 import { ENGINE6_63657P1_CARD_IMAGE_URL, engine6SpecimenTour } from "./listing";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
@@ -487,6 +493,32 @@ describe("engine6 meta descriptions", () => {
 
     expect(metaDescription).not.toContain("<p>");
     expect(metaDescription.length).toBeLessThanOrEqual(160);
+  });
+
+
+  it("builds destination-first SEO description and strips operational filler", () => {
+    const metaDescription = buildEngine6SeoDescription({
+      title: "Golden Gate Sunset Cruise",
+      city: "San Francisco",
+      categoryLabel: "Boat Tour",
+      sourceDescription:
+        "Public transportation options are available nearby. Cruise the bay at sunset with skyline and bridge views plus a small-group guide.",
+    });
+
+    expect(metaDescription.toLowerCase()).toContain("san francisco boat tour");
+    expect(isEngine6OperationalFiller(metaDescription)).toBe(false);
+    expect(metaDescription.length).toBeLessThanOrEqual(160);
+  });
+
+  it("prevents duplicate city phrasing in SEO titles", () => {
+    const seoTitle = buildEngine6SeoTitle({
+      title: "Golden Gate Cruise in San Francisco in San Francisco",
+      city: "San Francisco",
+      state: "California",
+    });
+
+    expect(seoTitle.toLowerCase()).not.toContain("in san francisco in san francisco");
+    expect(seoTitle.length).toBeLessThanOrEqual(60);
   });
 });
 
