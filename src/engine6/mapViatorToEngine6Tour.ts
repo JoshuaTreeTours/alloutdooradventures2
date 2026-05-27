@@ -335,11 +335,6 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Take in open-water panoramas while brunch service and live entertainment continue throughout the sailing.",
     "Pass naval installations, Shelter Island marinas, and Cabrillo’s coastal point on the scenic return across San Diego Bay.",
   ],
-  "415653P2": [
-    "Walk beneath towering giant sequoias in Tuolumne Grove, where a forested trail introduces Yosemite’s high-elevation old-growth landscape.",
-    "Pause at Glacier Point for a sweeping overlook of Yosemite Valley’s granite walls, including distant views toward Half Dome and high-country ridgelines.",
-    "Stop near Bridalveil Fall to experience one of Yosemite’s signature waterfalls, where mist and polished valley granite mark the south-valley corridor.",
-  ],
 };
 
 const ENGINE6_ITINERARY_ITEM_OVERRIDES: Record<
@@ -441,8 +436,8 @@ const rewriteItineraryDescriptionToSingleSentence = (
 
   const fallbackLead =
     item.stopType === "pass-by"
-      ? "Continue along the route with clear views of key waterfront and city landmarks"
-      : "Settle into a guided sightseeing segment with broad local views and destination context";
+      ? `${title} is passed along the route`
+      : `${title} is visited`;
 
   return `${fallbackLead}${durationClause}${admissionClause}.`
     .replace(/\s+/g, " ")
@@ -529,15 +524,11 @@ export const mapViatorToEngine6Tour = (
       }))
     : payload.extracted.itinerary?.map((item, index) => ({
         ...item,
-        ...(item.description
-          ? {
-              description: rewriteItineraryDescriptionToSingleSentence({
-                productCode: payload.rawProductCode,
-                item,
-                index,
-              }),
-            }
-          : {}),
+        description: rewriteItineraryDescriptionToSingleSentence({
+          productCode: payload.rawProductCode,
+          item,
+          index,
+        }),
       })) ?? [];
   const itinerarySummaryText = payload.extracted.itinerarySummaryText ?? null;
   const faqs = payload.extracted.faqs ?? [];
