@@ -52,8 +52,64 @@
         }
       },
       {
+        "title": "Tunnel View",
+        "duration": "15 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
         "title": "Bridalveil Fall",
         "duration": "30 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Swinging Bridge Picnic Area Yosemite National Park CA",
+        "duration": "15 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Half Dome",
+        "duration": "15 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Ahwahnee Historic Building",
+        "duration": "15 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Yosemite Village Store",
+        "duration": "30 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Lower Yosemite Fall Trail",
+        "duration": "30 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "El Capitan",
+        "duration": "15 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Valley View",
+        "duration": "15 minutes",
         "admission": {
           "isIncluded": true
         }
