@@ -3,6 +3,18 @@ import { slugify } from "../utils/slugify";
 import type { Engine6CategorySlug, Engine6Tour } from "./types";
 
 const ENGINE6_META_DESCRIPTION_CLAMP_AT = 155;
+const ENGINE6_META_DESCRIPTION_MIN = 140;
+const ENGINE6_BLOCKED_META_PATTERNS = [
+  /public transportation options are available nearby/i,
+  /confirmation will be received/i,
+  /not wheelchair accessible/i,
+  /most travelers can participate/i,
+  /near public transportation/i,
+  /infants must sit on laps/i,
+  /service animals allowed/i,
+  /not recommended for travelers/i,
+  /this experience requires good weather/i,
+];
 
 export const ENGINE6_CATEGORY_LABELS: Record<Engine6CategorySlug, string> = {
   "off-road-tour": "Jeep Tour",
@@ -98,20 +110,66 @@ export const buildEngine6SeoTitle = ({
   city: string;
   state: string;
 }) => {
-  const normalizedTitle = title.trim();
-  const locationLabel = [city, state].filter(Boolean).join(", ");
+  const normalizedTitle = title.trim().replace(/\s+/g, " ");
+  const normalizedCity = city.trim();
+  const normalizedState = state.trim();
+  const locationLabel = [normalizedCity, normalizedState].filter(Boolean).join(", ");
 
   if (!locationLabel) {
     return normalizedTitle;
   }
 
-  const titleIncludesLocation = normalizedTitle
-    .toLowerCase()
-    .includes(city.trim().toLowerCase());
+  const compact = normalizedTitle
+    .replace(new RegExp(`\\bin\\s+${normalizedCity}\\s+in\\s+${normalizedCity}\\b`, "ig"), `in ${normalizedCity}`)
+    .replace(/\s+/g, " ")
+    .trim();
+  const titleIncludesCity = compact.toLowerCase().includes(normalizedCity.toLowerCase());
+  const candidate = titleIncludesCity ? compact : `${compact} | ${locationLabel}`;
+  return candidate.length <= 60 ? candidate : candidate.slice(0, 60).trim();
+};
 
-  return titleIncludesLocation
-    ? normalizedTitle
-    : `${normalizedTitle} - ${locationLabel}`;
+const removeBlockedOperationalFiller = (value: string) => {
+  let cleaned = value;
+  for (const pattern of ENGINE6_BLOCKED_META_PATTERNS) {
+    cleaned = cleaned.replace(pattern, "");
+  }
+  return cleaned.replace(/\s+/g, " ").replace(/\s+([,.;!?])/g, "$1").trim();
+};
+
+export const isEngine6OperationalFiller = (value: string) =>
+  ENGINE6_BLOCKED_META_PATTERNS.some(pattern => pattern.test(value));
+
+export const buildEngine6SeoDescription = ({
+  title,
+  city,
+  categoryLabel,
+  sourceDescription,
+}: {
+  title: string;
+  city: string;
+  categoryLabel?: string | null;
+  sourceDescription: string;
+}) => {
+  const cleanedSource = removeBlockedOperationalFiller(
+    buildMetaDescription(sourceDescription)
+  );
+  const activity = (categoryLabel ?? "guided tour").replace(/\s+tour$/i, " tour");
+  const destinationLead = `${city} ${activity}`.trim();
+  const lead = `${destinationLead}:`;
+  const body = cleanedSource
+    .replace(new RegExp(`^${city}[:,\\s-]+`, "i"), "")
+    .trim();
+  const seeded = `${lead} ${body}`.replace(/\s+/g, " ").trim();
+  const withIdentity = seeded.toLowerCase().includes(title.toLowerCase())
+    ? seeded
+    : `${seeded} ${title}.`;
+  const clamped = clampEngine6MetaDescription(withIdentity);
+  if (clamped.length >= ENGINE6_META_DESCRIPTION_MIN) {
+    return clamped;
+  }
+  return clampEngine6MetaDescription(
+    `${clamped} Includes scenic stops, local guide insight, and memorable destination highlights.`
+  );
 };
 
 export const buildEngine6CanonicalPath = ({

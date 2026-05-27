@@ -41,7 +41,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
     resolveEngine6OfferUrl(affiliateUrl) ??
     (affiliateUrl?.startsWith("/") ? affiliateUrl : undefined);
   const categoryLabel = formatEngine6CategoryLabel(tour.primaryCategory);
-  const description = tour.description || tour.metaDescription || tour.title;
+  const description = tour.seoDescription || tour.metaDescription || tour.description || tour.title;
   const schemaName = buildCityAwareSchemaName({
     title: tour.title,
     city: tour.city,
