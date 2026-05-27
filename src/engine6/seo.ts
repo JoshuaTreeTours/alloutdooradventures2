@@ -101,6 +101,48 @@ export const buildMetaDescription = (input: string | undefined | null) => {
 export const buildEngine6MetaDescription = (description: string) =>
   buildMetaDescription(description);
 
+const ENGINE6_TITLE_STOP_WORDS = new Set([
+  "tour",
+  "tours",
+  "experience",
+  "experiences",
+  "trip",
+  "trips",
+  "activity",
+  "activities",
+]);
+
+const toTitleCase = (value: string) =>
+  value
+    .split(/\s+/)
+    .filter(Boolean)
+    .map(word => word[0]?.toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
+
+const normalizeEngine6ReadableTitle = (rawTitle: string) => {
+  const compact = rawTitle.replace(/[_|]+/g, " ").replace(/\s+/g, " ").trim();
+  const withoutStitching = compact
+    .replace(/(\b\w+\b)\s+\1\b/gi, "$1")
+    .replace(/\b(in)\s+([a-z][a-z\s]+?)\s+\1\s+\2\b/gi, "in $2")
+    .replace(/\bjail\s+house\b/gi, "jailhouse")
+    .replace(/\bapp\s+guided\b/gi, "App-Guided")
+    .replace(/\bself\s+guided\b/gi, "Self-Guided")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const words = withoutStitching.split(" ");
+  if (words.length <= 2) {
+    return withoutStitching;
+  }
+
+  const tail = words[words.length - 1] ?? "";
+  if (tail.length <= 4 && !ENGINE6_TITLE_STOP_WORDS.has(tail.toLowerCase())) {
+    return words.slice(0, -1).join(" ");
+  }
+
+  return withoutStitching;
+};
+
 export const buildEngine6SeoTitle = ({
   title,
   city,
@@ -110,22 +152,26 @@ export const buildEngine6SeoTitle = ({
   city: string;
   state: string;
 }) => {
-  const normalizedTitle = title.trim().replace(/\s+/g, " ");
-  const normalizedCity = city.trim();
-  const normalizedState = state.trim();
-  const locationLabel = [normalizedCity, normalizedState].filter(Boolean).join(", ");
+  const normalizedTitle = normalizeEngine6ReadableTitle(title);
+  const normalizedCity = toTitleCase(city.trim());
+  const normalizedState = toTitleCase(state.trim());
+  const locationLabel = [normalizedCity, normalizedState]
+    .filter(Boolean)
+    .join(", ");
 
   if (!locationLabel) {
     return normalizedTitle;
   }
 
-  const compact = normalizedTitle
-    .replace(new RegExp(`\\bin\\s+${normalizedCity}\\s+in\\s+${normalizedCity}\\b`, "ig"), `in ${normalizedCity}`)
-    .replace(/\s+/g, " ")
-    .trim();
-  const titleIncludesCity = compact.toLowerCase().includes(normalizedCity.toLowerCase());
-  const candidate = titleIncludesCity ? compact : `${compact} | ${locationLabel}`;
-  return candidate.length <= 60 ? candidate : candidate.slice(0, 60).trim();
+  const titleIncludesCity = normalizedTitle
+    .toLowerCase()
+    .includes(normalizedCity.toLowerCase());
+
+  if (titleIncludesCity) {
+    return normalizedTitle;
+  }
+
+  return `${normalizedTitle} | ${normalizedCity}`;
 };
 
 const removeBlockedOperationalFiller = (value: string) => {

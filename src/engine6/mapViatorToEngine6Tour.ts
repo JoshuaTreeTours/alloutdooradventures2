@@ -45,6 +45,7 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
 };
 const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
   "415653P2": "Private Yosemite & Giant Sequoias Tour from San Francisco",
+  "304471P122": "Alcatraz App-Guided Experience with Ferry Access | San Francisco",
 };
 const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "415653P2":

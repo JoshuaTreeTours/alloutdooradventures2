@@ -510,6 +510,19 @@ describe("engine6 meta descriptions", () => {
     expect(metaDescription.length).toBeLessThanOrEqual(160);
   });
 
+
+
+  it("synthesizes readable non-truncated title for stitched supplier input", () => {
+    const seoTitle = buildEngine6SeoTitle({
+      title: "San Francisco Alcatraz App Guided Tour Cruise Jail House Tou",
+      city: "San Francisco",
+      state: "California",
+    });
+
+    expect(seoTitle).toBe("San Francisco Alcatraz App-Guided Tour Cruise jailhouse");
+    expect(seoTitle.endsWith("Tou")).toBe(false);
+  });
+
   it("prevents duplicate city phrasing in SEO titles", () => {
     const seoTitle = buildEngine6SeoTitle({
       title: "Golden Gate Cruise in San Francisco in San Francisco",
@@ -518,7 +531,7 @@ describe("engine6 meta descriptions", () => {
     });
 
     expect(seoTitle.toLowerCase()).not.toContain("in san francisco in san francisco");
-    expect(seoTitle.length).toBeLessThanOrEqual(60);
+    expect(seoTitle).toBe("Golden Gate Cruise in San Francisco");
   });
 });
 
