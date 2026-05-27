@@ -1,0 +1,75 @@
+{
+  "product": {
+    "productCode": "72999P3",
+    "productUrl": "https://www.viator.com/tours/San-Francisco/Skip-The-Bus-San-Francisco-By-Luxury-Minivan-Tour/d651-72999P3",
+    "title": "Skip The Bus: San Francisco By Luxury Van Tour",
+    "description": {
+      "text": "Avoid the crowds and discover San Francisco by luxury van on a guided city route designed for smaller groups. This experience covers major landmarks and neighborhood viewpoints with easier access than large-coach tours."
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California"
+    },
+    "duration": "4 hours",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/0d/92/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided small-group city tour by luxury van",
+      "Landmark-focused route with neighborhood viewpoints",
+      "Alternative to large bus sightseeing formats"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Departure from central San Francisco meeting point. Please arrive at least 15 minutes early."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Fisherman's Wharf",
+        "description": "Start near San Francisco's waterfront district.",
+        "duration": "Pass by"
+      },
+      {
+        "title": "Palace of Fine Arts",
+        "description": "Brief stop for architecture and photo opportunities.",
+        "duration": "10 minutes"
+      },
+      {
+        "title": "Golden Gate Bridge Viewpoint",
+        "description": "Scenic stop for bridge and bay views.",
+        "duration": "10 minutes"
+      },
+      {
+        "title": "Twin Peaks",
+        "description": "Panoramic city overlook depending on conditions.",
+        "duration": "10 minutes"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long is this tour?",
+        "answer": "The listed duration is approximately 4 hours."
+      },
+      {
+        "question": "Where is departure?",
+        "answer": "Departure is from a central San Francisco meeting point provided with booking details."
+      }
+    ],
+    "additionalInfo": [
+      "Mobile ticket accepted.",
+      "Small-group sightseeing format."
+    ]
+  }
+}
