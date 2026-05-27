@@ -42,6 +42,15 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
     "Sail Santa Barbara’s waterfront on a happy-hour yacht cruise with coastal views, relaxed onboard seating, and a social golden-hour atmosphere.",
   "117409P1":
     "Head beyond the coast on a guided Santa Ynez Valley day trip focused on wine-country towns, vineyard landscapes, and relaxed tasting stops.",
+  "415653P2":
+    "Explore Yosemite National Park from San Francisco on a private tour featuring giant sequoias, Glacier Point views, waterfalls, granite cliffs, and Sierra scenery.",
+};
+const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
+  "415653P2": "Private Yosemite & Giant Sequoias Tour from San Francisco",
+};
+const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
+  "415653P2":
+    "Explore Yosemite National Park from San Francisco on a private tour featuring giant sequoias, Glacier Point views, waterfalls, granite cliffs, and Sierra scenery.",
 };
 const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "447486P2":
@@ -560,6 +569,8 @@ export const mapViatorToEngine6Tour = (
     categoryLabel,
     sourceDescription: descriptionOverride ?? payload.extracted.seoDescription ?? description,
   });
+  const governedMetaDescription =
+    ENGINE6_META_DESCRIPTION_OVERRIDES[payload.rawProductCode] ?? metaDescription;
   const aggregateRating = normalizeEngine6AggregateRating(
     payload.extracted.aggregateRating
   );
@@ -612,10 +623,12 @@ export const mapViatorToEngine6Tour = (
   return {
     productCode: payload.rawProductCode,
     title,
-    seoTitle: buildEngine6SeoTitle({ title, city, state }),
-    seoDescription: metaDescription,
+    seoTitle:
+      ENGINE6_SEO_TITLE_OVERRIDES[payload.rawProductCode] ??
+      buildEngine6SeoTitle({ title, city, state }),
+    seoDescription: governedMetaDescription,
     description,
-    metaDescription,
+    metaDescription: governedMetaDescription,
     city,
     state,
     resolvedImageUrl: strictResolvedHero.url,

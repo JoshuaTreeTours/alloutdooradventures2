@@ -29,6 +29,7 @@ import specimen36001Payload from "../../data/engine6/viator/36001P1.exact-produc
 import specimen36001p14Payload from "../../data/engine6/viator/36001P14.exact-product.json";
 import specimen152424p1Payload from "../../data/engine6/viator/152424P1.exact-product.json";
 import specimen23068p2Payload from "../../data/engine6/viator/23068P2.exact-product.json";
+import specimen415653p2Payload from "../../data/engine6/viator/415653P2.exact-product.json";
 import specimen2660sfowinPayload from "../../data/engine6/viator/2660SFOWIN.exact-product.json";
 import specimen100569Payload from "../../data/engine6/viator/100569P5.exact-product.json";
 import specimen411138Payload from "../../data/engine6/viator/411138P3.exact-product.json";
@@ -495,6 +496,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/San-Francisco/San-Francisco-Love-Tour/d651-23068P2",
     rawPayload: specimen23068p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "415653P2",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-Sequoias-Glacier-Point-and-More-5-Person-Epic-Adventure/d5265-415653P2",
+    rawPayload: specimen415653p2Payload as Record<string, unknown>,
   },
   {
     productCode: "2660SFOWIN",

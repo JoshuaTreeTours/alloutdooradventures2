@@ -1,0 +1,65 @@
+{
+  "product": {
+    "productCode": "415653P2",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-Sequoias-Glacier-Point-and-More-5-Person-Epic-Adventure/d5265-415653P2",
+    "title": "Yosemite, Sequoias, Glacier Point and More - 5 Person Epic Adventure",
+    "description": {
+      "text": "Explore Yosemite National Park from San Francisco on a private tour featuring giant sequoias, Glacier Point views, waterfalls, granite cliffs, and Sierra scenery."
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California"
+    },
+    "priceFrom": "$0.00",
+    "reviews": {
+      "combinedAverageRating": 0,
+      "totalReviews": 0
+    },
+    "duration": "Full day",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/24/ed/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Yosemite day trip from San Francisco",
+      "View giant sequoias and Glacier Point scenery",
+      "See Yosemite waterfalls, granite cliffs, and Sierra landscapes"
+    ],
+    "logistics": {
+      "start": {
+        "description": "San Francisco meeting details provided after booking."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Yosemite National Park",
+        "description": "Explore Yosemite Valley viewpoints, waterfalls, and granite cliffs.",
+        "duration": "Varies"
+      },
+      {
+        "title": "Glacier Point",
+        "description": "Take in elevated valley and High Sierra views from Glacier Point when accessible.",
+        "duration": "Varies"
+      },
+      {
+        "title": "Giant Sequoias",
+        "description": "Visit giant sequoia groves during the Yosemite experience.",
+        "duration": "Varies"
+      }
+    ],
+    "additionalInfo": [
+      "Private tour format.",
+      "Mobile ticket accepted."
+    ]
+  }
+}

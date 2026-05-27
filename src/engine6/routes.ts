@@ -102,6 +102,9 @@ export const ENGINE6_MUIR_WOODS_SAUSALITO_ROUTE =
 export const ENGINE6_SAN_FRANCISCO_LOVE_TOUR_PRODUCT_CODE = "23068P2";
 export const ENGINE6_SAN_FRANCISCO_LOVE_TOUR_ROUTE =
   "/destinations/california/san-francisco/tours/san-francisco-love-tour";
+export const ENGINE6_YOSEMITE_SEQUOIAS_GLACIER_POINT_PRODUCT_CODE = "415653P2";
+export const ENGINE6_YOSEMITE_SEQUOIAS_GLACIER_POINT_ROUTE =
+  "/destinations/california/san-francisco/tours/yosemite-sequoias-glacier-point-and-more-5-person-epic-adventure-415653P2";
 export const ENGINE6_NAPA_SONOMA_WINE_COUNTRY_PRODUCT_CODE = "2660SFOWIN";
 export const ENGINE6_NAPA_SONOMA_WINE_COUNTRY_ROUTE =
   "/destinations/california/san-francisco/tours/napa-and-sonoma-wine-country-tour";
@@ -530,6 +533,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SAN_FRANCISCO_LOVE_TOUR_ROUTE,
     ENGINE6_SAN_FRANCISCO_LOVE_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YOSEMITE_SEQUOIAS_GLACIER_POINT_ROUTE,
+    ENGINE6_YOSEMITE_SEQUOIAS_GLACIER_POINT_PRODUCT_CODE,
   ],
   [
     ENGINE6_NAPA_SONOMA_WINE_COUNTRY_ROUTE,
