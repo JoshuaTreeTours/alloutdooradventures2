@@ -278,7 +278,44 @@ export default function CityTourDetailRoute({
               ? extracted.overviewText
               : null,
           itinerary: Array.isArray(extracted.itinerary)
-            ? (extracted.itinerary as Engine6Tour["itinerary"])
+            ? (extracted.itinerary
+                .map(item => {
+                  if (!item || typeof item !== "object") return null;
+                  const record = item as Record<string, unknown>;
+                  const title =
+                    typeof record.title === "string" && record.title.trim().length > 0
+                      ? record.title.trim()
+                      : "This stop";
+                  const duration =
+                    typeof record.duration === "string" &&
+                    record.duration.trim().length > 0
+                      ? record.duration.trim()
+                      : null;
+                  const stopType =
+                    record.stopType === "pass-by" ? "pass-by" : "stop";
+                  const sourceDescription =
+                    typeof record.description === "string"
+                      ? record.description.trim()
+                      : "";
+                  const oneSentenceDescription =
+                    sourceDescription.length > 0
+                      ? sourceDescription
+                      : `${title} is ${
+                          stopType === "pass-by" ? "passed along the route" : "visited"
+                        }${duration ? ` over ${duration}` : ""}.`;
+
+                  return {
+                    ...record,
+                    title,
+                    ...(duration ? { duration } : {}),
+                    stopType,
+                    description: oneSentenceDescription
+                      .replace(/\s+/g, " ")
+                      .replace(/\.\./g, ".")
+                      .trim(),
+                  };
+                })
+                .filter((item): item is Engine6Tour["itinerary"][number] => Boolean(item)) as Engine6Tour["itinerary"])
             : null,
           itinerarySummaryText:
             typeof extracted.itinerarySummaryText === "string"
