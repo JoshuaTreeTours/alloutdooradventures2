@@ -32,6 +32,7 @@ import specimen23068p2Payload from "../../data/engine6/viator/23068P2.exact-prod
 import specimen415653p2Payload from "../../data/engine6/viator/415653P2.exact-product.json";
 import specimen2660sfowinPayload from "../../data/engine6/viator/2660SFOWIN.exact-product.json";
 import specimen72999p3Payload from "../../data/engine6/viator/72999P3.exact-product.json";
+import specimen304471p122Payload from "../../data/engine6/viator/304471P122.exact-product.json";
 import specimen100569Payload from "../../data/engine6/viator/100569P5.exact-product.json";
 import specimen411138Payload from "../../data/engine6/viator/411138P3.exact-product.json";
 import specimen53474Payload from "../../data/engine6/viator/53474P8.exact-product.json";
@@ -509,6 +510,15 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/San-Francisco/Skip-The-Bus-San-Francisco-By-Luxury-Minivan-Tour/d651-72999P3",
     rawPayload: specimen72999p3Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "304471P122",
+    publicUrl:
+      "https://www.viator.com/tours/San-Francisco/San-Francisco-Alcatraz-App-Guided-Tour-Cruise-Jail-House-Tour/d651-304471P122",
+    rawPayload: specimen304471p122Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
   },
   {
     productCode: "2660SFOWIN",

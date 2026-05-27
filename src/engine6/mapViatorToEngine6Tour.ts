@@ -211,11 +211,6 @@ const buildAuthoritativeOverview = ({
     .map(stop => stop.title.replace(/\.$/, "").trim())
     .filter(Boolean)
     .join(", ");
-  const sourceSnippet = cleanedSourceOverview
-    .split(/(?<=[.!?])\s+/)
-    .slice(0, 2)
-    .join(" ")
-    .trim();
 
   const opening = toSentence(
     `Set in ${normalizedLocation}, ${title} is a ${activityLabel} built around a guide-led experience and practical local context`
@@ -245,7 +240,7 @@ const buildAuthoritativeOverview = ({
     `Overall, this ${city} experience balances clear guidance, real destination context, and a relaxed pace suited to small groups`
   );
 
-  const parts = [opening, middleA, logistics, sourceSnippet, closer].filter(
+  const parts = [opening, middleA, logistics, closer].filter(
     Boolean
   );
   const withLimit = () => {
@@ -392,57 +387,16 @@ const rewriteItineraryDescriptionToSingleSentence = (
   const title = item.title?.trim() || "This stop";
   const duration = item.duration?.trim();
   const admission = item.admissionNote?.trim();
-  const sourceDescription = item.description?.trim() ?? "";
-  const cleanedSource = sourceDescription
-    .replace(/\s+/g, " ")
-    .replace(/\([^)]*\)/g, " ")
-    .replace(/\b(you will|you'll|we will|we'll)\b/gi, "")
-    .trim();
-  const sourceSentence =
-    cleanedSource
-      .split(/[.!?]/)
-      .map(part => part.trim())
-      .find(Boolean) ?? "";
-  const normalizedTitle = title.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-  const normalizedSentence = sourceSentence
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim();
-  const repeatsTitle =
-    normalizedTitle.length > 0 &&
-    normalizedSentence.length > 0 &&
-    (normalizedSentence === normalizedTitle ||
-      normalizedSentence.includes(normalizedTitle));
-  const polishedSourceSentence = sourceSentence
-    .replace(/^(enjoy|experience|discover|visit|explore|see)\s+/i, "")
-    .replace(/^take in\s+/i, "")
-    .replace(/^check out\s+/i, "")
-    .replace(/^pass(?: by)?\s+/i, "")
-    .replace(/^you(?:'ll| will)\s+/i, "")
-    .replace(/^[a-z]/, m => m.toUpperCase())
-    .replace(/[;:,]\s*$/, "")
-    .trim();
+  const actionLead = item.stopType === "pass-by" ? "Pass" : "Stop";
+  const durationClause = duration ? ` for about ${duration}` : "";
+  const admissionClause =
+    admission && admission.toLowerCase() !== "admission included"
+      ? `; ${admission}`
+      : "";
 
-  const durationClause = duration ? ` over ${duration}` : "";
-  const admissionClause = admission ? `; ${admission}` : "";
-
-  if (polishedSourceSentence && !repeatsTitle) {
-    return `${polishedSourceSentence}${admissionClause}.`
-      .replace(/\s+/g, " ")
-      .replace(/\s+([;,.])/g, "$1")
-      .replace(/\.\./g, ".")
-      .trim();
-  }
-
-  const fallbackLead =
-    item.stopType === "pass-by"
-      ? `${title} is passed along the route`
-      : `${title} is visited`;
-
-  return `${fallbackLead}${durationClause}${admissionClause}.`
+  return `${actionLead} at ${title}${durationClause}${admissionClause}.`
     .replace(/\s+/g, " ")
     .replace(/\s+([;,.])/g, "$1")
-    .replace(/\.\./g, ".")
     .trim();
 };
 
@@ -538,11 +492,6 @@ export const mapViatorToEngine6Tour = (
   const primaryCategory =
     payload.extracted.primaryCategory ?? categories[0] ?? null;
   const categoryLabel = formatEngine6CategoryLabel(primaryCategory);
-  const rawDescription =
-    payload.extracted.overviewText ??
-    payload.extracted.seoDescription ??
-    `Explore ${title} with local guides in ${city}, ${state}.`;
-  const cleanedDescription = cleanEngine6Description(rawDescription);
   const openingSentence = buildEngine6OpeningSentence({
     city,
     title,
@@ -552,19 +501,7 @@ export const mapViatorToEngine6Tour = (
   const enforcedOpeningSentence =
     ENGINE6_OPENING_SENTENCE_OVERRIDES[payload.rawProductCode] ??
     openingSentence;
-  const descriptionBody = cleanedDescription.replace(/\s+/g, " ").trim();
   const descriptionOverride = ENGINE6_DESCRIPTION_OVERRIDES[payload.rawProductCode];
-  const description =
-    descriptionOverride ??
-    [enforcedOpeningSentence, descriptionBody].filter(Boolean).join(" ");
-  const metaDescription = buildEngine6SeoDescription({
-    title,
-    city,
-    categoryLabel,
-    sourceDescription: descriptionOverride ?? payload.extracted.seoDescription ?? description,
-  });
-  const governedMetaDescription =
-    ENGINE6_META_DESCRIPTION_OVERRIDES[payload.rawProductCode] ?? metaDescription;
   const aggregateRating = normalizeEngine6AggregateRating(
     payload.extracted.aggregateRating
   );
@@ -601,8 +538,18 @@ export const mapViatorToEngine6Tour = (
     state,
     sourceOverview: sourceOverviewText,
   });
-  const normalizedOverview =
-    overriddenOverview || sourceOverviewText || synthesizedOverview;
+  const normalizedOverview = overriddenOverview || synthesizedOverview;
+  const description =
+    descriptionOverride ??
+    [enforcedOpeningSentence, normalizedOverview].filter(Boolean).join(" ");
+  const metaDescription = buildEngine6SeoDescription({
+    title,
+    city,
+    categoryLabel,
+    sourceDescription: descriptionOverride ?? normalizedOverview,
+  });
+  const governedMetaDescription =
+    ENGINE6_META_DESCRIPTION_OVERRIDES[payload.rawProductCode] ?? metaDescription;
 
 
   if (payload.rawProductCode === "335698P13") {

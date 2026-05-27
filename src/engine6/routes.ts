@@ -108,6 +108,9 @@ export const ENGINE6_YOSEMITE_SEQUOIAS_GLACIER_POINT_ROUTE =
 export const ENGINE6_SAN_FRANCISCO_SKIP_THE_BUS_PRODUCT_CODE = "72999P3";
 export const ENGINE6_SAN_FRANCISCO_SKIP_THE_BUS_ROUTE =
   "/destinations/california/san-francisco/tours/skip-the-bus-san-francisco-by-luxury-van-tour";
+export const ENGINE6_SAN_FRANCISCO_ALCATRAZ_APP_GUIDED_PRODUCT_CODE = "304471P122";
+export const ENGINE6_SAN_FRANCISCO_ALCATRAZ_APP_GUIDED_ROUTE =
+  "/destinations/california/san-francisco/tours/san-francisco-alcatraz-app-guided-tour-cruise-and-jail-house";
 export const ENGINE6_NAPA_SONOMA_WINE_COUNTRY_PRODUCT_CODE = "2660SFOWIN";
 export const ENGINE6_NAPA_SONOMA_WINE_COUNTRY_ROUTE =
   "/destinations/california/san-francisco/tours/napa-and-sonoma-wine-country-tour";
@@ -544,6 +547,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SAN_FRANCISCO_SKIP_THE_BUS_ROUTE,
     ENGINE6_SAN_FRANCISCO_SKIP_THE_BUS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_FRANCISCO_ALCATRAZ_APP_GUIDED_ROUTE,
+    ENGINE6_SAN_FRANCISCO_ALCATRAZ_APP_GUIDED_PRODUCT_CODE,
   ],
   [
     ENGINE6_NAPA_SONOMA_WINE_COUNTRY_ROUTE,

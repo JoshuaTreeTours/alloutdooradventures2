@@ -312,10 +312,7 @@ export default function CityTourDetailRoute({
             typeof extracted.meetingPointText === "string"
               ? extracted.meetingPointText
               : null,
-          overviewText:
-            typeof extracted.overviewText === "string"
-              ? extracted.overviewText
-              : null,
+          overviewText: null,
           itinerary: Array.isArray(extracted.itinerary)
             ? (extracted.itinerary
                 .map(item => {
@@ -332,14 +329,11 @@ export default function CityTourDetailRoute({
                       : null;
                   const stopType =
                     record.stopType === "pass-by" ? "pass-by" : "stop";
-                  const sourceDescription =
-                    typeof record.description === "string"
-                      ? record.description.trim()
-                      : "";
-                  const oneSentenceDescription =
-                    sourceDescription.length > 0
-                      ? sourceDescription
-                      : synthesizeItinerarySentence({ title, duration, stopType });
+                  const oneSentenceDescription = synthesizeItinerarySentence({
+                    title,
+                    duration,
+                    stopType,
+                  });
 
                   return {
                     ...record,
