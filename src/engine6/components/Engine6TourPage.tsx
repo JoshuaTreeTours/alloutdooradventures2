@@ -316,6 +316,22 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
   }, []);
   const showRelatedTours = hydratedRelatedTours.length >= 2;
   const isExternalBookingUrl = /^https?:\/\//i.test(tour.bookingUrl);
+  const isSupportingGalleryTestRoute =
+    tour.canonicalPath ===
+    "/destinations/california/santa-barbara/tours/santa-barbara-happy-hour-on-a-yacht";
+  const supportingGalleryImageUrls = isSupportingGalleryTestRoute
+    ? tour.supportingGalleryImageUrls.slice(0, 4)
+    : [];
+  const supportingGalleryScrollerRef = useRef<HTMLDivElement | null>(null);
+  const scrollSupportingGalleryByDirection = useCallback((direction: "prev" | "next") => {
+    const scroller = supportingGalleryScrollerRef.current;
+    if (!scroller) return;
+    const scrollAmount = Math.max(240, Math.round(scroller.clientWidth * 0.9));
+    scroller.scrollBy({
+      left: direction === "next" ? scrollAmount : -scrollAmount,
+      behavior: "smooth",
+    });
+  }, []);
   useStructuredData(schemaGraph);
 
   return (
@@ -449,6 +465,44 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
       </section>
 
       <div className="mx-auto max-w-6xl px-6 py-10">
+        {supportingGalleryImageUrls.length > 0 ? (
+          <ContentSection title="More photos from this tour">
+            <div className="flex items-center justify-end gap-2">
+              <button
+                type="button"
+                aria-label="Scroll gallery left"
+                onClick={() => scrollSupportingGalleryByDirection("prev")}
+                className="rounded-full border border-green-200 bg-white px-3 py-2 text-sm text-green-900 hover:bg-green-50"
+              >
+                ←
+              </button>
+              <button
+                type="button"
+                aria-label="Scroll gallery right"
+                onClick={() => scrollSupportingGalleryByDirection("next")}
+                className="rounded-full border border-green-200 bg-white px-3 py-2 text-sm text-green-900 hover:bg-green-50"
+              >
+                →
+              </button>
+            </div>
+            <div
+              ref={supportingGalleryScrollerRef}
+              className="mt-4 flex snap-x gap-4 overflow-x-auto pb-2"
+              data-testid="engine6-supporting-gallery"
+            >
+              {supportingGalleryImageUrls.map((imageUrl, index) => (
+                <img
+                  key={imageUrl}
+                  src={imageUrl}
+                  loading="lazy"
+                  alt={`${tour.title} supporting photo ${index + 1}`}
+                  className="h-56 w-[85%] min-w-[85%] snap-start rounded-2xl object-cover shadow-sm sm:w-[48%] sm:min-w-[48%] lg:w-[32%] lg:min-w-[32%]"
+                />
+              ))}
+            </div>
+          </ContentSection>
+        ) : null}
+
         {tour.overviewText ? (
           <ContentSection title="Overview">
             <div className="space-y-4 text-base leading-7 text-slate-700">
