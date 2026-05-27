@@ -103,6 +103,45 @@ type CityTourDetailRouteProps = {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
+  const synthesizeItinerarySentence = (args: {
+    title: string;
+    duration: string | null;
+    stopType: "stop" | "pass-by";
+  }) => {
+    const { title, duration, stopType } = args;
+    const normalizedTitle = title.toLowerCase();
+    const durationClause = duration ? ` in about ${duration}` : "";
+
+    if (/tunnel view/i.test(normalizedTitle)) {
+      return "Tunnel View frames Yosemite Valley with broad granite and waterfall vistas from a classic overlook.";
+    }
+    if (/glacier point/i.test(normalizedTitle)) {
+      return "Glacier Point overlooks Yosemite Valley from a high granite promontory with wide alpine panoramas.";
+    }
+    if (/el capitan/i.test(normalizedTitle)) {
+      return "El Capitan towers above Yosemite Valley as a sheer granite wall central to the park’s climbing heritage.";
+    }
+    if (/half dome/i.test(normalizedTitle)) {
+      return "Half Dome stands out as Yosemite’s most recognizable granite summit above the valley skyline.";
+    }
+    if (/bridalveil/i.test(normalizedTitle) || /waterfall|fall trail/i.test(normalizedTitle)) {
+      return `${title} highlights Yosemite’s glacially carved valley and cascading water features${durationClause}.`;
+    }
+    if (/valley view/i.test(normalizedTitle)) {
+      return "Valley View captures a broad river-level perspective of Yosemite’s granite cliffs and forested valley floor.";
+    }
+    if (/sequoia|grove/i.test(normalizedTitle)) {
+      return `${title} features giant sequoia habitat and classic Sierra Nevada forest terrain${durationClause}.`;
+    }
+    if (/village|store|historic building|picnic area/i.test(normalizedTitle)) {
+      return `${title} adds local park context with a practical stop inside Yosemite Valley${durationClause}.`;
+    }
+
+    return stopType === "pass-by"
+      ? `${title} is viewed along the route with destination context${durationClause}.`
+      : `${title} provides a focused Yosemite stop with landscape context${durationClause}.`;
+  };
+
   const [strictBridgeApiTour, setStrictBridgeApiTour] =
     useState<Engine4ViatorApiTour>();
   const [strictBridgeSource, setStrictBridgeSource] =
@@ -118,6 +157,11 @@ export default function CityTourDetailRoute({
           reviewCount: number | null;
           durationText: string | null;
           meetingPointText: string | null;
+          overviewText: string | null;
+          itinerary: Engine6Tour["itinerary"] | null;
+          itinerarySummaryText: string | null;
+          included: string[] | null;
+          requirements: string[] | null;
         }
       >
     >({});
@@ -268,6 +312,64 @@ export default function CityTourDetailRoute({
             typeof extracted.meetingPointText === "string"
               ? extracted.meetingPointText
               : null,
+          overviewText:
+            typeof extracted.overviewText === "string"
+              ? extracted.overviewText
+              : null,
+          itinerary: Array.isArray(extracted.itinerary)
+            ? (extracted.itinerary
+                .map(item => {
+                  if (!item || typeof item !== "object") return null;
+                  const record = item as Record<string, unknown>;
+                  const title =
+                    typeof record.title === "string" && record.title.trim().length > 0
+                      ? record.title.trim()
+                      : "This stop";
+                  const duration =
+                    typeof record.duration === "string" &&
+                    record.duration.trim().length > 0
+                      ? record.duration.trim()
+                      : null;
+                  const stopType =
+                    record.stopType === "pass-by" ? "pass-by" : "stop";
+                  const sourceDescription =
+                    typeof record.description === "string"
+                      ? record.description.trim()
+                      : "";
+                  const oneSentenceDescription =
+                    sourceDescription.length > 0
+                      ? sourceDescription
+                      : synthesizeItinerarySentence({ title, duration, stopType });
+
+                  return {
+                    ...record,
+                    title,
+                    ...(duration ? { duration } : {}),
+                    stopType,
+                    description: oneSentenceDescription
+                      .replace(/\s+/g, " ")
+                      .replace(/\.\./g, ".")
+                      .trim(),
+                  };
+                })
+                .filter((item): item is Engine6Tour["itinerary"][number] => Boolean(item)) as Engine6Tour["itinerary"])
+            : null,
+          itinerarySummaryText:
+            typeof extracted.itinerarySummaryText === "string"
+              ? extracted.itinerarySummaryText
+              : null,
+          included: Array.isArray(extracted.included)
+            ? extracted.included.filter(
+                (item): item is string =>
+                  typeof item === "string" && item.trim().length > 0
+              )
+            : null,
+          requirements: Array.isArray(extracted.requirements)
+            ? extracted.requirements.filter(
+                (item): item is string =>
+                  typeof item === "string" && item.trim().length > 0
+              )
+            : null,
         };
       })
       .then(dynamicFields => {
@@ -308,6 +410,12 @@ export default function CityTourDetailRoute({
           durationText: liveDynamic.durationText ?? nativeEngine6Tour.durationText,
           meetingPointText:
             liveDynamic.meetingPointText ?? nativeEngine6Tour.meetingPointText,
+          overviewText: liveDynamic.overviewText ?? nativeEngine6Tour.overviewText,
+          itinerary: liveDynamic.itinerary ?? nativeEngine6Tour.itinerary,
+          itinerarySummaryText:
+            liveDynamic.itinerarySummaryText ?? nativeEngine6Tour.itinerarySummaryText,
+          included: liveDynamic.included ?? nativeEngine6Tour.included,
+          requirements: liveDynamic.requirements ?? nativeEngine6Tour.requirements,
         }
       : nativeEngine6Tour;
 

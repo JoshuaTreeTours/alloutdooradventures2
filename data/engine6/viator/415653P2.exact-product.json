@@ -1,0 +1,124 @@
+{
+  "product": {
+    "productCode": "415653P2",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-Sequoias-Glacier-Point-and-More-5-Person-Epic-Adventure/d5265-415653P2",
+    "title": "Yosemite National Park & Sequoias Private Tour from San Francisco",
+    "description": {
+      "text": "Discover the highlights of Yosemite Park in just one day with this hassle-free private tour from San Francisco. Travel by SUV or minivan and soak up the scenery on the drive to the park. At the park, see the top highlights such as the Mariposa Grove of Giant Sequoias, Glacier Point, Tunnel View, Bridalveil Falls, Valley View, and more."
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California"
+    },
+    "priceFrom": null,
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 64
+    },
+    "duration": null,
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/24/ed/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [],
+    "logistics": {
+      "start": {
+        "description": "Pick-up at your San Francisco hotel."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Tuolumne Grove of Giant Sequoias",
+        "duration": "1 hour 30 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Glacier Point",
+        "duration": "15 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Tunnel View",
+        "duration": "15 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Bridalveil Fall",
+        "duration": "30 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Swinging Bridge Picnic Area Yosemite National Park CA",
+        "duration": "15 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Half Dome",
+        "duration": "15 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Ahwahnee Historic Building",
+        "duration": "15 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Yosemite Village Store",
+        "duration": "30 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Lower Yosemite Fall Trail",
+        "duration": "30 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "El Capitan",
+        "duration": "15 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      },
+      {
+        "title": "Valley View",
+        "duration": "15 minutes",
+        "admission": {
+          "isIncluded": true
+        }
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Soda/Pop",
+      "Admission Included"
+    ]
+  }
+}

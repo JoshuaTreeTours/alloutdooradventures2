@@ -43,6 +43,13 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
   "117409P1":
     "Head beyond the coast on a guided Santa Ynez Valley day trip focused on wine-country towns, vineyard landscapes, and relaxed tasting stops.",
 };
+const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
+  "415653P2": "Private Yosemite & Giant Sequoias Tour from San Francisco",
+};
+const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
+  "415653P2":
+    "Explore Yosemite National Park from San Francisco on a private tour featuring giant sequoias, Glacier Point views, waterfalls, granite cliffs, and Sierra scenery.",
+};
 const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "447486P2":
     "Santa Barbara Happy Hour on a Yacht is a relaxing 90-minute cruise along the Santa Barbara waterfront, offering coastal views, fresh ocean air, and a social golden-hour atmosphere. Departing near Santa Barbara Harbor, this boat tour trades city streets for open water, marina scenery, shoreline views, and the Santa Ynez Mountain backdrop. Guests can unwind onboard while the captain cruises calm coastal routes past the harbor, Stearns Wharf, East Beach, and the Santa Barbara coastline.",
@@ -429,8 +436,8 @@ const rewriteItineraryDescriptionToSingleSentence = (
 
   const fallbackLead =
     item.stopType === "pass-by"
-      ? "Continue along the route with clear views of key waterfront and city landmarks"
-      : "Settle into a guided sightseeing segment with broad local views and destination context";
+      ? `${title} is passed along the route`
+      : `${title} is visited`;
 
   return `${fallbackLead}${durationClause}${admissionClause}.`
     .replace(/\s+/g, " ")
@@ -517,15 +524,11 @@ export const mapViatorToEngine6Tour = (
       }))
     : payload.extracted.itinerary?.map((item, index) => ({
         ...item,
-        ...(item.description
-          ? {
-              description: rewriteItineraryDescriptionToSingleSentence({
-                productCode: payload.rawProductCode,
-                item,
-                index,
-              }),
-            }
-          : {}),
+        description: rewriteItineraryDescriptionToSingleSentence({
+          productCode: payload.rawProductCode,
+          item,
+          index,
+        }),
       })) ?? [];
   const itinerarySummaryText = payload.extracted.itinerarySummaryText ?? null;
   const faqs = payload.extracted.faqs ?? [];
@@ -560,6 +563,8 @@ export const mapViatorToEngine6Tour = (
     categoryLabel,
     sourceDescription: descriptionOverride ?? payload.extracted.seoDescription ?? description,
   });
+  const governedMetaDescription =
+    ENGINE6_META_DESCRIPTION_OVERRIDES[payload.rawProductCode] ?? metaDescription;
   const aggregateRating = normalizeEngine6AggregateRating(
     payload.extracted.aggregateRating
   );
@@ -612,10 +617,12 @@ export const mapViatorToEngine6Tour = (
   return {
     productCode: payload.rawProductCode,
     title,
-    seoTitle: buildEngine6SeoTitle({ title, city, state }),
-    seoDescription: metaDescription,
+    seoTitle:
+      ENGINE6_SEO_TITLE_OVERRIDES[payload.rawProductCode] ??
+      buildEngine6SeoTitle({ title, city, state }),
+    seoDescription: governedMetaDescription,
     description,
-    metaDescription,
+    metaDescription: governedMetaDescription,
     city,
     state,
     resolvedImageUrl: strictResolvedHero.url,
