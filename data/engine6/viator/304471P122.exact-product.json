@@ -1,0 +1,49 @@
+{
+  "product": {
+    "productCode": "304471P122",
+    "productUrl": "https://www.viator.com/tours/San-Francisco/San-Francisco-Alcatraz-App-Guided-Tour-Cruise-Jail-House-Tour/d651-304471P122",
+    "title": "San Francisco Alcatraz App Guided Tour Cruise Jail House Tour",
+    "description": {
+      "text": "App-guided Alcatraz experience from San Francisco with round-trip island ferry access and in-app narration focused on the former prison site."
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California"
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/48/81/4f/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "App-guided Alcatraz tour format",
+      "Round-trip ferry access to Alcatraz Island",
+      "Focus on jailhouse history and site interpretation"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Departure information is provided after booking for ferry access from San Francisco to Alcatraz Island."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Alcatraz Island",
+        "description": "Travel by ferry to Alcatraz Island and use the app-guided format to explore prison history on site.",
+        "duration": "Varies"
+      }
+    ],
+    "additionalInfo": [
+      "Mobile ticket accepted.",
+      "Self-guided app format."
+    ]
+  }
+}
