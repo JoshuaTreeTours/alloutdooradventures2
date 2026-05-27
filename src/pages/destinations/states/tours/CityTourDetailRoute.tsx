@@ -118,6 +118,11 @@ export default function CityTourDetailRoute({
           reviewCount: number | null;
           durationText: string | null;
           meetingPointText: string | null;
+          overviewText: string | null;
+          itinerary: Engine6Tour["itinerary"] | null;
+          itinerarySummaryText: string | null;
+          included: string[] | null;
+          requirements: string[] | null;
         }
       >
     >({});
@@ -268,6 +273,29 @@ export default function CityTourDetailRoute({
             typeof extracted.meetingPointText === "string"
               ? extracted.meetingPointText
               : null,
+          overviewText:
+            typeof extracted.overviewText === "string"
+              ? extracted.overviewText
+              : null,
+          itinerary: Array.isArray(extracted.itinerary)
+            ? (extracted.itinerary as Engine6Tour["itinerary"])
+            : null,
+          itinerarySummaryText:
+            typeof extracted.itinerarySummaryText === "string"
+              ? extracted.itinerarySummaryText
+              : null,
+          included: Array.isArray(extracted.included)
+            ? extracted.included.filter(
+                (item): item is string =>
+                  typeof item === "string" && item.trim().length > 0
+              )
+            : null,
+          requirements: Array.isArray(extracted.requirements)
+            ? extracted.requirements.filter(
+                (item): item is string =>
+                  typeof item === "string" && item.trim().length > 0
+              )
+            : null,
         };
       })
       .then(dynamicFields => {
@@ -308,6 +336,12 @@ export default function CityTourDetailRoute({
           durationText: liveDynamic.durationText ?? nativeEngine6Tour.durationText,
           meetingPointText:
             liveDynamic.meetingPointText ?? nativeEngine6Tour.meetingPointText,
+          overviewText: liveDynamic.overviewText ?? nativeEngine6Tour.overviewText,
+          itinerary: liveDynamic.itinerary ?? nativeEngine6Tour.itinerary,
+          itinerarySummaryText:
+            liveDynamic.itinerarySummaryText ?? nativeEngine6Tour.itinerarySummaryText,
+          included: liveDynamic.included ?? nativeEngine6Tour.included,
+          requirements: liveDynamic.requirements ?? nativeEngine6Tour.requirements,
         }
       : nativeEngine6Tour;
 
