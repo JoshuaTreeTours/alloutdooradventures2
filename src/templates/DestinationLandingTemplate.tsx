@@ -189,34 +189,22 @@ export default function DestinationLandingTemplate({
                 ))}
               </div>
             ) : (
-              <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {cityCards.map(
-                  ({ city, tourCount, heroImage: cityHeroImage }) => (
-                    <Link
-                      key={city.slug}
-                      href={`/destinations/${state.slug}/${city.slug}/tours`}
-                    >
-                      <a className="overflow-hidden rounded-xl border border-[#2f4a2f]/15 bg-[#f6f1e8] text-sm transition hover:border-[#2f4a2f]/35 hover:bg-white">
-                        {state.slug === "mexico" && cityHeroImage ? (
-                          <Image
-                            src={cityHeroImage}
-                            fallbackSrc={cityHeroImage}
-                            alt={`${city.name} tours`}
-                            className="h-24 w-full object-cover"
-                          />
-                        ) : null}
-                        <div className="px-4 py-3">
-                          <p className="font-semibold text-[#1f2a1f]">
-                            {city.name}
-                          </p>
-                          <p className="mt-1 text-xs text-[#405040]">
-                            {tourCount} {tourCount === 1 ? "tour" : "tours"}
-                          </p>
-                        </div>
-                      </a>
-                    </Link>
-                  )
-                )}
+              <div className="mt-6 flex flex-wrap gap-3">
+                {cityCards.map(({ city, tourCount }) => (
+                  <Link
+                    key={city.slug}
+                    href={`/destinations/${state.slug}/${city.slug}/tours`}
+                  >
+                    <a className="inline-flex min-h-[68px] min-w-[152px] flex-col justify-center rounded-2xl border border-[#2f4a2f]/20 bg-white px-4 py-2 text-left text-[#2f4a2f] shadow-sm transition hover:-translate-y-0.5 hover:border-[#2f4a2f]/35 hover:bg-[#f0f4ee]">
+                      <span className="text-sm font-semibold leading-tight">
+                        {city.name}
+                      </span>
+                      <span className="mt-1 text-xs text-[#405040]">
+                        {tourCount} {tourCount === 1 ? "tour" : "tours"}
+                      </span>
+                    </a>
+                  </Link>
+                ))}
               </div>
             )
           ) : (
