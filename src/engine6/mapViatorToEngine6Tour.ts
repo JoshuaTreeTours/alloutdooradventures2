@@ -168,10 +168,12 @@ const pickSupportingGalleryImages = ({
   rawProduct: Record<string, unknown> | null;
   heroUrl: string;
 }) => {
-  if (!rawProduct || !isRecord(rawProduct.product)) return [];
-  const images = Array.isArray(rawProduct.product.images)
-    ? rawProduct.product.images
-    : [];
+  if (!rawProduct) return [];
+  const productNode = isRecord(rawProduct.product)
+    ? rawProduct.product
+    : rawProduct;
+  const mediaNode = isRecord(productNode.media) ? productNode.media : null;
+  const images = mediaNode && Array.isArray(mediaNode.images) ? mediaNode.images : [];
 
   const urls = images
     .map(image => {
