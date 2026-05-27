@@ -167,11 +167,23 @@ const pickSupportingGalleryImages = ({
 }: {
   rawProduct: Record<string, unknown> | null;
   heroUrl: string;
+  expectedProductCode: string;
 }) => {
   if (!rawProduct) return [];
   const productNode = isRecord(rawProduct.product)
     ? rawProduct.product
     : rawProduct;
+
+  const nodeProductCode =
+    typeof productNode.productCode === "string" ? productNode.productCode.trim() : "";
+  if (!nodeProductCode || nodeProductCode.toUpperCase() !== expectedProductCode.toUpperCase()) {
+    return [];
+  }
+  const nodeProductUrl =
+    typeof productNode.productUrl === "string" ? productNode.productUrl : "";
+  if (nodeProductUrl && !nodeProductUrl.toUpperCase().includes(expectedProductCode.toUpperCase())) {
+    return [];
+  }
   const mediaNode = isRecord(productNode.media) ? productNode.media : null;
   const images = mediaNode && Array.isArray(mediaNode.images) ? mediaNode.images : [];
 
@@ -672,6 +684,7 @@ export const mapViatorToEngine6Tour = (
     supportingGalleryImageUrls: pickSupportingGalleryImages({
       rawProduct: payload.rawProduct,
       heroUrl: strictResolvedHero.url,
+      expectedProductCode: payload.rawProductCode,
     }),
     resolvedHero: strictResolvedHero,
     priceAmount: payload.extracted.priceAmount,

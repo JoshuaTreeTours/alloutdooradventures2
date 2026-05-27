@@ -322,6 +322,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
   const supportingGalleryImageUrls = isSupportingGalleryTestRoute
     ? tour.supportingGalleryImageUrls.slice(0, 4)
     : [];
+  const showSupportingGallery = supportingGalleryImageUrls.length >= 2;
   const supportingGalleryScrollerRef = useRef<HTMLDivElement | null>(null);
   const scrollSupportingGalleryByDirection = useCallback((direction: "prev" | "next") => {
     const scroller = supportingGalleryScrollerRef.current;
@@ -465,7 +466,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
       </section>
 
       <div className="mx-auto max-w-6xl px-6 py-10">
-        {supportingGalleryImageUrls.length > 0 ? (
+        {showSupportingGallery ? (
           <ContentSection title="More photos from this tour">
             <div className="flex items-center justify-end gap-2">
               <button
