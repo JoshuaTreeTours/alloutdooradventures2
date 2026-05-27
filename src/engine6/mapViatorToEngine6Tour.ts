@@ -103,6 +103,8 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
       .replace(/\s+/g, " ")
       .trim();
   },
+  "304471P122": () =>
+    "San Francisco Alcatraz App Guided Tour Cruise Jail House Tour is an app-guided Alcatraz experience that includes ferry transportation from San Francisco and on-island exploration focused on prison history and site context.",
   "163975P1": () =>
     "Santa Barbara Trolley Tour is a relaxed city overview that pairs coastal scenery with historic landmarks in a comfortable, open-air style ride. As the trolley rolls through town, you pass waterfront icons like Stearns Wharf and East Beach, continue by the Andrée Clark Bird Refuge and Butterfly Beach, and take in the city’s Spanish-influenced architecture around the courthouse and El Presidio district. The route also includes a dedicated stop at Old Mission Santa Barbara, where you have about 10 minutes to look around before rejoining the tour. Along the way, your guide adds practical local context on neighborhoods, history, and daily life, so the experience feels more personal than a standard transfer. It’s an easy way to understand Santa Barbara’s scenic, coastal, and historic character early in your visit.",
   "447486P2": () =>
