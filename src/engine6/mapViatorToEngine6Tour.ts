@@ -9,7 +9,6 @@ import {
   cleanEngine6Description,
   formatEngine6CategoryLabel,
 } from "./seo";
-import { rewriteEngine6ItineraryDescription } from "./itineraryGovernance";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 
 const ENGINE6_OPENING_PATTERNS = [
@@ -346,6 +345,98 @@ const ENGINE6_ITINERARY_ITEM_OVERRIDES: Record<
   string,
   Array<{ title: string; description: string; stopType: "pass-by" | "stop" }>
 > = {
+  "3454YE3D": [
+    {
+      title: "San Francisco departure",
+      description:
+        "Leave San Francisco for Yosemite with an eastbound Bay Bridge crossing and Sierra-bound drive.",
+      stopType: "stop",
+    },
+    {
+      title: "Bay Bridge crossing",
+      description:
+        "Cross the Bay Bridge for views toward Alcatraz Island, Angel Island, and the wider San Francisco Bay.",
+      stopType: "pass-by",
+    },
+    {
+      title: "Yosemite National Park entrance",
+      description:
+        "Arrive at Yosemite National Park after the drive from San Francisco and begin the park portion of the trip.",
+      stopType: "stop",
+    },
+    {
+      title: "Tuolumne Grove",
+      description:
+        "Walk the Tuolumne Grove route to see mature giant sequoias in a quieter Yosemite forest setting.",
+      stopType: "stop",
+    },
+    {
+      title: "Yosemite Valley orientation",
+      description:
+        "Travel through Yosemite Valley for an overview of its glacier-shaped cliffs, meadows, and central landmarks.",
+      stopType: "pass-by",
+    },
+    {
+      title: "Yosemite Village free time",
+      description:
+        "Use free time in Yosemite Village for independent walking, food, photos, or nearby valley exploration.",
+      stopType: "stop",
+    },
+    {
+      title: "Yosemite Falls",
+      description:
+        "Visit the Yosemite Falls area during valley time to see one of the park’s signature waterfall landmarks.",
+      stopType: "stop",
+    },
+    {
+      title: "Ansel Adams Gallery",
+      description:
+        "Browse the Ansel Adams Gallery for photography-focused Yosemite history and park-inspired artwork.",
+      stopType: "stop",
+    },
+    {
+      title: "Yosemite campsite",
+      description:
+        "Settle into the Yosemite campsite as camping equipment is distributed and the overnight base is introduced.",
+      stopType: "stop",
+    },
+    {
+      title: "Yosemite High Country",
+      description:
+        "Spend the second day in Yosemite High Country with alpine scenery shaped by lakes, granite, and open meadows.",
+      stopType: "stop",
+    },
+    {
+      title: "High-country hiking",
+      description:
+        "Follow high-country hiking options selected around group pace, seasonal access, and mountain conditions.",
+      stopType: "stop",
+    },
+    {
+      title: "Yosemite Valley return",
+      description:
+        "Return to Yosemite Valley on the final day for another block of independent park time.",
+      stopType: "stop",
+    },
+    {
+      title: "Valley activity time",
+      description:
+        "Choose a valley activity such as a waterfall walk, bicycle rental, museum visit, or Merced River break.",
+      stopType: "stop",
+    },
+    {
+      title: "El Capitan Meadow",
+      description:
+        "Stop at El Capitan Meadow to view the granite wall and watch climbers when conditions allow.",
+      stopType: "stop",
+    },
+    {
+      title: "Return to San Francisco",
+      description:
+        "Travel back from Yosemite to the San Francisco Hilton after the final day in the park.",
+      stopType: "stop",
+    },
+  ],
   "447486P2": [
     {
       title: "Santa Barbara Harbor departure",
@@ -378,6 +469,78 @@ const ENGINE6_ITINERARY_ITEM_OVERRIDES: Record<
       stopType: "stop",
     },
   ],
+};
+
+const rewriteItineraryDescriptionToSingleSentence = (args: {
+  productCode: string;
+  item: NonNullable<Engine6ApiResponse["extracted"]["itinerary"]>[number];
+  index: number;
+}) => {
+  const override =
+    ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES[args.productCode]?.[args.index];
+  if (override) {
+    return override;
+  }
+
+  const { item } = args;
+  const title = item.title?.trim() || "This stop";
+  const duration = item.duration?.trim();
+  const admission = item.admissionNote?.trim();
+  const sourceDescription = item.description?.trim() ?? "";
+  const cleanedSource = sourceDescription
+    .replace(/\s+/g, " ")
+    .replace(/\([^)]*\)/g, " ")
+    .replace(/\b(you will|you'll|we will|we'll)\b/gi, "")
+    .trim();
+  const sourceSentence =
+    cleanedSource
+      .split(/[.!?]/)
+      .map(part => part.trim())
+      .find(Boolean) ?? "";
+  const normalizedTitle = title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+  const normalizedSentence = sourceSentence
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+  const repeatsTitle =
+    normalizedTitle.length > 0 &&
+    normalizedSentence.length > 0 &&
+    (normalizedSentence === normalizedTitle ||
+      normalizedSentence.includes(normalizedTitle));
+  const polishedSourceSentence = sourceSentence
+    .replace(/^(enjoy|experience|discover|visit|explore|see)\s+/i, "")
+    .replace(/^take in\s+/i, "")
+    .replace(/^check out\s+/i, "")
+    .replace(/^pass(?: by)?\s+/i, "")
+    .replace(/^you(?:'ll| will)\s+/i, "")
+    .replace(/^[a-z]/, m => m.toUpperCase())
+    .replace(/[;:,]\s*$/, "")
+    .trim();
+
+  const durationClause = duration ? ` over ${duration}` : "";
+  const admissionClause = admission ? `; ${admission}` : "";
+
+  if (polishedSourceSentence && !repeatsTitle) {
+    return `${polishedSourceSentence}${admissionClause}.`
+      .replace(/\s+/g, " ")
+      .replace(/\s+([;,.])/g, "$1")
+      .replace(/\.\./g, ".")
+      .trim();
+  }
+
+  const fallbackLead =
+    item.stopType === "pass-by"
+      ? `${title} is passed along the route`
+      : `${title} is visited`;
+
+  return `${fallbackLead}${durationClause}${admissionClause}.`
+    .replace(/\s+/g, " ")
+    .replace(/\s+([;,.])/g, "$1")
+    .replace(/\.\./g, ".")
+    .trim();
 };
 
 export const mapViatorToEngine6Tour = (
@@ -458,7 +621,8 @@ export const mapViatorToEngine6Tour = (
       }))
     : (payload.extracted.itinerary?.map((item, index) => ({
         ...item,
-        description: rewriteEngine6ItineraryDescription({
+        description: rewriteItineraryDescriptionToSingleSentence({
+          productCode: payload.rawProductCode,
           item,
           index,
         }),

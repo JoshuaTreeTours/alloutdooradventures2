@@ -18,6 +18,7 @@ import ToursLanding from "../pages/tours/ToursLanding";
 import CityToursIndexRoute from "../pages/destinations/states/tours/CityToursIndexRoute";
 import CityTourDetailRoute from "../pages/destinations/states/tours/CityTourDetailRoute";
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
+import { validateEngine6GovernedItinerary } from "./itineraryGovernance";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import {
@@ -1908,6 +1909,31 @@ describe("engine6 listing surfaces", () => {
     expect(cardSurfaces.search[0]?.href).toBe(
       ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_ROUTE
     );
+
+    expect(tour!.itinerary).toHaveLength(15);
+    expect(tour!.itinerary.map(item => item.description)).toEqual([
+      "Leave San Francisco for Yosemite with an eastbound Bay Bridge crossing and Sierra-bound drive.",
+      "Cross the Bay Bridge for views toward Alcatraz Island, Angel Island, and the wider San Francisco Bay.",
+      "Arrive at Yosemite National Park after the drive from San Francisco and begin the park portion of the trip.",
+      "Walk the Tuolumne Grove route to see mature giant sequoias in a quieter Yosemite forest setting.",
+      "Travel through Yosemite Valley for an overview of its glacier-shaped cliffs, meadows, and central landmarks.",
+      "Use free time in Yosemite Village for independent walking, food, photos, or nearby valley exploration.",
+      "Visit the Yosemite Falls area during valley time to see one of the park’s signature waterfall landmarks.",
+      "Browse the Ansel Adams Gallery for photography-focused Yosemite history and park-inspired artwork.",
+      "Settle into the Yosemite campsite as camping equipment is distributed and the overnight base is introduced.",
+      "Spend the second day in Yosemite High Country with alpine scenery shaped by lakes, granite, and open meadows.",
+      "Follow high-country hiking options selected around group pace, seasonal access, and mountain conditions.",
+      "Return to Yosemite Valley on the final day for another block of independent park time.",
+      "Choose a valley activity such as a waterfall walk, bicycle rental, museum visit, or Merced River break.",
+      "Stop at El Capitan Meadow to view the granite wall and watch climbers when conditions allow.",
+      "Travel back from Yosemite to the San Francisco Hilton after the final day in the park.",
+    ]);
+    expect(
+      validateEngine6GovernedItinerary({
+        renderedItems: tour!.itinerary,
+        overviewText: tour!.overviewText,
+      })
+    ).toEqual([]);
 
     const detailHtml = renderToString(
       <CityTourDetailRoute

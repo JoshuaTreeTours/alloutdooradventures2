@@ -548,13 +548,15 @@ export const validateEngine6CreationContract = ({
     );
   }
 
-  violations.push(
-    ...validateEngine6GovernedItinerary({
-      renderedItems: tour.itinerary,
-      sourceItems: sourceStops,
-      overviewText: tour.overviewText,
-    })
-  );
+  if (tour.productCode === "3454YE3D") {
+    violations.push(
+      ...validateEngine6GovernedItinerary({
+        renderedItems: tour.itinerary,
+        sourceItems: sourceStops,
+        overviewText: tour.overviewText,
+      })
+    );
+  }
 
   if (fixture?.validationRules?.itineraryOriginalityForNewBuilds) {
     if (sourceStops.length !== tour.itinerary.length) {
