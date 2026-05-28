@@ -115,6 +115,10 @@ export const ENGINE6_SAN_FRANCISCO_ALCATRAZ_APP_ROUTE =
 export const ENGINE6_SAN_FRANCISCO_PRIVATE_CITY_TOUR_PRODUCT_CODE = "333016P3";
 export const ENGINE6_SAN_FRANCISCO_PRIVATE_CITY_TOUR_ROUTE =
   "/destinations/california/san-francisco/tours/private-city-tour-of-san-francisco";
+export const ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_PRODUCT_CODE =
+  "3454YE3D";
+export const ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_ROUTE =
+  "/destinations/california/san-francisco/tours/3-day-yosemite-camping-adventure-from-san-francisco";
 export const ENGINE6_NAPA_SONOMA_WINE_COUNTRY_ROUTE =
   "/destinations/california/san-francisco/tours/napa-and-sonoma-wine-country-tour";
 export const ENGINE6_LOS_ANGELES_PRIVATE_GUIDED_FULL_DAY_PRODUCT_CODE =
@@ -562,6 +566,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SAN_FRANCISCO_PRIVATE_CITY_TOUR_ROUTE,
     ENGINE6_SAN_FRANCISCO_PRIVATE_CITY_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_ROUTE,
+    ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_PRODUCT_CODE,
   ],
   [
     ENGINE6_LOS_ANGELES_PRIVATE_GUIDED_FULL_DAY_ROUTE,
