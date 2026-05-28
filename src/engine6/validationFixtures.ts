@@ -33,6 +33,7 @@ import specimen415653p2Payload from "../../data/engine6/viator/415653P2.exact-pr
 import specimen2660sfowinPayload from "../../data/engine6/viator/2660SFOWIN.exact-product.json";
 import specimen72999p3Payload from "../../data/engine6/viator/72999P3.exact-product.json";
 import specimen304471p122Payload from "../../data/engine6/viator/304471P122.exact-product.json";
+import specimen333016p3Payload from "../../data/engine6/viator/333016P3.exact-product.json";
 import specimen100569Payload from "../../data/engine6/viator/100569P5.exact-product.json";
 import specimen411138Payload from "../../data/engine6/viator/411138P3.exact-product.json";
 import specimen53474Payload from "../../data/engine6/viator/53474P8.exact-product.json";

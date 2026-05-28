@@ -112,6 +112,9 @@ export const ENGINE6_NAPA_SONOMA_WINE_COUNTRY_PRODUCT_CODE = "2660SFOWIN";
 export const ENGINE6_SAN_FRANCISCO_ALCATRAZ_APP_PRODUCT_CODE = "304471P122";
 export const ENGINE6_SAN_FRANCISCO_ALCATRAZ_APP_ROUTE =
   "/destinations/california/san-francisco/tours/san-francisco-alcatraz-app-guided-tour-cruise-jail-house-tour";
+export const ENGINE6_SAN_FRANCISCO_PRIVATE_CITY_TOUR_PRODUCT_CODE = "333016P3";
+export const ENGINE6_SAN_FRANCISCO_PRIVATE_CITY_TOUR_ROUTE =
+  "/destinations/california/san-francisco/tours/private-city-tour-of-san-francisco";
 export const ENGINE6_NAPA_SONOMA_WINE_COUNTRY_ROUTE =
   "/destinations/california/san-francisco/tours/napa-and-sonoma-wine-country-tour";
 export const ENGINE6_LOS_ANGELES_PRIVATE_GUIDED_FULL_DAY_PRODUCT_CODE =
