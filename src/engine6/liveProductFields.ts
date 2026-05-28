@@ -60,6 +60,22 @@ export const mergeEngine6LiveFieldsIntoTour = (
   };
 };
 
+export const mergeEngine6LiveCommercialFieldsIntoCardEntry = <
+  T extends { tour: Tour }
+>(
+  entry: T,
+  liveFields?: Partial<Engine6LiveProductFields>
+): T => {
+  if (entry.tour.engine !== "engine6" || !entry.tour.productCode || !liveFields) {
+    return entry;
+  }
+
+  return {
+    ...entry,
+    tour: mergeEngine6LiveFieldsIntoTour(entry.tour, liveFields),
+  };
+};
+
 
 export const fetchEngine6LiveProductFields = async (
   productCode: string,
