@@ -16,7 +16,9 @@ import Engine6TourPage, {
 } from "./components/Engine6TourPage";
 import ToursLanding from "../pages/tours/ToursLanding";
 import CityToursIndexRoute from "../pages/destinations/states/tours/CityToursIndexRoute";
+import CityTourDetailRoute from "../pages/destinations/states/tours/CityTourDetailRoute";
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
+import { validateEngine6GovernedItinerary } from "./itineraryGovernance";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import {
@@ -60,6 +62,7 @@ import {
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
+  ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_ROUTE,
   ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS,
 } from "./routes";
 import {
@@ -391,11 +394,14 @@ describe("engine6 extractor", () => {
             },
           ],
         },
-        itinerarySummary: "Generic summary should not be primary when days exist.",
+        itinerarySummary:
+          "Generic summary should not be primary when days exist.",
       },
     });
 
-    expect(extracted.diagnostics.itineraryFieldPath).toBe("product.itinerary.days");
+    expect(extracted.diagnostics.itineraryFieldPath).toBe(
+      "product.itinerary.days"
+    );
     expect(extracted.diagnostics.itineraryStructuredSourceUsed).toBe(true);
     expect(extracted.diagnostics.itineraryFallbackSummaryUsed).toBe(false);
     expect(extracted.extracted.itinerary.map(item => item.title)).toEqual([
@@ -495,7 +501,6 @@ describe("engine6 meta descriptions", () => {
     expect(metaDescription.length).toBeLessThanOrEqual(160);
   });
 
-
   it("builds destination-first SEO description and strips operational filler", () => {
     const metaDescription = buildEngine6SeoDescription({
       title: "Golden Gate Sunset Cruise",
@@ -510,8 +515,6 @@ describe("engine6 meta descriptions", () => {
     expect(metaDescription.length).toBeLessThanOrEqual(160);
   });
 
-
-
   it("synthesizes readable non-truncated title for stitched supplier input", () => {
     const seoTitle = buildEngine6SeoTitle({
       title: "San Francisco Alcatraz App Guided Tour Cruise Jail House Tou",
@@ -519,7 +522,9 @@ describe("engine6 meta descriptions", () => {
       state: "California",
     });
 
-    expect(seoTitle).toBe("San Francisco Alcatraz App-Guided Tour Cruise jailhouse");
+    expect(seoTitle).toBe(
+      "San Francisco Alcatraz App-Guided Tour Cruise jailhouse"
+    );
     expect(seoTitle.endsWith("Tou")).toBe(false);
   });
 
@@ -530,7 +535,9 @@ describe("engine6 meta descriptions", () => {
       state: "California",
     });
 
-    expect(seoTitle.toLowerCase()).not.toContain("in san francisco in san francisco");
+    expect(seoTitle.toLowerCase()).not.toContain(
+      "in san francisco in san francisco"
+    );
     expect(seoTitle).toBe("Golden Gate Cruise in San Francisco");
   });
 });
@@ -585,7 +592,9 @@ describe("engine6 mapping/cards/page", () => {
 
     try {
       for (const route of targetRoutes) {
-        const tour = engine6ResolvedTours.find(entry => entry.canonicalPath === route);
+        const tour = engine6ResolvedTours.find(
+          entry => entry.canonicalPath === route
+        );
         expect(tour, `Expected engine6 tour for route ${route}`).toBeDefined();
 
         const html = renderToString(<Engine6TourPage tour={tour!} />);
@@ -886,7 +895,6 @@ describe("engine6 listing surfaces", () => {
     );
   });
 
-
   it("adds 76145P2, 5559561P1, and 118958P8 to Florida and Fort Lauderdale listing sources", () => {
     const floridaTours = getToursByState("florida");
     const fortLauderdaleTours = getToursByCity("florida", "fort-lauderdale");
@@ -905,22 +913,19 @@ describe("engine6 listing surfaces", () => {
       {
         productCode: "76145P2",
         route: ENGINE6_FORT_LAUDERDALE_EVERGLADES_AIRBOAT_ROUTE,
-        hero:
-          "https://dynamic-media.tacdn.com/media/photo-o/2f/15/16/f1/caption.jpg?w=1100&h=800&s=1",
+        hero: "https://dynamic-media.tacdn.com/media/photo-o/2f/15/16/f1/caption.jpg?w=1100&h=800&s=1",
         cta: "https://www.viator.com/tours/Fort-Lauderdale/Authentic-Private-Everglades-Airboat-Tour/d660-76145P2?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD",
       },
       {
         productCode: "5559561P1",
         route: ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_ROUTE,
-        hero:
-          "https://dynamic-media.tacdn.com/media/photo-o/2e/d1/7c/59/caption.jpg?w=700&h=500&s=1",
+        hero: "https://dynamic-media.tacdn.com/media/photo-o/2e/d1/7c/59/caption.jpg?w=700&h=500&s=1",
         cta: "https://www.viator.com/tours/Fort-Lauderdale/JetCar-Fort-Lauderdale-Rental/d660-5559561P1?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD",
       },
       {
         productCode: "118958P8",
         route: ENGINE6_FORT_LAUDERDALE_BIG_GAME_FISHING_ROUTE,
-        hero:
-          "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/cd/26/caption.jpg?w=1100&h=800&s=1",
+        hero: "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/cd/26/caption.jpg?w=1100&h=800&s=1",
         cta: "https://www.viator.com/tours/Fort-Lauderdale/4-Hour-Shared-Big-Game-Fishing/d660-118958P8?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD",
       },
     ] as const;
@@ -948,9 +953,9 @@ describe("engine6 listing surfaces", () => {
       const webpage = graph.find(node => node["@type"] === "WebPage");
       const trip = graph.find(node => node["@type"] === "TouristTrip");
       const product = graph.find(node => node["@type"] === "Product");
-      const breadcrumb = graph.find(node => node["@type"] === "BreadcrumbList") as
-        | Record<string, unknown>
-        | undefined;
+      const breadcrumb = graph.find(
+        node => node["@type"] === "BreadcrumbList"
+      ) as Record<string, unknown> | undefined;
       expect((webpage as { image?: string } | undefined)?.image).toBe(
         expectation.hero
       );
@@ -1198,7 +1203,9 @@ describe("engine6 listing surfaces", () => {
     expect(engine6Entry?.tour.heroImage).toBe(
       engine6Entry?.tour.primaryImageUrl
     );
-    expect(engine6Entry?.tour.heroImage).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
+    expect(engine6Entry?.tour.heroImage).toBe(
+      ENGINE6_447234P3_EXPECTED_HERO_URL
+    );
     expect(engine6Entry?.tour.bookingUrl).toContain(
       "/tours/San-Diego/Day-Trip-to-Joshua-Tree-National-Park-from-San-Diego/d736-447234P3"
     );
@@ -1210,20 +1217,22 @@ describe("engine6 listing surfaces", () => {
     );
     expect(detailTour?.heroImageUrl).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
     expect(detailTour?.diagnostics.captionPrecedenceApplied).toBe(false);
-    expect(detailTour?.diagnostics.candidateFamilyIdentityDeterminable).toBe(true);
+    expect(detailTour?.diagnostics.candidateFamilyIdentityDeterminable).toBe(
+      true
+    );
     expect(detailTour?.diagnostics.heroSurfaceParity).toEqual({
       page: true,
       card: true,
       schema: true,
     });
-    expect(detailTour?.diagnostics.heroSourceType).not.toBe("approved-placeholder");
+    expect(detailTour?.diagnostics.heroSourceType).not.toBe(
+      "approved-placeholder"
+    );
     expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(false);
     const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
     expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
     expect(detailHtml).toContain("From $995");
-    expect(detailHtml).toContain(
-      `src="${ENGINE6_447234P3_EXPECTED_HERO_URL}"`
-    );
+    expect(detailHtml).toContain(`src="${ENGINE6_447234P3_EXPECTED_HERO_URL}"`);
     expect(detailHtml).toContain(
       `href=\"/destinations/california/san-diego/tours\"`
     );
@@ -1347,9 +1356,7 @@ describe("engine6 listing surfaces", () => {
     expect(detailHtml).toContain(
       "1500 A S Palm Canyon Dr, Palm Springs, CA 92264, USA"
     );
-    expect(detailHtml).toContain(
-      `src="${ENGINE6_327321P1_EXPECTED_HERO_URL}"`
-    );
+    expect(detailHtml).toContain(`src="${ENGINE6_327321P1_EXPECTED_HERO_URL}"`);
     expect(detailHtml).toContain(
       `href=\"/destinations/california/palm-springs/tours\"`
     );
@@ -1439,47 +1446,56 @@ describe("engine6 listing surfaces", () => {
     expect(detailTour?.itinerary.length).toBeGreaterThan(0);
   });
 
-
   it("keeps 335698P13 review counts aligned across listing, detail hero, and schema aggregate rating", () => {
     const unifiedTours = getToursByCityUnified("california", "joshua-tree");
-    const entry = unifiedTours.find(item => item.tour.productCode === "335698P13");
+    const entry = unifiedTours.find(
+      item => item.tour.productCode === "335698P13"
+    );
 
     expect(entry).toBeDefined();
     expect(entry?.tour.badges?.rating).toBe(5);
     expect(entry?.tour.badges?.reviewCount).toBe(86);
 
-    const detailTour = engine6ResolvedTours.find(tour => tour.productCode === "335698P13");
+    const detailTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "335698P13"
+    );
     expect(detailTour).toBeDefined();
     expect(detailTour?.aggregateRating).toBe(5);
     expect(detailTour?.reviewCount).toBe(86);
 
     const schema = buildEngine6SchemaGraph(detailTour!);
     const graph = schema["@graph"] as Array<Record<string, unknown>>;
-    const aggregateNode = graph.find(node => node["@type"] === "AggregateRating") as
-      | Record<string, unknown>
-      | undefined;
+    const aggregateNode = graph.find(
+      node => node["@type"] === "AggregateRating"
+    ) as Record<string, unknown> | undefined;
     expect(aggregateNode).toBeDefined();
     expect(aggregateNode?.ratingValue).toBe(5);
     expect(aggregateNode?.reviewCount).toBe(86);
   });
 
-
-
   it("rebuilds 3351P15 in place with API-derived price/reviews and deterministic hero parity", () => {
     const unifiedTours = getToursByCityUnified("california", "joshua-tree");
-    const entry = unifiedTours.find(item => item.tour.productCode === "3351P15");
-    expect(entry?.href).toBe(ENGINE6_PALM_SPRINGS_INDIAN_CANYONS_BIKE_HIKE_ROUTE);
+    const entry = unifiedTours.find(
+      item => item.tour.productCode === "3351P15"
+    );
+    expect(entry?.href).toBe(
+      ENGINE6_PALM_SPRINGS_INDIAN_CANYONS_BIKE_HIKE_ROUTE
+    );
     expect(entry?.tour.heroImage).toBe(ENGINE6_3351P15_EXPECTED_HERO_URL);
     expect(entry?.tour.badges?.priceFrom).toBe("From $149.00");
     expect(entry?.tour.badges?.rating).toBe(4.5);
     expect(entry?.tour.badges?.reviewCount).toBe(216);
 
-    const detailTour = engine6ResolvedTours.find(tour => tour.productCode === "3351P15");
+    const detailTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "3351P15"
+    );
     expect(detailTour?.priceAmount).toBe(149);
     expect(detailTour?.priceFormatted).toBe("From $149.00");
     expect(detailTour?.reviewCount).toBe(216);
     expect(detailTour?.heroImageUrl).toBe(ENGINE6_3351P15_EXPECTED_HERO_URL);
-    expect(detailTour?.canonicalPath).toBe(ENGINE6_PALM_SPRINGS_INDIAN_CANYONS_BIKE_HIKE_ROUTE);
+    expect(detailTour?.canonicalPath).toBe(
+      ENGINE6_PALM_SPRINGS_INDIAN_CANYONS_BIKE_HIKE_ROUTE
+    );
 
     const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
     expect(detailHtml).toContain("From $149.00");
@@ -1487,8 +1503,13 @@ describe("engine6 listing surfaces", () => {
 
     const schema = buildEngine6SchemaGraph(detailTour!);
     const graph = schema["@graph"] as Array<Record<string, unknown>>;
-    const productNode = graph.find(node => node["@type"] === "Product") as Record<string, unknown>;
-    const offerNode = graph.find(node => node["@type"] === "Offer") as Record<string, unknown>;
+    const productNode = graph.find(
+      node => node["@type"] === "Product"
+    ) as Record<string, unknown>;
+    const offerNode = graph.find(node => node["@type"] === "Offer") as Record<
+      string,
+      unknown
+    >;
     const aggregate = productNode?.aggregateRating as Record<string, unknown>;
     expect(productNode?.image).toBe(ENGINE6_3351P15_EXPECTED_HERO_URL);
     expect(offerNode?.price).toBe(149);
@@ -1522,8 +1543,12 @@ describe("engine6 listing surfaces", () => {
 
     const cityUnified = getToursByCityUnified("california", "san-diego");
 
-    for (const [productCode, expected] of Object.entries(expectedByProductCode)) {
-      const entry = cityUnified.find(card => card.tour.productCode === productCode);
+    for (const [productCode, expected] of Object.entries(
+      expectedByProductCode
+    )) {
+      const entry = cityUnified.find(
+        card => card.tour.productCode === productCode
+      );
       expect(entry?.href).toBe(expected.route);
       expect(entry?.tour.heroImage).toBe(expected.hero);
       expect(entry?.tour.primaryImageUrl).toBe(expected.hero);
@@ -1531,13 +1556,17 @@ describe("engine6 listing surfaces", () => {
       expect(entry?.tour.bookingUrl).toBe(expected.cta);
       expect(entry?.tour.bookingUrl).not.toContain("/search/");
 
-      const detailTour = engine6ResolvedTours.find(tour => tour.productCode === productCode);
+      const detailTour = engine6ResolvedTours.find(
+        tour => tour.productCode === productCode
+      );
       expect(detailTour?.heroImageUrl).toBe(expected.hero);
       expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(false);
       expect(detailTour?.faqs).toHaveLength(5);
 
       const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
-      expect(detailHtml).toContain(`src=\"${expected.hero.replaceAll("&", "&amp;")}\"`);
+      expect(detailHtml).toContain(
+        `src=\"${expected.hero.replaceAll("&", "&amp;")}\"`
+      );
       expect(detailHtml).toContain(expected.cta.replaceAll("&", "&amp;"));
       expect(detailHtml).toContain("Meeting point:");
       expect(detailHtml).not.toContain('data-testid="engine6-gallery"');
@@ -1563,7 +1592,9 @@ describe("engine6 listing surfaces", () => {
     }
 
     const heroes = Object.keys(expectedByProductCode).map(productCode => {
-      const tour = engine6ResolvedTours.find(entry => entry.productCode === productCode);
+      const tour = engine6ResolvedTours.find(
+        entry => entry.productCode === productCode
+      );
       return tour?.heroImageUrl;
     });
     expect(new Set(heroes).size).toBe(4);
@@ -1813,7 +1844,9 @@ describe("engine6 listing surfaces", () => {
   it("renders New York City tour cards with Engine6 entries before non-Engine6 entries", () => {
     const unified = getToursByCityUnified("new-york", "new-york");
     const firstEngine6 = unified.find(entry => entry.tour.engine === "engine6");
-    const firstNonEngine6 = unified.find(entry => entry.tour.engine !== "engine6");
+    const firstNonEngine6 = unified.find(
+      entry => entry.tour.engine !== "engine6"
+    );
 
     expect(firstEngine6).toBeDefined();
     expect(firstNonEngine6).toBeDefined();
@@ -1829,6 +1862,105 @@ describe("engine6 listing surfaces", () => {
     expect(engine6HrefIndex).toBeGreaterThan(-1);
     expect(nonEngine6HrefIndex).toBeGreaterThan(-1);
     expect(engine6HrefIndex).toBeLessThan(nonEngine6HrefIndex);
+  });
+
+  it("surfaces 3454YE3D through public route, city listings, card surfaces, and schema hero parity", () => {
+    const expectedHero =
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/19/f1/caption.jpg?w=700&h=500&s=1";
+    const tour = engine6ResolvedTours.find(
+      entry => entry.productCode === "3454YE3D"
+    );
+
+    expect(tour).toBeDefined();
+    expect(tour?.canonicalPath).toBe(
+      ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_ROUTE
+    );
+    expect(tour?.heroImageUrl).toBe(expectedHero);
+    expect(tour?.resolvedHero?.url).toBe(expectedHero);
+    expect(tour?.diagnostics.heroSourceFieldPath).toBe(
+      "product.media.images[0].variants.FULL.url"
+    );
+
+    const listingTour = getToursByCity("california", "san-francisco").find(
+      entry => entry.productCode === "3454YE3D"
+    );
+    expect(listingTour).toBeDefined();
+    expect(listingTour?.heroImage).toBe(expectedHero);
+    expect(listingTour?.primaryImageUrl).toBe(expectedHero);
+
+    const unifiedEntry = getToursByCityUnified(
+      "california",
+      "san-francisco"
+    ).find(
+      entry =>
+        entry.tour.engine === "engine6" && entry.tour.productCode === "3454YE3D"
+    );
+    expect(unifiedEntry).toBeDefined();
+    expect(unifiedEntry?.href).toBe(
+      ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_ROUTE
+    );
+    expect(unifiedEntry?.tour.heroImage).toBe(expectedHero);
+
+    const card = toEngine6Card(tour!);
+    const cardSurfaces = buildEngine6CardSurfaces(tour!);
+    expect(card.href).toBe(ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_ROUTE);
+    expect(card.imageUrl).toBe(expectedHero);
+    expect(cardSurfaces.city[0]?.imageUrl).toBe(expectedHero);
+    expect(cardSurfaces.search[0]?.href).toBe(
+      ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_ROUTE
+    );
+
+    expect(tour!.itinerary).toHaveLength(15);
+    expect(tour!.itinerary.map(item => item.description)).toEqual([
+      "Leave San Francisco for Yosemite with an eastbound Bay Bridge crossing and Sierra-bound drive.",
+      "Cross the Bay Bridge for views toward Alcatraz Island, Angel Island, and the wider San Francisco Bay.",
+      "Arrive at Yosemite National Park after the drive from San Francisco and begin the park portion of the trip.",
+      "Walk the Tuolumne Grove route to see mature giant sequoias in a quieter Yosemite forest setting.",
+      "Travel through Yosemite Valley for an overview of its glacier-shaped cliffs, meadows, and central landmarks.",
+      "Use free time in Yosemite Village for independent walking, food, photos, or nearby valley exploration.",
+      "Visit the Yosemite Falls area during valley time to see one of the park’s signature waterfall landmarks.",
+      "Browse the Ansel Adams Gallery for photography-focused Yosemite history and park-inspired artwork.",
+      "Settle into the Yosemite campsite as camping equipment is distributed and the overnight base is introduced.",
+      "Spend the second day in Yosemite High Country with alpine scenery shaped by lakes, granite, and open meadows.",
+      "Follow high-country hiking options selected around group pace, seasonal access, and mountain conditions.",
+      "Return to Yosemite Valley on the final day for another block of independent park time.",
+      "Choose a valley activity such as a waterfall walk, bicycle rental, museum visit, or Merced River break.",
+      "Stop at El Capitan Meadow to view the granite wall and watch climbers when conditions allow.",
+      "Travel back from Yosemite to the San Francisco Hilton after the final day in the park.",
+    ]);
+    expect(
+      validateEngine6GovernedItinerary({
+        renderedItems: tour!.itinerary,
+        overviewText: tour!.overviewText,
+      })
+    ).toEqual([]);
+
+    const detailHtml = renderToString(
+      <CityTourDetailRoute
+        params={{
+          stateSlug: "california",
+          citySlug: "san-francisco",
+          tourSlug: "3-day-yosemite-camping-adventure-from-san-francisco",
+        }}
+      />
+    );
+    const escapedHero = expectedHero.replace(/&/g, "&amp;");
+    expect(detailHtml).toContain(
+      "Yosemite 3-Day Camping Adventure from San Francisco"
+    );
+    expect(detailHtml).not.toContain("Tour not found");
+    expect(detailHtml).toContain(`src="${escapedHero}"`);
+
+    const schema = buildEngine6SchemaGraph(tour!);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const canonicalUrl = `https://www.alloutdooradventures.com${ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_ROUTE}`;
+    for (const type of ["WebPage", "Product", "TouristTrip"]) {
+      const node = graph.find(entry => entry["@type"] === type);
+      expect(node?.url).toBe(canonicalUrl);
+      expect((node as { image?: string } | undefined)?.image).toBe(
+        expectedHero
+      );
+    }
   });
 
   it("regression: every Engine6 listing card image stays identical to its detail hero", () => {
@@ -2298,9 +2430,7 @@ describe("engine6 image parity guardrails", () => {
           href="/destinations/alaska/anchorage/tours/engine6-invalid-image-test"
         />
       );
-      expect(html).toContain(
-        'data-card-image-src="/images/hiking-hero.jpg"'
-      );
+      expect(html).toContain('data-card-image-src="/images/hiking-hero.jpg"');
       expect(html).not.toContain('data-card-image-src="   "');
       expect(html).not.toContain('data-card-image-src="/hero.jpg"');
     }
@@ -2573,7 +2703,6 @@ describe("engine6 route wiring", () => {
     expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
   });
 
-
   it("registers the New York pedicab replacement route before the generic city tour detail route", () => {
     const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
     const engine6RouteIndex = source.indexOf(
@@ -2666,7 +2795,9 @@ describe("engine6 route wiring", () => {
       "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491/book"
     );
     expect(nycPedicabTour?.itinerary.length).toBeGreaterThanOrEqual(2);
-    expect(ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(ENGINE6_NYC_PEDICAB_ROUTE)).toBe(true);
+    expect(
+      ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(ENGINE6_NYC_PEDICAB_ROUTE)
+    ).toBe(true);
   });
 
   it("replaces 233384P2 in-place and keeps the existing /book endpoint CTA", () => {

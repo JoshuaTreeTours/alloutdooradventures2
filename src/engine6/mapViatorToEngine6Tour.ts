@@ -45,7 +45,8 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
 };
 const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
   "415653P2": "Private Yosemite & Giant Sequoias Tour from San Francisco",
-  "304471P122": "Alcatraz App-Guided Experience with Ferry Access | San Francisco",
+  "304471P122":
+    "Alcatraz App-Guided Experience with Ferry Access | San Francisco",
 };
 const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "415653P2":
@@ -344,6 +345,98 @@ const ENGINE6_ITINERARY_ITEM_OVERRIDES: Record<
   string,
   Array<{ title: string; description: string; stopType: "pass-by" | "stop" }>
 > = {
+  "3454YE3D": [
+    {
+      title: "San Francisco departure",
+      description:
+        "Leave San Francisco for Yosemite with an eastbound Bay Bridge crossing and Sierra-bound drive.",
+      stopType: "stop",
+    },
+    {
+      title: "Bay Bridge crossing",
+      description:
+        "Cross the Bay Bridge for views toward Alcatraz Island, Angel Island, and the wider San Francisco Bay.",
+      stopType: "pass-by",
+    },
+    {
+      title: "Yosemite National Park entrance",
+      description:
+        "Arrive at Yosemite National Park after the drive from San Francisco and begin the park portion of the trip.",
+      stopType: "stop",
+    },
+    {
+      title: "Tuolumne Grove",
+      description:
+        "Walk the Tuolumne Grove route to see mature giant sequoias in a quieter Yosemite forest setting.",
+      stopType: "stop",
+    },
+    {
+      title: "Yosemite Valley orientation",
+      description:
+        "Travel through Yosemite Valley for an overview of its glacier-shaped cliffs, meadows, and central landmarks.",
+      stopType: "pass-by",
+    },
+    {
+      title: "Yosemite Village free time",
+      description:
+        "Use free time in Yosemite Village for independent walking, food, photos, or nearby valley exploration.",
+      stopType: "stop",
+    },
+    {
+      title: "Yosemite Falls",
+      description:
+        "Visit the Yosemite Falls area during valley time to see one of the park’s signature waterfall landmarks.",
+      stopType: "stop",
+    },
+    {
+      title: "Ansel Adams Gallery",
+      description:
+        "Browse the Ansel Adams Gallery for photography-focused Yosemite history and park-inspired artwork.",
+      stopType: "stop",
+    },
+    {
+      title: "Yosemite campsite",
+      description:
+        "Settle into the Yosemite campsite as camping equipment is distributed and the overnight base is introduced.",
+      stopType: "stop",
+    },
+    {
+      title: "Yosemite High Country",
+      description:
+        "Spend the second day in Yosemite High Country with alpine scenery shaped by lakes, granite, and open meadows.",
+      stopType: "stop",
+    },
+    {
+      title: "High-country hiking",
+      description:
+        "Follow high-country hiking options selected around group pace, seasonal access, and mountain conditions.",
+      stopType: "stop",
+    },
+    {
+      title: "Yosemite Valley return",
+      description:
+        "Return to Yosemite Valley on the final day for another block of independent park time.",
+      stopType: "stop",
+    },
+    {
+      title: "Valley activity time",
+      description:
+        "Choose a valley activity such as a waterfall walk, bicycle rental, museum visit, or Merced River break.",
+      stopType: "stop",
+    },
+    {
+      title: "El Capitan Meadow",
+      description:
+        "Stop at El Capitan Meadow to view the granite wall and watch climbers when conditions allow.",
+      stopType: "stop",
+    },
+    {
+      title: "Return to San Francisco",
+      description:
+        "Travel back from Yosemite to the San Francisco Hilton after the final day in the park.",
+      stopType: "stop",
+    },
+  ],
   "447486P2": [
     {
       title: "Santa Barbara Harbor departure",
@@ -378,13 +471,11 @@ const ENGINE6_ITINERARY_ITEM_OVERRIDES: Record<
   ],
 };
 
-const rewriteItineraryDescriptionToSingleSentence = (
-  args: {
-    productCode: string;
-    item: NonNullable<Engine6ApiResponse["extracted"]["itinerary"]>[number];
-    index: number;
-  }
-) => {
+const rewriteItineraryDescriptionToSingleSentence = (args: {
+  productCode: string;
+  item: NonNullable<Engine6ApiResponse["extracted"]["itinerary"]>[number];
+  index: number;
+}) => {
   const override =
     ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES[args.productCode]?.[args.index];
   if (override) {
@@ -406,7 +497,10 @@ const rewriteItineraryDescriptionToSingleSentence = (
       .split(/[.!?]/)
       .map(part => part.trim())
       .find(Boolean) ?? "";
-  const normalizedTitle = title.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const normalizedTitle = title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
   const normalizedSentence = sourceSentence
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, " ")
@@ -525,14 +619,14 @@ export const mapViatorToEngine6Tour = (
         duration: null,
         admissionNote: null,
       }))
-    : payload.extracted.itinerary?.map((item, index) => ({
+    : (payload.extracted.itinerary?.map((item, index) => ({
         ...item,
         description: rewriteItineraryDescriptionToSingleSentence({
           productCode: payload.rawProductCode,
           item,
           index,
         }),
-      })) ?? [];
+      })) ?? []);
   const itinerarySummaryText = payload.extracted.itinerarySummaryText ?? null;
   const faqs = payload.extracted.faqs ?? [];
   const included = payload.extracted.included ?? [];
@@ -556,7 +650,8 @@ export const mapViatorToEngine6Tour = (
     ENGINE6_OPENING_SENTENCE_OVERRIDES[payload.rawProductCode] ??
     openingSentence;
   const descriptionBody = cleanedDescription.replace(/\s+/g, " ").trim();
-  const descriptionOverride = ENGINE6_DESCRIPTION_OVERRIDES[payload.rawProductCode];
+  const descriptionOverride =
+    ENGINE6_DESCRIPTION_OVERRIDES[payload.rawProductCode];
   const description =
     descriptionOverride ??
     [enforcedOpeningSentence, descriptionBody].filter(Boolean).join(" ");
@@ -564,10 +659,12 @@ export const mapViatorToEngine6Tour = (
     title,
     city,
     categoryLabel,
-    sourceDescription: descriptionOverride ?? payload.extracted.seoDescription ?? description,
+    sourceDescription:
+      descriptionOverride ?? payload.extracted.seoDescription ?? description,
   });
   const governedMetaDescription =
-    ENGINE6_META_DESCRIPTION_OVERRIDES[payload.rawProductCode] ?? metaDescription;
+    ENGINE6_META_DESCRIPTION_OVERRIDES[payload.rawProductCode] ??
+    metaDescription;
   const aggregateRating = normalizeEngine6AggregateRating(
     payload.extracted.aggregateRating
   );
@@ -599,14 +696,15 @@ export const mapViatorToEngine6Tour = (
     meetingPointText: payload.extracted.meetingPointText ?? null,
     sourceOverview: sourceOverviewText,
   });
-  const overriddenOverview = ENGINE6_OVERVIEW_OVERRIDES[payload.rawProductCode]?.({
+  const overriddenOverview = ENGINE6_OVERVIEW_OVERRIDES[
+    payload.rawProductCode
+  ]?.({
     city,
     state,
     sourceOverview: sourceOverviewText,
   });
   const normalizedOverview =
     overriddenOverview || sourceOverviewText || synthesizedOverview;
-
 
   if (payload.rawProductCode === "335698P13") {
     const requiredReviewCount = 86;
