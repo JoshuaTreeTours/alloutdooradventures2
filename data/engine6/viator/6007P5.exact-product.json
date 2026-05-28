@@ -1,0 +1,118 @@
+{
+    "product": {
+        "productCode": "6007P5",
+        "productUrl": "https://www.viator.com/tours/San-Francisco/Viator-Exclusive-Golden-Gate-Bridge-Guided-Bicycle-Tour-with-Lunch-at-Local-Hotspot/d651-6007P5",
+        "title": "Golden Gate Bridge Guided Bicycle Tour with Lunch at Local Hotspot",
+        "description": {
+            "text": "This guided bicycle tour starts at 721 Beach Street in San Francisco and finishes in Sausalito with a lunch voucher at a waterfront restaurant. The guided ride lasts about 2.5 to 3 hours, while the included bicycle rental remains valid for the day so travelers can decide how to return after lunch. The route is designed for riders who want an active, hosted bridge crossing with practical logistics, photo breaks, and time to continue independently once the guided portion ends. A helmet, lock, rear rack, and standard bike setup are included; ferry tickets are handled separately if travelers choose that return option."
+        },
+        "location": {
+            "city": "San Francisco",
+            "state": "California"
+        },
+        "duration": "3 hours to 1 day",
+        "priceFrom": "From $92.00",
+        "reviews": {
+            "combinedAverageRating": 4.9,
+            "totalReviews": 56
+        },
+        "media": {
+            "images": [
+                {
+                    "isCover": true,
+                    "variants": {
+                        "FULL": {
+                            "url": "https://dynamic-media.tacdn.com/media/photo-o/32/9b/cf/6d/caption.jpg?w=700&h=500&s=1",
+                            "width": 700,
+                            "height": 500
+                        }
+                    }
+                }
+            ]
+        },
+        "highlights": [
+            "Join a guided bicycle ride from San Francisco to Sausalito with bike rental available for the rest of the day.",
+            "Use the included restaurant voucher for lunch after the guided ride concludes in Sausalito.",
+            "Stop for photos and route context while the guide manages pacing and orientation.",
+            "Return independently by cycling back or arranging the ferry option according to the day's schedule."
+        ],
+        "logistics": {
+            "start": {
+                "description": "Blazing Saddles Bike Rentals and Tours, 721 Beach Street, San Francisco, CA 94109. Arrive 15 minutes early for bike fitting, orientation, and guide check-in."
+            },
+            "end": {
+                "description": "Joinery, 300 Turney Street, Sausalito, CA 94965. The guided tour ends in Sausalito after lunch; travelers return the bike independently after choosing a biking or ferry return plan."
+            }
+        },
+        "itineraryItems": [
+            {
+                "title": "Beach Street bike fitting",
+                "description": "Travelers meet at the bike shop for check-in, equipment setup, and a route briefing before the guided ride leaves the waterfront.",
+                "duration": "15 minutes",
+                "stopType": "stop"
+            },
+            {
+                "title": "Guided ride toward the bridge",
+                "description": "The guide leads the group along bike-friendly corridors with pauses for photos, orientation, and local context before the bridge crossing.",
+                "duration": "1 hour 15 minutes",
+                "stopType": "stop"
+            },
+            {
+                "title": "Golden Gate Bridge crossing",
+                "description": "Riders cross the bridge on the designated bicycle route while the guide manages group pacing and safe transitions.",
+                "duration": "30 minutes",
+                "stopType": "stop"
+            },
+            {
+                "title": "Sausalito lunch and onward rental time",
+                "description": "The guided portion concludes near the lunch stop, leaving the included bike rental available for independent return planning.",
+                "stopType": "stop"
+            }
+        ],
+        "inclusions": [
+            "Professional guide",
+            "All-day bicycle rental",
+            "Helmet, lock, and rear rack",
+            "Restaurant voucher for food and drink",
+            "Optional ferry ticket available for purchase in shop"
+        ],
+        "additionalInfo": [
+            "Confirmation is provided at time of booking.",
+            "Bike tour lasts about 2.5 to 3 hours; bike rental is valid for 24 hours.",
+            "Arrive 15 minutes early for bike fitting and orientation.",
+            "Bring a credit card for the security deposit.",
+            "Most travelers can participate.",
+            "This tour/activity has a maximum of 99 travelers.",
+            "You can cancel up to 24 hours in advance for a full refund."
+        ],
+        "faqs": [
+            {
+                "question": "Where does the Golden Gate Bridge lunch bike tour start?",
+                "answer": "The tour starts at Blazing Saddles Bike Rentals and Tours at 721 Beach Street in San Francisco, where riders check in and get fitted before departure."
+            },
+            {
+                "question": "Where does the guided ride end?",
+                "answer": "The guided portion ends in Sausalito near Joinery at 300 Turney Street, where the lunch voucher is used before travelers plan their independent return."
+            },
+            {
+                "question": "Is the bike rental only for the guided portion?",
+                "answer": "No. The guided ride is about 2.5 to 3 hours, and the bicycle rental is valid for the day according to the product details."
+            },
+            {
+                "question": "Is the ferry ticket included?",
+                "answer": "No. A ferry ticket can be purchased separately in shop if travelers prefer not to bike back to San Francisco."
+            }
+        ],
+        "categories": [
+            {
+                "label": "Bike tour"
+            },
+            {
+                "label": "Outdoor activities"
+            },
+            {
+                "label": "Food and drink tour"
+            }
+        ]
+    }
+}

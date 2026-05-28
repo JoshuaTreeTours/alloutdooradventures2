@@ -29,6 +29,7 @@ import specimen36001Payload from "../../data/engine6/viator/36001P1.exact-produc
 import specimen36001p14Payload from "../../data/engine6/viator/36001P14.exact-product.json";
 import specimen152424p1Payload from "../../data/engine6/viator/152424P1.exact-product.json";
 import specimen6007ggbPayload from "../../data/engine6/viator/6007GGB.exact-product.json";
+import specimen6007p5Payload from "../../data/engine6/viator/6007P5.exact-product.json";
 import specimen3454p57Payload from "../../data/engine6/viator/3454P57.exact-product.json";
 import specimen23068p2Payload from "../../data/engine6/viator/23068P2.exact-product.json";
 import specimen415653p2Payload from "../../data/engine6/viator/415653P2.exact-product.json";
@@ -502,6 +503,15 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/San-Francisco/Bike-the-Golden-Gate-Bridge-San-Francisco-to-Sausalito/d651-6007GGB",
     rawPayload: specimen6007ggbPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "6007P5",
+    publicUrl:
+      "https://www.viator.com/tours/San-Francisco/Viator-Exclusive-Golden-Gate-Bridge-Guided-Bicycle-Tour-with-Lunch-at-Local-Hotspot/d651-6007P5",
+    rawPayload: specimen6007p5Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
