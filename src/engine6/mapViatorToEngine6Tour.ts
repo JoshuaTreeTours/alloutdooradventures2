@@ -305,11 +305,11 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Return to Santa Barbara with a final scenic drive back over the pass after the day’s tasting itinerary wraps.",
   ],
   "447486P2": [
-    "Depart from Santa Barbara Harbor and settle in for a relaxed happy-hour yacht cruise.",
-    "Glide past Stearns Wharf for classic waterfront views from the water.",
-    "Cruise along East Beach and the Santa Barbara coastline with open-ocean breezes.",
-    "Take in channel and mountain sunset views as golden-hour light builds offshore.",
-    "Return to Santa Barbara Harbor to finish the coastal yacht experience.",
+    "Board near Stearns Wharf for a 90-minute happy-hour yacht cruise on the Santa Barbara waterfront.",
+    "Pass Stearns Wharf as the yacht moves along Santa Barbara’s waterfront.",
+    "Follow the Santa Barbara coast by East Beach with open water and shoreline views.",
+    "Watch the Santa Barbara Channel and coastal mountains from the yacht during the late-afternoon cruise.",
+    "Return toward Santa Barbara Harbor after the 90-minute coastal cruise.",
   ],
   "5096P30": [
     "Begin your sightseeing loop on Hollywood Boulevard at the Big Bus Welcome Center, where departures run throughout the day.",
@@ -441,31 +441,31 @@ const ENGINE6_ITINERARY_ITEM_OVERRIDES: Record<
     {
       title: "Santa Barbara Harbor departure",
       description:
-        "Depart from Santa Barbara Harbor and settle in for a relaxed happy-hour yacht cruise.",
+        "Board near Stearns Wharf for a 90-minute happy-hour yacht cruise on the Santa Barbara waterfront.",
       stopType: "stop",
     },
     {
       title: "Stearns Wharf waterfront views",
       description:
-        "Glide past Stearns Wharf for classic waterfront views from the water.",
+        "Pass Stearns Wharf as the yacht moves along Santa Barbara’s waterfront.",
       stopType: "pass-by",
     },
     {
       title: "East Beach coastline views",
       description:
-        "Cruise along East Beach and the Santa Barbara coastline with open-ocean breezes.",
+        "Follow the Santa Barbara coast by East Beach with open water and shoreline views.",
       stopType: "pass-by",
     },
     {
       title: "Channel and mountain sunset views",
       description:
-        "Take in channel and mountain sunset views as golden-hour light builds offshore.",
+        "Watch the Santa Barbara Channel and coastal mountains from the yacht during the late-afternoon cruise.",
       stopType: "pass-by",
     },
     {
       title: "Return to Santa Barbara Harbor",
       description:
-        "Return to Santa Barbara Harbor to finish the coastal yacht experience.",
+        "Return toward Santa Barbara Harbor after the 90-minute coastal cruise.",
       stopType: "stop",
     },
   ],
