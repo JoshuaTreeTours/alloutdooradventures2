@@ -1,485 +1,28 @@
 {
   "product": {
-    "status": "ACTIVE",
     "productCode": "333016P3",
-    "language": "en",
-    "createdAt": "2022-08-29T09:05:00.333867Z",
-    "lastUpdatedAt": "2026-04-28T08:51:52Z",
-    "title": "Private City Tour of San Francisco",
-    "ticketInfo": {
-      "ticketTypes": [
-        "MOBILE_ONLY"
-      ],
-      "ticketTypeDescription": "Mobile or paper ticket accepted",
-      "ticketsPerBooking": "ONE_PER_BOOKING",
-      "ticketsPerBookingDescription": "One per booking"
-    },
-    "pricingInfo": {
-      "type": "UNIT",
-      "ageBands": [
-        {
-          "ageBand": "TRAVELER",
-          "startAge": 0,
-          "endAge": 120,
-          "minTravelersPerBooking": 0,
-          "maxTravelersPerBooking": 7
-        }
-      ],
-      "unitType": "VEHICLE"
-    },
-    "images": [
-      {
-        "imageSource": "SUPPLIER_PROVIDED",
-        "caption": "Private City Tour of San Francisco",
-        "isCover": true,
-        "variants": [
-          {
-            "height": 500,
-            "width": 700,
-            "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/2c/6c/caption.jpg?w=700&h=500&s=1"
-          }
-        ]
-      }
-    ],
-    "logistics": {
-      "start": [
-        {
-          "location": {
-            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5BLW5VVWB2iB+6qJvOWEWdU8EX3kJQIcpSyqlNcoy4bi"
-          }
-        },
-        {
-          "location": {
-            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5NYE9u3Jm/KFXvQlJGUKbshLxTRoZ/Vje8K+buOmAh+t"
-          },
-          "description": "At the airport, your hotel, airbnb, just anywhere in the LA county! Additional charge if over 10 miles out of the city.\n"
-        }
-      ],
-      "end": [
-        {
-          "location": {
-            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5BLW5VVWB2iB+6qJvOWEWdU8EX3kJQIcpSyqlNcoy4bi"
-          }
-        },
-        {
-          "location": {
-            "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5NYE9u3Jm/KFXvQlJGUKbshLxTRoZ/Vje8K+buOmAh+t"
-          },
-          "description": "At the airport, your hotel, airbnb, just anywhere in the LA county! Additional charge if over 10 miles out of the city.\n"
-        }
-      ],
-      "redemption": {
-        "redemptionType": "NONE",
-        "specialInstructions": "We will check in prior to tour day what time you would like to start, we are flexible !"
-      },
-      "travelerPickup": {
-        "pickupOptionType": "PICKUP_AND_MEET_AT_START_POINT",
-        "allowCustomTravelerPickup": true,
-        "locations": [
-          {
-            "location": {
-              "ref": "MEET_AT_DEPARTURE_POINT"
-            },
-            "pickupType": "OTHER"
-          },
-          {
-            "location": {
-              "ref": "CONTACT_SUPPLIER_LATER"
-            },
-            "pickupType": "OTHER"
-          },
-          {
-            "location": {
-              "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5BLW5VVWB2iB+6qJvOWEWdU8EX3kJQIcpSyqlNcoy4bi"
-            },
-            "pickupType": "LOCATION"
-          },
-          {
-            "location": {
-              "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5IDDmQmanmE6LCTANC7SwMfNOxkPpPmgarvNgKMMpX9s"
-            },
-            "pickupType": "LOCATION"
-          },
-          {
-            "location": {
-              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyNyOfzPLrQrdRFKfoFIPxWo="
-            },
-            "pickupType": "HOTEL"
-          },
-          {
-            "location": {
-              "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5I/M7yk4QBf6mMyq4rWV4Mif/Kda6JffwDPTX3UkwE5N"
-            },
-            "pickupType": "PORT"
-          },
-          {
-            "location": {
-              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyAScefjh+BayLTB310bCRo8="
-            },
-            "pickupType": "AIRPORT"
-          },
-          {
-            "location": {
-              "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5JCzB25J+EqLYiDVitjGmL7iCL93ehGRZRQOGreAWWVF"
-            },
-            "pickupType": "LOCATION"
-          },
-          {
-            "location": {
-              "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5I3OBavThtaEop3HtEKiiuAm6lv2mXYUTL/vXwoQkrMD"
-            },
-            "pickupType": "LOCATION"
-          },
-          {
-            "location": {
-              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyLjYAMR6M3wwEtgeVz4rqlk="
-            },
-            "pickupType": "AIRPORT"
-          }
-        ],
-        "additionalInfo": "We will pick up from your hotel, airport, cruise, Airbnb home in the Los Angeles area. 15 miles and more outside LA City will be an additional charge.\nBe aware of luggage space before booking a large group.\n"
-      }
-    },
-    "timeZone": "America/Los_Angeles",
-    "description": "Explore San Francisco with a private driver-guide on a flexible city highlights tour covering major neighborhoods, waterfront viewpoints, and iconic landmarks.",
-    "inclusions": [
-      {
-        "category": "TRANSPORT_AMENITIES",
-        "categoryDescription": "Transportation amenities",
-        "type": "AIR_CONDITIONED_VEHICLE",
-        "typeDescription": "In-vehicle air conditioning",
-        "description": "Air-conditioned vehicle"
-      }
-    ],
-    "exclusions": [
-      {
-        "category": "FEES_AND_TAXES",
-        "categoryDescription": "Fees",
-        "type": "GRATUITIES",
-        "typeDescription": "Gratuities",
-        "description": "Gratuities"
-      }
-    ],
-    "additionalInfo": [
-      {
-        "type": "WHEELCHAIR_ACCESSIBLE",
-        "description": "Wheelchair accessible"
-      },
-      {
-        "type": "STROLLER_ACCESSIBLE",
-        "description": "Infants and small children can ride in a pram or stroller"
-      },
-      {
-        "type": "PUBLIC_TRANSPORTATION_NEARBY",
-        "description": "Public transportation options are available nearby"
-      },
-      {
-        "type": "INFANT_SEATS_AVAILABLE",
-        "description": "Specialized infant seats are available"
-      },
-      {
-        "type": "TRANSPORTATION_WHEELCHAIR_ACCESSIBLE",
-        "description": "Transportation options are wheelchair accessible"
-      },
-      {
-        "type": "SURFACES_WHEELCHAIR_ACCESSIBLE",
-        "description": "All areas and surfaces are wheelchair accessible"
-      },
-      {
-        "type": "PHYSICAL_EASY",
-        "description": "Suitable for all physical fitness levels"
-      }
-    ],
-    "cancellationPolicy": {
-      "type": "STANDARD",
-      "description": "For a full refund, cancel at least 24 hours before the scheduled departure time.",
-      "cancelIfBadWeather": true,
-      "cancelIfInsufficientTravelers": false,
-      "refundEligibility": [
-        {
-          "dayRangeMin": 1,
-          "percentageRefundable": 100
-        },
-        {
-          "dayRangeMin": 0,
-          "dayRangeMax": 1,
-          "percentageRefundable": 0
-        }
-      ]
-    },
-    "bookingConfirmationSettings": {
-      "bookingCutoffType": "OPENING_TIME",
-      "bookingCutoffInMinutes": 240,
-      "confirmationType": "INSTANT"
-    },
-    "bookingRequirements": {
-      "minTravelersPerBooking": 1,
-      "maxTravelersPerBooking": 15,
-      "requiresAdultForBooking": false
-    },
-    "languageGuides": [
-      {
-        "type": "GUIDE",
-        "language": "en",
-        "legacyGuide": "en/SERVICE_GUIDE"
-      },
-      {
-        "type": "GUIDE",
-        "language": "nl",
-        "legacyGuide": "nl/SERVICE_GUIDE"
-      }
-    ],
-    "bookingQuestions": [
-      "AGEBAND",
-      "FULL_NAMES_FIRST",
-      "FULL_NAMES_LAST",
-      "PICKUP_POINT",
-      "SPECIAL_REQUIREMENTS",
-      "TRANSFER_AIR_ARRIVAL_AIRLINE",
-      "TRANSFER_AIR_ARRIVAL_FLIGHT_NO",
-      "TRANSFER_ARRIVAL_DROP_OFF",
-      "TRANSFER_ARRIVAL_MODE",
-      "TRANSFER_ARRIVAL_TIME",
-      "TRANSFER_PORT_ARRIVAL_TIME",
-      "TRANSFER_PORT_CRUISE_SHIP",
-      "TRANSFER_RAIL_ARRIVAL_LINE",
-      "TRANSFER_RAIL_ARRIVAL_STATION"
-    ],
-    "tags": [
-      367649,
-      367653,
-      21768,
-      11930,
-      11938,
-      367660,
-      11889,
-      12075,
-      12028,
-      21733,
-      367654,
-      12056,
-      11941,
-      21972,
-      367661
-    ],
-    "destinations": [
-      {
-        "ref": "645",
-        "primary": true
-      },
-      {
-        "ref": "32539",
-        "primary": false
-      }
-    ],
-    "itinerary": {
-      "itineraryType": "STANDARD",
-      "skipTheLine": false,
-      "privateTour": true,
-      "duration": {
-        "variableDurationFromMinutes": 360,
-        "variableDurationToMinutes": 420
-      },
-      "itineraryItems": [
-        {
-          "pointOfInterestLocation": {
-            "location": {
-              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyEoKb/4AG12xapcldDQF74E="
-            },
-            "attractionId": 1048,
-            "locationName": "Venice Beach Boardwalk"
-          },
-          "duration": {
-            "fixedDurationInMinutes": 25
-          },
-          "passByWithoutStopping": false,
-          "admissionIncluded": "NOT_APPLICABLE",
-          "description": "The board walk with the famous Muscle beach, skate park and rollerskaters.\nShop the many vendors or watch the talented artists."
-        },
-        {
-          "pointOfInterestLocation": {
-            "location": {
-              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyPIVrlXljde5LEtZM6m2uCQ="
-            },
-            "attractionId": 1044,
-            "locationName": "Santa Monica Pier"
-          },
-          "duration": {
-            "fixedDurationInMinutes": 25
-          },
-          "passByWithoutStopping": false,
-          "admissionIncluded": "NOT_APPLICABLE",
-          "description": "The world famous Pier where many oscar winning movies have filmed with its amusement park and end of route 66"
-        },
-        {
-          "pointOfInterestLocation": {
-            "location": {
-              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyORHqgYTm+iowxsY7zdMoRI="
-            },
-            "locationName": "Beverly Hills"
-          },
-          "passByWithoutStopping": true,
-          "admissionIncluded": "NOT_APPLICABLE",
-          "description": "A drive through the streets of Beverly Hills . the beautiful mansions the tree line streets and rodeo drive with the high end shops"
-        },
-        {
-          "pointOfInterestLocation": {
-            "location": {
-              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyK2df0K7268jqiqTg2oJAJE="
-            },
-            "locationName": "West Hollywood"
-          },
-          "passByWithoutStopping": true,
-          "admissionIncluded": "NOT_APPLICABLE",
-          "description": "Drive through Sunset strip ,the nightclubs the famous Instagram shops on Melrose Avenue and the big billboards."
-        },
-        {
-          "pointOfInterestLocation": {
-            "location": {
-              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyFdbExY6tqB8EJsnHu/v1qc="
-            },
-            "attractionId": 1036,
-            "locationName": "The Original Farmers Market"
-          },
-          "duration": {
-            "fixedDurationInMinutes": 60
-          },
-          "passByWithoutStopping": false,
-          "admissionIncluded": "NOT_APPLICABLE",
-          "description": "Eat at the original farmers market since 1934 with many food styles to choose from every cuisine there is"
-        },
-        {
-          "pointOfInterestLocation": {
-            "location": {
-              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyCNY/kvasFaypHWmeYV9CYg="
-            },
-            "attractionId": 8263,
-            "locationName": "The Grove"
-          },
-          "duration": {
-            "fixedDurationInMinutes": 60
-          },
-          "passByWithoutStopping": false,
-          "admissionIncluded": "NOT_APPLICABLE",
-          "description": "Shop the stores at the grove with top shop , Michael Kors ,Brandy Melville and the biggest Nike store in town+ many more."
-        },
-        {
-          "pointOfInterestLocation": {
-            "location": {
-              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyAHR7Bnkt3ulX/iZnCs4oxI="
-            },
-            "attractionId": 8117,
-            "locationName": "Dolby Theatre"
-          },
-          "duration": {
-            "fixedDurationInMinutes": 25
-          },
-          "passByWithoutStopping": false,
-          "admissionIncluded": "NOT_APPLICABLE",
-          "description": "Oscar theater on its famous walk of fame with celebrity stars In the ground, Many souvenir shops and artist on the street"
-        },
-        {
-          "pointOfInterestLocation": {
-            "location": {
-              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyArQqkGuvUjltVU1sJfHK00="
-            },
-            "attractionId": 1038,
-            "locationName": "TCL Chinese Theatres"
-          },
-          "duration": {
-            "fixedDurationInMinutes": 25
-          },
-          "passByWithoutStopping": false,
-          "admissionIncluded": "NOT_APPLICABLE",
-          "description": "The biggest iMac theater in the country where many movies are premiered with over 300 iconic hand and foot prints in front of famous movie stars."
-        },
-        {
-          "pointOfInterestLocation": {
-            "location": {
-              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyH1Woy+twEH8e0K6sUuy9+0="
-            },
-            "attractionId": 10335,
-            "locationName": "Mulholland Drive"
-          },
-          "passByWithoutStopping": true,
-          "admissionIncluded": "NOT_APPLICABLE",
-          "description": "Experience driving through the windy roads of Mulholland Drive with its beautiful mansions and views over the city including the skyscrapers downtown LA!"
-        },
-        {
-          "pointOfInterestLocation": {
-            "location": {
-              "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyHiWiZrtCOazP0jQ+pw3qaY="
-            },
-            "attractionId": 1050,
-            "locationName": "Hollywood Sign"
-          },
-          "duration": {
-            "fixedDurationInMinutes": 10
-          },
-          "passByWithoutStopping": false,
-          "admissionIncluded": "NOT_APPLICABLE",
-          "description": "A secret trail only known by a few locals right underneath the Hollywood sign the most famous landmark of the world!"
-        }
-      ]
-    },
-    "productOptions": [
-      {
-        "productOptionCode": "TG6",
-        "description": "Pickup included",
-        "title": "Los Angeles Private Guided Sig",
-        "languageGuides": [
-          {
-            "type": "GUIDE",
-            "language": "en",
-            "legacyGuide": "en/SERVICE_GUIDE"
-          },
-          {
-            "type": "GUIDE",
-            "language": "nl",
-            "legacyGuide": "nl/SERVICE_GUIDE"
-          }
-        ]
-      },
-      {
-        "productOptionCode": "TG5",
-        "description": "Private tour<br/>City tour<br/>Personalized<br/>Duration: 7 hours<br/>Drinks offered<br/>Famous neighborhoods in LA<br/>Luxury minivan<br/>Pickup included",
-        "title": "Private tour for all seasons",
-        "languageGuides": [
-          {
-            "type": "GUIDE",
-            "language": "en",
-            "legacyGuide": "en/SERVICE_GUIDE"
-          },
-          {
-            "type": "GUIDE",
-            "language": "nl",
-            "legacyGuide": "nl/SERVICE_GUIDE"
-          }
-        ]
-      }
-    ],
-    "translationInfo": {
-      "containsMachineTranslatedText": false,
-      "translationSource": "ORIGINAL"
-    },
-    "supplier": {
-      "name": "Private tour guide LA",
-      "reference": "SUPPLIER-dPy1cQE2LdPATh6lGcyFWw=="
-    },
     "productUrl": "https://www.viator.com/tours/San-Francisco/Private-City-Tour-of-San-Francisco/d651-333016P3",
+    "title": "Private City Tour of San Francisco",
+    "description": {
+      "text": "Private San Francisco city tour with a dedicated driver-guide covering major neighborhoods, iconic landmarks, and waterfront viewpoints with flexible pacing for your group."
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California"
+    },
+    "priceFrom": "$305.00",
     "reviews": {
       "combinedAverageRating": 4.8,
       "totalReviews": 24
     },
-    "location": "San Francisco",
-    "priceFrom": "$659.00",
+    "duration": "4 hours",
     "media": {
       "images": [
         {
           "isCover": true,
           "variants": {
             "FULL": {
-              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/bf/05/caption.jpg?w=700&h=500&s=1",
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/2c/6c/caption.jpg?w=700&h=500&s=1",
               "width": 700,
               "height": 500
             }
@@ -487,15 +30,73 @@
         }
       ]
     },
-    "shortDescription": "Private San Francisco city highlights tour with a dedicated guide.",
-    "destination": "San Francisco",
-    "pricing": {
-      "summary": {
-        "fromPrice": {
-          "amount": 399,
-          "currency": "USD"
-        }
+    "highlights": [
+      "Private city tour with driver-guide and flexible pace",
+      "Golden Gate Bridge photo stop at vista point",
+      "Drive down Lombard Street when traffic allows",
+      "Stops around Coit Tower, Fisherman's Wharf, and Union Square",
+      "Waterfront drive along the Embarcadero with skyline and Bay Bridge views"
+    ],
+    "logistics": {
+      "start": {
+        "description": "San Francisco pickup at selected hotels or agreed central meeting point."
       }
-    }
+    },
+    "itineraryItems": [
+      {
+        "title": "Golden Gate Bridge",
+        "description": "Drive over the Golden Gate Bridge with a stop at a vista point for photos.",
+        "duration": "15 minutes"
+      },
+      {
+        "title": "Lombard Street",
+        "description": "Drive through Lombard Street for photos and city views, with a stop when conditions permit.",
+        "duration": "10 minutes"
+      },
+      {
+        "title": "Coit Tower",
+        "description": "See the Telegraph Hill landmark and surrounding city viewpoints.",
+        "duration": "15 minutes"
+      },
+      {
+        "title": "Fisherman's Wharf",
+        "description": "Drive through the waterfront district with time near Pier 39 and nearby attractions.",
+        "duration": "1 hour"
+      },
+      {
+        "title": "Union Square",
+        "description": "Drive through Union Square and adjacent downtown shopping district.",
+        "duration": "20 minutes"
+      },
+      {
+        "title": "The Embarcadero",
+        "description": "Cruise along the Embarcadero for skyline and Bay Bridge views.",
+        "duration": "10 minutes"
+      },
+      {
+        "title": "Chinatown (pass-by)",
+        "description": "Drive through Chinatown with optional stop based on traffic and group preference.",
+        "duration": "Pass by"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How is pricing shown for this private tour?",
+        "answer": "The listing starts from $305.00 per group (up to 3 travelers), with final pricing based on selected option and availability."
+      },
+      {
+        "question": "What landmarks are included on the route?",
+        "answer": "Typical stops include Golden Gate Bridge, Lombard Street, Coit Tower, Fisherman's Wharf, Union Square, the Embarcadero, and a Chinatown pass-by segment."
+      },
+      {
+        "question": "Is cancellation available?",
+        "answer": "Yes. Free cancellation is available up to 24 hours before the experience start time."
+      }
+    ],
+    "additionalInfo": [
+      "Private format with dedicated vehicle and driver-guide.",
+      "Reserve now and pay later may be available depending on selected option.",
+      "Free cancellation up to 24 hours before start time."
+    ]
   }
 }
