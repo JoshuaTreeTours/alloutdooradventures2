@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "333016P3",
+    "productUrl": "https://www.viator.com/tours/San-Francisco/Private-City-Tour-of-San-Francisco/d651-333016P3",
+    "title": "Private City Tour of San Francisco",
+    "description": {
+      "text": "Private San Francisco city tour with a dedicated driver-guide covering major neighborhoods, iconic landmarks, and waterfront viewpoints with flexible pacing for your group."
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California"
+    },
+    "priceFrom": "$305.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 24
+    },
+    "duration": "4 hours",
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/2c/6c/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private city tour with driver-guide and flexible pace",
+      "Golden Gate Bridge photo stop at vista point",
+      "Drive down Lombard Street when traffic allows",
+      "Stops around Coit Tower, Fisherman's Wharf, and Union Square",
+      "Waterfront drive along the Embarcadero with skyline and Bay Bridge views"
+    ],
+    "logistics": {
+      "start": {
+        "description": "San Francisco pickup at selected hotels or agreed central meeting point."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Golden Gate Bridge",
+        "description": "Drive over the Golden Gate Bridge with a stop at a vista point for photos.",
+        "duration": "15 minutes"
+      },
+      {
+        "title": "Lombard Street",
+        "description": "Drive through Lombard Street for photos and city views, with a stop when conditions permit.",
+        "duration": "10 minutes"
+      },
+      {
+        "title": "Coit Tower",
+        "description": "See the Telegraph Hill landmark and surrounding city viewpoints.",
+        "duration": "15 minutes"
+      },
+      {
+        "title": "Fisherman's Wharf",
+        "description": "Drive through the waterfront district with time near Pier 39 and nearby attractions.",
+        "duration": "1 hour"
+      },
+      {
+        "title": "Union Square",
+        "description": "Drive through Union Square and adjacent downtown shopping district.",
+        "duration": "20 minutes"
+      },
+      {
+        "title": "The Embarcadero",
+        "description": "Cruise along the Embarcadero for skyline and Bay Bridge views.",
+        "duration": "10 minutes"
+      },
+      {
+        "title": "Chinatown (pass-by)",
+        "description": "Drive through Chinatown with optional stop based on traffic and group preference.",
+        "duration": "Pass by"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How is pricing shown for this private tour?",
+        "answer": "The listing starts from $305.00 per group (up to 3 travelers), with final pricing based on selected option and availability."
+      },
+      {
+        "question": "What landmarks are included on the route?",
+        "answer": "Typical stops include Golden Gate Bridge, Lombard Street, Coit Tower, Fisherman's Wharf, Union Square, the Embarcadero, and a Chinatown pass-by segment."
+      },
+      {
+        "question": "Is cancellation available?",
+        "answer": "Yes. Free cancellation is available up to 24 hours before the experience start time."
+      }
+    ],
+    "additionalInfo": [
+      "Private format with dedicated vehicle and driver-guide.",
+      "Reserve now and pay later may be available depending on selected option.",
+      "Free cancellation up to 24 hours before start time."
+    ]
+  }
+}

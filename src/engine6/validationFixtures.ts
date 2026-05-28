@@ -33,6 +33,7 @@ import specimen415653p2Payload from "../../data/engine6/viator/415653P2.exact-pr
 import specimen2660sfowinPayload from "../../data/engine6/viator/2660SFOWIN.exact-product.json";
 import specimen72999p3Payload from "../../data/engine6/viator/72999P3.exact-product.json";
 import specimen304471p122Payload from "../../data/engine6/viator/304471P122.exact-product.json";
+import specimen333016p3Payload from "../../data/engine6/viator/333016P3.exact-product.json";
 import specimen100569Payload from "../../data/engine6/viator/100569P5.exact-product.json";
 import specimen411138Payload from "../../data/engine6/viator/411138P3.exact-product.json";
 import specimen53474Payload from "../../data/engine6/viator/53474P8.exact-product.json";
@@ -522,6 +523,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/San-Francisco/San-Francisco-Alcatraz-App-Guided-Tour-Cruise-Jail-House-Tour/d651-304471P122",
     rawPayload: specimen304471p122Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "333016P3",
+    publicUrl:
+      "https://www.viator.com/tours/San-Francisco/Private-City-Tour-of-San-Francisco/d651-333016P3",
+    rawPayload: specimen333016p3Payload as Record<string, unknown>,
   },
   {
     productCode: "100569P5",

@@ -128,4 +128,37 @@ describe("engine6 production rules lightweight validations", () => {
     expect(tour.priceFormatted).not.toBe("Check latest price");
     expect(offerNode?.price).toBe(175);
   });
+
+  it("enforces metadata quality governance for all configured tours", () => {
+    const bannedFragments = ["SEO_CANONICAL", "alcatraz app guided tour cruise jail house"];
+    for (const fixture of ENGINE6_VALIDATION_FIXTURES) {
+      let tour;
+      try {
+        tour = mapViatorToEngine6Tour(toPayload(fixture));
+      } catch {
+        continue;
+      }
+      const graph = buildEngine6SchemaGraph(tour)["@graph"] as Array<Record<string, unknown>>;
+      const webPage = graph.find(node => node["@type"] === "WebPage") as Record<string, unknown> | undefined;
+      const product = graph.find(node => node["@type"] === "Product") as Record<string, unknown> | undefined;
+      const trip = graph.find(node => node["@type"] === "TouristTrip") as Record<string, unknown> | undefined;
+      const title = tour.seoTitle;
+      const desc = tour.metaDescription;
+
+      expect(title.length).toBeGreaterThanOrEqual(15);
+      expect(title.length).toBeLessThanOrEqual(80);
+      expect(title).not.toMatch(/\.\.\.$/);
+      expect(desc.length).toBeGreaterThanOrEqual(80);
+      expect(desc).not.toContain("homepage");
+      for (const banned of bannedFragments) {
+        expect(`${title} ${desc}`.toLowerCase()).not.toContain(banned);
+      }
+
+      expect(webPage?.name).toBe(product?.name);
+      expect(product?.name).toBe(trip?.name);
+      expect(webPage?.description).toBe(product?.description);
+      expect(product?.description).toBe(trip?.description);
+    }
+  });
+
 });
