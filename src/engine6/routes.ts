@@ -99,6 +99,9 @@ export const ENGINE6_BIG_SUR_MONTEREY_CARMEL_ROUTE =
 export const ENGINE6_MUIR_WOODS_SAUSALITO_PRODUCT_CODE = "152424P1";
 export const ENGINE6_MUIR_WOODS_SAUSALITO_ROUTE =
   "/destinations/california/san-francisco/tours/muir-woods-and-sausalito-small-group-tour";
+export const ENGINE6_GOLDEN_GATE_BRIDGE_BIKE_PRODUCT_CODE = "6007GGB";
+export const ENGINE6_GOLDEN_GATE_BRIDGE_BIKE_ROUTE =
+  "/destinations/california/san-francisco/tours/bike-the-golden-gate-bridge-san-francisco-to-sausalito";
 export const ENGINE6_SAN_FRANCISCO_LOVE_TOUR_PRODUCT_CODE = "23068P2";
 export const ENGINE6_SAN_FRANCISCO_LOVE_TOUR_ROUTE =
   "/destinations/california/san-francisco/tours/san-francisco-love-tour";
@@ -541,6 +544,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_MUIR_WOODS_SAUSALITO_ROUTE,
     ENGINE6_MUIR_WOODS_SAUSALITO_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GOLDEN_GATE_BRIDGE_BIKE_ROUTE,
+    ENGINE6_GOLDEN_GATE_BRIDGE_BIKE_PRODUCT_CODE,
   ],
   [
     ENGINE6_SAN_FRANCISCO_LOVE_TOUR_ROUTE,
