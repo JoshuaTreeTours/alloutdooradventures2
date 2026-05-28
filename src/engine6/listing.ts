@@ -18,6 +18,38 @@ const resolveEngine6ListingCountry = (tour: Engine6Tour, stateSlug: string) => {
   return tour.state;
 };
 
+const getEngine6ActivitySlugs = (tour: Engine6Tour) => {
+  const normalizedCategories = new Set(
+    [tour.primaryCategory, ...tour.categories]
+      .filter((value): value is string => Boolean(value))
+      .map(value => value.toLowerCase())
+  );
+  const slugs = new Set<string>();
+
+  if (normalizedCategories.has("bike-tour")) {
+    slugs.add("cycling");
+    slugs.add("bike-tours");
+  }
+
+  if (normalizedCategories.has("hiking-tour")) {
+    slugs.add("hiking");
+  }
+
+  if (
+    normalizedCategories.has("paddle-tour") ||
+    normalizedCategories.has("boat-tour") ||
+    normalizedCategories.has("snorkeling-tour")
+  ) {
+    slugs.add("canoeing");
+  }
+
+  if (normalizedCategories.has("adventure-tour")) {
+    slugs.add("adventure");
+  }
+
+  return slugs.size > 0 ? [...slugs] : ["adventure"];
+};
+
 const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
   const [, stateSlug = "", citySlug = "", slug = ""] =
     ENGINE6_CANONICAL_TOUR_PATH.exec(tour.canonicalPath) ?? [];
@@ -50,7 +82,7 @@ const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
     startingPrice: tour.priceAmount ?? undefined,
     currency: "USD",
     tagPills: tour.categoryLabel ? [tour.categoryLabel] : undefined,
-    activitySlugs: ["bike-tours"],
+    activitySlugs: getEngine6ActivitySlugs(tour),
     bookingProvider: tour.ownership.ctaOwner,
     bookingUrl: tour.bookingUrl,
     longDescription: tour.overviewText ?? card.description,
