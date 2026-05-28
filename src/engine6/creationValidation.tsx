@@ -9,6 +9,7 @@ import {
 } from "../data/tours";
 import ToursLanding from "../pages/tours/ToursLanding";
 import { toEngine6Card } from "./cards";
+import { validateEngine6GovernedItinerary } from "./itineraryGovernance";
 import Engine6TourPage from "./components/Engine6TourPage";
 import {
   buildEngine6ParentCityToursPath,
@@ -129,7 +130,8 @@ const isSimpleExperienceProfile = (tour: Engine6Tour) => {
     /\b(short|cruise|catamaran|ferry|ride|sightseeing|boat|panoramic|scenic)\b/.test(
       `${title} ${category}`
     );
-  const shortDuration = durationMinutes !== null ? durationMinutes <= 120 : false;
+  const shortDuration =
+    durationMinutes !== null ? durationMinutes <= 120 : false;
   return simpleKeyword || shortDuration;
 };
 
@@ -234,6 +236,7 @@ export const validateEngine6CreationContract = ({
   const renderedItineraryItemCount = (
     pageHtml.match(/data-testid="engine6-itinerary-item"/g) ?? []
   ).length;
+  const sourceStops = getSourceItineraryStops(rawPayload);
   const hasValidResolvedHero =
     typeof resolvedPrimaryHero === "string" &&
     resolvedPrimaryHero.startsWith("http") &&
@@ -404,13 +407,17 @@ export const validateEngine6CreationContract = ({
     typeof extractedFields.reviewCount === "number" &&
     !pageHtml.includes('data-testid="engine6-rating-summary"')
   ) {
-    violations.push("above-fold rating/review count missing despite API values");
+    violations.push(
+      "above-fold rating/review count missing despite API values"
+    );
   }
   if (
     extractedFields.meetingPointText?.trim() &&
     !pageHtml.includes("<strong>Meeting point:</strong>")
   ) {
-    violations.push("above-fold meeting point missing despite API meeting point");
+    violations.push(
+      "above-fold meeting point missing despite API meeting point"
+    );
   }
 
   if (parentCityToursPath) {
@@ -438,7 +445,9 @@ export const validateEngine6CreationContract = ({
     }
   }
 
-  const breadcrumbList = graph.find(node => node["@type"] === "BreadcrumbList") as
+  const breadcrumbList = graph.find(
+    node => node["@type"] === "BreadcrumbList"
+  ) as
     | {
         itemListElement?: Array<{ position?: number; item?: string }>;
       }
@@ -503,8 +512,13 @@ export const validateEngine6CreationContract = ({
       "timeline rendered without sufficient structured stop data"
     );
   }
-  if (structuredStopCount > 0 && renderedItineraryItemCount !== tour.itinerary.length) {
-    violations.push("itinerary length parity mismatch between mapped and rendered stops");
+  if (
+    structuredStopCount > 0 &&
+    renderedItineraryItemCount !== tour.itinerary.length
+  ) {
+    violations.push(
+      "itinerary length parity mismatch between mapped and rendered stops"
+    );
   }
   if (
     extractedFields.itinerary.length > 0 &&
@@ -534,8 +548,15 @@ export const validateEngine6CreationContract = ({
     );
   }
 
+  violations.push(
+    ...validateEngine6GovernedItinerary({
+      renderedItems: tour.itinerary,
+      sourceItems: sourceStops,
+      overviewText: tour.overviewText,
+    })
+  );
+
   if (fixture?.validationRules?.itineraryOriginalityForNewBuilds) {
-    const sourceStops = getSourceItineraryStops(rawPayload);
     if (sourceStops.length !== tour.itinerary.length) {
       violations.push(
         "new-build itinerary originality validation failed: itinerary was reduced or simplified versus Viator source stops"
@@ -574,7 +595,10 @@ export const validateEngine6CreationContract = ({
           );
         }
       }
-      if (targetDescription && isGenericItineraryDescription(targetDescription)) {
+      if (
+        targetDescription &&
+        isGenericItineraryDescription(targetDescription)
+      ) {
         violations.push(
           `new-build itinerary originality validation failed: stop ${index + 1} (${sourceStop.title}) description is generic`
         );
@@ -586,10 +610,14 @@ export const validateEngine6CreationContract = ({
     | { itinerary?: unknown }
     | undefined;
   if (tour.itinerary.length >= 2 && !tripNode?.itinerary) {
-    violations.push("schema itinerary missing while visible itinerary is present");
+    violations.push(
+      "schema itinerary missing while visible itinerary is present"
+    );
   }
   if (tour.itinerary.length < 2 && tripNode?.itinerary) {
-    violations.push("schema itinerary present while visible itinerary is absent");
+    violations.push(
+      "schema itinerary present while visible itinerary is absent"
+    );
   }
 
   if (tour.faqs.length > 0) {
@@ -642,7 +670,8 @@ export const validateEngine6CreationContract = ({
     violations.push("card hero did not use authoritative resolved hero");
   }
   if (
-    (product as { image?: string } | undefined)?.image !== tour.resolvedHero?.url
+    (product as { image?: string } | undefined)?.image !==
+    tour.resolvedHero?.url
   ) {
     violations.push("schema hero did not use authoritative resolved hero");
   }
