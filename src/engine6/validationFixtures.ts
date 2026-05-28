@@ -525,6 +525,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     rawPayload: specimen304471p122Payload as Record<string, unknown>,
   },
   {
+    productCode: "333016P3",
+    publicUrl:
+      "https://www.viator.com/tours/San-Francisco/Private-City-Tour-of-San-Francisco/d651-333016P3",
+    rawPayload: specimen333016p3Payload as Record<string, unknown>,
+  },
+  {
     productCode: "100569P5",
     publicUrl:
       "https://www.viator.com/tours/Anchorage/SUNSET-Wilderness-Wildlife-Glacier-and-Nature-Free-Photo-Lessons-May-Sept/d4152-100569P5",
