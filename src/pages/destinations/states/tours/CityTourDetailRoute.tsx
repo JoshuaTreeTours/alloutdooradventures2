@@ -53,11 +53,15 @@ import { getEngine4TourBySlugs } from "../../../../engine4/routing";
 import { getLegacyFhMigratedTourBySlugs } from "../../../../engine6/legacyFh/registry";
 import Engine6TourPage from "../../../../engine6/components/Engine6TourPage";
 import { getEngine6NativeTourByCanonicalPath } from "../../../../engine6/registry";
-import type { Engine6ApiResponse, Engine6Tour } from "../../../../engine6/types";
+import type {
+  Engine6ApiResponse,
+  Engine6Tour,
+} from "../../../../engine6/types";
 import { isExcludedProductCode } from "../../../../data/excludedProductCodes";
 import { isEngine6CanonicalPath } from "../../../../engine6/routes";
 import { buildEngine6SchemaGraph } from "../../../../engine6/schema/buildEngine6SchemaGraph";
 import { mergeEngine6LiveFieldsIntoTour } from "../../../../engine6/liveProductFields";
+import { isEngine6ItinerarySectionSuppressed } from "../../../../engine6/mapViatorToEngine6Tour";
 import {
   assertEngine6CtaIntegrity,
   assertEngine6DataSource,
@@ -124,7 +128,10 @@ export default function CityTourDetailRoute({
     if (/half dome/i.test(normalizedTitle)) {
       return "Half Dome stands out as Yosemite’s most recognizable granite summit above the valley skyline.";
     }
-    if (/bridalveil/i.test(normalizedTitle) || /waterfall|fall trail/i.test(normalizedTitle)) {
+    if (
+      /bridalveil/i.test(normalizedTitle) ||
+      /waterfall|fall trail/i.test(normalizedTitle)
+    ) {
       return `${title} highlights Yosemite’s glacially carved valley and cascading water features${durationClause}.`;
     }
     if (/valley view/i.test(normalizedTitle)) {
@@ -239,7 +246,8 @@ export default function CityTourDetailRoute({
     typeof process !== "undefined" &&
     process.env.ENABLE_FH_CONTENT_PILOT_PALM_SPRINGS === "true";
 
-  const routeProductCode = params.tourSlug.split("-").at(-1)?.toUpperCase() ?? null;
+  const routeProductCode =
+    params.tourSlug.split("-").at(-1)?.toUpperCase() ?? null;
 
   if (isExcludedProductCode(routeProductCode)) {
     return (
@@ -261,8 +269,7 @@ export default function CityTourDetailRoute({
     );
   }
 
-  const requestedPath =
-    `/destinations/${params.stateSlug}/${params.citySlug}/tours/${params.tourSlug}`;
+  const requestedPath = `/destinations/${params.stateSlug}/${params.citySlug}/tours/${params.tourSlug}`;
 
   const migratedLegacyEngine6Tour = getLegacyFhMigratedTourBySlugs(
     params.stateSlug,
@@ -284,8 +291,12 @@ export default function CityTourDetailRoute({
 
     let cancelled = false;
     const productCode = nativeEngine6Tour.productCode;
+    const suppressLiveContentFields =
+      isEngine6ItinerarySectionSuppressed(productCode);
 
-    fetch(`/api/engine6/viator-product?productCode=${encodeURIComponent(productCode)}`)
+    fetch(
+      `/api/engine6/viator-product?productCode=${encodeURIComponent(productCode)}`
+    )
       .then(async response => {
         if (!response.ok) {
           return null;
@@ -295,7 +306,9 @@ export default function CityTourDetailRoute({
         if (!extracted) return null;
         return {
           priceAmount:
-            typeof extracted.priceAmount === "number" ? extracted.priceAmount : null,
+            typeof extracted.priceAmount === "number"
+              ? extracted.priceAmount
+              : null,
           priceFormatted:
             typeof extracted.priceFormatted === "string"
               ? extracted.priceFormatted
@@ -305,56 +318,70 @@ export default function CityTourDetailRoute({
               ? extracted.aggregateRating
               : null,
           reviewCount:
-            typeof extracted.reviewCount === "number" ? extracted.reviewCount : null,
+            typeof extracted.reviewCount === "number"
+              ? extracted.reviewCount
+              : null,
           durationText:
-            typeof extracted.durationText === "string" ? extracted.durationText : null,
+            typeof extracted.durationText === "string"
+              ? extracted.durationText
+              : null,
           meetingPointText:
             typeof extracted.meetingPointText === "string"
               ? extracted.meetingPointText
               : null,
           overviewText:
+            !suppressLiveContentFields &&
             typeof extracted.overviewText === "string"
               ? extracted.overviewText
               : null,
-          itinerary: Array.isArray(extracted.itinerary)
-            ? (extracted.itinerary
-                .map(item => {
-                  if (!item || typeof item !== "object") return null;
-                  const record = item as Record<string, unknown>;
-                  const title =
-                    typeof record.title === "string" && record.title.trim().length > 0
-                      ? record.title.trim()
-                      : "This stop";
-                  const duration =
-                    typeof record.duration === "string" &&
-                    record.duration.trim().length > 0
-                      ? record.duration.trim()
-                      : null;
-                  const stopType =
-                    record.stopType === "pass-by" ? "pass-by" : "stop";
-                  const sourceDescription =
-                    typeof record.description === "string"
-                      ? record.description.trim()
-                      : "";
-                  const oneSentenceDescription =
-                    sourceDescription.length > 0
-                      ? sourceDescription
-                      : synthesizeItinerarySentence({ title, duration, stopType });
+          itinerary:
+            !suppressLiveContentFields && Array.isArray(extracted.itinerary)
+              ? (extracted.itinerary
+                  .map(item => {
+                    if (!item || typeof item !== "object") return null;
+                    const record = item as Record<string, unknown>;
+                    const title =
+                      typeof record.title === "string" &&
+                      record.title.trim().length > 0
+                        ? record.title.trim()
+                        : "This stop";
+                    const duration =
+                      typeof record.duration === "string" &&
+                      record.duration.trim().length > 0
+                        ? record.duration.trim()
+                        : null;
+                    const stopType =
+                      record.stopType === "pass-by" ? "pass-by" : "stop";
+                    const sourceDescription =
+                      typeof record.description === "string"
+                        ? record.description.trim()
+                        : "";
+                    const oneSentenceDescription =
+                      sourceDescription.length > 0
+                        ? sourceDescription
+                        : synthesizeItinerarySentence({
+                            title,
+                            duration,
+                            stopType,
+                          });
 
-                  return {
-                    ...record,
-                    title,
-                    ...(duration ? { duration } : {}),
-                    stopType,
-                    description: oneSentenceDescription
-                      .replace(/\s+/g, " ")
-                      .replace(/\.\./g, ".")
-                      .trim(),
-                  };
-                })
-                .filter((item): item is Engine6Tour["itinerary"][number] => Boolean(item)) as Engine6Tour["itinerary"])
-            : null,
+                    return {
+                      ...record,
+                      title,
+                      ...(duration ? { duration } : {}),
+                      stopType,
+                      description: oneSentenceDescription
+                        .replace(/\s+/g, " ")
+                        .replace(/\.\./g, ".")
+                        .trim(),
+                    };
+                  })
+                  .filter((item): item is Engine6Tour["itinerary"][number] =>
+                    Boolean(item)
+                  ) as Engine6Tour["itinerary"])
+              : null,
           itinerarySummaryText:
+            !suppressLiveContentFields &&
             typeof extracted.itinerarySummaryText === "string"
               ? extracted.itinerarySummaryText
               : null,
@@ -389,7 +416,11 @@ export default function CityTourDetailRoute({
   }, [nativeEngine6Tour?.productCode]);
 
   if (nativeEngine6Tour) {
-    const liveDynamic = liveEngine6DynamicByProductCode[nativeEngine6Tour.productCode];
+    const liveDynamic =
+      liveEngine6DynamicByProductCode[nativeEngine6Tour.productCode];
+    const suppressLiveContentFields = isEngine6ItinerarySectionSuppressed(
+      nativeEngine6Tour.productCode
+    );
     const resolvedEngine6Tour: Engine6Tour = liveDynamic
       ? {
           ...nativeEngine6Tour,
@@ -407,15 +438,23 @@ export default function CityTourDetailRoute({
             liveDynamic.reviewCount !== null
               ? liveDynamic.reviewCount
               : nativeEngine6Tour.reviewCount,
-          durationText: liveDynamic.durationText ?? nativeEngine6Tour.durationText,
+          durationText:
+            liveDynamic.durationText ?? nativeEngine6Tour.durationText,
           meetingPointText:
             liveDynamic.meetingPointText ?? nativeEngine6Tour.meetingPointText,
-          overviewText: liveDynamic.overviewText ?? nativeEngine6Tour.overviewText,
-          itinerary: liveDynamic.itinerary ?? nativeEngine6Tour.itinerary,
-          itinerarySummaryText:
-            liveDynamic.itinerarySummaryText ?? nativeEngine6Tour.itinerarySummaryText,
+          overviewText: suppressLiveContentFields
+            ? nativeEngine6Tour.overviewText
+            : (liveDynamic.overviewText ?? nativeEngine6Tour.overviewText),
+          itinerary: suppressLiveContentFields
+            ? nativeEngine6Tour.itinerary
+            : (liveDynamic.itinerary ?? nativeEngine6Tour.itinerary),
+          itinerarySummaryText: suppressLiveContentFields
+            ? nativeEngine6Tour.itinerarySummaryText
+            : (liveDynamic.itinerarySummaryText ??
+              nativeEngine6Tour.itinerarySummaryText),
           included: liveDynamic.included ?? nativeEngine6Tour.included,
-          requirements: liveDynamic.requirements ?? nativeEngine6Tour.requirements,
+          requirements:
+            liveDynamic.requirements ?? nativeEngine6Tour.requirements,
         }
       : nativeEngine6Tour;
 
@@ -437,9 +476,8 @@ export default function CityTourDetailRoute({
     const schema = buildEngine6SchemaGraph(resolvedEngine6Tour);
     const graph = schema["@graph"] as Array<Record<string, unknown>>;
     const product = graph.find(node => node["@type"] === "Product");
-    const schemaImage = (
-      product as { image?: string | string[] } | undefined
-    )?.image;
+    const schemaImage = (product as { image?: string | string[] } | undefined)
+      ?.image;
     const primarySchemaImage = Array.isArray(schemaImage)
       ? schemaImage[0]
       : schemaImage;
