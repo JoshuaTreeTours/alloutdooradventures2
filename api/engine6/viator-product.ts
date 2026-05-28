@@ -9,6 +9,45 @@ import { extractEngine6Product } from "./viatorExtractors.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 
+const CONTAMINATED_CONTENT_SUPPRESSED_PRODUCT_CODES = new Set(["447486P2"]);
+
+const HAPPY_HOUR_YACHT_DESCRIPTION =
+  "Santa Barbara Happy Hour on a Yacht is a relaxing 90-minute cruise along the Santa Barbara waterfront, offering coastal views, fresh ocean air, and a social golden-hour atmosphere.";
+
+const shouldSuppressContaminatedContent = (productCode: string) =>
+  CONTAMINATED_CONTENT_SUPPRESSED_PRODUCT_CODES.has(productCode.toUpperCase());
+
+const sanitizeExtractedProductForResponse = <T extends Record<string, unknown>>(
+  productCode: string,
+  extracted: T
+): T => {
+  if (!shouldSuppressContaminatedContent(productCode)) {
+    return extracted;
+  }
+
+  return {
+    ...extracted,
+    overviewText: null,
+    itinerary: [],
+    itinerarySummaryText: null,
+  };
+};
+
+const sanitizeRawProductForResponse = (
+  productCode: string,
+  rawProduct: Record<string, unknown> | null
+): Record<string, unknown> | null => {
+  if (!rawProduct || !shouldSuppressContaminatedContent(productCode)) {
+    return rawProduct;
+  }
+
+  const sanitized = { ...rawProduct };
+  delete sanitized.itinerary;
+  delete sanitized.itineraryItems;
+  sanitized.description = HAPPY_HOUR_YACHT_DESCRIPTION;
+  return sanitized;
+};
+
 const buildHeaders = (apiKey: string) => ({
   "Content-Type": "application/json;version=2.0",
   Accept: "application/json;version=2.0",
@@ -27,7 +66,11 @@ const extractAvailabilitySummaryPrice = (payload: unknown): number | null => {
   }
 
   const fromPrice = (summary as Record<string, unknown>).fromPrice;
-  if (typeof fromPrice !== "number" || !Number.isFinite(fromPrice) || fromPrice <= 0) {
+  if (
+    typeof fromPrice !== "number" ||
+    !Number.isFinite(fromPrice) ||
+    fromPrice <= 0
+  ) {
     return null;
   }
 
@@ -47,7 +90,9 @@ const fetchAvailabilitySummaryPrice = async (args: {
     return null;
   }
 
-  const contentType = String(response.headers.get("content-type") ?? "").toLowerCase();
+  const contentType = String(
+    response.headers.get("content-type") ?? ""
+  ).toLowerCase();
   if (!contentType.includes("json")) {
     return null;
   }
@@ -227,8 +272,14 @@ const respondWithNormalizedEnvelope = (
     source: args.source,
     diagnostics: args.diagnostics,
     rawProductCode: args.productCode,
-    rawProduct: args.rawProduct,
-    extracted: args.extracted,
+    rawProduct: sanitizeRawProductForResponse(
+      args.productCode,
+      args.rawProduct
+    ),
+    extracted: sanitizeExtractedProductForResponse(
+      args.productCode,
+      args.extracted as unknown as Record<string, unknown>
+    ),
     ...(args.error ? { error: args.error } : {}),
     ...(args.details ? { details: args.details } : {}),
   });
@@ -362,8 +413,10 @@ const applyResolvedHero = (args: {
         .slice(0, 3)
         .map(candidate => `${candidate.reason}:${candidate.url}`),
       rejectedForeignHeroCandidates: heroDecision.rejectedForeignCandidates,
-      heroSourceProductCode: heroDecision.finalCandidate?.sourceProductCode ?? null,
-      heroSourceProductUrl: heroDecision.finalCandidate?.sourceProductUrl ?? null,
+      heroSourceProductCode:
+        heroDecision.finalCandidate?.sourceProductCode ?? null,
+      heroSourceProductUrl:
+        heroDecision.finalCandidate?.sourceProductUrl ?? null,
       heroSourceFieldPath: heroDecision.finalCandidate?.sourceFieldPath ?? null,
       heroHost: heroDecision.finalCandidate?.host ?? null,
     },
@@ -380,7 +433,10 @@ const getStrictHeroViolationReason = (args: {
   if (!diagnostics.heroSourceProductCode) return "missing provenance";
   if (!diagnostics.heroSourceProductUrl) return "missing provenance";
   if (!diagnostics.heroSourceFieldPath) return "missing provenance";
-  if (diagnostics.heroSourceProductCode.toUpperCase() !== productCode.toUpperCase()) {
+  if (
+    diagnostics.heroSourceProductCode.toUpperCase() !==
+    productCode.toUpperCase()
+  ) {
     return "mismatched productCode";
   }
   if (!diagnostics.heroSourceFieldPath.startsWith("product.media.images")) {
@@ -547,7 +603,8 @@ export default async function handler(req: any, res: any) {
   }
 
   diagnostics.upstreamStatus = upstreamResponse.status;
-  diagnostics.upstreamContentType = upstreamResponse.headers.get("content-type");
+  diagnostics.upstreamContentType =
+    upstreamResponse.headers.get("content-type");
   diagnostics.upstreamOk = upstreamResponse.ok;
 
   const rawText = await upstreamResponse.text();
@@ -658,7 +715,10 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
-  if (bundledPayload && extractedWithAvailabilityPrice.extracted.priceAmount === null) {
+  if (
+    bundledPayload &&
+    extractedWithAvailabilityPrice.extracted.priceAmount === null
+  ) {
     diagnostics.usedBundledFallbackBecause = "live-price-missing-or-zero";
     respondWithBundledFallback(
       res,
@@ -670,7 +730,10 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
-  if (bundledPayload && extractedWithAvailabilityPrice.diagnostics.heroFallbackTriggered) {
+  if (
+    bundledPayload &&
+    extractedWithAvailabilityPrice.diagnostics.heroFallbackTriggered
+  ) {
     diagnostics.usedBundledFallbackBecause = "live-hero-missing-or-foreign";
     respondWithBundledFallback(
       res,

@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import handler from "./viator-product";
 
@@ -24,6 +24,12 @@ const createRes = () => {
 };
 
 describe("/api/engine6/viator-product", () => {
+  beforeEach(() => {
+    delete process.env.VIATOR_API_KEY;
+    delete process.env.VIATOR_API_BASE_URL;
+    delete process.env.VIATOR_BASE_URL;
+  });
+
   afterEach(() => {
     vi.restoreAllMocks();
     delete process.env.VIATOR_API_KEY;
@@ -61,6 +67,23 @@ describe("/api/engine6/viator-product", () => {
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg"
     );
     expect((res.body as any).extracted.heroImageUrl).not.toContain("/hero.jpg");
+  });
+
+  it("strips contaminated itinerary content from the happy hour yacht API envelope", async () => {
+    const req = { method: "GET", query: { productCode: "447486P2" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).extracted.itinerary).toEqual([]);
+    expect((res.body as any).extracted.itinerarySummaryText).toBeNull();
+    expect((res.body as any).extracted.overviewText).toBeNull();
+    expect((res.body as any).rawProduct.itinerary).toBeUndefined();
+    expect((res.body as any).rawProduct.itineraryItems).toBeUndefined();
+    expect(JSON.stringify((res.body as any).extracted)).not.toMatch(
+      /Stearns Wharf|Andrée Clark Bird Refuge|Santa Barbara Trolley Tour/i
+    );
   });
 
   it("falls back when bundled payload lacks product.media.images candidates", async () => {
@@ -171,9 +194,9 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).extracted.heroImageUrl).toBe(
       "https://media.tacdn.com/media/attractions-content--1x-1/0f/56/92/caption.jpg"
     );
-    expect((res.body as any).diagnostics.selectedHeroWidth).toBeGreaterThanOrEqual(
-      800
-    );
+    expect(
+      (res.body as any).diagnostics.selectedHeroWidth
+    ).toBeGreaterThanOrEqual(800);
   });
 
   it("rejects a foreign live hero candidate and keeps the bundled product-scoped hero", async () => {
@@ -256,9 +279,7 @@ describe("/api/engine6/viator-product", () => {
     );
     expect((res.body as any).details).toBe("null resolved hero");
     expect((res.body as any).extracted.heroImageUrl).toBeNull();
-    expect((res.body as any).diagnostics.heroSourceType).toBe(
-      "none"
-    );
+    expect((res.body as any).diagnostics.heroSourceType).toBe("none");
     expect((res.body as any).diagnostics.heroFallbackTriggered).toBe(true);
     expect((res.body as any).diagnostics.heroCandidatesPresent).toBe(false);
     expect((res.body as any).diagnostics.heroCandidateCount).toBe(0);
@@ -276,10 +297,12 @@ describe("/api/engine6/viator-product", () => {
 
     expect(res.statusCode).toBe(200);
     expect((res.body as any).source).toBe("bundled-fallback");
-    expect((res.body as any).diagnostics.heroQualityClassification).toBe("caption");
-    expect((res.body as any).diagnostics.heroCandidateCount).toBeGreaterThanOrEqual(
-      1
+    expect((res.body as any).diagnostics.heroQualityClassification).toBe(
+      "caption"
     );
+    expect(
+      (res.body as any).diagnostics.heroCandidateCount
+    ).toBeGreaterThanOrEqual(1);
     expect((res.body as any).extracted.heroImageUrl).toBe(
       "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg?w=700&h=500&s=1"
     );
@@ -293,10 +316,12 @@ describe("/api/engine6/viator-product", () => {
 
     expect(res.statusCode).toBe(200);
     expect((res.body as any).source).toBe("bundled-fallback");
-    expect((res.body as any).diagnostics.heroQualityClassification).toBe("splice");
-    expect((res.body as any).diagnostics.heroCandidateCount).toBeGreaterThanOrEqual(
-      1
+    expect((res.body as any).diagnostics.heroQualityClassification).toBe(
+      "splice"
     );
+    expect(
+      (res.body as any).diagnostics.heroCandidateCount
+    ).toBeGreaterThanOrEqual(1);
     expect((res.body as any).extracted.heroImageUrl).toBe(
       "https://media.tacdn.com/media/attractions-splice-spp-360x240/0a/29/a2/f4.jpg"
     );
@@ -310,8 +335,12 @@ describe("/api/engine6/viator-product", () => {
 
     expect(res.statusCode).toBe(200);
     expect((res.body as any).source).toBe("bundled-fallback");
-    expect((res.body as any).diagnostics.heroQualityClassification).toBe("caption");
-    expect((res.body as any).diagnostics.heroSourceProductCode).toBe("6331BAHA");
+    expect((res.body as any).diagnostics.heroQualityClassification).toBe(
+      "caption"
+    );
+    expect((res.body as any).diagnostics.heroSourceProductCode).toBe(
+      "6331BAHA"
+    );
     expect((res.body as any).diagnostics.rejectedForeignCandidateCount).toBe(0);
     expect((res.body as any).extracted.heroImageUrl).toBe(
       "https://dynamic-media.tacdn.com/media/photo-o/30/7a/ae/ce/caption.jpg?w=1400&h=1000&s=1"
@@ -326,8 +355,12 @@ describe("/api/engine6/viator-product", () => {
 
     expect(res.statusCode).toBe(200);
     expect((res.body as any).source).toBe("bundled-fallback");
-    expect((res.body as any).diagnostics.heroQualityClassification).toBe("caption");
-    expect((res.body as any).diagnostics.heroSourceProductCode).toBe("89173P10");
+    expect((res.body as any).diagnostics.heroQualityClassification).toBe(
+      "caption"
+    );
+    expect((res.body as any).diagnostics.heroSourceProductCode).toBe(
+      "89173P10"
+    );
     expect((res.body as any).diagnostics.finalHeroUrl).toBe(
       "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/e5/f4/caption.jpg?w=700&h=500&s=1"
     );
@@ -360,7 +393,9 @@ describe("/api/engine6/viator-product", () => {
       (res.body as any).diagnostics.rejectedForeignHeroCandidates.length
     );
     expect(
-      Array.isArray((res.body as any).diagnostics.rejectedForeignCandidateExamples)
+      Array.isArray(
+        (res.body as any).diagnostics.rejectedForeignCandidateExamples
+      )
     ).toBe(true);
   });
 
@@ -375,9 +410,11 @@ describe("/api/engine6/viator-product", () => {
         JSON.stringify({
           product: {
             productCode: "ROOT1",
-            productUrl: "https://www.viator.com/tours/Miami/Root-Pool-Test/d662-ROOT1",
+            productUrl:
+              "https://www.viator.com/tours/Miami/Root-Pool-Test/d662-ROOT1",
             title: "Root Pool Test",
-            imageUrl: "https://dynamic-media.tacdn.com/media/photo-o/ff/00/foreign.jpg",
+            imageUrl:
+              "https://dynamic-media.tacdn.com/media/photo-o/ff/00/foreign.jpg",
             images: [
               {
                 url: "https://dynamic-media.tacdn.com/media/photo-o/ff/11/foreign-array.jpg",
@@ -402,7 +439,9 @@ describe("/api/engine6/viator-product", () => {
     );
     expect((res.body as any).details).toBe("null resolved hero");
     expect((res.body as any).diagnostics.heroCandidatesPresent).toBe(false);
-    expect((res.body as any).diagnostics.heroCandidateCountBeforeFiltering).toBe(0);
+    expect(
+      (res.body as any).diagnostics.heroCandidateCountBeforeFiltering
+    ).toBe(0);
     expect((res.body as any).diagnostics.heroFallbackTriggered).toBe(true);
     expect((res.body as any).extracted.heroImageUrl).toBeNull();
   });
