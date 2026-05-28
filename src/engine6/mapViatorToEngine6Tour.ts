@@ -52,6 +52,13 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "415653P2":
     "Explore Yosemite National Park from San Francisco on a private tour featuring giant sequoias, Glacier Point views, waterfalls, granite cliffs, and Sierra scenery.",
 };
+const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
+  "447486P2",
+]);
+
+export const isEngine6ItinerarySectionSuppressed = (productCode: string) =>
+  ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES.has(productCode);
+
 const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "447486P2":
     "Santa Barbara Happy Hour on a Yacht is a relaxing 90-minute cruise along the Santa Barbara waterfront, offering coastal views, fresh ocean air, and a social golden-hour atmosphere. Departing near Santa Barbara Harbor, this boat tour trades city streets for open water, marina scenery, shoreline views, and the Santa Ynez Mountain backdrop. Guests can unwind onboard while the captain cruises calm coastal routes past the harbor, Stearns Wharf, East Beach, and the Santa Barbara coastline.",
@@ -609,25 +616,32 @@ export const mapViatorToEngine6Tour = (
     payload.extracted.overviewText ?? ""
   );
   const highlights = payload.extracted.highlights ?? [];
+  const suppressItinerarySection = isEngine6ItinerarySectionSuppressed(
+    payload.rawProductCode
+  );
   const itineraryOverride =
     ENGINE6_ITINERARY_ITEM_OVERRIDES[payload.rawProductCode] ?? null;
-  const itinerary = itineraryOverride
-    ? itineraryOverride.map(item => ({
-        title: item.title,
-        description: item.description,
-        stopType: item.stopType,
-        duration: null,
-        admissionNote: null,
-      }))
-    : (payload.extracted.itinerary?.map((item, index) => ({
-        ...item,
-        description: rewriteItineraryDescriptionToSingleSentence({
-          productCode: payload.rawProductCode,
-          item,
-          index,
-        }),
-      })) ?? []);
-  const itinerarySummaryText = payload.extracted.itinerarySummaryText ?? null;
+  const itinerary = suppressItinerarySection
+    ? []
+    : itineraryOverride
+      ? itineraryOverride.map(item => ({
+          title: item.title,
+          description: item.description,
+          stopType: item.stopType,
+          duration: null,
+          admissionNote: null,
+        }))
+      : (payload.extracted.itinerary?.map((item, index) => ({
+          ...item,
+          description: rewriteItineraryDescriptionToSingleSentence({
+            productCode: payload.rawProductCode,
+            item,
+            index,
+          }),
+        })) ?? []);
+  const itinerarySummaryText = suppressItinerarySection
+    ? null
+    : (payload.extracted.itinerarySummaryText ?? null);
   const faqs = payload.extracted.faqs ?? [];
   const included = payload.extracted.included ?? [];
   const requirements = payload.extracted.requirements ?? [];

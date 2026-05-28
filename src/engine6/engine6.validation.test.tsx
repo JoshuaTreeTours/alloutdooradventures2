@@ -3,7 +3,10 @@ import { renderToString } from "react-dom/server";
 
 import Engine6TourPage from "./components/Engine6TourPage";
 import { toEngine6Card } from "./cards";
-import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
+import {
+  isEngine6ItinerarySectionSuppressed,
+  mapViatorToEngine6Tour,
+} from "./mapViatorToEngine6Tour";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import { buildEngine6ValidationReport } from "./validation";
 import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures";
@@ -107,8 +110,19 @@ describe("engine6 single-tour validation harness", () => {
       expect(tour.diagnostics.rejectedForeignHeroCandidates).toEqual([]);
       const structuredStops = countStructuredSourceStops(fixture.rawPayload);
       if (structuredStops >= 2) {
-        expect(tour.itinerary.length).toBeGreaterThanOrEqual(2);
-        expect(html).toContain('data-testid="engine6-itinerary-timeline"');
+        if (isEngine6ItinerarySectionSuppressed(fixture.productCode)) {
+          expect(tour.itinerary).toEqual([]);
+          expect(tour.itinerarySummaryText).toBeNull();
+          expect(html).not.toContain(
+            'data-testid="engine6-itinerary-timeline"'
+          );
+          expect(html).not.toContain(
+            'data-testid="engine6-itinerary-summary-only"'
+          );
+        } else {
+          expect(tour.itinerary.length).toBeGreaterThanOrEqual(2);
+          expect(html).toContain('data-testid="engine6-itinerary-timeline"');
+        }
       }
       if (typeof tour.priceAmount === "number") {
         expect(tour.priceFormatted).toMatch(/^From \$/);
@@ -168,7 +182,9 @@ describe("engine6 single-tour validation harness", () => {
       expect(product?.url).toBe(
         `https://www.alloutdooradventures.com${tour.canonicalPath}`
       );
-      const breadcrumbList = graph.find(node => node["@type"] === "BreadcrumbList") as
+      const breadcrumbList = graph.find(
+        node => node["@type"] === "BreadcrumbList"
+      ) as
         | {
             itemListElement?: Array<{ position?: number; item?: string }>;
           }
@@ -202,7 +218,9 @@ describe("engine6 single-tour validation harness", () => {
 
     expect(tour.heroImageUrl).toBeNull();
     expect(tour.diagnostics.heroFallbackTriggered).toBe(true);
-    expect(tour.diagnostics.heroPlaceholderFallbackReason).toBe("no-candidates");
+    expect(tour.diagnostics.heroPlaceholderFallbackReason).toBe(
+      "no-candidates"
+    );
   });
 
   it("rotates standardized SEO openings across multiple tours", () => {
@@ -229,7 +247,9 @@ describe("engine6 single-tour validation harness", () => {
 
     expect(tour.title).toBe(extracted.title);
     expect(tour.priceAmount).toBe(extracted.priceAmount);
-    expect(tour.priceFormatted).toBe(`From $${extracted.priceAmount!.toFixed(2)}`);
+    expect(tour.priceFormatted).toBe(
+      `From $${extracted.priceAmount!.toFixed(2)}`
+    );
     expect(tour.aggregateRating).toBe(extracted.aggregateRating);
     expect(tour.reviewCount).toBe(extracted.reviewCount);
     expect(tour.durationText).toBe(extracted.durationText);
@@ -243,7 +263,9 @@ describe("engine6 single-tour validation harness", () => {
     expect(tour.itinerary.map(item => item.duration ?? null)).toEqual(
       (extracted.itinerary ?? []).map(item => item.duration ?? null)
     );
-    expect(tour.itinerary.every(item => Boolean(item.description?.trim()))).toBe(true);
+    expect(
+      tour.itinerary.every(item => Boolean(item.description?.trim()))
+    ).toBe(true);
 
     expect(tour.diagnostics.commercialPriceFieldPath).toBe("product.priceFrom");
     expect(tour.diagnostics.ratingFieldPath).toBe(
@@ -257,8 +279,6 @@ describe("engine6 single-tour validation harness", () => {
       /^product\.logistics\.start(?:\[0\])?\.description$/
     );
   });
-
-
 
   it("emits a compact validation report for each Engine6 tour fixture", () => {
     const reports = ENGINE6_VALIDATION_FIXTURES.map(

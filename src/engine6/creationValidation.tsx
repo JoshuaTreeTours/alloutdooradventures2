@@ -10,6 +10,7 @@ import {
 import ToursLanding from "../pages/tours/ToursLanding";
 import { toEngine6Card } from "./cards";
 import { validateEngine6GovernedItinerary } from "./itineraryGovernance";
+import { isEngine6ItinerarySectionSuppressed } from "./mapViatorToEngine6Tour";
 import Engine6TourPage from "./components/Engine6TourPage";
 import {
   buildEngine6ParentCityToursPath,
@@ -485,6 +486,9 @@ export const validateEngine6CreationContract = ({
   }
 
   const structuredStopCount = structuredStopCountFromPayload(rawPayload);
+  const suppressItinerarySection = isEngine6ItinerarySectionSuppressed(
+    tour.productCode
+  );
   const simpleItineraryEligible =
     isSimpleExperienceProfile(tour) &&
     structuredStopCount <= 1 &&
@@ -497,7 +501,11 @@ export const validateEngine6CreationContract = ({
   ) {
     violations.push("structured itinerary degraded from timeline rendering");
   }
-  if (structuredStopCount >= 2 && tour.itinerary.length < 2) {
+  if (
+    structuredStopCount >= 2 &&
+    tour.itinerary.length < 2 &&
+    !suppressItinerarySection
+  ) {
     violations.push(
       "structured itinerary was dropped despite reliable source stop data"
     );
@@ -506,7 +514,8 @@ export const validateEngine6CreationContract = ({
     tour.itinerary.length < 2 &&
     structuredStopCount > 0 &&
     pageHtml.includes('data-testid="engine6-itinerary-timeline"') &&
-    !simpleItineraryEligible
+    !simpleItineraryEligible &&
+    !suppressItinerarySection
   ) {
     violations.push(
       "timeline rendered without sufficient structured stop data"
@@ -514,7 +523,8 @@ export const validateEngine6CreationContract = ({
   }
   if (
     structuredStopCount > 0 &&
-    renderedItineraryItemCount !== tour.itinerary.length
+    renderedItineraryItemCount !== tour.itinerary.length &&
+    !suppressItinerarySection
   ) {
     violations.push(
       "itinerary length parity mismatch between mapped and rendered stops"
@@ -541,7 +551,8 @@ export const validateEngine6CreationContract = ({
     tour.itinerary.length < 2 &&
     tour.itinerarySummaryText &&
     !pageHtml.includes('data-testid="engine6-itinerary-summary-only"') &&
-    !simpleItineraryEligible
+    !simpleItineraryEligible &&
+    !suppressItinerarySection
   ) {
     violations.push(
       "summary-only itinerary missing explicit summary rendering"
@@ -558,7 +569,10 @@ export const validateEngine6CreationContract = ({
     );
   }
 
-  if (fixture?.validationRules?.itineraryOriginalityForNewBuilds) {
+  if (
+    fixture?.validationRules?.itineraryOriginalityForNewBuilds &&
+    !suppressItinerarySection
+  ) {
     if (sourceStops.length !== tour.itinerary.length) {
       violations.push(
         "new-build itinerary originality validation failed: itinerary was reduced or simplified versus Viator source stops"
