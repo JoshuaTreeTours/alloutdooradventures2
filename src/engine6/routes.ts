@@ -102,6 +102,9 @@ export const ENGINE6_MUIR_WOODS_SAUSALITO_ROUTE =
 export const ENGINE6_SAN_FRANCISCO_LOVE_TOUR_PRODUCT_CODE = "23068P2";
 export const ENGINE6_SAN_FRANCISCO_LOVE_TOUR_ROUTE =
   "/destinations/california/san-francisco/tours/san-francisco-love-tour";
+export const ENGINE6_SAN_FRANCISCO_YOSEMITE_CAMPING_PRODUCT_CODE = "3454YE3D";
+export const ENGINE6_SAN_FRANCISCO_YOSEMITE_CAMPING_ROUTE =
+  "/destinations/california/san-francisco/tours/3-day-yosemite-camping-adventure-from-san-francisco";
 export const ENGINE6_YOSEMITE_SEQUOIAS_GLACIER_POINT_PRODUCT_CODE = "415653P2";
 export const ENGINE6_YOSEMITE_SEQUOIAS_GLACIER_POINT_ROUTE =
   "/destinations/california/san-francisco/tours/yosemite-sequoias-glacier-point-and-more-5-person-epic-adventure-415653P2";
@@ -562,6 +565,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SAN_FRANCISCO_PRIVATE_CITY_TOUR_ROUTE,
     ENGINE6_SAN_FRANCISCO_PRIVATE_CITY_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_FRANCISCO_YOSEMITE_CAMPING_ROUTE,
+    ENGINE6_SAN_FRANCISCO_YOSEMITE_CAMPING_PRODUCT_CODE,
   ],
   [
     ENGINE6_LOS_ANGELES_PRIVATE_GUIDED_FULL_DAY_ROUTE,

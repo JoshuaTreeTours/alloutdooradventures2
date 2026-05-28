@@ -1,0 +1,1467 @@
+{
+  "status": "ACTIVE",
+  "productCode": "3454YE3D",
+  "language": "en",
+  "createdAt": "2006-12-01T08:00:00Z",
+  "lastUpdatedAt": "2026-05-21T07:16:04Z",
+  "title": "Yosemite 3-Day Camping Adventure from San Francisco",
+  "ticketInfo": {
+    "ticketTypes": [
+      "MOBILE_ONLY"
+    ],
+    "ticketTypeDescription": "Mobile or paper ticket accepted",
+    "ticketsPerBooking": "ONE_PER_BOOKING",
+    "ticketsPerBookingDescription": "One per booking"
+  },
+  "pricingInfo": {
+    "type": "PER_PERSON",
+    "ageBands": [
+      {
+        "ageBand": "CHILD",
+        "startAge": 0,
+        "endAge": 12,
+        "minTravelersPerBooking": 0,
+        "maxTravelersPerBooking": 9
+      },
+      {
+        "ageBand": "ADULT",
+        "startAge": 13,
+        "endAge": 99,
+        "minTravelersPerBooking": 1,
+        "maxTravelersPerBooking": 9
+      }
+    ]
+  },
+  "images": [
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": true,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/06/ef/e4/20.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/06/ef/e4/20.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/06/ef/e4/20.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/06/ef/e4/20.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/06/ef/e4/20.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/06/ef/e4/20.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/ef/e4/20.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/06/ef/e4/20.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/06/ef/e4/20.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/06/ef/e4/20.jpg"
+        }
+      ]
+    },
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": false,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/2b/41/77.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/2b/41/77.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/2b/41/77.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/2b/41/77.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/2b/41/77.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/2b/41/77.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/2b/41/77.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/2b/41/77.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/2b/41/77.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/2b/41/77.jpg"
+        }
+      ]
+    },
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": false,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/2b/41/4b.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/2b/41/4b.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/2b/41/4b.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/2b/41/4b.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/2b/41/4b.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/2b/41/4b.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/2b/41/4b.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/2b/41/4b.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/2b/41/4b.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/2b/41/4b.jpg"
+        }
+      ]
+    },
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": false,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/09/6f/64/76.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/09/6f/64/76.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/09/6f/64/76.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/6f/64/76.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/09/6f/64/76.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/09/6f/64/76.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/6f/64/76.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/6f/64/76.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/09/6f/64/76.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/09/6f/64/76.jpg"
+        }
+      ]
+    },
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": false,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/2b/41/4a.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/2b/41/4a.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/2b/41/4a.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/2b/41/4a.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/2b/41/4a.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/2b/41/4a.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/2b/41/4a.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/2b/41/4a.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/2b/41/4a.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/2b/41/4a.jpg"
+        }
+      ]
+    },
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": false,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/09/6f/5d/e9.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/09/6f/5d/e9.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/09/6f/5d/e9.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/6f/5d/e9.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/09/6f/5d/e9.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/09/6f/5d/e9.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/6f/5d/e9.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/6f/5d/e9.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/09/6f/5d/e9.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/09/6f/5d/e9.jpg"
+        }
+      ]
+    },
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": false,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/2b/41/49.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/2b/41/49.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/2b/41/49.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/2b/41/49.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/2b/41/49.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/2b/41/49.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/2b/41/49.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/2b/41/49.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/2b/41/49.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/2b/41/49.jpg"
+        }
+      ]
+    },
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": false,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/09/6f/5a/05.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/09/6f/5a/05.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/09/6f/5a/05.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/6f/5a/05.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/09/6f/5a/05.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/09/6f/5a/05.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/6f/5a/05.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/6f/5a/05.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/09/6f/5a/05.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/09/6f/5a/05.jpg"
+        }
+      ]
+    },
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": false,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/07/39/47/e0.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/07/39/47/e0.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/07/39/47/e0.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/39/47/e0.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/39/47/e0.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/39/47/e0.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/39/47/e0.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/39/47/e0.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/07/39/47/e0.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/07/39/47/e0.jpg"
+        }
+      ]
+    },
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": false,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/09/6f/5b/e6.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/09/6f/5b/e6.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/09/6f/5b/e6.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/6f/5b/e6.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/09/6f/5b/e6.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/09/6f/5b/e6.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/6f/5b/e6.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/6f/5b/e6.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/09/6f/5b/e6.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/09/6f/5b/e6.jpg"
+        }
+      ]
+    },
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": false,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/09/6f/5e/cd.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/09/6f/5e/cd.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/09/6f/5e/cd.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/6f/5e/cd.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/09/6f/5e/cd.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/09/6f/5e/cd.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/6f/5e/cd.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/6f/5e/cd.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/09/6f/5e/cd.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/09/6f/5e/cd.jpg"
+        }
+      ]
+    },
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": false,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/2b/41/4c.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/2b/41/4c.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/2b/41/4c.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/2b/41/4c.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/2b/41/4c.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/2b/41/4c.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/2b/41/4c.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/2b/41/4c.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/2b/41/4c.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/2b/41/4c.jpg"
+        }
+      ]
+    },
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": false,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/2b/41/7a.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/2b/41/7a.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/2b/41/7a.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/2b/41/7a.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/2b/41/7a.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/2b/41/7a.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/2b/41/7a.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/2b/41/7a.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/2b/41/7a.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/2b/41/7a.jpg"
+        }
+      ]
+    },
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": false,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/2b/41/78.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/2b/41/78.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/2b/41/78.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/2b/41/78.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/2b/41/78.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/2b/41/78.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/2b/41/78.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/2b/41/78.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/2b/41/78.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/2b/41/78.jpg"
+        }
+      ]
+    },
+    {
+      "imageSource": "SUPPLIER_PROVIDED",
+      "caption": "",
+      "isCover": false,
+      "variants": [
+        {
+          "height": 100,
+          "width": 100,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-100x100/0b/2b/41/f8.jpg"
+        },
+        {
+          "height": 200,
+          "width": 200,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-200x200/0b/2b/41/f8.jpg"
+        },
+        {
+          "height": 400,
+          "width": 400,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-400x400/0b/2b/41/f8.jpg"
+        },
+        {
+          "height": 240,
+          "width": 360,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0b/2b/41/f8.jpg"
+        },
+        {
+          "height": 320,
+          "width": 480,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/2b/41/f8.jpg"
+        },
+        {
+          "height": 360,
+          "width": 540,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/0b/2b/41/f8.jpg"
+        },
+        {
+          "height": 446,
+          "width": 674,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/2b/41/f8.jpg"
+        },
+        {
+          "height": 480,
+          "width": 720,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/2b/41/f8.jpg"
+        },
+        {
+          "height": 118,
+          "width": 210,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-210x118/0b/2b/41/f8.jpg"
+        },
+        {
+          "height": 75,
+          "width": 75,
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-75x75/0b/2b/41/f8.jpg"
+        }
+      ]
+    }
+  ],
+  "logistics": {
+    "start": [
+      {
+        "location": {
+          "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5GZsbpUaE0k094ltgtSWN1yTuLnVXddCTFDeLl4c4rsw"
+        },
+        "description": "This tour picks up from the Hilton San Francisco Union Square (Mason Street side)."
+      }
+    ],
+    "end": [
+      {
+        "location": {
+          "ref": "LOC-o0AXGEKPN4wJ9sIG0RAn5GZsbpUaE0k094ltgtSWN1yTuLnVXddCTFDeLl4c4rsw"
+        },
+        "description": "This tour picks up from the Hilton San Francisco Union Square (Mason Street side)."
+      }
+    ],
+    "redemption": {
+      "redemptionType": "NONE",
+      "specialInstructions": "• Minimum numbers apply. There is a possibility of cancellation after confirmation if there is not enough passengers to meet requirements. In the event of this occurring, you will be offered an alternative or full refund\n • Important: Please notify the tour operator of sleeping bag and any dietary requirements prior to the tour"
+    },
+    "travelerPickup": {
+      "pickupOptionType": "MEET_EVERYONE_AT_START_POINT",
+      "allowCustomTravelerPickup": false
+    }
+  },
+  "timeZone": "America/Los_Angeles",
+  "description": "Explore America's favorite national park on a 3-day camping trip that takes you off the beaten path to trails and sights unseen by most who venture here. You'll enjoy three days and two nights of camping, hiking and swimming in a fun-filled, friendly atmosphere. Never camped before? No problem! The necessary camping gear is provided for you, and the tour is fully guided.",
+  "inclusions": [
+    {
+      "category": "OTHER",
+      "categoryDescription": "Other",
+      "type": "OTHER",
+      "typeDescription": "Other",
+      "otherDescription": "All fees and taxes"
+    },
+    {
+      "category": "OTHER",
+      "categoryDescription": "Other",
+      "type": "OTHER",
+      "typeDescription": "Other",
+      "otherDescription": "Professional guide"
+    },
+    {
+      "category": "OTHER",
+      "categoryDescription": "Other",
+      "type": "OTHER",
+      "typeDescription": "Other",
+      "otherDescription": "Transport by biodiesel van"
+    },
+    {
+      "category": "FOOD_AND_DRINK",
+      "categoryDescription": "Food and drink",
+      "type": "LUNCH",
+      "typeDescription": "Lunch",
+      "quantity": 2
+    },
+    {
+      "category": "FOOD_AND_DRINK",
+      "categoryDescription": "Food and drink",
+      "type": "DINNER",
+      "typeDescription": "Dinner",
+      "description": "Dinner"
+    },
+    {
+      "category": "FOOD_AND_DRINK",
+      "categoryDescription": "Food and drink",
+      "type": "BREAKFAST",
+      "typeDescription": "Breakfast",
+      "quantity": 2
+    },
+    {
+      "category": "OTHER",
+      "categoryDescription": "Other",
+      "type": "OTHER",
+      "typeDescription": "Other",
+      "otherDescription": "Camping equipment (except a sleeping bag)"
+    },
+    {
+      "category": "OTHER",
+      "categoryDescription": "Other",
+      "type": "OTHER",
+      "typeDescription": "Other",
+      "otherDescription": "Camping fees"
+    }
+  ],
+  "exclusions": [
+    {
+      "category": "FEES_AND_TAXES",
+      "categoryDescription": "Fees",
+      "type": "GRATUITIES",
+      "typeDescription": "Gratuities",
+      "description": "Gratuities"
+    },
+    {
+      "category": "OTHER",
+      "categoryDescription": "Other",
+      "type": "OTHER",
+      "typeDescription": "Other",
+      "otherDescription": "Sleeping bag (available to rent for USD30)"
+    },
+    {
+      "category": "OTHER",
+      "categoryDescription": "Other",
+      "type": "OTHER",
+      "typeDescription": "Other",
+      "otherDescription": "Hotel pickup and drop-off"
+    },
+    {
+      "category": "FEES_AND_TAXES",
+      "categoryDescription": "Fees",
+      "type": "GOVERNMENT_FEES",
+      "typeDescription": "Government fees",
+      "description": "Non-resident fee for Yosemite National Park for those 16 years and older (includes processing fees)"
+    }
+  ],
+  "additionalInfo": [
+    {
+      "type": "STROLLER_ACCESSIBLE",
+      "description": "Infants and small children can ride in a pram or stroller"
+    },
+    {
+      "type": "PUBLIC_TRANSPORTATION_NEARBY",
+      "description": "Public transportation options are available nearby"
+    },
+    {
+      "type": "INFANT_SEATS_AVAILABLE",
+      "description": "Specialized infant seats are available"
+    },
+    {
+      "type": "PHYSICAL_MEDIUM",
+      "description": "Travelers should have at least a moderate level of physical fitness"
+    },
+    {
+      "type": "OTHER",
+      "description": "Children 17 years and younger must be accompanied by an adult"
+    },
+    {
+      "type": "OTHER",
+      "description": "Tours are arranged on a demand basis and require a minimum of 5 passengers to guarantee departure"
+    },
+    {
+      "type": "OTHER",
+      "description": "Important: Please note if you need a sleeping bag and any dietary requirements in the 'Special Requirements' field when booking"
+    },
+    {
+      "type": "OTHER",
+      "description": "Camping is easy, but cooperation is important. Don't worry if you've never camped before; many people haven't. You will be supplied with all the camping equipment necessary for a trip of this nature, using quality tents, camping and cooking equipment. Everybody is expected to participate in setting up and breaking down the camp, and the professional guides are available to attend to your needs to ensure a positive camping experience. We camp at the best campsites, with hot showers and modern facilities. Swimming is available nearby. During booking, please note if you will need a sleeping bag"
+    },
+    {
+      "type": "OTHER",
+      "description": "We use 4-person tents but only have two people in each. In the case of odd numbers in your party, there is a chance you will be paired with another person of the same gender from a different party."
+    },
+    {
+      "type": "OTHER",
+      "description": "You will be provided with the food, but not the chefs. You guys are the cooks, waiters, dishwashers and, of course, the guests. On leaving the city, we stop at a supermarket and buy everything we need. The fare is a mixture of chicken, beef and vegetarian, all-you-can-eat and very tasty. Most people eat better with us than they have done previously on their travels. Please inform us of any dietary requirements/concerns at the time of booking."
+    },
+    {
+      "type": "OTHER",
+      "description": "Tour operator uses comfortable 15-passenger vans with dual air-conditioning and stereo sound. Our vans are fueled by biodiesel, a vegetable oil-based diesel fuel, to promote green business. All of the vans have large roof racks for your luggage and the camping equipment."
+    },
+    {
+      "type": "OTHER",
+      "description": "On your journeys, you will need sneakers or hiking boots, shorts, T-shirts, swimwear, sun protection, a water bottle, flashlight and something warmer in case there is a change in weather."
+    },
+    {
+      "type": "OTHER",
+      "description": "June through September in Yosemite is hot and sunny with occasional afternoon showers. May and October days are warm with cooler nights. As with all mountain environments, weather can vary quickly, so a layer of warm clothing is a good idea."
+    }
+  ],
+  "cancellationPolicy": {
+    "type": "CUSTOM",
+    "description": "If you cancel at least 6 full day(s) before the scheduled departure time, you will receive a full refund.<br>If you cancel between 2 and 6 day(s) before the scheduled departure time, you will receive a 50% refund.<br>If you cancel within 2 day(s) of the scheduled departure, you will receive a 0% refund.",
+    "cancelIfBadWeather": true,
+    "cancelIfInsufficientTravelers": true,
+    "refundEligibility": [
+      {
+        "dayRangeMin": 6,
+        "percentageRefundable": 100
+      },
+      {
+        "dayRangeMin": 2,
+        "dayRangeMax": 6,
+        "percentageRefundable": 50
+      },
+      {
+        "dayRangeMin": 0,
+        "dayRangeMax": 2,
+        "percentageRefundable": 0
+      }
+    ]
+  },
+  "bookingConfirmationSettings": {
+    "bookingCutoffType": "START_TIME",
+    "bookingCutoffInMinutes": 1440,
+    "confirmationType": "MANUAL"
+  },
+  "bookingRequirements": {
+    "minTravelersPerBooking": 1,
+    "maxTravelersPerBooking": 9,
+    "requiresAdultForBooking": true
+  },
+  "languageGuides": [
+    {
+      "type": "GUIDE",
+      "language": "en",
+      "legacyGuide": "en/SERVICE_GUIDE"
+    }
+  ],
+  "bookingQuestions": [
+    "AGEBAND",
+    "FULL_NAMES_FIRST",
+    "FULL_NAMES_LAST",
+    "SPECIAL_REQUIREMENTS"
+  ],
+  "tags": [
+    367664,
+    21631,
+    21760,
+    367654,
+    12067,
+    11921,
+    11938,
+    11902,
+    367650,
+    11922,
+    21629,
+    367653,
+    11903,
+    11930,
+    21860,
+    21971,
+    22046,
+    12046,
+    367661
+  ],
+  "destinations": [
+    {
+      "ref": "651",
+      "primary": true
+    }
+  ],
+  "itinerary": {
+    "itineraryType": "MULTI_DAY_TOUR",
+    "skipTheLine": false,
+    "privateTour": false,
+    "maxTravelersInSharedTour": 13,
+    "days": [
+      {
+        "title": "San Francisco to Yosemite",
+        "dayNumber": 1,
+        "items": [
+          {
+            "pointOfInterestLocation": {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyAPN5hP7rw3ZviWxXBrVTCE="
+              },
+              "attractionId": 8933
+            },
+            "duration": {},
+            "passByWithoutStopping": false,
+            "admissionIncluded": "NOT_APPLICABLE",
+            "description": "Leave San Francisco behind and cross the Bay Bridge, offering amazing views of Alcatraz Island and Angel Island. Cruise through Oakland, the East Bay and on to Central Valley to stop for groceries (own expense). Travel through Gold Country and the Sierra Nevada Foothills."
+          },
+          {
+            "pointOfInterestLocation": {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyKH9Z6+Cyl3qJmrggbmfSZI="
+              }
+            },
+            "duration": {},
+            "passByWithoutStopping": false,
+            "admissionIncluded": "NOT_APPLICABLE",
+            "description": "After approximately 3-4 hours you'll arrive to the entrance of Yosemite National Park. Enjoy the scenic mountain views as your guide explains the history and geology of this special place."
+          },
+          {
+            "pointOfInterestLocation": {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyMCsB7GPtYE3IdXlWxQLsLM="
+              },
+              "attractionId": 26230
+            },
+            "duration": {
+              "fixedDurationInMinutes": 90
+            },
+            "passByWithoutStopping": false,
+            "admissionIncluded": "YES",
+            "description": "Head down a beautiful scenic path to the enchanted Tuolumne Grove consisting of dozens of Giant Sequoia trees. But don’t be fooled by this moderate downhill stroll. Make sure you bring some water to sip as you enjoy your time among the giants as you have a bit of climb ahead of you to get back to the mini-coach. You'll also have time to enjoy your lunch here among the towering trees."
+          },
+          {
+            "pointOfInterestLocation": {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyHzhmBKZaqaN6NnYx8sLpS8="
+              },
+              "attractionId": 11037
+            },
+            "duration": {
+              "fixedDurationInMinutes": 60
+            },
+            "passByWithoutStopping": false,
+            "admissionIncluded": "YES",
+            "description": "Next, we’ll leave the gentle giants of the Sequoia Grove in the mini-coach to get a narrated tour through Yosemite’s glaciated valley. We’ll make a few stops along the way, to snap some pictures of some of the famous waterfalls and rock formations while your guide gives you some of the history that makes this park so special."
+          },
+          {
+            "pointOfInterestLocation": {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyET83G/4AYsXorHbxCUbQwc="
+              }
+            },
+            "duration": {
+              "fixedDurationInMinutes": 120
+            },
+            "passByWithoutStopping": false,
+            "admissionIncluded": "YES",
+            "description": "Now it’s time to spend a couple of hours exploring on your own! We’ll make a stop near the base of Yosemite Falls. You’ll have a number of options of where to go, including a leisurely walk through the Ansel Adams Gallery, the historic Ahwahnee lodge, or get your pulse up with a hike or bike ride along the river."
+          },
+          {
+            "pointOfInterestLocation": {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyJaWj29ImqU3+efk4qJRHfo="
+              },
+              "attractionId": 11036
+            },
+            "duration": {
+              "fixedDurationInMinutes": 5
+            },
+            "passByWithoutStopping": false,
+            "admissionIncluded": "YES",
+            "description": "You can explore Yosemite Falls on your own during your free time in Yosemite Village."
+          },
+          {
+            "pointOfInterestLocation": {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyPwd25QjAONth7EW6m1p9X8="
+              },
+              "attractionId": 11025
+            },
+            "duration": {
+              "fixedDurationInMinutes": 5
+            },
+            "passByWithoutStopping": false,
+            "admissionIncluded": "NOT_APPLICABLE",
+            "description": "During your free time in Yosemite Village, you can choose to visit the famous photographer' gallery to view a collection of Ansel Adams' original photographs."
+          },
+          {
+            "pointOfInterestLocation": {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyM3ZnUKeqYqhwNCBgbmfq+M="
+              }
+            },
+            "duration": {
+              "fixedDurationInMinutes": 720
+            },
+            "passByWithoutStopping": false,
+            "admissionIncluded": "NOT_APPLICABLE",
+            "description": "Once at camp, your guide will hand out camping gear and show you the local amenities. You'll enjoy a freshly prepared dinner at camp, as well as s’mores as your group shares drinks and stories around the campfire, but don’t forget to get some sleep tonight for a full-day of exploring the park tomorrow."
+          }
+        ],
+        "accommodations": [
+          {
+            "description": "A campsite with modern facilities and we provide all the equipment necessary to ensure you are well taken care."
+          }
+        ],
+        "foodAndDrinks": [
+          {
+            "type": "DINNER",
+            "typeDescription": "Dinner",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "title": "Yosemite High Country",
+        "dayNumber": 2,
+        "items": [
+          {
+            "pointOfInterestLocation": {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyKH9Z6+Cyl3qJmrggbmfSZI="
+              }
+            },
+            "duration": {
+              "fixedDurationInMinutes": 600
+            },
+            "passByWithoutStopping": false,
+            "admissionIncluded": "NOT_APPLICABLE",
+            "description": "Are you ready for clear, sparkling lakes? Crisp, mountain air? Prepare to spend a full day exploring Yosemite’s picturesque lakes, hiking to mountain summits that overlook lush greenery, and passing through serene meadows. Your guide will make sure the group takes full advantage of the park, while making sure everyone is comfortable, by customizing the hikes around the groups’ needs."
+          }
+        ],
+        "accommodations": [
+          {
+            "description": "A campsite with modern facilities and we provide all the equipment necessary to ensure you are well taken care."
+          }
+        ],
+        "foodAndDrinks": [
+          {
+            "type": "BREAKFAST",
+            "typeDescription": "Breakfast",
+            "description": ""
+          },
+          {
+            "type": "LUNCH",
+            "typeDescription": "Lunch",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "title": "Yosemite to San Francisco",
+        "dayNumber": 3,
+        "items": [
+          {
+            "pointOfInterestLocation": {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyHzhmBKZaqaN6NnYx8sLpS8="
+              },
+              "attractionId": 11037
+            },
+            "duration": {
+              "fixedDurationInMinutes": 240
+            },
+            "passByWithoutStopping": false,
+            "admissionIncluded": "YES",
+            "description": "On the last morning, we’ll make a quick breakfast, prepare another brown bag lunch, make sure all the camping gear is put away before heading into Yosemite Valley.\n\nDid you pass up a hike on the way to a vista? Have you been pining after a particular swimming spot? Are you ready to stretch your legs and have a new self-guided adventure? Day three is the perfect time to choose your own adventure in Yosemite Valley. You can hike to a waterfall, rent a bicycle to cruise around the valley floor, check out the visitor’s center, museum, and Ansel Adams Gallery, or relax in the shade by the emerald green Merced River."
+          },
+          {
+            "pointOfInterestLocation": {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyCNuOCOeVdN8yeSXeYPmPt8="
+              }
+            },
+            "duration": {
+              "fixedDurationInMinutes": 15
+            },
+            "passByWithoutStopping": false,
+            "admissionIncluded": "YES",
+            "description": "Regroup for one final group activity, a visit to the El Capitan Meadow to watch the daredevil rock climbers conquering the largest granite monolith in North America."
+          },
+          {
+            "pointOfInterestLocation": {
+              "location": {
+                "ref": "LOC-6eKJ+or5y8o99Qw0C8xWyFxOpjD1Jl28WGja3yZtwdg="
+              }
+            },
+            "duration": {
+              "fixedDurationInMinutes": 240
+            },
+            "passByWithoutStopping": false,
+            "admissionIncluded": "NOT_APPLICABLE",
+            "description": "After a full day of exploring, we’ll make our way back to the San Francisco Hilton, arriving in the city around 8:30pm – 9pm."
+          }
+        ],
+        "foodAndDrinks": [
+          {
+            "type": "BREAKFAST",
+            "typeDescription": "Breakfast",
+            "description": ""
+          },
+          {
+            "type": "LUNCH",
+            "typeDescription": "Lunch",
+            "description": ""
+          }
+        ]
+      }
+    ],
+    "duration": {
+      "fixedDurationInMinutes": 4320
+    }
+  },
+  "productOptions": [
+    {
+      "productOptionCode": "DEFAULT",
+      "description": "",
+      "title": "3-Day Yosemite Camping Tour",
+      "languageGuides": [
+        {
+          "type": "GUIDE",
+          "language": "en",
+          "legacyGuide": "en/SERVICE_GUIDE"
+        }
+      ]
+    }
+  ],
+  "translationInfo": {
+    "containsMachineTranslatedText": false,
+    "translationSource": "ORIGINAL"
+  },
+  "supplier": {
+    "name": "Incredible Adventures",
+    "reference": "SUPPLIER-oFLaies9bPxDZklAmkDbUg=="
+  },
+  "productUrl": "https://www.viator.com/tours/San-Francisco/3-Day-Yosemite-Camping-Adventure-from-San-Francisco/d651-3454YE3D?mcid=42383&pid=P00290915&medium=api&api_version=2.0",
+  "reviews": {
+    "sources": [
+      {
+        "provider": "VIATOR",
+        "reviewCounts": [
+          {
+            "rating": 1,
+            "count": 1
+          },
+          {
+            "rating": 2,
+            "count": 1
+          },
+          {
+            "rating": 3,
+            "count": 9
+          },
+          {
+            "rating": 4,
+            "count": 14
+          },
+          {
+            "rating": 5,
+            "count": 95
+          }
+        ],
+        "totalCount": 120,
+        "averageRating": 4.7
+      },
+      {
+        "provider": "TRIPADVISOR",
+        "reviewCounts": [
+          {
+            "rating": 1,
+            "count": 1
+          },
+          {
+            "rating": 2,
+            "count": 1
+          },
+          {
+            "rating": 3,
+            "count": 5
+          },
+          {
+            "rating": 4,
+            "count": 9
+          },
+          {
+            "rating": 5,
+            "count": 75
+          }
+        ],
+        "totalCount": 91,
+        "averageRating": 4.7
+      }
+    ],
+    "reviewCountTotals": [
+      {
+        "rating": 1,
+        "count": 2
+      },
+      {
+        "rating": 2,
+        "count": 2
+      },
+      {
+        "rating": 3,
+        "count": 14
+      },
+      {
+        "rating": 4,
+        "count": 23
+      },
+      {
+        "rating": 5,
+        "count": 170
+      }
+    ],
+    "totalReviews": 211,
+    "combinedAverageRating": 4.691943
+  }
+}
