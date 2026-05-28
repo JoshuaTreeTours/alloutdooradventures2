@@ -34,6 +34,7 @@ import specimen2660sfowinPayload from "../../data/engine6/viator/2660SFOWIN.exac
 import specimen72999p3Payload from "../../data/engine6/viator/72999P3.exact-product.json";
 import specimen304471p122Payload from "../../data/engine6/viator/304471P122.exact-product.json";
 import specimen333016p3Payload from "../../data/engine6/viator/333016P3.exact-product.json";
+import specimen3454ye3dPayload from "../../data/engine6/viator/3454YE3D.exact-product.json";
 import specimen100569Payload from "../../data/engine6/viator/100569P5.exact-product.json";
 import specimen411138Payload from "../../data/engine6/viator/411138P3.exact-product.json";
 import specimen53474Payload from "../../data/engine6/viator/53474P8.exact-product.json";
@@ -529,6 +530,12 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/San-Francisco/Private-City-Tour-of-San-Francisco/d651-333016P3",
     rawPayload: specimen333016p3Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "3454YE3D",
+    publicUrl:
+      "https://www.viator.com/tours/San-Francisco/3-Day-Yosemite-Camping-Adventure-from-San-Francisco/d651-3454YE3D",
+    rawPayload: specimen3454ye3dPayload as Record<string, unknown>,
   },
   {
     productCode: "100569P5",
