@@ -1,7 +1,8 @@
-const HARD_DELETED_PRODUCT_IDS = new Set(["301378", "301379"]);
+const HARD_DELETED_PRODUCT_IDS = new Set(["301378", "301379", "549337"]);
 const HARD_DELETED_SLUGS = new Set([
   "intermediate-singletrack-mountain-biking-clinic-301378",
   "private-mtb-lesson-301379",
+  "golden-gate-bridge-bike-tour-with-muir-woods-and-sausalito-549337",
 ]);
 const HARD_DELETED_CANONICAL_PATHS = new Set([
   "/destinations/united-states/alaska/anchorage/tours/intermediate-singletrack-mountain-biking-clinic-301378",
@@ -10,10 +11,10 @@ const HARD_DELETED_CANONICAL_PATHS = new Set([
   "/destinations/alaska/anchorage/tours/private-mtb-lesson-301379",
   "/tours/alaska/anchorage/intermediate-singletrack-mountain-biking-clinic-301378",
   "/tours/alaska/anchorage/private-mtb-lesson-301379",
+  "/destinations/california/san-francisco/tours/golden-gate-bridge-bike-tour-with-muir-woods-and-sausalito-549337",
 ]);
 
-const normalize = (value?: string | null) =>
-  (value ?? "").trim().toLowerCase();
+const normalize = (value?: string | null) => (value ?? "").trim().toLowerCase();
 
 export const isHardDeletedLegacyTour = ({
   productId,
@@ -25,7 +26,10 @@ export const isHardDeletedLegacyTour = ({
   canonicalPath?: string | null;
 }) => {
   const normalizedProductId = normalize(productId).replace(/^engine2-/, "");
-  if (normalizedProductId && HARD_DELETED_PRODUCT_IDS.has(normalizedProductId)) {
+  if (
+    normalizedProductId &&
+    HARD_DELETED_PRODUCT_IDS.has(normalizedProductId)
+  ) {
     return true;
   }
 

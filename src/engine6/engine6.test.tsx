@@ -62,6 +62,7 @@ import {
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
+  ENGINE6_GOLDEN_GATE_MUIR_WOODS_BIKE_ROUTE,
   ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_ROUTE,
   ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS,
 } from "./routes";
@@ -1887,7 +1888,6 @@ describe("engine6 listing surfaces", () => {
     expect(listingTour).toBeDefined();
     expect(listingTour?.heroImage).toBe(expectedHero);
     expect(listingTour?.primaryImageUrl).toBe(expectedHero);
-
     const unifiedEntry = getToursByCityUnified(
       "california",
       "san-francisco"
@@ -1954,6 +1954,104 @@ describe("engine6 listing surfaces", () => {
     const schema = buildEngine6SchemaGraph(tour!);
     const graph = schema["@graph"] as Array<Record<string, unknown>>;
     const canonicalUrl = `https://www.alloutdooradventures.com${ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_ROUTE}`;
+    for (const type of ["WebPage", "Product", "TouristTrip"]) {
+      const node = graph.find(entry => entry["@type"] === type);
+      expect(node?.url).toBe(canonicalUrl);
+      expect((node as { image?: string } | undefined)?.image).toBe(
+        expectedHero
+      );
+    }
+  });
+
+  it("surfaces 3454P57 through San Francisco route, listings, cards, and schema hero parity", () => {
+    const expectedHero =
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/c3/8e/2c/caption.jpg?w=700&h=500&s=1";
+    const tour = engine6ResolvedTours.find(
+      entry => entry.productCode === "3454P57"
+    );
+
+    expect(tour).toBeDefined();
+    expect(tour?.canonicalPath).toBe(ENGINE6_GOLDEN_GATE_MUIR_WOODS_BIKE_ROUTE);
+    expect(tour?.heroImageUrl).toBe(expectedHero);
+    expect(tour?.resolvedHero?.url).toBe(expectedHero);
+    expect(tour?.diagnostics.heroSourceFieldPath).toBe(
+      "product.media.images[0].variants.FULL.url"
+    );
+    expect(tour?.overviewText).toContain("Muir Woods National Monument");
+    expect(tour?.overviewText).toContain("Sausalito");
+    expect(tour?.overviewText).not.toContain("Yosemite");
+    expect(tour?.overviewText).not.toContain("Santa Barbara");
+    expect(tour?.itinerary.map(item => item.title)).toEqual([
+      "Fisherman’s Wharf bike orientation",
+      "Bayfront ride toward the bridge",
+      "Golden Gate Bridge crossing",
+      "Sausalito bike handoff and lunch time",
+      "Sausalito minicoach meeting point",
+      "Muir Woods National Monument",
+      "Sausalito return window",
+      "San Francisco drop-off",
+    ]);
+    expect(
+      validateEngine6GovernedItinerary({
+        renderedItems: tour!.itinerary,
+        overviewText: tour!.overviewText,
+      })
+    ).toEqual([]);
+
+    const listingTour = getToursByCity("california", "san-francisco").find(
+      entry => entry.productCode === "3454P57"
+    );
+    expect(listingTour).toBeDefined();
+    expect(listingTour?.heroImage).toBe(expectedHero);
+    expect(listingTour?.primaryImageUrl).toBe(expectedHero);
+    expect(
+      getToursByCity("california", "san-francisco").some(
+        entry =>
+          entry.slug ===
+          "golden-gate-bridge-bike-tour-with-muir-woods-and-sausalito-549337"
+      )
+    ).toBe(false);
+
+    const unifiedEntry = getToursByCityUnified(
+      "california",
+      "san-francisco"
+    ).find(
+      entry =>
+        entry.tour.engine === "engine6" && entry.tour.productCode === "3454P57"
+    );
+    expect(unifiedEntry).toBeDefined();
+    expect(unifiedEntry?.href).toBe(ENGINE6_GOLDEN_GATE_MUIR_WOODS_BIKE_ROUTE);
+    expect(unifiedEntry?.tour.heroImage).toBe(expectedHero);
+
+    const card = toEngine6Card(tour!);
+    const cardSurfaces = buildEngine6CardSurfaces(tour!);
+    expect(card.href).toBe(ENGINE6_GOLDEN_GATE_MUIR_WOODS_BIKE_ROUTE);
+    expect(card.imageUrl).toBe(expectedHero);
+    expect(cardSurfaces.city[0]?.imageUrl).toBe(expectedHero);
+    expect(cardSurfaces.search[0]?.href).toBe(
+      ENGINE6_GOLDEN_GATE_MUIR_WOODS_BIKE_ROUTE
+    );
+
+    const detailHtml = renderToString(
+      <CityTourDetailRoute
+        params={{
+          stateSlug: "california",
+          citySlug: "san-francisco",
+          tourSlug:
+            "golden-gate-bridge-bike-tour-with-muir-woods-and-sausalito",
+        }}
+      />
+    );
+    const escapedHero = expectedHero.replace(/&/g, "&amp;");
+    expect(detailHtml).toContain(
+      "Golden Gate Bridge Bike Tour with Muir Woods and Sausalito Tour"
+    );
+    expect(detailHtml).not.toContain("Tour not found");
+    expect(detailHtml).toContain(`src="${escapedHero}"`);
+
+    const schema = buildEngine6SchemaGraph(tour!);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const canonicalUrl = `https://www.alloutdooradventures.com${ENGINE6_GOLDEN_GATE_MUIR_WOODS_BIKE_ROUTE}`;
     for (const type of ["WebPage", "Product", "TouristTrip"]) {
       const node = graph.find(entry => entry["@type"] === type);
       expect(node?.url).toBe(canonicalUrl);

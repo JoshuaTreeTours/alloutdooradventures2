@@ -1,0 +1,147 @@
+{
+  "product": {
+    "productCode": "3454P57",
+    "productUrl": "https://www.viator.com/tours/San-Francisco/Golden-Gate-Bridge-Bike-Tour-with-Muir-Woods-and-Sausalito-Tour/d651-3454P57",
+    "title": "Golden Gate Bridge Bike Tour with Muir Woods and Sausalito Tour",
+    "description": {
+      "text": "Start in Fisherman’s Wharf with bike fitting and route orientation, then ride a guided bayfront route toward the Golden Gate Bridge before descending into Sausalito. After time on the Marin waterfront, the experience shifts to a small-coach segment for Muir Woods National Monument, where the schedule allows independent walking among old-growth coastal redwoods. The day finishes with a return toward San Francisco, with ferry-upgrade logistics handled according to the booked option. This is a full-day combination tour for travelers who want cycling, Sausalito, and redwood forest time in one structured outing."
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California"
+    },
+    "duration": "8 hours 30 minutes",
+    "priceFrom": "From $209.00",
+    "operatorReviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 1871
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/c3/8e/2c/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ride from Fisherman’s Wharf across San Francisco’s northern waterfront toward the Golden Gate Bridge.",
+      "Cross the Golden Gate Bridge by bike with guide-managed pacing and photo opportunities.",
+      "Use free time in Sausalito before continuing by minicoach.",
+      "Walk independently in Muir Woods National Monument with entrance included in the tour format."
+    ],
+    "logistics": {
+      "start": {
+        "description": "2715 Hyde Street, San Francisco, CA 94109. Arrive before the 10:00 AM departure for bike fitting, equipment assignment, and orientation."
+      },
+      "end": {
+        "description": "251 Mason Street, San Francisco, CA 94102. The return is by minicoach unless a ferry-return option is selected according to booking details."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Fisherman’s Wharf bike orientation",
+        "description": "Meet at the Hyde Street bike location for check-in, equipment fitting, and a safety briefing before the guided ride begins.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bayfront ride toward the bridge",
+        "description": "Bike through San Francisco’s northern waterfront toward the Golden Gate Bridge while the guide manages pace and road crossings.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Golden Gate Bridge crossing",
+        "description": "Ride the bridge path with time for bay, city, and headlands views from the span.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sausalito bike handoff and lunch time",
+        "description": "Descend into Sausalito, return the bike to the designated handoff point, and use free time for lunch or a short waterfront walk.",
+        "duration": "1 hour 15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sausalito minicoach meeting point",
+        "description": "Regroup at the scheduled Sausalito pickup location for the afternoon coach segment toward the redwoods.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Muir Woods National Monument",
+        "description": "Walk through Muir Woods National Monument among coastal redwoods on established paths and boardwalks at your own pace.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sausalito return window",
+        "description": "Return through Sausalito for a final short break or ferry-option handoff before the coach continues toward San Francisco.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "San Francisco drop-off",
+        "description": "Return to San Francisco for the Union Square-area drop-off after the combined bike, Sausalito, and Muir Woods itinerary wraps up.",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Choice of electric bike or deluxe traditional bike according to selected option",
+      "Helmet, lock, handlebar bag, and rear rack",
+      "Bike fitting and route orientation",
+      "Minicoach transportation for the Sausalito and Muir Woods segment",
+      "Muir Woods National Monument entrance fee",
+      "Free time in Sausalito"
+    ],
+    "additionalInfo": [
+      "Not wheelchair accessible.",
+      "Travelers should have a moderate physical fitness level and be comfortable riding a bicycle outdoors.",
+      "The tour is not recommended for travelers with serious back, heart, or mobility concerns.",
+      "Service animals are allowed according to operator policy.",
+      "Group size is limited by the selected tour operation and vehicle capacity.",
+      "You can cancel up to 24 hours in advance for a full refund."
+    ],
+    "faqs": [
+      {
+        "question": "Where does this Golden Gate Bridge and Muir Woods tour start?",
+        "answer": "The tour starts at 2715 Hyde Street in Fisherman’s Wharf, where travelers check in for bike fitting and orientation before departure."
+      },
+      {
+        "question": "Is Muir Woods included on the same day?",
+        "answer": "Yes. After the bike ride and Sausalito time, the itinerary continues by minicoach to Muir Woods National Monument."
+      },
+      {
+        "question": "Can travelers choose an e-bike?",
+        "answer": "The product offers an electric-bike or deluxe traditional-bike choice according to the option selected at booking."
+      },
+      {
+        "question": "How much cycling is involved?",
+        "answer": "The bike portion follows an approximately eight-mile route from Fisherman’s Wharf across the Golden Gate Bridge to Sausalito."
+      },
+      {
+        "question": "Does the tour return to San Francisco?",
+        "answer": "Yes. The standard itinerary returns by minicoach to a San Francisco drop-off near Union Square, with ferry-option details handled through the booked option."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike tour"
+      },
+      {
+        "label": "Outdoor activities"
+      },
+      {
+        "label": "Day trip"
+      }
+    ]
+  }
+}
