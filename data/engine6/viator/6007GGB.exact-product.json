@@ -1,0 +1,134 @@
+{
+  "product": {
+    "productCode": "6007GGB",
+    "productUrl": "https://www.viator.com/tours/San-Francisco/Bike-the-Golden-Gate-Bridge-San-Francisco-to-Sausalito/d651-6007GGB",
+    "title": "Golden Gate Bridge Guided Bicycle or E-Bike Tour from San Francisco to Sausalito",
+    "description": {
+      "text": "Ride from San Francisco to Sausalito on a guided bicycle tour built around the Golden Gate Bridge crossing. The route starts near Fisherman’s Wharf, follows waterfront bike paths through the northern edge of the city, and continues through the Presidio toward the bridge approach. After crossing the span with time for bay and ocean views, the guided portion finishes in Sausalito, where travelers can choose how to return with the rental bike according to the booking details. Regular bicycle and pedal-assist e-bike options make the experience suitable for riders who want an active, point-to-point way to connect San Francisco landmarks with the Marin waterfront."
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California"
+    },
+    "duration": "3 hours",
+    "priceFrom": "From $90.00",
+    "reviews": {
+      "combinedAverageRating": 4.776699,
+      "totalReviews": 721
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/be/59/43/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ride a guided waterfront route from Fisherman’s Wharf toward the Golden Gate Bridge.",
+      "Choose a standard bicycle or pedal-assist e-bike when booking.",
+      "Cross the Golden Gate Bridge with views over San Francisco Bay and the Pacific side of the headlands.",
+      "Finish the guided ride in Sausalito with return options handled according to the bike-rental instructions."
+    ],
+    "logistics": {
+      "start": {
+        "description": "721 Beach Street, San Francisco, CA 94109. Meet near Fisherman’s Wharf for bike assignment, orientation, and guide check-in."
+      },
+      "end": {
+        "description": "The guided ride ends in Sausalito. Travelers follow the supplier’s bike-return instructions, with ferry or biking return options depending on schedule and preference."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Fisherman’s Wharf bike check-in",
+        "description": "Meet the guide near the waterfront, get fitted for the selected bike type, and review the point-to-point route before departure.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fort Mason waterfront corridor",
+        "description": "Ride west from the wharf through the waterfront transition between the marina, parkland, and former military grounds.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marina Green and Crissy Field",
+        "description": "Follow flat bayfront paths with open views across the water toward Alcatraz, the bridge, and the Marin Headlands.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Palace of Fine Arts area",
+        "description": "Pause or slow near the 1915 exposition landmark as the route turns from the marina toward the Presidio approach.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Presidio bridge approach",
+        "description": "Climb gradually through the park corridor leading to the Golden Gate Bridge, with guide pacing and traffic-aware route management.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Golden Gate Bridge crossing",
+        "description": "Bike across the bridge on the designated path while the bay, city skyline, and Pacific-facing views open from the span.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sausalito finish",
+        "description": "Descend into Sausalito to conclude the guided portion, then continue with the planned bike return or ferry strategy.",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Use of bicycle or pedal-assist e-bike option selected at booking",
+      "Helmet",
+      "Bike lock",
+      "Rear rack and bungee cord"
+    ],
+    "additionalInfo": [
+      "Not wheelchair accessible.",
+      "Travelers should be comfortable riding a bicycle on city streets, shared paths, and bridge approaches.",
+      "Children must be accompanied by an adult.",
+      "This shared tour has a maximum group size of 25 travelers.",
+      "You can cancel up to 24 hours in advance for a full refund."
+    ],
+    "faqs": [
+      {
+        "question": "Where does the Golden Gate Bridge bike tour start?",
+        "answer": "The tour meets at 721 Beach Street near Fisherman’s Wharf in San Francisco for bike fitting and guide check-in."
+      },
+      {
+        "question": "Does the tour end back in San Francisco?",
+        "answer": "No. The guided ride ends in Sausalito, and travelers follow the bike-return instructions provided at check-in, including ferry or biking return options."
+      },
+      {
+        "question": "Can I choose an e-bike?",
+        "answer": "Yes. The product offers standard bicycle and pedal-assist e-bike options, selected according to availability when booking."
+      },
+      {
+        "question": "How long is the guided experience?",
+        "answer": "The guided portion is approximately 3 hours, not including any independent return time after Sausalito."
+      },
+      {
+        "question": "Is this suitable for every traveler?",
+        "answer": "Riders should be comfortable cycling outdoors, handling bridge approaches, and sharing paths with pedestrians and other cyclists."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike tour"
+      },
+      {
+        "label": "Outdoor activities"
+      }
+    ]
+  }
+}
