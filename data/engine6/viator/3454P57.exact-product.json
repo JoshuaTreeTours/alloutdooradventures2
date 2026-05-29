@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/San-Francisco/Golden-Gate-Bridge-Bike-Tour-with-Muir-Woods-and-Sausalito-Tour/d651-3454P57",
     "title": "Golden Gate Bridge Bike Tour with Muir Woods and Sausalito Tour",
     "description": {
-      "text": "Start in Fisherman’s Wharf with bike fitting and route orientation, then ride a guided bayfront route toward the Golden Gate Bridge before descending into Sausalito. After time on the Marin waterfront, the experience shifts to a small-coach segment for Muir Woods National Monument, where the schedule allows independent walking among old-growth coastal redwoods. The day finishes with a return toward San Francisco, with ferry-upgrade logistics handled according to the booked option. This is a full-day combination tour for travelers who want cycling, Sausalito, and redwood forest time in one structured outing."
+      "text": "Start in Fisherman\u2019s Wharf with bike fitting and route orientation, then ride a guided bayfront route toward the Golden Gate Bridge before descending into Sausalito. After time on the Marin waterfront, the experience shifts to a small-coach segment for Muir Woods National Monument, where the schedule allows independent walking among old-growth coastal redwoods. The day finishes with a return toward San Francisco, with ferry-upgrade logistics handled according to the booked option. This is a full-day combination tour for travelers who want cycling, Sausalito, and redwood forest time in one structured outing."
     },
     "location": {
       "city": "San Francisco",
@@ -12,10 +12,6 @@
     },
     "duration": "8 hours 30 minutes",
     "priceFrom": "From $209.00",
-    "operatorReviews": {
-      "combinedAverageRating": 4.5,
-      "totalReviews": 1871
-    },
     "media": {
       "images": [
         {
@@ -31,7 +27,7 @@
       ]
     },
     "highlights": [
-      "Ride from Fisherman’s Wharf across San Francisco’s northern waterfront toward the Golden Gate Bridge.",
+      "Ride from Fisherman\u2019s Wharf across San Francisco\u2019s northern waterfront toward the Golden Gate Bridge.",
       "Cross the Golden Gate Bridge by bike with guide-managed pacing and photo opportunities.",
       "Use free time in Sausalito before continuing by minicoach.",
       "Walk independently in Muir Woods National Monument with entrance included in the tour format."
@@ -46,14 +42,14 @@
     },
     "itineraryItems": [
       {
-        "title": "Fisherman’s Wharf bike orientation",
+        "title": "Fisherman\u2019s Wharf bike orientation",
         "description": "Meet at the Hyde Street bike location for check-in, equipment fitting, and a safety briefing before the guided ride begins.",
         "duration": "15 minutes",
         "stopType": "stop"
       },
       {
         "title": "Bayfront ride toward the bridge",
-        "description": "Bike through San Francisco’s northern waterfront toward the Golden Gate Bridge while the guide manages pace and road crossings.",
+        "description": "Bike through San Francisco\u2019s northern waterfront toward the Golden Gate Bridge while the guide manages pace and road crossings.",
         "duration": "45 minutes",
         "stopType": "stop"
       },
@@ -113,7 +109,7 @@
     "faqs": [
       {
         "question": "Where does this Golden Gate Bridge and Muir Woods tour start?",
-        "answer": "The tour starts at 2715 Hyde Street in Fisherman’s Wharf, where travelers check in for bike fitting and orientation before departure."
+        "answer": "The tour starts at 2715 Hyde Street in Fisherman\u2019s Wharf, where travelers check in for bike fitting and orientation before departure."
       },
       {
         "question": "Is Muir Woods included on the same day?",
@@ -125,7 +121,7 @@
       },
       {
         "question": "How much cycling is involved?",
-        "answer": "The bike portion follows an approximately eight-mile route from Fisherman’s Wharf across the Golden Gate Bridge to Sausalito."
+        "answer": "The bike portion follows an approximately eight-mile route from Fisherman\u2019s Wharf across the Golden Gate Bridge to Sausalito."
       },
       {
         "question": "Does the tour return to San Francisco?",
@@ -142,6 +138,15 @@
       {
         "label": "Day trip"
       }
-    ]
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 209.0
+      },
+      "currency": "USD"
+    },
+    "reviews": {
+      "totalReviews": 0
+    }
   }
 }

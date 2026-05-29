@@ -12,8 +12,86 @@
     },
     "priceFrom": "$129.00",
     "reviews": {
-      "combinedAverageRating": 4.5,
-      "totalReviews": 4200
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 97
+            },
+            {
+              "rating": 2.0,
+              "count": 171
+            },
+            {
+              "rating": 3.0,
+              "count": 341
+            },
+            {
+              "rating": 4.0,
+              "count": 912
+            },
+            {
+              "rating": 5.0,
+              "count": 1913
+            }
+          ],
+          "totalCount": 3434,
+          "averageRating": 4.3
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 32
+            },
+            {
+              "rating": 2.0,
+              "count": 38
+            },
+            {
+              "rating": 3.0,
+              "count": 63
+            },
+            {
+              "rating": 4.0,
+              "count": 178
+            },
+            {
+              "rating": 5.0,
+              "count": 771
+            }
+          ],
+          "totalCount": 1082,
+          "averageRating": 4.5
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 129
+        },
+        {
+          "rating": 2.0,
+          "count": 209
+        },
+        {
+          "rating": 3.0,
+          "count": 404
+        },
+        {
+          "rating": 4.0,
+          "count": 1090
+        },
+        {
+          "rating": 5.0,
+          "count": 2684
+        }
+      ],
+      "totalReviews": 4516,
+      "combinedAverageRating": 4.3266163
     },
     "duration": "8 to 9 hours",
     "media": {
@@ -76,6 +154,12 @@
     "additionalInfo": [
       "Full-day itinerary.",
       "Winery tasting stops included in route plan."
-    ]
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 156.75
+      },
+      "currency": "USD"
+    }
   }
 }

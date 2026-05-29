@@ -44,6 +44,94 @@
     "additionalInfo": [
       "Mobile ticket accepted.",
       "Self-guided app format."
-    ]
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 76.49
+      },
+      "currency": "USD"
+    },
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 7
+            },
+            {
+              "rating": 2.0,
+              "count": 4
+            },
+            {
+              "rating": 3.0,
+              "count": 5
+            },
+            {
+              "rating": 4.0,
+              "count": 12
+            },
+            {
+              "rating": 5.0,
+              "count": 27
+            }
+          ],
+          "totalCount": 55,
+          "averageRating": 3.9
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 4
+            },
+            {
+              "rating": 2.0,
+              "count": 0
+            },
+            {
+              "rating": 3.0,
+              "count": 0
+            },
+            {
+              "rating": 4.0,
+              "count": 0
+            },
+            {
+              "rating": 5.0,
+              "count": 6
+            }
+          ],
+          "totalCount": 10,
+          "averageRating": 3.4
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 11
+        },
+        {
+          "rating": 2.0,
+          "count": 4
+        },
+        {
+          "rating": 3.0,
+          "count": 5
+        },
+        {
+          "rating": 4.0,
+          "count": 12
+        },
+        {
+          "rating": 5.0,
+          "count": 33
+        }
+      ],
+      "totalReviews": 65,
+      "combinedAverageRating": 3.8
+    }
   }
 }

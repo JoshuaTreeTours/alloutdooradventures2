@@ -748,23 +748,23 @@
           "provider": "VIATOR",
           "reviewCounts": [
             {
-              "rating": 1.0,
+              "rating": 1,
               "count": 0
             },
             {
-              "rating": 2.0,
+              "rating": 2,
               "count": 0
             },
             {
-              "rating": 3.0,
+              "rating": 3,
               "count": 0
             },
             {
-              "rating": 4.0,
+              "rating": 4,
               "count": 1
             },
             {
-              "rating": 5.0,
+              "rating": 5,
               "count": 5
             }
           ],
@@ -775,23 +775,23 @@
           "provider": "TRIPADVISOR",
           "reviewCounts": [
             {
-              "rating": 1.0,
+              "rating": 1,
               "count": 0
             },
             {
-              "rating": 2.0,
+              "rating": 2,
               "count": 0
             },
             {
-              "rating": 3.0,
+              "rating": 3,
               "count": 0
             },
             {
-              "rating": 4.0,
+              "rating": 4,
               "count": 1
             },
             {
-              "rating": 5.0,
+              "rating": 5,
               "count": 155
             }
           ],
@@ -801,23 +801,23 @@
       ],
       "reviewCountTotals": [
         {
-          "rating": 1.0,
+          "rating": 1,
           "count": 0
         },
         {
-          "rating": 2.0,
+          "rating": 2,
           "count": 0
         },
         {
-          "rating": 3.0,
+          "rating": 3,
           "count": 0
         },
         {
-          "rating": 4.0,
+          "rating": 4,
           "count": 2
         },
         {
-          "rating": 5.0,
+          "rating": 5,
           "count": 160
         }
       ],
@@ -839,6 +839,12 @@
           }
         }
       ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 69.0
+      },
+      "currency": "USD"
     }
   }
 }

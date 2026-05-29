@@ -631,6 +631,12 @@
           ]
         }
       ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 115.0
+      },
+      "currency": "USD"
     }
   }
 }

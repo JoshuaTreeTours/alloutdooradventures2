@@ -12,8 +12,86 @@
     },
     "priceFrom": "$79.00",
     "reviews": {
-      "combinedAverageRating": 4.9,
-      "totalReviews": 1900
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 28
+            },
+            {
+              "rating": 2.0,
+              "count": 8
+            },
+            {
+              "rating": 3.0,
+              "count": 17
+            },
+            {
+              "rating": 4.0,
+              "count": 67
+            },
+            {
+              "rating": 5.0,
+              "count": 1439
+            }
+          ],
+          "totalCount": 1559,
+          "averageRating": 4.8
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 23
+            },
+            {
+              "rating": 2.0,
+              "count": 8
+            },
+            {
+              "rating": 3.0,
+              "count": 13
+            },
+            {
+              "rating": 4.0,
+              "count": 59
+            },
+            {
+              "rating": 5.0,
+              "count": 1340
+            }
+          ],
+          "totalCount": 1443,
+          "averageRating": 4.9
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 51
+        },
+        {
+          "rating": 2.0,
+          "count": 16
+        },
+        {
+          "rating": 3.0,
+          "count": 30
+        },
+        {
+          "rating": 4.0,
+          "count": 126
+        },
+        {
+          "rating": 5.0,
+          "count": 2779
+        }
+      ],
+      "totalReviews": 3002,
+      "combinedAverageRating": 4.8540974
     },
     "duration": "2 hours",
     "media": {
@@ -82,6 +160,12 @@
     "additionalInfo": [
       "Mobile ticket accepted.",
       "Small-group format."
-    ]
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 85.0
+      },
+      "currency": "USD"
+    }
   }
 }

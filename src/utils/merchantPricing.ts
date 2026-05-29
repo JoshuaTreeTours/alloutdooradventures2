@@ -38,9 +38,13 @@ export const applyPriceFloor = (price: number | null): number => {
 };
 
 export const formatMerchantPrice = (
-  amount: number,
+  amount: number | null,
   currency: string
 ): string => {
+  if (amount === null || !Number.isFinite(amount) || amount <= 0) {
+    return "";
+  }
+
   const normalizedCurrency = currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
   return `${amount.toFixed(2)} ${normalizedCurrency}`;
 };

@@ -6,7 +6,9 @@
   "lastUpdatedAt": "2026-05-21T07:16:04Z",
   "title": "Yosemite 3-Day Camping Adventure from San Francisco",
   "ticketInfo": {
-    "ticketTypes": ["MOBILE_ONLY"],
+    "ticketTypes": [
+      "MOBILE_ONLY"
+    ],
     "ticketTypeDescription": "Mobile or paper ticket accepted",
     "ticketsPerBooking": "ONE_PER_BOOKING",
     "ticketsPerBookingDescription": "One per booking"
@@ -906,7 +908,7 @@
     ],
     "redemption": {
       "redemptionType": "NONE",
-      "specialInstructions": "• Minimum numbers apply. There is a possibility of cancellation after confirmation if there is not enough passengers to meet requirements. In the event of this occurring, you will be offered an alternative or full refund\n • Important: Please notify the tour operator of sleeping bag and any dietary requirements prior to the tour"
+      "specialInstructions": "\u2022 Minimum numbers apply. There is a possibility of cancellation after confirmation if there is not enough passengers to meet requirements. In the event of this occurring, you will be offered an alternative or full refund\n \u2022 Important: Please notify the tour operator of sleeping bag and any dietary requirements prior to the tour"
     },
     "travelerPickup": {
       "pickupOptionType": "MEET_EVERYONE_AT_START_POINT",
@@ -1103,8 +1105,25 @@
     "SPECIAL_REQUIREMENTS"
   ],
   "tags": [
-    367664, 21631, 21760, 367654, 12067, 11921, 11938, 11902, 367650, 11922,
-    21629, 367653, 11903, 11930, 21860, 21971, 22046, 12046, 367661
+    367664,
+    21631,
+    21760,
+    367654,
+    12067,
+    11921,
+    11938,
+    11902,
+    367650,
+    11922,
+    21629,
+    367653,
+    11903,
+    11930,
+    21860,
+    21971,
+    22046,
+    12046,
+    367661
   ],
   "destinations": [
     {
@@ -1157,7 +1176,7 @@
             },
             "passByWithoutStopping": false,
             "admissionIncluded": "YES",
-            "description": "Head down a beautiful scenic path to the enchanted Tuolumne Grove consisting of dozens of Giant Sequoia trees. But don’t be fooled by this moderate downhill stroll. Make sure you bring some water to sip as you enjoy your time among the giants as you have a bit of climb ahead of you to get back to the mini-coach. You'll also have time to enjoy your lunch here among the towering trees."
+            "description": "Head down a beautiful scenic path to the enchanted Tuolumne Grove consisting of dozens of Giant Sequoia trees. But don\u2019t be fooled by this moderate downhill stroll. Make sure you bring some water to sip as you enjoy your time among the giants as you have a bit of climb ahead of you to get back to the mini-coach. You'll also have time to enjoy your lunch here among the towering trees."
           },
           {
             "pointOfInterestLocation": {
@@ -1171,7 +1190,7 @@
             },
             "passByWithoutStopping": false,
             "admissionIncluded": "YES",
-            "description": "Next, we’ll leave the gentle giants of the Sequoia Grove in the mini-coach to get a narrated tour through Yosemite’s glaciated valley. We’ll make a few stops along the way, to snap some pictures of some of the famous waterfalls and rock formations while your guide gives you some of the history that makes this park so special."
+            "description": "Next, we\u2019ll leave the gentle giants of the Sequoia Grove in the mini-coach to get a narrated tour through Yosemite\u2019s glaciated valley. We\u2019ll make a few stops along the way, to snap some pictures of some of the famous waterfalls and rock formations while your guide gives you some of the history that makes this park so special."
           },
           {
             "pointOfInterestLocation": {
@@ -1184,7 +1203,7 @@
             },
             "passByWithoutStopping": false,
             "admissionIncluded": "YES",
-            "description": "Now it’s time to spend a couple of hours exploring on your own! We’ll make a stop near the base of Yosemite Falls. You’ll have a number of options of where to go, including a leisurely walk through the Ansel Adams Gallery, the historic Ahwahnee lodge, or get your pulse up with a hike or bike ride along the river."
+            "description": "Now it\u2019s time to spend a couple of hours exploring on your own! We\u2019ll make a stop near the base of Yosemite Falls. You\u2019ll have a number of options of where to go, including a leisurely walk through the Ansel Adams Gallery, the historic Ahwahnee lodge, or get your pulse up with a hike or bike ride along the river."
           },
           {
             "pointOfInterestLocation": {
@@ -1225,7 +1244,7 @@
             },
             "passByWithoutStopping": false,
             "admissionIncluded": "NOT_APPLICABLE",
-            "description": "Once at camp, your guide will hand out camping gear and show you the local amenities. You'll enjoy a freshly prepared dinner at camp, as well as s’mores as your group shares drinks and stories around the campfire, but don’t forget to get some sleep tonight for a full-day of exploring the park tomorrow."
+            "description": "Once at camp, your guide will hand out camping gear and show you the local amenities. You'll enjoy a freshly prepared dinner at camp, as well as s\u2019mores as your group shares drinks and stories around the campfire, but don\u2019t forget to get some sleep tonight for a full-day of exploring the park tomorrow."
           }
         ],
         "accommodations": [
@@ -1256,7 +1275,7 @@
             },
             "passByWithoutStopping": false,
             "admissionIncluded": "NOT_APPLICABLE",
-            "description": "Are you ready for clear, sparkling lakes? Crisp, mountain air? Prepare to spend a full day exploring Yosemite’s picturesque lakes, hiking to mountain summits that overlook lush greenery, and passing through serene meadows. Your guide will make sure the group takes full advantage of the park, while making sure everyone is comfortable, by customizing the hikes around the groups’ needs."
+            "description": "Are you ready for clear, sparkling lakes? Crisp, mountain air? Prepare to spend a full day exploring Yosemite\u2019s picturesque lakes, hiking to mountain summits that overlook lush greenery, and passing through serene meadows. Your guide will make sure the group takes full advantage of the park, while making sure everyone is comfortable, by customizing the hikes around the groups\u2019 needs."
           }
         ],
         "accommodations": [
@@ -1293,7 +1312,7 @@
             },
             "passByWithoutStopping": false,
             "admissionIncluded": "YES",
-            "description": "On the last morning, we’ll make a quick breakfast, prepare another brown bag lunch, make sure all the camping gear is put away before heading into Yosemite Valley.\n\nDid you pass up a hike on the way to a vista? Have you been pining after a particular swimming spot? Are you ready to stretch your legs and have a new self-guided adventure? Day three is the perfect time to choose your own adventure in Yosemite Valley. You can hike to a waterfall, rent a bicycle to cruise around the valley floor, check out the visitor’s center, museum, and Ansel Adams Gallery, or relax in the shade by the emerald green Merced River."
+            "description": "On the last morning, we\u2019ll make a quick breakfast, prepare another brown bag lunch, make sure all the camping gear is put away before heading into Yosemite Valley.\n\nDid you pass up a hike on the way to a vista? Have you been pining after a particular swimming spot? Are you ready to stretch your legs and have a new self-guided adventure? Day three is the perfect time to choose your own adventure in Yosemite Valley. You can hike to a waterfall, rent a bicycle to cruise around the valley floor, check out the visitor\u2019s center, museum, and Ansel Adams Gallery, or relax in the shade by the emerald green Merced River."
           },
           {
             "pointOfInterestLocation": {
@@ -1319,7 +1338,7 @@
             },
             "passByWithoutStopping": false,
             "admissionIncluded": "NOT_APPLICABLE",
-            "description": "After a full day of exploring, we’ll make our way back to the San Francisco Hilton, arriving in the city around 8:30pm – 9pm."
+            "description": "After a full day of exploring, we\u2019ll make our way back to the San Francisco Hilton, arriving in the city around 8:30pm \u2013 9pm."
           }
         ],
         "foodAndDrinks": [
@@ -1386,10 +1405,10 @@
           },
           {
             "rating": 5.0,
-            "count": 95
+            "count": 96
           }
         ],
-        "totalCount": 120,
+        "totalCount": 121,
         "averageRating": 4.7
       },
       {
@@ -1439,11 +1458,11 @@
       },
       {
         "rating": 5.0,
-        "count": 170
+        "count": 171
       }
     ],
-    "totalReviews": 211,
-    "combinedAverageRating": 4.691943
+    "totalReviews": 212,
+    "combinedAverageRating": 4.693396
   },
   "media": {
     "images": [
@@ -1458,5 +1477,11 @@
         }
       }
     ]
+  },
+  "pricing": {
+    "summary": {
+      "fromPrice": 795.0
+    },
+    "currency": "USD"
   }
 }
