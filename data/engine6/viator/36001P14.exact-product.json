@@ -11,8 +11,86 @@
     },
     "priceFrom": "$190.85",
     "reviews": {
-      "combinedAverageRating": "4.5",
-      "totalReviews": "34"
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 0
+            },
+            {
+              "rating": 2.0,
+              "count": 0
+            },
+            {
+              "rating": 3.0,
+              "count": 0
+            },
+            {
+              "rating": 4.0,
+              "count": 0
+            },
+            {
+              "rating": 5.0,
+              "count": 3
+            }
+          ],
+          "totalCount": 3,
+          "averageRating": 5.0
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 0
+            },
+            {
+              "rating": 2.0,
+              "count": 0
+            },
+            {
+              "rating": 3.0,
+              "count": 0
+            },
+            {
+              "rating": 4.0,
+              "count": 1
+            },
+            {
+              "rating": 5.0,
+              "count": 6
+            }
+          ],
+          "totalCount": 7,
+          "averageRating": 4.9
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 0
+        },
+        {
+          "rating": 2.0,
+          "count": 0
+        },
+        {
+          "rating": 3.0,
+          "count": 0
+        },
+        {
+          "rating": 4.0,
+          "count": 1
+        },
+        {
+          "rating": 5.0,
+          "count": 9
+        }
+      ],
+      "totalReviews": 10,
+      "combinedAverageRating": 4.9
     },
     "duration": "12 hours (approx.)",
     "highlights": [
@@ -94,6 +172,12 @@
           }
         }
       ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 193.0
+      },
+      "currency": "USD"
     }
   }
 }

@@ -7,11 +7,7 @@ import {
 } from "../src/constants/merchantDefaults";
 import { tours } from "../src/data/tours";
 import { slugify } from "../src/utils/slugify";
-import {
-  applyPriceFloor,
-  formatMerchantPrice,
-  parsePrice,
-} from "../src/utils/merchantPricing";
+import { formatMerchantPrice, parsePrice } from "../src/utils/merchantPricing";
 import { extractPageImage } from "./utils/extractPageImage";
 
 const INPUT_PATH = path.resolve(process.cwd(), "data/tourEnrichment.csv");
@@ -190,14 +186,13 @@ const main = async () => {
     const tourId = row.tourId?.trim() || `generated-${index + 1}`;
 
     const rawPrice = parsePrice(row.price);
-    const finalPrice = applyPriceFloor(rawPrice);
     const currency = row.currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
-    const price = formatMerchantPrice(finalPrice, currency);
+    const price = formatMerchantPrice(rawPrice, currency);
 
-    if (rawPrice === null || finalPrice !== rawPrice) {
+    if (!price) {
       warningCount += 1;
       console.warn(
-        `Fallback used for price on tourId ${tourId}: defaulted to ${price}.`
+        `Price unavailable for tourId ${tourId}: leaving merchant price blank.`
       );
     }
 

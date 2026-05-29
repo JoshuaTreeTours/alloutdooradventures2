@@ -1656,10 +1656,10 @@
             },
             {
               "rating": 5,
-              "count": 87
+              "count": 89
             }
           ],
-          "totalCount": 104,
+          "totalCount": 106,
           "averageRating": 4.8
         },
         {
@@ -1683,10 +1683,10 @@
             },
             {
               "rating": 5,
-              "count": 105
+              "count": 106
             }
           ],
-          "totalCount": 116,
+          "totalCount": 117,
           "averageRating": 4.8
         }
       ],
@@ -1709,11 +1709,11 @@
         },
         {
           "rating": 5,
-          "count": 192
+          "count": 195
         }
       ],
-      "totalReviews": 220,
-      "combinedAverageRating": 4.809091
+      "totalReviews": 223,
+      "combinedAverageRating": 4.8116593
     },
     "media": {
       "images": [
@@ -2122,6 +2122,12 @@
           }
         }
       ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 239.0
+      },
+      "currency": "USD"
     }
   }
 }

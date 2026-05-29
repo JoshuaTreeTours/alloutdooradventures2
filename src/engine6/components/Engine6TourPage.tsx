@@ -20,6 +20,7 @@ import { buildEngine6DisplaySections } from "../displaySections";
 import type { Engine6Tour } from "../types";
 import {
   fetchEngine6LiveProductFields,
+  mergeEngine6LiveFieldsIntoEngine6Tour,
   type Engine6LiveProductFields,
 } from "../liveProductFields";
 
@@ -208,11 +209,41 @@ export const hydrateRelatedTourCommercialFields = (
   };
 };
 
-export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
+export default function Engine6TourPage({
+  tour: initialTour,
+}: {
+  tour: Engine6Tour;
+}) {
   const relatedToursScrollerRef = useRef<HTMLDivElement | null>(null);
   const SHOW_ENGINE6_DEBUG =
     process.env.NODE_ENV !== "production" &&
     process.env.NEXT_PUBLIC_ENGINE6_DEBUG === "true";
+  const [liveCurrentProductFields, setLiveCurrentProductFields] =
+    useState<Engine6LiveProductFields | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchEngine6LiveProductFields(initialTour.productCode)
+      .then(fields => {
+        if (!cancelled && fields) {
+          setLiveCurrentProductFields(fields);
+        }
+      })
+      .catch(() => {});
+
+    return () => {
+      cancelled = true;
+    };
+  }, [initialTour.productCode]);
+
+  const tour = useMemo(
+    () =>
+      mergeEngine6LiveFieldsIntoEngine6Tour(
+        initialTour,
+        liveCurrentProductFields ?? undefined
+      ),
+    [initialTour, liveCurrentProductFields]
+  );
   const categoryLabel =
     tour.categoryLabel ?? formatEngine6CategoryLabel(tour.primaryCategory);
   const seo = buildEngine6Seo(tour);
@@ -228,7 +259,10 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
   const breadcrumbs = buildEngine6Breadcrumbs(tour);
   const parentCityToursPath =
     buildEngine6ParentCityToursPath(tour.canonicalPath) ?? breadcrumbs[2]?.href;
-  const displaySections = buildEngine6DisplaySections(tour.highlights, tour.requirements);
+  const displaySections = buildEngine6DisplaySections(
+    tour.highlights,
+    tour.requirements
+  );
   const relatedTours = useMemo(() => {
     const [, stateSlug = "", citySlug = "", currentSlug = ""] =
       /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
@@ -256,10 +290,12 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     () =>
       relatedTours
         .map(entry => entry.tour)
-        .filter(
-          candidate => candidate.engine === "engine6" && Boolean(candidate.productCode)
+        .map(candidate =>
+          candidate.engine === "engine6" && candidate.productCode
+            ? candidate.productCode
+            : null
         )
-        .map(candidate => candidate.productCode),
+        .filter((productCode): productCode is string => Boolean(productCode)),
     [relatedTours]
   );
   useEffect(() => {
@@ -285,7 +321,10 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           next[result[0]] = result[1];
         }
         if (Object.keys(next).length > 0) {
-          setLiveEngine6DynamicByProductCode(previous => ({ ...previous, ...next }));
+          setLiveEngine6DynamicByProductCode(previous => ({
+            ...previous,
+            ...next,
+          }));
         }
       })
       .catch(() => {});
@@ -307,13 +346,19 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     [liveEngine6DynamicByProductCode, relatedTours]
   );
 
-  const scrollRelatedToursByDirection = useCallback((direction: "prev" | "next") => {
-    const scroller = relatedToursScrollerRef.current;
-    if (!scroller) return;
-    const scrollAmount = Math.max(280, Math.round(scroller.clientWidth * 0.85));
-    const signedAmount = direction === "next" ? scrollAmount : -scrollAmount;
-    scroller.scrollBy({ left: signedAmount, behavior: "smooth" });
-  }, []);
+  const scrollRelatedToursByDirection = useCallback(
+    (direction: "prev" | "next") => {
+      const scroller = relatedToursScrollerRef.current;
+      if (!scroller) return;
+      const scrollAmount = Math.max(
+        280,
+        Math.round(scroller.clientWidth * 0.85)
+      );
+      const signedAmount = direction === "next" ? scrollAmount : -scrollAmount;
+      scroller.scrollBy({ left: signedAmount, behavior: "smooth" });
+    },
+    []
+  );
   const showRelatedTours = hydratedRelatedTours.length >= 2;
   const isExternalBookingUrl = /^https?:\/\//i.test(tour.bookingUrl);
   useStructuredData(schemaGraph);

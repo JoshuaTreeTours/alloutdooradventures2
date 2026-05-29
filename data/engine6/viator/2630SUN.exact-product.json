@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/San-Francisco/San-Francisco-Bay-Sunset-Cruise/d651-2630SUN",
     "title": "San Francisco Bay Sunset & City Lights Cruise",
     "description": {
-      "text": "Board at Pier 43 1/2 for a two-hour sightseeing cruise on San Francisco Bay timed for sunset in warmer months or evening city lights in winter. The route stays on the water, with indoor and outdoor viewing areas as the vessel moves between Fisherman’s Wharf, the Golden Gate Bridge area, Alcatraz, the downtown skyline, and the Bay Bridge. This is a relaxed harbor cruise rather than a narrated city tour, so the experience is best suited to travelers who want bay views, open-deck time, and a simple round-trip departure from the waterfront."
+      "text": "Board at Pier 43 1/2 for a two-hour sightseeing cruise on San Francisco Bay timed for sunset in warmer months or evening city lights in winter. The route stays on the water, with indoor and outdoor viewing areas as the vessel moves between Fisherman\u2019s Wharf, the Golden Gate Bridge area, Alcatraz, the downtown skyline, and the Bay Bridge. This is a relaxed harbor cruise rather than a narrated city tour, so the experience is best suited to travelers who want bay views, open-deck time, and a simple round-trip departure from the waterfront."
     },
     "location": {
       "city": "San Francisco",
@@ -13,8 +13,86 @@
     "duration": "2 hours",
     "priceFrom": "From $58.00",
     "reviews": {
-      "combinedAverageRating": 4.5,
-      "totalReviews": 1977
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 48
+            },
+            {
+              "rating": 2.0,
+              "count": 47
+            },
+            {
+              "rating": 3.0,
+              "count": 108
+            },
+            {
+              "rating": 4.0,
+              "count": 297
+            },
+            {
+              "rating": 5.0,
+              "count": 1114
+            }
+          ],
+          "totalCount": 1614,
+          "averageRating": 4.5
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 13
+            },
+            {
+              "rating": 2.0,
+              "count": 10
+            },
+            {
+              "rating": 3.0,
+              "count": 12
+            },
+            {
+              "rating": 4.0,
+              "count": 56
+            },
+            {
+              "rating": 5.0,
+              "count": 273
+            }
+          ],
+          "totalCount": 364,
+          "averageRating": 4.6
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 61
+        },
+        {
+          "rating": 2.0,
+          "count": 57
+        },
+        {
+          "rating": 3.0,
+          "count": 120
+        },
+        {
+          "rating": 4.0,
+          "count": 353
+        },
+        {
+          "rating": 5.0,
+          "count": 1387
+        }
+      ],
+      "totalReviews": 1978,
+      "combinedAverageRating": 4.490394
     },
     "media": {
       "images": [
@@ -33,7 +111,7 @@
     "highlights": [
       "Cruise San Francisco Bay during sunset season or after dark on winter city-lights departures.",
       "See waterfront views of the Golden Gate Bridge, Alcatraz, the skyline, and the Bay Bridge from the water.",
-      "Board directly at the Red and White Fleet pier near Fisherman’s Wharf.",
+      "Board directly at the Red and White Fleet pier near Fisherman\u2019s Wharf.",
       "Use indoor seating or outdoor deck space depending on weather and personal preference."
     ],
     "logistics": {
@@ -46,8 +124,8 @@
     },
     "itineraryItems": [
       {
-        "title": "Pier 43½",
-        "description": "Board at Pier 43½ on the Fisherman’s Wharf waterfront before the vessel leaves the dock for the bay route.",
+        "title": "Pier 43\u00bd",
+        "description": "Board at Pier 43\u00bd on the Fisherman\u2019s Wharf waterfront before the vessel leaves the dock for the bay route.",
         "passByWithoutStopping": false
       },
       {
@@ -67,7 +145,7 @@
       },
       {
         "title": "Fort Mason",
-        "description": "The route passes Fort Mason, a former military post on the waterfront west of Fisherman’s Wharf.",
+        "description": "The route passes Fort Mason, a former military post on the waterfront west of Fisherman\u2019s Wharf.",
         "passByWithoutStopping": true
       },
       {
@@ -87,7 +165,7 @@
       },
       {
         "title": "Treasure Island",
-        "description": "Treasure Island sits off the Bay Bridge route and remains part of the cruise’s central bay sightseeing sequence.",
+        "description": "Treasure Island sits off the Bay Bridge route and remains part of the cruise\u2019s central bay sightseeing sequence.",
         "passByWithoutStopping": true
       }
     ],
@@ -109,7 +187,7 @@
     "faqs": [
       {
         "question": "Where does the San Francisco Bay Sunset & City Lights Cruise depart?",
-        "answer": "The cruise departs from the Red and White Fleet at Pier 43 1/2 near Fisherman’s Wharf in San Francisco."
+        "answer": "The cruise departs from the Red and White Fleet at Pier 43 1/2 near Fisherman\u2019s Wharf in San Francisco."
       },
       {
         "question": "Does this cruise return to the same pier?",
@@ -127,6 +205,12 @@
       {
         "label": "Sightseeing cruise"
       }
-    ]
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 58.0
+      },
+      "currency": "USD"
+    }
   }
 }
