@@ -44,21 +44,27 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
     "Head beyond the coast on a guided Santa Ynez Valley day trip focused on wine-country towns, vineyard landscapes, and relaxed tasting stops.",
   "6007P5":
     "Start near Fisherman’s Wharf for a guided bicycle ride to Sausalito, then use the included lunch voucher and all-day bike rental for an independent return plan.",
+  "2630SUN":
+    "Board at Pier 43 1/2 for a two-hour San Francisco Bay cruise with sunset-season or winter city-lights timing, open-water views, and a round-trip return to Fisherman’s Wharf.",
 };
 const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
   "415653P2": "Private Yosemite & Giant Sequoias Tour from San Francisco",
   "304471P122":
     "Alcatraz App-Guided Experience with Ferry Access | San Francisco",
   "6007P5": "Golden Gate Bridge Bike Tour with Lunch | San Francisco",
+  "2630SUN": "San Francisco Bay Sunset & City Lights Cruise",
 };
 const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "415653P2":
     "Explore Yosemite National Park from San Francisco on a private tour featuring giant sequoias, Glacier Point views, waterfalls, granite cliffs, and Sierra scenery.",
   "6007P5":
     "Book a San Francisco guided bicycle tour to Sausalito with Golden Gate Bridge riding, lunch voucher, all-day bike rental, and independent return options.",
+  "2630SUN":
+    "Book a two-hour San Francisco Bay sunset or city-lights cruise with waterfront boarding, bridge views, Alcatraz views, and round-trip return to Pier 43 1/2.",
 };
 const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",
+  "2630SUN",
 ]);
 
 export const isEngine6ItinerarySectionSuppressed = (productCode: string) =>
@@ -69,6 +75,8 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Santa Barbara Happy Hour on a Yacht is a relaxing 90-minute cruise along the Santa Barbara waterfront, offering coastal views, fresh ocean air, and a social golden-hour atmosphere. Departing near Santa Barbara Harbor, this boat tour trades city streets for open water, marina scenery, shoreline views, and the Santa Ynez Mountain backdrop. Guests can unwind onboard while the captain cruises calm coastal routes past the harbor, Stearns Wharf, East Beach, and the Santa Barbara coastline.",
   "6007P5":
     "This San Francisco bicycle tour pairs a guided ride to Sausalito with a lunch voucher and all-day bike rental. After check-in and fitting at 721 Beach Street, the guide leads a paced route toward the Golden Gate Bridge with time for photos and practical orientation. The ride continues across the bridge and ends in Sausalito near the lunch stop, where travelers can use the voucher before choosing whether to bike back or arrange the ferry return separately.",
+  "2630SUN":
+    "San Francisco Bay Sunset & City Lights Cruise is a two-hour harbor cruise departing from Pier 43 1/2 near Fisherman’s Wharf. The experience stays on the bay, using seasonal evening light to frame views of the Golden Gate Bridge area, Alcatraz, the city skyline, and the Bay Bridge. It is a relaxed round-trip boat outing with indoor and outdoor viewing areas rather than a narrated city tour or multi-stop itinerary.",
 };
 
 const ENGINE6_OVERVIEW_OVERRIDES: Record<

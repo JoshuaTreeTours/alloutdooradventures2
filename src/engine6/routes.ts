@@ -102,6 +102,10 @@ export const ENGINE6_MUIR_WOODS_SAUSALITO_ROUTE =
 export const ENGINE6_GOLDEN_GATE_BRIDGE_BIKE_PRODUCT_CODE = "6007GGB";
 export const ENGINE6_GOLDEN_GATE_BRIDGE_BIKE_ROUTE =
   "/destinations/california/san-francisco/tours/bike-the-golden-gate-bridge-san-francisco-to-sausalito";
+export const ENGINE6_SAN_FRANCISCO_SUNSET_CITY_LIGHTS_CRUISE_PRODUCT_CODE =
+  "2630SUN";
+export const ENGINE6_SAN_FRANCISCO_SUNSET_CITY_LIGHTS_CRUISE_ROUTE =
+  "/destinations/california/san-francisco/tours/san-francisco-bay-sunset-city-lights-cruise";
 export const ENGINE6_GOLDEN_GATE_BRIDGE_LUNCH_BIKE_PRODUCT_CODE = "6007P5";
 export const ENGINE6_GOLDEN_GATE_BRIDGE_LUNCH_BIKE_ROUTE =
   "/destinations/california/san-francisco/tours/golden-gate-bridge-guided-bicycle-tour-with-lunch";
@@ -551,6 +555,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_GOLDEN_GATE_BRIDGE_BIKE_ROUTE,
     ENGINE6_GOLDEN_GATE_BRIDGE_BIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_FRANCISCO_SUNSET_CITY_LIGHTS_CRUISE_ROUTE,
+    ENGINE6_SAN_FRANCISCO_SUNSET_CITY_LIGHTS_CRUISE_PRODUCT_CODE,
   ],
   [
     ENGINE6_GOLDEN_GATE_BRIDGE_LUNCH_BIKE_ROUTE,

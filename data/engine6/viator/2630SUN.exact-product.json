@@ -1,0 +1,86 @@
+{
+  "product": {
+    "productCode": "2630SUN",
+    "productUrl": "https://www.viator.com/tours/San-Francisco/San-Francisco-Bay-Sunset-Cruise/d651-2630SUN",
+    "title": "San Francisco Bay Sunset & City Lights Cruise",
+    "description": {
+      "text": "Board at Pier 43 1/2 for a two-hour sightseeing cruise on San Francisco Bay timed for sunset in warmer months or evening city lights in winter. The route stays on the water, with indoor and outdoor viewing areas as the vessel moves between Fisherman’s Wharf, the Golden Gate Bridge area, Alcatraz, the downtown skyline, and the Bay Bridge. This is a relaxed harbor cruise rather than a narrated city tour, so the experience is best suited to travelers who want bay views, open-deck time, and a simple round-trip departure from the waterfront."
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California"
+    },
+    "duration": "2 hours",
+    "priceFrom": "From $58.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 1977
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/31/69/4e/61/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Cruise San Francisco Bay during sunset season or after dark on winter city-lights departures.",
+      "See waterfront views of the Golden Gate Bridge, Alcatraz, the skyline, and the Bay Bridge from the water.",
+      "Board directly at the Red and White Fleet pier near Fisherman’s Wharf.",
+      "Use indoor seating or outdoor deck space depending on weather and personal preference."
+    ],
+    "logistics": {
+      "start": {
+        "description": "San Francisco Cruises (Red and White Fleet), Pier 43 1/2, San Francisco, CA 94133. Arrive before the scheduled departure for boarding."
+      },
+      "end": {
+        "description": "This round-trip cruise returns to the same Pier 43 1/2 meeting point."
+      }
+    },
+    "itineraryItems": [],
+    "inclusions": [
+      "Two-hour San Francisco Bay sunset or city-lights cruise",
+      "Straight-to-the-gate boarding access",
+      "Onboard restrooms"
+    ],
+    "additionalInfo": [
+      "Wheelchair accessible.",
+      "Stroller accessible.",
+      "Service animals allowed.",
+      "The cruise is not narrated.",
+      "Food, drinks, and snacks may be available to purchase from the onboard bar.",
+      "Most travelers can participate.",
+      "Maximum group size is 300 travelers.",
+      "You can cancel up to 24 hours in advance for a full refund."
+    ],
+    "faqs": [
+      {
+        "question": "Where does the San Francisco Bay Sunset & City Lights Cruise depart?",
+        "answer": "The cruise departs from the Red and White Fleet at Pier 43 1/2 near Fisherman’s Wharf in San Francisco."
+      },
+      {
+        "question": "Does this cruise return to the same pier?",
+        "answer": "Yes. This is a round-trip bay cruise that ends back at the Pier 43 1/2 meeting point."
+      },
+      {
+        "question": "Is this a narrated sightseeing cruise?",
+        "answer": "No. The product is positioned as a relaxed sunset or city-lights cruise without onboard narration."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat tour"
+      },
+      {
+        "label": "Sightseeing cruise"
+      }
+    ]
+  }
+}
