@@ -178,86 +178,7 @@
     },
     "productUrl": "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Happy-Hour-on-a-Yacht/d4372-447486P2?mcid=42383&pid=P00290915&medium=api&api_version=2.0",
     "reviews": {
-      "sources": [
-        {
-          "provider": "VIATOR",
-          "reviewCounts": [
-            {
-              "rating": 1,
-              "count": 15
-            },
-            {
-              "rating": 2,
-              "count": 8
-            },
-            {
-              "rating": 3,
-              "count": 16
-            },
-            {
-              "rating": 4,
-              "count": 52
-            },
-            {
-              "rating": 5,
-              "count": 280
-            }
-          ],
-          "totalCount": 371,
-          "averageRating": 4.5
-        },
-        {
-          "provider": "TRIPADVISOR",
-          "reviewCounts": [
-            {
-              "rating": 1,
-              "count": 17
-            },
-            {
-              "rating": 2,
-              "count": 3
-            },
-            {
-              "rating": 3,
-              "count": 25
-            },
-            {
-              "rating": 4,
-              "count": 68
-            },
-            {
-              "rating": 5,
-              "count": 352
-            }
-          ],
-          "totalCount": 465,
-          "averageRating": 4.6
-        }
-      ],
-      "reviewCountTotals": [
-        {
-          "rating": 1,
-          "count": 32
-        },
-        {
-          "rating": 2,
-          "count": 11
-        },
-        {
-          "rating": 3,
-          "count": 41
-        },
-        {
-          "rating": 4,
-          "count": 120
-        },
-        {
-          "rating": 5,
-          "count": 632
-        }
-      ],
-      "totalReviews": 836,
-      "combinedAverageRating": 4.5657897
+      "totalReviews": 0
     },
     "media": {
       "images": [
@@ -621,6 +542,12 @@
           ]
         }
       ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 45.0
+      },
+      "currency": "USD"
     }
   }
 }

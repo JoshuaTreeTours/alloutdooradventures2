@@ -687,7 +687,7 @@
             }
           ],
           "totalCount": 1,
-          "averageRating": 5
+          "averageRating": 5.0
         },
         {
           "provider": "TRIPADVISOR",
@@ -710,11 +710,11 @@
             },
             {
               "rating": 5,
-              "count": 95
+              "count": 96
             }
           ],
-          "totalCount": 96,
-          "averageRating": 5
+          "totalCount": 97,
+          "averageRating": 5.0
         }
       ],
       "reviewCountTotals": [
@@ -736,11 +736,11 @@
         },
         {
           "rating": 5,
-          "count": 96
+          "count": 97
         }
       ],
-      "totalReviews": 97,
-      "combinedAverageRating": 4.989691
+      "totalReviews": 98,
+      "combinedAverageRating": 4.9897957
     },
     "media": {
       "images": [
@@ -755,6 +755,12 @@
           }
         }
       ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 85.0
+      },
+      "currency": "USD"
     }
   }
 }

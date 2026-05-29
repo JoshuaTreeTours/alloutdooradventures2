@@ -825,50 +825,50 @@
           "provider": "VIATOR",
           "reviewCounts": [
             {
-              "rating": 1.0,
+              "rating": 1,
               "count": 0
             },
             {
-              "rating": 2.0,
+              "rating": 2,
               "count": 0
             },
             {
-              "rating": 3.0,
+              "rating": 3,
               "count": 1
             },
             {
-              "rating": 4.0,
+              "rating": 4,
               "count": 2
             },
             {
-              "rating": 5.0,
-              "count": 28
+              "rating": 5,
+              "count": 29
             }
           ],
-          "totalCount": 31,
+          "totalCount": 32,
           "averageRating": 4.9
         },
         {
           "provider": "TRIPADVISOR",
           "reviewCounts": [
             {
-              "rating": 1.0,
+              "rating": 1,
               "count": 0
             },
             {
-              "rating": 2.0,
+              "rating": 2,
               "count": 0
             },
             {
-              "rating": 3.0,
+              "rating": 3,
               "count": 0
             },
             {
-              "rating": 4.0,
+              "rating": 4,
               "count": 0
             },
             {
-              "rating": 5.0,
+              "rating": 5,
               "count": 7
             }
           ],
@@ -878,28 +878,28 @@
       ],
       "reviewCountTotals": [
         {
-          "rating": 1.0,
+          "rating": 1,
           "count": 0
         },
         {
-          "rating": 2.0,
+          "rating": 2,
           "count": 0
         },
         {
-          "rating": 3.0,
+          "rating": 3,
           "count": 1
         },
         {
-          "rating": 4.0,
+          "rating": 4,
           "count": 2
         },
         {
-          "rating": 5.0,
-          "count": 35
+          "rating": 5,
+          "count": 36
         }
       ],
-      "totalReviews": 38,
-      "combinedAverageRating": 4.894737
+      "totalReviews": 39,
+      "combinedAverageRating": 4.8974357
     },
     "media": {
       "images": [
@@ -1531,6 +1531,12 @@
           ]
         }
       ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 189.0
+      },
+      "currency": "USD"
     }
   }
 }

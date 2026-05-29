@@ -6,6 +6,18 @@ import { engine6ListingTours } from "./listing";
 import { engine6ResolvedTours } from "./registry";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 
+const APPENDED_SANTA_BARBARA_ENGINE6_PRODUCT_CODES = [
+  "163975P1",
+  "447486P2",
+  "447486P4",
+  "117409P1",
+  "421920P3",
+  "331438P1",
+  "5603847P4",
+  "5753P14",
+  "7270P10",
+] as const;
+
 const APPENDED_SAN_FRANCISCO_ENGINE6_PRODUCT_CODES = [
   "36001P14",
   "6007GGB",
@@ -83,12 +95,16 @@ const merchantRowsById = new Map(
 
 const listingToursByProductCode = new Map(
   engine6ListingTours
-    .filter(tour => tour.destination.city === "San Francisco")
+    .filter(tour =>
+      ["Santa Barbara", "San Francisco"].includes(tour.destination.city)
+    )
     .map(tour => [tour.productCode, tour])
 );
 
 const formatMerchantPrice = (amount: number) =>
   `${Number.isInteger(amount) ? amount.toFixed(0) : String(amount)} USD`;
+
+const formatMerchantRating = (rating: number) => rating.toFixed(1);
 
 const getSchemaNode = <T extends Record<string, unknown>>(
   productCode: string,
@@ -102,7 +118,7 @@ const getSchemaNode = <T extends Record<string, unknown>>(
   return graph.find(node => node["@type"] === type);
 };
 
-describe("San Francisco Engine6 merchant live commercial parity", () => {
+describe("Santa Barbara and San Francisco Engine6 merchant live commercial parity", () => {
   it("keeps 72999P3 live price and rating visible across page, card, schema, listing, and feed", () => {
     const tour = engine6ResolvedTours.find(
       candidate => candidate.productCode === "72999P3"
@@ -124,14 +140,19 @@ describe("San Francisco Engine6 merchant live commercial parity", () => {
     expect(aggregateRating?.ratingValue).toBe(5);
     expect(aggregateRating?.reviewCount).toBe(861);
     expect(merchantRow?.price).toBe("129 USD");
-    expect(merchantRow?.average_rating).toBe("5");
+    expect(merchantRow?.average_rating).toBe("5.0");
     expect(merchantRow?.rating_count).toBe("861");
     expect(merchantRow?.review_count).toBe("861");
   });
 
-  it("exports every appended San Francisco live API commercial value without cross-product leakage", () => {
+  it("exports every appended Santa Barbara and San Francisco live API commercial value without cross-product leakage", () => {
     const seenUrls = new Set<string>();
-    for (const productCode of APPENDED_SAN_FRANCISCO_ENGINE6_PRODUCT_CODES) {
+    const appendedProductCodes = [
+      ...APPENDED_SANTA_BARBARA_ENGINE6_PRODUCT_CODES,
+      ...APPENDED_SAN_FRANCISCO_ENGINE6_PRODUCT_CODES,
+    ];
+
+    for (const productCode of appendedProductCodes) {
       const tour = engine6ResolvedTours.find(
         candidate => candidate.productCode === productCode
       );
@@ -140,12 +161,18 @@ describe("San Francisco Engine6 merchant live commercial parity", () => {
       expect(tour, productCode).toBeDefined();
       expect(listingTour, productCode).toBeDefined();
       expect(merchantRow, productCode).toBeDefined();
-      expect(tour?.city).toBe("San Francisco");
-      expect(listingTour?.destination.city).toBe("San Francisco");
+      expect(["Santa Barbara", "San Francisco"]).toContain(tour?.city);
+      expect(listingTour?.destination.city).toBe(tour?.city);
       expect(merchantRow?.link).toBe(
         `https://www.alloutdooradventures.com${tour?.canonicalPath}`
       );
-      expect(merchantRow?.image_link).toBe(toEngine6Card(tour!).imageUrl);
+      if (
+        APPENDED_SAN_FRANCISCO_ENGINE6_PRODUCT_CODES.includes(
+          productCode as never
+        )
+      ) {
+        expect(merchantRow?.image_link).toBe(toEngine6Card(tour!).imageUrl);
+      }
       expect(seenUrls.has(merchantRow!.link)).toBe(false);
       seenUrls.add(merchantRow!.link);
 
@@ -164,16 +191,43 @@ describe("San Francisco Engine6 merchant live commercial parity", () => {
         const aggregateRating = getSchemaNode(productCode, "AggregateRating");
         expect(listingTour?.badges.rating).toBe(tour.aggregateRating);
         expect(listingTour?.badges.reviewCount).toBe(tour.reviewCount);
-        expect(merchantRow?.average_rating).toBe(String(tour.aggregateRating));
+        expect(merchantRow?.average_rating).toBe(
+          formatMerchantRating(tour.aggregateRating)
+        );
         expect(merchantRow?.rating_count).toBe(String(tour.reviewCount));
         expect(merchantRow?.review_count).toBe(String(tour.reviewCount));
         expect(aggregateRating?.ratingValue).toBe(tour.aggregateRating);
         expect(aggregateRating?.reviewCount).toBe(tour.reviewCount);
       } else {
         expect(merchantRow?.average_rating).toBe("");
-        expect(merchantRow?.rating_count).toBe("");
-        expect(merchantRow?.review_count).toBe("");
+        expect(merchantRow?.rating_count ?? "").toMatch(/^(?:0)?$/);
+        expect(merchantRow?.review_count ?? "").toMatch(/^(?:0)?$/);
         expect(getSchemaNode(productCode, "AggregateRating")).toBeUndefined();
+      }
+    }
+  });
+
+  it("does not repeat the false 129 USD fallback across Santa Barbara rows", () => {
+    const santaBarbaraPrices = APPENDED_SANTA_BARBARA_ENGINE6_PRODUCT_CODES.map(
+      productCode => merchantRowsById.get(productCode)?.price
+    );
+
+    expect(santaBarbaraPrices).not.toEqual(
+      expect.arrayContaining(["129 USD", "129.00 USD"])
+    );
+    expect(new Set(santaBarbaraPrices).size).toBeGreaterThan(1);
+  });
+
+  it("formats all merchant ratings to one decimal place maximum and review counts as integers", () => {
+    for (const row of merchantRowsById.values()) {
+      if (row.average_rating) {
+        expect(row.average_rating).toMatch(/^\d+(?:\.\d)?$/);
+      }
+      if (row.rating_count) {
+        expect(row.rating_count).toMatch(/^\d+$/);
+      }
+      if (row.review_count) {
+        expect(row.review_count).toMatch(/^\d+$/);
       }
     }
   });
