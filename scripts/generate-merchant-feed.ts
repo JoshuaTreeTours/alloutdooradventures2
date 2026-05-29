@@ -1,17 +1,18 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { writeFile } from "node:fs/promises";
 import path from "node:path";
 
-import {
-  DEFAULT_CURRENCY,
-  DEFAULT_IMAGE_URL,
-} from "../src/constants/merchantDefaults";
-import { tours } from "../src/data/tours";
-import { slugify } from "../src/utils/slugify";
-import { formatMerchantPrice, parsePrice } from "../src/utils/merchantPricing";
-import { extractPageImage } from "./utils/extractPageImage";
+import { extractEngine6Product } from "../api/engine6/viatorExtractors";
+import { fetchViatorWithCurl } from "../lib/viator";
+import { DEFAULT_CURRENCY } from "../src/constants/merchantDefaults";
+import { engine6ResolvedTours } from "../src/engine6/registry";
+import type { Engine6Tour } from "../src/engine6/types";
+import { formatMerchantPrice } from "../src/utils/merchantPricing";
 
-const INPUT_PATH = path.resolve(process.cwd(), "data/tourEnrichment.csv");
 const OUTPUT_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
+const DOMAIN = "https://www.alloutdooradventures.com";
+const DEFAULT_AVAILABILITY = "in stock";
+const DEFAULT_BRAND = "Outdoor Adventures";
+const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 
 const OUTPUT_HEADERS = [
   "id",
@@ -22,72 +23,21 @@ const OUTPUT_HEADERS = [
   "availability",
   "price",
   "condition",
+  "brand",
+  "average_rating",
+  "rating_count",
+  "review_count",
 ] as const;
 
 type OutputHeader = (typeof OUTPUT_HEADERS)[number];
-type CsvRecord = Record<string, string>;
 type MerchantRow = Record<OutputHeader, string>;
 
-type ProductImageRecord = {
-  image_url?: string;
-};
-
-const DOMAIN = "https://www.alloutdooradventures.com";
-const DEFAULT_AVAILABILITY = "in_stock";
-
-const parseCsv = (content: string): CsvRecord[] => {
-  const normalized = content.replace(/^\uFEFF/, "").replace(/\r\n/g, "\n");
-  if (!normalized.trim()) {
-    return [];
-  }
-
-  const rows: string[][] = [];
-  let currentRow: string[] = [];
-  let currentValue = "";
-  let inQuotes = false;
-
-  for (let i = 0; i < normalized.length; i += 1) {
-    const char = normalized[i];
-    const next = normalized[i + 1];
-
-    if (char === '"') {
-      if (inQuotes && next === '"') {
-        currentValue += '"';
-        i += 1;
-      } else {
-        inQuotes = !inQuotes;
-      }
-      continue;
-    }
-
-    if (char === "," && !inQuotes) {
-      currentRow.push(currentValue);
-      currentValue = "";
-      continue;
-    }
-
-    if (char === "\n" && !inQuotes) {
-      currentRow.push(currentValue);
-      rows.push(currentRow);
-      currentRow = [];
-      currentValue = "";
-      continue;
-    }
-
-    currentValue += char;
-  }
-
-  currentRow.push(currentValue);
-  rows.push(currentRow);
-
-  const header = rows[0]?.map(column => column.trim()) ?? [];
-  return rows.slice(1).map(rowValues => {
-    const row: CsvRecord = {};
-    header.forEach((column, index) => {
-      row[column] = rowValues[index]?.trim() ?? "";
-    });
-    return row;
-  });
+type Engine6FeedHydration = {
+  priceAmount: number | null;
+  currency: string | null;
+  averageRating: number | null;
+  ratingCount: number | null;
+  reviewCount: number | null;
 };
 
 const escapeCsv = (value: string) => {
@@ -101,34 +51,6 @@ const toCsv = (rows: MerchantRow[]) => {
     .map(row => OUTPUT_HEADERS.map(header => escapeCsv(row[header])).join(","))
     .join("\n");
   return `${headerLine}\n${body}\n`;
-};
-
-const buildFallbackLink = (row: CsvRecord, tourId: string) => {
-  const rawSlug = row.slug?.trim();
-  const generatedSlug =
-    rawSlug || slugify(row.title?.trim() || tourId || "tour");
-  return `${DOMAIN}/tours/${generatedSlug}`;
-};
-
-const toAoaLink = (rawSourceUrl: string, row: CsvRecord, tourId: string) => {
-  const trimmed = rawSourceUrl.trim();
-  if (!trimmed) {
-    return buildFallbackLink(row, tourId);
-  }
-
-  try {
-    const parsed = new URL(trimmed, DOMAIN);
-    if (parsed.hostname.includes("alloutdooradventures.com")) {
-      const pathname = parsed.pathname.replace(/\/+$/, "") || "/";
-      return `${DOMAIN}${pathname}`;
-    }
-  } catch {
-    if (trimmed.startsWith("/")) {
-      return `${DOMAIN}${trimmed.replace(/\/+$/, "")}`;
-    }
-  }
-
-  return buildFallbackLink(row, tourId);
 };
 
 const isValidHttpUrl = (value: unknown): value is string => {
@@ -149,114 +71,192 @@ const isValidHttpUrl = (value: unknown): value is string => {
   }
 };
 
-const getProductMap = () => {
-  const products = new Map<string, ProductImageRecord>();
+const extractAvailabilitySummaryPrice = (payload: unknown): number | null => {
+  if (!payload || typeof payload !== "object") {
+    return null;
+  }
 
-  tours.forEach(tour => {
-    const bookingItemId = tour.bookingUrl.match(/\/items\/(\d+)/)?.[1];
-    const fallbackImage =
-      tour.heroImage ??
-      tour.galleryImages?.find(image => isValidHttpUrl(image));
+  const summary = (payload as Record<string, unknown>).summary;
+  if (!summary || typeof summary !== "object") {
+    return null;
+  }
 
-    if (!fallbackImage) {
-      return;
-    }
+  const fromPrice = (summary as Record<string, unknown>).fromPrice;
+  if (
+    typeof fromPrice !== "number" ||
+    !Number.isFinite(fromPrice) ||
+    fromPrice <= 0
+  ) {
+    return null;
+  }
 
-    if (bookingItemId) {
-      products.set(bookingItemId, { image_url: fallbackImage });
-    }
+  return fromPrice;
+};
 
-    if (tour.id) {
-      products.set(tour.id, { image_url: fallbackImage });
-    }
-  });
+const fetchAvailabilitySummaryPrice = async (args: {
+  apiKey: string;
+  baseUrl: string;
+  productCode: string;
+}): Promise<number | null> => {
+  const url = `${args.baseUrl}/availability/schedules/${encodeURIComponent(args.productCode)}?currency=USD`;
+  const { status, body } = await fetchViatorWithCurl(url, args.apiKey);
+  if (status < 200 || status >= 300) {
+    return null;
+  }
 
-  return products;
+  try {
+    return extractAvailabilitySummaryPrice(JSON.parse(body));
+  } catch {
+    return null;
+  }
+};
+
+const fetchExactEngine6FeedHydration = async (
+  productCode: string
+): Promise<Engine6FeedHydration | null> => {
+  const apiKey = process.env.VIATOR_API_KEY || process.env.VITE_VIATOR_API_KEY;
+  if (!apiKey) {
+    return null;
+  }
+
+  const normalizedProductCode = productCode.trim().toUpperCase();
+  const baseUrl = (
+    process.env.VIATOR_API_BASE_URL ||
+    process.env.VIATOR_BASE_URL ||
+    DEFAULT_VIATOR_BASE_URL
+  ).replace(/\/$/, "");
+  const url = `${baseUrl}/products/${encodeURIComponent(normalizedProductCode)}`;
+
+  const { status, body } = await fetchViatorWithCurl(url, apiKey);
+  if (status < 200 || status >= 300) {
+    return null;
+  }
+
+  let payload: unknown;
+  try {
+    payload = JSON.parse(body);
+  } catch {
+    return null;
+  }
+
+  const extraction = extractEngine6Product(payload);
+  const extractedProductCode =
+    typeof extraction.product?.productCode === "string"
+      ? extraction.product.productCode.trim().toUpperCase()
+      : null;
+
+  if (extractedProductCode !== normalizedProductCode) {
+    return null;
+  }
+
+  const availabilityPrice =
+    extraction.extracted.priceAmount === null
+      ? await fetchAvailabilitySummaryPrice({
+          apiKey,
+          baseUrl,
+          productCode: normalizedProductCode,
+        })
+      : null;
+  const priceAmount = availabilityPrice ?? extraction.extracted.priceAmount;
+  const reviewCount =
+    typeof extraction.extracted.reviewCount === "number" &&
+    Number.isFinite(extraction.extracted.reviewCount)
+      ? Math.trunc(extraction.extracted.reviewCount)
+      : null;
+
+  return {
+    priceAmount,
+    currency: DEFAULT_CURRENCY,
+    averageRating: extraction.extracted.aggregateRating,
+    ratingCount: reviewCount,
+    reviewCount,
+  };
+};
+
+const formatMerchantRating = (value: number | null) =>
+  typeof value === "number" && Number.isFinite(value) ? value.toFixed(1) : "";
+
+const formatMerchantCount = (value: number | null) =>
+  typeof value === "number" && Number.isFinite(value)
+    ? String(Math.trunc(value))
+    : "";
+
+const buildMerchantRow = (
+  tour: Engine6Tour,
+  hydration: Engine6FeedHydration | null
+): MerchantRow => {
+  const imageLink = [
+    tour.resolvedHero?.url,
+    tour.heroImageUrl,
+    tour.resolvedImageUrl,
+  ]
+    .map(value => value?.trim())
+    .find(isValidHttpUrl);
+
+  return {
+    id: tour.productCode,
+    title: tour.title,
+    description:
+      tour.seoDescription || tour.metaDescription || tour.description,
+    link: `${DOMAIN}${tour.canonicalPath}`,
+    image_link: imageLink ?? "",
+    availability: DEFAULT_AVAILABILITY,
+    price: hydration
+      ? formatMerchantPrice(hydration.priceAmount, hydration.currency ?? "")
+      : "",
+    condition: "new",
+    brand: DEFAULT_BRAND,
+    average_rating: hydration
+      ? formatMerchantRating(hydration.averageRating)
+      : "",
+    rating_count: hydration ? formatMerchantCount(hydration.ratingCount) : "",
+    review_count: hydration ? formatMerchantCount(hydration.reviewCount) : "",
+  };
 };
 
 const main = async () => {
-  const sourceRows = parseCsv(await readFile(INPUT_PATH, "utf8"));
-  const productsByTourId = getProductMap();
-
   const outputRows: MerchantRow[] = [];
   let warningCount = 0;
 
-  for (let index = 0; index < sourceRows.length; index += 1) {
-    const row = sourceRows[index];
-    const tourId = row.tourId?.trim() || `generated-${index + 1}`;
-
-    const rawPrice = parsePrice(row.price);
-    const currency = row.currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
-    const price = formatMerchantPrice(rawPrice, currency);
-
-    if (!price) {
+  for (const tour of engine6ResolvedTours) {
+    let hydration: Engine6FeedHydration | null = null;
+    try {
+      hydration = await fetchExactEngine6FeedHydration(tour.productCode);
+    } catch (error) {
       warningCount += 1;
       console.warn(
-        `Price unavailable for tourId ${tourId}: leaving merchant price blank.`
+        `Live Viator hydration failed for ${tour.productCode}: ${
+          error instanceof Error ? error.message : String(error)
+        }`
       );
     }
 
-    const title =
-      row.merchant_title?.trim() || row.title?.trim() || `Tour ${tourId}`;
-    const description =
-      row.merchant_description?.trim() ||
-      row.description?.trim() ||
-      `Tour ${tourId}`;
-    const link = toAoaLink(row.source_url ?? "", row, tourId);
-
-    const product = productsByTourId.get(tourId);
-    const extractedPageImage = await extractPageImage(link);
-    const imageLink = [
-      row.image,
-      product?.image_url,
-      extractedPageImage,
-      DEFAULT_IMAGE_URL,
-    ].find(candidate => isValidHttpUrl(candidate)) as string;
-
-    const availability =
-      (row.availability ?? "").trim() || DEFAULT_AVAILABILITY;
-
-    if (!row.source_url?.trim()) {
+    if (!hydration) {
       warningCount += 1;
       console.warn(
-        `Fallback used for link on tourId ${tourId}: used AOA URL ${link}`
+        `Live Viator hydration unavailable for ${tour.productCode}: price and rating fields left blank.`
       );
-    } else if (!row.source_url.includes("alloutdooradventures.com")) {
-      warningCount += 1;
-      console.warn(
-        `Fallback used for link on tourId ${tourId}: replaced with ${link}`
-      );
+    } else {
+      if (hydration.priceAmount === null) {
+        warningCount += 1;
+        console.warn(
+          `Live Viator price unavailable for ${tour.productCode}: merchant price left blank.`
+        );
+      }
+      if (hydration.averageRating === null || hydration.reviewCount === null) {
+        warningCount += 1;
+        console.warn(
+          `Live Viator ratings unavailable for ${tour.productCode}: merchant rating fields left blank.`
+        );
+      }
     }
 
-    if (!row.image?.trim() && imageLink !== row.image?.trim()) {
-      warningCount += 1;
-      console.warn(
-        `Fallback used for image on tourId ${tourId}: resolved to ${imageLink}.`
-      );
-    }
-
-    if (!(row.availability ?? "").trim()) {
-      warningCount += 1;
-      console.warn(
-        `Fallback used for availability on tourId ${tourId}: defaulted to ${DEFAULT_AVAILABILITY}.`
-      );
-    }
-
-    outputRows.push({
-      id: tourId,
-      title,
-      description,
-      link,
-      image_link: imageLink,
-      availability,
-      price,
-      condition: "new",
-    });
+    outputRows.push(buildMerchantRow(tour, hydration));
   }
 
   await writeFile(OUTPUT_PATH, toCsv(outputRows), "utf8");
 
-  console.log(`Processed ${sourceRows.length} rows.`);
+  console.log(`Processed ${engine6ResolvedTours.length} Engine6 products.`);
   console.log(
     `Wrote ${outputRows.length} merchant feed rows to ${OUTPUT_PATH}.`
   );

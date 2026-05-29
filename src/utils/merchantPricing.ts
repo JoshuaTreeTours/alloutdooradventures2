@@ -37,6 +37,11 @@ export const applyPriceFloor = (price: number | null): number => {
   return price;
 };
 
+const formatCleanMerchantAmount = (amount: number): string => {
+  const roundedToCents = Math.round(amount * 100) / 100;
+  return roundedToCents.toFixed(2).replace(/\.00$/, "");
+};
+
 export const formatMerchantPrice = (
   amount: number | null,
   currency: string
@@ -46,5 +51,5 @@ export const formatMerchantPrice = (
   }
 
   const normalizedCurrency = currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
-  return `${amount.toFixed(2)} ${normalizedCurrency}`;
+  return `${formatCleanMerchantAmount(amount)} ${normalizedCurrency}`;
 };
