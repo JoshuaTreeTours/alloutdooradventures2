@@ -75,9 +75,7 @@ export const clampEngine6MetaDescription = (
   const clipped = text.slice(0, maxLength).trim();
   const lastWordBoundary = clipped.lastIndexOf(" ");
   const safeClipped =
-    lastWordBoundary > 100
-      ? clipped.slice(0, lastWordBoundary)
-      : clipped;
+    lastWordBoundary > 100 ? clipped.slice(0, lastWordBoundary) : clipped;
 
   return `${safeClipped.trim()}...`;
 };
@@ -88,7 +86,10 @@ export const buildMetaDescription = (input: string | undefined | null) => {
   }
 
   const clean = cleanEngine6Description(
-    input.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim()
+    input
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
   );
 
   if (clean.length <= ENGINE6_META_DESCRIPTION_CLAMP_AT) {
@@ -179,7 +180,10 @@ const removeBlockedOperationalFiller = (value: string) => {
   for (const pattern of ENGINE6_BLOCKED_META_PATTERNS) {
     cleaned = cleaned.replace(pattern, "");
   }
-  return cleaned.replace(/\s+/g, " ").replace(/\s+([,.;!?])/g, "$1").trim();
+  return cleaned
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .trim();
 };
 
 export const isEngine6OperationalFiller = (value: string) =>
@@ -199,7 +203,10 @@ export const buildEngine6SeoDescription = ({
   const cleanedSource = removeBlockedOperationalFiller(
     buildMetaDescription(sourceDescription)
   );
-  const activity = (categoryLabel ?? "guided tour").replace(/\s+tour$/i, " tour");
+  const activity = (categoryLabel ?? "guided tour").replace(
+    /\s+tour$/i,
+    " tour"
+  );
   const destinationLead = `${city} ${activity}`.trim();
   const lead = `${destinationLead}:`;
   const body = cleanedSource
@@ -214,7 +221,7 @@ export const buildEngine6SeoDescription = ({
     return clamped;
   }
   return clampEngine6MetaDescription(
-    `${clamped} Includes scenic stops, local guide insight, and memorable destination highlights.`
+    `${clamped} ${title} is a product-specific ${activity} aligned to the page details.`
   );
 };
 

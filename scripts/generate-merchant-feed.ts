@@ -4,6 +4,7 @@ import path from "node:path";
 import { extractEngine6Product } from "../api/engine6/viatorExtractors";
 import { fetchViatorWithCurl } from "../lib/viator";
 import { DEFAULT_CURRENCY } from "../src/constants/merchantDefaults";
+import { resolveMerchantDescription } from "../src/engine6/merchantDescriptions";
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import type { Engine6Tour } from "../src/engine6/types";
 import { formatMerchantPrice } from "../src/utils/merchantPricing";
@@ -38,6 +39,7 @@ type Engine6FeedHydration = {
   averageRating: number | null;
   ratingCount: number | null;
   reviewCount: number | null;
+  viatorApiDescription: string | null;
 };
 
 const escapeCsv = (value: string) => {
@@ -170,6 +172,7 @@ const fetchExactEngine6FeedHydration = async (
     averageRating: extraction.extracted.aggregateRating,
     ratingCount: reviewCount,
     reviewCount,
+    viatorApiDescription: extraction.extracted.overviewText,
   };
 };
 
@@ -196,8 +199,16 @@ const buildMerchantRow = (
   return {
     id: tour.productCode,
     title: tour.title,
-    description:
-      tour.seoDescription || tour.metaDescription || tour.description,
+    description: resolveMerchantDescription({
+      productCode: tour.productCode,
+      title: tour.title,
+      city: tour.city,
+      categoryLabel: tour.categoryLabel,
+      pageMetadataDescription: tour.metaDescription || tour.seoDescription,
+      jsonLdProductDescription: tour.description,
+      viatorApiDescription:
+        hydration?.viatorApiDescription ?? tour.overviewText ?? null,
+    }),
     link: `${DOMAIN}${tour.canonicalPath}`,
     image_link: imageLink ?? "",
     availability: DEFAULT_AVAILABILITY,
