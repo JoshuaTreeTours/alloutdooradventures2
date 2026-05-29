@@ -31,6 +31,11 @@ import {
 import { buildEngine6CardSurfaces, toEngine6Card } from "./cards";
 import { ENGINE6_63657P1_CARD_IMAGE_URL, engine6SpecimenTour } from "./listing";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
+import {
+  MERCHANT_APPROVED_DESCRIPTIONS,
+  resolveMerchantDescription,
+  stripGeneratedMerchantDescriptionPrefix,
+} from "./merchantDescriptions";
 import { engine6ResolvedTours } from "./registry";
 import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures";
 import {
@@ -484,6 +489,69 @@ describe("engine6 extractor", () => {
   });
 });
 
+describe("merchant description prefix governance", () => {
+  it("preserves every merchant-approved description exactly", () => {
+    for (const [productCode, approvedDescription] of Object.entries(
+      MERCHANT_APPROVED_DESCRIPTIONS
+    )) {
+      expect(
+        resolveMerchantDescription({
+          productCode,
+          title: "Generated replacement",
+          city: "San Francisco",
+          categoryLabel: "Bike Tour",
+          pageMetadataDescription:
+            "San Francisco Bike Tour: Generated replacement",
+          jsonLdProductDescription: null,
+          viatorApiDescription: null,
+        })
+      ).toBe(approvedDescription);
+    }
+  });
+
+  it("removes generated taxonomy and destination prefixes from future feed sources", () => {
+    expect(
+      stripGeneratedMerchantDescriptionPrefix(
+        "San Francisco guided tour: Ride from San Francisco to Sausalito on a guided bicycle tour built around the Golden Gate Bridge crossing."
+      )
+    ).toBe(
+      "Ride from San Francisco to Sausalito on a guided bicycle tour built around the Golden Gate Bridge crossing."
+    );
+
+    expect(
+      resolveMerchantDescription({
+        productCode: "FUTURE-PRODUCT",
+        title: "Golden Gate Bridge Bike Tour",
+        city: "San Francisco",
+        categoryLabel: "Bike Tour",
+        pageMetadataDescription:
+          "San Francisco Bike Tour: Ride from San Francisco to Sausalito on a guided bicycle tour built around the Golden Gate Bridge crossing.",
+        jsonLdProductDescription: null,
+        viatorApiDescription: null,
+      })
+    ).toMatch(/^Ride from San Francisco to Sausalito/);
+  });
+
+  it("generates fallback copy without prepending city or category labels", () => {
+    const description = resolveMerchantDescription({
+      productCode: "FUTURE-FALLBACK",
+      title: "Golden Gate Bridge Bike Tour",
+      city: "San Francisco",
+      categoryLabel: "Bike Tour",
+      pageMetadataDescription: null,
+      jsonLdProductDescription: null,
+      viatorApiDescription: null,
+    });
+
+    expect(description).toBe(
+      "Golden Gate Bridge Bike Tour includes product-specific details aligned to the product page and booking experience."
+    );
+    expect(description.toLowerCase()).not.toMatch(
+      /^(san francisco|bike tour|guided tour):/
+    );
+  });
+});
+
 describe("engine6 meta descriptions", () => {
   it("clamps long descriptions at a word boundary with an ellipsis", () => {
     const metaDescription = buildEngine6MetaDescription(
@@ -502,7 +570,7 @@ describe("engine6 meta descriptions", () => {
     expect(metaDescription.length).toBeLessThanOrEqual(160);
   });
 
-  it("builds destination-first SEO description and strips operational filler", () => {
+  it("builds natural SEO descriptions without generated destination/category prefixes", () => {
     const metaDescription = buildEngine6SeoDescription({
       title: "Golden Gate Sunset Cruise",
       city: "San Francisco",
@@ -511,7 +579,10 @@ describe("engine6 meta descriptions", () => {
         "Public transportation options are available nearby. Cruise the bay at sunset with skyline and bridge views plus a small-group guide.",
     });
 
-    expect(metaDescription.toLowerCase()).toContain("san francisco boat tour");
+    expect(metaDescription).toMatch(/^Cruise the bay at sunset/i);
+    expect(metaDescription.toLowerCase()).not.toContain(
+      "san francisco boat tour:"
+    );
     expect(isEngine6OperationalFiller(metaDescription)).toBe(false);
     expect(metaDescription.length).toBeLessThanOrEqual(160);
   });
@@ -2940,10 +3011,11 @@ describe("engine6 route wiring", () => {
     );
     expect(anchorageTour).toBeDefined();
     expect(anchorageTour?.canonicalPath).toBe(ENGINE6_ANCHORAGE_SUNSET_ROUTE);
-    expect(
-      anchorageTour?.description.startsWith(
-        "Join one of the best experiences in Anchorage..."
-      )
-    ).toBe(true);
+    expect(anchorageTour?.description).not.toMatch(
+      /^Anchorage\s+(?:guided tour|wildlife tour):/i
+    );
+    expect(anchorageTour?.description).not.toContain(
+      "Join one of the best experiences in Anchorage..."
+    );
   });
 });

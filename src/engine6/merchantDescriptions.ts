@@ -125,22 +125,31 @@ const normalizeMerchantDescriptionCandidate = (
     return null;
   }
 
-  const normalized = value.replace(/\s+/g, " ").trim();
+  const normalized = stripGeneratedMerchantDescriptionPrefix(
+    value.replace(/\s+/g, " ").trim()
+  );
   return normalized.length > 0 ? normalized : null;
 };
 
-const buildProductSpecificFallback = (args: {
-  title: string;
-  city: string;
-  categoryLabel?: string | null;
-}) => {
-  const title = args.title.trim();
-  const city = args.city.trim();
-  const activity =
-    args.categoryLabel?.trim().toLowerCase() || "guided experience";
-  const destination = city ? ` in ${city}` : "";
+const GENERATED_DESCRIPTION_PREFIX_PATTERNS = [
+  /^(?:[A-Z][A-Za-z.'’&-]+(?:\s+[A-Z][A-Za-z.'’&-]+){0,4}\s+)?(?:guided\s+tour|bike\s+tour|boat\s+tour|hiking\s+tour|paddle\s+tour|wildlife\s+tour|food\s*&\s*drink\s+tour|sightseeing\s+tour|adventure\s+tour|air\s+tour|snorkeling\s+tour)\s*:\s*/i,
+  /^[A-Z][A-Za-z.'’&-]+(?:\s+[A-Z][A-Za-z.'’&-]+){0,4}\s*:\s*/,
+];
 
-  return `${title} is a ${activity}${destination} with details aligned to the product page and booking experience.`;
+export const stripGeneratedMerchantDescriptionPrefix = (value: string) => {
+  let cleaned = value.trim();
+
+  for (const pattern of GENERATED_DESCRIPTION_PREFIX_PATTERNS) {
+    cleaned = cleaned.replace(pattern, "").trim();
+  }
+
+  return cleaned;
+};
+
+const buildProductSpecificFallback = (args: { title: string }) => {
+  const title = args.title.trim() || "This outdoor experience";
+
+  return `${title} includes product-specific details aligned to the product page and booking experience.`;
 };
 
 export const resolveMerchantDescription = (args: {
@@ -173,7 +182,5 @@ export const resolveMerchantDescription = (args: {
 
   return buildProductSpecificFallback({
     title: args.title,
-    city: args.city,
-    categoryLabel: args.categoryLabel,
   });
 };
