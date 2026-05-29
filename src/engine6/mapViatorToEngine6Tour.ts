@@ -42,15 +42,20 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
     "Sail Santa Barbara’s waterfront on a happy-hour yacht cruise with coastal views, relaxed onboard seating, and a social golden-hour atmosphere.",
   "117409P1":
     "Head beyond the coast on a guided Santa Ynez Valley day trip focused on wine-country towns, vineyard landscapes, and relaxed tasting stops.",
+  "6007P5":
+    "Start near Fisherman’s Wharf for a guided bicycle ride to Sausalito, then use the included lunch voucher and all-day bike rental for an independent return plan.",
 };
 const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
   "415653P2": "Private Yosemite & Giant Sequoias Tour from San Francisco",
   "304471P122":
     "Alcatraz App-Guided Experience with Ferry Access | San Francisco",
+  "6007P5": "Golden Gate Bridge Bike Tour with Lunch | San Francisco",
 };
 const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "415653P2":
     "Explore Yosemite National Park from San Francisco on a private tour featuring giant sequoias, Glacier Point views, waterfalls, granite cliffs, and Sierra scenery.",
+  "6007P5":
+    "Book a San Francisco guided bicycle tour to Sausalito with Golden Gate Bridge riding, lunch voucher, all-day bike rental, and independent return options.",
 };
 const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",
@@ -62,6 +67,8 @@ export const isEngine6ItinerarySectionSuppressed = (productCode: string) =>
 const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "447486P2":
     "Santa Barbara Happy Hour on a Yacht is a relaxing 90-minute cruise along the Santa Barbara waterfront, offering coastal views, fresh ocean air, and a social golden-hour atmosphere. Departing near Santa Barbara Harbor, this boat tour trades city streets for open water, marina scenery, shoreline views, and the Santa Ynez Mountain backdrop. Guests can unwind onboard while the captain cruises calm coastal routes past the harbor, Stearns Wharf, East Beach, and the Santa Barbara coastline.",
+  "6007P5":
+    "This San Francisco bicycle tour pairs a guided ride to Sausalito with a lunch voucher and all-day bike rental. After check-in and fitting at 721 Beach Street, the guide leads a paced route toward the Golden Gate Bridge with time for photos and practical orientation. The ride continues across the bridge and ends in Sausalito near the lunch stop, where travelers can use the voucher before choosing whether to bike back or arrange the ferry return separately.",
 };
 
 const ENGINE6_OVERVIEW_OVERRIDES: Record<
@@ -317,6 +324,12 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Cruise along East Beach and the Santa Barbara coastline with open-ocean breezes.",
     "Take in channel and mountain sunset views as golden-hour light builds offshore.",
     "Return to Santa Barbara Harbor to finish the coastal yacht experience.",
+  ],
+  "6007P5": [
+    "Check in at the Beach Street bike shop for fitting, equipment, and a concise route orientation before departure.",
+    "Follow the guide toward the bridge on bike-friendly corridors with photo pauses and group pacing built into the ride.",
+    "Cross the Golden Gate Bridge on the bicycle route with guide-managed transitions and time to take in the bay setting.",
+    "End the hosted portion in Sausalito for lunch, then keep the rental bike for the independent return plan selected that day.",
   ],
   "5096P30": [
     "Begin your sightseeing loop on Hollywood Boulevard at the Big Bus Welcome Center, where departures run throughout the day.",
