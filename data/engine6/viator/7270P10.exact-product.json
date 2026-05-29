@@ -1224,6 +1224,12 @@
           }
         }
       ]
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 89.0
+      },
+      "currency": "USD"
     }
   }
 }
