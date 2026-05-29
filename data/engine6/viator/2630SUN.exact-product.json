@@ -44,7 +44,53 @@
         "description": "This round-trip cruise returns to the same Pier 43 1/2 meeting point."
       }
     },
-    "itineraryItems": [],
+    "itineraryItems": [
+      {
+        "title": "Pier 43½",
+        "description": "Board at Pier 43½ on the Fisherman’s Wharf waterfront before the vessel leaves the dock for the bay route.",
+        "passByWithoutStopping": false
+      },
+      {
+        "title": "Golden Gate Bridge",
+        "description": "The route reaches the western bay for Golden Gate Bridge views from the water before turning back toward central San Francisco Bay.",
+        "passByWithoutStopping": true
+      },
+      {
+        "title": "San Francisco Bay",
+        "description": "The cruise crosses open San Francisco Bay waters between the waterfront, bridge corridors, and island landmarks.",
+        "passByWithoutStopping": true
+      },
+      {
+        "title": "Marina District",
+        "description": "The vessel passes the Marina District shoreline while moving along the northern San Francisco waterfront.",
+        "passByWithoutStopping": true
+      },
+      {
+        "title": "Fort Mason",
+        "description": "The route passes Fort Mason, a former military post on the waterfront west of Fisherman’s Wharf.",
+        "passByWithoutStopping": true
+      },
+      {
+        "title": "Coit Tower",
+        "description": "Coit Tower appears above Telegraph Hill as the cruise returns toward the downtown waterfront.",
+        "passByWithoutStopping": true
+      },
+      {
+        "title": "Bay Bridge",
+        "description": "The route includes Bay Bridge views where the bridge spans the bay between San Francisco and the East Bay.",
+        "passByWithoutStopping": true
+      },
+      {
+        "title": "Yerba Buena Island",
+        "description": "The cruise passes near Yerba Buena Island along the Bay Bridge corridor.",
+        "passByWithoutStopping": true
+      },
+      {
+        "title": "Treasure Island",
+        "description": "Treasure Island sits off the Bay Bridge route and remains part of the cruise’s central bay sightseeing sequence.",
+        "passByWithoutStopping": true
+      }
+    ],
     "inclusions": [
       "Two-hour San Francisco Bay sunset or city-lights cruise",
       "Straight-to-the-gate boarding access",

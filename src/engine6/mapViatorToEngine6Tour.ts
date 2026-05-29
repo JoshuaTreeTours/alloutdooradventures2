@@ -64,7 +64,6 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
 };
 const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",
-  "2630SUN",
 ]);
 
 export const isEngine6ItinerarySectionSuppressed = (productCode: string) =>
@@ -338,6 +337,17 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Follow the guide toward the bridge on bike-friendly corridors with photo pauses and group pacing built into the ride.",
     "Cross the Golden Gate Bridge on the bicycle route with guide-managed transitions and time to take in the bay setting.",
     "End the hosted portion in Sausalito for lunch, then keep the rental bike for the independent return plan selected that day.",
+  ],
+  "2630SUN": [
+    "Board at Pier 43½ on the Fisherman’s Wharf waterfront for the round-trip bay cruise departure.",
+    "Pass the Golden Gate Bridge from the water during the western bay portion of the route.",
+    "Cross San Francisco Bay between the waterfront, bridge corridors, and island landmarks.",
+    "Pass the Marina District shoreline while the vessel follows the northern San Francisco waterfront.",
+    "Pass Fort Mason, a former military post on the waterfront west of Fisherman’s Wharf.",
+    "View Coit Tower above Telegraph Hill as the cruise returns toward the downtown waterfront.",
+    "See the Bay Bridge where it spans the bay between San Francisco and the East Bay.",
+    "Pass near Yerba Buena Island along the Bay Bridge corridor.",
+    "Keep Treasure Island in the central bay sightseeing sequence near the Bay Bridge route.",
   ],
   "5096P30": [
     "Begin your sightseeing loop on Hollywood Boulevard at the Big Bus Welcome Center, where departures run throughout the day.",

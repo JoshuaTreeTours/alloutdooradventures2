@@ -513,6 +513,9 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/San-Francisco/San-Francisco-Bay-Sunset-Cruise/d651-2630SUN",
     rawPayload: specimen2630sunPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
   },
   {
     productCode: "6007P5",
