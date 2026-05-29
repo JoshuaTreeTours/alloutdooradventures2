@@ -4,7 +4,7 @@
     "productUrl": "https://www.viator.com/tours/San-Francisco/Bike-the-Golden-Gate-Bridge-San-Francisco-to-Sausalito/d651-6007GGB",
     "title": "Golden Gate Bridge Guided Bicycle or E-Bike Tour from San Francisco to Sausalito",
     "description": {
-      "text": "Ride from San Francisco to Sausalito on a guided bicycle tour built around the Golden Gate Bridge crossing. The route starts near Fisherman’s Wharf, follows waterfront bike paths through the northern edge of the city, and continues through the Presidio toward the bridge approach. After crossing the span with time for bay and ocean views, the guided portion finishes in Sausalito, where travelers can choose how to return with the rental bike according to the booking details. Regular bicycle and pedal-assist e-bike options make the experience suitable for riders who want an active, point-to-point way to connect San Francisco landmarks with the Marin waterfront."
+      "text": "Ride from San Francisco to Sausalito on a guided bicycle tour built around the Golden Gate Bridge crossing. The route starts near Fisherman\u2019s Wharf, follows waterfront bike paths through the northern edge of the city, and continues through the Presidio toward the bridge approach. After crossing the span with time for bay and ocean views, the guided portion finishes in Sausalito, where travelers can choose how to return with the rental bike according to the booking details. Regular bicycle and pedal-assist e-bike options make the experience suitable for riders who want an active, point-to-point way to connect San Francisco landmarks with the Marin waterfront."
     },
     "location": {
       "city": "San Francisco",
@@ -13,8 +13,86 @@
     "duration": "3 hours",
     "priceFrom": "From $90.00",
     "reviews": {
-      "combinedAverageRating": 4.776699,
-      "totalReviews": 721
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 2
+            },
+            {
+              "rating": 2.0,
+              "count": 2
+            },
+            {
+              "rating": 3.0,
+              "count": 4
+            },
+            {
+              "rating": 4.0,
+              "count": 9
+            },
+            {
+              "rating": 5.0,
+              "count": 124
+            }
+          ],
+          "totalCount": 141,
+          "averageRating": 4.8
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 10
+            },
+            {
+              "rating": 2.0,
+              "count": 8
+            },
+            {
+              "rating": 3.0,
+              "count": 12
+            },
+            {
+              "rating": 4.0,
+              "count": 42
+            },
+            {
+              "rating": 5.0,
+              "count": 509
+            }
+          ],
+          "totalCount": 581,
+          "averageRating": 4.8
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 12
+        },
+        {
+          "rating": 2.0,
+          "count": 10
+        },
+        {
+          "rating": 3.0,
+          "count": 16
+        },
+        {
+          "rating": 4.0,
+          "count": 51
+        },
+        {
+          "rating": 5.0,
+          "count": 633
+        }
+      ],
+      "totalReviews": 722,
+      "combinedAverageRating": 4.7770085
     },
     "media": {
       "images": [
@@ -31,22 +109,22 @@
       ]
     },
     "highlights": [
-      "Ride a guided waterfront route from Fisherman’s Wharf toward the Golden Gate Bridge.",
+      "Ride a guided waterfront route from Fisherman\u2019s Wharf toward the Golden Gate Bridge.",
       "Choose a standard bicycle or pedal-assist e-bike when booking.",
       "Cross the Golden Gate Bridge with views over San Francisco Bay and the Pacific side of the headlands.",
       "Finish the guided ride in Sausalito with return options handled according to the bike-rental instructions."
     ],
     "logistics": {
       "start": {
-        "description": "721 Beach Street, San Francisco, CA 94109. Meet near Fisherman’s Wharf for bike assignment, orientation, and guide check-in."
+        "description": "721 Beach Street, San Francisco, CA 94109. Meet near Fisherman\u2019s Wharf for bike assignment, orientation, and guide check-in."
       },
       "end": {
-        "description": "The guided ride ends in Sausalito. Travelers follow the supplier’s bike-return instructions, with ferry or biking return options depending on schedule and preference."
+        "description": "The guided ride ends in Sausalito. Travelers follow the supplier\u2019s bike-return instructions, with ferry or biking return options depending on schedule and preference."
       }
     },
     "itineraryItems": [
       {
-        "title": "Fisherman’s Wharf bike check-in",
+        "title": "Fisherman\u2019s Wharf bike check-in",
         "description": "Meet the guide near the waterfront, get fitted for the selected bike type, and review the point-to-point route before departure.",
         "duration": "15 minutes",
         "stopType": "stop"
@@ -103,7 +181,7 @@
     "faqs": [
       {
         "question": "Where does the Golden Gate Bridge bike tour start?",
-        "answer": "The tour meets at 721 Beach Street near Fisherman’s Wharf in San Francisco for bike fitting and guide check-in."
+        "answer": "The tour meets at 721 Beach Street near Fisherman\u2019s Wharf in San Francisco for bike fitting and guide check-in."
       },
       {
         "question": "Does the tour end back in San Francisco?",
@@ -129,6 +207,12 @@
       {
         "label": "Outdoor activities"
       }
-    ]
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 90.0
+      },
+      "currency": "USD"
+    }
   }
 }

@@ -70,6 +70,94 @@
     "additionalInfo": [
       "Mobile ticket accepted.",
       "Small-group sightseeing format."
-    ]
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 129.0
+      },
+      "currency": "USD"
+    },
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 2
+            },
+            {
+              "rating": 2.0,
+              "count": 1
+            },
+            {
+              "rating": 3.0,
+              "count": 2
+            },
+            {
+              "rating": 4.0,
+              "count": 12
+            },
+            {
+              "rating": 5.0,
+              "count": 426
+            }
+          ],
+          "totalCount": 443,
+          "averageRating": 4.9
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 3
+            },
+            {
+              "rating": 2.0,
+              "count": 0
+            },
+            {
+              "rating": 3.0,
+              "count": 0
+            },
+            {
+              "rating": 4.0,
+              "count": 4
+            },
+            {
+              "rating": 5.0,
+              "count": 411
+            }
+          ],
+          "totalCount": 418,
+          "averageRating": 5.0
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 5
+        },
+        {
+          "rating": 2.0,
+          "count": 1
+        },
+        {
+          "rating": 3.0,
+          "count": 2
+        },
+        {
+          "rating": 4.0,
+          "count": 16
+        },
+        {
+          "rating": 5.0,
+          "count": 837
+        }
+      ],
+      "totalReviews": 861,
+      "combinedAverageRating": 4.950058
+    }
   }
 }

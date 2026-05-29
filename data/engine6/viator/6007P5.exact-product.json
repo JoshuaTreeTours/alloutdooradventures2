@@ -13,8 +13,86 @@
         "duration": "3 hours to 1 day",
         "priceFrom": "From $92.00",
         "reviews": {
-            "combinedAverageRating": 4.9,
-            "totalReviews": 56
+            "sources": [
+                {
+                    "provider": "VIATOR",
+                    "reviewCounts": [
+                        {
+                            "rating": 1.0,
+                            "count": 0
+                        },
+                        {
+                            "rating": 2.0,
+                            "count": 0
+                        },
+                        {
+                            "rating": 3.0,
+                            "count": 0
+                        },
+                        {
+                            "rating": 4.0,
+                            "count": 0
+                        },
+                        {
+                            "rating": 5.0,
+                            "count": 4
+                        }
+                    ],
+                    "totalCount": 4,
+                    "averageRating": 5.0
+                },
+                {
+                    "provider": "TRIPADVISOR",
+                    "reviewCounts": [
+                        {
+                            "rating": 1.0,
+                            "count": 0
+                        },
+                        {
+                            "rating": 2.0,
+                            "count": 0
+                        },
+                        {
+                            "rating": 3.0,
+                            "count": 2
+                        },
+                        {
+                            "rating": 4.0,
+                            "count": 2
+                        },
+                        {
+                            "rating": 5.0,
+                            "count": 48
+                        }
+                    ],
+                    "totalCount": 52,
+                    "averageRating": 4.9
+                }
+            ],
+            "reviewCountTotals": [
+                {
+                    "rating": 1.0,
+                    "count": 0
+                },
+                {
+                    "rating": 2.0,
+                    "count": 0
+                },
+                {
+                    "rating": 3.0,
+                    "count": 2
+                },
+                {
+                    "rating": 4.0,
+                    "count": 2
+                },
+                {
+                    "rating": 5.0,
+                    "count": 52
+                }
+            ],
+            "totalReviews": 56,
+            "combinedAverageRating": 4.892857
         },
         "media": {
             "images": [
@@ -113,6 +191,12 @@
             {
                 "label": "Food and drink tour"
             }
-        ]
+        ],
+        "pricing": {
+            "summary": {
+                "fromPrice": 92.0
+            },
+            "currency": "USD"
+        }
     }
 }

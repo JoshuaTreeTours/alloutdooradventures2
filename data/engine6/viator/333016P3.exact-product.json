@@ -12,8 +12,59 @@
     },
     "priceFrom": "$305.00",
     "reviews": {
-      "combinedAverageRating": 4.8,
-      "totalReviews": 24
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 2
+            },
+            {
+              "rating": 2.0,
+              "count": 1
+            },
+            {
+              "rating": 3.0,
+              "count": 1
+            },
+            {
+              "rating": 4.0,
+              "count": 3
+            },
+            {
+              "rating": 5.0,
+              "count": 112
+            }
+          ],
+          "totalCount": 119,
+          "averageRating": 4.9
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 2
+        },
+        {
+          "rating": 2.0,
+          "count": 1
+        },
+        {
+          "rating": 3.0,
+          "count": 1
+        },
+        {
+          "rating": 4.0,
+          "count": 3
+        },
+        {
+          "rating": 5.0,
+          "count": 112
+        }
+      ],
+      "totalReviews": 119,
+      "combinedAverageRating": 4.865546
     },
     "duration": "4 hours",
     "media": {
@@ -97,6 +148,12 @@
       "Private format with dedicated vehicle and driver-guide.",
       "Reserve now and pay later may be available depending on selected option.",
       "Free cancellation up to 24 hours before start time."
-    ]
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 305.0
+      },
+      "currency": "USD"
+    }
   }
 }

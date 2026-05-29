@@ -1,4 +1,5 @@
 import type { Tour } from "../data/tours.types";
+import type { Engine6Tour } from "./types";
 
 export type Engine6LiveProductFields = {
   priceAmount: number | null;
@@ -9,10 +10,76 @@ export type Engine6LiveProductFields = {
   meetingPointText: string | null;
 };
 
-const parsePriceFromFormatted = (value: string | null | undefined): number | null => {
+const parsePriceFromFormatted = (
+  value: string | null | undefined
+): number | null => {
   if (!value) return null;
   const parsed = Number.parseFloat(value.replace(/[^\d.]/g, ""));
   return Number.isFinite(parsed) ? parsed : null;
+};
+
+const formatLivePriceLabel = (amount: number) =>
+  `From ${new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(amount)}`;
+
+const resolveLivePriceFormatted = (
+  priceAmount: number | null,
+  priceFormatted: string,
+  fallback?: string | null
+) =>
+  priceFormatted ||
+  (typeof priceAmount === "number"
+    ? formatLivePriceLabel(priceAmount)
+    : fallback);
+
+export const mergeEngine6LiveFieldsIntoEngine6Tour = (
+  tour: Engine6Tour,
+  liveFields?: Partial<Engine6LiveProductFields>
+): Engine6Tour => {
+  if (!liveFields) {
+    return tour;
+  }
+
+  const priceAmount =
+    typeof liveFields.priceAmount === "number" ? liveFields.priceAmount : null;
+  const priceFormatted =
+    typeof liveFields.priceFormatted === "string"
+      ? liveFields.priceFormatted.trim()
+      : "";
+  const resolvedPriceAmount = priceAmount ?? tour.priceAmount;
+  const resolvedPriceFormatted = resolveLivePriceFormatted(
+    priceAmount,
+    priceFormatted,
+    tour.priceFormatted
+  );
+
+  return {
+    ...tour,
+    priceAmount: resolvedPriceAmount,
+    priceFormatted: resolvedPriceFormatted ?? tour.priceFormatted,
+    aggregateRating:
+      typeof liveFields.aggregateRating === "number"
+        ? liveFields.aggregateRating
+        : tour.aggregateRating,
+    reviewCount:
+      typeof liveFields.reviewCount === "number"
+        ? liveFields.reviewCount
+        : tour.reviewCount,
+    durationText:
+      typeof liveFields.durationText === "string" &&
+      liveFields.durationText.trim()
+        ? liveFields.durationText
+        : tour.durationText,
+    meetingPointText:
+      typeof liveFields.meetingPointText === "string" &&
+      liveFields.meetingPointText.trim()
+        ? liveFields.meetingPointText
+        : tour.meetingPointText,
+  };
 };
 
 export const mergeEngine6LiveFieldsIntoTour = (
@@ -35,7 +102,7 @@ export const mergeEngine6LiveFieldsIntoTour = (
   const resolvedPriceBadge =
     priceFormatted ||
     (typeof resolvedStartingPrice === "number"
-      ? `From $${resolvedStartingPrice.toFixed(2)}`
+      ? formatLivePriceLabel(resolvedStartingPrice)
       : tour.badges.priceFrom);
 
   return {
@@ -53,13 +120,13 @@ export const mergeEngine6LiveFieldsIntoTour = (
           : tour.badges.reviewCount,
       priceFrom: resolvedPriceBadge,
       duration:
-        typeof liveFields.durationText === "string" && liveFields.durationText.trim()
+        typeof liveFields.durationText === "string" &&
+        liveFields.durationText.trim()
           ? liveFields.durationText
           : tour.badges.duration,
     },
   };
 };
-
 
 export const fetchEngine6LiveProductFields = async (
   productCode: string,
@@ -73,14 +140,25 @@ export const fetchEngine6LiveProductFields = async (
   const extracted = payload?.extracted;
   if (!extracted) return null;
   return {
-    priceAmount: typeof extracted.priceAmount === "number" ? extracted.priceAmount : null,
+    priceAmount:
+      typeof extracted.priceAmount === "number" ? extracted.priceAmount : null,
     priceFormatted:
-      typeof extracted.priceFormatted === "string" ? extracted.priceFormatted : null,
+      typeof extracted.priceFormatted === "string"
+        ? extracted.priceFormatted
+        : null,
     aggregateRating:
-      typeof extracted.aggregateRating === "number" ? extracted.aggregateRating : null,
-    reviewCount: typeof extracted.reviewCount === "number" ? extracted.reviewCount : null,
-    durationText: typeof extracted.durationText === "string" ? extracted.durationText : null,
+      typeof extracted.aggregateRating === "number"
+        ? extracted.aggregateRating
+        : null,
+    reviewCount:
+      typeof extracted.reviewCount === "number" ? extracted.reviewCount : null,
+    durationText:
+      typeof extracted.durationText === "string"
+        ? extracted.durationText
+        : null,
     meetingPointText:
-      typeof extracted.meetingPointText === "string" ? extracted.meetingPointText : null,
+      typeof extracted.meetingPointText === "string"
+        ? extracted.meetingPointText
+        : null,
   };
 };

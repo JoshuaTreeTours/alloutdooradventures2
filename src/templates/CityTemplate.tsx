@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Link } from "wouter";
 
@@ -21,6 +21,11 @@ import { getFlagstaffTourDetailPath } from "../data/flagstaffTours";
 import { filterHeroImages, resolveHeroImageForRoute } from "../utils/hero";
 import { SITE_BRAND_NAME } from "../utils/site";
 import { buildMetaDescription } from "../utils/seo";
+import {
+  fetchEngine6LiveProductFields,
+  mergeEngine6LiveFieldsIntoTour,
+  type Engine6LiveProductFields,
+} from "../engine6/liveProductFields";
 
 type CityTemplateProps = {
   state: StateDestination;
@@ -79,10 +84,7 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
       >
         <div className="flex">
           {images.map((image, index) => (
-            <div
-              key={`${image}-${index}`}
-              className="min-w-0 flex-[0_0_100%]"
-            >
+            <div key={`${image}-${index}`} className="min-w-0 flex-[0_0_100%]">
               <Image
                 src={image}
                 fallbackSrc={image}
@@ -101,9 +103,7 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
               type="button"
               aria-label={`Go to slide ${index + 1}`}
               className={`h-2 w-2 rounded-full transition ${
-                selectedIndex === index
-                  ? "bg-[#2f4a2f]"
-                  : "bg-[#2f4a2f]/30"
+                selectedIndex === index ? "bg-[#2f4a2f]" : "bg-[#2f4a2f]/30"
               }`}
               onClick={() => scrollTo(index)}
             />
@@ -143,7 +143,9 @@ export default function CityTemplate({
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const stateHref =
     stateHrefOverride ??
-    (state.isFallback ? `/destinations/${state.slug}` : `/destinations/states/${state.slug}`);
+    (state.isFallback
+      ? `/destinations/${state.slug}`
+      : `/destinations/states/${state.slug}`);
   const guideParentSlug = guideParentSlugOverride ?? state.slug;
   const guideRegionType =
     guideRegionTypeOverride ?? (state.isFallback ? "country" : "state");
@@ -153,63 +155,137 @@ export default function CityTemplate({
     guideRegionType === "country"
       ? getGuideCountryBySlug(guideParentSlug)
       : getGuideStateBySlug(guideParentSlug);
-  const cityGuide = guideParent?.cities.find((guideCity) => guideCity.slug === city.slug);
+  const cityGuide = guideParent?.cities.find(
+    guideCity => guideCity.slug === city.slug
+  );
   const guideDescription = cityGuide
     ? "Review the city guide and explore broader planning tips for the region."
     : `Explore planning tips across ${state.name} and nearby cities.`;
-  const cityTours = toursOverride ?? getToursByCity(state.slug, city.slug);
-  const topTours = getTopToursForPlace(
-    {
-      type: "city",
-      slug: city.slug,
-      name: city.name,
-      parentSlug: guideParentSlug,
-      parentName: state.name,
-      regionType: guideRegionType,
-    },
-    { min: 3, max: 6 },
+  const baseCityTours = useMemo(
+    () => toursOverride ?? getToursByCity(state.slug, city.slug),
+    [city.slug, state.slug, toursOverride]
+  );
+  const baseTopTours = useMemo(
+    () =>
+      getTopToursForPlace(
+        {
+          type: "city",
+          slug: city.slug,
+          name: city.name,
+          parentSlug: guideParentSlug,
+          parentName: state.name,
+          regionType: guideRegionType,
+        },
+        { min: 3, max: 6 }
+      ),
+    [city.name, city.slug, guideParentSlug, guideRegionType, state.name]
+  );
+  const engine6ProductCodes = useMemo(
+    () =>
+      Array.from(
+        new Set(
+          [...baseCityTours, ...baseTopTours]
+            .filter(
+              tour => tour.engine === "engine6" && Boolean(tour.productCode)
+            )
+            .map(tour => tour.productCode as string)
+        )
+      ),
+    [baseCityTours, baseTopTours]
+  );
+  const [liveEngine6FieldsByProductCode, setLiveEngine6FieldsByProductCode] =
+    useState<Record<string, Engine6LiveProductFields>>({});
+
+  useEffect(() => {
+    if (engine6ProductCodes.length === 0) {
+      return;
+    }
+    let cancelled = false;
+
+    Promise.all(
+      engine6ProductCodes.map(async productCode => {
+        const fields = await fetchEngine6LiveProductFields(productCode);
+        if (!fields) return null;
+        return [productCode, fields] as const;
+      })
+    )
+      .then(results => {
+        if (cancelled) return;
+        const next: Record<string, Engine6LiveProductFields> = {};
+        for (const result of results) {
+          if (result) next[result[0]] = result[1];
+        }
+        if (Object.keys(next).length > 0) {
+          setLiveEngine6FieldsByProductCode(previous => ({
+            ...previous,
+            ...next,
+          }));
+        }
+      })
+      .catch(() => {});
+
+    return () => {
+      cancelled = true;
+    };
+  }, [engine6ProductCodes]);
+
+  const cityTours = useMemo(
+    () =>
+      baseCityTours.map(tour =>
+        tour.engine === "engine6" && tour.productCode
+          ? mergeEngine6LiveFieldsIntoTour(
+              tour,
+              liveEngine6FieldsByProductCode[tour.productCode]
+            )
+          : tour
+      ),
+    [baseCityTours, liveEngine6FieldsByProductCode]
+  );
+  const topTours = useMemo(
+    () =>
+      baseTopTours.map(tour =>
+        tour.engine === "engine6" && tour.productCode
+          ? mergeEngine6LiveFieldsIntoTour(
+              tour,
+              liveEngine6FieldsByProductCode[tour.productCode]
+            )
+          : tour
+      ),
+    [baseTopTours, liveEngine6FieldsByProductCode]
   );
   const title = `${city.name}, ${state.name} ${SITE_BRAND_NAME} | Tours & City Guide`;
   const description = buildMetaDescription(
     city.shortDescription,
-    `Plan hikes, tours, and outdoor experiences around ${city.name}, ${state.name}.`,
+    `Plan hikes, tours, and outdoor experiences around ${city.name}, ${state.name}.`
   );
   const categorizedTours = [
     {
       title: "Day Tours & Highlights",
-      tours: cityTours.filter((tour) =>
-        tour.activitySlugs.includes("detours"),
-      ),
+      tours: cityTours.filter(tour => tour.activitySlugs.includes("detours")),
     },
     {
       title: "Hiking Tours",
-      tours: cityTours.filter((tour) =>
-        tour.activitySlugs.includes("hiking"),
-      ),
+      tours: cityTours.filter(tour => tour.activitySlugs.includes("hiking")),
     },
     {
       title: "Cycling Tours",
-      tours: cityTours.filter((tour) =>
-        tour.activitySlugs.includes("cycling"),
-      ),
+      tours: cityTours.filter(tour => tour.activitySlugs.includes("cycling")),
     },
     {
       title: "Paddle Sports Tours",
-      tours: cityTours.filter((tour) =>
-        tour.activitySlugs.includes("canoeing"),
-      ),
+      tours: cityTours.filter(tour => tour.activitySlugs.includes("canoeing")),
     },
-  ].filter((section) => section.tours.length > 0);
-  const hasCoordinates =
-    Number.isFinite(city.lat) && Number.isFinite(city.lng);
-  const heroImage = resolveHeroImageForRoute({
-    route:
-      seoUrlOverride ??
-      `/destinations/states/${state.slug}/cities/${city.slug}`,
-    state,
-    city,
-    cityTours,
-  }) ?? undefined;
+  ].filter(section => section.tours.length > 0);
+  const hasCoordinates = Number.isFinite(city.lat) && Number.isFinite(city.lng);
+  const heroImage =
+    resolveHeroImageForRoute({
+      route:
+        seoUrlOverride ??
+        `/destinations/states/${state.slug}/cities/${city.slug}`,
+      state,
+      city,
+      cityTours,
+    }) ?? undefined;
   const cityHeroImages = filterHeroImages(city.heroImages, "city");
   const heroImages = cityHeroImages.length
     ? cityHeroImages
@@ -249,7 +325,7 @@ export default function CityTemplate({
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            {city.activityTags.map((tag) => (
+            {city.activityTags.map(tag => (
               <span
                 key={tag}
                 className="rounded-full bg-white/15 px-4 py-2 text-xs uppercase tracking-[0.2em]"
@@ -292,7 +368,9 @@ export default function CityTemplate({
                     </a>
                   </Link>
                   {cityGuide ? (
-                    <Link href={`${guideBasePath}/${guideParentSlug}/${city.slug}`}>
+                    <Link
+                      href={`${guideBasePath}/${guideParentSlug}/${city.slug}`}
+                    >
                       <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
                         {city.name} guide
                       </a>
@@ -312,7 +390,7 @@ export default function CityTemplate({
                 Compare top-rated experiences and browse live availability.
               </p>
               <div className="mt-6 grid gap-5 md:grid-cols-2">
-                {topTours.map((tour) => (
+                {topTours.map(tour => (
                   <TourCard
                     key={tour.id}
                     tour={tour}
@@ -337,7 +415,7 @@ export default function CityTemplate({
           Where it is & what it’s like
         </h2>
         <div className="mt-4 space-y-4 text-sm md:text-base text-[#405040] leading-relaxed">
-          {city.whereItIs.map((paragraph) => (
+          {city.whereItIs.map(paragraph => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
@@ -355,7 +433,7 @@ export default function CityTemplate({
               </h2>
             </div>
             <div className="mt-6 space-y-4 text-sm md:text-base text-[#405040] leading-relaxed">
-              {longDescription.map((paragraph) => (
+              {longDescription.map(paragraph => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
@@ -373,8 +451,8 @@ export default function CityTemplate({
               Outdoor experiences in {city.name}
             </h2>
             <p className="mt-3 text-sm md:text-base text-[#405040]">
-              From mountain viewpoints to scenic drives, here’s how to explore the
-              landscape around {city.name}.
+              From mountain viewpoints to scenic drives, here’s how to explore
+              the landscape around {city.name}.
             </p>
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
@@ -385,7 +463,7 @@ export default function CityTemplate({
               { title: "Cycling & MTB", copy: city.experiences.cycling },
               { title: "Scenic drives", copy: city.experiences.scenicDrives },
               { title: "Seasonal notes", copy: city.experiences.seasonalNotes },
-            ].map((experience) => (
+            ].map(experience => (
               <div
                 key={experience.title}
                 className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm"
@@ -407,7 +485,7 @@ export default function CityTemplate({
           Top things to do
         </h2>
         <ul className="mt-6 grid gap-4 md:grid-cols-2">
-          {city.thingsToDo.map((activity) => (
+          {city.thingsToDo.map(activity => (
             <li
               key={activity}
               className="rounded-2xl border border-black/10 bg-white/80 p-5 text-sm text-[#405040]"
@@ -429,7 +507,7 @@ export default function CityTemplate({
             </h2>
           </div>
           <div className="mt-6 space-y-4 text-sm md:text-base text-[#405040] leading-relaxed">
-            {city.toursCopy.map((paragraph) => (
+            {city.toursCopy.map(paragraph => (
               <p key={paragraph}>
                 {paragraph}{" "}
                 <Link href={toursHref}>
@@ -457,7 +535,7 @@ export default function CityTemplate({
             </p>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {toursOverride.map((tour) => (
+            {toursOverride.map(tour => (
               <TourCard
                 key={tour.id}
                 tour={tour}
@@ -482,13 +560,13 @@ export default function CityTemplate({
             </p>
           </div>
           <div className="mt-10 space-y-12">
-            {categorizedTours.map((section) => (
+            {categorizedTours.map(section => (
               <div key={section.title}>
                 <h3 className="text-xl font-semibold text-[#2f4a2f]">
                   {section.title}
                 </h3>
                 <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-                  {section.tours.map((tour) => (
+                  {section.tours.map(tour => (
                     <TourCard
                       key={tour.id}
                       tour={tour}
@@ -510,7 +588,7 @@ export default function CityTemplate({
           <div className="rounded-2xl border border-black/10 bg-white/80 p-6">
             <h3 className="text-base font-semibold text-[#1f2a1f]">Day 1</h3>
             <ul className="mt-3 space-y-2 text-sm text-[#405040]">
-              {city.weekendItinerary.dayOne.map((item) => (
+              {city.weekendItinerary.dayOne.map(item => (
                 <li key={item}>• {item}</li>
               ))}
             </ul>
@@ -518,7 +596,7 @@ export default function CityTemplate({
           <div className="rounded-2xl border border-black/10 bg-white/80 p-6">
             <h3 className="text-base font-semibold text-[#1f2a1f]">Day 2</h3>
             <ul className="mt-3 space-y-2 text-sm text-[#405040]">
-              {city.weekendItinerary.dayTwo.map((item) => (
+              {city.weekendItinerary.dayTwo.map(item => (
                 <li key={item}>• {item}</li>
               ))}
             </ul>
@@ -532,7 +610,7 @@ export default function CityTemplate({
             Getting there
           </h2>
           <div className="mt-4 space-y-3 text-sm md:text-base text-[#405040] leading-relaxed">
-            {city.gettingThere.map((paragraph) => (
+            {city.gettingThere.map(paragraph => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
@@ -565,7 +643,7 @@ export default function CityTemplate({
             FAQ
           </h2>
           <div className="mt-6 space-y-4">
-            {city.faq.map((item) => (
+            {city.faq.map(item => (
               <div
                 key={item.question}
                 className="rounded-2xl border border-black/10 bg-white p-5"
