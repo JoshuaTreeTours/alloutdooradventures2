@@ -4,11 +4,15 @@ import { formatEngine6StartingPriceLabel } from "./priceDisplay";
 import { resolveEngine6PathForProductCode } from "./routes";
 import {
   buildEngine6CanonicalPath,
-  buildEngine6SeoDescription,
+  buildEngine6SerpMetaDescription,
   buildEngine6SeoTitle,
   cleanEngine6Description,
   formatEngine6CategoryLabel,
 } from "./seo";
+import {
+  isEngine6OriginalMerchantApprovedProduct,
+  resolveMerchantDescription,
+} from "./merchantDescriptions";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 
 const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
@@ -20,11 +24,11 @@ const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
 };
 const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "415653P2":
-    "Explore Yosemite from San Francisco on a private tour with giant sequoias, Glacier Point, waterfalls, granite cliffs, and Sierra scenery",
+    "Explore Yosemite from San Francisco on a private tour with giant sequoias, Glacier Point, waterfalls, granite cliffs, and Sierra scenery.",
   "6007P5":
-    "Ride from San Francisco to Sausalito on a guided bike tour across the Golden Gate Bridge, with lunch voucher, all-day rental, and return options",
+    "Ride from San Francisco to Sausalito on a guided bike tour across the Golden Gate Bridge, with lunch voucher, all-day rental, and return options.",
   "2630SUN":
-    "Cruise San Francisco Bay at sunset or after dark on a two-hour waterfront sailing with Golden Gate Bridge, Alcatraz, Bay Bridge, and Pier 43 1/2 return",
+    "Cruise San Francisco Bay at sunset or after dark on a two-hour waterfront sailing with Golden Gate Bridge, Alcatraz, Bay Bridge, and Pier 43 1/2 return.",
 };
 const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",
@@ -606,7 +610,7 @@ export const mapViatorToEngine6Tour = (
   const descriptionOverride =
     ENGINE6_DESCRIPTION_OVERRIDES[payload.rawProductCode];
   const description = descriptionOverride ?? descriptionBody;
-  const metaDescription = buildEngine6SeoDescription({
+  const metaDescription = buildEngine6SerpMetaDescription({
     title,
     city,
     categoryLabel,
@@ -615,10 +619,19 @@ export const mapViatorToEngine6Tour = (
       sourceOverviewText ??
       payload.extracted.seoDescription ??
       description,
+    highlights,
   });
-  const governedMetaDescription =
-    ENGINE6_META_DESCRIPTION_OVERRIDES[payload.rawProductCode] ??
-    metaDescription;
+  const metaDescriptionOverride =
+    ENGINE6_META_DESCRIPTION_OVERRIDES[payload.rawProductCode];
+  const governedMetaDescription = metaDescriptionOverride
+    ? buildEngine6SerpMetaDescription({
+        title,
+        city,
+        categoryLabel,
+        sourceDescription: metaDescriptionOverride,
+        highlights,
+      })
+    : metaDescription;
   const aggregateRating = normalizeEngine6AggregateRating(
     payload.extracted.aggregateRating
   );
@@ -660,6 +673,25 @@ export const mapViatorToEngine6Tour = (
   const normalizedOverview =
     overriddenOverview || sourceOverviewText || synthesizedOverview;
 
+  const merchantDescription = isEngine6OriginalMerchantApprovedProduct(
+    payload.rawProductCode
+  )
+    ? null
+    : resolveMerchantDescription({
+        productCode: payload.rawProductCode,
+        title,
+        city,
+        state,
+        categoryLabel,
+        productOverviewDescription: normalizedOverview,
+        pageMetadataDescription: governedMetaDescription,
+        jsonLdProductDescription: description,
+        viatorApiDescription: sourceOverviewText,
+        itineraryStops: itinerary,
+        included,
+        highlights,
+      });
+
   if (payload.rawProductCode === "335698P13") {
     const requiredReviewCount = 86;
     if (payload.extracted.reviewCount !== requiredReviewCount) {
@@ -677,6 +709,7 @@ export const mapViatorToEngine6Tour = (
       buildEngine6SeoTitle({ title, city, state }),
     seoDescription: governedMetaDescription,
     description,
+    merchantDescription,
     metaDescription: governedMetaDescription,
     city,
     state,

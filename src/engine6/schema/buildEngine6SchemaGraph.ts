@@ -34,14 +34,20 @@ const buildCityAwareSchemaName = ({
 };
 
 export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
-  const resolvedHeroUrl = tour.resolvedHero?.url ?? tour.heroImageUrl ?? undefined;
+  const resolvedHeroUrl =
+    tour.resolvedHero?.url ?? tour.heroImageUrl ?? undefined;
   const canonicalUrl = buildCanonicalUrl(tour.canonicalPath);
   const affiliateUrl = tour.bookingUrl;
   const offerUrl =
     resolveEngine6OfferUrl(affiliateUrl) ??
     (affiliateUrl?.startsWith("/") ? affiliateUrl : undefined);
   const categoryLabel = formatEngine6CategoryLabel(tour.primaryCategory);
-  const description = tour.seoDescription || tour.metaDescription || tour.description || tour.title;
+  const description =
+    tour.merchantDescription ||
+    tour.seoDescription ||
+    tour.metaDescription ||
+    tour.description ||
+    tour.title;
   const schemaName = buildCityAwareSchemaName({
     title: tour.title,
     city: tour.city,
