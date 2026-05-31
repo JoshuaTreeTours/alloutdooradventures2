@@ -23,6 +23,7 @@ import { normalizeEngine6AggregateRating } from "./rating";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import {
   buildEngine6MetaDescription,
+  buildEngine6Seo,
   buildEngine6SeoDescription,
   buildEngine6SeoTitle,
   buildMetaDescription,
@@ -521,6 +522,7 @@ describe("engine6 meta descriptions", () => {
 
   it("keeps API-derived meta descriptions product-specific for priority routes", () => {
     const priorityProductCodes = [
+      "411138P3",
       "398496P5",
       "152424P1",
       "447486P2",
@@ -532,6 +534,9 @@ describe("engine6 meta descriptions", () => {
       "guide support",
       "easy logistics",
       "traveler-friendly pace",
+      "guided local context",
+      "scenic views",
+      "memorable experience",
       "with clear logistics",
     ];
 
@@ -540,15 +545,31 @@ describe("engine6 meta descriptions", () => {
         candidate => candidate.productCode === productCode
       );
       expect(tour, `missing Engine6 tour ${productCode}`).toBeDefined();
-      const description = tour?.metaDescription ?? "";
+      const description = tour ? buildEngine6Seo(tour).description : "";
 
-      expect(description.length).toBeGreaterThanOrEqual(120);
+      expect(description.length).toBeGreaterThanOrEqual(140);
       expect(description.length).toBeLessThanOrEqual(160);
       expect(description).not.toContain("...");
       for (const fragment of bannedGenericFragments) {
         expect(description.toLowerCase()).not.toContain(fragment);
       }
     }
+
+    expect(
+      buildEngine6Seo(
+        engine6ResolvedTours.find(tour => tour.productCode === "411138P3")!
+      ).description
+    ).toContain("Turnagain Arm Drive");
+    expect(
+      buildEngine6Seo(
+        engine6ResolvedTours.find(tour => tour.productCode === "398496P5")!
+      ).description
+    ).toContain("Las Vegas Sphere");
+    expect(
+      buildEngine6Seo(
+        engine6ResolvedTours.find(tour => tour.productCode === "414460P1")!
+      ).description
+    ).toContain("Bethesda Fountain");
   });
 
   it("governs all Engine6 meta and schema descriptions without generated taxonomy prefixes", () => {
