@@ -548,6 +548,9 @@ describe("engine6 meta descriptions", () => {
       const description = tour ? buildEngine6Seo(tour).description : "";
 
       expect(description.length).toBeGreaterThanOrEqual(140);
+      const description = tour?.metaDescription ?? "";
+
+      expect(description.length).toBeGreaterThanOrEqual(120);
       expect(description.length).toBeLessThanOrEqual(160);
       expect(description).not.toContain("...");
       for (const fragment of bannedGenericFragments) {

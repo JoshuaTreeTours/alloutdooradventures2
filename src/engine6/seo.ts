@@ -889,6 +889,197 @@ const buildEngine6ItinerarySerpDescription = ({
 
   if (composed.length < ENGINE6_OPTIMIZED_DESCRIPTION_MIN) {
     composed = appendEngine6SerpDetailIfUseful(composed, sourceText);
+};
+
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const removeDuplicateTitleRestatement = (value: string, title: string) => {
+  const readableTitle = normalizeEngine6ReadableTitle(title)
+    .replace(/\s+\d{4,}$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!readableTitle) return value;
+
+  const titlePattern = new RegExp(
+    `^${escapeRegExp(readableTitle)}\\s+(?:is|offers|provides|gives|takes|brings|combines|features)\\s+`,
+    "i"
+  );
+
+  return value.replace(titlePattern, "").trim();
+};
+
+const removeAwkwardMetaBoilerplate = (value: string, title: string) => {
+  let cleaned = value;
+  for (const pattern of ENGINE6_AWKWARD_META_BOILERPLATE_PATTERNS) {
+    cleaned = cleaned.replace(pattern, "");
+  }
+
+  const readableTitle = normalizeEngine6ReadableTitle(title)
+    .replace(/\s+\d{4,}$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (readableTitle) {
+    cleaned = cleaned.replace(
+      new RegExp(`^Explore\\s+${escapeRegExp(readableTitle)}\\s+`, "i"),
+      ""
+    );
+  }
+
+  return cleaned
+    .replace(/\b[A-Z0-9]{2,}_[A-Z0-9_]+\b/g, "")
+    .replace(/\b\d{3,}[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)?\b/g, "")
+    .replace(/\b[A-Z]{2,}\d{2,}[A-Z0-9]*(?:_[A-Z0-9]+)?\b/g, "")
+    .replace(/\s*,\s*,+/g, ", ")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .replace(/^[,.;:!?\s-]+/, "")
+    .trim();
+};
+
+const cleanEngine6SourceProseForMeta = (value: string, title: string) => {
+  const cleaned = removeAwkwardMetaBoilerplate(
+    removeDuplicateTitleRestatement(
+      stripGenericMarketingLead(
+        stripEngine6GeneratedDescriptionPrefix(
+          removeBlockedOperationalFiller(
+            cleanEngine6Description(
+              value
+                .replace(/<[^>]*>/g, " ")
+                .replace(/\s+/g, " ")
+                .trim()
+            )
+          )
+        )
+      ),
+      title
+    ),
+    title
+  );
+
+  return sentenceCase(
+    cleaned
+      .replace(/\s*,\s*(?:and\s*)?\./g, ".")
+      .replace(/\s+([,.;!?])/g, "$1")
+      .replace(/\s+/g, " ")
+      .trim()
+  );
+};
+
+const isUsableEngine6MetaSource = (value: string) => {
+  const normalized = value.trim();
+  if (normalized.length < 50) return false;
+  if (
+    ENGINE6_BAD_SOURCE_PROSE_PATTERNS.some(pattern => pattern.test(normalized))
+  ) {
+    return false;
+  }
+  const words = normalized.split(/\s+/).filter(Boolean);
+  return words.length >= 8;
+};
+
+const normalizeForDuplicateComparison = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const appendSourceSentenceIfUseful = (base: string, sentence: string) => {
+  const cleanedSentence = sentence.trim();
+  if (!cleanedSentence) return base;
+
+  const normalizedBase = normalizeForDuplicateComparison(base);
+  const normalizedSentence = normalizeForDuplicateComparison(cleanedSentence);
+  if (
+    normalizedSentence.length < 20 ||
+    normalizedBase.includes(normalizedSentence) ||
+    normalizedSentence.includes(normalizedBase)
+  ) {
+    return base;
+  }
+
+  const next = `${base.replace(/[.!?]?$/, ".")} ${cleanedSentence}`
+    .replace(/\s+/g, " ")
+    .trim();
+  return next.length <= ENGINE6_META_DESCRIPTION_HARD_MAX ? next : base;
+};
+
+const composeEngine6SourceMetaDescription = (
+  source: string,
+  supportingSources: string[] = [],
+  context?: { city: string; categoryLabel?: string | null }
+) => {
+  const sentences = splitDescriptionSentences(source);
+  const parts = sentences.length > 0 ? sentences : [source];
+  let composed = "";
+
+  for (const part of parts) {
+    const next = composed ? `${composed} ${part}` : part;
+    if (next.length <= ENGINE6_OPTIMIZED_DESCRIPTION_MAX) {
+      composed = next;
+      if (
+        composed.length >= ENGINE6_OPTIMIZED_DESCRIPTION_MIN &&
+        /[.!?]$/.test(composed)
+      ) {
+        break;
+      }
+      continue;
+    }
+
+    if (!composed) {
+      composed = trimDescriptionToWordBoundary(
+        part,
+        ENGINE6_META_DESCRIPTION_HARD_MAX
+      );
+    }
+    break;
+  }
+
+  if (!composed) {
+    composed = trimDescriptionToWordBoundary(
+      source,
+      ENGINE6_META_DESCRIPTION_HARD_MAX
+    );
+  }
+
+  for (const supportingSource of supportingSources) {
+    if (composed.length >= ENGINE6_OPTIMIZED_DESCRIPTION_MIN) break;
+    const supportingSentences = splitDescriptionSentences(supportingSource);
+    for (const sentence of supportingSentences.length > 0
+      ? supportingSentences
+      : [supportingSource]) {
+      const next = appendSourceSentenceIfUseful(composed, sentence);
+      if (next !== composed) {
+        composed = next;
+      }
+      if (composed.length >= ENGINE6_OPTIMIZED_DESCRIPTION_MIN) break;
+    }
+  }
+
+  if (composed.length < 120 && context) {
+    const category = (context.categoryLabel ?? "experience")
+      .toLowerCase()
+      .replace(/\btour\b/i, "tour");
+    const city = context.city.trim();
+    const contextPhrase = city
+      ? ` on a ${city} ${category}`
+      : ` on a ${category}`;
+    const candidate = `${composed.replace(/[.!?]?$/, "")}${contextPhrase}.`
+      .replace(/\s+/g, " ")
+      .trim();
+    if (candidate.length <= ENGINE6_META_DESCRIPTION_HARD_MAX) {
+      composed = candidate;
+    }
+  }
+
+  if (composed.length < 120) {
+    const candidate = `${composed.replace(/[.!?]?$/, "")} with route details.`
+      .replace(/\s+/g, " ")
+      .trim();
+    if (candidate.length <= ENGINE6_META_DESCRIPTION_HARD_MAX) {
+      composed = candidate;
+    }
   }
 
   if (composed.length > ENGINE6_META_DESCRIPTION_HARD_MAX) {
@@ -907,6 +1098,21 @@ const buildEngine6ItinerarySerpDescription = ({
   }
 
   return cleaned;
+  const normalized = composed
+    .replace(/\.\.\.+/g, ".")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .trim();
+
+  const punctuated =
+    normalized && !/[.!?]$/.test(normalized) ? `${normalized}.` : normalized;
+
+  return punctuated.length > ENGINE6_META_DESCRIPTION_HARD_MAX
+    ? trimDescriptionToWordBoundary(
+        punctuated,
+        ENGINE6_META_DESCRIPTION_HARD_MAX
+      )
+    : punctuated;
 };
 
 const buildEngine6FallbackMetaDescription = ({
@@ -947,6 +1153,22 @@ export const buildEngine6OptimizedDescription = ({
   sourceDescriptions?: Array<string | null | undefined>;
 }) => {
   const candidates = [...(sourceDescriptions ?? []), sourceDescription];
+
+  const cleanedCandidates = candidates
+    .map(candidate =>
+      candidate ? cleanEngine6SourceProseForMeta(candidate, title) : ""
+    )
+    .filter(Boolean);
+
+  for (const cleanedSource of cleanedCandidates) {
+    if (!isUsableEngine6MetaSource(cleanedSource)) continue;
+    return composeEngine6SourceMetaDescription(
+      cleanedSource,
+      cleanedCandidates.filter(candidate => candidate !== cleanedSource),
+      { city, categoryLabel }
+    );
+  }
+
 
   const cleanedCandidates = candidates
     .map(candidate =>
