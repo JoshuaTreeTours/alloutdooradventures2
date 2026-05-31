@@ -106,6 +106,67 @@ const toSentence = (value: string) => {
   return /[.!?]$/.test(trimmed) ? trimmed : `${trimmed}.`;
 };
 
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  Boolean(value) && typeof value === "object";
+
+const pickSupportingGalleryImages = ({
+  rawProduct,
+  heroUrl,
+}: {
+  rawProduct: Record<string, unknown> | null;
+  heroUrl: string;
+  expectedProductCode: string;
+}) => {
+  if (!rawProduct) return [];
+  const productNode = isRecord(rawProduct.product)
+    ? rawProduct.product
+    : rawProduct;
+
+  const nodeProductCode =
+    typeof productNode.productCode === "string" ? productNode.productCode.trim() : "";
+  if (!nodeProductCode || nodeProductCode.toUpperCase() !== expectedProductCode.toUpperCase()) {
+    return [];
+  }
+  const nodeProductUrl =
+    typeof productNode.productUrl === "string" ? productNode.productUrl : "";
+  if (nodeProductUrl && !nodeProductUrl.toUpperCase().includes(expectedProductCode.toUpperCase())) {
+    return [];
+  }
+  const mediaNode = isRecord(productNode.media) ? productNode.media : null;
+  const images = mediaNode && Array.isArray(mediaNode.images) ? mediaNode.images : [];
+
+  const urls = images
+    .map(image => {
+      if (!isRecord(image) || image.isCover === true) return null;
+      const variants = Array.isArray(image.variants) ? image.variants : [];
+      const candidates = variants
+        .map(variant => {
+          if (!isRecord(variant) || typeof variant.url !== "string") return null;
+          const url = variant.url.trim();
+          if (!/^https?:\/\//i.test(url)) return null;
+          return {
+            url,
+            width: typeof variant.width === "number" ? variant.width : 0,
+            isTacdn: /\btacdn\.com\b/i.test(url),
+            isSplice: /attractions-splice/i.test(url),
+          };
+        })
+        .filter((entry): entry is { url: string; width: number; isTacdn: boolean; isSplice: boolean } => Boolean(entry));
+      if (candidates.length === 0) return null;
+      candidates.sort((a, b) => {
+        if (a.isSplice !== b.isSplice) return a.isSplice ? 1 : -1;
+        if (a.isTacdn !== b.isTacdn) return a.isTacdn ? -1 : 1;
+        return b.width - a.width;
+      });
+      return candidates[0]?.url ?? null;
+    })
+    .filter((url): url is string => Boolean(url))
+    .filter(url => url !== heroUrl);
+
+  return Array.from(new Set(urls)).slice(0, 4);
+};
+
 const countWords = (value: string) =>
   value.trim().split(/\s+/).filter(Boolean).length;
 
@@ -685,6 +746,11 @@ export const mapViatorToEngine6Tour = (
     state,
     resolvedImageUrl: strictResolvedHero.url,
     heroImageUrl: strictResolvedHero.url,
+    supportingGalleryImageUrls: pickSupportingGalleryImages({
+      rawProduct: payload.rawProduct,
+      heroUrl: strictResolvedHero.url,
+      expectedProductCode: payload.rawProductCode,
+    }),
     resolvedHero: strictResolvedHero,
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: formattedStartingPrice,

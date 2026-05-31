@@ -145,6 +145,7 @@ export type Engine6Tour = {
   state: string;
   resolvedImageUrl: string | null;
   heroImageUrl: string | null;
+  supportingGalleryImageUrls: string[];
   resolvedHero:
     | {
         url: string;
