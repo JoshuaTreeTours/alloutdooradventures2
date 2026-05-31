@@ -209,6 +209,9 @@ const ENGINE6_ACTIVE_DESCRIPTION_START_PATTERN =
   /^(Explore|Ride|Paddle|Sail|Discover|Visit|Fly|See|Cruise|Hike|Kayak|Bike|Drive|Taste|Tour|Walk|Glide)\b/i;
 const ENGINE6_GENERIC_MARKETING_LEAD_PATTERNS = [
   /^this\s+(?:private\s+)?(?:tour|experience|outing|activity)\s+(?:offers|provides|gives|is)\s+(?:an?\s+)?(?:unparalleled\s+opportunity\s+to\s+)?/i,
+  /^this\s+[^.!?]{0,90}?\s+private\s+tour,?\s+(?:offers\s+)?(?:an?\s+)?(?:unparalleled\s+opportunity\s+(?:to|for\s+travelers\s+to)\s+)?/i,
+  /^unparalleled\s+opportunity\s+(?:to|for\s+travelers\s+to)\s+/i,
+  /^the\s+private\s+tour\s+"?[^"]+"?\s+combines\s+/i,
   /^join\s+us\s+for\s+(?:an?\s+)?/i,
   /^come\s+discover\s+/i,
   /^we\s+created\s+[^.!?]*[.!?]\s*/i,
@@ -235,15 +238,69 @@ const splitDescriptionSentences = (value: string) =>
     .map(sentence => sentence.trim())
     .filter(Boolean);
 
-const chooseEngine6ExperienceVerb = (categoryLabel?: string | null) => {
+const chooseEngine6ExperienceVerb = ({
+  categoryLabel,
+  title,
+  sourceDescription,
+}: {
+  categoryLabel?: string | null;
+  title: string;
+  sourceDescription: string;
+}) => {
   const category = (categoryLabel ?? "").toLowerCase();
-  if (/bike|cycling/.test(category)) return "Ride";
-  if (/paddle|kayak|canoe|sup/.test(category)) return "Paddle";
-  if (/boat|cruise|sailing/.test(category)) return "Sail";
-  if (/air|helicopter|paraglid/.test(category)) return "Fly";
-  if (/hiking|walk/.test(category)) return "Hike";
-  if (/food|drink|wine/.test(category)) return "Taste";
-  if (/museum|attraction/.test(category)) return "Visit";
+  const titleIdentity = `${title} ${category}`.toLowerCase();
+  const identity = `${title} ${sourceDescription}`.toLowerCase();
+  if (
+    /bike|cycling|e-bike/.test(titleIdentity) ||
+    /bike|cycling/.test(category)
+  ) {
+    return "Ride";
+  }
+  if (
+    /paddle|kayak|canoe|sup/.test(titleIdentity) ||
+    /paddle|kayak|canoe|sup/.test(category)
+  ) {
+    return "Paddle";
+  }
+  if (
+    /\b(?:helicopter|paraglid|parasail(?:ing)?|flight|fly)\b/.test(identity)
+  ) {
+    return "Fly";
+  }
+  if (
+    /\b(?:hiking|hike|walking)\b/.test(titleIdentity) ||
+    /hiking|walk/.test(category)
+  ) {
+    return "Hike";
+  }
+  if (
+    /museum|admission|ticket|attraction|theme park|universal studios/.test(
+      titleIdentity
+    ) ||
+    /museum|attraction/.test(category)
+  ) {
+    return "Visit";
+  }
+  if (
+    /sightseeing|celebrity|hollywood|beverly|landmark|city tour|private.*tour/.test(
+      titleIdentity
+    )
+  ) {
+    return "Explore";
+  }
+  if (
+    /boat|cruise|sail|yacht|catamaran|harbor/.test(titleIdentity) ||
+    (/boat|water|cruise|sailing/.test(category) &&
+      /boat|cruise|sail|yacht|catamaran|harbor|bay|water/.test(identity))
+  ) {
+    return "Sail";
+  }
+  if (
+    /food|drink|wine|tasting|chocolate/.test(identity) ||
+    /food|drink|wine/.test(category)
+  ) {
+    return "Taste";
+  }
   return "Explore";
 };
 
@@ -282,12 +339,18 @@ const buildEngine6ExperienceLead = ({
   title,
   city,
   categoryLabel,
+  sourceDescription,
 }: {
   title: string;
   city: string;
   categoryLabel?: string | null;
+  sourceDescription: string;
 }) => {
-  const verb = chooseEngine6ExperienceVerb(categoryLabel);
+  const verb = chooseEngine6ExperienceVerb({
+    categoryLabel,
+    title,
+    sourceDescription,
+  });
   const readableTitle = normalizeEngine6ReadableTitle(title)
     .replace(/\s+\d{4,}$/i, "")
     .trim();
@@ -321,7 +384,15 @@ const trimDescriptionToWordBoundary = (value: string, maxLength: number) => {
   const clipped = normalized.slice(0, maxLength).trim();
   const lastSpace = clipped.lastIndexOf(" ");
   const safeClipped = lastSpace > 100 ? clipped.slice(0, lastSpace) : clipped;
-  return safeClipped.replace(/[,:;\s-]+$/, "").trim();
+  let cleaned = safeClipped.replace(/[,:;\s-]+$/, "").trim();
+  cleaned = cleaned
+    .replace(
+      /\b(?:but\s+for\s+those|from\s+the|for\s+those|from|with|and|for|of|in|on|at|to|while|that|this|those|the|a|an)$/i,
+      ""
+    )
+    .replace(/[,:;\s-]+$/, "")
+    .trim();
+  return cleaned;
 };
 
 export const buildEngine6OptimizedDescription = ({
@@ -350,7 +421,12 @@ export const buildEngine6OptimizedDescription = ({
   const sourceStartsActively =
     ENGINE6_ACTIVE_DESCRIPTION_START_PATTERN.test(cleanedSource);
   const priorityAttraction = extractEngine6PriorityAttraction(cleanedSource);
-  const baseLead = buildEngine6ExperienceLead({ title, city, categoryLabel });
+  const baseLead = buildEngine6ExperienceLead({
+    title,
+    city,
+    categoryLabel,
+    sourceDescription: cleanedSource,
+  });
   const lead =
     priorityAttraction &&
     !baseLead.toLowerCase().includes(priorityAttraction.toLowerCase()) &&
@@ -365,9 +441,18 @@ export const buildEngine6OptimizedDescription = ({
       primarySource.toLowerCase().includes(title.toLowerCase()) ||
       primarySource.length >= 80);
 
+  const sourceRemainder = sourceSentences.filter(sentence => {
+    const normalizedSentence = sentence.toLowerCase();
+    const normalizedLead = lead.toLowerCase();
+    return !(
+      normalizedSentence.includes(normalizedLead) ||
+      normalizedLead.includes(normalizedSentence.replace(/\.$/, ""))
+    );
+  });
+
   const parts = shouldUseSourceAsLead
-    ? [primarySource, ...sourceSentences.slice(1)]
-    : [lead, primarySource, ...sourceSentences.slice(1)];
+    ? sourceSentences
+    : [lead, ...sourceRemainder];
   let composed = parts
     .filter(Boolean)
     .join(". ")
@@ -381,8 +466,11 @@ export const buildEngine6OptimizedDescription = ({
 
   if (composed.length < ENGINE6_OPTIMIZED_DESCRIPTION_MIN) {
     const category = (categoryLabel ?? "guided experience").toLowerCase();
+    const guidePhrase = category.includes("guided")
+      ? "local context"
+      : "guide support, local context";
     composed =
-      `${composed} ${category.includes("guided") ? "" : "Guided format with "}local context and traveler-focused logistics.`
+      `${composed} Expect ${guidePhrase}, clear timing, and traveler-focused logistics for a smooth day.`
         .replace(/\s+/g, " ")
         .trim();
   }

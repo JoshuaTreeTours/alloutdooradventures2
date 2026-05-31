@@ -2968,10 +2968,11 @@ describe("engine6 route wiring", () => {
     );
     expect(anchorageTour).toBeDefined();
     expect(anchorageTour?.canonicalPath).toBe(ENGINE6_ANCHORAGE_SUNSET_ROUTE);
-    expect(
-      anchorageTour?.description.startsWith(
-        "Join one of the best experiences in Anchorage..."
-      )
-    ).toBe(true);
+    expect(anchorageTour?.description).toMatch(
+      /^Explore the wilderness outside Anchorage/
+    );
+    expect(anchorageTour?.description).not.toMatch(
+      /Join one of the best experiences in Anchorage/i
+    );
   });
 });
