@@ -1,4 +1,7 @@
-import { stripEngine6GeneratedDescriptionPrefix } from "./seo";
+import {
+  buildEngine6OptimizedDescription,
+  stripEngine6GeneratedDescriptionPrefix,
+} from "./seo";
 
 export const MERCHANT_APPROVED_DESCRIPTIONS: Record<string, string> = {
   "152424P1":
@@ -173,13 +176,23 @@ export const resolveMerchantDescription = (args: {
   for (const candidate of sourceCandidates) {
     const normalized = normalizeMerchantDescriptionCandidate(candidate);
     if (normalized && !hasGenericMerchantDescriptionBoilerplate(normalized)) {
-      return normalized;
+      return buildEngine6OptimizedDescription({
+        title: args.title,
+        city: args.city,
+        categoryLabel: args.categoryLabel,
+        sourceDescription: normalized,
+      });
     }
   }
 
-  return buildProductSpecificFallback({
+  return buildEngine6OptimizedDescription({
     title: args.title,
     city: args.city,
     categoryLabel: args.categoryLabel,
+    sourceDescription: buildProductSpecificFallback({
+      title: args.title,
+      city: args.city,
+      categoryLabel: args.categoryLabel,
+    }),
   });
 };

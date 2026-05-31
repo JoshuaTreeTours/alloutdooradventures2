@@ -56,11 +56,11 @@ const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
 };
 const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "415653P2":
-    "Explore Yosemite National Park from San Francisco on a private tour featuring giant sequoias, Glacier Point views, waterfalls, granite cliffs, and Sierra scenery.",
+    "Explore Yosemite from San Francisco on a private tour with giant sequoias, Glacier Point, waterfalls, granite cliffs, and Sierra scenery",
   "6007P5":
-    "Book a San Francisco guided bicycle tour to Sausalito with Golden Gate Bridge riding, lunch voucher, all-day bike rental, and independent return options.",
+    "Ride from San Francisco to Sausalito on a guided bike tour across the Golden Gate Bridge, with lunch voucher, all-day rental, and return options",
   "2630SUN":
-    "Book a two-hour San Francisco Bay sunset or city-lights cruise with waterfront boarding, bridge views, Alcatraz views, and round-trip return to Pier 43 1/2.",
+    "Cruise San Francisco Bay at sunset or after dark on a two-hour waterfront sailing with Golden Gate Bridge, Alcatraz, Bay Bridge, and Pier 43 1/2 return",
 };
 const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",

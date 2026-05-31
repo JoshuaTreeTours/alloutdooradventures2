@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import { extractEngine6Product } from "../api/engine6/viatorExtractors";
@@ -53,94 +53,6 @@ const toCsv = (rows: MerchantRow[]) => {
     .map(row => OUTPUT_HEADERS.map(header => escapeCsv(row[header])).join(","))
     .join("\n");
   return `${headerLine}\n${body}\n`;
-};
-
-const parseCsvLine = (line: string) => {
-  const values: string[] = [];
-  let current = "";
-  let inQuotes = false;
-
-  for (let index = 0; index < line.length; index += 1) {
-    const char = line[index];
-    const next = line[index + 1];
-
-    if (char === '"') {
-      if (inQuotes && next === '"') {
-        current += '"';
-        index += 1;
-      } else {
-        inQuotes = !inQuotes;
-      }
-      continue;
-    }
-
-    if (char === "," && !inQuotes) {
-      values.push(current);
-      current = "";
-      continue;
-    }
-
-    current += char;
-  }
-
-  values.push(current);
-  return values;
-};
-
-const parseExistingMerchantRows = async () => {
-  try {
-    const csv = await readFile(OUTPUT_PATH, "utf8");
-    const lines = csv.split(/\r?\n/).filter(Boolean);
-    const [headerLine, ...bodyLines] = lines;
-    const headers = parseCsvLine(headerLine ?? "");
-    const idIndex = headers.indexOf("id");
-
-    if (idIndex < 0) {
-      return new Map<string, MerchantRow>();
-    }
-
-    const existingRows = new Map<string, MerchantRow>();
-    for (const line of bodyLines) {
-      const values = parseCsvLine(line);
-      const id = values[idIndex]?.trim();
-      if (!id) continue;
-
-      const row = Object.fromEntries(
-        OUTPUT_HEADERS.map(header => [
-          header,
-          values[headers.indexOf(header)] ?? "",
-        ])
-      ) as MerchantRow;
-      existingRows.set(id, row);
-    }
-
-    return existingRows;
-  } catch {
-    return new Map<string, MerchantRow>();
-  }
-};
-
-const preserveExistingGovernedNonDescriptionFields = (
-  row: MerchantRow,
-  existingRow: MerchantRow | undefined
-): MerchantRow => {
-  if (!existingRow) {
-    return row;
-  }
-
-  return {
-    ...row,
-    title: existingRow.title,
-    link: existingRow.link,
-    image_link: existingRow.image_link,
-    availability: existingRow.availability,
-    price: existingRow.price,
-    condition: existingRow.condition,
-    brand: existingRow.brand,
-    average_rating: existingRow.average_rating,
-    rating_count: existingRow.rating_count,
-    review_count: existingRow.review_count,
-  };
 };
 
 const isValidHttpUrl = (value: unknown): value is string => {
@@ -274,8 +186,7 @@ const formatMerchantCount = (value: number | null) =>
 
 const buildMerchantRow = (
   tour: Engine6Tour,
-  hydration: Engine6FeedHydration | null,
-  existingRow?: MerchantRow
+  hydration: Engine6FeedHydration | null
 ): MerchantRow => {
   const imageLink = [
     tour.resolvedHero?.url,
@@ -285,7 +196,7 @@ const buildMerchantRow = (
     .map(value => value?.trim())
     .find(isValidHttpUrl);
 
-  const row: MerchantRow = {
+  return {
     id: tour.productCode,
     title: tour.title,
     description: resolveMerchantDescription({
@@ -313,12 +224,9 @@ const buildMerchantRow = (
     rating_count: hydration ? formatMerchantCount(hydration.ratingCount) : "",
     review_count: hydration ? formatMerchantCount(hydration.reviewCount) : "",
   };
-
-  return preserveExistingGovernedNonDescriptionFields(row, existingRow);
 };
 
 const main = async () => {
-  const existingRows = await parseExistingMerchantRows();
   const outputRows: MerchantRow[] = [];
   let warningCount = 0;
 
@@ -355,9 +263,7 @@ const main = async () => {
       }
     }
 
-    outputRows.push(
-      buildMerchantRow(tour, hydration, existingRows.get(tour.productCode))
-    );
+    outputRows.push(buildMerchantRow(tour, hydration));
   }
 
   await writeFile(OUTPUT_PATH, toCsv(outputRows), "utf8");

@@ -515,7 +515,8 @@ describe("engine6 meta descriptions", () => {
     expect(metaDescription).toMatch(/^Cruise the bay at sunset/);
     expect(hasEngine6GeneratedDescriptionPrefix(metaDescription)).toBe(false);
     expect(isEngine6OperationalFiller(metaDescription)).toBe(false);
-    expect(metaDescription.length).toBeLessThanOrEqual(160);
+    expect(metaDescription.length).toBeGreaterThanOrEqual(140);
+    expect(metaDescription.length).toBeLessThanOrEqual(155);
   });
 
   it("governs all Engine6 meta and schema descriptions without generated taxonomy prefixes", () => {
@@ -535,6 +536,11 @@ describe("engine6 meta descriptions", () => {
         hasEngine6GeneratedDescriptionPrefix(String(product?.description ?? ""))
       ).toBe(false);
       expect(product?.description).toBe(tour.metaDescription);
+      expect(tour.metaDescription.length).toBeGreaterThanOrEqual(120);
+      expect(tour.metaDescription.length).toBeLessThanOrEqual(160);
+      expect(tour.metaDescription).not.toMatch(
+        /^(This tour offers|This experience provides|This private tour offers an unparalleled opportunity|Join us for|Come discover)/i
+      );
     }
   });
 

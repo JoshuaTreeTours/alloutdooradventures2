@@ -3,7 +3,6 @@ import { slugify } from "../utils/slugify";
 import type { Engine6CategorySlug, Engine6Tour } from "./types";
 
 const ENGINE6_META_DESCRIPTION_CLAMP_AT = 155;
-const ENGINE6_META_DESCRIPTION_MIN = 140;
 const ENGINE6_BLOCKED_META_PATTERNS = [
   /public transportation options are available nearby/i,
   /confirmation will be received/i,
@@ -204,7 +203,128 @@ const removeBlockedOperationalFiller = (value: string) => {
 export const isEngine6OperationalFiller = (value: string) =>
   ENGINE6_BLOCKED_META_PATTERNS.some(pattern => pattern.test(value));
 
-export const buildEngine6SeoDescription = ({
+const ENGINE6_OPTIMIZED_DESCRIPTION_MIN = 140;
+const ENGINE6_OPTIMIZED_DESCRIPTION_MAX = 155;
+const ENGINE6_ACTIVE_DESCRIPTION_START_PATTERN =
+  /^(Explore|Ride|Paddle|Sail|Discover|Visit|Fly|See|Cruise|Hike|Kayak|Bike|Drive|Taste|Tour|Walk|Glide)\b/i;
+const ENGINE6_GENERIC_MARKETING_LEAD_PATTERNS = [
+  /^this\s+(?:private\s+)?(?:tour|experience|outing|activity)\s+(?:offers|provides|gives|is)\s+(?:an?\s+)?(?:unparalleled\s+opportunity\s+to\s+)?/i,
+  /^join\s+us\s+for\s+(?:an?\s+)?/i,
+  /^come\s+discover\s+/i,
+  /^we\s+created\s+[^.!?]*[.!?]\s*/i,
+  /^your\s+private\s+[^.!?]*?\s+will\s+showcase\s+/i,
+];
+
+const sentenceCase = (value: string) => {
+  const trimmed = value.trim();
+  if (!trimmed) return "";
+  return `${trimmed.charAt(0).toUpperCase()}${trimmed.slice(1)}`;
+};
+
+const stripGenericMarketingLead = (value: string) => {
+  let cleaned = value.trim();
+  for (const pattern of ENGINE6_GENERIC_MARKETING_LEAD_PATTERNS) {
+    cleaned = cleaned.replace(pattern, "").trim();
+  }
+  return sentenceCase(cleaned);
+};
+
+const splitDescriptionSentences = (value: string) =>
+  value
+    .split(/(?<=[.!?])\s+/)
+    .map(sentence => sentence.trim())
+    .filter(Boolean);
+
+const chooseEngine6ExperienceVerb = (categoryLabel?: string | null) => {
+  const category = (categoryLabel ?? "").toLowerCase();
+  if (/bike|cycling/.test(category)) return "Ride";
+  if (/paddle|kayak|canoe|sup/.test(category)) return "Paddle";
+  if (/boat|cruise|sailing/.test(category)) return "Sail";
+  if (/air|helicopter|paraglid/.test(category)) return "Fly";
+  if (/hiking|walk/.test(category)) return "Hike";
+  if (/food|drink|wine/.test(category)) return "Taste";
+  if (/museum|attraction/.test(category)) return "Visit";
+  return "Explore";
+};
+
+const ENGINE6_ATTRACTION_HINT_PATTERN =
+  /\b(?:The\s+)?[A-Z][A-Za-z'’]+(?:\s+[A-Z][A-Za-z'’]+){0,4}\s+(?:Sign|Bridge|Bay|Harbor|Lake|Park|Canyon|Falls|Waterfalls|Glacier|Island|Pier|Wharf|Beach|Valley|Mountain|Mount|Museum|Studios?|Observatory|River)\b/;
+
+const extractEngine6TitleSubject = (title: string, city: string) => {
+  const readableTitle = normalizeEngine6ReadableTitle(title)
+    .replace(/\([^)]*\)/g, " ")
+    .replace(/\s+\d{4,}$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  const subject = /\b(?:of|on|through|around|at|to|in)\s+(?:the\s+)?(.+)$/i
+    .exec(readableTitle)?.[1]
+    ?.replace(/^the\s+/i, "")
+    .trim();
+
+  if (
+    !subject ||
+    subject.length < 4 ||
+    subject.length > 70 ||
+    subject.toLowerCase() === city.toLowerCase()
+  ) {
+    return null;
+  }
+
+  return subject;
+};
+
+const extractEngine6PriorityAttraction = (value: string) => {
+  const match = ENGINE6_ATTRACTION_HINT_PATTERN.exec(value);
+  return match?.[0]?.replace(/^Iconic\s+/i, "").trim() ?? null;
+};
+
+const buildEngine6ExperienceLead = ({
+  title,
+  city,
+  categoryLabel,
+}: {
+  title: string;
+  city: string;
+  categoryLabel?: string | null;
+}) => {
+  const verb = chooseEngine6ExperienceVerb(categoryLabel);
+  const readableTitle = normalizeEngine6ReadableTitle(title)
+    .replace(/\s+\d{4,}$/i, "")
+    .trim();
+  const normalizedCity = city.trim();
+  const subject = extractEngine6TitleSubject(readableTitle, normalizedCity);
+
+  if (subject && /^(Ride|Paddle|Sail|Fly|Hike)$/i.test(verb)) {
+    const subjectIncludesCity =
+      normalizedCity.length > 0 &&
+      subject.toLowerCase().includes(normalizedCity.toLowerCase());
+    return `${verb} ${subject}${normalizedCity && !subjectIncludesCity ? ` in ${normalizedCity}` : ""}`
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  const titleIncludesCity =
+    normalizedCity.length > 0 &&
+    readableTitle.toLowerCase().includes(normalizedCity.toLowerCase());
+  const destination =
+    titleIncludesCity || !normalizedCity
+      ? readableTitle
+      : `${readableTitle} in ${normalizedCity}`;
+
+  return `${verb} ${destination}`.replace(/\s+/g, " ").trim();
+};
+
+const trimDescriptionToWordBoundary = (value: string, maxLength: number) => {
+  const normalized = value.replace(/\s+/g, " ").trim();
+  if (normalized.length <= maxLength) return normalized;
+
+  const clipped = normalized.slice(0, maxLength).trim();
+  const lastSpace = clipped.lastIndexOf(" ");
+  const safeClipped = lastSpace > 100 ? clipped.slice(0, lastSpace) : clipped;
+  return safeClipped.replace(/[,:;\s-]+$/, "").trim();
+};
+
+export const buildEngine6OptimizedDescription = ({
   title,
   city,
   categoryLabel,
@@ -215,29 +335,85 @@ export const buildEngine6SeoDescription = ({
   categoryLabel?: string | null;
   sourceDescription: string;
 }) => {
-  const cleanedSource = stripEngine6GeneratedDescriptionPrefix(
-    removeBlockedOperationalFiller(buildMetaDescription(sourceDescription))
-  );
-  const activity = (categoryLabel ?? "guided experience")
-    .replace(/\s+tour$/i, " tour")
-    .toLowerCase();
-  const body = cleanedSource
-    .replace(new RegExp(`^${city}[:,\\s-]+`, "i"), "")
-    .trim();
-  const seeded = body || `${title} is a ${activity} in ${city}.`;
-  const withIdentity = seeded.toLowerCase().includes(title.toLowerCase())
-    ? seeded
-    : `${seeded} ${title}.`;
-  const clamped = clampEngine6MetaDescription(withIdentity);
-  if (clamped.length >= ENGINE6_META_DESCRIPTION_MIN) {
-    return stripEngine6GeneratedDescriptionPrefix(clamped);
-  }
-  return stripEngine6GeneratedDescriptionPrefix(
-    clampEngine6MetaDescription(
-      `${clamped} Book this ${activity} with product-specific route details, local context, and traveler-focused planning guidance.`
+  const cleanedSource = stripGenericMarketingLead(
+    stripEngine6GeneratedDescriptionPrefix(
+      removeBlockedOperationalFiller(
+        cleanEngine6Description(
+          sourceDescription
+            .replace(/<[^>]*>/g, " ")
+            .replace(/\s+/g, " ")
+            .trim()
+        )
+      )
     )
   );
+  const sourceStartsActively =
+    ENGINE6_ACTIVE_DESCRIPTION_START_PATTERN.test(cleanedSource);
+  const priorityAttraction = extractEngine6PriorityAttraction(cleanedSource);
+  const baseLead = buildEngine6ExperienceLead({ title, city, categoryLabel });
+  const lead =
+    priorityAttraction &&
+    !baseLead.toLowerCase().includes(priorityAttraction.toLowerCase()) &&
+    baseLead.length + priorityAttraction.length < 105
+      ? `${baseLead} with ${priorityAttraction}`
+      : baseLead;
+  const sourceSentences = splitDescriptionSentences(cleanedSource);
+  const primarySource = sourceSentences[0] ?? cleanedSource;
+  const shouldUseSourceAsLead =
+    sourceStartsActively &&
+    (primarySource.toLowerCase().includes(city.toLowerCase()) ||
+      primarySource.toLowerCase().includes(title.toLowerCase()) ||
+      primarySource.length >= 80);
+
+  const parts = shouldUseSourceAsLead
+    ? [primarySource, ...sourceSentences.slice(1)]
+    : [lead, primarySource, ...sourceSentences.slice(1)];
+  let composed = parts
+    .filter(Boolean)
+    .join(". ")
+    .replace(/\s+/g, " ")
+    .replace(/\.\s*\./g, ".")
+    .trim();
+
+  if (composed && !/[.!?]$/.test(composed)) {
+    composed = `${composed}.`;
+  }
+
+  if (composed.length < ENGINE6_OPTIMIZED_DESCRIPTION_MIN) {
+    const category = (categoryLabel ?? "guided experience").toLowerCase();
+    composed =
+      `${composed} ${category.includes("guided") ? "" : "Guided format with "}local context and traveler-focused logistics.`
+        .replace(/\s+/g, " ")
+        .trim();
+  }
+
+  const trimmed = trimDescriptionToWordBoundary(
+    composed,
+    ENGINE6_OPTIMIZED_DESCRIPTION_MAX
+  );
+
+  return stripEngine6GeneratedDescriptionPrefix(trimmed)
+    .replace(/[.!?,;:]+$/, "")
+    .trim();
 };
+
+export const buildEngine6SeoDescription = ({
+  title,
+  city,
+  categoryLabel,
+  sourceDescription,
+}: {
+  title: string;
+  city: string;
+  categoryLabel?: string | null;
+  sourceDescription: string;
+}) =>
+  buildEngine6OptimizedDescription({
+    title,
+    city,
+    categoryLabel,
+    sourceDescription,
+  });
 
 export const buildEngine6CanonicalPath = ({
   state,
