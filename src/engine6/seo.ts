@@ -188,6 +188,29 @@ export const buildEngine6SeoTitle = ({
   return `${normalizedTitle} | ${normalizedCity}`;
 };
 
+const ENGINE6_EDITORIAL_META_OVERRIDES: Record<string, string> = {
+  "447486P2":
+    "Enjoy Santa Barbara from a sunset yacht cruise with coastal views, fresh ocean air, and a relaxed harborfront atmosphere.",
+  "331438P1":
+    "Soar above Santa Barbara on a parasailing flight from Stearns Wharf with licensed captains and ocean views.",
+  "398496P5":
+    "See the Las Vegas Sphere and Strip landmarks on a guided drive with live narration and city context.",
+  "190492P3":
+    "Visit Zion and Bryce Canyon from Las Vegas on a full-day guided tour with scenic viewpoints and national park highlights.",
+  "414460P1":
+    "Explore Central Park by pedicab with a licensed local guide, landmark stops, and more park coverage in less time.",
+};
+
+const ENGINE6_META_MAX_LENGTH = 155;
+const ENGINE6_META_MIN_TARGET_LENGTH = 120;
+const ENGINE6_META_BANNED_PATTERNS = [
+  /\.\.\./,
+  /\b[A-Z0-9]{2,}\d+[A-Z0-9]*\b/,
+  /\bThis route\b/i,
+  /\bwith Our\b/,
+  /\b(cruise|tour)\b[^.!?]{0,40}\b\1\b/i,
+];
+
 const removeBlockedOperationalFiller = (value: string) => {
   let cleaned = value;
   for (const pattern of ENGINE6_BLOCKED_META_PATTERNS) {
@@ -203,11 +226,352 @@ const removeBlockedOperationalFiller = (value: string) => {
 export const isEngine6OperationalFiller = (value: string) =>
   ENGINE6_BLOCKED_META_PATTERNS.some(pattern => pattern.test(value));
 
-const ENGINE6_OPTIMIZED_DESCRIPTION_MIN = 140;
-const ENGINE6_OPTIMIZED_DESCRIPTION_MAX = 155;
-const ENGINE6_ACTIVE_DESCRIPTION_START_PATTERN =
+const sentenceCase = (value: string) => {
+  const trimmed = value.trim();
+  if (!trimmed) return "";
+  return `${trimmed.charAt(0).toUpperCase()}${trimmed.slice(1)}`;
+};
+
+const normalizeEngine6MetaText = (value: string) =>
+  cleanEngine6Description(
+    value
+      .replace(/<[^>]*>/g, " ")
+      .replace(/[“”]/g, '"')
+      .replace(/[‘’]/g, "'")
+      .replace(/\s+/g, " ")
+      .trim()
+  );
+
+const splitDescriptionSentences = (value: string) =>
+  value
+    .split(/(?<=[.!?])\s+/)
+    .map(sentence => sentence.trim())
+    .filter(Boolean);
+
+const chooseEngine6EditorialVerb = ({
+  categoryLabel,
+  title,
+  sourceDescription,
+}: {
+  categoryLabel?: string | null;
+  title: string;
+  sourceDescription: string;
+}) => {
+  const category = (categoryLabel ?? "").toLowerCase();
+  const identity = `${title} ${category} ${sourceDescription}`.toLowerCase();
+
+  if (/parasail|paraglid|helicopter|flight|fly|air\s*tour/.test(identity)) {
+    return "Soar";
+  }
+  if (/boat|cruise|sail|yacht|catamaran|harbor|bay/.test(identity)) {
+    return "Enjoy";
+  }
+  if (/kayak|canoe|paddle|sup|emerald cave/.test(identity)) {
+    return "Paddle";
+  }
+  if (/pedicab|bike|cycling|e-bike|segway|shopping cart|limo/.test(identity)) {
+    return "Explore";
+  }
+  if (
+    /zion|bryce|national park|museum|admission|ticket|attraction/.test(identity)
+  ) {
+    return "Visit";
+  }
+  if (/sphere|strip|landmark|driving|city tour|sightseeing/.test(identity)) {
+    return "See";
+  }
+  if (/hiking|hike|walking/.test(identity)) {
+    return "Hike";
+  }
+  if (/kayak|canoe|paddle|sup/.test(identity)) {
+    return "Paddle";
+  }
+  if (/food|wine|tasting|brewery|drink/.test(identity)) {
+    return "Taste";
+  }
+  return "Explore";
+};
+
+const trimTrailingMetaFragments = (value: string) =>
+  value
+    .replace(
+      /\b(?:and|or|with|for|from|through|across|around|near|plus|including|while|during|on|in|at|to|by|of|the|a|an)$/i,
+      ""
+    )
+    .replace(/[\s,;:—-]+$/g, "")
+    .trim();
+
+const ensureCompleteMetaSentence = (value: string) => {
+  const normalized = value
+    .replace(/\.\.\./g, "")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .trim();
+  const withoutTerminal = trimTrailingMetaFragments(
+    normalized.replace(/[.!?]+$/g, "")
+  );
+  return `${sentenceCase(withoutTerminal)}.`;
+};
+
+const clampEngine6EditorialMeta = (value: string) => {
+  let sentence = ensureCompleteMetaSentence(value);
+  if (sentence.length <= ENGINE6_META_MAX_LENGTH) {
+    return sentence;
+  }
+
+  const clipped = sentence.slice(0, ENGINE6_META_MAX_LENGTH - 1).trim();
+  const lastSpace = clipped.lastIndexOf(" ");
+  sentence = ensureCompleteMetaSentence(
+    lastSpace > 90 ? clipped.slice(0, lastSpace) : clipped
+  );
+
+  while (sentence.length > ENGINE6_META_MAX_LENGTH) {
+    const body = sentence.replace(/[.!?]$/g, "");
+    const last = body.lastIndexOf(" ");
+    if (last < 60) break;
+    sentence = ensureCompleteMetaSentence(body.slice(0, last));
+  }
+
+  return sentence;
+};
+
+const extractEngine6DestinationPhrase = ({
+  title,
+  city,
+  sourceDescription,
+}: {
+  title: string;
+  city: string;
+  sourceDescription: string;
+}) => {
+  const normalizedTitle = normalizeEngine6ReadableTitle(title);
+  const rawCity = city.trim();
+  const normalizedCity = /[:|]|\btour\b|\bexperience\b/i.test(rawCity)
+    ? ""
+    : rawCity;
+  const text = `${normalizedTitle}. ${sourceDescription}`;
+
+  if (/zion/i.test(text) && /bryce/i.test(text)) {
+    return "Zion and Bryce Canyon from Las Vegas";
+  }
+  if (/central park/i.test(text)) {
+    return "Central Park";
+  }
+  if (/sphere/i.test(text) && /strip/i.test(text)) {
+    return "the Las Vegas Sphere and Strip landmarks";
+  }
+  if (/sphere/i.test(text)) {
+    return "the Las Vegas Sphere";
+  }
+  if (
+    /santa barbara/i.test(text) &&
+    /coast|parasail|stearns wharf/i.test(text)
+  ) {
+    return "above Santa Barbara";
+  }
+  if (/santa barbara/i.test(text)) {
+    return "Santa Barbara";
+  }
+
+  const titleSubject =
+    /\b(?:of|on|through|around|at|to|in|above)\s+(?:the\s+)?(.+)$/i
+      .exec(normalizedTitle)?.[1]
+      ?.replace(/^the\s+/i, "")
+      .trim();
+  if (
+    titleSubject &&
+    titleSubject.length <= 48 &&
+    !/[:|]|\btours?\b|\bexperience\b/i.test(titleSubject)
+  ) {
+    return titleSubject;
+  }
+
+  return normalizedCity || normalizedTitle;
+};
+
+const chooseEngine6ExperienceType = ({
+  title,
+  categoryLabel,
+  sourceDescription,
+}: {
+  title: string;
+  categoryLabel?: string | null;
+  sourceDescription: string;
+}) => {
+  const identity =
+    `${title} ${categoryLabel ?? ""} ${sourceDescription}`.toLowerCase();
+  if (/parasail/.test(identity)) return "parasailing flight";
+  if (/shopping cart|limo/.test(identity)) return "guided ride";
+  if (/pedicab/.test(identity)) return "pedicab ride";
+  if (/yacht/.test(identity)) return "yacht cruise";
+  if (/cruise|boat|sail|catamaran/.test(identity)) return "boat cruise";
+  if (/driving|drive/.test(identity)) return "guided drive";
+  if (/zion|bryce|day trip|full-day/.test(identity))
+    return "full-day guided tour";
+  if (/bike|cycling|e-bike/.test(identity)) return "guided bike ride";
+  if (/hike|hiking|walking/.test(identity)) return "guided hike";
+  if (/kayak|canoe|paddle|emerald cave/.test(identity)) return "guided paddle";
+  if (/food|wine|tasting/.test(identity)) return "tasting experience";
+  return (categoryLabel ?? "guided experience").toLowerCase();
+};
+
+const chooseEngine6Differentiator = ({
+  title,
+  sourceDescription,
+}: {
+  title: string;
+  sourceDescription: string;
+}) => {
+  const identity = `${title} ${sourceDescription}`.toLowerCase();
+  if (/parasail|coast guard|licensed captain|stearns wharf/.test(identity)) {
+    return "licensed captains and ocean views";
+  }
+  if (/yacht|sunset|happy hour|harbor|coastal/.test(identity)) {
+    return "coastal views, fresh ocean air, and a relaxed harborfront atmosphere";
+  }
+  if (/red rock|emerald cave|kayak/.test(identity)) {
+    return "scenic views, guide support, and easy logistics";
+  }
+  if (/sphere|strip|las vegas/.test(identity)) {
+    return "live narration, local context, and traveler-friendly logistics";
+  }
+  if (/zion|bryce|national park/.test(identity)) {
+    return "scenic viewpoints and national park highlights";
+  }
+  if (/central park|pedicab/.test(identity)) {
+    return "a licensed local guide, landmark stops, and efficient park coverage";
+  }
+  if (/golden gate|bridge|bay|skyline/.test(identity)) {
+    return "scenic views, guide support, and easy logistics";
+  }
+  return "local context, clear logistics, and a traveler-friendly pace";
+};
+
+const buildEngine6EditorialTemplate = ({
+  title,
+  city,
+  categoryLabel,
+  sourceDescription,
+}: {
+  title: string;
+  city: string;
+  categoryLabel?: string | null;
+  sourceDescription: string;
+}) => {
+  const verb = chooseEngine6EditorialVerb({
+    categoryLabel,
+    title,
+    sourceDescription,
+  });
+  const destination = extractEngine6DestinationPhrase({
+    title,
+    city,
+    sourceDescription,
+  });
+  const experienceType = chooseEngine6ExperienceType({
+    title,
+    categoryLabel,
+    sourceDescription,
+  });
+  const differentiator = chooseEngine6Differentiator({
+    title,
+    sourceDescription,
+  });
+
+  if (verb === "Soar") {
+    return `${verb} ${destination} on a ${experienceType} with ${differentiator}`;
+  }
+
+  const connector = /^(Visit|See|Explore|Hike|Paddle|Taste)$/i.test(verb)
+    ? "on"
+    : "from";
+
+  return `${verb} ${destination} ${connector} a ${experienceType} with ${differentiator}`;
+};
+
+const expandEngine6ShortMeta = (value: string) => {
+  let sentence = ensureCompleteMetaSentence(value);
+  if (sentence.length >= ENGINE6_META_MIN_TARGET_LENGTH) {
+    return sentence;
+  }
+
+  const additions = [
+    "with clear logistics and a traveler-friendly pace",
+    "with local context and easy planning",
+    "with scenic highlights and guide support",
+  ];
+
+  for (const addition of additions) {
+    const expanded = ensureCompleteMetaSentence(
+      `${sentence.replace(/[.!?]$/g, "")}, ${addition}`
+    );
+    if (expanded.length <= ENGINE6_META_MAX_LENGTH) {
+      sentence = expanded;
+      if (sentence.length >= ENGINE6_META_MIN_TARGET_LENGTH) break;
+    }
+  }
+
+  return sentence;
+};
+
+export const buildEngine6OptimizedDescription = ({
+  productCode,
+  title,
+  city,
+  categoryLabel,
+  sourceDescription,
+}: {
+  productCode?: string | null;
+  title: string;
+  city: string;
+  categoryLabel?: string | null;
+  sourceDescription: string;
+}) => {
+  const override = productCode
+    ? ENGINE6_EDITORIAL_META_OVERRIDES[productCode]
+    : undefined;
+  if (override) {
+    return clampEngine6EditorialMeta(override);
+  }
+
+  const cleanedSource = removeBlockedOperationalFiller(
+    normalizeEngine6MetaText(sourceDescription)
+  );
+  const generated = buildEngine6EditorialTemplate({
+    title,
+    city,
+    categoryLabel,
+    sourceDescription: cleanedSource,
+  });
+  return expandEngine6ShortMeta(clampEngine6EditorialMeta(generated));
+};
+
+export const buildEngine6SeoDescription = ({
+  productCode,
+  title,
+  city,
+  categoryLabel,
+  sourceDescription,
+}: {
+  productCode?: string | null;
+  title: string;
+  city: string;
+  categoryLabel?: string | null;
+  sourceDescription: string;
+}) =>
+  buildEngine6OptimizedDescription({
+    productCode,
+    title,
+    city,
+    categoryLabel,
+    sourceDescription,
+  });
+
+const ENGINE6_LEGACY_OPTIMIZED_DESCRIPTION_MIN = 140;
+const ENGINE6_LEGACY_OPTIMIZED_DESCRIPTION_MAX = 155;
+const ENGINE6_LEGACY_ACTIVE_DESCRIPTION_START_PATTERN =
   /^(Explore|Ride|Paddle|Sail|Discover|Visit|Fly|See|Cruise|Hike|Kayak|Bike|Drive|Taste|Tour|Walk|Glide)\b/i;
-const ENGINE6_GENERIC_MARKETING_LEAD_PATTERNS = [
+const ENGINE6_LEGACY_GENERIC_MARKETING_LEAD_PATTERNS = [
   /^this\s+(?:private\s+)?(?:tour|experience|outing|activity)\s+(?:offers|provides|gives|is)\s+(?:an?\s+)?(?:unparalleled\s+opportunity\s+to\s+)?/i,
   /^this\s+[^.!?]{0,90}?\s+private\s+tour,?\s+(?:offers\s+)?(?:an?\s+)?(?:unparalleled\s+opportunity\s+(?:to|for\s+travelers\s+to)\s+)?/i,
   /^unparalleled\s+opportunity\s+(?:to|for\s+travelers\s+to)\s+/i,
@@ -218,27 +582,15 @@ const ENGINE6_GENERIC_MARKETING_LEAD_PATTERNS = [
   /^your\s+private\s+[^.!?]*?\s+will\s+showcase\s+/i,
 ];
 
-const sentenceCase = (value: string) => {
-  const trimmed = value.trim();
-  if (!trimmed) return "";
-  return `${trimmed.charAt(0).toUpperCase()}${trimmed.slice(1)}`;
-};
-
-const stripGenericMarketingLead = (value: string) => {
+const stripLegacyGenericMarketingLead = (value: string) => {
   let cleaned = value.trim();
-  for (const pattern of ENGINE6_GENERIC_MARKETING_LEAD_PATTERNS) {
+  for (const pattern of ENGINE6_LEGACY_GENERIC_MARKETING_LEAD_PATTERNS) {
     cleaned = cleaned.replace(pattern, "").trim();
   }
   return sentenceCase(cleaned);
 };
 
-const splitDescriptionSentences = (value: string) =>
-  value
-    .split(/(?<=[.!?])\s+/)
-    .map(sentence => sentence.trim())
-    .filter(Boolean);
-
-const chooseEngine6ExperienceVerb = ({
+const chooseLegacyEngine6ExperienceVerb = ({
   categoryLabel,
   title,
   sourceDescription,
@@ -253,61 +605,51 @@ const chooseEngine6ExperienceVerb = ({
   if (
     /bike|cycling|e-bike/.test(titleIdentity) ||
     /bike|cycling/.test(category)
-  ) {
+  )
     return "Ride";
-  }
   if (
     /paddle|kayak|canoe|sup/.test(titleIdentity) ||
     /paddle|kayak|canoe|sup/.test(category)
-  ) {
+  )
     return "Paddle";
-  }
-  if (
-    /\b(?:helicopter|paraglid|parasail(?:ing)?|flight|fly)\b/.test(identity)
-  ) {
+  if (/\b(?:helicopter|paraglid|parasail(?:ing)?|flight|fly)\b/.test(identity))
     return "Fly";
-  }
   if (
     /\b(?:hiking|hike|walking)\b/.test(titleIdentity) ||
     /hiking|walk/.test(category)
-  ) {
+  )
     return "Hike";
-  }
   if (
     /museum|admission|ticket|attraction|theme park|universal studios/.test(
       titleIdentity
     ) ||
     /museum|attraction/.test(category)
-  ) {
+  )
     return "Visit";
-  }
   if (
     /sightseeing|celebrity|hollywood|beverly|landmark|city tour|private.*tour/.test(
       titleIdentity
     )
-  ) {
+  )
     return "Explore";
-  }
   if (
     /boat|cruise|sail|yacht|catamaran|harbor/.test(titleIdentity) ||
     (/boat|water|cruise|sailing/.test(category) &&
       /boat|cruise|sail|yacht|catamaran|harbor|bay|water/.test(identity))
-  ) {
+  )
     return "Sail";
-  }
   if (
     /food|drink|wine|tasting|chocolate/.test(identity) ||
     /food|drink|wine/.test(category)
-  ) {
+  )
     return "Taste";
-  }
   return "Explore";
 };
 
-const ENGINE6_ATTRACTION_HINT_PATTERN =
+const ENGINE6_LEGACY_ATTRACTION_HINT_PATTERN =
   /\b(?:The\s+)?[A-Z][A-Za-z'’]+(?:\s+[A-Z][A-Za-z'’]+){0,4}\s+(?:Sign|Bridge|Bay|Harbor|Lake|Park|Canyon|Falls|Waterfalls|Glacier|Island|Pier|Wharf|Beach|Valley|Mountain|Mount|Museum|Studios?|Observatory|River)\b/;
 
-const extractEngine6TitleSubject = (title: string, city: string) => {
+const extractLegacyEngine6TitleSubject = (title: string, city: string) => {
   const readableTitle = normalizeEngine6ReadableTitle(title)
     .replace(/\([^)]*\)/g, " ")
     .replace(/\s+\d{4,}$/i, "")
@@ -323,19 +665,17 @@ const extractEngine6TitleSubject = (title: string, city: string) => {
     subject.length < 4 ||
     subject.length > 70 ||
     subject.toLowerCase() === city.toLowerCase()
-  ) {
+  )
     return null;
-  }
-
   return subject;
 };
 
-const extractEngine6PriorityAttraction = (value: string) => {
-  const match = ENGINE6_ATTRACTION_HINT_PATTERN.exec(value);
+const extractLegacyEngine6PriorityAttraction = (value: string) => {
+  const match = ENGINE6_LEGACY_ATTRACTION_HINT_PATTERN.exec(value);
   return match?.[0]?.replace(/^Iconic\s+/i, "").trim() ?? null;
 };
 
-const buildEngine6ExperienceLead = ({
+const buildLegacyEngine6ExperienceLead = ({
   title,
   city,
   categoryLabel,
@@ -346,7 +686,7 @@ const buildEngine6ExperienceLead = ({
   categoryLabel?: string | null;
   sourceDescription: string;
 }) => {
-  const verb = chooseEngine6ExperienceVerb({
+  const verb = chooseLegacyEngine6ExperienceVerb({
     categoryLabel,
     title,
     sourceDescription,
@@ -355,7 +695,10 @@ const buildEngine6ExperienceLead = ({
     .replace(/\s+\d{4,}$/i, "")
     .trim();
   const normalizedCity = city.trim();
-  const subject = extractEngine6TitleSubject(readableTitle, normalizedCity);
+  const subject = extractLegacyEngine6TitleSubject(
+    readableTitle,
+    normalizedCity
+  );
 
   if (subject && /^(Ride|Paddle|Sail|Fly|Hike)$/i.test(verb)) {
     const subjectIncludesCity =
@@ -373,14 +716,15 @@ const buildEngine6ExperienceLead = ({
     titleIncludesCity || !normalizedCity
       ? readableTitle
       : `${readableTitle} in ${normalizedCity}`;
-
   return `${verb} ${destination}`.replace(/\s+/g, " ").trim();
 };
 
-const trimDescriptionToWordBoundary = (value: string, maxLength: number) => {
+const trimLegacyDescriptionToWordBoundary = (
+  value: string,
+  maxLength: number
+) => {
   const normalized = value.replace(/\s+/g, " ").trim();
   if (normalized.length <= maxLength) return normalized;
-
   const clipped = normalized.slice(0, maxLength).trim();
   const lastSpace = clipped.lastIndexOf(" ");
   const safeClipped = lastSpace > 100 ? clipped.slice(0, lastSpace) : clipped;
@@ -395,7 +739,7 @@ const trimDescriptionToWordBoundary = (value: string, maxLength: number) => {
   return cleaned;
 };
 
-export const buildEngine6OptimizedDescription = ({
+export const buildEngine6LegacySeoDescription = ({
   title,
   city,
   categoryLabel,
@@ -406,7 +750,7 @@ export const buildEngine6OptimizedDescription = ({
   categoryLabel?: string | null;
   sourceDescription: string;
 }) => {
-  const cleanedSource = stripGenericMarketingLead(
+  const cleanedSource = stripLegacyGenericMarketingLead(
     stripEngine6GeneratedDescriptionPrefix(
       removeBlockedOperationalFiller(
         cleanEngine6Description(
@@ -419,9 +763,10 @@ export const buildEngine6OptimizedDescription = ({
     )
   );
   const sourceStartsActively =
-    ENGINE6_ACTIVE_DESCRIPTION_START_PATTERN.test(cleanedSource);
-  const priorityAttraction = extractEngine6PriorityAttraction(cleanedSource);
-  const baseLead = buildEngine6ExperienceLead({
+    ENGINE6_LEGACY_ACTIVE_DESCRIPTION_START_PATTERN.test(cleanedSource);
+  const priorityAttraction =
+    extractLegacyEngine6PriorityAttraction(cleanedSource);
+  const baseLead = buildLegacyEngine6ExperienceLead({
     title,
     city,
     categoryLabel,
@@ -440,7 +785,6 @@ export const buildEngine6OptimizedDescription = ({
     (primarySource.toLowerCase().includes(city.toLowerCase()) ||
       primarySource.toLowerCase().includes(title.toLowerCase()) ||
       primarySource.length >= 80);
-
   const sourceRemainder = sourceSentences.filter(sentence => {
     const normalizedSentence = sentence.toLowerCase();
     const normalizedLead = lead.toLowerCase();
@@ -449,7 +793,6 @@ export const buildEngine6OptimizedDescription = ({
       normalizedLead.includes(normalizedSentence.replace(/\.$/, ""))
     );
   });
-
   const parts = shouldUseSourceAsLead
     ? sourceSentences
     : [lead, ...sourceRemainder];
@@ -459,12 +802,8 @@ export const buildEngine6OptimizedDescription = ({
     .replace(/\s+/g, " ")
     .replace(/\.\s*\./g, ".")
     .trim();
-
-  if (composed && !/[.!?]$/.test(composed)) {
-    composed = `${composed}.`;
-  }
-
-  if (composed.length < ENGINE6_OPTIMIZED_DESCRIPTION_MIN) {
+  if (composed && !/[.!?]$/.test(composed)) composed = `${composed}.`;
+  if (composed.length < ENGINE6_LEGACY_OPTIMIZED_DESCRIPTION_MIN) {
     const category = (categoryLabel ?? "guided experience").toLowerCase();
     const guidePhrase = category.includes("guided")
       ? "local context"
@@ -474,34 +813,14 @@ export const buildEngine6OptimizedDescription = ({
         .replace(/\s+/g, " ")
         .trim();
   }
-
-  const trimmed = trimDescriptionToWordBoundary(
+  const trimmed = trimLegacyDescriptionToWordBoundary(
     composed,
-    ENGINE6_OPTIMIZED_DESCRIPTION_MAX
+    ENGINE6_LEGACY_OPTIMIZED_DESCRIPTION_MAX
   );
-
   return stripEngine6GeneratedDescriptionPrefix(trimmed)
     .replace(/[.!?,;:]+$/, "")
     .trim();
 };
-
-export const buildEngine6SeoDescription = ({
-  title,
-  city,
-  categoryLabel,
-  sourceDescription,
-}: {
-  title: string;
-  city: string;
-  categoryLabel?: string | null;
-  sourceDescription: string;
-}) =>
-  buildEngine6OptimizedDescription({
-    title,
-    city,
-    categoryLabel,
-    sourceDescription,
-  });
 
 export const buildEngine6CanonicalPath = ({
   state,
