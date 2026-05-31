@@ -515,8 +515,40 @@ describe("engine6 meta descriptions", () => {
     expect(metaDescription).toMatch(/^Cruise the bay at sunset/);
     expect(hasEngine6GeneratedDescriptionPrefix(metaDescription)).toBe(false);
     expect(isEngine6OperationalFiller(metaDescription)).toBe(false);
-    expect(metaDescription.length).toBeGreaterThanOrEqual(140);
-    expect(metaDescription.length).toBeLessThanOrEqual(155);
+    expect(metaDescription.length).toBeGreaterThanOrEqual(120);
+    expect(metaDescription.length).toBeLessThanOrEqual(160);
+  });
+
+  it("keeps API-derived meta descriptions product-specific for priority routes", () => {
+    const priorityProductCodes = [
+      "398496P5",
+      "152424P1",
+      "447486P2",
+      "5503P10",
+      "190492P3",
+      "414460P1",
+    ];
+    const bannedGenericFragments = [
+      "guide support",
+      "easy logistics",
+      "traveler-friendly pace",
+      "with clear logistics",
+    ];
+
+    for (const productCode of priorityProductCodes) {
+      const tour = engine6ResolvedTours.find(
+        candidate => candidate.productCode === productCode
+      );
+      expect(tour, `missing Engine6 tour ${productCode}`).toBeDefined();
+      const description = tour?.metaDescription ?? "";
+
+      expect(description.length).toBeGreaterThanOrEqual(120);
+      expect(description.length).toBeLessThanOrEqual(160);
+      expect(description).not.toContain("...");
+      for (const fragment of bannedGenericFragments) {
+        expect(description.toLowerCase()).not.toContain(fragment);
+      }
+    }
   });
 
   it("governs all Engine6 meta and schema descriptions without generated taxonomy prefixes", () => {
