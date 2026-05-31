@@ -1,5 +1,5 @@
 import {
-  buildEngine6OptimizedDescription,
+  buildEngine6RichProductDescription,
   stripEngine6GeneratedDescriptionPrefix,
 } from "./seo";
 
@@ -159,6 +159,10 @@ export const resolveMerchantDescription = (args: {
   pageMetadataDescription?: string | null;
   jsonLdProductDescription?: string | null;
   viatorApiDescription?: string | null;
+  itineraryStops?: Array<{ title: string; description?: string | null }>;
+  highlights?: string[];
+  included?: string[];
+  durationText?: string | null;
 }) => {
   const approvedDescription = MERCHANT_APPROVED_DESCRIPTIONS[args.productCode];
 
@@ -176,23 +180,33 @@ export const resolveMerchantDescription = (args: {
   for (const candidate of sourceCandidates) {
     const normalized = normalizeMerchantDescriptionCandidate(candidate);
     if (normalized && !hasGenericMerchantDescriptionBoilerplate(normalized)) {
-      return buildEngine6OptimizedDescription({
+      return buildEngine6RichProductDescription({
         title: args.title,
         city: args.city,
         categoryLabel: args.categoryLabel,
-        sourceDescription: normalized,
+        overviewText:
+          args.productOverviewDescription ?? args.viatorApiDescription,
+        description: normalized,
+        itineraryStops: args.itineraryStops,
+        highlights: args.highlights,
+        included: args.included,
+        durationText: args.durationText,
       });
     }
   }
 
-  return buildEngine6OptimizedDescription({
+  return buildEngine6RichProductDescription({
     title: args.title,
     city: args.city,
     categoryLabel: args.categoryLabel,
-    sourceDescription: buildProductSpecificFallback({
+    description: buildProductSpecificFallback({
       title: args.title,
       city: args.city,
       categoryLabel: args.categoryLabel,
     }),
+    itineraryStops: args.itineraryStops,
+    highlights: args.highlights,
+    included: args.included,
+    durationText: args.durationText,
   });
 };
