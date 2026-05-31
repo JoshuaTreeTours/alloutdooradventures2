@@ -76,7 +76,10 @@ describe("engine6 production rules lightweight validations", () => {
 
     expect(card.imageUrl).toBe(tour.resolvedHero?.url);
     expect(card.href).toBe(tour.canonicalPath);
-    if (typeof tour.aggregateRating === "number" && typeof tour.reviewCount === "number") {
+    if (
+      typeof tour.aggregateRating === "number" &&
+      typeof tour.reviewCount === "number"
+    ) {
       expect(card.ratingLabel).toMatch(/^★\s+\d(?:\.\d)?\s+\(\d+\)$/);
     }
     if (typeof tour.priceAmount === "number") {
@@ -89,7 +92,9 @@ describe("engine6 production rules lightweight validations", () => {
     const payload = toPayload(fixture!);
     const tour = mapViatorToEngine6Tour(payload);
     const card = toEngine6Card(tour);
-    const graph = buildEngine6SchemaGraph(tour)["@graph"] as Array<Record<string, unknown>>;
+    const graph = buildEngine6SchemaGraph(tour)["@graph"] as Array<
+      Record<string, unknown>
+    >;
     const product = graph.find(node => node["@type"] === "Product") as
       | Record<string, unknown>
       | undefined;
@@ -112,7 +117,9 @@ describe("engine6 production rules lightweight validations", () => {
 
     const payload = toPayload(palmSpringsFixture!);
     const tour = mapViatorToEngine6Tour(payload);
-    const graph = buildEngine6SchemaGraph(tour)["@graph"] as Array<Record<string, unknown>>;
+    const graph = buildEngine6SchemaGraph(tour)["@graph"] as Array<
+      Record<string, unknown>
+    >;
     const productNode = graph.find(node => node["@type"] === "Product") as
       | Record<string, unknown>
       | undefined;
@@ -130,7 +137,10 @@ describe("engine6 production rules lightweight validations", () => {
   });
 
   it("enforces metadata quality governance for all configured tours", () => {
-    const bannedFragments = ["SEO_CANONICAL", "alcatraz app guided tour cruise jail house"];
+    const bannedFragments = [
+      "SEO_CANONICAL",
+      "alcatraz app guided tour cruise jail house",
+    ];
     for (const fixture of ENGINE6_VALIDATION_FIXTURES) {
       let tour;
       try {
@@ -138,10 +148,18 @@ describe("engine6 production rules lightweight validations", () => {
       } catch {
         continue;
       }
-      const graph = buildEngine6SchemaGraph(tour)["@graph"] as Array<Record<string, unknown>>;
-      const webPage = graph.find(node => node["@type"] === "WebPage") as Record<string, unknown> | undefined;
-      const product = graph.find(node => node["@type"] === "Product") as Record<string, unknown> | undefined;
-      const trip = graph.find(node => node["@type"] === "TouristTrip") as Record<string, unknown> | undefined;
+      const graph = buildEngine6SchemaGraph(tour)["@graph"] as Array<
+        Record<string, unknown>
+      >;
+      const webPage = graph.find(node => node["@type"] === "WebPage") as
+        | Record<string, unknown>
+        | undefined;
+      const product = graph.find(node => node["@type"] === "Product") as
+        | Record<string, unknown>
+        | undefined;
+      const trip = graph.find(node => node["@type"] === "TouristTrip") as
+        | Record<string, unknown>
+        | undefined;
       const title = tour.seoTitle;
       const desc = tour.metaDescription;
 
@@ -156,9 +174,14 @@ describe("engine6 production rules lightweight validations", () => {
 
       expect(webPage?.name).toBe(product?.name);
       expect(product?.name).toBe(trip?.name);
+      expect(desc.length).toBeLessThanOrEqual(155);
+      expect(desc).toMatch(/[.!?]$/);
+      expect(desc).not.toContain("...");
+      expect(desc).not.toMatch(/\bThis route\b|\bwith Our\b/i);
+      expect(desc).not.toMatch(/\b(cruise|tour)\b[^.!?]{0,40}\b\1\b/i);
       expect(webPage?.description).toBe(product?.description);
       expect(product?.description).toBe(trip?.description);
+      expect(product?.description).toBe(tour.seoDescription);
     }
   });
-
 });

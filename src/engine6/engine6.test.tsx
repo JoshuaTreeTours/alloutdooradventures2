@@ -486,7 +486,7 @@ describe("engine6 extractor", () => {
 });
 
 describe("engine6 meta descriptions", () => {
-  it("clamps long descriptions at a word boundary with an ellipsis", () => {
+  it("legacy meta clamping still handles long descriptions for non-Engine6 callers", () => {
     const metaDescription = buildEngine6MetaDescription(
       "Ride through the towns and vineyards of the Santa Ynez Valley wine region on this e-bike tour with transport from Santa Barbara, wine tastings, picnic lunch, and countryside views for adventurous food-loving cyclists."
     );
@@ -503,7 +503,7 @@ describe("engine6 meta descriptions", () => {
     expect(metaDescription.length).toBeLessThanOrEqual(160);
   });
 
-  it("builds traveler-first SEO description and strips generated prefixes and operational filler", () => {
+  it("builds complete editorial Engine6 SEO descriptions without compression artifacts", () => {
     const metaDescription = buildEngine6SeoDescription({
       title: "Golden Gate Sunset Cruise",
       city: "San Francisco",
@@ -512,10 +512,11 @@ describe("engine6 meta descriptions", () => {
         "Public transportation options are available nearby. Cruise the bay at sunset with skyline and bridge views plus a small-group guide.",
     });
 
-    expect(metaDescription).toMatch(/^Cruise the bay at sunset/);
+    expect(metaDescription).toMatch(/^Enjoy San Francisco from a boat cruise/);
+    expect(metaDescription).toMatch(/[.!?]$/);
+    expect(metaDescription).not.toContain("...");
     expect(hasEngine6GeneratedDescriptionPrefix(metaDescription)).toBe(false);
     expect(isEngine6OperationalFiller(metaDescription)).toBe(false);
-    expect(metaDescription.length).toBeGreaterThanOrEqual(140);
     expect(metaDescription.length).toBeLessThanOrEqual(155);
   });
 
@@ -535,14 +536,53 @@ describe("engine6 meta descriptions", () => {
       expect(
         hasEngine6GeneratedDescriptionPrefix(String(product?.description ?? ""))
       ).toBe(false);
-      expect(product?.description).toBe(tour.metaDescription);
-      expect(tour.metaDescription.length).toBeGreaterThanOrEqual(120);
-      expect(tour.metaDescription.length).toBeLessThanOrEqual(160);
+      expect(product?.description).toBe(tour.seoDescription);
+      expect(tour.metaDescription.length).toBeLessThanOrEqual(155);
+      expect(tour.metaDescription).toMatch(/[.!?]$/);
+      expect(tour.metaDescription).not.toContain("...");
       expect(tour.metaDescription).not.toMatch(
         /^(This tour offers|This experience provides|This private tour offers an unparalleled opportunity|Join us for|Come discover)/i
       );
     }
   });
+
+  it.each([
+    [
+      "447486P2",
+      "Enjoy Santa Barbara from a sunset yacht cruise with coastal views, fresh ocean air, and a relaxed harborfront atmosphere.",
+    ],
+    [
+      "331438P1",
+      "Soar above Santa Barbara on a parasailing flight from Stearns Wharf with licensed captains and ocean views.",
+    ],
+    [
+      "398496P5",
+      "See the Las Vegas Sphere and Strip landmarks on a guided drive with live narration and city context.",
+    ],
+    [
+      "190492P3",
+      "Visit Zion and Bryce Canyon from Las Vegas on a full-day guided tour with scenic viewpoints and national park highlights.",
+    ],
+    [
+      "414460P1",
+      "Explore Central Park by pedicab with a licensed local guide, landmark stops, and more park coverage in less time.",
+    ],
+  ])(
+    "generates deterministic editorial meta for %s",
+    (productCode, expected) => {
+      const tour = engine6ResolvedTours.find(
+        entry => entry.productCode === productCode
+      );
+
+      expect(tour).toBeDefined();
+      expect(tour?.metaDescription).toBe(expected);
+      expect(expected.length).toBeLessThanOrEqual(155);
+      expect(expected).toMatch(/[.!?]$/);
+      expect(expected).not.toContain("...");
+      expect(expected).not.toMatch(/\bThis route\b|\bwith Our\b/i);
+      expect(expected).not.toMatch(/\b(cruise|tour)\b[^.!?]{0,40}\b\1\b/i);
+    }
+  );
 
   it("synthesizes readable non-truncated title for stitched supplier input", () => {
     const seoTitle = buildEngine6SeoTitle({

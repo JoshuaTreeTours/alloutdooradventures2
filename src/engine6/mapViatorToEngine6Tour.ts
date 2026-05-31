@@ -4,6 +4,7 @@ import { formatEngine6StartingPriceLabel } from "./priceDisplay";
 import { resolveEngine6PathForProductCode } from "./routes";
 import {
   buildEngine6CanonicalPath,
+  buildEngine6LegacySeoDescription,
   buildEngine6SeoDescription,
   buildEngine6SeoTitle,
   cleanEngine6Description,
@@ -18,7 +19,7 @@ const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
   "6007P5": "Golden Gate Bridge Bike Tour with Lunch | San Francisco",
   "2630SUN": "San Francisco Bay Sunset & City Lights Cruise",
 };
-const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
+const ENGINE6_LEGACY_SEO_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "415653P2":
     "Explore Yosemite from San Francisco on a private tour with giant sequoias, Glacier Point, waterfalls, granite cliffs, and Sierra scenery",
   "6007P5":
@@ -607,6 +608,7 @@ export const mapViatorToEngine6Tour = (
     ENGINE6_DESCRIPTION_OVERRIDES[payload.rawProductCode];
   const description = descriptionOverride ?? descriptionBody;
   const metaDescription = buildEngine6SeoDescription({
+    productCode: payload.rawProductCode,
     title,
     city,
     categoryLabel,
@@ -616,9 +618,20 @@ export const mapViatorToEngine6Tour = (
       payload.extracted.seoDescription ??
       description,
   });
-  const governedMetaDescription =
-    ENGINE6_META_DESCRIPTION_OVERRIDES[payload.rawProductCode] ??
-    metaDescription;
+  const legacySeoDescription = buildEngine6LegacySeoDescription({
+    title,
+    city,
+    categoryLabel,
+    sourceDescription:
+      descriptionOverride ??
+      sourceOverviewText ??
+      payload.extracted.seoDescription ??
+      description,
+  });
+  const governedSchemaDescription =
+    ENGINE6_LEGACY_SEO_DESCRIPTION_OVERRIDES[payload.rawProductCode] ??
+    legacySeoDescription;
+  const governedMetaDescription = metaDescription;
   const aggregateRating = normalizeEngine6AggregateRating(
     payload.extracted.aggregateRating
   );
@@ -675,7 +688,7 @@ export const mapViatorToEngine6Tour = (
     seoTitle:
       ENGINE6_SEO_TITLE_OVERRIDES[payload.rawProductCode] ??
       buildEngine6SeoTitle({ title, city, state }),
-    seoDescription: governedMetaDescription,
+    seoDescription: governedSchemaDescription,
     description,
     metaDescription: governedMetaDescription,
     city,
