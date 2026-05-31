@@ -26,6 +26,7 @@ import {
   buildEngine6SeoDescription,
   buildEngine6SeoTitle,
   buildMetaDescription,
+  hasEngine6GeneratedDescriptionPrefix,
   isEngine6OperationalFiller,
 } from "./seo";
 import { buildEngine6CardSurfaces, toEngine6Card } from "./cards";
@@ -502,7 +503,7 @@ describe("engine6 meta descriptions", () => {
     expect(metaDescription.length).toBeLessThanOrEqual(160);
   });
 
-  it("builds destination-first SEO description and strips operational filler", () => {
+  it("builds traveler-first SEO description and strips generated prefixes and operational filler", () => {
     const metaDescription = buildEngine6SeoDescription({
       title: "Golden Gate Sunset Cruise",
       city: "San Francisco",
@@ -511,9 +512,30 @@ describe("engine6 meta descriptions", () => {
         "Public transportation options are available nearby. Cruise the bay at sunset with skyline and bridge views plus a small-group guide.",
     });
 
-    expect(metaDescription.toLowerCase()).toContain("san francisco boat tour");
+    expect(metaDescription).toMatch(/^Cruise the bay at sunset/);
+    expect(hasEngine6GeneratedDescriptionPrefix(metaDescription)).toBe(false);
     expect(isEngine6OperationalFiller(metaDescription)).toBe(false);
     expect(metaDescription.length).toBeLessThanOrEqual(160);
+  });
+
+  it("governs all Engine6 meta and schema descriptions without generated taxonomy prefixes", () => {
+    for (const tour of engine6ResolvedTours) {
+      expect(hasEngine6GeneratedDescriptionPrefix(tour.metaDescription)).toBe(
+        false
+      );
+      expect(hasEngine6GeneratedDescriptionPrefix(tour.seoDescription)).toBe(
+        false
+      );
+
+      const graph = buildEngine6SchemaGraph(tour)["@graph"] as Array<
+        Record<string, unknown>
+      >;
+      const product = graph.find(node => node["@type"] === "Product");
+      expect(
+        hasEngine6GeneratedDescriptionPrefix(String(product?.description ?? ""))
+      ).toBe(false);
+      expect(product?.description).toBe(tour.metaDescription);
+    }
   });
 
   it("synthesizes readable non-truncated title for stitched supplier input", () => {

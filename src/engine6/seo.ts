@@ -50,18 +50,32 @@ export const formatEngine6CategoryLabel = (
   return value.replace(/-/g, " ").replace(/\b\w/g, char => char.toUpperCase());
 };
 
+const ENGINE6_GENERATED_DESCRIPTION_PREFIX_PATTERN =
+  /^[A-Za-z]+(?:[ -][A-Za-z]+)*\s+(?:guided tour|Bike tour|Boat tour|Hiking tour|Paddle tour|Air tour|Airboat Tours|Water Sports|Cruises And Sailing|Attractions And Museums|Multi Day Tours):\s*/i;
+
+export const stripEngine6GeneratedDescriptionPrefix = (value: string) =>
+  value
+    .replace(ENGINE6_GENERATED_DESCRIPTION_PREFIX_PATTERN, "")
+    .replace(/^[-:|\s]+/, "")
+    .trim();
+
+export const hasEngine6GeneratedDescriptionPrefix = (value: string) =>
+  ENGINE6_GENERATED_DESCRIPTION_PREFIX_PATTERN.test(value.trim());
+
 export const cleanEngine6Description = (text: string): string => {
   if (!text) {
     return "";
   }
 
-  return text
+  const cleaned = text
     .replace(/\.\./g, ".")
     .replace(/Best tour.*?reviews\./gi, "")
     .replace(/Rated\s*\d+(?:\.\d+)?\s*\/\s*\d+(?:\.\d+)?[^.]*\./gi, "")
     .replace(/\s+/g, " ")
     .replace(/\s+([,.;!?])/g, "$1")
     .trim();
+
+  return stripEngine6GeneratedDescriptionPrefix(cleaned);
 };
 
 export const clampEngine6MetaDescription = (
@@ -183,6 +197,7 @@ const removeBlockedOperationalFiller = (value: string) => {
   return cleaned
     .replace(/\s+/g, " ")
     .replace(/\s+([,.;!?])/g, "$1")
+    .replace(/^[,.;:!?\s-]+/, "")
     .trim();
 };
 
@@ -200,28 +215,27 @@ export const buildEngine6SeoDescription = ({
   categoryLabel?: string | null;
   sourceDescription: string;
 }) => {
-  const cleanedSource = removeBlockedOperationalFiller(
-    buildMetaDescription(sourceDescription)
+  const cleanedSource = stripEngine6GeneratedDescriptionPrefix(
+    removeBlockedOperationalFiller(buildMetaDescription(sourceDescription))
   );
-  const activity = (categoryLabel ?? "guided tour").replace(
-    /\s+tour$/i,
-    " tour"
-  );
-  const destinationLead = `${city} ${activity}`.trim();
-  const lead = `${destinationLead}:`;
+  const activity = (categoryLabel ?? "guided experience")
+    .replace(/\s+tour$/i, " tour")
+    .toLowerCase();
   const body = cleanedSource
     .replace(new RegExp(`^${city}[:,\\s-]+`, "i"), "")
     .trim();
-  const seeded = `${lead} ${body}`.replace(/\s+/g, " ").trim();
+  const seeded = body || `${title} is a ${activity} in ${city}.`;
   const withIdentity = seeded.toLowerCase().includes(title.toLowerCase())
     ? seeded
     : `${seeded} ${title}.`;
   const clamped = clampEngine6MetaDescription(withIdentity);
   if (clamped.length >= ENGINE6_META_DESCRIPTION_MIN) {
-    return clamped;
+    return stripEngine6GeneratedDescriptionPrefix(clamped);
   }
-  return clampEngine6MetaDescription(
-    `${clamped} ${title} is a product-specific ${activity} aligned to the page details.`
+  return stripEngine6GeneratedDescriptionPrefix(
+    clampEngine6MetaDescription(
+      `${clamped} Book this ${activity} with product-specific route details, local context, and traveler-focused planning guidance.`
+    )
   );
 };
 
