@@ -48,4 +48,25 @@ describe("extractEngine6Product operatorReviews mapping", () => {
     );
   });
 
+  it("prefers operator review count when both total and operator counts are present", () => {
+    const payload = {
+      product: {
+        productCode: "447486P2",
+        reviews: {
+          combinedAverageRating: 4.6,
+          totalReviews: 836,
+          operatorReviewCount: 39,
+        },
+      },
+    };
+
+    const result = extractEngine6Product(payload as Record<string, unknown>);
+
+    expect(result.extracted.aggregateRating).toBe(4.6);
+    expect(result.extracted.reviewCount).toBe(39);
+    expect(result.diagnostics.reviewCountFieldPath).toBe(
+      "product.reviews.operatorReviewCount"
+    );
+  });
+
 });
