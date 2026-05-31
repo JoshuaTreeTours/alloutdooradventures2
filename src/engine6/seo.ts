@@ -203,8 +203,9 @@ const removeBlockedOperationalFiller = (value: string) => {
 export const isEngine6OperationalFiller = (value: string) =>
   ENGINE6_BLOCKED_META_PATTERNS.some(pattern => pattern.test(value));
 
-const ENGINE6_OPTIMIZED_DESCRIPTION_MIN = 140;
+const ENGINE6_OPTIMIZED_DESCRIPTION_MIN = 135;
 const ENGINE6_OPTIMIZED_DESCRIPTION_MAX = 155;
+const ENGINE6_META_DESCRIPTION_HARD_MAX = 160;
 const ENGINE6_ACTIVE_DESCRIPTION_START_PATTERN =
   /^(Explore|Ride|Paddle|Sail|Discover|Visit|Fly|See|Cruise|Hike|Kayak|Bike|Drive|Taste|Tour|Walk|Glide)\b/i;
 const ENGINE6_GENERIC_MARKETING_LEAD_PATTERNS = [
@@ -216,6 +217,28 @@ const ENGINE6_GENERIC_MARKETING_LEAD_PATTERNS = [
   /^come\s+discover\s+/i,
   /^we\s+created\s+[^.!?]*[.!?]\s*/i,
   /^your\s+private\s+[^.!?]*?\s+will\s+showcase\s+/i,
+];
+
+const ENGINE6_AWKWARD_META_BOILERPLATE_PATTERNS = [
+  /\bthis tour offers\b/gi,
+  /\bthis experience provides\b/gi,
+  /\bwith clear logistics\b/gi,
+  /\bclear logistics\b/gi,
+  /\btraveler-friendly pace\b/gi,
+  /\btraveler-focused logistics\b/gi,
+  /\beasy logistics\b/gi,
+  /\bguide support\b/gi,
+];
+
+const ENGINE6_BAD_SOURCE_PROSE_PATTERNS = [
+  ...ENGINE6_BLOCKED_META_PATTERNS,
+  /\bbest tour in\b/i,
+  /\brated\s*\d+(?:\.\d+)?\s*\/\s*5\b/i,
+  /\b\d+\s+reviews?\b/i,
+  /\bSEO_CANONICAL\b/i,
+  /\bguide support\b/i,
+  /\beasy logistics\b/i,
+  /\btraveler-friendly pace\b/i,
 ];
 
 const sentenceCase = (value: string) => {
@@ -382,6 +405,15 @@ const trimDescriptionToWordBoundary = (value: string, maxLength: number) => {
   if (normalized.length <= maxLength) return normalized;
 
   const clipped = normalized.slice(0, maxLength).trim();
+  const lastSentenceBoundary = Math.max(
+    clipped.lastIndexOf("."),
+    clipped.lastIndexOf("!"),
+    clipped.lastIndexOf("?")
+  );
+  if (lastSentenceBoundary >= ENGINE6_OPTIMIZED_DESCRIPTION_MIN - 1) {
+    return clipped.slice(0, lastSentenceBoundary + 1).trim();
+  }
+
   const lastSpace = clipped.lastIndexOf(" ");
   const safeClipped = lastSpace > 100 ? clipped.slice(0, lastSpace) : clipped;
   let cleaned = safeClipped.replace(/[,:;\s-]+$/, "").trim();
@@ -392,10 +424,225 @@ const trimDescriptionToWordBoundary = (value: string, maxLength: number) => {
     )
     .replace(/[,:;\s-]+$/, "")
     .trim();
-  return cleaned;
+  return cleaned && !/[.!?]$/.test(cleaned) ? `${cleaned}.` : cleaned;
 };
 
-export const buildEngine6OptimizedDescription = ({
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const removeDuplicateTitleRestatement = (value: string, title: string) => {
+  const readableTitle = normalizeEngine6ReadableTitle(title)
+    .replace(/\s+\d{4,}$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!readableTitle) return value;
+
+  const titlePattern = new RegExp(
+    `^${escapeRegExp(readableTitle)}\\s+(?:is|offers|provides|gives|takes|brings|combines|features)\\s+`,
+    "i"
+  );
+
+  return value.replace(titlePattern, "").trim();
+};
+
+const removeAwkwardMetaBoilerplate = (value: string, title: string) => {
+  let cleaned = value;
+  for (const pattern of ENGINE6_AWKWARD_META_BOILERPLATE_PATTERNS) {
+    cleaned = cleaned.replace(pattern, "");
+  }
+
+  const readableTitle = normalizeEngine6ReadableTitle(title)
+    .replace(/\s+\d{4,}$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (readableTitle) {
+    cleaned = cleaned.replace(
+      new RegExp(`^Explore\\s+${escapeRegExp(readableTitle)}\\s+`, "i"),
+      ""
+    );
+  }
+
+  return cleaned
+    .replace(/\b[A-Z0-9]{2,}_[A-Z0-9_]+\b/g, "")
+    .replace(/\b\d{3,}[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)?\b/g, "")
+    .replace(/\b[A-Z]{2,}\d{2,}[A-Z0-9]*(?:_[A-Z0-9]+)?\b/g, "")
+    .replace(/\s*,\s*,+/g, ", ")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .replace(/^[,.;:!?\s-]+/, "")
+    .trim();
+};
+
+const cleanEngine6SourceProseForMeta = (value: string, title: string) => {
+  const cleaned = removeAwkwardMetaBoilerplate(
+    removeDuplicateTitleRestatement(
+      stripGenericMarketingLead(
+        stripEngine6GeneratedDescriptionPrefix(
+          removeBlockedOperationalFiller(
+            cleanEngine6Description(
+              value
+                .replace(/<[^>]*>/g, " ")
+                .replace(/\s+/g, " ")
+                .trim()
+            )
+          )
+        )
+      ),
+      title
+    ),
+    title
+  );
+
+  return sentenceCase(
+    cleaned
+      .replace(/\s*,\s*(?:and\s*)?\./g, ".")
+      .replace(/\s+([,.;!?])/g, "$1")
+      .replace(/\s+/g, " ")
+      .trim()
+  );
+};
+
+const isUsableEngine6MetaSource = (value: string) => {
+  const normalized = value.trim();
+  if (normalized.length < 50) return false;
+  if (
+    ENGINE6_BAD_SOURCE_PROSE_PATTERNS.some(pattern => pattern.test(normalized))
+  ) {
+    return false;
+  }
+  const words = normalized.split(/\s+/).filter(Boolean);
+  return words.length >= 8;
+};
+
+const normalizeForDuplicateComparison = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const appendSourceSentenceIfUseful = (base: string, sentence: string) => {
+  const cleanedSentence = sentence.trim();
+  if (!cleanedSentence) return base;
+
+  const normalizedBase = normalizeForDuplicateComparison(base);
+  const normalizedSentence = normalizeForDuplicateComparison(cleanedSentence);
+  if (
+    normalizedSentence.length < 20 ||
+    normalizedBase.includes(normalizedSentence) ||
+    normalizedSentence.includes(normalizedBase)
+  ) {
+    return base;
+  }
+
+  const next = `${base.replace(/[.!?]?$/, ".")} ${cleanedSentence}`
+    .replace(/\s+/g, " ")
+    .trim();
+  return next.length <= ENGINE6_META_DESCRIPTION_HARD_MAX ? next : base;
+};
+
+const composeEngine6SourceMetaDescription = (
+  source: string,
+  supportingSources: string[] = [],
+  context?: { city: string; categoryLabel?: string | null }
+) => {
+  const sentences = splitDescriptionSentences(source);
+  const parts = sentences.length > 0 ? sentences : [source];
+  let composed = "";
+
+  for (const part of parts) {
+    const next = composed ? `${composed} ${part}` : part;
+    if (next.length <= ENGINE6_OPTIMIZED_DESCRIPTION_MAX) {
+      composed = next;
+      if (
+        composed.length >= ENGINE6_OPTIMIZED_DESCRIPTION_MIN &&
+        /[.!?]$/.test(composed)
+      ) {
+        break;
+      }
+      continue;
+    }
+
+    if (!composed) {
+      composed = trimDescriptionToWordBoundary(
+        part,
+        ENGINE6_META_DESCRIPTION_HARD_MAX
+      );
+    }
+    break;
+  }
+
+  if (!composed) {
+    composed = trimDescriptionToWordBoundary(
+      source,
+      ENGINE6_META_DESCRIPTION_HARD_MAX
+    );
+  }
+
+  for (const supportingSource of supportingSources) {
+    if (composed.length >= ENGINE6_OPTIMIZED_DESCRIPTION_MIN) break;
+    const supportingSentences = splitDescriptionSentences(supportingSource);
+    for (const sentence of supportingSentences.length > 0
+      ? supportingSentences
+      : [supportingSource]) {
+      const next = appendSourceSentenceIfUseful(composed, sentence);
+      if (next !== composed) {
+        composed = next;
+      }
+      if (composed.length >= ENGINE6_OPTIMIZED_DESCRIPTION_MIN) break;
+    }
+  }
+
+  if (composed.length < 120 && context) {
+    const category = (context.categoryLabel ?? "experience")
+      .toLowerCase()
+      .replace(/\btour\b/i, "tour");
+    const city = context.city.trim();
+    const contextPhrase = city
+      ? ` on a ${city} ${category}`
+      : ` on a ${category}`;
+    const candidate = `${composed.replace(/[.!?]?$/, "")}${contextPhrase}.`
+      .replace(/\s+/g, " ")
+      .trim();
+    if (candidate.length <= ENGINE6_META_DESCRIPTION_HARD_MAX) {
+      composed = candidate;
+    }
+  }
+
+  if (composed.length < 120) {
+    const candidate = `${composed.replace(/[.!?]?$/, "")} with route details.`
+      .replace(/\s+/g, " ")
+      .trim();
+    if (candidate.length <= ENGINE6_META_DESCRIPTION_HARD_MAX) {
+      composed = candidate;
+    }
+  }
+
+  if (composed.length > ENGINE6_META_DESCRIPTION_HARD_MAX) {
+    composed = trimDescriptionToWordBoundary(
+      composed,
+      ENGINE6_META_DESCRIPTION_HARD_MAX
+    );
+  }
+
+  const normalized = composed
+    .replace(/\.\.\.+/g, ".")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .trim();
+
+  const punctuated =
+    normalized && !/[.!?]$/.test(normalized) ? `${normalized}.` : normalized;
+
+  return punctuated.length > ENGINE6_META_DESCRIPTION_HARD_MAX
+    ? trimDescriptionToWordBoundary(
+        punctuated,
+        ENGINE6_META_DESCRIPTION_HARD_MAX
+      )
+    : punctuated;
+};
+
+const buildEngine6FallbackMetaDescription = ({
   title,
   city,
   categoryLabel,
@@ -406,83 +653,59 @@ export const buildEngine6OptimizedDescription = ({
   categoryLabel?: string | null;
   sourceDescription: string;
 }) => {
-  const cleanedSource = stripGenericMarketingLead(
-    stripEngine6GeneratedDescriptionPrefix(
-      removeBlockedOperationalFiller(
-        cleanEngine6Description(
-          sourceDescription
-            .replace(/<[^>]*>/g, " ")
-            .replace(/\s+/g, " ")
-            .trim()
-        )
-      )
-    )
-  );
-  const sourceStartsActively =
-    ENGINE6_ACTIVE_DESCRIPTION_START_PATTERN.test(cleanedSource);
-  const priorityAttraction = extractEngine6PriorityAttraction(cleanedSource);
-  const baseLead = buildEngine6ExperienceLead({
+  const lead = buildEngine6ExperienceLead({
     title,
     city,
     categoryLabel,
-    sourceDescription: cleanedSource,
+    sourceDescription,
   });
-  const lead =
-    priorityAttraction &&
-    !baseLead.toLowerCase().includes(priorityAttraction.toLowerCase()) &&
-    baseLead.length + priorityAttraction.length < 105
-      ? `${baseLead} with ${priorityAttraction}`
-      : baseLead;
-  const sourceSentences = splitDescriptionSentences(cleanedSource);
-  const primarySource = sourceSentences[0] ?? cleanedSource;
-  const shouldUseSourceAsLead =
-    sourceStartsActively &&
-    (primarySource.toLowerCase().includes(city.toLowerCase()) ||
-      primarySource.toLowerCase().includes(title.toLowerCase()) ||
-      primarySource.length >= 80);
-
-  const sourceRemainder = sourceSentences.filter(sentence => {
-    const normalizedSentence = sentence.toLowerCase();
-    const normalizedLead = lead.toLowerCase();
-    return !(
-      normalizedSentence.includes(normalizedLead) ||
-      normalizedLead.includes(normalizedSentence.replace(/\.$/, ""))
-    );
-  });
-
-  const parts = shouldUseSourceAsLead
-    ? sourceSentences
-    : [lead, ...sourceRemainder];
-  let composed = parts
-    .filter(Boolean)
-    .join(". ")
-    .replace(/\s+/g, " ")
-    .replace(/\.\s*\./g, ".")
-    .trim();
-
-  if (composed && !/[.!?]$/.test(composed)) {
-    composed = `${composed}.`;
-  }
-
-  if (composed.length < ENGINE6_OPTIMIZED_DESCRIPTION_MIN) {
-    const category = (categoryLabel ?? "guided experience").toLowerCase();
-    const guidePhrase = category.includes("guided")
-      ? "local context"
-      : "guide support, local context";
-    composed =
-      `${composed} Expect ${guidePhrase}, clear timing, and traveler-focused logistics for a smooth day.`
-        .replace(/\s+/g, " ")
-        .trim();
-  }
-
-  const trimmed = trimDescriptionToWordBoundary(
-    composed,
-    ENGINE6_OPTIMIZED_DESCRIPTION_MAX
+  const category = (categoryLabel ?? "experience").toLowerCase();
+  return trimDescriptionToWordBoundary(
+    `${lead} on a ${category} with destination highlights and practical local context.`,
+    ENGINE6_META_DESCRIPTION_HARD_MAX
   );
+};
 
-  return stripEngine6GeneratedDescriptionPrefix(trimmed)
-    .replace(/[.!?,;:]+$/, "")
-    .trim();
+export const buildEngine6OptimizedDescription = ({
+  title,
+  city,
+  categoryLabel,
+  sourceDescription,
+  sourceDescriptions,
+}: {
+  title: string;
+  city: string;
+  categoryLabel?: string | null;
+  sourceDescription: string;
+  sourceDescriptions?: Array<string | null | undefined>;
+}) => {
+  const candidates = [...(sourceDescriptions ?? []), sourceDescription];
+
+  const cleanedCandidates = candidates
+    .map(candidate =>
+      candidate ? cleanEngine6SourceProseForMeta(candidate, title) : ""
+    )
+    .filter(Boolean);
+
+  for (const cleanedSource of cleanedCandidates) {
+    if (!isUsableEngine6MetaSource(cleanedSource)) continue;
+    return composeEngine6SourceMetaDescription(
+      cleanedSource,
+      cleanedCandidates.filter(candidate => candidate !== cleanedSource),
+      { city, categoryLabel }
+    );
+  }
+
+  const cleanedFallbackSource = cleanEngine6SourceProseForMeta(
+    sourceDescription,
+    title
+  );
+  return buildEngine6FallbackMetaDescription({
+    title,
+    city,
+    categoryLabel,
+    sourceDescription: cleanedFallbackSource || sourceDescription,
+  });
 };
 
 export const buildEngine6SeoDescription = ({
@@ -490,17 +713,20 @@ export const buildEngine6SeoDescription = ({
   city,
   categoryLabel,
   sourceDescription,
+  sourceDescriptions,
 }: {
   title: string;
   city: string;
   categoryLabel?: string | null;
   sourceDescription: string;
+  sourceDescriptions?: Array<string | null | undefined>;
 }) =>
   buildEngine6OptimizedDescription({
     title,
     city,
     categoryLabel,
     sourceDescription,
+    sourceDescriptions,
   });
 
 export const buildEngine6CanonicalPath = ({
