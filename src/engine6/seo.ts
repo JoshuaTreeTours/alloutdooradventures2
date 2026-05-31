@@ -204,7 +204,7 @@ export const isEngine6OperationalFiller = (value: string) =>
   ENGINE6_BLOCKED_META_PATTERNS.some(pattern => pattern.test(value));
 
 const ENGINE6_OPTIMIZED_DESCRIPTION_MIN = 140;
-const ENGINE6_OPTIMIZED_DESCRIPTION_MAX = 155;
+const ENGINE6_OPTIMIZED_DESCRIPTION_MAX = 159;
 const ENGINE6_ACTIVE_DESCRIPTION_START_PATTERN =
   /^(Explore|Ride|Paddle|Sail|Discover|Visit|Fly|See|Cruise|Hike|Kayak|Bike|Drive|Taste|Tour|Walk|Glide)\b/i;
 const ENGINE6_GENERIC_MARKETING_LEAD_PATTERNS = [
@@ -480,9 +480,15 @@ export const buildEngine6OptimizedDescription = ({
     ENGINE6_OPTIMIZED_DESCRIPTION_MAX
   );
 
-  return stripEngine6GeneratedDescriptionPrefix(trimmed)
-    .replace(/[.!?,;:]+$/, "")
+  const withoutPrefix = stripEngine6GeneratedDescriptionPrefix(trimmed)
+    .replace(/[!?;,]+$/, "")
     .trim();
+
+  if (!withoutPrefix) {
+    return "";
+  }
+
+  return /\.$/.test(withoutPrefix) ? withoutPrefix : `${withoutPrefix}.`;
 };
 
 export const buildEngine6SeoDescription = ({

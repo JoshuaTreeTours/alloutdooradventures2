@@ -12,10 +12,7 @@ export type Engine6FaqItem = {
   answer: string;
 };
 
-export type Engine6HeroSourceType =
-  | "api-primary"
-  | "api-gallery"
-  | "none";
+export type Engine6HeroSourceType = "api-primary" | "api-gallery" | "none";
 
 export type Engine6HeroQualityClassification =
   | "caption"
@@ -140,20 +137,19 @@ export type Engine6Tour = {
   seoTitle: string;
   seoDescription: string;
   description: string;
+  merchantDescription: string | null;
   metaDescription: string;
   city: string;
   state: string;
   resolvedImageUrl: string | null;
   heroImageUrl: string | null;
-  resolvedHero:
-    | {
-        url: string;
-        sourceProductCode: string;
-        sourceProductUrl: string;
-        sourceFieldPath: string;
-        host: string;
-      }
-    | null;
+  resolvedHero: {
+    url: string;
+    sourceProductCode: string;
+    sourceProductUrl: string;
+    sourceFieldPath: string;
+    host: string;
+  } | null;
   priceAmount: number | null;
   priceFormatted: string;
   aggregateRating: number | null;

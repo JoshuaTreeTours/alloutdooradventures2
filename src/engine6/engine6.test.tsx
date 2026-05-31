@@ -535,7 +535,9 @@ describe("engine6 meta descriptions", () => {
       expect(
         hasEngine6GeneratedDescriptionPrefix(String(product?.description ?? ""))
       ).toBe(false);
-      expect(product?.description).toBe(tour.metaDescription);
+      expect(product?.description).toBe(
+        tour.merchantDescription ?? tour.metaDescription
+      );
       expect(tour.metaDescription.length).toBeGreaterThanOrEqual(120);
       expect(tour.metaDescription.length).toBeLessThanOrEqual(160);
       expect(tour.metaDescription).not.toMatch(

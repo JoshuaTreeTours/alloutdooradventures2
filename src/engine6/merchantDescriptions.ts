@@ -1,7 +1,4 @@
-import {
-  buildEngine6OptimizedDescription,
-  stripEngine6GeneratedDescriptionPrefix,
-} from "./seo";
+import { stripEngine6GeneratedDescriptionPrefix } from "./seo";
 
 export const MERCHANT_APPROVED_DESCRIPTIONS: Record<string, string> = {
   "152424P1":
@@ -112,6 +109,214 @@ export const MERCHANT_APPROVED_DESCRIPTIONS: Record<string, string> = {
     "Learn to surf in beautiful Santa Barbara! Your expert instructor will teach you how to stand up on your board and ride the perfect wave, offering tips on balance while ensuring your safety. All skill levels are welcome, and equipment rental is included. This Southern California city offers great outdoor activities like surfing year-round.",
 };
 
+export const ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES = new Set(
+  Object.keys(MERCHANT_APPROVED_DESCRIPTIONS)
+);
+
+export const isEngine6OriginalMerchantApprovedProduct = (productCode: string) =>
+  ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES.has(productCode);
+
+const MERCHANT_DESCRIPTION_TARGET_MAX = 500;
+const MERCHANT_DESCRIPTION_PREFERRED_MIN = 250;
+
+const CATEGORY_PREFIX_PATTERN =
+  /^(?:bike|food|boat|guided|walking|attractions?|hiking|paddle|air|wildlife|snorkeling|sightseeing|adventure|jeep|off-road)\s+(?:and\s+\w+\s+)?(?:tour|tours|experience|attractions?)\s*:\s*/i;
+
+const MERCHANT_OPERATIONAL_PATTERNS = [
+  /public transportation options are available nearby/i,
+  /confirmation will be received/i,
+  /not wheelchair accessible/i,
+  /most travelers can participate/i,
+  /infants must sit on laps/i,
+  /service animals allowed/i,
+  /this experience requires good weather/i,
+  /travelers should have at least a moderate physical fitness level/i,
+];
+
+const normalizeMerchantProse = (value: string | null | undefined) => {
+  if (!value) return null;
+  let normalized = stripEngine6GeneratedDescriptionPrefix(
+    value
+      .replace(/<[^>]*>/g, " ")
+      .replace(/&amp;/g, "&")
+      .replace(/\s+/g, " ")
+      .trim()
+  ).replace(CATEGORY_PREFIX_PATTERN, "");
+
+  for (const pattern of MERCHANT_OPERATIONAL_PATTERNS) {
+    normalized = normalized.replace(pattern, "");
+  }
+
+  normalized = normalized
+    .replace(
+      /^(?:this\s+(?:tour|experience|activity)\s+(?:offers|provides|is)\s+)/i,
+      ""
+    )
+    .replace(/^(?:join\s+us\s+for\s+)/i, "")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .replace(/^[,.;:!?\s-]+/, "")
+    .trim();
+
+  if (!normalized) return null;
+  return `${normalized.charAt(0).toUpperCase()}${normalized.slice(1)}`;
+};
+
+const splitMerchantSentences = (value: string) =>
+  value
+    .split(/(?<=[.!?])\s+/)
+    .map(sentence => sentence.trim())
+    .filter(sentence => sentence.length > 0);
+
+const sentenceWithPeriod = (value: string) => {
+  const trimmed = value.replace(/\s+/g, " ").trim();
+  if (!trimmed) return "";
+  return /[.!?]$/.test(trimmed) ? trimmed : `${trimmed}.`;
+};
+
+const uniqueByLower = (values: string[]) => {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const value of values) {
+    const normalized = value
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
+    if (!normalized || seen.has(normalized)) continue;
+    seen.add(normalized);
+    out.push(value);
+  }
+  return out;
+};
+
+const formatList = (values: string[]) => {
+  const clean = uniqueByLower(
+    values.map(value => value.trim()).filter(Boolean)
+  );
+  if (clean.length === 0) return "";
+  if (clean.length === 1) return clean[0]!;
+  if (clean.length === 2) return `${clean[0]} and ${clean[1]}`;
+  return `${clean.slice(0, -1).join(", ")}, and ${clean[clean.length - 1]}`;
+};
+
+const trimMerchantDescription = (value: string) => {
+  const normalized = value.replace(/\s+/g, " ").trim();
+  if (normalized.length <= MERCHANT_DESCRIPTION_TARGET_MAX) {
+    return sentenceWithPeriod(normalized);
+  }
+
+  const sentences = splitMerchantSentences(normalized);
+  let out = "";
+  for (const sentence of sentences) {
+    const candidate = out ? `${out} ${sentence}` : sentence;
+    if (candidate.length > MERCHANT_DESCRIPTION_TARGET_MAX) break;
+    out = candidate;
+  }
+
+  if (out.length >= MERCHANT_DESCRIPTION_PREFERRED_MIN) {
+    return sentenceWithPeriod(out);
+  }
+
+  const clipped = normalized.slice(0, MERCHANT_DESCRIPTION_TARGET_MAX).trim();
+  const lastSpace = clipped.lastIndexOf(" ");
+  const safe =
+    lastSpace > MERCHANT_DESCRIPTION_PREFERRED_MIN
+      ? clipped.slice(0, lastSpace)
+      : clipped;
+  return sentenceWithPeriod(safe.replace(/[,:;\s-]+$/, ""));
+};
+
+export const buildEngine6AuthoritativeMerchantDescription = (args: {
+  title: string;
+  city: string;
+  state?: string | null;
+  productOverviewDescription?: string | null;
+  productDescription?: string | null;
+  pageMetadataDescription?: string | null;
+  jsonLdProductDescription?: string | null;
+  viatorApiDescription?: string | null;
+  itineraryStops?: Array<{
+    title?: string | null;
+    description?: string | null;
+  }>;
+  included?: string[];
+  highlights?: string[];
+}) => {
+  const hierarchyCandidates = [
+    args.productOverviewDescription,
+    args.productDescription,
+    args.viatorApiDescription,
+    args.jsonLdProductDescription,
+    args.pageMetadataDescription,
+  ];
+
+  const sourceSentences = uniqueByLower(
+    hierarchyCandidates
+      .map(normalizeMerchantProse)
+      .filter((value): value is string => Boolean(value))
+      .flatMap(splitMerchantSentences)
+      .filter(sentence => {
+        if (hasGenericMerchantDescriptionBoilerplate(sentence)) return false;
+        if (/^(?:from|per)\s+\$?\d+/i.test(sentence)) return false;
+        return !MERCHANT_OPERATIONAL_PATTERNS.some(pattern =>
+          pattern.test(sentence)
+        );
+      })
+      .map(sentenceWithPeriod)
+  );
+
+  const parts: string[] = [];
+  for (const sentence of sourceSentences) {
+    const candidate = [...parts, sentence].join(" ");
+    if (candidate.length > 360 && parts.length >= 2) break;
+    parts.push(sentence);
+    if (candidate.length >= MERCHANT_DESCRIPTION_PREFERRED_MIN) break;
+  }
+
+  const stopTitles = uniqueByLower(
+    (args.itineraryStops ?? [])
+      .map(stop => stop.title ?? "")
+      .filter(title => title.trim().length > 1)
+      .slice(0, 4)
+  );
+  if (stopTitles.length > 0) {
+    const stopSentence = sentenceWithPeriod(
+      `The route includes ${formatList(stopTitles)}`
+    );
+    const lowerBody = parts.join(" ").toLowerCase();
+    if (!stopTitles.every(stop => lowerBody.includes(stop.toLowerCase()))) {
+      parts.push(stopSentence);
+    }
+  }
+
+  const highlights = uniqueByLower([
+    ...(args.highlights ?? []),
+    ...(args.included ?? []),
+  ])
+    .map(normalizeMerchantProse)
+    .filter((value): value is string => Boolean(value))
+    .slice(0, 3);
+  if (
+    highlights.length > 0 &&
+    parts.join(" ").length < MERCHANT_DESCRIPTION_PREFERRED_MIN
+  ) {
+    parts.push(
+      sentenceWithPeriod(`Travelers can expect ${formatList(highlights)}`)
+    );
+  }
+
+  if (parts.length === 0) {
+    const location = [args.city, args.state].filter(Boolean).join(", ");
+    parts.push(
+      sentenceWithPeriod(
+        `${args.title} is a traveler-focused experience${location ? ` in ${location}` : ""} with details drawn from the product page and itinerary`
+      )
+    );
+  }
+
+  return trimMerchantDescription(parts.join(" "));
+};
+
 const GENERATED_DESCRIPTION_BLOCKLIST = [
   /scenic stops/i,
   /local guide insight/i,
@@ -123,33 +328,6 @@ const GENERATED_DESCRIPTION_BLOCKLIST = [
 export const hasGenericMerchantDescriptionBoilerplate = (value: string) =>
   GENERATED_DESCRIPTION_BLOCKLIST.some(pattern => pattern.test(value));
 
-const normalizeMerchantDescriptionCandidate = (
-  value: string | null | undefined
-) => {
-  if (!value) {
-    return null;
-  }
-
-  const normalized = stripEngine6GeneratedDescriptionPrefix(
-    value.replace(/\s+/g, " ").trim()
-  );
-  return normalized.length > 0 ? normalized : null;
-};
-
-const buildProductSpecificFallback = (args: {
-  title: string;
-  city: string;
-  categoryLabel?: string | null;
-}) => {
-  const title = args.title.trim();
-  const city = args.city.trim();
-  const activity =
-    args.categoryLabel?.trim().toLowerCase() || "guided experience";
-  const destination = city ? ` in ${city}` : "";
-
-  return `${title} is a ${activity}${destination} with details aligned to the product page and booking experience.`;
-};
-
 export const resolveMerchantDescription = (args: {
   productCode: string;
   title: string;
@@ -159,6 +337,13 @@ export const resolveMerchantDescription = (args: {
   pageMetadataDescription?: string | null;
   jsonLdProductDescription?: string | null;
   viatorApiDescription?: string | null;
+  itineraryStops?: Array<{
+    title?: string | null;
+    description?: string | null;
+  }>;
+  included?: string[];
+  highlights?: string[];
+  state?: string | null;
 }) => {
   const approvedDescription = MERCHANT_APPROVED_DESCRIPTIONS[args.productCode];
 
@@ -166,33 +351,17 @@ export const resolveMerchantDescription = (args: {
     return approvedDescription;
   }
 
-  const sourceCandidates = [
-    args.productOverviewDescription,
-    args.pageMetadataDescription,
-    args.jsonLdProductDescription,
-    args.viatorApiDescription,
-  ];
-
-  for (const candidate of sourceCandidates) {
-    const normalized = normalizeMerchantDescriptionCandidate(candidate);
-    if (normalized && !hasGenericMerchantDescriptionBoilerplate(normalized)) {
-      return buildEngine6OptimizedDescription({
-        title: args.title,
-        city: args.city,
-        categoryLabel: args.categoryLabel,
-        sourceDescription: normalized,
-      });
-    }
-  }
-
-  return buildEngine6OptimizedDescription({
+  return buildEngine6AuthoritativeMerchantDescription({
     title: args.title,
     city: args.city,
-    categoryLabel: args.categoryLabel,
-    sourceDescription: buildProductSpecificFallback({
-      title: args.title,
-      city: args.city,
-      categoryLabel: args.categoryLabel,
-    }),
+    state: args.state,
+    productOverviewDescription: args.productOverviewDescription,
+    productDescription: args.jsonLdProductDescription,
+    pageMetadataDescription: args.pageMetadataDescription,
+    jsonLdProductDescription: args.jsonLdProductDescription,
+    viatorApiDescription: args.viatorApiDescription,
+    itineraryStops: args.itineraryStops,
+    included: args.included,
+    highlights: args.highlights,
   });
 };
