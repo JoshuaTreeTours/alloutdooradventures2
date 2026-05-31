@@ -209,6 +209,10 @@ const buildMerchantRow = (
       jsonLdProductDescription: tour.description,
       viatorApiDescription:
         hydration?.viatorApiDescription ?? tour.overviewText ?? null,
+      itineraryStops: tour.itinerary,
+      highlights: tour.highlights,
+      included: tour.included,
+      durationText: tour.durationText,
     }),
     link: `${DOMAIN}${tour.canonicalPath}`,
     image_link: imageLink ?? "",

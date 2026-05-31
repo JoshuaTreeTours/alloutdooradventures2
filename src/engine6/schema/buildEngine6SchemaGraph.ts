@@ -9,7 +9,10 @@ import {
 import { SITE_BRAND_NAME } from "../../utils/site";
 import { resolveEngine6OfferUrl } from "../buildEngine6ViatorBookingUrl";
 import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
-import { formatEngine6CategoryLabel } from "../seo";
+import {
+  buildEngine6RichProductDescription,
+  formatEngine6CategoryLabel,
+} from "../seo";
 import type { Engine6Tour } from "../types";
 
 const includesTerm = (source: string, term: string) =>
@@ -34,14 +37,26 @@ const buildCityAwareSchemaName = ({
 };
 
 export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
-  const resolvedHeroUrl = tour.resolvedHero?.url ?? tour.heroImageUrl ?? undefined;
+  const resolvedHeroUrl =
+    tour.resolvedHero?.url ?? tour.heroImageUrl ?? undefined;
   const canonicalUrl = buildCanonicalUrl(tour.canonicalPath);
   const affiliateUrl = tour.bookingUrl;
   const offerUrl =
     resolveEngine6OfferUrl(affiliateUrl) ??
     (affiliateUrl?.startsWith("/") ? affiliateUrl : undefined);
   const categoryLabel = formatEngine6CategoryLabel(tour.primaryCategory);
-  const description = tour.seoDescription || tour.metaDescription || tour.description || tour.title;
+  const description = buildEngine6RichProductDescription({
+    title: tour.title,
+    city: tour.city,
+    categoryLabel: tour.categoryLabel,
+    overviewText: tour.overviewText,
+    description:
+      tour.description || tour.metaDescription || tour.seoDescription,
+    itineraryStops: tour.itinerary,
+    highlights: tour.highlights,
+    included: tour.included,
+    durationText: tour.durationText,
+  });
   const schemaName = buildCityAwareSchemaName({
     title: tour.title,
     city: tour.city,

@@ -975,6 +975,267 @@ export const buildEngine6OptimizedDescription = ({
   });
 };
 
+const ENGINE6_RICH_PRODUCT_DESCRIPTION_MIN_WORDS = 75;
+const ENGINE6_RICH_PRODUCT_DESCRIPTION_MAX_WORDS = 120;
+const ENGINE6_RICH_PRODUCT_BLOCKED_PHRASES = [
+  /\bguide support\b/gi,
+  /\beasy logistics\b/gi,
+  /\btraveler-friendly pace\b/gi,
+  /\bmemorable experience\b/gi,
+  /\bscenic views\b/gi,
+  /\bguided local context\b/gi,
+  /\bwith clear logistics\b/gi,
+  /\bpractical local context\b/gi,
+  /\bclear guidance\b/gi,
+  /\brelaxed pace\b/gi,
+];
+
+const countEngine6Words = (value: string) =>
+  value.trim().split(/\s+/).filter(Boolean).length;
+
+const normalizeEngine6Sentence = (value: string) => {
+  const cleaned = value
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\.\.\.+/g, ".")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .replace(/^[,.;:!?\s-]+/, "")
+    .trim();
+
+  if (!cleaned) return "";
+  const withoutDangling = cleaned.replace(/[,:;\s-]+$/g, "").trim();
+  return /[.!?]$/.test(withoutDangling)
+    ? withoutDangling
+    : `${withoutDangling}.`;
+};
+
+const cleanEngine6RichProductSource = (value: string, title: string) => {
+  let cleaned = cleanEngine6SourceProseForMeta(value, title)
+    .replace(/\.\.\.+/g, ".")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  for (const pattern of ENGINE6_RICH_PRODUCT_BLOCKED_PHRASES) {
+    cleaned = cleaned.replace(pattern, "").replace(/\s+/g, " ").trim();
+  }
+
+  const readableTitle = normalizeEngine6ReadableTitle(title)
+    .replace(/\s+\d{4,}$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (readableTitle) {
+    cleaned = cleaned
+      .replace(
+        new RegExp(
+          `^${escapeRegExp(readableTitle)}\\s+(?:is|offers|provides|gives|takes|brings|combines|features)\\s+`,
+          "i"
+        ),
+        ""
+      )
+      .replace(new RegExp(`^${escapeRegExp(readableTitle)}[,;:\\s-]+`, "i"), "")
+      .trim();
+  }
+
+  return sentenceCase(cleaned);
+};
+
+const appendEngine6RichSentenceIfUseful = (
+  sentences: string[],
+  sentence: string,
+  maxWords = ENGINE6_RICH_PRODUCT_DESCRIPTION_MAX_WORDS
+) => {
+  const normalized = normalizeEngine6Sentence(sentence);
+  if (!normalized) return false;
+  if (
+    ENGINE6_BAD_SOURCE_PROSE_PATTERNS.some(pattern => pattern.test(normalized))
+  ) {
+    return false;
+  }
+  const normalizedCandidate = normalizeForDuplicateComparison(normalized);
+  if (normalizedCandidate.length < 12) return false;
+  if (
+    sentences.some(existing => {
+      const normalizedExisting = normalizeForDuplicateComparison(existing);
+      return (
+        normalizedExisting.includes(normalizedCandidate) ||
+        normalizedCandidate.includes(normalizedExisting)
+      );
+    })
+  ) {
+    return false;
+  }
+
+  const candidate = [...sentences, normalized].join(" ");
+  if (countEngine6Words(candidate) > maxWords) return false;
+  sentences.push(normalized);
+  return true;
+};
+
+const summarizeEngine6List = (values: string[], limit = 4) =>
+  values
+    .map(value =>
+      value
+        .replace(/<[^>]*>/g, " ")
+        .replace(/[.!?]+$/g, "")
+        .replace(/\s+/g, " ")
+        .trim()
+    )
+    .filter(Boolean)
+    .filter(
+      (value, index, list) =>
+        list.findIndex(
+          other =>
+            normalizeForDuplicateComparison(other) ===
+            normalizeForDuplicateComparison(value)
+        ) === index
+    )
+    .slice(0, limit);
+
+const buildEngine6RichItinerarySentence = (
+  itineraryStops: Array<{ title: string; description?: string | null }>
+) => {
+  const stops = summarizeEngine6List(
+    itineraryStops.map(stop => stop.title).filter(Boolean),
+    4
+  );
+  if (stops.length === 0) return "";
+  return normalizeEngine6Sentence(
+    `The route includes ${formatEngine6LandmarkList(stops)}`
+  );
+};
+
+const buildEngine6RichHighlightsSentence = (highlights: string[]) => {
+  const items = summarizeEngine6List(highlights, 3);
+  if (items.length === 0) return "";
+  return normalizeEngine6Sentence(
+    `Highlights include ${formatEngine6LandmarkList(items)}`
+  );
+};
+
+const buildEngine6RichInclusionsSentence = (included: string[]) => {
+  const items = summarizeEngine6List(included, 3);
+  if (items.length === 0) return "";
+  return normalizeEngine6Sentence(
+    `Included elements cover ${formatEngine6LandmarkList(items)}`
+  );
+};
+
+const buildEngine6RichDurationSentence = ({
+  durationText,
+  categoryLabel,
+}: {
+  durationText?: string | null;
+  categoryLabel?: string | null;
+}) => {
+  const duration = durationText?.trim();
+  const category = categoryLabel?.trim().toLowerCase();
+  if (duration && category) {
+    return normalizeEngine6Sentence(
+      `The ${category} typically lasts ${duration}`
+    );
+  }
+  if (duration) {
+    return normalizeEngine6Sentence(
+      `The experience typically lasts ${duration}`
+    );
+  }
+  if (category) {
+    return normalizeEngine6Sentence(`The format is a ${category}`);
+  }
+  return "";
+};
+
+export const buildEngine6RichProductDescription = ({
+  title,
+  city,
+  categoryLabel,
+  overviewText,
+  description,
+  itineraryStops = [],
+  highlights = [],
+  included = [],
+  durationText,
+}: {
+  title: string;
+  city: string;
+  categoryLabel?: string | null;
+  overviewText?: string | null;
+  description?: string | null;
+  itineraryStops?: Array<{ title: string; description?: string | null }>;
+  highlights?: string[];
+  included?: string[];
+  durationText?: string | null;
+}) => {
+  const sentences: string[] = [];
+  const primarySources = [overviewText, description]
+    .map(value => (value ? cleanEngine6RichProductSource(value, title) : ""))
+    .filter(Boolean);
+
+  for (const source of primarySources) {
+    for (const sentence of splitDescriptionSentences(source)) {
+      appendEngine6RichSentenceIfUseful(sentences, sentence);
+      if (
+        countEngine6Words(sentences.join(" ")) >=
+        ENGINE6_RICH_PRODUCT_DESCRIPTION_MIN_WORDS
+      ) {
+        break;
+      }
+    }
+    if (
+      countEngine6Words(sentences.join(" ")) >=
+      ENGINE6_RICH_PRODUCT_DESCRIPTION_MIN_WORDS
+    ) {
+      break;
+    }
+  }
+
+  const itinerarySentence = buildEngine6RichItinerarySentence(itineraryStops);
+  const itineraryDetailSentences = itineraryStops.flatMap(stop =>
+    splitDescriptionSentences(
+      cleanEngine6RichProductSource(
+        [stop.title, stop.description].filter(Boolean).join(". "),
+        title
+      )
+    )
+  );
+  const supportingSentences = [
+    itinerarySentence,
+    ...itineraryDetailSentences,
+    buildEngine6RichHighlightsSentence(highlights),
+    buildEngine6RichInclusionsSentence(included),
+    buildEngine6RichDurationSentence({ durationText, categoryLabel }),
+  ];
+
+  for (const sentence of supportingSentences) {
+    if (
+      countEngine6Words(sentences.join(" ")) >=
+      ENGINE6_RICH_PRODUCT_DESCRIPTION_MIN_WORDS
+    ) {
+      break;
+    }
+    appendEngine6RichSentenceIfUseful(sentences, sentence);
+  }
+
+  if (sentences.length === 0) {
+    appendEngine6RichSentenceIfUseful(
+      sentences,
+      buildEngine6FallbackMetaDescription({
+        title,
+        city,
+        categoryLabel,
+        sourceDescription: description ?? overviewText ?? title,
+      })
+    );
+  }
+
+  return sentences
+    .join(" ")
+    .replace(/\.\.\.+/g, ".")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .trim();
+};
+
 export const buildEngine6SeoDescription = ({
   title,
   city,

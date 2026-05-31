@@ -32,6 +32,7 @@ import {
 } from "./seo";
 import { buildEngine6CardSurfaces, toEngine6Card } from "./cards";
 import { ENGINE6_63657P1_CARD_IMAGE_URL, engine6SpecimenTour } from "./listing";
+import { resolveMerchantDescription } from "./merchantDescriptions";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import { engine6ResolvedTours } from "./registry";
 import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures";
@@ -588,13 +589,149 @@ describe("engine6 meta descriptions", () => {
       expect(
         hasEngine6GeneratedDescriptionPrefix(String(product?.description ?? ""))
       ).toBe(false);
-      expect(product?.description).toBe(tour.metaDescription);
+      expect(String(product?.description ?? "").length).toBeGreaterThanOrEqual(
+        tour.metaDescription.length
+      );
       expect(tour.metaDescription.length).toBeGreaterThanOrEqual(120);
       expect(tour.metaDescription.length).toBeLessThanOrEqual(160);
       expect(tour.metaDescription).not.toMatch(
         /^(This tour offers|This experience provides|This private tour offers an unparalleled opportunity|Join us for|Come discover)/i
       );
     }
+  });
+
+  it("uses rich governed product descriptions for JSON-LD while preserving concise SERP metadata", () => {
+    const productCodes = [
+      "411138P3",
+      "447486P2",
+      "398496P5",
+      "152424P1",
+      "190492P3",
+    ];
+    const requiredTermsByProductCode: Record<string, string[]> = {
+      "411138P3": [
+        "Byron Glacier",
+        "Beluga Point",
+        "Alaska Wildlife Conservation Center",
+      ],
+      "447486P2": ["Santa Barbara Harbor", "Stearns Wharf", "Santa Ynez"],
+      "398496P5": ["Sphere", "Strip"],
+      "152424P1": [
+        "Muir Woods National Monument",
+        "Sausalito",
+        "Golden Gate Bridge",
+      ],
+      "190492P3": ["Bryce Canyon", "Zion National Park"],
+    };
+    const bannedFragments = [
+      "guide support",
+      "easy logistics",
+      "traveler-friendly pace",
+      "memorable experience",
+      "scenic views",
+      "guided local context",
+    ];
+    const wordCount = (value: string) =>
+      value.trim().split(/\s+/).filter(Boolean).length;
+
+    for (const productCode of productCodes) {
+      const tour = engine6ResolvedTours.find(
+        candidate => candidate.productCode === productCode
+      );
+      expect(tour, productCode).toBeDefined();
+      const seo = buildEngine6Seo(tour!);
+      const graph = buildEngine6SchemaGraph(tour!)["@graph"] as Array<
+        Record<string, unknown>
+      >;
+      const webPage = graph.find(node => node["@type"] === "WebPage");
+      const trip = graph.find(node => node["@type"] === "TouristTrip");
+      const product = graph.find(node => node["@type"] === "Product");
+      const richDescription = String(product?.description ?? "");
+
+      expect(seo.description.length).toBeGreaterThanOrEqual(120);
+      expect(seo.description.length).toBeLessThanOrEqual(160);
+      expect(seo.description.length).toBeLessThan(richDescription.length);
+      expect(webPage?.description).toBe(richDescription);
+      expect(trip?.description).toBe(richDescription);
+      expect(wordCount(richDescription), productCode).toBeGreaterThanOrEqual(
+        75
+      );
+      expect(wordCount(richDescription), productCode).toBeLessThanOrEqual(120);
+      expect(richDescription).not.toContain("...");
+      expect(richDescription.startsWith(tour!.title)).toBe(false);
+      for (const term of requiredTermsByProductCode[productCode]) {
+        expect(richDescription).toContain(term);
+      }
+      for (const fragment of bannedFragments) {
+        expect(richDescription.toLowerCase()).not.toContain(fragment);
+      }
+    }
+  });
+
+  it("uses the same governed rich description source for post-original-55 merchant rows", () => {
+    const productCode = "398496P5";
+    const tour = engine6ResolvedTours.find(
+      candidate => candidate.productCode === productCode
+    );
+    expect(tour).toBeDefined();
+    const product = (
+      buildEngine6SchemaGraph(tour!)["@graph"] as Array<Record<string, unknown>>
+    ).find(node => node["@type"] === "Product");
+
+    const merchantDescription = resolveMerchantDescription({
+      productCode,
+      title: tour!.title,
+      city: tour!.city,
+      categoryLabel: tour!.categoryLabel,
+      productOverviewDescription: tour!.overviewText,
+      pageMetadataDescription: tour!.metaDescription,
+      jsonLdProductDescription: tour!.description,
+      viatorApiDescription: tour!.overviewText,
+      itineraryStops: tour!.itinerary,
+      highlights: tour!.highlights,
+      included: tour!.included,
+      durationText: tour!.durationText,
+    });
+    const parseCsvLine = (line: string) => {
+      const values: string[] = [];
+      let current = "";
+      let inQuotes = false;
+      for (let index = 0; index < line.length; index += 1) {
+        const char = line[index];
+        if (inQuotes) {
+          if (char === '"' && line[index + 1] === '"') {
+            current += '"';
+            index += 1;
+          } else if (char === '"') {
+            inQuotes = false;
+          } else {
+            current += char;
+          }
+        } else if (char === '"') {
+          inQuotes = true;
+        } else if (char === ",") {
+          values.push(current);
+          current = "";
+        } else {
+          current += char;
+        }
+      }
+      values.push(current);
+      return values;
+    };
+    const merchantFeedLines = readFileSync("data/merchantFeed.csv", "utf8")
+      .trim()
+      .split("\n");
+    const headers = parseCsvLine(merchantFeedLines[0]);
+    const merchantFeedRow = merchantFeedLines
+      .slice(1)
+      .map(parseCsvLine)
+      .find(row => row[headers.indexOf("id")] === productCode);
+
+    expect(merchantDescription).toBe(product?.description);
+    expect(merchantFeedRow?.[headers.indexOf("description")]).toBe(
+      product?.description
+    );
   });
 
   it("synthesizes readable non-truncated title for stitched supplier input", () => {
