@@ -204,6 +204,7 @@ const buildMerchantRow = (
       title: tour.title,
       city: tour.city,
       categoryLabel: tour.categoryLabel,
+      productOverviewDescription: tour.overviewText,
       pageMetadataDescription: tour.metaDescription || tour.seoDescription,
       jsonLdProductDescription: tour.description,
       viatorApiDescription:

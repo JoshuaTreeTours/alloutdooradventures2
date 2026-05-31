@@ -1,3 +1,8 @@
+import {
+  buildEngine6OptimizedDescription,
+  stripEngine6GeneratedDescriptionPrefix,
+} from "./seo";
+
 export const MERCHANT_APPROVED_DESCRIPTIONS: Record<string, string> = {
   "152424P1":
     "Half-day small-group tour from San Francisco to Muir Woods National Monument and Sausalito, including scenic views and free time to explore.",
@@ -125,7 +130,9 @@ const normalizeMerchantDescriptionCandidate = (
     return null;
   }
 
-  const normalized = value.replace(/\s+/g, " ").trim();
+  const normalized = stripEngine6GeneratedDescriptionPrefix(
+    value.replace(/\s+/g, " ").trim()
+  );
   return normalized.length > 0 ? normalized : null;
 };
 
@@ -148,6 +155,7 @@ export const resolveMerchantDescription = (args: {
   title: string;
   city: string;
   categoryLabel?: string | null;
+  productOverviewDescription?: string | null;
   pageMetadataDescription?: string | null;
   jsonLdProductDescription?: string | null;
   viatorApiDescription?: string | null;
@@ -159,6 +167,7 @@ export const resolveMerchantDescription = (args: {
   }
 
   const sourceCandidates = [
+    args.productOverviewDescription,
     args.pageMetadataDescription,
     args.jsonLdProductDescription,
     args.viatorApiDescription,
@@ -167,13 +176,23 @@ export const resolveMerchantDescription = (args: {
   for (const candidate of sourceCandidates) {
     const normalized = normalizeMerchantDescriptionCandidate(candidate);
     if (normalized && !hasGenericMerchantDescriptionBoilerplate(normalized)) {
-      return normalized;
+      return buildEngine6OptimizedDescription({
+        title: args.title,
+        city: args.city,
+        categoryLabel: args.categoryLabel,
+        sourceDescription: normalized,
+      });
     }
   }
 
-  return buildProductSpecificFallback({
+  return buildEngine6OptimizedDescription({
     title: args.title,
     city: args.city,
     categoryLabel: args.categoryLabel,
+    sourceDescription: buildProductSpecificFallback({
+      title: args.title,
+      city: args.city,
+      categoryLabel: args.categoryLabel,
+    }),
   });
 };
