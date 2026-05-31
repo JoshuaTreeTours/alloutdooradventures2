@@ -182,6 +182,7 @@ const removeBlockedOperationalFiller = (value: string) => {
   }
   return cleaned
     .replace(/\s+/g, " ")
+    .replace(/^[\s.;:,-]+/, "")
     .replace(/\s+([,.;!?])/g, "$1")
     .trim();
 };
@@ -191,8 +192,6 @@ export const isEngine6OperationalFiller = (value: string) =>
 
 export const buildEngine6SeoDescription = ({
   title,
-  city,
-  categoryLabel,
   sourceDescription,
 }: {
   title: string;
@@ -203,25 +202,16 @@ export const buildEngine6SeoDescription = ({
   const cleanedSource = removeBlockedOperationalFiller(
     buildMetaDescription(sourceDescription)
   );
-  const activity = (categoryLabel ?? "guided tour").replace(
-    /\s+tour$/i,
-    " tour"
-  );
-  const destinationLead = `${city} ${activity}`.trim();
-  const lead = `${destinationLead}:`;
-  const body = cleanedSource
-    .replace(new RegExp(`^${city}[:,\\s-]+`, "i"), "")
-    .trim();
-  const seeded = `${lead} ${body}`.replace(/\s+/g, " ").trim();
-  const withIdentity = seeded.toLowerCase().includes(title.toLowerCase())
-    ? seeded
-    : `${seeded} ${title}.`;
-  const clamped = clampEngine6MetaDescription(withIdentity);
+  const body = cleanedSource.replace(/^([\w .’'&-]{2,80}):\s+/, "").trim();
+  const seeded = body.toLowerCase().includes(title.toLowerCase())
+    ? body
+    : `${body} ${title}.`;
+  const clamped = clampEngine6MetaDescription(seeded);
   if (clamped.length >= ENGINE6_META_DESCRIPTION_MIN) {
     return clamped;
   }
   return clampEngine6MetaDescription(
-    `${clamped} ${title} is a product-specific ${activity} aligned to the page details.`
+    `${clamped} This product-specific experience follows the page details.`
   );
 };
 

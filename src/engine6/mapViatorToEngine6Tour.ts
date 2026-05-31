@@ -11,42 +11,6 @@ import {
 } from "./seo";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 
-const ENGINE6_OPENING_PATTERNS = [
-  "Join one of the best experiences in %CITY% with this %TOUR_TYPE%.",
-  "Discover one of the top-rated experiences in %CITY% on this %TOUR_TYPE%.",
-  "Experience one of the most popular things to do in %CITY% with this %TOUR_TYPE%.",
-  "Explore one of the best outdoor adventures in %CITY% on this %TOUR_TYPE%.",
-] as const;
-const ENGINE6_OPENING_PATTERN_OVERRIDES: Record<string, number> = {
-  "100569P5": 0,
-};
-const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
-  "100569P5": "Join one of the best experiences in Anchorage...",
-  "365892P1":
-    "Explore Los Angeles on a private full-day sightseeing tour with hotel pickup, a comfortable air-conditioned vehicle, and stops at Venice Beach, Santa Monica Pier, Beverly Hills, Hollywood, and the Hollywood Sign.",
-  "15131P4":
-    "Fly above Los Angeles on a private helicopter tour with sweeping aerial views of Hollywood, downtown Los Angeles, and the city’s most recognizable landmarks.",
-  "148509P1":
-    "Go behind the scenes of Hollywood filmmaking on a guided Warner Bros. Studio Tour featuring working backlots, sound stages, and iconic film and TV sets.",
-  "106439P1":
-    "See the homes of celebrities and iconic landmarks on a guided sightseeing tour through Hollywood, Beverly Hills, and the Sunset Strip.",
-  "170119P1":
-    "Explore Los Angeles in a single day on a guided tour covering Hollywood, Beverly Hills, Santa Monica, and coastal highlights with multiple photo stops.",
-  "47235P1":
-    "See the most famous highlights of Los Angeles in one day, including Hollywood, Beverly Hills, Santa Monica, and Venice Beach with guided stops along the way.",
-  "2030UNIENTRY":
-    "Enjoy a full day at Universal Studios Hollywood with access to thrilling rides, immersive movie-themed attractions, and behind-the-scenes studio experiences.",
-  "163975P1":
-    "Settle into Santa Barbara’s coastal rhythm on a guided trolley tour that links landmark neighborhoods, beaches, and historic architecture in one easy loop.",
-  "447486P2":
-    "Sail Santa Barbara’s waterfront on a happy-hour yacht cruise with coastal views, relaxed onboard seating, and a social golden-hour atmosphere.",
-  "117409P1":
-    "Head beyond the coast on a guided Santa Ynez Valley day trip focused on wine-country towns, vineyard landscapes, and relaxed tasting stops.",
-  "6007P5":
-    "Start near Fisherman’s Wharf for a guided bicycle ride to Sausalito, then use the included lunch voucher and all-day bike rental for an independent return plan.",
-  "2630SUN":
-    "Board at Pier 43 1/2 for a two-hour San Francisco Bay cruise with sunset-season or winter city-lights timing, open-water views, and a round-trip return to Fisherman’s Wharf.",
-};
 const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
   "415653P2": "Private Yosemite & Giant Sequoias Tour from San Francisco",
   "304471P122":
@@ -203,7 +167,6 @@ const buildAuthoritativeOverview = ({
   title,
   city,
   state,
-  categoryLabel,
   durationText,
   highlights,
   itinerary,
@@ -213,7 +176,6 @@ const buildAuthoritativeOverview = ({
   title: string;
   city: string;
   state: string;
-  categoryLabel: string | null;
   durationText: string | null;
   highlights: string[];
   itinerary: Array<{ title: string }>;
@@ -221,8 +183,6 @@ const buildAuthoritativeOverview = ({
   sourceOverview: string;
 }) => {
   const normalizedLocation = `${city}, ${state}`;
-  const activityLabel =
-    categoryLabel?.toLowerCase().replace(/\s+tour$/i, " tour") ?? "guided tour";
   const cleanedSourceOverview = stripMarketingLanguage(sourceOverview)
     .replace(/\s+/g, " ")
     .trim();
@@ -243,7 +203,7 @@ const buildAuthoritativeOverview = ({
     .trim();
 
   const opening = toSentence(
-    `Set in ${normalizedLocation}, ${title} is a ${activityLabel} built around a guide-led experience and practical local context`
+    `${title} is built around a guide-led experience, practical local context, and details specific to ${normalizedLocation}`
   );
   const middleA = toSentence(
     [
@@ -267,7 +227,7 @@ const buildAuthoritativeOverview = ({
       .join(" ")
   );
   const closer = toSentence(
-    `Overall, this ${city} experience balances clear guidance, real destination context, and a relaxed pace suited to small groups`
+    `Overall, the experience balances clear guidance, real destination context, and a relaxed pace suited to small groups`
   );
 
   const parts = [opening, middleA, logistics, sourceSnippet, closer].filter(
@@ -683,23 +643,12 @@ export const mapViatorToEngine6Tour = (
   const rawDescription =
     payload.extracted.overviewText ??
     payload.extracted.seoDescription ??
-    `Explore ${title} with local guides in ${city}, ${state}.`;
+    `${title} includes product-specific details aligned to the product page and booking experience.`;
   const cleanedDescription = cleanEngine6Description(rawDescription);
-  const openingSentence = buildEngine6OpeningSentence({
-    city,
-    title,
-    categoryLabel,
-    productCode: payload.rawProductCode,
-  });
-  const enforcedOpeningSentence =
-    ENGINE6_OPENING_SENTENCE_OVERRIDES[payload.rawProductCode] ??
-    openingSentence;
   const descriptionBody = cleanedDescription.replace(/\s+/g, " ").trim();
   const descriptionOverride =
     ENGINE6_DESCRIPTION_OVERRIDES[payload.rawProductCode];
-  const description =
-    descriptionOverride ??
-    [enforcedOpeningSentence, descriptionBody].filter(Boolean).join(" ");
+  const description = descriptionOverride ?? descriptionBody;
   const metaDescription = buildEngine6SeoDescription({
     title,
     city,
@@ -734,7 +683,6 @@ export const mapViatorToEngine6Tour = (
     title,
     city,
     state,
-    categoryLabel,
     durationText: payload.extracted.durationText ?? null,
     highlights,
     itinerary,
