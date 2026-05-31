@@ -203,8 +203,10 @@ const removeBlockedOperationalFiller = (value: string) => {
 export const isEngine6OperationalFiller = (value: string) =>
   ENGINE6_BLOCKED_META_PATTERNS.some(pattern => pattern.test(value));
 
-const ENGINE6_OPTIMIZED_DESCRIPTION_MIN = 140;
-const ENGINE6_OPTIMIZED_DESCRIPTION_MAX = 159;
+const ENGINE6_SERP_META_DESCRIPTION_MIN = 145;
+const ENGINE6_SERP_META_DESCRIPTION_MAX = 160;
+const ENGINE6_OPTIMIZED_DESCRIPTION_MIN = ENGINE6_SERP_META_DESCRIPTION_MIN;
+const ENGINE6_OPTIMIZED_DESCRIPTION_MAX = ENGINE6_SERP_META_DESCRIPTION_MAX;
 const ENGINE6_ACTIVE_DESCRIPTION_START_PATTERN =
   /^(Explore|Ride|Paddle|Sail|Discover|Visit|Fly|See|Cruise|Hike|Kayak|Bike|Drive|Taste|Tour|Walk|Glide)\b/i;
 const ENGINE6_GENERIC_MARKETING_LEAD_PATTERNS = [
@@ -420,7 +422,9 @@ export const buildEngine6OptimizedDescription = ({
   );
   const sourceStartsActively =
     ENGINE6_ACTIVE_DESCRIPTION_START_PATTERN.test(cleanedSource);
-  const priorityAttraction = extractEngine6PriorityAttraction(cleanedSource);
+  const priorityAttraction = extractEngine6PriorityAttraction(
+    cleanedSource
+  )?.replace(/^(?:Explore|Visit|See)\s+/i, "");
   const baseLead = buildEngine6ExperienceLead({
     title,
     city,
@@ -480,18 +484,83 @@ export const buildEngine6OptimizedDescription = ({
     ENGINE6_OPTIMIZED_DESCRIPTION_MAX
   );
 
-  const withoutPrefix = stripEngine6GeneratedDescriptionPrefix(trimmed)
+  return finalizeEngine6SerpMetaDescription(trimmed);
+};
+
+const finalizeEngine6SerpMetaDescription = (value: string) => {
+  const withoutPrefix = stripEngine6GeneratedDescriptionPrefix(value)
+    .replace(/\.\.\.$/, "")
     .replace(/[!?;,]+$/, "")
+    .replace(/\s+/g, " ")
     .trim();
 
   if (!withoutPrefix) {
     return "";
   }
 
-  return /\.$/.test(withoutPrefix) ? withoutPrefix : `${withoutPrefix}.`;
+  const bounded = trimDescriptionToWordBoundary(
+    withoutPrefix,
+    ENGINE6_SERP_META_DESCRIPTION_MAX - 1
+  )
+    .replace(/[.!?,;:\s-]+$/, "")
+    .trim();
+
+  return `${bounded}.`;
 };
 
-export const buildEngine6SeoDescription = ({
+const expandShortEngine6SerpMetaDescription = ({
+  description,
+  city,
+}: {
+  description: string;
+  city: string;
+}) => {
+  if (description.length >= ENGINE6_SERP_META_DESCRIPTION_MIN) {
+    return description;
+  }
+
+  const base = description.replace(/[.!?]+$/, "").trim();
+  const destination = city.trim();
+  const extensions = [
+    destination
+      ? ` for an easy-to-plan ${destination} experience`
+      : " for an easy-to-plan travel experience",
+    destination
+      ? ` with traveler-friendly timing in ${destination}`
+      : " with traveler-friendly timing",
+    destination
+      ? ` with clear logistics for a smooth ${destination} outing`
+      : " with clear logistics for a smooth outing",
+  ];
+
+  for (const extension of extensions) {
+    const candidate = finalizeEngine6SerpMetaDescription(`${base}${extension}`);
+    if (
+      candidate.length >= ENGINE6_SERP_META_DESCRIPTION_MIN &&
+      candidate.length <= ENGINE6_SERP_META_DESCRIPTION_MAX
+    ) {
+      return candidate;
+    }
+  }
+
+  return finalizeEngine6SerpMetaDescription(
+    `${base} with clear logistics, useful local context, and traveler-focused planning`
+  );
+};
+
+const ENGINE6_INCOMPLETE_SERP_END_PATTERN =
+  /\b(?:major|local|route|museum|beach|bridge|with|and|or|the|a|an|from|for|of|in|on|at|to)\.$/i;
+
+const includesEngine6Destination = (description: string, city: string) => {
+  const normalizedCity = city.trim().toLowerCase();
+  if (!normalizedCity) {
+    return true;
+  }
+
+  return description.toLowerCase().includes(normalizedCity);
+};
+
+const buildEngine6SerpFallbackDescription = ({
   title,
   city,
   categoryLabel,
@@ -501,13 +570,100 @@ export const buildEngine6SeoDescription = ({
   city: string;
   categoryLabel?: string | null;
   sourceDescription: string;
-}) =>
-  buildEngine6OptimizedDescription({
+}) => {
+  const cleanedSource = stripGenericMarketingLead(
+    stripEngine6GeneratedDescriptionPrefix(
+      removeBlockedOperationalFiller(
+        cleanEngine6Description(
+          sourceDescription
+            .replace(/<[^>]*>/g, " ")
+            .replace(/\s+/g, " ")
+            .trim()
+        )
+      )
+    )
+  );
+  const lead = buildEngine6ExperienceLead({
+    title,
+    city,
+    categoryLabel,
+    sourceDescription: cleanedSource,
+  });
+  const priorityAttraction = extractEngine6PriorityAttraction(
+    cleanedSource
+  )?.replace(/^(?:Explore|Visit|See)\s+/i, "");
+  const attractionPhrase =
+    priorityAttraction &&
+    !lead.toLowerCase().includes(priorityAttraction.toLowerCase())
+      ? ` with ${priorityAttraction}`
+      : "";
+  const destination = city.trim();
+  const planningPhrase = destination
+    ? ` with clear logistics, useful local context, and traveler-friendly planning for a smooth ${destination} outing`
+    : " with clear logistics, useful local context, and traveler-friendly planning for a smooth outing";
+
+  const candidates = [
+    `${lead}${attractionPhrase}${planningPhrase}`,
+    `${lead}${attractionPhrase} with clear logistics, local context, and traveler-friendly timing`,
+    `${lead} with clear logistics, local context, and traveler-friendly timing`,
+    `${lead}${attractionPhrase} with useful local context, clear logistics, and traveler-friendly planning`,
+  ].map(finalizeEngine6SerpMetaDescription);
+
+  return (
+    candidates.find(
+      candidate =>
+        candidate.length >= ENGINE6_SERP_META_DESCRIPTION_MIN &&
+        candidate.length <= ENGINE6_SERP_META_DESCRIPTION_MAX &&
+        includesEngine6Destination(candidate, city) &&
+        !ENGINE6_INCOMPLETE_SERP_END_PATTERN.test(candidate)
+    ) ??
+    candidates.find(
+      candidate => !ENGINE6_INCOMPLETE_SERP_END_PATTERN.test(candidate)
+    ) ??
+    candidates[0] ??
+    ""
+  );
+};
+
+export const buildEngine6SerpMetaDescription = ({
+  title,
+  city,
+  categoryLabel,
+  sourceDescription,
+}: {
+  title: string;
+  city: string;
+  categoryLabel?: string | null;
+  sourceDescription: string;
+}) => {
+  const optimized = buildEngine6OptimizedDescription({
     title,
     city,
     categoryLabel,
     sourceDescription,
   });
+
+  const expanded = expandShortEngine6SerpMetaDescription({
+    description: optimized,
+    city,
+  });
+
+  if (
+    !includesEngine6Destination(expanded, city) ||
+    ENGINE6_INCOMPLETE_SERP_END_PATTERN.test(expanded)
+  ) {
+    return buildEngine6SerpFallbackDescription({
+      title,
+      city,
+      categoryLabel,
+      sourceDescription,
+    });
+  }
+
+  return expanded;
+};
+
+export const buildEngine6SeoDescription = buildEngine6SerpMetaDescription;
 
 export const buildEngine6CanonicalPath = ({
   state,

@@ -512,11 +512,12 @@ describe("engine6 meta descriptions", () => {
         "Public transportation options are available nearby. Cruise the bay at sunset with skyline and bridge views plus a small-group guide.",
     });
 
-    expect(metaDescription).toMatch(/^Cruise the bay at sunset/);
+    expect(metaDescription).toContain("San Francisco");
+    expect(metaDescription).toMatch(/Cruise|Sail/);
     expect(hasEngine6GeneratedDescriptionPrefix(metaDescription)).toBe(false);
     expect(isEngine6OperationalFiller(metaDescription)).toBe(false);
-    expect(metaDescription.length).toBeGreaterThanOrEqual(140);
-    expect(metaDescription.length).toBeLessThanOrEqual(155);
+    expect(metaDescription.length).toBeGreaterThanOrEqual(145);
+    expect(metaDescription.length).toBeLessThanOrEqual(160);
   });
 
   it("governs all Engine6 meta and schema descriptions without generated taxonomy prefixes", () => {
@@ -538,7 +539,7 @@ describe("engine6 meta descriptions", () => {
       expect(product?.description).toBe(
         tour.merchantDescription ?? tour.metaDescription
       );
-      expect(tour.metaDescription.length).toBeGreaterThanOrEqual(120);
+      expect(tour.metaDescription.length).toBeGreaterThanOrEqual(145);
       expect(tour.metaDescription.length).toBeLessThanOrEqual(160);
       expect(tour.metaDescription).not.toMatch(
         /^(This tour offers|This experience provides|This private tour offers an unparalleled opportunity|Join us for|Come discover)/i

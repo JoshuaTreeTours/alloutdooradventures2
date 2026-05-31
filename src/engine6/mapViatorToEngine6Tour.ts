@@ -4,7 +4,7 @@ import { formatEngine6StartingPriceLabel } from "./priceDisplay";
 import { resolveEngine6PathForProductCode } from "./routes";
 import {
   buildEngine6CanonicalPath,
-  buildEngine6SeoDescription,
+  buildEngine6SerpMetaDescription,
   buildEngine6SeoTitle,
   cleanEngine6Description,
   formatEngine6CategoryLabel,
@@ -610,7 +610,7 @@ export const mapViatorToEngine6Tour = (
   const descriptionOverride =
     ENGINE6_DESCRIPTION_OVERRIDES[payload.rawProductCode];
   const description = descriptionOverride ?? descriptionBody;
-  const metaDescription = buildEngine6SeoDescription({
+  const metaDescription = buildEngine6SerpMetaDescription({
     title,
     city,
     categoryLabel,
@@ -620,9 +620,16 @@ export const mapViatorToEngine6Tour = (
       payload.extracted.seoDescription ??
       description,
   });
-  const governedMetaDescription =
-    ENGINE6_META_DESCRIPTION_OVERRIDES[payload.rawProductCode] ??
-    metaDescription;
+  const metaDescriptionOverride =
+    ENGINE6_META_DESCRIPTION_OVERRIDES[payload.rawProductCode];
+  const governedMetaDescription = metaDescriptionOverride
+    ? buildEngine6SerpMetaDescription({
+        title,
+        city,
+        categoryLabel,
+        sourceDescription: metaDescriptionOverride,
+      })
+    : metaDescription;
   const aggregateRating = normalizeEngine6AggregateRating(
     payload.extracted.aggregateRating
   );
