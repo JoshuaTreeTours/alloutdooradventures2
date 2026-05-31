@@ -203,8 +203,9 @@ const removeBlockedOperationalFiller = (value: string) => {
 export const isEngine6OperationalFiller = (value: string) =>
   ENGINE6_BLOCKED_META_PATTERNS.some(pattern => pattern.test(value));
 
-const ENGINE6_OPTIMIZED_DESCRIPTION_MIN = 140;
+const ENGINE6_OPTIMIZED_DESCRIPTION_MIN = 135;
 const ENGINE6_OPTIMIZED_DESCRIPTION_MAX = 155;
+const ENGINE6_META_DESCRIPTION_HARD_MAX = 160;
 const ENGINE6_ACTIVE_DESCRIPTION_START_PATTERN =
   /^(Explore|Ride|Paddle|Sail|Discover|Visit|Fly|See|Cruise|Hike|Kayak|Bike|Drive|Taste|Tour|Walk|Glide)\b/i;
 const ENGINE6_GENERIC_MARKETING_LEAD_PATTERNS = [
@@ -216,6 +217,34 @@ const ENGINE6_GENERIC_MARKETING_LEAD_PATTERNS = [
   /^come\s+discover\s+/i,
   /^we\s+created\s+[^.!?]*[.!?]\s*/i,
   /^your\s+private\s+[^.!?]*?\s+will\s+showcase\s+/i,
+];
+
+const ENGINE6_AWKWARD_META_BOILERPLATE_PATTERNS = [
+  /\bthis tour offers\b/gi,
+  /\bthis experience provides\b/gi,
+  /\bwith clear logistics\b/gi,
+  /\bclear logistics\b/gi,
+  /\btraveler-friendly pace\b/gi,
+  /\btraveler-focused logistics\b/gi,
+  /\beasy logistics\b/gi,
+  /\bguide support\b/gi,
+  /\bguided local context\b/gi,
+  /\bscenic views\b/gi,
+  /\bmemorable experience\b/gi,
+];
+
+const ENGINE6_BAD_SOURCE_PROSE_PATTERNS = [
+  ...ENGINE6_BLOCKED_META_PATTERNS,
+  /\bbest tour in\b/i,
+  /\brated\s*\d+(?:\.\d+)?\s*\/\s*5\b/i,
+  /\b\d+\s+reviews?\b/i,
+  /\bSEO_CANONICAL\b/i,
+  /\bguide support\b/i,
+  /\beasy logistics\b/i,
+  /\btraveler-friendly pace\b/i,
+  /\bguided local context\b/i,
+  /\bscenic views\b/i,
+  /\bmemorable experience\b/i,
 ];
 
 const sentenceCase = (value: string) => {
@@ -382,6 +411,15 @@ const trimDescriptionToWordBoundary = (value: string, maxLength: number) => {
   if (normalized.length <= maxLength) return normalized;
 
   const clipped = normalized.slice(0, maxLength).trim();
+  const lastSentenceBoundary = Math.max(
+    clipped.lastIndexOf("."),
+    clipped.lastIndexOf("!"),
+    clipped.lastIndexOf("?")
+  );
+  if (lastSentenceBoundary >= ENGINE6_OPTIMIZED_DESCRIPTION_MIN - 1) {
+    return clipped.slice(0, lastSentenceBoundary + 1).trim();
+  }
+
   const lastSpace = clipped.lastIndexOf(" ");
   const safeClipped = lastSpace > 100 ? clipped.slice(0, lastSpace) : clipped;
   let cleaned = safeClipped.replace(/[,:;\s-]+$/, "").trim();
@@ -392,10 +430,486 @@ const trimDescriptionToWordBoundary = (value: string, maxLength: number) => {
     )
     .replace(/[,:;\s-]+$/, "")
     .trim();
+  return cleaned && !/[.!?]$/.test(cleaned) ? `${cleaned}.` : cleaned;
+};
+
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const removeDuplicateTitleRestatement = (value: string, title: string) => {
+  const readableTitle = normalizeEngine6ReadableTitle(title)
+    .replace(/\s+\d{4,}$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!readableTitle) return value;
+
+  const titlePattern = new RegExp(
+    `^${escapeRegExp(readableTitle)}\\s+(?:is|offers|provides|gives|takes|brings|combines|features)\\s+`,
+    "i"
+  );
+
+  return value.replace(titlePattern, "").trim();
+};
+
+const removeAwkwardMetaBoilerplate = (value: string, title: string) => {
+  let cleaned = value;
+  for (const pattern of ENGINE6_AWKWARD_META_BOILERPLATE_PATTERNS) {
+    cleaned = cleaned.replace(pattern, "");
+  }
+
+  const readableTitle = normalizeEngine6ReadableTitle(title)
+    .replace(/\s+\d{4,}$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (readableTitle) {
+    cleaned = cleaned.replace(
+      new RegExp(`^Explore\\s+${escapeRegExp(readableTitle)}\\s+`, "i"),
+      ""
+    );
+  }
+
+  return cleaned
+    .replace(/\b[A-Z0-9]{2,}_[A-Z0-9_]+\b/g, "")
+    .replace(/\b\d{3,}[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)?\b/g, "")
+    .replace(/\b[A-Z]{2,}\d{2,}[A-Z0-9]*(?:_[A-Z0-9]+)?\b/g, "")
+    .replace(/\s*,\s*,+/g, ", ")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .replace(/^[,.;:!?\s-]+/, "")
+    .trim();
+};
+
+const cleanEngine6SourceProseForMeta = (value: string, title: string) => {
+  const cleaned = removeAwkwardMetaBoilerplate(
+    removeDuplicateTitleRestatement(
+      stripGenericMarketingLead(
+        stripEngine6GeneratedDescriptionPrefix(
+          removeBlockedOperationalFiller(
+            cleanEngine6Description(
+              value
+                .replace(/<[^>]*>/g, " ")
+                .replace(/\s+/g, " ")
+                .trim()
+            )
+          )
+        )
+      ),
+      title
+    ),
+    title
+  );
+
+  return sentenceCase(
+    cleaned
+      .replace(/\s*,\s*(?:and\s*)?\./g, ".")
+      .replace(/\s+([,.;!?])/g, "$1")
+      .replace(/\s+/g, " ")
+      .trim()
+  );
+};
+
+const isUsableEngine6MetaSource = (value: string) => {
+  const normalized = value.trim();
+  if (normalized.length < 50) return false;
+  if (
+    ENGINE6_BAD_SOURCE_PROSE_PATTERNS.some(pattern => pattern.test(normalized))
+  ) {
+    return false;
+  }
+  const words = normalized.split(/\s+/).filter(Boolean);
+  return words.length >= 8;
+};
+
+const normalizeForDuplicateComparison = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const appendSourceSentenceIfUseful = (base: string, sentence: string) => {
+  const cleanedSentence = sentence.trim();
+  if (!cleanedSentence) return base;
+
+  const normalizedBase = normalizeForDuplicateComparison(base);
+  const normalizedSentence = normalizeForDuplicateComparison(cleanedSentence);
+  if (
+    normalizedSentence.length < 20 ||
+    normalizedBase.includes(normalizedSentence) ||
+    normalizedSentence.includes(normalizedBase)
+  ) {
+    return base;
+  }
+
+  const next = `${base.replace(/[.!?]?$/, ".")} ${cleanedSentence}`
+    .replace(/\s+/g, " ")
+    .trim();
+  return next.length <= ENGINE6_META_DESCRIPTION_HARD_MAX ? next : base;
+};
+
+const composeEngine6SourceMetaDescription = (
+  source: string,
+  supportingSources: string[] = [],
+  context?: { city: string; categoryLabel?: string | null }
+) => {
+  const sentences = splitDescriptionSentences(source);
+  const parts = sentences.length > 0 ? sentences : [source];
+  let composed = "";
+
+  for (const part of parts) {
+    const next = composed ? `${composed} ${part}` : part;
+    if (next.length <= ENGINE6_OPTIMIZED_DESCRIPTION_MAX) {
+      composed = next;
+      if (
+        composed.length >= ENGINE6_OPTIMIZED_DESCRIPTION_MIN &&
+        /[.!?]$/.test(composed)
+      ) {
+        break;
+      }
+      continue;
+    }
+
+    if (!composed) {
+      composed = trimDescriptionToWordBoundary(
+        part,
+        ENGINE6_META_DESCRIPTION_HARD_MAX
+      );
+    }
+    break;
+  }
+
+  if (!composed) {
+    composed = trimDescriptionToWordBoundary(
+      source,
+      ENGINE6_META_DESCRIPTION_HARD_MAX
+    );
+  }
+
+  for (const supportingSource of supportingSources) {
+    if (composed.length >= ENGINE6_OPTIMIZED_DESCRIPTION_MIN) break;
+    const supportingSentences = splitDescriptionSentences(supportingSource);
+    for (const sentence of supportingSentences.length > 0
+      ? supportingSentences
+      : [supportingSource]) {
+      const next = appendSourceSentenceIfUseful(composed, sentence);
+      if (next !== composed) {
+        composed = next;
+      }
+      if (composed.length >= ENGINE6_OPTIMIZED_DESCRIPTION_MIN) break;
+    }
+  }
+
+  if (composed.length < 120 && context) {
+    const category = (context.categoryLabel ?? "experience")
+      .toLowerCase()
+      .replace(/\btour\b/i, "tour");
+    const city = context.city.trim();
+    const contextPhrase = city
+      ? ` on a ${city} ${category}`
+      : ` on a ${category}`;
+    const candidate = `${composed.replace(/[.!?]?$/, "")}${contextPhrase}.`
+      .replace(/\s+/g, " ")
+      .trim();
+    if (candidate.length <= ENGINE6_META_DESCRIPTION_HARD_MAX) {
+      composed = candidate;
+    }
+  }
+
+  if (composed.length < 120) {
+    const candidate = `${composed.replace(/[.!?]?$/, "")} with route details.`
+      .replace(/\s+/g, " ")
+      .trim();
+    if (candidate.length <= ENGINE6_META_DESCRIPTION_HARD_MAX) {
+      composed = candidate;
+    }
+  }
+
+  if (composed.length > ENGINE6_META_DESCRIPTION_HARD_MAX) {
+    composed = trimDescriptionToWordBoundary(
+      composed,
+      ENGINE6_META_DESCRIPTION_HARD_MAX
+    );
+  }
+
+  const normalized = composed
+    .replace(/\.\.\.+/g, ".")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .trim();
+
+  const punctuated =
+    normalized && !/[.!?]$/.test(normalized) ? `${normalized}.` : normalized;
+
+  return punctuated.length > ENGINE6_META_DESCRIPTION_HARD_MAX
+    ? trimDescriptionToWordBoundary(
+        punctuated,
+        ENGINE6_META_DESCRIPTION_HARD_MAX
+      )
+    : punctuated;
+};
+
+const ENGINE6_LANDMARK_NAME_HINT_PATTERN =
+  /\b(?:[A-Z][A-Za-z'’&]+|MGM|VIP|NYC)(?:\s+(?:[A-Z][A-Za-z'’&]+|MGM|VIP|NYC)){0,5}\s+(?:Arm|Bay|Beach|Boardwalk|Bridge|Canyon|Center|Centre|Corridor|Drive|Falls|Fields|Fountain|Fountains|Glacier|Harbor|Headlands|Island|Lake|Memorial|Monument|Mountain|Mount|Museum|Park|Point|River|Sphere|Strip|Valley|Wharf|Woods)\b/g;
+
+const ENGINE6_OPERATIONAL_STOP_PATTERN =
+  /\b(?:check-?in|briefing|departure|drop-?off|pickup|return|segment|transfer|orientation)\b/i;
+const ENGINE6_RECOGNIZABLE_STOP_PATTERN =
+  /\b(?:Arm|Bay|Beach|Boardwalk|Bridge|Canyon|Center|Centre|Falls|Fields|Fountain|Fountains|Glacier|Harbor|Headlands|Island|Lake|Memorial|Monument|Mountain|Mount|Museum|Park|Point|River|Sphere|Strip|Valley|Wharf|Woods|Zion|Bryce|Girdwood|Sausalito|Beluga|Bethesda|Bow)\b/i;
+
+const ENGINE6_STOP_SUFFIX_CLEANERS = [
+  /\s*\((?:pass-by|drive-by)\)\s*$/i,
+  /\s+(?:departure|return|segment|viewpoints?|highlights?|orientation|stop|visit)\s*$/i,
+];
+
+const normalizeEngine6LandmarkName = (value: string, city: string) => {
+  let cleaned = value
+    .replace(/\bthe\s+/gi, "")
+    .replace(/\s+/g, " ")
+    .replace(/[,:;.!?]+$/g, "")
+    .trim();
+
+  let previous = "";
+  while (previous !== cleaned) {
+    previous = cleaned;
+    for (const pattern of ENGINE6_STOP_SUFFIX_CLEANERS) {
+      cleaned = cleaned.replace(pattern, "").trim();
+    }
+  }
+
+  cleaned = cleaned
+    .replace(/^scenic\s+transfer\s+to\s+/i, "")
+    .replace(/^guided\s+/i, "")
+    .replace(/,.*$/g, "")
+    .replace(/\s+drive$/i, " Drive")
+    .trim();
+
+  if (/sphere/i.test(cleaned) && city) {
+    return `${city} Sphere`;
+  }
+
+  if (/^Strip\b/i.test(cleaned)) {
+    return "major Strip landmarks";
+  }
+
   return cleaned;
 };
 
-export const buildEngine6OptimizedDescription = ({
+const shouldUseEngine6StopTitleAsLandmark = (value: string) => {
+  if (!value || value.length < 3) return false;
+  if (!ENGINE6_RECOGNIZABLE_STOP_PATTERN.test(value)) return false;
+  if (ENGINE6_OPERATIONAL_STOP_PATTERN.test(value)) {
+    return /\b(?:Sphere|Strip|Bridge|Fountain|Point|Park|Monument|Center|Arm|Girdwood|Zion|Bryce)\b/i.test(
+      value
+    );
+  }
+  return true;
+};
+
+const extractEngine6LandmarkNames = (value: string, city: string) => {
+  const matches = value.match(ENGINE6_LANDMARK_NAME_HINT_PATTERN) ?? [];
+  return matches
+    .map(match => normalizeEngine6LandmarkName(match, city))
+    .filter(match => shouldUseEngine6StopTitleAsLandmark(match));
+};
+
+const dedupeEngine6Landmarks = (values: string[]) => {
+  const result: string[] = [];
+  const seen = new Set<string>();
+
+  for (const value of values) {
+    const normalized = normalizeForDuplicateComparison(value);
+    if (!normalized || seen.has(normalized)) continue;
+    if (
+      result.some(existing => {
+        const normalizedExisting = normalizeForDuplicateComparison(existing);
+        return (
+          normalizedExisting.includes(normalized) ||
+          normalized.includes(normalizedExisting)
+        );
+      })
+    ) {
+      continue;
+    }
+    seen.add(normalized);
+    result.push(value);
+  }
+
+  return result;
+};
+
+const formatEngine6LandmarkList = (values: string[]) => {
+  if (values.length <= 1) return values[0] ?? "";
+  if (values.length === 2) return `${values[0]} and ${values[1]}`;
+  return `${values.slice(0, -1).join(", ")}, and ${values[values.length - 1]}`;
+};
+
+const buildEngine6ActivityPhrase = ({
+  title,
+  categoryLabel,
+}: {
+  title: string;
+  categoryLabel?: string | null;
+}) => {
+  const identity = `${title} ${categoryLabel ?? ""}`.toLowerCase();
+  if (/pedicab/.test(identity)) return "pedicab tour";
+  if (/full[-\s]?day/.test(identity) && /small[-\s]?group/.test(identity)) {
+    return "full-day small-group tour";
+  }
+  if (/small[-\s]?group/.test(identity)) return "small-group tour";
+  if (/driv/.test(identity)) return "sightseeing drive";
+  if (/parasail/.test(identity)) return "parasailing outing";
+  if (/yacht/.test(identity)) return "yacht cruise";
+  if (/cruise|boat|sail/.test(identity)) return "cruise";
+  if (/bike|cycling|e-bike/.test(identity)) return "bike tour";
+  if (/wildlife/.test(identity)) return "wildlife tour";
+  if (/hiking|hike/.test(identity)) return "hiking tour";
+  if (/sightseeing/.test(identity)) return "sightseeing tour";
+  return (categoryLabel ?? "tour")
+    .toLowerCase()
+    .replace(/\bday trips\b/g, "day trip");
+};
+
+const appendEngine6SerpDetailIfUseful = (base: string, source: string) => {
+  const lower = source.toLowerCase();
+  const candidatePhrases = [
+    /live (?:guide )?narration/.test(lower)
+      ? "with live narration on entertainment districts"
+      : null,
+    /canyon/.test(lower) && /short walks?/.test(lower)
+      ? "with canyon viewpoints and short walks"
+      : null,
+    /redwood/.test(lower) ? "with redwood trails" : null,
+    /photo/.test(lower) ? "with photo stops" : null,
+    /licensed local guide/.test(lower) ? "with a licensed local guide" : null,
+    /safety/.test(lower) ? "with a safety briefing" : null,
+    /waterfront|coastal|harbor/.test(lower) ? "with waterfront scenery" : null,
+  ].filter((phrase): phrase is string => Boolean(phrase));
+
+  let composed = base;
+  for (const phrase of candidatePhrases) {
+    const separator = /\bwith\b/i.test(composed)
+      ? "and"
+      : phrase.startsWith("with")
+        ? ""
+        : "with";
+    const normalizedPhrase = separator
+      ? `${separator} ${phrase.replace(/^with\s+/i, "")}`
+      : phrase;
+    const candidate = `${composed.replace(/[.!?]$/, "")} ${normalizedPhrase}.`
+      .replace(/\s+/g, " ")
+      .trim();
+    if (candidate.length <= ENGINE6_META_DESCRIPTION_HARD_MAX) {
+      composed = candidate;
+      if (composed.length >= ENGINE6_OPTIMIZED_DESCRIPTION_MIN) return composed;
+    }
+  }
+
+  return composed;
+};
+
+const buildEngine6ItinerarySerpDescription = ({
+  title,
+  city,
+  categoryLabel,
+  itineraryStops,
+  sourceDescriptions,
+}: {
+  title: string;
+  city: string;
+  categoryLabel?: string | null;
+  itineraryStops: Array<{ title: string; description?: string | null }>;
+  sourceDescriptions: string[];
+}) => {
+  if (itineraryStops.length === 0) return null;
+
+  const sourceText = sourceDescriptions.filter(Boolean).join(" ");
+  const landmarks = dedupeEngine6Landmarks(
+    itineraryStops.flatMap(stop => {
+      const titleLandmark = normalizeEngine6LandmarkName(stop.title, city);
+      const titleCandidates = shouldUseEngine6StopTitleAsLandmark(titleLandmark)
+        ? [titleLandmark]
+        : [];
+      return [
+        ...titleCandidates,
+        ...extractEngine6LandmarkNames(stop.description ?? "", city),
+      ];
+    })
+  );
+
+  if (/sphere/i.test(`${title} ${sourceText}`) && /strip/i.test(sourceText)) {
+    landmarks.unshift(`${city} Sphere`, "major Strip landmarks");
+  }
+
+  const dedupedLandmarks = dedupeEngine6Landmarks(landmarks);
+  if (dedupedLandmarks.length === 0) return null;
+
+  const baseActivity = buildEngine6ActivityPhrase({ title, categoryLabel });
+  const activity =
+    /full[-\s]?day/i.test(sourceText) && baseActivity === "small-group tour"
+      ? "full-day small-group tour"
+      : baseActivity;
+  const titleIdentity = title.toLowerCase();
+  const routeLandmark = dedupedLandmarks.find(landmark =>
+    /\b(?:Arm|Drive)\b/i.test(landmark)
+  );
+  const uniqueLandmarks = routeLandmark
+    ? [
+        routeLandmark,
+        ...dedupedLandmarks.filter(landmark => landmark !== routeLandmark),
+      ].slice(0, 4)
+    : dedupedLandmarks.slice(0, 4);
+  const destinationLandmarks = routeLandmark
+    ? uniqueLandmarks.filter(landmark => landmark !== routeLandmark).slice(0, 3)
+    : uniqueLandmarks;
+  const landmarkList = formatEngine6LandmarkList(destinationLandmarks);
+
+  let composed = "";
+  if (/parasail/.test(titleIdentity)) {
+    composed = `Fly above ${landmarkList} on a ${activity} from ${city}.`;
+  } else if (/pedicab/.test(titleIdentity)) {
+    composed = `Ride through ${city.includes("Central Park") ? city : "Central Park"} to ${landmarkList} on a private ${activity}.`;
+  } else if (/bike|cycling|e-bike/.test(`${titleIdentity} ${activity}`)) {
+    composed = `Ride from ${city} to ${landmarkList} on a guided ${activity}.`;
+  } else if (/cruise|yacht/.test(activity)) {
+    composed = `Cruise ${city ? `${city} ` : ""}to ${landmarkList} on a ${activity}.`;
+  } else if (/driv|sightseeing/.test(activity)) {
+    const seeList = landmarkList.startsWith(city)
+      ? `the ${landmarkList}`
+      : landmarkList;
+    composed = `See ${seeList} on a guided ${activity} through ${city}.`;
+  } else if (/National Park/i.test(landmarkList) && city) {
+    composed = `Travel from ${city} to ${landmarkList} on a ${activity}.`;
+  } else if (routeLandmark && destinationLandmarks.length > 0) {
+    composed = `Travel from ${city} along ${routeLandmark} to ${landmarkList} on a ${activity}.`;
+  } else {
+    composed = `Visit ${landmarkList} on a ${activity}${city ? ` from ${city}` : ""}.`;
+  }
+
+  composed = composed.replace(/\s+/g, " ").trim();
+
+  if (composed.length < ENGINE6_OPTIMIZED_DESCRIPTION_MIN) {
+    composed = appendEngine6SerpDetailIfUseful(composed, sourceText);
+  }
+
+  if (composed.length > ENGINE6_META_DESCRIPTION_HARD_MAX) {
+    composed = trimDescriptionToWordBoundary(
+      composed,
+      ENGINE6_META_DESCRIPTION_HARD_MAX
+    );
+  }
+
+  const cleaned = removeAwkwardMetaBoilerplate(composed, title);
+  if (
+    cleaned.length < 120 ||
+    ENGINE6_BAD_SOURCE_PROSE_PATTERNS.some(pattern => pattern.test(cleaned))
+  ) {
+    return null;
+  }
+
+  return cleaned;
+};
+
+const buildEngine6FallbackMetaDescription = ({
   title,
   city,
   categoryLabel,
@@ -406,83 +920,59 @@ export const buildEngine6OptimizedDescription = ({
   categoryLabel?: string | null;
   sourceDescription: string;
 }) => {
-  const cleanedSource = stripGenericMarketingLead(
-    stripEngine6GeneratedDescriptionPrefix(
-      removeBlockedOperationalFiller(
-        cleanEngine6Description(
-          sourceDescription
-            .replace(/<[^>]*>/g, " ")
-            .replace(/\s+/g, " ")
-            .trim()
-        )
-      )
-    )
-  );
-  const sourceStartsActively =
-    ENGINE6_ACTIVE_DESCRIPTION_START_PATTERN.test(cleanedSource);
-  const priorityAttraction = extractEngine6PriorityAttraction(cleanedSource);
-  const baseLead = buildEngine6ExperienceLead({
+  const lead = buildEngine6ExperienceLead({
     title,
     city,
     categoryLabel,
-    sourceDescription: cleanedSource,
+    sourceDescription,
   });
-  const lead =
-    priorityAttraction &&
-    !baseLead.toLowerCase().includes(priorityAttraction.toLowerCase()) &&
-    baseLead.length + priorityAttraction.length < 105
-      ? `${baseLead} with ${priorityAttraction}`
-      : baseLead;
-  const sourceSentences = splitDescriptionSentences(cleanedSource);
-  const primarySource = sourceSentences[0] ?? cleanedSource;
-  const shouldUseSourceAsLead =
-    sourceStartsActively &&
-    (primarySource.toLowerCase().includes(city.toLowerCase()) ||
-      primarySource.toLowerCase().includes(title.toLowerCase()) ||
-      primarySource.length >= 80);
-
-  const sourceRemainder = sourceSentences.filter(sentence => {
-    const normalizedSentence = sentence.toLowerCase();
-    const normalizedLead = lead.toLowerCase();
-    return !(
-      normalizedSentence.includes(normalizedLead) ||
-      normalizedLead.includes(normalizedSentence.replace(/\.$/, ""))
-    );
-  });
-
-  const parts = shouldUseSourceAsLead
-    ? sourceSentences
-    : [lead, ...sourceRemainder];
-  let composed = parts
-    .filter(Boolean)
-    .join(". ")
-    .replace(/\s+/g, " ")
-    .replace(/\.\s*\./g, ".")
-    .trim();
-
-  if (composed && !/[.!?]$/.test(composed)) {
-    composed = `${composed}.`;
-  }
-
-  if (composed.length < ENGINE6_OPTIMIZED_DESCRIPTION_MIN) {
-    const category = (categoryLabel ?? "guided experience").toLowerCase();
-    const guidePhrase = category.includes("guided")
-      ? "local context"
-      : "guide support, local context";
-    composed =
-      `${composed} Expect ${guidePhrase}, clear timing, and traveler-focused logistics for a smooth day.`
-        .replace(/\s+/g, " ")
-        .trim();
-  }
-
-  const trimmed = trimDescriptionToWordBoundary(
-    composed,
-    ENGINE6_OPTIMIZED_DESCRIPTION_MAX
+  const category = (categoryLabel ?? "experience").toLowerCase();
+  return trimDescriptionToWordBoundary(
+    `${lead} on a ${category} with destination highlights and practical local context.`,
+    ENGINE6_META_DESCRIPTION_HARD_MAX
   );
+};
 
-  return stripEngine6GeneratedDescriptionPrefix(trimmed)
-    .replace(/[.!?,;:]+$/, "")
-    .trim();
+export const buildEngine6OptimizedDescription = ({
+  title,
+  city,
+  categoryLabel,
+  sourceDescription,
+  sourceDescriptions,
+}: {
+  title: string;
+  city: string;
+  categoryLabel?: string | null;
+  sourceDescription: string;
+  sourceDescriptions?: Array<string | null | undefined>;
+}) => {
+  const candidates = [...(sourceDescriptions ?? []), sourceDescription];
+
+  const cleanedCandidates = candidates
+    .map(candidate =>
+      candidate ? cleanEngine6SourceProseForMeta(candidate, title) : ""
+    )
+    .filter(Boolean);
+
+  for (const cleanedSource of cleanedCandidates) {
+    if (!isUsableEngine6MetaSource(cleanedSource)) continue;
+    return composeEngine6SourceMetaDescription(
+      cleanedSource,
+      cleanedCandidates.filter(candidate => candidate !== cleanedSource),
+      { city, categoryLabel }
+    );
+  }
+
+  const cleanedFallbackSource = cleanEngine6SourceProseForMeta(
+    sourceDescription,
+    title
+  );
+  return buildEngine6FallbackMetaDescription({
+    title,
+    city,
+    categoryLabel,
+    sourceDescription: cleanedFallbackSource || sourceDescription,
+  });
 };
 
 export const buildEngine6SeoDescription = ({
@@ -490,17 +980,20 @@ export const buildEngine6SeoDescription = ({
   city,
   categoryLabel,
   sourceDescription,
+  sourceDescriptions,
 }: {
   title: string;
   city: string;
   categoryLabel?: string | null;
   sourceDescription: string;
+  sourceDescriptions?: Array<string | null | undefined>;
 }) =>
   buildEngine6OptimizedDescription({
     title,
     city,
     categoryLabel,
     sourceDescription,
+    sourceDescriptions,
   });
 
 export const buildEngine6CanonicalPath = ({
@@ -514,9 +1007,25 @@ export const buildEngine6CanonicalPath = ({
 }) =>
   `/destinations/${slugify(state)}/${slugify(city)}/tours/${slugify(title)}`;
 
-export const buildEngine6Seo = (tour: Engine6Tour) => ({
-  title: tour.seoTitle,
-  description: tour.metaDescription,
-  url: tour.canonicalPath,
-  image: tour.resolvedImageUrl ?? "",
-});
+export const buildEngine6Seo = (tour: Engine6Tour) => {
+  const itineraryDescription = buildEngine6ItinerarySerpDescription({
+    title: tour.title,
+    city: tour.city,
+    categoryLabel: tour.categoryLabel,
+    itineraryStops: tour.itinerary,
+    sourceDescriptions: [
+      tour.overviewText ?? "",
+      tour.description,
+      tour.itinerarySummaryText ?? "",
+      ...tour.highlights,
+      ...tour.itinerary.map(item => `${item.title}. ${item.description ?? ""}`),
+    ],
+  });
+
+  return {
+    title: tour.seoTitle,
+    description: itineraryDescription ?? tour.metaDescription,
+    url: tour.canonicalPath,
+    image: tour.resolvedImageUrl ?? "",
+  };
+};
