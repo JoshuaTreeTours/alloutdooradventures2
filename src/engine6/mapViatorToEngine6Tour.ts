@@ -619,6 +619,7 @@ export const mapViatorToEngine6Tour = (
       sourceOverviewText ??
       payload.extracted.seoDescription ??
       description,
+    highlights,
   });
   const metaDescriptionOverride =
     ENGINE6_META_DESCRIPTION_OVERRIDES[payload.rawProductCode];
@@ -628,6 +629,7 @@ export const mapViatorToEngine6Tour = (
         city,
         categoryLabel,
         sourceDescription: metaDescriptionOverride,
+        highlights,
       })
     : metaDescription;
   const aggregateRating = normalizeEngine6AggregateRating(

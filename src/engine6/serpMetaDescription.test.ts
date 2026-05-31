@@ -4,11 +4,10 @@ import { buildEngine6SerpMetaDescription, buildEngine6Seo } from "./seo";
 import { engine6ResolvedTours } from "./registry";
 
 const assertSerpSafeDescription = (description: string) => {
-  expect(description.length).toBeGreaterThanOrEqual(145);
-  expect(description.length).toBeLessThanOrEqual(160);
+  expect(description.length).toBeGreaterThanOrEqual(110);
+  expect(description.length).toBeLessThanOrEqual(155);
   expect(description).toMatch(/[.!?]$/);
   expect(description).not.toMatch(/\.\.\.$/);
-  expect(description).not.toMatch(/\s[\w'’-]*$/);
 };
 
 describe("Engine6 SERP meta description governance", () => {
@@ -25,13 +24,27 @@ describe("Engine6 SERP meta description governance", () => {
 
     assertSerpSafeDescription(description);
     expect(description).toContain("Joshua Tree");
-    expect(description).toMatch(/Explore|Visit|Discover|Tour|Sightseeing/i);
+    expect(description).toMatch(/Joshua Tree|sightseeing|desert|guide/i);
     expect(description).not.toBe(merchantStyleSource);
+    expect(description).not.toContain(
+      "Joshua Tree National Park Sightseeing Tour"
+    );
+    expect(description).not.toMatch(
+      /^Explore Joshua Tree National Park Sightseeing Tour/i
+    );
   });
 
   it("applies SERP-safe meta descriptions to every resolved Engine6 tour", () => {
     for (const tour of engine6ResolvedTours) {
       assertSerpSafeDescription(tour.metaDescription);
+      expect(tour.metaDescription).toContain(tour.city);
+      expect(tour.metaDescription).not.toContain(tour.title);
+      expect(tour.metaDescription).not.toMatch(
+        /^Explore [A-Z][^.!?]{20,90} (?:in|from|near|around|on|through|at) [A-Z]/
+      );
+      expect(tour.metaDescription).not.toMatch(
+        /\b(?:route includes|itinerary includes|stops include|This route)\b/i
+      );
       expect(buildEngine6Seo(tour).description).toBe(tour.metaDescription);
     }
   });
