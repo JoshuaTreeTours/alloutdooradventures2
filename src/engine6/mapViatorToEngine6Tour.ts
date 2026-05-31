@@ -610,11 +610,14 @@ export const mapViatorToEngine6Tour = (
     title,
     city,
     categoryLabel,
-    sourceDescription:
-      descriptionOverride ??
-      sourceOverviewText ??
-      payload.extracted.seoDescription ??
-      description,
+    sourceDescription: description,
+    sourceDescriptions: [
+      sourceOverviewText,
+      payload.extracted.seoDescription,
+      itinerarySummaryText,
+      highlights.join(". "),
+      descriptionOverride,
+    ],
   });
   const governedMetaDescription =
     ENGINE6_META_DESCRIPTION_OVERRIDES[payload.rawProductCode] ??
