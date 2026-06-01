@@ -68,6 +68,7 @@ import {
   ENGINE6_GOLDEN_GATE_MUIR_WOODS_BIKE_ROUTE,
   ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_ROUTE,
   ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS,
+  ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES,
 } from "./routes";
 import {
   buildEngine6SpecimenApiUrl,
@@ -669,7 +670,7 @@ describe("engine6 meta descriptions", () => {
   });
 
   it("uses the same governed rich description source for post-original-55 merchant rows", () => {
-    const productCode = "398496P5";
+    const productCode = "7081NYCDAY";
     const tour = engine6ResolvedTours.find(
       candidate => candidate.productCode === productCode
     );
@@ -732,6 +733,110 @@ describe("engine6 meta descriptions", () => {
     expect(merchantFeedRow?.[headers.indexOf("description")]).toBe(
       product?.description
     );
+  });
+
+  it("fails governance when post-original-55 merchant rows keep fallback descriptions despite sufficient source data", () => {
+    const parseCsvLine = (line: string) => {
+      const values: string[] = [];
+      let current = "";
+      let inQuotes = false;
+      for (let index = 0; index < line.length; index += 1) {
+        const char = line[index];
+        if (inQuotes) {
+          if (char === '"' && line[index + 1] === '"') {
+            current += '"';
+            index += 1;
+          } else if (char === '"') {
+            inQuotes = false;
+          } else {
+            current += char;
+          }
+        } else if (char === '"') {
+          inQuotes = true;
+        } else if (char === ",") {
+          values.push(current);
+          current = "";
+        } else {
+          current += char;
+        }
+      }
+      values.push(current);
+      return values;
+    };
+    const wordCount = (value: string) =>
+      value.trim().split(/\s+/).filter(Boolean).length;
+    const richSourceWordCount = (tour: (typeof engine6ResolvedTours)[number]) =>
+      wordCount(
+        [
+          tour.overviewText,
+          tour.description,
+          ...tour.itinerary.flatMap(stop => [stop.title, stop.description]),
+          ...tour.highlights,
+          ...tour.included,
+          tour.durationText,
+          tour.categoryLabel,
+        ]
+          .filter(Boolean)
+          .join(" ")
+      );
+    const merchantFeedLines = readFileSync("data/merchantFeed.csv", "utf8")
+      .trim()
+      .split("\n");
+    const headers = parseCsvLine(merchantFeedLines[0]);
+    const descriptionIndex = headers.indexOf("description");
+    const merchantDescriptionByProductCode = new Map(
+      merchantFeedLines
+        .slice(1)
+        .map(parseCsvLine)
+        .map(row => [row[headers.indexOf("id")], row[descriptionIndex]])
+    );
+    const fallbackRows = engine6ResolvedTours
+      .filter(
+        tour =>
+          !ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES.has(
+            tour.productCode
+          )
+      )
+      .filter(tour => richSourceWordCount(tour) >= 75)
+      .flatMap(tour => {
+        const product = (
+          buildEngine6SchemaGraph(tour)["@graph"] as Array<
+            Record<string, unknown>
+          >
+        ).find(node => node["@type"] === "Product");
+        const governedRichDescription = String(product?.description ?? "");
+        const merchantDescription =
+          merchantDescriptionByProductCode.get(tour.productCode) ?? "";
+        const resolvedMerchantDescription = resolveMerchantDescription({
+          productCode: tour.productCode,
+          title: tour.title,
+          city: tour.city,
+          categoryLabel: tour.categoryLabel,
+          productOverviewDescription: tour.overviewText,
+          pageMetadataDescription: tour.metaDescription || tour.seoDescription,
+          jsonLdProductDescription: tour.description,
+          viatorApiDescription: tour.overviewText,
+          itineraryStops: tour.itinerary,
+          highlights: tour.highlights,
+          included: tour.included,
+          durationText: tour.durationText,
+        });
+
+        const governedRichWordCount = wordCount(governedRichDescription);
+        const richDescriptionThreshold = Math.min(75, governedRichWordCount);
+
+        return merchantDescription !== governedRichDescription ||
+          resolvedMerchantDescription !== governedRichDescription ||
+          wordCount(merchantDescription) < richDescriptionThreshold
+          ? [
+              `${tour.productCode}: merchant=${wordCount(
+                merchantDescription
+              )} words, governed=${wordCount(governedRichDescription)} words`,
+            ]
+          : [];
+      });
+
+    expect(fallbackRows).toEqual([]);
   });
 
   it("synthesizes readable non-truncated title for stitched supplier input", () => {
