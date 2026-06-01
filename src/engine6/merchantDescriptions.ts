@@ -2,6 +2,7 @@ import {
   buildEngine6RichProductDescription,
   stripEngine6GeneratedDescriptionPrefix,
 } from "./seo";
+import { ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES } from "./routes";
 
 export const MERCHANT_APPROVED_DESCRIPTIONS: Record<string, string> = {
   "152424P1":
@@ -164,46 +165,46 @@ export const resolveMerchantDescription = (args: {
   included?: string[];
   durationText?: string | null;
 }) => {
-  const approvedDescription = MERCHANT_APPROVED_DESCRIPTIONS[args.productCode];
+  const approvedDescription = ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES.has(
+    args.productCode
+  )
+    ? MERCHANT_APPROVED_DESCRIPTIONS[args.productCode]
+    : undefined;
 
   if (approvedDescription) {
     return approvedDescription;
   }
 
-  const sourceCandidates = [
-    args.productOverviewDescription,
-    args.pageMetadataDescription,
-    args.jsonLdProductDescription,
-    args.viatorApiDescription,
-  ];
-
-  for (const candidate of sourceCandidates) {
-    const normalized = normalizeMerchantDescriptionCandidate(candidate);
-    if (normalized && !hasGenericMerchantDescriptionBoilerplate(normalized)) {
-      return buildEngine6RichProductDescription({
-        title: args.title,
-        city: args.city,
-        categoryLabel: args.categoryLabel,
-        overviewText:
-          args.productOverviewDescription ?? args.viatorApiDescription,
-        description: normalized,
-        itineraryStops: args.itineraryStops,
-        highlights: args.highlights,
-        included: args.included,
-        durationText: args.durationText,
-      });
-    }
-  }
+  const governedDescriptionSource = normalizeMerchantDescriptionCandidate(
+    args.jsonLdProductDescription
+  );
+  const pageMetadataSource = normalizeMerchantDescriptionCandidate(
+    args.pageMetadataDescription
+  );
+  const viatorSource = normalizeMerchantDescriptionCandidate(
+    args.viatorApiDescription
+  );
+  const fallbackDescriptionSource = [
+    governedDescriptionSource,
+    pageMetadataSource,
+    viatorSource,
+  ].find(
+    candidate =>
+      candidate && !hasGenericMerchantDescriptionBoilerplate(candidate)
+  );
 
   return buildEngine6RichProductDescription({
     title: args.title,
     city: args.city,
     categoryLabel: args.categoryLabel,
-    description: buildProductSpecificFallback({
-      title: args.title,
-      city: args.city,
-      categoryLabel: args.categoryLabel,
-    }),
+    overviewText: args.productOverviewDescription,
+    description:
+      fallbackDescriptionSource ??
+      buildProductSpecificFallback({
+        title: args.title,
+        city: args.city,
+        categoryLabel: args.categoryLabel,
+      }),
     itineraryStops: args.itineraryStops,
     highlights: args.highlights,
     included: args.included,
