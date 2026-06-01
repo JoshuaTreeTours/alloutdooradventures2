@@ -712,6 +712,7 @@ const main = async () => {
     engine6RegistryModule,
     engine6SeoModule,
     tourSeoModule,
+    engine4RoutingModule,
   ] = await Promise.all([
     safeImport("../src/utils/structuredData.ts", "structuredData"),
     safeImport("../src/data/tourPaths.ts", "tourPaths"),
@@ -722,6 +723,7 @@ const main = async () => {
     safeImport("../src/engine6/registry.ts", "engine6Registry"),
     safeImport("../src/engine6/seo.ts", "engine6Seo"),
     safeImport("../src/lib/tourSeo.ts", "tourSeo"),
+    safeImport("../src/engine4/routing.ts", "engine4Routing"),
   ]);
 
   const tours = Array.isArray(toursGeneratedModule.toursGenerated)
@@ -787,6 +789,13 @@ const main = async () => {
   const getTourBookingPath = tourPathsModule?.getTourBookingPath ?? null;
   const getGuideImages = guideImagesModule?.getGuideImages ?? null;
   const getEngine2TourByPath = engine2DataModule?.getEngine2TourByPath ?? null;
+  const getEngine4TourBySlugs = engine4RoutingModule?.getEngine4TourBySlugs ?? null;
+  const getEngine4TourByPath = pathname => {
+    const match = /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(pathname);
+    return match && getEngine4TourBySlugs
+      ? getEngine4TourBySlugs(match[1], match[2], match[3])
+      : null;
+  };
   const buildEngine2Seo = engine2SeoModule?.buildEngine2Seo ?? null;
   const buildEngine2SchemaGraph = engine2SchemaModule?.buildSchemaGraph ?? null;
   const engine6ResolvedTours = Array.isArray(engine6RegistryModule?.engine6ResolvedTours)
@@ -880,9 +889,9 @@ const main = async () => {
       type: DEFAULT_SEO.type,
       image: buildImageUrl(DEFAULT_SEO.image),
     };
-    const engine2Tour = getEngine2TourByPath
+    const engine2Tour = (getEngine2TourByPath
       ? getEngine2TourByPath(basePathname)
-      : null;
+      : null) ?? getEngine4TourByPath(basePathname);
     const engine2Seo =
       engine2Tour && buildEngine2Seo ? buildEngine2Seo(engine2Tour) : null;
     const engine6Tour = engine6ResolvedTours.find(

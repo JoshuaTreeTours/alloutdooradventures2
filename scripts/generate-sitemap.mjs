@@ -685,6 +685,17 @@ const buildSitemap = async () => {
     console.warn("Unable to import Engine6 tours for sitemap; continuing without Engine6 sitemap entries.", error?.message || error);
   }
 
+  let engine4ListingEntries = [];
+  try {
+    const engine4ListingModule = await tsImport("../src/engine4/listing/getEngine4ListingEntries.ts", import.meta.url);
+    const allEngine4ListingEntries = engine4ListingModule.getAllEngine4ListingEntries?.();
+    engine4ListingEntries = Array.isArray(allEngine4ListingEntries)
+      ? allEngine4ListingEntries
+      : [];
+  } catch (error) {
+    console.warn("Unable to import Engine4 listing tours for sitemap; continuing without Engine4 sitemap entries.", error?.message || error);
+  }
+
   const pages = new Set();
   const toursUrls = new Set();
   const cityUrls = new Set();
@@ -774,6 +785,17 @@ const buildSitemap = async () => {
     if (!tourPath) {
       console.warn(
         `Skipping Engine2 tour sitemap URL (missing route fields): ${getTourIdentifier(tour)}`,
+      );
+      return;
+    }
+    addUrl(toursUrls, tourPath);
+  });
+
+  engine4ListingEntries.forEach((entry) => {
+    const tourPath = ensurePath(entry.href);
+    if (!tourPath) {
+      console.warn(
+        `Skipping Engine4 tour sitemap URL (missing route fields): ${getTourIdentifier(entry.tour, entry.tour?.productCode ?? "unknown")}`,
       );
       return;
     }
