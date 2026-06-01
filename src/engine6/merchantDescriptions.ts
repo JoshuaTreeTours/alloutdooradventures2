@@ -4,6 +4,18 @@ import {
 } from "./seo";
 import { ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES } from "./routes";
 
+const ENGINE6_TARGETED_MERCHANT_JSON_LD_PARITY_PRODUCT_CODES = new Set([
+  "5119P13",
+  "190492P3",
+  "13920P12",
+  "7079RREBIKE",
+  "191767P5",
+  "3533P14",
+  "60136P1",
+  "26719P8",
+  "152424P1",
+]);
+
 export const MERCHANT_APPROVED_DESCRIPTIONS: Record<string, string> = {
   "152424P1":
     "Half-day small-group tour from San Francisco to Muir Woods National Monument and Sausalito, including scenic views and free time to explore.",
@@ -165,11 +177,13 @@ export const resolveMerchantDescription = (args: {
   included?: string[];
   durationText?: string | null;
 }) => {
-  const approvedDescription = ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES.has(
-    args.productCode
-  )
-    ? MERCHANT_APPROVED_DESCRIPTIONS[args.productCode]
-    : undefined;
+  const approvedDescription =
+    ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES.has(args.productCode) &&
+    !ENGINE6_TARGETED_MERCHANT_JSON_LD_PARITY_PRODUCT_CODES.has(
+      args.productCode
+    )
+      ? MERCHANT_APPROVED_DESCRIPTIONS[args.productCode]
+      : undefined;
 
   if (approvedDescription) {
     return approvedDescription;
@@ -178,6 +192,14 @@ export const resolveMerchantDescription = (args: {
   const governedDescriptionSource = normalizeMerchantDescriptionCandidate(
     args.jsonLdProductDescription
   );
+
+  if (
+    governedDescriptionSource &&
+    ENGINE6_TARGETED_MERCHANT_JSON_LD_PARITY_PRODUCT_CODES.has(args.productCode)
+  ) {
+    return governedDescriptionSource;
+  }
+
   const pageMetadataSource = normalizeMerchantDescriptionCandidate(
     args.pageMetadataDescription
   );

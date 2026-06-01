@@ -735,6 +735,91 @@ describe("engine6 meta descriptions", () => {
     );
   });
 
+  it("repairs targeted post-original-55 merchant rows to the JSON-LD Product.description source", () => {
+    const targetedProductCodes = [
+      "5119P13",
+      "190492P3",
+      "13920P12",
+      "7079RREBIKE",
+      "191767P5",
+      "3533P14",
+      "60136P1",
+      "26719P8",
+      "152424P1",
+    ];
+    const parseCsvLine = (line: string) => {
+      const values: string[] = [];
+      let current = "";
+      let inQuotes = false;
+      for (let index = 0; index < line.length; index += 1) {
+        const char = line[index];
+        if (inQuotes) {
+          if (char === '"' && line[index + 1] === '"') {
+            current += '"';
+            index += 1;
+          } else if (char === '"') {
+            inQuotes = false;
+          } else {
+            current += char;
+          }
+        } else if (char === '"') {
+          inQuotes = true;
+        } else if (char === ",") {
+          values.push(current);
+          current = "";
+        } else {
+          current += char;
+        }
+      }
+      values.push(current);
+      return values;
+    };
+    const merchantFeedLines = readFileSync("data/merchantFeed.csv", "utf8")
+      .trim()
+      .split("\n");
+    const headers = parseCsvLine(merchantFeedLines[0]);
+    const descriptionIndex = headers.indexOf("description");
+    const merchantDescriptionByProductCode = new Map(
+      merchantFeedLines
+        .slice(1)
+        .map(parseCsvLine)
+        .map(row => [row[headers.indexOf("id")], row[descriptionIndex]])
+    );
+
+    for (const productCode of targetedProductCodes) {
+      const tour = engine6ResolvedTours.find(
+        candidate => candidate.productCode === productCode
+      );
+      expect(tour, productCode).toBeDefined();
+      const product = (
+        buildEngine6SchemaGraph(tour!)["@graph"] as Array<
+          Record<string, unknown>
+        >
+      ).find(node => node["@type"] === "Product");
+      const productDescription = String(product?.description ?? "");
+      const merchantDescription = resolveMerchantDescription({
+        productCode,
+        title: tour!.title,
+        city: tour!.city,
+        categoryLabel: tour!.categoryLabel,
+        productOverviewDescription: tour!.overviewText,
+        pageMetadataDescription: tour!.metaDescription || tour!.seoDescription,
+        jsonLdProductDescription: productDescription,
+        viatorApiDescription: tour!.overviewText,
+        itineraryStops: tour!.itinerary,
+        highlights: tour!.highlights,
+        included: tour!.included,
+        durationText: tour!.durationText,
+      });
+
+      expect(merchantDescription, productCode).toBe(productDescription);
+      expect(
+        merchantDescriptionByProductCode.get(productCode),
+        productCode
+      ).toBe(productDescription);
+    }
+  });
+
   it("fails governance when post-original-55 merchant rows keep fallback descriptions despite sufficient source data", () => {
     const parseCsvLine = (line: string) => {
       const values: string[] = [];
