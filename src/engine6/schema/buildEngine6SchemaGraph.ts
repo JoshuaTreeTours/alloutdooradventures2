@@ -8,6 +8,7 @@ import {
 } from "../../utils/structuredData";
 import { SITE_BRAND_NAME } from "../../utils/site";
 import { resolveEngine6OfferUrl } from "../buildEngine6ViatorBookingUrl";
+import { getEngine6TargetedNarrativeDescription } from "../approvedNarrativeDescriptions";
 import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import {
   buildEngine6RichProductDescription,
@@ -45,18 +46,20 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
     resolveEngine6OfferUrl(affiliateUrl) ??
     (affiliateUrl?.startsWith("/") ? affiliateUrl : undefined);
   const categoryLabel = formatEngine6CategoryLabel(tour.primaryCategory);
-  const description = buildEngine6RichProductDescription({
-    title: tour.title,
-    city: tour.city,
-    categoryLabel: tour.categoryLabel,
-    overviewText: tour.overviewText,
-    description:
-      tour.description || tour.metaDescription || tour.seoDescription,
-    itineraryStops: tour.itinerary,
-    highlights: tour.highlights,
-    included: tour.included,
-    durationText: tour.durationText,
-  });
+  const description =
+    getEngine6TargetedNarrativeDescription(tour.productCode) ??
+    buildEngine6RichProductDescription({
+      title: tour.title,
+      city: tour.city,
+      categoryLabel: tour.categoryLabel,
+      overviewText: tour.overviewText,
+      description:
+        tour.description || tour.metaDescription || tour.seoDescription,
+      itineraryStops: tour.itinerary,
+      highlights: tour.highlights,
+      included: tour.included,
+      durationText: tour.durationText,
+    });
   const schemaName = buildCityAwareSchemaName({
     title: tour.title,
     city: tour.city,
