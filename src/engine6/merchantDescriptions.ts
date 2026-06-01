@@ -15,6 +15,7 @@ const ENGINE6_TARGETED_MERCHANT_JSON_LD_PARITY_PRODUCT_CODES = new Set([
   "60136P1",
   "26719P8",
   "152424P1",
+  "15200P6",
 ]);
 
 export const MERCHANT_APPROVED_DESCRIPTIONS: Record<string, string> = {

@@ -19,6 +19,7 @@ const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
   "6007P5": "Golden Gate Bridge Bike Tour with Lunch | San Francisco",
   "2630SUN": "San Francisco Bay Sunset & City Lights Cruise",
   "6455NOLAAIR": "New Orleans Airboat Ride | Louisiana Bayou Tour",
+  "15200P6": "New Orleans Swamp Boat Tour with Pickup",
 };
 const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "415653P2":
@@ -29,6 +30,8 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Cruise San Francisco Bay at sunset or after dark on a two-hour waterfront sailing with Golden Gate Bridge, Alcatraz, Bay Bridge, and Pier 43 1/2 return.",
   "6455NOLAAIR":
     "Ride by airboat through Lafitte-area cypress swamp near New Orleans, with wildlife viewing, captain commentary, and optional hotel transportation.",
+  "15200P6":
+    "Travel from New Orleans to a Louisiana swamp for a narrated boat tour with pickup, bayou scenery, and seasonal wildlife viewing.",
 };
 const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",
@@ -48,6 +51,8 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "San Francisco Bay Sunset & City Lights Cruise is a two-hour harbor cruise departing from Pier 43 1/2 near Fisherman’s Wharf. The experience stays on the bay, using seasonal evening light to frame views of the Golden Gate Bridge area, Alcatraz, the city skyline, and the Bay Bridge. It is a relaxed round-trip boat outing with indoor and outdoor viewing areas rather than a narrated city tour or multi-stop itinerary.",
   "6455NOLAAIR":
     "Ride by airboat through cypress swamp and bayou waterways near Jean Lafitte National Historical Park and Preserve. This New Orleans-area tour focuses on marsh scenery, local wildlife, and captain-led interpretation, with optional hotel transportation on selected bookings and a direct meeting point in Lafitte. The route is water-based rather than a city sightseeing loop, so the experience centers on the airboat launch, swamp channels, and wildlife viewing conditions on the day of travel. Guests depart from Lafitte, south of New Orleans, for a bayou outing shaped by water level, weather, and seasonal wildlife activity.",
+  "15200P6":
+    "Travel from New Orleans to a Louisiana swamp for a narrated boat tour through bayou waterways and wetland scenery. This experience includes selected hotel pickup and drop-off, then continues to the launch area for time on the water with a local captain. The route is water-based rather than a city sightseeing loop, so conditions, wildlife activity, and captain routing shape what guests see during the outing. Expect marsh and cypress landscapes, opportunities for wildlife viewing, and practical transportation logistics suited to travelers who want a swamp experience without arranging a separate drive from New Orleans.",
 };
 
 const ENGINE6_OVERVIEW_OVERRIDES: Record<
@@ -311,6 +316,12 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Board at the Lafitte airboat launch after check-in and practical orientation for the selected boat size.",
     "Travel through tidewater cypress swamp near Jean Lafitte National Historical Park and Preserve, with wildlife viewing shaped by the day’s conditions.",
     "Return to the Lafitte launch area before continuing independently or using the booked transportation option back toward New Orleans.",
+  ],
+  "15200P6": [
+    "Begin with confirmed pickup from a selected New Orleans hotel or designated pickup point before traveling to the swamp boat launch.",
+    "Check in at the launch area and board the swamp boat for a captain-led outing on the water.",
+    "Cruise through swamp and bayou channels where wetland scenery and wildlife viewing vary by season and conditions.",
+    "Use the included transportation back toward the selected New Orleans drop-off point after the boat portion.",
   ],
 };
 
