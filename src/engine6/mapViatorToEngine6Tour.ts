@@ -20,11 +20,11 @@ const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
 };
 const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "415653P2":
-    "Explore Yosemite from San Francisco on a private tour with giant sequoias, Glacier Point, waterfalls, granite cliffs, and Sierra scenery",
+    "Explore Yosemite from San Francisco on a private tour with giant sequoias, Glacier Point, waterfalls, granite cliffs, and Sierra scenery.",
   "6007P5":
-    "Ride from San Francisco to Sausalito on a guided bike tour across the Golden Gate Bridge, with lunch voucher, all-day rental, and return options",
+    "Ride from San Francisco to Sausalito on a guided bike tour across the Golden Gate Bridge, with lunch voucher, all-day rental, and return options.",
   "2630SUN":
-    "Cruise San Francisco Bay at sunset or after dark on a two-hour waterfront sailing with Golden Gate Bridge, Alcatraz, Bay Bridge, and Pier 43 1/2 return",
+    "Cruise San Francisco Bay at sunset or after dark on a two-hour waterfront sailing with Golden Gate Bridge, Alcatraz, Bay Bridge, and Pier 43 1/2 return.",
 };
 const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",
@@ -34,6 +34,8 @@ export const isEngine6ItinerarySectionSuppressed = (productCode: string) =>
   ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES.has(productCode);
 
 const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
+  "5569HIKE":
+    "Hike through Griffith Park on a guided route to Mount Hollywood, Griffith Observatory, and Hollywood Sign viewpoints. This Los Angeles outing focuses on city panoramas, film-location context, and photo stops from the Hollywood Hills. The route includes the Greek Theatre meeting area, Griffith Park trails, Griffith Observatory, and Tiffany Point for Hollywood Sign views.",
   "447486P2":
     "Santa Barbara Happy Hour on a Yacht is a relaxing 90-minute cruise along the Santa Barbara waterfront, offering coastal views, fresh ocean air, and a social golden-hour atmosphere. Departing near Santa Barbara Harbor, this boat tour trades city streets for open water, marina scenery, shoreline views, and the Santa Ynez Mountain backdrop. Guests can unwind onboard while the captain cruises calm coastal routes past the harbor, Stearns Wharf, East Beach, and the Santa Barbara coastline. The route is harbor-based rather than a multi-stop land itinerary.",
   "6007P5":
@@ -46,6 +48,8 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
   string,
   (args: { city: string; state: string; sourceOverview: string }) => string
 > = {
+  "5569HIKE": () =>
+    "Hike through Griffith Park on a guided route to Mount Hollywood, Griffith Observatory, and Hollywood Sign viewpoints. This Los Angeles outing focuses on city panoramas, film-location context, and photo stops from the Hollywood Hills. The route includes the Greek Theatre meeting area, Griffith Park trails, Griffith Observatory, and Tiffany Point for Hollywood Sign views.",
   "6740JTREE": () =>
     "Skip the crowds and see a wilder side of Joshua Tree on a guide-led backroads outing from Palm Springs and the Coachella Valley. Riding in an open-air Hummer, you travel through high-desert terrain where Joshua tree forests, granite piles, broad valleys, and distant mountain lines open up in every direction. The pace stays relaxed, with time for pullouts, photos, and short walks at signature spots such as Keys View, Barker Dam, and Cap Rock when conditions allow. Along the way, your guide connects what you are seeing to the park’s geology, wildlife, and human history without turning the day into a lecture. It’s a scenic, low-stress way to experience Joshua Tree National Park while still getting off the usual highway rhythm.",
   "2335P1": () =>
@@ -61,11 +65,11 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
   "191303P1": () =>
     "This guided electric-bike tour explores Coronado Island in a small group of up to six travelers using custom Fat Woody beach cruisers. Riders roll past the Glorietta Bay Promenade, Coronado Beach, and Coronado Ferry Landing while a local guide shares Coronado history, manages route pacing, and helps capture photos along the way. Bikes include an integrated speaker system for beach tunes, and each guest receives a color-matched helmet plus bottled water. The 3-hour format is designed for confident riders who want scenic waterfront coverage, light storytelling, and a relaxed but structured coastal loop near San Diego.",
   "69764P1": () =>
-    "This 3-hour whale watching cruise from San Diego follows the local coastline for seasonal marine-life viewing and open-ocean scenery. Depending on conditions, sightings can include whales, dolphins, and seabirds while your crew shares practical context about local waters and wildlife behavior, including naturalist or captain commentary when offered onboard. The route is paced as a classic coastal outing with clear logistics and broad photo opportunities from the boat. It is a strong fit for families, couples, and first-time visitors who want a dependable San Diego ocean activity centered on wildlife and views.",
+    "This 3-hour whale watching cruise from San Diego follows the local coastline for seasonal marine-life viewing and open-ocean scenery. Depending on conditions, sightings can include whales, dolphins, and seabirds while your crew shares practical context about local waters and wildlife behavior, including naturalist or captain commentary when offered onboard. The classic coastal outing offers broad photo opportunities from the boat. It is a strong fit for families, couples, and first-time visitors who want a dependable San Diego ocean activity centered on wildlife and views.",
   "18125P5": () =>
     "This private Segway tour offers a fun, efficient way to explore Balboa Park with a dedicated guide in San Diego. You glide through the park to see gardens, museum exteriors, Spanish Colonial Revival architecture, and other landmark areas while covering more ground than a typical walking route. The private format supports a more personalized pace and commentary tailored to your group. It is a strong fit for visitors who want an engaging overview of Balboa Park without spending the day on foot.",
   "173946P1": () =>
-    "This half-day 4x4 adventure near San Diego takes you into inland backcountry terrain for a guide-led, outdoor-focused route. The experience explores changing dirt tracks, elevation gains, and scenic overlooks in the Otay wilderness area, creating a rugged alternative to standard city sightseeing. Travel is managed by a guide with route pacing adjusted to conditions and group comfort. With a private format and clear logistics, it is a strong fit for travelers who want a more active outing that prioritizes terrain, landscape views, and hands-on adventure over typical urban tour stops.",
+    "This half-day 4x4 adventure near San Diego takes you into inland backcountry terrain for a guide-led, outdoor-focused route. The experience explores changing dirt tracks, elevation gains, and scenic overlooks in the Otay wilderness area, creating a rugged alternative to standard city sightseeing. Travel is managed by a guide with route pacing adjusted to conditions and group comfort. With a private format and guide-managed routing, it is a strong fit for travelers who want a more active outing that prioritizes terrain, landscape views, and hands-on adventure over typical urban tour stops.",
   "3885SW303BS": ({ city, state, sourceOverview }) => {
     const supportsLucerne = /lucerne/i.test(sourceOverview);
     const supportsTitlis = /\b(mt\.?\s*titlis|mount titlis)\b/i.test(

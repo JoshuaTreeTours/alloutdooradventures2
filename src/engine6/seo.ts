@@ -233,7 +233,17 @@ const ENGINE6_AWKWARD_META_BOILERPLATE_PATTERNS = [
   /\bmemorable experience\b/gi,
 ];
 
+export const ENGINE6_DESCRIPTION_MALFORMED_PROSE_PATTERNS = [
+  /^(?:Visit Explore|Explore Discover|See View)\b/i,
+  /\b(?:guided experience|clear logistics|memorable local stops|traveler-friendly pace|easy logistics)\b/i,
+  /\b(?:Admission Ticket Free|Admission Ticket Included)\b/i,
+  /\b(?:visited over|passed along the route over)\b/i,
+  /\b(?:Yosemite stop|landscape context)\b/i,
+  /\.\.\.|…/,
+];
+
 const ENGINE6_BAD_SOURCE_PROSE_PATTERNS = [
+  ...ENGINE6_DESCRIPTION_MALFORMED_PROSE_PATTERNS,
   ...ENGINE6_BLOCKED_META_PATTERNS,
   /\bbest tour in\b/i,
   /\brated\s*\d+(?:\.\d+)?\s*\/\s*5\b/i,
@@ -979,6 +989,9 @@ const ENGINE6_RICH_PRODUCT_DESCRIPTION_MIN_WORDS = 75;
 const ENGINE6_RICH_PRODUCT_DESCRIPTION_MAX_WORDS = 120;
 const ENGINE6_RICH_PRODUCT_BLOCKED_PHRASES = [
   /\bguide support\b/gi,
+  /\bguided experience\b/gi,
+  /\bclear logistics\b/gi,
+  /\bmemorable local stops\b/gi,
   /\beasy logistics\b/gi,
   /\btraveler-friendly pace\b/gi,
   /\bmemorable experience\b/gi,
@@ -1010,6 +1023,10 @@ const normalizeEngine6Sentence = (value: string) => {
 };
 
 const cleanEngine6RichProductSource = (value: string, title: string) => {
+  if (/\.\.\.|…/.test(value)) {
+    return "";
+  }
+
   let cleaned = cleanEngine6SourceProseForMeta(value, title)
     .replace(/\.\.\.+/g, ".")
     .replace(/\s+/g, " ")
@@ -1036,7 +1053,13 @@ const cleanEngine6RichProductSource = (value: string, title: string) => {
       .trim();
   }
 
-  return sentenceCase(cleaned);
+  return sentenceCase(
+    cleaned
+      .replace(/\b(?:and|with)\s*,/gi, "")
+      .replace(/\s+/g, " ")
+      .replace(/\s+([,.;!?])/g, "$1")
+      .trim()
+  );
 };
 
 const appendEngine6RichSentenceIfUseful = (
@@ -1046,6 +1069,7 @@ const appendEngine6RichSentenceIfUseful = (
 ) => {
   const normalized = normalizeEngine6Sentence(sentence);
   if (!normalized) return false;
+  if (/\.\.\.|…/.test(sentence)) return false;
   if (
     ENGINE6_BAD_SOURCE_PROSE_PATTERNS.some(pattern => pattern.test(normalized))
   ) {
