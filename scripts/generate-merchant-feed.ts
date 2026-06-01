@@ -5,6 +5,7 @@ import { extractEngine6Product } from "../api/engine6/viatorExtractors";
 import { fetchViatorWithCurl } from "../lib/viator";
 import { DEFAULT_CURRENCY } from "../src/constants/merchantDefaults";
 import { resolveMerchantDescription } from "../src/engine6/merchantDescriptions";
+import { buildEngine6SchemaGraph } from "../src/engine6/schema/buildEngine6SchemaGraph";
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import type { Engine6Tour } from "../src/engine6/types";
 import { formatMerchantPrice } from "../src/utils/merchantPricing";
@@ -184,6 +185,14 @@ const formatMerchantCount = (value: number | null) =>
     ? String(Math.trunc(value))
     : "";
 
+const resolveEngine6ProductDescription = (tour: Engine6Tour) => {
+  const product = (
+    buildEngine6SchemaGraph(tour)["@graph"] as Array<Record<string, unknown>>
+  ).find(node => node["@type"] === "Product");
+
+  return typeof product?.description === "string" ? product.description : null;
+};
+
 const buildMerchantRow = (
   tour: Engine6Tour,
   hydration: Engine6FeedHydration | null
@@ -206,7 +215,7 @@ const buildMerchantRow = (
       categoryLabel: tour.categoryLabel,
       productOverviewDescription: tour.overviewText,
       pageMetadataDescription: tour.metaDescription || tour.seoDescription,
-      jsonLdProductDescription: tour.description,
+      jsonLdProductDescription: resolveEngine6ProductDescription(tour),
       viatorApiDescription:
         hydration?.viatorApiDescription ?? tour.overviewText ?? null,
       itineraryStops: tour.itinerary,
