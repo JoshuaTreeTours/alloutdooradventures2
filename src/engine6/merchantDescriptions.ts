@@ -2,6 +2,7 @@ import {
   buildEngine6RichProductDescription,
   stripEngine6GeneratedDescriptionPrefix,
 } from "./seo";
+import { getEngine6TargetedNarrativeDescription } from "./approvedNarrativeDescriptions";
 import { ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES } from "./routes";
 
 const ENGINE6_TARGETED_MERCHANT_JSON_LD_PARITY_PRODUCT_CODES = new Set([
@@ -177,6 +178,14 @@ export const resolveMerchantDescription = (args: {
   included?: string[];
   durationText?: string | null;
 }) => {
+  const targetedNarrativeDescription = getEngine6TargetedNarrativeDescription(
+    args.productCode
+  );
+
+  if (targetedNarrativeDescription) {
+    return targetedNarrativeDescription;
+  }
+
   const approvedDescription =
     ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES.has(args.productCode) &&
     !ENGINE6_TARGETED_MERCHANT_JSON_LD_PARITY_PRODUCT_CODES.has(
