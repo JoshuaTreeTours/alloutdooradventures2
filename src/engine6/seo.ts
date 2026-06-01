@@ -236,11 +236,36 @@ const ENGINE6_AWKWARD_META_BOILERPLATE_PATTERNS = [
 export const ENGINE6_DESCRIPTION_MALFORMED_PROSE_PATTERNS = [
   /^(?:Visit Explore|Explore Discover|See View)\b/i,
   /\b(?:guided experience|clear logistics|memorable local stops|traveler-friendly pace|easy logistics)\b/i,
-  /\b(?:Admission Ticket Free|Admission Ticket Included)\b/i,
+  /\b(?:Admission Ticket Free|Admission Ticket Included|Admission Ticket Not Included|Free admission|Ticket included|Ticket not included)\b/i,
   /\b(?:visited over|passed along the route over)\b/i,
   /\b(?:Yosemite stop|landscape context)\b/i,
   /\.\.\.|…/,
 ];
+
+export const ENGINE6_ADMISSION_ARTIFACT_PATTERNS = [
+  /\bAdmission Ticket Free\b/gi,
+  /\bAdmission Ticket Included\b/gi,
+  /\bAdmission Ticket Not Included\b/gi,
+  /\bFree admission\b/gi,
+  /\bTicket included\b/gi,
+  /\bTicket not included\b/gi,
+];
+
+export const stripEngine6AdmissionArtifacts = (value: string) => {
+  let cleaned = value;
+  for (const pattern of ENGINE6_ADMISSION_ARTIFACT_PATTERNS) {
+    cleaned = cleaned.replace(pattern, "");
+  }
+
+  return cleaned
+    .replace(/\s*[—–-]\s*(?=[.!?]|$)/g, "")
+    .replace(/\s*[—–-]\s*([.!?])/g, "$1")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .replace(/\s+/g, " ")
+    .replace(/^[,.;:!?\s—–-]+/, "")
+    .replace(/[,;:\s—–-]+$/g, "")
+    .trim();
+};
 
 const ENGINE6_BAD_SOURCE_PROSE_PATTERNS = [
   ...ENGINE6_DESCRIPTION_MALFORMED_PROSE_PATTERNS,
@@ -1007,7 +1032,7 @@ const countEngine6Words = (value: string) =>
   value.trim().split(/\s+/).filter(Boolean).length;
 
 const normalizeEngine6Sentence = (value: string) => {
-  const cleaned = value
+  const cleaned = stripEngine6AdmissionArtifacts(value)
     .replace(/<[^>]*>/g, " ")
     .replace(/\.\.\.+/g, ".")
     .replace(/\s+/g, " ")
@@ -1027,7 +1052,9 @@ const cleanEngine6RichProductSource = (value: string, title: string) => {
     return "";
   }
 
-  let cleaned = cleanEngine6SourceProseForMeta(value, title)
+  let cleaned = stripEngine6AdmissionArtifacts(
+    cleanEngine6SourceProseForMeta(value, title)
+  )
     .replace(/\.\.\.+/g, ".")
     .replace(/\s+/g, " ")
     .trim();
