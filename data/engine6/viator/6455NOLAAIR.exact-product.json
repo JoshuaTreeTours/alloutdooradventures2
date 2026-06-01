@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "6455NOLAAIR",
+    "productUrl": "https://www.viator.com/tours/New-Orleans/New-Orleans-Airboat-Ride/d675-6455NOLAAIR",
+    "title": "New Orleans Airboat Ride",
+    "description": {
+      "text": "Ride by airboat through cypress swamp and bayou waterways near Jean Lafitte National Historical Park and Preserve. This New Orleans-area tour focuses on marsh scenery, local wildlife, and captain-led interpretation, with optional hotel transportation on selected bookings and a direct meeting point in Lafitte. The route is water-based rather than a city sightseeing loop, so the experience centers on the airboat launch, swamp channels, and wildlife viewing conditions on the day of travel."
+    },
+    "location": {
+      "city": "New Orleans",
+      "state": "Louisiana",
+      "country": "USA"
+    },
+    "duration": "2 to 4 hours (approx.)",
+    "priceFrom": "$59.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 5106
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b4/48/b4/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Airboat ride through cypress swamp and bayou waterways near Lafitte",
+      "Wildlife-focused route with seasonal chances to see alligators, birds, turtles, and other marsh animals",
+      "Captain-led commentary about the local wetlands and surrounding bayou country",
+      "Optional hotel pickup and drop-off available when the transportation option is selected"
+    ],
+    "logistics": {
+      "start": {
+        "description": "5145 Fleming Park Rd, Lafitte, LA 70067, USA. Optional hotel pickup is available only when the transportation option is selected at booking."
+      },
+      "end": {
+        "description": "This activity ends back at the meeting point."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "New Orleans pickup corridor",
+        "description": "Optional transportation begins from selected downtown New Orleans and French Quarter hotels before the ride to Lafitte.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Lafitte airboat launch",
+        "description": "Guests meet at the Lafitte launch site, board the selected airboat size, and receive practical boarding instructions before entering the swamp.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jean Lafitte National Historical Park and Preserve area",
+        "description": "The airboat travels through nearby tidewater cypress swamp and bayou channels where wildlife sightings vary by season and conditions.",
+        "duration": "1 hour 45 minutes",
+        "admissionNote": "Admission Ticket Free",
+        "stopType": "stop"
+      },
+      {
+        "title": "Return to Lafitte",
+        "description": "The route returns to the launch area before guests depart independently or use the booked transportation option back toward New Orleans.",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Airboat ride",
+      "Local guide",
+      "Roundtrip transportation when the transportation option is selected at booking",
+      "Ear protection",
+      "Small under-seat storage space",
+      "Unobstructed views"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Not recommended for travelers with back problems",
+      "Not recommended for pregnant travelers",
+      "No heart problems or other serious medical conditions",
+      "Most travelers can participate",
+      "Operates in rain unless conditions are unsafe",
+      "Minimum age is 5 years",
+      "Maximum of 30 travelers"
+    ],
+    "categories": [
+      {
+        "label": "Boat tour"
+      },
+      {
+        "label": "Wildlife tour"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 59
+      }
+    }
+  }
+}
