@@ -126,6 +126,7 @@ import specimen428219p6Payload from "../../data/engine6/viator/428219P6.exact-pr
 import specimen5144brunchPayload from "../../data/engine6/viator/5144BRUNCH.exact-product.json";
 import specimen77348p8Payload from "../../data/engine6/viator/77348P8.exact-product.json";
 import specimen5569hikePayload from "../../data/engine6/viator/5569HIKE.exact-product.json";
+import specimen6455nolaairPayload from "../../data/engine6/viator/6455NOLAAIR.exact-product.json";
 
 import {
   ENGINE6_SOURCE_OF_TRUTH_API_DRIVEN,
@@ -951,6 +952,16 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Los-Angeles/2-hour-Inside-Adventure-Tour-on-Catalina-Island/d645-32779P6",
     rawPayload: specimen32779p6Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+
+  {
+    productCode: "6455NOLAAIR",
+    publicUrl:
+      "https://www.viator.com/tours/New-Orleans/New-Orleans-Airboat-Ride/d675-6455NOLAAIR",
+    rawPayload: specimen6455nolaairPayload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

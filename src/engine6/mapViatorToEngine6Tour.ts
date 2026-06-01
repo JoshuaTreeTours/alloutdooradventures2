@@ -17,6 +17,7 @@ const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
     "Alcatraz App-Guided Experience with Ferry Access | San Francisco",
   "6007P5": "Golden Gate Bridge Bike Tour with Lunch | San Francisco",
   "2630SUN": "San Francisco Bay Sunset & City Lights Cruise",
+  "6455NOLAAIR": "New Orleans Airboat Ride | Louisiana Bayou Tour",
 };
 const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "415653P2":
@@ -25,6 +26,8 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Ride from San Francisco to Sausalito on a guided bike tour across the Golden Gate Bridge, with lunch voucher, all-day rental, and return options.",
   "2630SUN":
     "Cruise San Francisco Bay at sunset or after dark on a two-hour waterfront sailing with Golden Gate Bridge, Alcatraz, Bay Bridge, and Pier 43 1/2 return.",
+  "6455NOLAAIR":
+    "Ride by airboat through Lafitte-area cypress swamp near New Orleans, with wildlife viewing, captain commentary, and optional hotel transportation.",
 };
 const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",
@@ -42,6 +45,8 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "This San Francisco bicycle tour pairs a guided ride to Sausalito with a lunch voucher and all-day bike rental. After check-in and fitting at 721 Beach Street, the guide leads a paced route toward the Golden Gate Bridge with time for photos and practical orientation. The ride continues across the bridge and ends in Sausalito near the lunch stop, where travelers can use the voucher before choosing whether to bike back or arrange the ferry return separately.",
   "2630SUN":
     "San Francisco Bay Sunset & City Lights Cruise is a two-hour harbor cruise departing from Pier 43 1/2 near Fisherman’s Wharf. The experience stays on the bay, using seasonal evening light to frame views of the Golden Gate Bridge area, Alcatraz, the city skyline, and the Bay Bridge. It is a relaxed round-trip boat outing with indoor and outdoor viewing areas rather than a narrated city tour or multi-stop itinerary.",
+  "6455NOLAAIR":
+    "New Orleans Airboat Ride is a bayou and cypress-swamp outing based near Lafitte, south of the city. The experience uses an airboat route near Jean Lafitte National Historical Park and Preserve, with captain commentary and wildlife viewing shaped by water level, weather, and season. Optional hotel transportation is available on selected bookings, while self-drive guests meet at the Lafitte launch. This is a water-based wildlife tour rather than a French Quarter, harbor, or city sightseeing route.",
 };
 
 const ENGINE6_OVERVIEW_OVERRIDES: Record<
@@ -54,6 +59,8 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
     "Skip the crowds and see a wilder side of Joshua Tree on a guide-led backroads outing from Palm Springs and the Coachella Valley. Riding in an open-air Hummer, you travel through high-desert terrain where Joshua tree forests, granite piles, broad valleys, and distant mountain lines open up in every direction. The pace stays relaxed, with time for pullouts, photos, and short walks at signature spots such as Keys View, Barker Dam, and Cap Rock when conditions allow. Along the way, your guide connects what you are seeing to the park’s geology, wildlife, and human history without turning the day into a lecture. It’s a scenic, low-stress way to experience Joshua Tree National Park while still getting off the usual highway rhythm.",
   "2335P1": () =>
     "Explore one of the Coachella Valley’s defining geologic landscapes on this guided off-road Jeep tour into the San Andreas Fault zone near Palm Springs. The route travels through desert canyons and washes shaped by active tectonic forces, where your naturalist guide interprets fault movement, earthquake geology, and the landforms that reveal how the valley evolved over time. Along the way, you experience rugged terrain and wide desert vistas while learning how climate, erosion, and plate dynamics interact across this section of Southern California. Designed as a destination-first geology adventure rather than a standard city sightseeing loop, this small-group experience combines outdoor exploration with clear scientific context in one of the region’s most consequential fault environments.",
+  "6455NOLAAIR": () =>
+    "Ride by airboat through Lafitte-area cypress swamp and bayou waterways near Jean Lafitte National Historical Park and Preserve. This New Orleans-area outing is built around the water route, captain commentary, and wildlife viewing rather than a city sightseeing loop. Optional hotel transportation is available on selected bookings, while self-drive guests meet at the Lafitte launch before boarding the airboat. The route is concise and location-specific: depart the launch, move through swamp channels where alligator and bird sightings vary by season, then return to the same launch area.",
   "335698P7": () =>
     "Short on time but want a solid first look at Joshua Tree National Park? This half-day small-group tour from the Palm Springs region covers key landscapes efficiently while keeping the experience personal and unhurried. You ride between major viewpoints and iconic rock areas, then get out for brief walks and interpretive stops at places such as Hidden Valley, Cap Rock, or Keys View depending on timing and conditions. Your guide handles routing and park logistics so you can focus on the scenery: twisted Joshua trees, rounded granite monoliths, open desert basins, and long mountain horizons. Commentary is approachable and useful, touching on geology, plants, and park history without overloading the outing. It’s ideal for first-time visitors, photographers, and anyone seeking the highlights in a compact format.",
   "237571P2": () =>
@@ -297,6 +304,12 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Watch downtown skyline views broaden from the dining deck as the yacht glides through central harbor waters.",
     "Take in open-water panoramas while brunch service and live entertainment continue throughout the sailing.",
     "Pass naval installations, Shelter Island marinas, and Cabrillo’s coastal point on the scenic return across San Diego Bay.",
+  ],
+  "6455NOLAAIR": [
+    "Use the selected pickup option from New Orleans or travel independently toward the Lafitte launch area before the airboat portion begins.",
+    "Board at the Lafitte airboat launch after check-in and practical orientation for the selected boat size.",
+    "Travel through tidewater cypress swamp near Jean Lafitte National Historical Park and Preserve, with wildlife viewing shaped by the day’s conditions.",
+    "Return to the Lafitte launch area before continuing independently or using the booked transportation option back toward New Orleans.",
   ],
 };
 
