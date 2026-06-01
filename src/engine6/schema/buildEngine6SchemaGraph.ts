@@ -13,6 +13,7 @@ import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import {
   buildEngine6RichProductDescription,
   formatEngine6CategoryLabel,
+  stripEngine6AdmissionArtifacts,
 } from "../seo";
 import type { Engine6Tour } from "../types";
 
@@ -82,11 +83,11 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
             item: {
               "@type": "TouristAttraction",
               name: item.title,
-              ...(item.description || item.admissionNote
+              ...(item.description
                 ? {
-                    description: [item.description, item.admissionNote]
-                      .filter(Boolean)
-                      .join(" — "),
+                    description: stripEngine6AdmissionArtifacts(
+                      item.description
+                    ),
                   }
                 : {}),
             },

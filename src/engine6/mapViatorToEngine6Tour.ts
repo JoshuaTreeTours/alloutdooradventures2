@@ -8,6 +8,7 @@ import {
   buildEngine6SeoTitle,
   cleanEngine6Description,
   formatEngine6CategoryLabel,
+  stripEngine6AdmissionArtifacts,
 } from "./seo";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 
@@ -46,7 +47,7 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "2630SUN":
     "San Francisco Bay Sunset & City Lights Cruise is a two-hour harbor cruise departing from Pier 43 1/2 near Fisherman’s Wharf. The experience stays on the bay, using seasonal evening light to frame views of the Golden Gate Bridge area, Alcatraz, the city skyline, and the Bay Bridge. It is a relaxed round-trip boat outing with indoor and outdoor viewing areas rather than a narrated city tour or multi-stop itinerary.",
   "6455NOLAAIR":
-    "New Orleans Airboat Ride is a bayou and cypress-swamp outing based near Lafitte, south of the city. The experience uses an airboat route near Jean Lafitte National Historical Park and Preserve, with captain commentary and wildlife viewing shaped by water level, weather, and season. Optional hotel transportation is available on selected bookings, while self-drive guests meet at the Lafitte launch. This is a water-based wildlife tour rather than a French Quarter, harbor, or city sightseeing route.",
+    "Ride by airboat through cypress swamp and bayou waterways near Jean Lafitte National Historical Park and Preserve. This New Orleans-area tour focuses on marsh scenery, local wildlife, and captain-led interpretation, with optional hotel transportation on selected bookings and a direct meeting point in Lafitte. The route is water-based rather than a city sightseeing loop, so the experience centers on the airboat launch, swamp channels, and wildlife viewing conditions on the day of travel. Guests depart from Lafitte, south of New Orleans, for a bayou outing shaped by water level, weather, and seasonal wildlife activity.",
 };
 
 const ENGINE6_OVERVIEW_OVERRIDES: Record<
@@ -60,7 +61,7 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
   "2335P1": () =>
     "Explore one of the Coachella Valley’s defining geologic landscapes on this guided off-road Jeep tour into the San Andreas Fault zone near Palm Springs. The route travels through desert canyons and washes shaped by active tectonic forces, where your naturalist guide interprets fault movement, earthquake geology, and the landforms that reveal how the valley evolved over time. Along the way, you experience rugged terrain and wide desert vistas while learning how climate, erosion, and plate dynamics interact across this section of Southern California. Designed as a destination-first geology adventure rather than a standard city sightseeing loop, this small-group experience combines outdoor exploration with clear scientific context in one of the region’s most consequential fault environments.",
   "6455NOLAAIR": () =>
-    "Ride by airboat through Lafitte-area cypress swamp and bayou waterways near Jean Lafitte National Historical Park and Preserve. This New Orleans-area outing is built around the water route, captain commentary, and wildlife viewing rather than a city sightseeing loop. Optional hotel transportation is available on selected bookings, while self-drive guests meet at the Lafitte launch before boarding the airboat. The route is concise and location-specific: depart the launch, move through swamp channels where alligator and bird sightings vary by season, then return to the same launch area.",
+    "Ride by airboat through cypress swamp and bayou waterways near Jean Lafitte National Historical Park and Preserve. This New Orleans-area tour focuses on marsh scenery, local wildlife, and captain-led interpretation, with optional hotel transportation on selected bookings and a direct meeting point in Lafitte. The route is water-based rather than a city sightseeing loop, so the experience centers on the airboat launch, swamp channels, and wildlife viewing conditions on the day of travel. Guests depart from Lafitte, south of New Orleans, for a bayou outing shaped by water level, weather, and seasonal wildlife activity.",
   "335698P7": () =>
     "Short on time but want a solid first look at Joshua Tree National Park? This half-day small-group tour from the Palm Springs region covers key landscapes efficiently while keeping the experience personal and unhurried. You ride between major viewpoints and iconic rock areas, then get out for brief walks and interpretive stops at places such as Hidden Valley, Cap Rock, or Keys View depending on timing and conditions. Your guide handles routing and park logistics so you can focus on the scenery: twisted Joshua trees, rounded granite monoliths, open desert basins, and long mountain horizons. Commentary is approachable and useful, touching on geology, plants, and park history without overloading the outing. It’s ideal for first-time visitors, photographers, and anyone seeking the highlights in a compact format.",
   "237571P2": () =>
@@ -457,9 +458,8 @@ const rewriteItineraryDescriptionToSingleSentence = (args: {
   const { item } = args;
   const title = item.title?.trim() || "This stop";
   const duration = item.duration?.trim();
-  const admission = item.admissionNote?.trim();
   const sourceDescription = item.description?.trim() ?? "";
-  const cleanedSource = sourceDescription
+  const cleanedSource = stripEngine6AdmissionArtifacts(sourceDescription)
     .replace(/\s+/g, " ")
     .replace(/\([^)]*\)/g, " ")
     .replace(/\b(you will|you'll|we will|we'll)\b/gi, "")
@@ -492,23 +492,31 @@ const rewriteItineraryDescriptionToSingleSentence = (args: {
     .replace(/[;:,]\s*$/, "")
     .trim();
 
-  const durationClause = duration ? ` over ${duration}` : "";
-  const admissionClause = admission ? `; ${admission}` : "";
+  const durationClause = duration
+    ? ` during the ${duration.replace(/[.!?]+$/g, "")} stop`
+    : "";
 
   if (polishedSourceSentence && !repeatsTitle) {
-    return `${polishedSourceSentence}${admissionClause}.`
+    return stripEngine6AdmissionArtifacts(`${polishedSourceSentence}.`)
       .replace(/\s+/g, " ")
       .replace(/\s+([;,.])/g, "$1")
       .replace(/\.\./g, ".")
       .trim();
   }
 
+  const fallbackTitle = title
+    .replace(
+      /^(?:enjoy|experience|discover|visit|explore|see|head to|head|take in|check out|pass(?: by)?)\s+/i,
+      ""
+    )
+    .replace(/^[a-z]/, m => m.toUpperCase())
+    .trim();
   const fallbackLead =
     item.stopType === "pass-by"
-      ? `${title} is passed along the route`
-      : `${title} is visited`;
+      ? `Pass ${fallbackTitle || title} as part of the route`
+      : `Visit ${fallbackTitle || title}${durationClause}`;
 
-  return `${fallbackLead}${durationClause}${admissionClause}.`
+  return stripEngine6AdmissionArtifacts(`${fallbackLead}.`)
     .replace(/\s+/g, " ")
     .replace(/\s+([;,.])/g, "$1")
     .replace(/\.\./g, ".")

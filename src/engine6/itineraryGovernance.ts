@@ -1,3 +1,4 @@
+import { stripEngine6AdmissionArtifacts } from "./seo";
 import type { Engine6ItineraryItem } from "./types";
 
 type GovernedItinerarySourceItem = Pick<
@@ -251,9 +252,6 @@ const contextClause = (item: GovernedItinerarySourceItem, title: string) => {
     : null;
   if (sourceContext) return `with ${sourceContext}`;
 
-  const admission = item.admissionNote?.trim();
-  if (admission) return `with ${admission.replace(/[.!?]+$/g, "")}`;
-
   const duration = item.duration?.trim();
   if (duration) return `during the ${duration.replace(/[.!?]+$/g, "")} stop`;
 
@@ -281,7 +279,9 @@ export const rewriteEngine6ItineraryDescription = ({
   const verbs = item.stopType === "pass-by" ? PASS_BY_VERBS : STOP_VERBS;
   const verb = verbs[index % verbs.length];
   const clause = contextClause(item, title);
-  return enforceSingleSentence(`${verb} ${title} ${clause}`);
+  return stripEngine6AdmissionArtifacts(
+    enforceSingleSentence(`${verb} ${title} ${clause}`)
+  );
 };
 
 export const isEngine6GenericItineraryDescription = (value: string) =>
@@ -350,6 +350,16 @@ export const validateEngine6GovernedItinerary = ({
     if (isEngine6GenericItineraryDescription(description)) {
       violations.push(
         `governed itinerary validation failed: stop ${index + 1} description uses generic or mechanical phrasing`
+      );
+    }
+
+    if (
+      /\b(?:Admission Ticket Free|Admission Ticket Included|Admission Ticket Not Included|Free admission|Ticket included|Ticket not included)\b/i.test(
+        description
+      )
+    ) {
+      violations.push(
+        `governed itinerary validation failed: stop ${index + 1} description exposes admission-ticket artifacts`
       );
     }
 
