@@ -146,6 +146,10 @@ const replaceMeta = (html, seo) => {
   const url = escapeAttribute(sanitizeFinalSeoUrl(seo.url));
   const type = escapeAttribute(seo.type);
   const image = escapeAttribute(sanitizeFinalSeoUrl(seo.image));
+  const robots = escapeAttribute(
+    seo.robots ?? "index,follow,max-image-preview:large"
+  );
+  const googlebot = escapeAttribute(seo.googlebot ?? robots);
 
   let output = html
     .replaceAll("__SEO_TITLE__", title)
@@ -159,6 +163,16 @@ const replaceMeta = (html, seo) => {
     .replaceAll("__SEO_TWITTER_DESCRIPTION__", description)
     .replaceAll("__SEO_TWITTER_IMAGE__", image);
 
+  output = output
+    .replace(
+      /<meta([^>]+name=["']robots["'][^>]+content=)["'][^"']*["']([^>]*)>/i,
+      `<meta$1"${robots}"$2>`
+    )
+    .replace(
+      /<meta([^>]+name=["']googlebot["'][^>]+content=)["'][^"']*["']([^>]*)>/i,
+      `<meta$1"${googlebot}"$2>`
+    );
+
   if (!image) {
     output = output.replace(
       /<meta[^>]+(?:property=["']og:image["']|name=["']twitter:image["'])[^>]*>\s*/gi,
@@ -168,6 +182,9 @@ const replaceMeta = (html, seo) => {
 
   return output;
 };
+
+const INDEX_ROBOTS = "index,follow,max-image-preview:large";
+const BOOK_ROBOTS = "noindex,follow";
 
 const STRUCTURED_DATA_SCRIPT_ID = "structured-data";
 
@@ -888,6 +905,8 @@ const main = async () => {
       url: buildCanonicalUrl(normalizedPathname),
       type: DEFAULT_SEO.type,
       image: buildImageUrl(DEFAULT_SEO.image),
+      robots: isBookingRoute ? BOOK_ROBOTS : INDEX_ROBOTS,
+      googlebot: isBookingRoute ? BOOK_ROBOTS : INDEX_ROBOTS,
     };
     const engine2Tour = (getEngine2TourByPath
       ? getEngine2TourByPath(basePathname)
@@ -956,6 +975,8 @@ const main = async () => {
         seo.title = bookingMeta.title;
         seo.description = bookingMeta.description;
         seo.url = bookingMeta.canonical;
+        seo.robots = bookingMeta.robots;
+        seo.googlebot = bookingMeta.googlebot;
       } else if (!isBookingRoute && buildTourMeta) {
         const tourMeta = buildTourMeta(tourForSeo, buildCanonicalUrl(basePathname));
         seo.title = tourMeta.title;
@@ -1322,6 +1343,8 @@ const main = async () => {
     url: buildCanonicalUrl("/"),
     type: DEFAULT_SEO.type,
     image: buildImageUrl(ROOT_OG_IMAGE),
+    robots: INDEX_ROBOTS,
+    googlebot: INDEX_ROBOTS,
   };
   await writeFile(templatePath, replaceMeta(template, homepageSeo), "utf8");
 
@@ -1374,7 +1397,7 @@ const main = async () => {
             normalizePathname(pathname)
           )
       ),
-      expectedRobots: "noindex,follow,max-image-preview:large",
+      expectedRobots: BOOK_ROBOTS,
     },
     {
       label: "Static",

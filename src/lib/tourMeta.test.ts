@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildTourMeta } from "./tourMeta";
+import { buildBookingMeta, buildTourMeta } from "./tourMeta";
 
 describe("buildTourMeta", () => {
   it("normalizes legacy breadcrumb-style titles into readable SEO titles", () => {
@@ -126,5 +126,18 @@ describe("buildTourMeta", () => {
     expect(meta.title).toBe("Rome Twilight Food Walk | Rome, Italy | All Outdoor Adventures");
     expect(meta.description).toContain("Explore Rome Twilight Food Walk in Rome, Italy.");
     expect(meta.description).not.toContain("guided outdoor experience");
+  });
+
+  it("emits exact noindex,follow robots metadata for booking utility pages", () => {
+    const meta = buildBookingMeta(
+      {
+        title: "RV Site 12 198666",
+        destination: { city: "Deadwood", state: "South Dakota" },
+      },
+      "/destinations/south-dakota/deadwood/tours/rv-site-12-198666/book"
+    );
+
+    expect(meta.robots).toBe("noindex,follow");
+    expect(meta.googlebot).toBe("noindex,follow");
   });
 });
