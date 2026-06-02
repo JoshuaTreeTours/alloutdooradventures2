@@ -49,6 +49,13 @@ const removeMetaTag = (selector: string) => {
   document.head.querySelector<HTMLMetaElement>(selector)?.remove();
 };
 
+const BOOK_ROBOTS = "noindex,follow";
+
+const isExactBookPath = (pathname: string) => {
+  const normalizedPathname = pathname.split(/[?#]/)[0].replace(/\/+$/, "");
+  return normalizedPathname.endsWith("/book");
+};
+
 export default function Seo({
   title = DEFAULT_SEO.title,
   description = DEFAULT_SEO.description,
@@ -61,6 +68,10 @@ export default function Seo({
   const [location] = useLocation();
   const canonicalUrl = buildCanonicalUrl(url ?? location ?? "/");
   const resolvedImage = image ? buildImageUrl(image) : "";
+  const resolvedRobots = isExactBookPath(location ?? "/") ? BOOK_ROBOTS : robots;
+  const resolvedGooglebot = isExactBookPath(location ?? "/")
+    ? BOOK_ROBOTS
+    : googlebot;
 
   useLayoutEffect(() => {
     document.title = title;
@@ -115,11 +126,11 @@ export default function Seo({
     }
     upsertMetaTag('meta[name="robots"]', {
       name: "robots",
-      content: robots,
+      content: resolvedRobots,
     });
     upsertMetaTag('meta[name="googlebot"]', {
       name: "googlebot",
-      content: googlebot,
+      content: resolvedGooglebot,
     });
     upsertLinkTag('link[rel="canonical"]', {
       rel: "canonical",
@@ -128,9 +139,9 @@ export default function Seo({
   }, [
     canonicalUrl,
     description,
-    googlebot,
+    resolvedGooglebot,
     resolvedImage,
-    robots,
+    resolvedRobots,
     title,
     type,
   ]);

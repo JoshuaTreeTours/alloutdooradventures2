@@ -25,7 +25,7 @@ type TourLike = {
 };
 
 const INDEX_ROBOTS = "index,follow,max-image-preview:large";
-const NOINDEX_ROBOTS = "noindex,follow,max-image-preview:large";
+const NOINDEX_ROBOTS = "noindex,follow";
 
 const clean = (value?: string) => (value ?? "").trim();
 
