@@ -1,4 +1,7 @@
-import { matchesCategoryPageActivity } from "./activityFilters";
+import {
+  matchesCategoryPageActivity,
+  sortCategoryPageActivityTours,
+} from "./activityFilters";
 import type { BookingProvider, Tour } from "./tours.types";
 import { flagstaffTours } from "./flagstaffTours";
 import { sedonaTours } from "./sedonaTours";
@@ -25,9 +28,7 @@ import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEn
 import { getEngine4ListingEntries } from "../engine4/listing/getEngine4ListingEntries";
 import { engine6ListingTours } from "../engine6/listing";
 import { assertUniqueByCanonicalPath } from "../engine6/hardening";
-import {
-  suppressLegacyFareHarborTour,
-} from "../engine6/replacementMode";
+import { suppressLegacyFareHarborTour } from "../engine6/replacementMode";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -228,14 +229,15 @@ export const tours: Tour[] = [
   ...australiaTours,
   ...engine6ListingTours,
 ]
-  .filter(tour =>
-    !suppressLegacyFareHarborTour(tour, engine6CanonicalTourPaths)
+  .filter(
+    tour => !suppressLegacyFareHarborTour(tour, engine6CanonicalTourPaths)
   )
-  .filter(tour =>
-    !isTourRemoved({
-      tourId: getEngine1FareHarborItemId(tour),
-      operatorName: tour.operator,
-    })
+  .filter(
+    tour =>
+      !isTourRemoved({
+        tourId: getEngine1FareHarborItemId(tour),
+        operatorName: tour.operator,
+      })
   )
   .map(tour =>
     applyTourPricing({
@@ -247,7 +249,7 @@ export const tours: Tour[] = [
     })
   )
   .map(remapMisclassifiedAfricaTours)
-    .filter(
+  .filter(
     tour =>
       !isHardDeletedLegacyTour({
         productId: getEngine1FareHarborItemId(tour),
@@ -262,7 +264,6 @@ export const tours: Tour[] = [
       )
   )
   .filter(hasValidPublicCardHero);
-
 
 const legacyTours: Tour[] = [
   ...toursGenerated,
@@ -289,7 +290,7 @@ const legacyTours: Tour[] = [
     })
   )
   .map(remapMisclassifiedAfricaTours)
-    .filter(
+  .filter(
     tour =>
       !isHardDeletedLegacyTour({
         productId: getEngine1FareHarborItemId(tour),
@@ -304,7 +305,6 @@ const legacyTours: Tour[] = [
       )
   )
   .filter(hasValidPublicCardHero);
-
 
 export const getLegacyTourBySlugs = (
   stateSlug: string,
@@ -468,7 +468,10 @@ export const getTourBySlugs = (
   );
 
 export const getToursByActivity = (activitySlug: string) =>
-  tours.filter(tour => matchesCategoryPageActivity(tour, activitySlug));
+  sortCategoryPageActivityTours(
+    tours.filter(tour => matchesCategoryPageActivity(tour, activitySlug)),
+    activitySlug
+  );
 
 export const getTourDetailPath = (tour: Tour) =>
   tour.destination.stateSlug === "switzerland" || tour.engine === "engine6"
@@ -570,9 +573,7 @@ const isValidForPublicCityListing = (
     return false;
   }
   if (
-    CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS.has(
-      itemId.replace(/^engine2-/, "")
-    )
+    CONTAMINATED_AFARICA_LEGACY_PRODUCT_IDS.has(itemId.replace(/^engine2-/, ""))
   ) {
     return false;
   }
