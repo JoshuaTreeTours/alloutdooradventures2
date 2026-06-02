@@ -1,0 +1,91 @@
+{
+  "product": {
+    "productCode": "6953SWAMPTRANS",
+    "productUrl": "https://www.viator.com/tours/New-Orleans/Honey-Island-Swamp-Tour-With-Transport/d675-6953SWAMPTRANS",
+    "title": "New Orleans Swamp and Bayou Boat Tour with Transportation",
+    "description": {
+      "text": "Travel from downtown New Orleans across Lake Pontchartrain to Honey Island Swamp for a guided flat-bottom boat tour through protected Louisiana wetlands. The route moves through narrow bayou passages where the captain explains swamp ecology, Cajun culture, and local preservation efforts. Travelers may see alligators, birds, turtles, raccoons, wild boar, and other wildlife depending on conditions, and the route includes views of a Cajun village reachable only by boat before returning to shore and the New Orleans pickup point."
+    },
+    "location": {
+      "city": "New Orleans",
+      "state": "Louisiana",
+      "country": "USA"
+    },
+    "duration": "5 hours",
+    "priceFrom": "$70.12",
+    "reviews": {
+      "combinedAverageRating": 4.9019995,
+      "totalReviews": 6051
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b4/53/48/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            },
+            "CARD": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b4/53/48/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Transportation from downtown New Orleans to Honey Island Swamp",
+      "Two-hour flat-bottom boat tour through protected wetlands",
+      "Captain narration about Louisiana swamp ecology and Cajun culture",
+      "Seasonal wildlife viewing in bayou waterways"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Homewood Suites French Quarter, 317 North Rampart Street, for the selected pickup window."
+      },
+      "end": {
+        "description": "This activity returns to the original downtown New Orleans pickup point."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Downtown New Orleans pickup",
+        "description": "Meet at the assigned French Quarter pickup point before traveling toward Honey Island Swamp.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Pontchartrain crossing",
+        "description": "Travel across Lake Pontchartrain on the way from New Orleans to the swamp region.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Honey Island Swamp",
+        "description": "Board a quiet flat-bottom boat for a captain-led route through protected wetland passages and bayou scenery.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cajun village by boat",
+        "description": "See a Cajun village reachable only from the water while learning how local communities have used the swamp.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Return to New Orleans",
+        "description": "Return to shore after the boat tour, then continue back to the downtown pickup point.",
+        "stopType": "stop"
+      }
+    ],
+    "categories": [
+      "boat-tour",
+      "adventure-tour"
+    ],
+    "primaryCategory": "boat-tour",
+    "included": [
+      "Transportation from downtown New Orleans",
+      "Live commentary on board",
+      "Professional tour guide"
+    ]
+  }
+}

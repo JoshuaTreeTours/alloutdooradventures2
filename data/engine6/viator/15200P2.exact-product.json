@@ -1,0 +1,85 @@
+{
+  "product": {
+    "productCode": "15200P2",
+    "productUrl": "https://www.viator.com/tours/New-Orleans/Large-Airboat-Swamp-Tour-with-Hotel-Pickup/d675-15200P2",
+    "title": "Large Airboat Swamp Tour with Transportation from New Orleans",
+    "description": {
+      "text": "Travel from downtown New Orleans by hotel pickup toward the swamp for a large-airboat ride on Louisiana waterways. After the drive along the Mississippi River corridor, board a 16-passenger airboat with a captain who narrates the route, explains local wildlife and flora, and balances faster runs with slower photo stops. Wildlife sightings vary by season and conditions, but the outing is designed around swamp scenery, alligator habitat, and a coordinated return transfer back to New Orleans."
+    },
+    "location": {
+      "city": "New Orleans",
+      "state": "Louisiana",
+      "country": "USA"
+    },
+    "duration": "4 hours 15 minutes",
+    "priceFrom": "$90.00",
+    "reviews": {
+      "combinedAverageRating": 4.908461,
+      "totalReviews": 2021
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b4/4d/6a/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            },
+            "CARD": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b4/4d/6a/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hotel pickup and drop-off from downtown New Orleans",
+      "Large 16-passenger airboat ride through swamp waterways",
+      "Captain narration about local wildlife and flora",
+      "Photo stops and seasonal alligator viewing opportunities"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from selected downtown New Orleans hotels when confirmed at booking."
+      },
+      "end": {
+        "description": "This activity returns to the selected New Orleans pickup location."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Downtown New Orleans hotel pickup",
+        "description": "Begin with confirmed pickup from a selected downtown hotel before traveling toward the swamp.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mississippi River corridor",
+        "description": "Travel by air-conditioned vehicle along the Mississippi River corridor on the way to the airboat launch.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Louisiana swamp airboat ride",
+        "description": "Board a large 16-passenger airboat for a captain-narrated route through swamp waterways, photo stops, and wildlife habitat.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Return transfer",
+        "description": "After the airboat portion, use the coordinated transfer back to the selected New Orleans hotel pickup location.",
+        "stopType": "stop"
+      }
+    ],
+    "categories": [
+      "boat-tour",
+      "adventure-tour"
+    ],
+    "primaryCategory": "boat-tour",
+    "included": [
+      "Hotel pickup and drop-off",
+      "Professional guide"
+    ]
+  }
+}
