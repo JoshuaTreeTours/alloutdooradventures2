@@ -129,6 +129,8 @@ import specimen5569hikePayload from "../../data/engine6/viator/5569HIKE.exact-pr
 import specimen6455nolaairPayload from "../../data/engine6/viator/6455NOLAAIR.exact-product.json";
 import specimen15200p6Payload from "../../data/engine6/viator/15200P6.exact-product.json";
 import specimen3780p45Payload from "../../data/engine6/viator/3780P45.exact-product.json";
+import specimen6953swamptransPayload from "../../data/engine6/viator/6953SWAMPTRANS.exact-product.json";
+import specimen15200p2Payload from "../../data/engine6/viator/15200P2.exact-product.json";
 
 import {
   ENGINE6_SOURCE_OF_TRUTH_API_DRIVEN,
@@ -982,6 +984,24 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/New-Orleans/Mardi-Gras-Jazz-Brunch-Cruise/d675-3780P45",
     rawPayload: specimen3780p45Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "6953SWAMPTRANS",
+    publicUrl:
+      "https://www.viator.com/tours/New-Orleans/Honey-Island-Swamp-Tour-With-Transport/d675-6953SWAMPTRANS",
+    rawPayload: specimen6953swamptransPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "15200P2",
+    publicUrl:
+      "https://www.viator.com/tours/New-Orleans/Large-Airboat-Swamp-Tour-with-Hotel-Pickup/d675-15200P2",
+    rawPayload: specimen15200p2Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

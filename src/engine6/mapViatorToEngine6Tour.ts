@@ -21,6 +21,9 @@ const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
   "6455NOLAAIR": "New Orleans Airboat Ride | Louisiana Bayou Tour",
   "15200P6": "New Orleans Swamp Boat Tour with Pickup",
   "3780P45": "New Orleans Riverboat Sightseeing Cruise",
+  "6953SWAMPTRANS":
+    "Honey Island Swamp Boat Tour with New Orleans Transportation",
+  "15200P2": "Large Airboat Swamp Tour with New Orleans Pickup",
 };
 const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "415653P2":
@@ -35,6 +38,10 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Travel from New Orleans to a Louisiana swamp for a narrated boat tour with pickup, bayou scenery, and seasonal wildlife viewing.",
   "3780P45":
     "Cruise the Mississippi River from New Orleans on a 75-minute narrated riverboat route past French Quarter waterfront landmarks.",
+  "6953SWAMPTRANS":
+    "Travel from New Orleans to Honey Island Swamp for a guided flat-bottom boat tour through protected wetlands, bayou passages, and Cajun village scenery.",
+  "15200P2":
+    "Ride a large airboat through Louisiana swamp waterways with downtown New Orleans hotel pickup, captain narration, photo stops, and seasonal wildlife viewing.",
 };
 const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",
@@ -58,6 +65,10 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Travel from New Orleans to a Louisiana swamp for a narrated boat tour through bayou waterways and wetland scenery. This experience includes selected hotel pickup and drop-off, then continues to the launch area for time on the water with a local captain. The route is water-based rather than a city sightseeing loop, so conditions, wildlife activity, and captain routing shape what guests see during the outing. Expect marsh and cypress landscapes, opportunities for wildlife viewing, and practical transportation logistics suited to travelers who want a swamp experience without arranging a separate drive from New Orleans.",
   "3780P45":
     "Board the Riverboat CITY of NEW ORLEANS for a 75-minute Mississippi River sightseeing cruise from the French Quarter riverfront. The route stays on the water with live captain narration, open river views, and a round-trip departure behind JAX Brewery. From the vessel, travelers can see the French Quarter riverfront, Jackson Square, St. Louis Cathedral, the Crescent City Connection, the Aquarium of the Americas, Mardi Gras World, Caesars Casino, and Woldenberg Riverfront Park before returning to the same dock.",
+  "6953SWAMPTRANS":
+    "Travel from downtown New Orleans across Lake Pontchartrain to Honey Island Swamp for a guided flat-bottom boat tour through protected Louisiana wetlands. The route moves through narrow bayou passages where the captain explains swamp ecology, Cajun culture, and local preservation efforts. Travelers may see alligators, birds, turtles, raccoons, wild boar, and other wildlife depending on conditions, and the route includes views of a Cajun village reachable only by boat before returning to shore and the New Orleans pickup point.",
+  "15200P2":
+    "Travel from downtown New Orleans by hotel pickup toward the swamp for a large-airboat ride on Louisiana waterways. After the drive along the Mississippi River corridor, board a 16-passenger airboat with a captain who narrates the route, explains local wildlife and flora, and balances faster runs with slower photo stops. Wildlife sightings vary by season and conditions, but the outing is designed around swamp scenery, alligator habitat, and a coordinated return transfer back to New Orleans.",
 };
 
 const ENGINE6_OVERVIEW_OVERRIDES: Record<
@@ -336,6 +347,19 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Check in at the launch area and board the swamp boat for a captain-led outing on the water.",
     "Cruise through swamp and bayou channels where wetland scenery and wildlife viewing vary by season and conditions.",
     "Use the included transportation back toward the selected New Orleans drop-off point after the boat portion.",
+  ],
+  "6953SWAMPTRANS": [
+    "Meet at the assigned French Quarter pickup point before traveling toward Honey Island Swamp.",
+    "Travel across Lake Pontchartrain on the way from New Orleans to the swamp region.",
+    "Board a quiet flat-bottom boat for a captain-led route through protected wetland passages and bayou scenery.",
+    "See a Cajun village reachable only from the water while learning how local communities have used the swamp.",
+    "Return to shore after the boat tour, then continue back to the downtown pickup point.",
+  ],
+  "15200P2": [
+    "Begin with confirmed pickup from a selected downtown hotel before traveling toward the swamp.",
+    "Travel by air-conditioned vehicle along the Mississippi River corridor on the way to the airboat launch.",
+    "Board a large 16-passenger airboat for a captain-narrated route through swamp waterways, photo stops, and wildlife habitat.",
+    "After the airboat portion, use the coordinated transfer back to the selected New Orleans hotel pickup location.",
   ],
 };
 
