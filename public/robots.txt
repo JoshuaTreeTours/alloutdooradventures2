@@ -1,10 +1,13 @@
 User-agent: Googlebot
+Disallow: /book/
 Allow: /
 
 User-agent: Googlebot-Image
+Disallow: /book/
 Allow: /
 
 User-agent: *
+Disallow: /book/
 Allow: /
 
 Sitemap: https://www.alloutdooradventures.com/sitemap.xml
