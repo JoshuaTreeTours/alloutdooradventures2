@@ -2,6 +2,7 @@ import { Link } from "wouter";
 
 import Image from "../../components/Image";
 import TourCard from "../../components/TourCard";
+import { matchesCategoryPageActivity } from "../../data/activityFilters";
 import { tours } from "../../data/tours";
 import { ADVENTURE_ACTIVITY_PAGES, slugify } from "../../data/tourCatalog";
 import { resolveHeroImage } from "../../utils/hero";
@@ -33,7 +34,7 @@ export default function ActivityStateTours({
 
   const stateTours = tours.filter(
     (tour) =>
-      tour.activitySlugs.includes(activity.slug) &&
+      matchesCategoryPageActivity(tour, activity.slug) &&
       slugify(tour.destination.state) === params.stateSlug,
   );
   const stateName = stateTours[0]?.destination.state ?? "this state";
