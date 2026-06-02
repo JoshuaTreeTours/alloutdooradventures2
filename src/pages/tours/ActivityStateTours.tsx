@@ -4,6 +4,7 @@ import Image from "../../components/Image";
 import TourCard from "../../components/TourCard";
 import {
   matchesCategoryPageActivity,
+  sortCategoryPageActivityTours,
   withCategoryPageActivityBadge,
 } from "../../data/activityFilters";
 import { tours } from "../../data/tours";
@@ -35,13 +36,16 @@ export default function ActivityStateTours({
     );
   }
 
-  const stateTours = tours
-    .filter(
-      tour =>
-        matchesCategoryPageActivity(tour, activity.slug) &&
-        slugify(tour.destination.state) === params.stateSlug
-    )
-    .map(tour => withCategoryPageActivityBadge(tour, activity.slug));
+  const stateTours = sortCategoryPageActivityTours(
+    tours
+      .filter(
+        tour =>
+          matchesCategoryPageActivity(tour, activity.slug) &&
+          slugify(tour.destination.state) === params.stateSlug
+      )
+      .map(tour => withCategoryPageActivityBadge(tour, activity.slug)),
+    activity.slug
+  );
   const stateName = stateTours[0]?.destination.state ?? "this state";
   const heroImage = resolveHeroImage({
     pageType: "activity",
