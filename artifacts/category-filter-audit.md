@@ -1,85 +1,97 @@
-# Category Assignment and Hiking Filter Audit
+# Strict Hiking Category Filter Audit
 
 ## Root cause
 
-Bike products reached `/tours/hiking/us/california` through two paths:
+Bike products originally reached `/tours/hiking/us/california` because CSV import and category-page filtering treated any secondary `hiking` activity slug as enough to render on Hiking pages. A second pass showed the same loose rule still admitted other non-hiking products — food, history, ghost, walking, boat, kayak, horseback/trail ride, yoga, rental, and general outdoor products — when generated data carried weak `hiking` categories or activity slugs.
 
-1. Legacy CSV import inferred `hiking` for cycling records when broad scenic keywords such as `trail`, `mountain`, or `canyon` appeared in bike product titles/tags. That produced cycling-primary tours with `activitySlugs: ["cycling", "hiking"]`.
-2. The activity state route filtered category pages with a simple `activitySlugs.includes(activity.slug)` check, so any cycling-primary product that carried a secondary `hiking` slug rendered on Hiking category pages.
+## Updated rule
 
-Engine6-specific audit found category labels such as `Bike Tours`, `E-Bike Tours`, `Mountain Bike Tours`, `Hiking Tours`, and `Walking Tours` were normalized literally to plural slugs (for example, `e-bike-tours`) rather than canonical activity slugs. That did not create the reported California hiking leakage by itself, but it made bike/e-bike classification inconsistent across Engine6 products.
+The Hiking category filter is now strict:
 
-## Engine6 tagged product counts after normalization
+- Include governed Engine6 products only when their primary governed category is `hiking-tour` / Hiking.
+- Include non-Engine6 products only when they have an explicit Hiking label/badge or a title-level `hike` / `hiking` product activity signal.
+- Exclude products with non-hiking activity signals such as bike/eBike/mountain-bike, boat, kayak, paddle, horseback/trail ride, food, history, ghost, yoga, rental, cooking, firearms/permits, and similar non-hiking categories.
+- Do not include products merely because generated metadata or descriptions contain broad outdoorsy words such as trail, mountain, park, outdoor, scenery, walking, or nature.
 
-- Total Engine6 listing products audited: 130
-- Hiking / hike tagged: 10
-- Bike / bicycle / cycling tagged: 15
-- eBike tagged: 8
-- Mountain bike tagged: 0
-- Walking tagged: 1
+## Removed non-hiking products from `/tours/hiking/us/california`
 
-## Engine6 products reviewed in requested categories
+Removed count: 48
 
-| Product code                     | Title                                                                            | Primary category | Categories                                                      | Activity slugs              | Notes                                                              |
-| -------------------------------- | -------------------------------------------------------------------------------- | ---------------- | --------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------ |
-| 63657P1                          | Santa Barbara Vineyard to Table Taste Tour by E-Bike                             | bike-tour        | bike-tour, food-and-drink-tour                                  | cycling, bike-tours         | Excluded from Hiking                                               |
-| 7079RREBIKE                      | Red Rock Canyon Electric Bike Tour                                               | bike-tour        | bike-tour, outdoor-activities, nature-and-wildlife-tours        | cycling, bike-tours         | Canonicalized from Bike Tours                                      |
-| 354611P1                         | Historical Railroad Trail eBike Tour                                             | bike-tour        | bike-tour, outdoor-activities, half-day-tours, historical-tours | cycling, bike-tours         | Canonicalized from Bike Tours                                      |
-| 5615689P4                        | Arts District E Bike Tour                                                        | bike-tour        | bike-tour, city-tours                                           | cycling, bike-tours         | Canonicalized eBike / mountain-bike labels to bike-tour            |
-| 6007GGB                          | Golden Gate Bridge Guided Bicycle or E-Bike Tour from San Francisco to Sausalito | bike-tour        | bike-tour, outdoor-activities                                   | cycling, bike-tours         | Excluded from Hiking                                               |
-| 6007P5                           | Golden Gate Bridge Guided Bicycle Tour with Lunch at Local Hotspot               | bike-tour        | bike-tour, outdoor-activities, food-and-drink-tour              | cycling, bike-tours         | Excluded from Hiking                                               |
-| 3454P57                          | Golden Gate Bridge Bike Tour with Muir Woods and Sausalito Tour                  | bike-tour        | bike-tour, outdoor-activities, day-trip                         | cycling, bike-tours         | Excluded from Hiking                                               |
-| 53474P8                          | Anchorage Greenbelt Bike Tour                                                    | bike-tour        | bike-tour, wildlife-tour                                        | cycling, bike-tours         | Excluded from Hiking                                               |
-| 233384P2                         | Brooklyn Bridge Waterfront Guided Bike Tour                                      | bike-tour        | bike-tour, sightseeing-tour                                     | cycling, bike-tours         | Excluded from Hiking                                               |
-| 3156P13                          | Classic Manhattan Electric Bike Tour                                             | bike-tour        | bike-tour                                                       | cycling, bike-tours         | Excluded from Hiking                                               |
-| 191303P1                         | San Diego Electric Bike Tour of Coronado (Small-Group Beach Cruiser Experience)  | bike-tour        | bike-tour                                                       | cycling, bike-tours         | Canonicalized from Bike Tours / E-Bike Tours; excluded from Hiking |
-| 383300P6                         | 90 min Electric Bike Tour of Fort Lauderdale (min 2)                             | bike-tour        | bike-tour, sightseeing-tours                                    | cycling, bike-tours         | Canonicalized from E-Bike Tours                                    |
-| 26095P3                          | Lauterbrunnen and Trummelbach Waterfalls E-bike Tour Swiss Picnic                | bike-tour        | bike-tour                                                       | cycling, bike-tours         | Excluded from Hiking                                               |
-| fh-central-park-bike-tours-16628 | Central Park Bike Tours                                                          | bike-tour        | bike-tour                                                       | cycling, bike-tours         | Excluded from Hiking                                               |
-| 3454YE3D                         | Yosemite 3-Day Camping Adventure from San Francisco                              | hiking-tour      | hiking-tour, food-and-drink-tour                                | hiking                      | Included in Hiking                                                 |
-| 5569HIKE                         | Griffith Observatory Hike: Guided Tour through Griffith Park                     | hiking-tour      | hiking-tour                                                     | hiking                      | Included in Hiking                                                 |
-| 100569P5                         | Glacier Hike on Matanuska Glacier - Best Vacation Value                          | hiking-tour      | hiking-tour, wildlife-tour                                      | hiking                      | Included in Hiking                                                 |
-| 327321P1                         | Mountain Sunrise Hike and Meditation in Palm Springs                             | hiking-tour      | hiking-tour, outdoor-activities                                 | hiking                      | Included in Hiking                                                 |
-| 237571P2                         | Full Day Hike in Joshua Tree National Park                                       | hiking-tour      | hiking-tour                                                     | hiking                      | Included in Hiking                                                 |
-| 335698P7                         | Joshua Tree National Park Half-Day Small-Group Guided Tour                       | hiking-tour      | hiking-tour, wildlife-tour                                      | hiking                      | Included in Hiking                                                 |
-| 3351P15                          | Palm Springs Indian Canyons Bike and Hike                                        | hiking-tour      | hiking-tour, bike-tour                                          | cycling, bike-tours, hiking | Included because Hiking is primary                                 |
-| 474891P3                         | New York City Private Walking Tour with a Local                                  | walking-tour     | walking-tour, private-tour                                      | adventure                   | Included on Hiking-style pages as walking experience               |
-| 60136P1                          | Antelope Canyon Horseshoe Bend Day Tour from Las Vegas                           | day-trip         | day-trip, hiking-tour                                           | hiking                      | Included by hiking signal; not a bike product                      |
-| 2335P1                           | San Andreas Fault Jeep Tour (Greater Palm Springs)                               | off-road-tour    | off-road-tour, hiking-tour                                      | hiking                      | Included by hiking signal; not a bike product                      |
-| 428219P6                         | Chinatown and Little Italy Food Tour \| Tasty Tours NYC                          | hiking-tour      | hiking-tour, food-and-drink-tour                                | hiking                      | Existing primary category is Hiking; retained by current rule      |
+- Bike The Bridge & 1 Day Hop On Hop Off Combo
+- Golden Gate Bridge Electric Bike Guided Tour
+- Golden Gate Bridge to Sausalito Bike Tour
+- Golden Gate Bridge Guided Tour
+- The Golden Gate Bridge Bike Tour
+- Alcatraz & the Golden Gate Bridge to Sausalito Tour
+- Golden Gate Bridge Bike and Brew Tour
+- Private Golden Gate Bridge to Sausalito
+- Bike The Bridge & Muir Woods Tour Combo
+- Goat Mountain & 007 Guided Ride – Intermediate
+- Big Sandy Guided Ride & Hike – Beginner
+- Custom Guided Mountain Bike Ride – All Levels
+- Big Sandy eBike Ride & Waterfall Hike – Beginner
+- 007 3rd – 1st Guided Mountain Bike Ride – Advanced
+- Golden Gate Bridge Bike Tour
+- E-Mountain Bike Tours
+- Golden Gate Bridge Electric Bike Tour
+- Sip, Savor and Sea - La Jolla
+- Pizza, Pasta and Piazzas
+- Vino! Vino! Little Italy Wine Tour
+- Brothels, Bites and Booze
+- San Diego Beach Yoga Hiking Tour
+- San Diego: Embarcadero Waterfront Ghost Tour
+- Art of Balboa Park Walking Tour
+- Blue Bridge Kayak Tour
+- Private Duffy Coronado Bay Bridge, City Skyline, Aircraft Carrier Tour • 2 Hours
+- San Diego: LGBTQ+ History Tour
+- Trail Rides
+- San Diego: Embarcadero History & Photo Tour
+- 5 Day Yoga & Hiking Retreat in San Diego
+- Tarot Reading
+- Pizza and Gelato Tour
+- The Original Downtown Food Tour (Mini)
+- Wine & Walking Tour Santa Barbara
+- Desert Nature Walk + Soundbath + Meditation + Cacao Ceremony
+- Sunset Trail Ride
+- Morning Trail Ride
+- 17' Boston Whaler
+- 13 foot Boston Whaler
+- SWFT Boston Cooking Classes
+- Boston Whaler
+- Midtown Walking Food Tour
+- Historic Old Sacramento Walking Tour
+- SWFT Washington DC Cooking Classes
+- Utah/Florida Concealed Firearms Permit
+- Jet Ski Florida Special!
+- Palm Canyon Tour
+- San Andreas Fault Jeep Tour (Greater Palm Springs)
 
-## California Hiking page validation
+## Final remaining hiking products
 
-Route: `/tours/hiking/us/california`
+Rendered count: 16
 
-Before filtering fix:
+- Laguna Wilderness Hiking — badge: Hiking
+- San Diego Tours: Torrey Pines Hiking + Picnic Experience (Private) — badge: Hiking
+- Meditation and Mountain Hike Tour 8:00 AM — badge: Hiking
+- Mountain Hike Tour (meditation optional) 10:30 AM — badge: Hiking
+- Potato Chip Rock Hiking — badge: Hiking
+- Photography Hike — badge: Hiking
+- Sunset Hike, Dinner, & Night Sky Presentation — badge: Hiking
+- Hike & Climb — badge: Hiking
+- Private Morning Hike — badge: Hiking
+- Private Sunset Hike — badge: Hiking
+- Yosemite 3-Day Camping Adventure from San Francisco — governed Engine6 Hiking Tour
+- Griffith Observatory Hike: Guided Tour through Griffith Park — governed Engine6 Hiking Tour
+- Mountain Sunrise Hike and Meditation in Palm Springs — governed Engine6 Hiking Tour
+- Full Day Hike in Joshua Tree National Park — governed Engine6 Hiking Tour
+- Joshua Tree National Park Half-Day Small-Group Guided Tour — governed Engine6 Hiking Tour
+- Palm Springs Indian Canyons Bike and Hike — governed Engine6 Hiking Tour
 
-- Total products selected by old route predicate: 64
-- Pure bicycle products selected: 17
+## Validation
 
-After filtering fix:
+A local rendered-count validation of `/tours/hiking/us/california` using the same route predicate reported:
 
-- Total products selected by new route predicate: 47
-- Pure bicycle products selected: 0
-
-Excluded pure bicycle products:
-
-- bay-city-bike-262797 — Bike The Bridge & 1 Day Hop On Hop Off Combo
-- blazing-saddles-bike-rentals-and-tours---san-francisco-78858 — Golden Gate Bridge Electric Bike Guided Tour
-- bay-city-bike-10199 — Golden Gate Bridge to Sausalito Bike Tour
-- blazing-saddles-bike-rentals-and-tours---san-francisco-78855 — Golden Gate Bridge Guided Tour
-- unlimited-biking-138644 — The Golden Gate Bridge Bike Tour
-- bay-city-bike-81664 — Alcatraz & the Golden Gate Bridge to Sausalito Tour
-- blazing-saddles-bike-rentals-and-tours---san-francisco-110469 — Golden Gate Bridge Bike and Brew Tour
-- bay-city-bike-333235 — Private Golden Gate Bridge to Sausalito
-- bay-city-bike-165139 — Bike The Bridge & Muir Woods Tour Combo
-- pedal-forward-bikes-629558 — Goat Mountain & 007 Guided Ride – Intermediate
-- pedal-forward-bikes-629569 — Big Sandy Guided Ride & Hike – Beginner
-- pedal-forward-bikes-629570 — Custom Guided Mountain Bike Ride – All Levels
-- pedal-forward-bikes-629572 — Big Sandy eBike Ride & Waterfall Hike – Beginner
-- pedal-forward-bikes-629579 — 007 3rd – 1st Guided Mountain Bike Ride – Advanced
-- bike-and-roll-san-francisco-638088 — Golden Gate Bridge Bike Tour
-- calistoga-bikeshop-542598 — E-Mountain Bike Tours
-- fog-city-bike-tours-901002 — Golden Gate Bridge Electric Bike Tour
-
-Prerendered HTML validation for `dist/tours/hiking/us/california/index.html` found none of these pure bicycle strings: `Golden Gate Bridge Electric Bike Tour`, `Big Sandy eBike Ride`, `Mountain Bike`, `Bike Tour`, or `Bicycle`.
+- Previous loose activity-slug selection: 64 products
+- Strict rendered selection: 16 products
+- Removed non-hiking products: 48
+- Remaining products without a visible Hiking badge or governed Engine6 Hiking Tour classification: 0
