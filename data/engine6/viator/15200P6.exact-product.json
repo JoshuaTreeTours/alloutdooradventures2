@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "15200P6",
+    "productUrl": "https://www.viator.com/tours/New-Orleans/New-Orleans-Swamp-Tour-Boat-Adventure-With-Pickup/d675-15200P6",
+    "title": "New Orleans Swamp Tour Boat Adventure With Pickup",
+    "description": {
+      "text": "Travel from New Orleans to a Louisiana swamp for a narrated boat tour through bayou waterways and wetland scenery. This experience includes selected hotel pickup and drop-off, then continues to the launch area for time on the water with a local captain. The route is water-based rather than a city sightseeing loop, so conditions, wildlife activity, and captain routing shape what guests see during the outing. Expect marsh and cypress landscapes, opportunities for wildlife viewing, and practical transportation logistics suited to travelers who want a swamp experience without arranging a separate drive from New Orleans."
+    },
+    "location": {
+      "city": "New Orleans",
+      "state": "Louisiana",
+      "country": "USA"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "$60.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 2220
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b4/57/30/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            },
+            "CARD": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b4/57/30/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Round-trip transportation from selected New Orleans pickup locations",
+      "Narrated swamp boat tour through Louisiana bayou waterways",
+      "Wetland scenery with seasonal opportunities to see local wildlife",
+      "Water-based route led by a local captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from selected New Orleans hotels or designated pickup points when confirmed at booking."
+      },
+      "end": {
+        "description": "This activity returns to the original pickup location or designated drop-off point."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "New Orleans pickup",
+        "description": "Begin with pickup from a selected New Orleans hotel or designated pickup point before traveling to the swamp boat launch.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Louisiana swamp boat launch",
+        "description": "Check in at the launch area and board the swamp boat for a captain-led outing on the water.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bayou waterways",
+        "description": "Cruise through swamp and bayou channels where wetland scenery and wildlife viewing vary by season and conditions.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Return to New Orleans",
+        "description": "After the boat portion, use the included transportation back toward the selected New Orleans drop-off point.",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Swamp boat tour",
+      "Local captain commentary",
+      "Round-trip transportation from selected pickup locations"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Operates in most weather conditions",
+      "Wildlife sightings vary by season, weather, and water conditions",
+      "Most travelers can participate"
+    ],
+    "categories": [
+      {
+        "label": "Boat tour"
+      },
+      {
+        "label": "Wildlife tour"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 60
+      }
+    }
+  }
+}
