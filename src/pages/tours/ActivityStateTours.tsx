@@ -2,6 +2,10 @@ import { Link } from "wouter";
 
 import Image from "../../components/Image";
 import TourCard from "../../components/TourCard";
+import {
+  matchesCategoryPageActivity,
+  withCategoryPageActivityBadge,
+} from "../../data/activityFilters";
 import { tours } from "../../data/tours";
 import { ADVENTURE_ACTIVITY_PAGES, slugify } from "../../data/tourCatalog";
 import { resolveHeroImage } from "../../utils/hero";
@@ -17,7 +21,7 @@ export default function ActivityStateTours({
   params,
 }: ActivityStateToursProps) {
   const activity = ADVENTURE_ACTIVITY_PAGES.find(
-    (item) => item.slug === params.activitySlug,
+    item => item.slug === params.activitySlug
   );
 
   if (!activity) {
@@ -31,11 +35,13 @@ export default function ActivityStateTours({
     );
   }
 
-  const stateTours = tours.filter(
-    (tour) =>
-      tour.activitySlugs.includes(activity.slug) &&
-      slugify(tour.destination.state) === params.stateSlug,
-  );
+  const stateTours = tours
+    .filter(
+      tour =>
+        matchesCategoryPageActivity(tour, activity.slug) &&
+        slugify(tour.destination.state) === params.stateSlug
+    )
+    .map(tour => withCategoryPageActivityBadge(tour, activity.slug));
   const stateName = stateTours[0]?.destination.state ?? "this state";
   const heroImage = resolveHeroImage({
     pageType: "activity",
@@ -98,7 +104,7 @@ export default function ActivityStateTours({
       <section className="mx-auto max-w-6xl px-6 py-14">
         {stateTours.length ? (
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {stateTours.map((tour) => (
+            {stateTours.map(tour => (
               <TourCard key={tour.id} tour={tour} />
             ))}
           </div>

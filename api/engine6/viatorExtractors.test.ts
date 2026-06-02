@@ -49,3 +49,30 @@ describe("extractEngine6Product operatorReviews mapping", () => {
   });
 
 });
+
+describe("extractEngine6Product category normalization", () => {
+  it("canonicalizes bike, e-bike, mountain bike, hiking, and walking category labels", () => {
+    const payload = {
+      product: {
+        productCode: "CATEGORYTEST",
+        title: "Category test",
+        categories: [
+          "Bike Tours",
+          "E-Bike Tours",
+          "Mountain Bike Tours",
+          "Hiking Tours",
+          "Walking Tours",
+        ],
+      },
+    };
+
+    const result = extractEngine6Product(payload as Record<string, unknown>);
+
+    expect(result.extracted.primaryCategory).toBe("bike-tour");
+    expect(result.extracted.categories).toEqual([
+      "bike-tour",
+      "hiking-tour",
+      "walking-tour",
+    ]);
+  });
+});

@@ -1,3 +1,4 @@
+import { matchesCategoryPageActivity } from "./activityFilters";
 import type { BookingProvider, Tour } from "./tours.types";
 import { flagstaffTours } from "./flagstaffTours";
 import { sedonaTours } from "./sedonaTours";
@@ -467,13 +468,7 @@ export const getTourBySlugs = (
   );
 
 export const getToursByActivity = (activitySlug: string) =>
-  tours.filter(tour => {
-    if (activitySlug === "hiking") {
-      return tour.primaryCategory === "hiking";
-    }
-
-    return tour.activitySlugs.includes(activitySlug);
-  });
+  tours.filter(tour => matchesCategoryPageActivity(tour, activitySlug));
 
 export const getTourDetailPath = (tour: Tour) =>
   tour.destination.stateSlug === "switzerland" || tour.engine === "engine6"

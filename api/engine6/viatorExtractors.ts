@@ -1484,20 +1484,43 @@ const toCategorySlug = (value: string) =>
     .replace(/^-+|-+$/g, "")
     .replace(/-{2,}/g, "-");
 
+const ENGINE6_CATEGORY_CANONICAL_SLUGS: Record<string, string> = {
+  "bike-tours": "bike-tour",
+  "bicycle-tours": "bike-tour",
+  "bicycle-tour": "bike-tour",
+  "cycling-tours": "bike-tour",
+  "cycling-tour": "bike-tour",
+  "e-bike-tours": "bike-tour",
+  "e-bike-tour": "bike-tour",
+  "ebike-tours": "bike-tour",
+  "ebike-tour": "bike-tour",
+  "mountain-bike-tours": "bike-tour",
+  "mountain-bike-tour": "bike-tour",
+  "hiking-tours": "hiking-tour",
+  "walking-tours": "walking-tour",
+};
+
+const canonicalizeEngine6CategorySlug = (slug: string) =>
+  ENGINE6_CATEGORY_CANONICAL_SLUGS[slug] ?? slug;
+
 const normalizeCategoryArray = (value: unknown): string[] =>
   Array.isArray(value)
     ? dedupeStrings(
-        value.map(item => {
-          if (typeof item === "string") return item;
-          const row = asRecord(item);
-          return (
-            asNonEmptyString(row?.label) ??
-            asNonEmptyString(row?.title) ??
-            asNonEmptyString(row?.name) ??
-            asNonEmptyString(row?.description)
-          );
-        })
-      ).map(toCategorySlug)
+        value
+          .map(item => {
+            if (typeof item === "string") return item;
+            const row = asRecord(item);
+            return (
+              asNonEmptyString(row?.label) ??
+              asNonEmptyString(row?.title) ??
+              asNonEmptyString(row?.name) ??
+              asNonEmptyString(row?.description)
+            );
+          })
+          .filter((item): item is string => Boolean(item))
+          .map(toCategorySlug)
+          .map(canonicalizeEngine6CategorySlug)
+      )
     : [];
 
 const extractClassification = (product: RecordLike) => {

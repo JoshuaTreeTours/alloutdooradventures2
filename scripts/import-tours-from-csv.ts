@@ -369,6 +369,9 @@ const normalizeCategory = (value?: string) => {
   return undefined;
 };
 
+const hasStrongHikingSignal = (text: string) =>
+  /\b(hike|hiking|trek|walking|nature walk|guided walk)\b/i.test(text);
+
 const inferCategoriesFromText = (text: string) => {
   const normalized = text.toLowerCase();
   return Object.entries(CATEGORY_KEYWORDS)
@@ -407,10 +410,18 @@ const resolveActivitySlugs = ({
     };
   }
 
-  const inferred = inferCategoriesFromText(
-    [title, shortDescription, tags.join(" ")].filter(Boolean).join(" "),
-  );
+  const classifierText = [title, shortDescription, tags.join(" ")]
+    .filter(Boolean)
+    .join(" ");
   const normalizedExplicit = normalizeCategory(explicitCategory) ?? fallbackActivity;
+  const inferred = inferCategoriesFromText(classifierText).filter(category => {
+    const isWeakCyclingHikingMatch =
+      normalizedExplicit === "cycling" &&
+      category === "hiking" &&
+      !hasStrongHikingSignal(classifierText);
+
+    return !isWeakCyclingHikingMatch;
+  });
   const categories = new Set<string>([
     ...(normalizedExplicit ? [normalizedExplicit] : []),
     ...inferred,
