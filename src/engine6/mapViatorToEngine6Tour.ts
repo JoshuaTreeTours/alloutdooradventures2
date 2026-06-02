@@ -20,6 +20,7 @@ const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
   "2630SUN": "San Francisco Bay Sunset & City Lights Cruise",
   "6455NOLAAIR": "New Orleans Airboat Ride | Louisiana Bayou Tour",
   "15200P6": "New Orleans Swamp Boat Tour with Pickup",
+  "3780P45": "New Orleans Riverboat Sightseeing Cruise",
 };
 const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "415653P2":
@@ -32,6 +33,8 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Ride by airboat through Lafitte-area cypress swamp near New Orleans, with wildlife viewing, captain commentary, and optional hotel transportation.",
   "15200P6":
     "Travel from New Orleans to a Louisiana swamp for a narrated boat tour with pickup, bayou scenery, and seasonal wildlife viewing.",
+  "3780P45":
+    "Cruise the Mississippi River from New Orleans on a 75-minute narrated riverboat route past French Quarter waterfront landmarks.",
 };
 const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",
@@ -53,6 +56,8 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Ride by airboat through cypress swamp and bayou waterways near Jean Lafitte National Historical Park and Preserve. This New Orleans-area tour focuses on marsh scenery, local wildlife, and captain-led interpretation, with optional hotel transportation on selected bookings and a direct meeting point in Lafitte. The route is water-based rather than a city sightseeing loop, so the experience centers on the airboat launch, swamp channels, and wildlife viewing conditions on the day of travel. Guests depart from Lafitte, south of New Orleans, for a bayou outing shaped by water level, weather, and seasonal wildlife activity.",
   "15200P6":
     "Travel from New Orleans to a Louisiana swamp for a narrated boat tour through bayou waterways and wetland scenery. This experience includes selected hotel pickup and drop-off, then continues to the launch area for time on the water with a local captain. The route is water-based rather than a city sightseeing loop, so conditions, wildlife activity, and captain routing shape what guests see during the outing. Expect marsh and cypress landscapes, opportunities for wildlife viewing, and practical transportation logistics suited to travelers who want a swamp experience without arranging a separate drive from New Orleans.",
+  "3780P45":
+    "Board the Riverboat CITY of NEW ORLEANS for a 75-minute Mississippi River sightseeing cruise from the French Quarter riverfront. The route stays on the water with live captain narration, open river views, and a round-trip departure behind JAX Brewery. From the vessel, travelers can see the French Quarter riverfront, Jackson Square, St. Louis Cathedral, the Crescent City Connection, the Aquarium of the Americas, Mardi Gras World, Caesars Casino, and Woldenberg Riverfront Park before returning to the same dock.",
 };
 
 const ENGINE6_OVERVIEW_OVERRIDES: Record<
@@ -258,6 +263,15 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Continue through Los Olivos for small-town wine-country atmosphere and additional tasting opportunities when scheduled.",
     "Travel through Santa Ynez with route commentary on valley history, agriculture, and regional winemaking styles.",
     "Return to Santa Barbara with a final scenic drive back over the pass after the day’s tasting itinerary wraps.",
+  ],
+  "3780P45": [
+    "Board at 101 Saint Louis Street behind JAX Brewery for the round-trip riverboat cruise departure.",
+    "Cruise along the French Quarter riverfront while the captain narrates the Mississippi River setting.",
+    "Pass Jackson Square and St. Louis Cathedral from the water along the downtown riverfront.",
+    "View the Crescent City Connection from the Mississippi River during the sightseeing route.",
+    "Pass the Aquarium of the Americas along the central New Orleans riverfront.",
+    "Pass Mardi Gras World while the boat continues along the riverfront corridor.",
+    "Cruise by Woldenberg Riverfront Park before returning to the French Quarter dock.",
   ],
   "447486P2": [
     "Depart from Santa Barbara Harbor and settle in for a relaxed happy-hour yacht cruise.",

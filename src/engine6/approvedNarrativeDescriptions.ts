@@ -5,6 +5,7 @@ export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "3857PHI",
   "5250LIBERTYELLIS",
   "122012P17",
+  "3780P45",
 ] as const;
 
 export type Engine6TargetedNarrativeDescriptionProductCode =
@@ -26,6 +27,8 @@ export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTIONS: Record<
     "Explore two of New York Harbor's most important landmarks with a guided visit to Liberty Island and Ellis Island. Learn the story of the Statue of Liberty as a symbol of freedom before continuing to Ellis Island, where millions of immigrants first entered the United States. Ferry transportation is included, and your guide provides historical context that brings the harbor, the monuments, and the immigration experience to life throughout the tour.",
   "122012P17":
     "See many of New York City's most recognizable neighborhoods and landmarks on a guided half-day sightseeing tour by luxury coach. Travel through Midtown, Central Park, Lincoln Center, and other notable areas while your guide shares stories about the city's history, architecture, and culture. Strategic photo stops along the route allow you to capture iconic views without the hassle of navigating the city on your own, making this an efficient introduction to New York for first-time visitors.",
+  "3780P45":
+    "Cruise the Mississippi River from the French Quarter riverfront aboard the Riverboat CITY of NEW ORLEANS. This 75-minute sightseeing route uses live captain narration while the boat passes downtown river landmarks including Jackson Square, St. Louis Cathedral, the Crescent City Connection, the Aquarium of the Americas, Mardi Gras World, Caesars Casino, and Woldenberg Riverfront Park. Travelers experience New Orleans from the water with open river views and a smooth downtown round-trip finish at the dock behind JAX Brewery.",
 };
 
 export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
