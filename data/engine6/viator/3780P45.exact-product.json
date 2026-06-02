@@ -1,0 +1,151 @@
+{
+  "product": {
+    "productCode": "3780P45",
+    "productUrl": "https://www.viator.com/tours/New-Orleans/Mardi-Gras-Jazz-Brunch-Cruise/d675-3780P45",
+    "title": "New Orleans 75-Minute Riverboat Sightseeing Cruise",
+    "description": {
+      "text": "Board the Riverboat CITY of NEW ORLEANS for a 75-minute Mississippi River sightseeing cruise from the French Quarter riverfront. The route stays on the water with live captain narration, open river views, and a round-trip departure behind JAX Brewery. From the vessel, travelers can see the French Quarter riverfront, Jackson Square, St. Louis Cathedral, the Crescent City Connection, the Aquarium of the Americas, Mardi Gras World, Caesars Casino, and Woldenberg Riverfront Park before returning to the same dock."
+    },
+    "location": {
+      "city": "New Orleans",
+      "state": "Louisiana"
+    },
+    "duration": "75 minutes",
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "totalCount": 59,
+          "averageRating": 4.118644
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 3
+        },
+        {
+          "rating": 2.0,
+          "count": 5
+        },
+        {
+          "rating": 3.0,
+          "count": 6
+        },
+        {
+          "rating": 4.0,
+          "count": 13
+        },
+        {
+          "rating": 5.0,
+          "count": 32
+        }
+      ],
+      "totalReviews": 59,
+      "combinedAverageRating": 4.118644
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/33/3e/2e/e9/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Cruise the Mississippi River from the French Quarter riverfront aboard the Riverboat CITY of NEW ORLEANS.",
+      "Listen to live captain narration during the 75-minute sightseeing route.",
+      "See riverfront landmarks such as Jackson Square, St. Louis Cathedral, Mardi Gras World, and Woldenberg Riverfront Park from the water.",
+      "Board and return at 101 Saint Louis Street behind JAX Brewery."
+    ],
+    "logistics": {
+      "start": {
+        "description": "101 Saint Louis Street, New Orleans, LA 70130. Board directly behind JAX Brewery on the French Quarter riverfront."
+      },
+      "end": {
+        "description": "The cruise returns to the same French Quarter riverfront dock behind JAX Brewery."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Riverboat CITY of NEW ORLEANS boarding",
+        "description": "Board the Riverboat CITY of NEW ORLEANS at the French Quarter riverfront for the round-trip sightseeing cruise.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "French Quarter riverfront",
+        "description": "Cruise past the historic French Quarter edge along the Mississippi River near the Toulouse Street wharf.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Jackson Square and St. Louis Cathedral",
+        "description": "See Jackson Square and St. Louis Cathedral from the river as the boat moves along the downtown waterfront.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Crescent City Connection",
+        "description": "View the Crescent City Connection from the Mississippi River during the sightseeing route.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Aquarium of the Americas",
+        "description": "Pass the Aquarium of the Americas along the central New Orleans riverfront.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Mardi Gras World",
+        "description": "Pass Mardi Gras World from the water while continuing along the riverfront corridor.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Woldenberg Riverfront Park",
+        "description": "Cruise by Woldenberg Riverfront Park before returning toward the French Quarter dock.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "75-minute sightseeing cruise",
+      "Live captain narration",
+      "Full-service bars on every deck",
+      "Snack bar onboard"
+    ],
+    "additionalInfo": [
+      "Wheelchair accessible",
+      "Service animals allowed",
+      "Public transportation options are available nearby",
+      "The Riverboat CITY of NEW ORLEANS cruises rain or shine.",
+      "The top deck is accessible by stairs only."
+    ],
+    "faqs": [
+      {
+        "question": "Where does the New Orleans riverboat sightseeing cruise board?",
+        "answer": "Boarding is at 101 Saint Louis Street in New Orleans, directly behind JAX Brewery on the French Quarter riverfront."
+      },
+      {
+        "question": "How long is the Mississippi River sightseeing cruise?",
+        "answer": "The sightseeing cruise lasts about 75 minutes and returns to the same riverfront dock."
+      }
+    ],
+    "primaryCategory": "boat-tour",
+    "categories": ["boat-tour", "sightseeing-tour"],
+    "pricing": {
+      "summary": {
+        "fromPrice": 25.75,
+        "fromPriceBeforeDiscount": 25.75
+      },
+      "currency": "USD"
+    }
+  },
+  "sourceMeta": {
+    "fetchedFrom": "https://api.viator.com/partner/products/3780P45",
+    "fetchedAt": "2026-06-02T00:00:00Z",
+    "sourceSchema": "viator-v2-product"
+  }
+}

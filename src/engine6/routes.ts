@@ -248,6 +248,9 @@ export const ENGINE6_NEW_ORLEANS_AIRBOAT_ROUTE =
 export const ENGINE6_NEW_ORLEANS_SWAMP_BOAT_PICKUP_PRODUCT_CODE = "15200P6";
 export const ENGINE6_NEW_ORLEANS_SWAMP_BOAT_PICKUP_ROUTE =
   "/destinations/louisiana/new-orleans/tours/new-orleans-swamp-tour-boat-adventure-with-pickup";
+export const ENGINE6_NEW_ORLEANS_RIVERBOAT_SIGHTSEEING_PRODUCT_CODE = "3780P45";
+export const ENGINE6_NEW_ORLEANS_RIVERBOAT_SIGHTSEEING_ROUTE =
+  "/destinations/louisiana/new-orleans/tours/new-orleans-75-minute-riverboat-sightseeing-cruise";
 export const ENGINE6_SAN_DIEGO_SUNDAY_BRUNCH_CRUISE_PRODUCT_CODE = "5144BRUNCH";
 export const ENGINE6_SAN_DIEGO_SUNDAY_BRUNCH_CRUISE_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-sunday-brunch-cruise";
@@ -692,6 +695,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_NEW_ORLEANS_SWAMP_BOAT_PICKUP_ROUTE,
     ENGINE6_NEW_ORLEANS_SWAMP_BOAT_PICKUP_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NEW_ORLEANS_RIVERBOAT_SIGHTSEEING_ROUTE,
+    ENGINE6_NEW_ORLEANS_RIVERBOAT_SIGHTSEEING_PRODUCT_CODE,
   ],
   [ENGINE6_NYC_MEDIA_BOAT_ROUTE, ENGINE6_NYC_MEDIA_BOAT_PRODUCT_CODE],
   [
