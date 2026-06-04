@@ -1,8 +1,18 @@
-const HARD_DELETED_PRODUCT_IDS = new Set(["301378", "301379", "549337"]);
+const HARD_DELETED_PRODUCT_IDS = new Set([
+  "301378",
+  "301379",
+  "549337",
+  "650824",
+  "661652",
+  "519110",
+]);
 const HARD_DELETED_SLUGS = new Set([
   "intermediate-singletrack-mountain-biking-clinic-301378",
   "private-mtb-lesson-301379",
   "golden-gate-bridge-bike-tour-with-muir-woods-and-sausalito-549337",
+  "full-day-tours-650824",
+  "bike-661652",
+  "camp-talks-519110",
 ]);
 const HARD_DELETED_CANONICAL_PATHS = new Set([
   "/destinations/united-states/alaska/anchorage/tours/intermediate-singletrack-mountain-biking-clinic-301378",
@@ -12,6 +22,9 @@ const HARD_DELETED_CANONICAL_PATHS = new Set([
   "/tours/alaska/anchorage/intermediate-singletrack-mountain-biking-clinic-301378",
   "/tours/alaska/anchorage/private-mtb-lesson-301379",
   "/destinations/california/san-francisco/tours/golden-gate-bridge-bike-tour-with-muir-woods-and-sausalito-549337",
+  "/destinations/wyoming/jackson/tours/full-day-tours-650824",
+  "/destinations/california/coronado/tours/bike-661652",
+  "/destinations/australia/summerlands/tours/camp-talks-519110",
 ]);
 
 const normalize = (value?: string | null) => (value ?? "").trim().toLowerCase();

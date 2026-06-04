@@ -16,6 +16,7 @@ const MISSING_ROUTE_FIXTURE_URLS = [
   "/destinations/california/coronado/tours/bike-661652",
   "/destinations/alaska/anchorage/tours/8-day-zanzibar---the-spice-island-mangroves-and-stonetown-517094",
   "/destinations/australia/summerlands/tours/camp-talks-519110",
+  "/destinations/colorado/oak-creek/tours/__SEO_CANONICAL__",
   "/destinations/california/los-angeles/tours/warner-bros-studio-tour-hollywood-148509p1",
   "/destinations/colorado/colorado-springs/tours/25-hour-cocktails-and-canaps-walking-tour-148263",
 ];
@@ -54,11 +55,11 @@ const resolvesToTourTemplate = (pathname: string) => {
 
     return Boolean(
       getEngine6NativeTourByCanonicalPath(decoded) ||
-        getLegacyFhMigratedTourBySlugs(stateSlug, citySlug, tourSlug) ||
-        getTourBySlugs(stateSlug, citySlug, tourSlug) ||
-        getEngine2TourBySlug(stateSlug, citySlug, tourSlug) ||
-        getEngine3TourBySlugs(stateSlug, citySlug, tourSlug) ||
-        getEngine4TourBySlugs(stateSlug, citySlug, tourSlug)
+      getLegacyFhMigratedTourBySlugs(stateSlug, citySlug, tourSlug) ||
+      getTourBySlugs(stateSlug, citySlug, tourSlug) ||
+      getEngine2TourBySlug(stateSlug, citySlug, tourSlug) ||
+      getEngine3TourBySlugs(stateSlug, citySlug, tourSlug) ||
+      getEngine4TourBySlugs(stateSlug, citySlug, tourSlug)
     );
   }
 
@@ -84,11 +85,11 @@ describe("sitemap URL integrity", () => {
 
     expect(urls).not.toHaveLength(0);
     expect(urls.filter(url => /__SEO_|placeholder/i.test(url))).toEqual([]);
-    expect(MISSING_ROUTE_FIXTURE_URLS.filter(url => urls.includes(url))).toEqual(
-      []
-    );
-    expect([...sitemap.toursUrls].filter(url => !resolvesToTourTemplate(url))).toEqual(
-      []
-    );
+    expect(
+      MISSING_ROUTE_FIXTURE_URLS.filter(url => urls.includes(url))
+    ).toEqual([]);
+    expect(
+      [...sitemap.toursUrls].filter(url => !resolvesToTourTemplate(url))
+    ).toEqual([]);
   }, 60_000);
 });

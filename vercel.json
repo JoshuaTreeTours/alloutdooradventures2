@@ -286,6 +286,30 @@
       "destination": "/robots.txt"
     },
     {
+      "source": "/destinations/wyoming/jackson/tours/full-day-tours-650824",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/california/coronado/tours/bike-661652",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/australia/summerlands/tours/camp-talks-519110",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/colorado/oak-creek/tours/__SEO_CANONICAL__",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/:state/:city/tours/__SEO_PLACEHOLDER__",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/:state/:city/tours/:slug(.*placeholder.*)",
+      "destination": "/api/gone"
+    },
+    {
       "source": "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849",
       "destination": "/api/gone"
     },
