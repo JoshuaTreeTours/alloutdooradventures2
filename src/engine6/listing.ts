@@ -93,7 +93,11 @@ const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
     },
     startingPrice: tour.priceAmount ?? undefined,
     currency: "USD",
-    tagPills: tour.categoryLabel ? [tour.categoryLabel] : undefined,
+    tagPills: tour.primaryDisplayCategory
+      ? [tour.primaryDisplayCategory]
+      : tour.categoryLabel
+        ? [tour.categoryLabel]
+        : undefined,
     activitySlugs: getEngine6ActivitySlugs(tour),
     bookingProvider: tour.ownership.ctaOwner,
     bookingUrl: tour.bookingUrl,

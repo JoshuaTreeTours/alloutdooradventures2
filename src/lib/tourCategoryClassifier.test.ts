@@ -54,4 +54,29 @@ describe("classifyTourCategories", () => {
       "sightseeing-city-tours",
     ]);
   });
+
+  it("does not infer activities from Santa Barbara trolley route location names", () => {
+    expect(
+      slugsFor({
+        title: "Santa Barbara Trolley Tour",
+        overview:
+          "See Santa Barbara highlights by trolley with local narration.",
+        itinerary: [
+          { title: "Stearns Wharf" },
+          { title: "Andrée Clark Bird Refuge" },
+          { title: "East Beach waterfront" },
+        ],
+      })
+    ).toEqual(["sightseeing-city-tours"]);
+  });
+
+  it("uses Jeep & Off-Road as primary when off-road and trail language both appear", () => {
+    expect(
+      slugsFor({
+        title: "Off Road Las Vegas Tour",
+        overview:
+          "Ride a 4x4 off-road route near Las Vegas with desert trail scenery.",
+      })
+    ).toEqual(["jeep-off-road"]);
+  });
 });

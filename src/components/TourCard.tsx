@@ -144,7 +144,8 @@ export default function TourCard({
   };
   const detailHref = href ?? getTourDetailPath(tour);
   const fareHarborId =
-    tour.bookingUrl?.match(/\/items\/(\d+)/)?.[1] ?? tour.id.replace(/^engine2-/, "");
+    tour.bookingUrl?.match(/\/items\/(\d+)/)?.[1] ??
+    tour.id.replace(/^engine2-/, "");
   if (
     CONTAMINATED_TOUR_IDS.has(fareHarborId) ||
     CONTAMINATED_TOUR_PATHS.has(detailHref) ||
@@ -160,10 +161,12 @@ export default function TourCard({
   const blurb = getCardBlurb(tour);
   const categorySource =
     tour.primaryCategory ?? tour.categories?.[0] ?? tour.activitySlugs?.[0];
-  const categoryLabel =
+  const fallbackCategoryLabel =
     tour.engine === "engine6"
       ? formatCategoryLabel(categorySource)
       : getActivityLabelFromSlug(categorySource);
+  const categoryLabel =
+    tour.primaryDisplayCategory?.trim() || fallbackCategoryLabel;
   const regionLabel = tour.destination.state || tour.destination.country || "";
   const locationLabel = regionLabel
     ? `${tour.destination.city}, ${regionLabel}`
@@ -185,12 +188,13 @@ export default function TourCard({
       ? tour.heroImage?.trim() || ""
       : (resolveTourHeroImage(tour) ?? "");
   const fallbackImage = cardImage;
-  const renderedTagPills =
-    tour.tagPills?.map(tag =>
-      tour.engine === "engine6" && tag.toUpperCase() === "ENGINE6"
-        ? formatCategoryLabel(categorySource)
-        : tag
-    ) ?? [];
+  const renderedTagPills = tour.primaryDisplayCategory?.trim()
+    ? [tour.primaryDisplayCategory.trim()]
+    : (tour.tagPills?.map(tag =>
+        tour.engine === "engine6" && tag.toUpperCase() === "ENGINE6"
+          ? fallbackCategoryLabel
+          : tag
+      ) ?? []);
 
   return (
     <article

@@ -59,24 +59,10 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
     signals: [/\b(?:bike|bicycle|e[- ]?bike|ebike|cycling|pedal)\b/],
   },
   {
-    slug: "hiking",
-    signals: [/\b(?:hike|hiking|trail|trek|nature walk|canyon walk)\b/],
-  },
-  {
-    slug: "paddle-sports",
-    signals: [
-      /\b(?:kayak|kayaking|canoe|paddleboard|stand up paddle|sup|rafting|river float)\b/,
-    ],
-  },
-  {
     slug: "water-sports",
     signals: [
       /\b(?:jet ski|jetski|waverunner|wave runner|parasail|parasailing|wakeboard|tubing|water ski|speedboat|powerboat)\b/,
     ],
-  },
-  {
-    slug: "sailing",
-    signals: [/\b(?:sail|sailing|yacht|catamaran|schooner)\b/],
   },
   {
     slug: "jeep-off-road",
@@ -87,6 +73,16 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
     signals: [
       /\b(?:helicopter|airplane|flightseeing|aerial|balloon|seaplane)\b/,
     ],
+  },
+  {
+    slug: "paddle-sports",
+    signals: [
+      /\b(?:kayak|kayaking|canoe|paddleboard|stand up paddle|sup|rafting|river float)\b/,
+    ],
+  },
+  {
+    slug: "sailing",
+    signals: [/\b(?:sail|sailing|yacht|catamaran|schooner)\b/],
   },
   {
     slug: "wildlife",
@@ -107,6 +103,12 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
     ],
   },
   {
+    slug: "hiking",
+    signals: [
+      /\b(?:hike|hiking|trek|nature walk|canyon walk|trail hike|hiking trail|trail walk|guided trail)\b/,
+    ],
+  },
+  {
     slug: "sightseeing-city-tours",
     signals: [
       /\b(?:sightseeing|city tour|trolley|bus tour|walking tour|hop[- ]on hop[- ]off|landmarks|highlights tour)\b/,
@@ -115,10 +117,13 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
 ];
 
 const SOURCE_CATEGORY_TO_ACTIVITY: Record<string, TourActivityCategorySlug> = {
+  cycling: "cycling",
   "bike-tour": "cycling",
   "bicycle-tour": "cycling",
   "cycling-tour": "cycling",
+  hiking: "hiking",
   "hiking-tour": "hiking",
+  canoeing: "paddle-sports",
   "paddle-tour": "paddle-sports",
   "boat-tour": "sailing",
   "snorkeling-tour": "water-sports",
@@ -129,6 +134,8 @@ const SOURCE_CATEGORY_TO_ACTIVITY: Record<string, TourActivityCategorySlug> = {
   "sightseeing-tour": "sightseeing-city-tours",
   "walking-tour": "sightseeing-city-tours",
 };
+
+const CATEGORY_PRIORITY = CATEGORY_SIGNAL_PATTERNS.map(pattern => pattern.slug);
 
 const SIGHTSEEING_SLUG: TourActivityCategorySlug = "sightseeing-city-tours";
 
@@ -166,7 +173,6 @@ const buildClassifierText = (input: TourCategoryClassificationInput) => {
 
     if (item) {
       appendIfPresent(parts, item.sectionLabel);
-      appendIfPresent(parts, item.title);
       appendIfPresent(parts, item.description);
     }
   }
@@ -185,14 +191,16 @@ const pushUnique = <T>(items: T[], item: T) => {
   if (!items.includes(item)) items.push(item);
 };
 
-const orderPrimaryFirst = (slugs: TourActivityCategorySlug[]) => {
-  if (slugs.length <= 1 || !slugs.includes(SIGHTSEEING_SLUG)) {
-    return slugs;
-  }
+const orderPrimaryFirst = (slugs: TourActivityCategorySlug[]) =>
+  [...slugs].sort((a, b) => {
+    if (a === SIGHTSEEING_SLUG && b !== SIGHTSEEING_SLUG) return 1;
+    if (b === SIGHTSEEING_SLUG && a !== SIGHTSEEING_SLUG) return -1;
 
-  const specific = slugs.filter(slug => slug !== SIGHTSEEING_SLUG);
-  return specific.length > 0 ? [...specific, SIGHTSEEING_SLUG] : slugs;
-};
+    const priorityA = CATEGORY_PRIORITY.indexOf(a);
+    const priorityB = CATEGORY_PRIORITY.indexOf(b);
+
+    return priorityA - priorityB;
+  });
 
 export const classifyTourCategories = (
   input: TourCategoryClassificationInput
@@ -212,7 +220,19 @@ export const classifyTourCategories = (
     }
   }
 
-  const matchedCategorySlugs = orderPrimaryFirst(matched);
+  const isTransitSightseeingTour =
+    /\b(?:trolley|bus tour|hop[- ]on hop[- ]off)\b/.test(normalizedText) &&
+    matched.includes(SIGHTSEEING_SLUG);
+  const filteredMatches = isTransitSightseeingTour
+    ? matched.filter(
+        slug =>
+          slug === SIGHTSEEING_SLUG ||
+          slug === "food-wine" ||
+          slug === "stargazing"
+      )
+    : matched;
+
+  const matchedCategorySlugs = orderPrimaryFirst(filteredMatches);
   const activityCategories = matchedCategorySlugs
     .map(slug => CATEGORY_BY_SLUG.get(slug))
     .filter((category): category is TourActivityCategory => Boolean(category));
