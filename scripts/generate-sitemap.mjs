@@ -14,7 +14,7 @@ const MIN_TOUR_URL_COUNT = 50;
 
 const EXCLUDED_PRODUCT_CODES = ["36001P1", "301378", "301379"];
 const EXCLUDED_TOUR_PATH_TOKENS = [
-  ...EXCLUDED_PRODUCT_CODES.map((code) => code.toLowerCase()),
+  ...EXCLUDED_PRODUCT_CODES.map(code => code.toLowerCase()),
   "yosemite-in-a-day-tour-from-san-francisco",
   "intermediate-singletrack-mountain-biking-clinic-301378",
   "private-mtb-lesson-301379",
@@ -30,9 +30,10 @@ const LEGACY_SOFT_404_TOUR_PATH_PATTERNS = [
 const excludedUrlStats = {
   tokenMatches: 0,
   legacySoft404Matches: 0,
+  bookingMatches: 0,
 };
 
-const ensurePath = (value) => {
+const ensurePath = value => {
   if (!value) {
     return null;
   }
@@ -61,12 +62,21 @@ const addUrl = (set, value) => {
   }
 
   const normalizedLower = normalized.toLowerCase();
-  if (EXCLUDED_TOUR_PATH_TOKENS.some((token) => normalizedLower.includes(token))) {
+  if (/\/book\/?$/i.test(normalized)) {
+    excludedUrlStats.bookingMatches += 1;
+    return;
+  }
+
+  if (
+    EXCLUDED_TOUR_PATH_TOKENS.some(token => normalizedLower.includes(token))
+  ) {
     excludedUrlStats.tokenMatches += 1;
     return;
   }
 
-  if (LEGACY_SOFT_404_TOUR_PATH_PATTERNS.some((pattern) => pattern.test(normalized))) {
+  if (
+    LEGACY_SOFT_404_TOUR_PATH_PATTERNS.some(pattern => pattern.test(normalized))
+  ) {
     excludedUrlStats.legacySoft404Matches += 1;
     return;
   }
@@ -102,10 +112,12 @@ const buildCanonicalTourPath = (tour, catalogModule) => {
       tour?.canonicalPath ||
       tour?.path ||
       tour?.href ||
-      tour?.url,
+      tour?.url
   );
   if (canonicalPath && canonicalPath !== "/") {
-    const legacyMatch = canonicalPath.match(/^\/tours\/([^/]+)\/([^/]+)\/([^/]+)\/?$/);
+    const legacyMatch = canonicalPath.match(
+      /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)\/?$/
+    );
     if (legacyMatch) {
       const [, stateSlug, citySlug, slug] = legacyMatch;
       return `/destinations/${stateSlug}/${citySlug}/tours/${slug}`;
@@ -147,25 +159,25 @@ const listUsGuideCitiesByState = async () => {
 
   await Promise.all(
     stateEntries
-      .filter((entry) => entry.isDirectory())
-      .map(async (stateEntry) => {
+      .filter(entry => entry.isDirectory())
+      .map(async stateEntry => {
         const stateSlug = stateEntry.name;
         const stateDir = path.join(guidesRoot, stateSlug);
         const cityEntries = await readdir(stateDir, { withFileTypes: true });
         const citySlugs = cityEntries
-          .filter((entry) => entry.isFile() && entry.name.endsWith(".json"))
-          .map((entry) => entry.name.replace(/\.json$/, ""))
-          .filter((citySlug) => citySlug !== "index");
+          .filter(entry => entry.isFile() && entry.name.endsWith(".json"))
+          .map(entry => entry.name.replace(/\.json$/, ""))
+          .filter(citySlug => citySlug !== "index");
 
         guidesByState.set(stateSlug, new Set(citySlugs));
-      }),
+      })
   );
 
   return guidesByState;
 };
 
-const escapeXml = (value) =>
-  value.replace(/[<>&'"]/g, (char) => {
+const escapeXml = value =>
+  value.replace(/[<>&'"]/g, char => {
     switch (char) {
       case "<":
         return "&lt;";
@@ -182,13 +194,13 @@ const escapeXml = (value) =>
     }
   });
 
-const buildUrlsetXml = (entries) => {
+const buildUrlsetXml = entries => {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   const urlsetOpen =
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   const urlsetClose = "</urlset>\n";
   const urlEntries = entries
-    .map((entry) => {
+    .map(entry => {
       const segments = [`<loc>${escapeXml(entry.loc)}</loc>`];
       if (entry.lastmod) {
         segments.push(`<lastmod>${escapeXml(entry.lastmod)}</lastmod>`);
@@ -203,24 +215,24 @@ const buildUrlsetXml = (entries) => {
   return `${xml}${urlsetOpen}${urlEntries}\n${urlsetClose}`;
 };
 
-const buildSitemapIndexXml = (entries) => {
+const buildSitemapIndexXml = entries => {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   const sitemapOpen =
     '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   const sitemapClose = "</sitemapindex>\n";
   const sitemapEntries = entries
-    .map((entry) => `  <sitemap><loc>${escapeXml(entry)}</loc></sitemap>`)
+    .map(entry => `  <sitemap><loc>${escapeXml(entry)}</loc></sitemap>`)
     .join("\n");
 
   return `${xml}${sitemapOpen}${sitemapEntries}\n${sitemapClose}`;
 };
 
-const getStateSlugSet = (catalogModule) =>
+const getStateSlugSet = catalogModule =>
   new Set(
-    (catalogModule.US_STATES || []).map((state) => catalogModule.slugify(state)),
+    (catalogModule.US_STATES || []).map(state => catalogModule.slugify(state))
   );
 
-const parseCsvRows = (text) => {
+const parseCsvRows = text => {
   const rows = [];
   let current = "";
   let row = [];
@@ -267,15 +279,15 @@ const parseCsvRows = (text) => {
   return rows;
 };
 
-const parseCsv = (contents) => {
+const parseCsv = contents => {
   const rows = parseCsvRows(contents);
   if (!rows.length) {
     return [];
   }
 
-  const headers = rows[0].map((header) => header.trim());
+  const headers = rows[0].map(header => header.trim());
 
-  return rows.slice(1).map((row) => {
+  return rows.slice(1).map(row => {
     const entry = {};
     headers.forEach((header, index) => {
       if (!header) {
@@ -307,7 +319,14 @@ const getCountrySlugFromTour = (tour, catalogModule) =>
         ? catalogModule.slugify(tour.destination.state)
         : undefined);
 
-const REMOVED_TOUR_IDS = new Set(["34849", "34897", "43915", "34899", "34891", "574370"]);
+const REMOVED_TOUR_IDS = new Set([
+  "34849",
+  "34897",
+  "43915",
+  "34899",
+  "34891",
+  "574370",
+]);
 const REMOVED_OPERATOR_NAMES = new Set([
   "desert adventures red jeep tours",
   "red jeep tours",
@@ -315,12 +334,12 @@ const REMOVED_OPERATOR_NAMES = new Set([
 ]);
 const REMOVED_OPERATOR_SHORTNAMES = new Set(["red-jeep"]);
 
-const getTourIdFromSlug = (slug) => {
+const getTourIdFromSlug = slug => {
   const match = slug?.match?.(/-(\d+)$/);
   return match?.[1] ?? null;
 };
 
-const isRemovedTour = (tour) => {
+const isRemovedTour = tour => {
   const tourId = tour.id?.toString?.() ?? getTourIdFromSlug(tour.slug ?? "");
   if (tourId && REMOVED_TOUR_IDS.has(tourId)) {
     return true;
@@ -335,21 +354,24 @@ const isRemovedTour = (tour) => {
   return Boolean(shortName && REMOVED_OPERATOR_SHORTNAMES.has(shortName));
 };
 
-const buildTourSummaries = async (catalogModule) => {
+const buildTourSummaries = async catalogModule => {
   const toursGeneratedModule = await tsImport(
     "../src/data/tours.generated.ts",
-    import.meta.url,
+    import.meta.url
   );
 
   const tours = [];
 
   if (Array.isArray(toursGeneratedModule.toursGenerated)) {
-    toursGeneratedModule.toursGenerated.forEach((tour) => tours.push(tour));
+    toursGeneratedModule.toursGenerated.forEach(tour => tours.push(tour));
   }
 
-  const wyomingModule = await tsImport("../src/data/us/wyoming.ts", import.meta.url);
+  const wyomingModule = await tsImport(
+    "../src/data/us/wyoming.ts",
+    import.meta.url
+  );
   if (typeof wyomingModule.loadWyomingTours === "function") {
-    wyomingModule.loadWyomingTours().forEach((tour) => {
+    wyomingModule.loadWyomingTours().forEach(tour => {
       tours.push({
         slug: catalogModule.slugify(`${tour.title}-${tour.id}`),
         destination: {
@@ -364,9 +386,12 @@ const buildTourSummaries = async (catalogModule) => {
     });
   }
 
-  const minnesotaModule = await tsImport("../src/data/us/minnesota.ts", import.meta.url);
+  const minnesotaModule = await tsImport(
+    "../src/data/us/minnesota.ts",
+    import.meta.url
+  );
   if (typeof minnesotaModule.loadMinnesotaTours === "function") {
-    minnesotaModule.loadMinnesotaTours().forEach((tour) => {
+    minnesotaModule.loadMinnesotaTours().forEach(tour => {
       tours.push({
         slug: catalogModule.slugify(`${tour.title}-${tour.id}`),
         destination: {
@@ -381,9 +406,12 @@ const buildTourSummaries = async (catalogModule) => {
     });
   }
 
-  const alaskaModule = await tsImport("../src/data/us/alaska.ts", import.meta.url);
+  const alaskaModule = await tsImport(
+    "../src/data/us/alaska.ts",
+    import.meta.url
+  );
   if (typeof alaskaModule.loadAlaskaTours === "function") {
-    alaskaModule.loadAlaskaTours().forEach((tour) => {
+    alaskaModule.loadAlaskaTours().forEach(tour => {
       tours.push({
         slug: catalogModule.slugify(`${tour.title}-${tour.id}`),
         destination: {
@@ -402,15 +430,13 @@ const buildTourSummaries = async (catalogModule) => {
   const europeFiles = await readdir(europeDir);
   await Promise.all(
     europeFiles
-      .filter((file) => file.endsWith(".csv"))
-      .map(async (file) => {
-        const activitySlug = file
-          .replace(/^europe-/, "")
-          .replace(/\.csv$/, "");
+      .filter(file => file.endsWith(".csv"))
+      .map(async file => {
+        const activitySlug = file.replace(/^europe-/, "").replace(/\.csv$/, "");
         const contents = await readFile(path.join(europeDir, file), "utf8");
         const rows = parseCsv(contents);
 
-        rows.forEach((row) => {
+        rows.forEach(row => {
           const location = row.location?.trim();
           const itemName = row.item_name?.trim();
           if (!location || !itemName) {
@@ -419,7 +445,7 @@ const buildTourSummaries = async (catalogModule) => {
 
           const locationParts = location
             .split("/")
-            .map((part) => part.trim())
+            .map(part => part.trim())
             .filter(Boolean);
           const country = locationParts[0] ?? "Europe";
           const city = locationParts[locationParts.length - 1] ?? country;
@@ -437,14 +463,14 @@ const buildTourSummaries = async (catalogModule) => {
             primaryCategory: activitySlug,
           });
         });
-      }),
+      })
   );
 
   const australiaPath = path.resolve(__dirname, "../data/australia.csv");
   const australiaContents = await readFile(australiaPath, "utf8");
   const australiaRows = parseCsv(australiaContents);
 
-  australiaRows.forEach((row) => {
+  australiaRows.forEach(row => {
     const location = row.location?.trim();
     const itemName = row.item_name?.trim();
     if (!location || !itemName) {
@@ -453,7 +479,7 @@ const buildTourSummaries = async (catalogModule) => {
 
     const locationParts = location
       .split("/")
-      .map((part) => part.trim())
+      .map(part => part.trim())
       .filter(Boolean);
     const city = locationParts[locationParts.length - 1] ?? "Unknown";
     const country = "Australia";
@@ -472,24 +498,44 @@ const buildTourSummaries = async (catalogModule) => {
     });
   });
 
-  return tours.filter((tour) => !isRemovedTour(tour));
+  return tours.filter(tour => !isRemovedTour(tour));
 };
-
 
 const parseUsStateFallbackRows = (rows, catalogModule, defaults = {}) =>
   rows
     .map((row, index) => {
       const location = row.location?.trim() || "";
-      const parts = location.split("/").map((part) => part.trim()).filter(Boolean);
-      const country = (defaults.country || row.country || row.country_name || parts[0] || "").trim();
-      const stateSlug = (defaults.stateSlug || row.stateSlug || row.state || parts[1] || "").trim();
+      const parts = location
+        .split("/")
+        .map(part => part.trim())
+        .filter(Boolean);
+      const country = (
+        defaults.country ||
+        row.country ||
+        row.country_name ||
+        parts[0] ||
+        ""
+      ).trim();
+      const stateSlug = (
+        defaults.stateSlug ||
+        row.stateSlug ||
+        row.state ||
+        parts[1] ||
+        ""
+      ).trim();
       const city = (defaults.city || row.city || parts[2] || "").trim();
       const citySlug =
         typeof defaults.citySlug === "function"
           ? defaults.citySlug(row, catalogModule)
           : defaults.citySlug || catalogModule.slugify(city);
       const title = (row.title || row.name || row.item_name || "").trim();
-      const id = (row.id || row.tour_id || row.item_id || row.sourceItemId || "").trim();
+      const id = (
+        row.id ||
+        row.tour_id ||
+        row.item_id ||
+        row.sourceItemId ||
+        ""
+      ).trim();
 
       if (!country || !stateSlug || !citySlug || !title || !id) {
         console.warn(
@@ -499,7 +545,11 @@ const parseUsStateFallbackRows = (rows, catalogModule, defaults = {}) =>
       }
 
       const normalizedCountry = country.toLowerCase();
-      if (!normalizedCountry.includes("united states") && normalizedCountry !== "us" && normalizedCountry !== "usa") {
+      if (
+        !normalizedCountry.includes("united states") &&
+        normalizedCountry !== "us" &&
+        normalizedCountry !== "usa"
+      ) {
         return null;
       }
 
@@ -513,7 +563,7 @@ const parseUsStateFallbackRows = (rows, catalogModule, defaults = {}) =>
     })
     .filter(Boolean);
 
-const buildHawaiiSitemapFallbackTours = async (catalogModule) => {
+const buildHawaiiSitemapFallbackTours = async catalogModule => {
   const hawaiiPath = path.resolve(__dirname, "../data/hawaii.csv");
   const hawaiiContents = await readFile(hawaiiPath, "utf8");
   const hawaiiRows = parseCsv(hawaiiContents);
@@ -528,7 +578,10 @@ const buildHawaiiSitemapFallbackTours = async (catalogModule) => {
       }
 
       const location = (row.location || "").trim();
-      const parts = location.split("/").map((part) => part.trim()).filter(Boolean);
+      const parts = location
+        .split("/")
+        .map(part => part.trim())
+        .filter(Boolean);
       const cityFromLocation = parts[2] || parts[parts.length - 1] || "Hawaii";
       const normalized = module.slugify(cityFromLocation);
       return normalized || "hawaii";
@@ -540,15 +593,30 @@ const parseMexicoFallbackRows = (rows, catalogModule, defaults = {}) =>
   rows
     .map((row, index) => {
       const location = row.location?.trim() || "";
-      const parts = location.split("/").map((part) => part.trim()).filter(Boolean);
-      const country = (defaults.country || row.country || row.country_name || parts[0] || "").trim();
+      const parts = location
+        .split("/")
+        .map(part => part.trim())
+        .filter(Boolean);
+      const country = (
+        defaults.country ||
+        row.country ||
+        row.country_name ||
+        parts[0] ||
+        ""
+      ).trim();
       const city = (defaults.city || row.city || parts[2] || "").trim();
       const citySlug =
         typeof defaults.citySlug === "function"
           ? defaults.citySlug(row, catalogModule)
           : defaults.citySlug || catalogModule.slugify(city);
       const title = (row.title || row.name || row.item_name || "").trim();
-      const id = (row.id || row.tour_id || row.item_id || row.sourceItemId || "").trim();
+      const id = (
+        row.id ||
+        row.tour_id ||
+        row.item_id ||
+        row.sourceItemId ||
+        ""
+      ).trim();
 
       if (!country || !citySlug || !title || !id) {
         console.warn(
@@ -574,31 +642,39 @@ const parseMexicoFallbackRows = (rows, catalogModule, defaults = {}) =>
     })
     .filter(Boolean);
 
-const buildMexicoSitemapFallbackTours = async (catalogModule) => {
+const buildMexicoSitemapFallbackTours = async catalogModule => {
   const mexicoPath = path.resolve(__dirname, "../data/mexico.csv");
   const cancunPath = path.resolve(__dirname, "../data/cancun.csv");
-  const puertoVallartaPath = path.resolve(__dirname, "../data/Puerto Vallarta.csv");
+  const puertoVallartaPath = path.resolve(
+    __dirname,
+    "../data/Puerto Vallarta.csv"
+  );
   const caboPath = path.resolve(__dirname, "../data/cabo.csv");
 
-  const [mexicoContents, cancunContents, puertoVallartaContents, caboContents] = await Promise.all([
-    readFile(mexicoPath, "utf8"),
-    readFile(cancunPath, "utf8"),
-    readFile(puertoVallartaPath, "utf8"),
-    readFile(caboPath, "utf8"),
-  ]);
+  const [mexicoContents, cancunContents, puertoVallartaContents, caboContents] =
+    await Promise.all([
+      readFile(mexicoPath, "utf8"),
+      readFile(cancunPath, "utf8"),
+      readFile(puertoVallartaPath, "utf8"),
+      readFile(caboPath, "utf8"),
+    ]);
 
   const mexicoRows = parseCsv(mexicoContents);
   const cancunRows = parseCsv(cancunContents);
   const puertoVallartaRows = parseCsv(puertoVallartaContents);
   const caboRows = parseCsv(caboContents);
 
-  const resolveCaboCitySlug = (row) => {
-    const source = `${row.city || ""} ${row.destination_city || ""} ${row.location || ""}`
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "");
+  const resolveCaboCitySlug = row => {
+    const source =
+      `${row.city || ""} ${row.destination_city || ""} ${row.location || ""}`
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
 
-    if (source.includes("san jose del cabo") || source.includes("san jose cabo")) {
+    if (
+      source.includes("san jose del cabo") ||
+      source.includes("san jose cabo")
+    ) {
       return "san-jose-del-cabo";
     }
 
@@ -625,7 +701,7 @@ const buildMexicoSitemapFallbackTours = async (catalogModule) => {
   ];
 };
 
-const buildAmsterdamSitemapFallbackTours = async (catalogModule) => {
+const buildAmsterdamSitemapFallbackTours = async catalogModule => {
   const amsterdamPath = path.resolve(__dirname, "../data/amsterdam.csv");
   const amsterdamContents = await readFile(amsterdamPath, "utf8");
   const amsterdamRows = parseCsv(amsterdamContents);
@@ -654,46 +730,65 @@ const buildAmsterdamSitemapFallbackTours = async (catalogModule) => {
 const buildSitemap = async () => {
   const destinationsModule = await tsImport(
     "../src/data/destinations.ts",
-    import.meta.url,
+    import.meta.url
   );
   const catalogModule = await tsImport(
     "../src/data/tourCatalog.ts",
-    import.meta.url,
+    import.meta.url
   );
   const flagstaffModule = await tsImport(
     "../src/data/flagstaffTours.ts",
-    import.meta.url,
+    import.meta.url
   );
   const tours = await buildTourSummaries(catalogModule);
   let engine2Tours = [];
   try {
-    const engine2Module = await tsImport("../src/engine2/data/loadEngine2.ts", import.meta.url);
+    const engine2Module = await tsImport(
+      "../src/engine2/data/loadEngine2.ts",
+      import.meta.url
+    );
     engine2Tours = Array.isArray(engine2Module.getAllEngine2Tours?.())
       ? engine2Module.getAllEngine2Tours()
       : [];
   } catch (error) {
-    console.warn("Unable to import Engine2 tours for sitemap; continuing with fallback parsing.", error?.message || error);
+    console.warn(
+      "Unable to import Engine2 tours for sitemap; continuing with fallback parsing.",
+      error?.message || error
+    );
   }
 
   let engine6Tours = [];
   try {
-    const engine6Module = await tsImport("../src/engine6/registry.ts", import.meta.url);
+    const engine6Module = await tsImport(
+      "../src/engine6/registry.ts",
+      import.meta.url
+    );
     engine6Tours = Array.isArray(engine6Module.engine6ResolvedTours)
       ? engine6Module.engine6ResolvedTours
       : [];
   } catch (error) {
-    console.warn("Unable to import Engine6 tours for sitemap; continuing without Engine6 sitemap entries.", error?.message || error);
+    console.warn(
+      "Unable to import Engine6 tours for sitemap; continuing without Engine6 sitemap entries.",
+      error?.message || error
+    );
   }
 
   let engine4ListingEntries = [];
   try {
-    const engine4ListingModule = await tsImport("../src/engine4/listing/getEngine4ListingEntries.ts", import.meta.url);
-    const allEngine4ListingEntries = engine4ListingModule.getAllEngine4ListingEntries?.();
+    const engine4ListingModule = await tsImport(
+      "../src/engine4/listing/getEngine4ListingEntries.ts",
+      import.meta.url
+    );
+    const allEngine4ListingEntries =
+      engine4ListingModule.getAllEngine4ListingEntries?.();
     engine4ListingEntries = Array.isArray(allEngine4ListingEntries)
       ? allEngine4ListingEntries
       : [];
   } catch (error) {
-    console.warn("Unable to import Engine4 listing tours for sitemap; continuing without Engine4 sitemap entries.", error?.message || error);
+    console.warn(
+      "Unable to import Engine4 listing tours for sitemap; continuing without Engine4 sitemap entries.",
+      error?.message || error
+    );
   }
 
   const pages = new Set();
@@ -728,13 +823,13 @@ const buildSitemap = async () => {
   addUrl(guideUrls, "/guides");
 
   if (Array.isArray(catalogModule.ACTIVITY_PAGES)) {
-    catalogModule.ACTIVITY_PAGES.forEach((activity) => {
+    catalogModule.ACTIVITY_PAGES.forEach(activity => {
       addUrl(categoryUrls, `/tours/activities/${activity.slug}`);
     });
   }
 
   if (Array.isArray(catalogModule.ADVENTURE_ACTIVITY_PAGES)) {
-    catalogModule.ADVENTURE_ACTIVITY_PAGES.forEach((activity) => {
+    catalogModule.ADVENTURE_ACTIVITY_PAGES.forEach(activity => {
       addUrl(categoryUrls, `/tours/activities/${activity.slug}`);
       addUrl(categoryUrls, `/tours/${activity.slug}`);
     });
@@ -744,69 +839,69 @@ const buildSitemap = async () => {
   addUrl(destinationUrls, "/destinations/europe");
 
   if (Array.isArray(destinationsModule.destinations)) {
-    destinationsModule.destinations.forEach((destination) => {
+    destinationsModule.destinations.forEach(destination => {
       addUrl(destinationUrls, destination.href);
     });
   }
 
   if (Array.isArray(destinationsModule.states)) {
-    destinationsModule.states.forEach((state) => {
+    destinationsModule.states.forEach(state => {
       addUrl(destinationUrls, `/destinations/states/${state.slug}`);
       addUrl(destinationUrls, `/destinations/states/${state.slug}/tours`);
 
       if (Array.isArray(state.cities)) {
-        state.cities.forEach((city) => {
+        state.cities.forEach(city => {
           addUrl(
             cityUrls,
-            `/destinations/states/${state.slug}/cities/${city.slug}`,
+            `/destinations/states/${state.slug}/cities/${city.slug}`
           );
           addUrl(
             cityUrls,
-            `/destinations/states/${state.slug}/cities/${city.slug}/tours`,
+            `/destinations/states/${state.slug}/cities/${city.slug}/tours`
           );
         });
       }
     });
   }
 
-  tours.forEach((tour) => {
+  tours.forEach(tour => {
     const tourPath = buildCanonicalTourPath(tour, catalogModule);
     if (!tourPath) {
       console.warn(
-        `Skipping tour sitemap URL (missing route fields): ${getTourIdentifier(tour)}`,
+        `Skipping tour sitemap URL (missing route fields): ${getTourIdentifier(tour)}`
       );
       return;
     }
     addUrl(toursUrls, tourPath);
   });
 
-  engine2Tours.forEach((tour) => {
+  engine2Tours.forEach(tour => {
     const tourPath = buildCanonicalTourPath(tour, catalogModule);
     if (!tourPath) {
       console.warn(
-        `Skipping Engine2 tour sitemap URL (missing route fields): ${getTourIdentifier(tour)}`,
+        `Skipping Engine2 tour sitemap URL (missing route fields): ${getTourIdentifier(tour)}`
       );
       return;
     }
     addUrl(toursUrls, tourPath);
   });
 
-  engine4ListingEntries.forEach((entry) => {
+  engine4ListingEntries.forEach(entry => {
     const tourPath = ensurePath(entry.href);
     if (!tourPath) {
       console.warn(
-        `Skipping Engine4 tour sitemap URL (missing route fields): ${getTourIdentifier(entry.tour, entry.tour?.productCode ?? "unknown")}`,
+        `Skipping Engine4 tour sitemap URL (missing route fields): ${getTourIdentifier(entry.tour, entry.tour?.productCode ?? "unknown")}`
       );
       return;
     }
     addUrl(toursUrls, tourPath);
   });
 
-  engine6Tours.forEach((tour) => {
+  engine6Tours.forEach(tour => {
     const tourPath = buildCanonicalTourPath(tour, catalogModule);
     if (!tourPath) {
       console.warn(
-        `Skipping Engine6 tour sitemap URL (missing route fields): ${getTourIdentifier(tour, tour?.productCode ?? "unknown")}`,
+        `Skipping Engine6 tour sitemap URL (missing route fields): ${getTourIdentifier(tour, tour?.productCode ?? "unknown")}`
       );
       return;
     }
@@ -814,19 +909,26 @@ const buildSitemap = async () => {
   });
 
   if (!engine2Tours.length) {
-    const [mexicoFallbackTours, hawaiiFallbackTours, amsterdamFallbackTours] = await Promise.all([
-      buildMexicoSitemapFallbackTours(catalogModule),
-      buildHawaiiSitemapFallbackTours(catalogModule),
-      buildAmsterdamSitemapFallbackTours(catalogModule),
-    ]);
-    [...mexicoFallbackTours, ...hawaiiFallbackTours, ...amsterdamFallbackTours].forEach((tour) => {
+    const [mexicoFallbackTours, hawaiiFallbackTours, amsterdamFallbackTours] =
+      await Promise.all([
+        buildMexicoSitemapFallbackTours(catalogModule),
+        buildHawaiiSitemapFallbackTours(catalogModule),
+        buildAmsterdamSitemapFallbackTours(catalogModule),
+      ]);
+    [
+      ...mexicoFallbackTours,
+      ...hawaiiFallbackTours,
+      ...amsterdamFallbackTours,
+    ].forEach(tour => {
       const tourPath = buildCanonicalTourPath(tour, catalogModule);
       if (tourPath) addUrl(toursUrls, tourPath);
     });
   }
   if (Array.isArray(flagstaffModule.flagstaffTours)) {
-    flagstaffModule.flagstaffTours.forEach((tour) => {
-      const legacyPath = ensurePath(flagstaffModule.getFlagstaffTourDetailPath(tour));
+    flagstaffModule.flagstaffTours.forEach(tour => {
+      const legacyPath = ensurePath(
+        flagstaffModule.getFlagstaffTourDetailPath(tour)
+      );
       const canonicalPath = buildCanonicalTourPath(tour, catalogModule);
       if (canonicalPath) {
         addUrl(toursUrls, canonicalPath);
@@ -837,14 +939,14 @@ const buildSitemap = async () => {
         return;
       }
       console.warn(
-        `Skipping Flagstaff tour sitemap URL (missing route fields): ${getTourIdentifier(tour)}`,
+        `Skipping Flagstaff tour sitemap URL (missing route fields): ${getTourIdentifier(tour)}`
       );
     });
   }
 
   const activityByState = new Map();
 
-  tours.forEach((tour) => {
+  tours.forEach(tour => {
     if (!isUsStateTour(tour, stateSlugSet, catalogModule)) {
       return;
     }
@@ -855,10 +957,10 @@ const buildSitemap = async () => {
     }
 
     const activitySlugs = new Set(
-      [...(tour.activitySlugs ?? []), tour.primaryCategory].filter(Boolean),
+      [...(tour.activitySlugs ?? []), tour.primaryCategory].filter(Boolean)
     );
 
-    activitySlugs.forEach((slug) => {
+    activitySlugs.forEach(slug => {
       if (!activityByState.has(slug)) {
         activityByState.set(slug, new Set());
       }
@@ -867,20 +969,20 @@ const buildSitemap = async () => {
   });
 
   activityByState.forEach((stateSlugs, activitySlug) => {
-    stateSlugs.forEach((stateSlug) => {
+    stateSlugs.forEach(stateSlug => {
       addUrl(categoryUrls, `/tours/${activitySlug}/us/${stateSlug}`);
     });
   });
 
   const europeCountrySlugs = new Set(
-    (catalogModule.EUROPE_COUNTRIES || []).map((country) =>
-      catalogModule.slugify(country),
-    ),
+    (catalogModule.EUROPE_COUNTRIES || []).map(country =>
+      catalogModule.slugify(country)
+    )
   );
   const europeCitiesByCountry = new Map();
   const worldCitiesByCountry = new Map();
 
-  tours.forEach((tour) => {
+  tours.forEach(tour => {
     const countrySlug = getCountrySlugFromTour(tour, catalogModule);
     const citySlug = tour.destination.citySlug;
     if (!countrySlug || !citySlug) {
@@ -905,14 +1007,14 @@ const buildSitemap = async () => {
     addUrl(destinationUrls, `/destinations/europe/${countrySlug}`);
     addUrl(destinationUrls, `/destinations/europe/${countrySlug}/tours`);
 
-    cities.forEach((citySlug) => {
+    cities.forEach(citySlug => {
       addUrl(
         cityUrls,
-        `/destinations/europe/${countrySlug}/cities/${citySlug}`,
+        `/destinations/europe/${countrySlug}/cities/${citySlug}`
       );
       addUrl(
         cityUrls,
-        `/destinations/europe/${countrySlug}/cities/${citySlug}/tours`,
+        `/destinations/europe/${countrySlug}/cities/${citySlug}/tours`
       );
     });
   });
@@ -920,14 +1022,11 @@ const buildSitemap = async () => {
   worldCitiesByCountry.forEach((cities, countrySlug) => {
     addUrl(destinationUrls, `/destinations/world/${countrySlug}`);
 
-    cities.forEach((citySlug) => {
+    cities.forEach(citySlug => {
+      addUrl(cityUrls, `/destinations/world/${countrySlug}/cities/${citySlug}`);
       addUrl(
         cityUrls,
-        `/destinations/world/${countrySlug}/cities/${citySlug}`,
-      );
-      addUrl(
-        cityUrls,
-        `/destinations/world/${countrySlug}/cities/${citySlug}/tours`,
+        `/destinations/world/${countrySlug}/cities/${citySlug}/tours`
       );
     });
   });
@@ -936,7 +1035,7 @@ const buildSitemap = async () => {
   const guideCountries = new Map();
   const allowedUsGuideCities = await listUsGuideCitiesByState();
 
-  tours.forEach((tour) => {
+  tours.forEach(tour => {
     const citySlug = tour.destination.citySlug;
     if (!citySlug) {
       return;
@@ -971,14 +1070,14 @@ const buildSitemap = async () => {
 
   guideStates.forEach((cities, stateSlug) => {
     addUrl(guideUrls, `/guides/us/${stateSlug}`);
-    cities.forEach((citySlug) => {
+    cities.forEach(citySlug => {
       addUrl(guideUrls, `/guides/us/${stateSlug}/${citySlug}`);
     });
   });
 
   guideCountries.forEach((cities, countrySlug) => {
     addUrl(guideUrls, `/guides/world/${countrySlug}`);
-    cities.forEach((citySlug) => {
+    cities.forEach(citySlug => {
       addUrl(guideUrls, `/guides/world/${countrySlug}/${citySlug}`);
     });
   });
@@ -995,8 +1094,14 @@ const buildSitemap = async () => {
 
 const run = async () => {
   const shouldWrite = process.env.SITEMAP_WRITE === "1";
-  const { pages, toursUrls, cityUrls, guideUrls, destinationUrls, categoryUrls } =
-    await buildSitemap();
+  const {
+    pages,
+    toursUrls,
+    cityUrls,
+    guideUrls,
+    destinationUrls,
+    categoryUrls,
+  } = await buildSitemap();
   const outputDir = path.resolve(__dirname, "../public");
   const sitemapIndexPath = path.join(outputDir, "sitemap.xml");
 
@@ -1006,15 +1111,15 @@ const run = async () => {
     const existingFiles = await readdir(outputDir);
     await Promise.all(
       existingFiles
-        .filter((file) => file.startsWith("sitemap-") && file.endsWith(".xml"))
-        .map((file) => unlink(path.join(outputDir, file))),
+        .filter(file => file.startsWith("sitemap-") && file.endsWith(".xml"))
+        .map(file => unlink(path.join(outputDir, file)))
     );
   }
 
   const toEntries = (values, options = {}) =>
     Array.from(values)
       .sort((a, b) => a.localeCompare(b))
-      .map((url) => ({
+      .map(url => ({
         loc: `${BASE_URL}${url}`,
         lastmod: options.lastmod,
         priority: options.priority,
@@ -1041,7 +1146,7 @@ const run = async () => {
           await writeFile(filepath, buildUrlsetXml(chunk), "utf8");
         }
         return `${BASE_URL}/${filename}`;
-      }),
+      })
     );
   };
 
@@ -1082,16 +1187,19 @@ const run = async () => {
   const tourUrlCount = toursSection?.entries.length ?? 0;
   if (tourUrlCount < MIN_TOUR_URL_COUNT) {
     throw new Error(
-      `sitemap-tours.xml must contain at least ${MIN_TOUR_URL_COUNT} tour URLs (found ${tourUrlCount})`,
+      `sitemap-tours.xml must contain at least ${MIN_TOUR_URL_COUNT} tour URLs (found ${tourUrlCount})`
     );
   }
 
   const excludedPatternCount =
-    EXCLUDED_TOUR_PATH_TOKENS.length + LEGACY_SOFT_404_TOUR_PATH_PATTERNS.length;
+    EXCLUDED_TOUR_PATH_TOKENS.length +
+    LEGACY_SOFT_404_TOUR_PATH_PATTERNS.length;
   const excludedUrlCount =
-    excludedUrlStats.tokenMatches + excludedUrlStats.legacySoft404Matches;
+    excludedUrlStats.tokenMatches +
+    excludedUrlStats.legacySoft404Matches +
+    excludedUrlStats.bookingMatches;
   console.log(
-    `[sitemap] excluded ${excludedUrlCount} URL emissions using ${excludedPatternCount} denylist patterns/tokens (${excludedUrlStats.tokenMatches} token matches, ${excludedUrlStats.legacySoft404Matches} legacy soft-404 matches).`,
+    `[sitemap] excluded ${excludedUrlCount} URL emissions using ${excludedPatternCount} denylist patterns/tokens (${excludedUrlStats.tokenMatches} token matches, ${excludedUrlStats.legacySoft404Matches} legacy soft-404 matches, ${excludedUrlStats.bookingMatches} booking matches).`
   );
 
   if (!shouldWrite) {

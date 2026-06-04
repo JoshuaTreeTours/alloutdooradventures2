@@ -146,6 +146,12 @@ const replaceMeta = (html, seo) => {
   const url = escapeAttribute(sanitizeFinalSeoUrl(seo.url));
   const type = escapeAttribute(seo.type);
   const image = escapeAttribute(sanitizeFinalSeoUrl(seo.image));
+  const robots = escapeAttribute(
+    seo.robots || "index,follow,max-image-preview:large"
+  );
+  const googlebot = escapeAttribute(
+    seo.googlebot || seo.robots || "index,follow,max-image-preview:large"
+  );
 
   let output = html
     .replaceAll("__SEO_TITLE__", title)
@@ -158,6 +164,16 @@ const replaceMeta = (html, seo) => {
     .replaceAll("__SEO_TWITTER_TITLE__", title)
     .replaceAll("__SEO_TWITTER_DESCRIPTION__", description)
     .replaceAll("__SEO_TWITTER_IMAGE__", image);
+
+  output = output
+    .replace(
+      /<meta[^>]*name=["']robots["'][^>]*>/i,
+      `<meta name="robots" content="${robots}" />`
+    )
+    .replace(
+      /<meta[^>]*name=["']googlebot["'][^>]*>/i,
+      `<meta name="googlebot" content="${googlebot}" />`
+    );
 
   if (!image) {
     output = output.replace(
@@ -211,7 +227,8 @@ const buildOutputPath = pathname => {
   };
 };
 
-const DOLPHIN_ROUTE = "/destinations/florida/santa-rosa-beach/tours/dolphin-cruise-614529";
+const DOLPHIN_ROUTE =
+  "/destinations/florida/santa-rosa-beach/tours/dolphin-cruise-614529";
 
 const ensureDirectory = async dir => {
   try {
@@ -789,16 +806,21 @@ const main = async () => {
   const getTourBookingPath = tourPathsModule?.getTourBookingPath ?? null;
   const getGuideImages = guideImagesModule?.getGuideImages ?? null;
   const getEngine2TourByPath = engine2DataModule?.getEngine2TourByPath ?? null;
-  const getEngine4TourBySlugs = engine4RoutingModule?.getEngine4TourBySlugs ?? null;
+  const getEngine4TourBySlugs =
+    engine4RoutingModule?.getEngine4TourBySlugs ?? null;
   const getEngine4TourByPath = pathname => {
-    const match = /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(pathname);
+    const match = /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
+      pathname
+    );
     return match && getEngine4TourBySlugs
       ? getEngine4TourBySlugs(match[1], match[2], match[3])
       : null;
   };
   const buildEngine2Seo = engine2SeoModule?.buildEngine2Seo ?? null;
   const buildEngine2SchemaGraph = engine2SchemaModule?.buildSchemaGraph ?? null;
-  const engine6ResolvedTours = Array.isArray(engine6RegistryModule?.engine6ResolvedTours)
+  const engine6ResolvedTours = Array.isArray(
+    engine6RegistryModule?.engine6ResolvedTours
+  )
     ? engine6RegistryModule.engine6ResolvedTours
     : [];
   const buildEngine6Seo = engine6SeoModule?.buildEngine6Seo ?? null;
@@ -876,323 +898,56 @@ const main = async () => {
   for (const url of urlsToRender) {
     const pathname = new URL(url).pathname;
     try {
-    const normalizedPathname = normalizePathname(pathname);
-    const isBookingRoute = normalizedPathname.endsWith("/book");
-    const basePathname = isBookingRoute
-      ? normalizedPathname.replace(/\/book$/, "")
-      : normalizedPathname;
-    const segments = basePathname.split("/").filter(Boolean);
-    const seo = {
-      title: DEFAULT_SEO.title,
-      description: DEFAULT_SEO.description,
-      url: buildCanonicalUrl(normalizedPathname),
-      type: DEFAULT_SEO.type,
-      image: buildImageUrl(DEFAULT_SEO.image),
-    };
-    const engine2Tour = (getEngine2TourByPath
-      ? getEngine2TourByPath(basePathname)
-      : null) ?? getEngine4TourByPath(basePathname);
-    const engine2Seo =
-      engine2Tour && buildEngine2Seo ? buildEngine2Seo(engine2Tour) : null;
-    const engine6Tour = engine6ResolvedTours.find(
-      tour => tour.canonicalPath === basePathname
-    ) ?? null;
-    const engine6Seo =
-      engine6Tour && buildEngine6Seo ? buildEngine6Seo(engine6Tour) : null;
+      const normalizedPathname = normalizePathname(pathname);
+      const isBookingRoute = normalizedPathname.endsWith("/book");
+      const basePathname = isBookingRoute
+        ? normalizedPathname.replace(/\/book$/, "")
+        : normalizedPathname;
+      const segments = basePathname.split("/").filter(Boolean);
+      const seo = {
+        title: DEFAULT_SEO.title,
+        description: DEFAULT_SEO.description,
+        url: buildCanonicalUrl(normalizedPathname),
+        type: DEFAULT_SEO.type,
+        image: buildImageUrl(DEFAULT_SEO.image),
+        robots: "index,follow,max-image-preview:large",
+        googlebot: "index,follow,max-image-preview:large",
+      };
+      const engine2Tour =
+        (getEngine2TourByPath ? getEngine2TourByPath(basePathname) : null) ??
+        getEngine4TourByPath(basePathname);
+      const engine2Seo =
+        engine2Tour && buildEngine2Seo ? buildEngine2Seo(engine2Tour) : null;
+      const engine6Tour =
+        engine6ResolvedTours.find(
+          tour => tour.canonicalPath === basePathname
+        ) ?? null;
+      const engine6Seo =
+        engine6Tour && buildEngine6Seo ? buildEngine6Seo(engine6Tour) : null;
 
-    let tourForSeo = null;
-    let stateForHero = null;
-    let cityForHero = null;
-    let guideForHero = null;
-    let cityToursForHero = null;
+      let tourForSeo = null;
+      let stateForHero = null;
+      let cityForHero = null;
+      let guideForHero = null;
+      let cityToursForHero = null;
 
-    if (segments[0] === "tours" && segments.length === 4) {
-      tourForSeo =
-        getTourBySlugs(segments[1], segments[2], segments[3]) ?? null;
-    } else if (segments[0] === "tours" && segments.length === 2) {
-      tourForSeo = getFlagstaffTourBySlug(segments[1]) ?? null;
-    } else if (
-      segments[0] === "destinations" &&
-      segments[3] === "tours" &&
-      segments.length === 5
-    ) {
-      const [stateSlug, citySlug, , tourSlug] = segments.slice(1);
-      const isFlagstaff = stateSlug === "arizona" && citySlug === "flagstaff";
-      tourForSeo =
-        (isFlagstaff
-          ? getFlagstaffTourBySlug(tourSlug)
-          : getTourBySlugs(stateSlug, citySlug, tourSlug)) ?? null;
-    } else if (
-      segments[0] === "destinations" &&
-      segments[1] === "states" &&
-      segments[4] === "cities" &&
-      segments[6] === "tours" &&
-      segments.length === 8
-    ) {
-      const stateSlug = segments[2];
-      const citySlug = segments[5];
-      const tourSlug = segments[7];
-      const isFlagstaff = stateSlug === "arizona" && citySlug === "flagstaff";
-      tourForSeo =
-        (isFlagstaff
-          ? getFlagstaffTourBySlug(tourSlug)
-          : getTourBySlugs(stateSlug, citySlug, tourSlug)) ?? null;
-    }
-
-    if (engine2Seo) {
-      seo.title = isBookingRoute
-        ? `${engine2Seo.title} | Book`
-        : engine2Seo.title;
-      seo.description = isBookingRoute
-        ? `Book ${engine2Tour.name} in ${engine2Tour.geo.city}, ${engine2Tour.geo.region}.`
-        : engine2Seo.description;
-      seo.url = isBookingRoute
-        ? buildCanonicalUrl(normalizedPathname)
-        : engine2Seo.canonical;
-      seo.image = engine2Seo.og.image;
-    } else if (tourForSeo) {
-      if (isBookingRoute && buildBookingMeta) {
-        const bookingMeta = buildBookingMeta(tourForSeo, buildCanonicalUrl(normalizedPathname));
-        seo.title = bookingMeta.title;
-        seo.description = bookingMeta.description;
-        seo.url = bookingMeta.canonical;
-      } else if (!isBookingRoute && buildTourMeta) {
-        const tourMeta = buildTourMeta(tourForSeo, buildCanonicalUrl(basePathname));
-        seo.title = tourMeta.title;
-        seo.description = tourMeta.description;
-        seo.url = tourMeta.canonical;
-      } else {
-        const regionLabel =
-          tourForSeo.destination.state || tourForSeo.destination.country || "";
-        const destinationLabel = regionLabel
-          ? `${tourForSeo.destination.city}, ${regionLabel}`
-          : tourForSeo.destination.city;
-        if (isBookingRoute) {
-          seo.title = `${tourForSeo.title} Booking | ${siteBrandName}`;
-          seo.description = buildMetaDescription(
-            `Reserve ${tourForSeo.title} in ${destinationLabel}.`,
-            tourForSeo.shortDescription ??
-              tourForSeo.badges?.tagline ??
-              tourForSeo.longDescription
-          );
-          seo.url = buildCanonicalUrl(normalizedPathname);
-        } else {
-          seo.title = `${tourForSeo.title} | ${destinationLabel} Outdoor Tour`;
-          seo.description = buildTourMetaDescription(tourForSeo, {
-            isDuplicate: isTourDescriptionDuplicate(tourForSeo),
-            diagnosticsLabel: `prerender:${tourForSeo.id}`,
-          });
-          seo.url = buildCanonicalUrl(basePathname);
-        }
-      }
-    } else {
-      const staticSeo = getStaticPageSeo(pathname);
-      if (staticSeo) {
-        seo.title = staticSeo.title;
-        seo.description = staticSeo.description;
-        seo.url = staticSeo.url;
-        seo.image = staticSeo.image;
-      } else {
-        seo.title = buildFallbackTitle(
-          segments,
-          DEFAULT_SEO.title,
-          siteBrandName
-        );
-        seo.description = buildFallbackDescription(
-          segments,
-          DEFAULT_SEO.description,
-          siteBrandName
-        );
-      }
-    }
-
-    if (segments[0] === "guides" && segments.length >= 3) {
-      const guideScope = segments[1];
-      if (guideScope === "us") {
-        const stateSlug = segments[2];
-        stateForHero = getStateBySlug ? getStateBySlug(stateSlug) : null;
-        if (segments.length === 4) {
-          const citySlug = segments[3];
-          cityForHero = getCityBySlugs
-            ? getCityBySlugs(stateSlug, citySlug)
-            : null;
-          guideForHero = getGuideImages
-            ? {
-                type: "city",
-                guideImages: getGuideImages(citySlug, stateSlug),
-              }
-            : { type: "city" };
-        } else {
-          guideForHero = { type: "state" };
-        }
-      } else if (guideScope === "world") {
-        const countrySlug = segments[2];
-        if (segments.length === 4) {
-          const citySlug = segments[3];
-          guideForHero = getGuideImages
-            ? {
-                type: "city",
-                guideImages: getGuideImages(citySlug, undefined, countrySlug),
-              }
-            : { type: "city" };
-        } else {
-          guideForHero = { type: "country" };
-        }
-      }
-    }
-
-    if (segments[0] === "destinations" && !tourForSeo) {
-      if (segments[1] === "states" && segments[2]) {
-        stateForHero = getStateBySlug ? getStateBySlug(segments[2]) : null;
-        if (segments[3] === "cities" && segments[4]) {
-          cityForHero = getCityBySlugs
-            ? getCityBySlugs(segments[2], segments[4])
-            : null;
-        }
+      if (segments[0] === "tours" && segments.length === 4) {
+        tourForSeo =
+          getTourBySlugs(segments[1], segments[2], segments[3]) ?? null;
+      } else if (segments[0] === "tours" && segments.length === 2) {
+        tourForSeo = getFlagstaffTourBySlug(segments[1]) ?? null;
       } else if (
-        segments[1] &&
-        segments[1] !== "world" &&
-        segments[1] !== "europe"
-      ) {
-        stateForHero = getStateBySlug ? getStateBySlug(segments[1]) : null;
-        if (segments[2] && segments[2] !== "tours") {
-          cityForHero = getCityBySlugs
-            ? getCityBySlugs(segments[1], segments[2])
-            : null;
-        }
-      }
-    }
-
-    if (cityForHero?.slug && stateForHero?.slug) {
-      cityToursForHero = tours.filter(
-        tour =>
-          tour.destination.stateSlug === stateForHero.slug &&
-          tour.destination.citySlug === cityForHero.slug
-      );
-    }
-
-    const resolvedHeroImage = resolveHeroImageForRoute
-      ? resolveHeroImageForRoute({
-          route: normalizedPathname,
-          tour: tourForSeo,
-          guide: guideForHero,
-          state: stateForHero,
-          city: cityForHero,
-          cityTours: cityToursForHero ?? undefined,
-        })
-      : null;
-
-    if (tourForSeo && !engine2Seo) {
-      seo.image = resolvedHeroImage ?? "";
-    } else if (resolvedHeroImage && !engine2Seo) {
-      seo.image = resolvedHeroImage;
-    }
-
-    const canonicalUrl = seo.url;
-    let structuredData = null;
-
-    if (
-      engine2Tour &&
-      engine2Seo &&
-      buildEngine2SchemaGraph &&
-      normalizeStructuredData
-    ) {
-      const engine2Nodes = buildEngine2SchemaGraph(engine2Tour, engine2Seo);
-      structuredData = normalizeStructuredData({
-        "@context": "https://schema.org",
-        "@graph": Array.isArray(engine2Nodes) ? engine2Nodes : [],
-      });
-    } else if (
-      buildWebPageStructuredData &&
-      getSiteStructuredDataNodes &&
-      normalizeStructuredData
-    ) {
-      const baseStructuredDataNodes = getSiteStructuredDataNodes();
-      const structuredDataNodes = [];
-      let tourForStructuredData = null;
-      let bookingUrl = null;
-      let breadcrumbItems = null;
-      const canBuildTourNodes =
-        Boolean(buildTourProductStructuredData) &&
-        Boolean(buildTourTripStructuredData) &&
-        Boolean(getTourBookingPath);
-      const canBuildBookingNodes = Boolean(buildReserveActionStructuredData);
-
-      if (
-        !isBookingRoute &&
-        canBuildTourNodes &&
-        segments[0] === "tours" &&
-        segments.length === 4
-      ) {
-        tourForStructuredData = getTourBySlugs(
-          segments[1],
-          segments[2],
-          segments[3]
-        );
-        if (tourForStructuredData) {
-          bookingUrl = buildCanonicalUrl(
-            getTourBookingPath(tourForStructuredData)
-          );
-          breadcrumbItems = buildTourBreadcrumbs({
-            tour: tourForStructuredData,
-            detailUrl: canonicalUrl,
-            includeDestinations: false,
-          });
-        }
-      } else if (
-        !isBookingRoute &&
-        canBuildTourNodes &&
-        segments[0] === "tours" &&
-        segments.length === 2
-      ) {
-        tourForStructuredData = getFlagstaffTourBySlug(segments[1]);
-        if (tourForStructuredData) {
-          bookingUrl = buildCanonicalUrl(
-            getTourBookingPath(tourForStructuredData)
-          );
-          const stateSlug = tourForStructuredData.destination.stateSlug;
-          const citySlug = tourForStructuredData.destination.citySlug;
-          breadcrumbItems = buildTourBreadcrumbs({
-            tour: tourForStructuredData,
-            detailUrl: canonicalUrl,
-            countryHref: "/destinations/united-states",
-            countryName: "United States",
-            stateHref: `/destinations/united-states/${stateSlug}`,
-            cityHref: `/destinations/united-states/${stateSlug}/${citySlug}`,
-            toursHref: `/destinations/united-states/${stateSlug}/${citySlug}/tours`,
-            includeDestinations: true,
-          });
-        }
-      } else if (
-        !isBookingRoute &&
-        canBuildTourNodes &&
         segments[0] === "destinations" &&
         segments[3] === "tours" &&
         segments.length === 5
       ) {
         const [stateSlug, citySlug, , tourSlug] = segments.slice(1);
         const isFlagstaff = stateSlug === "arizona" && citySlug === "flagstaff";
-        tourForStructuredData = isFlagstaff
-          ? getFlagstaffTourBySlug(tourSlug)
-          : getTourBySlugs(stateSlug, citySlug, tourSlug);
-        if (tourForStructuredData) {
-          bookingUrl = buildCanonicalUrl(
-            getTourBookingPath(tourForStructuredData)
-          );
-          breadcrumbItems = buildTourBreadcrumbs({
-            tour: tourForStructuredData,
-            detailUrl: canonicalUrl,
-            countryHref: "/destinations/united-states",
-            countryName: "United States",
-            stateHref: `/destinations/united-states/${stateSlug}`,
-            cityHref: `/destinations/united-states/${stateSlug}/${citySlug}`,
-            toursHref: `/destinations/united-states/${stateSlug}/${citySlug}/tours`,
-            includeDestinations: true,
-          });
-        }
+        tourForSeo =
+          (isFlagstaff
+            ? getFlagstaffTourBySlug(tourSlug)
+            : getTourBySlugs(stateSlug, citySlug, tourSlug)) ?? null;
       } else if (
-        !isBookingRoute &&
-        canBuildTourNodes &&
         segments[0] === "destinations" &&
         segments[1] === "states" &&
         segments[4] === "cities" &&
@@ -1203,103 +958,391 @@ const main = async () => {
         const citySlug = segments[5];
         const tourSlug = segments[7];
         const isFlagstaff = stateSlug === "arizona" && citySlug === "flagstaff";
-        tourForStructuredData = isFlagstaff
-          ? getFlagstaffTourBySlug(tourSlug)
-          : getTourBySlugs(stateSlug, citySlug, tourSlug);
-        if (tourForStructuredData) {
-          bookingUrl = buildCanonicalUrl(
-            getTourBookingPath(tourForStructuredData)
-          );
-          breadcrumbItems = buildTourBreadcrumbs({
-            tour: tourForStructuredData,
-            detailUrl: canonicalUrl,
-            countryHref: "/destinations/united-states",
-            countryName: "United States",
-            stateHref: `/destinations/united-states/${stateSlug}`,
-            cityHref: `/destinations/united-states/${stateSlug}/${citySlug}`,
-            toursHref: `/destinations/united-states/${stateSlug}/${citySlug}/tours`,
-            includeDestinations: true,
-          });
-        }
+        tourForSeo =
+          (isFlagstaff
+            ? getFlagstaffTourBySlug(tourSlug)
+            : getTourBySlugs(stateSlug, citySlug, tourSlug)) ?? null;
       }
 
-      if (isBookingRoute && tourForSeo && canBuildBookingNodes) {
-        const bookingCanonicalUrl = buildCanonicalUrl(normalizedPathname);
-        const detailCanonicalUrl = buildCanonicalUrl(basePathname);
-        structuredDataNodes.push(
-          buildWebPageStructuredData({
-            url: bookingCanonicalUrl,
-            name: seo.title,
-            description: seo.description,
-            image: resolvedHeroImage ?? undefined,
-          }),
-          buildReserveActionStructuredData({
-            bookingUrl: bookingCanonicalUrl,
-            tourDetailUrl: detailCanonicalUrl,
-            tourName: tourForSeo.title,
-          })
-        );
-      } else if (tourForStructuredData && bookingUrl && canBuildTourNodes) {
-        const heroImage = resolvedHeroImage ?? null;
-        const structuredImages = heroImage ? [heroImage] : [];
-        structuredDataNodes.push(
-          buildWebPageStructuredData({
-            url: canonicalUrl,
-            name: seo.title,
-            description: seo.description,
-            image: heroImage,
-          }),
-          buildTourProductStructuredData({
-            tour: tourForStructuredData,
-            detailUrl: canonicalUrl,
-            bookingUrl,
-            description: seo.description,
-            images: structuredImages.length ? structuredImages : undefined,
-          }),
-          buildTourTripStructuredData({
-            tour: tourForStructuredData,
-            detailUrl: canonicalUrl,
-            bookingUrl,
-            description: seo.description,
-            images: structuredImages.length ? structuredImages : undefined,
-          })
-        );
-        if (breadcrumbItems?.length && buildBreadcrumbList) {
-          structuredDataNodes.push(buildBreadcrumbList(breadcrumbItems));
+      if (engine2Seo) {
+        seo.title = isBookingRoute
+          ? `${engine2Seo.title} | Book`
+          : engine2Seo.title;
+        seo.description = isBookingRoute
+          ? `Book ${engine2Tour.name} in ${engine2Tour.geo.city}, ${engine2Tour.geo.region}.`
+          : engine2Seo.description;
+        seo.url = isBookingRoute
+          ? buildCanonicalUrl(normalizedPathname)
+          : engine2Seo.canonical;
+        if (isBookingRoute) {
+          seo.robots = "noindex, nofollow";
+          seo.googlebot = "noindex, nofollow";
+        }
+        seo.image = engine2Seo.og.image;
+      } else if (tourForSeo) {
+        if (isBookingRoute && buildBookingMeta) {
+          const bookingMeta = buildBookingMeta(
+            tourForSeo,
+            buildCanonicalUrl(normalizedPathname)
+          );
+          seo.title = bookingMeta.title;
+          seo.description = bookingMeta.description;
+          seo.url = bookingMeta.canonical;
+          seo.robots = bookingMeta.robots;
+          seo.googlebot = bookingMeta.googlebot;
+        } else if (!isBookingRoute && buildTourMeta) {
+          const tourMeta = buildTourMeta(
+            tourForSeo,
+            buildCanonicalUrl(basePathname)
+          );
+          seo.title = tourMeta.title;
+          seo.description = tourMeta.description;
+          seo.url = tourMeta.canonical;
+        } else {
+          const regionLabel =
+            tourForSeo.destination.state ||
+            tourForSeo.destination.country ||
+            "";
+          const destinationLabel = regionLabel
+            ? `${tourForSeo.destination.city}, ${regionLabel}`
+            : tourForSeo.destination.city;
+          if (isBookingRoute) {
+            seo.title = `${tourForSeo.title} Booking | ${siteBrandName}`;
+            seo.description = buildMetaDescription(
+              `Reserve ${tourForSeo.title} in ${destinationLabel}.`,
+              tourForSeo.shortDescription ??
+                tourForSeo.badges?.tagline ??
+                tourForSeo.longDescription
+            );
+            seo.url = buildCanonicalUrl(normalizedPathname);
+            seo.robots = "noindex, nofollow";
+            seo.googlebot = "noindex, nofollow";
+          } else {
+            seo.title = `${tourForSeo.title} | ${destinationLabel} Outdoor Tour`;
+            seo.description = buildTourMetaDescription(tourForSeo, {
+              isDuplicate: isTourDescriptionDuplicate(tourForSeo),
+              diagnosticsLabel: `prerender:${tourForSeo.id}`,
+            });
+            seo.url = buildCanonicalUrl(basePathname);
+          }
         }
       } else {
-        structuredDataNodes.push(
-          buildWebPageStructuredData({
-            url: canonicalUrl,
-            name: seo.title,
-            description: seo.description,
-          })
+        const staticSeo = getStaticPageSeo(pathname);
+        if (staticSeo) {
+          seo.title = staticSeo.title;
+          seo.description = staticSeo.description;
+          seo.url = staticSeo.url;
+          seo.image = staticSeo.image;
+        } else {
+          seo.title = buildFallbackTitle(
+            segments,
+            DEFAULT_SEO.title,
+            siteBrandName
+          );
+          seo.description = buildFallbackDescription(
+            segments,
+            DEFAULT_SEO.description,
+            siteBrandName
+          );
+        }
+      }
+
+      if (segments[0] === "guides" && segments.length >= 3) {
+        const guideScope = segments[1];
+        if (guideScope === "us") {
+          const stateSlug = segments[2];
+          stateForHero = getStateBySlug ? getStateBySlug(stateSlug) : null;
+          if (segments.length === 4) {
+            const citySlug = segments[3];
+            cityForHero = getCityBySlugs
+              ? getCityBySlugs(stateSlug, citySlug)
+              : null;
+            guideForHero = getGuideImages
+              ? {
+                  type: "city",
+                  guideImages: getGuideImages(citySlug, stateSlug),
+                }
+              : { type: "city" };
+          } else {
+            guideForHero = { type: "state" };
+          }
+        } else if (guideScope === "world") {
+          const countrySlug = segments[2];
+          if (segments.length === 4) {
+            const citySlug = segments[3];
+            guideForHero = getGuideImages
+              ? {
+                  type: "city",
+                  guideImages: getGuideImages(citySlug, undefined, countrySlug),
+                }
+              : { type: "city" };
+          } else {
+            guideForHero = { type: "country" };
+          }
+        }
+      }
+
+      if (segments[0] === "destinations" && !tourForSeo) {
+        if (segments[1] === "states" && segments[2]) {
+          stateForHero = getStateBySlug ? getStateBySlug(segments[2]) : null;
+          if (segments[3] === "cities" && segments[4]) {
+            cityForHero = getCityBySlugs
+              ? getCityBySlugs(segments[2], segments[4])
+              : null;
+          }
+        } else if (
+          segments[1] &&
+          segments[1] !== "world" &&
+          segments[1] !== "europe"
+        ) {
+          stateForHero = getStateBySlug ? getStateBySlug(segments[1]) : null;
+          if (segments[2] && segments[2] !== "tours") {
+            cityForHero = getCityBySlugs
+              ? getCityBySlugs(segments[1], segments[2])
+              : null;
+          }
+        }
+      }
+
+      if (cityForHero?.slug && stateForHero?.slug) {
+        cityToursForHero = tours.filter(
+          tour =>
+            tour.destination.stateSlug === stateForHero.slug &&
+            tour.destination.citySlug === cityForHero.slug
         );
       }
 
-      structuredData = normalizeStructuredData({
-        "@context": "https://schema.org",
-        "@graph": [...baseStructuredDataNodes, ...structuredDataNodes],
-      });
-    }
+      const resolvedHeroImage = resolveHeroImageForRoute
+        ? resolveHeroImageForRoute({
+            route: normalizedPathname,
+            tour: tourForSeo,
+            guide: guideForHero,
+            state: stateForHero,
+            city: cityForHero,
+            cityTours: cityToursForHero ?? undefined,
+          })
+        : null;
 
-    const { outputPath, shouldWrite } = buildOutputPath(pathname);
+      if (tourForSeo && !engine2Seo) {
+        seo.image = resolvedHeroImage ?? "";
+      } else if (resolvedHeroImage && !engine2Seo) {
+        seo.image = resolvedHeroImage;
+      }
 
-    if (!shouldWrite || path.basename(outputPath) !== "index.html") {
-      continue;
-    }
+      const canonicalUrl = seo.url;
+      let structuredData = null;
 
-    const dir = path.dirname(outputPath);
-    const canWrite = await ensureDirectory(dir);
-    if (!canWrite) {
-      continue;
-    }
-    const htmlWithMeta = replaceMeta(template, seo);
-    const htmlWithStructuredData = replaceStructuredData(
-      htmlWithMeta,
-      structuredData
-    );
-    await writeFile(outputPath, htmlWithStructuredData, "utf8");
+      if (
+        engine2Tour &&
+        engine2Seo &&
+        buildEngine2SchemaGraph &&
+        normalizeStructuredData
+      ) {
+        const engine2Nodes = buildEngine2SchemaGraph(engine2Tour, engine2Seo);
+        structuredData = normalizeStructuredData({
+          "@context": "https://schema.org",
+          "@graph": Array.isArray(engine2Nodes) ? engine2Nodes : [],
+        });
+      } else if (
+        buildWebPageStructuredData &&
+        getSiteStructuredDataNodes &&
+        normalizeStructuredData
+      ) {
+        const baseStructuredDataNodes = getSiteStructuredDataNodes();
+        const structuredDataNodes = [];
+        let tourForStructuredData = null;
+        let bookingUrl = null;
+        let breadcrumbItems = null;
+        const canBuildTourNodes =
+          Boolean(buildTourProductStructuredData) &&
+          Boolean(buildTourTripStructuredData) &&
+          Boolean(getTourBookingPath);
+        const canBuildBookingNodes = Boolean(buildReserveActionStructuredData);
+
+        if (
+          !isBookingRoute &&
+          canBuildTourNodes &&
+          segments[0] === "tours" &&
+          segments.length === 4
+        ) {
+          tourForStructuredData = getTourBySlugs(
+            segments[1],
+            segments[2],
+            segments[3]
+          );
+          if (tourForStructuredData) {
+            bookingUrl = buildCanonicalUrl(
+              getTourBookingPath(tourForStructuredData)
+            );
+            breadcrumbItems = buildTourBreadcrumbs({
+              tour: tourForStructuredData,
+              detailUrl: canonicalUrl,
+              includeDestinations: false,
+            });
+          }
+        } else if (
+          !isBookingRoute &&
+          canBuildTourNodes &&
+          segments[0] === "tours" &&
+          segments.length === 2
+        ) {
+          tourForStructuredData = getFlagstaffTourBySlug(segments[1]);
+          if (tourForStructuredData) {
+            bookingUrl = buildCanonicalUrl(
+              getTourBookingPath(tourForStructuredData)
+            );
+            const stateSlug = tourForStructuredData.destination.stateSlug;
+            const citySlug = tourForStructuredData.destination.citySlug;
+            breadcrumbItems = buildTourBreadcrumbs({
+              tour: tourForStructuredData,
+              detailUrl: canonicalUrl,
+              countryHref: "/destinations/united-states",
+              countryName: "United States",
+              stateHref: `/destinations/united-states/${stateSlug}`,
+              cityHref: `/destinations/united-states/${stateSlug}/${citySlug}`,
+              toursHref: `/destinations/united-states/${stateSlug}/${citySlug}/tours`,
+              includeDestinations: true,
+            });
+          }
+        } else if (
+          !isBookingRoute &&
+          canBuildTourNodes &&
+          segments[0] === "destinations" &&
+          segments[3] === "tours" &&
+          segments.length === 5
+        ) {
+          const [stateSlug, citySlug, , tourSlug] = segments.slice(1);
+          const isFlagstaff =
+            stateSlug === "arizona" && citySlug === "flagstaff";
+          tourForStructuredData = isFlagstaff
+            ? getFlagstaffTourBySlug(tourSlug)
+            : getTourBySlugs(stateSlug, citySlug, tourSlug);
+          if (tourForStructuredData) {
+            bookingUrl = buildCanonicalUrl(
+              getTourBookingPath(tourForStructuredData)
+            );
+            breadcrumbItems = buildTourBreadcrumbs({
+              tour: tourForStructuredData,
+              detailUrl: canonicalUrl,
+              countryHref: "/destinations/united-states",
+              countryName: "United States",
+              stateHref: `/destinations/united-states/${stateSlug}`,
+              cityHref: `/destinations/united-states/${stateSlug}/${citySlug}`,
+              toursHref: `/destinations/united-states/${stateSlug}/${citySlug}/tours`,
+              includeDestinations: true,
+            });
+          }
+        } else if (
+          !isBookingRoute &&
+          canBuildTourNodes &&
+          segments[0] === "destinations" &&
+          segments[1] === "states" &&
+          segments[4] === "cities" &&
+          segments[6] === "tours" &&
+          segments.length === 8
+        ) {
+          const stateSlug = segments[2];
+          const citySlug = segments[5];
+          const tourSlug = segments[7];
+          const isFlagstaff =
+            stateSlug === "arizona" && citySlug === "flagstaff";
+          tourForStructuredData = isFlagstaff
+            ? getFlagstaffTourBySlug(tourSlug)
+            : getTourBySlugs(stateSlug, citySlug, tourSlug);
+          if (tourForStructuredData) {
+            bookingUrl = buildCanonicalUrl(
+              getTourBookingPath(tourForStructuredData)
+            );
+            breadcrumbItems = buildTourBreadcrumbs({
+              tour: tourForStructuredData,
+              detailUrl: canonicalUrl,
+              countryHref: "/destinations/united-states",
+              countryName: "United States",
+              stateHref: `/destinations/united-states/${stateSlug}`,
+              cityHref: `/destinations/united-states/${stateSlug}/${citySlug}`,
+              toursHref: `/destinations/united-states/${stateSlug}/${citySlug}/tours`,
+              includeDestinations: true,
+            });
+          }
+        }
+
+        if (isBookingRoute && tourForSeo && canBuildBookingNodes) {
+          const bookingCanonicalUrl = buildCanonicalUrl(normalizedPathname);
+          const detailCanonicalUrl = buildCanonicalUrl(basePathname);
+          structuredDataNodes.push(
+            buildWebPageStructuredData({
+              url: bookingCanonicalUrl,
+              name: seo.title,
+              description: seo.description,
+              image: resolvedHeroImage ?? undefined,
+            }),
+            buildReserveActionStructuredData({
+              bookingUrl: bookingCanonicalUrl,
+              tourDetailUrl: detailCanonicalUrl,
+              tourName: tourForSeo.title,
+            })
+          );
+        } else if (tourForStructuredData && bookingUrl && canBuildTourNodes) {
+          const heroImage = resolvedHeroImage ?? null;
+          const structuredImages = heroImage ? [heroImage] : [];
+          structuredDataNodes.push(
+            buildWebPageStructuredData({
+              url: canonicalUrl,
+              name: seo.title,
+              description: seo.description,
+              image: heroImage,
+            }),
+            buildTourProductStructuredData({
+              tour: tourForStructuredData,
+              detailUrl: canonicalUrl,
+              bookingUrl,
+              description: seo.description,
+              images: structuredImages.length ? structuredImages : undefined,
+            }),
+            buildTourTripStructuredData({
+              tour: tourForStructuredData,
+              detailUrl: canonicalUrl,
+              bookingUrl,
+              description: seo.description,
+              images: structuredImages.length ? structuredImages : undefined,
+            })
+          );
+          if (breadcrumbItems?.length && buildBreadcrumbList) {
+            structuredDataNodes.push(buildBreadcrumbList(breadcrumbItems));
+          }
+        } else {
+          structuredDataNodes.push(
+            buildWebPageStructuredData({
+              url: canonicalUrl,
+              name: seo.title,
+              description: seo.description,
+            })
+          );
+        }
+
+        structuredData = normalizeStructuredData({
+          "@context": "https://schema.org",
+          "@graph": [...baseStructuredDataNodes, ...structuredDataNodes],
+        });
+      }
+
+      const { outputPath, shouldWrite } = buildOutputPath(pathname);
+
+      if (!shouldWrite || path.basename(outputPath) !== "index.html") {
+        continue;
+      }
+
+      const dir = path.dirname(outputPath);
+      const canWrite = await ensureDirectory(dir);
+      if (!canWrite) {
+        continue;
+      }
+      const htmlWithMeta = replaceMeta(template, seo);
+      const htmlWithStructuredData = replaceStructuredData(
+        htmlWithMeta,
+        structuredData
+      );
+      await writeFile(outputPath, htmlWithStructuredData, "utf8");
     } catch (error) {
       routeFailures.push({
         route: pathname,
@@ -1374,7 +1417,7 @@ const main = async () => {
             normalizePathname(pathname)
           )
       ),
-      expectedRobots: "noindex,follow,max-image-preview:large",
+      expectedRobots: "noindex, nofollow",
     },
     {
       label: "Static",

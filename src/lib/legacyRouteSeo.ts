@@ -5,7 +5,12 @@ import type { buildBookingMeta, buildTourMeta } from "./tourMeta";
 type Tour = {
   id?: string | number;
   slug: string;
-  destination: { stateSlug: string; citySlug: string; state?: string; city?: string };
+  destination: {
+    stateSlug: string;
+    citySlug: string;
+    state?: string;
+    city?: string;
+  };
   heroImage?: string | null;
   galleryImages?: string[] | null;
   primaryImage?: string | null;
@@ -16,9 +21,9 @@ type MetaBuilder = typeof buildTourMeta;
 type BookingBuilder = typeof buildBookingMeta;
 
 const LEGACY_DETAIL_RES = [
-  /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/,
-  /^\/destinations\/([^/]+)\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/,
-  /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)\/?$/,
+  /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)(\/book)?\/?$/,
+  /^\/destinations\/([^/]+)\/([^/]+)\/([^/]+)\/tours\/([^/]+)(\/book)?\/?$/,
+  /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)(\/book)?\/?$/,
 ];
 
 const FORBIDDEN_TOUR_ROUTE_IMAGES = new Set(["/hero.jpg"]);
@@ -43,7 +48,8 @@ const normalizeCandidateImage = (value: unknown): string | null => {
   if (!trimmed) return null;
   if (/[<>]/.test(trimmed)) return null;
   if (/^\/hero\.jpg$/i.test(trimmed)) return null;
-  if (/^https?:\/\/www\.alloutdooradventures\.com\/hero\.jpg$/i.test(trimmed)) return null;
+  if (/^https?:\/\/www\.alloutdooradventures\.com\/hero\.jpg$/i.test(trimmed))
+    return null;
   const looksLikeImage =
     /^data:image\//i.test(trimmed) ||
     /cdn\.filestackcontent\.com|filepicker\.io/i.test(trimmed) ||
@@ -60,16 +66,32 @@ const extractFirstLegacyMarkupImage = (
   raw: string,
   candidateLog?: LegacyImageCandidateLog[]
 ): string | null => {
-  const patterns: Array<{ type: LegacyImageCandidateLog["type"]; re: RegExp }> = [
-    { type: "img[src]", re: /<img[^>]*\ssrc=["']([^"']+)["'][^>]*>/i },
-    { type: "data-src", re: /<img[^>]*\sdata-src=["']([^"']+)["'][^>]*>/i },
-    { type: "data-lazy-src", re: /<img[^>]*\sdata-lazy-src=["']([^"']+)["'][^>]*>/i },
-    { type: "data-flickity-lazyload", re: /<img[^>]*\sdata-flickity-lazyload=["']([^"']+)["'][^>]*>/i },
-    { type: "srcset", re: /<img[^>]*\ssrcset=["']([^"']+)["'][^>]*>/i },
-    { type: "background-image", re: /background-image\s*:\s*url\(([^)]+)\)/i },
-    { type: "json-blobs", re: /["'](?:image|image_url|heroImage|feature_image|url)["']\s*[:=]\s*["'](https?:\\?\/\\?\/[^"']+)["']/i },
-    { type: "filestack", re: /https?:\\?\/\\?\/cdn\.filestackcontent\.com\\?\/[A-Za-z0-9][^\s"')<]*/i },
-  ];
+  const patterns: Array<{ type: LegacyImageCandidateLog["type"]; re: RegExp }> =
+    [
+      { type: "img[src]", re: /<img[^>]*\ssrc=["']([^"']+)["'][^>]*>/i },
+      { type: "data-src", re: /<img[^>]*\sdata-src=["']([^"']+)["'][^>]*>/i },
+      {
+        type: "data-lazy-src",
+        re: /<img[^>]*\sdata-lazy-src=["']([^"']+)["'][^>]*>/i,
+      },
+      {
+        type: "data-flickity-lazyload",
+        re: /<img[^>]*\sdata-flickity-lazyload=["']([^"']+)["'][^>]*>/i,
+      },
+      { type: "srcset", re: /<img[^>]*\ssrcset=["']([^"']+)["'][^>]*>/i },
+      {
+        type: "background-image",
+        re: /background-image\s*:\s*url\(([^)]+)\)/i,
+      },
+      {
+        type: "json-blobs",
+        re: /["'](?:image|image_url|heroImage|feature_image|url)["']\s*[:=]\s*["'](https?:\\?\/\\?\/[^"']+)["']/i,
+      },
+      {
+        type: "filestack",
+        re: /https?:\\?\/\\?\/cdn\.filestackcontent\.com\\?\/[A-Za-z0-9][^\s"')<]*/i,
+      },
+    ];
 
   for (const { type, re } of patterns) {
     const match = re.exec(raw);
@@ -86,10 +108,14 @@ const extractFirstLegacyMarkupImage = (
   return null;
 };
 
-
-const findImageInUnknown = (value: unknown, seen = new Set<unknown>()): string | null => {
+const findImageInUnknown = (
+  value: unknown,
+  seen = new Set<unknown>()
+): string | null => {
   if (typeof value === "string") {
-    return normalizeCandidateImage(value) ?? extractFirstLegacyMarkupImage(value);
+    return (
+      normalizeCandidateImage(value) ?? extractFirstLegacyMarkupImage(value)
+    );
   }
 
   if (!value || typeof value !== "object") return null;
@@ -130,7 +156,9 @@ const findImageInUnknown = (value: unknown, seen = new Set<unknown>()): string |
 
   return null;
 };
-export const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>) => {
+export const resolveLegacyTourRouteImage = (
+  tour: Tour & Record<string, unknown>
+) => {
   const directCandidates = [
     resolveTourHeroImage(tour as any),
     tour.heroImage,
@@ -159,7 +187,9 @@ export const resolveLegacyTourRouteImage = (tour: Tour & Record<string, unknown>
     if (!Array.isArray(collection)) continue;
     for (const image of collection) {
       const normalized = normalizeCandidateImage(
-        typeof image === "string" ? image : (image as any)?.url ?? (image as any)?.src
+        typeof image === "string"
+          ? image
+          : ((image as any)?.url ?? (image as any)?.src)
       );
       if (normalized) return normalized;
     }
@@ -200,13 +230,19 @@ export const buildLegacyTourRouteSeo = ({
   );
   if (!detailMatch) return null;
 
-  const routeGroups = detailMatch.slice(1);
+  const isBookingRoute = pathname.replace(/\/+$/, "").endsWith("/book");
+  const routeGroups = detailMatch
+    .slice(1)
+    .filter(group => group !== undefined && group !== "/book");
   const [stateSlug, citySlug, tourSlug] =
     routeGroups.length === 4
       ? [routeGroups[1], routeGroups[2], routeGroups[3]]
       : [routeGroups[0], routeGroups[1], routeGroups[2]];
   const normalize = (value: string | undefined | null) =>
-    (value ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    (value ?? "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
   const routeState = normalize(stateSlug);
   const routeCity = normalize(citySlug);
   const routeProductIdMatch = /-(\d+)$/i.exec(tourSlug);
@@ -237,12 +273,17 @@ export const buildLegacyTourRouteSeo = ({
   if (!tour) return null;
 
   const canonical = `${site}${pathname}`;
-  const meta = buildTourMetaFn(tour as any, canonical);
+  const meta =
+    isBookingRoute && buildBookingMetaFn
+      ? buildBookingMetaFn(tour as any, canonical)
+      : buildTourMetaFn(tour as any, canonical);
 
   return {
     title: meta.title,
     description: meta.description,
     url: meta.canonical,
     image: resolveLegacyTourRouteImage(tour as Tour & Record<string, unknown>),
+    robots: meta.robots,
+    googlebot: meta.googlebot,
   };
 };
