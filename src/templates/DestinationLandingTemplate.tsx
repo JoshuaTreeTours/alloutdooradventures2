@@ -9,7 +9,8 @@ import BubbleChips from "../components/BubbleChips";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import type { StateDestination } from "../data/destinations";
 import type { Tour } from "../data/tours.types";
-import { getTourDetailPath, getToursByCityUnified } from "../data/tours";
+import { getDestinationCityCards } from "../data/destinationCityListings";
+import { getTourDetailPath } from "../data/tours";
 import { pickBestHeroImageFromTours } from "../utils/heroImage";
 import { resolveHeroImageForRoute, resolveTourHeroImage } from "../utils/hero";
 import { SITE_BRAND_NAME } from "../utils/site";
@@ -42,25 +43,7 @@ export default function DestinationLandingTemplate({
       : null;
   const heroImage = mexicoHeroImage ?? fallbackHeroImage;
 
-  const cityCards = useMemo(
-    () =>
-      state.cities
-        .map(city => {
-          const cityTours = getToursByCityUnified(state.slug, city.slug);
-          return {
-            city,
-            tourCount: cityTours.length,
-            heroImage: pickBestHeroImageFromTours(
-              cityTours.map(entry => entry.tour) as unknown[]
-            ),
-          };
-        })
-        .sort(
-          (a, b) =>
-            b.tourCount - a.tourCount || a.city.name.localeCompare(b.city.name)
-        ),
-    [state.cities, state.slug]
-  );
+  const cityCards = useMemo(() => getDestinationCityCards(state), [state]);
   const cityPills = useMemo(
     () =>
       [...cityCards]
