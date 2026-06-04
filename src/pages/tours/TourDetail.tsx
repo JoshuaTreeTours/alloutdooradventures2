@@ -288,7 +288,10 @@ export default function TourDetail({ params }: TourDetailProps) {
                   : `From ${startingPriceLabel} per person`}
               </p>
               <Link href={bookingUrl}>
-                <a className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]">
+                <a
+                  rel="nofollow"
+                  className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+                >
                   BOOK
                 </a>
               </Link>
@@ -337,7 +340,10 @@ export default function TourDetail({ params }: TourDetailProps) {
         {bookingUrl ? (
           <div className="mt-12 text-center">
             <Link href={bookingUrl}>
-              <a className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]">
+              <a
+                rel="nofollow"
+                className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+              >
                 Book This Tour
               </a>
             </Link>

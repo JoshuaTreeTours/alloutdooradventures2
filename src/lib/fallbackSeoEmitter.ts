@@ -5,27 +5,58 @@ import { resolveLegacyTourRouteImage } from "./legacyRouteSeo";
 
 export const applyRouteSeo = (
   html: string,
-  { title, description, url, image }: { title: string; description: string; url: string; image?: string }
+  {
+    title,
+    description,
+    url,
+    image,
+    robots,
+    googlebot,
+  }: {
+    title: string;
+    description: string;
+    url: string;
+    image?: string;
+    robots?: string;
+    googlebot?: string;
+  }
 ) => {
-  const setMetaByAttr = (input: string, attr: string, name: string, value: string) => {
+  const setMetaByAttr = (
+    input: string,
+    attr: string,
+    name: string,
+    value: string
+  ) => {
     const re = new RegExp(`<meta[^>]*${attr}=["']${name}["'][^>]*>`, "i");
     if (re.test(input)) {
       return input.replace(re, `<meta ${attr}="${name}" content="${value}" />`);
     }
-    return input.replace("</head>", `<meta ${attr}="${name}" content="${value}" /></head>`);
+    return input.replace(
+      "</head>",
+      `<meta ${attr}="${name}" content="${value}" /></head>`
+    );
   };
   const removeMetaByAttr = (input: string, attr: string, name: string) => {
     const re = new RegExp(`<meta[^>]*${attr}=["']${name}["'][^>]*>\\s*`, "i");
     return input.replace(re, "");
   };
 
-  let out = html.replace(/<title[^>]*>[\s\S]*?<\/title>/i, `<title>${title}</title>`);
+  let out = html.replace(
+    /<title[^>]*>[\s\S]*?<\/title>/i,
+    `<title>${title}</title>`
+  );
   out = setMetaByAttr(out, "name", "description", description);
   out = setMetaByAttr(out, "property", "og:title", title);
   out = setMetaByAttr(out, "property", "og:description", description);
   out = setMetaByAttr(out, "property", "og:url", url);
   out = setMetaByAttr(out, "name", "twitter:title", title);
   out = setMetaByAttr(out, "name", "twitter:description", description);
+  if (robots) {
+    out = setMetaByAttr(out, "name", "robots", robots);
+  }
+  if (googlebot ?? robots) {
+    out = setMetaByAttr(out, "name", "googlebot", googlebot ?? robots);
+  }
   if (image) {
     out = setMetaByAttr(out, "property", "og:image", image);
     out = setMetaByAttr(out, "name", "twitter:image", image);
@@ -33,7 +64,10 @@ export const applyRouteSeo = (
     out = removeMetaByAttr(out, "property", "og:image");
     out = removeMetaByAttr(out, "name", "twitter:image");
   }
-  out = out.replace(/<link[^>]*rel=["']canonical["'][^>]*>/i, `<link rel="canonical" href="${url}" />`);
+  out = out.replace(
+    /<link[^>]*rel=["']canonical["'][^>]*>/i,
+    `<link rel="canonical" href="${url}" />`
+  );
   const structuredData: Record<string, string> = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -45,7 +79,8 @@ export const applyRouteSeo = (
   if (image) structuredData.image = image;
   const ld = `<script id="structured-data" type="application/ld+json">${JSON.stringify(structuredData).replace(/</g, "\\u003c")}</script>`;
 
-  const ldScriptRe = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/i;
+  const ldScriptRe =
+    /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/i;
   const existingLdMatch = out.match(ldScriptRe);
   if (!existingLdMatch) {
     return out.replace("</head>", `${ld}</head>`);
@@ -64,14 +99,17 @@ export const applyRouteSeo = (
       }
       const nodeType = node["@type"];
       const isTargetType =
-        nodeType === "WebPage" || nodeType === "Product" || nodeType === "TouristTrip";
+        nodeType === "WebPage" ||
+        nodeType === "Product" ||
+        nodeType === "TouristTrip";
       if (!isTargetType) {
         return node;
       }
 
       const existingImage = node.image;
       const hasImage =
-        (typeof existingImage === "string" && existingImage.trim().length > 0) ||
+        (typeof existingImage === "string" &&
+          existingImage.trim().length > 0) ||
         (Array.isArray(existingImage) && existingImage.length > 0);
       if (!hasImage) {
         node.image = image;
@@ -121,7 +159,9 @@ export const buildLegacyTourRouteFallbackSeo = ({
 }) => {
   const match =
     /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/.exec(pathname) ??
-    /^\/destinations\/([^/]+)\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/.exec(pathname) ??
+    /^\/destinations\/([^/]+)\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/.exec(
+      pathname
+    ) ??
     /^\/tours\/([^/]+)\/([^/]+)\/([^/]+)\/?$/.exec(pathname);
   if (!match) return null;
 
@@ -134,7 +174,8 @@ export const buildLegacyTourRouteFallbackSeo = ({
   const city = toTitleCase(citySlug);
   const tour = toTitleCase(tourSlug.replace(/-\d+$/g, ""));
   const legacyTour = getLegacyTourBySlugs(stateSlug, citySlug, tourSlug);
-  const isSantaBarbaraLegacy = stateSlug === "california" && citySlug === "santa-barbara";
+  const isSantaBarbaraLegacy =
+    stateSlug === "california" && citySlug === "santa-barbara";
   const tourImage = legacyTour
     ? isSantaBarbaraLegacy
       ? resolveLegacyTourRouteImage(legacyTour as Record<string, unknown>)

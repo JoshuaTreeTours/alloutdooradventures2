@@ -25,13 +25,16 @@ type TourLike = {
 };
 
 const INDEX_ROBOTS = "index,follow,max-image-preview:large";
-const NOINDEX_ROBOTS = "noindex,follow,max-image-preview:large";
+const NOINDEX_ROBOTS = "noindex, nofollow";
 
 const clean = (value?: string) => (value ?? "").trim();
 
 const stripLegacyPrefix = (value: string) =>
   value
-    .replace(/^Destinations\s*\/\s*[^/]+\s*\/\s*[^/]+\s*\/\s*Tours\s*\/\s*/i, "")
+    .replace(
+      /^Destinations\s*\/\s*[^/]+\s*\/\s*[^/]+\s*\/\s*Tours\s*\/\s*/i,
+      ""
+    )
     .replace(/\bHome\s*[:|/-]\s*/gi, "")
     .replace(/\s*\|\s*All Outdoor Adventures$/i, "");
 
@@ -63,14 +66,20 @@ const pickTourName = (tour: TourLike) => {
 
 const pickCity = (tour: TourLike) => clean(tour.destination?.city) || "Unknown";
 
-const pickState = (tour: TourLike) => clean(tour.destination?.state) || "Unknown";
+const pickState = (tour: TourLike) =>
+  clean(tour.destination?.state) || "Unknown";
 
-const pickCountry = (tour: TourLike) => clean(tour.destination?.country) || pickState(tour);
+const pickCountry = (tour: TourLike) =>
+  clean(tour.destination?.country) || pickState(tour);
 
-const isInternationalLegacyTourRoute = (tour: TourLike, canonicalUrl: string) => {
+const isInternationalLegacyTourRoute = (
+  tour: TourLike,
+  canonicalUrl: string
+) => {
   const rawCountry = clean(tour.destination?.country);
   const country = rawCountry.toLowerCase();
-  const isInternational = !!rawCountry && country !== "united states" && country !== "usa";
+  const isInternational =
+    !!rawCountry && country !== "united states" && country !== "usa";
   const isLegacyRoute =
     /\/tours\/[^/]+\/[^/]+\/[^/]+\/?$/i.test(canonicalUrl) ||
     /\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+\/?$/i.test(canonicalUrl);
@@ -83,11 +92,15 @@ const pickActivityType = (tour: TourLike) => {
     clean(tour.primaryCategory) ||
     clean(tour.categories?.[0]) ||
     clean(tour.activitySlugs?.[0]);
-  return raw ? raw.replace(/[-_]/g, " ").replace(/\s+/g, " ").trim().toLowerCase() : "";
+  return raw
+    ? raw.replace(/[-_]/g, " ").replace(/\s+/g, " ").trim().toLowerCase()
+    : "";
 };
 
 const withLengthCap = (value: string, max: number) =>
-  value.length <= max ? value : `${value.slice(0, Math.max(0, max - 1)).trimEnd()}…`;
+  value.length <= max
+    ? value
+    : `${value.slice(0, Math.max(0, max - 1)).trimEnd()}…`;
 
 const getTourSlugFromPath = (pathname: string) => {
   const normalized = pathname.split("?")[0].split("#")[0].replace(/\/+$/, "");
@@ -96,7 +109,10 @@ const getTourSlugFromPath = (pathname: string) => {
 };
 
 const normalizeCanonical = (canonicalUrl: string) => {
-  if (canonicalUrl.startsWith("http://") || canonicalUrl.startsWith("https://")) {
+  if (
+    canonicalUrl.startsWith("http://") ||
+    canonicalUrl.startsWith("https://")
+  ) {
     return canonicalUrl;
   }
 
@@ -133,7 +149,10 @@ const buildDescription = (tour: TourLike, canonicalUrl: string) => {
 
   if (tour.engine === "engine6") {
     if (detail) {
-      return withLengthCap(`Explore ${tourName} in ${city}, ${state}. ${detail}`, 155);
+      return withLengthCap(
+        `Explore ${tourName} in ${city}, ${state}. ${detail}`,
+        155
+      );
     }
     return withLengthCap(
       `Experience ${tourName} in ${city}, ${state} with destination highlights, local context, and flexible planning through All Outdoor Adventures.`,
@@ -151,7 +170,8 @@ const buildDescription = (tour: TourLike, canonicalUrl: string) => {
       `Join ${tourName} in ${city}, ${country}`,
       `Enjoy ${tourName} in ${city}, ${country}`,
     ];
-    const templateIndex = (clean(tour.id).length + clean(tour.slug).length) % templates.length;
+    const templateIndex =
+      (clean(tour.id).length + clean(tour.slug).length) % templates.length;
     const pieces = [
       templates[templateIndex],
       activity ? `for a ${activity} outing` : "for a memorable local outing",
@@ -162,7 +182,10 @@ const buildDescription = (tour: TourLike, canonicalUrl: string) => {
     if (detail) {
       return withLengthCap(`${base} ${detail}`, 155);
     }
-    return withLengthCap(`${base} Discover destination highlights, local atmosphere, and easy planning for your trip.`, 155);
+    return withLengthCap(
+      `${base} Discover destination highlights, local atmosphere, and easy planning for your trip.`,
+      155
+    );
   }
 
   const templates = [
@@ -173,7 +196,8 @@ const buildDescription = (tour: TourLike, canonicalUrl: string) => {
     `Ride into ${city}, ${state} on ${tourName}.`,
     `Discover ${tourName} across ${city}, ${state}.`,
   ];
-  const templateIndex = (clean(tour.id).length + clean(tour.slug).length) % templates.length;
+  const templateIndex =
+    (clean(tour.id).length + clean(tour.slug).length) % templates.length;
   const activity = pickActivityType(tour);
   const duration = clean(tour.badges?.duration);
   const operator = clean(tour.operator);

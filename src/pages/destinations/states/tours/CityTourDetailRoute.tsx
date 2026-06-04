@@ -957,7 +957,10 @@ export default function CityTourDetailRoute({
           </div>
           <div className="flex flex-wrap gap-3">
             <Link href={bookingUrl}>
-              <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
+              <a
+                rel="nofollow"
+                className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+              >
                 {hardenedTemplate?.primaryCtaLabel ?? "BOOK"}
               </a>
             </Link>
@@ -1114,7 +1117,10 @@ export default function CityTourDetailRoute({
         {bookingUrl ? (
           <div id="booking-section" className="mt-12 text-center">
             <Link href={bookingUrl}>
-              <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
+              <a
+                rel="nofollow"
+                className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+              >
                 Book This Tour
               </a>
             </Link>
