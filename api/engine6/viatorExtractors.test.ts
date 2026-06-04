@@ -47,7 +47,6 @@ describe("extractEngine6Product operatorReviews mapping", () => {
       "product.reviews.totalReviews"
     );
   });
-
 });
 
 describe("extractEngine6Product category normalization", () => {
@@ -68,11 +67,17 @@ describe("extractEngine6Product category normalization", () => {
 
     const result = extractEngine6Product(payload as Record<string, unknown>);
 
-    expect(result.extracted.primaryCategory).toBe("bike-tour");
+    expect(result.extracted.primaryCategory).toBe("cycling");
     expect(result.extracted.categories).toEqual([
-      "bike-tour",
-      "hiking-tour",
-      "walking-tour",
+      "cycling",
+      "hiking",
+      "sightseeing-city-tours",
+    ]);
+    expect(result.extracted.primaryDisplayCategory).toBe("Cycling");
+    expect(result.extracted.activityCategories).toEqual([
+      { slug: "cycling", label: "Cycling" },
+      { slug: "hiking", label: "Hiking" },
+      { slug: "sightseeing-city-tours", label: "Sightseeing & City Tours" },
     ]);
   });
 });

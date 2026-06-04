@@ -650,8 +650,8 @@ export const mapViatorToEngine6Tour = (
           title: item.title,
           description: item.description,
           stopType: item.stopType,
-          duration: null,
-          admissionNote: null,
+          duration: undefined,
+          admissionNote: undefined,
         }))
       : (payload.extracted.itinerary?.map((item, index) => ({
           ...item,
@@ -670,7 +670,11 @@ export const mapViatorToEngine6Tour = (
   const categories = payload.extracted.categories ?? [];
   const primaryCategory =
     payload.extracted.primaryCategory ?? categories[0] ?? null;
-  const categoryLabel = formatEngine6CategoryLabel(primaryCategory);
+  const primaryDisplayCategory =
+    payload.extracted.primaryDisplayCategory ??
+    formatEngine6CategoryLabel(primaryCategory);
+  const activityCategories = payload.extracted.activityCategories ?? [];
+  const categoryLabel = primaryDisplayCategory;
   const rawDescription =
     payload.extracted.overviewText ??
     payload.extracted.seoDescription ??
@@ -776,6 +780,8 @@ export const mapViatorToEngine6Tour = (
     requirements,
     primaryCategory,
     categories,
+    primaryDisplayCategory,
+    activityCategories,
     categoryLabel,
     pagePath: canonicalPath,
     canonicalPath,

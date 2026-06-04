@@ -37,6 +37,8 @@ export type Tour = {
   tags?: string[];
   categories?: string[];
   primaryCategory?: string;
+  primaryDisplayCategory?: string;
+  activityCategories?: Array<{ slug: string; label: string }>;
   destination: TourDestination;
   heroImage: string;
   resolvedImageUrl?: string | null;

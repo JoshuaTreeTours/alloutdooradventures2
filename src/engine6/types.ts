@@ -12,10 +12,7 @@ export type Engine6FaqItem = {
   answer: string;
 };
 
-export type Engine6HeroSourceType =
-  | "api-primary"
-  | "api-gallery"
-  | "none";
+export type Engine6HeroSourceType = "api-primary" | "api-gallery" | "none";
 
 export type Engine6HeroQualityClassification =
   | "caption"
@@ -116,6 +113,11 @@ export type Engine6ApiDiagnostics = Engine6TourDiagnostics & {
   usedBundledFallbackBecause: string;
 };
 
+export type Engine6ActivityCategory = {
+  slug: string;
+  label: string;
+};
+
 export type Engine6CategorySlug =
   | "off-road-tour"
   | "hiking-tour"
@@ -145,15 +147,13 @@ export type Engine6Tour = {
   state: string;
   resolvedImageUrl: string | null;
   heroImageUrl: string | null;
-  resolvedHero:
-    | {
-        url: string;
-        sourceProductCode: string;
-        sourceProductUrl: string;
-        sourceFieldPath: string;
-        host: string;
-      }
-    | null;
+  resolvedHero: {
+    url: string;
+    sourceProductCode: string;
+    sourceProductUrl: string;
+    sourceFieldPath: string;
+    host: string;
+  } | null;
   priceAmount: number | null;
   priceFormatted: string;
   aggregateRating: number | null;
@@ -169,6 +169,8 @@ export type Engine6Tour = {
   requirements: string[];
   primaryCategory: Engine6CategorySlug | string | null;
   categories: Array<Engine6CategorySlug | string>;
+  primaryDisplayCategory: string | null;
+  activityCategories: Engine6ActivityCategory[];
   categoryLabel: string | null;
   pagePath: string;
   canonicalPath: string;
@@ -205,5 +207,7 @@ export type Engine6ApiResponse = {
     requirements: string[];
     primaryCategory: Engine6CategorySlug | string | null;
     categories: Array<Engine6CategorySlug | string>;
+    primaryDisplayCategory?: string | null;
+    activityCategories?: Engine6ActivityCategory[];
   };
 };

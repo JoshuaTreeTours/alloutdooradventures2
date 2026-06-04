@@ -21,6 +21,7 @@ import {
   normalizeDescriptionForDedupe,
 } from "../utils/tourDescription";
 import { slugify } from "../utils/slugify";
+import { classifyTourCategories } from "../lib/tourCategoryClassifier";
 import { isTourRemoved } from "../utils/tours/isTourRemoved";
 import { isHardDeletedLegacyTour } from "../utils/tours/hardDeleteLegacyTours";
 import { resolveTourHeroImage } from "../utils/hero";
@@ -529,6 +530,14 @@ const toEngine2ListingTour = (tour: Engine2Tour): Tour => {
     lng: tour.geo.lng ?? undefined,
   });
 
+  const classification = classifyTourCategories({
+    title: tour.name,
+    overview: tour.content.highlights[0],
+    description: tour.content.experienceText,
+    highlights: tour.content.highlights,
+    categories: isRental ? ["adventure", "rentals"] : ["adventure"],
+  });
+
   return {
     id: `engine2-${tour.id}`,
     type: isRental ? "rental" : "tour",
@@ -540,6 +549,8 @@ const toEngine2ListingTour = (tour: Engine2Tour): Tour => {
     operator: tour.provider.name,
     categories: isRental ? ["adventure", "rentals"] : ["adventure"],
     primaryCategory: isRental ? "rentals" : "adventure",
+    primaryDisplayCategory: classification.primaryDisplayCategory ?? undefined,
+    activityCategories: classification.activityCategories,
     destination: remappedDestination,
     heroImage: tour.images.hero ?? "",
     primaryImageUrl: tour.images.hero ?? undefined,

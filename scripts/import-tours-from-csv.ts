@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import type { Tour } from "../src/data/tours.types";
 import { getCityBySlugs, getStateBySlug } from "../src/data/destinations";
 import { classifyActivity } from "../src/lib/activityClassifier";
+import { classifyTourCategories } from "../src/lib/tourCategoryClassifier";
 import { loadWyomingTours } from "../src/data/us/wyoming";
 import { createIngestLogger } from "../src/lib/logging/ingestLogger";
 import {
@@ -148,11 +149,7 @@ const slugify = (value: string) =>
     .replace(/\s+/g, "-");
 
 const sanitizeCsvText = (value?: string) =>
-  value
-    ?.replace(/\r/g, " ")
-    .replace(/\n/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+  value?.replace(/\r/g, " ").replace(/\n/g, " ").replace(/\s+/g, " ").trim();
 
 const escapeForTsString = (value: string) =>
   value
@@ -186,7 +183,7 @@ const stringifyForTs = (value: unknown, depth = 0): string => {
       return "[]";
     }
     const inner = value
-      .map((entry) => `${nestedIndent}${stringifyForTs(entry, depth + 1)}`)
+      .map(entry => `${nestedIndent}${stringifyForTs(entry, depth + 1)}`)
       .join(",\n");
     return `[\n${inner}\n${indent}]`;
   }
@@ -201,8 +198,8 @@ const stringifyForTs = (value: unknown, depth = 0): string => {
         ([key, entryValue]) =>
           `${nestedIndent}${stringifyForTs(key)}: ${stringifyForTs(
             entryValue,
-            depth + 1,
-          )}`,
+            depth + 1
+          )}`
       )
       .join(",\n");
     return `{\n${inner}\n${indent}}`;
@@ -285,7 +282,7 @@ const parseCsv = (contents: string) => {
     return { header: [], records: [] };
   }
 
-  const records = dataRows.map((row) => {
+  const records = dataRows.map(row => {
     const record: Record<string, string> = {};
     header.forEach((column, index) => {
       record[column] = row[index] ?? "";
@@ -334,10 +331,12 @@ const parseCsvRow = (row: Record<string, string>) => {
 };
 
 const parseLocation = (location: string) => {
-  const segments = location.split("/").map((segment) => segment.trim());
+  const segments = location.split("/").map(segment => segment.trim());
   const city = segments.at(-1) || "Unknown";
   const state =
-    segments.length >= 3 ? segments[1] || "Unknown" : segments.at(-2) || "Unknown";
+    segments.length >= 3
+      ? segments[1] || "Unknown"
+      : segments.at(-2) || "Unknown";
   return {
     state,
     stateSlug: slugify(state),
@@ -349,7 +348,7 @@ const parseLocation = (location: string) => {
 const parseTags = (rawTags: string) =>
   rawTags
     .split(/[-|,]/)
-    .map((tag) => tag.trim())
+    .map(tag => tag.trim())
     .filter(Boolean);
 
 const normalizeCategory = (value?: string) => {
@@ -357,13 +356,15 @@ const normalizeCategory = (value?: string) => {
     return undefined;
   }
   const normalized = value.toLowerCase().trim();
-  if (CATEGORY_KEYWORDS.canoeing.some((keyword) => normalized.includes(keyword))) {
+  if (
+    CATEGORY_KEYWORDS.canoeing.some(keyword => normalized.includes(keyword))
+  ) {
     return "canoeing";
   }
-  if (CATEGORY_KEYWORDS.cycling.some((keyword) => normalized.includes(keyword))) {
+  if (CATEGORY_KEYWORDS.cycling.some(keyword => normalized.includes(keyword))) {
     return "cycling";
   }
-  if (CATEGORY_KEYWORDS.hiking.some((keyword) => normalized.includes(keyword))) {
+  if (CATEGORY_KEYWORDS.hiking.some(keyword => normalized.includes(keyword))) {
     return "hiking";
   }
   return undefined;
@@ -376,7 +377,7 @@ const inferCategoriesFromText = (text: string) => {
   const normalized = text.toLowerCase();
   return Object.entries(CATEGORY_KEYWORDS)
     .filter(([, keywords]) =>
-      keywords.some((keyword) => normalized.includes(keyword)),
+      keywords.some(keyword => normalized.includes(keyword))
     )
     .map(([category]) => category);
 };
@@ -385,7 +386,7 @@ const sortByPriority = (categories: string[]) =>
   Array.from(new Set(categories)).sort(
     (a, b) =>
       CATEGORY_PRIORITY.indexOf(a as (typeof CATEGORY_PRIORITY)[number]) -
-      CATEGORY_PRIORITY.indexOf(b as (typeof CATEGORY_PRIORITY)[number]),
+      CATEGORY_PRIORITY.indexOf(b as (typeof CATEGORY_PRIORITY)[number])
   );
 
 const resolveActivitySlugs = ({
@@ -413,7 +414,8 @@ const resolveActivitySlugs = ({
   const classifierText = [title, shortDescription, tags.join(" ")]
     .filter(Boolean)
     .join(" ");
-  const normalizedExplicit = normalizeCategory(explicitCategory) ?? fallbackActivity;
+  const normalizedExplicit =
+    normalizeCategory(explicitCategory) ?? fallbackActivity;
   const inferred = inferCategoriesFromText(classifierText).filter(category => {
     const isWeakCyclingHikingMatch =
       normalizedExplicit === "cycling" &&
@@ -434,11 +436,13 @@ const resolveActivitySlugs = ({
   const ordered = sortByPriority(Array.from(categories));
   const primary =
     normalizedExplicit ??
-    CATEGORY_PRIORITY.find((category) => categories.has(category)) ??
+    CATEGORY_PRIORITY.find(category => categories.has(category)) ??
     ordered[0];
 
   return {
-    activitySlugs: primary ? [primary, ...ordered.filter((slug) => slug !== primary)] : ordered,
+    activitySlugs: primary
+      ? [primary, ...ordered.filter(slug => slug !== primary)]
+      : ordered,
     primaryCategory: primary ?? ordered[0],
   };
 };
@@ -461,10 +465,10 @@ const buildRating = (qualityScore?: number) => {
 };
 
 const requiredColumnsMissing = (header: string[]) =>
-  REQUIRED_COLUMNS.filter((column) => !header.includes(column));
+  REQUIRED_COLUMNS.filter(column => !header.includes(column));
 
 const optionalColumnsMissing = (header: string[]) =>
-  OPTIONAL_COLUMNS.filter((column) => !header.includes(column));
+  OPTIONAL_COLUMNS.filter(column => !header.includes(column));
 
 type CitySeed = {
   name: string;
@@ -509,7 +513,7 @@ const addRegionSeed = (
     lng?: number;
     heroImage?: string;
     activitySlugs: string[];
-  },
+  }
 ) => {
   if (!state || !city || state === "Unknown" || city === "Unknown") {
     return;
@@ -549,11 +553,11 @@ const addRegionSeed = (
   if (heroImage) {
     cityEntry.heroImages.add(heroImage);
   }
-  activitySlugs.forEach((slug) => cityEntry.activitySlugs.add(slug));
+  activitySlugs.forEach(slug => cityEntry.activitySlugs.add(slug));
 };
 
 const buildAverageCoordinate = (values: number[]) => {
-  const valid = values.filter((value) => Number.isFinite(value));
+  const valid = values.filter(value => Number.isFinite(value));
   if (!valid.length) {
     return Number.NaN;
   }
@@ -563,18 +567,18 @@ const buildAverageCoordinate = (values: number[]) => {
 
 const buildPlacementContext = (
   source: string,
-  destination: ReturnType<typeof parseLocation>,
+  destination: ReturnType<typeof parseLocation>
 ): PlacementContext => {
   const cityMeta = getCityBySlugs(destination.stateSlug, destination.citySlug);
   const stateMeta = getStateBySlug(destination.stateSlug);
   const stateLat = stateMeta
     ? buildAverageCoordinate(
-        stateMeta.cities.map((city) => city.lat).filter(Number.isFinite),
+        stateMeta.cities.map(city => city.lat).filter(Number.isFinite)
       )
     : Number.NaN;
   const stateLng = stateMeta
     ? buildAverageCoordinate(
-        stateMeta.cities.map((city) => city.lng).filter(Number.isFinite),
+        stateMeta.cities.map(city => city.lng).filter(Number.isFinite)
       )
     : Number.NaN;
   const center = cityMeta
@@ -603,7 +607,7 @@ const buildActivityTags = (slugs: string[]) =>
 
 const buildThingsToDo = (cityName: string, tags: string[]) => {
   const items = [
-    ...tags.map((tag) => {
+    ...tags.map(tag => {
       if (tag === "cycling") {
         return `Ride a scenic bike loop around ${cityName}.`;
       }
@@ -689,8 +693,8 @@ const buildCityNarrative = (city: CitySeed, regionName: string) => {
 };
 
 const buildStateNarrative = (state: StateSeed, regionName: string) => {
-  const cities = Array.from(state.cities.values()).map((city) =>
-    buildCityNarrative(city, regionName),
+  const cities = Array.from(state.cities.values()).map(city =>
+    buildCityNarrative(city, regionName)
   );
   const heroImage = cities[0]?.heroImages?.[0] ?? PLACEHOLDER_IMAGE;
 
@@ -723,10 +727,10 @@ const buildStateNarrative = (state: StateSeed, regionName: string) => {
 
 const sanitizeFareHarborUrl = (parsedUrl: URL, rawUrl: string) => {
   const calendarMatch = parsedUrl.pathname.match(
-    /\/embeds\/calendar\/([^/]+)\/items\/(\d+)/,
+    /\/embeds\/calendar\/([^/]+)\/items\/(\d+)/
   );
   const bookCalendarMatch = parsedUrl.pathname.match(
-    /\/embeds\/book\/([^/]+)\/items\/(\d+)\/calendar/,
+    /\/embeds\/book\/([^/]+)\/items\/(\d+)\/calendar/
   );
   const itemMatch = parsedUrl.pathname.match(/\/items\/(\d+)/);
   if (!itemMatch?.[1]) {
@@ -765,10 +769,10 @@ const normalizeCalendarUrl = (rawUrl: string) => {
 
   if (parsedUrl.hostname === "fareharbor.com") {
     const calendarMatch = parsedUrl.pathname.match(
-      /\/embeds\/calendar\/([^/]+)\/items\/(\d+)/,
+      /\/embeds\/calendar\/([^/]+)\/items\/(\d+)/
     );
     const bookMatch = parsedUrl.pathname.match(
-      /\/embeds\/book\/([^/]+)\/items\/(\d+)/,
+      /\/embeds\/book\/([^/]+)\/items\/(\d+)/
     );
 
     if (calendarMatch?.[1] && calendarMatch?.[2]) {
@@ -785,7 +789,7 @@ const rowToTour = (
   row: Record<string, string>,
   parsedRow: ReturnType<typeof parseCsvRow>,
   activitySlug: string | undefined,
-  forceCategory: string | undefined,
+  forceCategory: string | undefined
 ): Tour => {
   const galleryImage = sanitizeCsvText(row.image_url);
   const destination = parseLocation(parsedRow.location);
@@ -802,14 +806,18 @@ const rowToTour = (
     tags: parsedRow.tags,
   });
   const idFallback = slugify(
-    [parsedRow.title, destination.city, parsedRow.operator].filter(Boolean).join(" "),
+    [parsedRow.title, destination.city, parsedRow.operator]
+      .filter(Boolean)
+      .join(" ")
   );
   const id = parsedRow.idSource
     ? `${slugify(parsedRow.operator ?? parsedRow.title)}-${parsedRow.idSource}`
     : idFallback || slugBase;
 
   if (!parsedRow.bookingUrl) {
-    throw new Error(`Missing booking URL for item ${parsedRow.itemId} (${parsedRow.title}).`);
+    throw new Error(
+      `Missing booking URL for item ${parsedRow.itemId} (${parsedRow.title}).`
+    );
   }
 
   const normalizedBookingUrl = normalizeBookingUrl(parsedRow.bookingUrl);
@@ -820,6 +828,18 @@ const rowToTour = (
   const likelyToSellOut =
     typeof parsedRow.availabilityCount === "number" &&
     parsedRow.availabilityCount <= 30;
+  const longDescription = buildLongDescription(
+    parsedRow.title,
+    destination.city,
+    destination.state
+  );
+  const classification = classifyTourCategories({
+    title: parsedRow.title,
+    overview: parsedRow.shortDescription,
+    description: longDescription,
+    highlights: parsedRow.tags,
+    categories: activitySlugs,
+  });
 
   return {
     id,
@@ -829,6 +849,8 @@ const rowToTour = (
     operator: parsedRow.operator,
     categories: activitySlugs,
     primaryCategory,
+    primaryDisplayCategory: classification.primaryDisplayCategory ?? undefined,
+    activityCategories: classification.activityCategories,
     tags: parsedRow.tags,
     destination: {
       ...destination,
@@ -848,16 +870,12 @@ const rowToTour = (
     bookingProvider: "fareharbor",
     bookingUrl: normalizedBookingUrl,
     bookingWidgetUrl: normalizedCalendarLink,
-    longDescription: buildLongDescription(
-      parsedRow.title,
-      destination.city,
-      destination.state,
-    ),
+    longDescription,
   };
 };
 
 const buildToursFromWyomingLoader = (): Tour[] =>
-  loadWyomingTours().flatMap((tour) => {
+  loadWyomingTours().flatMap(tour => {
     if (!tour.bookingUrl) {
       return [];
     }
@@ -872,10 +890,22 @@ const buildToursFromWyomingLoader = (): Tour[] =>
         slug,
         title: tour.title,
         shortDescription:
-          tour.description || `${tour.title} guided tour in ${tour.city}, Wyoming.`,
+          tour.description ||
+          `${tour.title} guided tour in ${tour.city}, Wyoming.`,
         operator: tour.operator || "Local guide",
         categories: ["day-adventures"],
         primaryCategory: "day-adventures",
+        primaryDisplayCategory:
+          classifyTourCategories({
+            title: tour.title,
+            overview: tour.description,
+            categories: ["day-adventures"],
+          }).primaryDisplayCategory ?? undefined,
+        activityCategories: classifyTourCategories({
+          title: tour.title,
+          overview: tour.description,
+          categories: ["day-adventures"],
+        }).activityCategories,
         tags: [],
         destination: {
           country: "United States",
@@ -913,9 +943,9 @@ export const toursGenerated: Tour[] = ${stringifyForTs(tours)};
 
 const run = async () => {
   const files = new Set(await readdir(DATA_DIR));
-  const categoryCsvFiles = CATEGORY_FILES.filter((entry) =>
-    files.has(entry.filename),
-  ).map((entry) => ({
+  const categoryCsvFiles = CATEGORY_FILES.filter(entry =>
+    files.has(entry.filename)
+  ).map(entry => ({
     source: entry.filename,
     activitySlug: entry.activitySlug,
     forceCategory: "forceCategory" in entry ? entry.forceCategory : undefined,
@@ -924,30 +954,32 @@ const run = async () => {
     isDeepSouth: false,
   }));
   const northeastCsvFiles = (await listCsvFiles(NORTHEAST_DIR)).map(
-    (csvPath) => ({
+    csvPath => ({
       source: path.relative(DATA_DIR, csvPath),
       activitySlug: undefined,
       csvPath,
       isNortheast: true,
       isDeepSouth: false,
-    }),
+    })
   );
   const deepSouthCsvFiles = (await listCsvFiles(DEEP_SOUTH_DIR)).map(
-    (csvPath) => ({
+    csvPath => ({
       source: path.relative(DATA_DIR, csvPath),
       activitySlug: undefined,
       csvPath,
       isNortheast: false,
       isDeepSouth: true,
-    }),
+    })
   );
-  const heartlandCsvFiles = (await listCsvFiles(HEARTLAND_DIR)).map((csvPath) => ({
-    source: path.relative(DATA_DIR, csvPath),
-    activitySlug: undefined,
-    csvPath,
-    isNortheast: false,
-    isDeepSouth: false,
-  }));
+  const heartlandCsvFiles = (await listCsvFiles(HEARTLAND_DIR)).map(
+    csvPath => ({
+      source: path.relative(DATA_DIR, csvPath),
+      activitySlug: undefined,
+      csvPath,
+      isNortheast: false,
+      isDeepSouth: false,
+    })
+  );
   const csvFiles = [
     ...categoryCsvFiles,
     ...northeastCsvFiles,
@@ -958,8 +990,8 @@ const run = async () => {
   if (!csvFiles.length) {
     throw new Error(
       `No CSV files found in ${DATA_DIR}. Expected category files: ${CATEGORY_FILES.map(
-        (entry) => entry.filename,
-      ).join(", ")}.`,
+        entry => entry.filename
+      ).join(", ")}.`
     );
   }
 
@@ -997,14 +1029,10 @@ const run = async () => {
     }
   >();
 
-  for (const {
-    source,
-    activitySlug,
-    forceCategory,
-    csvPath,
-    isNortheast,
-    isDeepSouth,
-  } of csvFiles) {
+  for (const csvFile of csvFiles) {
+    const { source, activitySlug, csvPath, isNortheast, isDeepSouth } = csvFile;
+    const forceCategory =
+      "forceCategory" in csvFile ? csvFile.forceCategory : undefined;
     const contents = await readFile(csvPath, "utf8");
     const { header, records } = parseCsv(contents);
     const missingColumns = requiredColumnsMissing(header);
@@ -1012,7 +1040,7 @@ const run = async () => {
 
     if (missingColumns.length) {
       throw new Error(
-        `${source} is missing required columns: ${missingColumns.join(", ")}`,
+        `${source} is missing required columns: ${missingColumns.join(", ")}`
       );
     }
 
@@ -1023,7 +1051,7 @@ const run = async () => {
           event: "csv_missing_optional_columns",
           source,
           columns: missingOptionalColumns,
-        }),
+        })
       );
     }
 
@@ -1072,7 +1100,7 @@ const run = async () => {
         : slugify(
             [row.item_name, row.location, row.company_shortname]
               .filter(Boolean)
-              .join(" "),
+              .join(" ")
           );
       const nextSnapshot = {
         source,
@@ -1119,7 +1147,7 @@ const run = async () => {
             lat: parsedRow.latitude,
             lng: parsedRow.longitude,
           },
-          placementContext,
+          placementContext
         );
 
         if (!placementResult.ok) {
@@ -1171,7 +1199,7 @@ const run = async () => {
           const nextActivitySlugs = [
             reclassifiedCategory,
             ...tour.activitySlugs.filter(
-              (slug) => slug !== "hiking" && slug !== reclassifiedCategory,
+              slug => slug !== "hiking" && slug !== reclassifiedCategory
             ),
           ];
           tour = {
@@ -1192,7 +1220,10 @@ const run = async () => {
         tours.push(tour);
         ingestLogger.incrementAccepted();
 
-        if (isNortheast && NORTHEAST_STATE_SLUGS.has(tour.destination.stateSlug)) {
+        if (
+          isNortheast &&
+          NORTHEAST_STATE_SLUGS.has(tour.destination.stateSlug)
+        ) {
           addRegionSeed(northeastSeeds, {
             state,
             stateSlug: tour.destination.stateSlug,
@@ -1205,7 +1236,10 @@ const run = async () => {
           });
         }
 
-        if (isDeepSouth && DEEP_SOUTH_STATE_SLUGS.has(tour.destination.stateSlug)) {
+        if (
+          isDeepSouth &&
+          DEEP_SOUTH_STATE_SLUGS.has(tour.destination.stateSlug)
+        ) {
           addRegionSeed(deepSouthSeeds, {
             state,
             stateSlug: tour.destination.stateSlug,
@@ -1233,11 +1267,11 @@ const run = async () => {
     });
   }
 
-  const northeastStates = Array.from(northeastSeeds.values()).map((state) =>
-    buildStateNarrative(state, "Northeast"),
+  const northeastStates = Array.from(northeastSeeds.values()).map(state =>
+    buildStateNarrative(state, "Northeast")
   );
-  const deepSouthStates = Array.from(deepSouthSeeds.values()).map((state) =>
-    buildStateNarrative(state, "Deep South"),
+  const deepSouthStates = Array.from(deepSouthSeeds.values()).map(state =>
+    buildStateNarrative(state, "Deep South")
   );
   for (const tour of tours) {
     if (tour.primaryCategory !== "hiking") {
@@ -1274,11 +1308,15 @@ const run = async () => {
     deletedTours,
     hikingViolations,
   };
-  await writeFile(IMPORT_REPORT_PATH, JSON.stringify(importReport, null, 2), "utf8");
+  await writeFile(
+    IMPORT_REPORT_PATH,
+    JSON.stringify(importReport, null, 2),
+    "utf8"
+  );
 
   if (hikingViolations.length > 0) {
     throw new Error(
-      `Hiking audit failed: ${hikingViolations.length} tours violate hiking rules. See ${IMPORT_REPORT_PATH}.`,
+      `Hiking audit failed: ${hikingViolations.length} tours violate hiking rules. See ${IMPORT_REPORT_PATH}.`
     );
   }
 
@@ -1289,10 +1327,10 @@ const run = async () => {
 
 // This file is auto-generated by scripts/import-tours-from-csv.ts. Do not edit manually.
 export const northeastStates: StateDestination[] = ${stringifyForTs(
-      northeastStates,
+      northeastStates
     )};
 `,
-    "utf8",
+    "utf8"
   );
   await writeFile(
     DEEP_SOUTH_OUTPUT_PATH,
@@ -1300,16 +1338,16 @@ export const northeastStates: StateDestination[] = ${stringifyForTs(
 
 // This file is auto-generated by scripts/import-tours-from-csv.ts. Do not edit manually.
 export const deepSouthStates: StateDestination[] = ${stringifyForTs(
-      deepSouthStates,
+      deepSouthStates
     )};
 `,
-    "utf8",
+    "utf8"
   );
   ingestLogger.printSummary();
 };
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  run().catch((error) => {
+  run().catch(error => {
     console.error(error);
     process.exit(1);
   });

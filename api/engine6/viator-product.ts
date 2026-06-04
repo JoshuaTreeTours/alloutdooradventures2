@@ -5,7 +5,10 @@ import {
   resolveProductScopedHero,
   type Engine6HeroCandidate,
 } from "./heroResolver.js";
-import { extractEngine6Product } from "./viatorExtractors.js";
+import {
+  extractEngine6Product,
+  type Engine6Extracted,
+} from "./viatorExtractors.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 
@@ -198,7 +201,7 @@ const buildDiagnostics = (
   fallbackFieldNames: [] as string[],
 });
 
-const EMPTY_EXTRACTED_PRODUCT = {
+const EMPTY_EXTRACTED_PRODUCT: Engine6Extracted = {
   title: null,
   seoTitle: null,
   seoDescription: null,
@@ -227,6 +230,8 @@ const EMPTY_EXTRACTED_PRODUCT = {
   requirements: [] as string[],
   primaryCategory: null,
   categories: [] as string[],
+  primaryDisplayCategory: null,
+  activityCategories: [] as Array<{ slug: string; label: string }>,
 };
 
 const buildEmptyEnvelope = (productCode: string) => ({
@@ -235,7 +240,9 @@ const buildEmptyEnvelope = (productCode: string) => ({
   extracted: EMPTY_EXTRACTED_PRODUCT,
 });
 
-const safeExtractEngine6Product = (payload: unknown) => {
+const safeExtractEngine6Product = (
+  payload: unknown
+): ReturnType<typeof extractEngine6Product> => {
   try {
     return extractEngine6Product(payload);
   } catch {
@@ -682,16 +689,18 @@ export default async function handler(req: any, res: any) {
           productCode,
         })
       : null;
-  const extractedWithAvailabilityPrice =
+  const extractedWithAvailabilityPrice: ReturnType<
+    typeof extractEngine6Product
+  > =
     typeof liveAvailabilityPrice === "number"
-      ? {
+      ? ({
           ...extracted,
           extracted: {
             ...extracted.extracted,
             priceAmount: liveAvailabilityPrice,
             priceFormatted: `From $${liveAvailabilityPrice.toFixed(2)}`,
           },
-        }
+        } as ReturnType<typeof extractEngine6Product>)
       : extracted;
 
   const extractedProductCode =

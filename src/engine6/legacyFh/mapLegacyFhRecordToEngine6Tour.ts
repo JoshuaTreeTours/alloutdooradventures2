@@ -1,3 +1,4 @@
+import { classifyTourCategories } from "../../lib/tourCategoryClassifier";
 import type { Engine6Tour } from "../types";
 import { formatEngine6StartingPriceLabel } from "../priceDisplay";
 import { resolveLegacyFhCommercialConfidenceReason } from "./commercialConfidence";
@@ -58,6 +59,13 @@ export const mapLegacyFhRecordToEngine6Tour = (
     : typeof record.priceSnapshot.amount === "number"
       ? formatEngine6StartingPriceLabel(record.priceSnapshot.amount)
       : "Check latest price";
+  const classification = classifyTourCategories({
+    title: record.title,
+    overview: record.overview,
+    highlights: record.highlights,
+    itinerary: record.itinerary,
+    categories: ["bike-tour"],
+  });
 
   return {
     productCode: `fh-${record.slug}`,
@@ -91,9 +99,17 @@ export const mapLegacyFhRecordToEngine6Tour = (
     faqs: [],
     included: record.inclusions,
     requirements,
-    primaryCategory: "bike-tour",
-    categories: ["bike-tour"],
-    categoryLabel: "Bike tour",
+    primaryCategory: classification.matchedCategorySlugs[0] ?? "cycling",
+    categories:
+      classification.matchedCategorySlugs.length > 0
+        ? classification.matchedCategorySlugs
+        : ["cycling"],
+    primaryDisplayCategory: classification.primaryDisplayCategory ?? "Cycling",
+    activityCategories:
+      classification.activityCategories.length > 0
+        ? classification.activityCategories
+        : [{ slug: "cycling", label: "Cycling" }],
+    categoryLabel: classification.primaryDisplayCategory ?? "Cycling",
     pagePath: record.canonicalPath,
     canonicalPath: record.canonicalPath,
     bookingUrl: record.bookingPath,
@@ -163,7 +179,7 @@ export const mapLegacyFhRecordToEngine6Tour = (
       faqSourceUsed: null,
       requirementsFieldPath: "legacy.additionalInfo",
       highlightClassificationReason: "legacy-fh-migrated",
-      classificationFieldPath: null,
+      classificationFieldPath: "legacy:title+overview+highlights+itinerary",
       fieldLevelFallbackUsed: false,
       fallbackFieldNames: [],
     },
