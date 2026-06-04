@@ -1,8 +1,20 @@
-const HARD_DELETED_PRODUCT_IDS = new Set(["301378", "301379", "549337"]);
+import {
+  getInvalidPlaceholderTourIds,
+  getInvalidPlaceholderTourPaths,
+  getInvalidPlaceholderTourSlugs,
+} from "./invalidPlaceholderTours";
+
+const HARD_DELETED_PRODUCT_IDS = new Set([
+  "301378",
+  "301379",
+  "549337",
+  ...getInvalidPlaceholderTourIds(),
+]);
 const HARD_DELETED_SLUGS = new Set([
   "intermediate-singletrack-mountain-biking-clinic-301378",
   "private-mtb-lesson-301379",
   "golden-gate-bridge-bike-tour-with-muir-woods-and-sausalito-549337",
+  ...getInvalidPlaceholderTourSlugs(),
 ]);
 const HARD_DELETED_CANONICAL_PATHS = new Set([
   "/destinations/united-states/alaska/anchorage/tours/intermediate-singletrack-mountain-biking-clinic-301378",
@@ -12,6 +24,7 @@ const HARD_DELETED_CANONICAL_PATHS = new Set([
   "/tours/alaska/anchorage/intermediate-singletrack-mountain-biking-clinic-301378",
   "/tours/alaska/anchorage/private-mtb-lesson-301379",
   "/destinations/california/san-francisco/tours/golden-gate-bridge-bike-tour-with-muir-woods-and-sausalito-549337",
+  ...getInvalidPlaceholderTourPaths(),
 ]);
 
 const normalize = (value?: string | null) => (value ?? "").trim().toLowerCase();

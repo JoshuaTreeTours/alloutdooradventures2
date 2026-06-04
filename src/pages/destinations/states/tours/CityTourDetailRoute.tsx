@@ -85,6 +85,7 @@ import {
 import type { Engine4ViatorApiTour } from "../../../../engine4/types";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
+import { isInvalidPlaceholderTourSlug } from "../../../../utils/tours/invalidPlaceholderTours";
 import { applyEngine1Template } from "../../../../utils/tours/applyEngine1HardenedTemplate";
 import { fetchFareHarborHtml } from "../../../../utils/fh/fetchFareHarborHtml";
 import { parseFareHarborHtml } from "../../../../utils/fh/parseFareHarborHtml";
@@ -248,6 +249,10 @@ export default function CityTourDetailRoute({
 
   const routeProductCode =
     params.tourSlug.split("-").at(-1)?.toUpperCase() ?? null;
+
+  if (isInvalidPlaceholderTourSlug(params.tourSlug)) {
+    return null;
+  }
 
   if (isExcludedProductCode(routeProductCode)) {
     return (
