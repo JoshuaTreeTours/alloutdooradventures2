@@ -91,7 +91,7 @@ export default function FlagstaffTourBookingRoute({
     typeof window !== "undefined" &&
     new URLSearchParams(window.location.search).get("debug") === "1";
 
-  const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
+  const cityHref = `/guides/us/${state.slug}/${city.slug}`;
   const stateHref = state.isFallback
     ? "/destinations"
     : `/destinations/states/${state.slug}`;

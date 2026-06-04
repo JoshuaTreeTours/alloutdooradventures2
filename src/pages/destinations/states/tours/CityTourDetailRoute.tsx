@@ -655,7 +655,7 @@ export default function CityTourDetailRoute({
     state && city
       ? state.isFallback
         ? `/destinations/${state.slug}/${city.slug}`
-        : `/destinations/states/${state.slug}/cities/${city.slug}`
+        : `/guides/us/${state.slug}/${city.slug}`
       : "";
   const stateHref = state
     ? state.isFallback

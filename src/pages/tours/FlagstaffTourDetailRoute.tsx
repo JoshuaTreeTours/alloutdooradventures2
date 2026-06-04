@@ -81,7 +81,7 @@ export default function FlagstaffTourDetailRoute({
         `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`
       )
     : undefined;
-  const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
+  const cityHref = `/guides/us/${state.slug}/${city.slug}`;
   const stateHref = state.isFallback
     ? "/destinations"
     : `/destinations/states/${state.slug}`;

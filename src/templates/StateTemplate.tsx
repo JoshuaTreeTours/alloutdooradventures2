@@ -21,7 +21,7 @@ const buildCityDestination = (
   stateSlug,
   description: city.shortDescription,
   image: city.heroImages[0],
-  href: `/destinations/states/${stateSlug}/cities/${city.slug}`,
+  href: `/guides/us/${stateSlug}/${city.slug}`,
 });
 
 const buildStateHistory = (stateName: string) => [

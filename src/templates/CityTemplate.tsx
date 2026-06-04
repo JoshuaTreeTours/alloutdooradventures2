@@ -151,6 +151,7 @@ export default function CityTemplate({
     guideRegionTypeOverride ?? (state.isFallback ? "country" : "state");
   const guideBasePath =
     guideRegionType === "state" ? "/guides/us" : "/guides/world";
+  const canonicalCityHref = `${guideBasePath}/${guideParentSlug}/${city.slug}`;
   const guideParent =
     guideRegionType === "country"
       ? getGuideCountryBySlug(guideParentSlug)
@@ -279,9 +280,7 @@ export default function CityTemplate({
   const hasCoordinates = Number.isFinite(city.lat) && Number.isFinite(city.lng);
   const heroImage =
     resolveHeroImageForRoute({
-      route:
-        seoUrlOverride ??
-        `/destinations/states/${state.slug}/cities/${city.slug}`,
+      route: seoUrlOverride ?? canonicalCityHref,
       state,
       city,
       cityTours,
@@ -298,10 +297,7 @@ export default function CityTemplate({
       <Seo
         title={title}
         description={description}
-        url={
-          seoUrlOverride ??
-          `/destinations/states/${state.slug}/cities/${city.slug}`
-        }
+        url={seoUrlOverride ?? canonicalCityHref}
         image={heroImage ?? null}
       />
       <section className="bg-[#2f4a2f] text-white">

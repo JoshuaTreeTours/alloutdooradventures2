@@ -59,26 +59,30 @@ export default function CityToursIndexRoute({
   const isFlagstaff = Boolean(
     state && city && state.slug === "arizona" && city.slug === "flagstaff"
   );
-  const tours = useMemo(() =>
-    state && city
-      ? isFlagstaff
-        ? flagstaffTours.map(tour => ({
-            tour,
-            href: getFlagstaffTourDetailPath(tour),
-          }))
-        : getToursByCityUnified(state.slug, city.slug)
-      : []
-  , [state, city, isFlagstaff]);
+  const tours = useMemo(
+    () =>
+      state && city
+        ? isFlagstaff
+          ? flagstaffTours.map(tour => ({
+              tour,
+              href: getFlagstaffTourDetailPath(tour),
+            }))
+          : getToursByCityUnified(state.slug, city.slug)
+        : [],
+    [state, city, isFlagstaff]
+  );
 
   const [liveEngine6DynamicByProductCode, setLiveEngine6DynamicByProductCode] =
     useState<Record<string, Engine6LiveProductFields>>({});
 
-  const engine6ProductCodes = useMemo(() =>
-    tours
-      .map(entry => entry.tour)
-      .filter(tour => tour.engine === "engine6" && !!tour.productCode)
-      .map(tour => tour.productCode)
-  , [tours]);
+  const engine6ProductCodes = useMemo(
+    () =>
+      tours
+        .map(entry => entry.tour)
+        .filter(tour => tour.engine === "engine6" && !!tour.productCode)
+        .map(tour => tour.productCode),
+    [tours]
+  );
 
   useEffect(() => {
     let cancelled = false;
@@ -97,7 +101,10 @@ export default function CityToursIndexRoute({
           if (item) next[item[0]] = item[1];
         }
         if (Object.keys(next).length) {
-          setLiveEngine6DynamicByProductCode(previous => ({ ...previous, ...next }));
+          setLiveEngine6DynamicByProductCode(previous => ({
+            ...previous,
+            ...next,
+          }));
         }
       })
       .catch(() => {});
@@ -122,7 +129,9 @@ export default function CityToursIndexRoute({
     typeof window !== "undefined"
       ? new URLSearchParams(window.location.search).get("activity")
       : null;
-  const toursWithImages = hydratedTours.filter(entry => hasValidTourImage(entry.tour));
+  const toursWithImages = hydratedTours.filter(entry =>
+    hasValidTourImage(entry.tour)
+  );
   const toursOnlyWithImages = toursWithImages.filter(
     entry => !isRentalTour(entry.tour)
   );
@@ -140,9 +149,14 @@ export default function CityToursIndexRoute({
     state && city
       ? state?.isFallback && !basePathOverride
         ? `/destinations/${state.slug}/${city.slug}`
-        : `${stateHref}/cities/${city.slug}`
+        : `/guides/us/${state.slug}/${city.slug}`
       : "";
-  const toursHref = `${cityHref}/tours`;
+  const toursHref =
+    state && city
+      ? state?.isFallback && !basePathOverride
+        ? `${cityHref}/tours`
+        : `/destinations/${state.slug}/${city.slug}/tours`
+      : "";
   const heroImage =
     resolveHeroImageForRoute({
       route: toursHref,
