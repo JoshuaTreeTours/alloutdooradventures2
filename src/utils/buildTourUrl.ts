@@ -43,7 +43,7 @@ export function buildTourUrl(row: TourUrlRow) {
   const tourSlug = row.slug || toSlug(row.title, row.tourId);
 
   if (stateSlug && citySlug && tourSlug) {
-    return `${DOMAIN}/destinations/states/${stateSlug}/cities/${citySlug}/tours/${tourSlug}`;
+    return `${DOMAIN}/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`;
   }
 
   if (stateSlug && tourSlug) {

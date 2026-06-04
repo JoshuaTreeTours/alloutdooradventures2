@@ -29,9 +29,9 @@ export type GuideCitySummary = {
   tourCount: number;
 };
 
-const US_STATE_SLUGS = new Set(US_STATES.map((state) => slugify(state)));
+const US_STATE_SLUGS = new Set(US_STATES.map(state => slugify(state)));
 const EUROPE_COUNTRY_SLUGS = new Set(
-  EUROPE_COUNTRIES.map((country) => slugify(country)),
+  EUROPE_COUNTRIES.map(country => slugify(country))
 );
 
 const isUsStateTour = (tour: Tour) => {
@@ -68,7 +68,7 @@ const matchesActivity = (tour: Tour, activitySlug: string) =>
 const buildCitySummaries = (tourList: Tour[]): GuideCitySummary[] => {
   const cities = new Map<string, GuideCitySummary>();
 
-  tourList.forEach((tour) => {
+  tourList.forEach(tour => {
     const key = tour.destination.citySlug;
     if (!key) {
       return;
@@ -93,22 +93,23 @@ const buildCitySummaries = (tourList: Tour[]): GuideCitySummary[] => {
 const getToursForPlace = (place: GuidePlace): Tour[] => {
   if (place.type === "state") {
     return tours.filter(
-      (tour) =>
-        tour.destination.stateSlug === place.slug && isUsStateTour(tour),
+      tour => tour.destination.stateSlug === place.slug && isUsStateTour(tour)
     );
   }
 
   if (place.type === "country") {
-    return tours.filter((tour) => getCountryFromTour(tour)?.slug === place.slug);
+    return tours.filter(tour => getCountryFromTour(tour)?.slug === place.slug);
   }
 
-  return tours.filter((tour) => {
+  return tours.filter(tour => {
     if (tour.destination.citySlug !== place.slug) {
       return false;
     }
 
     if (place.regionType === "state") {
-      return tour.destination.stateSlug === place.parentSlug && isUsStateTour(tour);
+      return (
+        tour.destination.stateSlug === place.parentSlug && isUsStateTour(tour)
+      );
     }
 
     return getCountryFromTour(tour)?.slug === place.parentSlug;
@@ -148,12 +149,14 @@ const compareTours = (a: Tour, b: Tour) => {
 
 export const getTourCountsForActivities = (
   place: GuidePlace,
-  activitySlugs: string[],
+  activitySlugs: string[]
 ) => {
   const toursForPlace = getToursForPlace(place);
 
   return activitySlugs.reduce<Record<string, number>>((acc, slug) => {
-    acc[slug] = toursForPlace.filter((tour) => matchesActivity(tour, slug)).length;
+    acc[slug] = toursForPlace.filter(tour =>
+      matchesActivity(tour, slug)
+    ).length;
     return acc;
   }, {});
 };
@@ -164,13 +167,15 @@ export const getTopToursForPlace = (
     min = 3,
     max = 6,
     activitySlug,
-  }: { min?: number; max?: number; activitySlug?: string } = {},
+  }: { min?: number; max?: number; activitySlug?: string } = {}
 ) => {
   const toursForPlace = getToursForPlace(place);
   const filteredTours = activitySlug
-    ? toursForPlace.filter((tour) => matchesActivity(tour, activitySlug))
+    ? toursForPlace.filter(tour => matchesActivity(tour, activitySlug))
     : toursForPlace;
-  const sortedTours = prioritizeEngine6Tours([...filteredTours].sort(compareTours));
+  const sortedTours = prioritizeEngine6Tours(
+    [...filteredTours].sort(compareTours)
+  );
   const limit = Math.min(sortedTours.length, max);
   if (sortedTours.length <= min) {
     return sortedTours;
@@ -181,7 +186,7 @@ export const getTopToursForPlace = (
 
 export const getTopCitiesForPlace = (
   place: Extract<GuidePlace, { type: "state" | "country" }>,
-  limit = 6,
+  limit = 6
 ): GuideCitySummary[] => {
   const toursForPlace = getToursForPlace(place);
   return buildCitySummaries(toursForPlace)
@@ -204,7 +209,7 @@ export const getAllToursHref = (place: GuidePlace) => {
   }
 
   if (place.regionType === "state") {
-    return `/destinations/states/${place.parentSlug}/cities/${place.slug}/tours`;
+    return `/destinations/${place.parentSlug}/${place.slug}/tours`;
   }
 
   return isEuropeCountrySlug(place.parentSlug)

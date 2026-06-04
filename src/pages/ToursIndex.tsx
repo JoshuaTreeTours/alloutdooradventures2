@@ -5,7 +5,11 @@ import RegionDropdownButton from "../components/RegionDropdownButton";
 import Seo from "../components/Seo";
 import { states } from "../data/destinations";
 import { getStateCityOptions } from "../data/stateCityOptions";
-import { EUROPE_COUNTRIES, WORLD_DESTINATIONS, slugify } from "../data/tourCatalog";
+import {
+  EUROPE_COUNTRIES,
+  WORLD_DESTINATIONS,
+  slugify,
+} from "../data/tourCatalog";
 import { getStaticPageSeo } from "../utils/seo";
 
 export default function ToursIndex() {
@@ -14,34 +18,34 @@ export default function ToursIndex() {
   const [selectedCitySlug, setSelectedCitySlug] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
   const countryOptions = useMemo(() => {
-    const europeOptions = EUROPE_COUNTRIES.map((country) => ({
+    const europeOptions = EUROPE_COUNTRIES.map(country => ({
       name: country,
       slug: `europe:${slugify(country)}`,
     }));
-    const worldOptions = WORLD_DESTINATIONS.map((country) => ({
+    const worldOptions = WORLD_DESTINATIONS.map(country => ({
       name: country,
       slug: `world:${slugify(country)}`,
     }));
     return [...europeOptions, ...worldOptions].sort((a, b) =>
-      a.name.localeCompare(b.name),
+      a.name.localeCompare(b.name)
     );
   }, []);
 
   const stateOptions = useMemo(
     () =>
       states
-        .map((state) => ({
+        .map(state => ({
           name: state.name,
           slug: state.slug,
           cities: state.cities,
         }))
         .sort((a, b) => a.name.localeCompare(b.name)),
-    [],
+    []
   );
 
   const selectedState = useMemo(
-    () => stateOptions.find((state) => state.slug === selectedStateSlug),
-    [stateOptions, selectedStateSlug],
+    () => stateOptions.find(state => state.slug === selectedStateSlug),
+    [stateOptions, selectedStateSlug]
   );
 
   const cityOptions = useMemo(() => {
@@ -58,7 +62,7 @@ export default function ToursIndex() {
   useEffect(() => {
     if (
       selectedCitySlug &&
-      !cityOptions.some((city) => city.slug === selectedCitySlug)
+      !cityOptions.some(city => city.slug === selectedCitySlug)
     ) {
       setSelectedCitySlug("");
     }
@@ -116,17 +120,19 @@ export default function ToursIndex() {
               label="Select a country…"
               options={countryOptions}
               selectedName={
-                countryOptions.find((country) => country.slug === selectedCountry)
+                countryOptions.find(country => country.slug === selectedCountry)
                   ?.name
               }
-              onSelect={(slug) => {
+              onSelect={slug => {
                 const [region, countrySlug] = slug.split(":");
                 if (!countrySlug) {
                   return;
                 }
                 setSelectedCountry(slug);
                 const basePath =
-                  region === "world" ? "/destinations/world" : "/destinations/europe";
+                  region === "world"
+                    ? "/destinations/world"
+                    : "/destinations/europe";
                 window.location.assign(`${basePath}/${countrySlug}`);
               }}
             />
@@ -135,7 +141,7 @@ export default function ToursIndex() {
                 Popular destinations
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
-                {popularDestinations.map((destination) => (
+                {popularDestinations.map(destination => (
                   <Link key={destination.href} href={destination.href}>
                     <a className="rounded-full border border-[#2f4a2f]/20 bg-white px-3 py-1 text-xs font-semibold text-[#2f4a2f] hover:border-[#2f4a2f]/40 hover:bg-[#2f4a2f]/5 transition">
                       {destination.label}
@@ -153,12 +159,12 @@ export default function ToursIndex() {
             <div className="mt-3 grid gap-4 md:grid-cols-2">
               <RegionDropdownButton
                 label="Choose a state"
-                options={stateOptions.map((state) => ({
+                options={stateOptions.map(state => ({
                   name: state.name,
                   slug: state.slug,
                 }))}
                 selectedName={selectedState?.name || undefined}
-                onSelect={(slug) => {
+                onSelect={slug => {
                   setSelectedStateSlug(slug);
                 }}
               />
@@ -166,9 +172,9 @@ export default function ToursIndex() {
                 label="Choose a city"
                 options={cityOptions}
                 selectedName={
-                  cityOptions.find((city) => city.slug === selectedCitySlug)?.name
+                  cityOptions.find(city => city.slug === selectedCitySlug)?.name
                 }
-                onSelect={(slug) => setSelectedCitySlug(slug)}
+                onSelect={slug => setSelectedCitySlug(slug)}
               />
             </div>
             <div className="mt-4 flex flex-wrap gap-3 text-sm font-semibold text-[#2f4a2f]">
@@ -181,7 +187,7 @@ export default function ToursIndex() {
               ) : null}
               {selectedState && selectedCitySlug ? (
                 <Link
-                  href={`/destinations/states/${selectedState.slug}/cities/${selectedCitySlug}`}
+                  href={`/guides/us/${selectedState.slug}/${selectedCitySlug}`}
                 >
                   <a className="inline-flex items-center gap-2 rounded-md border border-[#2f4a2f]/20 px-3 py-1.5 hover:border-[#2f4a2f]/40 hover:bg-[#2f4a2f]/5 transition">
                     View city →

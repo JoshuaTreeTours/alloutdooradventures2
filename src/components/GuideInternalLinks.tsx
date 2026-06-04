@@ -120,7 +120,7 @@ const buildCategoryHref = (
   }
 
   if (guide.regionType === "state") {
-    return `/destinations/states/${guide.parentSlug}/cities/${guide.slug}/tours?activity=${activitySlug}`;
+    return `/destinations/${guide.parentSlug}/${guide.slug}/tours?activity=${activitySlug}`;
   }
 
   return isEuropeCountrySlug(guide.parentSlug ?? "")
@@ -194,7 +194,7 @@ const buildAreaLinks = (guide: GuideContent): GuideLink[] => {
       if (guide.parentSlug) {
         links.push({
           label: `${guide.name} destination`,
-          href: `/destinations/states/${guide.parentSlug}/cities/${guide.slug}`,
+          href: `/guides/us/${guide.parentSlug}/${guide.slug}`,
         });
       }
       return links;
@@ -348,7 +348,10 @@ export default function GuideInternalLinks({
           if (item) next[item[0]] = item[1];
         }
         if (Object.keys(next).length > 0) {
-          setLiveEngine6DynamicByProductCode(previous => ({ ...previous, ...next }));
+          setLiveEngine6DynamicByProductCode(previous => ({
+            ...previous,
+            ...next,
+          }));
         }
       })
       .catch(() => {});
@@ -370,7 +373,9 @@ export default function GuideInternalLinks({
               if (typeof merged.startingPrice === "number") {
                 return merged;
               }
-              const parsedBadgePrice = parsePriceFromBadge(merged.badges.priceFrom);
+              const parsedBadgePrice = parsePriceFromBadge(
+                merged.badges.priceFrom
+              );
               return parsedBadgePrice !== null
                 ? { ...merged, startingPrice: parsedBadgePrice }
                 : merged;

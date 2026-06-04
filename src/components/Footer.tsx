@@ -33,7 +33,9 @@ export default function Footer() {
             <ul className="mt-4 space-y-2">
               <li>
                 <Link href="/destinations">
-                  <a className="transition hover:text-white">United States Tours</a>
+                  <a className="transition hover:text-white">
+                    United States Tours
+                  </a>
                 </Link>
               </li>
               <li>
@@ -68,7 +70,9 @@ export default function Footer() {
             <ul className="mt-4 space-y-2">
               <li>
                 <Link href="/destinations/states/california/tours">
-                  <a className="transition hover:text-white">California Tours</a>
+                  <a className="transition hover:text-white">
+                    California Tours
+                  </a>
                 </Link>
               </li>
               <li>
@@ -100,27 +104,33 @@ export default function Footer() {
             </p>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link href="/destinations/states/california/cities/joshua-tree/tours">
-                  <a className="transition hover:text-white">Joshua Tree Tours</a>
+                <Link href="/destinations/california/joshua-tree/tours">
+                  <a className="transition hover:text-white">
+                    Joshua Tree Tours
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link href="/destinations/states/california/cities/palm-springs/tours">
-                  <a className="transition hover:text-white">Palm Springs Tours</a>
+                <Link href="/destinations/california/palm-springs/tours">
+                  <a className="transition hover:text-white">
+                    Palm Springs Tours
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link href="/destinations/states/arizona/cities/sedona/tours">
+                <Link href="/destinations/arizona/sedona/tours">
                   <a className="transition hover:text-white">Sedona Tours</a>
                 </Link>
               </li>
               <li>
-                <Link href="/destinations/states/california/cities/santa-barbara/tours">
-                  <a className="transition hover:text-white">Santa Barbara Tours</a>
+                <Link href="/destinations/california/santa-barbara/tours">
+                  <a className="transition hover:text-white">
+                    Santa Barbara Tours
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link href="/destinations/states/colorado/cities/denver/tours">
+                <Link href="/destinations/colorado/denver/tours">
                   <a className="transition hover:text-white">Denver Tours</a>
                 </Link>
               </li>
@@ -172,7 +182,11 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 rounded-2xl border border-white/15 bg-white/10 p-5 text-sm leading-relaxed text-white/90">
-          All Outdoor Adventures is a tour marketplace operated by Outdoor Adventures, Inc. Most experiences are operated by independent third-party providers, with select experiences operated directly by Outdoor Adventures, Inc., as identified on each tour page. Tours are displayed based on traveler reviews, ratings, and availability.
+          All Outdoor Adventures is a tour marketplace operated by Outdoor
+          Adventures, Inc. Most experiences are operated by independent
+          third-party providers, with select experiences operated directly by
+          Outdoor Adventures, Inc., as identified on each tour page. Tours are
+          displayed based on traveler reviews, ratings, and availability.
         </div>
 
         <div className="mt-10 rounded-2xl border border-white/15 bg-white/10 p-6 md:flex md:items-center md:justify-between">

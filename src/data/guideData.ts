@@ -884,7 +884,7 @@ export const buildStateGuide = (stateSlug: string): GuideContent | null => {
 
   const destinationCityLinks = highlightCities.map(city => ({
     label: `${city.name} city page`,
-    href: `/destinations/states/${stateSlug}/cities/${city.slug}`,
+    href: `/guides/us/${stateSlug}/${city.slug}`,
   }));
 
   const destinationLink = {
@@ -1078,7 +1078,7 @@ export const buildCityGuide = ({
   const toursToShow = filteredTours.length ? filteredTours : cityTours;
   const activityLinks = buildActivityLinks(cityTours, slug =>
     regionType === "state"
-      ? `/destinations/states/${parentSlug}/cities/${citySlug}/tours?activity=${slug}`
+      ? `/destinations/${parentSlug}/${citySlug}/tours?activity=${slug}`
       : `${getInternationalCityToursPath(parentSlug, citySlug)}?activity=${slug}`
   );
   const activityLabels = activityLinks
@@ -1093,7 +1093,7 @@ export const buildCityGuide = ({
     regionType === "state"
       ? {
           label: "All city tours",
-          href: `/destinations/states/${parentSlug}/cities/${citySlug}/tours`,
+          href: `/destinations/${parentSlug}/${citySlug}/tours`,
         }
       : {
           label: "All city tours",
@@ -1106,7 +1106,7 @@ export const buildCityGuide = ({
           label: `${getActivityLabelFromSlug(primaryActivitySlug)} tours`,
           href:
             regionType === "state"
-              ? `/destinations/states/${parentSlug}/cities/${citySlug}/tours?activity=${primaryActivitySlug}`
+              ? `/destinations/${parentSlug}/${citySlug}/tours?activity=${primaryActivitySlug}`
               : `${getInternationalCityToursPath(parentSlug, citySlug)}?activity=${primaryActivitySlug}`,
         },
       ]

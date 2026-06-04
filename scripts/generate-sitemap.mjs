@@ -729,14 +729,8 @@ export const buildSitemap = async () => {
 
       if (Array.isArray(state.cities)) {
         state.cities.forEach(city => {
-          addUrl(
-            cityUrls,
-            `/destinations/states/${state.slug}/cities/${city.slug}`
-          );
-          addUrl(
-            cityUrls,
-            `/destinations/states/${state.slug}/cities/${city.slug}/tours`
-          );
+          addUrl(cityUrls, `/guides/us/${state.slug}/${city.slug}`);
+          addUrl(cityUrls, `/destinations/${state.slug}/${city.slug}/tours`);
         });
       }
     });

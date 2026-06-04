@@ -271,6 +271,16 @@
       "permanent": true
     },
     {
+      "source": "/destinations/states/:stateSlug/cities/:citySlug/tours",
+      "destination": "/destinations/:stateSlug/:citySlug/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/states/:stateSlug/cities/:citySlug",
+      "destination": "/guides/us/:stateSlug/:citySlug",
+      "permanent": true
+    },
+    {
       "source": "/destinations/states/:stateSlug",
       "destination": "/guides/us/:stateSlug",
       "permanent": true
