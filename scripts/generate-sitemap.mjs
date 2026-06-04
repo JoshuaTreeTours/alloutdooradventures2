@@ -1095,10 +1095,8 @@ const buildSitemap = async () => {
 const run = async () => {
   const shouldWrite = process.env.SITEMAP_WRITE === "1";
   const {
-    pages,
     toursUrls,
     cityUrls,
-    guideUrls,
     destinationUrls,
     categoryUrls,
   } = await buildSitemap();
@@ -1151,10 +1149,8 @@ const run = async () => {
   };
 
   const sections = [
-    { slug: "pages", entries: toEntries(pages, { priority: 0.4 }) },
     { slug: "tours", entries: toEntries(toursUrls, { priority: 0.8 }) },
     { slug: "cities", entries: toEntries(cityUrls, { priority: 0.6 }) },
-    { slug: "guides", entries: toEntries(guideUrls, { priority: 0.5 }) },
     {
       slug: "destinations",
       entries: toEntries(destinationUrls, { priority: 0.6 }),
