@@ -7,6 +7,7 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/alaska/fairbanks</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/arizona/cottonwood</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/us/arizona/flagstaff</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/arizona/morristown</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/arizona/page</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/arizona/prescott</loc><priority>0.5</priority></url>
@@ -24,6 +25,7 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/california/joshua-tree</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/california/laguna-beach</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/california/lake-elsinore</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/us/california/los-angeles</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/california/marina-del-rey</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/california/napa</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/california/newport-beach</loc><priority>0.5</priority></url>
@@ -226,7 +228,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/holbrook</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/lexington</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/marblehead</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/mashpee</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/nantucket</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/natick</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/needham</loc><priority>0.5</priority></url>
@@ -236,20 +237,16 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/randolph</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/revere</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/salem</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/sandwich</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/sharon</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/somerville</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/sudbury</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/winthrop</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/wrentham</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/michigan</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/michigan/detroit</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/michigan/grosse-ile-township</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/michigan/lake-leelanau</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/michigan/mount-pleasant</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/michigan/traverse-city</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/minnesota</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/minnesota/minneapolis</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/minnesota/stillwater</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/mississippi</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/mississippi/natchez</loc><priority>0.5</priority></url>
@@ -257,6 +254,8 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/missouri/branson</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/montana</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/montana/bozeman</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/us/montana/missoula</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/us/montana/whitefish</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/nevada</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/nevada/las-vegas</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/new-hampshire</loc><priority>0.5</priority></url>
@@ -301,7 +300,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/oregon/cascade-locks</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/oregon/portland</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/pennsylvania</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/pennsylvania/bethlehem</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/pennsylvania/gettysburg</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/pennsylvania/philadelphia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/pennsylvania/pittsburgh</loc><priority>0.5</priority></url>
@@ -354,10 +352,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/world/albania</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/albania/maminas</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/albania/tiran</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/alberta</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/alberta/calgary</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/alberta/canmore</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/alberta/jasper</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/australia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/australia/airlie-beach</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/australia/alice-springs</loc><priority>0.5</priority></url>
@@ -417,7 +411,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/world/australia/south-brisbane</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/australia/south-murwillumbah</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/australia/south-perth</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/australia/summerlands</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/australia/surfers-paradise</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/australia/sydney</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/australia/torquay</loc><priority>0.5</priority></url>
@@ -426,32 +419,15 @@
   <url><loc>https://www.alloutdooradventures.com/guides/world/austria</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/austria/vienna</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/austria/wien</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/baja-california-sur</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/baja-california-sur/cabo-san-lucas</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/belgium</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/belgium/brugge</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/belgium/deinze</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/british-columbia</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/british-columbia/egmont</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/british-columbia/gibsons</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/british-columbia/kamloops</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/british-columbia/kelowna</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/british-columbia/new-westminster</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/british-columbia/squamish</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/british-columbia/ucluelet</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/british-columbia/vancouver</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/british-columbia/victoria</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/british-columbia/whistler</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/ciudad-de-mxico</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/ciudad-de-mxico/ciudad-de-mxico</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/croatia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/croatia/trogir</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/czechia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/czechia/vy-brod</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/denmark</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/denmark/kbenhavn</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/district-of-columbia</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/district-of-columbia/washington</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/estonia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/estonia/tallinn</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/finland</loc><priority>0.5</priority></url>
@@ -593,19 +569,11 @@
   <url><loc>https://www.alloutdooradventures.com/guides/world/italy/valmareno</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/italy/venezia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/italy/voltago-agordino</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/jalisco</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/jalisco/puerto-vallarta</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/lajas</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/lajas/la-parguera</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/latvia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/latvia/rga</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/lisboa</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/lisboa/santa-brbara</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/lithuania</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/lithuania/kaunas</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/lithuania/vilnius</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/manitoba</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/manitoba/winnipeg</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/morocco</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/morocco/taouz</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/netherlands</loc><priority>0.5</priority></url>
@@ -627,14 +595,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/world/norway/sogndal</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/norway/stavanger</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/norway/voss</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/ontario</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/ontario/brant</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/ontario/north-bay</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/ontario/northern-bruce-peninsula</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/ontario/st-thomas</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/ontario/stayner</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/ontario/toronto</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/ontario/windsor</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/poland</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/poland/krakw</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/poland/wrocaw</loc><priority>0.5</priority></url>
@@ -663,13 +623,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/world/portugal/troia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/portugal/unio-das-freguesias-de-canelas-e-espiunca</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/portugal/vila-nova-de-cacela</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/qubec</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/qubec/longueuil</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/qubec/montral</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/qubec/qubec</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/quintana-roo</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/quintana-roo/cancn</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/quintana-roo/cozumel</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/slovenia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/slovenia/bled</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/slovenia/bovec</loc><priority>0.5</priority></url>
@@ -725,10 +678,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/world/spain/valldemossa</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/spain/valncia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/spain/xbia</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/st-ann-parish</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/st-ann-parish/ocho-rios</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/st-thomas</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/st-thomas/red-hook</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/sweden</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/sweden/flaten</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/sweden/hultsfred</loc><priority>0.5</priority></url>
@@ -739,8 +688,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/world/sweden/virserum</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/switzerland</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/switzerland/interlaken</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/trelawny-parish</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/world/trelawny-parish/falmouth</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/united-kingdom</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/united-kingdom/ambergate</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/united-kingdom/aviemore</loc><priority>0.5</priority></url>
@@ -801,8 +748,41 @@
   <url><loc>https://www.alloutdooradventures.com/guides/world/united-kingdom/whitewell</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/united-kingdom/whitney-on-wye</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/united-states</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/brant</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/cabo-san-lucas</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/calgary</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/california</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/cancn</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/canmore</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/ciudad-de-mxico</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/cozumel</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/egmont</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/falmouth</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/florida</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/gibsons</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/hawaii</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/jasper</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/kamloops</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/kelowna</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/la-parguera</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/longueuil</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/montral</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/north-bay</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/north-carolina</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/northern-bruce-peninsula</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/ocho-rios</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/puerto-vallarta</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/qubec</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/red-hook</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/santa-brbara</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/squamish</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/st-thomas</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/stayner</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/toronto</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/ucluelet</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/vancouver</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/victoria</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/washington</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/whistler</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/world/united-states/windsor</loc><priority>0.5</priority></url>
 </urlset>
