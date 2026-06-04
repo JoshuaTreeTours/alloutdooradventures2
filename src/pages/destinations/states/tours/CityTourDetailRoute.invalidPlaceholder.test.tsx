@@ -33,14 +33,26 @@ const INVALID_TOUR_ROUTES = [
     tourSlug: "__SEO_CANONICAL__",
     forbiddenText: "__SEO_CANONICAL__",
   },
+  {
+    stateSlug: "north-carolina",
+    citySlug: "raleigh",
+    tourSlug: "raleigh-express-1hr-rydables-tour-662502",
+    forbiddenText: "Raleigh Express",
+  },
+  {
+    stateSlug: "utah",
+    citySlug: "st-george",
+    tourSlug: "a-617022",
+    forbiddenText: "A",
+  },
 ] as const;
 
 describe("invalid placeholder tour routes", () => {
   it("audits the known invalid placeholder tour URL set", () => {
-    expect(getInvalidPlaceholderTourPaths()).toHaveLength(4);
+    expect(getInvalidPlaceholderTourPaths()).toHaveLength(228);
     expect(
       getInvalidPlaceholderTourPaths().filter(isInvalidPlaceholderTourPath)
-    ).toHaveLength(4);
+    ).toHaveLength(228);
   });
 
   it("does not expose route-backed canonical tour records for invalid placeholders", () => {
