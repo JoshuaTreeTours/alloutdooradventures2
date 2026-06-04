@@ -125,6 +125,11 @@ const buildCanonicalTourPath = (tour, catalogModule) => {
     return canonicalPath;
   }
 
+  const destination = tour?.destination ?? {};
+  if (destination.stateSlug && destination.citySlug && tour?.slug) {
+    return `/destinations/${destination.stateSlug}/${destination.citySlug}/tours/${tour.slug}`;
+  }
+
   const slug =
     safeSlugify(catalogModule, tour?.slug) ||
     safeSlugify(catalogModule, tour?.title);
@@ -132,7 +137,6 @@ const buildCanonicalTourPath = (tour, catalogModule) => {
     return null;
   }
 
-  const destination = tour?.destination ?? {};
   const city =
     destination.citySlug || destination.city || tour?.city || tour?.location;
   const citySlug = safeSlugify(catalogModule, city);
@@ -355,148 +359,22 @@ const isRemovedTour = tour => {
 };
 
 const buildTourSummaries = async catalogModule => {
-  const toursGeneratedModule = await tsImport(
-    "../src/data/tours.generated.ts",
+  const toursDataModule = await tsImport(
+    "../src/data/tours.ts",
     import.meta.url
   );
 
   const tours = [];
 
-  if (Array.isArray(toursGeneratedModule.toursGenerated)) {
-    toursGeneratedModule.toursGenerated.forEach(tour => tours.push(tour));
+  if (Array.isArray(toursDataModule.tours)) {
+    toursDataModule.tours
+      .filter(tour => tour?.engine !== "engine6")
+      .forEach(tour => tours.push(tour));
   }
 
-  const wyomingModule = await tsImport(
-    "../src/data/us/wyoming.ts",
-    import.meta.url
-  );
-  if (typeof wyomingModule.loadWyomingTours === "function") {
-    wyomingModule.loadWyomingTours().forEach(tour => {
-      tours.push({
-        slug: catalogModule.slugify(`${tour.title}-${tour.id}`),
-        destination: {
-          state: "Wyoming",
-          stateSlug: "wyoming",
-          city: tour.city,
-          citySlug: catalogModule.slugify(tour.city),
-        },
-        activitySlugs: ["day-adventures"],
-        primaryCategory: "day-adventures",
-      });
-    });
-  }
-
-  const minnesotaModule = await tsImport(
-    "../src/data/us/minnesota.ts",
-    import.meta.url
-  );
-  if (typeof minnesotaModule.loadMinnesotaTours === "function") {
-    minnesotaModule.loadMinnesotaTours().forEach(tour => {
-      tours.push({
-        slug: catalogModule.slugify(`${tour.title}-${tour.id}`),
-        destination: {
-          state: "Minnesota",
-          stateSlug: "minnesota",
-          city: tour.city,
-          citySlug: catalogModule.slugify(tour.city),
-        },
-        activitySlugs: ["day-adventures"],
-        primaryCategory: "day-adventures",
-      });
-    });
-  }
-
-  const alaskaModule = await tsImport(
-    "../src/data/us/alaska.ts",
-    import.meta.url
-  );
-  if (typeof alaskaModule.loadAlaskaTours === "function") {
-    alaskaModule.loadAlaskaTours().forEach(tour => {
-      tours.push({
-        slug: catalogModule.slugify(`${tour.title}-${tour.id}`),
-        destination: {
-          state: "Alaska",
-          stateSlug: "alaska",
-          city: tour.city,
-          citySlug: catalogModule.slugify(tour.city),
-        },
-        activitySlugs: ["day-adventures"],
-        primaryCategory: "day-adventures",
-      });
-    });
-  }
-
-  const europeDir = path.resolve(__dirname, "../data/europe");
-  const europeFiles = await readdir(europeDir);
-  await Promise.all(
-    europeFiles
-      .filter(file => file.endsWith(".csv"))
-      .map(async file => {
-        const activitySlug = file.replace(/^europe-/, "").replace(/\.csv$/, "");
-        const contents = await readFile(path.join(europeDir, file), "utf8");
-        const rows = parseCsv(contents);
-
-        rows.forEach(row => {
-          const location = row.location?.trim();
-          const itemName = row.item_name?.trim();
-          if (!location || !itemName) {
-            return;
-          }
-
-          const locationParts = location
-            .split("/")
-            .map(part => part.trim())
-            .filter(Boolean);
-          const country = locationParts[0] ?? "Europe";
-          const city = locationParts[locationParts.length - 1] ?? country;
-          const itemId = row.item_id?.trim() || catalogModule.slugify(itemName);
-
-          tours.push({
-            slug: catalogModule.slugify(`${itemName}-${itemId}`),
-            destination: {
-              state: country,
-              stateSlug: catalogModule.slugify(country),
-              city,
-              citySlug: catalogModule.slugify(city),
-            },
-            activitySlugs: [activitySlug],
-            primaryCategory: activitySlug,
-          });
-        });
-      })
-  );
-
-  const australiaPath = path.resolve(__dirname, "../data/australia.csv");
-  const australiaContents = await readFile(australiaPath, "utf8");
-  const australiaRows = parseCsv(australiaContents);
-
-  australiaRows.forEach(row => {
-    const location = row.location?.trim();
-    const itemName = row.item_name?.trim();
-    if (!location || !itemName) {
-      return;
-    }
-
-    const locationParts = location
-      .split("/")
-      .map(part => part.trim())
-      .filter(Boolean);
-    const city = locationParts[locationParts.length - 1] ?? "Unknown";
-    const country = "Australia";
-    const itemId = row.item_id?.trim() || catalogModule.slugify(itemName);
-
-    tours.push({
-      slug: catalogModule.slugify(`${itemName}-${itemId}`),
-      destination: {
-        state: country,
-        stateSlug: catalogModule.slugify(country),
-        city,
-        citySlug: catalogModule.slugify(city),
-      },
-      activitySlugs: [],
-      primaryCategory: undefined,
-    });
-  });
+  // Sitemap tour detail URLs must come from route-backed registries only.
+  // Raw regional CSV fallbacks previously emitted product slugs that the SPA could
+  // not resolve, causing soft "Tour not found" detail pages and orphan city routes.
 
   return tours.filter(tour => !isRemovedTour(tour));
 };
@@ -727,7 +605,7 @@ const buildAmsterdamSitemapFallbackTours = async catalogModule => {
     .filter(Boolean);
 };
 
-const buildSitemap = async () => {
+export const buildSitemap = async () => {
   const destinationsModule = await tsImport(
     "../src/data/destinations.ts",
     import.meta.url
@@ -1207,10 +1085,14 @@ const run = async () => {
   }
 };
 
-try {
-  await run();
-} catch (error) {
-  const message = error instanceof Error ? error.message : String(error);
-  console.error(`Sitemap generation failed: ${message}`);
-  process.exit(1);
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === __filename;
+
+if (isMain) {
+  try {
+    await run();
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.error(`Sitemap generation failed: ${message}`);
+    process.exit(1);
+  }
 }

@@ -7,6 +7,7 @@
   <url><loc>https://www.alloutdooradventures.com/tours/activities/detours</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/activities/hiking</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/activities/multi-day</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/boat-tour/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/canoeing</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/alaska</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/arizona</loc><priority>0.5</priority></url>
@@ -19,8 +20,8 @@
   <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/louisiana</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/maryland</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/massachusetts</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/montana</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/new-hampshire</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/new-jersey</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/north-carolina</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/ohio</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/south-carolina</loc><priority>0.5</priority></url>
@@ -29,6 +30,7 @@
   <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/west-virginia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/wyoming</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/catalog</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/city-tour/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/cycling</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/cycling/us/alaska</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/cycling/us/arizona</loc><priority>0.5</priority></url>
@@ -64,15 +66,15 @@
   <url><loc>https://www.alloutdooradventures.com/tours/cycling/us/wisconsin</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/cycling/us/wyoming</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/day</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/day-adventures/us/alaska</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/day-adventures/us/minnesota</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/day-adventures/us/wyoming</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/day/cycling</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/day/hiking</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/day/paddle</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/detours/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/detours/us/california</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/detours/us/florida</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/detours/us/louisiana</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/eco-tour/us/arizona</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/guided-tour/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/alaska</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/arizona</loc><priority>0.5</priority></url>
@@ -93,6 +95,7 @@
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/minnesota</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/mississippi</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/missouri</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/montana</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/nevada</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/new-hampshire</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/new-jersey</loc><priority>0.5</priority></url>
@@ -114,5 +117,13 @@
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/west-virginia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/wisconsin</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/wyoming</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/history-tour/us/arizona</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/lodging/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/multi-day</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/other/us/arizona</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/photography-tour/us/arizona</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/segway/us/arizona</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-tour/us/arizona</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tour/us/arizona</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/water-activities/us/arizona</loc><priority>0.5</priority></url>
 </urlset>
