@@ -30,7 +30,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/alaska/anchorage/tours/deluxe-trolley-city-tour-312525</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/alaska/anchorage/tours/glacier-view-and-wildlife-anchorage-adventure-tour</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/alaska/anchorage/tours/historic-hatcher-pass-549877</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/alaska/anchorage/tours/intermediate-singletrack-mountain-biking-clinic-301378</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/alaska/anchorage/tours/kenai-peninsula-mountain-bike-adventure-146716</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/alaska/anchorage/tours/knik-glacier-off-roading-and-hiking-702520</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/alaska/anchorage/tours/matanuska-glacier-hike-and-tour-summer-edition-425024</loc><priority>0.8</priority></url>
@@ -38,7 +37,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/alaska/anchorage/tours/moose-hike-and-aurora-live-chase-tours-674316</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/alaska/anchorage/tours/moose-hike-kincaid-park-tour-674073</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/alaska/anchorage/tours/one-hour-trolley-city-tour-312522</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/alaska/anchorage/tours/private-mtb-lesson-301379</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/alaska/anchorage/tours/private-winter-fat-bike-tour-340387</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/alaska/anchorage/tours/progression-session-day-clinics-jumps-drops-banks-298933</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/alaska/anchorage/tours/seward-to-anchorage-transfer-with-national-park-hike-and-awcc-702523</loc><priority>0.8</priority></url>
@@ -605,9 +603,12 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/durango-514094</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/el-dorado-513079</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/equine-therapy-365796</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/full-day-hike-in-joshua-tree-national-park-237571p2</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/hike-and-climb-459591</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/in-the-company-of-horses-and-wine-587300</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/interactive-equine-visitor-pass-444127</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/joshua-tree-national-park-half-day-small-group-guided-tour-335698p7</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/joshua-tree-scenic-tour-6740p7</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/joshua-tree-stargazing-night-walk-901301</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/la-luna-514091</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/morning-trail-ride-598562</loc><priority>0.8</priority></url>
@@ -618,6 +619,8 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/private-morning-hike-459589</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/private-stargazing-with-an-astronomer-459584</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/private-sunset-hike-459590</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/professional-stargazing-in-joshua-tree-445161p1</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/rock-scrambling-adventures-in-joshua-tree-national-park-335698p13</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/sightseeing-tour-459544</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/soundbath-under-the-stars-joshua-tree-568106</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/sunset-hike-dinner-and-night-sky-presentation-459554</loc><priority>0.8</priority></url>
@@ -671,9 +674,11 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/los-angeles/tours/hollywood-private-helicopter-tour-15131P4</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/los-angeles/tours/los-angeles-private-guided-full-day-sightseeing-tour-365892P1</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/los-angeles/tours/mulholland-trail-horseback-tour-379799p1</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/los-angeles/tours/tour-of-los-angeles-hollywood-beverly-hills-santa-monica-beach-grand-tour-la-67760P2</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/los-angeles/tours/universal-studios-hollywood-general-admission-ticket-2030UNIENTRY</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/los-angeles/tours/warner-bros-studio-tour-hollywood-148509P1</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/los-angeles/tours/yosemite-and-kings-canyon-national-park-2-day-tour-from-la-132218p209</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/marina-del-rey/tours/13-foot-boston-whaler-656850</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/marina-del-rey/tours/15-passengers-harbor-cruise-weekend-388669</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/marina-del-rey/tours/15-passengers-open-ocean-coastal-388635</loc><priority>0.8</priority></url>
@@ -725,7 +730,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/california/oceanside/tours/sunset-sail-367215</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/oceanside/tours/tour-of-california-surf-museum-413654</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/earthquake-canyon-express-downhill-bicycle-adventure-3351p13</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/palm-canyon-tour-290437</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15</loc><priority>0.8</priority></url>
@@ -1235,6 +1239,7 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-diego/tours/yamaha-waverunner-453715</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-diego/tours/yo-ho-yo-ho-its-tritons-halloween-party-for-me-320731</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-diego/tours/yoga-float-and-flow-636071</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/3-day-yosemite-camping-adventure-from-san-francisco</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/alcatraz-and-full-day-electric-bike-rental-280403</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/alcatraz-and-streets-of-san-francisco-tour-15779</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/alcatraz-and-the-golden-gate-bridge-to-sausalito-tour-81664</loc><priority>0.8</priority></url>
@@ -1244,14 +1249,16 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/bike-rental-78799</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/bike-the-bridge-and-1-day-hop-on-hop-off-combo-262797</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/bike-the-bridge-and-muir-woods-tour-combo-165139</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/bike-the-golden-gate-bridge-san-francisco-to-sausalito</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/california-sunset-tour-10201</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/go-with-the-flow---south-423384</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/golden-gate-bridge-bike-and-brew-tour-110469</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/golden-gate-bridge-bike-tour-638088</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/golden-gate-bridge-bike-tour-with-muir-woods-and-sausalito</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/golden-gate-bridge-bike-tour-with-muir-woods-and-sausalito-549337</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/golden-gate-bridge-electric-bike-guided-tour-78858</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/golden-gate-bridge-electric-bike-tour-901002</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/bike-the-golden-gate-bridge-san-francisco-to-sausalito</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/golden-gate-bridge-guided-bicycle-tour-with-lunch</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/golden-gate-bridge-guided-tour-78855</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/golden-gate-bridge-to-sausalito-bike-tour-10199</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/golden-gate-kayak-adventure-901001</loc><priority>0.8</priority></url>
@@ -1263,22 +1270,30 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/muir-woods-and-sausalito-small-group-tour</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/napa-and-sonoma-wine-country-tour</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/private-california-sunset-tour-333236</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/private-city-tour-of-san-francisco</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/private-golden-gate-bridge-to-sausalito-333235</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/san-francisco-3-in-1-woods-wine-tour-sausalito-85853</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/san-francisco-alcatraz-app-guided-tour-cruise-jail-house-tour</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/san-francisco-bay-sunset-city-lights-cruise</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/san-francisco-bike-rentals-51429</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/san-francisco-love-tour</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/san-francisco-sunset-cruise-901003</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/skip-the-bus-san-francisco-by-luxury-van-tour</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/small-group-yosemite-tour-from-san-francisco-3454_b0016</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/streets-of-san-francisco-tour-10200</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/swft-boston-cooking-classes-612861</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/swft-washington-dc-cooking-classes-612863</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/the-golden-gate-bridge-bike-tour-138644</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/the-highlights-of-san-francisco-bike-tour-202161</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/san-francisco/tours/yosemite-sequoias-glacier-point-and-more-5-person-epic-adventure-415653P2</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/challenging-adventure-course-trek-in-the-santa-ynez-valley</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/coastal-adventure-449804</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/coastal-cruise-and-sunset-tour-620777</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/coastal-cruise-azure-seas-4241</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/corporate-wine-tours-and-team-building-490109</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/create-your-own-adventure-620872</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/e-foil-lessons-336389</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/epic-zipline-tour-over-the-santa-ynez-valley-421920p2</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/foiling-620861</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/full-day-island-cruise-620790</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/funk-zone-food-and-photo-tour-247375</loc><priority>0.8</priority></url>
@@ -1286,11 +1301,20 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/lourinh-wine-tasting-tour---3-wines-611821</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/lourinh-wine-tasting-tour---6-wines-612227</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/montecito-coastline-dog-friendly-electric-bike-and-sidecar-guided-tour-464867</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/private-harbor-cruise-on-electric-boat-in-santa-barbara-447486P4</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/private-two-person-surf-lesson-in-santa-barbara-5753P14</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/private-wine-tour-4364</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/santa-barbara-happy-hour-on-a-yacht</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/santa-barbara-harbor-and-waterfront-tour-449817</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/santa-barbara-stargazing-tour-with-phd-student-guide-5603847P4</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/santa-barbara-sunset-kayak-tour</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/santa-barbara-sunset-sail-449796</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/santa-barbara-trolley-tour</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/santa-barbara-vineyard-to-table-taste-tour-by-e-bike</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/santa-barbara-vineyard-to-table-taste-tour-by-ebike-63657p1</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/santa-barbara-wine-country-tour-shared-tour-4363</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/santa-ynez-valley-tour</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/soar-above-beautiful-santa-barbara</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/solvang-food-and-photo-tour-247379</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/spear-fishing-620851</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/sport-fishing-620823</loc><priority>0.8</priority></url>
@@ -1374,6 +1398,10 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/ciudad-de-mxico/ciudad-de-mxico/tours/mexico-off-the-beaten-track-308453</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/ciudad-de-mxico/ciudad-de-mxico/tours/michelin-taco-bike-tour-569992</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/ciudad-de-mxico/ciudad-de-mxico/tours/polanco-taco-bike-tour-642076</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/colorado/aspen/tours/aspen-east-end-light-hike-74828p5</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/colorado/aspen/tours/aspens-off-the-beaten-path-tour-74828p4</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/colorado/aspen/tours/glimpse-of-aspen-tour-74828p3</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/colorado/aspen/tours/private-professional-photoshoot-in-aspen-172188p151</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/colorado/boulder/tours/2-hour-e-bike-rental-80833</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/colorado/boulder/tours/best-of-boulder-e-bike-tour-87086</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/colorado/boulder/tours/boulder-e-bike-art-and-nature-tour-628917</loc><priority>0.8</priority></url>
@@ -1382,7 +1410,9 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/colorado/colorado-springs/tours/25-hour-cocktails-and-canaps-walking-tour-148263</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/colorado/colorado-springs/tours/25-hour-holiday-lights-and-bites-progressive-dinner-504381</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/colorado/colorado-springs/tours/3-hour-original-colorado-springs-food-tour-102503</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/colorado/colorado-springs/tours/garden-of-the-gods-tour-180019p2</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/colorado/colorado-springs/tours/mountainscape-e-bike-excursion-504255</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/colorado/colorado-springs/tours/small-group-tour-of-pikes-peak-and-the-garden-of-the-gods-from-denver-41410p10</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/colorado/denver/tours/1-hour-best-of-mid-and-lower-downtown-walking-tour-648293</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/colorado/denver/tours/16th-street-food-tour-604558</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/colorado/denver/tours/2-hour-lodo-walking-tour-79427</loc><priority>0.8</priority></url>
@@ -3399,17 +3429,22 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/hands-on-louisiana-meat-pies-seafood-gumbo-chocolate-and-original-pralines-584153</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/haunted-ghost-tours-359949</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/heart-of-the-city-50266</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/honey-island-swamp-tour-with-transport</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/inshore-kayak-fishing-charter-8999</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/italy-america-unveiling-of-louisiana-chapter-210436</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/large-airboat-swamp-tour-with-hotel-pickup</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/louisiana-coastal-birding-tour-656296</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/louisiana-plantation-tour-160437</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/made-in-louisiana-42878</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/magazine-street-foodie-tour-51615</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/manchac-magic-kayak-tour-8996</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/new-orleans-75-minute-riverboat-sightseeing-cruise</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/new-orleans-airboat-ride</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/new-orleans-birding-tour-447935</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/new-orleans-by-the-squares-473362</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/new-orleans-city-bike-tour-248318</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/new-orleans-city-tour-cemetery-french-quarter-garden-district-359340</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/new-orleans-swamp-tour-boat-adventure-with-pickup</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/oak-alley-plantation-3-hour-new-orleans-city-and-cemetery-tour-370334</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/oak-alley-plantation-covered-boat-swamp-tour-359739</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/oak-alley-plantation-large-airboat-swamp-tour-359886</loc><priority>0.8</priority></url>
@@ -4328,8 +4363,10 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/minnesota/waconia/tours/prince-the-tour-sightseeing-minneapolis-66387</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/minnesota/webster/tours/fresh-pressed-cider-tasting-kit-581603</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/minnesota/willow-river/tours/106-stand-up-paddle-board-rental-577574</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/mississippi/bay-saint-louis/tours/bay-saint-louis-discovery-boat-tour-380141p5</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/mississippi/natchez/tours/cherry-blossoms-washington-dc-566775</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/mississippi/natchez/tours/early-camellias-in-louisiana-455480</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/mississippi/natchez/tours/river-cruise-to-the-swamp-walk-tour-380141p3</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/missouri/branson/tours/new-jersey-nights-298922</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/missouri/springfield/tours/canoes-691864</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/montana/big-arm/tours/canoes-553615</loc><priority>0.8</priority></url>
@@ -5566,14 +5603,12 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/alaska/anchorage/tours/chugach-state-park-alpine-hiking-adventure-411854</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/alaska/anchorage/tours/coastal-cruise-bike-tour-110347</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/alaska/anchorage/tours/historic-hatcher-pass-549877</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/united-states/alaska/anchorage/tours/intermediate-singletrack-mountain-biking-clinic-301378</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/alaska/anchorage/tours/kenai-peninsula-mountain-bike-adventure-146716</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/alaska/anchorage/tours/knik-glacier-off-roading-and-hiking-702520</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/alaska/anchorage/tours/matanuska-glacier-hike-and-tour-summer-edition-425024</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/alaska/anchorage/tours/matanuska-glacier-hike-and-tour-winter-edition-418451</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/alaska/anchorage/tours/moose-hike-and-aurora-live-chase-tours-674316</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/alaska/anchorage/tours/moose-hike-kincaid-park-tour-674073</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/united-states/alaska/anchorage/tours/private-mtb-lesson-301379</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/alaska/anchorage/tours/private-winter-fat-bike-tour-340387</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/alaska/anchorage/tours/seward-to-anchorage-transfer-with-national-park-hike-and-awcc-702523</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/alaska/anchorage/tours/singletrack-sampler-private-tour-110365</loc><priority>0.8</priority></url>
@@ -6598,6 +6633,7 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/utah/hurricane/tours/west-rim---4-hour-private-tour-208760</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/utah/moab/tours/captain-ahab-private-guided-mountain-bike-tours-639072</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/utah/moab/tours/dead-horse-point-private-guided-mountain-bike-tour-639150</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/utah/moab/tours/half-day-day-canyoneering-91782p1</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/utah/moab/tours/kane-creek-petroglyph-tour-400063</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/utah/moab/tours/mag-7-in-town-pickup-rim-cyclery-639158</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/utah/moab/tours/mag-7-private-guided-mountain-bike-tours-639139</loc><priority>0.8</priority></url>
@@ -6977,6 +7013,4 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/wyoming/yellowstone-national-park/tours/two-lakes-kayaking-and-hiking-full-day-combo-with-lunch-540263</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/wyoming/yellowstone-national-park/tours/west-thumb-geyser-basin-and-overlook-hike-542975</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/wyoming/yellowstone-national-park/tours/yellowstone-family-adventure-695865</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/honey-island-swamp-tour-with-transport</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/louisiana/new-orleans/tours/large-airboat-swamp-tour-with-hotel-pickup</loc><priority>0.8</priority></url>
 </urlset>
