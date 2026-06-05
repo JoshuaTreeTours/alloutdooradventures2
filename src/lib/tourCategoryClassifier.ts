@@ -63,7 +63,7 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "water-sports",
     signals: [
-      /\b(?:jet ski|jetski|waverunner|wave runner|parasail|parasailing|wakeboard|tubing|water ski|speedboat|powerboat)\b/,
+      /\b(?:jet ski|jetski|waverunner|wave runner|parasail|parasailing|wakeboard|tubing|water ski|speedboat|powerboat|snorkel|snorkeling|swim (?:with|among|amongst)(?: [a-z]+){0,4} fish|coral reef snorkeling|reef snorkeling|underwater viewing)\b/,
     ],
   },
   {
@@ -89,7 +89,7 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "fishing",
     signals: [
-      /\b(?:fishing charter|deep sea fishing|sportfishing|sport fishing|fly fishing|reef fishing|angling|lake fishing|river fishing|fishing)\b/,
+      /\b(?:fishing charter|deep sea fishing|sportfishing|sport fishing|fly fishing|reef fishing|angling|lake fishing|river fishing|fishing trip|catch(?:ing)? fish|fishing)\b/,
     ],
   },
   {
@@ -179,7 +179,10 @@ const FOOD_PRIMARY_PATTERN =
   /\b(?:food tour|food walk|food walking|culinary|wine|winery|vineyard|tasting|brewery|beer|distillery|pizza|pasta|gelato|donut|chocolate|taco)\b/;
 
 const STRONG_FISHING_PATTERN =
-  /\b(?:fishing charter|deep sea fishing|sportfishing|sport fishing|fly fishing|reef fishing|angling|lake fishing|river fishing)\b/;
+  /\b(?:fishing charter|deep sea fishing|sportfishing|sport fishing|fly fishing|reef fishing|angling|lake fishing|river fishing|fishing trip|catch(?:ing)? fish)\b/;
+
+const SNORKELING_WATER_SPORTS_PATTERN =
+  /\b(?:snorkel|snorkeling|swim (?:with|among|amongst)(?: [a-z]+){0,4} fish|coral reef snorkeling|reef snorkeling|underwater viewing)\b/;
 
 const FISHING_SLUG: TourActivityCategorySlug = "fishing";
 
@@ -312,6 +315,14 @@ export const classifyTourCategories = (
     if (
       slug === FISHING_SLUG &&
       FOOD_PRIMARY_PATTERN.test(normalizedText) &&
+      !STRONG_FISHING_PATTERN.test(normalizedText)
+    ) {
+      return false;
+    }
+
+    if (
+      slug === FISHING_SLUG &&
+      SNORKELING_WATER_SPORTS_PATTERN.test(normalizedText) &&
       !STRONG_FISHING_PATTERN.test(normalizedText)
     ) {
       return false;
