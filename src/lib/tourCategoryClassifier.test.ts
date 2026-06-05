@@ -59,6 +59,42 @@ describe("classifyTourCategories", () => {
     ]);
   });
 
+  it("classifies equestrian riding inventory as Horseback Riding before broad activity buckets", () => {
+    [
+      "Horseback trail ride",
+      "Sunset ranch ride",
+      "Equestrian tour through the foothills",
+      "Mule ride canyon sightseeing tour",
+      "Horseback riding hiking trail tour",
+    ].forEach(title => {
+      const slugs = slugsFor({
+        title,
+        categories: ["Hiking", "Walking Tours", "Sightseeing & City Tours"],
+      });
+
+      expect(slugs[0]).toBe("horseback-riding");
+      expect(slugs).not.toContain("hiking");
+      expect(slugs).not.toContain("walking-tours");
+      expect(slugs).not.toContain("sightseeing-city-tours");
+    });
+  });
+
+  it("does not classify hiking or non-riding horse mentions as Horseback Riding", () => {
+    expect(slugsFor({ title: "Hiking trail tour" })).toEqual(["hiking"]);
+    expect(slugsFor({ title: "Historic horse carriage ride" })).not.toContain(
+      "horseback-riding"
+    );
+    expect(
+      slugsFor({ title: "Horse racing spectator experience" })
+    ).not.toContain("horseback-riding");
+    expect(
+      slugsFor({ title: "Historical tour about frontier horses" })
+    ).not.toContain("horseback-riding");
+    expect(
+      slugsFor({ title: "Working ranch tour without riding" })
+    ).not.toContain("horseback-riding");
+  });
+
   it("classifies fishing inventory as Fishing before broader activities", () => {
     [
       "Private fishing charter",

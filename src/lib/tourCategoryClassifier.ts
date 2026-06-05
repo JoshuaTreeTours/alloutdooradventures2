@@ -1,6 +1,7 @@
 export const TOUR_ACTIVITY_CATEGORIES = [
   { slug: "cycling", label: "Cycling" },
   { slug: "hiking", label: "Hiking" },
+  { slug: "horseback-riding", label: "Horseback Riding" },
   { slug: "walking-tours", label: "Walking Tours" },
   { slug: "paddle-sports", label: "Paddle Sports" },
   { slug: "water-sports", label: "Water Sports" },
@@ -111,6 +112,12 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
     ],
   },
   {
+    slug: "horseback-riding",
+    signals: [
+      /\b(?:horseback riding|horseback tour|trail ride|ranch ride|horse riding|equestrian tour|cowboy ride|mule ride|pony ride)\b/,
+    ],
+  },
+  {
     slug: "hiking",
     signals: [
       /\b(?:hike|hiking|trek|trekking|nature walk|canyon walk|mountain walk|national park walk|trail hike|hiking trail|trail walk|nature trail|forest trail|guided trail|glacier hike)\b/,
@@ -139,6 +146,14 @@ const SOURCE_CATEGORY_TO_ACTIVITY: Record<string, TourActivityCategorySlug> = {
   hiking: "hiking",
   "hiking-tours": "hiking",
   "hiking-tour": "hiking",
+  "horseback-riding": "horseback-riding",
+  "horseback-tour": "horseback-riding",
+  "horse-riding": "horseback-riding",
+  "equestrian-tour": "horseback-riding",
+  "trail-ride": "horseback-riding",
+  "ranch-ride": "horseback-riding",
+  "mule-ride": "horseback-riding",
+  "pony-ride": "horseback-riding",
   fishing: "fishing",
   "fishing-charter": "fishing",
   "deep-sea-fishing": "fishing",
@@ -170,6 +185,7 @@ const CATEGORY_PRIORITY = CATEGORY_SIGNAL_PATTERNS.map(pattern => pattern.slug);
 const SIGHTSEEING_SLUG: TourActivityCategorySlug = "sightseeing-city-tours";
 const WALKING_TOURS_SLUG: TourActivityCategorySlug = "walking-tours";
 const HIKING_SLUG: TourActivityCategorySlug = "hiking";
+const HORSEBACK_RIDING_SLUG: TourActivityCategorySlug = "horseback-riding";
 const FOOD_WINE_SLUG: TourActivityCategorySlug = "food-wine";
 
 const TRUE_HIKING_PATTERN =
@@ -177,6 +193,12 @@ const TRUE_HIKING_PATTERN =
 
 const FOOD_PRIMARY_PATTERN =
   /\b(?:food tour|food walk|food walking|culinary|wine|winery|vineyard|tasting|brewery|beer|distillery|pizza|pasta|gelato|donut|chocolate|taco)\b/;
+
+const HORSEBACK_RIDING_PATTERN =
+  /\b(?:horseback riding|horseback tour|trail ride|ranch ride|horse riding|equestrian tour|cowboy ride|mule ride|pony ride)\b/;
+
+const NON_HORSEBACK_RIDING_PATTERN =
+  /\b(?:carriage ride|carriage rides|horse carriage|horsedrawn carriage|horse drawn carriage|horse racing|horse race|race track|racetrack|spectator|ranch tour|ranch tours|historical tour|historic tour|rail trail ride|atv trail ride|ez[- ]?raider)\b/;
 
 const STRONG_FISHING_PATTERN =
   /\b(?:fishing charter|deep sea fishing|sportfishing|sport fishing|fly fishing|reef fishing|angling|lake fishing|river fishing|fishing trip|catch(?:ing)? fish)\b/;
@@ -291,6 +313,21 @@ export const classifyTourCategories = (
     : matched;
 
   const priorityFilteredMatches = transitFilteredMatches.filter(slug => {
+    if (
+      slug === HORSEBACK_RIDING_SLUG &&
+      NON_HORSEBACK_RIDING_PATTERN.test(normalizedText)
+    ) {
+      return false;
+    }
+
+    if (
+      [HIKING_SLUG, WALKING_TOURS_SLUG, SIGHTSEEING_SLUG].includes(slug) &&
+      HORSEBACK_RIDING_PATTERN.test(normalizedText) &&
+      !NON_HORSEBACK_RIDING_PATTERN.test(normalizedText)
+    ) {
+      return false;
+    }
+
     if (
       slug === WALKING_TOURS_SLUG &&
       FOOD_PRIMARY_PATTERN.test(normalizedText)

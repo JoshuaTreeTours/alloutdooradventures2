@@ -114,6 +114,27 @@ describe("activity discovery data", () => {
     );
   });
 
+  it("finds Horseback Riding tours from route-backed activity inventory", () => {
+    const horsebackTours = getToursByActivityCategory("horseback-riding");
+    const horsebackText = horsebackTours
+      .map(
+        tour =>
+          `${tour.title} ${tour.longDescription} ${(tour.categories ?? []).join(" ")} ${(tour.tags ?? []).join(" ")}`
+      )
+      .join(" ");
+
+    expect(horsebackTours.length).toBeGreaterThan(0);
+    expect(horsebackText).toMatch(
+      /horseback riding|horseback tour|trail ride|ranch ride|horse riding|equestrian tour|cowboy ride|mule ride|pony ride/i
+    );
+    expect(getActivityDiscoveryPage("horseback-riding")?.label).toBe(
+      "Horseback Riding"
+    );
+    expect(
+      buildActivityDiscoveryPath({ activitySlug: "horseback-riding" })
+    ).toBe("/tours/horseback-riding");
+  });
+
   it("finds Walking Tours from route-backed activity inventory", () => {
     const walkingTours = getToursByActivityCategory("walking-tours");
     const walkingText = walkingTours

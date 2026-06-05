@@ -97,6 +97,7 @@ describe("sitemap URL integrity", () => {
 
     expect(sitemap.categoryUrls.has("/tours/cycling")).toBe(true);
     expect(sitemap.categoryUrls.has("/tours/hiking")).toBe(true);
+    expect(sitemap.categoryUrls.has("/tours/horseback-riding")).toBe(true);
     expect(sitemap.categoryUrls.has("/tours/paddle-sports")).toBe(true);
     expect(sitemap.categoryUrls.has("/tours/fishing")).toBe(true);
     expect(sitemap.categoryUrls.has("/tours/canoeing")).toBe(false);

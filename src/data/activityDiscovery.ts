@@ -25,6 +25,7 @@ export type ActivityIndexCard = ActivityDiscoveryPage & {
 
 export const ACTIVITY_INDEX_PREFERRED_ORDER = [
   "hiking",
+  "horseback-riding",
   "walking-tours",
   "cycling",
   "paddle-sports",
@@ -52,6 +53,11 @@ const ACTIVITY_PAGE_COPY: Record<
     title: "Hiking Tours & Outdoor Adventures",
     description:
       "Find guided trail hikes, mountain hikes, canyon hikes, national park hikes, and nature-trail adventures led by local experts.",
+  },
+  "horseback-riding": {
+    title: "Horseback Riding Tours & Outdoor Adventures",
+    description:
+      "Browse horseback riding tours, trail rides, ranch rides, mule rides, pony rides, and equestrian outdoor adventures.",
   },
   "walking-tours": {
     title: "Walking Tours & Outdoor Adventures",
@@ -132,7 +138,7 @@ export const getActivityDiscoveryPage = (activitySlug: string) =>
   null;
 
 const STALE_ACTIVITY_LABEL_PATTERN =
-  /^(?:hiking(?:-tour|-tours)?|walking(?:-tour|-tours)?|walking tour|walking tours)$/;
+  /^(?:hiking(?:-tour|-tours)?|walking(?:-tour|-tours)?|walking tour|walking tours|sightseeing(?:-tour|-tours)?|sightseeing-city-tours)$/;
 
 const reclassifiedTourActivitySlugCache = new WeakMap<Tour, string[]>();
 
@@ -187,8 +193,16 @@ const hasStoredActivityCategory = (tour: Tour, activitySlug: string) =>
 const hasActivityCategory = (tour: Tour, activitySlug: string) => {
   const reclassifiedSlugs = getReclassifiedTourActivitySlugs(tour);
 
+  if (activitySlug === "horseback-riding") {
+    return reclassifiedSlugs.includes("horseback-riding");
+  }
+
   if (activitySlug === "walking-tours") {
     return reclassifiedSlugs.includes("walking-tours");
+  }
+
+  if (activitySlug === "sightseeing-city-tours") {
+    return reclassifiedSlugs.includes("sightseeing-city-tours");
   }
 
   if (activitySlug === "hiking") {
