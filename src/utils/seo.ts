@@ -6,7 +6,8 @@ import {
 import { SITE_BRAND_NAME } from "./site";
 
 export const SITE_URL = "https://www.alloutdooradventures.com";
-export const ROOT_OG_IMAGE = "/hero.jpg";
+export const ROOT_OG_IMAGE =
+  "https://cdn.filestackcontent.com/MMdbUxClRWq36GyZNbqk";
 
 export const DEFAULT_SEO = {
   title: `${SITE_BRAND_NAME} | Outdoor Tours, Activities & Travel Guides`,
