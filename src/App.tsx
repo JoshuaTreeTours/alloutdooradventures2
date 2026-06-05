@@ -59,6 +59,7 @@ import CanoeingTours from "./pages/tours/activities/CanoeingTours";
 import TourDetail from "./pages/tours/TourDetail";
 import ActivityStateTours from "./pages/tours/ActivityStateTours";
 import ActivityToursPage from "./pages/tours/ActivityToursPage";
+import { getActivityDiscoveryRouteDefinitions } from "./data/activityDiscovery";
 import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
 import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
 import Engine5ProofListingRoute from "./pages/engine5/Engine5ProofListingRoute";
@@ -106,6 +107,9 @@ import {
   ENGINE6_LUCERNE_SHORT_CATAMARAN_ROUTE,
 } from "./engine6/routes";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
+
+const activityDiscoveryRouteDefinitions =
+  getActivityDiscoveryRouteDefinitions();
 
 const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
 const FaqRedirect = () => <RouteRedirect to="/faqs" />;
@@ -519,28 +523,14 @@ export default function App() {
         <Route path="/terms" component={Terms} />
         <Route path="/cookies" component={Cookies} />
         <Route path="/disclosure" component={Disclosure} />
-        <Route path="/tours/cycling" component={CyclingTours} />
-        <Route path="/tours/hiking" component={HikingTours} />
-        <Route
-          path="/tours/paddle-sports"
-          component={({ params }) => (
-            <ActivityToursPage
-              params={{ ...params, activitySlug: "paddle-sports" }}
-            />
-          )}
-        />
+        {activityDiscoveryRouteDefinitions.map(route => (
+          <Route
+            key={route.path}
+            path={route.path}
+            component={() => <ActivityToursPage params={route.params} />}
+          />
+        ))}
         <Route path="/tours/canoeing" component={CanoeingTours} />
-        <Route path="/tours/water-sports" component={ActivityToursPage} />
-        <Route path="/tours/sailing" component={ActivityToursPage} />
-        <Route path="/tours/jeep-off-road" component={ActivityToursPage} />
-        <Route path="/tours/wildlife" component={ActivityToursPage} />
-        <Route path="/tours/stargazing" component={ActivityToursPage} />
-        <Route path="/tours/food-wine" component={ActivityToursPage} />
-        <Route path="/tours/air-tours" component={ActivityToursPage} />
-        <Route
-          path="/tours/sightseeing-city-tours"
-          component={ActivityToursPage}
-        />
         <Route
           path="/tours/:activitySlug/us/:stateSlug"
           component={ActivityStateTours}
@@ -565,14 +555,6 @@ export default function App() {
         <Route
           path="/tours/switzerland/:citySlug/:slug"
           component={SwissLegacyTourRedirect}
-        />
-        <Route
-          path="/tours/:activitySlug/:stateSlug/:citySlug"
-          component={ActivityToursPage}
-        />
-        <Route
-          path="/tours/:activitySlug/:stateSlug"
-          component={ActivityToursPage}
         />
         <Route path="/tours/:tourSlug" component={FlagstaffTourDetailRoute} />
         <Route

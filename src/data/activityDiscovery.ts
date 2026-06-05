@@ -1,3 +1,4 @@
+import { TOUR_ACTIVITY_CATEGORIES } from "../lib/tourCategoryClassifier";
 import { getStateBySlug } from "./destinations";
 import { tours } from "./tours";
 import type { Tour } from "./tours.types";
@@ -11,85 +12,78 @@ export type ActivityDiscoveryPage = {
   description: string;
 };
 
-export const ACTIVITY_DISCOVERY_PAGES: ActivityDiscoveryPage[] = [
-  {
-    slug: "cycling",
-    label: "Cycling",
+const ACTIVITY_PAGE_COPY: Record<
+  string,
+  { title: string; description: string }
+> = {
+  cycling: {
     title: "Cycling Tours & Outdoor Adventures",
     description:
       "Discover guided cycling tours, e-bike rides, scenic road routes, and bike-based outdoor adventures.",
   },
-  {
-    slug: "hiking",
-    label: "Hiking",
+  hiking: {
     title: "Hiking Tours & Outdoor Adventures",
     description:
       "Find guided hiking tours, trail days, nature walks, and outdoor adventures led by local experts.",
   },
-  {
-    slug: "paddle-sports",
-    label: "Paddle Sports",
+  "paddle-sports": {
     title: "Paddle Sports Tours & Outdoor Adventures",
     description:
       "Explore kayak, canoe, stand-up paddleboard, SUP, and other paddle-powered adventures on rivers, lakes, and coastlines.",
   },
-  {
-    slug: "water-sports",
-    label: "Water Sports",
+  "water-sports": {
     title: "Water Sports Tours & Outdoor Adventures",
     description:
       "Browse jet ski rides, snorkeling trips, speedboat outings, and active water-based outdoor adventures.",
   },
-  {
-    slug: "sailing",
-    label: "Sailing",
+  sailing: {
     title: "Sailing Tours & Outdoor Adventures",
     description:
       "Compare sailing charters, harbor cruises, sunset sails, and wind-powered experiences on the water.",
   },
-  {
-    slug: "jeep-off-road",
-    label: "Jeep & Off-Road",
+  "jeep-off-road": {
     title: "Jeep & Off-Road Tours & Outdoor Adventures",
     description:
       "Find Jeep tours, 4x4 routes, desert drives, and rugged off-road outdoor adventures.",
   },
-  {
-    slug: "wildlife",
-    label: "Wildlife",
+  wildlife: {
     title: "Wildlife Tours & Outdoor Adventures",
     description:
       "Discover wildlife watching tours, whale watching trips, national park outings, and nature-focused adventures.",
   },
-  {
-    slug: "stargazing",
-    label: "Stargazing",
+  stargazing: {
     title: "Stargazing Tours & Outdoor Adventures",
     description:
       "Browse night-sky tours, astronomy outings, and guided stargazing experiences in memorable outdoor settings.",
   },
-  {
-    slug: "food-wine",
-    label: "Food & Wine",
+  "food-wine": {
     title: "Food & Wine Tours & Outdoor Adventures",
     description:
       "Explore food tours, wine country outings, bike-and-bite experiences, and culinary adventures with a local flavor.",
   },
-  {
-    slug: "air-tours",
-    label: "Air Tours",
+  "air-tours": {
     title: "Air Tours & Outdoor Adventures",
     description:
       "Find helicopter rides, flightseeing tours, aerial sightseeing, and sky-high outdoor adventure experiences.",
   },
-  {
-    slug: "sightseeing-city-tours",
-    label: "Sightseeing & City Tours",
+  "sightseeing-city-tours": {
     title: "Sightseeing & City Tours & Outdoor Adventures",
     description:
       "Browse city tours, scenic sightseeing routes, local highlights, and easy guided discovery experiences.",
   },
-];
+};
+
+export const ACTIVITY_DISCOVERY_PAGES: ActivityDiscoveryPage[] =
+  TOUR_ACTIVITY_CATEGORIES.map(category => ({
+    slug: category.slug,
+    label: category.label,
+    title:
+      ACTIVITY_PAGE_COPY[category.slug]?.title ??
+      `${category.label} Tours & Outdoor Adventures`,
+    description:
+      ACTIVITY_PAGE_COPY[category.slug]?.description ??
+      `Browse ${category.label.toLowerCase()} tours and outdoor adventures.`,
+  }));
 
 export type ActivityLocationOption = {
   slug: string;
@@ -267,6 +261,53 @@ export const getActivityLocationNames = ({
       : "";
 
   return { stateName, cityName };
+};
+
+export type ActivityDiscoveryRouteDefinition = {
+  path: string;
+  params: {
+    activitySlug: string;
+    stateSlug?: string;
+    citySlug?: string;
+  };
+};
+
+export const getActivityDiscoveryRouteDefinitions = () => {
+  const definitions: ActivityDiscoveryRouteDefinition[] = [];
+
+  ACTIVITY_DISCOVERY_PAGES.forEach(activity => {
+    definitions.push({
+      path: buildActivityDiscoveryPath({ activitySlug: activity.slug }),
+      params: { activitySlug: activity.slug },
+    });
+
+    getActivityStateOptions(activity.slug).forEach(state => {
+      definitions.push({
+        path: buildActivityDiscoveryPath({
+          activitySlug: activity.slug,
+          stateSlug: state.slug,
+        }),
+        params: { activitySlug: activity.slug, stateSlug: state.slug },
+      });
+
+      getActivityCityOptions(activity.slug, state.slug).forEach(city => {
+        definitions.push({
+          path: buildActivityDiscoveryPath({
+            activitySlug: activity.slug,
+            stateSlug: state.slug,
+            citySlug: city.slug,
+          }),
+          params: {
+            activitySlug: activity.slug,
+            stateSlug: state.slug,
+            citySlug: city.slug,
+          },
+        });
+      });
+    });
+  });
+
+  return definitions;
 };
 
 export const slugifyActivityLocation = (value: string) => slugify(value);
