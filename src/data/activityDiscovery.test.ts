@@ -95,6 +95,25 @@ describe("activity discovery data", () => {
     ).toBe(true);
   });
 
+  it("finds Fishing tours from route-backed activity inventory", () => {
+    const fishingTours = getToursByActivityCategory("fishing");
+    const fishingText = fishingTours
+      .map(
+        tour =>
+          `${tour.title} ${tour.longDescription} ${(tour.categories ?? []).join(" ")} ${(tour.tags ?? []).join(" ")}`
+      )
+      .join(" ");
+
+    expect(fishingTours.length).toBeGreaterThan(0);
+    expect(fishingText).toMatch(
+      /fishing charter|deep sea fishing|sportfishing|sport fishing|fly fishing|reef fishing|angling|lake fishing|river fishing|\bfishing\b/i
+    );
+    expect(getActivityDiscoveryPage("fishing")?.label).toBe("Fishing");
+    expect(buildActivityDiscoveryPath({ activitySlug: "fishing" })).toBe(
+      "/tours/fishing"
+    );
+  });
+
   it("finds Walking Tours from route-backed activity inventory", () => {
     const walkingTours = getToursByActivityCategory("walking-tours");
     const walkingText = walkingTours

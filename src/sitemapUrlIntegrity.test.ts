@@ -98,6 +98,7 @@ describe("sitemap URL integrity", () => {
     expect(sitemap.categoryUrls.has("/tours/cycling")).toBe(true);
     expect(sitemap.categoryUrls.has("/tours/hiking")).toBe(true);
     expect(sitemap.categoryUrls.has("/tours/paddle-sports")).toBe(true);
+    expect(sitemap.categoryUrls.has("/tours/fishing")).toBe(true);
     expect(sitemap.categoryUrls.has("/tours/canoeing")).toBe(false);
     expect(sitemap.categoryUrls.has("/tours/empty-activity")).toBe(false);
   }, 60_000);

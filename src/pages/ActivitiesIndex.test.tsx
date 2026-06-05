@@ -45,6 +45,17 @@ describe("Activities index", () => {
     expect(walkingCard?.href).toBe("/tours/walking-tours");
   });
 
+  it("shows the Fishing card only when backed by route inventory", () => {
+    const fishingTours = getToursByActivityCategory("fishing");
+    const fishingCard = getActivityIndexCards().find(
+      card => card.slug === "fishing"
+    );
+
+    expect(fishingTours.length).toBeGreaterThan(0);
+    expect(fishingCard?.tourCount).toBe(fishingTours.length);
+    expect(fishingCard?.href).toBe("/tours/fishing");
+  });
+
   it("uses full activity route inventory for counts and images", () => {
     getActivityIndexCards().forEach(card => {
       const routeActivityTours = getToursByActivityCategory(card.slug);
@@ -73,6 +84,7 @@ describe("Activities index", () => {
       "paddle-sports",
       "water-sports",
       "sailing",
+      "fishing",
       "wildlife",
       "stargazing",
       "jeep-off-road",

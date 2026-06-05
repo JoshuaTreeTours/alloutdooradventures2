@@ -42,6 +42,33 @@ describe("classifyTourCategories", () => {
     ]);
   });
 
+  it("classifies fishing inventory as Fishing before broader activities", () => {
+    [
+      "Private fishing charter",
+      "Deep sea fishing adventure",
+      "Sportfishing trip",
+      "Fly fishing guided hike",
+      "Reef fishing sightseeing tour",
+      "Angling boat tour",
+      "Lake fishing excursion",
+      "River fishing city highlights tour",
+    ].forEach(title => {
+      const slugs = slugsFor({ title });
+
+      expect(slugs[0]).toBe("fishing");
+      expect(slugs).toContain("fishing");
+    });
+  });
+
+  it("does not classify non-fishing boat cruises or food walks as Fishing", () => {
+    expect(slugsFor({ title: "Private harbor boat cruise" })).not.toContain(
+      "fishing"
+    );
+    expect(
+      slugsFor({ title: "Pizza, pasta and piazzas", categories: ["Fishing"] })
+    ).not.toContain("fishing");
+  });
+
   it("classifies urban walking experiences as Walking Tours instead of Hiking", () => {
     [
       "Historic city walking tour",

@@ -30,6 +30,7 @@ export const ACTIVITY_INDEX_PREFERRED_ORDER = [
   "paddle-sports",
   "water-sports",
   "sailing",
+  "fishing",
   "wildlife",
   "stargazing",
   "jeep-off-road",
@@ -71,6 +72,11 @@ const ACTIVITY_PAGE_COPY: Record<
     title: "Sailing Tours & Outdoor Adventures",
     description:
       "Compare sailing charters, harbor cruises, sunset sails, and wind-powered experiences on the water.",
+  },
+  fishing: {
+    title: "Fishing Tours & Outdoor Adventures",
+    description:
+      "Browse fishing charters, deep sea fishing trips, fly fishing guides, and lake, river, and reef angling experiences.",
   },
   "jeep-off-road": {
     title: "Jeep & Off-Road Tours & Outdoor Adventures",
@@ -190,6 +196,10 @@ const hasActivityCategory = (tour: Tour, activitySlug: string) => {
       hasStoredActivityCategory(tour, "hiking") &&
       reclassifiedSlugs.includes("hiking")
     );
+  }
+
+  if (activitySlug === "fishing") {
+    return reclassifiedSlugs.includes("fishing");
   }
 
   return hasStoredActivityCategory(tour, activitySlug);
