@@ -173,12 +173,14 @@
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/hawaii</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/hawaii/hanalei</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/hawaii/honolulu</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/food-wine/hawaii/kailua-kona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/louisiana</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/louisiana/new-orleans</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/mexico</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/mexico/cabo-san-lucas</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/mexico/cancun</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/mexico/ciudad-de-mexico</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/food-wine/mexico/puerto-vallarta</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/minnesota</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/minnesota/brainerd</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/minnesota/duluth</loc><priority>0.5</priority></url>
@@ -194,6 +196,8 @@
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/spain</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/spain/barcelona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/spain/viladellops</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/food-wine/switzerland</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/food-wine/switzerland/zurich</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/guided-tour/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/alaska</loc><priority>0.5</priority></url>
@@ -228,11 +232,9 @@
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/california/oakhurst</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/california/palm-springs</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/california/san-francisco</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/hiking/california/santa-barbara</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/california/yucca-valley</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/colorado</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/colorado/aspen</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/hiking/colorado/colorado-springs</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/france</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/france/paris</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/hawaii</loc><priority>0.5</priority></url>
@@ -256,9 +258,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/minnesota</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/minnesota/bloomington</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/minnesota/duluth</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/hiking/mississippi</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/hiking/mississippi/bay-saint-louis</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/hiking/mississippi/natchez</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/nevada</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/nevada/las-vegas</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/new-brunswick</loc><priority>0.5</priority></url>
@@ -319,8 +318,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/west-virginia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/wisconsin</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/wyoming</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/hiking/utah</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/hiking/utah/moab</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/history-tour/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/jeep-off-road</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/jeep-off-road/alaska</loc><priority>0.5</priority></url>
@@ -507,6 +504,7 @@
   <url><loc>https://www.alloutdooradventures.com/tours/sailing/california/santa-cruz</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sailing/florida</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sailing/florida/fort-lauderdale</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/sailing/florida/miami</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sailing/france</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sailing/france/paris</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sailing/hawaii</loc><priority>0.5</priority></url>
@@ -535,15 +533,12 @@
   <url><loc>https://www.alloutdooradventures.com/tours/sailing/switzerland/lucerne</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/segway/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/alaska</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/alaska/denali-national-park-and-preserve</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/british-columbia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/british-columbia/vancouver</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/california</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/california/avalon</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/california/joshua-tree</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/california/los-angeles</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/california/mountain-ranch</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/california/palm-springs</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/california/perris</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/california/san-diego</loc><priority>0.5</priority></url>
@@ -600,6 +595,46 @@
   <url><loc>https://www.alloutdooradventures.com/tours/stargazing/nevada</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/stargazing/nevada/las-vegas</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tour/us/arizona</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/alaska</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/alaska/denali-national-park-and-preserve</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/australia</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/australia/ocean-shores</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/california</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/california/los-angeles</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/california/mountain-ranch</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/california/sacramento</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/california/san-diego</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/colorado</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/colorado/denver</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/district-of-columbia</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/district-of-columbia/washington</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/florida</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/florida/key-west</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/florida/venice</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/france</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/france/paris</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/georgia</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/georgia/senoia</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/kentucky</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/kentucky/louisville</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/louisiana</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/louisiana/new-orleans</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/massachusetts</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/massachusetts/boston</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/massachusetts/cambridge</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/netherlands</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/netherlands/amsterdam</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/new-york</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/new-york/new-york</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/ontario</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/ontario/toronto</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/pennsylvania</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/pennsylvania/philadelphia</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/virginia</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/virginia/arlington</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/washington</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/washington/seattle</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/water-activities/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/water-sports</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/water-sports/california</loc><priority>0.5</priority></url>

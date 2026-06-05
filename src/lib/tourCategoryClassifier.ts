@@ -1,6 +1,7 @@
 export const TOUR_ACTIVITY_CATEGORIES = [
   { slug: "cycling", label: "Cycling" },
   { slug: "hiking", label: "Hiking" },
+  { slug: "walking-tours", label: "Walking Tours" },
   { slug: "paddle-sports", label: "Paddle Sports" },
   { slug: "water-sports", label: "Water Sports" },
   { slug: "sailing", label: "Sailing" },
@@ -99,45 +100,73 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "food-wine",
     signals: [
-      /\b(?:wine|winery|vineyard|tasting|food tour|culinary|brewery|beer|distillery)\b/,
+      /\b(?:wine|winery|vineyard|tasting|food tour|food walk|food walking|culinary|brewery|beer|distillery|pizza|pasta|gelato|donut|chocolate|taco)\b/,
     ],
   },
   {
     slug: "hiking",
     signals: [
-      /\b(?:hike|hiking|trek|nature walk|canyon walk|trail hike|hiking trail|trail walk|guided trail)\b/,
+      /\b(?:hike|hiking|trek|trekking|nature walk|canyon walk|mountain walk|national park walk|trail hike|hiking trail|trail walk|nature trail|forest trail|guided trail|glacier hike)\b/,
+    ],
+  },
+  {
+    slug: "walking-tours",
+    signals: [
+      /\b(?:walking tour|guided walk|walking outing|city walk|history walk|historic walk|ghost walk|architecture walk|neighborhood walk|street art walk|cultural walk|urban exploration walk|walk of fame|on foot)\b/,
     ],
   },
   {
     slug: "sightseeing-city-tours",
     signals: [
-      /\b(?:sightseeing|city tour|trolley|bus tour|walking tour|hop[- ]on hop[- ]off|landmarks|highlights tour)\b/,
+      /\b(?:sightseeing|city tour|trolley|bus tour|hop[- ]on hop[- ]off|landmarks|highlights tour)\b/,
     ],
   },
 ];
 
 const SOURCE_CATEGORY_TO_ACTIVITY: Record<string, TourActivityCategorySlug> = {
   cycling: "cycling",
+  "bike-tours": "cycling",
   "bike-tour": "cycling",
   "bicycle-tour": "cycling",
   "cycling-tour": "cycling",
   hiking: "hiking",
+  "hiking-tours": "hiking",
   "hiking-tour": "hiking",
   canoeing: "paddle-sports",
+  "paddle-sports": "paddle-sports",
   "paddle-tour": "paddle-sports",
   "boat-tour": "sailing",
   "snorkeling-tour": "water-sports",
   "off-road-tour": "jeep-off-road",
   "wildlife-tour": "wildlife",
   "food-and-drink-tour": "food-wine",
+  "food-wine": "food-wine",
   "air-tour": "air-tours",
   "sightseeing-tour": "sightseeing-city-tours",
-  "walking-tour": "sightseeing-city-tours",
+  "sightseeing-city-tours": "sightseeing-city-tours",
+  "walking-tour": "walking-tours",
+  "walking-tours": "walking-tours",
 };
 
 const CATEGORY_PRIORITY = CATEGORY_SIGNAL_PATTERNS.map(pattern => pattern.slug);
 
 const SIGHTSEEING_SLUG: TourActivityCategorySlug = "sightseeing-city-tours";
+const WALKING_TOURS_SLUG: TourActivityCategorySlug = "walking-tours";
+const HIKING_SLUG: TourActivityCategorySlug = "hiking";
+const FOOD_WINE_SLUG: TourActivityCategorySlug = "food-wine";
+
+const TRUE_HIKING_PATTERN =
+  /\b(?:hike|hiking|trek|trekking|canyon hike|canyon walk|mountain hike|mountain walk|national park hike|national park walk|trail hike|hiking trail|trail walk|nature trail|forest trail|guided trail|glacier hike)\b/;
+
+const FOOD_PRIMARY_PATTERN =
+  /\b(?:food tour|food walk|food walking|culinary|wine|winery|vineyard|tasting|brewery|beer|distillery|pizza|pasta|gelato|donut|chocolate|taco)\b/;
+
+const EXPLICIT_HIKING_PATTERN = /\b(?:hike|hiking|trek|trekking)\b/;
+
+const NON_HIKING_PRIMARY_PATTERN =
+  /\b(?:bike|bicycle|e[- ]?bike|ebike|cycling|pedal|jeep|hummer|4x4|off[- ]?road|offroad|atv|utv|buggy|kayak|canoe|paddle|sup|snorkel|boat|sail|sailing|yacht|catamaran|cruise|jet ski|jetski|horse|horseback|zipline|zip line|segway|airplane|flightseeing|aerial)\b/;
+
+const NEGATED_HIKING_PATTERN = /\b(?:instead of|rather than|without) hiking\b/;
 
 export const normalizeTourCategoryText = (value: string) =>
   value
@@ -175,6 +204,10 @@ const buildClassifierText = (input: TourCategoryClassificationInput) => {
       appendIfPresent(parts, item.sectionLabel);
       appendIfPresent(parts, item.description);
     }
+  }
+
+  for (const sourceCategory of input.categories ?? []) {
+    appendIfPresent(parts, sourceCategory);
   }
 
   return normalizeTourCategoryText(parts.join(" "));
@@ -223,16 +256,57 @@ export const classifyTourCategories = (
   const isTransitSightseeingTour =
     /\b(?:trolley|bus tour|hop[- ]on hop[- ]off)\b/.test(normalizedText) &&
     matched.includes(SIGHTSEEING_SLUG);
-  const filteredMatches = isTransitSightseeingTour
+  const transitFilteredMatches = isTransitSightseeingTour
     ? matched.filter(
         slug =>
           slug === SIGHTSEEING_SLUG ||
-          slug === "food-wine" ||
+          slug === FOOD_WINE_SLUG ||
           slug === "stargazing"
       )
     : matched;
 
-  const matchedCategorySlugs = orderPrimaryFirst(filteredMatches);
+  const priorityFilteredMatches = transitFilteredMatches.filter(slug => {
+    if (
+      slug === WALKING_TOURS_SLUG &&
+      FOOD_PRIMARY_PATTERN.test(normalizedText)
+    ) {
+      return false;
+    }
+
+    if (
+      slug === WALKING_TOURS_SLUG &&
+      TRUE_HIKING_PATTERN.test(normalizedText)
+    ) {
+      return false;
+    }
+
+    if (
+      slug === WALKING_TOURS_SLUG &&
+      NON_HIKING_PRIMARY_PATTERN.test(normalizedText)
+    ) {
+      return false;
+    }
+
+    if (slug === HIKING_SLUG && NEGATED_HIKING_PATTERN.test(normalizedText)) {
+      return false;
+    }
+
+    if (slug === HIKING_SLUG && matched.includes(WALKING_TOURS_SLUG)) {
+      return TRUE_HIKING_PATTERN.test(normalizedText);
+    }
+
+    if (
+      slug === HIKING_SLUG &&
+      NON_HIKING_PRIMARY_PATTERN.test(normalizedText) &&
+      !EXPLICIT_HIKING_PATTERN.test(normalizedText)
+    ) {
+      return false;
+    }
+
+    return true;
+  });
+
+  const matchedCategorySlugs = orderPrimaryFirst(priorityFilteredMatches);
   const activityCategories = matchedCategorySlugs
     .map(slug => CATEGORY_BY_SLUG.get(slug))
     .filter((category): category is TourActivityCategory => Boolean(category));

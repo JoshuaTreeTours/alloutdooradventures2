@@ -42,6 +42,48 @@ describe("classifyTourCategories", () => {
     ]);
   });
 
+  it("classifies urban walking experiences as Walking Tours instead of Hiking", () => {
+    [
+      "Historic city walking tour",
+      "Ghost walk",
+      "Architecture walking tour",
+      "Neighborhood walking tour",
+      "Street art walking tour",
+      "Cultural walking tour",
+      "Urban exploration walk",
+    ].forEach(title => {
+      const slugs = slugsFor({ title });
+
+      expect(slugs).toContain("walking-tours");
+      expect(slugs).not.toContain("hiking");
+    });
+  });
+
+  it("keeps food walking tours in Food & Wine when food is primary", () => {
+    expect(
+      slugsFor({ title: "Food walking tour with pizza and gelato" })
+    ).toEqual(["food-wine"]);
+  });
+
+  it("keeps true hiking and trail inventory in Hiking instead of Walking Tours", () => {
+    [
+      "National park guided hike",
+      "Canyon trail trekking tour",
+      "Mountain hiking trail adventure",
+    ].forEach(title => {
+      const slugs = slugsFor({ title });
+
+      expect(slugs).toContain("hiking");
+      expect(slugs).not.toContain("walking-tours");
+    });
+  });
+
+  it("keeps bus sightseeing tours in Sightseeing & City Tours", () => {
+    expect(slugsFor({ title: "Bus sightseeing tour" })).toEqual([
+      "sightseeing-city-tours",
+    ]);
+  });
+
   it("classifies a generic city bus tour as Sightseeing & City Tours", () => {
     expect(slugsFor({ title: "Generic city bus tour" })).toEqual([
       "sightseeing-city-tours",

@@ -1,4 +1,8 @@
-import { TOUR_ACTIVITY_CATEGORIES } from "../lib/tourCategoryClassifier";
+import {
+  classifyTourCategories,
+  normalizeTourCategoryText,
+  TOUR_ACTIVITY_CATEGORIES,
+} from "../lib/tourCategoryClassifier";
 import { getStateBySlug } from "./destinations";
 import { getAllRouteBackedTourEntries, getTourDetailPath } from "./tours";
 import type { Tour } from "./tours.types";
@@ -21,6 +25,7 @@ export type ActivityIndexCard = ActivityDiscoveryPage & {
 
 export const ACTIVITY_INDEX_PREFERRED_ORDER = [
   "hiking",
+  "walking-tours",
   "cycling",
   "paddle-sports",
   "water-sports",
@@ -45,7 +50,12 @@ const ACTIVITY_PAGE_COPY: Record<
   hiking: {
     title: "Hiking Tours & Outdoor Adventures",
     description:
-      "Find guided hiking tours, trail days, nature walks, and outdoor adventures led by local experts.",
+      "Find guided trail hikes, mountain hikes, canyon hikes, national park hikes, and nature-trail adventures led by local experts.",
+  },
+  "walking-tours": {
+    title: "Walking Tours & Outdoor Adventures",
+    description:
+      "Explore city walking tours, historic walks, ghost walks, architecture walks, neighborhood walks, street art walks, and cultural walking experiences.",
   },
   "paddle-sports": {
     title: "Paddle Sports Tours & Outdoor Adventures",
@@ -115,10 +125,75 @@ export const getActivityDiscoveryPage = (activitySlug: string) =>
   ACTIVITY_DISCOVERY_PAGES.find(activity => activity.slug === activitySlug) ??
   null;
 
-const hasActivityCategory = (tour: Tour, activitySlug: string) =>
+const STALE_ACTIVITY_LABEL_PATTERN =
+  /^(?:hiking(?:-tour|-tours)?|walking(?:-tour|-tours)?|walking tour|walking tours)$/;
+
+const reclassifiedTourActivitySlugCache = new WeakMap<Tour, string[]>();
+
+const isStaleActivityLabelValue = (value: string | null | undefined) =>
+  Boolean(value) &&
+  STALE_ACTIVITY_LABEL_PATTERN.test(
+    normalizeTourCategoryText(value).replace(/\s+/g, "-")
+  );
+
+const getReclassifiedTourActivitySlugs = (tour: Tour) => {
+  const cached = reclassifiedTourActivitySlugCache.get(tour);
+  if (cached) {
+    return cached;
+  }
+
+  const slugs = classifyTourCategories({
+    title: tour.title,
+    overview: tour.shortDescription,
+    description: tour.longDescription,
+    highlights: [
+      ...((tour.content?.highlights as string[] | undefined) ?? []),
+      ...(tour.tags ?? []),
+      ...(tour.tagPills ?? []),
+    ].filter(
+      (value): value is string =>
+        Boolean(value) && !isStaleActivityLabelValue(value)
+    ),
+    categories: [
+      tour.primaryCategory,
+      ...(tour.categories ?? []),
+      ...(tour.tags ?? []),
+      ...(tour.tagPills ?? []),
+      ...(tour.activityCategories ?? []).flatMap(category => [
+        category.slug,
+        category.label,
+      ]),
+    ].filter(
+      (value): value is string =>
+        Boolean(value) && !isStaleActivityLabelValue(value)
+    ),
+  }).matchedCategorySlugs;
+
+  reclassifiedTourActivitySlugCache.set(tour, slugs);
+  return slugs;
+};
+
+const hasStoredActivityCategory = (tour: Tour, activitySlug: string) =>
   Boolean(
     tour.activityCategories?.some(category => category.slug === activitySlug)
   );
+
+const hasActivityCategory = (tour: Tour, activitySlug: string) => {
+  const reclassifiedSlugs = getReclassifiedTourActivitySlugs(tour);
+
+  if (activitySlug === "walking-tours") {
+    return reclassifiedSlugs.includes("walking-tours");
+  }
+
+  if (activitySlug === "hiking") {
+    return (
+      hasStoredActivityCategory(tour, "hiking") &&
+      reclassifiedSlugs.includes("hiking")
+    );
+  }
+
+  return hasStoredActivityCategory(tour, activitySlug);
+};
 
 const getUniqueTourKey = (tour: Tour) =>
   tour.productCode ||
