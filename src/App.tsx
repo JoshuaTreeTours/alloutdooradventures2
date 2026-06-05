@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import RouteRedirect from "./components/RouteRedirect";
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
 import Home from "./pages/Home";
+import ActivitiesIndex from "./pages/ActivitiesIndex";
 import DestinationsIndex from "./pages/destinations/DestinationsIndex";
 import EuropeCountryRoute from "./pages/destinations/europe/EuropeCountryRoute";
 import EuropeCityRoute from "./pages/destinations/europe/EuropeCityRoute";
@@ -177,6 +178,7 @@ export default function App() {
         <Route path="/england" component={EnglandRedirect} />
         <Route path="/united-kingdom" component={UnitedKingdomRoute} />
 
+        <Route path="/activities" component={ActivitiesIndex} />
         <Route path="/destinations" component={DestinationsIndex} />
         <Route path="/destinations/europe" component={EuropeIndex} />
         <Route

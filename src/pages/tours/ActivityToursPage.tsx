@@ -11,10 +11,10 @@ import {
   getActivityDiscoveryPage,
   getActivityLocationNames,
   getActivityStateOptions,
+  getActivityTourHref,
   getToursByActivityLocation,
   resolveActivityHeroImage,
 } from "../../data/activityDiscovery";
-import { getTourDetailPath } from "../../data/tours";
 import { resolveTourHeroImage } from "../../utils/hero";
 import { buildBreadcrumbList, buildItemList } from "../../utils/structuredData";
 
@@ -150,7 +150,7 @@ export default function ActivityToursPage({ params }: ActivityToursPageProps) {
             const image = resolveTourHeroImage(tour);
             return {
               name: tour.title,
-              url: getTourDetailPath(tour),
+              url: getActivityTourHref(tour),
               image: image ? [image] : undefined,
             };
           })
@@ -310,7 +310,11 @@ export default function ActivityToursPage({ params }: ActivityToursPageProps) {
         {activityTours.length ? (
           <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {activityTours.map(tour => (
-              <TourCard key={tour.id} tour={tour} />
+              <TourCard
+                key={tour.id}
+                tour={tour}
+                href={getActivityTourHref(tour)}
+              />
             ))}
           </div>
         ) : (
