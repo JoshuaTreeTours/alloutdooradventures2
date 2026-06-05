@@ -66,7 +66,7 @@ describe("Activities index", () => {
     expect(boatingCard?.tourCount).toBe(boatingTours.length);
     expect(boatingCard?.href).toBe("/tours/boating");
     expect(boatingCard?.image).toBe(
-      "https://cdn.filestackcontent.com/51rIQlJeQjK1mtPrkWBS"
+      "https://cdn.filestackcontent.com/OJiNPwlYQlaHDU6gDwva"
     );
   });
 

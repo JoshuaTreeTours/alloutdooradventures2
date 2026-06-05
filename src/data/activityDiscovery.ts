@@ -42,7 +42,7 @@ export const ACTIVITY_INDEX_PREFERRED_ORDER = [
 ] as const;
 
 const BOATING_ACTIVITY_HERO_IMAGE =
-  "https://cdn.filestackcontent.com/51rIQlJeQjK1mtPrkWBS";
+  "https://cdn.filestackcontent.com/OJiNPwlYQlaHDU6gDwva";
 
 const ACTIVITY_PAGE_COPY: Record<
   string,
