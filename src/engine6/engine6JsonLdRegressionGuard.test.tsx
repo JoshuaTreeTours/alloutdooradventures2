@@ -41,6 +41,16 @@ const toPayload = (
   };
 };
 
+const getSchemaIds = (graph: Array<Record<string, unknown>>) =>
+  graph
+    .map(node => node["@id"])
+    .filter((id): id is string => typeof id === "string");
+
+const expectNoDuplicateSchemaIds = (graph: Array<Record<string, unknown>>) => {
+  const ids = getSchemaIds(graph);
+  expect(new Set(ids).size).toBe(ids.length);
+};
+
 const getFixture = (productCode: string) => {
   const fixture = ENGINE6_VALIDATION_FIXTURES.find(
     entry => entry.productCode === productCode
@@ -66,6 +76,8 @@ describe("Engine6 JSON-LD regression guard", () => {
       expect(graph.some(node => node["@type"] === "Product")).toBe(true);
       expect(graph.some(node => node["@type"] === "TouristTrip")).toBe(true);
       expect(graph.some(node => node["@type"] === "WebPage")).toBe(true);
+      expect(graph.some(node => node["@type"] === "BreadcrumbList")).toBe(true);
+      expectNoDuplicateSchemaIds(graph);
       expect(seo.url).toBe(tour.canonicalPath);
       expect(seo.title).toContain(tour.seoTitle);
       expect(seo.description.length).toBeGreaterThan(40);

@@ -67,6 +67,58 @@ describe("classifyTourCategories", () => {
     });
   });
 
+  it("classifies vessel-based sightseeing as Boating before broad sightseeing", () => {
+    [
+      "boat tour",
+      "sightseeing boat tour",
+      "harbor cruise",
+      "bay cruise",
+      "river cruise",
+      "lake cruise",
+      "canal cruise",
+      "speedboat sightseeing tour",
+      "adventure boat tour",
+      "electric boat rental and tour",
+      "pontoon boat tour",
+      "private boat charter",
+      "yacht cruise",
+      "amphibious seal tour",
+      "water taxi-style sightseeing tour",
+    ].forEach(title => {
+      const slugs = slugsFor({ title });
+
+      expect(slugs[0]).toBe("boating");
+      expect(slugs).toContain("boating");
+      expect(slugs).not.toContain("sightseeing-city-tours");
+    });
+  });
+
+  it("keeps higher-priority water taxonomy categories out of Boating", () => {
+    const examples: Array<[string, string]> = [
+      ["whale watching cruise", "wildlife"],
+      ["dolphin watching boat tour", "wildlife"],
+      ["fishing charter", "fishing"],
+      ["sunset sail", "sailing"],
+      ["private sailing charter", "sailing"],
+      ["kayak tour", "paddle-sports"],
+      ["snorkel tour", "water-sports"],
+    ];
+
+    examples.forEach(([title, expectedSlug]) => {
+      const slugs = slugsFor({ title });
+
+      expect(slugs[0]).toBe(expectedSlug);
+      expect(slugs).toContain(expectedSlug);
+      expect(slugs).not.toContain("boating");
+    });
+  });
+
+  it("keeps land-based sightseeing in Sightseeing & City Tours", () => {
+    expect(slugsFor({ title: "city bus sightseeing tour" })).toEqual([
+      "sightseeing-city-tours",
+    ]);
+  });
+
   it("classifies an e-bike wine tour as Cycling and Food & Wine", () => {
     expect(slugsFor({ title: "E-bike wine tour through vineyards" })).toEqual([
       "cycling",
