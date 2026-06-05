@@ -1,6 +1,7 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 
+import { getToursByActivityCategory } from "../../data/activityDiscovery";
 import ActivityToursPage from "./ActivityToursPage";
 
 (globalThis as { location?: { pathname: string } }).location = {
@@ -24,6 +25,18 @@ describe("ActivityToursPage", () => {
 
     expect(html).toContain("Hiking Tours &amp; Outdoor Adventures");
     expect(html).toContain("Explore hiking tour cards");
+  });
+
+  it("/tours/walking-tours renders Walking Tours with the route-backed count", () => {
+    const walkingCount = getToursByActivityCategory("walking-tours").length;
+    const html = renderToStaticMarkup(
+      <ActivityToursPage params={{ activitySlug: "walking-tours" }} />
+    );
+
+    expect(walkingCount).toBeGreaterThan(0);
+    expect(html).toContain("Walking Tours &amp; Outdoor Adventures");
+    expect(html).toContain(`${walkingCount} tours`);
+    expect(html).toContain("Explore walking tours tour cards");
   });
 
   it("/tours/paddle-sports includes kayak/canoe/SUP tours", () => {
