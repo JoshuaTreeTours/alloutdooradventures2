@@ -53,8 +53,8 @@ export default function ActivityToursPage({ params }: ActivityToursPageProps) {
   );
 
   const heroImage = useMemo(
-    () => resolveActivityHeroImage(activityTours),
-    [activityTours]
+    () => resolveActivityHeroImage(activityTours, params.activitySlug),
+    [activityTours, params.activitySlug]
   );
 
   const stateOptions = useMemo(

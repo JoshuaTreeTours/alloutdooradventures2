@@ -74,14 +74,19 @@ describe("classifyTourCategories", () => {
       "harbor cruise",
       "bay cruise",
       "river cruise",
+      "riverboat sightseeing cruise",
       "lake cruise",
       "canal cruise",
       "speedboat sightseeing tour",
+      "speed boat adventure",
+      "Duffy boat rental",
       "adventure boat tour",
       "electric boat rental and tour",
       "pontoon boat tour",
       "private boat charter",
       "yacht cruise",
+      "Houston Party Barge Cruise",
+      "Tampa Bay Sandbar Cruise",
       "amphibious seal tour",
       "water taxi-style sightseeing tour",
     ].forEach(title => {
@@ -91,6 +96,66 @@ describe("classifyTourCategories", () => {
       expect(slugs).toContain("boating");
       expect(slugs).not.toContain("sightseeing-city-tours");
     });
+  });
+
+  it("keeps land-based and cycling tours out of Boating", () => {
+    const examples: Array<
+      [Parameters<typeof classifyTourCategories>[0], string[]]
+    > = [
+      [
+        { title: "Joshua Tree National Park Day Trip from San Diego" },
+        ["sightseeing-city-tours"],
+      ],
+      [
+        { title: "Private City Tour of San Francisco" },
+        ["sightseeing-city-tours"],
+      ],
+      [
+        { title: "Giant Shopping Cart Limo Ride in Las Vegas" },
+        ["sightseeing-city-tours"],
+      ],
+      [
+        { title: "GoCar After Dark - 2 hr. Gaslamp and Balboa Park Tour" },
+        ["sightseeing-city-tours"],
+      ],
+      [
+        {
+          title:
+            "Islands & Harbor Sightseeing Bike Tour - Explore the Must-See Sites",
+        },
+        ["cycling", "sightseeing-city-tours"],
+      ],
+      [{ title: "city bus sightseeing tour" }, ["sightseeing-city-tours"]],
+      [{ title: "Coastal Cruise Bike Tour" }, ["cycling"]],
+      [{ title: "Hike & Camp", categories: ["Boat Rental"] }, ["hiking"]],
+      [
+        {
+          title: "Hiking Tour to San Fruttuoso, Full day Private Experience",
+          categories: ["Ferry Transfer", "Boat Rental"],
+        },
+        ["hiking"],
+      ],
+    ];
+
+    examples.forEach(([input, expected]) => {
+      expect(slugsFor(input)).toEqual(expected);
+      expect(slugsFor(input)).not.toContain("boating");
+    });
+  });
+
+  it("does not use loose cruise wording alone as a Boating signal", () => {
+    expect(slugsFor({ title: "UPCOUNTRY FOOD CRUISE" })).toEqual(["food-wine"]);
+    expect(slugsFor({ title: "Coastal Cruise Bike Tour" })).toEqual([
+      "cycling",
+    ]);
+  });
+
+  it("keeps primary boat tours in Boating when bicycle rental is only an add-on", () => {
+    expect(
+      slugsFor({
+        title: "Miami Boat Tour with FREE South Beach Bicycle Rental",
+      })
+    ).toEqual(["boating"]);
   });
 
   it("keeps higher-priority water taxonomy categories out of Boating", () => {

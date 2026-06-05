@@ -93,7 +93,7 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "boating",
     signals: [
-      /\b(?:boat tour|sightseeing boat tour|harbou?r cruise|bay cruise|river cruise|lake cruise|canal cruise|speedboat(?: sightseeing)? tour|speed boat(?: sightseeing)? tour|adventure boat|electric boat|pontoon boat|private boat charter|yacht cruise|amphibious boat|amphibious seal tour|duck boat|seal tour|water taxi(?:[- ]style)? sightseeing tour|cruise|boat cruise|boat rental)\b/,
+      /\b(?:boat tour|sightseeing boat tour|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|ferry tour|speedboat(?: adventure| sightseeing)?(?: tour)?|speed boat(?: adventure| sightseeing)?(?: tour)?|jet boat(?: adventure| tour)?|adventure boat|duffy boat|electric boat|pontoon boat|private boat charter|yacht charter|yacht cruise|amphibious boat|amphibious seal tour|duck boat|seal tour|water taxi(?:[- ]style)? sightseeing tour|dinner boat|boat cruise|boat rental|party barge cruise|sandbar cruise)\b/,
     ],
   },
   {
@@ -117,7 +117,7 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "food-wine",
     signals: [
-      /\b(?:wine|winery|vineyard|tasting|food tour|food walk|food walking|culinary|brewery|beer|distillery|pizza|pasta|gelato|donut|chocolate|taco)\b/,
+      /\b(?:wine|winery|vineyard|tasting|food cruise|food tour|food walk|food walking|culinary|brewery|beer|distillery|pizza|pasta|gelato|donut|chocolate|taco)\b/,
     ],
   },
   {
@@ -141,7 +141,7 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "sightseeing-city-tours",
     signals: [
-      /\b(?:sightseeing|city tour|trolley|bus tour|hop[- ]on hop[- ]off|landmarks|highlights tour)\b/,
+      /\b(?:sightseeing|city tour|private city tour|trolley|bus tour|van tour|suv tour|hop[- ]on hop[- ]off|landmarks|highlights tour|day trip|road trip|limo ride|shopping cart limo|gocar|go car)\b/,
     ],
   },
 ];
@@ -188,6 +188,11 @@ const SOURCE_CATEGORY_TO_ACTIVITY: Record<string, TourActivityCategorySlug> = {
   "speed-boat-tour": "boating",
   "private-boat-charter": "boating",
   "yacht-cruise": "boating",
+  "yacht-charter": "boating",
+  "duffy-boat": "boating",
+  "pontoon-boat": "boating",
+  "ferry-tour": "boating",
+  "jet-boat": "boating",
   boating: "boating",
   "snorkeling-tour": "water-sports",
   "off-road-tour": "jeep-off-road",
@@ -210,13 +215,15 @@ const HORSEBACK_RIDING_SLUG: TourActivityCategorySlug = "horseback-riding";
 const FOOD_WINE_SLUG: TourActivityCategorySlug = "food-wine";
 const SAILING_SLUG: TourActivityCategorySlug = "sailing";
 const BOATING_SLUG: TourActivityCategorySlug = "boating";
+const CYCLING_SLUG: TourActivityCategorySlug = "cycling";
+const JEEP_OFF_ROAD_SLUG: TourActivityCategorySlug = "jeep-off-road";
 const WILDLIFE_SLUG: TourActivityCategorySlug = "wildlife";
 
 const TRUE_HIKING_PATTERN =
   /\b(?:hike|hiking|trek|trekking|canyon hike|canyon walk|mountain hike|mountain walk|national park hike|national park walk|trail hike|hiking trail|trail walk|nature trail|forest trail|guided trail|glacier hike)\b/;
 
 const FOOD_PRIMARY_PATTERN =
-  /\b(?:food tour|food walk|food walking|culinary|wine|winery|vineyard|tasting|brewery|beer|distillery|pizza|pasta|gelato|donut|chocolate|taco)\b/;
+  /\b(?:food cruise|food tour|food walk|food walking|culinary|wine|winery|vineyard|tasting|brewery|beer|distillery|pizza|pasta|gelato|donut|chocolate|taco)\b/;
 
 const HORSEBACK_RIDING_PATTERN =
   /\b(?:horseback riding|horseback tour|trail ride|ranch ride|horse riding|equestrian tour|cowboy ride|mule ride|pony ride)\b/;
@@ -229,6 +236,18 @@ const MARINE_WILDLIFE_PRIMARY_PATTERN =
 
 const AMPHIBIOUS_SEAL_TOUR_PATTERN =
   /\b(?:amphibious seal tour|duck boat|seal tour)\b/;
+
+const EXPLICIT_BOATING_VESSEL_PATTERN =
+  /\b(?:boat tour|sightseeing boat tour|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|ferry tour|yacht charter|yacht cruise|duffy boat|electric boat|pontoon boat|speedboat(?: adventure| sightseeing)?(?: tour)?|speed boat(?: adventure| sightseeing)?(?: tour)?|jet boat(?: adventure| tour)?|private boat charter|amphibious (?:seal|duck) tour|amphibious boat|duck boat|seal tour|water taxi(?:[- ]style)? sightseeing tour|dinner boat|boat cruise|boat rental|party barge cruise|sandbar cruise)\b/;
+
+const LAND_PRIMARY_BOATING_EXCLUSION_PATTERN =
+  /\b(?:land[- ]based city tour|private city tour|city tour|road trip|day trip|national park day trip|gocar|go car|limo ride|shopping cart limo|bike tour|bicycle tour|e[- ]?bike tour|ebike tour|walking tour|bus tour|van tour|suv tour|jeep tour|off[- ]?road tour)\b/;
+
+const BOATING_SOURCE_CATEGORY_PATTERN =
+  /\b(?:boat tour|sightseeing boat tour|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|ferry tour|yacht charter|duffy boat|pontoon boat|speedboat|speed boat|jet boat|private boat charter|amphibious seal tour|duck boat|boat rental)\b/;
+
+const BICYCLE_RENTAL_ADDON_PATTERN =
+  /\b(?:free )?(?:bike|bicycle|e[- ]?bike|ebike) rental\b/;
 
 const STRONG_FISHING_PATTERN =
   /\b(?:fishing charter|deep sea fishing|sportfishing|sport fishing|fly fishing|reef fishing|angling|lake fishing|river fishing|fishing trip|catch(?:ing)? fish)\b/;
@@ -349,6 +368,14 @@ export const classifyTourCategories = (
 
   const priorityFilteredMatches = transitFilteredMatches.filter(slug => {
     if (
+      slug === CYCLING_SLUG &&
+      BICYCLE_RENTAL_ADDON_PATTERN.test(normalizedText) &&
+      EXPLICIT_BOATING_VESSEL_PATTERN.test(primaryIntentText)
+    ) {
+      return false;
+    }
+
+    if (
       slug === HORSEBACK_RIDING_SLUG &&
       NON_HORSEBACK_RIDING_PATTERN.test(normalizedText)
     ) {
@@ -426,10 +453,23 @@ export const classifyTourCategories = (
             primaryIntentText
           ));
 
+      const hasExplicitBoatingIntent =
+        EXPLICIT_BOATING_VESSEL_PATTERN.test(primaryIntentText) ||
+        BOATING_SOURCE_CATEGORY_PATTERN.test(normalizedText);
+      const hasLandBasedPrimary =
+        LAND_PRIMARY_BOATING_EXCLUSION_PATTERN.test(primaryIntentText) ||
+        matched.includes(JEEP_OFF_ROAD_SLUG) ||
+        (matched.includes(CYCLING_SLUG) &&
+          !EXPLICIT_BOATING_VESSEL_PATTERN.test(primaryIntentText));
+
       if (
+        !hasExplicitBoatingIntent ||
+        hasLandBasedPrimary ||
         hasPrimaryWildlifeMatch ||
         matched.includes(FISHING_SLUG) ||
         matched.includes(SAILING_SLUG) ||
+        (matched.includes(HIKING_SLUG) &&
+          TRUE_HIKING_PATTERN.test(primaryIntentText)) ||
         matched.includes(PADDLE_SPORTS_SLUG) ||
         matched.includes(WATER_SPORTS_SLUG)
       ) {
@@ -437,7 +477,12 @@ export const classifyTourCategories = (
       }
     }
 
-    if (slug === SIGHTSEEING_SLUG && matched.includes(BOATING_SLUG)) {
+    if (
+      slug === SIGHTSEEING_SLUG &&
+      matched.includes(BOATING_SLUG) &&
+      EXPLICIT_BOATING_VESSEL_PATTERN.test(primaryIntentText) &&
+      !LAND_PRIMARY_BOATING_EXCLUSION_PATTERN.test(primaryIntentText)
+    ) {
       return false;
     }
 

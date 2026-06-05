@@ -41,6 +41,9 @@ export const ACTIVITY_INDEX_PREFERRED_ORDER = [
   "sightseeing-city-tours",
 ] as const;
 
+const BOATING_ACTIVITY_HERO_IMAGE =
+  "https://cdn.filestackcontent.com/51rIQlJeQjK1mtPrkWBS";
+
 const ACTIVITY_PAGE_COPY: Record<
   string,
   { title: string; description: string }
@@ -408,7 +411,14 @@ export const buildActivityDiscoveryPath = ({
   return `/tours/${activitySlug}`;
 };
 
-export const resolveActivityHeroImage = (activityTours: Tour[]) => {
+export const resolveActivityHeroImage = (
+  activityTours: Tour[],
+  activitySlug?: string
+) => {
+  if (activitySlug === "boating") {
+    return BOATING_ACTIVITY_HERO_IMAGE;
+  }
+
   const heroTour = sortActivityDiscoveryTours(activityTours).find(tour =>
     Boolean(resolveTourHeroImage(tour))
   );
@@ -503,7 +513,7 @@ export const getActivityIndexCards = (): ActivityIndexCard[] =>
 
     return {
       ...activity,
-      image: resolveActivityHeroImage(activityTours) ?? null,
+      image: resolveActivityHeroImage(activityTours, activity.slug) ?? null,
       tourCount: activityTours.length,
       href: buildActivityDiscoveryPath({ activitySlug: activity.slug }),
     };
