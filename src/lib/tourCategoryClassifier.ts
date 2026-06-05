@@ -5,6 +5,7 @@ export const TOUR_ACTIVITY_CATEGORIES = [
   { slug: "paddle-sports", label: "Paddle Sports" },
   { slug: "water-sports", label: "Water Sports" },
   { slug: "sailing", label: "Sailing" },
+  { slug: "fishing", label: "Fishing" },
   { slug: "jeep-off-road", label: "Jeep & Off-Road" },
   { slug: "wildlife", label: "Wildlife" },
   { slug: "stargazing", label: "Stargazing" },
@@ -62,7 +63,7 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "water-sports",
     signals: [
-      /\b(?:jet ski|jetski|waverunner|wave runner|parasail|parasailing|wakeboard|tubing|water ski|speedboat|powerboat)\b/,
+      /\b(?:jet ski|jetski|waverunner|wave runner|parasail|parasailing|wakeboard|tubing|water ski|speedboat|powerboat|snorkel|snorkeling|swim (?:with|among|amongst)(?: [a-z]+){0,4} fish|coral reef snorkeling|reef snorkeling|underwater viewing)\b/,
     ],
   },
   {
@@ -84,6 +85,12 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "sailing",
     signals: [/\b(?:sail|sailing|yacht|catamaran|schooner)\b/],
+  },
+  {
+    slug: "fishing",
+    signals: [
+      /\b(?:fishing charter|deep sea fishing|sportfishing|sport fishing|fly fishing|reef fishing|angling|lake fishing|river fishing|fishing trip|catch(?:ing)? fish|fishing)\b/,
+    ],
   },
   {
     slug: "wildlife",
@@ -132,6 +139,16 @@ const SOURCE_CATEGORY_TO_ACTIVITY: Record<string, TourActivityCategorySlug> = {
   hiking: "hiking",
   "hiking-tours": "hiking",
   "hiking-tour": "hiking",
+  fishing: "fishing",
+  "fishing-charter": "fishing",
+  "deep-sea-fishing": "fishing",
+  sportfishing: "fishing",
+  "sport-fishing": "fishing",
+  "fly-fishing": "fishing",
+  "reef-fishing": "fishing",
+  angling: "fishing",
+  "lake-fishing": "fishing",
+  "river-fishing": "fishing",
   canoeing: "paddle-sports",
   "paddle-sports": "paddle-sports",
   "paddle-tour": "paddle-sports",
@@ -161,10 +178,18 @@ const TRUE_HIKING_PATTERN =
 const FOOD_PRIMARY_PATTERN =
   /\b(?:food tour|food walk|food walking|culinary|wine|winery|vineyard|tasting|brewery|beer|distillery|pizza|pasta|gelato|donut|chocolate|taco)\b/;
 
+const STRONG_FISHING_PATTERN =
+  /\b(?:fishing charter|deep sea fishing|sportfishing|sport fishing|fly fishing|reef fishing|angling|lake fishing|river fishing|fishing trip|catch(?:ing)? fish)\b/;
+
+const SNORKELING_WATER_SPORTS_PATTERN =
+  /\b(?:snorkel|snorkeling|swim (?:with|among|amongst)(?: [a-z]+){0,4} fish|coral reef snorkeling|reef snorkeling|underwater viewing)\b/;
+
+const FISHING_SLUG: TourActivityCategorySlug = "fishing";
+
 const EXPLICIT_HIKING_PATTERN = /\b(?:hike|hiking|trek|trekking)\b/;
 
 const NON_HIKING_PRIMARY_PATTERN =
-  /\b(?:bike|bicycle|e[- ]?bike|ebike|cycling|pedal|jeep|hummer|4x4|off[- ]?road|offroad|atv|utv|buggy|kayak|canoe|paddle|sup|snorkel|boat|sail|sailing|yacht|catamaran|cruise|jet ski|jetski|horse|horseback|zipline|zip line|segway|airplane|flightseeing|aerial)\b/;
+  /\b(?:bike|bicycle|e[- ]?bike|ebike|cycling|pedal|jeep|hummer|4x4|off[- ]?road|offroad|atv|utv|buggy|kayak|canoe|paddle|sup|snorkel|boat|sail|sailing|yacht|catamaran|cruise|jet ski|jetski|fishing|angling|horse|horseback|zipline|zip line|segway|airplane|flightseeing|aerial)\b/;
 
 const NEGATED_HIKING_PATTERN = /\b(?:instead of|rather than|without) hiking\b/;
 
@@ -283,6 +308,22 @@ export const classifyTourCategories = (
     if (
       slug === WALKING_TOURS_SLUG &&
       NON_HIKING_PRIMARY_PATTERN.test(normalizedText)
+    ) {
+      return false;
+    }
+
+    if (
+      slug === FISHING_SLUG &&
+      FOOD_PRIMARY_PATTERN.test(normalizedText) &&
+      !STRONG_FISHING_PATTERN.test(normalizedText)
+    ) {
+      return false;
+    }
+
+    if (
+      slug === FISHING_SLUG &&
+      SNORKELING_WATER_SPORTS_PATTERN.test(normalizedText) &&
+      !STRONG_FISHING_PATTERN.test(normalizedText)
     ) {
       return false;
     }

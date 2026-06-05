@@ -9,6 +9,23 @@ describe("classifyTourCategories", () => {
     expect(slugsFor({ title: "Jet Ski Adventure" })).toEqual(["water-sports"]);
   });
 
+  it("classifies snorkeling and underwater fish viewing as Water Sports, not Fishing", () => {
+    [
+      "Snorkeling with tropical fish",
+      "Guided reef snorkeling",
+      "Swim among colorful fish",
+      "Snorkel tour",
+      "Coral reef snorkeling",
+      "Underwater viewing",
+    ].forEach(title => {
+      const slugs = slugsFor({ title, categories: ["Fishing"] });
+
+      expect(slugs[0]).toBe("water-sports");
+      expect(slugs).toContain("water-sports");
+      expect(slugs).not.toContain("fishing");
+    });
+  });
+
   it("classifies Dolphin Jet Ski as Water Sports and Wildlife", () => {
     expect(slugsFor({ title: "Dolphin Jet Ski Safari" })).toEqual([
       "water-sports",
@@ -40,6 +57,35 @@ describe("classifyTourCategories", () => {
     expect(slugsFor({ title: "Night sky stargazing tour" })).toEqual([
       "stargazing",
     ]);
+  });
+
+  it("classifies fishing inventory as Fishing before broader activities", () => {
+    [
+      "Private fishing charter",
+      "Deep sea fishing adventure",
+      "Deep sea fishing charter",
+      "Sportfishing trip",
+      "Fly fishing excursion",
+      "Fly fishing guided hike",
+      "Reef fishing sightseeing tour",
+      "Angling boat tour",
+      "Lake fishing excursion",
+      "River fishing city highlights tour",
+    ].forEach(title => {
+      const slugs = slugsFor({ title });
+
+      expect(slugs[0]).toBe("fishing");
+      expect(slugs).toContain("fishing");
+    });
+  });
+
+  it("does not classify non-fishing boat cruises or food walks as Fishing", () => {
+    expect(slugsFor({ title: "Private harbor boat cruise" })).not.toContain(
+      "fishing"
+    );
+    expect(
+      slugsFor({ title: "Pizza, pasta and piazzas", categories: ["Fishing"] })
+    ).not.toContain("fishing");
   });
 
   it("classifies urban walking experiences as Walking Tours instead of Hiking", () => {
