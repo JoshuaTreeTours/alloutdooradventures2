@@ -26,18 +26,27 @@ const getEngine6ActivitySlugs = (tour: Engine6Tour) => {
   );
   const slugs = new Set<string>();
 
-  if (normalizedCategories.has("bike-tour")) {
+  if (
+    normalizedCategories.has("bike-tour") ||
+    normalizedCategories.has("cycling")
+  ) {
     slugs.add("cycling");
     slugs.add("bike-tours");
   }
 
-  if (normalizedCategories.has("hiking-tour")) {
+  if (
+    normalizedCategories.has("hiking-tour") ||
+    normalizedCategories.has("hiking")
+  ) {
     slugs.add("hiking");
   }
 
   if (
     normalizedCategories.has("paddle-tour") ||
+    normalizedCategories.has("paddle-sports") ||
     normalizedCategories.has("boat-tour") ||
+    normalizedCategories.has("sailing") ||
+    normalizedCategories.has("water-sports") ||
     normalizedCategories.has("snorkeling-tour")
   ) {
     slugs.add("canoeing");
@@ -47,13 +56,14 @@ const getEngine6ActivitySlugs = (tour: Engine6Tour) => {
     slugs.add("adventure");
   }
 
-  return slugs.size > 0 ? [...slugs] : ["adventure"];
+  return slugs.size > 0 ? Array.from(slugs) : ["adventure"];
 };
 
 const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
   const [, stateSlug = "", citySlug = "", slug = ""] =
     ENGINE6_CANONICAL_TOUR_PATH.exec(tour.canonicalPath) ?? [];
   const card = toEngine6Card(tour);
+  const heroImageUrl = tour.heroImageUrl ?? "";
 
   return {
     id: `engine6-${tour.productCode}`,
@@ -64,6 +74,8 @@ const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
     shortDescription: card.description,
     categories: tour.categories,
     primaryCategory: tour.primaryCategory ?? undefined,
+    primaryDisplayCategory: tour.primaryDisplayCategory ?? undefined,
+    activityCategories: tour.activityCategories,
     destination: {
       country: resolveEngine6ListingCountry(tour, stateSlug),
       state: tour.state,
@@ -71,9 +83,9 @@ const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
       city: tour.city,
       citySlug,
     },
-    heroImage: tour.heroImageUrl,
-    resolvedImageUrl: tour.heroImageUrl || null,
-    primaryImageUrl: tour.heroImageUrl,
+    heroImage: heroImageUrl,
+    resolvedImageUrl: heroImageUrl || null,
+    primaryImageUrl: heroImageUrl || undefined,
     badges: {
       rating: tour.aggregateRating ?? undefined,
       reviewCount: tour.reviewCount ?? undefined,
@@ -81,7 +93,11 @@ const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
     },
     startingPrice: tour.priceAmount ?? undefined,
     currency: "USD",
-    tagPills: tour.categoryLabel ? [tour.categoryLabel] : undefined,
+    tagPills: tour.primaryDisplayCategory
+      ? [tour.primaryDisplayCategory]
+      : tour.categoryLabel
+        ? [tour.categoryLabel]
+        : undefined,
     activitySlugs: getEngine6ActivitySlugs(tour),
     bookingProvider: tour.ownership.ctaOwner,
     bookingUrl: tour.bookingUrl,

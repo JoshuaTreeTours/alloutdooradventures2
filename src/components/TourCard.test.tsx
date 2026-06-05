@@ -52,3 +52,69 @@ describe("TourCard rating display", () => {
     expect(html).toContain("★ 4.8 (216 reviews)");
   });
 });
+
+describe("TourCard category badge display", () => {
+  const renderBadgeTour = (
+    primaryDisplayCategory: string,
+    title = "Test Tour"
+  ) =>
+    renderToStaticMarkup(
+      <TourCard
+        tour={buildTour({
+          title,
+          shortDescription: "",
+          longDescription: "",
+          primaryCategory: "legacy-category",
+          primaryDisplayCategory,
+          tagPills: ["Old Badge"],
+        })}
+        href="/test-tour"
+      />
+    );
+
+  it("uses primaryDisplayCategory for an e-bike wine tour card badge", () => {
+    const html = renderBadgeTour("Cycling", "E-bike wine tour");
+
+    expect(html).toContain("Cycling");
+    expect(html).not.toContain("Old Badge");
+  });
+
+  it("uses primaryDisplayCategory for a Jet Ski tour card badge", () => {
+    expect(renderBadgeTour("Water Sports", "Jet Ski tour")).toContain(
+      "Water Sports"
+    );
+  });
+
+  it("uses primaryDisplayCategory for a trolley tour card badge", () => {
+    expect(
+      renderBadgeTour("Sightseeing & City Tours", "Trolley tour")
+    ).toContain("Sightseeing &amp; City Tours");
+  });
+
+  it("uses primaryDisplayCategory for a Jeep/off-road tour card badge", () => {
+    expect(renderBadgeTour("Jeep & Off-Road", "Jeep tour")).toContain(
+      "Jeep &amp; Off-Road"
+    );
+  });
+
+  it("uses primaryDisplayCategory for a stargazing tour card badge", () => {
+    expect(renderBadgeTour("Stargazing", "Stargazing tour")).toContain(
+      "Stargazing"
+    );
+  });
+
+  it("falls back to existing tagPills when no primaryDisplayCategory is present", () => {
+    const html = renderToStaticMarkup(
+      <TourCard
+        tour={buildTour({
+          shortDescription: "",
+          longDescription: "",
+          tagPills: ["Existing Badge"],
+        })}
+        href="/test-tour"
+      />
+    );
+
+    expect(html).toContain("Existing Badge");
+  });
+});

@@ -1,4 +1,5 @@
 import type { Tour } from "../../data/tours.types";
+import { classifyTourCategories } from "../../lib/tourCategoryClassifier";
 import { buildEngine4TourPath } from "../buildEngine4TourPath";
 import {
   engine4ViatorApiFallbackByProductCode,
@@ -20,6 +21,13 @@ const toEngine4ListingEntry = (
     apiTour: engine4ViatorApiFallbackByProductCode[record.productCode],
   });
   const href = buildEngine4TourPath(record);
+  const classification = classifyTourCategories({
+    title: vm.title,
+    overview: vm.content.overview,
+    description: vm.content.overview,
+    highlights: vm.content.highlights,
+    categories: ["hiking"],
+  });
 
   return {
     href,
@@ -32,6 +40,9 @@ const toEngine4ListingEntry = (
       shortDescription: vm.content.highlights[0],
       categories: ["hiking"],
       primaryCategory: "hiking",
+      primaryDisplayCategory:
+        classification.primaryDisplayCategory ?? undefined,
+      activityCategories: classification.activityCategories,
       destination: {
         country: record.destination.country,
         state: record.destination.state,
@@ -39,7 +50,7 @@ const toEngine4ListingEntry = (
         city: record.destination.city,
         citySlug: record.destination.citySlug,
       },
-      heroImage: vm.primaryImage ?? vm.heroImage ?? undefined,
+      heroImage: vm.primaryImage ?? vm.heroImage ?? "",
       primaryImageUrl: vm.primaryImage ?? vm.heroImage ?? undefined,
       galleryImages: vm.galleryImages,
       badges: {

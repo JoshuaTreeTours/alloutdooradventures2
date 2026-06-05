@@ -5,6 +5,7 @@ import {
   type Engine6HeroSourceType,
   resolveProductScopedHero,
 } from "./heroResolver.js";
+import { classifyTourCategories } from "../../src/lib/tourCategoryClassifier";
 
 export type Engine6DiagnosticsPaths = {
   commercialPriceFieldPath: string | null;
@@ -112,6 +113,8 @@ export type Engine6Extracted = {
   requirements: string[];
   primaryCategory: string | null;
   categories: string[];
+  primaryDisplayCategory: string | null;
+  activityCategories: Array<{ slug: string; label: string }>;
 };
 
 type RecordLike = Record<string, unknown>;
@@ -298,7 +301,9 @@ const LOCATION_CITY_PATTERNS = [
   /\bfrom\s+([A-Z][A-Za-zÀ-ÖØ-öø-ÿ' -]{1,60}?)(?=\s+(?:to|is|at)\b|,|\.)/i,
 ];
 
-const LOCATION_COUNTRY_PATTERNS = [/\b(Switzerland|United States|USA|Canada|Mexico)\b/i];
+const LOCATION_COUNTRY_PATTERNS = [
+  /\b(Switzerland|United States|USA|Canada|Mexico)\b/i,
+];
 
 const normalizeLocationToken = (value: string) =>
   value
@@ -394,6 +399,8 @@ const emptyExtracted = (): Engine6Extracted => ({
   requirements: [],
   primaryCategory: null,
   categories: [],
+  primaryDisplayCategory: null,
+  activityCategories: [],
 });
 
 const collectArrayVariants = (
@@ -523,7 +530,10 @@ const resolveImageCollectionHeroCandidates = (
       asImageUrl(image.url) ??
       asImageUrl(image.src) ??
       asImageUrl(image.imageUrl);
-    if (directUrl && !imageVariants.some(variant => variant.url === directUrl)) {
+    if (
+      directUrl &&
+      !imageVariants.some(variant => variant.url === directUrl)
+    ) {
       const directPath = asImageUrl(image.url)
         ? formatFieldPath([...basePath, "url"])
         : asImageUrl(image.src)
@@ -550,8 +560,8 @@ const withHeroScope = (
 ): Engine6HeroCandidate => {
   const normalizeHeroPath = (path: string) =>
     path
-    .replace(/^product\.product\./, "product.")
-    .replace(/^media\./, "product.media.");
+      .replace(/^product\.product\./, "product.")
+      .replace(/^media\./, "product.media.");
   const normalizedSourceFieldPath = normalizeHeroPath(hero.path);
   const normalizedVariantPath = normalizeHeroPath(hero.variantPath);
 
@@ -581,7 +591,9 @@ const extractPlaybookHeroCandidates = ({
     "api-primary"
   );
   candidates.push(
-    ...mediaHeroes.map(hero => withHeroScope(hero, productCode, sourceProductUrl))
+    ...mediaHeroes.map(hero =>
+      withHeroScope(hero, productCode, sourceProductUrl)
+    )
   );
 
   return candidates;
@@ -630,7 +642,9 @@ const extractPlaybookPrice = (product: RecordLike): PriceResult => {
       })
       .filter(
         (candidate): candidate is PricePathCandidate =>
-          candidate.amount !== null && Number.isFinite(candidate.amount) && candidate.amount > 0
+          candidate.amount !== null &&
+          Number.isFinite(candidate.amount) &&
+          candidate.amount > 0
       );
 
   const selectLowestCandidate = (
@@ -805,7 +819,13 @@ const extractPlaybookPrice = (product: RecordLike): PriceResult => {
     parsePriceAmount(readPath(product, ["pricingInfo", "price", "fromPrice"])),
     parsePriceAmount(readPath(product, ["pricingInfo", "price", "amount"])),
     parsePriceAmount(
-      readPath(product, ["productOptions", 0, "pricingInfo", "price", "fromPrice"])
+      readPath(product, [
+        "productOptions",
+        0,
+        "pricingInfo",
+        "price",
+        "fromPrice",
+      ])
     ),
     parsePriceAmount(
       readPath(product, ["productOptions", 0, "pricingInfo", "price", "amount"])
@@ -1025,7 +1045,8 @@ const normalizeSingleItineraryItem = (
     const descriptionText = asNonEmptyString(row.description);
     if (!descriptionText) return null;
 
-    const firstSentence = descriptionText.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
+    const firstSentence =
+      descriptionText.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
     if (!firstSentence) return null;
 
     const locationPattern =
@@ -1161,7 +1182,10 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
       return nestedRows;
     }
 
-    return [{ row, sectionLabel: inheritedSectionLabel ?? null }, ...nestedRows];
+    return [
+      { row, sectionLabel: inheritedSectionLabel ?? null },
+      ...nestedRows,
+    ];
   };
 
   const normalizeItinerary = (
@@ -1291,7 +1315,11 @@ const extractMeetingPoint = (product: RecordLike) => {
       };
     }
 
-    return { value: compact, summaryApplied: false, reason: null as string | null };
+    return {
+      value: compact,
+      summaryApplied: false,
+      reason: null as string | null,
+    };
   };
 
   const logistics = asRecord(product.logistics);
@@ -1310,7 +1338,8 @@ const extractMeetingPoint = (product: RecordLike) => {
       path: "product.logistics.start[0].description",
     },
     {
-      value: asRecord(asRecord(product.meetingAndPickup)?.meetingPoint)?.description,
+      value: asRecord(asRecord(product.meetingAndPickup)?.meetingPoint)
+        ?.description,
       path: "product.meetingAndPickup.meetingPoint.description",
     },
     {
@@ -1362,7 +1391,8 @@ const extractMeetingPoint = (product: RecordLike) => {
     asNonEmptyString(asRecord(product.description)?.text) ??
     asNonEmptyString(product.description);
   if (overviewFallback) {
-    const firstSentence = overviewFallback.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
+    const firstSentence =
+      overviewFallback.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
     if (firstSentence) {
       return {
         value: firstSentence,
@@ -1422,60 +1452,6 @@ const extractFaqs = (product: RecordLike) => {
   return { value: [], path: null as string | null };
 };
 
-const CATEGORY_ALIASES: Array<{
-  slug: string;
-  label: string;
-  keywords: RegExp;
-}> = [
-  {
-    slug: "off-road-tour",
-    label: "Off-road tour",
-    keywords:
-      /\b(jeep|off[- ]road|4x4|atv|utv|dune buggy|backcountry safari)\b/i,
-  },
-  {
-    slug: "hiking-tour",
-    label: "Hiking tour",
-    keywords: /\b(hike|hiking|trail walk|trek|walking tour|guided walk)\b/i,
-  },
-  {
-    slug: "bike-tour",
-    label: "Bike tour",
-    keywords:
-      /\b(bike|biking|cycling|bicycle|e-bike|ebike|mtb|mountain bike)\b/i,
-  },
-  {
-    slug: "boat-tour",
-    label: "Boat tour",
-    keywords: /\b(boat|cruise|sail|sailing|catamaran|yacht|ferry)\b/i,
-  },
-  {
-    slug: "paddle-tour",
-    label: "Paddle tour",
-    keywords: /\b(kayak|canoe|sup|paddleboard|rafting|raft)\b/i,
-  },
-  {
-    slug: "wildlife-tour",
-    label: "Wildlife tour",
-    keywords: /\b(wildlife|whale|dolphin|birdwatch|animal encounter)\b/i,
-  },
-  {
-    slug: "snorkeling-tour",
-    label: "Snorkeling tour",
-    keywords: /\b(snorkel|scuba|dive|diving)\b/i,
-  },
-  {
-    slug: "food-and-drink-tour",
-    label: "Food & drink tour",
-    keywords: /\b(food|drink|wine|beer|brewery|cocktail|tasting)\b/i,
-  },
-  {
-    slug: "air-tour",
-    label: "Air tour",
-    keywords: /\b(helicopter|airplane|flight|seaplane|air tour)\b/i,
-  },
-];
-
 const toCategorySlug = (value: string) =>
   value
     .toLowerCase()
@@ -1523,7 +1499,22 @@ const normalizeCategoryArray = (value: unknown): string[] =>
       )
     : [];
 
-const extractClassification = (product: RecordLike) => {
+const extractClassification = ({
+  product,
+  title,
+  overview,
+  highlights,
+  itinerary,
+}: {
+  product: RecordLike;
+  title: string | null;
+  overview: string | null;
+  highlights: string[];
+  itinerary: Engine6ExtractedItineraryItem[];
+}) => {
+  const sourceCategories: string[] = [];
+  const sourceCategoryPaths: string[] = [];
+
   for (const path of [
     ["categories"],
     ["tags"],
@@ -1532,38 +1523,36 @@ const extractClassification = (product: RecordLike) => {
   ] as PathSegment[][]) {
     const categories = normalizeCategoryArray(readPath(product, path));
     if (categories.length > 0) {
-      return {
-        primaryCategory: categories[0] ?? null,
-        categories,
-        path: formatFieldPath(path),
-      };
+      sourceCategories.push(...categories);
+      sourceCategoryPaths.push(formatFieldPath(path));
     }
   }
 
-  const classifierText = [
-    asNonEmptyString(product.title),
-    extractOverview(product).value,
-    ...extractHighlights(product).value,
-  ]
-    .filter((value): value is string => Boolean(value))
-    .join(" ");
-
-  const inferred = CATEGORY_ALIASES.filter(entry =>
-    entry.keywords.test(classifierText)
-  ).map(entry => entry.slug);
-
-  if (inferred.length > 0) {
-    return {
-      primaryCategory: inferred[0] ?? null,
-      categories: dedupeStrings(inferred),
-      path: "inferred:title+overview+highlights",
-    };
-  }
+  const classification = classifyTourCategories({
+    title,
+    overview,
+    description: asNonEmptyString(product.description),
+    highlights,
+    itinerary,
+    categories: sourceCategories,
+  });
 
   return {
-    primaryCategory: null,
-    categories: [],
-    path: null as string | null,
+    primaryCategory: classification.matchedCategorySlugs[0] ?? null,
+    categories: classification.matchedCategorySlugs,
+    primaryDisplayCategory: classification.primaryDisplayCategory,
+    activityCategories: classification.activityCategories,
+    path:
+      classification.matchedCategorySlugs.length > 0
+        ? [
+            sourceCategoryPaths.length > 0
+              ? sourceCategoryPaths.join("+")
+              : null,
+            "inferred:title+overview+description+highlights+itinerary",
+          ]
+            .filter(Boolean)
+            .join("+")
+        : null,
   };
 };
 
@@ -1684,7 +1673,9 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     asRecord((asRecord(product.logistics)?.start as unknown[] | undefined)?.[0])
       ?.description
   );
-  const itineraryItems = Array.isArray(asRecord(product.itinerary)?.itineraryItems)
+  const itineraryItems = Array.isArray(
+    asRecord(product.itinerary)?.itineraryItems
+  )
     ? (asRecord(product.itinerary)?.itineraryItems as unknown[])
     : [];
   const itineraryStartDescription = asNonEmptyString(
@@ -1736,14 +1727,19 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.heroCandidatesPresent = heroCandidates.length > 0;
   diagnostics.heroCandidateCount = heroCandidates.length;
   diagnostics.heroCandidateCountBeforeFiltering = heroCandidates.length;
-  diagnostics.heroCandidateCountAfterFiltering = heroDecision.finalCandidate ? 1 : 0;
-  diagnostics.heroImageFieldPath = heroDecision.finalCandidate?.fieldPath ?? null;
-  diagnostics.heroVariantFieldPath = heroDecision.finalCandidate?.variantPath ?? null;
+  diagnostics.heroCandidateCountAfterFiltering = heroDecision.finalCandidate
+    ? 1
+    : 0;
+  diagnostics.heroImageFieldPath =
+    heroDecision.finalCandidate?.fieldPath ?? null;
+  diagnostics.heroVariantFieldPath =
+    heroDecision.finalCandidate?.variantPath ?? null;
   diagnostics.selectedHeroWidth = heroDecision.finalCandidate?.width ?? null;
   diagnostics.selectedHeroHeight = heroDecision.finalCandidate?.height ?? null;
   diagnostics.imageSourceUsed = heroDecision.heroSourceType;
   diagnostics.heroSourceType = heroDecision.heroSourceType;
-  diagnostics.heroQualityClassification = heroDecision.heroQualityClassification;
+  diagnostics.heroQualityClassification =
+    heroDecision.heroQualityClassification;
   diagnostics.finalHeroUrl = heroDecision.heroUrl;
   diagnostics.heroFallbackTriggered = heroDecision.fallbackTriggered;
   diagnostics.heroPlaceholderFallbackReason = heroDecision.fallbackTriggered
@@ -1771,7 +1767,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroDecision.rejectedForeignCandidates
       .slice(0, 3)
       .map(candidate => `${candidate.reason}:${candidate.url}`);
-  diagnostics.rejectedForeignHeroCandidates = heroDecision.rejectedForeignCandidates;
+  diagnostics.rejectedForeignHeroCandidates =
+    heroDecision.rejectedForeignCandidates;
   diagnostics.heroSourceProductCode =
     heroDecision.finalCandidate?.sourceProductCode ?? null;
   diagnostics.heroSourceProductUrl =
@@ -1780,7 +1777,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroDecision.finalCandidate?.sourceFieldPath ?? null;
   diagnostics.heroHost = heroDecision.finalCandidate?.host ?? null;
 
-  const viablePriceDetection = detectViableViatorCommercialPriceCandidates(product);
+  const viablePriceDetection =
+    detectViableViatorCommercialPriceCandidates(product);
   diagnostics.hasAnyViablePriceCandidate =
     viablePriceDetection.hasAnyViablePriceCandidate;
   diagnostics.viablePriceCandidateFieldPaths =
@@ -1791,7 +1789,10 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.commercialPriceRawValue = price.rawValue;
   diagnostics.priceSourceUsed =
     price.amount !== null ? "live-price" : "fallback";
-  if (viablePriceDetection.hasAnyViablePriceCandidate && price.amount === null) {
+  if (
+    viablePriceDetection.hasAnyViablePriceCandidate &&
+    price.amount === null
+  ) {
     diagnostics.priceIntegrityViolation = true;
     diagnostics.extractionFailure = true;
     console.warn(
@@ -1850,9 +1851,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     const [question, answer] = item.split("|||");
     return { question, answer } satisfies Engine6ExtractedFaq;
   });
-  const faqPath = baseFaqs.value.length > 0
-    ? (baseFaqs.path ?? "product.qAndA.items")
-    : null;
+  const faqPath =
+    baseFaqs.value.length > 0 ? (baseFaqs.path ?? "product.qAndA.items") : null;
   const faqs = { value: mergedFaqs, path: faqPath };
   diagnostics.faqsFieldPath = faqs.path;
   diagnostics.faqFieldPath = faqs.path;
@@ -1860,7 +1860,13 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.faqSourceUsed =
     faqs.value.length > 0 ? (faqs.path ?? "derived") : "none";
 
-  const classification = extractClassification(product);
+  const classification = extractClassification({
+    product,
+    title,
+    overview: overview.value,
+    highlights: highlights.value,
+    itinerary: itinerary.value,
+  });
   diagnostics.classificationFieldPath = classification.path;
 
   const normalizedAggregateRating = normalizeEngine6AggregateRating(
@@ -1906,6 +1912,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       requirements: requirements.value,
       primaryCategory: classification.primaryCategory,
       categories: classification.categories,
+      primaryDisplayCategory: classification.primaryDisplayCategory,
+      activityCategories: classification.activityCategories,
     } satisfies Engine6Extracted,
     diagnostics,
     heroCandidates,
