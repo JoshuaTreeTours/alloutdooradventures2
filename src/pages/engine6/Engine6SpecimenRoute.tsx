@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import Engine6TourPage from "../../engine6/components/Engine6TourPage";
 import { mapViatorToEngine6Tour } from "../../engine6/mapViatorToEngine6Tour";
+import { getEngine6NativeTourByCanonicalPath } from "../../engine6/registry";
 import { resolveEngine6ProductCodeForPath } from "../../engine6/routes";
 import { assertEngine6RequestedPathMatchesResolvedTour } from "../../engine6/routeIntegrity";
 import type { Engine6ApiResponse, Engine6Tour } from "../../engine6/types";
@@ -110,6 +111,29 @@ export const buildInitialEngine6SpecimenDebug = (
   failureReason: null,
 });
 
+const withEngine6RouteBackedFallback = ({
+  fallbackTour,
+  error,
+  debug,
+}: {
+  fallbackTour?: Engine6Tour | null;
+  error: string;
+  debug: Engine6SpecimenDebug;
+}): Pick<Engine6SpecimenViewState, "tour" | "error" | "debug"> => {
+  if (!fallbackTour) {
+    return { tour: null, error, debug };
+  }
+
+  return {
+    tour: fallbackTour,
+    error: null,
+    debug: {
+      ...debug,
+      source: debug.source ?? fallbackTour.source ?? "route-backed-fallback",
+    },
+  };
+};
+
 export const resolveEngine6SpecimenResponse = ({
   payload,
   httpStatus,
@@ -117,6 +141,7 @@ export const resolveEngine6SpecimenResponse = ({
   apiUrl,
   responseContentType,
   responseBodyPreview,
+  fallbackTour = null,
 }: {
   payload: unknown;
   httpStatus: number;
@@ -124,12 +149,13 @@ export const resolveEngine6SpecimenResponse = ({
   apiUrl: string;
   responseContentType?: string | null;
   responseBodyPreview?: string | null;
+  fallbackTour?: Engine6Tour | null;
 }): Pick<Engine6SpecimenViewState, "tour" | "error" | "debug"> => {
   const fallbackDebug = buildInitialEngine6SpecimenDebug(productCode, apiUrl);
 
   if (!isRecord(payload)) {
-    return {
-      tour: null,
+    return withEngine6RouteBackedFallback({
+      fallbackTour,
       error: "Engine6 API returned non-object JSON",
       debug: {
         ...fallbackDebug,
@@ -138,7 +164,7 @@ export const resolveEngine6SpecimenResponse = ({
         responseBodyPreview: responseBodyPreview ?? null,
         failureReason: "non-object-json",
       },
-    };
+    });
   }
 
   const extracted = isRecord(payload.extracted) ? payload.extracted : null;
@@ -160,7 +186,9 @@ export const resolveEngine6SpecimenResponse = ({
     sourceProductUrl:
       typeof extracted?.productUrl === "string" ? extracted.productUrl : null,
     finalHeroUrl:
-      typeof extracted?.heroImageUrl === "string" ? extracted.heroImageUrl : null,
+      typeof extracted?.heroImageUrl === "string"
+        ? extracted.heroImageUrl
+        : null,
     overviewFieldPath:
       typeof payload.diagnostics === "object" &&
       payload.diagnostics &&
@@ -275,8 +303,8 @@ export const resolveEngine6SpecimenResponse = ({
     heroSourceType:
       typeof payload.diagnostics === "object" &&
       payload.diagnostics &&
-      typeof (payload.diagnostics as Record<string, unknown>)
-        .heroSourceType === "string"
+      typeof (payload.diagnostics as Record<string, unknown>).heroSourceType ===
+        "string"
         ? ((payload.diagnostics as Record<string, unknown>)
             .heroSourceType as string)
         : null,
@@ -303,8 +331,10 @@ export const resolveEngine6SpecimenResponse = ({
         (payload.diagnostics as Record<string, unknown>)
           .rejectedForeignHeroCandidates
       )
-        ? (((payload.diagnostics as Record<string, unknown>)
-            .rejectedForeignHeroCandidates as Array<Record<string, unknown>>)
+        ? (
+            (payload.diagnostics as Record<string, unknown>)
+              .rejectedForeignHeroCandidates as Array<Record<string, unknown>>
+          )
             .filter(candidate => typeof candidate.url === "string")
             .map(candidate => ({
               url: candidate.url as string,
@@ -328,7 +358,7 @@ export const resolveEngine6SpecimenResponse = ({
                 typeof candidate.fieldPath === "string"
                   ? (candidate.fieldPath as string)
                   : null,
-            })))
+            }))
         : [],
     commercialPriceRawValue:
       typeof payload.diagnostics === "object" &&
@@ -372,8 +402,8 @@ export const resolveEngine6SpecimenResponse = ({
   };
 
   if (!extracted) {
-    return {
-      tour: null,
+    return withEngine6RouteBackedFallback({
+      fallbackTour,
       error:
         payloadError ?? "Engine6 API response did not include extracted data",
       debug: {
@@ -381,7 +411,18 @@ export const resolveEngine6SpecimenResponse = ({
         failureReason:
           httpStatus >= 400 ? "api-error-response" : "missing-extracted-data",
       },
-    };
+    });
+  }
+
+  if (httpStatus >= 500) {
+    return withEngine6RouteBackedFallback({
+      fallbackTour,
+      error: payloadError ?? "Engine6 API failed",
+      debug: {
+        ...debug,
+        failureReason: "api-error-response",
+      },
+    });
   }
 
   try {
@@ -394,8 +435,8 @@ export const resolveEngine6SpecimenResponse = ({
       },
     };
   } catch (error) {
-    return {
-      tour: null,
+    return withEngine6RouteBackedFallback({
+      fallbackTour,
       error:
         error instanceof Error
           ? error.message
@@ -404,7 +445,7 @@ export const resolveEngine6SpecimenResponse = ({
         ...debug,
         failureReason: "mapping-failed",
       },
-    };
+    });
   }
 };
 
@@ -438,14 +479,14 @@ const Engine6SpecimenDiagnostics = ({
             <dd>{debug.httpStatus ?? "pending"}</dd>
           </div>
           <div>
-            <dt className="font-medium text-slate-900">Response content type</dt>
+            <dt className="font-medium text-slate-900">
+              Response content type
+            </dt>
             <dd>{debug.responseContentType ?? "unknown"}</dd>
           </div>
           <div>
             <dt className="font-medium text-slate-900">Response preview</dt>
-            <dd className="break-all">
-              {debug.responseBodyPreview ?? "none"}
-            </dd>
+            <dd className="break-all">{debug.responseBodyPreview ?? "none"}</dd>
           </div>
           <div>
             <dt className="font-medium text-slate-900">Parsed JSON keys</dt>
@@ -469,15 +510,21 @@ const Engine6SpecimenDiagnostics = ({
           </div>
           <div>
             <dt className="font-medium text-slate-900">Source product URL</dt>
-            <dd className="break-all">{debug.sourceProductUrl ?? "missing upstream"}</dd>
+            <dd className="break-all">
+              {debug.sourceProductUrl ?? "missing upstream"}
+            </dd>
           </div>
           <div>
             <dt className="font-medium text-slate-900">Final hero URL</dt>
-            <dd className="break-all">{debug.finalHeroUrl ?? "missing upstream"}</dd>
+            <dd className="break-all">
+              {debug.finalHeroUrl ?? "missing upstream"}
+            </dd>
           </div>
           <div>
             <dt className="font-medium text-slate-900">Hero source type</dt>
-            <dd>{debug.heroSourceType ?? debug.imageSourceUsed ?? "unknown"}</dd>
+            <dd>
+              {debug.heroSourceType ?? debug.imageSourceUsed ?? "unknown"}
+            </dd>
           </div>
           <div>
             <dt className="font-medium text-slate-900">Fallback triggered</dt>
@@ -502,7 +549,9 @@ const Engine6SpecimenDiagnostics = ({
             </dd>
           </div>
           <div className="sm:col-span-2">
-            <dt className="font-medium text-slate-900">Rejected foreign hero candidates</dt>
+            <dt className="font-medium text-slate-900">
+              Rejected foreign hero candidates
+            </dt>
             <dd className="space-y-1 break-all">
               {debug.rejectedForeignHeroCandidates.length > 0 ? (
                 debug.rejectedForeignHeroCandidates.map(candidate => (
@@ -667,10 +716,18 @@ export default function Engine6SpecimenRoute() {
         : null,
     [requestedProductCode]
   );
+  const routeBackedFallbackTour = useMemo(
+    () =>
+      requestedPath ? getEngine6NativeTourByCanonicalPath(requestedPath) : null,
+    [requestedPath]
+  );
   const [state, setState] = useState<Engine6SpecimenViewState>(() => ({
     tour: null,
     error: null,
-    debug: buildInitialEngine6SpecimenDebug(requestedProductCode ?? "", apiUrl ?? ""),
+    debug: buildInitialEngine6SpecimenDebug(
+      requestedProductCode ?? "",
+      apiUrl ?? ""
+    ),
     isLoading: true,
   }));
   const showDiagnostics = useMemo(() => {
@@ -678,9 +735,7 @@ export default function Engine6SpecimenRoute() {
       return false;
     }
 
-    return shouldShowEngine6Diagnostics(
-      window.location.search
-    );
+    return shouldShowEngine6Diagnostics(window.location.search);
   }, []);
 
   useEffect(() => {
@@ -689,8 +744,12 @@ export default function Engine6SpecimenRoute() {
     if (!requestedProductCode || !apiUrl) {
       setState({
         tour: null,
-        error: "Requested path is not mapped to an Engine6 canonical product route.",
-        debug: buildInitialEngine6SpecimenDebug(requestedProductCode ?? "", apiUrl ?? ""),
+        error:
+          "Requested path is not mapped to an Engine6 canonical product route.",
+        debug: buildInitialEngine6SpecimenDebug(
+          requestedProductCode ?? "",
+          apiUrl ?? ""
+        ),
         isLoading: false,
       });
       return;
@@ -717,8 +776,8 @@ export default function Engine6SpecimenRoute() {
               : "Engine6 API returned invalid JSON";
 
           if (!isDisposed) {
-            setState({
-              tour: null,
+            const fallbackState = withEngine6RouteBackedFallback({
+              fallbackTour: routeBackedFallbackTour,
               error: errorMessage,
               debug: {
                 ...buildInitialEngine6SpecimenDebug(
@@ -730,6 +789,9 @@ export default function Engine6SpecimenRoute() {
                 responseBodyPreview,
                 failureReason,
               },
+            });
+            setState({
+              ...fallbackState,
               isLoading: false,
             });
           }
@@ -743,6 +805,7 @@ export default function Engine6SpecimenRoute() {
           apiUrl,
           responseContentType,
           responseBodyPreview,
+          fallbackTour: routeBackedFallbackTour,
         });
 
         if (!isDisposed) {
@@ -760,8 +823,8 @@ export default function Engine6SpecimenRoute() {
         }
       } catch (error) {
         if (!isDisposed) {
-          setState({
-            tour: null,
+          const fallbackState = withEngine6RouteBackedFallback({
+            fallbackTour: routeBackedFallbackTour,
             error:
               error instanceof Error
                 ? error.message
@@ -770,6 +833,9 @@ export default function Engine6SpecimenRoute() {
               ...buildInitialEngine6SpecimenDebug(requestedProductCode, apiUrl),
               failureReason: "request-failed",
             },
+          });
+          setState({
+            ...fallbackState,
             isLoading: false,
           });
         }
@@ -779,7 +845,7 @@ export default function Engine6SpecimenRoute() {
     return () => {
       isDisposed = true;
     };
-  }, [apiUrl, requestedPath, requestedProductCode]);
+  }, [apiUrl, requestedPath, requestedProductCode, routeBackedFallbackTour]);
 
   if (!requestedProductCode || !apiUrl) {
     return (

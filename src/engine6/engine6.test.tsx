@@ -34,7 +34,10 @@ import { buildEngine6CardSurfaces, toEngine6Card } from "./cards";
 import { ENGINE6_63657P1_CARD_IMAGE_URL, engine6SpecimenTour } from "./listing";
 import { resolveMerchantDescription } from "./merchantDescriptions";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
-import { engine6ResolvedTours } from "./registry";
+import {
+  engine6ResolvedTours,
+  getEngine6NativeTourByCanonicalPath,
+} from "./registry";
 import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures";
 import {
   ENGINE6_ANTELOPE_ROUTE,
@@ -56,12 +59,16 @@ import {
   ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
   ENGINE6_JOSHUA_TREE_HALF_DAY_SMALL_GROUP_ROUTE,
   ENGINE6_PALM_SPRINGS_INDIAN_CANYONS_BIKE_HIKE_ROUTE,
+  ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_ROUTE,
+  ENGINE6_SAN_DIEGO_BAY_DAY_SAIL_ROUTE,
   ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
   ENGINE6_SAN_DIEGO_PRIVATE_BALBOA_SEGWAY_ROUTE,
   ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
   ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
+  ENGINE6_SAN_DIEGO_SEAL_TOUR_ROUTE,
   ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE,
+  ENGINE6_SAN_DIEGO_TIJUANA_BORDER_TOUR_ROUTE,
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
@@ -1122,6 +1129,87 @@ describe("engine6 mapping/cards/page", () => {
     expect(resolved.debug.heroSourceType).toBe("api-primary");
     expect(resolved.debug.fallbackTriggered).toBe(false);
     expect(resolved.debug.rejectedForeignHeroCandidates).toEqual([]);
+  });
+
+  it("falls back to route-backed tour data when live specimen responses fail", () => {
+    const representativeRoutes = [
+      ENGINE6_SAN_DIEGO_BAY_DAY_SAIL_ROUTE,
+      ENGINE6_NYC_CHINATOWN_LITTLE_ITALY_FOOD_ROUTE,
+      ENGINE6_SAN_DIEGO_TIJUANA_BORDER_TOUR_ROUTE,
+      ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
+      ENGINE6_SAN_DIEGO_SEAL_TOUR_ROUTE,
+    ];
+    const failurePayloads = [
+      { label: "http-500", payload: { error: "upstream failed" }, status: 500 },
+      { label: "malformed-object", payload: null, status: 200 },
+      {
+        label: "missing-extracted",
+        payload: { source: "live-api" },
+        status: 200,
+      },
+      {
+        label: "mapping-failed",
+        payload: {
+          source: "live-api",
+          extracted: { title: "Unmappable tour without productCode" },
+        },
+        status: 200,
+      },
+    ];
+
+    expect(representativeRoutes).toHaveLength(5);
+
+    for (const route of representativeRoutes) {
+      const fallbackTour = getEngine6NativeTourByCanonicalPath(route);
+      expect(fallbackTour).not.toBeNull();
+
+      for (const failure of failurePayloads) {
+        const resolved = resolveEngine6SpecimenResponse({
+          payload: failure.payload,
+          httpStatus: failure.status,
+          productCode: fallbackTour!.productCode,
+          apiUrl: buildEngine6SpecimenApiUrl(fallbackTour!.productCode),
+          responseContentType:
+            failure.label === "http-500" ? "application/json" : null,
+          responseBodyPreview: failure.label,
+          fallbackTour,
+        });
+
+        expect(resolved.error, `${route} ${failure.label}`).toBeNull();
+        expect(resolved.tour?.canonicalPath, `${route} ${failure.label}`).toBe(
+          route
+        );
+
+        const html = renderToString(<Engine6TourPage tour={resolved.tour!} />);
+        expect(html).not.toContain("Engine6 specimen unavailable");
+        expect(html).toContain('data-testid="engine6-hero-banner"');
+        expect(html).toContain('data-testid="engine6-bottom-cta"');
+
+        const seo = buildEngine6Seo(resolved.tour!);
+        expect(seo.url).toBe(route);
+        expect(seo.description).toBeTruthy();
+
+        const graph = buildEngine6SchemaGraph(resolved.tour!)[
+          "@graph"
+        ] as Array<Record<string, unknown>>;
+        const schemaTypes = new Set(graph.map(node => node["@type"]));
+        expect(schemaTypes.has("Organization")).toBe(true);
+        expect(schemaTypes.has("WebSite")).toBe(true);
+        expect(schemaTypes.has("WebPage")).toBe(true);
+        expect(schemaTypes.has("Product")).toBe(true);
+        expect(schemaTypes.has("TouristTrip")).toBe(true);
+        expect(schemaTypes.has("BreadcrumbList")).toBe(true);
+      }
+    }
+  });
+
+  it("keeps activity taxonomy changes isolated from Engine6 detail route resolution", () => {
+    const unresolvedRoutes = engine6ResolvedTours.filter(
+      tour => getEngine6NativeTourByCanonicalPath(tour.canonicalPath) !== tour
+    );
+
+    expect(unresolvedRoutes).toEqual([]);
+    expect(engine6ResolvedTours.length).toBeGreaterThan(100);
   });
 
   it("keeps rendering without an image when no valid product-owned hero exists", () => {
