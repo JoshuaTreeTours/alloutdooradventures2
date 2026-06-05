@@ -27,6 +27,19 @@ describe("ActivityToursPage", () => {
     expect(html).toContain("Explore hiking tour cards");
   });
 
+  it("/tours/horseback-riding renders Horseback Riding with the route-backed count", () => {
+    const horsebackCount =
+      getToursByActivityCategory("horseback-riding").length;
+    const html = renderToStaticMarkup(
+      <ActivityToursPage params={{ activitySlug: "horseback-riding" }} />
+    );
+
+    expect(horsebackCount).toBeGreaterThan(0);
+    expect(html).toContain("Horseback Riding Tours &amp; Outdoor Adventures");
+    expect(html).toContain(`${horsebackCount} tours`);
+    expect(html).toContain("Explore horseback riding tour cards");
+  });
+
   it("/tours/walking-tours renders Walking Tours with the route-backed count", () => {
     const walkingCount = getToursByActivityCategory("walking-tours").length;
     const html = renderToStaticMarkup(

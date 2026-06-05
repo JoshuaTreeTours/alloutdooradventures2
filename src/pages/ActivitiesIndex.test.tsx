@@ -34,6 +34,17 @@ describe("Activities index", () => {
     });
   });
 
+  it("shows the Horseback Riding card only when backed by route inventory", () => {
+    const horsebackTours = getToursByActivityCategory("horseback-riding");
+    const horsebackCard = getActivityIndexCards().find(
+      card => card.slug === "horseback-riding"
+    );
+
+    expect(horsebackTours.length).toBeGreaterThan(0);
+    expect(horsebackCard?.tourCount).toBe(horsebackTours.length);
+    expect(horsebackCard?.href).toBe("/tours/horseback-riding");
+  });
+
   it("shows the Walking Tours card only when backed by route inventory", () => {
     const walkingTours = getToursByActivityCategory("walking-tours");
     const walkingCard = getActivityIndexCards().find(
@@ -79,6 +90,7 @@ describe("Activities index", () => {
 
     expect(cards.map(card => card.slug)).toEqual([
       "hiking",
+      "horseback-riding",
       "walking-tours",
       "cycling",
       "paddle-sports",
