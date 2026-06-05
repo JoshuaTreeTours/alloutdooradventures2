@@ -7,21 +7,21 @@ export default function Footer() {
     <footer className="bg-[#2f4a2f] text-white">
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="flex flex-col gap-6 border-b border-white/15 pb-8 md:flex-row md:items-center md:justify-between">
-          <div className="flex flex-col gap-4 md:flex-row md:items-center">
-            <div className="flex items-center gap-3">
-              <img
-                src="/logo.svg"
-                alt={`${SITE_BRAND_NAME} logo`}
-                className="h-11 w-11"
-                loading="lazy"
-              />
-              <div>
-                <p className="text-lg font-semibold">All Outdoor Adventures</p>
-              </div>
+          <div className="flex items-center gap-4">
+            <img
+              src="/logo.svg"
+              alt={`${SITE_BRAND_NAME} logo`}
+              className="h-12 w-12"
+              loading="lazy"
+            />
+            <div className="space-y-1">
+              <p className="text-2xl font-semibold tracking-tight text-white">
+                {SITE_BRAND_NAME}
+              </p>
+              <p className="text-xs text-white/60">
+                operated by Outdoor Adventures, Inc.
+              </p>
             </div>
-            <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-              Outdoor Adventures, Inc. — Las Vegas, Nevada
-            </p>
           </div>
         </div>
 
