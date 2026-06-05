@@ -34,6 +34,17 @@ describe("Activities index", () => {
     });
   });
 
+  it("shows the Walking Tours card only when backed by route inventory", () => {
+    const walkingTours = getToursByActivityCategory("walking-tours");
+    const walkingCard = getActivityIndexCards().find(
+      card => card.slug === "walking-tours"
+    );
+
+    expect(walkingTours.length).toBeGreaterThan(0);
+    expect(walkingCard?.tourCount).toBe(walkingTours.length);
+    expect(walkingCard?.href).toBe("/tours/walking-tours");
+  });
+
   it("uses full activity route inventory for counts and images", () => {
     getActivityIndexCards().forEach(card => {
       const routeActivityTours = getToursByActivityCategory(card.slug);
@@ -57,6 +68,7 @@ describe("Activities index", () => {
 
     expect(cards.map(card => card.slug)).toEqual([
       "hiking",
+      "walking-tours",
       "cycling",
       "paddle-sports",
       "water-sports",
