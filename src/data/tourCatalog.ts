@@ -39,9 +39,9 @@ export const ADVENTURE_ACTIVITY_PAGES = [
     image: "/images/hiking-hero3.jpg",
   },
   {
-    slug: "canoeing",
+    slug: "paddle-sports",
     title: "Paddle Sports",
-    description: "Worldwide paddle adventures.",
+    description: "Kayak, canoe, SUP, and paddleboard adventures.",
     image: "/images/canoe-hero.jpg",
   },
 ];

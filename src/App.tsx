@@ -58,6 +58,8 @@ import MultiDayTours from "./pages/tours/activities/MultiDayTours";
 import CanoeingTours from "./pages/tours/activities/CanoeingTours";
 import TourDetail from "./pages/tours/TourDetail";
 import ActivityStateTours from "./pages/tours/ActivityStateTours";
+import ActivityToursPage from "./pages/tours/ActivityToursPage";
+import { getActivityDiscoveryRouteDefinitions } from "./data/activityDiscovery";
 import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
 import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
 import Engine5ProofListingRoute from "./pages/engine5/Engine5ProofListingRoute";
@@ -105,6 +107,9 @@ import {
   ENGINE6_LUCERNE_SHORT_CATAMARAN_ROUTE,
 } from "./engine6/routes";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
+
+const activityDiscoveryRouteDefinitions =
+  getActivityDiscoveryRouteDefinitions();
 
 const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
 const FaqRedirect = () => <RouteRedirect to="/faqs" />;
@@ -518,8 +523,13 @@ export default function App() {
         <Route path="/terms" component={Terms} />
         <Route path="/cookies" component={Cookies} />
         <Route path="/disclosure" component={Disclosure} />
-        <Route path="/tours/cycling" component={CyclingTours} />
-        <Route path="/tours/hiking" component={HikingTours} />
+        {activityDiscoveryRouteDefinitions.map(route => (
+          <Route
+            key={route.path}
+            path={route.path}
+            component={() => <ActivityToursPage params={route.params} />}
+          />
+        ))}
         <Route path="/tours/canoeing" component={CanoeingTours} />
         <Route
           path="/tours/:activitySlug/us/:stateSlug"
@@ -533,6 +543,10 @@ export default function App() {
         <Route path="/tours/activities/detours" component={DetoursTours} />
         <Route path="/tours/activities/hiking" component={HikingTours} />
         <Route path="/tours/activities/multi-day" component={MultiDayTours} />
+        <Route
+          path="/tours/activities/paddle-sports"
+          component={CanoeingTours}
+        />
         <Route path="/tours/activities/canoeing" component={CanoeingTours} />
         <Route
           path="/tours/:tourSlug/book"

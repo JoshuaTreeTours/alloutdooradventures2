@@ -92,4 +92,13 @@ describe("sitemap URL integrity", () => {
       [...sitemap.toursUrls].filter(url => !resolvesToTourTemplate(url))
     ).toEqual([]);
   }, 60_000);
+  it("includes only non-empty activity discovery pages", async () => {
+    const sitemap = await buildSitemap();
+
+    expect(sitemap.categoryUrls.has("/tours/cycling")).toBe(true);
+    expect(sitemap.categoryUrls.has("/tours/hiking")).toBe(true);
+    expect(sitemap.categoryUrls.has("/tours/paddle-sports")).toBe(true);
+    expect(sitemap.categoryUrls.has("/tours/canoeing")).toBe(false);
+    expect(sitemap.categoryUrls.has("/tours/empty-activity")).toBe(false);
+  }, 60_000);
 });

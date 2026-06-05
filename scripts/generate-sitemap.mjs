@@ -614,6 +614,10 @@ export const buildSitemap = async () => {
     "../src/data/tourCatalog.ts",
     import.meta.url
   );
+  const activityDiscoveryModule = await tsImport(
+    "../src/data/activityDiscovery.ts",
+    import.meta.url
+  );
   const flagstaffModule = await tsImport(
     "../src/data/flagstaffTours.ts",
     import.meta.url
@@ -694,9 +698,7 @@ export const buildSitemap = async () => {
   addUrl(categoryUrls, "/tours/day/hiking");
   addUrl(categoryUrls, "/tours/day/paddle");
   addUrl(categoryUrls, "/tours/multi-day");
-  addUrl(categoryUrls, "/tours/cycling");
-  addUrl(categoryUrls, "/tours/hiking");
-  addUrl(categoryUrls, "/tours/canoeing");
+  // Activity discovery pages are added below only when backed by activityCategories inventory.
 
   addUrl(guideUrls, "/guides");
 
@@ -709,7 +711,16 @@ export const buildSitemap = async () => {
   if (Array.isArray(catalogModule.ADVENTURE_ACTIVITY_PAGES)) {
     catalogModule.ADVENTURE_ACTIVITY_PAGES.forEach(activity => {
       addUrl(categoryUrls, `/tours/activities/${activity.slug}`);
-      addUrl(categoryUrls, `/tours/${activity.slug}`);
+    });
+  }
+
+  if (Array.isArray(activityDiscoveryModule.ACTIVITY_DISCOVERY_PAGES)) {
+    activityDiscoveryModule.ACTIVITY_DISCOVERY_PAGES.forEach(activity => {
+      const activityTours =
+        activityDiscoveryModule.getToursByActivityCategory?.(activity.slug);
+      if (Array.isArray(activityTours) && activityTours.length > 0) {
+        addUrl(categoryUrls, `/tours/${activity.slug}`);
+      }
     });
   }
 
@@ -816,7 +827,7 @@ export const buildSitemap = async () => {
     });
   }
 
-  const activityByState = new Map();
+  const legacyActivityByState = new Map();
 
   tours.forEach(tour => {
     if (!isUsStateTour(tour, stateSlugSet, catalogModule)) {
@@ -833,18 +844,51 @@ export const buildSitemap = async () => {
     );
 
     activitySlugs.forEach(slug => {
-      if (!activityByState.has(slug)) {
-        activityByState.set(slug, new Set());
+      if (!legacyActivityByState.has(slug)) {
+        legacyActivityByState.set(slug, new Set());
       }
-      activityByState.get(slug).add(stateSlug);
+      legacyActivityByState.get(slug).add(stateSlug);
     });
   });
 
-  activityByState.forEach((stateSlugs, activitySlug) => {
+  legacyActivityByState.forEach((stateSlugs, activitySlug) => {
     stateSlugs.forEach(stateSlug => {
       addUrl(categoryUrls, `/tours/${activitySlug}/us/${stateSlug}`);
     });
   });
+
+  if (Array.isArray(activityDiscoveryModule.ACTIVITY_DISCOVERY_PAGES)) {
+    activityDiscoveryModule.ACTIVITY_DISCOVERY_PAGES.forEach(activity => {
+      const activityTours =
+        activityDiscoveryModule.getToursByActivityCategory?.(activity.slug);
+      if (!Array.isArray(activityTours) || activityTours.length === 0) {
+        return;
+      }
+
+      const stateCityMap = new Map();
+      activityTours.forEach(tour => {
+        const stateSlug = tour.destination?.stateSlug;
+        const citySlug = tour.destination?.citySlug;
+        if (!stateSlug) return;
+        if (!stateCityMap.has(stateSlug)) {
+          stateCityMap.set(stateSlug, new Set());
+        }
+        if (citySlug) {
+          stateCityMap.get(stateSlug).add(citySlug);
+        }
+      });
+
+      stateCityMap.forEach((citySlugs, stateSlug) => {
+        addUrl(categoryUrls, `/tours/${activity.slug}/${stateSlug}`);
+        citySlugs.forEach(citySlug => {
+          addUrl(
+            categoryUrls,
+            `/tours/${activity.slug}/${stateSlug}/${citySlug}`
+          );
+        });
+      });
+    });
+  }
 
   const europeCountrySlugs = new Set(
     (catalogModule.EUROPE_COUNTRIES || []).map(country =>

@@ -1,0 +1,37 @@
+import { renderToStaticMarkup } from "react-dom/server";
+import { describe, expect, it } from "vitest";
+
+import ActivityToursPage from "./ActivityToursPage";
+
+(globalThis as { location?: { pathname: string } }).location = {
+  pathname: "/",
+};
+
+describe("ActivityToursPage", () => {
+  it("/tours/cycling renders cycling tours", () => {
+    const html = renderToStaticMarkup(
+      <ActivityToursPage params={{ activitySlug: "cycling" }} />
+    );
+
+    expect(html).toContain("Cycling Tours &amp; Outdoor Adventures");
+    expect(html).toContain("Explore cycling tour cards");
+  });
+
+  it("/tours/hiking renders hiking tours", () => {
+    const html = renderToStaticMarkup(
+      <ActivityToursPage params={{ activitySlug: "hiking" }} />
+    );
+
+    expect(html).toContain("Hiking Tours &amp; Outdoor Adventures");
+    expect(html).toContain("Explore hiking tour cards");
+  });
+
+  it("/tours/paddle-sports includes kayak/canoe/SUP tours", () => {
+    const html = renderToStaticMarkup(
+      <ActivityToursPage params={{ activitySlug: "paddle-sports" }} />
+    );
+
+    expect(html).toContain("Paddle Sports Tours &amp; Outdoor Adventures");
+    expect(html).toMatch(/kayak|canoe|SUP|paddle/i);
+  });
+});

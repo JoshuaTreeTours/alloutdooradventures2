@@ -24,6 +24,12 @@ import { getStaticPageSeo } from "../../utils/seo";
 import { slugify } from "../../utils/slugify";
 import { getGuideRecord } from "../../utils/guides/guideRegistry";
 import { EUROPE_COUNTRIES } from "../../data/tourCatalog";
+import {
+  ACTIVITY_DISCOVERY_PAGES,
+  buildActivityDiscoveryPath,
+  getActivityCityOptions,
+  getActivityStateOptions,
+} from "../../data/activityDiscovery";
 import { isRentalTour } from "../../utils/isRentalTour";
 import {
   fetchEngine6LiveProductFields,
@@ -38,8 +44,24 @@ import {
   MEXICO_COUNTRY_NAME,
 } from "./internationalSelectorData";
 
+const normalizeOptionValue = (value: string) =>
+  slugify(value.trim().toLowerCase());
 
-const normalizeOptionValue = (value: string) => slugify(value.trim().toLowerCase());
+export const resolveActivitySelectorRoute = ({
+  activitySlug,
+  stateSlug,
+  citySlug,
+}: {
+  activitySlug: string;
+  stateSlug?: string;
+  citySlug?: string;
+}) =>
+  buildActivityDiscoveryPath({
+    activitySlug,
+    stateSlug: stateSlug || undefined,
+    citySlug: stateSlug && citySlug ? citySlug : undefined,
+  });
+
 const AFRICA_ENGINE2_MAP: Record<string, { country: string; city: string }> = {
   "517094": { country: "Tanzania", city: "Zanzibar" },
 };
@@ -186,6 +208,67 @@ export default function ToursLanding() {
   const [inventoryType, setInventoryType] = useState<"tours" | "rentals">(
     initialSelection.type
   );
+  const [selectedActivitySlug, setSelectedActivitySlug] = useState("");
+  const [selectedActivityStateSlug, setSelectedActivityStateSlug] =
+    useState("");
+  const [selectedActivityCitySlug, setSelectedActivityCitySlug] = useState("");
+
+  const activityStateOptions = useMemo(
+    () =>
+      selectedActivitySlug ? getActivityStateOptions(selectedActivitySlug) : [],
+    [selectedActivitySlug]
+  );
+
+  const activityCityOptions = useMemo(
+    () =>
+      selectedActivitySlug && selectedActivityStateSlug
+        ? getActivityCityOptions(
+            selectedActivitySlug,
+            selectedActivityStateSlug
+          )
+        : [],
+    [selectedActivitySlug, selectedActivityStateSlug]
+  );
+
+  const routeToActivitySelection = (
+    activitySlug: string,
+    stateSlug = "",
+    citySlug = ""
+  ) => {
+    if (!activitySlug) {
+      return;
+    }
+
+    window.location.assign(
+      resolveActivitySelectorRoute({
+        activitySlug,
+        stateSlug,
+        citySlug,
+      })
+    );
+  };
+
+  const handleActivityChange = (nextActivitySlug: string) => {
+    setSelectedActivitySlug(nextActivitySlug);
+    setSelectedActivityStateSlug("");
+    setSelectedActivityCitySlug("");
+    routeToActivitySelection(nextActivitySlug);
+  };
+
+  const handleActivityStateChange = (nextStateSlug: string) => {
+    setSelectedActivityStateSlug(nextStateSlug);
+    setSelectedActivityCitySlug("");
+    routeToActivitySelection(selectedActivitySlug, nextStateSlug);
+  };
+
+  const handleActivityCityChange = (nextCitySlug: string) => {
+    setSelectedActivityCitySlug(nextCitySlug);
+    routeToActivitySelection(
+      selectedActivitySlug,
+      selectedActivityStateSlug,
+      nextCitySlug
+    );
+  };
 
   const canadaProvinces = useMemo(
     () =>
@@ -268,33 +351,29 @@ export default function ToursLanding() {
     [internationalTours, mexicoTours, internationalEngine2Tours]
   );
 
-  const internationalCities = useMemo(
-    () => {
-      const cities =
-      buildInternationalCityOptions({
-        selectedCountry,
-        selectedCanadaProvinceSlug: selectedInternationalProvinceSlug,
-        internationalTours,
-        canadaProvinces,
-        mexicoTours,
-      });
-      if (!selectedCountry) {
-        return cities;
-      }
-      const engine2Cities = internationalEngine2Tours
-        .filter(tour => tour.geo.country === selectedCountry)
-        .map(tour => ({ slug: tour.sourceCitySlug, name: tour.geo.city }));
-      return [...cities, ...engine2Cities];
-    },
-    [
-      canadaProvinces,
-      internationalTours,
+  const internationalCities = useMemo(() => {
+    const cities = buildInternationalCityOptions({
       selectedCountry,
-      selectedInternationalProvinceSlug,
+      selectedCanadaProvinceSlug: selectedInternationalProvinceSlug,
+      internationalTours,
+      canadaProvinces,
       mexicoTours,
-      internationalEngine2Tours,
-    ]
-  );
+    });
+    if (!selectedCountry) {
+      return cities;
+    }
+    const engine2Cities = internationalEngine2Tours
+      .filter(tour => tour.geo.country === selectedCountry)
+      .map(tour => ({ slug: tour.sourceCitySlug, name: tour.geo.city }));
+    return [...cities, ...engine2Cities];
+  }, [
+    canadaProvinces,
+    internationalTours,
+    selectedCountry,
+    selectedInternationalProvinceSlug,
+    mexicoTours,
+    internationalEngine2Tours,
+  ]);
 
   const filteredTours = useMemo(() => {
     let nextTours: Array<{ tour: Tour; href: string }> = [];
@@ -441,7 +520,10 @@ export default function ToursLanding() {
           next[result[0]] = result[1];
         }
         if (Object.keys(next).length > 0) {
-          setLiveEngine6DynamicByProductCode(previous => ({ ...previous, ...next }));
+          setLiveEngine6DynamicByProductCode(previous => ({
+            ...previous,
+            ...next,
+          }));
         }
       })
       .catch(() => {});
@@ -451,7 +533,11 @@ export default function ToursLanding() {
     };
   }, [filteredEngine6ProductCodes]);
   const hydratedFilteredTours = useMemo(
-    () => hydrateEngine6ListingEntries(filteredTours, liveEngine6DynamicByProductCode),
+    () =>
+      hydrateEngine6ListingEntries(
+        filteredTours,
+        liveEngine6DynamicByProductCode
+      ),
     [filteredTours, liveEngine6DynamicByProductCode]
   );
 
@@ -721,6 +807,75 @@ export default function ToursLanding() {
           </div>
         </section>
 
+        <section className="mt-8 rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-semibold text-[#1f2a1f]">
+            Search by Activity
+          </h2>
+          <div className="mt-4 grid gap-4 md:grid-cols-3">
+            <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
+              Activity
+              <select
+                className="rounded-md border border-[#2f4a2f]/20 bg-white px-3 py-2 text-sm text-[#1f2a1f]"
+                value={selectedActivitySlug}
+                onChange={event => handleActivityChange(event.target.value)}
+              >
+                <option value="">Select an activity</option>
+                {ACTIVITY_DISCOVERY_PAGES.map(activity => (
+                  <option key={activity.slug} value={activity.slug}>
+                    {activity.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
+              State
+              <select
+                className="rounded-md border border-[#2f4a2f]/20 bg-white px-3 py-2 text-sm text-[#1f2a1f]"
+                value={selectedActivityStateSlug}
+                onChange={event =>
+                  handleActivityStateChange(event.target.value)
+                }
+                disabled={!selectedActivitySlug}
+              >
+                <option value="">
+                  {selectedActivitySlug
+                    ? "Select a state"
+                    : "Select an activity first"}
+                </option>
+                {activityStateOptions.map(state => (
+                  <option key={state.slug} value={state.slug}>
+                    {state.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
+              City
+              <select
+                className="rounded-md border border-[#2f4a2f]/20 bg-white px-3 py-2 text-sm text-[#1f2a1f]"
+                value={selectedActivityCitySlug}
+                onChange={event => handleActivityCityChange(event.target.value)}
+                disabled={!selectedActivitySlug || !selectedActivityStateSlug}
+              >
+                <option value="">
+                  {!selectedActivitySlug
+                    ? "Select an activity first"
+                    : selectedActivityStateSlug
+                      ? "Select a city"
+                      : "Select a state first"}
+                </option>
+                {activityCityOptions.map(city => (
+                  <option key={city.slug} value={city.slug}>
+                    {city.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+        </section>
+
         {!selectedCity ? (
           <section className="mt-8 rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
             <h2 className="mb-4 text-xl font-semibold text-[#1f2a1f]">
@@ -741,7 +896,12 @@ export default function ToursLanding() {
                   onChange={event => handleCountryChange(event.target.value)}
                 >
                   <option value="">Select a country</option>
-                  {dedupeByNormalizedValue(countryOptions.map(country => ({ slug: country, name: country }))).map(country => (
+                  {dedupeByNormalizedValue(
+                    countryOptions.map(country => ({
+                      slug: country,
+                      name: country,
+                    }))
+                  ).map(country => (
                     <option key={country.slug} value={country.slug}>
                       {country.name}
                     </option>
