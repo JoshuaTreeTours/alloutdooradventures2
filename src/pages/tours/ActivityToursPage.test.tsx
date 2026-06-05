@@ -52,6 +52,18 @@ describe("ActivityToursPage", () => {
     expect(html).toContain("Explore walking tours tour cards");
   });
 
+  it("/tours/boating renders Boating with the route-backed count", () => {
+    const boatingCount = getToursByActivityCategory("boating").length;
+    const html = renderToStaticMarkup(
+      <ActivityToursPage params={{ activitySlug: "boating" }} />
+    );
+
+    expect(boatingCount).toBeGreaterThan(0);
+    expect(html).toContain("Boating Tours &amp; Outdoor Adventures");
+    expect(html).toContain(`${boatingCount} tours`);
+    expect(html).toContain("Explore boating tour cards");
+  });
+
   it("/tours/fishing renders Fishing with the route-backed count", () => {
     const fishingCount = getToursByActivityCategory("fishing").length;
     const html = renderToStaticMarkup(

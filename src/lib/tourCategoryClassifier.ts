@@ -6,6 +6,7 @@ export const TOUR_ACTIVITY_CATEGORIES = [
   { slug: "paddle-sports", label: "Paddle Sports" },
   { slug: "water-sports", label: "Water Sports" },
   { slug: "sailing", label: "Sailing" },
+  { slug: "boating", label: "Boating" },
   { slug: "fishing", label: "Fishing" },
   { slug: "jeep-off-road", label: "Jeep & Off-Road" },
   { slug: "wildlife", label: "Wildlife" },
@@ -64,7 +65,7 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "water-sports",
     signals: [
-      /\b(?:jet ski|jetski|waverunner|wave runner|parasail|parasailing|wakeboard|tubing|water ski|speedboat|powerboat|snorkel|snorkeling|swim (?:with|among|amongst)(?: [a-z]+){0,4} fish|coral reef snorkeling|reef snorkeling|underwater viewing)\b/,
+      /\b(?:jet ski|jetski|waverunner|wave runner|parasail|parasailing|wakeboard|tubing|water ski|snorkel|snorkeling|scuba|swim (?:with|among|amongst)(?: [a-z]+){0,4} fish|coral reef snorkeling|reef snorkeling|underwater viewing)\b/,
     ],
   },
   {
@@ -85,7 +86,15 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   },
   {
     slug: "sailing",
-    signals: [/\b(?:sail|sailing|sailboat|yacht|catamaran|schooner)\b/],
+    signals: [
+      /\b(?:sail|sailing|sailboat|sunset sail|catamaran sail|private sailing charter|yacht sailing|schooner)\b/,
+    ],
+  },
+  {
+    slug: "boating",
+    signals: [
+      /\b(?:boat tour|sightseeing boat tour|harbou?r cruise|bay cruise|river cruise|lake cruise|canal cruise|speedboat(?: sightseeing)? tour|speed boat(?: sightseeing)? tour|adventure boat|electric boat|pontoon boat|private boat charter|yacht cruise|amphibious boat|amphibious seal tour|duck boat|seal tour|water taxi(?:[- ]style)? sightseeing tour|cruise|boat cruise|boat rental)\b/,
+    ],
   },
   {
     slug: "fishing",
@@ -167,7 +176,19 @@ const SOURCE_CATEGORY_TO_ACTIVITY: Record<string, TourActivityCategorySlug> = {
   canoeing: "paddle-sports",
   "paddle-sports": "paddle-sports",
   "paddle-tour": "paddle-sports",
-  "boat-tour": "sailing",
+  "boat-tour": "boating",
+  "sightseeing-boat-tour": "boating",
+  "harbor-cruise": "boating",
+  "harbour-cruise": "boating",
+  "bay-cruise": "boating",
+  "river-cruise": "boating",
+  "lake-cruise": "boating",
+  "canal-cruise": "boating",
+  "speedboat-tour": "boating",
+  "speed-boat-tour": "boating",
+  "private-boat-charter": "boating",
+  "yacht-cruise": "boating",
+  boating: "boating",
   "snorkeling-tour": "water-sports",
   "off-road-tour": "jeep-off-road",
   "wildlife-tour": "wildlife",
@@ -188,6 +209,7 @@ const HIKING_SLUG: TourActivityCategorySlug = "hiking";
 const HORSEBACK_RIDING_SLUG: TourActivityCategorySlug = "horseback-riding";
 const FOOD_WINE_SLUG: TourActivityCategorySlug = "food-wine";
 const SAILING_SLUG: TourActivityCategorySlug = "sailing";
+const BOATING_SLUG: TourActivityCategorySlug = "boating";
 const WILDLIFE_SLUG: TourActivityCategorySlug = "wildlife";
 
 const TRUE_HIKING_PATTERN =
@@ -205,13 +227,18 @@ const NON_HORSEBACK_RIDING_PATTERN =
 const MARINE_WILDLIFE_PRIMARY_PATTERN =
   /\b(?:sea life viewing|marine wildlife|wildlife cruise|(?:whales?|dolphins?|orcas?|manatees?|seals?|turtles?)(?: [a-z0-9]+){0,3} (?:watch|watching|viewing|spotting|cruise|tour|sail)|watch(?:ing)? (?:whales?|dolphins?|orcas?|manatees?|seals?|turtles?))\b/;
 
+const AMPHIBIOUS_SEAL_TOUR_PATTERN =
+  /\b(?:amphibious seal tour|duck boat|seal tour)\b/;
+
 const STRONG_FISHING_PATTERN =
   /\b(?:fishing charter|deep sea fishing|sportfishing|sport fishing|fly fishing|reef fishing|angling|lake fishing|river fishing|fishing trip|catch(?:ing)? fish)\b/;
 
 const SNORKELING_WATER_SPORTS_PATTERN =
-  /\b(?:snorkel|snorkeling|swim (?:with|among|amongst)(?: [a-z]+){0,4} fish|coral reef snorkeling|reef snorkeling|underwater viewing)\b/;
+  /\b(?:snorkel|snorkeling|scuba|swim (?:with|among|amongst)(?: [a-z]+){0,4} fish|coral reef snorkeling|reef snorkeling|underwater viewing)\b/;
 
 const FISHING_SLUG: TourActivityCategorySlug = "fishing";
+const PADDLE_SPORTS_SLUG: TourActivityCategorySlug = "paddle-sports";
+const WATER_SPORTS_SLUG: TourActivityCategorySlug = "water-sports";
 
 const EXPLICIT_HIKING_PATTERN = /\b(?:hike|hiking|trek|trekking)\b/;
 
@@ -378,6 +405,39 @@ export const classifyTourCategories = (
       matched.includes(WILDLIFE_SLUG) &&
       MARINE_WILDLIFE_PRIMARY_PATTERN.test(primaryIntentText)
     ) {
+      return false;
+    }
+
+    if (
+      slug === WILDLIFE_SLUG &&
+      AMPHIBIOUS_SEAL_TOUR_PATTERN.test(normalizedText) &&
+      !/\b(?:watch|watching|viewing|spotting|wildlife|marine wildlife)\b/.test(
+        primaryIntentText
+      )
+    ) {
+      return false;
+    }
+
+    if (slug === BOATING_SLUG) {
+      const hasPrimaryWildlifeMatch =
+        matched.includes(WILDLIFE_SLUG) &&
+        (!AMPHIBIOUS_SEAL_TOUR_PATTERN.test(normalizedText) ||
+          /\b(?:watch|watching|viewing|spotting|wildlife|marine wildlife)\b/.test(
+            primaryIntentText
+          ));
+
+      if (
+        hasPrimaryWildlifeMatch ||
+        matched.includes(FISHING_SLUG) ||
+        matched.includes(SAILING_SLUG) ||
+        matched.includes(PADDLE_SPORTS_SLUG) ||
+        matched.includes(WATER_SPORTS_SLUG)
+      ) {
+        return false;
+      }
+    }
+
+    if (slug === SIGHTSEEING_SLUG && matched.includes(BOATING_SLUG)) {
       return false;
     }
 

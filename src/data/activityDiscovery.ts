@@ -31,6 +31,7 @@ export const ACTIVITY_INDEX_PREFERRED_ORDER = [
   "paddle-sports",
   "water-sports",
   "sailing",
+  "boating",
   "fishing",
   "wildlife",
   "stargazing",
@@ -72,12 +73,17 @@ const ACTIVITY_PAGE_COPY: Record<
   "water-sports": {
     title: "Water Sports Tours & Outdoor Adventures",
     description:
-      "Browse jet ski rides, snorkeling trips, speedboat outings, and active water-based outdoor adventures.",
+      "Browse jet ski rides, snorkeling trips, scuba outings, parasailing, tubing, and active water-based outdoor adventures.",
   },
   sailing: {
     title: "Sailing Tours & Outdoor Adventures",
     description:
-      "Compare sailing charters, harbor cruises, sunset sails, and wind-powered experiences on the water.",
+      "Compare sailing charters, sunset sails, sailboat trips, and wind-powered experiences on the water.",
+  },
+  boating: {
+    title: "Boating Tours & Outdoor Adventures",
+    description:
+      "Browse boat tours, harbor cruises, bay cruises, river cruises, pontoon outings, speedboat sightseeing, and private boat charters.",
   },
   fishing: {
     title: "Fishing Tours & Outdoor Adventures",
@@ -214,6 +220,10 @@ const hasActivityCategory = (tour: Tour, activitySlug: string) => {
 
   if (activitySlug === "fishing") {
     return reclassifiedSlugs.includes("fishing");
+  }
+
+  if (activitySlug === "boating") {
+    return reclassifiedSlugs.includes("boating");
   }
 
   return hasStoredActivityCategory(tour, activitySlug);

@@ -95,6 +95,25 @@ describe("activity discovery data", () => {
     ).toBe(true);
   });
 
+  it("finds Boating tours from route-backed activity inventory", () => {
+    const boatingTours = getToursByActivityCategory("boating");
+    const boatingText = boatingTours
+      .map(
+        tour =>
+          `${tour.title} ${tour.longDescription} ${(tour.categories ?? []).join(" ")} ${(tour.tags ?? []).join(" ")}`
+      )
+      .join(" ");
+
+    expect(boatingTours.length).toBeGreaterThan(0);
+    expect(boatingText).toMatch(
+      /boat tour|harbou?r cruise|bay cruise|river cruise|lake cruise|canal cruise|speedboat|electric boat|pontoon boat|private boat charter|yacht cruise|water taxi|cruise/i
+    );
+    expect(getActivityDiscoveryPage("boating")?.label).toBe("Boating");
+    expect(buildActivityDiscoveryPath({ activitySlug: "boating" })).toBe(
+      "/tours/boating"
+    );
+  });
+
   it("finds Fishing tours from route-backed activity inventory", () => {
     const fishingTours = getToursByActivityCategory("fishing");
     const fishingText = fishingTours
