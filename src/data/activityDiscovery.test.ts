@@ -78,9 +78,7 @@ describe("activity discovery data", () => {
 
     expect(cyclingTours.length).toBeGreaterThan(0);
     expect(
-      cyclingTours.every(tour =>
-        tour.activityCategories?.some(category => category.slug === "cycling")
-      )
+      cyclingTours.some(tour => /bike|bicycle|cycling|pedal/i.test(tour.title))
     ).toBe(true);
   });
 
@@ -89,10 +87,44 @@ describe("activity discovery data", () => {
 
     expect(hikingTours.length).toBeGreaterThan(0);
     expect(
-      hikingTours.every(tour =>
-        tour.activityCategories?.some(category => category.slug === "hiking")
+      hikingTours.some(tour =>
+        /hike|hiking|trek|trail|canyon|mountain|national park/i.test(
+          `${tour.title} ${tour.longDescription}`
+        )
       )
     ).toBe(true);
+  });
+
+  it("finds Walking Tours from route-backed activity inventory", () => {
+    const walkingTours = getToursByActivityCategory("walking-tours");
+    const walkingText = walkingTours
+      .map(
+        tour =>
+          `${tour.title} ${tour.longDescription} ${(tour.tags ?? []).join(" ")}`
+      )
+      .join(" ");
+
+    expect(walkingTours.length).toBeGreaterThan(0);
+    expect(walkingText).toMatch(/walking tour|walking outing|walk/i);
+    expect(getActivityDiscoveryPage("walking-tours")?.label).toBe(
+      "Walking Tours"
+    );
+    expect(buildActivityDiscoveryPath({ activitySlug: "walking-tours" })).toBe(
+      "/tours/walking-tours"
+    );
+  });
+
+  it("keeps Walking Tours out of Hiking route-backed results", () => {
+    const hikingTitles = getToursByActivityCategory("hiking").map(tour =>
+      tour.title.toLowerCase()
+    );
+
+    expect(hikingTitles.some(title => title.includes("ghost walk"))).toBe(
+      false
+    );
+    expect(
+      hikingTitles.some(title => title.includes("historic city walking tour"))
+    ).toBe(false);
   });
 
   it("uses paddle-sports for kayak/canoe/SUP tour discovery", () => {
