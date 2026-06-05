@@ -85,7 +85,7 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   },
   {
     slug: "sailing",
-    signals: [/\b(?:sail|sailing|yacht|catamaran|schooner)\b/],
+    signals: [/\b(?:sail|sailing|sailboat|yacht|catamaran|schooner)\b/],
   },
   {
     slug: "fishing",
@@ -96,7 +96,7 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "wildlife",
     signals: [
-      /\b(?:wildlife|whale|dolphin|bear|birding|safari|bison|elk|animal)\b/,
+      /\b(?:wildlife|whale|dolphin|orca|sea life|marine wildlife|wildlife cruise|manatee|seal|turtle|bear|birding|safari|bison|elk|animal)\b/,
     ],
   },
   {
@@ -187,6 +187,8 @@ const WALKING_TOURS_SLUG: TourActivityCategorySlug = "walking-tours";
 const HIKING_SLUG: TourActivityCategorySlug = "hiking";
 const HORSEBACK_RIDING_SLUG: TourActivityCategorySlug = "horseback-riding";
 const FOOD_WINE_SLUG: TourActivityCategorySlug = "food-wine";
+const SAILING_SLUG: TourActivityCategorySlug = "sailing";
+const WILDLIFE_SLUG: TourActivityCategorySlug = "wildlife";
 
 const TRUE_HIKING_PATTERN =
   /\b(?:hike|hiking|trek|trekking|canyon hike|canyon walk|mountain hike|mountain walk|national park hike|national park walk|trail hike|hiking trail|trail walk|nature trail|forest trail|guided trail|glacier hike)\b/;
@@ -199,6 +201,9 @@ const HORSEBACK_RIDING_PATTERN =
 
 const NON_HORSEBACK_RIDING_PATTERN =
   /\b(?:carriage ride|carriage rides|horse carriage|horsedrawn carriage|horse drawn carriage|horse racing|horse race|race track|racetrack|spectator|ranch tour|ranch tours|historical tour|historic tour|rail trail ride|atv trail ride|ez[- ]?raider)\b/;
+
+const MARINE_WILDLIFE_PRIMARY_PATTERN =
+  /\b(?:sea life viewing|marine wildlife|wildlife cruise|(?:whales?|dolphins?|orcas?|manatees?|seals?|turtles?)(?: [a-z0-9]+){0,3} (?:watch|watching|viewing|spotting|cruise|tour|sail)|watch(?:ing)? (?:whales?|dolphins?|orcas?|manatees?|seals?|turtles?))\b/;
 
 const STRONG_FISHING_PATTERN =
   /\b(?:fishing charter|deep sea fishing|sportfishing|sport fishing|fly fishing|reef fishing|angling|lake fishing|river fishing|fishing trip|catch(?:ing)? fish)\b/;
@@ -286,6 +291,9 @@ export const classifyTourCategories = (
   input: TourCategoryClassificationInput
 ): TourCategoryClassification => {
   const normalizedText = buildClassifierText(input);
+  const primaryIntentText = normalizeTourCategoryText(
+    [input.title, ...(input.categories ?? [])].filter(Boolean).join(" ")
+  );
   const matched: TourActivityCategorySlug[] = [];
 
   for (const sourceCategory of input.categories ?? []) {
@@ -361,6 +369,14 @@ export const classifyTourCategories = (
       slug === FISHING_SLUG &&
       SNORKELING_WATER_SPORTS_PATTERN.test(normalizedText) &&
       !STRONG_FISHING_PATTERN.test(normalizedText)
+    ) {
+      return false;
+    }
+
+    if (
+      slug === SAILING_SLUG &&
+      matched.includes(WILDLIFE_SLUG) &&
+      MARINE_WILDLIFE_PRIMARY_PATTERN.test(primaryIntentText)
     ) {
       return false;
     }

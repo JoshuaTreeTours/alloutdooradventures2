@@ -33,6 +33,40 @@ describe("classifyTourCategories", () => {
     ]);
   });
 
+  it("classifies marine wildlife intent as Wildlife instead of Sailing", () => {
+    [
+      "whale watching sail",
+      "dolphin watching catamaran",
+      "orca watching schooner",
+      "sea life viewing yacht",
+      "marine wildlife cruise",
+      "wildlife cruise",
+      "manatee watching boat tour",
+      "seal watching boat tour",
+      "turtle watching catamaran",
+    ].forEach(title => {
+      const slugs = slugsFor({ title, categories: ["Sailing"] });
+
+      expect(slugs[0]).toBe("wildlife");
+      expect(slugs).toContain("wildlife");
+      expect(slugs).not.toContain("sailing");
+    });
+  });
+
+  it("keeps primary sailing experiences classified as Sailing", () => {
+    [
+      "sunset sail",
+      "private sailing charter",
+      "sailing charter",
+      "sailboat cruise",
+      "catamaran sail",
+      "yacht sailing",
+      "private sailing experience",
+    ].forEach(title => {
+      expect(slugsFor({ title })).toEqual(["sailing"]);
+    });
+  });
+
   it("classifies an e-bike wine tour as Cycling and Food & Wine", () => {
     expect(slugsFor({ title: "E-bike wine tour through vineyards" })).toEqual([
       "cycling",
