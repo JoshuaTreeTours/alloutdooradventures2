@@ -25,8 +25,14 @@ import { classifyTourCategories } from "../lib/tourCategoryClassifier";
 import { isTourRemoved } from "../utils/tours/isTourRemoved";
 import { isHardDeletedLegacyTour } from "../utils/tours/hardDeleteLegacyTours";
 import { resolveTourHeroImage } from "../utils/hero";
-import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEntries";
-import { getEngine4ListingEntries } from "../engine4/listing/getEngine4ListingEntries";
+import {
+  getAllEngine3ListingEntries,
+  getEngine3ListingEntries,
+} from "../engine3/listing/getEngine3ListingEntries";
+import {
+  getAllEngine4ListingEntries,
+  getEngine4ListingEntries,
+} from "../engine4/listing/getEngine4ListingEntries";
 import { engine6ListingTours } from "../engine6/listing";
 import { assertUniqueByCanonicalPath } from "../engine6/hardening";
 import { suppressLegacyFareHarborTour } from "../engine6/replacementMode";
@@ -715,6 +721,35 @@ export const getToursByCityUnified = (
     ...engine4Tours,
     ...engine1Tours.filter(entry => entry.tour.engine !== "engine6"),
   ]).filter(entry => isValidForPublicCityListing(entry, stateSlug, citySlug));
+};
+
+let allRouteBackedTourEntriesCache: UnifiedCityTour[] | null = null;
+
+export const getAllRouteBackedTourEntries = (): UnifiedCityTour[] => {
+  if (allRouteBackedTourEntriesCache) {
+    return allRouteBackedTourEntriesCache;
+  }
+
+  allRouteBackedTourEntriesCache = dedupeUnifiedCityTours([
+    ...tours.map(toUnifiedEngine1Tour),
+    ...getAllEngine2Tours().map(toUnifiedEngine2Tour),
+    ...getAllEngine3ListingEntries().map(entry => ({
+      tour: entry.tour,
+      href: entry.href,
+    })),
+    ...getAllEngine4ListingEntries().map(entry => ({
+      tour: entry.tour,
+      href: entry.href,
+    })),
+  ]).filter(entry =>
+    isValidForPublicCityListing(
+      entry,
+      entry.tour.destination.stateSlug,
+      entry.tour.destination.citySlug
+    )
+  );
+
+  return allRouteBackedTourEntriesCache;
 };
 
 export const getAffiliateDisclosure = (tour: Tour) =>

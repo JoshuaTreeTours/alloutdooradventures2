@@ -1,7 +1,8 @@
 import { TOUR_ACTIVITY_CATEGORIES } from "../lib/tourCategoryClassifier";
 import { getStateBySlug } from "./destinations";
-import { tours } from "./tours";
+import { getAllRouteBackedTourEntries, getTourDetailPath } from "./tours";
 import type { Tour } from "./tours.types";
+import type { UnifiedCityTour } from "./tours";
 import { resolveTourHeroImage } from "../utils/hero";
 import { slugify } from "../utils/slugify";
 
@@ -11,6 +12,26 @@ export type ActivityDiscoveryPage = {
   title: string;
   description: string;
 };
+
+export type ActivityIndexCard = ActivityDiscoveryPage & {
+  image: string | null;
+  tourCount: number;
+  href: string;
+};
+
+export const ACTIVITY_INDEX_PREFERRED_ORDER = [
+  "hiking",
+  "cycling",
+  "paddle-sports",
+  "water-sports",
+  "sailing",
+  "wildlife",
+  "stargazing",
+  "jeep-off-road",
+  "air-tours",
+  "food-wine",
+  "sightseeing-city-tours",
+] as const;
 
 const ACTIVITY_PAGE_COPY: Record<
   string,
@@ -119,24 +140,77 @@ const dedupeTours = (activityTours: Tour[]) => {
 const getQualityValue = (value: number | undefined) =>
   typeof value === "number" && Number.isFinite(value) ? value : -1;
 
+const compareActivityDiscoveryTours = (a: Tour, b: Tour) => {
+  const ratingDelta =
+    getQualityValue(b.badges.rating) - getQualityValue(a.badges.rating);
+  if (ratingDelta !== 0) return ratingDelta;
+
+  const reviewDelta =
+    getQualityValue(b.badges.reviewCount) -
+    getQualityValue(a.badges.reviewCount);
+  if (reviewDelta !== 0) return reviewDelta;
+
+  return a.title.localeCompare(b.title);
+};
+
 export const sortActivityDiscoveryTours = (activityTours: Tour[]) =>
-  [...activityTours].sort((a, b) => {
-    const ratingDelta =
-      getQualityValue(b.badges.rating) - getQualityValue(a.badges.rating);
-    if (ratingDelta !== 0) return ratingDelta;
+  [...activityTours].sort(compareActivityDiscoveryTours);
 
-    const reviewDelta =
-      getQualityValue(b.badges.reviewCount) -
-      getQualityValue(a.badges.reviewCount);
-    if (reviewDelta !== 0) return reviewDelta;
+const getUniqueEntryKey = (entry: UnifiedCityTour) =>
+  entry.href || getUniqueTourKey(entry.tour);
 
-    return a.title.localeCompare(b.title);
+const dedupeTourEntries = (activityEntries: UnifiedCityTour[]) => {
+  const seen = new Set<string>();
+  return activityEntries.filter(entry => {
+    const key = getUniqueEntryKey(entry);
+    if (seen.has(key)) {
+      return false;
+    }
+    seen.add(key);
+    return true;
+  });
+};
+
+const sortActivityDiscoveryEntries = (activityEntries: UnifiedCityTour[]) =>
+  [...activityEntries].sort((a, b) =>
+    compareActivityDiscoveryTours(a.tour, b.tour)
+  );
+
+const activityTourHrefByKey = new Map<string, string>();
+
+export const getActivityTourEntriesByCategory = (activitySlug: string) => {
+  const entries = sortActivityDiscoveryEntries(
+    dedupeTourEntries(
+      getAllRouteBackedTourEntries().filter(entry =>
+        hasActivityCategory(entry.tour, activitySlug)
+      )
+    )
+  );
+
+  entries.forEach(entry => {
+    activityTourHrefByKey.set(getUniqueTourKey(entry.tour), entry.href);
   });
 
+  return entries;
+};
+
 export const getToursByActivityCategory = (activitySlug: string) =>
-  sortActivityDiscoveryTours(
-    dedupeTours(tours.filter(tour => hasActivityCategory(tour, activitySlug)))
+  getActivityTourEntriesByCategory(activitySlug).map(entry => entry.tour);
+
+export const getActivityTourHref = (tour: Tour) => {
+  const key = getUniqueTourKey(tour);
+  const cachedHref = activityTourHrefByKey.get(key);
+  if (cachedHref) {
+    return cachedHref;
+  }
+
+  const matchedEntry = getAllRouteBackedTourEntries().find(
+    entry => getUniqueTourKey(entry.tour) === key
   );
+  const href = matchedEntry?.href ?? getTourDetailPath(tour);
+  activityTourHrefByKey.set(key, href);
+  return href;
+};
 
 export const getToursByActivityLocation = ({
   activitySlug,
@@ -176,7 +250,7 @@ export const getActivityStateOptions = (
     );
   });
 
-  return [...stateMap.entries()]
+  return Array.from(stateMap.entries())
     .map(([slug, name]) => ({ slug, name }))
     .sort((a, b) => a.name.localeCompare(b.name));
 };
@@ -196,7 +270,7 @@ export const getActivityCityOptions = (
     cityMap.set(citySlug, tour.destination.city || citySlug);
   });
 
-  return [...cityMap.entries()]
+  return Array.from(cityMap.entries())
     .map(([slug, name]) => ({ slug, name }))
     .sort((a, b) => a.name.localeCompare(b.name));
 };
@@ -309,5 +383,29 @@ export const getActivityDiscoveryRouteDefinitions = () => {
 
   return definitions;
 };
+
+const ACTIVITY_INDEX_ORDER_RANK: Map<string, number> = new Map(
+  ACTIVITY_INDEX_PREFERRED_ORDER.map((slug, index) => [slug, index])
+);
+
+export const getActivityIndexCards = (): ActivityIndexCard[] =>
+  ACTIVITY_DISCOVERY_PAGES.map(activity => {
+    const activityTours = getToursByActivityCategory(activity.slug);
+
+    return {
+      ...activity,
+      image: resolveActivityHeroImage(activityTours) ?? null,
+      tourCount: activityTours.length,
+      href: buildActivityDiscoveryPath({ activitySlug: activity.slug }),
+    };
+  })
+    .filter(card => card.tourCount > 0)
+    .sort((a, b) => {
+      const rankDelta =
+        (ACTIVITY_INDEX_ORDER_RANK.get(a.slug) ?? Number.MAX_SAFE_INTEGER) -
+        (ACTIVITY_INDEX_ORDER_RANK.get(b.slug) ?? Number.MAX_SAFE_INTEGER);
+
+      return rankDelta || a.label.localeCompare(b.label);
+    });
 
 export const slugifyActivityLocation = (value: string) => slugify(value);

@@ -683,6 +683,7 @@ export const buildSitemap = async () => {
 
   addUrl(pages, "/");
   addUrl(pages, "/faqs");
+  addUrl(pages, "/activities");
   addUrl(pages, "/journeys");
   addUrl(pages, "/about");
   addUrl(pages, "/contact");

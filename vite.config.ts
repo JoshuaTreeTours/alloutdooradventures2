@@ -11,10 +11,18 @@ export default defineConfig({
       "@": path.resolve(import.meta.dirname, "src"),
       "@shared": path.resolve(import.meta.dirname, "shared"),
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
-      "csv-parse/sync": path.resolve(import.meta.dirname, "src/vendor/csvParseSync.ts"),
+      "csv-parse/sync": path.resolve(
+        import.meta.dirname,
+        "src/vendor/csvParseSync.ts"
+      ),
     },
   },
   envDir: path.resolve(import.meta.dirname),
+  define: {
+    "process.env": JSON.stringify({
+      NODE_ENV: process.env.NODE_ENV ?? "development",
+    }),
+  },
   build: {
     outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,

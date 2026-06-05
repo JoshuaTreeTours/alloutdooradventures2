@@ -46,6 +46,11 @@ export const STATIC_PAGE_SEO: Record<string, StaticSeoEntry> = {
     description:
       "Navigate outdoor destinations by country or state and jump straight to local guides and tours.",
   },
+  "/activities": {
+    title: `Explore Outdoor Activities | ${SITE_BRAND_NAME}`,
+    description:
+      "Browse outdoor tours by activity type, from hiking and cycling to paddle sports, wildlife, stargazing, food and wine, sailing, air tours, and city sightseeing.",
+  },
   "/destinations": {
     title: `Outdoor Adventure Destinations | ${SITE_BRAND_NAME}`,
     description:

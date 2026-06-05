@@ -60,6 +60,9 @@ export default function Header() {
                 </div>
               </div>
             </div>
+            <Link href="/activities">
+              <a className="hover:text-[#1f2a1f]">Activities</a>
+            </Link>
             <Link href="/guides">
               <a className="hover:text-[#1f2a1f]">Guides</a>
             </Link>
@@ -87,7 +90,7 @@ export default function Header() {
               type="button"
               aria-label="Toggle menu"
               aria-expanded={mobileOpen}
-              onClick={() => setMobileOpen((open) => !open)}
+              onClick={() => setMobileOpen(open => !open)}
               className="inline-flex items-center justify-center rounded-md border border-[#2f4a2f]/30 p-2 text-[#2f4a2f] transition hover:bg-[#2f4a2f]/10 md:hidden"
             >
               <svg
@@ -159,28 +162,51 @@ export default function Header() {
                   </Link>
                 </div>
               </details>
+              <Link href="/activities">
+                <a
+                  onClick={closeMobileMenu}
+                  className="font-medium text-[#1f2a1f]"
+                >
+                  Activities
+                </a>
+              </Link>
               <Link href="/guides">
-                <a onClick={closeMobileMenu} className="font-medium text-[#1f2a1f]">
+                <a
+                  onClick={closeMobileMenu}
+                  className="font-medium text-[#1f2a1f]"
+                >
                   Guides
                 </a>
               </Link>
               <Link href="/faqs">
-                <a onClick={closeMobileMenu} className="font-medium text-[#1f2a1f]">
+                <a
+                  onClick={closeMobileMenu}
+                  className="font-medium text-[#1f2a1f]"
+                >
                   FAQs
                 </a>
               </Link>
               <Link href="/journeys">
-                <a onClick={closeMobileMenu} className="font-medium text-[#1f2a1f]">
+                <a
+                  onClick={closeMobileMenu}
+                  className="font-medium text-[#1f2a1f]"
+                >
                   Journeys
                 </a>
               </Link>
               <Link href="/about">
-                <a onClick={closeMobileMenu} className="font-medium text-[#1f2a1f]">
+                <a
+                  onClick={closeMobileMenu}
+                  className="font-medium text-[#1f2a1f]"
+                >
                   About
                 </a>
               </Link>
               <Link href="/contact">
-                <a onClick={closeMobileMenu} className="font-medium text-[#1f2a1f]">
+                <a
+                  onClick={closeMobileMenu}
+                  className="font-medium text-[#1f2a1f]"
+                >
                   Contact
                 </a>
               </Link>
