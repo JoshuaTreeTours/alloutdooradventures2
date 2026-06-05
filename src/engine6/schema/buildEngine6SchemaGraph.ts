@@ -20,6 +20,33 @@ import type { Engine6Tour } from "../types";
 const includesTerm = (source: string, term: string) =>
   source.toLowerCase().includes(term.trim().toLowerCase());
 
+const resolveDurationIso8601 = (durationText: string | null | undefined) => {
+  const normalized = durationText?.trim().toLowerCase();
+  if (!normalized) return null;
+  if (/^p(?:t)?/i.test(normalized)) return durationText?.trim() ?? null;
+
+  const hoursMatch = normalized.match(/(\d+(?:\.\d+)?)\s*(?:hours?|hrs?|h)\b/);
+  const minutesMatch = normalized.match(
+    /(\d+(?:\.\d+)?)\s*(?:minutes?|mins?|m)\b/
+  );
+  const totalMinutesOnly = normalized.match(
+    /^(\d+(?:\.\d+)?)\s*(?:minutes?|mins?|m)$/
+  );
+
+  let totalMinutes = 0;
+  if (hoursMatch?.[1]) totalMinutes += Math.round(Number(hoursMatch[1]) * 60);
+  if (minutesMatch?.[1]) totalMinutes += Math.round(Number(minutesMatch[1]));
+  if (!hoursMatch && totalMinutesOnly?.[1])
+    totalMinutes = Math.round(Number(totalMinutesOnly[1]));
+
+  if (!Number.isFinite(totalMinutes) || totalMinutes <= 0)
+    return durationText?.trim() ?? null;
+
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+  return `PT${hours ? `${hours}H` : ""}${minutes ? `${minutes}M` : ""}`;
+};
+
 const buildCityAwareSchemaName = ({
   title,
   city,
@@ -46,7 +73,11 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
   const offerUrl =
     resolveEngine6OfferUrl(affiliateUrl) ??
     (affiliateUrl?.startsWith("/") ? affiliateUrl : undefined);
-  const categoryLabel = formatEngine6CategoryLabel(tour.primaryCategory);
+  const categoryLabel =
+    tour.primaryDisplayCategory ??
+    tour.categoryLabel ??
+    formatEngine6CategoryLabel(tour.primaryCategory);
+  const duration = resolveDurationIso8601(tour.durationText);
   const description =
     getEngine6TargetedNarrativeDescription(tour.productCode) ??
     buildEngine6RichProductDescription({
@@ -218,7 +249,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
         areaServed: { "@id": destinationPlaceId },
         offers: { "@id": offerNode["@id"] },
         itinerary,
-        ...(tour.durationText ? { duration: tour.durationText } : {}),
+        ...(duration ? { duration } : {}),
         ...(categoryLabel ? { touristType: categoryLabel } : {}),
         ...(tour.meetingPointText
           ? {

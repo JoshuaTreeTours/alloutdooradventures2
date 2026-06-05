@@ -328,8 +328,17 @@ const pushUnique = <T>(items: T[], item: T) => {
   if (!items.includes(item)) items.push(item);
 };
 
-const orderPrimaryFirst = (slugs: TourActivityCategorySlug[]) =>
+const orderPrimaryFirst = (
+  slugs: TourActivityCategorySlug[],
+  primaryIntentSlugs: TourActivityCategorySlug[] = []
+) =>
   [...slugs].sort((a, b) => {
+    const primaryA = primaryIntentSlugs.includes(a);
+    const primaryB = primaryIntentSlugs.includes(b);
+
+    if (primaryA && !primaryB) return -1;
+    if (primaryB && !primaryA) return 1;
+
     if (a === SIGHTSEEING_SLUG && b !== SIGHTSEEING_SLUG) return 1;
     if (b === SIGHTSEEING_SLUG && a !== SIGHTSEEING_SLUG) return -1;
 
@@ -347,16 +356,26 @@ export const classifyTourCategories = (
     [input.title, ...(input.categories ?? [])].filter(Boolean).join(" ")
   );
   const matched: TourActivityCategorySlug[] = [];
+  const primaryIntentMatched: TourActivityCategorySlug[] = [];
 
   for (const sourceCategory of input.categories ?? []) {
     if (!sourceCategory) continue;
     const mapped = SOURCE_CATEGORY_TO_ACTIVITY[toSimpleSlug(sourceCategory)];
-    if (mapped) pushUnique(matched, mapped);
+    if (mapped) {
+      pushUnique(matched, mapped);
+      pushUnique(primaryIntentMatched, mapped);
+    }
   }
 
   for (const categoryPattern of CATEGORY_SIGNAL_PATTERNS) {
     if (categoryPattern.signals.some(signal => signal.test(normalizedText))) {
       pushUnique(matched, categoryPattern.slug);
+    }
+
+    if (
+      categoryPattern.signals.some(signal => signal.test(primaryIntentText))
+    ) {
+      pushUnique(primaryIntentMatched, categoryPattern.slug);
     }
   }
 
@@ -525,7 +544,10 @@ export const classifyTourCategories = (
     return true;
   });
 
-  const matchedCategorySlugs = orderPrimaryFirst(priorityFilteredMatches);
+  const matchedCategorySlugs = orderPrimaryFirst(
+    priorityFilteredMatches,
+    primaryIntentMatched
+  );
   const activityCategories = matchedCategorySlugs
     .map(slug => CATEGORY_BY_SLUG.get(slug))
     .filter((category): category is TourActivityCategory => Boolean(category));

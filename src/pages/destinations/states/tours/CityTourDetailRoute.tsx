@@ -26,6 +26,7 @@ import {
 import { getExpandedTourDescription } from "../../../../data/tourNarratives";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import { buildTourMeta } from "../../../../lib/tourMeta";
+import { classifyTourCategories } from "../../../../lib/tourCategoryClassifier";
 import {
   buildBreadcrumbList,
   buildTourProductNodeId,
@@ -700,6 +701,29 @@ export default function CityTourDetailRoute({
       partnerBookingUrl: bookingUrl,
     });
 
+    const resolvedActivityClassification = classifyTourCategories({
+      title: tour.title,
+      overview: tour.shortDescription,
+      description: tour.longDescription,
+      highlights: [
+        ...((tour.content?.highlights as string[] | undefined) ?? []),
+        ...(tour.tags ?? []),
+        ...(tour.tagPills ?? []),
+      ],
+      categories: [
+        tour.primaryCategory,
+        ...(tour.categories ?? []),
+        ...(tour.activityCategories ?? []).flatMap(category => [
+          category.slug,
+          category.label,
+        ]),
+      ],
+    });
+    const resolvedActivityLabel =
+      resolvedActivityClassification.primaryDisplayCategory ??
+      tour.primaryDisplayCategory ??
+      tour.primaryCategory;
+
     const tourSchemaNodes = ENABLE_TOUR_SCHEMA_V1
       ? (buildTourSchemaGraph({
           url: canonicalUrl,
@@ -723,7 +747,7 @@ export default function CityTourDetailRoute({
               productDescription ??
               seoDescription ??
               "",
-            category: tour.primaryCategory,
+            category: resolvedActivityLabel,
           },
           trip: {
             id: `${canonicalUrl}#trip`,
@@ -734,7 +758,7 @@ export default function CityTourDetailRoute({
               seoDescription ??
               "",
             duration: hardenedTemplate?.durationISO ?? tour.badges.duration,
-            touristType: "Adventure travelers",
+            touristType: resolvedActivityLabel,
             departureLocation: null,
             itinerary: hardenedTemplate
               ? {
