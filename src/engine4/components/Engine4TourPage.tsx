@@ -2,6 +2,7 @@ import { Link } from "wouter";
 
 import TourCard from "../../components/TourCard";
 import Seo from "../../components/Seo";
+import { useStructuredData } from "../../components/StructuredDataProvider";
 import RatingStars from "./RatingStars";
 import { getToursByCityUnified } from "../../data/tours";
 import { buildEngine4ViatorSchemaGraph } from "../schema/buildEngine4ViatorSchemaGraph";
@@ -16,6 +17,8 @@ const BOOK_CTA_CLASSES =
 
 export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const schema = buildEngine4ViatorSchemaGraph(tour);
+  const schemaGraph = schema["@graph"] as Array<Record<string, unknown>>;
+  useStructuredData(schemaGraph);
   const heroImage = tour.primaryImage ?? tour.heroImage ?? "";
   const overview = tour.content.overview;
   const highlights = tour.content.highlights;
@@ -62,7 +65,9 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
     .slice(0, 6);
 
   if (process.env.NODE_ENV !== "production") {
-    const engine6Count = moreTours.filter(entry => entry.tour.engine === "engine6").length;
+    const engine6Count = moreTours.filter(
+      entry => entry.tour.engine === "engine6"
+    ).length;
     console.info("[legacy-more-tours][engine4]", {
       city: `${tour.destination.stateSlug}/${tour.destination.citySlug}`,
       currentSlug: tour.slug,
@@ -76,7 +81,7 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
     process.env.NODE_ENV === "development" ||
     process.env.NODE_ENV === "test"
   ) {
-    const graphNodes = schema["@graph"];
+    const graphNodes = schemaGraph;
     const schemaImages = graphNodes
       .filter(
         node =>
