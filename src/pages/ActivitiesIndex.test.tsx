@@ -65,6 +65,9 @@ describe("Activities index", () => {
     expect(boatingTours.length).toBeGreaterThan(0);
     expect(boatingCard?.tourCount).toBe(boatingTours.length);
     expect(boatingCard?.href).toBe("/tours/boating");
+    expect(boatingCard?.image).toBe(
+      "https://cdn.filestackcontent.com/OJiNPwlYQlaHDU6gDwva"
+    );
   });
 
   it("shows the Fishing card only when backed by route inventory", () => {
@@ -83,16 +86,20 @@ describe("Activities index", () => {
       const routeActivityTours = getToursByActivityCategory(card.slug);
 
       expect(card.tourCount).toBe(routeActivityTours.length);
-      expect(card.image).toBe(resolveActivityHeroImage(routeActivityTours));
-      expect(
-        routeActivityTours.some(tour =>
-          [
-            tour.heroImage,
-            tour.primaryImageUrl,
-            tour.resolvedImageUrl,
-          ].includes(card.image ?? undefined)
-        )
-      ).toBe(true);
+      expect(card.image).toBe(
+        resolveActivityHeroImage(routeActivityTours, card.slug)
+      );
+      if (card.slug !== "boating") {
+        expect(
+          routeActivityTours.some(tour =>
+            [
+              tour.heroImage,
+              tour.primaryImageUrl,
+              tour.resolvedImageUrl,
+            ].includes(card.image ?? undefined)
+          )
+        ).toBe(true);
+      }
     });
   });
 
