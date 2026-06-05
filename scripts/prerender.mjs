@@ -730,6 +730,7 @@ const main = async () => {
     engine6SeoModule,
     tourSeoModule,
     engine4RoutingModule,
+    engine4StructuredDataModule,
   ] = await Promise.all([
     safeImport("../src/utils/structuredData.ts", "structuredData"),
     safeImport("../src/data/tourPaths.ts", "tourPaths"),
@@ -741,6 +742,10 @@ const main = async () => {
     safeImport("../src/engine6/seo.ts", "engine6Seo"),
     safeImport("../src/lib/tourSeo.ts", "tourSeo"),
     safeImport("../src/engine4/routing.ts", "engine4Routing"),
+    safeImport(
+      "../src/engine4/schema/buildEngine4ViatorStructuredDataForPath.ts",
+      "engine4StructuredData"
+    ),
   ]);
 
   const tours = Array.isArray(toursGeneratedModule.toursGenerated)
@@ -816,6 +821,9 @@ const main = async () => {
       ? getEngine4TourBySlugs(match[1], match[2], match[3])
       : null;
   };
+  const buildEngine4ViatorStructuredDataNodesForPath =
+    engine4StructuredDataModule?.buildEngine4ViatorStructuredDataNodesForPath ??
+    null;
   const buildEngine2Seo = engine2SeoModule?.buildEngine2Seo ?? null;
   const buildEngine2SchemaGraph = engine2SchemaModule?.buildSchemaGraph ?? null;
   const engine6ResolvedTours = Array.isArray(
@@ -1133,6 +1141,18 @@ const main = async () => {
       let structuredData = null;
 
       if (
+        !isBookingRoute &&
+        engine2Tour?.engine === "engine4" &&
+        buildEngine4ViatorStructuredDataNodesForPath &&
+        normalizeStructuredData
+      ) {
+        const engine4Nodes =
+          buildEngine4ViatorStructuredDataNodesForPath(basePathname);
+        structuredData = normalizeStructuredData({
+          "@context": "https://schema.org",
+          "@graph": Array.isArray(engine4Nodes) ? engine4Nodes : [],
+        });
+      } else if (
         engine2Tour &&
         engine2Seo &&
         buildEngine2SchemaGraph &&
