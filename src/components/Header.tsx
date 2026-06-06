@@ -2,6 +2,11 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { SITE_BRAND_NAME } from "../utils/site";
 
+export const toursMenuItems = [
+  { label: "Day Tours", href: "/activities" },
+  { label: "Multi-Day Adventures", href: "/activities" },
+] as const;
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -29,34 +34,14 @@ export default function Header() {
                 <a className="hover:text-[#1f2a1f]">Tours</a>
               </Link>
               <div className="absolute left-0 top-full hidden w-64 rounded-2xl border border-black/10 bg-white p-4 shadow-lg group-hover:block">
-                <div className="space-y-4 text-sm text-[#405040]">
-                  <div>
-                    <Link href="/tours/day">
-                      <a className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b] hover:text-[#1f2a1f]">
-                        Day Tours
+                <div className="space-y-3 text-sm text-[#405040]">
+                  {toursMenuItems.map(item => (
+                    <Link key={item.label} href={item.href}>
+                      <a className="block text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b] hover:text-[#1f2a1f]">
+                        {item.label}
                       </a>
                     </Link>
-                    <div className="mt-2 space-y-2">
-                      <Link href="/tours/day/cycling">
-                        <a className="block hover:text-[#1f2a1f]">Cycling</a>
-                      </Link>
-                      <Link href="/tours/day/hiking">
-                        <a className="block hover:text-[#1f2a1f]">Hiking</a>
-                      </Link>
-                      <Link href="/tours/day/paddle">
-                        <a className="block hover:text-[#1f2a1f]">
-                          Paddle Sports
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                  <div>
-                    <Link href="/tours/multi-day">
-                      <a className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b] hover:text-[#1f2a1f]">
-                        Multi-Day Adventures
-                      </a>
-                    </Link>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -122,44 +107,16 @@ export default function Header() {
                   <span className="text-[#7a8a6b]">▾</span>
                 </summary>
                 <div className="mt-3 space-y-3">
-                  <Link href="/tours">
-                    <a onClick={closeMobileMenu} className="block font-medium">
-                      All Tours
-                    </a>
-                  </Link>
-                  <details className="rounded-xl border border-black/10 bg-white p-3">
-                    <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-semibold text-[#1f2a1f]">
-                      Day Tours
-                      <span className="text-[#7a8a6b]">▾</span>
-                    </summary>
-                    <div className="mt-3 space-y-2 pl-3 text-sm">
-                      <Link href="/tours/day">
-                        <a onClick={closeMobileMenu} className="block">
-                          Day Tours Overview
-                        </a>
-                      </Link>
-                      <Link href="/tours/day/cycling">
-                        <a onClick={closeMobileMenu} className="block">
-                          Cycling
-                        </a>
-                      </Link>
-                      <Link href="/tours/day/hiking">
-                        <a onClick={closeMobileMenu} className="block">
-                          Hiking
-                        </a>
-                      </Link>
-                      <Link href="/tours/day/paddle">
-                        <a onClick={closeMobileMenu} className="block">
-                          Paddle Sports
-                        </a>
-                      </Link>
-                    </div>
-                  </details>
-                  <Link href="/tours/multi-day">
-                    <a onClick={closeMobileMenu} className="block font-medium">
-                      Multi-Day Adventures
-                    </a>
-                  </Link>
+                  {toursMenuItems.map(item => (
+                    <Link key={item.label} href={item.href}>
+                      <a
+                        onClick={closeMobileMenu}
+                        className="block font-medium"
+                      >
+                        {item.label}
+                      </a>
+                    </Link>
+                  ))}
                 </div>
               </details>
               <Link href="/activities">
