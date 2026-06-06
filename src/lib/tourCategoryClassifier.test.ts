@@ -329,6 +329,45 @@ describe("classifyTourCategories", () => {
     ).toEqual(["boating"]);
   });
 
+  it("requires human-powered paddle intent for Paddle Sports", () => {
+    const excluded: Parameters<typeof classifyTourCategories>[0][] = [
+      {
+        title: "10 Passenger Pontoon Rental",
+        categories: ["paddle-sports", "Boat Rental"],
+      },
+      {
+        title: "Luxury Landau Pontoon Boat Rentals",
+        categories: ["paddle-sports", "Boat Rental", "Rentals"],
+      },
+      {
+        title: "Ocean and You",
+        categories: ["paddle-sports", "Boat Tour"],
+      },
+      {
+        title: "Narrated Scenic Tour from Weirs Beach",
+        categories: ["paddle-sports", "Boat Tour", "History Tour"],
+      },
+      { title: "Party Boat Sandbar Cruise", categories: ["paddle-sports"] },
+      { title: "Dolphin Ocean Boat Tour", categories: ["paddle-sports"] },
+    ];
+
+    excluded.forEach(input => {
+      expect(slugsFor(input)).not.toContain("paddle-sports");
+    });
+
+    const included: Parameters<typeof classifyTourCategories>[0][] = [
+      { title: "Rainbow Springs Paddle Adventure", categories: ["SUP"] },
+      { title: "Silver Springs Paddle Board Tour" },
+      { title: "Sunset Kayak Tour" },
+      { title: "Guided canoe rental" },
+      { title: "Whitewater rafting tour" },
+    ];
+
+    included.forEach(input => {
+      expect(slugsFor(input)).toContain("paddle-sports");
+    });
+  });
+
   it("keeps higher-priority water taxonomy categories out of Boating", () => {
     const examples: Array<[string, string]> = [
       ["whale watching cruise", "wildlife"],
