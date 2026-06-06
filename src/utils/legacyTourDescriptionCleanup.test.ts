@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import { engine6ResolvedTours } from "../engine6/registry";
 import { buildEngine6SchemaGraph } from "../engine6/schema/buildEngine6SchemaGraph";
+import { buildTourMeta } from "../lib/tourMeta";
 import { buildTourSchemaGraph } from "../schema/buildTourSchemaGraph";
 import { buildTourMetaDescription } from "./seo";
 
@@ -141,29 +142,69 @@ describe("legacy tour description cleanup", () => {
     expect(trip.touristType).toBe("Horseback Riding");
   });
 
-  it("does not output detours bullets for SUP - Coronado legacy descriptions", () => {
-    const { metaDescription, webPage, product, trip } = buildLegacyDescriptions(
-      {
-        title: "SUP - Coronado",
-        city: "Coronado",
-        state: "California",
-        operator: "Seaforth Boat Rentals",
-        rawDescription: "detours • with Seaforth Boat Rentals",
+  it("uses the cleaned provider-aware fallback for SUP - Coronado WebPage.description", () => {
+    const tour = {
+      id: "seaforth-boat-rentals-424572",
+      slug: "sup---coronado-424572",
+      title: "SUP - Coronado",
+      operator: "Seaforth Boat Rentals",
+      primaryCategory: "detours",
+      categories: ["detours"],
+      activitySlugs: ["detours"],
+      destination: { city: "Coronado", state: "California" },
+      shortDescription: "detours • with Seaforth Boat Rentals",
+      longDescription: "detours • with Seaforth Boat Rentals",
+    };
+    const canonicalUrl =
+      "https://www.alloutdooradventures.com/destinations/california/coronado/tours/sup---coronado-424572";
+    const webPageDescription = buildTourMeta(tour, canonicalUrl).description;
+    const schemaDescription = buildTourMetaDescription({
+      ...tour,
+      destination: {
+        ...tour.destination,
+        citySlug: "coronado",
+        stateSlug: "california",
+      },
+      badges: {},
+    });
+    const graph = buildTourSchemaGraph({
+      url: canonicalUrl,
+      pageName: tour.title,
+      pageDescription: webPageDescription,
+      heroImage: "https://example.com/legacy-tour.jpg",
+      place: { city: "Coronado", region: "California", countryCode: "US" },
+      product: {
+        id: `${canonicalUrl}#product`,
+        name: tour.title,
+        description: schemaDescription,
         category: "detours",
-      }
-    );
+      },
+      trip: {
+        id: `${canonicalUrl}#trip`,
+        name: tour.title,
+        description: schemaDescription,
+        touristType: "detours",
+        departureLocation: null,
+      },
+      offers: {
+        url: `${canonicalUrl}/book`,
+        price: 99,
+        priceCurrency: "USD",
+      },
+      brandOrgIds: LEGACY_BRAND_IDS,
+    })["@graph"] as Array<Record<string, unknown>>;
+    const webPage = findSchemaNode(graph, "WebPage");
+    const product = findSchemaNode(graph, "Product");
+    const trip = findSchemaNode(graph, "TouristTrip");
 
-    for (const description of [
-      metaDescription,
-      webPage.description,
-      product.description,
-      trip.description,
-    ].map(String)) {
-      expect(description).toBe(
-        "SUP - Coronado in Coronado, California with Seaforth Boat Rentals."
-      );
-      expect(description).not.toMatch(/\bdetours\s*•/i);
-    }
+    expect(webPage.description).toBe(
+      "SUP - Coronado in Coronado, California with Seaforth Boat Rentals."
+    );
+    expect(String(webPage.description)).not.toMatch(/\bdetours\s*•/i);
+    expect(product.description).toBe(webPage.description);
+    expect(trip.description).toBe(webPage.description);
+    expect(product.category).toBe("detours");
+    expect(trip.touristType).toBe("detours");
   });
 
   it("does not output canoeing bullets for Trapper Pack Trip legacy descriptions", () => {
