@@ -1,14 +1,17 @@
+export {};
+
 const originalConsoleLog = console.log;
 console.log = () => undefined;
 console.warn = () => undefined;
 
-const { buildEngine6SchemaGraph } = await import(
-  "../src/engine6/schema/buildEngine6SchemaGraph"
-);
-const { engine6ResolvedTours } = await import("../src/engine6/registry");
-const { ENGINE6_CONFIGURED_PRODUCT_CODES } = await import(
-  "../src/engine6/routes"
-);
+const main = async () => {
+  const { buildEngine6SchemaGraph } = await import(
+    "../src/engine6/schema/buildEngine6SchemaGraph"
+  );
+  const { engine6ResolvedTours } = await import("../src/engine6/registry");
+  const { ENGINE6_CONFIGURED_PRODUCT_CODES } = await import(
+    "../src/engine6/routes"
+  );
 
 const targetProductCode = "6740P7";
 const target = engine6ResolvedTours.find(
@@ -123,3 +126,9 @@ originalConsoleLog(
     2
   )
 );
+};
+
+main().catch(error => {
+  console.error(error instanceof Error ? error.message : String(error));
+  process.exitCode = 1;
+});
