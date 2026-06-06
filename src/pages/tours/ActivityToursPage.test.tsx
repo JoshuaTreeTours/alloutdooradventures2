@@ -7,6 +7,7 @@ import {
   getActivityTourEntriesByLocation,
   getToursByActivityCategory,
   HIKING_ACTIVITY_HERO_IMAGE,
+  JEEP_OFF_ROAD_ACTIVITY_HERO_IMAGE,
   PADDLE_SPORTS_ACTIVITY_HERO_IMAGE,
   SAILING_ACTIVITY_HERO_IMAGE,
 } from "../../data/activityDiscovery";
@@ -91,6 +92,20 @@ describe("ActivityToursPage", () => {
     expect(html).toContain("Sailing Tours &amp; Outdoor Adventures");
     expect(html).toContain(`${sailingCount} tours`);
     expect(html).toContain(SAILING_ACTIVITY_HERO_IMAGE);
+  });
+
+  it("/tours/jeep-off-road uses the dedicated Jeep & Off-Road hero image", () => {
+    const jeepCount = getToursByActivityCategory("jeep-off-road").length;
+    const html = renderToStaticMarkup(
+      <ActivityToursPage params={{ activitySlug: "jeep-off-road" }} />
+    );
+
+    expect(jeepCount).toBeGreaterThan(0);
+    expect(html).toContain(
+      "Jeep &amp; Off-Road Tours &amp; Outdoor Adventures"
+    );
+    expect(html).toContain(`${jeepCount} tours`);
+    expect(html).toContain(JEEP_OFF_ROAD_ACTIVITY_HERO_IMAGE);
   });
 
   it("/tours/fishing renders Fishing with the route-backed count", () => {
