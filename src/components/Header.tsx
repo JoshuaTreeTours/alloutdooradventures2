@@ -4,7 +4,7 @@ import { SITE_BRAND_NAME } from "../utils/site";
 
 export const toursMenuItems = [
   { label: "Day Tours", href: "/activities" },
-  { label: "Multi-Day Adventures", href: "/activities" },
+  { label: "Multi-Day Adventures", href: "/tours/multi-day" },
 ] as const;
 
 export default function Header() {
