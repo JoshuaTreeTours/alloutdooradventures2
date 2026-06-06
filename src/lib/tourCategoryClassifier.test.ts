@@ -443,6 +443,38 @@ describe("classifyTourCategories", () => {
     });
   });
 
+  it("prioritizes horseback and pack-trip signals over legacy canoeing categories", () => {
+    const examples = [
+      "The Trapper Pack Trip 2 Days 1 Night",
+      "Horseback Creek Trail Ride",
+      "Riding Stable Ranch Ride",
+      "Guided Horse Pack Trip",
+    ];
+
+    examples.forEach(title => {
+      const slugs = slugsFor({
+        title,
+        categories: ["canoeing", "boating", "watersports"],
+        description: "Operated by Willow Creek Horseback Rides",
+      });
+
+      expect(slugs[0]).toBe("horseback-riding");
+      expect(slugs).not.toContain("paddle-sports");
+      expect(slugs).not.toContain("boating");
+      expect(slugs).not.toContain("water-sports");
+    });
+  });
+
+  it("keeps explicit watercraft-dominant titles in water categories", () => {
+    const slugs = slugsFor({
+      title: "Canoeing River Tour",
+      categories: ["horseback-riding"],
+    });
+
+    expect(slugs[0]).toBe("paddle-sports");
+    expect(slugs).toContain("paddle-sports");
+  });
+
   it("does not classify hiking or non-riding horse mentions as Horseback Riding", () => {
     expect(slugsFor({ title: "Hiking trail tour" })).toEqual(["hiking"]);
     expect(slugsFor({ title: "Historic horse carriage ride" })).not.toContain(

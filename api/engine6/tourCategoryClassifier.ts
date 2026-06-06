@@ -81,7 +81,7 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "paddle-sports",
     signals: [
-      /\b(?:kayak|kayaking|canoe|paddleboard|stand up paddle|sup|rafting|river float)\b/,
+      /\b(?:kayak|kayaking|canoe|canoeing|paddleboard|stand up paddle|sup|rafting|river float)\b/,
     ],
   },
   {
@@ -123,7 +123,7 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "horseback-riding",
     signals: [
-      /\b(?:horseback riding|horseback tour|trail ride|ranch ride|horse riding|equestrian tour|cowboy ride|mule ride|pony ride)\b/,
+      /\b(?:horseback|horse|pack trip|trail ride|riding stable|ranch ride|horseback riding|horseback tour|horse riding|equestrian tour|cowboy ride|mule ride|pony ride)\b/,
     ],
   },
   {
@@ -232,7 +232,10 @@ const NON_FOOD_PRIMARY_INTENT_PATTERN =
   /\b(?:jet ski|jetski|waverunner|wave runner|snorkel|snorkeling|scuba|parasail|parasailing|kayak|kayaking|canoe|paddleboard|stand up paddle|\bsup\b|rafting|sailing|sailboat|sail boat|schooner|sunset sail|catamaran|yacht|boat tour|sightseeing boat tour|harbou?r cruise|bay cruise|river cruise|lake cruise|canal cruise|boat rental|speedboat|speed boat|jet boat|ferry|whale|dolphin|orca|manatee|seal|turtle|wildlife|fishing|bike tour|bicycle tour|e[- ]?bike tour|ebike tour|cycling|hike|hiking|walking tour|city tour|sightseeing|bus tour|van tour|suv tour|trolley|jeep|off[- ]?road|atv|utv|horseback|helicopter|airplane|flightseeing|stargazing)\b/;
 
 const HORSEBACK_RIDING_PATTERN =
-  /\b(?:horseback riding|horseback tour|trail ride|ranch ride|horse riding|equestrian tour|cowboy ride|mule ride|pony ride)\b/;
+  /\b(?:horseback|horse|pack trip|trail ride|riding stable|ranch ride|horseback riding|horseback tour|horse riding|equestrian tour|cowboy ride|mule ride|pony ride)\b/;
+
+const EXPLICIT_WATERCRAFT_DOMINANCE_PATTERN =
+  /\b(?:kayak|kayaking|canoe|canoeing|paddleboard|stand up paddle|\bsup\b|rafting|river float|jet ski|jetski|waverunner|wave runner|boat tour|sightseeing boat tour|harbou?r cruise|bay cruise|river cruise|lake cruise|canal cruise|boat rental|speedboat|speed boat|jet boat|sailing|sailboat|sail boat|schooner|catamaran|yacht|snorkel|snorkeling|scuba)\b/;
 
 const NON_HORSEBACK_RIDING_PATTERN =
   /\b(?:carriage ride|carriage rides|horse carriage|horsedrawn carriage|horse drawn carriage|horse racing|horse race|race track|racetrack|spectator|ranch tour|ranch tours|historical tour|historic tour|rail trail ride|atv trail ride|ez[- ]?raider)\b/;
@@ -277,6 +280,15 @@ const NON_HIKING_PRIMARY_PATTERN =
   /\b(?:bike|bicycle|e[- ]?bike|ebike|cycling|pedal|jeep|hummer|4x4|off[- ]?road|offroad|atv|utv|buggy|kayak|canoe|paddle|sup|snorkel|boat|sail|sailing|yacht|catamaran|cruise|jet ski|jetski|fishing|angling|horse|horseback|zipline|zip line|segway|airplane|flightseeing|aerial)\b/;
 
 const NEGATED_HIKING_PATTERN = /\b(?:instead of|rather than|without) hiking\b/;
+
+const HORSEBACK_SUPPRESSED_BY_RIDING_INTENT_SLUGS: TourActivityCategorySlug[] = [
+  HIKING_SLUG,
+  WALKING_TOURS_SLUG,
+  SIGHTSEEING_SLUG,
+  PADDLE_SPORTS_SLUG,
+  BOATING_SLUG,
+  WATER_SPORTS_SLUG,
+];
 
 export const normalizeTourCategoryText = (value: string) =>
   value
@@ -358,6 +370,7 @@ export const classifyTourCategories = (
   input: TourCategoryClassificationInput
 ): TourCategoryClassification => {
   const normalizedText = buildClassifierText(input);
+  const titleIntentText = normalizeTourCategoryText(input.title ?? "");
   const primaryIntentText = normalizeTourCategoryText(
     [input.title, ...(input.categories ?? [])].filter(Boolean).join(" ")
   );
@@ -414,9 +427,18 @@ export const classifyTourCategories = (
     }
 
     if (
-      [HIKING_SLUG, WALKING_TOURS_SLUG, SIGHTSEEING_SLUG].includes(slug) &&
-      HORSEBACK_RIDING_PATTERN.test(normalizedText) &&
-      !NON_HORSEBACK_RIDING_PATTERN.test(normalizedText)
+      slug === HORSEBACK_RIDING_SLUG &&
+      EXPLICIT_WATERCRAFT_DOMINANCE_PATTERN.test(titleIntentText) &&
+      !HORSEBACK_RIDING_PATTERN.test(titleIntentText)
+    ) {
+      return false;
+    }
+
+    if (
+      HORSEBACK_SUPPRESSED_BY_RIDING_INTENT_SLUGS.includes(slug) &&
+      HORSEBACK_RIDING_PATTERN.test(titleIntentText) &&
+      !NON_HORSEBACK_RIDING_PATTERN.test(normalizedText) &&
+      !EXPLICIT_WATERCRAFT_DOMINANCE_PATTERN.test(titleIntentText)
     ) {
       return false;
     }
