@@ -63,6 +63,36 @@ describe("Engine6 schema activity parity", () => {
     expect(product.category).toBe("Water Sports");
   });
 
+  it("keeps non-food taxonomy regressions out of Engine6 JSON-LD categories", () => {
+    const examples = [
+      {
+        path: "/destinations/florida/miami/tours/miami-biscayne-bay-jet-ski-tour",
+        expectedCategory: "Water Sports",
+      },
+      {
+        path: "/destinations/florida/fort-lauderdale/tours/reef-and-snorkel-paddle-tour-89173p8",
+        expectedCategory: "Water Sports",
+      },
+      {
+        path: "/destinations/california/san-diego/tours/san-diego-bay-day-sail",
+        expectedCategory: "Sailing",
+      },
+      {
+        path: "/destinations/california/santa-barbara/tours/santa-barbara-vineyard-to-table-taste-tour-by-e-bike",
+        expectedCategory: "Cycling",
+      },
+    ];
+
+    examples.forEach(({ path, expectedCategory }) => {
+      const { trip, product } = getSchemaCategoryValues(path);
+
+      expect(trip.touristType).toBe(expectedCategory);
+      expect(product.category).toBe(expectedCategory);
+      expect(JSON.stringify({ trip, product })).not.toContain("Food & Wine");
+      expect(JSON.stringify({ trip, product })).not.toContain("food-wine");
+    });
+  });
+
   it("keeps city/private sightseeing in Sightseeing & City Tours", () => {
     const classification = classifyTourCategories({
       title: "Private North Shore and Salem Tour",
