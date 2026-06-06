@@ -27,8 +27,29 @@ export type ActivityToursPageProps = {
   };
 };
 
+const CYCLING_ACTIVITY_PAGE_HERO_IMAGE =
+  "https://www.alloutdooradventures.com/images/cycling-hero.jpg";
+
 const formatCountLabel = (count: number) =>
   count === 1 ? "1 tour" : `${count} tours`;
+
+const resolveActivityPageHeroImage = ({
+  activitySlug,
+  citySlug,
+  fallbackHeroImage,
+  stateSlug,
+}: {
+  activitySlug: string;
+  citySlug?: string;
+  fallbackHeroImage: string | null;
+  stateSlug?: string;
+}) => {
+  if (activitySlug === "cycling" && !stateSlug && !citySlug) {
+    return CYCLING_ACTIVITY_PAGE_HERO_IMAGE;
+  }
+
+  return fallbackHeroImage;
+};
 
 export default function ActivityToursPage({ params }: ActivityToursPageProps) {
   const activity = getActivityDiscoveryPage(params.activitySlug);
@@ -59,10 +80,17 @@ export default function ActivityToursPage({ params }: ActivityToursPageProps) {
     [params.activitySlug, params.stateSlug, params.citySlug]
   );
 
-  const heroImage = useMemo(
+  const fallbackHeroImage = useMemo(
     () => resolveActivityHeroImage(activityTours, params.activitySlug),
     [activityTours, params.activitySlug]
   );
+
+  const heroImage = resolveActivityPageHeroImage({
+    activitySlug: params.activitySlug,
+    citySlug: params.citySlug,
+    fallbackHeroImage,
+    stateSlug: params.stateSlug,
+  });
 
   const stateOptions = useMemo(
     () => getActivityStateOptions(params.activitySlug),
