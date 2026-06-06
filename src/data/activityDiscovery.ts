@@ -149,16 +149,7 @@ export const getActivityDiscoveryPage = (activitySlug: string) =>
   ACTIVITY_DISCOVERY_PAGES.find(activity => activity.slug === activitySlug) ??
   null;
 
-const STALE_ACTIVITY_LABEL_PATTERN =
-  /^(?:hiking(?:-tour|-tours)?|walking(?:-tour|-tours)?|walking tour|walking tours|sightseeing(?:-tour|-tours)?|sightseeing-city-tours)$/;
-
 const resolvedPrimaryActivitySlugCache = new WeakMap<Tour, string | null>();
-
-const isStaleActivityLabelValue = (value: string | null | undefined) =>
-  Boolean(value) &&
-  STALE_ACTIVITY_LABEL_PATTERN.test(
-    normalizeTourCategoryText(value).replace(/\s+/g, "-")
-  );
 
 const normalizeActivityLookupValue = (value: string | null | undefined) =>
   value ? normalizeTourCategoryText(value).replace(/-tour$/, "") : "";
@@ -175,24 +166,44 @@ const resolvePrimaryActivitySlugFromValue = (
 ) =>
   PRIMARY_ACTIVITY_SLUG_LOOKUP.get(normalizeActivityLookupValue(value)) ?? null;
 
-const classifyTourPrimaryActivitySlug = (tour: Tour) =>
-  classifyTourCategories({
-    title: tour.title,
-    overview: tour.shortDescription,
-    description: tour.longDescription,
-    highlights: [
-      ...((tour.content?.highlights as string[] | undefined) ?? []),
-      ...(tour.tags ?? []),
-      ...(tour.tagPills ?? []),
-    ].filter(
-      (value): value is string =>
-        Boolean(value) && !isStaleActivityLabelValue(value)
-    ),
-    categories: [tour.primaryCategory].filter(
-      (value): value is string =>
-        Boolean(value) && !isStaleActivityLabelValue(value)
-    ),
-  }).matchedCategorySlugs[0] ?? null;
+const REPAIRED_ACTIVITY_SLUGS = new Set(["hiking", "walking-tours"]);
+
+const isRepairedActivitySlug = (slug: string | null | undefined) =>
+  Boolean(slug && REPAIRED_ACTIVITY_SLUGS.has(slug));
+
+const isRepairedActivityValue = (value: string | null | undefined) =>
+  isRepairedActivitySlug(resolvePrimaryActivitySlugFromValue(value));
+
+const isStaleHikingValue = (value: string | null | undefined) =>
+  resolvePrimaryActivitySlugFromValue(value) === "hiking";
+
+const classifyTourPrimaryActivitySlug = (tour: Tour) => {
+  const hasStoredRepairedActivity =
+    isRepairedActivityValue(tour.primaryDisplayCategory) ||
+    isRepairedActivityValue(tour.primaryCategory) ||
+    isRepairedActivitySlug(tour.activityCategories?.[0]?.slug);
+
+  return (
+    classifyTourCategories({
+      title: tour.title,
+      overview: hasStoredRepairedActivity ? undefined : tour.shortDescription,
+      description: hasStoredRepairedActivity ? undefined : tour.longDescription,
+      highlights: [
+        ...((tour.content?.highlights as string[] | undefined) ?? []),
+        ...(tour.tags ?? []),
+        ...(tour.tagPills ?? []),
+      ].filter(
+        (value): value is string =>
+          Boolean(value) &&
+          !(hasStoredRepairedActivity && isStaleHikingValue(value))
+      ),
+      categories: [tour.primaryCategory].filter(
+        (value): value is string =>
+          Boolean(value) && !isRepairedActivityValue(value)
+      ),
+    }).matchedCategorySlugs[0] ?? null
+  );
+};
 
 export const getResolvedPrimaryActivitySlug = (tour: Tour) => {
   const cached = resolvedPrimaryActivitySlugCache.get(tour);
@@ -200,11 +211,15 @@ export const getResolvedPrimaryActivitySlug = (tour: Tour) => {
     return cached;
   }
 
-  const resolvedSlug =
+  const storedPrimarySlug =
     resolvePrimaryActivitySlugFromValue(tour.primaryDisplayCategory) ??
     resolvePrimaryActivitySlugFromValue(tour.primaryCategory) ??
     tour.activityCategories?.[0]?.slug ??
-    classifyTourPrimaryActivitySlug(tour);
+    null;
+  const classifiedSlug = classifyTourPrimaryActivitySlug(tour);
+  const resolvedSlug = isRepairedActivitySlug(storedPrimarySlug)
+    ? classifiedSlug
+    : (storedPrimarySlug ?? classifiedSlug);
 
   resolvedPrimaryActivitySlugCache.set(tour, resolvedSlug);
   return resolvedSlug;
