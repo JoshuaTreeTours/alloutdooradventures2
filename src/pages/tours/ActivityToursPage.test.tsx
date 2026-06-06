@@ -5,6 +5,7 @@ import TourCard from "../../components/TourCard";
 import {
   getActivityTourEntriesByLocation,
   getToursByActivityCategory,
+  HIKING_ACTIVITY_HERO_IMAGE,
   SAILING_ACTIVITY_HERO_IMAGE,
 } from "../../data/activityDiscovery";
 import {
@@ -27,13 +28,17 @@ describe("ActivityToursPage", () => {
     expect(html).toContain("Explore cycling tour cards");
   });
 
-  it("/tours/hiking renders hiking tours", () => {
+  it("/tours/hiking renders hiking tours with the dedicated Hiking hero image", () => {
+    const hikingCount = getToursByActivityCategory("hiking").length;
     const html = renderToStaticMarkup(
       <ActivityToursPage params={{ activitySlug: "hiking" }} />
     );
 
+    expect(hikingCount).toBeGreaterThan(0);
     expect(html).toContain("Hiking Tours &amp; Outdoor Adventures");
+    expect(html).toContain(`${hikingCount} tours`);
     expect(html).toContain("Explore hiking tour cards");
+    expect(html).toContain(HIKING_ACTIVITY_HERO_IMAGE);
   });
 
   it("/tours/horseback-riding renders Horseback Riding with the route-backed count", () => {
