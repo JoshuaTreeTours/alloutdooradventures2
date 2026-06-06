@@ -12,6 +12,13 @@ export type DestinationCityCard = {
 
 const normalizeCityKey = (city: City) => city.slug.trim().toLowerCase();
 
+const cityNameCollator = new Intl.Collator(undefined, {
+  sensitivity: "base",
+});
+
+const compareCitiesByDisplayName = (a: City, b: City) =>
+  cityNameCollator.compare(a.name, b.name);
+
 const stateTourCache = new Map<string, Tour[]>();
 const stateTourCountCache = new Map<string, Map<string, number>>();
 const stateTourHeroCache = new Map<string, Map<string, string | null>>();
@@ -118,7 +125,4 @@ export const getDestinationCityCards = (
       tourCount: getDestinationCityTourCount(state.slug, city.slug),
       heroImage: getDestinationCityHeroImage(state.slug, city.slug),
     }))
-    .sort(
-      (a, b) =>
-        b.tourCount - a.tourCount || a.city.name.localeCompare(b.city.name)
-    );
+    .sort((a, b) => compareCitiesByDisplayName(a.city, b.city));
