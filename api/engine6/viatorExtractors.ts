@@ -902,21 +902,59 @@ const extractDuration = (product: RecordLike) => {
     }
   }
 
+  const formatMinutesDuration = (minutesValue: number) => {
+    const minutes = Math.trunc(minutesValue);
+    if (minutes % 60 === 0) {
+      const hours = minutes / 60;
+      return `${hours} ${hours === 1 ? "hour" : "hours"}`;
+    }
+    return `${minutes} minutes`;
+  };
+  const formatVariableMinutesDuration = (
+    fromValue: number,
+    toValue: number
+  ) => {
+    const fromMinutes = Math.trunc(fromValue);
+    const toMinutes = Math.trunc(toValue);
+    if (fromMinutes % 60 === 0 && toMinutes % 60 === 0) {
+      const fromHours = fromMinutes / 60;
+      const toHours = toMinutes / 60;
+      return `${fromHours} to ${toHours} hours`;
+    }
+    return `${formatMinutesDuration(fromValue)} to ${formatMinutesDuration(toValue)}`;
+  };
+
   const fixedMinutes = parseLooseNumber(
     readPath(product, ["itinerary", "duration", "fixedDurationInMinutes"])
   );
   if (fixedMinutes !== null && fixedMinutes > 0) {
-    const minutes = Math.trunc(fixedMinutes);
-    if (minutes % 60 === 0) {
-      const hours = minutes / 60;
-      return {
-        value: `${hours} ${hours === 1 ? "hour" : "hours"}`,
-        path: "product.itinerary.duration.fixedDurationInMinutes",
-      };
-    }
     return {
-      value: `${minutes} minutes`,
+      value: formatMinutesDuration(fixedMinutes),
       path: "product.itinerary.duration.fixedDurationInMinutes",
+    };
+  }
+
+  const variableFromMinutes = parseLooseNumber(
+    readPath(product, ["itinerary", "duration", "variableDurationFromMinutes"])
+  );
+  const variableToMinutes = parseLooseNumber(
+    readPath(product, ["itinerary", "duration", "variableDurationToMinutes"])
+  );
+  if (
+    variableFromMinutes !== null &&
+    variableToMinutes !== null &&
+    variableFromMinutes > 0 &&
+    variableToMinutes > 0
+  ) {
+    return {
+      value:
+        variableFromMinutes === variableToMinutes
+          ? formatMinutesDuration(variableFromMinutes)
+          : formatVariableMinutesDuration(
+              variableFromMinutes,
+              variableToMinutes
+            ),
+      path: "product.itinerary.duration.variableDurationFromMinutes|product.itinerary.duration.variableDurationToMinutes",
     };
   }
 

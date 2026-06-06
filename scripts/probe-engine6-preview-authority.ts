@@ -82,7 +82,9 @@ const requestUrl = async (url: string): Promise<HttpProbeResponse> => {
   try {
     const response = await fetch(url, { method: "GET" });
     const headers = new Map<string, string>();
-    response.headers.forEach((value, key) => headers.set(key.toLowerCase(), value));
+    response.headers.forEach((value, key) =>
+      headers.set(key.toLowerCase(), value)
+    );
     return {
       status: response.status,
       headers,

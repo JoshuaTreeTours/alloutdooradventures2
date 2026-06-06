@@ -757,6 +757,12 @@ export default async function handler(req: any, res: any) {
     typeof liveAvailabilityPrice === "number"
       ? ({
           ...extracted,
+          diagnostics: {
+            ...extracted.diagnostics,
+            commercialPriceFieldPath: "availability.summary.fromPrice",
+            commercialPriceRawValue: liveAvailabilityPrice,
+            priceSourceUsed: "live-price",
+          },
           extracted: {
             ...extracted.extracted,
             priceAmount: liveAvailabilityPrice,
