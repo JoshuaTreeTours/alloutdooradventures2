@@ -81,7 +81,7 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "paddle-sports",
     signals: [
-      /\b(?:kayak|kayaking|canoe|canoeing|paddleboard|stand up paddle|sup|rafting|river float)\b/,
+      /\b(?:kayaks?|kayaking|canoes?|canoeing|paddle[- ]?boards?|paddleboarding|stand[- ]?up paddle(?:board(?:s|ing)?)?|\bsup\b|whitewater rafting|river rafting|paddle rafting|rafting (?:trip|tour|adventure|excursion)|river float)\b/,
     ],
   },
   {
@@ -93,7 +93,7 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "boating",
     signals: [
-      /\b(?:boat tour|sightseeing boat tour|sightseeing cruise|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|brunch cruise|dinner cruise|holiday cruise|cocoa cruise|pirate (?:boat|cruise)|ferry|ferry tickets|ferry tour|speedboat(?: adventure| sightseeing)?(?: tour)?|speed boat(?: adventure| sightseeing)?(?: tour)?|jet boat(?: adventure| tour)?|adventure boat|duffy boat|electric boat|pontoon boat|private boat (?:charter|cruise)|boat with a captain|yacht charter|yacht cruise|cruise on yacht|amphibious boat|amphibious seal tour|duck boat|seal tour|water taxi(?:[- ]style)? sightseeing tour|dinner boat|boat cruise|boat rental|party barge cruise|sandbar cruise|fort lauderdale cruise)\b/,
+      /\b(?:boat tour|sightseeing boat tour|sightseeing cruise|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|brunch cruise|dinner cruise|holiday cruise|cocoa cruise|pirate (?:boat|cruise)|ferry|ferry tickets|ferry tour|speedboat(?: adventure| sightseeing)?(?: tour)?|speed boat(?: adventure| sightseeing)?(?: tour)?|jet boat(?: adventure| tour)?|adventure boat|duffy boat|electric boat|pontoon boat|private boat (?:charter|cruise)|boat with a captain|yacht charter|yacht cruise|cruise on yacht|amphibious boat|amphibious seal tour|duck boat|seal tour|water taxi(?:[- ]style)? sightseeing tour|dinner boat|boat cruise|boat rental|party barge cruise|party boat|tiki boat|bar boat|sandbar cruise|fort lauderdale cruise|pontoon(?: boat)? rentals?|boat rentals?|narrated scenic (?:boat )?tour|scenic boat tours?|dolphin cruise|ocean boat tours?)\b/,
     ],
   },
   {
@@ -256,7 +256,13 @@ const NON_SAILING_PRIMARY_PATTERN =
   /\b(?:sightseeing boat tour|sightseeing cruise|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|brunch cruise|dinner cruise|holiday cruise|cocoa cruise|pirate (?:boat|cruise)|ferry|ferry tickets|boat rental|duffy boat|electric boat|pontoon boat|speedboat|speed boat|jet boat|parasail|parasailing|private boat (?:charter|cruise)|boat with a captain|city tour|day trip|road trip|bus tour|van tour|suv tour)\b/;
 
 const EXPLICIT_BOATING_VESSEL_PATTERN =
-  /\b(?:boat tour|sightseeing boat tour|sightseeing cruise|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|brunch cruise|dinner cruise|holiday cruise|cocoa cruise|pirate (?:boat|cruise)|ferry|ferry tickets|ferry tour|yacht charter|yacht cruise|cruise on yacht|duffy boat|electric boat|pontoon boat|speedboat(?: adventure| sightseeing)?(?: tour)?|speed boat(?: adventure| sightseeing)?(?: tour)?|jet boat(?: adventure| tour)?|private boat (?:charter|cruise)|boat with a captain|amphibious (?:seal|duck) tour|amphibious boat|duck boat|seal tour|water taxi(?:[- ]style)? sightseeing tour|dinner boat|boat cruise|boat rental|party barge cruise|sandbar cruise|fort lauderdale cruise)\b/;
+  /\b(?:boat tour|sightseeing boat tour|sightseeing cruise|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|brunch cruise|dinner cruise|holiday cruise|cocoa cruise|pirate (?:boat|cruise)|ferry|ferry tickets|ferry tour|yacht charter|yacht cruise|cruise on yacht|duffy boat|electric boat|pontoon boat|speedboat(?: adventure| sightseeing)?(?: tour)?|speed boat(?: adventure| sightseeing)?(?: tour)?|jet boat(?: adventure| tour)?|private boat (?:charter|cruise)|boat with a captain|amphibious (?:seal|duck) tour|amphibious boat|duck boat|seal tour|water taxi(?:[- ]style)? sightseeing tour|dinner boat|boat cruise|boat rental|party barge cruise|party boat|tiki boat|bar boat|sandbar cruise|fort lauderdale cruise|pontoon(?: boat)? rentals?|boat rentals?|narrated scenic (?:boat )?tour|scenic boat tours?|dolphin cruise|ocean boat tours?)\b/;
+
+const PADDLE_SPORTS_ALLOWED_INTENT_PATTERN =
+  /\b(?:kayaks?|kayaking|canoes?|canoeing|paddle[- ]?boards?|paddleboarding|stand[- ]?up paddle(?:board(?:s|ing)?)?|\bsup\b|whitewater rafting|river rafting|paddle rafting|rafting (?:trip|tour|adventure|excursion)|river float|paddle (?:adventure|tour|rental)(?: [a-z0-9]+){0,6} (?:kayak|canoe|paddle[- ]?board|sup|raft))\b/;
+
+const PADDLE_SPORTS_PRIMARY_EXCLUSION_PATTERN =
+  /\b(?:boats?|pontoon|yacht|cruise|charter|ferry|sailing|sailboat|sail boat|catamaran|motorboat|driftboat|drift boat|speedboat|speed boat|jet ski|jetski|waverunner|wave runner|dolphin cruise|narrated scenic (?:boat )?tour|scenic boat tours?|tiki boat|bar boat|party boat|boat rentals?)\b/;
 
 const LAND_PRIMARY_BOATING_EXCLUSION_PATTERN =
   /\b(?:land[- ]based city tour|private city tour|city tour|road trip|day trip|national park day trip|gocar|go car|limo ride|shopping cart limo|bike tour|bicycle tour|e[- ]?bike tour|ebike tour|walking tour|bus tour|van tour|suv tour|jeep tour|off[- ]?road tour)\b/;
@@ -344,6 +350,34 @@ const toSimpleSlug = (value: string) =>
 const pushUnique = <T>(items: T[], item: T) => {
   if (!items.includes(item)) items.push(item);
 };
+
+const PADDLE_SPORTS_SOURCE_INTENT_SLUGS = new Set([
+  "canoeing",
+  "canoe",
+  "canoe-tour",
+  "kayaking",
+  "kayak",
+  "kayak-tour",
+  "sup",
+  "stand-up-paddleboard",
+  "stand-up-paddleboarding",
+  "paddleboard",
+  "paddleboarding",
+  "paddle-board",
+  "paddle-boarding",
+  "rafting",
+  "whitewater-rafting",
+  "river-rafting",
+]);
+
+const hasPaddleSportsSourceIntent = (
+  categories: TourCategoryClassificationInput["categories"]
+) =>
+  (categories ?? []).some(
+    sourceCategory =>
+      Boolean(sourceCategory) &&
+      PADDLE_SPORTS_SOURCE_INTENT_SLUGS.has(toSimpleSlug(sourceCategory!))
+  );
 
 const orderPrimaryFirst = (
   slugs: TourActivityCategorySlug[],
@@ -531,6 +565,27 @@ export const classifyTourCategories = (
       )
     ) {
       return false;
+    }
+
+    if (slug === PADDLE_SPORTS_SLUG) {
+      const hasAnyPaddleIntent =
+        PADDLE_SPORTS_ALLOWED_INTENT_PATTERN.test(contentIntentText) ||
+        hasPaddleSportsSourceIntent(input.categories);
+
+      if (!hasAnyPaddleIntent) {
+        return false;
+      }
+
+      if (PADDLE_SPORTS_PRIMARY_EXCLUSION_PATTERN.test(primaryIntentText)) {
+        return false;
+      }
+
+      if (
+        /\bdolphins?\b/.test(primaryIntentText) &&
+        !PADDLE_SPORTS_ALLOWED_INTENT_PATTERN.test(titleIntentText)
+      ) {
+        return false;
+      }
     }
 
     if (slug === BOATING_SLUG) {

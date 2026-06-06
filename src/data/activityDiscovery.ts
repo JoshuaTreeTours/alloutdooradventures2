@@ -166,7 +166,11 @@ const resolvePrimaryActivitySlugFromValue = (
 ) =>
   PRIMARY_ACTIVITY_SLUG_LOOKUP.get(normalizeActivityLookupValue(value)) ?? null;
 
-const REPAIRED_ACTIVITY_SLUGS = new Set(["hiking", "walking-tours"]);
+const REPAIRED_ACTIVITY_SLUGS = new Set([
+  "hiking",
+  "walking-tours",
+  "paddle-sports",
+]);
 
 const isRepairedActivitySlug = (slug: string | null | undefined) =>
   Boolean(slug && REPAIRED_ACTIVITY_SLUGS.has(slug));
@@ -174,20 +178,30 @@ const isRepairedActivitySlug = (slug: string | null | undefined) =>
 const isRepairedActivityValue = (value: string | null | undefined) =>
   isRepairedActivitySlug(resolvePrimaryActivitySlugFromValue(value));
 
-const isStaleHikingValue = (value: string | null | undefined) =>
-  resolvePrimaryActivitySlugFromValue(value) === "hiking";
+const isStaleRepairedActivityValue = (value: string | null | undefined) =>
+  isRepairedActivityValue(value);
 
 const classifyTourPrimaryActivitySlug = (tour: Tour) => {
   const hasStoredRepairedActivity =
     isRepairedActivityValue(tour.primaryDisplayCategory) ||
     isRepairedActivityValue(tour.primaryCategory) ||
     isRepairedActivitySlug(tour.activityCategories?.[0]?.slug);
+  const suppressStoredDescription =
+    resolvePrimaryActivitySlugFromValue(tour.primaryDisplayCategory) ===
+      "hiking" ||
+    resolvePrimaryActivitySlugFromValue(tour.primaryDisplayCategory) ===
+      "walking-tours" ||
+    resolvePrimaryActivitySlugFromValue(tour.primaryCategory) === "hiking" ||
+    resolvePrimaryActivitySlugFromValue(tour.primaryCategory) ===
+      "walking-tours" ||
+    tour.activityCategories?.[0]?.slug === "hiking" ||
+    tour.activityCategories?.[0]?.slug === "walking-tours";
 
   return (
     classifyTourCategories({
       title: tour.title,
-      overview: hasStoredRepairedActivity ? undefined : tour.shortDescription,
-      description: hasStoredRepairedActivity ? undefined : tour.longDescription,
+      overview: suppressStoredDescription ? undefined : tour.shortDescription,
+      description: suppressStoredDescription ? undefined : tour.longDescription,
       highlights: [
         ...((tour.content?.highlights as string[] | undefined) ?? []),
         ...(tour.tags ?? []),
@@ -195,7 +209,7 @@ const classifyTourPrimaryActivitySlug = (tour: Tour) => {
       ].filter(
         (value): value is string =>
           Boolean(value) &&
-          !(hasStoredRepairedActivity && isStaleHikingValue(value))
+          !(hasStoredRepairedActivity && isStaleRepairedActivityValue(value))
       ),
       categories: [tour.primaryCategory].filter(
         (value): value is string =>

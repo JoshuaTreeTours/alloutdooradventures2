@@ -200,6 +200,26 @@ describe("activity discovery data", () => {
     ).toBe(false);
   });
 
+  it("repairs stale Paddle Sports labels in route-backed activity results", () => {
+    const paddleTours = getToursByActivityCategory("paddle-sports");
+    const byTitle = (title: string) =>
+      paddleTours.some(tour => tour.title === title);
+
+    expect(byTitle("10 Passenger Pontoon Rental")).toBe(false);
+    expect(byTitle("Luxury Landau Pontoon Boat Rentals")).toBe(false);
+    expect(byTitle("Ocean and You")).toBe(false);
+    expect(byTitle("Narrated Scenic Tour from Weirs Beach")).toBe(false);
+
+    expect(byTitle("Rainbow Springs Paddle Adventure")).toBe(true);
+    expect(byTitle("Silver Springs Paddle Board Tour")).toBe(true);
+    expect(
+      paddleTours.some(tour => /sunset kayak tour/i.test(tour.title))
+    ).toBe(true);
+
+    expect(paddleTours.length).toBeGreaterThanOrEqual(500);
+    expect(paddleTours.length).toBeLessThanOrEqual(850);
+  });
+
   it("routes San Diego Bay Day Sail by its resolved Sailing primary category", () => {
     const cyclingCaliforniaTours = getToursByActivityLocation({
       activitySlug: "cycling",
