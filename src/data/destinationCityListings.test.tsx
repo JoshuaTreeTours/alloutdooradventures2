@@ -38,6 +38,42 @@ describe("destination city listings", () => {
     (globalThis as { location?: Location }).location = previousLocation;
   });
 
+  it("renders state destination city cards alphabetically by display name", () => {
+    const previousWindow = (globalThis as { window?: Window }).window;
+    const previousLocation = (globalThis as { location?: Location }).location;
+    (globalThis as { window?: Window }).window = {
+      location: { pathname: "/destinations/california", search: "" },
+      history: { pushState: () => undefined },
+    } as unknown as Window;
+    (globalThis as { location?: Location }).location = (
+      globalThis as { window?: Window }
+    ).window!.location as unknown as Location;
+
+    const california = getStateBySlug("california");
+    expect(california).toBeDefined();
+
+    const html = renderToString(
+      <DestinationLandingTemplate state={california!} tours={[]} />
+    );
+    const renderedCitySlugs = Array.from(
+      html.matchAll(/href="\/destinations\/california\/([^"/]+)\/tours"/g),
+      match => match[1]
+    );
+    const expectedCityCards = getDestinationCityCards(california!);
+
+    expect(renderedCitySlugs).toEqual(
+      expectedCityCards.map(({ city }) => city.slug)
+    );
+    expect(expectedCityCards.map(({ city }) => city.name)).toEqual(
+      [...expectedCityCards]
+        .map(({ city }) => city.name)
+        .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }))
+    );
+
+    (globalThis as { window?: Window }).window = previousWindow;
+    (globalThis as { location?: Location }).location = previousLocation;
+  });
+
   it("includes every eligible fallback child city destination with tours on its parent index", () => {
     const missingByState = states.flatMap(state => {
       const listedSlugs = new Set(
