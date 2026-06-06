@@ -134,6 +134,7 @@ export const buildTourMetaDescription = (
       stateSlug?: string;
     };
     shortDescription?: string;
+    operator?: string;
     badges?: { tagline?: string };
     longDescription?: string;
   },
@@ -153,6 +154,7 @@ export const buildTourMetaDescription = (
     variantLabel:
       extractVariantLabel(tour.title) ??
       extractVariantLabel(tour.badges?.tagline),
+    providerName: tour.operator,
     isDuplicate: options?.isDuplicate,
     diagnosticsLabel: options?.diagnosticsLabel,
   });

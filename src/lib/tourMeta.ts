@@ -112,6 +112,29 @@ const withLengthCap = (value: string, max: number) =>
     ? value
     : `${value.slice(0, Math.max(0, max - 1)).trimEnd()}…`;
 
+const hasLegacyCategoryProviderBulletLeak = (value: string) =>
+  /\b[a-z][a-z0-9&/_-]*(?:\s+[a-z0-9&/_-]+){0,5}\s*[•·]\s*with\s+[^.!?]+/i.test(
+    value
+  );
+
+const pickSafeLegacyTourName = (tour: TourLike) => {
+  const base = clean(tour.title) || clean(tour.name);
+  return (
+    stripTrailingId(stripLegacyPrefix(base)) ||
+    pickTourName(tour) ||
+    "this tour"
+  );
+};
+
+const buildSafeLegacyDescription = (tour: TourLike) => {
+  const tourName = pickSafeLegacyTourName(tour);
+  const city = pickCity(tour);
+  const state = pickState(tour);
+  const provider = pickProvider(tour);
+
+  return `${tourName} in ${city}, ${state} with ${provider}.`;
+};
+
 const getTourSlugFromPath = (pathname: string) => {
   const normalized = pathname.split("?")[0].split("#")[0].replace(/\/+$/, "");
   const match = normalized.match(/\/tours\/([^/]+)\/book$/);
@@ -227,17 +250,15 @@ const buildDescription = (tour: TourLike, canonicalUrl: string) => {
     .filter(Boolean)
     .join(" • ");
 
-  if (detail) {
-    return withLengthCap(
-      `${templates[templateIndex]}${qualifier ? ` ${qualifier}.` : ""} ${detail}`,
-      155
-    );
+  const legacyDescription = detail
+    ? `${templates[templateIndex]}${qualifier ? ` ${qualifier}.` : ""} ${detail}`
+    : `${templates[templateIndex]}${qualifier ? ` ${qualifier}.` : ""} Discover key sights, local flavor, and straightforward trip planning with All Outdoor Adventures.`;
+
+  if (hasLegacyCategoryProviderBulletLeak(legacyDescription)) {
+    return buildSafeLegacyDescription(tour);
   }
 
-  return withLengthCap(
-    `${templates[templateIndex]}${qualifier ? ` ${qualifier}.` : ""} Discover key sights, local flavor, and straightforward trip planning with All Outdoor Adventures.`,
-    155
-  );
+  return withLengthCap(legacyDescription, 155);
 };
 
 export const getCanonicalFromBookingPath = (pathname: string) => {
