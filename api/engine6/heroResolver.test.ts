@@ -270,7 +270,8 @@ describe("engine6 hero resolver", () => {
   it("uses same-product non-splice product media when caption is unavailable", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "MEDIA1",
-      currentSourceProductUrl: "https://www.viator.com/tours/City/Tour/d1-MEDIA1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/City/Tour/d1-MEDIA1",
       candidates: [
         {
           url: "https://dynamic-media.tacdn.com/media/photo-o/9a/8b/7c/6d.jpg?w=1600&h=1066&s=1",
@@ -319,7 +320,8 @@ describe("engine6 hero resolver", () => {
   it("rejects malformed URLs and falls back to placeholder classification", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "BADURL1",
-      currentSourceProductUrl: "https://www.viator.com/tours/City/Bad-Url/d1-BADURL1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/City/Bad-Url/d1-BADURL1",
       candidates: [
         {
           url: "not-a-url",
@@ -347,13 +349,15 @@ describe("engine6 hero resolver", () => {
   it("rejects candidates missing source field path provenance", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "PATH1",
-      currentSourceProductUrl: "https://www.viator.com/tours/City/With-Path/d1-PATH1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/City/With-Path/d1-PATH1",
       candidates: [
         {
           url: "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/pathless.jpg",
           sourceType: "api-primary",
           sourceProductCode: "PATH1",
-          sourceProductUrl: "https://www.viator.com/tours/City/With-Path/d1-PATH1",
+          sourceProductUrl:
+            "https://www.viator.com/tours/City/With-Path/d1-PATH1",
         },
       ],
     });
@@ -409,7 +413,8 @@ describe("engine6 hero resolver", () => {
   it("never fabricates caption URLs or rewrites image family paths", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "NOMUT1",
-      currentSourceProductUrl: "https://www.viator.com/tours/City/Tour/d1-NOMUT1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/City/Tour/d1-NOMUT1",
       candidates: [
         {
           url: "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg?w=1200&h=800&s=1",
@@ -427,5 +432,31 @@ describe("engine6 hero resolver", () => {
     );
     expect(resolved.heroUrl).not.toContain("caption.jpg");
     expect(resolved.heroUrl).not.toContain("/hero.jpg");
+  });
+});
+
+describe("engine6 hero resolver product URL drift", () => {
+  it("accepts same-product media when Viator changes the product URL slug", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "6740P7",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7",
+      candidates: [
+        {
+          url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg",
+          sourceType: "api-primary",
+          candidateProductCode: "6740P7",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-National-Park-Scenic-Tour-Rated-1/d648-6740P7",
+          fieldPath: "product.media.images[0].variants.FULL.url",
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg"
+    );
+    expect(resolved.fallbackTriggered).toBe(false);
+    expect(resolved.rejectedForeignCandidates).toEqual([]);
   });
 });
