@@ -26,6 +26,8 @@ const createRes = () => {
 describe("/api/engine6/viator-product", () => {
   beforeEach(() => {
     delete process.env.VIATOR_API_KEY;
+    delete process.env.ENGINE6_VIATOR_API_KEY;
+    delete process.env.VIATOR_PARTNER_API_KEY;
     delete process.env.VIATOR_API_BASE_URL;
     delete process.env.VIATOR_BASE_URL;
   });
@@ -33,6 +35,8 @@ describe("/api/engine6/viator-product", () => {
   afterEach(() => {
     vi.restoreAllMocks();
     delete process.env.VIATOR_API_KEY;
+    delete process.env.ENGINE6_VIATOR_API_KEY;
+    delete process.env.VIATOR_PARTNER_API_KEY;
     delete process.env.VIATOR_API_BASE_URL;
     delete process.env.VIATOR_BASE_URL;
   });
@@ -197,6 +201,95 @@ describe("/api/engine6/viator-product", () => {
     expect(
       (res.body as any).diagnostics.selectedHeroWidth
     ).toBeGreaterThanOrEqual(800);
+  });
+
+  it("accepts Engine6-specific Viator API key aliases before using snapshots", async () => {
+    process.env.ENGINE6_VIATOR_API_KEY = "alias-key";
+
+    const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () =>
+        JSON.stringify({
+          product: {
+            productCode: "63657P1",
+            productUrl:
+              "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+            title: "Santa Barbara Vineyard to Table Taste Tour by E-Bike",
+            priceFrom: "$201.00",
+            media: {
+              images: [
+                {
+                  variants: {
+                    FULL: {
+                      url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg",
+                      width: 674,
+                      height: 446,
+                    },
+                  },
+                },
+              ],
+            },
+          },
+        }),
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "63657P1" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(fetchSpy).toHaveBeenCalledWith(
+      expect.stringContaining("/products/63657P1"),
+      expect.objectContaining({
+        headers: expect.objectContaining({ "exp-api-key": "alias-key" }),
+      })
+    );
+    expect((res.body as any).source).toBe("live-api");
+    expect((res.body as any).extracted.priceAmount).toBe(201);
+  });
+
+  it("keeps live commercial fields when only the live hero needs a safe product-scoped snapshot override", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () =>
+        JSON.stringify({
+          product: {
+            productCode: "63657P1",
+            productUrl:
+              "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+            title: "Santa Barbara Vineyard to Table Taste Tour by E-Bike",
+            priceFrom: "$222.00",
+            reviews: { combinedAverageRating: 4.7, totalReviews: 2222 },
+            duration: "6 hours",
+          },
+        }),
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "63657P1" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).source).toBe("live-api");
+    expect(res.headers["X-Engine6-Source"]).toBe("live-api");
+    expect(res.headers["X-Engine6-Hero-Authority"]).toBe(
+      "safe-product-scoped-override"
+    );
+    expect((res.body as any).extracted.priceAmount).toBe(222);
+    expect((res.body as any).extracted.aggregateRating).toBe(4.7);
+    expect((res.body as any).extracted.reviewCount).toBe(2222);
+    expect((res.body as any).extracted.durationText).toBe("6 hours");
+    expect((res.body as any).extracted.heroImageUrl).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg"
+    );
+    expect((res.body as any).diagnostics.usedBundledFallbackBecause).toBe("");
   });
 
   it("rejects a foreign live hero candidate and keeps the bundled product-scoped hero", async () => {

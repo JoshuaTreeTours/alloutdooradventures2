@@ -55,6 +55,7 @@ export type Engine6DiagnosticsPaths = {
   productUrlFieldPath: string | null;
   ratingFieldPath: string | null;
   reviewCountFieldPath: string | null;
+  durationFieldPath: string | null;
   overviewFieldPath: string | null;
   highlightsFieldPath: string | null;
   requirementsFieldPath: string | null;
@@ -1641,6 +1642,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     productUrlFieldPath: null,
     ratingFieldPath: null,
     reviewCountFieldPath: null,
+    durationFieldPath: null,
     overviewFieldPath: null,
     highlightsFieldPath: null,
     requirementsFieldPath: null,
@@ -1821,6 +1823,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   const reviewCount = extractPlaybookReviewCount(product);
   diagnostics.reviewCountFieldPath = reviewCount.path;
   const duration = extractDuration(product);
+  diagnostics.durationFieldPath = duration.path;
 
   const meetingPoint = extractMeetingPoint(product);
   diagnostics.meetingPointFieldPath = meetingPoint.path;

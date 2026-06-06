@@ -180,6 +180,7 @@ const buildDiagnostics = (
   bookingUrlSource: "generated:viator-search-product-code" as const,
   ratingFieldPath: null as string | null,
   reviewCountFieldPath: null as string | null,
+  durationFieldPath: null as string | null,
   overviewFieldPath: null as string | null,
   highlightsFieldPath: null as string | null,
   itineraryFieldPath: null as string | null,
@@ -536,6 +537,64 @@ const respondWithBundledFallback = (
   });
 };
 
+const respondWithLiveApiAndSafeHeroOverride = (
+  res: any,
+  args: {
+    productCode: string;
+    liveExtraction: ReturnType<typeof extractEngine6Product>;
+    bundledPayload: Record<string, unknown>;
+    diagnostics: ReturnType<typeof buildDiagnostics>;
+  }
+) => {
+  const bundledExtraction = safeExtractEngine6Product(args.bundledPayload);
+  const merged = applyResolvedHero({
+    productCode: args.productCode,
+    baseExtraction: args.liveExtraction,
+    preferredHeroExtraction: args.liveExtraction,
+    fallbackHeroExtraction: bundledExtraction,
+  });
+
+  Object.assign(args.diagnostics, merged.diagnostics, {
+    source: "live-api",
+    usedBundledFallbackBecause: "",
+  });
+
+  const strictHeroViolationReason = getStrictHeroViolationReason({
+    productCode: args.productCode,
+    extractedHeroUrl: merged.extracted.heroImageUrl,
+    diagnostics: args.diagnostics,
+  });
+  if (strictHeroViolationReason) {
+    respondWithErrorEnvelope(res, {
+      statusCode: 422,
+      source: "live-api",
+      diagnostics: args.diagnostics,
+      productCode: args.productCode,
+      error: "Engine6 strict exact-product hero validation failed",
+      details: strictHeroViolationReason,
+    });
+    return;
+  }
+
+  respondWithNormalizedEnvelope(res, {
+    statusCode: 200,
+    source: "live-api",
+    diagnostics: args.diagnostics,
+    productCode: args.productCode,
+    rawProduct: args.liveExtraction.product,
+    extracted: merged.extracted,
+    headers: {
+      "Cache-Control": "public, s-maxage=300, stale-while-revalidate=1800",
+      "X-Engine6-Source": "live-api",
+      "X-Engine6-Hero-Authority":
+        merged.diagnostics.heroSourceProductCode?.toUpperCase() ===
+        args.productCode.toUpperCase()
+          ? "safe-product-scoped-override"
+          : "live-api",
+    },
+  });
+};
+
 export default async function handler(req: any, res: any) {
   if (req.method !== "GET") {
     respondWithErrorEnvelope(res, {
@@ -559,7 +618,10 @@ export default async function handler(req: any, res: any) {
   }
 
   const bundledPayload = await getBundledExactProductPayload(productCode);
-  const key = process.env.VIATOR_API_KEY;
+  const key =
+    process.env.VIATOR_API_KEY ||
+    process.env.ENGINE6_VIATOR_API_KEY ||
+    process.env.VIATOR_PARTNER_API_KEY;
   const diagnostics = buildDiagnostics("live-api", Boolean(key));
 
   if (!key) {
@@ -743,14 +805,12 @@ export default async function handler(req: any, res: any) {
     bundledPayload &&
     extractedWithAvailabilityPrice.diagnostics.heroFallbackTriggered
   ) {
-    diagnostics.usedBundledFallbackBecause = "live-hero-missing-or-foreign";
-    respondWithBundledFallback(
-      res,
+    respondWithLiveApiAndSafeHeroOverride(res, {
       productCode,
+      liveExtraction: extractedWithAvailabilityPrice,
       bundledPayload,
       diagnostics,
-      extractedWithAvailabilityPrice
-    );
+    });
     return;
   }
 
