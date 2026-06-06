@@ -42,7 +42,7 @@ export const ADVENTURE_ACTIVITY_PAGES = [
     slug: "paddle-sports",
     title: "Paddle Sports",
     description: "Kayak, canoe, SUP, and paddleboard adventures.",
-    image: "/images/canoe-hero.jpg",
+    image: "https://www.alloutdooradventures.com/images/canoe-hero.jpg",
   },
 ];
 

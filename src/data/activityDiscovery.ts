@@ -50,6 +50,9 @@ export const CYCLING_ACTIVITY_HERO_IMAGE =
 export const HIKING_ACTIVITY_HERO_IMAGE =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/07/b0/bc.jpg";
 
+export const PADDLE_SPORTS_ACTIVITY_HERO_IMAGE =
+  "https://www.alloutdooradventures.com/images/canoe-hero.jpg";
+
 export const SAILING_ACTIVITY_HERO_IMAGE =
   "https://cdn.filestackcontent.com/MMdbUxClRWq36GyZNbqk";
 
@@ -457,6 +460,10 @@ export const resolveActivityHeroImage = (
 
   if (activitySlug === "hiking") {
     return HIKING_ACTIVITY_HERO_IMAGE;
+  }
+
+  if (activitySlug === "paddle-sports") {
+    return PADDLE_SPORTS_ACTIVITY_HERO_IMAGE;
   }
 
   if (activitySlug === "sailing") {
