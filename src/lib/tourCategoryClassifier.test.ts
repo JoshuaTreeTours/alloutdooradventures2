@@ -362,6 +362,48 @@ describe("classifyTourCategories", () => {
     ]);
   });
 
+  it("keeps representative non-food tours out of Food & Wine", () => {
+    const examples: Array<
+      [Parameters<typeof classifyTourCategories>[0], string]
+    > = [
+      [
+        {
+          title: "10,000 Islands Guided Jet Ski Tour",
+          categories: ["Food Tour", "Jet Ski", "Wildlife Tour"],
+        },
+        "water-sports",
+      ],
+      [
+        {
+          title: "Late Night Manta Ray Snorkel",
+          categories: ["Food Tour", "Snorkeling Tour"],
+        },
+        "water-sports",
+      ],
+      [
+        {
+          title: "Deluxe Sunset & Day Sail Small Group",
+          categories: ["Food Tour", "Sailing"],
+        },
+        "sailing",
+      ],
+      [
+        {
+          title: "Porto Downtown and Sightseeing Bike Tour",
+          categories: ["Food Tour", "Bike Tour", "Sightseeing Tour"],
+        },
+        "cycling",
+      ],
+    ];
+
+    examples.forEach(([input, expectedPrimarySlug]) => {
+      const slugs = slugsFor(input);
+
+      expect(slugs[0]).toBe(expectedPrimarySlug);
+      expect(slugs).not.toContain("food-wine");
+    });
+  });
+
   it("classifies a helicopter wildlife tour as Air Tours and Wildlife", () => {
     expect(slugsFor({ title: "Helicopter wildlife tour" })).toEqual([
       "air-tours",

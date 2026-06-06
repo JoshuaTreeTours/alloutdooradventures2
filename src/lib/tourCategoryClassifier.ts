@@ -225,6 +225,12 @@ const TRUE_HIKING_PATTERN =
 const FOOD_PRIMARY_PATTERN =
   /\b(?:food cruise|food tour|food walk|food walking|culinary|wine|winery|vineyard|tasting|brewery|beer|distillery|pizza|pasta|gelato|donut|chocolate|taco)\b/;
 
+const FOOD_WINE_ALLOWED_PRIMARY_PATTERN =
+  /\b(?:food|wine|beer|brewery|breweries|brewpub|pub crawl|spirits?|cocktails?|bourbon|whiskey|whisky|tequila|distillery|distilleries|culinary|cuisine|cooking class|chef|dining|dinner|lunch|brunch|tasting|tastings|vineyard|winery|wineries|food market|farmers market|market tour|pizza|pasta|gelato|donut|doughnut|chocolate|taco|seafood|bites?)\b/;
+
+const NON_FOOD_PRIMARY_INTENT_PATTERN =
+  /\b(?:jet ski|jetski|waverunner|wave runner|snorkel|snorkeling|scuba|parasail|parasailing|kayak|kayaking|canoe|paddleboard|stand up paddle|\bsup\b|rafting|sailing|sailboat|sail boat|schooner|sunset sail|catamaran|yacht|boat tour|sightseeing boat tour|harbou?r cruise|bay cruise|river cruise|lake cruise|canal cruise|boat rental|speedboat|speed boat|jet boat|ferry|whale|dolphin|orca|manatee|seal|turtle|wildlife|fishing|bike tour|bicycle tour|e[- ]?bike tour|ebike tour|cycling|hike|hiking|walking tour|city tour|sightseeing|bus tour|van tour|suv tour|trolley|jeep|off[- ]?road|atv|utv|horseback|helicopter|airplane|flightseeing|stargazing)\b/;
+
 const HORSEBACK_RIDING_PATTERN =
   /\b(?:horseback riding|horseback tour|trail ride|ranch ride|horse riding|equestrian tour|cowboy ride|mule ride|pony ride)\b/;
 
@@ -418,6 +424,23 @@ export const classifyTourCategories = (
     if (
       slug === WALKING_TOURS_SLUG &&
       FOOD_PRIMARY_PATTERN.test(normalizedText)
+    ) {
+      return false;
+    }
+
+    if (
+      slug === FOOD_WINE_SLUG &&
+      !FOOD_WINE_ALLOWED_PRIMARY_PATTERN.test(primaryIntentText)
+    ) {
+      return false;
+    }
+
+    if (
+      slug === FOOD_WINE_SLUG &&
+      NON_FOOD_PRIMARY_INTENT_PATTERN.test(primaryIntentText) &&
+      !FOOD_PRIMARY_PATTERN.test(
+        input.title ? normalizeTourCategoryText(input.title) : ""
+      )
     ) {
       return false;
     }
