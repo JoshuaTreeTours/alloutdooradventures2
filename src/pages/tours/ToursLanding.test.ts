@@ -15,7 +15,7 @@ describe("ToursLanding Engine6 filtered listing hydration", () => {
         priceAmount: 127.2,
         priceFormatted: "From $127.20",
         aggregateRating: 4.7,
-        reviewCount: 556,
+        reviewCount: 565,
         durationText: "6 hours",
         meetingPointText: null,
       },
@@ -32,7 +32,7 @@ describe("ToursLanding Engine6 filtered listing hydration", () => {
 
     expect(hydratedTarget?.tour.badges.priceFrom).toBe("From $127.20");
     expect(hydratedTarget?.tour.badges.rating).toBe(4.7);
-    expect(hydratedTarget?.tour.badges.reviewCount).toBe(556);
+    expect(hydratedTarget?.tour.badges.reviewCount).toBe(565);
     expect(hydratedTarget?.tour.badges.duration).toBe("6 hours");
     expect(hydratedTarget?.tour.productCode).toBe(target?.tour.productCode);
     expect(hydratedTarget?.href).toBe(target?.href);

@@ -327,6 +327,40 @@ export const getActivityTourHref = (tour: Tour) => {
   return href;
 };
 
+const matchesActivityLocation = (
+  tour: Tour,
+  {
+    stateSlug,
+    citySlug,
+  }: {
+    stateSlug?: string;
+    citySlug?: string;
+  }
+) => {
+  if (stateSlug && tour.destination.stateSlug !== stateSlug) {
+    return false;
+  }
+
+  if (citySlug && tour.destination.citySlug !== citySlug) {
+    return false;
+  }
+
+  return true;
+};
+
+export const getActivityTourEntriesByLocation = ({
+  activitySlug,
+  stateSlug,
+  citySlug,
+}: {
+  activitySlug: string;
+  stateSlug?: string;
+  citySlug?: string;
+}) =>
+  getActivityTourEntriesByCategory(activitySlug).filter(entry =>
+    matchesActivityLocation(entry.tour, { stateSlug, citySlug })
+  );
+
 export const getToursByActivityLocation = ({
   activitySlug,
   stateSlug,
@@ -336,17 +370,9 @@ export const getToursByActivityLocation = ({
   stateSlug?: string;
   citySlug?: string;
 }) =>
-  getToursByActivityCategory(activitySlug).filter(tour => {
-    if (stateSlug && tour.destination.stateSlug !== stateSlug) {
-      return false;
-    }
-
-    if (citySlug && tour.destination.citySlug !== citySlug) {
-      return false;
-    }
-
-    return true;
-  });
+  getActivityTourEntriesByLocation({ activitySlug, stateSlug, citySlug }).map(
+    entry => entry.tour
+  );
 
 export const getActivityStateOptions = (
   activitySlug: string

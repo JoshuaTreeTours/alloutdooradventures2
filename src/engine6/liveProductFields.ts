@@ -10,6 +10,11 @@ export type Engine6LiveProductFields = {
   meetingPointText: string | null;
 };
 
+export type Engine6TourCardEntry<TTour extends Tour = Tour> = {
+  tour: TTour;
+  href?: string;
+};
+
 const parsePriceFromFormatted = (
   value: string | null | undefined
 ): number | null => {
@@ -127,6 +132,23 @@ export const mergeEngine6LiveFieldsIntoTour = (
     },
   };
 };
+
+export const hydrateEngine6TourCardEntries = <
+  TEntry extends Engine6TourCardEntry,
+>(
+  entries: TEntry[],
+  liveByProductCode: Record<string, Engine6LiveProductFields | undefined>
+): TEntry[] =>
+  entries.map(entry => ({
+    ...entry,
+    tour:
+      entry.tour.engine === "engine6" && entry.tour.productCode
+        ? mergeEngine6LiveFieldsIntoTour(
+            entry.tour,
+            liveByProductCode[entry.tour.productCode]
+          )
+        : entry.tour,
+  }));
 
 export const fetchEngine6LiveProductFields = async (
   productCode: string,

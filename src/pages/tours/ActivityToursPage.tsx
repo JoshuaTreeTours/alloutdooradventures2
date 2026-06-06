@@ -11,11 +11,12 @@ import {
   getActivityDiscoveryPage,
   getActivityLocationNames,
   getActivityStateOptions,
+  getActivityTourEntriesByLocation,
   getActivityTourHref,
-  getToursByActivityLocation,
   resolveActivityHeroImage,
 } from "../../data/activityDiscovery";
 import { resolveTourHeroImage } from "../../utils/hero";
+import { useEngine6LiveTourCardHydration } from "../../engine6/useEngine6LiveTourCardHydration";
 import { buildBreadcrumbList, buildItemList } from "../../utils/structuredData";
 
 export type ActivityToursPageProps = {
@@ -32,14 +33,20 @@ const formatCountLabel = (count: number) =>
 export default function ActivityToursPage({ params }: ActivityToursPageProps) {
   const activity = getActivityDiscoveryPage(params.activitySlug);
 
-  const activityTours = useMemo(
+  const activityTourEntries = useMemo(
     () =>
-      getToursByActivityLocation({
+      getActivityTourEntriesByLocation({
         activitySlug: params.activitySlug,
         stateSlug: params.stateSlug,
         citySlug: params.citySlug,
       }),
     [params.activitySlug, params.stateSlug, params.citySlug]
+  );
+  const hydratedActivityTourEntries =
+    useEngine6LiveTourCardHydration(activityTourEntries);
+  const activityTours = useMemo(
+    () => hydratedActivityTourEntries.map(entry => entry.tour),
+    [hydratedActivityTourEntries]
   );
 
   const { stateName, cityName } = useMemo(
@@ -309,11 +316,11 @@ export default function ActivityToursPage({ params }: ActivityToursPageProps) {
         </div>
         {activityTours.length ? (
           <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {activityTours.map(tour => (
+            {hydratedActivityTourEntries.map(entry => (
               <TourCard
-                key={tour.id}
-                tour={tour}
-                href={getActivityTourHref(tour)}
+                key={entry.tour.id}
+                tour={entry.tour}
+                href={entry.href || getActivityTourHref(entry.tour)}
               />
             ))}
           </div>

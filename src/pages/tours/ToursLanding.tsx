@@ -33,7 +33,7 @@ import {
 import { isRentalTour } from "../../utils/isRentalTour";
 import {
   fetchEngine6LiveProductFields,
-  mergeEngine6LiveFieldsIntoTour,
+  hydrateEngine6TourCardEntries,
   type Engine6LiveProductFields,
 } from "../../engine6/liveProductFields";
 import {
@@ -70,16 +70,7 @@ export const hydrateEngine6ListingEntries = (
   entries: Array<{ tour: Tour; href: string }>,
   liveByProductCode: Record<string, Engine6LiveProductFields>
 ): Array<{ tour: Tour; href: string }> =>
-  entries.map(entry => ({
-    ...entry,
-    tour:
-      entry.tour.engine === "engine6" && entry.tour.productCode
-        ? mergeEngine6LiveFieldsIntoTour(
-            entry.tour,
-            liveByProductCode[entry.tour.productCode]
-          )
-        : entry.tour,
-  }));
+  hydrateEngine6TourCardEntries(entries, liveByProductCode);
 
 const dedupeByNormalizedValue = <T extends { slug: string }>(options: T[]) => {
   const seen = new Set<string>();
@@ -493,7 +484,10 @@ export default function ToursLanding() {
     () =>
       filteredTours
         .map(entry => entry.tour)
-        .filter(tour => tour.engine === "engine6" && Boolean(tour.productCode))
+        .filter(
+          (tour): tour is Tour & { productCode: string } =>
+            tour.engine === "engine6" && Boolean(tour.productCode)
+        )
         .map(tour => tour.productCode),
     [filteredTours]
   );
