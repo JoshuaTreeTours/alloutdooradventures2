@@ -7,6 +7,7 @@ import {
   getActivityTourEntriesByLocation,
   getToursByActivityCategory,
   HIKING_ACTIVITY_HERO_IMAGE,
+  PADDLE_SPORTS_ACTIVITY_HERO_IMAGE,
   SAILING_ACTIVITY_HERO_IMAGE,
 } from "../../data/activityDiscovery";
 import {
@@ -104,12 +105,13 @@ describe("ActivityToursPage", () => {
     expect(html).toContain("Explore fishing tour cards");
   });
 
-  it("/tours/paddle-sports includes kayak/canoe/SUP tours", () => {
+  it("/tours/paddle-sports includes kayak/canoe/SUP tours with the dedicated Paddle Sports hero image", () => {
     const html = renderToStaticMarkup(
       <ActivityToursPage params={{ activitySlug: "paddle-sports" }} />
     );
 
     expect(html).toContain("Paddle Sports Tours &amp; Outdoor Adventures");
+    expect(html).toContain(PADDLE_SPORTS_ACTIVITY_HERO_IMAGE);
     expect(html).toMatch(/kayak|canoe|SUP|paddle/i);
   });
 
