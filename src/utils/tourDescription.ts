@@ -32,6 +32,13 @@ const VARIANT_PATTERNS: Array<{ pattern: RegExp; label: string }> = [
   { pattern: /\bone\s*[- ]?way\b/i, label: "One-way" },
 ];
 
+const BULLET_WITH_PROVIDER_PATTERN =
+  /^[a-z0-9][a-z0-9&/\-\s]*(?:[•·][a-z0-9&/\-\s]+)*[•·]\s*with\s+[^.!?]+$/i;
+
+const startsWithLowercaseCategoryFragment = (value: string) =>
+  /^[a-z][a-z0-9&/\-\s]{1,48}[•·]\s*with\s+[^.!?]+$/i.test(value) &&
+  value.charAt(0) === value.charAt(0).toLowerCase();
+
 type DescriptionInputs = {
   baseDescription: string;
   tourName: string;
@@ -42,6 +49,7 @@ type DescriptionInputs = {
   tourId: string | number;
   tourSlug?: string;
   variantLabel?: string;
+  providerName?: string;
   isDuplicate?: boolean;
   diagnosticsLabel?: string;
 };
@@ -106,6 +114,7 @@ export const buildTourDescriptionResult = ({
   tourId,
   tourSlug,
   variantLabel,
+  providerName,
   isDuplicate = false,
   diagnosticsLabel,
 }: DescriptionInputs): TourDescriptionBuildResult => {
@@ -114,11 +123,25 @@ export const buildTourDescriptionResult = ({
   const city = normalizeText(cityName || titleCaseSlug(citySlug));
   const state = normalizeText(stateName || titleCaseSlug(stateSlug));
   const location = city && state ? `${city}, ${state}` : city || state;
+  const provider = normalizeText(providerName || "");
+  const fallbackDescription = normalizeText(
+    provider && location
+      ? `${cleanName} in ${location} with ${provider}.`
+      : location
+        ? `${cleanName} is an outdoor experience in ${location}.`
+        : provider
+          ? `${cleanName} is an outdoor experience with ${provider}.`
+          : `${cleanName} is an outdoor experience.`
+  );
   const normalizedVariant = VARIANT_PATTERNS.find(
     ({ label }) => label === variantLabel
   )?.label;
 
-  let description = cleanBase;
+  let description =
+    BULLET_WITH_PROVIDER_PATTERN.test(cleanBase) ||
+    startsWithLowercaseCategoryFragment(cleanBase)
+      ? fallbackDescription
+      : cleanBase;
   if (isDuplicate) {
     const suffixParts = [
       `${cleanName}${location ? ` (${location})` : ""}`,
@@ -127,7 +150,7 @@ export const buildTourDescriptionResult = ({
     if (normalizedVariant) {
       suffixParts.push(normalizedVariant);
     }
-    description = `${cleanBase} — ${suffixParts.join(" · ")}`;
+    description = `${description} — ${suffixParts.join(" · ")}`;
   }
 
   description = normalizeText(description);
@@ -136,7 +159,9 @@ export const buildTourDescriptionResult = ({
     slugGuardTriggered = true;
     const safeBase = stripTokenizedFragments(cleanBase, tourSlug);
     description = normalizeText(
-      `${safeBase} ${cleanName}${location ? ` (${location})` : ""} · ID ${tourId}`
+      safeBase
+        ? `${safeBase} ${cleanName}${location ? ` (${location})` : ""} · ID ${tourId}`
+        : fallbackDescription
     );
   }
 
