@@ -8,6 +8,7 @@ import {
   CYCLING_ACTIVITY_HERO_IMAGE,
   getActivityIndexCards,
   getToursByActivityCategory,
+  JEEP_OFF_ROAD_ACTIVITY_HERO_IMAGE,
   PADDLE_SPORTS_ACTIVITY_HERO_IMAGE,
   resolveActivityHeroImage,
   SAILING_ACTIVITY_HERO_IMAGE,
@@ -116,6 +117,21 @@ describe("Activities index", () => {
     expect(sailingCard?.image).toBe(SAILING_ACTIVITY_HERO_IMAGE);
   });
 
+  it("uses the dedicated Jeep & Off-Road hero for Jeep activity surfaces", () => {
+    const jeepTours = getToursByActivityCategory("jeep-off-road");
+    const jeepCard = getActivityIndexCards().find(
+      card => card.slug === "jeep-off-road"
+    );
+    const html = renderToStaticMarkup(<ActivitiesIndex />);
+
+    expect(jeepTours.length).toBeGreaterThan(0);
+    expect(resolveActivityHeroImage(jeepTours, "jeep-off-road")).toBe(
+      JEEP_OFF_ROAD_ACTIVITY_HERO_IMAGE
+    );
+    expect(jeepCard?.image).toBe(JEEP_OFF_ROAD_ACTIVITY_HERO_IMAGE);
+    expect(html).toContain(JEEP_OFF_ROAD_ACTIVITY_HERO_IMAGE);
+  });
+
   it("shows the Fishing card only when backed by route inventory", () => {
     const fishingTours = getToursByActivityCategory("fishing");
     const fishingCard = getActivityIndexCards().find(
@@ -136,7 +152,13 @@ describe("Activities index", () => {
         resolveActivityHeroImage(routeActivityTours, card.slug)
       );
       if (
-        !["boating", "cycling", "paddle-sports", "sailing"].includes(card.slug)
+        ![
+          "boating",
+          "cycling",
+          "jeep-off-road",
+          "paddle-sports",
+          "sailing",
+        ].includes(card.slug)
       ) {
         expect(
           routeActivityTours.some(tour =>

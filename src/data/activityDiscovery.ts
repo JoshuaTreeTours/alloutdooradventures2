@@ -50,6 +50,9 @@ export const CYCLING_ACTIVITY_HERO_IMAGE =
 export const HIKING_ACTIVITY_HERO_IMAGE =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/07/b0/bc.jpg";
 
+export const JEEP_OFF_ROAD_ACTIVITY_HERO_IMAGE =
+  "https://media.rezgo.com/2320/17284/325520.jpg";
+
 export const PADDLE_SPORTS_ACTIVITY_HERO_IMAGE =
   "https://www.alloutdooradventures.com/images/canoe-hero.jpg";
 
@@ -460,6 +463,10 @@ export const resolveActivityHeroImage = (
 
   if (activitySlug === "hiking") {
     return HIKING_ACTIVITY_HERO_IMAGE;
+  }
+
+  if (activitySlug === "jeep-off-road") {
+    return JEEP_OFF_ROAD_ACTIVITY_HERO_IMAGE;
   }
 
   if (activitySlug === "paddle-sports") {
