@@ -42,19 +42,7 @@ const WALKING_INTENT_KEYWORDS = [
 
 const CYCLING_KEYWORDS = ["bike", "bicycle", "cycling", "e-bike", "ebike"];
 
-const WATER_KEYWORDS = [
-  "kayak",
-  "canoe",
-  "rafting",
-  "sup",
-  "paddle",
-  "boat",
-  "cruise",
-  "sailing",
-  "snorkel",
-  "scuba",
-  "fishing",
-];
+const WATER_KEYWORDS = ["kayak", "canoe", "rafting", "sup", "paddle"];
 
 const DAY_ADVENTURE_KEYWORDS = [
   "hummer",
@@ -95,14 +83,20 @@ const HIKING_DISQUALIFY_KEYWORDS = [
 
 const normalizeText = (value: string) => value.toLowerCase();
 
-const buildClassifierText = ({ title, description, tags }: ActivityClassifierInput) =>
-  normalizeText([title, description, tags?.join(" ")].filter(Boolean).join(" "));
+const buildClassifierText = ({
+  title,
+  description,
+  tags,
+}: ActivityClassifierInput) =>
+  normalizeText(
+    [title, description, tags?.join(" ")].filter(Boolean).join(" ")
+  );
 
 const getMatches = (text: string, keywords: string[]) =>
-  keywords.filter((keyword) => text.includes(keyword));
+  keywords.filter(keyword => text.includes(keyword));
 
 export const classifyActivity = (
-  input: ActivityClassifierInput,
+  input: ActivityClassifierInput
 ): ActivityClassification => {
   const text = buildClassifierText(input);
   const walkingIntentMatches = getMatches(text, WALKING_INTENT_KEYWORDS);
