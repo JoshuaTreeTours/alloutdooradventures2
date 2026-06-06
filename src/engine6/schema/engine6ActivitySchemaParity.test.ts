@@ -93,6 +93,31 @@ describe("Engine6 schema activity parity", () => {
     });
   });
 
+  it("uses the resolved Engine6 activity category as the schema source of truth", () => {
+    const { tour } = getSchemaCategoryValues(
+      "/destinations/california/san-diego/tours/san-diego-bay-day-sail"
+    );
+    const schema = buildEngine6SchemaGraph({
+      ...tour,
+      primaryDisplayCategory: "Adventure",
+      categoryLabel: "Outdoor enthusiasts",
+      activityCategories: [{ slug: "sailing", label: "Sailing" }],
+    });
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as Record<
+      string,
+      unknown
+    >;
+    const product = graph.find(node => node["@type"] === "Product") as Record<
+      string,
+      unknown
+    >;
+
+    expect(trip.touristType).toBe("Sailing");
+    expect(product.category).toBe("Sailing");
+    expect(trip.touristType).toBe(product.category);
+  });
+
   it("keeps city/private sightseeing in Sightseeing & City Tours", () => {
     const classification = classifyTourCategories({
       title: "Private North Shore and Salem Tour",

@@ -74,6 +74,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
     resolveEngine6OfferUrl(affiliateUrl) ??
     (affiliateUrl?.startsWith("/") ? affiliateUrl : undefined);
   const categoryLabel =
+    tour.activityCategories[0]?.label ??
     tour.primaryDisplayCategory ??
     tour.categoryLabel ??
     formatEngine6CategoryLabel(tour.primaryCategory);

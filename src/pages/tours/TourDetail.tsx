@@ -36,6 +36,7 @@ import {
   ENABLE_TOUR_SCHEMA_V1,
 } from "../../schema/buildTourSchemaGraph";
 import { buildTourMeta } from "../../lib/tourMeta";
+import { resolveTourSchemaActivityLabel } from "../../schema/resolveTourSchemaActivityLabel";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { applyPriceFloor } from "../../utils/merchantPricing";
 import { fetchFareHarborHtml } from "../../utils/fh/fetchFareHarborHtml";
@@ -82,6 +83,7 @@ export default function TourDetail({ params }: TourDetailProps) {
       return null;
     }
     const productNodeId = buildTourProductNodeId(tour.id);
+    const schemaActivityLabel = resolveTourSchemaActivityLabel(tour);
     const tourSchemaNodes = ENABLE_TOUR_SCHEMA_V1
       ? (buildTourSchemaGraph({
           url: detailUrl,
@@ -100,14 +102,14 @@ export default function TourDetail({ params }: TourDetailProps) {
             id: productNodeId,
             name: tour.title,
             description: metaDescription ?? "",
-            category: tour.primaryCategory,
+            category: schemaActivityLabel,
           },
           trip: {
             id: `${detailUrl}#trip`,
             name: tour.title,
             description: metaDescription ?? "",
             duration: tour.badges.duration,
-            touristType: "Adventure travelers",
+            touristType: schemaActivityLabel,
             departureLocation: null,
           },
           offers: {

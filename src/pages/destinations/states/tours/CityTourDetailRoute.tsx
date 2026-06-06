@@ -26,7 +26,7 @@ import {
 import { getExpandedTourDescription } from "../../../../data/tourNarratives";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import { buildTourMeta } from "../../../../lib/tourMeta";
-import { classifyTourCategories } from "../../../../lib/tourCategoryClassifier";
+import { resolveTourSchemaActivityLabel } from "../../../../schema/resolveTourSchemaActivityLabel";
 import {
   buildBreadcrumbList,
   buildTourProductNodeId,
@@ -701,28 +701,7 @@ export default function CityTourDetailRoute({
       partnerBookingUrl: bookingUrl,
     });
 
-    const resolvedActivityClassification = classifyTourCategories({
-      title: tour.title,
-      overview: tour.shortDescription,
-      description: tour.longDescription,
-      highlights: [
-        ...((tour.content?.highlights as string[] | undefined) ?? []),
-        ...(tour.tags ?? []),
-        ...(tour.tagPills ?? []),
-      ],
-      categories: [
-        tour.primaryCategory,
-        ...(tour.categories ?? []),
-        ...(tour.activityCategories ?? []).flatMap(category => [
-          category.slug,
-          category.label,
-        ]),
-      ],
-    });
-    const resolvedActivityLabel =
-      resolvedActivityClassification.primaryDisplayCategory ??
-      tour.primaryDisplayCategory ??
-      tour.primaryCategory;
+    const resolvedActivityLabel = resolveTourSchemaActivityLabel(tour);
 
     const tourSchemaNodes = ENABLE_TOUR_SCHEMA_V1
       ? (buildTourSchemaGraph({
