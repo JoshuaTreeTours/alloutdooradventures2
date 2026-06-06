@@ -5,6 +5,7 @@ import { describe, expect, it } from "vitest";
 
 import Header from "../components/Header";
 import {
+  CYCLING_ACTIVITY_HERO_IMAGE,
   getActivityIndexCards,
   getToursByActivityCategory,
   resolveActivityHeroImage,
@@ -33,6 +34,21 @@ describe("Activities index", () => {
       expect(html).toContain(`href="${card.href}"`);
       expect(html).toContain(card.label.replace(/&/g, "&amp;"));
     });
+  });
+
+  it("uses the dedicated Cycling hero for the Cycling activity card", () => {
+    const cyclingTours = getToursByActivityCategory("cycling");
+    const cyclingCard = getActivityIndexCards().find(
+      card => card.slug === "cycling"
+    );
+    const html = renderToStaticMarkup(<ActivitiesIndex />);
+
+    expect(cyclingTours.length).toBeGreaterThan(0);
+    expect(resolveActivityHeroImage(cyclingTours, "cycling")).toBe(
+      CYCLING_ACTIVITY_HERO_IMAGE
+    );
+    expect(cyclingCard?.image).toBe(CYCLING_ACTIVITY_HERO_IMAGE);
+    expect(html).toContain(CYCLING_ACTIVITY_HERO_IMAGE);
   });
 
   it("shows the Horseback Riding card only when backed by route inventory", () => {
@@ -103,7 +119,7 @@ describe("Activities index", () => {
       expect(card.image).toBe(
         resolveActivityHeroImage(routeActivityTours, card.slug)
       );
-      if (!["boating", "sailing"].includes(card.slug)) {
+      if (!["boating", "cycling", "sailing"].includes(card.slug)) {
         expect(
           routeActivityTours.some(tour =>
             [

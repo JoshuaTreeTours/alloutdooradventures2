@@ -44,6 +44,9 @@ export const ACTIVITY_INDEX_PREFERRED_ORDER = [
 const BOATING_ACTIVITY_HERO_IMAGE =
   "https://cdn.filestackcontent.com/OJiNPwlYQlaHDU6gDwva";
 
+export const CYCLING_ACTIVITY_HERO_IMAGE =
+  "https://www.alloutdooradventures.com/images/cycling-hero.jpg";
+
 export const HIKING_ACTIVITY_HERO_IMAGE =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/07/b0/bc.jpg";
 
@@ -444,6 +447,10 @@ export const resolveActivityHeroImage = (
   activityTours: Tour[],
   activitySlug?: string
 ) => {
+  if (activitySlug === "cycling") {
+    return CYCLING_ACTIVITY_HERO_IMAGE;
+  }
+
   if (activitySlug === "boating") {
     return BOATING_ACTIVITY_HERO_IMAGE;
   }
