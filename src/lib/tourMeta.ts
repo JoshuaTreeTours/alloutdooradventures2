@@ -21,6 +21,9 @@ type TourLike = {
     duration?: string;
   };
   operator?: string;
+  provider?: string;
+  companyName?: string;
+  supplierName?: string;
   engine?: string;
 };
 
@@ -71,6 +74,13 @@ const pickState = (tour: TourLike) =>
 
 const pickCountry = (tour: TourLike) =>
   clean(tour.destination?.country) || pickState(tour);
+
+const pickProvider = (tour: TourLike) =>
+  clean(tour.operator) ||
+  clean(tour.provider) ||
+  clean(tour.companyName) ||
+  clean(tour.supplierName) ||
+  "All Outdoor Adventures";
 
 const isInternationalLegacyTourRoute = (
   tour: TourLike,
@@ -134,6 +144,18 @@ const buildTitle = (tour: TourLike, canonicalUrl: string) => {
       ? "Grand Canyon South Rim Hummer Ground Tour"
       : pickTourName(tour) || "Tour"
   } | ${pickCity(tour)}, ${pickState(tour)} | All Outdoor Adventures`;
+};
+
+const buildBookingDescription = (tour: TourLike) => {
+  const tourName = pickTourName(tour) || "this tour";
+  const city = pickCity(tour);
+  const state = pickState(tour);
+  const provider = pickProvider(tour);
+
+  return withLengthCap(
+    `Reserve ${tourName} in ${city}, ${state} with ${provider}.`,
+    155
+  );
 };
 
 const buildDescription = (tour: TourLike, canonicalUrl: string) => {
@@ -243,7 +265,7 @@ export function buildTourMeta(tour: TourLike, canonicalUrl: string) {
 
 export function buildBookingMeta(tour: TourLike, canonicalUrl: string) {
   const title = buildTitle(tour, canonicalUrl);
-  const description = buildDescription(tour, canonicalUrl);
+  const description = buildBookingDescription(tour);
   const canonical = normalizeCanonical(canonicalUrl);
 
   return {

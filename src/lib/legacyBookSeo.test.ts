@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { applyRouteSeo } from "./fallbackSeoEmitter";
 import { buildLegacyTourRouteSeo } from "./legacyRouteSeo";
+import { buildWebPageStructuredData } from "../utils/structuredData";
 import { buildBookingMeta, buildTourMeta } from "./tourMeta";
 
 const sampleTour = {
@@ -47,6 +48,43 @@ describe("legacy /book SEO controls", () => {
     expect(seo?.url).toBe(`https://www.alloutdooradventures.com${detailPath}`);
     expect(seo?.robots).toBe("index,follow,max-image-preview:large");
     expect(seo?.googlebot).toBe("index,follow,max-image-preview:large");
+  });
+
+  it("uses safe legacy /book descriptions without untrusted activity labels", () => {
+    const trapperPackTrip = {
+      slug: "the-trapper-pack-trip-2-days-1-night-681036",
+      title: "The Trapper Pack Trip 2 Days 1 Night",
+      destination: {
+        stateSlug: "california",
+        citySlug: "oakhurst",
+        city: "Oakhurst",
+        state: "California",
+      },
+      primaryCategory: "canoeing",
+      categories: ["canoeing", "watersports"],
+      activitySlugs: ["canoeing"],
+      operator: "Willow Creek Horseback Rides",
+      heroImage: "https://cdn.example.com/trapper.jpg",
+    } as any;
+
+    const bookingMeta = buildBookingMeta(
+      trapperPackTrip,
+      "/destinations/california/oakhurst/tours/the-trapper-pack-trip-2-days-1-night-681036/book"
+    );
+
+    const webPage = buildWebPageStructuredData({
+      url: "/destinations/california/oakhurst/tours/the-trapper-pack-trip-2-days-1-night-681036/book",
+      name: `${trapperPackTrip.title} booking`,
+      description: bookingMeta.description,
+    });
+
+    expect(webPage).toMatchObject({
+      "@type": "WebPage",
+      description:
+        "Reserve The Trapper Pack Trip 2 Days 1 Night in Oakhurst, California with Willow Creek Horseback Rides.",
+    });
+    expect(String(webPage.description).toLowerCase()).not.toContain("canoe");
+    expect(String(webPage.description).toLowerCase()).not.toContain("water");
   });
 
   it("emits robots and googlebot noindex,nofollow tags into prerendered fallback HTML", () => {
