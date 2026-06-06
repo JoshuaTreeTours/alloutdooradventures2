@@ -277,6 +277,14 @@ const FISHING_SLUG: TourActivityCategorySlug = "fishing";
 const PADDLE_SPORTS_SLUG: TourActivityCategorySlug = "paddle-sports";
 const WATER_SPORTS_SLUG: TourActivityCategorySlug = "water-sports";
 
+const PADDLE_CORE_INTENT_PATTERN =
+  /\b(?:kayak|kayaking|canoe|canoeing|paddleboard|stand up paddle|\bsup\b)\b/;
+
+const NON_PADDLE_ALWAYS_EXCLUSION_PATTERN =
+  /\b(?:catamaran|dinner boat|dinner cruise|ocean boat|airboat|space center|kennedy|nasa|shelling)\b/;
+
+const NON_PADDLE_BOAT_PRIMARY_PATTERN = /\b(?:boat tour)\b/;
+
 const NEGATED_HIKING_PATTERN = /\b(?:instead of|rather than|without) hiking\b/;
 
 const HORSEBACK_SUPPRESSED_BY_RIDING_INTENT_SLUGS: TourActivityCategorySlug[] =
@@ -531,6 +539,19 @@ export const classifyTourCategories = (
       )
     ) {
       return false;
+    }
+
+    if (slug === PADDLE_SPORTS_SLUG) {
+      if (NON_PADDLE_ALWAYS_EXCLUSION_PATTERN.test(primaryIntentText)) {
+        return false;
+      }
+
+      if (
+        NON_PADDLE_BOAT_PRIMARY_PATTERN.test(primaryIntentText) &&
+        !PADDLE_CORE_INTENT_PATTERN.test(primaryIntentText)
+      ) {
+        return false;
+      }
     }
 
     if (slug === BOATING_SLUG) {

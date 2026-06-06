@@ -166,7 +166,11 @@ const resolvePrimaryActivitySlugFromValue = (
 ) =>
   PRIMARY_ACTIVITY_SLUG_LOOKUP.get(normalizeActivityLookupValue(value)) ?? null;
 
-const REPAIRED_ACTIVITY_SLUGS = new Set(["hiking", "walking-tours"]);
+const REPAIRED_ACTIVITY_SLUGS = new Set([
+  "hiking",
+  "walking-tours",
+  "paddle-sports",
+]);
 
 const isRepairedActivitySlug = (slug: string | null | undefined) =>
   Boolean(slug && REPAIRED_ACTIVITY_SLUGS.has(slug));
@@ -174,8 +178,8 @@ const isRepairedActivitySlug = (slug: string | null | undefined) =>
 const isRepairedActivityValue = (value: string | null | undefined) =>
   isRepairedActivitySlug(resolvePrimaryActivitySlugFromValue(value));
 
-const isStaleHikingValue = (value: string | null | undefined) =>
-  resolvePrimaryActivitySlugFromValue(value) === "hiking";
+const isStaleRepairedValue = (value: string | null | undefined) =>
+  isRepairedActivitySlug(resolvePrimaryActivitySlugFromValue(value));
 
 const classifyTourPrimaryActivitySlug = (tour: Tour) => {
   const hasStoredRepairedActivity =
@@ -195,7 +199,7 @@ const classifyTourPrimaryActivitySlug = (tour: Tour) => {
       ].filter(
         (value): value is string =>
           Boolean(value) &&
-          !(hasStoredRepairedActivity && isStaleHikingValue(value))
+          !(hasStoredRepairedActivity && isStaleRepairedValue(value))
       ),
       categories: [tour.primaryCategory].filter(
         (value): value is string =>

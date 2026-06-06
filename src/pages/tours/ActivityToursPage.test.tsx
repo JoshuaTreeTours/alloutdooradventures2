@@ -105,6 +105,24 @@ describe("ActivityToursPage", () => {
     expect(html).toContain("Paddle Sports Tours &amp; Outdoor Adventures");
     expect(html).toMatch(/kayak|canoe|SUP|paddle/i);
   });
+
+  it("/tours/paddle-sports does not surface obvious non-paddle boat products", () => {
+    const titles = getToursByActivityCategory("paddle-sports").map(
+      tour => tour.title
+    );
+
+    expect(titles).not.toContain("Mooloolaba Whale Watching");
+    expect(titles).not.toContain(
+      "Bamboo Rafting & Reggae Catamaran Cruise Party"
+    );
+    expect(
+      titles.some(title =>
+        /kennedy space center|nasa|airboat rental|dinner boat|ocean boat tour/i.test(
+          title
+        )
+      )
+    ).toBe(false);
+  });
 });
 
 describe("ActivityToursPage Engine6 live card authority", () => {

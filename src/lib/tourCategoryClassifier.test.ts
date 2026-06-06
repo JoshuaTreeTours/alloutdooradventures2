@@ -475,6 +475,25 @@ describe("classifyTourCategories", () => {
     expect(slugs).toContain("paddle-sports");
   });
 
+  it("keeps non-paddle boat products out of Paddle Sports", () => {
+    [
+      "Bamboo Rafting & Reggae Catamaran Cruise Party",
+      "Dinner Boat Cruise",
+      "Ocean Boat Tour",
+      "Kennedy Space Center Airboat Combo",
+      "NASA visitor center and airboat rental",
+    ].forEach(title => {
+      expect(slugsFor({ title })).not.toContain("paddle-sports");
+    });
+
+    expect(slugsFor({ title: "Guided Sea Kayak Tour" })).toContain(
+      "paddle-sports"
+    );
+    expect(slugsFor({ title: "Stand Up Paddleboard Lesson" })).toContain(
+      "paddle-sports"
+    );
+  });
+
   it("does not classify hiking or non-riding horse mentions as Horseback Riding", () => {
     expect(slugsFor({ title: "Hiking trail tour" })).toEqual(["hiking"]);
     expect(slugsFor({ title: "Historic horse carriage ride" })).not.toContain(
