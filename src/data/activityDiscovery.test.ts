@@ -7,6 +7,7 @@ import {
   getActivityDiscoveryPage,
   getActivityDiscoveryRouteDefinitions,
   getActivityStateOptions,
+  getResolvedPrimaryActivitySlug,
   getToursByActivityCategory,
   getToursByActivityLocation,
 } from "./activityDiscovery";
@@ -197,6 +198,59 @@ describe("activity discovery data", () => {
     expect(
       ACTIVITY_DISCOVERY_PAGES.some(page => page.slug === "canoeing")
     ).toBe(false);
+  });
+
+  it("routes San Diego Bay Day Sail by its resolved Sailing primary category", () => {
+    const cyclingCaliforniaTours = getToursByActivityLocation({
+      activitySlug: "cycling",
+      stateSlug: "california",
+    });
+    const sailingCaliforniaTours = getToursByActivityLocation({
+      activitySlug: "sailing",
+      stateSlug: "california",
+    });
+
+    const cyclingMatch = cyclingCaliforniaTours.find(
+      tour => tour.productCode === "37126P9"
+    );
+    const sailingMatch = sailingCaliforniaTours.find(
+      tour => tour.productCode === "37126P9"
+    );
+
+    expect(cyclingMatch).toBeUndefined();
+    expect(
+      getToursByActivityCategory("cycling").some(
+        tour => tour.productCode === "37126P9"
+      )
+    ).toBe(false);
+
+    expect(sailingMatch).toBeTruthy();
+    expect(
+      getToursByActivityCategory("sailing").some(
+        tour => tour.productCode === "37126P9"
+      )
+    ).toBe(true);
+    expect(sailingMatch?.primaryDisplayCategory).toBe("Sailing");
+    expect(sailingMatch?.tagPills).toEqual(["Sailing"]);
+    expect(getResolvedPrimaryActivitySlug(sailingMatch!)).toBe("sailing");
+  });
+
+  it("keeps California activity route membership aligned with card badges", () => {
+    (["cycling", "sailing"] as const).forEach(activitySlug => {
+      const activity = getActivityDiscoveryPage(activitySlug);
+      const tours = getToursByActivityLocation({
+        activitySlug,
+        stateSlug: "california",
+      });
+
+      expect(tours.length).toBeGreaterThan(0);
+      tours.forEach(tour => {
+        expect(getResolvedPrimaryActivitySlug(tour)).toBe(activitySlug);
+        if (tour.primaryDisplayCategory) {
+          expect(tour.primaryDisplayCategory).toBe(activity?.label);
+        }
+      });
+    });
   });
 
   it("filters Activity → State → City selector options and routes correctly", () => {

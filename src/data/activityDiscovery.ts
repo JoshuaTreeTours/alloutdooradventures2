@@ -152,7 +152,7 @@ export const getActivityDiscoveryPage = (activitySlug: string) =>
 const STALE_ACTIVITY_LABEL_PATTERN =
   /^(?:hiking(?:-tour|-tours)?|walking(?:-tour|-tours)?|walking tour|walking tours|sightseeing(?:-tour|-tours)?|sightseeing-city-tours)$/;
 
-const reclassifiedTourActivitySlugCache = new WeakMap<Tour, string[]>();
+const resolvedPrimaryActivitySlugCache = new WeakMap<Tour, string | null>();
 
 const isStaleActivityLabelValue = (value: string | null | undefined) =>
   Boolean(value) &&
@@ -160,13 +160,23 @@ const isStaleActivityLabelValue = (value: string | null | undefined) =>
     normalizeTourCategoryText(value).replace(/\s+/g, "-")
   );
 
-const getReclassifiedTourActivitySlugs = (tour: Tour) => {
-  const cached = reclassifiedTourActivitySlugCache.get(tour);
-  if (cached) {
-    return cached;
-  }
+const normalizeActivityLookupValue = (value: string | null | undefined) =>
+  value ? normalizeTourCategoryText(value).replace(/-tour$/, "") : "";
 
-  const slugs = classifyTourCategories({
+const PRIMARY_ACTIVITY_SLUG_LOOKUP = new Map(
+  TOUR_ACTIVITY_CATEGORIES.flatMap(category => [
+    [normalizeActivityLookupValue(category.slug), category.slug],
+    [normalizeActivityLookupValue(category.label), category.slug],
+  ])
+);
+
+const resolvePrimaryActivitySlugFromValue = (
+  value: string | null | undefined
+) =>
+  PRIMARY_ACTIVITY_SLUG_LOOKUP.get(normalizeActivityLookupValue(value)) ?? null;
+
+const classifyTourPrimaryActivitySlug = (tour: Tour) =>
+  classifyTourCategories({
     title: tour.title,
     overview: tour.shortDescription,
     description: tour.longDescription,
@@ -178,62 +188,30 @@ const getReclassifiedTourActivitySlugs = (tour: Tour) => {
       (value): value is string =>
         Boolean(value) && !isStaleActivityLabelValue(value)
     ),
-    categories: [
-      tour.primaryCategory,
-      ...(tour.categories ?? []),
-      ...(tour.tags ?? []),
-      ...(tour.tagPills ?? []),
-      ...(tour.activityCategories ?? []).flatMap(category => [
-        category.slug,
-        category.label,
-      ]),
-    ].filter(
+    categories: [tour.primaryCategory].filter(
       (value): value is string =>
         Boolean(value) && !isStaleActivityLabelValue(value)
     ),
-  }).matchedCategorySlugs;
+  }).matchedCategorySlugs[0] ?? null;
 
-  reclassifiedTourActivitySlugCache.set(tour, slugs);
-  return slugs;
+export const getResolvedPrimaryActivitySlug = (tour: Tour) => {
+  const cached = resolvedPrimaryActivitySlugCache.get(tour);
+  if (cached !== undefined) {
+    return cached;
+  }
+
+  const resolvedSlug =
+    resolvePrimaryActivitySlugFromValue(tour.primaryDisplayCategory) ??
+    resolvePrimaryActivitySlugFromValue(tour.primaryCategory) ??
+    tour.activityCategories?.[0]?.slug ??
+    classifyTourPrimaryActivitySlug(tour);
+
+  resolvedPrimaryActivitySlugCache.set(tour, resolvedSlug);
+  return resolvedSlug;
 };
 
-const hasStoredActivityCategory = (tour: Tour, activitySlug: string) =>
-  Boolean(
-    tour.activityCategories?.some(category => category.slug === activitySlug)
-  );
-
-const hasActivityCategory = (tour: Tour, activitySlug: string) => {
-  const reclassifiedSlugs = getReclassifiedTourActivitySlugs(tour);
-
-  if (activitySlug === "horseback-riding") {
-    return reclassifiedSlugs.includes("horseback-riding");
-  }
-
-  if (activitySlug === "walking-tours") {
-    return reclassifiedSlugs.includes("walking-tours");
-  }
-
-  if (activitySlug === "sightseeing-city-tours") {
-    return reclassifiedSlugs.includes("sightseeing-city-tours");
-  }
-
-  if (activitySlug === "hiking") {
-    return (
-      hasStoredActivityCategory(tour, "hiking") &&
-      reclassifiedSlugs.includes("hiking")
-    );
-  }
-
-  if (activitySlug === "fishing") {
-    return reclassifiedSlugs.includes("fishing");
-  }
-
-  if (activitySlug === "boating") {
-    return reclassifiedSlugs.includes("boating");
-  }
-
-  return hasStoredActivityCategory(tour, activitySlug);
-};
+const hasActivityCategory = (tour: Tour, activitySlug: string) =>
+  getResolvedPrimaryActivitySlug(tour) === activitySlug;
 
 const getUniqueTourKey = (tour: Tour) =>
   tour.productCode ||
