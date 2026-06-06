@@ -1,8 +1,19 @@
+import { classifyTourCategories } from "../../lib/tourCategoryClassifier";
 import { buildCanonicalUrl } from "../../utils/seo";
 import type { Engine4TourViewModel } from "../types";
 
 export const buildEngine4ViatorSchemaGraph = (tour: Engine4TourViewModel) => {
   const canonicalUrl = buildCanonicalUrl(tour.canonicalPath);
+
+  const activityCategory =
+    classifyTourCategories({
+      title: tour.title,
+      overview: tour.content.overview,
+      description: tour.content.whatToExpect,
+      highlights: tour.content.highlights,
+      itinerary: tour.content.itinerary,
+      categories: ["hiking"],
+    }).primaryDisplayCategory ?? "Hiking";
 
   const itinerary =
     tour.content.itinerary && tour.content.itinerary.length > 0
@@ -104,7 +115,7 @@ export const buildEngine4ViatorSchemaGraph = (tour: Engine4TourViewModel) => {
         itinerary,
         duration: tour.facts.duration,
         startTime: tour.facts.startTime,
-        touristType: "Adventure travelers",
+        touristType: activityCategory,
         ...(tour.facts.meetingPointFull
           ? {
               departureStation: {
@@ -122,6 +133,7 @@ export const buildEngine4ViatorSchemaGraph = (tour: Engine4TourViewModel) => {
         image: tour.primaryImage ?? tour.heroImage ?? undefined,
         description: tour.content.overview,
         url: tour.bookingUrl,
+        category: activityCategory,
         offers: { "@id": offerNode["@id"] },
         ...(aggregateRatingNode
           ? { aggregateRating: { "@id": aggregateRatingNode["@id"] } }

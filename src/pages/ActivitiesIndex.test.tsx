@@ -8,6 +8,7 @@ import {
   getActivityIndexCards,
   getToursByActivityCategory,
   resolveActivityHeroImage,
+  SAILING_ACTIVITY_HERO_IMAGE,
 } from "../data/activityDiscovery";
 import ActivitiesIndex from "./ActivitiesIndex";
 
@@ -70,6 +71,19 @@ describe("Activities index", () => {
     );
   });
 
+  it("uses the dedicated Sailing hero only for Sailing activity surfaces", () => {
+    const sailingTours = getToursByActivityCategory("sailing");
+    const sailingCard = getActivityIndexCards().find(
+      card => card.slug === "sailing"
+    );
+
+    expect(sailingTours.length).toBeGreaterThan(0);
+    expect(resolveActivityHeroImage(sailingTours, "sailing")).toBe(
+      SAILING_ACTIVITY_HERO_IMAGE
+    );
+    expect(sailingCard?.image).toBe(SAILING_ACTIVITY_HERO_IMAGE);
+  });
+
   it("shows the Fishing card only when backed by route inventory", () => {
     const fishingTours = getToursByActivityCategory("fishing");
     const fishingCard = getActivityIndexCards().find(
@@ -89,7 +103,7 @@ describe("Activities index", () => {
       expect(card.image).toBe(
         resolveActivityHeroImage(routeActivityTours, card.slug)
       );
-      if (card.slug !== "boating") {
+      if (!["boating", "sailing"].includes(card.slug)) {
         expect(
           routeActivityTours.some(tour =>
             [

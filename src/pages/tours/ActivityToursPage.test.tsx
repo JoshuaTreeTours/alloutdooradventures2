@@ -1,7 +1,10 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 
-import { getToursByActivityCategory } from "../../data/activityDiscovery";
+import {
+  getToursByActivityCategory,
+  SAILING_ACTIVITY_HERO_IMAGE,
+} from "../../data/activityDiscovery";
 import ActivityToursPage from "./ActivityToursPage";
 
 (globalThis as { location?: { pathname: string } }).location = {
@@ -62,6 +65,18 @@ describe("ActivityToursPage", () => {
     expect(html).toContain("Boating Tours &amp; Outdoor Adventures");
     expect(html).toContain(`${boatingCount} tours`);
     expect(html).toContain("Explore boating tour cards");
+  });
+
+  it("/tours/sailing uses the dedicated Sailing hero image", () => {
+    const sailingCount = getToursByActivityCategory("sailing").length;
+    const html = renderToStaticMarkup(
+      <ActivityToursPage params={{ activitySlug: "sailing" }} />
+    );
+
+    expect(sailingCount).toBeGreaterThan(0);
+    expect(html).toContain("Sailing Tours &amp; Outdoor Adventures");
+    expect(html).toContain(`${sailingCount} tours`);
+    expect(html).toContain(SAILING_ACTIVITY_HERO_IMAGE);
   });
 
   it("/tours/fishing renders Fishing with the route-backed count", () => {

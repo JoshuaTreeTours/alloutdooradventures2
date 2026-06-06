@@ -44,6 +44,9 @@ export const ACTIVITY_INDEX_PREFERRED_ORDER = [
 const BOATING_ACTIVITY_HERO_IMAGE =
   "https://cdn.filestackcontent.com/OJiNPwlYQlaHDU6gDwva";
 
+export const SAILING_ACTIVITY_HERO_IMAGE =
+  "https://cdn.filestackcontent.com/MMdbUxClRWq36GyZNbqk";
+
 const ACTIVITY_PAGE_COPY: Record<
   string,
   { title: string; description: string }
@@ -417,6 +420,10 @@ export const resolveActivityHeroImage = (
 ) => {
   if (activitySlug === "boating") {
     return BOATING_ACTIVITY_HERO_IMAGE;
+  }
+
+  if (activitySlug === "sailing") {
+    return SAILING_ACTIVITY_HERO_IMAGE;
   }
 
   const heroTour = sortActivityDiscoveryTours(activityTours).find(tour =>

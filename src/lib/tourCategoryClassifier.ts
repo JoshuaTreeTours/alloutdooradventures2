@@ -87,13 +87,13 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "sailing",
     signals: [
-      /\b(?:sail|sailing|sailboat|sunset sail|catamaran sail|private sailing charter|yacht sailing|schooner)\b/,
+      /\b(?:sailing|sailboat|sail boat|schooner|schooner sail|schooner sailing|sailing charter|sailing lesson|sunset sail|catamaran sail|catamaran sailing|yacht sailing|sailing excursion)\b/,
     ],
   },
   {
     slug: "boating",
     signals: [
-      /\b(?:boat tour|sightseeing boat tour|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|ferry tour|speedboat(?: adventure| sightseeing)?(?: tour)?|speed boat(?: adventure| sightseeing)?(?: tour)?|jet boat(?: adventure| tour)?|adventure boat|duffy boat|electric boat|pontoon boat|private boat charter|yacht charter|yacht cruise|amphibious boat|amphibious seal tour|duck boat|seal tour|water taxi(?:[- ]style)? sightseeing tour|dinner boat|boat cruise|boat rental|party barge cruise|sandbar cruise)\b/,
+      /\b(?:boat tour|sightseeing boat tour|sightseeing cruise|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|brunch cruise|dinner cruise|holiday cruise|cocoa cruise|pirate (?:boat|cruise)|ferry|ferry tickets|ferry tour|speedboat(?: adventure| sightseeing)?(?: tour)?|speed boat(?: adventure| sightseeing)?(?: tour)?|jet boat(?: adventure| tour)?|adventure boat|duffy boat|electric boat|pontoon boat|private boat (?:charter|cruise)|boat with a captain|yacht charter|yacht cruise|cruise on yacht|amphibious boat|amphibious seal tour|duck boat|seal tour|water taxi(?:[- ]style)? sightseeing tour|dinner boat|boat cruise|boat rental|party barge cruise|sandbar cruise|fort lauderdale cruise)\b/,
     ],
   },
   {
@@ -141,7 +141,7 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "sightseeing-city-tours",
     signals: [
-      /\b(?:sightseeing|city tour|private city tour|trolley|bus tour|van tour|suv tour|hop[- ]on hop[- ]off|landmarks|highlights tour|day trip|road trip|limo ride|shopping cart limo|gocar|go car)\b/,
+      /\b(?:sightseeing|city tour|private city tour|private (?:[a-z0-9]+ ){0,6}tour|trolley|bus tour|van tour|suv tour|hop[- ]on hop[- ]off|landmarks|highlights tour|day trip|road trip|limo ride|shopping cart limo|gocar|go car)\b/,
     ],
   },
 ];
@@ -237,14 +237,20 @@ const MARINE_WILDLIFE_PRIMARY_PATTERN =
 const AMPHIBIOUS_SEAL_TOUR_PATTERN =
   /\b(?:amphibious seal tour|duck boat|seal tour)\b/;
 
+const EXPLICIT_SAILING_INTENT_PATTERN =
+  /\b(?:sailing|sailboat|sail boat|schooner|schooner sail|schooner sailing|sailing charter|sailing lesson|sunset sail|catamaran sail|catamaran sailing|yacht sailing|sailing excursion)\b/;
+
+const NON_SAILING_PRIMARY_PATTERN =
+  /\b(?:sightseeing boat tour|sightseeing cruise|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|brunch cruise|dinner cruise|holiday cruise|cocoa cruise|pirate (?:boat|cruise)|ferry|ferry tickets|boat rental|duffy boat|electric boat|pontoon boat|speedboat|speed boat|jet boat|parasail|parasailing|private boat (?:charter|cruise)|boat with a captain|city tour|day trip|road trip|bus tour|van tour|suv tour)\b/;
+
 const EXPLICIT_BOATING_VESSEL_PATTERN =
-  /\b(?:boat tour|sightseeing boat tour|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|ferry tour|yacht charter|yacht cruise|duffy boat|electric boat|pontoon boat|speedboat(?: adventure| sightseeing)?(?: tour)?|speed boat(?: adventure| sightseeing)?(?: tour)?|jet boat(?: adventure| tour)?|private boat charter|amphibious (?:seal|duck) tour|amphibious boat|duck boat|seal tour|water taxi(?:[- ]style)? sightseeing tour|dinner boat|boat cruise|boat rental|party barge cruise|sandbar cruise)\b/;
+  /\b(?:boat tour|sightseeing boat tour|sightseeing cruise|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|brunch cruise|dinner cruise|holiday cruise|cocoa cruise|pirate (?:boat|cruise)|ferry|ferry tickets|ferry tour|yacht charter|yacht cruise|cruise on yacht|duffy boat|electric boat|pontoon boat|speedboat(?: adventure| sightseeing)?(?: tour)?|speed boat(?: adventure| sightseeing)?(?: tour)?|jet boat(?: adventure| tour)?|private boat (?:charter|cruise)|boat with a captain|amphibious (?:seal|duck) tour|amphibious boat|duck boat|seal tour|water taxi(?:[- ]style)? sightseeing tour|dinner boat|boat cruise|boat rental|party barge cruise|sandbar cruise|fort lauderdale cruise)\b/;
 
 const LAND_PRIMARY_BOATING_EXCLUSION_PATTERN =
   /\b(?:land[- ]based city tour|private city tour|city tour|road trip|day trip|national park day trip|gocar|go car|limo ride|shopping cart limo|bike tour|bicycle tour|e[- ]?bike tour|ebike tour|walking tour|bus tour|van tour|suv tour|jeep tour|off[- ]?road tour)\b/;
 
 const BOATING_SOURCE_CATEGORY_PATTERN =
-  /\b(?:boat tour|sightseeing boat tour|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|ferry tour|yacht charter|duffy boat|pontoon boat|speedboat|speed boat|jet boat|private boat charter|amphibious seal tour|duck boat|boat rental)\b/;
+  /\b(?:boat tour|sightseeing boat tour|sightseeing cruise|harbou?r cruise|bay cruise|riverboat(?: sightseeing)? cruise|river cruise|lake cruise|canal cruise|brunch cruise|dinner cruise|holiday cruise|cocoa cruise|pirate (?:boat|cruise)|ferry|ferry tickets|ferry tour|yacht charter|yacht cruise|cruise on yacht|duffy boat|pontoon boat|speedboat|speed boat|jet boat|private boat (?:charter|cruise)|boat with a captain|amphibious seal tour|duck boat|boat rental|fort lauderdale cruise)\b/;
 
 const BICYCLE_RENTAL_ADDON_PATTERN =
   /\b(?:free )?(?:bike|bicycle|e[- ]?bike|ebike) rental\b/;
@@ -322,8 +328,17 @@ const pushUnique = <T>(items: T[], item: T) => {
   if (!items.includes(item)) items.push(item);
 };
 
-const orderPrimaryFirst = (slugs: TourActivityCategorySlug[]) =>
+const orderPrimaryFirst = (
+  slugs: TourActivityCategorySlug[],
+  primaryIntentSlugs: TourActivityCategorySlug[] = []
+) =>
   [...slugs].sort((a, b) => {
+    const primaryA = primaryIntentSlugs.includes(a);
+    const primaryB = primaryIntentSlugs.includes(b);
+
+    if (primaryA && !primaryB) return -1;
+    if (primaryB && !primaryA) return 1;
+
     if (a === SIGHTSEEING_SLUG && b !== SIGHTSEEING_SLUG) return 1;
     if (b === SIGHTSEEING_SLUG && a !== SIGHTSEEING_SLUG) return -1;
 
@@ -341,16 +356,26 @@ export const classifyTourCategories = (
     [input.title, ...(input.categories ?? [])].filter(Boolean).join(" ")
   );
   const matched: TourActivityCategorySlug[] = [];
+  const primaryIntentMatched: TourActivityCategorySlug[] = [];
 
   for (const sourceCategory of input.categories ?? []) {
     if (!sourceCategory) continue;
     const mapped = SOURCE_CATEGORY_TO_ACTIVITY[toSimpleSlug(sourceCategory)];
-    if (mapped) pushUnique(matched, mapped);
+    if (mapped) {
+      pushUnique(matched, mapped);
+      pushUnique(primaryIntentMatched, mapped);
+    }
   }
 
   for (const categoryPattern of CATEGORY_SIGNAL_PATTERNS) {
     if (categoryPattern.signals.some(signal => signal.test(normalizedText))) {
       pushUnique(matched, categoryPattern.slug);
+    }
+
+    if (
+      categoryPattern.signals.some(signal => signal.test(primaryIntentText))
+    ) {
+      pushUnique(primaryIntentMatched, categoryPattern.slug);
     }
   }
 
@@ -427,12 +452,21 @@ export const classifyTourCategories = (
       return false;
     }
 
-    if (
-      slug === SAILING_SLUG &&
-      matched.includes(WILDLIFE_SLUG) &&
-      MARINE_WILDLIFE_PRIMARY_PATTERN.test(primaryIntentText)
-    ) {
-      return false;
+    if (slug === SAILING_SLUG) {
+      if (!EXPLICIT_SAILING_INTENT_PATTERN.test(primaryIntentText)) {
+        return false;
+      }
+
+      if (NON_SAILING_PRIMARY_PATTERN.test(primaryIntentText)) {
+        return false;
+      }
+
+      if (
+        matched.includes(WILDLIFE_SLUG) &&
+        MARINE_WILDLIFE_PRIMARY_PATTERN.test(primaryIntentText)
+      ) {
+        return false;
+      }
     }
 
     if (
@@ -461,13 +495,18 @@ export const classifyTourCategories = (
         matched.includes(JEEP_OFF_ROAD_SLUG) ||
         (matched.includes(CYCLING_SLUG) &&
           !EXPLICIT_BOATING_VESSEL_PATTERN.test(primaryIntentText));
+      const hasPrimarySailingMatch =
+        matched.includes(SAILING_SLUG) &&
+        EXPLICIT_SAILING_INTENT_PATTERN.test(primaryIntentText) &&
+        !NON_SAILING_PRIMARY_PATTERN.test(primaryIntentText);
 
       if (
         !hasExplicitBoatingIntent ||
         hasLandBasedPrimary ||
         hasPrimaryWildlifeMatch ||
         matched.includes(FISHING_SLUG) ||
-        matched.includes(SAILING_SLUG) ||
+        hasPrimarySailingMatch ||
+        FOOD_PRIMARY_PATTERN.test(primaryIntentText) ||
         (matched.includes(HIKING_SLUG) &&
           TRUE_HIKING_PATTERN.test(primaryIntentText)) ||
         matched.includes(PADDLE_SPORTS_SLUG) ||
@@ -505,7 +544,10 @@ export const classifyTourCategories = (
     return true;
   });
 
-  const matchedCategorySlugs = orderPrimaryFirst(priorityFilteredMatches);
+  const matchedCategorySlugs = orderPrimaryFirst(
+    priorityFilteredMatches,
+    primaryIntentMatched
+  );
   const activityCategories = matchedCategorySlugs
     .map(slug => CATEGORY_BY_SLUG.get(slug))
     .filter((category): category is TourActivityCategory => Boolean(category));

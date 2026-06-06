@@ -1045,9 +1045,19 @@ const normalizeSingleItineraryItem = (
     const descriptionText = asNonEmptyString(row.description);
     if (!descriptionText) return null;
 
+    const normalizedDescription = descriptionText
+      .replace(/^he\s+(?=[A-Z])/, "The ")
+      .trim();
     const firstSentence =
-      descriptionText.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
+      normalizedDescription.split(/(?<!\b\d)(?<=[.!?])\s+/)[0]?.trim() ?? "";
     if (!firstSentence) return null;
+
+    const subjectMatch = firstSentence.match(
+      /^((?:The\s+)?[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,7})\s+(?:is|are|offers?|provides?|features?)\b/
+    );
+    if (subjectMatch?.[1]) {
+      return subjectMatch[1].replace(/[.,:;]+$/, "").trim();
+    }
 
     const locationPattern =
       /\b(?:arrive in|continue to|final stop[:\s]+|visit|return to|journey in)\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,5})/;

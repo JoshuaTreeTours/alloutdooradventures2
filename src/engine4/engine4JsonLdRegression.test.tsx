@@ -44,8 +44,19 @@ describe("Engine4 JSON-LD regression guard", () => {
     expect(html).toContain(
       `src="${String(tour.primaryImage ?? tour.heroImage).replace(/&/g, "&amp;")}`
     );
-    expect(graph.some(node => node["@type"] === "Product")).toBe(true);
-    expect(graph.some(node => node["@type"] === "TouristTrip")).toBe(true);
+    const product = graph.find(node => node["@type"] === "Product") as Record<
+      string,
+      unknown
+    >;
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as Record<
+      string,
+      unknown
+    >;
+
+    expect(product).toBeTruthy();
+    expect(trip).toBeTruthy();
+    expect(product.category).toBe("Hiking");
+    expect(trip.touristType).toBe("Hiking");
     expect(graph.some(node => node["@type"] === "BreadcrumbList")).toBe(true);
     expectNoDuplicateSchemaIds(graph);
   });

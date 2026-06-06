@@ -515,7 +515,7 @@ const rewriteItineraryDescriptionToSingleSentence = (args: {
     .trim();
   const sourceSentence =
     cleanedSource
-      .split(/[.!?]/)
+      .split(/(?<!\b\d)[.!?]/)
       .map(part => part.trim())
       .find(Boolean) ?? "";
   const normalizedTitle = title
@@ -537,6 +537,7 @@ const rewriteItineraryDescriptionToSingleSentence = (args: {
     .replace(/^check out\s+/i, "")
     .replace(/^pass(?: by)?\s+/i, "")
     .replace(/^you(?:'ll| will)\s+/i, "")
+    .replace(/^he\s+(?=[A-Z])/, "The ")
     .replace(/^[a-z]/, m => m.toUpperCase())
     .replace(/[;:,]\s*$/, "")
     .trim();
@@ -558,6 +559,7 @@ const rewriteItineraryDescriptionToSingleSentence = (args: {
       /^(?:enjoy|experience|discover|visit|explore|see|head to|head|take in|check out|pass(?: by)?)\s+/i,
       ""
     )
+    .replace(/^he\s+(?=[A-Z])/, "The ")
     .replace(/^[a-z]/, m => m.toUpperCase())
     .trim();
   const fallbackLead =

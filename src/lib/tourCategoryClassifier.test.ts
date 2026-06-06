@@ -62,9 +62,180 @@ describe("classifyTourCategories", () => {
       "catamaran sail",
       "yacht sailing",
       "private sailing experience",
+      "sailboat tour",
+      "sail boat charter",
+      "schooner sail",
+      "catamaran sailing excursion",
     ].forEach(title => {
       expect(slugsFor({ title })).toEqual(["sailing"]);
     });
+  });
+
+  it("keeps listed non-sailing vessel and land tours out of Sailing", () => {
+    const examples: Array<
+      [Parameters<typeof classifyTourCategories>[0], string]
+    > = [
+      [
+        {
+          title: "Manhattan Adventure Sightseeing Boat Tour from Chelsea Piers",
+          highlights: ["Sailing"],
+        },
+        "boating",
+      ],
+      [{ title: "Ocean Parasailing", highlights: ["Sailing"] }, "water-sports"],
+      [
+        {
+          title: "Miami Private Boat Cruise with a Captain",
+          highlights: ["Sailing"],
+        },
+        "boating",
+      ],
+      [
+        { title: "Giant Comfort Boat", highlights: ["Boat Rental", "Sailing"] },
+        "boating",
+      ],
+      [
+        {
+          title: "New York City Sunset or Daytime Sightseeing Cruise",
+          highlights: ["Sailing"],
+        },
+        "boating",
+      ],
+      [
+        { title: "Cocoa and Carols Holiday Cruise", highlights: ["Sailing"] },
+        "boating",
+      ],
+      [
+        {
+          title: "Miami Pirate Boat Tour Skyline and Celebrity Homes",
+          highlights: ["Sailing"],
+        },
+        "boating",
+      ],
+      [
+        {
+          title: "Statue and Skyline Sightseeing Cruise",
+          highlights: ["Sailing"],
+        },
+        "boating",
+      ],
+      [
+        { title: "Sunset Cruise on Yacht Manhattan", highlights: ["Sailing"] },
+        "boating",
+      ],
+      [
+        {
+          title: "Statue and City Lights Cruise on Yacht Manhattan",
+          highlights: ["Sailing"],
+        },
+        "boating",
+      ],
+      [
+        {
+          title: "Statue and Skyline Holiday Cocoa Cruise",
+          highlights: ["Sailing"],
+        },
+        "boating",
+      ],
+      [
+        {
+          title: "Venice of America Fort Lauderdale Cruise",
+          highlights: ["Sailing"],
+        },
+        "boating",
+      ],
+      [
+        { title: "San Diego Sunday Brunch Cruise", highlights: ["Sailing"] },
+        "boating",
+      ],
+      [
+        {
+          title: "Miami Raccoon Island Adventure",
+          highlights: ["Boat Tour", "Sailing"],
+        },
+        "boating",
+      ],
+      [{ title: "Fall Brunch Cruise", highlights: ["Sailing"] }, "boating"],
+      [
+        {
+          title: "Holiday Brunch Cruise with Santa Claus",
+          highlights: ["Sailing"],
+        },
+        "boating",
+      ],
+      [
+        {
+          title:
+            "Mothers Brunch Cruise Aboard Northern Lights Featuring Live Jazz",
+          highlights: ["Sailing"],
+        },
+        "boating",
+      ],
+      [
+        {
+          title: "Clearwater Beach Pirate Cruise Adventure with Lunch",
+          highlights: ["Sailing"],
+        },
+        "boating",
+      ],
+      [
+        {
+          title: "Private North Shore and Salem Tour",
+          highlights: ["Sailing"],
+        },
+        "sightseeing-city-tours",
+      ],
+      [{ title: "Ferry Tickets", highlights: ["Ferry", "Sailing"] }, "boating"],
+    ];
+
+    examples.forEach(([input, expectedPrimary]) => {
+      const slugs = slugsFor(input);
+
+      expect(slugs[0]).toBe(expectedPrimary);
+      expect(slugs).not.toContain("sailing");
+    });
+  });
+
+  it("does not let generic cruise, yacht, or boat terms trigger Sailing by themselves", () => {
+    [
+      "sightseeing cruise",
+      "harbor cruise",
+      "brunch cruise",
+      "dinner cruise",
+      "holiday cruise",
+      "private yacht charter",
+      "boat rental",
+      "pontoon boat tour",
+      "electric boat rental",
+      "speedboat sightseeing tour",
+      "jet boat adventure",
+    ].forEach(title => {
+      const slugs = slugsFor({ title, highlights: ["Sailing"] });
+
+      expect(slugs).toContain("boating");
+      expect(slugs).not.toContain("sailing");
+    });
+  });
+
+  it("classifies parasailing as Water Sports instead of Sailing", () => {
+    expect(
+      slugsFor({ title: "Ocean Parasailing", highlights: ["Sailing"] })
+    ).toEqual(["water-sports"]);
+  });
+
+  it("classifies ferry tickets as Boating instead of Sailing", () => {
+    expect(
+      slugsFor({ title: "Ferry Tickets", highlights: ["Ferry", "Sailing"] })
+    ).toEqual(["boating"]);
+  });
+
+  it("classifies the land-based private Salem and North Shore tour as Sightseeing & City Tours", () => {
+    expect(
+      slugsFor({
+        title: "Private North Shore and Salem Tour",
+        highlights: ["Sailing"],
+      })
+    ).toEqual(["sightseeing-city-tours"]);
   });
 
   it("classifies vessel-based sightseeing as Boating before broad sightseeing", () => {
