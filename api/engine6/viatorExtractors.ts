@@ -5,7 +5,7 @@ import {
   type Engine6HeroSourceType,
   resolveProductScopedHero,
 } from "./heroResolver.js";
-import { classifyTourCategories } from "../../src/lib/tourCategoryClassifier";
+import { classifyTourCategories } from "./tourCategoryClassifier.js";
 
 export type Engine6DiagnosticsPaths = {
   commercialPriceFieldPath: string | null;
