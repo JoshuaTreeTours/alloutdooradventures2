@@ -44,6 +44,9 @@ export const ACTIVITY_INDEX_PREFERRED_ORDER = [
 const BOATING_ACTIVITY_HERO_IMAGE =
   "https://cdn.filestackcontent.com/OJiNPwlYQlaHDU6gDwva";
 
+export const HIKING_ACTIVITY_HERO_IMAGE =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/07/b0/bc.jpg";
+
 export const SAILING_ACTIVITY_HERO_IMAGE =
   "https://cdn.filestackcontent.com/MMdbUxClRWq36GyZNbqk";
 
@@ -443,6 +446,10 @@ export const resolveActivityHeroImage = (
 ) => {
   if (activitySlug === "boating") {
     return BOATING_ACTIVITY_HERO_IMAGE;
+  }
+
+  if (activitySlug === "hiking") {
+    return HIKING_ACTIVITY_HERO_IMAGE;
   }
 
   if (activitySlug === "sailing") {
