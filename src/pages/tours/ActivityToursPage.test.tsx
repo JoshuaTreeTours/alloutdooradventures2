@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 
 import TourCard from "../../components/TourCard";
 import {
+  CYCLING_ACTIVITY_HERO_IMAGE,
   getActivityTourEntriesByLocation,
   getToursByActivityCategory,
   HIKING_ACTIVITY_HERO_IMAGE,
@@ -25,6 +26,7 @@ describe("ActivityToursPage", () => {
     );
 
     expect(html).toContain("Cycling Tours &amp; Outdoor Adventures");
+    expect(html).toContain(CYCLING_ACTIVITY_HERO_IMAGE);
     expect(html).toContain("Explore cycling tour cards");
   });
 
