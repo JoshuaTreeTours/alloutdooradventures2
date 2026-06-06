@@ -1,7 +1,4 @@
-export type Engine6HeroSourceType =
-  | "api-primary"
-  | "api-gallery"
-  | "none";
+export type Engine6HeroSourceType = "api-primary" | "api-gallery" | "none";
 
 export type Engine6HeroQualityClassification =
   | "caption"
@@ -70,7 +67,10 @@ const getEffectiveWidth = (candidate: Engine6HeroCandidate) => {
 };
 
 const getEffectiveHeight = (candidate: Engine6HeroCandidate) => {
-  if (typeof candidate.height === "number" && Number.isFinite(candidate.height)) {
+  if (
+    typeof candidate.height === "number" &&
+    Number.isFinite(candidate.height)
+  ) {
     return candidate.height;
   }
 
@@ -114,7 +114,8 @@ const extractHost = (value: string): string | null => {
   }
 };
 
-const isCaptionHeroUrl = (value: string) => /\/caption\.jpg(?:$|[?#])/i.test(value);
+const isCaptionHeroUrl = (value: string) =>
+  /\/caption\.jpg(?:$|[?#])/i.test(value);
 
 const isSpliceHeroUrl = (value: string) =>
   /\/attractions-splice-spp-(?:\d+x\d+)\//i.test(value);
@@ -164,7 +165,10 @@ const extractCandidateFamilyKey = (value: string): string | null => {
   }
 };
 
-const hasCaptionPrecedence = (a: Engine6HeroCandidate, b: Engine6HeroCandidate) => {
+const hasCaptionPrecedence = (
+  a: Engine6HeroCandidate,
+  b: Engine6HeroCandidate
+) => {
   const aIsCaption = getHeroQualityClassification(a) === "caption";
   const bIsCaption = getHeroQualityClassification(b) === "caption";
   if (aIsCaption === bIsCaption) {
@@ -237,7 +241,8 @@ export const normalizeEngine6SourceProductUrl = (
   }
 };
 
-const isStaticHeroDisallowed = (value: string) => /(^|\/)hero\.jpg(?:$|[?#])/i.test(value);
+const isStaticHeroDisallowed = (value: string) =>
+  /(^|\/)hero\.jpg(?:$|[?#])/i.test(value);
 
 const isValidHttpImageUrl = (value: string) => {
   try {
@@ -356,7 +361,13 @@ export const resolveProductScopedHero = ({
       continue;
     }
 
+    const verifiedByProductCode =
+      normalizedCurrentProductCode &&
+      candidateProductCode &&
+      normalizedCurrentProductCode === candidateProductCode;
+
     if (
+      !verifiedByProductCode &&
       normalizedCurrentSourceProductUrl &&
       candidateSourceProductUrl &&
       normalizedCurrentSourceProductUrl !== candidateSourceProductUrl
@@ -367,10 +378,6 @@ export const resolveProductScopedHero = ({
       continue;
     }
 
-    const verifiedByProductCode =
-      normalizedCurrentProductCode &&
-      candidateProductCode &&
-      normalizedCurrentProductCode === candidateProductCode;
     const verifiedByProductUrl =
       normalizedCurrentSourceProductUrl &&
       candidateSourceProductUrl &&
@@ -396,11 +403,13 @@ export const resolveProductScopedHero = ({
       sourceFieldPath: candidateSourceFieldPath,
       host: candidate.host ?? extractHost(candidate.url),
       qualityClassification:
-        candidate.qualityClassification ?? getHeroQualityClassification(candidate),
+        candidate.qualityClassification ??
+        getHeroQualityClassification(candidate),
       candidateProductCode,
       candidateSourceProductUrl,
       fieldPath: candidateSourceFieldPath,
-      familyKey: candidate.familyKey ?? extractCandidateFamilyKey(candidate.url),
+      familyKey:
+        candidate.familyKey ?? extractCandidateFamilyKey(candidate.url),
     });
   }
 
@@ -408,9 +417,12 @@ export const resolveProductScopedHero = ({
     const selectedCandidate = rankHeroCandidates(validCandidates)[0]!;
     const normalizedUrl = normalizeHeroMediaUrl(selectedCandidate.url);
     const selectedFamilyKey =
-      selectedCandidate.familyKey ?? extractCandidateFamilyKey(selectedCandidate.url);
+      selectedCandidate.familyKey ??
+      extractCandidateFamilyKey(selectedCandidate.url);
     const candidateFamilyIdentityDeterminable = validCandidates.some(
-      candidate => (candidate.familyKey ?? extractCandidateFamilyKey(candidate.url)) !== null
+      candidate =>
+        (candidate.familyKey ?? extractCandidateFamilyKey(candidate.url)) !==
+        null
     );
     const captionPrecedenceApplied = validCandidates.some(candidate => {
       if (candidate === selectedCandidate) {
@@ -418,26 +430,33 @@ export const resolveProductScopedHero = ({
       }
       const selectedIsCaption =
         getHeroQualityClassification(selectedCandidate) === "caption";
-      const candidateIsCaption = getHeroQualityClassification(candidate) === "caption";
+      const candidateIsCaption =
+        getHeroQualityClassification(candidate) === "caption";
       if (!selectedIsCaption || candidateIsCaption) {
         return false;
       }
       const candidateFamily =
         candidate.familyKey ?? extractCandidateFamilyKey(candidate.url);
-      return Boolean(selectedFamilyKey && candidateFamily && selectedFamilyKey === candidateFamily);
+      return Boolean(
+        selectedFamilyKey &&
+        candidateFamily &&
+        selectedFamilyKey === candidateFamily
+      );
     });
 
     return {
       heroUrl: normalizedUrl,
       heroSourceType: selectedCandidate.sourceType,
-      heroQualityClassification: getHeroQualityClassification(selectedCandidate),
+      heroQualityClassification:
+        getHeroQualityClassification(selectedCandidate),
       fallbackTriggered: false,
       finalCandidate: {
         ...selectedCandidate,
         url: normalizedUrl,
         familyKey: selectedFamilyKey,
         width: selectedCandidate.width ?? getEffectiveWidth(selectedCandidate),
-        height: selectedCandidate.height ?? getEffectiveHeight(selectedCandidate),
+        height:
+          selectedCandidate.height ?? getEffectiveHeight(selectedCandidate),
       },
       rejectedForeignCandidates,
       captionPrecedenceApplied,

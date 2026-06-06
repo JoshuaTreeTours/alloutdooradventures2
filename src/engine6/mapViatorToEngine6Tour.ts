@@ -833,6 +833,7 @@ export const mapViatorToEngine6Tour = (
         "generated:viator-search-product-code",
       ratingFieldPath: payload.diagnostics.ratingFieldPath,
       reviewCountFieldPath: payload.diagnostics.reviewCountFieldPath,
+      durationFieldPath: payload.diagnostics.durationFieldPath ?? null,
       overviewFieldPath: payload.diagnostics.overviewFieldPath,
       highlightsFieldPath: payload.diagnostics.highlightsFieldPath,
       meetingPointFieldPath: payload.diagnostics.meetingPointFieldPath,

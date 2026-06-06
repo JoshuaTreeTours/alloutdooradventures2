@@ -70,6 +70,7 @@ export type Engine6TourDiagnostics = {
   bookingUrlSource: string;
   ratingFieldPath: string | null;
   reviewCountFieldPath: string | null;
+  durationFieldPath?: string | null;
   overviewFieldPath: string | null;
   highlightsFieldPath: string | null;
   meetingPointFieldPath: string | null;
