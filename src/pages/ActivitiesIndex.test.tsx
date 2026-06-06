@@ -8,6 +8,7 @@ import {
   CYCLING_ACTIVITY_HERO_IMAGE,
   getActivityIndexCards,
   getToursByActivityCategory,
+  PADDLE_SPORTS_ACTIVITY_HERO_IMAGE,
   resolveActivityHeroImage,
   SAILING_ACTIVITY_HERO_IMAGE,
 } from "../data/activityDiscovery";
@@ -49,6 +50,21 @@ describe("Activities index", () => {
     );
     expect(cyclingCard?.image).toBe(CYCLING_ACTIVITY_HERO_IMAGE);
     expect(html).toContain(CYCLING_ACTIVITY_HERO_IMAGE);
+  });
+
+  it("uses the dedicated Paddle Sports hero for the Paddle Sports activity card", () => {
+    const paddleSportsTours = getToursByActivityCategory("paddle-sports");
+    const paddleSportsCard = getActivityIndexCards().find(
+      card => card.slug === "paddle-sports"
+    );
+    const html = renderToStaticMarkup(<ActivitiesIndex />);
+
+    expect(paddleSportsTours.length).toBeGreaterThan(0);
+    expect(resolveActivityHeroImage(paddleSportsTours, "paddle-sports")).toBe(
+      PADDLE_SPORTS_ACTIVITY_HERO_IMAGE
+    );
+    expect(paddleSportsCard?.image).toBe(PADDLE_SPORTS_ACTIVITY_HERO_IMAGE);
+    expect(html).toContain(PADDLE_SPORTS_ACTIVITY_HERO_IMAGE);
   });
 
   it("shows the Horseback Riding card only when backed by route inventory", () => {
@@ -119,7 +135,9 @@ describe("Activities index", () => {
       expect(card.image).toBe(
         resolveActivityHeroImage(routeActivityTours, card.slug)
       );
-      if (!["boating", "cycling", "sailing"].includes(card.slug)) {
+      if (
+        !["boating", "cycling", "paddle-sports", "sailing"].includes(card.slug)
+      ) {
         expect(
           routeActivityTours.some(tour =>
             [

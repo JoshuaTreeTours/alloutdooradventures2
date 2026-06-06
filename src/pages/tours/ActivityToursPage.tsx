@@ -13,7 +13,7 @@ import {
   getActivityStateOptions,
   getActivityTourEntriesByLocation,
   getActivityTourHref,
-  resolveActivityPageHeroImage,
+  resolveActivityHeroImage,
 } from "../../data/activityDiscovery";
 import { resolveTourHeroImage } from "../../utils/hero";
 import { useEngine6LiveTourCardHydration } from "../../engine6/useEngine6LiveTourCardHydration";
@@ -60,7 +60,7 @@ export default function ActivityToursPage({ params }: ActivityToursPageProps) {
   );
 
   const heroImage = useMemo(
-    () => resolveActivityPageHeroImage(activityTours, params.activitySlug),
+    () => resolveActivityHeroImage(activityTours, params.activitySlug),
     [activityTours, params.activitySlug]
   );
 

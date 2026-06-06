@@ -462,6 +462,10 @@ export const resolveActivityHeroImage = (
     return HIKING_ACTIVITY_HERO_IMAGE;
   }
 
+  if (activitySlug === "paddle-sports") {
+    return PADDLE_SPORTS_ACTIVITY_HERO_IMAGE;
+  }
+
   if (activitySlug === "sailing") {
     return SAILING_ACTIVITY_HERO_IMAGE;
   }
@@ -471,17 +475,6 @@ export const resolveActivityHeroImage = (
   );
 
   return heroTour ? resolveTourHeroImage(heroTour) : null;
-};
-
-export const resolveActivityPageHeroImage = (
-  activityTours: Tour[],
-  activitySlug?: string
-) => {
-  if (activitySlug === "paddle-sports") {
-    return PADDLE_SPORTS_ACTIVITY_HERO_IMAGE;
-  }
-
-  return resolveActivityHeroImage(activityTours, activitySlug);
 };
 
 export const getActivityDisplayTitle = (activitySlug: string) =>
