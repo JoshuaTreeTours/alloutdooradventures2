@@ -8,6 +8,7 @@ import {
   withCategoryPageActivityBadge,
 } from "../../data/activityFilters";
 import { tours } from "../../data/tours";
+import { useEngine6LiveTourCardHydration } from "../../engine6/useEngine6LiveTourCardHydration";
 import { ADVENTURE_ACTIVITY_PAGES, slugify } from "../../data/tourCatalog";
 import { resolveHeroImage } from "../../utils/hero";
 
@@ -46,7 +47,11 @@ export default function ActivityStateTours({
       .map(tour => withCategoryPageActivityBadge(tour, activity.slug)),
     activity.slug
   );
-  const stateName = stateTours[0]?.destination.state ?? "this state";
+  const hydratedStateTourEntries = useEngine6LiveTourCardHydration(
+    stateTours.map(tour => ({ tour }))
+  );
+  const hydratedStateTours = hydratedStateTourEntries.map(entry => entry.tour);
+  const stateName = hydratedStateTours[0]?.destination.state ?? "this state";
   const heroImage = resolveHeroImage({
     pageType: "activity",
     primary: activity.image,
@@ -106,9 +111,9 @@ export default function ActivityStateTours({
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-14">
-        {stateTours.length ? (
+        {hydratedStateTours.length ? (
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {stateTours.map(tour => (
+            {hydratedStateTours.map(tour => (
               <TourCard key={tour.id} tour={tour} />
             ))}
           </div>

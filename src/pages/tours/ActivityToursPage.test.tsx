@@ -1,10 +1,16 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 
+import TourCard from "../../components/TourCard";
 import {
+  getActivityTourEntriesByLocation,
   getToursByActivityCategory,
   SAILING_ACTIVITY_HERO_IMAGE,
 } from "../../data/activityDiscovery";
+import {
+  hydrateEngine6TourCardEntries,
+  type Engine6LiveProductFields,
+} from "../../engine6/liveProductFields";
 import ActivityToursPage from "./ActivityToursPage";
 
 (globalThis as { location?: { pathname: string } }).location = {
@@ -98,5 +104,72 @@ describe("ActivityToursPage", () => {
 
     expect(html).toContain("Paddle Sports Tours &amp; Outdoor Adventures");
     expect(html).toMatch(/kayak|canoe|SUP|paddle/i);
+  });
+});
+
+describe("ActivityToursPage Engine6 live card authority", () => {
+  it("hydrates 6740P7 activity cards from the same live commercial resolver as product pages", () => {
+    const entries = getActivityTourEntriesByLocation({
+      activitySlug: "jeep-off-road",
+    });
+    const target = entries.find(entry => entry.tour.productCode === "6740P7");
+    expect(target).toBeDefined();
+
+    const liveByProductCode: Record<string, Engine6LiveProductFields> = {
+      "6740P7": {
+        priceAmount: 127.2,
+        priceFormatted: "From $127.20",
+        aggregateRating: 4.7,
+        reviewCount: 565,
+        durationText: "6 hours",
+        meetingPointText: null,
+      },
+    };
+
+    const hydratedTarget = hydrateEngine6TourCardEntries(
+      [target!],
+      liveByProductCode
+    )[0];
+    const html = renderToStaticMarkup(
+      <TourCard tour={hydratedTarget.tour} href={hydratedTarget.href} />
+    );
+
+    expect(hydratedTarget.tour.badges.priceFrom).toBe("From $127.20");
+    expect(hydratedTarget.tour.badges.rating).toBe(4.7);
+    expect(hydratedTarget.tour.badges.reviewCount).toBe(565);
+    expect(html).toContain("From $127.20");
+    expect(html).toContain("★ 4.7 (565 reviews)");
+    expect(html).not.toContain("From $179");
+    expect(html).not.toContain("★ 4.8 (453 reviews)");
+  });
+
+  it("keeps Engine6 activity card commercial fields in parity with product-page resolved fields", () => {
+    const [target] = getActivityTourEntriesByLocation({
+      activitySlug: "jeep-off-road",
+    }).filter(entry => entry.tour.productCode === "6740P7");
+    expect(target).toBeDefined();
+
+    const productPageResolvedFields: Engine6LiveProductFields = {
+      priceAmount: 127.2,
+      priceFormatted: "From $127.20",
+      aggregateRating: 4.7,
+      reviewCount: 565,
+      durationText: "6 hours",
+      meetingPointText: null,
+    };
+
+    const [cardEntry] = hydrateEngine6TourCardEntries([target!], {
+      "6740P7": productPageResolvedFields,
+    });
+
+    expect(cardEntry.tour.startingPrice).toBe(
+      productPageResolvedFields.priceAmount
+    );
+    expect(cardEntry.tour.badges.rating).toBe(
+      productPageResolvedFields.aggregateRating
+    );
+    expect(cardEntry.tour.badges.reviewCount).toBe(
+      productPageResolvedFields.reviewCount
+    );
   });
 });
