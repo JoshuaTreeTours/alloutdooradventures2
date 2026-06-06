@@ -19,40 +19,43 @@ const resolveEngine6ListingCountry = (tour: Engine6Tour, stateSlug: string) => {
 };
 
 const getEngine6ActivitySlugs = (tour: Engine6Tour) => {
-  const normalizedCategories = new Set(
-    [tour.primaryCategory, ...tour.categories]
-      .filter((value): value is string => Boolean(value))
-      .map(value => value.toLowerCase())
-  );
+  const primaryActivitySlug = tour.activityCategories[0]?.slug;
+  if (primaryActivitySlug) {
+    return primaryActivitySlug === "paddle-sports"
+      ? ["paddle-sports", "canoeing"]
+      : [primaryActivitySlug];
+  }
+
+  const normalizedPrimaryCategory = tour.primaryCategory?.toLowerCase();
   const slugs = new Set<string>();
 
   if (
-    normalizedCategories.has("bike-tour") ||
-    normalizedCategories.has("cycling")
+    normalizedPrimaryCategory === "bike-tour" ||
+    normalizedPrimaryCategory === "cycling"
   ) {
     slugs.add("cycling");
     slugs.add("bike-tours");
   }
 
   if (
-    normalizedCategories.has("hiking-tour") ||
-    normalizedCategories.has("hiking")
+    normalizedPrimaryCategory === "hiking-tour" ||
+    normalizedPrimaryCategory === "hiking"
   ) {
     slugs.add("hiking");
   }
 
   if (
-    normalizedCategories.has("paddle-tour") ||
-    normalizedCategories.has("paddle-sports") ||
-    normalizedCategories.has("boat-tour") ||
-    normalizedCategories.has("sailing") ||
-    normalizedCategories.has("water-sports") ||
-    normalizedCategories.has("snorkeling-tour")
+    normalizedPrimaryCategory === "paddle-tour" ||
+    normalizedPrimaryCategory === "paddle-sports" ||
+    normalizedPrimaryCategory === "boat-tour" ||
+    normalizedPrimaryCategory === "sailing" ||
+    normalizedPrimaryCategory === "water-sports" ||
+    normalizedPrimaryCategory === "snorkeling-tour"
   ) {
     slugs.add("canoeing");
   }
 
-  if (normalizedCategories.has("adventure-tour")) {
+  if (normalizedPrimaryCategory === "adventure-tour") {
     slugs.add("adventure");
   }
 
