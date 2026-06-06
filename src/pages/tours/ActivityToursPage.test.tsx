@@ -12,7 +12,9 @@ import {
   hydrateEngine6TourCardEntries,
   type Engine6LiveProductFields,
 } from "../../engine6/liveProductFields";
-import ActivityToursPage from "./ActivityToursPage";
+import ActivityToursPage, {
+  CYCLING_ACTIVITY_PAGE_HERO_IMAGE,
+} from "./ActivityToursPage";
 
 (globalThis as { location?: { pathname: string } }).location = {
   pathname: "/",
@@ -25,6 +27,7 @@ describe("ActivityToursPage", () => {
     );
 
     expect(html).toContain("Cycling Tours &amp; Outdoor Adventures");
+    expect(html).toContain(CYCLING_ACTIVITY_PAGE_HERO_IMAGE);
     expect(html).toContain("Explore cycling tour cards");
   });
 

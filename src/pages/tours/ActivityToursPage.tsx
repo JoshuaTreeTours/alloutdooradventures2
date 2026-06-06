@@ -27,6 +27,20 @@ export type ActivityToursPageProps = {
   };
 };
 
+export const CYCLING_ACTIVITY_PAGE_HERO_IMAGE =
+  "https://www.alloutdooradventures.com/images/cycling-hero.jpg";
+
+const resolveActivityPageHeroImage = (
+  activityTours: Parameters<typeof resolveActivityHeroImage>[0],
+  activitySlug: string
+) => {
+  if (activitySlug === "cycling") {
+    return CYCLING_ACTIVITY_PAGE_HERO_IMAGE;
+  }
+
+  return resolveActivityHeroImage(activityTours, activitySlug);
+};
+
 const formatCountLabel = (count: number) =>
   count === 1 ? "1 tour" : `${count} tours`;
 
@@ -60,7 +74,7 @@ export default function ActivityToursPage({ params }: ActivityToursPageProps) {
   );
 
   const heroImage = useMemo(
-    () => resolveActivityHeroImage(activityTours, params.activitySlug),
+    () => resolveActivityPageHeroImage(activityTours, params.activitySlug),
     [activityTours, params.activitySlug]
   );
 
