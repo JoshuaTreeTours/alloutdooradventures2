@@ -36,6 +36,7 @@ import {
   buildTourSchemaGraph,
   ENABLE_TOUR_SCHEMA_V1,
 } from "../../schema/buildTourSchemaGraph";
+import { resolveTourSchemaActivityLabel } from "../../schema/resolveTourSchemaActivityLabel";
 
 type FlagstaffTourDetailRouteProps = {
   params: {
@@ -90,6 +91,7 @@ export default function FlagstaffTourDetailRoute({
     if (!tour || !detailUrl) {
       return null;
     }
+    const schemaActivityLabel = resolveTourSchemaActivityLabel(tour);
     const tourSchemaNodes = ENABLE_TOUR_SCHEMA_V1
       ? (buildTourSchemaGraph({
           url: detailUrl,
@@ -108,14 +110,14 @@ export default function FlagstaffTourDetailRoute({
             id: `${detailUrl}#product`,
             name: tour.title,
             description: productDescription ?? metaDescription ?? "",
-            category: tour.primaryCategory,
+            category: schemaActivityLabel,
           },
           trip: {
             id: `${detailUrl}#trip`,
             name: tour.title,
             description: productDescription ?? metaDescription ?? "",
             duration: tour.badges.duration,
-            touristType: "Adventure travelers",
+            touristType: schemaActivityLabel,
             departureLocation: null,
           },
           offers: {

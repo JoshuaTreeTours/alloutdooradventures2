@@ -1,0 +1,269 @@
+{
+  "totalLegacyToursScanned": 4310,
+  "totalEngine6ToursScanned": 129,
+  "productCategoryMissingCount": 12,
+  "touristTypeGenericFallbackCount": 0,
+  "categoryTouristTypeMismatchCount": 0,
+  "examples": [
+    {
+      "title": "Nashville's Hidden Gems E-bike Tour",
+      "path": "/destinations/tennessee/nashville/tours/nashvilles-hidden-gems-e-bike-tour-432832",
+      "resolvedActivity": "Cycling",
+      "before": {
+        "productCategory": "cycling",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Cycling",
+        "touristType": "Cycling"
+      }
+    },
+    {
+      "title": "Bike The Bridge & 1 Day Hop On Hop Off Combo",
+      "path": "/destinations/california/san-francisco/tours/bike-the-bridge-and-1-day-hop-on-hop-off-combo-262797",
+      "resolvedActivity": "Sightseeing & City Tours",
+      "before": {
+        "productCategory": "cycling",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Sightseeing & City Tours",
+        "touristType": "Sightseeing & City Tours"
+      }
+    },
+    {
+      "title": "Miami Boat Tour with FREE South Beach Bicycle Rental",
+      "path": "/destinations/florida/miami-beach/tours/miami-boat-tour-with-free-south-beach-bicycle-rental-266593",
+      "resolvedActivity": "Boating",
+      "before": {
+        "productCategory": "cycling",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Boating",
+        "touristType": "Boating"
+      }
+    },
+    {
+      "title": "Moraine Lake and Lake Louise: Extended time for sightseeing, hiking, canoeing and wildlife",
+      "path": "/destinations/alberta/canmore/tours/moraine-lake-and-lake-louise-extended-time-for-sightseeing-hiking-canoeing-and-wildlife-614218",
+      "resolvedActivity": "Paddle Sports",
+      "before": {
+        "productCategory": "hiking",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Paddle Sports",
+        "touristType": "Paddle Sports"
+      }
+    },
+    {
+      "title": "Waterfall Hiking Tour",
+      "path": "/destinations/hawaii/honomu/tours/waterfall-hiking-tour-372871",
+      "resolvedActivity": "Hiking",
+      "before": {
+        "productCategory": "hiking",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Hiking",
+        "touristType": "Hiking"
+      }
+    },
+    {
+      "title": "Sedona Jeep Tours Guided Hiking Tours",
+      "path": "/destinations/arizona/sedona/tours/sedona-jeep-tours-guided-hiking-tours-663775",
+      "resolvedActivity": "Jeep & Off-Road",
+      "before": {
+        "productCategory": "hiking",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Jeep & Off-Road",
+        "touristType": "Jeep & Off-Road"
+      }
+    },
+    {
+      "title": "San Francisco Sunset Cruise",
+      "path": "/destinations/california/san-francisco/tours/san-francisco-sunset-cruise-901003",
+      "resolvedActivity": "Wildlife",
+      "before": {
+        "productCategory": "detours",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Wildlife",
+        "touristType": "Wildlife"
+      }
+    },
+    {
+      "title": "La Jolla Cove 2-Tank Guided Shore Dives",
+      "path": "/destinations/california/san-diego/tours/la-jolla-cove-2-tank-guided-shore-dives-107822",
+      "resolvedActivity": "Water Sports",
+      "before": {
+        "productCategory": "detours",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Water Sports",
+        "touristType": "Water Sports"
+      }
+    },
+    {
+      "title": "Sip, Savor and Sea - La Jolla",
+      "path": "/destinations/california/san-diego/tours/sip-savor-and-sea---la-jolla-451191",
+      "resolvedActivity": "Walking Tours",
+      "before": {
+        "productCategory": "detours",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Walking Tours",
+        "touristType": "Walking Tours"
+      }
+    },
+    {
+      "title": "Pizza, Pasta and Piazzas",
+      "path": "/destinations/california/san-diego/tours/pizza-pasta-and-piazzas-358226",
+      "resolvedActivity": "Food & Wine",
+      "before": {
+        "productCategory": "detours",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Food & Wine",
+        "touristType": "Food & Wine"
+      }
+    },
+    {
+      "title": "HowlOWeen Harvest Adventure",
+      "path": "/destinations/california/del-mar/tours/howloween-harvest-adventure-575650",
+      "resolvedActivity": "detours",
+      "before": {
+        "productCategory": "detours",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "detours",
+        "touristType": "detours"
+      }
+    },
+    {
+      "title": "San Diego Bay Sunset Sail Aboard A Classic Yacht",
+      "path": "/destinations/california/san-diego/tours/san-diego-bay-sunset-sail-aboard-a-classic-yacht-8683",
+      "resolvedActivity": "Sailing",
+      "before": {
+        "productCategory": "detours",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Sailing",
+        "touristType": "Sailing"
+      }
+    },
+    {
+      "title": "Coletta Sport Fishing - 3/4 Day Local Charter",
+      "path": "/destinations/california/san-diego/tours/coletta-sport-fishing---34-day-local-charter-54150",
+      "resolvedActivity": "Fishing",
+      "before": {
+        "productCategory": "detours",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Fishing",
+        "touristType": "Fishing"
+      }
+    },
+    {
+      "title": "Trail Rides",
+      "path": "/destinations/california/poway/tours/trail-rides-71811",
+      "resolvedActivity": "Horseback Riding",
+      "before": {
+        "productCategory": "detours",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Horseback Riding",
+        "touristType": "Horseback Riding"
+      }
+    },
+    {
+      "title": "Sunset Hike, Dinner, & Night Sky Presentation",
+      "path": "/destinations/california/joshua-tree/tours/sunset-hike-dinner-and-night-sky-presentation-459554",
+      "resolvedActivity": "Stargazing",
+      "before": {
+        "productCategory": "detours",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Stargazing",
+        "touristType": "Stargazing"
+      }
+    },
+    {
+      "title": "Miami Downtown Private Airplane Tour",
+      "path": "/destinations/florida/miami/tours/miami-downtown-private-airplane-tour-371933",
+      "resolvedActivity": "Air Tours",
+      "before": {
+        "productCategory": "hiking",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "Air Tours",
+        "touristType": "Air Tours"
+      }
+    },
+    {
+      "title": "Grand Canyon Skywalk Adventure Tour - West Rim (F-ADV)",
+      "path": "/destinations/arizona/flagstaff/tours/grand-canyon-skywalk-adventure-tour-west-rim-f-adv-164139",
+      "resolvedActivity": "photography-tour",
+      "before": {
+        "productCategory": "photography-tour",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "photography-tour",
+        "touristType": "photography-tour"
+      }
+    },
+    {
+      "title": "Monument Valley Air & Ground Tour (F-MVJ)",
+      "path": "/destinations/arizona/flagstaff/tours/monument-valley-air-ground-tour-f-mvj-164143",
+      "resolvedActivity": "guided-tour",
+      "before": {
+        "productCategory": "guided-tour",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "guided-tour",
+        "touristType": "guided-tour"
+      }
+    },
+    {
+      "title": "Field Study: Meteorite Hunters",
+      "path": "/destinations/arizona/flagstaff/tours/field-study-meteorite-hunters-664066",
+      "resolvedActivity": "other",
+      "before": {
+        "productCategory": "other",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "other",
+        "touristType": "other"
+      }
+    },
+    {
+      "title": "Alaska Denali Expedition",
+      "path": "/destinations/arizona/flagstaff/tours/alaska-denali-expedition-418261",
+      "resolvedActivity": "water-activities",
+      "before": {
+        "productCategory": "water-activities",
+        "touristType": "Adventure travelers"
+      },
+      "after": {
+        "productCategory": "water-activities",
+        "touristType": "water-activities"
+      }
+    }
+  ]
+}
