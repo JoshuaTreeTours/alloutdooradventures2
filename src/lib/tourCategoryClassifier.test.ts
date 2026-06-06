@@ -298,13 +298,13 @@ describe("classifyTourCategories", () => {
       ],
       [{ title: "city bus sightseeing tour" }, ["sightseeing-city-tours"]],
       [{ title: "Coastal Cruise Bike Tour" }, ["cycling"]],
-      [{ title: "Hike & Camp", categories: ["Boat Rental"] }, ["hiking"]],
+      [{ title: "Hike & Camp", categories: ["Boat Rental"] }, []],
       [
         {
           title: "Hiking Tour to San Fruttuoso, Full day Private Experience",
           categories: ["Ferry Transfer", "Boat Rental"],
         },
-        ["hiking"],
+        [],
       ],
     ];
 
@@ -537,10 +537,53 @@ describe("classifyTourCategories", () => {
     });
   });
 
-  it("keeps food walking tours in Food & Wine when food is primary", () => {
+  it("classifies food walking tours as Walking Tours", () => {
     expect(
       slugsFor({ title: "Food walking tour with pizza and gelato" })
-    ).toEqual(["food-wine"]);
+    ).toEqual(["walking-tours"]);
+  });
+
+  it("requires explicit hiking signals instead of legacy Hiking categories", () => {
+    [
+      { title: "Private Manhattan history tour", categories: ["Hiking"] },
+      {
+        title: "NYC's Underground Subway Tour - Private Tour",
+        categories: ["Hiking"],
+      },
+      { title: "Kayak lake adventure", categories: ["Hiking"] },
+      { title: "Two hour e-bike rental", categories: ["Hiking"] },
+      { title: "Pub crawl downtown", categories: ["Hiking"] },
+      { title: "Food tour in Little Italy", categories: ["Hiking"] },
+    ].forEach(input => {
+      expect(slugsFor(input)).not.toContain("hiking");
+    });
+  });
+
+  it("moves private city walking and history tours to Walking Tours", () => {
+    [
+      {
+        title: "NYC private history walking tour",
+        categories: ["Hiking"],
+      },
+      {
+        title: "NYC's Underground Subway Tour - Private Tour",
+        highlights: ["Walking Tour"],
+        categories: ["Hiking"],
+      },
+      {
+        title: "Private neighborhood walking tour in Brooklyn",
+        categories: ["Hiking"],
+      },
+      {
+        title: "Ghost walk through old New York",
+        categories: ["Hiking"],
+      },
+    ].forEach(input => {
+      const slugs = slugsFor(input);
+
+      expect(slugs[0]).toBe("walking-tours");
+      expect(slugs).not.toContain("hiking");
+    });
   });
 
   it("keeps true hiking and trail inventory in Hiking instead of Walking Tours", () => {

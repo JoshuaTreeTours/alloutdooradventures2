@@ -129,13 +129,13 @@ const CATEGORY_SIGNAL_PATTERNS: Array<{
   {
     slug: "hiking",
     signals: [
-      /\b(?:hike|hiking|trek|trekking|nature walk|canyon walk|mountain walk|national park walk|trail hike|hiking trail|trail walk|nature trail|forest trail|guided trail|glacier hike)\b/,
+      /\b(?:hike|hiking|trek|trekking|scramble|scrambling|glacier hike|nature trail|trail hike|hiking trail|forest trail|canyon trail|mountain trail|backcountry trail|guided trail)\b/,
     ],
   },
   {
     slug: "walking-tours",
     signals: [
-      /\b(?:walking tour|guided walk|walking outing|city walk|history walk|historic walk|ghost walk|architecture walk|neighborhood walk|street art walk|cultural walk|urban exploration walk|walk of fame|on foot)\b/,
+      /\b(?:walking tour|guided walk|walking outing|city walk|history walk|historical walk|historic walk|mansions tour|ghost walk|architecture walk|architectural walk|neighborhood walk|street art walk|food walk|food walking|culinary walk|culture walk|cultural walk|urban exploration walk|walk of fame|on foot)\b/,
     ],
   },
   {
@@ -152,9 +152,6 @@ const SOURCE_CATEGORY_TO_ACTIVITY: Record<string, TourActivityCategorySlug> = {
   "bike-tour": "cycling",
   "bicycle-tour": "cycling",
   "cycling-tour": "cycling",
-  hiking: "hiking",
-  "hiking-tours": "hiking",
-  "hiking-tour": "hiking",
   "horseback-riding": "horseback-riding",
   "horseback-tour": "horseback-riding",
   "horse-riding": "horseback-riding",
@@ -220,7 +217,13 @@ const JEEP_OFF_ROAD_SLUG: TourActivityCategorySlug = "jeep-off-road";
 const WILDLIFE_SLUG: TourActivityCategorySlug = "wildlife";
 
 const TRUE_HIKING_PATTERN =
-  /\b(?:hike|hiking|trek|trekking|canyon hike|canyon walk|mountain hike|mountain walk|national park hike|national park walk|trail hike|hiking trail|trail walk|nature trail|forest trail|guided trail|glacier hike)\b/;
+  /\b(?:hike|hiking|trek|trekking|scramble|scrambling|canyon hike|mountain hike|national park hike|trail hike|hiking trail|nature trail|forest trail|canyon trail|mountain trail|backcountry trail|guided trail|glacier hike)\b/;
+
+const HIKING_PRIMARY_EXCLUSION_PATTERN =
+  /\b(?:boat|kayak|kayaking|canoe|canoeing|paddleboard|stand up paddle|\bsup\b|rental|rentals|cruise|bar crawl|pub crawl|subway|city tour|bike|bicycle|e[- ]?bike|ebike|cycling|horseback|horse riding|charter|sailing|sailboat|sail boat|ferry|food tour|food walk|food walking)\b/;
+
+const WALKING_TOUR_PATTERN =
+  /\b(?:walking tour|guided walk|walking outing|city walk|history walk|historical walk|historic walk|mansions tour|ghost walk|architecture walk|architectural walk|neighborhood walk|street art walk|food walk|food walking|culinary walk|culture walk|cultural walk|urban exploration walk|walk of fame|on foot)\b/;
 
 const FOOD_PRIMARY_PATTERN =
   /\b(?:food cruise|food tour|food walk|food walking|culinary|wine|winery|vineyard|tasting|brewery|beer|distillery|pizza|pasta|gelato|donut|chocolate|taco)\b/;
@@ -274,21 +277,17 @@ const FISHING_SLUG: TourActivityCategorySlug = "fishing";
 const PADDLE_SPORTS_SLUG: TourActivityCategorySlug = "paddle-sports";
 const WATER_SPORTS_SLUG: TourActivityCategorySlug = "water-sports";
 
-const EXPLICIT_HIKING_PATTERN = /\b(?:hike|hiking|trek|trekking)\b/;
-
-const NON_HIKING_PRIMARY_PATTERN =
-  /\b(?:bike|bicycle|e[- ]?bike|ebike|cycling|pedal|jeep|hummer|4x4|off[- ]?road|offroad|atv|utv|buggy|kayak|canoe|paddle|sup|snorkel|boat|sail|sailing|yacht|catamaran|cruise|jet ski|jetski|fishing|angling|horse|horseback|zipline|zip line|segway|airplane|flightseeing|aerial)\b/;
-
 const NEGATED_HIKING_PATTERN = /\b(?:instead of|rather than|without) hiking\b/;
 
-const HORSEBACK_SUPPRESSED_BY_RIDING_INTENT_SLUGS: TourActivityCategorySlug[] = [
-  HIKING_SLUG,
-  WALKING_TOURS_SLUG,
-  SIGHTSEEING_SLUG,
-  PADDLE_SPORTS_SLUG,
-  BOATING_SLUG,
-  WATER_SPORTS_SLUG,
-];
+const HORSEBACK_SUPPRESSED_BY_RIDING_INTENT_SLUGS: TourActivityCategorySlug[] =
+  [
+    HIKING_SLUG,
+    WALKING_TOURS_SLUG,
+    SIGHTSEEING_SLUG,
+    PADDLE_SPORTS_SLUG,
+    BOATING_SLUG,
+    WATER_SPORTS_SLUG,
+  ];
 
 export const normalizeTourCategoryText = (value: string) =>
   value
@@ -371,6 +370,7 @@ export const classifyTourCategories = (
 ): TourCategoryClassification => {
   const normalizedText = buildClassifierText(input);
   const titleIntentText = normalizeTourCategoryText(input.title ?? "");
+  const contentIntentText = buildClassifierText({ ...input, categories: [] });
   const primaryIntentText = normalizeTourCategoryText(
     [input.title, ...(input.categories ?? [])].filter(Boolean).join(" ")
   );
@@ -396,6 +396,14 @@ export const classifyTourCategories = (
     ) {
       pushUnique(primaryIntentMatched, categoryPattern.slug);
     }
+  }
+
+  if (
+    matched.includes(WALKING_TOURS_SLUG) &&
+    WALKING_TOUR_PATTERN.test(normalizedText) &&
+    !TRUE_HIKING_PATTERN.test(titleIntentText)
+  ) {
+    pushUnique(primaryIntentMatched, WALKING_TOURS_SLUG);
   }
 
   const isTransitSightseeingTour =
@@ -444,8 +452,8 @@ export const classifyTourCategories = (
     }
 
     if (
-      slug === WALKING_TOURS_SLUG &&
-      FOOD_PRIMARY_PATTERN.test(normalizedText)
+      slug === FOOD_WINE_SLUG &&
+      WALKING_TOUR_PATTERN.test(primaryIntentText)
     ) {
       return false;
     }
@@ -469,14 +477,15 @@ export const classifyTourCategories = (
 
     if (
       slug === WALKING_TOURS_SLUG &&
-      TRUE_HIKING_PATTERN.test(normalizedText)
+      TRUE_HIKING_PATTERN.test(titleIntentText)
     ) {
       return false;
     }
 
     if (
       slug === WALKING_TOURS_SLUG &&
-      NON_HIKING_PRIMARY_PATTERN.test(normalizedText)
+      HIKING_PRIMARY_EXCLUSION_PATTERN.test(primaryIntentText) &&
+      !WALKING_TOUR_PATTERN.test(normalizedText)
     ) {
       return false;
     }
@@ -574,16 +583,19 @@ export const classifyTourCategories = (
       return false;
     }
 
-    if (slug === HIKING_SLUG && matched.includes(WALKING_TOURS_SLUG)) {
-      return TRUE_HIKING_PATTERN.test(normalizedText);
+    if (slug === HIKING_SLUG && !TRUE_HIKING_PATTERN.test(contentIntentText)) {
+      return false;
     }
 
     if (
       slug === HIKING_SLUG &&
-      NON_HIKING_PRIMARY_PATTERN.test(normalizedText) &&
-      !EXPLICIT_HIKING_PATTERN.test(normalizedText)
+      HIKING_PRIMARY_EXCLUSION_PATTERN.test(primaryIntentText)
     ) {
       return false;
+    }
+
+    if (slug === HIKING_SLUG && matched.includes(WALKING_TOURS_SLUG)) {
+      return TRUE_HIKING_PATTERN.test(primaryIntentText);
     }
 
     return true;
