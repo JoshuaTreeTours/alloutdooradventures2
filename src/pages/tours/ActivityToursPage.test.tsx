@@ -70,6 +70,52 @@ describe("ActivityToursPage", () => {
     expect(html).toContain("Explore walking tours tour cards");
   });
 
+  it("activity city routes do not duplicate Tours in headings or descriptions", () => {
+    const routes = [
+      {
+        params: {
+          activitySlug: "walking-tours",
+          stateSlug: "massachusetts",
+          citySlug: "cambridge",
+        },
+        heading: "Walking Tours in Cambridge, Massachusetts",
+        description:
+          "Browse walking tours and outdoor adventures in Cambridge, Massachusetts.",
+      },
+      {
+        params: {
+          activitySlug: "hiking",
+          stateSlug: "arizona",
+          citySlug: "sedona",
+        },
+        heading: "Hiking Tours in Sedona, Arizona",
+        description:
+          "Browse hiking tours and outdoor adventures in Sedona, Arizona.",
+      },
+      {
+        params: {
+          activitySlug: "cycling",
+          stateSlug: "colorado",
+          citySlug: "boulder",
+        },
+        heading: "Cycling Tours in Boulder, Colorado",
+        description:
+          "Browse cycling tours and outdoor adventures in Boulder, Colorado.",
+      },
+    ] as const;
+
+    routes.forEach(({ params, heading, description }) => {
+      const html = renderToStaticMarkup(<ActivityToursPage params={params} />);
+
+      expect(html).toContain(heading);
+      expect(html).toContain(description);
+      expect(html).not.toContain(`${heading.split(" in ")[0]} Tours in`);
+      expect(html).not.toContain(
+        description.replace(" and outdoor", " tours and outdoor")
+      );
+    });
+  });
+
   it("/tours/boating renders Boating with the route-backed count", () => {
     const boatingCount = getToursByActivityCategory("boating").length;
     const html = renderToStaticMarkup(
