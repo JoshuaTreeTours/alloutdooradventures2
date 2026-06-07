@@ -30,6 +30,11 @@ export type ActivityToursPageProps = {
 const formatCountLabel = (count: number) =>
   count === 1 ? "1 tour" : `${count} tours`;
 
+const formatActivityToursLabel = (activityLabel: string) =>
+  /\btours$/i.test(activityLabel.trim())
+    ? activityLabel
+    : `${activityLabel} Tours`;
+
 export default function ActivityToursPage({ params }: ActivityToursPageProps) {
   const activity = getActivityDiscoveryPage(params.activitySlug);
 
@@ -82,15 +87,19 @@ export default function ActivityToursPage({ params }: ActivityToursPageProps) {
     citySlug: params.citySlug,
   });
 
+  const activityToursLabel = activity
+    ? formatActivityToursLabel(activity.label)
+    : "Activity Tours";
+
   const pageTitle = (() => {
     if (!activity) {
       return "Activity Tours & Outdoor Adventures";
     }
     if (cityName && stateName) {
-      return `${activity.label} Tours in ${cityName}, ${stateName} | Outdoor Adventures`;
+      return `${activityToursLabel} in ${cityName}, ${stateName} | Outdoor Adventures`;
     }
     if (stateName) {
-      return `${activity.label} Tours in ${stateName} | Outdoor Adventures`;
+      return `${activityToursLabel} in ${stateName} | Outdoor Adventures`;
     }
     return activity.title;
   })();
@@ -100,10 +109,10 @@ export default function ActivityToursPage({ params }: ActivityToursPageProps) {
       return "Activity not found";
     }
     if (cityName && stateName) {
-      return `${activity.label} Tours in ${cityName}, ${stateName}`;
+      return `${activityToursLabel} in ${cityName}, ${stateName}`;
     }
     if (stateName) {
-      return `${activity.label} Tours in ${stateName}`;
+      return `${activityToursLabel} in ${stateName}`;
     }
     return activity.title;
   })();
@@ -113,10 +122,10 @@ export default function ActivityToursPage({ params }: ActivityToursPageProps) {
       return "Browse tour discovery pages by activity.";
     }
     if (cityName && stateName) {
-      return `Browse ${activity.label.toLowerCase()} tours and outdoor adventures in ${cityName}, ${stateName}. Compare ${formatCountLabel(activityTours.length)} with live tour cards and direct booking links.`;
+      return `Browse ${activityToursLabel.toLowerCase()} and outdoor adventures in ${cityName}, ${stateName}. Compare ${formatCountLabel(activityTours.length)} with live tour cards and direct booking links.`;
     }
     if (stateName) {
-      return `Browse ${activity.label.toLowerCase()} tours and outdoor adventures across ${stateName}. Compare ${formatCountLabel(activityTours.length)} by city, rating, reviews, and title.`;
+      return `Browse ${activityToursLabel.toLowerCase()} and outdoor adventures across ${stateName}. Compare ${formatCountLabel(activityTours.length)} by city, rating, reviews, and title.`;
     }
     return `${activity.description} Compare ${formatCountLabel(activityTours.length)} sorted by rating, review count, and title.`;
   })();
