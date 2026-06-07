@@ -22,10 +22,34 @@ describe("state city options", () => {
     const sortedNames = [...names].sort((a, b) => a.localeCompare(b));
 
     expect(names).toEqual(sortedNames);
-    expect(californiaCities.some(city => city.slug === "los-angeles")).toBe(true);
+    expect(californiaCities.some(city => city.slug === "los-angeles")).toBe(
+      true
+    );
     expect(californiaCities.some(city => city.slug === "santa-barbara")).toBe(
       true
     );
+  });
+
+  it("includes all route-backed public Alaska tour cities", () => {
+    const alaskaCities = getStateCityOptions("alaska");
+    const citySlugs = alaskaCities.map(city => city.slug);
+    const normalizedCitySlugs = citySlugs.map(slug =>
+      slug.trim().toLowerCase()
+    );
+
+    expect(alaskaCities).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          name: "Anchorage",
+          slug: "anchorage",
+        }),
+        expect.objectContaining({
+          name: "Denali National Park and Preserve",
+          slug: "denali-national-park-and-preserve",
+        }),
+      ])
+    );
+    expect(new Set(normalizedCitySlugs).size).toBe(normalizedCitySlugs.length);
   });
 
   it("accepts Avalon in /tours query selection and returns Catalina results", () => {
