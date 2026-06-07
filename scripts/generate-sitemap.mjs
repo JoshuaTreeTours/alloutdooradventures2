@@ -875,7 +875,15 @@ export const buildSitemap = async () => {
     });
   });
 
+  const legacyRouteBackedActivitySlugs = new Set(
+    (catalogModule.ADVENTURE_ACTIVITY_PAGES || []).map(activity => activity.slug)
+  );
+
   legacyActivityByState.forEach((stateSlugs, activitySlug) => {
+    if (!legacyRouteBackedActivitySlugs.has(activitySlug)) {
+      return;
+    }
+
     stateSlugs.forEach(stateSlug => {
       addUrl(categoryUrls, `/tours/${activitySlug}/us/${stateSlug}`);
     });
