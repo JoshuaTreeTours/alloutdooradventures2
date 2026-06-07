@@ -148,6 +148,24 @@ describe("sitemap URL integrity", () => {
     expect(sitemap.categoryUrls.has("/tours/empty-activity")).toBe(false);
   }, 60_000);
 
+  it("does not emit Class A sitemap-only legacy activity URLs", async () => {
+    const sitemap = await getBuiltSitemap();
+
+    expect(sitemap.categoryUrls).not.toEqual(
+      expect.arrayContaining([
+        "/tours/activities/day-adventures",
+        "/tours/activities/detours",
+        "/tours/activities/multi-day",
+      ])
+    );
+
+    expect(sitemap.categoryUrls.has("/tours/activities/cycling")).toBe(true);
+    expect(sitemap.categoryUrls.has("/tours/activities/hiking")).toBe(true);
+    expect(sitemap.categoryUrls.has("/tours/activities/paddle-sports")).toBe(
+      true
+    );
+  }, 60_000);
+
   it("emits only route-backed legacy country-qualified activity state pages", async () => {
     const sitemap = await getBuiltSitemap();
     const legacyActivityStateUrls = [...sitemap.categoryUrls].filter(url =>

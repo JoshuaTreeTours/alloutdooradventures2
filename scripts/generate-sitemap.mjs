@@ -12,6 +12,12 @@ const BASE_URL = (
 const MAX_URLS_PER_SITEMAP = 50000;
 const MIN_TOUR_URL_COUNT = 50;
 
+const CLASS_A_SITEMAP_ONLY_ACTIVITY_PATHS = new Set([
+  "/tours/activities/day-adventures",
+  "/tours/activities/detours",
+  "/tours/activities/multi-day",
+]);
+
 const EXCLUDED_PRODUCT_CODES = ["36001P1", "301378", "301379"];
 const EXCLUDED_TOUR_PATH_TOKENS = [
   ...EXCLUDED_PRODUCT_CODES.map(code => code.toLowerCase()),
@@ -728,7 +734,10 @@ export const buildSitemap = async () => {
 
   if (Array.isArray(catalogModule.ACTIVITY_PAGES)) {
     catalogModule.ACTIVITY_PAGES.forEach(activity => {
-      addUrl(categoryUrls, `/tours/activities/${activity.slug}`);
+      const activityPath = `/tours/activities/${activity.slug}`;
+      if (!CLASS_A_SITEMAP_ONLY_ACTIVITY_PATHS.has(activityPath)) {
+        addUrl(categoryUrls, activityPath);
+      }
     });
   }
 
@@ -876,7 +885,9 @@ export const buildSitemap = async () => {
   });
 
   const legacyRouteBackedActivitySlugs = new Set(
-    (catalogModule.ADVENTURE_ACTIVITY_PAGES || []).map(activity => activity.slug)
+    (catalogModule.ADVENTURE_ACTIVITY_PAGES || []).map(
+      activity => activity.slug
+    )
   );
 
   legacyActivityByState.forEach((stateSlugs, activitySlug) => {
