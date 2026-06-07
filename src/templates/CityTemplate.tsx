@@ -17,7 +17,6 @@ import { getTopToursForPlace } from "../data/tourIndex";
 import type { Tour } from "../data/tours.types";
 import { cityLongDescriptions } from "../data/cityLongDescriptions";
 import { getCityTourDetailPath, getToursByCity } from "../data/tours";
-import { getFlagstaffTourDetailPath } from "../data/flagstaffTours";
 import { filterHeroImages, resolveHeroImageForRoute } from "../utils/hero";
 import { SITE_BRAND_NAME } from "../utils/site";
 import { buildMetaDescription } from "../utils/seo";
@@ -254,10 +253,12 @@ export default function CityTemplate({
       ),
     [baseTopTours, liveEngine6FieldsByProductCode]
   );
-  const title = `${city.name}, ${state.name} ${SITE_BRAND_NAME} | Tours & City Guide`;
+  const destinationDisplayName = city.name;
+  const destinationRegionName = state.name;
+  const title = `${destinationDisplayName}, ${destinationRegionName} ${SITE_BRAND_NAME} | Tours & City Guide`;
   const description = buildMetaDescription(
     city.shortDescription,
-    `Plan hikes, tours, and outdoor experiences around ${city.name}, ${state.name}.`
+    `Plan hikes, tours, and outdoor experiences around ${destinationDisplayName}, ${destinationRegionName}.`
   );
   const categorizedTours = [
     {
@@ -521,13 +522,14 @@ export default function CityTemplate({
         <section className="mx-auto max-w-6xl px-6 py-14">
           <div className="text-center">
             <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-              Flagstaff tours
+              {destinationDisplayName} tours
             </span>
             <h2 className="mt-2 text-2xl md:text-3xl font-semibold text-[#2f4a2f]">
-              Flagstaff adventures to book now
+              {destinationDisplayName} adventures to book now
             </h2>
             <p className="mt-3 text-sm md:text-base text-[#405040]">
-              Explore the curated set of tours available for Flagstaff.
+              Explore the curated set of tours available for{" "}
+              {destinationDisplayName}.
             </p>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -535,7 +537,7 @@ export default function CityTemplate({
               <TourCard
                 key={tour.id}
                 tour={tour}
-                href={getFlagstaffTourDetailPath(tour)}
+                href={getGuideTourDetailPath(tour)}
               />
             ))}
           </div>
