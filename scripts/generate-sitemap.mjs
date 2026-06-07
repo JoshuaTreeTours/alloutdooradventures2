@@ -84,6 +84,29 @@ const addUrl = (set, value) => {
   set.add(normalized);
 };
 
+const getNonCountryUsTourEquivalent = value => {
+  const normalized = ensurePath(value);
+  const match = normalized?.match?.(
+    /^\/destinations\/united-states\/([^/]+)\/([^/]+)\/tours\/([^/]+)\/?$/
+  );
+
+  if (!match) {
+    return null;
+  }
+
+  const [, stateSlug, citySlug, tourSlug] = match;
+  return `/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`;
+};
+
+const suppressDuplicateUsCountryQualifiedTourUrls = toursUrls => {
+  [...toursUrls].forEach(tourUrl => {
+    const nonCountryEquivalent = getNonCountryUsTourEquivalent(tourUrl);
+    if (nonCountryEquivalent && toursUrls.has(nonCountryEquivalent)) {
+      toursUrls.delete(tourUrl);
+    }
+  });
+};
+
 const safeSlugify = (catalogModule, value) => {
   if (typeof value !== "string") {
     return null;
@@ -998,6 +1021,8 @@ export const buildSitemap = async () => {
       addUrl(guideUrls, `/guides/world/${countrySlug}/${citySlug}`);
     });
   });
+
+  suppressDuplicateUsCountryQualifiedTourUrls(toursUrls);
 
   return {
     pages,
