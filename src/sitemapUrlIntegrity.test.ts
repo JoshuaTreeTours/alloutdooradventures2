@@ -11,6 +11,13 @@ import { getEngine6NativeTourByCanonicalPath } from "./engine6/registry";
 import { isRemovedTourSlug } from "./utils/tours/isTourRemoved";
 import { buildSitemap } from "../scripts/generate-sitemap.mjs";
 
+let sitemapPromise: ReturnType<typeof buildSitemap> | null = null;
+
+const getBuiltSitemap = () => {
+  sitemapPromise ??= buildSitemap();
+  return sitemapPromise;
+};
+
 const MISSING_ROUTE_FIXTURE_URLS = [
   "/destinations/wyoming/jackson/tours/full-day-tours-650824",
   "/destinations/california/coronado/tours/bike-661652",
@@ -27,6 +34,25 @@ const decodePath = (pathname: string) => {
   } catch {
     return pathname;
   }
+};
+
+const getDuplicateCountryQualifiedUsTourUrls = (urls: Iterable<string>) => {
+  const urlList = [...urls];
+  const urlSet = new Set(urlList);
+
+  return urlList.filter(url => {
+    const match = url.match(
+      /^\/destinations\/united-states\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/
+    );
+    if (!match) {
+      return false;
+    }
+
+    const [, stateSlug, citySlug, tourSlug] = match;
+    return urlSet.has(
+      `/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`
+    );
+  });
 };
 
 const resolvesToTourTemplate = (pathname: string) => {
@@ -73,7 +99,7 @@ const resolvesToTourTemplate = (pathname: string) => {
 
 describe("sitemap URL integrity", () => {
   it("does not emit SEO placeholders, placeholder slugs, or soft-404 tour URLs", async () => {
-    const sitemap = await buildSitemap();
+    const sitemap = await getBuiltSitemap();
     const urls = [
       ...sitemap.pages,
       ...sitemap.toursUrls,
@@ -92,8 +118,26 @@ describe("sitemap URL integrity", () => {
       [...sitemap.toursUrls].filter(url => !resolvesToTourTemplate(url))
     ).toEqual([]);
   }, 60_000);
+  it("suppresses duplicate country-qualified US tour detail sitemap URLs", async () => {
+    const sitemap = await getBuiltSitemap();
+
+    expect(
+      sitemap.toursUrls.has(
+        "/destinations/alaska/denali-national-park-and-preserve/tours/private-hiking-adventure-577765"
+      )
+    ).toBe(true);
+    expect(
+      sitemap.toursUrls.has(
+        "/destinations/united-states/alaska/denali-national-park-and-preserve/tours/private-hiking-adventure-577765"
+      )
+    ).toBe(false);
+    expect(getDuplicateCountryQualifiedUsTourUrls(sitemap.toursUrls)).toEqual(
+      []
+    );
+  }, 60_000);
+
   it("includes only non-empty activity discovery pages", async () => {
-    const sitemap = await buildSitemap();
+    const sitemap = await getBuiltSitemap();
 
     expect(sitemap.categoryUrls.has("/tours/cycling")).toBe(true);
     expect(sitemap.categoryUrls.has("/tours/hiking")).toBe(true);
