@@ -61,7 +61,7 @@ import TourDetail from "./pages/tours/TourDetail";
 import ActivityStateTours from "./pages/tours/ActivityStateTours";
 import ActivityToursPage from "./pages/tours/ActivityToursPage";
 import { getActivityDiscoveryRouteDefinitions } from "./data/activityDiscovery";
-import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
+import SlugOnlyTourRoute from "./pages/tours/SlugOnlyTourRoute";
 import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
 import Engine5ProofListingRoute from "./pages/engine5/Engine5ProofListingRoute";
 import Engine5ProofTourPage from "./engine5/components/Engine5ProofTourPage";
@@ -558,7 +558,7 @@ export default function App() {
           path="/tours/switzerland/:citySlug/:slug"
           component={SwissLegacyTourRedirect}
         />
-        <Route path="/tours/:tourSlug" component={FlagstaffTourDetailRoute} />
+        <Route path="/tours/:tourSlug" component={SlugOnlyTourRoute} />
         <Route
           path="/tours/:stateSlug/:citySlug/:slug"
           component={TourDetail}
