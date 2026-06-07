@@ -147,4 +147,29 @@ describe("sitemap URL integrity", () => {
     expect(sitemap.categoryUrls.has("/tours/canoeing")).toBe(false);
     expect(sitemap.categoryUrls.has("/tours/empty-activity")).toBe(false);
   }, 60_000);
+
+  it("emits only route-backed legacy country-qualified activity state pages", async () => {
+    const sitemap = await getBuiltSitemap();
+    const legacyActivityStateUrls = [...sitemap.categoryUrls].filter(url =>
+      /^\/tours\/[^/]+\/us\/[^/]+$/.test(url)
+    );
+
+    const legacySoft404Candidates = [
+      ["canoeing", "alaska"],
+      ["city-tour", "arizona"],
+      ["detours", "florida"],
+      ["walking-tour", "arizona"],
+      ["water-activities", "arizona"],
+    ].map(([activitySlug, stateSlug]) =>
+      ["", "tours", activitySlug, "us", stateSlug].join("/")
+    );
+
+    expect(legacyActivityStateUrls).not.toEqual(
+      expect.arrayContaining(legacySoft404Candidates)
+    );
+
+    expect(legacyActivityStateUrls).toContain("/tours/cycling/us/california");
+    expect(legacyActivityStateUrls).toContain("/tours/hiking/us/arizona");
+    expect(sitemap.categoryUrls).toContain("/tours/paddle-sports/arizona");
+  }, 60_000);
 });

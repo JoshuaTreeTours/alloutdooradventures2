@@ -25,29 +25,7 @@
   <url><loc>https://www.alloutdooradventures.com/tours/air-tours/new-york/new-york</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/air-tours/switzerland</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/air-tours/switzerland/zurich</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/boat-tour/us/arizona</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/alaska</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/arizona</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/california</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/connecticut</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/florida</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/georgia</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/hawaii</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/kentucky</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/louisiana</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/maryland</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/massachusetts</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/montana</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/new-hampshire</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/north-carolina</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/ohio</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/south-carolina</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/tennessee</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/vermont</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/west-virginia</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canoeing/us/wyoming</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/catalog</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/city-tour/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/cycling</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/cycling/alaska</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/cycling/alaska/anchorage</loc><priority>0.5</priority></url>
@@ -156,11 +134,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/day/cycling</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/day/hiking</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/day/paddle</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/detours/us/arizona</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/detours/us/california</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/detours/us/florida</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/detours/us/louisiana</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/eco-tour/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/california</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/california/ensenada</loc><priority>0.5</priority></url>
@@ -198,7 +171,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/spain/viladellops</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/switzerland</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/switzerland/zurich</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/guided-tour/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/alaska</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/alaska/anchorage</loc><priority>0.5</priority></url>
@@ -318,7 +290,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/west-virginia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/wisconsin</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hiking/us/wyoming</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/history-tour/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/jeep-off-road</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/jeep-off-road/alaska</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/jeep-off-road/alaska/denali-national-park-and-preserve</loc><priority>0.5</priority></url>
@@ -354,9 +325,7 @@
   <url><loc>https://www.alloutdooradventures.com/tours/jeep-off-road/spain/puerto-del-carmen</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/jeep-off-road/spain/san-pedro-alcantara</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/jeep-off-road/spain/son-serra-de-marina</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/lodging/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/multi-day</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/other/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/paddle-sports</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/paddle-sports/alabama</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/paddle-sports/alabama/gulf-shores</loc><priority>0.5</priority></url>
@@ -495,7 +464,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/paddle-sports/wisconsin</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/paddle-sports/wisconsin/chippewa-falls</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/paddle-sports/wisconsin/mercer</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/photography-tour/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sailing</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sailing/california</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sailing/california/san-diego</loc><priority>0.5</priority></url>
@@ -531,7 +499,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/sailing/pennsylvania/allison-park</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sailing/switzerland</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sailing/switzerland/lucerne</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/segway/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/british-columbia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/british-columbia/vancouver</loc><priority>0.5</priority></url>
@@ -580,7 +547,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/spain/barcelona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/spain/madrid</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-city-tours/spain/san-sebastian</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/sightseeing-tour/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/stargazing</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/stargazing/alberta</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/stargazing/alberta/banff</loc><priority>0.5</priority></url>
@@ -594,7 +560,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/stargazing/minnesota/ranier</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/stargazing/nevada</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/stargazing/nevada/las-vegas</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/walking-tour/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/alaska</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/alaska/denali-national-park-and-preserve</loc><priority>0.5</priority></url>
@@ -635,7 +600,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/virginia/arlington</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/washington</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/washington/seattle</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/water-activities/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/water-sports</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/water-sports/california</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/water-sports/california/portsmouth</loc><priority>0.5</priority></url>
