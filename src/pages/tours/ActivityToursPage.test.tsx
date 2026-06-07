@@ -22,7 +22,7 @@ import ActivityToursPage from "./ActivityToursPage";
 };
 
 describe("ActivityToursPage", () => {
-  it("/tours/cycling renders cycling tours", () => {
+  it("/tours/cycling renders cycling tours with the dedicated Cycling hero image", () => {
     const html = renderToStaticMarkup(
       <ActivityToursPage params={{ activitySlug: "cycling" }} />
     );
@@ -30,6 +30,9 @@ describe("ActivityToursPage", () => {
     expect(html).toContain("Cycling Tours &amp; Outdoor Adventures");
     expect(html).toContain(CYCLING_ACTIVITY_HERO_IMAGE);
     expect(html).toContain("Explore cycling tour cards");
+    expect(html).toContain(
+      "https://www.alloutdooradventures.com/images/cycling-hero.jpg"
+    );
   });
 
   it("/tours/hiking renders hiking tours with the dedicated Hiking hero image", () => {
