@@ -18,6 +18,48 @@ const CLASS_A_SITEMAP_ONLY_ACTIVITY_PATHS = new Set([
   "/tours/activities/multi-day",
 ]);
 
+const CATEGORY_SITEMAP_PATH = path.resolve(
+  __dirname,
+  "../public/sitemap-categories.xml"
+);
+const CATEGORY_SITEMAP_PRE_CANONICALIZATION_URL_COUNT = 616;
+
+const parseSitemapLocPaths = contents =>
+  [...contents.matchAll(/<loc>https?:\/\/[^/]+([^<]+)<\/loc>/g)].map(
+    match => match[1]
+  );
+
+const loadExistingCategorySitemapEligibility = async () => {
+  try {
+    const contents = await readFile(CATEGORY_SITEMAP_PATH, "utf8");
+    return new Set(parseSitemapLocPaths(contents));
+  } catch (error) {
+    console.warn(
+      `[sitemap] unable to load existing category sitemap eligibility from ${CATEGORY_SITEMAP_PATH}; activity category URLs will not be allowlist-pruned.`,
+      error?.message || error
+    );
+    return null;
+  }
+};
+
+const applyExistingCategorySitemapEligibility = (categoryUrls, eligibility) => {
+  if (!eligibility?.size) {
+    return;
+  }
+
+  [...categoryUrls].forEach(url => {
+    if (!eligibility.has(url)) {
+      categoryUrls.delete(url);
+    }
+  });
+
+  if (categoryUrls.size > CATEGORY_SITEMAP_PRE_CANONICALIZATION_URL_COUNT) {
+    throw new Error(
+      `sitemap-categories.xml must not expand while canonicalizing activity taxonomy routes (found ${categoryUrls.size}; limit ${CATEGORY_SITEMAP_PRE_CANONICALIZATION_URL_COUNT})`
+    );
+  }
+};
+
 export const CONFIRMED_EMPTY_ACTIVITY_CATEGORY_PATHS = new Set([
   "/tours/air-tours/switzerland",
   "/tours/hiking/nevada",
@@ -49,9 +91,6 @@ export const CONFIRMED_EMPTY_ACTIVITY_CATEGORY_PATHS = new Set([
   "/tours/hiking/hawaii/waianae",
   "/tours/hiking/minnesota/bloomington",
   "/tours/hiking/nevada/las-vegas",
-  "/tours/hiking/us/delaware",
-  "/tours/hiking/us/illinois",
-  "/tours/hiking/us/mississippi",
   "/tours/paddle-sports/alaska/ketchikan",
   "/tours/paddle-sports/alberta/grande-cache",
   "/tours/paddle-sports/florida/melbourne-beach",
@@ -59,7 +98,6 @@ export const CONFIRMED_EMPTY_ACTIVITY_CATEGORY_PATHS = new Set([
   "/tours/paddle-sports/florida/tierra-verde",
   "/tours/paddle-sports/hawaii/captain-cook",
   "/tours/paddle-sports/hawaii/lahaina",
-  "/tours/paddle-sports/hawaii/united-states",
   "/tours/paddle-sports/hawaii/waimea",
   "/tours/paddle-sports/minnesota/minneapolis",
   "/tours/paddle-sports/minnesota/taylors-falls",
@@ -941,46 +979,6 @@ export const buildSitemap = async () => {
     });
   }
 
-  const legacyActivityByState = new Map();
-
-  tours.forEach(tour => {
-    if (!isUsStateTour(tour, stateSlugSet, catalogModule)) {
-      return;
-    }
-
-    const stateSlug = tour.destination.stateSlug;
-    if (!stateSlug) {
-      return;
-    }
-
-    const activitySlugs = new Set(
-      [...(tour.activitySlugs ?? []), tour.primaryCategory].filter(Boolean)
-    );
-
-    activitySlugs.forEach(slug => {
-      if (!legacyActivityByState.has(slug)) {
-        legacyActivityByState.set(slug, new Set());
-      }
-      legacyActivityByState.get(slug).add(stateSlug);
-    });
-  });
-
-  const legacyRouteBackedActivitySlugs = new Set(
-    (catalogModule.ADVENTURE_ACTIVITY_PAGES || []).map(
-      activity => activity.slug
-    )
-  );
-
-  legacyActivityByState.forEach((stateSlugs, activitySlug) => {
-    if (!legacyRouteBackedActivitySlugs.has(activitySlug)) {
-      return;
-    }
-
-    stateSlugs.forEach(stateSlug => {
-      addUrl(categoryUrls, `/tours/${activitySlug}/us/${stateSlug}`);
-    });
-  });
-
   if (Array.isArray(activityDiscoveryModule.ACTIVITY_DISCOVERY_PAGES)) {
     activityDiscoveryModule.ACTIVITY_DISCOVERY_PAGES.forEach(activity => {
       const activityTours =
@@ -991,8 +989,11 @@ export const buildSitemap = async () => {
 
       const stateCityMap = new Map();
       activityTours.forEach(tour => {
-        const stateSlug = tour.destination?.stateSlug;
-        const citySlug = tour.destination?.citySlug;
+        const { stateSlug, citySlug } =
+          activityDiscoveryModule.getCanonicalActivityLocationSlugs?.(tour) ?? {
+            stateSlug: tour.destination?.stateSlug,
+            citySlug: tour.destination?.citySlug,
+          };
         if (!stateSlug) return;
         if (!stateCityMap.has(stateSlug)) {
           stateCityMap.set(stateSlug, new Set());
@@ -1123,6 +1124,10 @@ export const buildSitemap = async () => {
   });
 
   suppressDuplicateUsCountryQualifiedTourUrls(toursUrls);
+  applyExistingCategorySitemapEligibility(
+    categoryUrls,
+    await loadExistingCategorySitemapEligibility()
+  );
 
   return {
     pages,

@@ -157,6 +157,37 @@ export type ActivityLocationOption = {
   name: string;
 };
 
+export const COUNTRY_ALIAS_ACTIVITY_LOCATION_SLUGS = new Set([
+  "us",
+  "usa",
+  "united-states",
+]);
+
+export const isCountryAliasActivityLocationSlug = (
+  slug: string | null | undefined
+) => Boolean(slug && COUNTRY_ALIAS_ACTIVITY_LOCATION_SLUGS.has(slug));
+
+export const getCanonicalActivityLocationSlugs = (tour: Tour) => {
+  const stateSlug = tour.destination.stateSlug || undefined;
+  const citySlug = tour.destination.citySlug || undefined;
+
+  if (isCountryAliasActivityLocationSlug(stateSlug)) {
+    return {
+      stateSlug: citySlug,
+      citySlug: undefined,
+    };
+  }
+
+  if (isCountryAliasActivityLocationSlug(citySlug)) {
+    return {
+      stateSlug,
+      citySlug: undefined,
+    };
+  }
+
+  return { stateSlug, citySlug };
+};
+
 export const getActivityDiscoveryPage = (activitySlug: string) =>
   ACTIVITY_DISCOVERY_PAGES.find(activity => activity.slug === activitySlug) ??
   null;
@@ -346,11 +377,13 @@ const matchesActivityLocation = (
     citySlug?: string;
   }
 ) => {
-  if (stateSlug && tour.destination.stateSlug !== stateSlug) {
+  const canonicalLocation = getCanonicalActivityLocationSlugs(tour);
+
+  if (stateSlug && canonicalLocation.stateSlug !== stateSlug) {
     return false;
   }
 
-  if (citySlug && tour.destination.citySlug !== citySlug) {
+  if (citySlug && canonicalLocation.citySlug !== citySlug) {
     return false;
   }
 
@@ -389,7 +422,7 @@ export const getActivityStateOptions = (
   const stateMap = new Map<string, string>();
 
   getToursByActivityCategory(activitySlug).forEach(tour => {
-    const stateSlug = tour.destination.stateSlug;
+    const { stateSlug } = getCanonicalActivityLocationSlugs(tour);
     if (!stateSlug || stateMap.has(stateSlug)) {
       return;
     }
@@ -412,7 +445,7 @@ export const getActivityCityOptions = (
   const cityMap = new Map<string, string>();
 
   getToursByActivityLocation({ activitySlug, stateSlug }).forEach(tour => {
-    const citySlug = tour.destination.citySlug;
+    const { citySlug } = getCanonicalActivityLocationSlugs(tour);
     if (!citySlug || cityMap.has(citySlug)) {
       return;
     }
