@@ -66,6 +66,66 @@
   ],
   "redirects": [
     {
+      "source": "/destinations/europe/austria/cities/wien/tours",
+      "destination": "/destinations/europe/austria/cities/vienna/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/austria/cities/wien",
+      "destination": "/destinations/europe/austria/cities/vienna",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/italy/cities/firenze/tours",
+      "destination": "/destinations/europe/italy/cities/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/italy/cities/firenze",
+      "destination": "/destinations/europe/italy/cities/florence",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/italy/cities/roma/tours",
+      "destination": "/destinations/europe/italy/cities/rome/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/italy/cities/roma",
+      "destination": "/destinations/europe/italy/cities/rome",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/germany/cities/mnchen/tours",
+      "destination": "/destinations/europe/germany/cities/munich/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/germany/cities/mnchen",
+      "destination": "/destinations/europe/germany/cities/munich",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/germany/cities/münchen/tours",
+      "destination": "/destinations/europe/germany/cities/munich/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/germany/cities/münchen",
+      "destination": "/destinations/europe/germany/cities/munich",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/netherlands/cities/den-haag/tours",
+      "destination": "/destinations/europe/netherlands/cities/the-hague/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/netherlands/cities/den-haag",
+      "destination": "/destinations/europe/netherlands/cities/the-hague",
+      "permanent": true
+    },
+    {
       "source": "/guides/us/hawaii/paia",
       "destination": "/guides/us/hawaii",
       "permanent": true

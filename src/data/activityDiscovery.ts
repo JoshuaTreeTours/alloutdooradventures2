@@ -9,6 +9,7 @@ import type { Tour } from "./tours.types";
 import type { UnifiedCityTour } from "./tours";
 import { resolveTourHeroImage } from "../utils/hero";
 import { slugify } from "../utils/slugify";
+import { getCanonicalDestinationCitySlug } from "./destinationAliases";
 
 export type ActivityDiscoveryPage = {
   slug: string;
@@ -185,7 +186,13 @@ export const getCanonicalActivityLocationSlugs = (tour: Tour) => {
     };
   }
 
-  return { stateSlug, citySlug };
+  return {
+    stateSlug,
+    citySlug:
+      stateSlug && citySlug
+        ? getCanonicalDestinationCitySlug(stateSlug, citySlug)
+        : citySlug,
+  };
 };
 
 export const getActivityDiscoveryPage = (activitySlug: string) =>
