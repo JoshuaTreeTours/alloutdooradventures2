@@ -36,6 +36,11 @@ import {
 import { engine6ListingTours } from "../engine6/listing";
 import { assertUniqueByCanonicalPath } from "../engine6/hardening";
 import { suppressLegacyFareHarborTour } from "../engine6/replacementMode";
+import {
+  canonicalizeDestinationPath,
+  getCanonicalDestinationCitySlug,
+  getDestinationCitySlugGroup,
+} from "./destinationAliases";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -351,7 +356,10 @@ const getEngine2ToursForLocation = (stateSlug: string, citySlug?: string) => {
 };
 
 const getCanonicalCityTourPath = (tour: Tour) =>
-  `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`;
+  `/destinations/${tour.destination.stateSlug}/${getCanonicalDestinationCitySlug(
+    tour.destination.stateSlug,
+    tour.destination.citySlug
+  )}/tours/${tour.slug}`;
 
 const ENGINE6_ONLY_CITY_KEYS = new Set<string>();
 
@@ -450,29 +458,37 @@ export const getToursByState = (stateSlug: string) =>
     ])
   );
 
-export const getToursByCity = (stateSlug: string, citySlug: string) =>
-  prioritizeEngine6Tours(
+export const getToursByCity = (stateSlug: string, citySlug: string) => {
+  const citySlugGroup = getDestinationCitySlugGroup(stateSlug, citySlug);
+
+  return prioritizeEngine6Tours(
     dedupeToursByCanonicalPath([
       ...tours.filter(
         tour =>
           tour.destination.stateSlug === stateSlug &&
-          tour.destination.citySlug === citySlug
+          citySlugGroup.includes(tour.destination.citySlug)
       ),
-      ...getEngine2ToursForLocation(stateSlug, citySlug),
+      ...citySlugGroup.flatMap(groupCitySlug =>
+        getEngine2ToursForLocation(stateSlug, groupCitySlug)
+      ),
     ])
   );
+};
 
 export const getTourBySlugs = (
   stateSlug: string,
   citySlug: string,
   tourSlug: string
-) =>
-  getToursByCity(stateSlug, citySlug).find(
+) => {
+  const citySlugGroup = getDestinationCitySlugGroup(stateSlug, citySlug);
+
+  return getToursByCity(stateSlug, citySlug).find(
     tour =>
       tour.destination.stateSlug === stateSlug &&
-      tour.destination.citySlug === citySlug &&
+      citySlugGroup.includes(tour.destination.citySlug) &&
       tour.slug === tourSlug
   );
+};
 
 export const getToursByActivity = (activitySlug: string) =>
   sortCategoryPageActivityTours(
@@ -483,10 +499,16 @@ export const getToursByActivity = (activitySlug: string) =>
 export const getTourDetailPath = (tour: Tour) =>
   tour.destination.stateSlug === "switzerland" || tour.engine === "engine6"
     ? getCityTourDetailPath(tour)
-    : `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`;
+    : `/tours/${tour.destination.stateSlug}/${getCanonicalDestinationCitySlug(
+        tour.destination.stateSlug,
+        tour.destination.citySlug
+      )}/${tour.slug}`;
 
 export const getCityTourDetailPath = (tour: Tour) =>
-  `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`;
+  `/destinations/${tour.destination.stateSlug}/${getCanonicalDestinationCitySlug(
+    tour.destination.stateSlug,
+    tour.destination.citySlug
+  )}/tours/${tour.slug}`;
 
 export type UnifiedCityTour = {
   tour: Tour;
@@ -614,7 +636,7 @@ const isValidForPublicCityListing = (
 
 const toUnifiedEngine2Tour = (tour: Engine2Tour): UnifiedCityTour => ({
   tour: toEngine2ListingTour(tour),
-  href: tour.seo.canonicalPath,
+  href: canonicalizeDestinationPath(tour.seo.canonicalPath),
 });
 
 const getDedupeKey = (entry: UnifiedCityTour) => {
@@ -687,16 +709,22 @@ export const getToursByCityUnified = (
     toUnifiedEngine1Tour
   );
 
-  const engine4Tours = getEngine4ListingEntries(stateSlug, citySlug).map(
-    entry => ({
-      tour: entry.tour,
-      href: entry.href,
-    })
+  const engine4Tours = getDestinationCitySlugGroup(stateSlug, citySlug).flatMap(
+    groupCitySlug =>
+      getEngine4ListingEntries(stateSlug, groupCitySlug).map(entry => ({
+        tour: entry.tour,
+        href: canonicalizeDestinationPath(entry.href),
+      }))
   );
 
   if (stateSlug !== "california") {
-    const engine2Tours = getEngine2ToursByStateSlug(stateSlug, citySlug).map(
-      toUnifiedEngine2Tour
+    const engine2Tours = getDestinationCitySlugGroup(
+      stateSlug,
+      citySlug
+    ).flatMap(groupCitySlug =>
+      getEngine2ToursByStateSlug(stateSlug, groupCitySlug).map(
+        toUnifiedEngine2Tour
+      )
     );
     return dedupeUnifiedCityTours([
       ...engine1Tours.filter(entry => entry.tour.engine === "engine6"),
@@ -708,11 +736,12 @@ export const getToursByCityUnified = (
 
   const engine2Tours =
     getEngine2ToursBySourceCity(citySlug).map(toUnifiedEngine2Tour);
-  const engine3Tours = getEngine3ListingEntries(stateSlug, citySlug).map(
-    entry => ({
-      tour: entry.tour,
-      href: entry.href,
-    })
+  const engine3Tours = getDestinationCitySlugGroup(stateSlug, citySlug).flatMap(
+    groupCitySlug =>
+      getEngine3ListingEntries(stateSlug, groupCitySlug).map(entry => ({
+        tour: entry.tour,
+        href: canonicalizeDestinationPath(entry.href),
+      }))
   );
   return dedupeUnifiedCityTours([
     ...engine1Tours.filter(entry => entry.tour.engine === "engine6"),
@@ -735,11 +764,11 @@ export const getAllRouteBackedTourEntries = (): UnifiedCityTour[] => {
     ...getAllEngine2Tours().map(toUnifiedEngine2Tour),
     ...getAllEngine3ListingEntries().map(entry => ({
       tour: entry.tour,
-      href: entry.href,
+      href: canonicalizeDestinationPath(entry.href),
     })),
     ...getAllEngine4ListingEntries().map(entry => ({
       tour: entry.tour,
-      href: entry.href,
+      href: canonicalizeDestinationPath(entry.href),
     })),
   ]).filter(entry =>
     isValidForPublicCityListing(

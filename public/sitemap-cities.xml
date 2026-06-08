@@ -36,8 +36,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/albania/cities/tiran/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/austria/cities/vienna</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/austria/cities/vienna/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/austria/cities/wien</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/austria/cities/wien/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/belgium/cities/brugge</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/belgium/cities/brugge/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/belgium/cities/deinze</loc><priority>0.6</priority></url>
@@ -110,8 +108,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/germany/cities/lichtenstein/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/germany/cities/melle</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/germany/cities/melle/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/germany/cities/mnchen</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/germany/cities/mnchen/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/germany/cities/munich</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/germany/cities/munich/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/germany/cities/oldendorf-luhe</loc><priority>0.6</priority></url>
@@ -220,8 +216,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/ercolano/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/falcade</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/falcade/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/firenze</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/firenze/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/florence</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/florence/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/frascati</loc><priority>0.6</priority></url>
@@ -280,8 +274,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/ravello/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/rignano-sullarno</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/rignano-sullarno/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/roma</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/roma/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/rome</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/rome/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/italy/cities/ronch</loc><priority>0.6</priority></url>
@@ -322,8 +314,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/netherlands/cities/amsterdam/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/netherlands/cities/delft</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/netherlands/cities/delft/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/netherlands/cities/den-haag</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/netherlands/cities/den-haag/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/netherlands/cities/middelburg</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/netherlands/cities/middelburg/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/netherlands/cities/rotterdam</loc><priority>0.6</priority></url>

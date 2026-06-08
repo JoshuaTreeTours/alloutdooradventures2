@@ -1,8 +1,10 @@
+import RouteRedirect from "../../../components/RouteRedirect";
 import CityTemplate from "../../../templates/CityTemplate";
 import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../../data/tourFallbacks";
+import { getDestinationCityAlias } from "../../../data/destinationAliases";
 
 type EuropeCityRouteProps = {
   params: {
@@ -12,8 +14,20 @@ type EuropeCityRouteProps = {
 };
 
 export default function EuropeCityRoute({ params }: EuropeCityRouteProps) {
+  const alias = getDestinationCityAlias(params.countrySlug, params.citySlug);
   const state = getFallbackStateBySlug(params.countrySlug);
-  const city = getFallbackCityBySlugs(params.countrySlug, params.citySlug);
+  const city = getFallbackCityBySlugs(
+    params.countrySlug,
+    alias?.canonicalCitySlug ?? params.citySlug
+  );
+
+  if (alias) {
+    return (
+      <RouteRedirect
+        to={`/destinations/europe/${params.countrySlug}/cities/${alias.canonicalCitySlug}`}
+      />
+    );
+  }
 
   if (!state || !city) {
     return (
@@ -32,7 +46,8 @@ export default function EuropeCityRoute({ params }: EuropeCityRouteProps) {
       state={state}
       city={city}
       stateHrefOverride={`/destinations/europe/${params.countrySlug}`}
-      seoUrlOverride={`/destinations/europe/${params.countrySlug}/cities/${params.citySlug}`}
+      cityToursHrefOverride={`/destinations/europe/${params.countrySlug}/cities/${city.slug}/tours`}
+      seoUrlOverride={`/destinations/europe/${params.countrySlug}/cities/${city.slug}`}
       guideParentSlugOverride={params.countrySlug}
       guideRegionTypeOverride="country"
     />

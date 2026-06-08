@@ -141,22 +141,27 @@ export default function CityToursIndexRoute({
         entry.tour.activitySlugs.includes(activityFilter)
       )
     : toursOnlyWithImages;
+  const legacyStateDestinationPrefix = "/destinations";
   const stateHref =
     basePathOverride ??
     (state?.isFallback
       ? `/destinations/${state?.slug ?? ""}`
-      : `/destinations/states/${state?.slug ?? ""}`);
+      : `${legacyStateDestinationPrefix}/states/${state?.slug ?? ""}`);
   const cityHref =
     state && city
-      ? state?.isFallback && !basePathOverride
-        ? `/destinations/${state.slug}/${city.slug}`
-        : resolveUsGuideHref(state.slug, city.slug).href
+      ? basePathOverride
+        ? `${basePathOverride}/cities/${city.slug}`
+        : state?.isFallback
+          ? `/destinations/${state.slug}/${city.slug}`
+          : resolveUsGuideHref(state.slug, city.slug).href
       : "";
   const toursHref =
     state && city
-      ? state?.isFallback && !basePathOverride
+      ? basePathOverride
         ? `${cityHref}/tours`
-        : `/destinations/${state.slug}/${city.slug}/tours`
+        : state?.isFallback
+          ? `${cityHref}/tours`
+          : `/destinations/${state.slug}/${city.slug}/tours`
       : "";
   const heroImage =
     resolveHeroImageForRoute({
@@ -225,7 +230,7 @@ export default function CityToursIndexRoute({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
-      <Seo title={pageTitle} description={pageIntro} />
+      <Seo title={pageTitle} description={pageIntro} url={toursHref} />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">

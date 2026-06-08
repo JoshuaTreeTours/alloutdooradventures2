@@ -2,9 +2,13 @@ import type { City, StateDestination } from "./destinations";
 import { tours } from "./tours";
 import { getAllEngine2Tours } from "../engine2/data/loadEngine2";
 import { slugify } from "../utils/slugify";
+import {
+  getCanonicalDestinationCitySlug,
+  getDestinationCitySlugGroup,
+} from "./destinationAliases";
 
 const buildActivityTags = (slugs: string[]) =>
-  Array.from(new Set(slugs)).map((slug) => slug.replace(/-/g, " "));
+  Array.from(new Set(slugs)).map(slug => slug.replace(/-/g, " "));
 
 const buildFallbackCity = ({
   cityName,
@@ -37,7 +41,9 @@ const buildFallbackCity = ({
     shortDescription: `Guided adventures, local trails, and outdoor experiences around ${cityName}.`,
     intro: `${cityName} is a strong basecamp for ${activityList} in ${stateName}.`,
     heroImages: [],
-    activityTags: activityTags.length ? activityTags : ["cycling", "hiking", "canoeing"],
+    activityTags: activityTags.length
+      ? activityTags
+      : ["cycling", "hiking", "canoeing"],
     whereItIs: [
       `${cityName} sits within ${stateName}, giving travelers access to scenic routes, waterways, and trailheads close to town.`,
       `Use the city as a launch point for guided experiences that showcase the best of the surrounding landscape.`,
@@ -95,7 +101,7 @@ const buildFallbackCity = ({
 const buildFallbackState = (
   stateName: string,
   stateSlug: string,
-  cities: City[],
+  cities: City[]
 ): StateDestination => ({
   slug: stateSlug,
   name: stateName,
@@ -123,7 +129,7 @@ const buildFallbackState = (
 });
 
 const buildAverageCoordinate = (values: Array<number | undefined>) => {
-  const valid = values.filter((value) => Number.isFinite(value)) as number[];
+  const valid = values.filter(value => Number.isFinite(value)) as number[];
   if (!valid.length) {
     return undefined;
   }
@@ -133,13 +139,15 @@ const buildAverageCoordinate = (values: Array<number | undefined>) => {
 
 export const getFallbackStateBySlug = (stateSlug: string) => {
   const stateTours = tours.filter(
-    (tour) => tour.destination.stateSlug === stateSlug,
+    tour => tour.destination.stateSlug === stateSlug
   );
 
   const engine2StateTours = getAllEngine2Tours().filter(
     tour =>
       tour.seo.canonicalPath.startsWith(`/destinations/${stateSlug}/`) ||
-      tour.seo.canonicalPath.startsWith(`/destinations/united-states/${stateSlug}/`)
+      tour.seo.canonicalPath.startsWith(
+        `/destinations/united-states/${stateSlug}/`
+      )
   );
 
   if (!stateTours.length && !engine2StateTours.length) {
@@ -151,7 +159,9 @@ export const getFallbackStateBySlug = (stateSlug: string) => {
   }
 
   const engine2CountryMatch = engine2StateTours.find(
-    tour => tour.sourceCountrySlug === stateSlug || slugify(tour.geo.country) === stateSlug
+    tour =>
+      tour.sourceCountrySlug === stateSlug ||
+      slugify(tour.geo.country) === stateSlug
   );
   const stateName =
     stateTours[0]?.destination.state ??
@@ -159,36 +169,44 @@ export const getFallbackStateBySlug = (stateSlug: string) => {
     engine2StateTours[0]?.geo.region ??
     stateSlug;
   const citySlugs = Array.from(
-    new Set([
-      ...stateTours.map((tour) => tour.destination.citySlug),
-      ...engine2StateTours.map(tour => tour.sourceCitySlug),
-    ]),
+    new Set(
+      [
+        ...stateTours.map(tour => tour.destination.citySlug),
+        ...engine2StateTours.map(tour => tour.sourceCitySlug),
+      ].map(citySlug => getCanonicalDestinationCitySlug(stateSlug, citySlug))
+    )
   );
   const cities = citySlugs
-    .map((citySlug) =>
-      getFallbackCityBySlugs(stateSlug, citySlug),
-    )
+    .map(citySlug => getFallbackCityBySlugs(stateSlug, citySlug))
     .filter((city): city is City => Boolean(city));
 
   return buildFallbackState(stateName, stateSlug, cities);
 };
 
-export const getFallbackCityBySlugs = (
-  stateSlug: string,
-  citySlug: string,
-) => {
+export const getFallbackCityBySlugs = (stateSlug: string, citySlug: string) => {
+  const citySlugGroup = getDestinationCitySlugGroup(stateSlug, citySlug);
+  const canonicalCitySlug = getCanonicalDestinationCitySlug(
+    stateSlug,
+    citySlug
+  );
   const cityTours = tours.filter(
-    (tour) =>
+    tour =>
       tour.destination.stateSlug === stateSlug &&
-      tour.destination.citySlug === citySlug,
+      citySlugGroup.includes(tour.destination.citySlug)
   );
   const engine2CityTours = getAllEngine2Tours().filter(
     tour =>
-      (tour.seo.canonicalPath.startsWith(`/destinations/${stateSlug}/${citySlug}/tours/`) ||
-        tour.seo.canonicalPath.startsWith(
-          `/destinations/united-states/${stateSlug}/${citySlug}/tours/`
-        )) ||
-      tour.seo.canonicalPath === `/destinations/${stateSlug}/tours/${tour.slug}` ||
+      citySlugGroup.some(
+        groupCitySlug =>
+          tour.seo.canonicalPath.startsWith(
+            `/destinations/${stateSlug}/${groupCitySlug}/tours/`
+          ) ||
+          tour.seo.canonicalPath.startsWith(
+            `/destinations/united-states/${stateSlug}/${groupCitySlug}/tours/`
+          )
+      ) ||
+      tour.seo.canonicalPath ===
+        `/destinations/${stateSlug}/tours/${tour.slug}` ||
       tour.seo.canonicalPath ===
         `/destinations/united-states/${stateSlug}/tours/${tour.slug}`
   );
@@ -197,30 +215,32 @@ export const getFallbackCityBySlugs = (
     return null;
   }
 
-  const stateName = cityTours[0]?.destination.state ?? engine2CityTours[0]?.geo.region ?? stateSlug;
-  const cityName = cityTours[0]?.destination.city ?? engine2CityTours[0]?.geo.city ?? citySlug;
-  const activityTags = buildActivityTags(
-    [
-      ...cityTours.flatMap((tour) => tour.activitySlugs),
-      ...(engine2CityTours.length ? ["adventure"] : []),
-    ],
-  );
-  const lat = buildAverageCoordinate(
-    [
-      ...cityTours.map((tour) => tour.destination.lat),
-      ...engine2CityTours.map(tour => tour.geo.lat ?? undefined),
-    ],
-  );
-  const lng = buildAverageCoordinate(
-    [
-      ...cityTours.map((tour) => tour.destination.lng),
-      ...engine2CityTours.map(tour => tour.geo.lng ?? undefined),
-    ],
-  );
+  const stateName =
+    cityTours[0]?.destination.state ??
+    engine2CityTours[0]?.geo.region ??
+    stateSlug;
+  const cityName =
+    cityTours.find(tour => tour.destination.citySlug === canonicalCitySlug)
+      ?.destination.city ??
+    cityTours[0]?.destination.city ??
+    engine2CityTours[0]?.geo.city ??
+    canonicalCitySlug;
+  const activityTags = buildActivityTags([
+    ...cityTours.flatMap(tour => tour.activitySlugs),
+    ...(engine2CityTours.length ? ["adventure"] : []),
+  ]);
+  const lat = buildAverageCoordinate([
+    ...cityTours.map(tour => tour.destination.lat),
+    ...engine2CityTours.map(tour => tour.geo.lat ?? undefined),
+  ]);
+  const lng = buildAverageCoordinate([
+    ...cityTours.map(tour => tour.destination.lng),
+    ...engine2CityTours.map(tour => tour.geo.lng ?? undefined),
+  ]);
 
   return buildFallbackCity({
     cityName,
-    citySlug,
+    citySlug: canonicalCitySlug,
     stateName,
     stateSlug,
     activityTags,

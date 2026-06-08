@@ -254,7 +254,19 @@ const getTourIdentifier = (tour, fallback = "unknown") =>
   tour?.slug ||
   fallback;
 
-const buildCanonicalTourPath = (tour, catalogModule) => {
+let destinationAliasesModulePromise = null;
+const getDestinationAliasesModule = () => {
+  destinationAliasesModulePromise ??= tsImport(
+    "../src/data/destinationAliases.ts",
+    import.meta.url
+  );
+  return destinationAliasesModulePromise;
+};
+
+const canonicalizeKnownDestinationPath = (pathname, aliasesModule) =>
+  aliasesModule?.canonicalizeDestinationPath?.(pathname) ?? pathname;
+
+const buildCanonicalTourPath = (tour, catalogModule, aliasesModule) => {
   const canonicalPath = ensurePath(
     tour?.seo?.canonicalPath ||
       tour?.canonicalPath ||
@@ -268,14 +280,20 @@ const buildCanonicalTourPath = (tour, catalogModule) => {
     );
     if (legacyMatch) {
       const [, stateSlug, citySlug, slug] = legacyMatch;
-      return `/destinations/${stateSlug}/${citySlug}/tours/${slug}`;
+      return canonicalizeKnownDestinationPath(
+        `/destinations/${stateSlug}/${citySlug}/tours/${slug}`,
+        aliasesModule
+      );
     }
-    return canonicalPath;
+    return canonicalizeKnownDestinationPath(canonicalPath, aliasesModule);
   }
 
   const destination = tour?.destination ?? {};
   if (destination.stateSlug && destination.citySlug && tour?.slug) {
-    return `/destinations/${destination.stateSlug}/${destination.citySlug}/tours/${tour.slug}`;
+    return canonicalizeKnownDestinationPath(
+      `/destinations/${destination.stateSlug}/${destination.citySlug}/tours/${tour.slug}`,
+      aliasesModule
+    );
   }
 
   const slug =
@@ -301,7 +319,10 @@ const buildCanonicalTourPath = (tour, catalogModule) => {
     return null;
   }
 
-  return `/destinations/${stateSlug}/${citySlug}/tours/${slug}`;
+  return canonicalizeKnownDestinationPath(
+    `/destinations/${stateSlug}/${citySlug}/tours/${slug}`,
+    aliasesModule
+  );
 };
 
 const listUsGuideCitiesByState = async () => {
@@ -758,6 +779,7 @@ export const buildSitemap = async () => {
     "../src/data/destinations.ts",
     import.meta.url
   );
+  const destinationAliasesModule = await getDestinationAliasesModule();
   const catalogModule = await tsImport(
     "../src/data/tourCatalog.ts",
     import.meta.url
@@ -900,7 +922,11 @@ export const buildSitemap = async () => {
   }
 
   tours.forEach(tour => {
-    const tourPath = buildCanonicalTourPath(tour, catalogModule);
+    const tourPath = buildCanonicalTourPath(
+      tour,
+      catalogModule,
+      destinationAliasesModule
+    );
     if (!tourPath) {
       console.warn(
         `Skipping tour sitemap URL (missing route fields): ${getTourIdentifier(tour)}`
@@ -911,7 +937,11 @@ export const buildSitemap = async () => {
   });
 
   engine2Tours.forEach(tour => {
-    const tourPath = buildCanonicalTourPath(tour, catalogModule);
+    const tourPath = buildCanonicalTourPath(
+      tour,
+      catalogModule,
+      destinationAliasesModule
+    );
     if (!tourPath) {
       console.warn(
         `Skipping Engine2 tour sitemap URL (missing route fields): ${getTourIdentifier(tour)}`
@@ -933,7 +963,11 @@ export const buildSitemap = async () => {
   });
 
   engine6Tours.forEach(tour => {
-    const tourPath = buildCanonicalTourPath(tour, catalogModule);
+    const tourPath = buildCanonicalTourPath(
+      tour,
+      catalogModule,
+      destinationAliasesModule
+    );
     if (!tourPath) {
       console.warn(
         `Skipping Engine6 tour sitemap URL (missing route fields): ${getTourIdentifier(tour, tour?.productCode ?? "unknown")}`
@@ -955,7 +989,11 @@ export const buildSitemap = async () => {
       ...hawaiiFallbackTours,
       ...amsterdamFallbackTours,
     ].forEach(tour => {
-      const tourPath = buildCanonicalTourPath(tour, catalogModule);
+      const tourPath = buildCanonicalTourPath(
+        tour,
+        catalogModule,
+        destinationAliasesModule
+      );
       if (tourPath) addUrl(toursUrls, tourPath);
     });
   }
@@ -964,7 +1002,11 @@ export const buildSitemap = async () => {
       const legacyPath = ensurePath(
         flagstaffModule.getFlagstaffTourDetailPath(tour)
       );
-      const canonicalPath = buildCanonicalTourPath(tour, catalogModule);
+      const canonicalPath = buildCanonicalTourPath(
+        tour,
+        catalogModule,
+        destinationAliasesModule
+      );
       if (canonicalPath) {
         addUrl(toursUrls, canonicalPath);
         return;
@@ -1025,7 +1067,10 @@ export const buildSitemap = async () => {
 
   tours.forEach(tour => {
     const countrySlug = getCountrySlugFromTour(tour, catalogModule);
-    const citySlug = tour.destination.citySlug;
+    const citySlug = destinationAliasesModule.getCanonicalDestinationCitySlug(
+      countrySlug ?? tour.destination.stateSlug,
+      tour.destination.citySlug
+    );
     if (!countrySlug || !citySlug) {
       return;
     }
@@ -1077,7 +1122,12 @@ export const buildSitemap = async () => {
   const allowedUsGuideCities = await listUsGuideCitiesByState();
 
   tours.forEach(tour => {
-    const citySlug = tour.destination.citySlug;
+    const rawCitySlug = tour.destination.citySlug;
+    const countrySlugForAlias = getCountrySlugFromTour(tour, catalogModule);
+    const citySlug = destinationAliasesModule.getCanonicalDestinationCitySlug(
+      countrySlugForAlias ?? tour.destination.stateSlug,
+      rawCitySlug
+    );
     if (!citySlug) {
       return;
     }
@@ -1099,7 +1149,7 @@ export const buildSitemap = async () => {
       return;
     }
 
-    const countrySlug = getCountrySlugFromTour(tour, catalogModule);
+    const countrySlug = countrySlugForAlias;
     if (!countrySlug) {
       return;
     }

@@ -32,6 +32,7 @@ type CityTemplateProps = {
   city: City;
   toursOverride?: Tour[];
   stateHrefOverride?: string;
+  cityToursHrefOverride?: string;
   seoUrlOverride?: string;
   guideParentSlugOverride?: string;
   guideRegionTypeOverride?: "state" | "country";
@@ -135,12 +136,14 @@ export default function CityTemplate({
   city,
   toursOverride,
   stateHrefOverride,
+  cityToursHrefOverride,
   seoUrlOverride,
   guideParentSlugOverride,
   guideRegionTypeOverride,
 }: CityTemplateProps) {
   const longDescription = cityLongDescriptions[city.slug] ?? [];
-  const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
+  const toursHref =
+    cityToursHrefOverride ?? `/destinations/${state.slug}/${city.slug}/tours`;
   const stateHref =
     stateHrefOverride ??
     (state.isFallback
