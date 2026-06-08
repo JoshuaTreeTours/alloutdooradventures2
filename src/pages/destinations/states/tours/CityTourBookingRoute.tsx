@@ -43,6 +43,11 @@ import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
 import Engine2TourBookingPage from "../../../../engine2/pages/Engine2TourBookingPage";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
+import RouteRedirect from "../../../../components/RouteRedirect";
+import {
+  getRetiredFareHarborTourRedirectPath,
+  isSuppressedFareHarborBookingPage,
+} from "../../../../utils/fareharbor/suppressedBookingPages";
 import RemovedTourGone from "../../../RemovedTourGone";
 
 type CityTourBookingRouteProps = {
@@ -56,6 +61,16 @@ type CityTourBookingRouteProps = {
 export default function CityTourBookingRoute({
   params,
 }: CityTourBookingRouteProps) {
+  const retiredFareHarborRedirectPath = getRetiredFareHarborTourRedirectPath({
+    stateSlug: params.stateSlug,
+    citySlug: params.citySlug,
+    tourSlug: params.tourSlug,
+  });
+
+  if (retiredFareHarborRedirectPath) {
+    return <RouteRedirect to={retiredFareHarborRedirectPath} />;
+  }
+
   if (isRemovedTourSlug(params.tourSlug)) {
     return (
       <RemovedTourGone
@@ -71,6 +86,10 @@ export default function CityTourBookingRoute({
   );
 
   if (engine2Tour) {
+    if (isSuppressedFareHarborBookingPage(engine2Tour)) {
+      return <RouteRedirect to={engine2Tour.seo.canonicalPath} />;
+    }
+
     return <Engine2TourBookingPage tour={engine2Tour} />;
   }
 
@@ -138,6 +157,14 @@ export default function CityTourBookingRoute({
         </div>
       </main>
     );
+  }
+
+  if (isSuppressedFareHarborBookingPage(tour)) {
+    const redirectPath = isFlagstaff
+      ? getFlagstaffTourDetailPath(tour)
+      : getCityTourDetailPath(tour);
+
+    return <RouteRedirect to={redirectPath} />;
   }
 
   // NOTE: useMemo ensures params are captured once per mount.

@@ -1,3 +1,5 @@
+import { RETIRED_FAREHARBOR_TOUR_IDS } from "../fareharbor/suppressedBookingPages";
+
 const REMOVED_TOUR_IDS = new Set([
   "34849",
   "34897",
@@ -28,8 +30,16 @@ export const isTourRemoved = ({
   operatorName,
   operatorShortName,
 }: IsTourRemovedArgs) => {
-  if (tourId && REMOVED_TOUR_IDS.has(tourId)) {
-    return true;
+  if (tourId) {
+    const normalizedTourId = tourId.trim();
+    const trailingTourId = getTourIdFromSlug(normalizedTourId);
+    if (
+      REMOVED_TOUR_IDS.has(normalizedTourId) ||
+      RETIRED_FAREHARBOR_TOUR_IDS.has(normalizedTourId) ||
+      Boolean(trailingTourId && RETIRED_FAREHARBOR_TOUR_IDS.has(trailingTourId))
+    ) {
+      return true;
+    }
   }
 
   const normalizedOperator = normalize(operatorName);

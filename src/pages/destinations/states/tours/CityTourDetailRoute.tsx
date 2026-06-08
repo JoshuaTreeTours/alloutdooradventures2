@@ -86,6 +86,10 @@ import {
 } from "../../../../engine4/viator/engine5Bridge421920P2";
 import type { Engine4ViatorApiTour } from "../../../../engine4/types";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
+import {
+  getRetiredFareHarborTourRedirectPath,
+  isSuppressedFareHarborBookingPage,
+} from "../../../../utils/fareharbor/suppressedBookingPages";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
 import { isInvalidPlaceholderTourSlug } from "../../../../utils/tours/invalidPlaceholderTours";
 import { applyEngine1Template } from "../../../../utils/tours/applyEngine1HardenedTemplate";
@@ -93,6 +97,7 @@ import { fetchFareHarborHtml } from "../../../../utils/fh/fetchFareHarborHtml";
 import { parseFareHarborHtml } from "../../../../utils/fh/parseFareHarborHtml";
 import { formatStartingPrice } from "../../../../lib/pricing";
 import RemovedTourGone from "../../../RemovedTourGone";
+import RouteRedirect from "../../../../components/RouteRedirect";
 import { extractViatorProductCode } from "../../../../utils/viator/extractViatorProductCode";
 import {
   getViatorFromPrice,
@@ -266,6 +271,16 @@ export default function CityTourDetailRoute({
         </p>
       </main>
     );
+  }
+
+  const retiredFareHarborRedirectPath = getRetiredFareHarborTourRedirectPath({
+    stateSlug: params.stateSlug,
+    citySlug: params.citySlug,
+    tourSlug: params.tourSlug,
+  });
+
+  if (retiredFareHarborRedirectPath) {
+    return <RouteRedirect to={retiredFareHarborRedirectPath} />;
   }
 
   if (isRemovedTourSlug(params.tourSlug)) {
@@ -646,7 +661,10 @@ export default function CityTourDetailRoute({
       tour,
     }) ?? undefined;
   const baseStructuredImages = heroImage ? [heroImage] : [];
-  const bookingUrl = tour ? getTourBookingPath(tour) : "";
+  const bookingUrl =
+    tour && !isSuppressedFareHarborBookingPage(tour)
+      ? getTourBookingPath(tour)
+      : "";
   const seoDescription = tour
     ? buildTourMeta(tour, canonicalUrl).description
     : undefined;
@@ -964,16 +982,18 @@ export default function CityTourDetailRoute({
               </p>
             ) : null}
           </div>
-          <div className="flex flex-wrap gap-3">
-            <Link href={bookingUrl}>
-              <a
-                rel="nofollow"
-                className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
-              >
-                {hardenedTemplate?.primaryCtaLabel ?? "BOOK"}
-              </a>
-            </Link>
-          </div>
+          {bookingUrl ? (
+            <div className="flex flex-wrap gap-3">
+              <Link href={bookingUrl}>
+                <a
+                  rel="nofollow"
+                  className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+                >
+                  {hardenedTemplate?.primaryCtaLabel ?? "BOOK"}
+                </a>
+              </Link>
+            </div>
+          ) : null}
         </div>
       </section>
 

@@ -12,6 +12,7 @@ import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { getToursByCityUnified } from "../../data/tours";
 import TourRating from "../components/TourRating";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
+import { isSuppressedFareHarborBookingPage } from "../../utils/fareharbor/suppressedBookingPages";
 import {
   getPalmSpringsOverrideContent,
   getPalmSpringsPilotContent,
@@ -114,7 +115,9 @@ export default function Engine2TourPage({
       `[FHPilot] fetched=${pilotContent ? "ok" : "failed"} transformed=${pilotContent ? "ok" : "failed"}`
     );
   }
-  const bookingPath = `${tour.seo.canonicalPath}/book`;
+  const bookingPath = isSuppressedFareHarborBookingPage(tour)
+    ? ""
+    : `${tour.seo.canonicalPath}/book`;
   const backToToursPath = tour.seo.canonicalPath.replace(
     /\/tours\/[^/]+$/,
     "/tours"
@@ -292,13 +295,13 @@ export default function Engine2TourPage({
               >
                 Book This Tour
               </a>
-            ) : (
+            ) : bookingPath ? (
               <Link href={bookingPath}>
                 <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
                   BOOK
                 </a>
               </Link>
-            )}
+            ) : null}
             <Link href={backToToursPath}>
               <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
                 Back to tours

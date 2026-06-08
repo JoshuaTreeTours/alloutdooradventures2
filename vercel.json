@@ -66,6 +66,1526 @@
   ],
   "redirects": [
     {
+      "source": "/destinations/alaska/anchorage/tours/byron-glacier-walk-and-wildlife-viewing-experience-402209",
+      "destination": "/destinations/alaska/anchorage/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/alaska/anchorage/tours/byron-glacier-walk-and-wildlife-viewing-experience-402209/book",
+      "destination": "/destinations/alaska/anchorage/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/alaska/anchorage/tours/chugach-state-park-alpine-hiking-adventure-411854",
+      "destination": "/destinations/alaska/anchorage/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/alaska/anchorage/tours/chugach-state-park-alpine-hiking-adventure-411854/book",
+      "destination": "/destinations/alaska/anchorage/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/albania/maminas/tours/cape-of-rodon-from-tirana-bike-tour-198564",
+      "destination": "/destinations/albania/maminas/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/albania/maminas/tours/cape-of-rodon-from-tirana-bike-tour-198564/book",
+      "destination": "/destinations/albania/maminas/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/albania/tiran/tours/best-of-southern-via-dinarica-a-hikers-dream-468723",
+      "destination": "/destinations/albania/tiran/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/albania/tiran/tours/best-of-southern-via-dinarica-a-hikers-dream-468723/book",
+      "destination": "/destinations/albania/tiran/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/albania/tiran/tours/kruja-and-sari-saltik-hiking-tour-from-tirana-216957",
+      "destination": "/destinations/albania/tiran/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/albania/tiran/tours/kruja-and-sari-saltik-hiking-tour-from-tirana-216957/book",
+      "destination": "/destinations/albania/tiran/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/albania/tiran/tours/mountain-dajti-hiking-trip-from-tirana-216951",
+      "destination": "/destinations/albania/tiran/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/albania/tiran/tours/mountain-dajti-hiking-trip-from-tirana-216951/book",
+      "destination": "/destinations/albania/tiran/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/albania/tiran/tours/tirana-mountain-bike-tour-196557",
+      "destination": "/destinations/albania/tiran/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/albania/tiran/tours/tirana-mountain-bike-tour-196557/book",
+      "destination": "/destinations/albania/tiran/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/albania/tiran/tours/tirana-to-durres-bike-tour-198560",
+      "destination": "/destinations/albania/tiran/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/albania/tiran/tours/tirana-to-durres-bike-tour-198560/book",
+      "destination": "/destinations/albania/tiran/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/arizona/page/tours/lower-antelope-canyon-hiking-tour-479458",
+      "destination": "/destinations/arizona/page/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/arizona/page/tours/lower-antelope-canyon-hiking-tour-479458/book",
+      "destination": "/destinations/arizona/page/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/anglesea/tours/mountain-biking-tour-673861",
+      "destination": "/destinations/australia/anglesea/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/anglesea/tours/mountain-biking-tour-673861/book",
+      "destination": "/destinations/australia/anglesea/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/barron/tours/six-day-bucket-list-tour-374826",
+      "destination": "/destinations/australia/barron/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/barron/tours/six-day-bucket-list-tour-374826/book",
+      "destination": "/destinations/australia/barron/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/barron/tours/three-day-escape-tour-374832",
+      "destination": "/destinations/australia/barron/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/barron/tours/three-day-escape-tour-374832/book",
+      "destination": "/destinations/australia/barron/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/deloraine/tours/guided-ride-full-day---mt-owen-queenstown-455313",
+      "destination": "/destinations/australia/deloraine/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/deloraine/tours/guided-ride-full-day---mt-owen-queenstown-455313/book",
+      "destination": "/destinations/australia/deloraine/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/deloraine/tours/guided-ride-half-day---mt-owen-queenstown-440634",
+      "destination": "/destinations/australia/deloraine/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/deloraine/tours/guided-ride-half-day---mt-owen-queenstown-440634/book",
+      "destination": "/destinations/australia/deloraine/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/fyshwick/tours/frogwatch-training-176341",
+      "destination": "/destinations/australia/fyshwick/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/fyshwick/tours/frogwatch-training-176341/book",
+      "destination": "/destinations/australia/fyshwick/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/fyshwick/tours/tales-and-trails-nature-playgroup-173567",
+      "destination": "/destinations/australia/fyshwick/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/fyshwick/tours/tales-and-trails-nature-playgroup-173567/book",
+      "destination": "/destinations/australia/fyshwick/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/kununurra/tours/culture-adventures-533159",
+      "destination": "/destinations/australia/kununurra/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/kununurra/tours/culture-adventures-533159/book",
+      "destination": "/destinations/australia/kununurra/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/rhyll/tours/koala-conservation-reserve-519133",
+      "destination": "/destinations/australia/rhyll/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/rhyll/tours/koala-conservation-reserve-519133/book",
+      "destination": "/destinations/australia/rhyll/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/zeehan/tours/heli-biking-weekend-1-and-2-february-2025-501369",
+      "destination": "/destinations/australia/zeehan/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/australia/zeehan/tours/heli-biking-weekend-1-and-2-february-2025-501369/book",
+      "destination": "/destinations/australia/zeehan/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/british-columbia/egmont/tours/strait-of-georgia-private-fishing-charters-566805",
+      "destination": "/destinations/british-columbia/egmont/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/british-columbia/egmont/tours/strait-of-georgia-private-fishing-charters-566805/book",
+      "destination": "/destinations/british-columbia/egmont/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/british-columbia/gibsons/tours/georgia-beach-paddle-board-rental-375027",
+      "destination": "/destinations/british-columbia/gibsons/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/british-columbia/gibsons/tours/georgia-beach-paddle-board-rental-375027/book",
+      "destination": "/destinations/british-columbia/gibsons/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/joshua-tree/tours/joshua-tree-stargazing-night-walk-901301",
+      "destination": "/destinations/california/joshua-tree/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/joshua-tree/tours/joshua-tree-stargazing-night-walk-901301/book",
+      "destination": "/destinations/california/joshua-tree/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/lake-elsinore/tours/brews-and-buzz-e-bike-tour-in-lake-elsinore-340849",
+      "destination": "/destinations/california/lake-elsinore/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/lake-elsinore/tours/brews-and-buzz-e-bike-tour-in-lake-elsinore-340849/book",
+      "destination": "/destinations/california/lake-elsinore/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/los-angeles/tours/1-hour-walk-of-fame-guided-tour-547525",
+      "destination": "/destinations/california/los-angeles/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/los-angeles/tours/1-hour-walk-of-fame-guided-tour-547525/book",
+      "destination": "/destinations/california/los-angeles/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/newport-beach/tours/boston-whaler-86650",
+      "destination": "/destinations/california/newport-beach/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/newport-beach/tours/boston-whaler-86650/book",
+      "destination": "/destinations/california/newport-beach/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/san-diego/tours/mission-bay-guided-paddleboard-tour-901101",
+      "destination": "/destinations/california/san-diego/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/san-diego/tours/mission-bay-guided-paddleboard-tour-901101/book",
+      "destination": "/destinations/california/san-diego/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/san-diego/tours/sea-sniper-2---private-charter-549018",
+      "destination": "/destinations/california/san-diego/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/san-diego/tours/sea-sniper-2---private-charter-549018/book",
+      "destination": "/destinations/california/san-diego/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/san-francisco/tours/go-with-the-flow---south-423384",
+      "destination": "/destinations/california/san-francisco/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/san-francisco/tours/go-with-the-flow---south-423384/book",
+      "destination": "/destinations/california/san-francisco/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/san-francisco/tours/golden-gate-bridge-electric-bike-tour-901002",
+      "destination": "/destinations/california/san-francisco/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/san-francisco/tours/golden-gate-bridge-electric-bike-tour-901002/book",
+      "destination": "/destinations/california/san-francisco/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/san-francisco/tours/golden-gate-kayak-adventure-901001",
+      "destination": "/destinations/california/san-francisco/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/san-francisco/tours/golden-gate-kayak-adventure-901001/book",
+      "destination": "/destinations/california/san-francisco/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/san-francisco/tours/san-francisco-sunset-cruise-901003",
+      "destination": "/destinations/california/san-francisco/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/san-francisco/tours/san-francisco-sunset-cruise-901003/book",
+      "destination": "/destinations/california/san-francisco/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/sonoma/tours/sonoma-by-sunset---guided-electric-trike-tour---3-hours-579429",
+      "destination": "/destinations/california/sonoma/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/california/sonoma/tours/sonoma-by-sunset---guided-electric-trike-tour---3-hours-579429/book",
+      "destination": "/destinations/california/sonoma/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/czechia/vy-brod/tours/kanutour-auf-der-moldau-family-and-friends-kanu-moldau-567765",
+      "destination": "/destinations/czechia/vy-brod/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/czechia/vy-brod/tours/kanutour-auf-der-moldau-family-and-friends-kanu-moldau-567765/book",
+      "destination": "/destinations/czechia/vy-brod/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/finland/espoo/tours/patikointia-nuuksion-jrviylngll-englanniksi-290957",
+      "destination": "/destinations/finland/espoo/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/finland/espoo/tours/patikointia-nuuksion-jrviylngll-englanniksi-290957/book",
+      "destination": "/destinations/finland/espoo/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/bradenton-beach/tours/3-tank-boat-dive-130269",
+      "destination": "/destinations/florida/bradenton-beach/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/bradenton-beach/tours/3-tank-boat-dive-130269/book",
+      "destination": "/destinations/florida/bradenton-beach/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/crystal-river/tours/sandbar-trip-568696",
+      "destination": "/destinations/florida/crystal-river/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/crystal-river/tours/sandbar-trip-568696/book",
+      "destination": "/destinations/florida/crystal-river/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/goodland/tours/afternoon-cruise-541644",
+      "destination": "/destinations/florida/goodland/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/goodland/tours/afternoon-cruise-541644/book",
+      "destination": "/destinations/florida/goodland/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/homosassa/tours/private-fishing-charter-88880",
+      "destination": "/destinations/florida/homosassa/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/homosassa/tours/private-fishing-charter-88880/book",
+      "destination": "/destinations/florida/homosassa/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/homosassa/tours/private-manatee-tour-57775",
+      "destination": "/destinations/florida/homosassa/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/homosassa/tours/private-manatee-tour-57775/book",
+      "destination": "/destinations/florida/homosassa/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/homosassa/tours/semi-private-manatee-tour-57774",
+      "destination": "/destinations/florida/homosassa/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/homosassa/tours/semi-private-manatee-tour-57774/book",
+      "destination": "/destinations/florida/homosassa/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/key-biscayne/tours/22-boston-whaler-montac-264618",
+      "destination": "/destinations/florida/key-biscayne/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/key-biscayne/tours/22-boston-whaler-montac-264618/book",
+      "destination": "/destinations/florida/key-biscayne/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/key-largo/tours/mangrove-tunnel-kayak-adventure-104674",
+      "destination": "/destinations/florida/key-largo/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/key-largo/tours/mangrove-tunnel-kayak-adventure-104674/book",
+      "destination": "/destinations/florida/key-largo/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/sarasota/tours/open-water-diver---sarasota-113803",
+      "destination": "/destinations/florida/sarasota/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/sarasota/tours/open-water-diver---sarasota-113803/book",
+      "destination": "/destinations/florida/sarasota/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/sarasota/tours/rescue-diver---sarasota-113819",
+      "destination": "/destinations/florida/sarasota/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/sarasota/tours/rescue-diver---sarasota-113819/book",
+      "destination": "/destinations/florida/sarasota/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/sarasota/tours/seahorse-safari-430401",
+      "destination": "/destinations/florida/sarasota/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/sarasota/tours/seahorse-safari-430401/book",
+      "destination": "/destinations/florida/sarasota/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/tampa/tours/inshore-fishing-charter-326447",
+      "destination": "/destinations/florida/tampa/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/florida/tampa/tours/inshore-fishing-charter-326447/book",
+      "destination": "/destinations/florida/tampa/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/france/aubagne/tours/a-la-dcouverte-de-la-sainte-baume-541565",
+      "destination": "/destinations/france/aubagne/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/france/aubagne/tours/a-la-dcouverte-de-la-sainte-baume-541565/book",
+      "destination": "/destinations/france/aubagne/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/france/aubagne/tours/leau-de-la-sainte-baume-541562",
+      "destination": "/destinations/france/aubagne/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/france/aubagne/tours/leau-de-la-sainte-baume-541562/book",
+      "destination": "/destinations/france/aubagne/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/france/aubagne/tours/trilogie-de-provence-541537",
+      "destination": "/destinations/france/aubagne/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/france/aubagne/tours/trilogie-de-provence-541537/book",
+      "destination": "/destinations/france/aubagne/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/germany/sigmaringen/tours/yoga-and-kanu-567766",
+      "destination": "/destinations/germany/sigmaringen/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/germany/sigmaringen/tours/yoga-and-kanu-567766/book",
+      "destination": "/destinations/germany/sigmaringen/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/germany/sulzberg/tours/fortgeschrittener-kurs-open-kanu-intensiv-solo-iller-567770",
+      "destination": "/destinations/germany/sulzberg/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/germany/sulzberg/tours/fortgeschrittener-kurs-open-kanu-intensiv-solo-iller-567770/book",
+      "destination": "/destinations/germany/sulzberg/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/germany/sulzberg/tours/tourguide-ausbildung-bei-out-active-nach-der-richtlinien-der-bundesverband-kanu-ev-iller-567771",
+      "destination": "/destinations/germany/sulzberg/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/germany/sulzberg/tours/tourguide-ausbildung-bei-out-active-nach-der-richtlinien-der-bundesverband-kanu-ev-iller-567771/book",
+      "destination": "/destinations/germany/sulzberg/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/greece/greece/tours/valia-calda-adventure-off-road-and-cooking-experience-398370",
+      "destination": "/destinations/greece/greece/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/greece/greece/tours/valia-calda-adventure-off-road-and-cooking-experience-398370/book",
+      "destination": "/destinations/greece/greece/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/greece/ioannina/tours/zagori-adventure-off-road-and-cooking-experience-398316",
+      "destination": "/destinations/greece/ioannina/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/greece/ioannina/tours/zagori-adventure-off-road-and-cooking-experience-398316/book",
+      "destination": "/destinations/greece/ioannina/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/greece/mikro-papigko/tours/alpine-dragon-lake-hike-398631",
+      "destination": "/destinations/greece/mikro-papigko/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/greece/mikro-papigko/tours/alpine-dragon-lake-hike-398631/book",
+      "destination": "/destinations/greece/mikro-papigko/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/greece/monodendri/tours/hiking-in-vikos-gorge-398621",
+      "destination": "/destinations/greece/monodendri/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/greece/monodendri/tours/hiking-in-vikos-gorge-398621/book",
+      "destination": "/destinations/greece/monodendri/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/chioggia/tours/cena-dal-pescatore-con-escursione-in-laguna-243190",
+      "destination": "/destinations/italy/chioggia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/chioggia/tours/cena-dal-pescatore-con-escursione-in-laguna-243190/book",
+      "destination": "/destinations/italy/chioggia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/florence/tours/bike-tour-sorrento-550977",
+      "destination": "/destinations/italy/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/florence/tours/bike-tour-sorrento-550977/book",
+      "destination": "/destinations/italy/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/florence/tours/cooking-class-amalfi-coast-550997",
+      "destination": "/destinations/italy/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/florence/tours/cooking-class-amalfi-coast-550997/book",
+      "destination": "/destinations/italy/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/florence/tours/degustazione-di-birra-in-costiera-amalfitana-552485",
+      "destination": "/destinations/italy/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/florence/tours/degustazione-di-birra-in-costiera-amalfitana-552485/book",
+      "destination": "/destinations/italy/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/florence/tours/lezione-di-mozzarella-552477",
+      "destination": "/destinations/italy/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/florence/tours/lezione-di-mozzarella-552477/book",
+      "destination": "/destinations/italy/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/florence/tours/lezione-di-yoga-privata-550986",
+      "destination": "/destinations/italy/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/florence/tours/lezione-di-yoga-privata-550986/book",
+      "destination": "/destinations/italy/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/florence/tours/pic-nic-in-cantina-552468",
+      "destination": "/destinations/italy/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/florence/tours/pic-nic-in-cantina-552468/book",
+      "destination": "/destinations/italy/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/florence/tours/wine-tasting-amalfi-coast-551001",
+      "destination": "/destinations/italy/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/florence/tours/wine-tasting-amalfi-coast-551001/book",
+      "destination": "/destinations/italy/florence/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/massa-lubrense/tours/escursione-in-kayak-alla-baia-di-ieranto-550985",
+      "destination": "/destinations/italy/massa-lubrense/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/massa-lubrense/tours/escursione-in-kayak-alla-baia-di-ieranto-550985/book",
+      "destination": "/destinations/italy/massa-lubrense/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/nerano/tours/escursione-privata-alla-baia-di-ieranto-550707",
+      "destination": "/destinations/italy/nerano/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/nerano/tours/escursione-privata-alla-baia-di-ieranto-550707/book",
+      "destination": "/destinations/italy/nerano/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/nerano/tours/snorkeling-alla-baia-di-ieranto-550721",
+      "destination": "/destinations/italy/nerano/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/nerano/tours/snorkeling-alla-baia-di-ieranto-550721/book",
+      "destination": "/destinations/italy/nerano/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/pianillo/tours/arrampicata-in-costiera-amalfitana-550975",
+      "destination": "/destinations/italy/pianillo/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/pianillo/tours/arrampicata-in-costiera-amalfitana-550975/book",
+      "destination": "/destinations/italy/pianillo/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/pianillo/tours/escursione-privata-al-sentiero-degli-dei-550705",
+      "destination": "/destinations/italy/pianillo/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/pianillo/tours/escursione-privata-al-sentiero-degli-dei-550705/book",
+      "destination": "/destinations/italy/pianillo/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/pontone/tours/escursione-privata-alla-valle-delle-ferriere-di-amalfi-550715",
+      "destination": "/destinations/italy/pontone/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/pontone/tours/escursione-privata-alla-valle-delle-ferriere-di-amalfi-550715/book",
+      "destination": "/destinations/italy/pontone/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/ravello/tours/escursione-privata-al-sentiero-dei-limoni-550691",
+      "destination": "/destinations/italy/ravello/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/ravello/tours/escursione-privata-al-sentiero-dei-limoni-550691/book",
+      "destination": "/destinations/italy/ravello/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/salerno/tours/escursione-in-barca-in-costiera-amalfitana-550982",
+      "destination": "/destinations/italy/salerno/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/salerno/tours/escursione-in-barca-in-costiera-amalfitana-550982/book",
+      "destination": "/destinations/italy/salerno/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/sorrento/tours/escursione-privata-a-capri-550712",
+      "destination": "/destinations/italy/sorrento/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/sorrento/tours/escursione-privata-a-capri-550712/book",
+      "destination": "/destinations/italy/sorrento/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/termini/tours/escursione-privata-a-punta-campanella-550689",
+      "destination": "/destinations/italy/termini/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/italy/termini/tours/escursione-privata-a-punta-campanella-550689/book",
+      "destination": "/destinations/italy/termini/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/louisiana/baton-rouge/tours/this-will-be-war-louisiana-secession-34618",
+      "destination": "/destinations/louisiana/baton-rouge/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/louisiana/baton-rouge/tours/this-will-be-war-louisiana-secession-34618/book",
+      "destination": "/destinations/louisiana/baton-rouge/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/louisiana/lafayette/tours/free-community-nature-hike-495610",
+      "destination": "/destinations/louisiana/lafayette/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/louisiana/lafayette/tours/free-community-nature-hike-495610/book",
+      "destination": "/destinations/louisiana/lafayette/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/louisiana/lafayette/tours/free-community-paddle-495726",
+      "destination": "/destinations/louisiana/lafayette/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/louisiana/lafayette/tours/free-community-paddle-495726/book",
+      "destination": "/destinations/louisiana/lafayette/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/louisiana/lafayette/tours/friends-and-family-archery-501931",
+      "destination": "/destinations/louisiana/lafayette/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/louisiana/lafayette/tours/friends-and-family-archery-501931/book",
+      "destination": "/destinations/louisiana/lafayette/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/louisiana/lafayette/tours/private-photography-paddle-501933",
+      "destination": "/destinations/louisiana/lafayette/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/louisiana/lafayette/tours/private-photography-paddle-501933/book",
+      "destination": "/destinations/louisiana/lafayette/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/louisiana/lafayette/tours/private-sunrise-kayak-tour-498628",
+      "destination": "/destinations/louisiana/lafayette/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/louisiana/lafayette/tours/private-sunrise-kayak-tour-498628/book",
+      "destination": "/destinations/louisiana/lafayette/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/louisiana/lafayette/tours/private-sunset-kayak-tour-501911",
+      "destination": "/destinations/louisiana/lafayette/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/louisiana/lafayette/tours/private-sunset-kayak-tour-501911/book",
+      "destination": "/destinations/louisiana/lafayette/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/maine/bar-harbor/tours/guided-e-bike-tours-carriage-roads-waitlist-526350",
+      "destination": "/destinations/maine/bar-harbor/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/maine/bar-harbor/tours/guided-e-bike-tours-carriage-roads-waitlist-526350/book",
+      "destination": "/destinations/maine/bar-harbor/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/maine/bar-harbor/tours/self-guided-e-bike-tours-carriage-roads-waitlist-526351",
+      "destination": "/destinations/maine/bar-harbor/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/maine/bar-harbor/tours/self-guided-e-bike-tours-carriage-roads-waitlist-526351/book",
+      "destination": "/destinations/maine/bar-harbor/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/maine/harpswell/tours/9-hour-haddock-and-groundfish-charters-rye-new-hampshire-535547",
+      "destination": "/destinations/maine/harpswell/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/maine/harpswell/tours/9-hour-haddock-and-groundfish-charters-rye-new-hampshire-535547/book",
+      "destination": "/destinations/maine/harpswell/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/maryland/lusby/tours/4-hours-1-angler-w-guide-473250",
+      "destination": "/destinations/maryland/lusby/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/maryland/lusby/tours/4-hours-1-angler-w-guide-473250/book",
+      "destination": "/destinations/maryland/lusby/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/maryland/lusby/tours/4-hours-1-kayak-self-guided-473251",
+      "destination": "/destinations/maryland/lusby/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/maryland/lusby/tours/4-hours-1-kayak-self-guided-473251/book",
+      "destination": "/destinations/maryland/lusby/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/maryland/lusby/tours/4-hours-2-anglers-w-guide-473238",
+      "destination": "/destinations/maryland/lusby/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/maryland/lusby/tours/4-hours-2-anglers-w-guide-473238/book",
+      "destination": "/destinations/maryland/lusby/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/maryland/lusby/tours/4-hours-2-kayaks-self-guided-473255",
+      "destination": "/destinations/maryland/lusby/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/maryland/lusby/tours/4-hours-2-kayaks-self-guided-473255/book",
+      "destination": "/destinations/maryland/lusby/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/beverly/tours/hammond-castle-and-a-drive-up-bostons-gold-coast-310486",
+      "destination": "/destinations/massachusetts/beverly/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/beverly/tours/hammond-castle-and-a-drive-up-bostons-gold-coast-310486/book",
+      "destination": "/destinations/massachusetts/beverly/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/boston/tours/boston-harbor-cruise-byob---legacy-motor-yacht-379532",
+      "destination": "/destinations/massachusetts/boston/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/boston/tours/boston-harbor-cruise-byob---legacy-motor-yacht-379532/book",
+      "destination": "/destinations/massachusetts/boston/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/boston/tours/full-moon-paddle---charles-river-boston-288303",
+      "destination": "/destinations/massachusetts/boston/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/boston/tours/full-moon-paddle---charles-river-boston-288303/book",
+      "destination": "/destinations/massachusetts/boston/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/boston/tours/protest-to-freedom-boston-black-heritage-tour-481940",
+      "destination": "/destinations/massachusetts/boston/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/boston/tours/protest-to-freedom-boston-black-heritage-tour-481940/book",
+      "destination": "/destinations/massachusetts/boston/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/boston/tours/the-protest-to-freedom-walking-tour-481941",
+      "destination": "/destinations/massachusetts/boston/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/boston/tours/the-protest-to-freedom-walking-tour-481941/book",
+      "destination": "/destinations/massachusetts/boston/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/cambridge/tours/july-2nd-harborfest-fireworks-in-boston-harbor-on-board-beacon-tiki-boat-557269",
+      "destination": "/destinations/massachusetts/cambridge/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/cambridge/tours/july-2nd-harborfest-fireworks-in-boston-harbor-on-board-beacon-tiki-boat-557269/book",
+      "destination": "/destinations/massachusetts/cambridge/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/cambridge/tours/july-4th-fireworks-on-the-charles-river-on-board-beacon-tiki-boat-557270",
+      "destination": "/destinations/massachusetts/cambridge/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/cambridge/tours/july-4th-fireworks-on-the-charles-river-on-board-beacon-tiki-boat-557270/book",
+      "destination": "/destinations/massachusetts/cambridge/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/cambridge/tours/private-cruise-356474",
+      "destination": "/destinations/massachusetts/cambridge/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/cambridge/tours/private-cruise-356474/book",
+      "destination": "/destinations/massachusetts/cambridge/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/cambridge/tours/tiki-cruise-356465",
+      "destination": "/destinations/massachusetts/cambridge/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/cambridge/tours/tiki-cruise-356465/book",
+      "destination": "/destinations/massachusetts/cambridge/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/holbrook/tours/boston-harbor-and-islands-558141",
+      "destination": "/destinations/massachusetts/holbrook/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/holbrook/tours/boston-harbor-and-islands-558141/book",
+      "destination": "/destinations/massachusetts/holbrook/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/winthrop/tours/quincy---boston-harbor-island-tour-96663",
+      "destination": "/destinations/massachusetts/winthrop/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/winthrop/tours/quincy---boston-harbor-island-tour-96663/book",
+      "destination": "/destinations/massachusetts/winthrop/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/winthrop/tours/winthrop---boston-harbor-cruise-96664",
+      "destination": "/destinations/massachusetts/winthrop/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/massachusetts/winthrop/tours/winthrop---boston-harbor-cruise-96664/book",
+      "destination": "/destinations/massachusetts/winthrop/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/missouri/branson/tours/new-jersey-nights-298922",
+      "destination": "/destinations/missouri/branson/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/missouri/branson/tours/new-jersey-nights-298922/book",
+      "destination": "/destinations/missouri/branson/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/new-jersey/millville/tours/njmp---new-jersey-motorsports-park-461699",
+      "destination": "/destinations/new-jersey/millville/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/new-jersey/millville/tours/njmp---new-jersey-motorsports-park-461699/book",
+      "destination": "/destinations/new-jersey/millville/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/new-york/queens/tours/tour-boston-199550",
+      "destination": "/destinations/new-york/queens/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/new-york/queens/tours/tour-boston-199550/book",
+      "destination": "/destinations/new-york/queens/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/new-york/queens/tours/tour-washington-dc-199547",
+      "destination": "/destinations/new-york/queens/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/new-york/queens/tours/tour-washington-dc-199547/book",
+      "destination": "/destinations/new-york/queens/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/new-york/staten-island/tours/new-jersey-shipwrecks-540990",
+      "destination": "/destinations/new-york/staten-island/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/new-york/staten-island/tours/new-jersey-shipwrecks-540990/book",
+      "destination": "/destinations/new-york/staten-island/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/new-york/staten-island/tours/the-lower-new-york-harbor-and-ambrose-channel-to-sandy-hook-and-atlantic-highlands-new-jersey-tour-452259",
+      "destination": "/destinations/new-york/staten-island/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/new-york/staten-island/tours/the-lower-new-york-harbor-and-ambrose-channel-to-sandy-hook-and-atlantic-highlands-new-jersey-tour-452259/book",
+      "destination": "/destinations/new-york/staten-island/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/north-macedonia/ohrid/tours/lake-ohrid-bike-tour-from-tirana-198567",
+      "destination": "/destinations/north-macedonia/ohrid/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/north-macedonia/ohrid/tours/lake-ohrid-bike-tour-from-tirana-198567/book",
+      "destination": "/destinations/north-macedonia/ohrid/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/norway/byrkjelo/tours/hiking-to-eggenipa-189430",
+      "destination": "/destinations/norway/byrkjelo/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/norway/byrkjelo/tours/hiking-to-eggenipa-189430/book",
+      "destination": "/destinations/norway/byrkjelo/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/norway/sandane/tours/hike-trivselsskogen-209293",
+      "destination": "/destinations/norway/sandane/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/norway/sandane/tours/hike-trivselsskogen-209293/book",
+      "destination": "/destinations/norway/sandane/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/ontario/st-thomas/tours/afternoon-tour-544296",
+      "destination": "/destinations/ontario/st-thomas/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/ontario/st-thomas/tours/afternoon-tour-544296/book",
+      "destination": "/destinations/ontario/st-thomas/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/ontario/st-thomas/tours/morning-tour-544294",
+      "destination": "/destinations/ontario/st-thomas/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/ontario/st-thomas/tours/morning-tour-544294/book",
+      "destination": "/destinations/ontario/st-thomas/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/poland/krakw/tours/krakow-bike-tour-307531",
+      "destination": "/destinations/poland/krakw/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/poland/krakw/tours/krakow-bike-tour-307531/book",
+      "destination": "/destinations/poland/krakw/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/paderne/tours/e-mountainbike-adventure-tour-cliffs-of-falsia-543078",
+      "destination": "/destinations/portugal/paderne/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/paderne/tours/e-mountainbike-adventure-tour-cliffs-of-falsia-543078/book",
+      "destination": "/destinations/portugal/paderne/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/paderne/tours/e-mountainbike-pleasure-tour-white-villages-543081",
+      "destination": "/destinations/portugal/paderne/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/paderne/tours/e-mountainbike-pleasure-tour-white-villages-543081/book",
+      "destination": "/destinations/portugal/paderne/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/paderne/tours/gravelbike-tour-paderne-and-alte-543089",
+      "destination": "/destinations/portugal/paderne/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/paderne/tours/gravelbike-tour-paderne-and-alte-543089/book",
+      "destination": "/destinations/portugal/paderne/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/so-simo/tours/rotas-a-sul---cais-da-moita---reserva-exclusiva-363097",
+      "destination": "/destinations/portugal/so-simo/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/so-simo/tours/rotas-a-sul---cais-da-moita---reserva-exclusiva-363097/book",
+      "destination": "/destinations/portugal/so-simo/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/vila-nova-de-cacela/tours/e-mountainbike-adventure-tour-beliche-543090",
+      "destination": "/destinations/portugal/vila-nova-de-cacela/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/vila-nova-de-cacela/tours/e-mountainbike-adventure-tour-beliche-543090/book",
+      "destination": "/destinations/portugal/vila-nova-de-cacela/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/vila-nova-de-cacela/tours/e-mountainbike-pleasure-tour-tavira-and-salt-pans-543096",
+      "destination": "/destinations/portugal/vila-nova-de-cacela/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/vila-nova-de-cacela/tours/e-mountainbike-pleasure-tour-tavira-and-salt-pans-543096/book",
+      "destination": "/destinations/portugal/vila-nova-de-cacela/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/vila-nova-de-cacela/tours/e-mountainbike-tour-vila-real-543092",
+      "destination": "/destinations/portugal/vila-nova-de-cacela/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/vila-nova-de-cacela/tours/e-mountainbike-tour-vila-real-543092/book",
+      "destination": "/destinations/portugal/vila-nova-de-cacela/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/vila-nova-de-cacela/tours/gravelbike-tour-543122",
+      "destination": "/destinations/portugal/vila-nova-de-cacela/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/vila-nova-de-cacela/tours/gravelbike-tour-543122/book",
+      "destination": "/destinations/portugal/vila-nova-de-cacela/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/vila-nova-de-cacela/tours/mountainbike-tour-cabanas-543121",
+      "destination": "/destinations/portugal/vila-nova-de-cacela/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/vila-nova-de-cacela/tours/mountainbike-tour-cabanas-543121/book",
+      "destination": "/destinations/portugal/vila-nova-de-cacela/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/vila-nova-de-cacela/tours/roadbike-tour-so-brs-543123",
+      "destination": "/destinations/portugal/vila-nova-de-cacela/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/portugal/vila-nova-de-cacela/tours/roadbike-tour-so-brs-543123/book",
+      "destination": "/destinations/portugal/vila-nova-de-cacela/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/slovenia/slovenia/tours/wildwasser-kurs-open-kanu-solo-soa-567774",
+      "destination": "/destinations/slovenia/slovenia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/slovenia/slovenia/tours/wildwasser-kurs-open-kanu-solo-soa-567774/book",
+      "destination": "/destinations/slovenia/slovenia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/south-carolina/columbia/tours/south-carolina-history-immersion-382093",
+      "destination": "/destinations/south-carolina/columbia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/south-carolina/columbia/tours/south-carolina-history-immersion-382093/book",
+      "destination": "/destinations/south-carolina/columbia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/aneto/tours/ruta-circular-al-pico-de-vallibierna-3000m-666095",
+      "destination": "/destinations/spain/aneto/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/aneto/tours/ruta-circular-al-pico-de-vallibierna-3000m-666095/book",
+      "destination": "/destinations/spain/aneto/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/aneto/tours/ruta-ibones-de-anglios-estival-666115",
+      "destination": "/destinations/spain/aneto/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/aneto/tours/ruta-ibones-de-anglios-estival-666115/book",
+      "destination": "/destinations/spain/aneto/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/bossst/tours/raquetas-de-nieve-en-el-bosque-nordico-cth-de-baretja-666282",
+      "destination": "/destinations/spain/bossst/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/bossst/tours/raquetas-de-nieve-en-el-bosque-nordico-cth-de-baretja-666282/book",
+      "destination": "/destinations/spain/bossst/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/catalunya/tours/ascensin-al-tuc-de-montarto-666078",
+      "destination": "/destinations/spain/catalunya/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/catalunya/tours/ascensin-al-tuc-de-montarto-666078/book",
+      "destination": "/destinations/spain/catalunya/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/catalunya/tours/ascensin-besiberri-sud-y-pic-de-comaloforno-666094",
+      "destination": "/destinations/spain/catalunya/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/catalunya/tours/ascensin-besiberri-sud-y-pic-de-comaloforno-666094/book",
+      "destination": "/destinations/spain/catalunya/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/catalunya/tours/ruta-a-los-estanys-de-gmena-666104",
+      "destination": "/destinations/spain/catalunya/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/catalunya/tours/ruta-a-los-estanys-de-gmena-666104/book",
+      "destination": "/destinations/spain/catalunya/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/catalunya/tours/ruta-estany-de-besiberri-666098",
+      "destination": "/destinations/spain/catalunya/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/catalunya/tours/ruta-estany-de-besiberri-666098/book",
+      "destination": "/destinations/spain/catalunya/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/la-rpita/tours/alquiler-de-embarcaciones-con-titulacin-569966",
+      "destination": "/destinations/spain/la-rpita/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/la-rpita/tours/alquiler-de-embarcaciones-con-titulacin-569966/book",
+      "destination": "/destinations/spain/la-rpita/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/la-rpita/tours/alquiler-de-embarcaciones-sin-titulacion-en-el-delta-del-ebro-570214",
+      "destination": "/destinations/spain/la-rpita/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/la-rpita/tours/alquiler-de-embarcaciones-sin-titulacion-en-el-delta-del-ebro-570214/book",
+      "destination": "/destinations/spain/la-rpita/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/montanuy/tours/raquetas-de-nieve-a-los-ibones-de-anglios-666284",
+      "destination": "/destinations/spain/montanuy/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/montanuy/tours/raquetas-de-nieve-a-los-ibones-de-anglios-666284/book",
+      "destination": "/destinations/spain/montanuy/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/naut-aran/tours/santuario-de-montgarri-estival-666386",
+      "destination": "/destinations/spain/naut-aran/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/spain/naut-aran/tours/santuario-de-montgarri-estival-666386/book",
+      "destination": "/destinations/spain/naut-aran/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/tennessee/greenbrier/tours/tennessee-enhanced-handgun-carry-permit-65612",
+      "destination": "/destinations/tennessee/greenbrier/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/tennessee/greenbrier/tours/tennessee-enhanced-handgun-carry-permit-65612/book",
+      "destination": "/destinations/tennessee/greenbrier/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/tennessee/nashville/tours/dive-bar-tour-614168",
+      "destination": "/destinations/tennessee/nashville/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/tennessee/nashville/tours/dive-bar-tour-614168/book",
+      "destination": "/destinations/tennessee/nashville/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/tennessee/nashville/tours/murals-and-mimosas-614174",
+      "destination": "/destinations/tennessee/nashville/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/tennessee/nashville/tours/murals-and-mimosas-614174/book",
+      "destination": "/destinations/tennessee/nashville/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/tennessee/nashville/tours/pint-tour-58739",
+      "destination": "/destinations/tennessee/nashville/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/tennessee/nashville/tours/pint-tour-58739/book",
+      "destination": "/destinations/tennessee/nashville/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/united-kingdom/norwich/tours/outrigger-canoeing---a-taste-of-tahiti-in-norfolk-389846",
+      "destination": "/destinations/united-kingdom/norwich/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/united-kingdom/norwich/tours/outrigger-canoeing---a-taste-of-tahiti-in-norfolk-389846/book",
+      "destination": "/destinations/united-kingdom/norwich/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/united-kingdom/norwich/tours/outrigger-canoeing-experience-day-354301",
+      "destination": "/destinations/united-kingdom/norwich/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/united-kingdom/norwich/tours/outrigger-canoeing-experience-day-354301/book",
+      "destination": "/destinations/united-kingdom/norwich/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/vermont/springfield/tours/bridges-and-breweries-tour-604004",
+      "destination": "/destinations/vermont/springfield/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/vermont/springfield/tours/bridges-and-breweries-tour-604004/book",
+      "destination": "/destinations/vermont/springfield/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/vermont/springfield/tours/signature-vermont-guided-tour-603981",
+      "destination": "/destinations/vermont/springfield/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/vermont/springfield/tours/signature-vermont-guided-tour-603981/book",
+      "destination": "/destinations/vermont/springfield/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/vermont/springfield/tours/tour-waitlist---all-tours-605814",
+      "destination": "/destinations/vermont/springfield/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/vermont/springfield/tours/tour-waitlist---all-tours-605814/book",
+      "destination": "/destinations/vermont/springfield/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/vermont/springfield/tours/two-peaks-tour-604009",
+      "destination": "/destinations/vermont/springfield/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/vermont/springfield/tours/two-peaks-tour-604009/book",
+      "destination": "/destinations/vermont/springfield/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/vermont/springfield/tours/vermont-experience-tours-604017",
+      "destination": "/destinations/vermont/springfield/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/vermont/springfield/tours/vermont-experience-tours-604017/book",
+      "destination": "/destinations/vermont/springfield/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/vermont/springfield/tours/vermont-fall-foliage-guided-tour-639844",
+      "destination": "/destinations/vermont/springfield/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/vermont/springfield/tours/vermont-fall-foliage-guided-tour-639844/book",
+      "destination": "/destinations/vermont/springfield/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/vermont/springfield/tours/vermont-sampler-tour-615770",
+      "destination": "/destinations/vermont/springfield/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/vermont/springfield/tours/vermont-sampler-tour-615770/book",
+      "destination": "/destinations/vermont/springfield/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/virginia/great-falls/tours/straight-from-the-source---washington-dc-south-florida-497781",
+      "destination": "/destinations/virginia/great-falls/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/virginia/great-falls/tours/straight-from-the-source---washington-dc-south-florida-497781/book",
+      "destination": "/destinations/virginia/great-falls/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/washington/chelan/tours/adventure-tour-37619",
+      "destination": "/destinations/washington/chelan/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/washington/chelan/tours/adventure-tour-37619/book",
+      "destination": "/destinations/washington/chelan/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/washington/seattle/tours/chef-guided-food-tour-of-pike-place-market-130990",
+      "destination": "/destinations/washington/seattle/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/washington/seattle/tours/chef-guided-food-tour-of-pike-place-market-130990/book",
+      "destination": "/destinations/washington/seattle/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/washington/seattle/tours/happy-hour-tour-534068",
+      "destination": "/destinations/washington/seattle/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/washington/seattle/tours/happy-hour-tour-534068/book",
+      "destination": "/destinations/washington/seattle/tours",
+      "permanent": true
+    },
+    {
       "source": "/destinations/:stateSlug/tours",
       "destination": "/destinations/:stateSlug",
       "permanent": true
