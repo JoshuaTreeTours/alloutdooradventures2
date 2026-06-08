@@ -139,14 +139,14 @@ describe("sitemap URL integrity", () => {
     );
   }, 60_000);
 
-  it("includes only non-empty activity discovery pages", async () => {
+  it("includes only eligible non-empty activity discovery pages without expanding the category sitemap", async () => {
     const sitemap = await getBuiltSitemap();
 
     expect(sitemap.categoryUrls.has("/tours/cycling")).toBe(true);
     expect(sitemap.categoryUrls.has("/tours/hiking")).toBe(true);
-    expect(sitemap.categoryUrls.has("/tours/horseback-riding")).toBe(true);
     expect(sitemap.categoryUrls.has("/tours/paddle-sports")).toBe(true);
-    expect(sitemap.categoryUrls.has("/tours/fishing")).toBe(true);
+    expect(sitemap.categoryUrls.has("/tours/horseback-riding")).toBe(false);
+    expect(sitemap.categoryUrls.has("/tours/fishing")).toBe(false);
     expect(sitemap.categoryUrls.has("/tours/canoeing")).toBe(false);
     expect(sitemap.categoryUrls.has("/tours/empty-activity")).toBe(false);
   }, 60_000);
@@ -201,5 +201,6 @@ describe("sitemap URL integrity", () => {
       false
     );
     expect(duplicateActivityLocationUrls).toEqual([]);
+    expect(sitemap.categoryUrls.size).toBeLessThanOrEqual(616);
   }, 60_000);
 });

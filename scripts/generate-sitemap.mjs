@@ -18,6 +18,48 @@ const CLASS_A_SITEMAP_ONLY_ACTIVITY_PATHS = new Set([
   "/tours/activities/multi-day",
 ]);
 
+const CATEGORY_SITEMAP_PATH = path.resolve(
+  __dirname,
+  "../public/sitemap-categories.xml"
+);
+const CATEGORY_SITEMAP_PRE_CANONICALIZATION_URL_COUNT = 616;
+
+const parseSitemapLocPaths = contents =>
+  [...contents.matchAll(/<loc>https?:\/\/[^/]+([^<]+)<\/loc>/g)].map(
+    match => match[1]
+  );
+
+const loadExistingCategorySitemapEligibility = async () => {
+  try {
+    const contents = await readFile(CATEGORY_SITEMAP_PATH, "utf8");
+    return new Set(parseSitemapLocPaths(contents));
+  } catch (error) {
+    console.warn(
+      `[sitemap] unable to load existing category sitemap eligibility from ${CATEGORY_SITEMAP_PATH}; activity category URLs will not be allowlist-pruned.`,
+      error?.message || error
+    );
+    return null;
+  }
+};
+
+const applyExistingCategorySitemapEligibility = (categoryUrls, eligibility) => {
+  if (!eligibility?.size) {
+    return;
+  }
+
+  [...categoryUrls].forEach(url => {
+    if (!eligibility.has(url)) {
+      categoryUrls.delete(url);
+    }
+  });
+
+  if (categoryUrls.size > CATEGORY_SITEMAP_PRE_CANONICALIZATION_URL_COUNT) {
+    throw new Error(
+      `sitemap-categories.xml must not expand while canonicalizing activity taxonomy routes (found ${categoryUrls.size}; limit ${CATEGORY_SITEMAP_PRE_CANONICALIZATION_URL_COUNT})`
+    );
+  }
+};
+
 export const CONFIRMED_EMPTY_ACTIVITY_CATEGORY_PATHS = new Set([
   "/tours/air-tours/switzerland",
   "/tours/hiking/nevada",
@@ -1082,6 +1124,10 @@ export const buildSitemap = async () => {
   });
 
   suppressDuplicateUsCountryQualifiedTourUrls(toursUrls);
+  applyExistingCategorySitemapEligibility(
+    categoryUrls,
+    await loadExistingCategorySitemapEligibility()
+  );
 
   return {
     pages,
