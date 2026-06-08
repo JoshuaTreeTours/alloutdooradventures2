@@ -9,7 +9,10 @@ import { getEngine4TourBySlugs } from "./engine4/routing";
 import { getLegacyFhMigratedTourBySlugs } from "./engine6/legacyFh/registry";
 import { getEngine6NativeTourByCanonicalPath } from "./engine6/registry";
 import { isRemovedTourSlug } from "./utils/tours/isTourRemoved";
-import { buildSitemap } from "../scripts/generate-sitemap.mjs";
+import {
+  buildSitemap,
+  CONFIRMED_EMPTY_ACTIVITY_CATEGORY_PATHS,
+} from "../scripts/generate-sitemap.mjs";
 
 let sitemapPromise: ReturnType<typeof buildSitemap> | null = null;
 
@@ -146,6 +149,23 @@ describe("sitemap URL integrity", () => {
     expect(sitemap.categoryUrls.has("/tours/fishing")).toBe(true);
     expect(sitemap.categoryUrls.has("/tours/canoeing")).toBe(false);
     expect(sitemap.categoryUrls.has("/tours/empty-activity")).toBe(false);
+  }, 60_000);
+
+  it("does not emit confirmed empty activity/category URLs", async () => {
+    const sitemap = await getBuiltSitemap();
+
+    expect(CONFIRMED_EMPTY_ACTIVITY_CATEGORY_PATHS.size).toBe(74);
+    expect([...CONFIRMED_EMPTY_ACTIVITY_CATEGORY_PATHS]).toEqual(
+      expect.arrayContaining([
+        "/tours/air-tours/switzerland",
+        "/tours/air-tours/alaska/seward",
+        "/tours/hiking/nevada/las-vegas",
+        "/tours/sailing/france/paris",
+      ])
+    );
+    expect(sitemap.categoryUrls).not.toEqual(
+      expect.arrayContaining([...CONFIRMED_EMPTY_ACTIVITY_CATEGORY_PATHS])
+    );
   }, 60_000);
 
   it("does not emit Class A sitemap-only legacy activity URLs", async () => {
