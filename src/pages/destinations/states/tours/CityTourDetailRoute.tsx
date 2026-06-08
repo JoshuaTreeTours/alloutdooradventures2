@@ -86,7 +86,10 @@ import {
 } from "../../../../engine4/viator/engine5Bridge421920P2";
 import type { Engine4ViatorApiTour } from "../../../../engine4/types";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
-import { isSuppressedFareHarborBookingPage } from "../../../../utils/fareharbor/suppressedBookingPages";
+import {
+  getRetiredFareHarborTourRedirectPath,
+  isSuppressedFareHarborBookingPage,
+} from "../../../../utils/fareharbor/suppressedBookingPages";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
 import { isInvalidPlaceholderTourSlug } from "../../../../utils/tours/invalidPlaceholderTours";
 import { applyEngine1Template } from "../../../../utils/tours/applyEngine1HardenedTemplate";
@@ -94,6 +97,7 @@ import { fetchFareHarborHtml } from "../../../../utils/fh/fetchFareHarborHtml";
 import { parseFareHarborHtml } from "../../../../utils/fh/parseFareHarborHtml";
 import { formatStartingPrice } from "../../../../lib/pricing";
 import RemovedTourGone from "../../../RemovedTourGone";
+import RouteRedirect from "../../../../components/RouteRedirect";
 import { extractViatorProductCode } from "../../../../utils/viator/extractViatorProductCode";
 import {
   getViatorFromPrice,
@@ -267,6 +271,16 @@ export default function CityTourDetailRoute({
         </p>
       </main>
     );
+  }
+
+  const retiredFareHarborRedirectPath = getRetiredFareHarborTourRedirectPath({
+    stateSlug: params.stateSlug,
+    citySlug: params.citySlug,
+    tourSlug: params.tourSlug,
+  });
+
+  if (retiredFareHarborRedirectPath) {
+    return <RouteRedirect to={retiredFareHarborRedirectPath} />;
   }
 
   if (isRemovedTourSlug(params.tourSlug)) {

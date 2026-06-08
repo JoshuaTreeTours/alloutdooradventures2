@@ -6,7 +6,7 @@ export type SuppressedFareHarborBookingPage = {
   title: string;
   id: string;
   observedError: string;
-  recommendedAction: "suppress page";
+  recommendedAction: "retire tour";
 };
 
 export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPage[] =
@@ -22,7 +22,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "into-the-woods-llc-402209",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "411854",
@@ -35,7 +35,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "into-the-woods-llc-411854",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "198564",
@@ -48,7 +48,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "sondortravel-198564",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "468723",
@@ -61,7 +61,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "sondortravel-468723",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "216957",
@@ -74,7 +74,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "sondortravel-216957",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "216951",
@@ -87,7 +87,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "sondortravel-216951",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "196557",
@@ -100,7 +100,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "sondortravel-196557",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "198560",
@@ -113,7 +113,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "sondortravel-198560",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "479458",
@@ -126,7 +126,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "dixies-lower-antelope-canyon-tours-479458",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "673861",
@@ -139,7 +139,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "seaearthadventures-673861",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "374826",
@@ -152,7 +152,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "capeyorkmotorcycles-374826",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "374832",
@@ -165,7 +165,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "capeyorkmotorcycles-374832",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "455313",
@@ -178,7 +178,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "gointothewild-455313",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "440634",
@@ -191,7 +191,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "gointothewild-440634",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "176341",
@@ -204,7 +204,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "jerrabomberrawetlands-176341",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "173567",
@@ -217,7 +217,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "jerrabomberrawetlands-173567",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "533159",
@@ -230,7 +230,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "petesculturaladventures-533159",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "519133",
@@ -243,7 +243,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "phillipislandecotours-519133",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "501369",
@@ -256,7 +256,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "gointothewild-501369",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "566805",
@@ -269,7 +269,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "coastland-marine-566805",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "375027",
@@ -282,7 +282,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "palli-paddle-boards---lower-coast-375027",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "901301",
@@ -295,7 +295,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "stargaze-joshua-901301",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "340849",
@@ -308,7 +308,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "empire-paddle-sports-340849",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "547525",
@@ -321,7 +321,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "walkandridetours-547525",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "86650",
@@ -334,7 +334,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "newport-beach-boat-rentals-86650",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "901101",
@@ -347,7 +347,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "pacific-paddle-co-901101",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "549018",
@@ -360,7 +360,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "san-diego-fishing-company---sea-sniper-2-549018",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "423384",
@@ -373,7 +373,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "spin-outside-llc-423384",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "901002",
@@ -386,7 +386,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "fog-city-bike-tours-901002",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "901001",
@@ -399,7 +399,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "bay-city-kayak-tours-901001",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "901003",
@@ -412,7 +412,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "bay-night-adventures-901003",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "579429",
@@ -425,7 +425,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "pushpak-motors-579429",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "567765",
@@ -438,7 +438,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "out-active-567765",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "290957",
@@ -451,7 +451,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "haltialakelodge-290957",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "130269",
@@ -464,7 +464,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "florida-underwater-sports-130269",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "568696",
@@ -476,7 +476,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "green-leaf-fishing-charters-llc-568696",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "541644",
@@ -488,7 +488,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "goodland-adventures-541644",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "88880",
@@ -501,7 +501,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "nature-coast-manatee-tours-88880",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "57775",
@@ -514,7 +514,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "nature-coast-manatee-tours-57775",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "57774",
@@ -527,7 +527,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "nature-coast-manatee-tours-57774",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "264618",
@@ -540,7 +540,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "club-nautico-264618",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "104674",
@@ -553,7 +553,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "florida-bay-outfitters-104674",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "113803",
@@ -566,7 +566,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "florida-underwater-sports-113803",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "113819",
@@ -579,7 +579,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "florida-underwater-sports-113819",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "430401",
@@ -591,7 +591,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "florida-underwater-sports-430401",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "326447",
@@ -604,7 +604,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "bagem-fishing-charters-326447",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "541565",
@@ -617,7 +617,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "team-evasion-541565",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "541562",
@@ -630,7 +630,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "team-evasion-541562",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "541537",
@@ -642,7 +642,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "team-evasion-541537",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "567766",
@@ -654,7 +654,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "out-active-567766",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "567770",
@@ -667,7 +667,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "out-active-567770",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "567771",
@@ -681,7 +681,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "out-active-567771",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "398370",
@@ -694,7 +694,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epirusadventures-398370",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "398316",
@@ -707,7 +707,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epirusadventures-398316",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "398631",
@@ -720,7 +720,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epirusadventures-398631",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "398621",
@@ -733,7 +733,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epirusadventures-398621",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "243190",
@@ -746,7 +746,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "chioggiatoursvenice-243190",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "550977",
@@ -758,7 +758,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-550977",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "550997",
@@ -771,7 +771,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-550997",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "552485",
@@ -784,7 +784,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-552485",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "552477",
@@ -797,7 +797,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-552477",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "550986",
@@ -810,7 +810,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-550986",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "552468",
@@ -822,7 +822,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-552468",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "551001",
@@ -835,7 +835,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-551001",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "550985",
@@ -848,7 +848,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-550985",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "550707",
@@ -861,7 +861,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-550707",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "550721",
@@ -874,7 +874,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-550721",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "550975",
@@ -887,7 +887,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-550975",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "550705",
@@ -900,7 +900,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-550705",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "550715",
@@ -913,7 +913,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-550715",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "550691",
@@ -926,7 +926,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-550691",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "550982",
@@ -939,7 +939,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-550982",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "550712",
@@ -952,7 +952,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-550712",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "550689",
@@ -965,7 +965,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "epicureo-it-550689",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "34618",
@@ -978,7 +978,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "blue-gray-and-bayous-34618",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "495610",
@@ -991,7 +991,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "louisiana-outdoor-adventures-by-natures-journey-495610",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "495726",
@@ -1004,7 +1004,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "louisiana-outdoor-adventures-by-natures-journey-495726",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "501931",
@@ -1017,7 +1017,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "louisiana-outdoor-adventures-by-natures-journey-501931",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "501933",
@@ -1030,7 +1030,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "louisiana-outdoor-adventures-by-natures-journey-501933",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "498628",
@@ -1043,7 +1043,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "louisiana-outdoor-adventures-by-natures-journey-498628",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "501911",
@@ -1056,7 +1056,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "louisiana-outdoor-adventures-by-natures-journey-501911",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "526350",
@@ -1069,7 +1069,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "island-time-e-bike-rentals-526350",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "526351",
@@ -1082,7 +1082,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "island-time-e-bike-rentals-526351",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "535547",
@@ -1095,7 +1095,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "pinwheel-tuna-fishing-charters-535547",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "473250",
@@ -1108,7 +1108,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "maryland-kayak-outfitters-473250",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "473251",
@@ -1121,7 +1121,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "maryland-kayak-outfitters-473251",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "473238",
@@ -1134,7 +1134,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "maryland-kayak-outfitters-473238",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "473255",
@@ -1147,7 +1147,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "maryland-kayak-outfitters-473255",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "310486",
@@ -1160,7 +1160,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "salem-smugglers-tour-310486",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "379532",
@@ -1173,7 +1173,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "legacy-yacht-379532",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "288303",
@@ -1186,7 +1186,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "rogers-wicked-fun-tours-288303",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "481940",
@@ -1199,7 +1199,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "bostonmurrell-llc-481940",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "481941",
@@ -1212,7 +1212,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "bostonmurrell-llc-481941",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "557269",
@@ -1226,7 +1226,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "beacon-tiki-boats-557269",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "557270",
@@ -1240,7 +1240,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "beacon-tiki-boats-557270",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "356474",
@@ -1253,7 +1253,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "beacon-tiki-boats-356474",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "356465",
@@ -1265,7 +1265,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "beacon-tiki-boats-356465",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "558141",
@@ -1278,7 +1278,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "hood-charters-558141",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "96663",
@@ -1291,7 +1291,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "winthrop-ferry-96663",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "96664",
@@ -1304,7 +1304,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "winthrop-ferry-96664",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "298922",
@@ -1316,7 +1316,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "discover-branson-298922",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "461699",
@@ -1329,7 +1329,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "ethan-low-racing-461699",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "199550",
@@ -1341,7 +1341,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "tour-new-york-360-199550",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "199547",
@@ -1353,7 +1353,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "tour-new-york-360-199547",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "540990",
@@ -1366,7 +1366,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "national-lighthouse-museum-540990",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "452259",
@@ -1380,7 +1380,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "national-lighthouse-museum-452259",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "198567",
@@ -1393,7 +1393,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "sondortravel-198567",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "189430",
@@ -1405,7 +1405,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "nordfjordaktiv-189430",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "209293",
@@ -1417,7 +1417,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "nordfjordaktiv-209293",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "544296",
@@ -1429,7 +1429,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "elgin-county-railway-museum-544296",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "544294",
@@ -1441,7 +1441,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "elgin-county-railway-museum-544294",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "307531",
@@ -1453,7 +1453,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "krakowtourguide-307531",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "543078",
@@ -1466,7 +1466,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "stallerbike-543078",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "543081",
@@ -1479,7 +1479,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "stallerbike-543081",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "543089",
@@ -1492,7 +1492,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "stallerbike-543089",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "363097",
@@ -1505,7 +1505,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "tejoconvida-363097",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "543090",
@@ -1518,7 +1518,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "stallerbike-543090",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "543096",
@@ -1531,7 +1531,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "stallerbike-543096",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "543092",
@@ -1544,7 +1544,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "stallerbike-543092",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "543122",
@@ -1557,7 +1557,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "stallerbike-543122",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "543121",
@@ -1570,7 +1570,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "stallerbike-543121",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "543123",
@@ -1583,7 +1583,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "stallerbike-543123",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "567774",
@@ -1596,7 +1596,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "out-active-567774",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "382093",
@@ -1609,7 +1609,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "dessau-international-inc-382093",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "666095",
@@ -1622,7 +1622,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "ecotourexperiences-666095",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "666115",
@@ -1635,7 +1635,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "ecotourexperiences-666115",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "666282",
@@ -1648,7 +1648,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "ecotourexperiences-666282",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "666078",
@@ -1661,7 +1661,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "ecotourexperiences-666078",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "666094",
@@ -1674,7 +1674,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "ecotourexperiences-666094",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "666104",
@@ -1687,7 +1687,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "ecotourexperiences-666104",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "666098",
@@ -1700,7 +1700,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "ecotourexperiences-666098",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "569966",
@@ -1713,7 +1713,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "ebrecharter-569966",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "570214",
@@ -1726,7 +1726,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "ebrecharter-570214",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "666284",
@@ -1739,7 +1739,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "ecotourexperiences-666284",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "666386",
@@ -1752,7 +1752,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "ecotourexperiences-666386",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "65612",
@@ -1765,7 +1765,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "guns-and-leather-shooting-academy-65612",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "614168",
@@ -1777,7 +1777,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "nashville-tennessee-tours-614168",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "614174",
@@ -1790,7 +1790,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "nashville-tennessee-tours-614174",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "58739",
@@ -1802,7 +1802,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "tennessee-brew-works-58739",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "389846",
@@ -1815,7 +1815,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "norfolkoutdooradventures-389846",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "354301",
@@ -1828,7 +1828,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "norfolkoutdooradventures-354301",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "604004",
@@ -1841,7 +1841,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "vermont-wayfinders-604004",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "603981",
@@ -1854,7 +1854,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "vermont-wayfinders-603981",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "605814",
@@ -1867,7 +1867,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "vermont-wayfinders-605814",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "604009",
@@ -1879,7 +1879,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "vermont-wayfinders-604009",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "604017",
@@ -1892,7 +1892,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "vermont-wayfinders-604017",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "639844",
@@ -1905,7 +1905,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "vermont-wayfinders-639844",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "615770",
@@ -1918,7 +1918,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "vermont-wayfinders-615770",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "497781",
@@ -1931,7 +1931,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "spyher-llc-497781",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "37619",
@@ -1943,7 +1943,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "chelan-electric-bikes-37619",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "130990",
@@ -1956,7 +1956,7 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "eat-seattle-tours-130990",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
     {
       itemId: "534068",
@@ -1968,15 +1968,42 @@ export const SUPPRESSED_FAREHARBOR_BOOKING_PAGES: SuppressedFareHarborBookingPag
       id: "eat-seattle-tours-534068",
       observedError:
         "HTTP 404 from FareHarbor embed endpoint (provider/account or route not found)",
-      recommendedAction: "suppress page",
+      recommendedAction: "retire tour",
     },
   ];
+
+export const RETIRED_FAREHARBOR_TOURS = SUPPRESSED_FAREHARBOR_BOOKING_PAGES;
 
 const suppressedByProviderAndItem = new Set(
   SUPPRESSED_FAREHARBOR_BOOKING_PAGES.map(
     row => `${row.provider}:${row.itemId}`
   )
 );
+
+export const RETIRED_FAREHARBOR_TOUR_IDS = new Set(
+  SUPPRESSED_FAREHARBOR_BOOKING_PAGES.map(row => row.itemId)
+);
+
+export const RETIRED_FAREHARBOR_TOUR_URLS = new Set(
+  SUPPRESSED_FAREHARBOR_BOOKING_PAGES.map(row => row.tourUrl)
+);
+
+export const RETIRED_FAREHARBOR_BOOKING_URLS = new Set(
+  SUPPRESSED_FAREHARBOR_BOOKING_PAGES.map(row => row.bookingPageUrl)
+);
+
+export const getRetiredFareHarborTourRedirectPath = (args: {
+  stateSlug: string;
+  citySlug: string;
+  tourSlug: string;
+}) => {
+  const tourPath = `/destinations/${args.stateSlug}/${args.citySlug}/tours/${args.tourSlug}`;
+  const isRetired = RETIRED_FAREHARBOR_TOUR_URLS.has(tourPath);
+
+  return isRetired
+    ? `/destinations/${args.stateSlug}/${args.citySlug}/tours`
+    : null;
+};
 
 export const getFareHarborProviderAndItem = (url?: string) => {
   const match = url?.match(
