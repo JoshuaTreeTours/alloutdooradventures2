@@ -18,6 +18,83 @@ const CLASS_A_SITEMAP_ONLY_ACTIVITY_PATHS = new Set([
   "/tours/activities/multi-day",
 ]);
 
+export const CONFIRMED_EMPTY_ACTIVITY_CATEGORY_PATHS = new Set([
+  "/tours/air-tours/switzerland",
+  "/tours/hiking/nevada",
+  "/tours/sailing/france",
+  "/tours/sailing/louisiana",
+  "/tours/sailing/minnesota",
+  "/tours/sailing/new-york",
+  "/tours/sailing/pennsylvania",
+  "/tours/sailing/switzerland",
+  "/tours/sightseeing-city-tours/mississippi",
+  "/tours/sightseeing-city-tours/netherlands",
+  "/tours/stargazing/nevada",
+  "/tours/water-sports/switzerland",
+  "/tours/wildlife/nevada",
+  "/tours/air-tours/alaska/seward",
+  "/tours/air-tours/switzerland/zurich",
+  "/tours/cycling/minnesota/cannon-falls",
+  "/tours/food-wine/california/ensenada",
+  "/tours/food-wine/california/los-angeles",
+  "/tours/food-wine/mexico/puerto-vallarta",
+  "/tours/food-wine/minnesota/grant",
+  "/tours/food-wine/ontario/windsor",
+  "/tours/food-wine/spain/barcelona",
+  "/tours/food-wine/spain/viladellops",
+  "/tours/hiking/alaska/moose-pass",
+  "/tours/hiking/california/san-francisco",
+  "/tours/hiking/hawaii/hawaii",
+  "/tours/hiking/hawaii/kapa-a",
+  "/tours/hiking/hawaii/waianae",
+  "/tours/hiking/minnesota/bloomington",
+  "/tours/hiking/nevada/las-vegas",
+  "/tours/hiking/us/delaware",
+  "/tours/hiking/us/illinois",
+  "/tours/hiking/us/mississippi",
+  "/tours/paddle-sports/alaska/ketchikan",
+  "/tours/paddle-sports/alberta/grande-cache",
+  "/tours/paddle-sports/florida/melbourne-beach",
+  "/tours/paddle-sports/florida/parrish",
+  "/tours/paddle-sports/florida/tierra-verde",
+  "/tours/paddle-sports/hawaii/captain-cook",
+  "/tours/paddle-sports/hawaii/lahaina",
+  "/tours/paddle-sports/hawaii/united-states",
+  "/tours/paddle-sports/hawaii/waimea",
+  "/tours/paddle-sports/minnesota/minneapolis",
+  "/tours/paddle-sports/minnesota/taylors-falls",
+  "/tours/paddle-sports/north-carolina/kure-beach",
+  "/tours/sailing/california/san-francisco",
+  "/tours/sailing/florida/fort-lauderdale",
+  "/tours/sailing/france/paris",
+  "/tours/sailing/hawaii/haleiwa",
+  "/tours/sailing/hawaii/kailua",
+  "/tours/sailing/hawaii/kailua-kona",
+  "/tours/sailing/hawaii/kapolei",
+  "/tours/sailing/hawaii/kekaha",
+  "/tours/sailing/hawaii/lahaina",
+  "/tours/sailing/hawaii/waianae",
+  "/tours/sailing/louisiana/new-orleans",
+  "/tours/sailing/mexico/cabo-san-lucas",
+  "/tours/sailing/mexico/cancun",
+  "/tours/sailing/minnesota/lake-city",
+  "/tours/sailing/new-york/new-york",
+  "/tours/sailing/pennsylvania/allison-park",
+  "/tours/sailing/switzerland/lucerne",
+  "/tours/sightseeing-city-tours/british-columbia/vancouver",
+  "/tours/sightseeing-city-tours/california/palm-springs",
+  "/tours/sightseeing-city-tours/mississippi/bay-saint-louis",
+  "/tours/sightseeing-city-tours/netherlands/amsterdam",
+  "/tours/sightseeing-city-tours/spain/san-sebastian",
+  "/tours/stargazing/nevada/las-vegas",
+  "/tours/water-sports/switzerland/zurich",
+  "/tours/wildlife/alberta/calgary",
+  "/tours/wildlife/hawaii/kahului",
+  "/tours/wildlife/hawaii/kapolei",
+  "/tours/wildlife/minnesota/brainerd",
+  "/tours/wildlife/nevada/las-vegas",
+]);
+
 const EXCLUDED_PRODUCT_CODES = ["36001P1", "301378", "301379"];
 const EXCLUDED_TOUR_PATH_TOKENS = [
   ...EXCLUDED_PRODUCT_CODES.map(code => code.toLowerCase()),
@@ -70,6 +147,10 @@ const addUrl = (set, value) => {
   const normalizedLower = normalized.toLowerCase();
   if (/\/book\/?$/i.test(normalized)) {
     excludedUrlStats.bookingMatches += 1;
+    return;
+  }
+
+  if (CONFIRMED_EMPTY_ACTIVITY_CATEGORY_PATHS.has(normalized)) {
     return;
   }
 
