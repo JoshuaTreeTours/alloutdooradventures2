@@ -26,7 +26,6 @@ import CityRoute from "./pages/destinations/states/CityRoute";
 import CityToursIndexRoute from "./pages/destinations/states/tours/CityToursIndexRoute";
 import CityTourDetailRoute from "./pages/destinations/states/tours/CityTourDetailRoute";
 import CityTourBookingRoute from "./pages/destinations/states/tours/CityTourBookingRoute";
-import StateToursRoute from "./pages/destinations/states/tours/StateToursRoute";
 import ToursLanding from "./pages/tours/ToursLanding";
 import ToursCatalog from "./pages/ToursCatalog";
 import GuidesIndex from "./pages/guides/GuidesIndex";
@@ -127,6 +126,18 @@ const DestinationStateGuideRedirect = ({ params }: StateSlugParams) => {
 
   return <RouteRedirect to={`${stateGuidePath}${queryString}`} />;
 };
+
+type DestinationStateToursRedirectProps = {
+  params: {
+    stateSlug: string;
+  };
+};
+
+const DestinationStateToursRedirect = ({
+  params,
+}: DestinationStateToursRedirectProps) => (
+  <RouteRedirect to={`/destinations/${params.stateSlug}`} />
+);
 
 const MexicoCitySlugRedirect = () => (
   <RouteRedirect to="/destinations/mexico/ciudad-de-mexico" />
@@ -424,7 +435,7 @@ export default function App() {
         />
         <Route
           path="/destinations/states/:stateSlug/tours"
-          component={StateToursRoute}
+          component={DestinationStateToursRedirect}
         />
         <Route
           path="/destinations/united-states/:stateSlug/:citySlug/tours/:tourSlug/book"
@@ -440,7 +451,7 @@ export default function App() {
         />
         <Route
           path="/destinations/united-states/:stateSlug/tours"
-          component={StateToursRoute}
+          component={DestinationStateToursRedirect}
         />
         <Route
           path="/destinations/united-states/:stateSlug"
@@ -464,6 +475,11 @@ export default function App() {
         <Route
           path="/destinations/mexico/ciudad-de-m-xico/tours/:tourSlug/book"
           component={MexicoCityBookSlugRedirect}
+        />
+
+        <Route
+          path="/destinations/:stateSlug/tours"
+          component={DestinationStateToursRedirect}
         />
 
         <Route

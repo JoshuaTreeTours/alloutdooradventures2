@@ -199,7 +199,7 @@ export const isEuropeCountrySlug = (countrySlug: string) =>
 
 export const getAllToursHref = (place: GuidePlace) => {
   if (place.type === "state") {
-    return `/destinations/states/${place.slug}/tours`;
+    return `/destinations/${place.slug}`;
   }
 
   if (place.type === "country") {

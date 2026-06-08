@@ -66,6 +66,21 @@
   ],
   "redirects": [
     {
+      "source": "/destinations/:stateSlug/tours",
+      "destination": "/destinations/:stateSlug",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/states/:stateSlug/tours",
+      "destination": "/destinations/:stateSlug",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/united-states/:stateSlug/tours",
+      "destination": "/destinations/:stateSlug",
+      "permanent": true
+    },
+    {
       "source": "/destinations/europe/austria/cities/wien/tours",
       "destination": "/destinations/europe/austria/cities/vienna/tours",
       "permanent": true

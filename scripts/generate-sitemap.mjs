@@ -909,8 +909,7 @@ export const buildSitemap = async () => {
 
   if (Array.isArray(destinationsModule.states)) {
     destinationsModule.states.forEach(state => {
-      addUrl(destinationUrls, `/destinations/states/${state.slug}`);
-      addUrl(destinationUrls, `/destinations/states/${state.slug}/tours`);
+      addUrl(destinationUrls, `/destinations/${state.slug}`);
 
       if (Array.isArray(state.cities)) {
         state.cities.forEach(city => {
