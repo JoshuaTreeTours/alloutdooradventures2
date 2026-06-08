@@ -2,6 +2,7 @@ import RouteRedirect from "../../components/RouteRedirect";
 import GuidePageTemplate from "../../templates/GuidePageTemplate";
 import { loadUsCityGuide } from "../../utils/loadGuide";
 import { resolveMissingUsCityGuideRedirect } from "../../utils/guides/guideResolver";
+import { getRetiredGuideRedirect } from "../../utils/guides/retiredLowInventoryGuides";
 
 type CityGuideUsRouteProps = {
   params: {
@@ -11,6 +12,15 @@ type CityGuideUsRouteProps = {
 };
 
 export default function CityGuideUsRoute({ params }: CityGuideUsRouteProps) {
+  const retiredGuideRedirect = getRetiredGuideRedirect(
+    params.stateSlug,
+    params.citySlug
+  );
+
+  if (retiredGuideRedirect) {
+    return <RouteRedirect to={retiredGuideRedirect} />;
+  }
+
   const guide = loadUsCityGuide(params.stateSlug, params.citySlug);
 
   if (!guide) {

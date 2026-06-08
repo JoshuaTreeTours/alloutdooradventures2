@@ -1,4 +1,5 @@
 import type { GuidePageData } from "../loadGuide";
+import { isRetiredLowInventoryGuide } from "./retiredLowInventoryGuides";
 
 type GuideRegistryRecord = {
   country: "us";
@@ -24,10 +25,16 @@ const parseGuidePath = (path: string) => {
   };
 };
 
-export const usGuideRegistry: GuideRegistryRecord[] = Object.entries(usGuideModules)
+export const usGuideRegistry: GuideRegistryRecord[] = Object.entries(
+  usGuideModules
+)
   .map(([path, dataImport]) => {
     const parsed = parseGuidePath(path);
-    if (!parsed || parsed.citySlug === "index") {
+    if (
+      !parsed ||
+      parsed.citySlug === "index" ||
+      isRetiredLowInventoryGuide(parsed.stateSlug, parsed.citySlug)
+    ) {
       return null;
     }
 
