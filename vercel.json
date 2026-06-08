@@ -271,6 +271,46 @@
       "permanent": true
     },
     {
+      "source": "/tours/:activitySlug/us/:stateSlug",
+      "destination": "/tours/:activitySlug/:stateSlug",
+      "permanent": true
+    },
+    {
+      "source": "/tours/:activitySlug/us/:stateSlug/:citySlug",
+      "destination": "/tours/:activitySlug/:stateSlug/:citySlug",
+      "permanent": true
+    },
+    {
+      "source": "/tours/:activitySlug/united-states/:stateSlug",
+      "destination": "/tours/:activitySlug/:stateSlug",
+      "permanent": true
+    },
+    {
+      "source": "/tours/:activitySlug/united-states/:stateSlug/:citySlug",
+      "destination": "/tours/:activitySlug/:stateSlug/:citySlug",
+      "permanent": true
+    },
+    {
+      "source": "/tours/:activitySlug/usa/:stateSlug",
+      "destination": "/tours/:activitySlug/:stateSlug",
+      "permanent": true
+    },
+    {
+      "source": "/tours/:activitySlug/usa/:stateSlug/:citySlug",
+      "destination": "/tours/:activitySlug/:stateSlug/:citySlug",
+      "permanent": true
+    },
+    {
+      "source": "/tours/:activitySlug/:stateSlug/united-states",
+      "destination": "/tours/:activitySlug/:stateSlug",
+      "permanent": true
+    },
+    {
+      "source": "/tours/:activitySlug/:stateSlug/usa",
+      "destination": "/tours/:activitySlug/:stateSlug",
+      "permanent": true
+    },
+    {
       "source": "/destinations/states/:stateSlug/cities/:citySlug/tours",
       "destination": "/destinations/:stateSlug/:citySlug/tours",
       "permanent": true

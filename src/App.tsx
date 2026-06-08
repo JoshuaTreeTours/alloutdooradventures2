@@ -58,7 +58,6 @@ import HikingTours from "./pages/tours/activities/HikingTours";
 import MultiDayTours from "./pages/tours/activities/MultiDayTours";
 import CanoeingTours from "./pages/tours/activities/CanoeingTours";
 import TourDetail from "./pages/tours/TourDetail";
-import ActivityStateTours from "./pages/tours/ActivityStateTours";
 import ActivityToursPage from "./pages/tours/ActivityToursPage";
 import { getActivityDiscoveryRouteDefinitions } from "./data/activityDiscovery";
 import SlugOnlyTourRoute from "./pages/tours/SlugOnlyTourRoute";
@@ -166,6 +165,37 @@ const SwissLegacyTourRedirect = ({ params }: SwissLegacyTourRedirectProps) => (
   <RouteRedirect
     to={`/destinations/switzerland/${params.citySlug}/tours/${params.slug}`}
   />
+);
+
+type ActivityCountryPrefixedRedirectProps = {
+  params: {
+    activitySlug: string;
+    stateSlug: string;
+    citySlug?: string;
+  };
+};
+
+const ActivityCountryPrefixedRedirect = ({
+  params,
+}: ActivityCountryPrefixedRedirectProps) => (
+  <RouteRedirect
+    to={`/tours/${params.activitySlug}/${params.stateSlug}${
+      params.citySlug ? `/${params.citySlug}` : ""
+    }`}
+  />
+);
+
+type ActivityCountrySuffixedRedirectProps = {
+  params: {
+    activitySlug: string;
+    stateSlug: string;
+  };
+};
+
+const ActivityCountrySuffixedRedirect = ({
+  params,
+}: ActivityCountrySuffixedRedirectProps) => (
+  <RouteRedirect to={`/tours/${params.activitySlug}/${params.stateSlug}`} />
 );
 
 export default function App() {
@@ -525,6 +555,38 @@ export default function App() {
         <Route path="/terms" component={Terms} />
         <Route path="/cookies" component={Cookies} />
         <Route path="/disclosure" component={Disclosure} />
+        <Route
+          path="/tours/:activitySlug/us/:stateSlug/:citySlug"
+          component={ActivityCountryPrefixedRedirect}
+        />
+        <Route
+          path="/tours/:activitySlug/us/:stateSlug"
+          component={ActivityCountryPrefixedRedirect}
+        />
+        <Route
+          path="/tours/:activitySlug/united-states/:stateSlug/:citySlug"
+          component={ActivityCountryPrefixedRedirect}
+        />
+        <Route
+          path="/tours/:activitySlug/united-states/:stateSlug"
+          component={ActivityCountryPrefixedRedirect}
+        />
+        <Route
+          path="/tours/:activitySlug/usa/:stateSlug/:citySlug"
+          component={ActivityCountryPrefixedRedirect}
+        />
+        <Route
+          path="/tours/:activitySlug/usa/:stateSlug"
+          component={ActivityCountryPrefixedRedirect}
+        />
+        <Route
+          path="/tours/:activitySlug/:stateSlug/united-states"
+          component={ActivityCountrySuffixedRedirect}
+        />
+        <Route
+          path="/tours/:activitySlug/:stateSlug/usa"
+          component={ActivityCountrySuffixedRedirect}
+        />
         {activityDiscoveryRouteDefinitions.map(route => (
           <Route
             key={route.path}
@@ -533,10 +595,6 @@ export default function App() {
           />
         ))}
         <Route path="/tours/canoeing" component={CanoeingTours} />
-        <Route
-          path="/tours/:activitySlug/us/:stateSlug"
-          component={ActivityStateTours}
-        />
         <Route path="/tours/activities/cycling" component={CyclingTours} />
         <Route
           path="/tours/activities/day-adventures"
