@@ -7,6 +7,7 @@ import { destinations } from "../../data/destinations";
 import { getGuideStates } from "../../data/guideData";
 import { WORLD_DESTINATIONS, slugify } from "../../data/tourCatalog";
 import { getStaticPageSeo } from "../../utils/seo";
+import { resolveUsGuideHref } from "../../utils/guides/guideResolver";
 
 const getRegionLabel = (region: string) => {
   if (region === "West") return "West Coast";
@@ -66,7 +67,7 @@ export default function DestinationsIndex() {
           {visibleCities.map(city => (
             <Link
               key={`${stateSlug}-${city.slug}`}
-              href={`/guides/us/${stateSlug}/${city.slug}`}
+              href={resolveUsGuideHref(stateSlug, city.slug).href}
             >
               <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
                 {city.name} guide

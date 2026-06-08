@@ -25,6 +25,7 @@ import {
   mergeEngine6LiveFieldsIntoTour,
   type Engine6LiveProductFields,
 } from "../engine6/liveProductFields";
+import { resolveUsGuideHref } from "../utils/guides/guideResolver";
 
 type CityTemplateProps = {
   state: StateDestination;
@@ -150,7 +151,13 @@ export default function CityTemplate({
     guideRegionTypeOverride ?? (state.isFallback ? "country" : "state");
   const guideBasePath =
     guideRegionType === "state" ? "/guides/us" : "/guides/world";
+  const resolvedUsGuide =
+    guideRegionType === "state"
+      ? resolveUsGuideHref(guideParentSlug, city.slug)
+      : null;
   const canonicalCityHref = `${guideBasePath}/${guideParentSlug}/${city.slug}`;
+  const resolvedGuideHref =
+    resolvedUsGuide?.href ?? `${guideBasePath}/${guideParentSlug}/${city.slug}`;
   const guideParent =
     guideRegionType === "country"
       ? getGuideCountryBySlug(guideParentSlug)
@@ -160,7 +167,7 @@ export default function CityTemplate({
   );
   const guideDescription = cityGuide
     ? "Review the city guide and explore broader planning tips for the region."
-    : `Explore planning tips across ${state.name} and nearby cities.`;
+    : `Explore the canonical ${state.name} guide for regional planning tips and nearby cities.`;
   const baseCityTours = useMemo(
     () => toursOverride ?? getToursByCity(state.slug, city.slug),
     [city.slug, state.slug, toursOverride]
@@ -364,15 +371,13 @@ export default function CityTemplate({
                       {state.name} guide
                     </a>
                   </Link>
-                  {cityGuide ? (
-                    <Link
-                      href={`${guideBasePath}/${guideParentSlug}/${city.slug}`}
-                    >
-                      <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
-                        {city.name} guide
-                      </a>
-                    </Link>
-                  ) : null}
+                  <Link href={resolvedGuideHref}>
+                    <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
+                      {cityGuide
+                        ? `${city.name} guide`
+                        : `Read ${state.name} guide`}
+                    </a>
+                  </Link>
                 </div>
               </div>
             ) : null}

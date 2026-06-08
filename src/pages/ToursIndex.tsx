@@ -11,6 +11,7 @@ import {
   slugify,
 } from "../data/tourCatalog";
 import { getStaticPageSeo } from "../utils/seo";
+import { resolveUsGuideHref } from "../utils/guides/guideResolver";
 
 export default function ToursIndex() {
   const seo = getStaticPageSeo("/tours");
@@ -187,7 +188,10 @@ export default function ToursIndex() {
               ) : null}
               {selectedState && selectedCitySlug ? (
                 <Link
-                  href={`/guides/us/${selectedState.slug}/${selectedCitySlug}`}
+                  href={
+                    resolveUsGuideHref(selectedState.slug, selectedCitySlug)
+                      .href
+                  }
                 >
                   <a className="inline-flex items-center gap-2 rounded-md border border-[#2f4a2f]/20 px-3 py-1.5 hover:border-[#2f4a2f]/40 hover:bg-[#2f4a2f]/5 transition">
                     View city →

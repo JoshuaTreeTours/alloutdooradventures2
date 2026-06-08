@@ -24,6 +24,7 @@ import {
   recordBlockedFareharborEmbed,
 } from "../../utils/fareharbor/optOutOperators";
 import { formatStartingPrice } from "../../lib/pricing";
+import { resolveUsGuideHref } from "../../utils/guides/guideResolver";
 import { SITE_BRAND_NAME } from "../../utils/site";
 import { buildMetaDescription } from "../../utils/seo";
 import {
@@ -91,7 +92,7 @@ export default function FlagstaffTourBookingRoute({
     typeof window !== "undefined" &&
     new URLSearchParams(window.location.search).get("debug") === "1";
 
-  const cityHref = `/guides/us/${state.slug}/${city.slug}`;
+  const cityHref = resolveUsGuideHref(state.slug, city.slug).href;
   const stateHref = state.isFallback
     ? "/destinations"
     : `/destinations/states/${state.slug}`;

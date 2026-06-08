@@ -27,6 +27,7 @@ import { getExpandedTourDescription } from "../../../../data/tourNarratives";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import { buildTourMeta } from "../../../../lib/tourMeta";
 import { resolveTourSchemaActivityLabel } from "../../../../schema/resolveTourSchemaActivityLabel";
+import { resolveUsGuideHref } from "../../../../utils/guides/guideResolver";
 import {
   buildBreadcrumbList,
   buildTourProductNodeId,
@@ -656,7 +657,7 @@ export default function CityTourDetailRoute({
     state && city
       ? state.isFallback
         ? `/destinations/${state.slug}/${city.slug}`
-        : `/guides/us/${state.slug}/${city.slug}`
+        : resolveUsGuideHref(state.slug, city.slug).href
       : "";
   const stateHref = state
     ? state.isFallback

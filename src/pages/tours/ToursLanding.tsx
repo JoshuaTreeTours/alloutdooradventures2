@@ -23,6 +23,7 @@ import { isUSStateName } from "../../constants/usStates";
 import { getStaticPageSeo } from "../../utils/seo";
 import { slugify } from "../../utils/slugify";
 import { getGuideRecord } from "../../utils/guides/guideRegistry";
+import { resolveUsGuideHref } from "../../utils/guides/guideResolver";
 import { EUROPE_COUNTRIES } from "../../data/tourCatalog";
 import {
   ACTIVITY_DISCOVERY_PAGES,
@@ -727,7 +728,9 @@ export default function ToursLanding() {
               Looking for curated recommendations? See our guide to the best
               tours in {selectedCity?.name}.{" "}
               <a
-                href={`/guides/us/${selectedStateSlug}/${selectedCitySlug}`}
+                href={
+                  resolveUsGuideHref(selectedStateSlug, selectedCitySlug).href
+                }
                 className="underline underline-offset-2"
               >
                 View guide

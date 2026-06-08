@@ -23,6 +23,7 @@ import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { applyPriceFloor } from "../../utils/merchantPricing";
 import { resolveHeroImageForRoute } from "../../utils/hero";
 import { buildMetaDescription } from "../../utils/seo";
+import { resolveUsGuideHref } from "../../utils/guides/guideResolver";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
@@ -82,7 +83,7 @@ export default function FlagstaffTourDetailRoute({
         `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`
       )
     : undefined;
-  const cityHref = `/guides/us/${state.slug}/${city.slug}`;
+  const cityHref = resolveUsGuideHref(state.slug, city.slug).href;
   const stateHref = state.isFallback
     ? "/destinations"
     : `/destinations/states/${state.slug}`;

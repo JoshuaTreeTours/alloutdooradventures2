@@ -23,6 +23,7 @@ import {
   type Engine6LiveProductFields,
 } from "../../../../engine6/liveProductFields";
 import { getGuideRecord } from "../../../../utils/guides/guideRegistry";
+import { resolveUsGuideHref } from "../../../../utils/guides/guideResolver";
 import {
   buildCategoryH1,
   buildCategorySeoTitle,
@@ -149,7 +150,7 @@ export default function CityToursIndexRoute({
     state && city
       ? state?.isFallback && !basePathOverride
         ? `/destinations/${state.slug}/${city.slug}`
-        : `/guides/us/${state.slug}/${city.slug}`
+        : resolveUsGuideHref(state.slug, city.slug).href
       : "";
   const toursHref =
     state && city
@@ -259,7 +260,7 @@ export default function CityToursIndexRoute({
                 Looking for curated recommendations? See our guide to the best
                 tours in {city.name}.{" "}
                 <a
-                  href={`/guides/us/${state.slug}/${city.slug}`}
+                  href={resolveUsGuideHref(state.slug, city.slug).href}
                   className="underline underline-offset-2"
                 >
                   View guide
