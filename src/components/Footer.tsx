@@ -69,29 +69,29 @@ export default function Footer() {
             </p>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link href="/destinations/states/california/tours">
+                <Link href="/destinations/california">
                   <a className="transition hover:text-white">
                     California Tours
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/destinations/states/colorado/tours">
+                <Link href="/destinations/colorado">
                   <a className="transition hover:text-white">Colorado Tours</a>
                 </Link>
               </li>
               <li>
-                <Link href="/destinations/states/arizona/tours">
+                <Link href="/destinations/arizona">
                   <a className="transition hover:text-white">Arizona Tours</a>
                 </Link>
               </li>
               <li>
-                <Link href="/destinations/states/utah/tours">
+                <Link href="/destinations/utah">
                   <a className="transition hover:text-white">Utah Tours</a>
                 </Link>
               </li>
               <li>
-                <Link href="/destinations/states/oregon/tours">
+                <Link href="/destinations/oregon">
                   <a className="transition hover:text-white">Oregon Tours</a>
                 </Link>
               </li>

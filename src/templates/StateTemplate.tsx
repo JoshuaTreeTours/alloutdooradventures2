@@ -56,7 +56,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
   );
   const heroImage =
     resolveHeroImageForRoute({
-      route: `/destinations/states/${state.slug}`,
+      route: `/destinations/${state.slug}`,
       state,
     }) ?? undefined;
 
@@ -65,7 +65,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
       <Seo
         title={title}
         description={description}
-        url={`/destinations/states/${state.slug}`}
+        url={`/destinations/${state.slug}`}
         image={heroImage ?? null}
       />
       <section className="relative overflow-hidden bg-[#2f4a2f]">
@@ -155,7 +155,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
           ))}
         </div>
         <div className="mt-8 flex justify-center">
-          <Link href={`/destinations/states/${state.slug}/tours`}>
+          <Link href={`/destinations/${state.slug}`}>
             <a className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]">
               See tours
             </a>
@@ -340,7 +340,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
                 ))}
               </div>
               <div className="mt-5">
-                <Link href={`/destinations/states/${state.slug}/tours`}>
+                <Link href={`/destinations/${state.slug}`}>
                   <a className="text-sm font-semibold text-[#2f4a2f] underline underline-offset-4">
                     View all {state.name} tours
                   </a>

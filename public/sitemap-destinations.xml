@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.alloutdooradventures.com/destinations</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/arizona</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/california</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/colorado</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/connecticut</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/district-of-columbia</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/albania</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/albania/tours</loc><priority>0.6</priority></url>
@@ -52,64 +57,31 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/switzerland/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/united-kingdom</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/united-kingdom/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/arizona</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/arizona/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/california</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/california/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/colorado</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/colorado/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/connecticut</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/connecticut/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/district-of-columbia</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/district-of-columbia/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/florida</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/florida/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/georgia</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/georgia/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/louisiana</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/louisiana/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/maine</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/maine/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/maryland</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/maryland/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/massachusetts</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/massachusetts/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/minnesota</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/minnesota/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/mississippi</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/mississippi/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/montana</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/montana/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/nevada</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/nevada/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/new-hampshire</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/new-hampshire/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/new-york</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/new-york/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/north-carolina</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/north-carolina/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/oregon</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/oregon/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/pennsylvania</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/pennsylvania/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/rhode-island</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/rhode-island/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/south-carolina</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/south-carolina/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/utah</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/utah/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/vermont</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/vermont/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/washington</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/washington/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/wyoming</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/states/wyoming/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/florida</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/georgia</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/louisiana</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/maine</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/maryland</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/massachusetts</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/minnesota</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/mississippi</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/montana</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/nevada</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/new-hampshire</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/new-jersey</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/new-york</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/north-carolina</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/pennsylvania</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/rhode-island</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/south-carolina</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/tennessee</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/utah</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/vermont</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/washington</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/australia</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/czechia</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/morocco</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/wyoming</loc><priority>0.6</priority></url>
 </urlset>

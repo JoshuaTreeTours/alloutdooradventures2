@@ -24,7 +24,7 @@ export default function StateToursTemplate({
 }) {
   const heroImage =
     resolveHeroImageForRoute({
-      route: `/destinations/states/${state.slug}/tours`,
+      route: `/destinations/${state.slug}`,
       state,
     }) ?? undefined;
   const stateTours = getToursByState(state.slug);
@@ -38,7 +38,7 @@ export default function StateToursTemplate({
   const structuredDataNodes = useMemo(() => {
     const breadcrumbs = buildBreadcrumbList([
       { name: "Destinations", url: "/destinations" },
-      { name: state.name, url: `/destinations/states/${state.slug}` },
+      { name: state.name, url: `/destinations/${state.slug}` },
     ]);
     const itemListItems = filteredTours.map(tour => {
       const image = resolveTourHeroImage(tour);
@@ -79,7 +79,7 @@ export default function StateToursTemplate({
               <a>Destinations</a>
             </Link>
             <span>/</span>
-            <Link href={`/destinations/states/${state.slug}`}>
+            <Link href={`/destinations/${state.slug}`}>
               <a>{state.name}</a>
             </Link>
           </div>
