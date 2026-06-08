@@ -10,6 +10,7 @@ import { getGuideStateBySlug, getGuideTourDetailPath } from "../data/guideData";
 import { getTopToursForPlace } from "../data/tourIndex";
 import { resolveHeroImageForRoute } from "../utils/hero";
 import { hasUsGuide } from "../utils/guides/guideIndex";
+import { resolveUsGuideHref } from "../utils/guides/guideResolver";
 import { SITE_BRAND_NAME } from "../utils/site";
 import { buildMetaDescription } from "../utils/seo";
 
@@ -21,7 +22,7 @@ const buildCityDestination = (
   stateSlug,
   description: city.shortDescription,
   image: city.heroImages[0],
-  href: `/guides/us/${stateSlug}/${city.slug}`,
+  href: resolveUsGuideHref(stateSlug, city.slug).href,
 });
 
 const buildStateHistory = (stateName: string) => [
@@ -300,7 +301,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
                   {guideCities.map(city => (
                     <Link
                       key={city.slug}
-                      href={`/guides/us/${state.slug}/${city.slug}`}
+                      href={resolveUsGuideHref(state.slug, city.slug).href}
                     >
                       <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
                         {city.name} guide

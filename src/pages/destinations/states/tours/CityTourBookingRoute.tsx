@@ -33,6 +33,7 @@ import {
   recordBlockedFareharborEmbed,
 } from "../../../../utils/fareharbor/optOutOperators";
 import { formatStartingPrice } from "../../../../lib/pricing";
+import { resolveUsGuideHref } from "../../../../utils/guides/guideResolver";
 import { buildBookingMeta } from "../../../../lib/tourMeta";
 import {
   buildReserveActionStructuredData,
@@ -190,7 +191,7 @@ export default function CityTourBookingRoute({
       ? `${tour.destination.city}, ${tour.destination.state}`
       : undefined;
 
-  const cityHref = `/guides/us/${state.slug}/${city.slug}`;
+  const cityHref = resolveUsGuideHref(state.slug, city.slug).href;
   const stateHref = state.isFallback
     ? "/destinations"
     : `/destinations/states/${state.slug}`;
