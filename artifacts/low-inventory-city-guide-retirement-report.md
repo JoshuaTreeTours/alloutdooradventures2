@@ -1,0 +1,215 @@
+# Low-Inventory U.S. City Guide Retirement Report
+
+Generated from the current guide registry and public `tours` marketplace inventory after FareHarbor retirement filtering.
+
+- Sub-4 city guides reviewed: 200
+- Protected exceptions retained: 20
+- Guides retired: 180
+- Sitemap guide URLs removed: 180
+- 301 redirects added: 180
+
+## Protected exceptions retained
+
+- `/guides/us/arizona/phoenix` — 0 active tours; top-50-us-city-guide
+- `/guides/us/arizona/scottsdale` — 2 active tours; flagship-tourism-destination
+- `/guides/us/california/napa` — 1 active tours; flagship-tourism-destination
+- `/guides/us/california/newport-beach` — 0 active tours; top-50-us-city-guide
+- `/guides/us/california/sacramento` — 2 active tours; top-50-us-city-guide
+- `/guides/us/colorado/boulder` — 3 active tours; flagship-tourism-destination
+- `/guides/us/florida/tampa` — 2 active tours; top-50-us-city-guide
+- `/guides/us/georgia/atlanta` — 1 active tours; top-50-us-city-guide
+- `/guides/us/hawaii/hilo` — 2 active tours; flagship-tourism-destination
+- `/guides/us/illinois/chicago` — 2 active tours; top-50-us-city-guide
+- `/guides/us/indiana/indianapolis` — 0 active tours; top-50-us-city-guide
+- `/guides/us/maine/bar-harbor` — 0 active tours; flagship-tourism-destination
+- `/guides/us/new-mexico/albuquerque` — 2 active tours; flagship-tourism-destination
+- `/guides/us/pennsylvania/philadelphia` — 3 active tours; top-50-us-city-guide
+- `/guides/us/south-carolina/charleston` — 2 active tours; flagship-tourism-destination
+- `/guides/us/texas/san-antonio` — 2 active tours; flagship-tourism-destination
+- `/guides/us/wyoming/cody` — 2 active tours; flagship-tourism-destination
+- `/guides/us/wyoming/jackson` — 2 active tours; flagship-tourism-destination
+- `/guides/us/wyoming/jackson-hole` — 0 active tours; flagship-tourism-destination
+- `/guides/us/wyoming/yellowstone-national-park` — 1 active tours; national-park-guide
+
+## Retired guides
+
+- `/guides/us/alaska/fairbanks` — 1 active tours; redirects to `/guides/us/alaska`
+- `/guides/us/arizona/cottonwood` — 2 active tours; redirects to `/guides/us/arizona`
+- `/guides/us/arizona/page` — 1 active tours; redirects to `/guides/us/arizona`
+- `/guides/us/arizona/prescott` — 1 active tours; redirects to `/guides/us/arizona`
+- `/guides/us/california/avalon` — 2 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/bonita` — 2 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/burlingame` — 1 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/carpinteria` — 1 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/indio` — 0 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/lake-elsinore` — 0 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/marina-del-rey` — 2 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/oceanside` — 3 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/pismo-beach` — 1 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/poway` — 1 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/rio-linda` — 1 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/santee` — 2 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/solvang` — 1 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/sonoma` — 1 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/temecula` — 2 active tours; redirects to `/guides/us/california`
+- `/guides/us/california/ventura` — 1 active tours; redirects to `/guides/us/california`
+- `/guides/us/connecticut/colchester` — 2 active tours; redirects to `/guides/us/connecticut`
+- `/guides/us/connecticut/east-lyme` — 1 active tours; redirects to `/guides/us/connecticut`
+- `/guides/us/connecticut/montville` — 1 active tours; redirects to `/guides/us/connecticut`
+- `/guides/us/connecticut/new-london` — 2 active tours; redirects to `/guides/us/connecticut`
+- `/guides/us/connecticut/salisbury` — 1 active tours; redirects to `/guides/us/connecticut`
+- `/guides/us/connecticut/thomaston` — 1 active tours; redirects to `/guides/us/connecticut`
+- `/guides/us/connecticut/wolcott` — 1 active tours; redirects to `/guides/us/connecticut`
+- `/guides/us/delaware/dewey-beach` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/florida/apopka` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/bonita-springs` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/bradenton-beach` — 0 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/canal-point` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/cape-canaveral` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/clermont` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/cocoa-beach` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/deland` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/delray-beach` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/estero` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/eustis` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/fellsmere` — 2 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/fort-myers-beach` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/fort-walton-beach` — 3 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/fort-white` — 2 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/gainesville` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/greenacres` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/gulfport` — 2 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/hallandale-beach` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/hastings` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/homestead` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/homosassa` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/key-biscayne` — 0 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/kissimmee` — 2 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/lake-wales` — 3 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/lakeland` — 3 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/lecanto` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/lighthouse-point` — 2 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/matlacha` — 2 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/new-smyrna-beach` — 2 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/nokomis` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/north-fort-myers` — 3 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/north-miami` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/orange-city` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/osprey` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/oviedo` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/palm-harbor` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/pembroke-pines` — 2 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/pensacola-beach` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/riviera-beach` — 2 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/sanford` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/st-cloud` — 2 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/summerland-key` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/tarpon-springs` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/titusville` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/town-n-country` — 2 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/vero-beach` — 2 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/warrington` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/weston` — 2 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/winter-haven` — 2 active tours; redirects to `/guides/us/florida`
+- `/guides/us/florida/winter-park` — 1 active tours; redirects to `/guides/us/florida`
+- `/guides/us/georgia/blairsville` — 2 active tours; redirects to `/guides/us/georgia`
+- `/guides/us/georgia/braselton` — 1 active tours; redirects to `/guides/us/georgia`
+- `/guides/us/georgia/covington` — 3 active tours; redirects to `/guides/us/georgia`
+- `/guides/us/georgia/helen` — 2 active tours; redirects to `/guides/us/georgia`
+- `/guides/us/georgia/juliette` — 1 active tours; redirects to `/guides/us/georgia`
+- `/guides/us/georgia/leesburg` — 3 active tours; redirects to `/guides/us/georgia`
+- `/guides/us/georgia/macon` — 2 active tours; redirects to `/guides/us/georgia`
+- `/guides/us/georgia/peachtree-city` — 1 active tours; redirects to `/guides/us/georgia`
+- `/guides/us/georgia/roswell` — 2 active tours; redirects to `/guides/us/georgia`
+- `/guides/us/georgia/summerville` — 1 active tours; redirects to `/guides/us/georgia`
+- `/guides/us/hawaii/haleiwa` — 3 active tours; redirects to `/guides/us/hawaii`
+- `/guides/us/hawaii/hanalei` — 1 active tours; redirects to `/guides/us/hawaii`
+- `/guides/us/hawaii/honomu` — 2 active tours; redirects to `/guides/us/hawaii`
+- `/guides/us/idaho/coeur-dalene` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/kentucky/new-haven` — 2 active tours; redirects to `/guides/us/kentucky`
+- `/guides/us/louisiana/abita-springs` — 1 active tours; redirects to `/guides/us/louisiana`
+- `/guides/us/louisiana/baton-rouge` — 1 active tours; redirects to `/guides/us/louisiana`
+- `/guides/us/louisiana/laplace` — 2 active tours; redirects to `/guides/us/louisiana`
+- `/guides/us/louisiana/ponchatoula` — 1 active tours; redirects to `/guides/us/louisiana`
+- `/guides/us/louisiana/vacherie` — 1 active tours; redirects to `/guides/us/louisiana`
+- `/guides/us/louisiana/venice` — 3 active tours; redirects to `/guides/us/louisiana`
+- `/guides/us/maine/bethel` — 2 active tours; redirects to `/guides/us/maine`
+- `/guides/us/maine/harpswell` — 0 active tours; redirects to `/guides/us/maine`
+- `/guides/us/maine/kennebunk` — 2 active tours; redirects to `/guides/us/maine`
+- `/guides/us/maryland/cambridge` — 2 active tours; redirects to `/guides/us/maryland`
+- `/guides/us/maryland/denton` — 1 active tours; redirects to `/guides/us/maryland`
+- `/guides/us/maryland/edgewater` — 3 active tours; redirects to `/guides/us/maryland`
+- `/guides/us/maryland/lusby` — 0 active tours; redirects to `/guides/us/maryland`
+- `/guides/us/maryland/monkton` — 1 active tours; redirects to `/guides/us/maryland`
+- `/guides/us/maryland/vienna` — 1 active tours; redirects to `/guides/us/maryland`
+- `/guides/us/massachusetts/beverly` — 0 active tours; redirects to `/guides/us/massachusetts`
+- `/guides/us/massachusetts/brookline` — 1 active tours; redirects to `/guides/us/massachusetts`
+- `/guides/us/massachusetts/chelsea` — 1 active tours; redirects to `/guides/us/massachusetts`
+- `/guides/us/massachusetts/holbrook` — 0 active tours; redirects to `/guides/us/massachusetts`
+- `/guides/us/massachusetts/lexington` — 1 active tours; redirects to `/guides/us/massachusetts`
+- `/guides/us/massachusetts/mashpee` — 0 active tours; redirects to `/guides/us/massachusetts`
+- `/guides/us/massachusetts/nantucket` — 2 active tours; redirects to `/guides/us/massachusetts`
+- `/guides/us/massachusetts/north-andover` — 3 active tours; redirects to `/guides/us/massachusetts`
+- `/guides/us/massachusetts/quincy` — 3 active tours; redirects to `/guides/us/massachusetts`
+- `/guides/us/massachusetts/revere` — 1 active tours; redirects to `/guides/us/massachusetts`
+- `/guides/us/massachusetts/sandwich` — 0 active tours; redirects to `/guides/us/massachusetts`
+- `/guides/us/massachusetts/somerville` — 0 active tours; redirects to `/guides/us/massachusetts`
+- `/guides/us/massachusetts/sudbury` — 3 active tours; redirects to `/guides/us/massachusetts`
+- `/guides/us/massachusetts/winthrop` — 0 active tours; redirects to `/guides/us/massachusetts`
+- `/guides/us/michigan/grosse-ile-township` — 1 active tours; redirects to `/guides/us/michigan`
+- `/guides/us/michigan/lake-leelanau` — 0 active tours; redirects to `/guides/us/michigan`
+- `/guides/us/michigan/mount-pleasant` — 2 active tours; redirects to `/guides/us/michigan`
+- `/guides/us/michigan/traverse-city` — 1 active tours; redirects to `/guides/us/michigan`
+- `/guides/us/minnesota/minneapolis` — 0 active tours; redirects to `/guides/us`
+- `/guides/us/minnesota/stillwater` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/mississippi/natchez` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/missouri/branson` — 0 active tours; redirects to `/guides/us`
+- `/guides/us/missouri/kansas-city` — 0 active tours; redirects to `/guides/us`
+- `/guides/us/missouri/st-louis` — 0 active tours; redirects to `/guides/us`
+- `/guides/us/new-jersey/atlantic-highlands` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/new-jersey/brick-township` — 2 active tours; redirects to `/guides/us`
+- `/guides/us/new-jersey/edgewater` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/new-jersey/fieldsboro` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/new-jersey/hillsdale` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/new-jersey/keyport` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/new-jersey/lavallette` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/new-jersey/middletown-township` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/new-jersey/millville` — 0 active tours; redirects to `/guides/us`
+- `/guides/us/new-jersey/ocean-city` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/new-jersey/shamong` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/new-jersey/wallington` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/new-jersey/wildwood-crest` — 1 active tours; redirects to `/guides/us`
+- `/guides/us/new-mexico/las-cruces` — 0 active tours; redirects to `/guides/us/new-mexico`
+- `/guides/us/new-york/hammondsport` — 2 active tours; redirects to `/guides/us/new-york`
+- `/guides/us/new-york/napanoch` — 1 active tours; redirects to `/guides/us/new-york`
+- `/guides/us/new-york/rushville` — 3 active tours; redirects to `/guides/us/new-york`
+- `/guides/us/north-carolina/charlotte` — 0 active tours; redirects to `/guides/us/north-carolina`
+- `/guides/us/north-carolina/highlands` — 1 active tours; redirects to `/guides/us/north-carolina`
+- `/guides/us/north-carolina/kill-devil-hills` — 2 active tours; redirects to `/guides/us/north-carolina`
+- `/guides/us/north-carolina/nags-head` — 1 active tours; redirects to `/guides/us/north-carolina`
+- `/guides/us/north-carolina/raleigh` — 1 active tours; redirects to `/guides/us/north-carolina`
+- `/guides/us/ohio/cincinnati` — 0 active tours; redirects to `/guides/us/ohio`
+- `/guides/us/ohio/cleveland` — 0 active tours; redirects to `/guides/us/ohio`
+- `/guides/us/ohio/columbus` — 0 active tours; redirects to `/guides/us/ohio`
+- `/guides/us/ohio/lancaster` — 2 active tours; redirects to `/guides/us/ohio`
+- `/guides/us/ohio/rockbridge` — 1 active tours; redirects to `/guides/us/ohio`
+- `/guides/us/oklahoma/oklahoma-city` — 2 active tours; redirects to `/guides/us`
+- `/guides/us/oregon/cascade-locks` — 1 active tours; redirects to `/guides/us/oregon`
+- `/guides/us/pennsylvania/bethlehem` — 0 active tours; redirects to `/guides/us/pennsylvania`
+- `/guides/us/pennsylvania/gettysburg` — 1 active tours; redirects to `/guides/us/pennsylvania`
+- `/guides/us/rhode-island/warwick` — 3 active tours; redirects to `/guides/us/rhode-island`
+- `/guides/us/south-carolina/columbia` — 0 active tours; redirects to `/guides/us/south-carolina`
+- `/guides/us/south-carolina/mount-pleasant` — 2 active tours; redirects to `/guides/us/south-carolina`
+- `/guides/us/south-dakota/rapid-city` — 2 active tours; redirects to `/guides/us`
+- `/guides/us/tennessee/franklin` — 1 active tours; redirects to `/guides/us/tennessee`
+- `/guides/us/tennessee/granville` — 1 active tours; redirects to `/guides/us/tennessee`
+- `/guides/us/tennessee/greenbrier` — 0 active tours; redirects to `/guides/us/tennessee`
+- `/guides/us/tennessee/johnson-city` — 1 active tours; redirects to `/guides/us/tennessee`
+- `/guides/us/tennessee/williamsport` — 1 active tours; redirects to `/guides/us/tennessee`
+- `/guides/us/texas/dallas` — 0 active tours; redirects to `/guides/us/texas`
+- `/guides/us/texas/fort-worth` — 1 active tours; redirects to `/guides/us/texas`
+- `/guides/us/utah/salt-lake-city` — 0 active tours; redirects to `/guides/us/utah`
+- `/guides/us/vermont/manchester` — 3 active tours; redirects to `/guides/us/vermont`
+- `/guides/us/washington/chelan` — 0 active tours; redirects to `/guides/us/washington`
+- `/guides/us/west-virginia/harpers-ferry` — 2 active tours; redirects to `/guides/us`
+- `/guides/us/wisconsin/washburn` — 2 active tours; redirects to `/guides/us/wisconsin`

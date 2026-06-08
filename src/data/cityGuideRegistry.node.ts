@@ -4,6 +4,7 @@ import type { City } from "./destinations";
 import { states } from "./destinations";
 import { CITY_TIER1_INTL } from "./cityTier1Intl";
 import { slugify } from "./tourCatalog";
+import { isRetiredLowInventoryGuide } from "../utils/guides/retiredLowInventoryGuides";
 
 export type CityGuideRecord = {
   country: string;
@@ -26,9 +27,9 @@ const parseCsvRows = (text: string) => {
     const char = text[index];
     const next = text[index + 1];
 
-    if (char === "\"") {
-      if (inQuotes && next === "\"") {
-        current += "\"";
+    if (char === '"') {
+      if (inQuotes && next === '"') {
+        current += '"';
         index += 1;
       } else {
         inQuotes = !inQuotes;
@@ -64,8 +65,8 @@ const parseCsvRows = (text: string) => {
 };
 
 const parseCsv = (text: string) => {
-  const rows = parseCsvRows(text).filter((row) =>
-    row.some((cell) => cell.trim().length > 0),
+  const rows = parseCsvRows(text).filter(row =>
+    row.some(cell => cell.trim().length > 0)
   );
   const [headers, ...dataRows] = rows;
 
@@ -73,7 +74,7 @@ const parseCsv = (text: string) => {
     return [];
   }
 
-  return dataRows.map((row) => {
+  return dataRows.map(row => {
     const record: Record<string, string> = {};
     headers.forEach((header, index) => {
       record[header] = row[index]?.trim() ?? "";
@@ -88,32 +89,32 @@ const getInternationalCsvFiles = () => {
   const europeFiles = fs.existsSync(europeDir)
     ? fs
         .readdirSync(europeDir)
-        .filter((file) => file.endsWith(".csv"))
-        .map((file) => path.join(europeDir, file))
+        .filter(file => file.endsWith(".csv"))
+        .map(file => path.join(europeDir, file))
     : [];
 
   return [
     path.join(baseDir, "australia.csv"),
     path.join(baseDir, "canada.csv"),
     ...europeFiles,
-  ].filter((file) => fs.existsSync(file));
+  ].filter(file => fs.existsSync(file));
 };
 
 const buildIntlCityGuideRecords = (): CityGuideRecord[] => {
   const records = new Map<string, CityGuideRecord>();
   const files = getInternationalCsvFiles();
 
-  files.forEach((file) => {
+  files.forEach(file => {
     const csvText = fs.readFileSync(file, "utf8");
     const rows = parseCsv(csvText);
-    rows.forEach((row) => {
+    rows.forEach(row => {
       const location = row.location;
       if (!location) {
         return;
       }
       const parts = location
         .split("/")
-        .map((part) => part.trim())
+        .map(part => part.trim())
         .filter(Boolean);
       if (parts.length < 3) {
         return;
@@ -142,36 +143,38 @@ const buildIntlCityGuideRecords = (): CityGuideRecord[] => {
 };
 
 const buildUsCityGuideRecords = (): CityGuideRecord[] =>
-  states.flatMap((state) =>
-    state.cities.map((city) => ({
-      country: "United States",
-      state: state.name,
-      stateSlug: state.slug,
-      city: city.name,
-      citySlug: city.slug,
-      route: `/guides/us/${state.slug}/${city.slug}`,
-      regionType: "state" as const,
-      cityData: city,
-    })),
+  states.flatMap(state =>
+    state.cities
+      .filter(city => !isRetiredLowInventoryGuide(state.slug, city.slug))
+      .map(city => ({
+        country: "United States",
+        state: state.name,
+        stateSlug: state.slug,
+        city: city.name,
+        citySlug: city.slug,
+        route: `/guides/us/${state.slug}/${city.slug}`,
+        regionType: "state" as const,
+        cityData: city,
+      }))
   );
 
 const intlCityGuideRecords = buildIntlCityGuideRecords();
 
 const tier1IntlMissing = CITY_TIER1_INTL.filter(
-  (city) =>
+  city =>
     !intlCityGuideRecords.some(
-      (record) =>
+      record =>
         record.stateSlug === city.countrySlug &&
-        record.citySlug === city.citySlug,
-    ),
+        record.citySlug === city.citySlug
+    )
 );
 
 if (tier1IntlMissing.length) {
   const missingList = tier1IntlMissing
-    .map((city) => `${city.countrySlug}/${city.citySlug}`)
+    .map(city => `${city.countrySlug}/${city.citySlug}`)
     .join(", ");
   throw new Error(
-    `Tier-1 Intl registry mismatch: ${missingList} not found in international guide records.`,
+    `Tier-1 Intl registry mismatch: ${missingList} not found in international guide records.`
   );
 }
 

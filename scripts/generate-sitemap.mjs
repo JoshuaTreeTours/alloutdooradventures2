@@ -325,7 +325,7 @@ const buildCanonicalTourPath = (tour, catalogModule, aliasesModule) => {
   );
 };
 
-const listUsGuideCitiesByState = async () => {
+const listUsGuideCitiesByState = async retiredGuidePolicy => {
   const guidesRoot = path.join(__dirname, "..", "src", "data", "guides", "us");
   const stateEntries = await readdir(guidesRoot, { withFileTypes: true });
   const guidesByState = new Map();
@@ -340,7 +340,14 @@ const listUsGuideCitiesByState = async () => {
         const citySlugs = cityEntries
           .filter(entry => entry.isFile() && entry.name.endsWith(".json"))
           .map(entry => entry.name.replace(/\.json$/, ""))
-          .filter(citySlug => citySlug !== "index");
+          .filter(
+            citySlug =>
+              citySlug !== "index" &&
+              !retiredGuidePolicy.isRetiredLowInventoryGuide(
+                stateSlug,
+                citySlug
+              )
+          );
 
         guidesByState.set(stateSlug, new Set(citySlugs));
       })
@@ -792,6 +799,10 @@ export const buildSitemap = async () => {
     "../src/data/flagstaffTours.ts",
     import.meta.url
   );
+  const retiredGuidePolicy = await tsImport(
+    "../src/utils/guides/retiredLowInventoryGuides.ts",
+    import.meta.url
+  );
   const tours = await buildTourSummaries(catalogModule);
   let engine2Tours = [];
   try {
@@ -913,7 +924,14 @@ export const buildSitemap = async () => {
 
       if (Array.isArray(state.cities)) {
         state.cities.forEach(city => {
-          addUrl(cityUrls, `/guides/us/${state.slug}/${city.slug}`);
+          if (
+            !retiredGuidePolicy.isRetiredLowInventoryGuide(
+              state.slug,
+              city.slug
+            )
+          ) {
+            addUrl(cityUrls, `/guides/us/${state.slug}/${city.slug}`);
+          }
           addUrl(cityUrls, `/destinations/${state.slug}/${city.slug}/tours`);
         });
       }
@@ -1118,7 +1136,8 @@ export const buildSitemap = async () => {
 
   const guideStates = new Map();
   const guideCountries = new Map();
-  const allowedUsGuideCities = await listUsGuideCitiesByState();
+  const allowedUsGuideCities =
+    await listUsGuideCitiesByState(retiredGuidePolicy);
 
   tours.forEach(tour => {
     const rawCitySlug = tour.destination.citySlug;
