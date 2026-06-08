@@ -4,9 +4,9 @@ import { isGuideCityAllowedUS } from "./guideCityAllowlistUS";
 import { getGuidesByState } from "./guideRegistry";
 
 describe("guideCityAllowlistUS", () => {
-  it("keeps Hawaii guides available", () => {
+  it("keeps protected or inventory-backed Hawaii guides available", () => {
     expect(isGuideCityAllowedUS("hawaii", "honolulu")).toBe(true);
-    expect(isGuideCityAllowedUS("hawaii", "hilo")).toBe(true);
+    expect(isGuideCityAllowedUS("hawaii", "hilo")).toBe(false);
   });
 
   it("removes the final-prune city slugs from Florida guides", () => {

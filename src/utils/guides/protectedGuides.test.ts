@@ -11,7 +11,7 @@ describe("protectedGuides", () => {
     ).toBe(true);
   });
 
-  it("protects image-embed guides", () => {
+  it("does not protect image-only guides without flagship status", () => {
     expect(
       isProtectedGuide({
         tier: "tier2",
@@ -19,7 +19,7 @@ describe("protectedGuides", () => {
         hero: { image: "https://cdn.example.com/hero.jpg" },
         thingsToDo: [],
       })
-    ).toBe(true);
+    ).toBe(false);
   });
 
   it("does not protect plain tier2 guide without top slug", () => {
