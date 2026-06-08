@@ -1,4 +1,5 @@
 import type { GuidePageData } from "../loadGuide";
+import { shouldRetainUsCityGuide } from "./guideRetentionPolicy";
 
 type GuideRegistryRecord = {
   country: "us";
@@ -24,7 +25,9 @@ const parseGuidePath = (path: string) => {
   };
 };
 
-export const usGuideRegistry: GuideRegistryRecord[] = Object.entries(usGuideModules)
+export const usGuideRegistry: GuideRegistryRecord[] = Object.entries(
+  usGuideModules
+)
   .map(([path, dataImport]) => {
     const parsed = parseGuidePath(path);
     if (!parsed || parsed.citySlug === "index") {
@@ -40,8 +43,12 @@ export const usGuideRegistry: GuideRegistryRecord[] = Object.entries(usGuideModu
   })
   .filter((record): record is GuideRegistryRecord => Boolean(record));
 
+export const retainedUsGuideRegistry = usGuideRegistry.filter(record =>
+  shouldRetainUsCityGuide(record.stateSlug, record.citySlug, record.dataImport)
+);
+
 const guideRegistryByKey = new Map(
-  usGuideRegistry.map(record => [
+  retainedUsGuideRegistry.map(record => [
     `${record.country}/${record.stateSlug}/${record.citySlug}`,
     record,
   ])
@@ -53,7 +60,12 @@ export const getGuideRecord = (stateSlug: string, citySlug: string) =>
 export const getGuideStates = () =>
   Array.from(new Set(usGuideRegistry.map(record => record.stateSlug))).sort();
 
+export const getRetainedGuideStates = () =>
+  Array.from(
+    new Set(retainedUsGuideRegistry.map(record => record.stateSlug))
+  ).sort();
+
 export const getGuidesByState = (stateSlug: string) =>
-  usGuideRegistry
+  retainedUsGuideRegistry
     .filter(record => record.stateSlug === stateSlug)
     .sort((a, b) => a.dataImport.city!.localeCompare(b.dataImport.city!));

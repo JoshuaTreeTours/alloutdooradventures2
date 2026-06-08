@@ -1,4 +1,4 @@
-import { usGuideRegistry } from "./guideRegistry";
+import { retainedUsGuideRegistry } from "./guideRegistry";
 
 export type GuideKey = string;
 
@@ -8,7 +8,7 @@ export const buildUsGuideKey = (
 ): GuideKey => `us/${stateSlug}/${citySlug}`;
 
 const usGuideIndex = new Set<GuideKey>(
-  usGuideRegistry.map(record =>
+  retainedUsGuideRegistry.map(record =>
     buildUsGuideKey(record.stateSlug, record.citySlug)
   )
 );

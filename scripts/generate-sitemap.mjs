@@ -732,6 +732,10 @@ export const buildSitemap = async () => {
     "../src/data/flagstaffTours.ts",
     import.meta.url
   );
+  const guideRetentionModule = await tsImport(
+    "../src/utils/guides/guideRetentionPolicy.ts",
+    import.meta.url
+  );
   const tours = await buildTourSummaries(catalogModule);
   let engine2Tours = [];
   try {
@@ -1073,7 +1077,27 @@ export const buildSitemap = async () => {
 
   const guideStates = new Map();
   const guideCountries = new Map();
-  const allowedUsGuideCities = await listUsGuideCitiesByState();
+  const countryGuideCityCounts = new Map();
+  const allUsGuideCities = await listUsGuideCitiesByState();
+  const allowedUsGuideCities = new Map();
+
+  allUsGuideCities.forEach((citySlugs, stateSlug) => {
+    citySlugs.forEach(citySlug => {
+      if (!guideRetentionModule.shouldRetainUsCityGuide(stateSlug, citySlug)) {
+        return;
+      }
+
+      if (!allowedUsGuideCities.has(stateSlug)) {
+        allowedUsGuideCities.set(stateSlug, new Set());
+      }
+      allowedUsGuideCities.get(stateSlug).add(citySlug);
+
+      if (!guideStates.has(stateSlug)) {
+        guideStates.set(stateSlug, new Set());
+      }
+      guideStates.get(stateSlug).add(citySlug);
+    });
+  });
 
   tours.forEach(tour => {
     const citySlug = tour.destination.citySlug;
@@ -1102,10 +1126,15 @@ export const buildSitemap = async () => {
     if (!countrySlug) {
       return;
     }
-    if (!guideCountries.has(countrySlug)) {
-      guideCountries.set(countrySlug, new Set());
+    if (!countryGuideCityCounts.has(countrySlug)) {
+      countryGuideCityCounts.set(countrySlug, new Map());
     }
-    guideCountries.get(countrySlug).add(citySlug);
+    const cityCounts = countryGuideCityCounts.get(countrySlug);
+    cityCounts.set(citySlug, (cityCounts.get(citySlug) ?? 0) + 1);
+  });
+
+  allUsGuideCities.forEach((_, stateSlug) => {
+    addUrl(guideUrls, `/guides/us/${stateSlug}`);
   });
 
   guideStates.forEach((cities, stateSlug) => {
@@ -1115,10 +1144,12 @@ export const buildSitemap = async () => {
     });
   });
 
-  guideCountries.forEach((cities, countrySlug) => {
+  countryGuideCityCounts.forEach((cityCounts, countrySlug) => {
     addUrl(guideUrls, `/guides/world/${countrySlug}`);
-    cities.forEach(citySlug => {
-      addUrl(guideUrls, `/guides/world/${countrySlug}/${citySlug}`);
+    cityCounts.forEach((count, citySlug) => {
+      if (count >= 5) {
+        addUrl(guideUrls, `/guides/world/${countrySlug}/${citySlug}`);
+      }
     });
   });
 

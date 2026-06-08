@@ -1,17 +1,16 @@
-import { CITY_TIER1_SLUGS } from "../../data/cityTier1";
 import type { GuidePageData } from "../loadGuide";
-import { isImageEmbedGuide } from "./isImageEmbedGuide";
+import {
+  PROTECTED_US_GUIDE_CITY_SLUGS,
+  isProtectedUsCityGuide,
+} from "./guideRetentionPolicy";
 
-export const protectedGuideSlugs: Set<string> = new Set(CITY_TIER1_SLUGS);
+export const protectedGuideSlugs: Set<string> = PROTECTED_US_GUIDE_CITY_SLUGS;
 
-type GuideLike = Partial<GuidePageData> & {
+type GuideLike = {
+  tier?: "tier1" | "tier2";
   slug?: string;
   citySlug?: string;
-  heroImage?: string;
-  images?: unknown[];
-  gallery?: unknown[];
-  imageEmbed?: unknown;
-  cardImage?: string;
+  city?: string;
 };
 
 const routeCitySlug = (slug?: string) => {
@@ -20,23 +19,9 @@ const routeCitySlug = (slug?: string) => {
   return parts[parts.length - 1] ?? "";
 };
 
-const hasHeroImageSections = (guide: GuideLike) =>
-  Boolean(
-    (Array.isArray(guide.images) && guide.images.length) ||
-      (Array.isArray(guide.gallery) && guide.gallery.length) ||
-      guide.imageEmbed ||
-      (typeof guide.cardImage === "string" && guide.cardImage.trim())
-  );
-
 export const isProtectedGuide = (guide: GuideLike): boolean => {
   if (!guide || typeof guide !== "object") return false;
 
-  if (guide.tier === "tier1") return true;
-
   const citySlug = (guide.citySlug || routeCitySlug(guide.slug)).trim();
-  if (citySlug && protectedGuideSlugs.has(citySlug)) return true;
-
-  if (hasHeroImageSections(guide)) return true;
-
-  return isImageEmbedGuide(guide as GuidePageData);
+  return isProtectedUsCityGuide(citySlug, guide as Partial<GuidePageData>);
 };

@@ -1,5 +1,7 @@
+import RouteRedirect from "../../components/RouteRedirect";
 import GuideTemplate from "../../templates/GuideTemplate";
 import { buildCityGuide } from "../../data/guideData";
+import { GUIDE_RETENTION_MIN_ACTIVE_TOURS } from "../../utils/guides/guideRetentionPolicy";
 
 type CityGuideRouteProps = {
   params: {
@@ -29,6 +31,18 @@ export default function CityGuideRoute({
     regionType,
     activityFocus: activity,
   });
+
+  if (guide && guide.featuredTours.length < GUIDE_RETENTION_MIN_ACTIVE_TOURS) {
+    return (
+      <RouteRedirect
+        to={
+          regionType === "state"
+            ? `/guides/us/${params.parentSlug}`
+            : `/guides/world/${params.parentSlug}`
+        }
+      />
+    );
+  }
 
   if (!guide) {
     return (

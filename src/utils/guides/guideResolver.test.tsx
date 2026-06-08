@@ -49,9 +49,9 @@ const bigSkyCity: City = {
 };
 
 describe("guideResolver", () => {
-  it("keeps the guide sitemap at the intentional guide-sized count", () => {
-    expect(countGuideSitemapUrls()).toBeGreaterThanOrEqual(770);
-    expect(countGuideSitemapUrls()).toBeLessThanOrEqual(800);
+  it("keeps the guide sitemap within the retained guide policy range", () => {
+    expect(countGuideSitemapUrls()).toBeGreaterThanOrEqual(250);
+    expect(countGuideSitemapUrls()).toBeLessThanOrEqual(400);
   });
 
   it("does not include a Montana city without a guide in sitemap-guides.xml", () => {
