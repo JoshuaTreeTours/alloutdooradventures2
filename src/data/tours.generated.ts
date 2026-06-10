@@ -256,7 +256,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bikeandview/items/51429/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bikeandview/items/51429/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "San Francisco Bike Rentals is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "San Francisco Bike Rentals starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "portcity-bike-tours-91868",
@@ -1262,7 +1262,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/262797/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitybike/items/262797/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Bike The Bridge & 1 Day Hop On Hop Off Combo is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Bike The Bridge & 1 Day Hop On Hop Off Combo starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "south-florida-trikke-tours-284554",
@@ -1703,7 +1703,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/10200/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitybike/items/10200/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Streets of San Francisco Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Streets of San Francisco Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "urban-adventours-27346",
@@ -1789,7 +1789,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/blazingsaddles/items/78858/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/blazingsaddles/items/78858/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Golden Gate Bridge Electric Bike Guided Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Golden Gate Bridge Electric Bike Guided Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "treasure-seekers-shell-tours-442030",
@@ -1882,7 +1882,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/incredibleadventures/items/549337/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/incredibleadventures/items/549337/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Golden Gate Bridge Bike Tour with Muir Woods & Sausalito is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Golden Gate Bridge Bike Tour with Muir Woods & Sausalito starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "toonie-tours-118669",
@@ -2049,7 +2049,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/10199/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitybike/items/10199/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Golden Gate Bridge to Sausalito Bike Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Golden Gate Bridge to Sausalito Bike Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "getaway-adventures-29207",
@@ -2633,7 +2633,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/blazingsaddles/items/78855/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/blazingsaddles/items/78855/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Golden Gate Bridge Guided Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Golden Gate Bridge Guided Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "unlimited-biking-394599",
@@ -3047,7 +3047,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/138644/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/138644/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "The Golden Gate Bridge Bike Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "The Golden Gate Bridge Bike Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "unlimited-biking-201023",
@@ -3125,7 +3125,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/202161/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/202161/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "The Highlights of San Francisco Bike Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "The Highlights of San Francisco Bike Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "la-vida-laguna-245311",
@@ -3601,7 +3601,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/15779/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitybike/items/15779/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Alcatraz & Streets of San Francisco Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Alcatraz & Streets of San Francisco Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "whistler-ebikes-159997",
@@ -3787,7 +3787,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/sanfranciscotoursandactivities/items/315553/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sanfranciscotoursandactivities/items/315553/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Alcatraz Tour Package is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Alcatraz Tour Package starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "unlimited-biking-394558",
@@ -4255,7 +4255,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/81664/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitybike/items/81664/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Alcatraz & the Golden Gate Bridge to Sausalito Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Alcatraz & the Golden Gate Bridge to Sausalito Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "unlimited-biking-110551",
@@ -5272,7 +5272,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/blazingsaddles/items/110469/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/blazingsaddles/items/110469/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Golden Gate Bridge Bike and Brew Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Golden Gate Bridge Bike and Brew Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "echo-sports-tours-524620",
@@ -5402,7 +5402,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/blazingsaddles/items/78799/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/blazingsaddles/items/78799/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Bike Rental is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Bike Rental starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "visit-palm-beach-101432",
@@ -5610,7 +5610,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/199386/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/199386/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Golden Gate Park Bike Rentals is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Golden Gate Park Bike Rentals starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "unlimited-biking-201012",
@@ -5735,7 +5735,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201053/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201053/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Best of San Francisco Electric Bike Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Best of San Francisco Electric Bike Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "unlimited-biking-202168",
@@ -6133,7 +6133,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201055/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201055/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Highlights of Golden Gate Park Bike Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Highlights of Golden Gate Park Bike Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "vallarta-food-tours---internal-210126",
@@ -6404,7 +6404,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/313936/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/313936/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Golden Gate Park Electric Bike Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Golden Gate Park Electric Bike Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "portland-discovery-tours-538625",
@@ -6909,7 +6909,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/sanfranciscotoursandactivities/items/85853/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sanfranciscotoursandactivities/items/85853/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "San Francisco 3-in-1: Woods + Wine Tour + Sausalito is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "San Francisco 3-in-1: Woods + Wine Tour + Sausalito starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "unlimited-biking-201026",
@@ -7584,7 +7584,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/333235/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitybike/items/333235/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Private Golden Gate Bridge to Sausalito is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Private Golden Gate Bridge to Sausalito starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "central-park-boutique-tours-562556",
@@ -7750,7 +7750,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/280403/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitybike/items/280403/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Alcatraz & Full Day Electric Bike Rental is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Alcatraz & Full Day Electric Bike Rental starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "alaska-trail-guides-391155",
@@ -8580,7 +8580,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/165139/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitybike/items/165139/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Bike The Bridge & Muir Woods Tour Combo is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Bike The Bridge & Muir Woods Tour Combo starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "unlimited-biking-201022",
@@ -10421,7 +10421,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/10201/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitybike/items/10201/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "California Sunset Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "California Sunset Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "maine-brews-cruise-444743",
@@ -11632,7 +11632,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/315246/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/315246/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Golden Gate Park eBike Rentals is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Golden Gate Park eBike Rentals starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "ebike-connections-406862",
@@ -14806,7 +14806,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bikeandroll/items/638088/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bikeandroll/items/638088/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Golden Gate Bridge Bike Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Golden Gate Bridge Bike Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "unlimited-biking-270115",
@@ -15218,7 +15218,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bikeandroll/items/638096/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bikeandroll/items/638096/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Golden Gate Park Electric Bike Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Golden Gate Park Electric Bike Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "hazard-county-shuttle-639072",
@@ -18987,7 +18987,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/spinoutfitness/items/423384/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/spinoutfitness/items/423384/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Go With The Flow - South is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Go With The Flow - South starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on go with the flow - south. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "unlimited-biking-540334",
@@ -22783,7 +22783,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baycitykayak/items/901001/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitykayak/items/901001/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Golden Gate Kayak Adventure is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Golden Gate Kayak Adventure starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on golden gate kayak adventure. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "fog-city-bike-tours-901002",
@@ -22832,7 +22832,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/fogcitybiketours/items/901002/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fogcitybiketours/items/901002/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Golden Gate Bridge Electric Bike Tour is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Golden Gate Bridge Electric Bike Tour starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on golden gate bridge electric bike tour. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "bay-night-adventures-901003",
@@ -22877,7 +22877,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baynightadventures/items/901003/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baynightadventures/items/901003/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "San Francisco Sunset Cruise is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "San Francisco Sunset Cruise starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on san francisco sunset cruise. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "dive-california-107822",
@@ -57755,7 +57755,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/sidewalkfoodtours/items/612861/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sidewalkfoodtours/items/612861/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "SWFT Boston Cooking Classes is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "SWFT Boston Cooking Classes starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "luxury-new-england-tours-652810",
@@ -91172,7 +91172,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/sidewalkfoodtours/items/612863/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sidewalkfoodtours/items/612863/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "SWFT Washington DC Cooking Classes is a guided outdoor experience based in San Francisco, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "SWFT Washington DC Cooking Classes starts in San Francisco with a flexible format that lets you focus on the city, the waterfront, and the neighborhoods that make this destination so memorable. This experience is operated through FareHarbor and centers on booking powered by fareharbor. Expect clear meeting logistics, a straightforward booking flow, and time to enjoy the route without feeling rushed. Depending on the specific option and day, you may ride across landmark corridors, follow bayfront stretches, or spend more time in parks and local districts. It works well for travelers who want a practical way to see more of San Francisco while still keeping room for personal pace, photos, and spontaneous stops."
   },
   {
     "id": "tour-new-york-360-199547",

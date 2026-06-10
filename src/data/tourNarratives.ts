@@ -45,6 +45,16 @@ export const getExpandedTourDescription = (tour: Tour) => {
     .split("\n\n")
     .map(paragraph => paragraph.trim())
     .filter(Boolean);
+
+  const isSanFranciscoLegacyFareHarborTour =
+    tour.bookingProvider === "fareharbor" &&
+    tour.destination.stateSlug === "california" &&
+    tour.destination.citySlug === "san-francisco";
+
+  if (isSanFranciscoLegacyFareHarborTour && baseParagraphs.length) {
+    return baseParagraphs.map(stripReviewMentions).map(paragraph => paragraph.trim());
+  }
+
   const activityLabel = getActivityLabel(tour);
   const skillLevel = getSkillLevelLabel(tour);
   const destinationLabel = `${tour.destination.city}, ${tour.destination.state}`;
