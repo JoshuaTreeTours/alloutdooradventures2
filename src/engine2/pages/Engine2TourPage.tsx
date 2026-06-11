@@ -19,6 +19,7 @@ import {
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
 import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
+import { buildEngine2TourBreadcrumbItems } from "../utils/buildEngine2BreadcrumbItems";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -171,6 +172,11 @@ export default function Engine2TourPage({
         .join(", ") || rewriteV3Content.meetingPoint.rawText
     : undefined;
 
+  const breadcrumbItems = useMemo(
+    () => buildEngine2TourBreadcrumbItems(normalizedTour),
+    [normalizedTour]
+  );
+
   const structuredDataNodes = useMemo(
     () =>
       buildSchemaGraph(
@@ -197,7 +203,9 @@ export default function Engine2TourPage({
 
   const relatedTours = useMemo(() => {
     const normalizedCurrentProductCode = tour.id?.trim().toUpperCase();
-    const { stateSlug, citySlug } = getStateCitySlugsFromCanonicalPath(normalizedTour.seo.canonicalPath);
+    const { stateSlug, citySlug } = getStateCitySlugsFromCanonicalPath(
+      normalizedTour.seo.canonicalPath
+    );
     const related = getToursByCityUnified(stateSlug, citySlug)
       .filter(entry => {
         if (entry.href === normalizedTour.seo.canonicalPath) {
@@ -208,7 +216,8 @@ export default function Engine2TourPage({
         }
         if (
           normalizedCurrentProductCode &&
-          entry.tour.productCode?.trim().toUpperCase() === normalizedCurrentProductCode
+          entry.tour.productCode?.trim().toUpperCase() ===
+            normalizedCurrentProductCode
         ) {
           return false;
         }
@@ -217,7 +226,9 @@ export default function Engine2TourPage({
       .slice(0, 6);
 
     if (process.env.NODE_ENV !== "production") {
-      const engine6Count = related.filter(entry => entry.tour.engine === "engine6").length;
+      const engine6Count = related.filter(
+        entry => entry.tour.engine === "engine6"
+      ).length;
       console.info("[legacy-more-tours][engine2]", {
         city: normalizedTour.sourceCitySlug,
         currentSlug: normalizedTour.slug,
@@ -242,7 +253,23 @@ export default function Engine2TourPage({
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto max-w-6xl px-6 py-12">
-          <p className="text-xs uppercase tracking-[0.3em] text-white/70">
+          <nav aria-label="Breadcrumb" className="text-xs text-white/75">
+            {breadcrumbItems.map((item, index) => (
+              <span key={`${item.url}-${index}`}>
+                {index > 0 ? <span className="mx-2">/</span> : null}
+                {index === breadcrumbItems.length - 1 ? (
+                  <span className="text-white">{item.name}</span>
+                ) : (
+                  <Link href={item.url}>
+                    <a className="hover:text-white hover:underline">
+                      {item.name}
+                    </a>
+                  </Link>
+                )}
+              </span>
+            ))}
+          </nav>
+          <p className="mt-4 text-xs uppercase tracking-[0.3em] text-white/70">
             {tour.geo.city}, {tour.geo.region}
           </p>
           <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
@@ -282,8 +309,13 @@ export default function Engine2TourPage({
             />
           ) : null}
           <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90">
-            <span className="block">This tour is operated by an independent third-party provider.</span>
-            <span className="block">All Outdoor Adventures is a marketplace that connects travelers with local tour operators.</span>
+            <span className="block">
+              This tour is operated by an independent third-party provider.
+            </span>
+            <span className="block">
+              All Outdoor Adventures is a marketplace that connects travelers
+              with local tour operators.
+            </span>
           </p>
           <div className="mt-6 flex gap-3">
             {isViatorTour ? (
@@ -727,7 +759,9 @@ export default function Engine2TourPage({
               {relatedTours.map(entry => {
                 const related = entry.tour;
                 const relatedHeroImage =
-                  related.primaryImageUrl || related.heroImage || ENGINE2_DEFAULT_IMAGE;
+                  related.primaryImageUrl ||
+                  related.heroImage ||
+                  ENGINE2_DEFAULT_IMAGE;
 
                 return (
                   <Link key={entry.href} href={entry.href}>
@@ -740,7 +774,8 @@ export default function Engine2TourPage({
                       />
                       <div className="p-4">
                         <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                          {related.destination.city}, {related.destination.state}
+                          {related.destination.city},{" "}
+                          {related.destination.state}
                         </p>
                         <h3 className="mt-2 text-base font-semibold text-[#1f2a1f]">
                           {related.title}

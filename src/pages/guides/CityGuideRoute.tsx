@@ -1,5 +1,7 @@
+import RouteRedirect from "../../components/RouteRedirect";
 import GuideTemplate from "../../templates/GuideTemplate";
 import { buildCityGuide } from "../../data/guideData";
+import { resolveMissingInternationalCityGuideRedirect } from "../../utils/guides/guideResolver";
 
 type CityGuideRouteProps = {
   params: {
@@ -31,6 +33,17 @@ export default function CityGuideRoute({
   });
 
   if (!guide) {
+    if (regionType === "country") {
+      const redirectTo = resolveMissingInternationalCityGuideRedirect(
+        params.parentSlug,
+        params.citySlug
+      );
+
+      if (redirectTo) {
+        return <RouteRedirect to={redirectTo} />;
+      }
+    }
+
     return (
       <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
         <h1 className="text-2xl font-semibold">Guide not found</h1>

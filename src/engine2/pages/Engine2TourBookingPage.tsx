@@ -18,68 +18,10 @@ import {
   OPT_OUT_OPERATOR_SLUGS,
   recordBlockedFareharborEmbed,
 } from "../../utils/fareharbor/optOutOperators";
+import { buildEngine2TourBreadcrumbItems } from "../utils/buildEngine2BreadcrumbItems";
 
 type Engine2TourBookingPageProps = {
   tour: Engine2Tour;
-};
-
-const getDestinationBreadcrumbs = (tour: Engine2Tour) => {
-  if (tour.sourceCountrySlug === "canada") {
-    return [
-      { name: "Canada", url: "/destinations/world/canada" },
-      {
-        name: tour.geo.region,
-        url: `/destinations/world/canada/${tour.sourceProvinceSlug}`,
-      },
-      {
-        name: tour.geo.city,
-        url: `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}`,
-      },
-    ];
-  }
-
-  if (tour.sourceCountrySlug === "mexico") {
-    return [
-      { name: "Mexico", url: "/destinations/mexico" },
-      {
-        name: tour.geo.city,
-        url: `/destinations/mexico/${tour.sourceCitySlug}`,
-      },
-      {
-        name: "Tours",
-        url: `/destinations/mexico/${tour.sourceCitySlug}/tours`,
-      },
-    ];
-  }
-
-  if (tour.sourceCountrySlug && tour.sourceCountrySlug !== "united-states") {
-    return [
-      {
-        name: tour.geo.country,
-        url: `/destinations/${tour.sourceCountrySlug}`,
-      },
-      {
-        name: tour.geo.city,
-        url: `/destinations/${tour.sourceCountrySlug}/${tour.sourceCitySlug}`,
-      },
-      {
-        name: "Tours",
-        url: `/destinations/${tour.sourceCountrySlug}/${tour.sourceCitySlug}/tours`,
-      },
-    ];
-  }
-
-  return [
-    { name: "California", url: "/destinations/california" },
-    {
-      name: tour.geo.city,
-      url: `/destinations/california/${tour.sourceCitySlug}`,
-    },
-    {
-      name: "Tours",
-      url: `/destinations/california/${tour.sourceCitySlug}/tours`,
-    },
-  ];
 };
 
 export default function Engine2TourBookingPage({
@@ -111,15 +53,15 @@ export default function Engine2TourBookingPage({
     recordBlockedFareharborEmbed(fareharborOperatorSlug);
   }, [fareharborOperatorSlug, isBlockedFareharborEmbed]);
 
+  const breadcrumbItems = useMemo(
+    () => buildEngine2TourBreadcrumbItems(tour, { includeBook: true }),
+    [tour]
+  );
+
   const structuredDataNodes = useMemo(
     () => [
       ...getSiteStructuredDataNodes(),
-      buildBreadcrumbList([
-        { name: "Destinations", url: "/destinations" },
-        ...getDestinationBreadcrumbs(tour),
-        { name: tour.name, url: tour.seo.canonicalPath },
-        { name: "Book", url: `${tour.seo.canonicalPath}/book` },
-      ]),
+      buildBreadcrumbList(breadcrumbItems),
       {
         "@type": "Product",
         "@id": `${seo.canonical}/book#product`,
@@ -138,7 +80,7 @@ export default function Engine2TourBookingPage({
         },
       },
     ],
-    [isRental, seo.canonical, seo.og.image, tour]
+    [breadcrumbItems, isRental, seo.canonical, seo.og.image, tour]
   );
 
   useStructuredData(structuredDataNodes);
@@ -160,7 +102,23 @@ export default function Engine2TourBookingPage({
 
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto max-w-6xl px-6 py-12">
-          <p className="text-xs uppercase tracking-[0.3em] text-white/70">
+          <nav aria-label="Breadcrumb" className="text-xs text-white/75">
+            {breadcrumbItems.map((item, index) => (
+              <span key={`${item.url}-${index}`}>
+                {index > 0 ? <span className="mx-2">/</span> : null}
+                {index === breadcrumbItems.length - 1 ? (
+                  <span className="text-white">{item.name}</span>
+                ) : (
+                  <Link href={item.url}>
+                    <a className="hover:text-white hover:underline">
+                      {item.name}
+                    </a>
+                  </Link>
+                )}
+              </span>
+            ))}
+          </nav>
+          <p className="mt-4 text-xs uppercase tracking-[0.3em] text-white/70">
             {isRental ? "Equipment Rental" : "Booking"}
           </p>
           <h1 className="mt-3 text-3xl font-semibold md:text-5xl">

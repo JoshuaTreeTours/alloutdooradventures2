@@ -400,3 +400,97 @@ describe("buildSchemaGraph", () => {
     expect(touristTrip).toBeUndefined();
   });
 });
+
+const getBreadcrumbNode = (graph: Array<Record<string, unknown>>) =>
+  graph.find(node => node["@type"] === "BreadcrumbList") as {
+    itemListElement: Array<{ name: string; item: string }>;
+  };
+
+const amsterdamLegacyTour: Engine2Tour = {
+  ...baseTour,
+  id: "amsterdam-missing-guide",
+  sourceCountrySlug: "netherlands",
+  sourceCitySlug: "amsterdam",
+  slug: "amsterdam-canal-bike-tour",
+  name: "Amsterdam Canal Bike Tour",
+  geo: {
+    country: "Netherlands",
+    region: "North Holland",
+    city: "Amsterdam",
+    lat: 52.3676,
+    lng: 4.9041,
+  },
+  seo: {
+    title: "Amsterdam Canal Bike Tour",
+    description: "Explore Amsterdam by bike.",
+    canonicalPath:
+      "/destinations/netherlands/amsterdam/tours/amsterdam-canal-bike-tour",
+    ogImage: "https://example.com/amsterdam.jpg",
+  },
+};
+
+const parisLegacyTour: Engine2Tour = {
+  ...baseTour,
+  id: "paris-retained-guide",
+  sourceCountrySlug: "france",
+  sourceCitySlug: "paris",
+  slug: "paris-sightseeing-bike-tour",
+  name: "Paris Sightseeing Bike Tour",
+  geo: {
+    country: "France",
+    region: "Île-de-France",
+    city: "Paris",
+    lat: 48.8566,
+    lng: 2.3522,
+  },
+  seo: {
+    title: "Paris Sightseeing Bike Tour",
+    description: "Explore Paris by bike.",
+    canonicalPath:
+      "/destinations/france/paris/tours/paris-sightseeing-bike-tour",
+    ogImage: "https://example.com/paris.jpg",
+  },
+};
+
+describe("international legacy guide breadcrumbs", () => {
+  it("falls missing international city guides back to the country guide in JSON-LD", async () => {
+    const seo = {
+      title: amsterdamLegacyTour.seo.title,
+      description: amsterdamLegacyTour.seo.description,
+      canonical: `https://www.alloutdooradventures.com${amsterdamLegacyTour.seo.canonicalPath}`,
+      og: { image: amsterdamLegacyTour.seo.ogImage },
+    };
+    const graph = buildSchemaGraph(amsterdamLegacyTour, seo as never);
+    const breadcrumb = getBreadcrumbNode(graph);
+    const breadcrumbText = JSON.stringify(breadcrumb).toLowerCase();
+    const breadcrumbUrls = breadcrumb.itemListElement.map(item => item.item);
+
+    expect(breadcrumb).toBeTruthy();
+    expect(breadcrumbUrls).toContain("/guides/world/netherlands");
+    expect(breadcrumbUrls).not.toContain("/guides/world/netherlands/amsterdam");
+    expect(breadcrumbUrls).toContain(amsterdamLegacyTour.seo.canonicalPath);
+    expect(
+      breadcrumb.itemListElement.every(
+        (item, index) => item.name && item.item && index + 1
+      )
+    ).toBe(true);
+    expect(breadcrumbText).not.toContain("guide not found");
+  });
+
+  it("keeps retained international city-guide breadcrumbs when the guide exists", () => {
+    const seo = {
+      title: parisLegacyTour.seo.title,
+      description: parisLegacyTour.seo.description,
+      canonical: `https://www.alloutdooradventures.com${parisLegacyTour.seo.canonicalPath}`,
+      og: { image: parisLegacyTour.seo.ogImage },
+    };
+    const graph = buildSchemaGraph(parisLegacyTour, seo as never);
+    const breadcrumbUrls = getBreadcrumbNode(graph).itemListElement.map(
+      item => item.item
+    );
+
+    expect(breadcrumbUrls).toContain("/guides/world/france");
+    expect(breadcrumbUrls).toContain("/guides/world/france/paris");
+    expect(breadcrumbUrls).toContain(parisLegacyTour.seo.canonicalPath);
+  });
+});

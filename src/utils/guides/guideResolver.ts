@@ -1,3 +1,4 @@
+import { buildCountryGuide } from "../../data/guideData";
 import { getGuideStates } from "./guideRegistry";
 import { hasUsGuide } from "./guideIndex";
 
@@ -45,4 +46,64 @@ export const resolveMissingUsCityGuideRedirect = (
   }
 
   return buildUsStateGuideHref(stateSlug);
+};
+
+export type ResolvedInternationalGuideHref = {
+  href: string;
+  countryHref: string;
+  hasCityGuide: boolean;
+  countrySlug: string;
+  citySlug: string;
+};
+
+const buildInternationalCountryGuideHref = (countrySlug: string) =>
+  `/guides/world/${countrySlug}`;
+
+const buildInternationalCityGuideHref = (
+  countrySlug: string,
+  citySlug: string
+) => `${buildInternationalCountryGuideHref(countrySlug)}/${citySlug}`;
+
+export const hasInternationalCountryGuide = (countrySlug: string): boolean =>
+  Boolean(buildCountryGuide(countrySlug));
+
+const RETAINED_INTERNATIONAL_CITY_GUIDES = new Set(["france/paris"]);
+
+export const hasInternationalCityGuide = (
+  countrySlug: string,
+  citySlug: string
+): boolean =>
+  RETAINED_INTERNATIONAL_CITY_GUIDES.has(`${countrySlug}/${citySlug}`);
+
+export const resolveInternationalGuideHref = (
+  countrySlug: string,
+  citySlug: string
+): ResolvedInternationalGuideHref => {
+  const countryHref = buildInternationalCountryGuideHref(countrySlug);
+  const hasCityGuide = hasInternationalCityGuide(countrySlug, citySlug);
+
+  return {
+    href: hasCityGuide
+      ? buildInternationalCityGuideHref(countrySlug, citySlug)
+      : countryHref,
+    countryHref,
+    hasCityGuide,
+    countrySlug,
+    citySlug,
+  };
+};
+
+export const resolveMissingInternationalCityGuideRedirect = (
+  countrySlug: string,
+  citySlug: string
+): string | null => {
+  if (hasInternationalCityGuide(countrySlug, citySlug)) {
+    return null;
+  }
+
+  if (!hasInternationalCountryGuide(countrySlug)) {
+    return null;
+  }
+
+  return buildInternationalCountryGuideHref(countrySlug);
 };

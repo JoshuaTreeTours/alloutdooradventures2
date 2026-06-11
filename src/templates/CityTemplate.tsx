@@ -25,7 +25,10 @@ import {
   mergeEngine6LiveFieldsIntoTour,
   type Engine6LiveProductFields,
 } from "../engine6/liveProductFields";
-import { resolveUsGuideHref } from "../utils/guides/guideResolver";
+import {
+  resolveInternationalGuideHref,
+  resolveUsGuideHref,
+} from "../utils/guides/guideResolver";
 
 type CityTemplateProps = {
   state: StateDestination;
@@ -158,16 +161,25 @@ export default function CityTemplate({
     guideRegionType === "state"
       ? resolveUsGuideHref(guideParentSlug, city.slug)
       : null;
+  const resolvedInternationalGuide =
+    guideRegionType === "country"
+      ? resolveInternationalGuideHref(guideParentSlug, city.slug)
+      : null;
   const canonicalCityHref = `${guideBasePath}/${guideParentSlug}/${city.slug}`;
   const resolvedGuideHref =
-    resolvedUsGuide?.href ?? `${guideBasePath}/${guideParentSlug}/${city.slug}`;
+    resolvedUsGuide?.href ??
+    resolvedInternationalGuide?.href ??
+    canonicalCityHref;
   const guideParent =
     guideRegionType === "country"
       ? getGuideCountryBySlug(guideParentSlug)
       : getGuideStateBySlug(guideParentSlug);
-  const cityGuide = guideParent?.cities.find(
-    guideCity => guideCity.slug === city.slug
-  );
+  const cityGuide =
+    guideRegionType === "country"
+      ? resolvedInternationalGuide?.hasCityGuide
+        ? guideParent?.cities.find(guideCity => guideCity.slug === city.slug)
+        : null
+      : guideParent?.cities.find(guideCity => guideCity.slug === city.slug);
   const guideDescription = cityGuide
     ? "Review the city guide and explore broader planning tips for the region."
     : `Explore the canonical ${state.name} guide for regional planning tips and nearby cities.`;
