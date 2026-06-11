@@ -8,10 +8,27 @@ type GuideRegistryRecord = {
   dataImport: GuidePageData;
 };
 
-const usGuideModules = import.meta.glob("../../data/guides/us/*/*.json", {
-  eager: true,
-  import: "default",
-}) as Record<string, GuidePageData>;
+const loadUsGuideModules = () => {
+  const glob = (
+    import.meta as ImportMeta & {
+      glob?: (
+        pattern: string,
+        options: { eager: true; import: "default" }
+      ) => Record<string, GuidePageData>;
+    }
+  ).glob;
+
+  if (typeof glob !== "function") {
+    return {} as Record<string, GuidePageData>;
+  }
+
+  return glob("../../data/guides/us/*/*.json", {
+    eager: true,
+    import: "default",
+  }) as Record<string, GuidePageData>;
+};
+
+const usGuideModules = loadUsGuideModules();
 
 const parseGuidePath = (path: string) => {
   const match = path.match(/\/us\/([^/]+)\/([^/]+)\.json$/);

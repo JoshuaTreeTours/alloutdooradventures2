@@ -18,12 +18,13 @@ import {
   OPT_OUT_OPERATOR_SLUGS,
   recordBlockedFareharborEmbed,
 } from "../../utils/fareharbor/optOutOperators";
+import { resolveInternationalGuideBreadcrumb } from "../../utils/guides/internationalGuideBreadcrumbs";
 
 type Engine2TourBookingPageProps = {
   tour: Engine2Tour;
 };
 
-const getDestinationBreadcrumbs = (tour: Engine2Tour) => {
+export const getDestinationBreadcrumbs = (tour: Engine2Tour) => {
   if (tour.sourceCountrySlug === "canada") {
     return [
       { name: "Canada", url: "/destinations/world/canada" },
@@ -53,18 +54,31 @@ const getDestinationBreadcrumbs = (tour: Engine2Tour) => {
   }
 
   if (tour.sourceCountrySlug && tour.sourceCountrySlug !== "united-states") {
+    const safeGuideBreadcrumb = resolveInternationalGuideBreadcrumb({
+      countrySlug: tour.sourceCountrySlug,
+      citySlug: tour.sourceCitySlug,
+      countryName: tour.geo.country,
+      cityName: tour.geo.city,
+    });
+    const destinationPath = `/destinations/${tour.sourceCountrySlug}/${tour.sourceCitySlug}`;
+    const destinationCrumbs = safeGuideBreadcrumb
+      ? [safeGuideBreadcrumb]
+      : [
+          {
+            name: tour.geo.country,
+            url: `/destinations/${tour.sourceCountrySlug}`,
+          },
+          {
+            name: tour.geo.city,
+            url: destinationPath,
+          },
+        ];
+
     return [
-      {
-        name: tour.geo.country,
-        url: `/destinations/${tour.sourceCountrySlug}`,
-      },
-      {
-        name: tour.geo.city,
-        url: `/destinations/${tour.sourceCountrySlug}/${tour.sourceCitySlug}`,
-      },
+      ...destinationCrumbs,
       {
         name: "Tours",
-        url: `/destinations/${tour.sourceCountrySlug}/${tour.sourceCitySlug}/tours`,
+        url: `${destinationPath}/tours`,
       },
     ];
   }

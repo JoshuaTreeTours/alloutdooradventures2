@@ -5,9 +5,9 @@ import {
 import { cleanImageUrls, toSchemaImageValue } from "../utils/cleanImageUrls";
 import { resolveUsState } from "../utils/geo/usStates";
 import type { TourRewriteV3_1 } from "../utils/fh/transformToAOAContent";
+import { resolveInternationalGuideBreadcrumb } from "../utils/guides/internationalGuideBreadcrumbs";
 
 export const ENABLE_TOUR_SCHEMA_V1 = true;
-
 
 type SchemaOffer = Record<string, unknown>;
 
@@ -110,12 +110,46 @@ export const buildTourBreadcrumbNode = ({
     { name: "Destinations", url: "/destinations" },
   ];
 
-  pathSegments.forEach((segment, index) => {
-    crumbs.push({
-      name: toSlugLabel(segment),
-      url: `/destinations/${pathSegments.slice(0, index + 1).join("/")}`,
+  const isLegacyInternationalCityPath =
+    pathSegments.length === 2 && pathSegments[0] !== "united-states";
+
+  if (isLegacyInternationalCityPath) {
+    const [countrySlug, citySlug] = pathSegments;
+    const safeGuideBreadcrumb = resolveInternationalGuideBreadcrumb({
+      countrySlug,
+      citySlug,
+      countryName: toSlugLabel(countrySlug),
+      cityName: toSlugLabel(citySlug),
     });
-  });
+
+    if (
+      safeGuideBreadcrumb?.url === `/guides/world/${countrySlug}/${citySlug}`
+    ) {
+      crumbs.push({
+        name: toSlugLabel(countrySlug),
+        url: `/guides/world/${countrySlug}`,
+      });
+      crumbs.push(safeGuideBreadcrumb);
+    } else if (safeGuideBreadcrumb) {
+      crumbs.push(safeGuideBreadcrumb);
+    } else {
+      crumbs.push({
+        name: toSlugLabel(countrySlug),
+        url: `/destinations/${countrySlug}`,
+      });
+      crumbs.push({
+        name: toSlugLabel(citySlug),
+        url: `/destinations/${countrySlug}/${citySlug}`,
+      });
+    }
+  } else {
+    pathSegments.forEach((segment, index) => {
+      crumbs.push({
+        name: toSlugLabel(segment),
+        url: `/destinations/${pathSegments.slice(0, index + 1).join("/")}`,
+      });
+    });
+  }
 
   crumbs.push({
     name: "Tours",
@@ -188,7 +222,9 @@ export function buildTourSchemaGraph(args: {
   const hasGeo =
     typeof args.place?.lat === "number" && typeof args.place?.lng === "number";
   const normalizedUsState =
-    args.place?.countryCode === "US" ? resolveUsState(args.place?.region) : null;
+    args.place?.countryCode === "US"
+      ? resolveUsState(args.place?.region)
+      : null;
   const regionName = normalizedUsState?.name ?? args.place?.region ?? null;
   const regionValue = normalizedUsState?.code ?? regionName;
 
@@ -314,18 +350,16 @@ export function buildTourSchemaGraph(args: {
         touristDestination: { "@id": placeId },
         ...(!args.trip.suppressFallbackItinerary || args.trip.itinerary
           ? {
-              itinerary:
-                args.trip.itinerary ??
-                {
-                  "@type": "ItemList",
-                  itemListElement: [
-                    {
-                      "@type": "ListItem",
-                      position: 1,
-                      item: { "@id": placeId },
-                    },
-                  ],
-                },
+              itinerary: args.trip.itinerary ?? {
+                "@type": "ItemList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    item: { "@id": placeId },
+                  },
+                ],
+              },
             }
           : {}),
         ...(args.trip.touristType

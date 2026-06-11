@@ -132,9 +132,10 @@ describe("buildTourSchemaGraph", () => {
     });
   });
 
-
   it("aligns WebPage.primaryImageOfPage.url and WebPage.image to the hero image", () => {
-    const graph = buildTourSchemaGraph(baseArgs)["@graph"] as Array<Record<string, unknown>>;
+    const graph = buildTourSchemaGraph(baseArgs)["@graph"] as Array<
+      Record<string, unknown>
+    >;
     const webPage = graph.find(node => node["@type"] === "WebPage") as {
       image: string;
       primaryImageOfPage: { url: string };
@@ -190,5 +191,59 @@ describe("buildTourSchemaGraph", () => {
         durationMinutes: 180,
       })
     ).toBe("PT3H");
+  });
+});
+
+describe("international legacy tour guide breadcrumbs", () => {
+  const breadcrumbUrlsFor = (canonicalPath: string) => {
+    const breadcrumb = buildTourBreadcrumbNode({
+      canonicalPath,
+      tourName: "Legacy International Tour",
+    });
+
+    return breadcrumb.itemListElement.map(item => item.item);
+  };
+
+  const breadcrumbNamesFor = (canonicalPath: string) => {
+    const breadcrumb = buildTourBreadcrumbNode({
+      canonicalPath,
+      tourName: "Legacy International Tour",
+    });
+
+    return breadcrumb.itemListElement.map(item => item.name);
+  };
+
+  it("retains the Amsterdam city-guide breadcrumb when that guide builds", () => {
+    const urls = breadcrumbUrlsFor(
+      "/destinations/netherlands/amsterdam/tours/amsterdam-bike-tour"
+    );
+
+    expect(urls).toContain("/guides/world/netherlands/amsterdam");
+    expect(urls.join(" ")).not.toContain("/guides/world/netherlands/tours");
+  });
+
+  it("retains the Paris city-guide breadcrumb when that guide builds", () => {
+    const urls = breadcrumbUrlsFor(
+      "/destinations/france/paris/tours/paris-louvre-tour"
+    );
+
+    expect(urls).toContain("/guides/world/france/paris");
+  });
+
+  it("falls back to the country guide for a fake missing minor city", () => {
+    const urls = breadcrumbUrlsFor(
+      "/destinations/netherlands/tiny-missing-city/tours/minor-city-tour"
+    );
+
+    expect(urls).toContain("/guides/world/netherlands");
+    expect(urls).not.toContain("/guides/world/netherlands/tiny-missing-city");
+  });
+
+  it("does not render Guide not found as an international breadcrumb label", () => {
+    const names = breadcrumbNamesFor(
+      "/destinations/netherlands/tiny-missing-city/tours/minor-city-tour"
+    );
+
+    expect(names.join(" ")).not.toContain("Guide not found");
   });
 });
