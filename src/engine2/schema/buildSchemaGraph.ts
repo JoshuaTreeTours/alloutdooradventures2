@@ -1,6 +1,7 @@
 import {
   getSiteStructuredDataNodes,
   buildWebPageStructuredData,
+  buildBreadcrumbList,
   SITE_ORGANIZATION_ID,
   SITE_BRAND_ID,
   SITE_WEBSITE_ID,
@@ -20,6 +21,7 @@ import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import type { AOAEnrichedTourContent } from "../../utils/fh/transformFareHarborToAOAContent";
 import type { TourRewriteV3_1 } from "../../utils/fh/transformToAOAContent";
 import { buildTourItinerary } from "../../utils/buildTourItinerary";
+import { buildEngine2TourBreadcrumbItems } from "../utils/buildEngine2BreadcrumbItems";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -299,9 +301,12 @@ export const buildSchemaGraph = (
     ...getSiteStructuredDataNodes(),
     ...tourNodes,
     ...(faqPageNode ? [faqPageNode] : []),
-    buildTourBreadcrumbNode({
-      canonicalPath: rewriteV3Content?.canonicalPath ?? tour.seo.canonicalPath,
-      tourName: tour.name,
-    }),
+    tour.sourceCountrySlug && tour.sourceCountrySlug !== "united-states"
+      ? buildBreadcrumbList(buildEngine2TourBreadcrumbItems(tour))
+      : buildTourBreadcrumbNode({
+          canonicalPath:
+            rewriteV3Content?.canonicalPath ?? tour.seo.canonicalPath,
+          tourName: tour.name,
+        }),
   ];
 };
