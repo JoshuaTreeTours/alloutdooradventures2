@@ -230,6 +230,20 @@ describe("international legacy tour guide breadcrumbs", () => {
     expect(urls).toContain("/guides/world/france/paris");
   });
 
+  it("retains Mexico city-guide breadcrumbs only when the guide route renders", () => {
+    const caboUrls = breadcrumbUrlsFor(
+      "/destinations/mexico/cabo-san-lucas/tours/cabo-snorkel-tour"
+    );
+    const puertoVallartaUrls = breadcrumbUrlsFor(
+      "/destinations/mexico/puerto-vallarta/tours/puerto-vallarta-sailing"
+    );
+
+    expect(caboUrls).toContain("/guides/world/mexico/cabo-san-lucas");
+    expect(puertoVallartaUrls).toContain(
+      "/guides/world/mexico/puerto-vallarta"
+    );
+  });
+
   it("falls back to the country guide for a fake missing minor city", () => {
     const urls = breadcrumbUrlsFor(
       "/destinations/netherlands/tiny-missing-city/tours/minor-city-tour"
