@@ -2,6 +2,11 @@ import { EUROPE_COUNTRIES, US_STATES, slugify } from "./tourCatalog";
 import { prioritizeEngine6Tours } from "./tours";
 import { tours } from "./tours";
 import type { Tour } from "./tours.types";
+import {
+  getCanonicalInternationalGuideCityName,
+  getCanonicalInternationalGuideCitySlug,
+  getInternationalGuideCitySlugGroup,
+} from "./internationalGuideAliases";
 
 export type GuidePlace =
   | {
@@ -65,11 +70,19 @@ const matchesActivity = (tour: Tour, activitySlug: string) =>
   tour.categories?.includes(activitySlug) ||
   tour.primaryCategory === activitySlug;
 
-const buildCitySummaries = (tourList: Tour[]): GuideCitySummary[] => {
+const buildCitySummaries = (
+  tourList: Tour[],
+  countrySlug?: string
+): GuideCitySummary[] => {
   const cities = new Map<string, GuideCitySummary>();
 
   tourList.forEach(tour => {
-    const key = tour.destination.citySlug;
+    const key = countrySlug
+      ? getCanonicalInternationalGuideCitySlug(
+          countrySlug,
+          tour.destination.citySlug
+        )
+      : tour.destination.citySlug;
     if (!key) {
       return;
     }
@@ -81,8 +94,14 @@ const buildCitySummaries = (tourList: Tour[]): GuideCitySummary[] => {
     }
 
     cities.set(key, {
-      name: tour.destination.city,
-      slug: tour.destination.citySlug,
+      name: countrySlug
+        ? getCanonicalInternationalGuideCityName(
+            countrySlug,
+            tour.destination.citySlug,
+            tour.destination.city
+          )
+        : tour.destination.city,
+      slug: key,
       tourCount: 1,
     });
   });
@@ -102,7 +121,11 @@ const getToursForPlace = (place: GuidePlace): Tour[] => {
   }
 
   return tours.filter(tour => {
-    if (tour.destination.citySlug !== place.slug) {
+    const citySlugGroup =
+      place.regionType === "country"
+        ? getInternationalGuideCitySlugGroup(place.parentSlug, place.slug)
+        : [place.slug];
+    if (!citySlugGroup.includes(tour.destination.citySlug)) {
       return false;
     }
 
@@ -189,7 +212,10 @@ export const getTopCitiesForPlace = (
   limit = 6
 ): GuideCitySummary[] => {
   const toursForPlace = getToursForPlace(place);
-  return buildCitySummaries(toursForPlace)
+  return buildCitySummaries(
+    toursForPlace,
+    place.type === "country" ? place.slug : undefined
+  )
     .sort((a, b) => b.tourCount - a.tourCount)
     .slice(0, limit);
 };

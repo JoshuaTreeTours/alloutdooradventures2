@@ -68,6 +68,94 @@ export const DESTINATION_CITY_ALIASES: DestinationAlias[] = [
       "same coordinates",
     ],
   },
+  {
+    countrySlug: "portugal",
+    aliasCitySlug: "lisboa",
+    canonicalCitySlug: "lisbon",
+    canonicalCityName: "Lisbon",
+    aliases: ["Lisboa"],
+    signals: ["local-language slug", "same metro inventory"],
+  },
+  {
+    countrySlug: "spain",
+    aliasCitySlug: "alcdia",
+    canonicalCitySlug: "alcudia",
+    canonicalCityName: "Alcudia",
+    aliases: ["Alcúdia"],
+    signals: ["diacritic-stripped slug", "same metro inventory"],
+  },
+  {
+    countrySlug: "spain",
+    aliasCitySlug: "calvi",
+    canonicalCitySlug: "calvia",
+    canonicalCityName: "Calvia",
+    aliases: ["Calvià"],
+    signals: ["diacritic-stripped slug", "same metro inventory"],
+  },
+  {
+    countrySlug: "spain",
+    aliasCitySlug: "dei",
+    canonicalCitySlug: "deia",
+    canonicalCityName: "Deia",
+    aliases: ["Deià"],
+    signals: ["diacritic-stripped slug", "same metro inventory"],
+  },
+  {
+    countrySlug: "spain",
+    aliasCitySlug: "l-estartit",
+    canonicalCitySlug: "lestartit",
+    canonicalCityName: "L'Estartit",
+    aliases: ["L'Estartit"],
+    signals: ["punctuation variant", "same metro inventory"],
+  },
+  {
+    countrySlug: "spain",
+    aliasCitySlug: "pollena",
+    canonicalCitySlug: "pollenca",
+    canonicalCityName: "Pollenca",
+    aliases: ["Pollença"],
+    signals: ["diacritic-stripped slug", "same metro inventory"],
+  },
+  {
+    countrySlug: "spain",
+    aliasCitySlug: "san-sebastin",
+    canonicalCitySlug: "san-sebastian",
+    canonicalCityName: "San Sebastian",
+    aliases: ["San Sebastián"],
+    signals: ["diacritic-stripped slug", "same metro inventory"],
+  },
+  {
+    countrySlug: "spain",
+    aliasCitySlug: "sller",
+    canonicalCitySlug: "soller",
+    canonicalCityName: "Soller",
+    aliases: ["Sóller"],
+    signals: ["diacritic-stripped slug", "same metro inventory"],
+  },
+  {
+    countrySlug: "spain",
+    aliasCitySlug: "valncia",
+    canonicalCitySlug: "valencia",
+    canonicalCityName: "Valencia",
+    aliases: ["València"],
+    signals: ["diacritic-stripped slug", "same metro inventory"],
+  },
+  {
+    countrySlug: "spain",
+    aliasCitySlug: "xbia",
+    canonicalCitySlug: "xabia",
+    canonicalCityName: "Xabia",
+    aliases: ["Xàbia"],
+    signals: ["diacritic-stripped slug", "same metro inventory"],
+  },
+  {
+    countrySlug: "united-states",
+    aliasCitySlug: "santa-brbara",
+    canonicalCitySlug: "santa-barbara",
+    canonicalCityName: "Santa Barbara",
+    aliases: ["Santa Bárbara"],
+    signals: ["diacritic-stripped world-route duplicate"],
+  },
 ];
 
 const aliasByKey = new Map(
@@ -109,23 +197,24 @@ export const getDestinationCitySlugGroup = (
     countrySlug,
     citySlug
   );
-  return [
-    ...(canonicalGroupsByKey.get(`${countrySlug}/${canonicalCitySlug}`) ??
-      new Set([canonicalCitySlug])),
-  ];
+  return Array.from(
+    canonicalGroupsByKey.get(`${countrySlug}/${canonicalCitySlug}`) ??
+      new Set([canonicalCitySlug])
+  );
 };
 
 export const canonicalizeDestinationPath = (pathname: string) => {
   const cityMatch = pathname.match(
-    /^\/destinations\/europe\/([^/]+)\/cities\/([^/]+)(\/tours)?\/?$/
+    /^\/destinations\/(europe|world)\/([^/]+)\/cities\/([^/]+)(\/tours)?\/?$/
   );
   if (cityMatch) {
-    const [, countrySlug, citySlug, toursSuffix = ""] = cityMatch;
+    const [, destinationScope, countrySlug, citySlug, toursSuffix = ""] =
+      cityMatch;
     const canonicalCitySlug = getCanonicalDestinationCitySlug(
       countrySlug,
       citySlug
     );
-    return `/destinations/europe/${countrySlug}/cities/${canonicalCitySlug}${toursSuffix}`;
+    return `/destinations/${destinationScope}/${countrySlug}/cities/${canonicalCitySlug}${toursSuffix}`;
   }
 
   const tourMatch = pathname.match(

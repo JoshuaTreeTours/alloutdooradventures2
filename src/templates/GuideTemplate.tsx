@@ -1,10 +1,11 @@
-import type { ReactNode } from "react";
+import { useMemo, type ReactNode } from "react";
 import { Link } from "wouter";
 
 import GuideInternalLinks from "../components/GuideInternalLinks";
 import GuideLinkPill from "../components/GuideLinkPill";
 import Image from "../components/Image";
 import Seo from "../components/Seo";
+import { useStructuredData } from "../components/StructuredDataProvider";
 import { getCityBySlugs, getStateBySlug } from "../data/destinations";
 import type { GuideContent, GuideLink } from "../data/guideData";
 import { getGuideCountryBySlug, getGuideStateBySlug } from "../data/guideData";
@@ -13,6 +14,7 @@ import { getToursByCity } from "../data/tours";
 import { resolveHeroImageForRoute } from "../utils/hero";
 import { hasUsGuide } from "../utils/guides/guideIndex";
 import { buildMetaDescription } from "../utils/seo";
+import { buildBreadcrumbList } from "../utils/structuredData";
 import {
   buildCityGuideDisplayTitle,
   buildCityGuideH1,
@@ -164,6 +166,25 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
       city: destinationCity,
       cityTours: cityToursForSeo,
     }) ?? undefined;
+  const structuredDataNodes = useMemo(
+    () => [
+      buildBreadcrumbList(
+        guide.breadcrumbs.map(crumb => ({
+          name: crumb.label,
+          url: crumb.href,
+        }))
+      ),
+      {
+        "@type": guide.type === "city" ? "TouristDestination" : "Place",
+        name: guide.name,
+        description: guideDescription,
+        url: guideUrl,
+      },
+    ],
+    [guide.breadcrumbs, guide.name, guide.type, guideDescription, guideUrl]
+  );
+
+  useStructuredData(structuredDataNodes);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
