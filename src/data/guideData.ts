@@ -32,6 +32,11 @@ import {
   getCanonicalInternationalGuideCitySlug,
   getInternationalGuideCitySlugGroup,
 } from "./internationalGuideAliases";
+import {
+  getGeneratedCityDestinationHref,
+  getGeneratedCityToursHref,
+  getGeneratedCountryDestinationHref,
+} from "../utils/destinations/liveInternationalDestinations";
 
 export type GuideCitySummary = {
   name: string;
@@ -94,9 +99,6 @@ export type { CityGuideIssue } from "./cityGuideContent";
 export { auditCityGuideContent } from "./cityGuideContent";
 
 const US_STATE_SLUGS = new Set(US_STATES.map(state => slugify(state)));
-const EUROPE_COUNTRY_SLUGS = new Set(
-  EUROPE_COUNTRIES.map(country => slugify(country))
-);
 const CATEGORY_ACTIVITY_SLUGS = new Set([
   "cycling",
   "hiking",
@@ -828,17 +830,16 @@ export const getGuideCountryBySlug = (countrySlug: string) =>
   getGuideCountries().find(country => country.slug === countrySlug);
 
 export const getCountryDestinationHref = (countrySlug: string) =>
-  EUROPE_COUNTRY_SLUGS.has(countrySlug)
-    ? `/destinations/europe/${countrySlug}`
-    : `/destinations/world/${countrySlug}`;
+  getGeneratedCountryDestinationHref(countrySlug) ??
+  `/guides/world/${countrySlug}`;
 
 const getInternationalCityBasePath = (countrySlug: string, citySlug: string) =>
-  EUROPE_COUNTRY_SLUGS.has(countrySlug)
-    ? `/destinations/europe/${countrySlug}/cities/${citySlug}`
-    : `/destinations/world/${countrySlug}/cities/${citySlug}`;
+  getGeneratedCityDestinationHref(countrySlug, citySlug) ??
+  `/guides/world/${countrySlug}/${citySlug}`;
 
 const getInternationalCityToursPath = (countrySlug: string, citySlug: string) =>
-  `${getInternationalCityBasePath(countrySlug, citySlug)}/tours`;
+  getGeneratedCityToursHref(countrySlug, citySlug) ??
+  `/guides/world/${countrySlug}/${citySlug}`;
 
 const buildBestTimeToVisit = (placeName: string) =>
   `Tour availability in ${placeName} varies by operator and activity, so check live calendars and choose dates that match your preferred pace.`;

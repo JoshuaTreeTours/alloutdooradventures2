@@ -13,7 +13,6 @@ import {
   getTopCitiesForPlace,
   getTopToursForPlace,
   getTourCountsForActivities,
-  isEuropeCountrySlug,
 } from "../data/tourIndex";
 import { slugify } from "../data/tourCatalog";
 import {
@@ -22,6 +21,11 @@ import {
   type Engine6LiveProductFields,
 } from "../engine6/liveProductFields";
 import { hasUsGuide } from "../utils/guides/guideIndex";
+import {
+  getGeneratedCityDestinationHref,
+  getGeneratedCityToursHref,
+  getGeneratedCountryCategoryHref,
+} from "../utils/destinations/liveInternationalDestinations";
 import TourCard from "./TourCard";
 
 type GuideInternalLinksProps = {
@@ -114,18 +118,24 @@ const buildCategoryHref = (
   }
 
   if (guide.type === "country") {
-    return isEuropeCountrySlug(guide.slug)
-      ? `/destinations/europe/${guide.slug}/${routeSlug}`
-      : `/destinations/world/${guide.slug}/${routeSlug}`;
+    return (
+      getGeneratedCountryCategoryHref(guide.slug, routeSlug) ??
+      `/guides/world/${guide.slug}`
+    );
   }
 
   if (guide.regionType === "state") {
     return `/destinations/${guide.parentSlug}/${guide.slug}/tours?activity=${activitySlug}`;
   }
 
-  return isEuropeCountrySlug(guide.parentSlug ?? "")
-    ? `/destinations/europe/${guide.parentSlug}/cities/${guide.slug}/tours?activity=${activitySlug}`
-    : `/destinations/world/${guide.parentSlug}/cities/${guide.slug}/tours?activity=${activitySlug}`;
+  const cityToursHref = getGeneratedCityToursHref(
+    guide.parentSlug ?? "",
+    guide.slug
+  );
+
+  return cityToursHref
+    ? `${cityToursHref}?activity=${activitySlug}`
+    : `/guides/world/${guide.parentSlug}/${guide.slug}`;
 };
 
 const buildGuidePlace = (guide: GuideContent) => {
@@ -209,9 +219,9 @@ const buildAreaLinks = (guide: GuideContent): GuideLink[] => {
     if (guide.parentSlug) {
       links.push({
         label: `${guide.name} destination`,
-        href: isEuropeCountrySlug(guide.parentSlug)
-          ? `/destinations/europe/${guide.parentSlug}/cities/${guide.slug}`
-          : `/destinations/world/${guide.parentSlug}/cities/${guide.slug}`,
+        href:
+          getGeneratedCityDestinationHref(guide.parentSlug, guide.slug) ??
+          `/guides/world/${guide.parentSlug}/${guide.slug}`,
       });
     }
     return links;
