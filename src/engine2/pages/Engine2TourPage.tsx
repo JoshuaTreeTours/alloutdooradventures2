@@ -19,6 +19,7 @@ import {
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
 import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
+import { resolveSafeTourListHref } from "../../utils/tours/tourNavigation";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -118,10 +119,12 @@ export default function Engine2TourPage({
   const bookingPath = isSuppressedFareHarborBookingPage(tour)
     ? ""
     : `${tour.seo.canonicalPath}/book`;
-  const backToToursPath = tour.seo.canonicalPath.replace(
-    /\/tours\/[^/]+$/,
-    "/tours"
-  );
+  const backToToursPath = resolveSafeTourListHref({
+    canonicalPath: tour.seo.canonicalPath,
+    countrySlug: tour.sourceCountrySlug,
+    stateSlug: tour.sourceProvinceSlug,
+    citySlug: tour.sourceCitySlug,
+  });
   const basePrice = parsePrice(tour.pricing?.price ?? null);
   const displayPrice = applyPriceFloor(basePrice);
   const enginePriceLabel =
@@ -197,7 +200,9 @@ export default function Engine2TourPage({
 
   const relatedTours = useMemo(() => {
     const normalizedCurrentProductCode = tour.id?.trim().toUpperCase();
-    const { stateSlug, citySlug } = getStateCitySlugsFromCanonicalPath(normalizedTour.seo.canonicalPath);
+    const { stateSlug, citySlug } = getStateCitySlugsFromCanonicalPath(
+      normalizedTour.seo.canonicalPath
+    );
     const related = getToursByCityUnified(stateSlug, citySlug)
       .filter(entry => {
         if (entry.href === normalizedTour.seo.canonicalPath) {
@@ -208,7 +213,8 @@ export default function Engine2TourPage({
         }
         if (
           normalizedCurrentProductCode &&
-          entry.tour.productCode?.trim().toUpperCase() === normalizedCurrentProductCode
+          entry.tour.productCode?.trim().toUpperCase() ===
+            normalizedCurrentProductCode
         ) {
           return false;
         }
@@ -217,7 +223,9 @@ export default function Engine2TourPage({
       .slice(0, 6);
 
     if (process.env.NODE_ENV !== "production") {
-      const engine6Count = related.filter(entry => entry.tour.engine === "engine6").length;
+      const engine6Count = related.filter(
+        entry => entry.tour.engine === "engine6"
+      ).length;
       console.info("[legacy-more-tours][engine2]", {
         city: normalizedTour.sourceCitySlug,
         currentSlug: normalizedTour.slug,
@@ -282,8 +290,13 @@ export default function Engine2TourPage({
             />
           ) : null}
           <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90">
-            <span className="block">This tour is operated by an independent third-party provider.</span>
-            <span className="block">All Outdoor Adventures is a marketplace that connects travelers with local tour operators.</span>
+            <span className="block">
+              This tour is operated by an independent third-party provider.
+            </span>
+            <span className="block">
+              All Outdoor Adventures is a marketplace that connects travelers
+              with local tour operators.
+            </span>
           </p>
           <div className="mt-6 flex gap-3">
             {isViatorTour ? (
@@ -727,7 +740,9 @@ export default function Engine2TourPage({
               {relatedTours.map(entry => {
                 const related = entry.tour;
                 const relatedHeroImage =
-                  related.primaryImageUrl || related.heroImage || ENGINE2_DEFAULT_IMAGE;
+                  related.primaryImageUrl ||
+                  related.heroImage ||
+                  ENGINE2_DEFAULT_IMAGE;
 
                 return (
                   <Link key={entry.href} href={entry.href}>
@@ -740,7 +755,8 @@ export default function Engine2TourPage({
                       />
                       <div className="p-4">
                         <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                          {related.destination.city}, {related.destination.state}
+                          {related.destination.city},{" "}
+                          {related.destination.state}
                         </p>
                         <h3 className="mt-2 text-base font-semibold text-[#1f2a1f]">
                           {related.title}

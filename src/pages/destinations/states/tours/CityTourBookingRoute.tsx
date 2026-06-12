@@ -33,7 +33,7 @@ import {
   recordBlockedFareharborEmbed,
 } from "../../../../utils/fareharbor/optOutOperators";
 import { formatStartingPrice } from "../../../../lib/pricing";
-import { resolveUsGuideHref } from "../../../../utils/guides/guideResolver";
+import { resolveDestinationGuideHref } from "../../../../utils/guides/guideResolver";
 import { buildBookingMeta } from "../../../../lib/tourMeta";
 import {
   buildReserveActionStructuredData,
@@ -49,6 +49,7 @@ import {
   isSuppressedFareHarborBookingPage,
 } from "../../../../utils/fareharbor/suppressedBookingPages";
 import RemovedTourGone from "../../../RemovedTourGone";
+import { resolveSafeTourListHref } from "../../../../utils/tours/tourNavigation";
 
 type CityTourBookingRouteProps = {
   params: {
@@ -218,17 +219,29 @@ export default function CityTourBookingRoute({
       ? `${tour.destination.city}, ${tour.destination.state}`
       : undefined;
 
-  const cityHref = resolveUsGuideHref(state.slug, city.slug).href;
-  const stateHref = state.isFallback
-    ? "/destinations"
-    : `/destinations/states/${state.slug}`;
-  const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
-  const tourDetailHref = isFlagstaff
-    ? getFlagstaffTourDetailPath(tour)
-    : `${toursHref}/${tour.slug}`;
+  const guideHref = resolveDestinationGuideHref({
+    stateSlug: state.slug,
+    citySlug: city.slug,
+    countrySlug: tour.destination.countrySlug ?? tour.destination.stateSlug,
+    countryName: tour.destination.country,
+    cityName: city.name,
+  });
+  const cityHref = guideHref.href;
+  const stateHref = guideHref.isInternational
+    ? cityHref
+    : state.isFallback
+      ? "/destinations"
+      : `/destinations/states/${state.slug}`;
+  const toursHref = resolveSafeTourListHref({
+    canonicalPath: getCityTourDetailPath(tour),
+    countrySlug: tour.destination.countrySlug ?? tour.destination.stateSlug,
+    stateSlug: state.slug,
+    citySlug: city.slug,
+  });
   const detailUrl = isFlagstaff
     ? getFlagstaffTourDetailPath(tour)
     : getCityTourDetailPath(tour);
+  const tourDetailHref = detailUrl;
   const bookingUrl = getTourBookingPath(tour);
   const heroImage =
     resolveHeroImageForRoute({

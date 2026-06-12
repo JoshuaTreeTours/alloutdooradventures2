@@ -4,10 +4,11 @@ import DestinationCard from "../../components/DestinationCard";
 import Seo from "../../components/Seo";
 import { countriesWithTours } from "../../data/europeIndex";
 import { destinations } from "../../data/destinations";
-import { getGuideStates } from "../../data/guideData";
+import { getGuideCountryBySlug, getGuideStates } from "../../data/guideData";
 import { WORLD_DESTINATIONS, slugify } from "../../data/tourCatalog";
 import { getStaticPageSeo } from "../../utils/seo";
 import { resolveUsGuideHref } from "../../utils/guides/guideResolver";
+import { getLiveCountryOrGuideHref } from "../../utils/destinations/liveInternationalDestinations";
 
 const getRegionLabel = (region: string) => {
   if (region === "West") return "West Coast";
@@ -48,6 +49,15 @@ export default function DestinationsIndex() {
     image: country.image,
     href: `/destinations/europe/${country.slug}`,
   }));
+  const liveWorldDestinationLinks = WORLD_DESTINATIONS.map(destination => {
+    const countrySlug = slugify(destination);
+    const href = getLiveCountryOrGuideHref({
+      countrySlug,
+      hasCountryGuide: Boolean(getGuideCountryBySlug(countrySlug)),
+    });
+
+    return href ? { name: destination, href } : null;
+  }).filter((link): link is { name: string; href: string } => Boolean(link));
 
   const renderGuideLinks = (stateSlug: string, stateName: string) => {
     const guideState = guideStateLookup.get(stateSlug);
@@ -295,13 +305,13 @@ export default function DestinationsIndex() {
                 regions.
               </p>
               <ul className="mt-4 grid gap-2 text-sm text-[#2f4a2f] sm:grid-cols-2 lg:grid-cols-3">
-                {WORLD_DESTINATIONS.map(destination => (
-                  <li key={destination}>
+                {liveWorldDestinationLinks.map(destination => (
+                  <li key={destination.name}>
                     <a
                       className="flex items-center gap-2 rounded-full border border-[#d6decf] px-4 py-2 transition hover:border-[#2f4a2f] hover:text-[#1f2a1f]"
-                      href={`/destinations/world/${slugify(destination)}`}
+                      href={destination.href}
                     >
-                      {destination}
+                      {destination.name}
                     </a>
                   </li>
                 ))}

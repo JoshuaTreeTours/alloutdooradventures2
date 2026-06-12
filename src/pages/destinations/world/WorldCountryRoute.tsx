@@ -8,6 +8,7 @@ import TourCard from "../../../components/TourCard";
 import { useStructuredData } from "../../../components/StructuredDataProvider";
 import { getActivityLabelFromSlug } from "../../../data/activityLabels";
 import { getGuideCountryBySlug } from "../../../data/guideData";
+import EuropeCountryRoute from "../europe/EuropeCountryRoute";
 import {
   worldCountriesWithTours,
   worldToursByCountry,
@@ -17,6 +18,7 @@ import { resolveHeroImage, resolveTourHeroImage } from "../../../utils/hero";
 import { SITE_BRAND_NAME } from "../../../utils/site";
 import { buildMetaDescription } from "../../../utils/seo";
 import { isUsCountryAlias } from "../../../utils/guides/usCountryAliases";
+import { getGeneratedCountryDestinationHref } from "../../../utils/destinations/liveInternationalDestinations";
 import {
   buildBreadcrumbList,
   buildItemList,
@@ -98,6 +100,18 @@ export default function WorldCountryRoute({ params }: WorldCountryRouteProps) {
   }
 
   if (!country) {
+    const generatedCountryDestinationHref = getGeneratedCountryDestinationHref(
+      params.countrySlug
+    );
+
+    if (generatedCountryDestinationHref?.startsWith("/destinations/europe/")) {
+      return <EuropeCountryRoute params={params} />;
+    }
+
+    if (guideCountry) {
+      return <RouteRedirect to={`/guides/world/${params.countrySlug}`} />;
+    }
+
     return (
       <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
         <h1 className="text-2xl font-semibold">Destination not found</h1>

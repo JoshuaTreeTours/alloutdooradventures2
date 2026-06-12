@@ -7,6 +7,10 @@ import {
   getCanonicalInternationalGuideCitySlug,
   getInternationalGuideCitySlugGroup,
 } from "./internationalGuideAliases";
+import {
+  getGeneratedCityToursHref,
+  getGeneratedCountryDestinationHref,
+} from "../utils/destinations/liveInternationalDestinations";
 
 export type GuidePlace =
   | {
@@ -229,16 +233,18 @@ export const getAllToursHref = (place: GuidePlace) => {
   }
 
   if (place.type === "country") {
-    return isEuropeCountrySlug(place.slug)
-      ? `/destinations/europe/${place.slug}`
-      : `/destinations/world/${place.slug}`;
+    return (
+      getGeneratedCountryDestinationHref(place.slug) ??
+      `/guides/world/${place.slug}`
+    );
   }
 
   if (place.regionType === "state") {
     return `/destinations/${place.parentSlug}/${place.slug}/tours`;
   }
 
-  return isEuropeCountrySlug(place.parentSlug)
-    ? `/destinations/europe/${place.parentSlug}/cities/${place.slug}/tours`
-    : `/destinations/world/${place.parentSlug}/cities/${place.slug}/tours`;
+  return (
+    getGeneratedCityToursHref(place.parentSlug, place.slug) ??
+    `/guides/world/${place.parentSlug}/${place.slug}`
+  );
 };
