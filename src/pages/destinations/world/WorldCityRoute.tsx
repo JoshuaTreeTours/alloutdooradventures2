@@ -1,8 +1,10 @@
+import RouteRedirect from "../../../components/RouteRedirect";
 import CityTemplate from "../../../templates/CityTemplate";
 import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../../data/tourFallbacks";
+import { getDestinationCityAlias } from "../../../data/destinationAliases";
 
 type WorldCityRouteProps = {
   params: {
@@ -12,8 +14,20 @@ type WorldCityRouteProps = {
 };
 
 export default function WorldCityRoute({ params }: WorldCityRouteProps) {
+  const alias = getDestinationCityAlias(params.countrySlug, params.citySlug);
   const state = getFallbackStateBySlug(params.countrySlug);
-  const city = getFallbackCityBySlugs(params.countrySlug, params.citySlug);
+  const city = getFallbackCityBySlugs(
+    params.countrySlug,
+    alias?.canonicalCitySlug ?? params.citySlug
+  );
+
+  if (alias) {
+    return (
+      <RouteRedirect
+        to={`/destinations/world/${params.countrySlug}/cities/${alias.canonicalCitySlug}`}
+      />
+    );
+  }
 
   if (!state || !city) {
     return (
@@ -32,7 +46,7 @@ export default function WorldCityRoute({ params }: WorldCityRouteProps) {
       state={state}
       city={city}
       stateHrefOverride={`/destinations/world/${params.countrySlug}`}
-      seoUrlOverride={`/destinations/world/${params.countrySlug}/cities/${params.citySlug}`}
+      seoUrlOverride={`/destinations/world/${params.countrySlug}/cities/${city.slug}`}
       guideParentSlugOverride={params.countrySlug}
       guideRegionTypeOverride="country"
     />

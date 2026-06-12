@@ -66,6 +66,316 @@
   ],
   "redirects": [
     {
+      "source": "/guides/world/austria/wien",
+      "destination": "/guides/world/austria/vienna",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/germany/mnchen",
+      "destination": "/guides/world/germany/munich",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/netherlands/den-haag",
+      "destination": "/guides/world/netherlands/the-hague",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/portugal/lisboa",
+      "destination": "/guides/world/portugal/lisbon",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/spain/alcdia",
+      "destination": "/guides/world/spain/alcudia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/spain/calvi",
+      "destination": "/guides/world/spain/calvia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/spain/dei",
+      "destination": "/guides/world/spain/deia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/spain/l-estartit",
+      "destination": "/guides/world/spain/lestartit",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/spain/pollena",
+      "destination": "/guides/world/spain/pollenca",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/spain/san-sebastin",
+      "destination": "/guides/world/spain/san-sebastian",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/spain/sller",
+      "destination": "/guides/world/spain/soller",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/spain/valncia",
+      "destination": "/guides/world/spain/valencia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/spain/xbia",
+      "destination": "/guides/world/spain/xabia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/united-states/santa-brbara",
+      "destination": "/guides/world/united-states/santa-barbara",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/portugal/cities/lisboa",
+      "destination": "/destinations/europe/portugal/cities/lisbon",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/portugal/cities/lisboa/tours",
+      "destination": "/destinations/europe/portugal/cities/lisbon/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/alcdia",
+      "destination": "/destinations/europe/spain/cities/alcudia",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/alcdia/tours",
+      "destination": "/destinations/europe/spain/cities/alcudia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/calvi",
+      "destination": "/destinations/europe/spain/cities/calvia",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/calvi/tours",
+      "destination": "/destinations/europe/spain/cities/calvia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/dei",
+      "destination": "/destinations/europe/spain/cities/deia",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/dei/tours",
+      "destination": "/destinations/europe/spain/cities/deia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/l-estartit",
+      "destination": "/destinations/europe/spain/cities/lestartit",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/l-estartit/tours",
+      "destination": "/destinations/europe/spain/cities/lestartit/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/pollena",
+      "destination": "/destinations/europe/spain/cities/pollenca",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/pollena/tours",
+      "destination": "/destinations/europe/spain/cities/pollenca/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/san-sebastin",
+      "destination": "/destinations/europe/spain/cities/san-sebastian",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/san-sebastin/tours",
+      "destination": "/destinations/europe/spain/cities/san-sebastian/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/sller",
+      "destination": "/destinations/europe/spain/cities/soller",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/sller/tours",
+      "destination": "/destinations/europe/spain/cities/soller/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/valncia",
+      "destination": "/destinations/europe/spain/cities/valencia",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/valncia/tours",
+      "destination": "/destinations/europe/spain/cities/valencia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/xbia",
+      "destination": "/destinations/europe/spain/cities/xabia",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/europe/spain/cities/xbia/tours",
+      "destination": "/destinations/europe/spain/cities/xabia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/austria/cities/wien",
+      "destination": "/destinations/world/austria/cities/vienna",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/austria/cities/wien/tours",
+      "destination": "/destinations/world/austria/cities/vienna/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/germany/cities/mnchen",
+      "destination": "/destinations/world/germany/cities/munich",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/germany/cities/mnchen/tours",
+      "destination": "/destinations/world/germany/cities/munich/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/netherlands/cities/den-haag",
+      "destination": "/destinations/world/netherlands/cities/the-hague",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/netherlands/cities/den-haag/tours",
+      "destination": "/destinations/world/netherlands/cities/the-hague/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/portugal/cities/lisboa",
+      "destination": "/destinations/world/portugal/cities/lisbon",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/portugal/cities/lisboa/tours",
+      "destination": "/destinations/world/portugal/cities/lisbon/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/alcdia",
+      "destination": "/destinations/world/spain/cities/alcudia",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/alcdia/tours",
+      "destination": "/destinations/world/spain/cities/alcudia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/calvi",
+      "destination": "/destinations/world/spain/cities/calvia",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/calvi/tours",
+      "destination": "/destinations/world/spain/cities/calvia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/dei",
+      "destination": "/destinations/world/spain/cities/deia",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/dei/tours",
+      "destination": "/destinations/world/spain/cities/deia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/l-estartit",
+      "destination": "/destinations/world/spain/cities/lestartit",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/l-estartit/tours",
+      "destination": "/destinations/world/spain/cities/lestartit/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/pollena",
+      "destination": "/destinations/world/spain/cities/pollenca",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/pollena/tours",
+      "destination": "/destinations/world/spain/cities/pollenca/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/san-sebastin",
+      "destination": "/destinations/world/spain/cities/san-sebastian",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/san-sebastin/tours",
+      "destination": "/destinations/world/spain/cities/san-sebastian/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/sller",
+      "destination": "/destinations/world/spain/cities/soller",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/sller/tours",
+      "destination": "/destinations/world/spain/cities/soller/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/valncia",
+      "destination": "/destinations/world/spain/cities/valencia",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/valncia/tours",
+      "destination": "/destinations/world/spain/cities/valencia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/xbia",
+      "destination": "/destinations/world/spain/cities/xabia",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/spain/cities/xbia/tours",
+      "destination": "/destinations/world/spain/cities/xabia/tours",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/united-states/cities/santa-brbara",
+      "destination": "/destinations/world/united-states/cities/santa-barbara",
+      "permanent": true
+    },
+    {
+      "source": "/destinations/world/united-states/cities/santa-brbara/tours",
+      "destination": "/destinations/world/united-states/cities/santa-barbara/tours",
+      "permanent": true
+    },
+    {
       "source": "/guides/us/alaska/fairbanks",
       "destination": "/guides/us/alaska",
       "permanent": true

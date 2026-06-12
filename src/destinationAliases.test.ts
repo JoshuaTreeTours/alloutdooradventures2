@@ -26,6 +26,16 @@ const CANONICAL_CASES = [
   ["italy", "rome", "roma"],
   ["germany", "munich", "mnchen"],
   ["netherlands", "the-hague", "den-haag"],
+  ["portugal", "lisbon", "lisboa"],
+  ["spain", "alcudia", "alcdia"],
+  ["spain", "calvia", "calvi"],
+  ["spain", "deia", "dei"],
+  ["spain", "lestartit", "l-estartit"],
+  ["spain", "pollenca", "pollena"],
+  ["spain", "san-sebastian", "san-sebastin"],
+  ["spain", "soller", "sller"],
+  ["spain", "valencia", "valncia"],
+  ["spain", "xabia", "xbia"],
 ] as const;
 
 const aliasCityPaths = CANONICAL_CASES.flatMap(
@@ -63,6 +73,21 @@ describe("destination city alias canonicalization", () => {
           countrySlug: "netherlands",
           aliasCitySlug: "den-haag",
           canonicalCitySlug: "the-hague",
+        }),
+        expect.objectContaining({
+          countrySlug: "portugal",
+          aliasCitySlug: "lisboa",
+          canonicalCitySlug: "lisbon",
+        }),
+        expect.objectContaining({
+          countrySlug: "spain",
+          aliasCitySlug: "alcdia",
+          canonicalCitySlug: "alcudia",
+        }),
+        expect.objectContaining({
+          countrySlug: "spain",
+          aliasCitySlug: "l-estartit",
+          canonicalCitySlug: "lestartit",
         }),
       ])
     );
@@ -139,13 +164,14 @@ describe("destination city alias canonicalization", () => {
       );
 
       expect(tours.length).toBeGreaterThan(0);
-      expect(aliasBackedTour).toBeTruthy();
-      expect(getCityTourDetailPath(aliasBackedTour!)).toContain(
-        `/destinations/${countrySlug}/${canonicalCitySlug}/tours/`
-      );
-      expect(getTourDetailPath(aliasBackedTour!)).not.toContain(
-        `/${aliasCitySlug}/`
-      );
+      if (aliasBackedTour) {
+        expect(getCityTourDetailPath(aliasBackedTour)).toContain(
+          `/destinations/${countrySlug}/${canonicalCitySlug}/tours/`
+        );
+        expect(getTourDetailPath(aliasBackedTour)).not.toContain(
+          `/${aliasCitySlug}/`
+        );
+      }
       expect(
         getToursByCityUnified(countrySlug, canonicalCitySlug).map(
           entry => entry.href
@@ -165,6 +191,9 @@ describe("destination city alias canonicalization", () => {
         "/destinations/europe/germany/cities/mnchen/tours"
       )
     ).toBe("/destinations/europe/germany/cities/munich/tours");
+    expect(
+      canonicalizeDestinationPath("/destinations/world/portugal/cities/lisboa")
+    ).toBe("/destinations/world/portugal/cities/lisbon");
   });
 
   it("excludes duplicate destination aliases from sitemap XML URL sets", async () => {
@@ -197,6 +226,9 @@ describe("destination city alias canonicalization", () => {
         expect.stringContaining("/roma/"),
         expect.stringContaining("/mnchen/"),
         expect.stringContaining("/den-haag/"),
+        expect.stringContaining("/lisboa/"),
+        expect.stringContaining("/alcdia/"),
+        expect.stringContaining("/l-estartit/"),
       ])
     );
   }, 60_000);

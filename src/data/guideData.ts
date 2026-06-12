@@ -27,6 +27,11 @@ import {
 } from "../utils/guides/guideRegistry";
 import { buildCityGuideIntroParagraphs } from "../utils/guides/cityGuideTitles";
 import { isGenericHeroFallbackImage } from "../utils/hero";
+import {
+  getCanonicalInternationalGuideCityName,
+  getCanonicalInternationalGuideCitySlug,
+  getInternationalGuideCitySlugGroup,
+} from "./internationalGuideAliases";
 
 export type GuideCitySummary = {
   name: string;
@@ -162,9 +167,17 @@ const engine2CountryCityIndex = engine2Tours.reduce<
 
   existingCountry.tourCount += 1;
 
-  const citySlug = tour.sourceCitySlug || slugify(tour.geo.city);
+  const rawCitySlug = tour.sourceCitySlug || slugify(tour.geo.city);
+  const citySlug = getCanonicalInternationalGuideCitySlug(
+    country.slug,
+    rawCitySlug
+  );
   if (citySlug) {
-    const cityName = tour.geo.city || citySlug;
+    const cityName = getCanonicalInternationalGuideCityName(
+      country.slug,
+      rawCitySlug,
+      tour.geo.city || citySlug
+    );
     const city = existingCountry.cities.get(citySlug);
     if (city) {
       city.tourCount += 1;
@@ -655,11 +668,19 @@ const getActivitySlugs = (tourList: Tour[]) =>
     )
   );
 
-const buildCitySummaries = (tourList: Tour[]): GuideCitySummary[] => {
+const buildCitySummaries = (
+  tourList: Tour[],
+  countrySlug?: string
+): GuideCitySummary[] => {
   const cities = new Map<string, GuideCitySummary>();
 
   tourList.forEach(tour => {
-    const key = tour.destination.citySlug;
+    const key = countrySlug
+      ? getCanonicalInternationalGuideCitySlug(
+          countrySlug,
+          tour.destination.citySlug
+        )
+      : tour.destination.citySlug;
     if (!key) {
       return;
     }
@@ -671,8 +692,14 @@ const buildCitySummaries = (tourList: Tour[]): GuideCitySummary[] => {
     }
 
     cities.set(key, {
-      name: tour.destination.city,
-      slug: tour.destination.citySlug,
+      name: countrySlug
+        ? getCanonicalInternationalGuideCityName(
+            countrySlug,
+            tour.destination.citySlug,
+            tour.destination.city
+          )
+        : tour.destination.city,
+      slug: key,
       tourCount: 1,
     });
   });
@@ -779,7 +806,8 @@ export const getGuideCountries = (): GuidePlaceSummary[] => {
         tours.filter(tour => {
           const tourCountry = getCountryFromTour(tour);
           return tourCountry?.slug === country.slug;
-        })
+        }),
+        country.slug
       );
       const engine2Cities = Array.from(
         engine2CountryCityIndex.get(country.slug)?.cities.values() ?? []
@@ -961,7 +989,7 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
     countryTours.length > 0
       ? (getCountryFromTour(countryTours[0])?.name ?? countrySlug)
       : (engine2Country?.name ?? countrySlug);
-  const cities = buildCitySummaries(countryTours);
+  const cities = buildCitySummaries(countryTours, countrySlug);
   const highlightCities = [...cities]
     .sort((a, b) => b.tourCount - a.tourCount)
     .slice(0, 3);
@@ -1048,8 +1076,16 @@ export const buildCityGuide = ({
       ? tours
       : [...tours, ...engine2InternationalGuideTours];
 
+  const canonicalCitySlug =
+    regionType === "country"
+      ? getCanonicalInternationalGuideCitySlug(parentSlug, citySlug)
+      : citySlug;
+  const citySlugGroup =
+    regionType === "country"
+      ? getInternationalGuideCitySlugGroup(parentSlug, citySlug)
+      : [citySlug];
   const cityTours = sourceTours.filter(tour => {
-    if (tour.destination.citySlug !== citySlug) {
+    if (!citySlugGroup.includes(tour.destination.citySlug)) {
       return false;
     }
 
@@ -1065,7 +1101,14 @@ export const buildCityGuide = ({
     return null;
   }
 
-  const cityName = cityTours[0].destination.city;
+  const cityName =
+    regionType === "country"
+      ? getCanonicalInternationalGuideCityName(
+          parentSlug,
+          canonicalCitySlug,
+          cityTours[0].destination.city
+        )
+      : cityTours[0].destination.city;
   const parentName =
     regionType === "state"
       ? cityTours[0].destination.state
@@ -1076,8 +1119,8 @@ export const buildCityGuide = ({
   const toursToShow = filteredTours.length ? filteredTours : cityTours;
   const activityLinks = buildActivityLinks(cityTours, slug =>
     regionType === "state"
-      ? `/destinations/${parentSlug}/${citySlug}/tours?activity=${slug}`
-      : `${getInternationalCityToursPath(parentSlug, citySlug)}?activity=${slug}`
+      ? `/destinations/${parentSlug}/${canonicalCitySlug}/tours?activity=${slug}`
+      : `${getInternationalCityToursPath(parentSlug, canonicalCitySlug)}?activity=${slug}`
   );
   const activityLabels = activityLinks
     .map(activity => activity.label)
@@ -1091,11 +1134,11 @@ export const buildCityGuide = ({
     regionType === "state"
       ? {
           label: "All city tours",
-          href: `/destinations/${parentSlug}/${citySlug}/tours`,
+          href: `/destinations/${parentSlug}/${canonicalCitySlug}/tours`,
         }
       : {
           label: "All city tours",
-          href: getInternationalCityToursPath(parentSlug, citySlug),
+          href: getInternationalCityToursPath(parentSlug, canonicalCitySlug),
         };
   const primaryActivitySlug = getActivitySlugs(cityTours)[0];
   const categoryLinks = primaryActivitySlug
@@ -1104,8 +1147,8 @@ export const buildCityGuide = ({
           label: `${getActivityLabelFromSlug(primaryActivitySlug)} tours`,
           href:
             regionType === "state"
-              ? `/destinations/${parentSlug}/${citySlug}/tours?activity=${primaryActivitySlug}`
-              : `${getInternationalCityToursPath(parentSlug, citySlug)}?activity=${primaryActivitySlug}`,
+              ? `/destinations/${parentSlug}/${canonicalCitySlug}/tours?activity=${primaryActivitySlug}`
+              : `${getInternationalCityToursPath(parentSlug, canonicalCitySlug)}?activity=${primaryActivitySlug}`,
         },
       ]
     : [];
@@ -1149,11 +1192,11 @@ export const buildCityGuide = ({
   const activityFocusLabel = activityFocus
     ? getActivityLabelFromSlug(activityFocus)
     : undefined;
-  const landmarks = getCityLandmarks(parentSlug, citySlug);
-  const metadata = getCityMetadata(parentSlug, citySlug);
+  const landmarks = getCityLandmarks(parentSlug, canonicalCitySlug);
+  const metadata = getCityMetadata(parentSlug, canonicalCitySlug);
   const cityFacts = buildCityGuideFacts({
     cityName,
-    citySlug,
+    citySlug: canonicalCitySlug,
     parentName,
     parentSlug,
     regionType,
@@ -1165,7 +1208,7 @@ export const buildCityGuide = ({
   const guide: GuideContent = {
     type: "city",
     name: cityName,
-    slug: citySlug,
+    slug: canonicalCitySlug,
     parentName,
     parentSlug,
     regionType,
@@ -1187,8 +1230,8 @@ export const buildCityGuide = ({
         label: cityName,
         href:
           regionType === "state"
-            ? `/guides/us/${parentSlug}/${citySlug}`
-            : `/guides/world/${parentSlug}/${citySlug}`,
+            ? `/guides/us/${parentSlug}/${canonicalCitySlug}`
+            : `/guides/world/${parentSlug}/${canonicalCitySlug}`,
       },
     ],
     activities: activityLinks,
@@ -1198,7 +1241,7 @@ export const buildCityGuide = ({
     featuredTours: toursToShow.slice(0, 12),
     activityFocus: activityFocusLabel,
     guideImages: getGuideImages(
-      citySlug,
+      canonicalCitySlug,
       regionType === "state" ? parentSlug : undefined,
       regionType === "country" ? parentSlug : undefined
     ),
@@ -1206,10 +1249,10 @@ export const buildCityGuide = ({
       cityName,
       parentName,
       parentSlug,
-      citySlug,
+      canonicalCitySlug,
       cityFacts
     ),
-    topThingsToDo: buildTopThingsToDo(cityName, parentSlug, citySlug, {
+    topThingsToDo: buildTopThingsToDo(cityName, parentSlug, canonicalCitySlug, {
       parentName,
       regionType,
       cityFacts,
@@ -1219,7 +1262,7 @@ export const buildCityGuide = ({
   const overrideRoute = buildCityOverrideRoute({
     regionType,
     parentSlug,
-    citySlug,
+    citySlug: canonicalCitySlug,
   });
   const override = cityOverrides[overrideRoute];
   if (override) {
@@ -1235,13 +1278,14 @@ export const buildCityGuide = ({
     toCityGuideTextContent(guide),
     {
       cityName,
-      citySlug,
+      citySlug: canonicalCitySlug,
       parentSlug,
       regionType,
       tier:
-        regionType === "country" && isTier1IntlCity(parentSlug, citySlug)
+        regionType === "country" &&
+        isTier1IntlCity(parentSlug, canonicalCitySlug)
           ? 1
-          : isTier1City(citySlug)
+          : isTier1City(canonicalCitySlug)
             ? 1
             : 2,
       knownPois,
