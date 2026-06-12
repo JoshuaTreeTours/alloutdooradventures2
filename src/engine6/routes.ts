@@ -251,12 +251,14 @@ export const ENGINE6_NEW_ORLEANS_SWAMP_BOAT_PICKUP_ROUTE =
 export const ENGINE6_NEW_ORLEANS_RIVERBOAT_SIGHTSEEING_PRODUCT_CODE = "3780P45";
 export const ENGINE6_NEW_ORLEANS_RIVERBOAT_SIGHTSEEING_ROUTE =
   "/destinations/louisiana/new-orleans/tours/new-orleans-75-minute-riverboat-sightseeing-cruise";
+export const ENGINE6_NEW_ORLEANS_IN_A_DAY_RIVERBOAT_PRODUCT_CODE = "3780SUPER";
+export const ENGINE6_NEW_ORLEANS_IN_A_DAY_RIVERBOAT_ROUTE =
+  "/destinations/louisiana/new-orleans/tours/new-orleans-in-a-day-with-75-minute-riverboat-cruise";
 export const ENGINE6_NEW_ORLEANS_HONEY_ISLAND_SWAMP_PRODUCT_CODE =
   "6953SWAMPTRANS";
 export const ENGINE6_NEW_ORLEANS_HONEY_ISLAND_SWAMP_ROUTE =
   "/destinations/louisiana/new-orleans/tours/honey-island-swamp-tour-with-transport";
-export const ENGINE6_NEW_ORLEANS_LARGE_AIRBOAT_SWAMP_PRODUCT_CODE =
-  "15200P2";
+export const ENGINE6_NEW_ORLEANS_LARGE_AIRBOAT_SWAMP_PRODUCT_CODE = "15200P2";
 export const ENGINE6_NEW_ORLEANS_LARGE_AIRBOAT_SWAMP_ROUTE =
   "/destinations/louisiana/new-orleans/tours/large-airboat-swamp-tour-with-hotel-pickup";
 export const ENGINE6_NEW_ORLEANS_BAYOU_WILDLIFE_PRODUCT_CODE = "273720P1";
@@ -710,6 +712,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_NEW_ORLEANS_RIVERBOAT_SIGHTSEEING_ROUTE,
     ENGINE6_NEW_ORLEANS_RIVERBOAT_SIGHTSEEING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NEW_ORLEANS_IN_A_DAY_RIVERBOAT_ROUTE,
+    ENGINE6_NEW_ORLEANS_IN_A_DAY_RIVERBOAT_PRODUCT_CODE,
   ],
   [
     ENGINE6_NEW_ORLEANS_HONEY_ISLAND_SWAMP_ROUTE,

@@ -21,6 +21,7 @@ const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
   "6455NOLAAIR": "New Orleans Airboat Ride | Louisiana Bayou Tour",
   "15200P6": "New Orleans Swamp Boat Tour with Pickup",
   "3780P45": "New Orleans Riverboat Sightseeing Cruise",
+  "3780SUPER": "New Orleans in a Day with Riverboat Cruise",
   "6953SWAMPTRANS":
     "Honey Island Swamp Boat Tour with New Orleans Transportation",
   "15200P2": "Large Airboat Swamp Tour with New Orleans Pickup",
@@ -39,6 +40,8 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Travel from New Orleans to a Louisiana swamp for a narrated boat tour with pickup, bayou scenery, and seasonal wildlife viewing.",
   "3780P45":
     "Cruise the Mississippi River from New Orleans on a 75-minute narrated riverboat route past French Quarter waterfront landmarks.",
+  "3780SUPER":
+    "Explore New Orleans in a day with a French Quarter walk, French Market lunch break, 75-minute riverboat cruise, and narrated city bus tour.",
   "6953SWAMPTRANS":
     "Travel from New Orleans to Honey Island Swamp for a guided flat-bottom boat tour through protected wetlands, bayou passages, and Cajun village scenery.",
   "15200P2":
@@ -50,6 +53,25 @@ const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",
   "273720P1",
 ]);
+
+const ENGINE6_CLASSIFICATION_OVERRIDES: Record<
+  string,
+  {
+    primaryCategory: string;
+    categories: string[];
+    primaryDisplayCategory: string;
+    activityCategories: Array<{ slug: string; label: string }>;
+  }
+> = {
+  "3780SUPER": {
+    primaryCategory: "sightseeing-city-tours",
+    categories: ["sightseeing-city-tours"],
+    primaryDisplayCategory: "Sightseeing & City Tours",
+    activityCategories: [
+      { slug: "sightseeing-city-tours", label: "Sightseeing & City Tours" },
+    ],
+  },
+};
 
 export const isEngine6ItinerarySectionSuppressed = (productCode: string) =>
   ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES.has(productCode);
@@ -69,6 +91,8 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Travel from New Orleans to a Louisiana swamp for a narrated boat tour through bayou waterways and wetland scenery. This experience includes selected hotel pickup and drop-off, then continues to the launch area for time on the water with a local captain. The route is water-based rather than a city sightseeing loop, so conditions, wildlife activity, and captain routing shape what guests see during the outing. Expect marsh and cypress landscapes, opportunities for wildlife viewing, and practical transportation logistics suited to travelers who want a swamp experience without arranging a separate drive from New Orleans.",
   "3780P45":
     "Board the Riverboat CITY of NEW ORLEANS for a 75-minute Mississippi River sightseeing cruise from the French Quarter riverfront. The route stays on the water with live captain narration, open river views, and a round-trip departure behind JAX Brewery. From the vessel, travelers can see the French Quarter riverfront, Jackson Square, St. Louis Cathedral, the Crescent City Connection, the Aquarium of the Americas, Mardi Gras World, Caesars Casino, and Woldenberg Riverfront Park before returning to the same dock.",
+  "3780SUPER":
+    "Explore New Orleans in one extended sightseeing outing with a guided French Quarter walk, independent lunch time at the French Market, a 75-minute Mississippi River cruise aboard the Riverboat CITY of NEW ORLEANS, and a narrated city highlights bus tour. The route begins at Cafe Beignet in the JAX Brewery Building and combines walking, coach, and riverboat perspectives on Jackson Square, the Garden District, City Park, the National WWII Museum, Audubon Aquarium, and the downtown riverfront.",
   "6953SWAMPTRANS":
     "Travel from downtown New Orleans across Lake Pontchartrain to Honey Island Swamp for a guided flat-bottom boat tour through protected Louisiana wetlands. The route moves through narrow bayou passages where the captain explains swamp ecology, Cajun culture, and local preservation efforts. Travelers may see alligators, birds, turtles, raccoons, wild boar, and other wildlife depending on conditions, and the route includes views of a Cajun village reachable only by boat before returning to shore and the New Orleans pickup point.",
   "15200P2":
@@ -280,6 +304,18 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Continue through Los Olivos for small-town wine-country atmosphere and additional tasting opportunities when scheduled.",
     "Travel through Santa Ynez with route commentary on valley history, agriculture, and regional winemaking styles.",
     "Return to Santa Barbara with a final scenic drive back over the pass after the day’s tasting itinerary wraps.",
+  ],
+  "3780SUPER": [
+    "Meet outside Cafe Beignet in the JAX Brewery Building on Decatur Street for check-in and the start of the day.",
+    "Walk through the historic French Quarter with guide-led context on New Orleans culture, architecture, and early city history.",
+    "Pass Jackson Square while moving through the French Quarter portion of the sightseeing route.",
+    "Pause at the French Market for independent lunch time before continuing the combined sightseeing experience.",
+    "Board the Riverboat CITY of NEW ORLEANS for a 75-minute Mississippi River sightseeing cruise with captain narration.",
+    "Continue by narrated coach through city highlight areas including the Garden District, St. Charles Avenue, and above-ground cemetery scenery.",
+    "Pass Audubon Aquarium along the downtown riverfront during the city highlights sequence.",
+    "Pass New Orleans City Park as the coach route introduces broader city neighborhoods beyond the French Quarter.",
+    "Travel through the Garden District for views of historic homes and neighborhood streets from the coach route.",
+    "Pass the National WWII Museum during the narrated city highlights portion of the tour.",
   ],
   "3780P45": [
     "Board at 101 Saint Louis Street behind JAX Brewery for the round-trip riverboat cruise departure.",
@@ -675,13 +711,23 @@ export const mapViatorToEngine6Tour = (
   const faqs = payload.extracted.faqs ?? [];
   const included = payload.extracted.included ?? [];
   const requirements = payload.extracted.requirements ?? [];
-  const categories = payload.extracted.categories ?? [];
+  const classificationOverride =
+    ENGINE6_CLASSIFICATION_OVERRIDES[payload.rawProductCode];
+  const categories =
+    classificationOverride?.categories ?? payload.extracted.categories ?? [];
   const primaryCategory =
-    payload.extracted.primaryCategory ?? categories[0] ?? null;
+    classificationOverride?.primaryCategory ??
+    payload.extracted.primaryCategory ??
+    categories[0] ??
+    null;
   const primaryDisplayCategory =
+    classificationOverride?.primaryDisplayCategory ??
     payload.extracted.primaryDisplayCategory ??
     formatEngine6CategoryLabel(primaryCategory);
-  const activityCategories = payload.extracted.activityCategories ?? [];
+  const activityCategories =
+    classificationOverride?.activityCategories ??
+    payload.extracted.activityCategories ??
+    [];
   const categoryLabel = primaryDisplayCategory;
   const rawDescription =
     payload.extracted.overviewText ??

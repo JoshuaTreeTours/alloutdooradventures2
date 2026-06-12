@@ -1,0 +1,176 @@
+{
+  "product": {
+    "productCode": "3780SUPER",
+    "productUrl": "https://www.viator.com/tours/New-Orleans/New-Orleans-City-Bus-Tour/d675-3780SUPER",
+    "title": "New Orleans in a Day - Includes 75 Minute Riverboat Cruise",
+    "description": {
+      "text": "Experience New Orleans in one extended sightseeing outing with a guided French Quarter walk, free time for lunch at the French Market, a 75-minute Mississippi River cruise aboard the Riverboat CITY of NEW ORLEANS, and a narrated city highlights bus tour. The route begins at Cafe Beignet in the JAX Brewery Building and combines walking, coach, and riverboat perspectives on the French Quarter, Jackson Square, the Garden District, City Park, the National WWII Museum, Audubon Aquarium, and the downtown riverfront."
+    },
+    "location": {
+      "city": "New Orleans",
+      "state": "Louisiana"
+    },
+    "duration": "6 hours 45 minutes",
+    "pricing": {
+      "summary": {
+        "fromPrice": 99.0,
+        "fromPriceBeforeDiscount": 99.0
+      },
+      "currency": "USD"
+    },
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "totalCount": 441,
+          "averageRating": 4.5
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 8
+        },
+        {
+          "rating": 2.0,
+          "count": 12
+        },
+        {
+          "rating": 3.0,
+          "count": 39
+        },
+        {
+          "rating": 4.0,
+          "count": 84
+        },
+        {
+          "rating": 5.0,
+          "count": 298
+        }
+      ],
+      "totalReviews": 441,
+      "combinedAverageRating": 4.5
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/32/6b/d4/87/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            },
+            "CARD": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/32/6b/d4/87/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Walk through the historic French Quarter with a local guide.",
+      "Use free time for lunch at the French Market.",
+      "Cruise the Mississippi River for 75 minutes aboard the Riverboat CITY of NEW ORLEANS.",
+      "Travel by narrated coach past New Orleans landmarks including the Garden District, City Park, the National WWII Museum, and Audubon Aquarium."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Cafe Beignet in the JAX Brewery Building, 600 Decatur Street, New Orleans, LA 70130."
+      },
+      "end": {
+        "description": "This activity returns to the Cafe Beignet meeting point at 600 Decatur Street."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Cafe Beignet departure",
+        "description": "Meet outside Cafe Beignet in the JAX Brewery Building on Decatur Street for check-in and the start of the day.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "French Quarter walking tour",
+        "description": "Walk through the historic French Quarter with guide-led context on New Orleans culture, architecture, and early city history.",
+        "duration": "1 hour 15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jackson Square",
+        "description": "Pass Jackson Square while moving through the French Quarter portion of the sightseeing route.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "French Market lunch break",
+        "description": "Pause at the French Market for independent lunch time before continuing the combined sightseeing experience.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Riverboat CITY of NEW ORLEANS cruise",
+        "description": "Board the Riverboat CITY of NEW ORLEANS for a 75-minute Mississippi River sightseeing cruise with captain narration.",
+        "duration": "1 hour 15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "New Orleans city highlights bus tour",
+        "description": "Continue by narrated coach through city highlight areas including the Garden District, St. Charles Avenue, and above-ground cemetery scenery.",
+        "duration": "2 hours 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Audubon Aquarium",
+        "description": "Pass Audubon Aquarium along the downtown riverfront during the city highlights sequence.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "City Park",
+        "description": "Pass New Orleans City Park as the coach route introduces broader city neighborhoods beyond the French Quarter.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Garden District",
+        "description": "Travel through the Garden District for views of historic homes and neighborhood streets from the coach route.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "The National WWII Museum",
+        "description": "Pass the National WWII Museum during the narrated city highlights portion of the tour.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Guided French Quarter walking tour",
+      "Local tour guide",
+      "Lunch break at the French Market",
+      "75-minute Riverboat CITY of NEW ORLEANS cruise",
+      "Narrated city highlights bus tour"
+    ],
+    "additionalInfo": [
+      "Pickup is offered on selected bookings.",
+      "Mobile ticket accepted.",
+      "Wheelchair accessible with advance arrangements for accessible bus needs.",
+      "Strollers and service animals are allowed.",
+      "Maximum group size is 40 travelers."
+    ],
+    "faqs": [
+      {
+        "question": "Where does New Orleans in a Day meet?",
+        "answer": "The tour meets outside Cafe Beignet in the JAX Brewery Building at 600 Decatur Street in New Orleans."
+      },
+      {
+        "question": "How long is the combined New Orleans sightseeing experience?",
+        "answer": "The experience is listed at about 6 hours and 45 minutes and returns to the meeting point."
+      }
+    ],
+    "primaryCategory": "sightseeing-tour",
+    "categories": ["sightseeing-tour", "boat-tour", "walking-tour"]
+  },
+  "sourceMeta": {
+    "capturedFrom": "viator-public-page-and-operator-page",
+    "capturedAt": "2026-06-12",
+    "heroImageProvidedByTask": true
+  }
+}
