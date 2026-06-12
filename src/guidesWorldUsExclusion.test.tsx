@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+
 import { createElement } from "react";
 import { renderToString } from "react-dom/server";
 import { beforeAll, describe, expect, it } from "vitest";
@@ -118,8 +120,13 @@ describe("international low-inventory guide retention", () => {
     expect(germanyGuide?.breadcrumbs.at(-1)?.href).toBe(
       "/guides/world/germany"
     );
-    expect(germanyGuide?.topCities?.map(city => city.slug)).not.toContain(
-      "kirchzarten"
+    const germanyGuideCitySlugs = germanyGuide?.topCities?.map(
+      city => city.slug
+    );
+
+    expect(germanyGuideCitySlugs).not.toContain("kirchzarten");
+    expect(germanyGuideCitySlugs).toEqual(
+      expect.arrayContaining(["berlin", "munich"])
     );
     expect(kirchzartenGuide).toBeNull();
     expect(berlinGuide?.breadcrumbs.at(-1)?.href).toBe(
@@ -128,6 +135,22 @@ describe("international low-inventory guide retention", () => {
     expect(munichGuide?.breadcrumbs.at(-1)?.href).toBe(
       "/guides/world/germany/munich"
     );
+  });
+
+  it("redirects the retired Kirchzarten world guide to the Germany country guide", () => {
+    const vercelConfig = JSON.parse(readFileSync("vercel.json", "utf8")) as {
+      redirects?: Array<{
+        source: string;
+        destination: string;
+        permanent: boolean;
+      }>;
+    };
+
+    expect(vercelConfig.redirects).toContainEqual({
+      source: "/guides/world/germany/kirchzarten",
+      destination: "/guides/world/germany",
+      permanent: true,
+    });
   });
 
   it("preserves Kirchzarten tour inventory outside guide pages", () => {

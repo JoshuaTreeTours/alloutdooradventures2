@@ -49,6 +49,42 @@ import {
 const normalizeOptionValue = (value: string) =>
   slugify(value.trim().toLowerCase());
 
+export const resolveInternationalCitySelectionRoute = ({
+  selectedCountry,
+  selectedCanadaProvinceSlug = "",
+  citySlug,
+  europeCountrySlugs = EUROPE_COUNTRIES.map(country => slugify(country)),
+}: {
+  selectedCountry: string;
+  selectedCanadaProvinceSlug?: string;
+  citySlug: string;
+  europeCountrySlugs?: string[];
+}) => {
+  if (!selectedCountry || !citySlug) {
+    return null;
+  }
+
+  if (selectedCountry === CANADA_COUNTRY_NAME && selectedCanadaProvinceSlug) {
+    return `/destinations/world/canada/${selectedCanadaProvinceSlug}/${citySlug}`;
+  }
+
+  if (selectedCountry === MEXICO_COUNTRY_NAME) {
+    return `/destinations/mexico/${citySlug}/tours`;
+  }
+
+  if (isUsCountryAlias(selectedCountry)) {
+    return "/guides/us";
+  }
+
+  const countrySlug = slugify(selectedCountry);
+  const europeSlugSet = new Set(europeCountrySlugs);
+  const basePath = europeSlugSet.has(countrySlug)
+    ? `/destinations/europe/${countrySlug}`
+    : `/destinations/world/${countrySlug}`;
+
+  return `${basePath}/cities/${citySlug}`;
+};
+
 export const resolveActivitySelectorRoute = ({
   activitySlug,
   stateSlug,
@@ -681,34 +717,15 @@ export default function ToursLanding() {
     setInventoryType("tours");
     updateUrl("", "", "tours");
 
-    if (
-      selectedCountry === CANADA_COUNTRY_NAME &&
-      selectedInternationalProvinceSlug &&
-      nextCity
-    ) {
-      window.location.assign(
-        `/destinations/world/canada/${selectedInternationalProvinceSlug}/${nextCity}`
-      );
-      return;
-    }
+    const route = resolveInternationalCitySelectionRoute({
+      selectedCountry,
+      selectedCanadaProvinceSlug: selectedInternationalProvinceSlug,
+      citySlug: nextCity,
+      europeCountrySlugs: Array.from(europeCountrySlugSet),
+    });
 
-    if (selectedCountry === MEXICO_COUNTRY_NAME && nextCity) {
-      window.location.assign(`/destinations/mexico/${nextCity}/tours`);
-      return;
-    }
-
-    if (selectedCountry && nextCity) {
-      if (isUsCountryAlias(selectedCountry)) {
-        window.location.assign("/guides/us");
-        return;
-      }
-
-      const countrySlug = slugify(selectedCountry);
-      const basePath = europeCountrySlugSet.has(countrySlug)
-        ? `/destinations/europe/${countrySlug}`
-        : `/destinations/world/${countrySlug}`;
-
-      window.location.assign(`${basePath}/cities/${nextCity}`);
+    if (route) {
+      window.location.assign(route);
     }
   };
 

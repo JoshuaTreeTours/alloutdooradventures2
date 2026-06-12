@@ -1,4 +1,3 @@
-import { getGuideCountryBySlug } from "../../data/guideData";
 import type { Tour } from "../../data/tours.types";
 import type {
   Engine2CanadaProvinceIndexEntry,
@@ -15,7 +14,8 @@ export type SelectorOption = {
   slug: string;
 };
 
-const normalizeSpacing = (value: string) => value.trim().toLowerCase().replace(/\s+/g, " ");
+const normalizeSpacing = (value: string) =>
+  value.trim().toLowerCase().replace(/\s+/g, " ");
 
 const normalizeAscii = (value: string) =>
   normalizeSpacing(value)
@@ -34,7 +34,10 @@ const isMexicoCityAlias = (name: string) => {
 export const normalizeMexicoCityName = (name: string): string =>
   isMexicoCityAlias(name) ? "Ciudad De México" : name;
 
-export const getMexicoCityKey = (name: string, fallbackSlug?: string): string => {
+export const getMexicoCityKey = (
+  name: string,
+  fallbackSlug?: string
+): string => {
   const normalizedFallbackSlug = normalizeAscii(fallbackSlug ?? "");
 
   if (
@@ -118,13 +121,6 @@ export const buildInternationalCityOptions = ({
     return Array.from(byCityKey.values()).sort((a, b) =>
       a.name.localeCompare(b.name)
     );
-  }
-
-  const guideCountry = getGuideCountryBySlug(slugify(selectedCountry));
-  if (guideCountry?.cities.length) {
-    return guideCountry.cities
-      .map((city) => ({ name: city.name, slug: city.slug || slugify(city.name) }))
-      .sort((a, b) => a.name.localeCompare(b.name));
   }
 
   return Array.from(
