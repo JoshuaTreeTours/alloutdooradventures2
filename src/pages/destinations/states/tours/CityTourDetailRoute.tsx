@@ -27,7 +27,10 @@ import { getExpandedTourDescription } from "../../../../data/tourNarratives";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import { buildTourMeta } from "../../../../lib/tourMeta";
 import { resolveTourSchemaActivityLabel } from "../../../../schema/resolveTourSchemaActivityLabel";
-import { resolveUsGuideHref } from "../../../../utils/guides/guideResolver";
+import {
+  resolveDestinationGuideHref,
+  resolveUsGuideHref,
+} from "../../../../utils/guides/guideResolver";
 import {
   buildBreadcrumbList,
   buildTourProductNodeId,
@@ -97,6 +100,7 @@ import { fetchFareHarborHtml } from "../../../../utils/fh/fetchFareHarborHtml";
 import { parseFareHarborHtml } from "../../../../utils/fh/parseFareHarborHtml";
 import { formatStartingPrice } from "../../../../lib/pricing";
 import RemovedTourGone from "../../../RemovedTourGone";
+import { resolveSafeTourListHref } from "../../../../utils/tours/tourNavigation";
 import RouteRedirect from "../../../../components/RouteRedirect";
 import { extractViatorProductCode } from "../../../../utils/viator/extractViatorProductCode";
 import {
@@ -671,19 +675,42 @@ export default function CityTourDetailRoute({
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
+  const guideHref =
+    state && city && tour
+      ? resolveDestinationGuideHref({
+          stateSlug: state.slug,
+          citySlug: city.slug,
+          countrySlug:
+            tour.destination.countrySlug ?? tour.destination.stateSlug,
+          countryName: tour.destination.country,
+          cityName: city.name,
+        })
+      : null;
   const cityHref =
     state && city
-      ? state.isFallback
-        ? `/destinations/${state.slug}/${city.slug}`
-        : resolveUsGuideHref(state.slug, city.slug).href
+      ? guideHref
+        ? guideHref.href
+        : state.isFallback
+          ? `/destinations/${state.slug}/${city.slug}`
+          : resolveUsGuideHref(state.slug, city.slug).href
       : "";
   const stateHref = state
-    ? state.isFallback
-      ? `/destinations/${state.slug}`
-      : `/destinations/states/${state.slug}`
+    ? guideHref?.isInternational
+      ? cityHref
+      : state.isFallback
+        ? `/destinations/${state.slug}`
+        : `/destinations/states/${state.slug}`
     : "";
   const toursHref =
-    state && city ? `/destinations/${state.slug}/${city.slug}/tours` : "";
+    state && city
+      ? resolveSafeTourListHref({
+          canonicalPath: tour ? getCityTourDetailPath(tour) : null,
+          countrySlug:
+            tour?.destination.countrySlug ?? tour?.destination.stateSlug,
+          stateSlug: state.slug,
+          citySlug: city.slug,
+        })
+      : "";
   const fareHarborParsed = useMemo(() => {
     if (!tour || tour.bookingProvider !== "fareharbor") {
       return null;

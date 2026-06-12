@@ -1,5 +1,7 @@
 import { getGuideStates } from "./guideRegistry";
 import { hasUsGuide } from "./guideIndex";
+import { resolveInternationalGuideBreadcrumb } from "./internationalGuideBreadcrumbs";
+import { isUsDestinationSlug } from "../tours/tourNavigation";
 
 export type ResolvedUsGuideHref = {
   href: string;
@@ -45,4 +47,52 @@ export const resolveMissingUsCityGuideRedirect = (
   }
 
   return buildUsStateGuideHref(stateSlug);
+};
+
+export type ResolvedDestinationGuideHref = {
+  href: string;
+  isInternational: boolean;
+};
+
+export const resolveDestinationGuideHref = ({
+  stateSlug,
+  citySlug,
+  countrySlug,
+  countryName,
+  cityName,
+}: {
+  stateSlug: string;
+  citySlug: string;
+  countrySlug?: string | null;
+  countryName?: string | null;
+  cityName?: string | null;
+}): ResolvedDestinationGuideHref => {
+  const normalizedStateSlug = stateSlug.trim().toLowerCase();
+  const normalizedCitySlug = citySlug.trim().toLowerCase();
+  const normalizedCountrySlug = (countrySlug ?? normalizedStateSlug)
+    .trim()
+    .toLowerCase();
+
+  if (isUsDestinationSlug(normalizedStateSlug)) {
+    return {
+      href: resolveUsGuideHref(normalizedStateSlug, normalizedCitySlug).href,
+      isInternational: false,
+    };
+  }
+
+  const guideBreadcrumb = resolveInternationalGuideBreadcrumb({
+    countrySlug: normalizedCountrySlug,
+    citySlug: normalizedCitySlug,
+    countryName,
+    cityName,
+  });
+
+  return {
+    href:
+      guideBreadcrumb?.url ??
+      (normalizedCountrySlug
+        ? `/destinations/world/${normalizedCountrySlug}`
+        : "/guides/world"),
+    isInternational: true,
+  };
 };
