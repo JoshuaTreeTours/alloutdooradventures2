@@ -219,10 +219,7 @@ const toEngine2GuideTour = (tour: Engine2Tour): Tour => {
 };
 
 const engine2InternationalGuideTours = engine2Tours
-  .filter(tour => {
-    const country = getCountryFromEngine2Tour(tour);
-    return country?.slug === "france";
-  })
+  .filter(tour => Boolean(getCountryFromEngine2Tour(tour)))
   .map(toEngine2GuideTour);
 
 const engine2GuideCanonicalById = new Map<string, string>(
@@ -944,10 +941,15 @@ export const buildStateGuide = (stateSlug: string): GuideContent | null => {
 };
 
 export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
-  const countryTours = tours.filter(tour => {
+  const staticCountryTours = tours.filter(tour => {
     const country = getCountryFromTour(tour);
     return country?.slug === countrySlug;
   });
+  const engine2CountryTours = engine2InternationalGuideTours.filter(tour => {
+    const country = getCountryFromTour(tour);
+    return country?.slug === countrySlug;
+  });
+  const countryTours = [...staticCountryTours, ...engine2CountryTours];
 
   const engine2Country = engine2CountryCityIndex.get(countrySlug);
 
@@ -956,14 +958,10 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
   }
 
   const countryName =
-    getCountryFromTour(countryTours[0])?.name ??
-    engine2CountryCityIndex.get(countrySlug)?.name ??
-    countrySlug;
-  const tourCities = buildCitySummaries(countryTours);
-  const engine2Cities = Array.from(
-    engine2CountryCityIndex.get(countrySlug)?.cities.values() ?? []
-  );
-  const cities = mergeCitySummaries(tourCities, engine2Cities);
+    countryTours.length > 0
+      ? (getCountryFromTour(countryTours[0])?.name ?? countrySlug)
+      : (engine2Country?.name ?? countrySlug);
+  const cities = buildCitySummaries(countryTours);
   const highlightCities = [...cities]
     .sort((a, b) => b.tourCount - a.tourCount)
     .slice(0, 3);
@@ -1018,7 +1016,7 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
     type: "country",
     name: countryName,
     slug: countrySlug,
-    intro: `${countryName} offers ${countryTours.length + (engine2CountryCityIndex.get(countrySlug)?.tourCount ?? 0)} tours across ${cities.length} cities, spanning ${formatList(activityLabels)}.`,
+    intro: `${countryName} offers ${countryTours.length || (engine2Country?.tourCount ?? 0)} tours across ${cities.length || (engine2Country?.cities.size ?? 0)} cities, spanning ${formatList(activityLabels)}.`,
     breadcrumbs: [
       { label: "Guides", href: "/guides" },
       { label: "International", href: "/guides/world" },
