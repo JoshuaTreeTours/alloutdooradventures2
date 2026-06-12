@@ -107,6 +107,6 @@ describe("ToursLanding international inventory selector", () => {
         selectedCountry: "Germany",
         citySlug: "kirchzarten",
       })
-    ).toBe("/destinations/europe/germany/cities/kirchzarten");
+    ).toBe("/destinations/europe/germany/cities/kirchzarten/tours");
   });
 });

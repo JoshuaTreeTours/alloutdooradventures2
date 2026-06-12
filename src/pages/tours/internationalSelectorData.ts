@@ -3,6 +3,7 @@ import type {
   Engine2CanadaProvinceIndexEntry,
   Engine2Tour,
 } from "../../engine2/data/loadEngine2";
+import { EUROPE_COUNTRIES } from "../../data/tourCatalog";
 import { slugify } from "../../utils/slugify";
 import { isUsCountryAlias } from "../../utils/guides/usCountryAliases";
 
@@ -12,6 +13,11 @@ export const MEXICO_COUNTRY_NAME = "Mexico";
 export type SelectorOption = {
   name: string;
   slug: string;
+};
+
+export type InternationalCitySelectorOption = SelectorOption & {
+  countrySlug: string;
+  route: string;
 };
 
 const normalizeSpacing = (value: string) =>
@@ -136,4 +142,66 @@ export const buildInternationalCityOptions = ({
   )
     .sort((a, b) => a.localeCompare(b))
     .map(city => ({ name: city, slug: slugify(city) }));
+};
+
+export const resolveInternationalCountrySelectionRoute = ({
+  selectedCountry,
+  europeCountrySlugs = EUROPE_COUNTRIES.map(country => slugify(country)),
+}: {
+  selectedCountry: string;
+  europeCountrySlugs?: string[];
+}) => {
+  if (!selectedCountry || isUsCountryAlias(selectedCountry)) {
+    return null;
+  }
+
+  if (selectedCountry === CANADA_COUNTRY_NAME) {
+    return "/destinations/world/canada";
+  }
+
+  if (selectedCountry === MEXICO_COUNTRY_NAME) {
+    return "/destinations/mexico";
+  }
+
+  const countrySlug = slugify(selectedCountry);
+  const europeSlugSet = new Set(europeCountrySlugs);
+  return europeSlugSet.has(countrySlug)
+    ? `/destinations/europe/${countrySlug}`
+    : `/destinations/world/${countrySlug}`;
+};
+
+export const resolveInternationalCitySelectionRoute = ({
+  selectedCountry,
+  selectedCanadaProvinceSlug = "",
+  citySlug,
+  europeCountrySlugs = EUROPE_COUNTRIES.map(country => slugify(country)),
+}: {
+  selectedCountry: string;
+  selectedCanadaProvinceSlug?: string;
+  citySlug: string;
+  europeCountrySlugs?: string[];
+}) => {
+  if (!selectedCountry || !citySlug) {
+    return null;
+  }
+
+  if (selectedCountry === CANADA_COUNTRY_NAME && selectedCanadaProvinceSlug) {
+    return `/destinations/world/canada/${selectedCanadaProvinceSlug}/${citySlug}`;
+  }
+
+  if (selectedCountry === MEXICO_COUNTRY_NAME) {
+    return `/destinations/mexico/${citySlug}/tours`;
+  }
+
+  if (isUsCountryAlias(selectedCountry)) {
+    return null;
+  }
+
+  const countrySlug = slugify(selectedCountry);
+  const europeSlugSet = new Set(europeCountrySlugs);
+  const basePath = europeSlugSet.has(countrySlug)
+    ? `/destinations/europe/${countrySlug}`
+    : `/destinations/world/${countrySlug}`;
+
+  return `${basePath}/cities/${citySlug}/tours`;
 };

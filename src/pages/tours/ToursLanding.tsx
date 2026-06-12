@@ -44,46 +44,13 @@ import {
   CANADA_COUNTRY_NAME,
   getMexicoCityKey,
   MEXICO_COUNTRY_NAME,
+  resolveInternationalCitySelectionRoute,
 } from "./internationalSelectorData";
+
+export { resolveInternationalCitySelectionRoute };
 
 const normalizeOptionValue = (value: string) =>
   slugify(value.trim().toLowerCase());
-
-export const resolveInternationalCitySelectionRoute = ({
-  selectedCountry,
-  selectedCanadaProvinceSlug = "",
-  citySlug,
-  europeCountrySlugs = EUROPE_COUNTRIES.map(country => slugify(country)),
-}: {
-  selectedCountry: string;
-  selectedCanadaProvinceSlug?: string;
-  citySlug: string;
-  europeCountrySlugs?: string[];
-}) => {
-  if (!selectedCountry || !citySlug) {
-    return null;
-  }
-
-  if (selectedCountry === CANADA_COUNTRY_NAME && selectedCanadaProvinceSlug) {
-    return `/destinations/world/canada/${selectedCanadaProvinceSlug}/${citySlug}`;
-  }
-
-  if (selectedCountry === MEXICO_COUNTRY_NAME) {
-    return `/destinations/mexico/${citySlug}/tours`;
-  }
-
-  if (isUsCountryAlias(selectedCountry)) {
-    return "/guides/us";
-  }
-
-  const countrySlug = slugify(selectedCountry);
-  const europeSlugSet = new Set(europeCountrySlugs);
-  const basePath = europeSlugSet.has(countrySlug)
-    ? `/destinations/europe/${countrySlug}`
-    : `/destinations/world/${countrySlug}`;
-
-  return `${basePath}/cities/${citySlug}`;
-};
 
 export const resolveActivitySelectorRoute = ({
   activitySlug,
