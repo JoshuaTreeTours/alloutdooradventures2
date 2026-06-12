@@ -5,6 +5,7 @@ import type {
   Engine2Tour,
 } from "../../engine2/data/loadEngine2";
 import { slugify } from "../../utils/slugify";
+import { isUsCountryAlias } from "../../utils/guides/usCountryAliases";
 
 export const CANADA_COUNTRY_NAME = "Canada";
 export const MEXICO_COUNTRY_NAME = "Mexico";
@@ -53,7 +54,10 @@ export const buildInternationalCountryOptions = (
   const countrySet = new Set(
     internationalTours
       .map(tour => tour.destination.country)
-      .filter((country): country is string => Boolean(country))
+      .filter(
+        (country): country is string =>
+          Boolean(country) && !isUsCountryAlias(country)
+      )
   );
 
   if (mexicoTours.length) {
@@ -126,7 +130,11 @@ export const buildInternationalCityOptions = ({
   return Array.from(
     new Set(
       internationalTours
-        .filter(tour => tour.destination.country === selectedCountry)
+        .filter(
+          tour =>
+            tour.destination.country === selectedCountry &&
+            !isUsCountryAlias(tour.destination.country)
+        )
         .map(tour => tour.destination.city)
     )
   )

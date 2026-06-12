@@ -7,6 +7,7 @@ import {
   canonicalizeDestinationPath,
   getCanonicalDestinationCitySlug,
   getDestinationCitySlugGroup,
+  resolveUsDestinationPath,
 } from "./data/destinationAliases";
 import {
   getCityTourDetailPath,
@@ -196,6 +197,31 @@ describe("destination city alias canonicalization", () => {
     ).toBe("/destinations/world/portugal/cities/lisbon");
   });
 
+  it("canonicalizes U.S. world-country aliases to domestic destination routes", () => {
+    expect(
+      canonicalizeDestinationPath("/destinations/world/usa/cities/gardnerville")
+    ).toBe("/destinations/california/gardnerville");
+    expect(
+      canonicalizeDestinationPath(
+        "/destinations/world/United%20States/cities/santa-barbara"
+      )
+    ).toBe("/destinations/california/santa-barbara");
+    expect(
+      canonicalizeDestinationPath(
+        "/destinations/world/u.s./cities/santa-brbara/tours"
+      )
+    ).toBe("/destinations/california/santa-barbara/tours");
+    expect(resolveUsDestinationPath("definitely-missing-city")).toBe(
+      "/guides/us"
+    );
+  });
+
+  it("keeps international world destination city paths under the world hierarchy", () => {
+    expect(
+      canonicalizeDestinationPath("/destinations/world/australia/cities/sydney")
+    ).toBe("/destinations/world/australia/cities/sydney");
+  });
+
   it("excludes duplicate destination aliases from sitemap XML URL sets", async () => {
     const sitemap = await buildSitemap();
     const allUrls = [
@@ -221,6 +247,8 @@ describe("destination city alias canonicalization", () => {
     expect(allUrls).not.toEqual(expect.arrayContaining(aliasCityPaths));
     expect(allUrls).not.toEqual(
       expect.arrayContaining([
+        expect.stringContaining("/destinations/world/usa"),
+        expect.stringContaining("/destinations/world/united-states"),
         expect.stringContaining("/wien/"),
         expect.stringContaining("/firenze/"),
         expect.stringContaining("/roma/"),

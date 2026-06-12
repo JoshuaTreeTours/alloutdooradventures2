@@ -189,6 +189,16 @@ describe("international guide alias canonicalization", () => {
       canonicalCitySlug,
       aliasCitySlug,
     ] of GUIDE_ALIAS_CASES) {
+      if (countrySlug === "united-states") {
+        expect(
+          sitemap.guideUrls.has(guidePath(countrySlug, canonicalCitySlug))
+        ).toBe(false);
+        expect(
+          sitemap.guideUrls.has(guidePath(countrySlug, aliasCitySlug))
+        ).toBe(false);
+        continue;
+      }
+
       expect(
         sitemap.guideUrls.has(guidePath(countrySlug, canonicalCitySlug))
       ).toBe(true);

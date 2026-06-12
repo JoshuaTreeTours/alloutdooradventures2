@@ -4,7 +4,11 @@ import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../../data/tourFallbacks";
-import { getDestinationCityAlias } from "../../../data/destinationAliases";
+import {
+  getDestinationCityAlias,
+  resolveUsDestinationPath,
+} from "../../../data/destinationAliases";
+import { isUsCountryAlias } from "../../../utils/guides/usCountryAliases";
 
 type WorldCityRouteProps = {
   params: {
@@ -14,6 +18,10 @@ type WorldCityRouteProps = {
 };
 
 export default function WorldCityRoute({ params }: WorldCityRouteProps) {
+  if (isUsCountryAlias(params.countrySlug)) {
+    return <RouteRedirect to={resolveUsDestinationPath(params.citySlug)} />;
+  }
+
   const alias = getDestinationCityAlias(params.countrySlug, params.citySlug);
   const state = getFallbackStateBySlug(params.countrySlug);
   const city = getFallbackCityBySlugs(

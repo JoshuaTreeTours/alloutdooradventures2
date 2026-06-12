@@ -499,6 +499,11 @@ const getCountrySlugFromTour = (tour, catalogModule) =>
         ? catalogModule.slugify(tour.destination.state)
         : undefined);
 
+const US_COUNTRY_ALIAS_SLUGS = new Set(["united-states", "us", "usa"]);
+
+const isUsCountryAliasSlug = countrySlug =>
+  Boolean(countrySlug && US_COUNTRY_ALIAS_SLUGS.has(countrySlug));
+
 const REMOVED_TOUR_IDS = new Set([
   "34849",
   "34897",
@@ -1092,6 +1097,10 @@ export const buildSitemap = async () => {
       return;
     }
 
+    if (isUsCountryAliasSlug(countrySlug)) {
+      return;
+    }
+
     if (isUsStateTour(tour, stateSlugSet, catalogModule)) {
       return;
     }
@@ -1168,7 +1177,7 @@ export const buildSitemap = async () => {
     }
 
     const countrySlug = countrySlugForAlias;
-    if (!countrySlug) {
+    if (!countrySlug || isUsCountryAliasSlug(countrySlug)) {
       return;
     }
     if (!guideCountries.has(countrySlug)) {

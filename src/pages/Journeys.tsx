@@ -9,6 +9,7 @@ import { getStaticPageSeo } from "../utils/seo";
 import { resolveTourHeroImage } from "../utils/hero";
 import { slugify } from "../utils/slugify";
 import { getAllEngine2Tours } from "../engine2/data/loadEngine2";
+import { isUsCountryAlias } from "../utils/guides/usCountryAliases";
 
 const durationBuckets = [
   { label: "2–3 days", value: "2-3" },
@@ -214,7 +215,7 @@ export default function Journeys() {
         tour,
         mapped: AFRICA_ENGINE2_MAP[tour.id],
       }))
-      .filter(({ tour, mapped }) => (mapped?.country ?? tour.geo.country) !== "United States")
+      .filter(({ tour, mapped }) => !isUsCountryAlias(mapped?.country ?? tour.geo.country))
       .map(tour => ({
         id: `engine2-${tour.tour.id}`,
         slug: tour.tour.slug,

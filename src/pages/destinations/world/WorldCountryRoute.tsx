@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Link, useLocation } from "wouter";
 
 import Image from "../../../components/Image";
+import RouteRedirect from "../../../components/RouteRedirect";
 import Seo from "../../../components/Seo";
 import TourCard from "../../../components/TourCard";
 import { useStructuredData } from "../../../components/StructuredDataProvider";
@@ -15,6 +16,7 @@ import { getTourDetailPath } from "../../../data/tours";
 import { resolveHeroImage, resolveTourHeroImage } from "../../../utils/hero";
 import { SITE_BRAND_NAME } from "../../../utils/site";
 import { buildMetaDescription } from "../../../utils/seo";
+import { isUsCountryAlias } from "../../../utils/guides/usCountryAliases";
 import {
   buildBreadcrumbList,
   buildItemList,
@@ -90,6 +92,10 @@ export default function WorldCountryRoute({ params }: WorldCountryRouteProps) {
   }, [country, filteredTours]);
 
   useStructuredData(structuredDataNodes);
+
+  if (!country && isUsCountryAlias(params.countrySlug)) {
+    return <RouteRedirect to="/guides/us" />;
+  }
 
   if (!country) {
     return (

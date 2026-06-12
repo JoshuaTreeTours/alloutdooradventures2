@@ -3,6 +3,7 @@ import { tours } from "./tours";
 import { australiaTours } from "./australiaTours";
 import { countriesWithTours } from "./europeIndex";
 import { US_STATES, slugify } from "./tourCatalog";
+import { US_COUNTRY_ALIAS_SLUGS } from "../utils/guides/usCountryAliases";
 
 export type WorldCountrySummary = {
   name: string;
@@ -17,7 +18,7 @@ const usStateSlugs = new Set(US_STATES.map(state => slugify(state)));
 const excludedCountrySlugs = new Set([
   ...europeCountrySlugs,
   ...usStateSlugs,
-  "united-states",
+  ...US_COUNTRY_ALIAS_SLUGS,
 ]);
 
 const getDestinationName = (tour: Tour) =>

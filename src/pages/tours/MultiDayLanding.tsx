@@ -8,6 +8,7 @@ import { tours } from "../../data/tours";
 import type { Tour } from "../../data/tours.types";
 import { US_STATES, slugify } from "../../data/tourCatalog";
 import { getAllEngine2Tours } from "../../engine2/data/loadEngine2";
+import { isUsCountryAlias } from "../../utils/guides/usCountryAliases";
 
 const multiDayTriggers = ["multi-day", "multi day", "overnight"];
 
@@ -127,7 +128,7 @@ export default function MultiDayLanding() {
     () => {
       const engine2International = getAllEngine2Tours()
         .map((tour) => ({ tour, mapped: AFRICA_ENGINE2_MAP[tour.id] }))
-        .filter(({ tour, mapped }) => (mapped?.country ?? tour.geo.country) !== "United States")
+        .filter(({ tour, mapped }) => !isUsCountryAlias(mapped?.country ?? tour.geo.country))
         .map((tour) => ({
           id: `engine2-${tour.tour.id}`,
           slug: tour.tour.slug,
