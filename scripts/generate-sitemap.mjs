@@ -808,6 +808,18 @@ export const buildSitemap = async () => {
     "../src/utils/guides/retiredLowInventoryGuides.ts",
     import.meta.url
   );
+  const internationalGuideRetention = await tsImport(
+    "../src/utils/guides/internationalGuideRetention.ts",
+    import.meta.url
+  );
+  const internationalGuideAliases = await tsImport(
+    "../src/data/internationalGuideAliases.ts",
+    import.meta.url
+  );
+  const guideDataModule = await tsImport(
+    "../src/data/guideData.ts",
+    import.meta.url
+  );
   const tours = await buildTourSummaries(catalogModule);
   let engine2Tours = [];
   try {
@@ -1147,6 +1159,14 @@ export const buildSitemap = async () => {
   const guideCountries = new Map();
   const allowedUsGuideCities =
     await listUsGuideCitiesByState(retiredGuidePolicy);
+  const addGuideCountryCity = (countrySlug, citySlug) => {
+    if (!guideCountries.has(countrySlug)) {
+      guideCountries.set(countrySlug, new Map());
+    }
+
+    const cities = guideCountries.get(countrySlug);
+    cities.set(citySlug, (cities.get(citySlug) ?? 0) + 1);
+  };
 
   tours.forEach(tour => {
     const rawCitySlug = tour.destination.citySlug;
@@ -1180,10 +1200,55 @@ export const buildSitemap = async () => {
     if (!countrySlug || isUsCountryAliasSlug(countrySlug)) {
       return;
     }
-    if (!guideCountries.has(countrySlug)) {
-      guideCountries.set(countrySlug, new Set());
+    const guideCitySlug =
+      internationalGuideAliases.getCanonicalInternationalGuideCitySlug(
+        countrySlug,
+        citySlug
+      );
+    addGuideCountryCity(countrySlug, guideCitySlug);
+  });
+
+  engine2Tours.forEach(tour => {
+    const countryName = (
+      tour.geo?.country ||
+      tour.sourceCountrySlug ||
+      ""
+    ).trim();
+    const countrySlug = catalogModule.slugify(countryName);
+    if (!countrySlug || isUsCountryAliasSlug(countrySlug)) {
+      return;
     }
-    guideCountries.get(countrySlug).add(citySlug);
+
+    const rawCitySlug =
+      tour.sourceCitySlug || catalogModule.slugify(tour.geo?.city || "");
+    if (!rawCitySlug) {
+      return;
+    }
+
+    const guideCitySlug =
+      internationalGuideAliases.getCanonicalInternationalGuideCitySlug(
+        countrySlug,
+        rawCitySlug
+      );
+    addGuideCountryCity(countrySlug, guideCitySlug);
+  });
+
+  guideDataModule.getGuideCountries?.().forEach(country => {
+    if (!country?.slug || isUsCountryAliasSlug(country.slug)) {
+      return;
+    }
+
+    if (!guideCountries.has(country.slug)) {
+      guideCountries.set(country.slug, new Map());
+    }
+
+    country.cities?.forEach(city => {
+      const cities = guideCountries.get(country.slug);
+      cities.set(
+        city.slug,
+        Math.max(cities.get(city.slug) ?? 0, city.tourCount)
+      );
+    });
   });
 
   guideStates.forEach((cities, stateSlug) => {
@@ -1195,8 +1260,16 @@ export const buildSitemap = async () => {
 
   guideCountries.forEach((cities, countrySlug) => {
     addUrl(guideUrls, `/guides/world/${countrySlug}`);
-    cities.forEach(citySlug => {
-      addUrl(guideUrls, `/guides/world/${countrySlug}/${citySlug}`);
+    cities.forEach((activeTourCount, citySlug) => {
+      if (
+        internationalGuideRetention.shouldRetainInternationalCityGuide({
+          countrySlug,
+          citySlug,
+          activeTourCount,
+        })
+      ) {
+        addUrl(guideUrls, `/guides/world/${countrySlug}/${citySlug}`);
+      }
     });
   });
 

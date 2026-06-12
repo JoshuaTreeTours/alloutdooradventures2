@@ -1,8 +1,12 @@
 import { describe, expect, it } from "vitest";
 
-import { getToursByCityUnified } from "../../data/tours";
+import { getToursByCityUnified, tours } from "../../data/tours";
 import type { Engine6LiveProductFields } from "../../engine6/liveProductFields";
-import { hydrateEngine6ListingEntries } from "./ToursLanding";
+import {
+  hydrateEngine6ListingEntries,
+  resolveInternationalCitySelectionRoute,
+} from "./ToursLanding";
+import { buildInternationalCityOptions } from "./internationalSelectorData";
 
 describe("ToursLanding Engine6 filtered listing hydration", () => {
   it("hydrates /tours?state=california&city=joshua-tree card fields from live Engine6 data", () => {
@@ -78,5 +82,31 @@ describe("ToursLanding activity selector routing", () => {
       citySlug: "santa-barbara",
       type: "tours",
     });
+  });
+});
+
+describe("ToursLanding international inventory selector", () => {
+  it("lists low-inventory international cities from active tour inventory", () => {
+    const germanyCities = buildInternationalCityOptions({
+      selectedCountry: "Germany",
+      selectedCanadaProvinceSlug: "",
+      internationalTours: tours,
+      canadaProvinces: [],
+      mexicoTours: [],
+    });
+    const citySlugs = germanyCities.map(city => city.slug);
+
+    expect(citySlugs).toContain("kirchzarten");
+    expect(citySlugs).toContain("berlin");
+    expect(citySlugs).toContain("munich");
+  });
+
+  it("routes low-inventory international city selections to destination inventory, not guides", () => {
+    expect(
+      resolveInternationalCitySelectionRoute({
+        selectedCountry: "Germany",
+        citySlug: "kirchzarten",
+      })
+    ).toBe("/destinations/europe/germany/cities/kirchzarten");
   });
 });
