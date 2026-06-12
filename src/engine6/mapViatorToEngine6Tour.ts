@@ -24,6 +24,7 @@ const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
   "6953SWAMPTRANS":
     "Honey Island Swamp Boat Tour with New Orleans Transportation",
   "15200P2": "Large Airboat Swamp Tour with New Orleans Pickup",
+  "273720P1": "Guided New Orleans Bayou Pontoon Boat Tour",
 };
 const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "415653P2":
@@ -42,9 +43,12 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Travel from New Orleans to Honey Island Swamp for a guided flat-bottom boat tour through protected wetlands, bayou passages, and Cajun village scenery.",
   "15200P2":
     "Ride a large airboat through Louisiana swamp waterways with downtown New Orleans hotel pickup, captain narration, photo stops, and seasonal wildlife viewing.",
+  "273720P1":
+    "Ride a flat-bottom boat through Lafitte-area cypress swamp near New Orleans, with captain narration, wildlife viewing, and optional pickup.",
 };
 const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",
+  "273720P1",
 ]);
 
 export const isEngine6ItinerarySectionSuppressed = (productCode: string) =>
@@ -69,6 +73,8 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Travel from downtown New Orleans across Lake Pontchartrain to Honey Island Swamp for a guided flat-bottom boat tour through protected Louisiana wetlands. The route moves through narrow bayou passages where the captain explains swamp ecology, Cajun culture, and local preservation efforts. Travelers may see alligators, birds, turtles, raccoons, wild boar, and other wildlife depending on conditions, and the route includes views of a Cajun village reachable only by boat before returning to shore and the New Orleans pickup point.",
   "15200P2":
     "Travel from downtown New Orleans by hotel pickup toward the swamp for a large-airboat ride on Louisiana waterways. After the drive along the Mississippi River corridor, board a 16-passenger airboat with a captain who narrates the route, explains local wildlife and flora, and balances faster runs with slower photo stops. Wildlife sightings vary by season and conditions, but the outing is designed around swamp scenery, alligator habitat, and a coordinated return transfer back to New Orleans.",
+  "273720P1":
+    "Ride a flat-bottom pontoon boat through tidewater cypress swamp near Jean Lafitte National Historical Park and Preserve. This New Orleans-area bayou tour departs from Lafitte, with pickup available on selected bookings, and focuses on marsh scenery, captain narration, and wildlife viewing. The route moves through shallow bayou waterways where alligators, turtles, snakes, herons, egrets, ibis, hawks, owls, and bald eagles may appear depending on season and conditions. Travelers finish back at the Lafitte meeting point or use the selected return transportation option to New Orleans.",
 };
 
 const ENGINE6_OVERVIEW_OVERRIDES: Record<
