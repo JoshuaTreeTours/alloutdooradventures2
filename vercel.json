@@ -66,6 +66,86 @@
   ],
   "redirects": [
     {
+      "source": "/guides/world/spain/bilbo",
+      "destination": "/guides/world/spain/bilbao",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/ireland/dublin-2",
+      "destination": "/guides/world/ireland/dublin",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/australia/blackburn-north",
+      "destination": "/guides/world/australia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/australia/hyden",
+      "destination": "/guides/world/australia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/australia/orbost",
+      "destination": "/guides/world/australia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/australia/roebuck",
+      "destination": "/guides/world/australia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/germany/solnhofen",
+      "destination": "/guides/world/germany",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/germany/treuchtlingen",
+      "destination": "/guides/world/germany",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/united-kingdom/dess",
+      "destination": "/guides/world/united-kingdom",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/united-kingdom/whitewell",
+      "destination": "/guides/world/united-kingdom",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/arizona/morristown",
+      "destination": "/guides/us/arizona",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/lamont",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/georgia/fortson",
+      "destination": "/guides/us/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/georgia/lizella",
+      "destination": "/guides/us/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/tennessee/christiana",
+      "destination": "/guides/us/tennessee",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/tennessee/delano",
+      "destination": "/guides/us/tennessee",
+      "permanent": true
+    },
+    {
       "source": "/guides/world/austria/wien",
       "destination": "/guides/world/austria/vienna",
       "permanent": true

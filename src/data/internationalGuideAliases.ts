@@ -67,10 +67,22 @@ export const INTERNATIONAL_GUIDE_CITY_ALIASES: InternationalGuideAlias[] = [
     canonicalCityName: "Lisbon",
   },
   {
+    countrySlug: "ireland",
+    aliasCitySlug: "dublin-2",
+    canonicalCitySlug: "dublin",
+    canonicalCityName: "Dublin",
+  },
+  {
     countrySlug: "spain",
     aliasCitySlug: "alcdia",
     canonicalCitySlug: "alcudia",
     canonicalCityName: "Alcudia",
+  },
+  {
+    countrySlug: "spain",
+    aliasCitySlug: "bilbo",
+    canonicalCitySlug: "bilbao",
+    canonicalCityName: "Bilbao",
   },
   {
     countrySlug: "spain",

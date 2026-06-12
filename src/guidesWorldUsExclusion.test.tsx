@@ -13,6 +13,7 @@ import {
   buildStateGuide,
 } from "./data/guideData";
 import { getTourBySlugs } from "./data/tours";
+import { loadUsCityGuide } from "./utils/loadGuide";
 import { getInternationalCountries } from "./utils/guides/getInternationalCountries";
 import { isUsCountryAlias } from "./utils/guides/usCountryAliases";
 
@@ -125,10 +126,20 @@ describe("international low-inventory guide retention", () => {
     );
 
     expect(germanyGuideCitySlugs).not.toContain("kirchzarten");
+    expect(germanyGuideCitySlugs).not.toContain("solnhofen");
+    expect(germanyGuideCitySlugs).not.toContain("treuchtlingen");
     expect(germanyGuideCitySlugs).toEqual(
       expect.arrayContaining(["berlin", "munich"])
     );
     expect(kirchzartenGuide).toBeNull();
+    expect(
+      buildCityGuide({
+        parentSlug: "germany",
+        citySlug: "solnhofen",
+        regionType: "country",
+        sanitize: false,
+      })
+    ).toBeNull();
     expect(berlinGuide?.breadcrumbs.at(-1)?.href).toBe(
       "/guides/world/germany/berlin"
     );
@@ -151,15 +162,48 @@ describe("international low-inventory guide retention", () => {
       destination: "/guides/world/germany",
       permanent: true,
     });
+    expect(vercelConfig.redirects).toContainEqual({
+      source: "/guides/world/germany/solnhofen",
+      destination: "/guides/world/germany",
+      permanent: true,
+    });
+    expect(vercelConfig.redirects).toContainEqual({
+      source: "/guides/us/arizona/morristown",
+      destination: "/guides/us/arizona",
+      permanent: true,
+    });
   });
 
-  it("preserves Kirchzarten tour inventory outside guide pages", () => {
+  it("retires selected U.S. guide pages while keeping state guide pages available", () => {
+    const arizonaGuide = buildStateGuide("arizona");
+    const arizonaCitySlugs = arizonaGuide?.topCities?.map(city => city.slug);
+
+    expect(arizonaGuide?.breadcrumbs.at(-1)?.href).toBe("/guides/us/arizona");
+    expect(arizonaCitySlugs).not.toContain("morristown");
+    expect(loadUsCityGuide("arizona", "morristown")).toBeUndefined();
+  });
+
+  it("preserves retired guide city destination and tour inventory outside guide pages", () => {
+    const solnhofenTour = getTourBySlugs(
+      "germany",
+      "solnhofen",
+      "2-tagestour-solnhofen-eichsttt-631668"
+    );
+    const morristownTour = getTourBySlugs(
+      "arizona",
+      "morristown",
+      "intro-to-riding---90-minutes-619755"
+    );
     const kirchzartenTour = getTourBySlugs(
       "germany",
       "kirchzarten",
       "radrtsel-der-brautzug-der-marie-antoinette-dreisamtal-538465"
     );
 
+    expect(solnhofenTour).toBeTruthy();
+    expect(solnhofenTour?.destination.city).toBe("Solnhofen");
+    expect(morristownTour).toBeTruthy();
+    expect(morristownTour?.destination.city).toBe("Morristown");
     expect(kirchzartenTour).toBeTruthy();
     expect(kirchzartenTour?.destination.city).toBe("Kirchzarten");
   });
@@ -171,6 +215,10 @@ describe("international low-inventory guide retention", () => {
     expect(sitemap.guideUrls.has("/guides/world/germany/kirchzarten")).toBe(
       false
     );
+    expect(sitemap.guideUrls.has("/guides/world/germany/solnhofen")).toBe(
+      false
+    );
+    expect(sitemap.guideUrls.has("/guides/us/arizona/morristown")).toBe(false);
     expect(sitemap.guideUrls.has("/guides/world/germany/berlin")).toBe(true);
     expect(sitemap.guideUrls.has("/guides/world/germany/munich")).toBe(true);
   }, 60_000);
