@@ -106,7 +106,7 @@ describe("ActivityToursPage", () => {
 
     expect(kirchzarten).toBeDefined();
     expect(kirchzarten?.route).toBe(
-      "/destinations/europe/germany/cities/kirchzarten/tours"
+      "/destinations/europe/germany/cities/kirchzarten/tours?activity=cycling"
     );
     expect(kirchzarten?.route).not.toMatch(/^\/guides\//);
   });

@@ -144,11 +144,22 @@ export const buildInternationalCityOptions = ({
     .map(city => ({ name: city, slug: slugify(city) }));
 };
 
+const appendActivityFilterQuery = (route: string, activitySlug?: string) => {
+  if (!activitySlug) {
+    return route;
+  }
+
+  const separator = route.includes("?") ? "&" : "?";
+  return `${route}${separator}activity=${encodeURIComponent(activitySlug)}`;
+};
+
 export const resolveInternationalCountrySelectionRoute = ({
   selectedCountry,
+  activitySlug,
   europeCountrySlugs = EUROPE_COUNTRIES.map(country => slugify(country)),
 }: {
   selectedCountry: string;
+  activitySlug?: string;
   europeCountrySlugs?: string[];
 }) => {
   if (!selectedCountry || isUsCountryAlias(selectedCountry)) {
@@ -156,29 +167,35 @@ export const resolveInternationalCountrySelectionRoute = ({
   }
 
   if (selectedCountry === CANADA_COUNTRY_NAME) {
-    return "/destinations/world/canada";
+    return activitySlug
+      ? `/destinations/world/canada/activities/${activitySlug}`
+      : "/destinations/world/canada";
   }
 
   if (selectedCountry === MEXICO_COUNTRY_NAME) {
-    return "/destinations/mexico";
+    return appendActivityFilterQuery("/destinations/mexico", activitySlug);
   }
 
   const countrySlug = slugify(selectedCountry);
   const europeSlugSet = new Set(europeCountrySlugs);
-  return europeSlugSet.has(countrySlug)
+  const basePath = europeSlugSet.has(countrySlug)
     ? `/destinations/europe/${countrySlug}`
     : `/destinations/world/${countrySlug}`;
+
+  return activitySlug ? `${basePath}/${activitySlug}` : basePath;
 };
 
 export const resolveInternationalCitySelectionRoute = ({
   selectedCountry,
   selectedCanadaProvinceSlug = "",
   citySlug,
+  activitySlug,
   europeCountrySlugs = EUROPE_COUNTRIES.map(country => slugify(country)),
 }: {
   selectedCountry: string;
   selectedCanadaProvinceSlug?: string;
   citySlug: string;
+  activitySlug?: string;
   europeCountrySlugs?: string[];
 }) => {
   if (!selectedCountry || !citySlug) {
@@ -186,11 +203,15 @@ export const resolveInternationalCitySelectionRoute = ({
   }
 
   if (selectedCountry === CANADA_COUNTRY_NAME && selectedCanadaProvinceSlug) {
-    return `/destinations/world/canada/${selectedCanadaProvinceSlug}/${citySlug}`;
+    const cityPath = `/destinations/world/canada/${selectedCanadaProvinceSlug}/${citySlug}`;
+    return activitySlug ? `${cityPath}/activities/${activitySlug}` : cityPath;
   }
 
   if (selectedCountry === MEXICO_COUNTRY_NAME) {
-    return `/destinations/mexico/${citySlug}/tours`;
+    return appendActivityFilterQuery(
+      `/destinations/mexico/${citySlug}/tours`,
+      activitySlug
+    );
   }
 
   if (isUsCountryAlias(selectedCountry)) {
@@ -203,5 +224,8 @@ export const resolveInternationalCitySelectionRoute = ({
     ? `/destinations/europe/${countrySlug}`
     : `/destinations/world/${countrySlug}`;
 
-  return `${basePath}/cities/${citySlug}/tours`;
+  return appendActivityFilterQuery(
+    `${basePath}/cities/${citySlug}/tours`,
+    activitySlug
+  );
 };

@@ -538,8 +538,12 @@ export const getActivityInternationalCityOptions = (
       route:
         resolveInternationalCitySelectionRoute({
           selectedCountry: country.name,
+          selectedCanadaProvinceSlug:
+            countrySlug === "canada" ? tour.destination.stateSlug : undefined,
           citySlug,
-        }) ?? `/destinations/world/${countrySlug}/cities/${citySlug}/tours`,
+          activitySlug,
+        }) ??
+        `/destinations/world/${countrySlug}/cities/${citySlug}/tours?activity=${activitySlug}`,
     });
   });
 
