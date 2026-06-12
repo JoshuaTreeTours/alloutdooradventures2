@@ -21,6 +21,12 @@ const readRepoFile = (path: string) =>
 const GUIDE_ALIAS_CASES = [
   ["austria", "vienna", "wien"],
   ["germany", "munich", "mnchen"],
+  ["denmark", "copenhagen", "kbenhavn"],
+  ["greece", "athens", "athina"],
+  ["italy", "florence", "firenze"],
+  ["italy", "rome", "roma"],
+  ["italy", "venice", "venezia"],
+  ["switzerland", "zurich", "zrich"],
   ["netherlands", "the-hague", "den-haag"],
   ["portugal", "lisbon", "lisboa"],
   ["spain", "alcudia", "alcdia"],

@@ -37,6 +37,7 @@ import {
   getGeneratedCityToursHref,
   getGeneratedCountryDestinationHref,
 } from "../utils/destinations/liveInternationalDestinations";
+import { shouldRetainInternationalCityGuide } from "../utils/guides/internationalGuideRetention";
 
 export type GuideCitySummary = {
   name: string;
@@ -711,6 +712,18 @@ const buildCitySummaries = (
   );
 };
 
+const filterRetainedInternationalGuideCities = (
+  countrySlug: string,
+  cities: GuideCitySummary[]
+) =>
+  cities.filter(city =>
+    shouldRetainInternationalCityGuide({
+      countrySlug,
+      citySlug: city.slug,
+      activeTourCount: city.tourCount,
+    })
+  );
+
 export const getGuideTourDetailPath = (tour: Tour) => {
   const engine2Path = engine2GuideCanonicalById.get(tour.id);
   if (engine2Path) {
@@ -817,7 +830,10 @@ export const getGuideCountries = (): GuidePlaceSummary[] => {
 
       return {
         ...country,
-        cities: mergeCitySummaries(tourCities, engine2Cities),
+        cities: filterRetainedInternationalGuideCities(
+          country.slug,
+          mergeCitySummaries(tourCities, engine2Cities)
+        ),
       };
     })
     .sort((a, b) => a.name.localeCompare(b.name));
@@ -990,7 +1006,8 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
     countryTours.length > 0
       ? (getCountryFromTour(countryTours[0])?.name ?? countrySlug)
       : (engine2Country?.name ?? countrySlug);
-  const cities = buildCitySummaries(countryTours, countrySlug);
+  const allCities = buildCitySummaries(countryTours, countrySlug);
+  const cities = filterRetainedInternationalGuideCities(countrySlug, allCities);
   const highlightCities = [...cities]
     .sort((a, b) => b.tourCount - a.tourCount)
     .slice(0, 3);
@@ -1002,7 +1019,7 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
 
   const cityLinks = highlightCities.map(city => ({
     label: `${city.name} city page`,
-    href: getInternationalCityBasePath(countrySlug, city.slug),
+    href: `/guides/world/${countrySlug}/${city.slug}`,
   }));
 
   const destinationLink = {
@@ -1045,7 +1062,7 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
     type: "country",
     name: countryName,
     slug: countrySlug,
-    intro: `${countryName} offers ${countryTours.length || (engine2Country?.tourCount ?? 0)} tours across ${cities.length || (engine2Country?.cities.size ?? 0)} cities, spanning ${formatList(activityLabels)}.`,
+    intro: `${countryName} offers ${countryTours.length || (engine2Country?.tourCount ?? 0)} tours across ${allCities.length || (engine2Country?.cities.size ?? 0)} cities, spanning ${formatList(activityLabels)}.`,
     breadcrumbs: [
       { label: "Guides", href: "/guides" },
       { label: "International", href: "/guides/world" },
@@ -1099,6 +1116,17 @@ export const buildCityGuide = ({
   });
 
   if (!cityTours.length) {
+    return null;
+  }
+
+  if (
+    regionType === "country" &&
+    !shouldRetainInternationalCityGuide({
+      countrySlug: parentSlug,
+      citySlug: canonicalCitySlug,
+      activeTourCount: cityTours.length,
+    })
+  ) {
     return null;
   }
 

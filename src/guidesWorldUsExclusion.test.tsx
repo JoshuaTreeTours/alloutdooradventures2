@@ -5,7 +5,12 @@ import { beforeAll, describe, expect, it } from "vitest";
 import InternationalGuidesIndex from "./pages/guides/InternationalGuidesIndex";
 import UsGuidesIndex from "./pages/guides/UsGuidesIndex";
 import { buildSitemap } from "../scripts/generate-sitemap.mjs";
-import { buildCityGuide, buildStateGuide } from "./data/guideData";
+import {
+  buildCityGuide,
+  buildCountryGuide,
+  buildStateGuide,
+} from "./data/guideData";
+import { getTourBySlugs } from "./data/tours";
 import { getInternationalCountries } from "./utils/guides/getInternationalCountries";
 import { isUsCountryAlias } from "./utils/guides/usCountryAliases";
 
@@ -84,5 +89,66 @@ describe("World Guides U.S. country alias exclusion", () => {
           url.startsWith("/guides/world/usa/")
       )
     ).toBe(false);
+  }, 60_000);
+});
+
+describe("international low-inventory guide retention", () => {
+  it("keeps Germany country guide and protected Germany city guides while retiring Kirchzarten", () => {
+    const germanyGuide = buildCountryGuide("germany");
+    const kirchzartenGuide = buildCityGuide({
+      parentSlug: "germany",
+      citySlug: "kirchzarten",
+      regionType: "country",
+      sanitize: false,
+    });
+    const berlinGuide = buildCityGuide({
+      parentSlug: "germany",
+      citySlug: "berlin",
+      regionType: "country",
+      sanitize: false,
+    });
+    const munichGuide = buildCityGuide({
+      parentSlug: "germany",
+      citySlug: "munich",
+      regionType: "country",
+      sanitize: false,
+    });
+
+    expect(germanyGuide).toBeTruthy();
+    expect(germanyGuide?.breadcrumbs.at(-1)?.href).toBe(
+      "/guides/world/germany"
+    );
+    expect(germanyGuide?.topCities?.map(city => city.slug)).not.toContain(
+      "kirchzarten"
+    );
+    expect(kirchzartenGuide).toBeNull();
+    expect(berlinGuide?.breadcrumbs.at(-1)?.href).toBe(
+      "/guides/world/germany/berlin"
+    );
+    expect(munichGuide?.breadcrumbs.at(-1)?.href).toBe(
+      "/guides/world/germany/munich"
+    );
+  });
+
+  it("preserves Kirchzarten tour inventory outside guide pages", () => {
+    const kirchzartenTour = getTourBySlugs(
+      "germany",
+      "kirchzarten",
+      "radrtsel-der-brautzug-der-marie-antoinette-dreisamtal-538465"
+    );
+
+    expect(kirchzartenTour).toBeTruthy();
+    expect(kirchzartenTour?.destination.city).toBe("Kirchzarten");
+  });
+
+  it("emits retained international guide URLs only in sitemap output", async () => {
+    const sitemap = await buildSitemap();
+
+    expect(sitemap.guideUrls.has("/guides/world/germany")).toBe(true);
+    expect(sitemap.guideUrls.has("/guides/world/germany/kirchzarten")).toBe(
+      false
+    );
+    expect(sitemap.guideUrls.has("/guides/world/germany/berlin")).toBe(true);
+    expect(sitemap.guideUrls.has("/guides/world/germany/munich")).toBe(true);
   }, 60_000);
 });

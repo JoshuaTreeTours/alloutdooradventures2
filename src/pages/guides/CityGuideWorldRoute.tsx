@@ -1,4 +1,5 @@
 import RouteRedirect from "../../components/RouteRedirect";
+import { buildCityGuide, buildCountryGuide } from "../../data/guideData";
 import { getInternationalGuideCityAlias } from "../../data/internationalGuideAliases";
 import CityGuideRoute from "./CityGuideRoute";
 
@@ -24,6 +25,24 @@ export default function CityGuideWorldRoute({
     return (
       <RouteRedirect
         to={`/guides/world/${params.countrySlug}/${alias.canonicalCitySlug}${queryString}`}
+      />
+    );
+  }
+
+  const guide = buildCityGuide({
+    parentSlug: params.countrySlug,
+    citySlug: params.citySlug,
+    regionType: "country",
+  });
+
+  if (!guide) {
+    const countryGuide = buildCountryGuide(params.countrySlug);
+
+    return (
+      <RouteRedirect
+        to={
+          countryGuide ? `/guides/world/${params.countrySlug}` : "/guides/world"
+        }
       />
     );
   }

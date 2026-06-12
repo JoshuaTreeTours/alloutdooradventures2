@@ -76,6 +76,41 @@
       "permanent": true
     },
     {
+      "source": "/guides/world/germany/kirchzarten",
+      "destination": "/guides/world/germany",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/denmark/kbenhavn",
+      "destination": "/guides/world/denmark/copenhagen",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/greece/athina",
+      "destination": "/guides/world/greece/athens",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/italy/firenze",
+      "destination": "/guides/world/italy/florence",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/italy/roma",
+      "destination": "/guides/world/italy/rome",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/italy/venezia",
+      "destination": "/guides/world/italy/venice",
+      "permanent": true
+    },
+    {
+      "source": "/guides/world/switzerland/zrich",
+      "destination": "/guides/world/switzerland/zurich",
+      "permanent": true
+    },
+    {
       "source": "/guides/world/netherlands/den-haag",
       "destination": "/guides/world/netherlands/the-hague",
       "permanent": true

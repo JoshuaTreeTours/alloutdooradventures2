@@ -19,6 +19,42 @@ export const INTERNATIONAL_GUIDE_CITY_ALIASES: InternationalGuideAlias[] = [
     canonicalCityName: "Munich",
   },
   {
+    countrySlug: "denmark",
+    aliasCitySlug: "kbenhavn",
+    canonicalCitySlug: "copenhagen",
+    canonicalCityName: "Copenhagen",
+  },
+  {
+    countrySlug: "greece",
+    aliasCitySlug: "athina",
+    canonicalCitySlug: "athens",
+    canonicalCityName: "Athens",
+  },
+  {
+    countrySlug: "italy",
+    aliasCitySlug: "firenze",
+    canonicalCitySlug: "florence",
+    canonicalCityName: "Florence",
+  },
+  {
+    countrySlug: "italy",
+    aliasCitySlug: "roma",
+    canonicalCitySlug: "rome",
+    canonicalCityName: "Rome",
+  },
+  {
+    countrySlug: "italy",
+    aliasCitySlug: "venezia",
+    canonicalCitySlug: "venice",
+    canonicalCityName: "Venice",
+  },
+  {
+    countrySlug: "switzerland",
+    aliasCitySlug: "zrich",
+    canonicalCitySlug: "zurich",
+    canonicalCityName: "Zurich",
+  },
+  {
     countrySlug: "netherlands",
     aliasCitySlug: "den-haag",
     canonicalCitySlug: "the-hague",
