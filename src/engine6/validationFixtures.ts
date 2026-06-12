@@ -131,6 +131,7 @@ import specimen15200p6Payload from "../../data/engine6/viator/15200P6.exact-prod
 import specimen3780p45Payload from "../../data/engine6/viator/3780P45.exact-product.json";
 import specimen6953swamptransPayload from "../../data/engine6/viator/6953SWAMPTRANS.exact-product.json";
 import specimen15200p2Payload from "../../data/engine6/viator/15200P2.exact-product.json";
+import specimen273720p1Payload from "../../data/engine6/viator/273720P1.exact-product.json";
 
 import {
   ENGINE6_SOURCE_OF_TRUTH_API_DRIVEN,
@@ -1002,6 +1003,15 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/New-Orleans/Large-Airboat-Swamp-Tour-with-Hotel-Pickup/d675-15200P2",
     rawPayload: specimen15200p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "273720P1",
+    publicUrl:
+      "https://www.viator.com/tours/New-Orleans/New-Orleans-Bayou-and-Wildlife-Tour/d675-273720P1",
+    rawPayload: specimen273720p1Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

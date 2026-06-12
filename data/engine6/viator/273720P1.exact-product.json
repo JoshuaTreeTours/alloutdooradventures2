@@ -1,0 +1,82 @@
+{
+  "product": {
+    "productCode": "273720P1",
+    "productUrl": "https://www.viator.com/tours/New-Orleans/New-Orleans-Bayou-and-Wildlife-Tour/d675-273720P1",
+    "title": "Guided Boat Tour of New Orleans Bayou",
+    "description": {
+      "text": "Ride a flat-bottom pontoon boat through tidewater cypress swamp near Jean Lafitte National Historical Park and Preserve. This New Orleans-area bayou tour departs from Lafitte, with pickup available on selected bookings, and focuses on marsh scenery, captain narration, and wildlife viewing. The route moves through shallow bayou waterways where alligators, turtles, snakes, herons, egrets, ibis, hawks, owls, and bald eagles may appear depending on season and conditions. Travelers finish back at the Lafitte meeting point or use the selected return transportation option to New Orleans."
+    },
+    "location": {
+      "city": "New Orleans",
+      "state": "Louisiana",
+      "country": "USA"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "$37.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 1582
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b4/4d/8e/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            },
+            "CARD": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b4/4d/8e/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Flat-bottom pontoon boat ride through Lafitte-area cypress swamp",
+      "Captain narration focused on bayou wildlife and local wetland scenery",
+      "Seasonal opportunities to see alligators, turtles, snakes, wading birds, hawks, owls, and bald eagles",
+      "Optional New Orleans pickup and drop-off when selected at booking"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at 5118 Texas St in Lafitte or use a selected New Orleans pickup option when confirmed at booking."
+      },
+      "end": {
+        "description": "This activity ends back at the Lafitte meeting point or the selected New Orleans drop-off option."
+      }
+    },
+    "itineraryItems": [],
+    "inclusions": [
+      "Pontoon boat ride",
+      "Local guide",
+      "Hotel pick-up and drop-off when the transport option is selected at booking"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Wheelchair accessible",
+      "Stroller accessible",
+      "Service animals allowed",
+      "Most travelers can participate",
+      "Maximum of 72 travelers",
+      "Wildlife sightings vary by season, weather, and water conditions"
+    ],
+    "categories": [
+      {
+        "label": "Boat tour"
+      },
+      {
+        "label": "Wildlife tour"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 37
+      }
+    }
+  }
+}

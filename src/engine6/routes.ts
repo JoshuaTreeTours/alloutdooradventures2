@@ -259,6 +259,9 @@ export const ENGINE6_NEW_ORLEANS_LARGE_AIRBOAT_SWAMP_PRODUCT_CODE =
   "15200P2";
 export const ENGINE6_NEW_ORLEANS_LARGE_AIRBOAT_SWAMP_ROUTE =
   "/destinations/louisiana/new-orleans/tours/large-airboat-swamp-tour-with-hotel-pickup";
+export const ENGINE6_NEW_ORLEANS_BAYOU_WILDLIFE_PRODUCT_CODE = "273720P1";
+export const ENGINE6_NEW_ORLEANS_BAYOU_WILDLIFE_ROUTE =
+  "/destinations/louisiana/new-orleans/tours/guided-boat-tour-of-new-orleans-bayou";
 export const ENGINE6_SAN_DIEGO_SUNDAY_BRUNCH_CRUISE_PRODUCT_CODE = "5144BRUNCH";
 export const ENGINE6_SAN_DIEGO_SUNDAY_BRUNCH_CRUISE_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-sunday-brunch-cruise";
@@ -715,6 +718,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_NEW_ORLEANS_LARGE_AIRBOAT_SWAMP_ROUTE,
     ENGINE6_NEW_ORLEANS_LARGE_AIRBOAT_SWAMP_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NEW_ORLEANS_BAYOU_WILDLIFE_ROUTE,
+    ENGINE6_NEW_ORLEANS_BAYOU_WILDLIFE_PRODUCT_CODE,
   ],
   [ENGINE6_NYC_MEDIA_BOAT_ROUTE, ENGINE6_NYC_MEDIA_BOAT_PRODUCT_CODE],
   [
