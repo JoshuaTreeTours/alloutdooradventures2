@@ -13,10 +13,18 @@ export const US_COUNTRY_ALIAS_SLUGS = new Set(
   US_COUNTRY_ALIAS_VALUES.map(alias => slugify(alias))
 );
 
+const decodeAliasValue = (value: string) => {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+};
+
 export const isUsCountryAlias = (value: string | null | undefined) => {
   if (!value) {
     return false;
   }
 
-  return US_COUNTRY_ALIAS_SLUGS.has(slugify(value));
+  return US_COUNTRY_ALIAS_SLUGS.has(slugify(decodeAliasValue(value)));
 };

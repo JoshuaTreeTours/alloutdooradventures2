@@ -1,3 +1,8 @@
+import { getAllEngine2Tours } from "../engine2/data/loadEngine2";
+import { isUsCountryAlias } from "../utils/guides/usCountryAliases";
+import { slugify } from "../utils/slugify";
+import { states } from "./destinations";
+
 export type DestinationAlias = {
   countrySlug: string;
   aliasCitySlug: string;
@@ -203,6 +208,69 @@ export const getDestinationCitySlugGroup = (
   );
 };
 
+const US_DESTINATION_FALLBACK = "/guides/us";
+
+const getDomesticPathFromEngine2CanonicalPath = (canonicalPath: string) => {
+  const countryQualifiedMatch = canonicalPath.match(
+    /^\/destinations\/united-states\/([^/]+)\/([^/]+)(?:\/tours(?:\/.*)?)?\/?$/
+  );
+  if (countryQualifiedMatch) {
+    const [, stateSlug, citySlug] = countryQualifiedMatch;
+    return `/destinations/${stateSlug}/${citySlug}`;
+  }
+
+  const domesticMatch = canonicalPath.match(
+    /^\/destinations\/([^/]+)\/([^/]+)(?:\/tours(?:\/.*)?)?\/?$/
+  );
+  if (!domesticMatch) {
+    return null;
+  }
+
+  const [, stateSlug, citySlug] = domesticMatch;
+  if (stateSlug === "world" || stateSlug === "europe") {
+    return null;
+  }
+
+  return `/destinations/${stateSlug}/${citySlug}`;
+};
+
+export const resolveUsDestinationPath = (
+  citySlug: string | null | undefined,
+  suffix = ""
+) => {
+  const canonicalCitySlug = citySlug
+    ? getCanonicalDestinationCitySlug("united-states", citySlug)
+    : "";
+
+  if (!canonicalCitySlug) {
+    return US_DESTINATION_FALLBACK;
+  }
+
+  const staticState = states.find(state =>
+    state.cities.some(city => city.slug === canonicalCitySlug)
+  );
+  if (staticState) {
+    return `/destinations/${staticState.slug}/${canonicalCitySlug}${suffix}`;
+  }
+
+  const engine2Tour = getAllEngine2Tours().find(tour => {
+    const tourCitySlug = tour.sourceCitySlug || slugify(tour.geo.city);
+    const isUsTour =
+      isUsCountryAlias(tour.geo.country) ||
+      isUsCountryAlias(tour.sourceCountrySlug);
+
+    return isUsTour && tourCitySlug === canonicalCitySlug;
+  });
+
+  const engine2DestinationPath = engine2Tour
+    ? getDomesticPathFromEngine2CanonicalPath(engine2Tour.seo.canonicalPath)
+    : null;
+
+  return engine2DestinationPath
+    ? `${engine2DestinationPath}${suffix}`
+    : US_DESTINATION_FALLBACK;
+};
+
 export const canonicalizeDestinationPath = (pathname: string) => {
   const cityMatch = pathname.match(
     /^\/destinations\/(europe|world)\/([^/]+)\/cities\/([^/]+)(\/tours)?\/?$/
@@ -210,6 +278,11 @@ export const canonicalizeDestinationPath = (pathname: string) => {
   if (cityMatch) {
     const [, destinationScope, countrySlug, citySlug, toursSuffix = ""] =
       cityMatch;
+
+    if (destinationScope === "world" && isUsCountryAlias(countrySlug)) {
+      return resolveUsDestinationPath(citySlug, toursSuffix);
+    }
+
     const canonicalCitySlug = getCanonicalDestinationCitySlug(
       countrySlug,
       citySlug

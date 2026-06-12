@@ -1,5 +1,9 @@
 import RouteRedirect from "../../../components/RouteRedirect";
-import { getDestinationCityAlias } from "../../../data/destinationAliases";
+import {
+  getDestinationCityAlias,
+  resolveUsDestinationPath,
+} from "../../../data/destinationAliases";
+import { isUsCountryAlias } from "../../../utils/guides/usCountryAliases";
 import CityToursIndexRoute from "../states/tours/CityToursIndexRoute";
 
 type WorldCityToursRouteProps = {
@@ -12,6 +16,12 @@ type WorldCityToursRouteProps = {
 export default function WorldCityToursRoute({
   params,
 }: WorldCityToursRouteProps) {
+  if (isUsCountryAlias(params.countrySlug)) {
+    return (
+      <RouteRedirect to={resolveUsDestinationPath(params.citySlug, "/tours")} />
+    );
+  }
+
   const alias = getDestinationCityAlias(params.countrySlug, params.citySlug);
 
   if (alias) {

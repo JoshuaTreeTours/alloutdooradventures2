@@ -499,11 +499,7 @@ const getCountrySlugFromTour = (tour, catalogModule) =>
         ? catalogModule.slugify(tour.destination.state)
         : undefined);
 
-const US_COUNTRY_ALIAS_SLUGS = new Set([
-  "united-states",
-  "us",
-  "usa",
-]);
+const US_COUNTRY_ALIAS_SLUGS = new Set(["united-states", "us", "usa"]);
 
 const isUsCountryAliasSlug = countrySlug =>
   Boolean(countrySlug && US_COUNTRY_ALIAS_SLUGS.has(countrySlug));
@@ -1098,6 +1094,10 @@ export const buildSitemap = async () => {
       tour.destination.citySlug
     );
     if (!countrySlug || !citySlug) {
+      return;
+    }
+
+    if (isUsCountryAliasSlug(countrySlug)) {
       return;
     }
 

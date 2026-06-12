@@ -22,6 +22,7 @@ import {
 import { isUSStateName } from "../../constants/usStates";
 import { getStaticPageSeo } from "../../utils/seo";
 import { slugify } from "../../utils/slugify";
+import { isUsCountryAlias } from "../../utils/guides/usCountryAliases";
 import { getGuideRecord } from "../../utils/guides/guideRegistry";
 import { resolveUsGuideHref } from "../../utils/guides/guideResolver";
 import { EUROPE_COUNTRIES } from "../../data/tourCatalog";
@@ -297,7 +298,7 @@ export default function ToursLanding() {
   }, [cityOptions, selectedCitySlug, selectedStateSlug]);
 
   const internationalTours = useMemo(
-    () => tours.filter(tour => tour.destination.country !== "United States"),
+    () => tours.filter(tour => !isUsCountryAlias(tour.destination.country)),
     []
   );
 
@@ -309,7 +310,7 @@ export default function ToursLanding() {
         .map(tour => ({ tour, mapped: AFRICA_ENGINE2_MAP[tour.id] }))
         .filter(
           ({ tour, mapped }) =>
-            (mapped?.country ?? tour.geo.country) !== "United States" &&
+            !isUsCountryAlias(mapped?.country ?? tour.geo.country) &&
             tour.sourceCountrySlug !== "canada" &&
             tour.sourceCountrySlug !== "mexico"
         )
@@ -338,7 +339,9 @@ export default function ToursLanding() {
   const countryOptions = useMemo(
     () =>
       buildInternationalCountryOptions(internationalTours, mexicoTours).concat(
-        internationalEngine2Tours.map(tour => tour.geo.country)
+        internationalEngine2Tours
+          .map(tour => tour.geo.country)
+          .filter(country => !isUsCountryAlias(country))
       ),
     [internationalTours, mexicoTours, internationalEngine2Tours]
   );
@@ -355,7 +358,11 @@ export default function ToursLanding() {
       return cities;
     }
     const engine2Cities = internationalEngine2Tours
-      .filter(tour => tour.geo.country === selectedCountry)
+      .filter(
+        tour =>
+          tour.geo.country === selectedCountry &&
+          !isUsCountryAlias(tour.geo.country)
+      )
       .map(tour => ({ slug: tour.sourceCitySlug, name: tour.geo.city }));
     return [...cities, ...engine2Cities];
   }, [
@@ -691,6 +698,11 @@ export default function ToursLanding() {
     }
 
     if (selectedCountry && nextCity) {
+      if (isUsCountryAlias(selectedCountry)) {
+        window.location.assign("/guides/us");
+        return;
+      }
+
       const countrySlug = slugify(selectedCountry);
       const basePath = europeCountrySlugSet.has(countrySlug)
         ? `/destinations/europe/${countrySlug}`
