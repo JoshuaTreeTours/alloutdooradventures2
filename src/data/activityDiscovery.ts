@@ -10,6 +10,8 @@ import type { UnifiedCityTour } from "./tours";
 import { resolveTourHeroImage } from "../utils/hero";
 import { slugify } from "../utils/slugify";
 import { getCanonicalDestinationCitySlug } from "./destinationAliases";
+import { isUsCountryAlias } from "../utils/guides/usCountryAliases";
+import { resolveInternationalCitySelectionRoute } from "../pages/tours/internationalSelectorData";
 
 export type ActivityDiscoveryPage = {
   slug: string;
@@ -156,6 +158,11 @@ export const ACTIVITY_DISCOVERY_PAGES: ActivityDiscoveryPage[] =
 export type ActivityLocationOption = {
   slug: string;
   name: string;
+};
+
+export type ActivityInternationalCityOption = ActivityLocationOption & {
+  countrySlug: string;
+  route: string;
 };
 
 export const COUNTRY_ALIAS_ACTIVITY_LOCATION_SLUGS = new Set([
@@ -430,7 +437,7 @@ export const getActivityStateOptions = (
 
   getToursByActivityCategory(activitySlug).forEach(tour => {
     const { stateSlug } = getCanonicalActivityLocationSlugs(tour);
-    if (!stateSlug || stateMap.has(stateSlug)) {
+    if (!stateSlug || stateMap.has(stateSlug) || !getStateBySlug(stateSlug)) {
       return;
     }
 
@@ -463,6 +470,86 @@ export const getActivityCityOptions = (
   return Array.from(cityMap.entries())
     .map(([slug, name]) => ({ slug, name }))
     .sort((a, b) => a.name.localeCompare(b.name));
+};
+
+const getInternationalCountrySlug = (tour: Tour) => {
+  const countryName = tour.destination.country || tour.destination.state;
+  const countrySlug = tour.destination.countrySlug || slugify(countryName);
+
+  if (
+    !countryName ||
+    !countrySlug ||
+    isUsCountryAlias(countryName) ||
+    isUsCountryAlias(countrySlug)
+  ) {
+    return null;
+  }
+
+  return countrySlug;
+};
+
+const getInternationalCountryName = (tour: Tour) =>
+  tour.destination.country || tour.destination.state;
+
+export const getActivityInternationalCountryOptions = (
+  activitySlug: string
+): ActivityLocationOption[] => {
+  const countryMap = new Map<string, string>();
+
+  getToursByActivityCategory(activitySlug).forEach(tour => {
+    const countrySlug = getInternationalCountrySlug(tour);
+    if (!countrySlug || countryMap.has(countrySlug)) {
+      return;
+    }
+
+    countryMap.set(countrySlug, getInternationalCountryName(tour));
+  });
+
+  return Array.from(countryMap.entries())
+    .map(([slug, name]) => ({ slug, name }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+};
+
+export const getActivityInternationalCityOptions = (
+  activitySlug: string,
+  countrySlug: string
+): ActivityInternationalCityOption[] => {
+  const cityMap = new Map<string, ActivityInternationalCityOption>();
+  const country = getActivityInternationalCountryOptions(activitySlug).find(
+    option => option.slug === countrySlug
+  );
+
+  if (!country) {
+    return [];
+  }
+
+  getToursByActivityCategory(activitySlug).forEach(tour => {
+    const tourCountrySlug = getInternationalCountrySlug(tour);
+    const citySlug =
+      tour.destination.citySlug || slugify(tour.destination.city);
+    if (tourCountrySlug !== countrySlug || !citySlug || cityMap.has(citySlug)) {
+      return;
+    }
+
+    cityMap.set(citySlug, {
+      slug: citySlug,
+      name: tour.destination.city || citySlug,
+      countrySlug,
+      route:
+        resolveInternationalCitySelectionRoute({
+          selectedCountry: country.name,
+          selectedCanadaProvinceSlug:
+            countrySlug === "canada" ? tour.destination.stateSlug : undefined,
+          citySlug,
+          activitySlug,
+        }) ??
+        `/destinations/world/${countrySlug}/cities/${citySlug}/tours?activity=${activitySlug}`,
+    });
+  });
+
+  return Array.from(cityMap.values()).sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
 };
 
 export const buildActivityDiscoveryPath = ({

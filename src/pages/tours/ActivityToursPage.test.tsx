@@ -4,6 +4,10 @@ import { describe, expect, it } from "vitest";
 import TourCard from "../../components/TourCard";
 import {
   CYCLING_ACTIVITY_HERO_IMAGE,
+  getActivityInternationalCityOptions,
+  getActivityInternationalCountryOptions,
+  getActivityCityOptions,
+  getActivityStateOptions,
   getActivityTourEntriesByLocation,
   getToursByActivityCategory,
   HIKING_ACTIVITY_HERO_IMAGE,
@@ -56,6 +60,70 @@ describe("ActivityToursPage", () => {
     expect(html).toContain("Horseback Riding Tours &amp; Outdoor Adventures");
     expect(html).toContain(`${horsebackCount} tours`);
     expect(html).toContain("Explore horseback riding tour cards");
+  });
+
+  it("renders International Locations for horseback riding when international inventory exists", () => {
+    const countries =
+      getActivityInternationalCountryOptions("horseback-riding");
+    const html = renderToStaticMarkup(
+      <ActivityToursPage params={{ activitySlug: "horseback-riding" }} />
+    );
+
+    expect(countries.map(country => country.slug)).toContain("france");
+    expect(countries.map(country => country.slug)).toContain("spain");
+    expect(html).toContain("International Locations");
+    expect(html).toContain("Select a country");
+    expect(html).toContain(">France</option>");
+    expect(html).toContain(">Spain</option>");
+  });
+
+  it("does not render an empty International Locations section when an activity has no international inventory", () => {
+    expect(getActivityInternationalCountryOptions("air-tours")).toEqual([]);
+
+    const html = renderToStaticMarkup(
+      <ActivityToursPage params={{ activitySlug: "air-tours" }} />
+    );
+
+    expect(html).not.toContain("International Locations");
+    expect(html).not.toContain("Select a country");
+  });
+
+  it("builds activity international selectors from active destination inventory and excludes U.S. aliases", () => {
+    const countrySlugs = getActivityInternationalCountryOptions("cycling").map(
+      country => country.slug
+    );
+
+    expect(countrySlugs).toContain("germany");
+    expect(countrySlugs).not.toContain("usa");
+    expect(countrySlugs).not.toContain("us");
+    expect(countrySlugs).not.toContain("united-states");
+
+    const germanyCities = getActivityInternationalCityOptions(
+      "cycling",
+      "germany"
+    );
+    const kirchzarten = germanyCities.find(city => city.slug === "kirchzarten");
+
+    expect(kirchzarten).toBeDefined();
+    expect(kirchzarten?.route).toBe(
+      "/destinations/europe/germany/cities/kirchzarten/tours?activity=cycling"
+    );
+    expect(kirchzarten?.route).not.toMatch(/^\/guides\//);
+  });
+
+  it("keeps existing U.S. state/city selector behavior unchanged", () => {
+    const states = getActivityStateOptions("cycling");
+    const california = states.find(state => state.slug === "california");
+    expect(california).toBeDefined();
+
+    const cities = getActivityCityOptions("cycling", "california");
+    expect(cities.some(city => city.slug === "santa-barbara")).toBe(true);
+
+    const html = renderToStaticMarkup(
+      <ActivityToursPage params={{ activitySlug: "cycling" }} />
+    );
+    expect(html).toContain("All states");
+    expect(html).toContain(">California</option>");
   });
 
   it("/tours/walking-tours renders Walking Tours with the route-backed count", () => {

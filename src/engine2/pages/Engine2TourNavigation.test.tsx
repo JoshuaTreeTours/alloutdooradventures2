@@ -8,6 +8,7 @@ import Engine2TourPage from "./Engine2TourPage";
 import { resolveSafeTourListHref } from "../../utils/tours/tourNavigation";
 import { resolveDestinationGuideHref } from "../../utils/guides/guideResolver";
 import CityTourBookingRoute from "../../pages/destinations/states/tours/CityTourBookingRoute";
+import CityToursIndexRoute from "../../pages/destinations/states/tours/CityToursIndexRoute";
 
 const LILLOOET_TOUR_SLUG =
   "limestone-multi-pitch-paradise-2-day-climbing-adventure-at-marble-canyon-603511";
@@ -125,6 +126,28 @@ describe("Engine2 tour navigation", () => {
     expect(html).toMatch(
       /href="(?:\/guides\/world\/germany(?:\/berlin)?|\/destinations\/world\/germany)"/
     );
+  });
+
+  it("shows an activity-filtered empty state instead of unrelated international city tours", () => {
+    const previousWindow = (globalThis as { window?: unknown }).window;
+    (globalThis as { window?: { location: { search: string } } }).window = {
+      location: { search: "?activity=horseback-riding" },
+    };
+
+    const html = renderWithRoute(
+      "/destinations/europe/germany/cities/kirchzarten/tours?activity=horseback-riding",
+      <CityToursIndexRoute
+        params={{ stateSlug: "germany", citySlug: "kirchzarten" }}
+        basePathOverride="/destinations/europe/germany"
+      />
+    );
+
+    expect(html).toContain(
+      "No Horseback Riding tours are currently available in Kirchzarten"
+    );
+    expect(html).not.toContain("Single trail at the Black Forest");
+
+    (globalThis as { window?: unknown }).window = previousWindow;
   });
 
   it("preserves U.S. guide routing for domestic booking breadcrumbs", () => {

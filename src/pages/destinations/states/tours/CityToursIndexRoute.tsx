@@ -7,6 +7,7 @@ import TourCard from "../../../../components/TourCard";
 import { useStructuredData } from "../../../../components/StructuredDataProvider";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
 import { getActivityLabelFromSlug } from "../../../../data/activityLabels";
+import { getResolvedPrimaryActivitySlug } from "../../../../data/activityDiscovery";
 import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
@@ -137,8 +138,8 @@ export default function CityToursIndexRoute({
     entry => !isRentalTour(entry.tour)
   );
   const filteredTours = activityFilter
-    ? toursOnlyWithImages.filter(entry =>
-        entry.tour.activitySlugs.includes(activityFilter)
+    ? toursOnlyWithImages.filter(
+        entry => getResolvedPrimaryActivitySlug(entry.tour) === activityFilter
       )
     : toursOnlyWithImages;
   const legacyStateDestinationPrefix = "/destinations";
@@ -298,7 +299,9 @@ export default function CityToursIndexRoute({
           </div>
         ) : (
           <p className="mt-10 text-center text-sm text-[#405040]">
-            New tours are on the way. Check back soon for {city.name} updates.
+            {activityFilter
+              ? `No ${activityLabel ?? "matching"} tours are currently available in ${city.name}. Try another destination or check back soon.`
+              : `New tours are on the way. Check back soon for ${city.name} updates.`}
           </p>
         )}
       </section>

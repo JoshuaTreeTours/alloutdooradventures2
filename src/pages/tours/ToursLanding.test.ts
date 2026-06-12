@@ -107,6 +107,18 @@ describe("ToursLanding international inventory selector", () => {
         selectedCountry: "Germany",
         citySlug: "kirchzarten",
       })
-    ).toBe("/destinations/europe/germany/cities/kirchzarten");
+    ).toBe("/destinations/europe/germany/cities/kirchzarten/tours");
+  });
+
+  it("preserves an originating activity filter in international city inventory routes", () => {
+    expect(
+      resolveInternationalCitySelectionRoute({
+        selectedCountry: "Germany",
+        citySlug: "kirchzarten",
+        activitySlug: "cycling",
+      })
+    ).toBe(
+      "/destinations/europe/germany/cities/kirchzarten/tours?activity=cycling"
+    );
   });
 });

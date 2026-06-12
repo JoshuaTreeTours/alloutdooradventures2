@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../components/Image";
@@ -9,6 +9,8 @@ import {
   buildActivityDiscoveryPath,
   getActivityCityOptions,
   getActivityDiscoveryPage,
+  getActivityInternationalCityOptions,
+  getActivityInternationalCountryOptions,
   getActivityLocationNames,
   getActivityStateOptions,
   getActivityTourEntriesByLocation,
@@ -79,6 +81,24 @@ export default function ActivityToursPage({ params }: ActivityToursPageProps) {
         ? getActivityCityOptions(params.activitySlug, params.stateSlug)
         : [],
     [params.activitySlug, params.stateSlug]
+  );
+  const internationalCountryOptions = useMemo(
+    () => getActivityInternationalCountryOptions(params.activitySlug),
+    [params.activitySlug]
+  );
+  const [
+    selectedInternationalCountrySlug,
+    setSelectedInternationalCountrySlug,
+  ] = useState("");
+  const internationalCityOptions = useMemo(
+    () =>
+      selectedInternationalCountrySlug
+        ? getActivityInternationalCityOptions(
+            params.activitySlug,
+            selectedInternationalCountrySlug
+          )
+        : [],
+    [params.activitySlug, selectedInternationalCountrySlug]
   );
 
   const canonicalPath = buildActivityDiscoveryPath({
@@ -308,6 +328,60 @@ export default function ActivityToursPage({ params }: ActivityToursPageProps) {
               </select>
             </label>
           </div>
+
+          {internationalCountryOptions.length ? (
+            <div className="mt-6 border-t border-[#2f4a2f]/10 pt-5">
+              <h3 className="text-base font-semibold text-[#1f2a1f]">
+                International Locations
+              </h3>
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
+                <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
+                  Country
+                  <select
+                    className="rounded-md border border-[#2f4a2f]/20 bg-white px-3 py-2 text-sm text-[#1f2a1f]"
+                    value={selectedInternationalCountrySlug}
+                    onChange={event => {
+                      setSelectedInternationalCountrySlug(event.target.value);
+                    }}
+                  >
+                    <option value="">Select a country</option>
+                    {internationalCountryOptions.map(country => (
+                      <option key={country.slug} value={country.slug}>
+                        {country.name}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
+                  City
+                  <select
+                    className="rounded-md border border-[#2f4a2f]/20 bg-white px-3 py-2 text-sm text-[#1f2a1f]"
+                    value=""
+                    onChange={event => {
+                      const city = internationalCityOptions.find(
+                        option => option.slug === event.target.value
+                      );
+                      if (city) {
+                        window.location.assign(city.route);
+                      }
+                    }}
+                    disabled={!selectedInternationalCountrySlug}
+                  >
+                    <option value="">
+                      {selectedInternationalCountrySlug
+                        ? "Select a city"
+                        : "Select a country first"}
+                    </option>
+                    {internationalCityOptions.map(city => (
+                      <option key={city.slug} value={city.slug}>
+                        {city.name}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+            </div>
+          ) : null}
         </div>
       </section>
 
