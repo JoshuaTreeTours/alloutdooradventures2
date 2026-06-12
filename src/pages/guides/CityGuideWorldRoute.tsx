@@ -1,6 +1,7 @@
 import RouteRedirect from "../../components/RouteRedirect";
 import { buildCityGuide, buildCountryGuide } from "../../data/guideData";
 import { getInternationalGuideCityAlias } from "../../data/internationalGuideAliases";
+import { getRetiredInternationalGuideRedirect } from "../../utils/guides/internationalGuideRetention";
 import CityGuideRoute from "./CityGuideRoute";
 
 type CityGuideWorldRouteProps = {
@@ -27,6 +28,15 @@ export default function CityGuideWorldRoute({
         to={`/guides/world/${params.countrySlug}/${alias.canonicalCitySlug}${queryString}`}
       />
     );
+  }
+
+  const retiredGuideRedirect = getRetiredInternationalGuideRedirect(
+    params.countrySlug,
+    params.citySlug
+  );
+
+  if (retiredGuideRedirect) {
+    return <RouteRedirect to={retiredGuideRedirect} />;
   }
 
   const guide = buildCityGuide({

@@ -29,7 +29,9 @@ const GUIDE_ALIAS_CASES = [
   ["switzerland", "zurich", "zrich"],
   ["netherlands", "the-hague", "den-haag"],
   ["portugal", "lisbon", "lisboa"],
+  ["ireland", "dublin", "dublin-2"],
   ["spain", "alcudia", "alcdia"],
+  ["spain", "bilbao", "bilbo"],
   ["spain", "calvia", "calvi"],
   ["spain", "deia", "dei"],
   ["spain", "lestartit", "l-estartit"],
@@ -168,6 +170,32 @@ describe("international guide alias canonicalization", () => {
         guidePath(countrySlug, aliasCitySlug)
       );
     }
+  });
+
+  it("keeps audited Bilbao and Dublin duplicate routes on canonical guide pages", () => {
+    const bilbaoGuide = buildCityGuide({
+      parentSlug: "spain",
+      citySlug: "bilbo",
+      regionType: "country",
+      sanitize: false,
+    });
+    const dublinGuide = buildCityGuide({
+      parentSlug: "ireland",
+      citySlug: "dublin-2",
+      regionType: "country",
+      sanitize: false,
+    });
+
+    expect(bilbaoGuide?.slug).toBe("bilbao");
+    expect(bilbaoGuide?.name).toBe("Bilbao");
+    expect(bilbaoGuide?.breadcrumbs.at(-1)?.href).toBe(
+      "/guides/world/spain/bilbao"
+    );
+    expect(dublinGuide?.slug).toBe("dublin");
+    expect(dublinGuide?.name).toBe("Dublin");
+    expect(dublinGuide?.breadcrumbs.at(-1)?.href).toBe(
+      "/guides/world/ireland/dublin"
+    );
   });
 
   it("uses canonical guide URLs from destination CTA rendering", () => {

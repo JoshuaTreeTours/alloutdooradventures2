@@ -1,13 +1,13 @@
 export type RetiredGuideRecord = {
   stateSlug: string;
   citySlug: string;
-  activeTourCount: 0 | 1 | 2 | 3;
+  activeTourCount: number;
   redirectTo: string;
 };
 export type ProtectedLowInventoryGuideRecord = {
   stateSlug: string;
   citySlug: string;
-  activeTourCount: 0 | 1 | 2 | 3;
+  activeTourCount: number;
   reason: string;
 };
 export const LOW_INVENTORY_GUIDES_REVIEWED = 200 as const;
@@ -158,6 +158,12 @@ export const RETIRED_LOW_INVENTORY_GUIDES: RetiredGuideRecord[] = [
     stateSlug: "arizona",
     citySlug: "prescott",
     activeTourCount: 1,
+    redirectTo: "/guides/us/arizona",
+  },
+  {
+    stateSlug: "arizona",
+    citySlug: "morristown",
+    activeTourCount: 11,
     redirectTo: "/guides/us/arizona",
   },
   {
@@ -516,6 +522,12 @@ export const RETIRED_LOW_INVENTORY_GUIDES: RetiredGuideRecord[] = [
   },
   {
     stateSlug: "florida",
+    citySlug: "lamont",
+    activeTourCount: 8,
+    redirectTo: "/guides/us/florida",
+  },
+  {
+    stateSlug: "florida",
     citySlug: "oviedo",
     activeTourCount: 1,
     redirectTo: "/guides/us/florida",
@@ -626,6 +638,18 @@ export const RETIRED_LOW_INVENTORY_GUIDES: RetiredGuideRecord[] = [
     stateSlug: "georgia",
     citySlug: "covington",
     activeTourCount: 3,
+    redirectTo: "/guides/us/georgia",
+  },
+  {
+    stateSlug: "georgia",
+    citySlug: "fortson",
+    activeTourCount: 5,
+    redirectTo: "/guides/us/georgia",
+  },
+  {
+    stateSlug: "georgia",
+    citySlug: "lizella",
+    activeTourCount: 12,
     redirectTo: "/guides/us/georgia",
   },
   {
@@ -1143,6 +1167,18 @@ export const RETIRED_LOW_INVENTORY_GUIDES: RetiredGuideRecord[] = [
     citySlug: "rapid-city",
     activeTourCount: 2,
     redirectTo: "/guides/us",
+  },
+  {
+    stateSlug: "tennessee",
+    citySlug: "christiana",
+    activeTourCount: 11,
+    redirectTo: "/guides/us/tennessee",
+  },
+  {
+    stateSlug: "tennessee",
+    citySlug: "delano",
+    activeTourCount: 5,
+    redirectTo: "/guides/us/tennessee",
   },
   {
     stateSlug: "tennessee",

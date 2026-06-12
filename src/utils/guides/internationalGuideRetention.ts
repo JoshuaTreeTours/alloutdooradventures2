@@ -8,6 +8,65 @@ export type ProtectedInternationalGuideRecord = {
   reason: string;
 };
 
+export type RetiredInternationalGuideRecord = {
+  countrySlug: string;
+  citySlug: string;
+  redirectTo: string;
+  reason: string;
+};
+
+export const RETIRED_INTERNATIONAL_CITY_GUIDES: RetiredInternationalGuideRecord[] =
+  [
+    {
+      countrySlug: "australia",
+      citySlug: "blackburn-north",
+      redirectTo: "/guides/world/australia",
+      reason: "low-tourist-impact-city-guide",
+    },
+    {
+      countrySlug: "australia",
+      citySlug: "hyden",
+      redirectTo: "/guides/world/australia",
+      reason: "low-tourist-impact-city-guide",
+    },
+    {
+      countrySlug: "australia",
+      citySlug: "orbost",
+      redirectTo: "/guides/world/australia",
+      reason: "low-tourist-impact-city-guide",
+    },
+    {
+      countrySlug: "australia",
+      citySlug: "roebuck",
+      redirectTo: "/guides/world/australia",
+      reason: "low-tourist-impact-city-guide",
+    },
+    {
+      countrySlug: "germany",
+      citySlug: "solnhofen",
+      redirectTo: "/guides/world/germany",
+      reason: "low-tourist-impact-city-guide",
+    },
+    {
+      countrySlug: "germany",
+      citySlug: "treuchtlingen",
+      redirectTo: "/guides/world/germany",
+      reason: "low-tourist-impact-city-guide",
+    },
+    {
+      countrySlug: "united-kingdom",
+      citySlug: "dess",
+      redirectTo: "/guides/world/united-kingdom",
+      reason: "low-tourist-impact-city-guide",
+    },
+    {
+      countrySlug: "united-kingdom",
+      citySlug: "whitewell",
+      redirectTo: "/guides/world/united-kingdom",
+      reason: "low-tourist-impact-city-guide",
+    },
+  ];
+
 export const PROTECTED_INTERNATIONAL_CITY_GUIDES: ProtectedInternationalGuideRecord[] =
   [
     {
@@ -169,6 +228,13 @@ export const PROTECTED_INTERNATIONAL_CITY_GUIDES: ProtectedInternationalGuideRec
 
 const normalizeSlug = (value: string) => value.trim().toLowerCase();
 
+const retiredGuideRedirects = new Map(
+  RETIRED_INTERNATIONAL_CITY_GUIDES.map(record => [
+    `${normalizeSlug(record.countrySlug)}/${normalizeSlug(record.citySlug)}`,
+    record.redirectTo,
+  ])
+);
+
 const protectedGuideKeys = new Set(
   PROTECTED_INTERNATIONAL_CITY_GUIDES.map(
     record =>
@@ -197,6 +263,20 @@ export const isProtectedInternationalCityGuide = (
     getCanonicalInternationalGuideKey(countrySlug, citySlug)
   );
 
+export const getRetiredInternationalGuideRedirect = (
+  countrySlug: string,
+  citySlug: string
+): string | null =>
+  retiredGuideRedirects.get(
+    getCanonicalInternationalGuideKey(countrySlug, citySlug)
+  ) ?? null;
+
+export const isRetiredInternationalCityGuide = (
+  countrySlug: string,
+  citySlug: string
+): boolean =>
+  Boolean(getRetiredInternationalGuideRedirect(countrySlug, citySlug));
+
 export const shouldRetainInternationalCityGuide = ({
   countrySlug,
   citySlug,
@@ -206,5 +286,6 @@ export const shouldRetainInternationalCityGuide = ({
   citySlug: string;
   activeTourCount: number;
 }) =>
-  isProtectedInternationalCityGuide(countrySlug, citySlug) ||
-  activeTourCount >= INTERNATIONAL_CITY_GUIDE_MIN_ACTIVE_TOURS;
+  !isRetiredInternationalCityGuide(countrySlug, citySlug) &&
+  (isProtectedInternationalCityGuide(countrySlug, citySlug) ||
+    activeTourCount >= INTERNATIONAL_CITY_GUIDE_MIN_ACTIVE_TOURS);
