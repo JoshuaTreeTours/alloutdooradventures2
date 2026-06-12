@@ -2,7 +2,7 @@ import { buildSeoLinks } from "./buildSeoLinks";
 import { cleanLandmarkText } from "./cleanLandmarkText";
 import { getGuideRecord } from "./guideRegistry";
 import { isImageEmbedGuide } from "./isImageEmbedGuide";
-import { selectCityHeroFromTours } from "./selectCityHeroFromTours";
+import { resolveGuideHeroImage } from "./resolveGuideHeroImage";
 import {
   buildCityGuideDisplayTitle,
   buildCityGuideH1,
@@ -46,19 +46,12 @@ const resolveWikiUrl = (thing: GuidePageData["thingsToDo"][number]) => {
 };
 
 const withResolvedGuideData = (guide: GuidePageData): GuidePageData => {
-  const heroSelection = guide.city
-    ? selectCityHeroFromTours(
-        guide.tours.stateSlug,
-        guide.tours.citySlug ?? "",
-        guide.city,
-        guide.state
-      )
-    : null;
+  const heroSelection = resolveGuideHeroImage(guide);
 
   const shouldSkipRewrite =
     guide.tier !== "tier2" ||
     isImageEmbedGuide(guide) ||
-    Boolean(heroSelection?.imageUrl);
+    heroSelection.source !== "generic";
   const normalizedThings = guide.thingsToDo.map(item => {
     const wikiUrl = resolveWikiUrl(item);
     const description = shouldSkipRewrite
@@ -88,8 +81,8 @@ const withResolvedGuideData = (guide: GuidePageData): GuidePageData => {
         : guide.overview,
     hero: {
       ...guide.hero,
-      image: heroSelection?.imageUrl ?? guide.hero.image,
-      alt: heroSelection?.alt ?? guide.hero.alt,
+      image: heroSelection.image,
+      alt: heroSelection.alt,
       headline: guide.city ? buildCityGuideH1(guide.city) : guide.hero.headline,
     },
     seoLinks: buildSeoLinks({
