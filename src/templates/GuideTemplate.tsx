@@ -12,6 +12,10 @@ import { getGuideCountryBySlug, getGuideStateBySlug } from "../data/guideData";
 import type { GuideImage } from "../data/guideImages";
 import { getToursByCity } from "../data/tours";
 import { resolveHeroImageForRoute } from "../utils/hero";
+import {
+  GENERIC_OUTDOOR_GUIDE_HERO_IMAGE,
+  isValidGuideHeroImage,
+} from "../utils/guides/resolveGuideHeroImage";
 import { hasUsGuide } from "../utils/guides/guideIndex";
 import { buildMetaDescription } from "../utils/seo";
 import { buildBreadcrumbList } from "../utils/structuredData";
@@ -48,7 +52,7 @@ const GuideImageBlock = ({ image }: { image: GuideImage }) => (
   <div className="mt-10 overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
     <Image
       src={image.src}
-      fallbackSrc={image.src}
+      fallbackSrc={GENERIC_OUTDOOR_GUIDE_HERO_IMAGE}
       alt={image.alt}
       className="h-64 w-full object-cover md:h-96"
     />
@@ -158,7 +162,7 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
     guide.type === "city" && guide.regionType === "state" && guide.parentSlug
       ? getToursByCity(guide.parentSlug, guide.slug)
       : [];
-  const guideHeroImage =
+  const resolvedGuideHeroImage =
     resolveHeroImageForRoute({
       route: guideUrl,
       guide,
@@ -166,6 +170,17 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
       city: destinationCity,
       cityTours: cityToursForSeo,
     }) ?? undefined;
+  const guideHeroImage = isValidGuideHeroImage(resolvedGuideHeroImage)
+    ? resolvedGuideHeroImage
+    : GENERIC_OUTDOOR_GUIDE_HERO_IMAGE;
+  const primaryGuideImage = guideImages.find(image =>
+    isValidGuideHeroImage(image.src)
+  ) ?? {
+    src: guideHeroImage,
+    alt: `${guide.name} outdoor adventure scenery`,
+    category: "scenic" as const,
+  };
+
   const structuredDataNodes = useMemo(
     () => [
       buildBreadcrumbList(
@@ -192,7 +207,7 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
         title={guideTitle}
         description={guideDescription}
         url={guideUrl}
-        image={guideHeroImage ?? null}
+        image={guideHeroImage}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
@@ -247,7 +262,7 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
       <section className="mx-auto max-w-6xl px-6 py-14">
         <CityGuideLinks guide={guide} />
         <GuideInternalLinks guide={guide} variant="primary" />
-        {guideImages[0] ? <GuideImageBlock image={guideImages[0]} /> : null}
+        <GuideImageBlock image={primaryGuideImage} />
         {guide.type === "city" && guide.activities?.length ? (
           <Section title={`Best ways to explore ${guide.name}`}>
             <div className="flex flex-wrap gap-3">

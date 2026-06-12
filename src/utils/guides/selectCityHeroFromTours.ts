@@ -1,5 +1,6 @@
 import { getToursByCity } from "../../data/tours";
 import type { Tour } from "../../data/tours.types";
+import { resolveTourHeroImage } from "../hero";
 
 export type SelectedCityHero = {
   imageUrl: string;
@@ -16,8 +17,12 @@ const isPlaceholderImage = (value: string) => {
   );
 };
 
-const hasValidImage = (tour: Tour) =>
-  Boolean(tour.heroImage && !isPlaceholderImage(tour.heroImage));
+const getValidTourImage = (tour: Tour) => {
+  const image = resolveTourHeroImage(tour);
+  return image && !isPlaceholderImage(image) ? image : undefined;
+};
+
+const hasValidImage = (tour: Tour) => Boolean(getValidTourImage(tour));
 
 const isFeaturedTour = (tour: Tour) => {
   const values = [
@@ -52,18 +57,18 @@ export const selectCityHeroFromTours = (
   const ranked = (featured.length ? featured : tours).sort((a, b) => {
     const aScore = scoreTour(a);
     const bScore = scoreTour(b);
-    if (bScore.ratingCount !== aScore.ratingCount) {
-      return bScore.ratingCount - aScore.ratingCount;
-    }
     if (bScore.ratingValue !== aScore.ratingValue) {
       return bScore.ratingValue - aScore.ratingValue;
     }
-    return 0;
+    if (bScore.ratingCount !== aScore.ratingCount) {
+      return bScore.ratingCount - aScore.ratingCount;
+    }
+    return a.id.localeCompare(b.id);
   });
 
   const selected = ranked[0];
   return {
-    imageUrl: selected.heroImage,
+    imageUrl: getValidTourImage(selected)!,
     alt: `${city}, ${state} — ${selected.title}`,
   };
 };

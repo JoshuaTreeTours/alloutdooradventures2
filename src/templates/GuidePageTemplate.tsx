@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Link } from "wouter";
 
+import Image from "../components/Image";
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
 import AvailableToursGrid from "../components/guides/AvailableToursGrid";
@@ -18,6 +19,7 @@ import type { GuidePageData } from "../utils/loadGuide";
 import { getGuidePlaceName, getValidSameAsLinks } from "../utils/loadGuide";
 import { buildBreadcrumbList } from "../utils/structuredData";
 import { buildCityFactsCard } from "../utils/guides/buildCityFactsCard";
+import { GENERIC_OUTDOOR_GUIDE_HERO_IMAGE } from "../utils/guides/resolveGuideHeroImage";
 import {
   buildCityGuideDisplayTitle,
   buildCityGuideH1,
@@ -205,8 +207,9 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
 
       <section className="mx-auto max-w-6xl px-6 py-14">
         <div className="overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
-          <img
+          <Image
             src={guide.hero.image}
+            fallbackSrc={GENERIC_OUTDOOR_GUIDE_HERO_IMAGE}
             alt={guide.hero.alt}
             className="h-64 w-full object-cover md:h-96"
           />
