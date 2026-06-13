@@ -1,0 +1,162 @@
+{
+  "product": {
+    "productCode": "58347P1",
+    "productUrl": "https://www.viator.com/tours/New-Orleans/Heart-of-the-City-Bicycle-Tour/d675-58347P1",
+    "title": "New Orleans Heart of the City Bicycle Tour",
+    "description": {
+      "text": "Ride beyond the French Quarter on a small-group New Orleans bicycle tour through historic neighborhoods including Faubourg Marigny, Bywater, and Treme. The route starts on North Rampart Street, uses a three-hour format, and includes stops near the Mississippi River, Jackson Square, and St. Roch Community Church while the guide shares stories about the city's multicultural origins and Creole culture."
+    },
+    "location": {
+      "city": "New Orleans",
+      "state": "Louisiana"
+    },
+    "duration": "3 hours",
+    "priceFrom": "From $55.00",
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            { "rating": 1.0, "count": 0 },
+            { "rating": 2.0, "count": 0 },
+            { "rating": 3.0, "count": 0 },
+            { "rating": 4.0, "count": 3 },
+            { "rating": 5.0, "count": 214 }
+          ],
+          "totalCount": 217,
+          "averageRating": 5.0
+        }
+      ],
+      "reviewCountTotals": [
+        { "rating": 1.0, "count": 0 },
+        { "rating": 2.0, "count": 0 },
+        { "rating": 3.0, "count": 0 },
+        { "rating": 4.0, "count": 3 },
+        { "rating": 5.0, "count": 214 }
+      ],
+      "totalReviews": 217,
+      "combinedAverageRating": 5.0
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b4/4c/f1/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore New Orleans historic neighborhoods on a guided bike tour.",
+      "Ride beyond the French Quarter into Faubourg Marigny, Bywater, and Treme.",
+      "Stop near the Mississippi River, Jackson Square, and St. Roch Community Church.",
+      "Join a small-group ride limited to 10 travelers with bicycle, helmet, and bottled water included."
+    ],
+    "logistics": {
+      "start": {
+        "description": "626 N Rampart St, New Orleans, LA 70116."
+      },
+      "end": {
+        "description": "This activity ends back at the meeting point."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Flambeaux Bicycle Tours & Bike Rentals",
+        "description": "Begin with about 15 minutes at Flambeaux Bicycle Tours & Bike Rentals for check-in, bike setup, and route orientation.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mississippi River",
+        "description": "Stop near the Mississippi River for about 10 minutes during the early part of the route.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jackson Square",
+        "description": "Visit Jackson Square during a 15-minute stop in the French Quarter area.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Faubourg Marigny",
+        "description": "Ride through Faubourg Marigny during a 30-minute neighborhood segment beyond the French Quarter.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bywater District",
+        "description": "Continue into the Bywater District for about 30 minutes as the route expands into less-touristy New Orleans neighborhoods.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Roch Community Church",
+        "description": "Stop near St. Roch Community Church for about 20 minutes while learning local neighborhood context.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Treme",
+        "description": "Ride through Treme during a 20-minute segment connected to New Orleans cultural history.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Flambeaux Bicycle Tours",
+        "description": "Return to Flambeaux Bicycle Tours for a short five-minute wrap-up at the end of the loop.",
+        "duration": "5 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Use of bicycle and helmet",
+      "Small-group bike tour",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Not wheelchair accessible.",
+      "Not recommended for travelers with back problems.",
+      "Not recommended for pregnant travelers.",
+      "Travelers should have a strong physical fitness level.",
+      "All participants must be over 4 feet 11 inches.",
+      "Minimum age is 13 years.",
+      "A maximum of 10 people per booking applies.",
+      "This tour has a maximum of 10 travelers.",
+      "You can cancel up to 24 hours in advance for a full refund."
+    ],
+    "faqs": [
+      {
+        "question": "Where does the Heart of the City Bicycle Tour meet?",
+        "answer": "The tour meets at 626 North Rampart Street in New Orleans."
+      },
+      {
+        "question": "Does this bike tour return to the meeting point?",
+        "answer": "Yes. The activity ends back at the North Rampart Street meeting point."
+      },
+      {
+        "question": "How long is the Heart of the City Bicycle Tour?",
+        "answer": "The tour lasts approximately 3 hours."
+      },
+      {
+        "question": "What neighborhoods does the tour visit?",
+        "answer": "The route includes areas such as the French Quarter, Faubourg Marigny, Bywater, and Treme."
+      }
+    ],
+    "categories": [
+      { "label": "Bike tour" },
+      { "label": "Outdoor activities" }
+    ],
+    "pricing": {
+      "summary": { "fromPrice": 55.0 },
+      "currency": "USD"
+    }
+  }
+}

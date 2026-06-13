@@ -126,6 +126,8 @@ import specimen428219p6Payload from "../../data/engine6/viator/428219P6.exact-pr
 import specimen5144brunchPayload from "../../data/engine6/viator/5144BRUNCH.exact-product.json";
 import specimen77348p8Payload from "../../data/engine6/viator/77348P8.exact-product.json";
 import specimen5569hikePayload from "../../data/engine6/viator/5569HIKE.exact-product.json";
+import specimen276551p2Payload from "../../data/engine6/viator/276551P2.exact-product.json";
+import specimen58347p1Payload from "../../data/engine6/viator/58347P1.exact-product.json";
 import specimen6455nolaairPayload from "../../data/engine6/viator/6455NOLAAIR.exact-product.json";
 import specimen15200p6Payload from "../../data/engine6/viator/15200P6.exact-product.json";
 import specimen3780p45Payload from "../../data/engine6/viator/3780P45.exact-product.json";
@@ -963,6 +965,24 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     },
   },
 
+  {
+    productCode: "276551P2",
+    publicUrl:
+      "https://www.viator.com/tours/New-Orleans/Garden-District-and-French-Quarter-Bike-Tour/d675-276551P2",
+    rawPayload: specimen276551p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "58347P1",
+    publicUrl:
+      "https://www.viator.com/tours/New-Orleans/Heart-of-the-City-Bicycle-Tour/d675-58347P1",
+    rawPayload: specimen58347p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
   {
     productCode: "6455NOLAAIR",
     publicUrl:

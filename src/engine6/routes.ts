@@ -242,6 +242,12 @@ export const ENGINE6_NYC_AMERICAN_DREAM_BUNDLE_ROUTE =
 export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_PRODUCT_CODE = "5024MANSKY";
 export const ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_ROUTE =
   "/destinations/new-york/new-york/tours/manhattan-sky-tour-new-york-helicopter-flight";
+export const ENGINE6_NEW_ORLEANS_CITY_BIKE_PRODUCT_CODE = "276551P2";
+export const ENGINE6_NEW_ORLEANS_CITY_BIKE_ROUTE =
+  "/destinations/louisiana/new-orleans/tours/new-orleans-city-bike-tour";
+export const ENGINE6_NEW_ORLEANS_HEART_CITY_BIKE_PRODUCT_CODE = "58347P1";
+export const ENGINE6_NEW_ORLEANS_HEART_CITY_BIKE_ROUTE =
+  "/destinations/louisiana/new-orleans/tours/new-orleans-heart-of-the-city-bicycle-tour";
 export const ENGINE6_NEW_ORLEANS_AIRBOAT_PRODUCT_CODE = "6455NOLAAIR";
 export const ENGINE6_NEW_ORLEANS_AIRBOAT_ROUTE =
   "/destinations/louisiana/new-orleans/tours/new-orleans-airboat-ride";
@@ -703,6 +709,14 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_ROUTE,
     ENGINE6_NYC_MANHATTAN_SKY_HELICOPTER_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NEW_ORLEANS_CITY_BIKE_ROUTE,
+    ENGINE6_NEW_ORLEANS_CITY_BIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NEW_ORLEANS_HEART_CITY_BIKE_ROUTE,
+    ENGINE6_NEW_ORLEANS_HEART_CITY_BIKE_PRODUCT_CODE,
   ],
   [ENGINE6_NEW_ORLEANS_AIRBOAT_ROUTE, ENGINE6_NEW_ORLEANS_AIRBOAT_PRODUCT_CODE],
   [
