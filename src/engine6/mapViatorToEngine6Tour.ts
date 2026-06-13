@@ -18,6 +18,8 @@ const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
     "Alcatraz App-Guided Experience with Ferry Access | San Francisco",
   "6007P5": "Golden Gate Bridge Bike Tour with Lunch | San Francisco",
   "2630SUN": "San Francisco Bay Sunset & City Lights Cruise",
+  "276551P2": "New Orleans City Bike Tour | French Quarter & Garden District",
+  "58347P1": "New Orleans Heart of the City Bicycle Tour",
   "6455NOLAAIR": "New Orleans Airboat Ride | Louisiana Bayou Tour",
   "15200P6": "New Orleans Swamp Boat Tour with Pickup",
   "3780P45": "New Orleans Riverboat Sightseeing Cruise",
@@ -34,6 +36,10 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Ride from San Francisco to Sausalito on a guided bike tour across the Golden Gate Bridge, with lunch voucher, all-day rental, and return options.",
   "2630SUN":
     "Cruise San Francisco Bay at sunset or after dark on a two-hour waterfront sailing with Golden Gate Bridge, Alcatraz, Bay Bridge, and Pier 43 1/2 return.",
+  "276551P2":
+    "Bike New Orleans on a guided city ride through the French Quarter, Jackson Square, Congo Square, Garden District, and Lafayette Cemetery No. 1.",
+  "58347P1":
+    "Ride beyond the French Quarter on a small-group New Orleans bike tour through Faubourg Marigny, Bywater, Treme, Jackson Square, and St. Roch.",
   "6455NOLAAIR":
     "Ride by airboat through Lafitte-area cypress swamp near New Orleans, with wildlife viewing, captain commentary, and optional hotel transportation.",
   "15200P6":

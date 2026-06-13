@@ -7,6 +7,8 @@ export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "122012P17",
   "3780P45",
   "3780SUPER",
+  "276551P2",
+  "58347P1",
 ] as const;
 
 export type Engine6TargetedNarrativeDescriptionProductCode =
@@ -32,6 +34,10 @@ export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTIONS: Record<
     "Cruise the Mississippi River from the French Quarter riverfront aboard the Riverboat CITY of NEW ORLEANS. This 75-minute sightseeing route uses live captain narration while the boat passes downtown river landmarks including Jackson Square, St. Louis Cathedral, the Crescent City Connection, the Aquarium of the Americas, Mardi Gras World, Caesars Casino, and Woldenberg Riverfront Park. Travelers experience New Orleans from the water with open river views and a smooth downtown round-trip finish at the dock behind JAX Brewery.",
   "3780SUPER":
     "Explore New Orleans in one combined sightseeing day with a guided French Quarter walk, independent lunch time at the French Market, and a 75-minute Mississippi River cruise aboard the Riverboat CITY of NEW ORLEANS. The experience continues by narrated coach through city highlights such as the Garden District, City Park, the National WWII Museum, and Audubon Aquarium. Starting and finishing at Cafe Beignet in the JAX Brewery Building, the route blends walking, riverboat, and bus perspectives on New Orleans.",
+  "276551P2":
+    "Bike through New Orleans on a guided city route linking the French Quarter, Jackson Square, Congo Square, the Garden District, and Lafayette Cemetery No. 1. Starting and finishing on Washington Avenue, the ride uses a comfortable pace to cover more ground than a walking tour while a local guide adds neighborhood context and practical recommendations. Travelers experience historic streets, downtown transitions, and garden-district architecture with bicycle, helmet, bottled water, and weather support included.",
+  "58347P1":
+    "Ride beyond the French Quarter on a small-group New Orleans bicycle tour through Faubourg Marigny, Bywater, and Treme. Departing from North Rampart Street, the three-hour route includes stops near the Mississippi River, Jackson Square, and St. Roch Community Church while the guide connects neighborhood scenery with the city's multicultural origins and Creole culture. Travelers use included bicycle and helmet equipment, with bottled water provided and the loop finishing back at the meeting point.",
 };
 
 export const getEngine6TargetedNarrativeDescription = (productCode: string) =>

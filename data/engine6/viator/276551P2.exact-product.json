@@ -1,0 +1,180 @@
+{
+  "product": {
+    "productCode": "276551P2",
+    "productUrl": "https://www.viator.com/tours/New-Orleans/Garden-District-and-French-Quarter-Bike-Tour/d675-276551P2",
+    "title": "New Orleans City Bike Tour",
+    "description": {
+      "text": "Bike through New Orleans on a guided city ride that connects the French Quarter, Jackson Square, Congo Square, the Garden District, and Lafayette Cemetery No. 1. The route starts and ends on Washington Avenue near the Garden District streetcar stop, using a comfortable pace to cover more ground than a walking tour while the guide shares neighborhood context and practical recommendations."
+    },
+    "location": {
+      "city": "New Orleans",
+      "state": "Louisiana"
+    },
+    "duration": "3 hours 30 minutes",
+    "priceFrom": "From $60.00",
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            { "rating": 1.0, "count": 0 },
+            { "rating": 2.0, "count": 1 },
+            { "rating": 3.0, "count": 4 },
+            { "rating": 4.0, "count": 7 },
+            { "rating": 5.0, "count": 153 }
+          ],
+          "totalCount": 165,
+          "averageRating": 4.9
+        }
+      ],
+      "reviewCountTotals": [
+        { "rating": 1.0, "count": 0 },
+        { "rating": 2.0, "count": 1 },
+        { "rating": 3.0, "count": 4 },
+        { "rating": 4.0, "count": 7 },
+        { "rating": 5.0, "count": 153 }
+      ],
+      "totalReviews": 165,
+      "combinedAverageRating": 4.9
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b4/42/63/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ride a guided bike route through the French Quarter and nearby New Orleans neighborhoods.",
+      "Stop around Jackson Square, Congo Square, the Garden District, and Lafayette Cemetery No. 1.",
+      "Cover more ground than a walking tour while biking at a comfortable pace.",
+      "Use an included bicycle, helmet, bottled water, and rain poncho when needed."
+    ],
+    "logistics": {
+      "start": {
+        "description": "1735 Washington Ave, New Orleans, LA 70113. Tours begin at the corner of Baronne and Washington Avenue near the Washington stop on the St. Charles streetcar line."
+      },
+      "end": {
+        "description": "This activity ends back at the meeting point."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "French Quarter",
+        "description": "Ride through the French Quarter during the 90-minute portion of the route, with guide commentary on the neighborhood and its role in the city.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Louis Cathedral",
+        "description": "Pause near St. Louis Cathedral during a brief five-minute stop in the historic center of New Orleans.",
+        "duration": "5 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jackson Square",
+        "description": "Spend about 15 minutes around Jackson Square while the guide explains the landmark setting near the Mississippi River and French Quarter.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Royal Street",
+        "description": "Pass along Royal Street as part of the French Quarter route.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Lafitte's Blacksmith Shop Bar",
+        "description": "Make a short five-minute stop near Lafitte's Blacksmith Shop Bar while moving through the upper French Quarter.",
+        "duration": "5 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Central Business District",
+        "description": "Pass through the Central Business District while connecting between New Orleans neighborhoods.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Congo Square",
+        "description": "Visit Congo Square during a 10-minute stop connected to the city's music and cultural history.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Treme",
+        "description": "Pass through Treme as the bike route broadens beyond the French Quarter.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Frenchmen Street",
+        "description": "Pass by Frenchmen Street during the neighborhood ride.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Mississippi River",
+        "description": "Pass near the Mississippi River while riding through the downtown side of the route.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Garden District",
+        "description": "Spend about one hour in the Garden District, using the bike route to explore the neighborhood's streets and architecture.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lafayette Cemetery No. 1",
+        "description": "Make a short five-minute stop at Lafayette Cemetery No. 1 before returning toward the Washington Avenue meeting point.",
+        "duration": "5 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Use of bicycle",
+      "Bottled water",
+      "Helmet",
+      "Poncho when raining",
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Not wheelchair accessible.",
+      "Travelers should have a moderate physical fitness level.",
+      "Please provide heights of all children so the correct bike size can be arranged.",
+      "The listed itinerary is a broad overview, and not every tour will be able to make every stop.",
+      "Tours operate rain or shine, with rescheduling or refund support in dangerous weather.",
+      "This tour has a maximum of 10 travelers.",
+      "You can cancel up to 24 hours in advance for a full refund."
+    ],
+    "faqs": [
+      {
+        "question": "Where does the New Orleans City Bike Tour meet?",
+        "answer": "The tour meets at 1735 Washington Avenue at the corner of Baronne and Washington Avenue in New Orleans."
+      },
+      {
+        "question": "Does the bike tour return to the starting point?",
+        "answer": "Yes. The activity starts and ends at the Washington Avenue meeting point."
+      },
+      {
+        "question": "How long is the New Orleans City Bike Tour?",
+        "answer": "The tour lasts approximately 3 hours and 30 minutes."
+      },
+      {
+        "question": "What equipment is included?",
+        "answer": "The tour includes use of a bicycle, helmet, bottled water, and a rain poncho when needed."
+      }
+    ],
+    "categories": [
+      { "label": "Bike tour" },
+      { "label": "Outdoor activities" }
+    ],
+    "pricing": {
+      "summary": { "fromPrice": 60.0 },
+      "currency": "USD"
+    }
+  }
+}
