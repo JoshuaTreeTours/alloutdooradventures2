@@ -1,4 +1,8 @@
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
+import {
+  buildEngine6ItineraryFromExtracted,
+  type Engine6ItinerarySourceItem,
+} from "./normalizeEngine6Itinerary";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { formatEngine6StartingPriceLabel } from "./priceDisplay";
 import { resolveEngine6PathForProductCode } from "./routes";
@@ -541,86 +545,21 @@ const ENGINE6_ITINERARY_ITEM_OVERRIDES: Record<
   ],
 };
 
-const rewriteItineraryDescriptionToSingleSentence = (args: {
-  productCode: string;
-  item: NonNullable<Engine6ApiResponse["extracted"]["itinerary"]>[number];
-  index: number;
-}) => {
-  const override =
-    ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES[args.productCode]?.[args.index];
-  if (override) {
-    return override;
-  }
+const getEngine6ItineraryBuildOptions = (productCode: string) => ({
+  itemOverrides: ENGINE6_ITINERARY_ITEM_OVERRIDES[productCode] ?? null,
+  getDescriptionOverride: (code: string, index: number) =>
+    ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES[code]?.[index],
+});
 
-  const { item } = args;
-  const title = item.title?.trim() || "This stop";
-  const duration = item.duration?.trim();
-  const sourceDescription = item.description?.trim() ?? "";
-  const cleanedSource = stripEngine6AdmissionArtifacts(sourceDescription)
-    .replace(/\s+/g, " ")
-    .replace(/\([^)]*\)/g, " ")
-    .replace(/\b(you will|you'll|we will|we'll)\b/gi, "")
-    .trim();
-  const sourceSentence =
-    cleanedSource
-      .split(/(?<!\b\d)[.!?]/)
-      .map(part => part.trim())
-      .find(Boolean) ?? "";
-  const normalizedTitle = title
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim();
-  const normalizedSentence = sourceSentence
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim();
-  const repeatsTitle =
-    normalizedTitle.length > 0 &&
-    normalizedSentence.length > 0 &&
-    (normalizedSentence === normalizedTitle ||
-      normalizedSentence.includes(normalizedTitle));
-  const polishedSourceSentence = sourceSentence
-    .replace(/^(enjoy|experience|discover|visit|explore|see)\s+/i, "")
-    .replace(/^take in\s+/i, "")
-    .replace(/^check out\s+/i, "")
-    .replace(/^pass(?: by)?\s+/i, "")
-    .replace(/^you(?:'ll| will)\s+/i, "")
-    .replace(/^he\s+(?=[A-Z])/, "The ")
-    .replace(/^[a-z]/, m => m.toUpperCase())
-    .replace(/[;:,]\s*$/, "")
-    .trim();
-
-  const durationClause = duration
-    ? ` during the ${duration.replace(/[.!?]+$/g, "")} stop`
-    : "";
-
-  if (polishedSourceSentence && !repeatsTitle) {
-    return stripEngine6AdmissionArtifacts(`${polishedSourceSentence}.`)
-      .replace(/\s+/g, " ")
-      .replace(/\s+([;,.])/g, "$1")
-      .replace(/\.\./g, ".")
-      .trim();
-  }
-
-  const fallbackTitle = title
-    .replace(
-      /^(?:enjoy|experience|discover|visit|explore|see|head to|head|take in|check out|pass(?: by)?)\s+/i,
-      ""
-    )
-    .replace(/^he\s+(?=[A-Z])/, "The ")
-    .replace(/^[a-z]/, m => m.toUpperCase())
-    .trim();
-  const fallbackLead =
-    item.stopType === "pass-by"
-      ? `Pass ${fallbackTitle || title} as part of the route`
-      : `Visit ${fallbackTitle || title}${durationClause}`;
-
-  return stripEngine6AdmissionArtifacts(`${fallbackLead}.`)
-    .replace(/\s+/g, " ")
-    .replace(/\s+([;,.])/g, "$1")
-    .replace(/\.\./g, ".")
-    .trim();
-};
+export const buildEngine6ItineraryForProduct = (
+  productCode: string,
+  extracted: Engine6ItinerarySourceItem[] | undefined | null
+) =>
+  buildEngine6ItineraryFromExtracted(
+    productCode,
+    extracted,
+    getEngine6ItineraryBuildOptions(productCode)
+  );
 
 export const mapViatorToEngine6Tour = (
   payload: Engine6ApiResponse
@@ -691,26 +630,12 @@ export const mapViatorToEngine6Tour = (
   const suppressItinerarySection = isEngine6ItinerarySectionSuppressed(
     payload.rawProductCode
   );
-  const itineraryOverride =
-    ENGINE6_ITINERARY_ITEM_OVERRIDES[payload.rawProductCode] ?? null;
   const itinerary = suppressItinerarySection
     ? []
-    : itineraryOverride
-      ? itineraryOverride.map(item => ({
-          title: item.title,
-          description: item.description,
-          stopType: item.stopType,
-          duration: undefined,
-          admissionNote: undefined,
-        }))
-      : (payload.extracted.itinerary?.map((item, index) => ({
-          ...item,
-          description: rewriteItineraryDescriptionToSingleSentence({
-            productCode: payload.rawProductCode,
-            item,
-            index,
-          }),
-        })) ?? []);
+    : buildEngine6ItineraryForProduct(
+        payload.rawProductCode,
+        payload.extracted.itinerary
+      );
   const itinerarySummaryText = suppressItinerarySection
     ? null
     : (payload.extracted.itinerarySummaryText ?? null);

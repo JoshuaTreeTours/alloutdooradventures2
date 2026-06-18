@@ -17,6 +17,7 @@ import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
 import { buildEngine6DisplaySections } from "../displaySections";
+import { rewriteEngine6ItineraryDescriptionToSingleSentence } from "../normalizeEngine6Itinerary";
 import type { Engine6Tour } from "../types";
 import {
   fetchEngine6LiveProductFields,
@@ -543,9 +544,11 @@ export default function Engine6TourPage({
                   item.sectionLabel !== tour.itinerary[index - 1]?.sectionLabel;
                 const itineraryDescription = item.description?.trim()
                   ? item.description.trim()
-                  : getItineraryStopType(item) === "Pass by"
-                    ? `${item.title} (Pass By)`
-                    : "";
+                  : rewriteEngine6ItineraryDescriptionToSingleSentence({
+                      productCode: tour.productCode,
+                      item,
+                      index,
+                    });
 
                 return (
                   <div key={`${item.title}-${index}`} className="space-y-3">
