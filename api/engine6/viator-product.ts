@@ -242,10 +242,11 @@ const buildEmptyEnvelope = (productCode: string) => ({
 });
 
 const safeExtractEngine6Product = (
-  payload: unknown
+  payload: unknown,
+  options?: Parameters<typeof extractEngine6Product>[1]
 ): ReturnType<typeof extractEngine6Product> => {
   try {
-    return extractEngine6Product(payload);
+    return extractEngine6Product(payload, options);
   } catch {
     return {
       extracted: EMPTY_EXTRACTED_PRODUCT,
@@ -463,7 +464,9 @@ const respondWithBundledFallback = (
   diagnostics: ReturnType<typeof buildDiagnostics>,
   liveExtraction?: ReturnType<typeof extractEngine6Product> | null
 ) => {
-  const bundledExtraction = safeExtractEngine6Product(bundledPayload);
+  const bundledExtraction = safeExtractEngine6Product(bundledPayload, {
+    payloadSource: "bundled-exact-product-fixture",
+  });
   const dynamicExtraction = liveExtraction?.extracted ?? null;
   const merged = applyResolvedHero({
     productCode,
@@ -546,7 +549,9 @@ const respondWithLiveApiAndSafeHeroOverride = (
     diagnostics: ReturnType<typeof buildDiagnostics>;
   }
 ) => {
-  const bundledExtraction = safeExtractEngine6Product(args.bundledPayload);
+  const bundledExtraction = safeExtractEngine6Product(args.bundledPayload, {
+    payloadSource: "bundled-exact-product-fixture",
+  });
   const merged = applyResolvedHero({
     productCode: args.productCode,
     baseExtraction: args.liveExtraction,
@@ -681,9 +686,12 @@ export default async function handler(req: any, res: any) {
   if (!upstreamResponse.ok) {
     if (bundledPayload) {
       diagnostics.usedBundledFallbackBecause = "upstream-not-ok";
-      const liveExtraction = safeExtractEngine6Product({
-        product: { productCode, productUrl: null },
-      });
+      const liveExtraction = safeExtractEngine6Product(
+        {
+          product: { productCode, productUrl: null },
+        },
+        { payloadSource: "live-api" }
+      );
       respondWithBundledFallback(
         res,
         productCode,
@@ -741,7 +749,9 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
-  const extracted = safeExtractEngine6Product(payload);
+  const extracted = safeExtractEngine6Product(payload, {
+    payloadSource: "live-api",
+  });
   const normalizedBaseUrl = baseUrl.replace(/\/$/, "");
   const liveAvailabilityPrice =
     extracted.extracted.priceAmount === null

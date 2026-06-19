@@ -78,6 +78,43 @@ export type Engine6TourDiagnostics = {
   meetingPointSummaryApplied?: boolean;
   meetingPointSummaryReason?: string | null;
   itineraryFieldPath: string | null;
+  itinerarySourceTitleFieldPath?: string | null;
+  itineraryMissingSourceTitleFieldPaths?: string[];
+  itineraryRowInspection276551P2?: Array<{
+    rowIndex: number;
+    itineraryRowFieldPath: string;
+    keys: string[];
+    title: unknown;
+    name: unknown;
+    label: unknown;
+    pointOfInterestLocation: unknown;
+    location: unknown;
+    attraction: unknown;
+    stopName: unknown;
+    stop: unknown;
+    pointOfInterest: unknown;
+    otherNamingFields: Record<string, unknown>;
+  }>;
+  itineraryTitleSourceReport276551P2?: {
+    productCode: "276551P2";
+    payloadSource:
+      | "live-api"
+      | "bundled-exact-product-fixture"
+      | "booking-page-scrape"
+      | "unknown";
+    itineraryFieldPath: string;
+    sourceTitleFieldPattern: string;
+    rows: Array<{
+      rowIndex: number;
+      sourceTitleFieldPath: string;
+      sourceTitle: string | null;
+      renderedTitle: string | null;
+      titleSource:
+        | "viator-itinerary-item-title"
+        | "confirmed-title-override"
+        | "missing";
+    }>;
+  };
   itineraryItemCount: number;
   itinerarySourceUsed: string | null;
   itineraryStructuredSourceUsed?: boolean;

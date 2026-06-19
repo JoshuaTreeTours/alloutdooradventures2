@@ -6,6 +6,28 @@ import {
   resolveProductScopedHero,
 } from "./heroResolver.js";
 import { classifyTourCategories } from "./tourCategoryClassifier.js";
+import {
+  buildEngine6ItineraryItemTitleFieldPath,
+  buildEngine6ItinerarySourceTitleFieldPattern,
+  readEngine6ViatorItineraryItemSourceTitle,
+  resolveEngine6ItinerarySourceTitle,
+} from "./itineraryTitlePolicy.js";
+import {
+  ENGINE6_ITINERARY_ROW_INSPECTION_PRODUCT_CODE,
+  ENGINE6_ITINERARY_ROW_INSPECTION_ROW_LIMIT,
+  inspectEngine6ItineraryRow276551P2,
+  logEngine6ItineraryRowInspection276551P2,
+  type Engine6ItineraryRowInspection276551P2,
+} from "./itineraryRowInspection276551P2.js";
+import {
+  buildEngine6ItineraryTitleSourceReport276551P2,
+  buildEngine6ItineraryTitleSourceRow276551P2,
+  ENGINE6_ITINERARY_TITLE_SOURCE_REPORT_PRODUCT_CODE,
+  logEngine6ItineraryTitleSourceReport276551P2,
+  type Engine6ItineraryPayloadSource,
+  type Engine6ItineraryTitleSourceReport276551P2,
+  type Engine6ItineraryTitleSourceRow276551P2,
+} from "./itineraryTitleSourceReport276551P2.js";
 import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
 
 export type Engine6DiagnosticsPaths = {
@@ -62,6 +84,10 @@ export type Engine6DiagnosticsPaths = {
   requirementsFieldPath: string | null;
   highlightClassificationReason: string | null;
   itineraryFieldPath: string | null;
+  itinerarySourceTitleFieldPath: string | null;
+  itineraryMissingSourceTitleFieldPaths: string[];
+  itineraryRowInspection276551P2?: Engine6ItineraryRowInspection276551P2[];
+  itineraryTitleSourceReport276551P2?: Engine6ItineraryTitleSourceReport276551P2;
   itineraryItemCount: number;
   itinerarySourceUsed: string | null;
   itineraryStructuredSourceUsed?: boolean;
@@ -152,6 +178,14 @@ type ItineraryResult = {
   value: Engine6ExtractedItineraryItem[];
   path: string;
   structuredSourceUsed: boolean;
+  sourceTitleFieldPath: string | null;
+  missingSourceTitleFieldPaths: string[];
+  rowInspection276551P2?: Engine6ItineraryRowInspection276551P2[];
+  titleSourceRows276551P2?: Engine6ItineraryTitleSourceRow276551P2[];
+};
+
+export type ExtractEngine6ProductOptions = {
+  payloadSource?: Engine6ItineraryPayloadSource;
 };
 
 type ViablePriceDetectionResult = {
@@ -1061,12 +1095,38 @@ const extractHighlights = (product: RecordLike) => {
 
 const normalizeSingleItineraryItem = (
   row: RecordLike,
-  context: { productCode: string | null; rowIndex: number }
-): Engine6ExtractedItineraryItem | null => {
+  context: {
+    productCode: string | null;
+    rowIndex: number;
+    itineraryFieldPath: string;
+    rowInspectionCollector276551P2?: Engine6ItineraryRowInspection276551P2[];
+    titleSourceRowCollector276551P2?: Engine6ItineraryTitleSourceRow276551P2[];
+  }
+): {
+  item: Engine6ExtractedItineraryItem | null;
+  missingSourceTitleFieldPath: string | null;
+} | null => {
+  if (
+    context.productCode?.toUpperCase() ===
+      ENGINE6_ITINERARY_ROW_INSPECTION_PRODUCT_CODE &&
+    context.rowIndex < ENGINE6_ITINERARY_ROW_INSPECTION_ROW_LIMIT &&
+    context.rowInspectionCollector276551P2
+  ) {
+    context.rowInspectionCollector276551P2.push(
+      inspectEngine6ItineraryRow276551P2(row, {
+        rowIndex: context.rowIndex,
+        itineraryFieldPath: context.itineraryFieldPath,
+      })
+    );
+  }
+
   const pointOfInterest = asRecord(row.pointOfInterest);
-  const pointOfInterestLocation = asRecord(row.pointOfInterestLocation);
   const stop = asRecord(row.stop);
   const location = asRecord(row.location);
+  const sourceTitleFieldPath = buildEngine6ItineraryItemTitleFieldPath(
+    context.itineraryFieldPath,
+    context.rowIndex
+  );
   const stopTypeRaw =
     asNonEmptyString(row.stopType) ??
     asNonEmptyString(row.activityType) ??
@@ -1077,59 +1137,43 @@ const normalizeSingleItineraryItem = (
     asBoolean(row.passByWithoutStopping) ??
     false;
   const isPassByFromType = /pass[\s_-]?by/i.test(stopTypeRaw ?? "");
-
-  const locationTitle =
-    asNonEmptyString(pointOfInterestLocation?.locationName) ??
-    asNonEmptyString(pointOfInterestLocation?.title) ??
-    asNonEmptyString(pointOfInterestLocation?.name);
-  const inferredTitleFromDescription = (() => {
-    const descriptionText = asNonEmptyString(row.description);
-    if (!descriptionText) return null;
-
-    const normalizedDescription = descriptionText
-      .replace(/^he\s+(?=[A-Z])/, "The ")
-      .trim();
-    const firstSentence =
-      normalizedDescription.split(/(?<!\b\d)(?<=[.!?])\s+/)[0]?.trim() ?? "";
-    if (!firstSentence) return null;
-
-    const subjectMatch = firstSentence.match(
-      /^((?:The\s+)?[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,7})\s+(?:is|are|offers?|provides?|features?)\b/
-    );
-    if (subjectMatch?.[1]) {
-      return subjectMatch[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    const locationPattern =
-      /\b(?:arrive in|continue to|final stop[:\s]+|visit|return to|journey in)\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,5})/;
-    const match = firstSentence.match(locationPattern);
-    if (match?.[1]) {
-      return match[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    return firstSentence.replace(/[.,:;]+$/, "").trim() || null;
-  })();
-
-  const title =
-    locationTitle ??
-    asNonEmptyString(row.title) ??
-    asNonEmptyString(row.name) ??
-    asNonEmptyString(row.label) ??
-    asNonEmptyString(pointOfInterest?.title) ??
-    asNonEmptyString(pointOfInterest?.name) ??
-    asNonEmptyString(stop?.name) ??
-    asNonEmptyString(stop?.title) ??
-    asNonEmptyString(location?.name) ??
-    getEngine6ItineraryTitleOverride({
+  const sourceTitle = readEngine6ViatorItineraryItemSourceTitle(row.title);
+  const titleResolution = resolveEngine6ItinerarySourceTitle({
+    sourceTitle,
+    sourceTitleFieldPath,
+    confirmedTitleOverride: getEngine6ItineraryTitleOverride({
       productCode: context.productCode,
       rowIndex: context.rowIndex,
-    }) ??
-    inferredTitleFromDescription;
+    }),
+  });
 
-  if (!title) return null;
-  const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
+  if (
+    context.productCode?.toUpperCase() ===
+      ENGINE6_ITINERARY_TITLE_SOURCE_REPORT_PRODUCT_CODE &&
+    context.rowIndex < ENGINE6_ITINERARY_ROW_INSPECTION_ROW_LIMIT &&
+    context.titleSourceRowCollector276551P2
+  ) {
+    context.titleSourceRowCollector276551P2.push(
+      buildEngine6ItineraryTitleSourceRow276551P2({
+        rowIndex: context.rowIndex,
+        itineraryFieldPath: context.itineraryFieldPath,
+        sourceTitle,
+        titleResolution,
+      })
+    );
+  }
+
+  if (!titleResolution.title) {
+    return {
+      item: null,
+      missingSourceTitleFieldPath: sourceTitleFieldPath,
+    };
+  }
+
+  const title = titleResolution.title;
   const isPassByFromTitle =
-    /\bpass(?:\s|-)?by\b/i.test(title) && cleanedTitle.length > 0;
+    /\bpass(?:\s|-)?by\b/i.test(title) ||
+    /\s*\((pass\s*by)\)\s*$/i.test(title);
 
   const description =
     asNonEmptyString(row.description) ??
@@ -1171,14 +1215,18 @@ const normalizeSingleItineraryItem = (
     isPassByFlag || isPassByFromType || isPassByFromTitle ? "pass-by" : "stop";
 
   return {
-    title: cleanedTitle || title,
-    stopType,
-    ...(descriptionWithoutAdmission
-      ? { description: descriptionWithoutAdmission }
-      : {}),
-    ...(duration ? { duration } : {}),
-    ...(admissionNote ? { admissionNote } : {}),
-  } satisfies Engine6ExtractedItineraryItem;
+    item: {
+      title,
+      stopType,
+      ...(descriptionWithoutAdmission
+        ? { description: descriptionWithoutAdmission }
+        : {}),
+      ...(duration ? { duration } : {}),
+      ...(admissionNote ? { admissionNote } : {}),
+    },
+    missingSourceTitleFieldPath:
+      titleResolution.missingSourceTitleFieldPath,
+  };
 };
 
 const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
@@ -1244,27 +1292,45 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
   };
 
   const normalizeItinerary = (
-    value: unknown
-  ): Engine6ExtractedItineraryItem[] => {
+    value: unknown,
+    itineraryFieldPath: string
+  ): ItineraryResult => {
     const rows = collectNestedStopRows(value);
-    if (!Array.isArray(rows)) {
-      return [];
-    }
-
+    const missingSourceTitleFieldPaths: string[] = [];
+    const productCode = asNonEmptyString(product.productCode);
+    const rowInspection276551P2 =
+      productCode?.toUpperCase() === ENGINE6_ITINERARY_ROW_INSPECTION_PRODUCT_CODE
+        ? ([] as Engine6ItineraryRowInspection276551P2[])
+        : undefined;
+    const titleSourceRows276551P2 =
+      productCode?.toUpperCase() ===
+      ENGINE6_ITINERARY_TITLE_SOURCE_REPORT_PRODUCT_CODE
+        ? ([] as Engine6ItineraryTitleSourceRow276551P2[])
+        : undefined;
     const seen = new Set<string>();
-    return rows
+    const valueItems = rows
       .map((item, rowIndex) => {
         const parsed = normalizeSingleItineraryItem(item.row, {
-          productCode: asNonEmptyString(product.productCode),
+          productCode,
           rowIndex,
+          itineraryFieldPath,
+          rowInspectionCollector276551P2: rowInspection276551P2,
+          titleSourceRowCollector276551P2: titleSourceRows276551P2,
         });
-        if (!parsed) return null;
+        if (!parsed?.item) {
+          if (parsed?.missingSourceTitleFieldPath) {
+            missingSourceTitleFieldPaths.push(
+              parsed.missingSourceTitleFieldPath
+            );
+          }
+          return null;
+        }
 
         const dedupeKey = [
-          parsed.title.toLowerCase(),
-          (parsed.description ?? "").toLowerCase(),
-          (parsed.duration ?? "").toLowerCase(),
-          parsed.stopType ?? "stop",
+          parsed.item.title.toLowerCase(),
+          (parsed.item.description ?? "").toLowerCase(),
+          (parsed.item.duration ?? "").toLowerCase(),
+          parsed.item.stopType ?? "stop",
           (item.sectionLabel ?? "").toLowerCase(),
         ].join("|");
 
@@ -1274,10 +1340,21 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
         seen.add(dedupeKey);
 
         return item.sectionLabel
-          ? { ...parsed, sectionLabel: item.sectionLabel }
-          : parsed;
+          ? { ...parsed.item, sectionLabel: item.sectionLabel }
+          : parsed.item;
       })
       .filter((item): item is Engine6ExtractedItineraryItem => Boolean(item));
+
+    return {
+      value: valueItems,
+      path: itineraryFieldPath,
+      structuredSourceUsed: false,
+      sourceTitleFieldPath:
+        buildEngine6ItinerarySourceTitleFieldPattern(itineraryFieldPath),
+      missingSourceTitleFieldPaths,
+      ...(rowInspection276551P2 ? { rowInspection276551P2 } : {}),
+      ...(titleSourceRows276551P2 ? { titleSourceRows276551P2 } : {}),
+    };
   };
 
   const structuredPaths: PathSegment[][] = [
@@ -1298,24 +1375,21 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
   ];
 
   for (const path of structuredPaths) {
-    const value = normalizeItinerary(readPath(product, path));
-    if (value.length > 0) {
+    const itineraryFieldPath = formatFieldPath(path);
+    const normalized = normalizeItinerary(readPath(product, path), itineraryFieldPath);
+    if (normalized.value.length > 0) {
       return {
-        value,
-        path: formatFieldPath(path),
+        ...normalized,
         structuredSourceUsed: true,
       };
     }
   }
 
   for (const path of [["itinerary"], ["whatToExpect"]] as PathSegment[][]) {
-    const value = normalizeItinerary(readPath(product, path));
-    if (value.length > 0) {
-      return {
-        value,
-        path: formatFieldPath(path),
-        structuredSourceUsed: false,
-      };
+    const itineraryFieldPath = formatFieldPath(path);
+    const normalized = normalizeItinerary(readPath(product, path), itineraryFieldPath);
+    if (normalized.value.length > 0) {
+      return normalized;
     }
   }
 
@@ -1323,6 +1397,10 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
     value: [],
     path: "product.itineraryItems",
     structuredSourceUsed: false,
+    sourceTitleFieldPath: buildEngine6ItinerarySourceTitleFieldPattern(
+      "product.itineraryItems"
+    ),
+    missingSourceTitleFieldPaths: [],
   };
 };
 
@@ -1646,7 +1724,10 @@ const extractIncluded = (product: RecordLike) => {
   return { value: [], path: null as string | null };
 };
 
-export const extractEngine6Product = (rawPayload: unknown) => {
+export const extractEngine6Product = (
+  rawPayload: unknown,
+  options: ExtractEngine6ProductOptions = {}
+) => {
   const product = pickProduct(rawPayload);
   const diagnostics: Engine6DiagnosticsPaths = {
     commercialPriceFieldPath: null,
@@ -1695,6 +1776,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     requirementsFieldPath: null,
     highlightClassificationReason: null,
     itineraryFieldPath: null,
+    itinerarySourceTitleFieldPath: null,
+    itineraryMissingSourceTitleFieldPaths: [],
     itineraryItemCount: 0,
     itinerarySourceUsed: null,
     itineraryStructuredSourceUsed: false,
@@ -1889,6 +1972,34 @@ export const extractEngine6Product = (rawPayload: unknown) => {
 
   const itinerary = extractPlaybookItinerary(product);
   diagnostics.itineraryFieldPath = itinerary.path;
+  diagnostics.itinerarySourceTitleFieldPath = itinerary.sourceTitleFieldPath;
+  diagnostics.itineraryMissingSourceTitleFieldPaths =
+    itinerary.missingSourceTitleFieldPaths;
+  if (
+    productCode?.toUpperCase() ===
+      ENGINE6_ITINERARY_TITLE_SOURCE_REPORT_PRODUCT_CODE &&
+    itinerary.titleSourceRows276551P2
+  ) {
+    diagnostics.itineraryTitleSourceReport276551P2 =
+      buildEngine6ItineraryTitleSourceReport276551P2({
+        payloadSource: options.payloadSource ?? "unknown",
+        itineraryFieldPath: itinerary.path,
+        rows: itinerary.titleSourceRows276551P2,
+      });
+    logEngine6ItineraryTitleSourceReport276551P2(
+      diagnostics.itineraryTitleSourceReport276551P2
+    );
+  }
+  if (
+    productCode?.toUpperCase() === ENGINE6_ITINERARY_ROW_INSPECTION_PRODUCT_CODE &&
+    itinerary.rowInspection276551P2
+  ) {
+    diagnostics.itineraryRowInspection276551P2 =
+      itinerary.rowInspection276551P2;
+    logEngine6ItineraryRowInspection276551P2(
+      itinerary.rowInspection276551P2
+    );
+  }
   diagnostics.itineraryItemCount = itinerary.value.length;
   diagnostics.itinerarySourceUsed =
     itinerary.value.length > 0 ? itinerary.path : null;

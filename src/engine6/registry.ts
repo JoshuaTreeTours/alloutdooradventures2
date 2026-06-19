@@ -17,7 +17,9 @@ const toEngine6FixturePayload = (
   fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
 ): Engine6ApiResponse => {
   assertEngine6FixtureSourceOfTruth(fixture);
-  const extraction = extractEngine6Product(fixture.rawPayload);
+  const extraction = extractEngine6Product(fixture.rawPayload, {
+    payloadSource: "bundled-exact-product-fixture",
+  });
 
   return {
     source: "bundled-fallback",
