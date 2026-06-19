@@ -1,5 +1,8 @@
+import type { Engine6ItineraryTitleSource } from "../../api/engine6/itineraryTitlePolicy";
+
 export type Engine6ItineraryItem = {
   title: string;
+  titleSource?: Engine6ItineraryTitleSource;
   stopType?: "stop" | "pass-by";
   sectionLabel?: string;
   description?: string;

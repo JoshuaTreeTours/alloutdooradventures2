@@ -66,6 +66,11 @@ import { isExcludedProductCode } from "../../../../data/excludedProductCodes";
 import { isEngine6CanonicalPath } from "../../../../engine6/routes";
 import { buildEngine6SchemaGraph } from "../../../../engine6/schema/buildEngine6SchemaGraph";
 import { mergeEngine6LiveFieldsIntoTour } from "../../../../engine6/liveProductFields";
+import {
+  mergeEngine6NativeItineraryWithLive,
+  readEngine6LiveItineraryTitleSource,
+  type Engine6LiveItineraryItem,
+} from "../../../../engine6/mergeEngine6LiveItinerary";
 import { isEngine6ItinerarySectionSuppressed } from "../../../../engine6/mapViatorToEngine6Tour";
 import {
   assertEngine6CtaIntegrity,
@@ -177,7 +182,7 @@ export default function CityTourDetailRoute({
           durationText: string | null;
           meetingPointText: string | null;
           overviewText: string | null;
-          itinerary: Engine6Tour["itinerary"] | null;
+          itinerary: Engine6LiveItineraryItem[] | null;
           itinerarySummaryText: string | null;
           included: string[] | null;
           requirements: string[] | null;
@@ -391,9 +396,12 @@ export default function CityTourDetailRoute({
                             stopType,
                           });
 
+                    const titleSource = readEngine6LiveItineraryTitleSource(record);
+
                     return {
                       ...record,
                       title,
+                      ...(titleSource ? { titleSource } : {}),
                       ...(duration ? { duration } : {}),
                       stopType,
                       description: oneSentenceDescription
@@ -402,9 +410,9 @@ export default function CityTourDetailRoute({
                         .trim(),
                     };
                   })
-                  .filter((item): item is Engine6Tour["itinerary"][number] =>
+                  .filter((item): item is Engine6LiveItineraryItem =>
                     Boolean(item)
-                  ) as Engine6Tour["itinerary"])
+                  ) as Engine6LiveItineraryItem[])
               : null,
           itinerarySummaryText:
             !suppressLiveContentFields &&
@@ -473,7 +481,12 @@ export default function CityTourDetailRoute({
             : (liveDynamic.overviewText ?? nativeEngine6Tour.overviewText),
           itinerary: suppressLiveContentFields
             ? nativeEngine6Tour.itinerary
-            : (liveDynamic.itinerary ?? nativeEngine6Tour.itinerary),
+            : liveDynamic.itinerary
+              ? mergeEngine6NativeItineraryWithLive(
+                  nativeEngine6Tour.itinerary,
+                  liveDynamic.itinerary
+                )
+              : nativeEngine6Tour.itinerary,
           itinerarySummaryText: suppressLiveContentFields
             ? nativeEngine6Tour.itinerarySummaryText
             : (liveDynamic.itinerarySummaryText ??
