@@ -2,6 +2,7 @@ export type Engine6ItineraryTitleSource =
   | "json-ld"
   | "explicit"
   | "product-override"
+  | "neutral-numbered"
   | "description-inferred";
 
 type RecordLike = Record<string, unknown>;

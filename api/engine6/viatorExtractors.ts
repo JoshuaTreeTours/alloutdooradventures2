@@ -1091,33 +1091,15 @@ const normalizeSingleItineraryItem = (
     asNonEmptyString(pointOfInterestLocation?.locationName) ??
     asNonEmptyString(pointOfInterestLocation?.title) ??
     asNonEmptyString(pointOfInterestLocation?.name);
-  const inferredTitleFromDescription = (() => {
-    const descriptionText = asNonEmptyString(row.description);
-    if (!descriptionText) return null;
-
-    const normalizedDescription = descriptionText
-      .replace(/^he\s+(?=[A-Z])/, "The ")
-      .trim();
-    const firstSentence =
-      normalizedDescription.split(/(?<!\b\d)(?<=[.!?])\s+/)[0]?.trim() ?? "";
-    if (!firstSentence) return null;
-
-    const subjectMatch = firstSentence.match(
-      /^((?:The\s+)?[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,7})\s+(?:is|are|offers?|provides?|features?)\b/
-    );
-    if (subjectMatch?.[1]) {
-      return subjectMatch[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    const locationPattern =
-      /\b(?:arrive in|continue to|final stop[:\s]+|visit|return to|journey in)\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,5})/;
-    const match = firstSentence.match(locationPattern);
-    if (match?.[1]) {
-      return match[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    return firstSentence.replace(/[.,:;]+$/, "").trim() || null;
-  })();
+  const neutralNumberedTitle = `Itinerary Stop ${context.rowIndex + 1}`;
+  const rowTitle = asNonEmptyString(row.title);
+  const rowName = asNonEmptyString(row.name);
+  const rowLabel = asNonEmptyString(row.label);
+  const pointOfInterestTitle = asNonEmptyString(pointOfInterest?.title);
+  const pointOfInterestName = asNonEmptyString(pointOfInterest?.name);
+  const stopName = asNonEmptyString(stop?.name);
+  const stopTitle = asNonEmptyString(stop?.title);
+  const locationName = asNonEmptyString(location?.name);
 
   const jsonLdTitle = getEngine6ItineraryJsonLdTitle(
     context.product,
@@ -1128,8 +1110,8 @@ const normalizeSingleItineraryItem = (
     rowIndex: context.rowIndex,
   });
 
-  let title: string | null = null;
-  let titleSource: Engine6ItineraryTitleSource = "description-inferred";
+  let title = neutralNumberedTitle;
+  let titleSource: Engine6ItineraryTitleSource = "neutral-numbered";
 
   if (jsonLdTitle) {
     title = jsonLdTitle;
@@ -1137,39 +1119,38 @@ const normalizeSingleItineraryItem = (
   } else if (locationTitle) {
     title = locationTitle;
     titleSource = "explicit";
-  } else if (asNonEmptyString(row.title)) {
-    title = asNonEmptyString(row.title);
+  } else if (rowTitle) {
+    title = rowTitle;
     titleSource = "explicit";
-  } else if (asNonEmptyString(row.name)) {
-    title = asNonEmptyString(row.name);
+  } else if (rowName) {
+    title = rowName;
     titleSource = "explicit";
-  } else if (asNonEmptyString(row.label)) {
-    title = asNonEmptyString(row.label);
+  } else if (rowLabel) {
+    title = rowLabel;
     titleSource = "explicit";
-  } else if (asNonEmptyString(pointOfInterest?.title)) {
-    title = asNonEmptyString(pointOfInterest?.title);
+  } else if (pointOfInterestTitle) {
+    title = pointOfInterestTitle;
     titleSource = "explicit";
-  } else if (asNonEmptyString(pointOfInterest?.name)) {
-    title = asNonEmptyString(pointOfInterest?.name);
+  } else if (pointOfInterestName) {
+    title = pointOfInterestName;
     titleSource = "explicit";
-  } else if (asNonEmptyString(stop?.name)) {
-    title = asNonEmptyString(stop?.name);
+  } else if (stopName) {
+    title = stopName;
     titleSource = "explicit";
-  } else if (asNonEmptyString(stop?.title)) {
-    title = asNonEmptyString(stop?.title);
+  } else if (stopTitle) {
+    title = stopTitle;
     titleSource = "explicit";
-  } else if (asNonEmptyString(location?.name)) {
-    title = asNonEmptyString(location?.name);
+  } else if (locationName) {
+    title = locationName;
     titleSource = "explicit";
   } else if (productOverride) {
     title = productOverride;
     titleSource = "product-override";
-  } else if (inferredTitleFromDescription) {
-    title = inferredTitleFromDescription;
-    titleSource = "description-inferred";
+  } else {
+    title = neutralNumberedTitle;
+    titleSource = "neutral-numbered";
   }
 
-  if (!title) return null;
   const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
   const isPassByFromTitle =
     /\bpass(?:\s|-)?by\b/i.test(title) && cleanedTitle.length > 0;
