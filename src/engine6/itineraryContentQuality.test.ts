@@ -73,7 +73,7 @@ describe("Engine6 itinerary content quality", () => {
     });
 
     expect(preserved).toBe(
-      "Visit Jackson Square during a 15-minute stop in the French Quarter area."
+      "During a 15-minute stop in the French Quarter area."
     );
     expect(
       isEngine6LowQualityItineraryDescription("Jackson Square", preserved)

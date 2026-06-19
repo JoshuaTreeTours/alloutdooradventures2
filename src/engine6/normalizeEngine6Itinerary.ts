@@ -2,6 +2,10 @@ import {
   isEngine6GenericItineraryDescription,
   normalizeEngine6ItineraryComparisonText,
 } from "./itineraryGovernance";
+import {
+  normalizeEngine6ItineraryStopFields,
+  stripTitleOverlapFromDescription,
+} from "./itineraryTitleDescription";
 import { stripEngine6AdmissionArtifacts } from "./seo";
 import type { Engine6ItineraryItem } from "./types";
 
@@ -707,7 +711,10 @@ export const rewriteEngine6ItineraryDescriptionToSingleSentence = (args: {
   const { item } = args;
   const title = item.title?.trim() || "This stop";
   const sourceDescription = item.description?.trim() ?? "";
-  const preservedSource = normalizePreservedSourceDescription(sourceDescription);
+  const preservedSource = stripTitleOverlapFromDescription(
+    title,
+    normalizePreservedSourceDescription(sourceDescription)
+  );
   const sourceSentence = extractCleanSourceSentence(sourceDescription);
 
   if (
@@ -832,15 +839,23 @@ export const buildEngine6ItineraryFromExtracted = (
     return [];
   }
 
-  const mapped = extracted.map((item, index) => ({
-    ...item,
-    description: rewriteEngine6ItineraryDescriptionToSingleSentence({
-      productCode,
-      item,
-      index,
-      getDescriptionOverride: options?.getDescriptionOverride,
-    }),
-  }));
+  const mapped = extracted.map((item, index) => {
+    const normalizedFields = normalizeEngine6ItineraryStopFields(item);
+
+    return {
+      ...item,
+      ...normalizedFields,
+      description: rewriteEngine6ItineraryDescriptionToSingleSentence({
+        productCode,
+        item: {
+          ...item,
+          ...normalizedFields,
+        },
+        index,
+        getDescriptionOverride: options?.getDescriptionOverride,
+      }),
+    };
+  });
 
   return dedupeEngine6ItineraryDescriptions(mapped, {
     productCode,

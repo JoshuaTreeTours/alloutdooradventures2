@@ -1,4 +1,5 @@
 import { normalizeEngine6AggregateRating } from "./rating.js";
+import { normalizeEngine6ItineraryStopFields } from "../../src/engine6/itineraryTitleDescription.js";
 import {
   type Engine6HeroCandidate,
   type Engine6HeroQualityClassification,
@@ -1080,33 +1081,6 @@ const normalizeSingleItineraryItem = (
     asNonEmptyString(pointOfInterestLocation?.locationName) ??
     asNonEmptyString(pointOfInterestLocation?.title) ??
     asNonEmptyString(pointOfInterestLocation?.name);
-  const inferredTitleFromDescription = (() => {
-    const descriptionText = asNonEmptyString(row.description);
-    if (!descriptionText) return null;
-
-    const normalizedDescription = descriptionText
-      .replace(/^he\s+(?=[A-Z])/, "The ")
-      .trim();
-    const firstSentence =
-      normalizedDescription.split(/(?<!\b\d)(?<=[.!?])\s+/)[0]?.trim() ?? "";
-    if (!firstSentence) return null;
-
-    const subjectMatch = firstSentence.match(
-      /^((?:The\s+)?[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,7})\s+(?:is|are|offers?|provides?|features?)\b/
-    );
-    if (subjectMatch?.[1]) {
-      return subjectMatch[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    const locationPattern =
-      /\b(?:arrive in|continue to|final stop[:\s]+|visit|return to|journey in)\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,5})/;
-    const match = firstSentence.match(locationPattern);
-    if (match?.[1]) {
-      return match[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    return firstSentence.replace(/[.,:;]+$/, "").trim() || null;
-  })();
 
   const title =
     locationTitle ??
@@ -1118,9 +1092,8 @@ const normalizeSingleItineraryItem = (
     asNonEmptyString(stop?.name) ??
     asNonEmptyString(stop?.title) ??
     asNonEmptyString(location?.name) ??
-    inferredTitleFromDescription;
+    "";
 
-  if (!title) return null;
   const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
   const isPassByFromTitle =
     /\bpass(?:\s|-)?by\b/i.test(title) && cleanedTitle.length > 0;
@@ -1164,11 +1137,27 @@ const normalizeSingleItineraryItem = (
   const stopType =
     isPassByFlag || isPassByFromType || isPassByFromTitle ? "pass-by" : "stop";
 
-  return {
+  const normalizedFields = normalizeEngine6ItineraryStopFields({
     title: cleanedTitle || title,
+    description: descriptionWithoutAdmission,
+  });
+
+  if (
+    !normalizedFields.title ||
+    (normalizedFields.title === "This stop" &&
+      !locationTitle &&
+      !cleanedTitle &&
+      !title &&
+      !normalizedFields.description)
+  ) {
+    return null;
+  }
+
+  return {
+    title: normalizedFields.title,
     stopType,
-    ...(descriptionWithoutAdmission
-      ? { description: descriptionWithoutAdmission }
+    ...(normalizedFields.description
+      ? { description: normalizedFields.description }
       : {}),
     ...(duration ? { duration } : {}),
     ...(admissionNote ? { admissionNote } : {}),
