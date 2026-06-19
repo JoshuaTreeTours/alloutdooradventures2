@@ -1058,6 +1058,71 @@ const extractHighlights = (product: RecordLike) => {
   return { value: [], path: null as string | null };
 };
 
+const ENGINE6_NARRATIVE_TITLE_START_PATTERN =
+  /^(?:next on the tour(?:\s+is)?|you will then(?:\s+visit)?|see the famous|after pick\s*up|visit|pass by|explore|discover)\b/i;
+
+const countWords = (value: string) => value.split(/\s+/).filter(Boolean).length;
+
+const normalizeTitleText = (value: string) =>
+  value
+    .replace(/\s+/g, " ")
+    .replace(/^he\s+(?=[A-Z])/, "The ")
+    .replace(/\s*\((pass\s*by)\)\s*$/i, "")
+    .trim();
+
+const isConciseItineraryTitle = (value: string | null | undefined) => {
+  const normalized = value ? normalizeTitleText(value) : "";
+  if (!normalized) return false;
+  if (countWords(normalized) > 12) return false;
+  if (ENGINE6_NARRATIVE_TITLE_START_PATTERN.test(normalized)) return false;
+  if (/[.!?]$/.test(normalized)) return false;
+  return true;
+};
+
+const extractConservativeTitlePhrase = (value: string | null | undefined) => {
+  const normalized = value ? normalizeTitleText(value) : "";
+  if (!normalized) return null;
+
+  const patterns = [
+    /^Next on the tour is\s+([^,.–—-]+(?:\s+(?:Park|Center|Theater|Theatre|Building|Memorial|Museum|Bridge|Falls?|Point|Square|District|Market|Wharf|Island|Canyon|Dam|Valley|Grove|Field|Cathedral|Church|Arch|Piers?|Yards?|Carousel))?)/i,
+    /^See the famous\s+([^,.–—-]+(?:\s+(?:Park|Center|Theater|Theatre|Building|Memorial|Museum|Bridge|Falls?|Point|Square|District|Market|Wharf|Island|Canyon|Dam|Valley|Grove|Field|Cathedral|Church|Arch|Piers?|Yards?|Carousel))?)/i,
+    /^You will then visit\s+([^,.–—-]+)/i,
+    /^(?:Visit|Explore|Discover|Pass by)\s+([^,.–—-]+)/i,
+  ];
+
+  for (const pattern of patterns) {
+    const match = normalized.match(pattern);
+    const candidate = match?.[1]?.replace(/^the\s+/i, "The ").trim();
+    if (candidate && countWords(candidate) <= 12) return candidate;
+  }
+
+  const beforeDelimiter = normalized.split(/[,.;:–—-]/)[0]?.trim();
+  if (beforeDelimiter && countWords(beforeDelimiter) <= 6) {
+    return beforeDelimiter.replace(
+      /^(?:Visit|Explore|Discover|Pass by)\s+/i,
+      ""
+    );
+  }
+
+  return null;
+};
+
+const chooseItineraryTitle = (candidates: Array<string | null | undefined>) => {
+  const normalizedCandidates = candidates
+    .map(candidate => (candidate ? normalizeTitleText(candidate) : null))
+    .filter((candidate): candidate is string => Boolean(candidate));
+
+  const concise = normalizedCandidates.find(isConciseItineraryTitle);
+  if (concise) return concise;
+
+  for (const candidate of normalizedCandidates) {
+    const extracted = extractConservativeTitlePhrase(candidate);
+    if (extracted) return extracted;
+  }
+
+  return normalizedCandidates[0] ?? null;
+};
+
 const normalizeSingleItineraryItem = (
   row: RecordLike
 ): Engine6ExtractedItineraryItem | null => {
@@ -1108,20 +1173,23 @@ const normalizeSingleItineraryItem = (
     return firstSentence.replace(/[.,:;]+$/, "").trim() || null;
   })();
 
-  const title =
-    locationTitle ??
-    asNonEmptyString(row.title) ??
-    asNonEmptyString(row.name) ??
-    asNonEmptyString(row.label) ??
-    asNonEmptyString(pointOfInterest?.title) ??
-    asNonEmptyString(pointOfInterest?.name) ??
-    asNonEmptyString(stop?.name) ??
-    asNonEmptyString(stop?.title) ??
-    asNonEmptyString(location?.name) ??
-    inferredTitleFromDescription;
+  const rawTitle = asNonEmptyString(row.title);
+  const title = chooseItineraryTitle([
+    rawTitle && isConciseItineraryTitle(rawTitle) ? rawTitle : null,
+    locationTitle,
+    asNonEmptyString(pointOfInterest?.title),
+    asNonEmptyString(pointOfInterest?.name),
+    asNonEmptyString(stop?.name),
+    asNonEmptyString(stop?.title),
+    asNonEmptyString(location?.name),
+    rawTitle,
+    asNonEmptyString(row.name),
+    asNonEmptyString(row.label),
+    inferredTitleFromDescription,
+  ]);
 
   if (!title) return null;
-  const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
+  const cleanedTitle = normalizeTitleText(title);
   const isPassByFromTitle =
     /\bpass(?:\s|-)?by\b/i.test(title) && cleanedTitle.length > 0;
 
