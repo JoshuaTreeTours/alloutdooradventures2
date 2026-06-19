@@ -83,6 +83,83 @@ describe("extractEngine6Product category normalization", () => {
 });
 
 describe("extractEngine6Product itinerary source preservation", () => {
+  it("extracts concise attraction titles instead of promoting supplier descriptions", () => {
+    const payload = {
+      product: {
+        productCode: "CENTRAL-PARK-PEDICAB-TITLES",
+        title: "Central Park Pedicab title audit",
+        itinerary: {
+          itineraryItems: [
+            {
+              title:
+                "Iconic carousel in Central Park built in 1908 & featuring over 50 hand-carved horses",
+              attractionName: "Central Park Carousel",
+              description:
+                "Iconic carousel in Central Park built in 1908 & featuring over 50 hand-carved horses",
+            },
+            {
+              title: "24 game tables shaded by wooden trellis.",
+              stopName: "Chess & Checkers House",
+              description: "24 game tables shaded by wooden trellis.",
+            },
+            {
+              title:
+                "Statues of Shakespeare, Robert Burns & other writers line this shaded promenade.",
+              locationName: "Literary Walk",
+              description:
+                "Statues of Shakespeare, Robert Burns & other writers line this shaded promenade.",
+            },
+            {
+              title: "Route passes the theater district and Midtown landmarks.",
+              pointOfInterest: {
+                attractionName: "Times Square",
+              },
+              description:
+                "Route passes the theater district and Midtown landmarks.",
+            },
+            {
+              title: "Visit Palace of Fine Arts during the stop.",
+              stop: {
+                locationName: "Palace of Fine Arts",
+              },
+              description: "Visit Palace of Fine Arts during the stop.",
+            },
+          ],
+        },
+      },
+    };
+
+    const result = extractEngine6Product(payload as Record<string, unknown>);
+
+    expect(result.extracted.itinerary).toEqual([
+      {
+        title: "Central Park Carousel",
+        stopType: "stop",
+        description:
+          "Iconic carousel in Central Park built in 1908 & featuring over 50 hand-carved horses",
+      },
+      {
+        title: "Chess & Checkers House",
+        stopType: "stop",
+        description: "24 game tables shaded by wooden trellis.",
+      },
+      {
+        title: "Literary Walk",
+        stopType: "stop",
+        description:
+          "Statues of Shakespeare, Robert Burns & other writers line this shaded promenade.",
+      },
+      {
+        title: "Times Square",
+        stopType: "stop",
+      },
+      {
+        title: "Palace of Fine Arts",
+        stopType: "stop",
+      },
+    ]);
+  });
+
   it("preserves meaningful supplier stop descriptions and shortens mechanical pass-by titles", () => {
     const payload = {
       product: {

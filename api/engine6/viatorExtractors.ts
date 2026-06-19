@@ -1084,7 +1084,9 @@ const isMechanicalItineraryPlaceholder = (
   }
 
   if (
-    /^(?:this is a scheduled stop|this portion is viewed)\b/i.test(normalized)
+    /^(?:this is a scheduled stop|this portion is viewed|route passes)\b/i.test(
+      normalized
+    )
   ) {
     return true;
   }
@@ -1107,7 +1109,7 @@ const isMechanicalItineraryPlaceholder = (
       : "[^.]+";
     if (
       new RegExp(
-        `^visit ${titlePattern} during the ${durationPattern} stop$`,
+        `^visit ${titlePattern} during the (?:${durationPattern} )?stop$`,
         "i"
       ).test(normalized)
     ) {
@@ -1135,6 +1137,32 @@ const cleanItineraryTitle = (value: string) =>
     .replace(/\s*\((pass\s*by)\)\s*$/i, "")
     .trim();
 
+const isLikelyDescriptiveItineraryTitle = (value: string) => {
+  const cleaned = cleanItineraryTitle(value) || value.trim();
+  const wordCount = cleaned.split(/\s+/).filter(Boolean).length;
+
+  if (/^(?:by|pass by)$/i.test(cleaned)) return true;
+  if (/[.!?]$/.test(cleaned)) return true;
+  if (/^(?:route passes|visit|pass)\b/i.test(cleaned)) return true;
+  if (/^\d+\s+\w+/.test(cleaned)) return true;
+
+  return (
+    wordCount > 8 &&
+    /\b(?:built|featuring|features|shaded|located|known|offers?|provides?|includes?|visit|pass(?:es)?|see|view|explore)\b/i.test(
+      cleaned
+    )
+  );
+};
+
+const firstConciseItineraryTitle = (
+  candidates: Array<string | null | undefined>
+) =>
+  candidates.find(
+    candidate =>
+      Boolean(candidate) &&
+      !isLikelyDescriptiveItineraryTitle(candidate as string)
+  );
+
 const normalizeSingleItineraryItem = (
   row: RecordLike
 ): Engine6ExtractedItineraryItem | null => {
@@ -1154,48 +1182,35 @@ const normalizeSingleItineraryItem = (
   const isPassByFromType = /pass[\s_-]?by/i.test(stopTypeRaw ?? "");
 
   const locationTitle =
+    asNonEmptyString(row.stopName) ??
+    asNonEmptyString(row.attractionName) ??
+    asNonEmptyString(row.locationName) ??
+    asNonEmptyString(stop?.stopName) ??
+    asNonEmptyString(stop?.attractionName) ??
+    asNonEmptyString(stop?.locationName) ??
+    asNonEmptyString(pointOfInterest?.stopName) ??
+    asNonEmptyString(pointOfInterest?.attractionName) ??
+    asNonEmptyString(pointOfInterest?.locationName) ??
     asNonEmptyString(pointOfInterestLocation?.locationName) ??
+    asNonEmptyString(pointOfInterestLocation?.stopName) ??
+    asNonEmptyString(pointOfInterestLocation?.attractionName) ??
     asNonEmptyString(pointOfInterestLocation?.title) ??
     asNonEmptyString(pointOfInterestLocation?.name);
-  const inferredTitleFromDescription = (() => {
-    const descriptionText = asNonEmptyString(row.description);
-    if (!descriptionText) return null;
 
-    const normalizedDescription = descriptionText
-      .replace(/^he\s+(?=[A-Z])/, "The ")
-      .trim();
-    const firstSentence =
-      normalizedDescription.split(/(?<!\b\d)(?<=[.!?])\s+/)[0]?.trim() ?? "";
-    if (!firstSentence) return null;
-
-    const subjectMatch = firstSentence.match(
-      /^((?:The\s+)?[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,7})\s+(?:is|are|offers?|provides?|features?)\b/
-    );
-    if (subjectMatch?.[1]) {
-      return subjectMatch[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    const locationPattern =
-      /\b(?:arrive in|continue to|final stop[:\s]+|visit|return to|journey in)\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,5})/;
-    const match = firstSentence.match(locationPattern);
-    if (match?.[1]) {
-      return match[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    return firstSentence.replace(/[.,:;]+$/, "").trim() || null;
-  })();
-
-  const title =
-    locationTitle ??
-    asNonEmptyString(row.title) ??
-    asNonEmptyString(row.name) ??
-    asNonEmptyString(row.label) ??
-    asNonEmptyString(pointOfInterest?.title) ??
-    asNonEmptyString(pointOfInterest?.name) ??
-    asNonEmptyString(stop?.name) ??
-    asNonEmptyString(stop?.title) ??
-    asNonEmptyString(location?.name) ??
-    inferredTitleFromDescription;
+  const title = firstConciseItineraryTitle([
+    locationTitle,
+    asNonEmptyString(location?.locationName),
+    asNonEmptyString(location?.stopName),
+    asNonEmptyString(location?.attractionName),
+    asNonEmptyString(location?.name),
+    asNonEmptyString(pointOfInterest?.title),
+    asNonEmptyString(pointOfInterest?.name),
+    asNonEmptyString(stop?.name),
+    asNonEmptyString(stop?.title),
+    asNonEmptyString(row.title),
+    asNonEmptyString(row.name),
+    asNonEmptyString(row.label),
+  ]);
 
   if (!title) return null;
   const cleanedTitle = cleanItineraryTitle(title) || title;
