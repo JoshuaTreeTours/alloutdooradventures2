@@ -1098,35 +1098,22 @@ const normalizeSingleItineraryItem = (
     const normalizedDescription = descriptionText
       .replace(/^he\s+(?=[A-Z])/, "The ")
       .trim();
-    const abbreviationSafeDescription = normalizedDescription
-      .replace(/\bMt\.\s+/g, "Mount ")
-      .replace(/\bSt\.\s+/g, "Saint ");
     const firstSentence =
-      abbreviationSafeDescription.split(/(?<!\b\d)(?<=[.!?])\s+/)[0]?.trim() ??
-      "";
+      normalizedDescription.split(/(?<!\b\d)(?<=[.!?])\s+/)[0]?.trim() ?? "";
     if (!firstSentence) return null;
-
-    const placeOnlyPatterns = [
-      /\barrive in\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*)\b/i,
-      /\breturn to\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*)\b/i,
-      /\bjourney to\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*)\b/i,
-      /\bfinal stop[:\s]+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*)\b/i,
-      /\bcontinue to(?:\s+the)?(?:\s+[a-zÀ-ÖØ-öø-ÿ'&\-]+){0,4}\s+of\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*)\b/i,
-      /\bcontinue to\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*)\b/i,
-      /\bjourney in\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*)\b/i,
-    ];
-    for (const pattern of placeOnlyPatterns) {
-      const match = firstSentence.match(pattern);
-      if (match?.[1]) {
-        return match[1].replace(/[.,:;]+$/, "").trim();
-      }
-    }
 
     const subjectMatch = firstSentence.match(
       /^((?:The\s+)?[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,7})\s+(?:is|are|offers?|provides?|features?)\b/
     );
     if (subjectMatch?.[1]) {
       return subjectMatch[1].replace(/[.,:;]+$/, "").trim();
+    }
+
+    const locationPattern =
+      /\b(?:arrive in|continue to|final stop[:\s]+|visit|return to|journey in)\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,5})/;
+    const match = firstSentence.match(locationPattern);
+    if (match?.[1]) {
+      return match[1].replace(/[.,:;]+$/, "").trim();
     }
 
     return firstSentence.replace(/[.,:;]+$/, "").trim() || null;
