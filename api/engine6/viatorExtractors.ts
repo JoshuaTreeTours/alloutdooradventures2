@@ -6,6 +6,7 @@ import {
   resolveProductScopedHero,
 } from "./heroResolver.js";
 import { classifyTourCategories } from "./tourCategoryClassifier.js";
+import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
 
 export type Engine6DiagnosticsPaths = {
   commercialPriceFieldPath: string | null;
@@ -1059,7 +1060,8 @@ const extractHighlights = (product: RecordLike) => {
 };
 
 const normalizeSingleItineraryItem = (
-  row: RecordLike
+  row: RecordLike,
+  context: { productCode: string | null; rowIndex: number }
 ): Engine6ExtractedItineraryItem | null => {
   const pointOfInterest = asRecord(row.pointOfInterest);
   const pointOfInterestLocation = asRecord(row.pointOfInterestLocation);
@@ -1118,6 +1120,10 @@ const normalizeSingleItineraryItem = (
     asNonEmptyString(stop?.name) ??
     asNonEmptyString(stop?.title) ??
     asNonEmptyString(location?.name) ??
+    getEngine6ItineraryTitleOverride({
+      productCode: context.productCode,
+      rowIndex: context.rowIndex,
+    }) ??
     inferredTitleFromDescription;
 
   if (!title) return null;
@@ -1247,8 +1253,11 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
 
     const seen = new Set<string>();
     return rows
-      .map(item => {
-        const parsed = normalizeSingleItineraryItem(item.row);
+      .map((item, rowIndex) => {
+        const parsed = normalizeSingleItineraryItem(item.row, {
+          productCode: asNonEmptyString(product.productCode),
+          rowIndex,
+        });
         if (!parsed) return null;
 
         const dedupeKey = [
