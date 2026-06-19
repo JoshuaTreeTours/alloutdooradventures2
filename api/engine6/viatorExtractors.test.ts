@@ -190,4 +190,45 @@ describe("extractEngine6Product itinerary title overrides", () => {
       description,
     });
   });
+  it("prefers meaningful source itinerary titles over location and description-derived candidates", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "SOURCE-TITLE-P1",
+        title: "Source title precedence tour",
+        itineraryItems: [
+          {
+            title: "French Quarter",
+            description:
+              "Ride through the French Quarter during the 90-minute portion of the route.",
+            pointOfInterestLocation: {
+              locationName: "Ride through the French Quarter",
+            },
+          },
+        ],
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary[0]).toMatchObject({
+      title: "French Quarter",
+      description:
+        "Ride through the French Quarter during the 90-minute portion of the route.",
+    });
+  });
+
+  it("ignores generic source placeholders before falling back to description-derived titles", () => {
+    const description =
+      "Royal Street offers a scenic French Quarter riding corridor.";
+    const result = extractEngine6Product({
+      product: {
+        productCode: "GENERIC-TITLE-P1",
+        title: "Generic title fallback tour",
+        itineraryItems: [{ title: "Stop 1", description }],
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary[0]).toMatchObject({
+      title: "Royal Street",
+      description,
+    });
+  });
 });
