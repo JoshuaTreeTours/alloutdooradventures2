@@ -1163,6 +1163,50 @@ const firstConciseItineraryTitle = (
       !isLikelyDescriptiveItineraryTitle(candidate as string)
   );
 
+const inferKnownLandmarkTitleFromItineraryText = (
+  candidates: Array<string | null | undefined>
+) => {
+  const normalized = candidates
+    .filter((candidate): candidate is string => Boolean(candidate))
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .toLowerCase();
+
+  if (!normalized) return null;
+  if (/\bcentral park\b/.test(normalized) && /\bcarousel\b/.test(normalized)) {
+    return "Central Park Carousel";
+  }
+  if (
+    /\bgame tables?\b/.test(normalized) ||
+    /\bwooden trellis\b/.test(normalized)
+  ) {
+    return "Chess & Checkers House";
+  }
+  if (
+    /\bshakespeare\b/.test(normalized) ||
+    /\brobert burns\b/.test(normalized)
+  ) {
+    return "Literary Walk";
+  }
+  if (/\bthe dairy\b|\bdairy\b/.test(normalized)) {
+    return "The Dairy";
+  }
+  if (/\bbow bridge\b|\bcast-iron bridge\b/.test(normalized)) {
+    return "Bow Bridge";
+  }
+  if (/\bbethesda fountain\b|\bbethesda terrace\b/.test(normalized)) {
+    return "Bethesda Fountain";
+  }
+  if (/\blombard street\b/.test(normalized)) {
+    return "Lombard Street";
+  }
+  if (/\bjackson square\b/.test(normalized)) {
+    return "Jackson Square";
+  }
+
+  return null;
+};
+
 const normalizeSingleItineraryItem = (
   row: RecordLike
 ): Engine6ExtractedItineraryItem | null => {
@@ -1201,7 +1245,7 @@ const normalizeSingleItineraryItem = (
     asNonEmptyString(pointOfInterestLocation?.title) ??
     asNonEmptyString(pointOfInterestLocation?.name);
 
-  const title = firstConciseItineraryTitle([
+  const titleCandidates = [
     locationTitle,
     asNonEmptyString(location?.locationName),
     asNonEmptyString(location?.stopName),
@@ -1215,7 +1259,20 @@ const normalizeSingleItineraryItem = (
     asNonEmptyString(row.title),
     asNonEmptyString(row.name),
     asNonEmptyString(row.label),
-  ]);
+  ];
+  const descriptionCandidates = [
+    asNonEmptyString(row.description),
+    asNonEmptyString(row.summary),
+    asNonEmptyString(row.details),
+    asNonEmptyString(pointOfInterest?.description),
+    asNonEmptyString(stop?.description),
+  ];
+  const title =
+    firstConciseItineraryTitle(titleCandidates) ??
+    inferKnownLandmarkTitleFromItineraryText([
+      ...titleCandidates,
+      ...descriptionCandidates,
+    ]);
 
   if (!title) return null;
   const cleanedTitle = cleanItineraryTitle(title) || title;
@@ -1230,13 +1287,7 @@ const normalizeSingleItineraryItem = (
     undefined;
 
   const description = firstMeaningfulItineraryText(
-    [
-      asNonEmptyString(row.description),
-      asNonEmptyString(row.summary),
-      asNonEmptyString(row.details),
-      asNonEmptyString(pointOfInterest?.description),
-      asNonEmptyString(stop?.description),
-    ],
+    descriptionCandidates,
     cleanedTitle,
     duration
   );

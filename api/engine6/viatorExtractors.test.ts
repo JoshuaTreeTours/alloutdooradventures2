@@ -176,6 +176,39 @@ describe("extractEngine6Product itinerary source preservation", () => {
     ]);
   });
 
+  it("keeps itinerary rows when live payloads only provide descriptive title text", () => {
+    const payload = {
+      product: {
+        productCode: "CENTRAL-PARK-LIVE-DESCRIPTIVE-TITLES",
+        title: "Central Park live title audit",
+        itinerary: {
+          itineraryItems: [
+            {
+              title:
+                "Iconic carousel in Central Park built in 1908 & featuring over 50 hand-carved horses",
+            },
+            {
+              title:
+                "24 game tables shaded by wooden trellis which was built in 1952 to offer visitors of all ages a space to play games",
+            },
+            {
+              title:
+                "Statues of Shakespeare, Robert Burns & other writers dot this wide promenade shaded by elm trees",
+            },
+          ],
+        },
+      },
+    };
+
+    const result = extractEngine6Product(payload as Record<string, unknown>);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Central Park Carousel",
+      "Chess & Checkers House",
+      "Literary Walk",
+    ]);
+  });
+
   it("preserves meaningful supplier stop descriptions and shortens mechanical pass-by titles", () => {
     const payload = {
       product: {

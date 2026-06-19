@@ -1,13 +1,19 @@
 import { describe, expect, it } from "vitest";
+import { createElement } from "react";
+import { renderToString } from "react-dom/server";
 
+import Engine6TourPage from "./components/Engine6TourPage";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures";
 import { suppressLegacyFareHarborTour } from "./replacementMode";
 import { engine6OverlapReplacementConfigs } from "./routes";
 import { toursGenerated } from "../data/tours.generated";
 
-describe("engine6 overlap replacement policy", () => {
+(globalThis as { location?: { pathname: string } }).location = {
+  pathname: "/",
+};
 
+describe("engine6 overlap replacement policy", () => {
   it("always uses native Viator booking links for overlap replacements", () => {
     const fixture = ENGINE6_VALIDATION_FIXTURES.find(
       item => item.productCode === "414460P1"
@@ -28,8 +34,8 @@ describe("engine6 overlap replacement policy", () => {
         commercialPriceFieldPath: "test",
         commercialPriceRawValue: "$50",
         priceSourceUsed: "live-price",
-        heroImageFieldPath: "product.media.images[0].variants[\"FULL\"].url",
-        heroVariantFieldPath: "product.media.images[0].variants[\"FULL\"]",
+        heroImageFieldPath: 'product.media.images[0].variants["FULL"].url',
+        heroVariantFieldPath: 'product.media.images[0].variants["FULL"]',
         selectedHeroWidth: 720,
         selectedHeroHeight: 480,
         imageSourceUsed: "api-primary",
@@ -54,7 +60,7 @@ describe("engine6 overlap replacement policy", () => {
         heroSourceProductCode: "414460P1",
         heroSourceProductUrl:
           "https://www.viator.com/tours/New-York-City/Vip-Central-Park-Pedicab-Guided-Tours/d687-414460P1",
-        heroSourceFieldPath: "product.media.images[0].variants[\"FULL\"].url",
+        heroSourceFieldPath: 'product.media.images[0].variants["FULL"].url',
         heroHost: "media-cdn.tripadvisor.com",
         productUrlFieldPath: "test",
         bookingUrlSource: "test",
@@ -93,7 +99,17 @@ describe("engine6 overlap replacement policy", () => {
         meetingPointText: "10 Central Park S, New York, NY 10019, USA",
         overviewText: "overview",
         highlights: [],
-        itinerary: [],
+        itinerary: [
+          {
+            title: "Central Park Carousel",
+            description:
+              "Historic carousel built in 1908 featuring hand-carved horses.",
+          },
+          {
+            title: "Chess & Checkers House",
+            description: "Central Park game tables shaded by a wooden trellis.",
+          },
+        ],
         itinerarySummaryText: null,
         faqs: [],
         included: [],
@@ -106,6 +122,16 @@ describe("engine6 overlap replacement policy", () => {
     expect(mapped.bookingUrl).toContain("viator.com");
     expect(mapped.bookingUrl.endsWith("/book")).toBe(false);
     expect(mapped.ownership.ctaOwner).toBe("viator");
+
+    const html = renderToString(
+      createElement(Engine6TourPage, { tour: mapped })
+    );
+
+    expect(mapped.itinerary).toHaveLength(2);
+    expect(html).toContain(">Itinerary<");
+    expect(html).toContain('data-testid="engine6-itinerary-timeline"');
+    expect(html).toContain('data-testid="engine6-itinerary-item"');
+    expect(html).toContain("Central Park Carousel");
   });
 
   it("suppresses only FareHarbor legacy tours that have overlap replacement coverage", () => {
