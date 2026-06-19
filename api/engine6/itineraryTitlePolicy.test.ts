@@ -5,6 +5,11 @@ import { getEngine6ItineraryJsonLdTitle } from "./itineraryTitlePolicy";
 import specimen276551p2Payload from "../../data/engine6/viator/276551P2.exact-product.json";
 import specimen3885grindelzurPayload from "../../data/engine6/viator/3885GRINDEL_ZUR.exact-product.json";
 import specimen3885sw303bsPayload from "../../data/engine6/viator/3885SW303BS.exact-product.json";
+import specimen3351p13Payload from "../../data/engine6/viator/3351P13.exact-product.json";
+import specimen6400p7Payload from "../../data/engine6/viator/6400P7.exact-product.json";
+import specimen3454ye3dPayload from "../../data/engine6/viator/3454YE3D.exact-product.json";
+import specimen106439p1Payload from "../../data/engine6/viator/106439P1.exact-product.json";
+import specimen117409p1Payload from "../../data/engine6/viator/117409P1.exact-product.json";
 import { mapViatorToEngine6Tour } from "../../src/engine6/mapViatorToEngine6Tour";
 import { buildEngine6SchemaGraph } from "../../src/engine6/schema/buildEngine6SchemaGraph";
 import type { Engine6ApiResponse } from "../../src/engine6/types";
@@ -149,6 +154,102 @@ describe("Engine6 prose-quality itinerary title governance", () => {
       "product-override",
       "product-override",
       "product-override",
+    ]);
+  });
+
+  it("applies audit quality gates to bad description-derived fixture titles", () => {
+    const cases = [
+      {
+        code: "3351P13",
+        payload: specimen3351p13Payload,
+        disallowed: [
+          "The route cuts through the heart of the San Andreas Fault in the Meccacopia Wilderness just outside of Mecca, CA",
+          "Magnificent views of the Salton Sea as guests round the last corner coming out of the canyon",
+        ],
+      },
+      {
+        code: "6400P7",
+        payload: specimen6400p7Payload,
+        disallowed: ["Enjoy the best of the lake Lucerne and"],
+      },
+      { code: "3454YE3D", payload: specimen3454ye3dPayload, disallowed: [] },
+      {
+        code: "106439P1",
+        payload: specimen106439p1Payload,
+        disallowed: ["This section", "This stop"],
+      },
+      {
+        code: "117409P1",
+        payload: specimen117409p1Payload,
+        disallowed: ["Explore the stunning vineyards"],
+      },
+    ];
+
+    for (const { code, payload, disallowed } of cases) {
+      const result = extractEngine6Product(payload);
+      const titles = result.extracted.itinerary.map(item => item.title);
+
+      expect(titles.length, code).toBeGreaterThan(0);
+      for (const badTitle of disallowed) {
+        expect(
+          titles.some(title => title.startsWith(badTitle)),
+          code
+        ).toBe(false);
+      }
+      expect(
+        titles.every(
+          title =>
+            !/^(?:this|that|it|they|we|you|here\s+you|this\s+section|this\s+stop)\b/i.test(
+              title
+            ) &&
+            !/^(?:explore|enjoy|experience|discover|visit|see|stop|drive|walk|ride|sail|cruise|pass|head|continue|return|depart|meet|board|now\s+it(?:'|’)s\s+time|are\s+you\s+ready)\b/i.test(
+              title
+            ) &&
+            !/\b(?:and|or|with|to|from|at|in|on|for)$/i.test(title)
+        ),
+        code
+      ).toBe(true);
+    }
+  });
+
+  it("falls back for Niagara-style pronoun sentence titles and extracts safe named entities", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "NIAGARA-PRONOUN-REGRESSION",
+        title: "Niagara Falls Tour",
+        itineraryItems: [
+          {
+            description:
+              "This is where your guide introduces the falls viewpoint and tour route.",
+          },
+          {
+            description:
+              "It is a popular place to pause before the boat portion of the trip.",
+          },
+          { description: "Visit Venice Beach for a short guided walk." },
+          {
+            description:
+              "Drive through Beverly Hills before returning to your hotel.",
+          },
+          {
+            description:
+              "Pass the Spanish Village Art Center on the way through Balboa Park.",
+          },
+          {
+            description:
+              "Scenic transfer to Zion National Park with time for photos.",
+          },
+        ],
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Itinerary Stop 1",
+      "Itinerary Stop 2",
+      "Venice Beach",
+      "Beverly Hills",
+      "Spanish Village Art Center",
+      "Zion National Park",
     ]);
   });
 
