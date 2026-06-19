@@ -159,6 +159,15 @@ type ViablePriceDetectionResult = {
   detectedFieldPaths: string[];
 };
 
+const GENERIC_ITINERARY_LABELS = new Set([
+  "this",
+  "stop",
+  "pass by",
+  "attraction",
+  "location",
+  "point of interest",
+]);
+
 const asRecord = (value: unknown): RecordLike | null =>
   value && typeof value === "object" && !Array.isArray(value)
     ? (value as RecordLike)
@@ -219,6 +228,22 @@ const asNonEmptyString = (value: unknown): string | null => {
   const normalized = stripHtml(value);
   return normalized.length > 0 ? normalized : null;
 };
+
+const isMeaningfulItineraryLabel = (value: string | null | undefined) => {
+  const normalized = value
+    ?.replace(/\s*\((?:pass\s*by)\)\s*$/i, "")
+    .replace(/[_-]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+
+  return Boolean(normalized && !GENERIC_ITINERARY_LABELS.has(normalized));
+};
+
+const firstMeaningfulItineraryLabel = (
+  candidates: Array<string | null | undefined>
+) =>
+  candidates.find(candidate => isMeaningfulItineraryLabel(candidate)) ?? null;
 
 const asBoolean = (value: unknown): boolean | null => {
   if (typeof value === "boolean") return value;
@@ -1078,10 +1103,21 @@ const normalizeSingleItineraryItem = (
     false;
   const isPassByFromType = /pass[\s_-]?by/i.test(stopTypeRaw ?? "");
 
-  const locationTitle =
-    asNonEmptyString(pointOfInterestLocation?.locationName) ??
-    asNonEmptyString(pointOfInterestLocation?.title) ??
-    asNonEmptyString(pointOfInterestLocation?.name);
+  const sourceTitle = firstMeaningfulItineraryLabel([
+    asNonEmptyString(row.title),
+    asNonEmptyString(row.name),
+    asNonEmptyString(row.label),
+    asNonEmptyString(pointOfInterest?.title),
+    asNonEmptyString(pointOfInterest?.name),
+    asNonEmptyString(pointOfInterestLocation?.locationName),
+    asNonEmptyString(pointOfInterestLocation?.title),
+    asNonEmptyString(pointOfInterestLocation?.name),
+    asNonEmptyString(stop?.name),
+    asNonEmptyString(stop?.title),
+    asNonEmptyString(location?.name),
+    asNonEmptyString(location?.title),
+    asNonEmptyString(location?.locationName),
+  ]);
   const inferredTitleFromDescription = (() => {
     const descriptionText = asNonEmptyString(row.description);
     if (!descriptionText) return null;
@@ -1111,20 +1147,12 @@ const normalizeSingleItineraryItem = (
   })();
 
   const title =
-    locationTitle ??
-    asNonEmptyString(row.title) ??
-    asNonEmptyString(row.name) ??
-    asNonEmptyString(row.label) ??
-    asNonEmptyString(pointOfInterest?.title) ??
-    asNonEmptyString(pointOfInterest?.name) ??
-    asNonEmptyString(stop?.name) ??
-    asNonEmptyString(stop?.title) ??
-    asNonEmptyString(location?.name) ??
+    sourceTitle ??
     getEngine6ItineraryTitleOverride({
       productCode: context.productCode,
       rowIndex: context.rowIndex,
     }) ??
-    inferredTitleFromDescription;
+    firstMeaningfulItineraryLabel([inferredTitleFromDescription]);
 
   if (!title) return null;
   const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
