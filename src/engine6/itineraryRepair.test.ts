@@ -70,17 +70,21 @@ describe("Engine6 itinerary repair", () => {
     ]);
   });
 
-  it("keeps title and description distinct for every paragon stop", () => {
+  it("keeps title and description distinct when a description is present", () => {
     const tour = mapViatorToEngine6Tour(buildParagonApiPayload());
 
     for (const stop of tour.itinerary) {
-      expect(stop.description?.trim()).toBeTruthy();
+      const description = stop.description?.trim() ?? "";
+      if (!description) {
+        continue;
+      }
+
       expect(
-        isEngine6TitleDescriptionMismatch(stop.title, stop.description ?? "")
+        isEngine6TitleDescriptionMismatch(stop.title, description)
       ).toBe(false);
       expect(
         normalizeEngine6ItineraryComparisonText(stop.title)
-      ).not.toBe(normalizeEngine6ItineraryComparisonText(stop.description ?? ""));
+      ).not.toBe(normalizeEngine6ItineraryComparisonText(description));
     }
   });
 
@@ -105,7 +109,7 @@ describe("Engine6 itinerary repair", () => {
     expect(new Set(descriptionKeys).size).toBe(descriptionKeys.length);
   });
 
-  it("uses safe fallback copy only when source itinerary prose is unusable", () => {
+  it("omits description when source itinerary prose is unusable", () => {
     const fallback = rewriteEngine6ItineraryDescriptionToSingleSentence({
       productCode: "TESTEMPTY1",
       index: 0,
@@ -117,15 +121,13 @@ describe("Engine6 itinerary repair", () => {
       },
     });
 
-    expect(fallback).toBe(
-      "This scheduled stop includes about 20 minutes in the itinerary."
-    );
+    expect(fallback).toBe("");
     expect(fallback).not.toMatch(/^Visit\s+/i);
     expect(fallback).not.toMatch(/\bguided route\b/i);
     expect(fallback).not.toMatch(/Yosemite|Tunnel View|Glacier Point/i);
   });
 
-  it("rewrites admission-only source lines into factual stop copy", () => {
+  it("omits description for admission-only source lines", () => {
     const rewritten = rewriteEngine6ItineraryDescriptionToSingleSentence({
       productCode: "5119P13",
       index: 1,
@@ -137,9 +139,7 @@ describe("Engine6 itinerary repair", () => {
       },
     });
 
-    expect(rewritten).toBe(
-      "This scheduled stop includes about 4 hours in the itinerary."
-    );
+    expect(rewritten).toBe("");
     expect(rewritten).not.toMatch(/^Visit\s+/i);
     expect(rewritten).not.toMatch(/Grand Canyon West/i);
     expect(rewritten).not.toMatch(/admission included/i);

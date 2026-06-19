@@ -58,6 +58,19 @@ export const engine6DescriptionTitleTokenOverlapExceedsThreshold = (
   threshold = 0.7
 ) => engine6DescriptionTitleTokenOverlapRatio(title, description) > threshold;
 
+const MECHANICAL_ITINERARY_PATTERNS = [
+  /^Pass\s+.+\s+as part of the route\.?$/i,
+  /^Scheduled stop on the tour route\.?$/i,
+  /^Scenic pass-by along the tour route\.?$/i,
+  /^Scheduled stop of about\b/i,
+  /^Scheduled stop featuring\b/i,
+  /^Route pass-by with\b/i,
+  /^This is a (?:scheduled stop|scenic pass-by)\b/i,
+  /^This portion is viewed from the route without a scheduled stop\.?$/i,
+  /^This scheduled stop includes about\b/i,
+  /^This is a scheduled stop with time included in the itinerary\.?$/i,
+] as const;
+
 const WRAPPER_ONLY_DESCRIPTION_TOKENS = new Set([
   "includes",
   "about",
@@ -73,9 +86,18 @@ const WRAPPER_ONLY_DESCRIPTION_TOKENS = new Set([
   "with",
   "for",
   "time",
+  "during",
+  "minute",
+  "minutes",
+  "hour",
+  "hours",
+  "min",
+  "mins",
+  "hr",
+  "hrs",
 ]);
 
-export const isEngine6TitleDescriptionMismatch = (
+export const isEngine6PureTitleRestatement = (
   title: string,
   description: string
 ) => {
@@ -85,16 +107,38 @@ export const isEngine6TitleDescriptionMismatch = (
     return false;
   }
 
+  if (normalizedDescription === normalizedTitle) {
+    return true;
+  }
+
+  const withoutLeadingVerb = description
+    .trim()
+    .replace(/^(?:visit|pass(?:\s+by)?|see|explore|enjoy|experience)\s+/i, "")
+    .trim();
+
+  if (normalizeComparableText(withoutLeadingVerb) === normalizedTitle) {
+    return true;
+  }
+
   if (
-    normalizedTitle === normalizedDescription ||
-    normalizedDescription.startsWith(`${normalizedTitle} `) ||
-    normalizedDescription.includes(` ${normalizedTitle} `)
+    /^route passes\s+/i.test(description.trim()) &&
+    engine6DescriptionTitleTokenOverlapExceedsThreshold(title, description, 0.85)
   ) {
     return true;
   }
 
-  return engine6DescriptionTitleTokenOverlapExceedsThreshold(title, description);
+  return false;
 };
+
+export const isEngine6TitleDescriptionMismatch = (
+  title: string,
+  description: string
+) => isEngine6PureTitleRestatement(title, description);
+
+const isAdmissionOnlyDescription = (value: string) =>
+  /^(?:admission(?: ticket)?(?: included| free| not included)?|ticket included|ticket not included)\.?$/i.test(
+    value.trim()
+  );
 
 export const descriptionAddsInformationBeyondTitle = (
   title: string,
@@ -105,7 +149,11 @@ export const descriptionAddsInformationBeyondTitle = (
     return false;
   }
 
-  if (engine6DescriptionTitleTokenOverlapExceedsThreshold(title, description)) {
+  if (isEngine6PureTitleRestatement(title, description)) {
+    return false;
+  }
+
+  if (isAdmissionOnlyDescription(description)) {
     return false;
   }
 
@@ -120,22 +168,15 @@ export const descriptionAddsInformationBeyondTitle = (
     .filter(token => token.length > 2 && !titleTokens.includes(token))
     .filter(token => !WRAPPER_ONLY_DESCRIPTION_TOKENS.has(token));
 
-  return remainingTokens.length >= 2;
+  return remainingTokens.length >= 1;
 };
 
 const ROUTE_PLACEHOLDER_PATTERNS = [
-  /^Visit\s+.+/i,
-  /^Pass\s+.+\s+as part of the route\.?$/i,
-  /^Scheduled stop on the tour route\.?$/i,
-  /^Scenic pass-by along the tour route\.?$/i,
-  /^Scheduled stop of about\b/i,
-  /^Scheduled stop featuring\b/i,
-  /^Route pass-by with\b/i,
+  ...MECHANICAL_ITINERARY_PATTERNS,
   /\bover about Pass by\b/i,
   /\bscenic pass-by segment\b/i,
   /\bhistoric context\b/i,
   /\bguided route\b/i,
-  /^This is a (?:scheduled stop|scenic pass-by)\b/i,
 ] as const;
 
 const GENERIC_FALLBACK_CONTEXT_PATTERNS = [
@@ -177,7 +218,7 @@ export const isEngine6LowQualityItineraryDescription = (
     return true;
   }
 
-  if (isEngine6TitleDescriptionMismatch(title, trimmed)) {
+  if (isEngine6PureTitleRestatement(title, trimmed)) {
     return true;
   }
 
@@ -188,21 +229,58 @@ export const isEngine6LowQualityItineraryDescription = (
   return false;
 };
 
-const enforceSingleSentence = (value: string) => {
+const enforceShortFactualDescription = (value: string, maxSentences = 2) => {
   const compact = value
     .replace(/\s+/g, " ")
     .replace(/\s+([,.;!?])/g, "$1")
     .replace(/,+/g, ",")
     .replace(/[;:]/g, ",")
     .trim();
-  const firstSentence = compact.split(/(?<=[.!?])\s+/)[0]?.trim() ?? compact;
-  return `${firstSentence.replace(/[.!?]+$/g, "")}.`;
+  if (!compact) {
+    return "";
+  }
+
+  const sentences = compact
+    .split(/(?<=[.!?])\s+/)
+    .map(part => part.trim())
+    .filter(Boolean)
+    .slice(0, maxSentences);
+
+  if (sentences.length === 0) {
+    return "";
+  }
+
+  return sentences
+    .map(sentence => `${sentence.replace(/[.!?]+$/g, "")}.`)
+    .join(" ");
 };
 
-const isAdmissionOnlyDescription = (value: string) =>
-  /^(?:admission(?: ticket)?(?: included| free| not included)?|ticket included|ticket not included)\.?$/i.test(
-    value.trim()
-  );
+const enforceSingleSentence = (value: string) =>
+  enforceShortFactualDescription(value, 1);
+
+const normalizePreservedSourceDescription = (sourceDescription: string) => {
+  const cleaned = stripEngine6AdmissionArtifacts(sourceDescription)
+    .replace(/\s+/g, " ")
+    .replace(/\([^)]*\)/g, " ")
+    .replace(/\b(you will|you'll|we will|we'll)\b/gi, "")
+    .trim();
+
+  if (!cleaned) {
+    return "";
+  }
+
+  const sentences = cleaned
+    .split(/(?<!\b\d)[.!?]/)
+    .map(part => part.trim())
+    .filter(part => part.length > 0)
+    .slice(0, 2);
+
+  return sentences
+    .map(sentence => `${sentence.replace(/[.!?]+$/g, "")}.`)
+    .join(" ");
+};
+
+const omitEngine6ItineraryDescription = () => "";
 
 const polishSourceSentence = (sourceSentence: string) =>
   sourceSentence
@@ -424,61 +502,19 @@ const resolveSourceDerivedContext = (
   return null;
 };
 
-const buildGenericNonDuplicativeFallback = (
-  item: Engine6ItinerarySourceItem,
-  variantIndex: number
-) => {
-  const duration = normalizeUsableDuration(item.duration);
-  const admissionNote = item.admissionNote?.trim()?.toLowerCase();
-
-  if (item.stopType === "pass-by") {
-    return "This portion is viewed from the route without a scheduled stop.";
-  }
-
-  if (duration && admissionNote) {
-    const variants = [
-      `This scheduled stop includes about ${duration} in the itinerary with ${admissionNote}.`,
-      `This scheduled stop includes about ${duration} in the itinerary, ${admissionNote}.`,
-    ];
-    return variants[variantIndex % variants.length] ?? variants[0]!;
-  }
-
-  if (duration) {
-    return `This scheduled stop includes about ${duration} in the itinerary.`;
-  }
-
-  return "This is a scheduled stop with time included in the itinerary.";
-};
-
-const buildDestinationTimedStopSentence = (
-  item: Engine6ItinerarySourceItem,
-  variantIndex: number
-) => buildGenericNonDuplicativeFallback(item, variantIndex);
-
-const buildDestinationPassBySentence = (
-  item: Engine6ItinerarySourceItem,
-  variantIndex: number
-) => buildGenericNonDuplicativeFallback(item, variantIndex);
-
 const isAcceptableFallbackDescription = (
   title: string,
   description: string
-) =>
-  !engine6DescriptionTitleTokenOverlapExceedsThreshold(title, description) &&
-  !isEngine6LowQualityItineraryDescription(title, description);
+) => !isEngine6LowQualityItineraryDescription(title, description);
 
 const finalizeFallbackCandidate = (
   title: string,
-  item: Engine6ItinerarySourceItem,
+  _item: Engine6ItinerarySourceItem,
   candidates: string[],
   variantIndex: number
 ) => {
   if (candidates.length === 0) {
-    return enforceSingleSentence(
-      stripEngine6AdmissionArtifacts(
-        buildGenericNonDuplicativeFallback(item, variantIndex)
-      )
-    );
+    return omitEngine6ItineraryDescription();
   }
 
   for (let offset = 0; offset < candidates.length; offset += 1) {
@@ -492,11 +528,7 @@ const finalizeFallbackCandidate = (
     }
   }
 
-  return enforceSingleSentence(
-    stripEngine6AdmissionArtifacts(
-      buildGenericNonDuplicativeFallback(item, variantIndex + candidates.length)
-    )
-  );
+  return omitEngine6ItineraryDescription();
 };
 
 const buildTimedStopIncludesSentence = (
@@ -605,7 +637,7 @@ const buildTimedStopIncludesSentence = (
     );
   }
 
-  return buildDestinationTimedStopSentence(item, variantIndex);
+  return omitEngine6ItineraryDescription();
 };
 
 const buildPassByFallbackSentence = (
@@ -629,7 +661,7 @@ const buildPassByFallbackSentence = (
     );
   }
 
-  return buildDestinationPassBySentence(item, variantIndex);
+  return omitEngine6ItineraryDescription();
 };
 
 const buildEngine6ContextualItineraryDescription = (
@@ -648,11 +680,7 @@ const buildEngine6ContextualItineraryDescription = (
     return normalized;
   }
 
-  return enforceSingleSentence(
-    stripEngine6AdmissionArtifacts(
-      buildGenericNonDuplicativeFallback(item, variantIndex + 1)
-    )
-  );
+  return omitEngine6ItineraryDescription();
 };
 
 export const rewriteEngine6ItineraryDescriptionToSingleSentence = (args: {
@@ -679,28 +707,16 @@ export const rewriteEngine6ItineraryDescriptionToSingleSentence = (args: {
   const { item } = args;
   const title = item.title?.trim() || "This stop";
   const sourceDescription = item.description?.trim() ?? "";
+  const preservedSource = normalizePreservedSourceDescription(sourceDescription);
   const sourceSentence = extractCleanSourceSentence(sourceDescription);
-  const polishedSourceSentence = polishSourceSentence(sourceSentence);
-  const normalizedTitle = normalizeComparableText(title);
-  const normalizedSentence = normalizeComparableText(sourceSentence);
-  const repeatsTitle =
-    normalizedTitle.length > 0 &&
-    normalizedSentence.length > 0 &&
-    (normalizedSentence === normalizedTitle ||
-      normalizedSentence.includes(normalizedTitle));
 
   if (
-    polishedSourceSentence &&
-    !repeatsTitle &&
-    !isAdmissionOnlyDescription(polishedSourceSentence) &&
-    !isEngine6GenericItineraryDescription(polishedSourceSentence) &&
-    !isEngine6LowQualityItineraryDescription(title, polishedSourceSentence)
+    preservedSource &&
+    !isAdmissionOnlyDescription(preservedSource) &&
+    !isEngine6GenericItineraryDescription(preservedSource) &&
+    !isEngine6LowQualityItineraryDescription(title, preservedSource)
   ) {
-    return stripEngine6AdmissionArtifacts(`${polishedSourceSentence}.`)
-      .replace(/\s+/g, " ")
-      .replace(/\s+([;,.])/g, "$1")
-      .replace(/\.\./g, ".")
-      .trim();
+    return preservedSource;
   }
 
   return buildEngine6ContextualItineraryDescription(
@@ -730,24 +746,35 @@ export const dedupeEngine6ItineraryDescriptions = (
       });
 
     if (isEngine6LowQualityItineraryDescription(item.title, description)) {
-      description = buildEngine6ContextualItineraryDescription(
+      const rebuilt = buildEngine6ContextualItineraryDescription(
         item,
         item.description ?? "",
         index + 1
       );
+      description = isEngine6LowQualityItineraryDescription(item.title, rebuilt)
+        ? omitEngine6ItineraryDescription()
+        : rebuilt;
     }
 
-    const descriptionKey = normalizeComparableText(description);
+    let descriptionKey = normalizeComparableText(description);
     if (descriptionKey && seenDescriptions.has(descriptionKey)) {
-      description = buildEngine6ContextualItineraryDescription(
+      const rebuilt = buildEngine6ContextualItineraryDescription(
         item,
         item.description ?? "",
         index + seenDescriptions.size + 1
       );
+      const rebuiltKey = normalizeComparableText(rebuilt);
+      description =
+        rebuiltKey &&
+        !seenDescriptions.has(rebuiltKey) &&
+        !isEngine6LowQualityItineraryDescription(item.title, rebuilt)
+          ? rebuilt
+          : omitEngine6ItineraryDescription();
+      descriptionKey = normalizeComparableText(description);
     }
 
     if (descriptionKey) {
-      seenDescriptions.add(normalizeComparableText(description));
+      seenDescriptions.add(descriptionKey);
     }
 
     return {
@@ -765,7 +792,16 @@ export const isEngine6StructuredItineraryUsable = (
   }
 
   const usableStops = items.filter(item => {
+    const title = item.title?.trim() ?? "";
+    if (!title) {
+      return false;
+    }
+
     const description = item.description?.trim() ?? "";
+    if (!description) {
+      return true;
+    }
+
     return !isEngine6LowQualityItineraryDescription(item.title, description);
   });
 

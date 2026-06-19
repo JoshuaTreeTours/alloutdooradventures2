@@ -59,6 +59,33 @@ describe("Engine6 itinerary content quality", () => {
     ).toBe(true);
   });
 
+  it("preserves Viator-style source prose even when the title appears in the description", () => {
+    const preserved = rewriteEngine6ItineraryDescriptionToSingleSentence({
+      productCode: "58347P1",
+      index: 2,
+      item: {
+        title: "Jackson Square",
+        stopType: "stop",
+        duration: "15 minutes",
+        description:
+          "Visit Jackson Square during a 15-minute stop in the French Quarter area.",
+      },
+    });
+
+    expect(preserved).toBe(
+      "Visit Jackson Square during a 15-minute stop in the French Quarter area."
+    );
+    expect(
+      isEngine6LowQualityItineraryDescription("Jackson Square", preserved)
+    ).toBe(false);
+    expect(
+      engine6DescriptionTitleTokenOverlapExceedsThreshold(
+        "Jackson Square",
+        preserved
+      )
+    ).toBe(true);
+  });
+
   it("preserves valid API descriptions that add detail beyond the title", () => {
     const preserved = rewriteEngine6ItineraryDescriptionToSingleSentence({
       productCode: "5119P13",
@@ -77,7 +104,7 @@ describe("Engine6 itinerary content quality", () => {
     ).toBe(true);
   });
 
-  it("replaces admission-only source lines with duration-based factual copy", () => {
+  it("omits description when admission-only source has no factual prose", () => {
     const rewritten = rewriteEngine6ItineraryDescriptionToSingleSentence({
       productCode: "5119P13",
       index: 1,
@@ -89,16 +116,14 @@ describe("Engine6 itinerary content quality", () => {
       },
     });
 
-    expect(rewritten).toBe(
-      "This scheduled stop includes about 4 hours in the itinerary."
-    );
+    expect(rewritten).toBe("");
     expect(rewritten).not.toMatch(/^Visit\s+/i);
     expect(rewritten).not.toMatch(/Grand Canyon West/i);
     expect(rewritten).not.toMatch(/admission included/i);
     expect(rewritten).not.toMatch(/\bguided route\b/i);
   });
 
-  it("uses non-duplicative copy when source prose is empty", () => {
+  it("omits description when source prose is empty", () => {
     const rewritten = rewriteEngine6ItineraryDescriptionToSingleSentence({
       productCode: "5119P13",
       index: 0,
@@ -110,9 +135,7 @@ describe("Engine6 itinerary content quality", () => {
       },
     });
 
-    expect(rewritten).toBe(
-      "This scheduled stop includes about 20 minutes in the itinerary."
-    );
+    expect(rewritten).toBe("");
     expect(rewritten).not.toMatch(/^Visit\s+/i);
     expect(rewritten).not.toMatch(/\bguided route\b/i);
     expect(rewritten).not.toMatch(/\bscenic pass-by segment\b/i);
@@ -123,20 +146,26 @@ describe("Engine6 itinerary content quality", () => {
 
     expect(tour.canonicalPath).toBe(ENGINE6_PARAGON_ROUTE);
     for (const stop of tour.itinerary) {
-      expect(stop.description?.trim()).toBeTruthy();
-      expect(
-        isEngine6LowQualityItineraryDescription(
-          stop.title,
-          stop.description ?? ""
-        )
-      ).toBe(false);
-      expect(
-        descriptionAddsInformationBeyondTitle(stop.title, stop.description ?? "")
-      ).toBe(true);
-      expect(stop.description).not.toMatch(/^Visit\s+/i);
-      expect(stop.description).not.toMatch(
-        /^Pass\s+.+\s+as part of the route\.?$/i
-      );
+      const description = stop.description?.trim() ?? "";
+      if (description) {
+        expect(
+          isEngine6LowQualityItineraryDescription(stop.title, description)
+        ).toBe(false);
+        expect(
+          descriptionAddsInformationBeyondTitle(stop.title, description)
+        ).toBe(true);
+        expect(description).not.toMatch(/^Visit\s+/i);
+        expect(description).not.toMatch(
+          /^Pass\s+.+\s+as part of the route\.?$/i
+        );
+        expect(description).not.toMatch(
+          /^This portion is viewed from the route without a scheduled stop\.?$/i
+        );
+        expect(description).not.toMatch(/^This scheduled stop includes about\b/i);
+        expect(description).not.toMatch(
+          /^This is a scheduled stop with time included in the itinerary\.?$/i
+        );
+      }
     }
   });
 
@@ -173,12 +202,10 @@ describe("Engine6 itinerary content quality", () => {
     ]);
 
     expect(itinerary[0]?.description).toBe("Photo stop and guide commentary.");
-    expect(itinerary[1]?.description).toBe(
-      "This scheduled stop includes about 4 hours in the itinerary."
-    );
+    expect(itinerary[1]?.description).toBe("");
   });
 
-  it("rejects descriptions with more than 70% title token overlap", () => {
+  it("rejects pure title restatements wrapped in route-pass phrasing", () => {
     const title =
       "Iconic carousel in Central Park built in 1908 & featuring over 50 hand-carved horses";
     const restated = `Route passes ${title}.`;
@@ -189,7 +216,7 @@ describe("Engine6 itinerary content quality", () => {
     expect(isEngine6LowQualityItineraryDescription(title, restated)).toBe(true);
   });
 
-  it("uses non-duplicative pass-by copy when source restates the title", () => {
+  it("omits pass-by description when source restates the title", () => {
     const title =
       "Iconic carousel in Central Park built in 1908 & featuring over 50 hand-carved horses";
     const rewritten = rewriteEngine6ItineraryDescriptionToSingleSentence({
@@ -202,15 +229,10 @@ describe("Engine6 itinerary content quality", () => {
       },
     });
 
-    expect(rewritten).toBe(
-      "This portion is viewed from the route without a scheduled stop."
-    );
-    expect(
-      engine6DescriptionTitleTokenOverlapExceedsThreshold(title, rewritten)
-    ).toBe(false);
+    expect(rewritten).toBe("");
   });
 
-  it("uses non-duplicative pass-by copy when source has no factual context", () => {
+  it("omits pass-by description when source has no factual context", () => {
     const rewritten = rewriteEngine6ItineraryDescriptionToSingleSentence({
       productCode: "122012P17",
       index: 0,
@@ -221,14 +243,12 @@ describe("Engine6 itinerary content quality", () => {
       },
     });
 
-    expect(rewritten).toBe(
-      "This portion is viewed from the route without a scheduled stop."
-    );
+    expect(rewritten).toBe("");
     expect(rewritten).not.toMatch(/\bscenic pass-by segment\b/i);
     expect(rewritten).not.toMatch(/\bguided route\b/i);
   });
 
-  it("builds pass-by fallback copy from source context without invalid durations", () => {
+  it("preserves pass-by source prose from Viator when it adds factual detail", () => {
     const rewritten = rewriteEngine6ItineraryDescriptionToSingleSentence({
       productCode: "23068P2",
       index: 0,
@@ -240,26 +260,9 @@ describe("Engine6 itinerary content quality", () => {
       },
     });
 
-    expect(rewritten).toBe("Passes by the curved hill section.");
-    expect(rewritten).not.toMatch(/over about Pass by/i);
-  });
-
-  it("builds timed stop fallback copy with includes-style phrasing", () => {
-    const rewritten = rewriteEngine6ItineraryDescriptionToSingleSentence({
-      productCode: "58347P1",
-      index: 2,
-      item: {
-        title: "Jackson Square",
-        stopType: "stop",
-        duration: "15 minutes",
-        description:
-          "Visit Jackson Square during a 15-minute stop in the French Quarter area.",
-      },
-    });
-
     expect(rewritten).toBe(
-      "Includes about 15 minutes at Jackson Square in the French Quarter area."
+      "Pass by the curved hill section of Lombard Street."
     );
-    expect(rewritten).not.toMatch(/15-minute stop.*15 minutes/i);
+    expect(rewritten).not.toMatch(/over about Pass by/i);
   });
 });
