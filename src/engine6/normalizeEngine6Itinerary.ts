@@ -26,6 +26,55 @@ const titleWordTokens = (title: string) =>
     .split(" ")
     .filter(token => token.length > 2);
 
+const descriptionWordTokens = (description: string) =>
+  normalizeComparableText(description)
+    .split(" ")
+    .filter(token => token.length > 2);
+
+export const engine6DescriptionTitleTokenOverlapRatio = (
+  title: string,
+  description: string
+) => {
+  const descTokens = descriptionWordTokens(description);
+  if (descTokens.length === 0) {
+    return 0;
+  }
+
+  const titleTokenSet = new Set(titleWordTokens(title));
+  if (titleTokenSet.size === 0) {
+    return 0;
+  }
+
+  const overlappingTokenCount = descTokens.filter(token =>
+    titleTokenSet.has(token)
+  ).length;
+
+  return overlappingTokenCount / descTokens.length;
+};
+
+export const engine6DescriptionTitleTokenOverlapExceedsThreshold = (
+  title: string,
+  description: string,
+  threshold = 0.7
+) => engine6DescriptionTitleTokenOverlapRatio(title, description) > threshold;
+
+const WRAPPER_ONLY_DESCRIPTION_TOKENS = new Set([
+  "includes",
+  "about",
+  "passes",
+  "route",
+  "pass",
+  "timed",
+  "stop",
+  "itinerary",
+  "without",
+  "stopping",
+  "near",
+  "with",
+  "for",
+  "time",
+]);
+
 export const isEngine6TitleDescriptionMismatch = (
   title: string,
   description: string
@@ -36,11 +85,15 @@ export const isEngine6TitleDescriptionMismatch = (
     return false;
   }
 
-  return (
+  if (
     normalizedTitle === normalizedDescription ||
     normalizedDescription.startsWith(`${normalizedTitle} `) ||
     normalizedDescription.includes(` ${normalizedTitle} `)
-  );
+  ) {
+    return true;
+  }
+
+  return engine6DescriptionTitleTokenOverlapExceedsThreshold(title, description);
 };
 
 export const descriptionAddsInformationBeyondTitle = (
@@ -52,6 +105,10 @@ export const descriptionAddsInformationBeyondTitle = (
     return false;
   }
 
+  if (engine6DescriptionTitleTokenOverlapExceedsThreshold(title, description)) {
+    return false;
+  }
+
   const titleTokens = titleWordTokens(title);
   if (titleTokens.length === 0) {
     return normalizedDescription.split(" ").filter(token => token.length > 2)
@@ -60,7 +117,8 @@ export const descriptionAddsInformationBeyondTitle = (
 
   const remainingTokens = normalizedDescription
     .split(" ")
-    .filter(token => token.length > 2 && !titleTokens.includes(token));
+    .filter(token => token.length > 2 && !titleTokens.includes(token))
+    .filter(token => !WRAPPER_ONLY_DESCRIPTION_TOKENS.has(token));
 
   return remainingTokens.length >= 2;
 };
@@ -366,43 +424,79 @@ const resolveSourceDerivedContext = (
   return null;
 };
 
-const buildDestinationTimedStopSentence = (
+const buildGenericNonDuplicativeFallback = (
   item: Engine6ItinerarySourceItem,
   variantIndex: number
 ) => {
-  const title = item.title?.trim() || "This stop";
   const duration = normalizeUsableDuration(item.duration);
   const admissionNote = item.admissionNote?.trim()?.toLowerCase();
 
+  if (item.stopType === "pass-by") {
+    return "This portion is viewed from the route without a scheduled stop.";
+  }
+
   if (duration && admissionNote) {
     const variants = [
-      `Includes about ${duration} at ${title} with ${admissionNote}.`,
-      `Includes about ${duration} at ${title}, ${admissionNote}.`,
+      `This scheduled stop includes about ${duration} in the itinerary with ${admissionNote}.`,
+      `This scheduled stop includes about ${duration} in the itinerary, ${admissionNote}.`,
     ];
     return variants[variantIndex % variants.length] ?? variants[0]!;
   }
 
   if (duration) {
-    const variants = [
-      `Includes about ${duration} at ${title}.`,
-      `Includes about ${duration} for ${title}.`,
-    ];
-    return variants[variantIndex % variants.length] ?? variants[0]!;
+    return `This scheduled stop includes about ${duration} in the itinerary.`;
   }
 
-  const variants = [
-    `Includes a stop at ${title}.`,
-    `Includes time at ${title}.`,
-  ];
-  return variants[variantIndex % variants.length] ?? variants[0]!;
+  return "This is a scheduled stop with time included in the itinerary.";
 };
 
-const buildDestinationPassBySentence = (title: string, variantIndex: number) => {
-  const variants = [
-    `Passes by ${title}.`,
-    `Route passes ${title}.`,
-  ];
-  return variants[variantIndex % variants.length] ?? variants[0]!;
+const buildDestinationTimedStopSentence = (
+  item: Engine6ItinerarySourceItem,
+  variantIndex: number
+) => buildGenericNonDuplicativeFallback(item, variantIndex);
+
+const buildDestinationPassBySentence = (
+  item: Engine6ItinerarySourceItem,
+  variantIndex: number
+) => buildGenericNonDuplicativeFallback(item, variantIndex);
+
+const isAcceptableFallbackDescription = (
+  title: string,
+  description: string
+) =>
+  !engine6DescriptionTitleTokenOverlapExceedsThreshold(title, description) &&
+  !isEngine6LowQualityItineraryDescription(title, description);
+
+const finalizeFallbackCandidate = (
+  title: string,
+  item: Engine6ItinerarySourceItem,
+  candidates: string[],
+  variantIndex: number
+) => {
+  if (candidates.length === 0) {
+    return enforceSingleSentence(
+      stripEngine6AdmissionArtifacts(
+        buildGenericNonDuplicativeFallback(item, variantIndex)
+      )
+    );
+  }
+
+  for (let offset = 0; offset < candidates.length; offset += 1) {
+    const candidate = enforceSingleSentence(
+      stripEngine6AdmissionArtifacts(
+        candidates[(variantIndex + offset) % candidates.length]!
+      )
+    );
+    if (isAcceptableFallbackDescription(title, candidate)) {
+      return candidate;
+    }
+  }
+
+  return enforceSingleSentence(
+    stripEngine6AdmissionArtifacts(
+      buildGenericNonDuplicativeFallback(item, variantIndex + candidates.length)
+    )
+  );
 };
 
 const buildTimedStopIncludesSentence = (
@@ -443,11 +537,15 @@ const buildTimedStopIncludesSentence = (
       ? "El Capitan Meadow"
       : `${title} Meadow`;
     if (withClause) {
-      const variants = [
-        `Includes about ${duration} near ${locationLabel} with ${withClause}.`,
-        `Includes about ${duration} at ${locationLabel} with ${withClause}.`,
-      ];
-      return variants[variantIndex % variants.length] ?? variants[0]!;
+      return finalizeFallbackCandidate(
+        title,
+        item,
+        [
+          `Includes about ${duration} near ${locationLabel} with ${withClause}.`,
+          `Includes about ${duration} at ${locationLabel} with ${withClause}.`,
+        ],
+        variantIndex
+      );
     }
   }
 
@@ -455,23 +553,31 @@ const buildTimedStopIncludesSentence = (
     ? extractLocationSuffixFromSource(mainPart || polishedSource, title, duration)
     : null;
   if (locationSuffix && duration) {
-    const variants = [
-      `Includes about ${duration} at ${title}${locationSuffix}.`,
-      withClause
-        ? `Includes about ${duration} at ${title}${locationSuffix} with ${withClause}.`
-        : `Includes about ${duration} at ${title}${locationSuffix}.`,
-    ];
-    return variants[variantIndex % variants.length] ?? variants[0]!;
+    return finalizeFallbackCandidate(
+      title,
+      item,
+      [
+        `Includes about ${duration} at ${title}${locationSuffix}.`,
+        withClause
+          ? `Includes about ${duration} at ${title}${locationSuffix} with ${withClause}.`
+          : `Includes about ${duration} at ${title}${locationSuffix}.`,
+      ],
+      variantIndex
+    );
   }
 
   const context = resolveSourceDerivedContext(sourceSentence, title, duration);
   if (context && duration) {
     if (withClause) {
-      const variants = [
-        `Includes about ${duration} near ${title} with ${withClause}.`,
-        `Includes about ${duration} at ${title} with ${withClause}.`,
-      ];
-      return variants[variantIndex % variants.length] ?? variants[0]!;
+      return finalizeFallbackCandidate(
+        title,
+        item,
+        [
+          `Includes about ${duration} near ${title} with ${withClause}.`,
+          `Includes about ${duration} at ${title} with ${withClause}.`,
+        ],
+        variantIndex
+      );
     }
 
     const preposition = /^(?:in|on|at|near|through|along|across|by)\b/i.test(
@@ -479,37 +585,51 @@ const buildTimedStopIncludesSentence = (
     )
       ? ""
       : " in ";
-    const variants = [
-      `Includes about ${duration} at ${title}${preposition}${context}.`,
-      `Includes about ${duration} at ${title} with ${context}.`,
-    ];
-    return variants[variantIndex % variants.length] ?? variants[0]!;
+    return finalizeFallbackCandidate(
+      title,
+      item,
+      [
+        `Includes about ${duration} at ${title}${preposition}${context}.`,
+        `Includes about ${duration} at ${title} with ${context}.`,
+      ],
+      variantIndex
+    );
   }
 
   if (withClause && duration) {
-    return `Includes about ${duration} near ${title} with ${withClause}.`;
+    return finalizeFallbackCandidate(
+      title,
+      item,
+      [`Includes about ${duration} near ${title} with ${withClause}.`],
+      variantIndex
+    );
   }
 
   return buildDestinationTimedStopSentence(item, variantIndex);
 };
 
 const buildPassByFallbackSentence = (
+  item: Engine6ItinerarySourceItem,
   sourceSentence: string,
-  title: string,
   variantIndex: number
 ) => {
+  const title = item.title?.trim() || "This stop";
   const context = resolveSourceDerivedContext(sourceSentence, title, null);
   const formattedContext = context ? formatPassByContext(context) : null;
 
   if (formattedContext) {
-    const variants = [
-      `Passes by ${formattedContext}.`,
-      `Route passes ${formattedContext}.`,
-    ];
-    return variants[variantIndex % variants.length] ?? variants[0]!;
+    return finalizeFallbackCandidate(
+      title,
+      item,
+      [
+        `Passes by ${formattedContext}.`,
+        `Route passes ${formattedContext}.`,
+      ],
+      variantIndex
+    );
   }
 
-  return buildDestinationPassBySentence(title, variantIndex);
+  return buildDestinationPassBySentence(item, variantIndex);
 };
 
 const buildEngine6ContextualItineraryDescription = (
@@ -520,10 +640,19 @@ const buildEngine6ContextualItineraryDescription = (
   const title = item.title?.trim() || "This stop";
   const sentence =
     item.stopType === "pass-by"
-      ? buildPassByFallbackSentence(sourceSentence, title, variantIndex)
+      ? buildPassByFallbackSentence(item, sourceSentence, variantIndex)
       : buildTimedStopIncludesSentence(item, sourceSentence, variantIndex);
 
-  return enforceSingleSentence(stripEngine6AdmissionArtifacts(sentence));
+  const normalized = enforceSingleSentence(stripEngine6AdmissionArtifacts(sentence));
+  if (isAcceptableFallbackDescription(title, normalized)) {
+    return normalized;
+  }
+
+  return enforceSingleSentence(
+    stripEngine6AdmissionArtifacts(
+      buildGenericNonDuplicativeFallback(item, variantIndex + 1)
+    )
+  );
 };
 
 export const rewriteEngine6ItineraryDescriptionToSingleSentence = (args: {

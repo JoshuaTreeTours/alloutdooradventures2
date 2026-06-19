@@ -8,6 +8,7 @@ import {
 } from "./mapViatorToEngine6Tour";
 import {
   descriptionAddsInformationBeyondTitle,
+  engine6DescriptionTitleTokenOverlapExceedsThreshold,
   isEngine6LowQualityItineraryDescription,
   rewriteEngine6ItineraryDescriptionToSingleSentence,
 } from "./normalizeEngine6Itinerary";
@@ -88,13 +89,16 @@ describe("Engine6 itinerary content quality", () => {
       },
     });
 
-    expect(rewritten).toBe("Includes about 4 hours at Grand Canyon West.");
+    expect(rewritten).toBe(
+      "This scheduled stop includes about 4 hours in the itinerary."
+    );
     expect(rewritten).not.toMatch(/^Visit\s+/i);
+    expect(rewritten).not.toMatch(/Grand Canyon West/i);
     expect(rewritten).not.toMatch(/admission included/i);
     expect(rewritten).not.toMatch(/\bguided route\b/i);
   });
 
-  it("uses destination-specific copy when source prose is empty", () => {
+  it("uses non-duplicative copy when source prose is empty", () => {
     const rewritten = rewriteEngine6ItineraryDescriptionToSingleSentence({
       productCode: "5119P13",
       index: 0,
@@ -106,7 +110,9 @@ describe("Engine6 itinerary content quality", () => {
       },
     });
 
-    expect(rewritten).toBe("Includes about 20 minutes at Hoover Dam.");
+    expect(rewritten).toBe(
+      "This scheduled stop includes about 20 minutes in the itinerary."
+    );
     expect(rewritten).not.toMatch(/^Visit\s+/i);
     expect(rewritten).not.toMatch(/\bguided route\b/i);
     expect(rewritten).not.toMatch(/\bscenic pass-by segment\b/i);
@@ -167,10 +173,44 @@ describe("Engine6 itinerary content quality", () => {
     ]);
 
     expect(itinerary[0]?.description).toBe("Photo stop and guide commentary.");
-    expect(itinerary[1]?.description).toBe("Includes about 4 hours at Grand Canyon West.");
+    expect(itinerary[1]?.description).toBe(
+      "This scheduled stop includes about 4 hours in the itinerary."
+    );
   });
 
-  it("uses destination-specific pass-by copy when source has no factual context", () => {
+  it("rejects descriptions with more than 70% title token overlap", () => {
+    const title =
+      "Iconic carousel in Central Park built in 1908 & featuring over 50 hand-carved horses";
+    const restated = `Route passes ${title}.`;
+
+    expect(
+      engine6DescriptionTitleTokenOverlapExceedsThreshold(title, restated)
+    ).toBe(true);
+    expect(isEngine6LowQualityItineraryDescription(title, restated)).toBe(true);
+  });
+
+  it("uses non-duplicative pass-by copy when source restates the title", () => {
+    const title =
+      "Iconic carousel in Central Park built in 1908 & featuring over 50 hand-carved horses";
+    const rewritten = rewriteEngine6ItineraryDescriptionToSingleSentence({
+      productCode: "TESTCAROUSEL1",
+      index: 0,
+      item: {
+        title,
+        stopType: "pass-by",
+        description: title,
+      },
+    });
+
+    expect(rewritten).toBe(
+      "This portion is viewed from the route without a scheduled stop."
+    );
+    expect(
+      engine6DescriptionTitleTokenOverlapExceedsThreshold(title, rewritten)
+    ).toBe(false);
+  });
+
+  it("uses non-duplicative pass-by copy when source has no factual context", () => {
     const rewritten = rewriteEngine6ItineraryDescriptionToSingleSentence({
       productCode: "122012P17",
       index: 0,
@@ -181,7 +221,9 @@ describe("Engine6 itinerary content quality", () => {
       },
     });
 
-    expect(rewritten).toBe("Passes by Midtown.");
+    expect(rewritten).toBe(
+      "This portion is viewed from the route without a scheduled stop."
+    );
     expect(rewritten).not.toMatch(/\bscenic pass-by segment\b/i);
     expect(rewritten).not.toMatch(/\bguided route\b/i);
   });
