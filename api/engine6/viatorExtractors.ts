@@ -6,6 +6,7 @@ import {
   resolveProductScopedHero,
 } from "./heroResolver.js";
 import { classifyTourCategories } from "./tourCategoryClassifier.js";
+import { resolveEngine6ItineraryTitle } from "./itineraryTitlePolicy.js";
 import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
 
 export type Engine6DiagnosticsPaths = {
@@ -1078,58 +1079,36 @@ const normalizeSingleItineraryItem = (
     false;
   const isPassByFromType = /pass[\s_-]?by/i.test(stopTypeRaw ?? "");
 
-  const locationTitle =
-    asNonEmptyString(pointOfInterestLocation?.locationName) ??
-    asNonEmptyString(pointOfInterestLocation?.title) ??
-    asNonEmptyString(pointOfInterestLocation?.name);
-  const inferredTitleFromDescription = (() => {
-    const descriptionText = asNonEmptyString(row.description);
-    if (!descriptionText) return null;
-
-    const normalizedDescription = descriptionText
-      .replace(/^he\s+(?=[A-Z])/, "The ")
-      .trim();
-    const firstSentence =
-      normalizedDescription.split(/(?<!\b\d)(?<=[.!?])\s+/)[0]?.trim() ?? "";
-    if (!firstSentence) return null;
-
-    const subjectMatch = firstSentence.match(
-      /^((?:The\s+)?[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,7})\s+(?:is|are|offers?|provides?|features?)\b/
-    );
-    if (subjectMatch?.[1]) {
-      return subjectMatch[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    const locationPattern =
-      /\b(?:arrive in|continue to|final stop[:\s]+|visit|return to|journey in)\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,5})/;
-    const match = firstSentence.match(locationPattern);
-    if (match?.[1]) {
-      return match[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    return firstSentence.replace(/[.,:;]+$/, "").trim() || null;
-  })();
-
-  const title =
-    locationTitle ??
-    asNonEmptyString(row.title) ??
-    asNonEmptyString(row.name) ??
-    asNonEmptyString(row.label) ??
-    asNonEmptyString(pointOfInterest?.title) ??
-    asNonEmptyString(pointOfInterest?.name) ??
-    asNonEmptyString(stop?.name) ??
-    asNonEmptyString(stop?.title) ??
-    asNonEmptyString(location?.name) ??
-    getEngine6ItineraryTitleOverride({
+  const preliminaryStopType =
+    isPassByFlag || isPassByFromType ? ("pass-by" as const) : ("stop" as const);
+  const resolvedTitle = resolveEngine6ItineraryTitle({
+    sourceTitleFields: [
+      asNonEmptyString(row.title),
+      asNonEmptyString(row.name),
+      asNonEmptyString(row.label),
+    ],
+    namingFields: [
+      asNonEmptyString(pointOfInterestLocation?.locationName),
+      asNonEmptyString(pointOfInterestLocation?.title),
+      asNonEmptyString(pointOfInterestLocation?.name),
+      asNonEmptyString(pointOfInterest?.title),
+      asNonEmptyString(pointOfInterest?.name),
+      asNonEmptyString(stop?.name),
+      asNonEmptyString(stop?.title),
+      asNonEmptyString(location?.name),
+    ],
+    titleOverride: getEngine6ItineraryTitleOverride({
       productCode: context.productCode,
       rowIndex: context.rowIndex,
-    }) ??
-    inferredTitleFromDescription;
-
-  if (!title) return null;
-  const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
+    }),
+    stopType: preliminaryStopType,
+  });
+  const cleanedTitle = resolvedTitle
+    .replace(/\s*\((pass\s*by)\)\s*$/i, "")
+    .trim();
+  const title = cleanedTitle || resolvedTitle;
   const isPassByFromTitle =
-    /\bpass(?:\s|-)?by\b/i.test(title) && cleanedTitle.length > 0;
+    /\bpass(?:\s|-)?by\b/i.test(resolvedTitle) && cleanedTitle.length > 0;
 
   const description =
     asNonEmptyString(row.description) ??
@@ -1171,7 +1150,7 @@ const normalizeSingleItineraryItem = (
     isPassByFlag || isPassByFromType || isPassByFromTitle ? "pass-by" : "stop";
 
   return {
-    title: cleanedTitle || title,
+    title,
     stopType,
     ...(descriptionWithoutAdmission
       ? { description: descriptionWithoutAdmission }

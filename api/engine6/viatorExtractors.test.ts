@@ -154,7 +154,7 @@ describe("extractEngine6Product itinerary title overrides", () => {
     );
   });
 
-  it("leaves rows without confirmed overrides on the existing description-derived path", () => {
+  it("falls back to Stop when rows lack confirmed overrides and naming fields", () => {
     const description =
       "Unconfirmed Landmark is not in the confirmed audit list.";
     const result = extractEngine6Product({
@@ -169,7 +169,7 @@ describe("extractEngine6Product itinerary title overrides", () => {
     } as Record<string, unknown>);
 
     expect(result.extracted.itinerary[17]).toMatchObject({
-      title: "Unconfirmed Landmark",
+      title: "Stop",
       description,
     });
   });
@@ -185,8 +185,7 @@ describe("extractEngine6Product itinerary title overrides", () => {
     } as Record<string, unknown>);
 
     expect(result.extracted.itinerary[0]).toMatchObject({
-      title:
-        "In winter guests can watch ice skating, pickleball, Home Alone 2 and Serendipity scenes here",
+      title: "Stop",
       description,
     });
   });

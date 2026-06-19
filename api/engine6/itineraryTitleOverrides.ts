@@ -5,8 +5,7 @@ type Engine6ItineraryTitleOverrideInput = {
 
 // Product-scoped itinerary title repairs confirmed by the Engine6 missing-title
 // audit/manual review. These rows in Viator product 414460P1 have stable row
-// order and no raw title/name fields in the affected payload; use these only as
-// conservative fallbacks before the description-derived title heuristic.
+// order and no raw title/name fields in the affected payload.
 const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
   "414460P1": {
     0: "Wollman Rink",
