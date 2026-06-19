@@ -10,23 +10,24 @@ import {
   SITE_BRAND_ID,
   SITE_ORGANIZATION_ID,
   SITE_WEBSITE_ID,
+  type StructuredDataNode,
 } from "../utils/structuredData";
 import { buildCanonicalUrl, DEFAULT_SEO } from "../utils/seo";
-
-type StructuredDataNode = Record<string, unknown>;
 
 type StructuredDataContextValue = {
   setNodes: (nodes: StructuredDataNode[] | null) => void;
 };
 
-const StructuredDataContext =
-  createContext<StructuredDataContextValue | null>(null);
+const StructuredDataContext = createContext<StructuredDataContextValue | null>(
+  null
+);
 
 const SCRIPT_ID = "structured-data";
 
 const hasNodeType = (nodes: StructuredDataNode[] | null, type: string) =>
   Boolean(
-    Array.isArray(nodes) && nodes.some((node) => {
+    Array.isArray(nodes) &&
+    nodes.some(node => {
       if (!node || typeof node !== "object") {
         return false;
       }
@@ -35,13 +36,17 @@ const hasNodeType = (nodes: StructuredDataNode[] | null, type: string) =>
         return nodeType.includes(type);
       }
       return nodeType === type;
-    }),
+    })
   );
 
-const SITE_NODE_IDS = new Set([SITE_ORGANIZATION_ID, SITE_BRAND_ID, SITE_WEBSITE_ID]);
+const SITE_NODE_IDS = new Set([
+  SITE_ORGANIZATION_ID,
+  SITE_BRAND_ID,
+  SITE_WEBSITE_ID,
+]);
 
 const includesSiteNodes = (nodes: StructuredDataNode[]) =>
-  nodes.some((node) => {
+  nodes.some(node => {
     if (!node || typeof node !== "object") {
       return false;
     }
@@ -52,7 +57,7 @@ const includesSiteNodes = (nodes: StructuredDataNode[]) =>
 
 const upsertStructuredDataScript = (json: StructuredDataNode | null) => {
   let script = document.head.querySelector<HTMLScriptElement>(
-    `script#${SCRIPT_ID}`,
+    `script#${SCRIPT_ID}`
   );
 
   if (!json) {
@@ -84,7 +89,7 @@ export const StructuredDataProvider = ({
     const pageNodes = nodes?.length ? nodes : [];
     const canonicalUrl =
       document.head
-        .querySelector<HTMLLinkElement>("link[rel=\"canonical\"]")
+        .querySelector<HTMLLinkElement>('link[rel="canonical"]')
         ?.getAttribute("href") ?? buildCanonicalUrl(location ?? "/");
     const baseNodes = includesSiteNodes(pageNodes)
       ? []
@@ -93,7 +98,7 @@ export const StructuredDataProvider = ({
         });
     const description =
       document.head
-        .querySelector<HTMLMetaElement>("meta[name=\"description\"]")
+        .querySelector<HTMLMetaElement>('meta[name="description"]')
         ?.getAttribute("content") ?? DEFAULT_SEO.description;
     const title = sanitizeSchemaName(document.title || DEFAULT_SEO.title);
 
@@ -120,7 +125,7 @@ export const StructuredDataProvider = ({
 
     const normalized = normalizeStructuredData(graph);
     upsertStructuredDataScript(
-      normalized ? (normalized as StructuredDataNode) : null,
+      normalized ? (normalized as StructuredDataNode) : null
     );
   }, [location, nodes]);
 

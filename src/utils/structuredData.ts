@@ -18,15 +18,15 @@ import {
   normalizeCountryKey,
 } from "./geo/countryCode";
 
-type StructuredDataValue =
+export type StructuredDataValue =
   | string
   | number
   | boolean
   | null
-  | StructuredDataValue[]
-  | { [key: string]: StructuredDataValue };
+  | readonly StructuredDataValue[]
+  | { readonly [key: string]: StructuredDataValue | undefined };
 
-type StructuredDataNode = Record<string, unknown>;
+export type StructuredDataNode = Record<string, unknown>;
 
 export const SITE_ORGANIZATION_ID = `${SITE_URL}/#org`;
 export const SITE_BRAND_ID = `${SITE_URL}/#brand`;
@@ -89,7 +89,7 @@ const stripEmptyValues = (value: StructuredDataValue): StructuredDataValue => {
 
   if (typeof value === "object") {
     const entries = Object.entries(value)
-      .map(([key, entryValue]) => [key, stripEmptyValues(entryValue)])
+      .map(([key, entryValue]) => [key, stripEmptyValues(entryValue ?? null)])
       .filter(([, entryValue]) => entryValue !== null);
     if (!entries.length) {
       return null;
@@ -123,7 +123,7 @@ const ensureAbsoluteUrls = (
     return Object.fromEntries(
       Object.entries(value).map(([entryKey, entryValue]) => [
         entryKey,
-        ensureAbsoluteUrls(entryValue, entryKey),
+        ensureAbsoluteUrls(entryValue ?? null, entryKey),
       ])
     ) as StructuredDataValue;
   }
@@ -165,9 +165,9 @@ const hasType = (value: StructuredDataValue): boolean => {
 };
 
 export const normalizeStructuredData = (
-  value: StructuredDataValue
+  value: unknown
 ): StructuredDataValue | null => {
-  const stripped = stripEmptyValues(value);
+  const stripped = stripEmptyValues(value as StructuredDataValue);
   if (!stripped) {
     return null;
   }
@@ -197,7 +197,9 @@ export const normalizeStructuredData = (
   return hasType(normalized) ? normalized : null;
 };
 
-export const dedupeGraphNodesById = (nodes: unknown[]): unknown[] => {
+export const dedupeGraphNodesById = (
+  nodes: readonly unknown[]
+): StructuredDataValue[] => {
   const seen = new Set<string>();
 
   return nodes.filter(node => {
@@ -216,7 +218,7 @@ export const dedupeGraphNodesById = (nodes: unknown[]): unknown[] => {
 
     seen.add(nodeId);
     return true;
-  });
+  }) as StructuredDataValue[];
 };
 
 export const getSiteStructuredDataNodes = ({
