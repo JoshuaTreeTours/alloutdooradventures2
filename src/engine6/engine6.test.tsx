@@ -3116,6 +3116,128 @@ it("keeps Yosemite replacement hero parity across detail, city card, filtered ca
 });
 
 describe("engine6 itinerary contract", () => {
+  it("preserves meaningful source attraction names instead of generic itinerary labels", () => {
+    const hero =
+      "https://dynamic-media.tacdn.com/media/photo-o/31/00/00/01/caption.jpg?w=1100&h=800&s=1";
+    const extraction = extractEngine6Product({
+      product: {
+        productCode: "276551P2",
+        productUrl:
+          "https://www.viator.com/tours/New-Orleans/Garden-District-and-French-Quarter-Bike-Tour/d675-276551P2",
+        title: "New Orleans City Bike Tour",
+        description: {
+          text: "Bike New Orleans through the French Quarter and Garden District.",
+        },
+        location: { city: "New Orleans", state: "Louisiana" },
+        media: {
+          images: [
+            {
+              isCover: true,
+              variants: {
+                FULL: {
+                  url: hero,
+                  width: 1100,
+                  height: 800,
+                },
+              },
+            },
+          ],
+        },
+        itineraryItems: [
+          {
+            title: "This",
+            pointOfInterest: { name: "Congo Square" },
+            description:
+              "Congo Square is a historic gathering place tied to New Orleans music and culture.",
+            duration: "10 minutes",
+          },
+          {
+            title: "Pass By",
+            pointOfInterestLocation: { locationName: "Treme" },
+            description: "Pass through Treme as the route leaves the quarter.",
+            stopType: "PASS_BY",
+          },
+          {
+            title: "Location",
+            location: { name: "Frenchmen Street" },
+            description:
+              "Frenchmen Street is known for music venues and neighborhood nightlife.",
+            stopType: "pass-by",
+          },
+          {
+            title: "Mississippi River",
+            description:
+              "The Mississippi River frames part of the downtown bike route.",
+            stopType: "pass-by",
+          },
+          {
+            title: "Attraction",
+            pointOfInterest: { title: "Garden District" },
+            description:
+              "Garden District streets feature historic homes and mature oaks.",
+            duration: "1 hour",
+          },
+          {
+            title: "Stop",
+            stop: { name: "Lafayette Cemetery No. 1" },
+            description:
+              "Lafayette Cemetery No. 1 is a brief stop before the return ride.",
+            duration: "5 minutes",
+          },
+        ],
+      },
+    });
+    const tour = mapViatorToEngine6Tour({
+      source: "live-api",
+      rawProductCode: "276551P2",
+      rawProduct: extraction.product,
+      extracted: extraction.extracted,
+      diagnostics: {
+        source: "live-api",
+        hasViatorApiKey: true,
+        attemptedLiveFetch: true,
+        upstreamStatus: 200,
+        upstreamContentType: "application/json",
+        upstreamOk: true,
+        usedBundledFallbackBecause: "",
+        bookingUrlSource: "product.productUrl",
+        fieldLevelFallbackUsed: false,
+        fallbackFieldNames: [],
+        ...extraction.diagnostics,
+      },
+    });
+    const expectedNames = [
+      "Congo Square",
+      "Treme",
+      "Frenchmen Street",
+      "Mississippi River",
+      "Garden District",
+      "Lafayette Cemetery No. 1",
+    ];
+
+    expect(tour.itinerary.map(item => item.title)).toEqual(expectedNames);
+    expect(tour.itinerary.map(item => item.description)).not.toContain("This");
+
+    const html = renderToString(<Engine6TourPage tour={tour} />);
+    expect(html).toContain('data-testid="engine6-itinerary-timeline"');
+    expect(html).not.toContain(">This<");
+    expectedNames.forEach(name => expect(html).toContain(name));
+
+    const schema = buildEngine6SchemaGraph(tour);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as
+      | {
+          itinerary?: { itemListElement?: Array<{ item?: { name?: string } }> };
+        }
+      | undefined;
+    const schemaNames = (trip?.itinerary?.itemListElement ?? []).map(
+      item => item.item?.name
+    );
+
+    expect(schemaNames).toEqual(expectedNames);
+    expect(schemaNames).not.toContain("This");
+  });
+
   it("renders structured timeline when at least two itinerary stops are present", () => {
     const yosemite = engine6ResolvedTours.find(
       tour => tour.productCode === "36001P1"
