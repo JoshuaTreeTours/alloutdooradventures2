@@ -7,13 +7,13 @@ import {
 } from "./itineraryTitleDescription";
 
 describe("Engine6 itinerary title and description splitting", () => {
-  it("splits Central Park carousel prose into a short landmark title and factual detail", () => {
+  it("extracts short landmark titles without rewriting supplier descriptions", () => {
     const source =
       "Iconic carousel in Central Park built in 1908 & featuring over 50 hand-carved horses";
 
     expect(splitDescriptiveProseIntoLandmarkAndDetail(source)).toEqual({
       landmark: "Central Park Carousel",
-      detail: "Built in 1908 and featuring over 50 hand-carved horses.",
+      detail: source,
     });
 
     expect(
@@ -23,11 +23,11 @@ describe("Engine6 itinerary title and description splitting", () => {
       })
     ).toEqual({
       title: "Central Park Carousel",
-      description: "Built in 1908 and featuring over 50 hand-carved horses.",
+      description: source,
     });
   });
 
-  it("keeps short landmark titles and separate factual descriptions", () => {
+  it("keeps short landmark titles and separate supplier descriptions", () => {
     expect(
       normalizeEngine6ItineraryStopFields({
         title: "Bethesda Fountain",
@@ -39,53 +39,49 @@ describe("Engine6 itinerary title and description splitting", () => {
     });
   });
 
-  it("splits landmark-leading prose when descriptive detail follows the name", () => {
+  it("promotes misplaced supplier prose into the description without rewriting it", () => {
+    const literaryWalkSource =
+      "Literary Walk along the mall with statues of famous writers and poets";
+
     expect(
       normalizeEngine6ItineraryStopFields({
-        title:
-          "Literary Walk along the mall with statues of famous writers and poets",
+        title: literaryWalkSource,
       })
     ).toEqual({
       title: "Literary Walk",
-      description:
-        "Along the mall with statues of famous writers and poets.",
+      description: literaryWalkSource,
     });
+
+    const sheepMeadowSource =
+      "Sheep Meadow open lawn area popular for picnics and sunbathing";
 
     expect(
       normalizeEngine6ItineraryStopFields({
-        title: "Sheep Meadow open lawn area popular for picnics and sunbathing",
+        title: sheepMeadowSource,
       })
     ).toEqual({
       title: "Sheep Meadow",
-      description: "Open lawn area popular for picnics and sunbathing.",
-    });
-
-    expect(
-      normalizeEngine6ItineraryStopFields({
-        title:
-          "Chess & Checkers House where visitors can borrow pieces for outdoor games",
-      })
-    ).toEqual({
-      title: "Chess & Checkers House",
-      description:
-        "Where visitors can borrow pieces for outdoor games.",
+      description: sheepMeadowSource,
     });
   });
 
-  it("builds Central Park pedicab itinerary cards with short titles and non-duplicative descriptions", () => {
+  it("builds Central Park pedicab cards with short titles and preserved supplier descriptions", () => {
+    const carouselSource =
+      "Iconic carousel in Central Park built in 1908 & featuring over 50 hand-carved horses";
+    const literaryWalkSource =
+      "Literary Walk along the mall with statues of famous writers and poets";
+    const sheepMeadowSource =
+      "Sheep Meadow open lawn area popular for picnics and sunbathing";
+
     const itinerary = buildEngine6ItineraryForProduct("414460P1", [
       {
-        title:
-          "Iconic carousel in Central Park built in 1908 & featuring over 50 hand-carved horses",
-        description:
-          "Iconic carousel in Central Park built in 1908 & featuring over 50 hand-carved horses",
+        title: carouselSource,
+        description: carouselSource,
         stopType: "stop",
       },
       {
-        title:
-          "Literary Walk along the mall with statues of famous writers and poets",
-        description:
-          "Literary Walk along the mall with statues of famous writers and poets",
+        title: literaryWalkSource,
+        description: literaryWalkSource,
         stopType: "stop",
       },
       {
@@ -95,36 +91,20 @@ describe("Engine6 itinerary title and description splitting", () => {
         stopType: "stop",
       },
       {
-        title: "Sheep Meadow open lawn area popular for picnics and sunbathing",
+        title: sheepMeadowSource,
         stopType: "pass-by",
       },
     ]);
 
     expect(itinerary[0]?.title).toBe("Central Park Carousel");
-    expect(itinerary[0]?.description).toBe(
-      "Built in 1908 and featuring over 50 hand-carved horses."
-    );
+    expect(itinerary[0]?.description).toBe(`${carouselSource}.`);
     expect(itinerary[1]?.title).toBe("Literary Walk");
-    expect(itinerary[1]?.description).toContain("Along the mall");
-    expect(itinerary[1]?.description).not.toMatch(/Literary Walk/i);
+    expect(itinerary[1]?.description).toBe(`${literaryWalkSource}.`);
     expect(itinerary[2]).toMatchObject({
       title: "Bethesda Fountain",
       description: "Photo stop and historical narration.",
     });
     expect(itinerary[3]?.title).toBe("Sheep Meadow");
-    expect(itinerary[3]?.description).toContain("Open lawn area");
-    expect(itinerary[3]?.description).not.toMatch(/Sheep Meadow/i);
-  });
-
-  it("splits Visit-during source lines into a short landmark title and timed detail", () => {
-    expect(
-      normalizeEngine6ItineraryStopFields({
-        title:
-          "Visit Jackson Square during a 15-minute stop in the French Quarter area.",
-      })
-    ).toEqual({
-      title: "Jackson Square",
-      description: "During a 15-minute stop in the French Quarter area.",
-    });
+    expect(itinerary[3]?.description).toBe(`${sheepMeadowSource}.`);
   });
 });

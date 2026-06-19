@@ -1,11 +1,5 @@
-import {
-  isEngine6GenericItineraryDescription,
-  normalizeEngine6ItineraryComparisonText,
-} from "./itineraryGovernance";
-import {
-  normalizeEngine6ItineraryStopFields,
-  stripTitleOverlapFromDescription,
-} from "./itineraryTitleDescription";
+import { normalizeEngine6ItineraryComparisonText } from "./itineraryGovernance";
+import { normalizeEngine6ItineraryStopFields } from "./itineraryTitleDescription";
 import { stripEngine6AdmissionArtifacts } from "./seo";
 import type { Engine6ItineraryItem } from "./types";
 
@@ -62,44 +56,85 @@ export const engine6DescriptionTitleTokenOverlapExceedsThreshold = (
   threshold = 0.7
 ) => engine6DescriptionTitleTokenOverlapRatio(title, description) > threshold;
 
-const MECHANICAL_ITINERARY_PATTERNS = [
-  /^Pass\s+.+\s+as part of the route\.?$/i,
-  /^Scheduled stop on the tour route\.?$/i,
-  /^Scenic pass-by along the tour route\.?$/i,
-  /^Scheduled stop of about\b/i,
-  /^Scheduled stop featuring\b/i,
-  /^Route pass-by with\b/i,
-  /^This is a (?:scheduled stop|scenic pass-by)\b/i,
-  /^This portion is viewed from the route without a scheduled stop\.?$/i,
-  /^This scheduled stop includes about\b/i,
-  /^This is a scheduled stop with time included in the itinerary\.?$/i,
-] as const;
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-const WRAPPER_ONLY_DESCRIPTION_TOKENS = new Set([
-  "includes",
-  "about",
-  "passes",
-  "route",
-  "pass",
-  "timed",
-  "stop",
-  "itinerary",
-  "without",
-  "stopping",
-  "near",
-  "with",
-  "for",
-  "time",
-  "during",
-  "minute",
-  "minutes",
-  "hour",
-  "hours",
-  "min",
-  "mins",
-  "hr",
-  "hrs",
-]);
+export const isEngine6BannedItineraryPlaceholder = (
+  title: string,
+  description: string
+) => {
+  const trimmed = description.trim();
+  if (!trimmed) {
+    return false;
+  }
+
+  if (/^By\.?$/i.test(trimmed)) {
+    return true;
+  }
+
+  if (/^Historic context\.?$/i.test(trimmed)) {
+    return true;
+  }
+
+  if (/^Scenic pass-by segment\.?$/i.test(trimmed)) {
+    return true;
+  }
+
+  if (/\bscenic pass-by segment\b/i.test(trimmed)) {
+    return true;
+  }
+
+  if (/\bhistoric context\b/i.test(trimmed)) {
+    return true;
+  }
+
+  if (/^Pass\s+.+\s+as part of the route\.?$/i.test(trimmed)) {
+    return true;
+  }
+
+  const normalizedTitle = title.trim();
+  if (normalizedTitle) {
+    const escapedTitle = escapeRegExp(normalizedTitle);
+    if (
+      new RegExp(
+        `^Visit\\s+${escapedTitle}\\s+during\\s+(?:the\\s+)?(?:\\d|[\\w-]+\\s+)*stop\\.?$`,
+        "i"
+      ).test(trimmed)
+    ) {
+      return true;
+    }
+  }
+
+  if (
+    /^Visit\s+.+\s+during\s+(?:the\s+)?(?:\d+\s*(?:hour|hours|minute|minutes|hr|hrs|min|mins)\s*)?stop\.?$/i.test(
+      trimmed
+    )
+  ) {
+    return true;
+  }
+
+  if (
+    /^This portion is viewed from the route without a scheduled stop\.?$/i.test(
+      trimmed
+    )
+  ) {
+    return true;
+  }
+
+  if (/^This scheduled stop includes about\b/i.test(trimmed)) {
+    return true;
+  }
+
+  if (
+    /^This is a scheduled stop with time included in the itinerary\.?$/i.test(
+      trimmed
+    )
+  ) {
+    return true;
+  }
+
+  return false;
+};
 
 export const isEngine6PureTitleRestatement = (
   title: string,
@@ -111,38 +146,13 @@ export const isEngine6PureTitleRestatement = (
     return false;
   }
 
-  if (normalizedDescription === normalizedTitle) {
-    return true;
-  }
-
-  const withoutLeadingVerb = description
-    .trim()
-    .replace(/^(?:visit|pass(?:\s+by)?|see|explore|enjoy|experience)\s+/i, "")
-    .trim();
-
-  if (normalizeComparableText(withoutLeadingVerb) === normalizedTitle) {
-    return true;
-  }
-
-  if (
-    /^route passes\s+/i.test(description.trim()) &&
-    engine6DescriptionTitleTokenOverlapExceedsThreshold(title, description, 0.85)
-  ) {
-    return true;
-  }
-
-  return false;
+  return normalizedDescription === normalizedTitle;
 };
 
 export const isEngine6TitleDescriptionMismatch = (
   title: string,
   description: string
 ) => isEngine6PureTitleRestatement(title, description);
-
-const isAdmissionOnlyDescription = (value: string) =>
-  /^(?:admission(?: ticket)?(?: included| free| not included)?|ticket included|ticket not included)\.?$/i.test(
-    value.trim()
-  );
 
 export const descriptionAddsInformationBeyondTitle = (
   title: string,
@@ -153,56 +163,7 @@ export const descriptionAddsInformationBeyondTitle = (
     return false;
   }
 
-  if (isEngine6PureTitleRestatement(title, description)) {
-    return false;
-  }
-
-  if (isAdmissionOnlyDescription(description)) {
-    return false;
-  }
-
-  const titleTokens = titleWordTokens(title);
-  if (titleTokens.length === 0) {
-    return normalizedDescription.split(" ").filter(token => token.length > 2)
-      .length >= 2;
-  }
-
-  const remainingTokens = normalizedDescription
-    .split(" ")
-    .filter(token => token.length > 2 && !titleTokens.includes(token))
-    .filter(token => !WRAPPER_ONLY_DESCRIPTION_TOKENS.has(token));
-
-  return remainingTokens.length >= 1;
-};
-
-const ROUTE_PLACEHOLDER_PATTERNS = [
-  ...MECHANICAL_ITINERARY_PATTERNS,
-  /\bover about Pass by\b/i,
-  /\bscenic pass-by segment\b/i,
-  /\bhistoric context\b/i,
-  /\bguided route\b/i,
-] as const;
-
-const GENERIC_FALLBACK_CONTEXT_PATTERNS = [
-  /^scenic views$/i,
-  /^historic context$/i,
-  /^wine-country context$/i,
-  /^trail time$/i,
-  /^wildlife viewing$/i,
-  /^former prison site context$/i,
-  /^app-guided format$/i,
-  /^ferry access$/i,
-  /\bcontext$/i,
-  /\bguided route\b/i,
-  /\bscenic pass-by segment\b/i,
-] as const;
-
-const isGenericFallbackContext = (context: string) => {
-  const trimmed = context.trim();
-  if (!trimmed) {
-    return true;
-  }
-  return GENERIC_FALLBACK_CONTEXT_PATTERNS.some(pattern => pattern.test(trimmed));
+  return normalizedDescription !== normalizeComparableText(title);
 };
 
 export const isEngine6LowQualityItineraryDescription = (
@@ -214,59 +175,12 @@ export const isEngine6LowQualityItineraryDescription = (
     return true;
   }
 
-  if (ROUTE_PLACEHOLDER_PATTERNS.some(pattern => pattern.test(trimmed))) {
-    return true;
-  }
-
-  if (isEngine6GenericItineraryDescription(trimmed)) {
-    return true;
-  }
-
-  if (isEngine6PureTitleRestatement(title, trimmed)) {
-    return true;
-  }
-
-  if (!descriptionAddsInformationBeyondTitle(title, trimmed)) {
-    return true;
-  }
-
-  return false;
+  return isEngine6BannedItineraryPlaceholder(title, trimmed);
 };
 
-const enforceShortFactualDescription = (value: string, maxSentences = 2) => {
-  const compact = value
-    .replace(/\s+/g, " ")
-    .replace(/\s+([,.;!?])/g, "$1")
-    .replace(/,+/g, ",")
-    .replace(/[;:]/g, ",")
-    .trim();
-  if (!compact) {
-    return "";
-  }
-
-  const sentences = compact
-    .split(/(?<=[.!?])\s+/)
-    .map(part => part.trim())
-    .filter(Boolean)
-    .slice(0, maxSentences);
-
-  if (sentences.length === 0) {
-    return "";
-  }
-
-  return sentences
-    .map(sentence => `${sentence.replace(/[.!?]+$/g, "")}.`)
-    .join(" ");
-};
-
-const enforceSingleSentence = (value: string) =>
-  enforceShortFactualDescription(value, 1);
-
-const normalizePreservedSourceDescription = (sourceDescription: string) => {
+const normalizeSupplierDescription = (sourceDescription: string) => {
   const cleaned = stripEngine6AdmissionArtifacts(sourceDescription)
     .replace(/\s+/g, " ")
-    .replace(/\([^)]*\)/g, " ")
-    .replace(/\b(you will|you'll|we will|we'll)\b/gi, "")
     .trim();
 
   if (!cleaned) {
@@ -280,411 +194,14 @@ const normalizePreservedSourceDescription = (sourceDescription: string) => {
     .slice(0, 2);
 
   return sentences
-    .map(sentence => `${sentence.replace(/[.!?]+$/g, "")}.`)
-    .join(" ");
-};
-
-const omitEngine6ItineraryDescription = () => "";
-
-const polishSourceSentence = (sourceSentence: string) =>
-  sourceSentence
-    .replace(/^(enjoy|experience|discover|visit|explore|see)\s+/i, "")
-    .replace(/^take in\s+/i, "")
-    .replace(/^check out\s+/i, "")
-    .replace(/^pass(?: by)?\s+/i, "")
-    .replace(/^you(?:'ll| will)\s+/i, "")
-    .replace(/^he\s+(?=[A-Z])/, "The ")
-    .replace(/^[a-z]/, match => match.toUpperCase())
-    .replace(/[;:,]\s*$/, "")
-    .trim();
-
-const extractCleanSourceSentence = (sourceDescription: string) => {
-  const cleanedSource = stripEngine6AdmissionArtifacts(sourceDescription)
-    .replace(/\s+/g, " ")
-    .replace(/\([^)]*\)/g, " ")
-    .replace(/\b(you will|you'll|we will|we'll)\b/gi, "")
-    .trim();
-
-  return (
-    cleanedSource
-      .split(/(?<!\b\d)[.!?]/)
-      .map(part => part.trim())
-      .find(part => part.length > 0) ?? ""
-  );
-};
-
-const PASS_BY_DURATION_PATTERN = /^pass(?:\s*-\s*by|\s+by)?$/i;
-
-const normalizeUsableDuration = (duration: string | undefined) => {
-  const trimmed = duration?.trim()?.replace(/[.!?]+$/g, "") ?? "";
-  if (!trimmed || PASS_BY_DURATION_PATTERN.test(trimmed)) {
-    return null;
-  }
-  return trimmed;
-};
-
-const escapeRegExp = (value: string) =>
-  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-const stripLeadingArticle = (value: string) =>
-  value.replace(/^(?:the|a|an)\s+/i, "").trim();
-
-const formatContextFragment = (value: string) =>
-  stripLeadingArticle(value.trim())
-    .replace(/^with\s+/i, "")
-    .replace(/\s+/g, " ")
-    .trim();
-
-const durationMentionedInText = (text: string, duration: string) => {
-  const normalizedText = normalizeComparableText(text);
-  const normalizedDuration = normalizeComparableText(duration);
-  if (!normalizedText || !normalizedDuration) {
-    return false;
-  }
-
-  if (normalizedText.includes(normalizedDuration)) {
-    return true;
-  }
-
-  const durationMatch = duration.match(
-    /(\d+(?:\.\d+)?)\s*(?:-| )?(minute|minutes|min|mins|hour|hours|hr|hrs)\b/i
-  );
-  if (!durationMatch) {
-    return false;
-  }
-
-  const [, amount, unit] = durationMatch;
-  const unitPattern =
-    unit.startsWith("min") || unit === "mins"
-      ? "(?:minute|minutes|min|mins)"
-      : "(?:hour|hours|hr|hrs)";
-  return new RegExp(
-    `\\b${escapeRegExp(amount)}\\s*(?:-| )?${unitPattern}\\b`,
-    "i"
-  ).test(text);
-};
-
-const stripDurationFromContext = (context: string, duration: string) => {
-  let cleaned = context;
-  cleaned = cleaned.replace(
-    new RegExp(`\\b(?:during|for)\\s+(?:a|an|the)?\\s*${escapeRegExp(duration)}\\b`, "gi"),
-    ""
-  );
-  cleaned = cleaned.replace(
-    /\b(?:during|for)\s+(?:a|an|the)?\s*[\d.]+\s*(?:-| )?(?:minute|minutes|min|mins|hour|hours|hr|hrs)\s*(?:stop|visit)?\b/gi,
-    ""
-  );
-  return formatContextFragment(cleaned);
-};
-
-const formatPassByContext = (context: string) => {
-  const fragment = formatContextFragment(context);
-  if (!fragment) {
-    return null;
-  }
-  if (/^(?:the|a|an)\s+/i.test(fragment)) {
-    return fragment;
-  }
-  return `the ${fragment}`;
-};
-
-const formatWithClause = (clause: string) => {
-  const trimmed = formatContextFragment(clause);
-  const commentaryMatch = trimmed.match(/^commentary on\s+(.+)$/i);
-  if (commentaryMatch?.[1]) {
-    const topic = commentaryMatch[1].trim().replace(/\s+/g, "-");
-    return `${topic}-history commentary`;
-  }
-  return trimmed;
-};
-
-const extractLocationSuffixFromSource = (
-  polishedSource: string,
-  title: string,
-  duration: string | null
-) => {
-  let remainder = polishedSource.replace(
-    new RegExp(escapeRegExp(title), "i"),
-    ""
-  );
-  if (duration) {
-    remainder = remainder.replace(new RegExp(escapeRegExp(duration), "gi"), "");
-  }
-  remainder = remainder.replace(
-    /\b(?:during|for)\s+(?:a|an|the)?\s*[\d.]+\s*(?:-| )?(?:minute|minutes|min|mins|hour|hours|hr|hrs)\s*(?:stop|visit)?\b/gi,
-    ""
-  );
-  remainder = formatContextFragment(
-    remainder
-      .replace(/^(?:photo stop|stop|visit|explore|see|enjoy|experience)\s*/i, "")
-      .replace(/^[,:\s-]+/, "")
-      .replace(/[,:\s-]+$/, "")
-  );
-
-  if (!remainder || !descriptionAddsInformationBeyondTitle(title, remainder)) {
-    return null;
-  }
-
-  if (duration && durationMentionedInText(remainder, duration)) {
-    remainder = stripDurationFromContext(remainder, duration);
-  }
-
-  if (!remainder) {
-    return null;
-  }
-
-  if (/^(?:in|on|at|near|through|along|across|by|from|into|onto|toward|towards|within)\b/i.test(
-    remainder
-  )) {
-    return ` ${remainder}`;
-  }
-
-  return ` in ${remainder}`;
-};
-
-const extractUsefulSourceFragment = (polishedSource: string, title: string) => {
-  if (!polishedSource || isAdmissionOnlyDescription(polishedSource)) {
-    return null;
-  }
-
-  const titleTokens = new Set(titleWordTokens(title));
-  const tokens = polishedSource
-    .split(/\s+/)
-    .map(token => token.replace(/^[^a-z0-9]+|[^a-z0-9]+$/gi, ""))
+    .map(sentence => {
+      const withoutTrailingPunctuation = sentence.replace(/[.!?]+$/g, "");
+      return withoutTrailingPunctuation
+        ? `${withoutTrailingPunctuation}.`
+        : "";
+    })
     .filter(Boolean)
-    .filter(token => {
-      const normalized = token.toLowerCase();
-      return (
-        normalized.length > 2 &&
-        !titleTokens.has(normalized) &&
-        !/^(?:the|and|with|from|into|onto|that|this|there|their|your|will|can|for|you|our|are|has|have|guide|guests|guest|travelers|traveler|group|everyone|comfortable|make|sure|well|ll|stop|visit|photo|route|tour|during|about|minutes|minute|hours|hour|pass|passes|by)$/.test(
-          normalized
-        )
-      );
-    });
-
-  if (tokens.length < 3) {
-    return null;
-  }
-
-  const fragment = tokens.slice(0, 8).join(" ");
-  return isGenericFallbackContext(fragment) ? null : fragment;
-};
-
-const resolveSourceDerivedContext = (
-  sourceSentence: string,
-  title: string,
-  duration: string | null
-) => {
-  const polishedSource = polishSourceSentence(sourceSentence);
-  if (!polishedSource || isAdmissionOnlyDescription(polishedSource)) {
-    return null;
-  }
-
-  const suffix = extractLocationSuffixFromSource(
-    polishedSource,
-    title,
-    duration
-  );
-  if (suffix) {
-    const cleaned = formatContextFragment(suffix.trim());
-    if (cleaned && !isGenericFallbackContext(cleaned)) {
-      return cleaned;
-    }
-  }
-
-  const fragment = extractUsefulSourceFragment(polishedSource, title);
-  if (fragment) {
-    const cleaned = duration
-      ? stripDurationFromContext(fragment, duration)
-      : formatContextFragment(fragment);
-    if (cleaned && !isGenericFallbackContext(cleaned)) {
-      return cleaned;
-    }
-  }
-
-  return null;
-};
-
-const isAcceptableFallbackDescription = (
-  title: string,
-  description: string
-) => !isEngine6LowQualityItineraryDescription(title, description);
-
-const finalizeFallbackCandidate = (
-  title: string,
-  _item: Engine6ItinerarySourceItem,
-  candidates: string[],
-  variantIndex: number
-) => {
-  if (candidates.length === 0) {
-    return omitEngine6ItineraryDescription();
-  }
-
-  for (let offset = 0; offset < candidates.length; offset += 1) {
-    const candidate = enforceSingleSentence(
-      stripEngine6AdmissionArtifacts(
-        candidates[(variantIndex + offset) % candidates.length]!
-      )
-    );
-    if (isAcceptableFallbackDescription(title, candidate)) {
-      return candidate;
-    }
-  }
-
-  return omitEngine6ItineraryDescription();
-};
-
-const buildTimedStopIncludesSentence = (
-  item: Engine6ItinerarySourceItem,
-  sourceSentence: string,
-  variantIndex: number
-) => {
-  const title = item.title?.trim() || "This stop";
-  const duration = normalizeUsableDuration(item.duration);
-  const polishedSource = polishSourceSentence(sourceSentence);
-  const andParts = polishedSource.split(/\s+and\s+/i);
-  let withClause: string | null = null;
-  let mainPart = polishedSource;
-
-  if (andParts.length > 1) {
-    const trailingPart = andParts[andParts.length - 1]?.trim() ?? "";
-    if (
-      /^(?:commentary|time|access|views|walk|photo stop|a photo stop)\b/i.test(
-        trailingPart
-      )
-    ) {
-      withClause = formatWithClause(trailingPart);
-      mainPart = andParts.slice(0, -1).join(" and ").trim();
-    }
-  }
-
-  if (!withClause) {
-    const withMatch = polishedSource.match(/\bwith\s+(.+)$/i);
-    if (withMatch?.[1]) {
-      withClause = formatWithClause(withMatch[1]);
-      mainPart = polishedSource.replace(/\bwith\s+.+$/i, "").trim();
-    }
-  }
-
-  const meadowMatch = mainPart.match(/\bat\s+(.+?)\s+meadow\b/i);
-  if (meadowMatch && duration) {
-    const locationLabel = /\bel capitan\b/i.test(title)
-      ? "El Capitan Meadow"
-      : `${title} Meadow`;
-    if (withClause) {
-      return finalizeFallbackCandidate(
-        title,
-        item,
-        [
-          `Includes about ${duration} near ${locationLabel} with ${withClause}.`,
-          `Includes about ${duration} at ${locationLabel} with ${withClause}.`,
-        ],
-        variantIndex
-      );
-    }
-  }
-
-  const locationSuffix = duration
-    ? extractLocationSuffixFromSource(mainPart || polishedSource, title, duration)
-    : null;
-  if (locationSuffix && duration) {
-    return finalizeFallbackCandidate(
-      title,
-      item,
-      [
-        `Includes about ${duration} at ${title}${locationSuffix}.`,
-        withClause
-          ? `Includes about ${duration} at ${title}${locationSuffix} with ${withClause}.`
-          : `Includes about ${duration} at ${title}${locationSuffix}.`,
-      ],
-      variantIndex
-    );
-  }
-
-  const context = resolveSourceDerivedContext(sourceSentence, title, duration);
-  if (context && duration) {
-    if (withClause) {
-      return finalizeFallbackCandidate(
-        title,
-        item,
-        [
-          `Includes about ${duration} near ${title} with ${withClause}.`,
-          `Includes about ${duration} at ${title} with ${withClause}.`,
-        ],
-        variantIndex
-      );
-    }
-
-    const preposition = /^(?:in|on|at|near|through|along|across|by)\b/i.test(
-      context
-    )
-      ? ""
-      : " in ";
-    return finalizeFallbackCandidate(
-      title,
-      item,
-      [
-        `Includes about ${duration} at ${title}${preposition}${context}.`,
-        `Includes about ${duration} at ${title} with ${context}.`,
-      ],
-      variantIndex
-    );
-  }
-
-  if (withClause && duration) {
-    return finalizeFallbackCandidate(
-      title,
-      item,
-      [`Includes about ${duration} near ${title} with ${withClause}.`],
-      variantIndex
-    );
-  }
-
-  return omitEngine6ItineraryDescription();
-};
-
-const buildPassByFallbackSentence = (
-  item: Engine6ItinerarySourceItem,
-  sourceSentence: string,
-  variantIndex: number
-) => {
-  const title = item.title?.trim() || "This stop";
-  const context = resolveSourceDerivedContext(sourceSentence, title, null);
-  const formattedContext = context ? formatPassByContext(context) : null;
-
-  if (formattedContext) {
-    return finalizeFallbackCandidate(
-      title,
-      item,
-      [
-        `Passes by ${formattedContext}.`,
-        `Route passes ${formattedContext}.`,
-      ],
-      variantIndex
-    );
-  }
-
-  return omitEngine6ItineraryDescription();
-};
-
-const buildEngine6ContextualItineraryDescription = (
-  item: Engine6ItinerarySourceItem,
-  sourceSentence: string,
-  variantIndex = 0
-) => {
-  const title = item.title?.trim() || "This stop";
-  const sentence =
-    item.stopType === "pass-by"
-      ? buildPassByFallbackSentence(item, sourceSentence, variantIndex)
-      : buildTimedStopIncludesSentence(item, sourceSentence, variantIndex);
-
-  const normalized = enforceSingleSentence(stripEngine6AdmissionArtifacts(sentence));
-  if (isAcceptableFallbackDescription(title, normalized)) {
-    return normalized;
-  }
-
-  return omitEngine6ItineraryDescription();
+    .join(" ");
 };
 
 export const rewriteEngine6ItineraryDescriptionToSingleSentence = (args: {
@@ -697,40 +214,33 @@ export const rewriteEngine6ItineraryDescriptionToSingleSentence = (args: {
     args.productCode,
     args.index
   );
-  if (override) {
-    const normalizedOverride = enforceSingleSentence(
-      stripEngine6AdmissionArtifacts(override)
-    );
+  if (override?.trim()) {
+    const normalizedOverride = normalizeSupplierDescription(override);
     if (
-      !isEngine6LowQualityItineraryDescription(args.item.title ?? "", normalizedOverride)
+      normalizedOverride &&
+      !isEngine6BannedItineraryPlaceholder(
+        args.item.title ?? "",
+        normalizedOverride
+      )
     ) {
       return normalizedOverride;
     }
   }
 
-  const { item } = args;
-  const title = item.title?.trim() || "This stop";
-  const sourceDescription = item.description?.trim() ?? "";
-  const preservedSource = stripTitleOverlapFromDescription(
-    title,
-    normalizePreservedSourceDescription(sourceDescription)
-  );
-  const sourceSentence = extractCleanSourceSentence(sourceDescription);
-
-  if (
-    preservedSource &&
-    !isAdmissionOnlyDescription(preservedSource) &&
-    !isEngine6GenericItineraryDescription(preservedSource) &&
-    !isEngine6LowQualityItineraryDescription(title, preservedSource)
-  ) {
-    return preservedSource;
+  const sourceDescription = args.item.description?.trim() ?? "";
+  if (!sourceDescription) {
+    return "";
   }
 
-  return buildEngine6ContextualItineraryDescription(
-    item,
-    sourceSentence,
-    args.index
-  );
+  const normalizedSource = normalizeSupplierDescription(sourceDescription);
+  if (
+    !normalizedSource ||
+    isEngine6BannedItineraryPlaceholder(args.item.title ?? "", normalizedSource)
+  ) {
+    return "";
+  }
+
+  return normalizedSource;
 };
 
 export const dedupeEngine6ItineraryDescriptions = (
@@ -739,11 +249,9 @@ export const dedupeEngine6ItineraryDescriptions = (
     Parameters<typeof rewriteEngine6ItineraryDescriptionToSingleSentence>[0],
     "productCode" | "getDescriptionOverride"
   >
-): Engine6ItineraryItem[] => {
-  const seenDescriptions = new Set<string>();
-
-  return items.map((item, index) => {
-    let description =
+): Engine6ItineraryItem[] =>
+  items.map((item, index) => {
+    const description =
       item.description?.trim() ||
       rewriteEngine6ItineraryDescriptionToSingleSentence({
         productCode: rewriteArgs?.productCode ?? "",
@@ -752,44 +260,11 @@ export const dedupeEngine6ItineraryDescriptions = (
         getDescriptionOverride: rewriteArgs?.getDescriptionOverride,
       });
 
-    if (isEngine6LowQualityItineraryDescription(item.title, description)) {
-      const rebuilt = buildEngine6ContextualItineraryDescription(
-        item,
-        item.description ?? "",
-        index + 1
-      );
-      description = isEngine6LowQualityItineraryDescription(item.title, rebuilt)
-        ? omitEngine6ItineraryDescription()
-        : rebuilt;
-    }
-
-    let descriptionKey = normalizeComparableText(description);
-    if (descriptionKey && seenDescriptions.has(descriptionKey)) {
-      const rebuilt = buildEngine6ContextualItineraryDescription(
-        item,
-        item.description ?? "",
-        index + seenDescriptions.size + 1
-      );
-      const rebuiltKey = normalizeComparableText(rebuilt);
-      description =
-        rebuiltKey &&
-        !seenDescriptions.has(rebuiltKey) &&
-        !isEngine6LowQualityItineraryDescription(item.title, rebuilt)
-          ? rebuilt
-          : omitEngine6ItineraryDescription();
-      descriptionKey = normalizeComparableText(description);
-    }
-
-    if (descriptionKey) {
-      seenDescriptions.add(descriptionKey);
-    }
-
     return {
       ...item,
       description,
     };
   });
-};
 
 export const isEngine6StructuredItineraryUsable = (
   items: Engine6ItineraryItem[]
@@ -809,7 +284,7 @@ export const isEngine6StructuredItineraryUsable = (
       return true;
     }
 
-    return !isEngine6LowQualityItineraryDescription(item.title, description);
+    return !isEngine6BannedItineraryPlaceholder(item.title, description);
   });
 
   if (items.length >= 2) {

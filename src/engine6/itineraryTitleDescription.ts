@@ -15,22 +15,6 @@ const normalizeComparableText = (value: string) =>
 const titleCaseWord = (word: string) =>
   word ? `${word.charAt(0).toUpperCase()}${word.slice(1).toLowerCase()}` : word;
 
-const polishDetailFragment = (detail: string) => {
-  let cleaned = detail
-    .replace(/^[,;:\-–—]+\s*/, "")
-    .replace(/\s*&\s*/g, " and ")
-    .replace(/\s+/g, " ")
-    .trim();
-  if (!cleaned) {
-    return "";
-  }
-  cleaned = cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
-  if (!/[.!?]$/.test(cleaned)) {
-    cleaned = `${cleaned.replace(/[.!?]+$/g, "")}.`;
-  }
-  return cleaned;
-};
-
 export const isDescriptiveProseTitle = (value: string) => {
   const compact = value.trim().replace(/\s+/g, " ");
   if (!compact) {
@@ -62,7 +46,7 @@ export const splitDescriptiveProseIntoLandmarkAndDetail = (
     ) {
       return {
         landmark,
-        detail: polishDetailFragment(visitDuringMatch[2]),
+        detail: visitDuringMatch[2].trim(),
       };
     }
   }
@@ -71,12 +55,9 @@ export const splitDescriptiveProseIntoLandmarkAndDetail = (
     /\b(?:an?\s+|the\s+|iconic\s+)?carousel\s+in\s+(Central Park)\b/i
   );
   if (carouselInPark) {
-    const detail = compact
-      .replace(/\b(?:An?\s+|The\s+|Iconic\s+)?carousel\s+in\s+Central Park\s*,?\s*/i, "")
-      .trim();
     return {
       landmark: `${carouselInPark[1]} Carousel`,
-      detail: polishDetailFragment(detail),
+      detail: compact,
     };
   }
 
@@ -89,11 +70,9 @@ export const splitDescriptiveProseIntoLandmarkAndDetail = (
   if (typeInPlace) {
     const typeWord = titleCaseWord(typeInPlace[1] ?? "");
     const place = typeInPlace[2]?.trim() ?? "";
-    const landmark = `${place} ${typeWord}`.trim();
-    const detail = compact.replace(typeInPlace[0], "").trim();
     return {
-      landmark,
-      detail: polishDetailFragment(detail),
+      landmark: `${place} ${typeWord}`.trim(),
+      detail: compact,
     };
   }
 
@@ -108,9 +87,7 @@ export const splitDescriptiveProseIntoLandmarkAndDetail = (
     ) {
       return {
         landmark,
-        detail: polishDetailFragment(
-          compact.slice(landmarkWithFollowingDetail[1].length).trim()
-        ),
+        detail: compact,
       };
     }
   }
@@ -130,7 +107,7 @@ export const splitDescriptiveProseIntoLandmarkAndDetail = (
     ) {
       return {
         landmark: landmarkCandidate,
-        detail: polishDetailFragment(compact.slice(markerMatch.index).trim()),
+        detail: compact,
       };
     }
   }
@@ -147,60 +124,6 @@ export const splitDescriptiveProseIntoLandmarkAndDetail = (
   return null;
 };
 
-export const stripTitleOverlapFromDescription = (
-  title: string,
-  description: string
-) => {
-  const trimmedDescription = description.trim();
-  if (!trimmedDescription) {
-    return "";
-  }
-
-  const normalizedTitle = normalizeComparableText(title);
-  const normalizedDescription = normalizeComparableText(trimmedDescription);
-  if (!normalizedTitle || normalizedDescription === normalizedTitle) {
-    return "";
-  }
-
-  let cleaned = trimmedDescription
-    .replace(
-      new RegExp(
-        `^(?:visit|see|explore|pass by|stop at|arrive at|continue to|photo stop at)\\s+${escapeRegExp(title)}\\s*[,:-–—]?\\s*`,
-        "i"
-      ),
-      ""
-    )
-    .replace(new RegExp(`^${escapeRegExp(title)}\\s*[,:-–—]?\\s*`, "i"), "")
-    .trim();
-
-  if (!cleaned || normalizeComparableText(cleaned) === normalizedTitle) {
-    return "";
-  }
-
-  cleaned = cleaned
-    .replace(/^during\b/i, "During")
-    .replace(/^at\b/i, "At")
-    .trim();
-
-  if (normalizedDescription.includes(normalizedTitle)) {
-    const titleTokens = normalizedTitle.split(" ").filter(token => token.length > 2);
-    const remainingTokens = normalizeComparableText(cleaned)
-      .split(" ")
-      .filter(token => token.length > 2 && !titleTokens.includes(token));
-    if (remainingTokens.length === 0) {
-      return "";
-    }
-  }
-
-  return cleaned;
-};
-
-const escapeRegExp = (value: string) =>
-  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-const descriptionsAreEffectivelySame = (left: string, right: string) =>
-  normalizeComparableText(left) === normalizeComparableText(right);
-
 export const normalizeEngine6ItineraryStopFields = (item: {
   title?: string;
   description?: string;
@@ -211,40 +134,30 @@ export const normalizeEngine6ItineraryStopFields = (item: {
   let title = rawTitle;
   let description = rawDescription || undefined;
 
-  const titleSource = rawTitle || rawDescription;
+  const titleSplitSource = rawTitle || rawDescription;
   const split =
-    titleSource && (isDescriptiveProseTitle(titleSource) || !rawTitle)
-      ? splitDescriptiveProseIntoLandmarkAndDetail(titleSource)
+    titleSplitSource &&
+    (isDescriptiveProseTitle(titleSplitSource) || !rawTitle)
+      ? splitDescriptiveProseIntoLandmarkAndDetail(titleSplitSource)
       : rawTitle
         ? splitDescriptiveProseIntoLandmarkAndDetail(rawTitle)
         : null;
 
   if (split?.landmark) {
     title = split.landmark;
-    if (split.detail) {
-      if (!description || descriptionsAreEffectivelySame(description, rawTitle)) {
-        description = split.detail;
+    if (!description) {
+      if (rawDescription) {
+        description = rawDescription;
+      } else if (rawTitle && isDescriptiveProseTitle(rawTitle)) {
+        description = rawTitle;
       }
-    } else if (description && descriptionsAreEffectivelySame(description, rawTitle)) {
-      description = undefined;
     }
-  } else if (rawTitle) {
-    title = rawTitle;
-  }
-
-  if (!title && rawDescription) {
+  } else if (!title && rawDescription) {
     const descriptionOnlySplit =
       splitDescriptiveProseIntoLandmarkAndDetail(rawDescription);
     if (descriptionOnlySplit?.landmark) {
       title = descriptionOnlySplit.landmark;
-      description = descriptionOnlySplit.detail || undefined;
-    }
-  }
-
-  if (description) {
-    description = stripTitleOverlapFromDescription(title, description);
-    if (!description.trim()) {
-      description = undefined;
+      description = rawDescription;
     }
   }
 

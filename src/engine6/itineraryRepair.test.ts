@@ -88,7 +88,7 @@ describe("Engine6 itinerary repair", () => {
     }
   });
 
-  it("rejects duplicate stop descriptions during normalization", () => {
+  it("preserves duplicate supplier descriptions without rewriting", () => {
     const normalized = dedupeEngine6ItineraryDescriptions(
       [
         {
@@ -103,10 +103,8 @@ describe("Engine6 itinerary repair", () => {
       { productCode: "TESTDUP1" }
     );
 
-    const descriptionKeys = normalized.map(item =>
-      normalizeEngine6ItineraryComparisonText(item.description ?? "")
-    );
-    expect(new Set(descriptionKeys).size).toBe(descriptionKeys.length);
+    expect(normalized[0]?.description).toBe("Photo stop and guide commentary.");
+    expect(normalized[1]?.description).toBe("Photo stop and guide commentary.");
   });
 
   it("omits description when source itinerary prose is unusable", () => {
@@ -127,7 +125,7 @@ describe("Engine6 itinerary repair", () => {
     expect(fallback).not.toMatch(/Yosemite|Tunnel View|Glacier Point/i);
   });
 
-  it("omits description for admission-only source lines", () => {
+  it("preserves admission-only supplier descriptions", () => {
     const rewritten = rewriteEngine6ItineraryDescriptionToSingleSentence({
       productCode: "5119P13",
       index: 1,
@@ -139,11 +137,7 @@ describe("Engine6 itinerary repair", () => {
       },
     });
 
-    expect(rewritten).toBe("");
-    expect(rewritten).not.toMatch(/^Visit\s+/i);
-    expect(rewritten).not.toMatch(/Grand Canyon West/i);
-    expect(rewritten).not.toMatch(/admission included/i);
-    expect(rewritten).not.toMatch(/\bguided route\b/i);
+    expect(rewritten).toBe("Admission included.");
   });
 
   it("preserves valid source itinerary prose when it is distinct from the title", () => {
