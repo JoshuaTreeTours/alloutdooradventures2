@@ -110,4 +110,41 @@ describe("Engine6 boat itinerary governance", () => {
       trip?.itinerary?.itemListElement?.map(item => item.item?.name)
     ).toEqual(tour.itinerary.map(item => item.title));
   });
+
+  it("uses New Orleans source itinerary titles for visible cards and JSON-LD names", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "276551P2"
+    );
+    expect(fixture).toBeDefined();
+
+    const tour = mapViatorToEngine6Tour(toPayload(fixture!));
+    const pageHtml = renderToString(<Engine6TourPage tour={tour} />);
+    const schema = buildEngine6SchemaGraph(tour);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as
+      | {
+          itinerary?: { itemListElement?: Array<{ item?: { name?: string } }> };
+        }
+      | undefined;
+    const expectedSourceTitles = [
+      "French Quarter",
+      "St. Louis Cathedral",
+      "Jackson Square",
+      "Royal Street",
+      "Lafitte's Blacksmith Shop Bar",
+      "Central Business District",
+      "Congo Square",
+    ];
+
+    expect(tour.itinerary.map(item => item.title).slice(0, 7)).toEqual(
+      expectedSourceTitles
+    );
+    expect(
+      pageHtml.match(/data-testid="engine6-itinerary-item"/g)
+    ).toHaveLength(tour.itinerary.length);
+    expect(
+      trip?.itinerary?.itemListElement?.map(item => item.item?.name).slice(0, 7)
+    ).toEqual(expectedSourceTitles);
+    expect(tour.itinerary[0].description).toBeTruthy();
+  });
 });

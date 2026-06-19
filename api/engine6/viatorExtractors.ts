@@ -1059,6 +1059,15 @@ const extractHighlights = (product: RecordLike) => {
   return { value: [], path: null as string | null };
 };
 
+const GENERIC_SOURCE_ITINERARY_TITLE_PATTERN =
+  /^(?:stop|itinerary item|point of interest|location|destination|place)(?:\s*#?\s*\d+)?$/i;
+
+const asMeaningfulSourceItineraryTitle = (value: unknown) => {
+  const title = asNonEmptyString(value);
+  if (!title) return null;
+  return GENERIC_SOURCE_ITINERARY_TITLE_PATTERN.test(title) ? null : title;
+};
+
 const normalizeSingleItineraryItem = (
   row: RecordLike,
   context: { productCode: string | null; rowIndex: number }
@@ -1078,10 +1087,20 @@ const normalizeSingleItineraryItem = (
     false;
   const isPassByFromType = /pass[\s_-]?by/i.test(stopTypeRaw ?? "");
 
+  const sourceTitle =
+    asMeaningfulSourceItineraryTitle(row.title) ??
+    asMeaningfulSourceItineraryTitle(row.name) ??
+    asMeaningfulSourceItineraryTitle(row.label);
+  const sourcePoiTitle =
+    asMeaningfulSourceItineraryTitle(pointOfInterest?.title) ??
+    asMeaningfulSourceItineraryTitle(pointOfInterest?.name) ??
+    asMeaningfulSourceItineraryTitle(stop?.name) ??
+    asMeaningfulSourceItineraryTitle(stop?.title) ??
+    asMeaningfulSourceItineraryTitle(location?.name);
   const locationTitle =
-    asNonEmptyString(pointOfInterestLocation?.locationName) ??
-    asNonEmptyString(pointOfInterestLocation?.title) ??
-    asNonEmptyString(pointOfInterestLocation?.name);
+    asMeaningfulSourceItineraryTitle(pointOfInterestLocation?.locationName) ??
+    asMeaningfulSourceItineraryTitle(pointOfInterestLocation?.title) ??
+    asMeaningfulSourceItineraryTitle(pointOfInterestLocation?.name);
   const inferredTitleFromDescription = (() => {
     const descriptionText = asNonEmptyString(row.description);
     if (!descriptionText) return null;
@@ -1111,15 +1130,9 @@ const normalizeSingleItineraryItem = (
   })();
 
   const title =
+    sourceTitle ??
+    sourcePoiTitle ??
     locationTitle ??
-    asNonEmptyString(row.title) ??
-    asNonEmptyString(row.name) ??
-    asNonEmptyString(row.label) ??
-    asNonEmptyString(pointOfInterest?.title) ??
-    asNonEmptyString(pointOfInterest?.name) ??
-    asNonEmptyString(stop?.name) ??
-    asNonEmptyString(stop?.title) ??
-    asNonEmptyString(location?.name) ??
     getEngine6ItineraryTitleOverride({
       productCode: context.productCode,
       rowIndex: context.rowIndex,
