@@ -171,6 +171,11 @@ const toTitle = (value: string | undefined) => {
 
 const titleTokenSet = (title: string) => new Set(wordTokens(title));
 
+export const extractEngine6ItineraryContextFromSource = (
+  sourceDescription: string,
+  title: string
+) => sanitizeSourcePhrase(sourceDescription, title);
+
 const sanitizeSourcePhrase = (value: string, title: string) => {
   const titleTokens = titleTokenSet(title);
   const firstSentence =

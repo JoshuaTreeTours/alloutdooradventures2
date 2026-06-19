@@ -15,10 +15,10 @@ import {
   dedupeEngine6ItineraryDescriptions,
   isEngine6StructuredItineraryUsable,
   isEngine6TitleDescriptionMismatch,
-  normalizeEngine6ItineraryComparisonText,
   resolveEngine6ItineraryForRender,
   rewriteEngine6ItineraryDescriptionToSingleSentence,
 } from "./normalizeEngine6Itinerary";
+import { normalizeEngine6ItineraryComparisonText } from "./itineraryGovernance";
 import { engine6ResolvedTours } from "./registry";
 import { ENGINE6_PARAGON_PRODUCT_CODE } from "./routes";
 import { engine6ListingTours } from "./listing";
@@ -117,7 +117,9 @@ describe("Engine6 itinerary repair", () => {
       },
     });
 
-    expect(fallback).toBe("Visit Hoover Dam during the 20 minutes stop.");
+    expect(fallback).toBe("This is a scheduled stop on the guided route.");
+    expect(fallback).not.toMatch(/^Visit\s+/i);
+    expect(fallback).not.toMatch(/Hoover Dam/i);
     expect(fallback).not.toMatch(/Yosemite|Tunnel View|Glacier Point/i);
   });
 
@@ -133,7 +135,9 @@ describe("Engine6 itinerary repair", () => {
       },
     });
 
-    expect(rewritten).toBe("Visit Grand Canyon West during the 4 hours stop.");
+    expect(rewritten).toBe("This is a scheduled stop on the guided route.");
+    expect(rewritten).not.toMatch(/^Visit\s+/i);
+    expect(rewritten).not.toMatch(/Grand Canyon West/i);
     expect(rewritten).not.toMatch(/admission included/i);
   });
 
