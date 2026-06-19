@@ -23,6 +23,7 @@ const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
   "6455NOLAAIR": "New Orleans Airboat Ride | Louisiana Bayou Tour",
   "15200P6": "New Orleans Swamp Boat Tour with Pickup",
   "3780P45": "New Orleans Riverboat Sightseeing Cruise",
+  "3780SUPERBUS": "New Orleans City Bus Tour with Riverboat Cruise",
   "3780SUPER": "New Orleans in a Day with Riverboat Cruise",
   "6953SWAMPTRANS":
     "Honey Island Swamp Boat Tour with New Orleans Transportation",
@@ -46,6 +47,8 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Travel from New Orleans to a Louisiana swamp for a narrated boat tour with pickup, bayou scenery, and seasonal wildlife viewing.",
   "3780P45":
     "Cruise the Mississippi River from New Orleans on a 75-minute narrated riverboat route past French Quarter waterfront landmarks.",
+  "3780SUPERBUS":
+    "Explore New Orleans by city bus, French Quarter walk, French Market lunch break, and 75-minute Mississippi River cruise in one coordinated day.",
   "3780SUPER":
     "Explore New Orleans in a day with a French Quarter walk, French Market lunch break, 75-minute riverboat cruise, and narrated city bus tour.",
   "6953SWAMPTRANS":
@@ -69,6 +72,14 @@ const ENGINE6_CLASSIFICATION_OVERRIDES: Record<
     activityCategories: Array<{ slug: string; label: string }>;
   }
 > = {
+  "3780SUPERBUS": {
+    primaryCategory: "sightseeing-city-tours",
+    categories: ["sightseeing-city-tours"],
+    primaryDisplayCategory: "Sightseeing & City Tours",
+    activityCategories: [
+      { slug: "sightseeing-city-tours", label: "Sightseeing & City Tours" },
+    ],
+  },
   "3780SUPER": {
     primaryCategory: "sightseeing-city-tours",
     categories: ["sightseeing-city-tours"],
@@ -97,6 +108,8 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Travel from New Orleans to a Louisiana swamp for a narrated boat tour through bayou waterways and wetland scenery. This experience includes selected hotel pickup and drop-off, then continues to the launch area for time on the water with a local captain. The route is water-based rather than a city sightseeing loop, so conditions, wildlife activity, and captain routing shape what guests see during the outing. Expect marsh and cypress landscapes, opportunities for wildlife viewing, and practical transportation logistics suited to travelers who want a swamp experience without arranging a separate drive from New Orleans.",
   "3780P45":
     "Board the Riverboat CITY of NEW ORLEANS for a 75-minute Mississippi River sightseeing cruise from the French Quarter riverfront. The route stays on the water with live captain narration, open river views, and a round-trip departure behind JAX Brewery. From the vessel, travelers can see the French Quarter riverfront, Jackson Square, St. Louis Cathedral, the Crescent City Connection, the Aquarium of the Americas, Mardi Gras World, Caesars Casino, and Woldenberg Riverfront Park before returning to the same dock.",
+  "3780SUPERBUS":
+    "Explore New Orleans in one extended sightseeing outing with a guided French Quarter walk, independent lunch time at the French Market, a 75-minute Mississippi River cruise aboard the Riverboat CITY of NEW ORLEANS, and a narrated city highlights bus tour. The route begins at Cafe Beignet in the JAX Brewery Building and combines walking, coach, and riverboat perspectives on Jackson Square, the Garden District, City Park, the National WWII Museum, Audubon Aquarium, and the downtown riverfront.",
   "3780SUPER":
     "Explore New Orleans in one extended sightseeing outing with a guided French Quarter walk, independent lunch time at the French Market, a 75-minute Mississippi River cruise aboard the Riverboat CITY of NEW ORLEANS, and a narrated city highlights bus tour. The route begins at Cafe Beignet in the JAX Brewery Building and combines walking, coach, and riverboat perspectives on Jackson Square, the Garden District, City Park, the National WWII Museum, Audubon Aquarium, and the downtown riverfront.",
   "6953SWAMPTRANS":
@@ -310,6 +323,15 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
     "Continue through Los Olivos for small-town wine-country atmosphere and additional tasting opportunities when scheduled.",
     "Travel through Santa Ynez with route commentary on valley history, agriculture, and regional winemaking styles.",
     "Return to Santa Barbara with a final scenic drive back over the pass after the day’s tasting itinerary wraps.",
+  ],
+  "3780SUPERBUS": [
+    "Meet outside Cafe Beignet in the JAX Brewery Building on Decatur Street for check-in and the start of the day.",
+    "Walk through the historic French Quarter with guide-led context on New Orleans culture, architecture, and early city history.",
+    "Pass Jackson Square while moving through the French Quarter portion of the sightseeing route.",
+    "Pause at the French Market for independent lunch time before continuing the combined sightseeing experience.",
+    "Board the Riverboat CITY of NEW ORLEANS for a 75-minute Mississippi River sightseeing cruise with captain narration.",
+    "Continue by narrated coach through city highlight areas including the Garden District, St. Charles Avenue, and above-ground cemetery scenery.",
+    "Return to the Cafe Beignet meeting area at the end of the coordinated walking, riverboat, and coach tour.",
   ],
   "3780SUPER": [
     "Meet outside Cafe Beignet in the JAX Brewery Building on Decatur Street for check-in and the start of the day.",

@@ -3,7 +3,10 @@ import { Link } from "wouter";
 import { SITE_BRAND_NAME } from "../utils/site";
 
 export const toursMenuItems = [
-  { label: "Day Tours", href: "/activities" },
+  { label: "Day Tours", href: "/tours/day" },
+  { label: "Cycling Day Tours", href: "/tours/day/cycling" },
+  { label: "Hiking Day Tours", href: "/tours/day/hiking" },
+  { label: "Paddle Day Tours", href: "/tours/day/paddle" },
   { label: "Multi-Day Adventures", href: "/tours/multi-day" },
 ] as const;
 

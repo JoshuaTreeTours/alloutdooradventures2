@@ -132,6 +132,7 @@ import specimen6455nolaairPayload from "../../data/engine6/viator/6455NOLAAIR.ex
 import specimen15200p6Payload from "../../data/engine6/viator/15200P6.exact-product.json";
 import specimen3780p45Payload from "../../data/engine6/viator/3780P45.exact-product.json";
 import specimen3780superPayload from "../../data/engine6/viator/3780SUPER.exact-product.json";
+import specimen3780superbusPayload from "../../data/engine6/viator/3780SUPERBUS.exact-product.json";
 import specimen6953swamptransPayload from "../../data/engine6/viator/6953SWAMPTRANS.exact-product.json";
 import specimen15200p2Payload from "../../data/engine6/viator/15200P2.exact-product.json";
 import specimen273720p1Payload from "../../data/engine6/viator/273720P1.exact-product.json";
@@ -1006,6 +1007,15 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/New-Orleans/Mardi-Gras-Jazz-Brunch-Cruise/d675-3780P45",
     rawPayload: specimen3780p45Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "3780SUPERBUS",
+    publicUrl:
+      "https://www.viator.com/tours/New-Orleans/New-Orleans-City-Bus-Tour/d675-3780SUPER",
+    rawPayload: specimen3780superbusPayload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

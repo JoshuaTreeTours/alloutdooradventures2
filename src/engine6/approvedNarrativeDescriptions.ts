@@ -6,6 +6,7 @@ export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "5250LIBERTYELLIS",
   "122012P17",
   "3780P45",
+  "3780SUPERBUS",
   "3780SUPER",
   "276551P2",
   "58347P1",
@@ -32,6 +33,8 @@ export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTIONS: Record<
     "See many of New York City's most recognizable neighborhoods and landmarks on a guided half-day sightseeing tour by luxury coach. Travel through Midtown, Central Park, Lincoln Center, and other notable areas while your guide shares stories about the city's history, architecture, and culture. Strategic photo stops along the route allow you to capture iconic views without the hassle of navigating the city on your own, making this an efficient introduction to New York for first-time visitors.",
   "3780P45":
     "Cruise the Mississippi River from the French Quarter riverfront aboard the Riverboat CITY of NEW ORLEANS. This 75-minute sightseeing route uses live captain narration while the boat passes downtown river landmarks including Jackson Square, St. Louis Cathedral, the Crescent City Connection, the Aquarium of the Americas, Mardi Gras World, Caesars Casino, and Woldenberg Riverfront Park. Travelers experience New Orleans from the water with open river views and a smooth downtown round-trip finish at the dock behind JAX Brewery.",
+  "3780SUPERBUS":
+    "Explore New Orleans in one combined sightseeing day with a guided French Quarter walk, independent lunch time at the French Market, and a 75-minute Mississippi River cruise aboard the Riverboat CITY of NEW ORLEANS. The experience continues by narrated coach through city highlights such as the Garden District, City Park, the National WWII Museum, and Audubon Aquarium. Starting and finishing at Cafe Beignet in the JAX Brewery Building, the route blends walking, riverboat, and bus perspectives on New Orleans.",
   "3780SUPER":
     "Explore New Orleans in one combined sightseeing day with a guided French Quarter walk, independent lunch time at the French Market, and a 75-minute Mississippi River cruise aboard the Riverboat CITY of NEW ORLEANS. The experience continues by narrated coach through city highlights such as the Garden District, City Park, the National WWII Museum, and Audubon Aquarium. Starting and finishing at Cafe Beignet in the JAX Brewery Building, the route blends walking, riverboat, and bus perspectives on New Orleans.",
   "276551P2":
