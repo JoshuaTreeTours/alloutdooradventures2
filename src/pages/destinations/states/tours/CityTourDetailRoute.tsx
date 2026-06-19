@@ -396,7 +396,8 @@ export default function CityTourDetailRoute({
                             stopType,
                           });
 
-                    const titleSource = readEngine6LiveItineraryTitleSource(record);
+                    const titleSource =
+                      readEngine6LiveItineraryTitleSource(record);
 
                     return {
                       ...record,
@@ -410,7 +411,7 @@ export default function CityTourDetailRoute({
                         .trim(),
                     };
                   })
-                  .filter((item): item is Engine6LiveItineraryItem =>
+                  .filter((item): item is NonNullable<typeof item> =>
                     Boolean(item)
                   ) as Engine6LiveItineraryItem[])
               : null,

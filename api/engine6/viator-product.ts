@@ -218,13 +218,7 @@ const EMPTY_EXTRACTED_PRODUCT: Engine6Extracted = {
   meetingPointText: null,
   overviewText: null,
   highlights: [] as string[],
-  itinerary: [] as Array<{
-    title: string;
-    stopType?: "stop" | "pass-by";
-    description?: string;
-    duration?: string;
-    admissionNote?: string;
-  }>,
+  itinerary: [] as Engine6Extracted["itinerary"],
   itinerarySummaryText: null,
   faqs: [] as Array<{ question: string; answer: string }>,
   included: [] as string[],
