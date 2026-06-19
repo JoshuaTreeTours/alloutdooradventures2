@@ -288,6 +288,22 @@ describe("Engine6 prose-quality itinerary title governance", () => {
             description:
               "Scenic transfer to Zion National Park with time for photos.",
           },
+          {
+            description:
+              "This stop overlooks the American and Horseshoe Falls from a classic viewpoint.",
+          },
+          {
+            description:
+              "It includes time around Goat Island before the next waterfall view.",
+          },
+          {
+            description:
+              "This section pauses near Prospect Point Observation Tower for photos.",
+          },
+          {
+            description:
+              "Here you pass Rainbow Bridge while your guide explains the border crossing.",
+          },
         ],
       },
     } as Record<string, unknown>);
@@ -299,6 +315,10 @@ describe("Engine6 prose-quality itinerary title governance", () => {
       "Beverly Hills",
       "Spanish Village Art Center",
       "Zion National Park",
+      "American and Horseshoe Falls",
+      "Goat Island",
+      "Prospect Point Observation Tower",
+      "Rainbow Bridge",
     ]);
   });
 

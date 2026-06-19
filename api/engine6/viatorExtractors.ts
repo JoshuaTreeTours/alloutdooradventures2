@@ -1099,6 +1099,13 @@ const cleanEngine6NamedEntityTitle = (value: string) =>
     .replace(/[.,:;!?]+$/g, "")
     .trim();
 
+const isSafeEngine6NamedEntityTitle = (entity: string) =>
+  entity.length > 0 &&
+  getEngine6WordCount(entity) <= 8 &&
+  !ENGINE6_WEAK_DESCRIPTION_TITLE_START.test(entity) &&
+  !ENGINE6_ACTION_DESCRIPTION_TITLE_START.test(entity) &&
+  !ENGINE6_WEAK_DESCRIPTION_TITLE_END.test(entity);
+
 const extractEngine6NamedEntityFromDescription = (description: string) => {
   const capitalizedEntity =
     "([A-ZÀ-ÖØ-Ý][\\wÀ-ÖØ-öø-ÿ'&\\-]*(?:\\s+(?:of|the|and|de|del|la|le|du|des|[A-ZÀ-ÖØ-Ý][\\wÀ-ÖØ-öø-ÿ'&\\-]*)){0,7})";
@@ -1110,7 +1117,7 @@ const extractEngine6NamedEntityFromDescription = (description: string) => {
       `^[Ss]cenic\\s+transfer\\s+to\\s+(?:the\\s+)?${capitalizedEntity}\\b`
     ),
     new RegExp(
-      `\\b(?:through|to|at|past|in)\\s+(?:the\\s+)?${capitalizedEntity}\\b`
+      `\\b(?:through|to|at|past|in|near|around|overlooking|toward|towards|beside|along)\\s+(?:the\\s+)?${capitalizedEntity}\\b`
     ),
   ];
 
@@ -1118,13 +1125,23 @@ const extractEngine6NamedEntityFromDescription = (description: string) => {
     const match = description.match(pattern);
     if (match?.[1]) {
       const entity = cleanEngine6NamedEntityTitle(match[1]);
-      if (
-        entity &&
-        getEngine6WordCount(entity) <= 8 &&
-        !ENGINE6_WEAK_DESCRIPTION_TITLE_END.test(entity)
-      ) {
+      if (isSafeEngine6NamedEntityTitle(entity)) {
         return entity;
       }
+    }
+  }
+
+  const poiSuffix =
+    "(?:POI|Point|Viewpoint|Overlook|Tower|Park|Bridge|Plaza|Street|Drive|Avenue|Boulevard|Road|District|Falls|Waterfall|Waterfalls|Island|Observation\\s+Tower|Center|Centre|Attraction|Garden|Gardens|Gorge|Trail|Hill|Hills|Harbor|Harbour|Beach|Pier|Wharf|Lake|River|Canyon|Valley|Monument|Memorial|Museum|Village|Square)";
+  const poiEntityPattern = new RegExp(
+    `\\b((?:[A-ZÀ-ÖØ-Ý][\\wÀ-ÖØ-öø-ÿ'&\\-]*|[A-Z]{2,})(?:\\s+(?:of|the|and|de|del|la|le|du|des|[A-ZÀ-ÖØ-Ý][\\wÀ-ÖØ-öø-ÿ'&\\-]*|[A-Z]{2,})){0,7}\\s+${poiSuffix})\\b`,
+    "g"
+  );
+  let poiMatch: RegExpExecArray | null;
+  while ((poiMatch = poiEntityPattern.exec(description)) !== null) {
+    const entity = cleanEngine6NamedEntityTitle(poiMatch[1] ?? "");
+    if (isSafeEngine6NamedEntityTitle(entity)) {
+      return entity;
     }
   }
 
