@@ -1254,9 +1254,9 @@ const normalizeSingleItineraryItem = (
     applyDescriptionTitlePolicy = Boolean(
       descriptionText &&
       title &&
-      (normalizeEngine6TitlePolicyText(descriptionText).startsWith(
-        normalizeEngine6TitlePolicyText(title)
-      ) ||
+      ((normalizeEngine6TitlePolicyText(descriptionText) ===
+        normalizeEngine6TitlePolicyText(title) &&
+        !isShortEngine6PoiTitle(title)) ||
         ENGINE6_WEAK_DESCRIPTION_TITLE_START.test(title) ||
         ENGINE6_ACTION_DESCRIPTION_TITLE_START.test(title) ||
         ENGINE6_WEAK_DESCRIPTION_TITLE_END.test(title))

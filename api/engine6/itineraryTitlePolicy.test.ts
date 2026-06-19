@@ -212,6 +212,55 @@ describe("Engine6 prose-quality itinerary title governance", () => {
     }
   });
 
+  it("preserves reviewed 106439P1 POI titles instead of neutral fallbacks", () => {
+    const result = extractEngine6Product(specimen106439p1Payload);
+    const titles = result.extracted.itinerary.map(item => item.title);
+
+    expect(titles).toContain("Two Rodeo Drive");
+    expect(titles).toContain("Greystone Mansion and Park");
+    expect(titles).toContain("Will Rogers Memorial Park");
+    expect(titles).not.toContain("Itinerary Stop 2");
+    expect(titles).not.toContain("Itinerary Stop 3");
+    expect(titles).not.toContain("Itinerary Stop 6");
+  });
+
+  it("does not demote explicit POI titles just because their descriptions start with the title", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "EXPLICIT-POI-TITLE-REGRESSION",
+        title: "Explicit POI Tour",
+        itineraryItems: [
+          {
+            title: "Two Rodeo Drive",
+            description:
+              "Two Rodeo Drive is a Beverly Hills shopping district with recognizable architecture.",
+          },
+          {
+            title: "Greystone Mansion and Park",
+            description:
+              "Greystone Mansion and Park has appeared in many film and TV productions.",
+          },
+          {
+            title: "Will Rogers Memorial Park",
+            description:
+              "Will Rogers Memorial Park is a landscaped city park near Rodeo Drive.",
+          },
+        ],
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Two Rodeo Drive",
+      "Greystone Mansion and Park",
+      "Will Rogers Memorial Park",
+    ]);
+    expect(result.extracted.itinerary.map(item => item.titleSource)).toEqual([
+      "explicit",
+      "explicit",
+      "explicit",
+    ]);
+  });
+
   it("falls back for Niagara-style pronoun sentence titles and extracts safe named entities", () => {
     const result = extractEngine6Product({
       product: {
