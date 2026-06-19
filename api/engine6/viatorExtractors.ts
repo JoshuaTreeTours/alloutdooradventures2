@@ -6,7 +6,11 @@ import {
   resolveProductScopedHero,
 } from "./heroResolver.js";
 import { classifyTourCategories } from "./tourCategoryClassifier.js";
-import { resolveEngine6ItineraryTitle } from "./itineraryTitlePolicy.js";
+import {
+  buildEngine6ItineraryItemTitleFieldPath,
+  buildEngine6ItinerarySourceTitleFieldPattern,
+  resolveEngine6ItineraryTitle,
+} from "./itineraryTitlePolicy.js";
 import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
 
 export type Engine6DiagnosticsPaths = {
@@ -63,6 +67,8 @@ export type Engine6DiagnosticsPaths = {
   requirementsFieldPath: string | null;
   highlightClassificationReason: string | null;
   itineraryFieldPath: string | null;
+  itinerarySourceTitleFieldPath: string | null;
+  itineraryMissingSourceTitleFieldPaths: string[];
   itineraryItemCount: number;
   itinerarySourceUsed: string | null;
   itineraryStructuredSourceUsed?: boolean;
@@ -153,6 +159,8 @@ type ItineraryResult = {
   value: Engine6ExtractedItineraryItem[];
   path: string;
   structuredSourceUsed: boolean;
+  sourceTitleFieldPath: string | null;
+  missingSourceTitleFieldPaths: string[];
 };
 
 type ViablePriceDetectionResult = {
@@ -1062,12 +1070,24 @@ const extractHighlights = (product: RecordLike) => {
 
 const normalizeSingleItineraryItem = (
   row: RecordLike,
-  context: { productCode: string | null; rowIndex: number }
-): Engine6ExtractedItineraryItem | null => {
+  context: {
+    productCode: string | null;
+    rowIndex: number;
+    itineraryFieldPath: string;
+  }
+): {
+  item: Engine6ExtractedItineraryItem;
+  missingSourceTitleFieldPath: string | null;
+} | null => {
   const pointOfInterest = asRecord(row.pointOfInterest);
   const pointOfInterestLocation = asRecord(row.pointOfInterestLocation);
   const stop = asRecord(row.stop);
   const location = asRecord(row.location);
+  const itineraryRowBasePath = `${context.itineraryFieldPath}[${context.rowIndex}]`;
+  const sourceTitleFieldPath = buildEngine6ItineraryItemTitleFieldPath(
+    context.itineraryFieldPath,
+    context.rowIndex
+  );
   const stopTypeRaw =
     asNonEmptyString(row.stopType) ??
     asNonEmptyString(row.activityType) ??
@@ -1081,21 +1101,42 @@ const normalizeSingleItineraryItem = (
 
   const preliminaryStopType =
     isPassByFlag || isPassByFromType ? ("pass-by" as const) : ("stop" as const);
-  const resolvedTitle = resolveEngine6ItineraryTitle({
-    sourceTitleFields: [
-      asNonEmptyString(row.title),
-      asNonEmptyString(row.name),
-      asNonEmptyString(row.label),
-    ],
+  const titleResolution = resolveEngine6ItineraryTitle({
+    sourceTitle: asNonEmptyString(row.title),
+    sourceTitleFieldPath,
     namingFields: [
-      asNonEmptyString(pointOfInterestLocation?.locationName),
-      asNonEmptyString(pointOfInterestLocation?.title),
-      asNonEmptyString(pointOfInterestLocation?.name),
-      asNonEmptyString(pointOfInterest?.title),
-      asNonEmptyString(pointOfInterest?.name),
-      asNonEmptyString(stop?.name),
-      asNonEmptyString(stop?.title),
-      asNonEmptyString(location?.name),
+      {
+        value: asNonEmptyString(pointOfInterestLocation?.locationName),
+        fieldPath: `${itineraryRowBasePath}.pointOfInterestLocation.locationName`,
+      },
+      {
+        value: asNonEmptyString(pointOfInterestLocation?.title),
+        fieldPath: `${itineraryRowBasePath}.pointOfInterestLocation.title`,
+      },
+      {
+        value: asNonEmptyString(pointOfInterestLocation?.name),
+        fieldPath: `${itineraryRowBasePath}.pointOfInterestLocation.name`,
+      },
+      {
+        value: asNonEmptyString(pointOfInterest?.title),
+        fieldPath: `${itineraryRowBasePath}.pointOfInterest.title`,
+      },
+      {
+        value: asNonEmptyString(pointOfInterest?.name),
+        fieldPath: `${itineraryRowBasePath}.pointOfInterest.name`,
+      },
+      {
+        value: asNonEmptyString(stop?.name),
+        fieldPath: `${itineraryRowBasePath}.stop.name`,
+      },
+      {
+        value: asNonEmptyString(stop?.title),
+        fieldPath: `${itineraryRowBasePath}.stop.title`,
+      },
+      {
+        value: asNonEmptyString(location?.name),
+        fieldPath: `${itineraryRowBasePath}.location.name`,
+      },
     ],
     titleOverride: getEngine6ItineraryTitleOverride({
       productCode: context.productCode,
@@ -1103,12 +1144,12 @@ const normalizeSingleItineraryItem = (
     }),
     stopType: preliminaryStopType,
   });
-  const cleanedTitle = resolvedTitle
+  const cleanedTitle = titleResolution.title
     .replace(/\s*\((pass\s*by)\)\s*$/i, "")
     .trim();
-  const title = cleanedTitle || resolvedTitle;
+  const title = cleanedTitle || titleResolution.title;
   const isPassByFromTitle =
-    /\bpass(?:\s|-)?by\b/i.test(resolvedTitle) && cleanedTitle.length > 0;
+    /\bpass(?:\s|-)?by\b/i.test(titleResolution.title) && cleanedTitle.length > 0;
 
   const description =
     asNonEmptyString(row.description) ??
@@ -1150,14 +1191,18 @@ const normalizeSingleItineraryItem = (
     isPassByFlag || isPassByFromType || isPassByFromTitle ? "pass-by" : "stop";
 
   return {
-    title,
-    stopType,
-    ...(descriptionWithoutAdmission
-      ? { description: descriptionWithoutAdmission }
-      : {}),
-    ...(duration ? { duration } : {}),
-    ...(admissionNote ? { admissionNote } : {}),
-  } satisfies Engine6ExtractedItineraryItem;
+    item: {
+      title,
+      stopType,
+      ...(descriptionWithoutAdmission
+        ? { description: descriptionWithoutAdmission }
+        : {}),
+      ...(duration ? { duration } : {}),
+      ...(admissionNote ? { admissionNote } : {}),
+    },
+    missingSourceTitleFieldPath:
+      titleResolution.missingSourceTitleFieldPath,
+  };
 };
 
 const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
@@ -1223,27 +1268,30 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
   };
 
   const normalizeItinerary = (
-    value: unknown
-  ): Engine6ExtractedItineraryItem[] => {
+    value: unknown,
+    itineraryFieldPath: string
+  ): ItineraryResult => {
     const rows = collectNestedStopRows(value);
-    if (!Array.isArray(rows)) {
-      return [];
-    }
-
+    const missingSourceTitleFieldPaths: string[] = [];
     const seen = new Set<string>();
-    return rows
+    const valueItems = rows
       .map((item, rowIndex) => {
         const parsed = normalizeSingleItineraryItem(item.row, {
           productCode: asNonEmptyString(product.productCode),
           rowIndex,
+          itineraryFieldPath,
         });
         if (!parsed) return null;
 
+        if (parsed.missingSourceTitleFieldPath) {
+          missingSourceTitleFieldPaths.push(parsed.missingSourceTitleFieldPath);
+        }
+
         const dedupeKey = [
-          parsed.title.toLowerCase(),
-          (parsed.description ?? "").toLowerCase(),
-          (parsed.duration ?? "").toLowerCase(),
-          parsed.stopType ?? "stop",
+          parsed.item.title.toLowerCase(),
+          (parsed.item.description ?? "").toLowerCase(),
+          (parsed.item.duration ?? "").toLowerCase(),
+          parsed.item.stopType ?? "stop",
           (item.sectionLabel ?? "").toLowerCase(),
         ].join("|");
 
@@ -1253,10 +1301,19 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
         seen.add(dedupeKey);
 
         return item.sectionLabel
-          ? { ...parsed, sectionLabel: item.sectionLabel }
-          : parsed;
+          ? { ...parsed.item, sectionLabel: item.sectionLabel }
+          : parsed.item;
       })
       .filter((item): item is Engine6ExtractedItineraryItem => Boolean(item));
+
+    return {
+      value: valueItems,
+      path: itineraryFieldPath,
+      structuredSourceUsed: false,
+      sourceTitleFieldPath:
+        buildEngine6ItinerarySourceTitleFieldPattern(itineraryFieldPath),
+      missingSourceTitleFieldPaths,
+    };
   };
 
   const structuredPaths: PathSegment[][] = [
@@ -1277,24 +1334,21 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
   ];
 
   for (const path of structuredPaths) {
-    const value = normalizeItinerary(readPath(product, path));
-    if (value.length > 0) {
+    const itineraryFieldPath = formatFieldPath(path);
+    const normalized = normalizeItinerary(readPath(product, path), itineraryFieldPath);
+    if (normalized.value.length > 0) {
       return {
-        value,
-        path: formatFieldPath(path),
+        ...normalized,
         structuredSourceUsed: true,
       };
     }
   }
 
   for (const path of [["itinerary"], ["whatToExpect"]] as PathSegment[][]) {
-    const value = normalizeItinerary(readPath(product, path));
-    if (value.length > 0) {
-      return {
-        value,
-        path: formatFieldPath(path),
-        structuredSourceUsed: false,
-      };
+    const itineraryFieldPath = formatFieldPath(path);
+    const normalized = normalizeItinerary(readPath(product, path), itineraryFieldPath);
+    if (normalized.value.length > 0) {
+      return normalized;
     }
   }
 
@@ -1302,6 +1356,10 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
     value: [],
     path: "product.itineraryItems",
     structuredSourceUsed: false,
+    sourceTitleFieldPath: buildEngine6ItinerarySourceTitleFieldPattern(
+      "product.itineraryItems"
+    ),
+    missingSourceTitleFieldPaths: [],
   };
 };
 
@@ -1674,6 +1732,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     requirementsFieldPath: null,
     highlightClassificationReason: null,
     itineraryFieldPath: null,
+    itinerarySourceTitleFieldPath: null,
+    itineraryMissingSourceTitleFieldPaths: [],
     itineraryItemCount: 0,
     itinerarySourceUsed: null,
     itineraryStructuredSourceUsed: false,
@@ -1868,6 +1928,9 @@ export const extractEngine6Product = (rawPayload: unknown) => {
 
   const itinerary = extractPlaybookItinerary(product);
   diagnostics.itineraryFieldPath = itinerary.path;
+  diagnostics.itinerarySourceTitleFieldPath = itinerary.sourceTitleFieldPath;
+  diagnostics.itineraryMissingSourceTitleFieldPaths =
+    itinerary.missingSourceTitleFieldPaths;
   diagnostics.itineraryItemCount = itinerary.value.length;
   diagnostics.itinerarySourceUsed =
     itinerary.value.length > 0 ? itinerary.path : null;

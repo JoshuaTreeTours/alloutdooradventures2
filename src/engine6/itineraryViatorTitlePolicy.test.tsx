@@ -65,6 +65,15 @@ describe("Engine6 Viator itinerary title policy", () => {
     const extracted = extractEngine6Product(fixture276551P2!.rawPayload);
     const tour = mapViatorToEngine6Tour(toPayload(fixture276551P2!));
 
+    expect(extracted.diagnostics.itineraryFieldPath).toBe(
+      "product.itineraryItems"
+    );
+    expect(extracted.diagnostics.itinerarySourceTitleFieldPath).toBe(
+      "product.itineraryItems[].title"
+    );
+    expect(extracted.diagnostics.itineraryMissingSourceTitleFieldPaths).toEqual(
+      []
+    );
     expect(extracted.extracted.itinerary.map(item => item.title)).toEqual(
       expected276551P2Titles
     );
@@ -135,6 +144,13 @@ describe("Engine6 Viator itinerary title policy", () => {
       "Pass By",
       "Stop",
       "Stop",
+    ]);
+    expect(extracted.diagnostics.itinerarySourceTitleFieldPath).toBe(
+      "product.itineraryItems[].title"
+    );
+    expect(extracted.diagnostics.itineraryMissingSourceTitleFieldPaths).toEqual([
+      "product.itineraryItems[0].title",
+      "product.itineraryItems[1].title",
     ]);
     expect(extracted.extracted.itinerary.map(item => item.description)).toEqual(
       [

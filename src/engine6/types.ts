@@ -78,6 +78,8 @@ export type Engine6TourDiagnostics = {
   meetingPointSummaryApplied?: boolean;
   meetingPointSummaryReason?: string | null;
   itineraryFieldPath: string | null;
+  itinerarySourceTitleFieldPath?: string | null;
+  itineraryMissingSourceTitleFieldPaths?: string[];
   itineraryItemCount: number;
   itinerarySourceUsed: string | null;
   itineraryStructuredSourceUsed?: boolean;
