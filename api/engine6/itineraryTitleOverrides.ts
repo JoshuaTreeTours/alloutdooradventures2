@@ -3,25 +3,11 @@ type Engine6ItineraryTitleOverrideInput = {
   rowIndex: number;
 };
 
-// Product-scoped itinerary title repairs confirmed by Engine6 itinerary
-// prose-quality and missing-title audits. These rows have stable order and no
-// usable raw title/name fields in the affected payloads; use these only as
+// Product-scoped itinerary title repairs confirmed by the Engine6 missing-title
+// audit/manual review. These rows in Viator product 414460P1 have stable row
+// order and no raw title/name fields in the affected payload; use these only as
 // conservative fallbacks before the description-derived title heuristic.
 const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
-  "3885SW303BS": {
-    0: "Sihlquai Bus Station departure",
-    1: "Lucerne orientation drive",
-    2: "Mount Titlis cable car ascent",
-    3: "Glacier Cave and Titlis Cliff Walk",
-    4: "Sihlquai Coach Terminal return",
-  },
-  "3885GRINDEL_ZUR": {
-    0: "Zurich departure",
-    1: "Interlaken",
-    2: "Grindelwald",
-    3: "Lauterbrunnen",
-    4: "Return to Zurich",
-  },
   "414460P1": {
     0: "Wollman Rink",
     1: "Central Park Carousel",
