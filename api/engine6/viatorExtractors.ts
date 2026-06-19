@@ -1064,6 +1064,120 @@ const extractHighlights = (product: RecordLike) => {
   return { value: [], path: null as string | null };
 };
 
+const ENGINE6_WEAK_DESCRIPTION_TITLE_START =
+  /^(?:this|that|it|they|we|you|here\s+you|this\s+section|this\s+stop)\b/i;
+const ENGINE6_ACTION_DESCRIPTION_TITLE_START =
+  /^(?:explore|enjoy|experience|discover|visit|see|stop|drive|walk|ride|sail|cruise|pass|head|continue|return|depart|meet|board|now\s+it(?:'|’)s\s+time|are\s+you\s+ready)\b/i;
+const ENGINE6_WEAK_DESCRIPTION_TITLE_END =
+  /\b(?:and|or|with|to|from|at|in|on|for)$/i;
+
+const normalizeEngine6TitlePolicyText = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+
+const getEngine6WordCount = (value: string) =>
+  value.trim().split(/\s+/).filter(Boolean).length;
+
+const isShortEngine6PoiTitle = (title: string) => {
+  const words = getEngine6WordCount(title);
+  return (
+    words > 0 &&
+    words <= 6 &&
+    /^[A-ZÀ-ÖØ-Ý0-9]/.test(title) &&
+    !ENGINE6_WEAK_DESCRIPTION_TITLE_START.test(title) &&
+    !ENGINE6_ACTION_DESCRIPTION_TITLE_START.test(title)
+  );
+};
+
+const cleanEngine6NamedEntityTitle = (value: string) =>
+  value
+    .replace(/\s+/g, " ")
+    .replace(/^the\s+/i, match => (match === "The " ? match : ""))
+    .replace(/[.,:;!?]+$/g, "")
+    .trim();
+
+const isSafeEngine6NamedEntityTitle = (entity: string) =>
+  entity.length > 0 &&
+  getEngine6WordCount(entity) <= 8 &&
+  !ENGINE6_WEAK_DESCRIPTION_TITLE_START.test(entity) &&
+  !ENGINE6_ACTION_DESCRIPTION_TITLE_START.test(entity) &&
+  !ENGINE6_WEAK_DESCRIPTION_TITLE_END.test(entity);
+
+const extractEngine6NamedEntityFromDescription = (description: string) => {
+  const capitalizedEntity =
+    "([A-ZÀ-ÖØ-Ý][\\wÀ-ÖØ-öø-ÿ'&\\-]*(?:\\s+(?:of|the|and|de|del|la|le|du|des|[A-ZÀ-ÖØ-Ý][\\wÀ-ÖØ-öø-ÿ'&\\-]*)){0,7})";
+  const patterns = [
+    new RegExp(
+      `^(?:[Vv]isit|[Dd]rive\\s+through|[Pp]ass|[Pp]ass\\s+the|[Ee]xplore|[Ee]njoy|[Ee]xperience|[Dd]iscover|[Ss]ee|[Ss]top\\s+at|[Ww]alk\\s+through|[Rr]ide\\s+through|[Ss]ail\\s+past|[Cc]ruise\\s+past|[Hh]ead\\s+to|[Cc]ontinue\\s+to|[Rr]eturn\\s+to|[Dd]epart\\s+from|[Mm]eet\\s+at|[Bb]oard\\s+at)\\s+(?:the\\s+)?${capitalizedEntity}\\b`
+    ),
+    new RegExp(
+      `^[Ss]cenic\\s+transfer\\s+to\\s+(?:the\\s+)?${capitalizedEntity}\\b`
+    ),
+    new RegExp(
+      `\\b(?:through|to|at|past|in|near|around|overlooking|toward|towards|beside|along)\\s+(?:the\\s+)?${capitalizedEntity}\\b`
+    ),
+  ];
+
+  for (const pattern of patterns) {
+    const match = description.match(pattern);
+    if (match?.[1]) {
+      const entity = cleanEngine6NamedEntityTitle(match[1]);
+      if (isSafeEngine6NamedEntityTitle(entity)) {
+        return entity;
+      }
+    }
+  }
+
+  const poiSuffix =
+    "(?:POI|Point|Viewpoint|Overlook|Tower|Park|Bridge|Plaza|Street|Drive|Avenue|Boulevard|Road|District|Falls|Waterfall|Waterfalls|Island|Observation\\s+Tower|Center|Centre|Attraction|Garden|Gardens|Gorge|Trail|Hill|Hills|Harbor|Harbour|Beach|Pier|Wharf|Lake|River|Canyon|Valley|Monument|Memorial|Museum|Village|Square)";
+  const poiEntityPattern = new RegExp(
+    `\\b((?:[A-ZÀ-ÖØ-Ý][\\wÀ-ÖØ-öø-ÿ'&\\-]*|[A-Z]{2,})(?:\\s+(?:of|the|and|de|del|la|le|du|des|[A-ZÀ-ÖØ-Ý][\\wÀ-ÖØ-öø-ÿ'&\\-]*|[A-Z]{2,})){0,7}\\s+${poiSuffix})\\b`,
+    "g"
+  );
+  let poiMatch: RegExpExecArray | null;
+  while ((poiMatch = poiEntityPattern.exec(description)) !== null) {
+    const entity = cleanEngine6NamedEntityTitle(poiMatch[1] ?? "");
+    if (isSafeEngine6NamedEntityTitle(entity)) {
+      return entity;
+    }
+  }
+
+  return null;
+};
+
+const resolveSafeEngine6DescriptionInferredTitle = (
+  candidate: string | null,
+  description: string | null,
+  stopNumber: number
+) => {
+  const fallback = `Itinerary Stop ${stopNumber}`;
+  const cleanedCandidate = candidate?.replace(/[.,:;]+$/, "").trim() ?? null;
+  const namedEntity = description
+    ? extractEngine6NamedEntityFromDescription(description)
+    : null;
+  if (!cleanedCandidate) return namedEntity ?? fallback;
+
+  const normalizedCandidate = normalizeEngine6TitlePolicyText(cleanedCandidate);
+  const normalizedDescription = description
+    ? normalizeEngine6TitlePolicyText(description)
+    : "";
+  const isDuplicateDescription =
+    normalizedDescription.length > 0 &&
+    (normalizedCandidate === normalizedDescription ||
+      normalizedDescription.startsWith(`${normalizedCandidate} `));
+  const weak =
+    ENGINE6_WEAK_DESCRIPTION_TITLE_START.test(cleanedCandidate) ||
+    ENGINE6_ACTION_DESCRIPTION_TITLE_START.test(cleanedCandidate) ||
+    ENGINE6_WEAK_DESCRIPTION_TITLE_END.test(cleanedCandidate) ||
+    (getEngine6WordCount(cleanedCandidate) > 12 && !namedEntity) ||
+    (isDuplicateDescription && !isShortEngine6PoiTitle(cleanedCandidate));
+
+  return weak ? (namedEntity ?? fallback) : cleanedCandidate;
+};
+
 const normalizeSingleItineraryItem = (
   row: RecordLike,
   context: {
@@ -1087,12 +1201,12 @@ const normalizeSingleItineraryItem = (
     false;
   const isPassByFromType = /pass[\s_-]?by/i.test(stopTypeRaw ?? "");
 
+  const descriptionText = asNonEmptyString(row.description);
   const locationTitle =
     asNonEmptyString(pointOfInterestLocation?.locationName) ??
     asNonEmptyString(pointOfInterestLocation?.title) ??
     asNonEmptyString(pointOfInterestLocation?.name);
   const inferredTitleFromDescription = (() => {
-    const descriptionText = asNonEmptyString(row.description);
     if (!descriptionText) return null;
 
     const normalizedDescription = descriptionText
@@ -1143,6 +1257,7 @@ const normalizeSingleItineraryItem = (
 
   let title: string | null = null;
   let titleSource: Engine6ItineraryTitleSource = "description-inferred";
+  let applyDescriptionTitlePolicy = false;
 
   if (jsonLdTitle) {
     title = jsonLdTitle;
@@ -1153,6 +1268,16 @@ const normalizeSingleItineraryItem = (
   } else if (asNonEmptyString(row.title)) {
     title = asNonEmptyString(row.title);
     titleSource = "explicit";
+    applyDescriptionTitlePolicy = Boolean(
+      descriptionText &&
+      title &&
+      ((normalizeEngine6TitlePolicyText(descriptionText) ===
+        normalizeEngine6TitlePolicyText(title) &&
+        !isShortEngine6PoiTitle(title)) ||
+        ENGINE6_WEAK_DESCRIPTION_TITLE_START.test(title) ||
+        ENGINE6_ACTION_DESCRIPTION_TITLE_START.test(title) ||
+        ENGINE6_WEAK_DESCRIPTION_TITLE_END.test(title))
+    );
   } else if (asNonEmptyString(row.name)) {
     title = asNonEmptyString(row.name);
     titleSource = "explicit";
@@ -1180,9 +1305,24 @@ const normalizeSingleItineraryItem = (
   } else if (inferredTitleFromDescription) {
     title = inferredTitleFromDescription;
     titleSource = "description-inferred";
+    applyDescriptionTitlePolicy = true;
+  } else if (descriptionText) {
+    title = resolveSafeEngine6DescriptionInferredTitle(
+      null,
+      descriptionText,
+      context.rowIndex + 1
+    );
+    titleSource = "description-inferred";
   }
 
   if (!title) return null;
+  if (applyDescriptionTitlePolicy) {
+    title = resolveSafeEngine6DescriptionInferredTitle(
+      title,
+      descriptionText,
+      context.rowIndex + 1
+    );
+  }
   const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
   const isPassByFromTitle =
     /\bpass(?:\s|-)?by\b/i.test(title) && cleanedTitle.length > 0;

@@ -5,6 +5,11 @@ import { getEngine6ItineraryJsonLdTitle } from "./itineraryTitlePolicy";
 import specimen276551p2Payload from "../../data/engine6/viator/276551P2.exact-product.json";
 import specimen3885grindelzurPayload from "../../data/engine6/viator/3885GRINDEL_ZUR.exact-product.json";
 import specimen3885sw303bsPayload from "../../data/engine6/viator/3885SW303BS.exact-product.json";
+import specimen3351p13Payload from "../../data/engine6/viator/3351P13.exact-product.json";
+import specimen6400p7Payload from "../../data/engine6/viator/6400P7.exact-product.json";
+import specimen3454ye3dPayload from "../../data/engine6/viator/3454YE3D.exact-product.json";
+import specimen106439p1Payload from "../../data/engine6/viator/106439P1.exact-product.json";
+import specimen117409p1Payload from "../../data/engine6/viator/117409P1.exact-product.json";
 import { mapViatorToEngine6Tour } from "../../src/engine6/mapViatorToEngine6Tour";
 import { buildEngine6SchemaGraph } from "../../src/engine6/schema/buildEngine6SchemaGraph";
 import type { Engine6ApiResponse } from "../../src/engine6/types";
@@ -149,6 +154,171 @@ describe("Engine6 prose-quality itinerary title governance", () => {
       "product-override",
       "product-override",
       "product-override",
+    ]);
+  });
+
+  it("applies audit quality gates to bad description-derived fixture titles", () => {
+    const cases = [
+      {
+        code: "3351P13",
+        payload: specimen3351p13Payload,
+        disallowed: [
+          "The route cuts through the heart of the San Andreas Fault in the Meccacopia Wilderness just outside of Mecca, CA",
+          "Magnificent views of the Salton Sea as guests round the last corner coming out of the canyon",
+        ],
+      },
+      {
+        code: "6400P7",
+        payload: specimen6400p7Payload,
+        disallowed: ["Enjoy the best of the lake Lucerne and"],
+      },
+      { code: "3454YE3D", payload: specimen3454ye3dPayload, disallowed: [] },
+      {
+        code: "106439P1",
+        payload: specimen106439p1Payload,
+        disallowed: ["This section", "This stop"],
+      },
+      {
+        code: "117409P1",
+        payload: specimen117409p1Payload,
+        disallowed: ["Explore the stunning vineyards"],
+      },
+    ];
+
+    for (const { code, payload, disallowed } of cases) {
+      const result = extractEngine6Product(payload);
+      const titles = result.extracted.itinerary.map(item => item.title);
+
+      expect(titles.length, code).toBeGreaterThan(0);
+      for (const badTitle of disallowed) {
+        expect(
+          titles.some(title => title.startsWith(badTitle)),
+          code
+        ).toBe(false);
+      }
+      expect(
+        titles.every(
+          title =>
+            !/^(?:this|that|it|they|we|you|here\s+you|this\s+section|this\s+stop)\b/i.test(
+              title
+            ) &&
+            !/^(?:explore|enjoy|experience|discover|visit|see|stop|drive|walk|ride|sail|cruise|pass|head|continue|return|depart|meet|board|now\s+it(?:'|’)s\s+time|are\s+you\s+ready)\b/i.test(
+              title
+            ) &&
+            !/\b(?:and|or|with|to|from|at|in|on|for)$/i.test(title)
+        ),
+        code
+      ).toBe(true);
+    }
+  });
+
+  it("preserves reviewed 106439P1 POI titles instead of neutral fallbacks", () => {
+    const result = extractEngine6Product(specimen106439p1Payload);
+    const titles = result.extracted.itinerary.map(item => item.title);
+
+    expect(titles).toContain("Two Rodeo Drive");
+    expect(titles).toContain("Greystone Mansion and Park");
+    expect(titles).toContain("Will Rogers Memorial Park");
+    expect(titles).not.toContain("Itinerary Stop 2");
+    expect(titles).not.toContain("Itinerary Stop 3");
+    expect(titles).not.toContain("Itinerary Stop 6");
+  });
+
+  it("does not demote explicit POI titles just because their descriptions start with the title", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "EXPLICIT-POI-TITLE-REGRESSION",
+        title: "Explicit POI Tour",
+        itineraryItems: [
+          {
+            title: "Two Rodeo Drive",
+            description:
+              "Two Rodeo Drive is a Beverly Hills shopping district with recognizable architecture.",
+          },
+          {
+            title: "Greystone Mansion and Park",
+            description:
+              "Greystone Mansion and Park has appeared in many film and TV productions.",
+          },
+          {
+            title: "Will Rogers Memorial Park",
+            description:
+              "Will Rogers Memorial Park is a landscaped city park near Rodeo Drive.",
+          },
+        ],
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Two Rodeo Drive",
+      "Greystone Mansion and Park",
+      "Will Rogers Memorial Park",
+    ]);
+    expect(result.extracted.itinerary.map(item => item.titleSource)).toEqual([
+      "explicit",
+      "explicit",
+      "explicit",
+    ]);
+  });
+
+  it("falls back for Niagara-style pronoun sentence titles and extracts safe named entities", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "NIAGARA-PRONOUN-REGRESSION",
+        title: "Niagara Falls Tour",
+        itineraryItems: [
+          {
+            description:
+              "This is where your guide introduces the falls viewpoint and tour route.",
+          },
+          {
+            description:
+              "It is a popular place to pause before the boat portion of the trip.",
+          },
+          { description: "Visit Venice Beach for a short guided walk." },
+          {
+            description:
+              "Drive through Beverly Hills before returning to your hotel.",
+          },
+          {
+            description:
+              "Pass the Spanish Village Art Center on the way through Balboa Park.",
+          },
+          {
+            description:
+              "Scenic transfer to Zion National Park with time for photos.",
+          },
+          {
+            description:
+              "This stop overlooks the American and Horseshoe Falls from a classic viewpoint.",
+          },
+          {
+            description:
+              "It includes time around Goat Island before the next waterfall view.",
+          },
+          {
+            description:
+              "This section pauses near Prospect Point Observation Tower for photos.",
+          },
+          {
+            description:
+              "Here you pass Rainbow Bridge while your guide explains the border crossing.",
+          },
+        ],
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Itinerary Stop 1",
+      "Itinerary Stop 2",
+      "Venice Beach",
+      "Beverly Hills",
+      "Spanish Village Art Center",
+      "Zion National Park",
+      "American and Horseshoe Falls",
+      "Goat Island",
+      "Prospect Point Observation Tower",
+      "Rainbow Bridge",
     ]);
   });
 

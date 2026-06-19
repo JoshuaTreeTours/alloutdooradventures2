@@ -22,6 +22,11 @@ const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
     3: "Lauterbrunnen",
     4: "Return to Zurich",
   },
+  "106439P1": {
+    1: "Two Rodeo Drive",
+    2: "Greystone Mansion and Park",
+    5: "Will Rogers Memorial Park",
+  },
   "414460P1": {
     0: "Wollman Rink",
     1: "Central Park Carousel",
