@@ -105,6 +105,7 @@ describe("extractEngine6Product itinerary JSON-LD title governance", () => {
 
     expect(result.extracted.itinerary[0]).toMatchObject({
       title: "Unconfirmed Landmark",
+      titleSource: "description-inferred",
       description,
     });
   });

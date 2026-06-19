@@ -6,7 +6,10 @@ import {
   resolveProductScopedHero,
 } from "./heroResolver.js";
 import { classifyTourCategories } from "./tourCategoryClassifier.js";
-import { getEngine6ItineraryJsonLdTitle } from "./itineraryTitlePolicy.js";
+import {
+  getEngine6ItineraryJsonLdTitle,
+  type Engine6ItineraryTitleSource,
+} from "./itineraryTitlePolicy.js";
 import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
 
 export type Engine6DiagnosticsPaths = {
@@ -86,6 +89,7 @@ export type Engine6ExtractedFaq = {
 
 export type Engine6ExtractedItineraryItem = {
   title: string;
+  titleSource: Engine6ItineraryTitleSource;
   stopType?: "stop" | "pass-by";
   sectionLabel?: string;
   description?: string;
@@ -1119,23 +1123,51 @@ const normalizeSingleItineraryItem = (
     context.product,
     context.rowIndex
   );
+  const productOverride = getEngine6ItineraryTitleOverride({
+    productCode: context.productCode,
+    rowIndex: context.rowIndex,
+  });
 
-  const title =
-    jsonLdTitle ??
-    locationTitle ??
-    asNonEmptyString(row.title) ??
-    asNonEmptyString(row.name) ??
-    asNonEmptyString(row.label) ??
-    asNonEmptyString(pointOfInterest?.title) ??
-    asNonEmptyString(pointOfInterest?.name) ??
-    asNonEmptyString(stop?.name) ??
-    asNonEmptyString(stop?.title) ??
-    asNonEmptyString(location?.name) ??
-    getEngine6ItineraryTitleOverride({
-      productCode: context.productCode,
-      rowIndex: context.rowIndex,
-    }) ??
-    inferredTitleFromDescription;
+  let title: string | null = null;
+  let titleSource: Engine6ItineraryTitleSource = "description-inferred";
+
+  if (jsonLdTitle) {
+    title = jsonLdTitle;
+    titleSource = "json-ld";
+  } else if (locationTitle) {
+    title = locationTitle;
+    titleSource = "explicit";
+  } else if (asNonEmptyString(row.title)) {
+    title = asNonEmptyString(row.title);
+    titleSource = "explicit";
+  } else if (asNonEmptyString(row.name)) {
+    title = asNonEmptyString(row.name);
+    titleSource = "explicit";
+  } else if (asNonEmptyString(row.label)) {
+    title = asNonEmptyString(row.label);
+    titleSource = "explicit";
+  } else if (asNonEmptyString(pointOfInterest?.title)) {
+    title = asNonEmptyString(pointOfInterest?.title);
+    titleSource = "explicit";
+  } else if (asNonEmptyString(pointOfInterest?.name)) {
+    title = asNonEmptyString(pointOfInterest?.name);
+    titleSource = "explicit";
+  } else if (asNonEmptyString(stop?.name)) {
+    title = asNonEmptyString(stop?.name);
+    titleSource = "explicit";
+  } else if (asNonEmptyString(stop?.title)) {
+    title = asNonEmptyString(stop?.title);
+    titleSource = "explicit";
+  } else if (asNonEmptyString(location?.name)) {
+    title = asNonEmptyString(location?.name);
+    titleSource = "explicit";
+  } else if (productOverride) {
+    title = productOverride;
+    titleSource = "product-override";
+  } else if (inferredTitleFromDescription) {
+    title = inferredTitleFromDescription;
+    titleSource = "description-inferred";
+  }
 
   if (!title) return null;
   const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
@@ -1183,6 +1215,7 @@ const normalizeSingleItineraryItem = (
 
   return {
     title: cleanedTitle || title,
+    titleSource,
     stopType,
     ...(descriptionWithoutAdmission
       ? { description: descriptionWithoutAdmission }

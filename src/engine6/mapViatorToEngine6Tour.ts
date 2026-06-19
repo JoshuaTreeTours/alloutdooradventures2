@@ -703,7 +703,7 @@ export const mapViatorToEngine6Tour = (
           duration: undefined,
           admissionNote: undefined,
         }))
-      : (payload.extracted.itinerary?.map((item, index) => ({
+      : (payload.extracted.itinerary?.map(({ titleSource: _titleSource, ...item }, index) => ({
           ...item,
           description: rewriteItineraryDescriptionToSingleSentence({
             productCode: payload.rawProductCode,

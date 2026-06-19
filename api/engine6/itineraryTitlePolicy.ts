@@ -1,3 +1,9 @@
+export type Engine6ItineraryTitleSource =
+  | "json-ld"
+  | "explicit"
+  | "product-override"
+  | "description-inferred";
+
 type RecordLike = Record<string, unknown>;
 
 const asRecord = (value: unknown): RecordLike | null =>
