@@ -154,7 +154,7 @@ describe("extractEngine6Product itinerary title overrides", () => {
     );
   });
 
-  it("leaves rows without confirmed overrides on the existing description-derived path", () => {
+  it("uses neutral numbered titles for rows without confirmed overrides", () => {
     const description =
       "Unconfirmed Landmark is not in the confirmed audit list.";
     const result = extractEngine6Product({
@@ -169,12 +169,13 @@ describe("extractEngine6Product itinerary title overrides", () => {
     } as Record<string, unknown>);
 
     expect(result.extracted.itinerary[17]).toMatchObject({
-      title: "Unconfirmed Landmark",
+      title: "Itinerary Stop 18",
+      titleSource: "neutral-numbered",
       description,
     });
   });
 
-  it("does not apply 414460P1 row overrides to other Engine6 products", () => {
+  it("uses neutral numbered titles instead of cross-product overrides", () => {
     const description = centralParkDescriptions[0];
     const result = extractEngine6Product({
       product: {
@@ -185,9 +186,50 @@ describe("extractEngine6Product itinerary title overrides", () => {
     } as Record<string, unknown>);
 
     expect(result.extracted.itinerary[0]).toMatchObject({
-      title:
-        "In winter guests can watch ice skating, pickleball, Home Alone 2 and Serendipity scenes here",
+      title: "Itinerary Stop 1",
+      titleSource: "neutral-numbered",
       description,
     });
+  });
+
+  it("uses neutral numbered titles for Santa Barbara trolley rows without native title fields", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "163975P1",
+        title: "Santa Barbara Trolley Tour",
+        itinerary: {
+          itineraryItems: [
+            {
+              description:
+                "Located in downtown Santa Barbara, El Presidio de Santa Bárbara State Historic Park preserves the site.",
+              passByWithoutStopping: true,
+              pointOfInterestLocation: { location: { ref: "opaque-ref" } },
+            },
+            {
+              description:
+                "At Santa Barbara Harbor you will find interesting stores and seafood restaurants.",
+              passByWithoutStopping: true,
+              pointOfInterestLocation: {
+                attractionId: 9488,
+                location: { ref: "opaque-ref-2" },
+              },
+            },
+          ],
+        },
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Itinerary Stop 1",
+      "Itinerary Stop 2",
+    ]);
+    expect(result.extracted.itinerary.map(item => item.titleSource)).toEqual([
+      "neutral-numbered",
+      "neutral-numbered",
+    ]);
+    expect(result.extracted.itinerary.map(item => item.stopType)).toEqual([
+      "pass-by",
+      "pass-by",
+    ]);
   });
 });

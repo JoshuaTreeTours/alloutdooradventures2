@@ -113,7 +113,7 @@ describe("mergeEngine6NativeItineraryWithLive", () => {
     expect(merged[3]?.description).toBe("Live refreshed description for stop 4.");
   });
 
-  it("marks live Partner API rows as description-inferred when no explicit title exists", () => {
+  it("marks live Partner API rows as neutral-numbered when no explicit title exists", () => {
     const result = extractEngine6Product({
       product: {
         productCode: "276551P2",
@@ -130,8 +130,8 @@ describe("mergeEngine6NativeItineraryWithLive", () => {
     } as Record<string, unknown>);
 
     expect(result.extracted.itinerary[0]).toMatchObject({
-      title: "One of the oldest bars in the US",
-      titleSource: "description-inferred",
+      title: "Itinerary Stop 1",
+      titleSource: "neutral-numbered",
     });
   });
 });
