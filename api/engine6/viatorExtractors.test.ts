@@ -98,16 +98,25 @@ describe("extractEngine6Product itinerary source preservation", () => {
                 "Iconic carousel in Central Park built in 1908 & featuring over 50 hand-carved horses",
             },
             {
-              title: "24 game tables shaded by wooden trellis.",
+              title:
+                "24 game tables shaded by wooden trellis which was built in 1952 to offer visitors of all ages a space to play games",
               stopName: "Chess & Checkers House",
-              description: "24 game tables shaded by wooden trellis.",
+              description:
+                "24 game tables shaded by wooden trellis which was built in 1952 to offer visitors of all ages a space to play games",
             },
             {
               title:
-                "Statues of Shakespeare, Robert Burns & other writers line this shaded promenade.",
-              locationName: "Literary Walk",
+                "Statues of Shakespeare, Robert Burns & other writers dot this wide promenade shaded by elm trees",
+              landmarkName: "Literary Walk",
               description:
-                "Statues of Shakespeare, Robert Burns & other writers line this shaded promenade.",
+                "Statues of Shakespeare, Robert Burns & other writers dot this wide promenade shaded by elm trees",
+            },
+            {
+              title:
+                "One of Central Park's most photographed cast-iron bridges spanning the Lake",
+              locationName: "Bow Bridge",
+              description:
+                "One of Central Park's most photographed cast-iron bridges spanning the Lake",
             },
             {
               title: "Route passes the theater district and Midtown landmarks.",
@@ -141,13 +150,20 @@ describe("extractEngine6Product itinerary source preservation", () => {
       {
         title: "Chess & Checkers House",
         stopType: "stop",
-        description: "24 game tables shaded by wooden trellis.",
+        description:
+          "24 game tables shaded by wooden trellis which was built in 1952 to offer visitors of all ages a space to play games",
       },
       {
         title: "Literary Walk",
         stopType: "stop",
         description:
-          "Statues of Shakespeare, Robert Burns & other writers line this shaded promenade.",
+          "Statues of Shakespeare, Robert Burns & other writers dot this wide promenade shaded by elm trees",
+      },
+      {
+        title: "Bow Bridge",
+        stopType: "stop",
+        description:
+          "One of Central Park's most photographed cast-iron bridges spanning the Lake",
       },
       {
         title: "Times Square",

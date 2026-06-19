@@ -1148,7 +1148,7 @@ const isLikelyDescriptiveItineraryTitle = (value: string) => {
 
   return (
     wordCount > 8 &&
-    /\b(?:built|featuring|features|shaded|located|known|offers?|provides?|includes?|visit|pass(?:es)?|see|view|explore)\b/i.test(
+    /\b(?:built|featuring|features|shaded|visitors?|ages|space|dot|located|known|offers?|provides?|includes?|visit|pass(?:es)?|see|view|explore)\b/i.test(
       cleaned
     )
   );
@@ -1184,16 +1184,20 @@ const normalizeSingleItineraryItem = (
   const locationTitle =
     asNonEmptyString(row.stopName) ??
     asNonEmptyString(row.attractionName) ??
+    asNonEmptyString(row.landmarkName) ??
     asNonEmptyString(row.locationName) ??
     asNonEmptyString(stop?.stopName) ??
     asNonEmptyString(stop?.attractionName) ??
+    asNonEmptyString(stop?.landmarkName) ??
     asNonEmptyString(stop?.locationName) ??
     asNonEmptyString(pointOfInterest?.stopName) ??
     asNonEmptyString(pointOfInterest?.attractionName) ??
+    asNonEmptyString(pointOfInterest?.landmarkName) ??
     asNonEmptyString(pointOfInterest?.locationName) ??
     asNonEmptyString(pointOfInterestLocation?.locationName) ??
     asNonEmptyString(pointOfInterestLocation?.stopName) ??
     asNonEmptyString(pointOfInterestLocation?.attractionName) ??
+    asNonEmptyString(pointOfInterestLocation?.landmarkName) ??
     asNonEmptyString(pointOfInterestLocation?.title) ??
     asNonEmptyString(pointOfInterestLocation?.name);
 
@@ -1202,6 +1206,7 @@ const normalizeSingleItineraryItem = (
     asNonEmptyString(location?.locationName),
     asNonEmptyString(location?.stopName),
     asNonEmptyString(location?.attractionName),
+    asNonEmptyString(location?.landmarkName),
     asNonEmptyString(location?.name),
     asNonEmptyString(pointOfInterest?.title),
     asNonEmptyString(pointOfInterest?.name),
