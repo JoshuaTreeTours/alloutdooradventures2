@@ -1058,6 +1058,155 @@ const extractHighlights = (product: RecordLike) => {
   return { value: [], path: null as string | null };
 };
 
+const normalizeItineraryPlaceholderText = (value: string) =>
+  value.replace(/\s+/g, " ").replace(/[“”]/g, '"').trim();
+
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const isMechanicalItineraryPlaceholder = (
+  value: string,
+  title?: string,
+  duration?: string
+) => {
+  const normalized = normalizeItineraryPlaceholderText(value).replace(
+    /[.!]+$/,
+    ""
+  );
+  const normalizedLower = normalized.toLowerCase();
+
+  if (
+    /^(?:by|pass by|admission included|admission ticket free|historic context|scenic pass-by segment)$/i.test(
+      normalized
+    )
+  ) {
+    return true;
+  }
+
+  if (
+    /^(?:this is a scheduled stop|this portion is viewed|route passes)\b/i.test(
+      normalized
+    )
+  ) {
+    return true;
+  }
+
+  const normalizedTitle = title
+    ? normalizeItineraryPlaceholderText(title).replace(/[.!]+$/, "")
+    : "";
+  if (normalizedTitle) {
+    const titlePattern = escapeRegExp(normalizedTitle);
+    if (
+      new RegExp(`^pass ${titlePattern} as part of the route$`, "i").test(
+        normalized
+      )
+    ) {
+      return true;
+    }
+
+    const durationPattern = duration
+      ? escapeRegExp(normalizeItineraryPlaceholderText(duration))
+      : "[^.]+";
+    if (
+      new RegExp(
+        `^visit ${titlePattern} during the (?:${durationPattern} )?stop$`,
+        "i"
+      ).test(normalized)
+    ) {
+      return true;
+    }
+  }
+
+  return normalizedLower.length === 0;
+};
+
+const firstMeaningfulItineraryText = (
+  candidates: Array<string | null | undefined>,
+  title?: string,
+  duration?: string
+) =>
+  candidates.find(
+    candidate =>
+      Boolean(candidate) &&
+      !isMechanicalItineraryPlaceholder(candidate as string, title, duration)
+  );
+
+const cleanItineraryTitle = (value: string) =>
+  value
+    .replace(/^pass\s+by\s*[:\-–—]?\s*/i, "")
+    .replace(/\s*\((pass\s*by)\)\s*$/i, "")
+    .trim();
+
+const isLikelyDescriptiveItineraryTitle = (value: string) => {
+  const cleaned = cleanItineraryTitle(value) || value.trim();
+  const wordCount = cleaned.split(/\s+/).filter(Boolean).length;
+
+  if (/^(?:by|pass by)$/i.test(cleaned)) return true;
+  if (/[.!?]$/.test(cleaned)) return true;
+  if (/^(?:route passes|visit|pass)\b/i.test(cleaned)) return true;
+  if (/^\d+\s+\w+/.test(cleaned)) return true;
+
+  return (
+    wordCount > 8 &&
+    /\b(?:built|featuring|features|shaded|visitors?|ages|space|dot|located|known|offers?|provides?|includes?|visit|pass(?:es)?|see|view|explore)\b/i.test(
+      cleaned
+    )
+  );
+};
+
+const firstConciseItineraryTitle = (
+  candidates: Array<string | null | undefined>
+) =>
+  candidates.find(
+    candidate =>
+      Boolean(candidate) &&
+      !isLikelyDescriptiveItineraryTitle(candidate as string)
+  );
+
+const inferKnownLandmarkTitleFromItineraryText = (
+  candidates: Array<string | null | undefined>
+) => {
+  const normalized = candidates
+    .filter((candidate): candidate is string => Boolean(candidate))
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .toLowerCase();
+
+  if (!normalized) return null;
+  if (/\bcentral park\b/.test(normalized) && /\bcarousel\b/.test(normalized)) {
+    return "Central Park Carousel";
+  }
+  if (
+    /\bgame tables?\b/.test(normalized) ||
+    /\bwooden trellis\b/.test(normalized)
+  ) {
+    return "Chess & Checkers House";
+  }
+  if (
+    /\bshakespeare\b/.test(normalized) ||
+    /\brobert burns\b/.test(normalized)
+  ) {
+    return "Literary Walk";
+  }
+  if (/\bthe dairy\b|\bdairy\b/.test(normalized)) {
+    return "The Dairy";
+  }
+  if (/\bbow bridge\b|\bcast-iron bridge\b/.test(normalized)) {
+    return "Bow Bridge";
+  }
+  if (/\bbethesda fountain\b|\bbethesda terrace\b/.test(normalized)) {
+    return "Bethesda Fountain";
+  }
+  if (/\blombard street\b/.test(normalized)) {
+    return "Lombard Street";
+  }
+  if (/\bjackson square\b/.test(normalized)) {
+    return "Jackson Square";
+  }
+
+  return null;
+};
+
 const normalizeSingleItineraryItem = (
   row: RecordLike
 ): Engine6ExtractedItineraryItem | null => {
@@ -1077,86 +1226,95 @@ const normalizeSingleItineraryItem = (
   const isPassByFromType = /pass[\s_-]?by/i.test(stopTypeRaw ?? "");
 
   const locationTitle =
+    asNonEmptyString(row.stopName) ??
+    asNonEmptyString(row.attractionName) ??
+    asNonEmptyString(row.landmarkName) ??
+    asNonEmptyString(row.locationName) ??
+    asNonEmptyString(stop?.stopName) ??
+    asNonEmptyString(stop?.attractionName) ??
+    asNonEmptyString(stop?.landmarkName) ??
+    asNonEmptyString(stop?.locationName) ??
+    asNonEmptyString(pointOfInterest?.stopName) ??
+    asNonEmptyString(pointOfInterest?.attractionName) ??
+    asNonEmptyString(pointOfInterest?.landmarkName) ??
+    asNonEmptyString(pointOfInterest?.locationName) ??
     asNonEmptyString(pointOfInterestLocation?.locationName) ??
+    asNonEmptyString(pointOfInterestLocation?.stopName) ??
+    asNonEmptyString(pointOfInterestLocation?.attractionName) ??
+    asNonEmptyString(pointOfInterestLocation?.landmarkName) ??
     asNonEmptyString(pointOfInterestLocation?.title) ??
     asNonEmptyString(pointOfInterestLocation?.name);
-  const inferredTitleFromDescription = (() => {
-    const descriptionText = asNonEmptyString(row.description);
-    if (!descriptionText) return null;
 
-    const normalizedDescription = descriptionText
-      .replace(/^he\s+(?=[A-Z])/, "The ")
-      .trim();
-    const firstSentence =
-      normalizedDescription.split(/(?<!\b\d)(?<=[.!?])\s+/)[0]?.trim() ?? "";
-    if (!firstSentence) return null;
-
-    const subjectMatch = firstSentence.match(
-      /^((?:The\s+)?[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,7})\s+(?:is|are|offers?|provides?|features?)\b/
-    );
-    if (subjectMatch?.[1]) {
-      return subjectMatch[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    const locationPattern =
-      /\b(?:arrive in|continue to|final stop[:\s]+|visit|return to|journey in)\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,5})/;
-    const match = firstSentence.match(locationPattern);
-    if (match?.[1]) {
-      return match[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    return firstSentence.replace(/[.,:;]+$/, "").trim() || null;
-  })();
-
+  const titleCandidates = [
+    locationTitle,
+    asNonEmptyString(location?.locationName),
+    asNonEmptyString(location?.stopName),
+    asNonEmptyString(location?.attractionName),
+    asNonEmptyString(location?.landmarkName),
+    asNonEmptyString(location?.name),
+    asNonEmptyString(pointOfInterest?.title),
+    asNonEmptyString(pointOfInterest?.name),
+    asNonEmptyString(stop?.name),
+    asNonEmptyString(stop?.title),
+    asNonEmptyString(row.title),
+    asNonEmptyString(row.name),
+    asNonEmptyString(row.label),
+  ];
+  const descriptionCandidates = [
+    asNonEmptyString(row.description),
+    asNonEmptyString(row.summary),
+    asNonEmptyString(row.details),
+    asNonEmptyString(pointOfInterest?.description),
+    asNonEmptyString(stop?.description),
+  ];
   const title =
-    locationTitle ??
-    asNonEmptyString(row.title) ??
-    asNonEmptyString(row.name) ??
-    asNonEmptyString(row.label) ??
-    asNonEmptyString(pointOfInterest?.title) ??
-    asNonEmptyString(pointOfInterest?.name) ??
-    asNonEmptyString(stop?.name) ??
-    asNonEmptyString(stop?.title) ??
-    asNonEmptyString(location?.name) ??
-    inferredTitleFromDescription;
+    firstConciseItineraryTitle(titleCandidates) ??
+    inferKnownLandmarkTitleFromItineraryText([
+      ...titleCandidates,
+      ...descriptionCandidates,
+    ]);
 
   if (!title) return null;
-  const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
+  const cleanedTitle = cleanItineraryTitle(title) || title;
   const isPassByFromTitle =
     /\bpass(?:\s|-)?by\b/i.test(title) && cleanedTitle.length > 0;
 
-  const description =
-    asNonEmptyString(row.description) ??
-    asNonEmptyString(row.summary) ??
-    asNonEmptyString(row.details) ??
-    asNonEmptyString(pointOfInterest?.description) ??
-    asNonEmptyString(stop?.description) ??
-    undefined;
-  const admissionNoteFromFields =
-    asNonEmptyString(row.admissionNote) ??
-    asNonEmptyString(row.admissionTicket) ??
-    asNonEmptyString(row.admission) ??
-    asNonEmptyString(row.ticketNote) ??
-    asNonEmptyString(row.ticketInfo) ??
-    asNonEmptyString(row.inclusion) ??
-    asNonEmptyString(row.inclusions) ??
-    (asBoolean(row.admissionIncluded) === true
-      ? "Admission Included"
-      : asBoolean(row.admissionIncluded) === false
-        ? "Admission Not Included"
-        : null);
-  const admissionNoteFromDescription =
-    description && /admission ticket/i.test(description)
-      ? description
-      : undefined;
-  const admissionNote =
-    admissionNoteFromFields ?? admissionNoteFromDescription ?? undefined;
   const duration =
     asNonEmptyString(row.duration) ??
     asNonEmptyString(row.durationText) ??
     asNonEmptyString(asRecord(row.durationInfo)?.durationText) ??
     asNonEmptyString(asRecord(row.durationInfo)?.label) ??
     undefined;
+
+  const description = firstMeaningfulItineraryText(
+    descriptionCandidates,
+    cleanedTitle,
+    duration
+  );
+  const admissionNoteFromFields = firstMeaningfulItineraryText(
+    [
+      asNonEmptyString(row.admissionNote),
+      asNonEmptyString(row.admissionTicket),
+      asNonEmptyString(row.admission),
+      asNonEmptyString(row.ticketNote),
+      asNonEmptyString(row.ticketInfo),
+      asNonEmptyString(row.inclusion),
+      asNonEmptyString(row.inclusions),
+      asBoolean(row.admissionIncluded) === true
+        ? "Admission Included"
+        : asBoolean(row.admissionIncluded) === false
+          ? "Admission Not Included"
+          : null,
+    ],
+    cleanedTitle,
+    duration
+  );
+  const admissionNoteFromDescription =
+    description && /admission ticket/i.test(description)
+      ? description
+      : undefined;
+  const admissionNote =
+    admissionNoteFromFields ?? admissionNoteFromDescription ?? undefined;
   const descriptionWithoutAdmission =
     admissionNoteFromDescription && description === admissionNoteFromDescription
       ? undefined
@@ -1165,7 +1323,7 @@ const normalizeSingleItineraryItem = (
     isPassByFlag || isPassByFromType || isPassByFromTitle ? "pass-by" : "stop";
 
   return {
-    title: cleanedTitle || title,
+    title: cleanedTitle,
     stopType,
     ...(descriptionWithoutAdmission
       ? { description: descriptionWithoutAdmission }
