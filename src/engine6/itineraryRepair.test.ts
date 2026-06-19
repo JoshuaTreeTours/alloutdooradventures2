@@ -117,9 +117,9 @@ describe("Engine6 itinerary repair", () => {
       },
     });
 
-    expect(fallback).toBe("This is a scheduled stop on the guided route.");
+    expect(fallback).toBe("Includes about 20 minutes at Hoover Dam.");
     expect(fallback).not.toMatch(/^Visit\s+/i);
-    expect(fallback).not.toMatch(/Hoover Dam/i);
+    expect(fallback).not.toMatch(/\bguided route\b/i);
     expect(fallback).not.toMatch(/Yosemite|Tunnel View|Glacier Point/i);
   });
 
@@ -135,10 +135,10 @@ describe("Engine6 itinerary repair", () => {
       },
     });
 
-    expect(rewritten).toBe("This is a scheduled stop on the guided route.");
+    expect(rewritten).toBe("Includes about 4 hours at Grand Canyon West.");
     expect(rewritten).not.toMatch(/^Visit\s+/i);
-    expect(rewritten).not.toMatch(/Grand Canyon West/i);
     expect(rewritten).not.toMatch(/admission included/i);
+    expect(rewritten).not.toMatch(/\bguided route\b/i);
   });
 
   it("preserves valid source itinerary prose when it is distinct from the title", () => {

@@ -88,12 +88,13 @@ describe("Engine6 itinerary content quality", () => {
       },
     });
 
-    expect(rewritten).toBe("This is a scheduled stop on the guided route.");
+    expect(rewritten).toBe("Includes about 4 hours at Grand Canyon West.");
     expect(rewritten).not.toMatch(/^Visit\s+/i);
-    expect(rewritten).not.toMatch(/Grand Canyon West/i);
+    expect(rewritten).not.toMatch(/admission included/i);
+    expect(rewritten).not.toMatch(/\bguided route\b/i);
   });
 
-  it("uses duration-only factual copy when source prose is empty", () => {
+  it("uses destination-specific copy when source prose is empty", () => {
     const rewritten = rewriteEngine6ItineraryDescriptionToSingleSentence({
       productCode: "5119P13",
       index: 0,
@@ -105,9 +106,10 @@ describe("Engine6 itinerary content quality", () => {
       },
     });
 
-    expect(rewritten).toBe("This is a scheduled stop on the guided route.");
+    expect(rewritten).toBe("Includes about 20 minutes at Hoover Dam.");
     expect(rewritten).not.toMatch(/^Visit\s+/i);
-    expect(rewritten).not.toMatch(/Hoover Dam/i);
+    expect(rewritten).not.toMatch(/\bguided route\b/i);
+    expect(rewritten).not.toMatch(/\bscenic pass-by segment\b/i);
   });
 
   it("maps the paragon preview tour without Visit/Pass placeholder descriptions", () => {
@@ -165,7 +167,23 @@ describe("Engine6 itinerary content quality", () => {
     ]);
 
     expect(itinerary[0]?.description).toBe("Photo stop and guide commentary.");
-    expect(itinerary[1]?.description).toBe("This is a scheduled stop on the guided route.");
+    expect(itinerary[1]?.description).toBe("Includes about 4 hours at Grand Canyon West.");
+  });
+
+  it("uses destination-specific pass-by copy when source has no factual context", () => {
+    const rewritten = rewriteEngine6ItineraryDescriptionToSingleSentence({
+      productCode: "122012P17",
+      index: 0,
+      item: {
+        title: "Midtown",
+        stopType: "pass-by",
+        description: "Pass By",
+      },
+    });
+
+    expect(rewritten).toBe("Passes by Midtown.");
+    expect(rewritten).not.toMatch(/\bscenic pass-by segment\b/i);
+    expect(rewritten).not.toMatch(/\bguided route\b/i);
   });
 
   it("builds pass-by fallback copy from source context without invalid durations", () => {
