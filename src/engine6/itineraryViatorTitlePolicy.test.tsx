@@ -62,9 +62,18 @@ describe("Engine6 Viator itinerary title policy", () => {
 
   it("preserves 276551P2 source titles exactly through extraction and mapping", () => {
     expect(fixture276551P2).toBeDefined();
-    const extracted = extractEngine6Product(fixture276551P2!.rawPayload);
+    const extracted = extractEngine6Product(fixture276551P2!.rawPayload, {
+      payloadSource: "bundled-exact-product-fixture",
+    });
     const tour = mapViatorToEngine6Tour(toPayload(fixture276551P2!));
 
+    expect(extracted.diagnostics.itineraryTitleSourceReport276551P2).toMatchObject(
+      {
+        payloadSource: "bundled-exact-product-fixture",
+        itineraryFieldPath: "product.itineraryItems",
+        sourceTitleFieldPattern: "product.itineraryItems[].title",
+      }
+    );
     expect(extracted.diagnostics.itineraryFieldPath).toBe(
       "product.itineraryItems"
     );
@@ -101,7 +110,7 @@ describe("Engine6 Viator itinerary title policy", () => {
     );
   });
 
-  it("uses Stop and Pass By instead of description-derived titles when source titles are missing", () => {
+  it("drops rows that lack a Viator itinerary title field", () => {
     const extracted = extractEngine6Product({
       product: {
         productCode: "TITLEPOLICY1",
@@ -126,14 +135,8 @@ describe("Engine6 Viator itinerary title policy", () => {
             stopType: "pass-by",
           },
           {
-            description:
-              "Filled with the city's best restaurants and historic architecture.",
-            stopType: "stop",
-          },
-          {
-            title: "This",
-            description:
-              "The big muddy river is the reason New Orleans exists.",
+            title: "French Quarter",
+            description: "Ride through the French Quarter.",
             stopType: "stop",
           },
         ],
@@ -141,24 +144,8 @@ describe("Engine6 Viator itinerary title policy", () => {
     } as Record<string, unknown>);
 
     expect(extracted.extracted.itinerary.map(item => item.title)).toEqual([
-      "Pass By",
-      "Stop",
-      "Stop",
+      "French Quarter",
     ]);
-    expect(extracted.diagnostics.itinerarySourceTitleFieldPath).toBe(
-      "product.itineraryItems[].title"
-    );
-    expect(extracted.diagnostics.itineraryMissingSourceTitleFieldPaths).toEqual([
-      "product.itineraryItems[0].title",
-      "product.itineraryItems[1].title",
-    ]);
-    expect(extracted.extracted.itinerary.map(item => item.description)).toEqual(
-      [
-        "Pedal past the lively music district with guide commentary.",
-        "Filled with the city's best restaurants and historic architecture.",
-        "The big muddy river is the reason New Orleans exists.",
-      ]
-    );
   });
 
   it("uses the same final title in visible cards and JSON-LD TouristAttraction names", () => {

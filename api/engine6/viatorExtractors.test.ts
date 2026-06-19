@@ -154,7 +154,7 @@ describe("extractEngine6Product itinerary title overrides", () => {
     );
   });
 
-  it("falls back to Stop when rows lack confirmed overrides and naming fields", () => {
+  it("drops rows without a Viator itinerary title field or confirmed override", () => {
     const description =
       "Unconfirmed Landmark is not in the confirmed audit list.";
     const result = extractEngine6Product({
@@ -168,10 +168,11 @@ describe("extractEngine6Product itinerary title overrides", () => {
       },
     } as Record<string, unknown>);
 
-    expect(result.extracted.itinerary[17]).toMatchObject({
-      title: "Stop",
-      description,
-    });
+    expect(result.extracted.itinerary).toHaveLength(17);
+    expect(result.extracted.itinerary[16]?.title).toBe("Columbus Circle");
+    expect(
+      result.extracted.itinerary.some(item => item.description === description)
+    ).toBe(false);
   });
 
   it("does not apply 414460P1 row overrides to other Engine6 products", () => {
@@ -184,9 +185,6 @@ describe("extractEngine6Product itinerary title overrides", () => {
       },
     } as Record<string, unknown>);
 
-    expect(result.extracted.itinerary[0]).toMatchObject({
-      title: "Stop",
-      description,
-    });
+    expect(result.extracted.itinerary).toEqual([]);
   });
 });
