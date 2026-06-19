@@ -6,6 +6,7 @@ import {
   resolveProductScopedHero,
 } from "./heroResolver.js";
 import { classifyTourCategories } from "./tourCategoryClassifier.js";
+import { getEngine6ItineraryJsonLdTitle } from "./itineraryTitlePolicy.js";
 import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
 
 export type Engine6DiagnosticsPaths = {
@@ -1061,7 +1062,11 @@ const extractHighlights = (product: RecordLike) => {
 
 const normalizeSingleItineraryItem = (
   row: RecordLike,
-  context: { productCode: string | null; rowIndex: number }
+  context: {
+    product: RecordLike;
+    productCode: string | null;
+    rowIndex: number;
+  }
 ): Engine6ExtractedItineraryItem | null => {
   const pointOfInterest = asRecord(row.pointOfInterest);
   const pointOfInterestLocation = asRecord(row.pointOfInterestLocation);
@@ -1110,7 +1115,13 @@ const normalizeSingleItineraryItem = (
     return firstSentence.replace(/[.,:;]+$/, "").trim() || null;
   })();
 
+  const jsonLdTitle = getEngine6ItineraryJsonLdTitle(
+    context.product,
+    context.rowIndex
+  );
+
   const title =
+    jsonLdTitle ??
     locationTitle ??
     asNonEmptyString(row.title) ??
     asNonEmptyString(row.name) ??
@@ -1255,6 +1266,7 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
     return rows
       .map((item, rowIndex) => {
         const parsed = normalizeSingleItineraryItem(item.row, {
+          product,
           productCode: asNonEmptyString(product.productCode),
           rowIndex,
         });
