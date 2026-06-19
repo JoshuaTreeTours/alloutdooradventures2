@@ -81,3 +81,205 @@ describe("extractEngine6Product category normalization", () => {
     ]);
   });
 });
+
+describe("extractEngine6Product itinerary source preservation", () => {
+  it("preserves meaningful supplier stop descriptions and shortens mechanical pass-by titles", () => {
+    const payload = {
+      product: {
+        productCode: "ITINERARY-PRESERVE",
+        title: "Itinerary preservation audit",
+        itinerary: {
+          itineraryItems: [
+            {
+              title: "Central Park Carousel",
+              description:
+                "Historic carousel built in 1908 featuring more than 50 hand-carved horses.",
+            },
+            {
+              title: "The Dairy",
+              description:
+                "The Dairy is a historic building that is now a visitor center and gift shop.",
+            },
+            {
+              title: "Bethesda Fountain",
+              description:
+                "Bethesda Fountain is one of Central Park's most photographed landmarks.",
+            },
+            {
+              title: "Pass By Lombard Street",
+              description: "Pass by the curved hill section of Lombard Street.",
+            },
+            {
+              title: "Jackson Square (Pass By)",
+              description:
+                "Jackson Square is a historic park in the French Quarter of New Orleans.",
+            },
+            {
+              title: "Tunnel View",
+              description:
+                "Tunnel View offers a classic perspective of El Capitan, Half Dome, and Bridalveil Fall.",
+            },
+            {
+              title: "El Capitan",
+              description:
+                "El Capitan is a granite monolith rising about 3,000 feet above Yosemite Valley.",
+            },
+            {
+              title: "Hoover Dam",
+              description:
+                "Hoover Dam is a Depression-era concrete arch-gravity dam on the Colorado River.",
+            },
+            {
+              title: "Eagle Point",
+              description:
+                "Eagle Point overlooks the Grand Canyon West rim and the Skywalk area.",
+            },
+            {
+              title: "Times Square",
+              description:
+                "Times Square is known for illuminated billboards, theaters, and dense pedestrian activity.",
+            },
+          ],
+        },
+      },
+    };
+
+    const result = extractEngine6Product(payload as Record<string, unknown>);
+
+    expect(result.extracted.itinerary).toMatchObject([
+      {
+        title: "Central Park Carousel",
+        description:
+          "Historic carousel built in 1908 featuring more than 50 hand-carved horses.",
+      },
+      {
+        title: "The Dairy",
+        description:
+          "The Dairy is a historic building that is now a visitor center and gift shop.",
+      },
+      {
+        title: "Bethesda Fountain",
+        description:
+          "Bethesda Fountain is one of Central Park's most photographed landmarks.",
+      },
+      {
+        title: "Lombard Street",
+        stopType: "pass-by",
+        description: "Pass by the curved hill section of Lombard Street.",
+      },
+      {
+        title: "Jackson Square",
+        stopType: "pass-by",
+        description:
+          "Jackson Square is a historic park in the French Quarter of New Orleans.",
+      },
+      {
+        title: "Tunnel View",
+        description:
+          "Tunnel View offers a classic perspective of El Capitan, Half Dome, and Bridalveil Fall.",
+      },
+      {
+        title: "El Capitan",
+        description:
+          "El Capitan is a granite monolith rising about 3,000 feet above Yosemite Valley.",
+      },
+      {
+        title: "Hoover Dam",
+        description:
+          "Hoover Dam is a Depression-era concrete arch-gravity dam on the Colorado River.",
+      },
+      {
+        title: "Eagle Point",
+        description:
+          "Eagle Point overlooks the Grand Canyon West rim and the Skywalk area.",
+      },
+      {
+        title: "Times Square",
+        description:
+          "Times Square is known for illuminated billboards, theaters, and dense pedestrian activity.",
+      },
+    ]);
+  });
+
+  it("omits only clear mechanical placeholders without inventing fallback prose", () => {
+    const payload = {
+      product: {
+        productCode: "ITINERARY-PLACEHOLDERS",
+        title: "Itinerary placeholder audit",
+        itinerary: {
+          itineraryItems: [
+            {
+              title: "Central Park Carousel",
+              description:
+                "Visit Central Park Carousel during the 10 minutes stop.",
+              duration: "10 minutes",
+            },
+            {
+              title: "Lombard Street",
+              description: "Pass Lombard Street as part of the route.",
+            },
+            {
+              title: "The Dairy",
+              description: "Historic context",
+              summary:
+                "The Dairy is a historic building that is now a visitor center and gift shop.",
+            },
+            {
+              title: "Bethesda Fountain",
+              description: "Admission Ticket Free",
+              admissionTicket: "Admission included",
+            },
+            {
+              title: "Jackson Square",
+              description: "This is a scheduled stop on the route.",
+            },
+            {
+              title: "Golden Gate Bridge",
+              description: "This portion is viewed from the vehicle.",
+            },
+            {
+              title: "Palace of Fine Arts",
+              description: "Scenic pass-by segment",
+            },
+            {
+              title: "Fisherman's Wharf",
+              description: "Pass By",
+            },
+            {
+              title: "Chinatown",
+              description: "By.",
+            },
+            {
+              title: "North Beach",
+              description: "Admission included",
+            },
+          ],
+        },
+      },
+    };
+
+    const result = extractEngine6Product(payload as Record<string, unknown>);
+
+    expect(result.extracted.itinerary).toEqual([
+      {
+        title: "Central Park Carousel",
+        stopType: "stop",
+        duration: "10 minutes",
+      },
+      { title: "Lombard Street", stopType: "stop" },
+      {
+        title: "The Dairy",
+        stopType: "stop",
+        description:
+          "The Dairy is a historic building that is now a visitor center and gift shop.",
+      },
+      { title: "Bethesda Fountain", stopType: "stop" },
+      { title: "Jackson Square", stopType: "stop" },
+      { title: "Golden Gate Bridge", stopType: "stop" },
+      { title: "Palace of Fine Arts", stopType: "stop" },
+      { title: "Fisherman's Wharf", stopType: "stop" },
+      { title: "Chinatown", stopType: "stop" },
+      { title: "North Beach", stopType: "stop" },
+    ]);
+  });
+});

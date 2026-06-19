@@ -1058,6 +1058,83 @@ const extractHighlights = (product: RecordLike) => {
   return { value: [], path: null as string | null };
 };
 
+const normalizeItineraryPlaceholderText = (value: string) =>
+  value.replace(/\s+/g, " ").replace(/[“”]/g, '"').trim();
+
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const isMechanicalItineraryPlaceholder = (
+  value: string,
+  title?: string,
+  duration?: string
+) => {
+  const normalized = normalizeItineraryPlaceholderText(value).replace(
+    /[.!]+$/,
+    ""
+  );
+  const normalizedLower = normalized.toLowerCase();
+
+  if (
+    /^(?:by|pass by|admission included|admission ticket free|historic context|scenic pass-by segment)$/i.test(
+      normalized
+    )
+  ) {
+    return true;
+  }
+
+  if (
+    /^(?:this is a scheduled stop|this portion is viewed)\b/i.test(normalized)
+  ) {
+    return true;
+  }
+
+  const normalizedTitle = title
+    ? normalizeItineraryPlaceholderText(title).replace(/[.!]+$/, "")
+    : "";
+  if (normalizedTitle) {
+    const titlePattern = escapeRegExp(normalizedTitle);
+    if (
+      new RegExp(`^pass ${titlePattern} as part of the route$`, "i").test(
+        normalized
+      )
+    ) {
+      return true;
+    }
+
+    const durationPattern = duration
+      ? escapeRegExp(normalizeItineraryPlaceholderText(duration))
+      : "[^.]+";
+    if (
+      new RegExp(
+        `^visit ${titlePattern} during the ${durationPattern} stop$`,
+        "i"
+      ).test(normalized)
+    ) {
+      return true;
+    }
+  }
+
+  return normalizedLower.length === 0;
+};
+
+const firstMeaningfulItineraryText = (
+  candidates: Array<string | null | undefined>,
+  title?: string,
+  duration?: string
+) =>
+  candidates.find(
+    candidate =>
+      Boolean(candidate) &&
+      !isMechanicalItineraryPlaceholder(candidate as string, title, duration)
+  );
+
+const cleanItineraryTitle = (value: string) =>
+  value
+    .replace(/^pass\s+by\s*[:\-–—]?\s*/i, "")
+    .replace(/\s*\((pass\s*by)\)\s*$/i, "")
+    .trim();
+
 const normalizeSingleItineraryItem = (
   row: RecordLike
 ): Engine6ExtractedItineraryItem | null => {
@@ -1121,42 +1198,52 @@ const normalizeSingleItineraryItem = (
     inferredTitleFromDescription;
 
   if (!title) return null;
-  const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
+  const cleanedTitle = cleanItineraryTitle(title) || title;
   const isPassByFromTitle =
     /\bpass(?:\s|-)?by\b/i.test(title) && cleanedTitle.length > 0;
 
-  const description =
-    asNonEmptyString(row.description) ??
-    asNonEmptyString(row.summary) ??
-    asNonEmptyString(row.details) ??
-    asNonEmptyString(pointOfInterest?.description) ??
-    asNonEmptyString(stop?.description) ??
-    undefined;
-  const admissionNoteFromFields =
-    asNonEmptyString(row.admissionNote) ??
-    asNonEmptyString(row.admissionTicket) ??
-    asNonEmptyString(row.admission) ??
-    asNonEmptyString(row.ticketNote) ??
-    asNonEmptyString(row.ticketInfo) ??
-    asNonEmptyString(row.inclusion) ??
-    asNonEmptyString(row.inclusions) ??
-    (asBoolean(row.admissionIncluded) === true
-      ? "Admission Included"
-      : asBoolean(row.admissionIncluded) === false
-        ? "Admission Not Included"
-        : null);
-  const admissionNoteFromDescription =
-    description && /admission ticket/i.test(description)
-      ? description
-      : undefined;
-  const admissionNote =
-    admissionNoteFromFields ?? admissionNoteFromDescription ?? undefined;
   const duration =
     asNonEmptyString(row.duration) ??
     asNonEmptyString(row.durationText) ??
     asNonEmptyString(asRecord(row.durationInfo)?.durationText) ??
     asNonEmptyString(asRecord(row.durationInfo)?.label) ??
     undefined;
+
+  const description = firstMeaningfulItineraryText(
+    [
+      asNonEmptyString(row.description),
+      asNonEmptyString(row.summary),
+      asNonEmptyString(row.details),
+      asNonEmptyString(pointOfInterest?.description),
+      asNonEmptyString(stop?.description),
+    ],
+    cleanedTitle,
+    duration
+  );
+  const admissionNoteFromFields = firstMeaningfulItineraryText(
+    [
+      asNonEmptyString(row.admissionNote),
+      asNonEmptyString(row.admissionTicket),
+      asNonEmptyString(row.admission),
+      asNonEmptyString(row.ticketNote),
+      asNonEmptyString(row.ticketInfo),
+      asNonEmptyString(row.inclusion),
+      asNonEmptyString(row.inclusions),
+      asBoolean(row.admissionIncluded) === true
+        ? "Admission Included"
+        : asBoolean(row.admissionIncluded) === false
+          ? "Admission Not Included"
+          : null,
+    ],
+    cleanedTitle,
+    duration
+  );
+  const admissionNoteFromDescription =
+    description && /admission ticket/i.test(description)
+      ? description
+      : undefined;
+  const admissionNote =
+    admissionNoteFromFields ?? admissionNoteFromDescription ?? undefined;
   const descriptionWithoutAdmission =
     admissionNoteFromDescription && description === admissionNoteFromDescription
       ? undefined
@@ -1165,7 +1252,7 @@ const normalizeSingleItineraryItem = (
     isPassByFlag || isPassByFromType || isPassByFromTitle ? "pass-by" : "stop";
 
   return {
-    title: cleanedTitle || title,
+    title: cleanedTitle,
     stopType,
     ...(descriptionWithoutAdmission
       ? { description: descriptionWithoutAdmission }
