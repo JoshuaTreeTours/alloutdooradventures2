@@ -3,6 +3,8 @@ import { describe, expect, it } from "vitest";
 import { extractEngine6Product } from "./viatorExtractors";
 import { getEngine6ItineraryJsonLdTitle } from "./itineraryTitlePolicy";
 import specimen276551p2Payload from "../../data/engine6/viator/276551P2.exact-product.json";
+import specimen3885grindelzurPayload from "../../data/engine6/viator/3885GRINDEL_ZUR.exact-product.json";
+import specimen3885sw303bsPayload from "../../data/engine6/viator/3885SW303BS.exact-product.json";
 import { mapViatorToEngine6Tour } from "../../src/engine6/mapViatorToEngine6Tour";
 import { buildEngine6SchemaGraph } from "../../src/engine6/schema/buildEngine6SchemaGraph";
 import type { Engine6ApiResponse } from "../../src/engine6/types";
@@ -111,6 +113,75 @@ describe("extractEngine6Product itinerary JSON-LD title governance", () => {
   });
 });
 
+describe("Engine6 prose-quality itinerary title governance", () => {
+  it("uses reviewed POI-style titles for Mount Titlis instead of sentence-derived prose", () => {
+    const result = extractEngine6Product(specimen3885sw303bsPayload);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Sihlquai Bus Station departure",
+      "Lucerne orientation drive",
+      "Mount Titlis cable car ascent",
+      "Glacier Cave and Titlis Cliff Walk",
+      "Sihlquai Coach Terminal return",
+    ]);
+    expect(result.extracted.itinerary.map(item => item.titleSource)).toEqual([
+      "product-override",
+      "product-override",
+      "product-override",
+      "product-override",
+      "product-override",
+    ]);
+  });
+
+  it("uses reviewed place titles for the Zurich Interlaken, Grindelwald, and Lauterbrunnen route", () => {
+    const result = extractEngine6Product(specimen3885grindelzurPayload);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Zurich departure",
+      "Interlaken",
+      "Grindelwald",
+      "Lauterbrunnen",
+      "Return to Zurich",
+    ]);
+    expect(result.extracted.itinerary.map(item => item.titleSource)).toEqual([
+      "product-override",
+      "product-override",
+      "product-override",
+      "product-override",
+      "product-override",
+    ]);
+  });
+
+  it("extracts concise place names from common prose-led itinerary descriptions", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "OTHERP2",
+        title: "Swiss Villages Tour",
+        itineraryItems: [
+          {
+            description:
+              "Arrive in Interlaken, where you'll enjoy some leisure time to explore this charming village at your own pace.",
+          },
+          {
+            description:
+              "Next, continue to the postcard-perfect mountain village of Grindelwald.",
+          },
+          {
+            description:
+              "After a full day of alpine discovery, relax on the scenic return journey to Zurich, where your tour concludes.",
+          },
+        ],
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Interlaken",
+      "Grindelwald",
+      "Zurich",
+    ]);
+  });
+});
+
 describe("Engine6 itinerary title governance for 276551P2", () => {
   const toPayload = (): Engine6ApiResponse => {
     const extraction = extractEngine6Product(specimen276551p2Payload);
@@ -152,9 +223,7 @@ describe("Engine6 itinerary title governance for 276551P2", () => {
       ...EXPECTED_276551P2_ITINERARY_TITLES,
     ]);
     expect(
-      trip?.itinerary?.itemListElement
-        ?.slice(0, 5)
-        .map(item => item.item?.name)
+      trip?.itinerary?.itemListElement?.slice(0, 5).map(item => item.item?.name)
     ).toEqual([...EXPECTED_276551P2_ITINERARY_TITLES]);
   });
 });
