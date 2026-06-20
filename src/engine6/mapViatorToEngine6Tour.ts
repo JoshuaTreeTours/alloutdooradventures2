@@ -501,7 +501,7 @@ const ENGINE6_ITINERARY_ITEM_OVERRIDES: Record<
       stopType: "stop",
     },
     {
-      title: "Return to San Francisco",
+      title: "San Francisco Drop-off",
       description:
         "Travel back from Yosemite to the San Francisco Hilton after the final day in the park.",
       stopType: "stop",

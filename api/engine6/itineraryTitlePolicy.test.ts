@@ -203,7 +203,9 @@ describe("public JSON-LD itinerary title enrichment", () => {
         Array(expectedTitles.length).fill("public-json-ld")
       );
       expect(
-        result.extracted.itinerary.every(item => item.description.length > 0)
+        result.extracted.itinerary.every(
+          item => (item.description?.length ?? 0) > 0
+        )
       ).toBe(true);
     }
   );
@@ -227,10 +229,10 @@ describe("public JSON-LD itinerary title enrichment", () => {
       "East Beach",
       "Andrée Clark Bird Refuge",
       "Butterfly Beach",
-      "Santa Barbara Museum of Natural History",
+      "Natural History Museum",
       "Old Mission Santa Barbara",
       "Santa Barbara County Courthouse",
-      "El Presidio de Santa Barbara State Historic Park",
+      "El Presidio State Park",
       "Santa Barbara Harbor",
     ]);
     expect(result.extracted.itinerary.map(item => item.titleSource)).toEqual(
@@ -302,6 +304,7 @@ describe("Engine6 definitely broken itinerary title repairs", () => {
         payload: specimen5569hikePayload,
         expectedByIndex: {
           0: "Safety Briefing",
+          1: "Greek Theatre Meeting Point",
           2: "Hollywood Hills Trail",
           3: "Griffith Observatory",
           4: "Tiffany Point",
@@ -314,7 +317,7 @@ describe("Engine6 definitely broken itinerary title repairs", () => {
           14: "Downtown Los Angeles Views",
           16: "Hollywood Views",
           17: "Los Angeles Zoo",
-          18: "Autry Museum of the American West",
+          18: "Autry Museum",
           19: "Griffith Park Bird Sanctuary",
           20: "Walt Disney Studios",
         },
@@ -322,7 +325,11 @@ describe("Engine6 definitely broken itinerary title repairs", () => {
       {
         payload: specimen5144brunchPayload,
         expectedByIndex: {
+          0: "Sunday Brunch Cruise",
+          1: "Coronado Bridge",
+          2: "San Diego Waterfront",
           3: "San Diego Bay Open-Water Panoramas",
+          4: "North Island Naval Air Station",
         },
       },
       {
@@ -343,6 +350,9 @@ describe("Engine6 definitely broken itinerary title repairs", () => {
         payload: specimen37126p9Payload,
         expectedByIndex: {
           0: "Star of India",
+          1: "USS Midway",
+          5: "Rady Shell",
+          6: "San Diego Convention Center",
         },
       },
       {
@@ -364,6 +374,18 @@ describe("Engine6 definitely broken itinerary title repairs", () => {
           8: "Paradeplatz",
         },
       },
+      {
+        payload: specimen32779p6Payload,
+        expectedByIndex: {
+          0: "Catalina Island Interior",
+        },
+      },
+      {
+        payload: specimen5046SanSeaPayload,
+        expectedByIndex: {
+          0: "San Diego Bay Cruise",
+        },
+      },
     ] as const;
 
     cases.forEach(({ payload, expectedByIndex }) => {
@@ -377,46 +399,15 @@ describe("Engine6 definitely broken itinerary title repairs", () => {
     });
   });
 
-  it("does not modify probably broken rows, false positives, or leave-unchanged products", () => {
-    expect(extractEngine6Product(specimen5569hikePayload).extracted.itinerary[1])
-      .toMatchObject({
-        title: "We'll meet you in front of the Greek Theatre",
-        titleSource: "description-inferred",
-      });
-    expect(extractEngine6Product(specimen5144brunchPayload).extracted.itinerary[0])
-      .toMatchObject({
-        title:
-          "Cruise San Diego Bay on a Sunday brunch cruise experience with skyline views and live onboard entertainment",
-        titleSource: "description-inferred",
-      });
-    expect(extractEngine6Product(specimen37126p9Payload).extracted.itinerary[6])
-      .toMatchObject({
-        title: "The San Diego Convention Center",
-        titleSource: "description-inferred",
-      });
-    expect(extractEngine6Product(specimen32779p6Payload).extracted.itinerary[0])
-      .toMatchObject({
-        title:
-          "As you venture ten miles into the rugged interior, you will view the protected side of Catalina Island seldom seen by most visitors",
-        titleSource: "description-inferred",
-      });
-    expect(
-      extractEngine6Product(specimen5046SanSeaPayload).extracted.itinerary[0]
-    ).toMatchObject({
-      title:
-        "This 90-minute shore excursion is a fantastic way to see the best of the Bay and San Diego during your limited time in port",
-      titleSource: "description-inferred",
-    });
-  });
-
   it("uses the reviewed 5569HIKE Warner Bros. Studios override without changing the description", () => {
-    expect(extractEngine6Product(specimen5569hikePayload).extracted.itinerary[13])
-      .toMatchObject({
-        title: "Warner Bros. Studios",
-        titleSource: "product-override",
-        description:
-          "Check out Warner Brothers, the most famous film studio in LA, in a bird's eye view on this Hollywood Hills Tour.",
-      });
+    expect(
+      extractEngine6Product(specimen5569hikePayload).extracted.itinerary[13]
+    ).toMatchObject({
+      title: "Warner Bros. Studios",
+      titleSource: "product-override",
+      description:
+        "Check out Warner Brothers, the most famous film studio in LA, in a bird's eye view on this Hollywood Hills Tour.",
+    });
   });
 });
 
