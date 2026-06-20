@@ -16,6 +16,20 @@ const PUBLIC_JSON_LD_ITINERARY_NAMES_BY_PRODUCT_CODE: Record<
   string,
   readonly string[]
 > = {
+  "3885GRINDEL_ZUR": [
+    "Zurich",
+    "Interlaken",
+    "Grindelwald",
+    "Lauterbrunnen Valley Waterfalls",
+    "Zurich",
+  ],
+  "3885SW303BS": [
+    "Zurich",
+    "Luzern Altstadt",
+    "Titlis",
+    "Titlis Cliff Walk",
+    "Zurich",
+  ],
   "163975P1": [
     "Stearns Wharf",
     "East Beach",
