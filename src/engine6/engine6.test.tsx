@@ -384,6 +384,106 @@ describe("engine6 extractor", () => {
     );
   });
 
+  it("recovers missing itinerary titles from structured Viator metadata without prose inference", () => {
+    const extracted = extractEngine6Product({
+      product: {
+        productCode: "STRUCTURED-TITLE-RECOVERY",
+        title: "Structured title recovery",
+        description: "Source overview.",
+        itineraryItems: [
+          {
+            title: "Native Row Title",
+            pointOfInterest: { title: "Ignored POI Title" },
+            description: "Description remains untouched.",
+          },
+          {
+            pointOfInterest: { title: "POI Title" },
+            description: "Do not infer Another Title from this prose.",
+          },
+          {
+            pointOfInterest: { name: "POI Name" },
+            description: "Visit a sentence that should not be used.",
+          },
+          {
+            pointOfInterestLocation: { name: "POI Location Name" },
+            description: "Location prose should not win.",
+          },
+          {
+            pointOfInterestLocation: {
+              locationName: "POI Location LocationName",
+            },
+            description: "LocationName prose should not win.",
+          },
+          {
+            pointOfInterestLocation: {
+              location: { name: "Nested POI Location Name" },
+            },
+            description: "Nested prose should not win.",
+          },
+          {
+            attraction: { name: "Attraction Name" },
+            description: "Attraction prose should not win.",
+          },
+          {
+            location: { place: { title: "Nested Location Title" } },
+            description: "Nested location prose should not win.",
+          },
+        ],
+      },
+    });
+
+    expect(extracted.extracted.itinerary.map(item => item.title)).toEqual([
+      "Native Row Title",
+      "POI Title",
+      "POI Name",
+      "POI Location Name",
+      "POI Location LocationName",
+      "Nested POI Location Name",
+      "Attraction Name",
+      "Nested Location Title",
+    ]);
+    expect(extracted.extracted.itinerary[1]?.description).toBe(
+      "Do not infer Another Title from this prose."
+    );
+  });
+
+  it.each([
+    [
+      "26095P3",
+      [
+        "Interlaken City Switzerland",
+        "Kirche Gsteig",
+        "Lauterbrunnen Valley Waterfalls",
+      ],
+    ],
+    [
+      "15131P4",
+      ["Downtown Los Angeles", "Dodger Stadium", "Walt Disney Concert Hall"],
+    ],
+    [
+      "365892P1",
+      ["Venice Beach Boardwalk", "Santa Monica Pier", "Beverly Hills"],
+    ],
+    ["424070P1", ["Santa Fe Depot", "Gaslamp Quarter", "Little Italy"]],
+    ["5257BOAT", ["Point Loma", "Coronado Island"]],
+  ])(
+    "recovers audited structured itinerary titles for %s",
+    (productCode, expectedTitles) => {
+      const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+        item => item.productCode === productCode
+      );
+
+      expect(fixture, `missing fixture for ${productCode}`).toBeDefined();
+
+      const extracted = extractEngine6Product(fixture!.rawPayload);
+      const titles = extracted.extracted.itinerary.map(item => item.title);
+
+      for (const expectedTitle of expectedTitles) {
+        expect(titles).toContain(expectedTitle);
+      }
+    }
+  );
+
   it("prefers structured day itinerary fields and preserves section labels", () => {
     const extracted = extractEngine6Product({
       product: {
