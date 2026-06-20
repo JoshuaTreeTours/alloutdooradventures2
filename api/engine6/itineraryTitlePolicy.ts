@@ -16,6 +16,23 @@ const PUBLIC_JSON_LD_ITINERARY_NAMES_BY_PRODUCT_CODE: Record<
   string,
   readonly string[]
 > = {
+  "117409P1": ["Santa Ynez Valley"],
+  "191303P1": ["Coronado Island"],
+  "2335P1": ["San Andreas Fault"],
+  "447486P4": ["Santa Barbara Maritime Museum"],
+  "67760P2": [
+    "Santa Monica Pier",
+    "The Original Farmers Market",
+    "Griffith Observatory",
+    "Hollywood Walk of Fame",
+  ],
+  "70058P145": [
+    "Griffith Observatory",
+    "Hollywood Walk of Fame",
+    "Rodeo Drive",
+    "Hollywood Sign",
+    "The Original Farmers Market",
+  ],
   "3885GRINDEL_ZUR": [
     "Zurich",
     "Interlaken",
