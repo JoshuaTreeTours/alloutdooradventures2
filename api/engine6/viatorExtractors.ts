@@ -1087,10 +1087,43 @@ const normalizeSingleItineraryItem = (
     false;
   const isPassByFromType = /pass[\s_-]?by/i.test(stopTypeRaw ?? "");
 
-  const locationTitle =
+  const attraction = asRecord(row.attraction);
+
+  const findNestedStructuredLocationTitle = (value: unknown): string | null => {
+    const record = asRecord(value);
+    if (!record) return null;
+
+    const directTitle =
+      asNonEmptyString(record.name) ?? asNonEmptyString(record.title);
+    if (directTitle) return directTitle;
+
+    for (const key of [
+      "location",
+      "address",
+      "place",
+      "venue",
+      "destination",
+      "pointOfInterest",
+      "pointOfInterestLocation",
+    ]) {
+      const nestedTitle = findNestedStructuredLocationTitle(record[key]);
+      if (nestedTitle) return nestedTitle;
+    }
+
+    return null;
+  };
+
+  const structuredRecoveredTitle =
+    asNonEmptyString(pointOfInterest?.title) ??
+    asNonEmptyString(pointOfInterest?.name) ??
+    asNonEmptyString(pointOfInterestLocation?.name) ??
     asNonEmptyString(pointOfInterestLocation?.locationName) ??
-    asNonEmptyString(pointOfInterestLocation?.title) ??
-    asNonEmptyString(pointOfInterestLocation?.name);
+    findNestedStructuredLocationTitle(pointOfInterestLocation?.location) ??
+    asNonEmptyString(attraction?.name) ??
+    asNonEmptyString(attraction?.title) ??
+    findNestedStructuredLocationTitle(location) ??
+    findNestedStructuredLocationTitle(stop?.location) ??
+    findNestedStructuredLocationTitle(attraction?.location);
   const inferredTitleFromDescription = (() => {
     const descriptionText = asNonEmptyString(row.description);
     if (!descriptionText) return null;
@@ -1131,13 +1164,7 @@ const normalizeSingleItineraryItem = (
   let title: string | null = null;
   let titleSource: Engine6ItineraryTitleSource = "description-inferred";
 
-  if (jsonLdTitle) {
-    title = jsonLdTitle;
-    titleSource = "json-ld";
-  } else if (locationTitle) {
-    title = locationTitle;
-    titleSource = "explicit";
-  } else if (asNonEmptyString(row.title)) {
+  if (asNonEmptyString(row.title)) {
     title = asNonEmptyString(row.title);
     titleSource = "explicit";
   } else if (asNonEmptyString(row.name)) {
@@ -1146,13 +1173,13 @@ const normalizeSingleItineraryItem = (
   } else if (asNonEmptyString(row.label)) {
     title = asNonEmptyString(row.label);
     titleSource = "explicit";
-  } else if (asNonEmptyString(pointOfInterest?.title)) {
-    title = asNonEmptyString(pointOfInterest?.title);
+  } else if (jsonLdTitle) {
+    title = jsonLdTitle;
+    titleSource = "json-ld";
+  } else if (structuredRecoveredTitle) {
+    title = structuredRecoveredTitle;
     titleSource = "explicit";
-  } else if (asNonEmptyString(pointOfInterest?.name)) {
-    title = asNonEmptyString(pointOfInterest?.name);
-    titleSource = "explicit";
-  } else if (asNonEmptyString(stop?.name)) {
+  } else if (stop?.name && asNonEmptyString(stop.name)) {
     title = asNonEmptyString(stop?.name);
     titleSource = "explicit";
   } else if (asNonEmptyString(stop?.title)) {
