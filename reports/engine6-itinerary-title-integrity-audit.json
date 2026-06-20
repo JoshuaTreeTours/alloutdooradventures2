@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T16:02:06.106Z",
+  "generatedAt": "2026-06-20T16:20:46.247Z",
   "totals": {
     "engine6ToursAudited": 133,
     "itineraryRowsAudited": 614,
@@ -9,11 +9,11 @@
   "topSuspiciousPatterns": [
     {
       "reason": "more-than-eight-words",
-      "count": 20
+      "count": 19
     },
     {
       "reason": "more-than-sixty-characters",
-      "count": 17
+      "count": 16
     },
     {
       "reason": "sentence-punctuation",
@@ -85,7 +85,7 @@
       "examples": [
         "We'll meet you in front of the Greek Theatre",
         "See the gorgeous LA River on this Hollywood Hills Tour",
-        "Check out Warner Brothers, the most famous film studio in LA, in a bird's eye view on this Hollywood Hills Tour"
+        "Warner Bros. Studios"
       ]
     },
     {
@@ -292,14 +292,12 @@
       "route": "/destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles",
       "tourTitle": "Griffith Observatory Hike: Guided Tour through Griffith Park",
       "itineraryIndex": 13,
-      "renderedTitle": "Check out Warner Brothers, the most famous film studio in LA, in a bird's eye view on this Hollywood Hills Tour",
-      "renderedDescription": "Pass Warner Brothers, the most famous film studio in LA, in a bird's eye view on this Hollywood Hills Tour as part of the route.",
+      "renderedTitle": "Warner Bros. Studios",
+      "renderedDescription": "Warner Brothers, the most famous film studio in LA, in a bird's eye view on this Hollywood Hills Tour.",
       "titleSource": null,
       "duration": null,
       "admissionStatus": null,
       "suspiciousReasons": [
-        "more-than-eight-words",
-        "more-than-sixty-characters",
         "sentence-punctuation"
       ]
     },

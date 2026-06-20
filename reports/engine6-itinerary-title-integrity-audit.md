@@ -1,6 +1,6 @@
 # Engine6 Itinerary Title Integrity Audit
 
-Generated: 2026-06-20T16:02:06.106Z
+Generated: 2026-06-20T16:20:46.247Z
 
 ## Totals
 
@@ -13,8 +13,8 @@ Generated: 2026-06-20T16:02:06.106Z
 
 | Pattern | Count |
 | --- | ---: |
-| more-than-eight-words | 20 |
-| more-than-sixty-characters | 17 |
+| more-than-eight-words | 19 |
+| more-than-sixty-characters | 16 |
 | sentence-punctuation | 14 |
 | generic-description-start | 5 |
 | supplier-marketing-prose | 4 |
@@ -28,7 +28,7 @@ Generated: 2026-06-20T16:02:06.106Z
 | /destinations/wyoming/jackson/tours/4-day-yellowstone-and-grand-teton-national-parks-wildlife-adventure | 6029_4DAYPARK | 4 | Day 1: Grand Teton National Park Dusk Adventure; Day 2: Grand Teton & Yellowstone Wildlife and the Grand Canyon of Yellowstone; Day 3: Buffalo Bill Cody Museum, Yellowstone Wildlife & Scenic Upper Loop Adventure |
 | /destinations/california/san-diego/tours/san-diego-bay-day-sail | 37126P9 | 3 | Sail under the bow of the aircraft carrier Midway for an out-of-this-world experience; The Rady Shell at Jacobs Park is a stunning open-air concert venue on the San Diego waterfront; The San Diego Convention Center |
 | /destinations/switzerland/zurich/tours/exclusive-zurich-tour-old-town-lake-zurich-cruise-and-lindt-museum | 5553984P5 | 3 | Zurich Main Station (Zürich Hauptbahnhof) is a bustling hub of activity and a must-visit for anyone traveling to the city; This prominent 13th-century Gothic cathedral is perhaps best known for one of its more recent additions; The "Home of Chocolate Lindt" offers a truly enchanting journey into the world of Swiss chocolate |
-| /destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles | 5569HIKE | 3 | We'll meet you in front of the Greek Theatre; See the gorgeous LA River on this Hollywood Hills Tour; Check out Warner Brothers, the most famous film studio in LA, in a bird's eye view on this Hollywood Hills Tour |
+| /destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles | 5569HIKE | 3 | We'll meet you in front of the Greek Theatre; See the gorgeous LA River on this Hollywood Hills Tour; Warner Bros. Studios |
 | /destinations/california/los-angeles/tours/hollywood-private-helicopter-tour-15131P4 | 15131P4 | 1 | Crypto.com Arena |
 | /destinations/california/san-diego/tours/san-diego-private-balboa-park-segway-tour | 18125P5 | 1 | Pass the Spanish Village Art Center to see colorful courtyards and artist studios that reflect the park's creative side |
 | /destinations/louisiana/new-orleans/tours/new-orleans-city-bike-tour | 276551P2 | 1 | Lafayette Cemetery No. 1 |

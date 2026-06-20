@@ -48,6 +48,7 @@ const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
     10: "Mount Hollywood",
     11: "Hollywood Sign",
     12: "Century City Views",
+    13: "Warner Bros. Studios",
     14: "Downtown Los Angeles Views",
     16: "Hollywood Views",
     17: "Los Angeles Zoo",

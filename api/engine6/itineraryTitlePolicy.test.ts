@@ -310,6 +310,7 @@ describe("Engine6 definitely broken itinerary title repairs", () => {
           10: "Mount Hollywood",
           11: "Hollywood Sign",
           12: "Century City Views",
+          13: "Warner Bros. Studios",
           14: "Downtown Los Angeles Views",
           16: "Hollywood Views",
           17: "Los Angeles Zoo",
@@ -406,6 +407,16 @@ describe("Engine6 definitely broken itinerary title repairs", () => {
         "This 90-minute shore excursion is a fantastic way to see the best of the Bay and San Diego during your limited time in port",
       titleSource: "description-inferred",
     });
+  });
+
+  it("uses the reviewed 5569HIKE Warner Bros. Studios override without changing the description", () => {
+    expect(extractEngine6Product(specimen5569hikePayload).extracted.itinerary[13])
+      .toMatchObject({
+        title: "Warner Bros. Studios",
+        titleSource: "product-override",
+        description:
+          "Check out Warner Brothers, the most famous film studio in LA, in a bird's eye view on this Hollywood Hills Tour.",
+      });
   });
 });
 
