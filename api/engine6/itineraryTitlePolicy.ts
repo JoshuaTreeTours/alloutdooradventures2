@@ -62,10 +62,10 @@ const PUBLIC_JSON_LD_ITINERARY_NAMES_BY_PRODUCT_CODE: Record<
     "East Beach",
     "Andrée Clark Bird Refuge",
     "Butterfly Beach",
-    "Santa Barbara Museum of Natural History",
+    "Natural History Museum",
     "Old Mission Santa Barbara",
     "Santa Barbara County Courthouse",
-    "El Presidio de Santa Barbara State Historic Park",
+    "El Presidio State Park",
     "Santa Barbara Harbor",
   ],
 };

@@ -1137,6 +1137,9 @@ const normalizeSingleItineraryItem = (
   if (alignedJsonLdTitle) {
     title = alignedJsonLdTitle.title;
     titleSource = alignedJsonLdTitle.source;
+  } else if (productOverride) {
+    title = productOverride;
+    titleSource = "product-override";
   } else if (locationTitle) {
     title = locationTitle;
     titleSource = "explicit";
@@ -1164,9 +1167,6 @@ const normalizeSingleItineraryItem = (
   } else if (asNonEmptyString(location?.name)) {
     title = asNonEmptyString(location?.name);
     titleSource = "explicit";
-  } else if (productOverride) {
-    title = productOverride;
-    titleSource = "product-override";
   } else if (inferredTitleFromDescription) {
     title = inferredTitleFromDescription;
     titleSource = "description-inferred";

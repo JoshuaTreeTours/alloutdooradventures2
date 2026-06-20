@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-06-20T17:15:55.695Z",
+  "criteria": {
+    "wordCountGreaterThan": 6,
+    "characterCountGreaterThan": 70,
+    "comparesAgainstDescriptionFirstSentence": true,
+    "blockedPrefixes": [
+      "On days",
+      "Your",
+      "You’ll",
+      "You'll",
+      "We’ll",
+      "We'll",
+      "This",
+      "The route",
+      "Visit",
+      "Enjoy",
+      "Explore",
+      "Discover",
+      "Continue",
+      "Check out",
+      "Pass",
+      "Sail",
+      "Cruise",
+      "Drive",
+      "Head",
+      "Return"
+    ]
+  },
+  "totals": {
+    "engine6ToursAudited": 133,
+    "itineraryRowsAudited": 614,
+    "suspiciousRows": 0,
+    "affectedProducts": 0
+  },
+  "specificallyCheckedProduct15131P4": {
+    "presentInPublishedEngine6Routes": true,
+    "suspiciousRows": []
+  },
+  "reasonCounts": [],
+  "affectedProducts": [],
+  "rows": []
+}
