@@ -203,7 +203,9 @@ describe("public JSON-LD itinerary title enrichment", () => {
         Array(expectedTitles.length).fill("public-json-ld")
       );
       expect(
-        result.extracted.itinerary.every(item => item.description.length > 0)
+        result.extracted.itinerary.every(
+          item => (item.description?.length ?? 0) > 0
+        )
       ).toBe(true);
     }
   );
