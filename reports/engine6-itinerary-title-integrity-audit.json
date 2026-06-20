@@ -1,0 +1,638 @@
+{
+  "generatedAt": "2026-06-20T16:20:46.247Z",
+  "totals": {
+    "engine6ToursAudited": 133,
+    "itineraryRowsAudited": 614,
+    "suspiciousRows": 29,
+    "affectedTours": 17
+  },
+  "topSuspiciousPatterns": [
+    {
+      "reason": "more-than-eight-words",
+      "count": 19
+    },
+    {
+      "reason": "more-than-sixty-characters",
+      "count": 16
+    },
+    {
+      "reason": "sentence-punctuation",
+      "count": 14
+    },
+    {
+      "reason": "generic-description-start",
+      "count": 5
+    },
+    {
+      "reason": "supplier-marketing-prose",
+      "count": 4
+    },
+    {
+      "reason": "matches-description-first-sentence",
+      "count": 1
+    }
+  ],
+  "affectedProducts": [
+    {
+      "productId": "5144BRUNCH",
+      "route": "/destinations/california/san-diego/tours/san-diego-sunday-brunch-cruise",
+      "tourTitle": "Champagne Brunch Buffet",
+      "suspiciousRowCount": 4,
+      "examples": [
+        "Cruise San Diego Bay on a Sunday brunch cruise experience with skyline views and live onboard entertainment",
+        "Sail past the Coronado Bridge, Seaport Village, USS Midway Museum, and downtown skyline during San Diego Bay sightseeing",
+        "Continue along the waterfront with clear views of the Coronado Bridge and central harbor landmarks from the dining deck"
+      ]
+    },
+    {
+      "productId": "6029_4DAYPARK",
+      "route": "/destinations/wyoming/jackson/tours/4-day-yellowstone-and-grand-teton-national-parks-wildlife-adventure",
+      "tourTitle": "Yellowstone and Grand Teton 4 Day 3 Night Wildlife Adventure",
+      "suspiciousRowCount": 4,
+      "examples": [
+        "Day 1: Grand Teton National Park Dusk Adventure",
+        "Day 2: Grand Teton & Yellowstone Wildlife and the Grand Canyon of Yellowstone",
+        "Day 3: Buffalo Bill Cody Museum, Yellowstone Wildlife & Scenic Upper Loop Adventure"
+      ]
+    },
+    {
+      "productId": "37126P9",
+      "route": "/destinations/california/san-diego/tours/san-diego-bay-day-sail",
+      "tourTitle": "San Diego Sailing Cruise Small Group 6 Guests Classic Yacht",
+      "suspiciousRowCount": 3,
+      "examples": [
+        "Sail under the bow of the aircraft carrier Midway for an out-of-this-world experience",
+        "The Rady Shell at Jacobs Park is a stunning open-air concert venue on the San Diego waterfront",
+        "The San Diego Convention Center"
+      ]
+    },
+    {
+      "productId": "5553984P5",
+      "route": "/destinations/switzerland/zurich/tours/exclusive-zurich-tour-old-town-lake-zurich-cruise-and-lindt-museum",
+      "tourTitle": "Zurich tour with Lake Zurich Cruise & Lindt Chocolate Experience",
+      "suspiciousRowCount": 3,
+      "examples": [
+        "Zurich Main Station (Zürich Hauptbahnhof) is a bustling hub of activity and a must-visit for anyone traveling to the city",
+        "This prominent 13th-century Gothic cathedral is perhaps best known for one of its more recent additions",
+        "The \"Home of Chocolate Lindt\" offers a truly enchanting journey into the world of Swiss chocolate"
+      ]
+    },
+    {
+      "productId": "5569HIKE",
+      "route": "/destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles",
+      "tourTitle": "Griffith Observatory Hike: Guided Tour through Griffith Park",
+      "suspiciousRowCount": 3,
+      "examples": [
+        "We'll meet you in front of the Greek Theatre",
+        "See the gorgeous LA River on this Hollywood Hills Tour",
+        "Warner Bros. Studios"
+      ]
+    },
+    {
+      "productId": "15131P4",
+      "route": "/destinations/california/los-angeles/tours/hollywood-private-helicopter-tour-15131P4",
+      "tourTitle": "Downtown LA Lights: Your Private Sunset and Night Helicopter Tour",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Crypto.com Arena"
+      ]
+    },
+    {
+      "productId": "18125P5",
+      "route": "/destinations/california/san-diego/tours/san-diego-private-balboa-park-segway-tour",
+      "tourTitle": "San Diego Private Balboa Park Segway Tour",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Pass the Spanish Village Art Center to see colorful courtyards and artist studios that reflect the park's creative side"
+      ]
+    },
+    {
+      "productId": "276551P2",
+      "route": "/destinations/louisiana/new-orleans/tours/new-orleans-city-bike-tour",
+      "tourTitle": "New Orleans City Bike Tour",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Lafayette Cemetery No. 1"
+      ]
+    },
+    {
+      "productId": "32779P6",
+      "route": "/destinations/california/los-angeles/tours/2-hour-inside-adventure-tour-on-catalina-island-32779P6",
+      "tourTitle": "Catalina Island 2-Hour Insider Adventure Tour",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "As you venture ten miles into the rugged interior, you will view the protected side of Catalina Island seldom seen by most visitors"
+      ]
+    },
+    {
+      "productId": "414460P1",
+      "route": "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491",
+      "tourTitle": "VIP Central Park Pedicab Guided Tour",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Strawberry Fields, John Lennon Memorial"
+      ]
+    },
+    {
+      "productId": "474891P3",
+      "route": "/destinations/new-york/new-york/tours/new-york-city-private-walking-tour-with-a-local-guide",
+      "tourTitle": "New York City Private Walking Tour with a Local",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "New York Public Library - Stephen A. Schwarzman Building"
+      ]
+    },
+    {
+      "productId": "5046SAN_SEA",
+      "route": "/destinations/california/san-diego/tours/san-diego-seal-tour-5046PRTSANSEA",
+      "tourTitle": "San Diego Seal Tour",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "This 90-minute shore excursion is a fantastic way to see the best of the Bay and San Diego during your limited time in port"
+      ]
+    },
+    {
+      "productId": "5515296P1",
+      "route": "/destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus",
+      "tourTitle": "NYC Bustronome Gourmet Sightseeing Lunch Panoramic Bus",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Solomon R. Guggenheim Museum"
+      ]
+    },
+    {
+      "productId": "5516ST5",
+      "route": "/destinations/nevada/las-vegas/tours/deluxe-las-vegas-helicopter-night-flight-with-vip-transportation",
+      "tourTitle": "Deluxe Las Vegas Helicopter Night Flight with VIP Transportation",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "MSG Sphere, High Roller, and LINQ district"
+      ]
+    },
+    {
+      "productId": "5603847P4",
+      "route": "/destinations/california/santa-barbara/tours/santa-barbara-stargazing-tour-with-phd-student-guide-5603847P4",
+      "tourTitle": "Santa Barbara Stargazing Tour with PhD Student Guide",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Escape the city lights and experience Santa Barbara’s night sky on a PhD-led stargazing tour"
+      ]
+    },
+    {
+      "productId": "5614063P8",
+      "route": "/destinations/new-york/new-york/tours/washington-d-c-tour-from-new-york",
+      "tourTitle": "Washington D.C. Tour from New York",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Washington, D.C. Landmarks"
+      ]
+    },
+    {
+      "productId": "6400P7",
+      "route": "/destinations/switzerland/lucerne/tours/short-catamaran-cruise-on-lake-lucerne",
+      "tourTitle": "Lake Lucerne 1-Hour Catamaran Cruise",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Enjoy the best of the lake Lucerne and"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "productId": "5603847P4",
+      "route": "/destinations/california/santa-barbara/tours/santa-barbara-stargazing-tour-with-phd-student-guide-5603847P4",
+      "tourTitle": "Santa Barbara Stargazing Tour with PhD Student Guide",
+      "itineraryIndex": 0,
+      "renderedTitle": "Escape the city lights and experience Santa Barbara’s night sky on a PhD-led stargazing tour",
+      "renderedDescription": "Visit Escape the city lights and experience Santa Barbara’s night sky on a PhD-led stargazing tour.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": "Admission Included",
+      "suspiciousReasons": [
+        "more-than-eight-words",
+        "more-than-sixty-characters"
+      ]
+    },
+    {
+      "productId": "5516ST5",
+      "route": "/destinations/nevada/las-vegas/tours/deluxe-las-vegas-helicopter-night-flight-with-vip-transportation",
+      "tourTitle": "Deluxe Las Vegas Helicopter Night Flight with VIP Transportation",
+      "itineraryIndex": 3,
+      "renderedTitle": "MSG Sphere, High Roller, and LINQ district",
+      "renderedDescription": "Continue northbound over the High Roller corridor and the bright entertainment zone around the Sphere.",
+      "titleSource": null,
+      "duration": "4 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "15131P4",
+      "route": "/destinations/california/los-angeles/tours/hollywood-private-helicopter-tour-15131P4",
+      "tourTitle": "Downtown LA Lights: Your Private Sunset and Night Helicopter Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "Crypto.com Arena",
+      "renderedDescription": "Home of the Lakers and Clippers, now called Crypto arena.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "32779P6",
+      "route": "/destinations/california/los-angeles/tours/2-hour-inside-adventure-tour-on-catalina-island-32779P6",
+      "tourTitle": "Catalina Island 2-Hour Insider Adventure Tour",
+      "itineraryIndex": 0,
+      "renderedTitle": "As you venture ten miles into the rugged interior, you will view the protected side of Catalina Island seldom seen by most visitors",
+      "renderedDescription": "Travel deep into Catalina’s interior for sweeping island viewpoints and frequent wildlife sightings across protected terrain.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "more-than-eight-words",
+        "more-than-sixty-characters",
+        "sentence-punctuation",
+        "supplier-marketing-prose"
+      ]
+    },
+    {
+      "productId": "5569HIKE",
+      "route": "/destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles",
+      "tourTitle": "Griffith Observatory Hike: Guided Tour through Griffith Park",
+      "itineraryIndex": 1,
+      "renderedTitle": "We'll meet you in front of the Greek Theatre",
+      "renderedDescription": "Meet you in front of the Greek Theatre.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "more-than-eight-words"
+      ]
+    },
+    {
+      "productId": "5569HIKE",
+      "route": "/destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles",
+      "tourTitle": "Griffith Observatory Hike: Guided Tour through Griffith Park",
+      "itineraryIndex": 7,
+      "renderedTitle": "See the gorgeous LA River on this Hollywood Hills Tour",
+      "renderedDescription": "Pass The gorgeous LA River on this Hollywood Hills Tour as part of the route.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "generic-description-start",
+        "more-than-eight-words"
+      ]
+    },
+    {
+      "productId": "5569HIKE",
+      "route": "/destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles",
+      "tourTitle": "Griffith Observatory Hike: Guided Tour through Griffith Park",
+      "itineraryIndex": 13,
+      "renderedTitle": "Warner Bros. Studios",
+      "renderedDescription": "Warner Brothers, the most famous film studio in LA, in a bird's eye view on this Hollywood Hills Tour.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "6029_4DAYPARK",
+      "route": "/destinations/wyoming/jackson/tours/4-day-yellowstone-and-grand-teton-national-parks-wildlife-adventure",
+      "tourTitle": "Yellowstone and Grand Teton 4 Day 3 Night Wildlife Adventure",
+      "itineraryIndex": 0,
+      "renderedTitle": "Day 1: Grand Teton National Park Dusk Adventure",
+      "renderedDescription": "Mormon Row Historic District; Grand Teton National Park; T.",
+      "titleSource": null,
+      "duration": "1 day",
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "supplier-marketing-prose"
+      ]
+    },
+    {
+      "productId": "6029_4DAYPARK",
+      "route": "/destinations/wyoming/jackson/tours/4-day-yellowstone-and-grand-teton-national-parks-wildlife-adventure",
+      "tourTitle": "Yellowstone and Grand Teton 4 Day 3 Night Wildlife Adventure",
+      "itineraryIndex": 1,
+      "renderedTitle": "Day 2: Grand Teton & Yellowstone Wildlife and the Grand Canyon of Yellowstone",
+      "renderedDescription": "Oxbow Bend; Jackson Lake; West Thumb Geyser Basin; Yellowstone Lake; Hayden Valley; Grand Canyon of the Yellowstone.",
+      "titleSource": null,
+      "duration": "1 day",
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "more-than-eight-words",
+        "more-than-sixty-characters"
+      ]
+    },
+    {
+      "productId": "6029_4DAYPARK",
+      "route": "/destinations/wyoming/jackson/tours/4-day-yellowstone-and-grand-teton-national-parks-wildlife-adventure",
+      "tourTitle": "Yellowstone and Grand Teton 4 Day 3 Night Wildlife Adventure",
+      "itineraryIndex": 2,
+      "renderedTitle": "Day 3: Buffalo Bill Cody Museum, Yellowstone Wildlife & Scenic Upper Loop Adventure",
+      "renderedDescription": "Buffalo Bill Center of the West; Chief Joseph Scenic Byway; Lamar Valley.",
+      "titleSource": null,
+      "duration": "1 day",
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "more-than-eight-words",
+        "more-than-sixty-characters",
+        "sentence-punctuation",
+        "supplier-marketing-prose"
+      ]
+    },
+    {
+      "productId": "6029_4DAYPARK",
+      "route": "/destinations/wyoming/jackson/tours/4-day-yellowstone-and-grand-teton-national-parks-wildlife-adventure",
+      "tourTitle": "Yellowstone and Grand Teton 4 Day 3 Night Wildlife Adventure",
+      "itineraryIndex": 3,
+      "renderedTitle": "Day 4: Wildlife Viewing in the American Serengeti, Mammoth Hot Springs, and Old Faithful Geyser",
+      "renderedDescription": "Lamar Valley; Old Faithful; Old Faithful Inn; Mammoth Hot Springs; Roosevelt Arch; Snake River Overlook; Fountain Paint Pot.",
+      "titleSource": null,
+      "duration": "1 day",
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "more-than-eight-words",
+        "more-than-sixty-characters",
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "414460P1",
+      "route": "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491",
+      "tourTitle": "VIP Central Park Pedicab Guided Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Strawberry Fields, John Lennon Memorial",
+      "renderedDescription": "Hear stories about the memorial and nearby landmarks.",
+      "titleSource": null,
+      "duration": "10 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "5614063P8",
+      "route": "/destinations/new-york/new-york/tours/washington-d-c-tour-from-new-york",
+      "tourTitle": "Washington D.C. Tour from New York",
+      "itineraryIndex": 1,
+      "renderedTitle": "Washington, D.C. Landmarks",
+      "renderedDescription": "Visit Washington, D.C. Landmarks during the 5 hours stop.",
+      "titleSource": null,
+      "duration": "5 hours",
+      "admissionStatus": "Admission Ticket Free",
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "276551P2",
+      "route": "/destinations/louisiana/new-orleans/tours/new-orleans-city-bike-tour",
+      "tourTitle": "New Orleans City Bike Tour",
+      "itineraryIndex": 11,
+      "renderedTitle": "Lafayette Cemetery No. 1",
+      "renderedDescription": "Make a short five-minute stop at Lafayette Cemetery No.",
+      "titleSource": null,
+      "duration": "5 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "474891P3",
+      "route": "/destinations/new-york/new-york/tours/new-york-city-private-walking-tour-with-a-local-guide",
+      "tourTitle": "New York City Private Walking Tour with a Local",
+      "itineraryIndex": 3,
+      "renderedTitle": "New York Public Library - Stephen A. Schwarzman Building",
+      "renderedDescription": "Visit New York Public Library - Stephen A. Schwarzman Building during the 20 minutes stop.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": "Admission Ticket Free",
+      "suspiciousReasons": [
+        "more-than-eight-words",
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "5515296P1",
+      "route": "/destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus",
+      "tourTitle": "NYC Bustronome Gourmet Sightseeing Lunch Panoramic Bus",
+      "itineraryIndex": 5,
+      "renderedTitle": "Solomon R. Guggenheim Museum",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "5144BRUNCH",
+      "route": "/destinations/california/san-diego/tours/san-diego-sunday-brunch-cruise",
+      "tourTitle": "Champagne Brunch Buffet",
+      "itineraryIndex": 0,
+      "renderedTitle": "Cruise San Diego Bay on a Sunday brunch cruise experience with skyline views and live onboard entertainment",
+      "renderedDescription": "Settle into a relaxed bay cruise with live onboard ambiance, skyline views, and a polished Sunday brunch setting.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "more-than-eight-words",
+        "more-than-sixty-characters"
+      ]
+    },
+    {
+      "productId": "5144BRUNCH",
+      "route": "/destinations/california/san-diego/tours/san-diego-sunday-brunch-cruise",
+      "tourTitle": "Champagne Brunch Buffet",
+      "itineraryIndex": 1,
+      "renderedTitle": "Sail past the Coronado Bridge, Seaport Village, USS Midway Museum, and downtown skyline during San Diego Bay sightseeing",
+      "renderedDescription": "Cruise beneath the Coronado Bridge past Seaport Village and the USS Midway along San Diego’s iconic waterfront corridor.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "more-than-eight-words",
+        "more-than-sixty-characters",
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "5144BRUNCH",
+      "route": "/destinations/california/san-diego/tours/san-diego-sunday-brunch-cruise",
+      "tourTitle": "Champagne Brunch Buffet",
+      "itineraryIndex": 2,
+      "renderedTitle": "Continue along the waterfront with clear views of the Coronado Bridge and central harbor landmarks from the dining deck",
+      "renderedDescription": "Watch downtown skyline views broaden from the dining deck as the yacht glides through central harbor waters.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "generic-description-start",
+        "more-than-eight-words",
+        "more-than-sixty-characters"
+      ]
+    },
+    {
+      "productId": "5144BRUNCH",
+      "route": "/destinations/california/san-diego/tours/san-diego-sunday-brunch-cruise",
+      "tourTitle": "Champagne Brunch Buffet",
+      "itineraryIndex": 4,
+      "renderedTitle": "Pass North Island Naval Air Station, Naval Submarine Base, Shelter Island, and Cabrillo National Monument on the return route",
+      "renderedDescription": "Pass naval installations, Shelter Island marinas, and Cabrillo’s coastal point on the scenic return across San Diego Bay.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "generic-description-start",
+        "more-than-eight-words",
+        "more-than-sixty-characters",
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "18125P5",
+      "route": "/destinations/california/san-diego/tours/san-diego-private-balboa-park-segway-tour",
+      "tourTitle": "San Diego Private Balboa Park Segway Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Pass the Spanish Village Art Center to see colorful courtyards and artist studios that reflect the park's creative side",
+      "renderedDescription": "Visit The Spanish Village Art Center to see colorful courtyards and artist studios that reflect the park's creative side.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "generic-description-start",
+        "more-than-eight-words",
+        "more-than-sixty-characters"
+      ]
+    },
+    {
+      "productId": "5046SAN_SEA",
+      "route": "/destinations/california/san-diego/tours/san-diego-seal-tour-5046PRTSANSEA",
+      "tourTitle": "San Diego Seal Tour",
+      "itineraryIndex": 0,
+      "renderedTitle": "This 90-minute shore excursion is a fantastic way to see the best of the Bay and San Diego during your limited time in port",
+      "renderedDescription": "Visit This 90-minute shore excursion is a fantastic way to see the best of the Bay and San Diego during your limited time in port.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "more-than-eight-words",
+        "more-than-sixty-characters"
+      ]
+    },
+    {
+      "productId": "37126P9",
+      "route": "/destinations/california/san-diego/tours/san-diego-bay-day-sail",
+      "tourTitle": "San Diego Sailing Cruise Small Group 6 Guests Classic Yacht",
+      "itineraryIndex": 1,
+      "renderedTitle": "Sail under the bow of the aircraft carrier Midway for an out-of-this-world experience",
+      "renderedDescription": "Pass Sail under the bow of the aircraft carrier Midway for an out-of-this-world experience as part of the route.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "more-than-eight-words",
+        "more-than-sixty-characters"
+      ]
+    },
+    {
+      "productId": "37126P9",
+      "route": "/destinations/california/san-diego/tours/san-diego-bay-day-sail",
+      "tourTitle": "San Diego Sailing Cruise Small Group 6 Guests Classic Yacht",
+      "itineraryIndex": 5,
+      "renderedTitle": "The Rady Shell at Jacobs Park is a stunning open-air concert venue on the San Diego waterfront",
+      "renderedDescription": "Pass The Rady Shell at Jacobs Park is a stunning open-air concert venue on the San Diego waterfront as part of the route.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "more-than-eight-words",
+        "more-than-sixty-characters",
+        "supplier-marketing-prose"
+      ]
+    },
+    {
+      "productId": "37126P9",
+      "route": "/destinations/california/san-diego/tours/san-diego-bay-day-sail",
+      "tourTitle": "San Diego Sailing Cruise Small Group 6 Guests Classic Yacht",
+      "itineraryIndex": 6,
+      "renderedTitle": "The San Diego Convention Center",
+      "renderedDescription": "The San Diego Convention Center is a striking waterfront venue known for its modern architecture and iconic sail-like rooftop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ]
+    },
+    {
+      "productId": "6400P7",
+      "route": "/destinations/switzerland/lucerne/tours/short-catamaran-cruise-on-lake-lucerne",
+      "tourTitle": "Lake Lucerne 1-Hour Catamaran Cruise",
+      "itineraryIndex": 0,
+      "renderedTitle": "Enjoy the best of the lake Lucerne and",
+      "renderedDescription": "Visit The best of the lake Lucerne and.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": "NOT_APPLICABLE",
+      "suspiciousReasons": [
+        "generic-description-start"
+      ]
+    },
+    {
+      "productId": "5553984P5",
+      "route": "/destinations/switzerland/zurich/tours/exclusive-zurich-tour-old-town-lake-zurich-cruise-and-lindt-museum",
+      "tourTitle": "Zurich tour with Lake Zurich Cruise & Lindt Chocolate Experience",
+      "itineraryIndex": 1,
+      "renderedTitle": "Zurich Main Station (Zürich Hauptbahnhof) is a bustling hub of activity and a must-visit for anyone traveling to the city",
+      "renderedDescription": "Zurich Main Station is a bustling hub of activity and a must-visit for anyone traveling to the city.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "more-than-eight-words",
+        "more-than-sixty-characters"
+      ]
+    },
+    {
+      "productId": "5553984P5",
+      "route": "/destinations/switzerland/zurich/tours/exclusive-zurich-tour-old-town-lake-zurich-cruise-and-lindt-museum",
+      "tourTitle": "Zurich tour with Lake Zurich Cruise & Lindt Chocolate Experience",
+      "itineraryIndex": 4,
+      "renderedTitle": "This prominent 13th-century Gothic cathedral is perhaps best known for one of its more recent additions",
+      "renderedDescription": "Pass This prominent 13th-century Gothic cathedral is perhaps best known for one of its more recent additions as part of the route.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "more-than-eight-words",
+        "more-than-sixty-characters"
+      ]
+    },
+    {
+      "productId": "5553984P5",
+      "route": "/destinations/switzerland/zurich/tours/exclusive-zurich-tour-old-town-lake-zurich-cruise-and-lindt-museum",
+      "tourTitle": "Zurich tour with Lake Zurich Cruise & Lindt Chocolate Experience",
+      "itineraryIndex": 7,
+      "renderedTitle": "The \"Home of Chocolate Lindt\" offers a truly enchanting journey into the world of Swiss chocolate",
+      "renderedDescription": "Visit The \"Home of Chocolate Lindt\" offers a truly enchanting journey into the world of Swiss chocolate.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": "Admission Included",
+      "suspiciousReasons": [
+        "more-than-eight-words",
+        "more-than-sixty-characters",
+        "sentence-punctuation"
+      ]
+    }
+  ]
+}
