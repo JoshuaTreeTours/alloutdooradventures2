@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest";
 
 import { extractEngine6Product } from "./viatorExtractors";
 import { getEngine6ItineraryJsonLdTitle } from "./itineraryTitlePolicy";
+import specimen163975p1Payload from "../../data/engine6/viator/163975P1.exact-product.json";
+import specimen36001p14Payload from "../../data/engine6/viator/36001P14.exact-product.json";
 import specimen276551p2Payload from "../../data/engine6/viator/276551P2.exact-product.json";
 import { mapViatorToEngine6Tour } from "../../src/engine6/mapViatorToEngine6Tour";
 import { buildEngine6SchemaGraph } from "../../src/engine6/schema/buildEngine6SchemaGraph";
@@ -111,6 +113,70 @@ describe("extractEngine6Product itinerary JSON-LD title governance", () => {
   });
 });
 
+describe("public JSON-LD itinerary title enrichment", () => {
+  it("enriches 163975P1 by position when the public JSON-LD count matches Engine6 rows and preserves descriptions", () => {
+    const result = extractEngine6Product(specimen163975p1Payload);
+
+    expect(result.extracted.itinerary).toHaveLength(9);
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Stearns Wharf",
+      "East Beach",
+      "Andrée Clark Bird Refuge",
+      "Butterfly Beach",
+      "Santa Barbara Museum of Natural History",
+      "Old Mission Santa Barbara",
+      "Santa Barbara County Courthouse",
+      "El Presidio de Santa Barbara State Historic Park",
+      "Santa Barbara Harbor",
+    ]);
+    expect(result.extracted.itinerary.map(item => item.titleSource)).toEqual(
+      Array(9).fill("public-json-ld")
+    );
+    expect(result.extracted.itinerary[0].description).toContain(
+      "Enjoy the seaside sights and sounds of Stearns Wharf"
+    );
+    expect(result.extracted.itinerary[6].description).toContain(
+      "Santa Barbara County Courthouse"
+    );
+  });
+
+  it("does not let mismatched JSON-LD overwrite 36001P14 Engine6 rows", () => {
+    const sourceProduct = (specimen36001p14Payload as Record<string, unknown>)
+      .product as Record<string, unknown>;
+    const sourceItinerary = sourceProduct.itinerary as
+      | Record<string, unknown>
+      | undefined;
+    const result = extractEngine6Product({
+      product: {
+        ...sourceProduct,
+        itinerary: {
+          ...(sourceItinerary ?? {}),
+          itemListElement: [
+            { item: { name: "Wrong Public JSON-LD Stop One" } },
+            { item: { name: "Wrong Public JSON-LD Stop Two" } },
+          ],
+        },
+      },
+    });
+
+    expect(result.extracted.itinerary).toHaveLength(6);
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Pacific Coast Highway",
+      "Monterey",
+      "Cannery Row",
+      "17-Mile Drive",
+      "Carmel-by-the-Sea",
+      "Big Sur",
+    ]);
+    expect(result.extracted.itinerary.map(item => item.title)).not.toContain(
+      "Wrong Public JSON-LD Stop One"
+    );
+    expect(result.extracted.itinerary.map(item => item.titleSource)).toEqual(
+      Array(6).fill("explicit")
+    );
+  });
+});
+
 describe("Engine6 itinerary title governance for 276551P2", () => {
   const toPayload = (): Engine6ApiResponse => {
     const extraction = extractEngine6Product(specimen276551p2Payload);
@@ -152,9 +218,7 @@ describe("Engine6 itinerary title governance for 276551P2", () => {
       ...EXPECTED_276551P2_ITINERARY_TITLES,
     ]);
     expect(
-      trip?.itinerary?.itemListElement
-        ?.slice(0, 5)
-        .map(item => item.item?.name)
+      trip?.itinerary?.itemListElement?.slice(0, 5).map(item => item.item?.name)
     ).toEqual([...EXPECTED_276551P2_ITINERARY_TITLES]);
   });
 });
