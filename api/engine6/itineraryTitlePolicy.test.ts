@@ -1,8 +1,17 @@
 import { describe, expect, it } from "vitest";
 
 import { extractEngine6Product } from "./viatorExtractors";
-import { getEngine6ItineraryJsonLdTitle } from "./itineraryTitlePolicy";
+import {
+  getEngine6AlignedPublicJsonLdItineraryTitle,
+  getEngine6ItineraryJsonLdTitle,
+} from "./itineraryTitlePolicy";
 import specimen163975p1Payload from "../../data/engine6/viator/163975P1.exact-product.json";
+import specimen117409p1Payload from "../../data/engine6/viator/117409P1.exact-product.json";
+import specimen191303p1Payload from "../../data/engine6/viator/191303P1.exact-product.json";
+import specimen2335p1Payload from "../../data/engine6/viator/2335P1.exact-product.json";
+import specimen447486p4Payload from "../../data/engine6/viator/447486P4.exact-product.json";
+import specimen67760p2Payload from "../../data/engine6/viator/67760P2.exact-product.json";
+import specimen70058p145Payload from "../../data/engine6/viator/70058P145.exact-product.json";
 import specimen36001p14Payload from "../../data/engine6/viator/36001P14.exact-product.json";
 import specimen276551p2Payload from "../../data/engine6/viator/276551P2.exact-product.json";
 import { mapViatorToEngine6Tour } from "../../src/engine6/mapViatorToEngine6Tour";
@@ -114,6 +123,76 @@ describe("extractEngine6Product itinerary JSON-LD title governance", () => {
 });
 
 describe("public JSON-LD itinerary title enrichment", () => {
+  it.each([
+    {
+      productCode: "117409P1",
+      payload: specimen117409p1Payload,
+      expectedTitles: ["Santa Ynez Valley"],
+    },
+    {
+      productCode: "191303P1",
+      payload: specimen191303p1Payload,
+      expectedTitles: ["Coronado Island"],
+    },
+    {
+      productCode: "2335P1",
+      payload: specimen2335p1Payload,
+      expectedTitles: ["San Andreas Fault"],
+    },
+    {
+      productCode: "447486P4",
+      payload: specimen447486p4Payload,
+      expectedTitles: ["Santa Barbara Maritime Museum"],
+    },
+    {
+      productCode: "67760P2",
+      payload: specimen67760p2Payload,
+      expectedTitles: [
+        "Santa Monica Pier",
+        "The Original Farmers Market",
+        "Griffith Observatory",
+        "Hollywood Walk of Fame",
+      ],
+    },
+    {
+      productCode: "70058P145",
+      payload: specimen70058p145Payload,
+      expectedTitles: [
+        "Griffith Observatory",
+        "Hollywood Walk of Fame",
+        "Rodeo Drive",
+        "Hollywood Sign",
+        "The Original Farmers Market",
+      ],
+    },
+  ])(
+    "enriches reviewed $productCode public JSON-LD itinerary names only by exact row alignment",
+    ({ payload, expectedTitles }) => {
+      const result = extractEngine6Product(payload);
+
+      expect(result.extracted.itinerary).toHaveLength(expectedTitles.length);
+      expect(result.extracted.itinerary.map(item => item.title)).toEqual(
+        expectedTitles
+      );
+      expect(result.extracted.itinerary.map(item => item.titleSource)).toEqual(
+        Array(expectedTitles.length).fill("public-json-ld")
+      );
+      expect(
+        result.extracted.itinerary.every(item => item.description.length > 0)
+      ).toBe(true);
+    }
+  );
+
+  it("does not apply reviewed public JSON-LD names when the Engine6 row count differs", () => {
+    expect(
+      getEngine6AlignedPublicJsonLdItineraryTitle({
+        productCode: "67760P2",
+        rowIndex: 0,
+        rowCount: 3,
+      })
+    ).toBeNull();
+  });
+
   it("enriches 163975P1 by position when the public JSON-LD count matches Engine6 rows and preserves descriptions", () => {
     const result = extractEngine6Product(specimen163975p1Payload);
 
