@@ -10,6 +10,7 @@ const normalizeTitleSource = (
 ): Engine6ItineraryTitleSource | undefined => {
   if (
     value === "json-ld" ||
+    value === "public-json-ld" ||
     value === "explicit" ||
     value === "product-override" ||
     value === "description-inferred"
@@ -27,7 +28,7 @@ export const readEngine6LiveItineraryTitleSource = (
 /**
  * Native/bundled titles win whenever present. Live titles apply only when
  * the native stop has no title, using live confidence priority:
- * json-ld > explicit/product-override > description-inferred.
+ * json-ld/public-json-ld > explicit/product-override > description-inferred.
  */
 export const resolveEngine6MergedItineraryTitle = (
   nativeItem: Engine6ItineraryItem | undefined,

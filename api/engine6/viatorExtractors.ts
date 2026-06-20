@@ -7,7 +7,7 @@ import {
 } from "./heroResolver.js";
 import { classifyTourCategories } from "./tourCategoryClassifier.js";
 import {
-  getEngine6ItineraryJsonLdTitle,
+  getEngine6AlignedItineraryJsonLdTitle,
   type Engine6ItineraryTitleSource,
 } from "./itineraryTitlePolicy.js";
 import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
@@ -1070,6 +1070,7 @@ const normalizeSingleItineraryItem = (
     product: RecordLike;
     productCode: string | null;
     rowIndex: number;
+    rowCount: number;
   }
 ): Engine6ExtractedItineraryItem | null => {
   const pointOfInterest = asRecord(row.pointOfInterest);
@@ -1119,10 +1120,12 @@ const normalizeSingleItineraryItem = (
     return firstSentence.replace(/[.,:;]+$/, "").trim() || null;
   })();
 
-  const jsonLdTitle = getEngine6ItineraryJsonLdTitle(
-    context.product,
-    context.rowIndex
-  );
+  const alignedJsonLdTitle = getEngine6AlignedItineraryJsonLdTitle({
+    product: context.product,
+    productCode: context.productCode,
+    rowIndex: context.rowIndex,
+    rowCount: context.rowCount,
+  });
   const productOverride = getEngine6ItineraryTitleOverride({
     productCode: context.productCode,
     rowIndex: context.rowIndex,
@@ -1131,9 +1134,9 @@ const normalizeSingleItineraryItem = (
   let title: string | null = null;
   let titleSource: Engine6ItineraryTitleSource = "description-inferred";
 
-  if (jsonLdTitle) {
-    title = jsonLdTitle;
-    titleSource = "json-ld";
+  if (alignedJsonLdTitle) {
+    title = alignedJsonLdTitle.title;
+    titleSource = alignedJsonLdTitle.source;
   } else if (locationTitle) {
     title = locationTitle;
     titleSource = "explicit";
@@ -1302,6 +1305,7 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
           product,
           productCode: asNonEmptyString(product.productCode),
           rowIndex,
+          rowCount: rows.length,
         });
         if (!parsed) return null;
 
