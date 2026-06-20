@@ -11,9 +11,20 @@ import specimen191303p1Payload from "../../data/engine6/viator/191303P1.exact-pr
 import specimen2335p1Payload from "../../data/engine6/viator/2335P1.exact-product.json";
 import specimen447486p4Payload from "../../data/engine6/viator/447486P4.exact-product.json";
 import specimen67760p2Payload from "../../data/engine6/viator/67760P2.exact-product.json";
+import specimen170119p1Payload from "../../data/engine6/viator/170119P1.exact-product.json";
 import specimen70058p145Payload from "../../data/engine6/viator/70058P145.exact-product.json";
 import specimen36001p14Payload from "../../data/engine6/viator/36001P14.exact-product.json";
 import specimen276551p2Payload from "../../data/engine6/viator/276551P2.exact-product.json";
+import specimen106439p1Payload from "../../data/engine6/viator/106439P1.exact-product.json";
+import specimen32779p6Payload from "../../data/engine6/viator/32779P6.exact-product.json";
+import specimen5569hikePayload from "../../data/engine6/viator/5569HIKE.exact-product.json";
+import specimen5144brunchPayload from "../../data/engine6/viator/5144BRUNCH.exact-product.json";
+import specimen69764p1Payload from "../../data/engine6/viator/69764P1.exact-product.json";
+import specimen18125p5Payload from "../../data/engine6/viator/18125P5.exact-product.json";
+import specimen5046SanSeaPayload from "../../data/engine6/viator/5046SAN_SEA.exact-product.json";
+import specimen37126p9Payload from "../../data/engine6/viator/37126P9.exact-product.json";
+import specimen28758p1Payload from "../../data/engine6/viator/28758P1.exact-product.json";
+import specimen5553984p5Payload from "../../data/engine6/viator/5553984P5.exact-product.json";
 import { mapViatorToEngine6Tour } from "../../src/engine6/mapViatorToEngine6Tour";
 import { buildEngine6SchemaGraph } from "../../src/engine6/schema/buildEngine6SchemaGraph";
 import type { Engine6ApiResponse } from "../../src/engine6/types";
@@ -155,6 +166,20 @@ describe("public JSON-LD itinerary title enrichment", () => {
       ],
     },
     {
+      productCode: "170119P1",
+      payload: specimen170119p1Payload,
+      expectedTitles: [
+        "Santa Monica Pier",
+        "Venice Beach",
+        "Venice Canals",
+        "Beverly Hills and Rodeo Drive",
+        "Original Farmers Market",
+        "The Grove",
+        "Hollywood Boulevard",
+        "Hollywood Sign Viewpoint",
+      ],
+    },
+    {
       productCode: "70058P145",
       payload: specimen70058p145Payload,
       expectedTitles: [
@@ -253,6 +278,134 @@ describe("public JSON-LD itinerary title enrichment", () => {
     expect(result.extracted.itinerary.map(item => item.titleSource)).toEqual(
       Array(6).fill("explicit")
     );
+  });
+});
+
+describe("Engine6 definitely broken itinerary title repairs", () => {
+  it("uses reviewed product-specific overrides for only the definitely broken rows", () => {
+    const cases = [
+      {
+        payload: specimen106439p1Payload,
+        expectedByIndex: {
+          1: "Rodeo Drive",
+          2: "Greystone Mansion",
+          3: "Beverly Gardens Park",
+          5: "Beverly Canon Gardens",
+          6: "Beverly Hills Civic Center",
+          7: "Golden Triangle and Platinum Triangle",
+          8: "Sunset Boulevard",
+          9: "Celebrity Homes Neighborhoods",
+          10: "Beverly Hills Hotel",
+        },
+      },
+      {
+        payload: specimen5569hikePayload,
+        expectedByIndex: {
+          0: "Safety Briefing",
+          2: "Hollywood Hills Trail",
+          3: "Griffith Observatory",
+          4: "Tiffany Point",
+          8: "Griffith Park",
+          9: "Santa Monica Mountains",
+          10: "Mount Hollywood",
+          11: "Hollywood Sign",
+          12: "Century City Views",
+          14: "Downtown Los Angeles Views",
+          16: "Hollywood Views",
+          17: "Los Angeles Zoo",
+          18: "Autry Museum of the American West",
+          19: "Griffith Park Bird Sanctuary",
+          20: "Walt Disney Studios",
+        },
+      },
+      {
+        payload: specimen5144brunchPayload,
+        expectedByIndex: {
+          3: "San Diego Bay Open-Water Panoramas",
+        },
+      },
+      {
+        payload: specimen69764p1Payload,
+        expectedByIndex: {
+          0: "San Diego Bay Departure",
+          1: "San Diego Coastline Wildlife Viewing",
+        },
+      },
+      {
+        payload: specimen18125p5Payload,
+        expectedByIndex: {
+          0: "Balboa Park",
+          2: "Alcazar Garden",
+        },
+      },
+      {
+        payload: specimen37126p9Payload,
+        expectedByIndex: {
+          0: "Star of India",
+        },
+      },
+      {
+        payload: specimen28758p1Payload,
+        expectedByIndex: {
+          0: "Tijuana",
+          1: "Tijuana Walking Tour",
+          2: "Tijuana Historic Center",
+        },
+      },
+      {
+        payload: specimen5553984p5Payload,
+        expectedByIndex: {
+          0: "Zurich Old Town",
+          2: "Lindenhof",
+          3: "Zurich Old Town (Altstadt)",
+          5: "Bahnhofstrasse",
+          6: "Lake Zurich Cruise",
+          8: "Paradeplatz",
+        },
+      },
+    ] as const;
+
+    cases.forEach(({ payload, expectedByIndex }) => {
+      const result = extractEngine6Product(payload);
+
+      Object.entries(expectedByIndex).forEach(([index, title]) => {
+        const item = result.extracted.itinerary[Number(index)];
+        expect(item.title).toBe(title);
+        expect(item.titleSource).toBe("product-override");
+      });
+    });
+  });
+
+  it("does not modify probably broken rows, false positives, or leave-unchanged products", () => {
+    expect(extractEngine6Product(specimen5569hikePayload).extracted.itinerary[1])
+      .toMatchObject({
+        title: "We'll meet you in front of the Greek Theatre",
+        titleSource: "description-inferred",
+      });
+    expect(extractEngine6Product(specimen5144brunchPayload).extracted.itinerary[0])
+      .toMatchObject({
+        title:
+          "Cruise San Diego Bay on a Sunday brunch cruise experience with skyline views and live onboard entertainment",
+        titleSource: "description-inferred",
+      });
+    expect(extractEngine6Product(specimen37126p9Payload).extracted.itinerary[6])
+      .toMatchObject({
+        title: "The San Diego Convention Center",
+        titleSource: "description-inferred",
+      });
+    expect(extractEngine6Product(specimen32779p6Payload).extracted.itinerary[0])
+      .toMatchObject({
+        title:
+          "As you venture ten miles into the rugged interior, you will view the protected side of Catalina Island seldom seen by most visitors",
+        titleSource: "description-inferred",
+      });
+    expect(
+      extractEngine6Product(specimen5046SanSeaPayload).extracted.itinerary[0]
+    ).toMatchObject({
+      title:
+        "This 90-minute shore excursion is a fantastic way to see the best of the Bay and San Diego during your limited time in port",
+      titleSource: "description-inferred",
+    });
   });
 });
 

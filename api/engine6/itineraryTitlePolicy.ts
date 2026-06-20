@@ -26,6 +26,16 @@ const PUBLIC_JSON_LD_ITINERARY_NAMES_BY_PRODUCT_CODE: Record<
     "Griffith Observatory",
     "Hollywood Walk of Fame",
   ],
+  "170119P1": [
+    "Santa Monica Pier",
+    "Venice Beach",
+    "Venice Canals",
+    "Beverly Hills and Rodeo Drive",
+    "Original Farmers Market",
+    "The Grove",
+    "Hollywood Boulevard",
+    "Hollywood Sign Viewpoint",
+  ],
   "70058P145": [
     "Griffith Observatory",
     "Hollywood Walk of Fame",
