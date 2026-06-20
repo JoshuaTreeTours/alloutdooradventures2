@@ -60,6 +60,11 @@ const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "273720P1",
 ]);
 
+const ENGINE6_LIVE_ITINERARY_MERGE_SUPPRESSED_PRODUCT_CODES = new Set([
+  "415653P2",
+  "3780SUPER",
+]);
+
 const ENGINE6_CLASSIFICATION_OVERRIDES: Record<
   string,
   {
@@ -81,6 +86,9 @@ const ENGINE6_CLASSIFICATION_OVERRIDES: Record<
 
 export const isEngine6ItinerarySectionSuppressed = (productCode: string) =>
   ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES.has(productCode);
+
+export const isEngine6LiveItineraryMergeSuppressed = (productCode: string) =>
+  ENGINE6_LIVE_ITINERARY_MERGE_SUPPRESSED_PRODUCT_CODES.has(productCode);
 
 const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "5569HIKE":
@@ -505,17 +513,6 @@ const ENGINE6_REVIEWED_ITINERARY_DESCRIPTION_OVERRIDES: Record<
     undefined,
     "Mardi Gras World remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
   ],
-  "3780SUPER": [
-    undefined,
-    "French Quarter walking tour remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-    undefined,
-    undefined,
-    "Riverboat Cruise remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-    "City Highlights Bus Tour remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-    "Audubon Aquarium remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-    "City Park remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-    "Garden District remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-  ],
   "3857PHI": [
     undefined,
     "Amish Country remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
@@ -540,17 +537,6 @@ const ENGINE6_REVIEWED_ITINERARY_DESCRIPTION_OVERRIDES: Record<
   "411138P3": [
     undefined,
     "Earthquake Park remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-  ],
-  "415653P2": [
-    undefined,
-    "Glacier Point remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-    "Tunnel View remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-    undefined,
-    "Swinging Bridge Picnic Area remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-    undefined,
-    undefined,
-    undefined,
-    "Lower Yosemite Fall Trail remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
   ],
   "424070P1": [
     undefined,

@@ -143,10 +143,6 @@ const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
     0: "Riverboat Boarding",
     2: "Jackson Square",
   },
-  "3780SUPER": {
-    4: "Riverboat Cruise",
-    5: "City Highlights Bus Tour",
-  },
   "122012P17": {
     20: "Chelsea Piers",
   },

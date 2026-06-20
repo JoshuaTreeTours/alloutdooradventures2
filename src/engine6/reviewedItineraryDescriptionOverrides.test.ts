@@ -157,48 +157,6 @@ const reviewedRows = [
       "Mardi Gras World remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
   },
   {
-    productId: "3780SUPER",
-    itineraryIndex: 1,
-    renderedTitle: "French Quarter walking tour",
-    renderedDescription:
-      "French Quarter walking tour remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-  },
-  {
-    productId: "3780SUPER",
-    itineraryIndex: 4,
-    renderedTitle: "Riverboat Cruise",
-    renderedDescription:
-      "Riverboat Cruise remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-  },
-  {
-    productId: "3780SUPER",
-    itineraryIndex: 5,
-    renderedTitle: "City Highlights Bus Tour",
-    renderedDescription:
-      "City Highlights Bus Tour remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-  },
-  {
-    productId: "3780SUPER",
-    itineraryIndex: 6,
-    renderedTitle: "Audubon Aquarium",
-    renderedDescription:
-      "Audubon Aquarium remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-  },
-  {
-    productId: "3780SUPER",
-    itineraryIndex: 7,
-    renderedTitle: "City Park",
-    renderedDescription:
-      "City Park remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-  },
-  {
-    productId: "3780SUPER",
-    itineraryIndex: 8,
-    renderedTitle: "Garden District",
-    renderedDescription:
-      "Garden District remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-  },
-  {
     productId: "3857PHI",
     itineraryIndex: 1,
     renderedTitle: "Amish Country",
@@ -260,34 +218,6 @@ const reviewedRows = [
     renderedTitle: "Earthquake Park",
     renderedDescription:
       "Earthquake Park remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-  },
-  {
-    productId: "415653P2",
-    itineraryIndex: 1,
-    renderedTitle: "Glacier Point",
-    renderedDescription:
-      "Glacier Point remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-  },
-  {
-    productId: "415653P2",
-    itineraryIndex: 2,
-    renderedTitle: "Tunnel View",
-    renderedDescription:
-      "Tunnel View remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-  },
-  {
-    productId: "415653P2",
-    itineraryIndex: 4,
-    renderedTitle: "Swinging Bridge Picnic Area",
-    renderedDescription:
-      "Swinging Bridge Picnic Area remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
-  },
-  {
-    productId: "415653P2",
-    itineraryIndex: 8,
-    renderedTitle: "Lower Yosemite Fall Trail",
-    renderedDescription:
-      "Lower Yosemite Fall Trail remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
   },
   {
     productId: "424070P1",
@@ -475,7 +405,7 @@ const reviewedRows = [
 
 describe("Engine6 reviewed itinerary description overrides", () => {
   it("keeps all high-confidence corrected rows aligned to their rendered titles", () => {
-    expect(reviewedRows).toHaveLength(67);
+    expect(reviewedRows).toHaveLength(57);
     const renderedRows = reviewedRows.filter(row => {
       const tour = engine6ResolvedTours.find(
         item => item.productCode === row.productId
@@ -483,7 +413,7 @@ describe("Engine6 reviewed itinerary description overrides", () => {
       return Boolean(tour?.itinerary[row.itineraryIndex]);
     });
 
-    expect(renderedRows).toHaveLength(66);
+    expect(renderedRows).toHaveLength(56);
 
     for (const row of renderedRows) {
       const tour = engine6ResolvedTours.find(
