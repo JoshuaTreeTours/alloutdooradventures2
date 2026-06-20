@@ -35,6 +35,9 @@ export const resolveEngine6MergedItineraryTitle = (
   liveItem: Pick<Engine6LiveItineraryItem, "title" | "titleSource">
 ): string => {
   const nativeTitle = nativeItem?.title?.trim();
+  if (nativeTitle && liveItem.titleSource === "description-inferred") {
+    return nativeTitle;
+  }
   if (nativeTitle) {
     return nativeTitle;
   }
