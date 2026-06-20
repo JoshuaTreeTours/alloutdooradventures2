@@ -190,4 +190,119 @@ describe("extractEngine6Product itinerary title overrides", () => {
       description,
     });
   });
+  it("applies reviewed public JSON-LD names for Mount Titlis when row counts align", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "3885SW303BS",
+        title: "Mount Titlis and Lucerne Day Trip from Zurich",
+        itinerary: {
+          itineraryItems: [
+            {
+              description:
+                "From the centrally located Sihlquai Bus Station, the scenic coach journey begins through the city of Zurich, the beautiful views of the countryside, and along the shores of the Lake of the Four Cantons to Lucerne.",
+            },
+            {
+              description:
+                "Enjoy a brief orientation drive, where your guide points out the main attractions of this charming town like the Chapel Bridge, the Town Hall, the Jesuit Church, and the Culture and Convention Centre (KKL).",
+            },
+            {
+              description:
+                "At the valley station the breathtaking journey with the different aerial cable cars to the top of Mt. Titlis begins.",
+            },
+            {
+              description:
+                "Visit the Glacier Cave and pass over Europe's highest suspension bridge - the Cliff Walk!",
+            },
+            {
+              description:
+                "Your action-packed day trip to Mt Titlis concludes with drop-off at Sihlquai Coach Terminal in central Zurich at approximately 7pm.",
+            },
+          ],
+        },
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Zurich",
+      "Luzern Altstadt",
+      "Titlis",
+      "Titlis Cliff Walk",
+      "Zurich",
+    ]);
+    expect(result.extracted.itinerary.map(item => item.titleSource)).toEqual([
+      "public-json-ld",
+      "public-json-ld",
+      "public-json-ld",
+      "public-json-ld",
+      "public-json-ld",
+    ]);
+  });
+
+  it("applies reviewed public JSON-LD names for Grindelwald, Interlaken, and Lauterbrunnen when row counts align", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "3885GRINDEL_ZUR",
+        title: "Grindelwald, Interlaken & Lauterbrunnen Day Trip from Zurich",
+        itineraryItems: [
+          { description: "Zurich is passed on departure." },
+          {
+            description:
+              "Arrive in Interlaken, where you'll enjoy some leisure time to explore this charming village at your own pace.",
+          },
+          {
+            description:
+              "Next, continue to the postcard-perfect mountain village of Grindelwald.",
+          },
+          {
+            description:
+              "Lauterbrunnen is a breathtaking valley home to waterfalls.",
+          },
+          {
+            description:
+              "After a full day of alpine discovery, relax on the scenic return journey to Zurich, where your tour concludes.",
+          },
+        ],
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Zurich",
+      "Interlaken",
+      "Grindelwald",
+      "Lauterbrunnen Valley Waterfalls",
+      "Zurich",
+    ]);
+    expect(result.extracted.itinerary.map(item => item.titleSource)).toEqual([
+      "public-json-ld",
+      "public-json-ld",
+      "public-json-ld",
+      "public-json-ld",
+      "public-json-ld",
+    ]);
+  });
+
+  it("does not apply reviewed public JSON-LD names when the Engine6 row count differs", () => {
+    const descriptions = [
+      "From the centrally located Sihlquai Bus Station, the scenic coach journey begins through the city of Zurich.",
+      "Enjoy a brief orientation drive through Lucerne.",
+      "At the valley station the breathtaking journey with the different aerial cable cars to the top of Mt. Titlis begins.",
+      "Visit the Glacier Cave and pass over Europe's highest suspension bridge - the Cliff Walk!",
+    ];
+    const result = extractEngine6Product({
+      product: {
+        productCode: "3885SW303BS",
+        title: "Mount Titlis and Lucerne Day Trip from Zurich",
+        itineraryItems: descriptions.map(description => ({ description })),
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary).toHaveLength(4);
+    expect(
+      result.extracted.itinerary.map(item => item.titleSource)
+    ).not.toContain("public-json-ld");
+    expect(result.extracted.itinerary[1]).toMatchObject({
+      title: "Enjoy a brief orientation drive through Lucerne",
+      titleSource: "description-inferred",
+    });
+  });
 });
