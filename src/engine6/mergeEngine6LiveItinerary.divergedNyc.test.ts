@@ -299,7 +299,7 @@ describe("diverged New York itinerary title authority", () => {
       "Times Square",
       "Rockefeller Center",
       "St. Patrick's Cathedral",
-      "New York Public Library - Stephen A. Schwarzman Building",
+      "New York Public Library",
       "Bryant Park",
       "Grand Central Terminal",
       "Chrysler Building",

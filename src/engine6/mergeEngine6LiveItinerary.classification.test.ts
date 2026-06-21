@@ -189,6 +189,7 @@ describe("Florida/Alaska itinerary merge classification", () => {
       "411138P3",
       "383300P6",
       "76145P2",
+      "5559561P1",
       "89173P10",
       "231628P7",
       "8836P2",

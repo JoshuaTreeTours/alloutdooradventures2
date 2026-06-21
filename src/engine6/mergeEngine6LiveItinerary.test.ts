@@ -448,8 +448,8 @@ describe("mergeEngine6NativeItineraryWithLive", () => {
     const merged = mergeEngine6NativeItineraryWithLive(native, live);
 
     expect(merged.map(item => item.title)).toEqual([
-      "Campbell Creek Greenbelt",
-      "Chester Creek Greenbelt",
+      "Campbell Creek Trail",
+      "Chester Creek Trail",
       "Westchester Lagoon",
       "Earthquake Park",
       "Kincaid Park",
