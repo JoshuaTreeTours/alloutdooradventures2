@@ -4,6 +4,7 @@ import { extractEngine6Product } from "./viatorExtractors";
 import {
   getEngine6AlignedPublicJsonLdItineraryTitle,
   getEngine6ItineraryJsonLdTitle,
+  resolveEngine6DivergedItineraryTitle,
 } from "./itineraryTitlePolicy";
 import specimen163975p1Payload from "../../data/engine6/viator/163975P1.exact-product.json";
 import specimen117409p1Payload from "../../data/engine6/viator/117409P1.exact-product.json";
@@ -621,6 +622,59 @@ describe("Engine6 Florida and Alaska itinerary title repairs", () => {
       ...greenbelt.map(item => item.title),
       ...glacier.slice(4).map(item => item.title),
     ]);
+  });
+});
+
+describe("411138P3 reviewed public JSON-LD itinerary titles", () => {
+  it("returns count-aligned reviewed names only at matching row counts", () => {
+    expect(
+      getEngine6AlignedPublicJsonLdItineraryTitle({
+        productCode: "411138P3",
+        rowIndex: 0,
+        rowCount: 9,
+      })
+    ).toBe("Downtown Anchorage");
+    expect(
+      getEngine6AlignedPublicJsonLdItineraryTitle({
+        productCode: "411138P3",
+        rowIndex: 8,
+        rowCount: 9,
+      })
+    ).toBe("Potter Marsh Bird Sanctuary");
+    expect(
+      getEngine6AlignedPublicJsonLdItineraryTitle({
+        productCode: "411138P3",
+        rowIndex: 0,
+        rowCount: 6,
+      })
+    ).toBeNull();
+  });
+
+  it("prefers public JSON-LD over description-inferred live prose in diverged title resolution", () => {
+    expect(
+      resolveEngine6DivergedItineraryTitle({
+        productCode: "411138P3",
+        rowIndex: 1,
+        rowCount: 9,
+        liveTitle: "Beluga point is just south of Anchorage on the Turnagain Arm",
+        liveTitleSource: "description-inferred",
+      })
+    ).toEqual({
+      title: "Beluga Point",
+      titleSource: "public-json-ld",
+    });
+    expect(
+      resolveEngine6DivergedItineraryTitle({
+        productCode: "411138P3",
+        rowIndex: 8,
+        rowCount: 9,
+        liveTitle: "Home to 130 bird species",
+        liveTitleSource: "description-inferred",
+      })
+    ).toEqual({
+      title: "Potter Marsh Bird Sanctuary",
+      titleSource: "public-json-ld",
+    });
   });
 });
 

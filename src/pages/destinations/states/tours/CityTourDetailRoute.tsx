@@ -183,6 +183,7 @@ export default function CityTourDetailRoute({
           meetingPointText: string | null;
           overviewText: string | null;
           itinerary: Engine6LiveItineraryItem[] | null;
+          rawProduct: Record<string, unknown> | null;
           itinerarySummaryText: string | null;
           included: string[] | null;
           requirements: string[] | null;
@@ -365,6 +366,10 @@ export default function CityTourDetailRoute({
             typeof extracted.overviewText === "string"
               ? extracted.overviewText
               : null,
+          rawProduct:
+            payload?.rawProduct && typeof payload.rawProduct === "object"
+              ? (payload.rawProduct as Record<string, unknown>)
+              : null,
           itinerary:
             !suppressLiveContentFields && Array.isArray(extracted.itinerary)
               ? (extracted.itinerary
@@ -485,7 +490,11 @@ export default function CityTourDetailRoute({
             : liveDynamic.itinerary
               ? mergeEngine6NativeItineraryWithLive(
                   nativeEngine6Tour.itinerary,
-                  liveDynamic.itinerary
+                  liveDynamic.itinerary,
+                  {
+                    productCode: nativeEngine6Tour.productCode,
+                    rawProduct: liveDynamic.rawProduct,
+                  }
                 )
               : nativeEngine6Tour.itinerary,
           itinerarySummaryText: suppressLiveContentFields
