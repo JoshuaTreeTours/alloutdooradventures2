@@ -1,7 +1,9 @@
 import {
   resolveEngine6DivergedItineraryTitle,
+  getEngine6NeutralItineraryStopTitle,
   type Engine6ItineraryTitleSource,
 } from "../../api/engine6/itineraryTitlePolicy";
+import { isEngine6ProseItineraryTitle } from "../../api/engine6/divergedItineraryTitle";
 import type { Engine6ItineraryItem } from "./types";
 
 export type Engine6LiveItineraryItem = Engine6ItineraryItem & {
@@ -183,27 +185,28 @@ export const getEngine6ItineraryMergeMode = (
 
 /**
  * Native/bundled titles win whenever present. Live titles apply only when
- * the native stop has no title, using live confidence priority:
- * json-ld/public-json-ld > explicit/product-override > description-inferred.
+ * the native stop has no title and the live title is authoritative.
  */
 export const resolveEngine6MergedItineraryTitle = (
   nativeItem: Engine6ItineraryItem | undefined,
-  liveItem: Pick<Engine6LiveItineraryItem, "title" | "titleSource">
+  liveItem: Pick<Engine6LiveItineraryItem, "title" | "titleSource">,
+  rowIndex = 0
 ): string => {
   const nativeTitle = nativeItem?.title?.trim();
-  if (nativeTitle && liveItem.titleSource === "description-inferred") {
-    return nativeTitle;
-  }
   if (nativeTitle) {
     return nativeTitle;
   }
 
   const liveTitle = liveItem.title?.trim();
-  if (!liveTitle) {
-    return "This stop";
+  if (
+    liveTitle &&
+    liveItem.titleSource !== "description-inferred" &&
+    !isEngine6ProseItineraryTitle(liveTitle)
+  ) {
+    return liveTitle;
   }
 
-  return liveTitle;
+  return getEngine6NeutralItineraryStopTitle(rowIndex);
 };
 
 const isHighConfidenceLiveItineraryTitleSource = (
@@ -239,6 +242,7 @@ export const resolveEngine6DivergedMergedItineraryTitle = (
       rawProduct: context.rawProduct ?? null,
       rowIndex: context.rowIndex,
       rowCount: context.rowCount,
+      nativeTitle: nativeItem?.title,
       liveTitle: liveItem.title,
       liveDescription: liveItem.description,
       liveTitleSource: liveItem.titleSource,
@@ -263,7 +267,7 @@ export const resolveEngine6DivergedMergedItineraryTitle = (
     if (nativeTitle) {
       return nativeTitle;
     }
-    return "This stop";
+    return getEngine6NeutralItineraryStopTitle(context?.rowIndex ?? 0);
   }
 
   if (liveTitle) {
@@ -274,7 +278,7 @@ export const resolveEngine6DivergedMergedItineraryTitle = (
     return nativeTitle;
   }
 
-  return "This stop";
+  return getEngine6NeutralItineraryStopTitle(context?.rowIndex ?? 0);
 };
 
 const mergeEngine6NativeItineraryWithLiveAligned = (
@@ -288,7 +292,7 @@ const mergeEngine6NativeItineraryWithLiveAligned = (
     return {
       ...(nativeItem ?? {}),
       ...liveFields,
-      title: resolveEngine6MergedItineraryTitle(nativeItem, liveItem),
+      title: resolveEngine6MergedItineraryTitle(nativeItem, liveItem, index),
     };
   });
 

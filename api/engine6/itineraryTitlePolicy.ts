@@ -173,24 +173,145 @@ const isAuthoritativeExtractedItineraryTitleSource = (
   source === "explicit" ||
   source === "product-override";
 
+export const getEngine6NeutralItineraryStopTitle = (rowIndex: number): string =>
+  `Itinerary Stop ${rowIndex + 1}`;
+
+const NEUTRAL_ITINERARY_STOP_TITLE_PATTERN = /^itinerary stop \d+$/i;
+
+export const isEngine6NeutralItineraryStopTitle = (
+  value: string | null | undefined
+): boolean => {
+  const normalized = asNonEmptyString(value)?.replace(/\s+/g, " ");
+  if (!normalized) return false;
+  return NEUTRAL_ITINERARY_STOP_TITLE_PATTERN.test(normalized);
+};
+
+const liveItineraryTitleIsUnreliable = (args: {
+  liveTitle?: string | null;
+  liveTitleSource?: Engine6ItineraryTitleSource;
+}): boolean => {
+  const liveTitle = asNonEmptyString(args.liveTitle);
+  if (!liveTitle) return true;
+  if (args.liveTitleSource === "description-inferred") return true;
+  if (isEngine6ProseItineraryTitle(liveTitle)) return true;
+  return isEngine6NeutralItineraryStopTitle(liveTitle);
+};
+
+const fuzzyMatchEngine6ItineraryStopTitles = (
+  left: string | null | undefined,
+  right: string | null | undefined
+): boolean => {
+  const normalizeTitle = (value: string | null | undefined): string =>
+    (value ?? "")
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+  const STOP_WORDS = new Set([
+    "a",
+    "an",
+    "and",
+    "at",
+    "by",
+    "for",
+    "from",
+    "in",
+    "of",
+    "on",
+    "or",
+    "the",
+    "to",
+    "with",
+  ]);
+
+  const tokenize = (value: string): string[] =>
+    normalizeTitle(value)
+      .split(" ")
+      .filter(token => token.length > 1 && !STOP_WORDS.has(token));
+
+  const normalizedLeft = normalizeTitle(left);
+  const normalizedRight = normalizeTitle(right);
+  if (!normalizedLeft || !normalizedRight) {
+    return false;
+  }
+  if (normalizedLeft === normalizedRight) {
+    return true;
+  }
+  if (
+    normalizedLeft.includes(normalizedRight) ||
+    normalizedRight.includes(normalizedLeft)
+  ) {
+    return true;
+  }
+
+  const leftTokens = tokenize(normalizedLeft);
+  const rightTokens = tokenize(normalizedRight);
+  if (!leftTokens.length || !rightTokens.length) {
+    return false;
+  }
+
+  const overlap = leftTokens.filter(token => rightTokens.includes(token));
+  if (overlap.length >= 2) {
+    return true;
+  }
+  if (
+    overlap.length >= 1 &&
+    (leftTokens.length === 1 || rightTokens.length === 1)
+  ) {
+    return true;
+  }
+
+  const union = new Set([...leftTokens, ...rightTokens]).size;
+  return union > 0 && overlap.length / union >= 0.5;
+};
+
+const shouldPreferNativeBundledTitleOverUnreliableLive = (args: {
+  nativeTitle?: string | null;
+  liveTitle?: string | null;
+  liveTitleSource?: Engine6ItineraryTitleSource;
+}): boolean => {
+  const nativeTitle = asNonEmptyString(args.nativeTitle);
+  if (!nativeTitle || isEngine6ProseItineraryTitle(nativeTitle)) {
+    return false;
+  }
+  if (!liveItineraryTitleIsUnreliable(args)) {
+    return false;
+  }
+
+  const conciseLiveTitle = extractEngine6ConciseItineraryTitleFromProse({
+    title: args.liveTitle,
+  })?.title;
+  if (
+    conciseLiveTitle &&
+    !fuzzyMatchEngine6ItineraryStopTitles(nativeTitle, conciseLiveTitle)
+  ) {
+    return false;
+  }
+
+  return true;
+};
+
 /**
  * Title authority for diverged itinerary merges only.
  * Order: public JSON-LD > partner JSON-LD > structured Partner/API fields >
- * live explicit > product override > prose-derived concise POI/location >
- * live authoritative extraction > description-inferred.
+ * bundled native title (when live title is unreliable) > live explicit >
+ * product override > concise POI/location from live title prose >
+ * live authoritative extraction > neutral Itinerary Stop {n}.
  */
 export const resolveEngine6DivergedItineraryTitle = (args: {
   productCode: string | null | undefined;
   rawProduct?: RecordLike | null;
   rowIndex: number;
   rowCount: number;
+  nativeTitle?: string | null;
   liveTitle?: string | null;
   liveDescription?: string | null;
   liveTitleSource?: Engine6ItineraryTitleSource;
 }): Engine6DivergedItineraryTitleResolution => {
   const { productCode, rawProduct, rowIndex, rowCount } = args;
   const liveTitle = asNonEmptyString(args.liveTitle);
-  const liveDescription = asNonEmptyString(args.liveDescription);
+  const nativeTitle = asNonEmptyString(args.nativeTitle);
 
   const publicJsonLdTitle = getEngine6AlignedPublicJsonLdItineraryTitle({
     productCode,
@@ -223,6 +344,16 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     };
   }
 
+  if (
+    shouldPreferNativeBundledTitleOverUnreliableLive({
+      nativeTitle,
+      liveTitle,
+      liveTitleSource: args.liveTitleSource,
+    })
+  ) {
+    return { title: nativeTitle!, titleSource: "explicit" };
+  }
+
   if (args.liveTitleSource === "explicit" && liveTitle && !isEngine6ProseItineraryTitle(liveTitle)) {
     return { title: liveTitle, titleSource: "explicit" };
   }
@@ -238,7 +369,6 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
 
   const conciseProseTitle = extractEngine6ConciseItineraryTitleFromProse({
     title: liveTitle,
-    description: liveDescription,
   });
   if (conciseProseTitle) {
     return conciseProseTitle;
@@ -255,9 +385,8 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     };
   }
 
-  if (liveTitle) {
-    return { title: liveTitle, titleSource: "description-inferred" };
-  }
-
-  return { title: "This stop", titleSource: "description-inferred" };
+  return {
+    title: getEngine6NeutralItineraryStopTitle(rowIndex),
+    titleSource: "explicit",
+  };
 };

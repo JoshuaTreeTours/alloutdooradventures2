@@ -8,8 +8,10 @@ import {
 import { classifyTourCategories } from "./tourCategoryClassifier.js";
 import {
   getEngine6AlignedItineraryJsonLdTitle,
+  getEngine6NeutralItineraryStopTitle,
   type Engine6ItineraryTitleSource,
 } from "./itineraryTitlePolicy.js";
+import { isEngine6ProseItineraryTitle } from "./divergedItineraryTitle.js";
 import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
 
 export type Engine6DiagnosticsPaths = {
@@ -1092,33 +1094,13 @@ const normalizeSingleItineraryItem = (
     asNonEmptyString(pointOfInterestLocation?.locationName) ??
     asNonEmptyString(pointOfInterestLocation?.title) ??
     asNonEmptyString(pointOfInterestLocation?.name);
-  const inferredTitleFromDescription = (() => {
-    const descriptionText = asNonEmptyString(row.description);
-    if (!descriptionText) return null;
-
-    const normalizedDescription = descriptionText
-      .replace(/^he\s+(?=[A-Z])/, "The ")
-      .trim();
-    const firstSentence =
-      normalizedDescription.split(/(?<!\b\d)(?<=[.!?])\s+/)[0]?.trim() ?? "";
-    if (!firstSentence) return null;
-
-    const subjectMatch = firstSentence.match(
-      /^((?:The\s+)?[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,7})\s+(?:is|are|offers?|provides?|features?)\b/
-    );
-    if (subjectMatch?.[1]) {
-      return subjectMatch[1].replace(/[.,:;]+$/, "").trim();
+  const isUsableExplicitItineraryField = (value: unknown): string | null => {
+    const candidate = asNonEmptyString(value);
+    if (!candidate || isEngine6ProseItineraryTitle(candidate)) {
+      return null;
     }
-
-    const locationPattern =
-      /\b(?:arrive in|continue to|final stop[:\s]+|visit|return to|journey in)\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,5})/;
-    const match = firstSentence.match(locationPattern);
-    if (match?.[1]) {
-      return match[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    return firstSentence.replace(/[.,:;]+$/, "").trim() || null;
-  })();
+    return candidate;
+  };
 
   const alignedJsonLdTitle = getEngine6AlignedItineraryJsonLdTitle({
     product: context.product,
@@ -1136,7 +1118,7 @@ const normalizeSingleItineraryItem = (
   });
 
   let title: string | null = null;
-  let titleSource: Engine6ItineraryTitleSource = "description-inferred";
+  let titleSource: Engine6ItineraryTitleSource = "explicit";
 
   if (alignedJsonLdTitle) {
     title = alignedJsonLdTitle.title;
@@ -1147,36 +1129,34 @@ const normalizeSingleItineraryItem = (
   } else if (locationTitle) {
     title = locationTitle;
     titleSource = "explicit";
-  } else if (asNonEmptyString(row.title)) {
-    title = asNonEmptyString(row.title);
+  } else if (isUsableExplicitItineraryField(row.title)) {
+    title = isUsableExplicitItineraryField(row.title);
     titleSource = "explicit";
-  } else if (asNonEmptyString(row.name)) {
-    title = asNonEmptyString(row.name);
+  } else if (isUsableExplicitItineraryField(row.name)) {
+    title = isUsableExplicitItineraryField(row.name);
     titleSource = "explicit";
-  } else if (asNonEmptyString(row.label)) {
-    title = asNonEmptyString(row.label);
+  } else if (isUsableExplicitItineraryField(row.label)) {
+    title = isUsableExplicitItineraryField(row.label);
     titleSource = "explicit";
-  } else if (asNonEmptyString(pointOfInterest?.title)) {
-    title = asNonEmptyString(pointOfInterest?.title);
+  } else if (isUsableExplicitItineraryField(pointOfInterest?.title)) {
+    title = isUsableExplicitItineraryField(pointOfInterest?.title);
     titleSource = "explicit";
-  } else if (asNonEmptyString(pointOfInterest?.name)) {
-    title = asNonEmptyString(pointOfInterest?.name);
+  } else if (isUsableExplicitItineraryField(pointOfInterest?.name)) {
+    title = isUsableExplicitItineraryField(pointOfInterest?.name);
     titleSource = "explicit";
-  } else if (asNonEmptyString(stop?.name)) {
-    title = asNonEmptyString(stop?.name);
+  } else if (isUsableExplicitItineraryField(stop?.name)) {
+    title = isUsableExplicitItineraryField(stop?.name);
     titleSource = "explicit";
-  } else if (asNonEmptyString(stop?.title)) {
-    title = asNonEmptyString(stop?.title);
+  } else if (isUsableExplicitItineraryField(stop?.title)) {
+    title = isUsableExplicitItineraryField(stop?.title);
     titleSource = "explicit";
-  } else if (asNonEmptyString(location?.name)) {
-    title = asNonEmptyString(location?.name);
+  } else if (isUsableExplicitItineraryField(location?.name)) {
+    title = isUsableExplicitItineraryField(location?.name);
     titleSource = "explicit";
-  } else if (inferredTitleFromDescription) {
-    title = inferredTitleFromDescription;
-    titleSource = "description-inferred";
+  } else {
+    title = getEngine6NeutralItineraryStopTitle(context.rowIndex);
+    titleSource = "explicit";
   }
-
-  if (!title) return null;
   const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
   const isPassByFromTitle =
     /\bpass(?:\s|-)?by\b/i.test(title) && cleanedTitle.length > 0;

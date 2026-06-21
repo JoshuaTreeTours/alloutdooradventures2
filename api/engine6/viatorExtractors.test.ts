@@ -301,8 +301,8 @@ describe("extractEngine6Product itinerary title overrides", () => {
       result.extracted.itinerary.map(item => item.titleSource)
     ).not.toContain("public-json-ld");
     expect(result.extracted.itinerary[1]).toMatchObject({
-      title: "Enjoy a brief orientation drive through Lucerne",
-      titleSource: "description-inferred",
+      title: "Itinerary Stop 2",
+      titleSource: "explicit",
     });
   });
 });
