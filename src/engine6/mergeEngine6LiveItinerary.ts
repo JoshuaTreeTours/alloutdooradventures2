@@ -1,6 +1,7 @@
 import {
   resolveEngine6DivergedItineraryTitle,
   getEngine6NeutralItineraryStopTitle,
+  isEngine6NeutralItineraryStopTitle,
   type Engine6ItineraryTitleSource,
 } from "../../api/engine6/itineraryTitlePolicy";
 import { isEngine6ProseItineraryTitle } from "../../api/engine6/divergedItineraryTitle";
@@ -13,6 +14,7 @@ export type Engine6LiveItineraryItem = Engine6ItineraryItem & {
 export type Engine6ItineraryMergeContext = {
   productCode?: string | null;
   rawProduct?: Record<string, unknown> | null;
+  bundledRawProduct?: Record<string, unknown> | null;
 };
 
 export type Engine6ItineraryMergeMode = "aligned" | "diverged";
@@ -201,7 +203,8 @@ export const resolveEngine6MergedItineraryTitle = (
   if (
     liveTitle &&
     liveItem.titleSource !== "description-inferred" &&
-    !isEngine6ProseItineraryTitle(liveTitle)
+    !isEngine6ProseItineraryTitle(liveTitle) &&
+    !isEngine6NeutralItineraryStopTitle(liveTitle)
   ) {
     return liveTitle;
   }
@@ -216,6 +219,7 @@ const isHighConfidenceLiveItineraryTitleSource = (
 export type Engine6DivergedMergedItineraryTitleContext = {
   productCode?: string | null;
   rawProduct?: Record<string, unknown> | null;
+  bundledRawProduct?: Record<string, unknown> | null;
   rowIndex: number;
   rowCount: number;
 };
@@ -240,6 +244,7 @@ export const resolveEngine6DivergedMergedItineraryTitle = (
     return resolveEngine6DivergedItineraryTitle({
       productCode: context.productCode,
       rawProduct: context.rawProduct ?? null,
+      bundledRawProduct: context.bundledRawProduct ?? null,
       rowIndex: context.rowIndex,
       rowCount: context.rowCount,
       nativeTitle: nativeItem?.title,
@@ -311,6 +316,7 @@ const mergeEngine6NativeItineraryWithLiveDiverged = (
       title: resolveEngine6DivergedMergedItineraryTitle(nativeItem, liveItem, {
         productCode: mergeContext?.productCode,
         rawProduct: mergeContext?.rawProduct,
+        bundledRawProduct: mergeContext?.bundledRawProduct,
         rowIndex: index,
         rowCount: liveItinerary.length,
       }),

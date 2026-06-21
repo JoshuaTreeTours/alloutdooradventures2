@@ -165,6 +165,33 @@ export const getEngine6PartnerItineraryRowPoiTitle = (
 ): string | null =>
   getEngine6PartnerItineraryRowStructuredTitle(product, rowIndex)?.title ?? null;
 
+/**
+ * Positional Viator itinerary authority for a single row index:
+ * JSON-LD itemListElement[n].item.name, then structured itineraryItems fields.
+ */
+export const getEngine6PositionalItineraryRowTitle = (
+  product: RecordLike | null | undefined,
+  rowIndex: number
+): { title: string; titleSource: "json-ld" | "explicit" } | null => {
+  const jsonLdTitle = getEngine6ItineraryJsonLdTitle(product, rowIndex);
+  if (jsonLdTitle) {
+    return { title: jsonLdTitle, titleSource: "json-ld" };
+  }
+
+  const structuredPartnerTitle = getEngine6PartnerItineraryRowStructuredTitle(
+    product,
+    rowIndex
+  );
+  if (structuredPartnerTitle) {
+    return {
+      title: structuredPartnerTitle.title,
+      titleSource: structuredPartnerTitle.source,
+    };
+  }
+
+  return null;
+};
+
 const isAuthoritativeExtractedItineraryTitleSource = (
   source: Engine6ItineraryTitleSource | undefined
 ): boolean =>
@@ -294,7 +321,7 @@ const shouldPreferNativeBundledTitleOverUnreliableLive = (args: {
 
 /**
  * Title authority for diverged itinerary merges only.
- * Order: public JSON-LD > partner JSON-LD > structured Partner/API fields >
+ * Order: public JSON-LD > bundled/live positional JSON-LD + structured fields >
  * bundled native title (when live title is unreliable) > live explicit >
  * product override > concise POI/location from live title prose >
  * live authoritative extraction > neutral Itinerary Stop {n}.
@@ -302,6 +329,7 @@ const shouldPreferNativeBundledTitleOverUnreliableLive = (args: {
 export const resolveEngine6DivergedItineraryTitle = (args: {
   productCode: string | null | undefined;
   rawProduct?: RecordLike | null;
+  bundledRawProduct?: RecordLike | null;
   rowIndex: number;
   rowCount: number;
   nativeTitle?: string | null;
@@ -309,7 +337,7 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
   liveDescription?: string | null;
   liveTitleSource?: Engine6ItineraryTitleSource;
 }): Engine6DivergedItineraryTitleResolution => {
-  const { productCode, rawProduct, rowIndex, rowCount } = args;
+  const { productCode, rawProduct, bundledRawProduct, rowIndex, rowCount } = args;
   const liveTitle = asNonEmptyString(args.liveTitle);
   const nativeTitle = asNonEmptyString(args.nativeTitle);
 
@@ -322,26 +350,14 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     return { title: publicJsonLdTitle, titleSource: "public-json-ld" };
   }
 
-  const itemListElement = asRecord(rawProduct?.itinerary)?.itemListElement;
-  if (Array.isArray(itemListElement) && itemListElement.length === rowCount) {
-    const partnerJsonLdTitle = getEngine6ItineraryJsonLdTitle(
-      rawProduct ?? null,
+  for (const product of [bundledRawProduct, rawProduct]) {
+    const positionalTitle = getEngine6PositionalItineraryRowTitle(
+      product ?? null,
       rowIndex
     );
-    if (partnerJsonLdTitle) {
-      return { title: partnerJsonLdTitle, titleSource: "json-ld" };
+    if (positionalTitle) {
+      return positionalTitle;
     }
-  }
-
-  const structuredPartnerTitle = getEngine6PartnerItineraryRowStructuredTitle(
-    rawProduct ?? null,
-    rowIndex
-  );
-  if (structuredPartnerTitle) {
-    return {
-      title: structuredPartnerTitle.title,
-      titleSource: structuredPartnerTitle.source,
-    };
   }
 
   if (
@@ -354,7 +370,12 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     return { title: nativeTitle!, titleSource: "explicit" };
   }
 
-  if (args.liveTitleSource === "explicit" && liveTitle && !isEngine6ProseItineraryTitle(liveTitle)) {
+  if (
+    args.liveTitleSource === "explicit" &&
+    liveTitle &&
+    !isEngine6ProseItineraryTitle(liveTitle) &&
+    !isEngine6NeutralItineraryStopTitle(liveTitle)
+  ) {
     return { title: liveTitle, titleSource: "explicit" };
   }
 
@@ -380,7 +401,8 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
   if (
     isAuthoritativeExtractedItineraryTitleSource(args.liveTitleSource) &&
     liveTitle &&
-    !isEngine6ProseItineraryTitle(liveTitle)
+    !isEngine6ProseItineraryTitle(liveTitle) &&
+    !isEngine6NeutralItineraryStopTitle(liveTitle)
   ) {
     return {
       title: liveTitle,

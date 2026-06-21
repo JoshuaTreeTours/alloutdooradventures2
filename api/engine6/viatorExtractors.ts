@@ -8,7 +8,9 @@ import {
 import { classifyTourCategories } from "./tourCategoryClassifier.js";
 import {
   getEngine6AlignedItineraryJsonLdTitle,
+  getEngine6ItineraryJsonLdTitle,
   getEngine6NeutralItineraryStopTitle,
+  isEngine6NeutralItineraryStopTitle,
   type Engine6ItineraryTitleSource,
 } from "./itineraryTitlePolicy.js";
 import { isEngine6ProseItineraryTitle } from "./divergedItineraryTitle.js";
@@ -1154,8 +1156,17 @@ const normalizeSingleItineraryItem = (
     title = isUsableExplicitItineraryField(location?.name);
     titleSource = "explicit";
   } else {
-    title = getEngine6NeutralItineraryStopTitle(context.rowIndex);
-    titleSource = "explicit";
+    const positionalJsonLdTitle = getEngine6ItineraryJsonLdTitle(
+      context.product,
+      context.rowIndex
+    );
+    if (positionalJsonLdTitle) {
+      title = positionalJsonLdTitle;
+      titleSource = "json-ld";
+    } else {
+      title = getEngine6NeutralItineraryStopTitle(context.rowIndex);
+      titleSource = "explicit";
+    }
   }
   const resolvedTitle =
     title ?? getEngine6NeutralItineraryStopTitle(context.rowIndex);

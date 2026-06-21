@@ -8,6 +8,10 @@ import { resolveEngine6DivergedItineraryTitle } from "../../api/engine6/itinerar
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 import specimen233384p2Payload from "../../data/engine6/viator/233384P2.exact-product.json";
 import specimen474891p3Payload from "../../data/engine6/viator/474891P3.exact-product.json";
+import {
+  ENGINE6_NYC_BROOKLYN_BRIDGE_PRODUCT_CODE,
+  ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
+} from "./routes";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import {
   getEngine6ItineraryMergeMode,
@@ -71,6 +75,13 @@ const loadNativeItinerary = (productCode: string) => {
   return mapViatorToEngine6Tour(payload).itinerary;
 };
 
+const loadBundledRawProduct = (productCode: string) => {
+  const fixture = JSON.parse(
+    readFileSync(path.join(fixtureDir, `${productCode}.exact-product.json`), "utf8")
+  ) as Record<string, unknown>;
+  return extractEngine6Product(fixture).product as Record<string, unknown>;
+};
+
 const buildDescriptionInferredLiveItinerary = (
   count: number,
   proseByIndex: Record<number, string> = {}
@@ -80,6 +91,18 @@ const buildDescriptionInferredLiveItinerary = (
       proseByIndex[index] ??
       `Discover the charm of supplier prose stop ${index + 1} with guided commentary`,
     titleSource: "description-inferred" as const,
+    description: `Live refreshed description for stop ${index + 1}.`,
+  }));
+
+const buildNeutralExplicitLiveItinerary = (
+  count: number,
+  proseByIndex: Record<number, string> = {}
+): Engine6LiveItineraryItem[] =>
+  Array.from({ length: count }, (_, index) => ({
+    title:
+      proseByIndex[index] ??
+      `Itinerary Stop ${index + 1}`,
+    titleSource: "explicit" as const,
     description: `Live refreshed description for stop ${index + 1}.`,
   }));
 
@@ -118,6 +141,27 @@ describe("diverged New York itinerary title authority", () => {
     });
   });
 
+  it("233384P2 / 264853 keeps bundled positional titles over live Itinerary Stop rows", () => {
+    const native = loadNativeItinerary(ENGINE6_NYC_BROOKLYN_BRIDGE_PRODUCT_CODE);
+    const live = buildNeutralExplicitLiveItinerary(8);
+    const bundledRawProduct = loadBundledRawProduct(
+      ENGINE6_NYC_BROOKLYN_BRIDGE_PRODUCT_CODE
+    );
+
+    expect(getEngine6ItineraryMergeMode(native, live)).toBe("diverged");
+    expect(
+      mergeEngine6NativeItineraryWithLive(native, live, {
+        productCode: ENGINE6_NYC_BROOKLYN_BRIDGE_PRODUCT_CODE,
+        bundledRawProduct,
+      }).map(item => item.title)
+    ).toEqual([
+      ...EXPECTED_233384P2_NATIVE_TITLES,
+      "Itinerary Stop 7",
+      "Itinerary Stop 8",
+    ]);
+    expect(ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE).toContain("264853");
+  });
+
   it("233384P2 keeps bundled native titles over live description-inferred prose", () => {
     const native = loadNativeItinerary("233384P2");
     const live = buildDescriptionInferredLiveItinerary(8, {
@@ -129,12 +173,33 @@ describe("diverged New York itinerary title authority", () => {
     expect(
       mergeEngine6NativeItineraryWithLive(native, live, {
         productCode: "233384P2",
+        bundledRawProduct: loadBundledRawProduct("233384P2"),
       }).map(item => item.title)
     ).toEqual([
       ...EXPECTED_233384P2_NATIVE_TITLES,
       "Itinerary Stop 7",
       "Itinerary Stop 8",
     ]);
+  });
+
+  it("description-only live rows cannot overwrite bundled positional titles at the same index", () => {
+    const native = loadNativeItinerary("7081NYCDAY");
+    const live = buildNeutralExplicitLiveItinerary(14);
+    const merged = mergeEngine6NativeItineraryWithLive(native, live, {
+      productCode: "7081NYCDAY",
+      bundledRawProduct: loadBundledRawProduct("7081NYCDAY"),
+    });
+
+    expect(merged.slice(0, 6).map(item => item.title)).toEqual([
+      "Central Park",
+      "Rockefeller Center",
+      "Fifth Avenue",
+      "Gansevoort Liberty Market",
+      "The National 9/11 Memorial & Museum",
+      "New York Harbor",
+    ]);
+    expect(merged[0].description).toBe("Live refreshed description for stop 1.");
+    expect(merged[5].description).toBe("Live refreshed description for stop 6.");
   });
 
   it("preserves bundled native titles for the diverged NYC cohort at shared indices", () => {
@@ -175,9 +240,10 @@ describe("diverged New York itinerary title authority", () => {
 
     cases.forEach(({ productCode, liveCount, expectedNativePrefix }) => {
       const native = loadNativeItinerary(productCode);
-      const live = buildDescriptionInferredLiveItinerary(liveCount);
+      const live = buildNeutralExplicitLiveItinerary(liveCount);
       const merged = mergeEngine6NativeItineraryWithLive(native, live, {
         productCode,
+        bundledRawProduct: loadBundledRawProduct(productCode),
       });
 
       expect(merged.slice(0, expectedNativePrefix.length).map(item => item.title)).toEqual(

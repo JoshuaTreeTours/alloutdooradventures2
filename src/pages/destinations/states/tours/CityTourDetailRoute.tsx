@@ -57,7 +57,7 @@ import { getEngine3TourBySlugs } from "../../../../engine3/routing";
 import { getEngine4TourBySlugs } from "../../../../engine4/routing";
 import { getLegacyFhMigratedTourBySlugs } from "../../../../engine6/legacyFh/registry";
 import Engine6TourPage from "../../../../engine6/components/Engine6TourPage";
-import { getEngine6NativeTourByCanonicalPath } from "../../../../engine6/registry";
+import { getEngine6NativeTourByCanonicalPath, getEngine6BundledRawProductByProductCode } from "../../../../engine6/registry";
 import type {
   Engine6ApiResponse,
   Engine6Tour,
@@ -494,6 +494,9 @@ export default function CityTourDetailRoute({
                   {
                     productCode: nativeEngine6Tour.productCode,
                     rawProduct: liveDynamic.rawProduct,
+                    bundledRawProduct: getEngine6BundledRawProductByProductCode(
+                      nativeEngine6Tour.productCode
+                    ),
                   }
                 )
               : nativeEngine6Tour.itinerary,
