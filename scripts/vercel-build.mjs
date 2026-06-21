@@ -1,9 +1,12 @@
 import { execSync } from "node:child_process";
 import fs from "node:fs";
 
-function run(cmd) {
+function run(cmd, env = {}) {
   console.log(`\n> ${cmd}`);
-  execSync(cmd, { stdio: "inherit" });
+  execSync(cmd, {
+    stdio: "inherit",
+    env: { ...process.env, ...env },
+  });
 }
 
 const VERCEL_ENV = (process.env.VERCEL_ENV || "").toLowerCase();
@@ -42,7 +45,7 @@ if (!isPreview && exists("scripts/generate-tour-enrichment.mjs")) {
 run("vite build");
 
 if (exists("scripts/generate-sitemap.mjs")) {
-  run("SITEMAP_WRITE=1 node scripts/generate-sitemap.mjs");
+  run("node scripts/generate-sitemap.mjs", { SITEMAP_WRITE: "1" });
 }
 
 if (isPreview) {

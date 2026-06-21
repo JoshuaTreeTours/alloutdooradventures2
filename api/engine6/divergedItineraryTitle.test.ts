@@ -66,10 +66,7 @@ describe("extractEngine6ConciseItineraryTitleFromProse", () => {
         title:
           "Named after one of the most captivating shorelines on the Spanish coast, Vizcaya Museum & Gardens captures jaw-dropping European extravagance",
       })
-    ).toEqual({
-      title: "Vizcaya Museum & Gardens",
-      source: "explicit",
-    });
+    ).toBeNull();
   });
 
   it("extracts marketplace and island names from Miami boat prose", () => {

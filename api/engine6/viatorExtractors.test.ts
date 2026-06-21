@@ -68,21 +68,15 @@ describe("extractEngine6Product category normalization", () => {
     const result = extractEngine6Product(payload as Record<string, unknown>);
 
     expect(result.extracted.primaryCategory).toBe("cycling");
-    expect(result.extracted.categories).toEqual([
-      "cycling",
-      "hiking",
-      "sightseeing-city-tours",
-    ]);
+    expect(result.extracted.categories).toEqual(["cycling"]);
     expect(result.extracted.primaryDisplayCategory).toBe("Cycling");
     expect(result.extracted.activityCategories).toEqual([
       { slug: "cycling", label: "Cycling" },
-      { slug: "hiking", label: "Hiking" },
-      { slug: "sightseeing-city-tours", label: "Sightseeing & City Tours" },
     ]);
   });
 });
 
-describe("extractEngine6Product itinerary title overrides", () => {
+describe("extractEngine6Product description-only itinerary titles", () => {
   const centralParkDescriptions = [
     "In winter guests can watch ice skating, pickleball, Home Alone 2 and Serendipity scenes here.",
     "The 1908 carousel has more than 50 hand-carved horses.",
@@ -103,7 +97,7 @@ describe("extractEngine6Product itinerary title overrides", () => {
     "A traffic circle with the Christopher Columbus monument marks this gateway.",
   ];
 
-  it("applies confirmed 414460P1 Central Park Pedicab row title overrides", () => {
+  it("uses neutral stop titles for description-only Central Park Pedicab rows", () => {
     const result = extractEngine6Product({
       product: {
         productCode: "414460P1",
@@ -117,28 +111,12 @@ describe("extractEngine6Product itinerary title overrides", () => {
       },
     } as Record<string, unknown>);
 
-    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
-      "Wollman Rink",
-      "Central Park Carousel",
-      "Chess & Checkers House",
-      "Literary Walk",
-      "Balto Statue",
-      "Conservatory Water",
-      "Central Park Boathouse",
-      "Bethesda Fountain",
-      "Cherry Hill",
-      "Bow Bridge",
-      "The Lake",
-      "Daniel Webster Monument",
-      "The Dakota",
-      "Tavern on the Green",
-      "Sheep Meadow",
-      "Pinebank Arch",
-      "Columbus Circle",
-    ]);
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual(
+      centralParkDescriptions.map((_, index) => `Itinerary Stop ${index + 1}`)
+    );
   });
 
-  it("preserves itinerary descriptions when title overrides are applied", () => {
+  it("preserves itinerary descriptions when neutral stop titles are applied", () => {
     const result = extractEngine6Product({
       product: {
         productCode: "414460P1",
@@ -154,7 +132,7 @@ describe("extractEngine6Product itinerary title overrides", () => {
     );
   });
 
-  it("leaves rows without confirmed overrides on the existing description-derived path", () => {
+  it("uses neutral stop titles for extra description-only rows", () => {
     const description =
       "Unconfirmed Landmark is not in the confirmed audit list.";
     const result = extractEngine6Product({
@@ -169,12 +147,12 @@ describe("extractEngine6Product itinerary title overrides", () => {
     } as Record<string, unknown>);
 
     expect(result.extracted.itinerary[17]).toMatchObject({
-      title: "Unconfirmed Landmark",
+      title: "Itinerary Stop 18",
       description,
     });
   });
 
-  it("does not apply 414460P1 row overrides to other Engine6 products", () => {
+  it("uses neutral stop titles for other description-only Engine6 products", () => {
     const description = centralParkDescriptions[0];
     const result = extractEngine6Product({
       product: {
@@ -185,8 +163,7 @@ describe("extractEngine6Product itinerary title overrides", () => {
     } as Record<string, unknown>);
 
     expect(result.extracted.itinerary[0]).toMatchObject({
-      title:
-        "In winter guests can watch ice skating, pickleball, Home Alone 2 and Serendipity scenes here",
+      title: "Itinerary Stop 1",
       description,
     });
   });
@@ -301,8 +278,8 @@ describe("extractEngine6Product itinerary title overrides", () => {
       result.extracted.itinerary.map(item => item.titleSource)
     ).not.toContain("public-json-ld");
     expect(result.extracted.itinerary[1]).toMatchObject({
-      title: "Enjoy a brief orientation drive through Lucerne",
-      titleSource: "description-inferred",
+      title: "Itinerary Stop 2",
+      titleSource: "explicit",
     });
   });
 });

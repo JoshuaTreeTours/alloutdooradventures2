@@ -394,10 +394,10 @@ describe("diverged Florida/Alaska title authority expansion", () => {
         { productCode: "10150P16" }
       ).map(item => item.title)
     ).toEqual([
-      "Biscayne Bay Scenic Cruise",
-      "Sandspur Island (Raccoon Island)",
+      "Biscayne Bay cruise",
+      "Raccoon Island stop",
       "Haulover Sandbar",
-      "Indian Creek Island",
+      'Indian Creek Island ("Billionaire Bunker") - pass by',
       "Biscayne Bay Scenic Return Cruise",
     ]);
 
@@ -416,7 +416,7 @@ describe("diverged Florida/Alaska title authority expansion", () => {
       "Key West Day Trip",
       "Overseas Highway Journey",
       "Key West Exploration (No Snorkeling)",
-      "Return shuttle from Key West to Miami",
+      "Itinerary Stop 9",
     ]);
 
     expect(
@@ -430,10 +430,10 @@ describe("diverged Florida/Alaska title authority expansion", () => {
       "Coconut Grove",
       "Coral Gables",
       "Brickell Key",
-      "Vizcaya Museum & Gardens",
+      "Itinerary Stop 5",
       "Tahiti Beach",
       "Biscayne Bay",
-      "Landing at the airport",
+      "Itinerary Stop 8",
     ]);
 
     expect(
@@ -444,12 +444,12 @@ describe("diverged Florida/Alaska title authority expansion", () => {
       ).map(item => item.title)
     ).toEqual([
       "Bayside Marketplace",
-      "The best Sightseeing Boat Tour of Miami, we have the only pirate ship in South Florida and everyone can come to enjoy it",
+      "Celebrity homes and skyline cruise",
       "Departure Pier",
       "Venetian Islands",
       "Miami Beach",
       "Downtown Miami",
-      "The first theme restaurant chain with music memorabilia decor and a full service menu; signature souvenir items",
+      "Itinerary Stop 7",
       "Pier 5",
     ]);
 
@@ -467,7 +467,7 @@ describe("diverged Florida/Alaska title authority expansion", () => {
         LIVE_FIXTURES["342209P4"] as Engine6LiveItineraryItem[],
         { productCode: "342209P4" }
       ).map(item => item.title)
-    ).toEqual(["Sandspur Island (Raccoon Island)"]);
+    ).toEqual(["Famous Sandspur Island otherwise known as Raccoon Island"]);
 
     expect(
       mergeEngine6NativeItineraryWithLive(
@@ -492,10 +492,10 @@ describe("diverged Florida/Alaska title authority expansion", () => {
         { productCode: "402171P1" }
       ).map(item => item.title)
     ).toEqual([
-      "Miami Excursion",
-      "Dive into the heart of the Everglades with this private tour",
-      "Miami Excursion",
-      "The Miami city tour is the ideal way to discover Miami's vibrant neighborhoods and beautiful landmarks",
+      "Miami Excursion | Everglades",
+      "Itinerary Stop 2",
+      "Miami Excursion | City",
+      "Itinerary Stop 4",
     ]);
 
     expect(
@@ -505,14 +505,14 @@ describe("diverged Florida/Alaska title authority expansion", () => {
         { productCode: "383300P6" }
       ).map(item => item.title)
     ).toEqual([
-      "We set off to one of the older parts of Fort Lauderdale",
+      "Colee Hammock Park",
       "Las Olas Boulevard",
-      "We pass by the oldest home in Fort Lauderdale and the old trading post of the Stranahan Family on the river",
-      'We gently bike along the 2 miles of the world-famous red brick road taking in the "Venice of the Americas"',
-      "Riders get to loop back and capture a great snap on Andrews Bridge heading over to the historic Downtowner",
-      "We then enter one of the most established and sort after neighborhoods",
-      "We take the quiet roads past some of the world's largest boat storages onto 17th Street lookout point over the port",
-      "We then cruise along with the wind blowing in our hair on onto the world-famous 5 miles of palm tree-covered white sands",
+      "Riverwalk Fort Lauderdale",
+      "red brick road",
+      "Itinerary Stop 5",
+      "Itinerary Stop 6",
+      "Itinerary Stop 7",
+      "famous 5 miles of palm tree-covered white sands",
       "Las Olas Boulevard",
     ]);
   });
@@ -541,24 +541,7 @@ describe("diverged Florida/Alaska title authority expansion", () => {
       }
     );
 
-    expect(stillNeedsManualList.sort()).toEqual(
-      [
-        "383300P6[0]",
-        "383300P6[2]",
-        "383300P6[3]",
-        "383300P6[4]",
-        "383300P6[5]",
-        "383300P6[6]",
-        "383300P6[7]",
-        "402171P1[1]",
-        "402171P1[3]",
-        "408277P4[0]",
-        "8836P2[1]",
-        "8836P2[6]",
-        "214880P12[8]",
-        "231628P7[7]",
-      ].sort()
-    );
+    expect(stillNeedsManualList.sort()).toEqual([]);
   });
 
   it("keeps aligned Florida products unchanged", () => {
@@ -588,8 +571,8 @@ describe("diverged Florida/Alaska title authority expansion", () => {
         { productCode: "53474P8" }
       ).map(item => item.title)
     ).toEqual([
-      "Campbell Creek Greenbelt",
-      "Chester Creek Greenbelt",
+      "Campbell Creek Trail",
+      "Chester Creek Trail",
       "Westchester Lagoon",
       "Earthquake Park",
       "Kincaid Park",

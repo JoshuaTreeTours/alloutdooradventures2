@@ -270,12 +270,11 @@ const splitLeadingConciseSegment = (
 };
 
 /**
- * Derive a concise POI/location title from supplier prose when structured
- * Partner/API fields are unavailable.
+ * Derive a concise POI/location title from supplier prose in the live title
+ * field when structured Partner/API fields are unavailable.
  */
 export const extractEngine6ConciseItineraryTitleFromProse = (args: {
   title?: string | null;
-  description?: string | null;
 }): { title: string; source: Engine6ItineraryTitleSource } | null => {
   const splitCandidate = splitLeadingConciseSegment(args.title);
   if (splitCandidate) {
@@ -290,21 +289,6 @@ export const extractEngine6ConciseItineraryTitleFromProse = (args: {
   const titlePhrase = extractLocationPhraseFromProse(args.title);
   if (titlePhrase) {
     return { title: titlePhrase, source: "explicit" };
-  }
-
-  const descriptionPhrase = extractLocationPhraseFromProse(args.description);
-  if (descriptionPhrase) {
-    return { title: descriptionPhrase, source: "explicit" };
-  }
-
-  const descriptionEntity = extractNamedEntityFromDescription(args.description);
-  if (descriptionEntity) {
-    return { title: descriptionEntity, source: "explicit" };
-  }
-
-  const descriptionSplit = splitLeadingConciseSegment(args.description);
-  if (descriptionSplit) {
-    return { title: descriptionSplit, source: "explicit" };
   }
 
   return null;

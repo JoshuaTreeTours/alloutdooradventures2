@@ -1,7 +1,11 @@
 import {
   resolveEngine6DivergedItineraryTitle,
+  getEngine6NeutralItineraryStopTitle,
+  isEngine6NeutralItineraryStopTitle,
   type Engine6ItineraryTitleSource,
 } from "../../api/engine6/itineraryTitlePolicy";
+import { isEngine6ProseItineraryTitle } from "../../api/engine6/divergedItineraryTitle";
+import { getEngine6BundledRawProductByProductCode } from "./registry";
 import type { Engine6ItineraryItem } from "./types";
 
 export type Engine6LiveItineraryItem = Engine6ItineraryItem & {
@@ -11,6 +15,7 @@ export type Engine6LiveItineraryItem = Engine6ItineraryItem & {
 export type Engine6ItineraryMergeContext = {
   productCode?: string | null;
   rawProduct?: Record<string, unknown> | null;
+  bundledRawProduct?: Record<string, unknown> | null;
 };
 
 export type Engine6ItineraryMergeMode = "aligned" | "diverged";
@@ -183,27 +188,29 @@ export const getEngine6ItineraryMergeMode = (
 
 /**
  * Native/bundled titles win whenever present. Live titles apply only when
- * the native stop has no title, using live confidence priority:
- * json-ld/public-json-ld > explicit/product-override > description-inferred.
+ * the native stop has no title and the live title is authoritative.
  */
 export const resolveEngine6MergedItineraryTitle = (
   nativeItem: Engine6ItineraryItem | undefined,
-  liveItem: Pick<Engine6LiveItineraryItem, "title" | "titleSource">
+  liveItem: Pick<Engine6LiveItineraryItem, "title" | "titleSource">,
+  rowIndex = 0
 ): string => {
   const nativeTitle = nativeItem?.title?.trim();
-  if (nativeTitle && liveItem.titleSource === "description-inferred") {
-    return nativeTitle;
-  }
   if (nativeTitle) {
     return nativeTitle;
   }
 
   const liveTitle = liveItem.title?.trim();
-  if (!liveTitle) {
-    return "This stop";
+  if (
+    liveTitle &&
+    liveItem.titleSource !== "description-inferred" &&
+    !isEngine6ProseItineraryTitle(liveTitle) &&
+    !isEngine6NeutralItineraryStopTitle(liveTitle)
+  ) {
+    return liveTitle;
   }
 
-  return liveTitle;
+  return getEngine6NeutralItineraryStopTitle(rowIndex);
 };
 
 const isHighConfidenceLiveItineraryTitleSource = (
@@ -213,6 +220,7 @@ const isHighConfidenceLiveItineraryTitleSource = (
 export type Engine6DivergedMergedItineraryTitleContext = {
   productCode?: string | null;
   rawProduct?: Record<string, unknown> | null;
+  bundledRawProduct?: Record<string, unknown> | null;
   rowIndex: number;
   rowCount: number;
 };
@@ -237,8 +245,10 @@ export const resolveEngine6DivergedMergedItineraryTitle = (
     return resolveEngine6DivergedItineraryTitle({
       productCode: context.productCode,
       rawProduct: context.rawProduct ?? null,
+      bundledRawProduct: context.bundledRawProduct ?? null,
       rowIndex: context.rowIndex,
       rowCount: context.rowCount,
+      nativeTitle: nativeItem?.title,
       liveTitle: liveItem.title,
       liveDescription: liveItem.description,
       liveTitleSource: liveItem.titleSource,
@@ -263,7 +273,7 @@ export const resolveEngine6DivergedMergedItineraryTitle = (
     if (nativeTitle) {
       return nativeTitle;
     }
-    return "This stop";
+    return getEngine6NeutralItineraryStopTitle(context?.rowIndex ?? 0);
   }
 
   if (liveTitle) {
@@ -274,7 +284,7 @@ export const resolveEngine6DivergedMergedItineraryTitle = (
     return nativeTitle;
   }
 
-  return "This stop";
+  return getEngine6NeutralItineraryStopTitle(context?.rowIndex ?? 0);
 };
 
 const mergeEngine6NativeItineraryWithLiveAligned = (
@@ -288,7 +298,7 @@ const mergeEngine6NativeItineraryWithLiveAligned = (
     return {
       ...(nativeItem ?? {}),
       ...liveFields,
-      title: resolveEngine6MergedItineraryTitle(nativeItem, liveItem),
+      title: resolveEngine6MergedItineraryTitle(nativeItem, liveItem, index),
     };
   });
 
@@ -307,11 +317,29 @@ const mergeEngine6NativeItineraryWithLiveDiverged = (
       title: resolveEngine6DivergedMergedItineraryTitle(nativeItem, liveItem, {
         productCode: mergeContext?.productCode,
         rawProduct: mergeContext?.rawProduct,
+        bundledRawProduct: mergeContext?.bundledRawProduct,
         rowIndex: index,
         rowCount: liveItinerary.length,
       }),
     };
   });
+
+const resolveEngine6ItineraryMergeContext = (
+  mergeContext?: Engine6ItineraryMergeContext
+): Engine6ItineraryMergeContext | undefined => {
+  const productCode = mergeContext?.productCode?.trim();
+  if (!productCode) {
+    return mergeContext;
+  }
+
+  return {
+    ...mergeContext,
+    productCode,
+    bundledRawProduct:
+      mergeContext?.bundledRawProduct ??
+      getEngine6BundledRawProductByProductCode(productCode),
+  };
+};
 
 export const mergeEngine6NativeItineraryWithLive = (
   nativeItinerary: Engine6ItineraryItem[],
@@ -322,6 +350,7 @@ export const mergeEngine6NativeItineraryWithLive = (
     return nativeItinerary;
   }
 
+  const resolvedMergeContext = resolveEngine6ItineraryMergeContext(mergeContext);
   const mergeMode = getEngine6ItineraryMergeMode(
     nativeItinerary,
     liveItinerary
@@ -331,7 +360,7 @@ export const mergeEngine6NativeItineraryWithLive = (
     return mergeEngine6NativeItineraryWithLiveDiverged(
       nativeItinerary,
       liveItinerary,
-      mergeContext
+      resolvedMergeContext
     );
   }
 
