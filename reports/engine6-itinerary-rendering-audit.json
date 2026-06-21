@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-06-21T21:45:54.912Z",
+  "branch": {
+    "name": "current-working-tree",
+    "commit": "9f66e824b0b0cb777832d36347f7b5c340317b02"
+  },
+  "production": {
+    "origin": "https://www.alloutdooradventures.com",
+    "toursAttempted": 133,
+    "toursFetchedOk": 133,
+    "fetchErrors": []
+  },
+  "criteria": {
+    "flags": [
+      "title-equals-description",
+      "long-prose-sentence",
+      "blocked-prefix",
+      "title-exceeds-80-chars",
+      "neutral-stop-with-native-title"
+    ],
+    "blockedPrefixes": [
+      "A guided",
+      "In this",
+      "View",
+      "No other",
+      "Learn",
+      "Discover",
+      "Visit",
+      "See"
+    ],
+    "proseDetector": "isEngine6ProseItineraryTitle",
+    "neutralStopPattern": "Itinerary Stop N",
+    "bundledNativeSources": [
+      "positional-json",
+      "explicit",
+      "json-ld",
+      "product-override"
+    ],
+    "longProseHeuristic": ">8 words, >72 chars, sentence punctuation after stripping St/Mt/Dr abbreviations, or isEngine6ProseItineraryTitle with >=7 words and >=50 chars"
+  },
+  "totals": {
+    "engine6ToursAudited": 133,
+    "itineraryRowsAudited": 614,
+    "failingRows": 0,
+    "affectedTours": 0,
+    "productionTitleDiffs": 0,
+    "productionRoutesWithDiffs": 0
+  },
+  "flagCounts": {},
+  "titleSourceCounts": {},
+  "groupedFailures": [],
+  "productionComparisons": [],
+  "rows": [],
+  "neutralStopInventory": {
+    "totalNeutralStopRows": 24,
+    "rowsWithBundledPositionalAlternative": 0,
+    "rows": []
+  },
+  "limitations": [
+    "Audited bundled registry tours (SSR/initial render). Client-side live API merge is not simulated without VIATOR_API_KEY.",
+    "Production comparison uses JSON-LD itemListElement names from prerendered HTML; visible DOM may hydrate with live merge after load.",
+    "neutral-stop-with-native-title only flags when bundled positional or native explicit title differs from rendered neutral fallback."
+  ]
+}
