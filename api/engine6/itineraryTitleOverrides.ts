@@ -66,6 +66,9 @@ const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
     1: "Chester Creek Trail",
     2: "Westchester Lagoon",
     3: "Earthquake Park",
+    4: "Kincaid Park",
+    5: "Point Woronzof",
+    6: "Tony Knowles Coastal Trail",
   },
   "7079RREBIKE": {
     0: "Bike Setup",
@@ -256,6 +259,12 @@ const PRODUCT_ROW_CONDITIONAL_TITLE_OVERRIDES: Record<
   Record<number, readonly ConditionalTitleOverride[]>
 > = {
   "411138P3": {
+    4: [
+      {
+        title: "Girdwood",
+        currentTitleStartsWith: ["In Girdwood"],
+      },
+    ],
     5: [
       {
         title: "Explorer Glacier",
@@ -266,6 +275,35 @@ const PRODUCT_ROW_CONDITIONAL_TITLE_OVERRIDES: Record<
       {
         title: "Byron Glacier",
         currentTitleStartsWith: ["Seasonal Self-Guided", "Byron Glacier"],
+      },
+    ],
+  },
+  "53474P8": {
+    0: [
+      {
+        title: "Campbell Creek Trail",
+        currentTitleStartsWith: [
+          "The southernmost of Anchorage’s cross-city trails",
+          "The southernmost of Anchorage's cross-city trails",
+        ],
+      },
+    ],
+    1: [
+      {
+        title: "Chester Creek Trail",
+        currentTitleStartsWith: ["The Lanie Fleischer Chester Creek Trail"],
+      },
+    ],
+    2: [
+      {
+        title: "Westchester Lagoon",
+        currentTitleStartsWith: ["Stop by Westchester Lagoon"],
+      },
+    ],
+    3: [
+      {
+        title: "Earthquake Park",
+        currentTitleStartsWith: ["Earthquake Park gives visitors insight"],
       },
     ],
   },
