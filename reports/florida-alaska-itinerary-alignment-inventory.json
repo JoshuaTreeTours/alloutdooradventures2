@@ -1,0 +1,820 @@
+{
+  "summary": {
+    "totalFloridaProductsScanned": 20,
+    "totalAlaskaProductsScanned": 3,
+    "totalProductsWithCountAlignment": 4,
+    "totalProductsWithCountMismatches": 19,
+    "totalProductsCurrentlyRelyingOnOverrides": 10,
+    "totalProductsWhereViatorJsonLdCouldBecomeSourceOfTruth": 0,
+    "estimateOfRemediationEffort": "high"
+  },
+  "products": [
+    {
+      "productCode": "53474P8",
+      "route": "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155",
+      "state": "Alaska",
+      "tourTitle": "Anchorage Greenbelt Bike Tour",
+      "renderedItineraryRowCount": 7,
+      "sourcePayloadItineraryRowCount": 7,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "product-override, explicit",
+      "currentUseOfReviewedOverrides": "yes",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Campbell Creek Trail",
+        "Chester Creek Trail",
+        "Westchester Lagoon",
+        "Earthquake Park",
+        "Kincaid Park",
+        "Point Woronzof",
+        "Tony Knowles Coastal Trail"
+      ],
+      "extractedTitles": [
+        "Campbell Creek Trail",
+        "Chester Creek Trail",
+        "Westchester Lagoon",
+        "Earthquake Park",
+        "Kincaid Park",
+        "Point Woronzof",
+        "Tony Knowles Coastal Trail"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 7,
+        "payloadCount": 7,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "411138P3",
+      "route": "/destinations/alaska/anchorage/tours/glacier-view-and-wildlife-anchorage-adventure-tour",
+      "state": "Alaska",
+      "tourTitle": "Glacier View & Wildlife Anchorage Adventure Tour",
+      "renderedItineraryRowCount": 6,
+      "sourcePayloadItineraryRowCount": 6,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit, product-override",
+      "currentUseOfReviewedOverrides": "yes",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Anchorage",
+        "Earthquake Park",
+        "Beluga Point",
+        "Alaska Wildlife Conservation Center",
+        "Girdwood",
+        "Turnagain Arm Drive"
+      ],
+      "extractedTitles": [
+        "Anchorage",
+        "Earthquake Park",
+        "Beluga Point",
+        "Alaska Wildlife Conservation Center",
+        "Girdwood",
+        "Turnagain Arm Drive"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 6,
+        "payloadCount": 6,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "100569P5",
+      "route": "/destinations/alaska/anchorage/tours/sunset-wilderness-wildlife-glacier-and-nature-free-photo-lessons-may-sept",
+      "state": "Alaska",
+      "tourTitle": "Glacier Hike on Matanuska Glacier - Best Vacation Value",
+      "renderedItineraryRowCount": 3,
+      "sourcePayloadItineraryRowCount": 3,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit",
+      "currentUseOfReviewedOverrides": "no",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Matanuska Glacier State Recreational Site",
+        "Palmer",
+        "Eagle River"
+      ],
+      "extractedTitles": [
+        "Matanuska Glacier State Recreational Site",
+        "Palmer",
+        "Eagle River"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 3,
+        "payloadCount": 3,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "118958P8",
+      "route": "/destinations/florida/fort-lauderdale/tours/4-hour-shared-big-game-fishing-118958p8",
+      "state": "Florida",
+      "tourTitle": "4 Hour Shared Big Game Fishing",
+      "renderedItineraryRowCount": 3,
+      "sourcePayloadItineraryRowCount": 3,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "product-override",
+      "currentUseOfReviewedOverrides": "yes",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "no",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Fort Lauderdale Marina",
+        "Offshore Fishing Grounds",
+        "Harbor Arrival"
+      ],
+      "extractedTitles": [
+        "Fort Lauderdale Marina",
+        "Offshore Fishing Grounds",
+        "Harbor Arrival"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "reviewed-override",
+      "mismatch": {
+        "renderedCount": 3,
+        "payloadCount": 3,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "76145P2",
+      "route": "/destinations/florida/fort-lauderdale/tours/authentic-private-everglades-airboat-tour-76145p2",
+      "state": "Florida",
+      "tourTitle": "Authentic Private Everglades Airboat Tour",
+      "renderedItineraryRowCount": 3,
+      "sourcePayloadItineraryRowCount": 3,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "product-override",
+      "currentUseOfReviewedOverrides": "yes",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "no",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Everglades Launch Area",
+        "Everglades Wetlands",
+        "Dock Arrival"
+      ],
+      "extractedTitles": [
+        "Everglades Launch Area",
+        "Everglades Wetlands",
+        "Dock Arrival"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "reviewed-override",
+      "mismatch": {
+        "renderedCount": 3,
+        "payloadCount": 3,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "6331BAHA",
+      "route": "/destinations/florida/fort-lauderdale/tours/bahamas-day-escape-by-ferry-6331baha",
+      "state": "Florida",
+      "tourTitle": "FROM FLORIDA: Bahamas Day Escape By Ferry",
+      "renderedItineraryRowCount": 4,
+      "sourcePayloadItineraryRowCount": 4,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit, product-override",
+      "currentUseOfReviewedOverrides": "yes",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Check-in at Port Everglades",
+        "Ferry crossing to the Bahamas",
+        "Free time on the island",
+        "Florida Ferry Crossing"
+      ],
+      "extractedTitles": [
+        "Check-in at Port Everglades",
+        "Ferry crossing to the Bahamas",
+        "Free time on the island",
+        "Florida Ferry Crossing"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 4,
+        "payloadCount": 4,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "89173P10",
+      "route": "/destinations/florida/fort-lauderdale/tours/fort-lauderdale-tropical-kayak-tour-and-island-adventure-89173p10",
+      "state": "Florida",
+      "tourTitle": "Fort Lauderdale Tropical Kayak Tour and Island Adventure",
+      "renderedItineraryRowCount": 4,
+      "sourcePayloadItineraryRowCount": 4,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit, product-override",
+      "currentUseOfReviewedOverrides": "yes",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Launch and Safety Briefing",
+        "Tropical Waterway Paddle",
+        "Island Adventure Stop",
+        "Launch Paddle"
+      ],
+      "extractedTitles": [
+        "Launch and Safety Briefing",
+        "Tropical Waterway Paddle",
+        "Island Adventure Stop",
+        "Launch Paddle"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 4,
+        "payloadCount": 4,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "383300P6",
+      "route": "/destinations/florida/fort-lauderdale/tours/guided-electric-bike-tours-of-greater-fort-lauderdale",
+      "state": "Florida",
+      "tourTitle": "90 min Electric Bike Tour of Fort Lauderdale (min 2)",
+      "renderedItineraryRowCount": 4,
+      "sourcePayloadItineraryRowCount": 4,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit",
+      "currentUseOfReviewedOverrides": "no",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itinerary",
+      "renderedTitles": [
+        "Colee Hammock Park",
+        "Las Olas Boulevard",
+        "Riverwalk Fort Lauderdale",
+        "Fort Lauderdale Beach"
+      ],
+      "extractedTitles": [
+        "Colee Hammock Park",
+        "Las Olas Boulevard",
+        "Riverwalk Fort Lauderdale",
+        "Fort Lauderdale Beach"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 4,
+        "payloadCount": 4,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itinerary"
+      }
+    },
+    {
+      "productCode": "5559561P1",
+      "route": "/destinations/florida/fort-lauderdale/tours/jetcar-fort-lauderdale-rental-5559561p1",
+      "state": "Florida",
+      "tourTitle": "JetCar Fort Lauderdale Rental",
+      "renderedItineraryRowCount": 2,
+      "sourcePayloadItineraryRowCount": 2,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit",
+      "currentUseOfReviewedOverrides": "no",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Check in and safety orientation",
+        "JetCar rental ride"
+      ],
+      "extractedTitles": [
+        "Check in and safety orientation",
+        "JetCar rental ride"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 2,
+        "payloadCount": 2,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "89173P8",
+      "route": "/destinations/florida/fort-lauderdale/tours/reef-and-snorkel-paddle-tour-89173p8",
+      "state": "Florida",
+      "tourTitle": "Reef Snorkel & Ocean Paddle Adventure in Fort Lauderdale Beach",
+      "renderedItineraryRowCount": 4,
+      "sourcePayloadItineraryRowCount": 4,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit",
+      "currentUseOfReviewedOverrides": "no",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Lauderdale-By-The-Sea",
+        "Lauderdale-By-The-Sea Visitor Center",
+        "Anglin's Fishing Pier",
+        "Beach Pavilion"
+      ],
+      "extractedTitles": [
+        "Lauderdale-By-The-Sea",
+        "Lauderdale-By-The-Sea Visitor Center",
+        "Anglin's Fishing Pier",
+        "Beach Pavilion"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 4,
+        "payloadCount": 4,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "57834P1",
+      "route": "/destinations/florida/fort-lauderdale/tours/venice-of-america-fort-lauderdale-cruise",
+      "state": "Florida",
+      "tourTitle": "VENICE OF AMERICA TOUR!! Best of Fort Lauderdale over 30 years!!!",
+      "renderedItineraryRowCount": 4,
+      "sourcePayloadItineraryRowCount": 4,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit",
+      "currentUseOfReviewedOverrides": "no",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Carrie B Cruises",
+        "Stranahan House",
+        "Riverside Hotel Fort Lauderdale",
+        "Colee Hammock Park"
+      ],
+      "extractedTitles": [
+        "Carrie B Cruises",
+        "Stranahan House",
+        "Riverside Hotel Fort Lauderdale",
+        "Colee Hammock Park"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 4,
+        "payloadCount": 4,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "214880P12",
+      "route": "/destinations/florida/miami/tours/3-days-amazing-tour-in-miami",
+      "state": "Florida",
+      "tourTitle": "3 Days Amazing Tour in Miami",
+      "renderedItineraryRowCount": 3,
+      "sourcePayloadItineraryRowCount": 3,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit, product-override",
+      "currentUseOfReviewedOverrides": "yes",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Day 1 - Miami introduction",
+        "Coastal Cultural Stops",
+        "Day 3 - Final discoveries"
+      ],
+      "extractedTitles": [
+        "Day 1 - Miami introduction",
+        "Coastal Cultural Stops",
+        "Day 3 - Final discoveries"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 3,
+        "payloadCount": 3,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "5503P21",
+      "route": "/destinations/florida/miami/tours/all-included-combo-with-miami-watersports",
+      "state": "Florida",
+      "tourTitle": "All Included Combo with Miami Watersports",
+      "renderedItineraryRowCount": 0,
+      "sourcePayloadItineraryRowCount": 0,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "yes",
+      "currentRenderedTitleSource": "none",
+      "currentUseOfReviewedOverrides": "no",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "no",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [],
+      "extractedTitles": [],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "manual-review",
+      "mismatch": null
+    },
+    {
+      "productCode": "44152P18",
+      "route": "/destinations/florida/miami/tours/everglades-to-keys-floridas-ultimate-national-parks-expedition",
+      "state": "Florida",
+      "tourTitle": "Everglades to Keys: Florida's Ultimate National Parks Expedition",
+      "renderedItineraryRowCount": 3,
+      "sourcePayloadItineraryRowCount": 3,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "product-override",
+      "currentUseOfReviewedOverrides": "yes",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "no",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Miami",
+        "Everglades Region",
+        "Florida Keys"
+      ],
+      "extractedTitles": [
+        "Miami",
+        "Everglades Region",
+        "Florida Keys"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "reviewed-override",
+      "mismatch": {
+        "renderedCount": 3,
+        "payloadCount": 3,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "7943P1",
+      "route": "/destinations/florida/miami/tours/miami-biscayne-bay-jet-ski-tour",
+      "state": "Florida",
+      "tourTitle": "Miami Biscayne Bay Jet Ski Tour",
+      "renderedItineraryRowCount": 1,
+      "sourcePayloadItineraryRowCount": 1,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit",
+      "currentUseOfReviewedOverrides": "no",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Biscayne Bay Jet Ski route"
+      ],
+      "extractedTitles": [
+        "Biscayne Bay Jet Ski route"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 1,
+        "payloadCount": 1,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "402171P1",
+      "route": "/destinations/florida/miami/tours/miami-excursions-luxury-experience-private",
+      "state": "Florida",
+      "tourTitle": "Miami Excursions Luxury Experience Private",
+      "renderedItineraryRowCount": 0,
+      "sourcePayloadItineraryRowCount": 0,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "yes",
+      "currentRenderedTitleSource": "none",
+      "currentUseOfReviewedOverrides": "no",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "no",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [],
+      "extractedTitles": [],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "manual-review",
+      "mismatch": null
+    },
+    {
+      "productCode": "8836P2",
+      "route": "/destinations/florida/miami/tours/miami-pirate-boat-tour-skyline-and-celebrity-homes",
+      "state": "Florida",
+      "tourTitle": "Miami Pirate Boat Tour: Skyline & Celebrity Homes",
+      "renderedItineraryRowCount": 3,
+      "sourcePayloadItineraryRowCount": 3,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit, product-override",
+      "currentUseOfReviewedOverrides": "yes",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Bayside departure",
+        "Celebrity homes and skyline cruise",
+        "Departure Pier"
+      ],
+      "extractedTitles": [
+        "Bayside departure",
+        "Celebrity homes and skyline cruise",
+        "Departure Pier"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 3,
+        "payloadCount": 3,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "438341P2",
+      "route": "/destinations/florida/miami/tours/miami-private-boat-cruise-with-a-captain",
+      "state": "Florida",
+      "tourTitle": "Miami Private Boat Cruise with a Captain",
+      "renderedItineraryRowCount": 3,
+      "sourcePayloadItineraryRowCount": 3,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit",
+      "currentUseOfReviewedOverrides": "no",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Regal Marina departure",
+        "Miami River and downtown waterfront",
+        "Island and open-water sightseeing"
+      ],
+      "extractedTitles": [
+        "Regal Marina departure",
+        "Miami River and downtown waterfront",
+        "Island and open-water sightseeing"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 3,
+        "payloadCount": 3,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "10150P16",
+      "route": "/destinations/florida/miami/tours/miami-raccoon-island-adventure",
+      "state": "Florida",
+      "tourTitle": "Miami Raccoon Island Adventure",
+      "renderedItineraryRowCount": 3,
+      "sourcePayloadItineraryRowCount": 3,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit",
+      "currentUseOfReviewedOverrides": "no",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Biscayne Bay cruise",
+        "Raccoon Island stop",
+        "Indian Creek Island pass-by"
+      ],
+      "extractedTitles": [
+        "Biscayne Bay cruise",
+        "Raccoon Island stop",
+        "Indian Creek Island pass-by"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 3,
+        "payloadCount": 3,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "5503P10",
+      "route": "/destinations/florida/miami/tours/parasailing-with-miami-watersports",
+      "state": "Florida",
+      "tourTitle": "Parasailing with Miami Watersports",
+      "renderedItineraryRowCount": 3,
+      "sourcePayloadItineraryRowCount": 3,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit, product-override",
+      "currentUseOfReviewedOverrides": "yes",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Check-in and safety briefing",
+        "Biscayne Bay parasailing flight",
+        "Marina Arrival"
+      ],
+      "extractedTitles": [
+        "Check-in and safety briefing",
+        "Biscayne Bay parasailing flight",
+        "Marina Arrival"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 3,
+        "payloadCount": 3,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    },
+    {
+      "productCode": "408277P4",
+      "route": "/destinations/florida/miami/tours/real-extreme-off-road-atv-miami-driver-license-required",
+      "state": "Florida",
+      "tourTitle": "Real Extreme Off Road ATV Miami (driver license required)",
+      "renderedItineraryRowCount": 0,
+      "sourcePayloadItineraryRowCount": 0,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "yes",
+      "currentRenderedTitleSource": "none",
+      "currentUseOfReviewedOverrides": "no",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "no",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [],
+      "extractedTitles": [],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "manual-review",
+      "mismatch": null
+    },
+    {
+      "productCode": "342209P4",
+      "route": "/destinations/florida/miami/tours/sup-kayak-wildlife-exploration-through-mangrove-jungle",
+      "state": "Florida",
+      "tourTitle": "SUP / Kayak Wildlife exploration through mangrove jungle",
+      "renderedItineraryRowCount": 0,
+      "sourcePayloadItineraryRowCount": 0,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "yes",
+      "currentRenderedTitleSource": "none",
+      "currentUseOfReviewedOverrides": "no",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "no",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [],
+      "extractedTitles": [],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "manual-review",
+      "mismatch": null
+    },
+    {
+      "productCode": "231628P7",
+      "route": "/destinations/florida/miami/tours/taste-of-miami-helicopter-tour",
+      "state": "Florida",
+      "tourTitle": "Taste of Miami Helicopter Tour",
+      "renderedItineraryRowCount": 2,
+      "sourcePayloadItineraryRowCount": 2,
+      "viatorJsonLdItineraryRowCount": 0,
+      "countAligned": "no",
+      "currentRenderedTitleSource": "explicit",
+      "currentUseOfReviewedOverrides": "no",
+      "currentUseOfDescriptionDerivedTitles": "no",
+      "cleanViatorJsonLdItemNamesExist": "no",
+      "cleanPayloadTitleNamePoiFieldsExist": "yes",
+      "exactExtractorPathUsed": "product.itineraryItems",
+      "renderedTitles": [
+        "Preflight arrival and briefing",
+        "Taste of Miami helicopter flight"
+      ],
+      "extractedTitles": [
+        "Preflight arrival and briefing",
+        "Taste of Miami helicopter flight"
+      ],
+      "payloadTitles": [],
+      "viatorJsonLdNames": [],
+      "recommendedSourceAuthority": "payload-title",
+      "mismatch": {
+        "renderedCount": 2,
+        "payloadCount": 2,
+        "jsonLdCount": 0,
+        "suspectedMissingRows": [],
+        "suspectedDroppedRows": [],
+        "exactExtractorPathUsed": "product.itineraryItems"
+      }
+    }
+  ]
+}
