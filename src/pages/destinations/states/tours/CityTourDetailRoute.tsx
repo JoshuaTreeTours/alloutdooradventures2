@@ -485,7 +485,8 @@ export default function CityTourDetailRoute({
             : liveDynamic.itinerary
               ? mergeEngine6NativeItineraryWithLive(
                   nativeEngine6Tour.itinerary,
-                  liveDynamic.itinerary
+                  liveDynamic.itinerary,
+                  { productCode: nativeEngine6Tour.productCode }
                 )
               : nativeEngine6Tour.itinerary,
           itinerarySummaryText: suppressLiveContentFields

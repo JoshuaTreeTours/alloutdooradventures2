@@ -1,8 +1,16 @@
-import type { Engine6ItineraryTitleSource } from "../../api/engine6/itineraryTitlePolicy";
+import {
+  resolveEngine6DivergedItineraryTitle,
+  type Engine6ItineraryTitleSource,
+} from "../../api/engine6/itineraryTitlePolicy";
 import type { Engine6ItineraryItem } from "./types";
 
 export type Engine6LiveItineraryItem = Engine6ItineraryItem & {
   titleSource?: Engine6ItineraryTitleSource;
+};
+
+export type Engine6ItineraryMergeContext = {
+  productCode?: string | null;
+  rawProduct?: Record<string, unknown> | null;
 };
 
 export type Engine6ItineraryMergeMode = "aligned" | "diverged";
@@ -202,14 +210,40 @@ const isHighConfidenceLiveItineraryTitleSource = (
   source: Engine6ItineraryTitleSource | undefined
 ): boolean => isAuthoritativeLiveItineraryTitleSource(source);
 
+export type Engine6DivergedMergedItineraryTitleContext = {
+  productCode?: string | null;
+  rawProduct?: Record<string, unknown> | null;
+  rowIndex: number;
+  rowCount: number;
+};
+
 /**
- * Diverged composition merge keeps live row structure and prefers live titles
- * unless the native title clearly refers to the same stop at the same index.
+ * Diverged composition merge keeps live row structure and resolves titles via
+ * the diverged title authority ladder when product context is available.
  */
 export const resolveEngine6DivergedMergedItineraryTitle = (
   nativeItem: Engine6ItineraryItem | undefined,
-  liveItem: Pick<Engine6LiveItineraryItem, "title" | "titleSource">
+  liveItem: Pick<
+    Engine6LiveItineraryItem,
+    "title" | "titleSource" | "description"
+  >,
+  context?: Engine6DivergedMergedItineraryTitleContext
 ): string => {
+  if (
+    context?.productCode &&
+    context.rowIndex >= 0 &&
+    context.rowCount > 0
+  ) {
+    return resolveEngine6DivergedItineraryTitle({
+      productCode: context.productCode,
+      rawProduct: context.rawProduct ?? null,
+      rowIndex: context.rowIndex,
+      rowCount: context.rowCount,
+      liveTitle: liveItem.title,
+      liveTitleSource: liveItem.titleSource,
+    }).title;
+  }
+
   const nativeTitle = nativeItem?.title?.trim();
   const liveTitle = liveItem.title?.trim();
 
@@ -259,7 +293,8 @@ const mergeEngine6NativeItineraryWithLiveAligned = (
 
 const mergeEngine6NativeItineraryWithLiveDiverged = (
   nativeItinerary: Engine6ItineraryItem[],
-  liveItinerary: Engine6LiveItineraryItem[]
+  liveItinerary: Engine6LiveItineraryItem[],
+  mergeContext?: Engine6ItineraryMergeContext
 ): Engine6ItineraryItem[] =>
   liveItinerary.map((liveItem, index) => {
     const nativeItem = nativeItinerary[index];
@@ -268,13 +303,19 @@ const mergeEngine6NativeItineraryWithLiveDiverged = (
     return {
       ...(nativeItem ?? {}),
       ...liveFields,
-      title: resolveEngine6DivergedMergedItineraryTitle(nativeItem, liveItem),
+      title: resolveEngine6DivergedMergedItineraryTitle(nativeItem, liveItem, {
+        productCode: mergeContext?.productCode,
+        rawProduct: mergeContext?.rawProduct,
+        rowIndex: index,
+        rowCount: liveItinerary.length,
+      }),
     };
   });
 
 export const mergeEngine6NativeItineraryWithLive = (
   nativeItinerary: Engine6ItineraryItem[],
-  liveItinerary: Engine6LiveItineraryItem[]
+  liveItinerary: Engine6LiveItineraryItem[],
+  mergeContext?: Engine6ItineraryMergeContext
 ): Engine6ItineraryItem[] => {
   if (!liveItinerary.length) {
     return nativeItinerary;
@@ -288,7 +329,8 @@ export const mergeEngine6NativeItineraryWithLive = (
   if (mergeMode === "diverged") {
     return mergeEngine6NativeItineraryWithLiveDiverged(
       nativeItinerary,
-      liveItinerary
+      liveItinerary,
+      mergeContext
     );
   }
 
