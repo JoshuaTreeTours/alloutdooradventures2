@@ -60,6 +60,11 @@ const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "273720P1",
 ]);
 
+const ENGINE6_LIVE_ITINERARY_MERGE_SUPPRESSED_PRODUCT_CODES = new Set([
+  "415653P2",
+  "3780SUPER",
+]);
+
 const ENGINE6_CLASSIFICATION_OVERRIDES: Record<
   string,
   {
@@ -81,6 +86,9 @@ const ENGINE6_CLASSIFICATION_OVERRIDES: Record<
 
 export const isEngine6ItinerarySectionSuppressed = (productCode: string) =>
   ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES.has(productCode);
+
+export const isEngine6LiveItineraryMergeSuppressed = (productCode: string) =>
+  ENGINE6_LIVE_ITINERARY_MERGE_SUPPRESSED_PRODUCT_CODES.has(productCode);
 
 const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
   "5569HIKE":
@@ -411,6 +419,206 @@ const ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES: Record<string, string[]> = {
   ],
 };
 
+const ENGINE6_REVIEWED_ITINERARY_DESCRIPTION_OVERRIDES: Record<
+  string,
+  Array<string | undefined>
+> = {
+  "103533P1": [
+    undefined,
+    undefined,
+    "Battery Park City remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "106439P1": [
+    undefined,
+    undefined,
+    undefined,
+    "Beverly Gardens Park remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    undefined,
+    "Beverly Canon Gardens remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "190492P3": [
+    undefined,
+    "Bryce Canyon National Park remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "233384P2": [
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    "Brooklyn Navy Yard remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "2630SUN": [
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    "Yerba Buena Island remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "Treasure Island remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "2660SFOWIN": [
+    undefined,
+    "Napa Valley remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "28758P1": [
+    undefined,
+    "Tijuana Walking Tour remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "3097SDZSP_2VISIT": [
+    undefined,
+    "San Diego Zoo Safari Park remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "3454YE3D": [
+    "San Francisco departure remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    "Yosemite Village free time remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    "Valley activity time remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "3533P14": [
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    "Willow Springs area remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "354611P1": [
+    undefined,
+    undefined,
+    "Historic Railroad Trail remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "36001P14": [
+    "Pacific Coast Highway remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    undefined,
+    "Cannery Row remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "17-Mile Drive remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "Carmel-by-the-Sea remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "3780P45": [
+    undefined,
+    "French Quarter riverfront remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    undefined,
+    "Crescent City Connection remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    undefined,
+    "Mardi Gras World remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "3857PHI": [
+    undefined,
+    "Amish Country remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "388361P1": [
+    undefined,
+    undefined,
+    undefined,
+    "San Diego Bay Walk remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    undefined,
+    undefined,
+    "Coronado Island remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "Shelter Island remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "Coronado Bridge remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "The Embarcadero remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "Rady Shell remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "3885SW303BS": [
+    undefined,
+    "Luzern Altstadt remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "411138P3": [
+    undefined,
+    "Earthquake Park remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "424070P1": [
+    undefined,
+    undefined,
+    undefined,
+    "Coronado Bridge remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "447234P3": [
+    undefined,
+    undefined,
+    "Skull Rock remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "Keys View remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "Hidden Valley remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "47235P1": [
+    undefined,
+    "Beverly Hills remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "474891P3": [
+    undefined,
+    undefined,
+    "St. Patrick's Cathedral remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "5144BRUNCH": [
+    "Sunday Brunch Cruise remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "53474P8": [
+    undefined,
+    "Chester Creek Greenbelt remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "5553984P5": [
+    "Zurich Old Town remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "5584233P1": [
+    undefined,
+    "San Diego Bay remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    undefined,
+    undefined,
+    "Cabrillo National Monument remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "5598628P3": [
+    undefined,
+    "Coronado Island remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "Seaport Village remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "Point Loma remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "Sunset Cliffs Natural Park remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    undefined,
+    "Shelter Island remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "Waterfront Park Downtown San Diego remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "5602P25": [
+    undefined,
+    undefined,
+    "Day 3: Monument Valley remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "62527P11": [
+    "Midtown Manhattan Departure remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    "It remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "6288P29": [
+    undefined,
+    undefined,
+    undefined,
+    "Ellis Island remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "6953SWAMPTRANS": [
+    "Downtown New Orleans pickup remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+  "7081NYCDAY": [
+    undefined,
+    "Rockefeller Center remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "Fifth Avenue remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    "Gansevoort Liberty Market remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+    undefined,
+    "New York Harbor remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+  ],
+};
+
 const ENGINE6_ITINERARY_ITEM_OVERRIDES: Record<
   string,
   Array<{ title: string; description: string; stopType: "pass-by" | "stop" }>
@@ -547,6 +755,9 @@ const rewriteItineraryDescriptionToSingleSentence = (args: {
   index: number;
 }) => {
   const override =
+    ENGINE6_REVIEWED_ITINERARY_DESCRIPTION_OVERRIDES[args.productCode]?.[
+      args.index
+    ] ??
     ENGINE6_ITINERARY_DESCRIPTION_OVERRIDES[args.productCode]?.[args.index];
   if (override) {
     return override;
@@ -696,21 +907,26 @@ export const mapViatorToEngine6Tour = (
   const itinerary = suppressItinerarySection
     ? []
     : itineraryOverride
-      ? itineraryOverride.map(item => ({
+      ? itineraryOverride.map((item, index) => ({
           title: item.title,
-          description: item.description,
+          description:
+            ENGINE6_REVIEWED_ITINERARY_DESCRIPTION_OVERRIDES[
+              payload.rawProductCode
+            ]?.[index] ?? item.description,
           stopType: item.stopType,
           duration: undefined,
           admissionNote: undefined,
         }))
-      : (payload.extracted.itinerary?.map(({ titleSource: _titleSource, ...item }, index) => ({
-          ...item,
-          description: rewriteItineraryDescriptionToSingleSentence({
-            productCode: payload.rawProductCode,
-            item,
-            index,
-          }),
-        })) ?? []);
+      : (payload.extracted.itinerary?.map(
+          ({ titleSource: _titleSource, ...item }, index) => ({
+            ...item,
+            description: rewriteItineraryDescriptionToSingleSentence({
+              productCode: payload.rawProductCode,
+              item,
+              index,
+            }),
+          })
+        ) ?? []);
   const itinerarySummaryText = suppressItinerarySection
     ? null
     : (payload.extracted.itinerarySummaryText ?? null);

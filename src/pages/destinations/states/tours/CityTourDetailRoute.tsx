@@ -71,7 +71,7 @@ import {
   readEngine6LiveItineraryTitleSource,
   type Engine6LiveItineraryItem,
 } from "../../../../engine6/mergeEngine6LiveItinerary";
-import { isEngine6ItinerarySectionSuppressed } from "../../../../engine6/mapViatorToEngine6Tour";
+import { isEngine6LiveItineraryMergeSuppressed } from "../../../../engine6/mapViatorToEngine6Tour";
 import {
   assertEngine6CtaIntegrity,
   assertEngine6DataSource,
@@ -323,7 +323,7 @@ export default function CityTourDetailRoute({
     let cancelled = false;
     const productCode = nativeEngine6Tour.productCode;
     const suppressLiveContentFields =
-      isEngine6ItinerarySectionSuppressed(productCode);
+      isEngine6LiveItineraryMergeSuppressed(productCode);
 
     fetch(
       `/api/engine6/viator-product?productCode=${encodeURIComponent(productCode)}`
@@ -453,7 +453,7 @@ export default function CityTourDetailRoute({
   if (nativeEngine6Tour) {
     const liveDynamic =
       liveEngine6DynamicByProductCode[nativeEngine6Tour.productCode];
-    const suppressLiveContentFields = isEngine6ItinerarySectionSuppressed(
+    const suppressLiveContentFields = isEngine6LiveItineraryMergeSuppressed(
       nativeEngine6Tour.productCode
     );
     const resolvedEngine6Tour: Engine6Tour = liveDynamic
