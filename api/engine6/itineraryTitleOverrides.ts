@@ -1,6 +1,12 @@
 type Engine6ItineraryTitleOverrideInput = {
   productCode: string | null;
   rowIndex: number;
+  currentTitle?: string | null;
+};
+
+type ConditionalTitleOverride = {
+  title: string;
+  currentTitleStartsWith: readonly string[];
 };
 
 // Product-scoped itinerary title repairs confirmed by Engine6 itinerary title
@@ -24,6 +30,8 @@ const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
   },
 
   "118958P8": {
+    0: "Fort Lauderdale Marina",
+    1: "Offshore Fishing Grounds",
     2: "Harbor Arrival",
   },
   "15200P2": {
@@ -49,6 +57,15 @@ const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
   },
   "470339P1": {
     2: "Las Vegas Sign",
+  },
+  "411138P3": {
+    4: "Girdwood",
+  },
+  "53474P8": {
+    0: "Campbell Creek Trail",
+    1: "Chester Creek Trail",
+    2: "Westchester Lagoon",
+    3: "Earthquake Park",
   },
   "7079RREBIKE": {
     0: "Bike Setup",
@@ -132,6 +149,11 @@ const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
   "6331BAHA": {
     3: "Florida Ferry Crossing",
   },
+  "44152P18": {
+    0: "Miami",
+    1: "Everglades Region",
+    2: "Florida Keys",
+  },
   "58347P1": {
     0: "Flambeaux Bicycle Tours",
   },
@@ -196,6 +218,8 @@ const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
     4: "Downtown Drop-off",
   },
   "76145P2": {
+    0: "Everglades Launch Area",
+    1: "Everglades Wetlands",
     2: "Dock Arrival",
   },
   "8836P2": {
@@ -227,10 +251,48 @@ const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
   },
 };
 
+const PRODUCT_ROW_CONDITIONAL_TITLE_OVERRIDES: Record<
+  string,
+  Record<number, readonly ConditionalTitleOverride[]>
+> = {
+  "411138P3": {
+    5: [
+      {
+        title: "Explorer Glacier",
+        currentTitleStartsWith: ["Explorer Glacier"],
+      },
+    ],
+    6: [
+      {
+        title: "Byron Glacier",
+        currentTitleStartsWith: ["Seasonal Self-Guided", "Byron Glacier"],
+      },
+    ],
+  },
+};
+
+const normalizeTitleForMatch = (value: string | null | undefined): string =>
+  (value ?? "").replace(/\s+/g, " ").trim().toLowerCase();
+
 export const getEngine6ItineraryTitleOverride = ({
   productCode,
   rowIndex,
+  currentTitle,
 }: Engine6ItineraryTitleOverrideInput): string | null => {
   if (!productCode) return null;
-  return PRODUCT_ROW_TITLE_OVERRIDES[productCode]?.[rowIndex] ?? null;
+  const normalizedProductCode = productCode.toUpperCase();
+  const normalizedCurrentTitle = normalizeTitleForMatch(currentTitle);
+  const conditionalOverride =
+    PRODUCT_ROW_CONDITIONAL_TITLE_OVERRIDES[normalizedProductCode]?.[
+      rowIndex
+    ]?.find(override =>
+      override.currentTitleStartsWith.some(prefix =>
+        normalizedCurrentTitle.startsWith(normalizeTitleForMatch(prefix))
+      )
+    )?.title ?? null;
+  return (
+    conditionalOverride ??
+    PRODUCT_ROW_TITLE_OVERRIDES[normalizedProductCode]?.[rowIndex] ??
+    null
+  );
 };
