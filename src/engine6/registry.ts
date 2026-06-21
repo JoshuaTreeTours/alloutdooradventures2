@@ -51,7 +51,10 @@ const hasStrictExactProductHero = (tour: Engine6Tour) =>
   tour.diagnostics.heroSourceFieldPath?.startsWith("product.media.images");
 
 const fixtureByProductCode = new Map(
-  ENGINE6_VALIDATION_FIXTURES.map(fixture => [fixture.productCode, fixture])
+  ENGINE6_VALIDATION_FIXTURES.map(fixture => [
+    fixture.productCode.trim().toUpperCase(),
+    fixture,
+  ])
 );
 
 const bundledRawProductByProductCode = new Map<string, Record<string, unknown>>();
