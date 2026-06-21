@@ -1129,6 +1129,10 @@ const normalizeSingleItineraryItem = (
   const productOverride = getEngine6ItineraryTitleOverride({
     productCode: context.productCode,
     rowIndex: context.rowIndex,
+    currentTitle:
+      asNonEmptyString(row.title) ??
+      asNonEmptyString(row.name) ??
+      asNonEmptyString(row.locationName),
   });
 
   let title: string | null = null;

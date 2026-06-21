@@ -25,6 +25,12 @@ import specimen5046SanSeaPayload from "../../data/engine6/viator/5046SAN_SEA.exa
 import specimen37126p9Payload from "../../data/engine6/viator/37126P9.exact-product.json";
 import specimen28758p1Payload from "../../data/engine6/viator/28758P1.exact-product.json";
 import specimen5553984p5Payload from "../../data/engine6/viator/5553984P5.exact-product.json";
+import specimen100569p5Payload from "../../data/engine6/viator/100569P5.exact-product.json";
+import specimen411138p3Payload from "../../data/engine6/viator/411138P3.exact-product.json";
+import specimen53474p8Payload from "../../data/engine6/viator/53474P8.exact-product.json";
+import specimen118958p8Payload from "../../data/engine6/viator/118958P8.exact-product.json";
+import specimen76145p2Payload from "../../data/engine6/viator/76145P2.exact-product.json";
+import specimen44152p18Payload from "../../data/engine6/viator/44152P18.exact-product.json";
 import { mapViatorToEngine6Tour } from "../../src/engine6/mapViatorToEngine6Tour";
 import { buildEngine6SchemaGraph } from "../../src/engine6/schema/buildEngine6SchemaGraph";
 import type { Engine6ApiResponse } from "../../src/engine6/types";
@@ -408,6 +414,213 @@ describe("Engine6 definitely broken itinerary title repairs", () => {
       description:
         "Check out Warner Brothers, the most famous film studio in LA, in a bird's eye view on this Hollywood Hills Tour.",
     });
+  });
+});
+
+describe("Engine6 Florida and Alaska itinerary title repairs", () => {
+  const expectConcisePoiTitles = (titles: readonly string[]) => {
+    titles.forEach(title => {
+      expect(title.split(/\s+/).filter(Boolean).length).toBeLessThanOrEqual(5);
+      expect(title).not.toMatch(
+        /^(Board|Depart|Meet|Private|Return|Cruise|Continue|Experience)\b/i
+      );
+    });
+  };
+
+  it("uses concise Florida POI/location titles without shifting row descriptions", () => {
+    const airboat = extractEngine6Product(specimen76145p2Payload).extracted
+      .itinerary;
+    const fishing = extractEngine6Product(specimen118958p8Payload).extracted
+      .itinerary;
+    const evergladesToKeys = extractEngine6Product(specimen44152p18Payload)
+      .extracted.itinerary;
+
+    expect(airboat.map(item => item.title)).toEqual([
+      "Everglades Launch Area",
+      "Everglades Wetlands",
+      "Dock Arrival",
+    ]);
+    expect(airboat.map(item => item.description)).toEqual([
+      "Arrive at the departure point and receive a short safety briefing.",
+      "Cruise deep into the Everglades with a private guide and narrated wildlife viewing.",
+      "Head back to the launch area and wrap up your experience.",
+    ]);
+
+    expect(fishing.map(item => item.title)).toEqual([
+      "Fort Lauderdale Marina",
+      "Offshore Fishing Grounds",
+      "Harbor Arrival",
+    ]);
+    expect(fishing.map(item => item.description)).toEqual([
+      "Meet at the marina, board the vessel, and head offshore.",
+      "Fish likely hotspots with guidance from the onboard crew.",
+      "Cruise back to Fort Lauderdale marina after your fishing window.",
+    ]);
+
+    expect(evergladesToKeys.map(item => item.title)).toEqual([
+      "Miami",
+      "Everglades Region",
+      "Florida Keys",
+    ]);
+    expect(evergladesToKeys.map(item => item.description)).toEqual([
+      "Begin with a guided transfer toward South Florida parks.",
+      "Experience wetlands and wildlife viewing opportunities.",
+      "Continue south for coastal scenery and nature interpretation.",
+    ]);
+
+    expectConcisePoiTitles([
+      ...airboat.map(item => item.title),
+      ...fishing.map(item => item.title),
+      ...evergladesToKeys.map(item => item.title),
+    ]);
+  });
+
+  it("keeps every published Alaska itinerary title as a concise POI/location name", () => {
+    const alaskaItineraries = [
+      extractEngine6Product(specimen100569p5Payload).extracted.itinerary,
+      extractEngine6Product(specimen411138p3Payload).extracted.itinerary,
+      extractEngine6Product(specimen53474p8Payload).extracted.itinerary,
+    ];
+    const alaskaTitles = alaskaItineraries.flatMap(itinerary =>
+      itinerary.map(item => item.title)
+    );
+
+    expect(alaskaTitles).toEqual([
+      "Matanuska Glacier State Recreational Site",
+      "Palmer",
+      "Eagle River",
+      "Anchorage",
+      "Earthquake Park",
+      "Beluga Point",
+      "Alaska Wildlife Conservation Center",
+      "Girdwood",
+      "Turnagain Arm Drive",
+      "Campbell Creek Trail",
+      "Chester Creek Trail",
+      "Westchester Lagoon",
+      "Earthquake Park",
+      "Kincaid Park",
+      "Point Woronzof",
+      "Tony Knowles Coastal Trail",
+    ]);
+    expectConcisePoiTitles(alaskaTitles);
+    expect(alaskaTitles).toEqual(
+      expect.not.arrayContaining([
+        "The",
+        "In",
+        "We",
+        "Stop by",
+        "Seasonal",
+        "Optional",
+        "Enjoy",
+      ])
+    );
+    alaskaTitles.forEach(title => {
+      expect(title).not.toMatch(
+        /^(The|In|We|Stop by|Seasonal|Optional|Enjoy)\b/i
+      );
+      expect(title).not.toMatch(/[.!?]$/);
+    });
+  });
+
+  it("does not rewrite Alaska itinerary descriptions during title review", () => {
+    expect(
+      extractEngine6Product(specimen100569p5Payload).extracted.itinerary.map(
+        item => item.description
+      )
+    ).toEqual([
+      "See dramatic glacier views and learn about the region with your guide.",
+      "Drive through Palmer Valley with narrated local context and photo stops.",
+      "Watch for wildlife along the route and enjoy scenic viewpoints near Eagle River.",
+    ]);
+  });
+
+  it("normalizes known Alaska live narrative titles without changing descriptions", () => {
+    const greenbeltDescriptions = [
+      "The southernmost of Anchorage’s cross-city trails, the 7.5-mile Campbell Creek Trail links wooded greenbelt scenery with neighborhood bike access.",
+      "The Lanie Fleischer Chester Creek Trail cuts a tree-lined path through central Anchorage.",
+      "Stop by Westchester Lagoon, a waterfowl sanctuary near the coastal trail connection.",
+      "Earthquake Park gives visitors insight into Anchorage geology and the 1964 earthquake.",
+    ];
+    const greenbelt = extractEngine6Product({
+      product: {
+        productCode: "53474P8",
+        title: "Anchorage Greenbelt Bike Tour",
+        itineraryItems: [
+          {
+            title:
+              "The southernmost of Anchorage’s cross-city trails, the 7.5-mile Campbell Creek Trail...",
+            description: greenbeltDescriptions[0],
+          },
+          {
+            title:
+              "The Lanie Fleischer Chester Creek Trail cuts a tree-lined path...",
+            description: greenbeltDescriptions[1],
+          },
+          {
+            title: "Stop by Westchester Lagoon, a waterfowl sanctuary",
+            description: greenbeltDescriptions[2],
+          },
+          {
+            title: "Earthquake Park gives visitors insight...",
+            description: greenbeltDescriptions[3],
+          },
+        ],
+      },
+    }).extracted.itinerary;
+
+    const glacierDescriptions = [
+      "In Girdwood, we enjoy stop for an optional lunch at a locally owned spot.",
+      "Explorer Glacier Seasonally we can see hanging ice above Portage Valley.",
+      "Seasonal Self-Guided walk to the foot of the stunning Byron Glacier.",
+    ];
+    const glacier = extractEngine6Product({
+      product: {
+        productCode: "411138P3",
+        title: "Glacier View & Wildlife Anchorage Adventure Tour",
+        itineraryItems: [
+          { title: "Anchorage" },
+          { title: "Beluga Point" },
+          { title: "Alaska Wildlife Conservation Center" },
+          { title: "Turnagain Arm Drive" },
+          {
+            title: "In Girdwood, we enjoy stop for an optional lunch...",
+            description: glacierDescriptions[0],
+          },
+          {
+            title: "Explorer Glacier Seasonally we can see...",
+            description: glacierDescriptions[1],
+          },
+          {
+            title:
+              "Seasonal Self-Guided walk to the foot of the stunning Byron Glacier",
+            description: glacierDescriptions[2],
+          },
+        ],
+      },
+    }).extracted.itinerary;
+
+    expect(greenbelt.map(item => item.title)).toEqual([
+      "Campbell Creek Trail",
+      "Chester Creek Trail",
+      "Westchester Lagoon",
+      "Earthquake Park",
+    ]);
+    expect(greenbelt.map(item => item.description)).toEqual(
+      greenbeltDescriptions
+    );
+    expect(glacier.slice(4).map(item => item.title)).toEqual([
+      "Girdwood",
+      "Explorer Glacier",
+      "Byron Glacier",
+    ]);
+    expect(glacier.slice(4).map(item => item.description)).toEqual(
+      glacierDescriptions
+    );
+    expectConcisePoiTitles([
+      ...greenbelt.map(item => item.title),
+      ...glacier.slice(4).map(item => item.title),
+    ]);
   });
 });
 
