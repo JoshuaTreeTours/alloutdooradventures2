@@ -1,4 +1,9 @@
 import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
+import {
+  extractEngine6ConciseItineraryTitleFromProse,
+  getEngine6PartnerItineraryRowStructuredTitle,
+  isEngine6ProseItineraryTitle,
+} from "./divergedItineraryTitle.js";
 
 export type Engine6ItineraryTitleSource =
   | "json-ld"
@@ -154,58 +159,11 @@ export const getEngine6AlignedItineraryJsonLdTitle = (args: {
   return title ? { title, source: "json-ld" } : null;
 };
 
-const readPartnerItineraryRows = (
-  product: RecordLike | null | undefined
-): RecordLike[] => {
-  if (!product) return [];
-
-  const candidates = [
-    product.itineraryItems,
-    asRecord(product.itinerary)?.itineraryItems,
-    asRecord(product.itinerary)?.items,
-    asRecord(product.whatToExpect)?.items,
-  ];
-
-  for (const candidate of candidates) {
-    if (Array.isArray(candidate)) {
-      return candidate
-        .map(item => asRecord(item))
-        .filter((item): item is RecordLike => Boolean(item));
-    }
-  }
-
-  return [];
-};
-
 export const getEngine6PartnerItineraryRowPoiTitle = (
   product: RecordLike | null | undefined,
   rowIndex: number
-): string | null => {
-  if (rowIndex < 0) return null;
-
-  const row = readPartnerItineraryRows(product)[rowIndex];
-  if (!row) return null;
-
-  const pointOfInterestLocation = asRecord(row.pointOfInterestLocation);
-  const pointOfInterest = asRecord(row.pointOfInterest);
-  const stop = asRecord(row.stop);
-  const location = asRecord(row.location);
-
-  return (
-    asNonEmptyString(pointOfInterestLocation?.locationName) ??
-    asNonEmptyString(pointOfInterestLocation?.title) ??
-    asNonEmptyString(pointOfInterestLocation?.name) ??
-    asNonEmptyString(pointOfInterest?.title) ??
-    asNonEmptyString(pointOfInterest?.name) ??
-    asNonEmptyString(stop?.locationName) ??
-    asNonEmptyString(stop?.title) ??
-    asNonEmptyString(stop?.name) ??
-    asNonEmptyString(location?.locationName) ??
-    asNonEmptyString(location?.title) ??
-    asNonEmptyString(location?.name) ??
-    asNonEmptyString(row.locationName)
-  );
-};
+): string | null =>
+  getEngine6PartnerItineraryRowStructuredTitle(product, rowIndex)?.title ?? null;
 
 const isAuthoritativeExtractedItineraryTitleSource = (
   source: Engine6ItineraryTitleSource | undefined
@@ -217,8 +175,9 @@ const isAuthoritativeExtractedItineraryTitleSource = (
 
 /**
  * Title authority for diverged itinerary merges only.
- * Order: public JSON-LD > partner JSON-LD > explicit > product override >
- * partner POI/location > live authoritative extraction > description-inferred.
+ * Order: public JSON-LD > partner JSON-LD > structured Partner/API fields >
+ * live explicit > product override > prose-derived concise POI/location >
+ * live authoritative extraction > description-inferred.
  */
 export const resolveEngine6DivergedItineraryTitle = (args: {
   productCode: string | null | undefined;
@@ -226,10 +185,12 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
   rowIndex: number;
   rowCount: number;
   liveTitle?: string | null;
+  liveDescription?: string | null;
   liveTitleSource?: Engine6ItineraryTitleSource;
 }): Engine6DivergedItineraryTitleResolution => {
   const { productCode, rawProduct, rowIndex, rowCount } = args;
   const liveTitle = asNonEmptyString(args.liveTitle);
+  const liveDescription = asNonEmptyString(args.liveDescription);
 
   const publicJsonLdTitle = getEngine6AlignedPublicJsonLdItineraryTitle({
     productCode,
@@ -251,7 +212,18 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     }
   }
 
-  if (args.liveTitleSource === "explicit" && liveTitle) {
+  const structuredPartnerTitle = getEngine6PartnerItineraryRowStructuredTitle(
+    rawProduct ?? null,
+    rowIndex
+  );
+  if (structuredPartnerTitle) {
+    return {
+      title: structuredPartnerTitle.title,
+      titleSource: structuredPartnerTitle.source,
+    };
+  }
+
+  if (args.liveTitleSource === "explicit" && liveTitle && !isEngine6ProseItineraryTitle(liveTitle)) {
     return { title: liveTitle, titleSource: "explicit" };
   }
 
@@ -264,17 +236,18 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     return { title: productOverride, titleSource: "product-override" };
   }
 
-  const partnerPoiTitle = getEngine6PartnerItineraryRowPoiTitle(
-    rawProduct ?? null,
-    rowIndex
-  );
-  if (partnerPoiTitle) {
-    return { title: partnerPoiTitle, titleSource: "explicit" };
+  const conciseProseTitle = extractEngine6ConciseItineraryTitleFromProse({
+    title: liveTitle,
+    description: liveDescription,
+  });
+  if (conciseProseTitle) {
+    return conciseProseTitle;
   }
 
   if (
     isAuthoritativeExtractedItineraryTitleSource(args.liveTitleSource) &&
-    liveTitle
+    liveTitle &&
+    !isEngine6ProseItineraryTitle(liveTitle)
   ) {
     return {
       title: liveTitle,

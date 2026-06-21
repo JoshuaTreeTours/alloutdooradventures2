@@ -240,6 +240,7 @@ export const resolveEngine6DivergedMergedItineraryTitle = (
       rowIndex: context.rowIndex,
       rowCount: context.rowCount,
       liveTitle: liveItem.title,
+      liveDescription: liveItem.description,
       liveTitleSource: liveItem.titleSource,
     }).title;
   }
