@@ -1157,9 +1157,11 @@ const normalizeSingleItineraryItem = (
     title = getEngine6NeutralItineraryStopTitle(context.rowIndex);
     titleSource = "explicit";
   }
-  const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
+  const resolvedTitle =
+    title ?? getEngine6NeutralItineraryStopTitle(context.rowIndex);
+  const cleanedTitle = resolvedTitle.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
   const isPassByFromTitle =
-    /\bpass(?:\s|-)?by\b/i.test(title) && cleanedTitle.length > 0;
+    /\bpass(?:\s|-)?by\b/i.test(resolvedTitle) && cleanedTitle.length > 0;
 
   const description =
     asNonEmptyString(row.description) ??
@@ -1201,7 +1203,7 @@ const normalizeSingleItineraryItem = (
     isPassByFlag || isPassByFromType || isPassByFromTitle ? "pass-by" : "stop";
 
   return {
-    title: cleanedTitle || title,
+    title: cleanedTitle || resolvedTitle,
     titleSource,
     stopType,
     ...(descriptionWithoutAdmission
