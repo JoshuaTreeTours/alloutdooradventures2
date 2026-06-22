@@ -171,4 +171,55 @@ describe("mergeEngine6NativeItineraryWithLive 233384P2 title guard", () => {
         .map(item => item.title)
     ).toEqual(BUNDLED_233384P2_POSITIONAL_TITLES);
   });
+
+  it("prefers native POI titles over live prose when bundledRawProduct lookup is null", () => {
+    const lookupSpy = vi
+      .spyOn(bundledRawProductLookup, "getEngine6BundledRawProductByProductCode")
+      .mockReturnValue(null);
+
+    const nativeItinerary = extractEngine6Product(
+      specimen233384p2Payload
+    ).extracted.itinerary;
+    const liveItinerary = buildDescriptionInferredLiveItinerary(8);
+
+    expect(getEngine6ItineraryMergeMode(nativeItinerary, liveItinerary)).toBe(
+      "diverged"
+    );
+
+    const merged = mergeEngine6NativeItineraryWithLive(
+      nativeItinerary,
+      liveItinerary,
+      {
+        productCode: "233384P2",
+        rawProduct: null,
+        bundledRawProduct: null,
+      }
+    );
+
+    expect(
+      merged
+        .slice(0, BUNDLED_233384P2_POSITIONAL_TITLES.length)
+        .map(item => item.title)
+    ).toEqual(BUNDLED_233384P2_POSITIONAL_TITLES);
+
+    expect(
+      merged
+        .slice(0, BUNDLED_233384P2_POSITIONAL_TITLES.length)
+        .every(
+          (item, index) =>
+            item.description === liveItinerary[index]?.description
+        )
+    ).toBe(true);
+
+    expect(merged[6]?.title).not.toEqual(
+      expect.stringMatching(/^Itinerary Stop \d+$/)
+    );
+    expect(BUNDLED_233384P2_POSITIONAL_TITLES).not.toContain(merged[6]?.title);
+    expect(merged[7]?.title).not.toEqual(
+      expect.stringMatching(/^Itinerary Stop \d+$/)
+    );
+    expect(BUNDLED_233384P2_POSITIONAL_TITLES).not.toContain(merged[7]?.title);
+
+    lookupSpy.mockRestore();
+  });
 });

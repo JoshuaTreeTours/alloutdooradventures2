@@ -222,6 +222,29 @@ const liveItineraryTitleIsUnreliableForMerge = (
   return NEUTRAL_ITINERARY_STOP_TITLE_PATTERN.test(liveTitle);
 };
 
+const nativeItineraryTitleIsBundledPoiTitle = (
+  nativeItem: Engine6ItineraryItem | undefined
+): boolean => {
+  const nativeTitle = nativeItem?.title?.trim();
+  if (!nativeTitle) return false;
+  if (NEUTRAL_ITINERARY_STOP_TITLE_PATTERN.test(nativeTitle)) return false;
+  if (isEngine6ProseItineraryTitle(nativeTitle)) return false;
+  return true;
+};
+
+const preferNativePoiTitleOverUnreliableLiveTitle = (
+  nativeItem: Engine6ItineraryItem | undefined,
+  liveItem: Pick<Engine6LiveItineraryItem, "title" | "titleSource">
+): string | null => {
+  if (!nativeItineraryTitleIsBundledPoiTitle(nativeItem)) {
+    return null;
+  }
+  if (!liveItineraryTitleIsUnreliableForMerge(liveItem)) {
+    return null;
+  }
+  return nativeItem?.title?.trim() ?? null;
+};
+
 const resolveAlignedMergedItineraryTitle = (
   nativeItem: Engine6ItineraryItem | undefined,
   liveItem: Engine6LiveItineraryItem,
@@ -269,6 +292,14 @@ export const resolveEngine6DivergedMergedItineraryTitle = (
   >,
   context?: Engine6DivergedMergedItineraryTitleContext
 ): string => {
+  const nativePoiTitle = preferNativePoiTitleOverUnreliableLiveTitle(
+    nativeItem,
+    liveItem
+  );
+  if (nativePoiTitle) {
+    return nativePoiTitle;
+  }
+
   if (
     context?.productCode &&
     context.rowIndex >= 0 &&
