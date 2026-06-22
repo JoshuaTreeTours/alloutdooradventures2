@@ -93,6 +93,16 @@ const PUBLIC_JSON_LD_ITINERARY_NAMES_BY_PRODUCT_CODE: Record<
     "Chugach State Park",
     "Potter Marsh Bird Sanctuary",
   ],
+  "233384P2": [
+    "City Hall Park",
+    "Brooklyn Bridge",
+    "Brooklyn Heights",
+    "Brooklyn Heights Promenade",
+    "Brooklyn Bridge Park",
+    "DUMBO",
+    "Manhattan Bridge",
+    "John V. Lindsay East River Park",
+  ],
 };
 
 const asNonEmptyString = (value: unknown): string | null => {

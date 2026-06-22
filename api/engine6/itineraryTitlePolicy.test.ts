@@ -29,6 +29,7 @@ import specimen5553984p5Payload from "../../data/engine6/viator/5553984P5.exact-
 import specimen3156p13Payload from "../../data/engine6/viator/3156P13.exact-product.json";
 import specimen335698p13Payload from "../../data/engine6/viator/335698P13.exact-product.json";
 import specimen5559561p1Payload from "../../data/engine6/viator/5559561P1.exact-product.json";
+import specimen233384p2Payload from "../../data/engine6/viator/233384P2.exact-product.json";
 import specimen100569p5Payload from "../../data/engine6/viator/100569P5.exact-product.json";
 import specimen411138p3Payload from "../../data/engine6/viator/411138P3.exact-product.json";
 import specimen53474p8Payload from "../../data/engine6/viator/53474P8.exact-product.json";
@@ -712,6 +713,72 @@ describe("411138P3 reviewed public JSON-LD itinerary titles", () => {
       title: "Potter Marsh Bird Sanctuary",
       titleSource: "public-json-ld",
     });
+  });
+});
+
+describe("233384P2 reviewed public JSON-LD itinerary titles", () => {
+  const EXPECTED_233384P2_PUBLIC_JSON_LD_TITLES = [
+    "City Hall Park",
+    "Brooklyn Bridge",
+    "Brooklyn Heights",
+    "Brooklyn Heights Promenade",
+    "Brooklyn Bridge Park",
+    "DUMBO",
+    "Manhattan Bridge",
+    "John V. Lindsay East River Park",
+  ] as const;
+
+  it("returns count-aligned reviewed names only when live row count is eight", () => {
+    expect(
+      getEngine6AlignedPublicJsonLdItineraryTitle({
+        productCode: "233384P2",
+        rowIndex: 0,
+        rowCount: 8,
+      })
+    ).toBe("City Hall Park");
+    expect(
+      getEngine6AlignedPublicJsonLdItineraryTitle({
+        productCode: "233384P2",
+        rowIndex: 0,
+        rowCount: 6,
+      })
+    ).toBeNull();
+  });
+
+  it("prefers public JSON-LD over description-only live rows during extraction", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "233384P2",
+        itineraryItems: Array.from({ length: 8 }, (_, index) => ({
+          description:
+            index === 0
+              ? "Historic park where General George Washington read the Declaration of Independence, surrounded by City Hall, Municipal Building, Tweed Courthouse, the Woolworth Building and other icons of the city"
+              : index === 1
+                ? "John Augustus Roebling's masterpiece combines engineering and art"
+                : `Supplier prose for stop ${index + 1}.`,
+        })),
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      ...EXPECTED_233384P2_PUBLIC_JSON_LD_TITLES,
+    ]);
+    expect(result.extracted.itinerary.map(item => item.titleSource)).toEqual(
+      Array(8).fill("public-json-ld")
+    );
+  });
+
+  it("keeps bundled six-row titles unchanged when public JSON-LD count does not align", () => {
+    const result = extractEngine6Product(specimen233384p2Payload);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "City Hall Area",
+      "Brooklyn Bridge",
+      "Brooklyn Heights Promenade",
+      "Brooklyn Bridge Park",
+      "DUMBO",
+      "Brooklyn Navy Yard",
+    ]);
   });
 });
 
