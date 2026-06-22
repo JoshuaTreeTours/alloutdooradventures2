@@ -236,7 +236,7 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
   const structuredProducts = [bundledRawProduct ?? null, rawProduct ?? null];
 
   const productOverride = getEngine6ItineraryTitleOverride({
-    productCode,
+    productCode: productCode ?? null,
     rowIndex,
     currentTitle: liveTitle,
   });
@@ -313,7 +313,10 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     description: liveDescription,
   });
   if (conciseProseTitle) {
-    return conciseProseTitle;
+    return {
+      title: conciseProseTitle.title,
+      titleSource: conciseProseTitle.source,
+    };
   }
 
   if (

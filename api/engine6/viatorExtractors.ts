@@ -1094,7 +1094,7 @@ const normalizeSingleItineraryItem = (
     asNonEmptyString(pointOfInterestLocation?.name);
   const nativeRowTitle = asNonEmptyString(row.title);
   const nativeIsNeutral =
-    Boolean(nativeRowTitle) &&
+    nativeRowTitle !== null &&
     /^itinerary stop \d+$/i.test(nativeRowTitle.replace(/\s+/g, " "));
   const inferredTitleFromDescription = (() => {
     const descriptionText =
