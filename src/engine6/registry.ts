@@ -1,4 +1,5 @@
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
+import { getEngine6BundledRawProductByProductCode } from "./bundledRawProductLookup";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import { assertEngine6FixtureSourceOfTruth } from "./sourceOfTruthPolicy";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
@@ -57,38 +58,7 @@ const fixtureByProductCode = new Map(
   ])
 );
 
-const bundledRawProductByProductCode = new Map<string, Record<string, unknown>>();
-
-export const getEngine6BundledRawProductByProductCode = (
-  productCode: string | null | undefined
-): Record<string, unknown> | null => {
-  const normalizedProductCode = productCode?.trim().toUpperCase();
-  if (!normalizedProductCode) {
-    return null;
-  }
-
-  const cached = bundledRawProductByProductCode.get(normalizedProductCode);
-  if (cached) {
-    return cached;
-  }
-
-  const fixture = fixtureByProductCode.get(normalizedProductCode);
-  if (!fixture) {
-    return null;
-  }
-
-  const extraction = extractEngine6Product(fixture.rawPayload);
-  const product = extraction.product;
-  if (!product || typeof product !== "object") {
-    return null;
-  }
-
-  bundledRawProductByProductCode.set(
-    normalizedProductCode,
-    product as Record<string, unknown>
-  );
-  return product as Record<string, unknown>;
-};
+export { getEngine6BundledRawProductByProductCode };
 
 const missingFixtureProductCodes = ENGINE6_CONFIGURED_PRODUCT_CODES.filter(
   productCode => !fixtureByProductCode.has(productCode)

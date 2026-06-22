@@ -104,6 +104,10 @@ const readPartnerItineraryRows = (
   return [];
 };
 
+export const getEngine6PartnerItineraryRowCount = (
+  product: RecordLike | null | undefined
+): number => readPartnerItineraryRows(product).length;
+
 const readStructuredFieldCandidates = (row: RecordLike): string[] => {
   const pointOfInterestLocation = asRecord(row.pointOfInterestLocation);
   const pointOfInterest = asRecord(row.pointOfInterest);

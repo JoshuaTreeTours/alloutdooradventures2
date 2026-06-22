@@ -1,8 +1,10 @@
 import {
+  getEngine6BundledPositionalItineraryTitle,
   resolveEngine6DivergedItineraryTitle,
   type Engine6ItineraryTitleSource,
 } from "../../api/engine6/itineraryTitlePolicy";
-import { getEngine6BundledRawProductByProductCode } from "./registry";
+import { isEngine6ProseItineraryTitle } from "../../api/engine6/divergedItineraryTitle";
+import { getEngine6BundledRawProductByProductCode } from "./bundledRawProductLookup";
 import type { Engine6ItineraryItem } from "./types";
 
 export type Engine6LiveItineraryItem = Engine6ItineraryItem & {
@@ -208,6 +210,41 @@ export const resolveEngine6MergedItineraryTitle = (
   return liveTitle;
 };
 
+const NEUTRAL_ITINERARY_STOP_TITLE_PATTERN = /^itinerary stop \d+$/i;
+
+const liveItineraryTitleIsUnreliableForMerge = (
+  liveItem: Pick<Engine6LiveItineraryItem, "title" | "titleSource">
+): boolean => {
+  const liveTitle = liveItem.title?.trim();
+  if (!liveTitle) return true;
+  if (liveItem.titleSource === "description-inferred") return true;
+  if (isEngine6ProseItineraryTitle(liveTitle)) return true;
+  return NEUTRAL_ITINERARY_STOP_TITLE_PATTERN.test(liveTitle);
+};
+
+const resolveAlignedMergedItineraryTitle = (
+  nativeItem: Engine6ItineraryItem | undefined,
+  liveItem: Engine6LiveItineraryItem,
+  rowIndex: number,
+  mergeContext?: Engine6ItineraryMergeContext
+): string => {
+  if (
+    mergeContext?.productCode &&
+    liveItineraryTitleIsUnreliableForMerge(liveItem)
+  ) {
+    const resolvedContext = resolveEngine6ItineraryMergeContext(mergeContext);
+    const bundledTitle = getEngine6BundledPositionalItineraryTitle(
+      resolvedContext?.bundledRawProduct ?? null,
+      rowIndex
+    );
+    if (bundledTitle) {
+      return bundledTitle.title;
+    }
+  }
+
+  return resolveEngine6MergedItineraryTitle(nativeItem, liveItem);
+};
+
 const isHighConfidenceLiveItineraryTitleSource = (
   source: Engine6ItineraryTitleSource | undefined
 ): boolean => isAuthoritativeLiveItineraryTitleSource(source);
@@ -283,7 +320,8 @@ export const resolveEngine6DivergedMergedItineraryTitle = (
 
 const mergeEngine6NativeItineraryWithLiveAligned = (
   nativeItinerary: Engine6ItineraryItem[],
-  liveItinerary: Engine6LiveItineraryItem[]
+  liveItinerary: Engine6LiveItineraryItem[],
+  mergeContext?: Engine6ItineraryMergeContext
 ): Engine6ItineraryItem[] =>
   liveItinerary.map((liveItem, index) => {
     const nativeItem = nativeItinerary[index];
@@ -292,7 +330,12 @@ const mergeEngine6NativeItineraryWithLiveAligned = (
     return {
       ...(nativeItem ?? {}),
       ...liveFields,
-      title: resolveEngine6MergedItineraryTitle(nativeItem, liveItem),
+      title: resolveAlignedMergedItineraryTitle(
+        nativeItem,
+        liveItem,
+        index,
+        mergeContext
+      ),
     };
   });
 
@@ -360,6 +403,7 @@ export const mergeEngine6NativeItineraryWithLive = (
 
   return mergeEngine6NativeItineraryWithLiveAligned(
     nativeItinerary,
-    liveItinerary
+    liveItinerary,
+    resolvedMergeContext
   );
 };

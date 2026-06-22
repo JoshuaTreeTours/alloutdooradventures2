@@ -1,6 +1,7 @@
 import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
 import {
   extractEngine6ConciseItineraryTitleFromProse,
+  getEngine6PartnerItineraryRowCount,
   getEngine6PartnerItineraryRowStructuredTitle,
   isEngine6ProseItineraryTitle,
 } from "./divergedItineraryTitle.js";
@@ -188,7 +189,7 @@ const isNeutralItineraryStopTitle = (value: string | null | undefined): boolean 
   return NEUTRAL_ITINERARY_STOP_TITLE_PATTERN.test(normalized);
 };
 
-const getEngine6BundledPositionalItineraryTitle = (
+export const getEngine6BundledPositionalItineraryTitle = (
   product: RecordLike | null | undefined,
   rowIndex: number
 ): { title: string; titleSource: "json-ld" | "explicit" } | null => {
@@ -211,6 +212,17 @@ const getEngine6BundledPositionalItineraryTitle = (
   return null;
 };
 
+const liveItineraryTitleIsUnreliable = (args: {
+  liveTitle?: string | null;
+  liveTitleSource?: Engine6ItineraryTitleSource;
+}): boolean => {
+  const liveTitle = asNonEmptyString(args.liveTitle);
+  if (!liveTitle) return true;
+  if (args.liveTitleSource === "description-inferred") return true;
+  if (isEngine6ProseItineraryTitle(liveTitle)) return true;
+  return isNeutralItineraryStopTitle(liveTitle);
+};
+
 export const resolveEngine6DivergedItineraryTitle = (args: {
   productCode: string | null | undefined;
   rawProduct?: RecordLike | null;
@@ -224,6 +236,14 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
   const { productCode, rawProduct, bundledRawProduct, rowIndex, rowCount } = args;
   const liveTitle = asNonEmptyString(args.liveTitle);
   const liveDescription = asNonEmptyString(args.liveDescription);
+  const bundledRowCount = getEngine6PartnerItineraryRowCount(
+    bundledRawProduct ?? null
+  );
+  const withinBundledRows = rowIndex >= 0 && rowIndex < bundledRowCount;
+  const liveTitleIsUnreliable = liveItineraryTitleIsUnreliable({
+    liveTitle,
+    liveTitleSource: args.liveTitleSource,
+  });
 
   const publicJsonLdTitle = getEngine6AlignedPublicJsonLdItineraryTitle({
     productCode,
@@ -253,15 +273,17 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     }
   }
 
-  const structuredPartnerTitle = getEngine6PartnerItineraryRowStructuredTitle(
-    rawProduct ?? null,
-    rowIndex
-  );
-  if (structuredPartnerTitle) {
-    return {
-      title: structuredPartnerTitle.title,
-      titleSource: structuredPartnerTitle.source,
-    };
+  if (!(withinBundledRows && bundledRowCount > 0)) {
+    const structuredPartnerTitle = getEngine6PartnerItineraryRowStructuredTitle(
+      rawProduct ?? null,
+      rowIndex
+    );
+    if (structuredPartnerTitle) {
+      return {
+        title: structuredPartnerTitle.title,
+        titleSource: structuredPartnerTitle.source,
+      };
+    }
   }
 
   if (
@@ -282,12 +304,14 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     return { title: productOverride, titleSource: "product-override" };
   }
 
-  const conciseProseTitle = extractEngine6ConciseItineraryTitleFromProse({
-    title: liveTitle,
-    description: liveDescription,
-  });
-  if (conciseProseTitle) {
-    return conciseProseTitle;
+  if (!(withinBundledRows && liveTitleIsUnreliable)) {
+    const conciseProseTitle = extractEngine6ConciseItineraryTitleFromProse({
+      title: liveTitle,
+      description: liveDescription,
+    });
+    if (conciseProseTitle) {
+      return conciseProseTitle;
+    }
   }
 
   if (
@@ -299,6 +323,16 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
       title: liveTitle,
       titleSource: args.liveTitleSource ?? "explicit",
     };
+  }
+
+  if (withinBundledRows && liveTitleIsUnreliable) {
+    const bundledTitle = getEngine6BundledPositionalItineraryTitle(
+      bundledRawProduct ?? null,
+      rowIndex
+    );
+    if (bundledTitle) {
+      return bundledTitle;
+    }
   }
 
   if (liveTitle) {
