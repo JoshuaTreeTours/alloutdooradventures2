@@ -1,12 +1,17 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 import specimen233384p2Payload from "../../data/engine6/viator/233384P2.exact-product.json";
+import * as bundledRawProductLookup from "./bundledRawProductLookup";
 import {
   getEngine6ItineraryMergeMode,
   mergeEngine6NativeItineraryWithLive,
   type Engine6LiveItineraryItem,
 } from "./mergeEngine6LiveItinerary";
+
+const EXPLICIT_BUNDLED_RAW_PRODUCT = extractEngine6Product(
+  specimen233384p2Payload
+).product as Record<string, unknown>;
 
 const BUNDLED_233384P2_POSITIONAL_TITLES = (
   specimen233384p2Payload as {
@@ -50,6 +55,36 @@ const buildPartialLiveRawProduct = () => ({
 });
 
 describe("mergeEngine6NativeItineraryWithLive 233384P2 title guard", () => {
+  it("uses explicit bundledRawProduct from the render path over live prose", () => {
+    const lookupSpy = vi
+      .spyOn(bundledRawProductLookup, "getEngine6BundledRawProductByProductCode")
+      .mockReturnValue(null);
+
+    const nativeItinerary = buildNeutralNativeItinerary(
+      BUNDLED_233384P2_POSITIONAL_TITLES.length
+    );
+    const liveItinerary = buildDescriptionInferredLiveItinerary(8);
+
+    const merged = mergeEngine6NativeItineraryWithLive(
+      nativeItinerary,
+      liveItinerary,
+      {
+        productCode: "233384P2",
+        rawProduct: buildPartialLiveRawProduct(),
+        bundledRawProduct: EXPLICIT_BUNDLED_RAW_PRODUCT,
+      }
+    );
+
+    expect(lookupSpy).not.toHaveBeenCalled();
+    expect(
+      merged
+        .slice(0, BUNDLED_233384P2_POSITIONAL_TITLES.length)
+        .map(item => item.title)
+    ).toEqual(BUNDLED_233384P2_POSITIONAL_TITLES);
+
+    lookupSpy.mockRestore();
+  });
+
   it("uses every bundled positional POI title over description-only live rows", () => {
     const nativeItinerary = buildNeutralNativeItinerary(
       BUNDLED_233384P2_POSITIONAL_TITLES.length
