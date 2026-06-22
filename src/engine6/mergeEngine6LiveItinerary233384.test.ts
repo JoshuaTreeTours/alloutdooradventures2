@@ -172,7 +172,7 @@ describe("mergeEngine6NativeItineraryWithLive 233384P2 title guard", () => {
     ).toEqual(BUNDLED_233384P2_POSITIONAL_TITLES);
   });
 
-  it("prefers native POI titles over live prose when bundledRawProduct lookup is null", () => {
+  it("always preserves native POI titles over live prose when bundledRawProduct is null", () => {
     const lookupSpy = vi
       .spyOn(bundledRawProductLookup, "getEngine6BundledRawProductByProductCode")
       .mockReturnValue(null);
@@ -191,16 +191,19 @@ describe("mergeEngine6NativeItineraryWithLive 233384P2 title guard", () => {
       liveItinerary,
       {
         productCode: "233384P2",
-        rawProduct: null,
+        rawProduct: buildPartialLiveRawProduct(),
         bundledRawProduct: null,
       }
     );
 
-    expect(
-      merged
-        .slice(0, BUNDLED_233384P2_POSITIONAL_TITLES.length)
-        .map(item => item.title)
-    ).toEqual(BUNDLED_233384P2_POSITIONAL_TITLES);
+    expect(merged.slice(0, 6).map(item => item.title)).toEqual([
+      "City Hall Area",
+      "Brooklyn Bridge",
+      "Brooklyn Heights Promenade",
+      "Brooklyn Bridge Park",
+      "DUMBO",
+      "Brooklyn Navy Yard",
+    ]);
 
     expect(
       merged

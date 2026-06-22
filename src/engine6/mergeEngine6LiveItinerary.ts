@@ -222,7 +222,7 @@ const liveItineraryTitleIsUnreliableForMerge = (
   return NEUTRAL_ITINERARY_STOP_TITLE_PATTERN.test(liveTitle);
 };
 
-const nativeItineraryTitleIsBundledPoiTitle = (
+const nativeItineraryTitleIsPreservablePoiTitle = (
   nativeItem: Engine6ItineraryItem | undefined
 ): boolean => {
   const nativeTitle = nativeItem?.title?.trim();
@@ -232,14 +232,10 @@ const nativeItineraryTitleIsBundledPoiTitle = (
   return true;
 };
 
-const preferNativePoiTitleOverUnreliableLiveTitle = (
-  nativeItem: Engine6ItineraryItem | undefined,
-  liveItem: Pick<Engine6LiveItineraryItem, "title" | "titleSource">
+const resolveDivergedNativeItineraryTitle = (
+  nativeItem: Engine6ItineraryItem | undefined
 ): string | null => {
-  if (!nativeItineraryTitleIsBundledPoiTitle(nativeItem)) {
-    return null;
-  }
-  if (!liveItineraryTitleIsUnreliableForMerge(liveItem)) {
+  if (!nativeItineraryTitleIsPreservablePoiTitle(nativeItem)) {
     return null;
   }
   return nativeItem?.title?.trim() ?? null;
@@ -281,8 +277,9 @@ export type Engine6DivergedMergedItineraryTitleContext = {
 };
 
 /**
- * Diverged composition merge keeps live row structure and resolves titles via
- * the diverged title authority ladder when product context is available.
+ * Diverged composition merge keeps live row structure. Rows within native
+ * length always keep a non-neutral native POI title; live-only extra rows and
+ * neutral native placeholders still use the diverged title authority ladder.
  */
 export const resolveEngine6DivergedMergedItineraryTitle = (
   nativeItem: Engine6ItineraryItem | undefined,
@@ -292,10 +289,7 @@ export const resolveEngine6DivergedMergedItineraryTitle = (
   >,
   context?: Engine6DivergedMergedItineraryTitleContext
 ): string => {
-  const nativePoiTitle = preferNativePoiTitleOverUnreliableLiveTitle(
-    nativeItem,
-    liveItem
-  );
+  const nativePoiTitle = resolveDivergedNativeItineraryTitle(nativeItem);
   if (nativePoiTitle) {
     return nativePoiTitle;
   }
