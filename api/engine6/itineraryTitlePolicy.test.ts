@@ -26,6 +26,9 @@ import specimen5046SanSeaPayload from "../../data/engine6/viator/5046SAN_SEA.exa
 import specimen37126p9Payload from "../../data/engine6/viator/37126P9.exact-product.json";
 import specimen28758p1Payload from "../../data/engine6/viator/28758P1.exact-product.json";
 import specimen5553984p5Payload from "../../data/engine6/viator/5553984P5.exact-product.json";
+import specimen3156p13Payload from "../../data/engine6/viator/3156P13.exact-product.json";
+import specimen335698p13Payload from "../../data/engine6/viator/335698P13.exact-product.json";
+import specimen5559561p1Payload from "../../data/engine6/viator/5559561P1.exact-product.json";
 import specimen100569p5Payload from "../../data/engine6/viator/100569P5.exact-product.json";
 import specimen411138p3Payload from "../../data/engine6/viator/411138P3.exact-product.json";
 import specimen53474p8Payload from "../../data/engine6/viator/53474P8.exact-product.json";
@@ -416,6 +419,40 @@ describe("Engine6 definitely broken itinerary title repairs", () => {
         "Check out Warner Brothers, the most famous film studio in LA, in a bird's eye view on this Hollywood Hills Tour.",
     });
   });
+
+  it("uses reviewed overrides for the four remaining bad published itinerary headings", () => {
+    const cases = [
+      {
+        payload: specimen5559561p1Payload,
+        expectedByIndex: {
+          0: "Check-in",
+          1: "Fort Lauderdale Waterways",
+        },
+      },
+      {
+        payload: specimen3156p13Payload,
+        expectedByIndex: {
+          3: "Central Park South",
+        },
+      },
+      {
+        payload: specimen335698p13Payload,
+        expectedByIndex: {
+          3: "Secondary Scrambling Zone",
+        },
+      },
+    ] as const;
+
+    cases.forEach(({ payload, expectedByIndex }) => {
+      const result = extractEngine6Product(payload);
+
+      Object.entries(expectedByIndex).forEach(([index, title]) => {
+        const item = result.extracted.itinerary[Number(index)];
+        expect(item.title).toBe(title);
+        expect(item.titleSource).toBe("product-override");
+      });
+    });
+  });
 });
 
 describe("Engine6 Florida and Alaska itinerary title repairs", () => {
@@ -721,5 +758,106 @@ describe("Engine6 itinerary title governance for 276551P2", () => {
     expect(
       trip?.itinerary?.itemListElement?.slice(0, 5).map(item => item.item?.name)
     ).toEqual([...EXPECTED_276551P2_ITINERARY_TITLES]);
+  });
+});
+
+describe("pointOfInterestLocation.locationName itinerary title authority", () => {
+  it("prefers pointOfInterestLocation.locationName over description-inferred prose", () => {
+    const description =
+      "Santa Monica Pier is an iconic destination with carnival games and coastal views.";
+    const result = extractEngine6Product({
+      product: {
+        productCode: "POIPRIORITY1",
+        title: "Coastal Tour",
+        itineraryItems: [
+          {
+            pointOfInterestLocation: { locationName: "Santa Monica Pier" },
+            description,
+            duration: "45 minutes",
+            admissionIncluded: "NOT_INCLUDED",
+            passByWithoutStopping: true,
+          },
+        ],
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary[0]).toMatchObject({
+      title: "Santa Monica Pier",
+      titleSource: "explicit",
+      description,
+      duration: "45 minutes",
+      stopType: "pass-by",
+    });
+  });
+
+  it("prefers pointOfInterestLocation.locationName over a long first-sentence fallback", () => {
+    const description =
+      "The Original Farmers Market is a historic open-air market in Los Angeles that offers fresh produce, specialty foods, and local vendors in a lively neighborhood setting.";
+    const result = extractEngine6Product({
+      product: {
+        productCode: "POIPRIORITY2",
+        title: "LA Highlights",
+        itineraryItems: [
+          {
+            pointOfInterestLocation: {
+              locationName: "The Original Farmers Market",
+            },
+            description,
+          },
+        ],
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary[0]).toMatchObject({
+      title: "The Original Farmers Market",
+      titleSource: "explicit",
+      description,
+    });
+  });
+
+  it("keeps reviewed product overrides ahead of pointOfInterestLocation.locationName", () => {
+    expect(
+      extractEngine6Product(specimen5569hikePayload).extracted.itinerary[13]
+    ).toMatchObject({
+      title: "Warner Bros. Studios",
+      titleSource: "product-override",
+    });
+  });
+
+  it("keeps explicit bundled titles unchanged for 276551P2", () => {
+    const itinerary = extractEngine6Product(specimen276551p2Payload).extracted
+      .itinerary;
+
+    expect(itinerary.slice(0, 5).map(item => item.title)).toEqual([
+      ...EXPECTED_276551P2_ITINERARY_TITLES,
+    ]);
+    itinerary.slice(0, 5).forEach(item => {
+      expect(item.titleSource).toBe("explicit");
+    });
+  });
+
+  it("prefers bundled pointOfInterestLocation.locationName during diverged title resolution", () => {
+    expect(
+      resolveEngine6DivergedItineraryTitle({
+        productCode: "POIPRIORITY3",
+        bundledRawProduct: {
+          itineraryItems: [
+            {
+              pointOfInterestLocation: { locationName: "Beluga Point" },
+              description:
+                "Beluga point is just south of Anchorage on the Turnagain Arm",
+            },
+          ],
+        },
+        rowIndex: 0,
+        rowCount: 1,
+        liveTitle:
+          "Beluga point is just south of Anchorage on the Turnagain Arm",
+        liveTitleSource: "description-inferred",
+      })
+    ).toEqual({
+      title: "Beluga Point",
+      titleSource: "explicit",
+    });
   });
 });

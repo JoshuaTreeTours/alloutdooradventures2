@@ -242,6 +242,14 @@ const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
   },
   "335698P13": {
     0: "Park Entry Orientation",
+    3: "Secondary Scrambling Zone",
+  },
+  "3156P13": {
+    3: "Central Park South",
+  },
+  "5559561P1": {
+    0: "Check-in",
+    1: "Fort Lauderdale Waterways",
   },
   "214880P12": {
     1: "Coastal Cultural Stops",
