@@ -175,20 +175,53 @@ const isAuthoritativeExtractedItineraryTitleSource = (
 
 /**
  * Title authority for diverged itinerary merges only.
- * Order: public JSON-LD > partner JSON-LD > structured Partner/API fields >
+ * Order: public JSON-LD > bundled positional JSON-LD/structured fields >
+ * live partner JSON-LD > live structured Partner/API fields >
  * live explicit > product override > prose-derived concise POI/location >
  * live authoritative extraction > description-inferred.
  */
+const NEUTRAL_ITINERARY_STOP_TITLE_PATTERN = /^itinerary stop \d+$/i;
+
+const isNeutralItineraryStopTitle = (value: string | null | undefined): boolean => {
+  const normalized = asNonEmptyString(value)?.replace(/\s+/g, " ");
+  if (!normalized) return false;
+  return NEUTRAL_ITINERARY_STOP_TITLE_PATTERN.test(normalized);
+};
+
+const getEngine6BundledPositionalItineraryTitle = (
+  product: RecordLike | null | undefined,
+  rowIndex: number
+): { title: string; titleSource: "json-ld" | "explicit" } | null => {
+  const jsonLdTitle = getEngine6ItineraryJsonLdTitle(product, rowIndex);
+  if (jsonLdTitle) {
+    return { title: jsonLdTitle, titleSource: "json-ld" };
+  }
+
+  const structuredPartnerTitle = getEngine6PartnerItineraryRowStructuredTitle(
+    product,
+    rowIndex
+  );
+  if (structuredPartnerTitle) {
+    return {
+      title: structuredPartnerTitle.title,
+      titleSource: structuredPartnerTitle.source,
+    };
+  }
+
+  return null;
+};
+
 export const resolveEngine6DivergedItineraryTitle = (args: {
   productCode: string | null | undefined;
   rawProduct?: RecordLike | null;
+  bundledRawProduct?: RecordLike | null;
   rowIndex: number;
   rowCount: number;
   liveTitle?: string | null;
   liveDescription?: string | null;
   liveTitleSource?: Engine6ItineraryTitleSource;
 }): Engine6DivergedItineraryTitleResolution => {
-  const { productCode, rawProduct, rowIndex, rowCount } = args;
+  const { productCode, rawProduct, bundledRawProduct, rowIndex, rowCount } = args;
   const liveTitle = asNonEmptyString(args.liveTitle);
   const liveDescription = asNonEmptyString(args.liveDescription);
 
@@ -199,6 +232,14 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
   });
   if (publicJsonLdTitle) {
     return { title: publicJsonLdTitle, titleSource: "public-json-ld" };
+  }
+
+  const bundledPositionalTitle = getEngine6BundledPositionalItineraryTitle(
+    bundledRawProduct ?? null,
+    rowIndex
+  );
+  if (bundledPositionalTitle) {
+    return bundledPositionalTitle;
   }
 
   const itemListElement = asRecord(rawProduct?.itinerary)?.itemListElement;
@@ -223,7 +264,12 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     };
   }
 
-  if (args.liveTitleSource === "explicit" && liveTitle && !isEngine6ProseItineraryTitle(liveTitle)) {
+  if (
+    args.liveTitleSource === "explicit" &&
+    liveTitle &&
+    !isEngine6ProseItineraryTitle(liveTitle) &&
+    !isNeutralItineraryStopTitle(liveTitle)
+  ) {
     return { title: liveTitle, titleSource: "explicit" };
   }
 

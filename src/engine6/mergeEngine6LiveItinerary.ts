@@ -2,6 +2,7 @@ import {
   resolveEngine6DivergedItineraryTitle,
   type Engine6ItineraryTitleSource,
 } from "../../api/engine6/itineraryTitlePolicy";
+import { getEngine6BundledRawProductByProductCode } from "./registry";
 import type { Engine6ItineraryItem } from "./types";
 
 export type Engine6LiveItineraryItem = Engine6ItineraryItem & {
@@ -11,6 +12,7 @@ export type Engine6LiveItineraryItem = Engine6ItineraryItem & {
 export type Engine6ItineraryMergeContext = {
   productCode?: string | null;
   rawProduct?: Record<string, unknown> | null;
+  bundledRawProduct?: Record<string, unknown> | null;
 };
 
 export type Engine6ItineraryMergeMode = "aligned" | "diverged";
@@ -213,6 +215,7 @@ const isHighConfidenceLiveItineraryTitleSource = (
 export type Engine6DivergedMergedItineraryTitleContext = {
   productCode?: string | null;
   rawProduct?: Record<string, unknown> | null;
+  bundledRawProduct?: Record<string, unknown> | null;
   rowIndex: number;
   rowCount: number;
 };
@@ -237,6 +240,7 @@ export const resolveEngine6DivergedMergedItineraryTitle = (
     return resolveEngine6DivergedItineraryTitle({
       productCode: context.productCode,
       rawProduct: context.rawProduct ?? null,
+      bundledRawProduct: context.bundledRawProduct ?? null,
       rowIndex: context.rowIndex,
       rowCount: context.rowCount,
       liveTitle: liveItem.title,
@@ -307,11 +311,29 @@ const mergeEngine6NativeItineraryWithLiveDiverged = (
       title: resolveEngine6DivergedMergedItineraryTitle(nativeItem, liveItem, {
         productCode: mergeContext?.productCode,
         rawProduct: mergeContext?.rawProduct,
+        bundledRawProduct: mergeContext?.bundledRawProduct,
         rowIndex: index,
         rowCount: liveItinerary.length,
       }),
     };
   });
+
+const resolveEngine6ItineraryMergeContext = (
+  mergeContext?: Engine6ItineraryMergeContext
+): Engine6ItineraryMergeContext | undefined => {
+  const productCode = mergeContext?.productCode?.trim();
+  if (!productCode) {
+    return mergeContext;
+  }
+
+  return {
+    ...mergeContext,
+    productCode,
+    bundledRawProduct:
+      mergeContext?.bundledRawProduct ??
+      getEngine6BundledRawProductByProductCode(productCode),
+  };
+};
 
 export const mergeEngine6NativeItineraryWithLive = (
   nativeItinerary: Engine6ItineraryItem[],
@@ -322,6 +344,7 @@ export const mergeEngine6NativeItineraryWithLive = (
     return nativeItinerary;
   }
 
+  const resolvedMergeContext = resolveEngine6ItineraryMergeContext(mergeContext);
   const mergeMode = getEngine6ItineraryMergeMode(
     nativeItinerary,
     liveItinerary
@@ -331,7 +354,7 @@ export const mergeEngine6NativeItineraryWithLive = (
     return mergeEngine6NativeItineraryWithLiveDiverged(
       nativeItinerary,
       liveItinerary,
-      mergeContext
+      resolvedMergeContext
     );
   }
 
