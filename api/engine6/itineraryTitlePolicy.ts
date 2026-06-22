@@ -1,7 +1,9 @@
 import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
 import {
   extractEngine6ConciseItineraryTitleFromProse,
-  getEngine6PartnerItineraryRowStructuredTitle,
+  getEngine6PartnerItineraryRowExplicitFieldTitle,
+  getEngine6PartnerItineraryRowOtherStructuredTitle,
+  getEngine6PartnerItineraryRowPoiLocationName,
   isEngine6ProseItineraryTitle,
 } from "./divergedItineraryTitle.js";
 
@@ -91,6 +93,16 @@ const PUBLIC_JSON_LD_ITINERARY_NAMES_BY_PRODUCT_CODE: Record<
     "Chugach State Park",
     "Potter Marsh Bird Sanctuary",
   ],
+  "233384P2": [
+    "City Hall Park",
+    "Brooklyn Bridge",
+    "Brooklyn Heights",
+    "Brooklyn Heights Promenade",
+    "Brooklyn Bridge Park",
+    "DUMBO",
+    "Manhattan Bridge",
+    "John V. Lindsay East River Park",
+  ],
 };
 
 const asNonEmptyString = (value: unknown): string | null => {
@@ -163,7 +175,7 @@ export const getEngine6PartnerItineraryRowPoiTitle = (
   product: RecordLike | null | undefined,
   rowIndex: number
 ): string | null =>
-  getEngine6PartnerItineraryRowStructuredTitle(product, rowIndex)?.title ?? null;
+  getEngine6PartnerItineraryRowPoiLocationName(product, rowIndex);
 
 const isAuthoritativeExtractedItineraryTitleSource = (
   source: Engine6ItineraryTitleSource | undefined
@@ -175,10 +187,11 @@ const isAuthoritativeExtractedItineraryTitleSource = (
 
 /**
  * Title authority for diverged itinerary merges only.
- * Order: public JSON-LD > bundled positional JSON-LD/structured fields >
- * live partner JSON-LD > live structured Partner/API fields >
- * live explicit > product override > prose-derived concise POI/location >
- * live authoritative extraction > description-inferred.
+ * Order: product override > public/partner JSON-LD >
+ * pointOfInterestLocation.locationName > other structured POI/location fields >
+ * explicit itinerary row fields > live explicit extraction >
+ * prose-derived concise POI/location > live authoritative extraction >
+ * description-inferred.
  */
 const NEUTRAL_ITINERARY_STOP_TITLE_PATTERN = /^itinerary stop \d+$/i;
 
@@ -188,26 +201,22 @@ const isNeutralItineraryStopTitle = (value: string | null | undefined): boolean 
   return NEUTRAL_ITINERARY_STOP_TITLE_PATTERN.test(normalized);
 };
 
-const getEngine6BundledPositionalItineraryTitle = (
-  product: RecordLike | null | undefined,
-  rowIndex: number
-): { title: string; titleSource: "json-ld" | "explicit" } | null => {
-  const jsonLdTitle = getEngine6ItineraryJsonLdTitle(product, rowIndex);
-  if (jsonLdTitle) {
-    return { title: jsonLdTitle, titleSource: "json-ld" };
+const getEngine6PartnerRowStructuredTitleFromProducts = (
+  products: Array<RecordLike | null | undefined>,
+  rowIndex: number,
+  reader: (
+    product: RecordLike | null | undefined,
+    rowIndex: number
+  ) => { title: string; source: "explicit" } | string | null
+): { title: string; titleSource: "explicit" } | null => {
+  for (const product of products) {
+    const resolved = reader(product, rowIndex);
+    if (!resolved) continue;
+    if (typeof resolved === "string") {
+      return { title: resolved, titleSource: "explicit" };
+    }
+    return { title: resolved.title, titleSource: resolved.source };
   }
-
-  const structuredPartnerTitle = getEngine6PartnerItineraryRowStructuredTitle(
-    product,
-    rowIndex
-  );
-  if (structuredPartnerTitle) {
-    return {
-      title: structuredPartnerTitle.title,
-      titleSource: structuredPartnerTitle.source,
-    };
-  }
-
   return null;
 };
 
@@ -224,6 +233,16 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
   const { productCode, rawProduct, bundledRawProduct, rowIndex, rowCount } = args;
   const liveTitle = asNonEmptyString(args.liveTitle);
   const liveDescription = asNonEmptyString(args.liveDescription);
+  const structuredProducts = [bundledRawProduct ?? null, rawProduct ?? null];
+
+  const productOverride = getEngine6ItineraryTitleOverride({
+    productCode: productCode ?? null,
+    rowIndex,
+    currentTitle: liveTitle,
+  });
+  if (productOverride) {
+    return { title: productOverride, titleSource: "product-override" };
+  }
 
   const publicJsonLdTitle = getEngine6AlignedPublicJsonLdItineraryTitle({
     productCode,
@@ -234,12 +253,12 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     return { title: publicJsonLdTitle, titleSource: "public-json-ld" };
   }
 
-  const bundledPositionalTitle = getEngine6BundledPositionalItineraryTitle(
+  const bundledJsonLdTitle = getEngine6ItineraryJsonLdTitle(
     bundledRawProduct ?? null,
     rowIndex
   );
-  if (bundledPositionalTitle) {
-    return bundledPositionalTitle;
+  if (bundledJsonLdTitle) {
+    return { title: bundledJsonLdTitle, titleSource: "json-ld" };
   }
 
   const itemListElement = asRecord(rawProduct?.itinerary)?.itemListElement;
@@ -253,15 +272,31 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     }
   }
 
-  const structuredPartnerTitle = getEngine6PartnerItineraryRowStructuredTitle(
-    rawProduct ?? null,
-    rowIndex
+  const poiLocationName = getEngine6PartnerRowStructuredTitleFromProducts(
+    structuredProducts,
+    rowIndex,
+    getEngine6PartnerItineraryRowPoiLocationName
   );
-  if (structuredPartnerTitle) {
-    return {
-      title: structuredPartnerTitle.title,
-      titleSource: structuredPartnerTitle.source,
-    };
+  if (poiLocationName) {
+    return poiLocationName;
+  }
+
+  const otherStructuredTitle = getEngine6PartnerRowStructuredTitleFromProducts(
+    structuredProducts,
+    rowIndex,
+    getEngine6PartnerItineraryRowOtherStructuredTitle
+  );
+  if (otherStructuredTitle) {
+    return otherStructuredTitle;
+  }
+
+  const explicitRowFieldTitle = getEngine6PartnerRowStructuredTitleFromProducts(
+    structuredProducts,
+    rowIndex,
+    getEngine6PartnerItineraryRowExplicitFieldTitle
+  );
+  if (explicitRowFieldTitle) {
+    return explicitRowFieldTitle;
   }
 
   if (
@@ -273,21 +308,15 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     return { title: liveTitle, titleSource: "explicit" };
   }
 
-  const productOverride = getEngine6ItineraryTitleOverride({
-    productCode,
-    rowIndex,
-    currentTitle: liveTitle,
-  });
-  if (productOverride) {
-    return { title: productOverride, titleSource: "product-override" };
-  }
-
   const conciseProseTitle = extractEngine6ConciseItineraryTitleFromProse({
     title: liveTitle,
     description: liveDescription,
   });
   if (conciseProseTitle) {
-    return conciseProseTitle;
+    return {
+      title: conciseProseTitle.title,
+      titleSource: conciseProseTitle.source,
+    };
   }
 
   if (

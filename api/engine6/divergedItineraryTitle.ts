@@ -133,6 +133,98 @@ const readStructuredFieldCandidates = (row: RecordLike): string[] => {
   ].filter((value): value is string => Boolean(value));
 };
 
+const readOtherStructuredPoiLocationFieldCandidates = (
+  row: RecordLike
+): string[] => {
+  const pointOfInterestLocation = asRecord(row.pointOfInterestLocation);
+  const pointOfInterest = asRecord(row.pointOfInterest);
+  const stop = asRecord(row.stop);
+  const location = asRecord(row.location);
+  const attraction = asRecord(row.attraction);
+
+  return [
+    asNonEmptyString(pointOfInterestLocation?.title),
+    asNonEmptyString(pointOfInterestLocation?.name),
+    asNonEmptyString(pointOfInterest?.title),
+    asNonEmptyString(pointOfInterest?.name),
+    asNonEmptyString(attraction?.name),
+    asNonEmptyString(attraction?.title),
+    asNonEmptyString(stop?.locationName),
+    asNonEmptyString(stop?.title),
+    asNonEmptyString(stop?.name),
+    asNonEmptyString(location?.locationName),
+    asNonEmptyString(location?.title),
+    asNonEmptyString(location?.name),
+    asNonEmptyString(row.locationName),
+    asNonEmptyString(row.attractionName),
+  ].filter((value): value is string => Boolean(value));
+};
+
+const readExplicitItineraryRowFieldCandidates = (row: RecordLike): string[] =>
+  [
+    asNonEmptyString(row.title),
+    asNonEmptyString(row.name),
+    asNonEmptyString(row.label),
+  ].filter((value): value is string => Boolean(value));
+
+const pickFirstUsableStructuredTitle = (
+  candidates: string[]
+): { title: string; source: "explicit" } | null => {
+  for (const candidate of candidates) {
+    const normalized = normalizeCandidateTitle(candidate);
+    if (isUsableConciseItineraryTitle(normalized)) {
+      return { title: normalized, source: "explicit" };
+    }
+  }
+
+  return null;
+};
+
+export const getEngine6PartnerItineraryRowPoiLocationName = (
+  product: RecordLike | null | undefined,
+  rowIndex: number
+): string | null => {
+  if (rowIndex < 0) return null;
+
+  const row = readPartnerItineraryRows(product)[rowIndex];
+  if (!row) return null;
+
+  const pointOfInterestLocation = asRecord(row.pointOfInterestLocation);
+  const locationName = asNonEmptyString(pointOfInterestLocation?.locationName);
+  if (!locationName) return null;
+
+  const normalized = normalizeCandidateTitle(locationName);
+  return isUsableConciseItineraryTitle(normalized) ? normalized : null;
+};
+
+export const getEngine6PartnerItineraryRowOtherStructuredTitle = (
+  product: RecordLike | null | undefined,
+  rowIndex: number
+): { title: string; source: "explicit" } | null => {
+  if (rowIndex < 0) return null;
+
+  const row = readPartnerItineraryRows(product)[rowIndex];
+  if (!row) return null;
+
+  return pickFirstUsableStructuredTitle(
+    readOtherStructuredPoiLocationFieldCandidates(row)
+  );
+};
+
+export const getEngine6PartnerItineraryRowExplicitFieldTitle = (
+  product: RecordLike | null | undefined,
+  rowIndex: number
+): { title: string; source: "explicit" } | null => {
+  if (rowIndex < 0) return null;
+
+  const row = readPartnerItineraryRows(product)[rowIndex];
+  if (!row) return null;
+
+  return pickFirstUsableStructuredTitle(
+    readExplicitItineraryRowFieldCandidates(row)
+  );
+};
+
 export const getEngine6PartnerItineraryRowStructuredTitle = (
   product: RecordLike | null | undefined,
   rowIndex: number
@@ -142,14 +234,7 @@ export const getEngine6PartnerItineraryRowStructuredTitle = (
   const row = readPartnerItineraryRows(product)[rowIndex];
   if (!row) return null;
 
-  for (const candidate of readStructuredFieldCandidates(row)) {
-    const normalized = normalizeCandidateTitle(candidate);
-    if (isUsableConciseItineraryTitle(normalized)) {
-      return { title: normalized, source: "explicit" };
-    }
-  }
-
-  return null;
+  return pickFirstUsableStructuredTitle(readStructuredFieldCandidates(row));
 };
 
 const extractNamedEntityFromDescription = (

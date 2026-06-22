@@ -110,4 +110,18 @@ describe("Engine6 itinerary title override governance", () => {
       },
     ]);
   });
+
+  it("keeps reviewed title overrides for the four remaining bad published itinerary rows", () => {
+    const block = getProductBlocks().find(
+      entry => entry.productCode === "5559561P1"
+    );
+    expect(block?.body).toContain('0: "Check-in"');
+    expect(block?.body).toContain('1: "Fort Lauderdale Waterways"');
+    expect(
+      getProductBlocks().find(entry => entry.productCode === "3156P13")?.body
+    ).toContain('3: "Central Park South"');
+    expect(
+      getProductBlocks().find(entry => entry.productCode === "335698P13")?.body
+    ).toContain('3: "Secondary Scrambling Zone"');
+  });
 });

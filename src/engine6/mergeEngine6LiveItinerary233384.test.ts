@@ -6,12 +6,15 @@ import {
   type Engine6LiveItineraryItem,
 } from "./mergeEngine6LiveItinerary";
 
-const EXPECTED_233384P2_RENDERED_TITLES = [
-  "City Hall Area",
+const EXPECTED_233384P2_VIATOR_PUBLIC_JSON_LD_TITLES = [
+  "City Hall Park",
   "Brooklyn Bridge",
+  "Brooklyn Heights",
   "Brooklyn Heights Promenade",
   "Brooklyn Bridge Park",
   "DUMBO",
+  "Manhattan Bridge",
+  "John V. Lindsay East River Park",
 ] as const;
 
 const buildNeutralNativeItinerary = (count: number) =>
@@ -34,9 +37,10 @@ const buildDescriptionInferredLiveItinerary = (
   }));
 
 describe("mergeEngine6NativeItineraryWithLive 233384P2 title guard", () => {
-  it("uses bundled positional titles over description-only live rows", () => {
+  it("uses reviewed Viator public JSON-LD stop names over description-only live rows", () => {
     const nativeItinerary = buildNeutralNativeItinerary(6);
     const liveItinerary = buildDescriptionInferredLiveItinerary(8, {
+      0: "Historic park where General George Washington read the Declaration of Independence, surrounded by City Hall, Municipal Building, Tweed Courthouse, the Woolworth Building and other icons of the city",
       1: "John Augustus Roebling's masterpiece combines engineering and art",
       4: "NYC's newest park sits beneath the bridge",
     });
@@ -51,13 +55,18 @@ describe("mergeEngine6NativeItineraryWithLive 233384P2 title guard", () => {
       { productCode: "233384P2" }
     );
 
-    expect(merged.slice(0, 5).map(item => item.title)).toEqual([
-      ...EXPECTED_233384P2_RENDERED_TITLES,
+    expect(merged.map(item => item.title)).toEqual([
+      ...EXPECTED_233384P2_VIATOR_PUBLIC_JSON_LD_TITLES,
     ]);
     expect(
-      merged
-        .slice(0, 5)
-        .some(item => /^Itinerary Stop \d+$/.test(item.title))
+      merged.some(item => /^Itinerary Stop \d+$/.test(item.title))
+    ).toBe(false);
+    expect(
+      merged.some(item =>
+        /General George Washington|masterpiece combines engineering/i.test(
+          item.title
+        )
+      )
     ).toBe(false);
   });
 });

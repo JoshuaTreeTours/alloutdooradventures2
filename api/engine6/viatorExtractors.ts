@@ -1088,12 +1088,19 @@ const normalizeSingleItineraryItem = (
     false;
   const isPassByFromType = /pass[\s_-]?by/i.test(stopTypeRaw ?? "");
 
-  const locationTitle =
-    asNonEmptyString(pointOfInterestLocation?.locationName) ??
+  const poiLocationName = asNonEmptyString(pointOfInterestLocation?.locationName);
+  const otherPoiLocationTitle =
     asNonEmptyString(pointOfInterestLocation?.title) ??
     asNonEmptyString(pointOfInterestLocation?.name);
+  const nativeRowTitle = asNonEmptyString(row.title);
+  const nativeIsNeutral =
+    nativeRowTitle !== null &&
+    /^itinerary stop \d+$/i.test(nativeRowTitle.replace(/\s+/g, " "));
   const inferredTitleFromDescription = (() => {
-    const descriptionText = asNonEmptyString(row.description);
+    const descriptionText =
+      asNonEmptyString(row.description) ??
+      asNonEmptyString(row.summary) ??
+      asNonEmptyString(row.details);
     if (!descriptionText) return null;
 
     const normalizedDescription = descriptionText
@@ -1138,17 +1145,20 @@ const normalizeSingleItineraryItem = (
   let title: string | null = null;
   let titleSource: Engine6ItineraryTitleSource = "description-inferred";
 
-  if (alignedJsonLdTitle) {
-    title = alignedJsonLdTitle.title;
-    titleSource = alignedJsonLdTitle.source;
-  } else if (productOverride) {
+  if (productOverride) {
     title = productOverride;
     titleSource = "product-override";
-  } else if (locationTitle) {
-    title = locationTitle;
+  } else if (alignedJsonLdTitle) {
+    title = alignedJsonLdTitle.title;
+    titleSource = alignedJsonLdTitle.source;
+  } else if (poiLocationName) {
+    title = poiLocationName;
     titleSource = "explicit";
-  } else if (asNonEmptyString(row.title)) {
-    title = asNonEmptyString(row.title);
+  } else if (otherPoiLocationTitle) {
+    title = otherPoiLocationTitle;
+    titleSource = "explicit";
+  } else if (nativeRowTitle && !nativeIsNeutral) {
+    title = nativeRowTitle;
     titleSource = "explicit";
   } else if (asNonEmptyString(row.name)) {
     title = asNonEmptyString(row.name);
