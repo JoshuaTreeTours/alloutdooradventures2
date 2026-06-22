@@ -103,6 +103,17 @@ const PUBLIC_JSON_LD_ITINERARY_NAMES_BY_PRODUCT_CODE: Record<
     "Manhattan Bridge",
     "John V. Lindsay East River Park",
   ],
+  "62527P11": [
+    "Midtown Manhattan Departure",
+    "Niagara Falls State Park",
+    "Maid of the Mist",
+    "Niagara Falls Observation Tower",
+    "Prospect Point",
+    "Luna Island",
+    "Bridal Veil Falls",
+    "Goat Island",
+    "Horseshoe Falls",
+  ],
 };
 
 const asNonEmptyString = (value: unknown): string | null => {
