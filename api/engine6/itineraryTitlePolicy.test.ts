@@ -30,6 +30,7 @@ import specimen3156p13Payload from "../../data/engine6/viator/3156P13.exact-prod
 import specimen335698p13Payload from "../../data/engine6/viator/335698P13.exact-product.json";
 import specimen5559561p1Payload from "../../data/engine6/viator/5559561P1.exact-product.json";
 import specimen233384p2Payload from "../../data/engine6/viator/233384P2.exact-product.json";
+import specimen62527p11Payload from "../../data/engine6/viator/62527P11.exact-product.json";
 import specimen100569p5Payload from "../../data/engine6/viator/100569P5.exact-product.json";
 import specimen411138p3Payload from "../../data/engine6/viator/411138P3.exact-product.json";
 import specimen53474p8Payload from "../../data/engine6/viator/53474P8.exact-product.json";
@@ -778,6 +779,105 @@ describe("233384P2 reviewed public JSON-LD itinerary titles", () => {
       "Brooklyn Bridge Park",
       "DUMBO",
       "Brooklyn Navy Yard",
+    ]);
+  });
+});
+
+describe("62527P11 reviewed public JSON-LD itinerary titles", () => {
+  const EXPECTED_62527P11_PUBLIC_JSON_LD_TITLES = [
+    "Midtown Manhattan Departure",
+    "Niagara Falls State Park",
+    "Maid of the Mist",
+    "Niagara Falls Observation Tower",
+    "Prospect Point",
+    "Luna Island",
+    "Bridal Veil Falls",
+    "Goat Island",
+    "Horseshoe Falls",
+  ] as const;
+
+  it("returns count-aligned reviewed names only when live row count is nine", () => {
+    expect(
+      getEngine6AlignedPublicJsonLdItineraryTitle({
+        productCode: "62527P11",
+        rowIndex: 0,
+        rowCount: 9,
+      })
+    ).toBe("Midtown Manhattan Departure");
+    expect(
+      getEngine6AlignedPublicJsonLdItineraryTitle({
+        productCode: "62527P11",
+        rowIndex: 8,
+        rowCount: 9,
+      })
+    ).toBe("Horseshoe Falls");
+    expect(
+      getEngine6AlignedPublicJsonLdItineraryTitle({
+        productCode: "62527P11",
+        rowIndex: 0,
+        rowCount: 2,
+      })
+    ).toBeNull();
+  });
+
+  it("prefers public JSON-LD over description-only live rows during extraction", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "62527P11",
+        itineraryItems: [
+          {
+            description:
+              "You will travel on a comfortable motor coach, with your bilingual tour guide, enjoying the scenic landscape of upstate New York",
+          },
+          {
+            description:
+              "If you have selected the tour that includes this option, you will board the historic the Maid of the Mist boat",
+          },
+          {
+            description:
+              "Once the boat ride is over, your guide will head to the Observation Tower, as it is the unique way of exiting",
+          },
+          { description: "This is the nearest lookout from which the American Falls can be seen" },
+          {
+            description:
+              "Then you will visit this small island, which is located in between The American and Bridal Falls",
+          },
+          {
+            description:
+              "It is the smallest of the three waterfalls that make up Niagara Falls",
+          },
+          {
+            description:
+              "This island is considered the natural border between Canada and the United States",
+          },
+          {
+            description:
+              "From here you can clearly see the Horseshoe Falls from the USA side of Niagara Falls",
+          },
+          { description: "Horseshoe Falls is considered the most impressive of the three falls" },
+        ],
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      ...EXPECTED_62527P11_PUBLIC_JSON_LD_TITLES,
+    ]);
+    expect(result.extracted.itinerary.map(item => item.titleSource)).toEqual(
+      Array(9).fill("public-json-ld")
+    );
+    expect(
+      result.extracted.itinerary.some(item =>
+        /^(This|Once the boat ride is over)/i.test(item.title)
+      )
+    ).toBe(false);
+  });
+
+  it("keeps bundled two-row titles unchanged when public JSON-LD count does not align", () => {
+    const result = extractEngine6Product(specimen62527p11Payload);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Midtown Manhattan Departure",
+      "Niagara Falls",
     ]);
   });
 });
