@@ -1,0 +1,211 @@
+{
+  "product": {
+    "productCode": "194901P4",
+    "productUrl": "https://www.viator.com/tours/Portland/Oregon-Coast-Tour-Full-Day/d5065-194901P4",
+    "title": "Full-Day Guided Oregon Coast Tour from Portland",
+    "description": {
+      "text": "Travel from Portland to the northern Oregon Coast on a full-day small-group outing led by a naturalist guide. Ride in an air-conditioned minivan with bottled water and light snacks while the route links Ecola State Park overlooks, Indian Beach, Cannon Beach, and Haystack Rock along scenic Highway 101. Depending on tides and conditions, the day may include stops at Hug Point or Oswald West State Park before a Neahkahnie Mountain viewpoint when time allows. The structured coastal itinerary covers key north-coast landmarks without self-driving from Portland, with pickup available at select downtown hotels or South Waterfront Park."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "8 to 9 hours (approx.)",
+    "priceFrom": "From $139.00",
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 3
+            },
+            {
+              "rating": 2.0,
+              "count": 2
+            },
+            {
+              "rating": 3.0,
+              "count": 5
+            },
+            {
+              "rating": 4.0,
+              "count": 18
+            },
+            {
+              "rating": 5.0,
+              "count": 420
+            }
+          ],
+          "totalCount": 448,
+          "averageRating": 4.9
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 2
+            },
+            {
+              "rating": 2.0,
+              "count": 1
+            },
+            {
+              "rating": 3.0,
+              "count": 3
+            },
+            {
+              "rating": 4.0,
+              "count": 12
+            },
+            {
+              "rating": 5.0,
+              "count": 89
+            }
+          ],
+          "totalCount": 107,
+          "averageRating": 4.9
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 5
+        },
+        {
+          "rating": 2.0,
+          "count": 3
+        },
+        {
+          "rating": 3.0,
+          "count": 8
+        },
+        {
+          "rating": 4.0,
+          "count": 30
+        },
+        {
+          "rating": 5.0,
+          "count": 509
+        }
+      ],
+      "totalReviews": 555,
+      "combinedAverageRating": 4.9
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/6c/eb/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day Oregon Coast route from Portland with a naturalist guide",
+      "Stops at Ecola State Park, Cannon Beach, and Haystack Rock",
+      "Scenic Highway 101 segments with optional Hug Point or Oswald West State Park visits",
+      "Small-group van transport with bottled water and light snacks",
+      "Hotel pickup or South Waterfront Park meeting options"
+    ],
+    "logistics": {
+      "start": {
+        "description": "South Waterfront Park, 2001 S River Dr, Portland, OR 97201, or pickup at select downtown Portland hotels."
+      },
+      "end": {
+        "description": "Returns to the original Portland pickup location."
+      }
+    },
+    "itinerarySummary": "Full-day coastal outing from Portland with organized stops across Ecola State Park, Cannon Beach, Haystack Rock, and northern Oregon Coast viewpoints.",
+    "itineraryItems": [
+      {
+        "title": "Ecola State Park",
+        "description": "Stop for ocean views from the coastal forest overlook and time to scan for wildlife along the headlands.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Indian Beach",
+        "description": "Walk the shoreline or follow a short trail for Pacific views when conditions allow.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cannon Beach",
+        "description": "Explore the coastal town, browse local shops, and break for lunch on your own schedule.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Haystack Rock",
+        "description": "Visit the iconic sea stack and tide-line area to look for nesting seabirds when tides permit.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hug Point State Park",
+        "description": "Optional stop at a secluded beach and waterfall area when tides and timing allow.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Oswald West State Park",
+        "description": "Optional forest-and-coast stop with short walks when route conditions allow.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Neahkahnie Mountain",
+        "description": "Finish with a coastal viewpoint stop when time allows before the return drive to Portland.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Naturalist guide",
+      "Air-conditioned vehicle",
+      "Bottled water and light snacks",
+      "Hotel pickup from select Portland locations"
+    ],
+    "additionalInfo": [
+      "Small-group format with a maximum of 12 travelers.",
+      "Free cancellation up to 24 hours before the experience start time.",
+      "Layered clothing and comfortable walking shoes are recommended for coastal weather."
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Oregon Coast tour from Portland?",
+        "answer": "The planned duration is about 8 to 9 hours, including driving time and scheduled coastal stops."
+      },
+      {
+        "question": "Where does the tour pick up in Portland?",
+        "answer": "Pickup is available at select downtown hotels or the default meeting point at South Waterfront Park, 2001 S River Dr."
+      },
+      {
+        "question": "What coastal landmarks are included?",
+        "answer": "Typical stops include Ecola State Park, Indian Beach, Cannon Beach, Haystack Rock, and additional Highway 101 viewpoints when conditions allow."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 139.0
+      },
+      "currency": "USD"
+    }
+  }
+}

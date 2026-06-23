@@ -100,6 +100,8 @@ import specimen5096p30Payload from "../../data/engine6/viator/5096P30.exact-prod
 import specimen67760p2Payload from "../../data/engine6/viator/67760P2.exact-product.json";
 import specimen32779p6Payload from "../../data/engine6/viator/32779P6.exact-product.json";
 import specimen70058p145Payload from "../../data/engine6/viator/70058P145.exact-product.json";
+import specimen194901p4Payload from "../../data/engine6/viator/194901P4.exact-product.json";
+import specimen378720p1Payload from "../../data/engine6/viator/378720P1.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -1051,6 +1053,24 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Los-Angeles/Greater-Los-Angeles-Private-Day-Trip-From-Los-Angeles/d645-70058P145",
     rawPayload: specimen70058p145Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "194901P4",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Oregon-Coast-Tour-Full-Day/d5065-194901P4",
+    rawPayload: specimen194901p4Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "378720P1",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/City-of-Roses-Tour-Visit-iconic-and-historic-Portland-sights/d5065-378720P1",
+    rawPayload: specimen378720p1Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

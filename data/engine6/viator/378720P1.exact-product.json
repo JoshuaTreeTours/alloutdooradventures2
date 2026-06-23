@@ -1,0 +1,198 @@
+{
+  "product": {
+    "productCode": "378720P1",
+    "productUrl": "https://www.viator.com/tours/Portland/City-of-Roses-Tour-Visit-iconic-and-historic-Portland-sights/d5065-378720P1",
+    "title": "Portland City Tour: Views and News",
+    "description": {
+      "text": "Explore Portland on a guided city tour that introduces the city's history, architecture, and evolving neighborhoods in roughly three hours. A local guide narrates the route from pioneer-era settlement through today's districts, crossing the Willamette River on an iconic bridge and visiting Pittock Mansion for Mount Hood views. The outing includes a stop at the International Rose Test Garden in Washington Park, drive-by perspectives on Old Town and downtown corridors, and east-side neighborhoods that reflect Portland's local character and ongoing change."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $79.00",
+    "reviews": {
+      "sources": [
+        {
+          "provider": "VIATOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 2
+            },
+            {
+              "rating": 2.0,
+              "count": 1
+            },
+            {
+              "rating": 3.0,
+              "count": 4
+            },
+            {
+              "rating": 4.0,
+              "count": 10
+            },
+            {
+              "rating": 5.0,
+              "count": 58
+            }
+          ],
+          "totalCount": 75,
+          "averageRating": 4.7
+        },
+        {
+          "provider": "TRIPADVISOR",
+          "reviewCounts": [
+            {
+              "rating": 1.0,
+              "count": 1
+            },
+            {
+              "rating": 2.0,
+              "count": 1
+            },
+            {
+              "rating": 3.0,
+              "count": 2
+            },
+            {
+              "rating": 4.0,
+              "count": 5
+            },
+            {
+              "rating": 5.0,
+              "count": 2
+            }
+          ],
+          "totalCount": 11,
+          "averageRating": 4.6
+        }
+      ],
+      "reviewCountTotals": [
+        {
+          "rating": 1.0,
+          "count": 3
+        },
+        {
+          "rating": 2.0,
+          "count": 2
+        },
+        {
+          "rating": 3.0,
+          "count": 6
+        },
+        {
+          "rating": 4.0,
+          "count": 15
+        },
+        {
+          "rating": 5.0,
+          "count": 60
+        }
+      ],
+      "totalReviews": 86,
+      "combinedAverageRating": 4.7
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/b4/4c/f1/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided overview of Portland history and neighborhoods",
+      "Stop at Pittock Mansion for Mt. Hood and city views",
+      "Visit the International Rose Test Garden in Washington Park",
+      "Cross the Willamette River on an iconic Portland bridge",
+      "Drive through historic districts and east-side neighborhoods"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Director Park, 815 SW Park Ave, Portland, OR 97205. Meet near Flying Elephants Delicatessen at 846 SW Park Ave."
+      },
+      "end": {
+        "description": "Returns to Director Park in downtown Portland."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Director Park departure",
+        "description": "Meet the guide downtown for orientation before the city route begins.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Town",
+        "description": "Pass through downtown Portland's historic district with commentary on the city's early settlement era.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Willamette River bridge crossing",
+        "description": "Cross the Willamette River for east-side perspectives on Portland's waterfront and bridge architecture.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Pittock Mansion",
+        "description": "Stop for views from the historic estate grounds toward Mt. Hood and the city skyline.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "International Rose Test Garden",
+        "description": "Walk among rose varieties in Washington Park with time for photos when blooms are in season.",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "East Portland neighborhoods",
+        "description": "Drive through local-favorite districts that show how Portland neighborhoods continue to evolve.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Shared tour format with a maximum of 24 travelers.",
+      "Most of the route uses drive-by viewing with selected walk stops at Pittock Mansion and the Rose Garden."
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Portland city tour?",
+        "answer": "The listed duration is about 3 hours, including driving time and selected walk stops."
+      },
+      {
+        "question": "Where does the tour meet?",
+        "answer": "The tour meets at Director Park near Flying Elephants Delicatessen at 846 SW Park Ave in downtown Portland."
+      },
+      {
+        "question": "Which landmarks are included?",
+        "answer": "The route typically includes Pittock Mansion, the International Rose Test Garden, a Willamette River bridge crossing, and drive-by views of historic and east-side districts."
+      }
+    ],
+    "categories": [
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 79.0
+      },
+      "currency": "USD"
+    }
+  }
+}
