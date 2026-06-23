@@ -590,7 +590,7 @@ const PRODUCT_ROW_CONDITIONAL_TITLE_OVERRIDES: Record<
     2: [
       {
         title: "Elfreth's Alley",
-        currentTitleStartsWith: ["Stroll Elfreth's Alley"],
+        currentTitleStartsWith: ["Stroll Elfreth"],
       },
     ],
     3: [
@@ -607,6 +607,30 @@ const PRODUCT_ROW_CONDITIONAL_TITLE_OVERRIDES: Record<
     ],
   },
   "5119P13": {
+    0: [
+      {
+        title: "Hoover Dam",
+        currentTitleStartsWith: ["Your full-day guided Grand Canyon West Tour"],
+      },
+    ],
+    1: [
+      {
+        title: "Grand Canyon West",
+        currentTitleStartsWith: ["Your adventure continues as you journey"],
+      },
+    ],
+    2: [
+      {
+        title: "Eagle Point and Guano Point",
+        currentTitleStartsWith: ["At Eagle Point"],
+      },
+    ],
+    3: [
+      {
+        title: "Guano Point",
+        currentTitleStartsWith: ["Guano Point"],
+      },
+    ],
     4: [
       {
         title: "Grand Canyon West",
@@ -739,6 +763,12 @@ const PRODUCT_ROW_CONDITIONAL_TITLE_OVERRIDES: Record<
     ],
   },
   "26719P8": {
+    0: [
+      {
+        title: "Willow Beach Marina",
+        currentTitleStartsWith: ["Begin your kayak adventure at Willow Beach Marina"],
+      },
+    ],
     1: [
       {
         title: "Black Canyon",

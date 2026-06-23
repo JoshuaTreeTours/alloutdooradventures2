@@ -194,7 +194,13 @@ describe("Engine6 surgical itinerary title cleanup", () => {
       { productCode: "5119P13" }
     );
 
-    expect(merged[4]?.title).toBe("Grand Canyon West");
+    expect(merged.map(item => item.title)).toEqual([
+      "Hoover Dam",
+      "Grand Canyon West",
+      "Eagle Point and Guano Point",
+      "Guano Point",
+      "Grand Canyon West",
+    ]);
     expect(
       merged.some(item => isEngine6ProseItineraryTitle(item.title))
     ).toBe(false);
