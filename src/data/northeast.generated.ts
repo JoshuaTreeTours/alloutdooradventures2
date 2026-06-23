@@ -31,17 +31,18 @@ export const northeastStates: StateDestination[] = [
         "slug": "cambridge",
         "stateSlug": "massachusetts",
         "region": "Northeast",
-        "lat": -71.0957114,
-        "lng": 42.366184,
+        "lat": -71.08891525,
+        "lng": 42.364675250000005,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Cambridge.",
-        "intro": "Cambridge is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Cambridge is a strong basecamp for hiking, day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/FzwUWNvdReSk5W0dxfxu",
-          "https://cdn.filestackcontent.com/CuDyfXfTgau2RYq9khJM",
-          "https://cdn.filestackcontent.com/2uvIep9HSjexcWLBJwFQ"
+          "https://cdn.filestackcontent.com/2uvIep9HSjexcWLBJwFQ",
+          "https://cdn.filestackcontent.com/nXdxhhXXTOGwH0NNhgZW"
         ],
         "activityTags": [
-          "hiking"
+          "hiking",
+          "day-adventures"
         ],
         "whereItIs": [
           "Cambridge sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -64,7 +65,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Cambridge's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Cambridge."
+          "Use activity filters to compare hiking, day-adventures departures in Cambridge."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -98,16 +99,17 @@ export const northeastStates: StateDestination[] = [
         "slug": "boston",
         "stateSlug": "massachusetts",
         "region": "Northeast",
-        "lat": -71.06085740158728,
-        "lng": 42.35511277142856,
+        "lat": -71.06266718599998,
+        "lng": 42.353975032,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Boston.",
-        "intro": "Boston is a strong basecamp for hiking, canoeing in Massachusetts.",
+        "intro": "Boston is a strong basecamp for day-adventures, hiking, canoeing in Massachusetts.",
         "heroImages": [
-          "https://cdn.filestackcontent.com/TrD38jWTW2jpcqmIWxL3",
-          "https://cdn.filestackcontent.com/uxzKzBDsRuukams2E4v1",
-          "https://cdn.filestackcontent.com/cu6gxCQzQ82R2Q87KHuL"
+          "https://cdn.filestackcontent.com/cu6gxCQzQ82R2Q87KHuL",
+          "https://cdn.filestackcontent.com/BTP5F5TlOR1myHYskVgQ",
+          "https://cdn.filestackcontent.com/qHCKYCuuTlefutaZ29O8"
         ],
         "activityTags": [
+          "day-adventures",
           "hiking",
           "canoeing"
         ],
@@ -133,7 +135,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Boston's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking, canoeing departures in Boston."
+          "Use activity filters to compare day-adventures, hiking, canoeing departures in Boston."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -170,12 +172,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -71.227153,
         "lng": 42.44735,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Lexington.",
-        "intro": "Lexington is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Lexington is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/A59VyRi3Q3221GDZ7tKo"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Lexington sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -198,7 +200,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Lexington's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Lexington."
+          "Use activity filters to compare day-adventures departures in Lexington."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -235,12 +237,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -70.992229,
         "lng": 42.407131,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Revere.",
-        "intro": "Revere is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Revere is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/eCKzEgRjTgqt2VDrFlMN"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Revere sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -263,7 +265,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Revere's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Revere."
+          "Use activity filters to compare day-adventures departures in Revere."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -300,14 +302,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Natick.",
-        "intro": "Natick is a strong basecamp for hiking, canoeing in Massachusetts.",
+        "intro": "Natick is a strong basecamp for day-adventures, canoeing in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/QFW5F9ZTM4WUn3JzZQw1",
           "https://cdn.filestackcontent.com/NXkBol0VQ5aAE1KKbzjg",
           "https://cdn.filestackcontent.com/Lmn5zPYwR5OvX6TJNbQB"
         ],
         "activityTags": [
-          "hiking",
+          "day-adventures",
           "canoeing"
         ],
         "whereItIs": [
@@ -332,7 +334,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Natick's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking, canoeing departures in Natick."
+          "Use activity filters to compare day-adventures, canoeing departures in Natick."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -369,13 +371,13 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Nantucket.",
-        "intro": "Nantucket is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Nantucket is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/wTG7Pi03QRmEiFGvDYta",
           "https://cdn.filestackcontent.com/MFHF3091RfSAn1mteluY"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Nantucket sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -398,7 +400,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Nantucket's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Nantucket."
+          "Use activity filters to compare day-adventures departures in Nantucket."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -435,14 +437,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Quincy.",
-        "intro": "Quincy is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Quincy is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/tYBabkfXQYWAFnfTWFEg",
           "https://cdn.filestackcontent.com/xdaNzUjxSGCN6gLBx3eY",
           "https://cdn.filestackcontent.com/v6cBSLMRzyfDtlxIYpOH"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Quincy sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -465,7 +467,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Quincy's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Quincy."
+          "Use activity filters to compare day-adventures departures in Quincy."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -506,7 +508,7 @@ export const northeastStates: StateDestination[] = [
         "heroImages": [
           "https://cdn.filestackcontent.com/v4SL69VGTmecvruy4PeJ",
           "https://cdn.filestackcontent.com/IONGJI84QDqLrIWB9VeE",
-          "https://cdn.filestackcontent.com/Z8e0mTZsSTiM4577b1yK"
+          "https://cdn.filestackcontent.com/54WvsslvQM2ksyCxEZs5"
         ],
         "activityTags": [
           "canoeing"
@@ -569,14 +571,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Needham.",
-        "intro": "Needham is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Needham is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/MtG3ZjpOROagarVhRKVd",
           "https://cdn.filestackcontent.com/IsHsr0nRmqqYl5QAHERu",
           "https://cdn.filestackcontent.com/P6zcpK0Rami3mEf6vlOA"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Needham sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -599,7 +601,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Needham's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Needham."
+          "Use activity filters to compare day-adventures departures in Needham."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -636,12 +638,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Chelsea.",
-        "intro": "Chelsea is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Chelsea is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/AHAE0VnxQGYIJZUAHYfs"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Chelsea sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -664,7 +666,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Chelsea's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Chelsea."
+          "Use activity filters to compare day-adventures departures in Chelsea."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -701,13 +703,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -71.141724,
         "lng": 42.310588,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Brookline.",
-        "intro": "Brookline is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Brookline is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
-          "https://cdn.filestackcontent.com/jAgnMeSXTiuFpknUYUOl",
-          ""
+          "https://cdn.filestackcontent.com/jAgnMeSXTiuFpknUYUOl"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Brookline sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -730,7 +731,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Brookline's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Brookline."
+          "Use activity filters to compare day-adventures departures in Brookline."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -767,14 +768,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Wrentham.",
-        "intro": "Wrentham is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Wrentham is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/PHNsxSinSAStwpO3ggwN",
           "https://cdn.filestackcontent.com/ydGa6eFSMeVppYlE2PgQ",
           "https://cdn.filestackcontent.com/yQG6HmlURIKQqfF75DOA"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Wrentham sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -797,7 +798,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Wrentham's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Wrentham."
+          "Use activity filters to compare day-adventures departures in Wrentham."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -834,14 +835,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Barnstable.",
-        "intro": "Barnstable is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Barnstable is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/vkeFYSPcSK2So07wFjbP",
           "https://cdn.filestackcontent.com/EyJJnURRqWAoUZav1wBE",
           "https://cdn.filestackcontent.com/7AWYEP51Q3KHOC4L9VK2"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Barnstable sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -864,7 +865,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Barnstable's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Barnstable."
+          "Use activity filters to compare day-adventures departures in Barnstable."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -901,12 +902,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Beverly.",
-        "intro": "Beverly is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Beverly is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/jMjejQLxTcCdOpJMZgeK"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Beverly sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -929,7 +930,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Beverly's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Beverly."
+          "Use activity filters to compare day-adventures departures in Beverly."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -966,15 +967,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around North Andover.",
-        "intro": "North Andover is a strong basecamp for canoeing, hiking in Massachusetts.",
+        "intro": "North Andover is a strong basecamp for canoeing in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/mFa3erd9RSlaogcm92yi",
           "https://cdn.filestackcontent.com/jl5ySkfGS5eEbXw8OaDO",
           "https://cdn.filestackcontent.com/R28j5rBtQdmvmHnI7qCW"
         ],
         "activityTags": [
-          "canoeing",
-          "hiking"
+          "canoeing"
         ],
         "whereItIs": [
           "North Andover sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -990,7 +990,6 @@ export const northeastStates: StateDestination[] = [
         },
         "thingsToDo": [
           "Plan a paddle or canoe outing near North Andover.",
-          "Hike a scenic trail with views around North Andover.",
           "Explore a local park or nature preserve near North Andover.",
           "Catch golden hour at a nearby viewpoint.",
           "Stroll a waterfront trail or greenway in North Andover."
@@ -998,7 +997,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with North Andover's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare canoeing, hiking departures in North Andover."
+          "Use activity filters to compare canoeing departures in North Andover."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1035,7 +1034,7 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Newton.",
-        "intro": "Newton is a strong basecamp for canoeing, hiking in Massachusetts.",
+        "intro": "Newton is a strong basecamp for canoeing, day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/Ry5eOkqREGAbzaxLOxRI",
           "https://cdn.filestackcontent.com/3NCaxkoURwi6vZF4DZQz",
@@ -1043,7 +1042,7 @@ export const northeastStates: StateDestination[] = [
         ],
         "activityTags": [
           "canoeing",
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Newton sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -1067,7 +1066,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Newton's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare canoeing, hiking departures in Newton."
+          "Use activity filters to compare canoeing, day-adventures departures in Newton."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1104,14 +1103,14 @@ export const northeastStates: StateDestination[] = [
         "lat": -71.053656,
         "lng": 42.183175,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Randolph.",
-        "intro": "Randolph is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Randolph is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/lYJ9Y5FRRO2Q5xS0lpW4",
           "https://cdn.filestackcontent.com/C6wHjUqZS6uzLJHkkB4L",
           "https://cdn.filestackcontent.com/OOjfbas8SwqPQfqAHQuv"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Randolph sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -1134,7 +1133,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Randolph's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Randolph."
+          "Use activity filters to compare day-adventures departures in Randolph."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1171,14 +1170,14 @@ export const northeastStates: StateDestination[] = [
         "lat": -70.891205,
         "lng": 42.519699,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Salem.",
-        "intro": "Salem is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Salem is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/wNUDEOPhQECXhGDmA8CL",
           "https://cdn.filestackcontent.com/NTeSk515QQyV4DmX9aow",
           "https://cdn.filestackcontent.com/YEr4hbRlT2OxXfcLpF1M"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Salem sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -1201,7 +1200,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Salem's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Salem."
+          "Use activity filters to compare day-adventures departures in Salem."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1238,12 +1237,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Somerville.",
-        "intro": "Somerville is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Somerville is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           ""
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Somerville sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -1266,7 +1265,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Somerville's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Somerville."
+          "Use activity filters to compare day-adventures departures in Somerville."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1303,14 +1302,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Sudbury.",
-        "intro": "Sudbury is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Sudbury is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/cCQBxrQ2STikNDenja3c",
           "https://cdn.filestackcontent.com/nRELgnY5QgOj4BHuREVw",
           "https://cdn.filestackcontent.com/WQ9JIX7kQyWuHOqKYYt5"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Sudbury sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -1333,7 +1332,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Sudbury's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Sudbury."
+          "Use activity filters to compare day-adventures departures in Sudbury."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1370,14 +1369,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Oak Bluffs.",
-        "intro": "Oak Bluffs is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Oak Bluffs is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://www.filepicker.io/api/file/riNNidu6QquW7jmGnn76",
           "https://www.filepicker.io/api/file/e4YJk9JS16dJbx5y8kam",
           "https://www.filepicker.io/api/file/D1e5CgMnTs2nQd3wx1fA"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Oak Bluffs sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -1400,7 +1399,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Oak Bluffs's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Oak Bluffs."
+          "Use activity filters to compare day-adventures departures in Oak Bluffs."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1437,14 +1436,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Marblehead.",
-        "intro": "Marblehead is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Marblehead is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/ikMkyeKQdG0qSOfMhevA",
           "https://cdn.filestackcontent.com/Z4aPUKCSQ863ctBeLHBS",
           "https://cdn.filestackcontent.com/5NUf3pz9T2rz2OkFXGYQ"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Marblehead sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -1467,7 +1466,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Marblehead's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Marblehead."
+          "Use activity filters to compare day-adventures departures in Marblehead."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1504,12 +1503,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Holbrook.",
-        "intro": "Holbrook is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Holbrook is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/a9ggE5oQXGd3EvUxNTiQ"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Holbrook sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -1532,7 +1531,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Holbrook's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Holbrook."
+          "Use activity filters to compare day-adventures departures in Holbrook."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1569,12 +1568,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Winthrop.",
-        "intro": "Winthrop is a strong basecamp for hiking in Massachusetts.",
+        "intro": "Winthrop is a strong basecamp for day-adventures in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/AsIEoFuZQniziPFavGR1"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Winthrop sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -1597,7 +1596,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Winthrop's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Winthrop."
+          "Use activity filters to compare day-adventures departures in Winthrop."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1629,106 +1628,11 @@ export const northeastStates: StateDestination[] = [
     ]
   },
   {
-    "slug": "district-of-columbia",
-    "name": "District of Columbia",
-    "description": "Outdoor experiences across District of Columbia.",
-    "featuredDescription": "Plan hiking, cycling, and canoeing escapes across District of Columbia's Northeast landscapes.",
-    "heroImage": "https://cdn.filestackcontent.com/uLfzGU37QhWxqv5OaUN5",
-    "region": "Northeast",
-    "intro": "Plan multi-activity getaways across District of Columbia with guided tours and local experts.",
-    "longDescription": "District of Columbia delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in District of Columbia will highlight its local specialties so travelers can book with confidence.",
-    "topRegions": [
-      {
-        "title": "Trail networks",
-        "description": "Find day hikes, scenic lookouts, and local parks across District of Columbia."
-      },
-      {
-        "title": "Waterways",
-        "description": "Paddling routes and calm water escapes are easy to reach in District of Columbia."
-      },
-      {
-        "title": "Scenic drives",
-        "description": "Short drives from city centers reveal iconic views and seasonal highlights."
-      }
-    ],
-    "cities": [
-      {
-        "name": "Washington",
-        "slug": "washington",
-        "stateSlug": "district-of-columbia",
-        "region": "Northeast",
-        "lat": -77.03179617857143,
-        "lng": 38.898281464285716,
-        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Washington.",
-        "intro": "Washington is a strong basecamp for hiking, cycling in District of Columbia.",
-        "heroImages": [
-          "https://cdn.filestackcontent.com/uLfzGU37QhWxqv5OaUN5",
-          "https://cdn.filestackcontent.com/ibxw45PoSemqM8QdDDfT",
-          "https://cdn.filestackcontent.com/O01HrWPTkOwcxNJK76TT"
-        ],
-        "activityTags": [
-          "hiking",
-          "cycling"
-        ],
-        "whereItIs": [
-          "Washington sits within District of Columbia, offering quick access to trailheads, waterfront paths, and local parks.",
-          "Travelers can mix guided tours with self-guided exploration, using Washington as a comfortable launch point for day trips."
-        ],
-        "experiences": {
-          "mountains": "Seek out ridge walks and lookout points just outside Washington.",
-          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Washington.",
-          "desertForest": "Nearby forests and greenways around Washington provide easy escape time in nature.",
-          "cycling": "Bike paths and guided rides offer a relaxed way to explore Washington.",
-          "scenicDrives": "Short scenic drives from Washington reveal overlooks and seasonal color.",
-          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Washington."
-        },
-        "thingsToDo": [
-          "Hike a scenic trail with views around Washington.",
-          "Ride a scenic bike loop around Washington.",
-          "Explore a local park or nature preserve near Washington.",
-          "Catch golden hour at a nearby viewpoint.",
-          "Stroll a waterfront trail or greenway in Washington."
-        ],
-        "toursCopy": [
-          "Plan a half-day tour to get oriented with Washington's outdoor highlights.",
-          "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking, cycling departures in Washington."
-        ],
-        "weekendItinerary": {
-          "dayOne": [
-            "Morning: grab coffee in Washington and start a guided tour.",
-            "Afternoon: unwind on a waterfront path or shaded trail.",
-            "Evening: explore downtown Washington for dinner."
-          ],
-          "dayTwo": [
-            "Morning: hit a scenic trail or bike path.",
-            "Afternoon: visit a nearby park or market.",
-            "Evening: finish with a sunset viewpoint or easy stroll."
-          ]
-        },
-        "gettingThere": [
-          "Fly or drive into Washington, then use rideshare or a rental car to reach trailheads.",
-          "Many tours depart from central pickup points near downtown Washington."
-        ],
-        "faq": [
-          {
-            "question": "When is the best time to visit Washington?",
-            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Washington."
-          },
-          {
-            "question": "Do I need to book tours in advance?",
-            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
-          }
-        ]
-      }
-    ]
-  },
-  {
     "slug": "rhode-island",
     "name": "Rhode Island",
     "description": "Outdoor experiences across Rhode Island.",
     "featuredDescription": "Plan hiking, cycling, and canoeing escapes across Rhode Island's Northeast landscapes.",
-    "heroImage": "https://cdn.filestackcontent.com/9mpbD58NR7Kuyt7elTkK",
+    "heroImage": "https://cdn.filestackcontent.com/5WcWq4FVRDatDF0MRMXX",
     "region": "Northeast",
     "intro": "Plan multi-activity getaways across Rhode Island with guided tours and local experts.",
     "longDescription": "Rhode Island delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in Rhode Island will highlight its local specialties so travelers can book with confidence.",
@@ -1755,14 +1659,13 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Warwick.",
-        "intro": "Warwick is a strong basecamp for hiking in Rhode Island.",
+        "intro": "Warwick is a strong basecamp for day-adventures in Rhode Island.",
         "heroImages": [
-          "https://cdn.filestackcontent.com/9mpbD58NR7Kuyt7elTkK",
           "https://cdn.filestackcontent.com/5WcWq4FVRDatDF0MRMXX",
           "https://cdn.filestackcontent.com/oAnc1HChRzWufm1jie3u"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Warwick sits within Rhode Island, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -1785,7 +1688,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Warwick's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Warwick."
+          "Use activity filters to compare day-adventures departures in Warwick."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1848,14 +1751,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Queens.",
-        "intro": "Queens is a strong basecamp for hiking in New York.",
+        "intro": "Queens is a strong basecamp for day-adventures in New York.",
         "heroImages": [
           "https://cdn.filestackcontent.com/oxMhq87NSn2wBId9oeIK",
           "https://cdn.filestackcontent.com/PvTjESxDS3yMfnhbULNL",
           "https://cdn.filestackcontent.com/uNj337MNSUyu1VPeYUG4"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Queens sits within New York, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -1878,7 +1781,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Queens's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Queens."
+          "Use activity filters to compare day-adventures departures in Queens."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1912,16 +1815,17 @@ export const northeastStates: StateDestination[] = [
         "slug": "new-york",
         "stateSlug": "new-york",
         "region": "Northeast",
-        "lat": -73.99944335714285,
-        "lng": 40.73532092857143,
+        "lat": -73.99560862499999,
+        "lng": 40.739504249999996,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around New York.",
-        "intro": "New York is a strong basecamp for hiking in New York.",
+        "intro": "New York is a strong basecamp for day-adventures, hiking in New York.",
         "heroImages": [
           "https://cdn.filestackcontent.com/WwebXsinSrCPcvciW8FW",
           "https://cdn.filestackcontent.com/ei8iCJvS1O3XpTmLnZY7",
           "https://cdn.filestackcontent.com/HU5i9f23TmwbuRfRm9RN"
         ],
         "activityTags": [
+          "day-adventures",
           "hiking"
         ],
         "whereItIs": [
@@ -1945,7 +1849,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with New York's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in New York."
+          "Use activity filters to compare day-adventures, hiking departures in New York."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1982,12 +1886,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Montauk.",
-        "intro": "Montauk is a strong basecamp for hiking in New York.",
+        "intro": "Montauk is a strong basecamp for day-adventures in New York.",
         "heroImages": [
           ""
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Montauk sits within New York, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -2010,7 +1914,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Montauk's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Montauk."
+          "Use activity filters to compare day-adventures departures in Montauk."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -2047,12 +1951,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Catskill.",
-        "intro": "Catskill is a strong basecamp for hiking in New York.",
+        "intro": "Catskill is a strong basecamp for day-adventures in New York.",
         "heroImages": [
           "https://cdn.filestackcontent.com/jD6p2tHVTLjt1p8NEdrm"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Catskill sits within New York, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -2075,7 +1979,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Catskill's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Catskill."
+          "Use activity filters to compare day-adventures departures in Catskill."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -2112,12 +2016,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -74.301039,
         "lng": 41.275347,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Warwick.",
-        "intro": "Warwick is a strong basecamp for hiking in New York.",
+        "intro": "Warwick is a strong basecamp for day-adventures in New York.",
         "heroImages": [
           "https://cdn.filestackcontent.com/MVlCQD2DQKSUqtwtxjHa"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Warwick sits within New York, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -2140,7 +2044,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Warwick's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Warwick."
+          "Use activity filters to compare day-adventures departures in Warwick."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -2177,13 +2081,13 @@ export const northeastStates: StateDestination[] = [
         "lat": -74.074502,
         "lng": 40.642041,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Staten Island.",
-        "intro": "Staten Island is a strong basecamp for hiking in New York.",
+        "intro": "Staten Island is a strong basecamp for day-adventures in New York.",
         "heroImages": [
           "https://cdn.filestackcontent.com/vjhIFZVQRvOsFBFsA37a",
           "https://cdn.filestackcontent.com/HdXqjTysTd6iJuwIKPWm"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Staten Island sits within New York, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -2206,7 +2110,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Staten Island's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Staten Island."
+          "Use activity filters to compare day-adventures departures in Staten Island."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -2243,12 +2147,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -74.373661,
         "lng": 41.740605,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Napanoch.",
-        "intro": "Napanoch is a strong basecamp for hiking in New York.",
+        "intro": "Napanoch is a strong basecamp for day-adventures in New York.",
         "heroImages": [
           "https://cdn.filestackcontent.com/9LaqXk59RtyOXrniQtnf"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Napanoch sits within New York, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -2271,7 +2175,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Napanoch's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Napanoch."
+          "Use activity filters to compare day-adventures departures in Napanoch."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -2305,16 +2209,15 @@ export const northeastStates: StateDestination[] = [
         "slug": "brooklyn",
         "stateSlug": "new-york",
         "region": "Northeast",
-        "lat": -73.993068,
-        "lng": 40.697724,
+        "lat": null,
+        "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Brooklyn.",
-        "intro": "Brooklyn is a strong basecamp for hiking in New York.",
+        "intro": "Brooklyn is a strong basecamp for day-adventures in New York.",
         "heroImages": [
-          "https://cdn.filestackcontent.com/KVA866B1Tka0DXBZDyz3",
           "https://cdn.filestackcontent.com/0a61sEkPRweZH4INXhjZ"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Brooklyn sits within New York, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -2337,7 +2240,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Brooklyn's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Brooklyn."
+          "Use activity filters to compare day-adventures departures in Brooklyn."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -2400,12 +2303,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Lavallette.",
-        "intro": "Lavallette is a strong basecamp for hiking in New Jersey.",
+        "intro": "Lavallette is a strong basecamp for day-adventures in New Jersey.",
         "heroImages": [
           "https://cdn.filestackcontent.com/jgoql9gnQnWKynWP5Xg6"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Lavallette sits within New Jersey, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -2428,7 +2331,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Lavallette's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Lavallette."
+          "Use activity filters to compare day-adventures departures in Lavallette."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -2465,12 +2368,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Ocean City.",
-        "intro": "Ocean City is a strong basecamp for hiking in New Jersey.",
+        "intro": "Ocean City is a strong basecamp for day-adventures in New Jersey.",
         "heroImages": [
           "https://www.filepicker.io/api/file/yHD61jHBShGQOBSJSlG0"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Ocean City sits within New Jersey, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -2493,7 +2396,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Ocean City's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Ocean City."
+          "Use activity filters to compare day-adventures departures in Ocean City."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -2530,12 +2433,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -75.061608,
         "lng": 39.358998,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Millville.",
-        "intro": "Millville is a strong basecamp for hiking in New Jersey.",
+        "intro": "Millville is a strong basecamp for day-adventures in New Jersey.",
         "heroImages": [
           "https://cdn.filestackcontent.com/vBgtaDpDSmOJkAlXTfwX"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Millville sits within New Jersey, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -2558,7 +2461,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Millville's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Millville."
+          "Use activity filters to compare day-adventures departures in Millville."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -2588,71 +2491,6 @@ export const northeastStates: StateDestination[] = [
         ]
       },
       {
-        "name": "Atlantic Highlands",
-        "slug": "atlantic-highlands",
-        "stateSlug": "new-jersey",
-        "region": "Northeast",
-        "lat": -74.033648,
-        "lng": 40.41193,
-        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Atlantic Highlands.",
-        "intro": "Atlantic Highlands is a strong basecamp for hiking in New Jersey.",
-        "heroImages": [
-          "https://cdn.filestackcontent.com/QPGWdBKTX2ox2q2xfsn1"
-        ],
-        "activityTags": [
-          "hiking"
-        ],
-        "whereItIs": [
-          "Atlantic Highlands sits within New Jersey, offering quick access to trailheads, waterfront paths, and local parks.",
-          "Travelers can mix guided tours with self-guided exploration, using Atlantic Highlands as a comfortable launch point for day trips."
-        ],
-        "experiences": {
-          "mountains": "Seek out ridge walks and lookout points just outside Atlantic Highlands.",
-          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Atlantic Highlands.",
-          "desertForest": "Nearby forests and greenways around Atlantic Highlands provide easy escape time in nature.",
-          "cycling": "Bike paths and guided rides offer a relaxed way to explore Atlantic Highlands.",
-          "scenicDrives": "Short scenic drives from Atlantic Highlands reveal overlooks and seasonal color.",
-          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Atlantic Highlands."
-        },
-        "thingsToDo": [
-          "Hike a scenic trail with views around Atlantic Highlands.",
-          "Explore a local park or nature preserve near Atlantic Highlands.",
-          "Catch golden hour at a nearby viewpoint.",
-          "Stroll a waterfront trail or greenway in Atlantic Highlands."
-        ],
-        "toursCopy": [
-          "Plan a half-day tour to get oriented with Atlantic Highlands's outdoor highlights.",
-          "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Atlantic Highlands."
-        ],
-        "weekendItinerary": {
-          "dayOne": [
-            "Morning: grab coffee in Atlantic Highlands and start a guided tour.",
-            "Afternoon: unwind on a waterfront path or shaded trail.",
-            "Evening: explore downtown Atlantic Highlands for dinner."
-          ],
-          "dayTwo": [
-            "Morning: hit a scenic trail or bike path.",
-            "Afternoon: visit a nearby park or market.",
-            "Evening: finish with a sunset viewpoint or easy stroll."
-          ]
-        },
-        "gettingThere": [
-          "Fly or drive into Atlantic Highlands, then use rideshare or a rental car to reach trailheads.",
-          "Many tours depart from central pickup points near downtown Atlantic Highlands."
-        ],
-        "faq": [
-          {
-            "question": "When is the best time to visit Atlantic Highlands?",
-            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Atlantic Highlands."
-          },
-          {
-            "question": "Do I need to book tours in advance?",
-            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
-          }
-        ]
-      },
-      {
         "name": "Keyport",
         "slug": "keyport",
         "stateSlug": "new-jersey",
@@ -2660,12 +2498,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Keyport.",
-        "intro": "Keyport is a strong basecamp for hiking in New Jersey.",
+        "intro": "Keyport is a strong basecamp for day-adventures in New Jersey.",
         "heroImages": [
           "https://cdn.filestackcontent.com/M0ZyV0fQTU68sm7Do8b8"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Keyport sits within New Jersey, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -2688,7 +2526,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Keyport's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Keyport."
+          "Use activity filters to compare day-adventures departures in Keyport."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -2725,12 +2563,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Edgewater.",
-        "intro": "Edgewater is a strong basecamp for hiking in New Jersey.",
+        "intro": "Edgewater is a strong basecamp for day-adventures in New Jersey.",
         "heroImages": [
           "https://cdn.filestackcontent.com/TfyUDoIAQe2b1wza7OxT"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Edgewater sits within New Jersey, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -2753,7 +2591,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Edgewater's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Edgewater."
+          "Use activity filters to compare day-adventures departures in Edgewater."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -2790,13 +2628,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Wallington.",
-        "intro": "Wallington is a strong basecamp for hiking in New Jersey.",
+        "intro": "Wallington is a strong basecamp for day-adventures in New Jersey.",
         "heroImages": [
-          "https://cdn.filestackcontent.com/KvdwVvwbTXaxykw1XbjA",
-          ""
+          "https://cdn.filestackcontent.com/KvdwVvwbTXaxykw1XbjA"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Wallington sits within New Jersey, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -2819,7 +2656,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Wallington's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Wallington."
+          "Use activity filters to compare day-adventures departures in Wallington."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -2849,71 +2686,6 @@ export const northeastStates: StateDestination[] = [
         ]
       },
       {
-        "name": "Hillsdale",
-        "slug": "hillsdale",
-        "stateSlug": "new-jersey",
-        "region": "Northeast",
-        "lat": null,
-        "lng": null,
-        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Hillsdale.",
-        "intro": "Hillsdale is a strong basecamp for hiking in New Jersey.",
-        "heroImages": [
-          "https://cdn.filestackcontent.com/npAFjuGJSQ2fw0Nl0GBd"
-        ],
-        "activityTags": [
-          "hiking"
-        ],
-        "whereItIs": [
-          "Hillsdale sits within New Jersey, offering quick access to trailheads, waterfront paths, and local parks.",
-          "Travelers can mix guided tours with self-guided exploration, using Hillsdale as a comfortable launch point for day trips."
-        ],
-        "experiences": {
-          "mountains": "Seek out ridge walks and lookout points just outside Hillsdale.",
-          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Hillsdale.",
-          "desertForest": "Nearby forests and greenways around Hillsdale provide easy escape time in nature.",
-          "cycling": "Bike paths and guided rides offer a relaxed way to explore Hillsdale.",
-          "scenicDrives": "Short scenic drives from Hillsdale reveal overlooks and seasonal color.",
-          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Hillsdale."
-        },
-        "thingsToDo": [
-          "Hike a scenic trail with views around Hillsdale.",
-          "Explore a local park or nature preserve near Hillsdale.",
-          "Catch golden hour at a nearby viewpoint.",
-          "Stroll a waterfront trail or greenway in Hillsdale."
-        ],
-        "toursCopy": [
-          "Plan a half-day tour to get oriented with Hillsdale's outdoor highlights.",
-          "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Hillsdale."
-        ],
-        "weekendItinerary": {
-          "dayOne": [
-            "Morning: grab coffee in Hillsdale and start a guided tour.",
-            "Afternoon: unwind on a waterfront path or shaded trail.",
-            "Evening: explore downtown Hillsdale for dinner."
-          ],
-          "dayTwo": [
-            "Morning: hit a scenic trail or bike path.",
-            "Afternoon: visit a nearby park or market.",
-            "Evening: finish with a sunset viewpoint or easy stroll."
-          ]
-        },
-        "gettingThere": [
-          "Fly or drive into Hillsdale, then use rideshare or a rental car to reach trailheads.",
-          "Many tours depart from central pickup points near downtown Hillsdale."
-        ],
-        "faq": [
-          {
-            "question": "When is the best time to visit Hillsdale?",
-            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Hillsdale."
-          },
-          {
-            "question": "Do I need to book tours in advance?",
-            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
-          }
-        ]
-      },
-      {
         "name": "Fieldsboro",
         "slug": "fieldsboro",
         "stateSlug": "new-jersey",
@@ -2921,12 +2693,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -74.734044,
         "lng": 40.136825,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Fieldsboro.",
-        "intro": "Fieldsboro is a strong basecamp for hiking in New Jersey.",
+        "intro": "Fieldsboro is a strong basecamp for day-adventures in New Jersey.",
         "heroImages": [
           "https://cdn.filestackcontent.com/K3puxUK2RLWFL7WWhhc7"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Fieldsboro sits within New Jersey, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -2949,7 +2721,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Fieldsboro's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Fieldsboro."
+          "Use activity filters to compare day-adventures departures in Fieldsboro."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -2986,13 +2758,13 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Brick Township.",
-        "intro": "Brick Township is a strong basecamp for hiking in New Jersey.",
+        "intro": "Brick Township is a strong basecamp for day-adventures in New Jersey.",
         "heroImages": [
           "https://cdn.filestackcontent.com/TinlW7SACo7YwCBnbiYw",
           "https://cdn.filestackcontent.com/vV5NePjdRqutoMLMkJYA"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Brick Township sits within New Jersey, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -3015,7 +2787,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Brick Township's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Brick Township."
+          "Use activity filters to compare day-adventures departures in Brick Township."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -3052,12 +2824,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Shamong.",
-        "intro": "Shamong is a strong basecamp for hiking in New Jersey.",
+        "intro": "Shamong is a strong basecamp for day-adventures in New Jersey.",
         "heroImages": [
           "https://cdn.filestackcontent.com/FocSmyFaTJuUnvjD4Hht"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Shamong sits within New Jersey, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -3080,7 +2852,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Shamong's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Shamong."
+          "Use activity filters to compare day-adventures departures in Shamong."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -3177,760 +2949,6 @@ export const northeastStates: StateDestination[] = [
     ]
   },
   {
-    "slug": "connecticut",
-    "name": "Connecticut",
-    "description": "Outdoor experiences across Connecticut.",
-    "featuredDescription": "Plan hiking, cycling, and canoeing escapes across Connecticut's Northeast landscapes.",
-    "heroImage": "https://cdn.filestackcontent.com/ufopg11ATw62UvrmAxrV",
-    "region": "Northeast",
-    "intro": "Plan multi-activity getaways across Connecticut with guided tours and local experts.",
-    "longDescription": "Connecticut delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in Connecticut will highlight its local specialties so travelers can book with confidence.",
-    "topRegions": [
-      {
-        "title": "Trail networks",
-        "description": "Find day hikes, scenic lookouts, and local parks across Connecticut."
-      },
-      {
-        "title": "Waterways",
-        "description": "Paddling routes and calm water escapes are easy to reach in Connecticut."
-      },
-      {
-        "title": "Scenic drives",
-        "description": "Short drives from city centers reveal iconic views and seasonal highlights."
-      }
-    ],
-    "cities": [
-      {
-        "name": "Seymour",
-        "slug": "seymour",
-        "stateSlug": "connecticut",
-        "region": "Northeast",
-        "lat": null,
-        "lng": null,
-        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Seymour.",
-        "intro": "Seymour is a strong basecamp for hiking in Connecticut.",
-        "heroImages": [
-          "https://cdn.filestackcontent.com/ufopg11ATw62UvrmAxrV",
-          "https://cdn.filestackcontent.com/Inc3VZ4VTXiZJPG3dTYX",
-          "https://cdn.filestackcontent.com/8wvu4iPKSSmSNUtjsvuq"
-        ],
-        "activityTags": [
-          "hiking"
-        ],
-        "whereItIs": [
-          "Seymour sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
-          "Travelers can mix guided tours with self-guided exploration, using Seymour as a comfortable launch point for day trips."
-        ],
-        "experiences": {
-          "mountains": "Seek out ridge walks and lookout points just outside Seymour.",
-          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Seymour.",
-          "desertForest": "Nearby forests and greenways around Seymour provide easy escape time in nature.",
-          "cycling": "Bike paths and guided rides offer a relaxed way to explore Seymour.",
-          "scenicDrives": "Short scenic drives from Seymour reveal overlooks and seasonal color.",
-          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Seymour."
-        },
-        "thingsToDo": [
-          "Hike a scenic trail with views around Seymour.",
-          "Explore a local park or nature preserve near Seymour.",
-          "Catch golden hour at a nearby viewpoint.",
-          "Stroll a waterfront trail or greenway in Seymour."
-        ],
-        "toursCopy": [
-          "Plan a half-day tour to get oriented with Seymour's outdoor highlights.",
-          "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Seymour."
-        ],
-        "weekendItinerary": {
-          "dayOne": [
-            "Morning: grab coffee in Seymour and start a guided tour.",
-            "Afternoon: unwind on a waterfront path or shaded trail.",
-            "Evening: explore downtown Seymour for dinner."
-          ],
-          "dayTwo": [
-            "Morning: hit a scenic trail or bike path.",
-            "Afternoon: visit a nearby park or market.",
-            "Evening: finish with a sunset viewpoint or easy stroll."
-          ]
-        },
-        "gettingThere": [
-          "Fly or drive into Seymour, then use rideshare or a rental car to reach trailheads.",
-          "Many tours depart from central pickup points near downtown Seymour."
-        ],
-        "faq": [
-          {
-            "question": "When is the best time to visit Seymour?",
-            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Seymour."
-          },
-          {
-            "question": "Do I need to book tours in advance?",
-            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
-          }
-        ]
-      },
-      {
-        "name": "New Milford",
-        "slug": "new-milford",
-        "stateSlug": "connecticut",
-        "region": "Northeast",
-        "lat": -73.408528,
-        "lng": 41.56597,
-        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around New Milford.",
-        "intro": "New Milford is a strong basecamp for hiking in Connecticut.",
-        "heroImages": [
-          "https://cdn.filestackcontent.com/b673gkaBTfGPbp5kndvt",
-          "https://cdn.filestackcontent.com/0KDyog4Tmx2fvFvQOHKQ",
-          "https://cdn.filestackcontent.com/pLeGkpGmRs0tDDyZlBmY"
-        ],
-        "activityTags": [
-          "hiking"
-        ],
-        "whereItIs": [
-          "New Milford sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
-          "Travelers can mix guided tours with self-guided exploration, using New Milford as a comfortable launch point for day trips."
-        ],
-        "experiences": {
-          "mountains": "Seek out ridge walks and lookout points just outside New Milford.",
-          "lakesWater": "Plan a calm-water paddle or lakeside stroll near New Milford.",
-          "desertForest": "Nearby forests and greenways around New Milford provide easy escape time in nature.",
-          "cycling": "Bike paths and guided rides offer a relaxed way to explore New Milford.",
-          "scenicDrives": "Short scenic drives from New Milford reveal overlooks and seasonal color.",
-          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around New Milford."
-        },
-        "thingsToDo": [
-          "Hike a scenic trail with views around New Milford.",
-          "Explore a local park or nature preserve near New Milford.",
-          "Catch golden hour at a nearby viewpoint.",
-          "Stroll a waterfront trail or greenway in New Milford."
-        ],
-        "toursCopy": [
-          "Plan a half-day tour to get oriented with New Milford's outdoor highlights.",
-          "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in New Milford."
-        ],
-        "weekendItinerary": {
-          "dayOne": [
-            "Morning: grab coffee in New Milford and start a guided tour.",
-            "Afternoon: unwind on a waterfront path or shaded trail.",
-            "Evening: explore downtown New Milford for dinner."
-          ],
-          "dayTwo": [
-            "Morning: hit a scenic trail or bike path.",
-            "Afternoon: visit a nearby park or market.",
-            "Evening: finish with a sunset viewpoint or easy stroll."
-          ]
-        },
-        "gettingThere": [
-          "Fly or drive into New Milford, then use rideshare or a rental car to reach trailheads.",
-          "Many tours depart from central pickup points near downtown New Milford."
-        ],
-        "faq": [
-          {
-            "question": "When is the best time to visit New Milford?",
-            "answer": "Late spring through early fall delivers the best weather for outdoor activities in New Milford."
-          },
-          {
-            "question": "Do I need to book tours in advance?",
-            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
-          }
-        ]
-      },
-      {
-        "name": "Plainville",
-        "slug": "plainville",
-        "stateSlug": "connecticut",
-        "region": "Northeast",
-        "lat": -72.86367955555556,
-        "lng": 41.67747577777778,
-        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Plainville.",
-        "intro": "Plainville is a strong basecamp for hiking in Connecticut.",
-        "heroImages": [
-          "https://cdn.filestackcontent.com/Y0EySHfbTMyTlQmHsRwS",
-          "https://cdn.filestackcontent.com/bAJW6B6iRHKpqsoJTPys",
-          "https://cdn.filestackcontent.com/st7KdGYTFiUrKeVbX6Uh"
-        ],
-        "activityTags": [
-          "hiking"
-        ],
-        "whereItIs": [
-          "Plainville sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
-          "Travelers can mix guided tours with self-guided exploration, using Plainville as a comfortable launch point for day trips."
-        ],
-        "experiences": {
-          "mountains": "Seek out ridge walks and lookout points just outside Plainville.",
-          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Plainville.",
-          "desertForest": "Nearby forests and greenways around Plainville provide easy escape time in nature.",
-          "cycling": "Bike paths and guided rides offer a relaxed way to explore Plainville.",
-          "scenicDrives": "Short scenic drives from Plainville reveal overlooks and seasonal color.",
-          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Plainville."
-        },
-        "thingsToDo": [
-          "Hike a scenic trail with views around Plainville.",
-          "Explore a local park or nature preserve near Plainville.",
-          "Catch golden hour at a nearby viewpoint.",
-          "Stroll a waterfront trail or greenway in Plainville."
-        ],
-        "toursCopy": [
-          "Plan a half-day tour to get oriented with Plainville's outdoor highlights.",
-          "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Plainville."
-        ],
-        "weekendItinerary": {
-          "dayOne": [
-            "Morning: grab coffee in Plainville and start a guided tour.",
-            "Afternoon: unwind on a waterfront path or shaded trail.",
-            "Evening: explore downtown Plainville for dinner."
-          ],
-          "dayTwo": [
-            "Morning: hit a scenic trail or bike path.",
-            "Afternoon: visit a nearby park or market.",
-            "Evening: finish with a sunset viewpoint or easy stroll."
-          ]
-        },
-        "gettingThere": [
-          "Fly or drive into Plainville, then use rideshare or a rental car to reach trailheads.",
-          "Many tours depart from central pickup points near downtown Plainville."
-        ],
-        "faq": [
-          {
-            "question": "When is the best time to visit Plainville?",
-            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Plainville."
-          },
-          {
-            "question": "Do I need to book tours in advance?",
-            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
-          }
-        ]
-      },
-      {
-        "name": "Essex",
-        "slug": "essex",
-        "stateSlug": "connecticut",
-        "region": "Northeast",
-        "lat": null,
-        "lng": null,
-        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Essex.",
-        "intro": "Essex is a strong basecamp for hiking in Connecticut.",
-        "heroImages": [
-          "https://cdn.filestackcontent.com/l5E4RGpCQOOoBZveY3zT",
-          "https://cdn.filestackcontent.com/2kaIsU12R5OtM21SFGo9",
-          "https://cdn.filestackcontent.com/F6FYP3uaQlOWkTwSkYST"
-        ],
-        "activityTags": [
-          "hiking"
-        ],
-        "whereItIs": [
-          "Essex sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
-          "Travelers can mix guided tours with self-guided exploration, using Essex as a comfortable launch point for day trips."
-        ],
-        "experiences": {
-          "mountains": "Seek out ridge walks and lookout points just outside Essex.",
-          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Essex.",
-          "desertForest": "Nearby forests and greenways around Essex provide easy escape time in nature.",
-          "cycling": "Bike paths and guided rides offer a relaxed way to explore Essex.",
-          "scenicDrives": "Short scenic drives from Essex reveal overlooks and seasonal color.",
-          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Essex."
-        },
-        "thingsToDo": [
-          "Hike a scenic trail with views around Essex.",
-          "Explore a local park or nature preserve near Essex.",
-          "Catch golden hour at a nearby viewpoint.",
-          "Stroll a waterfront trail or greenway in Essex."
-        ],
-        "toursCopy": [
-          "Plan a half-day tour to get oriented with Essex's outdoor highlights.",
-          "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Essex."
-        ],
-        "weekendItinerary": {
-          "dayOne": [
-            "Morning: grab coffee in Essex and start a guided tour.",
-            "Afternoon: unwind on a waterfront path or shaded trail.",
-            "Evening: explore downtown Essex for dinner."
-          ],
-          "dayTwo": [
-            "Morning: hit a scenic trail or bike path.",
-            "Afternoon: visit a nearby park or market.",
-            "Evening: finish with a sunset viewpoint or easy stroll."
-          ]
-        },
-        "gettingThere": [
-          "Fly or drive into Essex, then use rideshare or a rental car to reach trailheads.",
-          "Many tours depart from central pickup points near downtown Essex."
-        ],
-        "faq": [
-          {
-            "question": "When is the best time to visit Essex?",
-            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Essex."
-          },
-          {
-            "question": "Do I need to book tours in advance?",
-            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
-          }
-        ]
-      },
-      {
-        "name": "Hartford",
-        "slug": "hartford",
-        "stateSlug": "connecticut",
-        "region": "Northeast",
-        "lat": -72.67337199999999,
-        "lng": 41.765804,
-        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Hartford.",
-        "intro": "Hartford is a strong basecamp for hiking in Connecticut.",
-        "heroImages": [
-          "https://cdn.filestackcontent.com/5aDMWPjvT7XWN5CXKdPw",
-          "https://cdn.filestackcontent.com/W567MCqxSZOvhx9rLF6C",
-          "https://cdn.filestackcontent.com/9AeZ1noFTg2Mufcytbbi"
-        ],
-        "activityTags": [
-          "hiking"
-        ],
-        "whereItIs": [
-          "Hartford sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
-          "Travelers can mix guided tours with self-guided exploration, using Hartford as a comfortable launch point for day trips."
-        ],
-        "experiences": {
-          "mountains": "Seek out ridge walks and lookout points just outside Hartford.",
-          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Hartford.",
-          "desertForest": "Nearby forests and greenways around Hartford provide easy escape time in nature.",
-          "cycling": "Bike paths and guided rides offer a relaxed way to explore Hartford.",
-          "scenicDrives": "Short scenic drives from Hartford reveal overlooks and seasonal color.",
-          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Hartford."
-        },
-        "thingsToDo": [
-          "Hike a scenic trail with views around Hartford.",
-          "Explore a local park or nature preserve near Hartford.",
-          "Catch golden hour at a nearby viewpoint.",
-          "Stroll a waterfront trail or greenway in Hartford."
-        ],
-        "toursCopy": [
-          "Plan a half-day tour to get oriented with Hartford's outdoor highlights.",
-          "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Hartford."
-        ],
-        "weekendItinerary": {
-          "dayOne": [
-            "Morning: grab coffee in Hartford and start a guided tour.",
-            "Afternoon: unwind on a waterfront path or shaded trail.",
-            "Evening: explore downtown Hartford for dinner."
-          ],
-          "dayTwo": [
-            "Morning: hit a scenic trail or bike path.",
-            "Afternoon: visit a nearby park or market.",
-            "Evening: finish with a sunset viewpoint or easy stroll."
-          ]
-        },
-        "gettingThere": [
-          "Fly or drive into Hartford, then use rideshare or a rental car to reach trailheads.",
-          "Many tours depart from central pickup points near downtown Hartford."
-        ],
-        "faq": [
-          {
-            "question": "When is the best time to visit Hartford?",
-            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Hartford."
-          },
-          {
-            "question": "Do I need to book tours in advance?",
-            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
-          }
-        ]
-      },
-      {
-        "name": "Wolcott",
-        "slug": "wolcott",
-        "stateSlug": "connecticut",
-        "region": "Northeast",
-        "lat": null,
-        "lng": null,
-        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Wolcott.",
-        "intro": "Wolcott is a strong basecamp for hiking in Connecticut.",
-        "heroImages": [
-          "https://cdn.filestackcontent.com/xyTmGK9Rweq33CIedu0z"
-        ],
-        "activityTags": [
-          "hiking"
-        ],
-        "whereItIs": [
-          "Wolcott sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
-          "Travelers can mix guided tours with self-guided exploration, using Wolcott as a comfortable launch point for day trips."
-        ],
-        "experiences": {
-          "mountains": "Seek out ridge walks and lookout points just outside Wolcott.",
-          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Wolcott.",
-          "desertForest": "Nearby forests and greenways around Wolcott provide easy escape time in nature.",
-          "cycling": "Bike paths and guided rides offer a relaxed way to explore Wolcott.",
-          "scenicDrives": "Short scenic drives from Wolcott reveal overlooks and seasonal color.",
-          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Wolcott."
-        },
-        "thingsToDo": [
-          "Hike a scenic trail with views around Wolcott.",
-          "Explore a local park or nature preserve near Wolcott.",
-          "Catch golden hour at a nearby viewpoint.",
-          "Stroll a waterfront trail or greenway in Wolcott."
-        ],
-        "toursCopy": [
-          "Plan a half-day tour to get oriented with Wolcott's outdoor highlights.",
-          "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Wolcott."
-        ],
-        "weekendItinerary": {
-          "dayOne": [
-            "Morning: grab coffee in Wolcott and start a guided tour.",
-            "Afternoon: unwind on a waterfront path or shaded trail.",
-            "Evening: explore downtown Wolcott for dinner."
-          ],
-          "dayTwo": [
-            "Morning: hit a scenic trail or bike path.",
-            "Afternoon: visit a nearby park or market.",
-            "Evening: finish with a sunset viewpoint or easy stroll."
-          ]
-        },
-        "gettingThere": [
-          "Fly or drive into Wolcott, then use rideshare or a rental car to reach trailheads.",
-          "Many tours depart from central pickup points near downtown Wolcott."
-        ],
-        "faq": [
-          {
-            "question": "When is the best time to visit Wolcott?",
-            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Wolcott."
-          },
-          {
-            "question": "Do I need to book tours in advance?",
-            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
-          }
-        ]
-      },
-      {
-        "name": "Haddam",
-        "slug": "haddam",
-        "stateSlug": "connecticut",
-        "region": "Northeast",
-        "lat": null,
-        "lng": null,
-        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Haddam.",
-        "intro": "Haddam is a strong basecamp for hiking in Connecticut.",
-        "heroImages": [
-          "https://cdn.filestackcontent.com/3rxG6neDQQ2MF4ZeuyGo",
-          "https://cdn.filestackcontent.com/fFCf51okTISpee6UNShj",
-          "https://cdn.filestackcontent.com/ekrpdSizRkGbEKVa1kIa"
-        ],
-        "activityTags": [
-          "hiking"
-        ],
-        "whereItIs": [
-          "Haddam sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
-          "Travelers can mix guided tours with self-guided exploration, using Haddam as a comfortable launch point for day trips."
-        ],
-        "experiences": {
-          "mountains": "Seek out ridge walks and lookout points just outside Haddam.",
-          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Haddam.",
-          "desertForest": "Nearby forests and greenways around Haddam provide easy escape time in nature.",
-          "cycling": "Bike paths and guided rides offer a relaxed way to explore Haddam.",
-          "scenicDrives": "Short scenic drives from Haddam reveal overlooks and seasonal color.",
-          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Haddam."
-        },
-        "thingsToDo": [
-          "Hike a scenic trail with views around Haddam.",
-          "Explore a local park or nature preserve near Haddam.",
-          "Catch golden hour at a nearby viewpoint.",
-          "Stroll a waterfront trail or greenway in Haddam."
-        ],
-        "toursCopy": [
-          "Plan a half-day tour to get oriented with Haddam's outdoor highlights.",
-          "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Haddam."
-        ],
-        "weekendItinerary": {
-          "dayOne": [
-            "Morning: grab coffee in Haddam and start a guided tour.",
-            "Afternoon: unwind on a waterfront path or shaded trail.",
-            "Evening: explore downtown Haddam for dinner."
-          ],
-          "dayTwo": [
-            "Morning: hit a scenic trail or bike path.",
-            "Afternoon: visit a nearby park or market.",
-            "Evening: finish with a sunset viewpoint or easy stroll."
-          ]
-        },
-        "gettingThere": [
-          "Fly or drive into Haddam, then use rideshare or a rental car to reach trailheads.",
-          "Many tours depart from central pickup points near downtown Haddam."
-        ],
-        "faq": [
-          {
-            "question": "When is the best time to visit Haddam?",
-            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Haddam."
-          },
-          {
-            "question": "Do I need to book tours in advance?",
-            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
-          }
-        ]
-      },
-      {
-        "name": "New London",
-        "slug": "new-london",
-        "stateSlug": "connecticut",
-        "region": "Northeast",
-        "lat": null,
-        "lng": null,
-        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around New London.",
-        "intro": "New London is a strong basecamp for hiking in Connecticut.",
-        "heroImages": [
-          "https://cdn.filestackcontent.com/e2GIJ2JAQselWqsNDz8K",
-          "https://cdn.filestackcontent.com/s27q2XhPS9SFq25AGn23"
-        ],
-        "activityTags": [
-          "hiking"
-        ],
-        "whereItIs": [
-          "New London sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
-          "Travelers can mix guided tours with self-guided exploration, using New London as a comfortable launch point for day trips."
-        ],
-        "experiences": {
-          "mountains": "Seek out ridge walks and lookout points just outside New London.",
-          "lakesWater": "Plan a calm-water paddle or lakeside stroll near New London.",
-          "desertForest": "Nearby forests and greenways around New London provide easy escape time in nature.",
-          "cycling": "Bike paths and guided rides offer a relaxed way to explore New London.",
-          "scenicDrives": "Short scenic drives from New London reveal overlooks and seasonal color.",
-          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around New London."
-        },
-        "thingsToDo": [
-          "Hike a scenic trail with views around New London.",
-          "Explore a local park or nature preserve near New London.",
-          "Catch golden hour at a nearby viewpoint.",
-          "Stroll a waterfront trail or greenway in New London."
-        ],
-        "toursCopy": [
-          "Plan a half-day tour to get oriented with New London's outdoor highlights.",
-          "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in New London."
-        ],
-        "weekendItinerary": {
-          "dayOne": [
-            "Morning: grab coffee in New London and start a guided tour.",
-            "Afternoon: unwind on a waterfront path or shaded trail.",
-            "Evening: explore downtown New London for dinner."
-          ],
-          "dayTwo": [
-            "Morning: hit a scenic trail or bike path.",
-            "Afternoon: visit a nearby park or market.",
-            "Evening: finish with a sunset viewpoint or easy stroll."
-          ]
-        },
-        "gettingThere": [
-          "Fly or drive into New London, then use rideshare or a rental car to reach trailheads.",
-          "Many tours depart from central pickup points near downtown New London."
-        ],
-        "faq": [
-          {
-            "question": "When is the best time to visit New London?",
-            "answer": "Late spring through early fall delivers the best weather for outdoor activities in New London."
-          },
-          {
-            "question": "Do I need to book tours in advance?",
-            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
-          }
-        ]
-      },
-      {
-        "name": "East Lyme",
-        "slug": "east-lyme",
-        "stateSlug": "connecticut",
-        "region": "Northeast",
-        "lat": null,
-        "lng": null,
-        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around East Lyme.",
-        "intro": "East Lyme is a strong basecamp for hiking in Connecticut.",
-        "heroImages": [
-          "https://cdn.filestackcontent.com/vfHIhtbNQQWCIziJmIXw"
-        ],
-        "activityTags": [
-          "hiking"
-        ],
-        "whereItIs": [
-          "East Lyme sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
-          "Travelers can mix guided tours with self-guided exploration, using East Lyme as a comfortable launch point for day trips."
-        ],
-        "experiences": {
-          "mountains": "Seek out ridge walks and lookout points just outside East Lyme.",
-          "lakesWater": "Plan a calm-water paddle or lakeside stroll near East Lyme.",
-          "desertForest": "Nearby forests and greenways around East Lyme provide easy escape time in nature.",
-          "cycling": "Bike paths and guided rides offer a relaxed way to explore East Lyme.",
-          "scenicDrives": "Short scenic drives from East Lyme reveal overlooks and seasonal color.",
-          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around East Lyme."
-        },
-        "thingsToDo": [
-          "Hike a scenic trail with views around East Lyme.",
-          "Explore a local park or nature preserve near East Lyme.",
-          "Catch golden hour at a nearby viewpoint.",
-          "Stroll a waterfront trail or greenway in East Lyme."
-        ],
-        "toursCopy": [
-          "Plan a half-day tour to get oriented with East Lyme's outdoor highlights.",
-          "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in East Lyme."
-        ],
-        "weekendItinerary": {
-          "dayOne": [
-            "Morning: grab coffee in East Lyme and start a guided tour.",
-            "Afternoon: unwind on a waterfront path or shaded trail.",
-            "Evening: explore downtown East Lyme for dinner."
-          ],
-          "dayTwo": [
-            "Morning: hit a scenic trail or bike path.",
-            "Afternoon: visit a nearby park or market.",
-            "Evening: finish with a sunset viewpoint or easy stroll."
-          ]
-        },
-        "gettingThere": [
-          "Fly or drive into East Lyme, then use rideshare or a rental car to reach trailheads.",
-          "Many tours depart from central pickup points near downtown East Lyme."
-        ],
-        "faq": [
-          {
-            "question": "When is the best time to visit East Lyme?",
-            "answer": "Late spring through early fall delivers the best weather for outdoor activities in East Lyme."
-          },
-          {
-            "question": "Do I need to book tours in advance?",
-            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
-          }
-        ]
-      },
-      {
-        "name": "Thomaston",
-        "slug": "thomaston",
-        "stateSlug": "connecticut",
-        "region": "Northeast",
-        "lat": null,
-        "lng": null,
-        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Thomaston.",
-        "intro": "Thomaston is a strong basecamp for hiking in Connecticut.",
-        "heroImages": [
-          "https://cdn.filestackcontent.com/WC18wFnjQ2SIJc4rIgvI"
-        ],
-        "activityTags": [
-          "hiking"
-        ],
-        "whereItIs": [
-          "Thomaston sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
-          "Travelers can mix guided tours with self-guided exploration, using Thomaston as a comfortable launch point for day trips."
-        ],
-        "experiences": {
-          "mountains": "Seek out ridge walks and lookout points just outside Thomaston.",
-          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Thomaston.",
-          "desertForest": "Nearby forests and greenways around Thomaston provide easy escape time in nature.",
-          "cycling": "Bike paths and guided rides offer a relaxed way to explore Thomaston.",
-          "scenicDrives": "Short scenic drives from Thomaston reveal overlooks and seasonal color.",
-          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Thomaston."
-        },
-        "thingsToDo": [
-          "Hike a scenic trail with views around Thomaston.",
-          "Explore a local park or nature preserve near Thomaston.",
-          "Catch golden hour at a nearby viewpoint.",
-          "Stroll a waterfront trail or greenway in Thomaston."
-        ],
-        "toursCopy": [
-          "Plan a half-day tour to get oriented with Thomaston's outdoor highlights.",
-          "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Thomaston."
-        ],
-        "weekendItinerary": {
-          "dayOne": [
-            "Morning: grab coffee in Thomaston and start a guided tour.",
-            "Afternoon: unwind on a waterfront path or shaded trail.",
-            "Evening: explore downtown Thomaston for dinner."
-          ],
-          "dayTwo": [
-            "Morning: hit a scenic trail or bike path.",
-            "Afternoon: visit a nearby park or market.",
-            "Evening: finish with a sunset viewpoint or easy stroll."
-          ]
-        },
-        "gettingThere": [
-          "Fly or drive into Thomaston, then use rideshare or a rental car to reach trailheads.",
-          "Many tours depart from central pickup points near downtown Thomaston."
-        ],
-        "faq": [
-          {
-            "question": "When is the best time to visit Thomaston?",
-            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Thomaston."
-          },
-          {
-            "question": "Do I need to book tours in advance?",
-            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
-          }
-        ]
-      },
-      {
-        "name": "Montville",
-        "slug": "montville",
-        "stateSlug": "connecticut",
-        "region": "Northeast",
-        "lat": -72.224359,
-        "lng": 41.432475,
-        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Montville.",
-        "intro": "Montville is a strong basecamp for hiking in Connecticut.",
-        "heroImages": [
-          "https://cdn.filestackcontent.com/jnJA4u3xTrG34opPHfvS"
-        ],
-        "activityTags": [
-          "hiking"
-        ],
-        "whereItIs": [
-          "Montville sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
-          "Travelers can mix guided tours with self-guided exploration, using Montville as a comfortable launch point for day trips."
-        ],
-        "experiences": {
-          "mountains": "Seek out ridge walks and lookout points just outside Montville.",
-          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Montville.",
-          "desertForest": "Nearby forests and greenways around Montville provide easy escape time in nature.",
-          "cycling": "Bike paths and guided rides offer a relaxed way to explore Montville.",
-          "scenicDrives": "Short scenic drives from Montville reveal overlooks and seasonal color.",
-          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Montville."
-        },
-        "thingsToDo": [
-          "Hike a scenic trail with views around Montville.",
-          "Explore a local park or nature preserve near Montville.",
-          "Catch golden hour at a nearby viewpoint.",
-          "Stroll a waterfront trail or greenway in Montville."
-        ],
-        "toursCopy": [
-          "Plan a half-day tour to get oriented with Montville's outdoor highlights.",
-          "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Montville."
-        ],
-        "weekendItinerary": {
-          "dayOne": [
-            "Morning: grab coffee in Montville and start a guided tour.",
-            "Afternoon: unwind on a waterfront path or shaded trail.",
-            "Evening: explore downtown Montville for dinner."
-          ],
-          "dayTwo": [
-            "Morning: hit a scenic trail or bike path.",
-            "Afternoon: visit a nearby park or market.",
-            "Evening: finish with a sunset viewpoint or easy stroll."
-          ]
-        },
-        "gettingThere": [
-          "Fly or drive into Montville, then use rideshare or a rental car to reach trailheads.",
-          "Many tours depart from central pickup points near downtown Montville."
-        ],
-        "faq": [
-          {
-            "question": "When is the best time to visit Montville?",
-            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Montville."
-          },
-          {
-            "question": "Do I need to book tours in advance?",
-            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
-          }
-        ]
-      }
-    ]
-  },
-  {
     "slug": "maine",
     "name": "Maine",
     "description": "Outdoor experiences across Maine.",
@@ -3962,14 +2980,14 @@ export const northeastStates: StateDestination[] = [
         "lat": -70.597229,
         "lng": 43.241329,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Ogunquit.",
-        "intro": "Ogunquit is a strong basecamp for hiking in Maine.",
+        "intro": "Ogunquit is a strong basecamp for day-adventures in Maine.",
         "heroImages": [
           "https://cdn.filestackcontent.com/R5BerKQASjCijJdxZCt7",
           "https://cdn.filestackcontent.com/2CU1VbPVTKaxVNcOqZUV",
           "https://cdn.filestackcontent.com/nG4HG8mUR22a3UobN3AS"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Ogunquit sits within Maine, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -3992,7 +3010,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Ogunquit's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Ogunquit."
+          "Use activity filters to compare day-adventures departures in Ogunquit."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -4029,13 +3047,13 @@ export const northeastStates: StateDestination[] = [
         "lat": -70.252779,
         "lng": 43.6556,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Portland.",
-        "intro": "Portland is a strong basecamp for hiking in Maine.",
+        "intro": "Portland is a strong basecamp for day-adventures in Maine.",
         "heroImages": [
           "https://cdn.filestackcontent.com/wdkWLBH7TSeJgNdKVy3X",
           "https://www.filepicker.io/api/file/ROMi227uR9WOoePlZHvO"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Portland sits within Maine, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -4058,7 +3076,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Portland's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Portland."
+          "Use activity filters to compare day-adventures departures in Portland."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -4095,12 +3113,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Harpswell.",
-        "intro": "Harpswell is a strong basecamp for hiking in Maine.",
+        "intro": "Harpswell is a strong basecamp for day-adventures in Maine.",
         "heroImages": [
           "https://cdn.filestackcontent.com/PMzAf2kuQDq4BQY0gjNX"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Harpswell sits within Maine, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -4123,7 +3141,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Harpswell's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Harpswell."
+          "Use activity filters to compare day-adventures departures in Harpswell."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -4186,12 +3204,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around New Castle.",
-        "intro": "New Castle is a strong basecamp for hiking in New Hampshire.",
+        "intro": "New Castle is a strong basecamp for day-adventures in New Hampshire.",
         "heroImages": [
           "https://cdn.filestackcontent.com/wwWZTiFsRFiXPqVulnVh"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "New Castle sits within New Hampshire, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -4214,7 +3232,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with New Castle's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in New Castle."
+          "Use activity filters to compare day-adventures departures in New Castle."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -4316,13 +3334,13 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Weare.",
-        "intro": "Weare is a strong basecamp for hiking in New Hampshire.",
+        "intro": "Weare is a strong basecamp for day-adventures in New Hampshire.",
         "heroImages": [
           "https://cdn.filestackcontent.com/pmEnmNyJT1WRxjeA9qHS",
           "https://cdn.filestackcontent.com/WyNyRAeiQbqc10PeKUbq"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Weare sits within New Hampshire, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -4345,7 +3363,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Weare's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Weare."
+          "Use activity filters to compare day-adventures departures in Weare."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -4382,12 +3400,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -71.4629853,
         "lng": 43.6101233,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Laconia.",
-        "intro": "Laconia is a strong basecamp for hiking in New Hampshire.",
+        "intro": "Laconia is a strong basecamp for day-adventures in New Hampshire.",
         "heroImages": [
           "https://cdn.filestackcontent.com/pR4xazrMS6OxEzbH6KtK"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Laconia sits within New Hampshire, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -4410,7 +3428,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Laconia's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Laconia."
+          "Use activity filters to compare day-adventures departures in Laconia."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -4447,12 +3465,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -71.21307,
         "lng": 43.5839,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Wolfeboro.",
-        "intro": "Wolfeboro is a strong basecamp for hiking in New Hampshire.",
+        "intro": "Wolfeboro is a strong basecamp for day-adventures in New Hampshire.",
         "heroImages": [
           "https://cdn.filestackcontent.com/qfaxWxxxQGtjy5cILYTg"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Wolfeboro sits within New Hampshire, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -4475,7 +3493,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Wolfeboro's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Wolfeboro."
+          "Use activity filters to compare day-adventures departures in Wolfeboro."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -4497,6 +3515,694 @@ export const northeastStates: StateDestination[] = [
           {
             "question": "When is the best time to visit Wolfeboro?",
             "answer": "Late spring through early fall delivers the best weather for outdoor activities in Wolfeboro."
+          },
+          {
+            "question": "Do I need to book tours in advance?",
+            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "connecticut",
+    "name": "Connecticut",
+    "description": "Outdoor experiences across Connecticut.",
+    "featuredDescription": "Plan hiking, cycling, and canoeing escapes across Connecticut's Northeast landscapes.",
+    "heroImage": "https://cdn.filestackcontent.com/SBrf2k12RnCi7MS4QT4N",
+    "region": "Northeast",
+    "intro": "Plan multi-activity getaways across Connecticut with guided tours and local experts.",
+    "longDescription": "Connecticut delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in Connecticut will highlight its local specialties so travelers can book with confidence.",
+    "topRegions": [
+      {
+        "title": "Trail networks",
+        "description": "Find day hikes, scenic lookouts, and local parks across Connecticut."
+      },
+      {
+        "title": "Waterways",
+        "description": "Paddling routes and calm water escapes are easy to reach in Connecticut."
+      },
+      {
+        "title": "Scenic drives",
+        "description": "Short drives from city centers reveal iconic views and seasonal highlights."
+      }
+    ],
+    "cities": [
+      {
+        "name": "Seymour",
+        "slug": "seymour",
+        "stateSlug": "connecticut",
+        "region": "Northeast",
+        "lat": null,
+        "lng": null,
+        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Seymour.",
+        "intro": "Seymour is a strong basecamp for canoeing, day-adventures in Connecticut.",
+        "heroImages": [
+          "https://cdn.filestackcontent.com/SBrf2k12RnCi7MS4QT4N"
+        ],
+        "activityTags": [
+          "canoeing",
+          "day-adventures"
+        ],
+        "whereItIs": [
+          "Seymour sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
+          "Travelers can mix guided tours with self-guided exploration, using Seymour as a comfortable launch point for day trips."
+        ],
+        "experiences": {
+          "mountains": "Seek out ridge walks and lookout points just outside Seymour.",
+          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Seymour.",
+          "desertForest": "Nearby forests and greenways around Seymour provide easy escape time in nature.",
+          "cycling": "Bike paths and guided rides offer a relaxed way to explore Seymour.",
+          "scenicDrives": "Short scenic drives from Seymour reveal overlooks and seasonal color.",
+          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Seymour."
+        },
+        "thingsToDo": [
+          "Plan a paddle or canoe outing near Seymour.",
+          "Hike a scenic trail with views around Seymour.",
+          "Explore a local park or nature preserve near Seymour.",
+          "Catch golden hour at a nearby viewpoint.",
+          "Stroll a waterfront trail or greenway in Seymour."
+        ],
+        "toursCopy": [
+          "Plan a half-day tour to get oriented with Seymour's outdoor highlights.",
+          "Pair a guided adventure with free time for local food and neighborhoods.",
+          "Use activity filters to compare canoeing, day-adventures departures in Seymour."
+        ],
+        "weekendItinerary": {
+          "dayOne": [
+            "Morning: grab coffee in Seymour and start a guided tour.",
+            "Afternoon: unwind on a waterfront path or shaded trail.",
+            "Evening: explore downtown Seymour for dinner."
+          ],
+          "dayTwo": [
+            "Morning: hit a scenic trail or bike path.",
+            "Afternoon: visit a nearby park or market.",
+            "Evening: finish with a sunset viewpoint or easy stroll."
+          ]
+        },
+        "gettingThere": [
+          "Fly or drive into Seymour, then use rideshare or a rental car to reach trailheads.",
+          "Many tours depart from central pickup points near downtown Seymour."
+        ],
+        "faq": [
+          {
+            "question": "When is the best time to visit Seymour?",
+            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Seymour."
+          },
+          {
+            "question": "Do I need to book tours in advance?",
+            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
+          }
+        ]
+      },
+      {
+        "name": "New Milford",
+        "slug": "new-milford",
+        "stateSlug": "connecticut",
+        "region": "Northeast",
+        "lat": -73.408528,
+        "lng": 41.56597,
+        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around New Milford.",
+        "intro": "New Milford is a strong basecamp for day-adventures in Connecticut.",
+        "heroImages": [
+          "https://cdn.filestackcontent.com/b673gkaBTfGPbp5kndvt",
+          "https://cdn.filestackcontent.com/0KDyog4Tmx2fvFvQOHKQ",
+          "https://cdn.filestackcontent.com/pLeGkpGmRs0tDDyZlBmY"
+        ],
+        "activityTags": [
+          "day-adventures"
+        ],
+        "whereItIs": [
+          "New Milford sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
+          "Travelers can mix guided tours with self-guided exploration, using New Milford as a comfortable launch point for day trips."
+        ],
+        "experiences": {
+          "mountains": "Seek out ridge walks and lookout points just outside New Milford.",
+          "lakesWater": "Plan a calm-water paddle or lakeside stroll near New Milford.",
+          "desertForest": "Nearby forests and greenways around New Milford provide easy escape time in nature.",
+          "cycling": "Bike paths and guided rides offer a relaxed way to explore New Milford.",
+          "scenicDrives": "Short scenic drives from New Milford reveal overlooks and seasonal color.",
+          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around New Milford."
+        },
+        "thingsToDo": [
+          "Hike a scenic trail with views around New Milford.",
+          "Explore a local park or nature preserve near New Milford.",
+          "Catch golden hour at a nearby viewpoint.",
+          "Stroll a waterfront trail or greenway in New Milford."
+        ],
+        "toursCopy": [
+          "Plan a half-day tour to get oriented with New Milford's outdoor highlights.",
+          "Pair a guided adventure with free time for local food and neighborhoods.",
+          "Use activity filters to compare day-adventures departures in New Milford."
+        ],
+        "weekendItinerary": {
+          "dayOne": [
+            "Morning: grab coffee in New Milford and start a guided tour.",
+            "Afternoon: unwind on a waterfront path or shaded trail.",
+            "Evening: explore downtown New Milford for dinner."
+          ],
+          "dayTwo": [
+            "Morning: hit a scenic trail or bike path.",
+            "Afternoon: visit a nearby park or market.",
+            "Evening: finish with a sunset viewpoint or easy stroll."
+          ]
+        },
+        "gettingThere": [
+          "Fly or drive into New Milford, then use rideshare or a rental car to reach trailheads.",
+          "Many tours depart from central pickup points near downtown New Milford."
+        ],
+        "faq": [
+          {
+            "question": "When is the best time to visit New Milford?",
+            "answer": "Late spring through early fall delivers the best weather for outdoor activities in New Milford."
+          },
+          {
+            "question": "Do I need to book tours in advance?",
+            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
+          }
+        ]
+      },
+      {
+        "name": "Plainville",
+        "slug": "plainville",
+        "stateSlug": "connecticut",
+        "region": "Northeast",
+        "lat": -72.866212,
+        "lng": 41.691314,
+        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Plainville.",
+        "intro": "Plainville is a strong basecamp for day-adventures in Connecticut.",
+        "heroImages": [
+          "https://cdn.filestackcontent.com/Y0EySHfbTMyTlQmHsRwS"
+        ],
+        "activityTags": [
+          "day-adventures"
+        ],
+        "whereItIs": [
+          "Plainville sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
+          "Travelers can mix guided tours with self-guided exploration, using Plainville as a comfortable launch point for day trips."
+        ],
+        "experiences": {
+          "mountains": "Seek out ridge walks and lookout points just outside Plainville.",
+          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Plainville.",
+          "desertForest": "Nearby forests and greenways around Plainville provide easy escape time in nature.",
+          "cycling": "Bike paths and guided rides offer a relaxed way to explore Plainville.",
+          "scenicDrives": "Short scenic drives from Plainville reveal overlooks and seasonal color.",
+          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Plainville."
+        },
+        "thingsToDo": [
+          "Hike a scenic trail with views around Plainville.",
+          "Explore a local park or nature preserve near Plainville.",
+          "Catch golden hour at a nearby viewpoint.",
+          "Stroll a waterfront trail or greenway in Plainville."
+        ],
+        "toursCopy": [
+          "Plan a half-day tour to get oriented with Plainville's outdoor highlights.",
+          "Pair a guided adventure with free time for local food and neighborhoods.",
+          "Use activity filters to compare day-adventures departures in Plainville."
+        ],
+        "weekendItinerary": {
+          "dayOne": [
+            "Morning: grab coffee in Plainville and start a guided tour.",
+            "Afternoon: unwind on a waterfront path or shaded trail.",
+            "Evening: explore downtown Plainville for dinner."
+          ],
+          "dayTwo": [
+            "Morning: hit a scenic trail or bike path.",
+            "Afternoon: visit a nearby park or market.",
+            "Evening: finish with a sunset viewpoint or easy stroll."
+          ]
+        },
+        "gettingThere": [
+          "Fly or drive into Plainville, then use rideshare or a rental car to reach trailheads.",
+          "Many tours depart from central pickup points near downtown Plainville."
+        ],
+        "faq": [
+          {
+            "question": "When is the best time to visit Plainville?",
+            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Plainville."
+          },
+          {
+            "question": "Do I need to book tours in advance?",
+            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
+          }
+        ]
+      },
+      {
+        "name": "Essex",
+        "slug": "essex",
+        "stateSlug": "connecticut",
+        "region": "Northeast",
+        "lat": null,
+        "lng": null,
+        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Essex.",
+        "intro": "Essex is a strong basecamp for day-adventures, hiking, canoeing in Connecticut.",
+        "heroImages": [
+          "https://cdn.filestackcontent.com/l5E4RGpCQOOoBZveY3zT",
+          "https://cdn.filestackcontent.com/2kaIsU12R5OtM21SFGo9",
+          "https://cdn.filestackcontent.com/F6FYP3uaQlOWkTwSkYST"
+        ],
+        "activityTags": [
+          "day-adventures",
+          "hiking",
+          "canoeing"
+        ],
+        "whereItIs": [
+          "Essex sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
+          "Travelers can mix guided tours with self-guided exploration, using Essex as a comfortable launch point for day trips."
+        ],
+        "experiences": {
+          "mountains": "Seek out ridge walks and lookout points just outside Essex.",
+          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Essex.",
+          "desertForest": "Nearby forests and greenways around Essex provide easy escape time in nature.",
+          "cycling": "Bike paths and guided rides offer a relaxed way to explore Essex.",
+          "scenicDrives": "Short scenic drives from Essex reveal overlooks and seasonal color.",
+          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Essex."
+        },
+        "thingsToDo": [
+          "Hike a scenic trail with views around Essex.",
+          "Plan a paddle or canoe outing near Essex.",
+          "Explore a local park or nature preserve near Essex.",
+          "Catch golden hour at a nearby viewpoint.",
+          "Stroll a waterfront trail or greenway in Essex."
+        ],
+        "toursCopy": [
+          "Plan a half-day tour to get oriented with Essex's outdoor highlights.",
+          "Pair a guided adventure with free time for local food and neighborhoods.",
+          "Use activity filters to compare day-adventures, hiking, canoeing departures in Essex."
+        ],
+        "weekendItinerary": {
+          "dayOne": [
+            "Morning: grab coffee in Essex and start a guided tour.",
+            "Afternoon: unwind on a waterfront path or shaded trail.",
+            "Evening: explore downtown Essex for dinner."
+          ],
+          "dayTwo": [
+            "Morning: hit a scenic trail or bike path.",
+            "Afternoon: visit a nearby park or market.",
+            "Evening: finish with a sunset viewpoint or easy stroll."
+          ]
+        },
+        "gettingThere": [
+          "Fly or drive into Essex, then use rideshare or a rental car to reach trailheads.",
+          "Many tours depart from central pickup points near downtown Essex."
+        ],
+        "faq": [
+          {
+            "question": "When is the best time to visit Essex?",
+            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Essex."
+          },
+          {
+            "question": "Do I need to book tours in advance?",
+            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
+          }
+        ]
+      },
+      {
+        "name": "Wolcott",
+        "slug": "wolcott",
+        "stateSlug": "connecticut",
+        "region": "Northeast",
+        "lat": null,
+        "lng": null,
+        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Wolcott.",
+        "intro": "Wolcott is a strong basecamp for day-adventures in Connecticut.",
+        "heroImages": [
+          "https://cdn.filestackcontent.com/xyTmGK9Rweq33CIedu0z"
+        ],
+        "activityTags": [
+          "day-adventures"
+        ],
+        "whereItIs": [
+          "Wolcott sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
+          "Travelers can mix guided tours with self-guided exploration, using Wolcott as a comfortable launch point for day trips."
+        ],
+        "experiences": {
+          "mountains": "Seek out ridge walks and lookout points just outside Wolcott.",
+          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Wolcott.",
+          "desertForest": "Nearby forests and greenways around Wolcott provide easy escape time in nature.",
+          "cycling": "Bike paths and guided rides offer a relaxed way to explore Wolcott.",
+          "scenicDrives": "Short scenic drives from Wolcott reveal overlooks and seasonal color.",
+          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Wolcott."
+        },
+        "thingsToDo": [
+          "Hike a scenic trail with views around Wolcott.",
+          "Explore a local park or nature preserve near Wolcott.",
+          "Catch golden hour at a nearby viewpoint.",
+          "Stroll a waterfront trail or greenway in Wolcott."
+        ],
+        "toursCopy": [
+          "Plan a half-day tour to get oriented with Wolcott's outdoor highlights.",
+          "Pair a guided adventure with free time for local food and neighborhoods.",
+          "Use activity filters to compare day-adventures departures in Wolcott."
+        ],
+        "weekendItinerary": {
+          "dayOne": [
+            "Morning: grab coffee in Wolcott and start a guided tour.",
+            "Afternoon: unwind on a waterfront path or shaded trail.",
+            "Evening: explore downtown Wolcott for dinner."
+          ],
+          "dayTwo": [
+            "Morning: hit a scenic trail or bike path.",
+            "Afternoon: visit a nearby park or market.",
+            "Evening: finish with a sunset viewpoint or easy stroll."
+          ]
+        },
+        "gettingThere": [
+          "Fly or drive into Wolcott, then use rideshare or a rental car to reach trailheads.",
+          "Many tours depart from central pickup points near downtown Wolcott."
+        ],
+        "faq": [
+          {
+            "question": "When is the best time to visit Wolcott?",
+            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Wolcott."
+          },
+          {
+            "question": "Do I need to book tours in advance?",
+            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
+          }
+        ]
+      },
+      {
+        "name": "Haddam",
+        "slug": "haddam",
+        "stateSlug": "connecticut",
+        "region": "Northeast",
+        "lat": null,
+        "lng": null,
+        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Haddam.",
+        "intro": "Haddam is a strong basecamp for day-adventures in Connecticut.",
+        "heroImages": [
+          "https://cdn.filestackcontent.com/3rxG6neDQQ2MF4ZeuyGo",
+          "https://cdn.filestackcontent.com/fFCf51okTISpee6UNShj",
+          "https://cdn.filestackcontent.com/ekrpdSizRkGbEKVa1kIa"
+        ],
+        "activityTags": [
+          "day-adventures"
+        ],
+        "whereItIs": [
+          "Haddam sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
+          "Travelers can mix guided tours with self-guided exploration, using Haddam as a comfortable launch point for day trips."
+        ],
+        "experiences": {
+          "mountains": "Seek out ridge walks and lookout points just outside Haddam.",
+          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Haddam.",
+          "desertForest": "Nearby forests and greenways around Haddam provide easy escape time in nature.",
+          "cycling": "Bike paths and guided rides offer a relaxed way to explore Haddam.",
+          "scenicDrives": "Short scenic drives from Haddam reveal overlooks and seasonal color.",
+          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Haddam."
+        },
+        "thingsToDo": [
+          "Hike a scenic trail with views around Haddam.",
+          "Explore a local park or nature preserve near Haddam.",
+          "Catch golden hour at a nearby viewpoint.",
+          "Stroll a waterfront trail or greenway in Haddam."
+        ],
+        "toursCopy": [
+          "Plan a half-day tour to get oriented with Haddam's outdoor highlights.",
+          "Pair a guided adventure with free time for local food and neighborhoods.",
+          "Use activity filters to compare day-adventures departures in Haddam."
+        ],
+        "weekendItinerary": {
+          "dayOne": [
+            "Morning: grab coffee in Haddam and start a guided tour.",
+            "Afternoon: unwind on a waterfront path or shaded trail.",
+            "Evening: explore downtown Haddam for dinner."
+          ],
+          "dayTwo": [
+            "Morning: hit a scenic trail or bike path.",
+            "Afternoon: visit a nearby park or market.",
+            "Evening: finish with a sunset viewpoint or easy stroll."
+          ]
+        },
+        "gettingThere": [
+          "Fly or drive into Haddam, then use rideshare or a rental car to reach trailheads.",
+          "Many tours depart from central pickup points near downtown Haddam."
+        ],
+        "faq": [
+          {
+            "question": "When is the best time to visit Haddam?",
+            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Haddam."
+          },
+          {
+            "question": "Do I need to book tours in advance?",
+            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
+          }
+        ]
+      },
+      {
+        "name": "New London",
+        "slug": "new-london",
+        "stateSlug": "connecticut",
+        "region": "Northeast",
+        "lat": null,
+        "lng": null,
+        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around New London.",
+        "intro": "New London is a strong basecamp for day-adventures in Connecticut.",
+        "heroImages": [
+          "https://cdn.filestackcontent.com/e2GIJ2JAQselWqsNDz8K",
+          "https://cdn.filestackcontent.com/s27q2XhPS9SFq25AGn23"
+        ],
+        "activityTags": [
+          "day-adventures"
+        ],
+        "whereItIs": [
+          "New London sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
+          "Travelers can mix guided tours with self-guided exploration, using New London as a comfortable launch point for day trips."
+        ],
+        "experiences": {
+          "mountains": "Seek out ridge walks and lookout points just outside New London.",
+          "lakesWater": "Plan a calm-water paddle or lakeside stroll near New London.",
+          "desertForest": "Nearby forests and greenways around New London provide easy escape time in nature.",
+          "cycling": "Bike paths and guided rides offer a relaxed way to explore New London.",
+          "scenicDrives": "Short scenic drives from New London reveal overlooks and seasonal color.",
+          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around New London."
+        },
+        "thingsToDo": [
+          "Hike a scenic trail with views around New London.",
+          "Explore a local park or nature preserve near New London.",
+          "Catch golden hour at a nearby viewpoint.",
+          "Stroll a waterfront trail or greenway in New London."
+        ],
+        "toursCopy": [
+          "Plan a half-day tour to get oriented with New London's outdoor highlights.",
+          "Pair a guided adventure with free time for local food and neighborhoods.",
+          "Use activity filters to compare day-adventures departures in New London."
+        ],
+        "weekendItinerary": {
+          "dayOne": [
+            "Morning: grab coffee in New London and start a guided tour.",
+            "Afternoon: unwind on a waterfront path or shaded trail.",
+            "Evening: explore downtown New London for dinner."
+          ],
+          "dayTwo": [
+            "Morning: hit a scenic trail or bike path.",
+            "Afternoon: visit a nearby park or market.",
+            "Evening: finish with a sunset viewpoint or easy stroll."
+          ]
+        },
+        "gettingThere": [
+          "Fly or drive into New London, then use rideshare or a rental car to reach trailheads.",
+          "Many tours depart from central pickup points near downtown New London."
+        ],
+        "faq": [
+          {
+            "question": "When is the best time to visit New London?",
+            "answer": "Late spring through early fall delivers the best weather for outdoor activities in New London."
+          },
+          {
+            "question": "Do I need to book tours in advance?",
+            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
+          }
+        ]
+      },
+      {
+        "name": "East Lyme",
+        "slug": "east-lyme",
+        "stateSlug": "connecticut",
+        "region": "Northeast",
+        "lat": null,
+        "lng": null,
+        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around East Lyme.",
+        "intro": "East Lyme is a strong basecamp for day-adventures in Connecticut.",
+        "heroImages": [
+          "https://cdn.filestackcontent.com/vfHIhtbNQQWCIziJmIXw"
+        ],
+        "activityTags": [
+          "day-adventures"
+        ],
+        "whereItIs": [
+          "East Lyme sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
+          "Travelers can mix guided tours with self-guided exploration, using East Lyme as a comfortable launch point for day trips."
+        ],
+        "experiences": {
+          "mountains": "Seek out ridge walks and lookout points just outside East Lyme.",
+          "lakesWater": "Plan a calm-water paddle or lakeside stroll near East Lyme.",
+          "desertForest": "Nearby forests and greenways around East Lyme provide easy escape time in nature.",
+          "cycling": "Bike paths and guided rides offer a relaxed way to explore East Lyme.",
+          "scenicDrives": "Short scenic drives from East Lyme reveal overlooks and seasonal color.",
+          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around East Lyme."
+        },
+        "thingsToDo": [
+          "Hike a scenic trail with views around East Lyme.",
+          "Explore a local park or nature preserve near East Lyme.",
+          "Catch golden hour at a nearby viewpoint.",
+          "Stroll a waterfront trail or greenway in East Lyme."
+        ],
+        "toursCopy": [
+          "Plan a half-day tour to get oriented with East Lyme's outdoor highlights.",
+          "Pair a guided adventure with free time for local food and neighborhoods.",
+          "Use activity filters to compare day-adventures departures in East Lyme."
+        ],
+        "weekendItinerary": {
+          "dayOne": [
+            "Morning: grab coffee in East Lyme and start a guided tour.",
+            "Afternoon: unwind on a waterfront path or shaded trail.",
+            "Evening: explore downtown East Lyme for dinner."
+          ],
+          "dayTwo": [
+            "Morning: hit a scenic trail or bike path.",
+            "Afternoon: visit a nearby park or market.",
+            "Evening: finish with a sunset viewpoint or easy stroll."
+          ]
+        },
+        "gettingThere": [
+          "Fly or drive into East Lyme, then use rideshare or a rental car to reach trailheads.",
+          "Many tours depart from central pickup points near downtown East Lyme."
+        ],
+        "faq": [
+          {
+            "question": "When is the best time to visit East Lyme?",
+            "answer": "Late spring through early fall delivers the best weather for outdoor activities in East Lyme."
+          },
+          {
+            "question": "Do I need to book tours in advance?",
+            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
+          }
+        ]
+      },
+      {
+        "name": "Thomaston",
+        "slug": "thomaston",
+        "stateSlug": "connecticut",
+        "region": "Northeast",
+        "lat": null,
+        "lng": null,
+        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Thomaston.",
+        "intro": "Thomaston is a strong basecamp for day-adventures in Connecticut.",
+        "heroImages": [
+          "https://cdn.filestackcontent.com/WC18wFnjQ2SIJc4rIgvI"
+        ],
+        "activityTags": [
+          "day-adventures"
+        ],
+        "whereItIs": [
+          "Thomaston sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
+          "Travelers can mix guided tours with self-guided exploration, using Thomaston as a comfortable launch point for day trips."
+        ],
+        "experiences": {
+          "mountains": "Seek out ridge walks and lookout points just outside Thomaston.",
+          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Thomaston.",
+          "desertForest": "Nearby forests and greenways around Thomaston provide easy escape time in nature.",
+          "cycling": "Bike paths and guided rides offer a relaxed way to explore Thomaston.",
+          "scenicDrives": "Short scenic drives from Thomaston reveal overlooks and seasonal color.",
+          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Thomaston."
+        },
+        "thingsToDo": [
+          "Hike a scenic trail with views around Thomaston.",
+          "Explore a local park or nature preserve near Thomaston.",
+          "Catch golden hour at a nearby viewpoint.",
+          "Stroll a waterfront trail or greenway in Thomaston."
+        ],
+        "toursCopy": [
+          "Plan a half-day tour to get oriented with Thomaston's outdoor highlights.",
+          "Pair a guided adventure with free time for local food and neighborhoods.",
+          "Use activity filters to compare day-adventures departures in Thomaston."
+        ],
+        "weekendItinerary": {
+          "dayOne": [
+            "Morning: grab coffee in Thomaston and start a guided tour.",
+            "Afternoon: unwind on a waterfront path or shaded trail.",
+            "Evening: explore downtown Thomaston for dinner."
+          ],
+          "dayTwo": [
+            "Morning: hit a scenic trail or bike path.",
+            "Afternoon: visit a nearby park or market.",
+            "Evening: finish with a sunset viewpoint or easy stroll."
+          ]
+        },
+        "gettingThere": [
+          "Fly or drive into Thomaston, then use rideshare or a rental car to reach trailheads.",
+          "Many tours depart from central pickup points near downtown Thomaston."
+        ],
+        "faq": [
+          {
+            "question": "When is the best time to visit Thomaston?",
+            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Thomaston."
+          },
+          {
+            "question": "Do I need to book tours in advance?",
+            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
+          }
+        ]
+      },
+      {
+        "name": "Montville",
+        "slug": "montville",
+        "stateSlug": "connecticut",
+        "region": "Northeast",
+        "lat": -72.224359,
+        "lng": 41.432475,
+        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Montville.",
+        "intro": "Montville is a strong basecamp for day-adventures in Connecticut.",
+        "heroImages": [
+          "https://cdn.filestackcontent.com/jnJA4u3xTrG34opPHfvS"
+        ],
+        "activityTags": [
+          "day-adventures"
+        ],
+        "whereItIs": [
+          "Montville sits within Connecticut, offering quick access to trailheads, waterfront paths, and local parks.",
+          "Travelers can mix guided tours with self-guided exploration, using Montville as a comfortable launch point for day trips."
+        ],
+        "experiences": {
+          "mountains": "Seek out ridge walks and lookout points just outside Montville.",
+          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Montville.",
+          "desertForest": "Nearby forests and greenways around Montville provide easy escape time in nature.",
+          "cycling": "Bike paths and guided rides offer a relaxed way to explore Montville.",
+          "scenicDrives": "Short scenic drives from Montville reveal overlooks and seasonal color.",
+          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Montville."
+        },
+        "thingsToDo": [
+          "Hike a scenic trail with views around Montville.",
+          "Explore a local park or nature preserve near Montville.",
+          "Catch golden hour at a nearby viewpoint.",
+          "Stroll a waterfront trail or greenway in Montville."
+        ],
+        "toursCopy": [
+          "Plan a half-day tour to get oriented with Montville's outdoor highlights.",
+          "Pair a guided adventure with free time for local food and neighborhoods.",
+          "Use activity filters to compare day-adventures departures in Montville."
+        ],
+        "weekendItinerary": {
+          "dayOne": [
+            "Morning: grab coffee in Montville and start a guided tour.",
+            "Afternoon: unwind on a waterfront path or shaded trail.",
+            "Evening: explore downtown Montville for dinner."
+          ],
+          "dayTwo": [
+            "Morning: hit a scenic trail or bike path.",
+            "Afternoon: visit a nearby park or market.",
+            "Evening: finish with a sunset viewpoint or easy stroll."
+          ]
+        },
+        "gettingThere": [
+          "Fly or drive into Montville, then use rideshare or a rental car to reach trailheads.",
+          "Many tours depart from central pickup points near downtown Montville."
+        ],
+        "faq": [
+          {
+            "question": "When is the best time to visit Montville?",
+            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Montville."
           },
           {
             "question": "Do I need to book tours in advance?",
@@ -4538,14 +4244,14 @@ export const northeastStates: StateDestination[] = [
         "lat": -75.07762566666666,
         "lng": 38.357751666666665,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Ocean City.",
-        "intro": "Ocean City is a strong basecamp for hiking, canoeing in Maryland.",
+        "intro": "Ocean City is a strong basecamp for day-adventures, canoeing in Maryland.",
         "heroImages": [
           "https://cdn.filestackcontent.com/wS6OwdypSJeGv4b8W9Uy",
           "https://cdn.filestackcontent.com/eE1B5PXjRibxiVOcUKNs",
           "https://cdn.filestackcontent.com/2iwH0NKRuSofZ895o9So"
         ],
         "activityTags": [
-          "hiking",
+          "day-adventures",
           "canoeing"
         ],
         "whereItIs": [
@@ -4570,7 +4276,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Ocean City's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking, canoeing departures in Ocean City."
+          "Use activity filters to compare day-adventures, canoeing departures in Ocean City."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -4607,14 +4313,15 @@ export const northeastStates: StateDestination[] = [
         "lat": -76.614927,
         "lng": 39.177407,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Glen Burnie.",
-        "intro": "Glen Burnie is a strong basecamp for hiking in Maryland.",
+        "intro": "Glen Burnie is a strong basecamp for day-adventures, canoeing in Maryland.",
         "heroImages": [
           "https://cdn.filestackcontent.com/UIUFtouQHCvLnhuYElmJ",
           "https://cdn.filestackcontent.com/XsX6mNTHRR3oHco9vTCw",
           "https://cdn.filestackcontent.com/VYWQTYbFRwO74F7DU1gx"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures",
+          "canoeing"
         ],
         "whereItIs": [
           "Glen Burnie sits within Maryland, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -4630,6 +4337,7 @@ export const northeastStates: StateDestination[] = [
         },
         "thingsToDo": [
           "Hike a scenic trail with views around Glen Burnie.",
+          "Plan a paddle or canoe outing near Glen Burnie.",
           "Explore a local park or nature preserve near Glen Burnie.",
           "Catch golden hour at a nearby viewpoint.",
           "Stroll a waterfront trail or greenway in Glen Burnie."
@@ -4637,7 +4345,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Glen Burnie's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Glen Burnie."
+          "Use activity filters to compare day-adventures, canoeing departures in Glen Burnie."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -4674,14 +4382,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Cumberland.",
-        "intro": "Cumberland is a strong basecamp for hiking in Maryland.",
+        "intro": "Cumberland is a strong basecamp for day-adventures in Maryland.",
         "heroImages": [
           "https://cdn.filestackcontent.com/8PPtKDSSSuu4pI8ZIdNR",
           "https://cdn.filestackcontent.com/JREs3MNTHqkBrQ6nv0Be",
           "https://cdn.filestackcontent.com/cqqtZqVMSnK2p1zvuiFI"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Cumberland sits within Maryland, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -4704,7 +4412,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Cumberland's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Cumberland."
+          "Use activity filters to compare day-adventures departures in Cumberland."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -4741,14 +4449,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Edgewater.",
-        "intro": "Edgewater is a strong basecamp for hiking in Maryland.",
+        "intro": "Edgewater is a strong basecamp for day-adventures in Maryland.",
         "heroImages": [
           "https://cdn.filestackcontent.com/lD9aLgs8QGOR7h17YNkN",
           "https://cdn.filestackcontent.com/0HT5qGmRde21JHhzi9Dg",
           "https://cdn.filestackcontent.com/N41dLdjsSdaqlbAoofWt"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Edgewater sits within Maryland, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -4771,7 +4479,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Edgewater's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Edgewater."
+          "Use activity filters to compare day-adventures departures in Edgewater."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -4808,12 +4516,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Denton.",
-        "intro": "Denton is a strong basecamp for hiking in Maryland.",
+        "intro": "Denton is a strong basecamp for day-adventures in Maryland.",
         "heroImages": [
           "https://cdn.filestackcontent.com/wdoQecrITB6pJpxUaLXo"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Denton sits within Maryland, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -4836,7 +4544,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Denton's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Denton."
+          "Use activity filters to compare day-adventures departures in Denton."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -4873,13 +4581,14 @@ export const northeastStates: StateDestination[] = [
         "lat": -76.5767595,
         "lng": 39.2790875,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Baltimore.",
-        "intro": "Baltimore is a strong basecamp for hiking in Maryland.",
+        "intro": "Baltimore is a strong basecamp for day-adventures, hiking in Maryland.",
         "heroImages": [
           "https://cdn.filestackcontent.com/XnRkRr6xSP60EzqS2kkI",
           "https://cdn.filestackcontent.com/9nCVXxgT1WG3XowvdnuQ",
           "https://cdn.filestackcontent.com/cynPlaOlTya0YoBaox2j"
         ],
         "activityTags": [
+          "day-adventures",
           "hiking"
         ],
         "whereItIs": [
@@ -4903,7 +4612,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Baltimore's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Baltimore."
+          "Use activity filters to compare day-adventures, hiking departures in Baltimore."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -4940,14 +4649,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Lusby.",
-        "intro": "Lusby is a strong basecamp for hiking, canoeing in Maryland.",
+        "intro": "Lusby is a strong basecamp for day-adventures, canoeing in Maryland.",
         "heroImages": [
           "https://cdn.filestackcontent.com/93pHi4t0QkyIWCwNJf4U",
           "https://cdn.filestackcontent.com/lM4ipwtgQy6OmBVMiq5X",
           "https://cdn.filestackcontent.com/10YEXGUCQhb4p5KxgDwC"
         ],
         "activityTags": [
-          "hiking",
+          "day-adventures",
           "canoeing"
         ],
         "whereItIs": [
@@ -4972,7 +4681,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Lusby's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking, canoeing departures in Lusby."
+          "Use activity filters to compare day-adventures, canoeing departures in Lusby."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5009,12 +4718,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Monkton.",
-        "intro": "Monkton is a strong basecamp for hiking in Maryland.",
+        "intro": "Monkton is a strong basecamp for day-adventures in Maryland.",
         "heroImages": [
           "https://cdn.filestackcontent.com/65Xm3uK3RbWw88Xpk5P1"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Monkton sits within Maryland, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -5037,7 +4746,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Monkton's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Monkton."
+          "Use activity filters to compare day-adventures departures in Monkton."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5074,14 +4783,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Fort Washington.",
-        "intro": "Fort Washington is a strong basecamp for hiking in Maryland.",
+        "intro": "Fort Washington is a strong basecamp for day-adventures in Maryland.",
         "heroImages": [
           "https://cdn.filestackcontent.com/iDcjaedYSXyGJ08I3BpI",
           "https://cdn.filestackcontent.com/KPg2UiBSTZmSuT52auDH",
           "https://cdn.filestackcontent.com/Eg5WSfdiRyCpmcsbZrnZ"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Fort Washington sits within Maryland, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -5104,7 +4813,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Fort Washington's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Fort Washington."
+          "Use activity filters to compare day-adventures departures in Fort Washington."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5167,14 +4876,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Airville.",
-        "intro": "Airville is a strong basecamp for hiking in Pennsylvania.",
+        "intro": "Airville is a strong basecamp for day-adventures in Pennsylvania.",
         "heroImages": [
           "https://cdn.filestackcontent.com/S2hjpM09R3aXwmJ56f7W",
           "https://cdn.filestackcontent.com/NdvQBSr2QCS9N17RA0mn",
           "https://cdn.filestackcontent.com/5afu9QwGQLidKmDBdM56"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Airville sits within Pennsylvania, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -5197,7 +4906,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Airville's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Airville."
+          "Use activity filters to compare day-adventures departures in Airville."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5234,12 +4943,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -76.496498,
         "lng": 39.977641,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Wrightsville.",
-        "intro": "Wrightsville is a strong basecamp for hiking in Pennsylvania.",
+        "intro": "Wrightsville is a strong basecamp for day-adventures in Pennsylvania.",
         "heroImages": [
           "https://cdn.filestackcontent.com/FmWeRUWrQWmhx3sUGDNw"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Wrightsville sits within Pennsylvania, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -5262,7 +4971,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Wrightsville's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Wrightsville."
+          "Use activity filters to compare day-adventures departures in Wrightsville."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5299,12 +5008,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -75.356927,
         "lng": 40.614087,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Bethlehem.",
-        "intro": "Bethlehem is a strong basecamp for hiking in Pennsylvania.",
+        "intro": "Bethlehem is a strong basecamp for day-adventures in Pennsylvania.",
         "heroImages": [
           ""
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Bethlehem sits within Pennsylvania, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -5327,7 +5036,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Bethlehem's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Bethlehem."
+          "Use activity filters to compare day-adventures departures in Bethlehem."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5364,12 +5073,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -74.839758,
         "lng": 40.160578,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Levittown.",
-        "intro": "Levittown is a strong basecamp for hiking in Pennsylvania.",
+        "intro": "Levittown is a strong basecamp for day-adventures in Pennsylvania.",
         "heroImages": [
           "https://cdn.filestackcontent.com/PONFLS2WRzSJeQeXDklH"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Levittown sits within Pennsylvania, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -5392,7 +5101,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Levittown's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Levittown."
+          "Use activity filters to compare day-adventures departures in Levittown."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5429,12 +5138,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Gettysburg.",
-        "intro": "Gettysburg is a strong basecamp for hiking in Pennsylvania.",
+        "intro": "Gettysburg is a strong basecamp for day-adventures in Pennsylvania.",
         "heroImages": [
           "https://cdn.filestackcontent.com/SeJo47P8SsytLwdCg2Bw"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Gettysburg sits within Pennsylvania, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -5457,7 +5166,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Gettysburg's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Gettysburg."
+          "Use activity filters to compare day-adventures departures in Gettysburg."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5491,12 +5200,11 @@ export const northeastStates: StateDestination[] = [
         "slug": "philadelphia",
         "stateSlug": "pennsylvania",
         "region": "Northeast",
-        "lat": -75.15455750000001,
-        "lng": 39.951323,
+        "lat": -75.165222,
+        "lng": 39.952584,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Philadelphia.",
         "intro": "Philadelphia is a strong basecamp for hiking in Pennsylvania.",
         "heroImages": [
-          "https://cdn.filestackcontent.com/zN1uV4S7SN6WRiylFTx3",
           "https://cdn.filestackcontent.com/VVWGXwsATIiuJiFg0I8z"
         ],
         "activityTags": [
@@ -5560,12 +5268,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -79.493203,
         "lng": 39.867513,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Ohiopyle.",
-        "intro": "Ohiopyle is a strong basecamp for hiking in Pennsylvania.",
+        "intro": "Ohiopyle is a strong basecamp for canoeing in Pennsylvania.",
         "heroImages": [
           "https://cdn.filestackcontent.com/TAKGasQURMCRRmZt48wb"
         ],
         "activityTags": [
-          "hiking"
+          "canoeing"
         ],
         "whereItIs": [
           "Ohiopyle sits within Pennsylvania, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -5580,7 +5288,7 @@ export const northeastStates: StateDestination[] = [
           "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Ohiopyle."
         },
         "thingsToDo": [
-          "Hike a scenic trail with views around Ohiopyle.",
+          "Plan a paddle or canoe outing near Ohiopyle.",
           "Explore a local park or nature preserve near Ohiopyle.",
           "Catch golden hour at a nearby viewpoint.",
           "Stroll a waterfront trail or greenway in Ohiopyle."
@@ -5588,7 +5296,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Ohiopyle's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Ohiopyle."
+          "Use activity filters to compare canoeing departures in Ohiopyle."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5625,14 +5333,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Hawley.",
-        "intro": "Hawley is a strong basecamp for hiking in Pennsylvania.",
+        "intro": "Hawley is a strong basecamp for day-adventures in Pennsylvania.",
         "heroImages": [
           "https://cdn.filestackcontent.com/NjHTKriaTafh5ykDSYUh",
           "https://cdn.filestackcontent.com/LcAGlQTlqlFgP5b38o4g",
           "https://cdn.filestackcontent.com/2fL3sy6ES6OBDkUpUFev"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Hawley sits within Pennsylvania, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -5655,7 +5363,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Hawley's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Hawley."
+          "Use activity filters to compare day-adventures departures in Hawley."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5692,14 +5400,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Pittsburgh.",
-        "intro": "Pittsburgh is a strong basecamp for hiking in Pennsylvania.",
+        "intro": "Pittsburgh is a strong basecamp for day-adventures in Pennsylvania.",
         "heroImages": [
-          "https://cdn.filestackcontent.com/SFSJOmaTma1ZTSfpWKqh",
           "https://cdn.filestackcontent.com/haUXrkiYSZSaFeP8G10b",
-          "https://cdn.filestackcontent.com/yXybo8JBT7SVvutphbHp"
+          "https://cdn.filestackcontent.com/yXybo8JBT7SVvutphbHp",
+          "https://cdn.filestackcontent.com/9RprVIiRRICU78LMjIkl"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Pittsburgh sits within Pennsylvania, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -5722,7 +5430,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Pittsburgh's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Pittsburgh."
+          "Use activity filters to compare day-adventures departures in Pittsburgh."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5759,12 +5467,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around New Stanton.",
-        "intro": "New Stanton is a strong basecamp for hiking in Pennsylvania.",
+        "intro": "New Stanton is a strong basecamp for day-adventures in Pennsylvania.",
         "heroImages": [
           "https://cdn.filestackcontent.com/6TC5AaLOTKiHDqa3X7Oo"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "New Stanton sits within Pennsylvania, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -5787,7 +5495,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with New Stanton's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in New Stanton."
+          "Use activity filters to compare day-adventures departures in New Stanton."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5809,6 +5517,102 @@ export const northeastStates: StateDestination[] = [
           {
             "question": "When is the best time to visit New Stanton?",
             "answer": "Late spring through early fall delivers the best weather for outdoor activities in New Stanton."
+          },
+          {
+            "question": "Do I need to book tours in advance?",
+            "answer": "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "district-of-columbia",
+    "name": "District of Columbia",
+    "description": "Outdoor experiences across District of Columbia.",
+    "featuredDescription": "Plan hiking, cycling, and canoeing escapes across District of Columbia's Northeast landscapes.",
+    "heroImage": "https://cdn.filestackcontent.com/wEiCHgF4RE2dsDNMPBXi",
+    "region": "Northeast",
+    "intro": "Plan multi-activity getaways across District of Columbia with guided tours and local experts.",
+    "longDescription": "District of Columbia delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in District of Columbia will highlight its local specialties so travelers can book with confidence.",
+    "topRegions": [
+      {
+        "title": "Trail networks",
+        "description": "Find day hikes, scenic lookouts, and local parks across District of Columbia."
+      },
+      {
+        "title": "Waterways",
+        "description": "Paddling routes and calm water escapes are easy to reach in District of Columbia."
+      },
+      {
+        "title": "Scenic drives",
+        "description": "Short drives from city centers reveal iconic views and seasonal highlights."
+      }
+    ],
+    "cities": [
+      {
+        "name": "Washington",
+        "slug": "washington",
+        "stateSlug": "district-of-columbia",
+        "region": "Northeast",
+        "lat": -77.03128313636364,
+        "lng": 38.89825731818183,
+        "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Washington.",
+        "intro": "Washington is a strong basecamp for day-adventures, hiking, cycling in District of Columbia.",
+        "heroImages": [
+          "https://cdn.filestackcontent.com/wEiCHgF4RE2dsDNMPBXi",
+          "https://cdn.filestackcontent.com/Lw8l7YeQu6mvbfKzDoj8",
+          "https://cdn.filestackcontent.com/hQ0AXRzaRymVv0pkbFL5"
+        ],
+        "activityTags": [
+          "day-adventures",
+          "hiking",
+          "cycling"
+        ],
+        "whereItIs": [
+          "Washington sits within District of Columbia, offering quick access to trailheads, waterfront paths, and local parks.",
+          "Travelers can mix guided tours with self-guided exploration, using Washington as a comfortable launch point for day trips."
+        ],
+        "experiences": {
+          "mountains": "Seek out ridge walks and lookout points just outside Washington.",
+          "lakesWater": "Plan a calm-water paddle or lakeside stroll near Washington.",
+          "desertForest": "Nearby forests and greenways around Washington provide easy escape time in nature.",
+          "cycling": "Bike paths and guided rides offer a relaxed way to explore Washington.",
+          "scenicDrives": "Short scenic drives from Washington reveal overlooks and seasonal color.",
+          "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Washington."
+        },
+        "thingsToDo": [
+          "Hike a scenic trail with views around Washington.",
+          "Ride a scenic bike loop around Washington.",
+          "Explore a local park or nature preserve near Washington.",
+          "Catch golden hour at a nearby viewpoint.",
+          "Stroll a waterfront trail or greenway in Washington."
+        ],
+        "toursCopy": [
+          "Plan a half-day tour to get oriented with Washington's outdoor highlights.",
+          "Pair a guided adventure with free time for local food and neighborhoods.",
+          "Use activity filters to compare day-adventures, hiking, cycling departures in Washington."
+        ],
+        "weekendItinerary": {
+          "dayOne": [
+            "Morning: grab coffee in Washington and start a guided tour.",
+            "Afternoon: unwind on a waterfront path or shaded trail.",
+            "Evening: explore downtown Washington for dinner."
+          ],
+          "dayTwo": [
+            "Morning: hit a scenic trail or bike path.",
+            "Afternoon: visit a nearby park or market.",
+            "Evening: finish with a sunset viewpoint or easy stroll."
+          ]
+        },
+        "gettingThere": [
+          "Fly or drive into Washington, then use rideshare or a rental car to reach trailheads.",
+          "Many tours depart from central pickup points near downtown Washington."
+        ],
+        "faq": [
+          {
+            "question": "When is the best time to visit Washington?",
+            "answer": "Late spring through early fall delivers the best weather for outdoor activities in Washington."
           },
           {
             "question": "Do I need to book tours in advance?",
@@ -5850,7 +5654,7 @@ export const northeastStates: StateDestination[] = [
         "lat": -72.230095,
         "lng": 43.81557099999999,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Thetford.",
-        "intro": "Thetford is a strong basecamp for cycling, hiking in Vermont.",
+        "intro": "Thetford is a strong basecamp for cycling, day-adventures in Vermont.",
         "heroImages": [
           "https://cdn.filestackcontent.com/xAtSDpRT6eCb4eGQ5uOT",
           "https://cdn.filestackcontent.com/iIZaUAYbQkW6DUtWN56W",
@@ -5858,7 +5662,7 @@ export const northeastStates: StateDestination[] = [
         ],
         "activityTags": [
           "cycling",
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Thetford sits within Vermont, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -5882,7 +5686,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Thetford's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare cycling, hiking departures in Thetford."
+          "Use activity filters to compare cycling, day-adventures departures in Thetford."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5919,14 +5723,14 @@ export const northeastStates: StateDestination[] = [
         "lat": -72.961243,
         "lng": 43.206169,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Manchester.",
-        "intro": "Manchester is a strong basecamp for hiking in Vermont.",
+        "intro": "Manchester is a strong basecamp for day-adventures in Vermont.",
         "heroImages": [
           "https://cdn.filestackcontent.com/nVxhSDgwTpagES2jddFN",
           "https://cdn.filestackcontent.com/2ulVshXjTsqy503ydaZ2",
           "https://cdn.filestackcontent.com/eHdcNGuEQgCsWAqHatjy"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Manchester sits within Vermont, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -5949,7 +5753,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Manchester's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Manchester."
+          "Use activity filters to compare day-adventures departures in Manchester."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5986,14 +5790,14 @@ export const northeastStates: StateDestination[] = [
         "lat": -72.27521666666667,
         "lng": 43.757950333333326,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Norwich.",
-        "intro": "Norwich is a strong basecamp for hiking in Vermont.",
+        "intro": "Norwich is a strong basecamp for day-adventures in Vermont.",
         "heroImages": [
           "https://cdn.filestackcontent.com/ohHufjmNRgKVniMNno2y",
           "https://cdn.filestackcontent.com/REyV7cIkSfOLrJnJhdHl",
           "https://cdn.filestackcontent.com/PBiCSQuuQyCQGNk8laQR"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Norwich sits within Vermont, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -6016,7 +5820,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Norwich's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Norwich."
+          "Use activity filters to compare day-adventures departures in Norwich."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -6053,12 +5857,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -72.720116,
         "lng": 43.981448,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Braintree.",
-        "intro": "Braintree is a strong basecamp for hiking in Vermont.",
+        "intro": "Braintree is a strong basecamp for day-adventures in Vermont.",
         "heroImages": [
           "https://cdn.filestackcontent.com/cA7S6oD1SbKovgN9B4i7"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Braintree sits within Vermont, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -6081,7 +5885,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Braintree's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Braintree."
+          "Use activity filters to compare day-adventures departures in Braintree."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -6118,12 +5922,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -72.521953,
         "lng": 43.82031,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Royalton.",
-        "intro": "Royalton is a strong basecamp for hiking in Vermont.",
+        "intro": "Royalton is a strong basecamp for day-adventures in Vermont.",
         "heroImages": [
           "https://cdn.filestackcontent.com/WI2K9H1yTfi69dvXGrVT"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Royalton sits within Vermont, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -6146,7 +5950,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Royalton's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Royalton."
+          "Use activity filters to compare day-adventures departures in Royalton."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -6183,12 +5987,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -72.401691,
         "lng": 43.51302,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Windsor.",
-        "intro": "Windsor is a strong basecamp for hiking in Vermont.",
+        "intro": "Windsor is a strong basecamp for day-adventures in Vermont.",
         "heroImages": [
           "https://cdn.filestackcontent.com/uimfsgSUQIC4Oo0bajSP"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Windsor sits within Vermont, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -6211,7 +6015,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Windsor's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Windsor."
+          "Use activity filters to compare day-adventures departures in Windsor."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -6248,14 +6052,14 @@ export const northeastStates: StateDestination[] = [
         "lat": -72.696233,
         "lng": 44.451508,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Stowe.",
-        "intro": "Stowe is a strong basecamp for hiking in Vermont.",
+        "intro": "Stowe is a strong basecamp for day-adventures in Vermont.",
         "heroImages": [
           "https://cdn.filestackcontent.com/DCbZEISXTkKQzjrXYqZI",
-          "https://cdn.filestackcontent.com/u0yjPEWETZm4bxjjpMpJ",
-          "https://cdn.filestackcontent.com/qtXYpoExSXedz1fKSuvg"
+          "https://cdn.filestackcontent.com/JEWhAXQTQDiXB249ItxC",
+          "https://cdn.filestackcontent.com/mBAJxzSkTKKxKLUBqP7i"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Stowe sits within Vermont, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -6278,7 +6082,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Stowe's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Stowe."
+          "Use activity filters to compare day-adventures departures in Stowe."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -6315,14 +6119,14 @@ export const northeastStates: StateDestination[] = [
         "lat": -72.422626,
         "lng": 43.647226,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Hartford.",
-        "intro": "Hartford is a strong basecamp for hiking, cycling in Vermont.",
+        "intro": "Hartford is a strong basecamp for day-adventures, cycling in Vermont.",
         "heroImages": [
           "https://cdn.filestackcontent.com/a8EnH343SKe0U9cYwqWP",
           "https://cdn.filestackcontent.com/ilj1HxUZQP6NHsC4QuCS",
           "https://cdn.filestackcontent.com/9oH85KRaWWcqX4Zv1XZQ"
         ],
         "activityTags": [
-          "hiking",
+          "day-adventures",
           "cycling"
         ],
         "whereItIs": [
@@ -6347,7 +6151,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Hartford's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking, cycling departures in Hartford."
+          "Use activity filters to compare day-adventures, cycling departures in Hartford."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -6384,13 +6188,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Springfield.",
-        "intro": "Springfield is a strong basecamp for hiking in Vermont.",
+        "intro": "Springfield is a strong basecamp for day-adventures, hiking in Vermont.",
         "heroImages": [
           "https://cdn.filestackcontent.com/OnbjFaNRqSnnJGDA4PeA",
           "https://cdn.filestackcontent.com/s3aOuQg6RaenqDBYKku7",
           "https://cdn.filestackcontent.com/a9TgIvYNToOpbgIvhJE4"
         ],
         "activityTags": [
+          "day-adventures",
           "hiking"
         ],
         "whereItIs": [
@@ -6414,7 +6219,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Springfield's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Springfield."
+          "Use activity filters to compare day-adventures, hiking departures in Springfield."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -6451,14 +6256,14 @@ export const northeastStates: StateDestination[] = [
         "lat": -72.095542,
         "lng": 44.851509,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Charleston.",
-        "intro": "Charleston is a strong basecamp for hiking in Vermont.",
+        "intro": "Charleston is a strong basecamp for day-adventures in Vermont.",
         "heroImages": [
           "https://cdn.filestackcontent.com/E5TN9dRJRnmJ3ExXGZiw",
           "https://cdn.filestackcontent.com/DiZswFvSWSTATfPlRgc7",
           "https://cdn.filestackcontent.com/b9hao3irTaqEZdSHLxsT"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Charleston sits within Vermont, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -6481,7 +6286,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Charleston's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Charleston."
+          "Use activity filters to compare day-adventures departures in Charleston."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -6518,14 +6323,14 @@ export const northeastStates: StateDestination[] = [
         "lat": -72.751195,
         "lng": 43.598137,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Bridgewater.",
-        "intro": "Bridgewater is a strong basecamp for hiking in Vermont.",
+        "intro": "Bridgewater is a strong basecamp for day-adventures in Vermont.",
         "heroImages": [
           "https://www.filepicker.io/api/file/AEgDyzhSAKu137OHE7st",
           "https://www.filepicker.io/api/file/12MksESSCOoBkxKqquLp",
           "https://www.filepicker.io/api/file/PM8P9mBTmCm3t0H728Ng"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Bridgewater sits within Vermont, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -6548,7 +6353,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Bridgewater's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Bridgewater."
+          "Use activity filters to compare day-adventures departures in Bridgewater."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -6585,12 +6390,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -72.700719,
         "lng": 43.561113,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Plymouth.",
-        "intro": "Plymouth is a strong basecamp for hiking in Vermont.",
+        "intro": "Plymouth is a strong basecamp for day-adventures in Vermont.",
         "heroImages": [
           "https://www.filepicker.io/api/file/DwgGpWoQsqvb2Pto2fTs"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Plymouth sits within Vermont, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -6613,7 +6418,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Plymouth's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Plymouth."
+          "Use activity filters to compare day-adventures departures in Plymouth."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -6650,14 +6455,14 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Essex Junction.",
-        "intro": "Essex Junction is a strong basecamp for hiking in Vermont.",
+        "intro": "Essex Junction is a strong basecamp for day-adventures in Vermont.",
         "heroImages": [
           "https://cdn.filestackcontent.com/olZIxNBSv2u4HP5mVTFY",
           "https://cdn.filestackcontent.com/avAkz5CuTr2A9UfZ7VYG",
           "https://cdn.filestackcontent.com/N5ZCBxLRVuFwXGsh7LVJ"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Essex Junction sits within Vermont, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -6680,7 +6485,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Essex Junction's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Essex Junction."
+          "Use activity filters to compare day-adventures departures in Essex Junction."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -6717,12 +6522,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -72.759048,
         "lng": 44.339561,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Waterbury.",
-        "intro": "Waterbury is a strong basecamp for hiking in Vermont.",
+        "intro": "Waterbury is a strong basecamp for day-adventures in Vermont.",
         "heroImages": [
           "https://cdn.filestackcontent.com/UWqIeYjgQMutHWGW9lJA"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Waterbury sits within Vermont, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -6745,7 +6550,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Waterbury's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Waterbury."
+          "Use activity filters to compare day-adventures departures in Waterbury."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -6782,13 +6587,13 @@ export const northeastStates: StateDestination[] = [
         "lat": -72.15642,
         "lng": 43.909669,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Fairlee.",
-        "intro": "Fairlee is a strong basecamp for hiking in Vermont.",
+        "intro": "Fairlee is a strong basecamp for day-adventures in Vermont.",
         "heroImages": [
           "https://cdn.filestackcontent.com/DQnRJyDgREebQDEn6GNx",
           "https://cdn.filestackcontent.com/gIcCEIRueaQbySxOEybA"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Fairlee sits within Vermont, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -6811,7 +6616,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Fairlee's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Fairlee."
+          "Use activity filters to compare day-adventures departures in Fairlee."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -6848,12 +6653,12 @@ export const northeastStates: StateDestination[] = [
         "lat": -73.029597,
         "lng": 42.890268,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Woodford.",
-        "intro": "Woodford is a strong basecamp for hiking in Vermont.",
+        "intro": "Woodford is a strong basecamp for day-adventures in Vermont.",
         "heroImages": [
           "https://www.filepicker.io/api/file/EzW5YyzdT52nV77rcbzC"
         ],
         "activityTags": [
-          "hiking"
+          "day-adventures"
         ],
         "whereItIs": [
           "Woodford sits within Vermont, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -6876,7 +6681,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Woodford's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Woodford."
+          "Use activity filters to compare day-adventures departures in Woodford."
         ],
         "weekendItinerary": {
           "dayOne": [

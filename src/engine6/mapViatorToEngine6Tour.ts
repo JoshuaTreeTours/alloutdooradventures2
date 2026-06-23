@@ -54,6 +54,10 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Ride a large airboat through Louisiana swamp waterways with downtown New Orleans hotel pickup, captain narration, photo stops, and seasonal wildlife viewing.",
   "273720P1":
     "Ride a flat-bottom boat through Lafitte-area cypress swamp near New Orleans, with captain narration, wildlife viewing, and optional pickup.",
+  "194901P4":
+    "Explore the Oregon Coast from Portland on a full-day small-group tour with Ecola State Park, Cannon Beach, Haystack Rock, and a naturalist guide.",
+  "378720P1":
+    "See Portland on a guided city tour with Pittock Mansion, the International Rose Test Garden, historic districts, and Willamette River bridge views.",
 };
 const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",
@@ -75,6 +79,14 @@ const ENGINE6_CLASSIFICATION_OVERRIDES: Record<
   }
 > = {
   "3780SUPER": {
+    primaryCategory: "sightseeing-city-tours",
+    categories: ["sightseeing-city-tours"],
+    primaryDisplayCategory: "Sightseeing & City Tours",
+    activityCategories: [
+      { slug: "sightseeing-city-tours", label: "Sightseeing & City Tours" },
+    ],
+  },
+  "194901P4": {
     primaryCategory: "sightseeing-city-tours",
     categories: ["sightseeing-city-tours"],
     primaryDisplayCategory: "Sightseeing & City Tours",
@@ -113,6 +125,10 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Travel from downtown New Orleans by hotel pickup toward the swamp for a large-airboat ride on Louisiana waterways. After the drive along the Mississippi River corridor, board a 16-passenger airboat with a captain who narrates the route, explains local wildlife and flora, and balances faster runs with slower photo stops. Wildlife sightings vary by season and conditions, but the outing is designed around swamp scenery, alligator habitat, and a coordinated return transfer back to New Orleans.",
   "273720P1":
     "Ride a flat-bottom pontoon boat through tidewater cypress swamp near Jean Lafitte National Historical Park and Preserve. This New Orleans-area bayou tour departs from Lafitte, with pickup available on selected bookings, and focuses on marsh scenery, captain narration, and wildlife viewing. The route moves through shallow bayou waterways where alligators, turtles, snakes, herons, egrets, ibis, hawks, owls, and bald eagles may appear depending on season and conditions. Travelers finish back at the Lafitte meeting point or use the selected return transportation option to New Orleans.",
+  "194901P4":
+    "Travel from Portland to the northern Oregon Coast on a full-day small-group outing led by a naturalist guide. Ride in an air-conditioned minivan with bottled water and light snacks while the route links Ecola State Park overlooks, Indian Beach, Cannon Beach, and Haystack Rock along scenic Highway 101. Depending on tides and conditions, the day may include stops at Hug Point or Oswald West State Park before a Neahkahnie Mountain viewpoint when time allows. The structured coastal itinerary covers key north-coast landmarks without self-driving from Portland, with pickup available at select downtown hotels or South Waterfront Park.",
+  "378720P1":
+    "Explore Portland on a guided city tour that introduces the city's history, architecture, and evolving neighborhoods in roughly three hours. A local guide narrates the route from pioneer-era settlement through today's districts, crossing the Willamette River on an iconic bridge and visiting Pittock Mansion for Mount Hood views. The outing includes a stop at the International Rose Test Garden in Washington Park, drive-by perspectives on Old Town and downtown corridors, and east-side neighborhoods that reflect Portland's local character and ongoing change.",
 };
 
 const ENGINE6_OVERVIEW_OVERRIDES: Record<

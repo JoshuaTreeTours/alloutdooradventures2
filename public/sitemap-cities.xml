@@ -21,7 +21,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/connecticut/east-lyme/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/connecticut/essex/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/connecticut/haddam/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/connecticut/hartford/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/connecticut/montville/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/connecticut/new-london/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/connecticut/new-milford/tours</loc><priority>0.6</priority></url>
@@ -324,8 +323,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/portugal/cities/colares/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/portugal/cities/lagos</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/portugal/cities/lagos/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/portugal/cities/lisboa</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/portugal/cities/lisboa/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/portugal/cities/lisbon</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/portugal/cities/lisbon/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/portugal/cities/lomba</loc><priority>0.6</priority></url>
@@ -352,8 +349,8 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/slovenia/cities/bled/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/slovenia/cities/bovec</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/slovenia/cities/bovec/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/alcdia</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/alcdia/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/alcudia</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/alcudia/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/alicante-alacant</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/alicante-alacant/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/andoain</loc><priority>0.6</priority></url>
@@ -372,16 +369,16 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/cala-anguila-cala-mendia/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/caldes-de-malavella</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/caldes-de-malavella/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/calvi</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/calvi/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/calvia</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/calvia/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/catalonia</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/catalonia/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/collbat</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/collbat/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/costa-teguise</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/costa-teguise/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/dei</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/dei/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/deia</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/deia/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/donostia</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/donostia/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/el-talladell</loc><priority>0.6</priority></url>
@@ -412,20 +409,20 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/nerja/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/palma</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/palma/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/pollena</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/pollena/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/pollenca</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/pollenca/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/randa</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/randa/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/salamanca</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/salamanca/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/san-sebastin</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/san-sebastin/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/san-sebastian</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/san-sebastian/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/sant-elm</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/sant-elm/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/sevilla</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/sevilla/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/sller</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/sller/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/soller</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/soller/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/son-serra-de-marina</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/son-serra-de-marina/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/trrega</loc><priority>0.6</priority></url>
@@ -436,10 +433,8 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/valencia/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/valldemossa</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/valldemossa/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/valncia</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/valncia/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/xbia</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/xbia/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/xabia</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/europe/spain/cities/xabia/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/sweden/cities/flaten</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/sweden/cities/flaten/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/sweden/cities/hultsfred</loc><priority>0.6</priority></url>
@@ -598,7 +593,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/florida/gainesville/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/florida/goodland/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/florida/greenacres/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/florida/hallandale-beach/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/florida/hastings/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/florida/hobe-sound/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/florida/hollywood/tours</loc><priority>0.6</priority></url>
@@ -733,11 +727,9 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/new-hampshire/new-castle/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-hampshire/weare/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-hampshire/wolfeboro/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/new-jersey/atlantic-highlands/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-jersey/brick-township/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-jersey/edgewater/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-jersey/fieldsboro/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/new-jersey/hillsdale/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-jersey/keyport/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-jersey/lavallette/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-jersey/middletown-township/tours</loc><priority>0.6</priority></url>
@@ -771,7 +763,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/pennsylvania/pittsburgh/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/pennsylvania/wrightsville/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/rhode-island/warwick/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/south-carolina/columbia/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/south-carolina/hilton-head-island/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/south-carolina/johns-island/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/south-carolina/mount-pleasant/tours</loc><priority>0.6</priority></url>
@@ -780,11 +771,9 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/tennessee/christiana/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/tennessee/delano/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/tennessee/franklin/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/tennessee/granville/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/tennessee/greenbrier/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/tennessee/johnson-city/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/tennessee/nashville/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/tennessee/pigeon-forge/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/tennessee/sevierville/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/tennessee/williamsport/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/utah/moab/tours</loc><priority>0.6</priority></url>
@@ -944,7 +933,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/colorado/fort-collins</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/connecticut/essex</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/connecticut/haddam</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/connecticut/hartford</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/connecticut/new-milford</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/connecticut/plainville</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/connecticut/seymour</loc><priority>0.6</priority></url>
@@ -969,7 +957,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/florida/jupiter</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/florida/key-largo</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/florida/key-west</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/florida/lamont</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/florida/marathon</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/florida/marco-island</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/florida/merritt-island</loc><priority>0.6</priority></url>
@@ -995,9 +982,7 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/georgia/augusta</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/georgia/buford</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/georgia/cleveland</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/georgia/fortson</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/georgia/hogansville</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/georgia/lizella</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/georgia/savannah</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/georgia/senoia</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/georgia/tybee-island</loc><priority>0.6</priority></url>
@@ -1063,10 +1048,7 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/south-carolina/johns-island</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/south-carolina/winnsboro</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/tennessee/chattanooga</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/tennessee/christiana</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/tennessee/delano</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/tennessee/nashville</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/tennessee/pigeon-forge</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/tennessee/sevierville</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/utah/moab</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/utah/park-city</loc><priority>0.6</priority></url>

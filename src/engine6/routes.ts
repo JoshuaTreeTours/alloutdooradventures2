@@ -443,6 +443,13 @@ export const ENGINE6_LUCERNE_SHORT_CATAMARAN_PRODUCT_CODE = "6400P7";
 export const ENGINE6_LUCERNE_SHORT_CATAMARAN_ROUTE =
   "/destinations/switzerland/lucerne/tours/short-catamaran-cruise-on-lake-lucerne";
 
+export const ENGINE6_PORTLAND_OREGON_COAST_PRODUCT_CODE = "194901P4";
+export const ENGINE6_PORTLAND_OREGON_COAST_ROUTE =
+  "/destinations/oregon/portland/tours/oregon-coast-tour-full-day-194901P4";
+export const ENGINE6_PORTLAND_CITY_OF_ROSES_PRODUCT_CODE = "378720P1";
+export const ENGINE6_PORTLAND_CITY_OF_ROSES_ROUTE =
+  "/destinations/oregon/portland/tours/city-of-roses-tour-378720P1";
+
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
   canonicalPath: string;
@@ -955,6 +962,11 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_INTERLAKEN_LAUTERBRUNNEN_EBIKE_ROUTE,
     ENGINE6_INTERLAKEN_LAUTERBRUNNEN_EBIKE_PRODUCT_CODE,
+  ],
+  [ENGINE6_PORTLAND_OREGON_COAST_ROUTE, ENGINE6_PORTLAND_OREGON_COAST_PRODUCT_CODE],
+  [
+    ENGINE6_PORTLAND_CITY_OF_ROSES_ROUTE,
+    ENGINE6_PORTLAND_CITY_OF_ROSES_PRODUCT_CODE,
   ],
 ] as const;
 
