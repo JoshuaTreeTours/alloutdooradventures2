@@ -4,7 +4,11 @@ import {
   assertEngine6NoCanonicalSlugCollisions,
   assertEngine6RequestedPathMatchesResolvedTour,
 } from "./routeIntegrity";
-import { getEngine6NativeTourByCanonicalPath, engine6ResolvedTours } from "./registry";
+import {
+  getEngine6NativeTourByCanonicalPath,
+  engine6ResolvedTours,
+} from "./registry";
+import { getLegacyFhMigratedTourByCanonicalPath } from "./legacyFh/registry";
 import {
   ENGINE6_NYC_PEDICAB_PRODUCT_CODE,
   ENGINE6_NYC_PEDICAB_ROUTE,
@@ -37,9 +41,9 @@ describe("engine6 route integrity enforcement", () => {
   });
 
   it("test 3: San Diego sample URL resolves correctly", () => {
-    expect(resolveEngine6ProductCodeForPath(ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE)).toBe(
-      ENGINE6_SAN_DIEGO_JOSHUA_TREE_PRODUCT_CODE
-    );
+    expect(
+      resolveEngine6ProductCodeForPath(ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE)
+    ).toBe(ENGINE6_SAN_DIEGO_JOSHUA_TREE_PRODUCT_CODE);
 
     const tour = getEngine6NativeTourByCanonicalPath(
       ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE
@@ -61,7 +65,11 @@ describe("engine6 route integrity enforcement", () => {
   });
 
   it("fails closed for unknown canonical route lookups", () => {
-    expect(resolveEngine6ProductCodeForPath("/destinations/new-york/new-york/tours/not-real")).toBeNull();
+    expect(
+      resolveEngine6ProductCodeForPath(
+        "/destinations/new-york/new-york/tours/not-real"
+      )
+    ).toBeNull();
     expect(
       getEngine6NativeTourByCanonicalPath(
         "/destinations/new-york/new-york/tours/not-real"
@@ -69,8 +77,26 @@ describe("engine6 route integrity enforcement", () => {
     ).toBeNull();
   });
 
+  it("suppresses the migrated FH Central Park Bike Tours route from published Engine6 route lookup", () => {
+    const suppressedPath =
+      "/destinations/new-york/new-york/tours/central-park-bike-tours-16628";
+
+    expect(resolveEngine6ProductCodeForPath(suppressedPath)).toBeNull();
+    expect(getEngine6NativeTourByCanonicalPath(suppressedPath)).toBeNull();
+    expect(getLegacyFhMigratedTourByCanonicalPath(suppressedPath)).toBeNull();
+    expect(
+      engine6ResolvedTours.some(
+        tour =>
+          tour.canonicalPath === suppressedPath ||
+          tour.productCode === "fh-central-park-bike-tours-16628"
+      )
+    ).toBe(false);
+  });
+
   it("asserts there are no canonical slug collisions across products", () => {
-    expect(() => assertEngine6NoCanonicalSlugCollisions(engine6ResolvedTours)).not.toThrow();
+    expect(() =>
+      assertEngine6NoCanonicalSlugCollisions(engine6ResolvedTours)
+    ).not.toThrow();
 
     const [firstTour] = engine6ResolvedTours;
     expect(firstTour).toBeDefined();

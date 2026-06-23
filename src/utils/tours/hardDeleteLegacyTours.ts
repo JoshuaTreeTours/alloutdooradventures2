@@ -5,18 +5,21 @@ import {
 } from "./invalidPlaceholderTours";
 
 const HARD_DELETED_PRODUCT_IDS = new Set([
+  "16628",
   "301378",
   "301379",
   "549337",
   ...getInvalidPlaceholderTourIds(),
 ]);
 const HARD_DELETED_SLUGS = new Set([
+  "central-park-bike-tours-16628",
   "intermediate-singletrack-mountain-biking-clinic-301378",
   "private-mtb-lesson-301379",
   "golden-gate-bridge-bike-tour-with-muir-woods-and-sausalito-549337",
   ...getInvalidPlaceholderTourSlugs(),
 ]);
 const HARD_DELETED_CANONICAL_PATHS = new Set([
+  "/destinations/new-york/new-york/tours/central-park-bike-tours-16628",
   "/destinations/united-states/alaska/anchorage/tours/intermediate-singletrack-mountain-biking-clinic-301378",
   "/destinations/united-states/alaska/anchorage/tours/private-mtb-lesson-301379",
   "/destinations/alaska/anchorage/tours/intermediate-singletrack-mountain-biking-clinic-301378",

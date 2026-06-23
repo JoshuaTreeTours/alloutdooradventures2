@@ -121,7 +121,9 @@ describe("engine6 canonical slug winner dedupe", () => {
     expect(engine6Tour?.bookingUrl.endsWith("/book")).toBe(false);
     expect(engine6Tour?.bookingProvider).toBe("viator");
     expect(legacyTour?.bookingProvider).toBe("fareharbor");
-    expect(legacyTour?.bookingUrl).toContain("fareharbor.com/embeds/book/peterpentours/items/27491");
+    expect(legacyTour?.bookingUrl).toContain(
+      "fareharbor.com/embeds/book/peterpentours/items/27491"
+    );
   });
 
   it("removes legacy 1 Hour Central Park Pedicab Tour entries from base city collections", () => {
@@ -154,21 +156,18 @@ describe("engine6 canonical slug winner dedupe", () => {
     }
   });
 
-  it("keeps only one listing for migrated FH canonical slugs and upgrades card engine to Engine6", () => {
+  it("removes the suppressed migrated FH Central Park Bike Tours route from New York listing cards", () => {
+    const suppressedPath =
+      "/destinations/new-york/new-york/tours/central-park-bike-tours-16628";
     const unified = getToursByCityUnified("new-york", "new-york").filter(
-      entry =>
-        entry.href ===
-        "/destinations/new-york/new-york/tours/central-park-bike-tours-16628"
+      entry => entry.href === suppressedPath
     );
     const city = getToursByCity("new-york", "new-york").filter(
       tour => tour.slug === "central-park-bike-tours-16628"
     );
 
-    expect(unified).toHaveLength(1);
-    expect(unified[0]?.tour.engine).toBe("engine6");
-    expect(unified[0]?.tour.bookingProvider).toBe("fareharbor");
-    expect(city).toHaveLength(1);
-    expect(city[0]?.engine).toBe("engine6");
+    expect(unified).toHaveLength(0);
+    expect(city).toHaveLength(0);
   });
 });
 
@@ -213,14 +212,14 @@ describe("Engine6-first discovery ordering", () => {
     expect(newYorkTours.length).toBeGreaterThan(0);
     expect(firstNonEngine6Index).toBeGreaterThan(-1);
     expect(
-      newYorkTours.slice(0, firstNonEngine6Index).every(
-        tour => tour.engine === "engine6"
-      )
+      newYorkTours
+        .slice(0, firstNonEngine6Index)
+        .every(tour => tour.engine === "engine6")
     ).toBe(true);
     expect(
-      newYorkTours.slice(firstNonEngine6Index).some(
-        tour => tour.engine !== "engine6"
-      )
+      newYorkTours
+        .slice(firstNonEngine6Index)
+        .some(tour => tour.engine !== "engine6")
     ).toBe(true);
   });
 
@@ -233,18 +232,17 @@ describe("Engine6-first discovery ordering", () => {
     expect(newYorkUnified.length).toBeGreaterThan(0);
     expect(firstNonEngine6Index).toBeGreaterThan(-1);
     expect(
-      newYorkUnified.slice(0, firstNonEngine6Index).every(
-        entry => entry.tour.engine === "engine6"
-      )
+      newYorkUnified
+        .slice(0, firstNonEngine6Index)
+        .every(entry => entry.tour.engine === "engine6")
     ).toBe(true);
     expect(
-      newYorkUnified.slice(firstNonEngine6Index).some(
-        entry => entry.tour.engine !== "engine6"
-      )
+      newYorkUnified
+        .slice(firstNonEngine6Index)
+        .some(entry => entry.tour.engine !== "engine6")
     ).toBe(true);
   });
 });
-
 
 describe("Switzerland Engine6 discovery propagation", () => {
   it("uses destination-style canonical URLs for all Switzerland tour cards", () => {
@@ -262,12 +260,16 @@ describe("Switzerland Engine6 discovery propagation", () => {
 
   it("indexes Engine6 Switzerland tours as international (non-US) inventory", () => {
     const swissEngine6Tours = tours.filter(
-      tour => tour.engine === "engine6" && tour.destination.stateSlug === "switzerland"
+      tour =>
+        tour.engine === "engine6" &&
+        tour.destination.stateSlug === "switzerland"
     );
 
     expect(swissEngine6Tours.length).toBeGreaterThan(0);
     expect(
-      swissEngine6Tours.every(tour => tour.destination.country === "Switzerland")
+      swissEngine6Tours.every(
+        tour => tour.destination.country === "Switzerland"
+      )
     ).toBe(true);
   });
 
@@ -290,12 +292,15 @@ describe("Switzerland Engine6 discovery propagation", () => {
     expect(switzerlandTours.length).toBeGreaterThan(0);
     expect(
       switzerlandTours.some(
-        tour => tour.engine === "engine6" && tour.destination.citySlug === "zurich"
+        tour =>
+          tour.engine === "engine6" && tour.destination.citySlug === "zurich"
       )
     ).toBe(true);
     expect(
       switzerlandTours.some(
-        tour => tour.engine === "engine6" && tour.destination.citySlug === "interlaken"
+        tour =>
+          tour.engine === "engine6" &&
+          tour.destination.citySlug === "interlaken"
       )
     ).toBe(true);
   });
