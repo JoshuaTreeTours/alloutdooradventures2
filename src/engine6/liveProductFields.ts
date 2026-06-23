@@ -1,5 +1,6 @@
 import type { Tour } from "../data/tours.types";
 import type { Engine6Tour } from "./types";
+import { getEngine6LiveRatingSourceOfTruth } from "./ratingSourceOfTruth";
 
 export type Engine6LiveProductFields = {
   priceAmount: number | null;
@@ -62,18 +63,15 @@ export const mergeEngine6LiveFieldsIntoEngine6Tour = (
     tour.priceFormatted
   );
 
+  const liveRatingSourceOfTruth = getEngine6LiveRatingSourceOfTruth(liveFields);
+
   return {
     ...tour,
     priceAmount: resolvedPriceAmount,
     priceFormatted: resolvedPriceFormatted ?? tour.priceFormatted,
     aggregateRating:
-      typeof liveFields.aggregateRating === "number"
-        ? liveFields.aggregateRating
-        : tour.aggregateRating,
-    reviewCount:
-      typeof liveFields.reviewCount === "number"
-        ? liveFields.reviewCount
-        : tour.reviewCount,
+      liveRatingSourceOfTruth.aggregateRating ?? tour.aggregateRating,
+    reviewCount: liveRatingSourceOfTruth.reviewCount ?? tour.reviewCount,
     durationText:
       typeof liveFields.durationText === "string" &&
       liveFields.durationText.trim()
@@ -110,19 +108,16 @@ export const mergeEngine6LiveFieldsIntoTour = (
       ? formatLivePriceLabel(resolvedStartingPrice)
       : tour.badges.priceFrom);
 
+  const liveRatingSourceOfTruth = getEngine6LiveRatingSourceOfTruth(liveFields);
+
   return {
     ...tour,
     startingPrice: resolvedStartingPrice,
     badges: {
       ...tour.badges,
-      rating:
-        typeof liveFields.aggregateRating === "number"
-          ? liveFields.aggregateRating
-          : tour.badges.rating,
+      rating: liveRatingSourceOfTruth.aggregateRating ?? tour.badges.rating,
       reviewCount:
-        typeof liveFields.reviewCount === "number"
-          ? liveFields.reviewCount
-          : tour.badges.reviewCount,
+        liveRatingSourceOfTruth.reviewCount ?? tour.badges.reviewCount,
       priceFrom: resolvedPriceBadge,
       duration:
         typeof liveFields.durationText === "string" &&

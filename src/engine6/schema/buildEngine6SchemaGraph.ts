@@ -15,6 +15,7 @@ import {
   formatEngine6CategoryLabel,
   stripEngine6AdmissionArtifacts,
 } from "../seo";
+import { getEngine6TourRatingSourceOfTruth } from "../ratingSourceOfTruth";
 import type { Engine6Tour } from "../types";
 
 const includesTerm = (source: string, term: string) =>
@@ -140,16 +141,15 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
     priceValidUntil: getPriceValidUntil(),
   };
 
+  const ratingSourceOfTruth = getEngine6TourRatingSourceOfTruth(tour);
   const aggregateRatingNode =
-    typeof tour.aggregateRating === "number" &&
-    Number.isFinite(tour.aggregateRating) &&
-    typeof tour.reviewCount === "number" &&
-    Number.isFinite(tour.reviewCount)
+    ratingSourceOfTruth.aggregateRating !== null &&
+    ratingSourceOfTruth.reviewCount !== null
       ? {
           "@type": "AggregateRating",
           "@id": `${canonicalUrl}#aggregate-rating`,
-          ratingValue: tour.aggregateRating,
-          reviewCount: tour.reviewCount,
+          ratingValue: ratingSourceOfTruth.aggregateRating,
+          reviewCount: ratingSourceOfTruth.reviewCount,
         }
       : undefined;
 

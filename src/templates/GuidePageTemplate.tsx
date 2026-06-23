@@ -19,6 +19,12 @@ import type { GuidePageData } from "../utils/loadGuide";
 import { getGuidePlaceName, getValidSameAsLinks } from "../utils/loadGuide";
 import { buildBreadcrumbList } from "../utils/structuredData";
 import { buildCityFactsCard } from "../utils/guides/buildCityFactsCard";
+import { useEngine6LiveTourCardHydration } from "../engine6/useEngine6LiveTourCardHydration";
+import {
+  hydrateEngine6TourCardEntries,
+  type Engine6LiveProductFields,
+} from "../engine6/liveProductFields";
+import type { Tour } from "../data/tours.types";
 import { GENERIC_OUTDOOR_GUIDE_HERO_IMAGE } from "../utils/guides/resolveGuideHeroImage";
 import {
   buildCityGuideDisplayTitle,
@@ -30,6 +36,15 @@ import {
 type GuidePageTemplateProps = {
   guide: GuidePageData;
 };
+
+export const hydrateGuideFeaturedTours = (
+  featuredTours: Tour[],
+  liveByProductCode: Record<string, Engine6LiveProductFields | undefined>
+): Tour[] =>
+  hydrateEngine6TourCardEntries(
+    featuredTours.map(tour => ({ tour })),
+    liveByProductCode
+  ).map(entry => entry.tour);
 
 const Section = ({
   title,
@@ -69,10 +84,24 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
     : guide.overview[0];
   const urlPath = `/${guide.slug.replace(/^\/+/, "")}`;
   const sameAs = getValidSameAsLinks(guide);
-  const tours = guide.tours.citySlug
-    ? getToursByCity(guide.tours.stateSlug, guide.tours.citySlug)
-    : getToursByState(guide.tours.stateSlug);
-  const featuredTours = tours.slice(0, guide.tours.limit ?? 6);
+  const tours = useMemo(
+    () =>
+      guide.tours.citySlug
+        ? getToursByCity(guide.tours.stateSlug, guide.tours.citySlug)
+        : getToursByState(guide.tours.stateSlug),
+    [guide.tours.citySlug, guide.tours.stateSlug]
+  );
+  const featuredTours = useMemo(
+    () => tours.slice(0, guide.tours.limit ?? 6),
+    [guide.tours.limit, tours]
+  );
+  const featuredTourEntries = useMemo(
+    () => featuredTours.map(tour => ({ tour })),
+    [featuredTours]
+  );
+  const hydratedFeaturedTours = useEngine6LiveTourCardHydration(
+    featuredTourEntries
+  ).map(entry => entry.tour);
   const allCityTours =
     guide.tours.stateSlug && guide.tours.citySlug
       ? getToursByCityUnified(guide.tours.stateSlug, guide.tours.citySlug)
@@ -234,11 +263,11 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           </ul>
         </Section>
 
-        {!isTier2 && featuredTours.length ? (
+        {!isTier2 && hydratedFeaturedTours.length ? (
           <Section title="Top Tours">
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex gap-4">
-                {featuredTours.map(tour => (
+                {hydratedFeaturedTours.map(tour => (
                   <div
                     key={tour.id}
                     className="min-w-0 flex-[0_0_85%] md:flex-[0_0_50%] lg:flex-[0_0_33%]"

@@ -1,4 +1,5 @@
 import { formatEngine6AggregateRating } from "./rating";
+import { getEngine6TourRatingSourceOfTruth } from "./ratingSourceOfTruth";
 import { formatEngine6StartingPriceLabel } from "./priceDisplay";
 import { formatEngine6CategoryLabel } from "./seo";
 import type { Engine6Tour } from "./types";
@@ -33,21 +34,25 @@ const buildCardDescription = (tour: Engine6Tour) => {
   return `Discover top outdoor highlights around ${tour.city} with a locally guided experience.`;
 };
 
-export const toEngine6Card = (tour: Engine6Tour): Engine6Card => ({
-  imageUrl: tour.resolvedHero?.url ?? tour.heroImageUrl ?? "",
-  title: tour.title,
-  locationLabel: `${tour.city}, ${tour.state}`,
-  ratingLabel:
-    tour.aggregateRating && tour.reviewCount
-      ? `★ ${formatEngine6AggregateRating(tour.aggregateRating)} (${tour.reviewCount})`
-      : "No ratings yet",
-  priceLabel:
-    typeof tour.priceAmount === "number"
-      ? formatEngine6StartingPriceLabel(tour.priceAmount)
-      : tour.priceFormatted,
-  description: buildCardDescription(tour),
-  href: tour.canonicalPath,
-});
+export const toEngine6Card = (tour: Engine6Tour): Engine6Card => {
+  const ratingSourceOfTruth = getEngine6TourRatingSourceOfTruth(tour);
+
+  return {
+    imageUrl: tour.resolvedHero?.url ?? tour.heroImageUrl ?? "",
+    title: tour.title,
+    locationLabel: `${tour.city}, ${tour.state}`,
+    ratingLabel:
+      ratingSourceOfTruth.aggregateRating && ratingSourceOfTruth.reviewCount
+        ? `★ ${formatEngine6AggregateRating(ratingSourceOfTruth.aggregateRating)} (${ratingSourceOfTruth.reviewCount})`
+        : "No ratings yet",
+    priceLabel:
+      typeof tour.priceAmount === "number"
+        ? formatEngine6StartingPriceLabel(tour.priceAmount)
+        : tour.priceFormatted,
+    description: buildCardDescription(tour),
+    href: tour.canonicalPath,
+  };
+};
 
 export const buildEngine6CardSurfaces = (tour: Engine6Tour) => {
   const makeCard = () => ({ ...toEngine6Card(tour) });

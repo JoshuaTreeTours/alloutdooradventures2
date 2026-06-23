@@ -1,24 +1,272 @@
 import { describe, expect, it } from "vitest";
 import { renderToString } from "react-dom/server";
 import TourCard from "../components/TourCard";
-import { getToursByCityUnified } from "../data/tours";
+import Engine6TourPage, {
+  hydrateRelatedTourCommercialFields,
+} from "./components/Engine6TourPage";
+import { toEngine6Card } from "./cards";
+import { engine6ListingTours } from "./listing";
+import { engine6ResolvedTours } from "./registry";
+import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
+import { getToursByCity, getToursByCityUnified } from "../data/tours";
+import { hydrateGuideFeaturedTours } from "../templates/GuidePageTemplate";
 import {
   fetchEngine6LiveProductFields,
+  mergeEngine6LiveFieldsIntoEngine6Tour,
   mergeEngine6LiveFieldsIntoTour,
+  type Engine6LiveProductFields,
 } from "./liveProductFields";
 
 describe("engine6 city listing parity regression", () => {
+  it("renders 335698P13 ratings from the same normalized Engine6 source on page, city card, related card, schema, and fixture card", () => {
+    const previousWindow = (globalThis as { window?: Window }).window;
+    const previousLocation = (globalThis as { location?: Location }).location;
+    (globalThis as { window?: Window }).window = {
+      location: {
+        pathname: "/destinations/california/joshua-tree/tours",
+        search: "",
+      },
+      history: { pushState: () => undefined },
+    } as unknown as Window;
+    (globalThis as { location?: Location }).location = (
+      globalThis as {
+        window?: Window;
+      }
+    ).window!.location as unknown as Location;
+
+    const tour = engine6ResolvedTours.find(
+      candidate => candidate.productCode === "335698P13"
+    );
+    expect(tour).toBeDefined();
+
+    const expectedRating = tour!.aggregateRating?.toFixed(1);
+    const expectedReviewCount = tour!.reviewCount;
+    expect(expectedRating).toBe("5.0");
+    expect(expectedReviewCount).toBe(86);
+
+    const pageHtml = renderToString(<Engine6TourPage tour={tour!} />);
+    expect(pageHtml).toContain(expectedRating);
+    expect(pageHtml).toContain(String(expectedReviewCount));
+    expect(pageHtml).toContain("rating");
+    expect(pageHtml).toContain("reviews");
+
+    const fixtureCard = toEngine6Card(tour!);
+    expect(fixtureCard.ratingLabel).toBe(
+      `★ ${expectedRating} (${expectedReviewCount})`
+    );
+
+    const cityListingTour = engine6ListingTours.find(
+      candidate => candidate.productCode === "335698P13"
+    );
+    expect(cityListingTour?.badges.rating).toBe(tour!.aggregateRating);
+    expect(cityListingTour?.badges.reviewCount).toBe(tour!.reviewCount);
+
+    const cityCardHtml = renderToString(
+      <TourCard tour={cityListingTour!} href={tour!.canonicalPath} />
+    );
+    expect(cityCardHtml).toContain("★");
+    expect(cityCardHtml).toContain(expectedRating);
+    expect(cityCardHtml).toContain(String(expectedReviewCount));
+    expect(cityCardHtml).toContain("reviews");
+
+    const relatedEntry = { tour: cityListingTour!, href: tour!.canonicalPath };
+    const hydratedRelatedEntry = hydrateRelatedTourCommercialFields(
+      relatedEntry,
+      {
+        aggregateRating: tour!.aggregateRating,
+        reviewCount: tour!.reviewCount,
+      }
+    );
+    const relatedCardHtml = renderToString(
+      <TourCard
+        tour={hydratedRelatedEntry.tour}
+        href={hydratedRelatedEntry.href}
+      />
+    );
+    expect(relatedCardHtml).toContain("★");
+    expect(relatedCardHtml).toContain(expectedRating);
+    expect(relatedCardHtml).toContain(String(expectedReviewCount));
+    expect(relatedCardHtml).toContain("reviews");
+
+    const aggregateRating = (
+      buildEngine6SchemaGraph(tour!)["@graph"] as Array<Record<string, unknown>>
+    ).find(node => node["@type"] === "AggregateRating");
+    expect(aggregateRating?.ratingValue).toBe(tour!.aggregateRating);
+    expect(aggregateRating?.reviewCount).toBe(tour!.reviewCount);
+
+    (globalThis as { window?: Window }).window = previousWindow;
+    (globalThis as { location?: Location }).location = previousLocation;
+  });
+
+  it("hydrates the Muir Woods guide card on /guides/us/california/san-francisco to match the product page live rating", () => {
+    const productCode = "152424P1";
+    const guidePath = "/guides/us/california/san-francisco";
+    const productPath =
+      "/destinations/california/san-francisco/tours/muir-woods-and-sausalito-small-group-tour";
+    const liveFields: Engine6LiveProductFields = {
+      priceAmount: 99,
+      priceFormatted: "From $99.00",
+      aggregateRating: 4.7,
+      reviewCount: 872,
+      durationText: "5 hours",
+      meetingPointText: null,
+    };
+
+    const staleFixtureTour = engine6ResolvedTours.find(
+      candidate => candidate.productCode === productCode
+    );
+    expect(staleFixtureTour).toBeDefined();
+    expect(staleFixtureTour?.canonicalPath).toBe(productPath);
+    expect(staleFixtureTour?.aggregateRating).toBe(4.7);
+    expect(staleFixtureTour?.reviewCount).toBe(765);
+
+    const guideFeaturedTours = getToursByCity(
+      "california",
+      "san-francisco"
+    ).slice(0, 6);
+    const staleGuideCard = guideFeaturedTours.find(
+      candidate => candidate.productCode === productCode
+    );
+    expect(staleGuideCard, guidePath).toBeDefined();
+    expect(staleGuideCard?.badges.rating).toBe(4.7);
+    expect(staleGuideCard?.badges.reviewCount).toBe(765);
+
+    const [hydratedGuideCard] = hydrateGuideFeaturedTours([staleGuideCard!], {
+      [productCode]: liveFields,
+    });
+    const hydratedProductPageTour = mergeEngine6LiveFieldsIntoEngine6Tour(
+      staleFixtureTour!,
+      liveFields
+    );
+
+    expect(hydratedGuideCard?.badges.rating).toBe(
+      hydratedProductPageTour.aggregateRating
+    );
+    expect(hydratedGuideCard?.badges.reviewCount).toBe(
+      hydratedProductPageTour.reviewCount
+    );
+
+    const previousWindow = (globalThis as { window?: Window }).window;
+    const previousLocation = (globalThis as { location?: Location }).location;
+    (globalThis as { window?: Window }).window = {
+      location: { pathname: guidePath, search: "" },
+      history: { pushState: () => undefined },
+    } as unknown as Window;
+    (globalThis as { location?: Location }).location = (
+      globalThis as { window?: Window }
+    ).window!.location as unknown as Location;
+
+    const hydratedGuideCardHtml = renderToString(
+      <TourCard tour={hydratedGuideCard!} href={productPath} />
+    );
+    expect(hydratedGuideCardHtml).toContain("4.7");
+    expect(hydratedGuideCardHtml).toContain("872");
+    expect(hydratedGuideCardHtml).not.toContain("765");
+
+    (globalThis as { window?: Window }).window = previousWindow;
+    (globalThis as { location?: Location }).location = previousLocation;
+  });
+
+  it("keeps San Francisco Other Tours cards aligned with product pages and JSON-LD", () => {
+    const samplePaths = [
+      "/destinations/california/san-francisco/tours/muir-woods-and-sausalito-small-group-tour",
+      "/destinations/california/san-francisco/tours/bike-the-golden-gate-bridge-san-francisco-to-sausalito",
+    ];
+
+    const allSanFranciscoEntries = getToursByCityUnified(
+      "california",
+      "san-francisco"
+    );
+
+    for (const samplePath of samplePaths) {
+      const currentTour = engine6ResolvedTours.find(
+        candidate => candidate.canonicalPath === samplePath
+      );
+      expect(currentTour, samplePath).toBeDefined();
+      expect(currentTour?.aggregateRating, samplePath).toBeTypeOf("number");
+      expect(currentTour?.reviewCount, samplePath).toBeTypeOf("number");
+
+      const currentPageRating = {
+        rating: currentTour!.aggregateRating,
+        reviewCount: currentTour!.reviewCount,
+      };
+      const currentListingCard = engine6ListingTours.find(
+        candidate => candidate.productCode === currentTour!.productCode
+      );
+      expect(currentListingCard?.badges.rating, samplePath).toBe(
+        currentPageRating.rating
+      );
+      expect(currentListingCard?.badges.reviewCount, samplePath).toBe(
+        currentPageRating.reviewCount
+      );
+
+      const aggregateRating = (
+        buildEngine6SchemaGraph(currentTour!)["@graph"] as Array<
+          Record<string, unknown>
+        >
+      ).find(node => node["@type"] === "AggregateRating");
+      expect(aggregateRating?.ratingValue, samplePath).toBe(
+        currentPageRating.rating
+      );
+      expect(aggregateRating?.reviewCount, samplePath).toBe(
+        currentPageRating.reviewCount
+      );
+
+      const relatedEntries = allSanFranciscoEntries.filter(entry => {
+        const matchesProductCode =
+          Boolean(entry.tour.productCode) &&
+          entry.tour.productCode?.toUpperCase() ===
+            currentTour!.productCode.toUpperCase();
+        const matchesSlug = samplePath.endsWith(`/tours/${entry.tour.slug}`);
+        return !matchesProductCode && !matchesSlug;
+      });
+      expect(relatedEntries.length, samplePath).toBeGreaterThanOrEqual(2);
+
+      for (const relatedEntry of relatedEntries.filter(
+        entry => entry.tour.engine === "engine6"
+      )) {
+        const relatedProductPage = engine6ResolvedTours.find(
+          candidate => candidate.productCode === relatedEntry.tour.productCode
+        );
+        expect(relatedProductPage, relatedEntry.tour.productCode).toBeDefined();
+
+        const hydratedRelatedEntry = hydrateRelatedTourCommercialFields(
+          relatedEntry,
+          {
+            aggregateRating: relatedProductPage!.aggregateRating,
+            reviewCount: relatedProductPage!.reviewCount,
+          }
+        );
+
+        expect(
+          hydratedRelatedEntry.tour.badges.rating,
+          relatedEntry.tour.productCode
+        ).toBe(relatedProductPage!.aggregateRating ?? undefined);
+        expect(
+          hydratedRelatedEntry.tour.badges.reviewCount,
+          relatedEntry.tour.productCode
+        ).toBe(relatedProductPage!.reviewCount ?? undefined);
+      }
+    }
+  });
+
   it("hydrates rendered San Francisco Napa/Sonoma card to match detail commercial values", async () => {
     const previousWindow = (globalThis as { window?: Window }).window;
     const previousLocation = (globalThis as { location?: Location }).location;
     (globalThis as { window?: Window }).window = {
-      location: { pathname: "/destinations/california/san-francisco/tours", search: "" },
+      location: {
+        pathname: "/destinations/california/san-francisco/tours",
+        search: "",
+      },
       history: { pushState: () => undefined },
     } as unknown as Window;
-    (globalThis as { location?: Location }).location =
-      (globalThis as { window?: Window }).window!.location as unknown as Location;
+    (globalThis as { location?: Location }).location = (
+      globalThis as { window?: Window }
+    ).window!.location as unknown as Location;
     const cityEntry = getToursByCityUnified("california", "san-francisco").find(
-      entry => entry.tour.engine === "engine6" && entry.tour.productCode === "2660SFOWIN"
+      entry =>
+        entry.tour.engine === "engine6" &&
+        entry.tour.productCode === "2660SFOWIN"
     );
     expect(cityEntry).toBeDefined();
 
@@ -40,8 +288,13 @@ describe("engine6 city listing parity regression", () => {
         }) as Response) as typeof fetch
     );
 
-    const hydrated = mergeEngine6LiveFieldsIntoTour(cityEntry!.tour, fields ?? undefined);
-    const html = renderToString(<TourCard tour={hydrated} href={cityEntry!.href} />);
+    const hydrated = mergeEngine6LiveFieldsIntoTour(
+      cityEntry!.tour,
+      fields ?? undefined
+    );
+    const html = renderToString(
+      <TourCard tour={hydrated} href={cityEntry!.href} />
+    );
 
     expect(html).toContain("$156.75");
     expect(html).toContain("4512");
@@ -55,13 +308,21 @@ describe("engine6 city listing parity regression", () => {
     const previousWindow = (globalThis as { window?: Window }).window;
     const previousLocation = (globalThis as { location?: Location }).location;
     (globalThis as { window?: Window }).window = {
-      location: { pathname: "/destinations/california/san-francisco/tours", search: "" },
+      location: {
+        pathname: "/destinations/california/san-francisco/tours",
+        search: "",
+      },
       history: { pushState: () => undefined },
     } as unknown as Window;
-    (globalThis as { location?: Location }).location =
-      (globalThis as { window?: Window }).window!.location as unknown as Location;
-    const relatedEntry = getToursByCityUnified("california", "san-francisco").find(
-      entry => entry.tour.engine === "engine6" && entry.tour.productCode === "36001P14"
+    (globalThis as { location?: Location }).location = (
+      globalThis as { window?: Window }
+    ).window!.location as unknown as Location;
+    const relatedEntry = getToursByCityUnified(
+      "california",
+      "san-francisco"
+    ).find(
+      entry =>
+        entry.tour.engine === "engine6" && entry.tour.productCode === "36001P14"
     );
     expect(relatedEntry).toBeDefined();
 
@@ -95,7 +356,9 @@ describe("engine6 city listing parity regression", () => {
     expect(html).toContain("1880");
     expect(html).toContain("4.7");
     expect(html).toContain(relatedEntry!.href);
-    expect(html).toContain((relatedEntry!.tour.heroImage ?? "").replaceAll("&", "&amp;"));
+    expect(html).toContain(
+      (relatedEntry!.tour.heroImage ?? "").replaceAll("&", "&amp;")
+    );
 
     (globalThis as { window?: Window }).window = previousWindow;
     (globalThis as { location?: Location }).location = previousLocation;
