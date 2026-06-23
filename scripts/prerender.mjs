@@ -710,6 +710,7 @@ const main = async () => {
     heroModule,
     destinationsModule,
     tourDescriptionModule,
+    hardDeleteLegacyToursModule,
   ] = await Promise.all([
     tsImport("../src/data/tours.generated.ts", import.meta.url),
     tsImport("../src/data/flagstaffTours.ts", import.meta.url),
@@ -718,6 +719,7 @@ const main = async () => {
     tsImport("../src/utils/hero.ts", import.meta.url),
     tsImport("../src/data/destinations.ts", import.meta.url),
     tsImport("../src/utils/tourDescription.ts", import.meta.url),
+    tsImport("../src/utils/tours/hardDeleteLegacyTours.ts", import.meta.url),
   ]);
   const [
     structuredDataModule,
@@ -748,8 +750,17 @@ const main = async () => {
     ),
   ]);
 
+  const isHardDeletedLegacyTour =
+    hardDeleteLegacyToursModule?.isHardDeletedLegacyTour ?? (() => false);
   const tours = Array.isArray(toursGeneratedModule.toursGenerated)
-    ? toursGeneratedModule.toursGenerated
+    ? toursGeneratedModule.toursGenerated.filter(
+        tour =>
+          !isHardDeletedLegacyTour({
+            productId: tour.id,
+            slug: tour.slug,
+            canonicalPath: `/destinations/${tour.destination?.stateSlug}/${tour.destination?.citySlug}/tours/${tour.slug}`,
+          })
+      )
     : [];
   const getTourBySlugs = (stateSlug, citySlug, tourSlug) =>
     tours.find(
