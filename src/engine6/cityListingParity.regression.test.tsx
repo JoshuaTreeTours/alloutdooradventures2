@@ -8,10 +8,13 @@ import { toEngine6Card } from "./cards";
 import { engine6ListingTours } from "./listing";
 import { engine6ResolvedTours } from "./registry";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
-import { getToursByCityUnified } from "../data/tours";
+import { getToursByCity, getToursByCityUnified } from "../data/tours";
+import { hydrateGuideFeaturedTours } from "../templates/GuidePageTemplate";
 import {
   fetchEngine6LiveProductFields,
+  mergeEngine6LiveFieldsIntoEngine6Tour,
   mergeEngine6LiveFieldsIntoTour,
+  type Engine6LiveProductFields,
 } from "./liveProductFields";
 
 describe("engine6 city listing parity regression", () => {
@@ -90,6 +93,75 @@ describe("engine6 city listing parity regression", () => {
     ).find(node => node["@type"] === "AggregateRating");
     expect(aggregateRating?.ratingValue).toBe(tour!.aggregateRating);
     expect(aggregateRating?.reviewCount).toBe(tour!.reviewCount);
+
+    (globalThis as { window?: Window }).window = previousWindow;
+    (globalThis as { location?: Location }).location = previousLocation;
+  });
+
+  it("hydrates the Muir Woods guide card on /guides/us/california/san-francisco to match the product page live rating", () => {
+    const productCode = "152424P1";
+    const guidePath = "/guides/us/california/san-francisco";
+    const productPath =
+      "/destinations/california/san-francisco/tours/muir-woods-and-sausalito-small-group-tour";
+    const liveFields: Engine6LiveProductFields = {
+      priceAmount: 99,
+      priceFormatted: "From $99.00",
+      aggregateRating: 4.7,
+      reviewCount: 872,
+      durationText: "5 hours",
+      meetingPointText: null,
+    };
+
+    const staleFixtureTour = engine6ResolvedTours.find(
+      candidate => candidate.productCode === productCode
+    );
+    expect(staleFixtureTour).toBeDefined();
+    expect(staleFixtureTour?.canonicalPath).toBe(productPath);
+    expect(staleFixtureTour?.aggregateRating).toBe(4.7);
+    expect(staleFixtureTour?.reviewCount).toBe(765);
+
+    const guideFeaturedTours = getToursByCity(
+      "california",
+      "san-francisco"
+    ).slice(0, 6);
+    const staleGuideCard = guideFeaturedTours.find(
+      candidate => candidate.productCode === productCode
+    );
+    expect(staleGuideCard, guidePath).toBeDefined();
+    expect(staleGuideCard?.badges.rating).toBe(4.7);
+    expect(staleGuideCard?.badges.reviewCount).toBe(765);
+
+    const [hydratedGuideCard] = hydrateGuideFeaturedTours([staleGuideCard!], {
+      [productCode]: liveFields,
+    });
+    const hydratedProductPageTour = mergeEngine6LiveFieldsIntoEngine6Tour(
+      staleFixtureTour!,
+      liveFields
+    );
+
+    expect(hydratedGuideCard?.badges.rating).toBe(
+      hydratedProductPageTour.aggregateRating
+    );
+    expect(hydratedGuideCard?.badges.reviewCount).toBe(
+      hydratedProductPageTour.reviewCount
+    );
+
+    const previousWindow = (globalThis as { window?: Window }).window;
+    const previousLocation = (globalThis as { location?: Location }).location;
+    (globalThis as { window?: Window }).window = {
+      location: { pathname: guidePath, search: "" },
+      history: { pushState: () => undefined },
+    } as unknown as Window;
+    (globalThis as { location?: Location }).location = (
+      globalThis as { window?: Window }
+    ).window!.location as unknown as Location;
+
+    const hydratedGuideCardHtml = renderToString(
+      <TourCard tour={hydratedGuideCard!} href={productPath} />
+    );
+    expect(hydratedGuideCardHtml).toContain("4.7");
+    expect(hydratedGuideCardHtml).toContain("872");
+    expect(hydratedGuideCardHtml).not.toContain("765");
 
     (globalThis as { window?: Window }).window = previousWindow;
     (globalThis as { location?: Location }).location = previousLocation;
