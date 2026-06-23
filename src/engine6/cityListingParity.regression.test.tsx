@@ -94,6 +94,90 @@ describe("engine6 city listing parity regression", () => {
     (globalThis as { window?: Window }).window = previousWindow;
     (globalThis as { location?: Location }).location = previousLocation;
   });
+
+  it("keeps San Francisco Other Tours cards aligned with product pages and JSON-LD", () => {
+    const samplePaths = [
+      "/destinations/california/san-francisco/tours/muir-woods-and-sausalito-small-group-tour",
+      "/destinations/california/san-francisco/tours/bike-the-golden-gate-bridge-san-francisco-to-sausalito",
+    ];
+
+    const allSanFranciscoEntries = getToursByCityUnified(
+      "california",
+      "san-francisco"
+    );
+
+    for (const samplePath of samplePaths) {
+      const currentTour = engine6ResolvedTours.find(
+        candidate => candidate.canonicalPath === samplePath
+      );
+      expect(currentTour, samplePath).toBeDefined();
+      expect(currentTour?.aggregateRating, samplePath).toBeTypeOf("number");
+      expect(currentTour?.reviewCount, samplePath).toBeTypeOf("number");
+
+      const currentPageRating = {
+        rating: currentTour!.aggregateRating,
+        reviewCount: currentTour!.reviewCount,
+      };
+      const currentListingCard = engine6ListingTours.find(
+        candidate => candidate.productCode === currentTour!.productCode
+      );
+      expect(currentListingCard?.badges.rating, samplePath).toBe(
+        currentPageRating.rating
+      );
+      expect(currentListingCard?.badges.reviewCount, samplePath).toBe(
+        currentPageRating.reviewCount
+      );
+
+      const aggregateRating = (
+        buildEngine6SchemaGraph(currentTour!)["@graph"] as Array<
+          Record<string, unknown>
+        >
+      ).find(node => node["@type"] === "AggregateRating");
+      expect(aggregateRating?.ratingValue, samplePath).toBe(
+        currentPageRating.rating
+      );
+      expect(aggregateRating?.reviewCount, samplePath).toBe(
+        currentPageRating.reviewCount
+      );
+
+      const relatedEntries = allSanFranciscoEntries.filter(entry => {
+        const matchesProductCode =
+          Boolean(entry.tour.productCode) &&
+          entry.tour.productCode?.toUpperCase() ===
+            currentTour!.productCode.toUpperCase();
+        const matchesSlug = samplePath.endsWith(`/tours/${entry.tour.slug}`);
+        return !matchesProductCode && !matchesSlug;
+      });
+      expect(relatedEntries.length, samplePath).toBeGreaterThanOrEqual(2);
+
+      for (const relatedEntry of relatedEntries.filter(
+        entry => entry.tour.engine === "engine6"
+      )) {
+        const relatedProductPage = engine6ResolvedTours.find(
+          candidate => candidate.productCode === relatedEntry.tour.productCode
+        );
+        expect(relatedProductPage, relatedEntry.tour.productCode).toBeDefined();
+
+        const hydratedRelatedEntry = hydrateRelatedTourCommercialFields(
+          relatedEntry,
+          {
+            aggregateRating: relatedProductPage!.aggregateRating,
+            reviewCount: relatedProductPage!.reviewCount,
+          }
+        );
+
+        expect(
+          hydratedRelatedEntry.tour.badges.rating,
+          relatedEntry.tour.productCode
+        ).toBe(relatedProductPage!.aggregateRating ?? undefined);
+        expect(
+          hydratedRelatedEntry.tour.badges.reviewCount,
+          relatedEntry.tour.productCode
+        ).toBe(relatedProductPage!.reviewCount ?? undefined);
+      }
+    }
+  });
+
   it("hydrates rendered San Francisco Napa/Sonoma card to match detail commercial values", async () => {
     const previousWindow = (globalThis as { window?: Window }).window;
     const previousLocation = (globalThis as { location?: Location }).location;

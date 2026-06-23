@@ -13,10 +13,7 @@ import TourCard from "../../components/TourCard";
 import { getToursByCityUnified } from "../../data/tours";
 import Engine6DebugPanel from "./Engine6DebugPanel";
 import { formatEngine6AggregateRating } from "../rating";
-import {
-  getEngine6LiveRatingSourceOfTruth,
-  getEngine6TourRatingSourceOfTruth,
-} from "../ratingSourceOfTruth";
+import { getEngine6TourRatingSourceOfTruth } from "../ratingSourceOfTruth";
 import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
@@ -25,6 +22,7 @@ import type { Engine6Tour } from "../types";
 import {
   fetchEngine6LiveProductFields,
   mergeEngine6LiveFieldsIntoEngine6Tour,
+  mergeEngine6LiveFieldsIntoTour,
   type Engine6LiveProductFields,
 } from "../liveProductFields";
 
@@ -175,39 +173,13 @@ export const hydrateRelatedTourCommercialFields = (
   entry: { tour: import("../../data/tours.types").Tour; href: string },
   liveFields?: Partial<Engine6LiveProductFields>
 ) => {
-  const baseTour = entry.tour;
-  if (baseTour.engine !== "engine6" || !liveFields) {
+  if (entry.tour.engine !== "engine6" || !liveFields) {
     return entry;
   }
 
-  const priceAmount =
-    typeof liveFields.priceAmount === "number" ? liveFields.priceAmount : null;
-  const priceFormatted =
-    typeof liveFields.priceFormatted === "string"
-      ? liveFields.priceFormatted.trim()
-      : "";
-
-  const liveRatingSourceOfTruth = getEngine6LiveRatingSourceOfTruth(liveFields);
-
   return {
     ...entry,
-    tour: {
-      ...baseTour,
-      startingPrice: priceAmount ?? baseTour.startingPrice,
-      badges: {
-        ...baseTour.badges,
-        rating:
-          liveRatingSourceOfTruth.aggregateRating ?? baseTour.badges.rating,
-        reviewCount:
-          liveRatingSourceOfTruth.reviewCount ?? baseTour.badges.reviewCount,
-        priceFrom: priceFormatted || baseTour.badges.priceFrom,
-        duration:
-          typeof liveFields.durationText === "string" &&
-          liveFields.durationText.trim()
-            ? liveFields.durationText
-            : baseTour.badges.duration,
-      },
-    },
+    tour: mergeEngine6LiveFieldsIntoTour(entry.tour, liveFields),
   };
 };
 
