@@ -496,6 +496,12 @@ export const ENGINE6_PORTLAND_FOOD_CARTS_TOUR_PRODUCT_CODE = "67842P3";
 export const ENGINE6_PORTLAND_FOOD_CARTS_TOUR_ROUTE =
   "/destinations/oregon/portland/tours/portland-food-carts-pods-and-patios-tour-67842P3";
 
+export const ENGINE6_PORTLAND_TOUR_PATH_PREFIX =
+  "/destinations/oregon/portland/tours/";
+
+export const isEngine6PortlandTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_PORTLAND_TOUR_PATH_PREFIX);
+
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
   canonicalPath: string;

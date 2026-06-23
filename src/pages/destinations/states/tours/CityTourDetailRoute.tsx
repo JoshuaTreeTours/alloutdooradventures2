@@ -63,7 +63,10 @@ import type {
   Engine6Tour,
 } from "../../../../engine6/types";
 import { isExcludedProductCode } from "../../../../data/excludedProductCodes";
-import { isEngine6CanonicalPath } from "../../../../engine6/routes";
+import {
+  isEngine6CanonicalPath,
+  isEngine6PortlandTourCanonicalPath,
+} from "../../../../engine6/routes";
 import { buildEngine6SchemaGraph } from "../../../../engine6/schema/buildEngine6SchemaGraph";
 import { mergeEngine6LiveFieldsIntoTour } from "../../../../engine6/liveProductFields";
 import {
@@ -325,6 +328,9 @@ export default function CityTourDetailRoute({
     const productCode = nativeEngine6Tour.productCode;
     const suppressLiveContentFields =
       isEngine6LiveItineraryMergeSuppressed(productCode);
+    const suppressLiveItineraryMerge =
+      suppressLiveContentFields ||
+      isEngine6PortlandTourCanonicalPath(nativeEngine6Tour.canonicalPath);
 
     fetch(
       `/api/engine6/viator-product?productCode=${encodeURIComponent(productCode)}`
@@ -371,7 +377,7 @@ export default function CityTourDetailRoute({
               ? (payload.rawProduct as Record<string, unknown>)
               : null,
           itinerary:
-            !suppressLiveContentFields && Array.isArray(extracted.itinerary)
+            !suppressLiveItineraryMerge && Array.isArray(extracted.itinerary)
               ? (extracted.itinerary
                   .map(item => {
                     if (!item || typeof item !== "object") return null;
@@ -421,7 +427,7 @@ export default function CityTourDetailRoute({
                   ) as Engine6LiveItineraryItem[])
               : null,
           itinerarySummaryText:
-            !suppressLiveContentFields &&
+            !suppressLiveItineraryMerge &&
             typeof extracted.itinerarySummaryText === "string"
               ? extracted.itinerarySummaryText
               : null,
@@ -453,7 +459,7 @@ export default function CityTourDetailRoute({
     return () => {
       cancelled = true;
     };
-  }, [nativeEngine6Tour?.productCode]);
+  }, [nativeEngine6Tour?.productCode, nativeEngine6Tour?.canonicalPath]);
 
   if (nativeEngine6Tour) {
     const liveDynamic =
@@ -461,6 +467,9 @@ export default function CityTourDetailRoute({
     const suppressLiveContentFields = isEngine6LiveItineraryMergeSuppressed(
       nativeEngine6Tour.productCode
     );
+    const suppressLiveItineraryMerge =
+      suppressLiveContentFields ||
+      isEngine6PortlandTourCanonicalPath(nativeEngine6Tour.canonicalPath);
     const resolvedEngine6Tour: Engine6Tour = liveDynamic
       ? {
           ...nativeEngine6Tour,
@@ -485,7 +494,7 @@ export default function CityTourDetailRoute({
           overviewText: suppressLiveContentFields
             ? nativeEngine6Tour.overviewText
             : (liveDynamic.overviewText ?? nativeEngine6Tour.overviewText),
-          itinerary: suppressLiveContentFields
+          itinerary: suppressLiveItineraryMerge
             ? nativeEngine6Tour.itinerary
             : liveDynamic.itinerary
               ? mergeEngine6NativeItineraryWithLive(
@@ -497,7 +506,7 @@ export default function CityTourDetailRoute({
                   }
                 )
               : nativeEngine6Tour.itinerary,
-          itinerarySummaryText: suppressLiveContentFields
+          itinerarySummaryText: suppressLiveItineraryMerge
             ? nativeEngine6Tour.itinerarySummaryText
             : (liveDynamic.itinerarySummaryText ??
               nativeEngine6Tour.itinerarySummaryText),
