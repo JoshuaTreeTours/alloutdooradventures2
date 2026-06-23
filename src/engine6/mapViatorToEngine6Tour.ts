@@ -58,6 +58,36 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Explore the Oregon Coast from Portland on a full-day small-group tour with Ecola State Park, Cannon Beach, Haystack Rock, and a naturalist guide.",
   "378720P1":
     "See Portland on a guided city tour with Pittock Mansion, the International Rose Test Garden, historic districts, and Willamette River bridge views.",
+  "18277P2":
+    "Visit popular Portland attractions on a guided small-group tour with stops at Voodoo Doughnut, Hoyt Arboretum, Pittock Mansion, and the International Rose Test Garden.",
+  "194901P3":
+    "Visit Portland parks and neighborhoods on a small-group tour with a local guide who explains city history and culture while visiting Washington Park and Pittock Mansion.",
+  "9634P1":
+    "Explore Portland's top sights on a half-day guided tour through historic districts, riverfront viewpoints, and Washington Park landmarks with a local guide.",
+  "5765P10":
+    "Explore Portland on a morning city sightseeing tour from downtown to the Pearl District and Nob Hill with stops at Pioneer Courthouse Square and the Rose Garden.",
+  "5765P14":
+    "See Portland on an afternoon city sightseeing tour with stops at Pioneer Courthouse Square, the Pearl District, Nob Hill, and the International Rose Test Garden.",
+  "9634P2":
+    "Travel from Portland along the Historic Columbia River Highway to Crown Point, Latourell Falls, and Multnomah Falls on a small-group gorge waterfall tour.",
+  "126203P10":
+    "Head to the Columbia River Gorge for a half-day tour of cascading waterfalls and scenic overlooks from Portland, including Multnomah Falls and Latourell Falls.",
+  "18277P1":
+    "Explore the Columbia River Gorge on a half-day small-group tour from Portland with stops at Multnomah Falls, Latourell Falls, and Vista House.",
+  "5765P9":
+    "Escape Portland for a guided waterfall tour along the Columbia River Highway with stops at Multnomah Falls, Latourell Falls, and Horsetail Falls.",
+  "9634P6":
+    "Combine the Columbia River Gorge and Mount Hood on a full-day tour from Portland with waterfall stops, mountain viewpoints, and scenic foothill driving.",
+  "194901P2":
+    "Spend a full day touring Columbia River Gorge waterfalls and Mount Hood from Portland with a naturalist guide, van transport, and scenic driving.",
+  "5765MTHOOD":
+    "Take a full-day Mount Hood trip from Portland with stops at Multnomah Falls, Hood River, and scenic viewpoints along the Columbia River Gorge.",
+  "5765P7":
+    "Travel from Portland to the northern Oregon Coast on a full-day tour with stops at coastal overlooks, Cannon Beach, and Haystack Rock.",
+  "401191P1":
+    "Explore downtown Portland on a guided food tour with tastings at local favorites across the city center with neighborhood history and food culture commentary.",
+  "67842P3":
+    "Discover Portland's food-cart culture on a guided tour of pods, patios, and cart clusters across the city with tastings from multiple vendors.",
 };
 const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",
@@ -94,6 +124,18 @@ const ENGINE6_CLASSIFICATION_OVERRIDES: Record<
       { slug: "sightseeing-city-tours", label: "Sightseeing & City Tours" },
     ],
   },
+  "401191P1": {
+    primaryCategory: "food-wine",
+    categories: ["food-wine"],
+    primaryDisplayCategory: "Food & Wine",
+    activityCategories: [{ slug: "food-wine", label: "Food & Wine" }],
+  },
+  "67842P3": {
+    primaryCategory: "food-wine",
+    categories: ["food-wine"],
+    primaryDisplayCategory: "Food & Wine",
+    activityCategories: [{ slug: "food-wine", label: "Food & Wine" }],
+  },
 };
 
 export const isEngine6ItinerarySectionSuppressed = (productCode: string) =>
@@ -129,6 +171,36 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Travel from Portland to the northern Oregon Coast on a full-day small-group outing led by a naturalist guide. Ride in an air-conditioned minivan with bottled water and light snacks while the route links Ecola State Park overlooks, Indian Beach, Cannon Beach, and Haystack Rock along scenic Highway 101. Depending on tides and conditions, the day may include stops at Hug Point or Oswald West State Park before a Neahkahnie Mountain viewpoint when time allows. The structured coastal itinerary covers key north-coast landmarks without self-driving from Portland, with pickup available at select downtown hotels or South Waterfront Park.",
   "378720P1":
     "Explore Portland on a guided city tour that introduces the city's history, architecture, and evolving neighborhoods in roughly three hours. A local guide narrates the route from pioneer-era settlement through today's districts, crossing the Willamette River on an iconic bridge and visiting Pittock Mansion for Mount Hood views. The outing includes a stop at the International Rose Test Garden in Washington Park, drive-by perspectives on Old Town and downtown corridors, and east-side neighborhoods that reflect Portland's local character and ongoing change.",
+  "18277P2":
+    "Visit popular Portland attractions on a guided small-group tour with stops at Voodoo Doughnut, Hoyt Arboretum, Pittock Mansion, and the International Rose Test Garden. A local guide narrates the route through parks, viewpoints, and city landmarks before returning to your hotel pickup point.",
+  "194901P3":
+    "Visit Portland parks and neighborhoods on a small-group tour with a local guide who explains city history and culture. The route includes Waterfront Park, Pioneer Square, the South Park Blocks, Washington Park, the International Rose Test Garden, and Pittock Mansion for panoramic views.",
+  "9634P1":
+    "Explore Portland's top sights on a half-day guided tour through historic districts, riverfront viewpoints, and Washington Park. The route introduces city history and culture while visiting landmarks such as Pittock Mansion and the International Rose Test Garden with a knowledgeable local guide.",
+  "5765P10":
+    "Explore Portland on a morning city sightseeing tour from downtown to the Pearl District and Nob Hill. Visit Pioneer Courthouse Square, NW 23rd Avenue, the South Park Blocks, and the International Rose Test Garden in Washington Park with hotel pickup and drop-off included.",
+  "5765P14":
+    "See Portland on an afternoon city sightseeing tour with stops at Pioneer Courthouse Square, the Pearl District, Nob Hill, and the International Rose Test Garden. A local guide shares Portland history and culture during a Mercedes-Benz Sprinter route with downtown hotel pickup.",
+  "9634P2":
+    "Travel from Portland along the Historic Columbia River Highway to Crown Point, Latourell Falls, and Multnomah Falls. This small-group outing visits Vista House overlooks and gorge waterfalls with time for photos and short walks when trail conditions allow.",
+  "126203P10":
+    "Head to the Columbia River Gorge for a half-day tour of cascading waterfalls and scenic overlooks from Portland. Visit Multnomah Falls, Latourell Falls, Vista House, Bridal Veil Falls, and Portland Women's Forum viewpoints with optional mini-hikes when conditions allow.",
+  "18277P1":
+    "Explore the Columbia River Gorge on a half-day small-group tour from Portland with stops at Multnomah Falls, Latourell Falls, and Vista House. A local guide handles transportation from downtown hotels so you can focus on gorge scenery and waterfall viewpoints.",
+  "5765P9":
+    "Escape Portland for a guided waterfall tour along the Columbia River Highway National Scenic Byway. Stops typically include Portland Women's Forum viewpoints, Wahkeena Falls, Latourell Falls, Multnomah Falls, and Horsetail Falls with hotel pickup in a Mercedes-Benz Sprinter van.",
+  "9634P6":
+    "Combine the Columbia River Gorge and Mount Hood on a full-day tour from Portland with waterfall stops and mountain viewpoints. The route links gorge landmarks such as Multnomah Falls with Mount Hood scenery, fruit-stand stops, and scenic driving through Oregon's Cascade foothills.",
+  "194901P2":
+    "Spend a full day touring Columbia River Gorge waterfalls and Mount Hood from Portland with a naturalist guide. The outing combines gorge overlooks, waterfall walks, and Mount Hood viewpoints with van transport, bottled water, and light snacks throughout the day.",
+  "5765MTHOOD":
+    "Take a full-day Mount Hood trip from Portland with stops at Multnomah Falls, Hood River, and scenic viewpoints along the Columbia River Gorge. Travel by Mercedes-Benz Sprinter with a local guide, hotel pickup, and time for photos at waterfall and mountain overlooks.",
+  "5765P7":
+    "Travel from Portland to the northern Oregon Coast on a full-day tour with stops at coastal overlooks, beach towns, and scenic Highway 101 viewpoints. A local guide handles the driving while you visit Cannon Beach, Haystack Rock, and additional north-coast landmarks.",
+  "401191P1":
+    "Explore downtown Portland on a guided food tour with tastings at local favorites across the city center. A guide leads a walking route through central districts while sharing Portland food culture, neighborhood history, and stories behind each stop.",
+  "67842P3":
+    "Discover Portland's food-cart culture on a guided tour of pods, patios, and cart clusters across the city. Sample dishes from multiple vendors while a local guide explains how Portland's cart scene shaped the city's dining identity.",
 };
 
 const ENGINE6_OVERVIEW_OVERRIDES: Record<

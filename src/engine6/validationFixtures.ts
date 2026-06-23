@@ -102,6 +102,21 @@ import specimen32779p6Payload from "../../data/engine6/viator/32779P6.exact-prod
 import specimen70058p145Payload from "../../data/engine6/viator/70058P145.exact-product.json";
 import specimen194901p4Payload from "../../data/engine6/viator/194901P4.exact-product.json";
 import specimen378720p1Payload from "../../data/engine6/viator/378720P1.exact-product.json";
+import specimen18277p2Payload from "../../data/engine6/viator/18277P2.exact-product.json";
+import specimen194901p3Payload from "../../data/engine6/viator/194901P3.exact-product.json";
+import specimen9634p1Payload from "../../data/engine6/viator/9634P1.exact-product.json";
+import specimen5765p10Payload from "../../data/engine6/viator/5765P10.exact-product.json";
+import specimen5765p14Payload from "../../data/engine6/viator/5765P14.exact-product.json";
+import specimen9634p2Payload from "../../data/engine6/viator/9634P2.exact-product.json";
+import specimen126203p10Payload from "../../data/engine6/viator/126203P10.exact-product.json";
+import specimen18277p1Payload from "../../data/engine6/viator/18277P1.exact-product.json";
+import specimen5765p9Payload from "../../data/engine6/viator/5765P9.exact-product.json";
+import specimen9634p6Payload from "../../data/engine6/viator/9634P6.exact-product.json";
+import specimen194901p2Payload from "../../data/engine6/viator/194901P2.exact-product.json";
+import specimen5765mthoodPayload from "../../data/engine6/viator/5765MTHOOD.exact-product.json";
+import specimen5765p7Payload from "../../data/engine6/viator/5765P7.exact-product.json";
+import specimen401191p1Payload from "../../data/engine6/viator/401191P1.exact-product.json";
+import specimen67842p3Payload from "../../data/engine6/viator/67842P3.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -1071,6 +1086,141 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Portland/City-of-Roses-Tour-Visit-iconic-and-historic-Portland-sights/d5065-378720P1",
     rawPayload: specimen378720p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "18277P2",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Portland-City-Tour/d5065-18277P2",
+    rawPayload: specimen18277p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "194901P3",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Portland-Oregon-City-Tour/d5065-194901P3",
+    rawPayload: specimen194901p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "9634P1",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Tour-the-City-of-Roses/d5065-9634P1",
+    rawPayload: specimen9634p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5765P10",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Best-of-Portland-City-Tour/d5065-5765P10",
+    rawPayload: specimen5765p10Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5765P14",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Best-of-Portland-City-Tour-2PM/d5065-5765P14",
+    rawPayload: specimen5765p14Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "9634P2",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Columbia-River-Gorge-Waterfalls-Tour-from-Portland/d5065-9634P2",
+    rawPayload: specimen9634p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "126203P10",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Multnomah-Falls-Zen-Columbia-River-Gorge-Waterfalls-Tour/d5065-126203P10",
+    rawPayload: specimen126203p10Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "18277P1",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Columbia-River-Gorge-Tour-from-Portland/d5065-18277P1",
+    rawPayload: specimen18277p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5765P9",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Portland-Day-Trip-Multnomah-Falls-and-Columbia-River-Gorge-Waterfalls-Tour/d5065-5765P9",
+    rawPayload: specimen5765p9Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "9634P6",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Columbia-Gorge-and-Mt-Hood-Tour/d5065-9634P6",
+    rawPayload: specimen9634p6Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "194901P2",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Columbia-Gorge-Waterfalls-and-Mt-Hood-Tour-Full-Day/d5065-194901P2",
+    rawPayload: specimen194901p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5765MTHOOD",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Mt-Hood-Day-Trip-from-Portland-to-Multnomah-Falls-and-Hood-River/d5065-5765MTHOOD",
+    rawPayload: specimen5765mthoodPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5765P7",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Oregon-Coast-Tour-from-Portland/d5065-5765P7",
+    rawPayload: specimen5765p7Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "401191P1",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Heart-of-Downtown-Portland-Food-Tour/d5065-401191P1",
+    rawPayload: specimen401191p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "67842P3",
+    publicUrl:
+      "https://www.viator.com/tours/Portland/Portland-Food-Carts-Pods-and-Patios-Tour/d5065-67842P3",
+    rawPayload: specimen67842p3Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
