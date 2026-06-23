@@ -13,6 +13,10 @@ import TourCard from "../../components/TourCard";
 import { getToursByCityUnified } from "../../data/tours";
 import Engine6DebugPanel from "./Engine6DebugPanel";
 import { formatEngine6AggregateRating } from "../rating";
+import {
+  getEngine6LiveRatingSourceOfTruth,
+  getEngine6TourRatingSourceOfTruth,
+} from "../ratingSourceOfTruth";
 import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
@@ -183,6 +187,8 @@ export const hydrateRelatedTourCommercialFields = (
       ? liveFields.priceFormatted.trim()
       : "";
 
+  const liveRatingSourceOfTruth = getEngine6LiveRatingSourceOfTruth(liveFields);
+
   return {
     ...entry,
     tour: {
@@ -191,13 +197,9 @@ export const hydrateRelatedTourCommercialFields = (
       badges: {
         ...baseTour.badges,
         rating:
-          typeof liveFields.aggregateRating === "number"
-            ? liveFields.aggregateRating
-            : baseTour.badges.rating,
+          liveRatingSourceOfTruth.aggregateRating ?? baseTour.badges.rating,
         reviewCount:
-          typeof liveFields.reviewCount === "number"
-            ? liveFields.reviewCount
-            : baseTour.badges.reviewCount,
+          liveRatingSourceOfTruth.reviewCount ?? baseTour.badges.reviewCount,
         priceFrom: priceFormatted || baseTour.badges.priceFrom,
         duration:
           typeof liveFields.durationText === "string" &&
@@ -251,9 +253,10 @@ export default function Engine6TourPage({
   const schemaGraph = schema["@graph"] as Array<Record<string, unknown>>;
   const resolvedHeroUrl = tour.resolvedHero?.url ?? tour.heroImageUrl;
   const hasPrice = Boolean(tour.priceFormatted);
+  const ratingSourceOfTruth = getEngine6TourRatingSourceOfTruth(tour);
   const hasRating =
-    typeof tour.aggregateRating === "number" &&
-    typeof tour.reviewCount === "number";
+    ratingSourceOfTruth.aggregateRating !== null &&
+    ratingSourceOfTruth.reviewCount !== null;
   const hasMeetingPoint = Boolean(tour.meetingPointText?.trim());
   const hasDuration = Boolean(tour.durationText?.trim());
   const breadcrumbs = buildEngine6Breadcrumbs(tour);
@@ -441,8 +444,8 @@ export default function Engine6TourPage({
                   ) : null}
                   {hasRating ? (
                     <RatingSummary
-                      aggregateRating={tour.aggregateRating}
-                      reviewCount={tour.reviewCount}
+                      aggregateRating={ratingSourceOfTruth.aggregateRating}
+                      reviewCount={ratingSourceOfTruth.reviewCount}
                     />
                   ) : null}
                 </div>

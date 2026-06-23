@@ -2,6 +2,7 @@ import type { Tour } from "../data/tours.types";
 import { isExcludedProductCode } from "../data/excludedProductCodes";
 import { isUSStateName } from "../constants/usStates";
 import { toEngine6Card } from "./cards";
+import { getEngine6TourRatingSourceOfTruth } from "./ratingSourceOfTruth";
 import { legacyFhMigratedTours } from "./legacyFh/registry";
 import { ENGINE6_SPECIMEN_PRODUCT_CODE } from "./routes";
 import { engine6ResolvedTours } from "./registry";
@@ -66,6 +67,7 @@ const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
   const [, stateSlug = "", citySlug = "", slug = ""] =
     ENGINE6_CANONICAL_TOUR_PATH.exec(tour.canonicalPath) ?? [];
   const card = toEngine6Card(tour);
+  const ratingSourceOfTruth = getEngine6TourRatingSourceOfTruth(tour);
   const heroImageUrl = tour.heroImageUrl ?? "";
 
   return {
@@ -90,8 +92,8 @@ const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
     resolvedImageUrl: heroImageUrl || null,
     primaryImageUrl: heroImageUrl || undefined,
     badges: {
-      rating: tour.aggregateRating ?? undefined,
-      reviewCount: tour.reviewCount ?? undefined,
+      rating: ratingSourceOfTruth.aggregateRating ?? undefined,
+      reviewCount: ratingSourceOfTruth.reviewCount ?? undefined,
       priceFrom: tour.priceFormatted,
     },
     startingPrice: tour.priceAmount ?? undefined,
