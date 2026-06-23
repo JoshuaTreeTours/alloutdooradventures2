@@ -105,8 +105,8 @@ describe("Engine6 itinerary title override governance", () => {
       { title: "Bethesda Fountain", titleSource: "explicit" },
       { title: "Bow Bridge", titleSource: "explicit" },
       {
-        title: "Strawberry Fields, John Lennon Memorial",
-        titleSource: "explicit",
+        title: "Strawberry Fields",
+        titleSource: "product-override",
       },
     ]);
   });
