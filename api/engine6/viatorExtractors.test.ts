@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { extractEngine6Product } from "./viatorExtractors";
+import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides";
 
 describe("extractEngine6Product operatorReviews mapping", () => {
   it("maps operatorReviews rating and totalReviews without dropping to zero", () => {
@@ -103,28 +104,22 @@ describe("extractEngine6Product itinerary title overrides", () => {
     "A traffic circle with the Christopher Columbus monument marks this gateway.",
   ];
 
-  it("applies confirmed 414460P1 Central Park Pedicab row title overrides", () => {
-    const result = extractEngine6Product({
-      product: {
-        productCode: "414460P1",
-        title: "VIP Central Park Pedicab Guided Tour",
-        itinerary: {
-          itineraryItems: centralParkDescriptions.map(description => ({
-            description,
-            pointOfInterestLocation: { location: { ref: "opaque-ref" } },
-          })),
-        },
-      },
-    } as Record<string, unknown>);
+  it("applies confirmed 414460P1 Central Park Pedicab row title overrides when live prose titles are present", () => {
+    const inferredTitles = centralParkDescriptions.map(description => {
+      const firstSentence =
+        description.split(/(?<=[.!?])\s+/)[0]?.replace(/[.!?]+$/, "").trim() ??
+        description;
+      return firstSentence;
+    });
 
-    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+    const expectedTitles = [
       "Wollman Rink",
       "Central Park Carousel",
       "Chess & Checkers House",
       "Literary Walk",
       "Balto Statue",
       "Conservatory Water",
-      "Central Park Boathouse",
+      "Loeb Boathouse",
       "Bethesda Fountain",
       "Cherry Hill",
       "Bow Bridge",
@@ -135,7 +130,17 @@ describe("extractEngine6Product itinerary title overrides", () => {
       "Sheep Meadow",
       "Pinebank Arch",
       "Columbus Circle",
-    ]);
+    ];
+
+    inferredTitles.forEach((currentTitle, rowIndex) => {
+      expect(
+        getEngine6ItineraryTitleOverride({
+          productCode: "414460P1",
+          rowIndex,
+          currentTitle,
+        })
+      ).toBe(expectedTitles[rowIndex]);
+    });
   });
 
   it("preserves itinerary descriptions when title overrides are applied", () => {

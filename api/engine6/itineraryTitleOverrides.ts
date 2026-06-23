@@ -44,6 +44,18 @@ const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
     3: "Trailhead Descent",
   },
   "3454YE3D": {
+    0: "San Francisco departure",
+    1: "Bay Bridge crossing",
+    2: "Yosemite National Park entrance",
+    3: "Tuolumne Grove",
+    4: "Yosemite Valley orientation",
+    5: "Yosemite Village free time",
+    6: "Yosemite Falls",
+    7: "Ansel Adams Gallery",
+    8: "Yosemite campsite",
+    10: "High-country hiking",
+    12: "Valley activity time",
+    13: "El Capitan Meadow",
     14: "San Francisco Drop-off",
   },
   "190492P3": {
@@ -79,6 +91,9 @@ const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
     1: "Scenic Loop Entry",
     6: "Rocky Gap Road",
     7: "Las Vegas Transfer",
+  },
+  "5119P13": {
+    4: "Grand Canyon West",
   },
   "5615689P4": {
     1: "Las Vegas Arts District",
@@ -263,6 +278,482 @@ const PRODUCT_ROW_CONDITIONAL_TITLE_OVERRIDES: Record<
   string,
   Record<number, readonly ConditionalTitleOverride[]>
 > = {
+  "414460P1": {
+    0: [
+      {
+        title: "Wollman Rink",
+        currentTitleStartsWith: ["Winter time", "In winter guests"],
+      },
+    ],
+    1: [
+      {
+        title: "Central Park Carousel",
+        currentTitleStartsWith: ["Iconic carousel", "The 1908 carousel"],
+      },
+    ],
+    2: [
+      {
+        title: "Chess & Checkers House",
+        currentTitleStartsWith: ["24 game tables", "The 24 game tables"],
+      },
+      {
+        title: "Strawberry Fields",
+        currentTitleStartsWith: ["Strawberry Fields, John Lennon Memorial"],
+      },
+    ],
+    3: [
+      {
+        title: "Literary Walk",
+        currentTitleStartsWith: ["Statues of Shakespeare"],
+      },
+    ],
+    4: [
+      {
+        title: "Literary Walk",
+        currentTitleStartsWith: ["Statues of Shakespeare"],
+      },
+      {
+        title: "Balto Statue",
+        currentTitleStartsWith: ["Balto was"],
+      },
+    ],
+    5: [
+      {
+        title: "Balto Statue",
+        currentTitleStartsWith: ["Balto was"],
+      },
+      {
+        title: "Conservatory Water",
+        currentTitleStartsWith: ["Remote-control model boats"],
+      },
+    ],
+    6: [
+      {
+        title: "Rumsey Playfield",
+        currentTitleStartsWith: ["Rumsey Playfield"],
+      },
+      {
+        title: "Loeb Boathouse",
+        currentTitleStartsWith: [
+          "This lakeside restaurant & bar",
+          "This lakeside restaurant and bar",
+        ],
+      },
+    ],
+    7: [
+      {
+        title: "Conservatory Water",
+        currentTitleStartsWith: ["Man-made pond"],
+      },
+      {
+        title: "Bethesda Fountain",
+        currentTitleStartsWith: ["Bethesda Terrace and its famous fountain"],
+      },
+    ],
+    8: [
+      {
+        title: "Loeb Boathouse",
+        currentTitleStartsWith: ["American restaurant & bar"],
+      },
+      {
+        title: "Cherry Hill",
+        currentTitleStartsWith: ["Cherry trees and the Friends Fountain"],
+      },
+    ],
+    9: [
+      {
+        title: "Bethesda Fountain",
+        currentTitleStartsWith: ["Bethesda Terrace Fountain"],
+      },
+      {
+        title: "Bow Bridge",
+        currentTitleStartsWith: ["This Victorian bridge", "Built in 1862"],
+      },
+    ],
+    10: [
+      {
+        title: "Bow Bridge",
+        currentTitleStartsWith: ["This Victorian bridge"],
+      },
+      {
+        title: "The Lake",
+        currentTitleStartsWith: ["The second-largest", "The second largest"],
+      },
+    ],
+    11: [
+      {
+        title: "Daniel Webster Monument",
+        currentTitleStartsWith: ["The Daniel Webster monument"],
+      },
+      {
+        title: "The Lake",
+        currentTitleStartsWith: ["The second-largest", "The second largest"],
+      },
+      {
+        title: "Cherry Hill",
+        currentTitleStartsWith: ["Named for the cherry trees"],
+      },
+    ],
+    12: [
+      {
+        title: "The Dakota",
+        currentTitleStartsWith: ["The Dakota building", "Dakota building"],
+      },
+      {
+        title: "Daniel Webster Monument",
+        currentTitleStartsWith: [
+          "The Daniel Webster monument",
+          "The monument to American lawyer",
+        ],
+      },
+      {
+        title: "Bow Bridge",
+        currentTitleStartsWith: ["Built in 1862"],
+      },
+    ],
+    13: [
+      {
+        title: "Tavern on the Green",
+        currentTitleStartsWith: ["Tavern on the Green is"],
+      },
+      {
+        title: "The Dakota",
+        currentTitleStartsWith: ["The Dakota building", "Dakota building"],
+      },
+      {
+        title: "The Lake",
+        currentTitleStartsWith: ["The second largest man-made body of water"],
+      },
+    ],
+    14: [
+      {
+        title: "Sheep Meadow",
+        currentTitleStartsWith: ["The largest lawn", "Park's largest lawn"],
+      },
+      {
+        title: "Tavern on the Green",
+        currentTitleStartsWith: ["Tavern on the Green is"],
+      },
+      {
+        title: "Daniel Webster Monument",
+        currentTitleStartsWith: ["The monument to American lawyer"],
+      },
+    ],
+    15: [
+      {
+        title: "Sheep Meadow",
+        currentTitleStartsWith: ["The largest lawn", "Park's largest lawn"],
+      },
+      {
+        title: "Pinebank Arch",
+        currentTitleStartsWith: ["Pinebank Arch is"],
+      },
+    ],
+    16: [
+      {
+        title: "The Dakota",
+        currentTitleStartsWith: ["Dakota building", "The Dakota building"],
+      },
+      {
+        title: "Columbus Circle",
+        currentTitleStartsWith: ["A traffic circle with the Christopher Columbus monument"],
+      },
+    ],
+    17: [
+      {
+        title: "Tavern on the Green",
+        currentTitleStartsWith: ["Tavern on the Green is an American cuisine"],
+      },
+    ],
+    18: [
+      {
+        title: "Sheep Meadow",
+        currentTitleStartsWith: ["Park's largest lawn"],
+      },
+    ],
+    20: [
+      {
+        title: "Columbus Circle",
+        currentTitleStartsWith: ["Busy traffic circle"],
+      },
+    ],
+  },
+  "3156P13": {
+    0: [
+      {
+        title: "City Hall & Civic Center",
+        currentTitleStartsWith: ["Once we make sure you are comfortable"],
+      },
+    ],
+    1: [
+      {
+        title: "Central Park",
+        currentTitleStartsWith: ["Explore Central Park"],
+      },
+    ],
+    2: [
+      {
+        title: "The Vessel",
+        currentTitleStartsWith: ["See the new vessel"],
+      },
+    ],
+  },
+  "5614063P8": {
+    0: [
+      {
+        title: "Departure from New York",
+        currentTitleStartsWith: ["Our tour begins when you leave Manhattan"],
+      },
+    ],
+    1: [
+      {
+        title: "Delaware Rest Stop",
+        currentTitleStartsWith: ["When we meet in Delaware"],
+      },
+    ],
+    2: [
+      {
+        title: "Pentagon",
+        currentTitleStartsWith: [
+          "Then we will head to the state of Virginia to border the Pentagon",
+        ],
+      },
+    ],
+    3: [
+      {
+        title: "Arlington National Cemetery",
+        currentTitleStartsWith: ["Our first stop will be Arlington National Cemetery"],
+      },
+    ],
+    4: [
+      {
+        title: "Iwo Jima Memorial",
+        currentTitleStartsWith: ["Our next stop will be the Iwo Jima Memorial"],
+      },
+    ],
+    5: [
+      {
+        title: "National Mall",
+        currentTitleStartsWith: ["We will arrive at the National Mall"],
+      },
+    ],
+    6: [
+      {
+        title: "Washington Monument",
+        currentTitleStartsWith: ["We will continue the tour past the federal reserve"],
+      },
+    ],
+    7: [
+      {
+        title: "White House",
+        currentTitleStartsWith: ["We will reach the outside of the white house"],
+      },
+    ],
+    8: [
+      {
+        title: "Ford's Theatre",
+        currentTitleStartsWith: ["We'll visit the Ford Theater"],
+      },
+    ],
+    9: [
+      {
+        title: "U.S. Capitol",
+        currentTitleStartsWith: ["We will visit the southern exterior of the National Capitol"],
+      },
+    ],
+    10: [
+      {
+        title: "Smithsonian Museums",
+        currentTitleStartsWith: ["After this you will have free time to eat"],
+      },
+    ],
+    11: [
+      {
+        title: "Times Square Return",
+        currentTitleStartsWith: ["We will be back in Manhattan between"],
+      },
+    ],
+  },
+  "3857PHI": {
+    0: [
+      {
+        title: "Departure from New York",
+        currentTitleStartsWith: ["Depart New York through New Jersey"],
+      },
+    ],
+    1: [
+      {
+        title: "Liberty Bell",
+        currentTitleStartsWith: ["Arriving in the historical center of Philadelphia"],
+      },
+    ],
+    2: [
+      {
+        title: "Elfreth's Alley",
+        currentTitleStartsWith: ["Stroll Elfreth's Alley"],
+      },
+    ],
+    3: [
+      {
+        title: "Philadelphia Highlights",
+        currentTitleStartsWith: ["Continue on a panoramic tour of Philadelphia"],
+      },
+    ],
+    4: [
+      {
+        title: "Amish Country",
+        currentTitleStartsWith: ["Start your time in Amish country"],
+      },
+    ],
+  },
+  "5119P13": {
+    4: [
+      {
+        title: "Grand Canyon West",
+        currentTitleStartsWith: ["At Grand Canyon West"],
+      },
+    ],
+  },
+  "5516ST5": {
+    0: [
+      {
+        title: "Las Vegas Strip",
+        currentTitleStartsWith: ["As your helicopter lifts off"],
+      },
+    ],
+    1: [
+      {
+        title: "High Roller",
+        currentTitleStartsWith: ["Soaring above the skyline, the High Roller"],
+      },
+    ],
+    2: [
+      {
+        title: "Sphere",
+        currentTitleStartsWith: ["Nothing prepares you for the sight of Sphere"],
+      },
+    ],
+    5: [
+      {
+        title: "Bellagio Fountains",
+        currentTitleStartsWith: ["From above, the Bellagio fountains"],
+      },
+    ],
+    7: [
+      {
+        title: "Luxor",
+        currentTitleStartsWith: [
+          "As your flight begins its return toward the heliport, the unmistakable pyramid of Luxor",
+        ],
+      },
+    ],
+    8: [
+      {
+        title: "Pampas Brazilian Grille",
+        currentTitleStartsWith: [
+          "Upgrade your experience with a traditional Brazilian churrascaria dinner at Pampas",
+        ],
+      },
+    ],
+  },
+  "3533P14": {
+    0: [
+      {
+        title: "Red Rock Canyon",
+        currentTitleStartsWith: ["Drive from the LV Strip to Red Rock Canyon"],
+      },
+    ],
+    2: [
+      {
+        title: "Spring Mountains",
+        currentTitleStartsWith: [
+          "Home to an impressive array of plants and wildlife, The Spring Mountains",
+        ],
+      },
+    ],
+    3: [
+      {
+        title: "Calico Hills",
+        currentTitleStartsWith: ["The kaleidoscopic colors of Calico Hills"],
+      },
+    ],
+    4: [
+      {
+        title: "Rocky Gap Road",
+        currentTitleStartsWith: ["Make your way up Rocky Gap Road"],
+      },
+    ],
+    5: [
+      {
+        title: "Willow Springs",
+        currentTitleStartsWith: ["Stop by Willow Springs"],
+      },
+    ],
+  },
+  "60136P1": {
+    0: [
+      {
+        title: "Virgin River Gorge",
+        currentTitleStartsWith: ["Drive through the Virgin River Gorge"],
+      },
+    ],
+    1: [
+      {
+        title: "Kanab",
+        currentTitleStartsWith: ["Pass through the town of Kanab"],
+      },
+    ],
+    2: [
+      {
+        title: "Glen Canyon Dam & Lake Powell",
+        currentTitleStartsWith: ["See views of Glen Canyon Dam and Lake Powell"],
+      },
+    ],
+    3: [
+      {
+        title: "Lake Powell",
+        currentTitleStartsWith: ["Enjoy views of the 181 mile long Lake Powell"],
+      },
+    ],
+    4: [
+      {
+        title: "Grand Staircase-Escalante",
+        currentTitleStartsWith: [
+          "Enjoy views of colorful rock formation and 80 mile views across the largest National Monument",
+        ],
+      },
+    ],
+    5: [
+      {
+        title: "Horseshoe Bend",
+        currentTitleStartsWith: [
+          "Enjoy views of the Colorado River in Glen Canyon's Horseshoe Bend",
+        ],
+      },
+    ],
+    6: [
+      {
+        title: "Antelope Canyon",
+        currentTitleStartsWith: ["Antelope Canyon"],
+      },
+    ],
+  },
+  "26719P8": {
+    1: [
+      {
+        title: "Black Canyon",
+        currentTitleStartsWith: [
+          "Immerse yourself in the breathtaking scenery of Black Canyon",
+        ],
+      },
+    ],
+    2: [
+      {
+        title: "Emerald Cove",
+        currentTitleStartsWith: ["Discover the magic of Emerald Cove"],
+      },
+    ],
+  },
   "411138P3": {
     5: [
       {
