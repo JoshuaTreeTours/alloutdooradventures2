@@ -7,8 +7,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/connecticut</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/district-of-columbia</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/albania</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/albania/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/austria</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/austria/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/belgium</loc><priority>0.6</priority></url>
@@ -39,8 +37,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/lithuania/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/netherlands</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/netherlands/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/north-macedonia</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/europe/north-macedonia/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/norway</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/norway/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/europe/poland</loc><priority>0.6</priority></url>
@@ -80,7 +76,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/vermont</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/washington</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/australia</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/czechia</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/morocco</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/wyoming</loc><priority>0.6</priority></url>
 </urlset>

@@ -6,7 +6,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/alaska/denali-national-park-and-preserve</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/arizona/flagstaff</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/arizona/scottsdale</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/arizona/sedona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/california</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/california/calistoga</loc><priority>0.5</priority></url>
@@ -18,9 +17,7 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/california/los-angeles</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/california/napa</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/california/oakhurst</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/california/palm-springs</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/california/redondo-beach</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/california/sacramento</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/california/san-diego</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/california/san-francisco</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/california/santa-barbara</loc><priority>0.5</priority></url>
@@ -33,7 +30,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/connecticut</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/connecticut/essex</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/connecticut/haddam</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/connecticut/hartford</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/connecticut/new-milford</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/connecticut/plainville</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/connecticut/seymour</loc><priority>0.5</priority></url>
@@ -87,13 +83,13 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/illinois/chicago</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/kentucky</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/kentucky/louisville</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/kentucky/park-city</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/louisiana</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/louisiana/lafayette</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/louisiana/madisonville</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/louisiana/marrero</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/louisiana/new-orleans</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/maine</loc><priority>0.5</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/guides/us/maine/bar-harbor</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/maine/ogunquit</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/maine/portland</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/maryland</loc><priority>0.5</priority></url>
@@ -133,7 +129,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/north-carolina</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/north-carolina/asheville</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/ohio</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/ohio/grove-city</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/ohio/logan</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/oregon</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/oregon/portland</loc><priority>0.5</priority></url>
@@ -148,7 +143,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/tennessee</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/tennessee/chattanooga</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/tennessee/nashville</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/tennessee/pigeon-forge</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/tennessee/sevierville</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/texas</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/texas/austin</loc><priority>0.5</priority></url>

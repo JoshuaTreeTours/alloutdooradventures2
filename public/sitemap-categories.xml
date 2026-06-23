@@ -118,7 +118,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/minnesota/webster</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/new-york</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/new-york/new-york</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/food-wine/ontario</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/oregon</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/oregon/portland</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/food-wine/spain</loc><priority>0.5</priority></url>
@@ -237,7 +236,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/paddle-sports/alaska/juneau</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/paddle-sports/alaska/moose-pass</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/paddle-sports/alaska/wasilla</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/paddle-sports/alberta</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/paddle-sports/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/paddle-sports/arizona/cottonwood</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/paddle-sports/arizona/temple-bar-marina</loc><priority>0.5</priority></url>
@@ -427,7 +425,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/california</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/california/los-angeles</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/california/mountain-ranch</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/california/sacramento</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/california/san-diego</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/colorado</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/colorado/denver</loc><priority>0.5</priority></url>
@@ -457,8 +454,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/pennsylvania/philadelphia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/virginia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/virginia/arlington</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/washington</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/walking-tours/washington/seattle</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/water-sports</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/water-sports/california</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/water-sports/california/portsmouth</loc><priority>0.5</priority></url>
