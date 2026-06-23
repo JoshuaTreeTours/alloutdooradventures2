@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "5765MTHOOD",
+    "productUrl": "https://www.viator.com/tours/Portland/Mt-Hood-Day-Trip-from-Portland-to-Multnomah-Falls-and-Hood-River/d5065-5765MTHOOD",
+    "title": "Mount Hood Day Trip from Portland to Multnomah Falls and Hood River",
+    "description": {
+      "text": "Take a full-day Mount Hood trip from Portland with stops at Multnomah Falls, Hood River, and scenic viewpoints along the Columbia River Gorge. Travel by Mercedes-Benz Sprinter with a local guide, hotel pickup, and time for photos at waterfall and mountain overlooks."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $149.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 95
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/5c/41/61.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day Mount Hood and gorge combination from Portland",
+      "Stop at Multnomah Falls in the Columbia River Gorge",
+      "Visit Hood River and Mount Hood scenic viewpoints",
+      "Mercedes-Benz Sprinter transport with hotel pickup",
+      "Small-group format with a local guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available at select downtown Portland hotels or a central meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Returns to the original Portland pickup location."
+      }
+    },
+    "itinerarySummary": "Take a full-day Mount Hood trip from Portland with stops at Multnomah Falls, Hood River, and scenic viewpoints along the Columbia River Gorge.",
+    "itineraryItems": [
+      {
+        "title": "Multnomah Falls",
+        "description": "Begin with a gorge stop at Oregon's iconic two-tier waterfall.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mount Hood scenic driving",
+        "description": "Continue toward Mount Hood with photo stops at mountain viewpoints.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hood River",
+        "description": "Pass through Hood River for riverfront and orchard-country scenery.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Return to Portland",
+        "description": "Finish with drop-off at downtown Portland hotels.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mount Hood Day Trip from Portland to Multnomah Falls and Hood River?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Portland?",
+        "answer": "Pickup is available at select downtown Portland hotels or a central meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "9634P2",
+    "productUrl": "https://www.viator.com/tours/Portland/Columbia-River-Gorge-Waterfalls-Tour-from-Portland/d5065-9634P2",
+    "title": "Columbia River Gorge Waterfalls Tour",
+    "description": {
+      "text": "Travel from Portland along the Historic Columbia River Highway to Crown Point, Latourell Falls, and Multnomah Falls. This small-group outing visits Vista House overlooks and gorge waterfalls with time for photos and short walks when trail conditions allow."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $79.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1200
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7b/94/a9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Drive the Historic Columbia River Highway from Portland",
+      "Stop at Crown Point and Vista House overlooks",
+      "Visit Latourell Falls and Multnomah Falls",
+      "Small-group van transport with a local guide",
+      "Photo stops at Columbia River Gorge viewpoints"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available at select downtown Portland hotels or a central meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Returns to the original Portland pickup location."
+      }
+    },
+    "itinerarySummary": "Travel from Portland along the Historic Columbia River Highway to Crown Point, Latourell Falls, and Multnomah Falls.",
+    "itineraryItems": [
+      {
+        "title": "Troutdale and Crown Point",
+        "description": "Begin east of Portland with views from Crown Point above the Columbia River.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vista House",
+        "description": "Explore the historic observatory and gorge panoramas at Crown Point.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Latourell Falls",
+        "description": "Visit the columnar-basalt waterfall with an optional short paved trail.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Multnomah Falls",
+        "description": "Stop at Oregon's tallest waterfall with time near the lodge and viewing platform.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Columbia River Gorge Waterfalls Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Portland?",
+        "answer": "Pickup is available at select downtown Portland hotels or a central meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Nature and Wildlife"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 79
+      },
+      "currency": "USD"
+    }
+  }
+}

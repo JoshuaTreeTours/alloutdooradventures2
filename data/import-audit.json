@@ -24597,12 +24597,6 @@
     },
     {
       "source": "northeast\\new-york.csv",
-      "itemId": "203356",
-      "title": "Private Group Tour: Brooklyn Heights, Brooklyn Bridge & DUMBO Food Tour",
-      "reason": "food-only"
-    },
-    {
-      "source": "northeast\\new-york.csv",
       "itemId": "206545",
       "title": "Late Night Manta Ray Snorkel",
       "reason": "food-only"
@@ -25065,12 +25059,6 @@
     },
     {
       "source": "deep-south\\florida.csv",
-      "itemId": "607530",
-      "title": "Key Largo Food Tour",
-      "reason": "food-only"
-    },
-    {
-      "source": "deep-south\\florida.csv",
       "itemId": "653616",
       "title": "Sweet & Savory Brunch: Art, History & Food Tour in Downtown Hollywood",
       "reason": "food-only"
@@ -25109,12 +25097,6 @@
       "source": "deep-south\\georgia.csv",
       "itemId": "220096",
       "title": "Wine Tasting at Georgian Hills Vineyards",
-      "reason": "food-only"
-    },
-    {
-      "source": "deep-south\\georgia.csv",
-      "itemId": "264974",
-      "title": "Georgia’s Haunted History and Wine by Fireside Tour",
       "reason": "food-only"
     },
     {

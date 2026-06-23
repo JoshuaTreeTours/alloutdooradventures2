@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "18277P2",
+    "productUrl": "https://www.viator.com/tours/Portland/Portland-City-Tour/d5065-18277P2",
+    "title": "Portland City Tour",
+    "description": {
+      "text": "Visit popular Portland attractions on a guided small-group tour with stops at Voodoo Doughnut, Hoyt Arboretum, Pittock Mansion, and the International Rose Test Garden. A local guide narrates the route through parks, viewpoints, and city landmarks before returning to your hotel pickup point."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $69.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 312
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/b8/a3/33.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group Portland sightseeing with a local guide",
+      "Stops at Pittock Mansion and the International Rose Test Garden",
+      "Drive through Hoyt Arboretum and downtown corridors",
+      "Sweet snack stop at Voodoo Doughnut",
+      "Hotel pickup and drop-off in the Portland area"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available at select downtown Portland hotels or a central meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Returns to the original Portland pickup location."
+      }
+    },
+    "itinerarySummary": "Visit popular Portland attractions on a guided small-group tour with stops at Voodoo Doughnut, Hoyt Arboretum, Pittock Mansion, and the International Rose Test Garden.",
+    "itineraryItems": [
+      {
+        "title": "Downtown Portland",
+        "description": "Begin with drive-by views of central Portland districts and waterfront corridors.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Voodoo Doughnut",
+        "description": "Stop for a sweet snack at one of Portland's iconic doughnut shops.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hoyt Arboretum",
+        "description": "Drive through tree-filled paths in Washington Park's arboretum area.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Pittock Mansion",
+        "description": "Stop for city and mountain views from the historic estate overlook.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "International Rose Test Garden",
+        "description": "Walk among rose varieties in Washington Park when blooms are in season.",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Portland City Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Portland?",
+        "answer": "Pickup is available at select downtown Portland hotels or a central meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 69
+      },
+      "currency": "USD"
+    }
+  }
+}

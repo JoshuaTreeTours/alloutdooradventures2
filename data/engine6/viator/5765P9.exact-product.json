@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "5765P9",
+    "productUrl": "https://www.viator.com/tours/Portland/Portland-Day-Trip-Multnomah-Falls-and-Columbia-River-Gorge-Waterfalls-Tour/d5065-5765P9",
+    "title": "Multnomah Falls and Columbia River Gorge Waterfalls Tour",
+    "description": {
+      "text": "Escape Portland for a guided waterfall tour along the Columbia River Highway National Scenic Byway. Stops typically include Portland Women's Forum viewpoints, Wahkeena Falls, Latourell Falls, Multnomah Falls, and Horsetail Falls with hotel pickup in a Mercedes-Benz Sprinter van."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $85.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 510
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/30/81/d2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Morning waterfall tour along the Columbia River Highway",
+      "Visit Multnomah Falls, Latourell Falls, and Horsetail Falls",
+      "Stop at Vista House and Portland Women's Forum viewpoints",
+      "Hotel pickup and drop-off in downtown Portland",
+      "Shared or private tour options when booking"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available at select downtown Portland hotels or a central meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Returns to the original Portland pickup location."
+      }
+    },
+    "itinerarySummary": "Escape Portland for a guided waterfall tour along the Columbia River Highway National Scenic Byway.",
+    "itineraryItems": [
+      {
+        "title": "Portland hotel pickup",
+        "description": "Board the Sprinter from a downtown hotel within the scheduled pickup window.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Portland Women's Forum viewpoint",
+        "description": "Pause for wide gorge vistas along the historic highway.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Latourell Falls and Multnomah Falls",
+        "description": "Visit two of the gorge's signature waterfalls with photo time.",
+        "duration": "60 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Horsetail Falls",
+        "description": "Finish the waterfall loop before returning to Portland.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Multnomah Falls and Columbia River Gorge Waterfalls Tour?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Portland?",
+        "answer": "Pickup is available at select downtown Portland hotels or a central meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Nature and Wildlife"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 85
+      },
+      "currency": "USD"
+    }
+  }
+}

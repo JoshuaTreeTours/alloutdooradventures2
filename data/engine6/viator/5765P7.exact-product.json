@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "5765P7",
+    "productUrl": "https://www.viator.com/tours/Portland/Oregon-Coast-Tour-from-Portland/d5065-5765P7",
+    "title": "Oregon Coast Tour from Portland",
+    "description": {
+      "text": "Travel from Portland to the northern Oregon Coast on a full-day tour with stops at coastal overlooks, beach towns, and scenic Highway 101 viewpoints. A local guide handles the driving while you visit Cannon Beach, Haystack Rock, and additional north-coast landmarks."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $139.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 180
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/6c/eb/caption.jpg?w=700&h=500&s=1",
+              "width": 700,
+              "height": 500
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day Oregon Coast tour from Portland",
+      "Visit Cannon Beach and Haystack Rock",
+      "Scenic Highway 101 driving with coastal overlooks",
+      "Mercedes-Benz Sprinter transport with hotel pickup",
+      "Small-group format with a local guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available at select downtown Portland hotels or a central meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Returns to the original Portland pickup location."
+      }
+    },
+    "itinerarySummary": "Travel from Portland to the northern Oregon Coast on a full-day tour with stops at coastal overlooks, beach towns, and scenic Highway 101 viewpoints.",
+    "itineraryItems": [
+      {
+        "title": "Portland departure",
+        "description": "Leave downtown Portland by van for the coast via Highway 26 and 101.",
+        "duration": "90 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Cannon Beach",
+        "description": "Stop in the coastal town with time near Haystack Rock when tides allow.",
+        "duration": "60 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Coastal overlooks",
+        "description": "Pause at north-coast viewpoints for photos and short walks.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Return to Portland",
+        "description": "Drive back to the original Portland pickup location.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Oregon Coast Tour from Portland?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Portland?",
+        "answer": "Pickup is available at select downtown Portland hotels or a central meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 139
+      },
+      "currency": "USD"
+    }
+  }
+}

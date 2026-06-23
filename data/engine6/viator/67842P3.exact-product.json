@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "67842P3",
+    "productUrl": "https://www.viator.com/tours/Portland/Portland-Food-Carts-Pods-and-Patios-Tour/d5065-67842P3",
+    "title": "Portland Food Carts, Pods and Patios Tour",
+    "description": {
+      "text": "Discover Portland's food-cart culture on a guided tour of pods, patios, and cart clusters across the city. Sample dishes from multiple vendors while a local guide explains how Portland's cart scene shaped the city's dining identity."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $79.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 165
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/3b/63/2e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit multiple Portland food-cart pods and patios",
+      "Sample dishes from curated cart vendors",
+      "Learn about Portland food-cart culture from a local guide",
+      "Walking tour with small-group format",
+      "Explore neighborhoods known for cart clusters"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available at select downtown Portland hotels or a central meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Returns to the original Portland pickup location."
+      }
+    },
+    "itinerarySummary": "Discover Portland's food-cart culture on a guided tour of pods, patios, and cart clusters across the city.",
+    "itineraryItems": [
+      {
+        "title": "Food-cart pod meeting point",
+        "description": "Meet the guide at the first cart pod before tastings begin.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cart pod tastings",
+        "description": "Sample dishes at several pods with time to explore vendor options.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Patios and neighborhood stops",
+        "description": "Continue to additional cart clusters and patio seating areas.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Portland Food Carts, Pods and Patios Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Portland?",
+        "answer": "Pickup is available at select downtown Portland hotels or a central meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 79
+      },
+      "currency": "USD"
+    }
+  }
+}

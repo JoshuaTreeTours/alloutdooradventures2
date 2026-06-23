@@ -449,6 +449,52 @@ export const ENGINE6_PORTLAND_OREGON_COAST_ROUTE =
 export const ENGINE6_PORTLAND_CITY_OF_ROSES_PRODUCT_CODE = "378720P1";
 export const ENGINE6_PORTLAND_CITY_OF_ROSES_ROUTE =
   "/destinations/oregon/portland/tours/city-of-roses-tour-378720P1";
+export const ENGINE6_PORTLAND_CITY_TOUR_PRODUCT_CODE = "18277P2";
+export const ENGINE6_PORTLAND_CITY_TOUR_ROUTE =
+  "/destinations/oregon/portland/tours/portland-city-tour-18277P2";
+export const ENGINE6_PORTLAND_OREGON_CITY_TOUR_PRODUCT_CODE = "194901P3";
+export const ENGINE6_PORTLAND_OREGON_CITY_TOUR_ROUTE =
+  "/destinations/oregon/portland/tours/portland-oregon-city-tour-194901P3";
+export const ENGINE6_PORTLAND_TOP_SIGHTS_HALF_DAY_PRODUCT_CODE = "9634P1";
+export const ENGINE6_PORTLAND_TOP_SIGHTS_HALF_DAY_ROUTE =
+  "/destinations/oregon/portland/tours/portland-top-sights-half-day-city-tour-9634P1";
+export const ENGINE6_PORTLAND_MORNING_CITY_TOUR_PRODUCT_CODE = "5765P10";
+export const ENGINE6_PORTLAND_MORNING_CITY_TOUR_ROUTE =
+  "/destinations/oregon/portland/tours/portland-morning-city-tour-5765P10";
+export const ENGINE6_PORTLAND_AFTERNOON_CITY_TOUR_PRODUCT_CODE = "5765P14";
+export const ENGINE6_PORTLAND_AFTERNOON_CITY_TOUR_ROUTE =
+  "/destinations/oregon/portland/tours/portland-afternoon-city-tour-5765P14";
+export const ENGINE6_PORTLAND_GORGE_WATERFALLS_PRODUCT_CODE = "9634P2";
+export const ENGINE6_PORTLAND_GORGE_WATERFALLS_ROUTE =
+  "/destinations/oregon/portland/tours/columbia-river-gorge-waterfalls-tour-9634P2";
+export const ENGINE6_PORTLAND_GORGE_HALF_DAY_PRODUCT_CODE = "126203P10";
+export const ENGINE6_PORTLAND_GORGE_HALF_DAY_ROUTE =
+  "/destinations/oregon/portland/tours/half-day-columbia-river-gorge-waterfall-tour-126203P10";
+export const ENGINE6_PORTLAND_GORGE_TOUR_PRODUCT_CODE = "18277P1";
+export const ENGINE6_PORTLAND_GORGE_TOUR_ROUTE =
+  "/destinations/oregon/portland/tours/columbia-river-gorge-tour-from-portland-18277P1";
+export const ENGINE6_PORTLAND_MULTNOMAH_GORGE_PRODUCT_CODE = "5765P9";
+export const ENGINE6_PORTLAND_MULTNOMAH_GORGE_ROUTE =
+  "/destinations/oregon/portland/tours/multnomah-falls-columbia-river-gorge-waterfalls-tour-5765P9";
+export const ENGINE6_PORTLAND_GORGE_MOUNT_HOOD_PRODUCT_CODE = "9634P6";
+export const ENGINE6_PORTLAND_GORGE_MOUNT_HOOD_ROUTE =
+  "/destinations/oregon/portland/tours/columbia-gorge-and-mount-hood-tour-9634P6";
+export const ENGINE6_PORTLAND_GORGE_MOUNT_HOOD_FULL_DAY_PRODUCT_CODE =
+  "194901P2";
+export const ENGINE6_PORTLAND_GORGE_MOUNT_HOOD_FULL_DAY_ROUTE =
+  "/destinations/oregon/portland/tours/columbia-gorge-waterfalls-and-mount-hood-tour-full-day-194901P2";
+export const ENGINE6_PORTLAND_MOUNT_HOOD_DAY_TRIP_PRODUCT_CODE = "5765MTHOOD";
+export const ENGINE6_PORTLAND_MOUNT_HOOD_DAY_TRIP_ROUTE =
+  "/destinations/oregon/portland/tours/mount-hood-day-trip-from-portland-5765MTHOOD";
+export const ENGINE6_PORTLAND_COAST_TOUR_PRODUCT_CODE = "5765P7";
+export const ENGINE6_PORTLAND_COAST_TOUR_ROUTE =
+  "/destinations/oregon/portland/tours/oregon-coast-tour-from-portland-5765P7";
+export const ENGINE6_PORTLAND_DOWNTOWN_FOOD_TOUR_PRODUCT_CODE = "401191P1";
+export const ENGINE6_PORTLAND_DOWNTOWN_FOOD_TOUR_ROUTE =
+  "/destinations/oregon/portland/tours/heart-of-downtown-portland-food-tour-401191P1";
+export const ENGINE6_PORTLAND_FOOD_CARTS_TOUR_PRODUCT_CODE = "67842P3";
+export const ENGINE6_PORTLAND_FOOD_CARTS_TOUR_ROUTE =
+  "/destinations/oregon/portland/tours/portland-food-carts-pods-and-patios-tour-67842P3";
 
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
@@ -967,6 +1013,57 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_PORTLAND_CITY_OF_ROSES_ROUTE,
     ENGINE6_PORTLAND_CITY_OF_ROSES_PRODUCT_CODE,
+  ],
+  [ENGINE6_PORTLAND_CITY_TOUR_ROUTE, ENGINE6_PORTLAND_CITY_TOUR_PRODUCT_CODE],
+  [
+    ENGINE6_PORTLAND_OREGON_CITY_TOUR_ROUTE,
+    ENGINE6_PORTLAND_OREGON_CITY_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PORTLAND_TOP_SIGHTS_HALF_DAY_ROUTE,
+    ENGINE6_PORTLAND_TOP_SIGHTS_HALF_DAY_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PORTLAND_MORNING_CITY_TOUR_ROUTE,
+    ENGINE6_PORTLAND_MORNING_CITY_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PORTLAND_AFTERNOON_CITY_TOUR_ROUTE,
+    ENGINE6_PORTLAND_AFTERNOON_CITY_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PORTLAND_GORGE_WATERFALLS_ROUTE,
+    ENGINE6_PORTLAND_GORGE_WATERFALLS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PORTLAND_GORGE_HALF_DAY_ROUTE,
+    ENGINE6_PORTLAND_GORGE_HALF_DAY_PRODUCT_CODE,
+  ],
+  [ENGINE6_PORTLAND_GORGE_TOUR_ROUTE, ENGINE6_PORTLAND_GORGE_TOUR_PRODUCT_CODE],
+  [
+    ENGINE6_PORTLAND_MULTNOMAH_GORGE_ROUTE,
+    ENGINE6_PORTLAND_MULTNOMAH_GORGE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PORTLAND_GORGE_MOUNT_HOOD_ROUTE,
+    ENGINE6_PORTLAND_GORGE_MOUNT_HOOD_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PORTLAND_GORGE_MOUNT_HOOD_FULL_DAY_ROUTE,
+    ENGINE6_PORTLAND_GORGE_MOUNT_HOOD_FULL_DAY_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PORTLAND_MOUNT_HOOD_DAY_TRIP_ROUTE,
+    ENGINE6_PORTLAND_MOUNT_HOOD_DAY_TRIP_PRODUCT_CODE,
+  ],
+  [ENGINE6_PORTLAND_COAST_TOUR_ROUTE, ENGINE6_PORTLAND_COAST_TOUR_PRODUCT_CODE],
+  [
+    ENGINE6_PORTLAND_DOWNTOWN_FOOD_TOUR_ROUTE,
+    ENGINE6_PORTLAND_DOWNTOWN_FOOD_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PORTLAND_FOOD_CARTS_TOUR_ROUTE,
+    ENGINE6_PORTLAND_FOOD_CARTS_TOUR_PRODUCT_CODE,
   ],
 ] as const;
 

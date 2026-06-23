@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "9634P6",
+    "productUrl": "https://www.viator.com/tours/Portland/Columbia-Gorge-and-Mt-Hood-Tour/d5065-9634P6",
+    "title": "Columbia Gorge and Mount Hood Tour",
+    "description": {
+      "text": "Combine the Columbia River Gorge and Mount Hood on a full-day tour from Portland with waterfall stops and mountain viewpoints. The route links gorge landmarks such as Multnomah Falls with Mount Hood scenery, fruit-stand stops, and scenic driving through Oregon's Cascade foothills."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $149.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 340
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/3c/b9/ff.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day tour combining the gorge and Mount Hood",
+      "Waterfall stops in the Columbia River Gorge",
+      "Mount Hood viewpoints and scenic foothill driving",
+      "Small-group transport with a local guide",
+      "Pickup available from select Portland hotels"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available at select downtown Portland hotels or a central meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Returns to the original Portland pickup location."
+      }
+    },
+    "itinerarySummary": "Combine the Columbia River Gorge and Mount Hood on a full-day tour from Portland with waterfall stops and mountain viewpoints.",
+    "itineraryItems": [
+      {
+        "title": "Columbia River Gorge waterfalls",
+        "description": "Begin with gorge stops including Multnomah Falls and nearby viewpoints.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mount Hood scenic route",
+        "description": "Drive toward Mount Hood with stops for mountain and valley views.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hood River area",
+        "description": "Pass orchard country and river towns east of the gorge.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Return to Portland",
+        "description": "Finish with drop-off at the original Portland pickup location.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Columbia Gorge and Mount Hood Tour?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Portland?",
+        "answer": "Pickup is available at select downtown Portland hotels or a central meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149
+      },
+      "currency": "USD"
+    }
+  }
+}
