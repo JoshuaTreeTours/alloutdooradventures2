@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "9634P1",
+    "productUrl": "https://www.viator.com/tours/Portland/Tour-the-City-of-Roses/d5065-9634P1",
+    "title": "Portland Top Sights Half Day City Tour",
+    "description": {
+      "text": "Explore Portland's top sights on a half-day guided tour through historic districts, riverfront viewpoints, and Washington Park. The route introduces city history and culture while visiting landmarks such as Pittock Mansion and the International Rose Test Garden with a knowledgeable local guide."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $79.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 890
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/3c/b7/a4.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Half-day overview of Portland's most visited landmarks",
+      "Visit Pittock Mansion and the International Rose Test Garden",
+      "Travel the Historic Columbia River Highway corridor into city districts",
+      "Small-group format with a local guide",
+      "Pickup available from select Portland hotels"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available at select downtown Portland hotels or a central meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Returns to the original Portland pickup location."
+      }
+    },
+    "itinerarySummary": "Explore Portland's top sights on a half-day guided tour through historic districts, riverfront viewpoints, and Washington Park.",
+    "itineraryItems": [
+      {
+        "title": "Portland hotel pickup",
+        "description": "Depart from a central Portland meeting point or selected hotel pickup.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Historic Portland districts",
+        "description": "Drive through downtown and west-side neighborhoods with guide commentary.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Pittock Mansion",
+        "description": "Stop for views over Portland and the Cascade Range when weather allows.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "International Rose Test Garden",
+        "description": "Walk among rose varieties in Washington Park during the blooming season.",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Portland Top Sights Half Day City Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Portland?",
+        "answer": "Pickup is available at select downtown Portland hotels or a central meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 79
+      },
+      "currency": "USD"
+    }
+  }
+}

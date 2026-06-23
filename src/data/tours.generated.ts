@@ -10035,55 +10035,6 @@ export const toursGenerated: Tour[] = [
     "longDescription": "Private Guided E-Bike & Bicycle Tours For Birthdays & Celebrations is a guided outdoor experience based in Austin, Texas that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
   },
   {
-    "id": "brooklyn-giro-bicycle-tours-64182",
-    "slug": "the-brooklyn-tour-our-must-do-64182",
-    "title": "THE BROOKLYN TOUR (OUR MUST DO)",
-    "shortDescription": null,
-    "operator": "Brooklyn Giro Bicycle Tours",
-    "categories": [
-      "cycling"
-    ],
-    "primaryCategory": "cycling",
-    "primaryDisplayCategory": "Cycling",
-    "activityCategories": [
-      {
-        "slug": "cycling",
-        "label": "Cycling"
-      }
-    ],
-    "tags": [
-      "Bike Tour"
-    ],
-    "destination": {
-      "state": "New York",
-      "stateSlug": "new-york",
-      "city": "Brooklyn",
-      "citySlug": "brooklyn",
-      "lat": -73.973557,
-      "lng": 40.697474
-    },
-    "heroImage": "https://cdn.filestackcontent.com/Ku4vu5VsSFmSUwh5htgs",
-    "galleryImages": [
-      "https://cdn.filestackcontent.com/Ku4vu5VsSFmSUwh5htgs"
-    ],
-    "badges": {
-      "rating": 3.3,
-      "reviewCount": 157,
-      "likelyToSellOut": false,
-      "tagline": "Bike Tour"
-    },
-    "tagPills": [
-      "Bike Tour"
-    ],
-    "activitySlugs": [
-      "cycling"
-    ],
-    "bookingProvider": "fareharbor",
-    "bookingUrl": "https://fareharbor.com/embeds/book/brooklyngiro/items/64182/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/brooklyngiro/items/64182/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "THE BROOKLYN TOUR (OUR MUST DO) is a guided outdoor experience based in Brooklyn, New York that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
-  },
-  {
     "id": "maui-downhill-70246",
     "slug": "bike-maui-downhill-tour-70246",
     "title": "Bike Maui Downhill Tour",
@@ -15346,55 +15297,6 @@ export const toursGenerated: Tour[] = [
     "longDescription": "A DAY IN MANHATTAN TOUR is a guided outdoor experience based in Brooklyn, New York that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
   },
   {
-    "id": "brooklyn-giro-bicycle-tours-138473",
-    "slug": "coney-island-138473",
-    "title": "CONEY ISLAND",
-    "shortDescription": null,
-    "operator": "Brooklyn Giro Bicycle Tours",
-    "categories": [
-      "cycling"
-    ],
-    "primaryCategory": "cycling",
-    "primaryDisplayCategory": "Cycling",
-    "activityCategories": [
-      {
-        "slug": "cycling",
-        "label": "Cycling"
-      }
-    ],
-    "tags": [
-      "Bike Tour"
-    ],
-    "destination": {
-      "state": "New York",
-      "stateSlug": "new-york",
-      "city": "Brooklyn",
-      "citySlug": "brooklyn",
-      "lat": -73.973557,
-      "lng": 40.697474
-    },
-    "heroImage": "https://cdn.filestackcontent.com/oqekdmJTSwMgbZUXaz6h",
-    "galleryImages": [
-      "https://cdn.filestackcontent.com/oqekdmJTSwMgbZUXaz6h"
-    ],
-    "badges": {
-      "rating": 2.7,
-      "reviewCount": 52,
-      "likelyToSellOut": false,
-      "tagline": "Bike Tour"
-    },
-    "tagPills": [
-      "Bike Tour"
-    ],
-    "activitySlugs": [
-      "cycling"
-    ],
-    "bookingProvider": "fareharbor",
-    "bookingUrl": "https://fareharbor.com/embeds/book/brooklyngiro/items/138473/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/brooklyngiro/items/138473/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "CONEY ISLAND is a guided outdoor experience based in Brooklyn, New York that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
-  },
-  {
     "id": "roll-225001",
     "slug": "four-day-ebike-rental-group-package-225001",
     "title": "Four Day eBike Rental | Group Package",
@@ -15642,55 +15544,6 @@ export const toursGenerated: Tour[] = [
     "bookingUrl": "https://fareharbor.com/embeds/book/brooklyngiro/items/64184/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/brooklyngiro/items/64184/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "RIDE THE BRIDGES is a guided outdoor experience based in Brooklyn, New York that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
-  },
-  {
-    "id": "brooklyn-giro-bicycle-tours-88160",
-    "slug": "a-day-in-brooklyn---half-day-in-brooklyn-88160",
-    "title": "A DAY IN BROOKLYN - HALF DAY IN BROOKLYN",
-    "shortDescription": null,
-    "operator": "Brooklyn Giro Bicycle Tours",
-    "categories": [
-      "cycling"
-    ],
-    "primaryCategory": "cycling",
-    "primaryDisplayCategory": "Cycling",
-    "activityCategories": [
-      {
-        "slug": "cycling",
-        "label": "Cycling"
-      }
-    ],
-    "tags": [
-      "Bike Tour"
-    ],
-    "destination": {
-      "state": "New York",
-      "stateSlug": "new-york",
-      "city": "Brooklyn",
-      "citySlug": "brooklyn",
-      "lat": -73.973557,
-      "lng": 40.697474
-    },
-    "heroImage": "https://cdn.filestackcontent.com/r3Ac8FrDQ4WKUxXASIEq",
-    "galleryImages": [
-      "https://cdn.filestackcontent.com/r3Ac8FrDQ4WKUxXASIEq"
-    ],
-    "badges": {
-      "rating": 2.7,
-      "reviewCount": 360,
-      "likelyToSellOut": false,
-      "tagline": "Bike Tour"
-    },
-    "tagPills": [
-      "Bike Tour"
-    ],
-    "activitySlugs": [
-      "cycling"
-    ],
-    "bookingProvider": "fareharbor",
-    "bookingUrl": "https://fareharbor.com/embeds/book/brooklyngiro/items/88160/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/brooklyngiro/items/88160/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "A DAY IN BROOKLYN - HALF DAY IN BROOKLYN is a guided outdoor experience based in Brooklyn, New York that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
   },
   {
     "id": "door-county-kayak-216710",
@@ -24472,60 +24325,6 @@ export const toursGenerated: Tour[] = [
     "bookingUrl": "https://fareharbor.com/embeds/book/coloradoebikeshop/items/665137/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/coloradoebikeshop/items/665137/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Palisade Wineries by eBike is a guided outdoor experience based in Leadville, Colorado that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
-  },
-  {
-    "id": "turnstile-tours-333546",
-    "slug": "brooklyn-navy-yard-bicycle-tour-333546",
-    "title": "Brooklyn Navy Yard Bicycle Tour",
-    "shortDescription": null,
-    "operator": "Turnstile Tours",
-    "categories": [
-      "cycling"
-    ],
-    "primaryCategory": "cycling",
-    "primaryDisplayCategory": "Cycling",
-    "activityCategories": [
-      {
-        "slug": "cycling",
-        "label": "Cycling"
-      }
-    ],
-    "tags": [
-      "Bike Tour",
-      "Brewery",
-      "Food Tour",
-      "History Tour"
-    ],
-    "destination": {
-      "state": "New York",
-      "stateSlug": "new-york",
-      "city": "Brooklyn",
-      "citySlug": "brooklyn",
-      "lat": -73.971021,
-      "lng": 40.698092
-    },
-    "heroImage": "https://cdn.filestackcontent.com/wHQytOdrS2mkeVWbma8x",
-    "galleryImages": [
-      "https://cdn.filestackcontent.com/wHQytOdrS2mkeVWbma8x"
-    ],
-    "badges": {
-      "rating": 1.5,
-      "reviewCount": 0,
-      "likelyToSellOut": true,
-      "tagline": "Bike Tour"
-    },
-    "tagPills": [
-      "Bike Tour",
-      "Brewery",
-      "Food Tour"
-    ],
-    "activitySlugs": [
-      "cycling"
-    ],
-    "bookingProvider": "fareharbor",
-    "bookingUrl": "https://fareharbor.com/embeds/book/turnstiletours/items/333546/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/turnstiletours/items/333546/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "Brooklyn Navy Yard Bicycle Tour is a guided outdoor experience based in Brooklyn, New York that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
   },
   {
     "id": "fl-bicycle-rentals-363479",

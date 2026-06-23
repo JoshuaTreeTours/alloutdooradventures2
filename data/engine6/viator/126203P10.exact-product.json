@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "126203P10",
+    "productUrl": "https://www.viator.com/tours/Portland/Multnomah-Falls-Zen-Columbia-River-Gorge-Waterfalls-Tour/d5065-126203P10",
+    "title": "Half-Day Columbia River Gorge and Waterfall Tour",
+    "description": {
+      "text": "Head to the Columbia River Gorge for a half-day tour of cascading waterfalls and scenic overlooks from Portland. Visit Multnomah Falls, Latourell Falls, Vista House, Bridal Veil Falls, and Portland Women's Forum viewpoints with optional mini-hikes when conditions allow."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $95.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 420
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/14/db/94.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Half-day waterfall tour in the Columbia River Gorge",
+      "Visit Multnomah Falls and Latourell Falls",
+      "Stop at Vista House and Portland Women's Forum viewpoints",
+      "Optional short hikes for closer waterfall views",
+      "Air-conditioned van transport from Portland"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available at select downtown Portland hotels or a central meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Returns to the original Portland pickup location."
+      }
+    },
+    "itinerarySummary": "Head to the Columbia River Gorge for a half-day tour of cascading waterfalls and scenic overlooks from Portland.",
+    "itineraryItems": [
+      {
+        "title": "Portland departure",
+        "description": "Meet the guide and group before driving east to the gorge.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Multnomah Falls",
+        "description": "Stop at Oregon's tallest waterfall for photos and viewing time.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Latourell Falls",
+        "description": "Hike or view the plunge-style falls surrounded by basalt cliffs.",
+        "duration": "40 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vista House and Bridal Veil Falls",
+        "description": "Finish with gorge panoramas and a stop at Bridal Veil Falls State Park.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half-Day Columbia River Gorge and Waterfall Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Portland?",
+        "answer": "Pickup is available at select downtown Portland hotels or a central meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Hiking"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 95
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,46 +1,45 @@
 # Engine6 Itinerary Title Integrity Audit
 
-Generated: 2026-06-20T16:20:46.247Z
+Generated: 2026-06-23T20:13:26.420Z
 
 ## Totals
 
-- Total Engine6 tours audited: 133
-- Total itinerary rows audited: 614
-- Suspicious rows: 29
-- Affected tours: 17
+- Total Engine6 tours audited: 150
+- Total itinerary rows audited: 686
+- Suspicious rows: 25
+- Affected tours: 20
 
 ## Top suspicious patterns
 
 | Pattern | Count |
 | --- | ---: |
-| more-than-eight-words | 19 |
-| more-than-sixty-characters | 16 |
-| sentence-punctuation | 14 |
-| generic-description-start | 5 |
-| supplier-marketing-prose | 4 |
-| matches-description-first-sentence | 1 |
+| matches-description-first-sentence | 20 |
+| sentence-punctuation | 5 |
 
 ## Affected products
 
 | Route | Product ID | Suspicious rows | Examples |
 | --- | --- | ---: | --- |
-| /destinations/california/san-diego/tours/san-diego-sunday-brunch-cruise | 5144BRUNCH | 4 | Cruise San Diego Bay on a Sunday brunch cruise experience with skyline views and live onboard entertainment; Sail past the Coronado Bridge, Seaport Village, USS Midway Museum, and downtown skyline during San Diego Bay sightseeing; Continue along the waterfront with clear views of the Coronado Bridge and central harbor landmarks from the dining deck |
-| /destinations/wyoming/jackson/tours/4-day-yellowstone-and-grand-teton-national-parks-wildlife-adventure | 6029_4DAYPARK | 4 | Day 1: Grand Teton National Park Dusk Adventure; Day 2: Grand Teton & Yellowstone Wildlife and the Grand Canyon of Yellowstone; Day 3: Buffalo Bill Cody Museum, Yellowstone Wildlife & Scenic Upper Loop Adventure |
-| /destinations/california/san-diego/tours/san-diego-bay-day-sail | 37126P9 | 3 | Sail under the bow of the aircraft carrier Midway for an out-of-this-world experience; The Rady Shell at Jacobs Park is a stunning open-air concert venue on the San Diego waterfront; The San Diego Convention Center |
-| /destinations/switzerland/zurich/tours/exclusive-zurich-tour-old-town-lake-zurich-cruise-and-lindt-museum | 5553984P5 | 3 | Zurich Main Station (Zürich Hauptbahnhof) is a bustling hub of activity and a must-visit for anyone traveling to the city; This prominent 13th-century Gothic cathedral is perhaps best known for one of its more recent additions; The "Home of Chocolate Lindt" offers a truly enchanting journey into the world of Swiss chocolate |
-| /destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles | 5569HIKE | 3 | We'll meet you in front of the Greek Theatre; See the gorgeous LA River on this Hollywood Hills Tour; Warner Bros. Studios |
+| /destinations/california/san-francisco/tours/3-day-yosemite-camping-adventure-from-san-francisco | 3454YE3D | 3 | San Francisco departure; Yosemite Village free time; Valley activity time |
+| /destinations/california/los-angeles/tours/hollywood-and-beverly-hills-celebrity-homes-tour-106439P1 | 106439P1 | 2 | Beverly Gardens Park; Beverly Canon Gardens |
+| /destinations/louisiana/new-orleans/tours/new-orleans-75-minute-riverboat-sightseeing-cruise | 3780P45 | 2 | French Quarter riverfront; Crescent City Connection |
+| /destinations/california/san-diego/tours/san-diego-bay-sail-aboard-a-french-yacht-beer-and-wine-included | 5598628P3 | 2 | Sunset Cliffs Natural Park; Waterfront Park Downtown San Diego |
 | /destinations/california/los-angeles/tours/hollywood-private-helicopter-tour-15131P4 | 15131P4 | 1 | Crypto.com Arena |
-| /destinations/california/san-diego/tours/san-diego-private-balboa-park-segway-tour | 18125P5 | 1 | Pass the Spanish Village Art Center to see colorful courtyards and artist studios that reflect the park's creative side |
+| /destinations/nevada/las-vegas/tours/zion-and-bryce-canyon-small-group-tour-from-las-vegas | 190492P3 | 1 | Bryce Canyon National Park |
 | /destinations/louisiana/new-orleans/tours/new-orleans-city-bike-tour | 276551P2 | 1 | Lafayette Cemetery No. 1 |
-| /destinations/california/los-angeles/tours/2-hour-inside-adventure-tour-on-catalina-island-32779P6 | 32779P6 | 1 | As you venture ten miles into the rugged interior, you will view the protected side of Catalina Island seldom seen by most visitors |
-| /destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491 | 414460P1 | 1 | Strawberry Fields, John Lennon Memorial |
-| /destinations/new-york/new-york/tours/new-york-city-private-walking-tour-with-a-local-guide | 474891P3 | 1 | New York Public Library - Stephen A. Schwarzman Building |
-| /destinations/california/san-diego/tours/san-diego-seal-tour-5046PRTSANSEA | 5046SAN_SEA | 1 | This 90-minute shore excursion is a fantastic way to see the best of the Bay and San Diego during your limited time in port |
+| /destinations/california/san-diego/tours/tijuana-mexico-border-tour-from-san-diego-28758P1 | 28758P1 | 1 | Tijuana Walking Tour |
+| /destinations/california/san-diego/tours/san-diego-zoo-and-safari-park-2-visit-pass-ticket | 3097SDZSP_2VISIT | 1 | San Diego Zoo Safari Park |
+| /destinations/nevada/las-vegas/tours/historical-railroad-trail-ebike-tour | 354611P1 | 1 | Historic Railroad Trail |
+| /destinations/california/san-francisco/tours/big-sur-monterey-and-carmel-tour-from-san-francisco | 36001P14 | 1 | Pacific Coast Highway |
+| /destinations/california/san-diego/tours/san-diego-sunday-brunch-cruise | 5144BRUNCH | 1 | Sunday Brunch Cruise |
 | /destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus | 5515296P1 | 1 | Solomon R. Guggenheim Museum |
-| /destinations/nevada/las-vegas/tours/deluxe-las-vegas-helicopter-night-flight-with-vip-transportation | 5516ST5 | 1 | MSG Sphere, High Roller, and LINQ district |
-| /destinations/california/santa-barbara/tours/santa-barbara-stargazing-tour-with-phd-student-guide-5603847P4 | 5603847P4 | 1 | Escape the city lights and experience Santa Barbara’s night sky on a PhD-led stargazing tour |
+| /destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles | 5569HIKE | 1 | Warner Bros. Studios |
+| /destinations/california/san-diego/tours/spectacular-sunset-sail-on-san-diego-bay | 5584233P1 | 1 | Cabrillo National Monument |
+| /destinations/nevada/las-vegas/tours/western-national-parks-7-day-explorer-camping | 5602P25 | 1 | Day 3: Monument Valley |
 | /destinations/new-york/new-york/tours/washington-d-c-tour-from-new-york | 5614063P8 | 1 | Washington, D.C. Landmarks |
-| /destinations/switzerland/lucerne/tours/short-catamaran-cruise-on-lake-lucerne | 6400P7 | 1 | Enjoy the best of the lake Lucerne and |
+| /destinations/new-york/new-york/tours/niagara-falls-in-one-day-from-new-york-city | 62527P11 | 1 | Midtown Manhattan Departure |
+| /destinations/louisiana/new-orleans/tours/honey-island-swamp-tour-with-transport | 6953SWAMPTRANS | 1 | Downtown New Orleans pickup |
+| /destinations/new-york/new-york/tours/new-york-in-one-day-guided-sightseeing-tour | 7081NYCDAY | 1 | Gansevoort Liberty Market |
 
 ## Full suspicious rows
 

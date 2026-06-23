@@ -4682,19 +4682,15 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/new-south-wales/kangaroo-valley/tours/the-morton-national-park-2-day-paddle-343450</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-south-wales/narooma/tours/canoe-hire-274033</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-york/blue-mountain-lake/tours/canoe-rentals-548222</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/new-york/brooklyn/tours/a-day-in-brooklyn---half-day-in-brooklyn-88160</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-york/brooklyn/tours/a-day-in-manhattan-tour-74423</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-york/brooklyn/tours/brooklyn-navy-yard-bicycle-tour-19349</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/new-york/brooklyn/tours/brooklyn-navy-yard-bicycle-tour-333546</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-york/brooklyn/tours/brooklyn-navy-yard-urban-ecology-bicycle-tour-19351</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/new-york/brooklyn/tours/coney-island-138473</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-york/brooklyn/tours/cycle-nycs-top-sites-in-one-day-273867</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-york/brooklyn/tours/lower-manhattan-108837</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-york/brooklyn/tours/north-brooklyn---willamsburg-and-greenpoint-207475</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-york/brooklyn/tours/private-tour-108835</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-york/brooklyn/tours/ride-the-bridges-64184</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-york/brooklyn/tours/sup-american-canoe-association-classes-53335</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/new-york/brooklyn/tours/the-brooklyn-tour-our-must-do-64182</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-york/brooklyn/tours/washington-dc-group-tour-with-workshop-617347</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-york/catskill/tours/sunday-salon-lecture-thomas-cole-and-connecticut-a-closer-look-with-erin-monroe-curator-687287</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/new-york/clayton/tours/1000-islands-canada---no-passports-required-36589</loc><priority>0.8</priority></url>
@@ -4935,9 +4931,24 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/oregon/chiloquin/tours/shuttle-service-301670</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/oregon/klamath-falls/tours/malone-springs-kayaking-tour-301585</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/city-of-roses-tour-378720P1</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/columbia-gorge-and-mount-hood-tour-9634P6</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/columbia-gorge-waterfalls-and-mount-hood-tour-full-day-194901P2</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/columbia-river-gorge-tour-from-portland-18277P1</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/columbia-river-gorge-waterfalls-tour-9634P2</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/gorge-ous-sunset-multnomah-falls-waterfall-tour-from-portland-462223</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/half-day-columbia-river-gorge-waterfall-tour-126203P10</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/half-day-multnomah-falls-waterfall-shuttle-tour-from-portland-527345</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/heart-of-downtown-portland-food-tour-401191P1</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/mount-hood-day-trip-from-portland-5765MTHOOD</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/multnomah-falls-columbia-river-gorge-waterfalls-tour-5765P9</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/oregon-coast-tour-from-portland-5765P7</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/oregon-coast-tour-full-day-194901P4</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/portland-afternoon-city-tour-5765P14</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/portland-city-tour-18277P2</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/portland-food-carts-pods-and-patios-tour-67842P3</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/portland-morning-city-tour-5765P10</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/portland-oregon-city-tour-194901P3</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/oregon/portland/tours/portland-top-sights-half-day-city-tour-9634P1</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/oregon/sisters/tours/canoes-317154</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/oregon/sisters/tours/stand-up-paddleboards-317160</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/otago/dunedin/tours/iconic-karitane-maori-tour-and-moeraki-boulders-680320</loc><priority>0.8</priority></url>

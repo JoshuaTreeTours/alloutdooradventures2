@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "5765P10",
+    "productUrl": "https://www.viator.com/tours/Portland/Best-of-Portland-City-Tour/d5065-5765P10",
+    "title": "Portland Morning City Tour",
+    "description": {
+      "text": "Explore Portland on a morning city sightseeing tour from downtown to the Pearl District and Nob Hill. Visit Pioneer Courthouse Square, NW 23rd Avenue, the South Park Blocks, and the International Rose Test Garden in Washington Park with hotel pickup and drop-off included."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $85.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 155
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/a2/8a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Morning coach tour of Portland neighborhoods and parks",
+      "Visit the International Rose Test Garden in Washington Park",
+      "See Pioneer Courthouse Square, the Pearl District, and NW 23rd Avenue",
+      "Saturday morning PSU Farmers Market stop when scheduled",
+      "Mercedes-Benz Sprinter transport with bottled water"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available at select downtown Portland hotels or a central meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Returns to the original Portland pickup location."
+      }
+    },
+    "itinerarySummary": "Explore Portland on a morning city sightseeing tour from downtown to the Pearl District and Nob Hill.",
+    "itineraryItems": [
+      {
+        "title": "Downtown hotel pickup",
+        "description": "Board the Sprinter van from a downtown Portland hotel within the scheduled pickup window.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pioneer Courthouse Square and Pearl District",
+        "description": "Pass central Portland plazas and converted warehouse neighborhoods.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "International Rose Test Garden",
+        "description": "Stroll among more than 550 rose varieties in Washington Park.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nob Hill and NW 23rd Avenue",
+        "description": "Drive through one of Portland's popular shopping and dining corridors.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Portland Morning City Tour?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Portland?",
+        "answer": "Pickup is available at select downtown Portland hotels or a central meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 85
+      },
+      "currency": "USD"
+    }
+  }
+}

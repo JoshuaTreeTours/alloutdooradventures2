@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "401191P1",
+    "productUrl": "https://www.viator.com/tours/Portland/Heart-of-Downtown-Portland-Food-Tour/d5065-401191P1",
+    "title": "Heart of Downtown Portland Food Tour",
+    "description": {
+      "text": "Explore downtown Portland on a guided food tour with tastings at local favorites across the city center. A guide leads a walking route through central districts while sharing Portland food culture, neighborhood history, and stories behind each stop."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 210
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/9e/cc/e1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided downtown Portland food tasting tour",
+      "Multiple food stops across central neighborhoods",
+      "Walking route with local guide commentary",
+      "Small-group format for a personal experience",
+      "Sample Portland specialties at curated stops"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available at select downtown Portland hotels or a central meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Returns to the original Portland pickup location."
+      }
+    },
+    "itinerarySummary": "Explore downtown Portland on a guided food tour with tastings at local favorites across the city center.",
+    "itineraryItems": [
+      {
+        "title": "Downtown meeting point",
+        "description": "Meet the guide at a central downtown location before the tasting route begins.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Central Portland food stops",
+        "description": "Walk between curated restaurants, markets, and specialty food vendors.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Neighborhood highlights",
+        "description": "Pass landmark streets and districts while moving between tasting locations.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Heart of Downtown Portland Food Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Portland?",
+        "answer": "Pickup is available at select downtown Portland hotels or a central meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

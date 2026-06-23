@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "18277P1",
+    "productUrl": "https://www.viator.com/tours/Portland/Columbia-River-Gorge-Tour-from-Portland/d5065-18277P1",
+    "title": "Columbia River Gorge Tour from Portland",
+    "description": {
+      "text": "Explore the Columbia River Gorge on a half-day small-group tour from Portland with stops at Multnomah Falls, Latourell Falls, and Vista House. A local guide handles transportation from downtown hotels so you can focus on gorge scenery and waterfall viewpoints."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $69.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 281
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6b/8c/ce.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Half-day Columbia River Gorge tour from Portland",
+      "Visit Multnomah Falls and Latourell Falls",
+      "Stop at Vista House for gorge panoramas",
+      "Small family-run operator with local guides",
+      "Hotel pickup and drop-off in downtown Portland"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available at select downtown Portland hotels or a central meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Returns to the original Portland pickup location."
+      }
+    },
+    "itinerarySummary": "Explore the Columbia River Gorge on a half-day small-group tour from Portland with stops at Multnomah Falls, Latourell Falls, and Vista House.",
+    "itineraryItems": [
+      {
+        "title": "Downtown Portland pickup",
+        "description": "Meet at a downtown hotel or Pioneer Courthouse Square before departing east.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Latourell Falls",
+        "description": "Stop at one of the gorge's most photographed plunge waterfalls.",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vista House",
+        "description": "Take in wide Columbia River views from Crown Point.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Multnomah Falls",
+        "description": "Visit the iconic two-tier waterfall and lodge area.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Columbia River Gorge Tour from Portland?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Portland?",
+        "answer": "Pickup is available at select downtown Portland hotels or a central meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 69
+      },
+      "currency": "USD"
+    }
+  }
+}

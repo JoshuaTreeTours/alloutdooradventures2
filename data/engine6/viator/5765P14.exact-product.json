@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "5765P14",
+    "productUrl": "https://www.viator.com/tours/Portland/Best-of-Portland-City-Tour-2PM/d5065-5765P14",
+    "title": "Portland Afternoon City Tour",
+    "description": {
+      "text": "See Portland on an afternoon city sightseeing tour with stops at Pioneer Courthouse Square, the Pearl District, Nob Hill, and the International Rose Test Garden. A local guide shares Portland history and culture during a Mercedes-Benz Sprinter route with downtown hotel pickup."
+    },
+    "location": {
+      "city": "Portland",
+      "state": "Oregon"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $85.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 138
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/a2/91.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Afternoon coach tour of Portland parks and neighborhoods",
+      "Visit the International Rose Test Garden in Washington Park",
+      "Explore the Pearl District and NW 23rd Avenue corridors",
+      "Hotel pickup and drop-off in downtown Portland",
+      "Small-group format with a maximum of 11 travelers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available at select downtown Portland hotels or a central meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Returns to the original Portland pickup location."
+      }
+    },
+    "itinerarySummary": "See Portland on an afternoon city sightseeing tour with stops at Pioneer Courthouse Square, the Pearl District, Nob Hill, and the International Rose Test Garden.",
+    "itineraryItems": [
+      {
+        "title": "Afternoon hotel pickup",
+        "description": "Meet the guide and board the Sprinter from a downtown Portland hotel.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Downtown and Pearl District",
+        "description": "Drive through central Portland with commentary on city growth and architecture.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "International Rose Test Garden",
+        "description": "Walk among seasonal rose displays in Washington Park.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Return to downtown Portland",
+        "description": "Finish with drop-off at the original hotel pickup location.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Portland Afternoon City Tour?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Portland?",
+        "answer": "Pickup is available at select downtown Portland hotels or a central meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 85
+      },
+      "currency": "USD"
+    }
+  }
+}
