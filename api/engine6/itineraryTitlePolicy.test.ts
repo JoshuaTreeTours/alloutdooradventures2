@@ -467,7 +467,7 @@ describe("Engine6 Florida and Alaska itinerary title repairs", () => {
     });
   };
 
-  it("uses concise Florida POI/location titles without shifting row descriptions", () => {
+  it("uses reviewed Florida POI/location titles without shifting row descriptions", () => {
     const airboat = extractEngine6Product(specimen76145p2Payload).extracted
       .itinerary;
     const fishing = extractEngine6Product(specimen118958p8Payload).extracted
@@ -661,6 +661,124 @@ describe("Engine6 Florida and Alaska itinerary title repairs", () => {
       ...greenbelt.map(item => item.title),
       ...glacier.slice(4).map(item => item.title),
     ]);
+  });
+
+  it("uses reviewed Explorer Glacier override when a matching narrative title appears", () => {
+    const description =
+      "Explorer Glacier Seasonally we can see hanging ice above Portage Valley.";
+    const itinerary = extractEngine6Product({
+      product: {
+        productCode: "411138P3",
+        title: "Glacier View & Wildlife Anchorage Adventure Tour",
+        itineraryItems: [
+          { title: "Anchorage" },
+          { title: "Beluga Point" },
+          { title: "Alaska Wildlife Conservation Center" },
+          { title: "Turnagain Arm Drive" },
+          { title: "Girdwood" },
+          {
+            title: "Explorer Glacier Seasonally we can see...",
+            description,
+          },
+        ],
+      },
+    }).extracted.itinerary;
+
+    expect(itinerary[5]).toMatchObject({
+      title: "Explorer Glacier",
+      titleSource: "product-override",
+      description,
+    });
+  });
+
+  it("falls back when a narrative title parrots its description and preserves that description", () => {
+    const description =
+      "The southernmost neighborhood trail follows a wooded creek corridor before returning to the bike route.";
+    const itinerary = extractEngine6Product({
+      product: {
+        productCode: "NO_OVERRIDE_PARROT",
+        title: "Narrative Parrot Test",
+        itineraryItems: [
+          {
+            title:
+              "The southernmost neighborhood trail follows a wooded creek corridor",
+            description,
+          },
+          {
+            title:
+              "Seasonal Self-Guided walk to the foot of a glacier viewpoint",
+            description:
+              "Seasonal Self-Guided walk to the foot of a glacier viewpoint with time for photos.",
+          },
+        ],
+      },
+    }).extracted.itinerary;
+
+    expect(itinerary.map(item => item.title)).toEqual([
+      "Itinerary Stop 1",
+      "Itinerary Stop 2",
+    ]);
+    expect(itinerary.map(item => item.description)).toEqual([
+      description,
+      "Seasonal Self-Guided walk to the foot of a glacier viewpoint with time for photos.",
+    ]);
+  });
+
+  it("emits JSON-LD itinerary names from the final parrot-guarded rendered titles", () => {
+    const itinerary = extractEngine6Product({
+      product: {
+        productCode: "NO_OVERRIDE_SCHEMA_PARROT",
+        title: "Narrative Parrot Schema Test",
+        itineraryItems: [
+          {
+            title:
+              "We continue along a scenic shoreline route with mountain views",
+            description:
+              "We continue along a scenic shoreline route with mountain views and guide commentary.",
+          },
+          {
+            title: "Clean Viewpoint",
+            description: "Stop at a clean viewpoint title.",
+          },
+        ],
+      },
+    }).extracted.itinerary;
+    const schema = buildEngine6SchemaGraph({
+      productCode: "NO_OVERRIDE_SCHEMA_PARROT",
+      title: "Narrative Parrot Schema Test",
+      city: "Anchorage",
+      state: "Alaska",
+      canonicalPath:
+        "/destinations/alaska/anchorage/tours/narrative-parrot-schema-test",
+      bookingUrl: "/booking",
+      itinerary,
+      resolvedHero: null,
+      heroImageUrl: null,
+      activityCategories: [],
+      primaryDisplayCategory: null,
+      categoryLabel: null,
+      primaryCategory: null,
+      durationText: null,
+      overviewText: null,
+      description: "Narrative parrot schema test.",
+      metaDescription: "Narrative parrot schema test.",
+      seoDescription: "Narrative parrot schema test.",
+      highlights: [],
+      included: [],
+      faqs: [],
+      priceAmount: null,
+      priceFormatted: "",
+      aggregateRating: null,
+      reviewCount: null,
+      meetingPointText: "",
+    } as any);
+    const trip = (schema["@graph"] as Array<Record<string, any>>).find(
+      node => node["@type"] === "TouristTrip"
+    );
+
+    expect(trip?.itinerary?.itemListElement?.[0]?.item?.name).toBe(
+      "Itinerary Stop 1"
+    );
   });
 });
 

@@ -1073,6 +1073,61 @@ const normalizeSingleItineraryItem = (
     rowCount: number;
   }
 ): Engine6ExtractedItineraryItem | null => {
+  const countWords = (value: string) =>
+    value.trim().split(/\s+/).filter(Boolean).length;
+  const normalizeParrotText = (value: string) =>
+    value
+      .toLowerCase()
+      .replace(/[’']/g, "'")
+      .replace(/&/g, " and ")
+      .replace(/[^a-z0-9]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  const firstWords = (value: string, limit: number) =>
+    value.split(/\s+/).filter(Boolean).slice(0, limit).join(" ");
+  const startsWithNarrativePrefix = (value: string) =>
+    /^(?:the|in|we|enjoy|seasonal|stop\s+by)\b/i.test(value.trim());
+  const descriptionEchoesCandidateTitle = (
+    candidateTitle: string,
+    candidateDescription: string | undefined
+  ) => {
+    if (!candidateDescription) return false;
+
+    const normalizedTitle = normalizeParrotText(candidateTitle);
+    const normalizedDescription = normalizeParrotText(candidateDescription);
+    if (!normalizedTitle || !normalizedDescription) return false;
+
+    const titleLead = firstWords(normalizedTitle, 5);
+    return (
+      normalizedDescription.startsWith(normalizedTitle) ||
+      normalizedDescription.includes(normalizedTitle) ||
+      (titleLead.split(/\s+/).length >= 4 &&
+        normalizedDescription.startsWith(titleLead))
+    );
+  };
+  const shouldUseFallbackTitleForParrotedProse = (
+    candidateTitle: string,
+    candidateDescription: string | undefined,
+    candidateTitleSource: Engine6ItineraryTitleSource
+  ) => {
+    if (
+      candidateTitleSource === "json-ld" ||
+      candidateTitleSource === "public-json-ld" ||
+      candidateTitleSource === "product-override"
+    ) {
+      return false;
+    }
+
+    const titleLooksLikeProse =
+      countWords(candidateTitle) > 5 ||
+      startsWithNarrativePrefix(candidateTitle);
+
+    return (
+      titleLooksLikeProse &&
+      descriptionEchoesCandidateTitle(candidateTitle, candidateDescription)
+    );
+  };
+
   const pointOfInterest = asRecord(row.pointOfInterest);
   const pointOfInterestLocation = asRecord(row.pointOfInterestLocation);
   const stop = asRecord(row.stop);
@@ -1227,12 +1282,23 @@ const normalizeSingleItineraryItem = (
     admissionNoteFromDescription && description === admissionNoteFromDescription
       ? undefined
       : description;
+  const finalTitle = shouldUseFallbackTitleForParrotedProse(
+    cleanedTitle || title,
+    descriptionWithoutAdmission,
+    titleSource
+  )
+    ? `Itinerary Stop ${context.rowIndex + 1}`
+    : cleanedTitle || title;
+  const finalTitleSource =
+    finalTitle === cleanedTitle || finalTitle === title
+      ? titleSource
+      : "description-inferred";
   const stopType =
     isPassByFlag || isPassByFromType || isPassByFromTitle ? "pass-by" : "stop";
 
   return {
-    title: cleanedTitle || title,
-    titleSource,
+    title: finalTitle,
+    titleSource: finalTitleSource,
     stopType,
     ...(descriptionWithoutAdmission
       ? { description: descriptionWithoutAdmission }
