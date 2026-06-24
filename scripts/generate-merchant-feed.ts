@@ -5,6 +5,11 @@ import { extractEngine6Product } from "../api/engine6/viatorExtractors";
 import { fetchViatorWithCurl } from "../lib/viator";
 import { DEFAULT_CURRENCY } from "../src/constants/merchantDefaults";
 import { resolveMerchantDescription } from "../src/engine6/merchantDescriptions";
+import {
+  auditEngine6MerchantFeedParity,
+  buildMerchantFeedCanonicalCommercialExpectation,
+} from "../src/engine6/merchantFeedParity";
+import { getEngine6TourRatingSourceOfTruth } from "../src/engine6/ratingSourceOfTruth";
 import { buildEngine6SchemaGraph } from "../src/engine6/schema/buildEngine6SchemaGraph";
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import type { Engine6Tour } from "../src/engine6/types";
@@ -305,7 +310,7 @@ const loadBundledAvailabilitySummaryPrice = async (
   }
 };
 
-const resolveCanonicalFeedHydration = async (
+export const resolveCanonicalFeedHydration = async (
   tour: Engine6Tour
 ): Promise<Engine6FeedHydration> => {
   const canonical = resolveCanonicalFeedHydrationFromTour(tour);
@@ -365,23 +370,23 @@ export const mergeFeedHydration = (
   }
 
   const reviewCount = pickFirstReviewCount(
-    live.reviewCount,
-    live.ratingCount,
     canonical.reviewCount,
-    canonical.ratingCount
+    canonical.ratingCount,
+    live.reviewCount,
+    live.ratingCount
   );
 
   return {
-    priceAmount: pickFirstNumber(live.priceAmount, canonical.priceAmount),
-    currency: live.currency ?? canonical.currency ?? DEFAULT_CURRENCY,
+    priceAmount: pickFirstNumber(canonical.priceAmount, live.priceAmount),
+    currency: canonical.currency ?? live.currency ?? DEFAULT_CURRENCY,
     averageRating: pickFirstRating(
-      live.averageRating,
-      canonical.averageRating
+      canonical.averageRating,
+      live.averageRating
     ),
     ratingCount: reviewCount,
     reviewCount,
     viatorApiDescription:
-      live.viatorApiDescription ?? canonical.viatorApiDescription,
+      canonical.viatorApiDescription ?? live.viatorApiDescription,
   };
 };
 
@@ -473,10 +478,16 @@ export const buildMerchantRow = (
   ]
     .map(value => value?.trim())
     .find(isValidHttpUrl);
+  const canonicalCommercial =
+    buildMerchantFeedCanonicalCommercialExpectation(
+      tour,
+      hydration.priceAmount
+    );
+  const ratingSourceOfTruth = getEngine6TourRatingSourceOfTruth(tour);
 
   return {
     id: tour.productCode,
-    title: tour.title,
+    title: canonicalCommercial.title,
     description: resolveMerchantDescription({
       productCode: tour.productCode,
       title: tour.title,
@@ -485,25 +496,30 @@ export const buildMerchantRow = (
       productOverviewDescription: tour.overviewText,
       pageMetadataDescription: tour.metaDescription || tour.seoDescription,
       jsonLdProductDescription: resolveEngine6ProductDescription(tour),
-      viatorApiDescription:
-        hydration.viatorApiDescription ?? tour.overviewText ?? null,
+      viatorApiDescription: tour.overviewText ?? null,
       itineraryStops: tour.itinerary,
       highlights: tour.highlights,
       included: tour.included,
       durationText: tour.durationText,
     }),
-    link: `${DOMAIN}${tour.canonicalPath}`,
+    link: canonicalCommercial.link,
     image_link: imageLink ?? "",
     availability: DEFAULT_AVAILABILITY,
-    price: formatMerchantPrice(
-      hydration.priceAmount,
-      hydration.currency ?? DEFAULT_CURRENCY
-    ),
+    price: canonicalCommercial.price,
     condition: "new",
     brand: DEFAULT_BRAND,
-    average_rating: formatMerchantRating(hydration.averageRating),
-    rating_count: formatMerchantCount(hydration.ratingCount),
-    review_count: formatMerchantCount(hydration.reviewCount),
+    average_rating:
+      ratingSourceOfTruth.aggregateRating !== null
+        ? formatMerchantRating(ratingSourceOfTruth.aggregateRating)
+        : "",
+    rating_count:
+      ratingSourceOfTruth.reviewCount !== null
+        ? formatMerchantCount(ratingSourceOfTruth.reviewCount)
+        : "",
+    review_count:
+      ratingSourceOfTruth.reviewCount !== null
+        ? formatMerchantCount(ratingSourceOfTruth.reviewCount)
+        : "",
   };
 };
 
@@ -525,34 +541,17 @@ const main = async () => {
   }
 
   const outputRows: MerchantRow[] = [];
-  let liveOverlayCount = 0;
+  const resolvedPriceByProductCode = new Map<string, number | null>();
   let warningCount = 0;
 
   for (const tour of engine6ResolvedTours) {
-    const canonicalHydration = await resolveCanonicalFeedHydration(tour);
-    let liveHydration: Engine6FeedHydration | null = null;
-
-    try {
-      liveHydration = await fetchLiveEngine6FeedHydration(tour.productCode);
-    } catch (error) {
-      warningCount += 1;
-      console.warn(
-        `Live Viator hydration failed for ${tour.productCode}: ${
-          error instanceof Error ? error.message : String(error)
-        }`
-      );
-    }
-
-    if (liveHydration) {
-      liveOverlayCount += 1;
-    }
-
-    const hydration = mergeFeedHydration(canonicalHydration, liveHydration);
+    const hydration = await resolveCanonicalFeedHydration(tour);
+    resolvedPriceByProductCode.set(tour.productCode, hydration.priceAmount);
 
     if (hydration.priceAmount === null) {
       warningCount += 1;
       console.warn(
-        `Merchant price unavailable for ${tour.productCode}: canonical fixture/product data and live Viator both lacked a price.`
+        `Merchant price unavailable for ${tour.productCode}: canonical fixture/product data lacked a price.`
       );
     }
 
@@ -581,10 +580,29 @@ const main = async () => {
     throw new Error("Merchant feed validation failed before write.");
   }
 
+  const parityAudit = auditEngine6MerchantFeedParity(
+    engine6ResolvedTours,
+    new Map(outputRows.map(row => [row.id, row])),
+    tour => resolvedPriceByProductCode.get(tour.productCode) ?? tour.priceAmount
+  );
+
+  if (!parityAudit.pass) {
+    for (const failure of parityAudit.failures.slice(0, 20)) {
+      console.error(failure);
+    }
+    if (parityAudit.failures.length > 20) {
+      console.error(
+        `...and ${parityAudit.failures.length - 20} additional merchant feed parity failures.`
+      );
+    }
+    throw new Error(
+      "Merchant feed canonical parity validation failed before write."
+    );
+  }
+
   await writeFile(OUTPUT_PATH, toCsv(outputRows), "utf8");
 
   console.log(`Processed ${engine6ResolvedTours.length} Engine6 products.`);
-  console.log(`Applied live Viator overlays for ${liveOverlayCount} products.`);
   console.log(
     `Wrote ${outputRows.length} merchant feed rows to ${OUTPUT_PATH}.`
   );
