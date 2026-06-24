@@ -3,6 +3,7 @@ import path from "node:path";
 
 import { buildMerchantFeedRowFromProductSchema } from "../src/engine6/merchantFeedFromProductSchema";
 import { auditEngine6MerchantFeedSchemaParity } from "../src/engine6/merchantFeedParity";
+import { resolveEngine6ToursForProductSchema } from "../src/engine6/fetchEngine6LiveCommercialFieldsForSchema";
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import type { Engine6Tour } from "../src/engine6/types";
 
@@ -203,7 +204,11 @@ const main = async () => {
     console.log("\nMerchant Feed Before: no existing merchantFeed.csv rows.");
   }
 
-  const outputRows: MerchantRow[] = engine6ResolvedTours.map(tour =>
+  const schemaResolvedTours = await resolveEngine6ToursForProductSchema(
+    engine6ResolvedTours
+  );
+
+  const outputRows: MerchantRow[] = schemaResolvedTours.map(tour =>
     buildMerchantRow(tour)
   );
 
@@ -223,7 +228,7 @@ const main = async () => {
   }
 
   const parityAudit = auditEngine6MerchantFeedSchemaParity(
-    engine6ResolvedTours,
+    schemaResolvedTours,
     new Map(outputRows.map(row => [row.id, row]))
   );
 

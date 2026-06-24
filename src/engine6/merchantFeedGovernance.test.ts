@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
 import { validateMerchantFeedRows } from "../../scripts/generate-merchant-feed";
+import { resolveEngine6ToursForProductSchema } from "./fetchEngine6LiveCommercialFieldsForSchema";
 import {
   buildMerchantFeedRowFromProductSchema,
   resolveMerchantFeedProductSchemaSnapshot,
@@ -101,14 +102,15 @@ const getTourByProductCode = (productCode: string) => {
   return tour!;
 };
 
-const getProductSchemaNodes = (productCode: string) => {
+const getProductSchemaNodes = async (productCode: string) => {
   const tour = getTourByProductCode(productCode);
-  const graph = buildEngine6SchemaGraph(tour)["@graph"] as Array<
+  const [resolvedTour] = await resolveEngine6ToursForProductSchema([tour]);
+  const graph = buildEngine6SchemaGraph(resolvedTour)["@graph"] as Array<
     Record<string, unknown>
   >;
 
   return {
-    tour,
+    tour: resolvedTour,
     product: graph.find(node => node["@type"] === "Product"),
     offer: graph.find(node => node["@type"] === "Offer"),
     aggregateRating: graph.find(node => node["@type"] === "AggregateRating"),
@@ -116,15 +118,16 @@ const getProductSchemaNodes = (productCode: string) => {
 };
 
 describe("Engine6 merchant feed Product JSON-LD governance", () => {
-  it("builds merchant rows directly from the resolved Product JSON-LD graph", () => {
+  it("builds merchant rows directly from the resolved Product JSON-LD graph", async () => {
     for (const productCode of [
       ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODE,
       EXISTING_ENGINE6_PRODUCT_CODE,
       NEW_SEATTLE_ENGINE6_PRODUCT_CODE,
     ]) {
       const tour = getTourByProductCode(productCode);
-      const row = buildMerchantFeedRowFromProductSchema(tour);
-      const parity = compareMerchantFeedRowToProductSchema(tour, row);
+      const [resolvedTour] = await resolveEngine6ToursForProductSchema([tour]);
+      const row = buildMerchantFeedRowFromProductSchema(resolvedTour);
+      const parity = compareMerchantFeedRowToProductSchema(resolvedTour, row);
 
       for (const field of REQUIRED_MERCHANT_FIELDS) {
         expect(row[field], `${productCode}.${field}`).toBeTruthy();
@@ -156,9 +159,12 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
     expect(validation.report.blankRequiredFieldRows).toBe(0);
   });
 
-  it("audits every Engine6 merchant feed row against Product JSON-LD", () => {
+  it("audits every Engine6 merchant feed row against Product JSON-LD", async () => {
+    const schemaResolvedTours = await resolveEngine6ToursForProductSchema(
+      engine6ResolvedTours
+    );
     const audit = auditEngine6MerchantFeedSchemaParity(
-      engine6ResolvedTours,
+      schemaResolvedTours,
       merchantRowsById
     );
 
@@ -166,10 +172,9 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
     expect(merchantRowsById.size).toBe(engine6ResolvedTours.length);
   });
 
-  it("keeps 7081NYCDAY aligned with live page Product JSON-LD commercial fields", () => {
-    const { tour, product, offer, aggregateRating } = getProductSchemaNodes(
-      ENGINE6_NYC_ONE_DAY_SIGHTSEEING_PRODUCT_CODE
-    );
+  it("keeps 7081NYCDAY aligned with live page Product JSON-LD commercial fields", async () => {
+    const { tour, product, offer, aggregateRating } =
+      await getProductSchemaNodes(ENGINE6_NYC_ONE_DAY_SIGHTSEEING_PRODUCT_CODE);
     const merchantRow = merchantRowsById.get(
       ENGINE6_NYC_ONE_DAY_SIGHTSEEING_PRODUCT_CODE
     );
@@ -189,8 +194,8 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
     );
     expect(merchantRow?.price).toBe("99 USD");
     expect(merchantRow?.average_rating).toBe("4.8");
-    expect(merchantRow?.rating_count).toBe("13313");
-    expect(merchantRow?.review_count).toBe("13313");
+    expect(merchantRow?.rating_count).toBe("13580");
+    expect(merchantRow?.review_count).toBe("13580");
     expect(merchantRow?.image_link).toBe(product?.image);
     expect(merchantRow?.availability).toBe("in stock");
     expect(snapshot.bookingUrl).toBe(offer?.url);
