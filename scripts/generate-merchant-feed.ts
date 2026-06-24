@@ -1,20 +1,13 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-import { extractEngine6Product } from "../api/engine6/viatorExtractors";
-import { fetchViatorWithCurl } from "../lib/viator";
-import { DEFAULT_CURRENCY } from "../src/constants/merchantDefaults";
-import { resolveMerchantDescription } from "../src/engine6/merchantDescriptions";
-import { buildEngine6SchemaGraph } from "../src/engine6/schema/buildEngine6SchemaGraph";
+import { buildMerchantFeedRowFromProductSchema } from "../src/engine6/merchantFeedFromProductSchema";
+import { auditEngine6MerchantFeedSchemaParity } from "../src/engine6/merchantFeedParity";
+import { resolveEngine6ToursForProductSchema } from "../src/engine6/fetchEngine6LiveCommercialFieldsForSchema";
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import type { Engine6Tour } from "../src/engine6/types";
-import { formatMerchantPrice } from "../src/utils/merchantPricing";
 
 const OUTPUT_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
-const DOMAIN = "https://www.alloutdooradventures.com";
-const DEFAULT_AVAILABILITY = "in stock";
-const DEFAULT_BRAND = "Outdoor Adventures";
-const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 
 const OUTPUT_HEADERS = [
   "id",
@@ -45,15 +38,6 @@ const REQUIRED_MERCHANT_FIELDS = [
 
 type OutputHeader = (typeof OUTPUT_HEADERS)[number];
 type MerchantRow = Record<OutputHeader, string>;
-
-type Engine6FeedHydration = {
-  priceAmount: number | null;
-  currency: string | null;
-  averageRating: number | null;
-  ratingCount: number | null;
-  reviewCount: number | null;
-  viatorApiDescription: string | null;
-};
 
 type MerchantFeedBlankCounts = {
   totalRows: number;
@@ -200,312 +184,8 @@ const logMerchantFeedReport = (
   }
 };
 
-const isValidHttpUrl = (value: unknown): value is string => {
-  if (typeof value !== "string") {
-    return false;
-  }
-
-  const trimmed = value.trim();
-  if (!trimmed) {
-    return false;
-  }
-
-  try {
-    const parsed = new URL(trimmed);
-    return parsed.protocol === "http:" || parsed.protocol === "https:";
-  } catch {
-    return false;
-  }
-};
-
-const extractAvailabilitySummaryPrice = (payload: unknown): number | null => {
-  if (!payload || typeof payload !== "object") {
-    return null;
-  }
-
-  const summary = (payload as Record<string, unknown>).summary;
-  if (!summary || typeof summary !== "object") {
-    return null;
-  }
-
-  const fromPrice = (summary as Record<string, unknown>).fromPrice;
-  if (
-    typeof fromPrice !== "number" ||
-    !Number.isFinite(fromPrice) ||
-    fromPrice <= 0
-  ) {
-    return null;
-  }
-
-  return fromPrice;
-};
-
-const fetchAvailabilitySummaryPrice = async (args: {
-  apiKey: string;
-  baseUrl: string;
-  productCode: string;
-}): Promise<number | null> => {
-  const url = `${args.baseUrl}/availability/schedules/${encodeURIComponent(args.productCode)}?currency=USD`;
-  const { status, body } = await fetchViatorWithCurl(url, args.apiKey);
-  if (status < 200 || status >= 300) {
-    return null;
-  }
-
-  try {
-    return extractAvailabilitySummaryPrice(JSON.parse(body));
-  } catch {
-    return null;
-  }
-};
-
-const normalizeReviewCount = (value: number | null | undefined) =>
-  typeof value === "number" && Number.isFinite(value)
-    ? Math.trunc(value)
-    : null;
-
-const normalizePriceAmount = (value: number | null | undefined) =>
-  typeof value === "number" && Number.isFinite(value) && value > 0
-    ? value
-    : null;
-
-const normalizeAggregateRating = (value: number | null | undefined) =>
-  typeof value === "number" && Number.isFinite(value) ? value : null;
-
-export const resolveCanonicalFeedHydrationFromTour = (
-  tour: Engine6Tour
-): Engine6FeedHydration => {
-  const reviewCount = normalizeReviewCount(tour.reviewCount);
-
-  return {
-    priceAmount: normalizePriceAmount(tour.priceAmount),
-    currency: DEFAULT_CURRENCY,
-    averageRating: normalizeAggregateRating(tour.aggregateRating),
-    ratingCount: reviewCount,
-    reviewCount,
-    viatorApiDescription: tour.overviewText ?? null,
-  };
-};
-
-const loadBundledAvailabilitySummaryPrice = async (
-  productCode: string
-): Promise<number | null> => {
-  const payloadPath = path.join(
-    process.cwd(),
-    "data",
-    "engine6",
-    "viator",
-    `${productCode.trim().toUpperCase()}.availability-summary.json`
-  );
-
-  try {
-    const body = await readFile(payloadPath, "utf8");
-    return extractAvailabilitySummaryPrice(JSON.parse(body));
-  } catch {
-    return null;
-  }
-};
-
-const resolveCanonicalFeedHydration = async (
-  tour: Engine6Tour
-): Promise<Engine6FeedHydration> => {
-  const canonical = resolveCanonicalFeedHydrationFromTour(tour);
-  if (canonical.priceAmount !== null) {
-    return canonical;
-  }
-
-  const bundledAvailabilityPrice = await loadBundledAvailabilitySummaryPrice(
-    tour.productCode
-  );
-  if (bundledAvailabilityPrice === null) {
-    return canonical;
-  }
-
-  return {
-    ...canonical,
-    priceAmount: bundledAvailabilityPrice,
-  };
-};
-
-const pickFirstNumber = (...values: Array<number | null | undefined>) => {
-  for (const value of values) {
-    const normalized = normalizePriceAmount(value ?? null);
-    if (normalized !== null) {
-      return normalized;
-    }
-  }
-  return null;
-};
-
-const pickFirstRating = (...values: Array<number | null | undefined>) => {
-  for (const value of values) {
-    const normalized = normalizeAggregateRating(value ?? null);
-    if (normalized !== null) {
-      return normalized;
-    }
-  }
-  return null;
-};
-
-const pickFirstReviewCount = (...values: Array<number | null | undefined>) => {
-  for (const value of values) {
-    const normalized = normalizeReviewCount(value ?? null);
-    if (normalized !== null) {
-      return normalized;
-    }
-  }
-  return null;
-};
-
-export const mergeFeedHydration = (
-  canonical: Engine6FeedHydration,
-  live: Engine6FeedHydration | null
-): Engine6FeedHydration => {
-  if (!live) {
-    return canonical;
-  }
-
-  const reviewCount = pickFirstReviewCount(
-    live.reviewCount,
-    live.ratingCount,
-    canonical.reviewCount,
-    canonical.ratingCount
-  );
-
-  return {
-    priceAmount: pickFirstNumber(live.priceAmount, canonical.priceAmount),
-    currency: live.currency ?? canonical.currency ?? DEFAULT_CURRENCY,
-    averageRating: pickFirstRating(
-      live.averageRating,
-      canonical.averageRating
-    ),
-    ratingCount: reviewCount,
-    reviewCount,
-    viatorApiDescription:
-      live.viatorApiDescription ?? canonical.viatorApiDescription,
-  };
-};
-
-const fetchLiveEngine6FeedHydration = async (
-  productCode: string
-): Promise<Engine6FeedHydration | null> => {
-  const apiKey = process.env.VIATOR_API_KEY || process.env.VITE_VIATOR_API_KEY;
-  if (!apiKey) {
-    return null;
-  }
-
-  const normalizedProductCode = productCode.trim().toUpperCase();
-  const baseUrl = (
-    process.env.VIATOR_API_BASE_URL ||
-    process.env.VIATOR_BASE_URL ||
-    DEFAULT_VIATOR_BASE_URL
-  ).replace(/\/$/, "");
-  const url = `${baseUrl}/products/${encodeURIComponent(normalizedProductCode)}`;
-
-  const { status, body } = await fetchViatorWithCurl(url, apiKey);
-  if (status < 200 || status >= 300) {
-    return null;
-  }
-
-  let payload: unknown;
-  try {
-    payload = JSON.parse(body);
-  } catch {
-    return null;
-  }
-
-  const extraction = extractEngine6Product(payload);
-  const extractedProductCode =
-    typeof extraction.product?.productCode === "string"
-      ? extraction.product.productCode.trim().toUpperCase()
-      : null;
-
-  if (extractedProductCode !== normalizedProductCode) {
-    return null;
-  }
-
-  const availabilityPrice =
-    extraction.extracted.priceAmount === null
-      ? await fetchAvailabilitySummaryPrice({
-          apiKey,
-          baseUrl,
-          productCode: normalizedProductCode,
-        })
-      : null;
-  const priceAmount = availabilityPrice ?? extraction.extracted.priceAmount;
-  const reviewCount = normalizeReviewCount(extraction.extracted.reviewCount);
-
-  return {
-    priceAmount: normalizePriceAmount(priceAmount),
-    currency: DEFAULT_CURRENCY,
-    averageRating: normalizeAggregateRating(
-      extraction.extracted.aggregateRating
-    ),
-    ratingCount: reviewCount,
-    reviewCount,
-    viatorApiDescription: extraction.extracted.overviewText,
-  };
-};
-
-const formatMerchantRating = (value: number | null) =>
-  typeof value === "number" && Number.isFinite(value) ? value.toFixed(1) : "";
-
-const formatMerchantCount = (value: number | null) =>
-  typeof value === "number" && Number.isFinite(value)
-    ? String(Math.trunc(value))
-    : "";
-
-const resolveEngine6ProductDescription = (tour: Engine6Tour) => {
-  const product = (
-    buildEngine6SchemaGraph(tour)["@graph"] as Array<Record<string, unknown>>
-  ).find(node => node["@type"] === "Product");
-
-  return typeof product?.description === "string" ? product.description : null;
-};
-
-export const buildMerchantRow = (
-  tour: Engine6Tour,
-  hydration: Engine6FeedHydration
-): MerchantRow => {
-  const imageLink = [
-    tour.resolvedHero?.url,
-    tour.heroImageUrl,
-    tour.resolvedImageUrl,
-  ]
-    .map(value => value?.trim())
-    .find(isValidHttpUrl);
-
-  return {
-    id: tour.productCode,
-    title: tour.title,
-    description: resolveMerchantDescription({
-      productCode: tour.productCode,
-      title: tour.title,
-      city: tour.city,
-      categoryLabel: tour.categoryLabel,
-      productOverviewDescription: tour.overviewText,
-      pageMetadataDescription: tour.metaDescription || tour.seoDescription,
-      jsonLdProductDescription: resolveEngine6ProductDescription(tour),
-      viatorApiDescription:
-        hydration.viatorApiDescription ?? tour.overviewText ?? null,
-      itineraryStops: tour.itinerary,
-      highlights: tour.highlights,
-      included: tour.included,
-      durationText: tour.durationText,
-    }),
-    link: `${DOMAIN}${tour.canonicalPath}`,
-    image_link: imageLink ?? "",
-    availability: DEFAULT_AVAILABILITY,
-    price: formatMerchantPrice(
-      hydration.priceAmount,
-      hydration.currency ?? DEFAULT_CURRENCY
-    ),
-    condition: "new",
-    brand: DEFAULT_BRAND,
-    average_rating: formatMerchantRating(hydration.averageRating),
-    rating_count: formatMerchantCount(hydration.ratingCount),
-    review_count: formatMerchantCount(hydration.reviewCount),
-  };
-};
+export const buildMerchantRow = (tour: Engine6Tour): MerchantRow =>
+  buildMerchantFeedRowFromProductSchema(tour);
 
 const readExistingMerchantFeedRows = async (): Promise<MerchantRow[]> => {
   try {
@@ -524,47 +204,13 @@ const main = async () => {
     console.log("\nMerchant Feed Before: no existing merchantFeed.csv rows.");
   }
 
-  const outputRows: MerchantRow[] = [];
-  let liveOverlayCount = 0;
-  let warningCount = 0;
+  const schemaResolvedTours = await resolveEngine6ToursForProductSchema(
+    engine6ResolvedTours
+  );
 
-  for (const tour of engine6ResolvedTours) {
-    const canonicalHydration = await resolveCanonicalFeedHydration(tour);
-    let liveHydration: Engine6FeedHydration | null = null;
-
-    try {
-      liveHydration = await fetchLiveEngine6FeedHydration(tour.productCode);
-    } catch (error) {
-      warningCount += 1;
-      console.warn(
-        `Live Viator hydration failed for ${tour.productCode}: ${
-          error instanceof Error ? error.message : String(error)
-        }`
-      );
-    }
-
-    if (liveHydration) {
-      liveOverlayCount += 1;
-    }
-
-    const hydration = mergeFeedHydration(canonicalHydration, liveHydration);
-
-    if (hydration.priceAmount === null) {
-      warningCount += 1;
-      console.warn(
-        `Merchant price unavailable for ${tour.productCode}: canonical fixture/product data and live Viator both lacked a price.`
-      );
-    }
-
-    if (hydration.averageRating === null || hydration.reviewCount === null) {
-      warningCount += 1;
-      console.warn(
-        `Merchant rating fields unavailable for ${tour.productCode}: source JSON has no review data.`
-      );
-    }
-
-    outputRows.push(buildMerchantRow(tour, hydration));
-  }
+  const outputRows: MerchantRow[] = schemaResolvedTours.map(tour =>
+    buildMerchantRow(tour)
+  );
 
   const validation = validateMerchantFeedRows(outputRows);
   logMerchantFeedReport("After", validation.report, validation.pass);
@@ -581,14 +227,32 @@ const main = async () => {
     throw new Error("Merchant feed validation failed before write.");
   }
 
+  const parityAudit = auditEngine6MerchantFeedSchemaParity(
+    schemaResolvedTours,
+    new Map(outputRows.map(row => [row.id, row]))
+  );
+
+  if (!parityAudit.pass) {
+    for (const failure of parityAudit.failures.slice(0, 20)) {
+      console.error(failure);
+    }
+    if (parityAudit.failures.length > 20) {
+      console.error(
+        `...and ${parityAudit.failures.length - 20} additional Product JSON-LD parity failures.`
+      );
+    }
+    throw new Error(
+      "Merchant feed Product JSON-LD parity validation failed before write."
+    );
+  }
+
   await writeFile(OUTPUT_PATH, toCsv(outputRows), "utf8");
 
   console.log(`Processed ${engine6ResolvedTours.length} Engine6 products.`);
-  console.log(`Applied live Viator overlays for ${liveOverlayCount} products.`);
   console.log(
     `Wrote ${outputRows.length} merchant feed rows to ${OUTPUT_PATH}.`
   );
-  console.log(`Logged ${warningCount} warnings.`);
+  console.log("Product JSON-LD parity: PASS");
 };
 
 if (process.argv[1]?.includes("generate-merchant-feed")) {
