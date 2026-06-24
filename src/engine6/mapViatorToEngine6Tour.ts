@@ -2,6 +2,8 @@ import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { formatEngine6StartingPriceLabel } from "./priceDisplay";
 import { resolveEngine6PathForProductCode } from "./routes";
+import { isEngine6NewBuildProductCode } from "./engine6NewBuilds";
+import { rewriteEngine6Overview } from "./overviewGovernance";
 import {
   buildEngine6CanonicalPath,
   buildEngine6SeoDescription,
@@ -11,6 +13,9 @@ import {
   stripEngine6AdmissionArtifacts,
 } from "./seo";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
+
+const shouldLogEngine6LocationDiagnostics = () =>
+  process.env.ENGINE6_LOCATION_DIAGNOSTICS === "1";
 
 const ENGINE6_SEO_TITLE_OVERRIDES: Record<string, string> = {
   "415653P2": "Private Yosemite & Giant Sequoias Tour from San Francisco",
@@ -356,6 +361,9 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
   "117409P1": () =>
     "Santa Ynez Valley Tour is a full-day wine-country outing from Santa Barbara that trades shoreline views for inland ranchland, vineyard slopes, and small-town main streets. The route usually follows Highway 154 over San Marcos Pass into the Santa Ynez Valley, then moves between tasting stops in communities such as Solvang, Los Olivos, and Santa Ynez depending on the day’s winery lineup. Your guide handles driving and timing, so you can focus on scenery, local wine styles, and a relaxed pace between pours. Expect a social small-group format with structured stops, practical destination context, and enough free moments to browse tasting rooms or village blocks. It’s an easy way to experience one of Santa Barbara County’s best-known wine regions without self-driving logistics.",
 };
+
+export const hasEngine6ReviewedOverviewOverride = (productCode: string) =>
+  Boolean(ENGINE6_OVERVIEW_OVERRIDES[productCode.trim()]);
 
 const toSentence = (value: string) => {
   const trimmed = value.trim().replace(/\s+/g, " ");
@@ -1033,7 +1041,10 @@ export const mapViatorToEngine6Tour = (
   const city = routeCityLabel ?? payload.extracted.city ?? "Destination";
   const state = routeStateLabel ?? payload.extracted.state ?? "Destination";
 
-  if (!payload.extracted.city || !payload.extracted.state) {
+  if (
+    shouldLogEngine6LocationDiagnostics() &&
+    (!payload.extracted.city || !payload.extracted.state)
+  ) {
     console.warn("[engine6-location] missing explicit location fields", {
       productCode: payload.rawProductCode,
       extractedCity: payload.extracted.city,
@@ -1194,8 +1205,27 @@ export const mapViatorToEngine6Tour = (
     state,
     sourceOverview: sourceOverviewText,
   });
+  const governedOverview =
+    isEngine6NewBuildProductCode(payload.rawProductCode) &&
+    !hasEngine6ReviewedOverviewOverride(payload.rawProductCode)
+      ? rewriteEngine6Overview({
+          title,
+          city,
+          state,
+          categoryLabel,
+          durationText: payload.extracted.durationText ?? null,
+          highlights,
+          itinerary,
+          sourceOverview: sourceOverviewText,
+        })
+      : null;
   const normalizedOverview =
-    overriddenOverview || sourceOverviewText || synthesizedOverview;
+    overriddenOverview ||
+    governedOverview ||
+    (!isEngine6NewBuildProductCode(payload.rawProductCode)
+      ? sourceOverviewText
+      : null) ||
+    synthesizedOverview;
 
   if (payload.rawProductCode === "335698P13") {
     const requiredReviewCount = 86;

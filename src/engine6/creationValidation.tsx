@@ -9,8 +9,13 @@ import {
 } from "../data/tours";
 import ToursLanding from "../pages/tours/ToursLanding";
 import { toEngine6Card } from "./cards";
+import { isEngine6NewBuildProductCode } from "./engine6NewBuilds";
 import { validateEngine6GovernedItinerary } from "./itineraryGovernance";
-import { isEngine6ItinerarySectionSuppressed } from "./mapViatorToEngine6Tour";
+import {
+  hasEngine6ReviewedOverviewOverride,
+  isEngine6ItinerarySectionSuppressed,
+} from "./mapViatorToEngine6Tour";
+import { validateEngine6GovernedOverview } from "./overviewGovernance";
 import Engine6TourPage from "./components/Engine6TourPage";
 import {
   buildEngine6ParentCityToursPath,
@@ -565,6 +570,20 @@ export const validateEngine6CreationContract = ({
         renderedItems: tour.itinerary,
         sourceItems: sourceStops,
         overviewText: tour.overviewText,
+      })
+    );
+  }
+
+  if (
+    isEngine6NewBuildProductCode(tour.productCode) &&
+    !hasEngine6ReviewedOverviewOverride(tour.productCode)
+  ) {
+    violations.push(
+      ...validateEngine6GovernedOverview({
+        overviewText: tour.overviewText,
+        sourceOverview: extractedFields.overviewText,
+        highlights: tour.highlights,
+        itinerary: tour.itinerary,
       })
     );
   }

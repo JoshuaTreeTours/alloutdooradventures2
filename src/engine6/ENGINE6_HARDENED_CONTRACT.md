@@ -20,6 +20,8 @@ Every new Engine6 specimen must inherit these behaviors without custom branching
 - **Collision guard:** legacy route collision must throw unless explicitly configured in `ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS`.
 - **Itinerary rendering:** timeline rendering only when structured stop data exists; summary-only itinerary must render explicitly and visually distinct.
 - **New-build itinerary originality rule:** for newly created Engine6 tours only, itinerary stop order/structure must remain Viator-authored while each stop description is rewritten as one concise factual sentence (no verbatim copy or generic filler); existing Engine6 tours must not be retro-edited to satisfy this rule.
+- **New-build overview governance rule:** for newly created Engine6 tours only, overviews must use original travel-guide wording (120–250 words), preserve named locations from source material, avoid operational openings and supplier copy, and pass duplicate-content and factual-content review; reviewed product-specific overview overrides and existing Engine6 tours remain unchanged.
+- **New-build fixture default:** every Engine6 product outside the original merchant-approved set automatically receives `itineraryOriginalityForNewBuilds: true` in `validationFixtures.ts`, enabling itinerary and overview governance without per-fixture boilerplate.
 - **FAQ parity:** FAQ schema must match visible FAQ entries.
 - **Price contract:** price is "From" minimum price, kept aligned between UI copy and schema (`price`, `priceCurrency`, `priceValidUntil`).
 
@@ -32,6 +34,7 @@ The following are forbidden in Engine6 work:
 - Legacy route coexistence without explicit replacement declaration.
 - Silent fallback from structured itinerary to fake timeline behavior.
 - For new builds, copying Viator itinerary descriptions verbatim or using generic placeholder stop descriptions.
+- For new builds, copying supplier overview prose verbatim or opening overviews with pickup, meeting, clothing, or other operational instructions.
 
 ## Pre-merge requirements for Engine6 changes
 
