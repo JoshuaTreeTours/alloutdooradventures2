@@ -66,6 +66,7 @@ import { isExcludedProductCode } from "../../../../data/excludedProductCodes";
 import {
   isEngine6CanonicalPath,
   isEngine6PortlandTourCanonicalPath,
+  isEngine6SeattleTourCanonicalPath,
 } from "../../../../engine6/routes";
 import { buildEngine6SchemaGraph } from "../../../../engine6/schema/buildEngine6SchemaGraph";
 import { mergeEngine6LiveFieldsIntoTour } from "../../../../engine6/liveProductFields";
@@ -330,7 +331,8 @@ export default function CityTourDetailRoute({
       isEngine6LiveItineraryMergeSuppressed(productCode);
     const suppressLiveItineraryMerge =
       suppressLiveContentFields ||
-      isEngine6PortlandTourCanonicalPath(nativeEngine6Tour.canonicalPath);
+      isEngine6PortlandTourCanonicalPath(nativeEngine6Tour.canonicalPath) ||
+      isEngine6SeattleTourCanonicalPath(nativeEngine6Tour.canonicalPath);
 
     fetch(
       `/api/engine6/viator-product?productCode=${encodeURIComponent(productCode)}`
@@ -469,7 +471,8 @@ export default function CityTourDetailRoute({
     );
     const suppressLiveItineraryMerge =
       suppressLiveContentFields ||
-      isEngine6PortlandTourCanonicalPath(nativeEngine6Tour.canonicalPath);
+      isEngine6PortlandTourCanonicalPath(nativeEngine6Tour.canonicalPath) ||
+      isEngine6SeattleTourCanonicalPath(nativeEngine6Tour.canonicalPath);
     const resolvedEngine6Tour: Engine6Tour = liveDynamic
       ? {
           ...nativeEngine6Tour,

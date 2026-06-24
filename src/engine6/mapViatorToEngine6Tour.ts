@@ -88,6 +88,36 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Explore downtown Portland on a guided food tour with tastings at local favorites across the city center with neighborhood history and food culture commentary.",
   "67842P3":
     "Discover Portland's food-cart culture on a guided tour of pods, patios, and cart clusters across the city with tastings from multiple vendors.",
+  "5396P10":
+    "Explore Seattle on a guided three-hour city tour with stops at Pioneer Square, the Ballard Locks, and Kerry Park for skyline views with a local guide.",
+  "40943P1":
+    "See Seattle highlights on a small-group bus tour with stops at Pike Place Market, Kerry Park, the Space Needle, and the Fremont Troll sculpture.",
+  "479383P1":
+    "Get oriented to Seattle on a guided walking tour through downtown and Pioneer Square plus a scenic ride on the historic Seattle Monorail.",
+  "36129P1":
+    "Explore Pioneer Square on a guided walking tour through Seattle's historic underground passageways built after the Great Seattle Fire.",
+  "2956PIKEPL":
+    "Sample Pike Place Market on a guided food and culture walking tour with tastings from local vendors and market history commentary.",
+  "23161P1":
+    "Tour Pike Place Market with a chef guide who introduces vendor relationships, seasonal ingredients, and Pacific Northwest tastings.",
+  "2956EXCLUSIVE":
+    "Explore Pike Place Market before peak crowds on an early-access guided tasting tour with smoked salmon, chocolate, and market specialties.",
+  "7812P115":
+    "Discover Pike Place Market on a Secret Food Tours route with eight local tastings including clam chowder, piroshki, and artisan sweets.",
+  "2960HARBOR":
+    "Cruise Elliott Bay and Seattle Harbor on a one-hour narrated boat tour from Pier 55 with skyline, shipping-terminal, and mountain views.",
+  "3657RAINIER":
+    "Travel from Seattle to Mount Rainier National Park on a full-day guided tour with stops at Narada Falls, Paradise, and Longmire.",
+  "5396MTR":
+    "Visit Mount Rainier National Park on a full-day small-group tour from Seattle with seasonal routes through forests, waterfalls, and alpine viewpoints.",
+  "351474P1":
+    "Combine a Mount Rainier National Park tour from Seattle with guided hiking on alpine trails, waterfall stops, and glacier viewpoints.",
+  "3132SMB":
+    "Travel from downtown Seattle to the Boeing Future of Flight facility for a guided factory tour with round-trip transport from the Hyatt Regency.",
+  "5396BOEING":
+    "Take a half-day trip from Seattle to the Boeing Everett factory for a guided assembly-plant tour and Future of Flight aviation exhibits.",
+  "8647P594":
+    "Explore Seattle and Snoqualmie Falls on a private five-hour tour with a dedicated driver-guide covering city landmarks and the 268-foot falls overlook.",
 };
 const ENGINE6_ITINERARY_SECTION_SUPPRESSED_PRODUCT_CODES = new Set([
   "447486P2",
@@ -135,6 +165,38 @@ const ENGINE6_CLASSIFICATION_OVERRIDES: Record<
     categories: ["food-wine"],
     primaryDisplayCategory: "Food & Wine",
     activityCategories: [{ slug: "food-wine", label: "Food & Wine" }],
+  },
+  "2956PIKEPL": {
+    primaryCategory: "food-wine",
+    categories: ["food-wine"],
+    primaryDisplayCategory: "Food & Wine",
+    activityCategories: [{ slug: "food-wine", label: "Food & Wine" }],
+  },
+  "23161P1": {
+    primaryCategory: "food-wine",
+    categories: ["food-wine"],
+    primaryDisplayCategory: "Food & Wine",
+    activityCategories: [{ slug: "food-wine", label: "Food & Wine" }],
+  },
+  "2956EXCLUSIVE": {
+    primaryCategory: "food-wine",
+    categories: ["food-wine"],
+    primaryDisplayCategory: "Food & Wine",
+    activityCategories: [{ slug: "food-wine", label: "Food & Wine" }],
+  },
+  "7812P115": {
+    primaryCategory: "food-wine",
+    categories: ["food-wine"],
+    primaryDisplayCategory: "Food & Wine",
+    activityCategories: [{ slug: "food-wine", label: "Food & Wine" }],
+  },
+  "2960HARBOR": {
+    primaryCategory: "water-activities",
+    categories: ["water-activities"],
+    primaryDisplayCategory: "Water Activities",
+    activityCategories: [
+      { slug: "water-activities", label: "Water Activities" },
+    ],
   },
 };
 
@@ -201,6 +263,36 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Explore downtown Portland on a guided food tour with tastings at local favorites across the city center. A guide leads a walking route through central districts while sharing Portland food culture, neighborhood history, and stories behind each stop.",
   "67842P3":
     "Discover Portland's food-cart culture on a guided tour of pods, patios, and cart clusters across the city. Sample dishes from multiple vendors while a local guide explains how Portland's cart scene shaped the city's dining identity.",
+  "5396P10":
+    "Explore Seattle on a guided three-hour city tour with stops at Pioneer Square, the Ballard Locks, and Kerry Park for skyline views. A local guide narrates the route through waterfront districts, historic neighborhoods, and landmark corridors before ending near the Space Needle.",
+  "40943P1":
+    "See Seattle highlights on a small-group bus tour with stops at Pike Place Market, Kerry Park, the Space Needle, and the Fremont Troll. A local guide covers Chinatown, Pioneer Square, and Lake Union viewpoints on a compact city route.",
+  "479383P1":
+    "Get oriented to Seattle on a guided walking tour through downtown and Pioneer Square, plus a scenic ride on the historic Seattle Monorail. A local guide introduces major neighborhoods, city history, and landmark viewpoints in a few hours.",
+  "36129P1":
+    "Explore Pioneer Square on a guided walking tour through Seattle's historic underground passageways built after the Great Seattle Fire. A local guide shares stories of the city's early settlement, architecture, and subterranean corridors beneath modern streets.",
+  "2956PIKEPL":
+    "Sample Pike Place Market on a guided food and culture walking tour with tastings from local vendors. The route covers market stalls, specialty foods, and the history of Seattle's most famous public market.",
+  "23161P1":
+    "Tour Pike Place Market with a chef guide who introduces vendor relationships, seasonal ingredients, and behind-the-scenes market culture. Tastings highlight Pacific Northwest flavors across multiple stops in the historic market.",
+  "2956EXCLUSIVE":
+    "Explore Pike Place Market before peak crowds on an early-access guided tasting tour. Sample smoked salmon, local chocolate, and market specialties while vendors prepare for the day in a quieter market setting.",
+  "7812P115":
+    "Discover Pike Place Market on a Secret Food Tours walking route with eight authentic local tastings including clam chowder, piroshki, and artisan sweets. The tour explores main market levels and the DownUnder area with a licensed market guide.",
+  "2960HARBOR":
+    "Cruise Elliott Bay and Seattle Harbor on a one-hour narrated boat tour departing from Pier 55. The route offers skyline views, shipping-terminal perspectives, and mountain backdrops including the Cascades, Olympics, and Mount Rainier when visible.",
+  "3657RAINIER":
+    "Travel from Seattle to Mount Rainier National Park on a full-day guided tour with stops at Narada Falls, Paradise, and Longmire. A narrated drive crosses lakes and foothill scenery before exploring the park's waterfalls and mountain viewpoints.",
+  "5396MTR":
+    "Visit Mount Rainier National Park on a full-day small-group tour from Seattle with a professional guide. Seasonal routes include old-growth forests, wildflower meadows, waterfalls, and optional short hikes with flexible pacing for all abilities.",
+  "351474P1":
+    "Combine a Mount Rainier National Park tour from Seattle with guided hiking on alpine trails. The outing includes old-growth forest walks, waterfall stops, and glacier viewpoints with trekking poles and seasonal snowshoes provided when needed.",
+  "3132SMB":
+    "Travel from downtown Seattle to the Boeing Future of Flight facility for a guided factory tour of the world's largest building by volume. Explore assembly-line viewing areas and aviation exhibits with round-trip transport from the Hyatt Regency Seattle.",
+  "5396BOEING":
+    "Take a half-day trip from Seattle to the Boeing Everett factory for a guided assembly-plant tour and Future of Flight exhibits. Hotel pickup across the greater Seattle area includes time at the aviation gallery and gift shop.",
+  "8647P594":
+    "Explore Seattle and Snoqualmie Falls on a private five-hour tour with a dedicated driver-guide. The flexible route covers city landmarks such as Kerry Park and Pike Place Market before continuing east to the 268-foot Snoqualmie Falls overlook.",
 };
 
 const ENGINE6_OVERVIEW_OVERRIDES: Record<

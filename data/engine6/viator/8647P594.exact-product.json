@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "8647P594",
+    "productUrl": "https://www.viator.com/tours/Seattle/Private-5-hour-City-Tour-of-Seattle-and-Snoqualmie-Falls-with-driver-guide/d704-8647P594",
+    "title": "Private Seattle City and Snoqualmie Falls Tour",
+    "description": {
+      "text": "Explore Seattle and Snoqualmie Falls on a private five-hour tour with a dedicated driver-guide. The flexible route covers city landmarks such as Kerry Park and Pike Place Market before continuing east to the 268-foot Snoqualmie Falls overlook."
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "Washington"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $703.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 95
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/dc/30/71.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private five-hour Seattle and Snoqualmie Falls tour",
+      "Dedicated driver-guide for your group only",
+      "Flexible city stops including Kerry Park",
+      "Visit the famous Snoqualmie Falls overlook",
+      "Hotel or cruise port pickup available"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Private pickup from your Seattle hotel, cruise port, or confirmed central meeting point."
+      },
+      "end": {
+        "description": "Return to your Seattle hotel or cruise port."
+      }
+    },
+    "itinerarySummary": "Explore Seattle and Snoqualmie Falls on a private five-hour tour with a dedicated driver-guide.",
+    "itineraryItems": [
+      {
+        "title": "Seattle city highlights",
+        "description": "Drive to selected Seattle landmarks such as Kerry Park, Pike Place Market, or the Space Needle area.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Snoqualmie Falls",
+        "description": "Travel east to the 268-foot Snoqualmie Falls overlook and surrounding park viewpoints.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Scenic return drive",
+        "description": "Return toward Seattle through Cascade foothill scenery with flexible photo stops when time allows.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Private driver-guide",
+      "Private vehicle",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Seattle City and Snoqualmie Falls Tour?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Seattle?",
+        "answer": "Private pickup from your Seattle hotel, cruise port, or confirmed central meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 703
+      },
+      "currency": "USD"
+    }
+  }
+}

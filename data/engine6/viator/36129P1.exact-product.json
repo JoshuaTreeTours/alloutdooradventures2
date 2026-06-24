@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "36129P1",
+    "productUrl": "https://www.viator.com/tours/Seattle/Beneath-The-Streets/d704-36129P1",
+    "title": "Beneath The Streets Underground History Tour",
+    "description": {
+      "text": "Explore Pioneer Square on a guided walking tour through Seattle's historic underground passageways built after the Great Seattle Fire. A local guide shares stories of the city's early settlement, architecture, and subterranean corridors beneath modern streets."
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "Washington"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $29.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1800
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/17/c6.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided underground tour of Pioneer Square",
+      "Explore passageways built after the 1889 fire",
+      "Local guide shares Seattle origin stories",
+      "Covers three blocks of historic subterranean routes",
+      "Boutique tour with engaging narration"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at 102 Cherry Street, Seattle, WA 98104 in Pioneer Square."
+      },
+      "end": {
+        "description": "Tour returns to the Pioneer Square meeting area."
+      }
+    },
+    "itinerarySummary": "Explore Pioneer Square on a guided walking tour through Seattle's historic underground passageways built after the Great Seattle Fire.",
+    "itineraryItems": [
+      {
+        "title": "Pioneer Square",
+        "description": "Begin above ground in Pioneer Square before descending into historic underground corridors.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Underground passageways",
+        "description": "Walk through restored subterranean walkways built beneath post-fire Seattle street levels.",
+        "duration": "40 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Historic storefronts",
+        "description": "View remnants of nineteenth-century shopfronts and sidewalks preserved below modern Pioneer Square.",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Beneath The Streets Underground History Tour?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Seattle?",
+        "answer": "Meet at 102 Cherry Street, Seattle, WA 98104 in Pioneer Square."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 29
+      },
+      "currency": "USD"
+    }
+  }
+}

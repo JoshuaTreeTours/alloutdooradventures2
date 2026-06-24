@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "5396BOEING",
+    "productUrl": "https://www.viator.com/tours/Seattle/Boeing-Factory-Tour-from-Seattle/d704-5396BOEING",
+    "title": "Boeing Factory Tour from Seattle",
+    "description": {
+      "text": "Take a half-day trip from Seattle to the Boeing Everett factory for a guided assembly-plant tour and Future of Flight exhibits. Hotel pickup across the greater Seattle area includes time at the aviation gallery and gift shop."
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "Washington"
+    },
+    "duration": "4 to 5 hours (approx.)",
+    "priceFrom": "From $119.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 780
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/f3/0f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Half-day Boeing factory tour from Seattle",
+      "Hotel pickup across greater Seattle area",
+      "Guided assembly-plant viewing tour",
+      "Future of Flight interpretive center visit",
+      "See wide-body aircraft in production"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup available across the greater Seattle area when confirmed after booking."
+      },
+      "end": {
+        "description": "Return to the original Seattle pickup location."
+      }
+    },
+    "itinerarySummary": "Take a half-day trip from Seattle to the Boeing Everett factory for a guided assembly-plant tour and Future of Flight exhibits.",
+    "itineraryItems": [
+      {
+        "title": "Seattle hotel pickup",
+        "description": "Board the tour vehicle for the drive north to the Boeing Everett campus.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Aviation Center Gallery",
+        "description": "Browse interactive aviation exhibits before the factory tour segment.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boeing assembly plant",
+        "description": "Tour the world's largest building by volume with views of aircraft assembly lines.",
+        "duration": "90 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Factory tour admission",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Boeing Factory Tour from Seattle?",
+        "answer": "The planned duration is 4 to 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Seattle?",
+        "answer": "Hotel pickup available across the greater Seattle area when confirmed after booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Factory Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 119
+      },
+      "currency": "USD"
+    }
+  }
+}

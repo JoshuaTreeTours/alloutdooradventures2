@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "40943P1",
+    "productUrl": "https://www.viator.com/tours/Seattle/Seattle-City-Tour/d704-40943P1",
+    "title": "Seattle City Tour with Space Needle Drop Offs",
+    "description": {
+      "text": "See Seattle highlights on a small-group bus tour with stops at Pike Place Market, Kerry Park, the Space Needle, and the Fremont Troll. A local guide covers Chinatown, Pioneer Square, and Lake Union viewpoints on a compact city route."
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "Washington"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $65.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 890
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/16/e9/13.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group Seattle bus tour with expert guide",
+      "Photo stop at the Space Needle",
+      "Visit the Fremont Troll sculpture",
+      "Drive through Pike Place Market and Kerry Park",
+      "Maximum 15 travelers per departure"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at a central downtown Seattle location or selected hotel pickup point."
+      },
+      "end": {
+        "description": "Drop-off available at the Space Needle or downtown Seattle."
+      }
+    },
+    "itinerarySummary": "See Seattle highlights on a small-group bus tour with stops at Pike Place Market, Kerry Park, the Space Needle, and the Fremont Troll.",
+    "itineraryItems": [
+      {
+        "title": "Pioneer Square",
+        "description": "Drive through Pioneer Square and the International District with historic commentary.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Pike Place Market",
+        "description": "Pass the historic public market and waterfront corridors near Elliott Bay.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Kerry Park",
+        "description": "Stop for classic Seattle skyline photos with Space Needle and mountain backdrops.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Space Needle",
+        "description": "Stop for photos at the Space Needle before optional drop-off at the landmark.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fremont Troll",
+        "description": "View the iconic under-bridge sculpture in the Fremont neighborhood up close.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Seattle City Tour with Space Needle Drop Offs?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Seattle?",
+        "answer": "Meet at a central downtown Seattle location or selected hotel pickup point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65
+      },
+      "currency": "USD"
+    }
+  }
+}

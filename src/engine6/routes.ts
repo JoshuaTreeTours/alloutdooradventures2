@@ -502,6 +502,58 @@ export const ENGINE6_PORTLAND_TOUR_PATH_PREFIX =
 export const isEngine6PortlandTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_PORTLAND_TOUR_PATH_PREFIX);
 
+export const ENGINE6_SEATTLE_CITY_PREMIER_PRODUCT_CODE = "5396P10";
+export const ENGINE6_SEATTLE_CITY_PREMIER_ROUTE =
+  "/destinations/washington/seattle/tours/seattle-city-highlights-tour-5396P10";
+export const ENGINE6_SEATTLE_BUS_CITY_TOUR_PRODUCT_CODE = "40943P1";
+export const ENGINE6_SEATTLE_BUS_CITY_TOUR_ROUTE =
+  "/destinations/washington/seattle/tours/seattle-bus-tour-space-needle-fremont-troll-40943P1";
+export const ENGINE6_SEATTLE_WALKING_MONORAIL_PRODUCT_CODE = "479383P1";
+export const ENGINE6_SEATTLE_WALKING_MONORAIL_ROUTE =
+  "/destinations/washington/seattle/tours/welcome-to-seattle-walking-tour-monorail-479383P1";
+export const ENGINE6_SEATTLE_UNDERGROUND_TOUR_PRODUCT_CODE = "36129P1";
+export const ENGINE6_SEATTLE_UNDERGROUND_TOUR_ROUTE =
+  "/destinations/washington/seattle/tours/beneath-the-streets-underground-tour-36129P1";
+export const ENGINE6_SEATTLE_PIKE_PLACE_TASTING_PRODUCT_CODE = "2956PIKEPL";
+export const ENGINE6_SEATTLE_PIKE_PLACE_TASTING_ROUTE =
+  "/destinations/washington/seattle/tours/pike-place-market-tasting-tour-2956PIKEPL";
+export const ENGINE6_SEATTLE_CHEF_FOOD_TOUR_PRODUCT_CODE = "23161P1";
+export const ENGINE6_SEATTLE_CHEF_FOOD_TOUR_ROUTE =
+  "/destinations/washington/seattle/tours/chef-guided-pike-place-market-food-tour-23161P1";
+export const ENGINE6_SEATTLE_EARLY_BIRD_PIKE_PLACE_PRODUCT_CODE = "2956EXCLUSIVE";
+export const ENGINE6_SEATTLE_EARLY_BIRD_PIKE_PLACE_ROUTE =
+  "/destinations/washington/seattle/tours/early-bird-pike-place-market-tasting-tour-2956EXCLUSIVE";
+export const ENGINE6_SEATTLE_SECRET_FOOD_TOUR_PRODUCT_CODE = "7812P115";
+export const ENGINE6_SEATTLE_SECRET_FOOD_TOUR_ROUTE =
+  "/destinations/washington/seattle/tours/seattle-pike-place-food-tour-7812P115";
+export const ENGINE6_SEATTLE_HARBOR_CRUISE_PRODUCT_CODE = "2960HARBOR";
+export const ENGINE6_SEATTLE_HARBOR_CRUISE_ROUTE =
+  "/destinations/washington/seattle/tours/seattle-harbor-cruise-2960HARBOR";
+export const ENGINE6_SEATTLE_MT_RAINIER_HIGHLIGHTS_PRODUCT_CODE = "3657RAINIER";
+export const ENGINE6_SEATTLE_MT_RAINIER_HIGHLIGHTS_ROUTE =
+  "/destinations/washington/seattle/tours/mt-rainier-highlights-tour-from-seattle-3657RAINIER";
+export const ENGINE6_SEATTLE_MT_RAINIER_DAY_TOUR_PRODUCT_CODE = "5396MTR";
+export const ENGINE6_SEATTLE_MT_RAINIER_DAY_TOUR_ROUTE =
+  "/destinations/washington/seattle/tours/mt-rainier-day-tour-from-seattle-5396MTR";
+export const ENGINE6_SEATTLE_MT_RAINIER_HIKE_PRODUCT_CODE = "351474P1";
+export const ENGINE6_SEATTLE_MT_RAINIER_HIKE_ROUTE =
+  "/destinations/washington/seattle/tours/guided-hike-mt-rainier-351474P1";
+export const ENGINE6_SEATTLE_BOEING_TRANSPORT_PRODUCT_CODE = "3132SMB";
+export const ENGINE6_SEATTLE_BOEING_TRANSPORT_ROUTE =
+  "/destinations/washington/seattle/tours/boeing-factory-tour-transport-from-seattle-3132SMB";
+export const ENGINE6_SEATTLE_BOEING_FACTORY_PRODUCT_CODE = "5396BOEING";
+export const ENGINE6_SEATTLE_BOEING_FACTORY_ROUTE =
+  "/destinations/washington/seattle/tours/boeing-factory-tour-from-seattle-5396BOEING";
+export const ENGINE6_SEATTLE_SNOQUALMIE_PRIVATE_PRODUCT_CODE = "8647P594";
+export const ENGINE6_SEATTLE_SNOQUALMIE_PRIVATE_ROUTE =
+  "/destinations/washington/seattle/tours/private-seattle-city-snoqualmie-falls-tour-8647P594";
+
+export const ENGINE6_SEATTLE_TOUR_PATH_PREFIX =
+  "/destinations/washington/seattle/tours/";
+
+export const isEngine6SeattleTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_SEATTLE_TOUR_PATH_PREFIX);
+
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
   canonicalPath: string;
@@ -1070,6 +1122,66 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_PORTLAND_FOOD_CARTS_TOUR_ROUTE,
     ENGINE6_PORTLAND_FOOD_CARTS_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_CITY_PREMIER_ROUTE,
+    ENGINE6_SEATTLE_CITY_PREMIER_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_BUS_CITY_TOUR_ROUTE,
+    ENGINE6_SEATTLE_BUS_CITY_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_WALKING_MONORAIL_ROUTE,
+    ENGINE6_SEATTLE_WALKING_MONORAIL_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_UNDERGROUND_TOUR_ROUTE,
+    ENGINE6_SEATTLE_UNDERGROUND_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_PIKE_PLACE_TASTING_ROUTE,
+    ENGINE6_SEATTLE_PIKE_PLACE_TASTING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_CHEF_FOOD_TOUR_ROUTE,
+    ENGINE6_SEATTLE_CHEF_FOOD_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_EARLY_BIRD_PIKE_PLACE_ROUTE,
+    ENGINE6_SEATTLE_EARLY_BIRD_PIKE_PLACE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_SECRET_FOOD_TOUR_ROUTE,
+    ENGINE6_SEATTLE_SECRET_FOOD_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_HARBOR_CRUISE_ROUTE,
+    ENGINE6_SEATTLE_HARBOR_CRUISE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_MT_RAINIER_HIGHLIGHTS_ROUTE,
+    ENGINE6_SEATTLE_MT_RAINIER_HIGHLIGHTS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_MT_RAINIER_DAY_TOUR_ROUTE,
+    ENGINE6_SEATTLE_MT_RAINIER_DAY_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_MT_RAINIER_HIKE_ROUTE,
+    ENGINE6_SEATTLE_MT_RAINIER_HIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_BOEING_TRANSPORT_ROUTE,
+    ENGINE6_SEATTLE_BOEING_TRANSPORT_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_BOEING_FACTORY_ROUTE,
+    ENGINE6_SEATTLE_BOEING_FACTORY_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SEATTLE_SNOQUALMIE_PRIVATE_ROUTE,
+    ENGINE6_SEATTLE_SNOQUALMIE_PRIVATE_PRODUCT_CODE,
   ],
 ] as const;
 

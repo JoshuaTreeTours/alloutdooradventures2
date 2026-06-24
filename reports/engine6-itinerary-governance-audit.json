@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-24T00:05:01.654Z",
+  "generatedAt": "2026-06-24T01:03:45.887Z",
   "totals": {
-    "engine6ToursAudited": 150,
-    "itineraryRowsAudited": 686,
+    "engine6ToursAudited": 165,
+    "itineraryRowsAudited": 741,
     "suspiciousRows": 25,
     "affectedTours": 20,
-    "criticalRows": 184,
+    "criticalRows": 197,
     "reviewRows": 4
   },
   "topFindings": [
     {
       "reason": "title-description-semantic-mismatch",
       "severity": "critical",
-      "count": 164
+      "count": 177
     },
     {
       "reason": "matches-description-first-sentence",
@@ -3651,6 +3651,240 @@
       "renderedDescription": "Continue to additional cart clusters and patio seating areas.",
       "titleSource": null,
       "duration": "45 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5396P10",
+      "route": "/destinations/washington/seattle/tours/seattle-city-highlights-tour-5396P10",
+      "tourTitle": "Seattle City Premier Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Ballard Locks",
+      "renderedDescription": "Stop to watch boats pass through the Hiram M.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5396P10",
+      "route": "/destinations/washington/seattle/tours/seattle-city-highlights-tour-5396P10",
+      "tourTitle": "Seattle City Premier Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "Kerry Park",
+      "renderedDescription": "Stop for panoramic views of the Seattle skyline, Space Needle, and Mount Rainier when weather allows.",
+      "titleSource": null,
+      "duration": "15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "40943P1",
+      "route": "/destinations/washington/seattle/tours/seattle-bus-tour-space-needle-fremont-troll-40943P1",
+      "tourTitle": "Seattle City Tour with Space Needle Drop Offs",
+      "itineraryIndex": 2,
+      "renderedTitle": "Kerry Park",
+      "renderedDescription": "Stop for classic Seattle skyline photos with Space Needle and mountain backdrops.",
+      "titleSource": null,
+      "duration": "15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "479383P1",
+      "route": "/destinations/washington/seattle/tours/welcome-to-seattle-walking-tour-monorail-479383P1",
+      "tourTitle": "Welcome to Seattle Walking Tour with Monorail Ride",
+      "itineraryIndex": 1,
+      "renderedTitle": "Downtown Seattle",
+      "renderedDescription": "Walk through central districts with commentary on neighborhoods and city landmarks.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "36129P1",
+      "route": "/destinations/washington/seattle/tours/beneath-the-streets-underground-tour-36129P1",
+      "tourTitle": "Beneath The Streets Underground History Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Underground passageways",
+      "renderedDescription": "Walk through restored subterranean walkways built beneath post-fire Seattle street levels.",
+      "titleSource": null,
+      "duration": "40 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "36129P1",
+      "route": "/destinations/washington/seattle/tours/beneath-the-streets-underground-tour-36129P1",
+      "tourTitle": "Beneath The Streets Underground History Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Historic storefronts",
+      "renderedDescription": "View remnants of nineteenth-century shopfronts and sidewalks preserved below modern Pioneer Square.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "23161P1",
+      "route": "/destinations/washington/seattle/tours/chef-guided-pike-place-market-food-tour-23161P1",
+      "tourTitle": "Chef Guided Food Tour of Pike Place Market",
+      "itineraryIndex": 1,
+      "renderedTitle": "Vendor tastings",
+      "renderedDescription": "Sample dishes and ingredients from select Pike Place vendors with chef commentary.",
+      "titleSource": null,
+      "duration": "90 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "2956EXCLUSIVE",
+      "route": "/destinations/washington/seattle/tours/early-bird-pike-place-market-tasting-tour-2956EXCLUSIVE",
+      "tourTitle": "Early-Bird Tasting Tour of Pike Place Market",
+      "itineraryIndex": 1,
+      "renderedTitle": "Vendor tastings",
+      "renderedDescription": "Sample smoked salmon, chocolate, and market specialties from opening vendors.",
+      "titleSource": null,
+      "duration": "75 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "7812P115",
+      "route": "/destinations/washington/seattle/tours/seattle-pike-place-food-tour-7812P115",
+      "tourTitle": "Seattle Pike Market Food Tour with 8 Authentic Local Tastings",
+      "itineraryIndex": 0,
+      "renderedTitle": "Sur La Table meeting point",
+      "renderedDescription": "Meet the guide at Pine Street before entering Pike Place Market for the tasting route.",
+      "titleSource": null,
+      "duration": "10 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "7812P115",
+      "route": "/destinations/washington/seattle/tours/seattle-pike-place-food-tour-7812P115",
+      "tourTitle": "Seattle Pike Market Food Tour with 8 Authentic Local Tastings",
+      "itineraryIndex": 1,
+      "renderedTitle": "Market food stops",
+      "renderedDescription": "Sample eight local favorites including chowder, piroshki, and a signature secret dish.",
+      "titleSource": null,
+      "duration": "2 hours",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5396MTR",
+      "route": "/destinations/washington/seattle/tours/mt-rainier-day-tour-from-seattle-5396MTR",
+      "tourTitle": "Mt. Rainier Day Tour from Seattle",
+      "itineraryIndex": 2,
+      "renderedTitle": "Waterfall viewpoints",
+      "renderedDescription": "Stop at cascading falls and scenic overlooks such as Narada Falls when accessible.",
+      "titleSource": null,
+      "duration": "30 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5396MTR",
+      "route": "/destinations/washington/seattle/tours/mt-rainier-day-tour-from-seattle-5396MTR",
+      "tourTitle": "Mt. Rainier Day Tour from Seattle",
+      "itineraryIndex": 3,
+      "renderedTitle": "Alpine viewpoints",
+      "renderedDescription": "Meadow or mountain overlooks for Mount Rainier panoramas when weather allows.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3132SMB",
+      "route": "/destinations/washington/seattle/tours/boeing-factory-tour-transport-from-seattle-3132SMB",
+      "tourTitle": "Boeing Factory Tour with Guided Transport from Seattle",
+      "itineraryIndex": 1,
+      "renderedTitle": "Future of Flight Center",
+      "renderedDescription": "Aviation exhibits and gallery displays before the factory tour begins.",
+      "titleSource": null,
+      "duration": "30 minutes",
       "admissionStatus": null,
       "suspiciousReasons": [],
       "findings": [

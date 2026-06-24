@@ -2,14 +2,14 @@
 
 Report-only audit aligned with `src/engine6/ITINERARY_GOVERNANCE_POLICY.md` v2.
 
-Generated: 2026-06-24T00:05:01.654Z
+Generated: 2026-06-24T01:03:45.887Z
 
 ## Totals
 
-- Total Engine6 tours audited: 150
-- Total itinerary rows audited: 686
-- Rows with findings: 188
-- Critical rows: 184
+- Total Engine6 tours audited: 165
+- Total itinerary rows audited: 741
+- Rows with findings: 201
+- Critical rows: 197
 - Review rows: 4
 - Affected tours: 20
 
@@ -17,7 +17,7 @@ Generated: 2026-06-24T00:05:01.654Z
 
 | Severity | Finding | Count |
 | --- | --- | ---: |
-| critical | title-description-semantic-mismatch | 164 |
+| critical | title-description-semantic-mismatch | 177 |
 | critical | matches-description-first-sentence | 20 |
 | critical | prose-title | 1 |
 | review | sentence-punctuation | 5 |

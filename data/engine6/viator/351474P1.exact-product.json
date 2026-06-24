@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "351474P1",
+    "productUrl": "https://www.viator.com/tours/Seattle/Touring-and-hiking-scenic-places-in-Mt-Rainier-National-Park/d704-351474P1",
+    "title": "Mt. Rainier Tour and Guided Hike",
+    "description": {
+      "text": "Combine a Mount Rainier National Park tour from Seattle with guided hiking on alpine trails. The outing includes old-growth forest walks, waterfall stops, and glacier viewpoints with trekking poles and seasonal snowshoes provided when needed."
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "Washington"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $179.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 380
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/eb/c4/82.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided hike in Mount Rainier National Park",
+      "Old-growth forest and waterfall trail segments",
+      "Trekking poles and snowshoes provided seasonally",
+      "Lunch and snacks included on the tour day",
+      "Small-group transport from Seattle"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from a central Seattle meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Return to the Seattle departure location."
+      }
+    },
+    "itinerarySummary": "Combine a Mount Rainier National Park tour from Seattle with guided hiking on alpine trails.",
+    "itineraryItems": [
+      {
+        "title": "Seattle departure",
+        "description": "Travel from Seattle toward Mount Rainier National Park with guide orientation en route.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Guided trail hike",
+        "description": "Hike a guide-selected alpine trail with trekking poles provided for steady footing.",
+        "duration": "3 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Narada Falls",
+        "description": "Stop at Narada Falls for photos and short walks when trail conditions allow.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glacier viewpoints",
+        "description": "Reach scenic overlooks for Mount Rainier glacier and valley perspectives.",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Lunch",
+      "Trekking poles",
+      "Transport"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mt. Rainier Tour and Guided Hike?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Seattle?",
+        "answer": "Pickup from a central Seattle meeting point confirmed after booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 179
+      },
+      "currency": "USD"
+    }
+  }
+}

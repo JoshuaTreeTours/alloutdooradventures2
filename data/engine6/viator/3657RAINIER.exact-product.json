@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "3657RAINIER",
+    "productUrl": "https://www.viator.com/tours/Seattle/Mt-Rainier-Day-Trip-from-Seattle/d704-3657RAINIER",
+    "title": "Mt. Rainier National Park Day Tour from Seattle",
+    "description": {
+      "text": "Travel from Seattle to Mount Rainier National Park on a full-day guided tour with stops at Narada Falls, Paradise, and Longmire. A narrated drive crosses lakes and foothill scenery before exploring the park's waterfalls and mountain viewpoints."
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "Washington"
+    },
+    "duration": "10 to 12 hours (approx.)",
+    "priceFrom": "From $189.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1200
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/33/7e/f5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day Mount Rainier tour from Seattle",
+      "Stops at Narada Falls and Paradise area viewpoints",
+      "Visit Longmire visitor area in the national park",
+      "Hotel pickup from select Seattle locations",
+      "Narrated scenic drive through Cascade foothills"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup available from select downtown Seattle and airport-area hotels."
+      },
+      "end": {
+        "description": "Return to the original Seattle pickup location."
+      }
+    },
+    "itinerarySummary": "Travel from Seattle to Mount Rainier National Park on a full-day guided tour with stops at Narada Falls, Paradise, and Longmire.",
+    "itineraryItems": [
+      {
+        "title": "Seattle departure",
+        "description": "Depart Seattle by coach for the drive south toward Mount Rainier National Park.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Longmire",
+        "description": "Stop at the Longmire area for park orientation and visitor center perspectives.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Narada Falls",
+        "description": "Visit Narada Falls, one of the most photographed waterfalls in the national park.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Paradise",
+        "description": "Explore the Paradise area for alpine meadows and Mount Rainier viewpoints when conditions allow.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned vehicle",
+      "National park entry"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mt. Rainier National Park Day Tour from Seattle?",
+        "answer": "The planned duration is 10 to 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Seattle?",
+        "answer": "Pickup available from select downtown Seattle and airport-area hotels."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Nature Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 189
+      },
+      "currency": "USD"
+    }
+  }
+}
