@@ -1,17 +1,14 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
+import { validateMerchantFeedRows } from "../../scripts/generate-merchant-feed";
 import {
-  buildMerchantRow,
-  mergeFeedHydration,
-  resolveCanonicalFeedHydration,
-  resolveCanonicalFeedHydrationFromTour,
-  validateMerchantFeedRows,
-} from "../../scripts/generate-merchant-feed";
+  buildMerchantFeedRowFromProductSchema,
+  resolveMerchantFeedProductSchemaSnapshot,
+} from "./merchantFeedFromProductSchema";
 import {
-  auditEngine6MerchantFeedParity,
-  buildMerchantFeedCanonicalCommercialExpectation,
-  compareMerchantFeedRowToCanonical,
+  auditEngine6MerchantFeedSchemaParity,
+  compareMerchantFeedRowToProductSchema,
 } from "./merchantFeedParity";
 import { engine6ResolvedTours } from "./registry";
 import {
@@ -23,15 +20,6 @@ import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 const ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODE = "63657P1";
 const EXISTING_ENGINE6_PRODUCT_CODE = "411138P3";
 const NEW_SEATTLE_ENGINE6_PRODUCT_CODE = "5396P10";
-
-const KNOWN_VERIFICATION_PRODUCT_CODES = [
-  "7081NYCDAY",
-  "5396MTR",
-  "2956PIKEPL",
-  "411138P3",
-  "5396P10",
-  "2960HARBOR",
-] as const;
 
 const REQUIRED_MERCHANT_FIELDS = [
   "id",
@@ -105,11 +93,6 @@ const merchantRowsById = new Map(
   ])
 );
 
-const formatMerchantPrice = (amount: number) =>
-  `${Number.isInteger(amount) ? amount.toFixed(0) : String(amount)} USD`;
-
-const formatMerchantRating = (rating: number) => rating.toFixed(1);
-
 const getTourByProductCode = (productCode: string) => {
   const tour = engine6ResolvedTours.find(
     candidate => candidate.productCode === productCode
@@ -118,60 +101,37 @@ const getTourByProductCode = (productCode: string) => {
   return tour!;
 };
 
-describe("Engine6 merchant feed governance", () => {
-  it("builds compliant rows from canonical Engine6 fixture/product data", () => {
-    const cohort = [
-      {
-        productCode: ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODE,
-        label: "original merchant-approved cohort",
-      },
-      {
-        productCode: EXISTING_ENGINE6_PRODUCT_CODE,
-        label: "existing Engine6 product",
-      },
-      {
-        productCode: NEW_SEATTLE_ENGINE6_PRODUCT_CODE,
-        label: "newly added Seattle Engine6 product",
-      },
-    ];
+const getProductSchemaNodes = (productCode: string) => {
+  const tour = getTourByProductCode(productCode);
+  const graph = buildEngine6SchemaGraph(tour)["@graph"] as Array<
+    Record<string, unknown>
+  >;
 
-    for (const { productCode } of cohort) {
+  return {
+    tour,
+    product: graph.find(node => node["@type"] === "Product"),
+    offer: graph.find(node => node["@type"] === "Offer"),
+    aggregateRating: graph.find(node => node["@type"] === "AggregateRating"),
+  };
+};
+
+describe("Engine6 merchant feed Product JSON-LD governance", () => {
+  it("builds merchant rows directly from the resolved Product JSON-LD graph", () => {
+    for (const productCode of [
+      ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODE,
+      EXISTING_ENGINE6_PRODUCT_CODE,
+      NEW_SEATTLE_ENGINE6_PRODUCT_CODE,
+    ]) {
       const tour = getTourByProductCode(productCode);
-      const row = buildMerchantRow(
-        tour,
-        resolveCanonicalFeedHydrationFromTour(tour)
-      );
+      const row = buildMerchantFeedRowFromProductSchema(tour);
+      const parity = compareMerchantFeedRowToProductSchema(tour, row);
 
       for (const field of REQUIRED_MERCHANT_FIELDS) {
         expect(row[field], `${productCode}.${field}`).toBeTruthy();
       }
 
-      const parity = compareMerchantFeedRowToCanonical(tour, row);
       expect(parity.pass, parity.mismatches.join("; ")).toBe(true);
     }
-  });
-
-  it("preserves canonical commercial values when live Viator data differs", () => {
-    const tour = getTourByProductCode("7081NYCDAY");
-    const canonical = resolveCanonicalFeedHydrationFromTour(tour);
-    const merged = mergeFeedHydration(canonical, {
-      priceAmount: 101,
-      currency: "USD",
-      averageRating: 4.9,
-      ratingCount: 14000,
-      reviewCount: 14000,
-      viatorApiDescription: "Live overview",
-    });
-
-    expect(merged.priceAmount).toBe(canonical.priceAmount);
-    expect(merged.averageRating).toBe(canonical.averageRating);
-    expect(merged.reviewCount).toBe(canonical.reviewCount);
-    expect(
-      buildMerchantRow(tour, merged).price
-    ).toBe(formatMerchantPrice(tour.priceAmount!));
-    expect(buildMerchantRow(tour, merged).review_count).toBe(
-      String(tour.reviewCount)
-    );
   });
 
   it("validates the generated merchantFeed.csv has no blank required fields or prices", () => {
@@ -196,66 +156,46 @@ describe("Engine6 merchant feed governance", () => {
     expect(validation.report.blankRequiredFieldRows).toBe(0);
   });
 
-  it("audits every Engine6 merchant feed row against canonical tour commercial data", async () => {
-    const resolvedPriceByProductCode = new Map(
-      await Promise.all(
-        engine6ResolvedTours.map(async tour => [
-          tour.productCode,
-          (await resolveCanonicalFeedHydration(tour)).priceAmount,
-        ] as const)
-      )
-    );
-    const audit = auditEngine6MerchantFeedParity(
+  it("audits every Engine6 merchant feed row against Product JSON-LD", () => {
+    const audit = auditEngine6MerchantFeedSchemaParity(
       engine6ResolvedTours,
-      merchantRowsById,
-      tour => resolvedPriceByProductCode.get(tour.productCode) ?? tour.priceAmount
+      merchantRowsById
     );
 
     expect(audit.pass, audit.failures.slice(0, 5).join("; ")).toBe(true);
     expect(merchantRowsById.size).toBe(engine6ResolvedTours.length);
   });
 
-  it("keeps the NY one-day sightseeing tour aligned with canonical route, schema, and commercial fields", () => {
-    const tour = getTourByProductCode(ENGINE6_NYC_ONE_DAY_SIGHTSEEING_PRODUCT_CODE);
+  it("keeps 7081NYCDAY aligned with live page Product JSON-LD commercial fields", () => {
+    const { tour, product, offer, aggregateRating } = getProductSchemaNodes(
+      ENGINE6_NYC_ONE_DAY_SIGHTSEEING_PRODUCT_CODE
+    );
     const merchantRow = merchantRowsById.get(
       ENGINE6_NYC_ONE_DAY_SIGHTSEEING_PRODUCT_CODE
     );
-    expect(merchantRow).toBeDefined();
+    const snapshot = resolveMerchantFeedProductSchemaSnapshot(tour);
+    const parity = compareMerchantFeedRowToProductSchema(tour, merchantRow!);
 
-    const expected = buildMerchantFeedCanonicalCommercialExpectation(tour);
-    const parity = compareMerchantFeedRowToCanonical(tour, merchantRow!);
-
+    expect(product).toBeDefined();
+    expect(offer).toBeDefined();
+    expect(aggregateRating).toBeDefined();
     expect(parity.pass, parity.mismatches.join("; ")).toBe(true);
-    expect(expected.link).toBe(
+
+    expect(merchantRow?.title).toBe(product?.name);
+    expect(merchantRow?.description).toBe(product?.description);
+    expect(merchantRow?.link).toBe(product?.url);
+    expect(merchantRow?.link).toBe(
       `https://www.alloutdooradventures.com${ENGINE6_NYC_ONE_DAY_SIGHTSEEING_ROUTE}`
     );
-    expect(expected.bookingUrl).toContain("/d687-7081NYCDAY");
-    expect(expected.price).toBe(formatMerchantPrice(99));
-    expect(expected.average_rating).toBe(formatMerchantRating(4.8));
-    expect(expected.rating_count).toBe("13313");
-    expect(expected.review_count).toBe("13313");
-    expect(expected.schemaOfferPrice).toBe(99);
-    expect(expected.schemaRatingValue).toBe(4.8);
-    expect(expected.schemaReviewCount).toBe(13313);
-
-    const aggregateRating = (
-      buildEngine6SchemaGraph(tour)["@graph"] as Array<Record<string, unknown>>
-    ).find(node => node["@type"] === "AggregateRating");
-    expect(merchantRow?.average_rating).toBe(
-      formatMerchantRating(Number(aggregateRating?.ratingValue))
-    );
-    expect(merchantRow?.rating_count).toBe(String(aggregateRating?.reviewCount));
-    expect(merchantRow?.review_count).toBe(String(aggregateRating?.reviewCount));
-  });
-
-  it("keeps known verification products aligned with canonical Engine6 product data", () => {
-    for (const productCode of KNOWN_VERIFICATION_PRODUCT_CODES) {
-      const tour = getTourByProductCode(productCode);
-      const merchantRow = merchantRowsById.get(productCode);
-      expect(merchantRow, productCode).toBeDefined();
-
-      const parity = compareMerchantFeedRowToCanonical(tour, merchantRow!);
-      expect(parity.pass, parity.mismatches.join("; ")).toBe(true);
-    }
+    expect(merchantRow?.price).toBe("99 USD");
+    expect(merchantRow?.average_rating).toBe("4.8");
+    expect(merchantRow?.rating_count).toBe("13313");
+    expect(merchantRow?.review_count).toBe("13313");
+    expect(merchantRow?.image_link).toBe(product?.image);
+    expect(merchantRow?.availability).toBe("in stock");
+    expect(snapshot.bookingUrl).toBe(offer?.url);
+    expect(snapshot.offerPrice).toBe(offer?.price);
+    expect(snapshot.aggregateRatingValue).toBe(aggregateRating?.ratingValue);
+    expect(snapshot.aggregateReviewCount).toBe(aggregateRating?.reviewCount);
   });
 });

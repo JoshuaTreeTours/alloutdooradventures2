@@ -15,6 +15,12 @@
       "combinedAverageRating": 3.7383177,
       "totalReviews": 107
     },
+    "pricing": {
+      "summary": {
+        "fromPrice": 30,
+        "fromPriceFormatted": "$30.00"
+      }
+    },
     "media": {
       "images": [
         {

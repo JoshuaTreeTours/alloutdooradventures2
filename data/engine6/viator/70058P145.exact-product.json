@@ -26,6 +26,12 @@
         }
       ]
     },
+    "pricing": {
+      "summary": {
+        "fromPrice": 273,
+        "fromPriceFormatted": "$273.00"
+      }
+    },
     "images": [
       {
         "imageSource": "SUPPLIER_PROVIDED",
