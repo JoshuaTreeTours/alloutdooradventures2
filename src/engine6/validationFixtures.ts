@@ -173,6 +173,7 @@ import {
   assertEngine6FixtureSourceOfTruth,
   type Engine6SourceOfTruthMode,
 } from "./sourceOfTruthPolicy";
+import { ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES } from "./routes";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -188,6 +189,23 @@ export type Engine6ValidationFixture = {
   };
   validationRules?: {
     itineraryOriginalityForNewBuilds?: boolean;
+  };
+};
+
+const withNewBuildValidationRules = (
+  fixture: Omit<Engine6ValidationFixture, "sourceOfTruth">
+): Omit<Engine6ValidationFixture, "sourceOfTruth"> => {
+  const normalizedProductCode = fixture.productCode.trim().toUpperCase();
+  if (ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES.has(normalizedProductCode)) {
+    return fixture;
+  }
+
+  return {
+    ...fixture,
+    validationRules: {
+      ...fixture.validationRules,
+      itineraryOriginalityForNewBuilds: true,
+    },
   };
 };
 
@@ -1378,16 +1396,18 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
 ];
 
 export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] =
-  RAW_ENGINE6_VALIDATION_FIXTURES.map(fixture => ({
-    ...fixture,
-    sourceOfTruth: {
-      mode: ENGINE6_SOURCE_OF_TRUTH_API_DRIVEN,
-      deterministicHeroReference: {
-        strategy: "viator-product-media-first",
-        fieldPathPrefix: "product.media.images",
+  RAW_ENGINE6_VALIDATION_FIXTURES.map(withNewBuildValidationRules).map(
+    fixture => ({
+      ...fixture,
+      sourceOfTruth: {
+        mode: ENGINE6_SOURCE_OF_TRUTH_API_DRIVEN,
+        deterministicHeroReference: {
+          strategy: "viator-product-media-first",
+          fieldPathPrefix: "product.media.images",
+        },
       },
-    },
-  }));
+    })
+  );
 
 for (const fixture of ENGINE6_VALIDATION_FIXTURES) {
   assertEngine6FixtureSourceOfTruth(fixture);
