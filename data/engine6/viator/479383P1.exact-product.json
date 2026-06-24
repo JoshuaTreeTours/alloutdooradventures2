@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "479383P1",
+    "productUrl": "https://www.viator.com/tours/Seattle/Introduction-to-Seattle-Walking-Tour/d704-479383P1",
+    "title": "Welcome to Seattle Walking Tour with Monorail Ride",
+    "description": {
+      "text": "Get oriented to Seattle on a guided walking tour through downtown and Pioneer Square, plus a scenic ride on the historic Seattle Monorail. A local guide introduces major neighborhoods, city history, and landmark viewpoints in a few hours."
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "Washington"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $45.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 420
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/dc/31/76.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided walking introduction to Seattle",
+      "Ride on the historic Seattle Monorail",
+      "Explore Pioneer Square and downtown corridors",
+      "Small-group format with local guide",
+      "Ideal for first-time Seattle visitors"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at 100 Yesler Way, Seattle, WA 98104 in Pioneer Square."
+      },
+      "end": {
+        "description": "Tour ends near Seattle Center at 472 1st Ave N."
+      }
+    },
+    "itinerarySummary": "Get oriented to Seattle on a guided walking tour through downtown and Pioneer Square, plus a scenic ride on the historic Seattle Monorail.",
+    "itineraryItems": [
+      {
+        "title": "Pioneer Square",
+        "description": "Begin in Pioneer Square with an overview of Seattle founding history and architecture.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Downtown Seattle",
+        "description": "Walk through central districts with commentary on neighborhoods and city landmarks.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Seattle Monorail",
+        "description": "Ride the historic monorail linking downtown to Seattle Center for skyline perspectives.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Seattle Center",
+        "description": "Arrive near the Space Needle and Seattle Center campus to finish the orientation route.",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Monorail ticket"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Welcome to Seattle Walking Tour with Monorail Ride?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Seattle?",
+        "answer": "Meet at 100 Yesler Way, Seattle, WA 98104 in Pioneer Square."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 45
+      },
+      "currency": "USD"
+    }
+  }
+}

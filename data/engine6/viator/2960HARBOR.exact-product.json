@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "2960HARBOR",
+    "productUrl": "https://www.viator.com/tours/Seattle/Seattle-Harbor-Cruise/d704-2960HARBOR",
+    "title": "Seattle's Original Guided Harbor Cruise",
+    "description": {
+      "text": "Cruise Elliott Bay and Seattle Harbor on a one-hour narrated boat tour departing from Pier 55. The route offers skyline views, shipping-terminal perspectives, and mountain backdrops including the Cascades, Olympics, and Mount Rainier when visible."
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "Washington"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $46.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 5800
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/20/06/fb.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "One-hour narrated Elliott Bay harbor cruise",
+      "Depart from Pier 55 on the Seattle waterfront",
+      "Views of the skyline, Great Wheel, and Space Needle",
+      "See one of the world's largest shipping terminals",
+      "Mountain panoramas when weather permits"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board at Pier 55, 1101 Alaskan Way, Seattle, WA 98101."
+      },
+      "end": {
+        "description": "Return to Pier 55 after the harbor loop."
+      }
+    },
+    "itinerarySummary": "Cruise Elliott Bay and Seattle Harbor on a one-hour narrated boat tour departing from Pier 55.",
+    "itineraryItems": [
+      {
+        "title": "Pier 55 departure",
+        "description": "Board the vessel at the Seattle waterfront before the narrated harbor loop begins.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Elliott Bay",
+        "description": "Cruise Elliott Bay with commentary on Seattle's waterfront history and harbor operations.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Seattle skyline",
+        "description": "View the city skyline, Great Wheel, and Space Needle from open-water perspectives.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Shipping terminal",
+        "description": "Pass one of the largest container shipping terminals on the West Coast.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Live narration"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Seattle's Original Guided Harbor Cruise?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Seattle?",
+        "answer": "Board at Pier 55, 1101 Alaskan Way, Seattle, WA 98101."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Sightseeing Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 46
+      },
+      "currency": "USD"
+    }
+  }
+}

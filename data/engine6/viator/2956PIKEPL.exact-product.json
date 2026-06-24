@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "2956PIKEPL",
+    "productUrl": "https://www.viator.com/tours/Seattle/Food-and-Cultural-Walking-Tour-of-Pike-Place-Market/d704-2956PIKEPL",
+    "title": "Pike Place Market Tasting Tour",
+    "description": {
+      "text": "Sample Pike Place Market on a guided food and culture walking tour with tastings from local vendors. The route covers market stalls, specialty foods, and the history of Seattle's most famous public market."
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "Washington"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $69.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 3200
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ee/f4/4d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided Pike Place Market tasting tour",
+      "Multiple food samples from market vendors",
+      "Behind-the-scenes market stories and history",
+      "Walking route through main market levels",
+      "Small-group experience with local guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at 1901 Western Ave Suite E on the covered ramp outside Honest Biscuits at the north end of Pike Place Market."
+      },
+      "end": {
+        "description": "Tour ends near Bottega Italiana Gelato at 1425 1st Avenue."
+      }
+    },
+    "itinerarySummary": "Sample Pike Place Market on a guided food and culture walking tour with tastings from local vendors.",
+    "itineraryItems": [
+      {
+        "title": "Pike Place Market",
+        "description": "Meet at the market edge before entering the main hall for the tasting route.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Market vendor tastings",
+        "description": "Sample produce, smoked salmon, pastries, and specialty items from curated market stalls.",
+        "duration": "90 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Market history",
+        "description": "Learn how Pike Place Market began more than a century ago while moving between food stops.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Food tastings"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Pike Place Market Tasting Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Seattle?",
+        "answer": "Meet at 1901 Western Ave Suite E on the covered ramp outside Honest Biscuits at the north end of Pike Place Market."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 69
+      },
+      "currency": "USD"
+    }
+  }
+}

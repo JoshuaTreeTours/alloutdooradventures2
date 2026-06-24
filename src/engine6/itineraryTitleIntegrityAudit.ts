@@ -5,7 +5,8 @@ export type Engine6ItineraryTitleSuspiciousReason =
   | "single-generic-word"
   | "generic-description-start"
   | "more-than-eight-words"
-  | "more-than-sixty-characters"
+  | "more-than-twelve-words"
+  | "more-than-eighty-characters"
   | "sentence-punctuation"
   | "matches-description-first-sentence"
   | "visit-prefix-matches-description"
@@ -140,7 +141,8 @@ export const auditEngine6ItineraryTitle = (args: {
   }
 
   if (getWordCount(title) > 8) reasons.push("more-than-eight-words");
-  if (title.length > 60) reasons.push("more-than-sixty-characters");
+  if (getWordCount(title) > 12) reasons.push("more-than-twelve-words");
+  if (title.length > 80) reasons.push("more-than-eighty-characters");
   const titleWithoutCommonAbbreviationPeriods = title.replace(
     /\b(?:St|Mt|Dr|Mr|Mrs|Ms)\./g,
     match => match.slice(0, -1)

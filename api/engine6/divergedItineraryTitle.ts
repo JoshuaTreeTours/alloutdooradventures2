@@ -48,7 +48,7 @@ export const isEngine6ProseItineraryTitle = (value: string | null | undefined): 
   if (!normalized) return true;
 
   const wordCount = getEngine6ItineraryTitleWordCount(normalized);
-  if (wordCount > 8 || normalized.length > 72) {
+  if (wordCount > 8 || normalized.length > 80) {
     return true;
   }
 
@@ -77,6 +77,7 @@ const normalizeCandidateTitle = (value: string): string =>
 const isUsableConciseItineraryTitle = (value: string | null | undefined): value is string => {
   const normalized = asNonEmptyString(value);
   if (!normalized) return false;
+  if (getEngine6ItineraryTitleWordCount(normalized) > 8) return false;
   if (isEngine6ProseItineraryTitle(normalized)) return false;
   return getEngine6ItineraryTitleWordCount(normalized) >= 1;
 };

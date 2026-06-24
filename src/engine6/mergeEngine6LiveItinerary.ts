@@ -212,6 +212,53 @@ const isHighConfidenceLiveItineraryTitleSource = (
   source: Engine6ItineraryTitleSource | undefined
 ): boolean => isAuthoritativeLiveItineraryTitleSource(source);
 
+const isReviewedItineraryTitleSource = (
+  source: Engine6ItineraryTitleSource | undefined
+): boolean =>
+  source === "product-override" ||
+  source === "public-json-ld" ||
+  source === "json-ld";
+
+/**
+ * Diverged merges must keep title and description from the same source row.
+ * See ITINERARY_GOVERNANCE_POLICY.md §5.
+ */
+export const pickEngine6DivergedItineraryContentSource = (args: {
+  resolvedTitle: string;
+  titleSource: Engine6ItineraryTitleSource;
+  nativeItem?: Engine6ItineraryItem;
+  liveItem: Pick<
+    Engine6LiveItineraryItem,
+    "title" | "description" | "stopType" | "duration" | "admissionNote"
+  >;
+}): "native" | "live" => {
+  const { resolvedTitle, titleSource, nativeItem, liveItem } = args;
+
+  if (
+    fuzzyMatchEngine6ItineraryStopTitles(nativeItem?.title, resolvedTitle) ||
+    fuzzyMatchEngine6ItineraryStopTitles(nativeItem?.description, resolvedTitle)
+  ) {
+    return "native";
+  }
+
+  if (
+    fuzzyMatchEngine6ItineraryStopTitles(liveItem.title, resolvedTitle) ||
+    fuzzyMatchEngine6ItineraryStopTitles(liveItem.description, resolvedTitle)
+  ) {
+    return "live";
+  }
+
+  if (titleSource === "description-inferred") {
+    return "live";
+  }
+
+  if (isReviewedItineraryTitleSource(titleSource)) {
+    return liveItem.description?.trim() ? "live" : "native";
+  }
+
+  return nativeItem?.description?.trim() ? "native" : "live";
+};
+
 export type Engine6DivergedMergedItineraryTitleContext = {
   productCode?: string | null;
   rawProduct?: Record<string, unknown> | null;
@@ -303,18 +350,33 @@ const mergeEngine6NativeItineraryWithLiveDiverged = (
 ): Engine6ItineraryItem[] =>
   liveItinerary.map((liveItem, index) => {
     const nativeItem = nativeItinerary[index];
+    const titleResolution = resolveEngine6DivergedItineraryTitle({
+      productCode: mergeContext?.productCode,
+      rawProduct: mergeContext?.rawProduct ?? null,
+      bundledRawProduct: mergeContext?.bundledRawProduct ?? null,
+      rowIndex: index,
+      rowCount: liveItinerary.length,
+      liveTitle: liveItem.title,
+      liveDescription: liveItem.description,
+      liveTitleSource: liveItem.titleSource,
+    });
+    const contentSource = pickEngine6DivergedItineraryContentSource({
+      resolvedTitle: titleResolution.title,
+      titleSource: titleResolution.titleSource,
+      nativeItem,
+      liveItem,
+    });
+    const sourceItem =
+      contentSource === "native" ? (nativeItem ?? liveItem) : liveItem;
     const { titleSource: _titleSource, ...liveFields } = liveItem;
 
     return {
-      ...(nativeItem ?? {}),
-      ...liveFields,
-      title: resolveEngine6DivergedMergedItineraryTitle(nativeItem, liveItem, {
-        productCode: mergeContext?.productCode,
-        rawProduct: mergeContext?.rawProduct,
-        bundledRawProduct: mergeContext?.bundledRawProduct,
-        rowIndex: index,
-        rowCount: liveItinerary.length,
-      }),
+      ...(contentSource === "native" ? (nativeItem ?? {}) : liveFields),
+      title: titleResolution.title,
+      description: sourceItem.description,
+      stopType: sourceItem.stopType ?? liveItem.stopType ?? "stop",
+      duration: sourceItem.duration ?? liveItem.duration,
+      admissionNote: sourceItem.admissionNote ?? liveItem.admissionNote,
     };
   });
 

@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "23161P1",
+    "productUrl": "https://www.viator.com/tours/Seattle/Chef-Guided-Food-Tour-of-Pike-Place-Market/d704-23161P1",
+    "title": "Chef Guided Food Tour of Pike Place Market",
+    "description": {
+      "text": "Tour Pike Place Market with a chef guide who introduces vendor relationships, seasonal ingredients, and behind-the-scenes market culture. Tastings highlight Pacific Northwest flavors across multiple stops in the historic market."
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "Washington"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $73.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 650
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/02/be/65.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Chef-led Pike Place Market food tour",
+      "Behind-the-scenes vendor introductions",
+      "Multiple curated tastings across the market",
+      "Learn Pacific Northwest ingredient traditions",
+      "Small-group walking format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Pike Place Market meeting point listed in your booking confirmation."
+      },
+      "end": {
+        "description": "Tour finishes within Pike Place Market."
+      }
+    },
+    "itinerarySummary": "Tour Pike Place Market with a chef guide who introduces vendor relationships, seasonal ingredients, and behind-the-scenes market culture.",
+    "itineraryItems": [
+      {
+        "title": "Market meeting point",
+        "description": "Join the chef guide at the market entrance before the curated tasting route begins.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vendor tastings",
+        "description": "Sample dishes and ingredients from select Pike Place vendors with chef commentary.",
+        "duration": "90 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Market corridors",
+        "description": "Walk market lanes while learning about vendor history and seasonal Pacific Northwest produce.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Chef guide",
+      "Food tastings"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chef Guided Food Tour of Pike Place Market?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Seattle?",
+        "answer": "Meet at the confirmed Pike Place Market meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 73
+      },
+      "currency": "USD"
+    }
+  }
+}

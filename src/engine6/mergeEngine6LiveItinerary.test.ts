@@ -12,6 +12,7 @@ import {
   fuzzyMatchEngine6ItineraryStopTitles,
   getEngine6ItineraryMergeMode,
   mergeEngine6NativeItineraryWithLive,
+  pickEngine6DivergedItineraryContentSource,
   resolveEngine6DivergedMergedItineraryTitle,
   resolveEngine6MergedItineraryTitle,
 } from "./mergeEngine6LiveItinerary";
@@ -294,6 +295,45 @@ describe("resolveEngine6DivergedMergedItineraryTitle", () => {
         }
       )
     ).toBe("Downtown Anchorage");
+  });
+});
+
+describe("pickEngine6DivergedItineraryContentSource", () => {
+  it("keeps native descriptions when the resolved title matches the native stop", () => {
+    expect(
+      pickEngine6DivergedItineraryContentSource({
+        resolvedTitle: "Old Town",
+        titleSource: "explicit",
+        nativeItem: {
+          title: "Old Town",
+          description:
+            "Pass through downtown Portland's historic district with commentary on the city's early settlement era.",
+        },
+        liveItem: {
+          title:
+            "Washington Park is home to several major Portland attractions including the zoo and museums.",
+          description:
+            "Walk among rose varieties in Washington Park when blooms are in season.",
+        },
+      })
+    ).toBe("native");
+  });
+
+  it("prefers native descriptions when the native row matches the resolved title", () => {
+    expect(
+      pickEngine6DivergedItineraryContentSource({
+        resolvedTitle: "Downtown Anchorage",
+        titleSource: "public-json-ld",
+        nativeItem: {
+          title: "Anchorage",
+          description: "Pickup in downtown Anchorage.",
+        },
+        liveItem: {
+          title: "Downtown Anchorage",
+          description: "Pickup in Anchorage.",
+        },
+      })
+    ).toBe("native");
   });
 });
 

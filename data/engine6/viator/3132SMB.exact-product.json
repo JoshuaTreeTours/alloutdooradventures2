@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "3132SMB",
+    "productUrl": "https://www.viator.com/tours/Seattle/Morning-Tour-of-Boeing-Factory-from-Seattle/d704-3132SMB",
+    "title": "Boeing Factory Tour with Guided Transport from Seattle",
+    "description": {
+      "text": "Travel from downtown Seattle to the Boeing Future of Flight facility for a guided factory tour of the world's largest building by volume. Explore assembly-line viewing areas and aviation exhibits with round-trip transport from the Hyatt Regency Seattle."
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "Washington"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $125.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 620
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f8/91/1b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Round-trip transport from downtown Seattle",
+      "Guided Boeing factory assembly tour",
+      "Visit Future of Flight Aviation Center exhibits",
+      "Small-group morning departure format",
+      "See 777 and 787 production lines from viewing balconies"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup at Hyatt Regency Seattle, 808 Howell Street, Seattle, WA 98101."
+      },
+      "end": {
+        "description": "Return to the Hyatt Regency Seattle pickup location."
+      }
+    },
+    "itinerarySummary": "Travel from downtown Seattle to the Boeing Future of Flight facility for a guided factory tour of the world's largest building by volume.",
+    "itineraryItems": [
+      {
+        "title": "Hyatt Regency pickup",
+        "description": "Meet at the downtown Seattle hotel before the drive north to Everett.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Future of Flight Center",
+        "description": "Explore aviation exhibits and gallery displays before the factory tour begins.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boeing factory tour",
+        "description": "Tour the assembly plant viewing areas to see commercial aircraft production lines.",
+        "duration": "90 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Return to Seattle",
+        "description": "Drive back to downtown Seattle after the factory and gallery visit.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local driver/guide",
+      "Factory tour admission",
+      "Round-trip transport"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Boeing Factory Tour with Guided Transport from Seattle?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Seattle?",
+        "answer": "Pickup at Hyatt Regency Seattle, 808 Howell Street, Seattle, WA 98101."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Factory Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 125
+      },
+      "currency": "USD"
+    }
+  }
+}

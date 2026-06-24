@@ -1,0 +1,3898 @@
+{
+  "generatedAt": "2026-06-24T01:03:45.887Z",
+  "totals": {
+    "engine6ToursAudited": 165,
+    "itineraryRowsAudited": 741,
+    "suspiciousRows": 25,
+    "affectedTours": 20,
+    "criticalRows": 197,
+    "reviewRows": 4
+  },
+  "topFindings": [
+    {
+      "reason": "title-description-semantic-mismatch",
+      "severity": "critical",
+      "count": 177
+    },
+    {
+      "reason": "matches-description-first-sentence",
+      "severity": "critical",
+      "count": 20
+    },
+    {
+      "reason": "prose-title",
+      "severity": "critical",
+      "count": 1
+    },
+    {
+      "reason": "sentence-punctuation",
+      "severity": "review",
+      "count": 5
+    }
+  ],
+  "affectedProducts": [
+    {
+      "productId": "3454YE3D",
+      "route": "/destinations/california/san-francisco/tours/3-day-yosemite-camping-adventure-from-san-francisco",
+      "tourTitle": "Yosemite 3-Day Camping Adventure from San Francisco",
+      "suspiciousRowCount": 3,
+      "examples": [
+        "San Francisco departure",
+        "Yosemite Village free time",
+        "Valley activity time"
+      ]
+    },
+    {
+      "productId": "106439P1",
+      "route": "/destinations/california/los-angeles/tours/hollywood-and-beverly-hills-celebrity-homes-tour-106439P1",
+      "tourTitle": "2 Hour Private Tour - Hollywood and Beverly Hills Celebrity Homes",
+      "suspiciousRowCount": 2,
+      "examples": [
+        "Beverly Gardens Park",
+        "Beverly Canon Gardens"
+      ]
+    },
+    {
+      "productId": "3780P45",
+      "route": "/destinations/louisiana/new-orleans/tours/new-orleans-75-minute-riverboat-sightseeing-cruise",
+      "tourTitle": "New Orleans 75-Minute Riverboat Sightseeing Cruise",
+      "suspiciousRowCount": 2,
+      "examples": [
+        "French Quarter riverfront",
+        "Crescent City Connection"
+      ]
+    },
+    {
+      "productId": "5598628P3",
+      "route": "/destinations/california/san-diego/tours/san-diego-bay-sail-aboard-a-french-yacht-beer-and-wine-included",
+      "tourTitle": "San Diego Private Sailing Charter (3-Hour Classic Yacht Experience)",
+      "suspiciousRowCount": 2,
+      "examples": [
+        "Sunset Cliffs Natural Park",
+        "Waterfront Park Downtown San Diego"
+      ]
+    },
+    {
+      "productId": "15131P4",
+      "route": "/destinations/california/los-angeles/tours/hollywood-private-helicopter-tour-15131P4",
+      "tourTitle": "Downtown LA Lights: Your Private Sunset and Night Helicopter Tour",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Crypto.com Arena"
+      ]
+    },
+    {
+      "productId": "190492P3",
+      "route": "/destinations/nevada/las-vegas/tours/zion-and-bryce-canyon-small-group-tour-from-las-vegas",
+      "tourTitle": "Zion and Bryce Canyon Small Group Tour from Las Vegas",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Bryce Canyon National Park"
+      ]
+    },
+    {
+      "productId": "276551P2",
+      "route": "/destinations/louisiana/new-orleans/tours/new-orleans-city-bike-tour",
+      "tourTitle": "New Orleans City Bike Tour",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Lafayette Cemetery No. 1"
+      ]
+    },
+    {
+      "productId": "28758P1",
+      "route": "/destinations/california/san-diego/tours/tijuana-mexico-border-tour-from-san-diego-28758P1",
+      "tourTitle": "Crossing Borders: Tijuana Day Trip from San Diego",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Tijuana Walking Tour"
+      ]
+    },
+    {
+      "productId": "3097SDZSP_2VISIT",
+      "route": "/destinations/california/san-diego/tours/san-diego-zoo-and-safari-park-2-visit-pass-ticket",
+      "tourTitle": "San Diego Zoo and Safari Park 2-Visit Pass Ticket",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "San Diego Zoo Safari Park"
+      ]
+    },
+    {
+      "productId": "354611P1",
+      "route": "/destinations/nevada/las-vegas/tours/historical-railroad-trail-ebike-tour",
+      "tourTitle": "Historical Railroad Trail eBike Tour",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Historic Railroad Trail"
+      ]
+    },
+    {
+      "productId": "36001P14",
+      "route": "/destinations/california/san-francisco/tours/big-sur-monterey-and-carmel-tour-from-san-francisco",
+      "tourTitle": "Big Sur Monterey and Carmel Tour From San Francisco",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Pacific Coast Highway"
+      ]
+    },
+    {
+      "productId": "5144BRUNCH",
+      "route": "/destinations/california/san-diego/tours/san-diego-sunday-brunch-cruise",
+      "tourTitle": "Champagne Brunch Buffet",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Sunday Brunch Cruise"
+      ]
+    },
+    {
+      "productId": "5515296P1",
+      "route": "/destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus",
+      "tourTitle": "NYC Bustronome Gourmet Sightseeing Lunch Panoramic Bus",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Solomon R. Guggenheim Museum"
+      ]
+    },
+    {
+      "productId": "5569HIKE",
+      "route": "/destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles",
+      "tourTitle": "Griffith Observatory Hike: Guided Tour through Griffith Park",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Warner Bros. Studios"
+      ]
+    },
+    {
+      "productId": "5584233P1",
+      "route": "/destinations/california/san-diego/tours/spectacular-sunset-sail-on-san-diego-bay",
+      "tourTitle": "Spectacular Sunset Sail on San Diego Bay",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Cabrillo National Monument"
+      ]
+    },
+    {
+      "productId": "5602P25",
+      "route": "/destinations/nevada/las-vegas/tours/western-national-parks-7-day-explorer-camping",
+      "tourTitle": "Western National Parks 7-Day Explorer (Camping)",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Day 3: Monument Valley"
+      ]
+    },
+    {
+      "productId": "5614063P8",
+      "route": "/destinations/new-york/new-york/tours/washington-d-c-tour-from-new-york",
+      "tourTitle": "Washington D.C. Tour from New York",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Washington, D.C. Landmarks"
+      ]
+    },
+    {
+      "productId": "62527P11",
+      "route": "/destinations/new-york/new-york/tours/niagara-falls-in-one-day-from-new-york-city",
+      "tourTitle": "Niagara Falls in One Day from New York City",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Midtown Manhattan Departure"
+      ]
+    },
+    {
+      "productId": "6953SWAMPTRANS",
+      "route": "/destinations/louisiana/new-orleans/tours/honey-island-swamp-tour-with-transport",
+      "tourTitle": "New Orleans Swamp and Bayou Boat Tour with Transportation",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Downtown New Orleans pickup"
+      ]
+    },
+    {
+      "productId": "7081NYCDAY",
+      "route": "/destinations/new-york/new-york/tours/new-york-in-one-day-guided-sightseeing-tour",
+      "tourTitle": "New York in One Day Guided Sightseeing Tour",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Gansevoort Liberty Market"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "productId": "5119P13",
+      "route": "/destinations/nevada/las-vegas/tours/grand-canyon-west-6-in-1-tour-with-helicopter-and-landing",
+      "tourTitle": "Grand Canyon West 6-in-1 Tour with Helicopter and Landing",
+      "itineraryIndex": 0,
+      "renderedTitle": "Hoover Dam",
+      "renderedDescription": "Photo stop and guide commentary.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5119P13",
+      "route": "/destinations/nevada/las-vegas/tours/grand-canyon-west-6-in-1-tour-with-helicopter-and-landing",
+      "tourTitle": "Grand Canyon West 6-in-1 Tour with Helicopter and Landing",
+      "itineraryIndex": 1,
+      "renderedTitle": "Grand Canyon West",
+      "renderedDescription": "Admission included.",
+      "titleSource": null,
+      "duration": "4 hours",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5119P13",
+      "route": "/destinations/nevada/las-vegas/tours/grand-canyon-west-6-in-1-tour-with-helicopter-and-landing",
+      "tourTitle": "Grand Canyon West 6-in-1 Tour with Helicopter and Landing",
+      "itineraryIndex": 2,
+      "renderedTitle": "Eagle Point and Guano Point",
+      "renderedDescription": "Viewpoint exploration.",
+      "titleSource": null,
+      "duration": "1 hour",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5602P25",
+      "route": "/destinations/nevada/las-vegas/tours/western-national-parks-7-day-explorer-camping",
+      "tourTitle": "Western National Parks 7-Day Explorer (Camping)",
+      "itineraryIndex": 2,
+      "renderedTitle": "Day 3: Monument Valley",
+      "renderedDescription": "Day 3: Monument Valley remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": "1 day",
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "190492P3",
+      "route": "/destinations/nevada/las-vegas/tours/zion-and-bryce-canyon-small-group-tour-from-las-vegas",
+      "tourTitle": "Zion and Bryce Canyon Small Group Tour from Las Vegas",
+      "itineraryIndex": 1,
+      "renderedTitle": "Bryce Canyon National Park",
+      "renderedDescription": "Bryce Canyon National Park remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": "2 hours 30 minutes",
+      "admissionStatus": "Admission included",
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "190492P3",
+      "route": "/destinations/nevada/las-vegas/tours/zion-and-bryce-canyon-small-group-tour-from-las-vegas",
+      "tourTitle": "Zion and Bryce Canyon Small Group Tour from Las Vegas",
+      "itineraryIndex": 2,
+      "renderedTitle": "Zion Scenic Transfer",
+      "renderedDescription": "Continue through southern Utah scenery with narration and planned viewpoints en route.",
+      "titleSource": null,
+      "duration": "1 hour 30 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "13920P12",
+      "route": "/destinations/nevada/las-vegas/tours/off-road-las-vegas-tour",
+      "tourTitle": "Off Road Las Vegas Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "Rock garden and ledge section",
+      "renderedDescription": "Progress to technical rocky terrain with slow-speed guide support through uneven ledges.",
+      "titleSource": null,
+      "duration": "30 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "13920P12",
+      "route": "/destinations/nevada/las-vegas/tours/off-road-las-vegas-tour",
+      "tourTitle": "Off Road Las Vegas Tour",
+      "itineraryIndex": 4,
+      "renderedTitle": "High-desert ridgeline overlook",
+      "renderedDescription": "Pause at elevated viewpoints for photos and terrain interpretation before descending.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "398496P5",
+      "route": "/destinations/nevada/las-vegas/tours/mgm-sphere-guided-driving-tour",
+      "tourTitle": "MGM Sphere Guided Driving Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Resort Corridor Highlights",
+      "renderedDescription": "Continue through key Strip stretches including major casino and entertainment landmarks.",
+      "titleSource": null,
+      "duration": "40 minutes",
+      "admissionStatus": "Free admission",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "7079RREBIKE",
+      "route": "/destinations/nevada/las-vegas/tours/red-rock-canyon-electric-bike-tour",
+      "tourTitle": "Red Rock Canyon Electric Bike Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Overlook and geology stops",
+      "renderedDescription": "Pause at viewpoints to discuss sandstone formations, desert habitat, and conservation area highlights.",
+      "titleSource": null,
+      "duration": "60 minutes",
+      "admissionStatus": "Admission ticket included",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3533RRC",
+      "route": "/destinations/nevada/las-vegas/tours/red-rock-canyon-luxury-tour-trekker-experience",
+      "tourTitle": "Red Rock Canyon Luxury Tour Trekker Experience",
+      "itineraryIndex": 2,
+      "renderedTitle": "Calico Hills / Overlook Stop",
+      "renderedDescription": "Pause for panoramic views and short walks to appreciate layered red formations.",
+      "titleSource": null,
+      "duration": "40 minutes",
+      "admissionStatus": "Admission ticket included",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3533RRC",
+      "route": "/destinations/nevada/las-vegas/tours/red-rock-canyon-luxury-tour-trekker-experience",
+      "tourTitle": "Red Rock Canyon Luxury Tour Trekker Experience",
+      "itineraryIndex": 3,
+      "renderedTitle": "Red Rock Visitor Area",
+      "renderedDescription": "Complete the circuit with final photo opportunities before returning to Las Vegas.",
+      "titleSource": null,
+      "duration": "60 minutes",
+      "admissionStatus": "Admission ticket included",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "191767P5",
+      "route": "/destinations/nevada/las-vegas/tours/valley-of-fire-best-offroad-adventure",
+      "tourTitle": "Valley Of Fire Best Offroad Adventure",
+      "itineraryIndex": 1,
+      "renderedTitle": "Elephant Rock Stop",
+      "renderedDescription": "Walk short distances around the sandstone arch-like formation and learn about erosional shaping.",
+      "titleSource": null,
+      "duration": "30 minutes",
+      "admissionStatus": "Admission ticket included",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "191767P5",
+      "route": "/destinations/nevada/las-vegas/tours/valley-of-fire-best-offroad-adventure",
+      "tourTitle": "Valley Of Fire Best Offroad Adventure",
+      "itineraryIndex": 2,
+      "renderedTitle": "Rainbow Vista Overlook",
+      "renderedDescription": "Broad striped rock panoramas with guide explanation of color bands and mineral composition.",
+      "titleSource": null,
+      "duration": "35 minutes",
+      "admissionStatus": "Admission ticket included",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "191767P5",
+      "route": "/destinations/nevada/las-vegas/tours/valley-of-fire-best-offroad-adventure",
+      "tourTitle": "Valley Of Fire Best Offroad Adventure",
+      "itineraryIndex": 3,
+      "renderedTitle": "Petroglyph Viewing Area",
+      "renderedDescription": "Selected rock art panels when access conditions allow and discuss regional cultural history.",
+      "titleSource": null,
+      "duration": "30 minutes",
+      "admissionStatus": "Admission ticket included",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "191767P5",
+      "route": "/destinations/nevada/las-vegas/tours/valley-of-fire-best-offroad-adventure",
+      "tourTitle": "Valley Of Fire Best Offroad Adventure",
+      "itineraryIndex": 4,
+      "renderedTitle": "Offroad Exploration Segment",
+      "renderedDescription": "Continue through rugged sections for remote perspectives before returning to Las Vegas.",
+      "titleSource": null,
+      "duration": "80 minutes",
+      "admissionStatus": "Admission ticket included",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3533P14",
+      "route": "/destinations/nevada/las-vegas/tours/red-rock-canyon-with-rocky-gap-4x4-adventure",
+      "tourTitle": "Red Rock Canyon with Rocky Gap 4x4 Adventure",
+      "itineraryIndex": 1,
+      "renderedTitle": "Scenic Loop Entry",
+      "renderedDescription": "Enter the conservation area and begin guided narration on Mojave Desert ecology and sandstone geology.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3533P14",
+      "route": "/destinations/nevada/las-vegas/tours/red-rock-canyon-with-rocky-gap-4x4-adventure",
+      "tourTitle": "Red Rock Canyon with Rocky Gap 4x4 Adventure",
+      "itineraryIndex": 2,
+      "renderedTitle": "Calico Hills overview",
+      "renderedDescription": "Stop for views of layered red and cream sandstone formations and fault-line tilting patterns.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3533P14",
+      "route": "/destinations/nevada/las-vegas/tours/red-rock-canyon-with-rocky-gap-4x4-adventure",
+      "tourTitle": "Red Rock Canyon with Rocky Gap 4x4 Adventure",
+      "itineraryIndex": 3,
+      "renderedTitle": "High Point Overlook",
+      "renderedDescription": "Pause at one of the scenic loop's broadest lookouts for photos over the Red Rock escarpment.",
+      "titleSource": null,
+      "duration": "15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3533P14",
+      "route": "/destinations/nevada/las-vegas/tours/red-rock-canyon-with-rocky-gap-4x4-adventure",
+      "tourTitle": "Red Rock Canyon with Rocky Gap 4x4 Adventure",
+      "itineraryIndex": 5,
+      "renderedTitle": "Rocky Gap trailhead",
+      "renderedDescription": "Transition from paved scenic roads to rougher 4x4 terrain with guide-led speed management.",
+      "titleSource": null,
+      "duration": "15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "32779P2",
+      "route": "/destinations/california/avalon/tours/yellow-semi-submarine-tour-of-catalina-island-from-avalon",
+      "tourTitle": "Yellow Semi-Submarine Tour of Catalina Island From Avalon",
+      "itineraryIndex": 0,
+      "renderedTitle": "Avalon Bay and Lovers' Cove",
+      "renderedDescription": "Semi-submersible sightseeing route.",
+      "titleSource": null,
+      "duration": "45 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "26719P8",
+      "route": "/destinations/nevada/las-vegas/tours/emerald-cave-kayaking-tour",
+      "tourTitle": "Emerald Cave Kayaking Tour",
+      "itineraryIndex": 0,
+      "renderedTitle": "Willow Beach Marina",
+      "renderedDescription": "Meet your guide, get fitted with gear, and review paddling and safety instructions before launching on the Colorado River.",
+      "titleSource": null,
+      "duration": "4 hours",
+      "admissionStatus": "Admission ticket included",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "354611P1",
+      "route": "/destinations/nevada/las-vegas/tours/historical-railroad-trail-ebike-tour",
+      "tourTitle": "Historical Railroad Trail eBike Tour",
+      "itineraryIndex": 0,
+      "renderedTitle": "Hemenway Park",
+      "renderedDescription": "Start with a brief stop and orientation near Boulder City.",
+      "titleSource": null,
+      "duration": "10 minutes",
+      "admissionStatus": "Admission Ticket Free",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "354611P1",
+      "route": "/destinations/nevada/las-vegas/tours/historical-railroad-trail-ebike-tour",
+      "tourTitle": "Historical Railroad Trail eBike Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Historic Railroad Trail",
+      "renderedDescription": "Historic Railroad Trail remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": "1 hour",
+      "admissionStatus": "Admission Ticket Free",
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5615689P4",
+      "route": "/destinations/nevada/las-vegas/tours/arts-district-e-bike-tour",
+      "tourTitle": "Arts District E Bike Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Las Vegas Arts District",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": "Pass By",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5615689P4",
+      "route": "/destinations/nevada/las-vegas/tours/arts-district-e-bike-tour",
+      "tourTitle": "Arts District E Bike Tour",
+      "itineraryIndex": 5,
+      "renderedTitle": "Chapel Of The Flowers",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": "Pass By",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "36001P14",
+      "route": "/destinations/california/san-francisco/tours/big-sur-monterey-and-carmel-tour-from-san-francisco",
+      "tourTitle": "Big Sur Monterey and Carmel Tour From San Francisco",
+      "itineraryIndex": 0,
+      "renderedTitle": "Pacific Coast Highway",
+      "renderedDescription": "Pacific Coast Highway remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "36001P14",
+      "route": "/destinations/california/san-francisco/tours/big-sur-monterey-and-carmel-tour-from-san-francisco",
+      "tourTitle": "Big Sur Monterey and Carmel Tour From San Francisco",
+      "itineraryIndex": 1,
+      "renderedTitle": "Monterey",
+      "renderedDescription": "Stop for waterfront orientation and free time in the historic bay district.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "36001P14",
+      "route": "/destinations/california/san-francisco/tours/big-sur-monterey-and-carmel-tour-from-san-francisco",
+      "tourTitle": "Big Sur Monterey and Carmel Tour From San Francisco",
+      "itineraryIndex": 5,
+      "renderedTitle": "Big Sur",
+      "renderedDescription": "Stop at selected coastal overlooks for photos and landscape viewing.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "152424P1",
+      "route": "/destinations/california/san-francisco/tours/muir-woods-and-sausalito-small-group-tour",
+      "tourTitle": "Muir Woods and Sausalito Small-Group Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Vista Point",
+      "renderedDescription": "Brief stop for photos of the Golden Gate Bridge, San Francisco skyline, and Alcatraz views.",
+      "titleSource": null,
+      "duration": "10 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "152424P1",
+      "route": "/destinations/california/san-francisco/tours/muir-woods-and-sausalito-small-group-tour",
+      "tourTitle": "Muir Woods and Sausalito Small-Group Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "Sausalito Boardwalk",
+      "renderedDescription": "Free time along Sausalito's waterfront district for shops, cafes, and marina scenery.",
+      "titleSource": null,
+      "duration": "1 hour",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "6007GGB",
+      "route": "/destinations/california/san-francisco/tours/bike-the-golden-gate-bridge-san-francisco-to-sausalito",
+      "tourTitle": "Golden Gate Bridge Guided Bicycle or E-Bike Tour from San Francisco to Sausalito",
+      "itineraryIndex": 2,
+      "renderedTitle": "Marina Green and Crissy Field",
+      "renderedDescription": "Follow flat bayfront paths with open views across the water toward Alcatraz, the bridge, and the Marin Headlands.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "6007GGB",
+      "route": "/destinations/california/san-francisco/tours/bike-the-golden-gate-bridge-san-francisco-to-sausalito",
+      "tourTitle": "Golden Gate Bridge Guided Bicycle or E-Bike Tour from San Francisco to Sausalito",
+      "itineraryIndex": 3,
+      "renderedTitle": "Palace of Fine Arts area",
+      "renderedDescription": "Pause or slow near the 1915 exposition landmark as the route turns from the marina toward the Presidio approach.",
+      "titleSource": null,
+      "duration": "10 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "23068P2",
+      "route": "/destinations/california/san-francisco/tours/san-francisco-love-tour",
+      "tourTitle": "San Francisco Love Tour",
+      "itineraryIndex": 0,
+      "renderedTitle": "Fisherman's Wharf",
+      "renderedDescription": "Through the waterfront district near historic piers.",
+      "titleSource": null,
+      "duration": "Pass by",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "23068P2",
+      "route": "/destinations/california/san-francisco/tours/san-francisco-love-tour",
+      "tourTitle": "San Francisco Love Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Palace of Fine Arts Theatre",
+      "renderedDescription": "Short photo stop at the lagoon and colonnade.",
+      "titleSource": null,
+      "duration": "10 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "23068P2",
+      "route": "/destinations/california/san-francisco/tours/san-francisco-love-tour",
+      "tourTitle": "San Francisco Love Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Crissy Field",
+      "renderedDescription": "Stop for Golden Gate Bridge and bay views.",
+      "titleSource": null,
+      "duration": "10 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "23068P2",
+      "route": "/destinations/california/san-francisco/tours/san-francisco-love-tour",
+      "tourTitle": "San Francisco Love Tour",
+      "itineraryIndex": 4,
+      "renderedTitle": "Painted Ladies",
+      "renderedDescription": "Photo stop with Alamo Square skyline views.",
+      "titleSource": null,
+      "duration": "10 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "72999P3",
+      "route": "/destinations/california/san-francisco/tours/skip-the-bus-san-francisco-by-luxury-van-tour",
+      "tourTitle": "Skip The Bus: San Francisco By Luxury Van Tour",
+      "itineraryIndex": 0,
+      "renderedTitle": "Fisherman's Wharf",
+      "renderedDescription": "Start near San Francisco's waterfront district.",
+      "titleSource": null,
+      "duration": "Pass by",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "72999P3",
+      "route": "/destinations/california/san-francisco/tours/skip-the-bus-san-francisco-by-luxury-van-tour",
+      "tourTitle": "Skip The Bus: San Francisco By Luxury Van Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Palace of Fine Arts",
+      "renderedDescription": "Brief stop for architecture and photo opportunities.",
+      "titleSource": null,
+      "duration": "10 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "72999P3",
+      "route": "/destinations/california/san-francisco/tours/skip-the-bus-san-francisco-by-luxury-van-tour",
+      "tourTitle": "Skip The Bus: San Francisco By Luxury Van Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "Twin Peaks",
+      "renderedDescription": "Panoramic city overlook depending on conditions.",
+      "titleSource": null,
+      "duration": "10 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "333016P3",
+      "route": "/destinations/california/san-francisco/tours/private-city-tour-of-san-francisco",
+      "tourTitle": "Private City Tour of San Francisco",
+      "itineraryIndex": 2,
+      "renderedTitle": "Coit Tower",
+      "renderedDescription": "The Telegraph Hill landmark and surrounding city viewpoints.",
+      "titleSource": null,
+      "duration": "15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "333016P3",
+      "route": "/destinations/california/san-francisco/tours/private-city-tour-of-san-francisco",
+      "tourTitle": "Private City Tour of San Francisco",
+      "itineraryIndex": 3,
+      "renderedTitle": "Fisherman's Wharf",
+      "renderedDescription": "Drive through the waterfront district with time near Pier 39 and nearby attractions.",
+      "titleSource": null,
+      "duration": "1 hour",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3454YE3D",
+      "route": "/destinations/california/san-francisco/tours/3-day-yosemite-camping-adventure-from-san-francisco",
+      "tourTitle": "Yosemite 3-Day Camping Adventure from San Francisco",
+      "itineraryIndex": 0,
+      "renderedTitle": "San Francisco departure",
+      "renderedDescription": "San Francisco departure remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3454YE3D",
+      "route": "/destinations/california/san-francisco/tours/3-day-yosemite-camping-adventure-from-san-francisco",
+      "tourTitle": "Yosemite 3-Day Camping Adventure from San Francisco",
+      "itineraryIndex": 5,
+      "renderedTitle": "Yosemite Village free time",
+      "renderedDescription": "Yosemite Village free time remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3454YE3D",
+      "route": "/destinations/california/san-francisco/tours/3-day-yosemite-camping-adventure-from-san-francisco",
+      "tourTitle": "Yosemite 3-Day Camping Adventure from San Francisco",
+      "itineraryIndex": 12,
+      "renderedTitle": "Valley activity time",
+      "renderedDescription": "Valley activity time remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "365892P1",
+      "route": "/destinations/california/los-angeles/tours/los-angeles-private-guided-full-day-sightseeing-tour-365892P1",
+      "tourTitle": "Los Angeles Private, Guided, Full-Day Sightseeing Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "West Hollywood",
+      "renderedDescription": "Drive through Sunset strip,the nightclubs the famous Instagram shops on Melrose Avenue and the big billboards.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "365892P1",
+      "route": "/destinations/california/los-angeles/tours/los-angeles-private-guided-full-day-sightseeing-tour-365892P1",
+      "tourTitle": "Los Angeles Private, Guided, Full-Day Sightseeing Tour",
+      "itineraryIndex": 6,
+      "renderedTitle": "Dolby Theatre",
+      "renderedDescription": "Oscar theater on its famous walk of fame with celebrity stars In the ground, Many souvenir shops and artist on the street.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "365892P1",
+      "route": "/destinations/california/los-angeles/tours/los-angeles-private-guided-full-day-sightseeing-tour-365892P1",
+      "tourTitle": "Los Angeles Private, Guided, Full-Day Sightseeing Tour",
+      "itineraryIndex": 7,
+      "renderedTitle": "TCL Chinese Theatres",
+      "renderedDescription": "The biggest iMac theater in the country where many movies are premiered with over 300 iconic hand and foot prints in front of famous movie stars.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "15131P4",
+      "route": "/destinations/california/los-angeles/tours/hollywood-private-helicopter-tour-15131P4",
+      "tourTitle": "Downtown LA Lights: Your Private Sunset and Night Helicopter Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Walt Disney Concert Hall",
+      "renderedDescription": "Lit up at night and at sunset this iconic building looks incredible.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "15131P4",
+      "route": "/destinations/california/los-angeles/tours/hollywood-private-helicopter-tour-15131P4",
+      "tourTitle": "Downtown LA Lights: Your Private Sunset and Night Helicopter Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "Crypto.com Arena",
+      "renderedDescription": "Home of the Lakers and Clippers, now called Crypto arena.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ],
+      "findings": [
+        {
+          "reason": "sentence-punctuation",
+          "severity": "review"
+        }
+      ]
+    },
+    {
+      "productId": "15131P4",
+      "route": "/destinations/california/los-angeles/tours/hollywood-private-helicopter-tour-15131P4",
+      "tourTitle": "Downtown LA Lights: Your Private Sunset and Night Helicopter Tour",
+      "itineraryIndex": 4,
+      "renderedTitle": "University of Southern California",
+      "renderedDescription": "One of the most famous private colleges in the United States from the air.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "106439P1",
+      "route": "/destinations/california/los-angeles/tours/hollywood-and-beverly-hills-celebrity-homes-tour-106439P1",
+      "tourTitle": "2 Hour Private Tour - Hollywood and Beverly Hills Celebrity Homes",
+      "itineraryIndex": 3,
+      "renderedTitle": "Beverly Gardens Park",
+      "renderedDescription": "Beverly Gardens Park remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "106439P1",
+      "route": "/destinations/california/los-angeles/tours/hollywood-and-beverly-hills-celebrity-homes-tour-106439P1",
+      "tourTitle": "2 Hour Private Tour - Hollywood and Beverly Hills Celebrity Homes",
+      "itineraryIndex": 5,
+      "renderedTitle": "Beverly Canon Gardens",
+      "renderedDescription": "Beverly Canon Gardens remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "67760P2",
+      "route": "/destinations/california/los-angeles/tours/tour-of-los-angeles-hollywood-beverly-hills-santa-monica-beach-grand-tour-la-67760P2",
+      "tourTitle": "Full-Day LA Tour: Santa Monica, Hollywood and Beverly Hills",
+      "itineraryIndex": 1,
+      "renderedTitle": "The Original Farmers Market",
+      "renderedDescription": "Sample Los Angeles food options with time to browse popular retail spots such as The Grove.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "67760P2",
+      "route": "/destinations/california/los-angeles/tours/tour-of-los-angeles-hollywood-beverly-hills-santa-monica-beach-grand-tour-la-67760P2",
+      "tourTitle": "Full-Day LA Tour: Santa Monica, Hollywood and Beverly Hills",
+      "itineraryIndex": 2,
+      "renderedTitle": "Griffith Observatory",
+      "renderedDescription": "Take in close-up Hollywood Sign views while exploring science-focused exhibits and hilltop city vistas.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5569HIKE",
+      "route": "/destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles",
+      "tourTitle": "Griffith Observatory Hike: Guided Tour through Griffith Park",
+      "itineraryIndex": 3,
+      "renderedTitle": "Griffith Observatory",
+      "renderedDescription": "Enter one of the most iconic landmarks in Los Angeles to experience an extensive array of space and science-related displays on this Hollywood Hills Hike tour.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": "Admission Included",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5569HIKE",
+      "route": "/destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles",
+      "tourTitle": "Griffith Observatory Hike: Guided Tour through Griffith Park",
+      "itineraryIndex": 13,
+      "renderedTitle": "Warner Bros. Studios",
+      "renderedDescription": "Warner Brothers, the most famous film studio in LA, in a bird's eye view on this Hollywood Hills Tour.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ],
+      "findings": [
+        {
+          "reason": "sentence-punctuation",
+          "severity": "review"
+        }
+      ]
+    },
+    {
+      "productId": "233384P2",
+      "route": "/destinations/new-york/new-york/tours/brooklyn-bridge-and-waterfront-bike-tour-264853",
+      "tourTitle": "Brooklyn Bridge Waterfront Guided Bike Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Brooklyn Heights Promenade",
+      "renderedDescription": "Pause for views across the harbor and discuss the history of Brooklyn's waterfront neighborhoods.",
+      "titleSource": null,
+      "duration": "15 minutes",
+      "admissionStatus": "Admission Ticket Free",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "233384P2",
+      "route": "/destinations/new-york/new-york/tours/brooklyn-bridge-and-waterfront-bike-tour-264853",
+      "tourTitle": "Brooklyn Bridge Waterfront Guided Bike Tour",
+      "itineraryIndex": 4,
+      "renderedTitle": "DUMBO",
+      "renderedDescription": "Cobblestone streets and converted warehouse blocks in one of Brooklyn's iconic districts.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": "Admission Ticket Free",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "414460P1",
+      "route": "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491",
+      "tourTitle": "VIP Central Park Pedicab Guided Tour",
+      "itineraryIndex": 0,
+      "renderedTitle": "Bethesda Fountain",
+      "renderedDescription": "Photo stop and historical narration.",
+      "titleSource": null,
+      "duration": "15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "414460P1",
+      "route": "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491",
+      "tourTitle": "VIP Central Park Pedicab Guided Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Bow Bridge",
+      "renderedDescription": "Scenic stop featured in many films.",
+      "titleSource": null,
+      "duration": "10 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "414460P1",
+      "route": "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491",
+      "tourTitle": "VIP Central Park Pedicab Guided Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Strawberry Fields",
+      "renderedDescription": "Hear stories about the memorial and nearby landmarks.",
+      "titleSource": null,
+      "duration": "10 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3156P13",
+      "route": "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168",
+      "tourTitle": "Classic Manhattan Electric Bike Tour",
+      "itineraryIndex": 0,
+      "renderedTitle": "City Hall & Civic Center",
+      "renderedDescription": "Begin in Lower Manhattan with a quick orientation and safety briefing before rolling north.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3156P13",
+      "route": "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168",
+      "tourTitle": "Classic Manhattan Electric Bike Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Hudson River Greenway",
+      "renderedDescription": "Use protected bike lanes for a steady riverfront segment with skyline photo opportunities.",
+      "titleSource": null,
+      "duration": "45 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3156P13",
+      "route": "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168",
+      "tourTitle": "Classic Manhattan Electric Bike Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Central Manhattan Highlights",
+      "renderedDescription": "Ride through key Midtown corridors while your guide shares local history and route context.",
+      "titleSource": null,
+      "duration": "80 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3156P13",
+      "route": "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168",
+      "tourTitle": "Classic Manhattan Electric Bike Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "Central Park South",
+      "renderedDescription": "End near 56 W 56th St with recommendations for nearby food and transit connections.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "7081NYCDAY",
+      "route": "/destinations/new-york/new-york/tours/new-york-in-one-day-guided-sightseeing-tour",
+      "tourTitle": "New York in One Day Guided Sightseeing Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "Gansevoort Liberty Market",
+      "renderedDescription": "Gansevoort Liberty Market remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": "45 minutes",
+      "admissionStatus": "Admission Ticket Free",
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "62527P11",
+      "route": "/destinations/new-york/new-york/tours/niagara-falls-in-one-day-from-new-york-city",
+      "tourTitle": "Niagara Falls in One Day from New York City",
+      "itineraryIndex": 0,
+      "renderedTitle": "Midtown Manhattan Departure",
+      "renderedDescription": "Midtown Manhattan Departure remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": "30 minutes",
+      "admissionStatus": "Admission Ticket Free",
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5614063P8",
+      "route": "/destinations/new-york/new-york/tours/washington-d-c-tour-from-new-york",
+      "tourTitle": "Washington D.C. Tour from New York",
+      "itineraryIndex": 1,
+      "renderedTitle": "Washington, D.C. Landmarks",
+      "renderedDescription": "Visit Washington, D.C. Landmarks during the 5 hours stop.",
+      "titleSource": null,
+      "duration": "5 hours",
+      "admissionStatus": "Admission Ticket Free",
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ],
+      "findings": [
+        {
+          "reason": "sentence-punctuation",
+          "severity": "review"
+        }
+      ]
+    },
+    {
+      "productId": "276551P2",
+      "route": "/destinations/louisiana/new-orleans/tours/new-orleans-city-bike-tour",
+      "tourTitle": "New Orleans City Bike Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "St. Louis Cathedral",
+      "renderedDescription": "Pause near St.",
+      "titleSource": null,
+      "duration": "5 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "276551P2",
+      "route": "/destinations/louisiana/new-orleans/tours/new-orleans-city-bike-tour",
+      "tourTitle": "New Orleans City Bike Tour",
+      "itineraryIndex": 11,
+      "renderedTitle": "Lafayette Cemetery No. 1",
+      "renderedDescription": "Make a short five-minute stop at Lafayette Cemetery No.",
+      "titleSource": null,
+      "duration": "5 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ],
+      "findings": [
+        {
+          "reason": "sentence-punctuation",
+          "severity": "review"
+        }
+      ]
+    },
+    {
+      "productId": "58347P1",
+      "route": "/destinations/louisiana/new-orleans/tours/new-orleans-heart-of-the-city-bicycle-tour",
+      "tourTitle": "New Orleans Heart of the City Bicycle Tour",
+      "itineraryIndex": 5,
+      "renderedTitle": "St. Roch Community Church",
+      "renderedDescription": "Stop near St.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3780P45",
+      "route": "/destinations/louisiana/new-orleans/tours/new-orleans-75-minute-riverboat-sightseeing-cruise",
+      "tourTitle": "New Orleans 75-Minute Riverboat Sightseeing Cruise",
+      "itineraryIndex": 1,
+      "renderedTitle": "French Quarter riverfront",
+      "renderedDescription": "French Quarter riverfront remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3780P45",
+      "route": "/destinations/louisiana/new-orleans/tours/new-orleans-75-minute-riverboat-sightseeing-cruise",
+      "tourTitle": "New Orleans 75-Minute Riverboat Sightseeing Cruise",
+      "itineraryIndex": 3,
+      "renderedTitle": "Crescent City Connection",
+      "renderedDescription": "Crescent City Connection remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "6953SWAMPTRANS",
+      "route": "/destinations/louisiana/new-orleans/tours/honey-island-swamp-tour-with-transport",
+      "tourTitle": "New Orleans Swamp and Bayou Boat Tour with Transportation",
+      "itineraryIndex": 0,
+      "renderedTitle": "Downtown New Orleans pickup",
+      "renderedDescription": "Downtown New Orleans pickup remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "6953SWAMPTRANS",
+      "route": "/destinations/louisiana/new-orleans/tours/honey-island-swamp-tour-with-transport",
+      "tourTitle": "New Orleans Swamp and Bayou Boat Tour with Transportation",
+      "itineraryIndex": 2,
+      "renderedTitle": "Honey Island Swamp",
+      "renderedDescription": "Board a quiet flat-bottom boat for a captain-led route through protected wetland passages and bayou scenery.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "103533P1",
+      "route": "/destinations/new-york/new-york/tours/manhattan-adventure-sightseeing-boat-tour-from-chelsea-piers-103533p1",
+      "tourTitle": "Manhattan Adventure Sightseeing Boat Tour - from Chelsea Piers",
+      "itineraryIndex": 5,
+      "renderedTitle": "Statue of Liberty",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "103533P1",
+      "route": "/destinations/new-york/new-york/tours/manhattan-adventure-sightseeing-boat-tour-from-chelsea-piers-103533p1",
+      "tourTitle": "Manhattan Adventure Sightseeing Boat Tour - from Chelsea Piers",
+      "itineraryIndex": 6,
+      "renderedTitle": "Ellis Island",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "6288P29",
+      "route": "/destinations/new-york/new-york/tours/new-york-city-sunset-or-daytime-sightseeing-cruise",
+      "tourTitle": "New York City Sunset or Daytime Sightseeing Cruise",
+      "itineraryIndex": 0,
+      "renderedTitle": "Hudson River",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "6288P29",
+      "route": "/destinations/new-york/new-york/tours/new-york-city-sunset-or-daytime-sightseeing-cruise",
+      "tourTitle": "New York City Sunset or Daytime Sightseeing Cruise",
+      "itineraryIndex": 1,
+      "renderedTitle": "One World Trade Center",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "6288P29",
+      "route": "/destinations/new-york/new-york/tours/new-york-city-sunset-or-daytime-sightseeing-cruise",
+      "tourTitle": "New York City Sunset or Daytime Sightseeing Cruise",
+      "itineraryIndex": 2,
+      "renderedTitle": "Governors Island National Monument",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "6288P29",
+      "route": "/destinations/new-york/new-york/tours/new-york-city-sunset-or-daytime-sightseeing-cruise",
+      "tourTitle": "New York City Sunset or Daytime Sightseeing Cruise",
+      "itineraryIndex": 4,
+      "renderedTitle": "Statue of Liberty",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 0,
+      "renderedTitle": "Midtown",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 1,
+      "renderedTitle": "Central Park",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 2,
+      "renderedTitle": "Lincoln Center Theater",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 3,
+      "renderedTitle": "The Dakota",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 4,
+      "renderedTitle": "Upper East Side",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 5,
+      "renderedTitle": "St. Patrick's Cathedral",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 8,
+      "renderedTitle": "Flatiron Building",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 9,
+      "renderedTitle": "Washington Square Arch",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 10,
+      "renderedTitle": "SoHo",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 11,
+      "renderedTitle": "Chinatown",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 12,
+      "renderedTitle": "Trinity Church NYC",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 13,
+      "renderedTitle": "Financial District",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 14,
+      "renderedTitle": "Charging Bull",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 16,
+      "renderedTitle": "Battery Park",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 19,
+      "renderedTitle": "Little Island",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 20,
+      "renderedTitle": "Chelsea Piers",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "122012P17",
+      "route": "/destinations/new-york/new-york/tours/half-day-bus-tour-of-nyc-top-highlights",
+      "tourTitle": "Half-Day Bus Tour of NYC Top Highlights",
+      "itineraryIndex": 21,
+      "renderedTitle": "Hudson Yards",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5515296P1",
+      "route": "/destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus",
+      "tourTitle": "NYC Bustronome Gourmet Sightseeing Lunch Panoramic Bus",
+      "itineraryIndex": 0,
+      "renderedTitle": "Times Square",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5515296P1",
+      "route": "/destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus",
+      "tourTitle": "NYC Bustronome Gourmet Sightseeing Lunch Panoramic Bus",
+      "itineraryIndex": 1,
+      "renderedTitle": "St. Patrick's Cathedral",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5515296P1",
+      "route": "/destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus",
+      "tourTitle": "NYC Bustronome Gourmet Sightseeing Lunch Panoramic Bus",
+      "itineraryIndex": 2,
+      "renderedTitle": "Madison Avenue",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5515296P1",
+      "route": "/destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus",
+      "tourTitle": "NYC Bustronome Gourmet Sightseeing Lunch Panoramic Bus",
+      "itineraryIndex": 3,
+      "renderedTitle": "United Nations Headquarters",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5515296P1",
+      "route": "/destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus",
+      "tourTitle": "NYC Bustronome Gourmet Sightseeing Lunch Panoramic Bus",
+      "itineraryIndex": 4,
+      "renderedTitle": "Columbus Circle",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5515296P1",
+      "route": "/destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus",
+      "tourTitle": "NYC Bustronome Gourmet Sightseeing Lunch Panoramic Bus",
+      "itineraryIndex": 5,
+      "renderedTitle": "Solomon R. Guggenheim Museum",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ],
+      "findings": [
+        {
+          "reason": "sentence-punctuation",
+          "severity": "review"
+        },
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5515296P1",
+      "route": "/destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus",
+      "tourTitle": "NYC Bustronome Gourmet Sightseeing Lunch Panoramic Bus",
+      "itineraryIndex": 6,
+      "renderedTitle": "Central Park",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5144BRUNCH",
+      "route": "/destinations/california/san-diego/tours/san-diego-sunday-brunch-cruise",
+      "tourTitle": "Champagne Brunch Buffet",
+      "itineraryIndex": 0,
+      "renderedTitle": "Sunday Brunch Cruise",
+      "renderedDescription": "Sunday Brunch Cruise remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5144BRUNCH",
+      "route": "/destinations/california/san-diego/tours/san-diego-sunday-brunch-cruise",
+      "tourTitle": "Champagne Brunch Buffet",
+      "itineraryIndex": 2,
+      "renderedTitle": "San Diego Waterfront",
+      "renderedDescription": "Watch downtown skyline views broaden from the dining deck as the yacht glides through central harbor waters.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3097SDZSP_2VISIT",
+      "route": "/destinations/california/san-diego/tours/san-diego-zoo-and-safari-park-2-visit-pass-ticket",
+      "tourTitle": "San Diego Zoo and Safari Park 2-Visit Pass Ticket",
+      "itineraryIndex": 1,
+      "renderedTitle": "San Diego Zoo Safari Park",
+      "renderedDescription": "San Diego Zoo Safari Park remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": "4 hours",
+      "admissionStatus": "Admission Ticket Included",
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5584233P1",
+      "route": "/destinations/california/san-diego/tours/spectacular-sunset-sail-on-san-diego-bay",
+      "tourTitle": "Spectacular Sunset Sail on San Diego Bay",
+      "itineraryIndex": 4,
+      "renderedTitle": "Cabrillo National Monument",
+      "renderedDescription": "Cabrillo National Monument remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "21165P1",
+      "route": "/destinations/california/san-diego/tours/la-jolla-sea-cave-kayak-adventure",
+      "tourTitle": "Original Sea Cave Kayak Tour",
+      "itineraryIndex": 0,
+      "renderedTitle": "La Jolla Ecological Reserve",
+      "renderedDescription": "Guided coastal paddling segment near sea caves and marine habitat.",
+      "titleSource": null,
+      "duration": "90 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "31015P9",
+      "route": "/destinations/california/san-diego/tours/private-sailing-charter-san-diego-bay",
+      "tourTitle": "Private Sailing Charter on San Diego Bay",
+      "itineraryIndex": 1,
+      "renderedTitle": "Harbor Highlights",
+      "renderedDescription": "Typical pass-by points can include USS Midway, Coronado Bridge, and Point Loma areas.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "173946P1",
+      "route": "/destinations/california/san-diego/tours/half-day-4x4-adventure",
+      "tourTitle": "San Diego Half-Day 4x4 Adventure Tour",
+      "itineraryIndex": 0,
+      "renderedTitle": "Otay Mountain Wilderness Area",
+      "renderedDescription": "Backcountry off-road segment with climbing and descending sections depending on route conditions.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "173946P1",
+      "route": "/destinations/california/san-diego/tours/half-day-4x4-adventure",
+      "tourTitle": "San Diego Half-Day 4x4 Adventure Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Guided Wilderness Route",
+      "renderedDescription": "Changing trail surfaces and scenic overlooks with a local guide.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5598628P3",
+      "route": "/destinations/california/san-diego/tours/san-diego-bay-sail-aboard-a-french-yacht-beer-and-wine-included",
+      "tourTitle": "San Diego Private Sailing Charter (3-Hour Classic Yacht Experience)",
+      "itineraryIndex": 4,
+      "renderedTitle": "Sunset Cliffs Natural Park",
+      "renderedDescription": "Sunset Cliffs Natural Park remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5598628P3",
+      "route": "/destinations/california/san-diego/tours/san-diego-bay-sail-aboard-a-french-yacht-beer-and-wine-included",
+      "tourTitle": "San Diego Private Sailing Charter (3-Hour Classic Yacht Experience)",
+      "itineraryIndex": 7,
+      "renderedTitle": "Waterfront Park Downtown San Diego",
+      "renderedDescription": "Waterfront Park Downtown San Diego remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "424070P1",
+      "route": "/destinations/california/san-diego/tours/san-diego-finest-city-tour-424070P1",
+      "tourTitle": "San Diego: The Most Extensive City & Beach Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Little Italy",
+      "renderedDescription": "Mama MIa.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "424070P1",
+      "route": "/destinations/california/san-diego/tours/san-diego-finest-city-tour-424070P1",
+      "tourTitle": "San Diego: The Most Extensive City & Beach Tour",
+      "itineraryIndex": 5,
+      "renderedTitle": "La Jolla Cove",
+      "renderedDescription": "One of the most popular attractions in San Diego.",
+      "titleSource": null,
+      "duration": "30 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "424070P1",
+      "route": "/destinations/california/san-diego/tours/san-diego-finest-city-tour-424070P1",
+      "tourTitle": "San Diego: The Most Extensive City & Beach Tour",
+      "itineraryIndex": 6,
+      "renderedTitle": "Mt. Soledad National Veterans Memorial",
+      "renderedDescription": "Honor our fallen soldiers and see spectacular views of San Diego.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "prose-title",
+          "severity": "critical"
+        },
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "28758P1",
+      "route": "/destinations/california/san-diego/tours/tijuana-mexico-border-tour-from-san-diego-28758P1",
+      "tourTitle": "Crossing Borders: Tijuana Day Trip from San Diego",
+      "itineraryIndex": 1,
+      "renderedTitle": "Tijuana Walking Tour",
+      "renderedDescription": "Tijuana Walking Tour remains the reviewed focus for this itinerary row, keeping the description aligned to the displayed stop.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "matches-description-first-sentence"
+      ],
+      "findings": [
+        {
+          "reason": "matches-description-first-sentence",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "327321P1",
+      "route": "/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs",
+      "tourTitle": "Mountain Sunrise Hike and Meditation in Palm Springs",
+      "itineraryIndex": 0,
+      "renderedTitle": "The Sukha Life (meeting point)",
+      "renderedDescription": "Meet your guide at the studio, complete check-in, and prepare for trail departure.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "327321P1",
+      "route": "/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs",
+      "tourTitle": "Mountain Sunrise Hike and Meditation in Palm Springs",
+      "itineraryIndex": 1,
+      "renderedTitle": "South Lykken Trail ascent",
+      "renderedDescription": "Begin the pre-dawn hike with regular water and pacing breaks as elevation increases.",
+      "titleSource": null,
+      "duration": "1 hour 15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "6740P7",
+      "route": "/destinations/california/joshua-tree/tours/joshua-tree-scenic-tour-6740p7",
+      "tourTitle": "Joshua Tree National Park Scenic Tour | Rated #1",
+      "itineraryIndex": 1,
+      "renderedTitle": "Keys View",
+      "renderedDescription": "Stop at one of the park’s most famous overlooks, where clear days can reveal views across the Coachella Valley, the Salton Sea, and toward Mexico.",
+      "titleSource": null,
+      "duration": "15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "6740P7",
+      "route": "/destinations/california/joshua-tree/tours/joshua-tree-scenic-tour-6740p7",
+      "tourTitle": "Joshua Tree National Park Scenic Tour | Rated #1",
+      "itineraryIndex": 2,
+      "renderedTitle": "Barker Dam Trail",
+      "renderedDescription": "An optional walk through a classic Joshua Tree landscape featuring monzogranite rock formations, desert plants, and historic desert scenery.",
+      "titleSource": null,
+      "duration": "45 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "445161P1",
+      "route": "/destinations/california/joshua-tree/tours/professional-stargazing-in-joshua-tree-445161p1",
+      "tourTitle": "Professional Stargazing in Joshua Tree",
+      "itineraryIndex": 2,
+      "renderedTitle": "Guided telescope session",
+      "renderedDescription": "Use professional telescopes to view planets, star clusters, nebulae, and other deep-sky features based on seasonal visibility.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "445161P1",
+      "route": "/destinations/california/joshua-tree/tours/professional-stargazing-in-joshua-tree-445161p1",
+      "tourTitle": "Professional Stargazing in Joshua Tree",
+      "itineraryIndex": 3,
+      "renderedTitle": "Constellation storytelling and Q&A",
+      "renderedDescription": "A relaxed discussion on astronomy, navigation, and sky interpretation while continuing naked-eye and telescope viewing.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3351P15",
+      "route": "/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15",
+      "tourTitle": "Palm Springs Indian Canyons Bike and Hike",
+      "itineraryIndex": 0,
+      "renderedTitle": "Indian Canyons",
+      "renderedDescription": "Ride and hike with your guide through canyon terrain and desert palm groves.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "383300P6",
+      "route": "/destinations/florida/fort-lauderdale/tours/guided-electric-bike-tours-of-greater-fort-lauderdale",
+      "tourTitle": "90 min Electric Bike Tour of Fort Lauderdale (min 2)",
+      "itineraryIndex": 0,
+      "renderedTitle": "Colee Hammock Park",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "383300P6",
+      "route": "/destinations/florida/fort-lauderdale/tours/guided-electric-bike-tours-of-greater-fort-lauderdale",
+      "tourTitle": "90 min Electric Bike Tour of Fort Lauderdale (min 2)",
+      "itineraryIndex": 1,
+      "renderedTitle": "Las Olas Boulevard",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "383300P6",
+      "route": "/destinations/florida/fort-lauderdale/tours/guided-electric-bike-tours-of-greater-fort-lauderdale",
+      "tourTitle": "90 min Electric Bike Tour of Fort Lauderdale (min 2)",
+      "itineraryIndex": 2,
+      "renderedTitle": "Riverwalk Fort Lauderdale",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "383300P6",
+      "route": "/destinations/florida/fort-lauderdale/tours/guided-electric-bike-tours-of-greater-fort-lauderdale",
+      "tourTitle": "90 min Electric Bike Tour of Fort Lauderdale (min 2)",
+      "itineraryIndex": 3,
+      "renderedTitle": "Fort Lauderdale Beach",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "89173P8",
+      "route": "/destinations/florida/fort-lauderdale/tours/reef-and-snorkel-paddle-tour-89173p8",
+      "tourTitle": "Reef Snorkel & Ocean Paddle Adventure in Fort Lauderdale Beach",
+      "itineraryIndex": 1,
+      "renderedTitle": "Lauderdale-By-The-Sea Visitor Center",
+      "renderedDescription": "Paddle along the shoreline while your guide shares local coastal context and reef conditions.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "76145P2",
+      "route": "/destinations/florida/fort-lauderdale/tours/authentic-private-everglades-airboat-tour-76145p2",
+      "tourTitle": "Authentic Private Everglades Airboat Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Dock Arrival",
+      "renderedDescription": "Head back to the launch area and wrap up your experience.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "118958P8",
+      "route": "/destinations/florida/fort-lauderdale/tours/4-hour-shared-big-game-fishing-118958p8",
+      "tourTitle": "4 Hour Shared Big Game Fishing",
+      "itineraryIndex": 1,
+      "renderedTitle": "Offshore Fishing Grounds",
+      "renderedDescription": "Fish likely hotspots with guidance from the onboard crew.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "118958P8",
+      "route": "/destinations/florida/fort-lauderdale/tours/4-hour-shared-big-game-fishing-118958p8",
+      "tourTitle": "4 Hour Shared Big Game Fishing",
+      "itineraryIndex": 2,
+      "renderedTitle": "Harbor Arrival",
+      "renderedDescription": "Cruise back to Fort Lauderdale marina after your fishing window.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "6331BAHA",
+      "route": "/destinations/florida/fort-lauderdale/tours/bahamas-day-escape-by-ferry-6331baha",
+      "tourTitle": "FROM FLORIDA: Bahamas Day Escape By Ferry",
+      "itineraryIndex": 1,
+      "renderedTitle": "Ferry crossing to the Bahamas",
+      "renderedDescription": "Cruise to Bimini Island or Grand Bahama with onboard seating and amenities.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "6331BAHA",
+      "route": "/destinations/florida/fort-lauderdale/tours/bahamas-day-escape-by-ferry-6331baha",
+      "tourTitle": "FROM FLORIDA: Bahamas Day Escape By Ferry",
+      "itineraryIndex": 2,
+      "renderedTitle": "Free time on the island",
+      "renderedDescription": "About 5 to 6 hours onshore for beaches, dining, and optional activities.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "57834P1",
+      "route": "/destinations/florida/fort-lauderdale/tours/venice-of-america-fort-lauderdale-cruise",
+      "tourTitle": "VENICE OF AMERICA TOUR!! Best of Fort Lauderdale over 30 years!!!",
+      "itineraryIndex": 1,
+      "renderedTitle": "Stranahan House",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "57834P1",
+      "route": "/destinations/florida/fort-lauderdale/tours/venice-of-america-fort-lauderdale-cruise",
+      "tourTitle": "VENICE OF AMERICA TOUR!! Best of Fort Lauderdale over 30 years!!!",
+      "itineraryIndex": 2,
+      "renderedTitle": "Riverside Hotel Fort Lauderdale",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "57834P1",
+      "route": "/destinations/florida/fort-lauderdale/tours/venice-of-america-fort-lauderdale-cruise",
+      "tourTitle": "VENICE OF AMERICA TOUR!! Best of Fort Lauderdale over 30 years!!!",
+      "itineraryIndex": 3,
+      "renderedTitle": "Colee Hammock Park",
+      "renderedDescription": "By.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "8836P2",
+      "route": "/destinations/florida/miami/tours/miami-pirate-boat-tour-skyline-and-celebrity-homes",
+      "tourTitle": "Miami Pirate Boat Tour: Skyline & Celebrity Homes",
+      "itineraryIndex": 1,
+      "renderedTitle": "Celebrity homes and skyline cruise",
+      "renderedDescription": "Star Island, Venetian Islands, and major waterfront viewpoints.",
+      "titleSource": null,
+      "duration": "50 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "10150P16",
+      "route": "/destinations/florida/miami/tours/miami-raccoon-island-adventure",
+      "tourTitle": "Miami Raccoon Island Adventure",
+      "itineraryIndex": 1,
+      "renderedTitle": "Raccoon Island stop",
+      "renderedDescription": "Step ashore for optional guided wildlife viewing and beach time.",
+      "titleSource": null,
+      "duration": "1 hour 15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "7943P1",
+      "route": "/destinations/florida/miami/tours/miami-biscayne-bay-jet-ski-tour",
+      "tourTitle": "Miami Biscayne Bay Jet Ski Tour",
+      "itineraryIndex": 0,
+      "renderedTitle": "Biscayne Bay Jet Ski route",
+      "renderedDescription": "Ride either toward Downtown Miami for skyline views or toward Miami Beach to see celebrity homes.",
+      "titleSource": null,
+      "duration": "1 hour",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "214880P12",
+      "route": "/destinations/florida/miami/tours/3-days-amazing-tour-in-miami",
+      "tourTitle": "3 Days Amazing Tour in Miami",
+      "itineraryIndex": 0,
+      "renderedTitle": "Day 1 - Miami introduction",
+      "renderedDescription": "Orientation and city exploration.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "214880P12",
+      "route": "/destinations/florida/miami/tours/3-days-amazing-tour-in-miami",
+      "tourTitle": "3 Days Amazing Tour in Miami",
+      "itineraryIndex": 1,
+      "renderedTitle": "Coastal Cultural Stops",
+      "renderedDescription": "Waterfront areas and major landmarks.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "214880P12",
+      "route": "/destinations/florida/miami/tours/3-days-amazing-tour-in-miami",
+      "tourTitle": "3 Days Amazing Tour in Miami",
+      "itineraryIndex": 2,
+      "renderedTitle": "Day 3 - Final discoveries",
+      "renderedDescription": "Wrap up with free time and guided recommendations.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "44152P18",
+      "route": "/destinations/florida/miami/tours/everglades-to-keys-floridas-ultimate-national-parks-expedition",
+      "tourTitle": "Everglades to Keys: Florida's Ultimate National Parks Expedition",
+      "itineraryIndex": 0,
+      "renderedTitle": "Miami",
+      "renderedDescription": "Begin with a guided transfer toward South Florida parks.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "44152P18",
+      "route": "/destinations/florida/miami/tours/everglades-to-keys-floridas-ultimate-national-parks-expedition",
+      "tourTitle": "Everglades to Keys: Florida's Ultimate National Parks Expedition",
+      "itineraryIndex": 1,
+      "renderedTitle": "Everglades Region",
+      "renderedDescription": "Wetlands and wildlife viewing opportunities.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "44152P18",
+      "route": "/destinations/florida/miami/tours/everglades-to-keys-floridas-ultimate-national-parks-expedition",
+      "tourTitle": "Everglades to Keys: Florida's Ultimate National Parks Expedition",
+      "itineraryIndex": 2,
+      "renderedTitle": "Florida Keys",
+      "renderedDescription": "Continue south for coastal scenery and nature interpretation.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3885SW303BS",
+      "route": "/destinations/switzerland/zurich/tours/mount-titlis-and-lucerne-day-trip-from-zurich",
+      "tourTitle": "Mount Titlis and Lucerne Day Trip from Zurich",
+      "itineraryIndex": 2,
+      "renderedTitle": "Titlis",
+      "renderedDescription": "At the valley station the breathtaking journey with the different aerial cable cars to the top of Mt.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": "Admission Included",
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5553984P5",
+      "route": "/destinations/switzerland/zurich/tours/exclusive-zurich-tour-old-town-lake-zurich-cruise-and-lindt-museum",
+      "tourTitle": "Zurich tour with Lake Zurich Cruise & Lindt Chocolate Experience",
+      "itineraryIndex": 2,
+      "renderedTitle": "Lindenhof",
+      "renderedDescription": "This Old Town district is thought to be where Zurich began as a Roman fort in the second century.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5553984P5",
+      "route": "/destinations/switzerland/zurich/tours/exclusive-zurich-tour-old-town-lake-zurich-cruise-and-lindt-museum",
+      "tourTitle": "Zurich tour with Lake Zurich Cruise & Lindt Chocolate Experience",
+      "itineraryIndex": 4,
+      "renderedTitle": "Fraumünster",
+      "renderedDescription": "This prominent 13th-century Gothic cathedral is perhaps best known for one of its more recent additions.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "26095P3",
+      "route": "/destinations/switzerland/interlaken/tours/lauterbrunnen-and-trummelbach-waterfalls-e-bike-tour-swiss-picnic",
+      "tourTitle": "Lauterbrunnen and Trummelbach Waterfalls E-bike Tour Swiss Picnic",
+      "itineraryIndex": 0,
+      "renderedTitle": "Interlaken City Switzerland",
+      "renderedDescription": "Meet at the bike shop for orientation and gear setup before departure.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "26095P3",
+      "route": "/destinations/switzerland/interlaken/tours/lauterbrunnen-and-trummelbach-waterfalls-e-bike-tour-swiss-picnic",
+      "tourTitle": "Lauterbrunnen and Trummelbach Waterfalls E-bike Tour Swiss Picnic",
+      "itineraryIndex": 1,
+      "renderedTitle": "Kirche Gsteig",
+      "renderedDescription": "Ride through historic surroundings and pause for views.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "26095P3",
+      "route": "/destinations/switzerland/interlaken/tours/lauterbrunnen-and-trummelbach-waterfalls-e-bike-tour-swiss-picnic",
+      "tourTitle": "Lauterbrunnen and Trummelbach Waterfalls E-bike Tour Swiss Picnic",
+      "itineraryIndex": 4,
+      "renderedTitle": "Lauterbrunnen Valley Waterfalls",
+      "renderedDescription": "Continue exploring the valley's trails and mountain scenery.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "194901P4",
+      "route": "/destinations/oregon/portland/tours/oregon-coast-tour-full-day-194901P4",
+      "tourTitle": "Full-Day Guided Oregon Coast Tour from Portland",
+      "itineraryIndex": 0,
+      "renderedTitle": "Ecola State Park",
+      "renderedDescription": "Stop for ocean views from the coastal forest overlook and time to scan for wildlife along the headlands.",
+      "titleSource": null,
+      "duration": "1 hour",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "194901P4",
+      "route": "/destinations/oregon/portland/tours/oregon-coast-tour-full-day-194901P4",
+      "tourTitle": "Full-Day Guided Oregon Coast Tour from Portland",
+      "itineraryIndex": 1,
+      "renderedTitle": "Indian Beach",
+      "renderedDescription": "Walk the shoreline or follow a short trail for Pacific views when conditions allow.",
+      "titleSource": null,
+      "duration": "1 hour",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "194901P4",
+      "route": "/destinations/oregon/portland/tours/oregon-coast-tour-full-day-194901P4",
+      "tourTitle": "Full-Day Guided Oregon Coast Tour from Portland",
+      "itineraryIndex": 2,
+      "renderedTitle": "Cannon Beach",
+      "renderedDescription": "The coastal town, browse local shops, and break for lunch on your own schedule.",
+      "titleSource": null,
+      "duration": "1 hour",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "194901P4",
+      "route": "/destinations/oregon/portland/tours/oregon-coast-tour-full-day-194901P4",
+      "tourTitle": "Full-Day Guided Oregon Coast Tour from Portland",
+      "itineraryIndex": 3,
+      "renderedTitle": "Haystack Rock",
+      "renderedDescription": "The iconic sea stack and tide-line area to look for nesting seabirds when tides permit.",
+      "titleSource": null,
+      "duration": "45 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "194901P4",
+      "route": "/destinations/oregon/portland/tours/oregon-coast-tour-full-day-194901P4",
+      "tourTitle": "Full-Day Guided Oregon Coast Tour from Portland",
+      "itineraryIndex": 4,
+      "renderedTitle": "Hug Point State Park",
+      "renderedDescription": "Optional stop at a secluded beach and waterfall area when tides and timing allow.",
+      "titleSource": null,
+      "duration": "30 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "194901P4",
+      "route": "/destinations/oregon/portland/tours/oregon-coast-tour-full-day-194901P4",
+      "tourTitle": "Full-Day Guided Oregon Coast Tour from Portland",
+      "itineraryIndex": 5,
+      "renderedTitle": "Oswald West State Park",
+      "renderedDescription": "Optional forest-and-coast stop with short walks when route conditions allow.",
+      "titleSource": null,
+      "duration": "1 hour",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "194901P4",
+      "route": "/destinations/oregon/portland/tours/oregon-coast-tour-full-day-194901P4",
+      "tourTitle": "Full-Day Guided Oregon Coast Tour from Portland",
+      "itineraryIndex": 6,
+      "renderedTitle": "Neahkahnie Mountain",
+      "renderedDescription": "Finish with a coastal viewpoint stop when time allows before the return drive to Portland.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "378720P1",
+      "route": "/destinations/oregon/portland/tours/city-of-roses-tour-378720P1",
+      "tourTitle": "Portland City Tour: Views and News",
+      "itineraryIndex": 1,
+      "renderedTitle": "Old Town",
+      "renderedDescription": "Through downtown Portland's historic district with commentary on the city's early settlement era.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "378720P1",
+      "route": "/destinations/oregon/portland/tours/city-of-roses-tour-378720P1",
+      "tourTitle": "Portland City Tour: Views and News",
+      "itineraryIndex": 3,
+      "renderedTitle": "Pittock Mansion",
+      "renderedDescription": "Stop for views from the historic estate grounds toward Mt.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "18277P2",
+      "route": "/destinations/oregon/portland/tours/portland-city-tour-18277P2",
+      "tourTitle": "Portland City Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "Pittock Mansion",
+      "renderedDescription": "Stop for city and mountain views from the historic estate overlook.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "194901P3",
+      "route": "/destinations/oregon/portland/tours/portland-oregon-city-tour-194901P3",
+      "tourTitle": "Portland Oregon City Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Waterfront Park and Pioneer Square",
+      "renderedDescription": "Downtown landmarks with commentary on Portland's early growth.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "194901P3",
+      "route": "/destinations/oregon/portland/tours/portland-oregon-city-tour-194901P3",
+      "tourTitle": "Portland Oregon City Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "Pittock Mansion",
+      "renderedDescription": "Stop for Mount Hood and skyline views from the historic estate grounds.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "9634P1",
+      "route": "/destinations/oregon/portland/tours/portland-top-sights-half-day-city-tour-9634P1",
+      "tourTitle": "Portland Top Sights Half Day City Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Historic Portland districts",
+      "renderedDescription": "Drive through downtown and west-side neighborhoods with guide commentary.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "9634P1",
+      "route": "/destinations/oregon/portland/tours/portland-top-sights-half-day-city-tour-9634P1",
+      "tourTitle": "Portland Top Sights Half Day City Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Pittock Mansion",
+      "renderedDescription": "Stop for views over Portland and the Cascade Range when weather allows.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5765P10",
+      "route": "/destinations/oregon/portland/tours/portland-morning-city-tour-5765P10",
+      "tourTitle": "Portland Morning City Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Pioneer Courthouse Square and Pearl District",
+      "renderedDescription": "Central Portland plazas and converted warehouse neighborhoods.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5765P10",
+      "route": "/destinations/oregon/portland/tours/portland-morning-city-tour-5765P10",
+      "tourTitle": "Portland Morning City Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "Nob Hill and NW 23rd Avenue",
+      "renderedDescription": "Drive through one of Portland's popular shopping and dining corridors.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5765P14",
+      "route": "/destinations/oregon/portland/tours/portland-afternoon-city-tour-5765P14",
+      "tourTitle": "Portland Afternoon City Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Downtown and Pearl District",
+      "renderedDescription": "Drive through central Portland with commentary on city growth and architecture.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "9634P2",
+      "route": "/destinations/oregon/portland/tours/columbia-river-gorge-waterfalls-tour-9634P2",
+      "tourTitle": "Columbia River Gorge Waterfalls Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Vista House",
+      "renderedDescription": "The historic observatory and gorge panoramas at Crown Point.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "9634P2",
+      "route": "/destinations/oregon/portland/tours/columbia-river-gorge-waterfalls-tour-9634P2",
+      "tourTitle": "Columbia River Gorge Waterfalls Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Latourell Falls",
+      "renderedDescription": "The columnar-basalt waterfall with an optional short paved trail.",
+      "titleSource": null,
+      "duration": "30 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "9634P2",
+      "route": "/destinations/oregon/portland/tours/columbia-river-gorge-waterfalls-tour-9634P2",
+      "tourTitle": "Columbia River Gorge Waterfalls Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "Multnomah Falls",
+      "renderedDescription": "Stop at Oregon's tallest waterfall with time near the lodge and viewing platform.",
+      "titleSource": null,
+      "duration": "45 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "126203P10",
+      "route": "/destinations/oregon/portland/tours/half-day-columbia-river-gorge-waterfall-tour-126203P10",
+      "tourTitle": "Half-Day Columbia River Gorge and Waterfall Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Multnomah Falls",
+      "renderedDescription": "Stop at Oregon's tallest waterfall for photos and viewing time.",
+      "titleSource": null,
+      "duration": "45 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "18277P1",
+      "route": "/destinations/oregon/portland/tours/columbia-river-gorge-tour-from-portland-18277P1",
+      "tourTitle": "Columbia River Gorge Tour from Portland",
+      "itineraryIndex": 1,
+      "renderedTitle": "Latourell Falls",
+      "renderedDescription": "Stop at one of the gorge's most photographed plunge waterfalls.",
+      "titleSource": null,
+      "duration": "25 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "18277P1",
+      "route": "/destinations/oregon/portland/tours/columbia-river-gorge-tour-from-portland-18277P1",
+      "tourTitle": "Columbia River Gorge Tour from Portland",
+      "itineraryIndex": 2,
+      "renderedTitle": "Vista House",
+      "renderedDescription": "Wide Columbia River views from Crown Point.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "18277P1",
+      "route": "/destinations/oregon/portland/tours/columbia-river-gorge-tour-from-portland-18277P1",
+      "tourTitle": "Columbia River Gorge Tour from Portland",
+      "itineraryIndex": 3,
+      "renderedTitle": "Multnomah Falls",
+      "renderedDescription": "The iconic two-tier waterfall and lodge area.",
+      "titleSource": null,
+      "duration": "45 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5765P9",
+      "route": "/destinations/oregon/portland/tours/multnomah-falls-columbia-river-gorge-waterfalls-tour-5765P9",
+      "tourTitle": "Multnomah Falls and Columbia River Gorge Waterfalls Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Portland Women's Forum viewpoint",
+      "renderedDescription": "Pause for wide gorge vistas along the historic highway.",
+      "titleSource": null,
+      "duration": "15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5765P9",
+      "route": "/destinations/oregon/portland/tours/multnomah-falls-columbia-river-gorge-waterfalls-tour-5765P9",
+      "tourTitle": "Multnomah Falls and Columbia River Gorge Waterfalls Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Latourell Falls and Multnomah Falls",
+      "renderedDescription": "Two of the gorge's signature waterfalls with photo time.",
+      "titleSource": null,
+      "duration": "60 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5765P9",
+      "route": "/destinations/oregon/portland/tours/multnomah-falls-columbia-river-gorge-waterfalls-tour-5765P9",
+      "tourTitle": "Multnomah Falls and Columbia River Gorge Waterfalls Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "Horsetail Falls",
+      "renderedDescription": "Finish the waterfall loop before returning to Portland.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5765MTHOOD",
+      "route": "/destinations/oregon/portland/tours/mount-hood-day-trip-from-portland-5765MTHOOD",
+      "tourTitle": "Mount Hood Day Trip from Portland to Multnomah Falls and Hood River",
+      "itineraryIndex": 0,
+      "renderedTitle": "Multnomah Falls",
+      "renderedDescription": "Begin with a gorge stop at Oregon's iconic two-tier waterfall.",
+      "titleSource": null,
+      "duration": "45 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5765P7",
+      "route": "/destinations/oregon/portland/tours/oregon-coast-tour-from-portland-5765P7",
+      "tourTitle": "Oregon Coast Tour from Portland",
+      "itineraryIndex": 1,
+      "renderedTitle": "Cannon Beach",
+      "renderedDescription": "Stop in the coastal town with time near Haystack Rock when tides allow.",
+      "titleSource": null,
+      "duration": "60 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5765P7",
+      "route": "/destinations/oregon/portland/tours/oregon-coast-tour-from-portland-5765P7",
+      "tourTitle": "Oregon Coast Tour from Portland",
+      "itineraryIndex": 2,
+      "renderedTitle": "Coastal overlooks",
+      "renderedDescription": "Pause at north-coast viewpoints for photos and short walks.",
+      "titleSource": null,
+      "duration": "45 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "401191P1",
+      "route": "/destinations/oregon/portland/tours/heart-of-downtown-portland-food-tour-401191P1",
+      "tourTitle": "Heart of Downtown Portland Food Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Neighborhood highlights",
+      "renderedDescription": "Landmark streets and districts while moving between tasting locations.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "67842P3",
+      "route": "/destinations/oregon/portland/tours/portland-food-carts-pods-and-patios-tour-67842P3",
+      "tourTitle": "Portland Food Carts, Pods and Patios Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Cart pod tastings",
+      "renderedDescription": "Sample dishes at several pods with time to explore vendor options.",
+      "titleSource": null,
+      "duration": "2 hours",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "67842P3",
+      "route": "/destinations/oregon/portland/tours/portland-food-carts-pods-and-patios-tour-67842P3",
+      "tourTitle": "Portland Food Carts, Pods and Patios Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Patios and neighborhood stops",
+      "renderedDescription": "Continue to additional cart clusters and patio seating areas.",
+      "titleSource": null,
+      "duration": "45 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5396P10",
+      "route": "/destinations/washington/seattle/tours/seattle-city-highlights-tour-5396P10",
+      "tourTitle": "Seattle City Premier Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Ballard Locks",
+      "renderedDescription": "Stop to watch boats pass through the Hiram M.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5396P10",
+      "route": "/destinations/washington/seattle/tours/seattle-city-highlights-tour-5396P10",
+      "tourTitle": "Seattle City Premier Tour",
+      "itineraryIndex": 3,
+      "renderedTitle": "Kerry Park",
+      "renderedDescription": "Stop for panoramic views of the Seattle skyline, Space Needle, and Mount Rainier when weather allows.",
+      "titleSource": null,
+      "duration": "15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "40943P1",
+      "route": "/destinations/washington/seattle/tours/seattle-bus-tour-space-needle-fremont-troll-40943P1",
+      "tourTitle": "Seattle City Tour with Space Needle Drop Offs",
+      "itineraryIndex": 2,
+      "renderedTitle": "Kerry Park",
+      "renderedDescription": "Stop for classic Seattle skyline photos with Space Needle and mountain backdrops.",
+      "titleSource": null,
+      "duration": "15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "479383P1",
+      "route": "/destinations/washington/seattle/tours/welcome-to-seattle-walking-tour-monorail-479383P1",
+      "tourTitle": "Welcome to Seattle Walking Tour with Monorail Ride",
+      "itineraryIndex": 1,
+      "renderedTitle": "Downtown Seattle",
+      "renderedDescription": "Walk through central districts with commentary on neighborhoods and city landmarks.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "36129P1",
+      "route": "/destinations/washington/seattle/tours/beneath-the-streets-underground-tour-36129P1",
+      "tourTitle": "Beneath The Streets Underground History Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Underground passageways",
+      "renderedDescription": "Walk through restored subterranean walkways built beneath post-fire Seattle street levels.",
+      "titleSource": null,
+      "duration": "40 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "36129P1",
+      "route": "/destinations/washington/seattle/tours/beneath-the-streets-underground-tour-36129P1",
+      "tourTitle": "Beneath The Streets Underground History Tour",
+      "itineraryIndex": 2,
+      "renderedTitle": "Historic storefronts",
+      "renderedDescription": "View remnants of nineteenth-century shopfronts and sidewalks preserved below modern Pioneer Square.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "23161P1",
+      "route": "/destinations/washington/seattle/tours/chef-guided-pike-place-market-food-tour-23161P1",
+      "tourTitle": "Chef Guided Food Tour of Pike Place Market",
+      "itineraryIndex": 1,
+      "renderedTitle": "Vendor tastings",
+      "renderedDescription": "Sample dishes and ingredients from select Pike Place vendors with chef commentary.",
+      "titleSource": null,
+      "duration": "90 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "2956EXCLUSIVE",
+      "route": "/destinations/washington/seattle/tours/early-bird-pike-place-market-tasting-tour-2956EXCLUSIVE",
+      "tourTitle": "Early-Bird Tasting Tour of Pike Place Market",
+      "itineraryIndex": 1,
+      "renderedTitle": "Vendor tastings",
+      "renderedDescription": "Sample smoked salmon, chocolate, and market specialties from opening vendors.",
+      "titleSource": null,
+      "duration": "75 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "7812P115",
+      "route": "/destinations/washington/seattle/tours/seattle-pike-place-food-tour-7812P115",
+      "tourTitle": "Seattle Pike Market Food Tour with 8 Authentic Local Tastings",
+      "itineraryIndex": 0,
+      "renderedTitle": "Sur La Table meeting point",
+      "renderedDescription": "Meet the guide at Pine Street before entering Pike Place Market for the tasting route.",
+      "titleSource": null,
+      "duration": "10 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "7812P115",
+      "route": "/destinations/washington/seattle/tours/seattle-pike-place-food-tour-7812P115",
+      "tourTitle": "Seattle Pike Market Food Tour with 8 Authentic Local Tastings",
+      "itineraryIndex": 1,
+      "renderedTitle": "Market food stops",
+      "renderedDescription": "Sample eight local favorites including chowder, piroshki, and a signature secret dish.",
+      "titleSource": null,
+      "duration": "2 hours",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5396MTR",
+      "route": "/destinations/washington/seattle/tours/mt-rainier-day-tour-from-seattle-5396MTR",
+      "tourTitle": "Mt. Rainier Day Tour from Seattle",
+      "itineraryIndex": 2,
+      "renderedTitle": "Waterfall viewpoints",
+      "renderedDescription": "Stop at cascading falls and scenic overlooks such as Narada Falls when accessible.",
+      "titleSource": null,
+      "duration": "30 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5396MTR",
+      "route": "/destinations/washington/seattle/tours/mt-rainier-day-tour-from-seattle-5396MTR",
+      "tourTitle": "Mt. Rainier Day Tour from Seattle",
+      "itineraryIndex": 3,
+      "renderedTitle": "Alpine viewpoints",
+      "renderedDescription": "Meadow or mountain overlooks for Mount Rainier panoramas when weather allows.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "3132SMB",
+      "route": "/destinations/washington/seattle/tours/boeing-factory-tour-transport-from-seattle-3132SMB",
+      "tourTitle": "Boeing Factory Tour with Guided Transport from Seattle",
+      "itineraryIndex": 1,
+      "renderedTitle": "Future of Flight Center",
+      "renderedDescription": "Aviation exhibits and gallery displays before the factory tour begins.",
+      "titleSource": null,
+      "duration": "30 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    }
+  ]
+}

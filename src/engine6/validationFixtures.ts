@@ -117,6 +117,21 @@ import specimen5765mthoodPayload from "../../data/engine6/viator/5765MTHOOD.exac
 import specimen5765p7Payload from "../../data/engine6/viator/5765P7.exact-product.json";
 import specimen401191p1Payload from "../../data/engine6/viator/401191P1.exact-product.json";
 import specimen67842p3Payload from "../../data/engine6/viator/67842P3.exact-product.json";
+import specimen5396p10Payload from "../../data/engine6/viator/5396P10.exact-product.json";
+import specimen40943p1Payload from "../../data/engine6/viator/40943P1.exact-product.json";
+import specimen479383p1Payload from "../../data/engine6/viator/479383P1.exact-product.json";
+import specimen36129p1Payload from "../../data/engine6/viator/36129P1.exact-product.json";
+import specimen2956pikeplPayload from "../../data/engine6/viator/2956PIKEPL.exact-product.json";
+import specimen23161p1Payload from "../../data/engine6/viator/23161P1.exact-product.json";
+import specimen2956exclusivePayload from "../../data/engine6/viator/2956EXCLUSIVE.exact-product.json";
+import specimen7812p115Payload from "../../data/engine6/viator/7812P115.exact-product.json";
+import specimen2960harborPayload from "../../data/engine6/viator/2960HARBOR.exact-product.json";
+import specimen3657rainierPayload from "../../data/engine6/viator/3657RAINIER.exact-product.json";
+import specimen5396mtrPayload from "../../data/engine6/viator/5396MTR.exact-product.json";
+import specimen351474p1Payload from "../../data/engine6/viator/351474P1.exact-product.json";
+import specimen3132smbPayload from "../../data/engine6/viator/3132SMB.exact-product.json";
+import specimen5396boeingPayload from "../../data/engine6/viator/5396BOEING.exact-product.json";
+import specimen8647p594Payload from "../../data/engine6/viator/8647P594.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -1221,6 +1236,141 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Portland/Portland-Food-Carts-Pods-and-Patios-Tour/d5065-67842P3",
     rawPayload: specimen67842p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5396P10",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Premier-3-Hour-Seattle-City-Tour/d704-5396P10",
+    rawPayload: specimen5396p10Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "40943P1",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Seattle-City-Tour/d704-40943P1",
+    rawPayload: specimen40943p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "479383P1",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Introduction-to-Seattle-Walking-Tour/d704-479383P1",
+    rawPayload: specimen479383p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "36129P1",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Beneath-The-Streets/d704-36129P1",
+    rawPayload: specimen36129p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "2956PIKEPL",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Food-and-Cultural-Walking-Tour-of-Pike-Place-Market/d704-2956PIKEPL",
+    rawPayload: specimen2956pikeplPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "23161P1",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Chef-Guided-Food-Tour-of-Pike-Place-Market/d704-23161P1",
+    rawPayload: specimen23161p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "2956EXCLUSIVE",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Viator-Exclusive-Early-Access-Food-Tour-of-Pike-Place-Market/d704-2956EXCLUSIVE",
+    rawPayload: specimen2956exclusivePayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "7812P115",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Secret-Food-Tours-Seattle/d704-7812P115",
+    rawPayload: specimen7812p115Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "2960HARBOR",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Seattle-Harbor-Cruise/d704-2960HARBOR",
+    rawPayload: specimen2960harborPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "3657RAINIER",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Mt-Rainier-Day-Trip-from-Seattle/d704-3657RAINIER",
+    rawPayload: specimen3657rainierPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5396MTR",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Mt-Rainier-Day-Tour-from-Seattle/d704-5396MTR",
+    rawPayload: specimen5396mtrPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "351474P1",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Touring-and-hiking-scenic-places-in-Mt-Rainier-National-Park/d704-351474P1",
+    rawPayload: specimen351474p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "3132SMB",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Morning-Tour-of-Boeing-Factory-from-Seattle/d704-3132SMB",
+    rawPayload: specimen3132smbPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5396BOEING",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Boeing-Factory-Tour-from-Seattle/d704-5396BOEING",
+    rawPayload: specimen5396boeingPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "8647P594",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Private-5-hour-City-Tour-of-Seattle-and-Snoqualmie-Falls-with-driver-guide/d704-8647P594",
+    rawPayload: specimen8647p594Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

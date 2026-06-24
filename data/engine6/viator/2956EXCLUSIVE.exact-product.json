@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "2956EXCLUSIVE",
+    "productUrl": "https://www.viator.com/tours/Seattle/Viator-Exclusive-Early-Access-Food-Tour-of-Pike-Place-Market/d704-2956EXCLUSIVE",
+    "title": "Early-Bird Tasting Tour of Pike Place Market",
+    "description": {
+      "text": "Explore Pike Place Market before peak crowds on an early-access guided tasting tour. Sample smoked salmon, local chocolate, and market specialties while vendors prepare for the day in a quieter market setting."
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "Washington"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $76.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 980
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/b2/ce/f2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Early-access Pike Place Market food tour",
+      "Tastings before peak market crowds arrive",
+      "Sample smoked salmon and local sweets",
+      "Small-group tour limited to 12 people",
+      "Viator Exclusive early-morning access"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at 1901 Western Ave D, Seattle, WA 98101."
+      },
+      "end": {
+        "description": "Tour ends within Pike Place Market."
+      }
+    },
+    "itinerarySummary": "Explore Pike Place Market before peak crowds on an early-access guided tasting tour.",
+    "itineraryItems": [
+      {
+        "title": "Early market entry",
+        "description": "Enter Pike Place Market during quiet morning hours before the main crowds arrive.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vendor tastings",
+        "description": "Sample smoked salmon, chocolate, and market specialties from opening vendors.",
+        "duration": "75 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Market history",
+        "description": "Learn how the market evolved over more than a century while tasting local favorites.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Food tastings"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Early-Bird Tasting Tour of Pike Place Market?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Seattle?",
+        "answer": "Meet at 1901 Western Ave D, Seattle, WA 98101."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 76
+      },
+      "currency": "USD"
+    }
+  }
+}

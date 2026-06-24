@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "5396P10",
+    "productUrl": "https://www.viator.com/tours/Seattle/Premier-3-Hour-Seattle-City-Tour/d704-5396P10",
+    "title": "Seattle City Premier Tour",
+    "description": {
+      "text": "Explore Seattle on a guided three-hour city tour with stops at Pioneer Square, the Ballard Locks, and Kerry Park for skyline views. A local guide narrates the route through waterfront districts, historic neighborhoods, and landmark corridors before ending near the Space Needle."
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "Washington"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $79.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 2100
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/a6/42/4f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided Seattle city tour in a mini coach",
+      "Stops at Pioneer Square and the Ballard Locks",
+      "Kerry Park skyline photo opportunity",
+      "Drive-by views of Pike Place Market and the waterfront",
+      "Local guide commentary on Seattle history"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available at select downtown Seattle hotels or a central meeting point confirmed after booking."
+      },
+      "end": {
+        "description": "Tour ends near the Space Needle or returns to downtown Seattle."
+      }
+    },
+    "itinerarySummary": "Explore Seattle on a guided three-hour city tour with stops at Pioneer Square, the Ballard Locks, and Kerry Park for skyline views.",
+    "itineraryItems": [
+      {
+        "title": "Downtown departure",
+        "description": "Board the mini coach for orientation before the Seattle city route begins.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pioneer Square",
+        "description": "Pass through Seattle's oldest neighborhood with commentary on pioneer-era architecture.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Ballard Locks",
+        "description": "Stop to watch boats pass through the Hiram M. Chittenden Locks between Puget Sound and Lake Union.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kerry Park",
+        "description": "Stop for panoramic views of the Seattle skyline, Space Needle, and Mount Rainier when weather allows.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Seattle Waterfront",
+        "description": "Drive along Elliott Bay waterfront corridors with views of ferries and harbor activity.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Transport by air-conditioned mini coach"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Seattle City Premier Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Seattle?",
+        "answer": "Pickup is available at select downtown Seattle hotels or a central meeting point confirmed after booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 79
+      },
+      "currency": "USD"
+    }
+  }
+}
