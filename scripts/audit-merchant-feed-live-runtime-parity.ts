@@ -3,7 +3,7 @@ import path from "node:path";
 
 import { buildEngine6SchemaGraph } from "../src/engine6/schema/buildEngine6SchemaGraph";
 import { resolveEngine6TourForProductSchema } from "../src/engine6/resolveEngine6TourForProductSchema";
-import { engine6ResolvedTours } from "../src/engine6/registry";
+import { merchantFeedEligibleTours } from "../src/engine6/merchantFeedEligibility";
 import { formatMerchantPrice } from "../src/utils/merchantPricing";
 
 const DEFAULT_RUNTIME_BASE_URL = "https://www.alloutdooradventures.com";
@@ -57,7 +57,7 @@ const fetchLiveProductJsonLdCommercial = async (productCode: string) => {
     };
   };
 
-  const tour = engine6ResolvedTours.find(
+  const tour = merchantFeedEligibleTours.find(
     candidate => candidate.productCode === productCode
   );
   if (!tour || !body.extracted) {
@@ -120,8 +120,8 @@ export const auditMerchantFeedLiveRuntimeParity = async (
   let ratingDrift = 0;
   let reviewCountDrift = 0;
 
-  for (let index = 0; index < engine6ResolvedTours.length; index += 8) {
-    const batch = engine6ResolvedTours.slice(index, index + 8);
+  for (let index = 0; index < merchantFeedEligibleTours.length; index += 8) {
+    const batch = merchantFeedEligibleTours.slice(index, index + 8);
     const results = await Promise.all(
       batch.map(async tour => {
         const csv = csvById.get(tour.productCode);
@@ -163,7 +163,7 @@ export const auditMerchantFeedLiveRuntimeParity = async (
   }
 
   return {
-    totalProducts: engine6ResolvedTours.length,
+    totalProducts: merchantFeedEligibleTours.length,
     productsInParity,
     priceDrift,
     ratingDrift,
