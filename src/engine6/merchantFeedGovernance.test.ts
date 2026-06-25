@@ -17,6 +17,7 @@ import { engine6ResolvedTours } from "./registry";
 import {
   ENGINE6_LAS_VEGAS_VALLEY_OF_FIRE_OFFROAD_PRODUCT_CODE,
   ENGINE6_LAS_VEGAS_VALLEY_OF_FIRE_OFFROAD_ROUTE,
+  ENGINE6_PORTLAND_MOUNT_HOOD_DAY_TRIP_PRODUCT_CODE,
   ENGINE6_NYC_ONE_DAY_SIGHTSEEING_PRODUCT_CODE,
   ENGINE6_NYC_ONE_DAY_SIGHTSEEING_ROUTE,
   ENGINE6_SANTA_BARBARA_TROLLEY_PRODUCT_CODE,
@@ -237,6 +238,28 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
     expect(tour.reviewCount).toBe(aggregateRating?.reviewCount);
   });
 
+  it("keeps 5765MTHOOD aligned with live page Product JSON-LD commercial fields", async () => {
+    const { tour, offer, aggregateRating } = await getProductSchemaNodes(
+      ENGINE6_PORTLAND_MOUNT_HOOD_DAY_TRIP_PRODUCT_CODE
+    );
+    const merchantRow = merchantRowsById.get(
+      ENGINE6_PORTLAND_MOUNT_HOOD_DAY_TRIP_PRODUCT_CODE
+    );
+    const commercialParity = auditEngine6CommercialFieldParity(
+      tour,
+      merchantRow!
+    );
+
+    expect(commercialParity.pass, commercialParity.mismatches.join("; ")).toBe(
+      true
+    );
+    expect(merchantRow?.price).toBe("126 USD");
+    expect(merchantRow?.average_rating).toBe("4.9");
+    expect(merchantRow?.review_count).toBe("709");
+    expect(tour.priceAmount).toBe(offer?.price);
+    expect(tour.reviewCount).toBe(aggregateRating?.reviewCount);
+  });
+
   it("keeps 7081NYCDAY aligned with live page Product JSON-LD commercial fields", async () => {
     const { tour, product, offer, aggregateRating } =
       await getProductSchemaNodes(ENGINE6_NYC_ONE_DAY_SIGHTSEEING_PRODUCT_CODE);
@@ -259,8 +282,8 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
     );
     expect(merchantRow?.price).toBe("99 USD");
     expect(merchantRow?.average_rating).toBe("4.8");
-    expect(merchantRow?.rating_count).toBe("13580");
-    expect(merchantRow?.review_count).toBe("13580");
+    expect(merchantRow?.rating_count).toBe("13582");
+    expect(merchantRow?.review_count).toBe("13582");
     expect(merchantRow?.image_link).toBe(product?.image);
     expect(merchantRow?.availability).toBe("in stock");
     expect(snapshot.bookingUrl).toBe(offer?.url);
