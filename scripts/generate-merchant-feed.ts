@@ -3,9 +3,9 @@ import path from "node:path";
 
 import {
   diagnoseEngine6ViatorProductCommercialExtract,
-  passesMerchantFeedLiveCommercialGuard,
   resolveViatorApiConfig,
 } from "../api/engine6/resolveEngine6ViatorProductCommercialExtract";
+import { passesMerchantFeedLiveCommercialGuardForBuild } from "../api/engine6/merchantFeedLegacyCommercialAllowlist";
 import { buildMerchantFeedRowFromProductSchema } from "../src/engine6/merchantFeedFromProductSchema";
 import {
   auditEngine6MerchantFeedCommercialParity,
@@ -247,7 +247,7 @@ const assertLiveCommercialExtracts = async (productCodes: string[]) => {
     const diagnostic =
       await diagnoseEngine6ViatorProductCommercialExtract(productCode);
 
-    const guard = passesMerchantFeedLiveCommercialGuard(diagnostic);
+    const guard = passesMerchantFeedLiveCommercialGuardForBuild(diagnostic);
     if (!guard.pass) {
       failures.push(`${productCode}: ${guard.reason}`);
     }
