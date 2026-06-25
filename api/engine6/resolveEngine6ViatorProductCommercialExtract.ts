@@ -23,6 +23,33 @@ const EMPTY_COMMERCIAL_EXTRACT: Engine6ViatorProductCommercialExtract = {
   source: "bundled-fallback",
 };
 
+const EMPTY_ENGINE6_EXTRACTED: Engine6Extracted = {
+  title: null,
+  seoTitle: null,
+  seoDescription: null,
+  city: null,
+  state: null,
+  heroImageUrl: null,
+  productUrl: null,
+  priceAmount: null,
+  priceFormatted: null,
+  durationText: null,
+  aggregateRating: null,
+  reviewCount: null,
+  meetingPointText: null,
+  overviewText: null,
+  highlights: [],
+  itinerary: [],
+  itinerarySummaryText: null,
+  faqs: [],
+  included: [],
+  requirements: [],
+  primaryCategory: null,
+  categories: [],
+  primaryDisplayCategory: null,
+  activityCategories: [],
+};
+
 const buildHeaders = (apiKey: string) => ({
   "Content-Type": "application/json;version=2.0",
   Accept: "application/json;version=2.0",
@@ -207,7 +234,7 @@ export const resolveEngine6ViatorProductCommercialExtract = async (
     ? safeExtractEngine6Product(bundledPayload)
     : null;
   const bundledExtracted =
-    bundledExtraction?.extracted ?? EMPTY_COMMERCIAL_EXTRACT;
+    bundledExtraction?.extracted ?? EMPTY_ENGINE6_EXTRACTED;
 
   const { apiKey, baseUrl } = resolveViatorApiConfig();
   if (!apiKey) {
