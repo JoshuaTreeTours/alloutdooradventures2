@@ -2,7 +2,11 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import { buildMerchantFeedRowFromProductSchema } from "../src/engine6/merchantFeedFromProductSchema";
-import { auditEngine6MerchantFeedSchemaParity } from "../src/engine6/merchantFeedParity";
+import {
+  auditEngine6MerchantFeedCommercialParity,
+  auditEngine6MerchantFeedSchemaParity,
+  formatMerchantFeedCommercialParityAuditReport,
+} from "../src/engine6/merchantFeedParity";
 import { resolveEngine6ToursForProductSchema } from "../src/engine6/fetchEngine6LiveCommercialFieldsForSchema";
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import type { Engine6Tour } from "../src/engine6/types";
@@ -246,6 +250,25 @@ const main = async () => {
     );
   }
 
+  const commercialParityAudit = auditEngine6MerchantFeedCommercialParity(
+    schemaResolvedTours,
+    new Map(outputRows.map(row => [row.id, row]))
+  );
+
+  if (!commercialParityAudit.pass) {
+    for (const failure of commercialParityAudit.failures.slice(0, 20)) {
+      console.error(failure);
+    }
+    if (commercialParityAudit.failures.length > 20) {
+      console.error(
+        `...and ${commercialParityAudit.failures.length - 20} additional commercial parity failures.`
+      );
+    }
+    throw new Error(
+      "Merchant feed commercial parity validation failed before write."
+    );
+  }
+
   await writeFile(OUTPUT_PATH, toCsv(outputRows), "utf8");
 
   console.log(`Processed ${engine6ResolvedTours.length} Engine6 products.`);
@@ -253,6 +276,12 @@ const main = async () => {
     `Wrote ${outputRows.length} merchant feed rows to ${OUTPUT_PATH}.`
   );
   console.log("Product JSON-LD parity: PASS");
+  console.log(
+    formatMerchantFeedCommercialParityAuditReport(
+      commercialParityAudit,
+      validation.report.blankRequiredFieldRows
+    )
+  );
 };
 
 if (process.argv[1]?.includes("generate-merchant-feed")) {
