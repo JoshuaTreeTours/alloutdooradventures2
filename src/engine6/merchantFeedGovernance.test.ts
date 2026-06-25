@@ -15,6 +15,8 @@ import {
 } from "./merchantFeedParity";
 import { engine6ResolvedTours } from "./registry";
 import {
+  ENGINE6_LAS_VEGAS_VALLEY_OF_FIRE_OFFROAD_PRODUCT_CODE,
+  ENGINE6_LAS_VEGAS_VALLEY_OF_FIRE_OFFROAD_ROUTE,
   ENGINE6_NYC_ONE_DAY_SIGHTSEEING_PRODUCT_CODE,
   ENGINE6_NYC_ONE_DAY_SIGHTSEEING_ROUTE,
   ENGINE6_SANTA_BARBARA_TROLLEY_PRODUCT_CODE,
@@ -209,6 +211,28 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
     expect(merchantRow?.price).toBe("37 USD");
     expect(merchantRow?.average_rating).toBe("4.6");
     expect(merchantRow?.review_count).toBe("853");
+    expect(tour.priceAmount).toBe(offer?.price);
+    expect(tour.reviewCount).toBe(aggregateRating?.reviewCount);
+  });
+
+  it("keeps 191767P5 aligned with live page Product JSON-LD commercial fields", async () => {
+    const { tour, offer, aggregateRating } = await getProductSchemaNodes(
+      ENGINE6_LAS_VEGAS_VALLEY_OF_FIRE_OFFROAD_PRODUCT_CODE
+    );
+    const merchantRow = merchantRowsById.get(
+      ENGINE6_LAS_VEGAS_VALLEY_OF_FIRE_OFFROAD_PRODUCT_CODE
+    );
+    const commercialParity = auditEngine6CommercialFieldParity(
+      tour,
+      merchantRow!
+    );
+
+    expect(commercialParity.pass, commercialParity.mismatches.join("; ")).toBe(
+      true
+    );
+    expect(merchantRow?.price).toBe("432.50 USD");
+    expect(merchantRow?.average_rating).toBe("4.5");
+    expect(merchantRow?.review_count).toBe("16");
     expect(tour.priceAmount).toBe(offer?.price);
     expect(tour.reviewCount).toBe(aggregateRating?.reviewCount);
   });
