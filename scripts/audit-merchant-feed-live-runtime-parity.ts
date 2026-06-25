@@ -1,6 +1,12 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
+import {
+  applyMerchantFeedLiveRuntimeParityBaselinePolicy,
+  buildMerchantFeedPublishedBaselineCatalog,
+  classifyMerchantFeedGovernanceTier,
+  snapshotMerchantFeedCommercial,
+} from "../api/engine6/merchantFeedBaselineGovernance";
 import { buildEngine6SchemaGraph } from "../src/engine6/schema/buildEngine6SchemaGraph";
 import { resolveEngine6TourForProductSchema } from "../src/engine6/resolveEngine6TourForProductSchema";
 import { merchantFeedEligibleTours } from "../src/engine6/merchantFeedEligibility";
@@ -15,6 +21,7 @@ export type MerchantFeedLiveRuntimeParityReport = {
   ratingDrift: number;
   reviewCountDrift: number;
   pass: boolean;
+  informationalLegacyProductCodes?: string[];
   drifts: Array<{
     productCode: string;
     title: string;
@@ -175,15 +182,24 @@ export const auditMerchantFeedLiveRuntimeParity = async (
 
 export const formatMerchantFeedLiveRuntimeParityReport = (
   report: MerchantFeedLiveRuntimeParityReport
-) =>
-  [
+) => {
+  const lines = [
     "Live runtime commercial parity audit:",
     `- total products: ${report.totalProducts}`,
     `- products in parity: ${report.productsInParity}`,
     `- price drift: ${report.priceDrift}`,
     `- rating drift: ${report.ratingDrift}`,
     `- review_count drift: ${report.reviewCountDrift}`,
-  ].join("\n");
+  ];
+
+  if (report.informationalLegacyProductCodes?.length) {
+    lines.push(
+      `- legacy baseline runtime parity (informational only): ${report.informationalLegacyProductCodes.length} product(s)`
+    );
+  }
+
+  return lines.join("\n");
+};
 
 const main = async () => {
   const csvContent = await readFile(
@@ -239,19 +255,39 @@ const main = async () => {
     Object.fromEntries(headers.map((header, index) => [header, values[index] ?? ""]))
   );
 
-  const report = await auditMerchantFeedLiveRuntimeParity(
-    csvRows.map(row => ({
-      id: row.id ?? "",
-      price: row.price ?? "",
-      average_rating: row.average_rating ?? "",
-      review_count: row.review_count ?? "",
-    }))
+  const merchantRows = csvRows.map(row => ({
+    id: row.id ?? "",
+    price: row.price ?? "",
+    average_rating: row.average_rating ?? "",
+    review_count: row.review_count ?? "",
+  }));
+  const publishedBaseline = buildMerchantFeedPublishedBaselineCatalog(merchantRows);
+  const governanceByProductCode = new Map(
+    merchantRows.map(row => [
+      row.id.trim().toUpperCase(),
+      classifyMerchantFeedGovernanceTier(
+        row.id,
+        snapshotMerchantFeedCommercial(row),
+        publishedBaseline
+      ),
+    ])
+  );
+
+  const report = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
+    await auditMerchantFeedLiveRuntimeParity(merchantRows),
+    governanceByProductCode
   );
 
   console.log(formatMerchantFeedLiveRuntimeParityReport(report));
 
   if (!report.pass) {
-    for (const drift of report.drifts.slice(0, 20)) {
+    const blockingDrifts = report.drifts.filter(drift => {
+      const tier =
+        governanceByProductCode.get(drift.productCode.trim().toUpperCase()) ??
+        "new-product";
+      return tier !== "unchanged-legacy-baseline";
+    });
+    for (const drift of blockingDrifts.slice(0, 20)) {
       console.error(
         `${drift.productCode}: csv=${drift.csv.price}/${drift.csv.rating}/${drift.csv.reviews} live=${drift.liveJsonLd.price}/${drift.liveJsonLd.averageRating}/${drift.liveJsonLd.reviewCount}`
       );

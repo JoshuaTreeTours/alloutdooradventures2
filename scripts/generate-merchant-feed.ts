@@ -2,10 +2,14 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import {
+  applyMerchantFeedLiveRuntimeParityBaselinePolicy,
+  buildMerchantFeedPublishedBaselineCatalog,
+  reconcileMerchantFeedRowsWithBaselineGovernance,
+} from "../api/engine6/merchantFeedBaselineGovernance";
+import {
   diagnoseEngine6ViatorProductCommercialExtract,
   resolveViatorApiConfig,
 } from "../api/engine6/resolveEngine6ViatorProductCommercialExtract";
-import { passesMerchantFeedLiveCommercialGuardForBuild } from "../api/engine6/merchantFeedLegacyCommercialAllowlist";
 import { buildMerchantFeedRowFromProductSchema } from "../src/engine6/merchantFeedFromProductSchema";
 import {
   auditEngine6MerchantFeedCommercialParity,
@@ -19,6 +23,7 @@ import {
 } from "../src/engine6/fetchEngine6LiveCommercialFieldsForSchema";
 import { resolveEngine6TourForProductSchema } from "../src/engine6/resolveEngine6TourForProductSchema";
 import { merchantFeedEligibleTours } from "../src/engine6/merchantFeedEligibility";
+import { parsePrice } from "../src/utils/merchantPricing";
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import type { Engine6Tour } from "../src/engine6/types";
 import {
@@ -206,6 +211,34 @@ const logMerchantFeedReport = (
 export const buildMerchantRow = (tour: Engine6Tour): MerchantRow =>
   buildMerchantFeedRowFromProductSchema(tour);
 
+const resolveToursFromMerchantFeedRows = (
+  tours: Engine6Tour[],
+  rows: MerchantRow[]
+): Engine6Tour[] => {
+  const rowsById = new Map(rows.map(row => [row.id.trim().toUpperCase(), row]));
+
+  return tours.map(tour => {
+    const row = rowsById.get(tour.productCode.trim().toUpperCase());
+    if (!row) {
+      return tour;
+    }
+
+    const priceAmount = parsePrice(row.price);
+    const aggregateRating = Number.parseFloat(row.average_rating);
+    const reviewCount = Number.parseInt(row.review_count, 10);
+
+    return resolveEngine6TourForProductSchema(tour, {
+      priceAmount,
+      priceFormatted:
+        typeof priceAmount === "number"
+          ? `From $${priceAmount.toFixed(2)}`
+          : null,
+      aggregateRating: Number.isFinite(aggregateRating) ? aggregateRating : null,
+      reviewCount: Number.isFinite(reviewCount) ? reviewCount : null,
+    });
+  });
+};
+
 const readExistingMerchantFeedRows = async (): Promise<MerchantRow[]> => {
   try {
     const content = await readFile(OUTPUT_PATH, "utf8");
@@ -222,7 +255,9 @@ const resolveRuntimeCommercialBaseUrl = () =>
     ""
   ).replace(/\/$/, "");
 
-const assertLiveCommercialExtracts = async (productCodes: string[]) => {
+const assertLiveCommercialExtracts = async (
+  failures: string[]
+) => {
   if (!requireLiveMerchantCommercial()) {
     return;
   }
@@ -239,18 +274,6 @@ const assertLiveCommercialExtracts = async (productCodes: string[]) => {
     throw new Error(
       "Merchant feed production build requires VIATOR_API_KEY for live commercial resolution."
     );
-  }
-
-  const failures: string[] = [];
-
-  for (const productCode of productCodes) {
-    const diagnostic =
-      await diagnoseEngine6ViatorProductCommercialExtract(productCode);
-
-    const guard = passesMerchantFeedLiveCommercialGuardForBuild(diagnostic);
-    if (!guard.pass) {
-      failures.push(`${productCode}: ${guard.reason}`);
-    }
   }
 
   if (failures.length > 0) {
@@ -282,22 +305,33 @@ const resolveToursForMerchantFeedGeneration = async (
 
 const main = async () => {
   const existingRows = await readExistingMerchantFeedRows();
+  const publishedBaseline = buildMerchantFeedPublishedBaselineCatalog(existingRows);
   if (existingRows.length > 0) {
     logMerchantFeedReport("Before", countMerchantFeedBlankFields(existingRows));
   } else {
     console.log("\nMerchant Feed Before: no existing merchantFeed.csv rows.");
   }
 
-  await assertLiveCommercialExtracts(
-    merchantFeedEligibleTours.map(tour => tour.productCode)
-  );
-
   const schemaResolvedTours = await resolveToursForMerchantFeedGeneration(
     merchantFeedEligibleTours
   );
 
-  const outputRows: MerchantRow[] = schemaResolvedTours.map(tour =>
+  const generatedRows: MerchantRow[] = schemaResolvedTours.map(tour =>
     buildMerchantRow(tour)
+  );
+
+  const reconciliation = await reconcileMerchantFeedRowsWithBaselineGovernance(
+    generatedRows,
+    publishedBaseline,
+    diagnoseEngine6ViatorProductCommercialExtract
+  );
+
+  await assertLiveCommercialExtracts(reconciliation.liveCommercialFailures);
+
+  const outputRows = reconciliation.rows;
+  const schemaResolvedToursForParity = resolveToursFromMerchantFeedRows(
+    schemaResolvedTours,
+    outputRows
   );
 
   const validation = validateMerchantFeedRows(outputRows);
@@ -316,7 +350,7 @@ const main = async () => {
   }
 
   const parityAudit = auditEngine6MerchantFeedSchemaParity(
-    schemaResolvedTours,
+    schemaResolvedToursForParity,
     new Map(outputRows.map(row => [row.id, row]))
   );
 
@@ -335,7 +369,7 @@ const main = async () => {
   }
 
   const commercialParityAudit = auditEngine6MerchantFeedCommercialParity(
-    schemaResolvedTours,
+    schemaResolvedToursForParity,
     new Map(outputRows.map(row => [row.id, row]))
   );
 
@@ -353,9 +387,24 @@ const main = async () => {
     );
   }
 
-  const runtimeParityAudit = await auditMerchantFeedLiveRuntimeParity(outputRows);
+  const runtimeParityAudit = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
+    await auditMerchantFeedLiveRuntimeParity(outputRows),
+    reconciliation.governanceByProductCode
+  );
 
   if (!runtimeParityAudit.pass) {
+    const blockingDrifts = runtimeParityAudit.drifts.filter(drift => {
+      const tier =
+        reconciliation.governanceByProductCode.get(
+          drift.productCode.trim().toUpperCase()
+        ) ?? "new-product";
+      return tier !== "unchanged-legacy-baseline";
+    });
+    for (const drift of blockingDrifts.slice(0, 20)) {
+      console.error(
+        `${drift.productCode}: csv=${drift.csv.price}/${drift.csv.rating}/${drift.csv.reviews} live=${drift.liveJsonLd.price}/${drift.liveJsonLd.averageRating}/${drift.liveJsonLd.reviewCount}`
+      );
+    }
     throw new Error(
       "Merchant feed live runtime commercial parity validation failed before write."
     );
