@@ -1,7 +1,8 @@
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import { fetchEngine6LiveCommercialFieldsForSchema } from "./fetchEngine6LiveCommercialFieldsForSchema";
+import { resolveEngine6ViatorProductCommercialExtract } from "../../api/engine6/resolveEngine6ViatorProductCommercialExtract";
 import { resolveMerchantFeedProductSchemaSnapshot } from "./merchantFeedFromProductSchema";
-import { compareMerchantFeedRowToProductSchema } from "./merchantFeedParity";
+import { auditEngine6CommercialFieldParity } from "./merchantFeedParity";
 import { getEngine6TourRatingSourceOfTruth } from "./ratingSourceOfTruth";
 import { resolveEngine6TourForProductSchema } from "./resolveEngine6TourForProductSchema";
 import type { Engine6Tour } from "./types";
@@ -20,6 +21,8 @@ export const traceEngine6ProductSchemaCommercialFields = async (
   const liveFields = await fetchEngine6LiveCommercialFieldsForSchema(
     tour.productCode
   );
+  const canonicalCommercial =
+    await resolveEngine6ViatorProductCommercialExtract(tour.productCode);
   const resolvedTour = resolveEngine6TourForProductSchema(tour, liveFields);
   const resolvedRating = getEngine6TourRatingSourceOfTruth(resolvedTour);
   const resolvedGraph = buildEngine6SchemaGraph(resolvedTour)[
@@ -41,10 +44,11 @@ export const traceEngine6ProductSchemaCommercialFields = async (
     rating_count: snapshot.ratingCount,
     review_count: snapshot.reviewCount,
   };
-  const parity = compareMerchantFeedRowToProductSchema(resolvedTour, merchantRow);
+  const parity = auditEngine6CommercialFieldParity(resolvedTour, merchantRow);
 
   return {
     productCode: tour.productCode,
+    canonicalCommercialExtract: canonicalCommercial,
     registryTour: {
       reviewCount: tour.reviewCount,
       aggregateRating: tour.aggregateRating,

@@ -8,6 +8,8 @@ import {
   resolveMerchantFeedProductSchemaSnapshot,
 } from "./merchantFeedFromProductSchema";
 import {
+  auditEngine6CommercialFieldParity,
+  auditEngine6MerchantFeedCommercialParity,
   auditEngine6MerchantFeedSchemaParity,
   compareMerchantFeedRowToProductSchema,
 } from "./merchantFeedParity";
@@ -15,6 +17,7 @@ import { engine6ResolvedTours } from "./registry";
 import {
   ENGINE6_NYC_ONE_DAY_SIGHTSEEING_PRODUCT_CODE,
   ENGINE6_NYC_ONE_DAY_SIGHTSEEING_ROUTE,
+  ENGINE6_SANTA_BARBARA_TROLLEY_PRODUCT_CODE,
 } from "./routes";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 
@@ -170,6 +173,44 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
 
     expect(audit.pass, audit.failures.slice(0, 5).join("; ")).toBe(true);
     expect(merchantRowsById.size).toBe(engine6ResolvedTours.length);
+  });
+
+  it("audits commercial parity across tour page, Product JSON-LD, and merchantFeed.csv", async () => {
+    const schemaResolvedTours = await resolveEngine6ToursForProductSchema(
+      engine6ResolvedTours
+    );
+    const audit = auditEngine6MerchantFeedCommercialParity(
+      schemaResolvedTours,
+      merchantRowsById
+    );
+
+    expect(audit.totalRowsAudited).toBe(engine6ResolvedTours.length);
+    expect(audit.priceMismatches).toBe(0);
+    expect(audit.ratingMismatches).toBe(0);
+    expect(audit.reviewCountMismatches).toBe(0);
+    expect(audit.pass, audit.failures.slice(0, 5).join("; ")).toBe(true);
+  });
+
+  it("keeps 163975P1 aligned with canonical commercial fields on page and JSON-LD", async () => {
+    const { tour, offer, aggregateRating } = await getProductSchemaNodes(
+      ENGINE6_SANTA_BARBARA_TROLLEY_PRODUCT_CODE
+    );
+    const merchantRow = merchantRowsById.get(
+      ENGINE6_SANTA_BARBARA_TROLLEY_PRODUCT_CODE
+    );
+    const commercialParity = auditEngine6CommercialFieldParity(
+      tour,
+      merchantRow!
+    );
+
+    expect(commercialParity.pass, commercialParity.mismatches.join("; ")).toBe(
+      true
+    );
+    expect(merchantRow?.price).toBe("37 USD");
+    expect(merchantRow?.average_rating).toBe("4.6");
+    expect(merchantRow?.review_count).toBe("853");
+    expect(tour.priceAmount).toBe(offer?.price);
+    expect(tour.reviewCount).toBe(aggregateRating?.reviewCount);
   });
 
   it("keeps 7081NYCDAY aligned with live page Product JSON-LD commercial fields", async () => {
