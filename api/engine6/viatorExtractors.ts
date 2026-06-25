@@ -863,6 +863,9 @@ const detectViableViatorCommercialPriceCandidates = (
     ["pricingInfo", "fromPrice"],
     ["pricingInfo", "price"],
     ["pricingInfo", "amount"],
+    ["pricingInfo", "summary", "fromPrice"],
+    ["priceFrom"],
+    ["fromPrice"],
   ] as PathSegment[][];
 
   const detectedFieldPaths = candidatePaths
