@@ -23,6 +23,7 @@ export type Engine6ViatorProductCommercialFailureReason =
   | "live-extraction-failed"
   | "live-product-code-mismatch"
   | "live-price-missing-or-zero"
+  | "live-rating-extraction-failed"
   | "live-api-success"
   | "bundled-fixture-only";
 
@@ -37,6 +38,8 @@ export type Engine6ViatorProductCommercialDiagnostic = {
   pricingAvailable: boolean;
   ratingAvailable: boolean;
   reviewCountAvailable: boolean;
+  /** True when the live Viator product payload includes rating/review metadata. */
+  ratingMetadataPresent: boolean;
 };
 
 const EMPTY_COMMERCIAL_EXTRACT: Engine6ViatorProductCommercialExtract = {
@@ -513,6 +516,7 @@ const buildCommercialDiagnostic = (args: {
   upstreamStatus: number | null;
   upstreamOk: boolean | null;
   failureReason: Engine6ViatorProductCommercialFailureReason;
+  ratingMetadataPresent?: boolean;
 }): Engine6ViatorProductCommercialDiagnostic => ({
   productCode: args.productCode,
   commercial: args.commercial,
@@ -524,7 +528,89 @@ const buildCommercialDiagnostic = (args: {
   pricingAvailable: typeof args.commercial.priceAmount === "number",
   ratingAvailable: typeof args.commercial.aggregateRating === "number",
   reviewCountAvailable: typeof args.commercial.reviewCount === "number",
+  ratingMetadataPresent: args.ratingMetadataPresent ?? false,
 });
+
+const hasPositiveNumericField = (value: unknown) =>
+  typeof value === "number" && Number.isFinite(value) && value > 0;
+
+const liveReviewSectionHasMetadata = (section: unknown) => {
+  if (!section || typeof section !== "object") {
+    return false;
+  }
+
+  const record = section as Record<string, unknown>;
+  if (
+    hasPositiveNumericField(record.combinedAverageRating) ||
+    hasPositiveNumericField(record.averageRating) ||
+    hasPositiveNumericField(record.totalReviews) ||
+    hasPositiveNumericField(record.operatorReviewCount) ||
+    hasPositiveNumericField(record.reviewCount) ||
+    hasPositiveNumericField(record.count)
+  ) {
+    return true;
+  }
+
+  return sumReviewCountTotals(record.reviewCountTotals) !== null;
+};
+
+/** Detects whether the live Viator product payload includes rating/review metadata. */
+export const detectLiveViatorProductRatingMetadata = (
+  product: Record<string, unknown> | null | undefined
+): boolean => {
+  if (!product || typeof product !== "object") {
+    return false;
+  }
+
+  if (
+    hasPositiveNumericField(product.combinedAverageRating) ||
+    liveReviewSectionHasMetadata(product.reviews) ||
+    liveReviewSectionHasMetadata(product.operatorReviews) ||
+    liveReviewSectionHasMetadata(product.reviewSummary) ||
+    sumReviewCountTotals(product.reviewCountTotals) !== null
+  ) {
+    return true;
+  }
+
+  return false;
+};
+
+export const passesMerchantFeedLiveCommercialGuard = (
+  diagnostic: Engine6ViatorProductCommercialDiagnostic
+): { pass: boolean; reason?: string } => {
+  if (diagnostic.commercial.source !== "live-api") {
+    return {
+      pass: false,
+      reason: `bundled commercial fallback forbidden (source=${diagnostic.commercial.source})`,
+    };
+  }
+
+  if (diagnostic.failureReason !== "live-api-success") {
+    return {
+      pass: false,
+      reason: `${diagnostic.failureReason} (upstream HTTP ${diagnostic.upstreamStatus ?? "n/a"})`,
+    };
+  }
+
+  if (!diagnostic.pricingAvailable) {
+    return {
+      pass: false,
+      reason: `missing live price (price=${diagnostic.commercial.priceAmount ?? "null"})`,
+    };
+  }
+
+  if (
+    diagnostic.ratingMetadataPresent &&
+    (!diagnostic.ratingAvailable || !diagnostic.reviewCountAvailable)
+  ) {
+    return {
+      pass: false,
+      reason: `live rating metadata present but extraction incomplete (rating=${diagnostic.commercial.aggregateRating ?? "null"}, reviews=${diagnostic.commercial.reviewCount ?? "null"})`,
+    };
+  }
+
+  return { pass: true };
+};
 
 export const diagnoseEngine6ViatorProductCommercialExtract = async (
   productCode: string
@@ -673,7 +759,30 @@ export const diagnoseEngine6ViatorProductCommercialExtract = async (
   }
 
   if (typeof liveWithReviews.priceAmount === "number") {
+    const ratingMetadataPresent = detectLiveViatorProductRatingMetadata(
+      liveExtraction.product
+    );
     const commercial = toCommercialExtract(liveWithReviews, "live-api");
+    const ratingExtracted = typeof liveWithReviews.aggregateRating === "number";
+    const reviewCountExtracted =
+      typeof liveWithReviews.reviewCount === "number";
+
+    if (
+      ratingMetadataPresent &&
+      (!ratingExtracted || !reviewCountExtracted)
+    ) {
+      return buildCommercialDiagnostic({
+        productCode: normalizedProductCode,
+        commercial,
+        hasViatorApiKey: true,
+        attemptedLiveFetch: true,
+        upstreamStatus,
+        upstreamOk,
+        failureReason: "live-rating-extraction-failed",
+        ratingMetadataPresent,
+      });
+    }
+
     return buildCommercialDiagnostic({
       productCode: normalizedProductCode,
       commercial,
@@ -682,6 +791,7 @@ export const diagnoseEngine6ViatorProductCommercialExtract = async (
       upstreamStatus,
       upstreamOk,
       failureReason: "live-api-success",
+      ratingMetadataPresent,
     });
   }
 
