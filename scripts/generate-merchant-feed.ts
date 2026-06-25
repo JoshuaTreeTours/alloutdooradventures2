@@ -255,8 +255,78 @@ const resolveRuntimeCommercialBaseUrl = () =>
     ""
   ).replace(/\/$/, "");
 
+const parseLiveCommercialFailureProductCode = (failure: string) =>
+  failure.split(":")[0]?.trim().toUpperCase() ?? "";
+
+const buildBaselineClassificationSnapshot = (
+  governanceByProductCode: Map<string, string>,
+  productCodes: string[]
+) =>
+  Object.fromEntries(
+    productCodes.map(productCode => [
+      productCode,
+      governanceByProductCode.get(productCode) ?? "unknown",
+    ])
+  );
+
+const buildDiagnosticFailureObjects = async (productCodes: string[]) => {
+  const uniqueProductCodes = [...new Set(productCodes.filter(Boolean))].slice(
+    0,
+    5
+  );
+
+  return Promise.all(
+    uniqueProductCodes.map(async productCode => {
+      const diagnostic =
+        await diagnoseEngine6ViatorProductCommercialExtract(productCode);
+      return {
+        productCode,
+        source: diagnostic.commercial.source,
+        failureReason: diagnostic.failureReason,
+        pricingAvailable: diagnostic.pricingAvailable,
+        ratingAvailable: diagnostic.ratingAvailable,
+        reviewCountAvailable: diagnostic.reviewCountAvailable,
+        ratingMetadataPresent: diagnostic.ratingMetadataPresent,
+        upstreamStatus: diagnostic.upstreamStatus,
+        priceAmount: diagnostic.commercial.priceAmount,
+      };
+    })
+  );
+};
+
+const logMerchantFeedBuildGuardFailure = async (args: {
+  guardName: string;
+  pass: boolean;
+  failingProductCodes?: string[];
+  baselineClassification?: Record<string, string>;
+  failureObjects?: unknown[];
+  includeDiagnostics?: boolean;
+}) => {
+  const failingProductCodes = args.failingProductCodes ?? [];
+  const failureObjects =
+    args.includeDiagnostics && failingProductCodes.length > 0
+      ? await buildDiagnosticFailureObjects(failingProductCodes)
+      : (args.failureObjects ?? []).slice(0, 5);
+
+  console.error(
+    "[merchant-feed-build-guard]",
+    JSON.stringify(
+      {
+        guardName: args.guardName,
+        pass: args.pass,
+        failingProductCodes,
+        baselineClassification: args.baselineClassification ?? {},
+        failureObjects: failureObjects.slice(0, 5),
+      },
+      null,
+      2
+    )
+  );
+};
+
 const assertLiveCommercialExtracts = async (
-  failures: string[]
+  failures: string[],
+  governanceByProductCode: Map<string, string>
 ) => {
   if (!requireLiveMerchantCommercial()) {
     return;
@@ -271,12 +341,35 @@ const assertLiveCommercialExtracts = async (
       return;
     }
 
+    await logMerchantFeedBuildGuardFailure({
+      guardName: "live-commercial-api-key",
+      pass: false,
+      failureObjects: [
+        {
+          reason:
+            "Merchant feed production build requires VIATOR_API_KEY for live commercial resolution.",
+          hasRuntimeBaseUrl: Boolean(resolveRuntimeCommercialBaseUrl()),
+        },
+      ],
+    });
     throw new Error(
       "Merchant feed production build requires VIATOR_API_KEY for live commercial resolution."
     );
   }
 
   if (failures.length > 0) {
+    const failingProductCodes = failures.map(parseLiveCommercialFailureProductCode);
+    await logMerchantFeedBuildGuardFailure({
+      guardName: "live-commercial-baseline-reconciliation",
+      pass: false,
+      failingProductCodes,
+      baselineClassification: buildBaselineClassificationSnapshot(
+        governanceByProductCode,
+        failingProductCodes
+      ),
+      failureObjects: failures.slice(0, 5).map(failure => ({ failure })),
+      includeDiagnostics: true,
+    });
     throw new Error(
       `Merchant feed live commercial validation failed for ${failures.length} product issue(s):\n${failures.join("\n")}`
     );
@@ -326,7 +419,10 @@ const main = async () => {
     diagnoseEngine6ViatorProductCommercialExtract
   );
 
-  await assertLiveCommercialExtracts(reconciliation.liveCommercialFailures);
+  await assertLiveCommercialExtracts(
+    reconciliation.liveCommercialFailures,
+    reconciliation.governanceByProductCode
+  );
 
   const outputRows = reconciliation.rows;
   const schemaResolvedToursForParity = resolveToursFromMerchantFeedRows(
@@ -346,6 +442,26 @@ const main = async () => {
         `...and ${validation.failures.length - 20} additional validation failures.`
       );
     }
+    const failingProductCodes = [
+      ...new Set(
+        validation.failures
+          .map(failure => failure.match(/product\s+([A-Z0-9]+)/i)?.[1] ?? "")
+          .filter(Boolean)
+          .map(code => code.toUpperCase())
+      ),
+    ];
+    await logMerchantFeedBuildGuardFailure({
+      guardName: "required-field-validation",
+      pass: false,
+      failingProductCodes,
+      baselineClassification: buildBaselineClassificationSnapshot(
+        reconciliation.governanceByProductCode,
+        failingProductCodes
+      ),
+      failureObjects: validation.failures.slice(0, 5).map(failure => ({
+        failure,
+      })),
+    });
     throw new Error("Merchant feed validation failed before write.");
   }
 
@@ -363,6 +479,25 @@ const main = async () => {
         `...and ${parityAudit.failures.length - 20} additional Product JSON-LD parity failures.`
       );
     }
+    const failingProductCodes = [
+      ...new Set(
+        parityAudit.failures
+          .map(failure => failure.split(".")[0]?.trim().toUpperCase() ?? "")
+          .filter(Boolean)
+      ),
+    ];
+    await logMerchantFeedBuildGuardFailure({
+      guardName: "product-jsonld-parity",
+      pass: false,
+      failingProductCodes,
+      baselineClassification: buildBaselineClassificationSnapshot(
+        reconciliation.governanceByProductCode,
+        failingProductCodes
+      ),
+      failureObjects: parityAudit.failures.slice(0, 5).map(failure => ({
+        failure,
+      })),
+    });
     throw new Error(
       "Merchant feed Product JSON-LD parity validation failed before write."
     );
@@ -382,6 +517,25 @@ const main = async () => {
         `...and ${commercialParityAudit.failures.length - 20} additional commercial parity failures.`
       );
     }
+    const failingProductCodes = [
+      ...new Set(
+        commercialParityAudit.failures
+          .map(failure => failure.split(".")[0]?.trim().toUpperCase() ?? "")
+          .filter(Boolean)
+      ),
+    ];
+    await logMerchantFeedBuildGuardFailure({
+      guardName: "commercial-parity",
+      pass: false,
+      failingProductCodes,
+      baselineClassification: buildBaselineClassificationSnapshot(
+        reconciliation.governanceByProductCode,
+        failingProductCodes
+      ),
+      failureObjects: commercialParityAudit.failures.slice(0, 5).map(failure => ({
+        failure,
+      })),
+    });
     throw new Error(
       "Merchant feed commercial parity validation failed before write."
     );
@@ -405,6 +559,31 @@ const main = async () => {
         `${drift.productCode}: csv=${drift.csv.price}/${drift.csv.rating}/${drift.csv.reviews} live=${drift.liveJsonLd.price}/${drift.liveJsonLd.averageRating}/${drift.liveJsonLd.reviewCount}`
       );
     }
+    const failingProductCodes = blockingDrifts.map(drift =>
+      drift.productCode.trim().toUpperCase()
+    );
+    await logMerchantFeedBuildGuardFailure({
+      guardName: "live-runtime-commercial-parity-baseline-policy",
+      pass: false,
+      failingProductCodes,
+      baselineClassification: buildBaselineClassificationSnapshot(
+        reconciliation.governanceByProductCode,
+        failingProductCodes
+      ),
+      failureObjects: blockingDrifts.slice(0, 5).map(drift => ({
+        productCode: drift.productCode,
+        baselineTier:
+          reconciliation.governanceByProductCode.get(
+            drift.productCode.trim().toUpperCase()
+          ) ?? "new-product",
+        csv: drift.csv,
+        liveJsonLd: drift.liveJsonLd,
+        priceDrift: drift.priceDrift,
+        ratingDrift: drift.ratingDrift,
+        reviewCountDrift: drift.reviewCountDrift,
+      })),
+      includeDiagnostics: true,
+    });
     throw new Error(
       "Merchant feed live runtime commercial parity validation failed before write."
     );
