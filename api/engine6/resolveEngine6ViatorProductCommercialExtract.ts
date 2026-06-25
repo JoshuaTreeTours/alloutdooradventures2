@@ -15,6 +15,30 @@ export type Engine6ViatorProductCommercialExtract = Pick<
   source: "live-api" | "bundled-fallback";
 };
 
+export type Engine6ViatorProductCommercialFailureReason =
+  | "missing-api-key"
+  | "upstream-not-ok"
+  | "upstream-fetch-failed"
+  | "upstream-non-json"
+  | "live-extraction-failed"
+  | "live-product-code-mismatch"
+  | "live-price-missing-or-zero"
+  | "live-api-success"
+  | "bundled-fixture-only";
+
+export type Engine6ViatorProductCommercialDiagnostic = {
+  productCode: string;
+  commercial: Engine6ViatorProductCommercialExtract;
+  hasViatorApiKey: boolean;
+  attemptedLiveFetch: boolean;
+  upstreamStatus: number | null;
+  upstreamOk: boolean | null;
+  failureReason: Engine6ViatorProductCommercialFailureReason;
+  pricingAvailable: boolean;
+  ratingAvailable: boolean;
+  reviewCountAvailable: boolean;
+};
+
 const EMPTY_COMMERCIAL_EXTRACT: Engine6ViatorProductCommercialExtract = {
   priceAmount: null,
   priceFormatted: null,
@@ -205,7 +229,7 @@ const applyAvailabilitySummaryPrice = async (args: {
   };
 };
 
-const resolveViatorApiConfig = () => {
+export const resolveViatorApiConfig = () => {
   const apiKey =
     process.env.VIATOR_API_KEY ||
     process.env.ENGINE6_VIATOR_API_KEY ||
@@ -220,13 +244,30 @@ const resolveViatorApiConfig = () => {
   return { apiKey, baseUrl };
 };
 
-/**
- * Canonical commercial extract used by /api/engine6/viator-product and
- * merchant-feed generation before Product JSON-LD is built.
- */
-export const resolveEngine6ViatorProductCommercialExtract = async (
+const buildCommercialDiagnostic = (args: {
+  productCode: string;
+  commercial: Engine6ViatorProductCommercialExtract;
+  hasViatorApiKey: boolean;
+  attemptedLiveFetch: boolean;
+  upstreamStatus: number | null;
+  upstreamOk: boolean | null;
+  failureReason: Engine6ViatorProductCommercialFailureReason;
+}): Engine6ViatorProductCommercialDiagnostic => ({
+  productCode: args.productCode,
+  commercial: args.commercial,
+  hasViatorApiKey: args.hasViatorApiKey,
+  attemptedLiveFetch: args.attemptedLiveFetch,
+  upstreamStatus: args.upstreamStatus,
+  upstreamOk: args.upstreamOk,
+  failureReason: args.failureReason,
+  pricingAvailable: typeof args.commercial.priceAmount === "number",
+  ratingAvailable: typeof args.commercial.aggregateRating === "number",
+  reviewCountAvailable: typeof args.commercial.reviewCount === "number",
+});
+
+export const diagnoseEngine6ViatorProductCommercialExtract = async (
   productCode: string
-): Promise<Engine6ViatorProductCommercialExtract> => {
+): Promise<Engine6ViatorProductCommercialDiagnostic> => {
   const normalizedProductCode = productCode.trim().toUpperCase();
   const bundledPayload =
     await readEngine6BundledExactProductPayload(normalizedProductCode);
@@ -238,19 +279,35 @@ export const resolveEngine6ViatorProductCommercialExtract = async (
 
   const { apiKey, baseUrl } = resolveViatorApiConfig();
   if (!apiKey) {
-    return bundledExtraction
+    const commercial = bundledExtraction
       ? toCommercialExtract(bundledExtracted, "bundled-fallback")
       : EMPTY_COMMERCIAL_EXTRACT;
+    return buildCommercialDiagnostic({
+      productCode: normalizedProductCode,
+      commercial,
+      hasViatorApiKey: false,
+      attemptedLiveFetch: false,
+      upstreamStatus: null,
+      upstreamOk: null,
+      failureReason: bundledExtraction
+        ? "bundled-fixture-only"
+        : "missing-api-key",
+    });
   }
 
   const requestUrl = `${baseUrl}/products/${encodeURIComponent(normalizedProductCode)}`;
 
   let livePayload: unknown = null;
+  let upstreamStatus: number | null = null;
+  let upstreamOk: boolean | null = null;
+
   try {
     const response = await fetch(requestUrl, {
       method: "GET",
       headers: buildHeaders(apiKey),
     });
+    upstreamStatus = response.status;
+    upstreamOk = response.ok;
 
     if (
       response.ok &&
@@ -259,21 +316,57 @@ export const resolveEngine6ViatorProductCommercialExtract = async (
         .includes("json")
     ) {
       livePayload = await response.json();
+    } else if (!response.ok) {
+      const commercial = toCommercialExtract(
+        mergeLiveDynamicCommercialExtract(bundledExtracted, null),
+        "bundled-fallback"
+      );
+      return buildCommercialDiagnostic({
+        productCode: normalizedProductCode,
+        commercial,
+        hasViatorApiKey: true,
+        attemptedLiveFetch: true,
+        upstreamStatus,
+        upstreamOk,
+        failureReason: "upstream-not-ok",
+      });
+    } else {
+      const commercial = toCommercialExtract(bundledExtracted, "bundled-fallback");
+      return buildCommercialDiagnostic({
+        productCode: normalizedProductCode,
+        commercial,
+        hasViatorApiKey: true,
+        attemptedLiveFetch: true,
+        upstreamStatus,
+        upstreamOk,
+        failureReason: "upstream-non-json",
+      });
     }
   } catch {
-    livePayload = null;
-  }
-
-  if (!livePayload) {
-    return toCommercialExtract(
-      bundledExtracted,
-      bundledExtraction ? "bundled-fallback" : "bundled-fallback"
-    );
+    const commercial = toCommercialExtract(bundledExtracted, "bundled-fallback");
+    return buildCommercialDiagnostic({
+      productCode: normalizedProductCode,
+      commercial,
+      hasViatorApiKey: true,
+      attemptedLiveFetch: true,
+      upstreamStatus,
+      upstreamOk,
+      failureReason: "upstream-fetch-failed",
+    });
   }
 
   const liveExtraction = safeExtractEngine6Product(livePayload);
   if (!liveExtraction) {
-    return toCommercialExtract(bundledExtracted, "bundled-fallback");
+    const commercial = toCommercialExtract(bundledExtracted, "bundled-fallback");
+    return buildCommercialDiagnostic({
+      productCode: normalizedProductCode,
+      commercial,
+      hasViatorApiKey: true,
+      attemptedLiveFetch: true,
+      upstreamStatus,
+      upstreamOk,
+      failureReason: "live-extraction-failed",
+    });
   }
 
   const liveWithAvailabilityPrice = await applyAvailabilitySummaryPrice({
@@ -293,24 +386,76 @@ export const resolveEngine6ViatorProductCommercialExtract = async (
     extractedProductCode &&
     extractedProductCode !== normalizedProductCode
   ) {
-    return toCommercialExtract(
+    const commercial = toCommercialExtract(
       mergeLiveDynamicCommercialExtract(
         bundledExtracted,
         liveWithAvailabilityPrice
       ),
       "bundled-fallback"
     );
+    return buildCommercialDiagnostic({
+      productCode: normalizedProductCode,
+      commercial,
+      hasViatorApiKey: true,
+      attemptedLiveFetch: true,
+      upstreamStatus,
+      upstreamOk,
+      failureReason: "live-product-code-mismatch",
+    });
   }
 
-  if (bundledExtraction && liveWithAvailabilityPrice.priceAmount === null) {
-    return toCommercialExtract(
+  if (typeof liveWithAvailabilityPrice.priceAmount === "number") {
+    const commercial = toCommercialExtract(liveWithAvailabilityPrice, "live-api");
+    return buildCommercialDiagnostic({
+      productCode: normalizedProductCode,
+      commercial,
+      hasViatorApiKey: true,
+      attemptedLiveFetch: true,
+      upstreamStatus,
+      upstreamOk,
+      failureReason: "live-api-success",
+    });
+  }
+
+  if (bundledExtraction) {
+    const commercial = toCommercialExtract(
       mergeLiveDynamicCommercialExtract(
         bundledExtracted,
         liveWithAvailabilityPrice
       ),
       "bundled-fallback"
     );
+    return buildCommercialDiagnostic({
+      productCode: normalizedProductCode,
+      commercial,
+      hasViatorApiKey: true,
+      attemptedLiveFetch: true,
+      upstreamStatus,
+      upstreamOk,
+      failureReason: "live-price-missing-or-zero",
+    });
   }
 
-  return toCommercialExtract(liveWithAvailabilityPrice, "live-api");
+  const commercial = toCommercialExtract(liveWithAvailabilityPrice, "live-api");
+  return buildCommercialDiagnostic({
+    productCode: normalizedProductCode,
+    commercial,
+    hasViatorApiKey: true,
+    attemptedLiveFetch: true,
+    upstreamStatus,
+    upstreamOk,
+    failureReason: "live-price-missing-or-zero",
+  });
+};
+
+/**
+ * Canonical commercial extract used by /api/engine6/viator-product and
+ * merchant-feed generation before Product JSON-LD is built.
+ */
+export const resolveEngine6ViatorProductCommercialExtract = async (
+  productCode: string
+): Promise<Engine6ViatorProductCommercialExtract> => {
+  const diagnostic =
+    await diagnoseEngine6ViatorProductCommercialExtract(productCode);
+  return diagnostic.commercial;
 };

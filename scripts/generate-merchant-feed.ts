@@ -1,6 +1,10 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
+import {
+  diagnoseEngine6ViatorProductCommercialExtract,
+  resolveViatorApiConfig,
+} from "../api/engine6/resolveEngine6ViatorProductCommercialExtract";
 import { buildMerchantFeedRowFromProductSchema } from "../src/engine6/merchantFeedFromProductSchema";
 import {
   auditEngine6MerchantFeedCommercialParity,
@@ -8,11 +12,17 @@ import {
   formatMerchantFeedCommercialParityAuditReport,
 } from "../src/engine6/merchantFeedParity";
 import {
+  fetchEngine6LiveCommercialFieldsForSchema,
+  requireLiveMerchantCommercial,
   resolveEngine6ToursForProductSchema,
-  resolveEngine6ViatorProductCommercialExtract,
 } from "../src/engine6/fetchEngine6LiveCommercialFieldsForSchema";
+import { resolveEngine6TourForProductSchema } from "../src/engine6/resolveEngine6TourForProductSchema";
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import type { Engine6Tour } from "../src/engine6/types";
+import {
+  auditMerchantFeedLiveRuntimeParity,
+  formatMerchantFeedLiveRuntimeParityReport,
+} from "./audit-merchant-feed-live-runtime-parity";
 
 const OUTPUT_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
 
@@ -203,30 +213,78 @@ const readExistingMerchantFeedRows = async (): Promise<MerchantRow[]> => {
   }
 };
 
-const requireLiveMerchantCommercial = () =>
-  process.env.REQUIRE_LIVE_MERCHANT_COMMERCIAL === "1" ||
-  process.env.VERCEL_ENV === "production";
+const resolveRuntimeCommercialBaseUrl = () =>
+  (
+    process.env.MERCHANT_FEED_RUNTIME_BASE_URL ??
+    process.env.ENGINE6_RUNTIME_BASE_URL ??
+    ""
+  ).replace(/\/$/, "");
 
 const assertLiveCommercialExtracts = async (productCodes: string[]) => {
   if (!requireLiveMerchantCommercial()) {
     return;
   }
 
-  const bundledFallbackProductCodes: string[] = [];
+  const { apiKey } = resolveViatorApiConfig();
+  if (!apiKey) {
+    if (resolveRuntimeCommercialBaseUrl()) {
+      console.log(
+        "Merchant feed live-commercial guard: using production runtime overlay (MERCHANT_FEED_RUNTIME_BASE_URL)."
+      );
+      return;
+    }
+
+    throw new Error(
+      "Merchant feed production build requires VIATOR_API_KEY for live commercial resolution."
+    );
+  }
+
+  const failures: string[] = [];
 
   for (const productCode of productCodes) {
-    const commercial =
-      await resolveEngine6ViatorProductCommercialExtract(productCode);
-    if (commercial.source === "bundled-fallback") {
-      bundledFallbackProductCodes.push(productCode);
+    const diagnostic =
+      await diagnoseEngine6ViatorProductCommercialExtract(productCode);
+
+    if (diagnostic.failureReason !== "live-api-success") {
+      failures.push(
+        `${productCode}: ${diagnostic.failureReason} (upstream HTTP ${diagnostic.upstreamStatus ?? "n/a"})`
+      );
+    }
+
+    if (
+      !diagnostic.pricingAvailable ||
+      !diagnostic.ratingAvailable ||
+      !diagnostic.reviewCountAvailable
+    ) {
+      failures.push(
+        `${productCode}: incomplete commercial fields (price=${diagnostic.commercial.priceAmount ?? "null"}, rating=${diagnostic.commercial.aggregateRating ?? "null"}, reviews=${diagnostic.commercial.reviewCount ?? "null"})`
+      );
     }
   }
 
-  if (bundledFallbackProductCodes.length > 0) {
+  if (failures.length > 0) {
     throw new Error(
-      `Merchant feed requires live Viator commercial data but bundled-fallback was used for ${bundledFallbackProductCodes.length} product(s): ${bundledFallbackProductCodes.slice(0, 10).join(", ")}${bundledFallbackProductCodes.length > 10 ? "..." : ""}. Configure VIATOR_API_KEY before generating the merchant feed.`
+      `Merchant feed live commercial validation failed for ${failures.length} product issue(s):\n${failures.join("\n")}`
     );
   }
+};
+
+const resolveToursForMerchantFeedGeneration = async () => {
+  const { apiKey } = resolveViatorApiConfig();
+  const runtimeBaseUrl = resolveRuntimeCommercialBaseUrl();
+
+  if (!apiKey && runtimeBaseUrl) {
+    return Promise.all(
+      engine6ResolvedTours.map(async tour => {
+        const liveFields = await fetchEngine6LiveCommercialFieldsForSchema(
+          tour.productCode
+        );
+        return resolveEngine6TourForProductSchema(tour, liveFields);
+      })
+    );
+  }
+
+  return resolveEngine6ToursForProductSchema(engine6ResolvedTours);
 };
 
 const main = async () => {
@@ -241,9 +299,7 @@ const main = async () => {
     engine6ResolvedTours.map(tour => tour.productCode)
   );
 
-  const schemaResolvedTours = await resolveEngine6ToursForProductSchema(
-    engine6ResolvedTours
-  );
+  const schemaResolvedTours = await resolveToursForMerchantFeedGeneration();
 
   const outputRows: MerchantRow[] = schemaResolvedTours.map(tour =>
     buildMerchantRow(tour)
@@ -302,6 +358,8 @@ const main = async () => {
     );
   }
 
+  const runtimeParityAudit = await auditMerchantFeedLiveRuntimeParity(outputRows);
+
   await writeFile(OUTPUT_PATH, toCsv(outputRows), "utf8");
 
   console.log(`Processed ${engine6ResolvedTours.length} Engine6 products.`);
@@ -315,6 +373,13 @@ const main = async () => {
       validation.report.blankRequiredFieldRows
     )
   );
+  console.log(formatMerchantFeedLiveRuntimeParityReport(runtimeParityAudit));
+
+  if (!runtimeParityAudit.pass) {
+    throw new Error(
+      "Merchant feed live runtime commercial parity validation failed before write."
+    );
+  }
 };
 
 if (process.argv[1]?.includes("generate-merchant-feed")) {
