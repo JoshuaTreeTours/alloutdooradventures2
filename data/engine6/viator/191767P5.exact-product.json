@@ -8,11 +8,16 @@
       "city": "Las Vegas",
       "state": "Nevada"
     },
-    "priceFrom": "$189.00",
+    "priceFrom": "$432.50",
+    "pricing": {
+      "summary": {
+        "fromPrice": 432.5
+      }
+    },
     "duration": "6 hours",
     "reviews": {
-      "combinedAverageRating": 4.8,
-      "totalReviews": 53
+      "combinedAverageRating": 4.5,
+      "totalReviews": 16
     },
     "media": {
       "images": [

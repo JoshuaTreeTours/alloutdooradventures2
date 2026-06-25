@@ -7,7 +7,10 @@ import {
   auditEngine6MerchantFeedSchemaParity,
   formatMerchantFeedCommercialParityAuditReport,
 } from "../src/engine6/merchantFeedParity";
-import { resolveEngine6ToursForProductSchema } from "../src/engine6/fetchEngine6LiveCommercialFieldsForSchema";
+import {
+  resolveEngine6ToursForProductSchema,
+  resolveEngine6ViatorProductCommercialExtract,
+} from "../src/engine6/fetchEngine6LiveCommercialFieldsForSchema";
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import type { Engine6Tour } from "../src/engine6/types";
 
@@ -200,6 +203,32 @@ const readExistingMerchantFeedRows = async (): Promise<MerchantRow[]> => {
   }
 };
 
+const requireLiveMerchantCommercial = () =>
+  process.env.REQUIRE_LIVE_MERCHANT_COMMERCIAL === "1" ||
+  process.env.VERCEL_ENV === "production";
+
+const assertLiveCommercialExtracts = async (productCodes: string[]) => {
+  if (!requireLiveMerchantCommercial()) {
+    return;
+  }
+
+  const bundledFallbackProductCodes: string[] = [];
+
+  for (const productCode of productCodes) {
+    const commercial =
+      await resolveEngine6ViatorProductCommercialExtract(productCode);
+    if (commercial.source === "bundled-fallback") {
+      bundledFallbackProductCodes.push(productCode);
+    }
+  }
+
+  if (bundledFallbackProductCodes.length > 0) {
+    throw new Error(
+      `Merchant feed requires live Viator commercial data but bundled-fallback was used for ${bundledFallbackProductCodes.length} product(s): ${bundledFallbackProductCodes.slice(0, 10).join(", ")}${bundledFallbackProductCodes.length > 10 ? "..." : ""}. Configure VIATOR_API_KEY before generating the merchant feed.`
+    );
+  }
+};
+
 const main = async () => {
   const existingRows = await readExistingMerchantFeedRows();
   if (existingRows.length > 0) {
@@ -207,6 +236,10 @@ const main = async () => {
   } else {
     console.log("\nMerchant Feed Before: no existing merchantFeed.csv rows.");
   }
+
+  await assertLiveCommercialExtracts(
+    engine6ResolvedTours.map(tour => tour.productCode)
+  );
 
   const schemaResolvedTours = await resolveEngine6ToursForProductSchema(
     engine6ResolvedTours
