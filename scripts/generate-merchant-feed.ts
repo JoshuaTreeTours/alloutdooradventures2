@@ -17,6 +17,7 @@ import {
   resolveEngine6ToursForProductSchema,
 } from "../src/engine6/fetchEngine6LiveCommercialFieldsForSchema";
 import { resolveEngine6TourForProductSchema } from "../src/engine6/resolveEngine6TourForProductSchema";
+import { merchantFeedEligibleTours } from "../src/engine6/merchantFeedEligibility";
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import type { Engine6Tour } from "../src/engine6/types";
 import {
@@ -269,13 +270,15 @@ const assertLiveCommercialExtracts = async (productCodes: string[]) => {
   }
 };
 
-const resolveToursForMerchantFeedGeneration = async () => {
+const resolveToursForMerchantFeedGeneration = async (
+  tours = merchantFeedEligibleTours
+) => {
   const { apiKey } = resolveViatorApiConfig();
   const runtimeBaseUrl = resolveRuntimeCommercialBaseUrl();
 
   if (!apiKey && runtimeBaseUrl) {
     return Promise.all(
-      engine6ResolvedTours.map(async tour => {
+      tours.map(async tour => {
         const liveFields = await fetchEngine6LiveCommercialFieldsForSchema(
           tour.productCode
         );
@@ -284,7 +287,7 @@ const resolveToursForMerchantFeedGeneration = async () => {
     );
   }
 
-  return resolveEngine6ToursForProductSchema(engine6ResolvedTours);
+  return resolveEngine6ToursForProductSchema(tours);
 };
 
 const main = async () => {
@@ -296,10 +299,12 @@ const main = async () => {
   }
 
   await assertLiveCommercialExtracts(
-    engine6ResolvedTours.map(tour => tour.productCode)
+    merchantFeedEligibleTours.map(tour => tour.productCode)
   );
 
-  const schemaResolvedTours = await resolveToursForMerchantFeedGeneration();
+  const schemaResolvedTours = await resolveToursForMerchantFeedGeneration(
+    merchantFeedEligibleTours
+  );
 
   const outputRows: MerchantRow[] = schemaResolvedTours.map(tour =>
     buildMerchantRow(tour)
@@ -360,9 +365,15 @@ const main = async () => {
 
   const runtimeParityAudit = await auditMerchantFeedLiveRuntimeParity(outputRows);
 
+  if (!runtimeParityAudit.pass) {
+    throw new Error(
+      "Merchant feed live runtime commercial parity validation failed before write."
+    );
+  }
+
   await writeFile(OUTPUT_PATH, toCsv(outputRows), "utf8");
 
-  console.log(`Processed ${engine6ResolvedTours.length} Engine6 products.`);
+  console.log(`Processed ${merchantFeedEligibleTours.length} Engine6 merchant-feed products (${engine6ResolvedTours.length - merchantFeedEligibleTours.length} excluded).`);
   console.log(
     `Wrote ${outputRows.length} merchant feed rows to ${OUTPUT_PATH}.`
   );
@@ -374,12 +385,6 @@ const main = async () => {
     )
   );
   console.log(formatMerchantFeedLiveRuntimeParityReport(runtimeParityAudit));
-
-  if (!runtimeParityAudit.pass) {
-    throw new Error(
-      "Merchant feed live runtime commercial parity validation failed before write."
-    );
-  }
 };
 
 if (process.argv[1]?.includes("generate-merchant-feed")) {

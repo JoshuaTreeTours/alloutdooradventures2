@@ -48,6 +48,25 @@ describe("extractEngine6Product operatorReviews mapping", () => {
       "product.reviews.totalReviews"
     );
   });
+
+  it("derives rating and review count from reviewCountTotals when combinedAverageRating is absent", () => {
+    const payload = {
+      product: {
+        productCode: "447486P2",
+        reviewCountTotals: [
+          { rating: 4, count: 3 },
+          { rating: 5, count: 7 },
+        ],
+        reviews: { totalReviews: 10 },
+      },
+    };
+
+    const result = extractEngine6Product(payload as Record<string, unknown>);
+
+    expect(result.extracted.aggregateRating).toBe(4.7);
+    expect(result.extracted.reviewCount).toBe(10);
+    expect(result.diagnostics.ratingFieldPath).toBe("product.reviewCountTotals");
+  });
 });
 
 describe("extractEngine6Product category normalization", () => {

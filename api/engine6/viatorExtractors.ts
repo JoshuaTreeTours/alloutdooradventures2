@@ -964,7 +964,59 @@ const extractDuration = (product: RecordLike) => {
     };
   }
 
-  return { value: null as string | null, path: null as string | null };
+  return { value: null, path: null as string | null };
+};
+
+type ReviewCountTotalEntry = {
+  rating?: unknown;
+  count?: unknown;
+};
+
+const sumReviewCountTotals = (value: unknown): number | null => {
+  if (!Array.isArray(value)) {
+    return null;
+  }
+
+  let total = 0;
+  for (const entry of value) {
+    if (!entry || typeof entry !== "object") {
+      continue;
+    }
+    const count = parseLooseNumber((entry as ReviewCountTotalEntry).count);
+    if (count !== null && count > 0) {
+      total += Math.trunc(count);
+    }
+  }
+
+  return total > 0 ? total : null;
+};
+
+const weightedAverageFromReviewCountTotals = (
+  value: unknown
+): number | null => {
+  if (!Array.isArray(value)) {
+    return null;
+  }
+
+  let weightedSum = 0;
+  let totalCount = 0;
+  for (const entry of value) {
+    if (!entry || typeof entry !== "object") {
+      continue;
+    }
+    const rating = parseLooseNumber((entry as ReviewCountTotalEntry).rating);
+    const count = parseLooseNumber((entry as ReviewCountTotalEntry).count);
+    if (rating !== null && count !== null && count > 0) {
+      weightedSum += rating * count;
+      totalCount += count;
+    }
+  }
+
+  if (totalCount <= 0) {
+    return null;
+  }
+
+  return weightedSum / totalCount;
 };
 
 const extractPlaybookRating = (product: RecordLike): NumericResult => {
@@ -973,6 +1025,7 @@ const extractPlaybookRating = (product: RecordLike): NumericResult => {
     ["reviews", "averageRating"],
     ["operatorReviews", "combinedAverageRating"],
     ["operatorReviews", "averageRating"],
+    ["combinedAverageRating"],
     ["rating"],
     ["averageRating"],
     ["reviewSummary", "averageRating"],
@@ -980,6 +1033,21 @@ const extractPlaybookRating = (product: RecordLike): NumericResult => {
     const value = parseLooseNumber(readPath(product, path));
     if (value !== null && value > 0) {
       return { value, path: formatFieldPath(path) };
+    }
+  }
+
+  for (const path of [
+    ["reviewCountTotals"],
+    ["reviews", "reviewCountTotals"],
+  ] as PathSegment[][]) {
+    const weightedAverage = weightedAverageFromReviewCountTotals(
+      readPath(product, path)
+    );
+    if (weightedAverage !== null && weightedAverage > 0) {
+      return {
+        value: weightedAverage,
+        path: formatFieldPath(path),
+      };
     }
   }
 
@@ -1003,6 +1071,16 @@ const extractPlaybookReviewCount = (product: RecordLike): NumericResult => {
     const value = parseLooseNumber(readPath(product, path));
     if (value !== null && value > 0) {
       return { value: Math.trunc(value), path: formatFieldPath(path) };
+    }
+  }
+
+  for (const path of [
+    ["reviewCountTotals"],
+    ["reviews", "reviewCountTotals"],
+  ] as PathSegment[][]) {
+    const total = sumReviewCountTotals(readPath(product, path));
+    if (total !== null && total > 0) {
+      return { value: total, path: formatFieldPath(path) };
     }
   }
 

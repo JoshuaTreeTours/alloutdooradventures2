@@ -13,6 +13,7 @@ import {
   auditEngine6MerchantFeedSchemaParity,
   compareMerchantFeedRowToProductSchema,
 } from "./merchantFeedParity";
+import { merchantFeedEligibleTours } from "./merchantFeedEligibility";
 import { engine6ResolvedTours } from "./registry";
 import {
   ENGINE6_LAS_VEGAS_VALLEY_OF_FIRE_OFFROAD_PRODUCT_CODE,
@@ -167,7 +168,7 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
 
   it("audits every Engine6 merchant feed row against Product JSON-LD", async () => {
     const schemaResolvedTours = await resolveEngine6ToursForProductSchema(
-      engine6ResolvedTours
+      merchantFeedEligibleTours
     );
     const audit = auditEngine6MerchantFeedSchemaParity(
       schemaResolvedTours,
@@ -175,19 +176,20 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
     );
 
     expect(audit.pass, audit.failures.slice(0, 5).join("; ")).toBe(true);
-    expect(merchantRowsById.size).toBe(engine6ResolvedTours.length);
+    expect(merchantRowsById.size).toBe(merchantFeedEligibleTours.length);
+    expect(merchantRowsById.has("5765P7")).toBe(false);
   });
 
   it("audits commercial parity across tour page, Product JSON-LD, and merchantFeed.csv", async () => {
     const schemaResolvedTours = await resolveEngine6ToursForProductSchema(
-      engine6ResolvedTours
+      merchantFeedEligibleTours
     );
     const audit = auditEngine6MerchantFeedCommercialParity(
       schemaResolvedTours,
       merchantRowsById
     );
 
-    expect(audit.totalRowsAudited).toBe(engine6ResolvedTours.length);
+    expect(audit.totalRowsAudited).toBe(merchantFeedEligibleTours.length);
     expect(audit.priceMismatches).toBe(0);
     expect(audit.ratingMismatches).toBe(0);
     expect(audit.reviewCountMismatches).toBe(0);
