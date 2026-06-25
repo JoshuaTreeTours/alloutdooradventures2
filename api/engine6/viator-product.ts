@@ -9,6 +9,11 @@ import {
   extractEngine6Product,
   type Engine6Extracted,
 } from "./viatorExtractors.js";
+import {
+  applyAvailabilitySummaryPrice,
+  applyLiveReviewsCommercial,
+  fetchViatorLiveJson,
+} from "./viatorLiveCommercialFetch.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 
@@ -49,59 +54,6 @@ const sanitizeRawProductForResponse = (
   delete sanitized.itineraryItems;
   sanitized.description = HAPPY_HOUR_YACHT_DESCRIPTION;
   return sanitized;
-};
-
-const buildHeaders = (apiKey: string) => ({
-  "Content-Type": "application/json;version=2.0",
-  Accept: "application/json;version=2.0",
-  "Accept-Language": "en-US",
-  "exp-api-key": apiKey,
-});
-
-const extractAvailabilitySummaryPrice = (payload: unknown): number | null => {
-  if (!payload || typeof payload !== "object") {
-    return null;
-  }
-
-  const summary = (payload as Record<string, unknown>).summary;
-  if (!summary || typeof summary !== "object") {
-    return null;
-  }
-
-  const fromPrice = (summary as Record<string, unknown>).fromPrice;
-  if (
-    typeof fromPrice !== "number" ||
-    !Number.isFinite(fromPrice) ||
-    fromPrice <= 0
-  ) {
-    return null;
-  }
-
-  return fromPrice;
-};
-
-const fetchAvailabilitySummaryPrice = async (args: {
-  apiKey: string;
-  baseUrl: string;
-  productCode: string;
-}): Promise<number | null> => {
-  const url = `${args.baseUrl}/availability/schedules/${encodeURIComponent(args.productCode)}?currency=USD`;
-  const response = await fetch(url, {
-    headers: buildHeaders(args.apiKey),
-  });
-  if (!response.ok) {
-    return null;
-  }
-
-  const contentType = String(
-    response.headers.get("content-type") ?? ""
-  ).toLowerCase();
-  if (!contentType.includes("json")) {
-    return null;
-  }
-
-  const payload = (await response.json()) as unknown;
-  return extractAvailabilitySummaryPrice(payload);
 };
 
 const getBundledExactProductPayload = async (productCode: string) => {
@@ -642,37 +594,20 @@ export default async function handler(req: any, res: any) {
 
   diagnostics.attemptedLiveFetch = true;
 
-  let upstreamResponse: Response;
-  try {
-    upstreamResponse = await fetch(requestUrl, {
-      method: "GET",
-      headers: buildHeaders(key),
-    });
-  } catch (error) {
-    if (bundledPayload) {
-      diagnostics.usedBundledFallbackBecause = "live-fetch-threw";
-      respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
-      return;
-    }
+  const normalizedBaseUrl = baseUrl.replace(/\/$/, "");
+  const productResponse = await fetchViatorLiveJson({
+    apiKey: key,
+    url: requestUrl,
+  });
 
-    respondWithErrorEnvelope(res, {
-      statusCode: 502,
-      productCode,
-      error: "Failed to reach Viator API",
-      diagnostics,
-      details: error instanceof Error ? error.message : String(error),
-    });
-    return;
-  }
+  diagnostics.upstreamStatus = productResponse.status;
+  diagnostics.upstreamOk =
+    productResponse.status >= 200 && productResponse.status < 300;
+  diagnostics.upstreamContentType = diagnostics.upstreamOk
+    ? "application/json"
+    : null;
 
-  diagnostics.upstreamStatus = upstreamResponse.status;
-  diagnostics.upstreamContentType =
-    upstreamResponse.headers.get("content-type");
-  diagnostics.upstreamOk = upstreamResponse.ok;
-
-  const rawText = await upstreamResponse.text();
-
-  if (!upstreamResponse.ok) {
+  if (!diagnostics.upstreamOk) {
     if (bundledPayload) {
       diagnostics.usedBundledFallbackBecause = "upstream-not-ok";
       const liveExtraction = safeExtractEngine6Product({
@@ -693,12 +628,12 @@ export default async function handler(req: any, res: any) {
       productCode,
       error: "Viator API returned an error response",
       diagnostics,
-      details: rawText.slice(0, 500),
+      details: `HTTP ${productResponse.status}`,
     });
     return;
   }
 
-  if (!diagnostics.upstreamContentType?.includes("json")) {
+  if (productResponse.payload === null) {
     if (bundledPayload) {
       diagnostics.usedBundledFallbackBecause = "upstream-non-json";
       respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
@@ -710,64 +645,59 @@ export default async function handler(req: any, res: any) {
       productCode,
       error: "Viator API returned non-JSON payload",
       diagnostics,
-      details: rawText.slice(0, 500),
     });
     return;
   }
 
-  let payload: unknown;
-  try {
-    payload = JSON.parse(rawText);
-  } catch {
-    if (bundledPayload) {
-      diagnostics.usedBundledFallbackBecause = "upstream-invalid-json";
-      respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
-      return;
-    }
-
-    respondWithErrorEnvelope(res, {
-      statusCode: 502,
-      productCode,
-      error: "Viator API returned invalid JSON",
-      diagnostics,
-      details: rawText.slice(0, 500),
-    });
-    return;
-  }
-
+  const payload = productResponse.payload;
   const extracted = safeExtractEngine6Product(payload);
-  const normalizedBaseUrl = baseUrl.replace(/\/$/, "");
-  const liveAvailabilityPrice =
-    extracted.extracted.priceAmount === null
-      ? await fetchAvailabilitySummaryPrice({
-          apiKey: key,
-          baseUrl: normalizedBaseUrl,
-          productCode,
-        })
-      : null;
-  const extractedWithAvailabilityPrice: ReturnType<
-    typeof extractEngine6Product
-  > =
-    typeof liveAvailabilityPrice === "number"
-      ? ({
-          ...extracted,
-          diagnostics: {
-            ...extracted.diagnostics,
-            commercialPriceFieldPath: "availability.summary.fromPrice",
-            commercialPriceRawValue: liveAvailabilityPrice,
-            priceSourceUsed: "live-price",
-          },
-          extracted: {
-            ...extracted.extracted,
-            priceAmount: liveAvailabilityPrice,
-            priceFormatted: `From $${liveAvailabilityPrice.toFixed(2)}`,
-          },
-        } as ReturnType<typeof extractEngine6Product>)
-      : extracted;
+  const extractedWithAvailabilityPrice = await applyAvailabilitySummaryPrice({
+    apiKey: key,
+    baseUrl: normalizedBaseUrl,
+    productCode,
+    extracted: extracted.extracted,
+  });
+  const extractedWithReviews = await applyLiveReviewsCommercial({
+    apiKey: key,
+    baseUrl: normalizedBaseUrl,
+    productCode,
+    extracted: extractedWithAvailabilityPrice,
+  });
+  const extractedWithLiveCommercial: ReturnType<typeof extractEngine6Product> =
+    {
+      ...extracted,
+      diagnostics: {
+        ...extracted.diagnostics,
+        ...(typeof extractedWithReviews.priceAmount === "number"
+          ? {
+              commercialPriceFieldPath:
+                extracted.diagnostics.commercialPriceFieldPath ??
+                "availability.summary.fromPrice",
+              commercialPriceRawValue: extractedWithReviews.priceAmount,
+              priceSourceUsed: "live-price" as const,
+            }
+          : {}),
+        ...(typeof extractedWithReviews.aggregateRating === "number"
+          ? {
+              ratingFieldPath:
+                extracted.diagnostics.ratingFieldPath ??
+                "reviews.product.totalReviewsSummary",
+            }
+          : {}),
+        ...(typeof extractedWithReviews.reviewCount === "number"
+          ? {
+              reviewCountFieldPath:
+                extracted.diagnostics.reviewCountFieldPath ??
+                "reviews.product.totalReviewsSummary",
+            }
+          : {}),
+      },
+      extracted: extractedWithReviews,
+    };
 
   const extractedProductCode =
-    typeof extractedWithAvailabilityPrice.product?.productCode === "string"
-      ? extractedWithAvailabilityPrice.product.productCode.trim().toUpperCase()
+    typeof extractedWithLiveCommercial.product?.productCode === "string"
+      ? extractedWithLiveCommercial.product.productCode.trim().toUpperCase()
       : null;
 
   if (
@@ -781,14 +711,14 @@ export default async function handler(req: any, res: any) {
       productCode,
       bundledPayload,
       diagnostics,
-      extractedWithAvailabilityPrice
+      extractedWithLiveCommercial
     );
     return;
   }
 
   if (
     bundledPayload &&
-    extractedWithAvailabilityPrice.extracted.priceAmount === null
+    extractedWithLiveCommercial.extracted.priceAmount === null
   ) {
     diagnostics.usedBundledFallbackBecause = "live-price-missing-or-zero";
     respondWithBundledFallback(
@@ -796,30 +726,30 @@ export default async function handler(req: any, res: any) {
       productCode,
       bundledPayload,
       diagnostics,
-      extractedWithAvailabilityPrice
+      extractedWithLiveCommercial
     );
     return;
   }
 
   if (
     bundledPayload &&
-    extractedWithAvailabilityPrice.diagnostics.heroFallbackTriggered
+    extractedWithLiveCommercial.diagnostics.heroFallbackTriggered
   ) {
     respondWithLiveApiAndSafeHeroOverride(res, {
       productCode,
-      liveExtraction: extractedWithAvailabilityPrice,
+      liveExtraction: extractedWithLiveCommercial,
       bundledPayload,
       diagnostics,
     });
     return;
   }
 
-  Object.assign(diagnostics, extractedWithAvailabilityPrice.diagnostics, {
+  Object.assign(diagnostics, extractedWithLiveCommercial.diagnostics, {
     source: "live-api",
   });
   const strictHeroViolationReason = getStrictHeroViolationReason({
     productCode,
-    extractedHeroUrl: extractedWithAvailabilityPrice.extracted.heroImageUrl,
+    extractedHeroUrl: extractedWithLiveCommercial.extracted.heroImageUrl,
     diagnostics,
   });
   if (strictHeroViolationReason) {
@@ -839,8 +769,8 @@ export default async function handler(req: any, res: any) {
     source: "live-api",
     diagnostics,
     productCode,
-    rawProduct: extractedWithAvailabilityPrice.product,
-    extracted: extractedWithAvailabilityPrice.extracted,
+    rawProduct: extractedWithLiveCommercial.product,
+    extracted: extractedWithLiveCommercial.extracted,
     headers: {
       "Cache-Control": "public, s-maxage=300, stale-while-revalidate=1800",
       "X-Engine6-Source": "live-api",

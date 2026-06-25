@@ -1,16 +1,87 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
-import { describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import { extractEngine6Product } from "./viatorExtractors";
 import {
   detectLiveViatorProductRatingMetadata,
+  diagnoseEngine6ViatorProductCommercialExtract,
   passesMerchantFeedLiveCommercialGuard,
   resolveEngine6ViatorProductCommercialExtract,
   type Engine6ViatorProductCommercialDiagnostic,
 } from "./resolveEngine6ViatorProductCommercialExtract";
 
+vi.mock("../../lib/viator.js", () => ({
+  fetchViatorWithCurl: vi.fn(),
+}));
+
+const { fetchViatorWithCurl } = await import("../../lib/viator.js");
+
 describe("resolveEngine6ViatorProductCommercialExtract", () => {
+  beforeEach(() => {
+    vi.stubGlobal("fetch", vi.fn());
+    vi.mocked(fetchViatorWithCurl).mockReset();
+  });
+
+  afterEach(() => {
+    vi.unstubAllGlobals();
+    delete process.env.VIATOR_API_KEY;
+    delete process.env.ENGINE6_VIATOR_API_KEY;
+    delete process.env.VIATOR_PARTNER_API_KEY;
+  });
+
+  it("resolves live-api when availability search returns a price via curl fallback", async () => {
+    process.env.VIATOR_API_KEY = "test-key";
+    vi.mocked(fetch).mockRejectedValue(new Error("ENETUNREACH"));
+    vi.mocked(fetchViatorWithCurl).mockImplementation(async url => {
+      if (String(url).includes("/products/191303P1")) {
+        return {
+          status: 200,
+          body: JSON.stringify({
+            productCode: "191303P1",
+            title: "San Diego Electric Bike Tour",
+            reviews: { combinedAverageRating: 5, totalReviews: 54 },
+          }),
+        };
+      }
+
+      if (String(url).includes("/availability/schedules/191303P1")) {
+        return { status: 200, body: JSON.stringify({ summary: {} }) };
+      }
+
+      if (String(url).includes("/availability/schedules/search")) {
+        return {
+          status: 200,
+          body: JSON.stringify({
+            bookableItems: [{ pricing: { recommendedRetailPrice: 89 } }],
+          }),
+        };
+      }
+
+      if (String(url).includes("/reviews/product")) {
+        return {
+          status: 200,
+          body: JSON.stringify({
+            totalReviewsSummary: {
+              combinedAverageRating: 5,
+              totalReviews: 54,
+            },
+          }),
+        };
+      }
+
+      return { status: 404, body: "{}" };
+    });
+
+    const diagnostic =
+      await diagnoseEngine6ViatorProductCommercialExtract("191303P1");
+
+    expect(diagnostic.commercial.source).toBe("live-api");
+    expect(diagnostic.failureReason).toBe("live-api-success");
+    expect(diagnostic.commercial.priceAmount).toBe(89);
+    expect(passesMerchantFeedLiveCommercialGuard(diagnostic).pass).toBe(true);
+  });
+
   it("reads bundled Santa Barbara trolley commercial fields when no API key is configured", async () => {
     const previousApiKey = process.env.VIATOR_API_KEY;
     const previousEngine6ApiKey = process.env.ENGINE6_VIATOR_API_KEY;
