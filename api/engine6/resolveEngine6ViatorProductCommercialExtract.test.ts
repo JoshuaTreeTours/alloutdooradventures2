@@ -3,7 +3,12 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 
 import { extractEngine6Product } from "./viatorExtractors";
-import { resolveEngine6ViatorProductCommercialExtract } from "./resolveEngine6ViatorProductCommercialExtract";
+import {
+  detectLiveViatorProductRatingMetadata,
+  passesMerchantFeedLiveCommercialGuard,
+  resolveEngine6ViatorProductCommercialExtract,
+  type Engine6ViatorProductCommercialDiagnostic,
+} from "./resolveEngine6ViatorProductCommercialExtract";
 
 describe("resolveEngine6ViatorProductCommercialExtract", () => {
   it("reads bundled Santa Barbara trolley commercial fields when no API key is configured", async () => {
@@ -56,5 +61,83 @@ describe("resolveEngine6ViatorProductCommercialExtract", () => {
     expect(extracted.priceAmount).toBe(37);
     expect(extracted.reviewCount).toBe(853);
     expect(extracted.aggregateRating).toBe(4.6);
+  });
+});
+
+describe("merchant feed live commercial guard", () => {
+  const unratedSuccess = (
+    overrides: Partial<Engine6ViatorProductCommercialDiagnostic> = {}
+  ): Engine6ViatorProductCommercialDiagnostic => ({
+    productCode: "447486P2",
+    commercial: {
+      priceAmount: 45,
+      priceFormatted: "From $45.00",
+      aggregateRating: null,
+      reviewCount: null,
+      source: "live-api",
+    },
+    hasViatorApiKey: true,
+    attemptedLiveFetch: true,
+    upstreamStatus: 200,
+    upstreamOk: true,
+    failureReason: "live-api-success",
+    pricingAvailable: true,
+    ratingAvailable: false,
+    reviewCountAvailable: false,
+    ratingMetadataPresent: false,
+    ...overrides,
+  });
+
+  it("passes when live price resolves and Viator provides no rating metadata", () => {
+    expect(passesMerchantFeedLiveCommercialGuard(unratedSuccess()).pass).toBe(
+      true
+    );
+  });
+
+  it("fails when bundled commercial fallback is used", () => {
+    const result = passesMerchantFeedLiveCommercialGuard(
+      unratedSuccess({
+        commercial: {
+          priceAmount: 45,
+          priceFormatted: "From $45.00",
+          aggregateRating: 5,
+          reviewCount: 54,
+          source: "bundled-fallback",
+        },
+        failureReason: "live-price-missing-or-zero",
+      })
+    );
+
+    expect(result.pass).toBe(false);
+    expect(result.reason).toContain("bundled commercial fallback forbidden");
+  });
+
+  it("fails when live rating metadata exists but extraction is incomplete", () => {
+    const result = passesMerchantFeedLiveCommercialGuard(
+      unratedSuccess({
+        failureReason: "live-rating-extraction-failed",
+        ratingMetadataPresent: true,
+      })
+    );
+
+    expect(result.pass).toBe(false);
+  });
+
+  it("detects absent rating metadata when Viator only reports totalReviews zero", () => {
+    expect(
+      detectLiveViatorProductRatingMetadata({
+        productCode: "447486P2",
+        reviews: { totalReviews: 0 },
+      })
+    ).toBe(false);
+  });
+
+  it("detects rating metadata when combinedAverageRating is present", () => {
+    expect(
+      detectLiveViatorProductRatingMetadata({
+        productCode: "191303P1",
+        reviews: { combinedAverageRating: 5, totalReviews: 54 },
+      })
+    ).toBe(true);
   });
 });

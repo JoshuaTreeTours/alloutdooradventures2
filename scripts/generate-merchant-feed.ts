@@ -3,6 +3,7 @@ import path from "node:path";
 
 import {
   diagnoseEngine6ViatorProductCommercialExtract,
+  passesMerchantFeedLiveCommercialGuard,
   resolveViatorApiConfig,
 } from "../api/engine6/resolveEngine6ViatorProductCommercialExtract";
 import { buildMerchantFeedRowFromProductSchema } from "../src/engine6/merchantFeedFromProductSchema";
@@ -246,20 +247,9 @@ const assertLiveCommercialExtracts = async (productCodes: string[]) => {
     const diagnostic =
       await diagnoseEngine6ViatorProductCommercialExtract(productCode);
 
-    if (diagnostic.failureReason !== "live-api-success") {
-      failures.push(
-        `${productCode}: ${diagnostic.failureReason} (upstream HTTP ${diagnostic.upstreamStatus ?? "n/a"})`
-      );
-    }
-
-    if (
-      !diagnostic.pricingAvailable ||
-      !diagnostic.ratingAvailable ||
-      !diagnostic.reviewCountAvailable
-    ) {
-      failures.push(
-        `${productCode}: incomplete commercial fields (price=${diagnostic.commercial.priceAmount ?? "null"}, rating=${diagnostic.commercial.aggregateRating ?? "null"}, reviews=${diagnostic.commercial.reviewCount ?? "null"})`
-      );
+    const guard = passesMerchantFeedLiveCommercialGuard(diagnostic);
+    if (!guard.pass) {
+      failures.push(`${productCode}: ${guard.reason}`);
     }
   }
 
@@ -385,6 +375,22 @@ const main = async () => {
     )
   );
   console.log(formatMerchantFeedLiveRuntimeParityReport(runtimeParityAudit));
+
+  const unratedProducts = outputRows
+    .filter(
+      row =>
+        !row.average_rating?.trim() ||
+        !row.rating_count?.trim() ||
+        !row.review_count?.trim()
+    )
+    .map(row => row.id);
+
+  if (unratedProducts.length > 0) {
+    console.log(
+      `Legitimate unrated merchant feed rows (blank rating/review fields): ${unratedProducts.length}`
+    );
+    console.log(unratedProducts.join(", "));
+  }
 };
 
 if (process.argv[1]?.includes("generate-merchant-feed")) {
