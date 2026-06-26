@@ -247,6 +247,8 @@ const respondWithErrorEnvelope = (
     error: string;
     source?: "live-api" | "bundled-fallback";
     diagnostics?: ReturnType<typeof buildDiagnostics>;
+    rawProduct?: Record<string, unknown> | null;
+    extracted?: ReturnType<typeof extractEngine6Product>["extracted"];
     details?: string;
   }
 ) =>
@@ -256,7 +258,12 @@ const respondWithErrorEnvelope = (
     diagnostics:
       args.diagnostics ?? buildDiagnostics(args.source ?? "live-api", false),
     productCode: args.productCode,
-    ...buildEmptyEnvelope(args.productCode),
+    rawProduct:
+      args.rawProduct !== undefined
+        ? args.rawProduct
+        : buildEmptyEnvelope(args.productCode).rawProduct,
+    extracted:
+      args.extracted ?? buildEmptyEnvelope(args.productCode).extracted,
     error: args.error,
     ...(args.details ? { details: args.details } : {}),
   });
@@ -463,6 +470,8 @@ const respondWithBundledFallback = (
       source: "bundled-fallback",
       diagnostics,
       productCode,
+      rawProduct: bundledExtraction.product,
+      extracted: mergedWithLiveDynamicFields.extracted,
       error: "Engine6 strict exact-product hero validation failed",
       details: strictHeroViolationReason,
     });
@@ -516,6 +525,8 @@ const respondWithLiveApiAndSafeHeroOverride = (
       source: "live-api",
       diagnostics: args.diagnostics,
       productCode: args.productCode,
+      rawProduct: args.liveExtraction.product,
+      extracted: merged.extracted,
       error: "Engine6 strict exact-product hero validation failed",
       details: strictHeroViolationReason,
     });
@@ -758,6 +769,8 @@ export default async function handler(req: any, res: any) {
       source: "live-api",
       diagnostics,
       productCode,
+      rawProduct: extractedWithLiveCommercial.product,
+      extracted: extractedWithLiveCommercial.extracted,
       error: "Engine6 strict exact-product hero validation failed",
       details: strictHeroViolationReason,
     });
