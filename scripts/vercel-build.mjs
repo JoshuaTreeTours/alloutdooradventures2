@@ -1,4 +1,4 @@
-import { execSync } from "node:child_process";
+import { execSync, spawnSync } from "node:child_process";
 import fs from "node:fs";
 
 const VERCEL_ENV = (process.env.VERCEL_ENV || "").toLowerCase();
@@ -26,6 +26,91 @@ function run(cmd, extraEnv = {}) {
     stdio: "inherit",
     env: { ...buildEnv, ...extraEnv },
   });
+}
+
+function emitCapturedProcessOutput(label, stdout, stderr) {
+  if (stdout) {
+    process.stdout.write(stdout);
+  }
+  if (stderr) {
+    process.stderr.write(stderr);
+  }
+}
+
+function formatCapturedProcessFailure(stdout, stderr) {
+  const sections = [];
+
+  if (stdout?.trim()) {
+    sections.push("--- stdout ---", stdout.trimEnd());
+  }
+
+  if (stderr?.trim()) {
+    sections.push("--- stderr ---", stderr.trimEnd());
+  }
+
+  if (sections.length === 0) {
+    sections.push("(no captured stdout/stderr)");
+  }
+
+  return sections.join("\n");
+}
+
+function runMerchantFeedGeneration() {
+  const cmd = "tsx";
+  const args = ["scripts/generate-merchant-feed.ts"];
+  const extraEnv = { REQUIRE_LIVE_MERCHANT_COMMERCIAL: "1" };
+
+  console.log(`\n> ${cmd} ${args.join(" ")}`);
+  console.log("[vercel-build] merchant feed env:", {
+    REQUIRE_LIVE_MERCHANT_COMMERCIAL: "1",
+    MERCHANT_FEED_RUNTIME_BASE_URL:
+      process.env.MERCHANT_FEED_RUNTIME_BASE_URL ?? "(unset)",
+    ENGINE6_RUNTIME_BASE_URL:
+      process.env.ENGINE6_RUNTIME_BASE_URL ?? "(unset)",
+    VIATOR_API_KEY: process.env.VIATOR_API_KEY ? "(set)" : "(unset)",
+    ENGINE6_VIATOR_API_KEY: process.env.ENGINE6_VIATOR_API_KEY
+      ? "(set)"
+      : "(unset)",
+    VIATOR_PARTNER_API_KEY: process.env.VIATOR_PARTNER_API_KEY
+      ? "(set)"
+      : "(unset)",
+    VIATOR_API_BASE_URL: process.env.VIATOR_API_BASE_URL ?? "(unset)",
+    VIATOR_BASE_URL: process.env.VIATOR_BASE_URL ?? "(unset)",
+  });
+
+  const result = spawnSync(`${cmd} ${args.join(" ")}`, {
+    env: { ...buildEnv, ...extraEnv },
+    encoding: "utf8",
+    maxBuffer: 64 * 1024 * 1024,
+    shell: true,
+    stdio: ["inherit", "pipe", "pipe"],
+  });
+
+  emitCapturedProcessOutput(
+    "[vercel-build][merchant-feed]",
+    result.stdout,
+    result.stderr
+  );
+
+  if (result.status !== 0) {
+    const failureDetails = formatCapturedProcessFailure(
+      result.stdout,
+      result.stderr
+    );
+
+    console.error(
+      `[vercel-build] generate-merchant-feed.ts failed (exit ${result.status ?? "null"})`
+    );
+    console.error(`[vercel-build] ${failureDetails.replace(/\n/g, "\n[vercel-build] ")}`);
+
+    if (result.error) {
+      console.error("[vercel-build] spawn error:", result.error);
+    }
+
+    throw new Error(
+      `generate-merchant-feed.ts failed with exit code ${result.status ?? "null"}\n${failureDetails}`
+    );
+  }
 }
 
 const runBuildArtifactVerification =
@@ -64,9 +149,7 @@ if (!isPreview && exists("scripts/generate-tour-enrichment.mjs")) {
 }
 
 if (!isPreview && exists("scripts/generate-merchant-feed.ts")) {
-  run("tsx scripts/generate-merchant-feed.ts", {
-    REQUIRE_LIVE_MERCHANT_COMMERCIAL: "1",
-  });
+  runMerchantFeedGeneration();
 } else if (!isPreview) {
   console.log("Skipping merchant feed generation.");
 }

@@ -9,6 +9,7 @@ import {
 import { loadMerchantFeedNotYetPublishedOnProductionProductCodes } from "../api/engine6/merchantFeedProductionDeploymentBaseline";
 import {
   diagnoseEngine6ViatorProductCommercialExtract,
+  describeViatorApiConfigEnvVisibility,
   resolveViatorApiConfig,
 } from "../api/engine6/resolveEngine6ViatorProductCommercialExtract";
 import { buildMerchantFeedRowFromProductSchema } from "../src/engine6/merchantFeedFromProductSchema";
@@ -256,6 +257,33 @@ const resolveRuntimeCommercialBaseUrl = () =>
     ""
   ).replace(/\/$/, "");
 
+const logMerchantFeedBuildEnvVisibility = () => {
+  const runtimeBaseUrl = resolveRuntimeCommercialBaseUrl();
+  console.log(
+    "[merchant-feed-build] env visibility:",
+    JSON.stringify(
+      {
+        VERCEL_ENV: process.env.VERCEL_ENV ?? "(unset)",
+        REQUIRE_LIVE_MERCHANT_COMMERCIAL:
+          process.env.REQUIRE_LIVE_MERCHANT_COMMERCIAL ?? "(unset)",
+        requireLiveMerchantCommercial: requireLiveMerchantCommercial(),
+        MERCHANT_FEED_RUNTIME_BASE_URL: process.env.MERCHANT_FEED_RUNTIME_BASE_URL
+          ? "(set)"
+          : "(unset)",
+        ENGINE6_RUNTIME_BASE_URL: process.env.ENGINE6_RUNTIME_BASE_URL
+          ? "(set)"
+          : "(unset)",
+        runtimeCommercialBaseUrlResolved: runtimeBaseUrl || "(empty)",
+        VIATOR_API_BASE_URL: process.env.VIATOR_API_BASE_URL ?? "(unset)",
+        VIATOR_BASE_URL: process.env.VIATOR_BASE_URL ?? "(unset)",
+        ...describeViatorApiConfigEnvVisibility(),
+      },
+      null,
+      2
+    )
+  );
+};
+
 const parseLiveCommercialFailureProductCode = (failure: string) =>
   failure.split(":")[0]?.trim().toUpperCase() ?? "";
 
@@ -398,6 +426,8 @@ const resolveToursForMerchantFeedGeneration = async (
 };
 
 const main = async () => {
+  logMerchantFeedBuildEnvVisibility();
+
   const existingRows = await readExistingMerchantFeedRows();
   const publishedBaseline = buildMerchantFeedPublishedBaselineCatalog(existingRows);
   const notYetPublishedOnProductionProductCodes =

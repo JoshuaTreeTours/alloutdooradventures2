@@ -191,6 +191,21 @@ export const resolveViatorApiConfig = () => {
   return { apiKey, baseUrl };
 };
 
+/** Build-time diagnostic only: never logs secret values. */
+export const describeViatorApiConfigEnvVisibility = () => {
+  const { apiKey, baseUrl } = resolveViatorApiConfig();
+
+  return {
+    rawEnvSet: {
+      VIATOR_API_KEY: Boolean(process.env.VIATOR_API_KEY),
+      ENGINE6_VIATOR_API_KEY: Boolean(process.env.ENGINE6_VIATOR_API_KEY),
+      VIATOR_PARTNER_API_KEY: Boolean(process.env.VIATOR_PARTNER_API_KEY),
+    },
+    resolvedApiKeyVisible: Boolean(apiKey),
+    resolvedBaseUrl: baseUrl,
+  };
+};
+
 const buildCommercialDiagnostic = (args: {
   productCode: string;
   commercial: Engine6ViatorProductCommercialExtract;
