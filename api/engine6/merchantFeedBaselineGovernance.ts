@@ -127,7 +127,7 @@ export const requiresStrictMerchantFeedLiveCommercialGuard = (
 
 export const requiresStrictMerchantFeedRuntimeParity = (
   tier: MerchantFeedGovernanceTier
-) => tier !== "unchanged-legacy-baseline";
+) => tier === "new-product";
 
 export const isMerchantFeedProductionRuntimeNotYetPublishedError = (
   error: unknown

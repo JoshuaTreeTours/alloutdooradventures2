@@ -1,3 +1,6 @@
+import { execFileSync } from "node:child_process";
+import { readFileSync } from "node:fs";
+
 import { describe, expect, it } from "vitest";
 
 import {
@@ -18,6 +21,7 @@ import {
   passesMerchantFeedLiveCommercialGuard,
   type Engine6ViatorProductCommercialDiagnostic,
 } from "./resolveEngine6ViatorProductCommercialExtract";
+import { validateMerchantFeedRows } from "../../scripts/generate-merchant-feed";
 
 const baselineRow = {
   id: "191303P1",
@@ -89,7 +93,7 @@ describe("merchant feed baseline governance", () => {
     ).toBe("new-product");
   });
 
-  it("requires strict governance only for new and modified products", () => {
+  it("requires strict live API governance for new and modified products, but runtime parity only for new products", () => {
     expect(requiresStrictMerchantFeedLiveCommercialGuard("unchanged-legacy-baseline")).toBe(
       false
     );
@@ -97,9 +101,8 @@ describe("merchant feed baseline governance", () => {
       true
     );
     expect(requiresStrictMerchantFeedLiveCommercialGuard("new-product")).toBe(true);
-    expect(requiresStrictMerchantFeedRuntimeParity("unchanged-legacy-baseline")).toBe(
-      false
-    );
+    expect(requiresStrictMerchantFeedRuntimeParity("unchanged-legacy-baseline")).toBe(false);
+    expect(requiresStrictMerchantFeedRuntimeParity("modified-commercial")).toBe(false);
     expect(requiresStrictMerchantFeedRuntimeParity("new-product")).toBe(true);
   });
 
@@ -126,22 +129,30 @@ describe("merchant feed baseline governance", () => {
     expect(build.reason).toContain("bundled commercial fallback forbidden");
   });
 
-  it("treats runtime parity drift as informational for unchanged baseline products only", () => {
+  it("treats pre-Monterey runtime price/rating/review drift as informational while new-product drift blocks", () => {
     const governanceByProductCode = new Map([
       ["191303P1", "unchanged-legacy-baseline" as const],
+      ["44152P18", "modified-commercial" as const],
       ["NEWTOUR1", "new-product" as const],
     ]);
 
     const evaluation = evaluateMerchantFeedLiveRuntimeParityForBuild(
       {
-        drifts: [{ productCode: "191303P1" }, { productCode: "NEWTOUR1" }],
+        drifts: [
+          { productCode: "191303P1" },
+          { productCode: "44152P18" },
+          { productCode: "NEWTOUR1" },
+        ],
       },
       governanceByProductCode
     );
 
     expect(evaluation.pass).toBe(false);
     expect(evaluation.blockingDriftCount).toBe(1);
-    expect(evaluation.informationalLegacyProductCodes).toEqual(["191303P1"]);
+    expect(evaluation.informationalLegacyProductCodes).toEqual([
+      "191303P1",
+      "44152P18",
+    ]);
   });
 
   it("passes runtime parity when only unchanged baseline products drift", () => {
@@ -249,7 +260,7 @@ describe("merchant feed branch-scoped runtime parity", () => {
     mainBaselineRow,
   ]);
 
-  it("blocks runtime drift for branch-changed commercial output vs main", () => {
+  it("logs branch-changed pre-Monterey commercial runtime drift as informational only", () => {
     const outputRows = [
       {
         id: "191303P1",
@@ -274,8 +285,8 @@ describe("merchant feed branch-scoped runtime parity", () => {
       branchScopedGovernance
     );
 
-    expect(report.pass).toBe(false);
-    expect(report.informationalLegacyProductCodes).toEqual([]);
+    expect(report.pass).toBe(true);
+    expect(report.informationalLegacyProductCodes).toEqual(["191303P1"]);
   });
 
   it("reports unchanged main-baseline runtime drift as informational only", () => {
@@ -327,5 +338,54 @@ describe("merchant feed branch-scoped runtime parity", () => {
     );
 
     expect(report.pass).toBe(false);
+  });
+
+  it("blocks Monterey/new products when required merchant fields are missing", () => {
+    const validation = validateMerchantFeedRows([
+      {
+        id: "70275P1",
+        title: "Monterey 17 Mile Drive Guided Electric Bike Tour",
+        description: "Monterey product",
+        link: "https://example.com/monterey",
+        image_link: "",
+        availability: "in stock",
+        price: "55 USD",
+        condition: "new",
+        brand: "Viator",
+        average_rating: "5.0",
+        rating_count: "889",
+        review_count: "889",
+      },
+    ]);
+
+    expect(validation.pass).toBe(false);
+    expect(validation.failures).toContain(
+      'Required field "image_link" is blank for product 70275P1'
+    );
+  });
+
+  it("does not mutate merchantFeed.csv while applying runtime parity policy", () => {
+    const before = readFileSync("data/merchantFeed.csv", "utf8");
+
+    applyMerchantFeedLiveRuntimeParityBaselinePolicy(
+      {
+        pass: false,
+        drifts: [{ productCode: "191303P1" }, { productCode: "NEWTOUR1" }],
+      },
+      new Map([
+        ["191303P1", "modified-commercial" as const],
+        ["NEWTOUR1", "new-product" as const],
+      ])
+    );
+
+    const after = readFileSync("data/merchantFeed.csv", "utf8");
+    const merchantFeedDiff = execFileSync(
+      "git",
+      ["diff", "--", "data/merchantFeed.csv"],
+      { encoding: "utf8" }
+    );
+
+    expect(after).toBe(before);
+    expect(merchantFeedDiff).toBe("");
   });
 });
