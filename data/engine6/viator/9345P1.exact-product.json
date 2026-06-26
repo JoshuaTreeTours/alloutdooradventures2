@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "9345P1",
+    "productUrl": "https://www.viator.com/tours/Monterey-and-Carmel/Monterey-Bay-Sailing-Family-Cruise/d5250-9345P1",
+    "title": "Monterey Bay Sailing Cruise",
+    "description": {
+      "text": "Sail Monterey Bay on a one- or two-hour catamaran cruise from Old Fisherman's Wharf. Watch for whales, dolphins, sea otters, and sea lions while enjoying views of the golden hills surrounding the protected marine sanctuary."
+    },
+    "location": {
+      "city": "Monterey",
+      "state": "California"
+    },
+    "duration": "1 to 2 hours (approx.)",
+    "priceFrom": "From $65.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 445
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/fe/5d/78.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sailing cruise on Monterey Bay from Fisherman's Wharf",
+      "Watch for whales, dolphins, and sea otters",
+      "One- or two-hour charter options",
+      "Views of sanctuary hills and coastline",
+      "Pet-friendly sailing experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Monterey Bay Sailing, 78 Old Fisherman's Wharf #1, Monterey, CA 93940."
+      },
+      "end": {
+        "description": "Return to Old Fisherman's Wharf after the sailing loop."
+      }
+    },
+    "itinerarySummary": "Sail Monterey Bay on a one- or two-hour catamaran cruise from Old Fisherman's Wharf.",
+    "itineraryItems": [
+      {
+        "title": "Old Fisherman's Wharf",
+        "description": "Board the catamaran at the Sail Monterey office on Fisherman's Wharf.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Monterey Bay",
+        "description": "Sail sanctuary waters with views of marine wildlife and coastal hills.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cannery Row",
+        "description": "Pass Cannery Row shoreline from open-water perspectives on the return leg.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Captain and crew"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Monterey Bay Sailing Cruise?",
+        "answer": "The planned duration is 1 to 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Monterey?",
+        "answer": "Meet at Monterey Bay Sailing, 78 Old Fisherman's Wharf #1, Monterey, CA 93940."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sailing Trips"
+      },
+      {
+        "label": "Cruises & Sailing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65
+      },
+      "currency": "USD"
+    }
+  }
+}

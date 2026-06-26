@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "88377P1",
+    "productUrl": "https://www.viator.com/tours/Monterey-and-Carmel/Old-Monterey-Walking-Food-Tour/d5250-88377P1",
+    "title": "Old Monterey Walking Food Tour",
+    "description": {
+      "text": "Taste Old Monterey on a guided walking food tour through historic adobe districts, Fisherman's Wharf, and Cannery Row corridors. Sample local seafood, artisan bites, and regional specialties while learning Monterey's Spanish and sardine-era history."
+    },
+    "location": {
+      "city": "Monterey",
+      "state": "California"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $153.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 221
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/7b/71/39.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided Old Monterey walking food tour",
+      "Tastings across historic downtown and waterfront areas",
+      "Learn Monterey adobe and Cannery Row history",
+      "Small-group format with local guide",
+      "Route covers Fisherman's Wharf and Cannery Row"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Old Monterey meeting point listed in your booking confirmation."
+      },
+      "end": {
+        "description": "Tour ends near Cannery Row or downtown Monterey."
+      }
+    },
+    "itinerarySummary": "Taste Old Monterey on a guided walking food tour through historic adobe districts, Fisherman's Wharf, and Cannery Row corridors.",
+    "itineraryItems": [
+      {
+        "title": "Old Monterey",
+        "description": "Start in the historic adobe district before the curated tasting route.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fisherman's Wharf",
+        "description": "Sample seafood and waterfront specialties along the wharf corridor.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cannery Row",
+        "description": "Continue along Cannery Row with tastings and Steinbeck-era commentary.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Food tastings"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Old Monterey Walking Food Tour?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Monterey?",
+        "answer": "Meet at the confirmed Old Monterey meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 153
+      },
+      "currency": "USD"
+    }
+  }
+}

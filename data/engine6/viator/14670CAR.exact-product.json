@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "14670CAR",
+    "productUrl": "https://www.viator.com/tours/Monterey-and-Carmel/1-Hour-Monterey-and-Cannery-Row-Sea-Car-Tour/d5250-14670CAR",
+    "title": "Ultimate Monterey Bay Cannery Row GoCar Tour",
+    "description": {
+      "text": "Explore Monterey, Cannery Row, and Pacific Grove at your own pace in a GPS-guided GoCar. The narrated route covers waterfront landmarks, 17-Mile Drive access points, and scenic overlooks with flexible one- to three-hour rental windows."
+    },
+    "location": {
+      "city": "Monterey",
+      "state": "California"
+    },
+    "duration": "1 to 3 hours (approx.)",
+    "priceFrom": "From $95.00",
+    "reviews": {
+      "combinedAverageRating": 4,
+      "totalReviews": 171
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/e8/2b/19.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "GPS-guided GoCar tour of Monterey and Cannery Row",
+      "Flexible one- to three-hour rental duration",
+      "Narrated route through Pacific Grove and bay viewpoints",
+      "Self-drive format with live GPS commentary",
+      "Cover more ground than a standard walking tour"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pick up the GoCar at the Monterey operator location listed in your booking confirmation."
+      },
+      "end": {
+        "description": "Return the GoCar to the original Monterey pickup location."
+      }
+    },
+    "itinerarySummary": "Explore Monterey, Cannery Row, and Pacific Grove at your own pace in a GPS-guided GoCar.",
+    "itineraryItems": [
+      {
+        "title": "Cannery Row",
+        "description": "Drive the narrated Cannery Row segment with GPS commentary at each landmark.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Monterey Bay",
+        "description": "Follow waterfront routes with stops at bay overlooks when you choose to pause.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pacific Grove",
+        "description": "Continue into Pacific Grove coastal lanes on the GPS-guided route.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "GoCar rental",
+      "GPS audio guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ultimate Monterey Bay Cannery Row GoCar Tour?",
+        "answer": "The planned duration is 1 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Monterey?",
+        "answer": "Pick up the GoCar at the Monterey operator location listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Self-guided Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 95
+      },
+      "currency": "USD"
+    }
+  }
+}

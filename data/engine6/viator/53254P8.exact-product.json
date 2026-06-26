@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "53254P8",
+    "productUrl": "https://www.viator.com/tours/Monterey-and-Carmel/Sunset-Whale-Watch/d5250-53254P8",
+    "title": "Sunset Whale Watch Tour in Monterey",
+    "description": {
+      "text": "Watch for whales at sunset on a guided Monterey Bay cruise led by a naturalist or marine biologist. The evening route departs from Fisherman's Wharf with provided coffee or tea while the crew searches for breaching whales and coastal wildlife."
+    },
+    "location": {
+      "city": "Monterey",
+      "state": "California"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $75.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 312
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/e7/f6.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sunset whale-watching cruise on Monterey Bay",
+      "Naturalist or marine biologist guide on board",
+      "Coffee or tea provided during the cruise",
+      "Shared group format from Fisherman's Wharf",
+      "Evening light over Pacific coastal waters"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at 66 Fisherman's Wharf, Monterey, CA 93940 at the Discovery Whale Watch blue building."
+      },
+      "end": {
+        "description": "Return to 66 Fisherman's Wharf after the sunset cruise."
+      }
+    },
+    "itinerarySummary": "Watch for whales at sunset on a guided Monterey Bay cruise led by a naturalist or marine biologist.",
+    "itineraryItems": [
+      {
+        "title": "Fisherman's Wharf",
+        "description": "Board at the Discovery Whale Watch office on Fisherman's Wharf.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Monterey Bay",
+        "description": "Cruise at sunset while the guide searches for whales and dolphins.",
+        "duration": "2 hours 15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Naturalist guide",
+      "Coffee or tea on board"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sunset Whale Watch Tour in Monterey?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Monterey?",
+        "answer": "Meet at 66 Fisherman's Wharf, Monterey, CA 93940 at the Discovery Whale Watch blue building."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Whale Watching"
+      },
+      {
+        "label": "Cruises & Sailing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 75
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "53254P1",
+    "productUrl": "https://www.viator.com/tours/Monterey-and-Carmel/Monterey-4-hour-Whale-Watching-Experience/d5250-53254P1",
+    "title": "Whale Watching Tour From Monterey",
+    "description": {
+      "text": "Cruise Monterey Bay on a guided whale-watching trip from Old Fisherman's Wharf with a naturalist crew. The route searches for gray, humpback, and blue whales plus dolphins, sea lions, and seabirds in the Monterey Bay National Marine Sanctuary."
+    },
+    "location": {
+      "city": "Monterey",
+      "state": "California"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $70.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1064
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/e7/f6.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided whale-watching cruise from Monterey Bay",
+      "Naturalist commentary on marine wildlife",
+      "Depart from Old Fisherman's Wharf",
+      "Search for gray, humpback, and blue whales",
+      "Views of dolphins, sea lions, and seabirds"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board at Old Fisherman's Wharf in Monterey at the operator location listed in your confirmation."
+      },
+      "end": {
+        "description": "Return to Old Fisherman's Wharf after the bay cruise."
+      }
+    },
+    "itinerarySummary": "Cruise Monterey Bay on a guided whale-watching trip from Old Fisherman's Wharf with a naturalist crew.",
+    "itineraryItems": [
+      {
+        "title": "Old Fisherman's Wharf",
+        "description": "Board the vessel at Monterey's historic wharf before heading into the bay.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Monterey Bay",
+        "description": "Cruise protected sanctuary waters while the crew searches for whales and dolphins.",
+        "duration": "2 hours 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Monterey Bay National Marine Sanctuary",
+        "description": "Pass through sanctuary waters with commentary on seasonal whale migration patterns.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Live commentary on board"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Whale Watching Tour From Monterey?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Monterey?",
+        "answer": "Board at Old Fisherman's Wharf in Monterey at the operator location listed in your confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Whale Watching"
+      },
+      {
+        "label": "Cruises & Sailing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 70
+      },
+      "currency": "USD"
+    }
+  }
+}

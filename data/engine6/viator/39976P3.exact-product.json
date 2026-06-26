@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "39976P3",
+    "productUrl": "https://www.viator.com/tours/Monterey-and-Carmel/Guided-Tours-of-Cannery-Row/d5250-39976P3",
+    "title": "Cannery Row Sardines Steinbeck and Sea Otters Tour",
+    "description": {
+      "text": "Walk Cannery Row on a guided tour focused on John Steinbeck history, sardine-canning heritage, and modern sea otter conservation. The route covers waterfront lanes, historic cannery sites, and Monterey Bay viewpoints with a local historian guide."
+    },
+    "location": {
+      "city": "Monterey",
+      "state": "California"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $32.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 43
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/26/1a/5c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided walking tour of historic Cannery Row",
+      "Learn John Steinbeck and sardine industry history",
+      "Sea otter and marine conservation context",
+      "Waterfront viewpoints along Monterey Bay",
+      "Small-group historian-led format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Cannery Row meeting point listed in your booking confirmation."
+      },
+      "end": {
+        "description": "Tour ends along Cannery Row near the Monterey waterfront."
+      }
+    },
+    "itinerarySummary": "Walk Cannery Row on a guided tour focused on John Steinbeck history, sardine-canning heritage, and modern sea otter conservation.",
+    "itineraryItems": [
+      {
+        "title": "Cannery Row",
+        "description": "Begin on Cannery Row with an overview of the sardine-canning era.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Monterey Bay Aquarium",
+        "description": "Pass the aquarium exterior and waterfront exhibits corridor on Cannery Row.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Monterey Bay",
+        "description": "Stop at bay viewpoints to discuss sea otters and marine sanctuary ecology.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Cannery Row Sardines Steinbeck and Sea Otters Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Monterey?",
+        "answer": "Meet at the confirmed Cannery Row meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 32
+      },
+      "currency": "USD"
+    }
+  }
+}
