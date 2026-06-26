@@ -1,6 +1,8 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
+import { MONTEREY_VIATOR_PUBLIC_RATINGS } from "../src/engine6/montereyViatorPublicRatings";
+
 type ItineraryItem = {
   title: string;
   description: string;
@@ -639,7 +641,12 @@ const MONTEREY_TOURS: MontereyTourFixture[] = [
   },
 ];
 
-const buildFixture = (tour: MontereyTourFixture) => ({
+const buildFixture = (tour: MontereyTourFixture) => {
+  const viatorRatings = MONTEREY_VIATOR_PUBLIC_RATINGS[tour.productCode];
+  const rating = viatorRatings?.rating ?? tour.rating;
+  const reviewCount = viatorRatings?.reviewCount ?? tour.reviewCount;
+
+  return {
   product: {
     productCode: tour.productCode,
     productUrl: tour.productUrl,
@@ -649,8 +656,8 @@ const buildFixture = (tour: MontereyTourFixture) => ({
     duration: tour.duration,
     priceFrom: `From $${tour.priceFrom.toFixed(2)}`,
     reviews: {
-      combinedAverageRating: tour.rating,
-      totalReviews: tour.reviewCount,
+      combinedAverageRating: rating,
+      totalReviews: reviewCount,
     },
     media: {
       images: [
@@ -696,7 +703,8 @@ const buildFixture = (tour: MontereyTourFixture) => ({
       currency: "USD",
     },
   },
-});
+  };
+};
 
 const outputDir = path.join(process.cwd(), "data", "engine6", "viator");
 mkdirSync(outputDir, { recursive: true });
