@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import {
   applyMerchantFeedLiveRuntimeParityBaselinePolicy,
+  buildMerchantFeedBranchScopedGovernanceByProductCode,
   buildMerchantFeedPublishedBaselineCatalog,
   classifyMerchantFeedGovernanceTier,
   evaluateMerchantFeedLiveRuntimeParityForBuild,
@@ -232,5 +233,99 @@ describe("merchant feed baseline governance", () => {
       "modified-commercial"
     );
     expect(reconciliation.rows[0]?.price).toBe("99.00 USD");
+  });
+});
+
+describe("merchant feed branch-scoped runtime parity", () => {
+  const mainBaselineRow = {
+    id: "191303P1",
+    price: "89.00 USD",
+    average_rating: "5.0",
+    rating_count: "54",
+    review_count: "54",
+  };
+
+  const mainBaseline = buildMerchantFeedPublishedBaselineCatalog([
+    mainBaselineRow,
+  ]);
+
+  it("blocks runtime drift for branch-changed commercial output vs main", () => {
+    const outputRows = [
+      {
+        id: "191303P1",
+        price: "99.00 USD",
+        average_rating: "5.0",
+        rating_count: "54",
+        review_count: "54",
+      },
+    ];
+    const branchScopedGovernance = buildMerchantFeedBranchScopedGovernanceByProductCode(
+      outputRows,
+      mainBaseline
+    );
+
+    expect(branchScopedGovernance.get("191303P1")).toBe("modified-commercial");
+
+    const report = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
+      {
+        pass: false,
+        drifts: [{ productCode: "191303P1" }],
+      },
+      branchScopedGovernance
+    );
+
+    expect(report.pass).toBe(false);
+    expect(report.informationalLegacyProductCodes).toEqual([]);
+  });
+
+  it("reports unchanged main-baseline runtime drift as informational only", () => {
+    const outputRows = [mainBaselineRow];
+    const branchScopedGovernance = buildMerchantFeedBranchScopedGovernanceByProductCode(
+      outputRows,
+      mainBaseline
+    );
+
+    expect(branchScopedGovernance.get("191303P1")).toBe(
+      "unchanged-legacy-baseline"
+    );
+
+    const report = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
+      {
+        pass: false,
+        drifts: [{ productCode: "191303P1" }],
+      },
+      branchScopedGovernance
+    );
+
+    expect(report.pass).toBe(true);
+    expect(report.informationalLegacyProductCodes).toEqual(["191303P1"]);
+  });
+
+  it("blocks runtime drift for branch-new products not present on main", () => {
+    const outputRows = [
+      {
+        id: "NEWTOUR1",
+        price: "45.00 USD",
+        average_rating: "4.8",
+        rating_count: "10",
+        review_count: "10",
+      },
+    ];
+    const branchScopedGovernance = buildMerchantFeedBranchScopedGovernanceByProductCode(
+      outputRows,
+      mainBaseline
+    );
+
+    expect(branchScopedGovernance.get("NEWTOUR1")).toBe("new-product");
+
+    const report = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
+      {
+        pass: false,
+        drifts: [{ productCode: "NEWTOUR1" }],
+      },
+      branchScopedGovernance
+    );
+
+    expect(report.pass).toBe(false);
   });
 });

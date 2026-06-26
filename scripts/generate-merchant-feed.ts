@@ -3,10 +3,14 @@ import path from "node:path";
 
 import {
   applyMerchantFeedLiveRuntimeParityBaselinePolicy,
+  buildMerchantFeedBranchScopedGovernanceByProductCode,
   buildMerchantFeedPublishedBaselineCatalog,
   reconcileMerchantFeedRowsWithBaselineGovernance,
 } from "../api/engine6/merchantFeedBaselineGovernance";
-import { loadMerchantFeedNotYetPublishedOnProductionProductCodes } from "../api/engine6/merchantFeedProductionDeploymentBaseline";
+import {
+  loadMerchantFeedMainBaselineCatalog,
+  loadMerchantFeedNotYetPublishedOnProductionProductCodes,
+} from "../api/engine6/merchantFeedProductionDeploymentBaseline";
 import {
   diagnoseEngine6ViatorProductCommercialExtract,
   describeViatorApiConfigEnvVisibility,
@@ -31,6 +35,7 @@ import type { Engine6Tour } from "../src/engine6/types";
 import {
   auditMerchantFeedLiveRuntimeParity,
   formatMerchantFeedLiveRuntimeParityReport,
+  logMerchantFeedInformationalLegacyRuntimeDrifts,
 } from "./audit-merchant-feed-live-runtime-parity";
 
 const OUTPUT_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
@@ -430,6 +435,7 @@ const main = async () => {
 
   const existingRows = await readExistingMerchantFeedRows();
   const publishedBaseline = buildMerchantFeedPublishedBaselineCatalog(existingRows);
+  const mainBaselineCatalog = loadMerchantFeedMainBaselineCatalog();
   const notYetPublishedOnProductionProductCodes =
     loadMerchantFeedNotYetPublishedOnProductionProductCodes(
       merchantFeedEligibleTours.map(tour => tour.productCode)
@@ -576,19 +582,27 @@ const main = async () => {
     );
   }
 
+  const branchScopedGovernanceByProductCode =
+    buildMerchantFeedBranchScopedGovernanceByProductCode(
+      outputRows,
+      mainBaselineCatalog
+    );
+
   const runtimeParityAudit = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
     await auditMerchantFeedLiveRuntimeParity(
       outputRows,
-      reconciliation.governanceByProductCode,
+      branchScopedGovernanceByProductCode,
       notYetPublishedOnProductionProductCodes
     ),
-    reconciliation.governanceByProductCode
+    branchScopedGovernanceByProductCode
   );
+
+  logMerchantFeedInformationalLegacyRuntimeDrifts(runtimeParityAudit);
 
   if (!runtimeParityAudit.pass) {
     const blockingDrifts = runtimeParityAudit.drifts.filter(drift => {
       const tier =
-        reconciliation.governanceByProductCode.get(
+        branchScopedGovernanceByProductCode.get(
           drift.productCode.trim().toUpperCase()
         ) ?? "new-product";
       return tier !== "unchanged-legacy-baseline";
@@ -606,13 +620,13 @@ const main = async () => {
       pass: false,
       failingProductCodes,
       baselineClassification: buildBaselineClassificationSnapshot(
-        reconciliation.governanceByProductCode,
+        branchScopedGovernanceByProductCode,
         failingProductCodes
       ),
       failureObjects: blockingDrifts.slice(0, 5).map(drift => ({
         productCode: drift.productCode,
         baselineTier:
-          reconciliation.governanceByProductCode.get(
+          branchScopedGovernanceByProductCode.get(
             drift.productCode.trim().toUpperCase()
           ) ?? "new-product",
         csv: drift.csv,

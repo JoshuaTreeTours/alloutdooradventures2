@@ -264,6 +264,39 @@ export const evaluateMerchantFeedLiveRuntimeParityForBuild = (
   };
 };
 
+export const buildMerchantFeedBranchScopedGovernanceByProductCode = <
+  TRow extends {
+    id: string;
+    price?: string;
+    average_rating?: string;
+    rating_count?: string;
+    review_count?: string;
+  },
+>(
+  outputRows: TRow[],
+  mainBaseline: MerchantFeedPublishedBaselineCatalog
+): Map<string, MerchantFeedGovernanceTier> => {
+  const governanceByProductCode = new Map<string, MerchantFeedGovernanceTier>();
+
+  for (const row of outputRows) {
+    const productCode = normalizeProductCode(row.id);
+    if (!productCode) {
+      continue;
+    }
+
+    governanceByProductCode.set(
+      productCode,
+      classifyMerchantFeedGovernanceTier(
+        productCode,
+        snapshotMerchantFeedCommercial(row),
+        mainBaseline
+      )
+    );
+  }
+
+  return governanceByProductCode;
+};
+
 export const applyMerchantFeedLiveRuntimeParityBaselinePolicy = <
   TReport extends {
     pass: boolean;

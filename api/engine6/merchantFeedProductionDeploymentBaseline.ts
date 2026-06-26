@@ -2,8 +2,17 @@ import { execSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
+import {
+  buildMerchantFeedPublishedBaselineCatalog,
+  type MerchantFeedPublishedBaselineCatalog,
+} from "./merchantFeedBaselineGovernance.js";
+
 /** Last known production deploy before the Monterey Engine6 catalog expansion. */
 export const DEFAULT_MERCHANT_FEED_PRODUCTION_DEPLOYMENT_GIT_REF = "cd7906a9";
+
+export const DEFAULT_MERCHANT_FEED_MAIN_BASELINE_GIT_REF = "origin/main";
+
+const MERCHANT_FEED_CSV_PATH = "data/merchantFeed.csv";
 
 const ENGINE6_PRODUCT_CODE_EXPORT_PATTERN =
   /export const ENGINE6_[A-Z0-9_]+_PRODUCT_CODE = "([^"]+)"/g;
@@ -55,6 +64,117 @@ const loadEngine6ProductCodesFromGitRef = (
 const resolveProductionDeploymentGitRef = () =>
   process.env.MERCHANT_FEED_PRODUCTION_DEPLOYMENT_GIT_REF?.trim() ||
   DEFAULT_MERCHANT_FEED_PRODUCTION_DEPLOYMENT_GIT_REF;
+
+const resolveMainBaselineGitRef = () =>
+  process.env.MERCHANT_FEED_MAIN_BASELINE_GIT_REF?.trim() ||
+  DEFAULT_MERCHANT_FEED_MAIN_BASELINE_GIT_REF;
+
+export const parseMerchantFeedCsvCommercialRows = (
+  content: string
+): Array<{
+  id: string;
+  price?: string;
+  average_rating?: string;
+  rating_count?: string;
+  review_count?: string;
+}> => {
+  const rows: string[][] = [];
+  let row: string[] = [];
+  let value = "";
+  let inQuotes = false;
+
+  for (let index = 0; index < content.length; index += 1) {
+    const char = content[index];
+    const next = content[index + 1];
+
+    if (char === '"') {
+      if (inQuotes && next === '"') {
+        value += '"';
+        index += 1;
+      } else {
+        inQuotes = !inQuotes;
+      }
+      continue;
+    }
+
+    if (char === "," && !inQuotes) {
+      row.push(value);
+      value = "";
+      continue;
+    }
+
+    if ((char === "\n" || char === "\r") && !inQuotes) {
+      if (char === "\r" && next === "\n") index += 1;
+      row.push(value);
+      rows.push(row);
+      row = [];
+      value = "";
+      continue;
+    }
+
+    value += char;
+  }
+
+  if (value || row.length > 0) {
+    row.push(value);
+    rows.push(row);
+  }
+
+  const [headers = [], ...bodyRows] = rows.filter(
+    candidate => candidate.length > 1
+  );
+
+  return bodyRows.map(values =>
+    Object.fromEntries(
+      headers.map((header, headerIndex) => [header, values[headerIndex] ?? ""])
+    )
+  ) as Array<{
+    id: string;
+    price?: string;
+    average_rating?: string;
+    rating_count?: string;
+    review_count?: string;
+  }>;
+};
+
+const loadMerchantFeedCsvFromGitRef = (gitRef: string): string | null => {
+  try {
+    return execSync(`git show ${gitRef}:${MERCHANT_FEED_CSV_PATH}`, {
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    });
+  } catch {
+    return null;
+  }
+};
+
+/**
+ * Published merchantFeed.csv commercial snapshot from the main branch baseline.
+ * Runtime parity blocking scope compares branch output against this catalog so
+ * unchanged legacy products do not block unrelated deploys.
+ */
+export const loadMerchantFeedMainBaselineCatalog =
+  (): MerchantFeedPublishedBaselineCatalog => {
+    const gitRef = resolveMainBaselineGitRef();
+    const gitContent = loadMerchantFeedCsvFromGitRef(gitRef);
+    if (gitContent) {
+      return buildMerchantFeedPublishedBaselineCatalog(
+        parseMerchantFeedCsvCommercialRows(gitContent)
+      );
+    }
+
+    try {
+      const workspaceContent = readFileSync(
+        path.resolve(process.cwd(), MERCHANT_FEED_CSV_PATH),
+        "utf8"
+      );
+      return buildMerchantFeedPublishedBaselineCatalog(
+        parseMerchantFeedCsvCommercialRows(workspaceContent)
+      );
+    } catch {
+      return new Map();
+    }
+  };
 
 /**
  * Product codes present in the current Engine6 catalog but not yet deployed to

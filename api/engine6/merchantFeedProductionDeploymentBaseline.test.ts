@@ -5,11 +5,14 @@ import {
   shouldDeferMerchantFeedProductionRuntimeParityFetch,
 } from "./merchantFeedBaselineGovernance";
 import {
+  DEFAULT_MERCHANT_FEED_MAIN_BASELINE_GIT_REF,
   DEFAULT_MERCHANT_FEED_PRODUCTION_DEPLOYMENT_GIT_REF,
   extractBranchNewEngine6ProductCodesFromRoutesDiff,
   extractEngine6ProductCodesFromRoutesSource,
+  loadMerchantFeedMainBaselineCatalog,
   loadMerchantFeedNotYetPublishedOnProductionProductCodes,
 } from "./merchantFeedProductionDeploymentBaseline";
+import { validateMerchantFeedRows } from "../../scripts/generate-merchant-feed";
 import { merchantFeedEligibleTours } from "../../src/engine6/merchantFeedEligibility";
 import { auditMerchantFeedLiveRuntimeParity } from "../../scripts/audit-merchant-feed-live-runtime-parity";
 
@@ -44,6 +47,45 @@ describe("merchant feed production deployment baseline", () => {
     expect(notYetPublished.has("53254P1")).toBe(true);
     expect(notYetPublished.has("63657P1")).toBe(false);
     expect(DEFAULT_MERCHANT_FEED_PRODUCTION_DEPLOYMENT_GIT_REF).toBe("cd7906a9");
+  });
+
+  it("loads the main branch merchant feed baseline catalog", () => {
+    const mainBaseline = loadMerchantFeedMainBaselineCatalog();
+
+    expect(DEFAULT_MERCHANT_FEED_MAIN_BASELINE_GIT_REF).toBe("origin/main");
+    expect(mainBaseline.size).toBeGreaterThan(0);
+    expect(mainBaseline.get("63657P1")?.price).toBeTruthy();
+  });
+
+  it("keeps merchant feed row count aligned with the eligible Engine6 catalog", () => {
+    const mainBaseline = loadMerchantFeedMainBaselineCatalog();
+    expect(mainBaseline.size).toBe(merchantFeedEligibleTours.length);
+  });
+});
+
+describe("merchant feed scoped runtime parity build guards", () => {
+  it("still blocks rows with missing required merchant feed fields", () => {
+    const validation = validateMerchantFeedRows([
+      {
+        id: "191303P1",
+        title: "",
+        description: "desc",
+        link: "https://example.com",
+        image_link: "https://example.com/image.jpg",
+        availability: "in stock",
+        price: "89.00 USD",
+        condition: "new",
+        brand: "Outdoor Adventures",
+        average_rating: "5.0",
+        rating_count: "54",
+        review_count: "54",
+      },
+    ]);
+
+    expect(validation.pass).toBe(false);
+    expect(validation.failures.some(failure => failure.includes("title"))).toBe(
+      true
+    );
   });
 });
 

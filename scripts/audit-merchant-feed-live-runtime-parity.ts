@@ -3,13 +3,15 @@ import path from "node:path";
 
 import {
   applyMerchantFeedLiveRuntimeParityBaselinePolicy,
-  buildMerchantFeedPublishedBaselineCatalog,
-  classifyMerchantFeedGovernanceTier,
+  buildMerchantFeedBranchScopedGovernanceByProductCode,
   shouldDeferMerchantFeedProductionRuntimeParityFetch,
-  snapshotMerchantFeedCommercial,
   type MerchantFeedGovernanceTier,
 } from "../api/engine6/merchantFeedBaselineGovernance";
-import { loadMerchantFeedNotYetPublishedOnProductionProductCodes } from "../api/engine6/merchantFeedProductionDeploymentBaseline";
+import {
+  loadMerchantFeedMainBaselineCatalog,
+  loadMerchantFeedNotYetPublishedOnProductionProductCodes,
+  parseMerchantFeedCsvCommercialRows,
+} from "../api/engine6/merchantFeedProductionDeploymentBaseline";
 import { buildEngine6SchemaGraph } from "../src/engine6/schema/buildEngine6SchemaGraph";
 import { resolveEngine6TourForProductSchema } from "../src/engine6/resolveEngine6TourForProductSchema";
 import { merchantFeedEligibleTours } from "../src/engine6/merchantFeedEligibility";
@@ -237,6 +239,17 @@ export const formatMerchantFeedLiveRuntimeParityReport = (
     lines.push(
       `- legacy baseline runtime parity (informational only): ${report.informationalLegacyProductCodes.length} product(s)`
     );
+    for (const productCode of report.informationalLegacyProductCodes.slice(
+      0,
+      20
+    )) {
+      lines.push(`  - ${productCode}`);
+    }
+    if (report.informationalLegacyProductCodes.length > 20) {
+      lines.push(
+        `  - ...and ${report.informationalLegacyProductCodes.length - 20} additional legacy product(s)`
+      );
+    }
   }
 
   if (report.deferredNotYetPublishedProductCodes?.length) {
@@ -248,98 +261,81 @@ export const formatMerchantFeedLiveRuntimeParityReport = (
   return lines.join("\n");
 };
 
+export const logMerchantFeedInformationalLegacyRuntimeDrifts = (
+  report: MerchantFeedLiveRuntimeParityReport
+) => {
+  const legacyProductCodes = report.informationalLegacyProductCodes ?? [];
+  if (legacyProductCodes.length === 0) {
+    return;
+  }
+
+  console.log(
+    `\nLegacy baseline runtime parity drift (informational, non-blocking): ${legacyProductCodes.length} product(s)`
+  );
+
+  for (const productCode of legacyProductCodes.slice(0, 20)) {
+    const drift = report.drifts.find(
+      candidate =>
+        candidate.productCode.trim().toUpperCase() ===
+        productCode.trim().toUpperCase()
+    );
+    if (!drift) {
+      console.log(`  ${productCode}: (drift details unavailable)`);
+      continue;
+    }
+
+    console.log(
+      `  ${drift.productCode}: csv=${drift.csv.price}/${drift.csv.rating}/${drift.csv.reviews} live=${drift.liveJsonLd.price}/${drift.liveJsonLd.averageRating}/${drift.liveJsonLd.reviewCount}`
+    );
+  }
+
+  if (legacyProductCodes.length > 20) {
+    console.log(
+      `  ...and ${legacyProductCodes.length - 20} additional legacy product(s)`
+    );
+  }
+};
+
 const main = async () => {
   const csvContent = await readFile(
     path.resolve(process.cwd(), "data/merchantFeed.csv"),
     "utf8"
   );
-  const rows: string[][] = [];
-  let row: string[] = [];
-  let value = "";
-  let inQuotes = false;
-
-  for (let index = 0; index < csvContent.length; index += 1) {
-    const char = csvContent[index];
-    const next = csvContent[index + 1];
-
-    if (char === '"') {
-      if (inQuotes && next === '"') {
-        value += '"';
-        index += 1;
-      } else {
-        inQuotes = !inQuotes;
-      }
-      continue;
-    }
-
-    if (char === "," && !inQuotes) {
-      row.push(value);
-      value = "";
-      continue;
-    }
-
-    if ((char === "\n" || char === "\r") && !inQuotes) {
-      if (char === "\r" && next === "\n") index += 1;
-      row.push(value);
-      rows.push(row);
-      row = [];
-      value = "";
-      continue;
-    }
-
-    value += char;
-  }
-
-  if (value || row.length > 0) {
-    row.push(value);
-    rows.push(row);
-  }
-
-  const [headers = [], ...bodyRows] = rows.filter(
-    candidate => candidate.length > 1
-  );
-  const csvRows = bodyRows.map(values =>
-    Object.fromEntries(headers.map((header, index) => [header, values[index] ?? ""]))
-  );
-
-  const merchantRows = csvRows.map(row => ({
+  const csvRows = parseMerchantFeedCsvCommercialRows(csvContent).map(row => ({
     id: row.id ?? "",
     price: row.price ?? "",
     average_rating: row.average_rating ?? "",
     review_count: row.review_count ?? "",
   }));
-  const publishedBaseline = buildMerchantFeedPublishedBaselineCatalog(merchantRows);
+  const mainBaselineCatalog = loadMerchantFeedMainBaselineCatalog();
   const notYetPublishedOnProductionProductCodes =
     loadMerchantFeedNotYetPublishedOnProductionProductCodes(
       merchantFeedEligibleTours.map(tour => tour.productCode)
     );
-  const governanceByProductCode = new Map(
-    merchantRows.map(row => [
-      row.id.trim().toUpperCase(),
-      classifyMerchantFeedGovernanceTier(
-        row.id,
-        snapshotMerchantFeedCommercial(row),
-        publishedBaseline
-      ),
-    ])
-  );
+  const branchScopedGovernanceByProductCode =
+    buildMerchantFeedBranchScopedGovernanceByProductCode(
+      csvRows,
+      mainBaselineCatalog
+    );
 
   const report = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
     await auditMerchantFeedLiveRuntimeParity(
-      merchantRows,
-      governanceByProductCode,
+      csvRows,
+      branchScopedGovernanceByProductCode,
       notYetPublishedOnProductionProductCodes
     ),
-    governanceByProductCode
+    branchScopedGovernanceByProductCode
   );
 
+  logMerchantFeedInformationalLegacyRuntimeDrifts(report);
   console.log(formatMerchantFeedLiveRuntimeParityReport(report));
 
   if (!report.pass) {
     const blockingDrifts = report.drifts.filter(drift => {
       const tier =
-        governanceByProductCode.get(drift.productCode.trim().toUpperCase()) ??
-        "new-product";
+        branchScopedGovernanceByProductCode.get(
+          drift.productCode.trim().toUpperCase()
+        ) ?? "new-product";
       return tier !== "unchanged-legacy-baseline";
     });
     for (const drift of blockingDrifts.slice(0, 20)) {
