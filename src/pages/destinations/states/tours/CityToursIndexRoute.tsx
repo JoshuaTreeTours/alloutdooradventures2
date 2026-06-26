@@ -19,6 +19,10 @@ import {
 } from "../../../../data/flagstaffTours";
 import { hasValidTourImage } from "../../../../lib/hasValidTourImage";
 import {
+  ENGINE6_GLOBAL_FALLBACK_HERO_URL,
+  resolveEngine6DisplayHeroFallback,
+} from "../../../../engine6/displayHero";
+import {
   fetchEngine6LiveProductFields,
   mergeEngine6LiveFieldsIntoTour,
   type Engine6LiveProductFields,
@@ -283,13 +287,17 @@ export default function CityToursIndexRoute({
           {heroImage ? (
             <Image
               src={heroImage}
-              fallbackSrc={heroImage}
+              fallbackSrc={
+                resolveEngine6DisplayHeroFallback({
+                  stateSlug: state.slug,
+                  citySlug: city.slug,
+                  excluding: heroImage,
+                }) || ENGINE6_GLOBAL_FALLBACK_HERO_URL
+              }
               alt={`${city.name} hero`}
               className="h-64 w-full object-cover md:h-80"
             />
-          ) : (
-            <div className="h-64 w-full bg-[#2f4a2f]/10 md:h-80" />
-          )}
+          ) : null}
         </div>
         {filteredTours.length ? (
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">

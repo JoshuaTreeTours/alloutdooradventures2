@@ -76,7 +76,17 @@ import {
   ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_ROUTE,
   ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS,
   ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES,
+  ENGINE6_MONTEREY_AQUARIUM_ADMISSION_PRODUCT_CODE,
+  ENGINE6_MONTEREY_AQUARIUM_ADMISSION_ROUTE,
+  ENGINE6_MONTEREY_POINT_LOBOS_WALK_PRODUCT_CODE,
+  ENGINE6_MONTEREY_POINT_LOBOS_WALK_ROUTE,
+  ENGINE6_MONTEREY_WHALE_WATCHING_4HR_PRODUCT_CODE,
+  ENGINE6_MONTEREY_WHALE_WATCHING_4HR_ROUTE,
 } from "./routes";
+import {
+  ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL,
+  resolveEngine6DisplayHero,
+} from "./displayHero";
 import {
   buildEngine6SpecimenApiUrl,
   resolveEngine6SpecimenResponse,
@@ -2338,6 +2348,76 @@ describe("engine6 listing surfaces", () => {
     expect(html).not.toContain('src="undefined"');
   });
 
+  it("renders a valid Monterey city tours hero and inherits the canonical city hero for broken product heroes", () => {
+    const cityHtml = renderToString(
+      <CityToursIndexRoute
+        params={{ stateSlug: "california", citySlug: "monterey" }}
+      />
+    );
+
+    expect(cityHtml).toContain('alt="Monterey hero"');
+    expect(cityHtml).toContain(ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL);
+    expect(cityHtml).not.toContain('alt="Monterey hero" src=""');
+    expect(cityHtml).not.toContain('src="/logo.svg"');
+
+    const whaleTour = engine6ResolvedTours.find(
+      entry => entry.productCode === ENGINE6_MONTEREY_WHALE_WATCHING_4HR_PRODUCT_CODE
+    );
+    const aquariumTour = engine6ResolvedTours.find(
+      entry => entry.productCode === ENGINE6_MONTEREY_AQUARIUM_ADMISSION_PRODUCT_CODE
+    );
+    const pointLobosTour = engine6ResolvedTours.find(
+      entry => entry.productCode === ENGINE6_MONTEREY_POINT_LOBOS_WALK_PRODUCT_CODE
+    );
+
+    expect(whaleTour?.heroImageUrl).toBe(ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL);
+    expect(
+      resolveEngine6DisplayHero({
+        productHeroUrl: aquariumTour?.heroImageUrl,
+        stateSlug: "california",
+        citySlug: "monterey",
+      })
+    ).toBe(ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL);
+    expect(
+      resolveEngine6DisplayHero({
+        productHeroUrl: pointLobosTour?.heroImageUrl,
+        stateSlug: "california",
+        citySlug: "monterey",
+      })
+    ).toBe(ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL);
+
+    const unified = getToursByCityUnified("california", "monterey");
+    const whaleEntry = unified.find(
+      entry => entry.href === ENGINE6_MONTEREY_WHALE_WATCHING_4HR_ROUTE
+    );
+    const aquariumEntry = unified.find(
+      entry => entry.href === ENGINE6_MONTEREY_AQUARIUM_ADMISSION_ROUTE
+    );
+    const pointLobosEntry = unified.find(
+      entry => entry.href === ENGINE6_MONTEREY_POINT_LOBOS_WALK_ROUTE
+    );
+
+    expect(whaleEntry).toBeDefined();
+    expect(aquariumEntry).toBeDefined();
+    expect(pointLobosEntry).toBeDefined();
+
+    const cardHtml = renderToString(
+      <>
+        <TourCard tour={whaleEntry!.tour} href={whaleEntry!.href} />
+        <TourCard tour={aquariumEntry!.tour} href={aquariumEntry!.href} />
+        <TourCard tour={pointLobosEntry!.tour} href={pointLobosEntry!.href} />
+      </>
+    );
+
+    expect(cardHtml).toContain(ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL);
+    expect(cardHtml).not.toContain(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/2e/41/ec.jpg"
+    );
+    expect(cardHtml).not.toContain(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/31/d9/f9/af.jpg"
+    );
+  });
+
   it("renders New York City tour cards with Engine6 entries before non-Engine6 entries", () => {
     const unified = getToursByCityUnified("new-york", "new-york");
     const firstEngine6 = unified.find(entry => entry.tour.engine === "engine6");
@@ -2713,8 +2793,17 @@ describe("engine6 multi-tour contract", () => {
       if (tour.heroImageUrl) {
         expect(tour.heroImageUrl).toContain("http");
         expect(tour.heroImageUrl).not.toContain("/hero.jpg");
+        const [, stateSlug = "", citySlug = ""] =
+          /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
+            tour.canonicalPath
+          ) ?? [];
+        const displayHeroUrl = resolveEngine6DisplayHero({
+          productHeroUrl: tour.heroImageUrl,
+          stateSlug,
+          citySlug,
+        });
         expect(html).toContain(
-          `src="${tour.heroImageUrl.replace(/&/g, "&amp;")}"`
+          `src="${displayHeroUrl.replace(/&/g, "&amp;")}"`
         );
       } else {
         expect(html).not.toContain('src="/images/hiking-hero.jpg"');

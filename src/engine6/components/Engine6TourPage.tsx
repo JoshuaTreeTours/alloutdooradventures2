@@ -7,6 +7,7 @@ import React, {
   useState,
 } from "react";
 
+import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
 import TourCard from "../../components/TourCard";
@@ -18,6 +19,10 @@ import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
 import { buildEngine6DisplaySections } from "../displaySections";
+import {
+  resolveEngine6DisplayHero,
+  resolveEngine6DisplayHeroFallback,
+} from "../displayHero";
 import type { Engine6Tour } from "../types";
 import {
   fetchEngine6LiveProductFields,
@@ -223,7 +228,20 @@ export default function Engine6TourPage({
   const seo = buildEngine6Seo(tour);
   const schema = buildEngine6SchemaGraph(tour);
   const schemaGraph = schema["@graph"] as Array<Record<string, unknown>>;
-  const resolvedHeroUrl = tour.resolvedHero?.url ?? tour.heroImageUrl;
+  const [, heroStateSlug = "", heroCitySlug = ""] =
+    /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
+      tour.canonicalPath
+    ) ?? [];
+  const resolvedHeroUrl = resolveEngine6DisplayHero({
+    productHeroUrl: tour.resolvedHero?.url ?? tour.heroImageUrl,
+    stateSlug: heroStateSlug,
+    citySlug: heroCitySlug,
+  });
+  const resolvedHeroFallbackUrl = resolveEngine6DisplayHeroFallback({
+    stateSlug: heroStateSlug,
+    citySlug: heroCitySlug,
+    excluding: resolvedHeroUrl,
+  });
   const hasPrice = Boolean(tour.priceFormatted);
   const ratingSourceOfTruth = getEngine6TourRatingSourceOfTruth(tour);
   const hasRating =
@@ -459,8 +477,9 @@ export default function Engine6TourPage({
           </div>
 
           {resolvedHeroUrl ? (
-            <img
+            <Image
               src={resolvedHeroUrl}
+              fallbackSrc={resolvedHeroFallbackUrl}
               alt={tour.title}
               className="h-80 w-full rounded-3xl object-cover shadow-2xl md:h-[440px]"
             />

@@ -6,6 +6,10 @@ import { getActivityLabelFromSlug } from "../data/activityLabels";
 import { getTourDetailPath } from "../data/tours";
 import { formatStartingPrice } from "../lib/pricing";
 import { buildRentalDescription } from "../templates/rentalDescription";
+import {
+  resolveEngine6DisplayHero,
+  resolveEngine6DisplayHeroFallback,
+} from "../engine6/displayHero";
 import { resolveTourHeroImage } from "../utils/hero";
 import { isRentalTour } from "../utils/isRentalTour";
 import { isHardDeletedLegacyTour } from "../utils/tours/hardDeleteLegacyTours";
@@ -185,9 +189,20 @@ export default function TourCard({
     typeof reviewCount === "number";
   const cardImage =
     tour.engine === "engine6"
-      ? tour.heroImage?.trim() || ""
+      ? resolveEngine6DisplayHero({
+          productHeroUrl: tour.heroImage,
+          stateSlug: tour.destination.stateSlug,
+          citySlug: tour.destination.citySlug,
+        })
       : (resolveTourHeroImage(tour) ?? "");
-  const fallbackImage = cardImage;
+  const fallbackImage =
+    tour.engine === "engine6"
+      ? resolveEngine6DisplayHeroFallback({
+          stateSlug: tour.destination.stateSlug,
+          citySlug: tour.destination.citySlug,
+          excluding: cardImage,
+        })
+      : cardImage;
   const renderedTagPills = tour.primaryDisplayCategory?.trim()
     ? [tour.primaryDisplayCategory.trim()]
     : (tour.tagPills?.map(tag =>
