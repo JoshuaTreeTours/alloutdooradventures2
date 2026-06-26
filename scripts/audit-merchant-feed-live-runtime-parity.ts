@@ -121,7 +121,8 @@ export const auditMerchantFeedLiveRuntimeParity = async (
     average_rating?: string;
     review_count?: string;
   }>,
-  governanceByProductCode?: Map<string, MerchantFeedGovernanceTier>
+  governanceByProductCode?: Map<string, MerchantFeedGovernanceTier>,
+  publishedBaselineProductCodes?: ReadonlySet<string>
 ): Promise<MerchantFeedLiveRuntimeParityReport> => {
   const csvById = new Map(csvRows.map(row => [row.id, row]));
   const drifts: MerchantFeedLiveRuntimeParityReport["drifts"] = [];
@@ -145,7 +146,10 @@ export const auditMerchantFeedLiveRuntimeParity = async (
         try {
           liveJsonLd = await fetchLiveProductJsonLdCommercial(tour.productCode);
         } catch (error) {
-          if (!requiresStrictMerchantFeedRuntimeParity(tier)) {
+          if (
+            !requiresStrictMerchantFeedRuntimeParity(tier) ||
+            publishedBaselineProductCodes?.has(normalizedProductCode)
+          ) {
             return null;
           }
           throw error;
@@ -281,6 +285,7 @@ const main = async () => {
     review_count: row.review_count ?? "",
   }));
   const publishedBaseline = buildMerchantFeedPublishedBaselineCatalog(merchantRows);
+  const publishedBaselineProductCodes = new Set(publishedBaseline.keys());
   const governanceByProductCode = new Map(
     merchantRows.map(row => [
       row.id.trim().toUpperCase(),
@@ -293,7 +298,11 @@ const main = async () => {
   );
 
   const report = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
-    await auditMerchantFeedLiveRuntimeParity(merchantRows, governanceByProductCode),
+    await auditMerchantFeedLiveRuntimeParity(
+      merchantRows,
+      governanceByProductCode,
+      publishedBaselineProductCodes
+    ),
     governanceByProductCode
   );
 
