@@ -1,5 +1,6 @@
 import {
   diagnoseEngine6ViatorProductCommercialExtract,
+  describeViatorApiConfigEnvVisibility,
   resolveEngine6ViatorProductCommercialExtract,
   resolveViatorApiConfig,
 } from "../../api/engine6/resolveEngine6ViatorProductCommercialExtract";
@@ -89,7 +90,20 @@ export const fetchEngine6LiveCommercialFieldsForSchema = async (
       const runtimeBaseUrl = resolveRuntimeCommercialBaseUrl();
       if (!runtimeBaseUrl) {
         throw new Error(
-          "Merchant feed requires VIATOR_API_KEY or MERCHANT_FEED_RUNTIME_BASE_URL for live commercial resolution."
+          `Merchant feed requires VIATOR_API_KEY or MERCHANT_FEED_RUNTIME_BASE_URL for live commercial resolution. Env visibility: ${JSON.stringify(
+            {
+              VERCEL_ENV: process.env.VERCEL_ENV ?? null,
+              REQUIRE_LIVE_MERCHANT_COMMERCIAL:
+                process.env.REQUIRE_LIVE_MERCHANT_COMMERCIAL ?? null,
+              MERCHANT_FEED_RUNTIME_BASE_URL: Boolean(
+                process.env.MERCHANT_FEED_RUNTIME_BASE_URL
+              ),
+              ENGINE6_RUNTIME_BASE_URL: Boolean(
+                process.env.ENGINE6_RUNTIME_BASE_URL
+              ),
+              ...describeViatorApiConfigEnvVisibility(),
+            }
+          )}`
         );
       }
     }
