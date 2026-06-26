@@ -356,6 +356,7 @@ describe("/api/engine6/viator-product", () => {
             title: "No Image Tour",
             description: { text: "No image but valid tour." },
             priceFrom: "$49.00",
+            reviews: { combinedAverageRating: 4.8, totalReviews: 321 },
             location: { city: "Santa Barbara", state: "California" },
           },
         }),
@@ -380,6 +381,10 @@ describe("/api/engine6/viator-product", () => {
       "no-candidates"
     );
     expect((res.body as any).diagnostics.finalHeroUrl).toBeNull();
+    expect((res.body as any).extracted.priceAmount).toBe(49);
+    expect((res.body as any).extracted.priceFormatted).toBe("From $49.00");
+    expect((res.body as any).extracted.aggregateRating).toBe(4.8);
+    expect((res.body as any).extracted.reviewCount).toBe(321);
   });
 
   it("keeps exact-product caption hero when caption + product-media are both available", async () => {
