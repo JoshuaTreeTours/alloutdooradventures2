@@ -5,10 +5,11 @@ import {
   applyMerchantFeedLiveRuntimeParityBaselinePolicy,
   buildMerchantFeedPublishedBaselineCatalog,
   classifyMerchantFeedGovernanceTier,
-  requiresStrictMerchantFeedRuntimeParity,
+  shouldDeferMerchantFeedProductionRuntimeParityFetch,
   snapshotMerchantFeedCommercial,
   type MerchantFeedGovernanceTier,
 } from "../api/engine6/merchantFeedBaselineGovernance";
+import { loadMerchantFeedNotYetPublishedOnProductionProductCodes } from "../api/engine6/merchantFeedProductionDeploymentBaseline";
 import { buildEngine6SchemaGraph } from "../src/engine6/schema/buildEngine6SchemaGraph";
 import { resolveEngine6TourForProductSchema } from "../src/engine6/resolveEngine6TourForProductSchema";
 import { merchantFeedEligibleTours } from "../src/engine6/merchantFeedEligibility";
@@ -24,6 +25,7 @@ export type MerchantFeedLiveRuntimeParityReport = {
   reviewCountDrift: number;
   pass: boolean;
   informationalLegacyProductCodes?: string[];
+  deferredNotYetPublishedProductCodes?: string[];
   drifts: Array<{
     productCode: string;
     title: string;
@@ -122,10 +124,11 @@ export const auditMerchantFeedLiveRuntimeParity = async (
     review_count?: string;
   }>,
   governanceByProductCode?: Map<string, MerchantFeedGovernanceTier>,
-  publishedBaselineProductCodes?: ReadonlySet<string>
+  notYetPublishedOnProductionProductCodes?: ReadonlySet<string>
 ): Promise<MerchantFeedLiveRuntimeParityReport> => {
   const csvById = new Map(csvRows.map(row => [row.id, row]));
   const drifts: MerchantFeedLiveRuntimeParityReport["drifts"] = [];
+  const deferredNotYetPublishedProductCodes: string[] = [];
   let productsInParity = 0;
   let priceDrift = 0;
   let ratingDrift = 0;
@@ -147,9 +150,23 @@ export const auditMerchantFeedLiveRuntimeParity = async (
           liveJsonLd = await fetchLiveProductJsonLdCommercial(tour.productCode);
         } catch (error) {
           if (
-            !requiresStrictMerchantFeedRuntimeParity(tier) ||
-            publishedBaselineProductCodes?.has(normalizedProductCode)
+            shouldDeferMerchantFeedProductionRuntimeParityFetch({
+              tier,
+              productCode: normalizedProductCode,
+              error,
+              notYetPublishedOnProductionProductCodes,
+            })
           ) {
+            if (
+              notYetPublishedOnProductionProductCodes?.has(
+                normalizedProductCode
+              ) &&
+              !deferredNotYetPublishedProductCodes.includes(
+                normalizedProductCode
+              )
+            ) {
+              deferredNotYetPublishedProductCodes.push(normalizedProductCode);
+            }
             return null;
           }
           throw error;
@@ -199,6 +216,7 @@ export const auditMerchantFeedLiveRuntimeParity = async (
     ratingDrift,
     reviewCountDrift,
     pass: drifts.length === 0,
+    deferredNotYetPublishedProductCodes,
     drifts,
   };
 };
@@ -218,6 +236,12 @@ export const formatMerchantFeedLiveRuntimeParityReport = (
   if (report.informationalLegacyProductCodes?.length) {
     lines.push(
       `- legacy baseline runtime parity (informational only): ${report.informationalLegacyProductCodes.length} product(s)`
+    );
+  }
+
+  if (report.deferredNotYetPublishedProductCodes?.length) {
+    lines.push(
+      `- production runtime fetch deferred (not yet published): ${report.deferredNotYetPublishedProductCodes.length} product(s)`
     );
   }
 
@@ -285,7 +309,10 @@ const main = async () => {
     review_count: row.review_count ?? "",
   }));
   const publishedBaseline = buildMerchantFeedPublishedBaselineCatalog(merchantRows);
-  const publishedBaselineProductCodes = new Set(publishedBaseline.keys());
+  const notYetPublishedOnProductionProductCodes =
+    loadMerchantFeedNotYetPublishedOnProductionProductCodes(
+      merchantFeedEligibleTours.map(tour => tour.productCode)
+    );
   const governanceByProductCode = new Map(
     merchantRows.map(row => [
       row.id.trim().toUpperCase(),
@@ -301,7 +328,7 @@ const main = async () => {
     await auditMerchantFeedLiveRuntimeParity(
       merchantRows,
       governanceByProductCode,
-      publishedBaselineProductCodes
+      notYetPublishedOnProductionProductCodes
     ),
     governanceByProductCode
   );
