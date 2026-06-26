@@ -129,6 +129,40 @@ export const requiresStrictMerchantFeedRuntimeParity = (
   tier: MerchantFeedGovernanceTier
 ) => tier !== "unchanged-legacy-baseline";
 
+export const isMerchantFeedProductionRuntimeNotYetPublishedError = (
+  error: unknown
+): boolean =>
+  error instanceof Error &&
+  /Live runtime commercial fetch failed for [^:]+: HTTP 422\b/.test(
+    error.message
+  );
+
+/**
+ * Defers production runtime parity fetch failures for unchanged baseline rows and
+ * for Engine6 catalog products not yet live on production. Published products keep
+ * strict runtime enforcement for non-422 fetch failures and for successful fetches.
+ */
+export const shouldDeferMerchantFeedProductionRuntimeParityFetch = (context: {
+  tier: MerchantFeedGovernanceTier;
+  productCode: string;
+  error?: unknown;
+  notYetPublishedOnProductionProductCodes?: ReadonlySet<string>;
+}): boolean => {
+  if (!requiresStrictMerchantFeedRuntimeParity(context.tier)) {
+    return true;
+  }
+
+  const normalizedProductCode = normalizeProductCode(context.productCode);
+
+  if (
+    context.notYetPublishedOnProductionProductCodes?.has(normalizedProductCode)
+  ) {
+    return true;
+  }
+
+  return false;
+};
+
 export const applyBaselineCommercialToMerchantFeedRow = <
   TRow extends {
     id: string;

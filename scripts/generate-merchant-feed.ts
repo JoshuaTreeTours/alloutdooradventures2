@@ -6,6 +6,7 @@ import {
   buildMerchantFeedPublishedBaselineCatalog,
   reconcileMerchantFeedRowsWithBaselineGovernance,
 } from "../api/engine6/merchantFeedBaselineGovernance";
+import { loadMerchantFeedNotYetPublishedOnProductionProductCodes } from "../api/engine6/merchantFeedProductionDeploymentBaseline";
 import {
   diagnoseEngine6ViatorProductCommercialExtract,
   resolveViatorApiConfig,
@@ -399,7 +400,10 @@ const resolveToursForMerchantFeedGeneration = async (
 const main = async () => {
   const existingRows = await readExistingMerchantFeedRows();
   const publishedBaseline = buildMerchantFeedPublishedBaselineCatalog(existingRows);
-  const publishedBaselineProductCodes = new Set(publishedBaseline.keys());
+  const notYetPublishedOnProductionProductCodes =
+    loadMerchantFeedNotYetPublishedOnProductionProductCodes(
+      merchantFeedEligibleTours.map(tour => tour.productCode)
+    );
   if (existingRows.length > 0) {
     logMerchantFeedReport("Before", countMerchantFeedBlankFields(existingRows));
   } else {
@@ -546,7 +550,7 @@ const main = async () => {
     await auditMerchantFeedLiveRuntimeParity(
       outputRows,
       reconciliation.governanceByProductCode,
-      publishedBaselineProductCodes
+      notYetPublishedOnProductionProductCodes
     ),
     reconciliation.governanceByProductCode
   );
