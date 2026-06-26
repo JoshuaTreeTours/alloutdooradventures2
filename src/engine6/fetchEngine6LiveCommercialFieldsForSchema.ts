@@ -40,8 +40,8 @@ const fetchProductionRuntimeCommercialFields = async (
   );
 
   if (!response.ok) {
-    throw new Error(
-      `Production runtime commercial fetch failed for ${productCode}: HTTP ${response.status}`
+    return toLiveCommercialFields(
+      await resolveEngine6ViatorProductCommercialExtract(productCode)
     );
   }
 
@@ -50,8 +50,8 @@ const fetchProductionRuntimeCommercialFields = async (
   };
 
   if (!body.extracted) {
-    throw new Error(
-      `Production runtime commercial fetch returned no extracted payload for ${productCode}`
+    return toLiveCommercialFields(
+      await resolveEngine6ViatorProductCommercialExtract(productCode)
     );
   }
 

@@ -399,6 +399,7 @@ const resolveToursForMerchantFeedGeneration = async (
 const main = async () => {
   const existingRows = await readExistingMerchantFeedRows();
   const publishedBaseline = buildMerchantFeedPublishedBaselineCatalog(existingRows);
+  const publishedBaselineProductCodes = new Set(publishedBaseline.keys());
   if (existingRows.length > 0) {
     logMerchantFeedReport("Before", countMerchantFeedBlankFields(existingRows));
   } else {
@@ -544,7 +545,8 @@ const main = async () => {
   const runtimeParityAudit = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
     await auditMerchantFeedLiveRuntimeParity(
       outputRows,
-      reconciliation.governanceByProductCode
+      reconciliation.governanceByProductCode,
+      publishedBaselineProductCodes
     ),
     reconciliation.governanceByProductCode
   );
@@ -626,6 +628,10 @@ const main = async () => {
 
 if (process.argv[1]?.includes("generate-merchant-feed")) {
   main().catch(error => {
+    console.error(
+      "[merchant-feed-build] failed:",
+      error instanceof Error ? error.message : error
+    );
     console.error(error);
     process.exit(1);
   });
