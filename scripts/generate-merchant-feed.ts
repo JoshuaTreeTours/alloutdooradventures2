@@ -542,7 +542,10 @@ const main = async () => {
   }
 
   const runtimeParityAudit = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
-    await auditMerchantFeedLiveRuntimeParity(outputRows),
+    await auditMerchantFeedLiveRuntimeParity(
+      outputRows,
+      reconciliation.governanceByProductCode
+    ),
     reconciliation.governanceByProductCode
   );
 
