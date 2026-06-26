@@ -228,7 +228,7 @@ const MONTEREY_TOURS: MontereyTourFixture[] = [
       "Visit the Monterey Bay Aquarium on Cannery Row with a skip-the-line admission ticket for all-day access. Explore kelp forest, open sea, and otter exhibits plus daily feedings and interpretive programs at one of the top aquariums on the Pacific Coast.",
     duration: "2 to 4 hours (approx.)",
     priceFrom: 60,
-    heroUrl: `${TACDN}/12/2e/41/ec.jpg`,
+    heroUrl: `${TACDN}/06/6e/e7/f6.jpg`,
     rating: 4.5,
     reviewCount: 1290,
     highlights: [
@@ -467,7 +467,7 @@ const MONTEREY_TOURS: MontereyTourFixture[] = [
       "Hike Point Lobos State Natural Reserve on a guided nature walk with a local naturalist. The route covers woodland trails, cliff overlooks, and cove viewpoints while watching for otters, seals, deer, and seabirds in a small-group format.",
     duration: "2 hours 30 minutes (approx.)",
     priceFrom: 89,
-    heroUrl: `${TACDN}/31/d9/f9/af.jpg`,
+    heroUrl: `${TACDN}/06/6e/e7/f6.jpg`,
     rating: 4.9,
     reviewCount: 186,
     highlights: [
