@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "362397P1",
+    "productUrl": "https://www.viator.com/tours/Monterey-and-Carmel/Monterey-Whale-Watching-Tour/d5250-362397P1",
+    "title": "Monterey Whale Watching Tour",
+    "description": {
+      "text": "Join a Monterey whale-watching cruise aboard a comfortable vessel with onboard naturalists and marine biologists. The route explores Monterey Bay sanctuary waters to spot humpback, gray, and blue whales along with dolphins, sea otters, and other Pacific wildlife."
+    },
+    "location": {
+      "city": "Monterey",
+      "state": "California"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $70.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 519
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/e7/f9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Whale-watching cruise with onboard naturalists",
+      "Comfortable vessel designed for wildlife viewing",
+      "High success rate for seasonal whale sightings",
+      "Marine biologist commentary on Monterey Bay ecology",
+      "Depart from Monterey waterfront"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Monterey waterfront departure point confirmed after booking."
+      },
+      "end": {
+        "description": "Return to the Monterey departure pier after the cruise."
+      }
+    },
+    "itinerarySummary": "Join a Monterey whale-watching cruise aboard a comfortable vessel with onboard naturalists and marine biologists.",
+    "itineraryItems": [
+      {
+        "title": "Monterey waterfront",
+        "description": "Check in and board at the Monterey departure pier before the bay cruise.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Monterey Bay",
+        "description": "Cruise open waters while naturalists help locate whales and marine mammals.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cannery Row",
+        "description": "Pass Cannery Row shoreline corridors on the return approach to harbor.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Onboard naturalist",
+      "Use of binoculars when available"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Monterey Whale Watching Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Monterey?",
+        "answer": "Meet at the Monterey waterfront departure point confirmed after booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Whale Watching"
+      },
+      {
+        "label": "Cruises & Sailing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 70
+      },
+      "currency": "USD"
+    }
+  }
+}

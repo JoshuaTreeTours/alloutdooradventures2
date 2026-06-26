@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "6021MBA",
+    "productUrl": "https://www.viator.com/tours/Monterey-and-Carmel/Monterey-Bay-Aquarium-Admission/d5250-6021MBA",
+    "title": "Monterey Bay Aquarium Admission Ticket",
+    "description": {
+      "text": "Visit the Monterey Bay Aquarium on Cannery Row with a skip-the-line admission ticket for all-day access. Explore kelp forest, open sea, and otter exhibits plus daily feedings and interpretive programs at one of the top aquariums on the Pacific Coast."
+    },
+    "location": {
+      "city": "Monterey",
+      "state": "California"
+    },
+    "duration": "2 to 4 hours (approx.)",
+    "priceFrom": "From $60.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 319
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/2e/41/ec.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Skip-the-line admission to Monterey Bay Aquarium",
+      "All-day access to major exhibit galleries",
+      "See sea otters, jellyfish, sharks, and kelp forest displays",
+      "Located on historic Cannery Row waterfront",
+      "Daily feedings and interpretive programs"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Enter at Monterey Bay Aquarium, 886 Cannery Row, Monterey, CA 93940 during opening hours."
+      },
+      "end": {
+        "description": "Exit at the aquarium entrance when your visit concludes."
+      }
+    },
+    "itinerarySummary": "Visit the Monterey Bay Aquarium on Cannery Row with a skip-the-line admission ticket for all-day access.",
+    "itineraryItems": [
+      {
+        "title": "Monterey Bay Aquarium",
+        "description": "Enter the aquarium and explore main galleries at your own pace.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kelp Forest",
+        "description": "View the towering kelp forest exhibit and surrounding marine habitats.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Open Sea",
+        "description": "Visit the open-ocean gallery featuring sharks, sardines, and pelagic species.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cannery Row",
+        "description": "Walk Cannery Row before or after your aquarium visit along the Monterey waterfront.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Aquarium admission ticket"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Monterey Bay Aquarium Admission Ticket?",
+        "answer": "The planned duration is 2 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Monterey?",
+        "answer": "Enter at Monterey Bay Aquarium, 886 Cannery Row, Monterey, CA 93940 during opening hours."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Attraction Tickets"
+      },
+      {
+        "label": "Family Friendly"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 60
+      },
+      "currency": "USD"
+    }
+  }
+}

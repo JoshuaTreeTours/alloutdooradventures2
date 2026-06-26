@@ -132,6 +132,19 @@ import specimen351474p1Payload from "../../data/engine6/viator/351474P1.exact-pr
 import specimen3132smbPayload from "../../data/engine6/viator/3132SMB.exact-product.json";
 import specimen5396boeingPayload from "../../data/engine6/viator/5396BOEING.exact-product.json";
 import specimen8647p594Payload from "../../data/engine6/viator/8647P594.exact-product.json";
+import specimen70275p1Payload from "../../data/engine6/viator/70275P1.exact-product.json";
+import specimen53254p1Payload from "../../data/engine6/viator/53254P1.exact-product.json";
+import specimen362397p1Payload from "../../data/engine6/viator/362397P1.exact-product.json";
+import specimen53254p8Payload from "../../data/engine6/viator/53254P8.exact-product.json";
+import specimen6021mbaPayload from "../../data/engine6/viator/6021MBA.exact-product.json";
+import specimen5973foodPayload from "../../data/engine6/viator/5973FOOD.exact-product.json";
+import specimen88377p1Payload from "../../data/engine6/viator/88377P1.exact-product.json";
+import specimen39976p3Payload from "../../data/engine6/viator/39976P3.exact-product.json";
+import specimen14670carPayload from "../../data/engine6/viator/14670CAR.exact-product.json";
+import specimen173135p2Payload from "../../data/engine6/viator/173135P2.exact-product.json";
+import specimen434555p1Payload from "../../data/engine6/viator/434555P1.exact-product.json";
+import specimen118676p4Payload from "../../data/engine6/viator/118676P4.exact-product.json";
+import specimen9345p1Payload from "../../data/engine6/viator/9345P1.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -1389,6 +1402,123 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Seattle/Private-5-hour-City-Tour-of-Seattle-and-Snoqualmie-Falls-with-driver-guide/d704-8647P594",
     rawPayload: specimen8647p594Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "70275P1",
+    publicUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/Ride-an-e-Bike-along-the-coastline-explore17-Mile-Drive/d5250-70275P1",
+    rawPayload: specimen70275p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "53254P1",
+    publicUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/Monterey-4-hour-Whale-Watching-Experience/d5250-53254P1",
+    rawPayload: specimen53254p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "362397P1",
+    publicUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/Monterey-Whale-Watching-Tour/d5250-362397P1",
+    rawPayload: specimen362397p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "53254P8",
+    publicUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/Sunset-Whale-Watch/d5250-53254P8",
+    rawPayload: specimen53254p8Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "6021MBA",
+    publicUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/Monterey-Bay-Aquarium-Admission/d5250-6021MBA",
+    rawPayload: specimen6021mbaPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5973FOOD",
+    publicUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/Carmel-Small-Group-Food-and-Wine-Walking-Tour/d5250-5973FOOD",
+    rawPayload: specimen5973foodPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "88377P1",
+    publicUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/Old-Monterey-Walking-Food-Tour/d5250-88377P1",
+    rawPayload: specimen88377p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "39976P3",
+    publicUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/Guided-Tours-of-Cannery-Row/d5250-39976P3",
+    rawPayload: specimen39976p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "14670CAR",
+    publicUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/1-Hour-Monterey-and-Cannery-Row-Sea-Car-Tour/d5250-14670CAR",
+    rawPayload: specimen14670carPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "173135P2",
+    publicUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/Guided-2-Hour-Point-Lobos-Nature-Walk/d5250-173135P2",
+    rawPayload: specimen173135p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "434555P1",
+    publicUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/Wine-Tasting-and-Walking-Tour-of-Carmel-by-the-Sea/d5250-434555P1",
+    rawPayload: specimen434555p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "118676P4",
+    publicUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/Wine-Trolley-Premium-Package/d5250-118676P4",
+    rawPayload: specimen118676p4Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "9345P1",
+    publicUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/Monterey-Bay-Sailing-Family-Cruise/d5250-9345P1",
+    rawPayload: specimen9345p1Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "118676P4",
+    "productUrl": "https://www.viator.com/tours/Monterey-and-Carmel/Wine-Trolley-Premium-Package/d5250-118676P4",
+    "title": "Carmel Valley Wine Tour Premium Package",
+    "description": {
+      "text": "Ride from downtown Monterey to Carmel Valley on a vintage trolley or high-top van for a premium wine-tasting day. Visit three wineries with lunch, scenic valley views, and a take-home bottle included on this guided Monterey wine country outing."
+    },
+    "location": {
+      "city": "Monterey",
+      "state": "California"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $179.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 14
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/e8/a2/b7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Carmel Valley wine tour from downtown Monterey",
+      "Tastings at three wineries plus lunch",
+      "Vintage trolley or high-top van transport",
+      "Take-home bottle of wine included",
+      "Insider guide perspective on valley producers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from downtown Monterey at the location confirmed after booking."
+      },
+      "end": {
+        "description": "Return to downtown Monterey after the valley wine tour."
+      }
+    },
+    "itinerarySummary": "Ride from downtown Monterey to Carmel Valley on a vintage trolley or high-top van for a premium wine-tasting day.",
+    "itineraryItems": [
+      {
+        "title": "Monterey",
+        "description": "Depart downtown Monterey by trolley or van toward Carmel Valley.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Carmel Valley",
+        "description": "Visit three wineries with guided tastings across the valley route.",
+        "duration": "4 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Carmel Valley Village",
+        "description": "Stop for lunch at a valley restaurant before the return drive to Monterey.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Wine tastings",
+      "Lunch",
+      "Transport"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Carmel Valley Wine Tour Premium Package?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Monterey?",
+        "answer": "Pickup from downtown Monterey at the location confirmed after booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 179
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "434555P1",
+    "productUrl": "https://www.viator.com/tours/Monterey-and-Carmel/Wine-Tasting-and-Walking-Tour-of-Carmel-by-the-Sea/d5250-434555P1",
+    "title": "Wine Tasting and Walking Tour of Carmel-by-the-Sea",
+    "description": {
+      "text": "Combine Carmel-by-the-Sea wine tastings with a guided walking tour of village highlights and hidden gems. Local sommeliers introduce regional wines while the route explores courtyards, galleries, and scenic lanes in a small-group format."
+    },
+    "location": {
+      "city": "Monterey",
+      "state": "California"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $159.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 74
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/4f/1e/85.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Wine tasting and walking tour of Carmel-by-the-Sea",
+      "Sommelier-led tastings at local venues",
+      "Explore village highlights and hidden courtyards",
+      "Three-hour guided small-group experience",
+      "Central Coast wine education from local experts"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at San Carlos Street, Carmel-by-the-Sea, CA 93921."
+      },
+      "end": {
+        "description": "Tour finishes in downtown Carmel-by-the-Sea."
+      }
+    },
+    "itinerarySummary": "Combine Carmel-by-the-Sea wine tastings with a guided walking tour of village highlights and hidden gems.",
+    "itineraryItems": [
+      {
+        "title": "Carmel-by-the-Sea",
+        "description": "Meet on San Carlos Street before the wine tasting and walking route begins.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Downtown Carmel",
+        "description": "Walk village lanes with stops at tasting rooms and local wine venues.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Wine tastings"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Wine Tasting and Walking Tour of Carmel-by-the-Sea?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Monterey?",
+        "answer": "Meet at San Carlos Street, Carmel-by-the-Sea, CA 93921."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 159
+      },
+      "currency": "USD"
+    }
+  }
+}

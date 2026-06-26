@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "70275P1",
+    "productUrl": "https://www.viator.com/tours/Monterey-and-Carmel/Ride-an-e-Bike-along-the-coastline-explore17-Mile-Drive/d5250-70275P1",
+    "title": "Monterey 17 Mile Drive Guided Electric Bike Tour",
+    "description": {
+      "text": "Ride an electric bike along the Monterey Peninsula coastline on a guided three-hour tour through 17-Mile Drive scenery. A local guide leads the route past Pebble Beach viewpoints, cypress groves, and Pacific overlooks with flexible pacing for varied fitness levels."
+    },
+    "location": {
+      "city": "Monterey",
+      "state": "California"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $55.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 767
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/ff/01/ff.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided electric bike tour along 17-Mile Drive",
+      "Coastal viewpoints and cypress-lined scenic corridors",
+      "Small-group format with local guide",
+      "Flexible pacing on e-bike assisted routes",
+      "Photo stops at iconic Monterey Peninsula overlooks"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Carmel or Pacific Grove meeting point listed in your booking confirmation."
+      },
+      "end": {
+        "description": "Tour returns to the original Monterey Peninsula meeting location."
+      }
+    },
+    "itinerarySummary": "Ride an electric bike along the Monterey Peninsula coastline on a guided three-hour tour through 17-Mile Drive scenery.",
+    "itineraryItems": [
+      {
+        "title": "17-Mile Drive",
+        "description": "Begin the guided e-bike route along the Monterey Peninsula coastal drive.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pebble Beach",
+        "description": "Pass scenic golf-course overlooks and shoreline viewpoints along the drive.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Lone Cypress",
+        "description": "Stop for photos at the famous cypress tree overlook when route conditions allow.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pacific Grove",
+        "description": "Continue through Pacific Grove coastal lanes with guide commentary on local history.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Electric bike and helmet"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Monterey 17 Mile Drive Guided Electric Bike Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Monterey?",
+        "answer": "Meet at the confirmed Carmel or Pacific Grove meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 55
+      },
+      "currency": "USD"
+    }
+  }
+}

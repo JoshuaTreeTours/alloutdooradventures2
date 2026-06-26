@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "5973FOOD",
+    "productUrl": "https://www.viator.com/tours/Monterey-and-Carmel/Carmel-Small-Group-Food-and-Wine-Walking-Tour/d5250-5973FOOD",
+    "title": "Carmel Small Group Walking Food and Cultural Tour",
+    "description": {
+      "text": "Explore Carmel-by-the-Sea on a small-group walking food and cultural tour with tastings at local restaurants and specialty shops. A guide shares village history while the route covers hidden courtyards, galleries, and signature Carmel flavors."
+    },
+    "location": {
+      "city": "Monterey",
+      "state": "California"
+    },
+    "duration": "3 hours 15 minutes (approx.)",
+    "priceFrom": "From $149.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 357
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/4f/1e/85.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group Carmel food and wine walking tour",
+      "Multiple tastings at local restaurants and shops",
+      "Explore hidden courtyards and village lanes",
+      "Guide shares Carmel history and architecture",
+      "Maximum group size keeps the route intimate"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Carmel-by-the-Sea meeting point listed in your booking confirmation."
+      },
+      "end": {
+        "description": "Tour finishes in downtown Carmel-by-the-Sea."
+      }
+    },
+    "itinerarySummary": "Explore Carmel-by-the-Sea on a small-group walking food and cultural tour with tastings at local restaurants and specialty shops.",
+    "itineraryItems": [
+      {
+        "title": "Carmel-by-the-Sea",
+        "description": "Begin in the village center before the guided tasting route through town.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ocean Avenue",
+        "description": "Walk Ocean Avenue corridors with stops at curated food and wine venues.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Carmel Mission",
+        "description": "Pass near the historic mission district with commentary on village founding.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Food tastings"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Carmel Small Group Walking Food and Cultural Tour?",
+        "answer": "The planned duration is 3 hours 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Monterey?",
+        "answer": "Meet at the confirmed Carmel-by-the-Sea meeting point listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149
+      },
+      "currency": "USD"
+    }
+  }
+}

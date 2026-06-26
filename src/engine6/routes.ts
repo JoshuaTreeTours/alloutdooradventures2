@@ -554,6 +554,52 @@ export const ENGINE6_SEATTLE_TOUR_PATH_PREFIX =
 export const isEngine6SeattleTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_SEATTLE_TOUR_PATH_PREFIX);
 
+export const ENGINE6_MONTEREY_17_MILE_EBIKE_PRODUCT_CODE = "70275P1";
+export const ENGINE6_MONTEREY_17_MILE_EBIKE_ROUTE =
+  "/destinations/california/monterey/tours/monterey-17-mile-drive-electric-bike-tour-70275P1";
+export const ENGINE6_MONTEREY_WHALE_WATCHING_4HR_PRODUCT_CODE = "53254P1";
+export const ENGINE6_MONTEREY_WHALE_WATCHING_4HR_ROUTE =
+  "/destinations/california/monterey/tours/whale-watching-tour-from-monterey-53254P1";
+export const ENGINE6_MONTEREY_WHALE_WATCHING_PRODUCT_CODE = "362397P1";
+export const ENGINE6_MONTEREY_WHALE_WATCHING_ROUTE =
+  "/destinations/california/monterey/tours/monterey-whale-watching-tour-362397P1";
+export const ENGINE6_MONTEREY_SUNSET_WHALE_WATCH_PRODUCT_CODE = "53254P8";
+export const ENGINE6_MONTEREY_SUNSET_WHALE_WATCH_ROUTE =
+  "/destinations/california/monterey/tours/sunset-whale-watch-monterey-53254P8";
+export const ENGINE6_MONTEREY_AQUARIUM_ADMISSION_PRODUCT_CODE = "6021MBA";
+export const ENGINE6_MONTEREY_AQUARIUM_ADMISSION_ROUTE =
+  "/destinations/california/monterey/tours/monterey-bay-aquarium-admission-6021MBA";
+export const ENGINE6_MONTEREY_CARMEL_FOOD_TOUR_PRODUCT_CODE = "5973FOOD";
+export const ENGINE6_MONTEREY_CARMEL_FOOD_TOUR_ROUTE =
+  "/destinations/california/monterey/tours/carmel-food-wine-walking-tour-5973FOOD";
+export const ENGINE6_MONTEREY_OLD_MONTEREY_FOOD_TOUR_PRODUCT_CODE = "88377P1";
+export const ENGINE6_MONTEREY_OLD_MONTEREY_FOOD_TOUR_ROUTE =
+  "/destinations/california/monterey/tours/old-monterey-walking-food-tour-88377P1";
+export const ENGINE6_MONTEREY_CANNERY_ROW_TOUR_PRODUCT_CODE = "39976P3";
+export const ENGINE6_MONTEREY_CANNERY_ROW_TOUR_ROUTE =
+  "/destinations/california/monterey/tours/cannery-row-steinbeck-sea-otters-tour-39976P3";
+export const ENGINE6_MONTEREY_GOCAR_TOUR_PRODUCT_CODE = "14670CAR";
+export const ENGINE6_MONTEREY_GOCAR_TOUR_ROUTE =
+  "/destinations/california/monterey/tours/monterey-gocar-cannery-row-tour-14670CAR";
+export const ENGINE6_MONTEREY_POINT_LOBOS_WALK_PRODUCT_CODE = "173135P2";
+export const ENGINE6_MONTEREY_POINT_LOBOS_WALK_ROUTE =
+  "/destinations/california/monterey/tours/point-lobos-nature-walk-173135P2";
+export const ENGINE6_MONTEREY_CARMEL_WINE_WALK_PRODUCT_CODE = "434555P1";
+export const ENGINE6_MONTEREY_CARMEL_WINE_WALK_ROUTE =
+  "/destinations/california/monterey/tours/carmel-wine-tasting-walking-tour-434555P1";
+export const ENGINE6_MONTEREY_CARMEL_VALLEY_WINE_PRODUCT_CODE = "118676P4";
+export const ENGINE6_MONTEREY_CARMEL_VALLEY_WINE_ROUTE =
+  "/destinations/california/monterey/tours/carmel-valley-wine-tour-premium-118676P4";
+export const ENGINE6_MONTEREY_SAILING_CRUISE_PRODUCT_CODE = "9345P1";
+export const ENGINE6_MONTEREY_SAILING_CRUISE_ROUTE =
+  "/destinations/california/monterey/tours/monterey-bay-sailing-cruise-9345P1";
+
+export const ENGINE6_MONTEREY_TOUR_PATH_PREFIX =
+  "/destinations/california/monterey/tours/";
+
+export const isEngine6MontereyTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_MONTEREY_TOUR_PATH_PREFIX);
+
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
   canonicalPath: string;
@@ -1182,6 +1228,58 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SEATTLE_SNOQUALMIE_PRIVATE_ROUTE,
     ENGINE6_SEATTLE_SNOQUALMIE_PRIVATE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MONTEREY_17_MILE_EBIKE_ROUTE,
+    ENGINE6_MONTEREY_17_MILE_EBIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MONTEREY_WHALE_WATCHING_4HR_ROUTE,
+    ENGINE6_MONTEREY_WHALE_WATCHING_4HR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MONTEREY_WHALE_WATCHING_ROUTE,
+    ENGINE6_MONTEREY_WHALE_WATCHING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MONTEREY_SUNSET_WHALE_WATCH_ROUTE,
+    ENGINE6_MONTEREY_SUNSET_WHALE_WATCH_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MONTEREY_AQUARIUM_ADMISSION_ROUTE,
+    ENGINE6_MONTEREY_AQUARIUM_ADMISSION_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MONTEREY_CARMEL_FOOD_TOUR_ROUTE,
+    ENGINE6_MONTEREY_CARMEL_FOOD_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MONTEREY_OLD_MONTEREY_FOOD_TOUR_ROUTE,
+    ENGINE6_MONTEREY_OLD_MONTEREY_FOOD_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MONTEREY_CANNERY_ROW_TOUR_ROUTE,
+    ENGINE6_MONTEREY_CANNERY_ROW_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MONTEREY_GOCAR_TOUR_ROUTE,
+    ENGINE6_MONTEREY_GOCAR_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MONTEREY_POINT_LOBOS_WALK_ROUTE,
+    ENGINE6_MONTEREY_POINT_LOBOS_WALK_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MONTEREY_CARMEL_WINE_WALK_ROUTE,
+    ENGINE6_MONTEREY_CARMEL_WINE_WALK_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MONTEREY_CARMEL_VALLEY_WINE_ROUTE,
+    ENGINE6_MONTEREY_CARMEL_VALLEY_WINE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MONTEREY_SAILING_CRUISE_ROUTE,
+    ENGINE6_MONTEREY_SAILING_CRUISE_PRODUCT_CODE,
   ],
 ] as const;
 

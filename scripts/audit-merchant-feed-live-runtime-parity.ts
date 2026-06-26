@@ -5,7 +5,9 @@ import {
   applyMerchantFeedLiveRuntimeParityBaselinePolicy,
   buildMerchantFeedPublishedBaselineCatalog,
   classifyMerchantFeedGovernanceTier,
+  requiresStrictMerchantFeedRuntimeParity,
   snapshotMerchantFeedCommercial,
+  type MerchantFeedGovernanceTier,
 } from "../api/engine6/merchantFeedBaselineGovernance";
 import { buildEngine6SchemaGraph } from "../src/engine6/schema/buildEngine6SchemaGraph";
 import { resolveEngine6TourForProductSchema } from "../src/engine6/resolveEngine6TourForProductSchema";
@@ -118,7 +120,8 @@ export const auditMerchantFeedLiveRuntimeParity = async (
     price?: string;
     average_rating?: string;
     review_count?: string;
-  }>
+  }>,
+  governanceByProductCode?: Map<string, MerchantFeedGovernanceTier>
 ): Promise<MerchantFeedLiveRuntimeParityReport> => {
   const csvById = new Map(csvRows.map(row => [row.id, row]));
   const drifts: MerchantFeedLiveRuntimeParityReport["drifts"] = [];
@@ -131,10 +134,23 @@ export const auditMerchantFeedLiveRuntimeParity = async (
     const batch = merchantFeedEligibleTours.slice(index, index + 8);
     const results = await Promise.all(
       batch.map(async tour => {
+        const normalizedProductCode = tour.productCode.trim().toUpperCase();
+        const tier =
+          governanceByProductCode?.get(normalizedProductCode) ?? "new-product";
         const csv = csvById.get(tour.productCode);
-        const liveJsonLd = await fetchLiveProductJsonLdCommercial(
-          tour.productCode
-        );
+
+        let liveJsonLd: Awaited<
+          ReturnType<typeof fetchLiveProductJsonLdCommercial>
+        >;
+        try {
+          liveJsonLd = await fetchLiveProductJsonLdCommercial(tour.productCode);
+        } catch (error) {
+          if (!requiresStrictMerchantFeedRuntimeParity(tier)) {
+            return null;
+          }
+          throw error;
+        }
+
         const priceMatch = (csv?.price ?? "").trim() === liveJsonLd.price.trim();
         const ratingMatch =
           (csv?.average_rating ?? "").trim() === liveJsonLd.averageRating.trim();
@@ -158,6 +174,9 @@ export const auditMerchantFeedLiveRuntimeParity = async (
     );
 
     for (const row of results) {
+      if (!row) {
+        continue;
+      }
       if (!row.priceDrift && !row.ratingDrift && !row.reviewCountDrift) {
         productsInParity += 1;
       } else {
@@ -274,7 +293,7 @@ const main = async () => {
   );
 
   const report = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
-    await auditMerchantFeedLiveRuntimeParity(merchantRows),
+    await auditMerchantFeedLiveRuntimeParity(merchantRows, governanceByProductCode),
     governanceByProductCode
   );
 

@@ -6,6 +6,11 @@ export type HeroPageType =
   | "activity"
   | "product";
 
+import {
+  ENGINE6_GLOBAL_FALLBACK_HERO_URL,
+  isDisplayableEngine6HeroUrl,
+  resolveEngine6CanonicalCityHero,
+} from "../engine6/displayHero";
 import { buildImageUrl } from "./seo";
 
 export const HOME_HERO_IMAGE = "/hero.jpg";
@@ -262,6 +267,10 @@ export const resolveCityHeroImage = ({
 
   for (const tour of rankedTourPool) {
     const candidateImage = tour.heroImage ?? tour.primaryImage;
+    if (!isDisplayableEngine6HeroUrl(candidateImage)) {
+      continue;
+    }
+
     const candidate: CityTourImageCandidate = {
       src: candidateImage,
       tourId: tour.id,
@@ -275,6 +284,18 @@ export const resolveCityHeroImage = ({
     if (isImageInCityTour(candidate, { citySlug, stateSlug, countryCode })) {
       return buildImageUrl(candidate.src);
     }
+  }
+
+  const canonicalCityHero = resolveEngine6CanonicalCityHero(
+    stateSlug,
+    citySlug
+  );
+  if (isDisplayableEngine6HeroUrl(canonicalCityHero)) {
+    return buildImageUrl(canonicalCityHero);
+  }
+
+  if (isDisplayableEngine6HeroUrl(ENGINE6_GLOBAL_FALLBACK_HERO_URL)) {
+    return buildImageUrl(ENGINE6_GLOBAL_FALLBACK_HERO_URL);
   }
 
   return buildImageUrl(CITY_NEUTRAL_BRAND_IMAGE);

@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "173135P2",
+    "productUrl": "https://www.viator.com/tours/Monterey-and-Carmel/Guided-2-Hour-Point-Lobos-Nature-Walk/d5250-173135P2",
+    "title": "Guided Point Lobos Nature Walk",
+    "description": {
+      "text": "Hike Point Lobos State Natural Reserve on a guided nature walk with a local naturalist. The route covers woodland trails, cliff overlooks, and cove viewpoints while watching for otters, seals, deer, and seabirds in a small-group format."
+    },
+    "location": {
+      "city": "Monterey",
+      "state": "California"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 54
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/31/d9/f9/af.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided hike in Point Lobos State Natural Reserve",
+      "Naturalist guide knows wildlife viewing areas",
+      "Woodland trails and coastal cliff overlooks",
+      "Small group limited to 14 travelers",
+      "Park admission included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Point Lobos Walks parking area on Highway 1 south of the reserve entrance."
+      },
+      "end": {
+        "description": "Return to the Highway 1 meeting parking area after the hike."
+      }
+    },
+    "itinerarySummary": "Hike Point Lobos State Natural Reserve on a guided nature walk with a local naturalist.",
+    "itineraryItems": [
+      {
+        "title": "Point Lobos State Natural Reserve",
+        "description": "Enter the reserve for a guided walk through woodland and coastal trails.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Whalers Cove",
+        "description": "Stop at cove overlooks to watch for seals and sea otters when visible.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "China Cove",
+        "description": "View the turquoise cove and cliff formations on the guided route.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Park admission"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Guided Point Lobos Nature Walk?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Monterey?",
+        "answer": "Meet at the Point Lobos Walks parking area on Highway 1 south of the reserve entrance."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature Walks"
+      },
+      {
+        "label": "Hiking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

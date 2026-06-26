@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-24T01:03:45.887Z",
+  "generatedAt": "2026-06-26T00:33:43.805Z",
   "totals": {
-    "engine6ToursAudited": 165,
-    "itineraryRowsAudited": 741,
+    "engine6ToursAudited": 178,
+    "itineraryRowsAudited": 780,
     "suspiciousRows": 25,
     "affectedTours": 20,
-    "criticalRows": 197,
+    "criticalRows": 206,
     "reviewRows": 4
   },
   "topFindings": [
     {
       "reason": "title-description-semantic-mismatch",
       "severity": "critical",
-      "count": 177
+      "count": 186
     },
     {
       "reason": "matches-description-first-sentence",
@@ -3885,6 +3885,168 @@
       "renderedDescription": "Aviation exhibits and gallery displays before the factory tour begins.",
       "titleSource": null,
       "duration": "30 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "70275P1",
+      "route": "/destinations/california/monterey/tours/monterey-17-mile-drive-electric-bike-tour-70275P1",
+      "tourTitle": "Monterey 17 Mile Drive Guided Electric Bike Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Pebble Beach",
+      "renderedDescription": "Scenic golf-course overlooks and shoreline viewpoints along the drive.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "53254P1",
+      "route": "/destinations/california/monterey/tours/whale-watching-tour-from-monterey-53254P1",
+      "tourTitle": "Whale Watching Tour From Monterey",
+      "itineraryIndex": 1,
+      "renderedTitle": "Monterey Bay",
+      "renderedDescription": "Cruise protected sanctuary waters while the crew searches for whales and dolphins.",
+      "titleSource": null,
+      "duration": "2 hours 30 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "362397P1",
+      "route": "/destinations/california/monterey/tours/monterey-whale-watching-tour-362397P1",
+      "tourTitle": "Monterey Whale Watching Tour",
+      "itineraryIndex": 1,
+      "renderedTitle": "Monterey Bay",
+      "renderedDescription": "Cruise open waters while naturalists help locate whales and marine mammals.",
+      "titleSource": null,
+      "duration": "2 hours",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "53254P8",
+      "route": "/destinations/california/monterey/tours/sunset-whale-watch-monterey-53254P8",
+      "tourTitle": "Sunset Whale Watch Tour in Monterey",
+      "itineraryIndex": 1,
+      "renderedTitle": "Monterey Bay",
+      "renderedDescription": "Cruise at sunset while the guide searches for whales and dolphins.",
+      "titleSource": null,
+      "duration": "2 hours 15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "5973FOOD",
+      "route": "/destinations/california/monterey/tours/carmel-food-wine-walking-tour-5973FOOD",
+      "tourTitle": "Carmel Small Group Walking Food and Cultural Tour",
+      "itineraryIndex": 0,
+      "renderedTitle": "Carmel-by-the-Sea",
+      "renderedDescription": "Begin in the village center before the guided tasting route through town.",
+      "titleSource": null,
+      "duration": "15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "88377P1",
+      "route": "/destinations/california/monterey/tours/old-monterey-walking-food-tour-88377P1",
+      "tourTitle": "Old Monterey Walking Food Tour",
+      "itineraryIndex": 0,
+      "renderedTitle": "Old Monterey",
+      "renderedDescription": "Start in the historic adobe district before the curated tasting route.",
+      "titleSource": null,
+      "duration": "20 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "434555P1",
+      "route": "/destinations/california/monterey/tours/carmel-wine-tasting-walking-tour-434555P1",
+      "tourTitle": "Wine Tasting and Walking Tour of Carmel-by-the-Sea",
+      "itineraryIndex": 0,
+      "renderedTitle": "Carmel-by-the-Sea",
+      "renderedDescription": "Meet on San Carlos Street before the wine tasting and walking route begins.",
+      "titleSource": null,
+      "duration": "15 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "434555P1",
+      "route": "/destinations/california/monterey/tours/carmel-wine-tasting-walking-tour-434555P1",
+      "tourTitle": "Wine Tasting and Walking Tour of Carmel-by-the-Sea",
+      "itineraryIndex": 1,
+      "renderedTitle": "Downtown Carmel",
+      "renderedDescription": "Walk village lanes with stops at tasting rooms and local wine venues.",
+      "titleSource": null,
+      "duration": "2 hours",
+      "admissionStatus": null,
+      "suspiciousReasons": [],
+      "findings": [
+        {
+          "reason": "title-description-semantic-mismatch",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "productId": "9345P1",
+      "route": "/destinations/california/monterey/tours/monterey-bay-sailing-cruise-9345P1",
+      "tourTitle": "Monterey Bay Sailing Cruise",
+      "itineraryIndex": 1,
+      "renderedTitle": "Monterey Bay",
+      "renderedDescription": "Sail sanctuary waters with views of marine wildlife and coastal hills.",
+      "titleSource": null,
+      "duration": "1 hour",
       "admissionStatus": null,
       "suspiciousReasons": [],
       "findings": [
