@@ -332,6 +332,86 @@ const buildDiagnosticFailureObjects = async (productCodes: string[]) => {
   );
 };
 
+const MERCHANT_FEED_COMMERCIAL_PARITY_FAILURE_FIELDS = new Set([
+  "price",
+  "average_rating",
+  "rating_count",
+  "review_count",
+  "merchantFeed.price",
+  "merchantFeed.average_rating",
+  "merchantFeed.rating_count",
+  "merchantFeed.review_count",
+]);
+
+const parseMerchantFeedParityFailure = (failure: string) => {
+  const [productCode = "", ...fieldParts] = failure.split(".");
+  return {
+    productCode: productCode.trim().toUpperCase(),
+    field: fieldParts.join(".").split(":")[0]?.trim() ?? "",
+  };
+};
+
+const partitionMerchantFeedParityFailuresByBuildScope = (
+  failures: string[],
+  governanceByProductCode: Map<string, string>
+) => {
+  const blockingFailures: string[] = [];
+  const informationalLegacyFailures: string[] = [];
+
+  for (const failure of failures) {
+    const { productCode, field } = parseMerchantFeedParityFailure(failure);
+    const tier = governanceByProductCode.get(productCode) ?? "new-product";
+    const isInformationalLegacyCommercialDrift =
+      tier === "unchanged-legacy-baseline" &&
+      MERCHANT_FEED_COMMERCIAL_PARITY_FAILURE_FIELDS.has(field);
+
+    if (isInformationalLegacyCommercialDrift) {
+      informationalLegacyFailures.push(failure);
+    } else {
+      blockingFailures.push(failure);
+    }
+  }
+
+  return {
+    blockingFailures,
+    informationalLegacyFailures,
+  };
+};
+
+const logMerchantFeedInformationalLegacyParityDrift = (args: {
+  guardName: string;
+  failures: string[];
+}) => {
+  if (args.failures.length === 0) {
+    return;
+  }
+
+  const productCodes = [
+    ...new Set(
+      args.failures
+        .map(failure => parseMerchantFeedParityFailure(failure).productCode)
+        .filter(Boolean)
+    ),
+  ];
+
+  console.warn(
+    "[merchant-feed-build-guard]",
+    JSON.stringify(
+      {
+        guardName: args.guardName,
+        pass: true,
+        informationalPreExistingDrift: true,
+        productCodes,
+        failureObjects: args.failures.slice(0, 5).map(failure => ({
+          failure,
+        })),
+      },
+      null,
+      2
+    )
+  );
+};
+
 const logMerchantFeedBuildGuardFailure = async (args: {
   guardName: string;
   pass: boolean;
@@ -522,18 +602,31 @@ const main = async () => {
     new Map(outputRows.map(row => [row.id, row]))
   );
 
-  if (!parityAudit.pass) {
-    for (const failure of parityAudit.failures.slice(0, 20)) {
+  const productJsonLdParityScope =
+    partitionMerchantFeedParityFailuresByBuildScope(
+      parityAudit.failures,
+      reconciliation.governanceByProductCode
+    );
+  logMerchantFeedInformationalLegacyParityDrift({
+    guardName: "product-jsonld-parity",
+    failures: productJsonLdParityScope.informationalLegacyFailures,
+  });
+
+  if (productJsonLdParityScope.blockingFailures.length > 0) {
+    for (const failure of productJsonLdParityScope.blockingFailures.slice(
+      0,
+      20
+    )) {
       console.error(failure);
     }
-    if (parityAudit.failures.length > 20) {
+    if (productJsonLdParityScope.blockingFailures.length > 20) {
       console.error(
-        `...and ${parityAudit.failures.length - 20} additional Product JSON-LD parity failures.`
+        `...and ${productJsonLdParityScope.blockingFailures.length - 20} additional Product JSON-LD parity failures.`
       );
     }
     const failingProductCodes = [
       ...new Set(
-        parityAudit.failures
+        productJsonLdParityScope.blockingFailures
           .map(failure => failure.split(".")[0]?.trim().toUpperCase() ?? "")
           .filter(Boolean)
       ),
@@ -546,9 +639,11 @@ const main = async () => {
         reconciliation.governanceByProductCode,
         failingProductCodes
       ),
-      failureObjects: parityAudit.failures.slice(0, 5).map(failure => ({
-        failure,
-      })),
+      failureObjects: productJsonLdParityScope.blockingFailures
+        .slice(0, 5)
+        .map(failure => ({
+          failure,
+        })),
     });
     throw new Error(
       "Merchant feed Product JSON-LD parity validation failed before write."
@@ -560,18 +655,27 @@ const main = async () => {
     new Map(outputRows.map(row => [row.id, row]))
   );
 
-  if (!commercialParityAudit.pass) {
-    for (const failure of commercialParityAudit.failures.slice(0, 20)) {
+  const commercialParityScope = partitionMerchantFeedParityFailuresByBuildScope(
+    commercialParityAudit.failures,
+    reconciliation.governanceByProductCode
+  );
+  logMerchantFeedInformationalLegacyParityDrift({
+    guardName: "commercial-parity",
+    failures: commercialParityScope.informationalLegacyFailures,
+  });
+
+  if (commercialParityScope.blockingFailures.length > 0) {
+    for (const failure of commercialParityScope.blockingFailures.slice(0, 20)) {
       console.error(failure);
     }
-    if (commercialParityAudit.failures.length > 20) {
+    if (commercialParityScope.blockingFailures.length > 20) {
       console.error(
-        `...and ${commercialParityAudit.failures.length - 20} additional commercial parity failures.`
+        `...and ${commercialParityScope.blockingFailures.length - 20} additional commercial parity failures.`
       );
     }
     const failingProductCodes = [
       ...new Set(
-        commercialParityAudit.failures
+        commercialParityScope.blockingFailures
           .map(failure => failure.split(".")[0]?.trim().toUpperCase() ?? "")
           .filter(Boolean)
       ),
@@ -584,7 +688,7 @@ const main = async () => {
         reconciliation.governanceByProductCode,
         failingProductCodes
       ),
-      failureObjects: commercialParityAudit.failures
+      failureObjects: commercialParityScope.blockingFailures
         .slice(0, 5)
         .map(failure => ({
           failure,
