@@ -197,6 +197,41 @@ export const applyBaselineCommercialToMerchantFeedRow = <
   };
 };
 
+const formatMerchantRating = (value: number) => value.toFixed(1);
+const formatMerchantCount = (value: number) => String(Math.trunc(value));
+
+export const applyLiveRatingMetadataToMerchantFeedRow = <
+  TRow extends {
+    average_rating: string;
+    rating_count: string;
+    review_count: string;
+  },
+>(
+  row: TRow,
+  diagnostic: Engine6ViatorProductCommercialDiagnostic
+): TRow => {
+  if (!diagnostic.ratingMetadataPresent) {
+    return row;
+  }
+
+  const { aggregateRating, reviewCount } = diagnostic.commercial;
+  if (
+    typeof aggregateRating !== "number" ||
+    !Number.isFinite(aggregateRating) ||
+    typeof reviewCount !== "number" ||
+    !Number.isFinite(reviewCount)
+  ) {
+    return row;
+  }
+
+  return {
+    ...row,
+    average_rating: formatMerchantRating(aggregateRating),
+    rating_count: formatMerchantCount(reviewCount),
+    review_count: formatMerchantCount(reviewCount),
+  };
+};
+
 export const passesMerchantFeedLiveCommercialGuardForBuild = (
   diagnostic: Engine6ViatorProductCommercialDiagnostic,
   context: {
@@ -376,7 +411,9 @@ export const reconcileMerchantFeedRowsWithBaselineGovernance = async <
         liveCommercialFailures.push(`${productCode}: ${guard.reason}`);
       }
       governanceByProductCode.set(productCode, "new-product");
-      rows.push(generatedRow);
+      rows.push(
+        applyLiveRatingMetadataToMerchantFeedRow(generatedRow, diagnostic)
+      );
       continue;
     }
 
@@ -392,7 +429,9 @@ export const reconcileMerchantFeedRowsWithBaselineGovernance = async <
         liveCommercialFailures.push(`${productCode}: ${strictGuard.reason}`);
       }
       governanceByProductCode.set(productCode, "modified-commercial");
-      rows.push(generatedRow);
+      rows.push(
+        applyLiveRatingMetadataToMerchantFeedRow(generatedRow, diagnostic)
+      );
       continue;
     }
 

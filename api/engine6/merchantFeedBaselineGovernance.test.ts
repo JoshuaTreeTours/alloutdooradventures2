@@ -21,7 +21,10 @@ import {
   passesMerchantFeedLiveCommercialGuard,
   type Engine6ViatorProductCommercialDiagnostic,
 } from "./resolveEngine6ViatorProductCommercialExtract";
-import { validateMerchantFeedRows } from "../../scripts/generate-merchant-feed";
+import {
+  partitionMerchantFeedParityFailuresByBuildScope,
+  validateMerchantFeedRows,
+} from "../../scripts/generate-merchant-feed";
 
 const baselineRow = {
   id: "191303P1",
@@ -264,6 +267,89 @@ describe("merchant feed baseline governance", () => {
     expect(reconciliation.rows[0]?.price).toBe("99.00 USD");
   });
 
+  it("writes live rating metadata into changed product merchant feed fields before parity validation", async () => {
+    const baseline = buildMerchantFeedPublishedBaselineCatalog([baselineRow]);
+    const generatedRow = {
+      id: "191303P1",
+      price: "99.00 USD",
+      average_rating: "",
+      rating_count: "",
+      review_count: "",
+    };
+
+    const reconciliation =
+      await reconcileMerchantFeedRowsWithBaselineGovernance(
+        [generatedRow],
+        baseline,
+        async () => ({
+          ...bundledFallbackDiagnostic("191303P1"),
+          commercial: {
+            priceAmount: 99,
+            priceFormatted: "From $99.00",
+            aggregateRating: 4.75,
+            reviewCount: 128,
+            source: "live-api" as const,
+          },
+          failureReason: "live-api-success" as const,
+          ratingMetadataPresent: true,
+          ratingAvailable: true,
+          reviewCountAvailable: true,
+        }),
+        new Set(["191303P1"])
+      );
+
+    expect(reconciliation.governanceByProductCode.get("191303P1")).toBe(
+      "modified-commercial"
+    );
+    expect(reconciliation.rows[0]).toMatchObject({
+      average_rating: "4.8",
+      rating_count: "128",
+      review_count: "128",
+    });
+    expect(reconciliation.liveCommercialFailures).toEqual([]);
+  });
+
+  it("allows blank rating fields for a new product when live metadata is absent", async () => {
+    const generatedRow = {
+      id: "NEWTOUR1",
+      price: "45.00 USD",
+      average_rating: "",
+      rating_count: "",
+      review_count: "",
+    };
+
+    const reconciliation =
+      await reconcileMerchantFeedRowsWithBaselineGovernance(
+        [generatedRow],
+        baseline,
+        async () => ({
+          ...bundledFallbackDiagnostic("NEWTOUR1", {
+            ratingMetadataPresent: false,
+            ratingAvailable: false,
+            reviewCountAvailable: false,
+          }),
+          commercial: {
+            priceAmount: 45,
+            priceFormatted: "From $45.00",
+            aggregateRating: null,
+            reviewCount: null,
+            source: "live-api" as const,
+          },
+          failureReason: "live-api-success" as const,
+        })
+      );
+
+    expect(reconciliation.governanceByProductCode.get("NEWTOUR1")).toBe(
+      "new-product"
+    );
+    expect(reconciliation.rows[0]).toMatchObject({
+      average_rating: "",
+      rating_count: "",
+      review_count: "",
+    });
+    expect(reconciliation.liveCommercialFailures).toEqual([]);
+  });
+
   it("preserves baseline when legacy live commercial values drift during regeneration", async () => {
     const baseline = buildMerchantFeedPublishedBaselineCatalog([baselineRow]);
     const generatedRow = {
@@ -397,6 +483,29 @@ describe("merchant feed branch-scoped runtime parity", () => {
 
     expect(report.pass).toBe(true);
     expect(report.informationalLegacyProductCodes).toEqual(["191303P1"]);
+  });
+
+  it("blocks Product JSON-LD parity drift for branch-modified and new products only", () => {
+    const scope = partitionMerchantFeedParityFailuresByBuildScope(
+      [
+        '191303P1.average_rating: expected "4.8", got ""',
+        'NEWTOUR1.title: expected "New tour", got "Wrong"',
+        'LEGACY1.description: expected "Live", got "Baseline"',
+      ],
+      new Map([
+        ["191303P1", "modified-commercial" as const],
+        ["NEWTOUR1", "new-product" as const],
+        ["LEGACY1", "unchanged-legacy-baseline" as const],
+      ])
+    );
+
+    expect(scope.blockingFailures).toEqual([
+      '191303P1.average_rating: expected "4.8", got ""',
+      'NEWTOUR1.title: expected "New tour", got "Wrong"',
+    ]);
+    expect(scope.informationalLegacyFailures).toEqual([
+      'LEGACY1.description: expected "Live", got "Baseline"',
+    ]);
   });
 
   it("blocks runtime drift for branch-new products not present on main", () => {
