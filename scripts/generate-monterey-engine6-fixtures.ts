@@ -52,7 +52,8 @@ const MONTEREY_TOURS: MontereyTourFixture[] = [
     ],
     startDescription:
       "Meet at the confirmed Carmel or Pacific Grove meeting point listed in your booking confirmation.",
-    endDescription: "Tour returns to the original Monterey Peninsula meeting location.",
+    endDescription:
+      "Tour returns to the original Monterey Peninsula meeting location.",
     itineraryItems: [
       {
         title: "17-Mile Drive",
@@ -228,7 +229,7 @@ const MONTEREY_TOURS: MontereyTourFixture[] = [
       "Visit the Monterey Bay Aquarium on Cannery Row with a skip-the-line admission ticket for all-day access. Explore kelp forest, open sea, and otter exhibits plus daily feedings and interpretive programs at one of the top aquariums on the Pacific Coast.",
     duration: "2 to 4 hours (approx.)",
     priceFrom: 60,
-    heroUrl: `${TACDN}/06/6e/e7/f6.jpg`,
+    heroUrl: `${TACDN}/12/2e/41/ec.jpg`,
     rating: 4.5,
     reviewCount: 1290,
     highlights: [
@@ -434,7 +435,8 @@ const MONTEREY_TOURS: MontereyTourFixture[] = [
     ],
     startDescription:
       "Pick up the GoCar at the Monterey operator location listed in your booking confirmation.",
-    endDescription: "Return the GoCar to the original Monterey pickup location.",
+    endDescription:
+      "Return the GoCar to the original Monterey pickup location.",
     itineraryItems: [
       {
         title: "Cannery Row",
@@ -467,7 +469,7 @@ const MONTEREY_TOURS: MontereyTourFixture[] = [
       "Hike Point Lobos State Natural Reserve on a guided nature walk with a local naturalist. The route covers woodland trails, cliff overlooks, and cove viewpoints while watching for otters, seals, deer, and seabirds in a small-group format.",
     duration: "2 hours 30 minutes (approx.)",
     priceFrom: 89,
-    heroUrl: `${TACDN}/06/6e/e7/f6.jpg`,
+    heroUrl: `${TACDN}/31/d9/f9/af.jpg`,
     rating: 4.9,
     reviewCount: 186,
     highlights: [
@@ -479,7 +481,8 @@ const MONTEREY_TOURS: MontereyTourFixture[] = [
     ],
     startDescription:
       "Meet at the Point Lobos Walks parking area on Highway 1 south of the reserve entrance.",
-    endDescription: "Return to the Highway 1 meeting parking area after the hike.",
+    endDescription:
+      "Return to the Highway 1 meeting parking area after the hike.",
     itineraryItems: [
       {
         title: "Point Lobos State Natural Reserve",
@@ -647,62 +650,62 @@ const buildFixture = (tour: MontereyTourFixture) => {
   const reviewCount = viatorRatings?.reviewCount ?? tour.reviewCount;
 
   return {
-  product: {
-    productCode: tour.productCode,
-    productUrl: tour.productUrl,
-    title: tour.title,
-    description: { text: tour.description },
-    location: { city: "Monterey", state: "California" },
-    duration: tour.duration,
-    priceFrom: `From $${tour.priceFrom.toFixed(2)}`,
-    reviews: {
-      combinedAverageRating: rating,
-      totalReviews: reviewCount,
-    },
-    media: {
-      images: [
-        {
-          isCover: true,
-          variants: {
-            FULL: {
-              url: tour.heroUrl,
-              width: 674,
-              height: 446,
+    product: {
+      productCode: tour.productCode,
+      productUrl: tour.productUrl,
+      title: tour.title,
+      description: { text: tour.description },
+      location: { city: "Monterey", state: "California" },
+      duration: tour.duration,
+      priceFrom: `From $${tour.priceFrom.toFixed(2)}`,
+      reviews: {
+        combinedAverageRating: rating,
+        totalReviews: reviewCount,
+      },
+      media: {
+        images: [
+          {
+            isCover: true,
+            variants: {
+              FULL: {
+                url: tour.heroUrl,
+                width: 674,
+                height: 446,
+              },
             },
           },
+        ],
+      },
+      highlights: tour.highlights,
+      logistics: {
+        start: { description: tour.startDescription },
+        end: { description: tour.endDescription },
+      },
+      itinerarySummary: tour.description.split(".").slice(0, 1).join(".") + ".",
+      itineraryItems: tour.itineraryItems,
+      inclusions: tour.inclusions,
+      additionalInfo: [
+        "Confirmation will be received at time of booking",
+        "Not wheelchair accessible",
+        "Near public transportation",
+        "Most travelers can participate",
+      ],
+      faqs: [
+        {
+          question: `How long is the ${tour.title}?`,
+          answer: `The planned duration is ${tour.duration.replace(" (approx.)", "")}.`,
+        },
+        {
+          question: "Where does the tour depart from in Monterey?",
+          answer: tour.startDescription,
         },
       ],
-    },
-    highlights: tour.highlights,
-    logistics: {
-      start: { description: tour.startDescription },
-      end: { description: tour.endDescription },
-    },
-    itinerarySummary: tour.description.split(".").slice(0, 1).join(".") + ".",
-    itineraryItems: tour.itineraryItems,
-    inclusions: tour.inclusions,
-    additionalInfo: [
-      "Confirmation will be received at time of booking",
-      "Not wheelchair accessible",
-      "Near public transportation",
-      "Most travelers can participate",
-    ],
-    faqs: [
-      {
-        question: `How long is the ${tour.title}?`,
-        answer: `The planned duration is ${tour.duration.replace(" (approx.)", "")}.`,
+      categories: tour.categories.map(label => ({ label })),
+      pricing: {
+        summary: { fromPrice: tour.priceFrom },
+        currency: "USD",
       },
-      {
-        question: "Where does the tour depart from in Monterey?",
-        answer: tour.startDescription,
-      },
-    ],
-    categories: tour.categories.map(label => ({ label })),
-    pricing: {
-      summary: { fromPrice: tour.priceFrom },
-      currency: "USD",
     },
-  },
   };
 };
 
@@ -710,8 +713,15 @@ const outputDir = path.join(process.cwd(), "data", "engine6", "viator");
 mkdirSync(outputDir, { recursive: true });
 
 for (const tour of MONTEREY_TOURS) {
-  const filePath = path.join(outputDir, `${tour.productCode}.exact-product.json`);
-  writeFileSync(filePath, `${JSON.stringify(buildFixture(tour), null, 2)}\n`, "utf8");
+  const filePath = path.join(
+    outputDir,
+    `${tour.productCode}.exact-product.json`
+  );
+  writeFileSync(
+    filePath,
+    `${JSON.stringify(buildFixture(tour), null, 2)}\n`,
+    "utf8"
+  );
   console.log(`Wrote ${filePath}`);
 }
 

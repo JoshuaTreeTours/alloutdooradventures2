@@ -6,6 +6,7 @@ import { getEngine6TourRatingSourceOfTruth } from "./ratingSourceOfTruth";
 import { legacyFhMigratedTours } from "./legacyFh/registry";
 import { ENGINE6_SPECIMEN_PRODUCT_CODE } from "./routes";
 import { engine6ResolvedTours } from "./registry";
+import { resolveEngine6DisplayHero } from "./displayHero";
 import type { Engine6Tour } from "./types";
 
 const ENGINE6_CANONICAL_TOUR_PATH =
@@ -68,7 +69,11 @@ const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
     ENGINE6_CANONICAL_TOUR_PATH.exec(tour.canonicalPath) ?? [];
   const card = toEngine6Card(tour);
   const ratingSourceOfTruth = getEngine6TourRatingSourceOfTruth(tour);
-  const heroImageUrl = tour.heroImageUrl ?? "";
+  const heroImageUrl = resolveEngine6DisplayHero({
+    productHeroUrl: tour.heroImageUrl,
+    stateSlug,
+    citySlug,
+  });
 
   return {
     id: `engine6-${tour.productCode}`,
