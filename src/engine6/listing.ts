@@ -6,7 +6,10 @@ import { getEngine6TourRatingSourceOfTruth } from "./ratingSourceOfTruth";
 import { legacyFhMigratedTours } from "./legacyFh/registry";
 import { ENGINE6_SPECIMEN_PRODUCT_CODE } from "./routes";
 import { engine6ResolvedTours } from "./registry";
-import { resolveEngine6DisplayHero } from "./displayHero";
+import {
+  resolveEngine6CityDisplayHeroes,
+  resolveEngine6DisplayHero,
+} from "./displayHero";
 import type { Engine6Tour } from "./types";
 
 const ENGINE6_CANONICAL_TOUR_PATH =
@@ -64,16 +67,22 @@ const getEngine6ActivitySlugs = (tour: Engine6Tour) => {
   return slugs.size > 0 ? Array.from(slugs) : ["adventure"];
 };
 
-const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
+const toEngine6ListingTour = (
+  tour: Engine6Tour,
+  governedHeroImageUrl?: string
+): Tour => {
   const [, stateSlug = "", citySlug = "", slug = ""] =
     ENGINE6_CANONICAL_TOUR_PATH.exec(tour.canonicalPath) ?? [];
   const card = toEngine6Card(tour);
   const ratingSourceOfTruth = getEngine6TourRatingSourceOfTruth(tour);
-  const heroImageUrl = resolveEngine6DisplayHero({
-    productHeroUrl: tour.heroImageUrl,
-    stateSlug,
-    citySlug,
-  });
+  const heroImageUrl =
+    governedHeroImageUrl ??
+    resolveEngine6DisplayHero({
+      productCode: tour.productCode,
+      productHeroUrl: tour.heroImageUrl,
+      stateSlug,
+      citySlug,
+    });
 
   return {
     id: `engine6-${tour.productCode}`,
@@ -137,9 +146,46 @@ const dedupeEngine6ToursByCanonicalPath = (tours: Engine6Tour[]) => {
   return Array.from(byPath.values());
 };
 
-export const engine6ListingTours: Tour[] = dedupeEngine6ToursByCanonicalPath([
-  ...engine6ResolvedTours,
-  ...legacyFhMigratedTours,
-])
-  .filter(tour => !isExcludedProductCode(tour.productCode))
-  .map(toEngine6ListingTour);
+const groupEngine6ToursByCity = (tours: Engine6Tour[]) => {
+  const groups = new Map<string, Engine6Tour[]>();
+
+  for (const tour of tours) {
+    const [, stateSlug = "", citySlug = ""] =
+      ENGINE6_CANONICAL_TOUR_PATH.exec(tour.canonicalPath) ?? [];
+    const key = `${stateSlug}/${citySlug}`;
+    groups.set(key, [...(groups.get(key) ?? []), tour]);
+  }
+
+  return groups;
+};
+
+const toGovernedEngine6ListingTours = (tours: Engine6Tour[]) => {
+  const governedHeroesByProductCode = new Map<string, string>();
+
+  for (const [key, cityTours] of Array.from(groupEngine6ToursByCity(tours))) {
+    const [stateSlug, citySlug] = key.split("/");
+    const cityHeroes = resolveEngine6CityDisplayHeroes({
+      tours: cityTours,
+      stateSlug,
+      citySlug,
+    });
+
+    for (const [productCode, hero] of Array.from(cityHeroes)) {
+      governedHeroesByProductCode.set(productCode, hero);
+    }
+  }
+
+  return tours.map(tour =>
+    toEngine6ListingTour(
+      tour,
+      governedHeroesByProductCode.get(tour.productCode)
+    )
+  );
+};
+
+export const engine6ListingTours: Tour[] = toGovernedEngine6ListingTours(
+  dedupeEngine6ToursByCanonicalPath([
+    ...engine6ResolvedTours,
+    ...legacyFhMigratedTours,
+  ]).filter(tour => !isExcludedProductCode(tour.productCode))
+);
