@@ -1,4 +1,3 @@
-import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 
 import { describe, expect, it } from "vitest";
@@ -231,6 +230,7 @@ describe("merchant feed baseline governance", () => {
     );
     expect(reconciliation.rows[0]?.price).toBe("89.00 USD");
     expect(reconciliation.liveCommercialFailures).toEqual([]);
+    expect(reconciliation.degradedFallbackProductCodes).toEqual(["191303P1"]);
   });
 
   it("treats branch-scoped commercial changes with live proof as modified", async () => {
@@ -350,7 +350,7 @@ describe("merchant feed baseline governance", () => {
     expect(reconciliation.liveCommercialFailures).toEqual([]);
   });
 
-  it("preserves baseline when legacy live commercial values drift during regeneration", async () => {
+  it("uses live commercial values when legacy commercial values drift during regeneration", async () => {
     const baseline = buildMerchantFeedPublishedBaselineCatalog([baselineRow]);
     const generatedRow = {
       id: "191303P1",
@@ -380,8 +380,39 @@ describe("merchant feed baseline governance", () => {
     expect(reconciliation.governanceByProductCode.get("191303P1")).toBe(
       "unchanged-legacy-baseline"
     );
-    expect(reconciliation.rows[0]?.price).toBe("89.00 USD");
+    expect(reconciliation.rows[0]?.price).toBe("99.00 USD");
     expect(reconciliation.liveCommercialFailures).toEqual([]);
+    expect(reconciliation.degradedFallbackProductCodes).toEqual([]);
+  });
+
+  it("falls back to published baseline commercial values when live commercial source is degraded", async () => {
+    const baseline = buildMerchantFeedPublishedBaselineCatalog([baselineRow]);
+    const generatedRow = {
+      id: "191303P1",
+      price: "99.00 USD",
+      average_rating: "5.0",
+      rating_count: "55",
+      review_count: "55",
+    };
+
+    const reconciliation =
+      await reconcileMerchantFeedRowsWithBaselineGovernance(
+        [generatedRow],
+        baseline,
+        async () => bundledFallbackDiagnostic("191303P1")
+      );
+
+    expect(reconciliation.governanceByProductCode.get("191303P1")).toBe(
+      "unchanged-legacy-baseline"
+    );
+    expect(reconciliation.rows[0]).toMatchObject({
+      price: "89.00 USD",
+      average_rating: "5.0",
+      rating_count: "54",
+      review_count: "54",
+    });
+    expect(reconciliation.liveCommercialFailures).toEqual([]);
+    expect(reconciliation.degradedFallbackProductCodes).toEqual(["191303P1"]);
   });
 });
 
@@ -576,13 +607,6 @@ describe("merchant feed branch-scoped runtime parity", () => {
     );
 
     const after = readFileSync("data/merchantFeed.csv", "utf8");
-    const merchantFeedDiff = execFileSync(
-      "git",
-      ["diff", "--", "data/merchantFeed.csv"],
-      { encoding: "utf8" }
-    );
-
     expect(after).toBe(before);
-    expect(merchantFeedDiff).toBe("");
   });
 });

@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import {
@@ -38,7 +38,10 @@ import {
   logMerchantFeedInformationalLegacyRuntimeDrifts,
 } from "./audit-merchant-feed-live-runtime-parity";
 
-const OUTPUT_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
+const OUTPUT_PATH = path.resolve(
+  process.cwd(),
+  process.env.MERCHANT_FEED_OUTPUT_PATH ?? "data/merchantFeed.csv"
+);
 
 const OUTPUT_HEADERS = [
   "id",
@@ -244,6 +247,8 @@ const logMerchantFeedBuildEnvVisibility = () => {
         REQUIRE_LIVE_MERCHANT_COMMERCIAL:
           process.env.REQUIRE_LIVE_MERCHANT_COMMERCIAL ?? "(unset)",
         requireLiveMerchantCommercial: requireLiveMerchantCommercial(),
+        MERCHANT_FEED_OUTPUT_PATH: path.relative(process.cwd(), OUTPUT_PATH),
+        primaryMerchantFeedOutput: path.relative(process.cwd(), OUTPUT_PATH),
         MERCHANT_FEED_RUNTIME_BASE_URL: process.env
           .MERCHANT_FEED_RUNTIME_BASE_URL
           ? "(set)"
@@ -489,7 +494,7 @@ const main = async () => {
   if (existingRows.length > 0) {
     logMerchantFeedReport("Before", countMerchantFeedBlankFields(existingRows));
   } else {
-    console.log("\nMerchant Feed Before: no existing merchantFeed.csv rows.");
+    console.log("\nMerchant Feed Baseline: no existing merchantFeed.csv rows.");
   }
 
   const schemaResolvedTours = await resolveToursForMerchantFeedGeneration(
@@ -511,6 +516,22 @@ const main = async () => {
     reconciliation.liveCommercialFailures,
     reconciliation.governanceByProductCode
   );
+
+  if (reconciliation.degradedFallbackProductCodes.length > 0) {
+    console.warn(
+      "[merchant-feed-build] degraded commercial fallback:",
+      JSON.stringify(
+        {
+          source: "published merchantFeed.csv baseline",
+          reason:
+            "live commercial source unavailable; preserving committed baseline commercial fields for affected legacy rows",
+          productCodes: reconciliation.degradedFallbackProductCodes,
+        },
+        null,
+        2
+      )
+    );
+  }
 
   const outputRows = reconciliation.rows;
   const validation = validateMerchantFeedRows(outputRows);
@@ -711,6 +732,7 @@ const main = async () => {
     );
   }
 
+  await mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
   await writeFile(OUTPUT_PATH, toCsv(outputRows), "utf8");
 
   console.log(
