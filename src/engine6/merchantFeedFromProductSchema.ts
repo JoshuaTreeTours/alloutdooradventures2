@@ -1,4 +1,6 @@
 import { formatMerchantPrice } from "../utils/merchantPricing";
+import { resolveEngine6DisplayHero } from "./displayHero";
+import { isEngine6MontereyTourCanonicalPath } from "./routes";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import type { Engine6Tour } from "./types";
 
@@ -91,13 +93,30 @@ export const resolveMerchantFeedProductSchemaSnapshot = (
       ? aggregateRatingNode.reviewCount
       : null;
 
+  const merchantImageLink = isEngine6MontereyTourCanonicalPath(
+    tour.canonicalPath
+  )
+    ? resolveEngine6DisplayHero({
+        productHeroUrl:
+          typeof productNode.image === "string"
+            ? productNode.image
+            : tour.heroImageUrl,
+        stateSlug: "california",
+        citySlug: "monterey",
+      })
+    : typeof productNode.image === "string"
+      ? productNode.image
+      : "";
+
   return {
     id: tour.productCode,
     title: typeof productNode.name === "string" ? productNode.name : tour.title,
     description:
-      typeof productNode.description === "string" ? productNode.description : "",
+      typeof productNode.description === "string"
+        ? productNode.description
+        : "",
     link: typeof productNode.url === "string" ? productNode.url : "",
-    imageLink: typeof productNode.image === "string" ? productNode.image : "",
+    imageLink: merchantImageLink,
     availability: mapSchemaAvailabilityToMerchant(offerNode?.availability),
     price: formatMerchantPrice(offerPrice, priceCurrency),
     priceCurrency,

@@ -2361,16 +2361,21 @@ describe("engine6 listing surfaces", () => {
     expect(cityHtml).not.toContain('src="/logo.svg"');
 
     const whaleTour = engine6ResolvedTours.find(
-      entry => entry.productCode === ENGINE6_MONTEREY_WHALE_WATCHING_4HR_PRODUCT_CODE
+      entry =>
+        entry.productCode === ENGINE6_MONTEREY_WHALE_WATCHING_4HR_PRODUCT_CODE
     );
     const aquariumTour = engine6ResolvedTours.find(
-      entry => entry.productCode === ENGINE6_MONTEREY_AQUARIUM_ADMISSION_PRODUCT_CODE
+      entry =>
+        entry.productCode === ENGINE6_MONTEREY_AQUARIUM_ADMISSION_PRODUCT_CODE
     );
     const pointLobosTour = engine6ResolvedTours.find(
-      entry => entry.productCode === ENGINE6_MONTEREY_POINT_LOBOS_WALK_PRODUCT_CODE
+      entry =>
+        entry.productCode === ENGINE6_MONTEREY_POINT_LOBOS_WALK_PRODUCT_CODE
     );
 
-    expect(whaleTour?.heroImageUrl).toBe(ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL);
+    expect(whaleTour?.heroImageUrl).toBe(
+      ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL
+    );
     expect(
       resolveEngine6DisplayHero({
         productHeroUrl: aquariumTour?.heroImageUrl,
@@ -2416,6 +2421,47 @@ describe("engine6 listing surfaces", () => {
     expect(cardHtml).not.toContain(
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/31/d9/f9/af.jpg"
     );
+  });
+
+  it("audits newly deployed Monterey Engine6 heroes with product payload precedence before city fallback", () => {
+    const montereyFixtures = ENGINE6_VALIDATION_FIXTURES.filter(fixture =>
+      fixture.publicUrl.includes("/Monterey-and-Carmel/")
+    );
+    const unavailableProductCodes = new Set([
+      ENGINE6_MONTEREY_AQUARIUM_ADMISSION_PRODUCT_CODE,
+      ENGINE6_MONTEREY_POINT_LOBOS_WALK_PRODUCT_CODE,
+    ]);
+
+    expect(montereyFixtures.length).toBeGreaterThan(0);
+
+    for (const fixture of montereyFixtures) {
+      const extracted = extractEngine6Product(fixture.rawPayload);
+      const payloadHero = extracted.diagnostics.finalHeroUrl;
+      const resolvedTour = engine6ResolvedTours.find(
+        tour => tour.productCode === fixture.productCode
+      );
+
+      expect(payloadHero).toBeTruthy();
+      expect(resolvedTour).toBeDefined();
+
+      if (unavailableProductCodes.has(fixture.productCode)) {
+        const listingEntry = getToursByCityUnified(
+          "california",
+          "monterey"
+        ).find(entry => entry.tour.productCode === fixture.productCode);
+
+        expect(resolvedTour?.heroImageUrl).toBe(payloadHero);
+        expect(listingEntry?.tour.heroImage).toBe(
+          ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL
+        );
+        expect(payloadHero).not.toBe(ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL);
+      } else {
+        expect(resolvedTour?.heroImageUrl).toBe(payloadHero);
+        expect(resolvedTour?.heroImageUrl).toBe(
+          resolvedTour?.diagnostics.finalHeroUrl
+        );
+      }
+    }
   });
 
   it("renders New York City tour cards with Engine6 entries before non-Engine6 entries", () => {

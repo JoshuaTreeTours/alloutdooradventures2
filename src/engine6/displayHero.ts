@@ -1,6 +1,5 @@
-import { ENGINE6_63657P1_CARD_IMAGE_URL } from "./listing";
-
-export const ENGINE6_GLOBAL_FALLBACK_HERO_URL = ENGINE6_63657P1_CARD_IMAGE_URL;
+export const ENGINE6_GLOBAL_FALLBACK_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg";
 
 export const ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/e7/f6.jpg";
@@ -85,10 +84,7 @@ export const resolveEngine6DisplayHeroFallback = (args: {
     args.stateSlug,
     args.citySlug
   );
-  if (
-    isDisplayableEngine6HeroUrl(cityHero) &&
-    cityHero !== args.excluding
-  ) {
+  if (isDisplayableEngine6HeroUrl(cityHero) && cityHero !== args.excluding) {
     return cityHero;
   }
 

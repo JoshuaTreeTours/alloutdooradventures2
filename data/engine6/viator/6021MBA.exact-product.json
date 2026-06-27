@@ -22,7 +22,7 @@
           "isCover": true,
           "variants": {
             "FULL": {
-              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/e7/f6.jpg",
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/2e/41/ec.jpg",
               "width": 674,
               "height": 446
             }
@@ -69,9 +69,7 @@
         "stopType": "pass-by"
       }
     ],
-    "inclusions": [
-      "Aquarium admission ticket"
-    ],
+    "inclusions": ["Aquarium admission ticket"],
     "additionalInfo": [
       "Confirmation will be received at time of booking",
       "Not wheelchair accessible",
