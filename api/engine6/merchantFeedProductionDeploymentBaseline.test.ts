@@ -7,6 +7,7 @@ import {
 import {
   DEFAULT_MERCHANT_FEED_MAIN_BASELINE_GIT_REF,
   DEFAULT_MERCHANT_FEED_PRODUCTION_DEPLOYMENT_GIT_REF,
+  extractBranchModifiedEngine6ProductCodesFromDiffNameOnly,
   extractBranchNewEngine6ProductCodesFromRoutesDiff,
   extractEngine6ProductCodesFromRoutesSource,
   loadMerchantFeedMainBaselineCatalog,
@@ -26,6 +27,19 @@ describe("merchant feed production deployment baseline", () => {
     expect([...codes]).toEqual(["111P1", "222P2"]);
   });
 
+  it("extracts branch-modified product codes from changed source paths without treating regenerated feed output as intentional", () => {
+    const codes = extractBranchModifiedEngine6ProductCodesFromDiffNameOnly(
+      `
+      data/engine6/viator/191303P1.exact-product.json
+      data/merchantFeed.csv
+      src/engine6/routes.ts
+      `,
+      ["191303P1", "44152P18"]
+    );
+
+    expect([...codes]).toEqual(["191303P1"]);
+  });
+
   it("extracts branch-new product codes from a routes diff", () => {
     const codes = extractBranchNewEngine6ProductCodesFromRoutesDiff(`
       unchanged line
@@ -37,16 +51,19 @@ describe("merchant feed production deployment baseline", () => {
   });
 
   it("identifies Monterey catalog products as not yet published on production", () => {
-    const notYetPublished = loadMerchantFeedNotYetPublishedOnProductionProductCodes([
-      "70275P1",
-      "53254P1",
-      "63657P1",
-    ]);
+    const notYetPublished =
+      loadMerchantFeedNotYetPublishedOnProductionProductCodes([
+        "70275P1",
+        "53254P1",
+        "63657P1",
+      ]);
 
     expect(notYetPublished.has("70275P1")).toBe(true);
     expect(notYetPublished.has("53254P1")).toBe(true);
     expect(notYetPublished.has("63657P1")).toBe(false);
-    expect(DEFAULT_MERCHANT_FEED_PRODUCTION_DEPLOYMENT_GIT_REF).toBe("cd7906a9");
+    expect(DEFAULT_MERCHANT_FEED_PRODUCTION_DEPLOYMENT_GIT_REF).toBe(
+      "cd7906a9"
+    );
   });
 
   it("loads the main branch merchant feed baseline catalog", () => {
@@ -143,8 +160,8 @@ describe("merchant feed production runtime parity fetch deferral", () => {
   });
 
   it("does not fail runtime audit solely because a not-yet-published product returns HTTP 422", async () => {
-    const fetchMock = vi.fn(async () =>
-      new Response("not published yet", { status: 422 })
+    const fetchMock = vi.fn(
+      async () => new Response("not published yet", { status: 422 })
     );
 
     vi.stubGlobal("fetch", fetchMock);

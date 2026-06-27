@@ -8,6 +8,7 @@ import {
   type MerchantFeedGovernanceTier,
 } from "../api/engine6/merchantFeedBaselineGovernance";
 import {
+  loadMerchantFeedBranchModifiedProductCodes,
   loadMerchantFeedMainBaselineCatalog,
   loadMerchantFeedNotYetPublishedOnProductionProductCodes,
   parseMerchantFeedCsvCommercialRows,
@@ -100,7 +101,9 @@ const fetchLiveProductJsonLdCommercial = async (productCode: string) => {
     Record<string, unknown>
   >;
   const offer = graph.find(node => node["@type"] === "Offer");
-  const aggregateRating = graph.find(node => node["@type"] === "AggregateRating");
+  const aggregateRating = graph.find(
+    node => node["@type"] === "AggregateRating"
+  );
 
   return {
     price: formatMerchantPrice(
@@ -174,9 +177,11 @@ export const auditMerchantFeedLiveRuntimeParity = async (
           throw error;
         }
 
-        const priceMatch = (csv?.price ?? "").trim() === liveJsonLd.price.trim();
+        const priceMatch =
+          (csv?.price ?? "").trim() === liveJsonLd.price.trim();
         const ratingMatch =
-          (csv?.average_rating ?? "").trim() === liveJsonLd.averageRating.trim();
+          (csv?.average_rating ?? "").trim() ===
+          liveJsonLd.averageRating.trim();
         const reviewMatch =
           (csv?.review_count ?? "").trim() === liveJsonLd.reviewCount.trim();
 
@@ -308,6 +313,9 @@ const main = async () => {
     review_count: row.review_count ?? "",
   }));
   const mainBaselineCatalog = loadMerchantFeedMainBaselineCatalog();
+  const branchModifiedProductCodes = loadMerchantFeedBranchModifiedProductCodes(
+    merchantFeedEligibleTours.map(tour => tour.productCode)
+  );
   const notYetPublishedOnProductionProductCodes =
     loadMerchantFeedNotYetPublishedOnProductionProductCodes(
       merchantFeedEligibleTours.map(tour => tour.productCode)
@@ -315,7 +323,8 @@ const main = async () => {
   const branchScopedGovernanceByProductCode =
     buildMerchantFeedBranchScopedGovernanceByProductCode(
       csvRows,
-      mainBaselineCatalog
+      mainBaselineCatalog,
+      branchModifiedProductCodes
     );
 
   const report = applyMerchantFeedLiveRuntimeParityBaselinePolicy(

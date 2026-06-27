@@ -76,6 +76,18 @@ describe("merchant feed baseline governance", () => {
         }),
         baseline
       )
+    ).toBe("unchanged-legacy-baseline");
+
+    expect(
+      classifyMerchantFeedGovernanceTier(
+        "191303P1",
+        snapshotMerchantFeedCommercial({
+          ...baselineRow,
+          price: "99.00 USD",
+        }),
+        baseline,
+        new Set(["191303P1"])
+      )
     ).toBe("modified-commercial");
 
     expect(
@@ -93,16 +105,22 @@ describe("merchant feed baseline governance", () => {
     ).toBe("new-product");
   });
 
-  it("requires strict live API governance for new and modified products, but runtime parity only for new products", () => {
-    expect(requiresStrictMerchantFeedLiveCommercialGuard("unchanged-legacy-baseline")).toBe(
-      false
-    );
-    expect(requiresStrictMerchantFeedLiveCommercialGuard("modified-commercial")).toBe(
+  it("requires strict live API and runtime parity governance for new and modified products", () => {
+    expect(
+      requiresStrictMerchantFeedLiveCommercialGuard("unchanged-legacy-baseline")
+    ).toBe(false);
+    expect(
+      requiresStrictMerchantFeedLiveCommercialGuard("modified-commercial")
+    ).toBe(true);
+    expect(requiresStrictMerchantFeedLiveCommercialGuard("new-product")).toBe(
       true
     );
-    expect(requiresStrictMerchantFeedLiveCommercialGuard("new-product")).toBe(true);
-    expect(requiresStrictMerchantFeedRuntimeParity("unchanged-legacy-baseline")).toBe(false);
-    expect(requiresStrictMerchantFeedRuntimeParity("modified-commercial")).toBe(false);
+    expect(
+      requiresStrictMerchantFeedRuntimeParity("unchanged-legacy-baseline")
+    ).toBe(false);
+    expect(requiresStrictMerchantFeedRuntimeParity("modified-commercial")).toBe(
+      true
+    );
     expect(requiresStrictMerchantFeedRuntimeParity("new-product")).toBe(true);
   });
 
@@ -129,7 +147,7 @@ describe("merchant feed baseline governance", () => {
     expect(build.reason).toContain("bundled commercial fallback forbidden");
   });
 
-  it("treats pre-Monterey runtime price/rating/review drift as informational while new-product drift blocks", () => {
+  it("treats unchanged legacy runtime drift as informational while branch-modified and new-product drift blocks", () => {
     const governanceByProductCode = new Map([
       ["191303P1", "unchanged-legacy-baseline" as const],
       ["44152P18", "modified-commercial" as const],
@@ -148,11 +166,8 @@ describe("merchant feed baseline governance", () => {
     );
 
     expect(evaluation.pass).toBe(false);
-    expect(evaluation.blockingDriftCount).toBe(1);
-    expect(evaluation.informationalLegacyProductCodes).toEqual([
-      "191303P1",
-      "44152P18",
-    ]);
+    expect(evaluation.blockingDriftCount).toBe(2);
+    expect(evaluation.informationalLegacyProductCodes).toEqual(["191303P1"]);
   });
 
   it("passes runtime parity when only unchanged baseline products drift", () => {
@@ -201,11 +216,12 @@ describe("merchant feed baseline governance", () => {
       review_count: "54",
     };
 
-    const reconciliation = await reconcileMerchantFeedRowsWithBaselineGovernance(
-      [generatedRow],
-      baseline,
-      async () => bundledFallbackDiagnostic("191303P1")
-    );
+    const reconciliation =
+      await reconcileMerchantFeedRowsWithBaselineGovernance(
+        [generatedRow],
+        baseline,
+        async () => bundledFallbackDiagnostic("191303P1")
+      );
 
     expect(reconciliation.governanceByProductCode.get("191303P1")).toBe(
       "unchanged-legacy-baseline"
@@ -214,7 +230,7 @@ describe("merchant feed baseline governance", () => {
     expect(reconciliation.liveCommercialFailures).toEqual([]);
   });
 
-  it("treats actual commercial changes with live proof as modified", async () => {
+  it("treats branch-scoped commercial changes with live proof as modified", async () => {
     const baseline = buildMerchantFeedPublishedBaselineCatalog([baselineRow]);
     const generatedRow = {
       id: "191303P1",
@@ -224,26 +240,62 @@ describe("merchant feed baseline governance", () => {
       review_count: "54",
     };
 
-    const reconciliation = await reconcileMerchantFeedRowsWithBaselineGovernance(
-      [generatedRow],
-      baseline,
-      async () => ({
-        ...bundledFallbackDiagnostic("191303P1"),
-        commercial: {
-          priceAmount: 99,
-          priceFormatted: "From $99.00",
-          aggregateRating: 5,
-          reviewCount: 54,
-          source: "live-api" as const,
-        },
-        failureReason: "live-api-success" as const,
-      })
-    );
+    const reconciliation =
+      await reconcileMerchantFeedRowsWithBaselineGovernance(
+        [generatedRow],
+        baseline,
+        async () => ({
+          ...bundledFallbackDiagnostic("191303P1"),
+          commercial: {
+            priceAmount: 99,
+            priceFormatted: "From $99.00",
+            aggregateRating: 5,
+            reviewCount: 54,
+            source: "live-api" as const,
+          },
+          failureReason: "live-api-success" as const,
+        }),
+        new Set(["191303P1"])
+      );
 
     expect(reconciliation.governanceByProductCode.get("191303P1")).toBe(
       "modified-commercial"
     );
     expect(reconciliation.rows[0]?.price).toBe("99.00 USD");
+  });
+
+  it("preserves baseline when legacy live commercial values drift during regeneration", async () => {
+    const baseline = buildMerchantFeedPublishedBaselineCatalog([baselineRow]);
+    const generatedRow = {
+      id: "191303P1",
+      price: "99.00 USD",
+      average_rating: "5.0",
+      rating_count: "54",
+      review_count: "54",
+    };
+
+    const reconciliation =
+      await reconcileMerchantFeedRowsWithBaselineGovernance(
+        [generatedRow],
+        baseline,
+        async () => ({
+          ...bundledFallbackDiagnostic("191303P1"),
+          commercial: {
+            priceAmount: 99,
+            priceFormatted: "From $99.00",
+            aggregateRating: 5,
+            reviewCount: 54,
+            source: "live-api" as const,
+          },
+          failureReason: "live-api-success" as const,
+        })
+      );
+
+    expect(reconciliation.governanceByProductCode.get("191303P1")).toBe(
+      "unchanged-legacy-baseline"
+    );
+    expect(reconciliation.rows[0]?.price).toBe("89.00 USD");
+    expect(reconciliation.liveCommercialFailures).toEqual([]);
   });
 });
 
@@ -260,7 +312,7 @@ describe("merchant feed branch-scoped runtime parity", () => {
     mainBaselineRow,
   ]);
 
-  it("logs branch-changed pre-Monterey commercial runtime drift as informational only", () => {
+  it("blocks branch-changed commercial runtime drift", () => {
     const outputRows = [
       {
         id: "191303P1",
@@ -270,12 +322,46 @@ describe("merchant feed branch-scoped runtime parity", () => {
         review_count: "54",
       },
     ];
-    const branchScopedGovernance = buildMerchantFeedBranchScopedGovernanceByProductCode(
-      outputRows,
-      mainBaseline
-    );
+    const branchScopedGovernance =
+      buildMerchantFeedBranchScopedGovernanceByProductCode(
+        outputRows,
+        mainBaseline,
+        new Set(["191303P1"])
+      );
 
     expect(branchScopedGovernance.get("191303P1")).toBe("modified-commercial");
+
+    const report = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
+      {
+        pass: false,
+        drifts: [{ productCode: "191303P1" }],
+      },
+      branchScopedGovernance
+    );
+
+    expect(report.pass).toBe(false);
+    expect(report.informationalLegacyProductCodes).toEqual([]);
+  });
+
+  it("reports regenerated legacy commercial drift as informational when the branch did not change the product", () => {
+    const outputRows = [
+      {
+        id: "191303P1",
+        price: "99.00 USD",
+        average_rating: "5.0",
+        rating_count: "54",
+        review_count: "54",
+      },
+    ];
+    const branchScopedGovernance =
+      buildMerchantFeedBranchScopedGovernanceByProductCode(
+        outputRows,
+        mainBaseline
+      );
+
+    expect(branchScopedGovernance.get("191303P1")).toBe(
+      "unchanged-legacy-baseline"
+    );
 
     const report = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
       {
@@ -291,10 +377,11 @@ describe("merchant feed branch-scoped runtime parity", () => {
 
   it("reports unchanged main-baseline runtime drift as informational only", () => {
     const outputRows = [mainBaselineRow];
-    const branchScopedGovernance = buildMerchantFeedBranchScopedGovernanceByProductCode(
-      outputRows,
-      mainBaseline
-    );
+    const branchScopedGovernance =
+      buildMerchantFeedBranchScopedGovernanceByProductCode(
+        outputRows,
+        mainBaseline
+      );
 
     expect(branchScopedGovernance.get("191303P1")).toBe(
       "unchanged-legacy-baseline"
@@ -322,10 +409,11 @@ describe("merchant feed branch-scoped runtime parity", () => {
         review_count: "10",
       },
     ];
-    const branchScopedGovernance = buildMerchantFeedBranchScopedGovernanceByProductCode(
-      outputRows,
-      mainBaseline
-    );
+    const branchScopedGovernance =
+      buildMerchantFeedBranchScopedGovernanceByProductCode(
+        outputRows,
+        mainBaseline
+      );
 
     expect(branchScopedGovernance.get("NEWTOUR1")).toBe("new-product");
 

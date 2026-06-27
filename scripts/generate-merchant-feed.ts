@@ -8,6 +8,7 @@ import {
   reconcileMerchantFeedRowsWithBaselineGovernance,
 } from "../api/engine6/merchantFeedBaselineGovernance";
 import {
+  loadMerchantFeedBranchModifiedProductCodes,
   loadMerchantFeedMainBaselineCatalog,
   loadMerchantFeedNotYetPublishedOnProductionProductCodes,
 } from "../api/engine6/merchantFeedProductionDeploymentBaseline";
@@ -240,7 +241,9 @@ const resolveToursFromMerchantFeedRows = (
         typeof priceAmount === "number"
           ? `From $${priceAmount.toFixed(2)}`
           : null,
-      aggregateRating: Number.isFinite(aggregateRating) ? aggregateRating : null,
+      aggregateRating: Number.isFinite(aggregateRating)
+        ? aggregateRating
+        : null,
       reviewCount: Number.isFinite(reviewCount) ? reviewCount : null,
     });
   });
@@ -272,7 +275,8 @@ const logMerchantFeedBuildEnvVisibility = () => {
         REQUIRE_LIVE_MERCHANT_COMMERCIAL:
           process.env.REQUIRE_LIVE_MERCHANT_COMMERCIAL ?? "(unset)",
         requireLiveMerchantCommercial: requireLiveMerchantCommercial(),
-        MERCHANT_FEED_RUNTIME_BASE_URL: process.env.MERCHANT_FEED_RUNTIME_BASE_URL
+        MERCHANT_FEED_RUNTIME_BASE_URL: process.env
+          .MERCHANT_FEED_RUNTIME_BASE_URL
           ? "(set)"
           : "(unset)",
         ENGINE6_RUNTIME_BASE_URL: process.env.ENGINE6_RUNTIME_BASE_URL
@@ -392,7 +396,9 @@ const assertLiveCommercialExtracts = async (
   }
 
   if (failures.length > 0) {
-    const failingProductCodes = failures.map(parseLiveCommercialFailureProductCode);
+    const failingProductCodes = failures.map(
+      parseLiveCommercialFailureProductCode
+    );
     await logMerchantFeedBuildGuardFailure({
       guardName: "live-commercial-baseline-reconciliation",
       pass: false,
@@ -434,8 +440,12 @@ const main = async () => {
   logMerchantFeedBuildEnvVisibility();
 
   const existingRows = await readExistingMerchantFeedRows();
-  const publishedBaseline = buildMerchantFeedPublishedBaselineCatalog(existingRows);
+  const publishedBaseline =
+    buildMerchantFeedPublishedBaselineCatalog(existingRows);
   const mainBaselineCatalog = loadMerchantFeedMainBaselineCatalog();
+  const branchModifiedProductCodes = loadMerchantFeedBranchModifiedProductCodes(
+    merchantFeedEligibleTours.map(tour => tour.productCode)
+  );
   const notYetPublishedOnProductionProductCodes =
     loadMerchantFeedNotYetPublishedOnProductionProductCodes(
       merchantFeedEligibleTours.map(tour => tour.productCode)
@@ -457,7 +467,8 @@ const main = async () => {
   const reconciliation = await reconcileMerchantFeedRowsWithBaselineGovernance(
     generatedRows,
     publishedBaseline,
-    diagnoseEngine6ViatorProductCommercialExtract
+    diagnoseEngine6ViatorProductCommercialExtract,
+    branchModifiedProductCodes
   );
 
   await assertLiveCommercialExtracts(
@@ -573,9 +584,11 @@ const main = async () => {
         reconciliation.governanceByProductCode,
         failingProductCodes
       ),
-      failureObjects: commercialParityAudit.failures.slice(0, 5).map(failure => ({
-        failure,
-      })),
+      failureObjects: commercialParityAudit.failures
+        .slice(0, 5)
+        .map(failure => ({
+          failure,
+        })),
     });
     throw new Error(
       "Merchant feed commercial parity validation failed before write."
@@ -585,7 +598,8 @@ const main = async () => {
   const branchScopedGovernanceByProductCode =
     buildMerchantFeedBranchScopedGovernanceByProductCode(
       outputRows,
-      mainBaselineCatalog
+      mainBaselineCatalog,
+      branchModifiedProductCodes
     );
 
   const runtimeParityAudit = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
@@ -644,7 +658,9 @@ const main = async () => {
 
   await writeFile(OUTPUT_PATH, toCsv(outputRows), "utf8");
 
-  console.log(`Processed ${merchantFeedEligibleTours.length} Engine6 merchant-feed products (${engine6ResolvedTours.length - merchantFeedEligibleTours.length} excluded).`);
+  console.log(
+    `Processed ${merchantFeedEligibleTours.length} Engine6 merchant-feed products (${engine6ResolvedTours.length - merchantFeedEligibleTours.length} excluded).`
+  );
   console.log(
     `Wrote ${outputRows.length} merchant feed rows to ${OUTPUT_PATH}.`
   );

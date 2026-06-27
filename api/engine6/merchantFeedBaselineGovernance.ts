@@ -5,9 +5,11 @@ import {
 
 /**
  * Forward-looking merchant-feed governance uses the published merchantFeed.csv catalog
- * as the legacy baseline. Unchanged baseline products are not blocked by historical
- * runtime parity drift or bundled-fallback during catalog preservation builds.
- * New products and intentional commercial updates must satisfy strict live governance.
+ * as the legacy baseline. Production deployments validate the work introduced by
+ * the current branch: unchanged baseline products remain continuously audited but
+ * are not blocked by historical runtime parity drift or bundled-fallback during
+ * catalog preservation builds. New products and intentional commercial updates
+ * must satisfy strict live governance before publication.
  */
 export type MerchantFeedCommercialSnapshot = {
   price: string;
@@ -90,17 +92,19 @@ export const buildMerchantFeedPublishedBaselineCatalog = (
 export const isMerchantFeedCommercialModifiedFromBaseline = (
   outputCommercial: MerchantFeedCommercialSnapshot,
   baselineCommercial: MerchantFeedCommercialSnapshot
-) => !merchantFeedCommercialSnapshotsEqual(outputCommercial, baselineCommercial);
+) =>
+  !merchantFeedCommercialSnapshotsEqual(outputCommercial, baselineCommercial);
 
 /**
- * Classifies governance from final commercial values. A baseline product is
- * modified only when its output commercial snapshot differs from the published
- * baseline — not merely because it was regenerated during a build.
+ * Classifies governance from the current branch scope. A baseline product is
+ * modified only when the current branch intentionally changed that product, not
+ * merely because live commercial values drifted during regeneration.
  */
 export const classifyMerchantFeedGovernanceTier = (
   productCode: string,
   outputCommercial: MerchantFeedCommercialSnapshot,
-  baseline: MerchantFeedPublishedBaselineCatalog
+  baseline: MerchantFeedPublishedBaselineCatalog,
+  branchModifiedProductCodes: ReadonlySet<string> = new Set()
 ): MerchantFeedGovernanceTier => {
   const normalizedProductCode = normalizeProductCode(productCode);
   const baselineCommercial = baseline.get(normalizedProductCode);
@@ -109,13 +113,17 @@ export const classifyMerchantFeedGovernanceTier = (
     return "new-product";
   }
 
+  if (branchModifiedProductCodes.has(normalizedProductCode)) {
+    return "modified-commercial";
+  }
+
   if (
     isMerchantFeedCommercialModifiedFromBaseline(
       outputCommercial,
       baselineCommercial
     )
   ) {
-    return "modified-commercial";
+    return "unchanged-legacy-baseline";
   }
 
   return "unchanged-legacy-baseline";
@@ -127,7 +135,7 @@ export const requiresStrictMerchantFeedLiveCommercialGuard = (
 
 export const requiresStrictMerchantFeedRuntimeParity = (
   tier: MerchantFeedGovernanceTier
-) => tier === "new-product";
+) => tier !== "unchanged-legacy-baseline";
 
 export const isMerchantFeedProductionRuntimeNotYetPublishedError = (
   error: unknown
@@ -274,7 +282,8 @@ export const buildMerchantFeedBranchScopedGovernanceByProductCode = <
   },
 >(
   outputRows: TRow[],
-  mainBaseline: MerchantFeedPublishedBaselineCatalog
+  mainBaseline: MerchantFeedPublishedBaselineCatalog,
+  branchModifiedProductCodes: ReadonlySet<string> = new Set()
 ): Map<string, MerchantFeedGovernanceTier> => {
   const governanceByProductCode = new Map<string, MerchantFeedGovernanceTier>();
 
@@ -289,7 +298,8 @@ export const buildMerchantFeedBranchScopedGovernanceByProductCode = <
       classifyMerchantFeedGovernanceTier(
         productCode,
         snapshotMerchantFeedCommercial(row),
-        mainBaseline
+        mainBaseline,
+        branchModifiedProductCodes
       )
     );
   }
@@ -346,7 +356,8 @@ export const reconcileMerchantFeedRowsWithBaselineGovernance = async <
   baseline: MerchantFeedPublishedBaselineCatalog,
   diagnose: (
     productCode: string
-  ) => Promise<Engine6ViatorProductCommercialDiagnostic>
+  ) => Promise<Engine6ViatorProductCommercialDiagnostic>,
+  branchModifiedProductCodes: ReadonlySet<string> = new Set()
 ): Promise<MerchantFeedGovernanceReconciliationResult<TRow>> => {
   const rows: TRow[] = [];
   const governanceByProductCode = new Map<string, MerchantFeedGovernanceTier>();
@@ -357,6 +368,7 @@ export const reconcileMerchantFeedRowsWithBaselineGovernance = async <
     const generatedCommercial = snapshotMerchantFeedCommercial(generatedRow);
     const baselineCommercial = baseline.get(productCode);
     const diagnostic = await diagnose(productCode);
+    const branchModified = branchModifiedProductCodes.has(productCode);
 
     if (!baselineCommercial) {
       const guard = passesMerchantFeedLiveCommercialGuard(diagnostic);
@@ -368,22 +380,29 @@ export const reconcileMerchantFeedRowsWithBaselineGovernance = async <
       continue;
     }
 
-    const generatedDiffersFromBaseline = isMerchantFeedCommercialModifiedFromBaseline(
-      generatedCommercial,
-      baselineCommercial
-    );
+    const generatedDiffersFromBaseline =
+      isMerchantFeedCommercialModifiedFromBaseline(
+        generatedCommercial,
+        baselineCommercial
+      );
+
+    if (branchModified) {
+      const strictGuard = passesMerchantFeedLiveCommercialGuard(diagnostic);
+      if (!strictGuard.pass) {
+        liveCommercialFailures.push(`${productCode}: ${strictGuard.reason}`);
+      }
+      governanceByProductCode.set(productCode, "modified-commercial");
+      rows.push(generatedRow);
+      continue;
+    }
 
     if (generatedDiffersFromBaseline) {
-      const strictGuard = passesMerchantFeedLiveCommercialGuard(diagnostic);
-      if (strictGuard.pass) {
-        governanceByProductCode.set(productCode, "modified-commercial");
-        rows.push(generatedRow);
-        continue;
-      }
-
-      // Regeneration drift without live proof preserves the published baseline.
+      // Regeneration drift outside the current branch scope preserves the
+      // published baseline, even when the live API proves the values changed.
       governanceByProductCode.set(productCode, "unchanged-legacy-baseline");
-      rows.push(applyBaselineCommercialToMerchantFeedRow(generatedRow, baseline));
+      rows.push(
+        applyBaselineCommercialToMerchantFeedRow(generatedRow, baseline)
+      );
       continue;
     }
 
