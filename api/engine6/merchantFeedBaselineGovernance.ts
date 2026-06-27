@@ -376,6 +376,7 @@ export type MerchantFeedGovernanceReconciliationResult<
   rows: TRow[];
   governanceByProductCode: Map<string, MerchantFeedGovernanceTier>;
   liveCommercialFailures: string[];
+  degradedFallbackProductCodes: string[];
 };
 
 export const reconcileMerchantFeedRowsWithBaselineGovernance = async <
@@ -397,6 +398,7 @@ export const reconcileMerchantFeedRowsWithBaselineGovernance = async <
   const rows: TRow[] = [];
   const governanceByProductCode = new Map<string, MerchantFeedGovernanceTier>();
   const liveCommercialFailures: string[] = [];
+  const degradedFallbackProductCodes: string[] = [];
 
   for (const generatedRow of generatedRows) {
     const productCode = normalizeProductCode(generatedRow.id);
@@ -435,9 +437,8 @@ export const reconcileMerchantFeedRowsWithBaselineGovernance = async <
       continue;
     }
 
-    if (generatedDiffersFromBaseline) {
-      // Regeneration drift outside the current branch scope preserves the
-      // published baseline, even when the live API proves the values changed.
+    if (diagnostic.commercial.source === "bundled-fallback") {
+      degradedFallbackProductCodes.push(productCode);
       governanceByProductCode.set(productCode, "unchanged-legacy-baseline");
       rows.push(
         applyBaselineCommercialToMerchantFeedRow(generatedRow, baseline)
@@ -445,13 +446,26 @@ export const reconcileMerchantFeedRowsWithBaselineGovernance = async <
       continue;
     }
 
+    if (generatedDiffersFromBaseline) {
+      // Routine live commercial drift is expected for unchanged legacy products:
+      // preserve the branch-scoped governance tier while the active feed carries live values.
+      governanceByProductCode.set(productCode, "unchanged-legacy-baseline");
+      rows.push(
+        applyLiveRatingMetadataToMerchantFeedRow(generatedRow, diagnostic)
+      );
+      continue;
+    }
+
     governanceByProductCode.set(productCode, "unchanged-legacy-baseline");
-    rows.push(applyBaselineCommercialToMerchantFeedRow(generatedRow, baseline));
+    rows.push(
+      applyLiveRatingMetadataToMerchantFeedRow(generatedRow, diagnostic)
+    );
   }
 
   return {
     rows,
     governanceByProductCode,
     liveCommercialFailures,
+    degradedFallbackProductCodes,
   };
 };

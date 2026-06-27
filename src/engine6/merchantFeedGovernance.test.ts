@@ -213,7 +213,7 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
     );
     expect(merchantRow?.price).toBe("37 USD");
     expect(merchantRow?.average_rating).toBe("4.6");
-    expect(merchantRow?.review_count).toBe("853");
+    expect(merchantRow?.review_count).toBe(String(tour.reviewCount));
     expect(tour.priceAmount).toBe(offer?.price);
     expect(tour.reviewCount).toBe(aggregateRating?.reviewCount);
   });
@@ -257,7 +257,7 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
     );
     expect(merchantRow?.price).toBe("126 USD");
     expect(merchantRow?.average_rating).toBe("4.9");
-    expect(merchantRow?.review_count).toBe("709");
+    expect(merchantRow?.review_count).toBe(String(tour.reviewCount));
     expect(tour.priceAmount).toBe(offer?.price);
     expect(tour.reviewCount).toBe(aggregateRating?.reviewCount);
   });
@@ -284,8 +284,8 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
     );
     expect(merchantRow?.price).toBe("99 USD");
     expect(merchantRow?.average_rating).toBe("4.8");
-    expect(merchantRow?.rating_count).toBe("13582");
-    expect(merchantRow?.review_count).toBe("13582");
+    expect(merchantRow?.rating_count).toBe(String(tour.reviewCount));
+    expect(merchantRow?.review_count).toBe(String(tour.reviewCount));
     expect(merchantRow?.image_link).toBe(product?.image);
     expect(merchantRow?.availability).toBe("in stock");
     expect(snapshot.bookingUrl).toBe(offer?.url);
