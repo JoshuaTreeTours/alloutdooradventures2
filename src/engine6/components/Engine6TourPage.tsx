@@ -36,6 +36,30 @@ const BOOK_CTA_CLASSES =
 
 const EXTERNAL_BOOKING_REL = "sponsored nofollow noopener";
 
+function Engine6MobileStickyAvailabilityBar({
+  href,
+  isExternal,
+}: {
+  href: string;
+  isExternal: boolean;
+}) {
+  return (
+    <div
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-green-900/10 bg-white/95 px-4 pb-[calc(1rem+env(safe-area-inset-bottom))] pt-3 shadow-[0_-10px_30px_rgba(31,77,54,0.18)] backdrop-blur md:hidden"
+      data-testid="engine6-mobile-sticky-availability"
+    >
+      <a
+        href={href}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? EXTERNAL_BOOKING_REL : undefined}
+        className="flex min-h-12 w-full items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-green-900/20 transition hover:bg-[#287a35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-900 focus-visible:ring-offset-2"
+      >
+        Check Availability
+      </a>
+    </div>
+  );
+}
+
 function Engine6BookingCta({
   href,
   isExternal,
@@ -357,7 +381,7 @@ export default function Engine6TourPage({
   useStructuredData(schemaGraph);
 
   return (
-    <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+    <main className="bg-[#f6f1e8] pb-[calc(6rem+env(safe-area-inset-bottom))] text-[#1f2a1f] md:pb-0">
       <Seo
         title={seo.title}
         description={seo.description}
@@ -726,6 +750,10 @@ export default function Engine6TourPage({
           </div>
         ) : null}
       </div>
+      <Engine6MobileStickyAvailabilityBar
+        href={tour.bookingUrl}
+        isExternal={isExternalBookingUrl}
+      />
     </main>
   );
 }
