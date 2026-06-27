@@ -25,7 +25,9 @@ export const extractEngine6ProductCodesFromRoutesSource = (
 ): ReadonlySet<string> => {
   const codes = new Set<string>();
 
-  for (const match of routesSource.matchAll(ENGINE6_PRODUCT_CODE_EXPORT_PATTERN)) {
+  for (const match of routesSource.matchAll(
+    ENGINE6_PRODUCT_CODE_EXPORT_PATTERN
+  )) {
     codes.add(match[1].trim().toUpperCase());
   }
 
@@ -176,6 +178,51 @@ export const loadMerchantFeedMainBaselineCatalog =
     }
   };
 
+export const extractBranchModifiedEngine6ProductCodesFromDiffNameOnly = (
+  diffNameOnlySource: string,
+  currentEligibleProductCodes: Iterable<string>
+): ReadonlySet<string> => {
+  const changedPaths = diffNameOnlySource
+    .split(/\r?\n/)
+    .map(line => line.trim().toUpperCase())
+    .filter(Boolean)
+    .filter(pathName => pathName !== MERCHANT_FEED_CSV_PATH.toUpperCase());
+  const changed = new Set<string>();
+
+  for (const productCode of currentEligibleProductCodes) {
+    const normalizedProductCode = productCode.trim().toUpperCase();
+    if (!normalizedProductCode) {
+      continue;
+    }
+
+    if (
+      changedPaths.some(pathName => pathName.includes(normalizedProductCode))
+    ) {
+      changed.add(normalizedProductCode);
+    }
+  }
+
+  return changed;
+};
+
+export const loadMerchantFeedBranchModifiedProductCodes = (
+  currentEligibleProductCodes: Iterable<string>
+): ReadonlySet<string> => {
+  try {
+    const diffNameOnlySource = execSync(
+      `${"git diff --name-only "}${resolveMainBaselineGitRef()}...HEAD`,
+      { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }
+    );
+
+    return extractBranchModifiedEngine6ProductCodesFromDiffNameOnly(
+      diffNameOnlySource,
+      currentEligibleProductCodes
+    );
+  } catch {
+    return new Set();
+  }
+};
+
 /**
  * Product codes present in the current Engine6 catalog but not yet deployed to
  * production. Used to defer production runtime parity fetch failures until the
@@ -218,7 +265,8 @@ export const loadMerchantFeedNotYetPublishedOnProductionProductCodes = (
       encoding: "utf8",
       stdio: ["ignore", "pipe", "ignore"],
     });
-    const currentCodes = extractEngine6ProductCodesFromRoutesSource(currentRoutes);
+    const currentCodes =
+      extractEngine6ProductCodesFromRoutesSource(currentRoutes);
     const mainCodes = extractEngine6ProductCodesFromRoutesSource(mainRoutes);
     return new Set([...currentCodes].filter(code => !mainCodes.has(code)));
   } catch {
