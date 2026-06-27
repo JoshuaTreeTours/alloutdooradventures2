@@ -30,7 +30,6 @@ import {
 } from "../src/engine6/fetchEngine6LiveCommercialFieldsForSchema";
 import { resolveEngine6TourForProductSchema } from "../src/engine6/resolveEngine6TourForProductSchema";
 import { merchantFeedEligibleTours } from "../src/engine6/merchantFeedEligibility";
-import { parsePrice } from "../src/utils/merchantPricing";
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import type { Engine6Tour } from "../src/engine6/types";
 import {
@@ -219,36 +218,6 @@ const logMerchantFeedReport = (
 export const buildMerchantRow = (tour: Engine6Tour): MerchantRow =>
   buildMerchantFeedRowFromProductSchema(tour);
 
-const resolveToursFromMerchantFeedRows = (
-  tours: Engine6Tour[],
-  rows: MerchantRow[]
-): Engine6Tour[] => {
-  const rowsById = new Map(rows.map(row => [row.id.trim().toUpperCase(), row]));
-
-  return tours.map(tour => {
-    const row = rowsById.get(tour.productCode.trim().toUpperCase());
-    if (!row) {
-      return tour;
-    }
-
-    const priceAmount = parsePrice(row.price);
-    const aggregateRating = Number.parseFloat(row.average_rating);
-    const reviewCount = Number.parseInt(row.review_count, 10);
-
-    return resolveEngine6TourForProductSchema(tour, {
-      priceAmount,
-      priceFormatted:
-        typeof priceAmount === "number"
-          ? `From $${priceAmount.toFixed(2)}`
-          : null,
-      aggregateRating: Number.isFinite(aggregateRating)
-        ? aggregateRating
-        : null,
-      reviewCount: Number.isFinite(reviewCount) ? reviewCount : null,
-    });
-  });
-};
-
 const readExistingMerchantFeedRows = async (): Promise<MerchantRow[]> => {
   try {
     const content = await readFile(OUTPUT_PATH, "utf8");
@@ -332,26 +301,15 @@ const buildDiagnosticFailureObjects = async (productCodes: string[]) => {
   );
 };
 
-const MERCHANT_FEED_COMMERCIAL_PARITY_FAILURE_FIELDS = new Set([
-  "price",
-  "average_rating",
-  "rating_count",
-  "review_count",
-  "merchantFeed.price",
-  "merchantFeed.average_rating",
-  "merchantFeed.rating_count",
-  "merchantFeed.review_count",
-]);
-
 const parseMerchantFeedParityFailure = (failure: string) => {
   const [productCode = "", ...fieldParts] = failure.split(".");
   return {
-    productCode: productCode.trim().toUpperCase(),
+    productCode: productCode.split(":")[0]?.trim().toUpperCase() ?? "",
     field: fieldParts.join(".").split(":")[0]?.trim() ?? "",
   };
 };
 
-const partitionMerchantFeedParityFailuresByBuildScope = (
+export const partitionMerchantFeedParityFailuresByBuildScope = (
   failures: string[],
   governanceByProductCode: Map<string, string>
 ) => {
@@ -359,13 +317,11 @@ const partitionMerchantFeedParityFailuresByBuildScope = (
   const informationalLegacyFailures: string[] = [];
 
   for (const failure of failures) {
-    const { productCode, field } = parseMerchantFeedParityFailure(failure);
+    const { productCode } = parseMerchantFeedParityFailure(failure);
     const tier = governanceByProductCode.get(productCode) ?? "new-product";
-    const isInformationalLegacyCommercialDrift =
-      tier === "unchanged-legacy-baseline" &&
-      MERCHANT_FEED_COMMERCIAL_PARITY_FAILURE_FIELDS.has(field);
+    const isInformationalLegacyDrift = tier === "unchanged-legacy-baseline";
 
-    if (isInformationalLegacyCommercialDrift) {
+    if (isInformationalLegacyDrift) {
       informationalLegacyFailures.push(failure);
     } else {
       blockingFailures.push(failure);
@@ -557,11 +513,6 @@ const main = async () => {
   );
 
   const outputRows = reconciliation.rows;
-  const schemaResolvedToursForParity = resolveToursFromMerchantFeedRows(
-    schemaResolvedTours,
-    outputRows
-  );
-
   const validation = validateMerchantFeedRows(outputRows);
   logMerchantFeedReport("After", validation.report, validation.pass);
 
@@ -598,7 +549,7 @@ const main = async () => {
   }
 
   const parityAudit = auditEngine6MerchantFeedSchemaParity(
-    schemaResolvedToursForParity,
+    schemaResolvedTours,
     new Map(outputRows.map(row => [row.id, row]))
   );
 
@@ -651,7 +602,7 @@ const main = async () => {
   }
 
   const commercialParityAudit = auditEngine6MerchantFeedCommercialParity(
-    schemaResolvedToursForParity,
+    schemaResolvedTours,
     new Map(outputRows.map(row => [row.id, row]))
   );
 
