@@ -4,34 +4,10 @@ import {
   stripEngine6GeneratedDescriptionPrefix,
 } from "./seo";
 
-export const MERCHANT_DESCRIPTION_FORBIDDEN_PATTERNS = [
-  /\ba food-focused guided outing\b/i,
-  /\ba water-based guided outing\b/i,
-  /\ba guided cycling outing\b/i,
-  /\ba city sightseeing outing\b/i,
-  /\ba park-focused guided outing\b/i,
-  /\ba guided destination outing\b/i,
-  /\ban aerial sightseeing outing\b/i,
-  /\ban off-road guided outing\b/i,
-  /\ba guided hiking outing\b/i,
-  /\bthe route emphasizes\b/i,
-  /\bthe experience emphasizes\b/i,
-  /\bscheduled stops include\b/i,
-  /\blandmarks referenced\b/i,
-  /\btravel is organized as\b/i,
-  /\bcentered on\b.*\bdestination landmarks\b/i,
-  /\bsurrounding destination landmarks\b/i,
-  /\bthe route combines\b/i,
-  /\bdestination interpretation throughout the route\b/i,
-  /\bexpect a route shaped around\b/i,
-  /\bthe format is designed to read as destination guidance\b/i,
-  /\bcity landmarks, neighborhood transitions\b/i,
-  /\btrip is fully private with travelers guests only\b/i,
-  /\bthe outing typically lasts\b/i,
-  /\bthe route includes\b/i,
-  /\bremains the reviewed focus for this itinerary row\b/i,
-  /\bkeeping the description aligned to the displayed stop\b/i,
-] as const;
+import { ENGINE6_EDITORIAL_FORBIDDEN_PATTERNS } from "./buildEngine6PremiumEditorialDescription";
+
+export const MERCHANT_DESCRIPTION_FORBIDDEN_PATTERNS =
+  ENGINE6_EDITORIAL_FORBIDDEN_PATTERNS;
 
 export const MERCHANT_DESCRIPTION_MIN_WORDS = 100;
 export const MERCHANT_DESCRIPTION_MAX_WORDS = 150;
