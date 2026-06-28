@@ -317,7 +317,7 @@ describe("Engine6 premium editorial governance", () => {
       .trim()
       .split("\n");
 
-    expect(merchantFeedLines.length - 1).toBe(189);
-    expect(merchantFeedEligibleTours).toHaveLength(189);
+    expect(merchantFeedLines.length - 1).toBe(198);
+    expect(merchantFeedEligibleTours).toHaveLength(198);
   });
 });

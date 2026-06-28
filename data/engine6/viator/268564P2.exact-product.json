@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "268564P2",
+    "productUrl": "https://www.viator.com/tours/Lake-Tahoe/Lake-Tahoe-Half-Day-Electric-Bike-Rental-Ride-the-Scenic-Shoreline/d816-268564P2",
+    "title": "Tahoe Coastal Self-Guided E-Bike Tour on East Shore Trail",
+    "description": {
+      "text": "Explore Lake Tahoe at your own pace on a self-guided electric bike rental along the car-free East Shore Trail. Ride from Incline Village toward Sand Harbor, stopping whenever you choose for photos, swims, or lunch with helmet, lock, and parking included."
+    },
+    "location": {
+      "city": "Lake Tahoe",
+      "state": "California"
+    },
+    "duration": "2 to 4 hours (approx.)",
+    "priceFrom": "From $99.95",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 332
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/86/24/80.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Self-guided e-bike rental on the East Shore Trail",
+      "Car-free bike path away from highway traffic",
+      "Flexible two-, three-, or four-hour rental windows",
+      "Helmet, bike lock, and parking fees included",
+      "Route ends at Sand Harbor beach area"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pick up your e-bike next to Starbucks at 893 Tahoe Blvd, Incline Village, NV 89451."
+      },
+      "end": {
+        "description": "Return your e-bike to the Incline Village pickup location."
+      }
+    },
+    "itinerarySummary": "Explore Lake Tahoe at your own pace on a self-guided electric bike rental along the car-free East Shore Trail.",
+    "itineraryItems": [
+      {
+        "title": "Incline Village",
+        "description": "Pick up your e-bike next to Starbucks at 893 Tahoe Blvd in Incline Village.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "East Shore Trail",
+        "description": "Ride the scenic East Shore bike path at your own pace toward Sand Harbor.",
+        "duration": "2 to 4 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sand Harbor",
+        "description": "End the ride near Sand Harbor with optional beach and swim time.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "E-bike rental",
+      "Helmet",
+      "Bike lock",
+      "Parking fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Tahoe Coastal Self-Guided E-Bike Tour on East Shore Trail?",
+        "answer": "The planned duration is 2 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Lake Tahoe?",
+        "answer": "Pick up your e-bike next to Starbucks at 893 Tahoe Blvd, Incline Village, NV 89451."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Mountain Bike Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 99.95
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "product": {
+    "productCode": "235497P3",
+    "productUrl": "https://www.viator.com/tours/Lake-Tahoe/2-Hour-Private-Lake-Tahoe-Shoreline-Cruise/d816-235497P3",
+    "title": "Private Emerald Bay Boat Cruise for Up to 12 Guests",
+    "description": {
+      "text": "Charter a private captain-led boat for up to 12 guests on a two-hour Lake Tahoe cruise. Drop anchor in Emerald Bay for a swim, relax on floating lily pads, and use the onboard stereo while tailoring the route to your group."
+    },
+    "location": {
+      "city": "Lake Tahoe",
+      "state": "California"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $650.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 32
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/d7/70/1f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private two-hour boat charter for up to 12 guests",
+      "Captain-led cruise with flexible shoreline routing",
+      "Floating lily pads and onboard stereo system",
+      "Swim stop options in Emerald Bay",
+      "Depart from Tahoe Keys Marina in South Lake Tahoe"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Rubicon Dock, Slip 135, Tahoe Keys Marina, 2435 Venice Dr E, South Lake Tahoe, CA 96150."
+      },
+      "end": {
+        "description": "Return to Tahoe Keys Marina at the end of the private cruise."
+      }
+    },
+    "itinerarySummary": "Charter a private captain-led boat for up to 12 guests on a two-hour Lake Tahoe cruise.",
+    "itineraryItems": [
+      {
+        "title": "Emerald Bay State Park",
+        "description": "Cruise to Emerald Bay with time to anchor, swim, and enjoy the private boat.",
+        "duration": "40 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private captain",
+      "Stereo system",
+      "Floating lily pad"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Emerald Bay Boat Cruise for Up to 12 Guests?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Lake Tahoe?",
+        "answer": "Meet at Rubicon Dock, Slip 135, Tahoe Keys Marina, 2435 Venice Dr E, South Lake Tahoe, CA 96150."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Day Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 650
+      },
+      "currency": "USD"
+    }
+  }
+}
