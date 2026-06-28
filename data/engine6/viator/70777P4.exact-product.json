@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "70777P4",
+    "productUrl": "https://www.viator.com/tours/Lake-Tahoe/Truckee-River-Boca-to-Floriston-Run-Class-III-Whitewater/d816-70777P4",
+    "title": "Truckee River: Boca to Floriston Run (Class III Whitewater)",
+    "description": {
+      "text": "Raft the Truckee River on a guided Class III whitewater run from Boca to Floriston Gorge. Begin with mellow rapids through Tahoe National Forest scenery, then build to intermediate rapids with optional swimming stops in natural pools on warm days."
+    },
+    "location": {
+      "city": "Lake Tahoe",
+      "state": "California"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $128.40",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 183
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/17/f7/85.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Class III whitewater run on the Truckee River",
+      "Guides assist from put-in through Floriston Gorge",
+      "PFD, helmet, and transport back to meeting point included",
+      "Wetsuits and splash jackets provided in cold weather",
+      "Scenic forest canyon setting near Lake Tahoe"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Truckee River Put-In, 10550 Stampede Meadows Rd, Truckee, CA 96161. Plan to carpool when parking is limited."
+      },
+      "end": {
+        "description": "Shuttle returns you to the Truckee River meeting point after the run."
+      }
+    },
+    "itinerarySummary": "Raft the Truckee River on a guided Class III whitewater run from Boca to Floriston Gorge.",
+    "itineraryItems": [
+      {
+        "title": "Lake Tahoe (California)",
+        "description": "Launch on the Truckee River for a guided rafting run through forest canyon scenery.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Truckee",
+        "description": "Finish in Floriston Gorge with intermediate Class III rapids.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "PFD",
+      "Helmet",
+      "Return transport",
+      "Wetsuits when needed"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Truckee River: Boca to Floriston Run (Class III Whitewater)?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from at Lake Tahoe?",
+        "answer": "Meet at Truckee River Put-In, 10550 Stampede Meadows Rd, Truckee, CA 96161. Plan to carpool when parking is limited."
+      }
+    ],
+    "categories": [
+      {
+        "label": "White Water Rafting"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 128.4
+      },
+      "currency": "USD"
+    }
+  }
+}

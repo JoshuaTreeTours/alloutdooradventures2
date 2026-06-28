@@ -1,0 +1,117 @@
+{
+  "product": {
+    "productCode": "6508TAHOE",
+    "productUrl": "https://www.viator.com/tours/Lake-Tahoe/Lake-Tahoe-Circle-Tour-Including-Squaw-Valley/d816-6508TAHOE",
+    "title": "Full-Day Lake Tahoe Circle Tour including Olympic Valley",
+    "description": {
+      "text": "Circle the full lake on a comfortable air-conditioned shuttle with a driver-guide. Stops include Palisades Tahoe, Emerald Bay State Park, Tahoe City, and Logan Shoals Vista Trail with commentary on Tahoe history and landmarks."
+    },
+    "location": {
+      "city": "Lake Tahoe",
+      "state": "California"
+    },
+    "duration": "7 hours 30 minutes (approx.)",
+    "priceFrom": "From $70.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 160
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/17/f3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full circumnavigation of Lake Tahoe by shuttle bus",
+      "Stops at Palisades Tahoe and Emerald Bay State Park",
+      "Logan Shoals Vista Trail and Tahoe City free time",
+      "Hotel pickup and drop-off at select South Shore hotels",
+      "Driver-guide commentary throughout the route"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from select South Shore hotels including Marriott Resorts, Golden Nugget Lake Tahoe, and Hilton Vacation Club on Ski Run Blvd starting at 8:00 AM."
+      },
+      "end": {
+        "description": "Return to your original South Shore hotel pickup point."
+      }
+    },
+    "itinerarySummary": "Circle the full lake on a comfortable air-conditioned shuttle with a driver-guide.",
+    "itineraryItems": [
+      {
+        "title": "Palisades Tahoe",
+        "description": "Stop at the former Olympic Valley resort area with time to explore the village.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Tahoe",
+        "description": "Travel the lakeshore ring road with scenic viewpoints and guide commentary.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Emerald Bay State Park",
+        "description": "Photo stop overlooking Emerald Bay and the surrounding alpine forest.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tahoe City",
+        "description": "Free time in Tahoe City to explore shops, the waterfront, or grab lunch.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Logan Shoals Vista Trail",
+        "description": "Brief stop at a North Shore viewpoint above the lake.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned shuttle bus",
+      "Driver/guide",
+      "Hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full-Day Lake Tahoe Circle Tour including Olympic Valley?",
+        "answer": "The planned duration is 7 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from at Lake Tahoe?",
+        "answer": "Pickup from select South Shore hotels including Marriott Resorts, Golden Nugget Lake Tahoe, and Hilton Vacation Club on Ski Run Blvd starting at 8:00 AM."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 70
+      },
+      "currency": "USD"
+    }
+  }
+}

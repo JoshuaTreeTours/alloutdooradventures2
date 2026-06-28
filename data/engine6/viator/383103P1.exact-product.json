@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "383103P1",
+    "productUrl": "https://www.viator.com/tours/Lake-Tahoe/Clear-Kayak-Paddle-Tour-at-Sand-Harbor/d816-383103P1",
+    "title": "Clear Kayak Tour of Sand Harbor's Crystal Clear Waters",
+    "description": {
+      "text": "Paddle clear kayaks on a small-group guided tour along Lake Tahoe's East Shore from Sand Harbor. A lifeguard-certified guide leads the route to hidden coves and landmarks such as Bonsai Rock with time to swim on warm days."
+    },
+    "location": {
+      "city": "Lake Tahoe",
+      "state": "California"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $150.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 222
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/74/cf/94.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group clear kayak tour on the East Shore",
+      "Lifeguard-certified guide leads the paddle route",
+      "Views of Sand Harbor, Bonsai Rock, and hidden coves",
+      "Swim breaks on warm days in crystal-clear water",
+      "Kayak, paddle, and safety gear included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Sand Harbor on the East Shore, launching from 797 Southwood Blvd, Incline Village area."
+      },
+      "end": {
+        "description": "Return to the Sand Harbor launch point after the paddle."
+      }
+    },
+    "itinerarySummary": "Paddle clear kayaks on a small-group guided tour along Lake Tahoe's East Shore from Sand Harbor.",
+    "itineraryItems": [
+      {
+        "title": "Incline Village",
+        "description": "Check in and receive kayak gear before launching from Sand Harbor.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Tahoe Area",
+        "description": "Paddle along the East Shore to scenic coves and Bonsai Rock with guide commentary.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Clear kayak",
+      "Paddle",
+      "Guide",
+      "Safety equipment"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Clear Kayak Tour of Sand Harbor's Crystal Clear Waters?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from at Lake Tahoe?",
+        "answer": "Meet at Sand Harbor on the East Shore, launching from 797 Southwood Blvd, Incline Village area."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Kayaking Tours"
+      },
+      {
+        "label": "On the Water"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 150
+      },
+      "currency": "USD"
+    }
+  }
+}

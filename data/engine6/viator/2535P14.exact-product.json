@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "2535P14",
+    "productUrl": "https://www.viator.com/tours/Lake-Tahoe/Razor-Ridge-Run-Tour/d816-2535P14",
+    "title": "2-Hour Off-Road Razor Ridge Run Tour in the Desert",
+    "description": {
+      "text": "Ride Polaris RZR side-by-sides through Carson Valley and the Pine Nut Mountains on a guided off-road tour. Scenic stops showcase high-desert views near Lake Tahoe with helmets, bandanas, and bottled water included for beginner and intermediate riders."
+    },
+    "location": {
+      "city": "Lake Tahoe",
+      "state": "California"
+    },
+    "duration": "2 to 4 hours (approx.)",
+    "priceFrom": "From $185.50",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 43
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/99/1e/e1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided off-road Razor tour through Carson Valley",
+      "Scenic ridge runs in the Pine Nut Mountain Range",
+      "Suited to beginner and intermediate riders",
+      "Helmet, bandana, and bottled water included",
+      "Complimentary shuttle from select South Shore hotels"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Lake Tahoe Adventures base with complimentary shuttle pickup available from select South Shore hotels."
+      },
+      "end": {
+        "description": "Return to the meeting point or hotel shuttle drop-off after the ride."
+      }
+    },
+    "itinerarySummary": "Ride Polaris RZR side-by-sides through Carson Valley and the Pine Nut Mountains on a guided off-road tour.",
+    "itineraryItems": [
+      {
+        "title": "Lake Tahoe Adventures Base",
+        "description": "Meet your guide, receive safety briefing, and board the Polaris RZR for the ridge run.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Carson Valley",
+        "description": "Follow your guide across desert washes, rocky hills, and sagebrush flats with photo stops.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Helmet",
+      "Bandana",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 2-Hour Off-Road Razor Ridge Run Tour in the Desert?",
+        "answer": "The planned duration is 2 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Lake Tahoe?",
+        "answer": "Meet at the Lake Tahoe Adventures base with complimentary shuttle pickup available from select South Shore hotels."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 185.5
+      },
+      "currency": "USD"
+    }
+  }
+}

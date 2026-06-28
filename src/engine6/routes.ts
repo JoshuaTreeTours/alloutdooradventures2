@@ -644,6 +644,42 @@ export const ENGINE6_NAPA_TOUR_PATH_PREFIX =
 export const isEngine6NapaTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_NAPA_TOUR_PATH_PREFIX);
 
+export const ENGINE6_LAKE_TAHOE_EMERALD_BAY_SCENIC_CRUISE_PRODUCT_CODE =
+  "2535P4";
+export const ENGINE6_LAKE_TAHOE_EMERALD_BAY_SCENIC_CRUISE_ROUTE =
+  "/destinations/california/lake-tahoe/tours/emerald-bay-scenic-cruise-2535P4";
+export const ENGINE6_LAKE_TAHOE_SAILING_CRUISE_PRODUCT_CODE = "271742P1";
+export const ENGINE6_LAKE_TAHOE_SAILING_CRUISE_ROUTE =
+  "/destinations/california/lake-tahoe/tours/south-lake-tahoe-sailing-cruise-271742P1";
+export const ENGINE6_LAKE_TAHOE_CIRCLE_TOUR_PRODUCT_CODE = "6508TAHOE";
+export const ENGINE6_LAKE_TAHOE_CIRCLE_TOUR_ROUTE =
+  "/destinations/california/lake-tahoe/tours/lake-tahoe-circle-tour-6508TAHOE";
+export const ENGINE6_LAKE_TAHOE_CLEAR_KAYAK_PRODUCT_CODE = "383103P1";
+export const ENGINE6_LAKE_TAHOE_CLEAR_KAYAK_ROUTE =
+  "/destinations/california/lake-tahoe/tours/clear-kayak-tour-sand-harbor-383103P1";
+export const ENGINE6_LAKE_TAHOE_TRUCKEE_RIVER_RAFT_PRODUCT_CODE = "70777P4";
+export const ENGINE6_LAKE_TAHOE_TRUCKEE_RIVER_RAFT_ROUTE =
+  "/destinations/california/lake-tahoe/tours/truckee-river-whitewater-raft-70777P4";
+export const ENGINE6_LAKE_TAHOE_SAND_HARBOR_BEACH_PRODUCT_CODE = "466292P2";
+export const ENGINE6_LAKE_TAHOE_SAND_HARBOR_BEACH_ROUTE =
+  "/destinations/california/lake-tahoe/tours/sand-harbor-beach-experience-466292P2";
+export const ENGINE6_LAKE_TAHOE_EAST_SHORE_EBIKE_PRODUCT_CODE = "268564P2";
+export const ENGINE6_LAKE_TAHOE_EAST_SHORE_EBIKE_ROUTE =
+  "/destinations/california/lake-tahoe/tours/east-shore-e-bike-tour-268564P2";
+export const ENGINE6_LAKE_TAHOE_PRIVATE_EMERALD_BAY_CRUISE_PRODUCT_CODE =
+  "235497P3";
+export const ENGINE6_LAKE_TAHOE_PRIVATE_EMERALD_BAY_CRUISE_ROUTE =
+  "/destinations/california/lake-tahoe/tours/private-emerald-bay-cruise-235497P3";
+export const ENGINE6_LAKE_TAHOE_RAZOR_RIDGE_RUN_PRODUCT_CODE = "2535P14";
+export const ENGINE6_LAKE_TAHOE_RAZOR_RIDGE_RUN_ROUTE =
+  "/destinations/california/lake-tahoe/tours/razor-ridge-run-off-road-2535P14";
+
+export const ENGINE6_LAKE_TAHOE_TOUR_PATH_PREFIX =
+  "/destinations/california/lake-tahoe/tours/";
+
+export const isEngine6LakeTahoeTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_LAKE_TAHOE_TOUR_PATH_PREFIX);
+
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
   canonicalPath: string;
@@ -1372,6 +1408,42 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_NAPA_SPRINTER_WINE_TOUR_ROUTE,
     ENGINE6_NAPA_SPRINTER_WINE_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LAKE_TAHOE_EMERALD_BAY_SCENIC_CRUISE_ROUTE,
+    ENGINE6_LAKE_TAHOE_EMERALD_BAY_SCENIC_CRUISE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LAKE_TAHOE_SAILING_CRUISE_ROUTE,
+    ENGINE6_LAKE_TAHOE_SAILING_CRUISE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LAKE_TAHOE_CIRCLE_TOUR_ROUTE,
+    ENGINE6_LAKE_TAHOE_CIRCLE_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LAKE_TAHOE_CLEAR_KAYAK_ROUTE,
+    ENGINE6_LAKE_TAHOE_CLEAR_KAYAK_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LAKE_TAHOE_TRUCKEE_RIVER_RAFT_ROUTE,
+    ENGINE6_LAKE_TAHOE_TRUCKEE_RIVER_RAFT_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LAKE_TAHOE_SAND_HARBOR_BEACH_ROUTE,
+    ENGINE6_LAKE_TAHOE_SAND_HARBOR_BEACH_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LAKE_TAHOE_EAST_SHORE_EBIKE_ROUTE,
+    ENGINE6_LAKE_TAHOE_EAST_SHORE_EBIKE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LAKE_TAHOE_PRIVATE_EMERALD_BAY_CRUISE_ROUTE,
+    ENGINE6_LAKE_TAHOE_PRIVATE_EMERALD_BAY_CRUISE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_LAKE_TAHOE_RAZOR_RIDGE_RUN_ROUTE,
+    ENGINE6_LAKE_TAHOE_RAZOR_RIDGE_RUN_PRODUCT_CODE,
   ],
 ] as const;
 

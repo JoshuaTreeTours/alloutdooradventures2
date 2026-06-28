@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "466292P2",
+    "productUrl": "https://www.viator.com/tours/Lake-Tahoe/The-Sand-Harbor-Experience-LAKE-TAHOES-MOST-BEAUTIFUL-BEACH/d816-466292P2",
+    "title": "Sand Harbor Experience Access & Beach Day at Tahoe's Beach",
+    "description": {
+      "text": "Skip Sand Harbor parking hassles with VIP beach access and complimentary transport into the park. Guides set up chairs, umbrellas, towels, and beach games at Camp Tahoe while you enjoy three and a half hours on one of Lake Tahoe's most beautiful beaches."
+    },
+    "location": {
+      "city": "Lake Tahoe",
+      "state": "California"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $175.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 16
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/db/58/7c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "VIP access and transport into Sand Harbor State Park",
+      "Beach setup with chairs, umbrellas, towels, and games",
+      "Morning and afternoon session options",
+      "Near Bonsai Rock on Lake Tahoe's East Shore",
+      "Optional kayak and stand-up paddle rentals nearby"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at 889 NV-28, Incline Village, NV 89451. Use central Incline parking lots such as Raley's or Ace Hardware and walk or take TART transit to the meeting point."
+      },
+      "end": {
+        "description": "Return transport brings you back to the Incline Village meeting area."
+      }
+    },
+    "itinerarySummary": "Skip Sand Harbor parking hassles with VIP beach access and complimentary transport into the park.",
+    "itineraryItems": [
+      {
+        "title": "Incline Village Meeting Point",
+        "description": "Check in at the Incline Village meeting area before complimentary transport into Sand Harbor State Park.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sand Harbor",
+        "description": "Enjoy a guided beach day at Sand Harbor with included park access and beach amenities.",
+        "duration": "3 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "All fees and taxes",
+      "Air-conditioned vehicle",
+      "Beach chairs and umbrellas",
+      "Towels and beach games"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sand Harbor Experience Access & Beach Day at Tahoe's Beach?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from at Lake Tahoe?",
+        "answer": "Meet at 889 NV-28, Incline Village, NV 89451. Use central Incline parking lots such as Raley's or Ace Hardware and walk or take TART transit to the meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 175
+      },
+      "currency": "USD"
+    }
+  }
+}

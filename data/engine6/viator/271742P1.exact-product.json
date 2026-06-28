@@ -1,0 +1,93 @@
+{
+  "product": {
+    "productCode": "271742P1",
+    "productUrl": "https://www.viator.com/tours/Lake-Tahoe/Daily-South-Lake-Tahoe-Sailing-Cruise/d816-271742P1",
+    "title": "2 Hour Sailing Cruise on Lake Tahoe",
+    "description": {
+      "text": "Sail Tahoe Blue on a small-group yacht limited to 18 passengers. This daily South Lake Tahoe sailing cruise includes complimentary local beer, wine, and non-alcoholic beverages while you glide across the lake under wind power."
+    },
+    "location": {
+      "city": "Lake Tahoe",
+      "state": "California"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $149.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 933
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/bb/44/51.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group sailing yacht limited to 18 passengers",
+      "Complimentary local beer, wine, and non-alcoholic beverages",
+      "Wind-powered cruise without engine noise",
+      "Daily departures from South Lake Tahoe",
+      "Restroom on board"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Sail Tahoe Blue check-in window next to Riva Grill, 900 Ski Run Blvd, South Lake Tahoe, CA 96150. Arrive 30 minutes before departure."
+      },
+      "end": {
+        "description": "Return to the Sail Tahoe Blue meeting point at Riva Grill."
+      }
+    },
+    "itinerarySummary": "Sail Tahoe Blue on a small-group yacht limited to 18 passengers.",
+    "itineraryItems": [
+      {
+        "title": "Lake Tahoe (California)",
+        "description": "Set sail from South Lake Tahoe for a two-hour cruise on clear alpine water.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Alcoholic beverages",
+      "Bottled water",
+      "Restroom on board"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 2 Hour Sailing Cruise on Lake Tahoe?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Lake Tahoe?",
+        "answer": "Meet at the Sail Tahoe Blue check-in window next to Riva Grill, 900 Ski Run Blvd, South Lake Tahoe, CA 96150. Arrive 30 minutes before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sailing"
+      },
+      {
+        "label": "Cruises & Sailing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "2535P4",
+    "productUrl": "https://www.viator.com/tours/Lake-Tahoe/M-S-Dixie-II-Emerald-Bay-Scenic-Cruise/d816-2535P4",
+    "title": "Lake Tahoe Emerald Bay Scenic Cruise",
+    "description": {
+      "text": "Board a classic paddlewheeler for a scenic cruise around Lake Tahoe's Emerald Bay. An included audio guide shares how the bay formed, stories of Fannette Island, and views of Vikingsholm Castle while you choose open-air decks or climate-controlled seating."
+    },
+    "location": {
+      "city": "Lake Tahoe",
+      "state": "California"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $104.94",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 729
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/d6/cf/11.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Scenic paddlewheel cruise to Emerald Bay",
+      "Included audio guide on Fannette Island and Vikingsholm Castle",
+      "Open-air decks and indoor climate-controlled seating",
+      "Complimentary shuttle service from select South Shore hotels",
+      "Onboard restrooms and optional food and bar service"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Zephyr Cove Marina, 760 US-50, Zephyr Cove, NV 89448. Arrive 30 minutes before departure to check in at the boat dock."
+      },
+      "end": {
+        "description": "Return to Zephyr Cove Marina after the cruise."
+      }
+    },
+    "itinerarySummary": "Board a classic paddlewheeler for a scenic cruise around Lake Tahoe's Emerald Bay.",
+    "itineraryItems": [
+      {
+        "title": "Lake Tahoe Cruises / MS Dixie II",
+        "description": "Board the MS Dixie II paddlewheeler at Zephyr Cove Marina for the Emerald Bay sightseeing route.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fannette Island",
+        "description": "Pass by Fannette Island while the audio guide shares Tahoe history and Emerald Bay geology.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Emerald Bay State Park",
+        "description": "Cruise along Emerald Bay with close views of alpine shoreline and Vikingsholm Castle.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Zephyr Cove",
+        "description": "Return along the South Shore with views of Zephyr Cove.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "All fees and taxes",
+      "Restroom on board",
+      "Audio guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Lake Tahoe Emerald Bay Scenic Cruise?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Lake Tahoe?",
+        "answer": "Meet at Zephyr Cove Marina, 760 US-50, Zephyr Cove, NV 89448. Arrive 30 minutes before departure to check in at the boat dock."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Cruises"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 104.94
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -157,6 +157,15 @@ import specimen175643p1Payload from "../../data/engine6/viator/175643P1.exact-pr
 import specimen396101p2Payload from "../../data/engine6/viator/396101P2.exact-product.json";
 import specimen212180p2Payload from "../../data/engine6/viator/212180P2.exact-product.json";
 import specimen87617p1Payload from "../../data/engine6/viator/87617P1.exact-product.json";
+import specimen2535p4Payload from "../../data/engine6/viator/2535P4.exact-product.json";
+import specimen271742p1Payload from "../../data/engine6/viator/271742P1.exact-product.json";
+import specimen6508tahoePayload from "../../data/engine6/viator/6508TAHOE.exact-product.json";
+import specimen383103p1Payload from "../../data/engine6/viator/383103P1.exact-product.json";
+import specimen70777p4Payload from "../../data/engine6/viator/70777P4.exact-product.json";
+import specimen466292p2Payload from "../../data/engine6/viator/466292P2.exact-product.json";
+import specimen268564p2Payload from "../../data/engine6/viator/268564P2.exact-product.json";
+import specimen235497p3Payload from "../../data/engine6/viator/235497P3.exact-product.json";
+import specimen2535p14Payload from "../../data/engine6/viator/2535P14.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -1639,6 +1648,87 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Napa-and-Sonoma/7-Hour-Private-Napa-or-Sonoma-Wine-Tour/d914-87617P1",
     rawPayload: specimen87617p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "2535P4",
+    publicUrl:
+      "https://www.viator.com/tours/Lake-Tahoe/M-S-Dixie-II-Emerald-Bay-Scenic-Cruise/d816-2535P4",
+    rawPayload: specimen2535p4Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "271742P1",
+    publicUrl:
+      "https://www.viator.com/tours/Lake-Tahoe/Daily-South-Lake-Tahoe-Sailing-Cruise/d816-271742P1",
+    rawPayload: specimen271742p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "6508TAHOE",
+    publicUrl:
+      "https://www.viator.com/tours/Lake-Tahoe/Lake-Tahoe-Circle-Tour-Including-Squaw-Valley/d816-6508TAHOE",
+    rawPayload: specimen6508tahoePayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "383103P1",
+    publicUrl:
+      "https://www.viator.com/tours/Lake-Tahoe/Clear-Kayak-Paddle-Tour-at-Sand-Harbor/d816-383103P1",
+    rawPayload: specimen383103p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "70777P4",
+    publicUrl:
+      "https://www.viator.com/tours/Lake-Tahoe/Truckee-River-Boca-to-Floriston-Run-Class-III-Whitewater/d816-70777P4",
+    rawPayload: specimen70777p4Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "466292P2",
+    publicUrl:
+      "https://www.viator.com/tours/Lake-Tahoe/The-Sand-Harbor-Experience-LAKE-TAHOES-MOST-BEAUTIFUL-BEACH/d816-466292P2",
+    rawPayload: specimen466292p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "268564P2",
+    publicUrl:
+      "https://www.viator.com/tours/Lake-Tahoe/Lake-Tahoe-Half-Day-Electric-Bike-Rental-Ride-the-Scenic-Shoreline/d816-268564P2",
+    rawPayload: specimen268564p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "235497P3",
+    publicUrl:
+      "https://www.viator.com/tours/Lake-Tahoe/2-Hour-Private-Lake-Tahoe-Shoreline-Cruise/d816-235497P3",
+    rawPayload: specimen235497p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "2535P14",
+    publicUrl:
+      "https://www.viator.com/tours/Lake-Tahoe/Razor-Ridge-Run-Tour/d816-2535P14",
+    rawPayload: specimen2535p14Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
