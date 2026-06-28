@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "212180P2",
+    "productUrl": "https://www.viator.com/tours/Napa-and-Sonoma/6-Hour-Exclusive-Wine-Country-Experience-for-up-to-6-Guests/d914-212180P2",
+    "title": "6-Hour Exclusive Wine Tour Experience Up to 6 Guests",
+    "description": {
+      "text": "Explore Napa or Sonoma Valley in luxury on a six-hour private SUV tour for up to six guests. Choose your own wineries or follow a curated schedule designed to maximize tastings, vineyard views, and relaxed pacing with a professional driver handling every transfer."
+    },
+    "location": {
+      "city": "Napa",
+      "state": "California"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $560.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 62
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/d9/96/d6/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Exclusive six-hour private SUV wine country experience",
+      "Up to six guests with curated or custom winery lineup",
+      "Professional driver for seamless valley transfers",
+      "Flexible time at each winery and scenic stop",
+      "Napa or Sonoma Valley routing available"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from your Napa Valley resort, hotel, or confirmed address after booking."
+      },
+      "end": {
+        "description": "Return to your pickup location after the final stop."
+      }
+    },
+    "itinerarySummary": "Explore Napa or Sonoma Valley in luxury on a six-hour private SUV tour for up to six guests.",
+    "itineraryItems": [
+      {
+        "title": "Napa Valley",
+        "description": "Begin a six-hour exclusive private route through wine country.",
+        "duration": "6 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Napa Valley Wineries",
+        "description": "Visit boutique and landmark producers with time for tastings and vineyard walks.",
+        "duration": "4 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private SUV transport",
+      "Professional driver"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 6-Hour Exclusive Wine Tour Experience Up to 6 Guests?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Napa Valley?",
+        "answer": "Pickup from your Napa Valley resort, hotel, or confirmed address after booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Drivers"
+      },
+      {
+        "label": "Wine Tasting"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 560
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -4,6 +4,9 @@ export const ENGINE6_GLOBAL_FALLBACK_HERO_URL =
 export const ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/e7/f6.jpg";
 
+export const ENGINE6_NAPA_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/72/f3/27.jpg";
+
 type Engine6HeroCandidateTour = {
   productCode: string;
   heroImageUrl?: string | null;
@@ -12,6 +15,7 @@ type Engine6HeroCandidateTour = {
 const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   california: {
     monterey: ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL,
+    napa: ENGINE6_NAPA_CANONICAL_CITY_HERO_URL,
   },
 };
 

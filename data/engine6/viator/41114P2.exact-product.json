@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "41114P2",
+    "productUrl": "https://www.viator.com/tours/Napa-and-Sonoma/Half-Day-Napa-Valley-Bike-and-Wine-Tour/d914-41114P2",
+    "title": "Half-Day Napa Valley E-Bike Tour",
+    "description": {
+      "text": "Explore Napa Valley on a half-day electric bike tour through wine country backroads. A local guide leads a small group to a winery stop with commentary on valley history and the vine-to-bottle process, with optional extended riding in Yountville after the tour concludes."
+    },
+    "location": {
+      "city": "Napa",
+      "state": "California"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $169.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 71
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/a3/2c/68.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Half-day Napa Valley e-bike tour with local guide",
+      "Pedal-assist bikes for varied fitness levels",
+      "Winery stop on the Yountville area route",
+      "Commentary on Napa Valley history and winemaking",
+      "Option to keep bikes for self-guided riding after tour"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Yountville area bike tour location listed in your booking confirmation."
+      },
+      "end": {
+        "description": "Finish in Yountville with optional extended self-guided riding."
+      }
+    },
+    "itinerarySummary": "Explore Napa Valley on a half-day electric bike tour through wine country backroads.",
+    "itineraryItems": [
+      {
+        "title": "Yountville",
+        "description": "Start the guided e-bike route through Napa Valley lanes near Yountville.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Napa Valley Wineries",
+        "description": "Stop at a local winery for tasting time on the half-day bike route.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Napa Valley",
+        "description": "Continue through scenic wine country backroads with guide commentary.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Electric bike and helmet"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half-Day Napa Valley E-Bike Tour?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Napa Valley?",
+        "answer": "Meet at the confirmed Yountville area bike tour location listed in your booking confirmation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Wine Tasting"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 169
+      },
+      "currency": "USD"
+    }
+  }
+}

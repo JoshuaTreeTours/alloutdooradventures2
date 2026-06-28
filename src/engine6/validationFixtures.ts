@@ -145,6 +145,18 @@ import specimen173135p2Payload from "../../data/engine6/viator/173135P2.exact-pr
 import specimen434555p1Payload from "../../data/engine6/viator/434555P1.exact-product.json";
 import specimen118676p4Payload from "../../data/engine6/viator/118676P4.exact-product.json";
 import specimen9345p1Payload from "../../data/engine6/viator/9345P1.exact-product.json";
+import specimen6938napatrlyPayload from "../../data/engine6/viator/6938NAPATRLY.exact-product.json";
+import specimen6285p4Payload from "../../data/engine6/viator/6285P4.exact-product.json";
+import specimen339737p1Payload from "../../data/engine6/viator/339737P1.exact-product.json";
+import specimen148923p3Payload from "../../data/engine6/viator/148923P3.exact-product.json";
+import specimen17140_dwtPayload from "../../data/engine6/viator/17140_DWT.exact-product.json";
+import specimen6938castlePayload from "../../data/engine6/viator/6938CASTLE.exact-product.json";
+import specimen41114p2Payload from "../../data/engine6/viator/41114P2.exact-product.json";
+import specimen38386p1Payload from "../../data/engine6/viator/38386P1.exact-product.json";
+import specimen175643p1Payload from "../../data/engine6/viator/175643P1.exact-product.json";
+import specimen396101p2Payload from "../../data/engine6/viator/396101P2.exact-product.json";
+import specimen212180p2Payload from "../../data/engine6/viator/212180P2.exact-product.json";
+import specimen87617p1Payload from "../../data/engine6/viator/87617P1.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -1519,6 +1531,114 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Monterey-and-Carmel/Monterey-Bay-Sailing-Family-Cruise/d5250-9345P1",
     rawPayload: specimen9345p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "6938NAPATRLY",
+    publicUrl:
+      "https://www.viator.com/tours/Napa-and-Sonoma/Napa-Valley-Wine-Trolley/d914-6938NAPATRLY",
+    rawPayload: specimen6938napatrlyPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "6285P4",
+    publicUrl:
+      "https://www.viator.com/tours/Napa-and-Sonoma/Small-Group-Wine-Tasting-Tour-through-Napa-Valley/d914-6285P4",
+    rawPayload: specimen6285p4Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "339737P1",
+    publicUrl:
+      "https://www.viator.com/tours/Napa-and-Sonoma/Join-in-Flight/d914-339737P1",
+    rawPayload: specimen339737p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "148923P3",
+    publicUrl:
+      "https://www.viator.com/tours/Napa-and-Sonoma/6-Hours-up-to-6-passengers-Napa-or-Sonoma-Valley-Wine-Tour-by-Private-SUV/d914-148923P3",
+    rawPayload: specimen148923p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "17140_DWT",
+    publicUrl:
+      "https://www.viator.com/tours/Napa-and-Sonoma/Napa-Valley-Wine-Country-Tour/d914-17140_DWT",
+    rawPayload: specimen17140_dwtPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "6938CASTLE",
+    publicUrl:
+      "https://www.viator.com/tours/Napa-and-Sonoma/Napa-Valley-Wine-Trolley-and-Castle-Tour/d914-6938CASTLE",
+    rawPayload: specimen6938castlePayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "41114P2",
+    publicUrl:
+      "https://www.viator.com/tours/Napa-and-Sonoma/Half-Day-Napa-Valley-Bike-and-Wine-Tour/d914-41114P2",
+    rawPayload: specimen41114p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "38386P1",
+    publicUrl:
+      "https://www.viator.com/tours/Napa-and-Sonoma/Private-Luxury-Wine-Tour-for-up-to-7-guests-thru-Napa-Valley-or-Sonoma/d914-38386P1",
+    rawPayload: specimen38386p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "175643P1",
+    publicUrl:
+      "https://www.viator.com/tours/Napa-and-Sonoma/8hr-Private-Sonoma-or-Napa-Wine-Tours-with-Concierge-Service/d914-175643P1",
+    rawPayload: specimen175643p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "396101P2",
+    publicUrl:
+      "https://www.viator.com/tours/Napa-and-Sonoma/Private-Napa-Valley-and-Sonoma-Wine-Tour-Experiences/d914-396101P2",
+    rawPayload: specimen396101p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "212180P2",
+    publicUrl:
+      "https://www.viator.com/tours/Napa-and-Sonoma/6-Hour-Exclusive-Wine-Country-Experience-for-up-to-6-Guests/d914-212180P2",
+    rawPayload: specimen212180p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "87617P1",
+    publicUrl:
+      "https://www.viator.com/tours/Napa-and-Sonoma/7-Hour-Private-Napa-or-Sonoma-Wine-Tour/d914-87617P1",
+    rawPayload: specimen87617p1Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

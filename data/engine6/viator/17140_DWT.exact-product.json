@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "17140_DWT",
+    "productUrl": "https://www.viator.com/tours/Napa-and-Sonoma/Napa-Valley-Wine-Country-Tour/d914-17140_DWT",
+    "title": "Napa Valley Daily Join In Group Wineries Tour Including Lunch",
+    "description": {
+      "text": "Join a daily group wine tour from Napa with professional driver-guide transport to three premier wineries. This join-in outing includes lunch and pickup from downtown Napa hotels or the Oxbow Public Market meeting point for an easy wine country day with fellow travelers."
+    },
+    "location": {
+      "city": "Napa",
+      "state": "California"
+    },
+    "duration": "6 to 7 hours (approx.)",
+    "priceFrom": "From $125.00",
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 465
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/d7/9c/7e/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Daily join-in group tour departing from Napa",
+      "Three premier winery stops with driver guide",
+      "Included lunch on the wine country route",
+      "Pickup from downtown Napa hotels or Oxbow Market",
+      "Shared format for meeting other wine lovers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from downtown Napa or American Canyon hotels, or meet at Oxbow Public Market, 610 1st St, Napa, CA 94559."
+      },
+      "end": {
+        "description": "Return to your pickup hotel or the Oxbow Public Market meeting point."
+      }
+    },
+    "itinerarySummary": "Join a daily group wine tour from Napa with professional driver-guide transport to three premier wineries.",
+    "itineraryItems": [
+      {
+        "title": "Napa Valley",
+        "description": "Ride with a professional driver guide to three premier Napa and Sonoma wineries.",
+        "duration": "5 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Oxbow Public Market",
+        "description": "Meet at Oxbow Public Market when joining from the central Napa meeting point.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Driver guide",
+      "Group transport",
+      "Lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Napa Valley Daily Join In Group Wineries Tour Including Lunch?",
+        "answer": "The planned duration is 6 to 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Napa Valley?",
+        "answer": "Pickup from downtown Napa or American Canyon hotels, or meet at Oxbow Public Market, 610 1st St, Napa, CA 94559."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 125
+      },
+      "currency": "USD"
+    }
+  }
+}

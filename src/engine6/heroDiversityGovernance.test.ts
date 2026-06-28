@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import {
   ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL,
+  ENGINE6_NAPA_CANONICAL_CITY_HERO_URL,
   resolveEngine6CityDisplayHeroes,
 } from "./displayHero";
 import { engine6ListingTours } from "./listing";
@@ -22,6 +23,13 @@ const montereyListingTours = engine6ListingTours.filter(
     tour.destination.citySlug === "monterey"
 );
 
+const napaListingTours = engine6ListingTours.filter(
+  tour =>
+    tour.engine === "engine6" &&
+    tour.destination.stateSlug === "california" &&
+    tour.destination.citySlug === "napa"
+);
+
 describe("Engine6 hero diversity governance", () => {
   it("uses Monterey as the validation cohort for unique listing-card heroes", () => {
     expect(montereyListingTours.length).toBeGreaterThan(0);
@@ -38,6 +46,23 @@ describe("Engine6 hero diversity governance", () => {
       heroCounts.get(ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL) ?? 0
     ).toBeLessThanOrEqual(1);
     expect(heroCounts.size).toBe(montereyListingTours.length);
+  });
+
+  it("uses Napa as the validation cohort for unique listing-card heroes", () => {
+    expect(napaListingTours).toHaveLength(12);
+
+    const heroCounts = napaListingTours.reduce<Map<string, number>>(
+      (counts, tour) => {
+        counts.set(tour.heroImage, (counts.get(tour.heroImage) ?? 0) + 1);
+        return counts;
+      },
+      new Map()
+    );
+
+    expect(
+      heroCounts.get(ENGINE6_NAPA_CANONICAL_CITY_HERO_URL) ?? 0
+    ).toBeLessThanOrEqual(1);
+    expect(heroCounts.size).toBe(napaListingTours.length);
   });
 
   it("newly generated Engine6 cities prefer unique product heroes before fallbacks", () => {

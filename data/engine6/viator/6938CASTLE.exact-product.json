@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "6938CASTLE",
+    "productUrl": "https://www.viator.com/tours/Napa-and-Sonoma/Napa-Valley-Wine-Trolley-and-Castle-Tour/d914-6938CASTLE",
+    "title": "Napa Valley Wine Trolley Castle Tour",
+    "description": {
+      "text": "Experience Napa Valley on the Wine Trolley Castle Tour heading north to Calistoga. The route includes Castello di Amorosa for an extensive tasting, lunch at Tre Vigne Pizzeria, and two additional notable Napa Valley wineries aboard an open-air cable car replica."
+    },
+    "location": {
+      "city": "Napa",
+      "state": "California"
+    },
+    "duration": "6 hours 30 minutes (approx.)",
+    "priceFrom": "From $135.00",
+    "reviews": {
+      "combinedAverageRating": 4.3,
+      "totalReviews": 244
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/d7/98/9b/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Up-valley Napa Wine Trolley route to Calistoga",
+      "Castello di Amorosa castle winery tasting stop",
+      "Included lunch at Tre Vigne Pizzeria",
+      "Open-air cable car replica transport",
+      "Two additional Napa Valley winery visits"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Oxbow Public Market, 610 1st St, Napa, CA 94559 for trolley pickup."
+      },
+      "end": {
+        "description": "Return to the Oxbow Public Market meeting point in Napa."
+      }
+    },
+    "itinerarySummary": "Experience Napa Valley on the Wine Trolley Castle Tour heading north to Calistoga.",
+    "itineraryItems": [
+      {
+        "title": "Castello di Amorosa",
+        "description": "Tour the Tuscan-style castle winery for an extensive tasting in Calistoga.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Calistoga",
+        "description": "Continue the up-valley trolley route through Calistoga wine country.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Napa Valley Wineries",
+        "description": "Visit two additional notable Napa Valley wineries after lunch.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Lunch",
+      "Guided tour",
+      "Winery reservations"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Napa Valley Wine Trolley Castle Tour?",
+        "answer": "The planned duration is 6 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Napa Valley?",
+        "answer": "Meet at Oxbow Public Market, 610 1st St, Napa, CA 94559 for trolley pickup."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting"
+      },
+      {
+        "label": "Trolley Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 135
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "396101P2",
+    "productUrl": "https://www.viator.com/tours/Napa-and-Sonoma/Private-Napa-Valley-and-Sonoma-Wine-Tour-Experiences/d914-396101P2",
+    "title": "Private Wine Tours of Napa Valley and Sonoma for 2 to 5 people",
+    "description": {
+      "text": "Book a private five-hour chauffeured wine tour for groups of two to five across Napa Valley and Sonoma County. A professional driver and concierge service help select and reserve winery tastings while you relax with complimentary bottled water between stops."
+    },
+    "location": {
+      "city": "Napa",
+      "state": "California"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $400.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 39
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/d7/95/fa/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private five-hour tour for two to five travelers",
+      "Door-to-door pickup and drop-off in wine country",
+      "Concierge assistance booking winery tastings",
+      "Professional chauffeur-guide throughout the day",
+      "Complimentary bottled water on board"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Door-to-door pickup from your Napa or Sonoma lodging within the service area."
+      },
+      "end": {
+        "description": "Return to your original pickup location after the tour."
+      }
+    },
+    "itinerarySummary": "Book a private five-hour chauffeured wine tour for groups of two to five across Napa Valley and Sonoma County.",
+    "itineraryItems": [
+      {
+        "title": "Napa Valley",
+        "description": "Travel by private vehicle between Napa Valley and Sonoma winery stops.",
+        "duration": "5 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Napa Valley Wineries",
+        "description": "Visit wineries selected with concierge support based on your preferences.",
+        "duration": "3 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private chauffeur-guide",
+      "Concierge service",
+      "Complimentary bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Wine Tours of Napa Valley and Sonoma for 2 to 5 people?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Napa Valley?",
+        "answer": "Door-to-door pickup from your Napa or Sonoma lodging within the service area."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Drivers"
+      },
+      {
+        "label": "Wine Tasting"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 400
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "148923P3",
+    "productUrl": "https://www.viator.com/tours/Napa-and-Sonoma/6-Hours-up-to-6-passengers-Napa-or-Sonoma-Valley-Wine-Tour-by-Private-SUV/d914-148923P3",
+    "title": "6 Hour Napa or Sonoma Valley Wine Tour by Private SUV",
+    "description": {
+      "text": "Explore Napa or Sonoma Valley in a private SUV with a knowledgeable chauffeur-guide. This six-hour tour whisks your group between handpicked wineries while you relax and enjoy the scenery, with bottled water provided and flexible pacing for tastings and lunch stops."
+    },
+    "location": {
+      "city": "Napa",
+      "state": "California"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $390.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 177
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/d7/9c/43/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private six-hour SUV wine tour for up to six passengers",
+      "Choose Napa Valley or Sonoma Valley routing",
+      "Knowledgeable chauffeur-guide and flexible winery pacing",
+      "Bottled water included on board",
+      "Door-to-door pickup in Napa Valley wine country"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from your Napa Valley hotel, Airbnb, or confirmed meeting location after booking."
+      },
+      "end": {
+        "description": "Return to your original pickup location after the final winery stop."
+      }
+    },
+    "itinerarySummary": "Explore Napa or Sonoma Valley in a private SUV with a knowledgeable chauffeur-guide.",
+    "itineraryItems": [
+      {
+        "title": "Napa Valley",
+        "description": "Depart in a private SUV for a customized six-hour Napa or Sonoma winery route.",
+        "duration": "6 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Napa Valley Wineries",
+        "description": "Visit multiple wineries selected for your group's preferences with time for tastings.",
+        "duration": "4 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private SUV transport",
+      "Chauffeur-guide",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 6 Hour Napa or Sonoma Valley Wine Tour by Private SUV?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Napa Valley?",
+        "answer": "Pickup from your Napa Valley hotel, Airbnb, or confirmed meeting location after booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Drivers"
+      },
+      {
+        "label": "Wine Tasting"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 390
+      },
+      "currency": "USD"
+    }
+  }
+}

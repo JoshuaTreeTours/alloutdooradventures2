@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "175643P1",
+    "productUrl": "https://www.viator.com/tours/Napa-and-Sonoma/8hr-Private-Sonoma-or-Napa-Wine-Tours-with-Concierge-Service/d914-175643P1",
+    "title": "Sonoma or Napa 8hr Private Wine Tour with Concierge Service",
+    "description": {
+      "text": "Spend a full day in wine country with a private tour and concierge service that preplans your Sonoma or Napa itinerary. Round-trip transport, bottled water, and predetermined tour templates help your group visit favorite wineries without worrying about driving or reservations."
+    },
+    "location": {
+      "city": "Napa",
+      "state": "California"
+    },
+    "duration": "8 hours 15 minutes (approx.)",
+    "priceFrom": "From $599.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 136
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/1b/38/98/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Eight-hour private wine tour with concierge planning",
+      "Visit Napa Valley or Sonoma County wineries",
+      "Pre-travel consultation to customize the itinerary",
+      "Free pickup in Napa city limits and south Sonoma",
+      "Predetermined tour templates available on request"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Free pickup in Napa city limits, Yountville, and south central Sonoma at your hotel or Airbnb."
+      },
+      "end": {
+        "description": "Return to your original pickup location after the tour."
+      }
+    },
+    "itinerarySummary": "Spend a full day in wine country with a private tour and concierge service that preplans your Sonoma or Napa itinerary.",
+    "itineraryItems": [
+      {
+        "title": "Napa Valley",
+        "description": "Depart on an eight-hour private route through Napa or Sonoma wine country.",
+        "duration": "8 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Napa Valley Wineries",
+        "description": "Visit multiple wineries selected during your pre-travel concierge consultation.",
+        "duration": "5 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Concierge planning",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sonoma or Napa 8hr Private Wine Tour with Concierge Service?",
+        "answer": "The planned duration is 8 hours 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Napa Valley?",
+        "answer": "Free pickup in Napa city limits, Yountville, and south central Sonoma at your hotel or Airbnb."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Drivers"
+      },
+      {
+        "label": "Wine Tasting"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 599
+      },
+      "currency": "USD"
+    }
+  }
+}
