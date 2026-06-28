@@ -14,6 +14,7 @@ import {
   compareMerchantFeedRowToProductSchema,
 } from "./merchantFeedParity";
 import { merchantFeedEligibleTours } from "./merchantFeedEligibility";
+import { resolveMerchantDescription } from "./merchantDescriptions";
 import { engine6ResolvedTours } from "./registry";
 import {
   ENGINE6_LAS_VEGAS_VALLEY_OF_FIRE_OFFROAD_PRODUCT_CODE,
@@ -277,7 +278,16 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
     expect(parity.pass, parity.mismatches.join("; ")).toBe(true);
 
     expect(merchantRow?.title).toBe(product?.name);
-    expect(merchantRow?.description).toBe(product?.description);
+    expect(merchantRow?.description).toBe(
+      resolveMerchantDescription({
+        productCode: tour.productCode,
+        title: tour.title,
+        city: tour.city,
+        state: tour.state,
+        categoryLabel: tour.categoryLabel,
+        productOverviewDescription: tour.overviewText,
+      })
+    );
     expect(merchantRow?.link).toBe(product?.url);
     expect(merchantRow?.link).toBe(
       `https://www.alloutdooradventures.com${ENGINE6_NYC_ONE_DAY_SIGHTSEEING_ROUTE}`

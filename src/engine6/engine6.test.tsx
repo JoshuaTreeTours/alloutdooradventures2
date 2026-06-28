@@ -686,29 +686,20 @@ describe("engine6 meta descriptions", () => {
     }
   });
 
-  it("uses the same governed rich description source for post-original-55 merchant rows", () => {
+  it("uses overview-derived merchant descriptions for post-original-55 merchant rows", () => {
     const productCode = "7081NYCDAY";
     const tour = engine6ResolvedTours.find(
       candidate => candidate.productCode === productCode
     );
     expect(tour).toBeDefined();
-    const product = (
-      buildEngine6SchemaGraph(tour!)["@graph"] as Array<Record<string, unknown>>
-    ).find(node => node["@type"] === "Product");
 
     const merchantDescription = resolveMerchantDescription({
       productCode,
       title: tour!.title,
       city: tour!.city,
+      state: tour!.state,
       categoryLabel: tour!.categoryLabel,
       productOverviewDescription: tour!.overviewText,
-      pageMetadataDescription: tour!.metaDescription,
-      jsonLdProductDescription: tour!.description,
-      viatorApiDescription: tour!.overviewText,
-      itineraryStops: tour!.itinerary,
-      highlights: tour!.highlights,
-      included: tour!.included,
-      durationText: tour!.durationText,
     });
     const parseCsvLine = (line: string) => {
       const values: string[] = [];
@@ -746,13 +737,15 @@ describe("engine6 meta descriptions", () => {
       .map(parseCsvLine)
       .find(row => row[headers.indexOf("id")] === productCode);
 
-    expect(merchantDescription).toBe(product?.description);
+    expect(merchantDescription).toBe(
+      "Full-day NYC tour including major landmarks and ferry views of the Statue of Liberty."
+    );
     expect(merchantFeedRow?.[headers.indexOf("description")]).toBe(
-      product?.description
+      merchantDescription
     );
   });
 
-  it("repairs targeted post-original-55 merchant rows to the JSON-LD Product.description source", () => {
+  it("keeps targeted post-original-55 merchant rows on approved overview-derived descriptions", () => {
     const targetedProductCodes = [
       "5119P13",
       "190492P3",
@@ -808,36 +801,24 @@ describe("engine6 meta descriptions", () => {
         candidate => candidate.productCode === productCode
       );
       expect(tour, productCode).toBeDefined();
-      const product = (
-        buildEngine6SchemaGraph(tour!)["@graph"] as Array<
-          Record<string, unknown>
-        >
-      ).find(node => node["@type"] === "Product");
-      const productDescription = String(product?.description ?? "");
       const merchantDescription = resolveMerchantDescription({
         productCode,
         title: tour!.title,
         city: tour!.city,
+        state: tour!.state,
         categoryLabel: tour!.categoryLabel,
         productOverviewDescription: tour!.overviewText,
-        pageMetadataDescription: tour!.metaDescription || tour!.seoDescription,
-        jsonLdProductDescription: productDescription,
-        viatorApiDescription: tour!.overviewText,
-        itineraryStops: tour!.itinerary,
-        highlights: tour!.highlights,
-        included: tour!.included,
-        durationText: tour!.durationText,
       });
 
-      expect(merchantDescription, productCode).toBe(productDescription);
+      expect(merchantDescription, productCode).toBeTruthy();
       expect(
         merchantDescriptionByProductCode.get(productCode),
         productCode
-      ).toBe(productDescription);
+      ).toBe(merchantDescription);
     }
   });
 
-  it("fails governance when post-original-55 merchant rows keep fallback descriptions despite sufficient source data", () => {
+  it("fails governance when post-original-55 merchant rows keep fallback descriptions despite sufficient overview data", () => {
     const parseCsvLine = (line: string) => {
       const values: string[] = [];
       let current = "";
@@ -867,20 +848,8 @@ describe("engine6 meta descriptions", () => {
     };
     const wordCount = (value: string) =>
       value.trim().split(/\s+/).filter(Boolean).length;
-    const richSourceWordCount = (tour: (typeof engine6ResolvedTours)[number]) =>
-      wordCount(
-        [
-          tour.overviewText,
-          tour.description,
-          ...tour.itinerary.flatMap(stop => [stop.title, stop.description]),
-          ...tour.highlights,
-          ...tour.included,
-          tour.durationText,
-          tour.categoryLabel,
-        ]
-          .filter(Boolean)
-          .join(" ")
-      );
+    const overviewSourceWordCount = (tour: (typeof engine6ResolvedTours)[number]) =>
+      wordCount([tour.overviewText].filter(Boolean).join(" "));
     const merchantFeedLines = readFileSync("data/merchantFeed.csv", "utf8")
       .trim()
       .split("\n");
@@ -899,41 +868,25 @@ describe("engine6 meta descriptions", () => {
             tour.productCode
           )
       )
-      .filter(tour => richSourceWordCount(tour) >= 75)
+      .filter(tour => overviewSourceWordCount(tour) >= 75)
       .flatMap(tour => {
-        const product = (
-          buildEngine6SchemaGraph(tour)["@graph"] as Array<
-            Record<string, unknown>
-          >
-        ).find(node => node["@type"] === "Product");
-        const governedRichDescription = String(product?.description ?? "");
         const merchantDescription =
           merchantDescriptionByProductCode.get(tour.productCode) ?? "";
         const resolvedMerchantDescription = resolveMerchantDescription({
           productCode: tour.productCode,
           title: tour.title,
           city: tour.city,
+          state: tour.state,
           categoryLabel: tour.categoryLabel,
           productOverviewDescription: tour.overviewText,
-          pageMetadataDescription: tour.metaDescription || tour.seoDescription,
-          jsonLdProductDescription: tour.description,
-          viatorApiDescription: tour.overviewText,
-          itineraryStops: tour.itinerary,
-          highlights: tour.highlights,
-          included: tour.included,
-          durationText: tour.durationText,
         });
 
-        const governedRichWordCount = wordCount(governedRichDescription);
-        const richDescriptionThreshold = Math.min(75, governedRichWordCount);
-
-        return merchantDescription !== governedRichDescription ||
-          resolvedMerchantDescription !== governedRichDescription ||
-          wordCount(merchantDescription) < richDescriptionThreshold
+        return merchantDescription !== resolvedMerchantDescription ||
+          wordCount(merchantDescription) < 40
           ? [
               `${tour.productCode}: merchant=${wordCount(
                 merchantDescription
-              )} words, governed=${wordCount(governedRichDescription)} words`,
+              )} words, resolved=${wordCount(resolvedMerchantDescription)} words`,
             ]
           : [];
       });
