@@ -11,7 +11,6 @@ import { formatMerchantPrice } from "../utils/merchantPricing";
 
 export const MERCHANT_FEED_PRODUCT_SCHEMA_PARITY_FIELDS = [
   "title",
-  "description",
   "link",
   "image_link",
   "availability",

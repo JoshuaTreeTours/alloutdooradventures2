@@ -1,24 +1,8 @@
+import { buildMerchantDescriptionFromOverview } from "./buildMerchantDescriptionFromOverview";
 import {
-  buildEngine6RichProductDescription,
-  stripEngine6GeneratedDescriptionPrefix,
-} from "./seo";
-import { getEngine6TargetedNarrativeDescription } from "./approvedNarrativeDescriptions";
-import { ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES } from "./routes";
-
-const ENGINE6_TARGETED_MERCHANT_JSON_LD_PARITY_PRODUCT_CODES = new Set([
-  "5119P13",
-  "190492P3",
-  "13920P12",
-  "7079RREBIKE",
-  "191767P5",
-  "3533P14",
-  "60136P1",
-  "26719P8",
-  "152424P1",
-  "15200P6",
-  "6953SWAMPTRANS",
-  "15200P2",
-]);
+  ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES,
+  getEngine6TargetedNarrativeDescription,
+} from "./approvedNarrativeDescriptions";
 
 export const MERCHANT_APPROVED_DESCRIPTIONS: Record<string, string> = {
   "152424P1":
@@ -83,7 +67,7 @@ export const MERCHANT_APPROVED_DESCRIPTIONS: Record<string, string> = {
   "388361P1": "Perfect way to get San Diego sunset shots",
   "424070P1": "Discover the best of San Diego on this guided tour",
   "447234P3":
-    "Take a private day trip from San Diego to Joshua Tree National Park with hotel, airport, or cruise terminal pickup options. The route includes time at the Joshua Tree National Park Visitor Center and park landmarks including Skull Rock, Keys View, Jumbo Rocks, and Hidden Valley, with flexibility for short walks based on your group.",
+    "Take a private day trip from San Diego to Joshua Tree National Park with hotel, airport, or cruise terminal pickup options. The day includes time at the Joshua Tree National Park Visitor Center and park landmarks including Skull Rock, Keys View, Jumbo Rocks, and Hidden Valley, with flexibility for short walks based on your group.",
   "5257BOAT":
     "Experience the thrill of driving a speedboat—and enjoy a new way to sightsee—on this two-in-one San Diego Harbor tour. Learn the basics of boating from your guide before following their boat around the harbor, cruising past highlights such as the USS Midway, Coronado Bridge, the San Diego Maritime Museum, and more. Discover the stories behind the landmarks via the on-board, two-way communication system, and stop for photo ops.",
   "5584233P1":
@@ -129,57 +113,13 @@ export const MERCHANT_APPROVED_DESCRIPTIONS: Record<string, string> = {
     "Learn to surf in beautiful Santa Barbara! Your expert instructor will teach you how to stand up on your board and ride the perfect wave, offering tips on balance while ensuring your safety. All skill levels are welcome, and equipment rental is included. This Southern California city offers great outdoor activities like surfing year-round.",
 };
 
-const GENERATED_DESCRIPTION_BLOCKLIST = [
-  /scenic stops/i,
-  /local guide insight/i,
-  /memorable destination highlights/i,
-  /destination highlights/i,
-  /destination-agnostic/i,
-];
-
-export const hasGenericMerchantDescriptionBoilerplate = (value: string) =>
-  GENERATED_DESCRIPTION_BLOCKLIST.some(pattern => pattern.test(value));
-
-const normalizeMerchantDescriptionCandidate = (
-  value: string | null | undefined
-) => {
-  if (!value) {
-    return null;
-  }
-
-  const normalized = stripEngine6GeneratedDescriptionPrefix(
-    value.replace(/\s+/g, " ").trim()
-  );
-  return normalized.length > 0 ? normalized : null;
-};
-
-const buildProductSpecificFallback = (args: {
-  title: string;
-  city: string;
-  categoryLabel?: string | null;
-}) => {
-  const title = args.title.trim();
-  const city = args.city.trim();
-  const activity =
-    args.categoryLabel?.trim().toLowerCase() || "guided experience";
-  const destination = city ? ` in ${city}` : "";
-
-  return `${title} is a ${activity}${destination} with details aligned to the product page and booking experience.`;
-};
-
 export const resolveMerchantDescription = (args: {
   productCode: string;
   title: string;
   city: string;
+  state?: string | null;
   categoryLabel?: string | null;
   productOverviewDescription?: string | null;
-  pageMetadataDescription?: string | null;
-  jsonLdProductDescription?: string | null;
-  viatorApiDescription?: string | null;
-  itineraryStops?: Array<{ title: string; description?: string | null }>;
-  highlights?: string[];
-  included?: string[];
-  durationText?: string | null;
 }) => {
   const targetedNarrativeDescription = getEngine6TargetedNarrativeDescription(
     args.productCode
@@ -189,59 +129,17 @@ export const resolveMerchantDescription = (args: {
     return targetedNarrativeDescription;
   }
 
-  const approvedDescription =
-    ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES.has(args.productCode) &&
-    !ENGINE6_TARGETED_MERCHANT_JSON_LD_PARITY_PRODUCT_CODES.has(
-      args.productCode
-    )
-      ? MERCHANT_APPROVED_DESCRIPTIONS[args.productCode]
-      : undefined;
+  const approvedDescription = MERCHANT_APPROVED_DESCRIPTIONS[args.productCode];
 
   if (approvedDescription) {
     return approvedDescription;
   }
 
-  const governedDescriptionSource = normalizeMerchantDescriptionCandidate(
-    args.jsonLdProductDescription
-  );
-
-  if (
-    governedDescriptionSource &&
-    ENGINE6_TARGETED_MERCHANT_JSON_LD_PARITY_PRODUCT_CODES.has(args.productCode)
-  ) {
-    return governedDescriptionSource;
-  }
-
-  const pageMetadataSource = normalizeMerchantDescriptionCandidate(
-    args.pageMetadataDescription
-  );
-  const viatorSource = normalizeMerchantDescriptionCandidate(
-    args.viatorApiDescription
-  );
-  const fallbackDescriptionSource = [
-    governedDescriptionSource,
-    pageMetadataSource,
-    viatorSource,
-  ].find(
-    candidate =>
-      candidate && !hasGenericMerchantDescriptionBoilerplate(candidate)
-  );
-
-  return buildEngine6RichProductDescription({
+  return buildMerchantDescriptionFromOverview({
     title: args.title,
     city: args.city,
+    state: args.state?.trim() || args.city.trim(),
     categoryLabel: args.categoryLabel,
     overviewText: args.productOverviewDescription,
-    description:
-      fallbackDescriptionSource ??
-      buildProductSpecificFallback({
-        title: args.title,
-        city: args.city,
-        categoryLabel: args.categoryLabel,
-      }),
-    itineraryStops: args.itineraryStops,
-    highlights: args.highlights,
-    included: args.included,
-    durationText: args.durationText,
   });
 };
