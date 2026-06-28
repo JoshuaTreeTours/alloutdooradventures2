@@ -1,7 +1,7 @@
+import { buildEngine6CardDescription } from "./governedEditorialDescriptions";
 import { formatEngine6AggregateRating } from "./rating";
 import { getEngine6TourRatingSourceOfTruth } from "./ratingSourceOfTruth";
 import { formatEngine6StartingPriceLabel } from "./priceDisplay";
-import { formatEngine6CategoryLabel } from "./seo";
 import type { Engine6Tour } from "./types";
 
 export type Engine6Card = {
@@ -12,26 +12,6 @@ export type Engine6Card = {
   priceLabel: string;
   description: string;
   href: string;
-};
-
-const buildCardDescription = (tour: Engine6Tour) => {
-  const overviewSentence = tour.overviewText?.split(/\n\n+/)[0]?.trim();
-  if (overviewSentence) {
-    return overviewSentence;
-  }
-
-  if (tour.highlights.length > 0) {
-    return tour.highlights[0];
-  }
-
-  const categoryLabel =
-    tour.categoryLabel ?? formatEngine6CategoryLabel(tour.primaryCategory);
-
-  if (categoryLabel) {
-    return `Discover ${tour.city} on a guided ${categoryLabel.toLowerCase()} with standout local highlights.`;
-  }
-
-  return `Discover top outdoor highlights around ${tour.city} with a locally guided experience.`;
 };
 
 export const toEngine6Card = (tour: Engine6Tour): Engine6Card => {
@@ -49,7 +29,7 @@ export const toEngine6Card = (tour: Engine6Tour): Engine6Card => {
       typeof tour.priceAmount === "number"
         ? formatEngine6StartingPriceLabel(tour.priceAmount)
         : tour.priceFormatted,
-    description: buildCardDescription(tour),
+    description: buildEngine6CardDescription(tour),
     href: tour.canonicalPath,
   };
 };
