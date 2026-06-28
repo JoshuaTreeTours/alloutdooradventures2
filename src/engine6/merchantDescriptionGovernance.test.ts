@@ -3,19 +3,14 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
 import {
-  ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES,
-} from "./approvedNarrativeDescriptions";
-import {
   buildMerchantDescriptionFromOverview,
   MERCHANT_DESCRIPTION_FORBIDDEN_PATTERNS,
 } from "./buildMerchantDescriptionFromOverview";
 import { buildMerchantFeedRowFromProductSchema } from "./merchantFeedFromProductSchema";
 import { merchantFeedEligibleTours } from "./merchantFeedEligibility";
+import { resolveEngine6GovernedProductDescription } from "./governedEditorialDescriptions";
 import { engine6ResolvedTours } from "./registry";
-import {
-  MERCHANT_APPROVED_DESCRIPTIONS,
-  resolveMerchantDescription,
-} from "./merchantDescriptions";
+import { resolveMerchantDescription } from "./merchantDescriptions";
 
 const parseCsv = (content: string) => {
   const rows: string[][] = [];
@@ -122,16 +117,9 @@ describe("Engine6 merchant CSV description governance", () => {
     assertNoForbiddenMerchantPhrases(description, "6007GGB");
   });
 
-  it("keeps merchant feed rows aligned with governed merchant descriptions", () => {
+  it("keeps merchant feed rows aligned with governed editorial descriptions", () => {
     for (const tour of merchantFeedEligibleTours) {
-      const expectedDescription = resolveMerchantDescription({
-        productCode: tour.productCode,
-        title: tour.title,
-        city: tour.city,
-        state: tour.state,
-        categoryLabel: tour.categoryLabel,
-        productOverviewDescription: tour.overviewText,
-      });
+      const expectedDescription = resolveEngine6GovernedProductDescription(tour);
       const merchantRow = merchantRowsById.get(tour.productCode);
       const generatedRow = buildMerchantFeedRowFromProductSchema(tour);
 
@@ -142,40 +130,21 @@ describe("Engine6 merchant CSV description governance", () => {
       expect(merchantRow?.description, tour.productCode).toBe(
         expectedDescription
       );
-      assertNoForbiddenMerchantPhrases(
-        merchantRow?.description ?? "",
-        tour.productCode
-      );
-    }
-  });
-
-  it("preserves approved merchant descriptions for legacy approved product codes", () => {
-    const targetedCodes = new Set<string>(
-      ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES
-    );
-
-    for (const [productCode, approvedDescription] of Object.entries(
-      MERCHANT_APPROVED_DESCRIPTIONS
-    )) {
-      if (targetedCodes.has(productCode)) {
-        continue;
-      }
-
-      const tour = engine6ResolvedTours.find(
-        candidate => candidate.productCode === productCode
-      );
-      if (!tour) continue;
-
       expect(
         resolveMerchantDescription({
-          productCode,
+          productCode: tour.productCode,
           title: tour.title,
           city: tour.city,
           state: tour.state,
           categoryLabel: tour.categoryLabel,
           productOverviewDescription: tour.overviewText,
-        })
-      ).toBe(approvedDescription);
+        }),
+        tour.productCode
+      ).toBe(expectedDescription);
+      assertNoForbiddenMerchantPhrases(
+        merchantRow?.description ?? "",
+        tour.productCode
+      );
     }
   });
 });

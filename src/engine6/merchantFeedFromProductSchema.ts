@@ -1,6 +1,6 @@
 import { formatMerchantPrice } from "../utils/merchantPricing";
 import { resolveEngine6DisplayHero } from "./displayHero";
-import { resolveMerchantDescription } from "./merchantDescriptions";
+import { resolveEngine6GovernedProductDescription } from "./governedEditorialDescriptions";
 import {
   isEngine6MontereyTourCanonicalPath,
   isEngine6NapaTourCanonicalPath,
@@ -161,14 +161,7 @@ export const buildMerchantFeedRowFromProductSchema = (
   return {
     id: snapshot.id,
     title: snapshot.title,
-    description: resolveMerchantDescription({
-      productCode: tour.productCode,
-      title: tour.title,
-      city: tour.city,
-      state: tour.state,
-      categoryLabel: tour.categoryLabel,
-      productOverviewDescription: tour.overviewText,
-    }),
+    description: resolveEngine6GovernedProductDescription(tour),
     link: snapshot.link,
     image_link: snapshot.imageLink,
     availability: snapshot.availability,

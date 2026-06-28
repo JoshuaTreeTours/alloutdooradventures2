@@ -32,6 +32,7 @@ import {
 } from "./seo";
 import { buildEngine6CardSurfaces, toEngine6Card } from "./cards";
 import { ENGINE6_63657P1_CARD_IMAGE_URL, engine6SpecimenTour } from "./listing";
+import { resolveEngine6GovernedProductDescription } from "./governedEditorialDescriptions";
 import { resolveMerchantDescription } from "./merchantDescriptions";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import {
@@ -672,9 +673,9 @@ describe("engine6 meta descriptions", () => {
       expect(webPage?.description).toBe(richDescription);
       expect(trip?.description).toBe(richDescription);
       expect(wordCount(richDescription), productCode).toBeGreaterThanOrEqual(
-        75
+        90
       );
-      expect(wordCount(richDescription), productCode).toBeLessThanOrEqual(120);
+      expect(wordCount(richDescription), productCode).toBeLessThanOrEqual(140);
       expect(richDescription).not.toContain("...");
       expect(richDescription.startsWith(tour!.title)).toBe(false);
       for (const term of requiredTermsByProductCode[productCode]) {
@@ -686,7 +687,7 @@ describe("engine6 meta descriptions", () => {
     }
   });
 
-  it("uses overview-derived merchant descriptions for post-original-55 merchant rows", () => {
+  it("keeps post-original-55 merchant rows aligned with governed editorial descriptions", () => {
     const productCode = "7081NYCDAY";
     const tour = engine6ResolvedTours.find(
       candidate => candidate.productCode === productCode
@@ -738,14 +739,15 @@ describe("engine6 meta descriptions", () => {
       .find(row => row[headers.indexOf("id")] === productCode);
 
     expect(merchantDescription).toBe(
-      "Full-day NYC tour including major landmarks and ferry views of the Statue of Liberty."
+      resolveEngine6GovernedProductDescription(tour!)
     );
+    expect(merchantDescription.length).toBeGreaterThanOrEqual(500);
     expect(merchantFeedRow?.[headers.indexOf("description")]).toBe(
       merchantDescription
     );
   });
 
-  it("keeps targeted post-original-55 merchant rows on approved overview-derived descriptions", () => {
+  it("keeps post-original-55 merchant rows on governed editorial descriptions", () => {
     const targetedProductCodes = [
       "5119P13",
       "190492P3",

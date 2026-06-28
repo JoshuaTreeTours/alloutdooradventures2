@@ -5,6 +5,7 @@ import {
   ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES,
   ENGINE6_TARGETED_NARRATIVE_DESCRIPTIONS,
 } from "./approvedNarrativeDescriptions";
+import { resolveEngine6GovernedProductDescription } from "./governedEditorialDescriptions";
 import { engine6ResolvedTours } from "./registry";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 
@@ -88,26 +89,33 @@ const machineGeneratedArtifactPattern =
   /Admission Ticket|visited over|Highlights include|Included elements cover|The route includes/i;
 
 describe("Engine6 targeted narrative descriptions", () => {
-  it("keeps the governed narrative override scoped to the six approved product codes", () => {
+  it("keeps the governed narrative override scoped to the approved product codes", () => {
     expect(Object.keys(ENGINE6_TARGETED_NARRATIVE_DESCRIPTIONS).sort()).toEqual(
       [...ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES].sort()
     );
     expect(ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES).toHaveLength(
-      6
+      10
     );
   });
 
   it.each(ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES)(
-    "uses the approved JSON-LD and Merchant CSV description for %s",
+    "uses the governed editorial description for %s across JSON-LD and Merchant CSV",
     productCode => {
-      const approvedDescription =
-        ENGINE6_TARGETED_NARRATIVE_DESCRIPTIONS[productCode];
+      const tour = engine6ResolvedTours.find(
+        candidate => candidate.productCode === productCode
+      );
+      expect(tour, productCode).toBeDefined();
+
+      const governedDescription = resolveEngine6GovernedProductDescription(tour!);
       const webPage = schemaNode(productCode, "WebPage");
       const trip = schemaNode(productCode, "TouristTrip");
       const product = schemaNode(productCode, "Product");
       const merchantRow = merchantRowsById.get(productCode);
 
-      expect(product.description).toBe(approvedDescription);
+      expect(governedDescription).toContain(
+        ENGINE6_TARGETED_NARRATIVE_DESCRIPTIONS[productCode].slice(0, 40)
+      );
+      expect(product.description).toBe(governedDescription);
       expect(webPage.description).toBe(product.description);
       expect(trip.description).toBe(product.description);
       expect(merchantRow?.description).toBe(product.description);
