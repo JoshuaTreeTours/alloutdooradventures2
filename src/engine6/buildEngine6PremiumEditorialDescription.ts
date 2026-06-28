@@ -1,4 +1,5 @@
 import { extractEngine6OverviewNamedLocations } from "./overviewGovernance";
+import { merchantFeedEligibleTours } from "./merchantFeedEligibility";
 import {
   cleanEngine6Description,
   stripEngine6AdmissionArtifacts,
@@ -68,6 +69,41 @@ export const ENGINE6_EDITORIAL_FORBIDDEN_PATTERNS = [
   /\bThe day moves through\b/i,
   /\bkeeps the focus on the places named in the itinerary\b/i,
   /\bwith time built around\b/i,
+  /^Sample .+ wine country on a tasting-day route\b/i,
+  /\bcollects you from\b/i,
+  /\btravelers .*(?:hotel|accommodation)\b/i,
+  /\bwheelchair accessible\b/i,
+  /\bnot wheelchair\b/i,
+  /\bservice animal\b/i,
+  /\bcancellation policy\b/i,
+  /\bfree cancellation\b/i,
+  /\bnot recommended for travelers\b/i,
+  /\bmost travelers can participate\b/i,
+  /\boperational metadata\b/i,
+] as const;
+
+export const ENGINE6_EDITORIAL_METADATA_PATTERNS = [
+  /\bwheelchair accessible\b/i,
+  /\bnot wheelchair accessible\b/i,
+  /\bnot recommended for travelers\b/i,
+  /\bmost travelers can participate\b/i,
+  /\bservice animal\b/i,
+  /\bcancellation policy\b/i,
+  /\bfree cancellation\b/i,
+  /\bnon-refundable\b/i,
+  /\brefund policy\b/i,
+  /\bpickup included\b/i,
+  /\bhotel pickup\b/i,
+  /\bcollects you from\b/i,
+  /\btravelers .*(?:hotel|accommodation)\b/i,
+  /\bmeeting point instructions\b/i,
+  /\bpassport required\b/i,
+  /\bminimum age\b/i,
+  /\bphysical fitness\b/i,
+  /\baccessibility\b/i,
+  /\bconfirmed pickup\b/i,
+  /\bpickup from\b/i,
+  /\bdowntown hotel\b/i,
 ] as const;
 
 export type Engine6EditorialActivityKind =
@@ -117,6 +153,36 @@ const normalizeSentence = (value: string) => {
 export const isEngine6ForbiddenEditorialPhrase = (value: string) =>
   ENGINE6_EDITORIAL_FORBIDDEN_PATTERNS.some(pattern => pattern.test(value));
 
+export const isEngine6EditorialMetadataPhrase = (value: string) =>
+  ENGINE6_EDITORIAL_METADATA_PATTERNS.some(pattern => pattern.test(value));
+
+export type Engine6WineExperienceProfile =
+  | "hot-air-balloon"
+  | "wine-trolley"
+  | "private-suv"
+  | "private-chauffeur"
+  | "join-in-group"
+  | "sprinter-bus"
+  | "e-bike"
+  | "coach-day-trip"
+  | "cooking-class"
+  | "walking-food-tour"
+  | "train-experience"
+  | "generic-winery";
+
+export const extractEngine6EditorialOpeningPattern = (description: string) => {
+  const opening =
+    description.trim().match(/^.*?[.!?](?=\s|$)/)?.[0] ?? description.trim();
+  return opening
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(" ")
+    .slice(0, 6)
+    .join(" ");
+};
+
 const splitSentences = (value: string) =>
   value
     .split(/(?<=[.!?])\s+/)
@@ -160,14 +226,345 @@ const summarizeList = (values: string[], limit = 5) =>
   dedupeValues(
     values
       .map(sanitizeListItem)
-      .filter(value => value.length >= 3 && !isEngine6ForbiddenEditorialPhrase(value))
+      .filter(
+        value =>
+          value.length >= 3 &&
+          !isEngine6ForbiddenEditorialPhrase(value) &&
+          !isEngine6EditorialMetadataPhrase(value) &&
+          !isGenericEditorialPoi(value) &&
+          !isOperationalStopTitle(value)
+      )
   ).slice(0, limit);
 
 const hashProductCode = (productCode: string) =>
   productCode.split("").reduce((sum, char) => sum + char.charCodeAt(0), 0);
 
+const isGenericEditorialPoi = (value: string) => {
+  const normalized = value.toLowerCase().trim();
+  if (!normalized) return true;
+  if (/^(?:napa valley|sonoma valley|carneros valley|wine country)$/.test(normalized)) {
+    return true;
+  }
+  if (/napa valley wineries|sonoma valley wineries/.test(normalized)) {
+    return true;
+  }
+  if (
+    /^valley and |^choose |^commentary on |^complimentary /.test(normalized) ||
+    /^private .* (?:tour|experience|route)/.test(normalized) ||
+    /^daily join-in/.test(normalized) ||
+    /^eight-hour /.test(normalized) ||
+    /(?:passengers?|guests?)$/.test(normalized) ||
+    /^sunrise hot air balloon flight/.test(normalized) ||
+    /^mercedes sprinter/.test(normalized)
+  ) {
+    return true;
+  }
+  return false;
+};
+
+export const classifyEngine6WineExperienceProfile = ({
+  title,
+  categoryLabel,
+  overviewText,
+}: {
+  title: string;
+  categoryLabel?: string | null;
+  overviewText: string;
+}): Engine6WineExperienceProfile => {
+  const titleIdentity = `${title} ${categoryLabel ?? ""}`.toLowerCase();
+  const identity = `${titleIdentity} ${overviewText}`.toLowerCase();
+
+  const fromTitle = (): Engine6WineExperienceProfile | null => {
+    if (/hot air balloon|balloon flight|join-in flight/.test(titleIdentity)) {
+      return "hot-air-balloon";
+    }
+    if (/cooking class|wine country cooking|regional cooking/.test(titleIdentity)) {
+      return "cooking-class";
+    }
+    if (/walking food|food walking|culinary walking/.test(titleIdentity)) {
+      return "walking-food-tour";
+    }
+    if (/wine train|rail experience|historic rail|train tour/.test(titleIdentity)) {
+      return "train-experience";
+    }
+    if (/wine trolley|trolley.*castle|castle tour|trolley classic/.test(titleIdentity)) {
+      return "wine-trolley";
+    }
+    if (/e-bike|electric bike|bike and wine|bike.*wine/.test(titleIdentity)) {
+      if (/wine|vineyard|winery|napa|sonoma|wine country/i.test(identity)) {
+        return "e-bike";
+      }
+    }
+    if (/sprinter|limo bus|mercedes.*bus|\b12 passenger/.test(titleIdentity)) {
+      return "sprinter-bus";
+    }
+    if (
+      /private suv|by private suv|exclusive wine.*up to 6|exclusive wine tour experience/.test(
+        titleIdentity
+      )
+    ) {
+      return "private-suv";
+    }
+    if (
+      /concierge|chauffeur|private.*customized|private wine tour|private luxury|private wine tours/.test(
+        titleIdentity
+      )
+    ) {
+      return "private-chauffeur";
+    }
+    if (/small group|join.?in|daily.*group|join in group/.test(titleIdentity)) {
+      return "join-in-group";
+    }
+    if (
+      /coach|day trip|wine country tour/.test(titleIdentity) &&
+      /san francisco|from san francisco/.test(titleIdentity)
+    ) {
+      return "coach-day-trip";
+    }
+    return null;
+  };
+
+  const titleProfile = fromTitle();
+  if (titleProfile) {
+    return titleProfile;
+  }
+
+  if (/hot air balloon|balloon flight|sunrise balloon/.test(identity)) {
+    return "hot-air-balloon";
+  }
+  if (/cooking class|regional cooking/.test(identity)) {
+    return "cooking-class";
+  }
+  if (/walking food tour|culinary walking/.test(identity)) {
+    return "walking-food-tour";
+  }
+  if (/wine train|historic rail|rail experience/.test(identity)) {
+    return "train-experience";
+  }
+  if (/wine trolley|open-air trolley|historic trolley/.test(identity)) {
+    return "wine-trolley";
+  }
+  if (/electric bike|e-bike|bike and wine/.test(identity)) {
+    if (/wine|vineyard|winery|napa|sonoma|wine country/i.test(identity)) {
+      return "e-bike";
+    }
+  }
+  if (/sprinter|limo bus|mercedes sprinter/.test(identity)) {
+    return "sprinter-bus";
+  }
+  if (/private suv|exclusive wine tour|six-hour exclusive/.test(identity)) {
+    return "private-suv";
+  }
+  if (/concierge|chauffeur|private customized|private wine tour/.test(identity)) {
+    return "private-chauffeur";
+  }
+  if (/small group|join.?in group|daily join-in|join-in winery/.test(identity)) {
+    return "join-in-group";
+  }
+  if (/coach tour|full-day coach|from san francisco/.test(identity)) {
+    return "coach-day-trip";
+  }
+
+  return "generic-winery";
+};
+
+const GENERIC_WINERY_OPENING_VARIANTS = [
+  (cityLabel: string, primaryPoi?: string) =>
+    `Follow a curated route between hand-selected estate wineries${primaryPoi ? ` such as ${primaryPoi}` : ""} across ${cityLabel}'s vineyard country.`,
+  (cityLabel: string) =>
+    `Spend the day among ${cityLabel} valley cellars with guided tastings at multiple estate stops.`,
+  (cityLabel: string) =>
+    `Wind through rolling vineyard lanes on a structured tasting circuit in ${cityLabel} wine country.`,
+  (cityLabel: string, primaryPoi?: string) =>
+    `Tour several distinct wineries${primaryPoi ? ` including ${primaryPoi}` : ""} with time in each cellar room across ${cityLabel}.`,
+  (cityLabel: string) =>
+    `Move between valley estates on a tasting-day itinerary with guide context through ${cityLabel}.`,
+  (cityLabel: string) =>
+    `Discover estate wines across multiple stops on a guided route through ${cityLabel} vineyard country.`,
+] as const;
+
+let genericWineryOpeningVariantByProductCode: Map<string, number> | null = null;
+
+const buildGenericWineryOpeningVariantAssignments = () => {
+  const assignments = new Map<string, number>();
+  const cityGroups = new Map<
+    string,
+    Array<{ productCode: string; profile: Engine6WineExperienceProfile }>
+  >();
+
+  for (const tour of merchantFeedEligibleTours) {
+    const activityKind = classifyEngine6EditorialActivityKind({
+      title: tour.title,
+      categoryLabel: tour.categoryLabel,
+      overviewText: tour.overviewText ?? tour.description ?? "",
+    });
+    if (activityKind !== "wine-tasting") {
+      continue;
+    }
+
+    const profile = classifyEngine6WineExperienceProfile({
+      title: tour.title,
+      categoryLabel: tour.categoryLabel,
+      overviewText: tour.overviewText ?? tour.description ?? "",
+    });
+    if (profile !== "generic-winery") {
+      continue;
+    }
+
+    const cityKey = tour.city.trim().toLowerCase();
+    cityGroups.set(cityKey, [
+      ...(cityGroups.get(cityKey) ?? []),
+      { productCode: tour.productCode, profile },
+    ]);
+  }
+
+  for (const entries of cityGroups.values()) {
+    const patternUsage = new Map<string, number>();
+    entries.forEach((entry, index) => {
+      let variantIndex = index % GENERIC_WINERY_OPENING_VARIANTS.length;
+      const patternKey = GENERIC_WINERY_OPENING_VARIANTS[variantIndex](
+        "City"
+      )
+        .slice(0, 40)
+        .toLowerCase();
+      const usage = patternUsage.get(patternKey) ?? 0;
+      if (usage >= 2) {
+        variantIndex = (variantIndex + 1) % GENERIC_WINERY_OPENING_VARIANTS.length;
+      }
+      patternUsage.set(
+        GENERIC_WINERY_OPENING_VARIANTS[variantIndex]("City")
+          .slice(0, 40)
+          .toLowerCase(),
+        (patternUsage.get(
+          GENERIC_WINERY_OPENING_VARIANTS[variantIndex]("City")
+            .slice(0, 40)
+            .toLowerCase()
+        ) ?? 0) + 1
+      );
+      assignments.set(entry.productCode, variantIndex);
+    });
+  }
+
+  return assignments;
+};
+
+const resolveGenericWineryOpeningVariantIndex = (productCode: string) => {
+  if (!genericWineryOpeningVariantByProductCode) {
+    genericWineryOpeningVariantByProductCode =
+      buildGenericWineryOpeningVariantAssignments();
+  }
+
+  return (
+    genericWineryOpeningVariantByProductCode.get(productCode) ??
+    hashProductCode(productCode) % GENERIC_WINERY_OPENING_VARIANTS.length
+  );
+};
+
+const buildWineExperienceOpening = ({
+  productCode,
+  title,
+  city,
+  categoryLabel,
+  overviewText,
+  primaryPoi,
+  durationPhrase,
+}: {
+  productCode: string;
+  title: string;
+  city: string;
+  categoryLabel?: string | null;
+  overviewText: string;
+  primaryPoi: string;
+  durationPhrase: string;
+}) => {
+  const cityLabel = city.trim();
+  const profile = classifyEngine6WineExperienceProfile({
+    title,
+    categoryLabel,
+    overviewText,
+  });
+  const titleIdentity = `${title} ${categoryLabel ?? ""}`.toLowerCase();
+
+  switch (profile) {
+    case "hot-air-balloon":
+      return normalizeSentence(
+        `Float above vineyard-covered valleys at sunrise on a hot air balloon flight${durationPhrase}, with champagne toast and ground transport to the launch site.`
+      );
+    case "wine-trolley":
+      if (/castle|castello di amorosa/i.test(`${title} ${primaryPoi}`)) {
+        return normalizeSentence(
+          `Ride aboard Napa's historic wine trolley to Castello di Amorosa for a castle winery tasting, rolling through Calistoga vineyard corridors between estate stops.`
+        );
+      }
+      return normalizeSentence(
+        `Ride aboard Napa's historic wine trolley between estate wineries${primaryPoi ? `, starting near ${primaryPoi}` : ""}, with open-air vineyard views and guide commentary between tasting stops.`
+      );
+    case "private-suv":
+      if (/exclusive|up to 6|six guests/i.test(titleIdentity)) {
+        return normalizeSentence(
+          `Board a private SUV for an exclusive six-hour wine country route limited to six guests, with a professional driver coordinating winery reservations.`
+        );
+      }
+      return normalizeSentence(
+        `Explore Napa and Sonoma with a private SUV and a completely flexible winery itinerary${durationPhrase}, shaped by your chauffeur-guide.`
+      );
+    case "private-chauffeur":
+      if (/8\s*hr|eight.?hour|concierge/i.test(titleIdentity)) {
+        return normalizeSentence(
+          `Relax while a private driver and concierge planning handle an eight-hour Napa or Sonoma winery route tailored to your group's pace.`
+        );
+      }
+      if (/2 to 5|two to five|2-5/i.test(titleIdentity)) {
+        return normalizeSentence(
+          `Travel wine country with a private chauffeur-guide for two to five guests, following a flexible five-hour route between estate cellars.`
+        );
+      }
+      return normalizeSentence(
+        `Relax while a private driver handles the day's winery route through Napa and Sonoma, with concierge planning for a customized tasting day.`
+      );
+    case "join-in-group":
+      if (/lunch|daily/i.test(titleIdentity)) {
+        return normalizeSentence(
+          `Join a daily small-group winery circuit with transport, guide commentary, and included lunch between estate tastings across the valley.`
+        );
+      }
+      return normalizeSentence(
+        `Visit several hand-selected wineries with a small group, shuttle transport, and live commentary between valley tasting stops.`
+      );
+    case "sprinter-bus":
+      return normalizeSentence(
+        `Travel your private wine route aboard a Mercedes sprinter limo bus for up to twelve passengers, with a professional driver coordinating winery reservations.`
+      );
+    case "e-bike":
+      return normalizeSentence(
+        `Cycle vineyard roads and quiet country lanes on an electric bike tour${primaryPoi ? ` through ${primaryPoi}` : ""}, with a local guide and winery tasting time along the route.`
+      );
+    case "coach-day-trip":
+      return normalizeSentence(
+        `Travel from San Francisco aboard a full-day coach to Napa and Sonoma wineries${durationPhrase}, crossing the Golden Gate Bridge before valley tasting stops.`
+      );
+    case "cooking-class":
+      return normalizeSentence(
+        `Learn regional wine-country cooking alongside local chefs${primaryPoi ? ` at ${primaryPoi}` : ""}, with hands-on prep and paired tasting notes.`
+      );
+    case "walking-food-tour":
+      return normalizeSentence(
+        `Taste local specialties while exploring historic downtown${primaryPoi ? ` around ${primaryPoi}` : ` in ${cityLabel}`} on a guided walking route.`
+      );
+    case "train-experience":
+      return normalizeSentence(
+        `Travel through Napa Valley aboard a historic rail experience${primaryPoi ? ` with views of ${primaryPoi}` : ""}, pairing scenic rail time with estate winery stops.`
+      );
+    default: {
+      const variantIndex = resolveGenericWineryOpeningVariantIndex(productCode);
+      const builder = GENERIC_WINERY_OPENING_VARIANTS[variantIndex];
+      return normalizeSentence(builder(cityLabel, primaryPoi || undefined));
+    }
+  }
+};
+
 const isOperationalStopTitle = (value: string) =>
-  /\b(?:departure|pickup|pick-up|meeting point|launch area|launch corridor|return|drop[- ]?off)\b/i.test(
+  /\b(?:departure|pickup|pick-up|meeting point|launch area|launch corridor|return|drop[- ]?off|hotel pickup|hotel drop)\b/i.test(
     value
   );
 
@@ -483,7 +880,7 @@ const cleanEditorialSource = (value: string, title: string) => {
 };
 
 const isExperienceFirstSentence = (sentence: string) =>
-  /^(?:Ride|Paddle|Sail|Fly|Hike|Walk|Board|Cruise|Explore|Discover|Visit|Watch|Scan|Roll|Glide|Cycle|Drive|Taste|Sample|Uncover|Step|Drift|Climb|Kayak|Whiz|Soar|Float|Tour|Use|Spend|Stand|Cross|Wind|Traverse|Uncover)/i.test(
+  /^(?:Ride|Paddle|Sail|Fly|Hike|Walk|Board|Cruise|Explore|Discover|Visit|Watch|Scan|Roll|Glide|Cycle|Drive|Taste|Sample|Uncover|Step|Drift|Climb|Kayak|Whiz|Soar|Float|Tour|Use|Spend|Stand|Cross|Wind|Traverse|Relax|Join|Follow|Learn|Travel|Move|Catch|Look|Skim|Lift|Dine|See|Begin|Depart)/i.test(
     sentence.trim()
   );
 
@@ -491,6 +888,7 @@ const appendSentenceIfUseful = (sentences: string[], sentence: string) => {
   const normalized = normalizeSentence(sentence);
   if (!normalized) return false;
   if (isEngine6ForbiddenEditorialPhrase(normalized)) return false;
+  if (isEngine6EditorialMetadataPhrase(normalized)) return false;
   if (countWords(normalized) < 4) return false;
 
   const candidateKey = normalized.toLowerCase();
@@ -654,9 +1052,15 @@ const buildExperienceOpening = ({
       );
     }
     case "wine-tasting":
-      return normalizeSentence(
-        `Sample ${cityLabel} wine country on a tasting-day route through valley vineyards${primaryPoi ? ` including ${primaryPoi}` : ""}.`
-      );
+      return buildWineExperienceOpening({
+        productCode,
+        title,
+        city,
+        categoryLabel,
+        overviewText,
+        primaryPoi,
+        durationPhrase,
+      });
     case "food-tour":
       return normalizeSentence(
         `Dine while sightseeing through ${cityLabel}${primaryPoi ? `, with courses served as you pass ${primaryPoi}` : ""}, on a panoramic bus route that pairs NYC landmarks with a multi-course meal.`
@@ -697,10 +1101,30 @@ const buildExperienceOpening = ({
       return normalizeSentence(
         `Glide through ${cityLabel}${primaryPoi ? ` to ${primaryPoi}` : ""} on a Segway route that covers more ground than walking while keeping a relaxed pace.`
       );
-    case "bike-tour":
+    case "bike-tour": {
+      const wineProfile = classifyEngine6WineExperienceProfile({
+        title,
+        categoryLabel,
+        overviewText,
+      });
+      const wineCountryContext = /wine|vineyard|winery|napa|sonoma|wine country/i.test(
+        `${title} ${categoryLabel ?? ""} ${overviewText}`
+      );
+      if (wineProfile === "e-bike" && wineCountryContext) {
+        return buildWineExperienceOpening({
+          productCode,
+          title,
+          city,
+          categoryLabel,
+          overviewText,
+          primaryPoi,
+          durationPhrase,
+        });
+      }
       return normalizeSentence(
         `Cycle through ${cityLabel}${primaryPoi ? `, linking ${primaryPoi}` : ""}, on a guided bike route with neighborhood context and photo stops.`
       );
+    }
     case "hiking-tour":
       return normalizeSentence(
         `Hike ${primaryPoi ? `through ${primaryPoi}` : `in ${cityLabel}`} on a trail route${durationPhrase} with wide views and guide interpretation.`
@@ -753,7 +1177,12 @@ const buildExperienceOpening = ({
 
 const buildInclusionsNarrative = (included: string[]) => {
   const items = summarizeList(
-    included.filter(item => !/pickup|pick-up|hotel/i.test(item)),
+    included.filter(
+      item =>
+        !/pickup|pick-up|hotel|wheelchair|accessibility|cancellation|refund|service animal/i.test(
+          item
+        )
+    ),
     3
   );
   if (items.length === 0) return "";
@@ -915,6 +1344,7 @@ export const buildEngine6PremiumEditorialDescription = ({
   const editorialSentences = splitSentences(sourceText).filter(
     sentence =>
       !isEngine6ForbiddenEditorialPhrase(sentence) &&
+      !isEngine6EditorialMetadataPhrase(sentence) &&
       countWords(sentence) >= 6 &&
       !/^this (?:tour|activity|experience)\b/i.test(sentence)
   );
