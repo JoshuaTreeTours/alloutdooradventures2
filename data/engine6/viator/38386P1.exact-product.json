@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "38386P1",
+    "productUrl": "https://www.viator.com/tours/Napa-and-Sonoma/Private-Luxury-Wine-Tour-for-up-to-7-guests-thru-Napa-Valley-or-Sonoma/d914-38386P1",
+    "title": "6 Hour Private Customized Wine Tour up to 7 Guests Napa and Sonoma",
+    "description": {
+      "text": "Enjoy a fully customizable half-day private wine tour of Napa and Sonoma in an SUV for up to seven guests. Your local guide provides concierge winery recommendations, bottled water, snacks, and photography assistance while you visit handpicked producers at your preferred pace."
+    },
+    "location": {
+      "city": "Napa",
+      "state": "California"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $600.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 80
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/30/78/a1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private six-hour SUV tour for up to seven guests",
+      "Fully customizable Napa or Sonoma winery itinerary",
+      "Concierge winery and restaurant recommendations",
+      "Pickup and drop-off in Napa or Sonoma",
+      "Bottled water and snacks included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from your Napa or Sonoma hotel, Airbnb, or confirmed address after booking."
+      },
+      "end": {
+        "description": "Return to your original pickup location after the tour."
+      }
+    },
+    "itinerarySummary": "Enjoy a fully customizable half-day private wine tour of Napa and Sonoma in an SUV for up to seven guests.",
+    "itineraryItems": [
+      {
+        "title": "Napa Valley",
+        "description": "Begin your private customized route through Napa or Sonoma wine country.",
+        "duration": "6 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Napa Valley Wineries",
+        "description": "Visit three or more wineries tailored to your group's wine preferences.",
+        "duration": "4 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide",
+      "SUV transport",
+      "Concierge service",
+      "Bottled water",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 6 Hour Private Customized Wine Tour up to 7 Guests Napa and Sonoma?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Napa Valley?",
+        "answer": "Pickup from your Napa or Sonoma hotel, Airbnb, or confirmed address after booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Drivers"
+      },
+      {
+        "label": "Wine Tasting"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 600
+      },
+      "currency": "USD"
+    }
+  }
+}

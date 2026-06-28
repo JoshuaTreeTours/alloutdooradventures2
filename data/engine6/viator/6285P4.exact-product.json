@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "6285P4",
+    "productUrl": "https://www.viator.com/tours/Napa-and-Sonoma/Small-Group-Wine-Tasting-Tour-through-Napa-Valley/d914-6285P4",
+    "title": "Napa Valley Small Group Winery Tour",
+    "description": {
+      "text": "Discover Napa Valley at a relaxed pace on a full-day small-group tour. Shuttle transport collects you from your Napa Valley hotel and carries your group to three distinct wineries for tastings at your own expense, with live commentary and a complimentary picnic lunch at a charming winery."
+    },
+    "location": {
+      "city": "Napa",
+      "state": "California"
+    },
+    "duration": "7 hours (approx.)",
+    "priceFrom": "From $151.48",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1038
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/72/f3/26.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group Napa Valley winery tour with hotel pickup",
+      "Three backroads winery stops with optional tastings",
+      "Complimentary picnic lunch at a Napa Valley winery",
+      "Shuttle transport with driver guide commentary",
+      "Hotel pickup and drop-off within the tour region"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from your Napa Valley hotel or meet at Main Street and 5th Street, Napa, CA 94559."
+      },
+      "end": {
+        "description": "Return to your hotel or the original Napa Valley meeting point."
+      }
+    },
+    "itinerarySummary": "Discover Napa Valley at a relaxed pace on a full-day small-group tour.",
+    "itineraryItems": [
+      {
+        "title": "Napa Valley",
+        "description": "Begin the full-day route through Napa Valley backroads wineries with your driver guide.",
+        "duration": "6 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Napa Valley Wineries",
+        "description": "Stop at three boutique wineries for tours, tastings, and optional purchases.",
+        "duration": "4 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Three winery stops",
+      "Driver tour guide",
+      "Shuttle transport",
+      "Picnic lunch",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Napa Valley Small Group Winery Tour?",
+        "answer": "The planned duration is 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Napa Valley?",
+        "answer": "Pickup from your Napa Valley hotel or meet at Main Street and 5th Street, Napa, CA 94559."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tasting"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 151.48
+      },
+      "currency": "USD"
+    }
+  }
+}

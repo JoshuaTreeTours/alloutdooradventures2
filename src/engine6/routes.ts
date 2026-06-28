@@ -600,6 +600,50 @@ export const ENGINE6_MONTEREY_TOUR_PATH_PREFIX =
 export const isEngine6MontereyTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_MONTEREY_TOUR_PATH_PREFIX);
 
+export const ENGINE6_NAPA_WINE_TROLLEY_CLASSIC_PRODUCT_CODE = "6938NAPATRLY";
+export const ENGINE6_NAPA_WINE_TROLLEY_CLASSIC_ROUTE =
+  "/destinations/california/napa/tours/napa-valley-wine-trolley-classic-tour-6938NAPATRLY";
+export const ENGINE6_NAPA_SMALL_GROUP_WINERY_PRODUCT_CODE = "6285P4";
+export const ENGINE6_NAPA_SMALL_GROUP_WINERY_ROUTE =
+  "/destinations/california/napa/tours/napa-valley-small-group-winery-tour-6285P4";
+export const ENGINE6_NAPA_BALLOON_FLIGHT_PRODUCT_CODE = "339737P1";
+export const ENGINE6_NAPA_BALLOON_FLIGHT_ROUTE =
+  "/destinations/california/napa/tours/wine-country-hot-air-balloon-flight-339737P1";
+export const ENGINE6_NAPA_PRIVATE_SUV_WINE_TOUR_PRODUCT_CODE = "148923P3";
+export const ENGINE6_NAPA_PRIVATE_SUV_WINE_TOUR_ROUTE =
+  "/destinations/california/napa/tours/napa-sonoma-private-suv-wine-tour-148923P3";
+export const ENGINE6_NAPA_DAILY_GROUP_WINERIES_PRODUCT_CODE = "17140_DWT";
+export const ENGINE6_NAPA_DAILY_GROUP_WINERIES_ROUTE =
+  "/destinations/california/napa/tours/napa-valley-daily-group-wineries-tour-17140_DWT";
+export const ENGINE6_NAPA_WINE_TROLLEY_CASTLE_PRODUCT_CODE = "6938CASTLE";
+export const ENGINE6_NAPA_WINE_TROLLEY_CASTLE_ROUTE =
+  "/destinations/california/napa/tours/napa-valley-wine-trolley-castle-tour-6938CASTLE";
+export const ENGINE6_NAPA_EBIKE_WINE_TOUR_PRODUCT_CODE = "41114P2";
+export const ENGINE6_NAPA_EBIKE_WINE_TOUR_ROUTE =
+  "/destinations/california/napa/tours/half-day-napa-valley-e-bike-tour-41114P2";
+export const ENGINE6_NAPA_PRIVATE_CUSTOM_WINE_TOUR_PRODUCT_CODE = "38386P1";
+export const ENGINE6_NAPA_PRIVATE_CUSTOM_WINE_TOUR_ROUTE =
+  "/destinations/california/napa/tours/private-customized-wine-tour-38386P1";
+export const ENGINE6_NAPA_PRIVATE_CONCIERGE_WINE_TOUR_PRODUCT_CODE =
+  "175643P1";
+export const ENGINE6_NAPA_PRIVATE_CONCIERGE_WINE_TOUR_ROUTE =
+  "/destinations/california/napa/tours/private-concierge-wine-tour-175643P1";
+export const ENGINE6_NAPA_PRIVATE_WINE_TOUR_2_5_PRODUCT_CODE = "396101P2";
+export const ENGINE6_NAPA_PRIVATE_WINE_TOUR_2_5_ROUTE =
+  "/destinations/california/napa/tours/private-wine-tour-napa-sonoma-396101P2";
+export const ENGINE6_NAPA_EXCLUSIVE_WINE_TOUR_PRODUCT_CODE = "212180P2";
+export const ENGINE6_NAPA_EXCLUSIVE_WINE_TOUR_ROUTE =
+  "/destinations/california/napa/tours/exclusive-wine-tour-experience-212180P2";
+export const ENGINE6_NAPA_SPRINTER_WINE_TOUR_PRODUCT_CODE = "87617P1";
+export const ENGINE6_NAPA_SPRINTER_WINE_TOUR_ROUTE =
+  "/destinations/california/napa/tours/mercedes-sprinter-wine-tour-87617P1";
+
+export const ENGINE6_NAPA_TOUR_PATH_PREFIX =
+  "/destinations/california/napa/tours/";
+
+export const isEngine6NapaTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_NAPA_TOUR_PATH_PREFIX);
+
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
   canonicalPath: string;
@@ -1280,6 +1324,54 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_MONTEREY_SAILING_CRUISE_ROUTE,
     ENGINE6_MONTEREY_SAILING_CRUISE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPA_WINE_TROLLEY_CLASSIC_ROUTE,
+    ENGINE6_NAPA_WINE_TROLLEY_CLASSIC_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPA_SMALL_GROUP_WINERY_ROUTE,
+    ENGINE6_NAPA_SMALL_GROUP_WINERY_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPA_BALLOON_FLIGHT_ROUTE,
+    ENGINE6_NAPA_BALLOON_FLIGHT_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPA_PRIVATE_SUV_WINE_TOUR_ROUTE,
+    ENGINE6_NAPA_PRIVATE_SUV_WINE_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPA_DAILY_GROUP_WINERIES_ROUTE,
+    ENGINE6_NAPA_DAILY_GROUP_WINERIES_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPA_WINE_TROLLEY_CASTLE_ROUTE,
+    ENGINE6_NAPA_WINE_TROLLEY_CASTLE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPA_EBIKE_WINE_TOUR_ROUTE,
+    ENGINE6_NAPA_EBIKE_WINE_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPA_PRIVATE_CUSTOM_WINE_TOUR_ROUTE,
+    ENGINE6_NAPA_PRIVATE_CUSTOM_WINE_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPA_PRIVATE_CONCIERGE_WINE_TOUR_ROUTE,
+    ENGINE6_NAPA_PRIVATE_CONCIERGE_WINE_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPA_PRIVATE_WINE_TOUR_2_5_ROUTE,
+    ENGINE6_NAPA_PRIVATE_WINE_TOUR_2_5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPA_EXCLUSIVE_WINE_TOUR_ROUTE,
+    ENGINE6_NAPA_EXCLUSIVE_WINE_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPA_SPRINTER_WINE_TOUR_ROUTE,
+    ENGINE6_NAPA_SPRINTER_WINE_TOUR_PRODUCT_CODE,
   ],
 ] as const;
 

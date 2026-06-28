@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "87617P1",
+    "productUrl": "https://www.viator.com/tours/Napa-and-Sonoma/7-Hour-Private-Napa-or-Sonoma-Wine-Tour/d914-87617P1",
+    "title": "6hr 12 Passenger Mercedes Limo Sprinter Bus",
+    "description": {
+      "text": "Tour Napa or Sonoma Valley in a Mercedes limo sprinter bus built for groups up to twelve passengers. This six-hour private charter includes flexible winery selection, onboard space to stand comfortably, and experienced planning for a VIP wine tasting day."
+    },
+    "location": {
+      "city": "Napa",
+      "state": "California"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $1440.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 174
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/d7/98/92/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Mercedes sprinter limo bus for up to twelve passengers",
+      "Six-hour private Napa or Sonoma wine tour charter",
+      "High-top interior with room to stand comfortably",
+      "Custom or operator-recommended winery itinerary",
+      "Ideal for celebrations and group wine country outings"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from your confirmed Napa or Sonoma address after itinerary planning."
+      },
+      "end": {
+        "description": "Return to your original pickup point after the charter."
+      }
+    },
+    "itinerarySummary": "Tour Napa or Sonoma Valley in a Mercedes limo sprinter bus built for groups up to twelve passengers.",
+    "itineraryItems": [
+      {
+        "title": "Napa Valley",
+        "description": "Board the sprinter bus for a six-hour private group wine tour route.",
+        "duration": "6 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Napa Valley Wineries",
+        "description": "Visit three to four wineries with reservations arranged for your group.",
+        "duration": "4 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private sprinter bus",
+      "Professional driver"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 6hr 12 Passenger Mercedes Limo Sprinter Bus?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Napa Valley?",
+        "answer": "Pickup from your confirmed Napa or Sonoma address after itinerary planning."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Limousine Tours"
+      },
+      {
+        "label": "Wine Tasting"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1440
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "339737P1",
+    "productUrl": "https://www.viator.com/tours/Napa-and-Sonoma/Join-in-Flight/d914-339737P1",
+    "title": "Wine Country Join-in Flight",
+    "description": {
+      "text": "Soar above Sonoma and Napa on this award-winning hot air balloon tour launching at sunrise from a private airport site. Glide over vineyards and canyons into Napa Valley with sweeping views from the Mayacamas Mountains to the San Francisco skyline, plus pre-flight snacks and a celebratory champagne toast."
+    },
+    "location": {
+      "city": "Napa",
+      "state": "California"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $325.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 272
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/18/11/e7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sunrise hot air balloon flight over Napa and Sonoma",
+      "Exclusive western Napa flight corridor with panoramic views",
+      "Pre-flight snacks and all-inclusive champagne toast",
+      "Launch from Sonoma Skypark private airport site",
+      "Views from Mayacamas Mountains to San Francisco skyline"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at 21870 8th St E, Sonoma, CA 95476 at the flight lounge parking lot marked by flashing yellow lights."
+      },
+      "end": {
+        "description": "Return to the Sonoma Skypark meeting location after the post-flight champagne toast."
+      }
+    },
+    "itinerarySummary": "Soar above Sonoma and Napa on this award-winning hot air balloon tour launching at sunrise from a private airport site.",
+    "itineraryItems": [
+      {
+        "title": "Sonoma Skypark",
+        "description": "Check in at the flight lounge before sunrise launch preparations.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Carneros Valley",
+        "description": "Float over Carneros Valley vineyard and canyon scenery on the balloon route.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Napa Valley",
+        "description": "Drift above Napa Valley vineyards with pilot commentary and photo opportunities.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hot air balloon flight",
+      "Pre-flight snacks",
+      "Champagne toast",
+      "Air-conditioned ground transport"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Wine Country Join-in Flight?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Napa Valley?",
+        "answer": "Meet at 21870 8th St E, Sonoma, CA 95476 at the flight lounge parking lot marked by flashing yellow lights."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hot Air Balloon Rides"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 325
+      },
+      "currency": "USD"
+    }
+  }
+}
