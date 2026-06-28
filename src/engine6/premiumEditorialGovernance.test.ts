@@ -7,10 +7,16 @@ import {
   ENGINE6_EDITORIAL_DESCRIPTION_MAX_CHARS,
   ENGINE6_EDITORIAL_DESCRIPTION_MIN_CHARS,
   ENGINE6_EDITORIAL_FORBIDDEN_PATTERNS,
+  ENGINE6_EDITORIAL_METADATA_PATTERNS,
   classifyEngine6EditorialActivityKind,
+  classifyEngine6WineExperienceProfile,
+  extractEngine6EditorialOpeningPattern,
+  isEngine6EditorialMetadataPhrase,
 } from "./buildEngine6PremiumEditorialDescription";
 import { resolveEngine6GovernedProductDescription } from "./governedEditorialDescriptions";
+import { excerptEngine6CardDescription } from "./governedEditorialDescriptions";
 import { merchantFeedEligibleTours } from "./merchantFeedEligibility";
+import { engine6ListingTours } from "./listing";
 import { engine6ResolvedTours } from "./registry";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import { toEngine6Card } from "./cards";
@@ -108,6 +114,28 @@ const merchantDescriptions = new Map(
     })
 );
 
+const ENGINE6_NAPA_PRODUCT_CODES = [
+  "6938NAPATRLY",
+  "6285P4",
+  "339737P1",
+  "148923P3",
+  "17140_DWT",
+  "6938CASTLE",
+  "41114P2",
+  "38386P1",
+  "175643P1",
+  "396101P2",
+  "212180P2",
+  "87617P1",
+] as const;
+
+const napaListingTours = engine6ListingTours.filter(
+  tour =>
+    tour.engine === "engine6" &&
+    tour.destination.stateSlug === "california" &&
+    tour.destination.citySlug === "napa"
+);
+
 describe("Engine6 premium editorial governance", () => {
   it("keeps merchant-eligible governed descriptions within editorial length targets", () => {
     for (const tour of merchantFeedEligibleTours) {
@@ -197,5 +225,99 @@ describe("Engine6 premium editorial governance", () => {
 
       expect(activityKind, assertion.productCode).not.toBe("generic-tour");
     }
+  });
+
+  it("keeps Napa listing-card openings diverse without destination-first wine templates", () => {
+    expect(napaListingTours).toHaveLength(12);
+
+    const openingPatterns = napaListingTours.map(tour => {
+      const resolvedTour = merchantFeedEligibleTours.find(
+        candidate => candidate.productCode === tour.productCode
+      );
+      expect(resolvedTour, tour.productCode ?? "").toBeDefined();
+
+      const cardOpening = excerptEngine6CardDescription(
+        resolveEngine6GovernedProductDescription(resolvedTour!)
+      );
+
+      expect(cardOpening, tour.productCode ?? "").not.toMatch(
+        /^Sample .+ wine country on a tasting-day route/i
+      );
+
+      return extractEngine6EditorialOpeningPattern(cardOpening);
+    });
+
+    const patternCounts = openingPatterns.reduce<Map<string, number>>(
+      (counts, pattern) => {
+        counts.set(pattern, (counts.get(pattern) ?? 0) + 1);
+        return counts;
+      },
+      new Map()
+    );
+
+    for (const [pattern, count] of patternCounts) {
+      expect(count, `opening pattern "${pattern}"`).toBeLessThanOrEqual(2);
+    }
+  });
+
+  it("assigns activity-specific wine experience profiles for Napa cohort products", () => {
+    const expectedProfiles: Record<
+      (typeof ENGINE6_NAPA_PRODUCT_CODES)[number],
+      ReturnType<typeof classifyEngine6WineExperienceProfile>
+    > = {
+      "6938NAPATRLY": "wine-trolley",
+      "6285P4": "join-in-group",
+      "339737P1": "hot-air-balloon",
+      "148923P3": "private-suv",
+      "17140_DWT": "join-in-group",
+      "6938CASTLE": "wine-trolley",
+      "41114P2": "e-bike",
+      "38386P1": "private-chauffeur",
+      "175643P1": "private-chauffeur",
+      "396101P2": "private-chauffeur",
+      "212180P2": "private-suv",
+      "87617P1": "sprinter-bus",
+    };
+
+    for (const productCode of ENGINE6_NAPA_PRODUCT_CODES) {
+      const tour = merchantFeedEligibleTours.find(
+        candidate => candidate.productCode === productCode
+      );
+      expect(tour, productCode).toBeDefined();
+
+      const profile = classifyEngine6WineExperienceProfile({
+        title: tour!.title,
+        categoryLabel: tour!.categoryLabel,
+        overviewText: tour!.overviewText ?? "",
+      });
+
+      expect(profile, productCode).toBe(expectedProfiles[productCode]);
+    }
+  });
+
+  it("never incorporates operational metadata into governed editorial copy", () => {
+    for (const tour of merchantFeedEligibleTours) {
+      const description = resolveEngine6GovernedProductDescription(tour);
+
+      for (const pattern of ENGINE6_EDITORIAL_METADATA_PATTERNS) {
+        expect(description, `${tour.productCode}: ${pattern}`).not.toMatch(
+          pattern
+        );
+      }
+
+      expect(
+        isEngine6EditorialMetadataPhrase(description),
+        tour.productCode
+      ).toBe(false);
+    }
+  });
+
+  it("preserves merchant feed row count after editorial regeneration scope", () => {
+    const merchantFeedLines = readFileSync("data/merchantFeed.csv", "utf8")
+      .trim()
+      .split("\n");
+
+    expect(merchantFeedLines.length - 1).toBe(189);
+    expect(merchantFeedEligibleTours).toHaveLength(189);
   });
 });
