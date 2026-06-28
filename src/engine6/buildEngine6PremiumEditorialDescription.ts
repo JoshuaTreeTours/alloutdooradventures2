@@ -54,20 +54,46 @@ export const ENGINE6_EDITORIAL_FORBIDDEN_PATTERNS = [
   /\btraveler-friendly pace\b/i,
   /\beasy logistics\b/i,
   /\bdetails aligned to the product page\b/i,
+  /^Spend your time in\b/i,
+  /\bopens up on\b/i,
+  /\bouting is built around\b/i,
+  /,\s*beginning with\b/i,
+  /\bputs the focus on\b/i,
+  /\byou set out on\b/i,
+  /\bStops along the way include\b/i,
+  /\bMajor pauses come at\b/i,
+  /\bParticular attention goes to\b/i,
+  /\bExpect time at\b/i,
+  /\bYou spend meaningful time at\b/i,
+  /\bThe day moves through\b/i,
+  /\bkeeps the focus on the places named in the itinerary\b/i,
+  /\bwith time built around\b/i,
 ] as const;
 
-const EDITORIAL_OPENING_VARIANTS = [
-  (city: string, activity: string) =>
-    `Spend your time in ${city} on ${activity.startsWith("a ") || activity.startsWith("an ") ? activity : `a ${activity}`}.`,
-  (city: string, activity: string) =>
-    `${city} opens up on ${activity.startsWith("a ") || activity.startsWith("an ") ? activity : `a ${activity}`}.`,
-  (city: string, activity: string) =>
-    `This ${city} outing is built around ${activity.replace(/^a /, "").replace(/^an /, "")}.`,
-  (city: string, activity: string) =>
-    `From ${city}, you set out on ${activity.startsWith("a ") || activity.startsWith("an ") ? activity : `a ${activity}`}.`,
-  (city: string, activity: string) =>
-    `${activity.startsWith("a ") || activity.startsWith("an ") ? activity.charAt(0).toUpperCase() + activity.slice(1) : `A ${activity}`} in ${city} puts the focus on the places you actually see along the way.`,
-] as const;
+export type Engine6EditorialActivityKind =
+  | "whale-watching"
+  | "aquarium-admission"
+  | "zoo-admission"
+  | "wine-tasting"
+  | "food-tour"
+  | "trolley-tour"
+  | "helicopter-flight"
+  | "airboat-tour"
+  | "kayak-tour"
+  | "parasail-tour"
+  | "speedboat-tour"
+  | "sailing-tour"
+  | "harbor-cruise"
+  | "segway-tour"
+  | "bike-tour"
+  | "hiking-tour"
+  | "off-road-tour"
+  | "stargazing-tour"
+  | "museum-tour"
+  | "national-park-tour"
+  | "city-sightseeing"
+  | "surf-lesson"
+  | "generic-tour";
 
 const countWords = (value: string) =>
   value.trim().split(/\s+/).filter(Boolean).length;
@@ -88,7 +114,7 @@ const normalizeSentence = (value: string) => {
     : `${withoutDangling}.`;
 };
 
-const isForbiddenEditorialPhrase = (value: string) =>
+export const isEngine6ForbiddenEditorialPhrase = (value: string) =>
   ENGINE6_EDITORIAL_FORBIDDEN_PATTERNS.some(pattern => pattern.test(value));
 
 const splitSentences = (value: string) =>
@@ -124,22 +150,28 @@ const dedupeValues = (values: string[]) => {
   return result;
 };
 
+const sanitizeListItem = (value: string) =>
+  value
+    .replace(/\bguided experience\b/gi, "guided visit")
+    .replace(/\bPrivate guided experience\b/gi, "private Met visit")
+    .trim();
+
 const summarizeList = (values: string[], limit = 5) =>
   dedupeValues(
     values
-      .map(value =>
-        value
-          .replace(/\bguided experience\b/gi, "guided visit")
-          .replace(/\bPrivate guided experience\b/gi, "Private Met visit")
-          .trim()
-      )
-      .filter(value => value.length >= 3 && !isForbiddenEditorialPhrase(value))
+      .map(sanitizeListItem)
+      .filter(value => value.length >= 3 && !isEngine6ForbiddenEditorialPhrase(value))
   ).slice(0, limit);
 
 const hashProductCode = (productCode: string) =>
   productCode.split("").reduce((sum, char) => sum + char.charCodeAt(0), 0);
 
-const inferActivityPhrase = ({
+const isOperationalStopTitle = (value: string) =>
+  /\b(?:departure|pickup|pick-up|meeting point|launch area|launch corridor|return|drop[- ]?off)\b/i.test(
+    value
+  );
+
+export const classifyEngine6EditorialActivityKind = ({
   title,
   categoryLabel,
   overviewText,
@@ -147,53 +179,274 @@ const inferActivityPhrase = ({
   title: string;
   categoryLabel?: string | null;
   overviewText: string;
-}) => {
+}): Engine6EditorialActivityKind => {
+  const titleIdentity = `${title} ${categoryLabel ?? ""}`.toLowerCase();
   const identity = `${title} ${categoryLabel ?? ""} ${overviewText}`.toLowerCase();
 
-  if (/wine|vineyard|tasting|culinary|food tour|chef/.test(identity)) {
-    return "a wine-country tasting day";
-  }
-  if (/surf/.test(identity)) return "a surf lesson on local breaks";
-  if (/kayak|paddle|parasail|snorkel/.test(identity)) {
-    return "a paddle along the shoreline";
-  }
-  if (/sail|yacht|boat|cruise|harbor|whale|airboat|speedboat/.test(identity)) {
-    if (/airboat|swamp|bayou/.test(identity)) {
-      return "an airboat run through swamp channels";
+  const fromTitle = (): Engine6EditorialActivityKind | null => {
+    if (/whale watch|whale watching|whale-watching/.test(titleIdentity)) {
+      return "whale-watching";
     }
-    return "a harbor cruise";
-  }
-  if (/helicopter|flight|air tour|paraglid/.test(identity)) {
-    return "an aerial tour";
-  }
-  if (/segway/.test(identity)) return "a Segway ride through key districts";
-  if (/bike|e-bike|cycling|trolley|pedicab/.test(identity)) {
-    return "a two-wheeled city route";
-  }
-  if (/hike|hiking|scrambl|climb|trail/.test(identity)) {
-    return "a guided trail day";
-  }
-  if (/jeep|4x4|off-road|humvee|atv/.test(identity)) {
-    return "an off-road desert run";
-  }
-  if (/stargaz|astronomy|night sky/.test(identity)) {
-    return "a stargazing session under dark skies";
-  }
-  if (/national park|state park|wildlife|desert|canyon|zoo|safari/.test(identity)) {
-    return "a park-focused day trip";
-  }
-  if (/museum|metropolitan|admission|zoo|aquarium/.test(identity)) {
-    return "a curated visit to major attractions";
-  }
-  if (/private/.test(identity)) return "a private sightseeing day";
-  if (/city|sightseeing|landmark|neighborhood|downtown|bus tour|coach/.test(identity)) {
-    return "a landmark-focused city circuit";
-  }
-  if (categoryLabel?.trim()) {
-    return `a ${categoryLabel.trim().toLowerCase()}`;
+    if (
+      /aquarium/.test(titleIdentity) &&
+      /admission|ticket|entry|pass/.test(titleIdentity)
+    ) {
+      return "aquarium-admission";
+    }
+    if (
+      /(?:zoo|safari park)/.test(titleIdentity) &&
+      /admission|ticket|entry|pass|2-visit|two day|2 day/.test(titleIdentity)
+    ) {
+      return "zoo-admission";
+    }
+    if (/wine|vineyard|winery|wine country/.test(titleIdentity)) {
+      return "wine-tasting";
+    }
+    if (
+      /food tour|culinary|gourmet|bustronome|dining experience|lunch tour|dinner tour/.test(
+        titleIdentity
+      )
+    ) {
+      return "food-tour";
+    }
+    if (/trolley/.test(titleIdentity)) {
+      return "trolley-tour";
+    }
+    if (/helicopter|heli[- ]?tour|sky tour|flightseeing/.test(titleIdentity)) {
+      return "helicopter-flight";
+    }
+    if (/airboat|swamp tour|bayou/.test(titleIdentity)) {
+      return "airboat-tour";
+    }
+    if (/kayak|sea cave|paddle board|paddleboard|\bsup\b|canoe/.test(titleIdentity)) {
+      return "kayak-tour";
+    }
+    if (/parasail|paraglid/.test(titleIdentity)) {
+      return "parasail-tour";
+    }
+    if (/speedboat|jet boat|jetboat/.test(titleIdentity)) {
+      return "speedboat-tour";
+    }
+    if (/sail|yacht|catamaran/.test(titleIdentity)) {
+      return "sailing-tour";
+    }
+    if (/segway/.test(titleIdentity)) {
+      return "segway-tour";
+    }
+    if (/surf lesson|learn to surf|surfing lesson/.test(titleIdentity)) {
+      return "surf-lesson";
+    }
+    if (/bike|e-bike|cycling|bicycle/.test(titleIdentity)) {
+      return "bike-tour";
+    }
+    if (/hike|hiking|scrambl|climb|trail run/.test(titleIdentity)) {
+      return "hiking-tour";
+    }
+    if (/jeep|4x4|off[- ]?road|humvee|atv|dune buggy/.test(titleIdentity)) {
+      return "off-road-tour";
+    }
+    if (/stargaz|astronomy|night sky|telescope/.test(titleIdentity)) {
+      return "stargazing-tour";
+    }
+    if (
+      (/museum|metropolitan museum|moma|gallery tour|art tour/.test(titleIdentity) ||
+        /private tour of .*museum/i.test(title)) &&
+      !/national park/.test(titleIdentity)
+    ) {
+      return "museum-tour";
+    }
+    if (/national park|state park|monument\b/.test(titleIdentity)) {
+      return "national-park-tour";
+    }
+    if (/cruise|boat tour|harbor tour|bay tour/.test(titleIdentity)) {
+      return "harbor-cruise";
+    }
+    if (
+      /city tour|sightseeing|landmark|panoramic bus|coach tour|bus tour|day trip/.test(
+        titleIdentity
+      )
+    ) {
+      return "city-sightseeing";
+    }
+    return null;
+  };
+
+  const titleKind = fromTitle();
+  if (titleKind) {
+    return titleKind;
   }
 
-  return "a locally guided day out";
+  if (/whale watch|whale watching|whale-watching/.test(identity)) {
+    return "whale-watching";
+  }
+  if (
+    /aquarium/.test(identity) &&
+    /admission|ticket|entry|pass/.test(identity)
+  ) {
+    return "aquarium-admission";
+  }
+  if (
+    /(?:zoo|safari park)/.test(identity) &&
+    /admission|ticket|entry|pass|2-visit|two day|2 day/.test(identity)
+  ) {
+    return "zoo-admission";
+  }
+  if (/wine|vineyard|winery|wine country|tasting/.test(identity)) {
+    return "wine-tasting";
+  }
+  if (/food tour|culinary|tasting tour|chefs? tour|gourmet|bustronome/.test(identity)) {
+    return "food-tour";
+  }
+  if (/trolley/.test(identity)) {
+    return "trolley-tour";
+  }
+  if (/helicopter|heli[- ]?tour|sky tour|aerial tour|flightseeing/.test(identity)) {
+    return "helicopter-flight";
+  }
+  if (/airboat|swamp tour|bayou/.test(identity)) {
+    return "airboat-tour";
+  }
+  if (/kayak|sea cave|paddle board|paddleboard|\bsup\b|canoe/.test(identity)) {
+    return "kayak-tour";
+  }
+  if (/parasail|paraglid/.test(identity)) {
+    return "parasail-tour";
+  }
+  if (/speedboat|jet boat|jetboat/.test(identity)) {
+    return "speedboat-tour";
+  }
+  if (/sail|yacht|catamaran/.test(identity)) {
+    return "sailing-tour";
+  }
+  if (/segway/.test(identity)) {
+    return "segway-tour";
+  }
+  if (/surf lesson|learn to surf|surfing lesson/.test(identity)) {
+    return "surf-lesson";
+  }
+  if (/bike|e-bike|cycling|bicycle|pedal/.test(identity)) {
+    return "bike-tour";
+  }
+  if (/hike|hiking|scrambl|climb|trail run/.test(identity)) {
+    return "hiking-tour";
+  }
+  if (/jeep|4x4|off[- ]?road|humvee|atv|dune buggy/.test(identity)) {
+    return "off-road-tour";
+  }
+  if (/stargaz|astronomy|night sky|telescope/.test(identity)) {
+    return "stargazing-tour";
+  }
+  if (
+    /private tour of .*museum/i.test(title) ||
+    (/museum|metropolitan museum|moma/.test(titleIdentity) &&
+      !/national park/.test(titleIdentity))
+  ) {
+    return "museum-tour";
+  }
+  if (/national park|state park|monument\b/.test(identity)) {
+    return "national-park-tour";
+  }
+  if (/cruise|boat tour|harbor tour|bay tour|dinner cruise|brunch cruise/.test(identity)) {
+    return "harbor-cruise";
+  }
+  if (
+    /city tour|sightseeing|landmark|neighborhood|downtown|coach tour|bus tour|day trip|panoramic bus/.test(
+      identity
+    )
+  ) {
+    return "city-sightseeing";
+  }
+  if (/wildlife|safari(?! park)/.test(identity) && /cruise|watch/.test(identity)) {
+    return "whale-watching";
+  }
+
+  return "generic-tour";
+};
+
+const selectPrimaryVenue = ({
+  title,
+  itineraryStops,
+  overviewText,
+  highlights,
+  preferPattern,
+}: {
+  title: string;
+  itineraryStops: Array<{ title: string; description?: string | null }>;
+  overviewText: string;
+  highlights: string[];
+  preferPattern?: RegExp;
+}) => {
+  const itineraryCandidates = itineraryStops
+    .map(stop => stop.title.trim())
+    .filter(
+      stopTitle =>
+        stopTitle &&
+        !isOperationalStopTitle(stopTitle) &&
+        (!preferPattern || preferPattern.test(stopTitle))
+    );
+
+  if (itineraryCandidates.length > 0) {
+    return itineraryCandidates[0];
+  }
+
+  if (preferPattern) {
+    const titleMatch = title.match(
+      new RegExp(`(${preferPattern.source})`, preferPattern.flags)
+    )?.[0];
+    if (titleMatch) {
+      return titleMatch.trim();
+    }
+  }
+
+  return (
+    collectEditorialPois({
+      title: "",
+      overviewText,
+      itineraryStops,
+      highlights,
+    })[0] ?? ""
+  );
+};
+
+const collectEditorialPois = ({
+  title,
+  overviewText,
+  itineraryStops,
+  highlights,
+  includeTitleMatches = false,
+}: {
+  title: string;
+  overviewText: string;
+  itineraryStops: Array<{ title: string; description?: string | null }>;
+  highlights: string[];
+  includeTitleMatches?: boolean;
+}) => {
+  const fromItinerary = itineraryStops
+    .map(stop => stop.title)
+    .filter(titleValue => titleValue && !isOperationalStopTitle(titleValue));
+  const fromOverview = extractEngine6OverviewNamedLocations({
+    sourceOverview: overviewText,
+    highlights,
+    itinerary: itineraryStops,
+  });
+  const fromHighlights = highlights
+    .map(sanitizeListItem)
+    .filter(item => item.length >= 4 && !/^see |^visit |^enjoy /i.test(item));
+
+  return summarizeList(
+    [...fromItinerary, ...fromOverview, ...fromHighlights].filter(poi => {
+      if (includeTitleMatches) {
+        return true;
+      }
+      const normalizedTitle = title.toLowerCase();
+      const normalizedPoi = poi.toLowerCase();
+      return (
+        normalizedPoi.length >= 8 ||
+        !normalizedTitle.includes(normalizedPoi)
+      );
+    }),
+    5
+  );
 };
 
 const cleanEditorialSource = (value: string, title: string) => {
@@ -229,10 +482,15 @@ const cleanEditorialSource = (value: string, title: string) => {
   return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
 };
 
+const isExperienceFirstSentence = (sentence: string) =>
+  /^(?:Ride|Paddle|Sail|Fly|Hike|Walk|Board|Cruise|Explore|Discover|Visit|Watch|Scan|Roll|Glide|Cycle|Drive|Taste|Sample|Uncover|Step|Drift|Climb|Kayak|Whiz|Soar|Float|Tour|Use|Spend|Stand|Cross|Wind|Traverse|Uncover)/i.test(
+    sentence.trim()
+  );
+
 const appendSentenceIfUseful = (sentences: string[], sentence: string) => {
   const normalized = normalizeSentence(sentence);
   if (!normalized) return false;
-  if (isForbiddenEditorialPhrase(normalized)) return false;
+  if (isEngine6ForbiddenEditorialPhrase(normalized)) return false;
   if (countWords(normalized) < 4) return false;
 
   const candidateKey = normalized.toLowerCase();
@@ -256,67 +514,60 @@ const appendSentenceIfUseful = (sentences: string[], sentence: string) => {
   return true;
 };
 
-const buildItineraryNarrative = (
-  stops: Array<{ title: string; description?: string | null }>
+const buildPoiFollowOn = (
+  pois: string[],
+  activityKind: Engine6EditorialActivityKind,
+  productCode: string
 ) => {
-  const titles = summarizeList(stops.map(stop => stop.title).filter(Boolean), 5);
-  if (titles.length === 0) return "";
+  if (pois.length === 0) return "";
 
-  if (titles.length === 1) {
-    return normalizeSentence(`Expect time at ${titles[0]}.`);
+  const list = formatLandmarkList(pois.slice(0, 4));
+  const variant = hashProductCode(productCode) % 4;
+
+  switch (activityKind) {
+    case "aquarium-admission":
+    case "zoo-admission":
+    case "museum-tour":
+      return normalizeSentence(
+        [
+          `Inside, you'll move through ${list}.`,
+          `The visit covers ${list}.`,
+          `Gallery time spans ${list}.`,
+          `Exhibits include ${list}.`,
+        ][variant]
+      );
+    case "whale-watching":
+    case "harbor-cruise":
+    case "sailing-tour":
+    case "speedboat-tour":
+      return normalizeSentence(
+        [
+          `From the water you'll pass ${list}.`,
+          `The route tracks ${list} along the shoreline.`,
+          `On deck you'll see ${list}.`,
+          `Captain commentary ties together ${list}.`,
+        ][variant]
+      );
+    case "wine-tasting":
+    case "food-tour":
+      return normalizeSentence(
+        [
+          `Tastings unfold at ${list}.`,
+          `Stops include ${list}.`,
+          `You'll sample across ${list}.`,
+          `The day visits ${list}.`,
+        ][variant]
+      );
+    default:
+      return normalizeSentence(
+        [
+          `Along the way you'll see ${list}.`,
+          `The route connects ${list}.`,
+          `You'll pause at ${list}.`,
+          `Landmarks along the route include ${list}.`,
+        ][variant]
+      );
   }
-
-  const connectors = [
-    `Stops along the way include ${formatLandmarkList(titles)}.`,
-    `The day moves through ${formatLandmarkList(titles)}.`,
-    `You spend meaningful time at ${formatLandmarkList(titles)}.`,
-    `Major pauses come at ${formatLandmarkList(titles)}.`,
-  ];
-
-  return normalizeSentence(connectors[titles.length % connectors.length]);
-};
-
-const buildHighlightsNarrative = (highlights: string[]) => {
-  const items = summarizeList(highlights, 3);
-  if (items.length === 0) return "";
-  return normalizeSentence(
-    `Particular attention goes to ${formatLandmarkList(items)}.`
-  );
-};
-
-const buildInclusionsNarrative = (included: string[]) => {
-  const items = summarizeList(
-    included.filter(item => !/pickup|pick-up|hotel/i.test(item)),
-    3
-  );
-  if (items.length === 0) return "";
-  return normalizeSentence(`${formatLandmarkList(items)} are part of the booking.`);
-};
-
-const buildDurationNarrative = ({
-  durationText,
-  categoryLabel,
-}: {
-  durationText?: string | null;
-  categoryLabel?: string | null;
-}) => {
-  const duration = durationText?.trim();
-  if (!duration) return "";
-
-  const category = categoryLabel?.trim().toLowerCase();
-  if (category) {
-    return normalizeSentence(`Plan on roughly ${duration} for this ${category}.`);
-  }
-
-  return normalizeSentence(`Plan on roughly ${duration} on the ground.`);
-};
-
-const buildTransportNarrative = (included: string[]) => {
-  const transport = included.find(item =>
-    /transport|ferry|shuttle|coach|bus|van|pickup|pick-up|round.?trip/i.test(item)
-  );
-  if (!transport) return "";
-  return normalizeSentence(`${transport.replace(/[.!?]+$/g, "")} keeps the day moving.`);
 };
 
 const buildExperienceOpening = ({
@@ -326,6 +577,8 @@ const buildExperienceOpening = ({
   categoryLabel,
   overviewText,
   itineraryStops,
+  highlights,
+  durationText,
 }: {
   productCode: string;
   title: string;
@@ -333,44 +586,209 @@ const buildExperienceOpening = ({
   categoryLabel?: string | null;
   overviewText: string;
   itineraryStops: Array<{ title: string; description?: string | null }>;
+  highlights: string[];
+  durationText?: string | null;
 }) => {
-  const activity = inferActivityPhrase({ title, categoryLabel, overviewText });
-  const variant =
-    EDITORIAL_OPENING_VARIANTS[
-      hashProductCode(productCode) % EDITORIAL_OPENING_VARIANTS.length
-    ];
-  const opening = normalizeSentence(variant(city.trim(), activity));
+  const activityKind = classifyEngine6EditorialActivityKind({
+    title,
+    categoryLabel,
+    overviewText,
+  });
+  const pois = collectEditorialPois({
+    title,
+    overviewText,
+    itineraryStops,
+    highlights,
+  });
+  const primaryPoi = selectPrimaryVenue({
+    title,
+    itineraryStops,
+    overviewText,
+    highlights,
+  });
+  const duration = durationText?.trim();
+  const durationPhrase = duration ? ` lasting ${duration}` : "";
+  const cityLabel = city.trim();
 
-  const itineraryTitles = summarizeList(
-    itineraryStops.map(stop => stop.title).filter(Boolean),
-    3
-  );
-  if (itineraryTitles.length === 0) {
-    const overviewLocations = summarizeList(
-      extractEngine6OverviewNamedLocations({
-        sourceOverview: overviewText,
-        highlights: [],
-        itinerary: itineraryStops,
-      }),
-      3
-    );
-    if (overviewLocations.length > 0) {
+  switch (activityKind) {
+    case "whale-watching":
       return normalizeSentence(
-        `${opening.replace(/\.$/, "")}, with time built around ${formatLandmarkList(overviewLocations)}.`
+        `Scan ${cityLabel}'s coastal waters on a whale watching cruise${durationPhrase} where seasonal migrations bring whales, dolphins, and seabirds within view of the boat.`
+      );
+    case "aquarium-admission": {
+      const venue =
+        selectPrimaryVenue({
+          title,
+          itineraryStops,
+          overviewText,
+          highlights,
+          preferPattern: /aquarium/i,
+        }) ||
+        title.match(/(.+?\bAquarium\b)/i)?.[1]?.trim() ||
+        primaryPoi;
+      return normalizeSentence(
+        venue
+          ? `Walk ${venue}'s kelp forest, Open Sea, and signature Pacific galleries at your own pace with timed admission.`
+          : `Explore ${cityLabel}'s aquarium galleries—from kelp forest to open-ocean exhibits—with a timed admission ticket.`
       );
     }
+    case "zoo-admission": {
+      const zooStops = itineraryStops
+        .map(stop => stop.title.trim())
+        .filter(Boolean);
+      if (zooStops.length >= 2) {
+        return normalizeSentence(
+          `Use your multi-day pass to explore ${zooStops[0]} and ${zooStops[1]}, moving between zoo habitats and open-range safari enclosures on your own schedule.`
+        );
+      }
+      const venue =
+        selectPrimaryVenue({
+          title,
+          itineraryStops,
+          overviewText,
+          highlights,
+          preferPattern: /zoo|safari park/i,
+        }) || primaryPoi;
+      return normalizeSentence(
+        `Move through ${venue || `${cityLabel}'s zoo`} with admission that lets you explore major habitats and animal exhibits at your pace.`
+      );
+    }
+    case "wine-tasting":
+      return normalizeSentence(
+        `Sample ${cityLabel} wine country on a tasting-day route through valley vineyards${primaryPoi ? ` including ${primaryPoi}` : ""}.`
+      );
+    case "food-tour":
+      return normalizeSentence(
+        `Dine while sightseeing through ${cityLabel}${primaryPoi ? `, with courses served as you pass ${primaryPoi}` : ""}, on a panoramic bus route that pairs NYC landmarks with a multi-course meal.`
+      );
+    case "trolley-tour":
+      return normalizeSentence(
+        `Roll through ${cityLabel} aboard an open-air trolley${primaryPoi ? `, passing ${primaryPoi}` : ""}, with live narration and photo stops along the route.`
+      );
+    case "helicopter-flight":
+      return normalizeSentence(
+        `Lift off over ${cityLabel} on a helicopter flight${durationPhrase} with aerial views of skyline and landmark rooftops.`
+      );
+    case "airboat-tour":
+      return normalizeSentence(
+        `Skim cypress swamp and bayou channels near ${primaryPoi || cityLabel} on an airboat ride where marsh scenery and wildlife unfold at speed.`
+      );
+    case "kayak-tour":
+      return normalizeSentence(
+        `Paddle ${primaryPoi ? `through ${primaryPoi}` : `along ${cityLabel}'s shoreline`} on a guided kayak route with close-up coastal views and wildlife-rich water.`
+      );
+    case "parasail-tour":
+      return normalizeSentence(
+        `Lift off from ${primaryPoi || cityLabel}'s waterfront on a parasailing flight with wide coastal views below.`
+      );
+    case "speedboat-tour":
+      return normalizeSentence(
+        `Drive your own speedboat through ${cityLabel}'s harbor${primaryPoi ? `, following the route past ${primaryPoi}` : ""}, with captain guidance and on-board commentary.`
+      );
+    case "sailing-tour":
+      return normalizeSentence(
+        `Sail ${cityLabel}'s bay${durationPhrase}${primaryPoi ? ` with views of ${primaryPoi}` : ""} from the deck of a private or small-group yacht.`
+      );
+    case "harbor-cruise":
+      return normalizeSentence(
+        `Cruise ${cityLabel}'s harbor${durationPhrase}${primaryPoi ? ` with views of ${primaryPoi}` : ""} from the water.`
+      );
+    case "segway-tour":
+      return normalizeSentence(
+        `Glide through ${cityLabel}${primaryPoi ? ` to ${primaryPoi}` : ""} on a Segway route that covers more ground than walking while keeping a relaxed pace.`
+      );
+    case "bike-tour":
+      return normalizeSentence(
+        `Cycle through ${cityLabel}${primaryPoi ? `, linking ${primaryPoi}` : ""}, on a guided bike route with neighborhood context and photo stops.`
+      );
+    case "hiking-tour":
+      return normalizeSentence(
+        `Hike ${primaryPoi ? `through ${primaryPoi}` : `in ${cityLabel}`} on a trail route${durationPhrase} with wide views and guide interpretation.`
+      );
+    case "off-road-tour":
+      return normalizeSentence(
+        `Climb into rugged backcountry near ${cityLabel}${primaryPoi ? `, reaching ${primaryPoi}` : ""}, on an off-road route shaped by desert terrain and scenic overlooks.`
+      );
+    case "stargazing-tour":
+      return normalizeSentence(
+        `Look up from ${primaryPoi || `${cityLabel}'s dark-sky country`} on a stargazing session with telescopes and constellation interpretation far from city glow.`
+      );
+    case "museum-tour": {
+      const museumName =
+        selectPrimaryVenue({
+          title,
+          itineraryStops,
+          overviewText,
+          highlights,
+          preferPattern: /museum|metropolitan|moma|gallery/i,
+        }) ||
+        title
+          .replace(/^private tour of (?:the )?/i, "")
+          .replace(/\s+in\s+.+$/i, "")
+          .trim();
+      return normalizeSentence(
+        `Tour ${museumName} with a private guide who tailors the route to your interests across the museum's major collections.`
+      );
+    }
+    case "national-park-tour":
+      return normalizeSentence(
+        `Travel into ${primaryPoi || "the national park"} from ${cityLabel} on a guided park day${durationPhrase} with scenic pullouts and short walks.`
+      );
+    case "city-sightseeing":
+      return normalizeSentence(
+        `See ${cityLabel}'s landmark neighborhoods${primaryPoi ? `, including ${primaryPoi}` : ""}, on a guided city circuit with strategic photo stops.`
+      );
+    case "surf-lesson":
+      return normalizeSentence(
+        `Catch your first waves on ${cityLabel}'s surf breaks with an instructor who handles board setup, ocean safety, and in-water coaching.`
+      );
+    default:
+      return normalizeSentence(
+        primaryPoi
+          ? `Discover ${primaryPoi} and surrounding ${cityLabel} highlights with time for the places that define the route.`
+          : `Explore ${cityLabel} with time for the landmarks and neighborhoods that define the route.`
+      );
   }
-
-  if (itineraryTitles.length > 0) {
-    return normalizeSentence(
-      `${opening.replace(/\.$/, "")}, beginning with ${itineraryTitles[0]}.`
-    );
-  }
-
-  return opening;
 };
 
-const trimToCharBudget = (value: string, maxChars = ENGINE6_EDITORIAL_DESCRIPTION_MAX_CHARS) => {
+const buildInclusionsNarrative = (included: string[]) => {
+  const items = summarizeList(
+    included.filter(item => !/pickup|pick-up|hotel/i.test(item)),
+    3
+  );
+  if (items.length === 0) return "";
+  return normalizeSentence(`${formatLandmarkList(items)} are included.`);
+};
+
+const buildDurationNarrative = ({
+  durationText,
+  activityKind,
+}: {
+  durationText?: string | null;
+  activityKind: Engine6EditorialActivityKind;
+}) => {
+  const duration = durationText?.trim();
+  if (!duration) return "";
+
+  if (activityKind === "aquarium-admission" || activityKind === "zoo-admission") {
+    return normalizeSentence(`Allow ${duration} for your visit.`);
+  }
+
+  return normalizeSentence(`Plan on ${duration} for the outing.`);
+};
+
+const buildTransportNarrative = (included: string[]) => {
+  const transport = included.find(item =>
+    /transport|ferry|shuttle|coach|bus|van|pickup|pick-up|round.?trip/i.test(item)
+  );
+  if (!transport) return "";
+  return normalizeSentence(`${transport.replace(/[.!?]+$/g, "")} is included.`);
+};
+
+const trimToCharBudget = (
+  value: string,
+  maxChars = ENGINE6_EDITORIAL_DESCRIPTION_MAX_CHARS
+) => {
   if (value.length <= maxChars) {
     return value;
   }
@@ -383,47 +801,6 @@ const trimToCharBudget = (value: string, maxChars = ENGINE6_EDITORIAL_DESCRIPTIO
       : clipped;
 
   return `${safe.replace(/[,.;:\s-]+$/g, "").trim()}.`;
-};
-
-const padToMinimumEditorialLength = ({
-  sentences,
-  itineraryStops,
-  highlights,
-  included,
-  durationText,
-  categoryLabel,
-}: {
-  sentences: string[];
-  itineraryStops: Array<{ title: string; description?: string | null }>;
-  highlights: string[];
-  included: string[];
-  durationText?: string | null;
-  categoryLabel?: string | null;
-}) => {
-  const paddingCandidates = [
-    buildItineraryNarrative(itineraryStops),
-    buildHighlightsNarrative(highlights),
-    buildInclusionsNarrative(included),
-    buildTransportNarrative(included),
-    buildDurationNarrative({ durationText, categoryLabel }),
-    ...itineraryStops.flatMap(stop =>
-      splitSentences(
-        cleanEditorialSource(
-          stop.description ?? stop.title,
-          stop.title
-        )
-      ).slice(0, 1)
-    ),
-  ];
-
-  for (const candidate of paddingCandidates) {
-    if (trimToCharBudget(sentences.join(" ")).length >= ENGINE6_EDITORIAL_DESCRIPTION_MIN_CHARS) {
-      break;
-    }
-    appendSentenceIfUseful(sentences, candidate);
-  }
-
-  return sentences;
 };
 
 const trimToWordBudget = (sentences: string[]) => {
@@ -453,6 +830,56 @@ const trimToWordBudget = (sentences: string[]) => {
   return selected.length > 0 ? selected : sentences.slice(0, 1);
 };
 
+const padToMinimumEditorialLength = ({
+  sentences,
+  activityKind,
+  productCode,
+  itineraryStops,
+  highlights,
+  included,
+  durationText,
+  overviewText,
+  title,
+}: {
+  sentences: string[];
+  activityKind: Engine6EditorialActivityKind;
+  productCode: string;
+  itineraryStops: Array<{ title: string; description?: string | null }>;
+  highlights: string[];
+  included: string[];
+  durationText?: string | null;
+  overviewText: string;
+  title: string;
+}) => {
+  const pois = collectEditorialPois({
+    title,
+    overviewText,
+    itineraryStops,
+    highlights,
+  });
+
+  const paddingCandidates = [
+    buildPoiFollowOn(pois, activityKind, productCode),
+    buildInclusionsNarrative(included),
+    buildTransportNarrative(included),
+    buildDurationNarrative({ durationText, activityKind }),
+    ...itineraryStops.flatMap(stop =>
+      splitSentences(
+        cleanEditorialSource(stop.description ?? "", stop.title)
+      ).slice(0, 1)
+    ),
+  ];
+
+  for (const candidate of paddingCandidates) {
+    if (trimToCharBudget(sentences.join(" ")).length >= ENGINE6_EDITORIAL_DESCRIPTION_MIN_CHARS) {
+      break;
+    }
+    appendSentenceIfUseful(sentences, candidate);
+  }
+
+  return sentences;
+};
+
 export const buildEngine6PremiumEditorialDescription = ({
   productCode,
   title,
@@ -479,57 +906,74 @@ export const buildEngine6PremiumEditorialDescription = ({
   const normalizedOverview = cleanEditorialSource(overviewText ?? "", title);
   const normalizedDescription = cleanEditorialSource(description ?? "", title);
   const sourceText = normalizedOverview || normalizedDescription;
+  const activityKind = classifyEngine6EditorialActivityKind({
+    title,
+    categoryLabel,
+    overviewText: sourceText,
+  });
 
   const editorialSentences = splitSentences(sourceText).filter(
     sentence =>
-      !isForbiddenEditorialPhrase(sentence) &&
+      !isEngine6ForbiddenEditorialPhrase(sentence) &&
       countWords(sentence) >= 6 &&
       !/^this (?:tour|activity|experience)\b/i.test(sentence)
   );
 
+  const experienceFirstOverview = editorialSentences.find(isExperienceFirstSentence);
   const curatedOverview = editorialSentences.join(" ").trim();
+
   if (
     curatedOverview.length >= ENGINE6_EDITORIAL_DESCRIPTION_MIN_CHARS &&
     countWords(curatedOverview) >= ENGINE6_EDITORIAL_DESCRIPTION_MIN_WORDS &&
-    !isForbiddenEditorialPhrase(curatedOverview)
+    !isEngine6ForbiddenEditorialPhrase(curatedOverview) &&
+    (experienceFirstOverview || editorialSentences.length >= 3)
   ) {
     return trimToCharBudget(curatedOverview);
   }
 
   const sentences: string[] = [];
+
+  if (experienceFirstOverview) {
+    appendSentenceIfUseful(sentences, experienceFirstOverview);
+  } else {
+    appendSentenceIfUseful(
+      sentences,
+      buildExperienceOpening({
+        productCode,
+        title,
+        city,
+        categoryLabel,
+        overviewText: sourceText,
+        itineraryStops,
+        highlights,
+        durationText,
+      })
+    );
+  }
+
+  const pois = collectEditorialPois({
+    title,
+    overviewText: sourceText,
+    itineraryStops,
+    highlights,
+  });
   appendSentenceIfUseful(
     sentences,
-    buildExperienceOpening({
-      productCode,
-      title,
-      city,
-      categoryLabel,
-      overviewText: sourceText,
-      itineraryStops,
-    })
+    buildPoiFollowOn(pois, activityKind, productCode)
   );
 
-  for (const sentence of editorialSentences.slice(0, 3)) {
+  for (const sentence of editorialSentences) {
     if (countWords(sentences.join(" ")) >= ENGINE6_EDITORIAL_DESCRIPTION_MIN_WORDS) {
       break;
     }
+    if (sentence === experienceFirstOverview) continue;
     appendSentenceIfUseful(sentences, sentence);
   }
 
   const supportingSentences = [
-    buildItineraryNarrative(itineraryStops),
-    ...itineraryStops.flatMap(stop =>
-      splitSentences(
-        cleanEditorialSource(
-          [stop.title, stop.description].filter(Boolean).join(". "),
-          title
-        )
-      ).slice(0, 1)
-    ),
-    buildHighlightsNarrative(highlights),
     buildInclusionsNarrative(included),
     buildTransportNarrative(included),
-    buildDurationNarrative({ durationText, categoryLabel }),
+    buildDurationNarrative({ durationText, activityKind }),
   ];
 
   for (const sentence of supportingSentences) {
@@ -539,27 +983,16 @@ export const buildEngine6PremiumEditorialDescription = ({
     appendSentenceIfUseful(sentences, sentence);
   }
 
-  if (sentences.length === 0) {
-    appendSentenceIfUseful(
-      sentences,
-      buildExperienceOpening({
-        productCode,
-        title,
-        city,
-        categoryLabel,
-        overviewText: title,
-        itineraryStops,
-      })
-    );
-  }
-
   padToMinimumEditorialLength({
     sentences,
+    activityKind,
+    productCode,
     itineraryStops,
     highlights,
     included,
     durationText,
-    categoryLabel,
+    overviewText: sourceText,
+    title,
   });
 
   const composed = trimToCharBudget(

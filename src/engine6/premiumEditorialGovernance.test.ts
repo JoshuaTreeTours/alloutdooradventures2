@@ -2,16 +2,70 @@ import { readFileSync } from "node:fs";
 
 import { describe, expect, it } from "vitest";
 
+import { getEngine6TargetedNarrativeDescription } from "./approvedNarrativeDescriptions";
 import {
   ENGINE6_EDITORIAL_DESCRIPTION_MAX_CHARS,
   ENGINE6_EDITORIAL_DESCRIPTION_MIN_CHARS,
   ENGINE6_EDITORIAL_FORBIDDEN_PATTERNS,
+  classifyEngine6EditorialActivityKind,
 } from "./buildEngine6PremiumEditorialDescription";
 import { resolveEngine6GovernedProductDescription } from "./governedEditorialDescriptions";
 import { merchantFeedEligibleTours } from "./merchantFeedEligibility";
+import { engine6ResolvedTours } from "./registry";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import { toEngine6Card } from "./cards";
 import { isEngine6CardDescriptionDerivedFromGovernedSource } from "./governedEditorialDescriptions";
+
+const ENGINE6_EDITORIAL_TEMPLATE_OPENING_PATTERNS = [
+  /^Spend your time in\b/i,
+  /\bopens up on\b/i,
+  /\bouting is built around\b/i,
+  /,\s*beginning with\b/i,
+  /\bputs the focus on\b/i,
+  /\byou set out on\b/i,
+] as const;
+
+const ENGINE6_ACTIVITY_TYPE_ASSERTIONS: Array<{
+  productCode: string;
+  mustMatch: RegExp[];
+  mustNotMatch: RegExp[];
+}> = [
+  {
+    productCode: "69764P1",
+    mustMatch: [/whale/i],
+    mustNotMatch: [/^Cruise .* harbor/i, /^San Diego opens up on a harbor cruise/i],
+  },
+  {
+    productCode: "6021MBA",
+    mustMatch: [/aquarium/i],
+    mustNotMatch: [/harbor cruise/i],
+  },
+  {
+    productCode: "3097SDZSP_2VISIT",
+    mustMatch: [/zoo|safari/i],
+    mustNotMatch: [/harbor cruise/i, /park-focused day trip in/i],
+  },
+  {
+    productCode: "6455NOLAAIR",
+    mustMatch: [/airboat|swamp|bayou/i],
+    mustNotMatch: [/harbor cruise/i],
+  },
+  {
+    productCode: "5024MANSKY",
+    mustMatch: [/helicopter|aerial|flight/i],
+    mustNotMatch: [/harbor cruise/i, /two-wheeled/i],
+  },
+  {
+    productCode: "163975P1",
+    mustMatch: [/trolley/i],
+    mustNotMatch: [/harbor cruise/i],
+  },
+  {
+    productCode: "117409P1",
+    mustMatch: [/wine|vineyard|tasting/i],
+    mustNotMatch: [/harbor cruise/i],
+  },
+];
 
 const parseCsvLine = (line: string) => {
   const values: string[] = [];
@@ -101,6 +155,47 @@ describe("Engine6 premium editorial governance", () => {
           pattern
         );
       }
+    }
+  });
+
+  it("avoids repetitive template openings in generated editorial descriptions", () => {
+    for (const tour of merchantFeedEligibleTours) {
+      if (getEngine6TargetedNarrativeDescription(tour.productCode)) {
+        continue;
+      }
+
+      const description = resolveEngine6GovernedProductDescription(tour);
+      const opening =
+        description.match(/^.*?[.!?](?=\s|$)/)?.[0] ?? description;
+
+      for (const pattern of ENGINE6_EDITORIAL_TEMPLATE_OPENING_PATTERNS) {
+        expect(opening, `${tour.productCode}: ${pattern}`).not.toMatch(pattern);
+      }
+    }
+  });
+
+  it("classifies primary activity types without cross-product confusion", () => {
+    for (const assertion of ENGINE6_ACTIVITY_TYPE_ASSERTIONS) {
+      const tour = engine6ResolvedTours.find(
+        candidate => candidate.productCode === assertion.productCode
+      );
+      expect(tour, assertion.productCode).toBeDefined();
+
+      const description = resolveEngine6GovernedProductDescription(tour!);
+      const activityKind = classifyEngine6EditorialActivityKind({
+        title: tour!.title,
+        categoryLabel: tour!.categoryLabel,
+        overviewText: tour!.overviewText ?? "",
+      });
+
+      for (const pattern of assertion.mustMatch) {
+        expect(description, assertion.productCode).toMatch(pattern);
+      }
+      for (const pattern of assertion.mustNotMatch) {
+        expect(description, assertion.productCode).not.toMatch(pattern);
+      }
+
+      expect(activityKind, assertion.productCode).not.toBe("generic-tour");
     }
   });
 });

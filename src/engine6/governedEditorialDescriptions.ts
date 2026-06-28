@@ -4,6 +4,7 @@ import {
   ENGINE6_EDITORIAL_DESCRIPTION_MAX_CHARS,
   ENGINE6_EDITORIAL_DESCRIPTION_MIN_CHARS,
   ENGINE6_EDITORIAL_FORBIDDEN_PATTERNS,
+  isEngine6ForbiddenEditorialPhrase,
 } from "./buildEngine6PremiumEditorialDescription";
 import type { Engine6Tour } from "./types";
 
@@ -43,19 +44,21 @@ const ensureEngine6EditorialLength = (
 
   const paddingSentences = [
     tour.itinerary.length > 0
-      ? `Major pauses come at ${tour.itinerary
+      ? `You'll pause at ${tour.itinerary
           .slice(0, 4)
           .map(stop => stop.title)
-          .filter(Boolean)
+          .filter(titleValue => titleValue && !/\b(?:departure|pickup|pick-up|meeting point)\b/i.test(titleValue))
           .join(", ")}.`
       : "",
     tour.highlights.length > 0
-      ? `Particular attention goes to ${tour.highlights.slice(0, 2).join(" and ")}.`
+      ? `${tour.highlights.slice(0, 2).join(" and ")} are included in the experience.`
       : "",
     tour.included.length > 0
-      ? `${tour.included.slice(0, 2).join(" and ")} are part of the booking.`
+      ? `${tour.included.slice(0, 2).join(" and ")} are included.`
       : "",
-    `Plan on roughly ${tour.durationText?.trim() || "a full outing"} in ${tour.city}.`,
+    tour.durationText?.trim()
+      ? `Plan on ${tour.durationText.trim()} for the outing.`
+      : "",
   ].filter(Boolean);
 
   let composed = normalized;
@@ -63,15 +66,18 @@ const ensureEngine6EditorialLength = (
     if (composed.length >= ENGINE6_EDITORIAL_DESCRIPTION_MIN_CHARS) {
       break;
     }
+    if (isEngine6ForbiddenEditorialPhrase(padding)) {
+      continue;
+    }
     composed = `${composed.replace(/[.!?]$/, "")}. ${padding}`.replace(/\s+/g, " ");
   }
 
   while (composed.length < ENGINE6_EDITORIAL_DESCRIPTION_MIN_CHARS) {
-    composed = `${composed.replace(/[.!?]$/, "")}. This ${tour.city} outing keeps the focus on the places named in the itinerary and the time you spend at each stop.`;
+    composed = `${composed.replace(/[.!?]$/, "")}. ${tour.title} keeps the itinerary focused on the named stops and the time you have at each one.`;
     if (composed.length >= ENGINE6_EDITORIAL_DESCRIPTION_MIN_CHARS) {
       break;
     }
-    composed = `${composed.replace(/[.!?]$/, "")}. ${tour.title} is designed for visitors who want a clear read on the destination without sorting logistics on their own.`;
+    composed = `${composed.replace(/[.!?]$/, "")}. The format suits visitors who want destination context without sorting tickets or routes on their own.`;
     break;
   }
 
@@ -114,8 +120,27 @@ export const excerptEngine6CardDescription = (
     return "";
   }
 
+  let sentenceEnd = -1;
+  for (let index = 0; index < normalized.length; index += 1) {
+    const char = normalized[index];
+    if (!/[.!?]/.test(char)) {
+      continue;
+    }
+
+    const initialsPattern = normalized.slice(Math.max(0, index - 2), index + 1);
+    if (/\b[A-Z]\.$/.test(initialsPattern)) {
+      continue;
+    }
+
+    const remainder = normalized.slice(index + 1);
+    if (remainder.length === 0 || /^\s+[A-Z0-9"']/.test(remainder)) {
+      sentenceEnd = index;
+      break;
+    }
+  }
+
   const firstSentence =
-    normalized.match(/^.*?[.!?](?=\s|$)/)?.[0] ?? normalized;
+    sentenceEnd >= 0 ? normalized.slice(0, sentenceEnd + 1) : normalized;
 
   if (firstSentence.length <= maxChars) {
     return firstSentence;
