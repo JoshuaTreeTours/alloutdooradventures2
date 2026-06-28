@@ -9,6 +9,7 @@ import {
   hasEngine6CardForbiddenTemplatePhrase,
   isEngine6CardDescriptionDerivedFromGovernedSource,
   resolveEngine6GovernedProductDescription,
+  resolveEngine6SchemaProductDescription,
 } from "./governedEditorialDescriptions";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import { merchantFeedEligibleTours } from "./merchantFeedEligibility";
@@ -124,29 +125,30 @@ describe("Engine6 card description governance", () => {
     }
   });
 
-  it("keeps listing cards aligned with Product JSON-LD governed descriptions", () => {
+  it("keeps listing cards aligned with governed editorial descriptions while schema uses normalized supplier narrative", () => {
     for (const tour of engine6ResolvedTours) {
       const graph = buildEngine6SchemaGraph(tour)["@graph"] as Array<
         Record<string, unknown>
       >;
       const product = graph.find(node => node["@type"] === "Product");
       const productDescription = String(product?.description ?? "");
+      const governedDescription = resolveEngine6GovernedProductDescription(tour);
       const card = toEngine6Card(tour);
 
       expect(productDescription, tour.productCode).toBe(
-        resolveEngine6GovernedProductDescription(tour)
+        resolveEngine6SchemaProductDescription(tour)
       );
       expect(
         isEngine6CardDescriptionDerivedFromGovernedSource(
           card.description,
-          productDescription
+          governedDescription
         ),
         tour.productCode
       ).toBe(true);
     }
   });
 
-  it("maintains editorial parity between merchant-eligible rows and listing cards", () => {
+  it("maintains merchant feed and listing card editorial separation from schema normalization", () => {
     const merchantDescriptions = readMerchantDescriptions();
     const eligibleProductCodes = new Set(
       merchantFeedEligibleTours.map(tour => tour.productCode)
@@ -163,37 +165,26 @@ describe("Engine6 card description governance", () => {
         continue;
       }
 
-      const graph = buildEngine6SchemaGraph(tour)["@graph"] as Array<
-        Record<string, unknown>
-      >;
-      const product = graph.find(node => node["@type"] === "Product");
-      const productDescription = String(product?.description ?? "");
+      const governedDescription = resolveEngine6GovernedProductDescription(tour);
       const resolvedMerchantDescription = resolveMerchantDescription({
         productCode: tour.productCode,
         title: tour.title,
         city: tour.city,
+        state: tour.state,
         categoryLabel: tour.categoryLabel,
         productOverviewDescription: tour.overviewText,
-        pageMetadataDescription: tour.metaDescription || tour.seoDescription,
-        jsonLdProductDescription: productDescription,
-        viatorApiDescription: tour.overviewText,
-        itineraryStops: tour.itinerary,
-        highlights: tour.highlights,
-        included: tour.included,
-        durationText: tour.durationText,
       });
       const merchantDescription =
         merchantDescriptions.get(tour.productCode) ?? "";
       const card = toEngine6Card(tour);
 
       expect(resolvedMerchantDescription, tour.productCode).toBe(
-        productDescription
+        merchantDescription
       );
-      expect(merchantDescription, tour.productCode).toBe(productDescription);
       expect(
         isEngine6CardDescriptionDerivedFromGovernedSource(
           card.description,
-          productDescription
+          governedDescription
         ),
         tour.productCode
       ).toBe(true);

@@ -8,7 +8,8 @@ import {
 } from "../../utils/structuredData";
 import { SITE_BRAND_NAME } from "../../utils/site";
 import { resolveEngine6OfferUrl } from "../buildEngine6ViatorBookingUrl";
-import { resolveEngine6GovernedProductDescription } from "../governedEditorialDescriptions";
+import { resolveEngine6SchemaProductDescription } from "../governedEditorialDescriptions";
+import { normalizeEngine6SupplierNarrativeText } from "../normalizeEngine6SupplierNarrative";
 import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import {
   formatEngine6CategoryLabel,
@@ -79,7 +80,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
     tour.categoryLabel ??
     formatEngine6CategoryLabel(tour.primaryCategory);
   const duration = resolveDurationIso8601(tour.durationText);
-  const description = resolveEngine6GovernedProductDescription(tour);
+  const description = resolveEngine6SchemaProductDescription(tour);
   const schemaName = buildCityAwareSchemaName({
     title: tour.title,
     city: tour.city,
@@ -104,8 +105,8 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
               name: item.title,
               ...(item.description
                 ? {
-                    description: stripEngine6AdmissionArtifacts(
-                      item.description
+                    description: normalizeEngine6SupplierNarrativeText(
+                      stripEngine6AdmissionArtifacts(item.description)
                     ),
                   }
                 : {}),
