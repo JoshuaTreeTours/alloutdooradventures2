@@ -1,4 +1,5 @@
 import { getEngine6TargetedNarrativeDescription } from "./approvedNarrativeDescriptions";
+import { normalizeEngine6SupplierNarrativeDescription } from "./normalizeEngine6SupplierNarrative";
 import { buildEngine6RichProductDescription } from "./seo";
 import type { Engine6Tour } from "./types";
 
@@ -39,6 +40,17 @@ export const resolveEngine6GovernedProductDescription = (
     included: tour.included,
     durationText: tour.durationText,
   });
+};
+
+export const resolveEngine6SchemaProductDescription = (
+  tour: Engine6Tour
+): string => {
+  const governedDescription = resolveEngine6GovernedProductDescription(tour);
+  if (getEngine6TargetedNarrativeDescription(tour.productCode)) {
+    return governedDescription;
+  }
+
+  return normalizeEngine6SupplierNarrativeDescription(governedDescription);
 };
 
 export const excerptEngine6CardDescription = (
