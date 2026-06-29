@@ -30,9 +30,7 @@ import {
   mergeEngine6LiveFieldsIntoTour,
   type Engine6LiveProductFields,
 } from "../liveProductFields";
-import {
-  shouldSuppressEngine6ItineraryRow,
-} from "../../../api/engine6/itineraryTitleOverrides";
+import { shouldSuppressEngine6ItineraryRow } from "../../../api/engine6/itineraryRenderingGovernance";
 
 const BOOK_CTA_CLASSES =
   "inline-flex rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]";
