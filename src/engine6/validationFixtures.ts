@@ -173,6 +173,15 @@ import specimen7011p8Payload from "../../data/engine6/viator/7011P8.exact-produc
 import specimen6004p8Payload from "../../data/engine6/viator/6004P8.exact-product.json";
 import specimen6004prhikePayload from "../../data/engine6/viator/6004PRHIKE.exact-product.json";
 import specimen69029p14Payload from "../../data/engine6/viator/69029P14.exact-product.json";
+import specimen18808p20Payload from "../../data/engine6/viator/18808P20.exact-product.json";
+import specimen18808p17Payload from "../../data/engine6/viator/18808P17.exact-product.json";
+import specimen18808p15Payload from "../../data/engine6/viator/18808P15.exact-product.json";
+import specimen69029p8Payload from "../../data/engine6/viator/69029P8.exact-product.json";
+import specimen7011p11Payload from "../../data/engine6/viator/7011P11.exact-product.json";
+import specimen19970p1Payload from "../../data/engine6/viator/19970P1.exact-product.json";
+import specimen460648p15Payload from "../../data/engine6/viator/460648P15.exact-product.json";
+import specimen5582835p5Payload from "../../data/engine6/viator/5582835P5.exact-product.json";
+import specimen449449p2Payload from "../../data/engine6/viator/449449P2.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -1718,6 +1727,87 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Yosemite-National-Park/Giant-Sequoia-Snowshoe-and-Yosemite-Valley-Waterfalls-Adventure/d5265-69029P14",
     rawPayload: specimen69029p14Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "18808P20",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Convertible-2020-Jeep-4-X-4-Yosemite-Park-Tour-with-Hotel-Pickup/d5265-18808P20",
+    rawPayload: specimen18808p20Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "18808P17",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Private-Yosemite-Tour/d5265-18808P17",
+    rawPayload: specimen18808p17Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "18808P15",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Hummer-4-X-4-Tour-of-Yosemite/d5265-18808P15",
+    rawPayload: specimen18808p15Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "69029P8",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-Valley-Glacier-Point-and-Giant-Sequoias-Sightseeing-Hike-and-Tour/d5265-69029P8",
+    rawPayload: specimen69029p8Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "7011P11",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Half-Dome-Backpacking/d5265-7011P11",
+    rawPayload: specimen7011p11Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "19970P1",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Sierra-National-Forest-4x4-Tour/d5265-19970P1",
+    rawPayload: specimen19970p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "460648P15",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Ultimate-Yosemite-Private-Tour-Lunch/d5265-460648P15",
+    rawPayload: specimen460648p15Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5582835P5",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Guided-Yosemite-Backpacking-Half-Dome/d5265-5582835P5",
+    rawPayload: specimen5582835p5Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "449449P2",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Waterfalls-of-Yosemite-Customizable-Private-Tour/d5265-449449P2",
+    rawPayload: specimen449449p2Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

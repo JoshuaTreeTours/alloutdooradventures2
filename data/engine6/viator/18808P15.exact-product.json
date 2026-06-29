@@ -1,0 +1,148 @@
+{
+  "product": {
+    "productCode": "18808P15",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Hummer-4-X-4-Tour-of-Yosemite/d5265-18808P15",
+    "title": "Private Hummer 4 X 4 Tour of Yosemite Including Hotel Pickup",
+    "description": {
+      "text": "Explore Yosemite National Park on a private tour in a 4X4 Hummer. Create your own itinerary with options to get out and hike or stay in the Hummer for a scenic ride, stop for a picnic lunch, and visit Glacier Point when roads are open."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "8 to 9 hours (approx.)",
+    "priceFrom": "From $1475.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 29
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/99/1d/b9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore Yosemite on a private tour in a 4x4 Hummer with a picnic lunch",
+      "Opt to hike in spring and summer months, or stay in the Hummer",
+      "Stop at Glacier Point overlook for panoramic views of the area",
+      "Hassle-free round-trip transportation from select hotels"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from select Oakhurst, Fish Camp, Bass Lake, and Mariposa-area hotels."
+      },
+      "end": {
+        "description": "Return to your hotel after the private Hummer tour of Yosemite Valley and Glacier Point."
+      }
+    },
+    "itinerarySummary": "Explore Yosemite National Park on a private tour in a 4X4 Hummer.",
+    "itineraryItems": [
+      {
+        "title": "Tunnel View",
+        "description": "Panoramic overlook stop at Tunnel View.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridalveil Fall",
+        "description": "Walk to the base of Bridalveil Fall.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sentinel Bridge",
+        "description": "Photo stop on Sentinel Bridge.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yosemite Falls",
+        "description": "Stop near Lower Yosemite Fall.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "El Capitan Meadow",
+        "description": "Photo stop beneath El Capitan.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glacier Point",
+        "description": "Rim overlook when seasonal access permits.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sentinel Dome",
+        "description": "Pass Sentinel Dome on the high-country route.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Washburn Point",
+        "description": "Short stop at Washburn Point.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pioneer Yosemite History Center",
+        "description": "Pass the Wawona history center when included in your route.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "The Ahwahnee",
+        "description": "Optional stop at The Ahwahnee historic building.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Lunch",
+      "Bottled water",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Hummer 4 X 4 Tour of Yosemite Including Hotel Pickup?",
+        "answer": "The planned duration is 8 to 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Hotel pickup from select Oakhurst, Fish Camp, Bass Lake, and Mariposa-area hotels."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1475
+      },
+      "currency": "USD"
+    }
+  }
+}

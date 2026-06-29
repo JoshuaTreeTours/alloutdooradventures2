@@ -16,6 +16,15 @@ export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "6004P8",
   "6004PRHIKE",
   "69029P14",
+  "18808P20",
+  "18808P17",
+  "18808P15",
+  "69029P8",
+  "7011P11",
+  "19970P1",
+  "460648P15",
+  "5582835P5",
+  "449449P2",
 ] as const;
 
 export type Engine6TargetedNarrativeDescriptionProductCode =
@@ -59,6 +68,24 @@ export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTIONS: Record<
     "Book a private guided hike with a Yosemite expert who builds a route around your fitness level and seasonal access. Options range from valley waterfall walks to longer treks with views toward Half Dome, Glacier Point when roads are open, or Tuolumne Grove among giant sequoias depending on conditions and your goals. Extended time on trail keeps the day away from crowded pullouts while your guide shares naturalist insight on flora, geology, and park history. Private guide service, trail planning, and snacks are included for this fully customized hiking day.",
   "69029P14":
     "Discover Yosemite Valley on a guided discovery walk focused on waterfalls, meadows, and iconic granite landmarks on an easy valley-floor route. Your guide leads an unhurried path with stops near Lower Yosemite Fall and viewpoints toward Half Dome while sharing stories of John Muir, Ansel Adams, and the park's climbing and conservation history. The small-group format suits travelers who want context and conversation rather than a driving tour. Professional guide service is included for this leisurely guided walk through Yosemite Valley.",
+  "18808P20":
+    "Experience Yosemite on a full-day private Jeep tour with hotel pickup, picnic lunch, and a guide who handles park entry logistics while you focus on the views. Stops include Tunnel View, Bridalveil Fall, Yosemite Falls, El Capitan Meadow, and Glacier Point when seasonal access permits, with a rugged open-air ride between valley pullouts. The private format lets your group customize pacing at each overlook without sharing the day with strangers. Hotel pickup and drop-off, lunch, bottled water, and guide service are included for this premium valley and rim loop from gateway hotels.",
+  "18808P17":
+    "Take a private SUV or van day tour of Yosemite with hotel pickup, picnic lunch, and a driver-guide who tailors stops to your group. Visit Tunnel View, Bridalveil Fall, Sentinel Bridge, Yosemite Falls, El Capitan Meadow, and Glacier Point when roads are open for rim views over Half Dome and the high country. Vehicle size scales to your party so you avoid crowded buses while keeping a comfortable pace between valley landmarks. Hotel pickup and drop-off, lunch, bottled water, and guide service are included for this customizable full-day route.",
+  "18808P15":
+    "Explore Yosemite on a private Hummer 4x4 tour with hotel pickup, picnic lunch, and flexible routing through the valley and Glacier Point when access permits. Your guide can keep the group in the Hummer for scenic drives or stop for short hikes at overlooks like Tunnel View, Bridalveil Fall, and El Capitan Meadow. The off-road-capable vehicle and private format deliver a high-value, crowd-free alternative to standard bus tours. Hotel pickup and drop-off, lunch, bottled water, and guide service are included for this full-day adventure.",
+  "69029P8":
+    "Pack Yosemite Valley, Glacier Point, and giant sequoias into one private guided day with a naturalist who adjusts hiking distance to your group. Pickup is available along Highway 120 between Groveland and the valley, with day packs, water filtration, snacks, and a custom hiker's lunch included for trail time between Bridalveil Fall, Tuolumne Grove, and rim overlooks. The private format keeps the pace flexible for photo stops and short swims near waterfalls when conditions allow. Private guide service, park entry, lunch, and transport from select Groveland pickup points are included.",
+  "7011P11":
+    "Backpack Yosemite's backcountry on a four-day guided trek culminating at Half Dome with permits, camp meals, and an expert guide handling logistics. Routes through Happy Isles, Little Yosemite Valley, and Sunrise Creek keep you away from valley crowds while building toward the cable ascent on the summit day. Group size is capped for an intimate wilderness experience with breakfasts, lunches, and dinners prepared in camp. Guide service and multi-day camp meals are included; personal camping gear such as a tent, sleeping bag, and pad is required.",
+  "19970P1":
+    "Ride a 4x4 Jeep from Fish Camp into Sierra National Forest for an off-road approach to a giant sequoia grove near Yosemite's south entrance. After a thrilling forest drive, take an easy guided hike among massive trees with commentary on Sierra Nevada ecology and the park gateway landscape. The half-day format pairs adventure with accessible walking suitable for most travelers seeking sequoias without a full valley tour. Driver-guide service and taxes are included for this Fish Camp departure.",
+  "460648P15":
+    "Book an Ultimate Yosemite private day shaped by a pre-trip questionnaire and led by local guides who route you to iconic overlooks and quieter corners of the park. The tailor-made itinerary runs four to eight hours with a picnic lunch in a scenic setting and optional trekking poles for trail segments your group selects. This is a premium private format without hotel transfers, focused on maximizing time inside the park with expert guidance. Professional guide service, lunch, and Yosemite entry reservation support are included.",
+  "5582835P5":
+    "Join a four-day guided Half Dome backpacking trip with wilderness permits, camp meals, and a Wilderness First Responder guide from Mono Meadows Trailhead. The route covers Illilouette Creek, Clouds Rest, the Half Dome cables, and Panorama Trail descents past Nevada Fall with group gear such as water filters, stoves, and bear cans supplied. Expect hearty breakfasts and dinners on trail with routing designed to hit bucket-list summits without self-managed permit logistics. Guide service, permits, group gear, and camp meals are included; personal backpacking equipment is required.",
+  "449449P2":
+    "Follow a private guide through Yosemite's waterfall country on a customizable six- to eight-hour tour that may include Bridalveil Fall, Yosemite Falls, Vernal Fall, and Nevada Fall depending on season and trail access. Meet at Curry Village for a hiking or car-based route tailored to your fitness, with Yosemite entry reservation handled for the day and trekking poles available on request. Spring and early summer deliver peak flow, while your guide adjusts routing when falls run lighter later in the year. Private guide service, park entry reservation, and private transport are included for this waterfall-focused day.",
 };
 
 export const getEngine6TargetedNarrativeDescription = (productCode: string) =>

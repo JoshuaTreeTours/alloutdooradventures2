@@ -1,0 +1,148 @@
+{
+  "product": {
+    "productCode": "18808P20",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Convertible-2020-Jeep-4-X-4-Yosemite-Park-Tour-with-Hotel-Pickup/d5265-18808P20",
+    "title": "Jeep 4 X 4 Yosemite Park Tour with Hotel Pickup",
+    "description": {
+      "text": "If you just have one day to experience all the wonders of Yosemite, make the most of it with a full-day private Jeep tour that showcases the park’s supersized attractions and amazing ecosystems. Vehicle passes and parking can be tough to come by, so let a guide handle all the driving and logistics while you enjoy the rugged ride—top down optional."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $1295.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 123
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/88/ea/8f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sturdy Jeep 4x4 can tackle all park roads and conditions",
+      "Avoid ticket sell outs, traffic jams, and long waits for parking",
+      "All-inclusive package includes hotel pickup and a picnic lunch",
+      "Private tour can be totally customized around your interests"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from select Oakhurst, Fish Camp, Bass Lake, and Mariposa-area hotels. Meet your guide at the agreed pickup point between 7:00 AM and 7:30 AM."
+      },
+      "end": {
+        "description": "Return to your hotel or original pickup location after the full-day private Jeep loop through Yosemite Valley and Glacier Point."
+      }
+    },
+    "itinerarySummary": "If you just have one day to experience all the wonders of Yosemite, make the most of it with a full-day private Jeep tour that showcases the park’s supersized attractions and amazing ecosystems.",
+    "itineraryItems": [
+      {
+        "title": "Tunnel View",
+        "description": "Stop at the classic overlook for panoramic views of El Capitan, Half Dome, and Bridalveil Fall.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridalveil Fall",
+        "description": "Walk to the base of Bridalveil Fall for misty views of the cascade.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sentinel Bridge",
+        "description": "Photo stop on Sentinel Bridge with views of Yosemite Falls and Half Dome.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yosemite Falls",
+        "description": "Stop near Lower Yosemite Fall for a short walk and waterfall views.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "El Capitan Meadow",
+        "description": "Photo stop beneath the granite walls of El Capitan.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glacier Point",
+        "description": "Rim overlook with sweeping views of Yosemite Valley and Half Dome.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sentinel Dome",
+        "description": "Pass Sentinel Dome on the route when seasonal access permits.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Washburn Point",
+        "description": "Short stop at Washburn Point for high-country views.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pioneer Yosemite History Center",
+        "description": "Pass through the Wawona area history center when included in your route.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "The Ahwahnee",
+        "description": "Optional stop at The Ahwahnee historic building in Yosemite Valley.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Lunch",
+      "Bottled water",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Jeep 4 X 4 Yosemite Park Tour with Hotel Pickup?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Hotel pickup from select Oakhurst, Fish Camp, Bass Lake, and Mariposa-area hotels. Meet your guide at the agreed pickup point between 7:00 AM and 7:30 AM."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1295
+      },
+      "currency": "USD"
+    }
+  }
+}

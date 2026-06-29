@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "19970P1",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Sierra-National-Forest-4x4-Tour/d5265-19970P1",
+    "title": "Off Road Giant Sequoia 4x4 Tour Yosemite National Park",
+    "description": {
+      "text": "Go off-roading in a Jeep to explore a giant sequoia forest near the south entrance to Yosemite National Park. Enjoy a fun ride into the forest from Fish Camp, followed by an easy hike through the trees for up-close views of California’s massive sequoias."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "4 hours 30 minutes (approx.)",
+    "priceFrom": "From $849.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 21
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6f/41/22.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "2-hour 4WD Jeep ride and hike in giant sequoias from Fish Camp",
+      "Off-road ride through Sierra National Forest near Yosemite",
+      "Stop at a grove of giant sequoias for a short hike",
+      "Learn about the environment of the Sierra Nevada mountains"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your driver-guide in Fish Camp near the south entrance to Yosemite National Park."
+      },
+      "end": {
+        "description": "Return to Fish Camp after the sequoia grove hike and 4x4 ride."
+      }
+    },
+    "itinerarySummary": "Go off-roading in a Jeep to explore a giant sequoia forest near the south entrance to Yosemite National Park.",
+    "itineraryItems": [
+      {
+        "title": "Sierra National Forest",
+        "description": "Off-road Jeep ride through Sierra National Forest toward the sequoia grove.",
+        "duration": "2 hours 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yosemite National Park",
+        "description": "Continue into the Yosemite gateway area for sequoia grove access and short hikes.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Experienced driver/guide",
+      "All taxes and fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Off Road Giant Sequoia 4x4 Tour Yosemite National Park?",
+        "answer": "The planned duration is 4 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Meet your driver-guide in Fish Camp near the south entrance to Yosemite National Park."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Adventure Tours"
+      },
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Nature and Wildlife"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 849
+      },
+      "currency": "USD"
+    }
+  }
+}

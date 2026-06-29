@@ -1,0 +1,127 @@
+{
+  "product": {
+    "productCode": "69029P8",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-Valley-Glacier-Point-and-Giant-Sequoias-Sightseeing-Hike-and-Tour/d5265-69029P8",
+    "title": "One Day In Yosemite Private Tour:Yosemite Valley, Glacier Point & Giant Sequoias",
+    "description": {
+      "text": "See what Yosemite has to offer on this packed private sightseeing hike and tour. You’ll get an overview of Yosemite in one day, from giant sequoias to Glacier Point and Bridalveil Fall, with hikes, photo stops, and swims beneath waterfalls when conditions allow."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $500.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 28
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/e2/24.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ideal for travelers who want to see a lot of Yosemite in one day",
+      "Travel with a guide so you don’t get lost on Yosemite’s trails",
+      "Use of day packs and water filter is included",
+      "Pickup from locations along Highway 120 between Groveland and Yosemite Valley"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your private naturalist guide at a pickup location along Highway 120 between Groveland and Yosemite Valley, or at select Groveland-area hotels."
+      },
+      "end": {
+        "description": "Return to your pickup point after the full-day private valley, sequoia, and Glacier Point route."
+      }
+    },
+    "itinerarySummary": "See what Yosemite has to offer on this packed private sightseeing hike and tour.",
+    "itineraryItems": [
+      {
+        "title": "Tuolumne Grove of Giant Sequoias",
+        "description": "Walk among giant sequoias in Tuolumne Grove when included in your route.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tunnel View",
+        "description": "Panoramic overlook of Yosemite Valley.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yosemite Valley",
+        "description": "Explore valley landmarks including El Capitan Meadow and Yosemite Falls.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridalveil Fall",
+        "description": "Stop at Bridalveil Fall for photos and a short walk.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glacier Point",
+        "description": "Rim overlook with sweeping views when seasonal road access permits.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vernal Fall",
+        "description": "View Vernal Fall from valley trails when included in your custom route.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Private naturalist guide",
+      "Hotel pickup and drop-off",
+      "National park entrance fee",
+      "Snacks",
+      "Water and water filter",
+      "Lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the One Day In Yosemite Private Tour:Yosemite Valley, Glacier Point & Giant Sequoias?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Meet your private naturalist guide at a pickup location along Highway 120 between Groveland and Yosemite Valley, or at select Groveland-area hotels."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Hiking"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 500
+      },
+      "currency": "USD"
+    }
+  }
+}

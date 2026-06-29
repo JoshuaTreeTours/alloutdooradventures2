@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "7011P11",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Half-Dome-Backpacking/d5265-7011P11",
+    "title": "4-Day Half Dome Backpacking Adventure",
+    "description": {
+      "text": "There’s only one way to get away from the crowds in Yosemite: backcountry adventures. On this four-day tour, meet your expert guide in Yosemite Valley and set out to see the park in its true majesty, exploring Happy Isles, Sunrise Creek, and the Half Dome cables with camp meals cooked by your guide."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "4 days (approx.)",
+    "priceFrom": "From $2150.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 64
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/99/46.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Backpack with an expert guide for tips, tricks, and excellent camp meals",
+      "Comfort provisions provided for good nights' sleep",
+      "Explore lesser-trafficked spots like Sunrise Creek in addition to Half Dome",
+      "A maximum of 8 backpackers makes this an intimate backcountry adventure"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide in Half Dome Village (Curry Village) in Yosemite Valley for a pre-trip briefing and gear check before entering the backcountry."
+      },
+      "end": {
+        "description": "Finish the backpacking loop back in Yosemite Valley after the Half Dome summit day."
+      }
+    },
+    "itinerarySummary": "There’s only one way to get away from the crowds in Yosemite: backcountry adventures.",
+    "itineraryItems": [
+      {
+        "title": "Yosemite Valley",
+        "description": "Meet your guide and prepare for the backcountry trek through Yosemite Valley.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Happy Isles",
+        "description": "Begin the trail from Happy Isles toward the Mist Trail corridor.",
+        "duration": "3 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Little Yosemite Valley",
+        "description": "Camp and acclimatize in Little Yosemite Valley before the Half Dome push.",
+        "duration": "1 day",
+        "stopType": "stop"
+      },
+      {
+        "title": "Half Dome",
+        "description": "Summit Half Dome via the cables on the highlight day of the trek.",
+        "duration": "14 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sunrise Creek",
+        "description": "Explore Sunrise Creek and surrounding backcountry on the return route.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Breakfast",
+      "Lunch",
+      "Dinner",
+      "Camping equipment"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 4-Day Half Dome Backpacking Adventure?",
+        "answer": "The planned duration is 4 days."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Meet your guide in Half Dome Village (Curry Village) in Yosemite Valley for a pre-trip briefing and gear check before entering the backcountry."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Multi-day Tours"
+      },
+      {
+        "label": "Hiking"
+      },
+      {
+        "label": "Camping"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 2150
+      },
+      "currency": "USD"
+    }
+  }
+}
