@@ -1,0 +1,93 @@
+{
+  "product": {
+    "productCode": "460648P15",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Ultimate-Yosemite-Private-Tour-Lunch/d5265-460648P15",
+    "title": "Ultimate Yosemite: Private Tour + Lunch",
+    "description": {
+      "text": "This exclusive tailor-made adventure is designed for travelers seeking the very best of Yosemite. A private experience curated from a pre-trip questionnaire, led by passionate local guides who know the park intimately, with iconic landmarks, hidden gems, and a picnic lunch in a stunning setting."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "4 to 8 hours (approx.)",
+    "priceFrom": "From $500.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 3
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/86/6d/ed.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private tour customized from a pre-trip questionnaire",
+      "Passionate local guides with deep Yosemite knowledge",
+      "Picnic lunch included in a scenic setting",
+      "Flexible 4- to 8-hour routing based on your interests"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the custom tour location agreed after booking inside Yosemite National Park."
+      },
+      "end": {
+        "description": "Finish at the agreed meeting point after your private Ultimate Yosemite day."
+      }
+    },
+    "itinerarySummary": "This exclusive tailor-made adventure is designed for travelers seeking the very best of Yosemite.",
+    "itineraryItems": [
+      {
+        "title": "Yosemite National Park",
+        "description": "Private guided routing through Yosemite landmarks tailored to your group's interests.",
+        "duration": "8 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Lunch",
+      "Yosemite reservation entry document",
+      "Trekking poles on request"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ultimate Yosemite: Private Tour + Lunch?",
+        "answer": "The planned duration is 4 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Meet your guide at the custom tour location agreed after booking inside Yosemite National Park."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 500
+      },
+      "currency": "USD"
+    }
+  }
+}

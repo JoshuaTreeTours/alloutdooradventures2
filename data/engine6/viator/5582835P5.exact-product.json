@@ -1,0 +1,126 @@
+{
+  "product": {
+    "productCode": "5582835P5",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Guided-Yosemite-Backpacking-Half-Dome/d5265-5582835P5",
+    "title": "4 Days Guided Yosemite Half Dome Tour",
+    "description": {
+      "text": "Turn your bucket list into a brag list on this four-day Yosemite backpacking adventure from secret swimming holes to the iconic Half Dome cables. Expert guides handle wilderness permits, camp meals, and routing through Panorama Trail, Clouds Rest, and Nevada Fall."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "4 days (approx.)",
+    "priceFrom": "From $1100.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/c0/7e/5e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Wilderness permits and Half Dome cable permits included",
+      "Wilderness First Responder guide handles all backcountry logistics",
+      "Hearty camp breakfasts and dinners with dietary accommodations",
+      "Group gear including water filters, stoves, and bear cans when applicable"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guides at Mono Meadows Trailhead on Glacier Point Road for trip briefing and gear check."
+      },
+      "end": {
+        "description": "Return to Mono Meadows Trailhead after the final descent via Panorama Trail."
+      }
+    },
+    "itinerarySummary": "Turn your bucket list into a brag list on this four-day Yosemite backpacking adventure from secret swimming holes to the iconic Half Dome cables.",
+    "itineraryItems": [
+      {
+        "title": "Mono Meadows Trailhead",
+        "description": "Meet guides and begin the backcountry trek.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Illilouette Creek",
+        "description": "Hike through Illilouette Creek toward camp.",
+        "duration": "5 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Half Dome",
+        "description": "Summit Half Dome via the cables on the highlight day.",
+        "duration": "15 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Clouds Rest",
+        "description": "Trek to Clouds Rest for high-country panoramas.",
+        "duration": "12 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Panorama Trail",
+        "description": "Descend the Panorama Trail past Nevada Fall toward the trailhead.",
+        "duration": "9 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nevada Fall",
+        "description": "Pass Nevada Fall on the Panorama Trail descent.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Wilderness permits",
+      "Breakfast",
+      "Dinner",
+      "Group camping gear"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 4 Days Guided Yosemite Half Dome Tour?",
+        "answer": "The planned duration is 4 days."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Meet your guides at Mono Meadows Trailhead on Glacier Point Road for trip briefing and gear check."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Multi-day Tours"
+      },
+      {
+        "label": "Hiking"
+      },
+      {
+        "label": "Camping"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1100
+      },
+      "currency": "USD"
+    }
+  }
+}

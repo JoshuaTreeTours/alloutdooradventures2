@@ -15,6 +15,15 @@ export const YOSEMITE_VIATOR_PUBLIC_RATINGS: Record<
   "6004P8": { rating: 4.9, reviewCount: 33 },
   "6004PRHIKE": { rating: 4.8, reviewCount: 83 },
   "69029P14": { rating: 4.7, reviewCount: 56 },
+  "18808P20": { rating: 4.9, reviewCount: 123 },
+  "18808P17": { rating: 4.8, reviewCount: 56 },
+  "18808P15": { rating: 4.5, reviewCount: 29 },
+  "69029P8": { rating: 5.0, reviewCount: 28 },
+  "7011P11": { rating: 5.0, reviewCount: 64 },
+  "19970P1": { rating: 4.7, reviewCount: 21 },
+  "460648P15": { rating: 4.7, reviewCount: 3 },
+  "5582835P5": { rating: 5.0, reviewCount: 1 },
+  "449449P2": { rating: 4.7, reviewCount: 19 },
 };
 
 export const YOSEMITE_VIATOR_PUBLIC_PRODUCT_CODES = Object.keys(

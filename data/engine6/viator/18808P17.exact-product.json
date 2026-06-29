@@ -1,0 +1,123 @@
+{
+  "product": {
+    "productCode": "18808P17",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Private-Yosemite-Tour/d5265-18808P17",
+    "title": "Private Yosemite & Glacier Point SUV / Van Tour Including Hotel Pickup",
+    "description": {
+      "text": "Take control of your own trip to Yosemite with this private day tour. Instead of squeezing into a crowded bus with strangers, you and your party will have the use of a private SUV or van for the day. Choose the sites that appeal to you most, such as Glacier Point, Yosemite Falls, or Sentinel Bridge, and go at your own pace."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $1075.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 56
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/e4/b5/09.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy the views instead of watching the road",
+      "A picnic lunch and bottled water will be provided",
+      "Hotel transfers include multiple pickup and drop-off locations",
+      "Vehicle type depends on your group's size"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from select Oakhurst, Fish Camp, Bass Lake, and Mariposa-area hotels starting around 7:00 AM."
+      },
+      "end": {
+        "description": "Return to your hotel after the private valley and Glacier Point tour."
+      }
+    },
+    "itinerarySummary": "Take control of your own trip to Yosemite with this private day tour.",
+    "itineraryItems": [
+      {
+        "title": "Tunnel View",
+        "description": "Panoramic overlook stop with views across Yosemite Valley.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridalveil Fall",
+        "description": "Walk to the base of Bridalveil Fall.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sentinel Bridge",
+        "description": "Photo stop on Sentinel Bridge with views toward Yosemite Falls.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yosemite Falls",
+        "description": "Stop near Lower Yosemite Fall for a short walk and waterfall views.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "El Capitan Meadow",
+        "description": "Photo stop beneath El Capitan.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glacier Point",
+        "description": "Rim overlook with sweeping views when seasonal road access permits.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Lunch",
+      "Bottled water",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Yosemite & Glacier Point SUV / Van Tour Including Hotel Pickup?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Hotel pickup from select Oakhurst, Fish Camp, Bass Lake, and Mariposa-area hotels starting around 7:00 AM."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1075
+      },
+      "currency": "USD"
+    }
+  }
+}

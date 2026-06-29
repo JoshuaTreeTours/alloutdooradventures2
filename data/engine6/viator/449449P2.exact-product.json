@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "449449P2",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Waterfalls-of-Yosemite-Customizable-Private-Tour/d5265-449449P2",
+    "title": "Waterfalls of Yosemite - Customizable Private Tour",
+    "description": {
+      "text": "Explore Yosemite’s legendary waterfalls with a local expert on a fully customizable private tour. Routes may include Bridalveil Fall, Yosemite Falls, Vernal Fall, Nevada Fall, and other cascades depending on season, trail access, and your group’s preferences."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "6 to 8 hours (approx.)",
+    "priceFrom": "From $495.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 19
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/fd/eb/e7/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private customizable guided waterfall tour",
+      "Reservation into Yosemite included on day of activity",
+      "Routes tailored for hiking or car-based touring",
+      "Trekking poles available on request"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at Curry Village Pizza Deck near Shuttle Stop 14 in Yosemite Valley."
+      },
+      "end": {
+        "description": "Finish near the Curry Village meeting area after your private waterfall tour."
+      }
+    },
+    "itinerarySummary": "Explore Yosemite’s legendary waterfalls with a local expert on a fully customizable private tour.",
+    "itineraryItems": [
+      {
+        "title": "Yosemite Valley",
+        "description": "Private routing through Yosemite Valley waterfall viewpoints tailored to season and fitness.",
+        "duration": "7 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridalveil Fall",
+        "description": "Stop at Bridalveil Fall when included in your custom route.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yosemite Falls",
+        "description": "Visit Lower Yosemite Fall and surrounding viewpoints.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vernal Fall",
+        "description": "Approach Vernal Fall on the Mist Trail when trail conditions permit.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Yosemite reservation entry",
+      "Private transportation",
+      "Trekking poles on request"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Waterfalls of Yosemite - Customizable Private Tour?",
+        "answer": "The planned duration is 6 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Meet your guide at Curry Village Pizza Deck near Shuttle Stop 14 in Yosemite Valley."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 495
+      },
+      "currency": "USD"
+    }
+  }
+}
