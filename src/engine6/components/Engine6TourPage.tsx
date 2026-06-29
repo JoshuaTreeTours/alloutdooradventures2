@@ -30,6 +30,9 @@ import {
   mergeEngine6LiveFieldsIntoTour,
   type Engine6LiveProductFields,
 } from "../liveProductFields";
+import {
+  shouldSuppressEngine6ItineraryRow,
+} from "../../../api/engine6/itineraryTitleOverrides";
 
 const BOOK_CTA_CLASSES =
   "inline-flex rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]";
@@ -239,13 +242,27 @@ export default function Engine6TourPage({
     };
   }, [initialTour.productCode]);
 
-  const tour = useMemo(
+  const mergedTour = useMemo(
     () =>
       mergeEngine6LiveFieldsIntoEngine6Tour(
         initialTour,
         liveCurrentProductFields ?? undefined
       ),
     [initialTour, liveCurrentProductFields]
+  );
+  const tour = useMemo(
+    () => ({
+      ...mergedTour,
+      itinerary: mergedTour.itinerary.filter(
+        (item, rowIndex) =>
+          !shouldSuppressEngine6ItineraryRow({
+            productCode: mergedTour.productCode,
+            rowIndex,
+            currentTitle: item.title,
+          })
+      ),
+    }),
+    [mergedTour]
   );
   const categoryLabel =
     tour.categoryLabel ?? formatEngine6CategoryLabel(tour.primaryCategory);

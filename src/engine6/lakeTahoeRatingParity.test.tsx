@@ -146,6 +146,33 @@ describe("Lake Tahoe Engine6 rating/review parity", () => {
     });
   });
 
+  it("filters duplicate 6508TAHOE malformed rows in the production itinerary renderer", () => {
+    const tour = engine6ResolvedTours.find(
+      entry => entry.productCode === "6508TAHOE"
+    );
+
+    expect(tour).toBeDefined();
+
+    const detailHtml = renderToString(
+      <Engine6TourPage
+        tour={{
+          ...tour!,
+          itinerary: [
+            ...tour!.itinerary,
+            { title: "South Lake Tahoe", stopType: "stop" },
+            { title: "inspiration point for photos", stopType: "stop" },
+            { title: "This", stopType: "stop" },
+          ],
+        }}
+      />
+    );
+
+    expect(detailHtml).toContain("Palisades Tahoe");
+    expect(detailHtml).toContain("South Lake Tahoe");
+    expect(detailHtml).not.toContain("inspiration point for photos");
+    expect(detailHtml).not.toMatch(/<p[^>]*>\s*This\s*<\/p>/i);
+  });
+
   it("suppresses the observed duplicate 6508TAHOE live itinerary title fragments only by product and row", () => {
     expect(
       shouldSuppressEngine6ItineraryRow({
