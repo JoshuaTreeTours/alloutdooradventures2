@@ -784,20 +784,6 @@ const PRODUCT_ROW_CONDITIONAL_TITLE_OVERRIDES: Record<
       },
     ],
   },
-  "6508TAHOE": {
-    6: [
-      {
-        title: "Emerald Bay State Park",
-        currentTitleStartsWith: ["inspiration point for photos"],
-      },
-    ],
-    7: [
-      {
-        title: "Tahoe City",
-        currentTitleStartsWith: ["This"],
-      },
-    ],
-  },
   "411138P3": {
     5: [
       {
@@ -811,6 +797,16 @@ const PRODUCT_ROW_CONDITIONAL_TITLE_OVERRIDES: Record<
         currentTitleStartsWith: ["Seasonal Self-Guided", "Byron Glacier"],
       },
     ],
+  },
+};
+
+const PRODUCT_ROW_SUPPRESSIONS: Record<
+  string,
+  Record<number, readonly string[]>
+> = {
+  "6508TAHOE": {
+    6: ["inspiration point for photos"],
+    7: ["This"],
   },
 };
 
@@ -837,5 +833,27 @@ export const getEngine6ItineraryTitleOverride = ({
     conditionalOverride ??
     PRODUCT_ROW_TITLE_OVERRIDES[normalizedProductCode]?.[rowIndex] ??
     null
+  );
+};
+
+export const shouldSuppressEngine6ItineraryRow = ({
+  productCode,
+  rowIndex,
+  currentTitle,
+}: Engine6ItineraryTitleOverrideInput): boolean => {
+  const normalizedProductCode = productCode?.trim().toUpperCase();
+  if (!normalizedProductCode) {
+    return false;
+  }
+
+  const suppressions =
+    PRODUCT_ROW_SUPPRESSIONS[normalizedProductCode]?.[rowIndex];
+  if (!suppressions?.length) {
+    return false;
+  }
+
+  const normalizedCurrentTitle = normalizeTitleForMatch(currentTitle);
+  return suppressions.some(
+    needle => normalizedCurrentTitle === normalizeTitleForMatch(needle)
   );
 };

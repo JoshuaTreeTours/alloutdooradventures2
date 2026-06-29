@@ -13,7 +13,8 @@ import {
 } from "./lakeTahoeViatorPublicRatings";
 import { engine6ResolvedTours } from "./registry";
 import { ENGINE6_LAKE_TAHOE_EMERALD_BAY_SCENIC_CRUISE_PRODUCT_CODE } from "./routes";
-import { getEngine6ItineraryTitleOverride } from "../../api/engine6/itineraryTitleOverrides";
+import { shouldSuppressEngine6ItineraryRow } from "../../api/engine6/itineraryTitleOverrides";
+import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 
 (globalThis as { location?: { pathname: string } }).location = {
   pathname: "/",
@@ -145,27 +146,53 @@ describe("Lake Tahoe Engine6 rating/review parity", () => {
     });
   });
 
-  it("repairs the observed 6508TAHOE live itinerary title fragments only by product and row", () => {
+  it("suppresses the observed duplicate 6508TAHOE live itinerary title fragments only by product and row", () => {
     expect(
-      getEngine6ItineraryTitleOverride({
+      shouldSuppressEngine6ItineraryRow({
         productCode: "6508TAHOE",
         rowIndex: 6,
         currentTitle: "inspiration point for photos",
       })
-    ).toBe("Emerald Bay State Park");
+    ).toBe(true);
     expect(
-      getEngine6ItineraryTitleOverride({
+      shouldSuppressEngine6ItineraryRow({
         productCode: "6508TAHOE",
         rowIndex: 7,
         currentTitle: "This",
       })
-    ).toBe("Tahoe City");
+    ).toBe(true);
     expect(
-      getEngine6ItineraryTitleOverride({
+      shouldSuppressEngine6ItineraryRow({
         productCode: "2535P4",
         rowIndex: 7,
         currentTitle: "This",
       })
-    ).toBeNull();
+    ).toBe(false);
+
+    const extracted = extractEngine6Product({
+      product: {
+        productCode: "6508TAHOE",
+        title: "Full-Day Lake Tahoe Circle Tour including Olympic Valley",
+        itineraryItems: [
+          { title: "Palisades Tahoe" },
+          { title: "Lake Tahoe" },
+          { title: "Emerald Bay State Park" },
+          { title: "Tahoe City" },
+          { title: "Logan Shoals Vista Trail" },
+          { title: "South Lake Tahoe" },
+          { title: "inspiration point for photos" },
+          { title: "This" },
+        ],
+      },
+    }).extracted.itinerary;
+
+    expect(extracted.map(item => item.title)).toEqual([
+      "Palisades Tahoe",
+      "Lake Tahoe",
+      "Emerald Bay State Park",
+      "Tahoe City",
+      "Logan Shoals Vista Trail",
+      "South Lake Tahoe",
+    ]);
   });
 });
