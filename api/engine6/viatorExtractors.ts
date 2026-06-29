@@ -10,7 +10,10 @@ import {
   getEngine6AlignedItineraryJsonLdTitle,
   type Engine6ItineraryTitleSource,
 } from "./itineraryTitlePolicy.js";
-import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
+import {
+  getEngine6ItineraryTitleOverride,
+  shouldSuppressEngine6ItineraryRow,
+} from "./itineraryTitleOverrides.js";
 
 export type Engine6DiagnosticsPaths = {
   commercialPriceFieldPath: string | null;
@@ -1403,6 +1406,15 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
           rowCount: rows.length,
         });
         if (!parsed) return null;
+        if (
+          shouldSuppressEngine6ItineraryRow({
+            productCode: asNonEmptyString(product.productCode),
+            rowIndex,
+            currentTitle: parsed.title,
+          })
+        ) {
+          return null;
+        }
 
         const dedupeKey = [
           parsed.title.toLowerCase(),

@@ -13,6 +13,8 @@ import {
 } from "./lakeTahoeViatorPublicRatings";
 import { engine6ResolvedTours } from "./registry";
 import { ENGINE6_LAKE_TAHOE_EMERALD_BAY_SCENIC_CRUISE_PRODUCT_CODE } from "./routes";
+import { shouldSuppressEngine6ItineraryRow } from "../../api/engine6/itineraryTitleOverrides";
+import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 
 (globalThis as { location?: { pathname: string } }).location = {
   pathname: "/",
@@ -120,5 +122,104 @@ describe("Lake Tahoe Engine6 rating/review parity", () => {
       reviewCount: "95",
     });
     expect(merchantFeedRows.size).toBe(198);
+  });
+
+  it("keeps Lake Tahoe public itinerary titles clean on rendered detail pages", () => {
+    const malformedTitlePattern =
+      /^(?:This|These|That|It|They|inspiration point for photos)$/i;
+
+    LAKE_TAHOE_VIATOR_PUBLIC_PRODUCT_CODES.forEach(productCode => {
+      const tour = engine6ResolvedTours.find(
+        entry => entry.productCode === productCode
+      );
+
+      expect(tour).toBeDefined();
+      tour!.itinerary.forEach(item => {
+        expect(item.title).not.toMatch(malformedTitlePattern);
+        expect(item.title).not.toMatch(/\bfor photos$/i);
+      });
+
+      const detailHtml = renderToString(<Engine6TourPage tour={tour!} />);
+      expect(detailHtml).toContain('data-testid="engine6-itinerary-timeline"');
+      expect(detailHtml).not.toMatch(/<h3[^>]*>\s*This\s*<\/h3>/i);
+      expect(detailHtml).not.toContain("inspiration point for photos");
+    });
+  });
+
+  it("filters duplicate 6508TAHOE malformed rows in the production itinerary renderer", () => {
+    const tour = engine6ResolvedTours.find(
+      entry => entry.productCode === "6508TAHOE"
+    );
+
+    expect(tour).toBeDefined();
+
+    const detailHtml = renderToString(
+      <Engine6TourPage
+        tour={{
+          ...tour!,
+          itinerary: [
+            ...tour!.itinerary,
+            { title: "South Lake Tahoe", stopType: "stop" },
+            { title: "inspiration point for photos", stopType: "stop" },
+            { title: "This", stopType: "stop" },
+          ],
+        }}
+      />
+    );
+
+    expect(detailHtml).toContain("Palisades Tahoe");
+    expect(detailHtml).toContain("South Lake Tahoe");
+    expect(detailHtml).not.toContain("inspiration point for photos");
+    expect(detailHtml).not.toMatch(/<p[^>]*>\s*This\s*<\/p>/i);
+  });
+
+  it("suppresses the observed duplicate 6508TAHOE live itinerary title fragments only by product and row", () => {
+    expect(
+      shouldSuppressEngine6ItineraryRow({
+        productCode: "6508TAHOE",
+        rowIndex: 6,
+        currentTitle: "inspiration point for photos",
+      })
+    ).toBe(true);
+    expect(
+      shouldSuppressEngine6ItineraryRow({
+        productCode: "6508TAHOE",
+        rowIndex: 7,
+        currentTitle: "This",
+      })
+    ).toBe(true);
+    expect(
+      shouldSuppressEngine6ItineraryRow({
+        productCode: "2535P4",
+        rowIndex: 7,
+        currentTitle: "This",
+      })
+    ).toBe(false);
+
+    const extracted = extractEngine6Product({
+      product: {
+        productCode: "6508TAHOE",
+        title: "Full-Day Lake Tahoe Circle Tour including Olympic Valley",
+        itineraryItems: [
+          { title: "Palisades Tahoe" },
+          { title: "Lake Tahoe" },
+          { title: "Emerald Bay State Park" },
+          { title: "Tahoe City" },
+          { title: "Logan Shoals Vista Trail" },
+          { title: "South Lake Tahoe" },
+          { title: "inspiration point for photos" },
+          { title: "This" },
+        ],
+      },
+    }).extracted.itinerary;
+
+    expect(extracted.map(item => item.title)).toEqual([
+      "Palisades Tahoe",
+      "Lake Tahoe",
+      "Emerald Bay State Park",
+      "Tahoe City",
+      "Logan Shoals Vista Trail",
+      "South Lake Tahoe",
+    ]);
   });
 });
