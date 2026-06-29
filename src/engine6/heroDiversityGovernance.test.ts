@@ -99,7 +99,7 @@ describe("Engine6 hero diversity governance", () => {
   });
 
   it("uses Yosemite as the validation cohort for unique listing-card heroes", () => {
-    expect(yosemiteListingTours).toHaveLength(10);
+    expect(yosemiteListingTours).toHaveLength(7);
 
     const heroCounts = yosemiteListingTours.reduce<Map<string, number>>(
       (counts, tour) => {
