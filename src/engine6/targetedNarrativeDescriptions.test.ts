@@ -94,7 +94,7 @@ describe("Engine6 targeted narrative descriptions", () => {
       [...ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES].sort()
     );
     expect(ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES).toHaveLength(
-      10
+      20
     );
   });
 

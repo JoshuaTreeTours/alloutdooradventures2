@@ -10,6 +10,9 @@ export const ENGINE6_NAPA_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_LAKE_TAHOE_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/d6/ce/fe.jpg";
 
+export const ENGINE6_YOSEMITE_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/2b/0d/2c.jpg";
+
 type Engine6HeroCandidateTour = {
   productCode: string;
   heroImageUrl?: string | null;
@@ -20,6 +23,7 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
     monterey: ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL,
     napa: ENGINE6_NAPA_CANONICAL_CITY_HERO_URL,
     "lake-tahoe": ENGINE6_LAKE_TAHOE_CANONICAL_CITY_HERO_URL,
+    yosemite: ENGINE6_YOSEMITE_CANONICAL_CITY_HERO_URL,
   },
 };
 

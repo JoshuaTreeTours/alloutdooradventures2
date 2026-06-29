@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "391021P3",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Mariposa-Grove-of-Giant-Sequoias-and-Wawona-Small-Group-Tour/d5265-391021P3",
+    "title": "Mariposa Grove of Giant Sequoias and Wawona Small Group Tour",
+    "description": {
+      "text": "Walk among the world's largest trees on a small-group tour of Mariposa Grove near Wawona. Your naturalist guide leads the grove trails past the Grizzly Giant and California Tunnel Tree with commentary on sequoia ecology and Yosemite's southern history."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $170.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 11
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/72/ab/91.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group tour of Mariposa Grove",
+      "See the Grizzly Giant and California Tunnel Tree",
+      "Naturalist guide explains sequoia ecology",
+      "Explore historic Wawona area",
+      "Round-trip transport included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Mariposa Grove arrival area. Arrive 15 minutes before departure."
+      },
+      "end": {
+        "description": "Return to the Mariposa Grove meeting point after the tour."
+      }
+    },
+    "itinerarySummary": "Walk among the world's largest trees on a small-group tour of Mariposa Grove near Wawona.",
+    "itineraryItems": [
+      {
+        "title": "Mariposa Grove",
+        "description": "Walk the grove trails among ancient giant sequoias including the Grizzly Giant.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wawona",
+        "description": "Brief stop in the historic Wawona area with guide commentary on early park history.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mariposa Grove of Giant Sequoias and Wawona Small Group Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Meet at the Mariposa Grove arrival area. Arrive 15 minutes before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Nature and Wildlife"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 170
+      },
+      "currency": "USD"
+    }
+  }
+}

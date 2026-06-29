@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "6004HIKE",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-Hiking-Excursion/d5265-6004HIKE",
+    "title": "Guided Yosemite Hiking Excursion",
+    "description": {
+      "text": "Hit the trail with a certified Yosemite hiking guide on a small-group excursion tailored to current conditions. Routes may include Yosemite Valley meadows, waterfall viewpoints, or moderate valley loops with naturalist commentary on flora and geology."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $205.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 77
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/3c/9f/95.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Certified Yosemite hiking guide",
+      "Small-group trail experience",
+      "Routes adapted to season and fitness level",
+      "Naturalist commentary on valley ecology",
+      "Trail snacks and water provided"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the designated Yosemite Valley trailhead meeting point."
+      },
+      "end": {
+        "description": "Return to the trailhead meeting point after the hike."
+      }
+    },
+    "itinerarySummary": "Hit the trail with a certified Yosemite hiking guide on a small-group excursion tailored to current conditions.",
+    "itineraryItems": [
+      {
+        "title": "Yosemite Valley",
+        "description": "Guided hike through valley trails with views of granite walls and meadows.",
+        "duration": "4 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yosemite Falls",
+        "description": "Approach Lower Yosemite Fall on a moderate valley trail segment.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Snacks",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Guided Yosemite Hiking Excursion?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Meet your guide at the designated Yosemite Valley trailhead meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 205
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "product": {
+    "productCode": "6004P8",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Family-Hike-in-Yosemite/d5265-6004P8",
+    "title": "Private Family Hike in Yosemite",
+    "description": {
+      "text": "Take the family on a private Yosemite hike paced for all ages. Your guide selects kid-friendly valley trails with plenty of stops for photos, wildlife spotting, and short lessons on Yosemite's granite cliffs and waterfalls."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $178.75",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 33
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/3c/99/2f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private family-friendly hiking tour",
+      "Kid-paced routes in Yosemite Valley",
+      "Guide shares fun facts on park wildlife",
+      "Flexible rest and photo stops",
+      "Trail snacks included for children"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the Yosemite Valley family hike meeting point."
+      },
+      "end": {
+        "description": "Return to the meeting point after the family hike."
+      }
+    },
+    "itinerarySummary": "Take the family on a private Yosemite hike paced for all ages.",
+    "itineraryItems": [
+      {
+        "title": "Yosemite Valley",
+        "description": "Easy-to-moderate family hike through meadow and riverside trails.",
+        "duration": "3 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "El Capitan Meadow",
+        "description": "Photo break with views of El Capitan suited for all ages.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide",
+      "Snacks",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Family Hike in Yosemite?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Meet your guide at the Yosemite Valley family hike meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 178.75
+      },
+      "currency": "USD"
+    }
+  }
+}

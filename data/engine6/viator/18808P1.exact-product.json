@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "18808P1",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-and-Glacier-Point-Tour-from-Fresno/d5265-18808P1",
+    "title": "Full-Day Small Group Yosemite & Glacier Point Tour Including Hotel Pickup",
+    "description": {
+      "text": "Travel from Fresno to Yosemite on a full-day small-group tour with hotel pickup. Visit Yosemite Valley landmarks including Tunnel View, Yosemite Falls, and El Capitan before ascending to Glacier Point for one of the park's most dramatic panoramas."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "11 hours (approx.)",
+    "priceFrom": "From $250.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 489
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6b/96/58.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hotel pickup and drop-off from Fresno area",
+      "Small-group tour with driver-guide",
+      "Yosemite Valley and Glacier Point in one day",
+      "Photo stops at Tunnel View and Yosemite Falls",
+      "Air-conditioned vehicle transport"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from select Fresno-area hotels between 6:00 AM and 6:30 AM."
+      },
+      "end": {
+        "description": "Return to your Fresno hotel after the full-day tour."
+      }
+    },
+    "itinerarySummary": "Travel from Fresno to Yosemite on a full-day small-group tour with hotel pickup.",
+    "itineraryItems": [
+      {
+        "title": "Tunnel View",
+        "description": "First valley overlook stop with views of El Capitan, Half Dome, and Bridalveil Fall.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yosemite Valley",
+        "description": "Explore the valley floor with stops near Yosemite Falls and Swinging Bridge.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "El Capitan",
+        "description": "Photo stop at El Capitan Meadow beneath the 3,000-foot granite wall.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glacier Point",
+        "description": "Ascend to Glacier Point for rim views over Half Dome and the high country.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Air-conditioned vehicle",
+      "Guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full-Day Small Group Yosemite & Glacier Point Tour Including Hotel Pickup?",
+        "answer": "The planned duration is 11 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Hotel pickup from select Fresno-area hotels between 6:00 AM and 6:30 AM."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 250
+      },
+      "currency": "USD"
+    }
+  }
+}
