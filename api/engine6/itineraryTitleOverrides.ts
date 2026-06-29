@@ -800,16 +800,6 @@ const PRODUCT_ROW_CONDITIONAL_TITLE_OVERRIDES: Record<
   },
 };
 
-const PRODUCT_ROW_SUPPRESSIONS: Record<
-  string,
-  Record<number, readonly string[]>
-> = {
-  "6508TAHOE": {
-    6: ["inspiration point for photos"],
-    7: ["This"],
-  },
-};
-
 const normalizeTitleForMatch = (value: string | null | undefined): string =>
   (value ?? "").replace(/\s+/g, " ").trim().toLowerCase();
 
@@ -833,27 +823,5 @@ export const getEngine6ItineraryTitleOverride = ({
     conditionalOverride ??
     PRODUCT_ROW_TITLE_OVERRIDES[normalizedProductCode]?.[rowIndex] ??
     null
-  );
-};
-
-export const shouldSuppressEngine6ItineraryRow = ({
-  productCode,
-  rowIndex,
-  currentTitle,
-}: Engine6ItineraryTitleOverrideInput): boolean => {
-  const normalizedProductCode = productCode?.trim().toUpperCase();
-  if (!normalizedProductCode) {
-    return false;
-  }
-
-  const suppressions =
-    PRODUCT_ROW_SUPPRESSIONS[normalizedProductCode]?.[rowIndex];
-  if (!suppressions?.length) {
-    return false;
-  }
-
-  const normalizedCurrentTitle = normalizeTitleForMatch(currentTitle);
-  return suppressions.some(
-    needle => normalizedCurrentTitle === normalizeTitleForMatch(needle)
   );
 };

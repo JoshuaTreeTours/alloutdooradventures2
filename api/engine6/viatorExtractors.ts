@@ -10,10 +10,8 @@ import {
   getEngine6AlignedItineraryJsonLdTitle,
   type Engine6ItineraryTitleSource,
 } from "./itineraryTitlePolicy.js";
-import {
-  getEngine6ItineraryTitleOverride,
-  shouldSuppressEngine6ItineraryRow,
-} from "./itineraryTitleOverrides.js";
+import { shouldSuppressEngine6ItineraryRow } from "./itineraryRenderingGovernance.js";
+import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
 
 export type Engine6DiagnosticsPaths = {
   commercialPriceFieldPath: string | null;

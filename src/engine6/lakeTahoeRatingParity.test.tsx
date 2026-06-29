@@ -13,7 +13,7 @@ import {
 } from "./lakeTahoeViatorPublicRatings";
 import { engine6ResolvedTours } from "./registry";
 import { ENGINE6_LAKE_TAHOE_EMERALD_BAY_SCENIC_CRUISE_PRODUCT_CODE } from "./routes";
-import { shouldSuppressEngine6ItineraryRow } from "../../api/engine6/itineraryTitleOverrides";
+import { shouldSuppressEngine6ItineraryRow } from "../../api/engine6/itineraryRenderingGovernance";
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 
 (globalThis as { location?: { pathname: string } }).location = {
@@ -193,6 +193,20 @@ describe("Lake Tahoe Engine6 rating/review parity", () => {
         productCode: "2535P4",
         rowIndex: 7,
         currentTitle: "This",
+      })
+    ).toBe(false);
+    expect(
+      shouldSuppressEngine6ItineraryRow({
+        productCode: "6508TAHOE",
+        rowIndex: 5,
+        currentTitle: "inspiration point for photos",
+      })
+    ).toBe(false);
+    expect(
+      shouldSuppressEngine6ItineraryRow({
+        productCode: "6508TAHOE",
+        rowIndex: 6,
+        currentTitle: "Emerald Bay State Park",
       })
     ).toBe(false);
 
