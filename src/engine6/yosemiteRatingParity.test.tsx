@@ -109,12 +109,12 @@ describe("Yosemite Engine6 rating/review parity", () => {
     ).toEqual({ rating: 4.9, reviewCount: 415 });
   });
 
-  it("lists exactly ten Engine6 cards on the Yosemite city index", () => {
+  it("lists exactly seven Engine6 cards on the Yosemite city index", () => {
     const engine6YosemiteTours = getToursByCityUnified(
       "california",
       "yosemite"
     ).filter(entry => entry.tour.engine === "engine6");
-    expect(engine6YosemiteTours).toHaveLength(10);
+    expect(engine6YosemiteTours).toHaveLength(7);
   });
 
   it("does not change non-Yosemite merchant feed rows", () => {
@@ -123,7 +123,7 @@ describe("Yosemite Engine6 rating/review parity", () => {
       ratingCount: "95",
       reviewCount: "95",
     });
-    expect(merchantFeedRows.size).toBe(208);
+    expect(merchantFeedRows.size).toBe(205);
   });
 
   it("keeps Yosemite merchant and listing-card descriptions free of template bleed", () => {

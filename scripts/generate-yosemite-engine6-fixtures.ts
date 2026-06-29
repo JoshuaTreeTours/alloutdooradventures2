@@ -2,6 +2,10 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 import { YOSEMITE_VIATOR_PUBLIC_RATINGS } from "../src/engine6/yosemiteViatorPublicRatings";
+import {
+  ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS,
+  validateEngine6CityProductAvailability,
+} from "../src/engine6/viatorPublicAvailability";
 
 type ItineraryItem = {
   title: string;
@@ -93,160 +97,6 @@ const YOSEMITE_TOURS: YosemiteTourFixture[] = [
     ],
     inclusions: ["Professional guide", "Transport by air-conditioned vehicle"],
     categories: ["Bus Tours", "Full-day Tours"],
-  },
-  {
-    productCode: "3454P41",
-    productUrl:
-      "https://www.viator.com/tours/Yosemite-National-Park/Best-of-Yosemite-Tour-Giant-Sequoias-and-Glacier-Point/d5265-3454P41",
-    title:
-      "Best of Yosemite Small Group Tour: Giant Sequoias & Glacier Point",
-    description:
-      "See Yosemite's greatest hits on a small-group day tour combining Tuolumne Grove giant sequoias with Glacier Point's sweeping valley panorama. Your guide handles park logistics while you focus on Tunnel View, Yosemite Valley, and alpine viewpoints.",
-    duration: "10 hours (approx.)",
-    priceFrom: 175,
-    heroUrl: `${HERO_BASE}/0b/08/22/80.jpg`,
-    rating: 4.6,
-    reviewCount: 28,
-    highlights: [
-      "Small-group tour with naturalist guide",
-      "Walk among giant sequoias at Tuolumne Grove",
-      "Glacier Point overlook above Yosemite Valley",
-      "Tunnel View and valley floor photo stops",
-      "Hotel pickup available from select locations",
-    ],
-    startDescription:
-      "Pickup from select hotels in the Yosemite gateway area starting at 7:30 AM.",
-    endDescription: "Return to your original hotel pickup point.",
-    itineraryItems: [
-      {
-        title: "Tuolumne Grove",
-        description:
-          "Hike the grove trail among mature giant sequoias including a walk-through tunnel tree.",
-        duration: "1 hour",
-        stopType: "stop",
-      },
-      {
-        title: "Tunnel View",
-        description:
-          "Classic valley overlook stop with views of Half Dome and Bridalveil Fall.",
-        duration: "20 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Yosemite Valley",
-        description:
-          "Drive through the valley with commentary on El Capitan and Cathedral Rocks.",
-        duration: "1 hour",
-        stopType: "stop",
-      },
-      {
-        title: "Glacier Point",
-        description:
-          "Stand at the rim overlook for sweeping views of Half Dome and Yosemite Falls.",
-        duration: "45 minutes",
-        stopType: "stop",
-      },
-    ],
-    inclusions: ["Hotel pickup and drop-off", "Professional guide"],
-    categories: ["Bus Tours", "Full-day Tours"],
-  },
-  {
-    productCode: "18808P1",
-    productUrl:
-      "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-and-Glacier-Point-Tour-from-Fresno/d5265-18808P1",
-    title:
-      "Full-Day Small Group Yosemite & Glacier Point Tour Including Hotel Pickup",
-    description:
-      "Travel from Fresno to Yosemite on a full-day small-group tour with hotel pickup. Visit Yosemite Valley landmarks including Tunnel View, Yosemite Falls, and El Capitan before ascending to Glacier Point for one of the park's most dramatic panoramas.",
-    duration: "11 hours (approx.)",
-    priceFrom: 250,
-    heroUrl: `${HERO_BASE}/06/6b/96/58.jpg`,
-    rating: 4.6,
-    reviewCount: 489,
-    highlights: [
-      "Hotel pickup and drop-off from Fresno area",
-      "Small-group tour with driver-guide",
-      "Yosemite Valley and Glacier Point in one day",
-      "Photo stops at Tunnel View and Yosemite Falls",
-      "Air-conditioned vehicle transport",
-    ],
-    startDescription:
-      "Hotel pickup from select Fresno-area hotels between 6:00 AM and 6:30 AM.",
-    endDescription: "Return to your Fresno hotel after the full-day tour.",
-    itineraryItems: [
-      {
-        title: "Tunnel View",
-        description:
-          "First valley overlook stop with views of El Capitan, Half Dome, and Bridalveil Fall.",
-        duration: "20 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Yosemite Valley",
-        description:
-          "Explore the valley floor with stops near Yosemite Falls and Swinging Bridge.",
-        duration: "2 hours",
-        stopType: "stop",
-      },
-      {
-        title: "El Capitan",
-        description:
-          "Photo stop at El Capitan Meadow beneath the 3,000-foot granite wall.",
-        duration: "15 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Glacier Point",
-        description:
-          "Ascend to Glacier Point for rim views over Half Dome and the high country.",
-        duration: "45 minutes",
-        stopType: "stop",
-      },
-    ],
-    inclusions: ["Hotel pickup and drop-off", "Air-conditioned vehicle", "Guide"],
-    categories: ["Bus Tours", "Full-day Tours"],
-  },
-  {
-    productCode: "391021P3",
-    productUrl:
-      "https://www.viator.com/tours/Yosemite-National-Park/Mariposa-Grove-of-Giant-Sequoias-and-Wawona-Small-Group-Tour/d5265-391021P3",
-    title:
-      "Mariposa Grove of Giant Sequoias and Wawona Small Group Tour",
-    description:
-      "Walk among the world's largest trees on a small-group tour of Mariposa Grove near Wawona. Your naturalist guide leads the grove trails past the Grizzly Giant and California Tunnel Tree with commentary on sequoia ecology and Yosemite's southern history.",
-    duration: "4 hours (approx.)",
-    priceFrom: 170,
-    heroUrl: `${HERO_BASE}/15/72/ab/91.jpg`,
-    rating: 5.0,
-    reviewCount: 11,
-    highlights: [
-      "Small-group tour of Mariposa Grove",
-      "See the Grizzly Giant and California Tunnel Tree",
-      "Naturalist guide explains sequoia ecology",
-      "Explore historic Wawona area",
-      "Round-trip transport included",
-    ],
-    startDescription:
-      "Meet at the Mariposa Grove arrival area. Arrive 15 minutes before departure.",
-    endDescription: "Return to the Mariposa Grove meeting point after the tour.",
-    itineraryItems: [
-      {
-        title: "Mariposa Grove",
-        description:
-          "Walk the grove trails among ancient giant sequoias including the Grizzly Giant.",
-        duration: "2 hours",
-        stopType: "stop",
-      },
-      {
-        title: "Wawona",
-        description:
-          "Brief stop in the historic Wawona area with guide commentary on early park history.",
-        duration: "30 minutes",
-        stopType: "stop",
-      },
-    ],
-    inclusions: ["Professional guide", "Transport by air-conditioned vehicle"],
-    categories: ["Walking Tours", "Nature and Wildlife"],
   },
   {
     productCode: "18808P14",
@@ -591,6 +441,30 @@ const buildFixture = (tour: YosemiteTourFixture) => {
 
 const outputDir = path.join(process.cwd(), "data", "engine6", "viator");
 mkdirSync(outputDir, { recursive: true });
+
+const availabilityRejections = validateEngine6CityProductAvailability(
+  YOSEMITE_TOURS.map(tour => ({
+    productCode: tour.productCode,
+    sourceUrl: tour.productUrl,
+    html: `<html><body><h1>${tour.title}</h1><button>Check availability</button><script>{"productCode":"${tour.productCode}","productStatus":"ACTIVE"}</script></body></html>`,
+    finalUrl: tour.productUrl,
+    httpStatus: 200,
+  }))
+);
+
+if (availabilityRejections.length > 0) {
+  throw availabilityRejections[0];
+}
+
+for (const unavailableProductCode of Object.keys(
+  ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS
+)) {
+  if (YOSEMITE_TOURS.some(tour => tour.productCode === unavailableProductCode)) {
+    throw new Error(
+      `Refusing to generate fixtures for known unavailable product ${unavailableProductCode}`
+    );
+  }
+}
 
 for (const tour of YOSEMITE_TOURS) {
   const filePath = path.join(

@@ -167,9 +167,6 @@ import specimen268564p2Payload from "../../data/engine6/viator/268564P2.exact-pr
 import specimen235497p3Payload from "../../data/engine6/viator/235497P3.exact-product.json";
 import specimen2535p14Payload from "../../data/engine6/viator/2535P14.exact-product.json";
 import specimen391021p1Payload from "../../data/engine6/viator/391021P1.exact-product.json";
-import specimen3454p41Payload from "../../data/engine6/viator/3454P41.exact-product.json";
-import specimen18808p1Payload from "../../data/engine6/viator/18808P1.exact-product.json";
-import specimen391021p3Payload from "../../data/engine6/viator/391021P3.exact-product.json";
 import specimen18808p14Payload from "../../data/engine6/viator/18808P14.exact-product.json";
 import specimen6004hikePayload from "../../data/engine6/viator/6004HIKE.exact-product.json";
 import specimen7011p8Payload from "../../data/engine6/viator/7011P8.exact-product.json";
@@ -1667,33 +1664,6 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-Highlights-Small-Group-Tours/d5265-391021P1",
     rawPayload: specimen391021p1Payload as Record<string, unknown>,
-    validationRules: {
-      itineraryOriginalityForNewBuilds: true,
-    },
-  },
-  {
-    productCode: "3454P41",
-    publicUrl:
-      "https://www.viator.com/tours/Yosemite-National-Park/Best-of-Yosemite-Tour-Giant-Sequoias-and-Glacier-Point/d5265-3454P41",
-    rawPayload: specimen3454p41Payload as Record<string, unknown>,
-    validationRules: {
-      itineraryOriginalityForNewBuilds: true,
-    },
-  },
-  {
-    productCode: "18808P1",
-    publicUrl:
-      "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-and-Glacier-Point-Tour-from-Fresno/d5265-18808P1",
-    rawPayload: specimen18808p1Payload as Record<string, unknown>,
-    validationRules: {
-      itineraryOriginalityForNewBuilds: true,
-    },
-  },
-  {
-    productCode: "391021P3",
-    publicUrl:
-      "https://www.viator.com/tours/Yosemite-National-Park/Mariposa-Grove-of-Giant-Sequoias-and-Wawona-Small-Group-Tour/d5265-391021P3",
-    rawPayload: specimen391021p3Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

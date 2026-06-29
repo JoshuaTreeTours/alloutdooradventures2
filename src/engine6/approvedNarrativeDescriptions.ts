@@ -10,9 +10,6 @@ export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "276551P2",
   "58347P1",
   "391021P1",
-  "3454P41",
-  "18808P1",
-  "391021P3",
   "18808P14",
   "6004HIKE",
   "7011P8",
@@ -50,12 +47,6 @@ export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTIONS: Record<
     "Ride beyond the French Quarter into Faubourg Marigny, Bywater, and Treme on a small-group bicycle tour departing from North Rampart Street. Stops near the Mississippi River, Jackson Square, and St. Roch Community Church anchor a three-hour route that connects neighborhood scenery to New Orleans' multicultural roots and Creole culture. Bicycle, helmet, and bottled water are included, with the loop returning to the meeting point after varied district scenery and frequent pauses for photos along the way.",
   "391021P1":
     "Explore Yosemite Valley on a small-group guided tour with a naturalist guide who shares park history, geology, and wildlife stories throughout the day. Photo stops include Tunnel View, Bridalveil Fall, and El Capitan Meadow with time to walk short trails near Yosemite Falls while your guide explains how glaciation shaped the granite walls around Half Dome and Cathedral Rocks. The itinerary concentrates on iconic valley overlooks rather than rushed transit, and transport by air-conditioned vehicle keeps the group comfortable between viewpoints. Professional guide service and valley transport are included for this full-day loop from select Yosemite gateway meeting points.",
-  "3454P41":
-    "See Yosemite's greatest hits on a small-group day tour combining Tuolumne Grove giant sequoias with Glacier Point's sweeping valley panorama. Your guide handles park logistics while you hike among mature sequoias, pause at Tunnel View for classic Half Dome and Bridalveil Fall views, and spend unhurried time on the valley floor near El Capitan and Cathedral Rocks. The route links grove walking with rim overlooks so you experience both forest scale and alpine perspective in one coordinated day. Hotel pickup from select gateway locations and a professional naturalist guide are included for this extended park circuit.",
-  "18808P1":
-    "Travel from Fresno or Oakhurst on a full-day small-group Yosemite tour with hotel pickup included. Visit Yosemite Valley landmarks including Tunnel View, Yosemite Falls, and El Capitan Meadow before ascending to Glacier Point for one of the park's most dramatic panoramas over Half Dome and the high country. Your driver-guide paces the day for photo stops at Swinging Bridge and other valley viewpoints while handling park entry and winding mountain roads. Air-conditioned vehicle transport, hotel pickup and drop-off, and a knowledgeable guide are included for this comprehensive valley-and-rim itinerary.",
-  "391021P3":
-    "Walk among the world's largest trees on a small-group tour of Mariposa Grove near Wawona in Yosemite's southern reaches. Your naturalist guide leads grove trails past the Grizzly Giant and California Tunnel Tree while explaining sequoia ecology, fire history, and the park's early conservation story. The pace allows unhurried time beneath the grove canopy before a brief stop in historic Wawona. Transport by air-conditioned vehicle and a professional naturalist guide are included for this focused sequoia experience away from the busiest valley corridors.",
   "18808P14":
     "Enjoy a semi-private Yosemite day tour with hotel pickup and lunch at The Ahwahnee, limited to a small group so your guide can tailor pacing at each stop. Visit Tunnel View, Yosemite Valley landmarks including Yosemite Falls and El Capitan Meadow, and Glacier Point when seasonal access permits for rim views over Half Dome and the high country. The format balances guided commentary with photo time at valley viewpoints without the feel of a large bus tour. Lunch, hotel pickup and drop-off, and a professional guide are included for this relaxed full-day valley and rim route from Fresno-area hotels.",
   "6004HIKE":
