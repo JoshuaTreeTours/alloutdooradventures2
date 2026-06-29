@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "7011P8",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-Valley-Custom-Adventure-Tour/d5265-7011P8",
+    "title": "Yosemite Valley Private Hiking Tour",
+    "description": {
+      "text": "Design your own Yosemite Valley adventure on a private hiking tour for your group. A local guide customizes the route to your interests—waterfall walks, meadow strolls, or moderate climbs—with insider knowledge of less-crowded trails."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $360.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 81
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/52/0f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private tour for your group only",
+      "Customized valley hiking route",
+      "Local guide with insider trail knowledge",
+      "Flexible pace and difficulty",
+      "Ideal for families and special occasions"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your private guide at a Yosemite Valley meeting point agreed at booking."
+      },
+      "end": {
+        "description": "Return to the agreed meeting point after your custom hike."
+      }
+    },
+    "itinerarySummary": "Design your own Yosemite Valley adventure on a private hiking tour for your group.",
+    "itineraryItems": [
+      {
+        "title": "Yosemite Valley",
+        "description": "Private guided hike through valley trails tailored to your group's interests.",
+        "duration": "5 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridalveil Fall",
+        "description": "Optional stop at Bridalveil Fall when included in your custom route.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide",
+      "Custom itinerary planning"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Yosemite Valley Private Hiking Tour?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Meet your private guide at a Yosemite Valley meeting point agreed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 360
+      },
+      "currency": "USD"
+    }
+  }
+}

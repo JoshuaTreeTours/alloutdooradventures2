@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "69029P14",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Giant-Sequoia-Snowshoe-and-Yosemite-Valley-Waterfalls-Adventure/d5265-69029P14",
+    "title": "Yosemite Valley Discovery Walk",
+    "description": {
+      "text": "Discover Yosemite Valley on a guided discovery walk focused on waterfalls, meadows, and iconic granite landmarks. Your guide leads an unhurried route through the valley floor with stories of John Muir, Ansel Adams, and the park's climbing history."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $180.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 56
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/6d/d8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided discovery walk in Yosemite Valley",
+      "Waterfall and meadow viewpoints",
+      "Stories of park history and conservation",
+      "Small-group format with naturalist guide",
+      "Easy walking suitable for most travelers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Yosemite Valley Visitor Center area for check-in with your guide."
+      },
+      "end": {
+        "description": "Finish the discovery walk near the Yosemite Valley meeting area."
+      }
+    },
+    "itinerarySummary": "Discover Yosemite Valley on a guided discovery walk focused on waterfalls, meadows, and iconic granite landmarks.",
+    "itineraryItems": [
+      {
+        "title": "Yosemite Valley",
+        "description": "Leisurely guided walk across the valley floor with frequent photo stops.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yosemite Falls",
+        "description": "Stop near Lower Yosemite Fall to hear the cascade and take photos.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Half Dome",
+        "description": "View Half Dome from valley meadows with guide commentary.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Yosemite Valley Discovery Walk?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Meet at the Yosemite Valley Visitor Center area for check-in with your guide."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Nature and Wildlife"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 180
+      },
+      "currency": "USD"
+    }
+  }
+}

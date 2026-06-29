@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "18808P14",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Semi-Private-Yosemite-Tour/d5265-18808P14",
+    "title": "Semi Private Yosemite Tour with Ahwahnee Lunch and Hotel Pickup",
+    "description": {
+      "text": "Enjoy a semi-private Yosemite day tour with hotel pickup and lunch at The Ahwahnee. Visit Tunnel View, Yosemite Valley, and Glacier Point with a small group and guide who tailors stops to your interests."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $250.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 70
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6b/96/71.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Semi-private tour with limited group size",
+      "Lunch included at The Ahwahnee",
+      "Hotel pickup from Fresno gateway hotels",
+      "Tunnel View, valley, and Glacier Point stops",
+      "Flexible pacing with driver-guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hotel pickup from select Fresno-area hotels starting at 6:30 AM."
+      },
+      "end": {
+        "description": "Return to your hotel after the semi-private valley tour."
+      }
+    },
+    "itinerarySummary": "Enjoy a semi-private Yosemite day tour with hotel pickup and lunch at The Ahwahnee.",
+    "itineraryItems": [
+      {
+        "title": "Tunnel View",
+        "description": "Panoramic overlook stop with views across Yosemite Valley.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yosemite Valley",
+        "description": "Explore valley landmarks including Yosemite Falls and El Capitan Meadow.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Half Dome",
+        "description": "View Half Dome from valley viewpoints with guide commentary.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Glacier Point",
+        "description": "Rim overlook with sweeping views of the valley and high country.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Lunch",
+      "Hotel pickup and drop-off",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Semi Private Yosemite Tour with Ahwahnee Lunch and Hotel Pickup?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Hotel pickup from select Fresno-area hotels starting at 6:30 AM."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 250
+      },
+      "currency": "USD"
+    }
+  }
+}

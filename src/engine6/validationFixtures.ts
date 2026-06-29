@@ -166,6 +166,16 @@ import specimen466292p2Payload from "../../data/engine6/viator/466292P2.exact-pr
 import specimen268564p2Payload from "../../data/engine6/viator/268564P2.exact-product.json";
 import specimen235497p3Payload from "../../data/engine6/viator/235497P3.exact-product.json";
 import specimen2535p14Payload from "../../data/engine6/viator/2535P14.exact-product.json";
+import specimen391021p1Payload from "../../data/engine6/viator/391021P1.exact-product.json";
+import specimen3454p41Payload from "../../data/engine6/viator/3454P41.exact-product.json";
+import specimen18808p1Payload from "../../data/engine6/viator/18808P1.exact-product.json";
+import specimen391021p3Payload from "../../data/engine6/viator/391021P3.exact-product.json";
+import specimen18808p14Payload from "../../data/engine6/viator/18808P14.exact-product.json";
+import specimen6004hikePayload from "../../data/engine6/viator/6004HIKE.exact-product.json";
+import specimen7011p8Payload from "../../data/engine6/viator/7011P8.exact-product.json";
+import specimen6004p8Payload from "../../data/engine6/viator/6004P8.exact-product.json";
+import specimen6004prhikePayload from "../../data/engine6/viator/6004PRHIKE.exact-product.json";
+import specimen69029p14Payload from "../../data/engine6/viator/69029P14.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -1648,6 +1658,96 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Napa-and-Sonoma/7-Hour-Private-Napa-or-Sonoma-Wine-Tour/d914-87617P1",
     rawPayload: specimen87617p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "391021P1",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-Highlights-Small-Group-Tours/d5265-391021P1",
+    rawPayload: specimen391021p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "3454P41",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Best-of-Yosemite-Tour-Giant-Sequoias-and-Glacier-Point/d5265-3454P41",
+    rawPayload: specimen3454p41Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "18808P1",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-and-Glacier-Point-Tour-from-Fresno/d5265-18808P1",
+    rawPayload: specimen18808p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "391021P3",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Mariposa-Grove-of-Giant-Sequoias-and-Wawona-Small-Group-Tour/d5265-391021P3",
+    rawPayload: specimen391021p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "18808P14",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Semi-Private-Yosemite-Tour/d5265-18808P14",
+    rawPayload: specimen18808p14Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "6004HIKE",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-Hiking-Excursion/d5265-6004HIKE",
+    rawPayload: specimen6004hikePayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "7011P8",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-Valley-Custom-Adventure-Tour/d5265-7011P8",
+    rawPayload: specimen7011p8Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "6004P8",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Family-Hike-in-Yosemite/d5265-6004P8",
+    rawPayload: specimen6004p8Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "6004PRHIKE",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Private-Guided-Hiking-Tour-in-Yosemite/d5265-6004PRHIKE",
+    rawPayload: specimen6004prhikePayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "69029P14",
+    publicUrl:
+      "https://www.viator.com/tours/Yosemite-National-Park/Giant-Sequoia-Snowshoe-and-Yosemite-Valley-Waterfalls-Adventure/d5265-69029P14",
+    rawPayload: specimen69029p14Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "6004PRHIKE",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Private-Guided-Hiking-Tour-in-Yosemite/d5265-6004PRHIKE",
+    "title": "Private Guided Hiking Tour in Yosemite",
+    "description": {
+      "text": "Book a private guided hike with a Yosemite expert who builds a route around your fitness level and goals. Options range from valley waterfall walks to longer treks with views of Half Dome, Glacier Point, or Tuolumne Grove depending on season."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $293.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 83
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/54/6a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fully private guided hiking experience",
+      "Route customized to fitness and interests",
+      "Expert naturalist guide",
+      "Seasonal routing to Glacier Point or groves",
+      "Extended time on trail away from crowds"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your private guide at the agreed Yosemite trailhead or valley meeting point."
+      },
+      "end": {
+        "description": "Return to the meeting point after your private hike."
+      }
+    },
+    "itinerarySummary": "Book a private guided hike with a Yosemite expert who builds a route around your fitness level and goals.",
+    "itineraryItems": [
+      {
+        "title": "Yosemite Valley",
+        "description": "Private hike through valley trails with guide-selected routing.",
+        "duration": "3 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glacier Point",
+        "description": "Seasonal ascent to Glacier Point when road access permits.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tuolumne Grove",
+        "description": "Optional grove walk among giant sequoias when included in your route.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide",
+      "Trail planning",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Guided Hiking Tour in Yosemite?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Meet your private guide at the agreed Yosemite trailhead or valley meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 293
+      },
+      "currency": "USD"
+    }
+  }
+}

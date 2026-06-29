@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "391021P1",
+    "productUrl": "https://www.viator.com/tours/Yosemite-National-Park/Yosemite-Highlights-Small-Group-Tours/d5265-391021P1",
+    "title": "Yosemite Highlights Small Group Tour",
+    "description": {
+      "text": "Explore Yosemite Valley on a small-group guided tour with a naturalist guide who shares park history, geology, and wildlife stories. Photo stops include Tunnel View, Bridalveil Fall, and El Capitan Meadow with time to walk short trails near Yosemite Falls."
+    },
+    "location": {
+      "city": "Yosemite",
+      "state": "California"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $210.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 415
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/49/7f/34.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group tour limited to 15 passengers",
+      "Tunnel View overlook of Yosemite Valley",
+      "Photo stops at Bridalveil Fall and El Capitan Meadow",
+      "Guided commentary on park geology and wildlife",
+      "Round-trip transport from select meeting points"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the designated Yosemite area pickup point. Arrive 15 minutes before departure for check-in with your naturalist guide."
+      },
+      "end": {
+        "description": "Return to the original meeting point after the valley highlights loop."
+      }
+    },
+    "itinerarySummary": "Explore Yosemite Valley on a small-group guided tour with a naturalist guide who shares park history, geology, and wildlife stories.",
+    "itineraryItems": [
+      {
+        "title": "Tunnel View",
+        "description": "Stop at the classic overlook for panoramic views of El Capitan, Half Dome, and Bridalveil Fall.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridalveil Fall",
+        "description": "Walk to the base of Bridalveil Fall for misty views of the 620-foot cascade.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "El Capitan Meadow",
+        "description": "Photo stop beneath the granite walls of El Capitan with guide commentary.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yosemite Valley",
+        "description": "Scenic drive through the valley floor with views of Cathedral Rocks and Sentinel Rock.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Yosemite Falls",
+        "description": "Stop near Lower Yosemite Fall for a short walk and waterfall views.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Transport by air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Yosemite Highlights Small Group Tour?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yosemite?",
+        "answer": "Meet at the designated Yosemite area pickup point. Arrive 15 minutes before departure for check-in with your naturalist guide."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 210
+      },
+      "currency": "USD"
+    }
+  }
+}
