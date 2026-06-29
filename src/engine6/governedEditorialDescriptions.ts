@@ -49,7 +49,13 @@ const ensureEngine6EditorialLength = (
       ? `You'll pause at ${tour.itinerary
           .slice(0, 4)
           .map(stop => stop.title)
-          .filter(titleValue => titleValue && !/\b(?:departure|pickup|pick-up|meeting point)\b/i.test(titleValue))
+          .filter(
+            titleValue =>
+              titleValue &&
+              !/\b(?:departure|pickup|pick-up|meeting point)\b/i.test(
+                titleValue
+              )
+          )
           .join(", ")}.`
       : "",
     tour.highlights.length > 0
@@ -71,7 +77,10 @@ const ensureEngine6EditorialLength = (
     if (isEngine6ForbiddenEditorialPhrase(padding)) {
       continue;
     }
-    composed = `${composed.replace(/[.!?]$/, "")}. ${padding}`.replace(/\s+/g, " ");
+    composed = `${composed.replace(/[.!?]$/, "")}. ${padding}`.replace(
+      /\s+/g,
+      " "
+    );
   }
 
   while (composed.length < ENGINE6_EDITORIAL_DESCRIPTION_MIN_CHARS) {
@@ -84,6 +93,25 @@ const ensureEngine6EditorialLength = (
   }
 
   return trimToEditorialCharBudget(composed);
+};
+
+const ENGINE6_OVERVIEW_FIRST_DESCRIPTION_CITIES = new Set([
+  "Portland",
+  "Seattle",
+]);
+
+const normalizeDescriptionSource = (value?: string | null) =>
+  value?.trim().replace(/\s+/g, " ") ?? "";
+
+const hasUsableEngine6OverviewFirstDescription = (tour: Engine6Tour) => {
+  if (!ENGINE6_OVERVIEW_FIRST_DESCRIPTION_CITIES.has(tour.city)) {
+    return false;
+  }
+
+  const description = normalizeDescriptionSource(tour.description);
+  const overview = normalizeDescriptionSource(tour.overviewText);
+
+  return description.length >= 80 && description !== overview;
 };
 
 export const ENGINE6_CARD_DESCRIPTION_MAX_CHARS = 150;
@@ -105,6 +133,10 @@ export const resolveEngine6GovernedProductDescription = (
   );
   if (targetedNarrative) {
     return ensureEngine6EditorialLength(tour, targetedNarrative);
+  }
+
+  if (hasUsableEngine6OverviewFirstDescription(tour)) {
+    return ensureEngine6EditorialLength(tour, tour.description);
   }
 
   return ensureEngine6EditorialLength(

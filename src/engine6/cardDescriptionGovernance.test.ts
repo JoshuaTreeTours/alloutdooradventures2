@@ -95,9 +95,39 @@ const toPayload = (
 };
 
 describe("Engine6 card description governance", () => {
+  it("uses reviewed overview-derived descriptions for the Portland and Seattle validation cohort", () => {
+    const merchantDescriptions = readMerchantDescriptions();
+    const cohortTours = engine6ResolvedTours.filter(
+      tour =>
+        ["Portland", "Seattle"].includes(tour.city) &&
+        merchantDescriptions.has(tour.productCode)
+    );
+
+    expect(cohortTours.length).toBeGreaterThan(20);
+
+    for (const tour of cohortTours) {
+      const governedDescription =
+        resolveEngine6GovernedProductDescription(tour);
+      const card = toEngine6Card(tour);
+      const merchantDescription = merchantDescriptions.get(tour.productCode);
+
+      expect(card.description, tour.productCode).toBe(
+        buildEngine6CardDescription(tour)
+      );
+      expect(merchantDescription, tour.productCode).toBe(governedDescription);
+      expect(card.description, tour.productCode).not.toMatch(
+        /^See (?:Portland|Seattle)'s landmark neighborhoods/i
+      );
+      expect(card.description, tour.productCode).not.toMatch(
+        /\b(?:vineyard country|valley cellars|distinct wineries)\b/i
+      );
+    }
+  });
+
   it("derives every published card description from the governed overview pipeline", () => {
     for (const tour of engine6ResolvedTours) {
-      const governedDescription = resolveEngine6GovernedProductDescription(tour);
+      const governedDescription =
+        resolveEngine6GovernedProductDescription(tour);
       const card = toEngine6Card(tour);
 
       expect(governedDescription.length, tour.productCode).toBeGreaterThan(40);
@@ -132,7 +162,8 @@ describe("Engine6 card description governance", () => {
       >;
       const product = graph.find(node => node["@type"] === "Product");
       const productDescription = String(product?.description ?? "");
-      const governedDescription = resolveEngine6GovernedProductDescription(tour);
+      const governedDescription =
+        resolveEngine6GovernedProductDescription(tour);
       const card = toEngine6Card(tour);
 
       expect(productDescription, tour.productCode).toBe(
@@ -165,7 +196,8 @@ describe("Engine6 card description governance", () => {
         continue;
       }
 
-      const governedDescription = resolveEngine6GovernedProductDescription(tour);
+      const governedDescription =
+        resolveEngine6GovernedProductDescription(tour);
       const resolvedMerchantDescription = resolveMerchantDescription({
         productCode: tour.productCode,
         title: tour.title,
@@ -195,7 +227,8 @@ describe("Engine6 card description governance", () => {
     for (const fixture of ENGINE6_VALIDATION_FIXTURES.slice(0, 5)) {
       const tour = mapViatorToEngine6Tour(toPayload(fixture));
       const card = toEngine6Card(tour);
-      const governedDescription = resolveEngine6GovernedProductDescription(tour);
+      const governedDescription =
+        resolveEngine6GovernedProductDescription(tour);
 
       expect(card.description.length, fixture.productCode).toBeGreaterThan(40);
       expect(
