@@ -784,6 +784,20 @@ const PRODUCT_ROW_CONDITIONAL_TITLE_OVERRIDES: Record<
       },
     ],
   },
+  "6508TAHOE": {
+    6: [
+      {
+        title: "Emerald Bay State Park",
+        currentTitleStartsWith: ["inspiration point for photos"],
+      },
+    ],
+    7: [
+      {
+        title: "Tahoe City",
+        currentTitleStartsWith: ["This"],
+      },
+    ],
+  },
   "411138P3": {
     5: [
       {

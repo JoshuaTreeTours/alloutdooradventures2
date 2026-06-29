@@ -13,6 +13,7 @@ import {
 } from "./lakeTahoeViatorPublicRatings";
 import { engine6ResolvedTours } from "./registry";
 import { ENGINE6_LAKE_TAHOE_EMERALD_BAY_SCENIC_CRUISE_PRODUCT_CODE } from "./routes";
+import { getEngine6ItineraryTitleOverride } from "../../api/engine6/itineraryTitleOverrides";
 
 (globalThis as { location?: { pathname: string } }).location = {
   pathname: "/",
@@ -120,5 +121,51 @@ describe("Lake Tahoe Engine6 rating/review parity", () => {
       reviewCount: "95",
     });
     expect(merchantFeedRows.size).toBe(198);
+  });
+
+  it("keeps Lake Tahoe public itinerary titles clean on rendered detail pages", () => {
+    const malformedTitlePattern =
+      /^(?:This|These|That|It|They|inspiration point for photos)$/i;
+
+    LAKE_TAHOE_VIATOR_PUBLIC_PRODUCT_CODES.forEach(productCode => {
+      const tour = engine6ResolvedTours.find(
+        entry => entry.productCode === productCode
+      );
+
+      expect(tour).toBeDefined();
+      tour!.itinerary.forEach(item => {
+        expect(item.title).not.toMatch(malformedTitlePattern);
+        expect(item.title).not.toMatch(/\bfor photos$/i);
+      });
+
+      const detailHtml = renderToString(<Engine6TourPage tour={tour!} />);
+      expect(detailHtml).toContain('data-testid="engine6-itinerary-timeline"');
+      expect(detailHtml).not.toMatch(/<h3[^>]*>\s*This\s*<\/h3>/i);
+      expect(detailHtml).not.toContain("inspiration point for photos");
+    });
+  });
+
+  it("repairs the observed 6508TAHOE live itinerary title fragments only by product and row", () => {
+    expect(
+      getEngine6ItineraryTitleOverride({
+        productCode: "6508TAHOE",
+        rowIndex: 6,
+        currentTitle: "inspiration point for photos",
+      })
+    ).toBe("Emerald Bay State Park");
+    expect(
+      getEngine6ItineraryTitleOverride({
+        productCode: "6508TAHOE",
+        rowIndex: 7,
+        currentTitle: "This",
+      })
+    ).toBe("Tahoe City");
+    expect(
+      getEngine6ItineraryTitleOverride({
+        productCode: "2535P4",
+        rowIndex: 7,
+        currentTitle: "This",
+      })
+    ).toBeNull();
   });
 });
