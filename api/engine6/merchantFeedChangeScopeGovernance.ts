@@ -192,6 +192,115 @@ const isStandardBranchScopedModificationAllowed = (
   context: MerchantFeedChangeScopeContext
 ) => context.branchModifiedProductCodes.has(productCode);
 
+const isFullRowRegenerationAllowed = (
+  productCode: string,
+  context: MerchantFeedChangeScopeContext
+) =>
+  isStandardBranchScopedModificationAllowed(productCode, context) ||
+  isGovernanceRegenerationAuthorized(productCode, context);
+
+/** Non-commercial columns from baseline; commercial columns from proposed. */
+export const mergeMerchantFeedBaselineNonCommercialWithProposedCommercial = <
+  TRow extends MerchantFeedCsvRow,
+>(
+  baselineRow: TRow,
+  proposedRow: TRow
+): TRow => {
+  const merged = { ...baselineRow };
+
+  for (const field of MERCHANT_FEED_COMMERCIAL_PARITY_FIELDS) {
+    merged[field] = proposedRow[field] ?? "";
+  }
+
+  return merged;
+};
+
+export type MerchantFeedChangeScopePreservationResult = {
+  rows: MerchantFeedCsvRow[];
+  /** Existing products whose regenerated non-commercial columns were restored from baseline. */
+  preservedNonCommercialProductCodes: string[];
+  appendedProductCodes: string[];
+};
+
+/**
+ * Production merchant-feed builds reconcile live commercial values first, then
+ * restore baseline non-commercial columns for unchanged catalog products so
+ * deploy-time regeneration cannot drift titles, descriptions, heroes, or links.
+ * Branch-scoped and governance-authorized products keep full proposed rows.
+ */
+export const applyMerchantFeedChangeScopePreservingNonCommercial = (
+  baselineRows: MerchantFeedCsvRow[],
+  proposedRows: MerchantFeedCsvRow[],
+  context: MerchantFeedChangeScopeContext
+): MerchantFeedChangeScopePreservationResult => {
+  const baselineByProductCode = new Map<string, MerchantFeedCsvRow>();
+  const proposedByProductCode = new Map<string, MerchantFeedCsvRow>();
+  const preservedNonCommercialProductCodes: string[] = [];
+  const rows: MerchantFeedCsvRow[] = [];
+
+  for (const row of baselineRows) {
+    const productCode = normalizeProductCode(row.id);
+    if (productCode) {
+      baselineByProductCode.set(productCode, row);
+    }
+  }
+
+  for (const row of proposedRows) {
+    const productCode = normalizeProductCode(row.id);
+    if (productCode) {
+      proposedByProductCode.set(productCode, row);
+    }
+  }
+
+  for (const baselineRow of baselineRows) {
+    const productCode = normalizeProductCode(baselineRow.id);
+    const proposedRow = proposedByProductCode.get(productCode);
+
+    if (!proposedRow) {
+      rows.push({ ...baselineRow });
+      continue;
+    }
+
+    if (isFullRowRegenerationAllowed(productCode, context)) {
+      rows.push({ ...proposedRow });
+      continue;
+    }
+
+    const nonCommercialChanged = changedNonCommercialFields(
+      baselineRow,
+      proposedRow
+    );
+
+    if (nonCommercialChanged.length > 0) {
+      preservedNonCommercialProductCodes.push(productCode);
+    }
+
+    rows.push(
+      mergeMerchantFeedBaselineNonCommercialWithProposedCommercial(
+        baselineRow,
+        proposedRow
+      )
+    );
+  }
+
+  const appendedProductCodes = Array.from(proposedByProductCode.keys()).filter(
+    productCode => !baselineByProductCode.has(productCode)
+  );
+
+  for (const productCode of appendedProductCodes) {
+    const appendedRow = proposedByProductCode.get(productCode);
+    if (appendedRow) {
+      rows.push({ ...appendedRow });
+    }
+  }
+
+  return {
+    rows,
+    preservedNonCommercialProductCodes,
+    appendedProductCodes,
+  };
+};
+
 /**
  * Validates that proposed merchant feed output respects branch change scope.
  * Baseline rows represent the published main-branch merchantFeed.csv catalog.
