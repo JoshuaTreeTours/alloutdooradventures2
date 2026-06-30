@@ -38,6 +38,8 @@ const PROSE_START_PATTERNS = [
   /^nestled in\b/i,
   /^the miami city tour\b/i,
   /^this\b/i,
+  /^one of the\b/i,
+  /^filled with\b/i,
 ];
 
 export const getEngine6ItineraryTitleWordCount = (value: string): number =>
@@ -56,7 +58,14 @@ export const isEngine6ProseItineraryTitle = (value: string | null | undefined): 
     return true;
   }
 
-  if (/[.!?]/.test(normalized) && wordCount > 4) {
+  const normalizedWithoutAbbreviationPeriods = normalized.replace(
+    /\b(?:St|Mt|Dr|Mr|Mrs|Ms|V)\./g,
+    match => match.slice(0, -1)
+  );
+  if (
+    /[.!?]/.test(normalizedWithoutAbbreviationPeriods) &&
+    wordCount > 4
+  ) {
     return true;
   }
 

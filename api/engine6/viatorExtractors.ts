@@ -11,6 +11,7 @@ import {
   type Engine6ItineraryTitleSource,
 } from "./itineraryTitlePolicy.js";
 import { shouldSuppressEngine6ItineraryRow } from "./itineraryRenderingGovernance.js";
+import { governEngine6ItineraryStopTitle } from "./itineraryTitleGovernance.js";
 import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
 
 export type Engine6DiagnosticsPaths = {
@@ -1178,37 +1179,6 @@ const normalizeSingleItineraryItem = (
   const nativeIsNeutral =
     nativeRowTitle !== null &&
     /^itinerary stop \d+$/i.test(nativeRowTitle.replace(/\s+/g, " "));
-  const inferredTitleFromDescription = (() => {
-    const descriptionText =
-      asNonEmptyString(row.description) ??
-      asNonEmptyString(row.summary) ??
-      asNonEmptyString(row.details);
-    if (!descriptionText) return null;
-
-    const normalizedDescription = descriptionText
-      .replace(/^he\s+(?=[A-Z])/, "The ")
-      .trim();
-    const firstSentence =
-      normalizedDescription.split(/(?<!\b\d)(?<=[.!?])\s+/)[0]?.trim() ?? "";
-    if (!firstSentence) return null;
-
-    const subjectMatch = firstSentence.match(
-      /^((?:The\s+)?[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,7})\s+(?:is|are|offers?|provides?|features?)\b/
-    );
-    if (subjectMatch?.[1]) {
-      return subjectMatch[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    const locationPattern =
-      /\b(?:arrive in|continue to|final stop[:\s]+|visit|return to|journey in)\s+([A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*(?:[\s,/]+[A-ZÀ-ÖØ-Ý][\wÀ-ÖØ-öø-ÿ'&\-]*){0,5})/;
-    const match = firstSentence.match(locationPattern);
-    if (match?.[1]) {
-      return match[1].replace(/[.,:;]+$/, "").trim();
-    }
-
-    return firstSentence.replace(/[.,:;]+$/, "").trim() || null;
-  })();
-
   const alignedJsonLdTitle = getEngine6AlignedItineraryJsonLdTitle({
     product: context.product,
     productCode: context.productCode,
@@ -1263,15 +1233,7 @@ const normalizeSingleItineraryItem = (
   } else if (asNonEmptyString(location?.name)) {
     title = asNonEmptyString(location?.name);
     titleSource = "explicit";
-  } else if (inferredTitleFromDescription) {
-    title = inferredTitleFromDescription;
-    titleSource = "description-inferred";
   }
-
-  if (!title) return null;
-  const cleanedTitle = title.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim();
-  const isPassByFromTitle =
-    /\bpass(?:\s|-)?by\b/i.test(title) && cleanedTitle.length > 0;
 
   const description =
     asNonEmptyString(row.description) ??
@@ -1280,6 +1242,19 @@ const normalizeSingleItineraryItem = (
     asNonEmptyString(pointOfInterest?.description) ??
     asNonEmptyString(stop?.description) ??
     undefined;
+  const duration =
+    asNonEmptyString(row.duration) ??
+    asNonEmptyString(row.durationText) ??
+    asNonEmptyString(asRecord(row.durationInfo)?.durationText) ??
+    asNonEmptyString(asRecord(row.durationInfo)?.label) ??
+    undefined;
+
+  if (!title && !description && !duration) return null;
+  const cleanedTitle = title?.replace(/\s*\((pass\s*by)\)\s*$/i, "").trim() ?? "";
+  const isPassByFromTitle =
+    Boolean(title) &&
+    /\bpass(?:\s|-)?by\b/i.test(title) &&
+    cleanedTitle.length > 0;
   const admissionNoteFromFields =
     asNonEmptyString(row.admissionNote) ??
     asNonEmptyString(row.admissionTicket) ??
@@ -1299,12 +1274,6 @@ const normalizeSingleItineraryItem = (
       : undefined;
   const admissionNote =
     admissionNoteFromFields ?? admissionNoteFromDescription ?? undefined;
-  const duration =
-    asNonEmptyString(row.duration) ??
-    asNonEmptyString(row.durationText) ??
-    asNonEmptyString(asRecord(row.durationInfo)?.durationText) ??
-    asNonEmptyString(asRecord(row.durationInfo)?.label) ??
-    undefined;
   const descriptionWithoutAdmission =
     admissionNoteFromDescription && description === admissionNoteFromDescription
       ? undefined
@@ -1312,9 +1281,15 @@ const normalizeSingleItineraryItem = (
   const stopType =
     isPassByFlag || isPassByFromType || isPassByFromTitle ? "pass-by" : "stop";
 
-  return {
-    title: cleanedTitle || title,
+  const governedTitle = governEngine6ItineraryStopTitle({
+    candidateTitle: cleanedTitle || title,
     titleSource,
+    rowIndex: context.rowIndex,
+  });
+
+  return {
+    title: governedTitle.title,
+    titleSource: governedTitle.titleSource,
     stopType,
     ...(descriptionWithoutAdmission
       ? { description: descriptionWithoutAdmission }

@@ -17,6 +17,10 @@ import {
   type MerchantFeedCsvRow,
 } from "../api/engine6/merchantFeedChangeScopeGovernance";
 import {
+  formatMerchantFeedCommercialRefreshAuditReport,
+  refreshExistingMerchantFeedCommercialFields,
+} from "../api/engine6/merchantFeedCommercialRefreshGovernance";
+import {
   diagnoseEngine6ViatorProductCommercialExtract,
   describeViatorApiConfigEnvVisibility,
   resolveViatorApiConfig,
@@ -567,7 +571,13 @@ const main = async () => {
     );
   }
 
-  const outputRows = changeScope.rows as MerchantRow[];
+  const commercialRefresh = await refreshExistingMerchantFeedCommercialFields(
+    changeScope.rows as MerchantFeedCsvRow[],
+    existingRows as MerchantFeedCsvRow[],
+    diagnoseEngine6ViatorProductCommercialExtract
+  );
+
+  const outputRows = commercialRefresh.rows as MerchantRow[];
   const validation = validateMerchantFeedRows(outputRows);
   logMerchantFeedReport("After", validation.report, validation.pass);
 
@@ -783,6 +793,9 @@ const main = async () => {
     )
   );
   console.log(formatMerchantFeedLiveRuntimeParityReport(runtimeParityAudit));
+  console.log(
+    formatMerchantFeedCommercialRefreshAuditReport(commercialRefresh.audit)
+  );
 
   const unratedProducts = outputRows
     .filter(

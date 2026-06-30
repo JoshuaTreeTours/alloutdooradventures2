@@ -6,6 +6,10 @@ import { renderToString } from "react-dom/server";
 import TourCard from "../components/TourCard";
 import { getToursByCityUnified } from "../data/tours";
 import Engine6TourPage from "./components/Engine6TourPage";
+import {
+  buildEngine6CardDescription,
+  resolveEngine6GovernedProductDescription,
+} from "./governedEditorialDescriptions";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import {
   YELLOWSTONE_VIATOR_PUBLIC_RATINGS,
@@ -119,6 +123,62 @@ describe("Yellowstone Engine6 rating/review parity", () => {
       ratingCount: "95",
       reviewCount: "95",
     });
+  });
+
+  it("keeps Yellowstone merchant and listing-card descriptions free of city template bleed", () => {
+    const forbiddenPatterns = [
+      /landmark neighborhoods/i,
+      /guided city circuit/i,
+      /city highlights/i,
+      /\bcity tour\b/i,
+      /The outing extends the/i,
+      /Coastal waters around Yellowstone/i,
+    ];
+
+    const yellowstoneTours = engine6ResolvedTours.filter(entry =>
+      entry.canonicalPath.includes("/yellowstone-national-park/")
+    );
+
+    expect(yellowstoneTours).toHaveLength(23);
+
+    yellowstoneTours.forEach(tour => {
+      const governedDescription = resolveEngine6GovernedProductDescription(tour);
+      const cardDescription = buildEngine6CardDescription(tour);
+
+      for (const pattern of forbiddenPatterns) {
+        expect(governedDescription, tour.productCode).not.toMatch(pattern);
+        expect(cardDescription, tour.productCode).not.toMatch(pattern);
+      }
+    });
+  });
+
+  it("uses wildlife safari openings only for explicitly wildlife-focused Yellowstone products", () => {
+    const yellowstoneTours = engine6ResolvedTours.filter(entry =>
+      entry.canonicalPath.includes("/yellowstone-national-park/")
+    );
+
+    const safariOpenings = yellowstoneTours.filter(tour => {
+      const governedDescription = resolveEngine6GovernedProductDescription(tour);
+      const firstSentence =
+        governedDescription.split(/(?<=[.!?])\s+/)[0] ?? governedDescription;
+      return /guided wildlife safari/i.test(firstSentence);
+    });
+
+    expect(safariOpenings.length).toBeLessThanOrEqual(6);
+    expect(safariOpenings.length).toBeGreaterThan(0);
+
+    for (const tour of yellowstoneTours) {
+      const governedDescription = resolveEngine6GovernedProductDescription(tour);
+      const firstSentence =
+        governedDescription.split(/(?<=[.!?])\s+/)[0] ?? governedDescription;
+      const titleIdentity = tour.title.toLowerCase();
+
+      if (/lower loop|grand prismatic|old faithful|geyser hiking|hidden gems|best in the west|iconic sites/i.test(
+        titleIdentity
+      )) {
+        expect(firstSentence, tour.productCode).not.toMatch(/guided wildlife safari/i);
+      }
+    }
   });
 
   it("keeps Yellowstone public itinerary titles clean on rendered detail pages", () => {
