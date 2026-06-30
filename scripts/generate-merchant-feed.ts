@@ -18,8 +18,10 @@ import {
 } from "../api/engine6/merchantFeedChangeScopeGovernance";
 import {
   formatMerchantFeedCommercialRefreshAuditReport,
-  refreshExistingMerchantFeedCommercialFields,
 } from "../api/engine6/merchantFeedCommercialRefreshGovernance";
+import {
+  applyMerchantFeedCommercialRefresh,
+} from "../api/engine6/runMerchantFeedCommercialBackfill";
 import {
   diagnoseEngine6ViatorProductCommercialExtract,
   describeViatorApiConfigEnvVisibility,
@@ -571,11 +573,11 @@ const main = async () => {
     );
   }
 
-  const commercialRefresh = await refreshExistingMerchantFeedCommercialFields(
-    changeScope.rows as MerchantFeedCsvRow[],
-    existingRows as MerchantFeedCsvRow[],
-    diagnoseEngine6ViatorProductCommercialExtract
-  );
+  const commercialRefresh = await applyMerchantFeedCommercialRefresh({
+    rows: changeScope.rows as MerchantFeedCsvRow[],
+    baselineRows: existingRows as MerchantFeedCsvRow[],
+    mode: "generation",
+  });
 
   const outputRows = commercialRefresh.rows as MerchantRow[];
   const validation = validateMerchantFeedRows(outputRows);
@@ -793,9 +795,12 @@ const main = async () => {
     )
   );
   console.log(formatMerchantFeedLiveRuntimeParityReport(runtimeParityAudit));
-  console.log(
-    formatMerchantFeedCommercialRefreshAuditReport(commercialRefresh.audit)
-  );
+  console.log(commercialRefresh.report);
+  if (!commercialRefresh.skipped) {
+    console.log(
+      formatMerchantFeedCommercialRefreshAuditReport(commercialRefresh.audit)
+    );
+  }
 
   const unratedProducts = outputRows
     .filter(

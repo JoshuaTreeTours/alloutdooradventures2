@@ -25,7 +25,7 @@ const toLiveCommercialFields = (
   reviewCount: commercial.reviewCount,
 });
 
-const resolveRuntimeCommercialBaseUrl = () =>
+export const resolveRuntimeCommercialBaseUrl = () =>
   (
     process.env.MERCHANT_FEED_RUNTIME_BASE_URL ??
     process.env.ENGINE6_RUNTIME_BASE_URL ??

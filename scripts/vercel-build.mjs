@@ -55,6 +55,63 @@ function formatCapturedProcessFailure(stdout, stderr) {
   return sections.join("\n");
 }
 
+function runMerchantFeedCommercialBackfill() {
+  const cmd = "tsx";
+  const args = ["scripts/refresh-merchant-feed-commercial-backfill.ts"];
+
+  console.log(`\n> ${cmd} ${args.join(" ")}`);
+  console.log("[vercel-build] commercial backfill env:", {
+    RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL:
+      process.env.RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL ?? "(unset)",
+    VERCEL_ENV: process.env.VERCEL_ENV ?? "(unset)",
+    VIATOR_API_KEY: process.env.VIATOR_API_KEY ? "(set)" : "(unset)",
+    ENGINE6_VIATOR_API_KEY: process.env.ENGINE6_VIATOR_API_KEY
+      ? "(set)"
+      : "(unset)",
+    VIATOR_PARTNER_API_KEY: process.env.VIATOR_PARTNER_API_KEY
+      ? "(set)"
+      : "(unset)",
+    VIATOR_API_BASE_URL: process.env.VIATOR_API_BASE_URL ?? "(unset)",
+    VIATOR_BASE_URL: process.env.VIATOR_BASE_URL ?? "(unset)",
+  });
+
+  const result = spawnSync(`${cmd} ${args.join(" ")}`, {
+    env: { ...buildEnv },
+    encoding: "utf8",
+    maxBuffer: 64 * 1024 * 1024,
+    shell: true,
+    stdio: ["inherit", "pipe", "pipe"],
+  });
+
+  emitCapturedProcessOutput(
+    "[vercel-build][commercial-backfill]",
+    result.stdout,
+    result.stderr
+  );
+
+  if (result.status !== 0) {
+    const failureDetails = formatCapturedProcessFailure(
+      result.stdout,
+      result.stderr
+    );
+
+    console.error(
+      `[vercel-build] refresh-merchant-feed-commercial-backfill.ts failed (exit ${result.status ?? "null"})`
+    );
+    console.error(
+      `[vercel-build] ${failureDetails.replace(/\n/g, "\n[vercel-build] ")}`
+    );
+
+    if (result.error) {
+      console.error("[vercel-build] spawn error:", result.error);
+    }
+
+    throw new Error(
+      `refresh-merchant-feed-commercial-backfill.ts failed with exit code ${result.status ?? "null"}\n${failureDetails}`
+    );
+  }
+}
+
 function runMerchantFeedGeneration() {
   const cmd = "tsx";
   const args = ["scripts/generate-merchant-feed.ts"];
@@ -125,7 +182,8 @@ preview:
 
 production:
   enrichment (when script exists)
-  merchant feed (when script exists; requires VIATOR_API_KEY)
+  merchant feed commercial backfill (optional one-time when RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL=1)
+  merchant feed (when script exists; live commercial refresh on every production build)
   sitemap
   vite
   prerender
@@ -148,8 +206,26 @@ if (!isPreview && exists("scripts/generate-tour-enrichment.mjs")) {
   console.log("Skipping tour enrichment.");
 }
 
-if (!isPreview && exists("scripts/generate-merchant-feed.ts")) {
+if (
+  !isPreview &&
+  process.env.RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL === "1" &&
+  exists("scripts/refresh-merchant-feed-commercial-backfill.ts")
+) {
+  runMerchantFeedCommercialBackfill();
+} else if (!isPreview && process.env.RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL === "1") {
+  console.log("Skipping merchant feed commercial backfill (script missing).");
+}
+
+if (
+  !isPreview &&
+  process.env.RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL !== "1" &&
+  exists("scripts/generate-merchant-feed.ts")
+) {
   runMerchantFeedGeneration();
+} else if (!isPreview && process.env.RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL === "1") {
+  console.log(
+    "Skipping full merchant feed generation (RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL=1)."
+  );
 } else if (!isPreview) {
   console.log("Skipping merchant feed generation.");
 }
