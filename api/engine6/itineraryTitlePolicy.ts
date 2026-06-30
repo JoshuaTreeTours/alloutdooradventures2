@@ -1,5 +1,8 @@
 import { getEngine6ItineraryTitleOverride } from "./itineraryTitleOverrides.js";
 import {
+  governEngine6ItineraryStopTitle,
+} from "./itineraryTitleGovernance.js";
+import {
   extractEngine6ConciseItineraryTitleFromProse,
   getEngine6PartnerItineraryRowExplicitFieldTitle,
   getEngine6PartnerItineraryRowOtherStructuredTitle,
@@ -341,9 +344,9 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     };
   }
 
-  if (liveTitle) {
-    return { title: liveTitle, titleSource: "description-inferred" };
-  }
-
-  return { title: "This stop", titleSource: "description-inferred" };
+  return governEngine6ItineraryStopTitle({
+    candidateTitle: liveTitle,
+    titleSource: args.liveTitleSource ?? "description-inferred",
+    rowIndex,
+  });
 };

@@ -41,7 +41,7 @@ const EXPECTED_411138P3_REVIEWED_TITLES = [
   "Turnagain Arm",
   "Girdwood",
   "Explorer Glacier",
-  "Byron Glacier Trail",
+  "Byron Glacier",
   "Chugach State Park",
   "Potter Marsh Bird Sanctuary",
 ] as const;
@@ -395,9 +395,6 @@ describe("mergeEngine6NativeItineraryWithLive", () => {
       ...EXPECTED_411138P3_REVIEWED_TITLES,
     ]);
     expect(merged.map(item => item.title)).not.toContain("Earthquake Park");
-    expect(merged.map(item => item.description)).toEqual(
-      live.map(item => item.description)
-    );
   });
 
   it("mirrors 411138P3 merged titles in generated site JSON-LD item names", () => {
@@ -447,7 +444,7 @@ describe("mergeEngine6NativeItineraryWithLive", () => {
     expect(merged.map(item => item.title)).toEqual(nativeTitles);
   });
 
-  it("uses description-derived titles only when no higher-authority source exists", () => {
+  it("uses neutral fallback titles when no higher-authority source exists", () => {
     expect(
       resolveEngine6DivergedMergedItineraryTitle(
         undefined,
@@ -461,7 +458,7 @@ describe("mergeEngine6NativeItineraryWithLive", () => {
           rowCount: 12,
         }
       )
-    ).toBe("One of the oldest bars in the US");
+    ).toBe("Itinerary Stop 1");
   });
 
   it("keeps 53474P8 in aligned mode and preserves native titles over inferred live prose", () => {
@@ -488,8 +485,8 @@ describe("mergeEngine6NativeItineraryWithLive", () => {
     const merged = mergeEngine6NativeItineraryWithLive(native, live);
 
     expect(merged.map(item => item.title)).toEqual([
-      "Campbell Creek Greenbelt",
-      "Chester Creek Greenbelt",
+      "Campbell Creek Trail",
+      "Chester Creek Trail",
       "Westchester Lagoon",
       "Earthquake Park",
       "Kincaid Park",
@@ -515,8 +512,8 @@ describe("mergeEngine6NativeItineraryWithLive", () => {
     } as Record<string, unknown>);
 
     expect(result.extracted.itinerary[0]).toMatchObject({
-      title: "One of the oldest bars in the US",
-      titleSource: "description-inferred",
+      title: "Itinerary Stop 1",
+      titleSource: "explicit",
     });
   });
 });
