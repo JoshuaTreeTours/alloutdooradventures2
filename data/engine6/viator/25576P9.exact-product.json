@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "25576P9",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Western-Ranch-Overnight-Experience-Cabin-or-Camp-Out/d815-25576P9",
+    "title": "Western Ranch Overnight Experience: Cabin or Camp Out",
+    "description": {
+      "text": "Spend one night at Grand Canyon Western Ranch choosing between a private cabin or an outdoor camp-out under the stars. The package includes a ranch dinner, breakfast, and western activities such as horseback riding on the Hualapai Reservation near the canyon."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "2 days (approx.)",
+    "priceFrom": "From $295.32",
+    "reviews": {
+      "combinedAverageRating": 4.1,
+      "totalReviews": 14
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/90/77/de.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "One-night stay in cabin or camp-out option",
+      "Ranch dinner and breakfast included",
+      "Horseback riding and ranch activities",
+      "Western entertainment on the Hualapai Reservation",
+      "Short drive to South Rim sightseeing"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Arrive at Grand Canyon Western Ranch, 3750 E Diamond Bar Rd, Peach Springs, AZ 86434 for afternoon check-in."
+      },
+      "end": {
+        "description": "Depart after breakfast on your second day from Grand Canyon Western Ranch."
+      }
+    },
+    "itinerarySummary": "Spend one night at Grand Canyon Western Ranch choosing between a private cabin or an outdoor camp-out under the stars.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon Western Ranch",
+        "description": "Overnight at the ranch with cabin or camp-out lodging, meals, and western activities.",
+        "duration": "2 days",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "One night lodging (cabin or camp-out)",
+      "Ranch dinner and breakfast",
+      "Horseback ride",
+      "Evening entertainment"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Western Ranch Overnight Experience: Cabin or Camp Out?",
+        "answer": "The planned duration is 2 days."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Arrive at Grand Canyon Western Ranch, 3750 E Diamond Bar Rd, Peach Springs, AZ 86434 for afternoon check-in."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Overnight Tours"
+      },
+      {
+        "label": "Multi-day Tours"
+      },
+      {
+        "label": "Safaris"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 295.32
+      },
+      "currency": "USD"
+    }
+  }
+}

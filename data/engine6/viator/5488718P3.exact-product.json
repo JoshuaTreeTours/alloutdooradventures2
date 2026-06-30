@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "5488718P3",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-South-Rim-Sunset-Tour-with-Dinner/d815-5488718P3",
+    "title": "Grand Canyon South Rim Sunset Tour with Dinner included",
+    "description": {
+      "text": "An afternoon-to-evening coach tour of the South Rim culminates in sunset viewing followed by a sit-down dinner near Tusayan. The guide paces rim stops so you reach a prime overlook as the canyon shifts through late-day color."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $170.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 242
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/2c/33/a4.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "South Rim sunset tour by comfortable coach",
+      "Included sit-down dinner after sunset viewing",
+      "Multiple rim overlooks with guide commentary",
+      "Pickup from Tusayan and Grand Canyon Village hotels",
+      "National park entrance fees included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Afternoon pickup from Tusayan hotels or Grand Canyon Village lodges. Confirm your pickup time when booking."
+      },
+      "end": {
+        "description": "Return to your hotel after dinner near Tusayan or drop-off at Grand Canyon Village."
+      }
+    },
+    "itinerarySummary": "An afternoon-to-evening coach tour of the South Rim culminates in sunset viewing followed by a sit-down dinner near Tusayan.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon South Rim",
+        "description": "Afternoon coach loop along South Rim roads with stops at major viewpoints before sunset.",
+        "duration": "3 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Coach transport",
+      "Professional guide",
+      "Sunset rim viewing",
+      "Dinner",
+      "National park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Grand Canyon South Rim Sunset Tour with Dinner included?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Afternoon pickup from Tusayan hotels or Grand Canyon Village lodges. Confirm your pickup time when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Dining Experiences"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 170
+      },
+      "currency": "USD"
+    }
+  }
+}

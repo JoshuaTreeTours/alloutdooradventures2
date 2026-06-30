@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "5637206P7",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Experience-Two-Night-Ranch-Adventure/d815-5637206P7",
+    "title": "Experience Two Night Ranch Adventure",
+    "description": {
+      "text": "A two-night package at Grand Canyon Western Ranch pairs western lodging with guided horseback rides and wagon tours across open range. Evenings bring live music and ranch-style dining while days leave room to visit the South Rim on your own or with optional tours."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "3 days (approx.)",
+    "priceFrom": "From $831.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 4
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/7e/62/0c/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Two-night western ranch stay near the Grand Canyon",
+      "Guided horseback and wagon ride activities included",
+      "Ranch meals and live evening entertainment",
+      "Family-friendly lodging on the Hualapai Reservation",
+      "Flexible time for South Rim sightseeing"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Arrive at Grand Canyon Western Ranch, 3750 E Diamond Bar Rd, Peach Springs, AZ 86434 for afternoon check-in."
+      },
+      "end": {
+        "description": "Depart from Grand Canyon Western Ranch after breakfast on departure day."
+      }
+    },
+    "itinerarySummary": "A two-night package at Grand Canyon Western Ranch pairs western lodging with guided horseback rides and wagon tours across open range.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon Western Ranch",
+        "description": "Enjoy two nights at the ranch with included rides, meals, and nightly western entertainment.",
+        "duration": "3 days",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Two nights ranch lodging",
+      "Ranch meals",
+      "Horseback and wagon rides",
+      "Evening entertainment"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Experience Two Night Ranch Adventure?",
+        "answer": "The planned duration is 3 days."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Arrive at Grand Canyon Western Ranch, 3750 E Diamond Bar Rd, Peach Springs, AZ 86434 for afternoon check-in."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Multi-day Tours"
+      },
+      {
+        "label": "Overnight Tours"
+      },
+      {
+        "label": "Safaris"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 831
+      },
+      "currency": "USD"
+    }
+  }
+}

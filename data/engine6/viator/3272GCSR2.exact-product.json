@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "3272GCSR2",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-South-Rim-Jeep-Tour-with-Transport-from-Tusayan/d815-3272GCSR2",
+    "title": "Grand Entrance Grand Canyon Jeep Tour",
+    "description": {
+      "text": "A two-hour Jeep tour from Tusayan covers the classic South Rim introduction with transport included from local hotels. Grandview Point overlooks and an IMAX ticket at the visitor center round out a compact first visit to the canyon."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $144.08",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 237
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/39/1e/5c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Two-hour open-air Jeep tour of the South Rim",
+      "Hotel transport included from Tusayan properties",
+      "Stop at Grandview Point for canyon panoramas",
+      "Grand Canyon IMAX movie ticket included",
+      "National park entrance fees covered"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from Tusayan hotels for transfer to the Jeep staging area near the National Geographic Visitor Center."
+      },
+      "end": {
+        "description": "Return transport to your Tusayan hotel after the Jeep loop and IMAX pickup."
+      }
+    },
+    "itinerarySummary": "A two-hour Jeep tour from Tusayan covers the classic South Rim introduction with transport included from local hotels.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon South Rim",
+        "description": "Two-hour Jeep introduction loop along primary South Rim viewpoints.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grandview Point",
+        "description": "Photo stop at Grandview Point with views above Horseshoe Mesa.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon Imax Theater",
+        "description": "Receive admission to the Grand Canyon IMAX film at the visitor center.",
+        "duration": "34 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Jeep transport",
+      "Tusayan hotel pickup",
+      "Driver/guide",
+      "IMAX movie ticket",
+      "National park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Grand Entrance Grand Canyon Jeep Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Pickup from Tusayan hotels for transfer to the Jeep staging area near the National Geographic Visitor Center."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Jeep Tours"
+      },
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 144.08
+      },
+      "currency": "USD"
+    }
+  }
+}

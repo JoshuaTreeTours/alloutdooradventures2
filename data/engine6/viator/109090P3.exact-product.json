@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "109090P3",
+    "productUrl": "https://www.viator.com/tours/Arizona/Exclusive-South-Rim-Grand-Canyon-Tour-Private-SUV-Hidden-Trails/d271-109090P3",
+    "title": "Grand Canyon Luxury Car Tour Experience",
+    "description": {
+      "text": "Travel the South Rim in a private luxury SUV with a dedicated guide who tailors stops to your interests. The route covers classic overlooks, Hermit Road viewpoints, and time at Grand Canyon Village with an optional lunch reservation at El Tovar Dining Room."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "4 to 7 hours (approx.)",
+    "priceFrom": "From $1200.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 7
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/cb/4f/7a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private luxury SUV for your party only",
+      "Flexible four- to seven-hour South Rim itinerary",
+      "Hermit Road overlooks and hidden trail viewpoints",
+      "Optional El Tovar Dining Room lunch reservation",
+      "Hotel pickup available from Flagstaff and Sedona area"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Private pickup from your Flagstaff, Sedona, or South Rim hotel. Your guide confirms timing and preferred overlooks before departure."
+      },
+      "end": {
+        "description": "Return to your original pickup location after the final rim stop."
+      }
+    },
+    "itinerarySummary": "Travel the South Rim in a private luxury SUV with a dedicated guide who tailors stops to your interests.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon South Rim",
+        "description": "Scenic drive along Desert View Drive and rim roads with stops at major overlooks.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hermit Trail",
+        "description": "Visit Hermit Road viewpoints including trail overlooks above the inner canyon.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "El Tovar Dining Room",
+        "description": "Optional lunch stop at the historic El Tovar Hotel dining room on the rim.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lipan Point",
+        "description": "Photo stop at Lipan Point for wide views toward the Colorado River bend.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private luxury SUV transport",
+      "Professional guide/driver",
+      "Bottled water",
+      "National park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Grand Canyon Luxury Car Tour Experience?",
+        "answer": "The planned duration is 4 to 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Private pickup from your Flagstaff, Sedona, or South Rim hotel. Your guide confirms timing and preferred overlooks before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Luxury Car Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1200
+      },
+      "currency": "USD"
+    }
+  }
+}

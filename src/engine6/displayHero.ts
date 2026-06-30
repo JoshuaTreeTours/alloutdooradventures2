@@ -13,6 +13,9 @@ export const ENGINE6_LAKE_TAHOE_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_YOSEMITE_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/2b/0d/2c.jpg";
 
+export const ENGINE6_GRAND_CANYON_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/47/d9/03.jpg";
+
 type Engine6HeroCandidateTour = {
   productCode: string;
   heroImageUrl?: string | null;
@@ -24,6 +27,9 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
     napa: ENGINE6_NAPA_CANONICAL_CITY_HERO_URL,
     "lake-tahoe": ENGINE6_LAKE_TAHOE_CANONICAL_CITY_HERO_URL,
     yosemite: ENGINE6_YOSEMITE_CANONICAL_CITY_HERO_URL,
+  },
+  arizona: {
+    "grand-canyon-national-park": ENGINE6_GRAND_CANYON_CANONICAL_CITY_HERO_URL,
   },
 };
 

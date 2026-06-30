@@ -1,0 +1,122 @@
+{
+  "product": {
+    "productCode": "18678CS",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/45-minute-Helicopter-Flight-Over-the-Grand-Canyon-from-Tusayan-Arizona/d815-18678CS",
+    "title": "45-minute Helicopter Flight Over the Grand Canyon from Tusayan, Arizona",
+    "description": {
+      "text": "Lift off from Tusayan on a 45-minute helicopter flight tracing the eastern Grand Canyon and Colorado River corridor. Narrated aerial routing covers Kaibab National Forest, Desert View Watchtower, Marble Canyon, and the Painted Desert beyond the park boundary."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "45 minutes (approx.)",
+    "priceFrom": "From $359.32",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 2018
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/47/d9/03.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "45-minute narrated helicopter flight from Tusayan",
+      "Aerial views of the eastern Grand Canyon and Colorado River",
+      "Flyover of Desert View Watchtower and Marble Canyon",
+      "Climate-controlled cabin with oversized viewing windows",
+      "Multiple daily departures from Grand Canyon Airport area"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at the helicopter terminal near Grand Canyon National Park Airport, Tusayan, AZ 86023. Arrive 30 minutes before your scheduled flight."
+      },
+      "end": {
+        "description": "Land back at the Tusayan helicopter terminal after the 45-minute aerial loop."
+      }
+    },
+    "itinerarySummary": "Lift off from Tusayan on a 45-minute helicopter flight tracing the eastern Grand Canyon and Colorado River corridor.",
+    "itineraryItems": [
+      {
+        "title": "Kaibab National Forest",
+        "description": "Depart over ponderosa pine forest on the canyon's south plateau.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Grand Canyon National Park",
+        "description": "Sweep along the main canyon chasm with views of layered rim and inner gorge.",
+        "duration": "20 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Painted Desert",
+        "description": "Fly toward the Painted Desert badlands northeast of the canyon.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Grand Canyon Desert View Watchtower",
+        "description": "Circle the Desert View Watchtower at the eastern South Rim.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Marble Canyon",
+        "description": "Follow Marble Canyon upstream where the Colorado River narrows.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Colorado River",
+        "description": "Track the Colorado River bend through the deepest sections of the flight path.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "45-minute helicopter flight",
+      "Live narration",
+      "Helicopter fuel surcharge",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 45-minute Helicopter Flight Over the Grand Canyon from Tusayan, Arizona?",
+        "answer": "The planned duration is 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Check in at the helicopter terminal near Grand Canyon National Park Airport, Tusayan, AZ 86023. Arrive 30 minutes before your scheduled flight."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 359.32
+      },
+      "currency": "USD"
+    }
+  }
+}

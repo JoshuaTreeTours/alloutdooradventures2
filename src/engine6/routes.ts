@@ -741,6 +741,87 @@ export const ENGINE6_YOSEMITE_TOUR_PATH_PREFIX =
 export const isEngine6YosemiteTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_YOSEMITE_TOUR_PATH_PREFIX);
 
+export const ENGINE6_GRAND_CANYON_HERMIT_BACKPACKING_PRODUCT_CODE =
+  "5662346P1";
+export const ENGINE6_GRAND_CANYON_HERMIT_BACKPACKING_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/4-day-grand-canyon-backpacking-hermit-trail-5662346P1";
+export const ENGINE6_GRAND_CANYON_THREE_NIGHT_RANCH_PRODUCT_CODE =
+  "5637206P8";
+export const ENGINE6_GRAND_CANYON_THREE_NIGHT_RANCH_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/three-night-ranch-adventure-5637206P8";
+export const ENGINE6_GRAND_CANYON_TWO_NIGHT_RANCH_PRODUCT_CODE =
+  "5637206P7";
+export const ENGINE6_GRAND_CANYON_TWO_NIGHT_RANCH_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/two-night-ranch-adventure-5637206P7";
+export const ENGINE6_GRAND_CANYON_LUXURY_CAR_TOUR_PRODUCT_CODE = "109090P3";
+export const ENGINE6_GRAND_CANYON_LUXURY_CAR_TOUR_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/grand-canyon-luxury-car-tour-109090P3";
+export const ENGINE6_GRAND_CANYON_WHITewater_RAFTING_PRODUCT_CODE = "5167SD";
+export const ENGINE6_GRAND_CANYON_WHITewater_RAFTING_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/self-drive-whitewater-rafting-5167SD";
+export const ENGINE6_GRAND_CANYON_HORSESHOE_BEND_AIRPLANE_PRODUCT_CODE =
+  "6338P18";
+export const ENGINE6_GRAND_CANYON_HORSESHOE_BEND_AIRPLANE_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/horseshoe-bend-antelope-canyon-airplane-6338P18";
+export const ENGINE6_GRAND_CANYON_FULL_DAY_SMALL_GROUP_PRODUCT_CODE =
+  "265766P28";
+export const ENGINE6_GRAND_CANYON_FULL_DAY_SMALL_GROUP_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/full-day-small-group-tour-hike-265766P28";
+export const ENGINE6_GRAND_CANYON_DELUXE_RANCH_PRODUCT_CODE = "5637206P4";
+export const ENGINE6_GRAND_CANYON_DELUXE_RANCH_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/two-nights-deluxe-ranch-5637206P4";
+export const ENGINE6_GRAND_CANYON_PRIVATE_GUIDED_HIKING_PRODUCT_CODE =
+  "318692P1";
+export const ENGINE6_GRAND_CANYON_PRIVATE_GUIDED_HIKING_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/half-day-private-guided-hiking-318692P1";
+export const ENGINE6_GRAND_CANYON_SUNSET_HIKING_PRODUCT_CODE = "318692P2";
+export const ENGINE6_GRAND_CANYON_SUNSET_HIKING_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/sunset-hiking-adventure-318692P2";
+export const ENGINE6_GRAND_CANYON_HELICOPTER_FLIGHT_PRODUCT_CODE = "18678CS";
+export const ENGINE6_GRAND_CANYON_HELICOPTER_FLIGHT_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/45-minute-helicopter-flight-18678CS";
+export const ENGINE6_GRAND_CANYON_HELICOPTER_HUMMER_PRODUCT_CODE = "6613P24";
+export const ENGINE6_GRAND_CANYON_HELICOPTER_HUMMER_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/helicopter-flight-hummer-tour-6613P24";
+export const ENGINE6_GRAND_CANYON_SIGNATURE_HUMMER_PRODUCT_CODE = "89776P1";
+export const ENGINE6_GRAND_CANYON_SIGNATURE_HUMMER_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/signature-hummer-tour-89776P1";
+export const ENGINE6_GRAND_CANYON_SUNSET_SAFARI_PRODUCT_CODE = "229754P2";
+export const ENGINE6_GRAND_CANYON_SUNSET_SAFARI_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/off-road-sunset-safari-229754P2";
+export const ENGINE6_GRAND_CANYON_SUNSET_DINNER_PRODUCT_CODE = "5488718P3";
+export const ENGINE6_GRAND_CANYON_SUNSET_DINNER_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/south-rim-sunset-tour-dinner-5488718P3";
+export const ENGINE6_GRAND_CANYON_TOUR_FROM_TUSAYAN_PRODUCT_CODE = "7886P3";
+export const ENGINE6_GRAND_CANYON_TOUR_FROM_TUSAYAN_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/grand-canyon-tour-from-tusayan-7886P3";
+export const ENGINE6_GRAND_CANYON_DESERT_VIEW_JEEP_PRODUCT_CODE = "3272GCER";
+export const ENGINE6_GRAND_CANYON_DESERT_VIEW_JEEP_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/desert-view-jeep-tour-3272GCER";
+export const ENGINE6_GRAND_CANYON_RANCH_OVERNIGHT_PRODUCT_CODE = "25576P9";
+export const ENGINE6_GRAND_CANYON_RANCH_OVERNIGHT_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/western-ranch-overnight-25576P9";
+export const ENGINE6_GRAND_CANYON_BIBLICAL_SUNSET_PRODUCT_CODE = "108446P2";
+export const ENGINE6_GRAND_CANYON_BIBLICAL_SUNSET_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/biblical-creation-sunset-tour-108446P2";
+export const ENGINE6_GRAND_CANYON_LANDMARKS_AIRPLANE_PRODUCT_CODE =
+  "6338DISCOVERY";
+export const ENGINE6_GRAND_CANYON_LANDMARKS_AIRPLANE_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/landmarks-tour-by-airplane-6338DISCOVERY";
+export const ENGINE6_GRAND_CANYON_BACK_ROAD_SAFARI_PRODUCT_CODE = "229754P1";
+export const ENGINE6_GRAND_CANYON_BACK_ROAD_SAFARI_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/back-road-safari-229754P1";
+export const ENGINE6_GRAND_CANYON_GRAND_ENTRANCE_JEEP_PRODUCT_CODE =
+  "3272GCSR2";
+export const ENGINE6_GRAND_CANYON_GRAND_ENTRANCE_JEEP_ROUTE =
+  "/destinations/arizona/grand-canyon-national-park/tours/grand-entrance-jeep-tour-3272GCSR2";
+
+export const ENGINE6_GRAND_CANYON_TOUR_PATH_PREFIX =
+  "/destinations/arizona/grand-canyon-national-park/tours/";
+
+export const isEngine6GrandCanyonTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_GRAND_CANYON_TOUR_PATH_PREFIX);
+
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
   canonicalPath: string;
@@ -1569,6 +1650,94 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_LAKE_TAHOE_RAZOR_RIDGE_RUN_ROUTE,
     ENGINE6_LAKE_TAHOE_RAZOR_RIDGE_RUN_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_HERMIT_BACKPACKING_ROUTE,
+    ENGINE6_GRAND_CANYON_HERMIT_BACKPACKING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_THREE_NIGHT_RANCH_ROUTE,
+    ENGINE6_GRAND_CANYON_THREE_NIGHT_RANCH_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_TWO_NIGHT_RANCH_ROUTE,
+    ENGINE6_GRAND_CANYON_TWO_NIGHT_RANCH_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_LUXURY_CAR_TOUR_ROUTE,
+    ENGINE6_GRAND_CANYON_LUXURY_CAR_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_WHITewater_RAFTING_ROUTE,
+    ENGINE6_GRAND_CANYON_WHITewater_RAFTING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_HORSESHOE_BEND_AIRPLANE_ROUTE,
+    ENGINE6_GRAND_CANYON_HORSESHOE_BEND_AIRPLANE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_FULL_DAY_SMALL_GROUP_ROUTE,
+    ENGINE6_GRAND_CANYON_FULL_DAY_SMALL_GROUP_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_DELUXE_RANCH_ROUTE,
+    ENGINE6_GRAND_CANYON_DELUXE_RANCH_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_PRIVATE_GUIDED_HIKING_ROUTE,
+    ENGINE6_GRAND_CANYON_PRIVATE_GUIDED_HIKING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_SUNSET_HIKING_ROUTE,
+    ENGINE6_GRAND_CANYON_SUNSET_HIKING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_HELICOPTER_FLIGHT_ROUTE,
+    ENGINE6_GRAND_CANYON_HELICOPTER_FLIGHT_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_HELICOPTER_HUMMER_ROUTE,
+    ENGINE6_GRAND_CANYON_HELICOPTER_HUMMER_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_SIGNATURE_HUMMER_ROUTE,
+    ENGINE6_GRAND_CANYON_SIGNATURE_HUMMER_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_SUNSET_SAFARI_ROUTE,
+    ENGINE6_GRAND_CANYON_SUNSET_SAFARI_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_SUNSET_DINNER_ROUTE,
+    ENGINE6_GRAND_CANYON_SUNSET_DINNER_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_TOUR_FROM_TUSAYAN_ROUTE,
+    ENGINE6_GRAND_CANYON_TOUR_FROM_TUSAYAN_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_DESERT_VIEW_JEEP_ROUTE,
+    ENGINE6_GRAND_CANYON_DESERT_VIEW_JEEP_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_RANCH_OVERNIGHT_ROUTE,
+    ENGINE6_GRAND_CANYON_RANCH_OVERNIGHT_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_BIBLICAL_SUNSET_ROUTE,
+    ENGINE6_GRAND_CANYON_BIBLICAL_SUNSET_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_LANDMARKS_AIRPLANE_ROUTE,
+    ENGINE6_GRAND_CANYON_LANDMARKS_AIRPLANE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_BACK_ROAD_SAFARI_ROUTE,
+    ENGINE6_GRAND_CANYON_BACK_ROAD_SAFARI_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GRAND_CANYON_GRAND_ENTRANCE_JEEP_ROUTE,
+    ENGINE6_GRAND_CANYON_GRAND_ENTRANCE_JEEP_PRODUCT_CODE,
   ],
 ] as const;
 

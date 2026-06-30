@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "229754P2",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Off-Road-Sunset-Safari-to-Grand-Canyon-with-Entrance-Gate-Detour/d815-229754P2",
+    "title": "3 Hour Off-Road Sunset Safari to Grand Canyon with Entrance Gate Detour",
+    "description": {
+      "text": "Board a custom open-air safari vehicle for a back-road approach to the South Rim that bypasses the main entrance gate lines. The three-hour route hits Yavapai Point, Pipe Creek Vista, and Grandview Point timed for sunset over the canyon."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $133.34",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 972
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/9f/98/57.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Open-air safari vehicle with entrance gate bypass route",
+      "Sunset-timed stops at Yavapai and Grandview points",
+      "Three-hour guided South Rim overview",
+      "National park entrance fees included",
+      "Departures from Tusayan area hotels"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from Tusayan hotels and the National Geographic Visitor Center. Sunset departure times vary by season."
+      },
+      "end": {
+        "description": "Return to your Tusayan pickup point after the final sunset stop."
+      }
+    },
+    "itinerarySummary": "Board a custom open-air safari vehicle for a back-road approach to the South Rim that bypasses the main entrance gate lines.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon South Rim",
+        "description": "Enter the park via back roads and begin the rim viewpoint loop.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yavapai Point",
+        "description": "Stop at Yavapai Point for wide views and pre-sunset photo time.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pipe Creek Vista",
+        "description": "Brief stop at Pipe Creek Vista overlooking the Bright Angel fault trace.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grandview Point",
+        "description": "Sunset viewing at Grandview Point above the Horseshoe Mesa.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Safari vehicle transport",
+      "Professional guide",
+      "National park entrance fees",
+      "Hotel pickup in Tusayan"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 3 Hour Off-Road Sunset Safari to Grand Canyon with Entrance Gate Detour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Pickup from Tusayan hotels and the National Geographic Visitor Center. Sunset departure times vary by season."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Safaris"
+      },
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "4WD Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 133.34
+      },
+      "currency": "USD"
+    }
+  }
+}
