@@ -126,7 +126,7 @@ describe("extractEngine6Product itinerary JSON-LD title governance", () => {
     ]);
   });
 
-  it("preserves existing fallback behavior when JSON-LD names are absent", () => {
+  it("uses neutral fallback titles when JSON-LD names are absent", () => {
     const description =
       "Unconfirmed Landmark is not in the confirmed audit list.";
     const result = extractEngine6Product({
@@ -138,8 +138,8 @@ describe("extractEngine6Product itinerary JSON-LD title governance", () => {
     } as Record<string, unknown>);
 
     expect(result.extracted.itinerary[0]).toMatchObject({
-      title: "Unconfirmed Landmark",
-      titleSource: "description-inferred",
+      title: "Itinerary Stop 1",
+      titleSource: "explicit",
       description,
     });
   });

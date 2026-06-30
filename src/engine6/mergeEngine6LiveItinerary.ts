@@ -2,6 +2,7 @@ import {
   resolveEngine6DivergedItineraryTitle,
   type Engine6ItineraryTitleSource,
 } from "../../api/engine6/itineraryTitlePolicy";
+import { governEngine6ItineraryStopTitle } from "../../api/engine6/itineraryTitleGovernance";
 import { getEngine6BundledRawProductByProductCode } from "./registry";
 import type { Engine6ItineraryItem } from "./types";
 
@@ -190,7 +191,8 @@ export const getEngine6ItineraryMergeMode = (
  */
 export const resolveEngine6MergedItineraryTitle = (
   nativeItem: Engine6ItineraryItem | undefined,
-  liveItem: Pick<Engine6LiveItineraryItem, "title" | "titleSource">
+  liveItem: Pick<Engine6LiveItineraryItem, "title" | "titleSource">,
+  rowIndex = 0
 ): string => {
   const nativeTitle = nativeItem?.title?.trim();
   if (nativeTitle && liveItem.titleSource === "description-inferred") {
@@ -200,12 +202,11 @@ export const resolveEngine6MergedItineraryTitle = (
     return nativeTitle;
   }
 
-  const liveTitle = liveItem.title?.trim();
-  if (!liveTitle) {
-    return "This stop";
-  }
-
-  return liveTitle;
+  return governEngine6ItineraryStopTitle({
+    candidateTitle: liveItem.title,
+    titleSource: liveItem.titleSource,
+    rowIndex,
+  }).title;
 };
 
 const isHighConfidenceLiveItineraryTitleSource = (
@@ -314,7 +315,11 @@ export const resolveEngine6DivergedMergedItineraryTitle = (
     if (nativeTitle) {
       return nativeTitle;
     }
-    return "This stop";
+    return governEngine6ItineraryStopTitle({
+      candidateTitle: null,
+      titleSource: "description-inferred",
+      rowIndex: context?.rowIndex ?? 0,
+    }).title;
   }
 
   if (liveTitle) {
@@ -325,7 +330,11 @@ export const resolveEngine6DivergedMergedItineraryTitle = (
     return nativeTitle;
   }
 
-  return "This stop";
+  return governEngine6ItineraryStopTitle({
+    candidateTitle: null,
+    titleSource: "description-inferred",
+    rowIndex: context?.rowIndex ?? 0,
+  }).title;
 };
 
 const mergeEngine6NativeItineraryWithLiveAligned = (
@@ -339,7 +348,7 @@ const mergeEngine6NativeItineraryWithLiveAligned = (
     return {
       ...(nativeItem ?? {}),
       ...liveFields,
-      title: resolveEngine6MergedItineraryTitle(nativeItem, liveItem),
+      title: resolveEngine6MergedItineraryTitle(nativeItem, liveItem, index),
     };
   });
 
