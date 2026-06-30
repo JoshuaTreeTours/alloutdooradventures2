@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "52661P40",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/The-Full-Yellowstone-2-day-Experience-Upper-and-Lower-package/d22411-52661P40",
+    "title": "Yellowstone 2-Step 2 of Days Of Upper/Lower Loop West Yellowstone",
+    "description": {
+      "text": "Join a small group of up to fourteen for a two-day sweep of Yellowstone's upper and lower loops from West Yellowstone. The same route as the private version covers Lamar Valley wildlife, Mammoth Hot Springs terraces, Old Faithful, Grand Prismatic Spring, and canyon overlooks at a shared per-person rate."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "2 days (approx.)",
+    "priceFrom": "From $424.15",
+    "reviews": {
+      "combinedAverageRating": 4.1,
+      "totalReviews": 8
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/25/0c/7d/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Two-day small-group upper and lower loop tour",
+      "Maximum fourteen guests with professional guide",
+      "Lamar Valley and Hayden Valley wildlife stops",
+      "Old Faithful and Grand Prismatic Spring boardwalks",
+      "Grand Canyon of the Yellowstone rim viewpoints"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning pickup from West Yellowstone hotels and the visitor center area. Confirm your pickup window when booking."
+      },
+      "end": {
+        "description": "Return to West Yellowstone after the day-two lower loop and Old Faithful stop."
+      }
+    },
+    "itinerarySummary": "Join a small group of up to fourteen for a two-day sweep of Yellowstone's upper and lower loops from West Yellowstone.",
+    "itineraryItems": [
+      {
+        "title": "Lamar Valley",
+        "description": "Day one wildlife drive through Lamar Valley with stops for bison herds and predator habitat.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mammoth Hot Springs",
+        "description": "Walk the Mammoth Hot Springs travertine terraces and historic fort area.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Faithful",
+        "description": "Day two geyser basin stop timed for an Old Faithful eruption.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Prismatic Spring",
+        "description": "Boardwalk visit to Grand Prismatic Spring in Midway Geyser Basin.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon of the Yellowstone",
+        "description": "Rim stop at Artist Point for views of the yellow canyon and Lower Falls.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Small-group transport",
+      "Park entrance fees",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Yellowstone 2-Step 2 of Days Of Upper/Lower Loop West Yellowstone?",
+        "answer": "The planned duration is 2 days."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Morning pickup from West Yellowstone hotels and the visitor center area. Confirm your pickup window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Multi-day Tours"
+      },
+      {
+        "label": "Small Group Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 424.15
+      },
+      "currency": "USD"
+    }
+  }
+}

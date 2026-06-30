@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "23667P1",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/Yellowstone-Hiking-Tour/d22411-23667P1",
+    "title": "Grand Canyon of the Yellowstone Rim and Loop Hike with Lunch",
+    "description": {
+      "text": "Trek rim trails along the Grand Canyon of the Yellowstone on a six-hour guided hike with included lunch. The route visits Artist Point, Inspiration Point, and viewpoints above the Lower Falls with interpretive commentary on the canyon's hydrothermal coloring and river erosion."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $182.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 382
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/19/f9/d9/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Six-hour Grand Canyon of the Yellowstone rim hike",
+      "Artist Point and Inspiration Point viewpoints",
+      "Lower Falls overlook trails",
+      "Included trail lunch",
+      "Geology commentary on yellow canyon walls"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Canyon Village area trailhead near the Grand Canyon of the Yellowstone. Bring hiking boots and rain layer."
+      },
+      "end": {
+        "description": "Return to Canyon Village after completing the rim loop and lunch stop."
+      }
+    },
+    "itinerarySummary": "Trek rim trails along the Grand Canyon of the Yellowstone on a six-hour guided hike with included lunch.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon of the Yellowstone",
+        "description": "Guided rim hike along the Grand Canyon of the Yellowstone trail system.",
+        "duration": "3 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Artist Point",
+        "description": "Primary viewpoint stop at Artist Point above the Lower Falls.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Inspiration Point",
+        "description": "North rim stop at Inspiration Point for canyon depth views.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lower Falls",
+        "description": "Viewpoints above the Lower Falls plunge and Yellowstone River gorge.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional hiking guide",
+      "Trail lunch",
+      "Bear-safety briefing",
+      "Park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Grand Canyon of the Yellowstone Rim and Loop Hike with Lunch?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Meet at the Canyon Village area trailhead near the Grand Canyon of the Yellowstone. Bring hiking boots and rain layer."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "Nature Walks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 182
+      },
+      "currency": "USD"
+    }
+  }
+}

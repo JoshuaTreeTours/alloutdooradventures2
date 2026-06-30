@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "463268P2",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/Half-Day-Private-Bespoke-Photography-Tour-of-Yellowstone/d22411-463268P2",
+    "title": "Private Yellowstone Summer Wildlife Photo Safaris - Half Day",
+    "description": {
+      "text": "A half-day private photo safari flexes between Lamar Valley wildlife telephoto sessions and landscape shots at Grand Prismatic Spring and Old Faithful. Your photographer guide adjusts the four- to five-hour routing for light conditions and provides hands-on coaching for exposure and composition."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "4 to 5 hours (approx.)",
+    "priceFrom": "From $645.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 16
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/1b/86/79/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Half-day private summer wildlife photo safari",
+      "Lamar Valley or Hayden Valley wildlife focus",
+      "Grand Prismatic Spring landscape compositions",
+      "Old Faithful geyser eruption photography",
+      "Photographer guide with custom routing"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from West Yellowstone or Gardiner area before dawn for optimal Lamar Valley light when selected."
+      },
+      "end": {
+        "description": "Return to your pickup location after the final geyser basin or wildlife photo stop."
+      }
+    },
+    "itinerarySummary": "A half-day private photo safari flexes between Lamar Valley wildlife telephoto sessions and landscape shots at Grand Prismatic Spring and Old Faithful.",
+    "itineraryItems": [
+      {
+        "title": "Lamar Valley",
+        "description": "Dawn or dusk wildlife photography in Lamar Valley when routing prioritizes predators.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hayden Valley",
+        "description": "Alternative wildlife meadow photography in Hayden Valley.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Grand Prismatic Spring",
+        "description": "Midday color and steam compositions at Grand Prismatic Spring.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Faithful",
+        "description": "Geyser eruption photography at Old Faithful when time remains.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional photographer guide",
+      "Private vehicle",
+      "Bottled water",
+      "Park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Yellowstone Summer Wildlife Photo Safaris - Half Day?",
+        "answer": "The planned duration is 4 to 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Pickup from West Yellowstone or Gardiner area before dawn for optimal Lamar Valley light when selected."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 645
+      },
+      "currency": "USD"
+    }
+  }
+}

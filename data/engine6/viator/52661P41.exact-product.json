@@ -1,0 +1,127 @@
+{
+  "product": {
+    "productCode": "52661P41",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/The-Full-Yellowstone-Two-Day-experience-From-West-Yellowstone/d22411-52661P41",
+    "title": "The Full Two Day Private Yellowstone Day Trips West Yellowstone",
+    "description": {
+      "text": "Cover both the upper and lower loops of Yellowstone across two private days with a dedicated guide who paces wildlife stops and geyser basins to your interests. Day one focuses on Lamar Valley and Mammoth Hot Springs while day two hits Old Faithful, Grand Prismatic Spring, and the Grand Canyon of the Yellowstone."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "2 days (approx.)",
+    "priceFrom": "From $2399.00",
+    "reviews": {
+      "combinedAverageRating": 0,
+      "totalReviews": 0
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/d9/ee/1d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private two-day upper and lower loop Yellowstone itinerary",
+      "Wildlife viewing in Lamar Valley and Hayden Valley",
+      "Old Faithful and Grand Prismatic Spring geyser stops",
+      "Grand Canyon of the Yellowstone and Artist Point overlooks",
+      "Flexible pacing for photography and family-friendly hikes"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Cody Wyoming Adventures staging area in West Yellowstone, MT 59758. Your guide confirms pickup time and daily loop priorities before departure."
+      },
+      "end": {
+        "description": "Return to West Yellowstone after the second-day lower loop completes at Old Faithful and canyon viewpoints."
+      }
+    },
+    "itinerarySummary": "Cover both the upper and lower loops of Yellowstone across two private days with a dedicated guide who paces wildlife stops and geyser basins to your interests.",
+    "itineraryItems": [
+      {
+        "title": "Lamar Valley",
+        "description": "Day one begins in Lamar Valley scanning for bison, elk, and wolf activity along the river corridor.",
+        "duration": "3 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mammoth Hot Springs",
+        "description": "Walk the travertine terraces at Mammoth Hot Springs on the park's northern edge.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Norris Geyser Basin",
+        "description": "Explore Norris Geyser Basin, Yellowstone's hottest and most changeable thermal area.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Faithful",
+        "description": "Day two reaches Upper Geyser Basin for an Old Faithful eruption and boardwalk time.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Prismatic Spring",
+        "description": "View the rainbow-colored Grand Prismatic Spring from the Midway Geyser Basin boardwalk.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon of the Yellowstone",
+        "description": "Finish at Artist Point overlooking the yellow canyon walls and Lower Falls.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Air-conditioned vehicle",
+      "Park entrance fees",
+      "Bottled water and snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The Full Two Day Private Yellowstone Day Trips West Yellowstone?",
+        "answer": "The planned duration is 2 days."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Meet at the Cody Wyoming Adventures staging area in West Yellowstone, MT 59758. Your guide confirms pickup time and daily loop priorities before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Multi-day Tours"
+      },
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 2399
+      },
+      "currency": "USD"
+    }
+  }
+}

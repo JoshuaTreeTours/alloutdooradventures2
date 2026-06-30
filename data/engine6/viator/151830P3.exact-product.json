@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "151830P3",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/Evening-Wildlife-Tour/d22411-151830P3",
+    "title": "Private Yellowstone Wolf Watching & Wildlife Safari + lunch",
+    "description": {
+      "text": "An evening-focused private safari targets wolf and predator activity in Lamar Valley and Hayden Valley with a provided lunch. Your guide uses spotting scopes at known wildlife corridors and adjusts routing for recent park sightings of bears, bison, and elk herds."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "6 to 9 hours (approx.)",
+    "priceFrom": "From $1999.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 100
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/19/f3/10/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private wolf-watching and wildlife safari",
+      "Lamar Valley and Hayden Valley predator corridors",
+      "Spotting scopes and binoculars provided",
+      "Included picnic lunch in the park",
+      "Flexible evening timing for active wildlife hours"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Early pickup from West Yellowstone area lodgings for dawn wildlife runs in Lamar Valley, WY."
+      },
+      "end": {
+        "description": "Return to West Yellowstone after dusk wildlife viewing in Hayden Valley or Norris Geyser Basin."
+      }
+    },
+    "itinerarySummary": "An evening-focused private safari targets wolf and predator activity in Lamar Valley and Hayden Valley with a provided lunch.",
+    "itineraryItems": [
+      {
+        "title": "Lamar Valley",
+        "description": "Dawn and dusk drives through Lamar Valley for wolf, bear, and bison sightings.",
+        "duration": "3 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hayden Valley",
+        "description": "Midday and evening scanning in Hayden Valley's open meadows and river bends.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mammoth Hot Springs",
+        "description": "Optional thermal-area stop at Mammoth Hot Springs between wildlife sessions.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Norris Geyser Basin",
+        "description": "Brief boardwalk stop at Norris Geyser Basin when routing allows.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Private wildlife guide",
+      "Picnic lunch",
+      "Spotting scope and binoculars",
+      "Park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Yellowstone Wolf Watching & Wildlife Safari + lunch?",
+        "answer": "The planned duration is 6 to 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Early pickup from West Yellowstone area lodgings for dawn wildlife runs in Lamar Valley, WY."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "Safaris"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1999
+      },
+      "currency": "USD"
+    }
+  }
+}

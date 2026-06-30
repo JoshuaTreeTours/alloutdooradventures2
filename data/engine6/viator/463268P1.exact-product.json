@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "463268P1",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/Private-Custom-Photo-Tours-of-Yellowstone-National-Park/d22411-463268P1",
+    "title": "Private, Bespoke Yellowstone Summer Wildlife Photo Safaris",
+    "description": {
+      "text": "Custom summer photo safaris route through Lamar Valley, Hayden Valley, and canyon overlooks with a photographer guide who coaches composition and exposure settings. The eight- to ten-hour day flexes between wildlife telephoto opportunities and landscape shots at Grand Prismatic Spring and the Grand Canyon of the Yellowstone."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "8 to 10 hours (approx.)",
+    "priceFrom": "From $1055.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 8
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/1b/87/4e/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Bespoke summer wildlife and landscape photo safari",
+      "Lamar Valley and Hayden Valley wildlife photography",
+      "Grand Prismatic Spring color and steam compositions",
+      "Grand Canyon of the Yellowstone rim landscapes",
+      "Photographer guide with custom routing"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from West Yellowstone or Gardiner area hotels before dawn for Lamar Valley light."
+      },
+      "end": {
+        "description": "Return to your pickup location after the final canyon or geyser basin photo stop."
+      }
+    },
+    "itinerarySummary": "Custom summer photo safaris route through Lamar Valley, Hayden Valley, and canyon overlooks with a photographer guide who coaches composition and exposure settings.",
+    "itineraryItems": [
+      {
+        "title": "Lamar Valley",
+        "description": "Dawn wildlife photography in Lamar Valley with telephoto coaching.",
+        "duration": "2 hours 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hayden Valley",
+        "description": "Midday bison and raptor photography in Hayden Valley meadows.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Prismatic Spring",
+        "description": "Midway Geyser Basin compositions at Grand Prismatic Spring.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon of the Yellowstone",
+        "description": "Afternoon rim landscapes at the Grand Canyon of the Yellowstone.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional photographer guide",
+      "Private vehicle",
+      "Bottled water",
+      "Park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private, Bespoke Yellowstone Summer Wildlife Photo Safaris?",
+        "answer": "The planned duration is 8 to 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Pickup from West Yellowstone or Gardiner area hotels before dawn for Lamar Valley light."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1055
+      },
+      "currency": "USD"
+    }
+  }
+}

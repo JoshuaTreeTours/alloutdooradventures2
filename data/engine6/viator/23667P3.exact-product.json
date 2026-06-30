@@ -1,0 +1,122 @@
+{
+  "product": {
+    "productCode": "23667P3",
+    "productUrl": "https://www.viator.com/tours/West-Yellowstone/Yellowstone-Tour-Lower-Loop-Active-Van-Adventure-from-West-Yellowstone/d50636-23667P3",
+    "title": "Lower Loop Van Tour from West Yellowstone: Grand Prismatic and Old Faithful",
+    "description": {
+      "text": "An active eight-hour lower loop van tour from West Yellowstone covers Old Faithful, Grand Prismatic Spring, Hayden Valley, and the Grand Canyon of the Yellowstone. Frequent short walks at each stop keep the day engaging while the guide handles park logistics and wildlife spotting."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $312.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 412
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/2d/74/f5/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Highly reviewed lower loop van tour with 412 traveler reviews",
+      "Old Faithful eruption and Upper Geyser Basin boardwalk",
+      "Grand Prismatic Spring and Midway Geyser Basin",
+      "Hayden Valley wildlife stop",
+      "Grand Canyon of the Yellowstone and Artist Point"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning pickup from West Yellowstone hotels. Active walking shoes recommended for frequent short hikes."
+      },
+      "end": {
+        "description": "Return to West Yellowstone after Artist Point and the final geyser basin stops."
+      }
+    },
+    "itinerarySummary": "An active eight-hour lower loop van tour from West Yellowstone covers Old Faithful, Grand Prismatic Spring, Hayden Valley, and the Grand Canyon of the Yellowstone.",
+    "itineraryItems": [
+      {
+        "title": "Old Faithful",
+        "description": "Upper Geyser Basin boardwalk timed for an Old Faithful eruption.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Prismatic Spring",
+        "description": "Midway Geyser Basin boardwalk at Grand Prismatic Spring.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hayden Valley",
+        "description": "Wildlife stop in Hayden Valley meadows along the river.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon of the Yellowstone",
+        "description": "Rim walk to Artist Point above the Lower Falls.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Artist Point",
+        "description": "Photo time at Artist Point on the canyon's south rim.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Active van transport",
+      "Bottled water",
+      "Park entrance fees",
+      "Hotel pickup in West Yellowstone"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Lower Loop Van Tour from West Yellowstone: Grand Prismatic and Old Faithful?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Morning pickup from West Yellowstone hotels. Active walking shoes recommended for frequent short hikes."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 312
+      },
+      "currency": "USD"
+    }
+  }
+}

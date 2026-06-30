@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "151830P8",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/PRIVATE-YELLOWSTONE-Hiking-Hot-Spring-and-Geyser-tour-Picnic-lunch-included/d22411-151830P8",
+    "title": "Private Hidden Gems of Yellowstone! Lunch w/ family friendly hikes included!",
+    "description": {
+      "text": "Discover lesser-known trails and thermal features on a private hiking-focused day with picnic lunch included. Routes combine short family-friendly walks near Norris Geyser Basin and Grand Prismatic Spring with canyon rim time at the Grand Canyon of the Yellowstone away from the busiest pullouts."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "7 to 9 hours (approx.)",
+    "priceFrom": "From $1999.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 23
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/19/ec/97/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private hiking tour of Yellowstone hidden gems",
+      "Family-friendly trail sections with guide pacing",
+      "Norris Geyser Basin and Grand Prismatic Spring stops",
+      "Picnic lunch at a scenic park location",
+      "Grand Canyon of the Yellowstone rim hike time"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from West Yellowstone hotels. Wear sturdy shoes and bring layers for changing park weather."
+      },
+      "end": {
+        "description": "Return to West Yellowstone after the final canyon or geyser basin hike."
+      }
+    },
+    "itinerarySummary": "Discover lesser-known trails and thermal features on a private hiking-focused day with picnic lunch included.",
+    "itineraryItems": [
+      {
+        "title": "Norris Geyser Basin",
+        "description": "Morning boardwalk loop through Norris Geyser Basin's steaming pools and geysers.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Prismatic Spring",
+        "description": "Midday stop at Grand Prismatic Spring with optional overlook hike when open.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Faithful",
+        "description": "Upper Geyser Basin visit timed around an Old Faithful eruption.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon of the Yellowstone",
+        "description": "Afternoon rim hike along the Grand Canyon of the Yellowstone viewpoints.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private hiking guide",
+      "Picnic lunch",
+      "Trail snacks and water",
+      "Park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Hidden Gems of Yellowstone! Lunch w/ family friendly hikes included!?",
+        "answer": "The planned duration is 7 to 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Pickup from West Yellowstone hotels. Wear sturdy shoes and bring layers for changing park weather."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1999
+      },
+      "currency": "USD"
+    }
+  }
+}

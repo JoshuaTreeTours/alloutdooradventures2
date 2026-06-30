@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "265766P66",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/Yellowstone-Full-Day-Private-Tour-and-Hike-from-Inside-the-Park/d22411-265766P66",
+    "title": "Yellowstone Full Day Private Tour & Hike - from Inside the Park",
+    "description": {
+      "text": "Guests staying inside Yellowstone meet a private guide for a six- to eight-hour tour combining scenic drives and guided hikes. The route covers Old Faithful, Grand Prismatic Spring overlooks, and rim trails at the Grand Canyon of the Yellowstone tailored to your group's fitness level."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "6 to 8 hours (approx.)",
+    "priceFrom": "From $951.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 4
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/31/fc/53/15/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private tour and hike for guests staying inside the park",
+      "Old Faithful and Grand Prismatic Spring stops",
+      "Guided rim hike at Grand Canyon of the Yellowstone",
+      "Trail choice matched to group fitness",
+      "Certified guide with safety equipment"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at your in-park lodge or campground near Old Faithful or Canyon Village. Confirm meeting point when booking."
+      },
+      "end": {
+        "description": "Return to your in-park lodging after the guided hike and final geyser basin stop."
+      }
+    },
+    "itinerarySummary": "Guests staying inside Yellowstone meet a private guide for a six- to eight-hour tour combining scenic drives and guided hikes.",
+    "itineraryItems": [
+      {
+        "title": "Old Faithful",
+        "description": "Morning Upper Geyser Basin boardwalk and Old Faithful eruption viewing.",
+        "duration": "1 hour 15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Prismatic Spring",
+        "description": "Midday stop at Grand Prismatic Spring with optional overlook hike.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon of the Yellowstone",
+        "description": "Guided rim hike along the Grand Canyon of the Yellowstone to Artist Point.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Artist Point",
+        "description": "Photo time at Artist Point above the Lower Falls plunge.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private certified hiking guide",
+      "Trail snacks and water",
+      "Safety equipment",
+      "Park entrance fees when applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Yellowstone Full Day Private Tour & Hike - from Inside the Park?",
+        "answer": "The planned duration is 6 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Meet your guide at your in-park lodge or campground near Old Faithful or Canyon Village. Confirm meeting point when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 951
+      },
+      "currency": "USD"
+    }
+  }
+}

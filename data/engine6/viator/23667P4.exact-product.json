@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "23667P4",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/5-Mile-Upper-Geyser-Basin-Loop-Hike-Morning-Glory-Old-Faithful-with-Lunch/d22411-23667P4",
+    "title": "6-Mile Geyser Hiking Tour in Yellowstone with Lunch",
+    "description": {
+      "text": "Hike a six-mile loop through the Upper Geyser Basin past Morning Glory Pool and Castle Geyser with Old Faithful timed near the trail's midpoint. The six-hour guided hike includes lunch and interpretive commentary on Yellowstone's geothermal plumbing and geyser eruption cycles."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $182.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 87
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/1a/12/fb/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Six-mile Upper Geyser Basin guided hike",
+      "Morning Glory Pool and Castle Geyser trail sections",
+      "Old Faithful eruption timed on the loop",
+      "Included trail lunch",
+      "Geothermal interpretive commentary from guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Old Faithful area trailhead. Wear sturdy hiking shoes and bring water for the six-mile loop."
+      },
+      "end": {
+        "description": "Finish at the Old Faithful visitor area after completing the Upper Geyser Basin loop."
+      }
+    },
+    "itinerarySummary": "Hike a six-mile loop through the Upper Geyser Basin past Morning Glory Pool and Castle Geyser with Old Faithful timed near the trail's midpoint.",
+    "itineraryItems": [
+      {
+        "title": "Upper Geyser Basin",
+        "description": "Six-mile guided loop through the Upper Geyser Basin boardwalks and trails.",
+        "duration": "4 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Morning Glory Pool",
+        "description": "Trail stop at Morning Glory Pool's vivid blue thermal spring.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Faithful",
+        "description": "Timed stop for an Old Faithful eruption during the basin loop.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Prismatic Spring",
+        "description": "Optional distant view toward Grand Prismatic Spring steam plumes when routing allows.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional hiking guide",
+      "Trail lunch",
+      "Bear-safety briefing",
+      "Park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 6-Mile Geyser Hiking Tour in Yellowstone with Lunch?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Meet at the Old Faithful area trailhead. Wear sturdy hiking shoes and bring water for the six-mile loop."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "Nature Walks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 182
+      },
+      "currency": "USD"
+    }
+  }
+}
