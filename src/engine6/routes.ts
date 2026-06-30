@@ -898,6 +898,64 @@ export const ENGINE6_YELLOWSTONE_TOUR_PATH_PREFIX =
 export const isEngine6YellowstoneTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_YELLOWSTONE_TOUR_PATH_PREFIX);
 
+export const ENGINE6_ZION_265766P9_PRODUCT_CODE = "265766P9";
+export const ENGINE6_ZION_265766P9_ROUTE =
+  "/destinations/utah/zion-national-park/tours/zion-full-day-private-tour-hike-265766P9";
+export const ENGINE6_ZION_199627P1_PRODUCT_CODE = "199627P1";
+export const ENGINE6_ZION_199627P1_ROUTE =
+  "/destinations/utah/zion-national-park/tours/narrows-zion-private-guided-hike-199627P1";
+export const ENGINE6_ZION_170406P19_PRODUCT_CODE = "170406P19";
+export const ENGINE6_ZION_170406P19_ROUTE =
+  "/destinations/utah/zion-national-park/tours/private-angels-landing-day-hike-170406P19";
+export const ENGINE6_ZION_310623P1_PRODUCT_CODE = "310623P1";
+export const ENGINE6_ZION_310623P1_ROUTE =
+  "/destinations/utah/zion-national-park/tours/east-zion-via-ferrata-canyoneering-rappelling-310623P1";
+export const ENGINE6_ZION_318343P2_PRODUCT_CODE = "318343P2";
+export const ENGINE6_ZION_318343P2_ROUTE =
+  "/destinations/utah/zion-national-park/tours/zion-kolob-ghost-town-slot-canyon-vistas-318343P2";
+export const ENGINE6_ZION_265766P10_PRODUCT_CODE = "265766P10";
+export const ENGINE6_ZION_265766P10_ROUTE =
+  "/destinations/utah/zion-national-park/tours/bryce-canyon-full-day-private-tour-hike-265766P10";
+export const ENGINE6_ZION_265766P27_PRODUCT_CODE = "265766P27";
+export const ENGINE6_ZION_265766P27_ROUTE =
+  "/destinations/utah/zion-national-park/tours/zion-full-day-small-group-tour-narrows-265766P27";
+export const ENGINE6_ZION_286874P2_PRODUCT_CODE = "286874P2";
+export const ENGINE6_ZION_286874P2_ROUTE =
+  "/destinations/utah/zion-national-park/tours/guided-angels-landing-with-permit-286874P2";
+export const ENGINE6_ZION_300061P2_PRODUCT_CODE = "300061P2";
+export const ENGINE6_ZION_300061P2_ROUTE =
+  "/destinations/utah/zion-national-park/tours/huntress-slot-canyon-adventure-300061P2";
+export const ENGINE6_ZION_163873P9_PRODUCT_CODE = "163873P9";
+export const ENGINE6_ZION_163873P9_ROUTE =
+  "/destinations/utah/zion-national-park/tours/east-zion-crimson-canyon-hike-utv-163873P9";
+export const ENGINE6_ZION_163873P18_PRODUCT_CODE = "163873P18";
+export const ENGINE6_ZION_163873P18_ROUTE =
+  "/destinations/utah/zion-national-park/tours/zion-sunset-jeep-tour-163873P18";
+export const ENGINE6_ZION_118887P1_PRODUCT_CODE = "118887P1";
+export const ENGINE6_ZION_118887P1_ROUTE =
+  "/destinations/utah/zion-national-park/tours/award-winning-utv-slot-canyon-tour-118887P1";
+export const ENGINE6_ZION_118887P5_PRODUCT_CODE = "118887P5";
+export const ENGINE6_ZION_118887P5_ROUTE =
+  "/destinations/utah/zion-national-park/tours/great-chamber-peekaboo-slot-canyon-utv-118887P5";
+export const ENGINE6_ZION_118887P2_PRODUCT_CODE = "118887P2";
+export const ENGINE6_ZION_118887P2_ROUTE =
+  "/destinations/utah/zion-national-park/tours/east-zion-slot-canyon-canyoneering-utv-118887P2";
+export const ENGINE6_ZION_275087P2_PRODUCT_CODE = "275087P2";
+export const ENGINE6_ZION_275087P2_ROUTE =
+  "/destinations/utah/zion-national-park/tours/peekaboo-slot-canyon-great-chamber-loop-utv-275087P2";
+export const ENGINE6_ZION_163873P1_PRODUCT_CODE = "163873P1";
+export const ENGINE6_ZION_163873P1_ROUTE =
+  "/destinations/utah/zion-national-park/tours/east-zion-canyoneering-elkheart-canyon-utv-163873P1";
+export const ENGINE6_ZION_118744P4_PRODUCT_CODE = "118744P4";
+export const ENGINE6_ZION_118744P4_ROUTE =
+  "/destinations/utah/zion-national-park/tours/white-sand-cave-118744P4";
+
+export const ENGINE6_ZION_TOUR_PATH_PREFIX =
+  "/destinations/utah/zion-national-park/tours/";
+
+export const isEngine6ZionTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_ZION_TOUR_PATH_PREFIX);
+
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
   canonicalPath: string;
@@ -1906,6 +1964,74 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_YELLOWSTONE_463268P2_ROUTE,
     ENGINE6_YELLOWSTONE_463268P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_265766P9_ROUTE,
+    ENGINE6_ZION_265766P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_199627P1_ROUTE,
+    ENGINE6_ZION_199627P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_170406P19_ROUTE,
+    ENGINE6_ZION_170406P19_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_310623P1_ROUTE,
+    ENGINE6_ZION_310623P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_318343P2_ROUTE,
+    ENGINE6_ZION_318343P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_265766P10_ROUTE,
+    ENGINE6_ZION_265766P10_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_265766P27_ROUTE,
+    ENGINE6_ZION_265766P27_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_286874P2_ROUTE,
+    ENGINE6_ZION_286874P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_300061P2_ROUTE,
+    ENGINE6_ZION_300061P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_163873P9_ROUTE,
+    ENGINE6_ZION_163873P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_163873P18_ROUTE,
+    ENGINE6_ZION_163873P18_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_118887P1_ROUTE,
+    ENGINE6_ZION_118887P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_118887P5_ROUTE,
+    ENGINE6_ZION_118887P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_118887P2_ROUTE,
+    ENGINE6_ZION_118887P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_275087P2_ROUTE,
+    ENGINE6_ZION_275087P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_163873P1_ROUTE,
+    ENGINE6_ZION_163873P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ZION_118744P4_ROUTE,
+    ENGINE6_ZION_118744P4_PRODUCT_CODE,
   ],
 ] as const;
 

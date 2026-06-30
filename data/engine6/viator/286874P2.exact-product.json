@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "286874P2",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Guided-Angels-Landing-Tour/d5610-286874P2",
+    "title": "Guided Angel's Landing With Permit",
+    "description": {
+      "text": "Hike Angels Landing with a guide who secures your permit and leads the West Rim Trail chain section to the summit. The six-hour outing includes pacing through Walter's Wiggles, rest at Scout Lookout, and a guided traverse of the exposed ridge with safety briefing at each chain segment. Suitable for fit hikers comfortable with heights who want permit logistics handled. Group format keeps the route social while maintaining safe spacing on the chains."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $350.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 28
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/c9/03/ac.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided Angels Landing hike with permit included",
+      "West Rim Trail ascent with certified guide",
+      "Chain section pacing and safety briefing",
+      "Scout Lookout rest before summit push",
+      "Six-hour round-trip format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Zion Canyon Visitor Center shuttle stop. Arrive 15 minutes before departure."
+      },
+      "end": {
+        "description": "Return to the Grotto trailhead after descending from Scout Lookout or the summit."
+      }
+    },
+    "itinerarySummary": "Hike Angels Landing with a guide who secures your permit and leads the West Rim Trail chain section to the summit.",
+    "itineraryItems": [
+      {
+        "title": "Zion Canyon Visitor Center",
+        "description": "Group briefing and permit check before the hike begins.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "West Rim Trail",
+        "description": "Steady climb on the West Rim Trail toward Scout Lookout.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Walter's Wiggles",
+        "description": "Switchback section climbing toward the chain route.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Scout Lookout",
+        "description": "Rest point with views before the chain-assisted section.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Angels Landing",
+        "description": "Chain traverse to the summit viewpoint over Zion Canyon.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Certified hiking guide",
+      "Angels Landing permit",
+      "Trail snacks and water",
+      "Safety equipment"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Guided Angel's Landing With Permit?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Meet at the Zion Canyon Visitor Center shuttle stop. Arrive 15 minutes before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Adrenaline & Extreme"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 350
+      },
+      "currency": "USD"
+    }
+  }
+}

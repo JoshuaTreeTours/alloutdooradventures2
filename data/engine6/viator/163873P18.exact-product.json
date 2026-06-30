@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "163873P18",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Zion-Sunset-Jeep-Tour/d5610-163873P18",
+    "title": "Zion Sunset Jeep Tour",
+    "description": {
+      "text": "Watch sunset over Zion's eastern plateau on a Jeep tour that climbs off-road routes to high viewpoints above the main canyon. Open-air Jeep transport reaches Pine Knoll and other overlooks timed for golden-hour light across sandstone domes and pine forest. The short two-hour format suits families and photographers who want a sunset experience without a full-day commitment. Departure from the East Zion area near Zion Ponderosa."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $81.48",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 261
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0c/12/32/fd.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sunset-timed Jeep tour in East Zion",
+      "Off-road ascent to high plateau overlooks",
+      "Pine Knoll and sunset viewpoint stops",
+      "Open-air Jeep with driver-guide commentary",
+      "Two-hour format ideal for evening plans"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Zion Ponderosa/East Zion Jeep staging area. Sunset departure times shift seasonally."
+      },
+      "end": {
+        "description": "Return to the staging area after the final sunset stop."
+      }
+    },
+    "itinerarySummary": "Watch sunset over Zion's eastern plateau on a Jeep tour that climbs off-road routes to high viewpoints above the main canyon.",
+    "itineraryItems": [
+      {
+        "title": "Zion Ponderosa",
+        "description": "Jeep departure from the East Zion staging area.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Off-Road Ascent",
+        "description": "Climb off-road routes through pine forest to plateau overlooks.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pine Knoll Overlook",
+        "description": "High viewpoint stop with wide eastern Zion panoramas.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sunset Viewpoint",
+        "description": "Final stop timed for sunset light over sandstone domes.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Jeep transport",
+      "Driver/guide",
+      "Bottled water",
+      "Sunset viewpoint access"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Zion Sunset Jeep Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Meet at the Zion Ponderosa/East Zion Jeep staging area. Sunset departure times shift seasonally."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Jeep Tours"
+      },
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "4WD Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 81.48
+      },
+      "currency": "USD"
+    }
+  }
+}

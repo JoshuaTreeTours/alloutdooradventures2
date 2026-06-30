@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "118744P4",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/The-White-Sand-Cave/d5610-118744P4",
+    "title": "The White Sand Cave",
+    "description": {
+      "text": "Visit the White Sand Cave and Great Chamber on a half-day hiking tour with off-road transfer from Kanab. Guides navigate desert backroads to the trailhead, then lead a short ascent into the white sand alcove and Great Chamber for photography. This small-group outing focuses on unique photo locations outside Zion National Park boundaries. Return transfer and trail snacks are included."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "3 to 4 hours (approx.)",
+    "priceFrom": "From $129.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 310
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/e6/6c/0b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "White Sand Cave and Great Chamber photo tour",
+      "Off-road desert approach from Kanab",
+      "Small-group guided hiking format",
+      "Great Chamber alcove photo stop",
+      "Half-day red rock country outing"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Kanab meeting point confirmed at booking. Wear sturdy hiking shoes and sun protection."
+      },
+      "end": {
+        "description": "Return transfer to Kanab after the Great Chamber photo stop."
+      }
+    },
+    "itinerarySummary": "Visit the White Sand Cave and Great Chamber on a half-day hiking tour with off-road transfer from Kanab.",
+    "itineraryItems": [
+      {
+        "title": "Kanab Meeting Point",
+        "description": "Group meetup before off-road transfer to the trailhead.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Off-Road Approach",
+        "description": "Desert backroad transfer to the White Sand Cave trailhead.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "White Sand Cave",
+        "description": "Short ascent into the white sand alcove formation.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Great Chamber",
+        "description": "Photo stop at the Great Chamber alcove viewpoint.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Return Transfer",
+        "description": "Return drive to Kanab after the cave stops.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guide and off-road transfer",
+      "Trail snacks",
+      "Bottled water",
+      "Safety briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The White Sand Cave?",
+        "answer": "The planned duration is 3 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Meet at the Kanab meeting point confirmed at booking. Wear sturdy hiking shoes and sun protection."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Small Group Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 129
+      },
+      "currency": "USD"
+    }
+  }
+}

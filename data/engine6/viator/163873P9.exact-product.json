@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "163873P9",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Zion-National-Park-Canyoneering-and-Jeep-Adventure/d5610-163873P9",
+    "title": "East Zion Crimson Canyon Hike & UTV Adventure",
+    "description": {
+      "text": "Combine a UTV ride through East Zion backroads with a canyoneering hike into Crimson Canyon slot formations. Guides lead off-road travel to the trailhead, then a short rock-climb and narrows section with photo stops in red sandstone corridors. This half-day adventure suits active travelers who want both motorized access and hands-on canyon exploration outside Zion Canyon. Helmets, UTV gear, and canyoneering equipment are included."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $129.91",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 887
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/e0/f5/44.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "UTV off-road approach to East Zion trailheads",
+      "Crimson Canyon slot canyoneering section",
+      "Rock-climb obstacle with guide assistance",
+      "Red sandstone narrows photo stops",
+      "Half-day adventure from East Zion base"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at the East Zion adventure base near Zion Ponderosa. Arrive 15 minutes early for UTV briefing."
+      },
+      "end": {
+        "description": "Return to the East Zion base after the UTV ride back from Crimson Canyon."
+      }
+    },
+    "itinerarySummary": "Combine a UTV ride through East Zion backroads with a canyoneering hike into Crimson Canyon slot formations.",
+    "itineraryItems": [
+      {
+        "title": "East Zion",
+        "description": "UTV departure from the East Zion adventure base.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Crimson Canyon",
+        "description": "Hike into the Crimson Canyon slot entrance.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rock Climb Section",
+        "description": "Guided scramble through a short rock obstacle.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sandstone Narrows",
+        "description": "Photo time in narrow red sandstone corridors.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "UTV transport",
+      "Canyoneering guide",
+      "Helmet and safety gear",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the East Zion Crimson Canyon Hike & UTV Adventure?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Check in at the East Zion adventure base near Zion Ponderosa. Arrive 15 minutes early for UTV briefing."
+      }
+    ],
+    "categories": [
+      {
+        "label": "UTV Tours"
+      },
+      {
+        "label": "Canyoneering"
+      },
+      {
+        "label": "Adrenaline & Extreme"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 129.91
+      },
+      "currency": "USD"
+    }
+  }
+}

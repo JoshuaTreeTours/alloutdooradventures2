@@ -19,6 +19,9 @@ export const ENGINE6_GRAND_CANYON_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_YELLOWSTONE_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/d9/ee/1d.jpg";
 
+export const ENGINE6_ZION_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/1d/62/0b.jpg";
+
 type Engine6HeroCandidateTour = {
   productCode: string;
   heroImageUrl?: string | null;
@@ -36,6 +39,9 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   wyoming: {
     "yellowstone-national-park": ENGINE6_YELLOWSTONE_CANONICAL_CITY_HERO_URL,
+  },
+  utah: {
+    "zion-national-park": ENGINE6_ZION_CANONICAL_CITY_HERO_URL,
   },
 };
 

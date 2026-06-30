@@ -227,6 +227,23 @@ import specimen316119p4Payload from "../../data/engine6/viator/316119P4.exact-pr
 import specimen23667p4Payload from "../../data/engine6/viator/23667P4.exact-product.json";
 import specimen23667p1Payload from "../../data/engine6/viator/23667P1.exact-product.json";
 import specimen463268p2Payload from "../../data/engine6/viator/463268P2.exact-product.json";
+import specimen265766p9Payload from "../../data/engine6/viator/265766P9.exact-product.json";
+import specimen199627p1Payload from "../../data/engine6/viator/199627P1.exact-product.json";
+import specimen170406p19Payload from "../../data/engine6/viator/170406P19.exact-product.json";
+import specimen310623p1Payload from "../../data/engine6/viator/310623P1.exact-product.json";
+import specimen318343p2Payload from "../../data/engine6/viator/318343P2.exact-product.json";
+import specimen265766p10Payload from "../../data/engine6/viator/265766P10.exact-product.json";
+import specimen265766p27Payload from "../../data/engine6/viator/265766P27.exact-product.json";
+import specimen286874p2Payload from "../../data/engine6/viator/286874P2.exact-product.json";
+import specimen300061p2Payload from "../../data/engine6/viator/300061P2.exact-product.json";
+import specimen163873p9Payload from "../../data/engine6/viator/163873P9.exact-product.json";
+import specimen163873p18Payload from "../../data/engine6/viator/163873P18.exact-product.json";
+import specimen118887p1Payload from "../../data/engine6/viator/118887P1.exact-product.json";
+import specimen118887p5Payload from "../../data/engine6/viator/118887P5.exact-product.json";
+import specimen118887p2Payload from "../../data/engine6/viator/118887P2.exact-product.json";
+import specimen275087p2Payload from "../../data/engine6/viator/275087P2.exact-product.json";
+import specimen163873p1Payload from "../../data/engine6/viator/163873P1.exact-product.json";
+import specimen118744p4Payload from "../../data/engine6/viator/118744P4.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -2339,6 +2356,159 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Yellowstone-National-Park/Half-Day-Private-Bespoke-Photography-Tour-of-Yellowstone/d22411-463268P2",
     rawPayload: specimen463268p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "265766P9",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Full-Day-Private-Hiking-Tour-in-Zion-National-Park/d5610-265766P9",
+    rawPayload: specimen265766p9Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "199627P1",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Day-Trip-Zion-National-Park/d5610-199627P1",
+    rawPayload: specimen199627p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "170406P19",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Private-Angels-Landing-Day-Hike-Party-of-1-4/d5610-170406P19",
+    rawPayload: specimen170406p19Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "310623P1",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Private-East-Zion-Via-Feratta-Canyoneering-and-Rappelling-Tour-half-day/d5610-310623P1",
+    rawPayload: specimen310623p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "318343P2",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Full-Day-Private-Tour-Zion-via-Kolob-Terrace-Ghost-Town-Slot-Canyon-and-Dunes/d5610-318343P2",
+    rawPayload: specimen318343p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "265766P10",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Full-Day-Private-Tour-and-Hike-in-Bryce-Canyon-National-Park/d5610-265766P10",
+    rawPayload: specimen265766p10Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "265766P27",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Full-Day-Small-Group-Tour-of-Zion-National-Park/d5610-265766P27",
+    rawPayload: specimen265766p27Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "286874P2",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Guided-Angels-Landing-Tour/d5610-286874P2",
+    rawPayload: specimen286874p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "300061P2",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Half-Day-Slot-Canyon-Canyoneering-near-East-Zion/d5610-300061P2",
+    rawPayload: specimen300061p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "163873P9",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Zion-National-Park-Canyoneering-and-Jeep-Adventure/d5610-163873P9",
+    rawPayload: specimen163873p9Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "163873P18",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Zion-Sunset-Jeep-Tour/d5610-163873P18",
+    rawPayload: specimen163873p18Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "118887P1",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/East-Zion-Slot-Canyon-Rappelling-Tour/d5610-118887P1",
+    rawPayload: specimen118887p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "118887P5",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Ultimate-UTV-Slot-Canyon-Tour/d5610-118887P5",
+    rawPayload: specimen118887p5Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "118887P2",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/East-Zion-Experiences-4-hr-ATV-Peekaboo-Slot-Canyon-Tour/d5610-118887P2",
+    rawPayload: specimen118887p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "275087P2",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Peekaboo-Slot-Canyon-Great-Chamber-Loop-ATV-Tour/d5610-275087P2",
+    rawPayload: specimen275087p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "163873P1",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Half-Day-Guided-Hiking-Tours/d5610-163873P1",
+    rawPayload: specimen163873p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "118744P4",
+    publicUrl:
+      "https://www.viator.com/tours/Zion-National-Park/The-White-Sand-Cave/d5610-118744P4",
+    rawPayload: specimen118744p4Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

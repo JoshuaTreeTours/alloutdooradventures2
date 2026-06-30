@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "265766P10",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Full-Day-Private-Tour-and-Hike-in-Bryce-Canyon-National-Park/d5610-265766P10",
+    "title": "Bryce Canyon Full Day Private Tour and Hike",
+    "description": {
+      "text": "Day-trip to Bryce Canyon National Park on a private full-day tour with guided hikes among the park's iconic hoodoo amphitheaters. Your guide covers Sunrise Point, Queen's Garden Trail, Inspiration Point, and Bryce Point with time for photography and interpretive commentary on the pink limestone formations. Travel from the Zion area in a private vehicle with flexible lunch timing. Ideal for travelers basing in Springdale who want Bryce without self-driving the mountain roads."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "6 to 8 hours (approx.)",
+    "priceFrom": "From $850.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 35
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/1f/60/0e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Bryce Canyon full-day tour from Zion area",
+      "Queen's Garden and Navajo Loop hike options",
+      "Sunrise, Inspiration, and Bryce Point overlooks",
+      "Professional guide with geology commentary",
+      "Private vehicle with flexible lunch stop"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning pickup from Springdale or Zion area lodging. Confirm pickup window when booking."
+      },
+      "end": {
+        "description": "Return to your Springdale pickup point after the final Bryce Point stop."
+      }
+    },
+    "itinerarySummary": "Day-trip to Bryce Canyon National Park on a private full-day tour with guided hikes among the park's iconic hoodoo amphitheaters.",
+    "itineraryItems": [
+      {
+        "title": "Bryce Canyon National Park",
+        "description": "Enter the park and begin the rim amphitheater loop.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sunrise Point",
+        "description": "First overlook stop above the main hoodoo amphitheater.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Queen's Garden Trail",
+        "description": "Guided descent among hoodoos on the Queen's Garden route.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Inspiration Point",
+        "description": "Rim viewpoint stop with wide amphitheater panoramas.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bryce Point",
+        "description": "Final overlook at Bryce Point before the return drive.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Private transport",
+      "Bryce Canyon entrance fees",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bryce Canyon Full Day Private Tour and Hike?",
+        "answer": "The planned duration is 6 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Morning pickup from Springdale or Zion area lodging. Confirm pickup window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 850
+      },
+      "currency": "USD"
+    }
+  }
+}

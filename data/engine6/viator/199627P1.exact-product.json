@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "199627P1",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Day-Trip-Zion-National-Park/d5610-199627P1",
+    "title": "The Narrows: Zion National Park Private Guided Hike",
+    "description": {
+      "text": "Hike the Narrows on a private guided outing that handles logistics, safety briefing, and pacing through Zion's most famous slot canyon. Your guide leads the Riverside Walk to the Virgin River entrance, then continues upstream through towering sandstone walls when conditions permit. Dry bags, walking sticks, and route selection are matched to seasonal flow levels. This private format keeps the focus on your group's comfort while maximizing time in the water-filled canyon."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "7 hours (approx.)",
+    "priceFrom": "From $364.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 125
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/2c/ff/9e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private guided Narrows hike in Zion National Park",
+      "Riverside Walk approach with gear briefing",
+      "Dry bags and walking sticks provided",
+      "Route adjusted to seasonal Virgin River flow",
+      "Ideal for hikers seeking a dedicated Narrows day"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Zion Lodge area or Springdale pickup point confirmed at booking. Wear closed-toe water shoes."
+      },
+      "end": {
+        "description": "Return to the Temple of Sinawava trailhead or your pickup location after the Narrows hike."
+      }
+    },
+    "itinerarySummary": "Hike the Narrows on a private guided outing that handles logistics, safety briefing, and pacing through Zion's most famous slot canyon.",
+    "itineraryItems": [
+      {
+        "title": "Temple of Sinawava",
+        "description": "Shuttle or walk to the Narrows trailhead at the end of Zion Canyon Scenic Drive.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Riverside Walk",
+        "description": "Paved riverside path leading to the Virgin River Narrows entrance.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Narrows",
+        "description": "Upstream hike through the slot canyon with guide-selected turnaround point.",
+        "duration": "3 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Orderville Canyon",
+        "description": "Optional side canyon exploration when water levels allow safe entry.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Zion Lodge",
+        "description": "Post-hike rest stop at Zion Lodge before return transport.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private certified guide",
+      "Dry bag and walking stick",
+      "Park entrance fees",
+      "Safety briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The Narrows: Zion National Park Private Guided Hike?",
+        "answer": "The planned duration is 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Meet at the Zion Lodge area or Springdale pickup point confirmed at booking. Wear closed-toe water shoes."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 364
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "275087P2",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Peekaboo-Slot-Canyon-Great-Chamber-Loop-ATV-Tour/d5610-275087P2",
+    "title": "Peekaboo Slot Canyon + Great Chamber Loop UTV YOU DRIVE",
+    "description": {
+      "text": "Drive your own UTV on a guided loop through Peekaboo Slot Canyon and the Great Chamber near Kanab. Guides lead the convoy along off-road routes, then on-foot exploration of Peekaboo narrows and the Great Chamber alcove before the return loop. This you-drive format suits confident UTV operators who want hands-on driving with guide navigation. Half-day timing covers multiple photo stops in red rock country."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $249.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 106
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/10/93/0d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "You-drive UTV convoy with guide navigation",
+      "Peekaboo Slot Canyon on-foot exploration",
+      "Great Chamber alcove photo stop",
+      "Kanab area off-road loop route",
+      "Guided half-day adventure format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Kanab/Peekaboo trailhead staging area. Valid driver license required for UTV operation."
+      },
+      "end": {
+        "description": "Return to the Kanab trailhead after completing the loop route."
+      }
+    },
+    "itinerarySummary": "Drive your own UTV on a guided loop through Peekaboo Slot Canyon and the Great Chamber near Kanab.",
+    "itineraryItems": [
+      {
+        "title": "Kanab Trailhead",
+        "description": "UTV briefing and convoy formation at the trailhead.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "UTV Drive Segment",
+        "description": "You-drive UTV segment along guided off-road routes.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Peekaboo Slot Canyon",
+        "description": "On-foot hike through Peekaboo narrows.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Great Chamber",
+        "description": "Photo stop at the Great Chamber alcove.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Loop Return",
+        "description": "Return UTV drive completing the loop route.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "UTV rental and guide",
+      "Helmet and goggles",
+      "Route navigation",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Peekaboo Slot Canyon + Great Chamber Loop UTV YOU DRIVE?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Meet at the Kanab/Peekaboo trailhead staging area. Valid driver license required for UTV operation."
+      }
+    ],
+    "categories": [
+      {
+        "label": "UTV Tours"
+      },
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Slot Canyon Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 249
+      },
+      "currency": "USD"
+    }
+  }
+}

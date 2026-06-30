@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "310623P1",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Private-East-Zion-Via-Feratta-Canyoneering-and-Rappelling-Tour-half-day/d5610-310623P1",
+    "title": "East Zion Via Ferrata Canyoneering & Rappelling",
+    "description": {
+      "text": "Combine via ferrata climbing, canyoneering, and rappelling on a half-day East Zion adventure above the main park canyon. Certified guides lead you up fixed cable routes at East Zion Resort, cross exposed ledges at Top of the Rock, then rappel into a sandstone slot section. Harness, helmet, and technical gear are included with instruction for first-time via ferrata climbers. This outing delivers adrenaline outside the crowded Zion Canyon shuttle zone."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "4 to 5 hours (approx.)",
+    "priceFrom": "From $249.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 120
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/d6/d8/fe.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Via ferrata ascent with fixed cable routes",
+      "Top of the Rock summit panoramas",
+      "Guided canyoneering and rappel descents",
+      "Technical gear and instruction included",
+      "Half-day East Zion adventure format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at East Zion Resort, 859 Zion Park Blvd, Orderville, UT 84758. Arrive 15 minutes before your scheduled departure."
+      },
+      "end": {
+        "description": "Return to East Zion Resort after the final rappel and gear return."
+      }
+    },
+    "itinerarySummary": "Combine via ferrata climbing, canyoneering, and rappelling on a half-day East Zion adventure above the main park canyon.",
+    "itineraryItems": [
+      {
+        "title": "East Zion Resort",
+        "description": "Gear fitting and via ferrata safety briefing at the resort base.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Via Ferrata",
+        "description": "Fixed-cable climbing route with multiple pitches above East Zion.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Top of the Rock",
+        "description": "Summit stop with panoramic views over Zion's eastern plateau.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyoneering Section",
+        "description": "Down-climb and traverse through a sandstone slot section.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rappel Descent",
+        "description": "Guided rappels into the slot canyon floor.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Certified canyoneering guide",
+      "Via ferrata and rappel equipment",
+      "Helmet and harness",
+      "Safety briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the East Zion Via Ferrata Canyoneering & Rappelling?",
+        "answer": "The planned duration is 4 to 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Check in at East Zion Resort, 859 Zion Park Blvd, Orderville, UT 84758. Arrive 15 minutes before your scheduled departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Canyoneering"
+      },
+      {
+        "label": "Climbing"
+      },
+      {
+        "label": "Adrenaline & Extreme"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 249
+      },
+      "currency": "USD"
+    }
+  }
+}

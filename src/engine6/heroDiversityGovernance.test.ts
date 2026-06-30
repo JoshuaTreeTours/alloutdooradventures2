@@ -7,6 +7,7 @@ import {
   ENGINE6_NAPA_CANONICAL_CITY_HERO_URL,
   ENGINE6_YELLOWSTONE_CANONICAL_CITY_HERO_URL,
   ENGINE6_YOSEMITE_CANONICAL_CITY_HERO_URL,
+  ENGINE6_ZION_CANONICAL_CITY_HERO_URL,
   resolveEngine6CityDisplayHeroes,
 } from "./displayHero";
 import { engine6ListingTours } from "./listing";
@@ -60,6 +61,13 @@ const yellowstoneListingTours = engine6ListingTours.filter(
     tour.engine === "engine6" &&
     tour.destination.stateSlug === "wyoming" &&
     tour.destination.citySlug === "yellowstone-national-park"
+);
+
+const zionListingTours = engine6ListingTours.filter(
+  tour =>
+    tour.engine === "engine6" &&
+    tour.destination.stateSlug === "utah" &&
+    tour.destination.citySlug === "zion-national-park"
 );
 
 describe("Engine6 hero diversity governance", () => {
@@ -163,6 +171,23 @@ describe("Engine6 hero diversity governance", () => {
       heroCounts.get(ENGINE6_YELLOWSTONE_CANONICAL_CITY_HERO_URL) ?? 0
     ).toBeLessThanOrEqual(1);
     expect(heroCounts.size).toBe(yellowstoneListingTours.length);
+  });
+
+  it("uses Zion as the validation cohort for unique listing-card heroes", () => {
+    expect(zionListingTours).toHaveLength(17);
+
+    const heroCounts = zionListingTours.reduce<Map<string, number>>(
+      (counts, tour) => {
+        counts.set(tour.heroImage, (counts.get(tour.heroImage) ?? 0) + 1);
+        return counts;
+      },
+      new Map()
+    );
+
+    expect(
+      heroCounts.get(ENGINE6_ZION_CANONICAL_CITY_HERO_URL) ?? 0
+    ).toBeLessThanOrEqual(1);
+    expect(heroCounts.size).toBe(zionListingTours.length);
   });
 
   it("newly generated Engine6 cities prefer unique product heroes before fallbacks", () => {

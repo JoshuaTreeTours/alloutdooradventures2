@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "118887P5",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Ultimate-UTV-Slot-Canyon-Tour/d5610-118887P5",
+    "title": "Great Chamber/Peekaboo Slot Canyon UTV Tour 4hrs",
+    "description": {
+      "text": "Spend four hours exploring Peekaboo Slot Canyon, hidden caves, and the Great Chamber on a UTV tour from Moqui Cave. The route links off-road driving with short hikes through Peekaboo narrows and a final stop at the Great Chamber alcove for dramatic photo opportunities. Guides share geology and route history while pacing the group through multiple slot sections. This is the extended East Zion UTV experience for travelers wanting more than a two-hour outing."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $199.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 352
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/25/b9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Four-hour UTV slot canyon expedition",
+      "Peekaboo Slot Canyon and Great Chamber stops",
+      "Hidden cave and lake viewpoint en route",
+      "Moqui Cave check-in and UTV briefing",
+      "Extended photo time in red rock narrows"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at Moqui Cave on US-89 near Kanab, UT. Arrive 15 minutes before departure."
+      },
+      "end": {
+        "description": "Return to Moqui Cave after the Great Chamber stop."
+      }
+    },
+    "itinerarySummary": "Spend four hours exploring Peekaboo Slot Canyon, hidden caves, and the Great Chamber on a UTV tour from Moqui Cave.",
+    "itineraryItems": [
+      {
+        "title": "Moqui Cave",
+        "description": "Check-in and four-hour tour orientation at Moqui Cave.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cave Lakes Route",
+        "description": "UTV segment past hidden cave and lake viewpoints.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Peekaboo Slot Canyon",
+        "description": "Hike through Peekaboo narrows with guide commentary.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hidden Cave",
+        "description": "Brief stop at a hidden cave formation along the route.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Great Chamber",
+        "description": "Final photo stop at the Great Chamber alcove.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "UTV transport",
+      "Professional guide",
+      "Helmet and goggles",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Great Chamber/Peekaboo Slot Canyon UTV Tour 4hrs?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Check in at Moqui Cave on US-89 near Kanab, UT. Arrive 15 minutes before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "UTV Tours"
+      },
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Off-road Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 199
+      },
+      "currency": "USD"
+    }
+  }
+}
