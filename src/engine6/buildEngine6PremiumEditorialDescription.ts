@@ -1,6 +1,12 @@
 import { extractEngine6OverviewNamedLocations } from "./overviewGovernance";
 import { merchantFeedEligibleTours } from "./merchantFeedEligibility";
 import {
+  applyEngine6NationalParkEditorialActivityOverride,
+  inferEngine6NationalParkRouteContext,
+  isEngine6NationalParkDestination,
+  isEngine6WildlifeFocusedNationalParkExperience,
+} from "./engine6NationalParkDestinationGovernance";
+import {
   cleanEngine6Description,
   stripEngine6AdmissionArtifacts,
   stripEngine6GeneratedDescriptionPrefix,
@@ -395,6 +401,7 @@ const buildGenericWineryOpeningVariantAssignments = () => {
   for (const tour of merchantFeedEligibleTours) {
     const activityKind = classifyEngine6EditorialActivityKind({
       title: tour.title,
+      city: tour.city,
       categoryLabel: tour.categoryLabel,
       overviewText: tour.overviewText ?? tour.description ?? "",
     });
@@ -569,6 +576,29 @@ const isOperationalStopTitle = (value: string) =>
   );
 
 export const classifyEngine6EditorialActivityKind = ({
+  title,
+  city,
+  categoryLabel,
+  overviewText,
+}: {
+  title: string;
+  city?: string | null;
+  categoryLabel?: string | null;
+  overviewText: string;
+}): Engine6EditorialActivityKind =>
+  applyEngine6NationalParkEditorialActivityOverride({
+    city,
+    activityKind: resolveEngine6EditorialActivityKind({
+      title,
+      categoryLabel,
+      overviewText,
+    }),
+    title,
+    categoryLabel,
+    overviewText,
+  }) as Engine6EditorialActivityKind;
+
+const resolveEngine6EditorialActivityKind = ({
   title,
   categoryLabel,
   overviewText,
@@ -915,12 +945,14 @@ const appendSentenceIfUseful = (sentences: string[], sentence: string) => {
 const buildPoiFollowOn = (
   pois: string[],
   activityKind: Engine6EditorialActivityKind,
-  productCode: string
+  productCode: string,
+  city?: string | null
 ) => {
   if (pois.length === 0) return "";
 
   const list = formatLandmarkList(pois.slice(0, 4));
   const variant = hashProductCode(productCode) % 4;
+  const inNationalParkDestination = isEngine6NationalParkDestination(city);
 
   switch (activityKind) {
     case "aquarium-admission":
@@ -956,6 +988,26 @@ const buildPoiFollowOn = (
           `The day visits ${list}.`,
         ][variant]
       );
+    case "national-park-tour":
+    case "hiking-tour":
+      if (inNationalParkDestination) {
+        return normalizeSentence(
+          [
+            `Scenic stops include ${list}.`,
+            `The route follows park roads through ${list}.`,
+            `You'll pause at iconic landmarks including ${list}.`,
+            `Along the route you'll visit ${list}.`,
+          ][variant]
+        );
+      }
+      return normalizeSentence(
+        [
+          `Along the way you'll see ${list}.`,
+          `The route connects ${list}.`,
+          `You'll pause at ${list}.`,
+          `Landmarks along the route include ${list}.`,
+        ][variant]
+      );
     default:
       return normalizeSentence(
         [
@@ -989,6 +1041,7 @@ const buildExperienceOpening = ({
 }) => {
   const activityKind = classifyEngine6EditorialActivityKind({
     title,
+    city,
     categoryLabel,
     overviewText,
   });
@@ -1126,6 +1179,16 @@ const buildExperienceOpening = ({
       );
     }
     case "hiking-tour":
+      if (isEngine6NationalParkDestination(cityLabel)) {
+        const routeContext = inferEngine6NationalParkRouteContext({
+          overviewText,
+          highlights,
+          itineraryTitles: itineraryStops.map(stop => stop.title),
+        });
+        return normalizeSentence(
+          `Hike ${primaryPoi ? `through ${primaryPoi} and` : "across"} ${cityLabel}'s ${routeContext}${durationPhrase} with wide valley views and guide interpretation.`
+        );
+      }
       return normalizeSentence(
         `Hike ${primaryPoi ? `through ${primaryPoi}` : `in ${cityLabel}`} on a trail route${durationPhrase} with wide views and guide interpretation.`
       );
@@ -1154,10 +1217,32 @@ const buildExperienceOpening = ({
         `Tour ${museumName} with a private guide who tailors the route to your interests across the museum's major collections.`
       );
     }
-    case "national-park-tour":
+    case "national-park-tour": {
+      const routeContext = inferEngine6NationalParkRouteContext({
+        overviewText,
+        highlights,
+        itineraryTitles: itineraryStops.map(stop => stop.title),
+      });
+      const wildlifeFocused = isEngine6WildlifeFocusedNationalParkExperience(
+        title,
+        overviewText
+      );
+
+      if (isEngine6NationalParkDestination(cityLabel)) {
+        if (wildlifeFocused) {
+          return normalizeSentence(
+            `Explore ${primaryPoi || "the park's wildlife habitats"} on a guided wildlife safari${durationPhrase} with scenic pullouts along park roads and valleys.`
+          );
+        }
+        return normalizeSentence(
+          `Explore ${primaryPoi ? `${primaryPoi} and nearby ` : ""}${routeContext} across ${cityLabel}${durationPhrase} with guide context at scenic viewpoints and park roads.`
+        );
+      }
+
       return normalizeSentence(
         `Travel into ${primaryPoi || "the national park"} from ${cityLabel} on a guided park day${durationPhrase} with scenic pullouts and short walks.`
       );
+    }
     case "city-sightseeing":
       return normalizeSentence(
         `See ${cityLabel}'s landmark neighborhoods${primaryPoi ? `, including ${primaryPoi}` : ""}, on a guided city circuit with strategic photo stops.`
@@ -1167,6 +1252,18 @@ const buildExperienceOpening = ({
         `Catch your first waves on ${cityLabel}'s surf breaks with an instructor who handles board setup, ocean safety, and in-water coaching.`
       );
     default:
+      if (isEngine6NationalParkDestination(cityLabel)) {
+        const routeContext = inferEngine6NationalParkRouteContext({
+          overviewText,
+          highlights,
+          itineraryTitles: itineraryStops.map(stop => stop.title),
+        });
+        return normalizeSentence(
+          primaryPoi
+            ? `Discover ${primaryPoi} and surrounding ${routeContext} across ${cityLabel}.`
+            : `Explore ${cityLabel} with time for ${routeContext}, valleys, and scenic overlooks along the route.`
+        );
+      }
       return normalizeSentence(
         primaryPoi
           ? `Discover ${primaryPoi} and surrounding ${cityLabel} highlights with time for the places that define the route.`
@@ -1263,6 +1360,7 @@ const padToMinimumEditorialLength = ({
   sentences,
   activityKind,
   productCode,
+  city,
   itineraryStops,
   highlights,
   included,
@@ -1273,6 +1371,7 @@ const padToMinimumEditorialLength = ({
   sentences: string[];
   activityKind: Engine6EditorialActivityKind;
   productCode: string;
+  city: string;
   itineraryStops: Array<{ title: string; description?: string | null }>;
   highlights: string[];
   included: string[];
@@ -1288,7 +1387,7 @@ const padToMinimumEditorialLength = ({
   });
 
   const paddingCandidates = [
-    buildPoiFollowOn(pois, activityKind, productCode),
+    buildPoiFollowOn(pois, activityKind, productCode, city),
     buildInclusionsNarrative(included),
     buildTransportNarrative(included),
     buildDurationNarrative({ durationText, activityKind }),
@@ -1337,6 +1436,7 @@ export const buildEngine6PremiumEditorialDescription = ({
   const sourceText = normalizedOverview || normalizedDescription;
   const activityKind = classifyEngine6EditorialActivityKind({
     title,
+    city,
     categoryLabel,
     overviewText: sourceText,
   });
@@ -1389,7 +1489,7 @@ export const buildEngine6PremiumEditorialDescription = ({
   });
   appendSentenceIfUseful(
     sentences,
-    buildPoiFollowOn(pois, activityKind, productCode)
+    buildPoiFollowOn(pois, activityKind, productCode, city)
   );
 
   for (const sentence of editorialSentences) {
@@ -1417,6 +1517,7 @@ export const buildEngine6PremiumEditorialDescription = ({
     sentences,
     activityKind,
     productCode,
+    city,
     itineraryStops,
     highlights,
     included,

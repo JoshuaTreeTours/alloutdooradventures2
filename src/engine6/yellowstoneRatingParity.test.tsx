@@ -6,6 +6,10 @@ import { renderToString } from "react-dom/server";
 import TourCard from "../components/TourCard";
 import { getToursByCityUnified } from "../data/tours";
 import Engine6TourPage from "./components/Engine6TourPage";
+import {
+  buildEngine6CardDescription,
+  resolveEngine6GovernedProductDescription,
+} from "./governedEditorialDescriptions";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import {
   YELLOWSTONE_VIATOR_PUBLIC_RATINGS,
@@ -118,6 +122,32 @@ describe("Yellowstone Engine6 rating/review parity", () => {
       averageRating: "4.9",
       ratingCount: "95",
       reviewCount: "95",
+    });
+  });
+
+  it("keeps Yellowstone merchant and listing-card descriptions free of city template bleed", () => {
+    const forbiddenPatterns = [
+      /landmark neighborhoods/i,
+      /guided city circuit/i,
+      /city highlights/i,
+      /\bcity tour\b/i,
+      /The outing extends the/i,
+    ];
+
+    const yellowstoneTours = engine6ResolvedTours.filter(entry =>
+      entry.canonicalPath.includes("/yellowstone-national-park/")
+    );
+
+    expect(yellowstoneTours).toHaveLength(23);
+
+    yellowstoneTours.forEach(tour => {
+      const governedDescription = resolveEngine6GovernedProductDescription(tour);
+      const cardDescription = buildEngine6CardDescription(tour);
+
+      for (const pattern of forbiddenPatterns) {
+        expect(governedDescription, tour.productCode).not.toMatch(pattern);
+        expect(cardDescription, tour.productCode).not.toMatch(pattern);
+      }
     });
   });
 

@@ -6,6 +6,7 @@ import {
   isEngine6SupplierMirroredItineraryText,
   normalizeEngine6ItineraryComparisonText,
 } from "./itineraryGovernance";
+import { isEngine6NationalParkDestination } from "./engine6NationalParkDestinationGovernance";
 
 export const ENGINE6_OVERVIEW_MIN_WORDS = 120;
 export const ENGINE6_OVERVIEW_MAX_WORDS = 250;
@@ -541,6 +542,10 @@ const buildOverviewTitleLocationSentence = ({
   city: string;
   state: string;
 }) => {
+  if (isEngine6NationalParkDestination(city)) {
+    return "";
+  }
+
   const titleMatch =
     /\bnear\s+([A-Z][A-Za-z'’&-]+(?:\s+[A-Z][A-Za-z'’&-]+){0,4})\b/.exec(title) ??
     /\bin\s+([A-Z][A-Za-z'’&-]+(?:\s+[A-Z][A-Za-z'’&-]+){0,4})\b/.exec(title) ??
