@@ -822,6 +822,82 @@ export const ENGINE6_GRAND_CANYON_TOUR_PATH_PREFIX =
 export const isEngine6GrandCanyonTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_GRAND_CANYON_TOUR_PATH_PREFIX);
 
+export const ENGINE6_YELLOWSTONE_52661P41_PRODUCT_CODE = "52661P41";
+export const ENGINE6_YELLOWSTONE_52661P41_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/the-full-two-day-private-yellowstone-day-trips-west-yel-52661P41";
+export const ENGINE6_YELLOWSTONE_5639875P7_PRODUCT_CODE = "5639875P7";
+export const ENGINE6_YELLOWSTONE_5639875P7_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/seven-days-guided-trek-to-yellowstone-thorofare-ranger--5639875P7";
+export const ENGINE6_YELLOWSTONE_52661P40_PRODUCT_CODE = "52661P40";
+export const ENGINE6_YELLOWSTONE_52661P40_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/yellowstone-2-step-2-of-days-of-upper-lower-loop-west-y-52661P40";
+export const ENGINE6_YELLOWSTONE_151830P1_PRODUCT_CODE = "151830P1";
+export const ENGINE6_YELLOWSTONE_151830P1_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/private-yellowstone-tour-iconic-sites-wildlife-family-f-151830P1";
+export const ENGINE6_YELLOWSTONE_151830P3_PRODUCT_CODE = "151830P3";
+export const ENGINE6_YELLOWSTONE_151830P3_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/private-yellowstone-wolf-watching-wildlife-safari-lunch-151830P3";
+export const ENGINE6_YELLOWSTONE_151830P8_PRODUCT_CODE = "151830P8";
+export const ENGINE6_YELLOWSTONE_151830P8_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/private-hidden-gems-of-yellowstone-lunch-w-family-frien-151830P8";
+export const ENGINE6_YELLOWSTONE_316119P3_PRODUCT_CODE = "316119P3";
+export const ENGINE6_YELLOWSTONE_316119P3_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/best-in-the-west-yellowstone-private-tour-316119P3";
+export const ENGINE6_YELLOWSTONE_5591554P17_PRODUCT_CODE = "5591554P17";
+export const ENGINE6_YELLOWSTONE_5591554P17_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/private-tour-of-yellowstone-lower-loop-5591554P17";
+export const ENGINE6_YELLOWSTONE_5591554P23_PRODUCT_CODE = "5591554P23";
+export const ENGINE6_YELLOWSTONE_5591554P23_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/private-yellowstone-wildlife-tour-in-the-american-seren-5591554P23";
+export const ENGINE6_YELLOWSTONE_137381P3_PRODUCT_CODE = "137381P3";
+export const ENGINE6_YELLOWSTONE_137381P3_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/private-yellowstone-wildlife-sightseeing-tour-137381P3";
+export const ENGINE6_YELLOWSTONE_481298P1_PRODUCT_CODE = "481298P1";
+export const ENGINE6_YELLOWSTONE_481298P1_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/yellowstone-national-park-private-wildlife-tour-481298P1";
+export const ENGINE6_YELLOWSTONE_265766P66_PRODUCT_CODE = "265766P66";
+export const ENGINE6_YELLOWSTONE_265766P66_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/yellowstone-full-day-private-tour-hike-from-inside-the--265766P66";
+export const ENGINE6_YELLOWSTONE_463268P4_PRODUCT_CODE = "463268P4";
+export const ENGINE6_YELLOWSTONE_463268P4_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/private-bespoke-yellowstone-winter-wildlife-photo-safar-463268P4";
+export const ENGINE6_YELLOWSTONE_463268P1_PRODUCT_CODE = "463268P1";
+export const ENGINE6_YELLOWSTONE_463268P1_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/private-bespoke-yellowstone-summer-wildlife-photo-safar-463268P1";
+export const ENGINE6_YELLOWSTONE_52661P26_PRODUCT_CODE = "52661P26";
+export const ENGINE6_YELLOWSTONE_52661P26_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/private-yellowstone-wildlife-and-photo-from-west-yellow-52661P26";
+export const ENGINE6_YELLOWSTONE_5584219P8_PRODUCT_CODE = "5584219P8";
+export const ENGINE6_YELLOWSTONE_5584219P8_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/upper-loop-lamar-wildlife-safari-from-gardiner-private--5584219P8";
+export const ENGINE6_YELLOWSTONE_23667P10_PRODUCT_CODE = "23667P10";
+export const ENGINE6_YELLOWSTONE_23667P10_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/upper-loop-tour-and-lamar-valley-from-west-yellowstone--23667P10";
+export const ENGINE6_YELLOWSTONE_23667P2_PRODUCT_CODE = "23667P2";
+export const ENGINE6_YELLOWSTONE_23667P2_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/lamar-valley-safari-hiking-tour-with-lunch-23667P2";
+export const ENGINE6_YELLOWSTONE_23667P3_PRODUCT_CODE = "23667P3";
+export const ENGINE6_YELLOWSTONE_23667P3_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/lower-loop-van-tour-from-west-yellowstone-grand-prismat-23667P3";
+export const ENGINE6_YELLOWSTONE_316119P4_PRODUCT_CODE = "316119P4";
+export const ENGINE6_YELLOWSTONE_316119P4_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/full-day-guided-yellowstone-day-tour-316119P4";
+export const ENGINE6_YELLOWSTONE_23667P4_PRODUCT_CODE = "23667P4";
+export const ENGINE6_YELLOWSTONE_23667P4_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/6-mile-geyser-hiking-tour-in-yellowstone-with-lunch-23667P4";
+export const ENGINE6_YELLOWSTONE_23667P1_PRODUCT_CODE = "23667P1";
+export const ENGINE6_YELLOWSTONE_23667P1_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/grand-canyon-of-the-yellowstone-rim-and-loop-hike-with--23667P1";
+export const ENGINE6_YELLOWSTONE_463268P2_PRODUCT_CODE = "463268P2";
+export const ENGINE6_YELLOWSTONE_463268P2_ROUTE =
+  "/destinations/wyoming/yellowstone-national-park/tours/private-yellowstone-summer-wildlife-photo-safaris-half--463268P2";
+
+export const ENGINE6_YELLOWSTONE_TOUR_PATH_PREFIX =
+  "/destinations/wyoming/yellowstone-national-park/tours/";
+
+export const isEngine6YellowstoneTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_YELLOWSTONE_TOUR_PATH_PREFIX);
+
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
   canonicalPath: string;
@@ -1738,6 +1814,98 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_GRAND_CANYON_GRAND_ENTRANCE_JEEP_ROUTE,
     ENGINE6_GRAND_CANYON_GRAND_ENTRANCE_JEEP_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_52661P41_ROUTE,
+    ENGINE6_YELLOWSTONE_52661P41_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_5639875P7_ROUTE,
+    ENGINE6_YELLOWSTONE_5639875P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_52661P40_ROUTE,
+    ENGINE6_YELLOWSTONE_52661P40_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_151830P1_ROUTE,
+    ENGINE6_YELLOWSTONE_151830P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_151830P3_ROUTE,
+    ENGINE6_YELLOWSTONE_151830P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_151830P8_ROUTE,
+    ENGINE6_YELLOWSTONE_151830P8_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_316119P3_ROUTE,
+    ENGINE6_YELLOWSTONE_316119P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_5591554P17_ROUTE,
+    ENGINE6_YELLOWSTONE_5591554P17_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_5591554P23_ROUTE,
+    ENGINE6_YELLOWSTONE_5591554P23_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_137381P3_ROUTE,
+    ENGINE6_YELLOWSTONE_137381P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_481298P1_ROUTE,
+    ENGINE6_YELLOWSTONE_481298P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_265766P66_ROUTE,
+    ENGINE6_YELLOWSTONE_265766P66_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_463268P4_ROUTE,
+    ENGINE6_YELLOWSTONE_463268P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_463268P1_ROUTE,
+    ENGINE6_YELLOWSTONE_463268P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_52661P26_ROUTE,
+    ENGINE6_YELLOWSTONE_52661P26_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_5584219P8_ROUTE,
+    ENGINE6_YELLOWSTONE_5584219P8_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_23667P10_ROUTE,
+    ENGINE6_YELLOWSTONE_23667P10_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_23667P2_ROUTE,
+    ENGINE6_YELLOWSTONE_23667P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_23667P3_ROUTE,
+    ENGINE6_YELLOWSTONE_23667P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_316119P4_ROUTE,
+    ENGINE6_YELLOWSTONE_316119P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_23667P4_ROUTE,
+    ENGINE6_YELLOWSTONE_23667P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_23667P1_ROUTE,
+    ENGINE6_YELLOWSTONE_23667P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_YELLOWSTONE_463268P2_ROUTE,
+    ENGINE6_YELLOWSTONE_463268P2_PRODUCT_CODE,
   ],
 ] as const;
 

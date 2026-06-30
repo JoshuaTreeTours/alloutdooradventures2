@@ -204,6 +204,29 @@ import specimen108446p2Payload from "../../data/engine6/viator/108446P2.exact-pr
 import specimen6338discoveryPayload from "../../data/engine6/viator/6338DISCOVERY.exact-product.json";
 import specimen229754p1Payload from "../../data/engine6/viator/229754P1.exact-product.json";
 import specimen3272gcsr2Payload from "../../data/engine6/viator/3272GCSR2.exact-product.json";
+import specimen52661p41Payload from "../../data/engine6/viator/52661P41.exact-product.json";
+import specimen5639875p7Payload from "../../data/engine6/viator/5639875P7.exact-product.json";
+import specimen52661p40Payload from "../../data/engine6/viator/52661P40.exact-product.json";
+import specimen151830p1Payload from "../../data/engine6/viator/151830P1.exact-product.json";
+import specimen151830p3Payload from "../../data/engine6/viator/151830P3.exact-product.json";
+import specimen151830p8Payload from "../../data/engine6/viator/151830P8.exact-product.json";
+import specimen316119p3Payload from "../../data/engine6/viator/316119P3.exact-product.json";
+import specimen5591554p17Payload from "../../data/engine6/viator/5591554P17.exact-product.json";
+import specimen5591554p23Payload from "../../data/engine6/viator/5591554P23.exact-product.json";
+import specimen137381p3Payload from "../../data/engine6/viator/137381P3.exact-product.json";
+import specimen481298p1Payload from "../../data/engine6/viator/481298P1.exact-product.json";
+import specimen265766p66Payload from "../../data/engine6/viator/265766P66.exact-product.json";
+import specimen463268p4Payload from "../../data/engine6/viator/463268P4.exact-product.json";
+import specimen463268p1Payload from "../../data/engine6/viator/463268P1.exact-product.json";
+import specimen52661p26Payload from "../../data/engine6/viator/52661P26.exact-product.json";
+import specimen5584219p8Payload from "../../data/engine6/viator/5584219P8.exact-product.json";
+import specimen23667p10Payload from "../../data/engine6/viator/23667P10.exact-product.json";
+import specimen23667p2Payload from "../../data/engine6/viator/23667P2.exact-product.json";
+import specimen23667p3Payload from "../../data/engine6/viator/23667P3.exact-product.json";
+import specimen316119p4Payload from "../../data/engine6/viator/316119P4.exact-product.json";
+import specimen23667p4Payload from "../../data/engine6/viator/23667P4.exact-product.json";
+import specimen23667p1Payload from "../../data/engine6/viator/23667P1.exact-product.json";
+import specimen463268p2Payload from "../../data/engine6/viator/463268P2.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -2109,6 +2132,213 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-South-Rim-Jeep-Tour-with-Transport-from-Tusayan/d815-3272GCSR2",
     rawPayload: specimen3272gcsr2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "52661P41",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/The-Full-Yellowstone-Two-Day-experience-From-West-Yellowstone/d22411-52661P41",
+    rawPayload: specimen52661p41Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5639875P7",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/Seven-Day-Guided-Trek-to-Yellowstones-Thorofare-Ranger-Station/d22411-5639875P7",
+    rawPayload: specimen5639875p7Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "52661P40",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/The-Full-Yellowstone-2-day-Experience-Upper-and-Lower-package/d22411-52661P40",
+    rawPayload: specimen52661p40Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "151830P1",
+    publicUrl:
+      "https://www.viator.com/tours/West-Yellowstone/Private-Tours-of-Yellowstone-National-Park-Gourmet-picnic-lunch-included/d50636-151830P1",
+    rawPayload: specimen151830p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "151830P3",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/Evening-Wildlife-Tour/d22411-151830P3",
+    rawPayload: specimen151830p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "151830P8",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/PRIVATE-YELLOWSTONE-Hiking-Hot-Spring-and-Geyser-tour-Picnic-lunch-included/d22411-151830P8",
+    rawPayload: specimen151830p8Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "316119P3",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/Yellowstone-Lower-Loop-Private-Tour-for-10/d22411-316119P3",
+    rawPayload: specimen316119p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5591554P17",
+    publicUrl:
+      "https://www.viator.com/tours/West-Yellowstone/Yellowstone-Lower-Loop-Tour/d50636-5591554P17",
+    rawPayload: specimen5591554p17Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5591554P23",
+    publicUrl:
+      "https://www.viator.com/tours/West-Yellowstone/Private-Yellowstone-Wildlife-Tour-in-the-American-Serengeti/d50636-5591554P23",
+    rawPayload: specimen5591554p23Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "137381P3",
+    publicUrl:
+      "https://www.viator.com/tours/Idaho/Private-Yellowstone-Wildlife-Tour/d22215-137381P3",
+    rawPayload: specimen137381p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "481298P1",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/Yellowstone-National-Park-Private-Wildlife-Tour/d22411-481298P1",
+    rawPayload: specimen481298p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "265766P66",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/Yellowstone-Full-Day-Private-Tour-and-Hike-from-Inside-the-Park/d22411-265766P66",
+    rawPayload: specimen265766p66Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "463268P4",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/Yellowstone-Winter-Photo-Safari-Wildlife-and-Landscape-Adventure/d22411-463268P4",
+    rawPayload: specimen463268p4Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "463268P1",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/Private-Custom-Photo-Tours-of-Yellowstone-National-Park/d22411-463268P1",
+    rawPayload: specimen463268p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "52661P26",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/Private-Luxury-Yellowstone-Tour-by-Transit/d22411-52661P26",
+    rawPayload: specimen52661p26Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5584219P8",
+    publicUrl:
+      "https://www.viator.com/tours/Gardiner/Upper-Loop-Lamar-Wildlife-Safari-from-Gardiner-PRIVATE-Lunch/d50734-5584219P8",
+    rawPayload: specimen5584219p8Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "23667P10",
+    publicUrl:
+      "https://www.viator.com/tours/West-Yellowstone/Lamar-Valley-Wildlife-Van-Tour-from-West-Yellowstone-Upper-Loop-Tour/d50636-23667P10",
+    rawPayload: specimen23667p10Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "23667P2",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/Lamar-Valley-Safari-Day-Hike/d22411-23667P2",
+    rawPayload: specimen23667p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "23667P3",
+    publicUrl:
+      "https://www.viator.com/tours/West-Yellowstone/Yellowstone-Tour-Lower-Loop-Active-Van-Adventure-from-West-Yellowstone/d50636-23667P3",
+    rawPayload: specimen23667p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "316119P4",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/Full-Day-Guided-Yellowstone-Day-Tour/d22411-316119P4",
+    rawPayload: specimen316119p4Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "23667P4",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/5-Mile-Upper-Geyser-Basin-Loop-Hike-Morning-Glory-Old-Faithful-with-Lunch/d22411-23667P4",
+    rawPayload: specimen23667p4Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "23667P1",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/Yellowstone-Hiking-Tour/d22411-23667P1",
+    rawPayload: specimen23667p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "463268P2",
+    publicUrl:
+      "https://www.viator.com/tours/Yellowstone-National-Park/Half-Day-Private-Bespoke-Photography-Tour-of-Yellowstone/d22411-463268P2",
+    rawPayload: specimen463268p2Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

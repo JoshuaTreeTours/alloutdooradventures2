@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "316119P3",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/Yellowstone-Lower-Loop-Private-Tour-for-10/d22411-316119P3",
+    "title": "Best in the West Yellowstone Private Tour",
+    "description": {
+      "text": "CoveredGround Tours runs a twelve-hour private lower loop for groups up to ten with hotel pickup from West Yellowstone. The long day covers Old Faithful, Grand Prismatic Spring, Hayden Valley wildlife, and Grand Canyon of the Yellowstone overlooks with a provided lunch stop."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "12 hours (approx.)",
+    "priceFrom": "From $1999.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 10
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/1b/82/b3/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Twelve-hour private lower loop for up to ten guests",
+      "Old Faithful and Grand Prismatic Spring geyser stops",
+      "Hayden Valley wildlife viewing with spotting scope",
+      "Grand Canyon of the Yellowstone and Artist Point",
+      "Hotel pickup from West Yellowstone lodgings"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning pickup from West Yellowstone hotels and RV parks. Depart around 7:00 AM for the full lower loop."
+      },
+      "end": {
+        "description": "Return to your West Yellowstone hotel after Artist Point and final geyser basin stops."
+      }
+    },
+    "itinerarySummary": "CoveredGround Tours runs a twelve-hour private lower loop for groups up to ten with hotel pickup from West Yellowstone.",
+    "itineraryItems": [
+      {
+        "title": "Hayden Valley",
+        "description": "Wildlife drive through Hayden Valley with bison and elk scanning.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Faithful",
+        "description": "Upper Geyser Basin boardwalk and Old Faithful eruption viewing.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Prismatic Spring",
+        "description": "Midway Geyser Basin boardwalk at Grand Prismatic Spring.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon of the Yellowstone",
+        "description": "Artist Point overlook above the yellow canyon walls and Lower Falls.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide",
+      "Air-conditioned van",
+      "Lunch",
+      "Binoculars and spotting scope",
+      "Park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Best in the West Yellowstone Private Tour?",
+        "answer": "The planned duration is 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Morning pickup from West Yellowstone hotels and RV parks. Depart around 7:00 AM for the full lower loop."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1999
+      },
+      "currency": "USD"
+    }
+  }
+}

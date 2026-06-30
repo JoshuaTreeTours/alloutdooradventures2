@@ -1,0 +1,122 @@
+{
+  "product": {
+    "productCode": "316119P4",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/Full-Day-Guided-Yellowstone-Day-Tour/d22411-316119P4",
+    "title": "Full-Day Guided Yellowstone Day Tour",
+    "description": {
+      "text": "CoveredGround Tours runs the flagship lower loop day tour from Cody with pickup at Fishing Bridge for in-park guests. The ten- to eleven-hour route includes Hayden Valley, Grand Prismatic Spring, Old Faithful, Gibbon Falls, and Grand Canyon of the Yellowstone overlooks with a provided lunch."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "10 to 11 hours (approx.)",
+    "priceFrom": "From $269.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 527
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/1a/0a/f2/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Highest review-count guided Yellowstone day tour on Viator",
+      "Lower loop highlights including Old Faithful and Grand Prismatic Spring",
+      "Hayden Valley wildlife viewing",
+      "Grand Canyon of the Yellowstone and Artist Point",
+      "Included lunch and Cody or Fishing Bridge pickup"
+    ],
+    "logistics": {
+      "start": {
+        "description": "7:00 AM pickup from Cody, WY hotels or 9:00 AM meet at Fishing Bridge General Store inside Yellowstone National Park."
+      },
+      "end": {
+        "description": "Return to Cody hotels or Fishing Bridge after the final canyon and geyser stops around 4:30 PM."
+      }
+    },
+    "itinerarySummary": "CoveredGround Tours runs the flagship lower loop day tour from Cody with pickup at Fishing Bridge for in-park guests.",
+    "itineraryItems": [
+      {
+        "title": "Hayden Valley",
+        "description": "Wildlife drive through Hayden Valley with bison and elk scanning.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Prismatic Spring",
+        "description": "Midway Geyser Basin boardwalk at Grand Prismatic Spring.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Faithful",
+        "description": "Upper Geyser Basin and Old Faithful eruption viewing.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon of the Yellowstone",
+        "description": "Rim stops along the Grand Canyon of the Yellowstone including Artist Point.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Artist Point",
+        "description": "Photo stop at Artist Point overlooking the Lower Falls.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Wilderness interpretive guide",
+      "Lunch",
+      "Binoculars and spotting scope",
+      "Air-conditioned vehicle",
+      "Park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full-Day Guided Yellowstone Day Tour?",
+        "answer": "The planned duration is 10 to 11 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "7:00 AM pickup from Cody, WY hotels or 9:00 AM meet at Fishing Bridge General Store inside Yellowstone National Park."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 269
+      },
+      "currency": "USD"
+    }
+  }
+}

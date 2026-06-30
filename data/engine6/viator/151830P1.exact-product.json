@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "151830P1",
+    "productUrl": "https://www.viator.com/tours/West-Yellowstone/Private-Tours-of-Yellowstone-National-Park-Gourmet-picnic-lunch-included/d50636-151830P1",
+    "title": "Private Yellowstone Tour: ICONIC Sites, Wildlife, Family Friendly Hikes + lunch",
+    "description": {
+      "text": "Yellowstone Adventure Tours leads your private party on a full-day route through the park's signature sights with gourmet picnic lunch included. The guide tailors wildlife scanning in Hayden Valley, geyser stops at Old Faithful and Grand Prismatic Spring, and short family-friendly hikes near canyon overlooks."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "7 to 9 hours (approx.)",
+    "priceFrom": "From $2200.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 842
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/2d/70/92/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Top-reviewed private Yellowstone day tour with 842 traveler reviews",
+      "Gourmet picnic lunch at a scenic park location",
+      "Old Faithful, Grand Prismatic Spring, and canyon overlooks",
+      "Family-friendly hikes matched to group ability",
+      "Wildlife viewing in Hayden Valley with spotting scope"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Private pickup from West Yellowstone hotels or a coordinated meeting point at the West Yellowstone visitor area, MT 59758."
+      },
+      "end": {
+        "description": "Return to your West Yellowstone pickup location after the final canyon or geyser stop."
+      }
+    },
+    "itinerarySummary": "Yellowstone Adventure Tours leads your private party on a full-day route through the park's signature sights with gourmet picnic lunch included.",
+    "itineraryItems": [
+      {
+        "title": "Hayden Valley",
+        "description": "Morning wildlife drive through Hayden Valley scanning for bison, elk, and bear activity.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Faithful",
+        "description": "Upper Geyser Basin boardwalk time centered on an Old Faithful eruption.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Prismatic Spring",
+        "description": "Midway Geyser Basin stop at Grand Prismatic Spring's colorful runoff channels.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon of the Yellowstone",
+        "description": "Short hike and rim time at Artist Point above the Lower Falls.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Gourmet picnic lunch",
+      "Spotting scope and binoculars",
+      "Park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Yellowstone Tour: ICONIC Sites, Wildlife, Family Friendly Hikes + lunch?",
+        "answer": "The planned duration is 7 to 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Private pickup from West Yellowstone hotels or a coordinated meeting point at the West Yellowstone visitor area, MT 59758."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 2200
+      },
+      "currency": "USD"
+    }
+  }
+}

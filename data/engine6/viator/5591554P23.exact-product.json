@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "5591554P23",
+    "productUrl": "https://www.viator.com/tours/West-Yellowstone/Private-Yellowstone-Wildlife-Tour-in-the-American-Serengeti/d50636-5591554P23",
+    "title": "Private Yellowstone Wildlife Tour in the American Serengeti",
+    "description": {
+      "text": "Explore Yellowstone's Lamar Valley and Hayden Valley on a private wildlife tour nicknamed the American Serengeti. Your guide uses spotting scopes at dawn-active corridors and routes through Mammoth Hot Springs and Norris Geyser Basin when wildlife activity slows midday."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "7 to 8 hours (approx.)",
+    "priceFrom": "From $1295.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 14
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/33/1b/8b/d7/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private wildlife safari in Lamar and Hayden valleys",
+      "Spotting scopes for wolf and bear viewing",
+      "Mammoth Hot Springs thermal terrace stop",
+      "Norris Geyser Basin boardwalk when routing allows",
+      "Expert guide with recent park sighting intel"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Early morning pickup from West Yellowstone hotels for Lamar Valley wildlife runs."
+      },
+      "end": {
+        "description": "Return to West Yellowstone after afternoon wildlife scanning in Hayden Valley."
+      }
+    },
+    "itinerarySummary": "Explore Yellowstone's Lamar Valley and Hayden Valley on a private wildlife tour nicknamed the American Serengeti.",
+    "itineraryItems": [
+      {
+        "title": "Lamar Valley",
+        "description": "Primary wildlife drive through Lamar Valley's open meadows and river bends.",
+        "duration": "2 hours 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hayden Valley",
+        "description": "Afternoon bison and elk viewing in Hayden Valley grasslands.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mammoth Hot Springs",
+        "description": "Thermal terrace walk at Mammoth Hot Springs between wildlife sessions.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Norris Geyser Basin",
+        "description": "Optional Norris Geyser Basin boardwalk when wildlife activity is quiet.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Private wildlife guide",
+      "Spotting scope and binoculars",
+      "Bottled water",
+      "Park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Yellowstone Wildlife Tour in the American Serengeti?",
+        "answer": "The planned duration is 7 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Early morning pickup from West Yellowstone hotels for Lamar Valley wildlife runs."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "Safaris"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1295
+      },
+      "currency": "USD"
+    }
+  }
+}

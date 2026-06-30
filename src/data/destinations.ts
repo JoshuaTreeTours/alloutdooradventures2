@@ -3571,6 +3571,78 @@ const wyomingState: StateDestination = {
         },
       ],
     },
+    {
+      name: "Yellowstone National Park",
+      slug: "yellowstone-national-park",
+      stateSlug: "wyoming",
+      region: "Yellowstone",
+      lat: 44.428,
+      lng: -110.5885,
+      shortDescription:
+        "Geysers, wildlife valleys, canyon overlooks, and multi-day park expeditions.",
+      intro:
+        "Yellowstone National Park is America's first national park—a volcanic landscape of geysers, hot springs, bison-filled valleys, and the Grand Canyon of the Yellowstone.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/d9/ee/1d.jpg",
+      ],
+      activityTags: ["wildlife", "hiking", "geysers"],
+      whereItIs: [
+        "Yellowstone spans northwestern Wyoming with entrances at West Yellowstone, Gardiner, Cody, and Jackson gateway routes.",
+        "Most guided tours depart from West Yellowstone, Gardiner, or in-park lodges for wildlife and geyser basin loops.",
+      ],
+      experiences: {
+        mountains:
+          "Hike canyon rims, geyser basins, and Lamar Valley trails with certified guides.",
+        lakesWater:
+          "Kayak Yellowstone Lake and photograph geothermal shorelines on half-day paddles.",
+        desertForest:
+          "Alpine meadows, lodgepole forests, and thermal basins create dramatic contrast.",
+        cycling: "Seasonal e-bike routes explore geyser basins on guided park tours.",
+        scenicDrives:
+          "Upper and lower loop drives connect Old Faithful, Grand Prismatic, and Lamar Valley.",
+        seasonalNotes:
+          "Summer is peak wildlife and geyser season; winter brings snowcoach and photo safaris.",
+      },
+      thingsToDo: [
+        "Watch Old Faithful and walk the Upper Geyser Basin boardwalks.",
+        "Scan Lamar Valley for wolves, bison, and elk on a wildlife safari.",
+        "Photograph Grand Prismatic Spring and Fairy Falls overlooks.",
+        "Hike the Grand Canyon of the Yellowstone rim to Artist Point.",
+        "Book a multi-day private upper and lower loop expedition.",
+      ],
+      toursCopy: [
+        "Private and small-group tours help you time Lamar Valley wildlife activity and geyser eruptions.",
+        "Multi-day packages cover both loops without rushing the park's signature sights.",
+        "Photo safaris and hiking tours suit travelers who want trail time beyond roadside overlooks.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Lamar Valley wildlife drive.",
+          "Afternoon: Mammoth Hot Springs and Norris Geyser Basin.",
+          "Evening: Return via Hayden Valley overlooks.",
+        ],
+        dayTwo: [
+          "Morning: Old Faithful and Grand Prismatic Spring.",
+          "Afternoon: Grand Canyon of the Yellowstone hike.",
+          "Evening: West Yellowstone or Gardiner return.",
+        ],
+      },
+      gettingThere: [
+        "West Yellowstone Airport and Bozeman Yellowstone International Airport serve most guided tour departures.",
+      ],
+      faq: [
+        {
+          question: "How many days do I need in Yellowstone?",
+          answer:
+            "Two full days cover the upper and lower loops; wildlife-focused travelers often add a third day in Lamar Valley.",
+        },
+        {
+          question: "Are private tours worth it in Yellowstone?",
+          answer:
+            "Private guides adjust timing for wildlife activity, geyser eruptions, and family-friendly hikes that crowded buses miss.",
+        },
+      ],
+    },
   ],
   isFallback: true,
 };

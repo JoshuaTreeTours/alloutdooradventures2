@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "463268P4",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/Yellowstone-Winter-Photo-Safari-Wildlife-and-Landscape-Adventure/d22411-463268P4",
+    "title": "Private, Bespoke Yellowstone Winter Wildlife Photo Safaris",
+    "description": {
+      "text": "A bespoke eight-hour winter photo safari targets Lamar Valley wolves and steam-shrouded thermal features at Mammoth Hot Springs and Norris Geyser Basin. Your photographer guide adjusts routing for light conditions and provides coaching at Old Faithful when the geyser erupts through winter ice."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $1520.00",
+    "reviews": {
+      "combinedAverageRating": 0,
+      "totalReviews": 0
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/32/14/4e/77/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private winter wildlife and landscape photo safari",
+      "Lamar Valley wolf and bison photography",
+      "Steam and ice compositions at Mammoth Hot Springs",
+      "Norris Geyser Basin winter boardwalk access",
+      "Photographer guide with local light routing"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your photographer guide at the Mammoth Hot Springs or Gardiner winter meeting point. Dress in layered cold-weather gear."
+      },
+      "end": {
+        "description": "Return to the Mammoth Hot Springs area after the final Lamar Valley golden-hour session."
+      }
+    },
+    "itinerarySummary": "A bespoke eight-hour winter photo safari targets Lamar Valley wolves and steam-shrouded thermal features at Mammoth Hot Springs and Norris Geyser Basin.",
+    "itineraryItems": [
+      {
+        "title": "Lamar Valley",
+        "description": "Primary winter wildlife photography in Lamar Valley's snow-covered meadows.",
+        "duration": "3 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mammoth Hot Springs",
+        "description": "Steam-and-travertine compositions at Mammoth Hot Springs terraces.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Norris Geyser Basin",
+        "description": "Winter boardwalk photography at Norris Geyser Basin thermal pools.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Faithful",
+        "description": "Old Faithful winter eruption photography when road access is open.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional photographer guide",
+      "Private transport with winter tires",
+      "Hot beverages",
+      "Park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private, Bespoke Yellowstone Winter Wildlife Photo Safaris?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Meet your photographer guide at the Mammoth Hot Springs or Gardiner winter meeting point. Dress in layered cold-weather gear."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1520
+      },
+      "currency": "USD"
+    }
+  }
+}

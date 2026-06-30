@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "23667P2",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/Lamar-Valley-Safari-Day-Hike/d22411-23667P2",
+    "title": "Lamar Valley Safari Hiking Tour with Lunch",
+    "description": {
+      "text": "Hike Lamar Valley trails on a six-hour guided safari with lunch included and wildlife awareness briefings throughout. The route combines meadow walks near Tower-Roosevelt with open-country viewing in Hayden Valley where bison herds and raptors are frequently active."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $182.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 183
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/32/a6/72/31/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Six-hour Lamar Valley guided hiking safari",
+      "Included trail lunch in the park",
+      "Wildlife awareness and bear-safety briefing",
+      "Tower-Roosevelt meadow trail sections",
+      "Hayden Valley open-country wildlife viewing"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Lamar Valley trailhead meeting point coordinated after booking. Wear hiking boots and bring bear spray if you have it."
+      },
+      "end": {
+        "description": "Return to the trailhead after the Hayden Valley wildlife stop and included lunch."
+      }
+    },
+    "itinerarySummary": "Hike Lamar Valley trails on a six-hour guided safari with lunch included and wildlife awareness briefings throughout.",
+    "itineraryItems": [
+      {
+        "title": "Lamar Valley",
+        "description": "Guided meadow hikes through Lamar Valley wildlife corridors.",
+        "duration": "2 hours 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tower-Roosevelt",
+        "description": "Trail sections near Tower-Roosevelt with river and meadow views.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hayden Valley",
+        "description": "Open-country wildlife viewing hike in Hayden Valley grasslands.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional hiking guide",
+      "Trail lunch",
+      "Bear-safety briefing",
+      "Park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Lamar Valley Safari Hiking Tour with Lunch?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Meet at the Lamar Valley trailhead meeting point coordinated after booking. Wear hiking boots and bring bear spray if you have it."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "Safaris"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 182
+      },
+      "currency": "USD"
+    }
+  }
+}

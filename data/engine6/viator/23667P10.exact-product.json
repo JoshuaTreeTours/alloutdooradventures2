@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "23667P10",
+    "productUrl": "https://www.viator.com/tours/West-Yellowstone/Lamar-Valley-Wildlife-Van-Tour-from-West-Yellowstone-Upper-Loop-Tour/d50636-23667P10",
+    "title": "Upper Loop Tour and Lamar Valley from West Yellowstone with Lunch",
+    "description": {
+      "text": "Yellowstone Guidelines leads an eight-hour upper loop van tour from West Yellowstone through Lamar Valley with included lunch. Stops include Mammoth Hot Springs, Norris Geyser Basin, and Tower-Roosevelt wildlife meadows where bison herds and predators are commonly spotted."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $312.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 177
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/2d/55/ab/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Eight-hour upper loop van tour from West Yellowstone",
+      "Lamar Valley wildlife viewing with guide commentary",
+      "Mammoth Hot Springs and Norris Geyser Basin stops",
+      "Included lunch in the park",
+      "Small-group format with active hiking options"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning pickup from West Yellowstone hotels. Tour departs early for Lamar Valley wildlife activity."
+      },
+      "end": {
+        "description": "Return to West Yellowstone after the Tower-Roosevelt and Norris Geyser Basin loop."
+      }
+    },
+    "itinerarySummary": "Yellowstone Guidelines leads an eight-hour upper loop van tour from West Yellowstone through Lamar Valley with included lunch.",
+    "itineraryItems": [
+      {
+        "title": "Lamar Valley",
+        "description": "Wildlife drive through Lamar Valley scanning for wolves, bears, and bison.",
+        "duration": "2 hours 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mammoth Hot Springs",
+        "description": "Boardwalk walk at Mammoth Hot Springs travertine terraces.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Norris Geyser Basin",
+        "description": "Thermal boardwalk loop at Norris Geyser Basin.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tower-Roosevelt",
+        "description": "Wildlife stop near Tower-Roosevelt meadows and Yellowstone River.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Van transport",
+      "Lunch",
+      "Park entrance fees",
+      "Hotel pickup in West Yellowstone"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Upper Loop Tour and Lamar Valley from West Yellowstone with Lunch?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Morning pickup from West Yellowstone hotels. Tour departs early for Lamar Valley wildlife activity."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 312
+      },
+      "currency": "USD"
+    }
+  }
+}

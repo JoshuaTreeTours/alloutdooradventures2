@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "5639875P7",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/Seven-Day-Guided-Trek-to-Yellowstones-Thorofare-Ranger-Station/d22411-5639875P7",
+    "title": "Seven Days Guided Trek to Yellowstone Thorofare Ranger Station",
+    "description": {
+      "text": "Trek deep into Yellowstone's Thorofare backcountry on a seven-day guided backpacking route to the remote ranger station southeast of Yellowstone Lake. Certified wilderness guides handle permits, camp meals, and bear-safe food storage while you hike through Hayden Valley approaches and lake-country meadows."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "7 days (approx.)",
+    "priceFrom": "From $2550.00",
+    "reviews": {
+      "combinedAverageRating": 0,
+      "totalReviews": 0
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/32/df/71/b2/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Seven-day guided backpacking trek to Thorofare Ranger Station",
+      "Remote Yellowstone Lake and Thorofare country wilderness",
+      "Certified guide with backcountry permits and camp meals",
+      "Wildlife corridors through Hayden Valley approaches",
+      "Intermediate backpacking fitness recommended"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the trailhead briefing location near Yellowstone Lake, WY 82190. Gear check and permit review occur the morning of day one."
+      },
+      "end": {
+        "description": "Return shuttle from the Thorofare trailhead back to the Yellowstone Lake area after the final camp night."
+      }
+    },
+    "itinerarySummary": "Trek deep into Yellowstone's Thorofare backcountry on a seven-day guided backpacking route to the remote ranger station southeast of Yellowstone Lake.",
+    "itineraryItems": [
+      {
+        "title": "Yellowstone Lake",
+        "description": "Begin the approach along Yellowstone Lake's southeastern shore toward backcountry trailheads.",
+        "duration": "1 day",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hayden Valley",
+        "description": "Cross Hayden Valley approaches with wildlife awareness briefings from your guide.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Thorofare Ranger Station",
+        "description": "Reach the remote Thorofare Ranger Station camp on the park's southeastern boundary.",
+        "duration": "2 days",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon of the Yellowstone",
+        "description": "Optional pre- or post-trek rim viewpoint stop at the Grand Canyon of the Yellowstone.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional wilderness guide",
+      "Backcountry permits",
+      "Camping meals and shared gear",
+      "Bear-safe food storage equipment"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Seven Days Guided Trek to Yellowstone Thorofare Ranger Station?",
+        "answer": "The planned duration is 7 days."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Meet your guide at the trailhead briefing location near Yellowstone Lake, WY 82190. Gear check and permit review occur the morning of day one."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Multi-day Tours"
+      },
+      {
+        "label": "Hiking"
+      },
+      {
+        "label": "Backpacking"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 2550
+      },
+      "currency": "USD"
+    }
+  }
+}

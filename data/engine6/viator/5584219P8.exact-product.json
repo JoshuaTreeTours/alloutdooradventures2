@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "5584219P8",
+    "productUrl": "https://www.viator.com/tours/Gardiner/Upper-Loop-Lamar-Wildlife-Safari-from-Gardiner-PRIVATE-Lunch/d50734-5584219P8",
+    "title": "Upper Loop Lamar Wildlife Safari from Gardiner PRIVATE Lunch",
+    "description": {
+      "text": "Depart Gardiner on a private eight-hour upper loop safari focused on Lamar Valley wildlife with included lunch. The route covers Mammoth Hot Springs terraces, Norris Geyser Basin boardwalks, and Tower-Roosevelt meadows where bear and wolf activity peaks in morning and evening hours."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $450.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/30/ee/fd/81/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private upper loop safari from Gardiner, MT",
+      "Lamar Valley wolf and bear wildlife focus",
+      "Included lunch in the park",
+      "Mammoth Hot Springs terrace walk",
+      "Norris Geyser Basin thermal boardwalk"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from Gardiner, MT hotels near the North Entrance. Early departure recommended for Lamar Valley wildlife."
+      },
+      "end": {
+        "description": "Return to Gardiner after the final Lamar Valley wildlife session and Norris Geyser Basin stop."
+      }
+    },
+    "itinerarySummary": "Depart Gardiner on a private eight-hour upper loop safari focused on Lamar Valley wildlife with included lunch.",
+    "itineraryItems": [
+      {
+        "title": "Lamar Valley",
+        "description": "Primary wildlife safari through Lamar Valley's predator corridors.",
+        "duration": "3 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mammoth Hot Springs",
+        "description": "Travertine terrace walk at Mammoth Hot Springs near Gardiner.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Norris Geyser Basin",
+        "description": "Boardwalk loop at Norris Geyser Basin between wildlife sessions.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tower-Roosevelt",
+        "description": "Meadow and river wildlife scanning near Tower-Roosevelt junction.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private wildlife guide",
+      "Lunch",
+      "Spotting scope",
+      "Park entrance fees",
+      "Gardiner hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Upper Loop Lamar Wildlife Safari from Gardiner PRIVATE Lunch?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Pickup from Gardiner, MT hotels near the North Entrance. Early departure recommended for Lamar Valley wildlife."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "Safaris"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 450
+      },
+      "currency": "USD"
+    }
+  }
+}

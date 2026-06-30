@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "481298P1",
+    "productUrl": "https://www.viator.com/tours/Yellowstone-National-Park/Yellowstone-National-Park-Private-Wildlife-Tour/d22411-481298P1",
+    "title": "Yellowstone National Park Private Wildlife Tour",
+    "description": {
+      "text": "Spend eight hours on a private wildlife tour through Lamar Valley, Hayden Valley, and Norris Geyser Basin with a naturalist guide. The route prioritizes bear and wolf habitat along river corridors and includes thermal boardwalk time when wildlife activity quiets in midday heat."
+    },
+    "location": {
+      "city": "Yellowstone National Park",
+      "state": "Wyoming"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $1000.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 89
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/8a/01/12/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Eight-hour private Yellowstone wildlife tour",
+      "Lamar Valley dawn wildlife corridor",
+      "Hayden Valley bison and elk meadows",
+      "Norris Geyser Basin thermal boardwalk stop",
+      "Naturalist guide with spotting equipment"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from West Yellowstone or Gardiner area lodgings. Confirm your preferred gate when booking."
+      },
+      "end": {
+        "description": "Return to your original pickup point after the Norris Geyser Basin or Hayden Valley final stop."
+      }
+    },
+    "itinerarySummary": "Spend eight hours on a private wildlife tour through Lamar Valley, Hayden Valley, and Norris Geyser Basin with a naturalist guide.",
+    "itineraryItems": [
+      {
+        "title": "Lamar Valley",
+        "description": "Early wildlife scanning in Lamar Valley for wolves, bears, and bison herds.",
+        "duration": "2 hours 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hayden Valley",
+        "description": "Open meadow wildlife viewing in Hayden Valley along the Yellowstone River.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mammoth Hot Springs",
+        "description": "Travertine terrace walk at Mammoth Hot Springs when routing from the north.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Norris Geyser Basin",
+        "description": "Boardwalk loop through Norris Geyser Basin's hottest thermal features.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private naturalist guide",
+      "Spotting scope",
+      "Bottled water",
+      "Park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Yellowstone National Park Private Wildlife Tour?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Yellowstone National Park?",
+        "answer": "Pickup from West Yellowstone or Gardiner area lodgings. Confirm your preferred gate when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "Safaris"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1000
+      },
+      "currency": "USD"
+    }
+  }
+}
