@@ -13,6 +13,10 @@ import {
   loadMerchantFeedNotYetPublishedOnProductionProductCodes,
 } from "../api/engine6/merchantFeedProductionDeploymentBaseline";
 import {
+  applyMerchantFeedChangeScopePreservingNonCommercial,
+  type MerchantFeedCsvRow,
+} from "../api/engine6/merchantFeedChangeScopeGovernance";
+import {
   diagnoseEngine6ViatorProductCommercialExtract,
   describeViatorApiConfigEnvVisibility,
   resolveViatorApiConfig,
@@ -533,7 +537,37 @@ const main = async () => {
     );
   }
 
-  const outputRows = reconciliation.rows;
+  const changeScope = applyMerchantFeedChangeScopePreservingNonCommercial(
+    existingRows as MerchantFeedCsvRow[],
+    reconciliation.rows as MerchantFeedCsvRow[],
+    { branchModifiedProductCodes }
+  );
+
+  if (changeScope.preservedNonCommercialProductCodes.length > 0) {
+    console.log(
+      "[merchant-feed-build] change-scope preservation:",
+      JSON.stringify(
+        {
+          reason:
+            "restored baseline non-commercial columns while keeping reconciled commercial fields",
+          preservedNonCommercialCount:
+            changeScope.preservedNonCommercialProductCodes.length,
+          preservedNonCommercialProductCodes:
+            changeScope.preservedNonCommercialProductCodes.slice(0, 20),
+        },
+        null,
+        2
+      )
+    );
+  }
+
+  if (changeScope.appendedProductCodes.length > 0) {
+    console.log(
+      `[merchant-feed-build] appended ${changeScope.appendedProductCodes.length} new merchant feed row(s).`
+    );
+  }
+
+  const outputRows = changeScope.rows as MerchantRow[];
   const validation = validateMerchantFeedRows(outputRows);
   logMerchantFeedReport("After", validation.report, validation.pass);
 

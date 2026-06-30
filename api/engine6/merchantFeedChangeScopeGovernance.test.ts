@@ -3,7 +3,9 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
 import {
+  applyMerchantFeedChangeScopePreservingNonCommercial,
   enforceMerchantFeedChangeScope,
+  mergeMerchantFeedBaselineNonCommercialWithProposedCommercial,
   merchantFeedCsvRowsByteIdentical,
   parseMerchantFeedCsvRows,
   serializeMerchantFeedCsvRow,
@@ -244,6 +246,114 @@ describe("merchant feed change-scope governance", () => {
     expect(result.violations[0]).toMatchObject({
       productCode: "191303P1",
       kind: "governance-regeneration-undocumented",
+    });
+  });
+
+  it("preserves baseline non-commercial columns while applying reconciled commercial refresh", () => {
+    const baseline = [sampleRow()];
+    const proposed = [
+      sampleRow({
+        title: "Regenerated title drift",
+        description: "Regenerated description drift.",
+        price: "99.00 USD",
+        average_rating: "4.8",
+        rating_count: "60",
+        review_count: "60",
+      }),
+    ];
+
+    const result = applyMerchantFeedChangeScopePreservingNonCommercial(
+      baseline,
+      proposed,
+      { branchModifiedProductCodes: new Set() }
+    );
+
+    expect(result.preservedNonCommercialProductCodes).toEqual(["191303P1"]);
+    expect(result.rows[0]).toMatchObject({
+      title: baseline[0]!.title,
+      description: baseline[0]!.description,
+      price: "99.00 USD",
+      average_rating: "4.8",
+      rating_count: "60",
+      review_count: "60",
+    });
+  });
+
+  it("keeps full proposed rows for branch-scoped products", () => {
+    const baseline = [sampleRow()];
+    const proposed = [
+      sampleRow({
+        title: "Branch-scoped title update",
+        description: "Branch-scoped description update.",
+        price: "99.00 USD",
+      }),
+    ];
+
+    const result = applyMerchantFeedChangeScopePreservingNonCommercial(
+      baseline,
+      proposed,
+      { branchModifiedProductCodes: new Set(["191303P1"]) }
+    );
+
+    expect(result.preservedNonCommercialProductCodes).toEqual([]);
+    expect(merchantFeedCsvRowsByteIdentical(result.rows[0]!, proposed[0]!)).toBe(
+      true
+    );
+  });
+
+  it("keeps full proposed rows for governance-authorized regeneration", () => {
+    const baseline = [sampleRow()];
+    const proposed = [
+      sampleRow({
+        description: "Governance-regenerated merchant description.",
+        image_link: "https://example.com/new-image.jpg",
+      }),
+    ];
+
+    const result = applyMerchantFeedChangeScopePreservingNonCommercial(
+      baseline,
+      proposed,
+      {
+        branchModifiedProductCodes: new Set(),
+        governancePurpose: "image-governance",
+        governanceRegenerationProductCodes: new Set(["191303P1"]),
+        governanceRegenerationReason:
+          "Replace stale hero imagery across merchant-eligible Napa products.",
+      }
+    );
+
+    expect(result.preservedNonCommercialProductCodes).toEqual([]);
+    expect(merchantFeedCsvRowsByteIdentical(result.rows[0]!, proposed[0]!)).toBe(
+      true
+    );
+  });
+
+  it("merges only commercial parity fields from proposed rows", () => {
+    const baseline = sampleRow({
+      availability: "in stock",
+      condition: "new",
+    });
+    const proposed = sampleRow({
+      availability: "out of stock",
+      condition: "used",
+      price: "99.00 USD",
+      average_rating: "4.8",
+      rating_count: "60",
+      review_count: "60",
+    });
+
+    expect(
+      mergeMerchantFeedBaselineNonCommercialWithProposedCommercial(
+        baseline,
+        proposed
+      )
+    ).toMatchObject({
+      availability: "in stock",
+      condition: "new",
+      price: "99.00 USD",
+      average_rating: "4.8",
+      rating_count: "60",
+      review_count: "60",
     });
   });
 
