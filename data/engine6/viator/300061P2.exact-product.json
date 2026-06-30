@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "300061P2",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Half-Day-Slot-Canyon-Canyoneering-near-East-Zion/d5610-300061P2",
+    "title": "The Huntress Slot Canyon Adventure",
+    "description": {
+      "text": "Rappel and canyoneer through Huntress Slot Canyon on a half-day East Zion adventure near Moqui Cave. Certified guides lead a hike-in approach, introductory rappel training, and multiple drops through the narrow sandstone corridor. Technical gear including harness, helmet, and rappel devices is provided with instruction for beginners. This small-group outing explores a slot canyon outside the main park shuttle routes."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $179.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 95
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ef/4b/41.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Huntress Slot Canyon canyoneering adventure",
+      "Introductory rappel training included",
+      "Multiple rappels through narrow sandstone",
+      "Small-group format with certified guides",
+      "Half-day East Zion departure near Moqui Cave"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Moqui Cave/US-89 staging area near Kanab, UT. Confirm exact coordinates when booking."
+      },
+      "end": {
+        "description": "Return to the Moqui Cave meeting point after the final rappel and hike out."
+      }
+    },
+    "itinerarySummary": "Rappel and canyoneer through Huntress Slot Canyon on a half-day East Zion adventure near Moqui Cave.",
+    "itineraryItems": [
+      {
+        "title": "Moqui Cave",
+        "description": "Meet guides and gear up near the US-89 staging area.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Huntress Canyon",
+        "description": "Hike into the canyon approach through desert scrub terrain.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Intro Rappel",
+        "description": "Practice rappel on a short drop with guide instruction.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Main Slot Canyon",
+        "description": "Series of rappels through the Huntress slot corridor.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hike Out",
+        "description": "Return hike to the staging area after the final drop.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Certified canyoneering guide",
+      "Rappel and canyoneering gear",
+      "Helmet and harness",
+      "Trail snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The Huntress Slot Canyon Adventure?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Meet at the Moqui Cave/US-89 staging area near Kanab, UT. Confirm exact coordinates when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Canyoneering"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Small Group Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 179
+      },
+      "currency": "USD"
+    }
+  }
+}

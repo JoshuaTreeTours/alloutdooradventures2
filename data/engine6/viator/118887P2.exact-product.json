@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "118887P2",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/East-Zion-Experiences-4-hr-ATV-Peekaboo-Slot-Canyon-Tour/d5610-118887P2",
+    "title": "East Zion Slot Canyon Canyoneering UTV Tour",
+    "description": {
+      "text": "Combine UTV off-road travel with slot canyon canyoneering on a two-and-a-half-hour East Zion adventure from Orderville. Guides lead UTV transport to the canyon entrance, then a canyoneering section through narrows with an optional cave stop before the return ride. Technical difficulty stays moderate for active travelers seeking more than a passive UTV tour. Helmets and canyoneering gear are provided."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $119.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 258
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/25/f2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "UTV plus canyoneering combo tour",
+      "Peekaboo area slot canyon section",
+      "Off-road UTV approach from Orderville",
+      "Optional cave stop en route",
+      "Two-and-a-half-hour active format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Orderville departure point on US-89. Wear closed-toe shoes suitable for canyon walking."
+      },
+      "end": {
+        "description": "Return to Orderville by UTV after the canyon and cave stops."
+      }
+    },
+    "itinerarySummary": "Combine UTV off-road travel with slot canyon canyoneering on a two-and-a-half-hour East Zion adventure from Orderville.",
+    "itineraryItems": [
+      {
+        "title": "Orderville Departure",
+        "description": "Group meetup and gear check at the Orderville base.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "UTV Off-Road",
+        "description": "UTV travel to the slot canyon trailhead.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Slot Canyon Canyoneering",
+        "description": "Guided canyoneering through Peekaboo area narrows.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cave Stop",
+        "description": "Optional cave photo stop before the return ride.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "UTV transport",
+      "Canyoneering guide",
+      "Helmet and safety gear",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the East Zion Slot Canyon Canyoneering UTV Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Meet at the Orderville departure point on US-89. Wear closed-toe shoes suitable for canyon walking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "UTV Tours"
+      },
+      {
+        "label": "Canyoneering"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 119
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "163873P1",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Half-Day-Guided-Hiking-Tours/d5610-163873P1",
+    "title": "East Zion Canyoneering Elkheart Canyon and UTV Tour",
+    "description": {
+      "text": "Explore Elkheart Canyon on a half-day canyoneering and UTV tour combining off-road access with two slot canyon sections near Mount Carmel. Guides lead UTV transport to the trailhead, then short hikes through narrows with moderate scrambling and photo stops. This outing suits active travelers wanting East Zion slot canyon time without a full-day commitment. Equipment and safety briefing are included at the Mount Carmel meeting point."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $149.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 420
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ff/4d/d9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Elkheart Canyon canyoneering and UTV combo",
+      "Two slot canyon sections on one outing",
+      "UTV off-road approach from Mount Carmel",
+      "Moderate scrambling with guide support",
+      "Half-day East Zion adventure"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Mount Carmel Junction staging area on US-89. Confirm meeting point when booking."
+      },
+      "end": {
+        "description": "Return to Mount Carmel by UTV after the second slot canyon section."
+      }
+    },
+    "itinerarySummary": "Explore Elkheart Canyon on a half-day canyoneering and UTV tour combining off-road access with two slot canyon sections near Mount Carmel.",
+    "itineraryItems": [
+      {
+        "title": "Mount Carmel",
+        "description": "Meet guides and gear up at the Mount Carmel staging area.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Elkheart Canyon",
+        "description": "Hike into Elkheart Canyon slot entrance.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "UTV Off-Road",
+        "description": "UTV segment connecting canyon sections.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Second Slot Canyon",
+        "description": "Explore a second narrows section with guide assistance.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "UTV transport",
+      "Canyoneering guide",
+      "Helmet and harness",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the East Zion Canyoneering Elkheart Canyon and UTV Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Meet at the Mount Carmel Junction staging area on US-89. Confirm meeting point when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "UTV Tours"
+      },
+      {
+        "label": "Canyoneering"
+      },
+      {
+        "label": "Hiking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149
+      },
+      "currency": "USD"
+    }
+  }
+}

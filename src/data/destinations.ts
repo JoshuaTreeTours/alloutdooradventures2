@@ -1655,6 +1655,78 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
         ],
       },
       {
+        name: "Zion National Park",
+        slug: "zion-national-park",
+        stateSlug: "utah",
+        region: "Zion Canyon",
+        lat: 37.2982,
+        lng: -113.0263,
+        shortDescription:
+          "Towering canyon walls, Narrows hikes, slot canyons, and East Zion adventures.",
+        intro:
+          "Zion National Park is Utah's crown-jewel canyon—a vertical landscape of red sandstone cliffs, Virgin River narrows, and world-famous hikes from Angels Landing to the Riverside Walk.",
+        heroImages: [
+          "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/1d/62/0b.jpg",
+        ],
+        activityTags: ["canyons", "hiking", "canyoneering"],
+        whereItIs: [
+          "Zion Canyon sits in southwestern Utah near Springdale, with the main park shuttle serving the scenic drive from March through November.",
+          "East Zion and Kanab-area operators run UTV slot canyon tours beyond the main canyon road.",
+        ],
+        experiences: {
+          mountains:
+            "Hike Angels Landing, the Narrows, and Emerald Pools with certified guides.",
+          lakesWater:
+            "Wade the Virgin River Narrows when flow levels permit safe bottom-up hiking.",
+          desertForest:
+            "Cottonwood groves line the canyon floor while desert scrub covers the eastern plateau.",
+          cycling: "Bike the Pa'rus Trail for a car-free ride with canyon views.",
+          scenicDrives:
+            "Zion Canyon Scenic Drive and Kolob Terrace Road reveal iconic viewpoints.",
+          seasonalNotes:
+            "Spring and fall are ideal; summer heat favors early starts and shuttle access.",
+        },
+        thingsToDo: [
+          "Hike the Narrows bottom-up from Riverside Walk.",
+          "Summit Angels Landing with a permitted guided hike.",
+          "Explore East Zion slot canyons on a UTV tour.",
+          "Photograph the Watchman at golden hour from Springdale.",
+          "Book a private full-day tour covering Zion and Bryce Canyon.",
+        ],
+        toursCopy: [
+          "Private and small-group tours help you time Narrows conditions and Angels Landing permits.",
+          "East Zion UTV and canyoneering tours access slot canyons beyond the main park road.",
+          "Multi-day Bryce and Zion combos suit travelers basing in Springdale.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Canyon Overlook or Riverside Walk.",
+            "Afternoon: Emerald Pools and shuttle stops.",
+            "Evening: sunset Jeep tour in East Zion.",
+          ],
+          dayTwo: [
+            "Morning: Narrows or Angels Landing guided hike.",
+            "Afternoon: UTV slot canyon tour near Kanab.",
+            "Evening: dinner in Springdale.",
+          ],
+        },
+        gettingThere: [
+          "Las Vegas McCarran International Airport is about 2.5 hours by car; St. George Regional Airport is the closest commercial option.",
+        ],
+        faq: [
+          {
+            question: "Do I need a permit for Angels Landing?",
+            answer:
+              "Yes. Angels Landing requires a seasonal permit; guided tours often include permit coordination.",
+          },
+          {
+            question: "When can I hike the Narrows?",
+            answer:
+              "Bottom-up Narrows hiking depends on Virgin River flow; check conditions and book a guide for gear and safety.",
+          },
+        ],
+      },
+      {
         name: "Park City",
         slug: "park-city",
         stateSlug: "utah",

@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "265766P27",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Full-Day-Small-Group-Tour-of-Zion-National-Park/d5610-265766P27",
+    "title": "Zion Full Day Small Group Tour with Narrows",
+    "description": {
+      "text": "Join a small-group full-day tour of Zion National Park that combines shuttle logistics, scenic overlooks, and a guided Narrows hike when river conditions allow. The itinerary covers Riverside Walk, Emerald Pools, Court of the Patriarchs, and bottom-up Narrows wading with a certified guide pacing the group. Maximum group size stays small for a social but uncrowded canyon experience. Park entrance fees and trail snacks are included."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "6 to 8 hours (approx.)",
+    "priceFrom": "From $279.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 77
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/1d/62/0b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group full-day Zion canyon tour",
+      "Guided bottom-up Narrows hike when permitted",
+      "Riverside Walk and Emerald Pools stops",
+      "Court of the Patriarchs viewpoint",
+      "Park entrance fees included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Zion Outfitter in Springdale, UT 84767 at your confirmed morning departure time."
+      },
+      "end": {
+        "description": "Return to the Springdale meeting point after the final canyon trail."
+      }
+    },
+    "itinerarySummary": "Join a small-group full-day tour of Zion National Park that combines shuttle logistics, scenic overlooks, and a guided Narrows hike when river conditions allow.",
+    "itineraryItems": [
+      {
+        "title": "Springdale",
+        "description": "Group meetup and gear check before entering Zion Canyon.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Riverside Walk",
+        "description": "Paved walk along the Virgin River toward the Narrows entrance.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Narrows",
+        "description": "Guided bottom-up Narrows hike when Virgin River flow allows.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Emerald Pools",
+        "description": "Short hike to lower Emerald Pools beneath canyon waterfalls.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Court of the Patriarchs",
+        "description": "Viewpoint stop at the Court of the Patriarchs pullout.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Small-group transport",
+      "Park entrance fees",
+      "Trail snacks and water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Zion Full Day Small Group Tour with Narrows?",
+        "answer": "The planned duration is 6 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Meet at Zion Outfitter in Springdale, UT 84767 at your confirmed morning departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Small Group Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 279
+      },
+      "currency": "USD"
+    }
+  }
+}

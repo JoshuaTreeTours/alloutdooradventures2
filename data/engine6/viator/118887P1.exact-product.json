@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "118887P1",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/East-Zion-Slot-Canyon-Rappelling-Tour/d5610-118887P1",
+    "title": "Award Winning UTV Slot Canyon Tour",
+    "description": {
+      "text": "Ride UTVs to Red Cave slot canyons on East Zion's award-winning two-hour slot canyon tour. Guides drive or lead you along off-road routes to upper and lower Red Cave narrows with time for photos in the red sandstone corridors. This compact outing delivers slot canyon access without a long hike or technical rappelling. Ideal for first-time visitors to East Zion seeking a high-review-count adventure."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $149.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1179
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/25/f7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Award-winning UTV slot canyon tour",
+      "Upper and Lower Red Cave narrows",
+      "Off-road UTV approach from Orderville",
+      "Two-hour compact adventure format",
+      "Photo time in red sandstone slots"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Orderville staging area on US-89. Confirm exact meeting coordinates when booking."
+      },
+      "end": {
+        "description": "Return to the Orderville staging area after the lower canyon stop."
+      }
+    },
+    "itinerarySummary": "Ride UTVs to Red Cave slot canyons on East Zion's award-winning two-hour slot canyon tour.",
+    "itineraryItems": [
+      {
+        "title": "Orderville Staging",
+        "description": "Check in and UTV safety briefing at the Orderville base.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "UTV Route",
+        "description": "Off-road UTV travel to the slot canyon trailhead.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Upper Red Cave Slot Canyon",
+        "description": "Walk through the upper Red Cave narrows section.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lower Red Cave Slot Canyon",
+        "description": "Continue to the lower slot section for photos.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "UTV transport",
+      "Professional guide",
+      "Helmet and goggles",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Award Winning UTV Slot Canyon Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Meet at the Orderville staging area on US-89. Confirm exact meeting coordinates when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "UTV Tours"
+      },
+      {
+        "label": "Slot Canyon Tours"
+      },
+      {
+        "label": "Small Group Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149
+      },
+      "currency": "USD"
+    }
+  }
+}
