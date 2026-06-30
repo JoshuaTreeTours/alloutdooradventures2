@@ -2,9 +2,12 @@ import { extractEngine6OverviewNamedLocations } from "./overviewGovernance";
 import { merchantFeedEligibleTours } from "./merchantFeedEligibility";
 import {
   applyEngine6NationalParkEditorialActivityOverride,
+  buildEngine6NationalParkExperienceOpening,
+  buildEngine6NationalParkHikingOpening,
+  buildEngine6NationalParkPoiFollowOn,
+  inferEngine6NationalParkExperienceProfile,
   inferEngine6NationalParkRouteContext,
   isEngine6NationalParkDestination,
-  isEngine6WildlifeFocusedNationalParkExperience,
 } from "./engine6NationalParkDestinationGovernance";
 import {
   cleanEngine6Description,
@@ -946,7 +949,8 @@ const buildPoiFollowOn = (
   pois: string[],
   activityKind: Engine6EditorialActivityKind,
   productCode: string,
-  city?: string | null
+  city?: string | null,
+  nationalParkProfile?: ReturnType<typeof inferEngine6NationalParkExperienceProfile>
 ) => {
   if (pois.length === 0) return "";
 
@@ -990,14 +994,22 @@ const buildPoiFollowOn = (
       );
     case "national-park-tour":
     case "hiking-tour":
+      if (inNationalParkDestination && nationalParkProfile) {
+        return normalizeSentence(
+          buildEngine6NationalParkPoiFollowOn({
+            profile: nationalParkProfile,
+            list,
+            variant,
+          })
+        );
+      }
       if (inNationalParkDestination) {
         return normalizeSentence(
-          [
-            `Scenic stops include ${list}.`,
-            `The route follows park roads through ${list}.`,
-            `You'll pause at iconic landmarks including ${list}.`,
-            `Along the route you'll visit ${list}.`,
-          ][variant]
+          buildEngine6NationalParkPoiFollowOn({
+            profile: "general-park-tour",
+            list,
+            variant,
+          })
         );
       }
       return normalizeSentence(
@@ -1186,7 +1198,13 @@ const buildExperienceOpening = ({
           itineraryTitles: itineraryStops.map(stop => stop.title),
         });
         return normalizeSentence(
-          `Hike ${primaryPoi ? `through ${primaryPoi} and` : "across"} ${cityLabel}'s ${routeContext}${durationPhrase} with wide valley views and guide interpretation.`
+          buildEngine6NationalParkHikingOpening({
+            title,
+            cityLabel,
+            primaryPoi,
+            durationPhrase,
+            routeContext,
+          })
         );
       }
       return normalizeSentence(
@@ -1223,19 +1241,25 @@ const buildExperienceOpening = ({
         highlights,
         itineraryTitles: itineraryStops.map(stop => stop.title),
       });
-      const wildlifeFocused = isEngine6WildlifeFocusedNationalParkExperience(
+      const profile = inferEngine6NationalParkExperienceProfile({
         title,
-        overviewText
-      );
+        categoryLabel,
+        overviewText,
+        highlights,
+        itineraryTitles: itineraryStops.map(stop => stop.title),
+        durationText,
+      });
 
       if (isEngine6NationalParkDestination(cityLabel)) {
-        if (wildlifeFocused) {
-          return normalizeSentence(
-            `Explore ${primaryPoi || "the park's wildlife habitats"} on a guided wildlife safari${durationPhrase} with scenic pullouts along park roads and valleys.`
-          );
-        }
         return normalizeSentence(
-          `Explore ${primaryPoi ? `${primaryPoi} and nearby ` : ""}${routeContext} across ${cityLabel}${durationPhrase} with guide context at scenic viewpoints and park roads.`
+          buildEngine6NationalParkExperienceOpening({
+            profile,
+            title,
+            cityLabel,
+            primaryPoi,
+            durationPhrase,
+            routeContext,
+          })
         );
       }
 
@@ -1361,6 +1385,8 @@ const padToMinimumEditorialLength = ({
   activityKind,
   productCode,
   city,
+  categoryLabel,
+  nationalParkProfile,
   itineraryStops,
   highlights,
   included,
@@ -1372,6 +1398,8 @@ const padToMinimumEditorialLength = ({
   activityKind: Engine6EditorialActivityKind;
   productCode: string;
   city: string;
+  categoryLabel?: string | null;
+  nationalParkProfile?: ReturnType<typeof inferEngine6NationalParkExperienceProfile>;
   itineraryStops: Array<{ title: string; description?: string | null }>;
   highlights: string[];
   included: string[];
@@ -1387,7 +1415,13 @@ const padToMinimumEditorialLength = ({
   });
 
   const paddingCandidates = [
-    buildPoiFollowOn(pois, activityKind, productCode, city),
+    buildPoiFollowOn(
+      pois,
+      activityKind,
+      productCode,
+      city,
+      nationalParkProfile
+    ),
     buildInclusionsNarrative(included),
     buildTransportNarrative(included),
     buildDurationNarrative({ durationText, activityKind }),
@@ -1440,6 +1474,16 @@ export const buildEngine6PremiumEditorialDescription = ({
     categoryLabel,
     overviewText: sourceText,
   });
+  const nationalParkProfile = isEngine6NationalParkDestination(city)
+    ? inferEngine6NationalParkExperienceProfile({
+        title,
+        categoryLabel,
+        overviewText: sourceText,
+        highlights,
+        itineraryTitles: itineraryStops.map(stop => stop.title),
+        durationText,
+      })
+    : undefined;
 
   const editorialSentences = splitSentences(sourceText).filter(
     sentence =>
@@ -1489,7 +1533,13 @@ export const buildEngine6PremiumEditorialDescription = ({
   });
   appendSentenceIfUseful(
     sentences,
-    buildPoiFollowOn(pois, activityKind, productCode, city)
+    buildPoiFollowOn(
+      pois,
+      activityKind,
+      productCode,
+      city,
+      nationalParkProfile
+    )
   );
 
   for (const sentence of editorialSentences) {
@@ -1518,6 +1568,8 @@ export const buildEngine6PremiumEditorialDescription = ({
     activityKind,
     productCode,
     city,
+    categoryLabel,
+    nationalParkProfile,
     itineraryStops,
     highlights,
     included,

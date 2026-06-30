@@ -132,6 +132,7 @@ describe("Yellowstone Engine6 rating/review parity", () => {
       /city highlights/i,
       /\bcity tour\b/i,
       /The outing extends the/i,
+      /Coastal waters around Yellowstone/i,
     ];
 
     const yellowstoneTours = engine6ResolvedTours.filter(entry =>
@@ -149,6 +150,35 @@ describe("Yellowstone Engine6 rating/review parity", () => {
         expect(cardDescription, tour.productCode).not.toMatch(pattern);
       }
     });
+  });
+
+  it("uses wildlife safari openings only for explicitly wildlife-focused Yellowstone products", () => {
+    const yellowstoneTours = engine6ResolvedTours.filter(entry =>
+      entry.canonicalPath.includes("/yellowstone-national-park/")
+    );
+
+    const safariOpenings = yellowstoneTours.filter(tour => {
+      const governedDescription = resolveEngine6GovernedProductDescription(tour);
+      const firstSentence =
+        governedDescription.split(/(?<=[.!?])\s+/)[0] ?? governedDescription;
+      return /guided wildlife safari/i.test(firstSentence);
+    });
+
+    expect(safariOpenings.length).toBeLessThanOrEqual(6);
+    expect(safariOpenings.length).toBeGreaterThan(0);
+
+    for (const tour of yellowstoneTours) {
+      const governedDescription = resolveEngine6GovernedProductDescription(tour);
+      const firstSentence =
+        governedDescription.split(/(?<=[.!?])\s+/)[0] ?? governedDescription;
+      const titleIdentity = tour.title.toLowerCase();
+
+      if (/lower loop|grand prismatic|old faithful|geyser hiking|hidden gems|best in the west|iconic sites/i.test(
+        titleIdentity
+      )) {
+        expect(firstSentence, tour.productCode).not.toMatch(/guided wildlife safari/i);
+      }
+    }
   });
 
   it("keeps Yellowstone public itinerary titles clean on rendered detail pages", () => {

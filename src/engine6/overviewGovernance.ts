@@ -647,6 +647,27 @@ const buildOverviewSourceParaphrase = ({
   const lower = sourceOverview.toLowerCase();
   const activityLabel = categoryLabel?.toLowerCase() ?? "guided outing";
 
+  if (isEngine6NationalParkDestination(city)) {
+    if (/trek|backcountry|hike|trail|ranger station/i.test(lower)) {
+      return normalizeOverviewSentence(
+        `Trail systems, canyon rims, and valley viewpoints structure the guided hiking experience across ${city}`
+      );
+    }
+    if (/wildlife|wolf|lamar|safari|bison|elk|naturalist/i.test(lower)) {
+      return normalizeOverviewSentence(
+        `Wildlife habitats, open valleys, and park-road pullouts structure the wildlife-focused route across ${city}`
+      );
+    }
+    if (/geyser|geothermal|old faithful|prismatic|thermal/i.test(lower)) {
+      return normalizeOverviewSentence(
+        `Geothermal basins, boardwalk stops, and scenic pullouts structure the park route across ${city}`
+      );
+    }
+    return normalizeOverviewSentence(
+      `Iconic landmarks, scenic viewpoints, and park roads structure the guided route across ${city}`
+    );
+  }
+
   if (/market|vendor|tasting|food|culinary|chef/.test(lower)) {
     return normalizeOverviewSentence(
       `Market stalls, specialty foods, and public-market history shape the walking format across ${city}'s best-known vendor areas`
