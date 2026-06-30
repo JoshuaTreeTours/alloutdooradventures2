@@ -1,0 +1,127 @@
+{
+  "product": {
+    "productCode": "3272GCER",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-East-Rim-Drive-by-Jeep-and-IMAX-Movie/d815-3272GCER",
+    "title": "Desert View Grand Canyon Jeep Tour",
+    "description": {
+      "text": "A three-hour open-air Jeep tour follows Desert View Drive east from Grand Canyon Village to the Desert View Watchtower. Stops include Duck on a Rock Viewpoint, Grandview Point, and Pipe Creek Vista, plus admission to the Grand Canyon IMAX film at the visitor center."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $166.43",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 298
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/39/1e/8c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Open-air Jeep tour along Desert View Drive",
+      "Stops at Grandview Point and Desert View Watchtower",
+      "Included Grand Canyon IMAX movie admission",
+      "National park entrance fees covered",
+      "Departures from Tusayan visitor center area"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Jeep tour staging area near the National Geographic Visitor Center, Tusayan, AZ 86023."
+      },
+      "end": {
+        "description": "Return to the Tusayan staging area; IMAX tickets valid for same-day screening."
+      }
+    },
+    "itinerarySummary": "A three-hour open-air Jeep tour follows Desert View Drive east from Grand Canyon Village to the Desert View Watchtower.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon South Rim",
+        "description": "Begin the east-rim Jeep route from the village area toward Desert View Drive.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Duck on a Rock Viewpoint",
+        "description": "Photo stop at Duck on a Rock Viewpoint along Desert View Drive.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grandview Point",
+        "description": "Stop at Grandview Point for views above Horseshoe Mesa and the inner canyon.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon Desert View Watchtower",
+        "description": "Visit the historic Desert View Watchtower at the eastern South Rim.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pipe Creek Vista",
+        "description": "Brief overlook stop at Pipe Creek Vista before returning west.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon Visitor Center Imax",
+        "description": "Receive IMAX admission for the Grand Canyon: River at Risk film screening.",
+        "duration": "34 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Jeep transport",
+      "Driver/guide",
+      "IMAX movie ticket",
+      "National park entrance fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Desert View Grand Canyon Jeep Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Meet at the Jeep tour staging area near the National Geographic Visitor Center, Tusayan, AZ 86023."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Jeep Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 166.43
+      },
+      "currency": "USD"
+    }
+  }
+}

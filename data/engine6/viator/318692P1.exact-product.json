@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "318692P1",
+    "productUrl": "https://www.viator.com/tours/Arizona/Grand-Canyon-guided-day-hike-below-the-rim/d271-318692P1",
+    "title": "Half-Day Private Grand Canyon Guided Hiking Tour",
+    "description": {
+      "text": "A private certified guide leads your group on a half-day hike below the South Rim on trails matched to your fitness level. Options include sections of South Kaibab, Bright Angel, or Grandview Trail with interpretive commentary on geology, flora, and safe canyon hiking practices."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $345.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 244
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/67/0b/3e/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private half-day hike with certified canyon guide",
+      "Trail choice tailored to group fitness and interests",
+      "South Kaibab, Bright Angel, or Grandview Trail options",
+      "Interpretive commentary on geology and canyon ecology",
+      "Pickup available from Tusayan and South Rim hotels"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at Grand Canyon Village or arrange hotel pickup in Tusayan. Wear sturdy hiking shoes and bring water."
+      },
+      "end": {
+        "description": "Return to the trailhead or your pickup point after the guided hike back to the rim."
+      }
+    },
+    "itinerarySummary": "A private certified guide leads your group on a half-day hike below the South Rim on trails matched to your fitness level.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon South Rim",
+        "description": "Begin at a South Rim trailhead selected for your group's ability level.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "South Kaibab Trail",
+        "description": "Possible guided descent on South Kaibab Trail to Ooh Aah Point or Cedar Ridge.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bright Angel Trail",
+        "description": "Alternative route on Bright Angel Trail with rest stops at shaded switchbacks.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Grandview Trail",
+        "description": "Optional Grandview Trail section for experienced hikers seeking steep canyon views.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Private certified hiking guide",
+      "Trail snacks",
+      "Safety equipment",
+      "Hotel pickup when selected"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half-Day Private Grand Canyon Guided Hiking Tour?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Meet your guide at Grand Canyon Village or arrange hotel pickup in Tusayan. Wear sturdy hiking shoes and bring water."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 345
+      },
+      "currency": "USD"
+    }
+  }
+}

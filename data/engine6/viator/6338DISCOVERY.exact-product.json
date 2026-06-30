@@ -1,0 +1,122 @@
+{
+  "product": {
+    "productCode": "6338DISCOVERY",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-Landmarks-Tour-by-Airplane/d815-6338DISCOVERY",
+    "title": "Grand Canyon Landmarks Tour by Airplane with Optional Hummer Tour",
+    "description": {
+      "text": "A 40-minute fixed-wing flight from Grand Canyon Airport showcases eastern canyon landmarks from the air. Optional ground Hummer add-ons extend the trip with South Rim stops after landing back in Tusayan."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "40 minutes (approx.)",
+    "priceFrom": "From $174.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 373
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/72/fe/76.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "40-minute scenic airplane flight from Grand Canyon Airport",
+      "Aerial views of Zuni Point and Desert View Watchtower",
+      "Optional Hummer ground tour add-on available",
+      "Every seat is a window seat on the sightseeing plane",
+      "Multiple departures daily from Tusayan"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at Grand Canyon National Park Airport terminal, 871 Liberator Dr, Grand Canyon Village, AZ 86023."
+      },
+      "end": {
+        "description": "Land at Grand Canyon Airport; Hummer add-on guests transfer to the ground tour."
+      }
+    },
+    "itinerarySummary": "A 40-minute fixed-wing flight from Grand Canyon Airport showcases eastern canyon landmarks from the air.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon National Park",
+        "description": "Depart by airplane for a narrated loop over the eastern Grand Canyon.",
+        "duration": "40 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Zuni Point",
+        "description": "Fly past Zuni Point on the East Rim for broad canyon panoramas.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Point Imperial Drive",
+        "description": "Aerial routing toward the North Rim vicinity along Point Imperial Drive.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Grand Canyon Desert View Watchtower",
+        "description": "Circle the Desert View Watchtower at the canyon's eastern gateway.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Colorado River",
+        "description": "Follow the Colorado River bend visible from the aircraft cabin.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Kaibab National Forest",
+        "description": "Initial climb and final descent over Kaibab National Forest.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Airplane flight",
+      "Live narration",
+      "Optional Hummer tour when selected",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Grand Canyon Landmarks Tour by Airplane with Optional Hummer Tour?",
+        "answer": "The planned duration is 40 minutes."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Check in at Grand Canyon National Park Airport terminal, 871 Liberator Dr, Grand Canyon Village, AZ 86023."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Airplane Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 174
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "318692P2",
+    "productUrl": "https://www.viator.com/tours/Arizona/Grand-Canyon-Sunset-Hiking-Adventure-Deep-Below-The-South-Rim/d271-318692P2",
+    "title": "Grand Canyon Sunset Hiking Adventure Deep Below The South Rim",
+    "description": {
+      "text": "Hike below the rim in the late afternoon with a private guide timed to watch sunset colors spread across the canyon walls. The route uses South Kaibab or Bright Angel Trail switchbacks with a return climb before dark, starting from Grand Canyon Village area trailheads."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $345.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 76
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/a3/87/ea/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private sunset-timed hike below the South Rim",
+      "Certified guide paces the route for safe rim return",
+      "South Kaibab or Bright Angel Trail options",
+      "Golden-hour views across layered canyon walls",
+      "Pickup from Tusayan and Grand Canyon Village hotels"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Afternoon meetup at Grand Canyon Village trailhead or hotel pickup in Tusayan. Start time shifts seasonally for optimal sunset timing."
+      },
+      "end": {
+        "description": "Return to the South Rim trailhead or your hotel after the post-sunset climb."
+      }
+    },
+    "itinerarySummary": "Hike below the rim in the late afternoon with a private guide timed to watch sunset colors spread across the canyon walls.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon South Rim",
+        "description": "Gather at the rim for a pre-hike briefing and sunset timing overview.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon Village",
+        "description": "Depart from the village area toward the selected below-rim trailhead.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "South Kaibab Trail",
+        "description": "Descend South Kaibab Trail to a viewpoint positioned for sunset over the inner canyon.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bright Angel Trail",
+        "description": "Alternative descent on Bright Angel Trail with rest at Indian Garden or mile-and-a-half resthouse.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Private certified guide",
+      "Headlamp for return hike",
+      "Trail snacks and water",
+      "Hotel pickup when selected"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Grand Canyon Sunset Hiking Adventure Deep Below The South Rim?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Afternoon meetup at Grand Canyon Village trailhead or hotel pickup in Tusayan. Start time shifts seasonally for optimal sunset timing."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Sunset Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 345
+      },
+      "currency": "USD"
+    }
+  }
+}

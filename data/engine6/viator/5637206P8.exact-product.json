@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "5637206P8",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Experience-Three-Night-Ranch-Adventure/d815-5637206P8",
+    "title": "Experience Three Night Ranch Adventure",
+    "description": {
+      "text": "Stay three nights at Grand Canyon Western Ranch on the Hualapai Reservation with horseback rides, wagon rides, and evening entertainment. Lodging, ranch meals, and guided activities fill each day while the canyon rim sits a short drive away for optional add-on excursions."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "4 days (approx.)",
+    "priceFrom": "From $1143.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 6
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/80/e2/60/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Three-night stay at Grand Canyon Western Ranch",
+      "Included horseback and wagon ride activities",
+      "Ranch meals and nightly entertainment",
+      "Western-themed lodging near the canyon",
+      "Optional South Rim sightseeing add-ons available"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at Grand Canyon Western Ranch, 3750 E Diamond Bar Rd, Peach Springs, AZ 86434. Ranch staff greet arrivals from mid-afternoon."
+      },
+      "end": {
+        "description": "Check out from Grand Canyon Western Ranch after breakfast on your final morning."
+      }
+    },
+    "itinerarySummary": "Stay three nights at Grand Canyon Western Ranch on the Hualapai Reservation with horseback rides, wagon rides, and evening entertainment.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon Western Ranch",
+        "description": "Spend four days at the ranch with lodging, meals, horseback rides, wagon rides, and evening shows.",
+        "duration": "4 days",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Three nights ranch lodging",
+      "Ranch meals",
+      "Horseback and wagon rides",
+      "Evening entertainment"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Experience Three Night Ranch Adventure?",
+        "answer": "The planned duration is 4 days."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Check in at Grand Canyon Western Ranch, 3750 E Diamond Bar Rd, Peach Springs, AZ 86434. Ranch staff greet arrivals from mid-afternoon."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Multi-day Tours"
+      },
+      {
+        "label": "Overnight Tours"
+      },
+      {
+        "label": "Safaris"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1143
+      },
+      "currency": "USD"
+    }
+  }
+}

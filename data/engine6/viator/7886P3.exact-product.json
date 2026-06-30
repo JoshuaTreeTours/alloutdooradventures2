@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "7886P3",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-Ultimate-Tour-from-Tusayan-South-Rim/d815-7886P3",
+    "title": "Grand Canyon Tour from Tusayan",
+    "description": {
+      "text": "This six-hour Tusayan departure covers the essential South Rim in a single comfortable bus tour. Multiple viewpoint stops, time at Grand Canyon Village, and included park entrance fees make it a straightforward full-morning or afternoon introduction to the canyon."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $249.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 177
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/be/c1/65.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Six-hour comprehensive South Rim bus tour from Tusayan",
+      "Multiple rim viewpoint photo stops",
+      "Free time at Grand Canyon Village",
+      "National park entrance fees included",
+      "Hotel pickup from Tusayan properties"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning or afternoon pickup from Tusayan hotels. Meet at your hotel lobby at the confirmed departure time."
+      },
+      "end": {
+        "description": "Return to your Tusayan hotel after the final village and rim stops."
+      }
+    },
+    "itinerarySummary": "This six-hour Tusayan departure covers the essential South Rim in a single comfortable bus tour.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon South Rim",
+        "description": "Six-hour guided loop with stops at Mather Point, Yavapai Point, and additional overlooks.",
+        "duration": "6 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned bus",
+      "Professional guide",
+      "National park entrance fees",
+      "Hotel pickup in Tusayan"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Grand Canyon Tour from Tusayan?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Morning or afternoon pickup from Tusayan hotels. Meet at your hotel lobby at the confirmed departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 249
+      },
+      "currency": "USD"
+    }
+  }
+}

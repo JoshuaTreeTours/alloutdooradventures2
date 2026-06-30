@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "265766P28",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Full-Day-Small-Group-Tour-of-Grand-Canyon-National-Park/d815-265766P28",
+    "title": "Grand Canyon Full Day Small Group Tour & Hike",
+    "description": {
+      "text": "Join a small group for a full day on the South Rim combining shuttle transport, rim overlooks, and a guided hike below the rim. Stops include Mather Point, Yavapai Geology Museum, Desert View Watchtower, and a section of the South Kaibab Trail tailored to group fitness."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "6 to 8 hours (approx.)",
+    "priceFrom": "From $527.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 14
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/45/6a/20.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group South Rim tour with certified guide",
+      "Guided hike below the rim on South Kaibab Trail",
+      "Mather Point and Yavapai Geology Museum stops",
+      "Desert View Watchtower visit on Desert View Drive",
+      "National park entrance fees included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from select Tusayan and Grand Canyon Village hotels. Confirm your pickup window when booking."
+      },
+      "end": {
+        "description": "Return to your Tusayan or Grand Canyon Village pickup point after the final rim stop."
+      }
+    },
+    "itinerarySummary": "Join a small group for a full day on the South Rim combining shuttle transport, rim overlooks, and a guided hike below the rim.",
+    "itineraryItems": [
+      {
+        "title": "Mather Point",
+        "description": "Begin at Mather Point for introductory views of the main canyon expanse.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "South Kaibab Trail",
+        "description": "Hike a guided section below the rim on the South Kaibab Trail.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon Desert View Watchtower",
+        "description": "Visit the stone Desert View Watchtower at the eastern end of the South Rim.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yavapai Point",
+        "description": "Stop at Yavapai Point for unobstructed views toward the inner gorge.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yavapai Geology Museum",
+        "description": "Explore exhibits explaining canyon rock layers and formation at the geology museum.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Small-group transport",
+      "National park entrance fees",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Grand Canyon Full Day Small Group Tour & Hike?",
+        "answer": "The planned duration is 6 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Pickup from select Tusayan and Grand Canyon Village hotels. Confirm your pickup window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Small Group Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 527
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "5167SD",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Self-Drive-One-Day-Grand-Canyon-White-Water-Rafting-Tour/d684-5167SD",
+    "title": "Self-Drive 1-Day Grand Canyon Whitewater Rafting Tour",
+    "description": {
+      "text": "Drive yourself from Las Vegas to Hualapai Lodge for a full-day Colorado River whitewater rafting adventure through Grand Canyon West. Class III to IV rapids, a riverside lunch, and return via Lake Mead National Recreation Area make this a long but action-packed canyon day."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "17 hours (approx.)",
+    "priceFrom": "From $634.99",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 50
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f1/95/58.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Self-drive day trip from Las Vegas to Hualapai Lodge",
+      "Guided whitewater rafting on the Colorado River",
+      "Class III to IV rapids through Grand Canyon West",
+      "Riverside lunch included on the raft trip",
+      "Return route passes Lake Mead National Recreation Area"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Drive to Hualapai Lodge, 900 Highway 66, Peach Springs, AZ 86434. Plan an early departure from Las Vegas for the 17-hour day."
+      },
+      "end": {
+        "description": "Return drive to Las Vegas after the rafting shuttle drops you back at Hualapai Lodge."
+      }
+    },
+    "itinerarySummary": "Drive yourself from Las Vegas to Hualapai Lodge for a full-day Colorado River whitewater rafting adventure through Grand Canyon West.",
+    "itineraryItems": [
+      {
+        "title": "Hualapai Lodge",
+        "description": "Check in at Hualapai Lodge for rafting orientation and shuttle to the river put-in.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon National Park",
+        "description": "Raft the Colorado River through canyon walls on a guided whitewater run.",
+        "duration": "6 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Mead National Recreation Area",
+        "description": "Pass through Lake Mead area scenery on the return drive toward Las Vegas.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Guided rafting trip",
+      "Riverside lunch",
+      "Rafting safety equipment",
+      "Shuttle between lodge and river"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Self-Drive 1-Day Grand Canyon Whitewater Rafting Tour?",
+        "answer": "The planned duration is 17 hours."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Drive to Hualapai Lodge, 900 Highway 66, Peach Springs, AZ 86434. Plan an early departure from Las Vegas for the 17-hour day."
+      }
+    ],
+    "categories": [
+      {
+        "label": "White Water Rafting"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 634.99
+      },
+      "currency": "USD"
+    }
+  }
+}

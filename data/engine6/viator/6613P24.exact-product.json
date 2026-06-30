@@ -1,0 +1,117 @@
+{
+  "product": {
+    "productCode": "6613P24",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-Helicopter-45-Minute-Flights-with-Optional-Hummer-Tour/d815-6613P24",
+    "title": "Grand Canyon Helicopter 45-Minute Flight with Optional Hummer Tour",
+    "description": {
+      "text": "Choose a standalone 45-minute helicopter flight or bundle it with a ground Hummer tour of the South Rim. The aerial segment covers both rims and the Colorado River while the optional Hummer portion adds rim-edge stops unreachable by standard buses."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "45 minutes (approx.)",
+    "priceFrom": "From $354.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 331
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/68/f7/98.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "45-minute helicopter flight over the Grand Canyon",
+      "Optional add-on Hummer ground tour of the South Rim",
+      "Views of North Rim, South Rim, and Colorado River",
+      "Departures from Tusayan helicopter terminal",
+      "Flexible booking for flight-only or combo packages"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at the Papillon helicopter terminal in Tusayan, AZ 86023. Allow 30 minutes for check-in before flight time."
+      },
+      "end": {
+        "description": "Return to the Tusayan terminal after landing; Hummer guests transfer to the ground tour staging area."
+      }
+    },
+    "itinerarySummary": "Choose a standalone 45-minute helicopter flight or bundle it with a ground Hummer tour of the South Rim.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon National Park",
+        "description": "Helicopter routing over the main canyon with commentary on major landmarks.",
+        "duration": "45 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Kaibab National Forest",
+        "description": "Initial climb over Kaibab National Forest before reaching the rim.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Grand Canyon North Rim",
+        "description": "Aerial views toward the less-visited North Rim plateau.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Colorado River",
+        "description": "Follow the Colorado River corridor visible from the helicopter cabin.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Grand Canyon South Rim",
+        "description": "Optional Hummer tour stops at South Rim viewpoints after the flight.",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Helicopter flight",
+      "Live narration",
+      "Optional Hummer tour when selected",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Grand Canyon Helicopter 45-Minute Flight with Optional Hummer Tour?",
+        "answer": "The planned duration is 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Check in at the Papillon helicopter terminal in Tusayan, AZ 86023. Allow 30 minutes for check-in before flight time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Air Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 354
+      },
+      "currency": "USD"
+    }
+  }
+}

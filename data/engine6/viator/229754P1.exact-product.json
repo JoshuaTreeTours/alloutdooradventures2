@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "229754P1",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Back-Road-Safari-to-Grand-Canyon-with-Entrance-Gate-By-Pass/d815-229754P1",
+    "title": "3 Hour Back-Road Safari to Grand Canyon with Entrance Gate By-Pass at 9:30 am",
+    "description": {
+      "text": "Morning safari vehicle pickup in Tusayan uses back roads to enter the South Rim without waiting at the main gate. Three hours of guided stops include Yavapai Point, views above Bright Angel Trail, and time near Hopi House in Grand Canyon Village."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $130.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 446
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/94/1d/55.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Morning 9:30 AM back-road safari from Tusayan",
+      "Entrance gate bypass saves time entering the park",
+      "Stops at Yavapai Point and Bright Angel Trail overlook",
+      "Visit Hopi House in Grand Canyon Village",
+      "National park entrance fees included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "9:30 AM pickup from Tusayan hotels and the National Geographic Visitor Center."
+      },
+      "end": {
+        "description": "Return to your Tusayan pickup point after the village and rim loop."
+      }
+    },
+    "itinerarySummary": "Morning safari vehicle pickup in Tusayan uses back roads to enter the South Rim without waiting at the main gate.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon South Rim",
+        "description": "Enter via back roads and begin the three-hour rim and village loop.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yavapai Point",
+        "description": "Stop at Yavapai Point for panoramic views of the inner canyon.",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bright Angel Trail",
+        "description": "Viewpoint above Bright Angel Trailhead to watch hikers on the upper switchbacks.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hopi House",
+        "description": "Stop at Mary Colter's Hopi House for architecture and artisan crafts in the village.",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Safari vehicle transport",
+      "Professional guide",
+      "National park entrance fees",
+      "Hotel pickup in Tusayan"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 3 Hour Back-Road Safari to Grand Canyon with Entrance Gate By-Pass at 9:30 am?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "9:30 AM pickup from Tusayan hotels and the National Geographic Visitor Center."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Safaris"
+      },
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 130
+      },
+      "currency": "USD"
+    }
+  }
+}

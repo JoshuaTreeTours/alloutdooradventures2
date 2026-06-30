@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "6338P18",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Horseshoe-Bend-and-Antelope-Canyon-Adventure/d815-6338P18",
+    "title": "Horseshoe Bend and Antelope Canyon Adventure by Airplane",
+    "description": {
+      "text": "Fly from Grand Canyon Airport on a fixed-wing sightseeing plane that links the South Rim with Page-area landmarks. Aerial views of the canyon precede ground visits to Lower Antelope Canyon and Horseshoe Bend with time at Lake Powell overlooks."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "6 hours 30 minutes (approx.)",
+    "priceFrom": "From $574.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 12
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/58/0d/07.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fixed-wing airplane flight from Grand Canyon Airport",
+      "Ground tour of Lower Antelope Canyon slot formations",
+      "Visit Horseshoe Bend overlook above the Colorado River",
+      "Lake Powell scenic viewpoints included",
+      "Small-group format with narrated aerial commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Grand Canyon National Park Airport, 871 Liberator Dr, Grand Canyon Village, AZ 86023. Arrive 30 minutes before departure."
+      },
+      "end": {
+        "description": "Return to Grand Canyon National Park Airport after the Page-area ground tour."
+      }
+    },
+    "itinerarySummary": "Fly from Grand Canyon Airport on a fixed-wing sightseeing plane that links the South Rim with Page-area landmarks.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon National Park",
+        "description": "Depart by airplane for aerial views of the South Rim and eastern canyon.",
+        "duration": "40 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lower Antelope Canyon",
+        "description": "Walk through Lower Antelope Canyon with a Navajo guide among sandstone slot walls.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Horseshoe Bend",
+        "description": "Stop at the Horseshoe Bend overlook for views of the Colorado River meander.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Powell",
+        "description": "Scenic viewpoints above Lake Powell on the return portion of the tour.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Airplane flight",
+      "Antelope Canyon admission and guide",
+      "Ground transport in Page area",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Horseshoe Bend and Antelope Canyon Adventure by Airplane?",
+        "answer": "The planned duration is 6 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Meet at Grand Canyon National Park Airport, 871 Liberator Dr, Grand Canyon Village, AZ 86023. Arrive 30 minutes before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 574
+      },
+      "currency": "USD"
+    }
+  }
+}

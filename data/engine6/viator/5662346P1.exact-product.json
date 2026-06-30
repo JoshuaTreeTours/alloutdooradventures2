@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "5662346P1",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/4-Day-Grand-Canyon-Backpacking-Adventure-on-Hermit-Trail/d815-5662346P1",
+    "title": "4 Day Grand Canyon Backpacking Adventure on Hermit Trail",
+    "description": {
+      "text": "Descend into the canyon on the historic Hermit Trail with a certified guide over four days of rim-to-river backpacking. Camp beside Monument Creek and Hermit Rapids, carry a lightweight shared gear load, and climb back to the South Rim with daily mileage paced for intermediate hikers."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "4 days (approx.)",
+    "priceFrom": "From $1800.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 3
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/48/6b/a1/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Four-day guided backpacking on the Hermit Trail",
+      "Camp nights at Monument Creek and Hermit Rapids",
+      "Certified wilderness guide with canyon route expertise",
+      "Shared group camping gear and meals provided",
+      "Intermediate fitness level recommended for rim-to-river mileage"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Hermit's Rest, Grand Canyon South Rim, AZ 86023. Arrive early for gear check and trail briefing before the descent."
+      },
+      "end": {
+        "description": "Finish at Hermit's Rest on the South Rim after the final climb out of the inner canyon."
+      }
+    },
+    "itinerarySummary": "Descend into the canyon on the historic Hermit Trail with a certified guide over four days of rim-to-river backpacking.",
+    "itineraryItems": [
+      {
+        "title": "Hermit Trail",
+        "description": "Begin the descent from Hermit's Rest on the rugged Hermit Trail into the Supai layer formations.",
+        "duration": "1 day",
+        "stopType": "stop"
+      },
+      {
+        "title": "Monument Creek",
+        "description": "Camp and explore the Monument Creek drainage with time to rest beside seasonal waterfalls.",
+        "duration": "1 day",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hermit Rapids",
+        "description": "Reach the Colorado River at Hermit Rapids for a camp night along the inner gorge.",
+        "duration": "1 day",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hermit's Rest",
+        "description": "Climb back to the South Rim trailhead at Hermit's Rest to complete the loop.",
+        "duration": "1 day",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional wilderness guide",
+      "Camping equipment and meals",
+      "Backcountry permits",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 4 Day Grand Canyon Backpacking Adventure on Hermit Trail?",
+        "answer": "The planned duration is 4 days."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Meet at Hermit's Rest, Grand Canyon South Rim, AZ 86023. Arrive early for gear check and trail briefing before the descent."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Multi-day Tours"
+      },
+      {
+        "label": "Hiking"
+      },
+      {
+        "label": "Camping"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1800
+      },
+      "currency": "USD"
+    }
+  }
+}

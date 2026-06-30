@@ -182,6 +182,28 @@ import specimen19970p1Payload from "../../data/engine6/viator/19970P1.exact-prod
 import specimen460648p15Payload from "../../data/engine6/viator/460648P15.exact-product.json";
 import specimen5582835p5Payload from "../../data/engine6/viator/5582835P5.exact-product.json";
 import specimen449449p2Payload from "../../data/engine6/viator/449449P2.exact-product.json";
+import specimen5662346p1Payload from "../../data/engine6/viator/5662346P1.exact-product.json";
+import specimen5637206p8Payload from "../../data/engine6/viator/5637206P8.exact-product.json";
+import specimen5637206p7Payload from "../../data/engine6/viator/5637206P7.exact-product.json";
+import specimen109090p3Payload from "../../data/engine6/viator/109090P3.exact-product.json";
+import specimen5167sdPayload from "../../data/engine6/viator/5167SD.exact-product.json";
+import specimen6338p18Payload from "../../data/engine6/viator/6338P18.exact-product.json";
+import specimen265766p28Payload from "../../data/engine6/viator/265766P28.exact-product.json";
+import specimen5637206p4Payload from "../../data/engine6/viator/5637206P4.exact-product.json";
+import specimen318692p1Payload from "../../data/engine6/viator/318692P1.exact-product.json";
+import specimen318692p2Payload from "../../data/engine6/viator/318692P2.exact-product.json";
+import specimen18678csPayload from "../../data/engine6/viator/18678CS.exact-product.json";
+import specimen6613p24Payload from "../../data/engine6/viator/6613P24.exact-product.json";
+import specimen89776p1Payload from "../../data/engine6/viator/89776P1.exact-product.json";
+import specimen229754p2Payload from "../../data/engine6/viator/229754P2.exact-product.json";
+import specimen5488718p3Payload from "../../data/engine6/viator/5488718P3.exact-product.json";
+import specimen7886p3Payload from "../../data/engine6/viator/7886P3.exact-product.json";
+import specimen3272gcerPayload from "../../data/engine6/viator/3272GCER.exact-product.json";
+import specimen25576p9Payload from "../../data/engine6/viator/25576P9.exact-product.json";
+import specimen108446p2Payload from "../../data/engine6/viator/108446P2.exact-product.json";
+import specimen6338discoveryPayload from "../../data/engine6/viator/6338DISCOVERY.exact-product.json";
+import specimen229754p1Payload from "../../data/engine6/viator/229754P1.exact-product.json";
+import specimen3272gcsr2Payload from "../../data/engine6/viator/3272GCSR2.exact-product.json";
 
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
@@ -1889,6 +1911,204 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Lake-Tahoe/Razor-Ridge-Run-Tour/d816-2535P14",
     rawPayload: specimen2535p14Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5662346P1",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/4-Day-Grand-Canyon-Backpacking-Adventure-on-Hermit-Trail/d815-5662346P1",
+    rawPayload: specimen5662346p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5637206P8",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Experience-Three-Night-Ranch-Adventure/d815-5637206P8",
+    rawPayload: specimen5637206p8Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5637206P7",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Experience-Two-Night-Ranch-Adventure/d815-5637206P7",
+    rawPayload: specimen5637206p7Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "109090P3",
+    publicUrl:
+      "https://www.viator.com/tours/Arizona/Exclusive-South-Rim-Grand-Canyon-Tour-Private-SUV-Hidden-Trails/d271-109090P3",
+    rawPayload: specimen109090p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5167SD",
+    publicUrl:
+      "https://www.viator.com/tours/Las-Vegas/Self-Drive-One-Day-Grand-Canyon-White-Water-Rafting-Tour/d684-5167SD",
+    rawPayload: specimen5167sdPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "6338P18",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Horseshoe-Bend-and-Antelope-Canyon-Adventure/d815-6338P18",
+    rawPayload: specimen6338p18Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "265766P28",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Full-Day-Small-Group-Tour-of-Grand-Canyon-National-Park/d815-265766P28",
+    rawPayload: specimen265766p28Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5637206P4",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Two-Nights-Deluxe-Ranch-Experience/d815-5637206P4",
+    rawPayload: specimen5637206p4Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "318692P1",
+    publicUrl:
+      "https://www.viator.com/tours/Arizona/Grand-Canyon-guided-day-hike-below-the-rim/d271-318692P1",
+    rawPayload: specimen318692p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "318692P2",
+    publicUrl:
+      "https://www.viator.com/tours/Arizona/Grand-Canyon-Sunset-Hiking-Adventure-Deep-Below-The-South-Rim/d271-318692P2",
+    rawPayload: specimen318692p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "18678CS",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/45-minute-Helicopter-Flight-Over-the-Grand-Canyon-from-Tusayan-Arizona/d815-18678CS",
+    rawPayload: specimen18678csPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "6613P24",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-Helicopter-45-Minute-Flights-with-Optional-Hummer-Tour/d815-6613P24",
+    rawPayload: specimen6613p24Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "89776P1",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-Signature-Hummer-Tour-with-Optional-Sunset-Views/d815-89776P1",
+    rawPayload: specimen89776p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "229754P2",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Off-Road-Sunset-Safari-to-Grand-Canyon-with-Entrance-Gate-Detour/d815-229754P2",
+    rawPayload: specimen229754p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5488718P3",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-South-Rim-Sunset-Tour-with-Dinner/d815-5488718P3",
+    rawPayload: specimen5488718p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "7886P3",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-Ultimate-Tour-from-Tusayan-South-Rim/d815-7886P3",
+    rawPayload: specimen7886p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "3272GCER",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-East-Rim-Drive-by-Jeep-and-IMAX-Movie/d815-3272GCER",
+    rawPayload: specimen3272gcerPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "25576P9",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Western-Ranch-Overnight-Experience-Cabin-or-Camp-Out/d815-25576P9",
+    rawPayload: specimen25576p9Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "108446P2",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-Biblical-Creation-Sunset-Tour/d815-108446P2",
+    rawPayload: specimen108446p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "6338DISCOVERY",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-Landmarks-Tour-by-Airplane/d815-6338DISCOVERY",
+    rawPayload: specimen6338discoveryPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "229754P1",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Back-Road-Safari-to-Grand-Canyon-with-Entrance-Gate-By-Pass/d815-229754P1",
+    rawPayload: specimen229754p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "3272GCSR2",
+    publicUrl:
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-South-Rim-Jeep-Tour-with-Transport-from-Tusayan/d815-3272GCSR2",
+    rawPayload: specimen3272gcsr2Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

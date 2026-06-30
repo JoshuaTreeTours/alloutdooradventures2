@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "89776P1",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-Signature-Hummer-Tour-with-Optional-Sunset-Views/d815-89776P1",
+    "title": "Grand Canyon Signature Hummer Tour with Optional Sunset Views",
+    "description": {
+      "text": "Ride an open-air Hummer along restricted South Rim roads to viewpoints most visitors never reach. A driver-guide shares canyon history at each stop, with an optional sunset departure timed for golden light over the inner gorge."
+    },
+    "location": {
+      "city": "Grand Canyon National Park",
+      "state": "Arizona"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $139.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1773
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/a5/8c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Open-air Hummer tour on restricted South Rim routes",
+      "Multiple rim viewpoints with photo time at each stop",
+      "Optional sunset departure for golden-hour canyon light",
+      "Driver-guide commentary on geology and park history",
+      "National park entrance fees included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Hummer tour check-in desk in Tusayan, AZ 86023, or at the National Geographic Visitor Center."
+      },
+      "end": {
+        "description": "Return to the Tusayan check-in point after the final rim viewpoint stop."
+      }
+    },
+    "itinerarySummary": "Ride an open-air Hummer along restricted South Rim roads to viewpoints most visitors never reach.",
+    "itineraryItems": [
+      {
+        "title": "Grand Canyon National Park",
+        "description": "Two-and-a-half-hour Hummer loop covering multiple South Rim overlooks and restricted roads.",
+        "duration": "2 hours 30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hummer transport",
+      "Driver/guide",
+      "National park entrance fees",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Grand Canyon Signature Hummer Tour with Optional Sunset Views?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from at the Grand Canyon?",
+        "answer": "Meet at the Hummer tour check-in desk in Tusayan, AZ 86023, or at the National Geographic Visitor Center."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Hummer Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 139
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -873,6 +873,63 @@ Arizona’s outdoor experiences feel timeless. They offer both big, bucket-list 
     ],
     cities: [
       {
+        name: "Grand Canyon National Park",
+        slug: "grand-canyon-national-park",
+        stateSlug: "arizona",
+        region: "Grand Canyon",
+        lat: 36.0544,
+        lng: -112.1401,
+        shortDescription:
+          "South Rim overlooks, canyon hikes, and Colorado River adventures.",
+        intro:
+          "Grand Canyon National Park is Arizona’s defining landscape—a mile-deep chasm carved by the Colorado River with layered rock, rim trails, and world-class viewpoints from the South Rim.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1474041669434-77e4c8abab92?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["canyons", "hiking", "rafting"],
+        whereItIs: [
+          "The South Rim sits on the Colorado Plateau in northern Arizona, about 90 minutes from Flagstaff and four hours from Phoenix.",
+          "Tusayan and Grand Canyon Village provide lodging and tour departures at the park’s main entrance.",
+        ],
+        experiences: {
+          mountains:
+            "Hike below the rim on guided trails like South Kaibab and Bright Angel with a certified guide.",
+          lakesWater:
+            "Colorado River rafting and helicopter flights reveal the canyon from river level.",
+          desertForest:
+            "Ponderosa pine forest frames the rim while the inner canyon opens to desert heat.",
+          cycling: "Limited rim cycling; most visitors explore by foot, shuttle, or guided tour.",
+          scenicDrives:
+            "Desert View Drive connects Mather Point, Yavapai, and Desert View Watchtower.",
+          seasonalNotes:
+            "Spring and fall offer the best hiking temps; summer favors sunrise and sunset tours.",
+        },
+        thingsToDo: [
+          "Watch sunrise from Mather Point or Yavapai Point.",
+          "Take a helicopter flight over the canyon from Tusayan.",
+          "Hike below the rim on a guided South Kaibab or Bright Angel route.",
+          "Join a Jeep or Hummer rim tour at sunset.",
+          "Book a multi-day ranch stay or backpacking trip into the inner canyon.",
+        ],
+        toursCopy: [
+          "Guided rim tours help you skip entrance lines and hit the best viewpoints efficiently.",
+          "Helicopter and airplane flights deliver unmatched aerial views of the Colorado River.",
+          "Multi-day ranch and backpacking trips suit travelers who want more than a rim stop.",
+        ],
+        faq: [
+          {
+            question: "Which rim should I visit?",
+            answer:
+              "The South Rim offers the classic national park experience with the most viewpoints and tours.",
+          },
+          {
+            question: "Do I need a guide to hike below the rim?",
+            answer:
+              "Day hikes below the rim are strenuous; guided hikes add safety, pacing, and local insight.",
+          },
+        ],
+      },
+      {
         name: "Sedona",
         slug: "sedona",
         stateSlug: "arizona",
