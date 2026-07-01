@@ -123,16 +123,8 @@ function resolveEngine6LiveViatorValidationEnv() {
         ? "pr-scoped"
         : "pr-scoped";
 
-  const baseRef =
-    process.env.ENGINE6_LIVE_VIATOR_VALIDATION_BASE_REF?.trim() ||
-    process.env.VERCEL_GIT_PREVIOUS_SHA?.trim() ||
-    "origin/main";
-
   return {
     ENGINE6_LIVE_VIATOR_VALIDATION_MODE: validationMode,
-    ...(validationMode === "pr-scoped"
-      ? { ENGINE6_LIVE_VIATOR_VALIDATION_BASE_REF: baseRef }
-      : {}),
   };
 }
 

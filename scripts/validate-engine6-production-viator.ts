@@ -3,12 +3,11 @@ import path from "node:path";
 
 import {
   formatEngine6LiveViatorProductionValidationReport,
-  resolveEngine6LiveViatorValidationBaseRef,
   resolveEngine6LiveViatorValidationMode,
   validateConfiguredEngine6ProductionViatorProducts,
   type Engine6LiveViatorValidationMode,
 } from "../src/engine6/engine6LiveViatorProductionValidation";
-import { resolveEngine6ProductCodesChangedSinceRef } from "../src/engine6/resolveEngine6ChangedProductCodes";
+import { resolveEngine6ProductCodesChangedSinceRefSafe } from "../src/engine6/resolveEngine6ChangedProductCodes";
 
 const OUTPUT_PATH = path.resolve(
   process.cwd(),
@@ -33,20 +32,42 @@ const resolveScopedProductCodes = (mode: Engine6LiveViatorValidationMode) => {
     return [];
   }
 
-  const baseRef = resolveEngine6LiveViatorValidationBaseRef();
-  if (!baseRef) {
-    throw new Error(
-      "ENGINE6_LIVE_VIATOR_VALIDATION_BASE_REF is required when ENGINE6_LIVE_VIATOR_VALIDATION_MODE=pr-scoped"
-    );
-  }
-
   const headRef =
     process.env.ENGINE6_LIVE_VIATOR_VALIDATION_HEAD_REF?.trim() || "HEAD";
 
-  return resolveEngine6ProductCodesChangedSinceRef({
-    baseRef,
+  const resolution = resolveEngine6ProductCodesChangedSinceRefSafe({
     headRef,
   });
+
+  if (resolution.warning) {
+    console.warn(
+      "[engine6-live-viator-validation]",
+      JSON.stringify(
+        {
+          warning: resolution.warning,
+          attemptedRefs: resolution.attemptedRefs,
+          deployScopedBlockingProductCodes: [],
+        },
+        null,
+        2
+      )
+    );
+  } else if (resolution.baseRef) {
+    console.log(
+      "[engine6-live-viator-validation]",
+      JSON.stringify(
+        {
+          baseRef: resolution.baseRef,
+          headRef,
+          deployScopedBlockingProductCodes: resolution.productCodes,
+        },
+        null,
+        2
+      )
+    );
+  }
+
+  return resolution.productCodes;
 };
 
 const publishGithubStepSummary = async (
