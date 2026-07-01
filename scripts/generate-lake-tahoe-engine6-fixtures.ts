@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 import { LAKE_TAHOE_VIATOR_PUBLIC_RATINGS } from "../src/engine6/lakeTahoeViatorPublicRatings";
+import { runEngine6ParagonFixtureGeneration } from "./lib/runEngine6ParagonFixtureGeneration";
 
 type ItineraryItem = {
   title: string;
@@ -511,20 +512,15 @@ const buildFixture = (tour: LakeTahoeTourFixture) => {
   };
 };
 
-const outputDir = path.join(process.cwd(), "data", "engine6", "viator");
-mkdirSync(outputDir, { recursive: true });
+const main = async () => {
+  await runEngine6ParagonFixtureGeneration({
+    destinationLabel: "Lake Tahoe",
+    destinationCitySlug: "lake-tahoe",
+    viatorDestinationSlug: "Lake-Tahoe",
+    tours: LAKE_TAHOE_TOURS,
+    buildFixture,
+    destinationLogLabel: "Lake Tahoe",
+  });
+};
 
-for (const tour of LAKE_TAHOE_TOURS) {
-  const filePath = path.join(
-    outputDir,
-    `${tour.productCode}.exact-product.json`
-  );
-  writeFileSync(
-    filePath,
-    `${JSON.stringify(buildFixture(tour), null, 2)}\n`,
-    "utf8"
-  );
-  console.log(`Wrote ${filePath}`);
-}
-
-console.log(`Generated ${LAKE_TAHOE_TOURS.length} Lake Tahoe Engine6 fixtures.`);
+await main();

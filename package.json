@@ -52,7 +52,9 @@
     "validate:engine6-live-viator": "tsx scripts/validate-engine6-production-viator.ts",
     "validate:engine6-live-viator:strict": "tsx scripts/validate-engine6-production-viator.ts --strict",
     "validate:engine6-product-selection": "tsx scripts/validate-engine6-product-selection-governance.ts",
-    "validate:engine6-product-selection:strict": "tsx scripts/validate-engine6-product-selection-governance.ts --strict"
+    "validate:engine6-product-selection:strict": "tsx scripts/validate-engine6-product-selection-governance.ts --strict",
+    "build:engine6-destination": "tsx scripts/build-engine6-destination.ts",
+    "build:engine6-paragon-destination": "tsx scripts/build-engine6-destination.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

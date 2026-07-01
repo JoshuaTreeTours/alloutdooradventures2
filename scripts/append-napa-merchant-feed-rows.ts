@@ -1,25 +1,27 @@
 import { NAPA_VIATOR_PUBLIC_PRODUCT_CODES } from "../src/engine6/napaViatorPublicRatings";
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import { appendMerchantFeedRowsWithImageGovernance } from "./lib/appendMerchantFeedRowsWithImageGovernance";
+import { requireEngine6ParagonMerchantFeedGate } from "./lib/requireEngine6ParagonDownstreamArtifactGate";
 
 const OUTPUT_PATH = "data/merchantFeed.csv";
 
-const tours = NAPA_VIATOR_PUBLIC_PRODUCT_CODES.map(productCode => {
-  const tour = engine6ResolvedTours.find(
-    entry => entry.productCode === productCode
-  );
-  if (!tour) {
-    throw new Error(`Missing resolved Napa tour for ${productCode}`);
-  }
+const main = async () => {
+  const tours = await requireEngine6ParagonMerchantFeedGate({
+    destinationLabel: "Napa Valley",
+    destinationCitySlug: "napa",
+    viatorDestinationSlug: "Napa-and-Sonoma",
+    productCodes: NAPA_VIATOR_PUBLIC_PRODUCT_CODES,
+    resolvedTours: engine6ResolvedTours,
+  });
 
-  return tour;
-});
+  await appendMerchantFeedRowsWithImageGovernance({
+    outputPath: OUTPUT_PATH,
+    tours,
+    destinationLabel: "Napa",
+  });
+};
 
-appendMerchantFeedRowsWithImageGovernance({
-  outputPath: OUTPUT_PATH,
-  tours,
-  destinationLabel: "Napa",
-}).catch(error => {
+main().catch(error => {
   console.error(error);
   process.exit(1);
 });

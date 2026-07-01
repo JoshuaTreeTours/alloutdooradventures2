@@ -1,5 +1,6 @@
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import { appendMerchantFeedRowsWithImageGovernance } from "./lib/appendMerchantFeedRowsWithImageGovernance";
+import { requireEngine6ParagonMerchantFeedGate } from "./lib/requireEngine6ParagonDownstreamArtifactGate";
 
 const OUTPUT_PATH = "data/merchantFeed.csv";
 
@@ -28,22 +29,23 @@ const NEW_GRAND_CANYON_PRODUCT_CODES = [
   "3272GCSR2",
 ] as const;
 
-const tours = NEW_GRAND_CANYON_PRODUCT_CODES.map(productCode => {
-  const tour = engine6ResolvedTours.find(
-    entry => entry.productCode === productCode
-  );
-  if (!tour) {
-    throw new Error(`Missing resolved Grand Canyon tour for ${productCode}`);
-  }
+const main = async () => {
+  const tours = await requireEngine6ParagonMerchantFeedGate({
+    destinationLabel: "Grand Canyon National Park",
+    destinationCitySlug: "grand-canyon-national-park",
+    viatorDestinationSlug: "Grand-Canyon-National-Park",
+    productCodes: NEW_GRAND_CANYON_PRODUCT_CODES,
+    resolvedTours: engine6ResolvedTours,
+  });
 
-  return tour;
-});
+  await appendMerchantFeedRowsWithImageGovernance({
+    outputPath: OUTPUT_PATH,
+    tours,
+    destinationLabel: "Grand Canyon",
+  });
+};
 
-appendMerchantFeedRowsWithImageGovernance({
-  outputPath: OUTPUT_PATH,
-  tours,
-  destinationLabel: "Grand Canyon",
-}).catch(error => {
+main().catch(error => {
   console.error(error);
   process.exit(1);
 });
