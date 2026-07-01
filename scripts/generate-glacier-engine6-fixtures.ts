@@ -84,54 +84,54 @@ const GLACIER_TOURS: GlacierTourFixture[] = [
     categories: ["White Water Rafting", "Adventure Tours", "Half-day Tours"],
   },
   {
-    productCode: "86727P4",
+    productCode: "70248P3",
     productUrl:
-      "https://www.viator.com/tours/West-Glacier/Full-Day-Glacier-National-Park-Whitewater-Rafting-Adventure/d50559-86727P4",
-    title: "Full Day Glacier National Park Whitewater Rafting Adventure - With Lunch!",
+      "https://www.viator.com/tours/West-Glacier/Full-Day-Whitewater-Trip/d50559-70248P3",
+    title: "Full Day Whitewater Adventure Trip with Included Lunch",
     description:
-      "Spend a full day on the Middle Fork Flathead River with extended whitewater sections, riverside lunch, and more time in Glacier's border country scenery. Glacier Guides leads this full-day adventure with additional rapids beyond the half-day route and a included meal break on the riverbank.",
+      "Immerse yourself in Montana river country on a full-day float-and-raft combo along the Middle Fork Flathead River bordering Glacier National Park. Glacier Raft Company guides lead a calm morning float, a riverside barbecue lunch, and afternoon Class II and III rapids through John Stevens Canyon.",
     duration: "6 hours (approx.)",
-    priceFrom: 152,
+    priceFrom: 158,
     heroUrl:
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/f2/20.jpg",
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/47/da/70.jpg",
     rating: 4.9,
-    reviewCount: 193,
+    reviewCount: 285,
     highlights: [
-      "Full-day whitewater rafting with included riverside lunch",
-      "Extended Middle Fork Flathead River mileage beyond half-day trips",
-      "Glacier Guides outfitter with park-border scenery",
-      "Additional rapids and float sections for experienced beginners",
+      "Full-day float and whitewater combo on the Middle Fork Flathead River",
+      "Included riverside barbecue lunch on the riverbank",
+      "Class II and III rapids in John Stevens Canyon",
+      "Glacier Raft Company outfitter with park-border scenery",
       "Professional guide team and complete safety equipment",
     ],
     startDescription:
-      "Check in at Glacier Guides, 11970 US-2, West Glacier, MT 59936. Full-day trips depart mid-morning after gear fitting.",
+      "Meet at Glacier Raft Company, 12127 US-2, West Glacier, MT 59936. Arrive 30 minutes before departure for check-in and gear fitting.",
     endDescription:
-      "Return to the Glacier Guides base after the full-day river take-out and shuttle.",
+      "Return to the Glacier Raft Company base after the full-day river take-out and shuttle.",
     itineraryItems: [
       {
         title: "Middle Fork Flathead River",
         description:
-          "Begin the full-day run on the Middle Fork Flathead with a safety briefing and paddle warm-up.",
-        duration: "1 hour",
+          "Begin with a calm scenic float on the Middle Fork Flathead before the whitewater sections.",
+        duration: "1 hour 30 minutes",
         stopType: "stop",
       },
       {
         title: "John Stevens Canyon",
         description:
-          "Tackle extended whitewater through John Stevens Canyon with multiple rapids and recovery pools.",
+          "Tackle Class II and III rapids through John Stevens Canyon with guide-led paddling commands.",
         duration: "2 hours",
         stopType: "stop",
       },
       {
         title: "Glacier National Park",
         description:
-          "Float along the park boundary with views of forested slopes and peaks above the river corridor.",
+          "Float along the park boundary with views of forested slopes above the river corridor.",
         stopType: "pass-by",
       },
     ],
     inclusions: [
-      "Full-day guided rafting",
-      "Riverside lunch",
+      "Full-day guided float and rafting",
+      "Riverside barbecue lunch",
       "Rafting equipment and guide",
       "Shuttle transport",
     ],
@@ -310,66 +310,65 @@ const GLACIER_TOURS: GlacierTourFixture[] = [
     categories: ["Bus Tours", "Full-day Tours", "Sightseeing Tours"],
   },
   {
-    productCode: "132253P8",
+    productCode: "299521P1",
     productUrl:
-      "https://www.viator.com/tours/West-Glacier/Private-Full-Day-Glacier-National-Park-Tour/d50559-132253P8",
-    title: "West Glacier & Polebridge Scenic Driving Tour",
+      "https://www.viator.com/tours/West-Glacier/Glacier-Adventure-Tour-Drive-Snowshoe-in-a-Winter-Wonderland/d50559-299521P1",
+    title: "Combo Tour: Driving and Snowshoe Trek of Glacier National Park",
     description:
-      "Discover the North Fork on a private full-day driving tour to Polebridge Mercantile, Bowman Lake, and West Glacier highlights tailored to your party. Your guide adjusts the route for wildlife stops, bakery time in Polebridge, and short hikes while handling all park navigation and entrance logistics.",
-    duration: "8 to 10 hours (approx.)",
-    priceFrom: 550,
+      "Combine a guided driving tour of West Glacier highlights with a two-hour snowshoe trek tailored to your group's fitness level. Tour Glacier leads this winter-friendly combo with included lunch, snowshoe gear, and hotel pickup from Whitefish, Columbia Falls, or Kalispell.",
+    duration: "4 to 5 hours (approx.)",
+    priceFrom: 220,
     heroUrl:
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/2c/ff/9e.jpg",
-    rating: 4.9,
-    reviewCount: 106,
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/1b/d1/75.jpg",
+    rating: 4.7,
+    reviewCount: 12,
     highlights: [
-      "Private full-day tour for your party only",
-      "Polebridge Mercantile and North Fork scenic drive",
-      "Bowman Lake and West Glacier viewpoint stops",
-      "Flexible itinerary with guide-customized wildlife and photo stops",
-      "Park entrance fees and private transport included",
+      "Guided driving tour plus two-hour snowshoe trek",
+      "Included picnic lunch with sandwich and hot drink choices",
+      "Snowshoes, poles, and hand warmers provided",
+      "Customized pace for varied fitness levels",
+      "Hotel pickup from Whitefish, Columbia Falls, or Kalispell",
     ],
     startDescription:
-      "Private pickup from Whitefish, Columbia Falls, or West Glacier lodging. Your guide confirms timing and preferred North Fork stops before departure.",
+      "Pickup from your Whitefish, Columbia Falls, or Kalispell hotel. Confirm sandwich preferences when booking.",
     endDescription:
-      "Return to your original pickup location after the Polebridge area loop.",
+      "Return to your pickup location after the driving and snowshoe loop.",
     itineraryItems: [
       {
-        title: "West Glacier",
+        title: "Apgar Village",
         description:
-          "Depart West Glacier toward the North Fork entrance with an overview of the day's route.",
+          "Begin with a driving overview through Apgar Village and the Lake McDonald shoreline.",
         duration: "30 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Polebridge",
-        description:
-          "Visit Polebridge Mercantile for huckleberry treats and a break in this remote gateway community.",
-        duration: "45 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Bowman Lake",
-        description:
-          "Scenic stop at Bowman Lake with time for shoreline photos and optional short walks.",
-        duration: "1 hour",
         stopType: "stop",
       },
       {
         title: "Lake McDonald",
         description:
-          "Return-route stop at Lake McDonald if time and conditions allow.",
+          "Stop at Lake McDonald Lodge area for photos and winter scenery along the lakeshore.",
         duration: "30 minutes",
         stopType: "stop",
       },
+      {
+        title: "Glacier National Park",
+        description:
+          "Two-hour guided snowshoe trek on park trails selected for your group's ability.",
+        duration: "2 hours",
+        stopType: "stop",
+      },
+      {
+        title: "West Glacier",
+        description:
+          "Return drive through West Glacier gateway communities with guide commentary.",
+        stopType: "pass-by",
+      },
     ],
     inclusions: [
-      "Private guide and vehicle",
-      "Park entrance fees",
-      "Snacks and refreshments",
+      "Guided driving tour",
+      "Snowshoe trek with equipment",
+      "Included lunch and hot drinks",
       "Hotel pickup and drop-off",
     ],
-    categories: ["Private Sightseeing Tours", "Full-day Tours", "Day Trips"],
+    categories: ["Nature and Wildlife Tours", "Winter Sports", "Full-day Tours"],
   },
   {
     productCode: "86727P7",
@@ -426,57 +425,59 @@ const GLACIER_TOURS: GlacierTourFixture[] = [
     categories: ["Hiking Tours", "Nature and Wildlife Tours", "Walking Tours"],
   },
   {
-    productCode: "132253P12",
+    productCode: "487722P1",
     productUrl:
-      "https://www.viator.com/tours/West-Glacier/E-Bike-Rental/d50559-132253P12",
-    title: "Private Guided Backcountry E-Bike Tour",
+      "https://www.viator.com/tours/West-Glacier/Clear-Kayak-Rentals-for-Glacier-Park/d50559-487722P1",
+    title: "Clear Kayak Rentals for Glacier Park",
     description:
-      "Pedal beyond crowded viewpoints on a private e-bike tour customized to your fitness level around Whitefish and West Glacier backroads. Your guide leads a worry-free day of crowd-free riding to scenic pullouts, forest roads, and park-adjacent trails that standard visitors rarely reach.",
-    duration: "4 to 6 hours (approx.)",
-    priceFrom: 299,
+      "See Glacier National Park waterways from a completely clear kayak with flexible four-hour rentals and free roof racks, trolleys, and phone cases for transport to Lake McDonald, Hungry Horse Reservoir, or other Flathead Valley launch sites. Glacier Clear Water staff help you choose the best paddle route for your group.",
+    duration: "4 hours (approx.)",
+    priceFrom: 135,
     heroUrl:
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/aa/97/94.jpg",
-    rating: 5.0,
-    reviewCount: 2,
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/81/5c/b9.jpg",
+    rating: 4.9,
+    reviewCount: 29,
     highlights: [
-      "Private e-bike tour tailored to your group",
-      "Custom route around Whitefish and West Glacier backcountry",
-      "E-bikes accommodate varied fitness levels",
-      "Guide-selected scenic roads away from main park crowds",
-      "Helmet and e-bike rental included",
+      "Clear kayak rentals with unique underwater visibility",
+      "Flexible four-hour rental window",
+      "Free roof racks, trolleys, and phone cases included",
+      "Launch at Lake McDonald, Hungry Horse Reservoir, or Lake 5",
+      "Optional delivery to select launch locations",
     ],
     startDescription:
-      "Meet your guide at the confirmed Whitefish or West Glacier staging area. Helmet fitting and route briefing precede the ride.",
+      "Pick up clear kayaks and gear at Glacier Clear Water in Hungry Horse or coordinate delivery to your launch site.",
     endDescription:
-      "Return e-bikes to the staging area after the final backroad loop.",
+      "Return kayaks and equipment to the agreed pickup point after your paddle session.",
     itineraryItems: [
       {
-        title: "Whitefish",
+        title: "Lake McDonald",
         description:
-          "Optional start from Whitefish area trails and forest roads selected for your group.",
-        duration: "1 hour",
+          "Popular launch option on Lake McDonald with shoreline views of the Lewis Range.",
+        duration: "2 hours",
+        stopType: "stop",
+      },
+      {
+        title: "Hungry Horse Reservoir",
+        description:
+          "Alternative paddle route on Hungry Horse Reservoir with mountain-backed water.",
+        duration: "2 hours",
         stopType: "stop",
       },
       {
         title: "Apgar Village",
         description:
-          "Ride toward Apgar Village and lakeshore paths with views of Lake McDonald.",
-        duration: "1 hour 30 minutes",
+          "Gear pickup and route briefing near Apgar Village when launching on Lake McDonald.",
+        duration: "20 minutes",
         stopType: "stop",
-      },
-      {
-        title: "Going-to-the-Sun Road",
-        description:
-          "Cycle selected lower-elevation sections of Going-to-the-Sun Road when seasonal bike access allows.",
-        stopType: "pass-by",
       },
     ],
     inclusions: [
-      "Private guide",
-      "E-bike and helmet rental",
-      "Route planning and support",
+      "Clear kayak rental",
+      "Paddle and life vest",
+      "Roof racks and transport accessories",
+      "Staff gear briefing",
     ],
-    categories: ["Private Tours", "Bike Tours", "Eco Tours"],
+    categories: ["Kayaking and Canoeing", "Outdoor Activities"],
   },
   {
     productCode: "487722P4",
@@ -526,65 +527,64 @@ const GLACIER_TOURS: GlacierTourFixture[] = [
     categories: ["Kayaking and Canoeing", "Photography Tours", "Sunset Tours"],
   },
   {
-    productCode: "132253P7",
+    productCode: "102020P125",
     productUrl:
-      "https://www.viator.com/tours/West-Glacier/Glacier-National-Park-Tour/d50559-132253P7",
-    title: "East Glacier & Two Medicine Scenic Driving Tour",
+      "https://www.viator.com/tours/West-Glacier/Glacier-National-Park-Going-to-the-Sun-Road-Audio-Tour-Guide/d50559-102020P125",
+    title: "Glacier National Park Going-to-the-Sun Road Self-Guided Tour",
     description:
-      "Leave park logistics to a professional driver-guide on this scenic driving tour through East Glacier and the Two Medicine Valley. Stops include East Glacier Park Lodge, Two Medicine Lake, and wildlife pullouts with commentary on the Crown of the Continent's geology and Blackfeet heritage.",
-    duration: "8 to 10 hours (approx.)",
-    priceFrom: 550,
+      "Drive the iconic Going-to-the-Sun Road at your own pace with a Shaka Guide audio tour that shares park history, wildlife stories, and geology at GPS-triggered stops from Lake McDonald to Logan Pass. Download the tour to your phone and explore Glacier's alpine scenery without a fixed group schedule.",
+    duration: "10 to 11 hours (approx.)",
+    priceFrom: 15,
     heroUrl:
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/45/6a/20.jpg",
-    rating: 4.9,
-    reviewCount: 52,
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/26/46/40.jpg",
+    rating: 3.0,
+    reviewCount: 12,
     highlights: [
-      "Scenic drive through East Glacier and Two Medicine",
-      "Stops at East Glacier Park Lodge and Two Medicine Lake",
-      "Professional driver-guide with park history commentary",
-      "Private transport and entrance fees included",
-      "Flexible photo and wildlife stops along the route",
+      "Self-guided audio tour along Going-to-the-Sun Road",
+      "GPS-triggered narration at Logan Pass and alpine pullouts",
+      "Flexible pacing with offline app access after download",
+      "Park history, wildlife, and geology commentary",
+      "Ideal complement to a full-day Sun Road drive",
     ],
     startDescription:
-      "Pickup from Whitefish, Columbia Falls, or East Glacier area hotels. Confirm pickup time when booking.",
+      "Download the Shaka Guide app and purchase tour access before entering Glacier National Park. Begin at the West Glacier or St. Mary entrance depending on your route.",
     endDescription:
-      "Return to your pickup location after the Two Medicine Valley loop.",
+      "Complete the Sun Road loop at your chosen endpoint—St. Mary or West Glacier—when you finish the audio route.",
     itineraryItems: [
       {
-        title: "East Glacier Park Lodge",
+        title: "Going-to-the-Sun Road",
         description:
-          "Visit the historic East Glacier Park Lodge for architecture and views of the surrounding peaks.",
-        duration: "45 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Two Medicine Lake",
-        description:
-          "Stop at Two Medicine Lake for shoreline photos and optional short walks.",
-        duration: "1 hour",
-        stopType: "stop",
-      },
-      {
-        title: "Glacier National Park",
-        description:
-          "Scenic drive through the eastern park valleys with wildlife viewing pullouts.",
-        duration: "2 hours",
+          "Follow the full Going-to-the-Sun Road with audio commentary at major pullouts and viewpoints.",
+        duration: "6 hours",
         stopType: "stop",
       },
       {
         title: "Logan Pass",
         description:
-          "Optional Logan Pass stop when Going-to-the-Sun Road access permits on the return leg.",
+          "Stop at Logan Pass for high-alpine views and optional short walks near the Continental Divide.",
+        duration: "45 minutes",
+        stopType: "stop",
+      },
+      {
+        title: "Lake McDonald",
+        description:
+          "Begin or end at Lake McDonald with lakeshore views of the Lewis Range.",
+        duration: "30 minutes",
+        stopType: "stop",
+      },
+      {
+        title: "Glacier National Park",
+        description:
+          "Audio narration covers park formation, wildlife, and road engineering history throughout the drive.",
         stopType: "pass-by",
       },
     ],
     inclusions: [
-      "Private driver-guide",
-      "Park entrance fees",
-      "Snacks and refreshments",
-      "Hotel pickup and drop-off",
+      "Self-guided audio tour access",
+      "GPS-triggered narration",
+      "Offline app playback after download",
     ],
-    categories: ["Private Sightseeing Tours", "Day Trips", "Bus Tours"],
+    categories: ["Audio Guided Tours", "Self-Guided Tours", "Day Trips"],
   },
 ];
 

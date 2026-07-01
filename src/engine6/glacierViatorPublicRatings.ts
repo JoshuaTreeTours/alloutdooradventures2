@@ -9,15 +9,15 @@ export const GLACIER_VIATOR_PUBLIC_RATINGS: Record<
   GlacierViatorPublicRating
 > = {
   "123783P1": { rating: 4.9, reviewCount: 389 },
-  "86727P4": { rating: 4.9, reviewCount: 193 },
+  "70248P3": { rating: 4.9, reviewCount: 285 },
   "70248P2": { rating: 4.9, reviewCount: 578 },
   "299521P2": { rating: 5.0, reviewCount: 18 },
   "299521P8": { rating: 5.0, reviewCount: 34 },
-  "132253P8": { rating: 4.9, reviewCount: 106 },
+  "299521P1": { rating: 4.7, reviewCount: 12 },
   "86727P7": { rating: 5.0, reviewCount: 47 },
-  "132253P12": { rating: 5.0, reviewCount: 2 },
+  "487722P1": { rating: 4.9, reviewCount: 29 },
   "487722P4": { rating: 5.0, reviewCount: 2 },
-  "132253P7": { rating: 4.9, reviewCount: 52 },
+  "102020P125": { rating: 3.0, reviewCount: 12 },
 };
 
 export const GLACIER_VIATOR_PUBLIC_PRODUCT_CODES = Object.keys(

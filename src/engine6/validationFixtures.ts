@@ -240,15 +240,15 @@ import specimen118887p2Payload from "../../data/engine6/viator/118887P2.exact-pr
 import specimen275087p2Payload from "../../data/engine6/viator/275087P2.exact-product.json";
 import specimen163873p1Payload from "../../data/engine6/viator/163873P1.exact-product.json";
 import specimen123783p1Payload from "../../data/engine6/viator/123783P1.exact-product.json";
-import specimen86727p4Payload from "../../data/engine6/viator/86727P4.exact-product.json";
+import specimen70248p3Payload from "../../data/engine6/viator/70248P3.exact-product.json";
 import specimen70248p2Payload from "../../data/engine6/viator/70248P2.exact-product.json";
 import specimen299521p2Payload from "../../data/engine6/viator/299521P2.exact-product.json";
 import specimen299521p8Payload from "../../data/engine6/viator/299521P8.exact-product.json";
-import specimen132253p8Payload from "../../data/engine6/viator/132253P8.exact-product.json";
+import specimen299521p1Payload from "../../data/engine6/viator/299521P1.exact-product.json";
 import specimen86727p7Payload from "../../data/engine6/viator/86727P7.exact-product.json";
-import specimen132253p12Payload from "../../data/engine6/viator/132253P12.exact-product.json";
+import specimen487722p1Payload from "../../data/engine6/viator/487722P1.exact-product.json";
 import specimen487722p4Payload from "../../data/engine6/viator/487722P4.exact-product.json";
-import specimen132253p7Payload from "../../data/engine6/viator/132253P7.exact-product.json";
+import specimen102020p125Payload from "../../data/engine6/viator/102020P125.exact-product.json";
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
 import specimen5503p10Payload from "../../data/engine6/viator/5503P10.exact-product.json";
@@ -2478,10 +2478,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     },
   },
   {
-    productCode: "86727P4",
+    productCode: "70248P3",
     publicUrl:
-      "https://www.viator.com/tours/West-Glacier/Full-Day-Glacier-National-Park-Whitewater-Rafting-Adventure/d50559-86727P4",
-    rawPayload: specimen86727p4Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/West-Glacier/Full-Day-Whitewater-Trip/d50559-70248P3",
+    rawPayload: specimen70248p3Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
@@ -2514,10 +2514,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     },
   },
   {
-    productCode: "132253P8",
+    productCode: "299521P1",
     publicUrl:
-      "https://www.viator.com/tours/West-Glacier/Private-Full-Day-Glacier-National-Park-Tour/d50559-132253P8",
-    rawPayload: specimen132253p8Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/West-Glacier/Glacier-Adventure-Tour-Drive-Snowshoe-in-a-Winter-Wonderland/d50559-299521P1",
+    rawPayload: specimen299521p1Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
@@ -2532,10 +2532,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     },
   },
   {
-    productCode: "132253P12",
+    productCode: "487722P1",
     publicUrl:
-      "https://www.viator.com/tours/West-Glacier/E-Bike-Rental/d50559-132253P12",
-    rawPayload: specimen132253p12Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/West-Glacier/Clear-Kayak-Rentals-for-Glacier-Park/d50559-487722P1",
+    rawPayload: specimen487722p1Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
@@ -2550,10 +2550,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     },
   },
   {
-    productCode: "132253P7",
+    productCode: "102020P125",
     publicUrl:
-      "https://www.viator.com/tours/West-Glacier/Glacier-National-Park-Tour/d50559-132253P7",
-    rawPayload: specimen132253p7Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/West-Glacier/Glacier-National-Park-Going-to-the-Sun-Road-Audio-Tour-Guide/d50559-102020P125",
+    rawPayload: specimen102020p125Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

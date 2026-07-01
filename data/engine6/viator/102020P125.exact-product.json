@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "102020P125",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Glacier-National-Park-Going-to-the-Sun-Road-Audio-Tour-Guide/d50559-102020P125",
+    "title": "Glacier National Park Going-to-the-Sun Road Self-Guided Tour",
+    "description": {
+      "text": "Drive the iconic Going-to-the-Sun Road at your own pace with a Shaka Guide audio tour that shares park history, wildlife stories, and geology at GPS-triggered stops from Lake McDonald to Logan Pass. Download the tour to your phone and explore Glacier's alpine scenery without a fixed group schedule."
+    },
+    "location": {
+      "city": "Glacier National Park / West Glacier",
+      "state": "Montana"
+    },
+    "duration": "10 to 11 hours (approx.)",
+    "priceFrom": "From $15.00",
+    "reviews": {
+      "combinedAverageRating": 3,
+      "totalReviews": 12
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/26/46/40.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Self-guided audio tour along Going-to-the-Sun Road",
+      "GPS-triggered narration at Logan Pass and alpine pullouts",
+      "Flexible pacing with offline app access after download",
+      "Park history, wildlife, and geology commentary",
+      "Ideal complement to a full-day Sun Road drive"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Download the Shaka Guide app and purchase tour access before entering Glacier National Park. Begin at the West Glacier or St. Mary entrance depending on your route."
+      },
+      "end": {
+        "description": "Complete the Sun Road loop at your chosen endpoint—St. Mary or West Glacier—when you finish the audio route."
+      }
+    },
+    "itinerarySummary": "Drive the iconic Going-to-the-Sun Road at your own pace with a Shaka Guide audio tour that shares park history, wildlife stories, and geology at GPS-triggered stops from Lake McDonald to Logan Pass.",
+    "itineraryItems": [
+      {
+        "title": "Going-to-the-Sun Road",
+        "description": "Follow the full Going-to-the-Sun Road with audio commentary at major pullouts and viewpoints.",
+        "duration": "6 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Logan Pass",
+        "description": "Stop at Logan Pass for high-alpine views and optional short walks near the Continental Divide.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake McDonald",
+        "description": "Begin or end at Lake McDonald with lakeshore views of the Lewis Range.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glacier National Park",
+        "description": "Audio narration covers park formation, wildlife, and road engineering history throughout the drive.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Self-guided audio tour access",
+      "GPS-triggered narration",
+      "Offline app playback after download"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Glacier National Park Going-to-the-Sun Road Self-Guided Tour?",
+        "answer": "The planned duration is 10 to 11 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Glacier National Park?",
+        "answer": "Download the Shaka Guide app and purchase tour access before entering Glacier National Park. Begin at the West Glacier or St. Mary entrance depending on your route."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Audio Guided Tours"
+      },
+      {
+        "label": "Self-Guided Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 15
+      },
+      "currency": "USD"
+    }
+  }
+}

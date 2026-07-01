@@ -80,6 +80,16 @@
           "priceFrom": 240,
           "categories": ["Bus Tours", "Full-day Tours"],
           "priority": 2
+        },
+        {
+          "productCode": "132253P7",
+          "sourceUrl": "https://www.viator.com/tours/West-Glacier/Glacier-National-Park-Tour/d50559-132253P7",
+          "title": "East Glacier & Two Medicine Scenic Driving Tour",
+          "experienceType": "full-day-glacier-tour",
+          "priceFrom": 550,
+          "categories": ["Private Sightseeing Tours", "Day Trips"],
+          "commercialTier": "premium",
+          "priority": 3
         }
       ]
     },
@@ -96,6 +106,16 @@
           "categories": ["Private Sightseeing Tours", "Full-day Tours"],
           "commercialTier": "premium",
           "priority": 1
+        },
+        {
+          "productCode": "299521P1",
+          "sourceUrl": "https://www.viator.com/tours/West-Glacier/Glacier-Adventure-Tour-Drive-Snowshoe-in-a-Winter-Wonderland/d50559-299521P1",
+          "title": "Combo Tour: Driving and Snowshoe Trek of Glacier National Park",
+          "experienceType": "private-glacier-tour",
+          "priceFrom": 220,
+          "categories": ["Nature and Wildlife Tours", "Winter Sports"],
+          "commercialTier": "premium",
+          "priority": 2
         }
       ]
     },
@@ -127,6 +147,15 @@
           "categories": ["Private Tours", "Bike Tours"],
           "commercialTier": "premium",
           "priority": 1
+        },
+        {
+          "productCode": "487722P1",
+          "sourceUrl": "https://www.viator.com/tours/West-Glacier/Clear-Kayak-Rentals-for-Glacier-Park/d50559-487722P1",
+          "title": "Clear Kayak Rentals for Glacier Park",
+          "experienceType": "e-bike-tour",
+          "priceFrom": 135,
+          "categories": ["Kayaking and Canoeing"],
+          "priority": 2
         }
       ]
     },
@@ -168,6 +197,15 @@
           "categories": ["Private Sightseeing Tours", "Day Trips"],
           "commercialTier": "premium",
           "priority": 1
+        },
+        {
+          "productCode": "102020P125",
+          "sourceUrl": "https://www.viator.com/tours/West-Glacier/Glacier-National-Park-Going-to-the-Sun-Road-Audio-Tour-Guide/d50559-102020P125",
+          "title": "Glacier National Park Going-to-the-Sun Road Self-Guided Tour",
+          "experienceType": "east-glacier-scenic-tour",
+          "priceFrom": 15,
+          "categories": ["Audio Guided Tours", "Self-Guided Tours"],
+          "priority": 2
         }
       ]
     }

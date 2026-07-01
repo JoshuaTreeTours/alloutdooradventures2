@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "70248P3",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Full-Day-Whitewater-Trip/d50559-70248P3",
+    "title": "Full Day Whitewater Adventure Trip with Included Lunch",
+    "description": {
+      "text": "Immerse yourself in Montana river country on a full-day float-and-raft combo along the Middle Fork Flathead River bordering Glacier National Park. Glacier Raft Company guides lead a calm morning float, a riverside barbecue lunch, and afternoon Class II and III rapids through John Stevens Canyon."
+    },
+    "location": {
+      "city": "Glacier National Park / West Glacier",
+      "state": "Montana"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $158.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 285
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/47/da/70.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day float and whitewater combo on the Middle Fork Flathead River",
+      "Included riverside barbecue lunch on the riverbank",
+      "Class II and III rapids in John Stevens Canyon",
+      "Glacier Raft Company outfitter with park-border scenery",
+      "Professional guide team and complete safety equipment"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Glacier Raft Company, 12127 US-2, West Glacier, MT 59936. Arrive 30 minutes before departure for check-in and gear fitting."
+      },
+      "end": {
+        "description": "Return to the Glacier Raft Company base after the full-day river take-out and shuttle."
+      }
+    },
+    "itinerarySummary": "Immerse yourself in Montana river country on a full-day float-and-raft combo along the Middle Fork Flathead River bordering Glacier National Park.",
+    "itineraryItems": [
+      {
+        "title": "Middle Fork Flathead River",
+        "description": "Begin with a calm scenic float on the Middle Fork Flathead before the whitewater sections.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Stevens Canyon",
+        "description": "Tackle Class II and III rapids through John Stevens Canyon with guide-led paddling commands.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glacier National Park",
+        "description": "Float along the park boundary with views of forested slopes above the river corridor.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Full-day guided float and rafting",
+      "Riverside barbecue lunch",
+      "Rafting equipment and guide",
+      "Shuttle transport"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full Day Whitewater Adventure Trip with Included Lunch?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Glacier National Park?",
+        "answer": "Meet at Glacier Raft Company, 12127 US-2, West Glacier, MT 59936. Arrive 30 minutes before departure for check-in and gear fitting."
+      }
+    ],
+    "categories": [
+      {
+        "label": "White Water Rafting"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 158
+      },
+      "currency": "USD"
+    }
+  }
+}

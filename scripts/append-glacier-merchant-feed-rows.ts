@@ -5,15 +5,15 @@ const OUTPUT_PATH = "data/merchantFeed.csv";
 
 const NEW_GLACIER_PRODUCT_CODES = [
   "123783P1",
-  "86727P4",
+  "70248P3",
   "70248P2",
   "299521P2",
   "299521P8",
-  "132253P8",
+  "299521P1",
   "86727P7",
-  "132253P12",
+  "487722P1",
   "487722P4",
-  "132253P7",
+  "102020P125",
 ] as const;
 
 const tours = NEW_GLACIER_PRODUCT_CODES.map(productCode => {
