@@ -1,3 +1,9 @@
+import { assessEngine6DestinationProductBinding } from "./engine6DestinationProductBinding.js";
+import {
+  collectEngine6ProductSelectionBlocklistAdditions,
+  isEngine6ProductSelectionBlocklistedProduct,
+  readEngine6ProductSelectionPermanentBlocklist,
+} from "./engine6ProductSelectionBlocklist.js";
 import {
   formatEngine6LiveViatorProductionValidationReport,
   selectValidEngine6CandidatesFromRankedList,
@@ -7,7 +13,6 @@ import {
   type Engine6RankedViatorCandidate,
 } from "./engine6LiveViatorProductionValidation.js";
 import { resolveEngine6ProductCodesChangedSinceRefSafe } from "./resolveEngine6ChangedProductCodes.js";
-import { ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS } from "./viatorPublicAvailability.js";
 
 export type Engine6CommercialTier = "premium" | "standard";
 
@@ -32,8 +37,14 @@ export type Engine6ProductSelectionRejectionReason =
   | "blocklisted"
   | "missing-commercial-fields"
   | "live-validation-failed"
+  | "inactive"
+  | "unavailable"
+  | "removed"
+  | "reassigned"
+  | "cross-destination"
   | "duplicate-product"
-  | "duplicate-experience";
+  | "duplicate-experience"
+  | "duplicate-engine6-assignment";
 
 export type Engine6ProductSelectionRejectedCandidate = {
   productCode: string;
@@ -98,16 +109,26 @@ export type Engine6ProductSelectionGovernanceReport = {
   blockingFailures: Engine6ProductSelectionRejectedCandidate[];
   blockingPassed: boolean;
   passed: boolean;
+  buildTerminated: boolean;
+  buildTerminationReason: string | null;
+  remainingQualifiedCandidates: Array<{
+    productCode: string;
+    sourceUrl: string;
+    experienceType: string;
+    priority?: number;
+  }>;
+  minimumPortfolioShortfall: number;
+  attemptedReplacements: Array<{
+    experienceType: string;
+    rejectedProductCode: string;
+    selectedProductCode: string;
+  }>;
   formattedLiveValidationReport?: string;
 };
 
-/** Products rejected repeatedly during destination selection and permanently excluded. */
-export const ENGINE6_PRODUCT_SELECTION_PERMANENT_BLOCKLIST = {
-  // Intentionally empty at introduction; append codes after repeated live rejections.
-} as const satisfies Record<
-  string,
-  { sourceUrl: string; title: string; reason: string }
->;
+/** Persisted reject/block list for destination selection (see data/engine6/). */
+export const ENGINE6_PRODUCT_SELECTION_PERMANENT_BLOCKLIST =
+  readEngine6ProductSelectionPermanentBlocklist();
 
 export const ENGINE6_DETERMINISTIC_BUILD_STAGES = [
   "live-validation",
@@ -123,12 +144,15 @@ export type Engine6DeterministicBuildStage =
 export const ENGINE6_PRODUCT_SELECTION_REUSED_MODULES = [
   "engine6LiveViatorProductionValidation.validateEngine6LiveViatorCandidate",
   "engine6LiveViatorProductionValidation.selectValidEngine6CandidatesFromRankedList",
+  "engine6DestinationProductBinding.assessEngine6DestinationProductBinding",
+  "engine6ProductSelectionBlocklist.readEngine6ProductSelectionPermanentBlocklist",
   "viatorPublicAvailability.ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS",
   "resolveEngine6ChangedProductCodes.resolveEngine6ProductCodesChangedSinceRefSafe",
 ] as const;
 
 export const ENGINE6_PRODUCT_SELECTION_NEW_MODULES = [
   "engine6ProductSelectionGovernance",
+  "engine6ParagonGovernancePipeline",
 ] as const;
 
 const DEFAULT_TARGET_PREMIUM_SHARE = 0.5;
@@ -171,12 +195,37 @@ export class Engine6BuildOrderViolationError extends Error {
 
 const normalizeProductCode = (value: string) => value.trim().toUpperCase();
 
-export const isEngine6ProductSelectionBlocklisted = (productCode: string) => {
-  const normalized = normalizeProductCode(productCode);
-  return (
-    normalized in ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS ||
-    normalized in ENGINE6_PRODUCT_SELECTION_PERMANENT_BLOCKLIST
-  );
+export const isEngine6ProductSelectionBlocklisted = (productCode: string) =>
+  isEngine6ProductSelectionBlocklistedProduct(productCode);
+
+const classifyLiveValidationRejectionReason = (
+  validationResult: Engine6LiveViatorValidationResult
+): Engine6ProductSelectionRejectionReason => {
+  const reason = (validationResult.reason ?? "").toLowerCase();
+
+  if (validationResult.knownUnavailableBlocklistHit) {
+    return "unavailable";
+  }
+
+  if (/inactive|discontinued|not_available/.test(reason)) {
+    return "inactive";
+  }
+
+  if (/unavailable|not currently bookable|public page unavailable/.test(reason)) {
+    return "unavailable";
+  }
+
+  if (/removed|missing product body|http 404/.test(reason)) {
+    return "removed";
+  }
+
+  if (/reassigned|product code mismatch|does not match configured source url|does not match intended destination/.test(
+    reason
+  )) {
+    return "reassigned";
+  }
+
+  return "live-validation-failed";
 };
 
 export const inferEngine6CommercialTier = (candidate: {
@@ -325,6 +374,8 @@ const isBlockingSelectionFailure = (args: {
 
 export type SelectEngine6DestinationPortfolioArgs = {
   destinationLabel: string;
+  destinationCitySlug?: string;
+  viatorDestinationSlug?: string;
   slots: Engine6ProductSelectionSlot[];
   targetPremiumShare?: number;
   mode?: Engine6LiveViatorValidationMode;
@@ -335,6 +386,26 @@ export type SelectEngine6DestinationPortfolioArgs = {
   generatedAt?: string;
   priorCompletedBuildStages?: readonly Engine6DeterministicBuildStage[];
 };
+
+export class Engine6CommitPullRequestGateError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "Engine6CommitPullRequestGateError";
+  }
+}
+
+export class Engine6DestinationBuildTerminatedError extends Error {
+  readonly report: Engine6ProductSelectionGovernanceReport;
+
+  constructor(report: Engine6ProductSelectionGovernanceReport) {
+    super(
+      report.buildTerminationReason ??
+        "Engine6 destination build terminated: validated candidate pool exhausted"
+    );
+    this.name = "Engine6DestinationBuildTerminatedError";
+    this.report = report;
+  }
+}
 
 export const assertEngine6FixturesBuildGate = (
   priorCompletedBuildStages: readonly Engine6DeterministicBuildStage[]
@@ -368,6 +439,110 @@ export const assertEngine6SitemapBuildGate = (
     priorCompletedStages: priorCompletedBuildStages,
   });
 
+export const assertEngine6LiveValidationBuildGate = (
+  priorCompletedBuildStages: readonly Engine6DeterministicBuildStage[]
+) =>
+  assertEngine6BuildStageOrder({
+    completedStage: "live-validation",
+    priorCompletedStages: priorCompletedBuildStages,
+  });
+
+export const assertEngine6ArtifactGenerationAllowed = (args: {
+  report: Engine6ProductSelectionGovernanceReport;
+  nextStage: Exclude<
+    Engine6DeterministicBuildStage,
+    "live-validation"
+  >;
+}) => {
+  if (!args.report.passed || args.report.buildTerminated) {
+    throw new Engine6DestinationBuildTerminatedError(args.report);
+  }
+
+  switch (args.nextStage) {
+    case "fixtures":
+      assertEngine6FixturesBuildGate(["live-validation"]);
+      break;
+    case "merchant-feed":
+      assertEngine6MerchantFeedBuildGate(["live-validation", "fixtures"]);
+      break;
+    case "routes":
+      assertEngine6RoutesBuildGate([
+        "live-validation",
+        "fixtures",
+        "merchant-feed",
+      ]);
+      break;
+    case "sitemap":
+      assertEngine6SitemapBuildGate([
+        "live-validation",
+        "fixtures",
+        "merchant-feed",
+        "routes",
+      ]);
+      break;
+    default:
+      break;
+  }
+};
+
+export const assertEngine6CommitPullRequestGate = (
+  report: Engine6ProductSelectionGovernanceReport
+) => {
+  if (report.buildTerminated || !report.passed || !report.blockingPassed) {
+    throw new Engine6CommitPullRequestGateError(
+      report.buildTerminationReason ??
+        "Engine6 commit/PR gate blocked: one or more products failed live validation or the destination portfolio is incomplete."
+    );
+  }
+
+  if (report.unfilledSlots.length > 0) {
+    throw new Engine6CommitPullRequestGateError(
+      "Engine6 commit/PR gate blocked: destination portfolio has unfilled experience slots."
+    );
+  }
+
+  if (report.blockingFailures.length > 0) {
+    throw new Engine6CommitPullRequestGateError(
+      "Engine6 commit/PR gate blocked: blocking validation failures remain."
+    );
+  }
+};
+
+const collectRemainingQualifiedCandidates = (args: {
+  slots: Engine6ProductSelectionSlot[];
+  acceptedCodes: ReadonlySet<string>;
+  rejectedCodes: ReadonlySet<string>;
+}) => {
+  const remaining: Engine6ProductSelectionGovernanceReport["remainingQualifiedCandidates"] =
+    [];
+
+  for (const slot of args.slots) {
+    for (const candidate of sortCandidates(slot.candidates)) {
+      const productCode = normalizeProductCode(candidate.productCode);
+      if (
+        args.acceptedCodes.has(productCode) ||
+        args.rejectedCodes.has(productCode) ||
+        isEngine6ProductSelectionBlocklisted(productCode)
+      ) {
+        continue;
+      }
+
+      if (resolveEngine6ProductSelectionCommercialFieldGap(candidate)) {
+        continue;
+      }
+
+      remaining.push({
+        productCode,
+        sourceUrl: candidate.sourceUrl,
+        experienceType: slot.experienceType,
+        priority: candidate.priority,
+      });
+    }
+  }
+
+  return remaining;
+};
+
 export const selectEngine6DestinationPortfolio = async (
   args: SelectEngine6DestinationPortfolioArgs
 ): Promise<Engine6ProductSelectionGovernanceReport> => {
@@ -395,6 +570,7 @@ export const selectEngine6DestinationPortfolio = async (
   for (const slot of args.slots) {
     const rankedCandidates = sortCandidates(slot.candidates);
     let slotAccepted = 0;
+    let lastFailedProductCodeForSlot: string | null = null;
 
     for (const candidate of rankedCandidates) {
       if (slotAccepted >= slot.desiredCount) {
@@ -429,6 +605,25 @@ export const selectEngine6DestinationPortfolio = async (
         continue;
       }
 
+      const destinationBinding = assessEngine6DestinationProductBinding({
+        productCode,
+        sourceUrl: candidate.sourceUrl,
+        destinationCitySlug: args.destinationCitySlug,
+        viatorDestinationSlug: args.viatorDestinationSlug,
+        destinationLabel: args.destinationLabel,
+      });
+
+      if (destinationBinding.violation) {
+        rejected.push({
+          productCode,
+          sourceUrl: candidate.sourceUrl,
+          experienceType: slot.experienceType,
+          reason: destinationBinding.violation,
+          detail: destinationBinding.detail ?? destinationBinding.violation,
+        });
+        continue;
+      }
+
       if (acceptedCodes.has(productCode)) {
         rejected.push({
           productCode,
@@ -447,23 +642,22 @@ export const selectEngine6DestinationPortfolio = async (
       });
 
       if (!validationResult.passed) {
+        const rejectionReason = classifyLiveValidationRejectionReason(
+          validationResult
+        );
         rejected.push({
           productCode,
           sourceUrl: candidate.sourceUrl,
           experienceType: slot.experienceType,
-          reason: "live-validation-failed",
+          reason: rejectionReason,
           detail: validationResult.reason ?? "live Viator validation failed",
           validationResult,
         });
+        lastFailedProductCodeForSlot = productCode;
         continue;
       }
 
-      const replacedProductCode =
-        rejected.find(
-          entry =>
-            entry.experienceType === slot.experienceType &&
-            entry.reason === "live-validation-failed"
-        )?.productCode ?? null;
+      const replacedProductCode = lastFailedProductCodeForSlot;
 
       if (replacedProductCode) {
         replacements.push({
@@ -471,6 +665,7 @@ export const selectEngine6DestinationPortfolio = async (
           rejectedProductCode: replacedProductCode,
           selectedProductCode: productCode,
         });
+        lastFailedProductCodeForSlot = null;
       }
 
       accepted.push({
@@ -513,7 +708,40 @@ export const selectEngine6DestinationPortfolio = async (
   );
   const blockingPassed =
     blockingFailures.length === 0 && unfilledSlots.length === 0;
-  const passed = mode === "strict" ? blockingPassed : blockingPassed;
+  const passed = blockingPassed;
+  const minimumPortfolioShortfall = unfilledSlots.reduce(
+    (total, slot) => total + (slot.desiredCount - slot.acceptedCount),
+    0
+  );
+  const rejectedCodes = new Set(rejected.map(entry => entry.productCode));
+  const remainingQualifiedCandidates = collectRemainingQualifiedCandidates({
+    slots: args.slots,
+    acceptedCodes,
+    rejectedCodes,
+  });
+  const buildTerminated = !passed;
+  const buildTerminationReason = buildTerminated
+    ? unfilledSlots.length > 0
+      ? `validated candidate pool exhausted with ${minimumPortfolioShortfall} unfilled portfolio slot(s)`
+      : blockingFailures.length > 0
+        ? "blocking validation failures remain after automatic replacement"
+        : "destination build could not assemble a fully validated portfolio"
+    : null;
+  const generatedAt = args.generatedAt ?? new Date().toISOString();
+  const candidateTitlesByCode = Object.fromEntries(
+    args.slots.flatMap(slot =>
+      slot.candidates.map(candidate => [
+        normalizeProductCode(candidate.productCode),
+        candidate.title,
+      ])
+    )
+  );
+  const blocklistAdditions = collectEngine6ProductSelectionBlocklistAdditions({
+    rejected,
+    destinationLabel: args.destinationLabel,
+    generatedAt,
+    candidateTitlesByCode,
+  }).map(entry => entry.productCode);
 
   const allValidationResults = [
     ...accepted.map(entry => entry.validationResult),
@@ -526,7 +754,7 @@ export const selectEngine6DestinationPortfolio = async (
   ];
 
   return {
-    generatedAt: args.generatedAt ?? new Date().toISOString(),
+    generatedAt,
     destinationLabel: args.destinationLabel,
     mode,
     scopedProductCodes: [...scopedProductCodes].sort(),
@@ -537,7 +765,7 @@ export const selectEngine6DestinationPortfolio = async (
     productsRejected: rejected.length,
     replacementProductsSelected: replacements.length,
     portfolioMix,
-    blocklistAdditions: [],
+    blocklistAdditions,
     accepted,
     rejected,
     replacements,
@@ -548,6 +776,11 @@ export const selectEngine6DestinationPortfolio = async (
     blockingFailures,
     blockingPassed,
     passed,
+    buildTerminated,
+    buildTerminationReason,
+    remainingQualifiedCandidates,
+    minimumPortfolioShortfall,
+    attemptedReplacements: replacements,
     formattedLiveValidationReport:
       allValidationResults.length > 0
         ? formatEngine6LiveViatorProductionValidationReport({
@@ -555,7 +788,7 @@ export const selectEngine6DestinationPortfolio = async (
             passed: blockingPassed,
             blockingPassed,
             scopedProductCodes: [...scopedProductCodes],
-            validatedAt: args.generatedAt ?? new Date().toISOString(),
+            validatedAt: generatedAt,
             results: allValidationResults,
             failures: allValidationResults.filter(result => !result.passed),
             blockingFailures: blockingFailures
@@ -582,6 +815,102 @@ export const selectEngine6DestinationPortfolio = async (
           })
         : undefined,
   };
+};
+
+export type Engine6DestinationBuildConfig = {
+  destinationLabel: string;
+  destinationCitySlug?: string;
+  viatorDestinationSlug?: string;
+  targetPremiumShare?: number;
+  slots: Engine6ProductSelectionSlot[];
+};
+
+export const runEngine6DestinationBuildGovernance = async (
+  args: SelectEngine6DestinationPortfolioArgs & {
+    destinationBuild?: boolean;
+  }
+) => {
+  const mode =
+    args.mode ??
+    (args.destinationBuild === false ? "pr-scoped" : "strict");
+  const scopedProductCodes =
+    args.scopedProductCodes ??
+    (mode === "pr-scoped"
+      ? resolveEngine6ProductCodesChangedSinceRefSafe({
+          headRef: args.headRef,
+        }).productCodes
+      : []);
+
+  const report = await selectEngine6DestinationPortfolio({
+    ...args,
+    mode,
+    scopedProductCodes,
+  });
+
+  return {
+    report,
+    validatedProductCodes: report.accepted.map(entry => entry.productCode),
+    completedBuildStages: report.passed
+      ? (["live-validation"] as const)
+      : ([] as const),
+  };
+};
+
+export const formatEngine6DestinationBuildFailureReport = (
+  report: Engine6ProductSelectionGovernanceReport
+) => {
+  const lines = [
+    `Engine6 destination build terminated (${report.generatedAt})`,
+    `Destination: ${report.destinationLabel}`,
+    `Reason: ${report.buildTerminationReason ?? "unknown"}`,
+    "",
+    "## Portfolio shortfall",
+    `- Minimum portfolio shortfall: ${report.minimumPortfolioShortfall}`,
+    `- Unfilled slots: ${report.unfilledSlots.length}`,
+    "",
+    "## Rejected products",
+  ];
+
+  for (const rejection of report.rejected) {
+    lines.push(
+      `- ${rejection.productCode} (${rejection.experienceType}/${rejection.reason}): ${rejection.detail}`
+    );
+  }
+
+  if (report.attemptedReplacements.length > 0) {
+    lines.push("", "## Attempted replacements");
+    for (const replacement of report.attemptedReplacements) {
+      lines.push(
+        `- ${replacement.experienceType}: ${replacement.rejectedProductCode} -> ${replacement.selectedProductCode}`
+      );
+    }
+  }
+
+  if (report.remainingQualifiedCandidates.length > 0) {
+    lines.push("", "## Remaining qualified candidates");
+    for (const candidate of report.remainingQualifiedCandidates.slice(0, 25)) {
+      lines.push(
+        `- ${candidate.productCode} (${candidate.experienceType}${candidate.priority != null ? `, priority ${candidate.priority}` : ""})`
+      );
+    }
+    if (report.remainingQualifiedCandidates.length > 25) {
+      lines.push(
+        `- ...and ${report.remainingQualifiedCandidates.length - 25} additional candidate(s).`
+      );
+    }
+  } else {
+    lines.push("", "## Remaining qualified candidates", "- none");
+  }
+
+  if (report.blocklistAdditions.length > 0) {
+    lines.push(
+      "",
+      "## Permanent blocklist additions",
+      report.blocklistAdditions.join(", ")
+    );
+  }
+
+  return lines.join("\n");
 };
 
 export const selectValidEngine6CandidatesForExperienceType = async (args: {
@@ -670,6 +999,17 @@ export const formatEngine6ProductSelectionGovernanceReport = (
         `- ${failure.productCode} (${failure.experienceType}): ${failure.detail}`
       );
     }
+  }
+
+  if (report.buildTerminated) {
+    lines.push(
+      "",
+      "## Build termination",
+      `- Terminated: ${report.buildTerminated}`,
+      `- Reason: ${report.buildTerminationReason ?? "unknown"}`,
+      `- Minimum portfolio shortfall: ${report.minimumPortfolioShortfall}`,
+      `- Remaining qualified candidates: ${report.remainingQualifiedCandidates.length}`
+    );
   }
 
   if (report.rejected.length > 0) {

@@ -2,10 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 import { YELLOWSTONE_VIATOR_PUBLIC_RATINGS } from "../src/engine6/yellowstoneViatorPublicRatings";
-import {
-  ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS,
-  validateEngine6CityProductAvailability,
-} from "../src/engine6/viatorPublicAvailability";
+import { runEngine6ParagonFixtureGeneration } from "./lib/runEngine6ParagonFixtureGeneration";
 
 type ItineraryItem = {
   title: string;
@@ -1551,48 +1548,15 @@ const buildFixture = (tour: YellowstoneTourFixture) => {
   };
 };
 
-const outputDir = path.join(process.cwd(), "data", "engine6", "viator");
-mkdirSync(outputDir, { recursive: true });
+const main = async () => {
+  await runEngine6ParagonFixtureGeneration({
+    destinationLabel: "Yellowstone National Park",
+    destinationCitySlug: "yellowstone-national-park",
+    viatorDestinationSlug: "Yellowstone-National-Park",
+    tours: YELLOWSTONE_TOURS,
+    buildFixture,
+    destinationLogLabel: "Yellowstone",
+  });
+};
 
-const availabilityRejections = validateEngine6CityProductAvailability(
-  YELLOWSTONE_TOURS.map(tour => ({
-    productCode: tour.productCode,
-    sourceUrl: tour.productUrl,
-    html: `<html><body><h1>${tour.title}</h1><button>Check availability</button><script>{"productCode":"${tour.productCode}","productStatus":"ACTIVE"}</script></body></html>`,
-    finalUrl: tour.productUrl,
-    httpStatus: 200,
-  }))
-);
-
-if (availabilityRejections.length > 0) {
-  throw availabilityRejections[0];
-}
-
-for (const unavailableProductCode of Object.keys(
-  ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS
-)) {
-  if (
-    YELLOWSTONE_TOURS.some(tour => tour.productCode === unavailableProductCode)
-  ) {
-    throw new Error(
-      `Refusing to generate fixtures for known unavailable product ${unavailableProductCode}`
-    );
-  }
-}
-
-for (const tour of YELLOWSTONE_TOURS) {
-  const filePath = path.join(
-    outputDir,
-    `${tour.productCode}.exact-product.json`
-  );
-  writeFileSync(
-    filePath,
-    `${JSON.stringify(buildFixture(tour), null, 2)}\n`,
-    "utf8"
-  );
-  console.log(`Wrote ${filePath}`);
-}
-
-console.log(
-  `Generated ${YELLOWSTONE_TOURS.length} Yellowstone Engine6 fixtures.`
-);
+await main();

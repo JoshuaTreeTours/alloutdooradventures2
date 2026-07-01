@@ -1,5 +1,6 @@
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import { appendMerchantFeedRowsWithImageGovernance } from "./lib/appendMerchantFeedRowsWithImageGovernance";
+import { requireEngine6ParagonMerchantFeedGate } from "./lib/requireEngine6ParagonDownstreamArtifactGate";
 
 const OUTPUT_PATH = "data/merchantFeed.csv";
 
@@ -29,23 +30,24 @@ const NEW_YELLOWSTONE_PRODUCT_CODES = [
   "463268P2",
 ] as const;
 
-const tours = NEW_YELLOWSTONE_PRODUCT_CODES.map(productCode => {
-  const tour = engine6ResolvedTours.find(
-    entry => entry.productCode === productCode
-  );
-  if (!tour) {
-    throw new Error(`Missing resolved Yellowstone tour for ${productCode}`);
-  }
+const main = async () => {
+  const tours = await requireEngine6ParagonMerchantFeedGate({
+    destinationLabel: "Yellowstone National Park",
+    destinationCitySlug: "yellowstone-national-park",
+    viatorDestinationSlug: "Yellowstone-National-Park",
+    productCodes: NEW_YELLOWSTONE_PRODUCT_CODES,
+    resolvedTours: engine6ResolvedTours,
+  });
 
-  return tour;
-});
+  await appendMerchantFeedRowsWithImageGovernance({
+    outputPath: OUTPUT_PATH,
+    tours,
+    destinationLabel: "Yellowstone",
+    optionalBlankFields: ["average_rating", "rating_count", "review_count"],
+  });
+};
 
-appendMerchantFeedRowsWithImageGovernance({
-  outputPath: OUTPUT_PATH,
-  tours,
-  destinationLabel: "Yellowstone",
-  optionalBlankFields: ["average_rating", "rating_count", "review_count"],
-}).catch(error => {
+main().catch(error => {
   console.error(error);
   process.exit(1);
 });

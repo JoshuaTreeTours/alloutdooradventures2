@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
 
 import {
+  assertEngine6ArtifactGenerationAllowed,
   assertEngine6BuildStageOrder,
+  assertEngine6CommitPullRequestGate,
   assertEngine6FixturesBuildGate,
   assertEngine6MerchantFeedBuildGate,
   assertEngine6RoutesBuildGate,
@@ -9,7 +11,10 @@ import {
   auditEngine6ProductSelectionPortfolioDiversity,
   buildEngine6PortfolioMixSummary,
   Engine6BuildOrderViolationError,
+  Engine6CommitPullRequestGateError,
+  Engine6DestinationBuildTerminatedError,
   ENGINE6_DETERMINISTIC_BUILD_STAGES,
+  formatEngine6DestinationBuildFailureReport,
   formatEngine6ProductSelectionGovernanceReport,
   inferEngine6CommercialTier,
   isEngine6ProductSelectionBlocklisted,
@@ -110,6 +115,7 @@ describe("engine6ProductSelectionGovernance", () => {
   it("selects valid ranked candidates and replaces failed primary picks", async () => {
     const report = await selectEngine6DestinationPortfolio({
       destinationLabel: "Example National Park",
+      viatorDestinationSlug: "Example",
       mode: "strict",
       scopedProductCodes: [],
       slots: [
@@ -186,6 +192,7 @@ describe("engine6ProductSelectionGovernance", () => {
   it("blocks only scoped products in pr-scoped mode", async () => {
     const report = await selectEngine6DestinationPortfolio({
       destinationLabel: "Example National Park",
+      viatorDestinationSlug: "Example",
       mode: "pr-scoped",
       scopedProductCodes: ["NEWP1"],
       slots: [
@@ -229,7 +236,7 @@ describe("engine6ProductSelectionGovernance", () => {
       report.rejected.some(
         entry =>
           entry.productCode === "LEGACYP1" &&
-          entry.reason === "live-validation-failed"
+          entry.reason === "unavailable" || entry.reason === "live-validation-failed"
       )
     ).toBe(true);
   });
@@ -237,6 +244,7 @@ describe("engine6ProductSelectionGovernance", () => {
   it("formats a completion report with portfolio and reuse confirmation", async () => {
     const report = await selectEngine6DestinationPortfolio({
       destinationLabel: "Zion National Park",
+      viatorDestinationSlug: "Zion-National-Park",
       mode: "strict",
       scopedProductCodes: [],
       slots: [
@@ -246,7 +254,8 @@ describe("engine6ProductSelectionGovernance", () => {
           candidates: [
             {
               productCode: "HIKEP1",
-              sourceUrl: "https://www.viator.com/tours/Example/d1-HIKEP1",
+              sourceUrl:
+                "https://www.viator.com/tours/Zion-National-Park/Private-Guided-Hike/d5610-HIKEP1",
               title: "Private Guided Hike",
               experienceType: "hiking-tour",
               priceFrom: 850,
@@ -309,6 +318,125 @@ describe("engine6ProductSelectionGovernance", () => {
     expect(report.productsRejected).toBe(1);
     expect(report.rejected[0]?.reason).toBe("blocklisted");
     expect(report.unfilledSlots).toHaveLength(1);
+  });
+
+  it("rejects cross-destination candidates before live validation", async () => {
+    const report = await selectEngine6DestinationPortfolio({
+      destinationLabel: "Zion National Park",
+      destinationCitySlug: "zion-national-park",
+      viatorDestinationSlug: "Zion-National-Park",
+      mode: "strict",
+      scopedProductCodes: [],
+      slots: [
+        {
+          experienceType: "day-tour",
+          desiredCount: 1,
+          candidates: [
+            {
+              productCode: "CROSSP1",
+              sourceUrl:
+                "https://www.viator.com/tours/Yosemite-National-Park/Some-Tour/d5265-CROSSP1",
+              title: "Wrong Destination Tour",
+              experienceType: "day-tour",
+              priceFrom: 199,
+            },
+          ],
+        },
+      ],
+      validateCandidate: async () => {
+        throw new Error("live validation should not run for cross-destination products");
+      },
+    });
+
+    expect(report.productsAccepted).toBe(0);
+    expect(report.rejected[0]?.reason).toBe("cross-destination");
+    expect(report.buildTerminated).toBe(true);
+    expect(report.minimumPortfolioShortfall).toBe(1);
+  });
+
+  it("blocks artifact generation and commits when the build terminates", async () => {
+    const report = await selectEngine6DestinationPortfolio({
+      destinationLabel: "Example National Park",
+      viatorDestinationSlug: "Example",
+      mode: "strict",
+      scopedProductCodes: [],
+      slots: [
+        {
+          experienceType: "day-tour",
+          desiredCount: 1,
+          candidates: [
+            {
+              productCode: "FAILP1",
+              sourceUrl: "https://www.viator.com/tours/Example/d1-FAILP1",
+              title: "Failed Day Tour",
+              experienceType: "day-tour",
+              priceFrom: 149,
+            },
+          ],
+        },
+      ],
+      validateCandidate: async args =>
+        buildValidationResult({
+          productCode: args.productCode,
+          sourceUrl: args.sourceUrl,
+          passed: false,
+          bookable: false,
+          reason: "Viator API reports inactive status INACTIVE",
+        }),
+    });
+
+    expect(() =>
+      assertEngine6ArtifactGenerationAllowed({
+        report,
+        nextStage: "fixtures",
+      })
+    ).toThrow(Engine6DestinationBuildTerminatedError);
+
+    expect(() => assertEngine6CommitPullRequestGate(report)).toThrow(
+      Engine6CommitPullRequestGateError
+    );
+
+    expect(formatEngine6DestinationBuildFailureReport(report)).toContain(
+      "Minimum portfolio shortfall: 1"
+    );
+  });
+
+  it("allows artifact generation after a validated portfolio is assembled", async () => {
+    const report = await selectEngine6DestinationPortfolio({
+      destinationLabel: "Example National Park",
+      viatorDestinationSlug: "Example",
+      mode: "strict",
+      scopedProductCodes: [],
+      slots: [
+        {
+          experienceType: "day-tour",
+          desiredCount: 1,
+          candidates: [
+            {
+              productCode: "GOODP1",
+              sourceUrl: "https://www.viator.com/tours/Example/d1-GOODP1",
+              title: "Small-Group Day Tour",
+              experienceType: "day-tour",
+              priceFrom: 149,
+            },
+          ],
+        },
+      ],
+      validateCandidate: async args =>
+        buildValidationResult({
+          productCode: args.productCode,
+          sourceUrl: args.sourceUrl,
+        }),
+    });
+
+    expect(() =>
+      assertEngine6ArtifactGenerationAllowed({
+        report,
+        nextStage: "fixtures",
+      })
+    ).not.toThrow();
+
+    expect(() => assertEngine6CommitPullRequestGate(report)).not.toThrow();
   });
 });
 

@@ -1,6 +1,4 @@
-import { mkdirSync, writeFileSync } from "node:fs";
-import path from "node:path";
-
+import { runEngine6ParagonFixtureGeneration } from "./lib/runEngine6ParagonFixtureGeneration";
 type ItineraryItem = {
   title: string;
   description: string;
@@ -855,13 +853,15 @@ const buildFixture = (tour: SeattleTourFixture) => ({
   },
 });
 
-const outputDir = path.join(process.cwd(), "data", "engine6", "viator");
-mkdirSync(outputDir, { recursive: true });
+const main = async () => {
+  await runEngine6ParagonFixtureGeneration({
+    destinationLabel: "Seattle",
+    destinationCitySlug: "seattle",
+    viatorDestinationSlug: "Seattle",
+    tours: SEATTLE_TOURS,
+    buildFixture,
+    destinationLogLabel: "Seattle",
+  });
+};
 
-for (const tour of SEATTLE_TOURS) {
-  const filePath = path.join(outputDir, `${tour.productCode}.exact-product.json`);
-  writeFileSync(filePath, `${JSON.stringify(buildFixture(tour), null, 2)}\n`, "utf8");
-  console.log(`Wrote ${filePath}`);
-}
-
-console.log(`Generated ${SEATTLE_TOURS.length} Seattle Engine6 fixtures.`);
+await main();

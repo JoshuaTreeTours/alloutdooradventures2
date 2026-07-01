@@ -1,12 +1,5 @@
-import { mkdirSync, writeFileSync } from "node:fs";
-import path from "node:path";
-
 import { ZION_VIATOR_PUBLIC_RATINGS } from "../src/engine6/zionViatorPublicRatings";
-import {
-  assertViatorPublicPageAvailability,
-  ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS,
-  fetchViatorPublicPage,
-} from "../src/engine6/viatorPublicAvailability";
+import { runEngine6ParagonFixtureGeneration } from "./lib/runEngine6ParagonFixtureGeneration";
 
 type ItineraryItem = {
   title: string;
@@ -1052,64 +1045,16 @@ const buildFixture = (tour: ZionTourFixture) => {
   };
 };
 
-const outputDir = path.join(process.cwd(), "data", "engine6", "viator");
-mkdirSync(outputDir, { recursive: true });
 
 const main = async () => {
-  const availabilityRejections: unknown[] = [];
-
-  for (const tour of ZION_TOURS) {
-    if (tour.productCode in ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS) {
-      availabilityRejections.push(
-        new Error(
-          `Refusing to generate fixtures for known unavailable product ${tour.productCode}`
-        )
-      );
-      continue;
-    }
-
-    try {
-      const page = await fetchViatorPublicPage(tour.productUrl);
-      assertViatorPublicPageAvailability({
-        productCode: tour.productCode,
-        sourceUrl: tour.productUrl,
-        html: page.html,
-        finalUrl: page.finalUrl,
-        httpStatus: page.httpStatus,
-      });
-    } catch (error) {
-      availabilityRejections.push(error);
-    }
-  }
-
-  if (availabilityRejections.length > 0) {
-    throw availabilityRejections[0];
-  }
-
-  for (const unavailableProductCode of Object.keys(
-    ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS
-  )) {
-    if (ZION_TOURS.some(tour => tour.productCode === unavailableProductCode)) {
-      throw new Error(
-        `Refusing to generate fixtures for known unavailable product ${unavailableProductCode}`
-      );
-    }
-  }
-
-  for (const tour of ZION_TOURS) {
-    const filePath = path.join(
-      outputDir,
-      `${tour.productCode}.exact-product.json`
-    );
-    writeFileSync(
-      filePath,
-      `${JSON.stringify(buildFixture(tour), null, 2)}\n`,
-      "utf8"
-    );
-    console.log(`Wrote ${filePath}`);
-  }
-
-  console.log(`Generated ${ZION_TOURS.length} Zion Engine6 fixtures.`);
+  await runEngine6ParagonFixtureGeneration({
+    destinationLabel: "Zion National Park",
+    destinationCitySlug: "zion-national-park",
+    viatorDestinationSlug: "Zion-National-Park",
+    tours: ZION_TOURS,
+    buildFixture,
+    destinationLogLabel: "Zion",
+  });
 };
 
 await main();
