@@ -34,7 +34,7 @@ const PUBLIC_JSON_LD_ITINERARY_NAMES_BY_PRODUCT_CODE: Record<
   readonly string[]
 > = {
   "117409P1": ["Santa Ynez Valley"],
-  "191303P1": ["Coronado Island"],
+  "142924P6": ["Coronado Island"],
   "2335P1": ["San Andreas Fault"],
   "447486P4": ["Santa Barbara Maritime Museum"],
   "67760P2": [

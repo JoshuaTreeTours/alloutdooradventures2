@@ -5,7 +5,7 @@ import {
   passesMerchantFeedLiveCommercialGuard,
 } from "./resolveEngine6ViatorProductCommercialExtract";
 
-const TARGET_CODES = ["191303P1", "5559561P1", "44152P18", "5396BOEING"];
+const TARGET_CODES = ["142924P6", "9345P24"];
 
 const hasViatorApiKey = Boolean(
   process.env.VIATOR_API_KEY ||

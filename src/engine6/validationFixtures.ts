@@ -65,7 +65,7 @@ import specimen237571p2Payload from "../../data/engine6/viator/237571P2.exact-pr
 import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-product.json";
 import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-product.json";
 import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-product.json";
-import specimen191303p1Payload from "../../data/engine6/viator/191303P1.exact-product.json";
+import specimen142924p6Payload from "../../data/engine6/viator/142924P6.exact-product.json";
 import specimen5598628p3Payload from "../../data/engine6/viator/5598628P3.exact-product.json";
 import specimen69764p1Payload from "../../data/engine6/viator/69764P1.exact-product.json";
 import specimen18125p5Payload from "../../data/engine6/viator/18125P5.exact-product.json";
@@ -77,7 +77,6 @@ import specimen37126p9Payload from "../../data/engine6/viator/37126P9.exact-prod
 import specimen28758p1Payload from "../../data/engine6/viator/28758P1.exact-product.json";
 import specimen383300p6Payload from "../../data/engine6/viator/383300P6.exact-product.json";
 import specimen76145p2Payload from "../../data/engine6/viator/76145P2.exact-product.json";
-import specimen5559561p1Payload from "../../data/engine6/viator/5559561P1.exact-product.json";
 import specimen118958p8Payload from "../../data/engine6/viator/118958P8.exact-product.json";
 import specimen6331bahaPayload from "../../data/engine6/viator/6331BAHA.exact-product.json";
 import specimen57834p1Payload from "../../data/engine6/viator/57834P1.exact-product.json";
@@ -114,7 +113,6 @@ import specimen5765p9Payload from "../../data/engine6/viator/5765P9.exact-produc
 import specimen9634p6Payload from "../../data/engine6/viator/9634P6.exact-product.json";
 import specimen194901p2Payload from "../../data/engine6/viator/194901P2.exact-product.json";
 import specimen5765mthoodPayload from "../../data/engine6/viator/5765MTHOOD.exact-product.json";
-import specimen5765p7Payload from "../../data/engine6/viator/5765P7.exact-product.json";
 import specimen401191p1Payload from "../../data/engine6/viator/401191P1.exact-product.json";
 import specimen67842p3Payload from "../../data/engine6/viator/67842P3.exact-product.json";
 import specimen5396p10Payload from "../../data/engine6/viator/5396P10.exact-product.json";
@@ -130,13 +128,11 @@ import specimen3657rainierPayload from "../../data/engine6/viator/3657RAINIER.ex
 import specimen5396mtrPayload from "../../data/engine6/viator/5396MTR.exact-product.json";
 import specimen351474p1Payload from "../../data/engine6/viator/351474P1.exact-product.json";
 import specimen3132smbPayload from "../../data/engine6/viator/3132SMB.exact-product.json";
-import specimen5396boeingPayload from "../../data/engine6/viator/5396BOEING.exact-product.json";
 import specimen8647p594Payload from "../../data/engine6/viator/8647P594.exact-product.json";
 import specimen70275p1Payload from "../../data/engine6/viator/70275P1.exact-product.json";
 import specimen53254p1Payload from "../../data/engine6/viator/53254P1.exact-product.json";
 import specimen362397p1Payload from "../../data/engine6/viator/362397P1.exact-product.json";
 import specimen53254p8Payload from "../../data/engine6/viator/53254P8.exact-product.json";
-import specimen6021mbaPayload from "../../data/engine6/viator/6021MBA.exact-product.json";
 import specimen5973foodPayload from "../../data/engine6/viator/5973FOOD.exact-product.json";
 import specimen88377p1Payload from "../../data/engine6/viator/88377P1.exact-product.json";
 import specimen39976p3Payload from "../../data/engine6/viator/39976P3.exact-product.json";
@@ -144,7 +140,7 @@ import specimen14670carPayload from "../../data/engine6/viator/14670CAR.exact-pr
 import specimen173135p2Payload from "../../data/engine6/viator/173135P2.exact-product.json";
 import specimen434555p1Payload from "../../data/engine6/viator/434555P1.exact-product.json";
 import specimen118676p4Payload from "../../data/engine6/viator/118676P4.exact-product.json";
-import specimen9345p1Payload from "../../data/engine6/viator/9345P1.exact-product.json";
+import specimen9345p24Payload from "../../data/engine6/viator/9345P24.exact-product.json";
 import specimen6938napatrlyPayload from "../../data/engine6/viator/6938NAPATRLY.exact-product.json";
 import specimen6285p4Payload from "../../data/engine6/viator/6285P4.exact-product.json";
 import specimen339737p1Payload from "../../data/engine6/viator/339737P1.exact-product.json";
@@ -243,14 +239,11 @@ import specimen118887p5Payload from "../../data/engine6/viator/118887P5.exact-pr
 import specimen118887p2Payload from "../../data/engine6/viator/118887P2.exact-product.json";
 import specimen275087p2Payload from "../../data/engine6/viator/275087P2.exact-product.json";
 import specimen163873p1Payload from "../../data/engine6/viator/163873P1.exact-product.json";
-import specimen118744p4Payload from "../../data/engine6/viator/118744P4.exact-product.json";
-
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
 import specimen5503p10Payload from "../../data/engine6/viator/5503P10.exact-product.json";
 import specimen7943p1Payload from "../../data/engine6/viator/7943P1.exact-product.json";
 import specimen214880p12Payload from "../../data/engine6/viator/214880P12.exact-product.json";
-import specimen44152p18Payload from "../../data/engine6/viator/44152P18.exact-product.json";
 import specimen402171p1Payload from "../../data/engine6/viator/402171P1.exact-product.json";
 import specimen408277p4Payload from "../../data/engine6/viator/408277P4.exact-product.json";
 import specimen5503p21Payload from "../../data/engine6/viator/5503P21.exact-product.json";
@@ -494,12 +487,6 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Miami/3-days-amazing-tour-in-Miami/d662-214880P12",
     rawPayload: specimen214880p12Payload as Record<string, unknown>,
-  },
-  {
-    productCode: "44152P18",
-    publicUrl:
-      "https://www.viator.com/tours/Miami/Everglades-to-Keys-Floridas-Ultimate-National-Parks-Expedition/d662-44152P18",
-    rawPayload: specimen44152p18Payload as Record<string, unknown>,
   },
   {
     productCode: "402171P1",
@@ -866,10 +853,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     rawPayload: specimen173946p1Payload as Record<string, unknown>,
   },
   {
-    productCode: "191303P1",
+    productCode: "142924P6",
     publicUrl:
-      "https://www.viator.com/tours/San-Diego/Fat-Woody-Beach-Cruiser-Experience-Electric-Bicycle-Tour/d736-191303P1",
-    rawPayload: specimen191303p1Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/San-Diego/Coronado-e-Bike-Tour/d736-142924P6",
+    rawPayload: specimen142924p6Payload as Record<string, unknown>,
   },
   {
     productCode: "5598628P3",
@@ -984,12 +971,6 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Fort-Lauderdale/Authentic-Private-Everglades-Airboat-Tour/d660-76145P2",
     rawPayload: specimen76145p2Payload as Record<string, unknown>,
-  },
-  {
-    productCode: "5559561P1",
-    publicUrl:
-      "https://www.viator.com/tours/Fort-Lauderdale/JetCar-Fort-Lauderdale-Rental/d660-5559561P1",
-    rawPayload: specimen5559561p1Payload as Record<string, unknown>,
   },
   {
     productCode: "118958P8",
@@ -1344,15 +1325,6 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     },
   },
   {
-    productCode: "5765P7",
-    publicUrl:
-      "https://www.viator.com/tours/Portland/Oregon-Coast-Tour-from-Portland/d5065-5765P7",
-    rawPayload: specimen5765p7Payload as Record<string, unknown>,
-    validationRules: {
-      itineraryOriginalityForNewBuilds: true,
-    },
-  },
-  {
     productCode: "401191P1",
     publicUrl:
       "https://www.viator.com/tours/Portland/Heart-of-Downtown-Portland-Food-Tour/d5065-401191P1",
@@ -1488,15 +1460,6 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     },
   },
   {
-    productCode: "5396BOEING",
-    publicUrl:
-      "https://www.viator.com/tours/Seattle/Boeing-Factory-Tour-from-Seattle/d704-5396BOEING",
-    rawPayload: specimen5396boeingPayload as Record<string, unknown>,
-    validationRules: {
-      itineraryOriginalityForNewBuilds: true,
-    },
-  },
-  {
     productCode: "8647P594",
     publicUrl:
       "https://www.viator.com/tours/Seattle/Private-5-hour-City-Tour-of-Seattle-and-Snoqualmie-Falls-with-driver-guide/d704-8647P594",
@@ -1537,15 +1500,6 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Monterey-and-Carmel/Sunset-Whale-Watch/d5250-53254P8",
     rawPayload: specimen53254p8Payload as Record<string, unknown>,
-    validationRules: {
-      itineraryOriginalityForNewBuilds: true,
-    },
-  },
-  {
-    productCode: "6021MBA",
-    publicUrl:
-      "https://www.viator.com/tours/Monterey-and-Carmel/Monterey-Bay-Aquarium-Admission/d5250-6021MBA",
-    rawPayload: specimen6021mbaPayload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
@@ -1614,10 +1568,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     },
   },
   {
-    productCode: "9345P1",
+    productCode: "9345P24",
     publicUrl:
-      "https://www.viator.com/tours/Monterey-and-Carmel/Monterey-Bay-Sailing-Family-Cruise/d5250-9345P1",
-    rawPayload: specimen9345p1Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Monterey-and-Carmel/Catamaran-Sailing-Cruise-in-Monterey/d5250-9345P24",
+    rawPayload: specimen9345p24Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
@@ -2500,15 +2454,6 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Zion-National-Park/Half-Day-Guided-Hiking-Tours/d5610-163873P1",
     rawPayload: specimen163873p1Payload as Record<string, unknown>,
-    validationRules: {
-      itineraryOriginalityForNewBuilds: true,
-    },
-  },
-  {
-    productCode: "118744P4",
-    publicUrl:
-      "https://www.viator.com/tours/Zion-National-Park/The-White-Sand-Cave/d5610-118744P4",
-    rawPayload: specimen118744p4Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

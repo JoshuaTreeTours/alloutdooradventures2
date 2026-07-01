@@ -42,8 +42,8 @@ const ENGINE6_ACTIVITY_TYPE_ASSERTIONS: Array<{
     mustNotMatch: [/^Cruise .* harbor/i, /^San Diego opens up on a harbor cruise/i],
   },
   {
-    productCode: "6021MBA",
-    mustMatch: [/aquarium/i],
+    productCode: "9345P24",
+    mustMatch: [/sail/i],
     mustNotMatch: [/harbor cruise/i],
   },
   {

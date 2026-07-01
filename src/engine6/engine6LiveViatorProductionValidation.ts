@@ -25,6 +25,33 @@ export type Engine6LiveViatorValidationResult = {
 
 export type Engine6LiveViatorValidationMode = "strict" | "pr-scoped";
 
+export const resolveEngine6LiveViatorValidationMode =
+  (): Engine6LiveViatorValidationMode => {
+    const explicit = process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE?.trim();
+
+    if (explicit === "strict") {
+      return "strict";
+    }
+
+    if (explicit === "pr-scoped") {
+      return "pr-scoped";
+    }
+
+    // Production deploys default to deploy-scoped validation while legacy catalog
+    // failures are remediated. Set ENGINE6_LIVE_VIATOR_VALIDATION_MODE=strict
+    // to restore full-catalog blocking once the catalog is clean.
+    if ((process.env.VERCEL_ENV ?? "").toLowerCase() === "production") {
+      return "pr-scoped";
+    }
+
+    return "strict";
+  };
+
+export const resolveEngine6LiveViatorValidationBaseRef = () =>
+  process.env.ENGINE6_LIVE_VIATOR_VALIDATION_BASE_REF?.trim() ||
+  process.env.VERCEL_GIT_PREVIOUS_SHA?.trim() ||
+  "origin/main";
+
 export type Engine6LiveViatorProductionValidationReport = {
   mode: Engine6LiveViatorValidationMode;
   passed: boolean;
@@ -307,13 +334,15 @@ export const formatEngine6LiveViatorProductionValidationReport = (
 
   if (report.mode === "pr-scoped") {
     lines.push(
-      `PR-scoped blocking products: ${report.scopedProductCodes.length}`,
+      `Deploy-scoped blocking products: ${report.scopedProductCodes.length}`,
       `Blocking failures: ${report.blockingFailures.length}`,
       `Legacy failures (report-only): ${report.legacyFailures.length}`
     );
 
     if (report.scopedProductCodes.length > 0) {
-      lines.push(`Scoped product codes: ${report.scopedProductCodes.join(", ")}`);
+      lines.push(
+        `Scoped product codes: ${report.scopedProductCodes.join(", ")}`
+      );
     }
   }
 

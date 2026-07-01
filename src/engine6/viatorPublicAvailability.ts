@@ -361,7 +361,7 @@ export const assertViatorPublicPageAvailabilityFromUrl = async (args: {
   });
 };
 
-/** Public-page evidence captured when unavailable products were rejected. */
+/** Public-page evidence captured when unavailable Viator products were rejected. */
 export const ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS = {
   "3454P41": {
     sourceUrl:
@@ -380,24 +380,46 @@ export const ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS = {
     title:
       "Mariposa Grove of Giant Sequoias and Wawona Small Group Tour in Yosemite",
   },
-  "265766P9": {
+  "44152P18": {
     sourceUrl:
-      "https://www.viator.com/tours/Zion-National-Park/Full-Day-Private-Hiking-Tour-in-Zion-National-Park/d5610-265766P9",
-    title: "Zion Full Day Private Tour & Hike",
+      "https://www.viator.com/tours/Miami/Everglades-to-Keys-Floridas-Ultimate-National-Parks-Expedition/d662-44152P18",
+    title:
+      "Everglades to Keys: Florida's Ultimate National Parks Expedition",
   },
-  "170406P19": {
+  "191303P1": {
     sourceUrl:
-      "https://www.viator.com/tours/Zion-National-Park/Private-Angels-Landing-Day-Hike-Party-of-1-4/d5610-170406P19",
-    title: "Private Angel's Landing Day Hike",
+      "https://www.viator.com/tours/San-Diego/Fat-Woody-Beach-Cruiser-Experience-Electric-Bicycle-Tour/d736-191303P1",
+    title:
+      "San Diego Electric Bike Tour of Coronado (Small-Group Beach Cruiser Experience)",
   },
-  "310623P1": {
+  "5559561P1": {
     sourceUrl:
-      "https://www.viator.com/tours/Zion-National-Park/Private-East-Zion-Via-Feratta-Canyoneering-and-Rappelling-Tour-half-day/d5610-310623P1",
-    title: "East Zion Via Ferrata Canyoneering & Rappelling",
+      "https://www.viator.com/tours/Fort-Lauderdale/JetCar-Fort-Lauderdale-Rental/d660-5559561P1",
+    title: "JetCar Fort Lauderdale Rental",
   },
-  "318343P2": {
+  "5765P7": {
     sourceUrl:
-      "https://www.viator.com/tours/Zion-National-Park/Full-Day-Private-Tour-Zion-via-Kolob-Terrace-Ghost-Town-Slot-Canyon-and-Dunes/d5610-318343P2",
-    title: "Zion/Kolob Ghost Town Slot Canyon Vistas Private Full Day",
+      "https://www.viator.com/tours/Portland/Oregon-Coast-Tour-from-Portland/d5065-5765P7",
+    title: "Oregon Coast Tour from Portland",
+  },
+  "5396BOEING": {
+    sourceUrl:
+      "https://www.viator.com/tours/Seattle/Boeing-Factory-Tour-from-Seattle/d704-5396BOEING",
+    title: "Boeing Factory Tour from Seattle",
+  },
+  "6021MBA": {
+    sourceUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/Monterey-Bay-Aquarium-Admission/d5250-6021MBA",
+    title: "Monterey Bay Aquarium Admission Ticket",
+  },
+  "9345P1": {
+    sourceUrl:
+      "https://www.viator.com/tours/Monterey-and-Carmel/Monterey-Bay-Sailing-Family-Cruise/d5250-9345P1",
+    title: "Monterey Bay Sailing Cruise",
+  },
+  "118744P4": {
+    sourceUrl:
+      "https://www.viator.com/tours/Zion-National-Park/The-White-Sand-Cave/d5610-118744P4",
+    title: "The White Sand Cave",
   },
 } as const;

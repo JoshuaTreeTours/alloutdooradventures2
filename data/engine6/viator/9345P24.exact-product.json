@@ -1,0 +1,79 @@
+{
+  "product": {
+    "productCode": "9345P24",
+    "productUrl": "https://www.viator.com/tours/Monterey-and-Carmel/Catamaran-Sailing-Cruise-in-Monterey/d5250-9345P24",
+    "title": "Catamaran Sailing Cruise in Monterey",
+    "description": {
+      "text": "Sail Monterey Bay on a catamaran cruise from the harbor with wind-powered navigation and complimentary beverages on board. Watch for sea otters, harbor seals, dolphins, and seasonal whales while your captain handles the sails across the Monterey Bay National Marine Sanctuary."
+    },
+    "location": {
+      "city": "Monterey",
+      "state": "California",
+      "country": "United States"
+    },
+    "priceFrom": 65,
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 38
+    },
+    "duration": "1 hour 15 minutes (approx.)",
+    "media": {
+      "images": [
+        {
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/46/2a/0e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Catamaran sailing cruise on Monterey Bay",
+      "Wind-powered route with complimentary beverages",
+      "Wildlife viewing for sea otters, seals, dolphins, and whales",
+      "Spacious deck on Monterey Bay National Marine Sanctuary waters",
+      "Depart from Monterey harbor"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Arrive at the Monterey harbor meeting point at least 45 minutes before departure to allow time for parking and boarding."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Monterey Harbor",
+        "description": "Board the catamaran and depart the harbor toward open bay waters.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Monterey Bay",
+        "description": "Sail the sanctuary with the captain trimming sails while guests watch for marine wildlife.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Captain and crew",
+      "Bottled water",
+      "Soda",
+      "Alcoholic beverages"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Minimum age 21 for alcoholic beverages"
+    ],
+    "categories": [
+      { "label": "Sailing Trips" },
+      { "label": "Cruises & Sailing" }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65,
+        "currency": "USD"
+      }
+    }
+  }
+}

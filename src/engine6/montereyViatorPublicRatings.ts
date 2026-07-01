@@ -12,7 +12,6 @@ export const MONTEREY_VIATOR_PUBLIC_RATINGS: Record<
   "53254P1": { rating: 4.8, reviewCount: 974 },
   "362397P1": { rating: 4.6, reviewCount: 519 },
   "53254P8": { rating: 4.7, reviewCount: 68 },
-  "6021MBA": { rating: 4.5, reviewCount: 319 },
   "5973FOOD": { rating: 4.9, reviewCount: 357 },
   "88377P1": { rating: 5.0, reviewCount: 223 },
   "39976P3": { rating: 4.9, reviewCount: 45 },
@@ -20,7 +19,7 @@ export const MONTEREY_VIATOR_PUBLIC_RATINGS: Record<
   "173135P2": { rating: 5.0, reviewCount: 54 },
   "434555P1": { rating: 5.0, reviewCount: 74 },
   "118676P4": { rating: 4.5, reviewCount: 14 },
-  "9345P1": { rating: 4.3, reviewCount: 12 },
+  "9345P24": { rating: 4.8, reviewCount: 38 },
 };
 
 export const MONTEREY_VIATOR_PUBLIC_PRODUCT_CODES = Object.keys(

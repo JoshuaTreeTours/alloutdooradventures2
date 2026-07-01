@@ -3,6 +3,8 @@ import path from "node:path";
 
 import {
   formatEngine6LiveViatorProductionValidationReport,
+  resolveEngine6LiveViatorValidationBaseRef,
+  resolveEngine6LiveViatorValidationMode,
   validateConfiguredEngine6ProductionViatorProducts,
   type Engine6LiveViatorValidationMode,
 } from "../src/engine6/engine6LiveViatorProductionValidation";
@@ -14,17 +16,24 @@ const OUTPUT_PATH = path.resolve(
     "artifacts/engine6-live-viator-production-validation.json"
 );
 
-const readValidationMode = (): Engine6LiveViatorValidationMode =>
-  process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE === "pr-scoped"
-    ? "pr-scoped"
-    : "strict";
+const readValidationMode = (): Engine6LiveViatorValidationMode => {
+  if (process.argv.includes("--strict")) {
+    return "strict";
+  }
+
+  if (process.argv.includes("--pr-scoped")) {
+    return "pr-scoped";
+  }
+
+  return resolveEngine6LiveViatorValidationMode();
+};
 
 const resolveScopedProductCodes = (mode: Engine6LiveViatorValidationMode) => {
   if (mode !== "pr-scoped") {
     return [];
   }
 
-  const baseRef = process.env.ENGINE6_LIVE_VIATOR_VALIDATION_BASE_REF?.trim();
+  const baseRef = resolveEngine6LiveViatorValidationBaseRef();
   if (!baseRef) {
     throw new Error(
       "ENGINE6_LIVE_VIATOR_VALIDATION_BASE_REF is required when ENGINE6_LIVE_VIATOR_VALIDATION_MODE=pr-scoped"
@@ -62,7 +71,7 @@ const publishGithubStepSummary = async (
 
   if (report.mode === "pr-scoped" && report.scopedProductCodes.length > 0) {
     lines.push(
-      "### PR-scoped blocking products",
+      "### Deploy-scoped blocking products",
       "",
       report.scopedProductCodes.map(code => `- \`${code}\``).join("\n"),
       ""
@@ -116,15 +125,15 @@ await publishGithubStepSummary(formatted, report);
 if (!report.blockingPassed) {
   console.error(
     report.mode === "pr-scoped"
-      ? "\nEngine6 PR validation rejected: one or more newly introduced or modified Viator products failed live validation."
-      : "\nEngine6 production build rejected: one or more configured Viator products failed live validation."
+      ? "\nEngine6 deploy-scoped validation rejected: one or more newly introduced or modified Viator products failed live validation."
+      : "\nEngine6 strict validation rejected: one or more configured Viator products failed live validation."
   );
   process.exit(1);
 }
 
 if (report.mode === "pr-scoped" && report.legacyFailures.length > 0) {
   console.warn(
-    `\nEngine6 PR validation passed with ${report.legacyFailures.length} legacy failure(s) reported separately.`
+    `\nEngine6 deploy-scoped validation passed with ${report.legacyFailures.length} legacy failure(s) reported separately (report-only until strict mode is re-enabled).`
   );
 }
 

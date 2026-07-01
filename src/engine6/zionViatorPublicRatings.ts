@@ -22,7 +22,6 @@ export const ZION_VIATOR_PUBLIC_RATINGS: Record<string, ZionViatorPublicRating> 
     "118887P2": { rating: 5.0, reviewCount: 258 },
     "275087P2": { rating: 5.0, reviewCount: 106 },
     "163873P1": { rating: 4.9, reviewCount: 420 },
-    "118744P4": { rating: 5.0, reviewCount: 310 },
   };
 
 export const ZION_VIATOR_PUBLIC_PRODUCT_CODES = Object.keys(

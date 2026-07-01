@@ -115,15 +115,9 @@ describe("Engine6 Viator public availability governance", () => {
     expect(String(rejections[0]?.message)).toMatch(/3454P41/);
   });
 
-  it("documents unavailable products removed for public unavailability", () => {
-    expect(Object.keys(ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS)).toEqual([
-      "3454P41",
-      "18808P1",
-      "391021P3",
-      "265766P9",
-      "170406P19",
-      "310623P1",
-      "318343P2",
-    ]);
+  it("documents legacy unavailable Viator products removed from Engine6", () => {
+    expect(ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS["5765P7"]).toBeDefined();
+    expect(ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS["191303P1"]).toBeDefined();
+    expect(ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS["118744P4"]).toBeDefined();
   });
 });

@@ -49,9 +49,6 @@ const CURATED_PRODUCT_HEROES: Record<string, string[]> = {
   "53254P8": [
     "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/7f/49/38.jpg",
   ],
-  "6021MBA": [
-    "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/17/30/28.jpg",
-  ],
   "173135P2": [
     "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/f7/e9/9d.jpg",
   ],

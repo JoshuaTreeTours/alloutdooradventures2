@@ -1,0 +1,83 @@
+{
+  "product": {
+    "productCode": "142924P6",
+    "productUrl": "https://www.viator.com/tours/San-Diego/Coronado-e-Bike-Tour/d736-142924P6",
+    "title": "San Diego eBike Tours on Coronado",
+    "description": {
+      "text": "Ride a guided electric bike tour across Coronado Island on flat, car-free paths with views of the Coronado Bridge, Hotel del Coronado, and San Diego Bay. The route follows separated bike lanes through Victorian neighborhoods and the Silver Strand shoreline while your guide shares local history and takes photos along the way."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California",
+      "country": "United States"
+    },
+    "priceFrom": 95,
+    "reviews": {
+      "combinedAverageRating": 4.2,
+      "totalReviews": 10
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "media": {
+      "images": [
+        {
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/14/85/ad.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided Coronado electric bike tour on flat, car-free paths",
+      "Ride under the Coronado Bridge and along the Silver Strand",
+      "Stop at Hotel del Coronado and Victorian neighborhood viewpoints",
+      "Views of San Diego Bay and the downtown skyline",
+      "Includes bottled water and guide photography"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your Coronado eBike tour guide wearing a white Scenic Cycle t-shirt and black shorts at the confirmed Coronado meeting point."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Coronado bike paths",
+        "description": "Begin on separated bike paths under the Coronado Bridge and through the island toward the Silver Strand.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hotel del Coronado",
+        "description": "Pause at the historic Hotel del Coronado for photos and optional ice cream.",
+        "stopType": "stop"
+      },
+      {
+        "title": "San Diego Bay views",
+        "description": "Continue along waterfront bike routes with panoramic views of San Diego Bay.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Electric bike",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Minimum of 2 travelers per booking",
+      "Riders must be at least 14 years old"
+    ],
+    "categories": [
+      { "label": "Bike Tours" },
+      { "label": "Cycling" }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 95,
+        "currency": "USD"
+      }
+    }
+  }
+}
