@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "123783P1",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Half-Day-Whitewater/d50559-123783P1",
+    "title": "Half-Day Glacier National Park Whitewater Rafting Adventure",
+    "description": {
+      "text": "Paddle through calm stretches of the Middle Fork Flathead River before entering John Stevens Canyon for a series of beginner-friendly Class II and III rapids. A professional guide leads your raft from Great Northern Resort with all safety gear included, making this a popular half-day introduction to Glacier country river running."
+    },
+    "location": {
+      "city": "Glacier National Park / West Glacier",
+      "state": "Montana"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $88.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 389
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/f2/61.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Beginner-friendly whitewater on the Middle Fork Flathead River",
+      "Professional guide and full rafting safety equipment included",
+      "Morning and afternoon departures from West Glacier",
+      "Scenic float sections paired with John Stevens Canyon rapids",
+      "Family-owned Great Northern Resort river outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Great Northern Resort, 12127 US-2, West Glacier, MT 59936. Arrive 30 minutes before your scheduled trip for check-in and safety briefing."
+      },
+      "end": {
+        "description": "Return to Great Northern Resort after the river take-out shuttle."
+      }
+    },
+    "itinerarySummary": "Paddle through calm stretches of the Middle Fork Flathead River before entering John Stevens Canyon for a series of beginner-friendly Class II and III rapids.",
+    "itineraryItems": [
+      {
+        "title": "Middle Fork Flathead River",
+        "description": "Launch on the Middle Fork Flathead River bordering Glacier National Park for a guided warm-up paddle.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Stevens Canyon",
+        "description": "Navigate Class II and III rapids through John Stevens Canyon with guide-led paddling commands.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "West Glacier",
+        "description": "Shuttle back to the Great Northern Resort base near the Going-to-the-Sun Road junction.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Raft, PFD, and paddles",
+      "Professional river guide",
+      "Shuttle transport"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half-Day Glacier National Park Whitewater Rafting Adventure?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from near Glacier National Park?",
+        "answer": "Meet at Great Northern Resort, 12127 US-2, West Glacier, MT 59936. Arrive 30 minutes before your scheduled trip for check-in and safety briefing."
+      }
+    ],
+    "categories": [
+      {
+        "label": "White Water Rafting"
+      },
+      {
+        "label": "Adventure Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 88
+      },
+      "currency": "USD"
+    }
+  }
+}

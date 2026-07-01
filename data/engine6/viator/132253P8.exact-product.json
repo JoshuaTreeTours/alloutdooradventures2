@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "132253P8",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Private-Full-Day-Glacier-National-Park-Tour/d50559-132253P8",
+    "title": "West Glacier & Polebridge Scenic Driving Tour",
+    "description": {
+      "text": "Discover the North Fork on a private full-day driving tour to Polebridge Mercantile, Bowman Lake, and West Glacier highlights tailored to your party. Your guide adjusts the route for wildlife stops, bakery time in Polebridge, and short hikes while handling all park navigation and entrance logistics."
+    },
+    "location": {
+      "city": "Glacier National Park / West Glacier",
+      "state": "Montana"
+    },
+    "duration": "8 to 10 hours (approx.)",
+    "priceFrom": "From $550.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 106
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/2c/ff/9e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private full-day tour for your party only",
+      "Polebridge Mercantile and North Fork scenic drive",
+      "Bowman Lake and West Glacier viewpoint stops",
+      "Flexible itinerary with guide-customized wildlife and photo stops",
+      "Park entrance fees and private transport included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Private pickup from Whitefish, Columbia Falls, or West Glacier lodging. Your guide confirms timing and preferred North Fork stops before departure."
+      },
+      "end": {
+        "description": "Return to your original pickup location after the Polebridge area loop."
+      }
+    },
+    "itinerarySummary": "Discover the North Fork on a private full-day driving tour to Polebridge Mercantile, Bowman Lake, and West Glacier highlights tailored to your party.",
+    "itineraryItems": [
+      {
+        "title": "West Glacier",
+        "description": "Depart West Glacier toward the North Fork entrance with an overview of the day's route.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Polebridge",
+        "description": "Visit Polebridge Mercantile for huckleberry treats and a break in this remote gateway community.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bowman Lake",
+        "description": "Scenic stop at Bowman Lake with time for shoreline photos and optional short walks.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake McDonald",
+        "description": "Return-route stop at Lake McDonald if time and conditions allow.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide and vehicle",
+      "Park entrance fees",
+      "Snacks and refreshments",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the West Glacier & Polebridge Scenic Driving Tour?",
+        "answer": "The planned duration is 8 to 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Glacier National Park?",
+        "answer": "Private pickup from Whitefish, Columbia Falls, or West Glacier lodging. Your guide confirms timing and preferred North Fork stops before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 550
+      },
+      "currency": "USD"
+    }
+  }
+}

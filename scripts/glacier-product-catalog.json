@@ -1,0 +1,122 @@
+[
+  {
+    "productCode": "123783P1",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Half-Day-Whitewater/d50559-123783P1",
+    "title": "Half-Day Glacier National Park Whitewater Rafting Adventure",
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": 88,
+    "rating": 4.9,
+    "reviewCount": 389,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/f2/61.jpg",
+    "categories": ["White Water Rafting", "Adventure Tours", "Half-day Tours"],
+    "itineraryTitles": ["Middle Fork Flathead River", "John Stevens Canyon", "West Glacier"]
+  },
+  {
+    "productCode": "86727P4",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Full-Day-Glacier-National-Park-Whitewater-Rafting-Adventure/d50559-86727P4",
+    "title": "Full Day Glacier National Park Whitewater Rafting Adventure - With Lunch!",
+    "duration": "6 hours (approx.)",
+    "priceFrom": 152,
+    "rating": 4.9,
+    "reviewCount": 193,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/f2/20.jpg",
+    "categories": ["White Water Rafting", "Full-day Tours", "Adventure Tours"],
+    "itineraryTitles": ["Middle Fork Flathead River", "John Stevens Canyon", "Glacier National Park"]
+  },
+  {
+    "productCode": "70248P2",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Half-Day-Scenic-Float/d50559-70248P2",
+    "title": "Half Day Scenic Float on the Middle Fork of the Flathead River",
+    "duration": "3 hours (approx.)",
+    "priceFrom": 83,
+    "rating": 4.9,
+    "reviewCount": 578,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1d/46/fd.jpg",
+    "categories": ["Rafting", "Nature and Wildlife Tours", "Half-day Tours"],
+    "itineraryTitles": ["Middle Fork Flathead River", "Glacier National Park", "West Glacier"]
+  },
+  {
+    "productCode": "299521P2",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Scenic-Drive-Experience-in-Glacier-National-Park-Includes-Lunch/d50559-299521P2",
+    "title": "Driving Tour in Glacier National Park",
+    "duration": "8 hours (approx.)",
+    "priceFrom": 220,
+    "rating": 5.0,
+    "reviewCount": 18,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/f1/ad.jpg",
+    "categories": ["Bus Tours", "Full-day Tours", "Nature and Wildlife Tours"],
+    "itineraryTitles": ["Apgar Village", "Lake McDonald", "Going-to-the-Sun Road", "Logan Pass"]
+  },
+  {
+    "productCode": "299521P8",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Driving-Tour-in-West-Glacier-National-Park-Summer/d50559-299521P8",
+    "title": "Driving Tour in West Glacier National Park",
+    "duration": "5 to 6 hours (approx.)",
+    "priceFrom": 240,
+    "rating": 5.0,
+    "reviewCount": 34,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/f1/ae.jpg",
+    "categories": ["Bus Tours", "Full-day Tours", "Sightseeing Tours"],
+    "itineraryTitles": ["Apgar Village", "Lake McDonald", "Belton Bridge", "West Glacier"]
+  },
+  {
+    "productCode": "132253P8",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Private-Full-Day-Glacier-National-Park-Tour/d50559-132253P8",
+    "title": "West Glacier & Polebridge Scenic Driving Tour",
+    "duration": "8 to 10 hours (approx.)",
+    "priceFrom": 550,
+    "rating": 4.9,
+    "reviewCount": 106,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/2c/ff/9e.jpg",
+    "categories": ["Private Sightseeing Tours", "Full-day Tours", "Day Trips"],
+    "itineraryTitles": ["West Glacier", "Polebridge", "Bowman Lake", "Lake McDonald"]
+  },
+  {
+    "productCode": "86727P7",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Nature-Walk-in-Glacier-National-Park/d50559-86727P7",
+    "title": "Nature Walk in Glacier National Park",
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": 65,
+    "rating": 5.0,
+    "reviewCount": 47,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/8f/3d/c9.jpg",
+    "categories": ["Hiking Tours", "Nature and Wildlife Tours", "Walking Tours"],
+    "itineraryTitles": ["Trail of the Cedars", "Glacier National Park", "Apgar Village"]
+  },
+  {
+    "productCode": "132253P12",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/E-Bike-Rental/d50559-132253P12",
+    "title": "Private Guided Backcountry E-Bike Tour",
+    "duration": "4 to 6 hours (approx.)",
+    "priceFrom": 299,
+    "rating": 5.0,
+    "reviewCount": 2,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/aa/97/94.jpg",
+    "categories": ["Private Tours", "Bike Tours", "Eco Tours"],
+    "itineraryTitles": ["Whitefish", "Apgar Village", "Going-to-the-Sun Road"]
+  },
+  {
+    "productCode": "487722P4",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Sunset-Clear-Paddleboard-Rentals-for-Glacier-Park/d50559-487722P4",
+    "title": "Sunset LED Clear Paddleboard Rentals for Glacier Park",
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": 150,
+    "rating": 5.0,
+    "reviewCount": 2,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/74/0f/9c.jpg",
+    "categories": ["Kayaking and Canoeing", "Photography Tours", "Sunset Tours"],
+    "itineraryTitles": ["Lake McDonald", "Apgar Village"]
+  },
+  {
+    "productCode": "132253P7",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Glacier-National-Park-Tour/d50559-132253P7",
+    "title": "East Glacier & Two Medicine Scenic Driving Tour",
+    "duration": "8 to 10 hours (approx.)",
+    "priceFrom": 550,
+    "rating": 4.9,
+    "reviewCount": 52,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/45/6a/20.jpg",
+    "categories": ["Private Sightseeing Tours", "Day Trips", "Bus Tours"],
+    "itineraryTitles": ["East Glacier Park Lodge", "Two Medicine Lake", "Glacier National Park", "Logan Pass"]
+  }
+]

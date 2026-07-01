@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "487722P4",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Sunset-Clear-Paddleboard-Rentals-for-Glacier-Park/d50559-487722P4",
+    "title": "Sunset LED Clear Paddleboard Rentals for Glacier Park",
+    "description": {
+      "text": "Glide across clear water on LED-equipped paddleboards timed for sunset over Glacier country lakes. Rentals include delivery to Lake McDonald, Hungry Horse Reservoir, or other Flathead Valley waterways with gear briefing and optional staff recommendations for the best evening paddle route."
+    },
+    "location": {
+      "city": "Glacier National Park / West Glacier",
+      "state": "Montana"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $150.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 2
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/74/0f/9c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Clear LED paddleboards for sunset paddling",
+      "Flexible lake delivery including Lake McDonald area",
+      "Unique evening perspective on Glacier Park waterways",
+      "Staff gear briefing and route recommendations",
+      "Ideal for couples and small groups seeking a photo-worthy outing"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Coordinate delivery location with Glacier Clear Water staff—popular launch sites include Apgar Village on Lake McDonald."
+      },
+      "end": {
+        "description": "Return boards and LED equipment to the agreed pickup point after sunset paddling."
+      }
+    },
+    "itinerarySummary": "Glide across clear water on LED-equipped paddleboards timed for sunset over Glacier country lakes.",
+    "itineraryItems": [
+      {
+        "title": "Lake McDonald",
+        "description": "Launch on Lake McDonald for sunset paddling with views of the Lewis Range reflected on clear water.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Apgar Village",
+        "description": "Meet staff at Apgar Village for gear handoff and safety briefing before launching.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Clear LED paddleboard rental",
+      "Paddle and life vest",
+      "Staff delivery and pickup coordination"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sunset LED Clear Paddleboard Rentals for Glacier Park?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Glacier National Park?",
+        "answer": "Coordinate delivery location with Glacier Clear Water staff—popular launch sites include Apgar Village on Lake McDonald."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Kayaking and Canoeing"
+      },
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Sunset Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 150
+      },
+      "currency": "USD"
+    }
+  }
+}

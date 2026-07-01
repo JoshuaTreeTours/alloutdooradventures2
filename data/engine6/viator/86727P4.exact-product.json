@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "86727P4",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Full-Day-Glacier-National-Park-Whitewater-Rafting-Adventure/d50559-86727P4",
+    "title": "Full Day Glacier National Park Whitewater Rafting Adventure - With Lunch!",
+    "description": {
+      "text": "Spend a full day on the Middle Fork Flathead River with extended whitewater sections, riverside lunch, and more time in Glacier's border country scenery. Glacier Guides leads this full-day adventure with additional rapids beyond the half-day route and a included meal break on the riverbank."
+    },
+    "location": {
+      "city": "Glacier National Park / West Glacier",
+      "state": "Montana"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $152.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 193
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/f2/20.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day whitewater rafting with included riverside lunch",
+      "Extended Middle Fork Flathead River mileage beyond half-day trips",
+      "Glacier Guides outfitter with park-border scenery",
+      "Additional rapids and float sections for experienced beginners",
+      "Professional guide team and complete safety equipment"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at Glacier Guides, 11970 US-2, West Glacier, MT 59936. Full-day trips depart mid-morning after gear fitting."
+      },
+      "end": {
+        "description": "Return to the Glacier Guides base after the full-day river take-out and shuttle."
+      }
+    },
+    "itinerarySummary": "Spend a full day on the Middle Fork Flathead River with extended whitewater sections, riverside lunch, and more time in Glacier's border country scenery.",
+    "itineraryItems": [
+      {
+        "title": "Middle Fork Flathead River",
+        "description": "Begin the full-day run on the Middle Fork Flathead with a safety briefing and paddle warm-up.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Stevens Canyon",
+        "description": "Tackle extended whitewater through John Stevens Canyon with multiple rapids and recovery pools.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glacier National Park",
+        "description": "Float along the park boundary with views of forested slopes and peaks above the river corridor.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Full-day guided rafting",
+      "Riverside lunch",
+      "Rafting equipment and guide",
+      "Shuttle transport"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full Day Glacier National Park Whitewater Rafting Adventure - With Lunch!?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Glacier National Park?",
+        "answer": "Check in at Glacier Guides, 11970 US-2, West Glacier, MT 59936. Full-day trips depart mid-morning after gear fitting."
+      }
+    ],
+    "categories": [
+      {
+        "label": "White Water Rafting"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 152
+      },
+      "currency": "USD"
+    }
+  }
+}

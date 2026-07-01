@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "132253P12",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/E-Bike-Rental/d50559-132253P12",
+    "title": "Private Guided Backcountry E-Bike Tour",
+    "description": {
+      "text": "Pedal beyond crowded viewpoints on a private e-bike tour customized to your fitness level around Whitefish and West Glacier backroads. Your guide leads a worry-free day of crowd-free riding to scenic pullouts, forest roads, and park-adjacent trails that standard visitors rarely reach."
+    },
+    "location": {
+      "city": "Glacier National Park / West Glacier",
+      "state": "Montana"
+    },
+    "duration": "4 to 6 hours (approx.)",
+    "priceFrom": "From $299.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 2
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/aa/97/94.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private e-bike tour tailored to your group",
+      "Custom route around Whitefish and West Glacier backcountry",
+      "E-bikes accommodate varied fitness levels",
+      "Guide-selected scenic roads away from main park crowds",
+      "Helmet and e-bike rental included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Whitefish or West Glacier staging area. Helmet fitting and route briefing precede the ride."
+      },
+      "end": {
+        "description": "Return e-bikes to the staging area after the final backroad loop."
+      }
+    },
+    "itinerarySummary": "Pedal beyond crowded viewpoints on a private e-bike tour customized to your fitness level around Whitefish and West Glacier backroads.",
+    "itineraryItems": [
+      {
+        "title": "Whitefish",
+        "description": "Optional start from Whitefish area trails and forest roads selected for your group.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Apgar Village",
+        "description": "Ride toward Apgar Village and lakeshore paths with views of Lake McDonald.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Going-to-the-Sun Road",
+        "description": "Cycle selected lower-elevation sections of Going-to-the-Sun Road when seasonal bike access allows.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Private guide",
+      "E-bike and helmet rental",
+      "Route planning and support"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Guided Backcountry E-Bike Tour?",
+        "answer": "The planned duration is 4 to 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Glacier National Park?",
+        "answer": "Meet your guide at the confirmed Whitefish or West Glacier staging area. Helmet fitting and route briefing precede the ride."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Eco Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 299
+      },
+      "currency": "USD"
+    }
+  }
+}

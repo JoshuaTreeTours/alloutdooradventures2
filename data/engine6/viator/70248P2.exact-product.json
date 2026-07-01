@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "70248P2",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Half-Day-Scenic-Float/d50559-70248P2",
+    "title": "Half Day Scenic Float on the Middle Fork of the Flathead River",
+    "description": {
+      "text": "Drift peacefully through the Middle Fork Flathead River on a scenic float designed for wildlife viewing and photography rather than rapids. Glacier Raft Company guides share river ecology and park-border natural history while you relax in an oar-powered raft through calm water below Glacier National Park."
+    },
+    "location": {
+      "city": "Glacier National Park / West Glacier",
+      "state": "Montana"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $83.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 578
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1d/46/fd.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Calm scenic float on the Middle Fork Flathead River",
+      "Wildlife viewing and photography opportunities",
+      "Oar-powered raft with interpretive guide commentary",
+      "Ideal for families and travelers preferring gentle water",
+      "Glacier Raft Company outfitter near West Glacier"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Glacier Raft Company, 12127 US-2, West Glacier, MT 59936. Arrive 30 minutes early for check-in."
+      },
+      "end": {
+        "description": "Shuttle back to the West Glacier meeting point after the scenic take-out."
+      }
+    },
+    "itinerarySummary": "Drift peacefully through the Middle Fork Flathead River on a scenic float designed for wildlife viewing and photography rather than rapids.",
+    "itineraryItems": [
+      {
+        "title": "Middle Fork Flathead River",
+        "description": "Board an oar raft for a gentle float through calm stretches of the Middle Fork Flathead.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glacier National Park",
+        "description": "Pass along the park boundary with views of forested foothills and possible wildlife sightings.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "West Glacier",
+        "description": "Return shuttle to the West Glacier base after the river take-out.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Scenic raft float",
+      "Professional guide",
+      "Safety equipment"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half Day Scenic Float on the Middle Fork of the Flathead River?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Glacier National Park?",
+        "answer": "Meet at Glacier Raft Company, 12127 US-2, West Glacier, MT 59936. Arrive 30 minutes early for check-in."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Rafting"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 83
+      },
+      "currency": "USD"
+    }
+  }
+}
