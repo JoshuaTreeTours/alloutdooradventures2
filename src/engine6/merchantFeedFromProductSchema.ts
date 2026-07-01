@@ -1,10 +1,6 @@
 import { formatMerchantPrice } from "../utils/merchantPricing";
-import { resolveEngine6DisplayHero } from "./displayHero";
+import { parseEngine6StateCityFromCanonicalPath, resolveEngine6DisplayHero } from "./displayHero";
 import { resolveEngine6GovernedProductDescription } from "./governedEditorialDescriptions";
-import {
-  isEngine6MontereyTourCanonicalPath,
-  isEngine6NapaTourCanonicalPath,
-} from "./routes";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import type { Engine6Tour } from "./types";
 
@@ -97,30 +93,17 @@ export const resolveMerchantFeedProductSchemaSnapshot = (
       ? aggregateRatingNode.reviewCount
       : null;
 
-  const merchantImageLink = isEngine6MontereyTourCanonicalPath(
+  const { stateSlug, citySlug } = parseEngine6StateCityFromCanonicalPath(
     tour.canonicalPath
-  )
-    ? resolveEngine6DisplayHero({
-        productHeroUrl:
-          typeof productNode.image === "string"
-            ? productNode.image
-            : tour.heroImageUrl,
-        stateSlug: "california",
-        citySlug: "monterey",
-      })
-    : isEngine6NapaTourCanonicalPath(tour.canonicalPath)
-      ? resolveEngine6DisplayHero({
-          productHeroUrl:
-            typeof productNode.image === "string"
-              ? productNode.image
-              : tour.heroImageUrl,
-          productCode: tour.productCode,
-          stateSlug: "california",
-          citySlug: "napa",
-        })
-      : typeof productNode.image === "string"
-        ? productNode.image
-        : "";
+  );
+  const schemaProductImage =
+    typeof productNode.image === "string" ? productNode.image : tour.heroImageUrl;
+  const merchantImageLink = resolveEngine6DisplayHero({
+    productHeroUrl: schemaProductImage,
+    productCode: tour.productCode,
+    stateSlug,
+    citySlug,
+  });
 
   return {
     id: tour.productCode,

@@ -27,6 +27,10 @@ import {
   describeViatorApiConfigEnvVisibility,
   resolveViatorApiConfig,
 } from "../api/engine6/resolveEngine6ViatorProductCommercialExtract";
+import {
+  applyMerchantFeedImageGovernance,
+  formatMerchantFeedImageValidationReport,
+} from "../src/engine6/merchantFeedImageGovernance";
 import { buildMerchantFeedRowFromProductSchema } from "../src/engine6/merchantFeedFromProductSchema";
 import {
   auditEngine6MerchantFeedCommercialParity,
@@ -580,7 +584,129 @@ const main = async () => {
   });
 
   const outputRows = commercialRefresh.rows as MerchantRow[];
-  const validation = validateMerchantFeedRows(outputRows);
+
+  const preImageGovernanceParityAudit = auditEngine6MerchantFeedSchemaParity(
+    schemaResolvedTours,
+    new Map(outputRows.map(row => [row.id, row]))
+  );
+
+  const preImageProductJsonLdParityScope =
+    partitionMerchantFeedParityFailuresByBuildScope(
+      preImageGovernanceParityAudit.failures,
+      reconciliation.governanceByProductCode
+    );
+  logMerchantFeedInformationalLegacyParityDrift({
+    guardName: "product-jsonld-parity",
+    failures: preImageProductJsonLdParityScope.informationalLegacyFailures,
+  });
+
+  if (preImageProductJsonLdParityScope.blockingFailures.length > 0) {
+    for (const failure of preImageProductJsonLdParityScope.blockingFailures.slice(
+      0,
+      20
+    )) {
+      console.error(failure);
+    }
+    if (preImageProductJsonLdParityScope.blockingFailures.length > 20) {
+      console.error(
+        `...and ${preImageProductJsonLdParityScope.blockingFailures.length - 20} additional Product JSON-LD parity failures.`
+      );
+    }
+    const failingProductCodes = [
+      ...new Set(
+        preImageProductJsonLdParityScope.blockingFailures
+          .map(failure => failure.split(".")[0]?.trim().toUpperCase() ?? "")
+          .filter(Boolean)
+      ),
+    ];
+    await logMerchantFeedBuildGuardFailure({
+      guardName: "product-jsonld-parity",
+      pass: false,
+      failingProductCodes,
+      baselineClassification: buildBaselineClassificationSnapshot(
+        reconciliation.governanceByProductCode,
+        failingProductCodes
+      ),
+      failureObjects: preImageProductJsonLdParityScope.blockingFailures
+        .slice(0, 5)
+        .map(failure => ({
+          failure,
+        })),
+    });
+    throw new Error(
+      "Merchant feed Product JSON-LD parity validation failed before image governance."
+    );
+  }
+
+  const imageGovernance = await applyMerchantFeedImageGovernance({
+    rows: outputRows,
+    toursByProductCode: new Map(
+      schemaResolvedTours.map(tour => [
+        tour.productCode.trim().toUpperCase(),
+        tour,
+      ])
+    ),
+    governanceByProductCode: reconciliation.governanceByProductCode,
+    branchModifiedProductCodes,
+  });
+  console.log(formatMerchantFeedImageValidationReport(imageGovernance.report));
+
+  if (imageGovernance.report.informationalLegacyProductCodes.length > 0) {
+    console.warn(
+      "[merchant-feed-build-guard]",
+      JSON.stringify(
+        {
+          guardName: "image-link-validation",
+          pass: true,
+          informationalPreExistingDrift: true,
+          productCodes: imageGovernance.report.informationalLegacyProductCodes,
+          failureObjects: imageGovernance.report.invalidUrlsReported
+            .filter(entry =>
+              imageGovernance.report.informationalLegacyProductCodes.includes(
+                entry.productCode
+              )
+            )
+            .slice(0, 5)
+            .map(entry => ({
+              productCode: entry.productCode,
+              invalidUrl: entry.invalidUrl,
+              reason: entry.reason,
+              status: entry.status,
+            })),
+        },
+        null,
+        2
+      )
+    );
+  }
+
+  if (!imageGovernance.pass) {
+    await logMerchantFeedBuildGuardFailure({
+      guardName: "image-link-validation",
+      pass: false,
+      failingProductCodes: imageGovernance.report.failures.map(
+        failure => failure.productCode
+      ),
+      baselineClassification: buildBaselineClassificationSnapshot(
+        reconciliation.governanceByProductCode,
+        imageGovernance.report.failures.map(failure => failure.productCode)
+      ),
+      failureObjects: imageGovernance.report.failures.slice(0, 5).map(
+        failure => ({
+          productCode: failure.productCode,
+          attemptedUrls: failure.attemptedUrls.slice(0, 5),
+          lastReason: failure.lastReason,
+          lastStatus: failure.lastStatus,
+        })
+      ),
+    });
+    throw new Error(
+      "Merchant feed image validation failed before write: no valid replacement image exists for one or more rows."
+    );
+  }
+
+  const governedOutputRows = imageGovernance.rows;
+  const validation = validateMerchantFeedRows(governedOutputRows);
   logMerchantFeedReport("After", validation.report, validation.pass);
 
   if (!validation.pass) {
@@ -615,62 +741,9 @@ const main = async () => {
     throw new Error("Merchant feed validation failed before write.");
   }
 
-  const parityAudit = auditEngine6MerchantFeedSchemaParity(
-    schemaResolvedTours,
-    new Map(outputRows.map(row => [row.id, row]))
-  );
-
-  const productJsonLdParityScope =
-    partitionMerchantFeedParityFailuresByBuildScope(
-      parityAudit.failures,
-      reconciliation.governanceByProductCode
-    );
-  logMerchantFeedInformationalLegacyParityDrift({
-    guardName: "product-jsonld-parity",
-    failures: productJsonLdParityScope.informationalLegacyFailures,
-  });
-
-  if (productJsonLdParityScope.blockingFailures.length > 0) {
-    for (const failure of productJsonLdParityScope.blockingFailures.slice(
-      0,
-      20
-    )) {
-      console.error(failure);
-    }
-    if (productJsonLdParityScope.blockingFailures.length > 20) {
-      console.error(
-        `...and ${productJsonLdParityScope.blockingFailures.length - 20} additional Product JSON-LD parity failures.`
-      );
-    }
-    const failingProductCodes = [
-      ...new Set(
-        productJsonLdParityScope.blockingFailures
-          .map(failure => failure.split(".")[0]?.trim().toUpperCase() ?? "")
-          .filter(Boolean)
-      ),
-    ];
-    await logMerchantFeedBuildGuardFailure({
-      guardName: "product-jsonld-parity",
-      pass: false,
-      failingProductCodes,
-      baselineClassification: buildBaselineClassificationSnapshot(
-        reconciliation.governanceByProductCode,
-        failingProductCodes
-      ),
-      failureObjects: productJsonLdParityScope.blockingFailures
-        .slice(0, 5)
-        .map(failure => ({
-          failure,
-        })),
-    });
-    throw new Error(
-      "Merchant feed Product JSON-LD parity validation failed before write."
-    );
-  }
-
   const commercialParityAudit = auditEngine6MerchantFeedCommercialParity(
     schemaResolvedTours,
-    new Map(outputRows.map(row => [row.id, row]))
+    new Map(governedOutputRows.map(row => [row.id, row]))
   );
 
   const commercialParityScope = partitionMerchantFeedParityFailuresByBuildScope(
@@ -719,14 +792,14 @@ const main = async () => {
 
   const branchScopedGovernanceByProductCode =
     buildMerchantFeedBranchScopedGovernanceByProductCode(
-      outputRows,
+      governedOutputRows,
       mainBaselineCatalog,
       branchModifiedProductCodes
     );
 
   const runtimeParityAudit = applyMerchantFeedLiveRuntimeParityBaselinePolicy(
     await auditMerchantFeedLiveRuntimeParity(
-      outputRows,
+      governedOutputRows,
       branchScopedGovernanceByProductCode,
       notYetPublishedOnProductionProductCodes
     ),
@@ -779,13 +852,13 @@ const main = async () => {
   }
 
   await mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
-  await writeFile(OUTPUT_PATH, toCsv(outputRows), "utf8");
+  await writeFile(OUTPUT_PATH, toCsv(governedOutputRows), "utf8");
 
   console.log(
     `Processed ${merchantFeedEligibleTours.length} Engine6 merchant-feed products (${engine6ResolvedTours.length - merchantFeedEligibleTours.length} excluded).`
   );
   console.log(
-    `Wrote ${outputRows.length} merchant feed rows to ${OUTPUT_PATH}.`
+    `Wrote ${governedOutputRows.length} merchant feed rows to ${OUTPUT_PATH}.`
   );
   console.log("Product JSON-LD parity: PASS");
   console.log(
@@ -802,7 +875,7 @@ const main = async () => {
     );
   }
 
-  const unratedProducts = outputRows
+  const unratedProducts = governedOutputRows
     .filter(
       row =>
         !row.average_rating?.trim() ||

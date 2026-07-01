@@ -1,3 +1,12 @@
+const ENGINE6_CANONICAL_TOUR_PATH =
+  /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/;
+
+export const parseEngine6StateCityFromCanonicalPath = (canonicalPath: string) => {
+  const [, stateSlug = "", citySlug = ""] =
+    ENGINE6_CANONICAL_TOUR_PATH.exec(canonicalPath) ?? [];
+  return { stateSlug, citySlug };
+};
+
 export const ENGINE6_GLOBAL_FALLBACK_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg";
 
@@ -102,8 +111,9 @@ export const resolveEngine6CanonicalCityHero = (
   return CANONICAL_CITY_HEROES[stateSlug]?.[citySlug];
 };
 
-const getCuratedEngine6HeroCandidates = (productCode?: string | null) =>
-  CURATED_PRODUCT_HEROES[(productCode ?? "").trim().toUpperCase()] ?? [];
+export const getEngine6CuratedProductHeroCandidates = (
+  productCode?: string | null
+) => CURATED_PRODUCT_HEROES[(productCode ?? "").trim().toUpperCase()] ?? [];
 
 const firstDisplayableCandidate = (
   candidates: Array<string | null | undefined>,
@@ -130,7 +140,7 @@ export const resolveEngine6DisplayHero = (args: {
   }
 
   const curatedHero = firstDisplayableCandidate(
-    getCuratedEngine6HeroCandidates(args.productCode),
+    getEngine6CuratedProductHeroCandidates(args.productCode),
     args.usedHeroes
   );
   if (curatedHero) {
