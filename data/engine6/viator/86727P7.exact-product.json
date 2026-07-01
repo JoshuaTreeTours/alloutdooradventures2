@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "86727P7",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Nature-Walk-in-Glacier-National-Park/d50559-86727P7",
+    "title": "Nature Walk in Glacier National Park",
+    "description": {
+      "text": "Join a naturalist guide for an easy nature walk on Glacier National Park trails suited to all fitness levels. Interpretive stops cover wildflower identification, glaciology, and wildlife habits along gentle paths near West Glacier with binoculars available for bird and mammal spotting."
+    },
+    "location": {
+      "city": "Glacier National Park / West Glacier",
+      "state": "Montana"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $65.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 47
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/8f/3d/c9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided nature walk with naturalist interpretation",
+      "Easy trails suitable for most fitness levels",
+      "Wildflower, wildlife, and glaciology commentary",
+      "Binoculars provided for bird and mammal viewing",
+      "Small-group format near West Glacier trailheads"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Glacier Guides, 11970 US-2, West Glacier, MT 59936. Wear closed-toe shoes and bring water."
+      },
+      "end": {
+        "description": "Return to the Glacier Guides meeting point after the guided walk."
+      }
+    },
+    "itinerarySummary": "Join a naturalist guide for an easy nature walk on Glacier National Park trails suited to all fitness levels.",
+    "itineraryItems": [
+      {
+        "title": "Trail of the Cedars",
+        "description": "Possible walk on the accessible Trail of the Cedars boardwalk through old-growth forest.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Glacier National Park",
+        "description": "Continue on gentle park trails selected for seasonal wildflowers and wildlife activity.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Apgar Village",
+        "description": "Finish near Apgar Village with optional time at the lakeshore after the walk.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Naturalist guide",
+      "Binoculars for wildlife viewing",
+      "Trail snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Nature Walk in Glacier National Park?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Glacier National Park?",
+        "answer": "Meet at Glacier Guides, 11970 US-2, West Glacier, MT 59936. Wear closed-toe shoes and bring water."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65
+      },
+      "currency": "USD"
+    }
+  }
+}

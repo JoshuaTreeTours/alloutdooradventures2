@@ -3088,6 +3088,79 @@ Basecamping in Bozeman, Missoula, or Whitefish keeps logistics simple while lett
           },
         ],
       },
+      {
+        name: "Glacier National Park",
+        slug: "glacier-national-park",
+        stateSlug: "montana",
+        region: "Flathead Valley",
+        lat: 48.4964,
+        lng: -113.9783,
+        shortDescription:
+          "Going-to-the-Sun Road, alpine lakes, whitewater rafting, and guided park tours.",
+        intro: `Glacier National Park is Montana's Crown of the Continent—a million-acre wilderness of alpine peaks, turquoise lakes, and the legendary Going-to-the-Sun Road. West Glacier serves as the primary gateway for rafting on the Middle Fork Flathead River, scenic driving tours, and guided hikes.`,
+        heroImages: [
+          "https://media.tacdn.com/media/photo-w/2d/67/82/0b/caption.jpg",
+        ],
+        activityTags: ["hiking", "rafting", "wildlife"],
+        whereItIs: [
+          "West Glacier sits at the west entrance to Glacier National Park, about 30 minutes from Whitefish and Kalispell.",
+          "Going-to-the-Sun Road connects Lake McDonald with Logan Pass and the park's eastern valleys.",
+        ],
+        experiences: {
+          mountains:
+            "Drive Going-to-the-Sun Road or hike trails from Logan Pass and Many Glacier.",
+          lakesWater:
+            "Raft the Middle Fork Flathead River or paddle Lake McDonald at sunset.",
+          desertForest:
+            "Old-growth cedar forests line valleys below the Continental Divide.",
+          cycling:
+            "E-bike tours explore Apgar Village and seasonal bike access on Sun Road.",
+          scenicDrives:
+            "Guided driving tours cover Lake McDonald, Logan Pass, and Two Medicine.",
+          seasonalNotes:
+            "Most tours run June through September when Going-to-the-Sun Road is fully open.",
+        },
+        thingsToDo: [
+          "Raft whitewater on the Middle Fork Flathead River.",
+          "Take a guided drive on Going-to-the-Sun Road.",
+          "Walk the Trail of the Cedars near Apgar Village.",
+          "Visit Polebridge Mercantile on a North Fork day trip.",
+          "Spot mountain goats at Logan Pass.",
+        ],
+        toursCopy: [
+          "Half-day rafting trips pair well with an afternoon lakeshore stop at Lake McDonald.",
+          "Private driving tours handle Sun Road logistics and wildlife stops.",
+          "Nature walks and e-bike outings suit travelers who want active time outside a vehicle.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Half-day whitewater rafting on the Middle Fork Flathead.",
+            "Afternoon: Apgar Village and Lake McDonald shoreline.",
+            "Evening: Sunset paddle or lodge dinner in West Glacier.",
+          ],
+          dayTwo: [
+            "Morning: Guided drive on Going-to-the-Sun Road to Logan Pass.",
+            "Afternoon: Nature walk or Two Medicine side trip.",
+            "Evening: Return through West Glacier gateway towns.",
+          ],
+        },
+        gettingThere: [
+          "Glacier Park International Airport in Kalispell is about 30 minutes from West Glacier.",
+          "A rental car helps for Sun Road access; many tours include hotel pickup.",
+        ],
+        faq: [
+          {
+            question: "When is Going-to-the-Sun Road open?",
+            answer:
+              "The road typically opens fully by late June and closes in October, depending on snow.",
+          },
+          {
+            question: "Is whitewater rafting beginner-friendly?",
+            answer:
+              "Yes, half-day trips on the Middle Fork Flathead are designed for first-time rafters.",
+          },
+        ],
+      },
     ],
   },
 ];

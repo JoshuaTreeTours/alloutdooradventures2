@@ -1,0 +1,99 @@
+{
+  "targetPremiumShare": 0.5,
+  "slots": [
+    {
+      "experienceType": "whitewater-rafting",
+      "desiredCount": 2,
+      "candidates": [
+        {
+          "productCode": "123783P1",
+          "sourceUrl": "https://www.viator.com/tours/West-Glacier/Half-Day-Whitewater/d50559-123783P1",
+          "title": "Half-Day Glacier National Park Whitewater Rafting Adventure",
+          "experienceType": "whitewater-rafting",
+          "priceFrom": 88,
+          "categories": ["White Water Rafting", "Adventure Tours"],
+          "priority": 1
+        },
+        {
+          "productCode": "70248P3",
+          "sourceUrl": "https://www.viator.com/tours/West-Glacier/Full-Day-Whitewater-Trip/d50559-70248P3",
+          "title": "Full Day Whitewater Adventure Trip with Included Lunch",
+          "experienceType": "whitewater-rafting",
+          "priceFrom": 158,
+          "categories": ["White Water Rafting", "Full-day Tours"],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "experienceType": "scenic-float",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "70248P2",
+          "sourceUrl": "https://www.viator.com/tours/West-Glacier/Half-Day-Scenic-Float/d50559-70248P2",
+          "title": "Half Day Scenic Float on the Middle Fork of the Flathead River",
+          "experienceType": "scenic-float",
+          "priceFrom": 83,
+          "categories": ["Rafting", "Nature and Wildlife Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "full-day-glacier-tour",
+      "desiredCount": 2,
+      "candidates": [
+        {
+          "productCode": "299521P2",
+          "sourceUrl": "https://www.viator.com/tours/West-Glacier/Scenic-Drive-Experience-in-Glacier-National-Park-Includes-Lunch/d50559-299521P2",
+          "title": "Driving Tour in Glacier National Park",
+          "experienceType": "full-day-glacier-tour",
+          "priceFrom": 220,
+          "categories": ["Bus Tours", "Full-day Tours", "Nature and Wildlife Tours"],
+          "priority": 1
+        },
+        {
+          "productCode": "299521P8",
+          "sourceUrl": "https://www.viator.com/tours/West-Glacier/Driving-Tour-in-West-Glacier-National-Park-Summer/d50559-299521P8",
+          "title": "Driving Tour in West Glacier National Park",
+          "experienceType": "full-day-glacier-tour",
+          "priceFrom": 240,
+          "categories": ["Bus Tours", "Full-day Tours"],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "experienceType": "guided-hiking",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "86727P7",
+          "sourceUrl": "https://www.viator.com/tours/West-Glacier/Nature-Walk-in-Glacier-National-Park/d50559-86727P7",
+          "title": "Nature Walk in Glacier National Park",
+          "experienceType": "guided-hiking",
+          "priceFrom": 65,
+          "categories": ["Hiking Tours", "Nature and Wildlife Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "premium-outdoor-adventure",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "487722P4",
+          "sourceUrl": "https://www.viator.com/tours/West-Glacier/Sunset-Clear-Paddleboard-Rentals-for-Glacier-Park/d50559-487722P4",
+          "title": "Sunset LED Clear Paddleboard Rentals for Glacier Park",
+          "experienceType": "premium-outdoor-adventure",
+          "priceFrom": 150,
+          "categories": ["Kayaking and Canoeing", "Photography Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    }
+  ]
+}
