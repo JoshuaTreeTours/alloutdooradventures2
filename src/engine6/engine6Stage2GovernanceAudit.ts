@@ -41,11 +41,16 @@ import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph.js";
 import { ENGINE6_CONFIGURED_PRODUCT_CODES } from "./routes.js";
 import type { Engine6Tour } from "./types.js";
 import { ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS } from "./viatorPublicAvailability.js";
+import {
+  isEngine6ProductSelectionBlocklisted,
+  type Engine6ProductSelectionGovernanceReport,
+} from "./engine6ProductSelectionGovernance.js";
 
 export type Engine6Stage2GovernanceAuditMode = Engine6LiveViatorValidationMode;
 
 export type Engine6Stage2GovernanceArea =
   | "live-viator"
+  | "product-selection"
   | "merchant-feed-commercial-refresh"
   | "merchant-feed-image"
   | "description-title"
@@ -85,6 +90,7 @@ export type Engine6Stage2GovernanceAuditReport = {
   areaSummaries: Engine6Stage2GovernanceAreaSummary[];
   findings: Engine6Stage2GovernanceFinding[];
   liveViator?: Engine6LiveViatorProductionValidationReport;
+  productSelection?: Engine6ProductSelectionGovernanceReport;
   merchantFeedImage?: MerchantFeedImageGovernanceReport;
   notes: string[];
 };
@@ -172,6 +178,7 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
 
 const STAGE2_AREAS: Engine6Stage2GovernanceArea[] = [
   "live-viator",
+  "product-selection",
   "merchant-feed-commercial-refresh",
   "merchant-feed-image",
   "description-title",
@@ -777,6 +784,85 @@ const parseMerchantFeedParityFailureProductCode = (failure: string) => {
   return normalizeProductCode(productCode);
 };
 
+export const auditEngine6ProductSelectionGovernanceFindings = (args: {
+  report?: Engine6ProductSelectionGovernanceReport;
+  tours: Engine6Tour[];
+  mode: Engine6Stage2GovernanceAuditMode;
+  scopedProductCodes: ReadonlySet<string>;
+}): Engine6Stage2GovernanceFinding[] => {
+  const findings: Engine6Stage2GovernanceFinding[] = [];
+
+  for (const tour of args.tours) {
+    if (isEngine6ProductSelectionBlocklisted(tour.productCode)) {
+      findings.push(
+        createEngine6Stage2GovernanceFinding({
+          area: "product-selection",
+          productCode: tour.productCode,
+          message:
+            "configured tour uses a product on the permanent product-selection blocklist",
+          mode: args.mode,
+          scopedProductCodes: args.scopedProductCodes,
+        })
+      );
+    }
+  }
+
+  if (!args.report) {
+    return findings;
+  }
+
+  if (!args.report.buildOrderPreserved) {
+    findings.push(
+      createEngine6Stage2GovernanceFinding({
+        area: "product-selection",
+        productCode: null,
+        message: "deterministic Engine6 build order was not preserved",
+        mode: args.mode,
+        scopedProductCodes: args.scopedProductCodes,
+      })
+    );
+  }
+
+  if (args.mode === "pr-scoped" && !args.report.onlyNewProductsCouldBlock) {
+    findings.push(
+      createEngine6Stage2GovernanceFinding({
+        area: "product-selection",
+        productCode: null,
+        message:
+          "product selection governance did not restrict blocking to PR-scoped products",
+        mode: args.mode,
+        scopedProductCodes: args.scopedProductCodes,
+      })
+    );
+  }
+
+  for (const failure of args.report.blockingFailures) {
+    findings.push(
+      createEngine6Stage2GovernanceFinding({
+        area: "product-selection",
+        productCode: failure.productCode,
+        message: failure.detail,
+        mode: args.mode,
+        scopedProductCodes: args.scopedProductCodes,
+      })
+    );
+  }
+
+  for (const slot of args.report.unfilledSlots) {
+    findings.push(
+      createEngine6Stage2GovernanceFinding({
+        area: "product-selection",
+        productCode: null,
+        message: `${slot.experienceType} slot unfilled (${slot.acceptedCount}/${slot.desiredCount})`,
+        mode: args.mode,
+        scopedProductCodes: args.scopedProductCodes,
+      })
+    );
+  }
+
+  return findings;
+};
+
 export const auditEngine6LiveViatorGovernanceFindings = (args: {
   report: Engine6LiveViatorProductionValidationReport;
   mode: Engine6Stage2GovernanceAuditMode;
@@ -859,6 +945,7 @@ export const buildEngine6Stage2GovernanceAuditReport = (args: {
   findings: Engine6Stage2GovernanceFinding[];
   generatedAt?: string;
   liveViator?: Engine6LiveViatorProductionValidationReport;
+  productSelection?: Engine6ProductSelectionGovernanceReport;
   merchantFeedImage?: MerchantFeedImageGovernanceReport;
   notes?: string[];
 }): Engine6Stage2GovernanceAuditReport => {
@@ -886,6 +973,7 @@ export const buildEngine6Stage2GovernanceAuditReport = (args: {
     areaSummaries,
     findings: args.findings,
     liveViator: args.liveViator,
+    productSelection: args.productSelection,
     merchantFeedImage: args.merchantFeedImage,
     notes: args.notes ?? [],
   };
@@ -901,6 +989,7 @@ export type BuildEngine6Stage2GovernanceAuditArgs = {
   generatedAt?: string;
   validateImageUrl?: ValidateEngine6MerchantFeedImageUrl;
   liveViator?: Engine6LiveViatorProductionValidationReport;
+  productSelection?: Engine6ProductSelectionGovernanceReport;
   skipAsyncImageAudit?: boolean;
 };
 
@@ -1010,12 +1099,22 @@ export const buildEngine6Stage2GovernanceAudit = async (
     );
   }
 
+  findings.push(
+    ...auditEngine6ProductSelectionGovernanceFindings({
+      report: args.productSelection,
+      tours: args.tours,
+      mode,
+      scopedProductCodes: scopedSet,
+    })
+  );
+
   return buildEngine6Stage2GovernanceAuditReport({
     mode,
     scopedProductCodes,
     findings,
     generatedAt: args.generatedAt,
     liveViator: args.liveViator,
+    productSelection: args.productSelection,
     merchantFeedImage,
     notes,
   });
