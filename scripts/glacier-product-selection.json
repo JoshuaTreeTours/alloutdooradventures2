@@ -1,0 +1,78 @@
+{
+  "destinationLabel": "Glacier National Park",
+  "stateSlug": "montana",
+  "citySlug": "glacier-national-park",
+  "targetPremiumShare": 0.5,
+  "slots": [
+    {
+      "experienceType": "driving-tour",
+      "desiredCount": 2,
+      "candidates": [
+        {
+          "productCode": "GLACIER-DRIVE-PRIMARY",
+          "sourceUrl": "https://www.viator.com/tours/Glacier-National-Park/Going-to-the-Sun-Road-Scenic-Drive/d1234-GLACIER-DRIVE-PRIMARY",
+          "title": "Going-to-the-Sun Road Scenic Red Bus Tour",
+          "experienceType": "driving-tour",
+          "priceFrom": 89,
+          "priority": 1,
+          "categories": ["Sightseeing Tours"]
+        },
+        {
+          "productCode": "GLACIER-DRIVE-BACKUP",
+          "sourceUrl": "https://www.viator.com/tours/Glacier-National-Park/Private-Glacier-Park-Van-Tour/d1234-GLACIER-DRIVE-BACKUP",
+          "title": "Private Glacier National Park Van Tour",
+          "experienceType": "driving-tour",
+          "priceFrom": 649,
+          "priority": 2,
+          "commercialTier": "premium",
+          "categories": ["Private Tours"]
+        }
+      ]
+    },
+    {
+      "experienceType": "hiking",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "GLACIER-HIKE-PRIMARY",
+          "sourceUrl": "https://www.viator.com/tours/Glacier-National-Park/Guided-Avalanche-Lake-Hike/d1234-GLACIER-HIKE-PRIMARY",
+          "title": "Guided Avalanche Lake Hiking Tour",
+          "experienceType": "hiking",
+          "priceFrom": 129,
+          "priority": 1,
+          "categories": ["Hiking Tours"]
+        }
+      ]
+    },
+    {
+      "experienceType": "rafting",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "GLACIER-RAFT-PRIMARY",
+          "sourceUrl": "https://www.viator.com/tours/Glacier-National-Park/Middle-Fork-Flathead-River-Rafting/d1234-GLACIER-RAFT-PRIMARY",
+          "title": "Middle Fork Flathead River Whitewater Rafting",
+          "experienceType": "rafting",
+          "priceFrom": 99,
+          "priority": 1,
+          "categories": ["Rafting"]
+        }
+      ]
+    },
+    {
+      "experienceType": "boat-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "GLACIER-BOAT-PRIMARY",
+          "sourceUrl": "https://www.viator.com/tours/Glacier-National-Park/Lake-McDonald-Boat-Cruise/d1234-GLACIER-BOAT-PRIMARY",
+          "title": "Lake McDonald Scenic Boat Cruise",
+          "experienceType": "boat-tour",
+          "priceFrom": 39,
+          "priority": 1,
+          "categories": ["Boat Tours"]
+        }
+      ]
+    }
+  ]
+}

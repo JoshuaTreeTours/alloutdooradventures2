@@ -247,8 +247,8 @@ describe("buildEngine6Stage2GovernanceAudit", () => {
       skipAsyncImageAudit: true,
     });
 
-    expect(report.areaSummaries).toHaveLength(9);
-    expect(report.totals.areasAudited).toBe(9);
+    expect(report.areaSummaries).toHaveLength(11);
+    expect(report.totals.areasAudited).toBe(11);
     expect(report.mode).toBe("pr-scoped");
     expect(report.notes.some(note => note.includes("rating_count"))).toBe(true);
   });
