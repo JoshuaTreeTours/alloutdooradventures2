@@ -3,8 +3,9 @@ import path from "node:path";
 
 import { ZION_VIATOR_PUBLIC_RATINGS } from "../src/engine6/zionViatorPublicRatings";
 import {
+  assertViatorPublicPageAvailability,
   ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS,
-  validateEngine6CityProductAvailability,
+  fetchViatorPublicPage,
 } from "../src/engine6/viatorPublicAvailability";
 
 type ItineraryItem = {
@@ -34,10 +35,10 @@ type ZionTourFixture = {
 
 const ZION_TOURS: ZionTourFixture[] = [
   {
-    productCode: "265766P9",
+    productCode: "199627P12",
     productUrl:
-      "https://www.viator.com/tours/Zion-National-Park/Full-Day-Private-Hiking-Tour-in-Zion-National-Park/d5610-265766P9",
-    title: "Zion Full Day Private Tour & Hike",
+      "https://www.viator.com/tours/Zion-National-Park/Zion-Guided-Hike-and-Gourmet-Picnic/d5610-199627P12",
+    title: "Zion National Park: Private Guided Hike & Picnic",
     description:
       "Explore Zion National Park on a private full-day tour tailored to your hiking ability and sightseeing priorities. A certified guide leads your party through canyon viewpoints, emerald pool trails, and optional Narrows wading when river conditions allow. Travel in a private vehicle with flexible stops at Court of the Patriarchs, Zion Lodge, and scenic pullouts along the canyon floor. This premium outing suits travelers who want a personalized Zion introduction without joining a large bus group.",
     duration: "6 to 10 hours (approx.)",
@@ -150,10 +151,10 @@ const ZION_TOURS: ZionTourFixture[] = [
     categories: ["Private Tours","Hiking Tours","Day Trips"],
   },
   {
-    productCode: "170406P19",
+    productCode: "422797P4",
     productUrl:
-      "https://www.viator.com/tours/Zion-National-Park/Private-Angels-Landing-Day-Hike-Party-of-1-4/d5610-170406P19",
-    title: "Private Angel's Landing Day Hike",
+      "https://www.viator.com/tours/Zion-National-Park/Angels-Landing-Guided-Hike-Permit-Included/d5610-422797P4",
+    title: "Private Angels Landing Hike Permit Included",
     description:
       "Climb Angels Landing on a private guided day hike with a certified leader who manages permit logistics and chain-section pacing. The route ascends Walter's Wiggles switchbacks to Scout Lookout, then continues along the exposed chain section to the summit viewpoint. Your guide monitors weather, hydration, and turnaround timing for a safe rim return. Private format limits group size to your party for a focused summit attempt.",
     duration: "4 to 6 hours (approx.)",
@@ -208,10 +209,10 @@ const ZION_TOURS: ZionTourFixture[] = [
     categories: ["Private Tours","Hiking Tours","Adrenaline & Extreme"],
   },
   {
-    productCode: "310623P1",
+    productCode: "118887P10",
     productUrl:
-      "https://www.viator.com/tours/Zion-National-Park/Private-East-Zion-Via-Feratta-Canyoneering-and-Rappelling-Tour-half-day/d5610-310623P1",
-    title: "East Zion Via Ferrata Canyoneering & Rappelling",
+      "https://www.viator.com/tours/Zion-National-Park/Top-of-the-Rock-Climbing-Iron-Ladder-Via-Ferrata-Canyoning-and-Rappelling/d5610-118887P10",
+    title: "Tallest in Utah Via Ferrata & Rappelling",
     description:
       "Combine via ferrata climbing, canyoneering, and rappelling on a half-day East Zion adventure above the main park canyon. Certified guides lead you up fixed cable routes at East Zion Resort, cross exposed ledges at Top of the Rock, then rappel into a sandstone slot section. Harness, helmet, and technical gear are included with instruction for first-time via ferrata climbers. This outing delivers adrenaline outside the crowded Zion Canyon shuttle zone.",
     duration: "4 to 5 hours (approx.)",
@@ -266,10 +267,10 @@ const ZION_TOURS: ZionTourFixture[] = [
     categories: ["Canyoneering","Climbing","Adrenaline & Extreme"],
   },
   {
-    productCode: "318343P2",
+    productCode: "118744P3",
     productUrl:
-      "https://www.viator.com/tours/Zion-National-Park/Full-Day-Private-Tour-Zion-via-Kolob-Terrace-Ghost-Town-Slot-Canyon-and-Dunes/d5610-318343P2",
-    title: "Zion/Kolob Ghost Town Slot Canyon Vistas Private Full Day",
+      "https://www.viator.com/tours/Zion-National-Park/Peekaboo-Slot-Canyon/d5610-118744P3",
+    title: "Peekaboo Slot Canyon 4WD Tour",
     description:
       "Discover Zion beyond the main canyon on a private full-day loop through Kolob Terrace Road, Grafton Ghost Town, and Peek-A-Boo Slot Canyon. Your guide combines back-road driving with short hikes to petroglyphs, lava-point vistas, and red sand dunes outside the park shuttle zone. This itinerary suits photographers and repeat visitors seeking Kolob country scenery without the Narrows crowds. Lunch stops and pacing remain flexible for your group.",
     duration: "8 hours (approx.)",
@@ -1054,41 +1055,61 @@ const buildFixture = (tour: ZionTourFixture) => {
 const outputDir = path.join(process.cwd(), "data", "engine6", "viator");
 mkdirSync(outputDir, { recursive: true });
 
-const availabilityRejections = validateEngine6CityProductAvailability(
-  ZION_TOURS.map(tour => ({
-    productCode: tour.productCode,
-    sourceUrl: tour.productUrl,
-    html: `<html><body><h1>${tour.title}</h1><button>Check availability</button><script>{"productCode":"${tour.productCode}","productStatus":"ACTIVE"}</script></body></html>`,
-    finalUrl: tour.productUrl,
-    httpStatus: 200,
-  }))
-);
+const main = async () => {
+  const availabilityRejections: unknown[] = [];
 
-if (availabilityRejections.length > 0) {
-  throw availabilityRejections[0];
-}
+  for (const tour of ZION_TOURS) {
+    if (tour.productCode in ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS) {
+      availabilityRejections.push(
+        new Error(
+          `Refusing to generate fixtures for known unavailable product ${tour.productCode}`
+        )
+      );
+      continue;
+    }
 
-for (const unavailableProductCode of Object.keys(
-  ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS
-)) {
-  if (ZION_TOURS.some(tour => tour.productCode === unavailableProductCode)) {
-    throw new Error(
-      `Refusing to generate fixtures for known unavailable product ${unavailableProductCode}`
-    );
+    try {
+      const page = await fetchViatorPublicPage(tour.productUrl);
+      assertViatorPublicPageAvailability({
+        productCode: tour.productCode,
+        sourceUrl: tour.productUrl,
+        html: page.html,
+        finalUrl: page.finalUrl,
+        httpStatus: page.httpStatus,
+      });
+    } catch (error) {
+      availabilityRejections.push(error);
+    }
   }
-}
 
-for (const tour of ZION_TOURS) {
-  const filePath = path.join(
-    outputDir,
-    `${tour.productCode}.exact-product.json`
-  );
-  writeFileSync(
-    filePath,
-    `${JSON.stringify(buildFixture(tour), null, 2)}\n`,
-    "utf8"
-  );
-  console.log(`Wrote ${filePath}`);
-}
+  if (availabilityRejections.length > 0) {
+    throw availabilityRejections[0];
+  }
 
-console.log(`Generated ${ZION_TOURS.length} Zion Engine6 fixtures.`);
+  for (const unavailableProductCode of Object.keys(
+    ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS
+  )) {
+    if (ZION_TOURS.some(tour => tour.productCode === unavailableProductCode)) {
+      throw new Error(
+        `Refusing to generate fixtures for known unavailable product ${unavailableProductCode}`
+      );
+    }
+  }
+
+  for (const tour of ZION_TOURS) {
+    const filePath = path.join(
+      outputDir,
+      `${tour.productCode}.exact-product.json`
+    );
+    writeFileSync(
+      filePath,
+      `${JSON.stringify(buildFixture(tour), null, 2)}\n`,
+      "utf8"
+    );
+    console.log(`Wrote ${filePath}`);
+  }
+
+  console.log(`Generated ${ZION_TOURS.length} Zion Engine6 fixtures.`);
+};
+
+await main();

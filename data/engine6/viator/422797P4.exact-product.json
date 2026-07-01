@@ -1,0 +1,125 @@
+{
+  "product": {
+    "productCode": "422797P4",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Angels-Landing-Guided-Hike-Permit-Included/d5610-422797P4",
+    "title": "Private Angels Landing Hike Permit Included",
+    "description": {
+      "text": "Summit Angels Landing on a private guided hike with your permit secured and chain-section pacing handled by a certified leader. The route climbs Walter's Wiggles switchbacks to Scout Lookout, then continues along the exposed ridge with safety briefings at each chain segment before reaching the iconic canyon viewpoint. Private format limits the outing to your party for focused pacing, hydration checks, and flexible turnaround decisions. Suitable for fit hikers comfortable with heights who want permit logistics and expert guidance on Zion's most famous trail."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "4 to 6 hours (approx.)",
+    "priceFrom": "From $378.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 6
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/e7/31/e0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Angels Landing hike with permit included",
+      "Certified guide manages chain-section pacing",
+      "Scout Lookout rest before the exposed ridge",
+      "Summit views over Zion Canyon",
+      "Flexible private party format for one to four hikers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Zion Canyon Visitor Center, Springdale, UT 84767. Start early for parking and permit check-in."
+      },
+      "end": {
+        "description": "Descend to the Grotto trailhead after the summit or Scout Lookout turnaround."
+      }
+    },
+    "itinerarySummary": "Summit Angels Landing on a private guided hike with your permit secured and chain-section pacing handled by a certified leader.",
+    "itineraryItems": [
+      {
+        "title": "Zion Canyon Visitor Center",
+        "description": "Pre-hike briefing and permit verification before entering the trail.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "West Rim Trail",
+        "description": "Steady climb on the West Rim Trail toward Scout Lookout.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Walter's Wiggles",
+        "description": "Switchback section climbing toward the chain route.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Scout Lookout",
+        "description": "Rest and assessment point before the exposed chain section.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Angels Landing",
+        "description": "Chain-assisted traverse to the summit viewpoint over Zion Canyon.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private certified hiking guide",
+      "Angels Landing permit",
+      "Trail snacks and water",
+      "Safety equipment and chain-section briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Angels Landing Hike Permit Included?",
+        "answer": "The planned duration is 4 to 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Meet at the Zion Canyon Visitor Center, Springdale, UT 84767. Start early for parking and permit check-in."
+      },
+      {
+        "question": "Is the Angels Landing permit included in the price?",
+        "answer": "Yes. Your guide secures the required Angels Landing permit as part of the private hike."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Adrenaline & Extreme"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 378
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,20 +1,20 @@
 {
   "product": {
-    "productCode": "310623P1",
-    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Private-East-Zion-Via-Feratta-Canyoneering-and-Rappelling-Tour-half-day/d5610-310623P1",
-    "title": "East Zion Via Ferrata Canyoneering & Rappelling",
+    "productCode": "118887P10",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Top-of-the-Rock-Climbing-Iron-Ladder-Via-Ferrata-Canyoning-and-Rappelling/d5610-118887P10",
+    "title": "Tallest in Utah Via Ferrata & Rappelling",
     "description": {
-      "text": "Combine via ferrata climbing, canyoneering, and rappelling on a half-day East Zion adventure above the main park canyon. Certified guides lead you up fixed cable routes at East Zion Resort, cross exposed ledges at Top of the Rock, then rappel into a sandstone slot section. Harness, helmet, and technical gear are included with instruction for first-time via ferrata climbers. This outing delivers adrenaline outside the crowded Zion Canyon shuttle zone."
+      "text": "Climb Utah's tallest via ferrata route at East Zion's Top of the Rock, then descend through a canyoneering section with guided rappels into sandstone slots. Certified guides fit your harness and helmet, lead you up fixed cable pitches and iron ladder sections, and coach first-time via ferrata climbers through each exposed ledge. The four-hour outing combines summit panoramas over the eastern plateau with adrenaline rappelling outside the crowded Zion Canyon shuttle zone. Technical gear and safety instruction are included for a complete half-day adventure."
     },
     "location": {
       "city": "Zion National Park",
       "state": "Utah"
     },
-    "duration": "4 to 5 hours (approx.)",
-    "priceFrom": "From $249.00",
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $199.00",
     "reviews": {
       "combinedAverageRating": 5,
-      "totalReviews": 120
+      "totalReviews": 54
     },
     "media": {
       "images": [
@@ -22,7 +22,7 @@
           "isCover": true,
           "variants": {
             "FULL": {
-              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/d6/d8/fe.jpg",
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/39/2a/de.jpg",
               "width": 674,
               "height": 446
             }
@@ -31,11 +31,11 @@
       ]
     },
     "highlights": [
-      "Via ferrata ascent with fixed cable routes",
-      "Top of the Rock summit panoramas",
-      "Guided canyoneering and rappel descents",
-      "Technical gear and instruction included",
-      "Half-day East Zion adventure format"
+      "Utah's tallest via ferrata with iron ladder sections",
+      "Top of the Rock summit panoramas over East Zion",
+      "Guided canyoneering traverse and rappel descents",
+      "Harness, helmet, and technical gear included",
+      "Instruction for first-time via ferrata climbers"
     ],
     "logistics": {
       "start": {
@@ -45,7 +45,7 @@
         "description": "Return to East Zion Resort after the final rappel and gear return."
       }
     },
-    "itinerarySummary": "Combine via ferrata climbing, canyoneering, and rappelling on a half-day East Zion adventure above the main park canyon.",
+    "itinerarySummary": "Climb Utah's tallest via ferrata route at East Zion's Top of the Rock, then descend through a canyoneering section with guided rappels into sandstone slots.",
     "itineraryItems": [
       {
         "title": "East Zion Resort",
@@ -54,8 +54,8 @@
         "stopType": "stop"
       },
       {
-        "title": "Via Ferrata",
-        "description": "Fixed-cable climbing route with multiple pitches above East Zion.",
+        "title": "Via Ferrata Ascent",
+        "description": "Fixed-cable climbing with iron ladder pitches on Utah's tallest via ferrata route.",
         "duration": "1 hour 30 minutes",
         "stopType": "stop"
       },
@@ -82,7 +82,7 @@
       "Certified canyoneering guide",
       "Via ferrata and rappel equipment",
       "Helmet and harness",
-      "Safety briefing"
+      "Safety briefing and instruction"
     ],
     "additionalInfo": [
       "Confirmation will be received at time of booking",
@@ -92,12 +92,16 @@
     ],
     "faqs": [
       {
-        "question": "How long is the East Zion Via Ferrata Canyoneering & Rappelling?",
-        "answer": "The planned duration is 4 to 5 hours."
+        "question": "How long is the Tallest in Utah Via Ferrata & Rappelling?",
+        "answer": "The planned duration is 4 hours."
       },
       {
         "question": "Where does the tour depart from at Zion National Park?",
         "answer": "Check in at East Zion Resort, 859 Zion Park Blvd, Orderville, UT 84758. Arrive 15 minutes before your scheduled departure."
+      },
+      {
+        "question": "Do I need prior climbing experience?",
+        "answer": "No prior via ferrata experience is required. Guides provide instruction and fit all technical gear before the ascent."
       }
     ],
     "categories": [
@@ -113,7 +117,7 @@
     ],
     "pricing": {
       "summary": {
-        "fromPrice": 249
+        "fromPrice": 199
       },
       "currency": "USD"
     }

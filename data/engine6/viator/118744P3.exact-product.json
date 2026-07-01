@@ -1,0 +1,125 @@
+{
+  "product": {
+    "productCode": "118744P3",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Peekaboo-Slot-Canyon/d5610-118744P3",
+    "title": "Peekaboo Slot Canyon 4WD Tour",
+    "description": {
+      "text": "Explore Peekaboo Slot Canyon on a private 4WD tour with off-road transfer from the Kanab area through red rock backcountry to one of southern Utah's most photogenic narrows. Your guide navigates sandy desert tracks to the slot entrance, then leads a short hike through twisting sandstone walls with time for photography in the chamber-like passages. This three-hour outing focuses on unique slot canyon scenery outside the Zion National Park shuttle zone without the commitment of a full-day loop. Return transfer, trail guidance, and photo tips are included for photographers and first-time slot canyon visitors."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $130.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 215
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/d8/4a/12.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private 4WD transfer to Peekaboo Slot Canyon",
+      "Guided hike through narrow sandstone passages",
+      "Dedicated photo time in slot canyon chambers",
+      "Off-road desert approach from Kanab area",
+      "Three-hour format ideal for photographers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Kanab meeting point confirmed at booking. Wear sturdy hiking shoes and sun protection."
+      },
+      "end": {
+        "description": "Return transfer to Kanab after the slot canyon photo stop."
+      }
+    },
+    "itinerarySummary": "Explore Peekaboo Slot Canyon on a private 4WD tour with off-road transfer from the Kanab area through red rock backcountry to one of southern Utah's most photogenic narrows.",
+    "itineraryItems": [
+      {
+        "title": "Kanab Meeting Point",
+        "description": "Group meetup and safety briefing before the off-road transfer.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "4WD Desert Approach",
+        "description": "Off-road transfer through red rock backcountry to the Peekaboo trailhead.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Peekaboo Slot Canyon Entrance",
+        "description": "Short walk to the slot entrance with guide orientation on canyon etiquette.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Slot Canyon Passage",
+        "description": "Guided hike through twisting narrows with photography stops in chamber sections.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Return Transfer",
+        "description": "4WD return drive to Kanab after the slot canyon visit.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private guide and 4WD transfer",
+      "Trail snacks",
+      "Bottled water",
+      "Photo location guidance"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Peekaboo Slot Canyon 4WD Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Meet at the Kanab meeting point confirmed at booking. Wear sturdy hiking shoes and sun protection."
+      },
+      {
+        "question": "Is this tour suitable for photography?",
+        "answer": "Yes. The itinerary includes dedicated time in Peekaboo Slot Canyon with guide tips for lighting and composition in the narrow passages."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Photography Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 130
+      },
+      "currency": "USD"
+    }
+  }
+}

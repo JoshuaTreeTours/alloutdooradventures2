@@ -227,11 +227,11 @@ import specimen316119p4Payload from "../../data/engine6/viator/316119P4.exact-pr
 import specimen23667p4Payload from "../../data/engine6/viator/23667P4.exact-product.json";
 import specimen23667p1Payload from "../../data/engine6/viator/23667P1.exact-product.json";
 import specimen463268p2Payload from "../../data/engine6/viator/463268P2.exact-product.json";
-import specimen265766p9Payload from "../../data/engine6/viator/265766P9.exact-product.json";
+import specimen199627p12Payload from "../../data/engine6/viator/199627P12.exact-product.json";
 import specimen199627p1Payload from "../../data/engine6/viator/199627P1.exact-product.json";
-import specimen170406p19Payload from "../../data/engine6/viator/170406P19.exact-product.json";
-import specimen310623p1Payload from "../../data/engine6/viator/310623P1.exact-product.json";
-import specimen318343p2Payload from "../../data/engine6/viator/318343P2.exact-product.json";
+import specimen422797p4Payload from "../../data/engine6/viator/422797P4.exact-product.json";
+import specimen118887p10Payload from "../../data/engine6/viator/118887P10.exact-product.json";
+import specimen118744p3Payload from "../../data/engine6/viator/118744P3.exact-product.json";
 import specimen265766p10Payload from "../../data/engine6/viator/265766P10.exact-product.json";
 import specimen265766p27Payload from "../../data/engine6/viator/265766P27.exact-product.json";
 import specimen286874p2Payload from "../../data/engine6/viator/286874P2.exact-product.json";
@@ -2361,10 +2361,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     },
   },
   {
-    productCode: "265766P9",
+    productCode: "199627P12",
     publicUrl:
-      "https://www.viator.com/tours/Zion-National-Park/Full-Day-Private-Hiking-Tour-in-Zion-National-Park/d5610-265766P9",
-    rawPayload: specimen265766p9Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Zion-National-Park/Zion-Guided-Hike-and-Gourmet-Picnic/d5610-199627P12",
+    rawPayload: specimen199627p12Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
@@ -2379,28 +2379,28 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     },
   },
   {
-    productCode: "170406P19",
+    productCode: "422797P4",
     publicUrl:
-      "https://www.viator.com/tours/Zion-National-Park/Private-Angels-Landing-Day-Hike-Party-of-1-4/d5610-170406P19",
-    rawPayload: specimen170406p19Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Zion-National-Park/Angels-Landing-Guided-Hike-Permit-Included/d5610-422797P4",
+    rawPayload: specimen422797p4Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
   },
   {
-    productCode: "310623P1",
+    productCode: "118887P10",
     publicUrl:
-      "https://www.viator.com/tours/Zion-National-Park/Private-East-Zion-Via-Feratta-Canyoneering-and-Rappelling-Tour-half-day/d5610-310623P1",
-    rawPayload: specimen310623p1Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Zion-National-Park/Top-of-the-Rock-Climbing-Iron-Ladder-Via-Ferrata-Canyoning-and-Rappelling/d5610-118887P10",
+    rawPayload: specimen118887p10Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
   },
   {
-    productCode: "318343P2",
+    productCode: "118744P3",
     publicUrl:
-      "https://www.viator.com/tours/Zion-National-Park/Full-Day-Private-Tour-Zion-via-Kolob-Terrace-Ghost-Town-Slot-Canyon-and-Dunes/d5610-318343P2",
-    rawPayload: specimen318343p2Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Zion-National-Park/Peekaboo-Slot-Canyon/d5610-118744P3",
+    rawPayload: specimen118744p3Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

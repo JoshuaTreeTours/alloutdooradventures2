@@ -1,0 +1,125 @@
+{
+  "product": {
+    "productCode": "199627P12",
+    "productUrl": "https://www.viator.com/tours/Zion-National-Park/Zion-Guided-Hike-and-Gourmet-Picnic/d5610-199627P12",
+    "title": "Zion National Park: Private Guided Hike & Picnic",
+    "description": {
+      "text": "Spend a full morning and afternoon exploring Zion Canyon on a private guided hike tailored to your fitness level, then unwind with a gourmet picnic beneath the sandstone walls. Your certified guide selects trails from Emerald Pools to Scout Lookout and optional Angels Landing approach or Watchman viewpoints based on conditions and your goals. This exclusive outing replaces crowded bus tours with a personalized pace, interpretive commentary, and a chef-prepared picnic spread at a scenic canyon stop. Ideal for couples and small groups seeking a premium Zion hiking experience without the logistics of planning routes and meals."
+    },
+    "location": {
+      "city": "Zion National Park",
+      "state": "Utah"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $299.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 78
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/d0/eb/24.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private guided hike customized to your fitness level",
+      "Gourmet picnic lunch at a scenic canyon location",
+      "Emerald Pools and Scout Lookout trail options",
+      "Optional Angels Landing approach or Watchman viewpoints",
+      "Certified guide with interpretive canyon commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the Zion Canyon Visitor Center shuttle stop, Springdale, UT 84767. Arrive 15 minutes before departure."
+      },
+      "end": {
+        "description": "Return to the visitor center area after the picnic and final canyon stop."
+      }
+    },
+    "itinerarySummary": "Spend a full morning and afternoon exploring Zion Canyon on a private guided hike tailored to your fitness level, then unwind with a gourmet picnic beneath the sandstone walls.",
+    "itineraryItems": [
+      {
+        "title": "Zion Canyon Visitor Center",
+        "description": "Private briefing, trail selection, and shuttle orientation before the hike begins.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Emerald Pools",
+        "description": "Guided hike to lower or middle Emerald Pools for waterfall and cliff views.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Scout Lookout",
+        "description": "Steady ascent on the West Rim Trail to Scout Lookout with canyon panoramas.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Angels Landing Approach or Watchman",
+        "description": "Optional extension toward Angels Landing chain section or Watchman Trail viewpoints based on group ability.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gourmet Picnic Stop",
+        "description": "Chef-prepared picnic lunch at a shaded canyon overlook with local ingredients and beverages.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private certified hiking guide",
+      "Gourmet picnic lunch and beverages",
+      "Trail snacks and water",
+      "Park shuttle guidance"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Zion National Park: Private Guided Hike & Picnic?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from at Zion National Park?",
+        "answer": "Meet your guide at the Zion Canyon Visitor Center shuttle stop, Springdale, UT 84767. Arrive 15 minutes before departure."
+      },
+      {
+        "question": "Can the hiking route be adjusted for our group?",
+        "answer": "Yes. Your guide selects trails from Emerald Pools to Scout Lookout and optional extensions based on your fitness level and current park conditions."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 299
+      },
+      "currency": "USD"
+    }
+  }
+}

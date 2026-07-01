@@ -6,11 +6,11 @@ export type ZionViatorPublicRating = {
 /** Viator public combined rating/review counts for Zion d5610 Engine6 products. */
 export const ZION_VIATOR_PUBLIC_RATINGS: Record<string, ZionViatorPublicRating> =
   {
-    "265766P9": { rating: 5.0, reviewCount: 51 },
+    "199627P12": { rating: 5.0, reviewCount: 78 },
     "199627P1": { rating: 5.0, reviewCount: 125 },
-    "170406P19": { rating: 5.0, reviewCount: 40 },
-    "310623P1": { rating: 5.0, reviewCount: 120 },
-    "318343P2": { rating: 5.0, reviewCount: 85 },
+    "422797P4": { rating: 5.0, reviewCount: 6 },
+    "118887P10": { rating: 5.0, reviewCount: 54 },
+    "118744P3": { rating: 4.9, reviewCount: 215 },
     "265766P10": { rating: 5.0, reviewCount: 35 },
     "265766P27": { rating: 4.9, reviewCount: 77 },
     "286874P2": { rating: 5.0, reviewCount: 28 },
