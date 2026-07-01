@@ -50,7 +50,9 @@
     "audit:engine6-stage2-governance": "tsx scripts/audit-engine6-stage2-governance.ts",
     "audit:engine6-stage2-governance:strict": "tsx scripts/audit-engine6-stage2-governance.ts --strict",
     "validate:engine6-live-viator": "tsx scripts/validate-engine6-production-viator.ts",
-    "validate:engine6-live-viator:strict": "tsx scripts/validate-engine6-production-viator.ts --strict"
+    "validate:engine6-live-viator:strict": "tsx scripts/validate-engine6-production-viator.ts --strict",
+    "validate:engine6-product-selection": "tsx scripts/validate-engine6-product-selection-governance.ts",
+    "validate:engine6-product-selection:strict": "tsx scripts/validate-engine6-product-selection-governance.ts --strict"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

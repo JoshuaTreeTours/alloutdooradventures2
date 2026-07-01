@@ -44,6 +44,20 @@ Every Engine6 merchant-feed generation path must enforce live image URL validati
 
 This Stage 2 rule applies to all future Engine6 city builds and all merchant-feed generation. Existing published cities remain unchanged until they are regenerated.
 
+## Stage 2: Product selection, portfolio diversity, and live validation
+
+Before writing any Engine6 destination fixtures, validate every candidate product through the existing live Viator validation infrastructure:
+
+- Reuse `validateEngine6LiveViatorCandidate` and ranked backup selection; do not duplicate validation logic.
+- Reject inactive, removed, unavailable, blocked, or commercially incomplete products before fixtures, merchant feed rows, routes, or sitemap entries are generated.
+- Maintain ranked candidate pools with backup products for every major experience type; replace failed primaries automatically with the next valid candidate.
+- Target an approximately 50/50 premium vs standard portfolio mix when the destination catalog permits, while preserving product quality and experience-type diversity.
+- Honor destination-specific selection priorities without unnecessary duplication of nearly identical products.
+- Keep live validation PR-scoped so only newly introduced products can block the current pull request.
+- Preserve deterministic build order: Live Validation → Fixtures → Merchant Feed → Routes → Sitemap.
+
+Use `selectEngine6DestinationPortfolio` in `src/engine6/engine6ProductSelectionGovernance.ts` for destination builds and `validate:engine6-product-selection` for completion reporting.
+
 ## Forbidden patterns
 
 The following are forbidden in Engine6 work:
