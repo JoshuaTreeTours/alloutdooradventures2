@@ -49,6 +49,7 @@
     "audit:engine6-itinerary-title-integrity": "tsx scripts/audit-engine6-itinerary-title-integrity.ts",
     "validate:engine6-live-viator": "tsx scripts/validate-engine6-production-viator.ts",
     "validate:engine6-live-viator:strict": "tsx scripts/validate-engine6-production-viator.ts --strict"
+    "validate:engine6-live-viator": "tsx scripts/validate-engine6-production-viator.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -6,11 +6,11 @@ import { engine6ResolvedTours } from "../src/engine6/registry";
 const OUTPUT_PATH = "data/merchantFeed.csv";
 
 const NEW_ZION_PRODUCT_CODES = [
-  "265766P9",
+  "199627P12",
   "199627P1",
-  "170406P19",
-  "310623P1",
-  "318343P2",
+  "422797P4",
+  "118887P10",
+  "118744P3",
   "265766P10",
   "265766P27",
   "286874P2",
