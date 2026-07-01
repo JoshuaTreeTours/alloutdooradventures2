@@ -9,11 +9,8 @@ const NEW_GLACIER_PRODUCT_CODES = [
   "70248P2",
   "299521P2",
   "299521P8",
-  "299521P1",
   "86727P7",
-  "487722P1",
   "487722P4",
-  "102020P125",
 ] as const;
 
 const tours = NEW_GLACIER_PRODUCT_CODES.map(productCode => {

@@ -952,21 +952,12 @@ export const ENGINE6_GLACIER_DRIVING_TOUR_GNP_ROUTE =
 export const ENGINE6_GLACIER_DRIVING_TOUR_WEST_PRODUCT_CODE = "299521P8";
 export const ENGINE6_GLACIER_DRIVING_TOUR_WEST_ROUTE =
   "/destinations/montana/glacier-national-park/tours/driving-tour-west-glacier-299521P8";
-export const ENGINE6_GLACIER_PRIVATE_POLEBRIDGE_PRODUCT_CODE = "299521P1";
-export const ENGINE6_GLACIER_PRIVATE_POLEBRIDGE_ROUTE =
-  "/destinations/montana/glacier-national-park/tours/combo-drive-snowshoe-299521P1";
 export const ENGINE6_GLACIER_NATURE_WALK_PRODUCT_CODE = "86727P7";
 export const ENGINE6_GLACIER_NATURE_WALK_ROUTE =
   "/destinations/montana/glacier-national-park/tours/nature-walk-glacier-86727P7";
-export const ENGINE6_GLACIER_EBIKE_TOUR_PRODUCT_CODE = "487722P1";
-export const ENGINE6_GLACIER_EBIKE_TOUR_ROUTE =
-  "/destinations/montana/glacier-national-park/tours/clear-kayak-rentals-487722P1";
 export const ENGINE6_GLACIER_SUNSET_PADDLEBOARD_PRODUCT_CODE = "487722P4";
 export const ENGINE6_GLACIER_SUNSET_PADDLEBOARD_ROUTE =
   "/destinations/montana/glacier-national-park/tours/sunset-clear-paddleboard-487722P4";
-export const ENGINE6_GLACIER_EAST_GLACIER_TOUR_PRODUCT_CODE = "102020P125";
-export const ENGINE6_GLACIER_EAST_GLACIER_TOUR_ROUTE =
-  "/destinations/montana/glacier-national-park/tours/going-to-the-sun-audio-102020P125";
 
 export const ENGINE6_GLACIER_TOUR_PATH_PREFIX =
   "/destinations/montana/glacier-national-park/tours/";
@@ -2051,24 +2042,12 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_GLACIER_DRIVING_TOUR_WEST_PRODUCT_CODE,
   ],
   [
-    ENGINE6_GLACIER_PRIVATE_POLEBRIDGE_ROUTE,
-    ENGINE6_GLACIER_PRIVATE_POLEBRIDGE_PRODUCT_CODE,
-  ],
-  [
     ENGINE6_GLACIER_NATURE_WALK_ROUTE,
     ENGINE6_GLACIER_NATURE_WALK_PRODUCT_CODE,
   ],
   [
-    ENGINE6_GLACIER_EBIKE_TOUR_ROUTE,
-    ENGINE6_GLACIER_EBIKE_TOUR_PRODUCT_CODE,
-  ],
-  [
     ENGINE6_GLACIER_SUNSET_PADDLEBOARD_ROUTE,
     ENGINE6_GLACIER_SUNSET_PADDLEBOARD_PRODUCT_CODE,
-  ],
-  [
-    ENGINE6_GLACIER_EAST_GLACIER_TOUR_ROUTE,
-    ENGINE6_GLACIER_EAST_GLACIER_TOUR_PRODUCT_CODE,
   ],
 ] as const;
 

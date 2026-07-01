@@ -244,11 +244,8 @@ import specimen70248p3Payload from "../../data/engine6/viator/70248P3.exact-prod
 import specimen70248p2Payload from "../../data/engine6/viator/70248P2.exact-product.json";
 import specimen299521p2Payload from "../../data/engine6/viator/299521P2.exact-product.json";
 import specimen299521p8Payload from "../../data/engine6/viator/299521P8.exact-product.json";
-import specimen299521p1Payload from "../../data/engine6/viator/299521P1.exact-product.json";
 import specimen86727p7Payload from "../../data/engine6/viator/86727P7.exact-product.json";
-import specimen487722p1Payload from "../../data/engine6/viator/487722P1.exact-product.json";
 import specimen487722p4Payload from "../../data/engine6/viator/487722P4.exact-product.json";
-import specimen102020p125Payload from "../../data/engine6/viator/102020P125.exact-product.json";
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
 import specimen5503p10Payload from "../../data/engine6/viator/5503P10.exact-product.json";
@@ -2514,15 +2511,6 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     },
   },
   {
-    productCode: "299521P1",
-    publicUrl:
-      "https://www.viator.com/tours/West-Glacier/Glacier-Adventure-Tour-Drive-Snowshoe-in-a-Winter-Wonderland/d50559-299521P1",
-    rawPayload: specimen299521p1Payload as Record<string, unknown>,
-    validationRules: {
-      itineraryOriginalityForNewBuilds: true,
-    },
-  },
-  {
     productCode: "86727P7",
     publicUrl:
       "https://www.viator.com/tours/West-Glacier/Nature-Walk-in-Glacier-National-Park/d50559-86727P7",
@@ -2532,28 +2520,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     },
   },
   {
-    productCode: "487722P1",
-    publicUrl:
-      "https://www.viator.com/tours/West-Glacier/Clear-Kayak-Rentals-for-Glacier-Park/d50559-487722P1",
-    rawPayload: specimen487722p1Payload as Record<string, unknown>,
-    validationRules: {
-      itineraryOriginalityForNewBuilds: true,
-    },
-  },
-  {
     productCode: "487722P4",
     publicUrl:
       "https://www.viator.com/tours/West-Glacier/Sunset-Clear-Paddleboard-Rentals-for-Glacier-Park/d50559-487722P4",
     rawPayload: specimen487722p4Payload as Record<string, unknown>,
-    validationRules: {
-      itineraryOriginalityForNewBuilds: true,
-    },
-  },
-  {
-    productCode: "102020P125",
-    publicUrl:
-      "https://www.viator.com/tours/West-Glacier/Glacier-National-Park-Going-to-the-Sun-Road-Audio-Tour-Guide/d50559-102020P125",
-    rawPayload: specimen102020p125Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

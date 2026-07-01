@@ -310,67 +310,6 @@ const GLACIER_TOURS: GlacierTourFixture[] = [
     categories: ["Bus Tours", "Full-day Tours", "Sightseeing Tours"],
   },
   {
-    productCode: "299521P1",
-    productUrl:
-      "https://www.viator.com/tours/West-Glacier/Glacier-Adventure-Tour-Drive-Snowshoe-in-a-Winter-Wonderland/d50559-299521P1",
-    title: "Combo Tour: Driving and Snowshoe Trek of Glacier National Park",
-    description:
-      "Combine a guided driving tour of West Glacier highlights with a two-hour snowshoe trek tailored to your group's fitness level. Tour Glacier leads this winter-friendly combo with included lunch, snowshoe gear, and hotel pickup from Whitefish, Columbia Falls, or Kalispell.",
-    duration: "4 to 5 hours (approx.)",
-    priceFrom: 220,
-    heroUrl:
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/1b/d1/75.jpg",
-    rating: 4.7,
-    reviewCount: 12,
-    highlights: [
-      "Guided driving tour plus two-hour snowshoe trek",
-      "Included picnic lunch with sandwich and hot drink choices",
-      "Snowshoes, poles, and hand warmers provided",
-      "Customized pace for varied fitness levels",
-      "Hotel pickup from Whitefish, Columbia Falls, or Kalispell",
-    ],
-    startDescription:
-      "Pickup from your Whitefish, Columbia Falls, or Kalispell hotel. Confirm sandwich preferences when booking.",
-    endDescription:
-      "Return to your pickup location after the driving and snowshoe loop.",
-    itineraryItems: [
-      {
-        title: "Apgar Village",
-        description:
-          "Begin with a driving overview through Apgar Village and the Lake McDonald shoreline.",
-        duration: "30 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Lake McDonald",
-        description:
-          "Stop at Lake McDonald Lodge area for photos and winter scenery along the lakeshore.",
-        duration: "30 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Glacier National Park",
-        description:
-          "Two-hour guided snowshoe trek on park trails selected for your group's ability.",
-        duration: "2 hours",
-        stopType: "stop",
-      },
-      {
-        title: "West Glacier",
-        description:
-          "Return drive through West Glacier gateway communities with guide commentary.",
-        stopType: "pass-by",
-      },
-    ],
-    inclusions: [
-      "Guided driving tour",
-      "Snowshoe trek with equipment",
-      "Included lunch and hot drinks",
-      "Hotel pickup and drop-off",
-    ],
-    categories: ["Nature and Wildlife Tours", "Winter Sports", "Full-day Tours"],
-  },
-  {
     productCode: "86727P7",
     productUrl:
       "https://www.viator.com/tours/West-Glacier/Nature-Walk-in-Glacier-National-Park/d50559-86727P7",
@@ -425,61 +364,6 @@ const GLACIER_TOURS: GlacierTourFixture[] = [
     categories: ["Hiking Tours", "Nature and Wildlife Tours", "Walking Tours"],
   },
   {
-    productCode: "487722P1",
-    productUrl:
-      "https://www.viator.com/tours/West-Glacier/Clear-Kayak-Rentals-for-Glacier-Park/d50559-487722P1",
-    title: "Clear Kayak Rentals for Glacier Park",
-    description:
-      "See Glacier National Park waterways from a completely clear kayak with flexible four-hour rentals and free roof racks, trolleys, and phone cases for transport to Lake McDonald, Hungry Horse Reservoir, or other Flathead Valley launch sites. Glacier Clear Water staff help you choose the best paddle route for your group.",
-    duration: "4 hours (approx.)",
-    priceFrom: 135,
-    heroUrl:
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/81/5c/b9.jpg",
-    rating: 4.9,
-    reviewCount: 29,
-    highlights: [
-      "Clear kayak rentals with unique underwater visibility",
-      "Flexible four-hour rental window",
-      "Free roof racks, trolleys, and phone cases included",
-      "Launch at Lake McDonald, Hungry Horse Reservoir, or Lake 5",
-      "Optional delivery to select launch locations",
-    ],
-    startDescription:
-      "Pick up clear kayaks and gear at Glacier Clear Water in Hungry Horse or coordinate delivery to your launch site.",
-    endDescription:
-      "Return kayaks and equipment to the agreed pickup point after your paddle session.",
-    itineraryItems: [
-      {
-        title: "Lake McDonald",
-        description:
-          "Popular launch option on Lake McDonald with shoreline views of the Lewis Range.",
-        duration: "2 hours",
-        stopType: "stop",
-      },
-      {
-        title: "Hungry Horse Reservoir",
-        description:
-          "Alternative paddle route on Hungry Horse Reservoir with mountain-backed water.",
-        duration: "2 hours",
-        stopType: "stop",
-      },
-      {
-        title: "Apgar Village",
-        description:
-          "Gear pickup and route briefing near Apgar Village when launching on Lake McDonald.",
-        duration: "20 minutes",
-        stopType: "stop",
-      },
-    ],
-    inclusions: [
-      "Clear kayak rental",
-      "Paddle and life vest",
-      "Roof racks and transport accessories",
-      "Staff gear briefing",
-    ],
-    categories: ["Kayaking and Canoeing", "Outdoor Activities"],
-  },
-  {
     productCode: "487722P4",
     productUrl:
       "https://www.viator.com/tours/West-Glacier/Sunset-Clear-Paddleboard-Rentals-for-Glacier-Park/d50559-487722P4",
@@ -525,66 +409,6 @@ const GLACIER_TOURS: GlacierTourFixture[] = [
       "Staff delivery and pickup coordination",
     ],
     categories: ["Kayaking and Canoeing", "Photography Tours", "Sunset Tours"],
-  },
-  {
-    productCode: "102020P125",
-    productUrl:
-      "https://www.viator.com/tours/West-Glacier/Glacier-National-Park-Going-to-the-Sun-Road-Audio-Tour-Guide/d50559-102020P125",
-    title: "Glacier National Park Going-to-the-Sun Road Self-Guided Tour",
-    description:
-      "Drive the iconic Going-to-the-Sun Road at your own pace with a Shaka Guide audio tour that shares park history, wildlife stories, and geology at GPS-triggered stops from Lake McDonald to Logan Pass. Download the tour to your phone and explore Glacier's alpine scenery without a fixed group schedule.",
-    duration: "10 to 11 hours (approx.)",
-    priceFrom: 15,
-    heroUrl:
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/26/46/40.jpg",
-    rating: 3.0,
-    reviewCount: 12,
-    highlights: [
-      "Self-guided audio tour along Going-to-the-Sun Road",
-      "GPS-triggered narration at Logan Pass and alpine pullouts",
-      "Flexible pacing with offline app access after download",
-      "Park history, wildlife, and geology commentary",
-      "Ideal complement to a full-day Sun Road drive",
-    ],
-    startDescription:
-      "Download the Shaka Guide app and purchase tour access before entering Glacier National Park. Begin at the West Glacier or St. Mary entrance depending on your route.",
-    endDescription:
-      "Complete the Sun Road loop at your chosen endpoint—St. Mary or West Glacier—when you finish the audio route.",
-    itineraryItems: [
-      {
-        title: "Going-to-the-Sun Road",
-        description:
-          "Follow the full Going-to-the-Sun Road with audio commentary at major pullouts and viewpoints.",
-        duration: "6 hours",
-        stopType: "stop",
-      },
-      {
-        title: "Logan Pass",
-        description:
-          "Stop at Logan Pass for high-alpine views and optional short walks near the Continental Divide.",
-        duration: "45 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Lake McDonald",
-        description:
-          "Begin or end at Lake McDonald with lakeshore views of the Lewis Range.",
-        duration: "30 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Glacier National Park",
-        description:
-          "Audio narration covers park formation, wildlife, and road engineering history throughout the drive.",
-        stopType: "pass-by",
-      },
-    ],
-    inclusions: [
-      "Self-guided audio tour access",
-      "GPS-triggered narration",
-      "Offline app playback after download",
-    ],
-    categories: ["Audio Guided Tours", "Self-Guided Tours", "Day Trips"],
   },
 ];
 

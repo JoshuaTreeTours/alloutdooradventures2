@@ -105,12 +105,12 @@ describe("Glacier Engine6 rating/review parity", () => {
     ).toEqual({ rating: 4.9, reviewCount: 389 });
   });
 
-  it("lists exactly ten Engine6 cards on the Glacier city index", () => {
+  it("lists exactly seven Engine6 cards on the Glacier city index", () => {
     const engine6GlacierTours = getToursByCityUnified(
       "montana",
       "glacier-national-park"
     ).filter(entry => entry.tour.engine === "engine6");
-    expect(engine6GlacierTours).toHaveLength(10);
+    expect(engine6GlacierTours).toHaveLength(7);
   });
 
   it("does not change non-Glacier merchant feed rows", () => {

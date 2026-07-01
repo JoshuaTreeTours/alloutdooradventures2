@@ -60,18 +60,6 @@
     "itineraryTitles": ["Apgar Village", "Lake McDonald", "Belton Bridge", "West Glacier"]
   },
   {
-    "productCode": "299521P1",
-    "productUrl": "https://www.viator.com/tours/West-Glacier/Glacier-Adventure-Tour-Drive-Snowshoe-in-a-Winter-Wonderland/d50559-299521P1",
-    "title": "Combo Tour: Driving and Snowshoe Trek of Glacier National Park",
-    "duration": "4 to 5 hours (approx.)",
-    "priceFrom": 220,
-    "rating": 4.7,
-    "reviewCount": 12,
-    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/1b/d1/75.jpg",
-    "categories": ["Nature and Wildlife Tours", "Winter Sports", "Full-day Tours"],
-    "itineraryTitles": ["Apgar Village", "Lake McDonald", "Glacier National Park", "West Glacier"]
-  },
-  {
     "productCode": "86727P7",
     "productUrl": "https://www.viator.com/tours/West-Glacier/Nature-Walk-in-Glacier-National-Park/d50559-86727P7",
     "title": "Nature Walk in Glacier National Park",
@@ -84,18 +72,6 @@
     "itineraryTitles": ["Trail of the Cedars", "Glacier National Park", "Apgar Village"]
   },
   {
-    "productCode": "487722P1",
-    "productUrl": "https://www.viator.com/tours/West-Glacier/Clear-Kayak-Rentals-for-Glacier-Park/d50559-487722P1",
-    "title": "Clear Kayak Rentals for Glacier Park",
-    "duration": "4 hours (approx.)",
-    "priceFrom": 135,
-    "rating": 4.9,
-    "reviewCount": 29,
-    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/81/5c/b9.jpg",
-    "categories": ["Kayaking and Canoeing", "Outdoor Activities"],
-    "itineraryTitles": ["Lake McDonald", "Hungry Horse Reservoir", "Apgar Village"]
-  },
-  {
     "productCode": "487722P4",
     "productUrl": "https://www.viator.com/tours/West-Glacier/Sunset-Clear-Paddleboard-Rentals-for-Glacier-Park/d50559-487722P4",
     "title": "Sunset LED Clear Paddleboard Rentals for Glacier Park",
@@ -106,17 +82,5 @@
     "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/74/0f/9c.jpg",
     "categories": ["Kayaking and Canoeing", "Photography Tours", "Sunset Tours"],
     "itineraryTitles": ["Lake McDonald", "Apgar Village"]
-  },
-  {
-    "productCode": "102020P125",
-    "productUrl": "https://www.viator.com/tours/West-Glacier/Glacier-National-Park-Going-to-the-Sun-Road-Audio-Tour-Guide/d50559-102020P125",
-    "title": "Glacier National Park Going-to-the-Sun Road Self-Guided Tour",
-    "duration": "10 to 11 hours (approx.)",
-    "priceFrom": 15,
-    "rating": 3.0,
-    "reviewCount": 12,
-    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/26/46/40.jpg",
-    "categories": ["Audio Guided Tours", "Self-Guided Tours", "Day Trips"],
-    "itineraryTitles": ["Going-to-the-Sun Road", "Logan Pass", "Lake McDonald", "Glacier National Park"]
   }
 ]

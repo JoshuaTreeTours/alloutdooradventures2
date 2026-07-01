@@ -10,11 +10,8 @@ export const ENGINE6_GLACIER_PRODUCT_CODES = [
   "70248P2",
   "299521P2",
   "299521P8",
-  "299521P1",
   "86727P7",
-  "487722P1",
   "487722P4",
-  "102020P125",
 ] as const;
 
 const glacierListingTours = engine6ListingTours.filter(
@@ -29,9 +26,9 @@ const glacierResolvedTours = engine6ResolvedTours.filter(tour =>
 );
 
 describe("Glacier Engine6 itinerary title governance", () => {
-  it("audits all 10 Glacier listing products", () => {
-    expect(glacierListingTours).toHaveLength(10);
-    expect(glacierResolvedTours).toHaveLength(10);
+  it("audits all 7 Glacier listing products", () => {
+    expect(glacierListingTours).toHaveLength(7);
+    expect(glacierResolvedTours).toHaveLength(7);
     expect(
       glacierResolvedTours.map(tour => tour.productCode).sort()
     ).toEqual([...ENGINE6_GLACIER_PRODUCT_CODES].sort());
@@ -56,8 +53,8 @@ describe("Glacier Engine6 itinerary title governance", () => {
 });
 
 describe("Glacier Engine6 hero diversity governance", () => {
-  it("uses unique listing-card heroes across all 10 Glacier products", () => {
-    expect(glacierListingTours).toHaveLength(10);
+  it("uses unique listing-card heroes across all 7 Glacier products", () => {
+    expect(glacierListingTours).toHaveLength(7);
 
     const heroCounts = glacierListingTours.reduce<Map<string, number>>(
       (counts, tour) => {
