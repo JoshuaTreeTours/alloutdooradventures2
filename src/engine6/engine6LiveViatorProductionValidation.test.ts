@@ -20,7 +20,10 @@ describe("engine6LiveViatorProductionValidation", () => {
 
   it("formats validation reports with failure details", () => {
     const formatted = formatEngine6LiveViatorProductionValidationReport({
+      mode: "strict",
       passed: false,
+      blockingPassed: false,
+      scopedProductCodes: [],
       validatedAt: "2026-06-30T00:00:00.000Z",
       results: [],
       failures: [
@@ -37,10 +40,69 @@ describe("engine6LiveViatorProductionValidation", () => {
           reason: "public page unavailable",
         },
       ],
+      blockingFailures: [
+        {
+          productCode: "TESTP1",
+          sourceUrl: "https://www.viator.com/tours/Test/d5610-TESTP1",
+          passed: false,
+          publicPageAvailable: false,
+          apiConfirmedActive: false,
+          canonicalProductCodeMatches: false,
+          merchantUrlMatches: true,
+          bookable: false,
+          knownUnavailableBlocklistHit: false,
+          reason: "public page unavailable",
+        },
+      ],
+      legacyFailures: [],
     });
 
     expect(formatted).toContain("TESTP1");
     expect(formatted).toContain("public page unavailable");
+  });
+
+  it("separates blocking and legacy failures in pr-scoped mode", () => {
+    const formatted = formatEngine6LiveViatorProductionValidationReport({
+      mode: "pr-scoped",
+      passed: true,
+      blockingPassed: true,
+      scopedProductCodes: ["NEWPRODUCTP1"],
+      validatedAt: "2026-06-30T00:00:00.000Z",
+      results: [],
+      failures: [
+        {
+          productCode: "LEGACYP1",
+          sourceUrl: "https://www.viator.com/tours/Test/d5610-LEGACYP1",
+          passed: false,
+          publicPageAvailable: false,
+          apiConfirmedActive: false,
+          canonicalProductCodeMatches: true,
+          merchantUrlMatches: true,
+          bookable: false,
+          knownUnavailableBlocklistHit: false,
+          reason: "legacy failure",
+        },
+      ],
+      blockingFailures: [],
+      legacyFailures: [
+        {
+          productCode: "LEGACYP1",
+          sourceUrl: "https://www.viator.com/tours/Test/d5610-LEGACYP1",
+          passed: false,
+          publicPageAvailable: false,
+          apiConfirmedActive: false,
+          canonicalProductCodeMatches: true,
+          merchantUrlMatches: true,
+          bookable: false,
+          knownUnavailableBlocklistHit: false,
+          reason: "legacy failure",
+        },
+      ],
+    });
+
+    expect(formatted).toContain("Legacy failures (report-only)");
+    expect(formatted).toContain("LEGACYP1");
+    expect(formatted).not.toContain("\nBlocking failures:\n");
   });
 
   it("accepts active public-page HTML signals for candidate assessment", () => {

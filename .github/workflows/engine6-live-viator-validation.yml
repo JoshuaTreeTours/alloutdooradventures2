@@ -22,6 +22,19 @@ on:
       - "scripts/vercel-build.mjs"
       - "src/engine6/**"
   workflow_dispatch:
+    inputs:
+      validation_mode:
+        description: Validation mode
+        required: false
+        default: pr-scoped
+        type: choice
+        options:
+          - pr-scoped
+          - strict
+      base_ref:
+        description: Base git ref for scoped product detection (pr-scoped only)
+        required: false
+        default: origin/main
 
 concurrency:
   group: engine6-live-viator-validation-${{ github.workflow }}-${{ github.ref }}
@@ -34,6 +47,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -44,9 +59,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Resolve validation base ref
+        id: validation-base
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "ref=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "push" ] && [ -n "${{ github.event.before }}" ]; then
+            echo "ref=${{ github.event.before }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "ref=${{ inputs.base_ref || 'origin/main' }}" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Validate configured Engine6 Viator products
         env:
           VIATOR_API_KEY: ${{ secrets.VIATOR_API_KEY }}
+          ENGINE6_LIVE_VIATOR_VALIDATION_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.validation_mode || 'pr-scoped' }}
+          ENGINE6_LIVE_VIATOR_VALIDATION_BASE_REF: ${{ steps.validation-base.outputs.ref }}
         run: npm run validate:engine6-live-viator
 
       - name: Upload validation report

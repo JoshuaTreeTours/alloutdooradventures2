@@ -23,11 +23,18 @@ export type Engine6LiveViatorValidationResult = {
   reason: string | null;
 };
 
+export type Engine6LiveViatorValidationMode = "strict" | "pr-scoped";
+
 export type Engine6LiveViatorProductionValidationReport = {
+  mode: Engine6LiveViatorValidationMode;
   passed: boolean;
+  blockingPassed: boolean;
+  scopedProductCodes: string[];
   validatedAt: string;
   results: Engine6LiveViatorValidationResult[];
   failures: Engine6LiveViatorValidationResult[];
+  blockingFailures: Engine6LiveViatorValidationResult[];
+  legacyFailures: Engine6LiveViatorValidationResult[];
 };
 
 const normalizeProductCode = (value: string) => value.trim().toUpperCase();
@@ -220,9 +227,50 @@ export const validateEngine6LiveViatorCandidate = async (args: {
   };
 };
 
+const buildEngine6LiveViatorProductionValidationReport = (args: {
+  mode: Engine6LiveViatorValidationMode;
+  scopedProductCodes: string[];
+  results: Engine6LiveViatorValidationResult[];
+}): Engine6LiveViatorProductionValidationReport => {
+  const scopedSet = new Set(
+    args.scopedProductCodes.map(code => code.trim().toUpperCase())
+  );
+  const failures = args.results.filter(result => !result.passed);
+  const blockingFailures =
+    args.mode === "strict"
+      ? failures
+      : failures.filter(result => scopedSet.has(result.productCode));
+  const legacyFailures =
+    args.mode === "strict"
+      ? []
+      : failures.filter(result => !scopedSet.has(result.productCode));
+  const blockingPassed = blockingFailures.length === 0;
+
+  return {
+    mode: args.mode,
+    passed: args.mode === "strict" ? failures.length === 0 : blockingPassed,
+    blockingPassed,
+    scopedProductCodes: [...args.scopedProductCodes].sort(),
+    validatedAt: new Date().toISOString(),
+    results: args.results,
+    failures,
+    blockingFailures,
+    legacyFailures,
+  };
+};
+
 export const validateConfiguredEngine6ProductionViatorProducts = async (args?: {
   fetchImpl?: typeof fetch;
+  mode?: Engine6LiveViatorValidationMode;
+  scopedProductCodes?: string[];
 }): Promise<Engine6LiveViatorProductionValidationReport> => {
+  const mode = args?.mode ?? "strict";
+  const scopedProductCodes = args?.scopedProductCodes ?? [];
+  const configuredCodes = new Set(
+    ENGINE6_VALIDATION_FIXTURES.map(fixture =>
+      fixture.productCode.trim().toUpperCase()
+    )
+  );
   const results: Engine6LiveViatorValidationResult[] = [];
 
   for (const fixture of ENGINE6_VALIDATION_FIXTURES) {
@@ -235,14 +283,16 @@ export const validateConfiguredEngine6ProductionViatorProducts = async (args?: {
     );
   }
 
-  const failures = results.filter(result => !result.passed);
+  const effectiveScopedProductCodes =
+    mode === "pr-scoped"
+      ? scopedProductCodes.filter(code => configuredCodes.has(code.toUpperCase()))
+      : [];
 
-  return {
-    passed: failures.length === 0,
-    validatedAt: new Date().toISOString(),
+  return buildEngine6LiveViatorProductionValidationReport({
+    mode,
+    scopedProductCodes: effectiveScopedProductCodes,
     results,
-    failures,
-  };
+  });
 };
 
 export const formatEngine6LiveViatorProductionValidationReport = (
@@ -250,14 +300,42 @@ export const formatEngine6LiveViatorProductionValidationReport = (
 ) => {
   const lines = [
     `Engine6 live Viator production validation (${report.validatedAt})`,
+    `Mode: ${report.mode}`,
     `Products validated: ${report.results.length}`,
     `Failures: ${report.failures.length}`,
   ];
 
-  for (const failure of report.failures) {
+  if (report.mode === "pr-scoped") {
     lines.push(
-      `- ${failure.productCode}: ${failure.reason ?? "validation failed"} (${failure.sourceUrl})`
+      `PR-scoped blocking products: ${report.scopedProductCodes.length}`,
+      `Blocking failures: ${report.blockingFailures.length}`,
+      `Legacy failures (report-only): ${report.legacyFailures.length}`
     );
+
+    if (report.scopedProductCodes.length > 0) {
+      lines.push(`Scoped product codes: ${report.scopedProductCodes.join(", ")}`);
+    }
+  }
+
+  if (report.blockingFailures.length > 0) {
+    lines.push(
+      "",
+      report.mode === "strict" ? "Failures:" : "Blocking failures:"
+    );
+    for (const failure of report.blockingFailures) {
+      lines.push(
+        `- ${failure.productCode}: ${failure.reason ?? "validation failed"} (${failure.sourceUrl})`
+      );
+    }
+  }
+
+  if (report.legacyFailures.length > 0) {
+    lines.push("", "Legacy failures (report-only):");
+    for (const failure of report.legacyFailures) {
+      lines.push(
+        `- ${failure.productCode}: ${failure.reason ?? "validation failed"} (${failure.sourceUrl})`
+      );
+    }
   }
 
   return lines.join("\n");
@@ -298,11 +376,12 @@ export const selectValidEngine6CandidatesFromRankedList = async (args: {
     accepted,
     rejected,
     filled: accepted.length >= args.desiredCount,
-    report: formatEngine6LiveViatorProductionValidationReport({
-      passed: accepted.length >= args.desiredCount,
-      validatedAt: new Date().toISOString(),
-      results: [...accepted, ...rejected],
-      failures: rejected,
-    }),
+    report: formatEngine6LiveViatorProductionValidationReport(
+      buildEngine6LiveViatorProductionValidationReport({
+        mode: "strict",
+        scopedProductCodes: [],
+        results: [...accepted, ...rejected],
+      })
+    ),
   };
 };
