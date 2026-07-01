@@ -9,6 +9,7 @@ import {
   fetchViatorPublicPage,
 } from "./viatorPublicAvailability.js";
 import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures.js";
+import { resolveVerifiedEngine6LiveViatorValidationBaseRef } from "./resolveEngine6ChangedProductCodes.js";
 
 export type Engine6LiveViatorValidationResult = {
   productCode: string;
@@ -47,10 +48,8 @@ export const resolveEngine6LiveViatorValidationMode =
     return "strict";
   };
 
-export const resolveEngine6LiveViatorValidationBaseRef = () =>
-  process.env.ENGINE6_LIVE_VIATOR_VALIDATION_BASE_REF?.trim() ||
-  process.env.VERCEL_GIT_PREVIOUS_SHA?.trim() ||
-  "origin/main";
+export const resolveEngine6LiveViatorValidationBaseRef = (): string | null =>
+  resolveVerifiedEngine6LiveViatorValidationBaseRef().baseRef;
 
 export type Engine6LiveViatorProductionValidationReport = {
   mode: Engine6LiveViatorValidationMode;
