@@ -50,7 +50,6 @@ import {
   ENGINE6_FORT_LAUDERDALE_BAHAMAS_FERRY_ROUTE,
   ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE,
   ENGINE6_FORT_LAUDERDALE_EVERGLADES_AIRBOAT_ROUTE,
-  ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_ROUTE,
   ENGINE6_FORT_LAUDERDALE_BIG_GAME_FISHING_ROUTE,
   ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE,
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
@@ -77,8 +76,8 @@ import {
   ENGINE6_SAN_FRANCISCO_YOSEMITE_3_DAY_CAMPING_ROUTE,
   ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS,
   ENGINE6_ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODES,
-  ENGINE6_MONTEREY_AQUARIUM_ADMISSION_PRODUCT_CODE,
-  ENGINE6_MONTEREY_AQUARIUM_ADMISSION_ROUTE,
+  ENGINE6_MONTEREY_SAILING_CRUISE_PRODUCT_CODE,
+  ENGINE6_MONTEREY_SAILING_CRUISE_ROUTE,
   ENGINE6_MONTEREY_POINT_LOBOS_WALK_PRODUCT_CODE,
   ENGINE6_MONTEREY_POINT_LOBOS_WALK_ROUTE,
   ENGINE6_MONTEREY_WHALE_WATCHING_4HR_PRODUCT_CODE,
@@ -1357,10 +1356,10 @@ describe("engine6 listing surfaces", () => {
     );
   });
 
-  it("adds 76145P2, 5559561P1, and 118958P8 to Florida and Fort Lauderdale listing sources", () => {
+  it("adds 76145P2 and 118958P8 to Florida and Fort Lauderdale listing sources", () => {
     const floridaTours = getToursByState("florida");
     const fortLauderdaleTours = getToursByCity("florida", "fort-lauderdale");
-    for (const productCode of ["76145P2", "5559561P1", "118958P8"]) {
+    for (const productCode of ["76145P2", "118958P8"]) {
       expect(floridaTours.some(tour => tour.productCode === productCode)).toBe(
         true
       );
@@ -1370,19 +1369,13 @@ describe("engine6 listing surfaces", () => {
     }
   });
 
-  it("keeps exact hero/card/cta parity for 76145P2, 5559561P1, and 118958P8", () => {
+  it("keeps exact hero/card/cta parity for 76145P2 and 118958P8", () => {
     const expectations = [
       {
         productCode: "76145P2",
         route: ENGINE6_FORT_LAUDERDALE_EVERGLADES_AIRBOAT_ROUTE,
         hero: "https://dynamic-media.tacdn.com/media/photo-o/2f/15/16/f1/caption.jpg?w=1100&h=800&s=1",
         cta: "https://www.viator.com/tours/Fort-Lauderdale/Authentic-Private-Everglades-Airboat-Tour/d660-76145P2?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD",
-      },
-      {
-        productCode: "5559561P1",
-        route: ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_ROUTE,
-        hero: "https://dynamic-media.tacdn.com/media/photo-o/2e/d1/7c/59/caption.jpg?w=700&h=500&s=1",
-        cta: "https://www.viator.com/tours/Fort-Lauderdale/JetCar-Fort-Lauderdale-Rental/d660-5559561P1?pid=P00290915&uid=U00174482&mcid=58086&medium=link&currency=USD",
       },
       {
         productCode: "118958P8",
@@ -2319,9 +2312,9 @@ describe("engine6 listing surfaces", () => {
       entry =>
         entry.productCode === ENGINE6_MONTEREY_WHALE_WATCHING_4HR_PRODUCT_CODE
     );
-    const aquariumTour = engine6ResolvedTours.find(
+    const sailingTour = engine6ResolvedTours.find(
       entry =>
-        entry.productCode === ENGINE6_MONTEREY_AQUARIUM_ADMISSION_PRODUCT_CODE
+        entry.productCode === ENGINE6_MONTEREY_SAILING_CRUISE_PRODUCT_CODE
     );
     const pointLobosTour = engine6ResolvedTours.find(
       entry =>
@@ -2333,11 +2326,11 @@ describe("engine6 listing surfaces", () => {
     );
     expect(
       resolveEngine6DisplayHero({
-        productHeroUrl: aquariumTour?.heroImageUrl,
+        productHeroUrl: sailingTour?.heroImageUrl,
         stateSlug: "california",
         citySlug: "monterey",
       })
-    ).toBe(ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL);
+    ).toBe(sailingTour?.heroImageUrl);
     expect(
       resolveEngine6DisplayHero({
         productHeroUrl: pointLobosTour?.heroImageUrl,
@@ -2350,21 +2343,21 @@ describe("engine6 listing surfaces", () => {
     const whaleEntry = unified.find(
       entry => entry.href === ENGINE6_MONTEREY_WHALE_WATCHING_4HR_ROUTE
     );
-    const aquariumEntry = unified.find(
-      entry => entry.href === ENGINE6_MONTEREY_AQUARIUM_ADMISSION_ROUTE
+    const sailingEntry = unified.find(
+      entry => entry.href === ENGINE6_MONTEREY_SAILING_CRUISE_ROUTE
     );
     const pointLobosEntry = unified.find(
       entry => entry.href === ENGINE6_MONTEREY_POINT_LOBOS_WALK_ROUTE
     );
 
     expect(whaleEntry).toBeDefined();
-    expect(aquariumEntry).toBeDefined();
+    expect(sailingEntry).toBeDefined();
     expect(pointLobosEntry).toBeDefined();
 
     const cardHtml = renderToString(
       <>
         <TourCard tour={whaleEntry!.tour} href={whaleEntry!.href} />
-        <TourCard tour={aquariumEntry!.tour} href={aquariumEntry!.href} />
+        <TourCard tour={sailingEntry!.tour} href={sailingEntry!.href} />
         <TourCard tour={pointLobosEntry!.tour} href={pointLobosEntry!.href} />
       </>
     );
@@ -2383,7 +2376,6 @@ describe("engine6 listing surfaces", () => {
       fixture.publicUrl.includes("/Monterey-and-Carmel/")
     );
     const unavailableProductCodes = new Set([
-      ENGINE6_MONTEREY_AQUARIUM_ADMISSION_PRODUCT_CODE,
       ENGINE6_MONTEREY_POINT_LOBOS_WALK_PRODUCT_CODE,
     ]);
 

@@ -296,7 +296,7 @@ export const ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE =
 export const ENGINE6_SAN_DIEGO_HALF_DAY_4X4_PRODUCT_CODE = "173946P1";
 export const ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE =
   "/destinations/california/san-diego/tours/half-day-4x4-adventure";
-export const ENGINE6_SAN_DIEGO_CORONADO_EBIKE_PRODUCT_CODE = "191303P1";
+export const ENGINE6_SAN_DIEGO_CORONADO_EBIKE_PRODUCT_CODE = "142924P6";
 export const ENGINE6_SAN_DIEGO_CORONADO_EBIKE_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-electric-bike-tour-of-coronado-small-group-beach-cruiser-experience";
 export const ENGINE6_SAN_DIEGO_CLASSIC_SAIL_CHARTER_PRODUCT_CODE = "5598628P3";
@@ -364,9 +364,6 @@ export const ENGINE6_FORT_LAUDERDALE_EVERGLADES_AIRBOAT_PRODUCT_CODE =
   "76145P2";
 export const ENGINE6_FORT_LAUDERDALE_EVERGLADES_AIRBOAT_ROUTE =
   "/destinations/florida/fort-lauderdale/tours/authentic-private-everglades-airboat-tour-76145p2";
-export const ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_PRODUCT_CODE = "5559561P1";
-export const ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_ROUTE =
-  "/destinations/florida/fort-lauderdale/tours/jetcar-fort-lauderdale-rental-5559561p1";
 export const ENGINE6_FORT_LAUDERDALE_BIG_GAME_FISHING_PRODUCT_CODE = "118958P8";
 export const ENGINE6_FORT_LAUDERDALE_BIG_GAME_FISHING_ROUTE =
   "/destinations/florida/fort-lauderdale/tours/4-hour-shared-big-game-fishing-118958p8";
@@ -402,9 +399,6 @@ export const ENGINE6_MIAMI_BISCAYNE_BAY_JET_SKI_ROUTE =
 export const ENGINE6_MIAMI_3_DAYS_AMAZING_PRODUCT_CODE = "214880P12";
 export const ENGINE6_MIAMI_3_DAYS_AMAZING_ROUTE =
   "/destinations/florida/miami/tours/3-days-amazing-tour-in-miami";
-export const ENGINE6_MIAMI_EVERGLADES_TO_KEYS_PRODUCT_CODE = "44152P18";
-export const ENGINE6_MIAMI_EVERGLADES_TO_KEYS_ROUTE =
-  "/destinations/florida/miami/tours/everglades-to-keys-floridas-ultimate-national-parks-expedition";
 export const ENGINE6_MIAMI_LUXURY_EXPERIENCE_PRIVATE_PRODUCT_CODE = "402171P1";
 export const ENGINE6_MIAMI_LUXURY_EXPERIENCE_PRIVATE_ROUTE =
   "/destinations/florida/miami/tours/miami-excursions-luxury-experience-private";
@@ -486,9 +480,6 @@ export const ENGINE6_PORTLAND_GORGE_MOUNT_HOOD_FULL_DAY_ROUTE =
 export const ENGINE6_PORTLAND_MOUNT_HOOD_DAY_TRIP_PRODUCT_CODE = "5765MTHOOD";
 export const ENGINE6_PORTLAND_MOUNT_HOOD_DAY_TRIP_ROUTE =
   "/destinations/oregon/portland/tours/mount-hood-day-trip-from-portland-5765MTHOOD";
-export const ENGINE6_PORTLAND_COAST_TOUR_PRODUCT_CODE = "5765P7";
-export const ENGINE6_PORTLAND_COAST_TOUR_ROUTE =
-  "/destinations/oregon/portland/tours/oregon-coast-tour-from-portland-5765P7";
 export const ENGINE6_PORTLAND_DOWNTOWN_FOOD_TOUR_PRODUCT_CODE = "401191P1";
 export const ENGINE6_PORTLAND_DOWNTOWN_FOOD_TOUR_ROUTE =
   "/destinations/oregon/portland/tours/heart-of-downtown-portland-food-tour-401191P1";
@@ -541,9 +532,6 @@ export const ENGINE6_SEATTLE_MT_RAINIER_HIKE_ROUTE =
 export const ENGINE6_SEATTLE_BOEING_TRANSPORT_PRODUCT_CODE = "3132SMB";
 export const ENGINE6_SEATTLE_BOEING_TRANSPORT_ROUTE =
   "/destinations/washington/seattle/tours/boeing-factory-tour-transport-from-seattle-3132SMB";
-export const ENGINE6_SEATTLE_BOEING_FACTORY_PRODUCT_CODE = "5396BOEING";
-export const ENGINE6_SEATTLE_BOEING_FACTORY_ROUTE =
-  "/destinations/washington/seattle/tours/boeing-factory-tour-from-seattle-5396BOEING";
 export const ENGINE6_SEATTLE_SNOQUALMIE_PRIVATE_PRODUCT_CODE = "8647P594";
 export const ENGINE6_SEATTLE_SNOQUALMIE_PRIVATE_ROUTE =
   "/destinations/washington/seattle/tours/private-seattle-city-snoqualmie-falls-tour-8647P594";
@@ -566,9 +554,6 @@ export const ENGINE6_MONTEREY_WHALE_WATCHING_ROUTE =
 export const ENGINE6_MONTEREY_SUNSET_WHALE_WATCH_PRODUCT_CODE = "53254P8";
 export const ENGINE6_MONTEREY_SUNSET_WHALE_WATCH_ROUTE =
   "/destinations/california/monterey/tours/sunset-whale-watch-monterey-53254P8";
-export const ENGINE6_MONTEREY_AQUARIUM_ADMISSION_PRODUCT_CODE = "6021MBA";
-export const ENGINE6_MONTEREY_AQUARIUM_ADMISSION_ROUTE =
-  "/destinations/california/monterey/tours/monterey-bay-aquarium-admission-6021MBA";
 export const ENGINE6_MONTEREY_CARMEL_FOOD_TOUR_PRODUCT_CODE = "5973FOOD";
 export const ENGINE6_MONTEREY_CARMEL_FOOD_TOUR_ROUTE =
   "/destinations/california/monterey/tours/carmel-food-wine-walking-tour-5973FOOD";
@@ -590,9 +575,9 @@ export const ENGINE6_MONTEREY_CARMEL_WINE_WALK_ROUTE =
 export const ENGINE6_MONTEREY_CARMEL_VALLEY_WINE_PRODUCT_CODE = "118676P4";
 export const ENGINE6_MONTEREY_CARMEL_VALLEY_WINE_ROUTE =
   "/destinations/california/monterey/tours/carmel-valley-wine-tour-premium-118676P4";
-export const ENGINE6_MONTEREY_SAILING_CRUISE_PRODUCT_CODE = "9345P1";
+export const ENGINE6_MONTEREY_SAILING_CRUISE_PRODUCT_CODE = "9345P24";
 export const ENGINE6_MONTEREY_SAILING_CRUISE_ROUTE =
-  "/destinations/california/monterey/tours/monterey-bay-sailing-cruise-9345P1";
+  "/destinations/california/monterey/tours/catamaran-sailing-cruise-monterey-9345P24";
 
 export const ENGINE6_MONTEREY_TOUR_PATH_PREFIX =
   "/destinations/california/monterey/tours/";
@@ -946,10 +931,6 @@ export const ENGINE6_ZION_275087P2_ROUTE =
 export const ENGINE6_ZION_163873P1_PRODUCT_CODE = "163873P1";
 export const ENGINE6_ZION_163873P1_ROUTE =
   "/destinations/utah/zion-national-park/tours/east-zion-canyoneering-elkheart-canyon-utv-163873P1";
-export const ENGINE6_ZION_118744P4_PRODUCT_CODE = "118744P4";
-export const ENGINE6_ZION_118744P4_ROUTE =
-  "/destinations/utah/zion-national-park/tours/white-sand-cave-118744P4";
-
 export const ENGINE6_ZION_TOUR_PATH_PREFIX =
   "/destinations/utah/zion-national-park/tours/";
 
@@ -1385,10 +1366,6 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_FORT_LAUDERDALE_EVERGLADES_AIRBOAT_PRODUCT_CODE,
   ],
   [
-    ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_ROUTE,
-    ENGINE6_FORT_LAUDERDALE_JETCAR_RENTAL_PRODUCT_CODE,
-  ],
-  [
     ENGINE6_FORT_LAUDERDALE_BIG_GAME_FISHING_ROUTE,
     ENGINE6_FORT_LAUDERDALE_BIG_GAME_FISHING_PRODUCT_CODE,
   ],
@@ -1422,10 +1399,6 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_MIAMI_3_DAYS_AMAZING_ROUTE,
     ENGINE6_MIAMI_3_DAYS_AMAZING_PRODUCT_CODE,
-  ],
-  [
-    ENGINE6_MIAMI_EVERGLADES_TO_KEYS_ROUTE,
-    ENGINE6_MIAMI_EVERGLADES_TO_KEYS_PRODUCT_CODE,
   ],
   [
     ENGINE6_MIAMI_LUXURY_EXPERIENCE_PRIVATE_ROUTE,
@@ -1516,7 +1489,6 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_PORTLAND_MOUNT_HOOD_DAY_TRIP_ROUTE,
     ENGINE6_PORTLAND_MOUNT_HOOD_DAY_TRIP_PRODUCT_CODE,
   ],
-  [ENGINE6_PORTLAND_COAST_TOUR_ROUTE, ENGINE6_PORTLAND_COAST_TOUR_PRODUCT_CODE],
   [
     ENGINE6_PORTLAND_DOWNTOWN_FOOD_TOUR_ROUTE,
     ENGINE6_PORTLAND_DOWNTOWN_FOOD_TOUR_PRODUCT_CODE,
@@ -1578,10 +1550,6 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_SEATTLE_BOEING_TRANSPORT_PRODUCT_CODE,
   ],
   [
-    ENGINE6_SEATTLE_BOEING_FACTORY_ROUTE,
-    ENGINE6_SEATTLE_BOEING_FACTORY_PRODUCT_CODE,
-  ],
-  [
     ENGINE6_SEATTLE_SNOQUALMIE_PRIVATE_ROUTE,
     ENGINE6_SEATTLE_SNOQUALMIE_PRIVATE_PRODUCT_CODE,
   ],
@@ -1600,10 +1568,6 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_MONTEREY_SUNSET_WHALE_WATCH_ROUTE,
     ENGINE6_MONTEREY_SUNSET_WHALE_WATCH_PRODUCT_CODE,
-  ],
-  [
-    ENGINE6_MONTEREY_AQUARIUM_ADMISSION_ROUTE,
-    ENGINE6_MONTEREY_AQUARIUM_ADMISSION_PRODUCT_CODE,
   ],
   [
     ENGINE6_MONTEREY_CARMEL_FOOD_TOUR_ROUTE,
@@ -2028,10 +1992,6 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_ZION_163873P1_ROUTE,
     ENGINE6_ZION_163873P1_PRODUCT_CODE,
-  ],
-  [
-    ENGINE6_ZION_118744P4_ROUTE,
-    ENGINE6_ZION_118744P4_PRODUCT_CODE,
   ],
 ] as const;
 

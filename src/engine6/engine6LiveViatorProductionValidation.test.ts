@@ -2,11 +2,31 @@ import { describe, expect, it } from "vitest";
 
 import {
   formatEngine6LiveViatorProductionValidationReport,
+  resolveEngine6LiveViatorValidationMode,
   validateEngine6LiveViatorCandidate,
 } from "./engine6LiveViatorProductionValidation";
 import { assessViatorPublicPageAvailability } from "./viatorPublicAvailability";
 
 describe("engine6LiveViatorProductionValidation", () => {
+  it("defaults production deploys to deploy-scoped validation", () => {
+    const previousVercelEnv = process.env.VERCEL_ENV;
+    const previousMode = process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE;
+
+    delete process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE;
+    process.env.VERCEL_ENV = "production";
+    expect(resolveEngine6LiveViatorValidationMode()).toBe("pr-scoped");
+
+    process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE = "strict";
+    expect(resolveEngine6LiveViatorValidationMode()).toBe("strict");
+
+    process.env.VERCEL_ENV = previousVercelEnv ?? "";
+    if (previousMode === undefined) {
+      delete process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE;
+    } else {
+      process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE = previousMode;
+    }
+  });
+
   it("rejects known unavailable blocklist products", async () => {
     const result = await validateEngine6LiveViatorCandidate({
       productCode: "3454P41",

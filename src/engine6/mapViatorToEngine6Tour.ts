@@ -87,8 +87,6 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Spend a full day touring Columbia River Gorge waterfalls and Mount Hood from Portland with a naturalist guide, van transport, and scenic driving.",
   "5765MTHOOD":
     "Take a full-day Mount Hood trip from Portland with stops at Multnomah Falls, Hood River, and scenic viewpoints along the Columbia River Gorge.",
-  "5765P7":
-    "Travel from Portland to the northern Oregon Coast on a full-day tour with stops at coastal overlooks, Cannon Beach, and Haystack Rock.",
   "401191P1":
     "Explore downtown Portland on a guided food tour with tastings at local favorites across the city center with neighborhood history and food culture commentary.",
   "67842P3":
@@ -119,8 +117,6 @@ const ENGINE6_META_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Combine a Mount Rainier National Park tour from Seattle with guided hiking on alpine trails, waterfall stops, and glacier viewpoints.",
   "3132SMB":
     "Travel from downtown Seattle to the Boeing Future of Flight facility for a guided factory tour with round-trip transport from the Hyatt Regency.",
-  "5396BOEING":
-    "Take a half-day trip from Seattle to the Boeing Everett factory for a guided assembly-plant tour and Future of Flight aviation exhibits.",
   "8647P594":
     "Explore Seattle and Snoqualmie Falls on a private five-hour tour with a dedicated driver-guide covering city landmarks and the 268-foot falls overlook.",
 };
@@ -262,8 +258,6 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Spend a full day touring Columbia River Gorge waterfalls and Mount Hood from Portland with a naturalist guide. The outing combines gorge overlooks, waterfall walks, and Mount Hood viewpoints with van transport, bottled water, and light snacks throughout the day.",
   "5765MTHOOD":
     "Take a full-day Mount Hood trip from Portland with stops at Multnomah Falls, Hood River, and scenic viewpoints along the Columbia River Gorge. Travel by Mercedes-Benz Sprinter with a local guide, hotel pickup, and time for photos at waterfall and mountain overlooks.",
-  "5765P7":
-    "Travel from Portland to the northern Oregon Coast on a full-day tour with stops at coastal overlooks, beach towns, and scenic Highway 101 viewpoints. A local guide handles the driving while you visit Cannon Beach, Haystack Rock, and additional north-coast landmarks.",
   "401191P1":
     "Explore downtown Portland on a guided food tour with tastings at local favorites across the city center. A guide leads a walking route through central districts while sharing Portland food culture, neighborhood history, and stories behind each stop.",
   "67842P3":
@@ -294,8 +288,6 @@ const ENGINE6_DESCRIPTION_OVERRIDES: Record<string, string> = {
     "Combine a Mount Rainier National Park tour from Seattle with guided hiking on alpine trails. The outing includes old-growth forest walks, waterfall stops, and glacier viewpoints with trekking poles and seasonal snowshoes provided when needed.",
   "3132SMB":
     "Travel from downtown Seattle to the Boeing Future of Flight facility for a guided factory tour of the world's largest building by volume. Explore assembly-line viewing areas and aviation exhibits with round-trip transport from the Hyatt Regency Seattle.",
-  "5396BOEING":
-    "Take a half-day trip from Seattle to the Boeing Everett factory for a guided assembly-plant tour and Future of Flight exhibits. Hotel pickup across the greater Seattle area includes time at the aviation gallery and gift shop.",
   "8647P594":
     "Explore Seattle and Snoqualmie Falls on a private five-hour tour with a dedicated driver-guide. The flexible route covers city landmarks such as Kerry Park and Pike Place Market before continuing east to the 268-foot Snoqualmie Falls overlook.",
 };
@@ -320,8 +312,8 @@ const ENGINE6_OVERVIEW_OVERRIDES: Record<
     "This Joshua Tree experience is built around movement: climbing, stepping, and scrambling through the park’s granite world with a guide who coaches technique and pacing as you go. Instead of staying on flat viewpoints, you work through boulder clusters and natural rock corridors, using hands and feet to reach higher perches with wide Mojave and Colorado Desert views. The route emphasizes active problem-solving and body awareness, with options that keep adventurous beginners engaged while still rewarding more experienced hikers. Between scrambles, your guide shares practical insight into how wind, water, and tectonic forces shaped these formations and why desert life survives here. From the Palm Springs/Joshua Tree area, it’s an energetic half-day outdoors for travelers who want something more physical than a standard scenic stop circuit.",
   "3351P15": () =>
     "Explore Indian Canyons on a guided bike-and-hike experience from Palm Springs that combines cycling sections with on-foot trail segments through canyon corridors and desert scenery. The route emphasizes the area’s canyon landscape, native palm oasis setting, and the broader Coachella Valley desert environment while logistics and pacing are managed by your guide. As an active, structured outing, it is a practical choice for travelers who want a single experience that blends sightseeing, light interpretation of local desert ecology and geology, and hands-on outdoor movement.",
-  "191303P1": () =>
-    "This guided electric-bike tour explores Coronado Island in a small group of up to six travelers using custom Fat Woody beach cruisers. Riders roll past the Glorietta Bay Promenade, Coronado Beach, and Coronado Ferry Landing while a local guide shares Coronado history, manages route pacing, and helps capture photos along the way. Bikes include an integrated speaker system for beach tunes, and each guest receives a color-matched helmet plus bottled water. The 3-hour format is designed for confident riders who want scenic waterfront coverage, light storytelling, and a relaxed but structured coastal loop near San Diego.",
+  "142924P6": () =>
+    "Ride a guided electric bike tour across Coronado Island on flat, car-free paths with views of the Coronado Bridge, Hotel del Coronado, and San Diego Bay. The route follows separated bike lanes through Victorian neighborhoods and the Silver Strand shoreline while your guide shares local history and takes photos along the way.",
   "69764P1": () =>
     "This 3-hour whale watching cruise from San Diego follows the local coastline for seasonal marine-life viewing and open-ocean scenery. Depending on conditions, sightings can include whales, dolphins, and seabirds while your crew shares practical context about local waters and wildlife behavior, including naturalist or captain commentary when offered onboard. The classic coastal outing offers broad photo opportunities from the boat. It is a strong fit for families, couples, and first-time visitors who want a dependable San Diego ocean activity centered on wildlife and views.",
   "18125P5": () =>

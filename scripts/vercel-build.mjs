@@ -112,6 +112,86 @@ function runMerchantFeedCommercialBackfill() {
   }
 }
 
+function resolveEngine6LiveViatorValidationEnv() {
+  const explicitMode =
+    process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE?.trim().toLowerCase() ??
+    "";
+  const validationMode =
+    explicitMode === "strict"
+      ? "strict"
+      : explicitMode === "pr-scoped"
+        ? "pr-scoped"
+        : "pr-scoped";
+
+  const baseRef =
+    process.env.ENGINE6_LIVE_VIATOR_VALIDATION_BASE_REF?.trim() ||
+    process.env.VERCEL_GIT_PREVIOUS_SHA?.trim() ||
+    "origin/main";
+
+  return {
+    ENGINE6_LIVE_VIATOR_VALIDATION_MODE: validationMode,
+    ...(validationMode === "pr-scoped"
+      ? { ENGINE6_LIVE_VIATOR_VALIDATION_BASE_REF: baseRef }
+      : {}),
+  };
+}
+
+function runEngine6LiveViatorProductionValidation() {
+  const cmd = "tsx";
+  const args = ["scripts/validate-engine6-production-viator.ts"];
+  const validationEnv = resolveEngine6LiveViatorValidationEnv();
+
+  console.log(`\n> ${cmd} ${args.join(" ")}`);
+  console.log("[vercel-build] Engine6 live Viator validation env:", {
+    ...validationEnv,
+    VERCEL_GIT_PREVIOUS_SHA: process.env.VERCEL_GIT_PREVIOUS_SHA ?? "(unset)",
+    VERCEL_GIT_COMMIT_SHA: process.env.VERCEL_GIT_COMMIT_SHA ?? "(unset)",
+    VIATOR_API_KEY: process.env.VIATOR_API_KEY ? "(set)" : "(unset)",
+    ENGINE6_VIATOR_API_KEY: process.env.ENGINE6_VIATOR_API_KEY
+      ? "(set)"
+      : "(unset)",
+    VIATOR_PARTNER_API_KEY: process.env.VIATOR_PARTNER_API_KEY
+      ? "(set)"
+      : "(unset)",
+  });
+
+  const result = spawnSync(`${cmd} ${args.join(" ")}`, {
+    env: { ...buildEnv, ...validationEnv },
+    encoding: "utf8",
+    maxBuffer: 64 * 1024 * 1024,
+    shell: true,
+    stdio: ["inherit", "pipe", "pipe"],
+  });
+
+  emitCapturedProcessOutput(
+    "[vercel-build][engine6-live-viator-validation]",
+    result.stdout,
+    result.stderr
+  );
+
+  if (result.status !== 0) {
+    const failureDetails = formatCapturedProcessFailure(
+      result.stdout,
+      result.stderr
+    );
+
+    console.error(
+      `[vercel-build] validate-engine6-production-viator.ts failed (exit ${result.status ?? "null"})`
+    );
+    console.error(
+      `[vercel-build] ${failureDetails.replace(/\n/g, "\n[vercel-build] ")}`
+    );
+
+    if (result.error) {
+      console.error("[vercel-build] spawn error:", result.error);
+    }
+
+    throw new Error(
+      `validate-engine6-production-viator.ts failed with exit code ${result.status ?? "null"}\n${failureDetails}`
+    );
+  }
+}
+
 function runMerchantFeedGeneration() {
   const cmd = "tsx";
   const args = ["scripts/generate-merchant-feed.ts"];
@@ -182,6 +262,7 @@ preview:
 
 production:
   enrichment (when script exists)
+  Engine6 live Viator validation (deploy-scoped by default; strict when ENGINE6_LIVE_VIATOR_VALIDATION_MODE=strict)
   merchant feed commercial backfill (optional one-time when RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL=1)
   merchant feed (when script exists; live commercial refresh on every production build)
   sitemap
@@ -214,6 +295,15 @@ if (
   runMerchantFeedCommercialBackfill();
 } else if (!isPreview && process.env.RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL === "1") {
   console.log("Skipping merchant feed commercial backfill (script missing).");
+}
+
+if (
+  !isPreview &&
+  exists("scripts/validate-engine6-production-viator.ts")
+) {
+  runEngine6LiveViatorProductionValidation();
+} else if (!isPreview) {
+  console.log("Skipping Engine6 live Viator production validation.");
 }
 
 if (

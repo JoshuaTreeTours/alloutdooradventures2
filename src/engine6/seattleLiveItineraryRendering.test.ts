@@ -47,7 +47,6 @@ describe("Seattle Engine6 live itinerary rendering", () => {
       "5396MTR",
       "351474P1",
       "3132SMB",
-      "5396BOEING",
       "8647P594",
     ];
 

@@ -174,7 +174,7 @@ describe("Engine6 hero diversity governance", () => {
   });
 
   it("uses Zion as the validation cohort for unique listing-card heroes", () => {
-    expect(zionListingTours).toHaveLength(17);
+    expect(zionListingTours).toHaveLength(16);
 
     const heroCounts = zionListingTours.reduce<Map<string, number>>(
       (counts, tour) => {
@@ -218,9 +218,9 @@ describe("Engine6 hero diversity governance", () => {
           heroImageUrl: ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL,
         },
         {
-          productCode: "6021MBA",
+          productCode: "9345P24",
           heroImageUrl:
-            "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/2e/41/ec.jpg",
+            "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/46/2a/0e.jpg",
         },
       ],
     });
@@ -229,7 +229,9 @@ describe("Engine6 hero diversity governance", () => {
       ENGINE6_MONTEREY_CANONICAL_CITY_HERO_URL
     );
     expect(resolvedHeroes.get("53254P8")).toBe(curatedSunsetWhaleWatchHero);
-    expect(resolvedHeroes.get("6021MBA")).toBe(aquariumFallbackHero);
+    expect(resolvedHeroes.get("9345P24")).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/46/2a/0e.jpg"
+    );
   });
 
   it("allows duplicate city-canonical heroes only when no valid unique alternative exists", () => {
