@@ -36,8 +36,68 @@ export const destinationIdentitiesMatch = (
   );
 };
 
+const DIRECTIONAL_DESTINATION_PREFIX_TOKENS = new Set([
+  "east",
+  "lower",
+  "north",
+  "south",
+  "upper",
+  "west",
+]);
+
 const destinationIdentityTokens = (value: string) =>
   normalizeEngine6DestinationIdentity(value).split(" ").filter(Boolean);
+
+const stripLeadingDirectionalDestinationTokens = (tokens: readonly string[]) => {
+  let index = 0;
+
+  while (
+    index < tokens.length - 1 &&
+    DIRECTIONAL_DESTINATION_PREFIX_TOKENS.has(tokens[index])
+  ) {
+    index += 1;
+  }
+
+  return tokens.slice(index);
+};
+
+const destinationIdentityTokensMatchAsPrefix = (
+  leftTokens: readonly string[],
+  rightTokens: readonly string[]
+) => {
+  const [prefixTokens, fullTokens] =
+    leftTokens.length <= rightTokens.length
+      ? [leftTokens, rightTokens]
+      : [rightTokens, leftTokens];
+
+  if (prefixTokens.length === 0) {
+    return false;
+  }
+
+  return prefixTokens.every((token, index) => fullTokens[index] === token);
+};
+
+const destinationIdentityTokenSetsReferToSameEngine6Destination = (
+  leftTokens: readonly string[],
+  rightTokens: readonly string[]
+) => {
+  if (destinationIdentityTokensMatchAsPrefix(leftTokens, rightTokens)) {
+    return true;
+  }
+
+  const leftWithoutDirection = stripLeadingDirectionalDestinationTokens(leftTokens);
+  const rightWithoutDirection =
+    stripLeadingDirectionalDestinationTokens(rightTokens);
+
+  return (
+    destinationIdentityTokensMatchAsPrefix(
+      leftWithoutDirection,
+      rightWithoutDirection
+    ) ||
+    destinationIdentityTokensMatchAsPrefix(leftTokens, rightWithoutDirection) ||
+    destinationIdentityTokensMatchAsPrefix(leftWithoutDirection, rightTokens)
+  );
+};
 
 export const destinationIdentitiesReferToSameEngine6Destination = (
   left: string | null | undefined,
@@ -51,23 +111,16 @@ export const destinationIdentitiesReferToSameEngine6Destination = (
     return true;
   }
 
-  const leftTokens = destinationIdentityTokens(left);
-  const rightTokens = destinationIdentityTokens(right);
-  const [prefixTokens, fullTokens] =
-    leftTokens.length <= rightTokens.length
-      ? [leftTokens, rightTokens]
-      : [rightTokens, leftTokens];
-
-  if (prefixTokens.length === 0) {
-    return false;
-  }
-
-  return prefixTokens.every((token, index) => fullTokens[index] === token);
+  return destinationIdentityTokenSetsReferToSameEngine6Destination(
+    destinationIdentityTokens(left),
+    destinationIdentityTokens(right)
+  );
 };
 
 const collectIntendedDestinationSlugs = (args: {
   destinationCitySlug?: string | null;
   viatorDestinationSlug?: string | null;
+  configPathSlug?: string | null;
 }) => {
   const slugs = new Set<string>();
 
@@ -79,13 +132,18 @@ const collectIntendedDestinationSlugs = (args: {
     slugs.add(args.viatorDestinationSlug.trim());
   }
 
+  if (args.configPathSlug?.trim()) {
+    slugs.add(args.configPathSlug.trim());
+  }
+
   return [...slugs];
 };
 
-const isProductBoundToSameEngine6Destination = (args: {
+export const isProductBoundToSameEngine6Destination = (args: {
   boundCitySlug: string;
   destinationCitySlug?: string | null;
   viatorDestinationSlug?: string | null;
+  configPathSlug?: string | null;
 }) => {
   const intendedDestinationSlugs = collectIntendedDestinationSlugs(args);
 
@@ -114,6 +172,7 @@ export const assessEngine6DestinationProductBinding = (args: {
   sourceUrl: string;
   destinationCitySlug?: string | null;
   viatorDestinationSlug?: string | null;
+  configPathSlug?: string | null;
   destinationLabel?: string | null;
 }): Engine6DestinationBindingAssessment => {
   const viatorDestinationSlug = extractViatorTourDestinationSlug(args.sourceUrl);
@@ -127,6 +186,7 @@ export const assessEngine6DestinationProductBinding = (args: {
       boundCitySlug,
       destinationCitySlug: args.destinationCitySlug,
       viatorDestinationSlug: args.viatorDestinationSlug,
+      configPathSlug: args.configPathSlug,
     })
   ) {
     return {

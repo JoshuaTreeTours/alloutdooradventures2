@@ -88,6 +88,27 @@ describe("engine6DestinationProductBinding", () => {
     ).toBe(false);
   });
 
+  it("treats West Glacier Viator slugs as the same Engine6 destination", () => {
+    expect(
+      destinationIdentitiesReferToSameEngine6Destination(
+        "glacier-national-park",
+        "west-glacier"
+      )
+    ).toBe(true);
+    expect(
+      destinationIdentitiesReferToSameEngine6Destination(
+        "glacier-national-park",
+        "West-Glacier"
+      )
+    ).toBe(true);
+    expect(
+      destinationIdentitiesReferToSameEngine6Destination(
+        "glacier-national-park",
+        "glacier"
+      )
+    ).toBe(true);
+  });
+
   it("detects duplicate Engine6 destination assignments across destinations", () => {
     const boundCitySlug = resolveEngine6ConfiguredProductCitySlug("199627P12");
     expect(boundCitySlug).toBe("zion-national-park");

@@ -122,6 +122,7 @@ export const runEngine6ParagonProductSelectionPipeline = async (args: {
     destinationLabel: args.config.destinationLabel,
     destinationCitySlug: args.config.destinationCitySlug,
     viatorDestinationSlug: args.config.viatorDestinationSlug,
+    configPathSlug: args.config.configPathSlug,
     targetPremiumShare: args.config.targetPremiumShare,
     slots: args.config.slots,
     fetchImpl: args.fetchImpl,

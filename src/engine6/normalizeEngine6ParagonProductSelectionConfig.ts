@@ -106,6 +106,7 @@ export const normalizeEngine6ParagonProductSelectionConfig = (args: {
     destinationLabel,
     destinationCitySlug,
     viatorDestinationSlug,
+    configPathSlug: pathSlug?.toLowerCase() ?? undefined,
     targetPremiumShare:
       typeof record.targetPremiumShare === "number"
         ? record.targetPremiumShare

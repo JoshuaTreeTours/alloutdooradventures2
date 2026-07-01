@@ -376,6 +376,7 @@ export type SelectEngine6DestinationPortfolioArgs = {
   destinationLabel: string;
   destinationCitySlug?: string;
   viatorDestinationSlug?: string;
+  configPathSlug?: string;
   slots: Engine6ProductSelectionSlot[];
   targetPremiumShare?: number;
   mode?: Engine6LiveViatorValidationMode;
@@ -610,6 +611,7 @@ export const selectEngine6DestinationPortfolio = async (
         sourceUrl: candidate.sourceUrl,
         destinationCitySlug: args.destinationCitySlug,
         viatorDestinationSlug: args.viatorDestinationSlug,
+        configPathSlug: args.configPathSlug,
         destinationLabel: args.destinationLabel,
       });
 
@@ -821,6 +823,7 @@ export type Engine6DestinationBuildConfig = {
   destinationLabel: string;
   destinationCitySlug?: string;
   viatorDestinationSlug?: string;
+  configPathSlug?: string;
   targetPremiumShare?: number;
   slots: Engine6ProductSelectionSlot[];
 };
