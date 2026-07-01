@@ -1,6 +1,38 @@
 import { readFileSync } from "node:fs";
 
+import { normalizeEngine6ParagonProductSelectionConfig } from "../../src/engine6/normalizeEngine6ParagonProductSelectionConfig";
 import type { Engine6DestinationBuildConfig } from "../../src/engine6/engine6ProductSelectionGovernance";
+
+export { normalizeEngine6ParagonProductSelectionConfig } from "../../src/engine6/normalizeEngine6ParagonProductSelectionConfig";
+
+const readDestinationLabelOverride = () => {
+  const flagIndex = process.argv.indexOf("--destination");
+  if (flagIndex >= 0) {
+    return process.argv[flagIndex + 1]?.trim() || null;
+  }
+
+  return process.env.ENGINE6_PRODUCT_SELECTION_DESTINATION?.trim() || null;
+};
+
+export const readEngine6ParagonProductSelectionConfigFromPath = (args: {
+  configPath: string;
+  destinationLabelOverride?: string | null;
+}): {
+  configPath: string;
+  config: Engine6DestinationBuildConfig;
+} => {
+  const raw = JSON.parse(readFileSync(args.configPath, "utf8")) as unknown;
+
+  return {
+    configPath: args.configPath,
+    config: normalizeEngine6ParagonProductSelectionConfig({
+      configPath: args.configPath,
+      raw,
+      destinationLabelOverride:
+        args.destinationLabelOverride ?? readDestinationLabelOverride(),
+    }),
+  };
+};
 
 export const readEngine6ParagonProductSelectionConfigFromArgv = () => {
   const configPath =
@@ -13,24 +45,5 @@ export const readEngine6ParagonProductSelectionConfigFromArgv = () => {
     );
   }
 
-  const parsed = JSON.parse(
-    readFileSync(configPath, "utf8")
-  ) as Engine6DestinationBuildConfig;
-
-  if (!parsed.destinationLabel?.trim()) {
-    throw new Error(
-      `Invalid Engine6 Paragon config at ${configPath}: missing destinationLabel`
-    );
-  }
-
-  if (!Array.isArray(parsed.slots) || parsed.slots.length === 0) {
-    throw new Error(
-      `Invalid Engine6 Paragon config at ${configPath}: expected non-empty slots array`
-    );
-  }
-
-  return {
-    configPath,
-    config: parsed,
-  };
+  return readEngine6ParagonProductSelectionConfigFromPath({ configPath });
 };
