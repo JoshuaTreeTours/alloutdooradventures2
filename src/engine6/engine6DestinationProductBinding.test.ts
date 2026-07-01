@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   assessEngine6DestinationProductBinding,
   destinationIdentitiesMatch,
+  destinationIdentitiesReferToSameEngine6Destination,
   extractViatorTourDestinationSlug,
   normalizeEngine6DestinationIdentity,
   resolveEngine6ConfiguredProductCitySlug,
@@ -41,7 +42,53 @@ describe("engine6DestinationProductBinding", () => {
     expect(assessment.violation).toBe("cross-destination");
   });
 
-  it("detects duplicate Engine6 destination assignments", () => {
+  it("accepts products already configured for the same Engine6 destination", () => {
+    const boundCitySlug = resolveEngine6ConfiguredProductCitySlug("199627P12");
+    expect(boundCitySlug).toBe("zion-national-park");
+
+    const sameDestinationAssessment = assessEngine6DestinationProductBinding({
+      productCode: "199627P12",
+      sourceUrl:
+        "https://www.viator.com/tours/Zion-National-Park/Zion-Guided-Hike/d5610-199627P12",
+      destinationCitySlug: "zion-national-park",
+      viatorDestinationSlug: "Zion-National-Park",
+    });
+
+    expect(sameDestinationAssessment.violation).toBeNull();
+
+    const shortSlugAssessment = assessEngine6DestinationProductBinding({
+      productCode: "199627P12",
+      sourceUrl:
+        "https://www.viator.com/tours/Zion-National-Park/Zion-Guided-Hike/d5610-199627P12",
+      destinationCitySlug: "zion",
+      viatorDestinationSlug: "Zion-National-Park",
+    });
+
+    expect(shortSlugAssessment.violation).toBeNull();
+  });
+
+  it("treats short destination slugs as the same Engine6 destination", () => {
+    expect(
+      destinationIdentitiesReferToSameEngine6Destination(
+        "zion-national-park",
+        "zion"
+      )
+    ).toBe(true);
+    expect(
+      destinationIdentitiesReferToSameEngine6Destination(
+        "yosemite",
+        "yosemite-national-park"
+      )
+    ).toBe(true);
+    expect(
+      destinationIdentitiesReferToSameEngine6Destination(
+        "zion-national-park",
+        "yellowstone-national-park"
+      )
+    ).toBe(false);
+  });
+
+  it("detects duplicate Engine6 destination assignments across destinations", () => {
     const boundCitySlug = resolveEngine6ConfiguredProductCitySlug("199627P12");
     expect(boundCitySlug).toBe("zion-national-park");
 
@@ -50,6 +97,7 @@ describe("engine6DestinationProductBinding", () => {
       sourceUrl:
         "https://www.viator.com/tours/Zion-National-Park/Zion-Guided-Hike/d5610-199627P12",
       destinationCitySlug: "yellowstone-national-park",
+      viatorDestinationSlug: "Yellowstone-National-Park",
     });
 
     expect(assessment.violation).toBe("duplicate-engine6-assignment");

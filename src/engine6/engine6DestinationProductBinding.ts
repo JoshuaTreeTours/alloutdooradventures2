@@ -36,6 +36,68 @@ export const destinationIdentitiesMatch = (
   );
 };
 
+const destinationIdentityTokens = (value: string) =>
+  normalizeEngine6DestinationIdentity(value).split(" ").filter(Boolean);
+
+export const destinationIdentitiesReferToSameEngine6Destination = (
+  left: string | null | undefined,
+  right: string | null | undefined
+) => {
+  if (!left?.trim() || !right?.trim()) {
+    return false;
+  }
+
+  if (destinationIdentitiesMatch(left, right)) {
+    return true;
+  }
+
+  const leftTokens = destinationIdentityTokens(left);
+  const rightTokens = destinationIdentityTokens(right);
+  const [prefixTokens, fullTokens] =
+    leftTokens.length <= rightTokens.length
+      ? [leftTokens, rightTokens]
+      : [rightTokens, leftTokens];
+
+  if (prefixTokens.length === 0) {
+    return false;
+  }
+
+  return prefixTokens.every((token, index) => fullTokens[index] === token);
+};
+
+const collectIntendedDestinationSlugs = (args: {
+  destinationCitySlug?: string | null;
+  viatorDestinationSlug?: string | null;
+}) => {
+  const slugs = new Set<string>();
+
+  if (args.destinationCitySlug?.trim()) {
+    slugs.add(args.destinationCitySlug.trim());
+  }
+
+  if (args.viatorDestinationSlug?.trim()) {
+    slugs.add(args.viatorDestinationSlug.trim());
+  }
+
+  return [...slugs];
+};
+
+const isProductBoundToSameEngine6Destination = (args: {
+  boundCitySlug: string;
+  destinationCitySlug?: string | null;
+  viatorDestinationSlug?: string | null;
+}) => {
+  const intendedDestinationSlugs = collectIntendedDestinationSlugs(args);
+
+  if (intendedDestinationSlugs.length === 0) {
+    return true;
+  }
+
+  return intendedDestinationSlugs.some(slug =>
+    destinationIdentitiesReferToSameEngine6Destination(args.boundCitySlug, slug)
+  );
+};
+
 export type Engine6DestinationBindingViolation =
   | "cross-destination"
   | "duplicate-engine6-assignment";
@@ -61,9 +123,11 @@ export const assessEngine6DestinationProductBinding = (args: {
 
   if (
     boundCitySlug &&
-    args.destinationCitySlug?.trim() &&
-    boundCitySlug !== args.destinationCitySlug.trim() &&
-    !destinationIdentitiesMatch(boundCitySlug, args.destinationCitySlug)
+    !isProductBoundToSameEngine6Destination({
+      boundCitySlug,
+      destinationCitySlug: args.destinationCitySlug,
+      viatorDestinationSlug: args.viatorDestinationSlug,
+    })
   ) {
     return {
       violation: "duplicate-engine6-assignment",
