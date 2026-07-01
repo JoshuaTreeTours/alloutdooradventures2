@@ -25,6 +25,25 @@ Every new Engine6 specimen must inherit these behaviors without custom branching
 - **FAQ parity:** FAQ schema must match visible FAQ entries.
 - **Price contract:** price is "From" minimum price, kept aligned between UI copy and schema (`price`, `priceCurrency`, `priceValidUntil`).
 
+## Stage 2: Merchant feed image governance
+
+Every Engine6 merchant-feed generation path must enforce live image URL validation before writing `image_link` values:
+
+- Resolve each row's initial hero using the standard Engine6 display-hero policy for the destination.
+- Before writing any merchant feed CSV row, verify every `image_link` URL resolves successfully.
+- Reject HTTP 404, 403, 5xx, timeout, invalid redirect, empty response, placeholder, missing, broken, or non-image URLs.
+- When the selected hero fails validation, recover automatically in this order:
+  1. next valid product-specific image
+  2. next valid POI/location image
+  3. curated product fallback image
+  4. destination canonical image
+  5. global Engine6 fallback image
+- Fail generation only when no valid replacement image exists for newly added or branch-modified Engine6 scope.
+- Report invalid images on unchanged legacy and non-Engine6 baseline rows without blocking production regeneration.
+- Report images validated, automatically repaired, requiring fallback, and unrecoverable failures in the build completion output.
+
+This Stage 2 rule applies to all future Engine6 city builds and all merchant-feed generation. Existing published cities remain unchanged until they are regenerated.
+
 ## Forbidden patterns
 
 The following are forbidden in Engine6 work:
