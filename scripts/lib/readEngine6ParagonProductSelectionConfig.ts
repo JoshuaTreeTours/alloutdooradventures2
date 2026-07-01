@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 
-import type { Engine6DestinationBuildConfig } from "../src/engine6/engine6ProductSelectionGovernance";
+import type { Engine6DestinationBuildConfig } from "../../src/engine6/engine6ProductSelectionGovernance";
 
 export const readEngine6ParagonProductSelectionConfigFromArgv = () => {
   const configPath =

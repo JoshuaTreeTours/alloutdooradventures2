@@ -6,11 +6,11 @@ import {
   formatEngine6ProductSelectionGovernanceReport,
   type Engine6DestinationBuildConfig,
   type Engine6ProductSelectionGovernanceReport,
-} from "../src/engine6/engine6ProductSelectionGovernance";
+} from "../../src/engine6/engine6ProductSelectionGovernance";
 import {
   collectEngine6ProductSelectionBlocklistAdditions,
   persistEngine6ProductSelectionBlocklistAdditions,
-} from "../src/engine6/engine6ProductSelectionBlocklist";
+} from "../../src/engine6/engine6ProductSelectionBlocklist";
 import {
   assertEngine6ParagonArtifactStageAllowed,
   buildEngine6ParagonProductSelectionConfig,
@@ -20,7 +20,7 @@ import {
   type Engine6ParagonDestinationCatalogTour,
   type Engine6ParagonGovernanceDownstreamArtifactStage,
   type Engine6ParagonGovernancePipelineContext,
-} from "../src/engine6/engine6ParagonGovernancePipeline";
+} from "../../src/engine6/engine6ParagonGovernancePipeline";
 
 export {
   assertEngine6ParagonArtifactStageAllowed,
@@ -33,7 +33,7 @@ export {
   type Engine6ParagonDestinationCatalogTour,
   type Engine6ParagonGovernanceDownstreamArtifactStage,
   type Engine6ParagonGovernancePipelineContext,
-} from "../src/engine6/engine6ParagonGovernancePipeline";
+} from "../../src/engine6/engine6ParagonGovernancePipeline";
 
 const REPORT_DIR = path.resolve("reports");
 const JSON_PATH = path.join(

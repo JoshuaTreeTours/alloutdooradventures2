@@ -1,4 +1,4 @@
-import type { Engine6Tour } from "../src/engine6/types";
+import type { Engine6Tour } from "../../src/engine6/types";
 import {
   buildEngine6ParagonProductSelectionConfig,
   prepareEngine6ParagonDownstreamStageFromResolvedTours,

@@ -14,7 +14,7 @@ import {
   runEngine6ParagonProductSelectionPipelineWithReports,
 } from "./engine6ParagonGovernancePipeline";
 import { readEngine6ParagonProductSelectionConfigFromArgv } from "./readEngine6ParagonProductSelectionConfig";
-import { assertEngine6CommitPullRequestGate } from "../src/engine6/engine6ProductSelectionGovernance";
+import { assertEngine6CommitPullRequestGate } from "../../src/engine6/engine6ProductSelectionGovernance";
 
 /** @deprecated Use the Engine6 Paragon governance pipeline exports instead. */
 export const readEngine6DestinationBuildConfigFromArgv =
