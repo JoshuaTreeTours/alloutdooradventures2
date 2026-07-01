@@ -1,0 +1,58 @@
+name: Engine6 Live Viator Validation
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/engine6-live-viator-validation.yml"
+      - "data/engine6/**"
+      - "data/merchantFeed.csv"
+      - "scripts/generate-*-engine6-fixtures.ts"
+      - "scripts/validate-engine6-production-viator.ts"
+      - "scripts/vercel-build.mjs"
+      - "src/engine6/**"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/engine6-live-viator-validation.yml"
+      - "data/engine6/**"
+      - "data/merchantFeed.csv"
+      - "scripts/generate-*-engine6-fixtures.ts"
+      - "scripts/validate-engine6-production-viator.ts"
+      - "scripts/vercel-build.mjs"
+      - "src/engine6/**"
+  workflow_dispatch:
+
+concurrency:
+  group: engine6-live-viator-validation-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-engine6-viator-products:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate configured Engine6 Viator products
+        env:
+          VIATOR_API_KEY: ${{ secrets.VIATOR_API_KEY }}
+        run: npm run validate:engine6-live-viator
+
+      - name: Upload validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: engine6-live-viator-validation-report
+          path: artifacts/engine6-live-viator-production-validation.json
+          if-no-files-found: ignore
