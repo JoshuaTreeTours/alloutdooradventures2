@@ -898,21 +898,21 @@ export const ENGINE6_YELLOWSTONE_TOUR_PATH_PREFIX =
 export const isEngine6YellowstoneTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_YELLOWSTONE_TOUR_PATH_PREFIX);
 
-export const ENGINE6_ZION_265766P9_PRODUCT_CODE = "265766P9";
-export const ENGINE6_ZION_265766P9_ROUTE =
-  "/destinations/utah/zion-national-park/tours/zion-full-day-private-tour-hike-265766P9";
+export const ENGINE6_ZION_199627P12_PRODUCT_CODE = "199627P12";
+export const ENGINE6_ZION_199627P12_ROUTE =
+  "/destinations/utah/zion-national-park/tours/zion-private-guided-hike-gourmet-picnic-199627P12";
 export const ENGINE6_ZION_199627P1_PRODUCT_CODE = "199627P1";
 export const ENGINE6_ZION_199627P1_ROUTE =
   "/destinations/utah/zion-national-park/tours/narrows-zion-private-guided-hike-199627P1";
-export const ENGINE6_ZION_170406P19_PRODUCT_CODE = "170406P19";
-export const ENGINE6_ZION_170406P19_ROUTE =
-  "/destinations/utah/zion-national-park/tours/private-angels-landing-day-hike-170406P19";
-export const ENGINE6_ZION_310623P1_PRODUCT_CODE = "310623P1";
-export const ENGINE6_ZION_310623P1_ROUTE =
-  "/destinations/utah/zion-national-park/tours/east-zion-via-ferrata-canyoneering-rappelling-310623P1";
-export const ENGINE6_ZION_318343P2_PRODUCT_CODE = "318343P2";
-export const ENGINE6_ZION_318343P2_ROUTE =
-  "/destinations/utah/zion-national-park/tours/zion-kolob-ghost-town-slot-canyon-vistas-318343P2";
+export const ENGINE6_ZION_422797P4_PRODUCT_CODE = "422797P4";
+export const ENGINE6_ZION_422797P4_ROUTE =
+  "/destinations/utah/zion-national-park/tours/private-angels-landing-hike-permit-included-422797P4";
+export const ENGINE6_ZION_118887P10_PRODUCT_CODE = "118887P10";
+export const ENGINE6_ZION_118887P10_ROUTE =
+  "/destinations/utah/zion-national-park/tours/tallest-utah-via-ferrata-rappelling-118887P10";
+export const ENGINE6_ZION_118744P3_PRODUCT_CODE = "118744P3";
+export const ENGINE6_ZION_118744P3_ROUTE =
+  "/destinations/utah/zion-national-park/tours/peekaboo-slot-canyon-4wd-tour-118744P3";
 export const ENGINE6_ZION_265766P10_PRODUCT_CODE = "265766P10";
 export const ENGINE6_ZION_265766P10_ROUTE =
   "/destinations/utah/zion-national-park/tours/bryce-canyon-full-day-private-tour-hike-265766P10";
@@ -1966,24 +1966,24 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_YELLOWSTONE_463268P2_PRODUCT_CODE,
   ],
   [
-    ENGINE6_ZION_265766P9_ROUTE,
-    ENGINE6_ZION_265766P9_PRODUCT_CODE,
+    ENGINE6_ZION_199627P12_ROUTE,
+    ENGINE6_ZION_199627P12_PRODUCT_CODE,
   ],
   [
     ENGINE6_ZION_199627P1_ROUTE,
     ENGINE6_ZION_199627P1_PRODUCT_CODE,
   ],
   [
-    ENGINE6_ZION_170406P19_ROUTE,
-    ENGINE6_ZION_170406P19_PRODUCT_CODE,
+    ENGINE6_ZION_422797P4_ROUTE,
+    ENGINE6_ZION_422797P4_PRODUCT_CODE,
   ],
   [
-    ENGINE6_ZION_310623P1_ROUTE,
-    ENGINE6_ZION_310623P1_PRODUCT_CODE,
+    ENGINE6_ZION_118887P10_ROUTE,
+    ENGINE6_ZION_118887P10_PRODUCT_CODE,
   ],
   [
-    ENGINE6_ZION_318343P2_ROUTE,
-    ENGINE6_ZION_318343P2_PRODUCT_CODE,
+    ENGINE6_ZION_118744P3_ROUTE,
+    ENGINE6_ZION_118744P3_PRODUCT_CODE,
   ],
   [
     ENGINE6_ZION_265766P10_ROUTE,

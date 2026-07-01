@@ -182,6 +182,7 @@ preview:
 
 production:
   enrichment (when script exists)
+  Engine6 live Viator production validation (required before merchant feed publication)
   merchant feed commercial backfill (optional one-time when RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL=1)
   merchant feed (when script exists; live commercial refresh on every production build)
   sitemap
@@ -214,6 +215,15 @@ if (
   runMerchantFeedCommercialBackfill();
 } else if (!isPreview && process.env.RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL === "1") {
   console.log("Skipping merchant feed commercial backfill (script missing).");
+}
+
+if (
+  !isPreview &&
+  exists("scripts/validate-engine6-production-viator.ts")
+) {
+  run("tsx scripts/validate-engine6-production-viator.ts");
+} else if (!isPreview) {
+  console.log("Skipping Engine6 live Viator production validation.");
 }
 
 if (

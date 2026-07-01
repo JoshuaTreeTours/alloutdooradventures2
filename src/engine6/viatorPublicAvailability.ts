@@ -361,7 +361,7 @@ export const assertViatorPublicPageAvailabilityFromUrl = async (args: {
   });
 };
 
-/** Public-page evidence captured when Yosemite unavailable products were rejected. */
+/** Public-page evidence captured when unavailable products were rejected. */
 export const ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS = {
   "3454P41": {
     sourceUrl:
@@ -379,5 +379,25 @@ export const ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS = {
       "https://www.viator.com/tours/Yosemite-National-Park/Mariposa-Grove-of-Giant-Sequoias-and-Wawona-Small-Group-Tour/d5265-391021P3",
     title:
       "Mariposa Grove of Giant Sequoias and Wawona Small Group Tour in Yosemite",
+  },
+  "265766P9": {
+    sourceUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Full-Day-Private-Hiking-Tour-in-Zion-National-Park/d5610-265766P9",
+    title: "Zion Full Day Private Tour & Hike",
+  },
+  "170406P19": {
+    sourceUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Private-Angels-Landing-Day-Hike-Party-of-1-4/d5610-170406P19",
+    title: "Private Angel's Landing Day Hike",
+  },
+  "310623P1": {
+    sourceUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Private-East-Zion-Via-Feratta-Canyoneering-and-Rappelling-Tour-half-day/d5610-310623P1",
+    title: "East Zion Via Ferrata Canyoneering & Rappelling",
+  },
+  "318343P2": {
+    sourceUrl:
+      "https://www.viator.com/tours/Zion-National-Park/Full-Day-Private-Tour-Zion-via-Kolob-Terrace-Ghost-Town-Slot-Canyon-and-Dunes/d5610-318343P2",
+    title: "Zion/Kolob Ghost Town Slot Canyon Vistas Private Full Day",
   },
 } as const;

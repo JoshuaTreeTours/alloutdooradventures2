@@ -115,11 +115,15 @@ describe("Engine6 Viator public availability governance", () => {
     expect(String(rejections[0]?.message)).toMatch(/3454P41/);
   });
 
-  it("documents the three Yosemite products removed for public unavailability", () => {
+  it("documents unavailable products removed for public unavailability", () => {
     expect(Object.keys(ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS)).toEqual([
       "3454P41",
       "18808P1",
       "391021P3",
+      "265766P9",
+      "170406P19",
+      "310623P1",
+      "318343P2",
     ]);
   });
 });

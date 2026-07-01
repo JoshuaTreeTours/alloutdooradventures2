@@ -399,8 +399,8 @@ export const buildEngine6NationalParkHikingOpening = ({
   }
 
   return poiLead
-    ? `Hike to ${poiLead} and across Yellowstone's ${routeContext}${durationPhrase} with wide valley views and guide interpretation.`
-    : `Hike across Yellowstone's ${routeContext}${durationPhrase} with wide valley views and guide interpretation.`;
+    ? `Hike to ${poiLead} and across ${cityLabel}'s ${routeContext}${durationPhrase} with wide valley views and guide interpretation.`
+    : `Hike across ${cityLabel}'s ${routeContext}${durationPhrase} with wide valley views and guide interpretation.`;
 };
 
 export const buildEngine6NationalParkPoiFollowOn = ({
