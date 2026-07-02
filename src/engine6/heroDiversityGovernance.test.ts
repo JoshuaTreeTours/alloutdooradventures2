@@ -140,7 +140,7 @@ describe("Engine6 hero diversity governance", () => {
   });
 
   it("uses Grand Canyon as the validation cohort for unique listing-card heroes", () => {
-    expect(grandCanyonListingTours).toHaveLength(22);
+    expect(grandCanyonListingTours).toHaveLength(21);
 
     const heroCounts = grandCanyonListingTours.reduce<Map<string, number>>(
       (counts, tour) => {

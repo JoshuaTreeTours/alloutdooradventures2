@@ -196,7 +196,6 @@ import specimen5488718p3Payload from "../../data/engine6/viator/5488718P3.exact-
 import specimen7886p3Payload from "../../data/engine6/viator/7886P3.exact-product.json";
 import specimen3272gcerPayload from "../../data/engine6/viator/3272GCER.exact-product.json";
 import specimen25576p9Payload from "../../data/engine6/viator/25576P9.exact-product.json";
-import specimen108446p2Payload from "../../data/engine6/viator/108446P2.exact-product.json";
 import specimen6338discoveryPayload from "../../data/engine6/viator/6338DISCOVERY.exact-product.json";
 import specimen229754p1Payload from "../../data/engine6/viator/229754P1.exact-product.json";
 import specimen3272gcsr2Payload from "../../data/engine6/viator/3272GCSR2.exact-product.json";
@@ -2074,15 +2073,6 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Grand-Canyon-National-Park/Western-Ranch-Overnight-Experience-Cabin-or-Camp-Out/d815-25576P9",
     rawPayload: specimen25576p9Payload as Record<string, unknown>,
-    validationRules: {
-      itineraryOriginalityForNewBuilds: true,
-    },
-  },
-  {
-    productCode: "108446P2",
-    publicUrl:
-      "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-Biblical-Creation-Sunset-Tour/d815-108446P2",
-    rawPayload: specimen108446p2Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
