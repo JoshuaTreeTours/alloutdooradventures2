@@ -105,12 +105,12 @@ describe("Grand Canyon Engine6 rating/review parity", () => {
     ).toEqual({ rating: 4.8, reviewCount: 2018 });
   });
 
-  it("lists exactly twenty-two Engine6 cards on the Grand Canyon city index", () => {
+  it("lists exactly twenty-one Engine6 cards on the Grand Canyon city index", () => {
     const engine6GrandCanyonTours = getToursByCityUnified(
       "arizona",
       "grand-canyon-national-park"
     ).filter(entry => entry.tour.engine === "engine6");
-    expect(engine6GrandCanyonTours).toHaveLength(22);
+    expect(engine6GrandCanyonTours).toHaveLength(21);
   });
 
   it("does not change non-Grand Canyon merchant feed rows", () => {

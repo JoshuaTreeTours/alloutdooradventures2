@@ -26,7 +26,6 @@ export const GRAND_CANYON_VIATOR_PUBLIC_RATINGS: Record<
   "7886P3": { rating: 5.0, reviewCount: 177 },
   "3272GCER": { rating: 4.6, reviewCount: 298 },
   "25576P9": { rating: 4.1, reviewCount: 14 },
-  "6613P14": { rating: 4.6, reviewCount: 184 },
   "6338DISCOVERY": { rating: 4.6, reviewCount: 373 },
   "229754P1": { rating: 4.9, reviewCount: 446 },
   "3272GCSR2": { rating: 4.6, reviewCount: 237 },
