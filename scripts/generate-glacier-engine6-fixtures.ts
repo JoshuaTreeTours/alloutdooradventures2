@@ -196,7 +196,7 @@ const GLACIER_TOURS: GlacierTourFixture[] = [
     duration: "8 hours (approx.)",
     priceFrom: 220,
     heroUrl:
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/f1/ad.jpg",
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/1b/d1/77.jpg",
     rating: 5.0,
     reviewCount: 18,
     highlights: [
@@ -258,7 +258,7 @@ const GLACIER_TOURS: GlacierTourFixture[] = [
     duration: "5 to 6 hours (approx.)",
     priceFrom: 240,
     heroUrl:
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/f1/ae.jpg",
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/15/32/ef/caption.jpg",
     rating: 5.0,
     reviewCount: 34,
     highlights: [
