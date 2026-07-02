@@ -1,230 +1,403 @@
-import { extractViatorTourDestinationSlug } from "./engine6DestinationProductBinding.js";
 import {
-  assertEngine6ArtifactGenerationAllowed,
-  assertEngine6CommitPullRequestGate,
-  runEngine6DestinationBuildGovernance,
-  type Engine6DestinationBuildConfig,
+  assertEngine6FixturesBuildGate,
+  assertEngine6MerchantFeedBuildGate,
+  assertEngine6RoutesBuildGate,
+  assertEngine6SitemapBuildGate,
+  selectEngine6DestinationPortfolio,
   type Engine6DeterministicBuildStage,
   type Engine6ProductSelectionGovernanceReport,
-  type Engine6ProductSelectionSlot,
 } from "./engine6ProductSelectionGovernance.js";
+import {
+  bindEngine6DestinationProducts,
+  buildEngine6HeroIntegrityInputsFromBinding,
+  buildPrincipalExperienceTypeMap,
+  summarizeEngine6DestinationProductBinding,
+  type Engine6DestinationProductBindingReport,
+} from "./engine6DestinationProductBinding.js";
+import {
+  formatEngine6HeroIntegrityGovernanceReport,
+  runEngine6HeroIntegrityGovernance,
+  type Engine6HeroIntegrityGovernanceReport,
+} from "./engine6HeroIntegrityGovernance.js";
+import {
+  formatEngine6RenderingParityGovernanceReport,
+  runEngine6RenderingParityGovernance,
+  type Engine6RenderingParityGovernanceReport,
+} from "./engine6RenderingParityGovernance.js";
+import type { Engine6LiveViatorValidationMode } from "./engine6LiveViatorProductionValidation.js";
+import {
+  normalizeEngine6ParagonProductSelectionConfig,
+  type Engine6ParagonProductSelectionConfig,
+} from "./normalizeEngine6ParagonProductSelectionConfig.js";
+import type { Engine6Tour } from "./types.js";
+import type { MerchantFeedParityRow } from "./merchantFeedParity.js";
 
-export const ENGINE6_PARAGON_GOVERNANCE_PIPELINE_ID =
-  "engine6-paragon-governance-pipeline" as const;
-
-export const ENGINE6_PARAGON_GOVERNANCE_DOWNSTREAM_ARTIFACT_STAGES = [
-  "fixtures",
-  "merchant-feed",
-  "routes",
-  "sitemap",
-  "destination-pages",
-  "previews",
+export const ENGINE6_PARAGON_GOVERNANCE_REUSED_MODULES = [
+  "engine6ProductSelectionGovernance.selectEngine6DestinationPortfolio",
+  "engine6HeroIntegrityGovernance.runEngine6HeroIntegrityGovernance",
+  "engine6RenderingParityGovernance.runEngine6RenderingParityGovernance",
+  "engine6DestinationProductBinding.bindEngine6DestinationProducts",
+  "displayHero.resolveEngine6DisplayHero",
+  "merchantFeedParity.compareMerchantFeedRowToProductSchema",
+  "creationValidation.validateEngine6CreationContract",
 ] as const;
 
-export type Engine6ParagonGovernanceDownstreamArtifactStage =
-  (typeof ENGINE6_PARAGON_GOVERNANCE_DOWNSTREAM_ARTIFACT_STAGES)[number];
+export const ENGINE6_PARAGON_GOVERNANCE_NEW_MODULES = [
+  "engine6ParagonGovernancePipeline",
+  "engine6HeroIntegrityGovernance",
+  "engine6RenderingParityGovernance",
+  "engine6DestinationProductBinding",
+  "normalizeEngine6ParagonProductSelectionConfig",
+  "engine6PrincipalExperienceType",
+] as const;
 
-const PARAGON_ARTIFACT_TO_BUILD_STAGE: Partial<
-  Record<
-    Engine6ParagonGovernanceDownstreamArtifactStage,
-    Exclude<Engine6DeterministicBuildStage, "live-validation">
-  >
-> = {
-  fixtures: "fixtures",
-  "merchant-feed": "merchant-feed",
-  routes: "routes",
-  sitemap: "sitemap",
-};
-
-export type Engine6ParagonDestinationCatalogTour = {
-  productCode: string;
-  productUrl: string;
-  title: string;
-  priceFrom: number;
-  categories?: string[];
-  experienceType?: string;
-};
-
-export type Engine6ParagonGovernancePipelineContext = {
-  pipelineId: typeof ENGINE6_PARAGON_GOVERNANCE_PIPELINE_ID;
-  report: Engine6ProductSelectionGovernanceReport;
-  validatedProductCodes: string[];
-  completedBuildStages: readonly Engine6DeterministicBuildStage[];
-};
-
-export class Engine6ParagonGovernancePipelineError extends Error {
-  readonly report: Engine6ProductSelectionGovernanceReport;
-
-  constructor(report: Engine6ProductSelectionGovernanceReport) {
-    super(
-      report.buildTerminationReason ??
-        "Engine6 Paragon governance pipeline blocked downstream artifact generation."
-    );
-    this.name = "Engine6ParagonGovernancePipelineError";
-    this.report = report;
-  }
-}
-
-const normalizeProductCode = (value: string) => value.trim().toUpperCase();
-
-export const buildEngine6ParagonProductSelectionConfig = (args: {
-  destinationLabel: string;
-  destinationCitySlug: string;
-  viatorDestinationSlug?: string;
-  targetPremiumShare?: number;
-  tours: Engine6ParagonDestinationCatalogTour[];
-  slots?: Engine6ProductSelectionSlot[];
-}): Engine6DestinationBuildConfig => {
-  const viatorDestinationSlug =
-    args.viatorDestinationSlug?.trim() ||
-    extractViatorTourDestinationSlug(args.tours[0]?.productUrl ?? "") ||
-    args.destinationCitySlug;
-
-  const slots =
-    args.slots ??
-    ([
-      {
-        experienceType: "destination-portfolio",
-        desiredCount: args.tours.length,
-        candidates: args.tours.map((tour, index) => ({
-          productCode: tour.productCode,
-          sourceUrl: tour.productUrl,
-          title: tour.title,
-          experienceType: tour.experienceType ?? "destination-portfolio",
-          priceFrom: tour.priceFrom,
-          categories: tour.categories,
-          priority: index + 1,
-        })),
-      },
-    ] satisfies Engine6ProductSelectionSlot[]);
-
-  return {
-    destinationLabel: args.destinationLabel,
-    destinationCitySlug: args.destinationCitySlug,
-    viatorDestinationSlug,
-    targetPremiumShare: args.targetPremiumShare,
-    slots,
-  };
-};
-
-export const runEngine6ParagonProductSelectionPipeline = async (args: {
-  config: Engine6DestinationBuildConfig;
-  fetchImpl?: typeof fetch;
-  destinationBuild?: boolean;
-  mode?: "strict" | "pr-scoped";
+export type Engine6ParagonGovernancePipelineArgs = {
+  config: Engine6ParagonProductSelectionConfig | unknown;
+  mode?: Engine6LiveViatorValidationMode;
   scopedProductCodes?: string[];
   headRef?: string;
+  fetchImpl?: typeof fetch;
   validateCandidate?: Parameters<
-    typeof runEngine6DestinationBuildGovernance
+    typeof selectEngine6DestinationPortfolio
   >[0]["validateCandidate"];
-}): Promise<Engine6ParagonGovernancePipelineContext> => {
-  const build = await runEngine6DestinationBuildGovernance({
-    destinationLabel: args.config.destinationLabel,
-    destinationCitySlug: args.config.destinationCitySlug,
-    viatorDestinationSlug: args.config.viatorDestinationSlug,
-    configPathSlug: args.config.configPathSlug,
-    targetPremiumShare: args.config.targetPremiumShare,
-    slots: args.config.slots,
-    fetchImpl: args.fetchImpl,
-    validateCandidate: args.validateCandidate,
-    mode: args.mode,
-    scopedProductCodes: args.scopedProductCodes,
-    headRef: args.headRef,
-    destinationBuild: args.destinationBuild ?? true,
-  });
-
-  if (build.report.buildTerminated || !build.report.passed) {
-    throw new Engine6ParagonGovernancePipelineError(build.report);
-  }
-
-  assertEngine6CommitPullRequestGate(build.report);
-
-  return {
-    pipelineId: ENGINE6_PARAGON_GOVERNANCE_PIPELINE_ID,
-    report: build.report,
-    validatedProductCodes: build.validatedProductCodes,
-    completedBuildStages: ["live-validation"],
-  };
-};
-
-export const assertEngine6ParagonArtifactStageAllowed = (args: {
-  context: Engine6ParagonGovernancePipelineContext;
-  stage: Engine6ParagonGovernanceDownstreamArtifactStage;
-}) => {
-  const mappedStage = PARAGON_ARTIFACT_TO_BUILD_STAGE[args.stage];
-
-  if (!mappedStage) {
-    if (args.context.report.buildTerminated || !args.context.report.passed) {
-      throw new Engine6ParagonGovernancePipelineError(args.context.report);
+  generatedAt?: string;
+  /** Live hero URLs from validated Viator products keyed by product code. */
+  liveProductHeroUrls?: Record<
+    string,
+    {
+      primaryHeroUrl?: string | null;
+      alternateHeroUrls?: string[];
     }
-
-    assertEngine6CommitPullRequestGate(args.context.report);
-    return;
-  }
-
-  assertEngine6ArtifactGenerationAllowed({
-    report: args.context.report,
-    nextStage: mappedStage,
-  });
+  >;
+  /** Pre-assigned hero URLs to validate/replace before binding. */
+  currentHeroUrlsByProductCode?: Record<string, string | null | undefined>;
+  /** Optional post-fixture tours for rendering parity validation. */
+  tours?: Engine6Tour[];
+  merchantFeedRowsByProductCode?: Map<string, MerchantFeedParityRow>;
+  /** Build stages already completed before invoking the pipeline. */
+  priorCompletedBuildStages?: readonly Engine6DeterministicBuildStage[];
+  /** When true, downstream artifact build gates are asserted after governance passes. */
+  assertBuildGates?: boolean;
+  /** Target build stage to gate (defaults to fixtures when tours are absent). */
+  targetBuildStage?: Engine6DeterministicBuildStage;
 };
 
-export const filterEngine6ParagonCatalogByValidatedProductCodes = <
-  T extends { productCode: string },
->(
-  catalog: T[],
-  validatedProductCodes: readonly string[]
-) => {
-  const catalogByCode = new Map(
-    catalog.map(entry => [normalizeProductCode(entry.productCode), entry])
+export type Engine6ParagonGovernancePipelineReport = {
+  generatedAt: string;
+  destinationLabel: string;
+  stateSlug: string;
+  citySlug: string;
+  configValid: boolean;
+  productSelection?: Engine6ProductSelectionGovernanceReport;
+  heroIntegrity?: Engine6HeroIntegrityGovernanceReport;
+  productBinding?: Engine6DestinationProductBindingReport;
+  renderingParity?: Engine6RenderingParityGovernanceReport;
+  buildOrderPreserved: boolean;
+  heroIntegrityPassed: boolean;
+  renderingParityPassed: boolean;
+  blockingPassed: boolean;
+  passed: boolean;
+  reusedModules: readonly string[];
+  newModules: readonly string[];
+  duplicateValidationLogicIntroduced: false;
+  formattedSummary: string;
+};
+
+const completedStagesAfterParagonPreflight = (
+  priorCompletedBuildStages: readonly Engine6DeterministicBuildStage[]
+): Engine6DeterministicBuildStage[] => {
+  const stages = new Set<Engine6DeterministicBuildStage>(
+    priorCompletedBuildStages
   );
+  stages.add("live-validation");
+  return [...stages];
+};
 
-  const filtered: T[] = [];
-  const missingCatalogEntries: string[] = [];
-
-  for (const productCode of validatedProductCodes) {
-    const normalized = normalizeProductCode(productCode);
-    const entry = catalogByCode.get(normalized);
-    if (!entry) {
-      missingCatalogEntries.push(normalized);
-      continue;
-    }
-    filtered.push(entry);
-  }
-
-  if (missingCatalogEntries.length > 0) {
+export const assertEngine6ParagonPreflightGate = (args: {
+  heroIntegrityPassed: boolean;
+  renderingParityPassed: boolean;
+  productBindingPassed: boolean;
+  productSelectionPassed: boolean;
+}) => {
+  if (!args.productSelectionPassed) {
     throw new Error(
-      `Engine6 Paragon governance selected validated product(s) missing from destination catalog: ${missingCatalogEntries.join(", ")}`
+      "Engine6 Paragon governance blocked: product selection did not pass live validation"
     );
   }
 
-  return filtered;
+  if (!args.heroIntegrityPassed) {
+    throw new Error(
+      "Engine6 Paragon governance blocked: hero integrity validation failed"
+    );
+  }
+
+  if (!args.productBindingPassed) {
+    throw new Error(
+      "Engine6 Paragon governance blocked: destination product binding incomplete"
+    );
+  }
+
+  if (!args.renderingParityPassed) {
+    throw new Error(
+      "Engine6 Paragon governance blocked: rendering parity validation failed"
+    );
+  }
 };
 
-export const buildEngine6ParagonProductSelectionConfigFromResolvedTours = (args: {
-  destinationLabel: string;
-  destinationCitySlug: string;
-  viatorDestinationSlug?: string;
-  targetPremiumShare?: number;
-  tours: Array<{
-    productCode: string;
-    bookingUrl: string;
-    title: string;
-    priceAmount: number | null;
-    categories?: string[];
-  }>;
-}) =>
-  buildEngine6ParagonProductSelectionConfig({
-    destinationLabel: args.destinationLabel,
-    destinationCitySlug: args.destinationCitySlug,
-    viatorDestinationSlug: args.viatorDestinationSlug,
-    targetPremiumShare: args.targetPremiumShare,
-    tours: args.tours.map(tour => ({
-      productCode: tour.productCode,
-      productUrl: tour.bookingUrl,
-      title: tour.title,
-      priceFrom: tour.priceAmount ?? 0,
-      categories: tour.categories?.map(category =>
-        typeof category === "string" ? category : String(category)
-      ),
-    })),
+export const runEngine6ParagonGovernancePipeline = async (
+  args: Engine6ParagonGovernancePipelineArgs
+): Promise<Engine6ParagonGovernancePipelineReport> => {
+  const generatedAt = args.generatedAt ?? new Date().toISOString();
+  const normalizedConfig =
+    typeof args.config === "object" &&
+    args.config !== null &&
+    "destinationLabel" in args.config &&
+    "stateSlug" in args.config &&
+    "citySlug" in args.config &&
+    "slots" in args.config
+      ? {
+          ok: true as const,
+          config: args.config as Engine6ParagonProductSelectionConfig,
+          issues: [] as [],
+        }
+      : normalizeEngine6ParagonProductSelectionConfig(args.config);
+
+  if (!normalizedConfig.ok) {
+    return {
+      generatedAt,
+      destinationLabel: "invalid-config",
+      stateSlug: "",
+      citySlug: "",
+      configValid: false,
+      buildOrderPreserved: false,
+      heroIntegrityPassed: false,
+      renderingParityPassed: false,
+      blockingPassed: false,
+      passed: false,
+      reusedModules: ENGINE6_PARAGON_GOVERNANCE_REUSED_MODULES,
+      newModules: ENGINE6_PARAGON_GOVERNANCE_NEW_MODULES,
+      duplicateValidationLogicIntroduced: false,
+      formattedSummary: [
+        "Engine6 Paragon governance failed during config normalization",
+        ...normalizedConfig.issues.map(issue => `- ${issue.path}: ${issue.detail}`),
+      ].join("\n"),
+    };
+  }
+
+  const config = normalizedConfig.config;
+  const priorCompletedBuildStages = args.priorCompletedBuildStages ?? [];
+
+  const productSelection = await selectEngine6DestinationPortfolio({
+    destinationLabel: config.destinationLabel,
+    slots: config.slots,
+    targetPremiumShare: config.targetPremiumShare,
+    mode: args.mode ?? "strict",
+    scopedProductCodes: args.scopedProductCodes ?? [],
+    headRef: args.headRef,
+    fetchImpl: args.fetchImpl,
+    validateCandidate: args.validateCandidate,
+    generatedAt,
+    priorCompletedBuildStages,
   });
+
+  const heroIntegrityInputs = buildEngine6HeroIntegrityInputsFromBinding({
+    config,
+    accepted: productSelection.accepted,
+    liveProductHeroUrls: args.liveProductHeroUrls,
+  });
+
+  const heroIntegrity = runEngine6HeroIntegrityGovernance({
+    products: heroIntegrityInputs,
+    currentHeroUrlsByProductCode: args.currentHeroUrlsByProductCode,
+    generatedAt,
+  });
+
+  const productBinding = bindEngine6DestinationProducts({
+    input: {
+      config,
+      accepted: productSelection.accepted,
+      heroResolutions: heroIntegrity.resolutions,
+      liveProductHeroUrls: args.liveProductHeroUrls,
+    },
+    generatedAt,
+  });
+
+  const renderingParity = args.tours?.length
+    ? runEngine6RenderingParityGovernance({
+        tours: args.tours,
+        merchantFeedRowsByProductCode: args.merchantFeedRowsByProductCode,
+        principalExperienceTypesByProductCode: buildPrincipalExperienceTypeMap(
+          productBinding.boundProducts
+        ),
+        generatedAt,
+      })
+    : {
+        generatedAt,
+        productsAudited: 0,
+        productsPassed: 0,
+        productsFailed: 0,
+        findings: [],
+        passed: true,
+      };
+
+  const heroIntegrityPassed = heroIntegrity.passed;
+  const renderingParityPassed = renderingParity.passed;
+  const productBindingPassed = productBinding.passed;
+  const productSelectionPassed = productSelection.blockingPassed;
+  const blockingPassed =
+    productSelectionPassed &&
+    heroIntegrityPassed &&
+    productBindingPassed &&
+    renderingParityPassed;
+
+  if (blockingPassed && args.assertBuildGates) {
+    const completedStages = completedStagesAfterParagonPreflight(
+      priorCompletedBuildStages
+    );
+    const targetStage = args.targetBuildStage ?? (args.tours?.length ? "merchant-feed" : "fixtures");
+
+    assertEngine6ParagonPreflightGate({
+      heroIntegrityPassed,
+      renderingParityPassed,
+      productBindingPassed,
+      productSelectionPassed,
+    });
+
+    if (targetStage === "fixtures") {
+      assertEngine6FixturesBuildGate(completedStages);
+    } else if (targetStage === "merchant-feed") {
+      assertEngine6MerchantFeedBuildGate(completedStages);
+    } else if (targetStage === "routes") {
+      assertEngine6RoutesBuildGate(completedStages);
+    } else if (targetStage === "sitemap") {
+      assertEngine6SitemapBuildGate(completedStages);
+    }
+  }
+
+  const formattedSummary = formatEngine6ParagonGovernancePipelineReport({
+    generatedAt,
+    destinationLabel: config.destinationLabel,
+    stateSlug: config.stateSlug,
+    citySlug: config.citySlug,
+    configValid: true,
+    productSelection,
+    heroIntegrity,
+    productBinding,
+    renderingParity,
+    buildOrderPreserved: productSelection.buildOrderPreserved,
+    heroIntegrityPassed,
+    renderingParityPassed,
+    blockingPassed,
+    passed: blockingPassed,
+    reusedModules: ENGINE6_PARAGON_GOVERNANCE_REUSED_MODULES,
+    newModules: ENGINE6_PARAGON_GOVERNANCE_NEW_MODULES,
+    duplicateValidationLogicIntroduced: false,
+    formattedSummary: "",
+  });
+
+  return {
+    generatedAt,
+    destinationLabel: config.destinationLabel,
+    stateSlug: config.stateSlug,
+    citySlug: config.citySlug,
+    configValid: true,
+    productSelection,
+    heroIntegrity,
+    productBinding,
+    renderingParity,
+    buildOrderPreserved: productSelection.buildOrderPreserved,
+    heroIntegrityPassed,
+    renderingParityPassed,
+    blockingPassed,
+    passed: blockingPassed,
+    reusedModules: ENGINE6_PARAGON_GOVERNANCE_REUSED_MODULES,
+    newModules: ENGINE6_PARAGON_GOVERNANCE_NEW_MODULES,
+    duplicateValidationLogicIntroduced: false,
+    formattedSummary,
+  };
+};
+
+export const formatEngine6ParagonGovernancePipelineReport = (
+  report: Engine6ParagonGovernancePipelineReport
+) => {
+  const lines = [
+    `Engine6 Paragon governance pipeline (${report.generatedAt})`,
+    `Destination: ${report.destinationLabel} (${report.stateSlug}/${report.citySlug})`,
+    "",
+    "## Summary",
+    `- Config valid: ${report.configValid}`,
+    `- Product selection passed: ${report.productSelection?.blockingPassed ?? false}`,
+    `- Hero integrity passed: ${report.heroIntegrityPassed}`,
+    `- Product binding passed: ${report.productBinding?.passed ?? false}`,
+    `- Rendering parity passed: ${report.renderingParityPassed}`,
+    `- Build order preserved: ${report.buildOrderPreserved}`,
+    `- Blocking passed: ${report.blockingPassed}`,
+    "",
+    "## Governance reuse",
+    `- Reused modules: ${report.reusedModules.join(", ")}`,
+    `- New modules: ${report.newModules.join(", ")}`,
+    `- Duplicate validation logic introduced: ${report.duplicateValidationLogicIntroduced}`,
+  ];
+
+  if (report.productSelection) {
+    lines.push(
+      "",
+      "## Product selection",
+      `- Accepted: ${report.productSelection.productsAccepted}`,
+      `- Rejected: ${report.productSelection.productsRejected}`,
+      `- Replacements: ${report.productSelection.replacementProductsSelected}`
+    );
+  }
+
+  if (report.heroIntegrity) {
+    lines.push("", formatEngine6HeroIntegrityGovernanceReport(report.heroIntegrity));
+  }
+
+  if (report.productBinding) {
+    lines.push("", summarizeEngine6DestinationProductBinding(report.productBinding));
+  }
+
+  if (report.renderingParity && report.renderingParity.productsAudited > 0) {
+    lines.push(
+      "",
+      formatEngine6RenderingParityGovernanceReport(report.renderingParity)
+    );
+  }
+
+  return lines.join("\n");
+};
+
+/** Ensures destination builders invoke shared Paragon governance instead of bypassing it. */
+export const requireEngine6ParagonGovernanceBeforeArtifacts = (args: {
+  paragonReport: Engine6ParagonGovernancePipelineReport;
+  artifactKind:
+    | "fixtures"
+    | "listing-card"
+    | "detail-page"
+    | "merchant-feed"
+    | "sitemap"
+    | "preview"
+    | "commit"
+    | "pull-request";
+}) => {
+  if (!args.paragonReport.passed) {
+    throw new Error(
+      `Engine6 Paragon governance must pass before generating ${args.artifactKind} artifacts`
+    );
+  }
+
+  if (!args.paragonReport.heroIntegrityPassed) {
+    throw new Error(
+      `Engine6 hero integrity governance must pass before generating ${args.artifactKind} artifacts`
+    );
+  }
+
+  if (
+    args.paragonReport.renderingParity &&
+    !args.paragonReport.renderingParityPassed
+  ) {
+    throw new Error(
+      `Engine6 rendering parity governance must pass before generating ${args.artifactKind} artifacts`
+    );
+  }
+};

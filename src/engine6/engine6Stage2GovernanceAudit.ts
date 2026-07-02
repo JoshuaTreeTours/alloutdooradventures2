@@ -45,12 +45,20 @@ import {
   isEngine6ProductSelectionBlocklisted,
   type Engine6ProductSelectionGovernanceReport,
 } from "./engine6ProductSelectionGovernance.js";
+import {
+  resolveEngine6HeroWithIntegrityGovernance,
+  type Engine6HeroIntegrityProductInput,
+} from "./engine6HeroIntegrityGovernance.js";
+import { auditEngine6TourRenderingParity } from "./engine6RenderingParityGovernance.js";
+import type { Engine6ParagonGovernancePipelineReport } from "./engine6ParagonGovernancePipeline.js";
 
 export type Engine6Stage2GovernanceAuditMode = Engine6LiveViatorValidationMode;
 
 export type Engine6Stage2GovernanceArea =
   | "live-viator"
   | "product-selection"
+  | "hero-integrity"
+  | "rendering-parity"
   | "merchant-feed-commercial-refresh"
   | "merchant-feed-image"
   | "description-title"
@@ -156,7 +164,7 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       label: "Glacier",
       matches: tour =>
         /\/glacier-national-park\//i.test(tour.canonicalPath) ||
-        /\bglacier\b/i.test(tour.city),
+        /\bglacier national park\b/i.test(tour.city),
       requireUniqueListingHeroes: true,
     },
     {
@@ -186,6 +194,8 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
 const STAGE2_AREAS: Engine6Stage2GovernanceArea[] = [
   "live-viator",
   "product-selection",
+  "hero-integrity",
+  "rendering-parity",
   "merchant-feed-commercial-refresh",
   "merchant-feed-image",
   "description-title",
@@ -926,6 +936,140 @@ export const auditEngine6MerchantFeedImageGovernanceFindings = (args: {
   return findings;
 };
 
+const parseStateCityFromCanonicalPath = (canonicalPath: string) => {
+  const [, stateSlug = "", citySlug = ""] =
+    /^\/destinations\/([^/]+)\/([^/]+)\/tours\/[^/]+$/.exec(canonicalPath) ??
+    [];
+  return { stateSlug, citySlug };
+};
+
+export const auditEngine6HeroIntegrityGovernanceFindings = (args: {
+  tours: Engine6Tour[];
+  mode: Engine6Stage2GovernanceAuditMode;
+  scopedProductCodes: ReadonlySet<string>;
+  paragonReport?: Engine6ParagonGovernancePipelineReport;
+}): Engine6Stage2GovernanceFinding[] => {
+  const findings: Engine6Stage2GovernanceFinding[] = [];
+
+  if (args.paragonReport?.heroIntegrity && !args.paragonReport.heroIntegrityPassed) {
+    for (const finding of args.paragonReport.heroIntegrity.findings) {
+      findings.push(
+        createEngine6Stage2GovernanceFinding({
+          area: "hero-integrity",
+          productCode: finding.productCode,
+          message: `${finding.reason}: ${finding.detail}`,
+          mode: args.mode,
+          scopedProductCodes: args.scopedProductCodes,
+        })
+      );
+    }
+    return findings;
+  }
+
+  for (const tour of args.tours) {
+    const { stateSlug, citySlug } = parseStateCityFromCanonicalPath(
+      tour.canonicalPath
+    );
+    const productInput: Engine6HeroIntegrityProductInput = {
+      productCode: tour.productCode,
+      title: tour.title,
+      experienceType: String(tour.primaryCategory ?? tour.categoryLabel ?? ""),
+      categoryLabel: tour.categoryLabel,
+      categories: tour.categories.map(String),
+      productPrimaryHeroUrl: tour.heroImageUrl,
+      stateSlug,
+      citySlug,
+    };
+
+    const heroAudit = resolveEngine6HeroWithIntegrityGovernance({
+      product: productInput,
+      currentHeroUrl: tour.heroImageUrl,
+    });
+
+    if (
+      heroAudit.resolution &&
+      heroAudit.resolution.replacedHeroUrl &&
+      heroAudit.resolution.resolvedHeroUrl !== tour.heroImageUrl
+    ) {
+      findings.push(
+        createEngine6Stage2GovernanceFinding({
+          area: "hero-integrity",
+          productCode: tour.productCode,
+          message: `hero materially misrepresents product (${heroAudit.resolution.replacementReason ?? "auto-replacement required"})`,
+          mode: args.mode,
+          scopedProductCodes: args.scopedProductCodes,
+        })
+      );
+    }
+
+    for (const finding of heroAudit.findings) {
+      if (finding.reason === "experience-mismatch") {
+        findings.push(
+          createEngine6Stage2GovernanceFinding({
+            area: "hero-integrity",
+            productCode: tour.productCode,
+            message: finding.detail,
+            mode: args.mode,
+            scopedProductCodes: args.scopedProductCodes,
+          })
+        );
+      }
+    }
+  }
+
+  return findings;
+};
+
+export const auditEngine6RenderingParityGovernanceFindings = (args: {
+  tours: Engine6Tour[];
+  merchantRowsByProductCode: Map<string, Record<string, string>>;
+  mode: Engine6Stage2GovernanceAuditMode;
+  scopedProductCodes: ReadonlySet<string>;
+  paragonReport?: Engine6ParagonGovernancePipelineReport;
+}): Engine6Stage2GovernanceFinding[] => {
+  const findings: Engine6Stage2GovernanceFinding[] = [];
+
+  if (
+    args.paragonReport?.renderingParity &&
+    !args.paragonReport.renderingParityPassed
+  ) {
+    for (const finding of args.paragonReport.renderingParity.findings) {
+      findings.push(
+        createEngine6Stage2GovernanceFinding({
+          area: "rendering-parity",
+          productCode: finding.productCode,
+          message: `${finding.field}: ${finding.detail}`,
+          mode: args.mode,
+          scopedProductCodes: args.scopedProductCodes,
+        })
+      );
+    }
+    return findings;
+  }
+
+  for (const tour of args.tours) {
+    const merchantRow = args.merchantRowsByProductCode.get(tour.productCode);
+    const audit = auditEngine6TourRenderingParity({
+      tour,
+      merchantFeedRow: merchantRow,
+    });
+
+    for (const finding of audit.findings) {
+      findings.push(
+        createEngine6Stage2GovernanceFinding({
+          area: "rendering-parity",
+          productCode: tour.productCode,
+          message: `${finding.field}: ${finding.detail}`,
+          mode: args.mode,
+          scopedProductCodes: args.scopedProductCodes,
+        })
+      );
+    }
+  }
+
+  return findings;
+};
+
 const summarizeAreas = (
   findings: Engine6Stage2GovernanceFinding[]
 ): Engine6Stage2GovernanceAreaSummary[] =>
@@ -997,6 +1141,7 @@ export type BuildEngine6Stage2GovernanceAuditArgs = {
   validateImageUrl?: ValidateEngine6MerchantFeedImageUrl;
   liveViator?: Engine6LiveViatorProductionValidationReport;
   productSelection?: Engine6ProductSelectionGovernanceReport;
+  paragonReport?: Engine6ParagonGovernancePipelineReport;
   skipAsyncImageAudit?: boolean;
 };
 
@@ -1068,6 +1213,19 @@ export const buildEngine6Stage2GovernanceAudit = async (
       tours: args.tours,
       mode,
       scopedProductCodes: scopedSet,
+    }),
+    ...auditEngine6HeroIntegrityGovernanceFindings({
+      tours: args.tours,
+      mode,
+      scopedProductCodes: scopedSet,
+      paragonReport: args.paragonReport,
+    }),
+    ...auditEngine6RenderingParityGovernanceFindings({
+      tours: args.tours,
+      merchantRowsByProductCode,
+      mode,
+      scopedProductCodes: scopedSet,
+      paragonReport: args.paragonReport,
     }),
   ];
 

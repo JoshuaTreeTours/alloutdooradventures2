@@ -1,219 +1,137 @@
-import { parseEngine6StateCityFromCanonicalPath } from "./displayHero.js";
-import { resolveEngine6PathForProductCode } from "./routes.js";
+import type { Engine6ProductSelectionAcceptedCandidate } from "./engine6ProductSelectionGovernance.js";
+import type { Engine6HeroIntegrityResolution } from "./engine6HeroIntegrityGovernance.js";
+import {
+  inferEngine6PrincipalExperienceTypeFromProduct,
+  type Engine6PrincipalExperienceType,
+} from "./engine6PrincipalExperienceType.js";
+import type { Engine6ParagonProductSelectionConfig } from "./normalizeEngine6ParagonProductSelectionConfig.js";
 
-export const extractViatorTourDestinationSlug = (sourceUrl: string) => {
-  const match = sourceUrl.trim().match(/\/tours\/([^/]+)\//i);
-  return match?.[1]?.trim() ?? null;
+export type Engine6DestinationProductBindingInput = {
+  config: Engine6ParagonProductSelectionConfig;
+  accepted: Engine6ProductSelectionAcceptedCandidate[];
+  heroResolutions: Engine6HeroIntegrityResolution[];
+  /** Optional live product hero URLs keyed by product code. */
+  liveProductHeroUrls?: Record<
+    string,
+    {
+      primaryHeroUrl?: string | null;
+      alternateHeroUrls?: string[];
+    }
+  >;
 };
 
-export const normalizeEngine6DestinationIdentity = (value: string) =>
-  value
-    .trim()
-    .toLowerCase()
-    .replace(/-/g, " ")
-    .replace(/\s+/g, " ");
-
-export const resolveEngine6ConfiguredProductCitySlug = (productCode: string) => {
-  const canonicalPath = resolveEngine6PathForProductCode(productCode);
-  if (!canonicalPath) {
-    return null;
-  }
-
-  return parseEngine6StateCityFromCanonicalPath(canonicalPath).citySlug || null;
-};
-
-export const destinationIdentitiesMatch = (
-  left: string | null | undefined,
-  right: string | null | undefined
-) => {
-  if (!left?.trim() || !right?.trim()) {
-    return true;
-  }
-
-  return (
-    normalizeEngine6DestinationIdentity(left) ===
-    normalizeEngine6DestinationIdentity(right)
-  );
-};
-
-const DIRECTIONAL_DESTINATION_PREFIX_TOKENS = new Set([
-  "east",
-  "lower",
-  "north",
-  "south",
-  "upper",
-  "west",
-]);
-
-const destinationIdentityTokens = (value: string) =>
-  normalizeEngine6DestinationIdentity(value).split(" ").filter(Boolean);
-
-const stripLeadingDirectionalDestinationTokens = (tokens: readonly string[]) => {
-  let index = 0;
-
-  while (
-    index < tokens.length - 1 &&
-    DIRECTIONAL_DESTINATION_PREFIX_TOKENS.has(tokens[index])
-  ) {
-    index += 1;
-  }
-
-  return tokens.slice(index);
-};
-
-const destinationIdentityTokensMatchAsPrefix = (
-  leftTokens: readonly string[],
-  rightTokens: readonly string[]
-) => {
-  const [prefixTokens, fullTokens] =
-    leftTokens.length <= rightTokens.length
-      ? [leftTokens, rightTokens]
-      : [rightTokens, leftTokens];
-
-  if (prefixTokens.length === 0) {
-    return false;
-  }
-
-  return prefixTokens.every((token, index) => fullTokens[index] === token);
-};
-
-const destinationIdentityTokenSetsReferToSameEngine6Destination = (
-  leftTokens: readonly string[],
-  rightTokens: readonly string[]
-) => {
-  if (destinationIdentityTokensMatchAsPrefix(leftTokens, rightTokens)) {
-    return true;
-  }
-
-  const leftWithoutDirection = stripLeadingDirectionalDestinationTokens(leftTokens);
-  const rightWithoutDirection =
-    stripLeadingDirectionalDestinationTokens(rightTokens);
-
-  return (
-    destinationIdentityTokensMatchAsPrefix(
-      leftWithoutDirection,
-      rightWithoutDirection
-    ) ||
-    destinationIdentityTokensMatchAsPrefix(leftTokens, rightWithoutDirection) ||
-    destinationIdentityTokensMatchAsPrefix(leftWithoutDirection, rightTokens)
-  );
-};
-
-export const destinationIdentitiesReferToSameEngine6Destination = (
-  left: string | null | undefined,
-  right: string | null | undefined
-) => {
-  if (!left?.trim() || !right?.trim()) {
-    return false;
-  }
-
-  if (destinationIdentitiesMatch(left, right)) {
-    return true;
-  }
-
-  return destinationIdentityTokenSetsReferToSameEngine6Destination(
-    destinationIdentityTokens(left),
-    destinationIdentityTokens(right)
-  );
-};
-
-const collectIntendedDestinationSlugs = (args: {
-  destinationCitySlug?: string | null;
-  viatorDestinationSlug?: string | null;
-  configPathSlug?: string | null;
-}) => {
-  const slugs = new Set<string>();
-
-  if (args.destinationCitySlug?.trim()) {
-    slugs.add(args.destinationCitySlug.trim());
-  }
-
-  if (args.viatorDestinationSlug?.trim()) {
-    slugs.add(args.viatorDestinationSlug.trim());
-  }
-
-  if (args.configPathSlug?.trim()) {
-    slugs.add(args.configPathSlug.trim());
-  }
-
-  return [...slugs];
-};
-
-export const isProductBoundToSameEngine6Destination = (args: {
-  boundCitySlug: string;
-  destinationCitySlug?: string | null;
-  viatorDestinationSlug?: string | null;
-  configPathSlug?: string | null;
-}) => {
-  const intendedDestinationSlugs = collectIntendedDestinationSlugs(args);
-
-  if (intendedDestinationSlugs.length === 0) {
-    return true;
-  }
-
-  return intendedDestinationSlugs.some(slug =>
-    destinationIdentitiesReferToSameEngine6Destination(args.boundCitySlug, slug)
-  );
-};
-
-export type Engine6DestinationBindingViolation =
-  | "cross-destination"
-  | "duplicate-engine6-assignment";
-
-export type Engine6DestinationBindingAssessment = {
-  violation: Engine6DestinationBindingViolation | null;
-  detail: string | null;
-  viatorDestinationSlug: string | null;
-  boundCitySlug: string | null;
-};
-
-export const assessEngine6DestinationProductBinding = (args: {
+export type Engine6BoundDestinationProduct = {
   productCode: string;
   sourceUrl: string;
-  destinationCitySlug?: string | null;
-  viatorDestinationSlug?: string | null;
-  configPathSlug?: string | null;
-  destinationLabel?: string | null;
-}): Engine6DestinationBindingAssessment => {
-  const viatorDestinationSlug = extractViatorTourDestinationSlug(args.sourceUrl);
-  const boundCitySlug = resolveEngine6ConfiguredProductCitySlug(args.productCode);
-  const expectedViatorSlug =
-    args.viatorDestinationSlug?.trim() || args.destinationCitySlug?.trim() || null;
+  title: string;
+  experienceType: string;
+  principalExperienceType: Engine6PrincipalExperienceType;
+  commercialTier: Engine6ProductSelectionAcceptedCandidate["commercialTier"];
+  heroUrl: string;
+  heroSourceTier: Engine6HeroIntegrityResolution["sourceTier"];
+  stateSlug: string;
+  citySlug: string;
+  destinationLabel: string;
+  validationResult: Engine6ProductSelectionAcceptedCandidate["validationResult"];
+};
 
-  if (
-    boundCitySlug &&
-    !isProductBoundToSameEngine6Destination({
-      boundCitySlug,
-      destinationCitySlug: args.destinationCitySlug,
-      viatorDestinationSlug: args.viatorDestinationSlug,
-      configPathSlug: args.configPathSlug,
-    })
-  ) {
-    return {
-      violation: "duplicate-engine6-assignment",
-      detail: `product ${args.productCode} is already configured for Engine6 destination city "${boundCitySlug}"`,
-      viatorDestinationSlug,
-      boundCitySlug,
-    };
-  }
+export type Engine6DestinationProductBindingReport = {
+  generatedAt: string;
+  destinationLabel: string;
+  stateSlug: string;
+  citySlug: string;
+  boundProducts: Engine6BoundDestinationProduct[];
+  missingHeroResolutions: string[];
+  passed: boolean;
+};
 
-  if (
-    viatorDestinationSlug &&
-    expectedViatorSlug &&
-    !destinationIdentitiesMatch(viatorDestinationSlug, expectedViatorSlug)
-  ) {
-    return {
-      violation: "cross-destination",
-      detail: `Viator URL destination "${viatorDestinationSlug}" does not match intended destination "${expectedViatorSlug}"`,
-      viatorDestinationSlug,
-      boundCitySlug,
-    };
+export const bindEngine6DestinationProducts = (args: {
+  input: Engine6DestinationProductBindingInput;
+  generatedAt?: string;
+}): Engine6DestinationProductBindingReport => {
+  const heroResolutionByCode = new Map(
+    args.input.heroResolutions.map(entry => [entry.productCode, entry])
+  );
+  const missingHeroResolutions: string[] = [];
+  const boundProducts: Engine6BoundDestinationProduct[] = [];
+
+  for (const accepted of args.input.accepted) {
+    const heroResolution = heroResolutionByCode.get(accepted.productCode);
+    if (!heroResolution) {
+      missingHeroResolutions.push(accepted.productCode);
+      continue;
+    }
+
+    boundProducts.push({
+      productCode: accepted.productCode,
+      sourceUrl: accepted.sourceUrl,
+      title: accepted.title,
+      experienceType: accepted.experienceType,
+      principalExperienceType: heroResolution.productExperienceType,
+      commercialTier: accepted.commercialTier,
+      heroUrl: heroResolution.resolvedHeroUrl,
+      heroSourceTier: heroResolution.sourceTier,
+      stateSlug: args.input.config.stateSlug,
+      citySlug: args.input.config.citySlug,
+      destinationLabel: args.input.config.destinationLabel,
+      validationResult: accepted.validationResult,
+    });
   }
 
   return {
-    violation: null,
-    detail: null,
-    viatorDestinationSlug,
-    boundCitySlug,
+    generatedAt: args.generatedAt ?? new Date().toISOString(),
+    destinationLabel: args.input.config.destinationLabel,
+    stateSlug: args.input.config.stateSlug,
+    citySlug: args.input.config.citySlug,
+    boundProducts,
+    missingHeroResolutions,
+    passed: missingHeroResolutions.length === 0 && boundProducts.length > 0,
   };
 };
+
+export const buildEngine6HeroIntegrityInputsFromBinding = (args: {
+  config: Engine6ParagonProductSelectionConfig;
+  accepted: Engine6ProductSelectionAcceptedCandidate[];
+  liveProductHeroUrls?: Engine6DestinationProductBindingInput["liveProductHeroUrls"];
+}) =>
+  args.accepted.map(accepted => {
+    const liveHero = args.liveProductHeroUrls?.[accepted.productCode];
+    return {
+      productCode: accepted.productCode,
+      title: accepted.title,
+      experienceType: accepted.experienceType,
+      productPrimaryHeroUrl: liveHero?.primaryHeroUrl ?? null,
+      productAlternateHeroUrls: liveHero?.alternateHeroUrls ?? [],
+      stateSlug: args.config.stateSlug,
+      citySlug: args.config.citySlug,
+    };
+  });
+
+export const buildPrincipalExperienceTypeMap = (
+  boundProducts: Engine6BoundDestinationProduct[]
+) =>
+  new Map(
+    boundProducts.map(product => [
+      product.productCode,
+      product.principalExperienceType,
+    ])
+  );
+
+export const summarizeEngine6DestinationProductBinding = (
+  report: Engine6DestinationProductBindingReport
+) =>
+  [
+    `Engine6 destination product binding (${report.generatedAt})`,
+    `Destination: ${report.destinationLabel} (${report.stateSlug}/${report.citySlug})`,
+    `- Bound products: ${report.boundProducts.length}`,
+    `- Missing hero resolutions: ${report.missingHeroResolutions.length}`,
+    `- Passed: ${report.passed}`,
+  ].join("\n");
+
+export const inferPrincipalExperienceTypeForAcceptedProduct = (
+  accepted: Engine6ProductSelectionAcceptedCandidate
+): Engine6PrincipalExperienceType =>
+  inferEngine6PrincipalExperienceTypeFromProduct({
+    experienceType: accepted.experienceType,
+    title: accepted.title,
+  });
