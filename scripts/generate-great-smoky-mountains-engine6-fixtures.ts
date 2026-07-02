@@ -62,7 +62,7 @@ const GREAT_SMOKY_MOUNTAINS_TOURS: GreatSmokyMountainsTourFixture[] = [
       {
         title: "Sugarlands Visitor Center",
         description:
-          "Check in with your naturalist guide and review trail conditions for the day's waterfall route.",
+          "Check in at Sugarlands Visitor Center with your naturalist guide and review trail conditions for the day's waterfall route.",
         duration: "15 minutes",
         stopType: "stop",
       },
@@ -83,7 +83,7 @@ const GREAT_SMOKY_MOUNTAINS_TOURS: GreatSmokyMountainsTourFixture[] = [
       {
         title: "Hidden Waterfalls",
         description:
-          "Reach secluded waterfall viewpoints with interpretive commentary on park ecology.",
+          "Reach secluded hidden waterfalls with interpretive commentary on park ecology.",
         duration: "45 minutes",
         stopType: "stop",
       },
@@ -138,7 +138,7 @@ const GREAT_SMOKY_MOUNTAINS_TOURS: GreatSmokyMountainsTourFixture[] = [
       {
         title: "Elkmont Historic District",
         description:
-          "Explore preserved structures and interpret logging-era Smoky Mountain history.",
+          "Explore Elkmont Historic District preserved structures and interpret logging-era Smoky Mountain history.",
         duration: "45 minutes",
         stopType: "stop",
       },
@@ -186,7 +186,7 @@ const GREAT_SMOKY_MOUNTAINS_TOURS: GreatSmokyMountainsTourFixture[] = [
       {
         title: "Fighting Creek Gap",
         description:
-          "Guide briefing and trailhead departure near Gatlinburg.",
+          "Guide briefing at Fighting Creek Gap trailhead departure near Gatlinburg.",
         duration: "15 minutes",
         stopType: "stop",
       },
@@ -254,14 +254,14 @@ const GREAT_SMOKY_MOUNTAINS_TOURS: GreatSmokyMountainsTourFixture[] = [
       {
         title: "Newfound Gap Road",
         description:
-          "Scenic drive with multiple pullouts for ridge-top photography.",
+          "Scenic drive along Newfound Gap Road with multiple pullouts for ridge-top photography.",
         duration: "1 hour",
         stopType: "stop",
       },
       {
         title: "Clingmans Dome Area",
         description:
-          "High-elevation stop with panoramic views above the Smoky Mountain crest.",
+          "High-elevation Clingmans Dome area stop with panoramic views above the Smoky Mountain crest.",
         duration: "45 minutes",
         stopType: "stop",
       },
@@ -315,21 +315,21 @@ const GREAT_SMOKY_MOUNTAINS_TOURS: GreatSmokyMountainsTourFixture[] = [
       {
         title: "Elkmont Historic District",
         description:
-          "Explore remnants of a long-gone resort town and early logging history.",
+          "Explore Elkmont Historic District remnants of a long-gone resort town and early logging history.",
         duration: "45 minutes",
         stopType: "stop",
       },
       {
         title: "Newfound Gap Road",
         description:
-          "Scenic mountain drive with overlooks for photos and interpretation.",
+          "Scenic Newfound Gap Road mountain drive with overlooks for photos and interpretation.",
         duration: "1 hour",
         stopType: "stop",
       },
       {
         title: "Newfound Gap",
         description:
-          "Stop at the Tennessee–North Carolina divide and Roosevelt dedication site.",
+          "Stop at Newfound Gap on the Tennessee–North Carolina divide and Roosevelt dedication site.",
         duration: "30 minutes",
         stopType: "stop",
       },
@@ -370,21 +370,21 @@ const GREAT_SMOKY_MOUNTAINS_TOURS: GreatSmokyMountainsTourFixture[] = [
       {
         title: "Gatlinburg",
         description:
-          "Check in, gear fitting, and casting basics before entering park streams.",
+          "Gatlinburg check-in, gear fitting, and casting basics before entering park streams.",
         duration: "30 minutes",
         stopType: "stop",
       },
       {
         title: "Smoky Mountain Streams",
         description:
-          "Travel to guided trout water with instruction on reading current and structure.",
+          "Travel to Smoky Mountain streams for guided trout water with instruction on reading current and structure.",
         duration: "45 minutes",
         stopType: "stop",
       },
       {
         title: "Guided Fly Fishing",
         description:
-          "Streamside coaching on presentation, drift, and catch-and-release handling.",
+          "Guided fly fishing streamside coaching on presentation, drift, and catch-and-release handling.",
         duration: "2 hours",
         stopType: "stop",
       },
@@ -432,7 +432,7 @@ const GREAT_SMOKY_MOUNTAINS_TOURS: GreatSmokyMountainsTourFixture[] = [
       {
         title: "Gatlinburg",
         description:
-          "Guide briefing on current fall color conditions and daily route plan.",
+          "Gatlinburg guide briefing on current fall color conditions and daily route plan.",
         duration: "15 minutes",
         stopType: "stop",
       },
@@ -453,7 +453,7 @@ const GREAT_SMOKY_MOUNTAINS_TOURS: GreatSmokyMountainsTourFixture[] = [
       {
         title: "Scenic Mountain Views",
         description:
-          "Final photo stop above the sea of autumn ridges before return.",
+          "Final scenic mountain views photo stop above the sea of autumn ridges before return.",
         duration: "30 minutes",
         stopType: "stop",
       },
@@ -493,7 +493,7 @@ const GREAT_SMOKY_MOUNTAINS_TOURS: GreatSmokyMountainsTourFixture[] = [
       {
         title: "Custom Trailhead",
         description:
-          "Guide presents waterfall, vista, and history options matched to your group.",
+          "Custom trailhead meetup where your guide presents waterfall, vista, and history options matched to your group.",
         duration: "30 minutes",
         stopType: "stop",
       },
@@ -507,7 +507,7 @@ const GREAT_SMOKY_MOUNTAINS_TOURS: GreatSmokyMountainsTourFixture[] = [
       {
         title: "Historic Vista",
         description:
-          "Scenic or cultural stop such as a pioneer site or ridge overlook.",
+          "Historic vista scenic or cultural stop such as a pioneer site or ridge overlook.",
         duration: "1 hour 30 minutes",
         stopType: "stop",
       },

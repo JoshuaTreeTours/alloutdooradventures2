@@ -49,7 +49,7 @@
     "itineraryItems": [
       {
         "title": "Sugarlands Visitor Center",
-        "description": "Check in with your naturalist guide and review trail conditions for the day's waterfall route.",
+        "description": "Check in at Sugarlands Visitor Center with your naturalist guide and review trail conditions for the day's waterfall route.",
         "duration": "15 minutes",
         "stopType": "stop"
       },
@@ -67,7 +67,7 @@
       },
       {
         "title": "Hidden Waterfalls",
-        "description": "Reach secluded waterfall viewpoints with interpretive commentary on park ecology.",
+        "description": "Reach secluded hidden waterfalls with interpretive commentary on park ecology.",
         "duration": "45 minutes",
         "stopType": "stop"
       }

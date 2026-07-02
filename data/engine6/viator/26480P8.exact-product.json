@@ -49,7 +49,7 @@
     "itineraryItems": [
       {
         "title": "Gatlinburg",
-        "description": "Guide briefing on current fall color conditions and daily route plan.",
+        "description": "Gatlinburg guide briefing on current fall color conditions and daily route plan.",
         "duration": "15 minutes",
         "stopType": "stop"
       },
@@ -67,7 +67,7 @@
       },
       {
         "title": "Scenic Mountain Views",
-        "description": "Final photo stop above the sea of autumn ridges before return.",
+        "description": "Final scenic mountain views photo stop above the sea of autumn ridges before return.",
         "duration": "30 minutes",
         "stopType": "stop"
       }

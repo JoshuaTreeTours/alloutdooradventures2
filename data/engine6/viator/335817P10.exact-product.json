@@ -49,19 +49,19 @@
     "itineraryItems": [
       {
         "title": "Gatlinburg",
-        "description": "Check in, gear fitting, and casting basics before entering park streams.",
+        "description": "Gatlinburg check-in, gear fitting, and casting basics before entering park streams.",
         "duration": "30 minutes",
         "stopType": "stop"
       },
       {
         "title": "Smoky Mountain Streams",
-        "description": "Travel to guided trout water with instruction on reading current and structure.",
+        "description": "Travel to Smoky Mountain streams for guided trout water with instruction on reading current and structure.",
         "duration": "45 minutes",
         "stopType": "stop"
       },
       {
         "title": "Guided Fly Fishing",
-        "description": "Streamside coaching on presentation, drift, and catch-and-release handling.",
+        "description": "Guided fly fishing streamside coaching on presentation, drift, and catch-and-release handling.",
         "duration": "2 hours",
         "stopType": "stop"
       },

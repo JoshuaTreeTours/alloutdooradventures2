@@ -49,7 +49,7 @@
     "itineraryItems": [
       {
         "title": "Custom Trailhead",
-        "description": "Guide presents waterfall, vista, and history options matched to your group.",
+        "description": "Custom trailhead meetup where your guide presents waterfall, vista, and history options matched to your group.",
         "duration": "30 minutes",
         "stopType": "stop"
       },
@@ -61,7 +61,7 @@
       },
       {
         "title": "Historic Vista",
-        "description": "Scenic or cultural stop such as a pioneer site or ridge overlook.",
+        "description": "Historic vista scenic or cultural stop such as a pioneer site or ridge overlook.",
         "duration": "1 hour 30 minutes",
         "stopType": "stop"
       },
