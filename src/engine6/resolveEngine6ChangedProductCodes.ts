@@ -57,76 +57,148 @@ export const extractEngine6ProductCodesFromExactProductPath = (filePath: string)
   return match ? [normalizeEngine6ProductCode(match[1])] : [];
 };
 
-export const extractEngine6ProductCodesFromCatalogDiff = (diff: string) => {
-  const scoped = new Set<string>();
+/** Stable record identity for a catalog diff line (CSV id, productCode field, ratings key). */
+export const extractEngine6CatalogDiffLineIdentity = (line: string) => {
+  const csvMatch = line.match(/^[ +-]([A-Z0-9_]+),/);
+  if (csvMatch) {
+    return normalizeEngine6ProductCode(csvMatch[1]);
+  }
+
+  const productCodeMatch = line.match(/productCode:\s*["']([A-Z0-9_]+)["']/i);
+  if (productCodeMatch) {
+    return normalizeEngine6ProductCode(productCodeMatch[1]);
+  }
+
+  const ratingsKeyMatch = line.match(/^[ +-]\s*["']([A-Z0-9_]+)["']\s*:\s*\{/);
+  if (ratingsKeyMatch) {
+    return normalizeEngine6ProductCode(ratingsKeyMatch[1]);
+  }
+
+  return null;
+};
+
+const collectEngine6CatalogDiffLineCodes = (line: string, activeRecordCode: string | null) => {
+  const codes = new Set<string>();
+  const identity = extractEngine6CatalogDiffLineIdentity(line);
+
+  if (identity) {
+    codes.add(identity);
+  } else if (activeRecordCode) {
+    codes.add(activeRecordCode);
+  }
+
+  for (const code of extractProductCodesFromText(line)) {
+    codes.add(code);
+  }
+
+  return codes;
+};
+
+export type Engine6CatalogDiffProductScope = {
+  addedOrModified: string[];
+  removedOnly: string[];
+  deployScoped: string[];
+};
+
+export const resolveEngine6CatalogDiffProductScope = (
+  diff: string
+): Engine6CatalogDiffProductScope => {
+  const plusLineCodes = new Set<string>();
+  const minusLineCodes = new Set<string>();
   const hunks = diff.split(/^@@/m).slice(1);
 
   for (const hunk of hunks) {
     const lines = hunk.split(/\r?\n/).slice(1);
-    const plusCodes = new Set<string>();
-    const minusCodes = new Set<string>();
-    const contextCodes = new Set<string>();
-    let hunkHasChange = false;
+    let activeRecordCode: string | null = null;
 
     for (const line of lines) {
       if (line.startsWith("+++") || line.startsWith("---")) {
         continue;
       }
 
-      const codes = extractProductCodesFromText(line);
-      if (line.startsWith("+")) {
-        hunkHasChange = true;
-        for (const code of codes) {
-          plusCodes.add(code);
+      const identity = extractEngine6CatalogDiffLineIdentity(line);
+
+      if (line.startsWith(" ")) {
+        if (identity) {
+          activeRecordCode = identity;
         }
-      } else if (line.startsWith("-")) {
-        hunkHasChange = true;
-        for (const code of codes) {
-          minusCodes.add(code);
-        }
-      } else if (line.startsWith(" ")) {
-        for (const code of codes) {
-          contextCodes.add(code);
-        }
+        continue;
       }
-    }
 
-    if (!hunkHasChange) {
-      continue;
-    }
+      if (line.startsWith("+")) {
+        for (const code of collectEngine6CatalogDiffLineCodes(line, activeRecordCode)) {
+          plusLineCodes.add(code);
+        }
+        if (identity) {
+          activeRecordCode = identity;
+        }
+        continue;
+      }
 
-    for (const code of plusCodes) {
-      scoped.add(code);
-    }
-
-    for (const code of contextCodes) {
-      scoped.add(code);
-    }
-
-    for (const code of minusCodes) {
-      if (plusCodes.has(code) || contextCodes.has(code)) {
-        scoped.add(code);
+      if (line.startsWith("-")) {
+        for (const code of collectEngine6CatalogDiffLineCodes(line, activeRecordCode)) {
+          minusLineCodes.add(code);
+        }
       }
     }
   }
 
-  return [...scoped];
+  const addedOrModified = new Set<string>();
+  for (const code of plusLineCodes) {
+    addedOrModified.add(code);
+  }
+  for (const code of minusLineCodes) {
+    if (plusLineCodes.has(code)) {
+      addedOrModified.add(code);
+    }
+  }
+
+  const removedOnly = new Set<string>();
+  for (const code of minusLineCodes) {
+    if (!plusLineCodes.has(code)) {
+      removedOnly.add(code);
+    }
+  }
+
+  const deployScoped = new Set([...plusLineCodes, ...minusLineCodes]);
+
+  return {
+    addedOrModified: [...addedOrModified].sort(),
+    removedOnly: [...removedOnly].sort(),
+    deployScoped: [...deployScoped].sort(),
+  };
 };
 
-export const extractEngine6ProductCodesFromChangedFiles = (args: {
+export const extractEngine6ProductCodesFromCatalogDiff = (diff: string) =>
+  resolveEngine6CatalogDiffProductScope(diff).deployScoped;
+
+export type Engine6ChangedFileProductScope = {
+  deployScoped: string[];
+  addedOrModified: string[];
+  removedOnly: string[];
+};
+
+export const resolveEngine6ProductScopeFromChangedFiles = (args: {
   changedFiles: Engine6GitChangedFile[];
   catalogDiffs: Record<string, string>;
-}) => {
-  const scoped = new Set<string>();
+}): Engine6ChangedFileProductScope => {
+  const deployScoped = new Set<string>();
+  const addedOrModified = new Set<string>();
+  const removedOnly = new Set<string>();
 
   for (const file of args.changedFiles) {
     if (file.status === "D") {
+      for (const code of extractEngine6ProductCodesFromExactProductPath(file.path)) {
+        removedOnly.add(code);
+        deployScoped.add(code);
+      }
       continue;
     }
 
     for (const code of extractEngine6ProductCodesFromExactProductPath(file.path)) {
-      if (file.status === "A" || file.status === "M") {
-        scoped.add(code);
+      if (file.status === "A") {
+        addedOrModified.add(code);
+        deployScoped.add(code);
       }
     }
 
@@ -135,16 +207,32 @@ export const extractEngine6ProductCodesFromChangedFiles = (args: {
       ENGINE6_CATALOG_DIFF_PATH.test(file.path) &&
       args.catalogDiffs[file.path]
     ) {
-      for (const code of extractEngine6ProductCodesFromCatalogDiff(
+      const scope = resolveEngine6CatalogDiffProductScope(
         args.catalogDiffs[file.path]
-      )) {
-        scoped.add(code);
+      );
+      for (const code of scope.deployScoped) {
+        deployScoped.add(code);
+      }
+      for (const code of scope.addedOrModified) {
+        addedOrModified.add(code);
+      }
+      for (const code of scope.removedOnly) {
+        removedOnly.add(code);
       }
     }
   }
 
-  return [...scoped].sort();
+  return {
+    deployScoped: [...deployScoped].sort(),
+    addedOrModified: [...addedOrModified].sort(),
+    removedOnly: [...removedOnly].sort(),
+  };
 };
+
+export const extractEngine6ProductCodesFromChangedFiles = (args: {
+  changedFiles: Engine6GitChangedFile[];
+  catalogDiffs: Record<string, string>;
+}) => resolveEngine6ProductScopeFromChangedFiles(args).deployScoped;
 
 export type Engine6LiveViatorValidationBaseRefResolution = {
   baseRef: string | null;
@@ -259,12 +347,16 @@ export const resolveEngine6ProductCodesChangedSinceRefSafe = (args?: {
   };
 };
 
-export const resolveEngine6ProductCodesChangedSinceRef = (args: {
+export type Engine6ProductScopeChangedSinceRefResult =
+  Engine6LiveViatorValidationBaseRefResolution &
+    Engine6ChangedFileProductScope;
+
+export const resolveEngine6ProductScopeChangedSinceRef = (args: {
   baseRef: string;
   headRef?: string;
   execImpl?: typeof execSync;
   execFileImpl?: typeof execFileSync;
-}) => {
+}): Engine6ChangedFileProductScope => {
   const headRef = args.headRef ?? "HEAD";
   const execImpl = args.execImpl ?? execSync;
   const execFileImpl = args.execFileImpl ?? execFileSync;
@@ -297,8 +389,16 @@ export const resolveEngine6ProductCodesChangedSinceRef = (args: {
     }
   }
 
-  return extractEngine6ProductCodesFromChangedFiles({
+  return resolveEngine6ProductScopeFromChangedFiles({
     changedFiles,
     catalogDiffs,
   });
 };
+
+export const resolveEngine6ProductCodesChangedSinceRef = (args: {
+  baseRef: string;
+  headRef?: string;
+  execImpl?: typeof execSync;
+  execFileImpl?: typeof execFileSync;
+}) =>
+  resolveEngine6ProductScopeChangedSinceRef(args).deployScoped;

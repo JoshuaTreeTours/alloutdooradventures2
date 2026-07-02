@@ -5,7 +5,9 @@ import { describe, expect, it } from "vitest";
 import {
   auditEngine6DescriptionTitleGovernance,
   auditEngine6LiveViatorGovernanceFindings,
+  auditEngine6MerchantFeedCommercialRefreshGovernance,
   auditEngine6MerchantFeedImageGovernanceFindings,
+  auditEngine6RemovedProductSurfaceParity,
   buildEngine6Stage2GovernanceAudit,
   buildEngine6Stage2GovernanceAuditReport,
   classifyEngine6Stage2FindingSeverity,
@@ -15,6 +17,10 @@ import {
   parseSitemapTourPaths,
   resolveEngine6Stage2ScopedProductCodes,
 } from "./engine6Stage2GovernanceAudit";
+import {
+  buildMerchantFeedBranchScopedGovernanceByProductCode,
+  buildMerchantFeedPublishedBaselineCatalog,
+} from "../../api/engine6/merchantFeedBaselineGovernance";
 import type { Engine6Tour } from "./types";
 
 const buildTour = (overrides: Partial<Engine6Tour> = {}): Engine6Tour =>
@@ -118,6 +124,109 @@ describe("engine6Stage2GovernanceAudit scope", () => {
 
     expect(blocking.severity).toBe("blocking");
     expect(legacy.severity).toBe("legacy");
+  });
+
+  it("treats unchanged sibling destination products as legacy in removal-only PR scope", () => {
+    const tour = buildTour({
+      productCode: "7886P3",
+      title: "Canonical Title",
+    });
+    const merchantRowsByProductCode = new Map([
+      [
+        "7886P3",
+        {
+          title: "Wrong Title",
+          description: "Wrong description",
+        },
+      ],
+    ]);
+    const baselineCatalog = buildMerchantFeedPublishedBaselineCatalog([
+      {
+        id: "7886P3",
+        price: "249 USD",
+        average_rating: "5.0",
+        rating_count: "177",
+        review_count: "177",
+      },
+    ]);
+    const governanceByProductCode =
+      buildMerchantFeedBranchScopedGovernanceByProductCode(
+        [
+          {
+            id: "7886P3",
+            price: "249 USD",
+            average_rating: "5.0",
+            rating_count: "177",
+            review_count: "177",
+          },
+        ],
+        baselineCatalog,
+        new Set(["108446P2"])
+      );
+
+    expect(governanceByProductCode.get("7886P3")).toBe(
+      "unchanged-legacy-baseline"
+    );
+
+    const descriptionFindings = auditEngine6DescriptionTitleGovernance({
+      tours: [tour],
+      merchantRowsByProductCode,
+      mode: "pr-scoped",
+      scopedProductCodes: new Set(["108446P2"]),
+    });
+    const commercialFindings = auditEngine6MerchantFeedCommercialRefreshGovernance(
+      {
+        tours: [tour],
+        merchantRowsByProductCode,
+        baselineRows: [
+          {
+            id: "7886P3",
+            price: "249 USD",
+            average_rating: "5.0",
+            rating_count: "177",
+            review_count: "177",
+          },
+        ],
+        governanceByProductCode,
+        governanceMode: "warn",
+        mode: "pr-scoped",
+        scopedProductCodes: new Set(["108446P2"]),
+      }
+    );
+
+    expect(
+      descriptionFindings.every(finding => finding.severity === "legacy")
+    ).toBe(true);
+    expect(
+      commercialFindings.every(finding => finding.severity === "legacy")
+    ).toBe(true);
+  });
+
+  it("blocks incomplete removal cleanup for deleted deploy-scoped products", () => {
+    const findings = auditEngine6RemovedProductSurfaceParity({
+      removedProductCodes: new Set(["108446P2"]),
+      merchantRowsByProductCode: new Map([
+        [
+          "108446P2",
+          {
+            link: "https://www.alloutdooradventures.com/destinations/arizona/grand-canyon-national-park/tours/biblical-creation-sunset-tour-108446P2",
+          },
+        ],
+      ]),
+      sitemapTourPaths: new Set([
+        "/destinations/arizona/grand-canyon-national-park/tours/biblical-creation-sunset-tour-108446P2",
+      ]),
+      mode: "pr-scoped",
+      scopedProductCodes: new Set(["108446P2"]),
+    });
+
+    expect(findings.some(finding => finding.severity === "blocking")).toBe(true);
+    expect(findings.map(finding => finding.message)).toEqual(
+      expect.arrayContaining([
+        "removed product still has a merchantFeed.csv row",
+        expect.stringContaining("removed product still appears in sitemap-tours.xml"),
+      ])
+    );
   });
 });
 
