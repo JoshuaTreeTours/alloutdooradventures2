@@ -1022,87 +1022,69 @@ const GRAND_CANYON_TOURS: GrandCanyonTourFixture[] = [
     categories: ["Overnight Tours", "Multi-day Tours", "Safaris"],
   },
   {
-    productCode: "108446P2",
+    productCode: "6613P14",
     productUrl:
-      "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-Biblical-Creation-Sunset-Tour/d815-108446P2",
-    title: "4-Hour Biblical Creation + Sunset Tour • Grand Canyon National Park South Rim",
+      "https://www.viator.com/tours/Grand-Canyon-National-Park/Helicopter-Tour-of-the-North-Canyon-with-Optional-Hummer-Excursion/d815-6613P14",
+    title: "Helicopter Tour of the North Canyon with Optional Hummer Excursion",
     description:
-      "A faith-focused four-hour coach tour visits seven South Rim viewpoints while a guide shares biblical creation perspectives on the canyon's geology. The itinerary builds toward sunset at a selected east-rim overlook such as Lipan or Navajo Point.",
-    duration: "4 hours (approx.)",
-    priceFrom: 149,
+      "Lift off from the Grand Canyon South Rim Heliport on a Bell helicopter flight over Kaibab National Forest and into the Dragon Corridor, the deepest and widest section of the canyon. An optional Hummer ground tour adds South Rim viewpoints after landing back in Tusayan.",
+    duration: "25 minutes to 4 hours 30 minutes (approx.)",
+    priceFrom: 289,
     heroUrl:
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/74/0f/9c.jpg",
-    rating: 5,
-    reviewCount: 825,
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/bb/cb/df.jpg",
+    rating: 4.6,
+    reviewCount: 184,
     highlights: [
-      "Four-hour faith-based South Rim coach tour",
-      "Seven viewpoint stops across the South Rim",
-      "Sunset viewing at Lipan Point or Navajo Point",
-      "Biblical creation commentary on canyon geology",
-      "National park entrance fees included",
+      "25-minute North Canyon helicopter flight from the South Rim Heliport",
+      "Aerial routing through the Dragon Corridor over the inner gorge",
+      "Optional add-on Hummer tour of South Rim viewpoints",
+      "State-of-the-art Bell helicopter with window views for every passenger",
+      "Seamless transfer to ground tour when the Hummer option is selected",
     ],
     startDescription:
-      "Pickup from Tusayan hotels and the National Geographic Visitor Center for afternoon departure.",
+      "Check in at Papillon Helicopters, 3568 Airport Rd, Grand Canyon Village, AZ 86023. Arrive 30 minutes before your scheduled departure.",
     endDescription:
-      "Return to your Tusayan pickup point after sunset viewing.",
+      "Return to the Papillon terminal after landing; Hummer add-on guests transfer to the ground tour staging area.",
     itineraryItems: [
+      {
+        title: "Kaibab National Forest",
+        description:
+          "Depart over ponderosa pine forest on the South Rim plateau before reaching the canyon edge.",
+        stopType: "pass-by",
+      },
+      {
+        title: "Dragon Corridor",
+        description:
+          "Fly through the Dragon Corridor, the deepest and widest section of the Grand Canyon.",
+        duration: "10 minutes",
+        stopType: "pass-by",
+      },
+      {
+        title: "Grand Canyon North Rim",
+        description:
+          "Aerial views toward the North Rim and inner gorge from the helicopter cabin.",
+        stopType: "pass-by",
+      },
+      {
+        title: "Colorado River",
+        description:
+          "Track the Colorado River bend visible from the North Canyon flight path.",
+        stopType: "pass-by",
+      },
       {
         title: "Grand Canyon South Rim",
         description:
-          "Begin the guided coach loop with an overview of the South Rim layout.",
-        duration: "30 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Grand Canyon Visitor Center",
-        description:
-          "Brief stop at the South Rim visitor center for park orientation.",
-        duration: "15 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Yavapai Point",
-        description:
-          "Viewpoint stop at Yavapai Point with geology discussion.",
-        duration: "20 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Grandview Point",
-        description:
-          "Photo stop at Grandview Point above Horseshoe Mesa.",
-        duration: "20 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Lipan Point",
-        description:
-          "East-rim stop at Lipan Point with wide river views.",
-        duration: "20 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Navajo Point",
-        description:
-          "Viewpoint stop at Navajo Point along Desert View Drive.",
-        duration: "15 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Moran Point",
-        description:
-          "Final pre-sunset stop at Moran Point before the evening overlook.",
-        duration: "15 minutes",
+          "Optional Hummer tour stops at South Rim viewpoints after the helicopter lands.",
         stopType: "stop",
       },
     ],
     inclusions: [
-      "Coach transport",
-      "Faith-based guide commentary",
-      "National park entrance fees",
-      "Hotel pickup in Tusayan",
+      "Helicopter air tour from Grand Canyon South Rim Heliport",
+      "Professional pilot and live narration",
+      "Optional Hummer tour with driver-guide when selected",
+      "All fees and taxes",
     ],
-    categories: ["Sunset Tours", "Bus Tours", "Sightseeing Tours"],
+    categories: ["Helicopter Tours", "4WD Tours", "Air Tours"],
   },
   {
     productCode: "6338DISCOVERY",

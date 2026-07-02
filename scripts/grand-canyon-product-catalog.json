@@ -216,16 +216,16 @@
     "itineraryTitles": ["Grand Canyon Western Ranch"]
   },
   {
-    "productCode": "108446P2",
-    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Grand-Canyon-Biblical-Creation-Sunset-Tour/d815-108446P2",
-    "title": "4-Hour Biblical Creation + Sunset Tour • Grand Canyon National Park South Rim",
-    "duration": "4 hours (approx.)",
-    "priceFrom": 149,
-    "rating": 5,
-    "reviewCount": 825,
-    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/74/0f/9c.jpg",
-    "categories": ["Sunset Tours", "Bus Tours", "Sightseeing Tours"],
-    "itineraryTitles": ["Grand Canyon South Rim", "Grand Canyon Visitor Center", "Yavapai Point", "Grandview Point", "Lipan Point", "Navajo Point", "Moran Point"]
+    "productCode": "6613P14",
+    "productUrl": "https://www.viator.com/tours/Grand-Canyon-National-Park/Helicopter-Tour-of-the-North-Canyon-with-Optional-Hummer-Excursion/d815-6613P14",
+    "title": "Helicopter Tour of the North Canyon with Optional Hummer Excursion",
+    "duration": "25 minutes to 4 hours 30 minutes (approx.)",
+    "priceFrom": 289,
+    "rating": 4.6,
+    "reviewCount": 184,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/bb/cb/df.jpg",
+    "categories": ["Helicopter Tours", "4WD Tours", "Air Tours"],
+    "itineraryTitles": ["Kaibab National Forest", "Dragon Corridor", "Grand Canyon North Rim", "Colorado River", "Grand Canyon South Rim"]
   },
   {
     "productCode": "6338DISCOVERY",
