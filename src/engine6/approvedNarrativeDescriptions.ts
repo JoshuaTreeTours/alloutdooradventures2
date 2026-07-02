@@ -1,3 +1,5 @@
+import { getGreatSmokyMountainsTargetedNarrativeDescription } from "./greatSmokyMountainsApprovedNarrativeDescriptions";
+
 export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "5615689P4",
   "5614063P8",
@@ -89,6 +91,7 @@ export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTIONS: Record<
 };
 
 export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
+  getGreatSmokyMountainsTargetedNarrativeDescription(productCode) ??
   ENGINE6_TARGETED_NARRATIVE_DESCRIPTIONS[
     productCode as Engine6TargetedNarrativeDescriptionProductCode
   ];
