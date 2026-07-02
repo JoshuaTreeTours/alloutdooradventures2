@@ -7,7 +7,11 @@ import {
   validateConfiguredEngine6ProductionViatorProducts,
   type Engine6LiveViatorValidationMode,
 } from "../src/engine6/engine6LiveViatorProductionValidation";
-import { resolveEngine6ProductCodesChangedSinceRefSafe } from "../src/engine6/resolveEngine6ChangedProductCodes";
+import {
+  resolveEngine6GovernanceExitPolicy,
+  resolveEngine6GovernanceMode,
+} from "../src/engine6/engine6GovernanceMode";
+import { resolveEngine6GovernanceScope } from "../src/engine6/resolveEngine6GovernanceScope";
 
 const OUTPUT_PATH = path.resolve(
   process.cwd(),
@@ -27,17 +31,41 @@ const readValidationMode = (): Engine6LiveViatorValidationMode => {
   return resolveEngine6LiveViatorValidationMode();
 };
 
-const resolveScopedProductCodes = (mode: Engine6LiveViatorValidationMode) => {
-  if (mode !== "pr-scoped") {
+const readGovernanceMode = () => {
+  if (process.argv.includes("--strict")) {
+    return "strict" as const;
+  }
+
+  if (process.argv.includes("--warn") || process.argv.includes("--pr-scoped")) {
+    return "warn" as const;
+  }
+
+  if (process.argv.includes("--audit")) {
+    return "audit" as const;
+  }
+
+  return resolveEngine6GovernanceMode();
+};
+
+const resolveScopedProductCodes = (
+  mode: Engine6LiveViatorValidationMode,
+  governanceMode: ReturnType<typeof readGovernanceMode>
+) => {
+  if (
+    governanceMode === "strict" &&
+    process.env.ENGINE6_GOVERNANCE_FULL_AUDIT === "1"
+  ) {
+    return [];
+  }
+
+  if (governanceMode === "audit") {
     return [];
   }
 
   const headRef =
     process.env.ENGINE6_LIVE_VIATOR_VALIDATION_HEAD_REF?.trim() || "HEAD";
 
-  const resolution = resolveEngine6ProductCodesChangedSinceRefSafe({
-    headRef,
-  });
+  const resolution = resolveEngine6GovernanceScope({ headRef });
 
   if (resolution.warning) {
     console.warn(
@@ -45,7 +73,7 @@ const resolveScopedProductCodes = (mode: Engine6LiveViatorValidationMode) => {
       JSON.stringify(
         {
           warning: resolution.warning,
-          attemptedRefs: resolution.attemptedRefs,
+          baseRef: resolution.baseRef,
           deployScopedBlockingProductCodes: [],
         },
         null,
@@ -59,7 +87,7 @@ const resolveScopedProductCodes = (mode: Engine6LiveViatorValidationMode) => {
         {
           baseRef: resolution.baseRef,
           headRef,
-          deployScopedBlockingProductCodes: resolution.productCodes,
+          deployScopedBlockingProductCodes: resolution.scopedProductCodes,
         },
         null,
         2
@@ -67,7 +95,7 @@ const resolveScopedProductCodes = (mode: Engine6LiveViatorValidationMode) => {
     );
   }
 
-  return resolution.productCodes;
+  return resolution.scopedProductCodes;
 };
 
 const publishGithubStepSummary = async (
@@ -83,6 +111,8 @@ const publishGithubStepSummary = async (
     "## Engine6 live Viator validation",
     "",
     `- Mode: \`${report.mode}\``,
+    `- Governance mode: \`${report.governanceMode}\``,
+    `- Skipped: ${report.skipped ? "yes" : "no"}`,
     `- Products validated: ${report.results.length}`,
     `- Scoped blocking products: ${report.scopedProductCodes.length}`,
     `- Blocking failures: ${report.blockingFailures.length}`,
@@ -125,9 +155,12 @@ const publishGithubStepSummary = async (
 };
 
 const mode = readValidationMode();
-const scopedProductCodes = resolveScopedProductCodes(mode);
+const governanceMode = readGovernanceMode();
+const scopedProductCodes = resolveScopedProductCodes(mode, governanceMode);
+const exitPolicy = resolveEngine6GovernanceExitPolicy(governanceMode);
 
 const report = await validateConfiguredEngine6ProductionViatorProducts({
+  governanceMode,
   mode,
   scopedProductCodes,
 });
@@ -143,7 +176,18 @@ await writeFile(
 console.log(formatted);
 await publishGithubStepSummary(formatted, report);
 
-if (!report.blockingPassed) {
+if (report.skipped && report.skipReason) {
+  if (!report.blockingPassed && exitPolicy.shouldExitOnBlockingFindings) {
+    console.error(`\n${report.skipReason}`);
+    process.exit(1);
+  }
+
+  console.warn(`\n${report.skipReason}`);
+  console.log("\nEngine6 live Viator production validation passed (skipped locally).");
+  process.exit(0);
+}
+
+if (!report.blockingPassed && exitPolicy.shouldExitOnBlockingFindings) {
   console.error(
     report.mode === "pr-scoped"
       ? "\nEngine6 deploy-scoped validation rejected: one or more newly introduced or modified Viator products failed live validation."

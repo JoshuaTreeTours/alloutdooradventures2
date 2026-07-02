@@ -2,42 +2,54 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 import {
+  resolveEngine6GovernanceExitPolicy,
+  resolveEngine6GovernanceMode,
+  resolveEngine6GovernanceRequiresFullSiteValidation,
+} from "../src/engine6/engine6GovernanceMode";
+import {
   formatEngine6LiveViatorProductionValidationReport,
   validateConfiguredEngine6ProductionViatorProducts,
-  type Engine6LiveViatorValidationMode,
 } from "../src/engine6/engine6LiveViatorProductionValidation";
 import {
   buildEngine6Stage2GovernanceAudit,
   formatEngine6Stage2GovernanceAuditMarkdown,
+  resolveEngine6Stage2GovernanceModeFromEnv,
 } from "../src/engine6/engine6Stage2GovernanceAudit";
 import { engine6ResolvedTours } from "../src/engine6/registry";
-import { resolveEngine6ProductCodesChangedSinceRefSafe } from "../src/engine6/resolveEngine6ChangedProductCodes";
+import { resolveEngine6GovernanceScope } from "../src/engine6/resolveEngine6GovernanceScope";
 
 const REPORT_DIR = path.resolve("reports");
 const JSON_PATH = path.join(REPORT_DIR, "engine6-stage2-governance-audit.json");
 const MD_PATH = path.join(REPORT_DIR, "engine6-stage2-governance-audit.md");
 
-const readValidationMode = (): Engine6LiveViatorValidationMode => {
+const readGovernanceMode = () => {
   if (process.argv.includes("--strict")) {
-    return "strict";
+    return "strict" as const;
   }
 
-  if (process.argv.includes("--pr-scoped")) {
-    return "pr-scoped";
+  if (process.argv.includes("--warn")) {
+    return "warn" as const;
   }
 
-  // Stage 2 consolidated audit defaults to deploy-scoped blocking for new/modified
-  // products while legacy catalog drift remains report-only.
-  return "pr-scoped";
+  if (process.argv.includes("--audit")) {
+    return "audit" as const;
+  }
+
+  return resolveEngine6GovernanceMode();
 };
 
 const shouldIncludeLiveViator = () => !process.argv.includes("--skip-live-viator");
 
-const mode = readValidationMode();
+const governanceMode = readGovernanceMode();
+const { mode } = resolveEngine6Stage2GovernanceModeFromEnv();
+const fullSiteValidation =
+  resolveEngine6GovernanceRequiresFullSiteValidation(governanceMode);
 const headRef =
   process.env.ENGINE6_STAGE2_GOVERNANCE_HEAD_REF?.trim() || "HEAD";
-const scopedResolution = resolveEngine6ProductCodesChangedSinceRefSafe({
+const scopedResolution = resolveEngine6GovernanceScope({
   headRef,
+  fullSiteValidation,
+  tours: engine6ResolvedTours,
 });
 
 if (scopedResolution.warning) {
@@ -53,9 +65,10 @@ let liveViator:
 
 if (shouldIncludeLiveViator()) {
   liveViator = await validateConfiguredEngine6ProductionViatorProducts({
+    governanceMode,
     mode,
     scopedProductCodes:
-      mode === "pr-scoped" ? scopedResolution.productCodes : [],
+      mode === "pr-scoped" ? scopedResolution.scopedProductCodes : [],
   });
   console.log(formatEngine6LiveViatorProductionValidationReport(liveViator));
 }
@@ -67,12 +80,16 @@ const report = await buildEngine6Stage2GovernanceAudit({
   tours: engine6ResolvedTours,
   merchantFeedCsvContent,
   sitemapTourXmlContent,
+  governanceMode,
   mode,
-  scopedProductCodes: scopedResolution.productCodes,
+  scopedProductCodes: scopedResolution.scopedProductCodes,
+  scopedDestinationLabels: scopedResolution.scopedDestinationLabels,
+  fullSiteValidation,
   liveViator,
 });
 
 const markdown = formatEngine6Stage2GovernanceAuditMarkdown(report);
+const exitPolicy = resolveEngine6GovernanceExitPolicy(governanceMode);
 
 mkdirSync(REPORT_DIR, { recursive: true });
 writeFileSync(JSON_PATH, `${JSON.stringify(report, null, 2)}\n`);
@@ -83,10 +100,12 @@ console.log(`Wrote ${MD_PATH}`);
 console.log(
   JSON.stringify(
     {
+      governanceMode: report.governanceMode,
       mode: report.mode,
       blockingPassed: report.blockingPassed,
       passed: report.passed,
       blockingFindings: report.totals.blockingFindings,
+      warningFindings: report.totals.warningFindings,
       legacyFindings: report.totals.legacyFindings,
       areasPassed: report.totals.areasPassed,
     },
@@ -95,16 +114,32 @@ console.log(
   )
 );
 
-if (!report.blockingPassed) {
+if (!report.blockingPassed && exitPolicy.shouldExitOnBlockingFindings) {
   console.error(
-    "\nEngine6 Stage 2 governance audit rejected: one or more blocking findings remain for new or modified products."
+    "\nEngine6 Stage 2 governance audit rejected: one or more blocking findings remain for deploy-scoped products."
   );
   process.exit(1);
 }
 
-if (report.totals.legacyFindings > 0) {
+if (
+  report.totals.warningFindings > 0 &&
+  exitPolicy.shouldExitOnWarnings
+) {
+  console.error(
+    `\nEngine6 Stage 2 governance audit rejected: ${report.totals.warningFindings} warning finding(s) remain in strict mode.`
+  );
+  process.exit(1);
+}
+
+if (report.totals.legacyFindings > 0 && exitPolicy.shouldReportLegacyFindings) {
   console.warn(
-    `\nEngine6 Stage 2 governance audit passed with ${report.totals.legacyFindings} legacy finding(s) reported separately (report-only in pr-scoped mode).`
+    `\nEngine6 Stage 2 governance audit completed with ${report.totals.legacyFindings} legacy finding(s) reported separately.`
+  );
+}
+
+if (report.totals.warningFindings > 0 && governanceMode === "warn") {
+  console.warn(
+    `\nEngine6 Stage 2 governance audit passed with ${report.totals.warningFindings} warning finding(s) (non-blocking in warn mode).`
   );
 }
 
