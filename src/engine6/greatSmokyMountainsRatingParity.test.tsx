@@ -6,6 +6,10 @@ import { renderToString } from "react-dom/server";
 import TourCard from "../components/TourCard";
 import { getToursByCityUnified } from "../data/tours";
 import Engine6TourPage from "./components/Engine6TourPage";
+import {
+  buildEngine6CardDescription,
+  resolveEngine6GovernedProductDescription,
+} from "./governedEditorialDescriptions";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import {
   GREAT_SMOKY_MOUNTAINS_VIATOR_PUBLIC_RATINGS,
@@ -118,6 +122,30 @@ describe("Great Smoky Mountains Engine6 rating/review parity", () => {
       averageRating: "4.9",
       ratingCount: "95",
       reviewCount: "95",
+    });
+  });
+
+  it("keeps Great Smoky Mountains listing and governed descriptions free of Yellowstone boilerplate", () => {
+    GREAT_SMOKY_MOUNTAINS_VIATOR_PUBLIC_PRODUCT_CODES.forEach(productCode => {
+      const tour = engine6ResolvedTours.find(
+        entry => entry.productCode === productCode
+      );
+      const listingEntry = getToursByCityUnified(
+        "tennessee",
+        "great-smoky-mountains-national-park"
+      ).find(entry => entry.tour.productCode === productCode);
+
+      expect(tour).toBeDefined();
+      expect(listingEntry).toBeDefined();
+
+      const cardDescription = buildEngine6CardDescription(tour!);
+      const governedDescription = resolveEngine6GovernedProductDescription(tour!);
+
+      expect(cardDescription, productCode).not.toMatch(/Yellowstone/i);
+      expect(governedDescription, productCode).not.toMatch(/Yellowstone/i);
+      expect(listingEntry!.tour.shortDescription, productCode).not.toMatch(
+        /Yellowstone/i
+      );
     });
   });
 
