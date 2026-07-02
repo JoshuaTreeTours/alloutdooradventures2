@@ -4,8 +4,8 @@ import {
 } from "./engine6DestinationValidationCohorts.js";
 import type { Engine6Tour } from "./types.js";
 import {
-  extractEngine6ProductCodesFromChangedFiles,
   parseGitNameStatusOutput,
+  resolveEngine6ProductScopeFromChangedFiles,
   type Engine6GitChangedFile,
   verifyGitRefExists,
 } from "./resolveEngine6ChangedProductCodes.js";
@@ -113,6 +113,8 @@ export const resolveEngine6DestinationLabelsForProductCodes = (
 
 export type Engine6GovernanceScopeResolution = {
   scopedProductCodes: string[];
+  branchModifiedProductCodes: string[];
+  removedProductCodes: string[];
   scopedDestinationLabels: string[];
   fullSiteValidation: boolean;
   changedFiles: Engine6GitChangedFile[];
@@ -133,11 +135,14 @@ export const resolveEngine6GovernanceScope = (args?: {
   const headRef = args?.headRef ?? "HEAD";
   const fullSiteValidation = args?.fullSiteValidation ?? false;
   const scopedProducts = new Set<string>();
+  const branchModifiedProducts = new Set<string>();
+  const removedProducts = new Set<string>();
 
   for (const code of args?.branchModifiedProductCodes ?? []) {
     const normalized = code.trim().toUpperCase();
     if (normalized) {
       scopedProducts.add(normalized);
+      branchModifiedProducts.add(normalized);
     }
   }
 
@@ -183,11 +188,19 @@ export const resolveEngine6GovernanceScope = (args?: {
       }
     }
 
-    for (const code of extractEngine6ProductCodesFromChangedFiles({
+    const productScope = resolveEngine6ProductScopeFromChangedFiles({
       changedFiles,
       catalogDiffs,
-    })) {
+    });
+
+    for (const code of productScope.deployScoped) {
       scopedProducts.add(code);
+    }
+    for (const code of productScope.addedOrModified) {
+      branchModifiedProducts.add(code);
+    }
+    for (const code of productScope.removedOnly) {
+      removedProducts.add(code);
     }
   }
 
@@ -211,6 +224,8 @@ export const resolveEngine6GovernanceScope = (args?: {
 
   return {
     scopedProductCodes: [...scopedProducts].sort(),
+    branchModifiedProductCodes: [...branchModifiedProducts].sort(),
+    removedProductCodes: [...removedProducts].sort(),
     scopedDestinationLabels,
     fullSiteValidation,
     changedFiles,
