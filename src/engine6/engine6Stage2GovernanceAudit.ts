@@ -448,6 +448,84 @@ export const auditEngine6ItineraryTitleGovernanceFindings = (args: {
   return findings;
 };
 
+export const auditEngine6RemovedProductSurfaceParity = (args: {
+  removedProductCodes: ReadonlySet<string>;
+  merchantRowsByProductCode: Map<string, Record<string, string>>;
+  sitemapTourPaths: ReadonlySet<string>;
+  mode: Engine6Stage2GovernanceAuditMode;
+  scopedProductCodes: ReadonlySet<string>;
+}): Engine6Stage2GovernanceFinding[] => {
+  if (args.mode !== "pr-scoped" || args.removedProductCodes.size === 0) {
+    return [];
+  }
+
+  const findings: Engine6Stage2GovernanceFinding[] = [];
+
+  for (const productCode of args.removedProductCodes) {
+    const normalized = normalizeProductCode(productCode);
+    if (!normalized) {
+      continue;
+    }
+
+    if (ENGINE6_CONFIGURED_PRODUCT_CODES.includes(normalized)) {
+      findings.push(
+        createEngine6Stage2GovernanceFinding({
+          area: "route-sitemap-merchant-feed-parity",
+          productCode: normalized,
+          message:
+            "removed product remains configured in ENGINE6_CONFIGURED_PRODUCT_CODES",
+          mode: args.mode,
+          scopedProductCodes: args.scopedProductCodes,
+        })
+      );
+    }
+
+    if (args.merchantRowsByProductCode.has(normalized)) {
+      findings.push(
+        createEngine6Stage2GovernanceFinding({
+          area: "route-sitemap-merchant-feed-parity",
+          productCode: normalized,
+          message: "removed product still has a merchantFeed.csv row",
+          mode: args.mode,
+          scopedProductCodes: args.scopedProductCodes,
+        })
+      );
+    }
+
+    for (const path of args.sitemapTourPaths) {
+      if (path.toUpperCase().includes(normalized)) {
+        findings.push(
+          createEngine6Stage2GovernanceFinding({
+            area: "route-sitemap-merchant-feed-parity",
+            productCode: normalized,
+            message: `removed product still appears in sitemap-tours.xml (${path})`,
+            mode: args.mode,
+            scopedProductCodes: args.scopedProductCodes,
+          })
+        );
+        break;
+      }
+    }
+
+    if (
+      merchantFeedEligibleTours.some(tour => tour.productCode === normalized)
+    ) {
+      findings.push(
+        createEngine6Stage2GovernanceFinding({
+          area: "route-sitemap-merchant-feed-parity",
+          productCode: normalized,
+          message:
+            "removed product remains merchant-feed eligible in resolved catalog",
+          mode: args.mode,
+          scopedProductCodes: args.scopedProductCodes,
+        })
+      );
+    }
+  }
+
+  return findings;
+};
+
 export const auditEngine6RouteSitemapMerchantFeedParity = (args: {
   tours: Engine6Tour[];
   merchantRowsByProductCode: Map<string, Record<string, string>>;
@@ -1081,6 +1159,7 @@ export type BuildEngine6Stage2GovernanceAuditArgs = {
   scopedDestinationLabels?: string[];
   fullSiteValidation?: boolean;
   branchModifiedProductCodes?: ReadonlySet<string>;
+  removedProductCodes?: ReadonlySet<string>;
   generatedAt?: string;
   validateImageUrl?: ValidateEngine6MerchantFeedImageUrl;
   liveViator?: Engine6LiveViatorProductionValidationReport;
@@ -1116,6 +1195,11 @@ export const buildEngine6Stage2GovernanceAudit = async (
   });
   const scopedProductCodes =
     args.scopedProductCodes ?? scopeResolution.scopedProductCodes;
+  const branchModifiedProductCodes =
+    args.branchModifiedProductCodes ??
+    new Set(scopeResolution.branchModifiedProductCodes);
+  const removedProductCodes =
+    args.removedProductCodes ?? new Set(scopeResolution.removedProductCodes);
   const scopedDestinationLabels =
     args.scopedDestinationLabels ?? scopeResolution.scopedDestinationLabels;
   const scopedSet = new Set(
@@ -1123,10 +1207,14 @@ export const buildEngine6Stage2GovernanceAudit = async (
   );
   const notes = [
     ...(scopeResolution.warning ? [scopeResolution.warning] : []),
-    ...(args.branchModifiedProductCodes &&
-    args.branchModifiedProductCodes.size > 0
+    ...(branchModifiedProductCodes.size > 0
       ? [
-          `Branch-modified product codes included in deploy scope: ${[...args.branchModifiedProductCodes].sort().join(", ")}`,
+          `Branch-modified product codes: ${[...branchModifiedProductCodes].sort().join(", ")}`,
+        ]
+      : []),
+    ...(removedProductCodes.size > 0
+      ? [
+          `Removed product codes requiring surface cleanup: ${[...removedProductCodes].sort().join(", ")}`,
         ]
       : []),
   ];
@@ -1151,12 +1239,19 @@ export const buildEngine6Stage2GovernanceAudit = async (
     buildMerchantFeedBranchScopedGovernanceByProductCode(
       merchantRows,
       baselineCatalog,
-      args.branchModifiedProductCodes ?? scopedSet
+      branchModifiedProductCodes
     );
   const sitemapTourPaths = parseSitemapTourPaths(args.sitemapTourXmlContent);
   const eligibleTours = merchantFeedEligibleTours;
 
   const findings: Engine6Stage2GovernanceFinding[] = [
+    ...auditEngine6RemovedProductSurfaceParity({
+      removedProductCodes,
+      merchantRowsByProductCode,
+      sitemapTourPaths,
+      mode,
+      scopedProductCodes: scopedSet,
+    }),
     ...auditEngine6MerchantFeedCommercialRefreshGovernance({
       tours: eligibleTours,
       merchantRowsByProductCode,
@@ -1214,7 +1309,7 @@ export const buildEngine6Stage2GovernanceAudit = async (
         args.tours.map(tour => [normalizeProductCode(tour.productCode), tour])
       ),
       governanceByProductCode,
-      branchModifiedProductCodes: scopedSet,
+      branchModifiedProductCodes,
       validateImageUrl: args.validateImageUrl,
     });
     merchantFeedImage = imageResult.report;
