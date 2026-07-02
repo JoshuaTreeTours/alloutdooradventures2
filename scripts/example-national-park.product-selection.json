@@ -1,0 +1,30 @@
+{
+  "destinationLabel": "Example National Park",
+  "destinationCitySlug": "example-national-park",
+  "viatorDestinationSlug": "Example-National-Park",
+  "targetPremiumShare": 0.5,
+  "slots": [
+    {
+      "experienceType": "private-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "PRIMARYP1",
+          "sourceUrl": "https://www.viator.com/tours/Example-National-Park/Primary-Tour/d9999-PRIMARYP1",
+          "title": "Private Example Tour",
+          "experienceType": "private-tour",
+          "priceFrom": 799,
+          "priority": 1
+        },
+        {
+          "productCode": "BACKUPP1",
+          "sourceUrl": "https://www.viator.com/tours/Example-National-Park/Backup-Tour/d9999-BACKUPP1",
+          "title": "Private Backup Example Tour",
+          "experienceType": "private-tour",
+          "priceFrom": 899,
+          "priority": 2
+        }
+      ]
+    }
+  ]
+}

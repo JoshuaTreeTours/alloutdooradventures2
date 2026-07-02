@@ -56,7 +56,7 @@ Before writing any Engine6 destination fixtures, validate every candidate produc
 - Keep live validation PR-scoped so only newly introduced products can block the current pull request.
 - Preserve deterministic build order: Live Validation → Fixtures → Merchant Feed → Routes → Sitemap.
 
-Use `selectEngine6DestinationPortfolio` in `src/engine6/engine6ProductSelectionGovernance.ts` for destination builds and `validate:engine6-product-selection` for completion reporting.
+Use the shared Engine6 Paragon governance pipeline in `src/engine6/engine6ParagonGovernancePipeline.ts` for all destination builds. Every destination fixture, merchant-feed, route, sitemap, destination-page, and preview script must invoke this pipeline before generating artifacts; destination-specific validation or selection logic is forbidden.
 
 ## Forbidden patterns
 

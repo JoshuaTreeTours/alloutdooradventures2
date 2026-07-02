@@ -1,12 +1,15 @@
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
-import {
-  formatEngine6ProductSelectionGovernanceReport,
-  selectEngine6DestinationPortfolio,
-  type Engine6ProductSelectionSlot,
-} from "../src/engine6/engine6ProductSelectionGovernance";
+import { formatEngine6ProductSelectionGovernanceReport } from "../src/engine6/engine6ProductSelectionGovernance";
 import { resolveEngine6ProductCodesChangedSinceRefSafe } from "../src/engine6/resolveEngine6ChangedProductCodes";
+import {
+  assertEngine6ParagonArtifactStageAllowed,
+  finalizeEngine6DestinationBuildGate,
+  persistEngine6ParagonGovernanceBlocklistAdditions,
+  runEngine6ParagonProductSelectionPipelineWithReports,
+} from "./lib/engine6ParagonGovernancePipeline";
+import { readEngine6ParagonProductSelectionConfigFromArgv } from "./lib/readEngine6ParagonProductSelectionConfig";
 
 const REPORT_DIR = path.resolve("reports");
 const JSON_PATH = path.join(
@@ -19,51 +22,20 @@ const MD_PATH = path.join(
 );
 
 const readMode = () => {
-  if (process.argv.includes("--strict")) {
+  if (process.argv.includes("--strict") || process.argv.includes("--destination-build")) {
     return "strict" as const;
   }
 
   return "pr-scoped" as const;
 };
 
-const readDestinationLabel = () => {
-  const flagIndex = process.argv.indexOf("--destination");
-  if (flagIndex >= 0) {
-    return process.argv[flagIndex + 1]?.trim() || "Engine6 Destination";
-  }
-
-  return process.env.ENGINE6_PRODUCT_SELECTION_DESTINATION?.trim() || "Engine6 Destination";
-};
-
-const readSlotsFromEnv = (): Engine6ProductSelectionSlot[] => {
-  const configPath =
-    process.env.ENGINE6_PRODUCT_SELECTION_SLOTS_PATH?.trim() ||
-    process.argv.find(arg => arg.endsWith(".product-selection.json"));
-
-  if (!configPath) {
-    console.error(
-      "Product selection governance requires ranked candidate slots. Provide ENGINE6_PRODUCT_SELECTION_SLOTS_PATH or pass a *.product-selection.json file path."
-    );
-    process.exit(2);
-  }
-
-  const parsed = JSON.parse(readFileSync(configPath, "utf8")) as {
-    slots: Engine6ProductSelectionSlot[];
-    targetPremiumShare?: number;
-  };
-
-  if (!Array.isArray(parsed.slots) || parsed.slots.length === 0) {
-    throw new Error(
-      `Invalid product selection config at ${configPath}: expected non-empty slots array`
-    );
-  }
-
-  return parsed.slots;
-};
+const isDestinationBuild = () =>
+  process.argv.includes("--destination-build") ||
+  Boolean(process.env.ENGINE6_DESTINATION_BUILD?.trim());
 
 const mode = readMode();
-const destinationLabel = readDestinationLabel();
-const slots = readSlotsFromEnv();
+const destinationBuild = isDestinationBuild();
+const { config } = readEngine6ParagonProductSelectionConfigFromArgv();
 const headRef =
   process.env.ENGINE6_PRODUCT_SELECTION_HEAD_REF?.trim() || "HEAD";
 const scopedResolution = resolveEngine6ProductCodesChangedSinceRefSafe({
@@ -71,36 +43,61 @@ const scopedResolution = resolveEngine6ProductCodesChangedSinceRefSafe({
 });
 
 if (scopedResolution.warning) {
-  console.warn(
-    "[engine6-product-selection-governance]",
-    scopedResolution.warning
-  );
+  console.warn("[engine6-paragon-governance]", scopedResolution.warning);
 }
 
-const report = await selectEngine6DestinationPortfolio({
-  destinationLabel,
-  slots,
+const build = await runEngine6ParagonProductSelectionPipelineWithReports({
+  config,
+  destinationBuild,
   mode,
   scopedProductCodes:
     mode === "pr-scoped" ? scopedResolution.productCodes : [],
   headRef,
 });
 
-const formatted = formatEngine6ProductSelectionGovernanceReport(report);
-
-mkdirSync(REPORT_DIR, { recursive: true });
-writeFileSync(JSON_PATH, `${JSON.stringify(report, null, 2)}\n`);
-writeFileSync(MD_PATH, formatted);
-
-console.log(formatted);
-console.log(`Wrote ${JSON_PATH}`);
-console.log(`Wrote ${MD_PATH}`);
-
-if (!report.blockingPassed) {
-  console.error(
-    "\nEngine6 product selection governance rejected: one or more blocking selection failures remain."
-  );
-  process.exit(1);
+if (destinationBuild) {
+  assertEngine6ParagonArtifactStageAllowed({
+    context: build.context,
+    stage: "fixtures",
+  });
 }
 
-console.log("\nEngine6 product selection governance passed.");
+if (!destinationBuild) {
+  mkdirSync(REPORT_DIR, { recursive: true });
+  writeFileSync(
+    JSON_PATH,
+    `${JSON.stringify(build.context.report, null, 2)}\n`
+  );
+  writeFileSync(
+    MD_PATH,
+    formatEngine6ProductSelectionGovernanceReport(build.context.report)
+  );
+}
+
+const blocklist = persistEngine6ParagonGovernanceBlocklistAdditions({
+  report: build.context.report,
+  config,
+});
+
+console.log(build.reports.formatted);
+console.log(`Wrote ${build.reports.jsonPath}`);
+console.log(`Wrote ${build.reports.markdownPath}`);
+
+if (build.reports.failureMarkdownPath) {
+  console.log(`Wrote ${build.reports.failureMarkdownPath}`);
+}
+
+if (blocklist.persistedCount > 0) {
+  console.log(
+    `[engine6-paragon-governance] Persisted ${blocklist.persistedCount} permanent blocklist addition(s) to ${blocklist.blocklistPath}`
+  );
+}
+
+const gate = finalizeEngine6DestinationBuildGate(build.context.report);
+
+if (!gate.ok) {
+  console.error(`\n${gate.message}`);
+  process.exit(gate.exitCode);
+}
+
+console.log("\nEngine6 Paragon product-selection governance passed.");

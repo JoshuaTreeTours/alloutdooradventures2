@@ -937,6 +937,34 @@ export const ENGINE6_ZION_TOUR_PATH_PREFIX =
 export const isEngine6ZionTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_ZION_TOUR_PATH_PREFIX);
 
+export const ENGINE6_GLACIER_HALF_DAY_WHITewater_PRODUCT_CODE = "123783P1";
+export const ENGINE6_GLACIER_HALF_DAY_WHITewater_ROUTE =
+  "/destinations/montana/glacier-national-park/tours/half-day-whitewater-rafting-123783P1";
+export const ENGINE6_GLACIER_FULL_DAY_WHITewater_PRODUCT_CODE = "70248P3";
+export const ENGINE6_GLACIER_FULL_DAY_WHITewater_ROUTE =
+  "/destinations/montana/glacier-national-park/tours/full-day-whitewater-lunch-70248P3";
+export const ENGINE6_GLACIER_SCENIC_FLOAT_PRODUCT_CODE = "70248P2";
+export const ENGINE6_GLACIER_SCENIC_FLOAT_ROUTE =
+  "/destinations/montana/glacier-national-park/tours/half-day-scenic-float-70248P2";
+export const ENGINE6_GLACIER_DRIVING_TOUR_GNP_PRODUCT_CODE = "299521P2";
+export const ENGINE6_GLACIER_DRIVING_TOUR_GNP_ROUTE =
+  "/destinations/montana/glacier-national-park/tours/driving-tour-glacier-national-park-299521P2";
+export const ENGINE6_GLACIER_DRIVING_TOUR_WEST_PRODUCT_CODE = "299521P8";
+export const ENGINE6_GLACIER_DRIVING_TOUR_WEST_ROUTE =
+  "/destinations/montana/glacier-national-park/tours/driving-tour-west-glacier-299521P8";
+export const ENGINE6_GLACIER_NATURE_WALK_PRODUCT_CODE = "86727P7";
+export const ENGINE6_GLACIER_NATURE_WALK_ROUTE =
+  "/destinations/montana/glacier-national-park/tours/nature-walk-glacier-86727P7";
+export const ENGINE6_GLACIER_SUNSET_PADDLEBOARD_PRODUCT_CODE = "487722P4";
+export const ENGINE6_GLACIER_SUNSET_PADDLEBOARD_ROUTE =
+  "/destinations/montana/glacier-national-park/tours/sunset-clear-paddleboard-487722P4";
+
+export const ENGINE6_GLACIER_TOUR_PATH_PREFIX =
+  "/destinations/montana/glacier-national-park/tours/";
+
+export const isEngine6GlacierTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_GLACIER_TOUR_PATH_PREFIX);
+
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
   canonicalPath: string;
@@ -1992,6 +2020,34 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_ZION_163873P1_ROUTE,
     ENGINE6_ZION_163873P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GLACIER_HALF_DAY_WHITewater_ROUTE,
+    ENGINE6_GLACIER_HALF_DAY_WHITewater_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GLACIER_FULL_DAY_WHITewater_ROUTE,
+    ENGINE6_GLACIER_FULL_DAY_WHITewater_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GLACIER_SCENIC_FLOAT_ROUTE,
+    ENGINE6_GLACIER_SCENIC_FLOAT_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GLACIER_DRIVING_TOUR_GNP_ROUTE,
+    ENGINE6_GLACIER_DRIVING_TOUR_GNP_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GLACIER_DRIVING_TOUR_WEST_ROUTE,
+    ENGINE6_GLACIER_DRIVING_TOUR_WEST_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GLACIER_NATURE_WALK_ROUTE,
+    ENGINE6_GLACIER_NATURE_WALK_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GLACIER_SUNSET_PADDLEBOARD_ROUTE,
+    ENGINE6_GLACIER_SUNSET_PADDLEBOARD_PRODUCT_CODE,
   ],
 ] as const;
 

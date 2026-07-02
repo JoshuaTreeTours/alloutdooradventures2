@@ -1,5 +1,6 @@
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import { appendMerchantFeedRowsWithImageGovernance } from "./lib/appendMerchantFeedRowsWithImageGovernance";
+import { requireEngine6ParagonMerchantFeedGate } from "./lib/requireEngine6ParagonDownstreamArtifactGate";
 
 const OUTPUT_PATH = "data/merchantFeed.csv";
 
@@ -23,22 +24,23 @@ const NEW_ZION_PRODUCT_CODES = [
   "118744P4",
 ] as const;
 
-const tours = NEW_ZION_PRODUCT_CODES.map(productCode => {
-  const tour = engine6ResolvedTours.find(
-    entry => entry.productCode === productCode
-  );
-  if (!tour) {
-    throw new Error(`Missing resolved Zion tour for ${productCode}`);
-  }
+const main = async () => {
+  const tours = await requireEngine6ParagonMerchantFeedGate({
+    destinationLabel: "Zion National Park",
+    destinationCitySlug: "zion-national-park",
+    viatorDestinationSlug: "Zion-National-Park",
+    productCodes: NEW_ZION_PRODUCT_CODES,
+    resolvedTours: engine6ResolvedTours,
+  });
 
-  return tour;
-});
+  await appendMerchantFeedRowsWithImageGovernance({
+    outputPath: OUTPUT_PATH,
+    tours,
+    destinationLabel: "Zion",
+  });
+};
 
-appendMerchantFeedRowsWithImageGovernance({
-  outputPath: OUTPUT_PATH,
-  tours,
-  destinationLabel: "Zion",
-}).catch(error => {
+main().catch(error => {
   console.error(error);
   process.exit(1);
 });

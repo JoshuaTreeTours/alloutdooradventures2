@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 import { NAPA_VIATOR_PUBLIC_RATINGS } from "../src/engine6/napaViatorPublicRatings";
+import { runEngine6ParagonFixtureGeneration } from "./lib/runEngine6ParagonFixtureGeneration";
 
 type ItineraryItem = {
   title: string;
@@ -653,20 +654,15 @@ const buildFixture = (tour: NapaTourFixture) => {
   };
 };
 
-const outputDir = path.join(process.cwd(), "data", "engine6", "viator");
-mkdirSync(outputDir, { recursive: true });
+const main = async () => {
+  await runEngine6ParagonFixtureGeneration({
+    destinationLabel: "Napa Valley",
+    destinationCitySlug: "napa",
+    viatorDestinationSlug: "Napa-and-Sonoma",
+    tours: NAPA_TOURS,
+    buildFixture,
+    destinationLogLabel: "Napa",
+  });
+};
 
-for (const tour of NAPA_TOURS) {
-  const filePath = path.join(
-    outputDir,
-    `${tour.productCode}.exact-product.json`
-  );
-  writeFileSync(
-    filePath,
-    `${JSON.stringify(buildFixture(tour), null, 2)}\n`,
-    "utf8"
-  );
-  console.log(`Wrote ${filePath}`);
-}
-
-console.log(`Generated ${NAPA_TOURS.length} Napa Engine6 fixtures.`);
+await main();

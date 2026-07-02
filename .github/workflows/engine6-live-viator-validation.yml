@@ -7,7 +7,9 @@ on:
       - "data/engine6/**"
       - "data/merchantFeed.csv"
       - "scripts/generate-*-engine6-fixtures.ts"
+      - "scripts/*product-selection.json"
       - "scripts/validate-engine6-production-viator.ts"
+      - "scripts/validate-engine6-product-selection-governance.ts"
       - "scripts/vercel-build.mjs"
       - "src/engine6/**"
   push:
@@ -18,7 +20,9 @@ on:
       - "data/engine6/**"
       - "data/merchantFeed.csv"
       - "scripts/generate-*-engine6-fixtures.ts"
+      - "scripts/*product-selection.json"
       - "scripts/validate-engine6-production-viator.ts"
+      - "scripts/validate-engine6-product-selection-governance.ts"
       - "scripts/vercel-build.mjs"
       - "src/engine6/**"
   workflow_dispatch:
@@ -77,6 +81,14 @@ jobs:
           ENGINE6_LIVE_VIATOR_VALIDATION_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.validation_mode || 'pr-scoped' }}
           ENGINE6_LIVE_VIATOR_VALIDATION_BASE_REF: ${{ steps.validation-base.outputs.ref }}
         run: npm run validate:engine6-live-viator
+
+      - name: Validate Engine6 product selection governance (strict)
+        if: hashFiles('scripts/glacier-product-selection.json') != ''
+        env:
+          VIATOR_API_KEY: ${{ secrets.VIATOR_API_KEY }}
+          ENGINE6_PRODUCT_SELECTION_SLOTS_PATH: scripts/glacier-product-selection.json
+          ENGINE6_PRODUCT_SELECTION_DESTINATION: Glacier National Park / West Glacier
+        run: npm run validate:engine6-product-selection:strict
 
       - name: Upload validation report
         if: always()

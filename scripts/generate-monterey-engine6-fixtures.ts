@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 import { MONTEREY_VIATOR_PUBLIC_RATINGS } from "../src/engine6/montereyViatorPublicRatings";
+import { runEngine6ParagonFixtureGeneration } from "./lib/runEngine6ParagonFixtureGeneration";
 
 type ItineraryItem = {
   title: string;
@@ -709,20 +710,15 @@ const buildFixture = (tour: MontereyTourFixture) => {
   };
 };
 
-const outputDir = path.join(process.cwd(), "data", "engine6", "viator");
-mkdirSync(outputDir, { recursive: true });
+const main = async () => {
+  await runEngine6ParagonFixtureGeneration({
+    destinationLabel: "Monterey",
+    destinationCitySlug: "monterey",
+    viatorDestinationSlug: "Monterey-and-Carmel",
+    tours: MONTEREY_TOURS,
+    buildFixture,
+    destinationLogLabel: "Monterey",
+  });
+};
 
-for (const tour of MONTEREY_TOURS) {
-  const filePath = path.join(
-    outputDir,
-    `${tour.productCode}.exact-product.json`
-  );
-  writeFileSync(
-    filePath,
-    `${JSON.stringify(buildFixture(tour), null, 2)}\n`,
-    "utf8"
-  );
-  console.log(`Wrote ${filePath}`);
-}
-
-console.log(`Generated ${MONTEREY_TOURS.length} Monterey Engine6 fixtures.`);
+await main();

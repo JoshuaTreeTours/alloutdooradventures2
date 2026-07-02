@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "299521P8",
+    "productUrl": "https://www.viator.com/tours/West-Glacier/Driving-Tour-in-West-Glacier-National-Park-Summer/d50559-299521P8",
+    "title": "Driving Tour in West Glacier National Park",
+    "description": {
+      "text": "Explore West Glacier's accessible highlights on a summer driving tour that covers Apgar Village, Lake McDonald, and Belton Bridge without navigating Going-to-the-Sun Road traffic. A guide handles parking and timing while you enjoy included lunch and short walks at key lakeshore pullouts."
+    },
+    "location": {
+      "city": "Glacier National Park / West Glacier",
+      "state": "Montana"
+    },
+    "duration": "5 to 6 hours (approx.)",
+    "priceFrom": "From $240.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 34
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/f1/ae.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "West Glacier-focused driving tour excluding Sun Road congestion",
+      "Stops at Apgar Village, Lake McDonald, and Belton Bridge",
+      "Included lunch and small-group transport",
+      "Ideal when Going-to-the-Sun Road access is limited",
+      "Hotel pickup from West Glacier and Whitefish"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from West Glacier area lodging or meet at Apgar Visitor Center. Summer departures adjust for road conditions."
+      },
+      "end": {
+        "description": "Return to your West Glacier or Whitefish pickup point after the final lakeshore stop."
+      }
+    },
+    "itinerarySummary": "Explore West Glacier's accessible highlights on a summer driving tour that covers Apgar Village, Lake McDonald, and Belton Bridge without navigating Going-to-the-Sun Road traffic.",
+    "itineraryItems": [
+      {
+        "title": "Apgar Village",
+        "description": "Start in Apgar Village with time at the visitor center and lakeshore access points.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake McDonald",
+        "description": "Scenic stop along Lake McDonald with views of the Lewis Range across the water.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Belton Bridge",
+        "description": "Photo stop at historic Belton Bridge over the Middle Fork Flathead River.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "West Glacier",
+        "description": "Drive through West Glacier gateway communities with guide commentary on park access.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Guided driving tour",
+      "Included lunch",
+      "Park entrance fees",
+      "Hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Driving Tour in West Glacier National Park?",
+        "answer": "The planned duration is 5 to 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Glacier National Park?",
+        "answer": "Pickup from West Glacier area lodging or meet at Apgar Visitor Center. Summer departures adjust for road conditions."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 240
+      },
+      "currency": "USD"
+    }
+  }
+}
