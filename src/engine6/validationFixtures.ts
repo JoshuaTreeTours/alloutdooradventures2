@@ -245,6 +245,14 @@ import specimen299521p2Payload from "../../data/engine6/viator/299521P2.exact-pr
 import specimen299521p8Payload from "../../data/engine6/viator/299521P8.exact-product.json";
 import specimen86727p7Payload from "../../data/engine6/viator/86727P7.exact-product.json";
 import specimen487722p4Payload from "../../data/engine6/viator/487722P4.exact-product.json";
+import specimen26480p10Payload from "../../data/engine6/viator/26480P10.exact-product.json";
+import specimen26480p2Payload from "../../data/engine6/viator/26480P2.exact-product.json";
+import specimen26480p11Payload from "../../data/engine6/viator/26480P11.exact-product.json";
+import specimen26480p6Payload from "../../data/engine6/viator/26480P6.exact-product.json";
+import specimen335817p3Payload from "../../data/engine6/viator/335817P3.exact-product.json";
+import specimen335817p10Payload from "../../data/engine6/viator/335817P10.exact-product.json";
+import specimen26480p8Payload from "../../data/engine6/viator/26480P8.exact-product.json";
+import specimen26480p14Payload from "../../data/engine6/viator/26480P14.exact-product.json";
 import specimen8836p2Payload from "../../data/engine6/viator/8836P2.exact-product.json";
 import specimen231628p7Payload from "../../data/engine6/viator/231628P7.exact-product.json";
 import specimen5503p10Payload from "../../data/engine6/viator/5503P10.exact-product.json";
@@ -2514,6 +2522,78 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/West-Glacier/Sunset-Clear-Paddleboard-Rentals-for-Glacier-Park/d50559-487722P4",
     rawPayload: specimen487722p4Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "26480P10",
+    publicUrl:
+      "https://www.viator.com/tours/Gatlinburg/Thundering-Cascades-of-the-Smokies/d24151-26480P10",
+    rawPayload: specimen26480p10Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "26480P2",
+    publicUrl:
+      "https://www.viator.com/tours/Gatlinburg/Explore-a-Simpler-Time-Smoky-Mountain-Tour/d24151-26480P2",
+    rawPayload: specimen26480p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "26480P11",
+    publicUrl:
+      "https://www.viator.com/tours/Gatlinburg/Romance-Streamside-Holiday-Special/d24151-26480P11",
+    rawPayload: specimen26480p11Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "26480P6",
+    publicUrl:
+      "https://www.viator.com/tours/Gatlinburg/Smoky-Mountain-High-Van-tour/d24151-26480P6",
+    rawPayload: specimen26480p6Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "335817P3",
+    publicUrl:
+      "https://www.viator.com/tours/Gatlinburg/Classic-Driving-Tour-of-the-Smokies/d24151-335817P3",
+    rawPayload: specimen335817p3Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "335817P10",
+    publicUrl:
+      "https://www.viator.com/tours/Gatlinburg/Smoky-Mountains-Half-Day-Fly-Fishing/d24151-335817P10",
+    rawPayload: specimen335817p10Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "26480P8",
+    publicUrl:
+      "https://www.viator.com/tours/Gatlinburg/Fall-Color-Tour-in-the-Smoky-Mountains/d24151-26480P8",
+    rawPayload: specimen26480p8Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "26480P14",
+    publicUrl:
+      "https://www.viator.com/tours/Gatlinburg/Best-of-the-Smokies/d24151-26480P14",
+    rawPayload: specimen26480p14Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

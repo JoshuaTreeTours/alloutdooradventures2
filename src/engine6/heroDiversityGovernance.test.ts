@@ -8,6 +8,7 @@ import {
   ENGINE6_YELLOWSTONE_CANONICAL_CITY_HERO_URL,
   ENGINE6_YOSEMITE_CANONICAL_CITY_HERO_URL,
   ENGINE6_ZION_CANONICAL_CITY_HERO_URL,
+  ENGINE6_GSM_CANONICAL_CITY_HERO_URL,
   resolveEngine6CityDisplayHeroes,
 } from "./displayHero";
 import { engine6ListingTours } from "./listing";
@@ -68,6 +69,13 @@ const zionListingTours = engine6ListingTours.filter(
     tour.engine === "engine6" &&
     tour.destination.stateSlug === "utah" &&
     tour.destination.citySlug === "zion-national-park"
+);
+
+const greatSmokyMountainsListingTours = engine6ListingTours.filter(
+  tour =>
+    tour.engine === "engine6" &&
+    tour.destination.stateSlug === "tennessee" &&
+    tour.destination.citySlug === "great-smoky-mountains-national-park"
 );
 
 describe("Engine6 hero diversity governance", () => {
@@ -188,6 +196,23 @@ describe("Engine6 hero diversity governance", () => {
       heroCounts.get(ENGINE6_ZION_CANONICAL_CITY_HERO_URL) ?? 0
     ).toBeLessThanOrEqual(1);
     expect(heroCounts.size).toBe(zionListingTours.length);
+  });
+
+  it("uses Great Smoky Mountains as the validation cohort for unique listing-card heroes", () => {
+    expect(greatSmokyMountainsListingTours).toHaveLength(8);
+
+    const heroCounts = greatSmokyMountainsListingTours.reduce<Map<string, number>>(
+      (counts, tour) => {
+        counts.set(tour.heroImage, (counts.get(tour.heroImage) ?? 0) + 1);
+        return counts;
+      },
+      new Map()
+    );
+
+    expect(
+      heroCounts.get(ENGINE6_GSM_CANONICAL_CITY_HERO_URL) ?? 0
+    ).toBeLessThanOrEqual(1);
+    expect(heroCounts.size).toBe(greatSmokyMountainsListingTours.length);
   });
 
   it("newly generated Engine6 cities prefer unique product heroes before fallbacks", () => {

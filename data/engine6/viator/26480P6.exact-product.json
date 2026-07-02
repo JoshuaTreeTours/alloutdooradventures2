@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "26480P6",
+    "productUrl": "https://www.viator.com/tours/Gatlinburg/Smoky-Mountain-High-Van-tour/d24151-26480P6",
+    "title": "Smoky Mountain Guided Scenic High Van Tour",
+    "description": {
+      "text": "Leave the driving to expert naturalist guides on a high-country van tour to the top of the Smoky Mountains. Travel the Newfound Gap corridor with photo stops above the sea of ridges, optional Appalachian Trail viewpoints, and commentary on human and natural history from guides who may include former park rangers and thru-hikers. This three-hour outing suits travelers who want big panoramas without hiking long distances. Luxury van transport keeps the focus on scenery and interpretation."
+    },
+    "location": {
+      "city": "Great Smoky Mountains National Park",
+      "state": "Tennessee"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $150.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 11
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/42/e8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided high-country van tour in Great Smoky Mountains National Park",
+      "Newfound Gap Road scenic overlooks and photo stops",
+      "Naturalist guides with park ranger and biology backgrounds",
+      "Optional Appalachian Trail viewpoint stop",
+      "Luxury van transport from Gatlinburg"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from A Walk in the Woods staging at 1420 Fighting Creek Gap Rd, Gatlinburg, TN 37738 unless otherwise confirmed."
+      },
+      "end": {
+        "description": "Return to the Gatlinburg pickup point after the final high-elevation overlook."
+      }
+    },
+    "itinerarySummary": "Leave the driving to expert naturalist guides on a high-country van tour to the top of the Smoky Mountains.",
+    "itineraryItems": [
+      {
+        "title": "Gatlinburg Pickup",
+        "description": "Board the luxury van and begin the climb toward Newfound Gap.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Newfound Gap Road",
+        "description": "Scenic drive with multiple pullouts for ridge-top photography.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Clingmans Dome Area",
+        "description": "High-elevation stop with panoramic views above the Smoky Mountain crest.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Appalachian Trail Overlook",
+        "description": "Optional viewpoint near the Appalachian Trail with interpretive commentary.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Luxury van transport",
+      "Professional naturalist guide",
+      "Photo stop time at overlooks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Smoky Mountain Guided Scenic High Van Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Great Smoky Mountains National Park?",
+        "answer": "Pickup from A Walk in the Woods staging at 1420 Fighting Creek Gap Rd, Gatlinburg, TN 37738 unless otherwise confirmed."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 150
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "productCode": "26480P10",
+    "productUrl": "https://www.viator.com/tours/Gatlinburg/Thundering-Cascades-of-the-Smokies/d24151-26480P10",
+    "title": "Thundering Streams and Falls of the Smokies Guided Hiking Tour",
+    "duration": "3 hours (approx.)",
+    "priceFrom": 76,
+    "rating": 4.9,
+    "reviewCount": 130,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/37/4b/91.jpg",
+    "categories": ["Hiking Tours", "Nature and Wildlife Tours", "Half-day Tours"],
+    "itineraryTitles": ["Sugarlands Visitor Center", "Little River Trail", "Thundering Cascades", "Hidden Waterfalls"]
+  },
+  {
+    "productCode": "26480P2",
+    "productUrl": "https://www.viator.com/tours/Gatlinburg/Explore-a-Simpler-Time-Smoky-Mountain-Tour/d24151-26480P2",
+    "title": "Historic River Town Ramble",
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": 85,
+    "rating": 5.0,
+    "reviewCount": 37,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/05/4c/ab.jpg",
+    "categories": ["Walking Tours", "Historical Tours", "Nature and Wildlife Tours"],
+    "itineraryTitles": ["Sugarlands Visitor Center", "Little River", "Elkmont Historic District", "Family Cemetery"]
+  },
+  {
+    "productCode": "26480P11",
+    "productUrl": "https://www.viator.com/tours/Gatlinburg/Romance-Streamside-Holiday-Special/d24151-26480P11",
+    "title": "Clear Creek Falls Hike",
+    "duration": "4 hours 30 minutes (approx.)",
+    "priceFrom": 99,
+    "rating": 5.0,
+    "reviewCount": 8,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/9b/0b/8d.jpg",
+    "categories": ["Hiking Tours", "Nature and Wildlife Tours"],
+    "itineraryTitles": ["Fighting Creek Gap", "Clear Creek Trail", "Clear Creek Falls", "Return Trail"]
+  },
+  {
+    "productCode": "26480P6",
+    "productUrl": "https://www.viator.com/tours/Gatlinburg/Smoky-Mountain-High-Van-tour/d24151-26480P6",
+    "title": "Smoky Mountain Guided Scenic High Van Tour",
+    "duration": "3 hours (approx.)",
+    "priceFrom": 150,
+    "rating": 4.9,
+    "reviewCount": 11,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/42/e8.jpg",
+    "categories": ["Bus Tours", "Sightseeing Tours", "Nature and Wildlife Tours"],
+    "itineraryTitles": ["Gatlinburg Pickup", "Newfound Gap Road", "Clingmans Dome Area", "Appalachian Trail Overlook"]
+  },
+  {
+    "productCode": "335817P3",
+    "productUrl": "https://www.viator.com/tours/Gatlinburg/Classic-Driving-Tour-of-the-Smokies/d24151-335817P3",
+    "title": "The Classic National Park Tour",
+    "duration": "3 hours (approx.)",
+    "priceFrom": 85,
+    "rating": 4.9,
+    "reviewCount": 171,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/05/4c/94.jpg",
+    "categories": ["Bus Tours", "Half-day Tours", "Hiking Tours"],
+    "itineraryTitles": ["Gatlinburg", "Elkmont Historic District", "Newfound Gap Road", "Newfound Gap"]
+  },
+  {
+    "productCode": "335817P10",
+    "productUrl": "https://www.viator.com/tours/Gatlinburg/Smoky-Mountains-Half-Day-Fly-Fishing/d24151-335817P10",
+    "title": "Smoky Mountains National Park Half Day Fly Fishing",
+    "duration": "4 hours (approx.)",
+    "priceFrom": 163,
+    "rating": 4.9,
+    "reviewCount": 12,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/42/eb.jpg",
+    "categories": ["Fishing Charters", "Nature and Wildlife Tours", "Half-day Tours"],
+    "itineraryTitles": ["Gatlinburg", "Smoky Mountain Streams", "Guided Fly Fishing", "Return to Gatlinburg"]
+  },
+  {
+    "productCode": "26480P8",
+    "productUrl": "https://www.viator.com/tours/Gatlinburg/Fall-Color-Tour-in-the-Smoky-Mountains/d24151-26480P8",
+    "title": "Fall Color Tour in the Smoky Mountains",
+    "duration": "4 hours (approx.)",
+    "priceFrom": 170,
+    "rating": 4.5,
+    "reviewCount": 11,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/42/ea.jpg",
+    "categories": ["Bus Tours", "Nature and Wildlife Tours", "Seasonal Tours"],
+    "itineraryTitles": ["Gatlinburg", "High-Elevation Overlooks", "Guided Fall Color Hike", "Scenic Mountain Views"]
+  },
+  {
+    "productCode": "26480P14",
+    "productUrl": "https://www.viator.com/tours/Gatlinburg/Best-of-the-Smokies/d24151-26480P14",
+    "title": "Smokies Custom Private Tour",
+    "duration": "8 hours (approx.)",
+    "priceFrom": 325,
+    "rating": 5.0,
+    "reviewCount": 3,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/42/ec.jpg",
+    "categories": ["Private Tours", "Hiking Tours", "Full-day Tours"],
+    "itineraryTitles": ["Custom Trailhead", "Waterfall Hike", "Historic Vista", "Picnic Lunch Stop"]
+  }
+]

@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "335817P3",
+    "productUrl": "https://www.viator.com/tours/Gatlinburg/Classic-Driving-Tour-of-the-Smokies/d24151-335817P3",
+    "title": "The Classic National Park Tour",
+    "description": {
+      "text": "Discover Appalachian history and mountain scenery on a small-group Classic National Park tour from Gatlinburg. Ride in eco-friendly vans to a vanished resort town, learn about Smokies logging and pioneer life, then ascend Newfound Gap Road to the Tennessee–North Carolina divide at 5,000 feet. Stops include scenic overlooks, a light hike, and the site where President Franklin Roosevelt dedicated the park in 1940. Snacks, water, and parking are included for a comfortable half-day introduction to America's most-visited national park."
+    },
+    "location": {
+      "city": "Great Smoky Mountains National Park",
+      "state": "Tennessee"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $85.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 171
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/05/4c/94.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group Classic Smoky Mountains tour from Gatlinburg",
+      "Historic resort town and logging heritage stops",
+      "Newfound Gap Road scenic drive to 5,000-foot divide",
+      "Light hike with professional guide commentary",
+      "Snacks, water, and parking included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the tour operator pickup location in Gatlinburg, TN confirmed at booking."
+      },
+      "end": {
+        "description": "Return to Gatlinburg after the Newfound Gap overlook stop."
+      }
+    },
+    "itinerarySummary": "Discover Appalachian history and mountain scenery on a small-group Classic National Park tour from Gatlinburg.",
+    "itineraryItems": [
+      {
+        "title": "Gatlinburg",
+        "description": "Pickup in Gatlinburg and orientation before entering the national park.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Elkmont Historic District",
+        "description": "Explore remnants of a long-gone resort town and early logging history.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Newfound Gap Road",
+        "description": "Scenic mountain drive with overlooks for photos and interpretation.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Newfound Gap",
+        "description": "Stop at the Tennessee–North Carolina divide and Roosevelt dedication site.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Eco-friendly van transport",
+      "Professional guide",
+      "Snacks and bottled water",
+      "Parking fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The Classic National Park Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Great Smoky Mountains National Park?",
+        "answer": "Meet at the tour operator pickup location in Gatlinburg, TN confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 85
+      },
+      "currency": "USD"
+    }
+  }
+}

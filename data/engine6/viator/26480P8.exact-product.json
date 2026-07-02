@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "26480P8",
+    "productUrl": "https://www.viator.com/tours/Gatlinburg/Fall-Color-Tour-in-the-Smoky-Mountains/d24151-26480P8",
+    "title": "Fall Color Tour in the Smoky Mountains",
+    "description": {
+      "text": "Chase peak autumn color in Great Smoky Mountains National Park on a guided fall foliage tour led by naturalists who track leaf progression weekly. Itineraries flex to the best color at tour time—high-elevation overlooks, ridgeline hikes, and quiet cove roads replace fixed routes when leaves peak at different elevations. Guides may include former park rangers and biologists who explain why the Smokies produce such vivid displays. Easy to moderate hiking keeps the outing accessible while maximizing color photography opportunities."
+    },
+    "location": {
+      "city": "Great Smoky Mountains National Park",
+      "state": "Tennessee"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $170.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 11
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/42/ea.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Seasonal fall color tour in Great Smoky Mountains National Park",
+      "Flexible routing based on current leaf peak locations",
+      "Naturalist guides tracking weekly color progression",
+      "Easy to moderate guided hiking included",
+      "Photography stops at high-elevation overlooks"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at 1420 Fighting Creek Gap Rd, Gatlinburg, TN 37738. Fall color routes vary by week; confirm conditions when booking."
+      },
+      "end": {
+        "description": "Return to the Gatlinburg meeting point after the final color overlook."
+      }
+    },
+    "itinerarySummary": "Chase peak autumn color in Great Smoky Mountains National Park on a guided fall foliage tour led by naturalists who track leaf progression weekly.",
+    "itineraryItems": [
+      {
+        "title": "Gatlinburg",
+        "description": "Guide briefing on current fall color conditions and daily route plan.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "High-Elevation Overlooks",
+        "description": "Drive to ridge-top overlooks showing peak or near-peak autumn color.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Guided Fall Color Hike",
+        "description": "Easy to moderate hike through cove hardwoods at the best color elevation.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Scenic Mountain Views",
+        "description": "Final photo stop above the sea of autumn ridges before return.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional naturalist guide",
+      "Van transport to color locations",
+      "Trail snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Fall Color Tour in the Smoky Mountains?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Great Smoky Mountains National Park?",
+        "answer": "Meet at 1420 Fighting Creek Gap Rd, Gatlinburg, TN 37738. Fall color routes vary by week; confirm conditions when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      },
+      {
+        "label": "Seasonal Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 170
+      },
+      "currency": "USD"
+    }
+  }
+}

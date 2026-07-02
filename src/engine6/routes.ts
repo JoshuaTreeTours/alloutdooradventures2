@@ -962,6 +962,37 @@ export const ENGINE6_GLACIER_TOUR_PATH_PREFIX =
 export const isEngine6GlacierTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_GLACIER_TOUR_PATH_PREFIX);
 
+export const ENGINE6_GSM_THUNDERING_STREAMS_PRODUCT_CODE = "26480P10";
+export const ENGINE6_GSM_THUNDERING_STREAMS_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/thundering-streams-falls-guided-hike-26480P10";
+export const ENGINE6_GSM_HISTORIC_RIVER_TOWN_PRODUCT_CODE = "26480P2";
+export const ENGINE6_GSM_HISTORIC_RIVER_TOWN_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/historic-river-town-ramble-26480P2";
+export const ENGINE6_GSM_CLEAR_CREEK_FALLS_PRODUCT_CODE = "26480P11";
+export const ENGINE6_GSM_CLEAR_CREEK_FALLS_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/clear-creek-falls-hike-26480P11";
+export const ENGINE6_GSM_SCENIC_VAN_TOUR_PRODUCT_CODE = "26480P6";
+export const ENGINE6_GSM_SCENIC_VAN_TOUR_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/smoky-mountain-scenic-van-tour-26480P6";
+export const ENGINE6_GSM_CLASSIC_PARK_TOUR_PRODUCT_CODE = "335817P3";
+export const ENGINE6_GSM_CLASSIC_PARK_TOUR_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/classic-national-park-tour-335817P3";
+export const ENGINE6_GSM_HALF_DAY_FLY_FISHING_PRODUCT_CODE = "335817P10";
+export const ENGINE6_GSM_HALF_DAY_FLY_FISHING_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/half-day-fly-fishing-smoky-mountains-335817P10";
+export const ENGINE6_GSM_FALL_COLOR_TOUR_PRODUCT_CODE = "26480P8";
+export const ENGINE6_GSM_FALL_COLOR_TOUR_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/fall-color-tour-smoky-mountains-26480P8";
+export const ENGINE6_GSM_CUSTOM_PRIVATE_TOUR_PRODUCT_CODE = "26480P14";
+export const ENGINE6_GSM_CUSTOM_PRIVATE_TOUR_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/smokies-custom-private-tour-26480P14";
+
+export const ENGINE6_GSM_TOUR_PATH_PREFIX =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/";
+
+export const isEngine6GreatSmokyMountainsTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_GSM_TOUR_PATH_PREFIX);
+
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
   canonicalPath: string;
@@ -2041,6 +2072,38 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_GLACIER_SUNSET_PADDLEBOARD_ROUTE,
     ENGINE6_GLACIER_SUNSET_PADDLEBOARD_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_THUNDERING_STREAMS_ROUTE,
+    ENGINE6_GSM_THUNDERING_STREAMS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_HISTORIC_RIVER_TOWN_ROUTE,
+    ENGINE6_GSM_HISTORIC_RIVER_TOWN_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_CLEAR_CREEK_FALLS_ROUTE,
+    ENGINE6_GSM_CLEAR_CREEK_FALLS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_SCENIC_VAN_TOUR_ROUTE,
+    ENGINE6_GSM_SCENIC_VAN_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_CLASSIC_PARK_TOUR_ROUTE,
+    ENGINE6_GSM_CLASSIC_PARK_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_HALF_DAY_FLY_FISHING_ROUTE,
+    ENGINE6_GSM_HALF_DAY_FLY_FISHING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_FALL_COLOR_TOUR_ROUTE,
+    ENGINE6_GSM_FALL_COLOR_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_CUSTOM_PRIVATE_TOUR_ROUTE,
+    ENGINE6_GSM_CUSTOM_PRIVATE_TOUR_PRODUCT_CODE,
   ],
 ] as const;
 
