@@ -10,20 +10,20 @@ import { assessViatorPublicPageAvailability } from "./viatorPublicAvailability";
 describe("engine6LiveViatorProductionValidation", () => {
   it("defaults production deploys to deploy-scoped validation", () => {
     const previousVercelEnv = process.env.VERCEL_ENV;
-    const previousMode = process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE;
+    const previousMode = process.env.ENGINE6_GOVERNANCE_MODE;
 
-    delete process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE;
+    delete process.env.ENGINE6_GOVERNANCE_MODE;
     process.env.VERCEL_ENV = "production";
     expect(resolveEngine6LiveViatorValidationMode()).toBe("pr-scoped");
 
-    process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE = "strict";
+    process.env.ENGINE6_GOVERNANCE_MODE = "strict";
     expect(resolveEngine6LiveViatorValidationMode()).toBe("strict");
 
     process.env.VERCEL_ENV = previousVercelEnv ?? "";
     if (previousMode === undefined) {
-      delete process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE;
+      delete process.env.ENGINE6_GOVERNANCE_MODE;
     } else {
-      process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE = previousMode;
+      process.env.ENGINE6_GOVERNANCE_MODE = previousMode;
     }
   });
 
@@ -41,8 +41,13 @@ describe("engine6LiveViatorProductionValidation", () => {
   it("formats validation reports with failure details", () => {
     const formatted = formatEngine6LiveViatorProductionValidationReport({
       mode: "strict",
+      governanceMode: "strict",
       passed: false,
       blockingPassed: false,
+      skipped: false,
+      skipReason: null,
+      credentialsRequired: true,
+      credentialsAvailable: true,
       scopedProductCodes: [],
       validatedAt: "2026-06-30T00:00:00.000Z",
       results: [],
@@ -84,8 +89,13 @@ describe("engine6LiveViatorProductionValidation", () => {
   it("separates blocking and legacy failures in pr-scoped mode", () => {
     const formatted = formatEngine6LiveViatorProductionValidationReport({
       mode: "pr-scoped",
+      governanceMode: "warn",
       passed: true,
       blockingPassed: true,
+      skipped: false,
+      skipReason: null,
+      credentialsRequired: true,
+      credentialsAvailable: true,
       scopedProductCodes: ["NEWPRODUCTP1"],
       validatedAt: "2026-06-30T00:00:00.000Z",
       results: [],

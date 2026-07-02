@@ -53,11 +53,25 @@ export type MerchantFeedImageGovernanceRow = {
   image_link: string;
 };
 
+export type Engine6MerchantFeedImageFailureReason =
+  | "missing-hero"
+  | "broken-image-url"
+  | "non-product-image"
+  | Engine6MerchantFeedImageValidationReason;
+
 export type MerchantFeedImageGovernanceFailure = {
   productCode: string;
   attemptedUrls: string[];
+  failureReason?: Engine6MerchantFeedImageFailureReason;
   lastReason?: Engine6MerchantFeedImageValidationReason;
   lastStatus?: number;
+};
+
+export type MerchantFeedImageGovernanceWarning = {
+  productCode: string;
+  selectedUrl: string;
+  originalUrl: string;
+  reason: "fallback-image-used";
 };
 
 export type MerchantFeedImageGovernanceReport = {
@@ -66,6 +80,7 @@ export type MerchantFeedImageGovernanceReport = {
   requiringFallback: number;
   /** Blocking failures for newly added or modified Engine6 scope only. */
   unrecoverableFailures: number;
+  fallbackImageWarnings: number;
   informationalLegacyInvalidImages: number;
   informationalLegacyProductCodes: string[];
   invalidUrlsReported: Array<{
@@ -75,6 +90,7 @@ export type MerchantFeedImageGovernanceReport = {
     status?: number;
   }>;
   failures: MerchantFeedImageGovernanceFailure[];
+  warnings: MerchantFeedImageGovernanceWarning[];
 };
 
 export type ApplyMerchantFeedImageGovernanceResult<
@@ -125,6 +141,46 @@ const recordUnrecoverableImageFailure = (
   if (!report.informationalLegacyProductCodes.includes(failure.productCode)) {
     report.informationalLegacyProductCodes.push(failure.productCode);
   }
+};
+
+const classifyMerchantFeedImageFailureReason = (args: {
+  currentUrl: string;
+  tour?: Engine6Tour;
+  validationReason?: Engine6MerchantFeedImageValidationReason;
+}): Engine6MerchantFeedImageFailureReason => {
+  if (!args.currentUrl.trim()) {
+    return "missing-hero";
+  }
+
+  if (
+    args.validationReason &&
+    args.validationReason !== "not-displayable"
+  ) {
+    return "broken-image-url";
+  }
+
+  const heroUrl = args.tour?.heroImageUrl?.trim() || args.tour?.resolvedHero?.url?.trim();
+  if (!heroUrl) {
+    return "missing-hero";
+  }
+
+  return args.validationReason ?? "broken-image-url";
+};
+
+const isNonProductFallbackImageUrl = (
+  url: string,
+  tour: Engine6Tour,
+  primaryCandidate: string
+) => {
+  const { stateSlug, citySlug } = parseEngine6StateCityFromCanonicalPath(
+    tour.canonicalPath
+  );
+  const cityHero = resolveEngine6CanonicalCityHero(stateSlug, citySlug);
+
+  return (
+    url !== primaryCandidate &&
+    (url === cityHero || url === ENGINE6_GLOBAL_FALLBACK_HERO_URL)
+  );
 };
 
 const isAcceptedImageContentType = (contentType: string) => {
@@ -393,6 +449,7 @@ export const formatMerchantFeedImageValidationReport = (
     `  Automatically repaired: ${report.automaticallyRepaired}`,
     `  Requiring fallback: ${report.requiringFallback}`,
     `  Unrecoverable failures: ${report.unrecoverableFailures}`,
+    `  Fallback image warnings: ${report.fallbackImageWarnings}`,
     `  Informational legacy invalid images: ${report.informationalLegacyInvalidImages}`,
   ];
 
@@ -451,10 +508,12 @@ export const applyMerchantFeedImageGovernance = async <
     automaticallyRepaired: 0,
     requiringFallback: 0,
     unrecoverableFailures: 0,
+    fallbackImageWarnings: 0,
     informationalLegacyInvalidImages: 0,
     informationalLegacyProductCodes: [],
     invalidUrlsReported: [],
     failures: [],
+    warnings: [],
   };
 
   const nextRows = await Promise.all(
@@ -488,6 +547,10 @@ export const applyMerchantFeedImageGovernance = async <
           {
             productCode,
             attemptedUrls: [currentUrl],
+            failureReason: classifyMerchantFeedImageFailureReason({
+              currentUrl,
+              validationReason: currentValidation.reason,
+            }),
             lastReason: currentValidation.reason,
             lastStatus: currentValidation.status,
           },
@@ -529,6 +592,11 @@ export const applyMerchantFeedImageGovernance = async <
           {
             productCode,
             attemptedUrls,
+            failureReason: classifyMerchantFeedImageFailureReason({
+              currentUrl,
+              tour,
+              validationReason: currentValidation.reason,
+            }),
             lastReason: currentValidation.reason,
             lastStatus: currentValidation.status,
           },
@@ -540,6 +608,33 @@ export const applyMerchantFeedImageGovernance = async <
       report.automaticallyRepaired += 1;
       if (replacementUrl !== primaryCandidate) {
         report.requiringFallback += 1;
+      }
+
+      if (
+        requiresStrictScope &&
+        isNonProductFallbackImageUrl(replacementUrl, tour, primaryCandidate)
+      ) {
+        report.fallbackImageWarnings += 1;
+        report.warnings.push({
+          productCode,
+          selectedUrl: replacementUrl,
+          originalUrl: currentUrl,
+          reason: "fallback-image-used",
+        });
+      } else if (
+        requiresStrictScope &&
+        replacementUrl !== primaryCandidate &&
+        !getEngine6CuratedProductHeroCandidates(tour.productCode).includes(
+          replacementUrl
+        )
+      ) {
+        report.fallbackImageWarnings += 1;
+        report.warnings.push({
+          productCode,
+          selectedUrl: replacementUrl,
+          originalUrl: currentUrl,
+          reason: "fallback-image-used",
+        });
       }
 
       return {

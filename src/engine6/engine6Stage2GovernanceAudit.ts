@@ -36,6 +36,21 @@ import {
   hasEngine6SupplierNarrativeMarketingBoilerplate,
   ENGINE6_SUPPLIER_NARRATIVE_MARKETING_PATTERNS,
 } from "./normalizeEngine6SupplierNarrative.js";
+import {
+  ENGINE6_DESTINATION_VALIDATION_COHORTS,
+  type Engine6DestinationValidationCohort,
+} from "./engine6DestinationValidationCohorts.js";
+import {
+  mapEngine6GovernanceModeToScopeMode,
+  resolveEngine6GovernanceMode,
+  resolveEngine6GovernanceRequiresFullSiteValidation,
+  shouldEngine6GovernanceAlwaysBlock,
+  type Engine6GovernanceMode,
+} from "./engine6GovernanceMode.js";
+import {
+  resolveEngine6DestinationValidationCohortsForScope,
+  resolveEngine6GovernanceScope,
+} from "./resolveEngine6GovernanceScope.js";
 import { resolveEngine6ProductCodesChangedSinceRefSafe } from "./resolveEngine6ChangedProductCodes.js";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph.js";
 import { ENGINE6_CONFIGURED_PRODUCT_CODES } from "./routes.js";
@@ -59,7 +74,10 @@ export type Engine6Stage2GovernanceArea =
   | "product-code-blocklist"
   | "destination-cohort";
 
-export type Engine6Stage2GovernanceFindingSeverity = "blocking" | "legacy";
+export type Engine6Stage2GovernanceFindingSeverity =
+  | "blocking"
+  | "warning"
+  | "legacy";
 
 export type Engine6Stage2GovernanceFinding = {
   area: Engine6Stage2GovernanceArea;
@@ -71,18 +89,23 @@ export type Engine6Stage2GovernanceFinding = {
 export type Engine6Stage2GovernanceAreaSummary = {
   area: Engine6Stage2GovernanceArea;
   blockingCount: number;
+  warningCount: number;
   legacyCount: number;
   pass: boolean;
 };
 
 export type Engine6Stage2GovernanceAuditReport = {
   generatedAt: string;
+  governanceMode: Engine6GovernanceMode;
   mode: Engine6Stage2GovernanceAuditMode;
   scopedProductCodes: string[];
+  scopedDestinationLabels: string[];
+  fullSiteValidation: boolean;
   blockingPassed: boolean;
   passed: boolean;
   totals: {
     blockingFindings: number;
+    warningFindings: number;
     legacyFindings: number;
     areasAudited: number;
     areasPassed: number;
@@ -95,93 +118,8 @@ export type Engine6Stage2GovernanceAuditReport = {
   notes: string[];
 };
 
-export type Engine6DestinationValidationCohort = {
-  label: string;
-  matches: (tour: Engine6Tour) => boolean;
-  /** When set, every listing-card hero in the cohort must be unique. */
-  requireUniqueListingHeroes?: boolean;
-};
-
-export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidationCohort[] =
-  [
-    {
-      label: "Monterey",
-      matches: tour =>
-        /\/monterey\//i.test(tour.canonicalPath) ||
-        /\bmonterey\b/i.test(tour.city),
-      requireUniqueListingHeroes: true,
-    },
-    {
-      label: "Napa",
-      matches: tour =>
-        /\/napa\//i.test(tour.canonicalPath) || /\bnapa\b/i.test(tour.city),
-      requireUniqueListingHeroes: true,
-    },
-    {
-      label: "Lake Tahoe",
-      matches: tour =>
-        /\/lake-tahoe\//i.test(tour.canonicalPath) ||
-        /\blake tahoe\b/i.test(tour.city),
-      requireUniqueListingHeroes: true,
-    },
-    {
-      label: "Yosemite",
-      matches: tour =>
-        /\/yosemite\//i.test(tour.canonicalPath) ||
-        /\byosemite\b/i.test(tour.city),
-      requireUniqueListingHeroes: true,
-    },
-    {
-      label: "Grand Canyon",
-      matches: tour =>
-        /\/grand-canyon-national-park\//i.test(tour.canonicalPath) ||
-        /\bgrand canyon\b/i.test(tour.city),
-      requireUniqueListingHeroes: true,
-    },
-    {
-      label: "Yellowstone",
-      matches: tour =>
-        /\/yellowstone-national-park\//i.test(tour.canonicalPath) ||
-        /\byellowstone\b/i.test(tour.city),
-      requireUniqueListingHeroes: true,
-    },
-    {
-      label: "Zion",
-      matches: tour =>
-        /\/zion-national-park\//i.test(tour.canonicalPath) ||
-        /\bzion\b/i.test(tour.city),
-      requireUniqueListingHeroes: true,
-    },
-    {
-      label: "Glacier",
-      matches: tour =>
-        /\/glacier-national-park\//i.test(tour.canonicalPath) ||
-        /\bglacier\b/i.test(tour.city),
-      requireUniqueListingHeroes: true,
-    },
-    {
-      label: "Napa editorial narrative",
-      matches: tour =>
-        /\/napa\//i.test(tour.canonicalPath) || /\bnapa\b/i.test(tour.city),
-    },
-    {
-      label: "Monterey editorial narrative",
-      matches: tour =>
-        /\/monterey\//i.test(tour.canonicalPath) ||
-        /\bmonterey\b/i.test(tour.city),
-    },
-    {
-      label: "Miami editorial narrative",
-      matches: tour =>
-        /\/miami\//i.test(tour.canonicalPath) || /\bmiami\b/i.test(tour.city),
-    },
-    {
-      label: "New York editorial narrative",
-      matches: tour =>
-        /\/new-york\//i.test(tour.canonicalPath) ||
-        /\bnew york\b/i.test(tour.city),
-    },
-  ];
+export { ENGINE6_DESTINATION_VALIDATION_COHORTS };
+export type { Engine6DestinationValidationCohort };
 
 const STAGE2_AREAS: Engine6Stage2GovernanceArea[] = [
   "live-viator",
@@ -254,13 +192,56 @@ export const isEngine6Stage2StrictScopeProduct = (
   return scopedProductCodes.has(normalized);
 };
 
+export const resolveEngine6Stage2GovernanceModeFromEnv = (): {
+  governanceMode: Engine6GovernanceMode;
+  mode: Engine6Stage2GovernanceAuditMode;
+} => {
+  const governanceMode = resolveEngine6GovernanceMode();
+  return {
+    governanceMode,
+    mode: mapEngine6GovernanceModeToScopeMode(governanceMode),
+  };
+};
+
 export const classifyEngine6Stage2FindingSeverity = (args: {
+  governanceMode: Engine6GovernanceMode;
   mode: Engine6Stage2GovernanceAuditMode;
   productCode: string | null | undefined;
   scopedProductCodes: ReadonlySet<string>;
+  alwaysBlock?: boolean;
+  warningOnly?: boolean;
 }): Engine6Stage2GovernanceFindingSeverity => {
-  if (args.mode === "strict") {
+  if (args.warningOnly) {
+    if (args.governanceMode === "strict") {
+      return "blocking";
+    }
+
+    if (args.governanceMode === "audit") {
+      return "legacy";
+    }
+
+    return isEngine6Stage2StrictScopeProduct(
+      args.productCode,
+      args.scopedProductCodes
+    )
+      ? "warning"
+      : "legacy";
+  }
+
+  if (args.alwaysBlock) {
+    if (args.governanceMode === "audit") {
+      return "legacy";
+    }
+
     return "blocking";
+  }
+
+  if (args.mode === "strict" || args.governanceMode === "strict") {
+    return "blocking";
+  }
+
+  if (args.governanceMode === "audit") {
+    return "legacy";
   }
 
   return isEngine6Stage2StrictScopeProduct(
@@ -275,18 +256,30 @@ export const createEngine6Stage2GovernanceFinding = (args: {
   area: Engine6Stage2GovernanceArea;
   productCode: string | null;
   message: string;
+  governanceMode?: Engine6GovernanceMode;
   mode: Engine6Stage2GovernanceAuditMode;
   scopedProductCodes: ReadonlySet<string>;
-}): Engine6Stage2GovernanceFinding => ({
-  area: args.area,
-  productCode: args.productCode,
-  message: args.message,
-  severity: classifyEngine6Stage2FindingSeverity({
-    mode: args.mode,
+  alwaysBlock?: boolean;
+  warningOnly?: boolean;
+}): Engine6Stage2GovernanceFinding => {
+  const governanceMode =
+    args.governanceMode ??
+    (args.mode === "strict" ? "strict" : "warn");
+
+  return {
+    area: args.area,
     productCode: args.productCode,
-    scopedProductCodes: args.scopedProductCodes,
-  }),
-});
+    message: args.message,
+    severity: classifyEngine6Stage2FindingSeverity({
+      governanceMode,
+      mode: args.mode,
+      productCode: args.productCode,
+      scopedProductCodes: args.scopedProductCodes,
+      alwaysBlock: args.alwaysBlock,
+      warningOnly: args.warningOnly,
+    }),
+  };
+};
 
 export const parseSitemapTourPaths = (sitemapXml: string) => {
   const paths = new Set<string>();
@@ -541,6 +534,7 @@ export const auditEngine6RouteSitemapMerchantFeedParity = (args: {
 export const auditEngine6ProductCodeBlocklistEnforcement = (args: {
   tours: Engine6Tour[];
   merchantRowsByProductCode: Map<string, Record<string, string>>;
+  governanceMode: Engine6GovernanceMode;
   mode: Engine6Stage2GovernanceAuditMode;
   scopedProductCodes: ReadonlySet<string>;
 }): Engine6Stage2GovernanceFinding[] => {
@@ -548,6 +542,10 @@ export const auditEngine6ProductCodeBlocklistEnforcement = (args: {
   const blocklistedCodes = Object.keys(
     ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS
   );
+  const alwaysBlock = shouldEngine6GovernanceAlwaysBlock({
+    mode: args.governanceMode,
+    area: "product-code-blocklist",
+  });
 
   for (const productCode of blocklistedCodes) {
     if (ENGINE6_CONFIGURED_PRODUCT_CODES.includes(productCode)) {
@@ -557,8 +555,10 @@ export const auditEngine6ProductCodeBlocklistEnforcement = (args: {
           productCode,
           message:
             "known-unavailable Viator product remains configured in ENGINE6_CONFIGURED_PRODUCT_CODES",
+          governanceMode: args.governanceMode,
           mode: args.mode,
           scopedProductCodes: args.scopedProductCodes,
+          alwaysBlock,
         })
       );
     }
@@ -570,8 +570,10 @@ export const auditEngine6ProductCodeBlocklistEnforcement = (args: {
           productCode,
           message:
             "known-unavailable Viator product still has a merchantFeed.csv row",
+          governanceMode: args.governanceMode,
           mode: args.mode,
           scopedProductCodes: args.scopedProductCodes,
+          alwaysBlock,
         })
       );
     }
@@ -588,8 +590,10 @@ export const auditEngine6ProductCodeBlocklistEnforcement = (args: {
           productCode,
           message:
             "known-unavailable Viator product remains merchant-feed eligible in resolved catalog",
+          governanceMode: args.governanceMode,
           mode: args.mode,
           scopedProductCodes: args.scopedProductCodes,
+          alwaysBlock,
         })
       );
     }
@@ -600,12 +604,19 @@ export const auditEngine6ProductCodeBlocklistEnforcement = (args: {
 
 export const auditEngine6DestinationCohortConsistency = (args: {
   tours: Engine6Tour[];
+  governanceMode: Engine6GovernanceMode;
   mode: Engine6Stage2GovernanceAuditMode;
   scopedProductCodes: ReadonlySet<string>;
   cohorts?: Engine6DestinationValidationCohort[];
+  fullSiteValidation?: boolean;
+  scopedDestinationLabels?: readonly string[];
 }): Engine6Stage2GovernanceFinding[] => {
   const findings: Engine6Stage2GovernanceFinding[] = [];
-  const cohorts = args.cohorts ?? ENGINE6_DESTINATION_VALIDATION_COHORTS;
+  const cohorts = resolveEngine6DestinationValidationCohortsForScope({
+    cohorts: args.cohorts ?? ENGINE6_DESTINATION_VALIDATION_COHORTS,
+    scopedDestinationLabels: args.scopedDestinationLabels,
+    fullSiteValidation: args.fullSiteValidation,
+  });
   const seenHeroCohorts = new Set<string>();
 
   for (const cohort of cohorts) {
@@ -709,6 +720,7 @@ export const auditEngine6MerchantFeedCommercialRefreshGovernance = (args: {
   merchantRowsByProductCode: Map<string, Record<string, string>>;
   baselineRows: Array<Record<string, string>>;
   governanceByProductCode: Map<string, MerchantFeedGovernanceTier>;
+  governanceMode: Engine6GovernanceMode;
   mode: Engine6Stage2GovernanceAuditMode;
   scopedProductCodes: ReadonlySet<string>;
 }): Engine6Stage2GovernanceFinding[] => {
@@ -754,33 +766,32 @@ export const auditEngine6MerchantFeedCommercialRefreshGovernance = (args: {
     args.governanceByProductCode
   );
 
-  const pushCommercialFinding = (
-    failure: string,
-    severity: Engine6Stage2GovernanceFindingSeverity
-  ) => {
-    findings.push({
-      area: "merchant-feed-commercial-refresh",
-      productCode: parseMerchantFeedParityFailureProductCode(failure) || null,
-      message: failure,
-      severity,
-    });
+  const pushCommercialFinding = (failure: string) => {
+    const productCode = parseMerchantFeedParityFailureProductCode(failure) || null;
+    findings.push(
+      createEngine6Stage2GovernanceFinding({
+        area: "merchant-feed-commercial-refresh",
+        productCode,
+        message: failure,
+        governanceMode: args.governanceMode,
+        mode: args.mode,
+        scopedProductCodes: args.scopedProductCodes,
+      })
+    );
   };
 
   for (const failure of [
     ...schemaScope.blockingFailures,
     ...commercialScope.blockingFailures,
   ]) {
-    pushCommercialFinding(failure, "blocking");
+    pushCommercialFinding(failure);
   }
 
   for (const failure of [
     ...schemaScope.informationalLegacyFailures,
     ...commercialScope.informationalLegacyFailures,
   ]) {
-    pushCommercialFinding(
-      failure,
-      args.mode === "strict" ? "blocking" : "legacy"
-    );
+    pushCommercialFinding(failure);
   }
 
   return findings;
@@ -794,10 +805,15 @@ const parseMerchantFeedParityFailureProductCode = (failure: string) => {
 export const auditEngine6ProductSelectionGovernanceFindings = (args: {
   report?: Engine6ProductSelectionGovernanceReport;
   tours: Engine6Tour[];
+  governanceMode: Engine6GovernanceMode;
   mode: Engine6Stage2GovernanceAuditMode;
   scopedProductCodes: ReadonlySet<string>;
 }): Engine6Stage2GovernanceFinding[] => {
   const findings: Engine6Stage2GovernanceFinding[] = [];
+  const alwaysBlock = shouldEngine6GovernanceAlwaysBlock({
+    mode: args.governanceMode,
+    area: "product-selection-blocklist",
+  });
 
   for (const tour of args.tours) {
     if (isEngine6ProductSelectionBlocklisted(tour.productCode)) {
@@ -807,8 +823,10 @@ export const auditEngine6ProductSelectionGovernanceFindings = (args: {
           productCode: tour.productCode,
           message:
             "configured tour uses a product on the permanent product-selection blocklist",
+          governanceMode: args.governanceMode,
           mode: args.mode,
           scopedProductCodes: args.scopedProductCodes,
+          alwaysBlock,
         })
       );
     }
@@ -872,27 +890,48 @@ export const auditEngine6ProductSelectionGovernanceFindings = (args: {
 
 export const auditEngine6LiveViatorGovernanceFindings = (args: {
   report: Engine6LiveViatorProductionValidationReport;
+  governanceMode: Engine6GovernanceMode;
   mode: Engine6Stage2GovernanceAuditMode;
   scopedProductCodes: ReadonlySet<string>;
 }): Engine6Stage2GovernanceFinding[] => {
   const findings: Engine6Stage2GovernanceFinding[] = [];
 
   for (const failure of args.report.blockingFailures) {
-    findings.push({
-      area: "live-viator",
-      productCode: failure.productCode,
-      message: failure.reason ?? "live Viator validation failed",
-      severity: "blocking",
-    });
+    findings.push(
+      createEngine6Stage2GovernanceFinding({
+        area: "live-viator",
+        productCode: failure.productCode,
+        message: failure.reason ?? "live Viator validation failed",
+        governanceMode: args.governanceMode,
+        mode: args.mode,
+        scopedProductCodes: args.scopedProductCodes,
+        alwaysBlock: failure.knownUnavailableBlocklistHit
+          ? shouldEngine6GovernanceAlwaysBlock({
+              mode: args.governanceMode,
+              area: "live-viator-known-unavailable",
+            })
+          : undefined,
+      })
+    );
   }
 
   for (const failure of args.report.legacyFailures) {
-    findings.push({
-      area: "live-viator",
-      productCode: failure.productCode,
-      message: failure.reason ?? "live Viator validation failed",
-      severity: args.mode === "strict" ? "blocking" : "legacy",
-    });
+    findings.push(
+      createEngine6Stage2GovernanceFinding({
+        area: "live-viator",
+        productCode: failure.productCode,
+        message: failure.reason ?? "live Viator validation failed",
+        governanceMode: args.governanceMode,
+        mode: args.mode,
+        scopedProductCodes: args.scopedProductCodes,
+        alwaysBlock: failure.knownUnavailableBlocklistHit
+          ? shouldEngine6GovernanceAlwaysBlock({
+              mode: args.governanceMode,
+              area: "live-viator-known-unavailable",
+            })
+          : undefined,
+      })
+    );
   }
 
   return findings;
@@ -900,27 +939,52 @@ export const auditEngine6LiveViatorGovernanceFindings = (args: {
 
 export const auditEngine6MerchantFeedImageGovernanceFindings = (args: {
   report: MerchantFeedImageGovernanceReport;
+  governanceMode: Engine6GovernanceMode;
   mode: Engine6Stage2GovernanceAuditMode;
   scopedProductCodes: ReadonlySet<string>;
 }): Engine6Stage2GovernanceFinding[] => {
   const findings: Engine6Stage2GovernanceFinding[] = [];
 
   for (const failure of args.report.failures) {
-    findings.push({
-      area: "merchant-feed-image",
-      productCode: failure.productCode,
-      message: `unrecoverable merchant feed image failure (${failure.lastReason ?? "invalid"}; attempted ${failure.attemptedUrls.length} URL(s))`,
-      severity: "blocking",
-    });
+    const reason = failure.failureReason ?? failure.lastReason ?? "invalid";
+    findings.push(
+      createEngine6Stage2GovernanceFinding({
+        area: "merchant-feed-image",
+        productCode: failure.productCode,
+        message: `fatal merchant feed image failure (${reason}; attempted ${failure.attemptedUrls.length} URL(s))`,
+        governanceMode: args.governanceMode,
+        mode: args.mode,
+        scopedProductCodes: args.scopedProductCodes,
+      })
+    );
+  }
+
+  for (const warning of args.report.warnings) {
+    findings.push(
+      createEngine6Stage2GovernanceFinding({
+        area: "merchant-feed-image",
+        productCode: warning.productCode,
+        message: `warning: merchant feed image uses usable fallback (${warning.reason}; selected ${warning.selectedUrl})`,
+        governanceMode: args.governanceMode,
+        mode: args.mode,
+        scopedProductCodes: args.scopedProductCodes,
+        warningOnly: true,
+      })
+    );
   }
 
   for (const productCode of args.report.informationalLegacyProductCodes) {
-    findings.push({
-      area: "merchant-feed-image",
-      productCode,
-      message: "legacy merchant feed image could not be validated or repaired",
-      severity: args.mode === "strict" ? "blocking" : "legacy",
-    });
+    findings.push(
+      createEngine6Stage2GovernanceFinding({
+        area: "merchant-feed-image",
+        productCode,
+        message:
+          "legacy merchant feed image could not be validated or repaired",
+        governanceMode: args.governanceMode,
+        mode: args.mode,
+        scopedProductCodes: args.scopedProductCodes,
+      })
+    );
   }
 
   return findings;
@@ -934,6 +998,9 @@ const summarizeAreas = (
     const blockingCount = areaFindings.filter(
       finding => finding.severity === "blocking"
     ).length;
+    const warningCount = areaFindings.filter(
+      finding => finding.severity === "warning"
+    ).length;
     const legacyCount = areaFindings.filter(
       finding => finding.severity === "legacy"
     ).length;
@@ -941,14 +1008,18 @@ const summarizeAreas = (
     return {
       area,
       blockingCount,
+      warningCount,
       legacyCount,
       pass: blockingCount === 0,
     };
   });
 
 export const buildEngine6Stage2GovernanceAuditReport = (args: {
+  governanceMode: Engine6GovernanceMode;
   mode: Engine6Stage2GovernanceAuditMode;
   scopedProductCodes: string[];
+  scopedDestinationLabels: string[];
+  fullSiteValidation: boolean;
   findings: Engine6Stage2GovernanceFinding[];
   generatedAt?: string;
   liveViator?: Engine6LiveViatorProductionValidationReport;
@@ -960,19 +1031,33 @@ export const buildEngine6Stage2GovernanceAuditReport = (args: {
   const blockingFindings = args.findings.filter(
     finding => finding.severity === "blocking"
   ).length;
+  const warningFindings = args.findings.filter(
+    finding => finding.severity === "warning"
+  ).length;
   const legacyFindings = args.findings.filter(
     finding => finding.severity === "legacy"
   ).length;
   const blockingPassed = blockingFindings === 0;
+  const warningsPassed =
+    args.governanceMode !== "strict" || warningFindings === 0;
 
   return {
     generatedAt: args.generatedAt ?? new Date().toISOString(),
+    governanceMode: args.governanceMode,
     mode: args.mode,
     scopedProductCodes: [...args.scopedProductCodes].sort(),
+    scopedDestinationLabels: [...args.scopedDestinationLabels].sort(),
+    fullSiteValidation: args.fullSiteValidation,
     blockingPassed,
-    passed: args.mode === "strict" ? blockingFindings === 0 : blockingPassed,
+    passed:
+      args.governanceMode === "audit"
+        ? true
+        : args.governanceMode === "strict"
+          ? blockingFindings === 0 && warningsPassed
+          : blockingPassed,
     totals: {
       blockingFindings,
+      warningFindings,
       legacyFindings,
       areasAudited: STAGE2_AREAS.length,
       areasPassed: areaSummaries.filter(summary => summary.pass).length,
@@ -990,8 +1075,11 @@ export type BuildEngine6Stage2GovernanceAuditArgs = {
   tours: Engine6Tour[];
   merchantFeedCsvContent: string;
   sitemapTourXmlContent: string;
+  governanceMode?: Engine6GovernanceMode;
   mode?: Engine6Stage2GovernanceAuditMode;
   scopedProductCodes?: string[];
+  scopedDestinationLabels?: string[];
+  fullSiteValidation?: boolean;
   branchModifiedProductCodes?: ReadonlySet<string>;
   generatedAt?: string;
   validateImageUrl?: ValidateEngine6MerchantFeedImageUrl;
@@ -1003,18 +1091,56 @@ export type BuildEngine6Stage2GovernanceAuditArgs = {
 export const buildEngine6Stage2GovernanceAudit = async (
   args: BuildEngine6Stage2GovernanceAuditArgs
 ): Promise<Engine6Stage2GovernanceAuditReport> => {
-  const mode = args.mode ?? "pr-scoped";
-  const scopeResolution = resolveEngine6Stage2ScopedProductCodes({
-    mode,
+  const resolvedModes = args.governanceMode
+    ? {
+        governanceMode: args.governanceMode,
+        mode: mapEngine6GovernanceModeToScopeMode(args.governanceMode),
+      }
+    : args.mode
+      ? {
+          governanceMode:
+            args.mode === "strict"
+              ? ("strict" as const)
+              : resolveEngine6GovernanceMode(),
+          mode: args.mode,
+        }
+      : resolveEngine6Stage2GovernanceModeFromEnv();
+  const { governanceMode, mode } = resolvedModes;
+  const fullSiteValidation =
+    args.fullSiteValidation ??
+    resolveEngine6GovernanceRequiresFullSiteValidation(governanceMode);
+  const scopeResolution = resolveEngine6GovernanceScope({
     branchModifiedProductCodes: args.branchModifiedProductCodes,
+    fullSiteValidation,
+    tours: args.tours,
   });
   const scopedProductCodes =
     args.scopedProductCodes ?? scopeResolution.scopedProductCodes;
+  const scopedDestinationLabels =
+    args.scopedDestinationLabels ?? scopeResolution.scopedDestinationLabels;
   const scopedSet = new Set(
     scopedProductCodes.map(code => normalizeProductCode(code))
   );
-  const notes = [...(scopeResolution.warning ? [scopeResolution.warning] : [])];
+  const notes = [
+    ...(scopeResolution.warning ? [scopeResolution.warning] : []),
+    ...(args.branchModifiedProductCodes &&
+    args.branchModifiedProductCodes.size > 0
+      ? [
+          `Branch-modified product codes included in deploy scope: ${[...args.branchModifiedProductCodes].sort().join(", ")}`,
+        ]
+      : []),
+  ];
   notes.push(MERCHANT_FEED_RATING_COUNT_SYNCHRONIZED_ALIAS_NOTE);
+
+  if (scopedDestinationLabels.length > 0) {
+    notes.push(
+      `Destination cohort scope: ${scopedDestinationLabels.join(", ")}`
+    );
+  } else if (!fullSiteValidation) {
+    notes.push(
+      "Destination cohort checks skipped: no changed Engine6 destination artifacts detected in deploy scope."
+    );
+  }
 
   const merchantRows = parseMerchantFeedCsvRows(args.merchantFeedCsvContent);
   const merchantRowsByProductCode = new Map(
@@ -1036,6 +1162,7 @@ export const buildEngine6Stage2GovernanceAudit = async (
       merchantRowsByProductCode,
       baselineRows: merchantRows,
       governanceByProductCode,
+      governanceMode,
       mode,
       scopedProductCodes: scopedSet,
     }),
@@ -1061,13 +1188,17 @@ export const buildEngine6Stage2GovernanceAudit = async (
     ...auditEngine6ProductCodeBlocklistEnforcement({
       tours: args.tours,
       merchantRowsByProductCode,
+      governanceMode,
       mode,
       scopedProductCodes: scopedSet,
     }),
     ...auditEngine6DestinationCohortConsistency({
       tours: args.tours,
+      governanceMode,
       mode,
       scopedProductCodes: scopedSet,
+      fullSiteValidation,
+      scopedDestinationLabels,
     }),
   ];
 
@@ -1090,6 +1221,7 @@ export const buildEngine6Stage2GovernanceAudit = async (
     findings.push(
       ...auditEngine6MerchantFeedImageGovernanceFindings({
         report: imageResult.report,
+        governanceMode,
         mode,
         scopedProductCodes: scopedSet,
       })
@@ -1100,6 +1232,7 @@ export const buildEngine6Stage2GovernanceAudit = async (
     findings.push(
       ...auditEngine6LiveViatorGovernanceFindings({
         report: args.liveViator,
+        governanceMode,
         mode,
         scopedProductCodes: scopedSet,
       })
@@ -1110,14 +1243,18 @@ export const buildEngine6Stage2GovernanceAudit = async (
     ...auditEngine6ProductSelectionGovernanceFindings({
       report: args.productSelection,
       tours: args.tours,
+      governanceMode,
       mode,
       scopedProductCodes: scopedSet,
     })
   );
 
   return buildEngine6Stage2GovernanceAuditReport({
+    governanceMode,
     mode,
     scopedProductCodes,
+    scopedDestinationLabels,
+    fullSiteValidation,
     findings,
     generatedAt: args.generatedAt,
     liveViator: args.liveViator,
@@ -1138,10 +1275,12 @@ export const formatEngine6Stage2GovernanceAuditMarkdown = (
   const lines = [
     "# Engine6 Stage 2 Governance Audit",
     "",
-    "Permanent consolidated audit across Engine6 publishing contracts. Report-only by default; blocking applies only to new or modified products in pr-scoped mode.",
+    "Permanent consolidated audit across Engine6 publishing contracts. Blocking applies only to deploy-scoped products in warn mode unless ENGINE6_GOVERNANCE_MODE=strict.",
     "",
     `Generated: ${report.generatedAt}`,
-    `Mode: ${report.mode}`,
+    `Governance mode: ${report.governanceMode}`,
+    `Scope mode: ${report.mode}`,
+    `Full-site validation: ${report.fullSiteValidation}`,
     `Blocking passed: ${report.blockingPassed}`,
     `Overall passed: ${report.passed}`,
     "",
@@ -1151,21 +1290,25 @@ export const formatEngine6Stage2GovernanceAuditMarkdown = (
     report.scopedProductCodes.length > 0
       ? `- Scoped product codes: ${report.scopedProductCodes.join(", ")}`
       : "- Scoped product codes: none",
+    report.scopedDestinationLabels.length > 0
+      ? `- Destination cohort labels: ${report.scopedDestinationLabels.join(", ")}`
+      : "- Destination cohort labels: none (cohort checks skipped unless full-site validation)",
     "",
     "## Totals",
     "",
     `- Blocking findings: ${report.totals.blockingFindings}`,
+    `- Warning findings: ${report.totals.warningFindings}`,
     `- Legacy findings (report-only): ${report.totals.legacyFindings}`,
     `- Areas audited: ${report.totals.areasAudited}`,
     `- Areas passed (no blocking findings): ${report.totals.areasPassed}`,
     "",
     "## Area summary",
     "",
-    "| Area | Blocking | Legacy | Pass |",
-    "| --- | ---: | ---: | --- |",
+    "| Area | Blocking | Warning | Legacy | Pass |",
+    "| --- | ---: | ---: | ---: | --- |",
     ...report.areaSummaries.map(
       summary =>
-        `| ${escapeCell(summary.area)} | ${summary.blockingCount} | ${summary.legacyCount} | ${summary.pass ? "yes" : "no"} |`
+        `| ${escapeCell(summary.area)} | ${summary.blockingCount} | ${summary.warningCount} | ${summary.legacyCount} | ${summary.pass ? "yes" : "no"} |`
     ),
     "",
   ];
@@ -1191,6 +1334,24 @@ export const formatEngine6Stage2GovernanceAuditMarkdown = (
     if (blockingFindings.length > 100) {
       lines.push(
         `- ...and ${blockingFindings.length - 100} additional blocking finding(s).`
+      );
+    }
+    lines.push("");
+  }
+
+  const warningFindings = report.findings.filter(
+    finding => finding.severity === "warning"
+  );
+  if (warningFindings.length > 0) {
+    lines.push("## Warning findings", "");
+    for (const finding of warningFindings.slice(0, 100)) {
+      lines.push(
+        `- **${finding.area}**${finding.productCode ? ` (\`${finding.productCode}\`)` : ""}: ${finding.message}`
+      );
+    }
+    if (warningFindings.length > 100) {
+      lines.push(
+        `- ...and ${warningFindings.length - 100} additional warning finding(s).`
       );
     }
     lines.push("");

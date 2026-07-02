@@ -10,6 +10,12 @@ import {
 } from "./viatorPublicAvailability.js";
 import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures.js";
 import { resolveVerifiedEngine6LiveViatorValidationBaseRef } from "./resolveEngine6ChangedProductCodes.js";
+import {
+  mapEngine6GovernanceModeToScopeMode,
+  resolveEngine6GovernanceCredentialPolicy,
+  resolveEngine6GovernanceMode,
+  type Engine6GovernanceMode,
+} from "./engine6GovernanceMode.js";
 
 export type Engine6LiveViatorValidationResult = {
   productCode: string;
@@ -27,34 +33,24 @@ export type Engine6LiveViatorValidationResult = {
 export type Engine6LiveViatorValidationMode = "strict" | "pr-scoped";
 
 export const resolveEngine6LiveViatorValidationMode =
-  (): Engine6LiveViatorValidationMode => {
-    const explicit = process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE?.trim();
+  (): Engine6LiveViatorValidationMode =>
+    mapEngine6GovernanceModeToScopeMode(resolveEngine6GovernanceMode());
 
-    if (explicit === "strict") {
-      return "strict";
-    }
-
-    if (explicit === "pr-scoped") {
-      return "pr-scoped";
-    }
-
-    // Production deploys default to deploy-scoped validation while legacy catalog
-    // failures are remediated. Set ENGINE6_LIVE_VIATOR_VALIDATION_MODE=strict
-    // to restore full-catalog blocking once the catalog is clean.
-    if ((process.env.VERCEL_ENV ?? "").toLowerCase() === "production") {
-      return "pr-scoped";
-    }
-
-    return "strict";
-  };
+export const resolveEngine6LiveViatorValidationGovernanceMode =
+  (): Engine6GovernanceMode => resolveEngine6GovernanceMode();
 
 export const resolveEngine6LiveViatorValidationBaseRef = (): string | null =>
   resolveVerifiedEngine6LiveViatorValidationBaseRef().baseRef;
 
 export type Engine6LiveViatorProductionValidationReport = {
   mode: Engine6LiveViatorValidationMode;
+  governanceMode: Engine6GovernanceMode;
   passed: boolean;
   blockingPassed: boolean;
+  skipped: boolean;
+  skipReason: string | null;
+  credentialsRequired: boolean;
+  credentialsAvailable: boolean;
   scopedProductCodes: string[];
   validatedAt: string;
   results: Engine6LiveViatorValidationResult[];
@@ -255,27 +251,44 @@ export const validateEngine6LiveViatorCandidate = async (args: {
 
 const buildEngine6LiveViatorProductionValidationReport = (args: {
   mode: Engine6LiveViatorValidationMode;
+  governanceMode: Engine6GovernanceMode;
   scopedProductCodes: string[];
   results: Engine6LiveViatorValidationResult[];
+  skipped?: boolean;
+  skipReason?: string | null;
+  credentialsRequired?: boolean;
+  credentialsAvailable?: boolean;
 }): Engine6LiveViatorProductionValidationReport => {
   const scopedSet = new Set(
     args.scopedProductCodes.map(code => code.trim().toUpperCase())
   );
   const failures = args.results.filter(result => !result.passed);
   const blockingFailures =
-    args.mode === "strict"
-      ? failures
-      : failures.filter(result => scopedSet.has(result.productCode));
+    args.governanceMode === "audit"
+      ? []
+      : args.mode === "strict" || args.governanceMode === "strict"
+        ? failures
+        : failures.filter(result => scopedSet.has(result.productCode));
   const legacyFailures =
-    args.mode === "strict"
+    args.mode === "strict" || args.governanceMode === "strict"
       ? []
       : failures.filter(result => !scopedSet.has(result.productCode));
   const blockingPassed = blockingFailures.length === 0;
 
   return {
     mode: args.mode,
-    passed: args.mode === "strict" ? failures.length === 0 : blockingPassed,
+    governanceMode: args.governanceMode,
+    passed:
+      args.governanceMode === "audit"
+        ? true
+        : args.mode === "strict" || args.governanceMode === "strict"
+          ? failures.length === 0
+          : blockingPassed,
     blockingPassed,
+    skipped: args.skipped ?? false,
+    skipReason: args.skipReason ?? null,
+    credentialsRequired: args.credentialsRequired ?? false,
+    credentialsAvailable: args.credentialsAvailable ?? false,
     scopedProductCodes: [...args.scopedProductCodes].sort(),
     validatedAt: new Date().toISOString(),
     results: args.results,
@@ -288,10 +301,44 @@ const buildEngine6LiveViatorProductionValidationReport = (args: {
 export const validateConfiguredEngine6ProductionViatorProducts = async (args?: {
   fetchImpl?: typeof fetch;
   mode?: Engine6LiveViatorValidationMode;
+  governanceMode?: Engine6GovernanceMode;
   scopedProductCodes?: string[];
 }): Promise<Engine6LiveViatorProductionValidationReport> => {
-  const mode = args?.mode ?? "strict";
+  const governanceMode = args?.governanceMode ?? resolveEngine6GovernanceMode();
+  const mode = args?.mode ?? mapEngine6GovernanceModeToScopeMode(governanceMode);
   const scopedProductCodes = args?.scopedProductCodes ?? [];
+  const credentialPolicy = resolveEngine6GovernanceCredentialPolicy(governanceMode);
+
+  if (credentialPolicy.shouldFailWhenCredentialsMissing) {
+    return {
+      ...buildEngine6LiveViatorProductionValidationReport({
+        mode,
+        governanceMode,
+        scopedProductCodes,
+        results: [],
+        skipped: true,
+        skipReason:
+          "live Viator validation failed: required Viator API credentials are missing in CI/production",
+        credentialsRequired: credentialPolicy.credentialsRequired,
+        credentialsAvailable: credentialPolicy.hasApiKey,
+      }),
+      blockingPassed: false,
+      passed: false,
+    };
+  }
+
+  if (credentialPolicy.shouldSkipLiveValidation) {
+    return buildEngine6LiveViatorProductionValidationReport({
+      mode,
+      governanceMode,
+      scopedProductCodes,
+      results: [],
+      skipped: true,
+      skipReason: credentialPolicy.skipReason,
+      credentialsRequired: credentialPolicy.credentialsRequired,
+      credentialsAvailable: credentialPolicy.hasApiKey,
+    });
+  }
   const configuredCodes = new Set(
     ENGINE6_VALIDATION_FIXTURES.map(fixture =>
       fixture.productCode.trim().toUpperCase()
@@ -316,8 +363,11 @@ export const validateConfiguredEngine6ProductionViatorProducts = async (args?: {
 
   return buildEngine6LiveViatorProductionValidationReport({
     mode,
+    governanceMode,
     scopedProductCodes: effectiveScopedProductCodes,
     results,
+    credentialsRequired: credentialPolicy.credentialsRequired,
+    credentialsAvailable: credentialPolicy.hasApiKey,
   });
 };
 
@@ -326,10 +376,21 @@ export const formatEngine6LiveViatorProductionValidationReport = (
 ) => {
   const lines = [
     `Engine6 live Viator production validation (${report.validatedAt})`,
-    `Mode: ${report.mode}`,
+    `Governance mode: ${report.governanceMode}`,
+    `Scope mode: ${report.mode}`,
     `Products validated: ${report.results.length}`,
     `Failures: ${report.failures.length}`,
   ];
+
+  if (report.skipped) {
+    lines.push(`Skipped: yes (${report.skipReason ?? "no reason provided"})`);
+  }
+
+  if (report.credentialsRequired) {
+    lines.push(
+      `Credentials required: yes (${report.credentialsAvailable ? "available" : "missing"})`
+    );
+  }
 
   if (report.mode === "pr-scoped") {
     lines.push(
@@ -407,8 +468,11 @@ export const selectValidEngine6CandidatesFromRankedList = async (args: {
     report: formatEngine6LiveViatorProductionValidationReport(
       buildEngine6LiveViatorProductionValidationReport({
         mode: "strict",
+        governanceMode: "strict",
         scopedProductCodes: [],
         results: [...accepted, ...rejected],
+        credentialsRequired: false,
+        credentialsAvailable: false,
       })
     ),
   };

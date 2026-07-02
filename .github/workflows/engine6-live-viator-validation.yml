@@ -10,6 +10,7 @@ on:
       - "scripts/*product-selection.json"
       - "scripts/validate-engine6-production-viator.ts"
       - "scripts/validate-engine6-product-selection-governance.ts"
+      - "scripts/audit-engine6-stage2-governance.ts"
       - "scripts/vercel-build.mjs"
       - "src/engine6/**"
   push:
@@ -23,20 +24,27 @@ on:
       - "scripts/*product-selection.json"
       - "scripts/validate-engine6-production-viator.ts"
       - "scripts/validate-engine6-product-selection-governance.ts"
+      - "scripts/audit-engine6-stage2-governance.ts"
       - "scripts/vercel-build.mjs"
       - "src/engine6/**"
   workflow_dispatch:
     inputs:
-      validation_mode:
-        description: Validation mode
+      governance_mode:
+        description: Governance mode
         required: false
-        default: pr-scoped
+        default: strict
         type: choice
         options:
-          - pr-scoped
+          - audit
+          - warn
           - strict
+      full_site_audit:
+        description: Validate the full Engine6 catalog (strict scheduled audit)
+        required: false
+        default: false
+        type: boolean
       base_ref:
-        description: Base git ref for scoped product detection (pr-scoped only)
+        description: Base git ref for scoped product detection
         required: false
         default: origin/main
 
@@ -75,25 +83,57 @@ jobs:
             echo "ref=${{ inputs.base_ref || 'origin/main' }}" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Resolve governance mode
+        id: governance
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "mode=${{ inputs.governance_mode || 'strict' }}" >> "$GITHUB_OUTPUT"
+            if [ "${{ inputs.full_site_audit }}" = "true" ]; then
+              echo "full_audit=1" >> "$GITHUB_OUTPUT"
+            else
+              echo "full_audit=0" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "mode=warn" >> "$GITHUB_OUTPUT"
+            echo "full_audit=0" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Validate configured Engine6 Viator products
         env:
           VIATOR_API_KEY: ${{ secrets.VIATOR_API_KEY }}
-          ENGINE6_LIVE_VIATOR_VALIDATION_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.validation_mode || 'pr-scoped' }}
+          ENGINE6_GOVERNANCE_MODE: ${{ steps.governance.outputs.mode }}
+          ENGINE6_LIVE_VIATOR_VALIDATION_MODE: ${{ steps.governance.outputs.mode == 'strict' && 'strict' || 'pr-scoped' }}
           ENGINE6_LIVE_VIATOR_VALIDATION_BASE_REF: ${{ steps.validation-base.outputs.ref }}
+          ENGINE6_GOVERNANCE_BASE_REF: ${{ steps.validation-base.outputs.ref }}
+          ENGINE6_GOVERNANCE_FULL_AUDIT: ${{ steps.governance.outputs.full_audit }}
         run: npm run validate:engine6-live-viator
 
-      - name: Validate Engine6 product selection governance (strict)
+      - name: Validate Engine6 product selection governance
         if: hashFiles('scripts/glacier-product-selection.json') != ''
         env:
           VIATOR_API_KEY: ${{ secrets.VIATOR_API_KEY }}
+          ENGINE6_GOVERNANCE_MODE: ${{ steps.governance.outputs.mode }}
           ENGINE6_PRODUCT_SELECTION_SLOTS_PATH: scripts/glacier-product-selection.json
           ENGINE6_PRODUCT_SELECTION_DESTINATION: Glacier National Park / West Glacier
         run: npm run validate:engine6-product-selection:strict
+
+      - name: Run Engine6 stage 2 governance audit
+        env:
+          VIATOR_API_KEY: ${{ secrets.VIATOR_API_KEY }}
+          ENGINE6_GOVERNANCE_MODE: ${{ steps.governance.outputs.mode }}
+          ENGINE6_STAGE2_GOVERNANCE_HEAD_REF: HEAD
+          ENGINE6_GOVERNANCE_BASE_REF: ${{ steps.validation-base.outputs.ref }}
+          ENGINE6_GOVERNANCE_FULL_AUDIT: ${{ steps.governance.outputs.full_audit }}
+        run: npm run audit:engine6-stage2-governance
 
       - name: Upload validation report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: engine6-live-viator-validation-report
-          path: artifacts/engine6-live-viator-production-validation.json
+          path: |
+            artifacts/engine6-live-viator-production-validation.json
+            reports/engine6-stage2-governance-audit.json
+            reports/engine6-stage2-governance-audit.md
           if-no-files-found: ignore

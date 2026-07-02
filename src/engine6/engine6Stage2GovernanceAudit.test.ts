@@ -65,6 +65,7 @@ describe("engine6Stage2GovernanceAudit scope", () => {
   it("classifies only deploy-scoped products as blocking in pr-scoped mode", () => {
     expect(
       classifyEngine6Stage2FindingSeverity({
+        governanceMode: "warn",
         mode: "pr-scoped",
         productCode: "LEGACYP1",
         scopedProductCodes: new Set(["NEWP1"]),
@@ -73,6 +74,7 @@ describe("engine6Stage2GovernanceAudit scope", () => {
 
     expect(
       classifyEngine6Stage2FindingSeverity({
+        governanceMode: "warn",
         mode: "pr-scoped",
         productCode: "NEWP1",
         scopedProductCodes: new Set(["NEWP1"]),
@@ -101,6 +103,7 @@ describe("engine6Stage2GovernanceAudit scope", () => {
       area: "description-title",
       productCode: "NEWP1",
       message: "example",
+      governanceMode: "warn",
       mode: "pr-scoped",
       scopedProductCodes: new Set(["NEWP1"]),
     });
@@ -108,6 +111,7 @@ describe("engine6Stage2GovernanceAudit scope", () => {
       area: "description-title",
       productCode: "OLDP1",
       message: "example",
+      governanceMode: "warn",
       mode: "pr-scoped",
       scopedProductCodes: new Set(["NEWP1"]),
     });
@@ -130,12 +134,18 @@ describe("engine6Stage2GovernanceAudit helpers", () => {
 
   it("partitions live Viator failures into blocking and legacy findings", () => {
     const findings = auditEngine6LiveViatorGovernanceFindings({
+      governanceMode: "warn",
       mode: "pr-scoped",
       scopedProductCodes: new Set(["NEWP1"]),
       report: {
         mode: "pr-scoped",
+        governanceMode: "warn",
         passed: true,
         blockingPassed: true,
+        skipped: false,
+        skipReason: null,
+        credentialsRequired: true,
+        credentialsAvailable: true,
         scopedProductCodes: ["NEWP1"],
         validatedAt: "2026-07-01T00:00:00.000Z",
         results: [],
@@ -211,8 +221,11 @@ describe("engine6Stage2GovernanceAudit helpers", () => {
   it("formats a consolidated markdown report", () => {
     const markdown = formatEngine6Stage2GovernanceAuditMarkdown(
       buildEngine6Stage2GovernanceAuditReport({
+        governanceMode: "warn",
         mode: "pr-scoped",
         scopedProductCodes: ["NEWP1"],
+        scopedDestinationLabels: ["Monterey"],
+        fullSiteValidation: false,
         findings: [
           {
             area: "live-viator",
@@ -255,6 +268,7 @@ describe("buildEngine6Stage2GovernanceAudit", () => {
 
   it("maps image governance failures to scoped blocking findings", () => {
     const findings = auditEngine6MerchantFeedImageGovernanceFindings({
+      governanceMode: "warn",
       mode: "pr-scoped",
       scopedProductCodes: new Set(["NEWP1"]),
       report: {
@@ -262,6 +276,7 @@ describe("buildEngine6Stage2GovernanceAudit", () => {
         automaticallyRepaired: 0,
         requiringFallback: 0,
         unrecoverableFailures: 1,
+        fallbackImageWarnings: 0,
         informationalLegacyInvalidImages: 1,
         informationalLegacyProductCodes: ["LEGACYP1"],
         invalidUrlsReported: [],
@@ -270,8 +285,10 @@ describe("buildEngine6Stage2GovernanceAudit", () => {
             productCode: "NEWP1",
             attemptedUrls: ["https://example.com/bad.jpg"],
             lastReason: "http-error",
+            failureReason: "broken-image-url",
           },
         ],
+        warnings: [],
       },
     });
 
