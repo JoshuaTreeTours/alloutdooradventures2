@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "6349P59",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+    "title": "Mount Vernon Estate and Old Town Alexandria",
+    "description": {
+      "text": "Visit George Washington's Mount Vernon estate and explore Old Town Alexandria on a guided day trip from Washington, D.C. with comfortable transport and a professional guide. Tour the mansion, museum, and Potomac River grounds at Mount Vernon before continuing to Alexandria's cobblestone streets, waterfront, and historic King Street corridor. Group size stays manageable for a social but uncrowded Virginia outing. Mount Vernon admission and guided commentary are included with hotel pickup options downtown."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $119.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 288
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/1f/52/93.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided Mount Vernon estate tour from Washington, D.C.",
+      "Old Town Alexandria waterfront and King Street walk",
+      "George Washington mansion and museum visit",
+      "Air-conditioned transport with limited group size",
+      "Professional guide with founding-era commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning departure from select downtown Washington, D.C. hotels or a central meeting point."
+      },
+      "end": {
+        "description": "Return to downtown Washington, D.C. after the Old Town Alexandria visit."
+      }
+    },
+    "itinerarySummary": "Visit George Washington's Mount Vernon estate and explore Old Town Alexandria on a guided day trip from Washington, D.",
+    "itineraryItems": [
+      {
+        "title": "Mount Vernon",
+        "description": "",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "George Washington's Tomb",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Town Alexandria",
+        "description": "",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Alexandria Waterfront",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Air-conditioned transport",
+      "Mount Vernon admission",
+      "Hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mount Vernon Estate and Old Town Alexandria?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Morning departure from select downtown Washington, D.C. hotels or a central meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Small Group Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 119
+      },
+      "currency": "USD"
+    }
+  }
+}

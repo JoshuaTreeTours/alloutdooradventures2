@@ -1,0 +1,127 @@
+{
+  "product": {
+    "productCode": "67327P13",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Black-History-Tour-Washington-DC/d657-67327P13",
+    "title": "Private Black History Tour DC",
+    "description": {
+      "text": "Explore Washington, D.C. through a private Black History tour with a dedicated guide and luxury vehicle for your party. The route connects the Martin Luther King Jr. Memorial, Lincoln Memorial, and U.S. Capitol with stops at Howard University, Ben's Chili Bowl, and the National Museum of African American History and Culture with admission included. Your guide shares context on civil rights landmarks, neighborhood stories, and museum highlights at a pace suited to your group. This premium private format suits travelers who want an immersive cultural history day without joining a large motorcoach group."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $475.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 13
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/26/be/ce.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Black History tour for your party only",
+      "NMAAHC admission tickets included",
+      "MLK Memorial and Lincoln Memorial photo stops",
+      "Howard University and Ben's Chili Bowl landmarks",
+      "Luxury private vehicle with hotel pickup"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning pickup from your Washington, D.C. hotel, vacation rental, or confirmed meeting point."
+      },
+      "end": {
+        "description": "Return to your pickup location after the National Museum of African American History and Culture visit."
+      }
+    },
+    "itinerarySummary": "Explore Washington, D.",
+    "itineraryItems": [
+      {
+        "title": "MLK Memorial",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "African American Civil War Memorial",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Howard University",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ben's Chili Bowl",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "National Museum of African American History and Culture",
+        "description": "",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "NMAAHC admission tickets",
+      "Private luxury vehicle transport",
+      "Hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Black History Tour DC?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Morning pickup from your Washington, D.C. hotel, vacation rental, or confirmed meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 475
+      },
+      "currency": "USD"
+    }
+  }
+}

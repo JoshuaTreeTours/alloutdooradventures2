@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "67327P3",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-and-Arlington-Cemetery-Tour/d657-67327P3",
+    "title": "Private DC and Arlington Cemetery Tour",
+    "description": {
+      "text": "See Washington landmarks and Arlington National Cemetery on a private six-hour tour combining National Mall memorials with a guided cemetery visit. Your guide leads stops at the Lincoln Memorial, White House exterior, and Capitol Hill before crossing the Potomac to Arlington for the Tomb of the Unknown Soldier. Private vehicle transport keeps the day efficient while allowing flexible photo time at each site. Ideal for travelers who want both city monuments and military heritage without self-navigating Virginia traffic."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $520.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 167
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/ff/aa/03.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private six-hour DC monuments and Arlington tour",
+      "National Mall memorial stops with guide commentary",
+      "White House and US Capitol exterior viewpoints",
+      "Arlington Cemetery with Tomb of the Unknown Soldier",
+      "Private vehicle with hotel pickup"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning pickup from your Washington, D.C. hotel. Confirm pickup time when booking."
+      },
+      "end": {
+        "description": "Return to your hotel after the Arlington Cemetery visit."
+      }
+    },
+    "itinerarySummary": "See Washington landmarks and Arlington National Cemetery on a private six-hour tour combining National Mall memorials with a guided cemetery visit.",
+    "itineraryItems": [
+      {
+        "title": "White House",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "US Capitol",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arlington National Cemetery",
+        "description": "",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tomb of the Unknown Soldier",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Private vehicle transport",
+      "Hotel pickup and drop-off",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private DC and Arlington Cemetery Tour?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Morning pickup from your Washington, D.C. hotel. Confirm pickup time when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 520
+      },
+      "currency": "USD"
+    }
+  }
+}

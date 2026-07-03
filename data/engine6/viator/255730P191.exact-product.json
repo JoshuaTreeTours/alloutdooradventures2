@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "255730P191",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-time-Walking-Tour-of-DCs-National-Mall/d657-255730P191",
+    "title": "National Mall at Dusk Private Tour",
+    "description": {
+      "text": "Walk the National Mall at dusk on a private two-hour tour focused on the memorials between the Lincoln Memorial and the Capitol. Your guide leads a paced stroll with stops at the Vietnam Veterans Memorial, World War II Memorial, and Washington Monument viewpoints as daylight fades to monument lighting. This walking format suits travelers who want an intimate Mall experience without vehicle transfers. Meet near the Mall for a compact evening outing with flexible photo time."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $185.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 95
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/11/77.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private dusk walking tour of the National Mall",
+      "Lincoln Memorial and Reflecting Pool stop",
+      "Vietnam and World War II Memorial visits",
+      "Washington Monument viewpoints at twilight",
+      "Two-hour format ideal for evening plans"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the Lincoln Memorial circle or a confirmed National Mall meeting point at dusk."
+      },
+      "end": {
+        "description": "Tour concludes near the World War II Memorial or your agreed Mall endpoint."
+      }
+    },
+    "itinerarySummary": "Walk the National Mall at dusk on a private two-hour tour focused on the memorials between the Lincoln Memorial and the Capitol.",
+    "itineraryItems": [
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vietnam Veterans Memorial",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "World War II Memorial",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Washington Monument",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Walking tour of the National Mall"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the National Mall at Dusk Private Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Meet your guide at the Lincoln Memorial circle or a confirmed National Mall meeting point at dusk."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Night Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 185
+      },
+      "currency": "USD"
+    }
+  }
+}

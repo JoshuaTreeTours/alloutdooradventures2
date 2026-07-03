@@ -267,6 +267,28 @@ import specimen15880p10Payload from "../../data/engine6/viator/15880P10.exact-pr
 import specimen32242p1Payload from "../../data/engine6/viator/32242P1.exact-product.json";
 import specimen291644p1Payload from "../../data/engine6/viator/291644P1.exact-product.json";
 import specimen115255p2Payload from "../../data/engine6/viator/115255P2.exact-product.json";
+import specimen67327p4Payload from "../../data/engine6/viator/67327P4.exact-product.json";
+import specimen7953p7Payload from "../../data/engine6/viator/7953P7.exact-product.json";
+import specimen67327p13Payload from "../../data/engine6/viator/67327P13.exact-product.json";
+import specimen149066p1Payload from "../../data/engine6/viator/149066P1.exact-product.json";
+import specimen255730p191Payload from "../../data/engine6/viator/255730P191.exact-product.json";
+import specimen67327p5Payload from "../../data/engine6/viator/67327P5.exact-product.json";
+import specimen41503p1Payload from "../../data/engine6/viator/41503P1.exact-product.json";
+import specimen41503p2Payload from "../../data/engine6/viator/41503P2.exact-product.json";
+import specimen6349p59Payload from "../../data/engine6/viator/6349P59.exact-product.json";
+import specimen6766sigtourPayload from "../../data/engine6/viator/6766SIGTOUR.exact-product.json";
+import specimen67327p3Payload from "../../data/engine6/viator/67327P3.exact-product.json";
+import specimen7812p219Payload from "../../data/engine6/viator/7812P219.exact-product.json";
+import specimen6349daytourPayload from "../../data/engine6/viator/6349DAYTOUR.exact-product.json";
+import specimen6349nightPayload from "../../data/engine6/viator/6349NIGHT.exact-product.json";
+import specimen6766p11Payload from "../../data/engine6/viator/6766P11.exact-product.json";
+import specimen41377p2Payload from "../../data/engine6/viator/41377P2.exact-product.json";
+import specimen60725p1Payload from "../../data/engine6/viator/60725P1.exact-product.json";
+import specimen14782p1Payload from "../../data/engine6/viator/14782P1.exact-product.json";
+import specimen5046was_monPayload from "../../data/engine6/viator/5046WAS_MON.exact-product.json";
+import specimen6349vipdcPayload from "../../data/engine6/viator/6349VIPDC.exact-product.json";
+import specimen2384p20Payload from "../../data/engine6/viator/2384P20.exact-product.json";
+import specimen5769mtvnPayload from "../../data/engine6/viator/5769MTVN.exact-product.json";
 import specimen26480p10Payload from "../../data/engine6/viator/26480P10.exact-product.json";
 import specimen26480p2Payload from "../../data/engine6/viator/26480P2.exact-product.json";
 import specimen26480p11Payload from "../../data/engine6/viator/26480P11.exact-product.json";
@@ -2772,6 +2794,160 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Sedona/Hopi-Cultural-and-Archaeological-Tour/d750-115255P2",
     rawPayload: specimen115255p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "67327P4",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Private-Night-Tour-of-Washington-DC/d657-67327P4",
+    rawPayload: specimen67327p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7953P7",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Washington-DC-Private-Night-City-Tour/d657-7953P7",
+    rawPayload: specimen7953p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "67327P13",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Black-History-Tour-Washington-DC/d657-67327P13",
+    rawPayload: specimen67327p13Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "149066P1",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Private-Luxury-Tour-of-Washington-DC-at-Night-with-a-Chauffeur-Late-Model-SUV/d657-149066P1",
+    rawPayload: specimen149066p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "255730P191",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Private-Night-time-Walking-Tour-of-DCs-National-Mall/d657-255730P191",
+    rawPayload: specimen255730p191Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "67327P5",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Private-Mount-Vernon-and-Arlington-Cemetery-Tour/d657-67327P5",
+    rawPayload: specimen67327p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "41503P1",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Private-DC-Monuments-at-Night-by-Bike/d657-41503P1",
+    rawPayload: specimen41503p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "41503P2",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Private-Customized-DC-Sights-Bike-Tour/d657-41503P2",
+    rawPayload: specimen41503p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6349P59",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+    rawPayload: specimen6349p59Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6766SIGTOUR",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+    rawPayload: specimen6766sigtourPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "67327P3",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-and-Arlington-Cemetery-Tour/d657-67327P3",
+    rawPayload: specimen67327p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7812P219",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+    rawPayload: specimen7812p219Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6349DAYTOUR",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Washington-DC-in-One-Day-Guided-Sightseeing-Tour/d657-6349DAYTOUR",
+    rawPayload: specimen6349daytourPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6349NIGHT",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Washington-DC-Guided-Night-Tour/d657-6349NIGHT",
+    rawPayload: specimen6349nightPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6766P11",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Moonlit-Motorcoach-Tour-of-National-Mall/d657-6766P11",
+    rawPayload: specimen6766p11Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "41377P2",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Capitol-Hill-Guided-Small-Group-Tour/d657-41377P2",
+    rawPayload: specimen41377p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "60725P1",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/See-the-City-Segway-Tour/d657-60725P1",
+    rawPayload: specimen60725p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "14782P1",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Walking-Food-Tour-Of-The-Historic-U-Street-Neighborhood/d657-14782P1",
+    rawPayload: specimen14782p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5046WAS_MON",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-by-Moonlight-Night-Tour-by-Trolley/d657-5046WAS_MON",
+    rawPayload: specimen5046was_monPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6349VIPDC",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Viator-VIP-Best-of-DC-Including-US-Capitol-and-National-Archives-Reserved-Access-the-White-House-and-Lincoln-Memorial/d657-6349VIPDC",
+    rawPayload: specimen6349vipdcPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2384P20",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+    rawPayload: specimen2384p20Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5769MTVN",
+    publicUrl:
+      "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+    rawPayload: specimen5769mtvnPayload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
 ];

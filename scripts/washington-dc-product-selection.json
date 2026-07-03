@@ -1,0 +1,296 @@
+{
+  "destinationLabel": "Washington, D.C.",
+  "destinationCitySlug": "washington",
+  "viatorDestinationSlug": "Washington-DC",
+  "targetPremiumShare": 0.5,
+  "slots": [
+    {
+      "experienceType": "private-night-tour",
+      "desiredCount": 4,
+      "candidates": [
+        {
+          "productCode": "67327P4",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-Tour-of-Washington-DC/d657-67327P4",
+          "title": "Private Night-Time Monuments Tour of DC",
+          "experienceType": "private-night-tour",
+          "priceFrom": 425,
+          "categories": ["Private Tours", "Night Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        },
+        {
+          "productCode": "7953P7",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Private-Night-City-Tour/d657-7953P7",
+          "title": "Private Washington DC Night City Tour",
+          "experienceType": "private-night-tour",
+          "priceFrom": 392,
+          "categories": ["Private Tours", "Night Tours"],
+          "commercialTier": "premium",
+          "priority": 2
+        },
+        {
+          "productCode": "67327P13",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Black-History-Tour-Washington-DC/d657-67327P13",
+          "title": "Private Black History Tour DC",
+          "experienceType": "private-cultural-tour",
+          "priceFrom": 475,
+          "categories": ["Private Tours", "Historical Tours", "Cultural Tours"],
+          "commercialTier": "premium",
+          "priority": 3
+        },
+        {
+          "productCode": "149066P1",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Luxury-Tour-of-Washington-DC-at-Night-with-a-Chauffeur-Late-Model-SUV/d657-149066P1",
+          "title": "DC After Dark Luxury SUV Tour",
+          "experienceType": "private-night-tour",
+          "priceFrom": 821,
+          "categories": ["Private and Luxury", "Night Tours"],
+          "commercialTier": "premium",
+          "priority": 4
+        }
+      ]
+    },
+    {
+      "experienceType": "private-night-walking",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "255730P191",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-time-Walking-Tour-of-DCs-National-Mall/d657-255730P191",
+          "title": "National Mall at Dusk Private Tour",
+          "experienceType": "private-night-walking",
+          "priceFrom": 185,
+          "categories": ["Private Tours", "Walking Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "mount-vernon-arlington",
+      "desiredCount": 4,
+      "candidates": [
+        {
+          "productCode": "67327P5",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Mount-Vernon-and-Arlington-Cemetery-Tour/d657-67327P5",
+          "title": "Private Mt Vernon/Arlington Cemetery",
+          "experienceType": "mount-vernon-arlington",
+          "priceFrom": 650,
+          "categories": ["Private Tours", "Day Trips"],
+          "commercialTier": "premium",
+          "priority": 1
+        },
+        {
+          "productCode": "6349P59",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+          "title": "Mount Vernon Estate and Old Town Alexandria",
+          "experienceType": "mount-vernon-arlington",
+          "priceFrom": 119,
+          "categories": ["Small Group Tours", "Day Trips"],
+          "commercialTier": "premium",
+          "priority": 2
+        },
+        {
+          "productCode": "6766SIGTOUR",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+          "title": "DC in a Day Monuments and Potomac Cruise",
+          "experienceType": "mount-vernon-arlington",
+          "priceFrom": 99,
+          "categories": ["Bus Tours", "Full-day Tours"],
+          "commercialTier": "premium",
+          "priority": 3
+        },
+        {
+          "productCode": "67327P3",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-and-Arlington-Cemetery-Tour/d657-67327P3",
+          "title": "Private DC and Arlington Cemetery",
+          "experienceType": "mount-vernon-arlington",
+          "priceFrom": 520,
+          "categories": ["Private Tours", "Sightseeing Tours"],
+          "commercialTier": "premium",
+          "priority": 4
+        }
+      ]
+    },
+    {
+      "experienceType": "bike-tour-private",
+      "desiredCount": 2,
+      "candidates": [
+        {
+          "productCode": "41503P1",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-DC-Monuments-at-Night-by-Bike/d657-41503P1",
+          "title": "Private DC Monuments at Night Bike",
+          "experienceType": "bike-tour-private",
+          "priceFrom": 580,
+          "categories": ["Private Tours", "Bike Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        },
+        {
+          "productCode": "41503P2",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Customized-DC-Sights-Bike-Tour/d657-41503P2",
+          "title": "Customized Private Bike Tour",
+          "experienceType": "bike-tour-private",
+          "priceFrom": 595,
+          "categories": ["Private Tours", "Bike Tours"],
+          "commercialTier": "premium",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "experienceType": "food-tour-private",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "7812P219",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+          "title": "Washington DC Secret Food Tours Walking Tasting",
+          "experienceType": "food-tour-private",
+          "priceFrom": 89,
+          "categories": ["Food Tours", "Walking Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "full-day-sightseeing",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "6349DAYTOUR",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-in-One-Day-Guided-Sightseeing-Tour/d657-6349DAYTOUR",
+          "title": "Washington DC in One Day",
+          "experienceType": "full-day-sightseeing",
+          "priceFrom": 89,
+          "categories": ["Bus Tours", "Full-day Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "night-monuments",
+      "desiredCount": 3,
+      "candidates": [
+        {
+          "productCode": "6349NIGHT",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Guided-Night-Tour/d657-6349NIGHT",
+          "title": "DC Monument Night Tour",
+          "experienceType": "night-monuments",
+          "priceFrom": 69,
+          "categories": ["Night Tours", "Bus Tours"],
+          "priority": 1
+        },
+        {
+          "productCode": "6766P11",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Moonlit-Motorcoach-Tour-of-National-Mall/d657-6766P11",
+          "title": "DC National Mall Night Tour",
+          "experienceType": "night-monuments",
+          "priceFrom": 69,
+          "categories": ["Night Tours", "Bus Tours"],
+          "priority": 2
+        },
+        {
+          "productCode": "5046WAS_MON",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-by-Moonlight-Night-Tour-by-Trolley/d657-5046WAS_MON",
+          "title": "Monuments by Moonlight Trolley",
+          "experienceType": "night-monuments",
+          "priceFrom": 53,
+          "categories": ["Night Tours", "Trolley Tours"],
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "experienceType": "capitol-hill",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "41377P2",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Capitol-Hill-Guided-Small-Group-Tour/d657-41377P2",
+          "title": "Capitol Hill Small-Group",
+          "experienceType": "capitol-hill",
+          "priceFrom": 89,
+          "categories": ["Small Group Tours", "Walking Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "segway-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "60725P1",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/See-the-City-Segway-Tour/d657-60725P1",
+          "title": "See the City Segway",
+          "experienceType": "segway-tour",
+          "priceFrom": 75,
+          "categories": ["Segway Tours", "Sightseeing Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "food-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "14782P1",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Walking-Food-Tour-Of-The-Historic-U-Street-Neighborhood/d657-14782P1",
+          "title": "U Street Food & History",
+          "experienceType": "food-tour",
+          "priceFrom": 112,
+          "categories": ["Food Tours", "Walking Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "vip-capitol",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "6349VIPDC",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Viator-VIP-Best-of-DC-Including-US-Capitol-and-National-Archives-Reserved-Access-the-White-House-and-Lincoln-Memorial/d657-6349VIPDC",
+          "title": "Best of DC VIP Capitol/Archives",
+          "experienceType": "vip-capitol",
+          "priceFrom": 117,
+          "categories": ["VIP Tours", "Full-day Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "bike-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "2384P20",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+          "title": "Washington DC Bike Tour of the National Mall",
+          "experienceType": "bike-tour",
+          "priceFrom": 59,
+          "categories": ["Bike Tours", "Sightseeing Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "mount-vernon-day-trip",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "5769MTVN",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+          "title": "Mount Vernon and Old Town Alexandria Day Trip",
+          "experienceType": "mount-vernon-day-trip",
+          "priceFrom": 95,
+          "categories": ["Day Trips", "Historical Tours"],
+          "priority": 1
+        }
+      ]
+    }
+  ]
+}

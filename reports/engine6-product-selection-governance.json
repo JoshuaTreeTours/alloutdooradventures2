@@ -1,0 +1,918 @@
+{
+  "generatedAt": "2026-07-03T18:36:11.127Z",
+  "destinationLabel": "Washington, D.C.",
+  "mode": "strict",
+  "scopedProductCodes": [],
+  "buildOrderPreserved": true,
+  "onlyNewProductsCouldBlock": false,
+  "candidatesEvaluated": 22,
+  "productsAccepted": 0,
+  "productsRejected": 22,
+  "replacementProductsSelected": 0,
+  "portfolioMix": {
+    "acceptedCount": 0,
+    "premiumCount": 0,
+    "standardCount": 0,
+    "premiumShare": 0,
+    "standardShare": 0,
+    "targetPremiumShare": 0.5,
+    "targetStandardShare": 0.5,
+    "experienceTypes": [],
+    "experienceTypeCount": 0,
+    "meetsCommercialTarget": true
+  },
+  "blocklistAdditions": [
+    "67327P4",
+    "7953P7",
+    "67327P2",
+    "149066P1",
+    "255730P191",
+    "67327P5",
+    "41503P1",
+    "41503P2",
+    "6349P59",
+    "6766SIGTOUR",
+    "67327P3",
+    "7812P219",
+    "6349DAYTOUR",
+    "6349NIGHT",
+    "6766P11",
+    "41377P2",
+    "60725P1",
+    "14782P1",
+    "5046WAS_MON",
+    "6349VIPDC",
+    "2384P20",
+    "5769MTVN"
+  ],
+  "accepted": [],
+  "rejected": [
+    {
+      "productCode": "67327P4",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-Tour-of-Washington-DC/d657-67327P4",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "67327P4",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-Tour-of-Washington-DC/d657-67327P4",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "7953P7",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Private-Night-City-Tour/d657-7953P7",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "7953P7",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Private-Night-City-Tour/d657-7953P7",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "67327P2",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "67327P2",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "149066P1",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Luxury-Tour-of-Washington-DC-at-Night-with-a-Chauffeur-Late-Model-SUV/d657-149066P1",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "149066P1",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Luxury-Tour-of-Washington-DC-at-Night-with-a-Chauffeur-Late-Model-SUV/d657-149066P1",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "255730P191",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-time-Walking-Tour-of-DCs-National-Mall/d657-255730P191",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "255730P191",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-time-Walking-Tour-of-DCs-National-Mall/d657-255730P191",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "67327P5",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Mount-Vernon-and-Arlington-Cemetery-Tour/d657-67327P5",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "67327P5",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Mount-Vernon-and-Arlington-Cemetery-Tour/d657-67327P5",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "41503P1",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-DC-Monuments-at-Night-by-Bike/d657-41503P1",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "41503P1",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-DC-Monuments-at-Night-by-Bike/d657-41503P1",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "41503P2",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Customized-DC-Sights-Bike-Tour/d657-41503P2",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "41503P2",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Customized-DC-Sights-Bike-Tour/d657-41503P2",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "6349P59",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "6349P59",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "6766SIGTOUR",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "6766SIGTOUR",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "67327P3",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-and-Arlington-Cemetery-Tour/d657-67327P3",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "67327P3",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-and-Arlington-Cemetery-Tour/d657-67327P3",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "7812P219",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "7812P219",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "6349DAYTOUR",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-in-One-Day-Guided-Sightseeing-Tour/d657-6349DAYTOUR",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "6349DAYTOUR",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-in-One-Day-Guided-Sightseeing-Tour/d657-6349DAYTOUR",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "6349NIGHT",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Guided-Night-Tour/d657-6349NIGHT",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "6349NIGHT",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Guided-Night-Tour/d657-6349NIGHT",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "6766P11",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Moonlit-Motorcoach-Tour-of-National-Mall/d657-6766P11",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "6766P11",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Moonlit-Motorcoach-Tour-of-National-Mall/d657-6766P11",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "41377P2",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Capitol-Hill-Guided-Small-Group-Tour/d657-41377P2",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "41377P2",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Capitol-Hill-Guided-Small-Group-Tour/d657-41377P2",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "60725P1",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/See-the-City-Segway-Tour/d657-60725P1",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "60725P1",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/See-the-City-Segway-Tour/d657-60725P1",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "14782P1",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Walking-Food-Tour-Of-The-Historic-U-Street-Neighborhood/d657-14782P1",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "14782P1",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Walking-Food-Tour-Of-The-Historic-U-Street-Neighborhood/d657-14782P1",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "5046WAS_MON",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-by-Moonlight-Night-Tour-by-Trolley/d657-5046WAS_MON",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "5046WAS_MON",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-by-Moonlight-Night-Tour-by-Trolley/d657-5046WAS_MON",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "6349VIPDC",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Viator-VIP-Best-of-DC-Including-US-Capitol-and-National-Archives-Reserved-Access-the-White-House-and-Lincoln-Memorial/d657-6349VIPDC",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "6349VIPDC",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Viator-VIP-Best-of-DC-Including-US-Capitol-and-National-Archives-Reserved-Access-the-White-House-and-Lincoln-Memorial/d657-6349VIPDC",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "2384P20",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "2384P20",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "5769MTVN",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "5769MTVN",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    }
+  ],
+  "replacements": [],
+  "reusedModules": [
+    "engine6LiveViatorProductionValidation.validateEngine6LiveViatorCandidate",
+    "engine6LiveViatorProductionValidation.selectValidEngine6CandidatesFromRankedList",
+    "engine6DestinationProductBinding.assessEngine6DestinationProductBinding",
+    "engine6ProductSelectionBlocklist.readEngine6ProductSelectionPermanentBlocklist",
+    "viatorPublicAvailability.ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS",
+    "resolveEngine6ChangedProductCodes.resolveEngine6ProductCodesChangedSinceRefSafe"
+  ],
+  "newModules": [
+    "engine6ProductSelectionGovernance",
+    "engine6ParagonGovernancePipeline"
+  ],
+  "duplicateValidationLogicIntroduced": false,
+  "unfilledSlots": [
+    {
+      "experienceType": "destination-portfolio",
+      "desiredCount": 22,
+      "acceptedCount": 0
+    }
+  ],
+  "blockingFailures": [
+    {
+      "productCode": "67327P4",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-Tour-of-Washington-DC/d657-67327P4",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "67327P4",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-Tour-of-Washington-DC/d657-67327P4",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "7953P7",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Private-Night-City-Tour/d657-7953P7",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "7953P7",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Private-Night-City-Tour/d657-7953P7",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "67327P2",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "67327P2",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "149066P1",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Luxury-Tour-of-Washington-DC-at-Night-with-a-Chauffeur-Late-Model-SUV/d657-149066P1",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "149066P1",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Luxury-Tour-of-Washington-DC-at-Night-with-a-Chauffeur-Late-Model-SUV/d657-149066P1",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "255730P191",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-time-Walking-Tour-of-DCs-National-Mall/d657-255730P191",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "255730P191",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-time-Walking-Tour-of-DCs-National-Mall/d657-255730P191",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "67327P5",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Mount-Vernon-and-Arlington-Cemetery-Tour/d657-67327P5",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "67327P5",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Mount-Vernon-and-Arlington-Cemetery-Tour/d657-67327P5",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "41503P1",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-DC-Monuments-at-Night-by-Bike/d657-41503P1",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "41503P1",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-DC-Monuments-at-Night-by-Bike/d657-41503P1",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "41503P2",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Customized-DC-Sights-Bike-Tour/d657-41503P2",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "41503P2",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Customized-DC-Sights-Bike-Tour/d657-41503P2",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "6349P59",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "6349P59",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "6766SIGTOUR",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "6766SIGTOUR",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "67327P3",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-and-Arlington-Cemetery-Tour/d657-67327P3",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "67327P3",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-and-Arlington-Cemetery-Tour/d657-67327P3",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "7812P219",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "7812P219",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "6349DAYTOUR",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-in-One-Day-Guided-Sightseeing-Tour/d657-6349DAYTOUR",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "6349DAYTOUR",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-in-One-Day-Guided-Sightseeing-Tour/d657-6349DAYTOUR",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "6349NIGHT",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Guided-Night-Tour/d657-6349NIGHT",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "6349NIGHT",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Guided-Night-Tour/d657-6349NIGHT",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "6766P11",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Moonlit-Motorcoach-Tour-of-National-Mall/d657-6766P11",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "6766P11",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Moonlit-Motorcoach-Tour-of-National-Mall/d657-6766P11",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "41377P2",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Capitol-Hill-Guided-Small-Group-Tour/d657-41377P2",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "41377P2",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Capitol-Hill-Guided-Small-Group-Tour/d657-41377P2",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "60725P1",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/See-the-City-Segway-Tour/d657-60725P1",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "60725P1",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/See-the-City-Segway-Tour/d657-60725P1",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "14782P1",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Walking-Food-Tour-Of-The-Historic-U-Street-Neighborhood/d657-14782P1",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "14782P1",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Walking-Food-Tour-Of-The-Historic-U-Street-Neighborhood/d657-14782P1",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "5046WAS_MON",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-by-Moonlight-Night-Tour-by-Trolley/d657-5046WAS_MON",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "5046WAS_MON",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-by-Moonlight-Night-Tour-by-Trolley/d657-5046WAS_MON",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "6349VIPDC",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Viator-VIP-Best-of-DC-Including-US-Capitol-and-National-Archives-Reserved-Access-the-White-House-and-Lincoln-Memorial/d657-6349VIPDC",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "6349VIPDC",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Viator-VIP-Best-of-DC-Including-US-Capitol-and-National-Archives-Reserved-Access-the-White-House-and-Lincoln-Memorial/d657-6349VIPDC",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "2384P20",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "2384P20",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    },
+    {
+      "productCode": "5769MTVN",
+      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+      "experienceType": "destination-portfolio",
+      "reason": "live-validation-failed",
+      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      "validationResult": {
+        "productCode": "5769MTVN",
+        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+        "passed": false,
+        "publicPageAvailable": false,
+        "apiConfirmedActive": false,
+        "canonicalProductCodeMatches": true,
+        "merchantUrlMatches": true,
+        "bookable": false,
+        "knownUnavailableBlocklistHit": false,
+        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
+      }
+    }
+  ],
+  "blockingPassed": false,
+  "passed": false,
+  "buildTerminated": true,
+  "buildTerminationReason": "validated candidate pool exhausted with 22 unfilled portfolio slot(s)",
+  "remainingQualifiedCandidates": [],
+  "minimumPortfolioShortfall": 22,
+  "attemptedReplacements": [],
+  "formattedLiveValidationReport": "Engine6 live Viator production validation (2026-07-03T18:36:11.127Z)\nGovernance mode: undefined\nScope mode: strict\nProducts validated: 22\nFailures: 22\n\nFailures:\n- 67327P4: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-Night-Tour-of-Washington-DC/d657-67327P4)\n- 7953P7: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Washington-DC-Private-Night-City-Tour/d657-7953P7)\n- 67327P2: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2)\n- 149066P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-Luxury-Tour-of-Washington-DC-at-Night-with-a-Chauffeur-Late-Model-SUV/d657-149066P1)\n- 255730P191: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-Night-time-Walking-Tour-of-DCs-National-Mall/d657-255730P191)\n- 67327P5: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-Mount-Vernon-and-Arlington-Cemetery-Tour/d657-67327P5)\n- 41503P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-DC-Monuments-at-Night-by-Bike/d657-41503P1)\n- 41503P2: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-Customized-DC-Sights-Bike-Tour/d657-41503P2)\n- 6349P59: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59)\n- 6766SIGTOUR: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR)\n- 67327P3: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-Washington-DC-and-Arlington-Cemetery-Tour/d657-67327P3)\n- 7812P219: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219)\n- 6349DAYTOUR: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Washington-DC-in-One-Day-Guided-Sightseeing-Tour/d657-6349DAYTOUR)\n- 6349NIGHT: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Washington-DC-Guided-Night-Tour/d657-6349NIGHT)\n- 6766P11: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Moonlit-Motorcoach-Tour-of-National-Mall/d657-6766P11)\n- 41377P2: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Capitol-Hill-Guided-Small-Group-Tour/d657-41377P2)\n- 60725P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/See-the-City-Segway-Tour/d657-60725P1)\n- 14782P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Walking-Food-Tour-Of-The-Historic-U-Street-Neighborhood/d657-14782P1)\n- 5046WAS_MON: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-by-Moonlight-Night-Tour-by-Trolley/d657-5046WAS_MON)\n- 6349VIPDC: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Viator-VIP-Best-of-DC-Including-US-Capitol-and-National-Archives-Reserved-Access-the-White-House-and-Lincoln-Memorial/d657-6349VIPDC)\n- 2384P20: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20)\n- 5769MTVN: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN)"
+}

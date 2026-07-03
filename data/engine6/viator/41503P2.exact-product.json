@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "41503P2",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Private-Customized-DC-Sights-Bike-Tour/d657-41503P2",
+    "title": "Customized Private Bike Tour",
+    "description": {
+      "text": "Design your own Washington, D.C. bike route on a private three-hour tour with a guide who adapts stops to your interests. Choose emphasis on National Mall memorials, Capitol Hill landmarks, Georgetown waterfront paths, or a mix of monument and neighborhood riding. Bikes and helmets are included with route pacing adjusted to your group's ability. This flexible private format suits repeat visitors and active travelers who want sightseeing on two wheels rather than a motorcoach."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $595.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 48
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/30/76.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Customizable private DC bike tour itinerary",
+      "National Mall or Georgetown routing options",
+      "Capitol Hill and memorial stops on your schedule",
+      "Bikes, helmets, and guide included",
+      "Three-hour active sightseeing format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the National Mall bike staging location or Georgetown depot confirmed at booking."
+      },
+      "end": {
+        "description": "Return to the starting depot after completing your customized route."
+      }
+    },
+    "itinerarySummary": "Design your own Washington, D.",
+    "itineraryItems": [
+      {
+        "title": "Route Planning",
+        "description": "",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "US Capitol",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Georgetown Waterfront",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private bike guide",
+      "Bike and helmet rental",
+      "Custom route planning",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Customized Private Bike Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Meet at the National Mall bike staging location or Georgetown depot confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 595
+      },
+      "currency": "USD"
+    }
+  }
+}

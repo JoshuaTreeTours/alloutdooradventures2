@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "60725P1",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/See-the-City-Segway-Tour/d657-60725P1",
+    "title": "See the City Segway Tour",
+    "description": {
+      "text": "Glide through Washington, D.C. on a two-and-a-half-hour Segway tour with stops at the White House, Lincoln Memorial, and Pennsylvania Avenue viewpoints. After a training session, your guide leads a paced route along National Mall paths and downtown corridors with commentary on monuments and federal landmarks. Segways and helmets are included with instruction for first-time riders. This active sightseeing format covers more ground than a walking tour in less time."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $75.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1828
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/8d/fe/ac.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Segway tour of DC monuments and downtown",
+      "Training session and safety briefing included",
+      "White House and Lincoln Memorial stops",
+      "National Mall riding route with guide commentary",
+      "Two-and-a-half-hour active sightseeing format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Segway staging area near the National Mall confirmed when booking. Allow time for training."
+      },
+      "end": {
+        "description": "Return Segways to the staging area after the final downtown stop."
+      }
+    },
+    "itinerarySummary": "Glide through Washington, D.",
+    "itineraryItems": [
+      {
+        "title": "Segway Training",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "White House",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pennsylvania Avenue",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "National Mall",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Segway rental and helmet",
+      "Training session"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the See the City Segway Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Meet at the Segway staging area near the National Mall confirmed when booking. Allow time for training."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Segway Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Active Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 75
+      },
+      "currency": "USD"
+    }
+  }
+}

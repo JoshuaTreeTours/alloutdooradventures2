@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "2384P20",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+    "title": "Washington DC Bike Tour of the National Mall",
+    "description": {
+      "text": "Cycle the National Mall on a three-hour guided bike tour connecting the Lincoln Memorial, Jefferson Memorial, and Capitol Hill approaches. Your guide leads a paced route along Mall paths with stops for photos and history at major memorials. Bikes and helmets are included with a brief safety orientation before departure. This active group tour covers more monuments than a walking tour while keeping a social, guided format ideal for first-time visitors."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $59.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1245
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/e8/2e/02.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided bike tour of the National Mall monuments",
+      "Lincoln and Jefferson Memorial stops",
+      "Capitol Hill and Mall riding route",
+      "Bikes, helmets, and safety briefing included",
+      "Three-hour active sightseeing format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the National Mall bike rental location confirmed when booking. Arrive early for helmet fitting."
+      },
+      "end": {
+        "description": "Return bikes to the rental staging area after the final memorial stop."
+      }
+    },
+    "itinerarySummary": "Cycle the National Mall on a three-hour guided bike tour connecting the Lincoln Memorial, Jefferson Memorial, and Capitol Hill approaches.",
+    "itineraryItems": [
+      {
+        "title": "Bike Orientation",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jefferson Memorial",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "US Capitol",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vietnam Veterans Memorial",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Bike and helmet rental",
+      "Safety briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Washington DC Bike Tour of the National Mall?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Meet at the National Mall bike rental location confirmed when booking. Arrive early for helmet fitting."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Active Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 59
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -105,10 +105,54 @@ export const resolveEngine6GovernanceExitPolicy = (
   mode: Engine6GovernanceMode = resolveEngine6GovernanceMode()
 ): Engine6GovernanceExitPolicy => ({
   mode,
-  shouldExitOnBlockingFindings: mode !== "audit",
+  shouldExitOnBlockingFindings: mode === "strict",
   shouldExitOnWarnings: mode === "strict",
   shouldReportLegacyFindings: mode !== "strict",
 });
+
+/** Mirrors Stage 2 / live Viator CLI exit behavior from governance exit policy. */
+export const resolveEngine6GovernanceProcessExitCode = (args: {
+  mode: Engine6GovernanceMode;
+  blockingPassed: boolean;
+  warningFindings?: number;
+}): 0 | 1 => {
+  const exitPolicy = resolveEngine6GovernanceExitPolicy(args.mode);
+
+  if (!args.blockingPassed && exitPolicy.shouldExitOnBlockingFindings) {
+    return 1;
+  }
+
+  if ((args.warningFindings ?? 0) > 0 && exitPolicy.shouldExitOnWarnings) {
+    return 1;
+  }
+
+  return 0;
+};
+
+export type Engine6Stage2GovernanceAuditOutcome = {
+  exitCode: 0 | 1;
+  shouldReportLegacyFindings: boolean;
+};
+
+/** Stage 2 audit script completion: exit code plus legacy report-only flag. */
+export const resolveEngine6Stage2GovernanceAuditOutcome = (args: {
+  mode: Engine6GovernanceMode;
+  blockingPassed: boolean;
+  warningFindings?: number;
+  legacyFindings?: number;
+}): Engine6Stage2GovernanceAuditOutcome => {
+  const exitPolicy = resolveEngine6GovernanceExitPolicy(args.mode);
+
+  return {
+    exitCode: resolveEngine6GovernanceProcessExitCode({
+      mode: args.mode,
+      blockingPassed: args.blockingPassed,
+      warningFindings: args.warningFindings,
+    }),
+    shouldReportLegacyFindings:
+      (args.legacyFindings ?? 0) > 0 && exitPolicy.shouldReportLegacyFindings,
+  };
+};
 
 export const shouldEngine6GovernanceAlwaysBlock = (args: {
   mode: Engine6GovernanceMode;
