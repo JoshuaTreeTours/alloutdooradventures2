@@ -8,6 +8,11 @@ import {
   type Engine6ProductSelectionGovernanceReport,
   type Engine6ProductSelectionSlot,
 } from "./engine6ProductSelectionGovernance.js";
+import {
+  deriveEngine6SelectedProductCodesFromConfig,
+  runEngine6ProductSelectionSelfReplacementGovernance,
+  type Engine6ProductSelectionSelfReplacementReport,
+} from "./engine6ProductSelectionSelfReplacementGovernance.js";
 
 export const ENGINE6_PARAGON_GOVERNANCE_PIPELINE_ID =
   "engine6-paragon-governance-pipeline" as const;
@@ -50,7 +55,58 @@ export type Engine6ParagonGovernancePipelineContext = {
   report: Engine6ProductSelectionGovernanceReport;
   validatedProductCodes: string[];
   completedBuildStages: readonly Engine6DeterministicBuildStage[];
+  selfReplacementReport?: Engine6ProductSelectionSelfReplacementReport;
 };
+
+const toProductSelectionGovernanceReportFromSelfReplacement = (
+  report: Engine6ProductSelectionSelfReplacementReport
+): Engine6ProductSelectionGovernanceReport => ({
+  generatedAt: report.generatedAt,
+  destinationLabel: report.destinationLabel,
+  mode: report.mode,
+  scopedProductCodes: report.scopedProductCodes,
+  buildOrderPreserved: true,
+  onlyNewProductsCouldBlock: report.mode === "pr-scoped",
+  candidatesEvaluated:
+    report.accepted.length + report.rejected.length + report.removedProductCodes.length,
+  productsAccepted: report.accepted.length,
+  productsRejected: report.rejected.length,
+  replacementProductsSelected: report.replacements.length,
+  portfolioMix: report.portfolioMix,
+  blocklistAdditions: report.blocklistAdditions,
+  accepted: report.accepted,
+  rejected: report.rejected,
+  replacements: report.replacements.map(replacement => ({
+    experienceType: replacement.experienceType,
+    rejectedProductCode: replacement.removedProductCode,
+    selectedProductCode: replacement.replacementProductCode,
+  })),
+  reusedModules: [
+    ...report.reusedModules,
+    "engine6ProductSelectionGovernance",
+    "engine6ParagonGovernancePipeline",
+  ],
+  newModules: ["engine6ProductSelectionSelfReplacementGovernance"],
+  duplicateValidationLogicIntroduced: false,
+  unfilledSlots: [],
+  blockingFailures: report.blockingFailures,
+  blockingPassed: report.blockingPassed,
+  passed: report.passed,
+  buildTerminated: report.buildTerminated,
+  buildTerminationReason: report.buildTerminationReason,
+  remainingQualifiedCandidates: [],
+  minimumPortfolioShortfall: report.passed
+    ? 0
+    : Math.max(
+        0,
+        report.removedProductCodes.length - report.replacementProductCodes.length
+      ),
+  attemptedReplacements: report.replacements.map(replacement => ({
+    experienceType: replacement.experienceType,
+    rejectedProductCode: replacement.removedProductCode,
+    selectedProductCode: replacement.replacementProductCode,
+  })),
+});
 
 export class Engine6ParagonGovernancePipelineError extends Error {
   readonly report: Engine6ProductSelectionGovernanceReport;
@@ -118,6 +174,43 @@ export const runEngine6ParagonProductSelectionPipeline = async (args: {
     typeof runEngine6DestinationBuildGovernance
   >[0]["validateCandidate"];
 }): Promise<Engine6ParagonGovernancePipelineContext> => {
+  const destinationBuild = args.destinationBuild ?? true;
+  const mode =
+    args.mode ??
+    (destinationBuild === false ? "pr-scoped" : "strict");
+
+  if (destinationBuild) {
+    const selectedProductCodes = deriveEngine6SelectedProductCodesFromConfig(
+      args.config
+    );
+    const selfReplacement = await runEngine6ProductSelectionSelfReplacementGovernance(
+      {
+        config: args.config,
+        selectedProductCodes,
+        mode,
+        scopedProductCodes: args.scopedProductCodes,
+        headRef: args.headRef,
+        fetchImpl: args.fetchImpl,
+        validateCandidate: args.validateCandidate,
+      }
+    );
+
+    if (selfReplacement.passed) {
+      const report = toProductSelectionGovernanceReportFromSelfReplacement(
+        selfReplacement
+      );
+      assertEngine6CommitPullRequestGate(report);
+
+      return {
+        pipelineId: ENGINE6_PARAGON_GOVERNANCE_PIPELINE_ID,
+        report,
+        validatedProductCodes: selfReplacement.validatedProductCodes,
+        completedBuildStages: ["live-validation"],
+        selfReplacementReport: selfReplacement,
+      };
+    }
+  }
+
   const build = await runEngine6DestinationBuildGovernance({
     destinationLabel: args.config.destinationLabel,
     destinationCitySlug: args.config.destinationCitySlug,
@@ -130,7 +223,7 @@ export const runEngine6ParagonProductSelectionPipeline = async (args: {
     mode: args.mode,
     scopedProductCodes: args.scopedProductCodes,
     headRef: args.headRef,
-    destinationBuild: args.destinationBuild ?? true,
+    destinationBuild,
   });
 
   if (build.report.buildTerminated || !build.report.passed) {

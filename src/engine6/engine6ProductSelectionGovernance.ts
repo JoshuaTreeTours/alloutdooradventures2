@@ -198,7 +198,7 @@ const normalizeProductCode = (value: string) => value.trim().toUpperCase();
 export const isEngine6ProductSelectionBlocklisted = (productCode: string) =>
   isEngine6ProductSelectionBlocklistedProduct(productCode);
 
-const classifyLiveValidationRejectionReason = (
+export const classifyLiveValidationRejectionReason = (
   validationResult: Engine6LiveViatorValidationResult
 ): Engine6ProductSelectionRejectionReason => {
   const reason = (validationResult.reason ?? "").toLowerCase();
