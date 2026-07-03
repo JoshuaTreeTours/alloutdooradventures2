@@ -5,6 +5,7 @@ import {
   resolveEngine6GovernanceCredentialPolicy,
   resolveEngine6GovernanceExitPolicy,
   resolveEngine6GovernanceMode,
+  resolveEngine6GovernanceProcessExitCode,
   shouldEngine6GovernanceAlwaysBlock,
 } from "./engine6GovernanceMode";
 
@@ -65,12 +66,32 @@ describe("engine6GovernanceMode", () => {
       shouldExitOnWarnings: false,
     });
     expect(resolveEngine6GovernanceExitPolicy("warn")).toMatchObject({
-      shouldExitOnBlockingFindings: true,
+      shouldExitOnBlockingFindings: false,
       shouldExitOnWarnings: false,
     });
     expect(resolveEngine6GovernanceExitPolicy("strict")).toMatchObject({
       shouldExitOnBlockingFindings: true,
       shouldExitOnWarnings: true,
     });
+  });
+
+  it("keeps warn-mode Stage 2 audit exit 0 when blocking findings remain", () => {
+    expect(
+      resolveEngine6GovernanceProcessExitCode({
+        mode: "warn",
+        blockingPassed: false,
+        warningFindings: 0,
+      })
+    ).toBe(0);
+  });
+
+  it("exits nonzero in strict mode when blocking findings remain", () => {
+    expect(
+      resolveEngine6GovernanceProcessExitCode({
+        mode: "strict",
+        blockingPassed: false,
+        warningFindings: 0,
+      })
+    ).toBe(1);
   });
 });

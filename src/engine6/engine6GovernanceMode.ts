@@ -105,10 +105,29 @@ export const resolveEngine6GovernanceExitPolicy = (
   mode: Engine6GovernanceMode = resolveEngine6GovernanceMode()
 ): Engine6GovernanceExitPolicy => ({
   mode,
-  shouldExitOnBlockingFindings: mode !== "audit",
+  shouldExitOnBlockingFindings: mode === "strict",
   shouldExitOnWarnings: mode === "strict",
   shouldReportLegacyFindings: mode !== "strict",
 });
+
+/** Mirrors Stage 2 / live Viator CLI exit behavior from governance exit policy. */
+export const resolveEngine6GovernanceProcessExitCode = (args: {
+  mode: Engine6GovernanceMode;
+  blockingPassed: boolean;
+  warningFindings?: number;
+}): 0 | 1 => {
+  const exitPolicy = resolveEngine6GovernanceExitPolicy(args.mode);
+
+  if (!args.blockingPassed && exitPolicy.shouldExitOnBlockingFindings) {
+    return 1;
+  }
+
+  if ((args.warningFindings ?? 0) > 0 && exitPolicy.shouldExitOnWarnings) {
+    return 1;
+  }
+
+  return 0;
+};
 
 export const shouldEngine6GovernanceAlwaysBlock = (args: {
   mode: Engine6GovernanceMode;

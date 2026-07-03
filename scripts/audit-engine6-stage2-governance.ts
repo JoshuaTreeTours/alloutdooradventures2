@@ -2,8 +2,8 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 import {
-  resolveEngine6GovernanceExitPolicy,
   resolveEngine6GovernanceMode,
+  resolveEngine6GovernanceProcessExitCode,
   resolveEngine6GovernanceRequiresFullSiteValidation,
 } from "../src/engine6/engine6GovernanceMode";
 import {
@@ -89,7 +89,11 @@ const report = await buildEngine6Stage2GovernanceAudit({
 });
 
 const markdown = formatEngine6Stage2GovernanceAuditMarkdown(report);
-const exitPolicy = resolveEngine6GovernanceExitPolicy(governanceMode);
+const exitCode = resolveEngine6GovernanceProcessExitCode({
+  mode: governanceMode,
+  blockingPassed: report.blockingPassed,
+  warningFindings: report.totals.warningFindings,
+});
 
 mkdirSync(REPORT_DIR, { recursive: true });
 writeFileSync(JSON_PATH, `${JSON.stringify(report, null, 2)}\n`);
@@ -114,17 +118,14 @@ console.log(
   )
 );
 
-if (!report.blockingPassed && exitPolicy.shouldExitOnBlockingFindings) {
+if (exitCode !== 0 && !report.blockingPassed) {
   console.error(
     "\nEngine6 Stage 2 governance audit rejected: one or more blocking findings remain for deploy-scoped products."
   );
   process.exit(1);
 }
 
-if (
-  report.totals.warningFindings > 0 &&
-  exitPolicy.shouldExitOnWarnings
-) {
+if (exitCode !== 0 && report.totals.warningFindings > 0) {
   console.error(
     `\nEngine6 Stage 2 governance audit rejected: ${report.totals.warningFindings} warning finding(s) remain in strict mode.`
   );
