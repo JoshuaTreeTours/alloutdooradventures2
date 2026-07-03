@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "327849P2",
+    "productUrl": "https://www.viator.com/tours/Sedona/The-Fast-Track-around-the-Sedona-Red-Rocks/d750-327849P2",
+    "title": "Everything Sedona (20+ Mile) - Sedona Helicopter Tour",
+    "description": {
+      "text": "See Sedona's signature red rock formations from above on a compact helicopter flight covering more than 20 miles of canyon country in about 10 to 12 minutes. Lift off near Sedona Airport and trace a scenic loop over Cathedral Rock, Bell Rock, Chapel of the Holy Cross, Oak Creek Canyon, and Devil's Bridge Trail with live pilot narration. The route works as a fast-track overview for visitors on tight schedules who still want aerial perspective on the formations that define the Verde Valley skyline. Climate-controlled cabins and oversized windows keep photography straightforward as you bank past mesas, spires, and pine-fringed ridgelines. Weight limits and weather minimums apply; arrive early for check-in at the Sedona heliport."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "10 to 12 minutes (approx.)",
+    "priceFrom": "From $196.79",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 111
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0c/0d/63/85.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Helicopter loop over 20+ miles of Sedona red rock country",
+      "Aerial views of Cathedral Rock, Bell Rock, and Chapel of the Holy Cross",
+      "Flyover of Oak Creek Canyon and Devil's Bridge Trail",
+      "Live pilot narration on major Sedona landmarks",
+      "Quick-format flight ideal for tight itineraries"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at the Sedona helicopter terminal near Sedona Airport, 455 Airport Rd, Sedona, AZ 86336. Arrive 30 minutes before departure."
+      },
+      "end": {
+        "description": "Land back at the Sedona helicopter terminal after the red rock aerial loop."
+      }
+    },
+    "itinerarySummary": "See Sedona's signature red rock formations from above on a compact helicopter flight covering more than 20 miles of canyon country in about 10 to 12 minutes.",
+    "itineraryItems": [
+      {
+        "title": "Cathedral Rock",
+        "description": "Circle Cathedral Rock's twin spires rising above Oak Creek from a helicopter vantage.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Bell Rock",
+        "description": "Pass Bell Rock's dome profile, one of Sedona's most photographed sandstone landmarks.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Chapel of the Holy Cross",
+        "description": "Fly past Chapel of the Holy Cross built into the red cliffs above Sedona.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Oak Creek Canyon",
+        "description": "Trace Oak Creek Canyon's forested gorge between high sandstone walls.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Devil's Bridge Trail",
+        "description": "View Devil's Bridge Trail country where a natural sandstone arch crowns the ridgeline.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Helicopter flight",
+      "Live pilot narration",
+      "Helicopter fuel surcharge",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Everything Sedona (20+ Mile) - Sedona Helicopter Tour?",
+        "answer": "The planned duration is 10 to 12 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Check in at the Sedona helicopter terminal near Sedona Airport, 455 Airport Rd, Sedona, AZ 86336. Arrive 30 minutes before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 196.79
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "54668P3",
+    "productUrl": "https://www.viator.com/tours/Sedona/Wild-West-Tour-by-Helicopter-from-Sedona/d750-54668P3",
+    "title": "Sedona Helicopter Tour: Wild West Tour",
+    "description": {
+      "text": "Combine Sedona's red rock panoramas with Wild West history on a 50-minute helicopter tour operated by Guidance Air from Sedona Airport. The flight sweeps over Cathedral Rock, Bell Rock, and Oak Creek Canyon before tracing routes associated with frontier ranching, mining, and outpost settlements across the Verde Valley. Pilots highlight how volcanic layers, fault lines, and erosion shaped the spires you see from town while pointing out remote canyons and mesa tops linked to Arizona's western heritage. This premium aerial outing suits travelers who want more air time than the short red rock loop and prefer a narrative focused on landscape and lore rather than a quick photo circuit. Check-in at Guidance Air includes a safety briefing and weight verification before boarding."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "50 to 55 minutes (approx.)",
+    "priceFrom": "From $756.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 37
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/fc/46.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "50-minute Wild West themed helicopter tour from Sedona",
+      "Guidance Air departures at Sedona Airport",
+      "Aerial views of Cathedral Rock, Bell Rock, and Oak Creek Canyon",
+      "Pilot commentary on Verde Valley frontier and mining history",
+      "Extended routing beyond the standard red rock loop"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at Guidance Air at Sedona Airport, 455 Airport Rd, Sedona, AZ 86336. Arrive 30 minutes before your scheduled flight."
+      },
+      "end": {
+        "description": "Land at Guidance Air at Sedona Airport after the Wild West aerial route."
+      }
+    },
+    "itinerarySummary": "Combine Sedona's red rock panoramas with Wild West history on a 50-minute helicopter tour operated by Guidance Air from Sedona Airport.",
+    "itineraryItems": [
+      {
+        "title": "Guidance Air",
+        "description": "Check in at Guidance Air for weigh-in, safety briefing, and boarding at Sedona Airport.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cathedral Rock",
+        "description": "Lift off toward Cathedral Rock for introductory red rock views above Oak Creek.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Bell Rock",
+        "description": "Pass Bell Rock and Courthouse Butte country on the western Sedona skyline.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Oak Creek Canyon",
+        "description": "Trace Oak Creek Canyon's rim where pine forest meets towering sandstone cliffs.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Helicopter flight",
+      "Live pilot narration",
+      "Helicopter fuel surcharge",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sedona Helicopter Tour: Wild West Tour?",
+        "answer": "The planned duration is 50 to 55 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Check in at Guidance Air at Sedona Airport, 455 Airport Rd, Sedona, AZ 86336. Arrive 30 minutes before your scheduled flight."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 756
+      },
+      "currency": "USD"
+    }
+  }
+}

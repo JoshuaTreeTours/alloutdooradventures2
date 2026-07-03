@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "25271P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/The-Original-Sedona-Vortex-Tour/d750-25271P1",
+    "title": "PRIVATE Customizable Sedona Vortex Jeep Tour",
+    "description": {
+      "text": "Customize a private two-hour Sedona vortex Jeep tour with guides trained to interpret the area's spiritual geography and red rock landforms. Depart Pink Jeep Tours on West State Route 89A and choose emphasis among Airport Mesa, Boynton Canyon, Bell Rock, and other vortex-associated sites based on your group's interests. Drivers combine mild 4x4 segments with stops for grounding exercises, photography, and educational commentary on how Sedona's vortex concept emerged from local landscape features. The private format lets skeptics and believers share one vehicle while pacing meditation time and scenic overlooks differently than a fixed group tour. Wear comfortable layers for open-air Jeep travel and expect short walks on sandy, uneven ground at viewpoint pullouts."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $159.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 185
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/69/15/d7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private customizable Sedona vortex Jeep experience",
+      "Professional vortex-trained Pink Jeep guides",
+      "Flexible stops at Airport Mesa, Bell Rock, and Boynton Canyon",
+      "Mild 4x4 travel with short viewpoint walks",
+      "Exclusive Jeep reserved for your party"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at Pink Jeep Tours, 2900 W State Rte 89A, Sedona, AZ 86336. Discuss vortex priorities with your guide before departure."
+      },
+      "end": {
+        "description": "Return to the Pink Jeep Tours base after your customized vortex loop."
+      }
+    },
+    "itinerarySummary": "Customize a private two-hour Sedona vortex Jeep tour with guides trained to interpret the area's spiritual geography and red rock landforms.",
+    "itineraryItems": [
+      {
+        "title": "Pink Jeep Tours Base",
+        "description": "Pink Jeep Tours Base vortex routing consultation at 2900 W State Rte 89A.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private Jeep 4x4 transport",
+      "Vortex-trained driver-guide",
+      "Customizable itinerary",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the PRIVATE Customizable Sedona Vortex Jeep Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Check in at Pink Jeep Tours, 2900 W State Rte 89A, Sedona, AZ 86336. Discuss vortex priorities with your guide before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Jeep Tours"
+      },
+      {
+        "label": "Religious Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 159
+      },
+      "currency": "USD"
+    }
+  }
+}

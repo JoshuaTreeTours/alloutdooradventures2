@@ -1,0 +1,432 @@
+[
+  {
+    "productCode": "162351P6",
+    "productUrl": "https://www.viator.com/tours/Sedona/Award-Winning-Sedona-Stargazing-with-TripAdvisor-Hall-of-Fame-Company/d750-162351P6",
+    "title": "Sedona Stargazing Tours LLC",
+    "duration": "1 hour 15 minutes (approx.)",
+    "priceFrom": 120,
+    "rating": 4.3,
+    "reviewCount": 955,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/f2/eb/a8.jpg",
+    "categories": [
+      "Attractions & Museums"
+    ],
+    "itineraryTitles": [
+      "Verde Valley School"
+    ]
+  },
+  {
+    "productCode": "321860P2",
+    "productUrl": "https://www.viator.com/tours/Sedona/The-Night-Sky-Galaxy-and-Star-Story-Tour/d750-321860P2",
+    "title": "The Night Sky Star Story, Galaxy, and Sedona Story Tour",
+    "duration": "2 hours 5 minutes (approx.)",
+    "priceFrom": 100,
+    "rating": 4.6,
+    "reviewCount": 278,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/d3/24/90.jpg",
+    "categories": [
+      "Night Tours"
+    ],
+    "itineraryTitles": [
+      "Sedona"
+    ]
+  },
+  {
+    "productCode": "327849P2",
+    "productUrl": "https://www.viator.com/tours/Sedona/The-Fast-Track-around-the-Sedona-Red-Rocks/d750-327849P2",
+    "title": "Everything Sedona (20+ Mile) - Sedona Helicopter Tour",
+    "duration": "10 to 12 minutes (approx.)",
+    "priceFrom": 196.79,
+    "rating": 5,
+    "reviewCount": 111,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0c/0d/63/85.jpg",
+    "categories": [
+      "Extreme Sports"
+    ],
+    "itineraryTitles": [
+      "Sedona Airport Scenic Overlook",
+      "Red Rock State Park",
+      "Cathedral Rock",
+      "Chapel of the Holy Cross",
+      "Bell Rock",
+      "Broken Arrow Trail",
+      "Courthouse Butte Loop Trail",
+      "Schnebly Hill Road",
+      "Midgely Bridge Trail",
+      "Wilson Mountain Trail",
+      "Grasshopper Point Picnic Area",
+      "Oak Creek Canyon",
+      "Brin's Mesa Trail",
+      "Thunder Mountain Trailhead",
+      "Devil's Bridge Trail",
+      "Seven Canyons",
+      "Mescal Trail",
+      "Boynton Canyon Trail",
+      "Doe Mountain Trail",
+      "Lower Chimney Rock Trail"
+    ]
+  },
+  {
+    "productCode": "327849P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/Mogollon-Rim-Tour-covering-3-wilderness-areas-around-Sedona/d750-327849P1",
+    "title": "Mogollon Rim (80+ Mile) - Sedona Helicopter Tour",
+    "duration": "50 to 52 minutes (approx.)",
+    "priceFrom": 755.7,
+    "rating": 5,
+    "reviewCount": 17,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/73/92/de.jpg",
+    "categories": [
+      "Private and Luxury"
+    ],
+    "itineraryTitles": [
+      "Sedona Airport Scenic Overlook",
+      "Cathedral Rock",
+      "Bell Rock",
+      "Broken Arrow Trail",
+      "Schnebly Hill Road",
+      "Oak Creek Canyon",
+      "Brin's Mesa Trail",
+      "Devil's Bridge Trail",
+      "Honanki",
+      "Boynton Canyon",
+      "Long Canyon Trail",
+      "Sycamore Canyon",
+      "Tuzigoot National Monument",
+      "Mingus Mountain Area",
+      "Verde River",
+      "Jerome"
+    ]
+  },
+  {
+    "productCode": "54668P3",
+    "productUrl": "https://www.viator.com/tours/Sedona/Wild-West-Tour-by-Helicopter-from-Sedona/d750-54668P3",
+    "title": "Sedona Helicopter Tour: Wild West Tour",
+    "duration": "50 to 55 minutes (approx.)",
+    "priceFrom": 756,
+    "rating": 5,
+    "reviewCount": 37,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/fc/46.jpg",
+    "categories": [
+      "Helicopter Tours"
+    ],
+    "itineraryTitles": [
+      "Guidance Air"
+    ]
+  },
+  {
+    "productCode": "189623P3",
+    "productUrl": "https://www.viator.com/tours/Sedona/Winery-Tours-from-Scottsdale-to-the-Verde-Valley-Vineyards-and-Sedona/d750-189623P3",
+    "title": "Bliss - Sedona’s Most Luxurious Wine Tour - Lunch Included!",
+    "duration": "6 hours (approx.)",
+    "priceFrom": 125,
+    "rating": 4.7,
+    "reviewCount": 657,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/df/69/5d.jpg",
+    "categories": [
+      "Wine Tours"
+    ],
+    "itineraryTitles": [
+      "Alcantara Vineyards and Winery",
+      "Cove Mesa Vineyard",
+      "D.A.Ranch",
+      "Javelina Leap Vineyard, Winery & Bistro"
+    ]
+  },
+  {
+    "productCode": "325517P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/VIP-Wine-and-City-tours-with-a-celebrity-tour-guide/d750-325517P1",
+    "title": "Vortex to Vineyards by ABC wildlife host Rachel Reenstra",
+    "duration": "3 to 4 hours (approx.)",
+    "priceFrom": 199,
+    "rating": 5,
+    "reviewCount": 206,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/24/76/24.jpg",
+    "categories": [
+      "Wine Tastings"
+    ],
+    "itineraryTitles": [
+      "DA Ranch",
+      "Javelina Leap Vineyard, Winery & Bistro",
+      "Sedona Airport Scenic Overlook",
+      "Page Springs Cellars",
+      "Page Springs Valley"
+    ]
+  },
+  {
+    "productCode": "109073P8",
+    "productUrl": "https://www.viator.com/tours/Sedona/Sedona-Scenic-Full-Day-Tour/d750-109073P8",
+    "title": "PRIVATE Sedona Scenic Full-Day Experience - Your Day - Your Way",
+    "duration": "7 to 8 hours (approx.)",
+    "priceFrom": 389,
+    "rating": 5,
+    "reviewCount": 19,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/80/b3/29.jpg",
+    "categories": [
+      "Private and Luxury"
+    ],
+    "itineraryTitles": [
+      "Chapel of the Holy Cross",
+      "Airport Mesa",
+      "Cathedral Rock",
+      "Bell Rock",
+      "Jerome",
+      "Sedona"
+    ]
+  },
+  {
+    "productCode": "129182P3",
+    "productUrl": "https://www.viator.com/tours/Sedona/Sedona-Sacred-Places-and-Vortex-tour/d750-129182P3",
+    "title": "Sedona Sacred Places and Vortex Private Tour",
+    "duration": "4 hours (approx.)",
+    "priceFrom": 245,
+    "rating": 4.9,
+    "reviewCount": 29,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/2a/1c/d8.jpg",
+    "categories": [
+      "4WD Tours"
+    ],
+    "itineraryTitles": [
+      "Cathedral Rock",
+      "Chapel of the Holy Cross"
+    ]
+  },
+  {
+    "productCode": "129182P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/Private-custom-tours/d750-129182P1",
+    "title": "Private Custom Tours in Sedona",
+    "duration": "3 to 4 hours (approx.)",
+    "priceFrom": 275,
+    "rating": 5,
+    "reviewCount": 46,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/25/db/52.jpg",
+    "categories": [
+      "Private Sightseeing Tours"
+    ],
+    "itineraryTitles": [
+      "Sedona Airport Scenic Overlook",
+      "Chapel of the Holy Cross",
+      "Boynton Canyon Trail",
+      "Oak Creek Canyon"
+    ]
+  },
+  {
+    "productCode": "291644P3",
+    "productUrl": "https://www.viator.com/tours/Sedona/Explore-Sedona-Tour/d750-291644P3",
+    "title": "Private tour of Sedona and hike in Red Rock State park",
+    "duration": "4 hours (approx.)",
+    "priceFrom": 275,
+    "rating": 4.5,
+    "reviewCount": 19,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/7c/31/9e.jpg",
+    "categories": [
+      "Red Rock State Park"
+    ],
+    "itineraryTitles": [
+      "Chapel of the Holy Cross",
+      "Airport Mesa",
+      "Red Rock State Park"
+    ]
+  },
+  {
+    "productCode": "338750P2",
+    "productUrl": "https://www.viator.com/tours/Sedona/Three-Hour-Creekside-of-Cathedral-Hike-Private-Group/d750-338750P2",
+    "title": "Sedona Creekside of Cathedral Rock Hike With a Private Guide",
+    "duration": "4 hours (approx.)",
+    "priceFrom": 285,
+    "rating": 5,
+    "reviewCount": 39,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/08/ae/0f.jpg",
+    "categories": [
+      "Cathedral Rock"
+    ],
+    "itineraryTitles": []
+  },
+  {
+    "productCode": "393812P3",
+    "productUrl": "https://www.viator.com/tours/Sedona/Sedona-Cathedral-Rock-Hiking-Tour-with-a-Private-Guide/d750-393812P3",
+    "title": "Sedona, Cathedral Rock Hiking Tour with a Private Guide",
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": 194.5,
+    "rating": 5,
+    "reviewCount": 12,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/71/08/54.jpg",
+    "categories": [
+      "Nature and Wildlife Tours"
+    ],
+    "itineraryTitles": [
+      "Cathedral Rock",
+      "Cathedral Rock Trailhead",
+      "Cathedral Rock Trail",
+      "Templeton Trail",
+      "Arizona 89A & Oak Creek Boulevard"
+    ]
+  },
+  {
+    "productCode": "320003P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/Sedona-Hiking-and-Photo-Adventure/d750-320003P1",
+    "title": "Sedona Hiking and Photo Adventure",
+    "duration": "5 hours 30 minutes (approx.)",
+    "priceFrom": 195,
+    "rating": 5,
+    "reviewCount": 6,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/3f/75/c5.jpg",
+    "categories": [
+      "Hiking Tours"
+    ],
+    "itineraryTitles": [
+      "Cathedral Rock"
+    ]
+  },
+  {
+    "productCode": "3925OBW",
+    "productUrl": "https://www.viator.com/tours/Sedona/Old-Bear-Wallow-Tour-from-Sedona/d750-3925OBW",
+    "title": "PRIVATE Sedona Jeep Tour 4X4 Climb - Colorado Plateau",
+    "duration": "2 hours (approx.)",
+    "priceFrom": 159,
+    "rating": 4.7,
+    "reviewCount": 361,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/49/60.jpg",
+    "categories": [
+      "Arizona Tours",
+      "Mogollon Rim"
+    ],
+    "itineraryTitles": [
+      "2900 W State Rte 89A",
+      "Schnebly Hill Vista",
+      "Mogollon Rim"
+    ]
+  },
+  {
+    "productCode": "3925P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/Red-Rock-Panoramic-Tour/d750-3925P1",
+    "title": "PRIVATE Sedona Jeep Tour Mild 4X4 - Red Rock Panoramic",
+    "duration": "2 hours (approx.)",
+    "priceFrom": 159,
+    "rating": 4.8,
+    "reviewCount": 137,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/54/33/78.jpg",
+    "categories": [
+      "Private Sightseeing Tours"
+    ],
+    "itineraryTitles": [
+      "2900 W State Rte 89A",
+      "Dry Creek Road",
+      "Boynton Canyon Trail"
+    ]
+  },
+  {
+    "productCode": "25271P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/The-Original-Sedona-Vortex-Tour/d750-25271P1",
+    "title": "PRIVATE Customizable Sedona Vortex Jeep Tour",
+    "duration": "2 hours (approx.)",
+    "priceFrom": 159,
+    "rating": 4.5,
+    "reviewCount": 185,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/69/15/d7.jpg",
+    "categories": [
+      "4WD Tours"
+    ],
+    "itineraryTitles": [
+      "2900 W State Rte 89A"
+    ]
+  },
+  {
+    "productCode": "15880P21",
+    "productUrl": "https://www.viator.com/tours/Sedona/Ultimate-Sedona-Experience/d750-15880P21",
+    "title": "Ultimate Sedona Jeep Tour: Vortex, Landmarks & Scenic Views",
+    "duration": "5 hours 30 minutes (approx.)",
+    "priceFrom": 119.23,
+    "rating": 4.9,
+    "reviewCount": 296,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7c/9c/24.jpg",
+    "categories": [
+      "Tlaquepaque Arts and Shopping Village"
+    ],
+    "itineraryTitles": [
+      "Chapel of the Holy Cross",
+      "Tlaquepaque Arts & Shopping Village",
+      "Sedona",
+      "Amitabha Stupa and Peace Park",
+      "Lover's Knoll",
+      "Airport Mesa"
+    ]
+  },
+  {
+    "productCode": "15880P10",
+    "productUrl": "https://www.viator.com/tours/Sedona/Outback/d750-15880P10",
+    "title": "Sedona Off-Road Jeep Tour: Rugged Western Canyons & Wildlife",
+    "duration": "3 hours (approx.)",
+    "priceFrom": 134.81,
+    "rating": 4.9,
+    "reviewCount": 1462,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/25/df/5f.jpg",
+    "categories": [
+      "4WD Tours"
+    ],
+    "itineraryTitles": [
+      "Coconino National Forest",
+      "Snoopy Rock",
+      "Cathedral Rock",
+      "Bear Mountain Trail"
+    ]
+  },
+  {
+    "productCode": "32242P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/Guided-ATV-Tour-of-Western-Sedona/d750-32242P1",
+    "title": "Sedona’s ONLY Guided ATV Tour: Western Red Rock Backcountry",
+    "duration": "4 hours (approx.)",
+    "priceFrom": 238.53,
+    "rating": 5,
+    "reviewCount": 1845,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/72/f3/f1/caption.jpg",
+    "categories": [
+      "Extreme Sports",
+      "ATV Tours"
+    ],
+    "itineraryTitles": [
+      "Arizona ATV Adventures"
+    ]
+  },
+  {
+    "productCode": "291644P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/Our-Vortex-Tour/d750-291644P1",
+    "title": "Sedona Vortex Odyssey - A Spiritual & Scientific Adventure",
+    "duration": "3 hours (approx.)",
+    "priceFrom": 110.5,
+    "rating": 4.9,
+    "reviewCount": 573,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/73/d5/25.jpg",
+    "categories": [
+      "Religious Tours"
+    ],
+    "itineraryTitles": [
+      "105 Roadrunner Dr",
+      "Airport Mesa",
+      "Boynton Canyon",
+      "Capitol Butte",
+      "Amitabha Stupa and Peace Park",
+      "Chimney Rock",
+      "Cockscomb Butte",
+      "Lover's Knoll",
+      "Long Canyon Trail"
+    ]
+  },
+  {
+    "productCode": "115255P2",
+    "productUrl": "https://www.viator.com/tours/Sedona/Hopi-Cultural-and-Archaeological-Tour/d750-115255P2",
+    "title": "Hopi Cultural and Archaeological Day Trip from Sedona or Flagstaff",
+    "duration": "9 to 11 hours (approx.)",
+    "priceFrom": 328.45,
+    "rating": 5,
+    "reviewCount": 2,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/6b/f4/0c.jpg",
+    "categories": [
+      "Archaeology Tours"
+    ],
+    "itineraryTitles": [
+      "Oak Creek Canyon",
+      "Little Painted Desert Scenic View",
+      "Walpi Village"
+    ]
+  }
+]

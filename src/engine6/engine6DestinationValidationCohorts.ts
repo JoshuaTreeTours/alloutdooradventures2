@@ -72,6 +72,12 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Sedona",
+      matches: tour =>
+        /\/sedona\//i.test(tour.canonicalPath) || /\bsedona\b/i.test(tour.city),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Napa editorial narrative",
       matches: tour =>
         /\/napa\//i.test(tour.canonicalPath) || /\bnapa\b/i.test(tour.city),

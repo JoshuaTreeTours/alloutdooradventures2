@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "115255P2",
+    "productUrl": "https://www.viator.com/tours/Sedona/Hopi-Cultural-and-Archaeological-Tour/d750-115255P2",
+    "title": "Hopi Cultural and Archaeological Day Trip from Sedona or Flagstaff",
+    "description": {
+      "text": "Travel from Sedona into Hopi tribal lands on a full-day small-group tour focused on living Native culture and ancestral archaeology. The route crosses Oak Creek Canyon toward the Little Painted Desert Scenic View before reaching Walpi Village on First Mesa, where Hopi guides explain centuries of continuous settlement, farming traditions, and artistic practice on the Colorado Plateau. A included lunch and respectful visitation guidelines frame the experience as cultural education rather than casual sightseeing. Expect nine to eleven hours on the road with moderate walking on mesa-top paths and strict photography rules inside village boundaries. This outing suits travelers who want depth beyond red rock Jeep loops and are willing to listen carefully on sovereign Hopi land."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "9 to 11 hours (approx.)",
+    "priceFrom": "From $328.45",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 2
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/6b/f4/0c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day Hopi cultural tour from Sedona or Flagstaff",
+      "Walpi Village visit on First Mesa with Hopi guides",
+      "Oak Creek Canyon scenic drive en route to tribal lands",
+      "Little Painted Desert Scenic View stop",
+      "Included lunch and small-group educational format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Early-morning pickup from Sedona or Flagstaff hotels confirmed at booking. Expect a long day on the Colorado Plateau."
+      },
+      "end": {
+        "description": "Return to your Sedona or Flagstaff pickup point after departing Hopi lands."
+      }
+    },
+    "itinerarySummary": "Travel from Sedona into Hopi tribal lands on a full-day small-group tour focused on living Native culture and ancestral archaeology.",
+    "itineraryItems": [
+      {
+        "title": "Oak Creek Canyon",
+        "description": "Drive north through Oak Creek Canyon toward the Colorado Plateau en route to Hopi country.",
+        "duration": "1 hour",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Little Painted Desert Scenic View",
+        "description": "Stop at Little Painted Desert Scenic View for badland colors on the approach to First Mesa.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Walpi Village",
+        "description": "Guided visit to Walpi Village on First Mesa with Hopi cultural interpretation.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional tour guide",
+      "Small-group transport",
+      "Hopi village access coordination",
+      "Lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Hopi Cultural and Archaeological Day Trip from Sedona or Flagstaff?",
+        "answer": "The planned duration is 9 to 11 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Early-morning pickup from Sedona or Flagstaff hotels confirmed at booking. Expect a long day on the Colorado Plateau."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Archaeology Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 328.45
+      },
+      "currency": "USD"
+    }
+  }
+}

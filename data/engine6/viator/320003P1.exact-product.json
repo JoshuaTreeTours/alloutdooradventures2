@@ -1,0 +1,90 @@
+{
+  "product": {
+    "productCode": "320003P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/Sedona-Hiking-and-Photo-Adventure/d750-320003P1",
+    "title": "Sedona Hiking and Photo Adventure",
+    "description": {
+      "text": "Pair active hiking with professional photography on a five-and-a-half-hour Sedona adventure that hits photogenic red rock locations in optimal light. Your guide leads drives and walks to Cathedral Rock viewpoints and additional scenic pullouts, timing stops for golden-hour color on sandstone fins and Oak Creek reflections. Along the way you receive coaching on composition while the guide captures high-resolution images of your party delivered after the tour for prints or social sharing. The format suits couples, families, and small teams who want exercise plus polished keepsake photos without hiring a separate photographer. Moderate hiking ability is recommended; routes adjust slightly for proposals, celebrations, or team-building goals when arranged in advance."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "5 hours 30 minutes (approx.)",
+    "priceFrom": "From $195.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 6
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/3f/75/c5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided Sedona hike combined with professional photography",
+      "Cathedral Rock and red rock scenic locations timed for light",
+      "Full-resolution edited photos delivered after the tour",
+      "Composition coaching for travelers who enjoy cameras",
+      "Flexible routing for proposals and small-group celebrations"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Sedona trailhead or hotel pickup point. Start times shift seasonally for best photography light."
+      },
+      "end": {
+        "description": "Return to the meeting point after the final photo location on Cathedral Rock country trails."
+      }
+    },
+    "itinerarySummary": "Pair active hiking with professional photography on a five-and-a-half-hour Sedona adventure that hits photogenic red rock locations in optimal light.",
+    "itineraryItems": [],
+    "inclusions": [
+      "Professional guide and photographer",
+      "Edited digital photo delivery",
+      "Trail transport between locations",
+      "Trail snacks and water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sedona Hiking and Photo Adventure?",
+        "answer": "The planned duration is 5 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Meet your guide at the confirmed Sedona trailhead or hotel pickup point. Start times shift seasonally for best photography light."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 195
+      },
+      "currency": "USD"
+    }
+  }
+}

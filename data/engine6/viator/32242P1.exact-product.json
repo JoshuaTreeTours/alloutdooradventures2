@@ -1,0 +1,90 @@
+{
+  "product": {
+    "productCode": "32242P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/Guided-ATV-Tour-of-Western-Sedona/d750-32242P1",
+    "title": "Sedona's ONLY Guided ATV Tour: Western Red Rock Backcountry",
+    "description": {
+      "text": "Drive your own ATV on Sedona's only guided backcountry tour through western red rock terrain unreachable by passenger cars. After orientation at Arizona ATV Adventures, follow a lead guide on a four-hour loop across sandy washes, juniper mesas, and cliff-lined corridors with stops for photos and red rock interpretation. No prior ATV experience is required, but operators verify comfort with automatic transmissions and provide helmets plus safety instruction before departure. The pace mixes moderate speed sections with scenic pauses overlooking Courthouse Butte country and remote canyon fins. Wear long pants, closed-toe shoes, and sunscreen; expect dust and vibration on this active alternative to windshield touring."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $238.53",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1845
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/72/f3/f1/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sedona's only guided ATV backcountry tour",
+      "Self-drive ATVs on western red rock routes",
+      "Four-hour loop through remote Coconino National Forest terrain",
+      "Helmets, safety briefing, and guide-led pacing included",
+      "Photo stops at cliff-lined canyon viewpoints"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Arizona ATV Adventures staging area in western Sedona. Arrive 30 minutes early for waiver and safety training."
+      },
+      "end": {
+        "description": "Return ATVs to Arizona ATV Adventures after the guided backcountry loop."
+      }
+    },
+    "itinerarySummary": "Drive your own ATV on Sedona's only guided backcountry tour through western red rock terrain unreachable by passenger cars.",
+    "itineraryItems": [],
+    "inclusions": [
+      "ATV rental and fuel",
+      "Helmet and safety gear",
+      "Professional lead guide",
+      "Safety training"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sedona's ONLY Guided ATV Tour: Western Red Rock Backcountry?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Meet at Arizona ATV Adventures staging area in western Sedona. Arrive 30 minutes early for waiver and safety training."
+      }
+    ],
+    "categories": [
+      {
+        "label": "ATV Tours"
+      },
+      {
+        "label": "Extreme Sports"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 238.53
+      },
+      "currency": "USD"
+    }
+  }
+}

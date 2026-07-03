@@ -29,6 +29,7 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     "zion-national-park": ["Zion"],
     glacier: ["Glacier"],
     "great-smoky-mountains-national-park": ["Great Smoky Mountains"],
+    sedona: ["Sedona"],
     miami: ["Miami editorial narrative"],
     "new-york": ["New York editorial narrative"],
   };

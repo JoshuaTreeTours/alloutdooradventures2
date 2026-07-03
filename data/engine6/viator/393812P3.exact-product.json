@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "393812P3",
+    "productUrl": "https://www.viator.com/tours/Sedona/Sedona-Cathedral-Rock-Hiking-Tour-with-a-Private-Guide/d750-393812P3",
+    "title": "Sedona, Cathedral Rock Hiking Tour with a Private Guide",
+    "description": {
+      "text": "Climb toward Cathedral Rock with a private Sedona guide who blends trail skills with thoughtful conversation about the landscape's cultural and philosophical significance. The two-and-a-half-hour route uses Cathedral Rock Trail and connecting paths such as Templeton Trail, with difficulty adjusted to your fitness on the moderate-to-challenging sandstone steps above Oak Creek. Local guides identify flora, fauna, and rock layers while pacing rest stops for water and photography at red rock saddles. This outing suits travelers who want more than a quick viewpoint stop and prefer expert navigation on Sedona's busiest icon without guessing trail junctions alone. Sturdy hiking shoes and a small daypack are recommended; afternoon starts avoid midday heat when possible."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $194.50",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 12
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/71/08/54.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Cathedral Rock hiking tour with local Sedona guide",
+      "Cathedral Rock Trail and Templeton Trail routing options",
+      "Difficulty adjusted to guest fitness and preferences",
+      "Geology, flora, and cultural context along the climb",
+      "Two-and-a-half-hour focused hike format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Cathedral Rock Trailhead area near Oak Creek. Your guide confirms the route based on conditions and ability."
+      },
+      "end": {
+        "description": "Return to the Cathedral Rock Trailhead after the guided descent."
+      }
+    },
+    "itinerarySummary": "Climb toward Cathedral Rock with a private Sedona guide who blends trail skills with thoughtful conversation about the landscape's cultural and philosophical significance.",
+    "itineraryItems": [
+      {
+        "title": "Cathedral Rock Trailhead",
+        "description": "Cathedral Rock Trailhead gear check before the guided ascent.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cathedral Rock Trail",
+        "description": "Ascend Cathedral Rock Trail sandstone steps with guide-led pacing and rest stops.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Templeton Trail",
+        "description": "Connect via Templeton Trail sections for alternate viewpoints above Oak Creek.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arizona 89A & Oak Creek Boulevard",
+        "description": "Arizona 89A & Oak Creek Boulevard corridor descent toward the trailhead.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private certified hiking guide",
+      "Trail snacks",
+      "Safety equipment"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sedona, Cathedral Rock Hiking Tour with a Private Guide?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Meet at the Cathedral Rock Trailhead area near Oak Creek. Your guide confirms the route based on conditions and ability."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 194.5
+      },
+      "currency": "USD"
+    }
+  }
+}

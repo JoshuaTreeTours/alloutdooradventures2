@@ -1,0 +1,122 @@
+{
+  "product": {
+    "productCode": "327849P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/Mogollon-Rim-Tour-covering-3-wilderness-areas-around-Sedona/d750-327849P1",
+    "title": "Mogollon Rim (80+ Mile) - Sedona Helicopter Tour",
+    "description": {
+      "text": "Upgrade to an extended Sedona helicopter expedition covering 80+ miles from red rock spires to the Mogollon Rim and Verde River corridor. This 50-minute flight climbs from Sedona Airport over Cathedral Rock, Bell Rock, Oak Creek Canyon, and Devil's Bridge before pushing into higher wilderness country around Sycamore Canyon, Honanki cliff dwellings, and the historic mining town of Jerome perched on Cleopatra Hill. Pilots narrate geology, forest ecology, and human history as you cross three wilderness areas invisible from Highway 89A alone. The longer routing suits photographers and repeat visitors who want context on how Sedona sits within the greater Colorado Plateau. Premium pricing reflects extended air time, fuel, and a broader aerial survey than the short red rock loop."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "50 to 52 minutes (approx.)",
+    "priceFrom": "From $755.70",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 17
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/73/92/de.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Extended 80+ mile helicopter tour from Sedona Airport",
+      "Aerial routing over Mogollon Rim and Sycamore Canyon wilderness",
+      "Views of Honanki ruins and historic Jerome on Cleopatra Hill",
+      "Cathedral Rock, Bell Rock, and Oak Creek Canyon flyovers included",
+      "Live pilot narration across three wilderness areas"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at the Sedona helicopter terminal near Sedona Airport, 455 Airport Rd, Sedona, AZ 86336. Allow 30 minutes for weigh-in and safety briefing."
+      },
+      "end": {
+        "description": "Return to the Sedona helicopter terminal after the Mogollon Rim aerial loop."
+      }
+    },
+    "itinerarySummary": "Upgrade to an extended Sedona helicopter expedition covering 80+ miles from red rock spires to the Mogollon Rim and Verde River corridor.",
+    "itineraryItems": [
+      {
+        "title": "Sedona Airport Scenic Overlook",
+        "description": "Sedona Airport Scenic Overlook lift-off above Airport Mesa.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Cathedral Rock",
+        "description": "Bank around Cathedral Rock above Oak Creek before heading into higher canyon country.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Oak Creek Canyon",
+        "description": "Follow Oak Creek Canyon northward where ponderosa pine meets sheer sandstone walls.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Honanki",
+        "description": "Fly near Honanki cliff dwellings tucked beneath basalt overhangs west of Sedona.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Sycamore Canyon",
+        "description": "Cross Sycamore Canyon wilderness with wide views toward the Mogollon Rim escarpment.",
+        "duration": "10 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Jerome",
+        "description": "Circle historic Jerome on Cleopatra Hill above the Verde Valley mining district.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Extended helicopter flight",
+      "Live pilot narration",
+      "Helicopter fuel surcharge",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mogollon Rim (80+ Mile) - Sedona Helicopter Tour?",
+        "answer": "The planned duration is 50 to 52 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Check in at the Sedona helicopter terminal near Sedona Airport, 455 Airport Rd, Sedona, AZ 86336. Allow 30 minutes for weigh-in and safety briefing."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Private and Luxury"
+      },
+      {
+        "label": "Air Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 755.7
+      },
+      "currency": "USD"
+    }
+  }
+}

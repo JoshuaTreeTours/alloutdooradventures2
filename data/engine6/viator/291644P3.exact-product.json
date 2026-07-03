@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "291644P3",
+    "productUrl": "https://www.viator.com/tours/Sedona/Explore-Sedona-Tour/d750-291644P3",
+    "title": "Private tour of Sedona and hike in Red Rock State park",
+    "description": {
+      "text": "Combine Sedona sightseeing with a guided hike inside Red Rock State Park on a private four-hour outing tailored to your fitness level. Your guide handles logistics from Chapel of the Holy Cross photo stops to Airport Mesa overlooks, then leads a park trail segment where riparian cottonwoods meet red sandstone fins above Oak Creek. Interpretive commentary covers Colorado Plateau geology, desert wildlife, and how state park rules protect sensitive habitats near Eagle's Nest and Apache Fire looms. Private transport keeps the pace flexible for families who want both windshield touring and a meaningful walk without joining a crowded group hike. Wear sturdy shoes and bring water; trails may include rocky steps and sun exposure."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $275.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 19
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/7c/31/9e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Sedona tour with guided Red Rock State Park hike",
+      "Chapel of the Holy Cross and Airport Mesa scenic stops",
+      "Trail pacing matched to your group's fitness level",
+      "Interpretive commentary on geology and Oak Creek ecology",
+      "Park entrance coordination handled by your guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from your Sedona lodging at the confirmed morning or afternoon departure time."
+      },
+      "end": {
+        "description": "Return to your Sedona pickup point after the Red Rock State Park hike."
+      }
+    },
+    "itinerarySummary": "Combine Sedona sightseeing with a guided hike inside Red Rock State Park on a private four-hour outing tailored to your fitness level.",
+    "itineraryItems": [
+      {
+        "title": "Chapel of the Holy Cross",
+        "description": "Stop at Chapel of the Holy Cross for cliffside architecture and valley views.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Airport Mesa",
+        "description": "Visit Airport Mesa overlook above Sedona's red rock amphitheater.",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Red Rock State Park",
+        "description": "Guided hike on Red Rock State Park trails along Oak Creek with ecology stops.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Private transport",
+      "Red Rock State Park entry coordination",
+      "Trail snacks and water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private tour of Sedona and hike in Red Rock State park?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Pickup from your Sedona lodging at the confirmed morning or afternoon departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 275
+      },
+      "currency": "USD"
+    }
+  }
+}
