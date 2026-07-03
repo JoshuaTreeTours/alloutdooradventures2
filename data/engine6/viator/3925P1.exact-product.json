@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "3925P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/Red-Rock-Panoramic-Tour/d750-3925P1",
+    "title": "PRIVATE Sedona Jeep Tour Mild 4X4 - Red Rock Panoramic",
+    "description": {
+      "text": "See Sedona's red rock panoramas on a mild private Pink Jeep tour through Coconino National Forest backroads without the steepest plateau climbs. The two-hour loop uses Dry Creek Road and Boynton Canyon Trail access routes to reach scenic benches facing Courthouse Butte, Boynton Canyon walls, and juniper-studded meadows invisible from the highway. Your driver-guide shares wildlife signs, movie-location trivia, and geology while keeping the ride suitable for guests who want 4x4 character without extreme pitch. Private Jeeps depart from the Pink Jeep base on West State Route 89A with photo stops timed for morning or afternoon light. Ideal for first-time visitors and families seeking an introductory off-road overview of western Sedona."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $159.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 137
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/54/33/78.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private mild 4x4 Pink Jeep tour of western Sedona",
+      "Dry Creek Road and Boynton Canyon scenic backroads",
+      "Panoramic red rock views without extreme cliff climbs",
+      "Driver-guide commentary on forest ecology and geology",
+      "Family-friendly introductory off-road format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Pink Jeep Tours, 2900 W State Rte 89A, Sedona, AZ 86336, 15 minutes before departure."
+      },
+      "end": {
+        "description": "Return to the Pink Jeep Tours base after the red rock panoramic loop."
+      }
+    },
+    "itinerarySummary": "See Sedona's red rock panoramas on a mild private Pink Jeep tour through Coconino National Forest backroads without the steepest plateau climbs.",
+    "itineraryItems": [
+      {
+        "title": "Pink Jeep Tours Base",
+        "description": "Pink Jeep Tours Base safety briefing before the red rock panoramic loop.",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dry Creek Road",
+        "description": "Follow Dry Creek Road through juniper forest toward western Sedona viewpoints.",
+        "duration": "40 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boynton Canyon Trail",
+        "description": "Stop near Boynton Canyon Trail for red wall panoramas and photo time.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private Jeep transport",
+      "Professional driver-guide",
+      "Bottled water",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the PRIVATE Sedona Jeep Tour Mild 4X4 - Red Rock Panoramic?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Meet at Pink Jeep Tours, 2900 W State Rte 89A, Sedona, AZ 86336, 15 minutes before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Jeep Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 159
+      },
+      "currency": "USD"
+    }
+  }
+}

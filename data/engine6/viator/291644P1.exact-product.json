@@ -1,0 +1,130 @@
+{
+  "product": {
+    "productCode": "291644P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/Our-Vortex-Tour/d750-291644P1",
+    "title": "Sedona Vortex Odyssey - A Spiritual & Scientific Adventure",
+    "description": {
+      "text": "Dynamic Journey Tours leads this three-hour van tour through Sedona vortex country with guides who blend metaphysical tradition and scientific context. Stops typically include Airport Mesa, Amitabha Stupa and Peace Park, Lover's Knoll, and viewpoints toward Boynton Canyon, Chimney Rock, and Capitol Butte while you learn how geology, Native heritage, and 1980s New Age literature shaped Sedona's vortex reputation. The van format keeps walking moderate and suits couples on opposite sides of the belief spectrum who still want shared outdoor time. Guides encourage personal reflection at each site rather than scripted rituals, emphasizing what public lands allow and how to visit respectfully. No pets; meet at the operator address on Roadrunner Drive."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $110.50",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 573
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/73/d5/25.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Three-hour Sedona vortex van tour with scientific and spiritual context",
+      "Airport Mesa and Amitabha Stupa and Peace Park stops",
+      "Views toward Boynton Canyon and Chimney Rock formations",
+      "Local guides from Dynamic Journey Tours",
+      "Moderate walking with van transport between sites"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at 105 Roadrunner Dr, Sedona, AZ 86336 at your confirmed departure time."
+      },
+      "end": {
+        "description": "Return to 105 Roadrunner Dr after the final vortex viewpoint stop."
+      }
+    },
+    "itinerarySummary": "Dynamic Journey Tours leads this three-hour van tour through Sedona vortex country with guides who blend metaphysical tradition and scientific context.",
+    "itineraryItems": [
+      {
+        "title": "Dynamic Journey Tours",
+        "description": "Dynamic Journey Tours check-in at 105 Roadrunner Dr before boarding the van.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Airport Mesa",
+        "description": "Visit Airport Mesa vortex viewpoint above Sedona's red rock basin.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boynton Canyon",
+        "description": "View Boynton Canyon red walls from a designated overlook on the vortex route.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Amitabha Stupa and Peace Park",
+        "description": "Stop at Amitabha Stupa and Peace Park for a stupa walk and meditation garden time.",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chimney Rock",
+        "description": "Photo perspective toward Chimney Rock spire from the guided van route.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Capitol Butte",
+        "description": "Pass Capitol Butte formations while learning how local geology relates to vortex lore.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Lover's Knoll",
+        "description": "Finish with Lover's Knoll scenic stop above Oak Creek red rock country.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional vortex guide",
+      "Van transport",
+      "Interpretive commentary",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sedona Vortex Odyssey - A Spiritual & Scientific Adventure?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Meet at 105 Roadrunner Dr, Sedona, AZ 86336 at your confirmed departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Religious Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 110.5
+      },
+      "currency": "USD"
+    }
+  }
+}

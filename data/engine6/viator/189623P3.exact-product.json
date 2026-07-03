@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "189623P3",
+    "productUrl": "https://www.viator.com/tours/Sedona/Winery-Tours-from-Scottsdale-to-the-Verde-Valley-Vineyards-and-Sedona/d750-189623P3",
+    "title": "Bliss - Sedona's Most Luxurious Wine Tour - Lunch Included!",
+    "description": {
+      "text": "Sample Verde Valley wines without driving on Bliss Wine Tours' full-day outing from Sedona through Cottonwood and Clarkdale tasting rooms. A luxury vehicle and host handle logistics while you visit Alcantara Vineyards, Cove Mesa Vineyard, D.A. Ranch, and Javelina Leap Vineyard with reserved tastings and a sit-down lunch included. Guides share how elevation, diurnal temperature swings, and volcanic soils shape Arizona varietals while pacing the day for relaxed conversation rather than rushed shuttle hops. The route stays anchored in the Sedona–Verde Valley corridor, pairing red rock scenery with riverside vineyards along Oak Creek and the Verde River. Ideal for couples and small groups who want a polished wine-country day with pickup options from Sedona lodging."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $125.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 657
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/df/69/5d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day Verde Valley wine tour with lunch included",
+      "Visits to Alcantara, Cove Mesa, D.A. Ranch, and Javelina Leap",
+      "Luxury transport with a dedicated wine tour host",
+      "Reserved tastings across Cottonwood and Clarkdale wineries",
+      "Pickup available from Sedona hotels and vacation rentals"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning pickup from your Sedona hotel or agreed meeting point. Confirm pickup window when booking."
+      },
+      "end": {
+        "description": "Return to your Sedona pickup location after the final winery stop."
+      }
+    },
+    "itinerarySummary": "Sample Verde Valley wines without driving on Bliss Wine Tours' full-day outing from Sedona through Cottonwood and Clarkdale tasting rooms.",
+    "itineraryItems": [
+      {
+        "title": "Alcantara Vineyards and Winery",
+        "description": "Alcantara Vineyards and Winery along the Verde River near Cottonwood.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cove Mesa Vineyard",
+        "description": "Continue to Cove Mesa Vineyard for a scenic Verde Valley tasting flight.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "D.A. Ranch",
+        "description": "Explore Page Springs Valley ranch estate for wine tasting with hillside views toward Clarkdale and the Verde River.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Javelina Leap Vineyard, Winery & Bistro",
+        "description": "Javelina Leap Vineyard, Winery & Bistro bistro lunch and final tasting.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Luxury vehicle transport",
+      "Wine tour host",
+      "Reserved tastings",
+      "Lunch",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bliss - Sedona's Most Luxurious Wine Tour - Lunch Included!?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Morning pickup from your Sedona hotel or agreed meeting point. Confirm pickup window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Food & Drink"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 125
+      },
+      "currency": "USD"
+    }
+  }
+}

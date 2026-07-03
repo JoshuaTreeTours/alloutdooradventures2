@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "393812P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/Introduction-to-Sedona-Easy-Walk/d750-393812P1",
+    "title": "Sedona Easy Hiking Tour with a Private Guide",
+    "description": {
+      "text": "Walk Sedona's red rock country on a private two-hour outing led by local guides who connect geology, philosophy, and desert ecology along gentle Red Rock State Park trails. Routes through Oak Creek corridors, the House of Apache Fires overlook, and Cathedral Rock viewpoints adjust to your pace from accessible paths to moderate inclines with trekking poles, water, and snacks provided. Guides identify flora and fauna while explaining how ancestral Puebloan people used Oak Creek water and how modern Hopi, Yavapai, and Apache traditions relate to the landscape. Park admission is included so you can focus on scenery rather than logistics. Meet at Red Rock State Park near Sedona and wear traction footwear for rocky steps and sun exposure on open benches."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $179.50",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 11
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/7c/31/9e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private easy hiking tour in Red Rock State Park",
+      "Oak Creek corridors and House of Apache Fires overlook",
+      "Cathedral Rock viewpoints on gentle Sedona trails",
+      "Local guide commentary on ecology and cultural history",
+      "Trekking poles, water, and snacks included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your private guide at Red Rock State Park near Sedona. Your guide confirms the trail loop based on conditions and ability."
+      },
+      "end": {
+        "description": "Finish at Red Rock State Park after the guided easy walk along Oak Creek."
+      }
+    },
+    "itinerarySummary": "Walk Sedona's red rock country on a private two-hour outing led by local guides who connect geology, philosophy, and desert ecology along gentle Red Rock State Park trails.",
+    "itineraryItems": [
+      {
+        "title": "Red Rock State Park",
+        "description": "Explore Red Rock State Park trails along Oak Creek with guide-led ecology stops.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cathedral Rock",
+        "description": "Cathedral Rock viewpoints frame the opening and closing sections of this easy Sedona walk.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Oak Creek",
+        "description": "Oak Creek shoreline segment where cottonwood shade and flowing water cool the desert bench.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "House of Apache Fires",
+        "description": "House of Apache Fires cliffside overlook above Oak Creek with Sedona history commentary.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private certified hiking guide",
+      "Red Rock State Park admission",
+      "Trekking poles",
+      "Trail snacks and water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sedona Easy Hiking Tour with a Private Guide?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Meet your private guide at Red Rock State Park near Sedona. Your guide confirms the trail loop based on conditions and ability."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 179.5
+      },
+      "currency": "USD"
+    }
+  }
+}
