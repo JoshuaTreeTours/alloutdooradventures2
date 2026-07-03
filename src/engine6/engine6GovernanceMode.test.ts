@@ -6,6 +6,7 @@ import {
   resolveEngine6GovernanceExitPolicy,
   resolveEngine6GovernanceMode,
   resolveEngine6GovernanceProcessExitCode,
+  resolveEngine6Stage2GovernanceAuditOutcome,
   shouldEngine6GovernanceAlwaysBlock,
 } from "./engine6GovernanceMode";
 
@@ -93,5 +94,17 @@ describe("engine6GovernanceMode", () => {
         warningFindings: 0,
       })
     ).toBe(1);
+  });
+
+  it("warn mode reports legacy findings without failing CI", () => {
+    const outcome = resolveEngine6Stage2GovernanceAuditOutcome({
+      mode: "warn",
+      blockingPassed: true,
+      warningFindings: 0,
+      legacyFindings: 3,
+    });
+
+    expect(outcome.exitCode).toBe(0);
+    expect(outcome.shouldReportLegacyFindings).toBe(true);
   });
 });

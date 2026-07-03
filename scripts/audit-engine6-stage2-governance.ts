@@ -3,8 +3,8 @@ import path from "node:path";
 
 import {
   resolveEngine6GovernanceMode,
-  resolveEngine6GovernanceProcessExitCode,
   resolveEngine6GovernanceRequiresFullSiteValidation,
+  resolveEngine6Stage2GovernanceAuditOutcome,
 } from "../src/engine6/engine6GovernanceMode";
 import {
   formatEngine6LiveViatorProductionValidationReport,
@@ -89,10 +89,11 @@ const report = await buildEngine6Stage2GovernanceAudit({
 });
 
 const markdown = formatEngine6Stage2GovernanceAuditMarkdown(report);
-const exitCode = resolveEngine6GovernanceProcessExitCode({
+const auditOutcome = resolveEngine6Stage2GovernanceAuditOutcome({
   mode: governanceMode,
   blockingPassed: report.blockingPassed,
   warningFindings: report.totals.warningFindings,
+  legacyFindings: report.totals.legacyFindings,
 });
 
 mkdirSync(REPORT_DIR, { recursive: true });
@@ -118,21 +119,21 @@ console.log(
   )
 );
 
-if (exitCode !== 0 && !report.blockingPassed) {
+if (auditOutcome.exitCode !== 0 && !report.blockingPassed) {
   console.error(
     "\nEngine6 Stage 2 governance audit rejected: one or more blocking findings remain for deploy-scoped products."
   );
   process.exit(1);
 }
 
-if (exitCode !== 0 && report.totals.warningFindings > 0) {
+if (auditOutcome.exitCode !== 0 && report.totals.warningFindings > 0) {
   console.error(
     `\nEngine6 Stage 2 governance audit rejected: ${report.totals.warningFindings} warning finding(s) remain in strict mode.`
   );
   process.exit(1);
 }
 
-if (report.totals.legacyFindings > 0 && exitPolicy.shouldReportLegacyFindings) {
+if (auditOutcome.shouldReportLegacyFindings) {
   console.warn(
     `\nEngine6 Stage 2 governance audit completed with ${report.totals.legacyFindings} legacy finding(s) reported separately.`
   );

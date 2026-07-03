@@ -17,7 +17,7 @@ import {
   parseSitemapTourPaths,
   resolveEngine6Stage2ScopedProductCodes,
 } from "./engine6Stage2GovernanceAudit";
-import { resolveEngine6GovernanceProcessExitCode } from "./engine6GovernanceMode";
+import { resolveEngine6Stage2GovernanceAuditOutcome } from "./engine6GovernanceMode";
 import {
   buildMerchantFeedBranchScopedGovernanceByProductCode,
   buildMerchantFeedPublishedBaselineCatalog,
@@ -370,12 +370,25 @@ describe("engine6Stage2GovernanceAudit helpers", () => {
     expect(report.blockingPassed).toBe(false);
     expect(report.totals.blockingFindings).toBe(22);
     expect(
-      resolveEngine6GovernanceProcessExitCode({
+      resolveEngine6Stage2GovernanceAuditOutcome({
         mode: report.governanceMode,
         blockingPassed: report.blockingPassed,
         warningFindings: report.totals.warningFindings,
-      })
+        legacyFindings: report.totals.legacyFindings,
+      }).exitCode
     ).toBe(0);
+  });
+
+  it("warn mode reports legacy findings without failing CI", () => {
+    const outcome = resolveEngine6Stage2GovernanceAuditOutcome({
+      mode: "warn",
+      blockingPassed: true,
+      warningFindings: 0,
+      legacyFindings: 2,
+    });
+
+    expect(outcome.exitCode).toBe(0);
+    expect(outcome.shouldReportLegacyFindings).toBe(true);
   });
 });
 
