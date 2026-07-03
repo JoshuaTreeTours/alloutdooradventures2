@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "7953P7",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Private-Night-City-Tour/d657-7953P7",
+    "title": "Private Washington DC Night City Tour",
+    "description": {
+      "text": "Explore the capital after sunset on a four-hour private city tour that combines National Mall memorials with Georgetown and Capitol Hill viewpoints. Your guide adjusts the route to your interests, whether that means extended time at the Lincoln Memorial or a drive through Embassy Row and Dupont Circle. Private vehicle transport keeps the evening comfortable while maximizing stops at illuminated landmarks. Ideal for first-time visitors who want a comprehensive night overview tailored to their group."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $392.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 450
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/7d/78/0a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Four-hour private night tour of Washington, D.C.",
+      "National Mall memorials with flexible photo time",
+      "Capitol Hill and Library of Congress exterior views",
+      "Georgetown waterfront and Embassy Row routing options",
+      "Private vehicle with hotel pickup"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Evening pickup from select Washington, D.C. hotels or a downtown meeting point confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your hotel or original pickup location after the final city viewpoint."
+      }
+    },
+    "itinerarySummary": "Explore the capital after sunset on a four-hour private city tour that combines National Mall memorials with Georgetown and Capitol Hill viewpoints.",
+    "itineraryItems": [
+      {
+        "title": "US Capitol",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Korean War Veterans Memorial",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Georgetown",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "White House",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private driver-guide",
+      "Private air-conditioned vehicle",
+      "Hotel pickup and drop-off",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Washington DC Night City Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Evening pickup from select Washington, D.C. hotels or a downtown meeting point confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 392
+      },
+      "currency": "USD"
+    }
+  }
+}

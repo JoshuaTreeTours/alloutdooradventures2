@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "5713P68",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Sample-Tastes-of-H-Street-Walking-Tour-With-Craft-Beer-Tasting/d657-5713P68",
+    "title": "Private H Street Walking Food Tour",
+    "description": {
+      "text": "Explore H Street NE on a private three-hour food and history walking tour with craft beer tastings at neighborhood establishments. Your guide connects the corridor's revival story with stops at local eateries serving regional flavors and brews. The route covers historic blocks between Union Station and the Atlas District with time to sample dishes and learn about Capitol Hill-adjacent neighborhood change. This premium food outing suits travelers who want a curated taste of DC beyond the National Mall."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 47
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/9c/28.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private H Street food and history walking tour",
+      "Craft beer tastings at local establishments",
+      "Multiple food sample stops along the corridor",
+      "Guide commentary on H Street neighborhood history",
+      "Three-hour format near Union Station"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide near Union Station or the confirmed H Street NE meeting point at your scheduled time."
+      },
+      "end": {
+        "description": "Tour ends on H Street NE near the final tasting stop."
+      }
+    },
+    "itinerarySummary": "Explore H Street NE on a private three-hour food and history walking tour with craft beer tastings at neighborhood establishments.",
+    "itineraryItems": [
+      {
+        "title": "Washington Union Station",
+        "description": "",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "H Street NE",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Food Sample Stop",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Craft Beer Tasting",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private food guide",
+      "Food samples",
+      "Craft beer tastings",
+      "Walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private H Street Walking Food Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Meet your guide near Union Station or the confirmed H Street NE meeting point at your scheduled time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

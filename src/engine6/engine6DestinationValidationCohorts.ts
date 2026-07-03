@@ -78,6 +78,14 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Washington, D.C.",
+      matches: tour =>
+        /\/district-of-columbia\/washington\//i.test(tour.canonicalPath) ||
+        (/\bwashington\b/i.test(tour.city) &&
+          /\bdistrict of columbia\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Napa editorial narrative",
       matches: tour =>
         /\/napa\//i.test(tour.canonicalPath) || /\bnapa\b/i.test(tour.city),

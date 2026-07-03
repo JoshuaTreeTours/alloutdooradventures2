@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "67327P4",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-Tour-of-Washington-DC/d657-67327P4",
+    "title": "Private Night-Time Monuments Tour of DC",
+    "description": {
+      "text": "See Washington's most iconic memorials after dark on a private evening tour built around your group's pace and photo priorities. A professional guide leads your party through the National Mall corridor with stops at the Lincoln Memorial, Vietnam Veterans Memorial, and Jefferson Memorial when lighting and crowds allow. Travel in a private vehicle with flexible routing past the Washington Monument and World War II Memorial. This premium format suits travelers who want an unhurried monuments experience without joining a large motorcoach group."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $425.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 278
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/ff/ad/1b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private night monuments tour for your party only",
+      "Lincoln Memorial and Reflecting Pool photo stops",
+      "Jefferson Memorial and Tidal Basin viewpoints",
+      "Flexible vehicle routing along the National Mall",
+      "Professional guide with evening lighting commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from downtown Washington, D.C. hotels or a central meeting point confirmed when booking. Evening departure times vary by season."
+      },
+      "end": {
+        "description": "Return to your pickup location or downtown hotel after the final memorial stop."
+      }
+    },
+    "itinerarySummary": "See Washington's most iconic memorials after dark on a private evening tour built around your group's pace and photo priorities.",
+    "itineraryItems": [
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vietnam Veterans Memorial",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "World War II Memorial",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jefferson Memorial",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Washington Monument",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Private vehicle transport",
+      "Hotel pickup and drop-off",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Night-Time Monuments Tour of DC?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Pickup from downtown Washington, D.C. hotels or a central meeting point confirmed when booking. Evening departure times vary by season."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 425
+      },
+      "currency": "USD"
+    }
+  }
+}

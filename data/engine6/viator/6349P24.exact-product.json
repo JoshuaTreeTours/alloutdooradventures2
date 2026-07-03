@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "6349P24",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Small-Group-Mount-Vernon-and-Arlington-National-Cemetery-Tour/d657-6349P24",
+    "title": "Small-Group Mount Vernon and Arlington Tour",
+    "description": {
+      "text": "Visit Mount Vernon and Arlington National Cemetery on a small-group six-hour tour from Washington, D.C. with a professional guide and comfortable transport. Tour George Washington's Potomac estate, then continue to Arlington for the Tomb of the Unknown Soldier and notable memorial sections. Group size stays limited for a social but uncrowded Virginia day trip. Mount Vernon admission and cemetery access are included with hotel pickup options downtown."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $109.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 890
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/1f/52/93.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group Mount Vernon and Arlington day trip",
+      "Guided tour of George Washington's estate",
+      "Arlington Cemetery with Tomb of the Unknown Soldier",
+      "Changing of the Guard when ceremony schedule allows",
+      "Transport from Washington, D.C. with limited group size"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning departure from select downtown Washington, D.C. hotels or a central meeting point."
+      },
+      "end": {
+        "description": "Return to downtown Washington, D.C. after the Arlington Cemetery visit."
+      }
+    },
+    "itinerarySummary": "Visit Mount Vernon and Arlington National Cemetery on a small-group six-hour tour from Washington, D.",
+    "itineraryItems": [
+      {
+        "title": "Mount Vernon",
+        "description": "",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "George Washington's Tomb",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arlington National Cemetery",
+        "description": "",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tomb of the Unknown Soldier",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Air-conditioned transport",
+      "Mount Vernon admission",
+      "Hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Small-Group Mount Vernon and Arlington Tour?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Morning departure from select downtown Washington, D.C. hotels or a central meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Small Group Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 109
+      },
+      "currency": "USD"
+    }
+  }
+}

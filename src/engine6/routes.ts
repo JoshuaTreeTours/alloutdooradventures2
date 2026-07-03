@@ -1035,6 +1035,79 @@ export const ENGINE6_SEDONA_TOUR_PATH_PREFIX =
 export const isEngine6SedonaTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_SEDONA_TOUR_PATH_PREFIX);
 
+export const ENGINE6_WASHINGTON_DC_67327P4_PRODUCT_CODE = "67327P4";
+export const ENGINE6_WASHINGTON_DC_67327P4_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/private-night-time-monuments-tour-of-dc-67327P4";
+export const ENGINE6_WASHINGTON_DC_7953P7_PRODUCT_CODE = "7953P7";
+export const ENGINE6_WASHINGTON_DC_7953P7_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/private-washington-dc-night-city-tour-7953P7";
+export const ENGINE6_WASHINGTON_DC_32453P11_PRODUCT_CODE = "32453P11";
+export const ENGINE6_WASHINGTON_DC_32453P11_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/private-under-the-stars-night-tour-32453P11";
+export const ENGINE6_WASHINGTON_DC_149066P1_PRODUCT_CODE = "149066P1";
+export const ENGINE6_WASHINGTON_DC_149066P1_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/dc-after-dark-luxury-suv-tour-149066P1";
+export const ENGINE6_WASHINGTON_DC_255730P191_PRODUCT_CODE = "255730P191";
+export const ENGINE6_WASHINGTON_DC_255730P191_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/national-mall-at-dusk-private-tour-255730P191";
+export const ENGINE6_WASHINGTON_DC_67327P5_PRODUCT_CODE = "67327P5";
+export const ENGINE6_WASHINGTON_DC_67327P5_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/private-mt-vernon-arlington-cemetery-67327P5";
+export const ENGINE6_WASHINGTON_DC_41503P1_PRODUCT_CODE = "41503P1";
+export const ENGINE6_WASHINGTON_DC_41503P1_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/private-dc-monuments-at-night-bike-41503P1";
+export const ENGINE6_WASHINGTON_DC_41503P2_PRODUCT_CODE = "41503P2";
+export const ENGINE6_WASHINGTON_DC_41503P2_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/customized-private-bike-tour-41503P2";
+export const ENGINE6_WASHINGTON_DC_6349P24_PRODUCT_CODE = "6349P24";
+export const ENGINE6_WASHINGTON_DC_6349P24_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/small-group-mount-vernon-and-arlington-6349P24";
+export const ENGINE6_WASHINGTON_DC_2890P28_PRODUCT_CODE = "2890P28";
+export const ENGINE6_WASHINGTON_DC_2890P28_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/mt-vernon-and-arlington-cemetery-tour-2890P28";
+export const ENGINE6_WASHINGTON_DC_67327P3_PRODUCT_CODE = "67327P3";
+export const ENGINE6_WASHINGTON_DC_67327P3_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/private-dc-and-arlington-cemetery-67327P3";
+export const ENGINE6_WASHINGTON_DC_5713P68_PRODUCT_CODE = "5713P68";
+export const ENGINE6_WASHINGTON_DC_5713P68_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/private-dc-food-and-history-h-street-5713P68";
+export const ENGINE6_WASHINGTON_DC_6349DAYTOUR_PRODUCT_CODE = "6349DAYTOUR";
+export const ENGINE6_WASHINGTON_DC_6349DAYTOUR_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/washington-dc-in-one-day-6349DAYTOUR";
+export const ENGINE6_WASHINGTON_DC_6349NIGHT_PRODUCT_CODE = "6349NIGHT";
+export const ENGINE6_WASHINGTON_DC_6349NIGHT_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/dc-monument-night-tour-6349NIGHT";
+export const ENGINE6_WASHINGTON_DC_6766P11_PRODUCT_CODE = "6766P11";
+export const ENGINE6_WASHINGTON_DC_6766P11_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/dc-national-mall-night-tour-6766P11";
+export const ENGINE6_WASHINGTON_DC_41377P2_PRODUCT_CODE = "41377P2";
+export const ENGINE6_WASHINGTON_DC_41377P2_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/capitol-hill-small-group-41377P2";
+export const ENGINE6_WASHINGTON_DC_60725P1_PRODUCT_CODE = "60725P1";
+export const ENGINE6_WASHINGTON_DC_60725P1_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/see-the-city-segway-60725P1";
+export const ENGINE6_WASHINGTON_DC_14782P1_PRODUCT_CODE = "14782P1";
+export const ENGINE6_WASHINGTON_DC_14782P1_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/u-street-food-history-14782P1";
+export const ENGINE6_WASHINGTON_DC_5046WAS_MON_PRODUCT_CODE = "5046WAS_MON";
+export const ENGINE6_WASHINGTON_DC_5046WAS_MON_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/monuments-by-moonlight-trolley-5046WAS_MON";
+export const ENGINE6_WASHINGTON_DC_6349VIPDC_PRODUCT_CODE = "6349VIPDC";
+export const ENGINE6_WASHINGTON_DC_6349VIPDC_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/best-of-dc-vip-capitol-archives-6349VIPDC";
+export const ENGINE6_WASHINGTON_DC_2384P1_PRODUCT_CODE = "2384P1";
+export const ENGINE6_WASHINGTON_DC_2384P1_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/monuments-and-memorials-bike-tour-2384P1";
+export const ENGINE6_WASHINGTON_DC_2890P2_PRODUCT_CODE = "2890P2";
+export const ENGINE6_WASHINGTON_DC_2890P2_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/mount-vernon-day-trip-2890P2";
+
+export const ENGINE6_WASHINGTON_DC_TOUR_PATH_PREFIX =
+  "/destinations/district-of-columbia/washington/tours/";
+
+export const isEngine6WashingtonDcTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_WASHINGTON_DC_TOUR_PATH_PREFIX);
+
 export const ENGINE6_GSM_THUNDERING_STREAMS_PRODUCT_CODE = "26480P10";
 export const ENGINE6_GSM_THUNDERING_STREAMS_ROUTE =
   "/destinations/tennessee/great-smoky-mountains-national-park/tours/thundering-streams-falls-guided-hike-26480P10";
@@ -2168,6 +2241,28 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [ENGINE6_SEDONA_32242P1_ROUTE, ENGINE6_SEDONA_32242P1_PRODUCT_CODE],
   [ENGINE6_SEDONA_291644P1_ROUTE, ENGINE6_SEDONA_291644P1_PRODUCT_CODE],
   [ENGINE6_SEDONA_115255P2_ROUTE, ENGINE6_SEDONA_115255P2_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_67327P4_ROUTE, ENGINE6_WASHINGTON_DC_67327P4_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_7953P7_ROUTE, ENGINE6_WASHINGTON_DC_7953P7_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_32453P11_ROUTE, ENGINE6_WASHINGTON_DC_32453P11_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_149066P1_ROUTE, ENGINE6_WASHINGTON_DC_149066P1_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_255730P191_ROUTE, ENGINE6_WASHINGTON_DC_255730P191_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_67327P5_ROUTE, ENGINE6_WASHINGTON_DC_67327P5_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_41503P1_ROUTE, ENGINE6_WASHINGTON_DC_41503P1_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_41503P2_ROUTE, ENGINE6_WASHINGTON_DC_41503P2_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_6349P24_ROUTE, ENGINE6_WASHINGTON_DC_6349P24_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_2890P28_ROUTE, ENGINE6_WASHINGTON_DC_2890P28_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_67327P3_ROUTE, ENGINE6_WASHINGTON_DC_67327P3_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_5713P68_ROUTE, ENGINE6_WASHINGTON_DC_5713P68_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_6349DAYTOUR_ROUTE, ENGINE6_WASHINGTON_DC_6349DAYTOUR_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_6349NIGHT_ROUTE, ENGINE6_WASHINGTON_DC_6349NIGHT_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_6766P11_ROUTE, ENGINE6_WASHINGTON_DC_6766P11_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_41377P2_ROUTE, ENGINE6_WASHINGTON_DC_41377P2_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_60725P1_ROUTE, ENGINE6_WASHINGTON_DC_60725P1_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_14782P1_ROUTE, ENGINE6_WASHINGTON_DC_14782P1_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_5046WAS_MON_ROUTE, ENGINE6_WASHINGTON_DC_5046WAS_MON_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_6349VIPDC_ROUTE, ENGINE6_WASHINGTON_DC_6349VIPDC_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_2384P1_ROUTE, ENGINE6_WASHINGTON_DC_2384P1_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_2890P2_ROUTE, ENGINE6_WASHINGTON_DC_2890P2_PRODUCT_CODE],
   [
     ENGINE6_GSM_THUNDERING_STREAMS_ROUTE,
     ENGINE6_GSM_THUNDERING_STREAMS_PRODUCT_CODE,

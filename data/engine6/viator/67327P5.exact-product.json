@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "67327P5",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Private-Mount-Vernon-and-Arlington-Cemetery-Tour/d657-67327P5",
+    "title": "Private Mt Vernon and Arlington Cemetery Tour",
+    "description": {
+      "text": "Day-trip to Mount Vernon and Arlington National Cemetery on a private eight-hour tour with a dedicated guide and vehicle. Explore George Washington's estate along the Potomac, then continue to Arlington for the Changing of the Guard at the Tomb of the Unknown Soldier and visits to notable gravesites. Your guide handles timing between Virginia sites while allowing flexible lunch and photo stops. This premium outing suits history-focused travelers who want both founding-era and military heritage in one private day."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $650.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 142
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/40/d0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private full-day Mount Vernon and Arlington tour",
+      "Guided visit to George Washington's estate and mansion",
+      "Arlington National Cemetery with Tomb of the Unknown Soldier",
+      "Changing of the Guard viewing when schedule allows",
+      "Private vehicle with hotel pickup in Washington, D.C."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning pickup from your Washington, D.C. hotel. Confirm pickup window when booking."
+      },
+      "end": {
+        "description": "Return to your Washington, D.C. hotel after the Arlington Cemetery visit."
+      }
+    },
+    "itinerarySummary": "Day-trip to Mount Vernon and Arlington National Cemetery on a private eight-hour tour with a dedicated guide and vehicle.",
+    "itineraryItems": [
+      {
+        "title": "Mount Vernon",
+        "description": "",
+        "duration": "2 hours 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "George Washington's Tomb",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arlington National Cemetery",
+        "description": "",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tomb of the Unknown Soldier",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arlington House",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Private vehicle transport",
+      "Mount Vernon admission",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Mt Vernon and Arlington Cemetery Tour?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Morning pickup from your Washington, D.C. hotel. Confirm pickup window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 650
+      },
+      "currency": "USD"
+    }
+  }
+}

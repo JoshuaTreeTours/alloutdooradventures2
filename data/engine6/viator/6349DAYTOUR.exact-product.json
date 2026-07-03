@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "6349DAYTOUR",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-in-One-Day-Guided-Sightseeing-Tour/d657-6349DAYTOUR",
+    "title": "Washington DC in One Day",
+    "description": {
+      "text": "See the capital's essential landmarks on a six-hour guided sightseeing tour covering the National Mall, Capitol Hill, and major memorials. A professional guide narrates the route with stops at the Lincoln Memorial, White House exterior, and Smithsonian area viewpoints. Motorcoach transport links the east and west ends of the Mall efficiently for first-time visitors with limited time. This comprehensive day tour delivers a solid DC overview without requiring separate monument visits."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 2941
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/0b/48.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day DC highlights sightseeing tour",
+      "Lincoln Memorial and National Mall stops",
+      "White House and US Capitol exterior views",
+      "Professional guide with city history commentary",
+      "Motorcoach transport with hotel pickup options"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from select downtown Washington, D.C. hotels or a central departure point in the morning."
+      },
+      "end": {
+        "description": "Return to downtown Washington, D.C. after the final National Mall stop."
+      }
+    },
+    "itinerarySummary": "See the capital's essential landmarks on a six-hour guided sightseeing tour covering the National Mall, Capitol Hill, and major memorials.",
+    "itineraryItems": [
+      {
+        "title": "US Capitol",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "White House",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vietnam Veterans Memorial",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "National Mall",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Air-conditioned motorcoach",
+      "Hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Washington DC in One Day?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Pickup from select downtown Washington, D.C. hotels or a central departure point in the morning."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

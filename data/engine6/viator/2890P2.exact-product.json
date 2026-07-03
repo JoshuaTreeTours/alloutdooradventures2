@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "2890P2",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Mount-Vernon-Day-Trip-from-Washington-DC/d657-2890P2",
+    "title": "Mount Vernon Day Trip",
+    "description": {
+      "text": "Day-trip to George Washington's Mount Vernon estate on a five-hour tour from Washington, D.C. with guided visits to the mansion, museum, and Potomac River grounds. Your guide covers Washington's life at the estate before allowing free time in the gardens and farm areas. Motorcoach transport handles the Virginia drive while admission is included. This half-day outing suits travelers who want founding-era history without a full-day Arlington combination."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $85.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 650
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/75/5d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Half-day Mount Vernon trip from Washington, D.C.",
+      "Guided tour of George Washington's mansion",
+      "Estate gardens and Potomac River grounds",
+      "Museum and education center visit time",
+      "Round-trip motorcoach transport included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning departure from select Washington, D.C. hotels or the confirmed downtown meeting point."
+      },
+      "end": {
+        "description": "Return to Washington, D.C. after free time on the Mount Vernon grounds."
+      }
+    },
+    "itinerarySummary": "Day-trip to George Washington's Mount Vernon estate on a five-hour tour from Washington, D.",
+    "itineraryItems": [
+      {
+        "title": "Mount Vernon Estate",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "George Washington's Mansion",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "George Washington's Tomb",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mount Vernon Gardens",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Motorcoach transport",
+      "Mount Vernon admission",
+      "Hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mount Vernon Day Trip?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Morning departure from select Washington, D.C. hotels or the confirmed downtown meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 85
+      },
+      "currency": "USD"
+    }
+  }
+}
