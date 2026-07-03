@@ -238,69 +238,58 @@ const SEDONA_TOURS: SedonaTourFixture[] = [
     categories: ["Helicopter Tours", "Private and Luxury", "Air Tours"],
   },
   {
-    productCode: "54668P2",
+    productCode: "25265P29",
     productUrl:
-      "https://www.viator.com/tours/Sedona/Desert-Thunder-Tour/d750-54668P2",
-    title: "Sedona Helicopter Tour: Desert Thunder Tour",
+      "https://www.viator.com/tours/Sedona/Mogollon-Rim-Jeep-Tour/d750-25265P29",
+    title: "Mogollon Rim Jeep Tour from Sedona",
     description:
-      "Fly Sedona's signature red rock country on a 30- to 35-minute helicopter loop with Guidance Air from Sedona Airport. Pilots narrate Cathedral Rock, Chapel of the Holy Cross, Bell Rock, Courthouse Butte, Snoopy Rock, Oak Creek Canyon, Devil's Bridge, Secret Canyon, and Boynton Canyon while banking past spires, mesas, and pine-fringed ridgelines above Coconino National Forest. Climate-controlled cabins and oversized windows keep photography straightforward as you trace aerial routes toward Anasazi cliff dwellings and Mogollon Rim viewpoints. The outing suits travelers who want a compact aerial introduction to Sedona landmarks without a full-day commitment. Check in at Guidance Air on Airport Road about 30 minutes before departure; weight limits apply.",
-    duration: "30 to 35 minutes (approx.)",
-    priceFrom: 384.18,
+      "Climb a historic stagecoach road above Sedona on a two-hour Mogollon Rim Jeep tour that gains roughly 1,500 feet toward pine-country overlooks above Oak Creek Canyon. Your guide narrates cowboy-era cattle routes, local wildlife, and red rock geology while navigating Schnebly Hill Road berms and rim-top pullouts. This is among Sedona's bumpiest Jeep routes, suited to adventurous travelers who want high-country views rather than a mild valley loop. Expect jolts, dust, and open-air seating; the outing is not recommended for guests with serious back or neck sensitivity. Check in at the operator meeting point confirmed at booking and bring sun protection for exposed rim stops.",
+    duration: "2 hours (approx.)",
+    priceFrom: 136.25,
     heroUrl:
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/fc/46.jpg",
     rating: 5,
-    reviewCount: 172,
+    reviewCount: 64,
     highlights: [
-      "30- to 35-minute Desert Thunder helicopter tour from Sedona",
-      "Guidance Air departures at Sedona Airport",
-      "Aerial views of Cathedral Rock, Bell Rock, and Oak Creek Canyon",
-      "Pilot narration over Devil's Bridge, Secret Canyon, and Boynton Canyon",
-      "Climate-controlled cabin with oversized viewing windows",
+      "Mogollon Rim Jeep climb on historic Schnebly Hill Road",
+      "Rough two-hour off-road route with rim-top panoramas",
+      "Oak Creek Canyon overlooks from high-country pullouts",
+      "Guide commentary on Sedona wildlife and frontier history",
+      "Small-group Jeep format above Sedona's red rock valley",
     ],
     startDescription:
-      "Check in at Guidance Air at Sedona Airport, 455 Airport Rd, Sedona, AZ 86336. Arrive 30 minutes before your scheduled flight.",
+      "Meet at the tour operator check-in location in Sedona confirmed when booking. Arrive 15 minutes before departure.",
     endDescription:
-      "Land at Guidance Air at Sedona Airport after the Desert Thunder aerial loop.",
+      "Return to the Sedona check-in point after the Mogollon Rim descent.",
     itineraryItems: [
       {
-        title: "Guidance Air",
+        title: "Schnebly Hill Road",
         description:
-          "Check in at Guidance Air for weigh-in, safety briefing, and boarding at Sedona Airport.",
-        duration: "20 minutes",
+          "Enjoy Schnebly Hill Road's historic stagecoach climb with frontier history commentary.",
+        duration: "45 minutes",
         stopType: "stop",
       },
       {
-        title: "Cathedral Rock",
+        title: "Mogollon Rim",
         description:
-          "Lift off toward Cathedral Rock for introductory red rock views above Oak Creek.",
-        stopType: "pass-by",
+          "Mogollon Rim pullouts frame pine-country views above Sedona's red rock basin.",
+        duration: "45 minutes",
+        stopType: "stop",
       },
       {
-        title: "Chapel of the Holy Cross",
+        title: "Oak Creek Canyon Overlook",
         description:
-          "Bank past Chapel of the Holy Cross perched on red rock above Sedona valley.",
-        stopType: "pass-by",
-      },
-      {
-        title: "Oak Creek Canyon",
-        description:
-          "Trace Oak Creek Canyon's rim where pine forest meets towering sandstone cliffs.",
-        stopType: "pass-by",
-      },
-      {
-        title: "Boynton Canyon",
-        description:
-          "Sweep Boynton Canyon walls and Secret Canyon country on the northern red rock skyline.",
-        stopType: "pass-by",
+          "Oak Creek Canyon Overlook reveals the gorge and valley floor far below the rim road.",
+        duration: "20 minutes",
+        stopType: "stop",
       },
     ],
     inclusions: [
-      "Helicopter flight",
-      "Live pilot narration",
-      "Helicopter fuel surcharge",
+      "Jeep 4x4 transport",
+      "Professional guide",
       "All fees and taxes",
     ],
-    categories: ["Helicopter Tours", "Air Tours", "Sightseeing Tours"],
+    categories: ["4WD Tours", "Jeep Tours", "Adventure Tours"],
   },
   {
     productCode: "189623P3",

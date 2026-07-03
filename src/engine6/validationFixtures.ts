@@ -249,7 +249,7 @@ import specimen162351p6Payload from "../../data/engine6/viator/162351P6.exact-pr
 import specimen321860p2Payload from "../../data/engine6/viator/321860P2.exact-product.json";
 import specimen327849p2Payload from "../../data/engine6/viator/327849P2.exact-product.json";
 import specimen327849p1Payload from "../../data/engine6/viator/327849P1.exact-product.json";
-import specimen54668p2Payload from "../../data/engine6/viator/54668P2.exact-product.json";
+import specimen25265p29Payload from "../../data/engine6/viator/25265P29.exact-product.json";
 import specimen189623p3Payload from "../../data/engine6/viator/189623P3.exact-product.json";
 import specimen325517p1Payload from "../../data/engine6/viator/325517P1.exact-product.json";
 import specimen109073p8Payload from "../../data/engine6/viator/109073P8.exact-product.json";
@@ -2649,10 +2649,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
-    productCode: "54668P2",
+    productCode: "25265P29",
     publicUrl:
-      "https://www.viator.com/tours/Sedona/Desert-Thunder-Tour/d750-54668P2",
-    rawPayload: specimen54668p2Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Sedona/Mogollon-Rim-Jeep-Tour/d750-25265P29",
+    rawPayload: specimen25265p29Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
