@@ -1,0 +1,117 @@
+{
+  "product": {
+    "productCode": "76126P2",
+    "productUrl": "https://www.viator.com/tours/Chicago/Lake-and-River-Architecture-Tour/d673-76126P2",
+    "title": "Lake and River Architecture Tour",
+    "description": {
+      "text": "Experience two perspectives of Chicago's skyline on a premium architecture outing that pairs a Chicago River cruise with a Lake Michigan segment. Certified docents explain how the Great Chicago Fire reshaped the Loop and how modern towers rose along the lakefront. The dual-water format covers river-level bridge views and open-lake panoramas of Navy Pier and the Magnificent Mile. Ideal for architecture enthusiasts who want both river and lake vantage points in one booking."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $49.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 3245
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/bb/52/d1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Combined Chicago River and Lake Michigan cruise",
+      "Certified architecture docent on both segments",
+      "Navy Pier and Magnificent Mile lakefront views",
+      "Willis Tower and river bridge commentary",
+      "Two-hour premium architecture format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at the Chicago Architecture Center river cruise dock on the Chicago River near Michigan Avenue."
+      },
+      "end": {
+        "description": "Return to the Architecture Center dock after completing the lake segment."
+      }
+    },
+    "itinerarySummary": "Experience two perspectives of Chicago's skyline on a premium architecture outing that pairs a Chicago River cruise with a Lake Michigan segment.",
+    "itineraryItems": [
+      {
+        "title": "Chicago River",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Michigan",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Navy Pier",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Willis Tower",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Magnificent Mile",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Certified architecture docent",
+      "River and lake cruise segments",
+      "Climate-controlled vessel seating"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Lake and River Architecture Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Check in at the Chicago Architecture Center river cruise dock on the Chicago River near Michigan Avenue."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Architecture Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 49
+      },
+      "currency": "USD"
+    }
+  }
+}

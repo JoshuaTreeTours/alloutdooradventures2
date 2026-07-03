@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "5680NIGHT",
+    "productUrl": "https://www.viator.com/tours/Chicago/Chicago-by-Night-Helicopter-Tour/d673-5680NIGHT",
+    "title": "Chicago by Night Helicopter Tour",
+    "description": {
+      "text": "Experience Chicago illuminated from above on a premium night helicopter flight over the Loop, lakefront, and Navy Pier. Your pilot narrates key landmarks as city lights reflect off Lake Michigan and the Chicago River. The compact aerial format delivers dramatic night photography angles unavailable from street level. Ideal for special occasions and travelers who want a bucket-list view of the skyline after dark."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "15 minutes (approx.)",
+    "priceFrom": "From $249.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 412
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ee/85/g4.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Night helicopter flight over downtown Chicago",
+      "Illuminated Willis Tower and Loop skyline views",
+      "Navy Pier and Lake Michigan aerial perspectives",
+      "Pilot narration on Chicago landmarks",
+      "Premium bucket-list aerial experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at the Chicago helicopter terminal near Chicago Midway or downtown heliport confirmed at booking."
+      },
+      "end": {
+        "description": "Return to the heliport after landing from the night flight."
+      }
+    },
+    "itinerarySummary": "Experience Chicago illuminated from above on a premium night helicopter flight over the Loop, lakefront, and Navy Pier.",
+    "itineraryItems": [
+      {
+        "title": "Willis Tower",
+        "description": "",
+        "duration": "5 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Millennium Park",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Navy Pier",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Lake Michigan",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Night helicopter flight",
+      "Pilot narration",
+      "Headset communication",
+      "Weight and safety briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chicago by Night Helicopter Tour?",
+        "answer": "The planned duration is 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Check in at the Chicago helicopter terminal near Chicago Midway or downtown heliport confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "Luxury Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 249
+      },
+      "currency": "USD"
+    }
+  }
+}

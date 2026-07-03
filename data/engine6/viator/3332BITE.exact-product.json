@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "3332BITE",
+    "productUrl": "https://www.viator.com/tours/Chicago/Tastes-of-Chicago-Bike-Tour-Chicago-Style-Pizza-Beer-Cupcakes-and-Hot-Dogs/d673-3332BITE",
+    "title": "Tastes of Chicago Bike Tour",
+    "description": {
+      "text": "Discover Chicago's iconic flavors on a premium bike tour combining deep-dish pizza, Italian beef, craft beer, cupcakes, and hot dogs across West Loop and lakefront neighborhoods. Your guide leads a paced ride with food stops timed for tasting and recovery between segments. The four-hour format balances active sightseeing with generous portions at local institutions. Ideal for food-loving travelers who want to cover neighborhoods and cuisine on two wheels."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $75.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 203
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/bf/j6/j5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Bike tour with Chicago-style pizza and local food tastings",
+      "Italian beef, hot dog, beer, and cupcake stops",
+      "West Loop and lakefront neighborhood routing",
+      "Bikes, helmets, and guide included",
+      "Four-hour premium food and cycling format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the bike depot in West Loop or Lincoln Park confirmed at booking. Arrive early for fitting."
+      },
+      "end": {
+        "description": "Return bikes to the depot after the final tasting stop."
+      }
+    },
+    "itinerarySummary": "Discover Chicago's iconic flavors on a premium bike tour combining deep-dish pizza, Italian beef, craft beer, cupcakes, and hot dogs across West Loop and lakefront neighborhoods.",
+    "itineraryItems": [
+      {
+        "title": "West Loop",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wicker Park",
+        "description": "",
+        "duration": "40 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lincoln Park",
+        "description": "",
+        "duration": "35 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lakefront Trail",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bike guide",
+      "Bike and helmet rental",
+      "Food tastings",
+      "Safety briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Tastes of Chicago Bike Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Meet at the bike depot in West Loop or Lincoln Park confirmed at booking. Arrive early for fitting."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Active Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 75
+      },
+      "currency": "USD"
+    }
+  }
+}

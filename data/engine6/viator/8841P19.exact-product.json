@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "8841P19",
+    "productUrl": "https://www.viator.com/tours/Chicago/Chicago-Architecture-and-Highlights-with-Local-Treat-Small-Group-Walking-Tour/d673-8841P19",
+    "title": "Best of Chicago: Architecture and Highlights City Private Tour",
+    "description": {
+      "text": "Discover Chicago's essential landmarks on a private walking tour tailored to your group's pace and photo priorities. Your guide connects Millennium Park, the Chicago Riverwalk, and the Magnificent Mile with architecture stories and a included local treat stop. The private format allows flexible time at Cloud Gate and Wrigley Building viewpoints without a large group schedule. Priced per group, this premium outing suits families and friends who want a personalized Chicago introduction."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $245.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 118
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/7b/f2/f1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Chicago architecture and highlights walking tour",
+      "Millennium Park and Cloud Gate photo time",
+      "Chicago Riverwalk and Wrigley Building stops",
+      "Included local treat tasting",
+      "Per-group pricing for your party only"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your private guide at Millennium Park or a confirmed downtown meeting point at your scheduled time."
+      },
+      "end": {
+        "description": "Tour ends on the Magnificent Mile or your agreed downtown endpoint."
+      }
+    },
+    "itinerarySummary": "Discover Chicago's essential landmarks on a private walking tour tailored to your group's pace and photo priorities.",
+    "itineraryItems": [
+      {
+        "title": "Millennium Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cloud Gate",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chicago Riverwalk",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Magnificent Mile",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wrigley Building",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Local treat tasting",
+      "Private walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Best of Chicago: Architecture and Highlights City Private Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Meet your private guide at Millennium Park or a confirmed downtown meeting point at your scheduled time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Architecture Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 245
+      },
+      "currency": "USD"
+    }
+  }
+}

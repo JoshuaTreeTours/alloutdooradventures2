@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "7812P19",
+    "productUrl": "https://www.viator.com/tours/Chicago/Small-Group-Chicago-Loop-Food-Walking-Tour/d673-7812P19",
+    "title": "Chicago Walking Food Tour With Secret Food Tours",
+    "description": {
+      "text": "Explore Chicago's Loop food scene on a Secret Food Tours walking route with deep-dish pizza, Italian beef, gourmet popcorn, and a chef-selected secret dish at neighborhood stops. Your guide connects each tasting to Loop landmarks from Willis Tower to the Rookery Building while you walk historic downtown blocks. The three-hour small-group format delivers enough bites for a hearty meal without rushing between courses. This outing suits travelers who want classic Chicago flavors and architecture in one downtown walk."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 695
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/1f/ko/s5/s4.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Secret Food Tours Loop walking route with multiple tastings",
+      "Deep-dish pizza, Italian beef, and classic Chicago bites",
+      "Willis Tower and Rookery Building landmarks along the route",
+      "Licensed guide with culinary history commentary",
+      "Three-hour small-group food experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed downtown Chicago meeting point at your scheduled departure time."
+      },
+      "end": {
+        "description": "Tour ends near the final tasting stop in the neighborhood covered on your route."
+      }
+    },
+    "itinerarySummary": "Explore Chicago's Loop food scene on a Secret Food Tours walking route with deep-dish pizza, Italian beef, gourmet popcorn, and a chef-selected secret dish at neighborhood stops.",
+    "itineraryItems": [
+      {
+        "title": "Chicago Loop",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Willis Tower",
+        "description": "",
+        "duration": "10 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Rookery Building",
+        "description": "",
+        "duration": "10 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Millennium Park",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Licensed food guide",
+      "Food samples",
+      "Walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chicago Walking Food Tour With Secret Food Tours?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Meet your guide at the confirmed downtown Chicago meeting point at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Small Group Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

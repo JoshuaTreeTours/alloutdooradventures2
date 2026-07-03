@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "188341P1",
+    "productUrl": "https://www.viator.com/tours/Chicago/Private-4-hour-Walking-Tour/d673-188341P1",
+    "title": "Your Way or the Highway: Customized Private Walking Tour in Chicago",
+    "description": {
+      "text": "Experience your ideal Chicago day on a fully customized four-hour private walking tour with a dedicated guide. Choose emphasis on architecture, food, museums, or neighborhood exploration across the Loop, River North, and lakefront. Your guide adjusts routing and stop length to your interests, whether that means extended time at the Art Institute or a deep dive into Fulton Market. This premium private format suits repeat visitors and groups with specific Chicago priorities."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $350.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 76
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/8c/g3/g2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fully customized four-hour private Chicago walking tour",
+      "Flexible routing across Loop, River North, and lakefront",
+      "Architecture, food, or museum emphasis on your schedule",
+      "Dedicated guide for your party only",
+      "Premium private format with personalized pacing"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at your Chicago hotel, vacation rental, or confirmed downtown meeting point."
+      },
+      "end": {
+        "description": "Tour concludes at your preferred downtown endpoint or starting location."
+      }
+    },
+    "itinerarySummary": "Experience your ideal Chicago day on a fully customized four-hour private walking tour with a dedicated guide.",
+    "itineraryItems": [
+      {
+        "title": "Route Planning",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Millennium Park",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Loop",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chicago River",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Magnificent Mile",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Custom route planning",
+      "Four-hour walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Your Way or the Highway: Customized Private Walking Tour in Chicago?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Meet your guide at your Chicago hotel, vacation rental, or confirmed downtown meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 350
+      },
+      "currency": "USD"
+    }
+  }
+}

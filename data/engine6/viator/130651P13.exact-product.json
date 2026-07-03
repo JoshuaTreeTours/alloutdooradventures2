@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "130651P13",
+    "productUrl": "https://www.viator.com/tours/Chicago/Walking-Tour-Chicago-Passageways-Pedway-and-Riverwalk/d673-130651P13",
+    "title": "Walking Tour: Underground Chicago via the Pedway and Riverwalk",
+    "description": {
+      "text": "Explore the hidden layers of downtown Chicago on a walking tour through the Pedway tunnel system and the Chicago Riverwalk. Your guide explains how the subterranean network connects Loop buildings, train stations, and civic plazas while keeping you comfortable in any weather. Above ground, the Riverwalk segment reveals bridge houses, public art, and river-level architecture. This two-hour outing suits curious travelers who want to see Chicago beyond the obvious streetscape."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $65.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 441
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/9d/h4/h3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided tour of the Chicago Pedway tunnel network",
+      "Chicago Riverwalk walk with bridge and art commentary",
+      "Loop District underground and street-level routing",
+      "Weather-friendly Pedway segments",
+      "Two-hour format near downtown meeting points"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the Chicago Cultural Center or confirmed Loop Pedway entrance at your scheduled time."
+      },
+      "end": {
+        "description": "Tour ends on the Chicago Riverwalk or your agreed Loop endpoint."
+      }
+    },
+    "itinerarySummary": "Explore the hidden layers of downtown Chicago on a walking tour through the Pedway tunnel system and the Chicago Riverwalk.",
+    "itineraryItems": [
+      {
+        "title": "Chicago Pedway",
+        "description": "",
+        "duration": "40 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chicago Riverwalk",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Loop",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chicago Theatre",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Pedway and Riverwalk walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Walking Tour: Underground Chicago via the Pedway and Riverwalk?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Meet your guide at the Chicago Cultural Center or confirmed Loop Pedway entrance at your scheduled time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65
+      },
+      "currency": "USD"
+    }
+  }
+}

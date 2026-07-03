@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "61552P17",
+    "productUrl": "https://www.viator.com/tours/Chicago/Gangster-Food-Tour/d673-61552P17",
+    "title": "Chicago Gangster and Food Walking Tour",
+    "description": {
+      "text": "Explore Chicago's Prohibition-era past on a walking tour that pairs mob history with tastings at local eateries. Your guide recounts stories of Al Capone, the St. Valentine's Day Massacre, and Loop speakeasies while you sample Chicago favorites in River North and the Theatre District. Stops include landmark hotels and streets where gangsters once operated openly. This premium food-and-history format suits travelers who want culture and cuisine in one three-hour outing."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 367
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/59/d0/df.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Gangster history walking tour with food tastings",
+      "Stories of Al Capone and Prohibition-era Chicago",
+      "Palmer House Hilton and Loop landmark stops",
+      "Curated bites at local Chicago restaurants",
+      "Three-hour premium food and history format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Loop or River North meeting point at your scheduled departure time."
+      },
+      "end": {
+        "description": "Tour ends near the final tasting stop in the neighborhood covered on your route."
+      }
+    },
+    "itinerarySummary": "Explore Chicago's Prohibition-era past on a walking tour that pairs mob history with tastings at local eateries.",
+    "itineraryItems": [
+      {
+        "title": "Loop District",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Palmer House Hilton",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chicago Theatre",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "River North",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Food tastings",
+      "Walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chicago Gangster and Food Walking Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Meet your guide at the confirmed Loop or River North meeting point at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

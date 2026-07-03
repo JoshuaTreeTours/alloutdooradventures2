@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "338277P2",
+    "productUrl": "https://www.viator.com/tours/Chicago/Small-Group-River-Boat-Tour-in-Chicago/d673-338277P2",
+    "title": "Small-Group River Boat Tour in Chicago",
+    "description": {
+      "text": "Experience the Chicago River on a small-group cruise with an intimate passenger count and personalized architecture commentary. The route covers the Loop canyon, Marina City, and landmark towers with time for questions and photos from deck-level seating. Limited group size keeps the experience conversational compared to large sightseeing boats. This premium river outing suits travelers who prefer a quieter architecture cruise with guide access."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 174
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/1e/jn/r4/r3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group Chicago River architecture cruise",
+      "Marina City and Willis Tower river views",
+      "Personalized guide commentary and Q&A time",
+      "Limited passenger count for intimate experience",
+      "90-minute premium river boat format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board at the Chicago River dock confirmed on your voucher near the Loop."
+      },
+      "end": {
+        "description": "Disembark at the same river dock after the architecture loop."
+      }
+    },
+    "itinerarySummary": "Experience the Chicago River on a small-group cruise with an intimate passenger count and personalized architecture commentary.",
+    "itineraryItems": [
+      {
+        "title": "Chicago River",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Willis Tower",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Marina City",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Wrigley Building",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Small-group river cruise",
+      "Deck seating"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Small-Group River Boat Tour in Chicago?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Board at the Chicago River dock confirmed on your voucher near the Loop."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Small Group Tours"
+      },
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Architecture Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "316128P3",
+    "productUrl": "https://www.viator.com/tours/Chicago/Private-Chicago-Scenic-Driving-Tour/d673-316128P3",
+    "title": "Private Chicago Scenic Driving Tour",
+    "description": {
+      "text": "Discover Chicago's most photogenic neighborhoods on a private three-hour driving tour with a dedicated guide and vehicle for your party. The route covers the Magnificent Mile, Gold Coast mansions, Lincoln Park, and Lake Shore Drive with flexible photo stops at your preferred viewpoints. Your guide shares architecture, history, and local stories while handling downtown traffic. This premium private format suits travelers who want comprehensive city coverage without walking long distances."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $425.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 87
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/cg/k7/k6.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private three-hour scenic driving tour of Chicago",
+      "Magnificent Mile and Gold Coast routing",
+      "Lincoln Park and Lake Shore Drive viewpoints",
+      "Private vehicle with hotel pickup options",
+      "Flexible photo stops tailored to your group"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from your Chicago hotel, vacation rental, or confirmed downtown meeting point."
+      },
+      "end": {
+        "description": "Return to your pickup location or requested drop-off point after the final scenic stop."
+      }
+    },
+    "itinerarySummary": "Discover Chicago's most photogenic neighborhoods on a private three-hour driving tour with a dedicated guide and vehicle for your party.",
+    "itineraryItems": [
+      {
+        "title": "Magnificent Mile",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gold Coast",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lincoln Park",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Shore Drive",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private driver-guide",
+      "Private vehicle transport",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Chicago Scenic Driving Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Pickup from your Chicago hotel, vacation rental, or confirmed downtown meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 425
+      },
+      "currency": "USD"
+    }
+  }
+}

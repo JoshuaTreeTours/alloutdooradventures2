@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "3332DAY",
+    "productUrl": "https://www.viator.com/tours/Chicago/Chicago-Lakefront-Neighborhoods-Bicycle-Tour/d673-3332DAY",
+    "title": "Bike Tour of Chicago's Lakefront Neighborhoods",
+    "description": {
+      "text": "Explore Chicago's north lakefront neighborhoods on a three-hour bike tour covering Lincoln Park, Lakeview, and Wrigleyville. Your guide shares local history and parkland stories while riding the Lakefront Trail and residential side streets. The route balances active riding with stops at lagoon viewpoints and Wrigley Field exteriors. Ideal for travelers who want neighborhood flavor beyond downtown monument loops."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $55.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 389
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/1c/hl/p2/p1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Lakefront neighborhoods bike tour of Chicago",
+      "Lincoln Park and Lakeview riding route",
+      "Wrigleyville and Wrigley Field exterior stop",
+      "Chicago Lakefront Trail segments",
+      "Three-hour guided neighborhood cycling"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Lincoln Park bike staging location confirmed when booking. Arrive early for helmet fitting."
+      },
+      "end": {
+        "description": "Return bikes to the Lincoln Park depot after the final neighborhood stop."
+      }
+    },
+    "itinerarySummary": "Explore Chicago's north lakefront neighborhoods on a three-hour bike tour covering Lincoln Park, Lakeview, and Wrigleyville.",
+    "itineraryItems": [
+      {
+        "title": "Lincoln Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lakeview",
+        "description": "",
+        "duration": "35 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wrigleyville",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chicago Lakefront Trail",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional bike guide",
+      "Bike and helmet rental",
+      "Safety briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bike Tour of Chicago's Lakefront Neighborhoods?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Meet at the Lincoln Park bike staging location confirmed when booking. Arrive early for helmet fitting."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Active Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 55
+      },
+      "currency": "USD"
+    }
+  }
+}
