@@ -167,71 +167,79 @@ const WASHINGTON_DC_TOURS: WashingtonDcTourFixture[] = [
     categories: ["Private Tours", "Night Tours", "City Tours"],
   },
   {
-    productCode: "67327P2",
+    productCode: "67327P13",
     productUrl:
-      "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
-    title: "Private Washington DC Monuments Tour",
+      "https://www.viator.com/tours/Washington-DC/Black-History-Tour-Washington-DC/d657-67327P13",
+    title: "Private Black History Tour DC",
     description:
-      "See Washington, D.C.'s landmark memorials on a private monuments tour paced for your group's photo and history priorities. A professional guide leads your party through the National Mall corridor with stops at the Lincoln Memorial, Vietnam Veterans Memorial, and Jefferson Memorial when crowds and lighting allow. Travel in a private vehicle with flexible routing past the Washington Monument, World War II Memorial, and Capitol Hill exteriors. This premium format suits travelers who want an unhurried monuments experience without joining a large motorcoach group.",
+      "Explore Washington, D.C. through a private Black History tour with a dedicated guide and luxury vehicle for your party. The route connects the Martin Luther King Jr. Memorial, Lincoln Memorial, and U.S. Capitol with stops at Howard University, Ben's Chili Bowl, and the National Museum of African American History and Culture with admission included. Your guide shares context on civil rights landmarks, neighborhood stories, and museum highlights at a pace suited to your group. This premium private format suits travelers who want an immersive cultural history day without joining a large motorcoach group.",
     duration: "3 hours (approx.)",
-    priceFrom: 445,
-    heroUrl: `${TACDN}/0a/9a/0d/f8.jpg`,
+    priceFrom: 475,
+    heroUrl: `${TACDN}/0a/26/be/ce.jpg`,
     rating: 5,
-    reviewCount: 214,
+    reviewCount: 13,
     highlights: [
-      "Private monuments tour for your party only",
-      "Lincoln Memorial and Reflecting Pool photo stops",
-      "Jefferson Memorial and Tidal Basin viewpoints",
-      "Flexible vehicle routing along the National Mall",
-      "Professional guide with Capitol Hill commentary",
+      "Private Black History tour for your party only",
+      "NMAAHC admission tickets included",
+      "MLK Memorial and Lincoln Memorial photo stops",
+      "Howard University and Ben's Chili Bowl landmarks",
+      "Luxury private vehicle with hotel pickup",
     ],
     startDescription:
-      "Pickup from downtown Washington, D.C. hotels or a central meeting point confirmed when booking.",
+      "Morning pickup from your Washington, D.C. hotel, vacation rental, or confirmed meeting point.",
     endDescription:
-      "Return to your pickup location or downtown hotel after the final memorial stop.",
+      "Return to your pickup location after the National Museum of African American History and Culture visit.",
     itineraryItems: [
       {
-        title: "Lincoln Memorial",
+        title: "MLK Memorial",
         description:
-          "Stop at the Lincoln Memorial steps with views across the Reflecting Pool.",
-        duration: "30 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Vietnam Veterans Memorial",
-        description:
-          "Walk the black granite wall panels with guide commentary on the memorial design.",
-        duration: "20 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "World War II Memorial",
-        description:
-          "Photo stop at the WWII Memorial fountains with the Washington Monument backdrop.",
+          "Guided stop at the MLK Memorial with Tidal Basin and memorial design commentary.",
         duration: "15 minutes",
         stopType: "stop",
       },
       {
-        title: "Jefferson Memorial",
+        title: "Lincoln Memorial",
         description:
-          "Visit the Tidal Basin viewpoint for the Jefferson Memorial dome.",
-        duration: "25 minutes",
+          "Photo stop at the Lincoln Memorial steps with Reflecting Pool views.",
+        duration: "15 minutes",
         stopType: "stop",
       },
       {
-        title: "Washington Monument",
+        title: "African American Civil War Memorial",
         description:
-          "Pass-by views of the Washington Monument along the National Mall.",
-        stopType: "pass-by",
+          "Visit the African American Civil War Memorial and museum plaza.",
+        duration: "15 minutes",
+        stopType: "stop",
+      },
+      {
+        title: "Howard University",
+        description:
+          "Drive-by and photo stop at historic Howard University campus viewpoints.",
+        duration: "15 minutes",
+        stopType: "stop",
+      },
+      {
+        title: "Ben's Chili Bowl",
+        description:
+          "Photo stop at the Ben's Chili Bowl mural on U Street.",
+        duration: "15 minutes",
+        stopType: "stop",
+      },
+      {
+        title: "National Museum of African American History and Culture",
+        description:
+          "Guided visit with included admission to the Smithsonian NMAAHC.",
+        duration: "1 hour",
+        stopType: "stop",
       },
     ],
     inclusions: [
       "Private professional guide",
-      "Private vehicle transport",
-      "Hotel pickup and drop-off",
-      "Bottled water",
+      "NMAAHC admission tickets",
+      "Private luxury vehicle transport",
+      "Hotel pickup",
     ],
-    categories: ["Private Tours", "Sightseeing Tours", "Historical Tours"],
+    categories: ["Private Tours", "Historical Tours", "Cultural Tours"],
   },
   {
     productCode: "149066P1",

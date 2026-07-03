@@ -10,7 +10,7 @@ export const WASHINGTON_DC_VIATOR_PUBLIC_RATINGS: Record<
 > = {
   "67327P4": { rating: 5, reviewCount: 278 },
   "7953P7": { rating: 4.9, reviewCount: 450 },
-  "67327P2": { rating: 5, reviewCount: 214 },
+  "67327P13": { rating: 5, reviewCount: 13 },
   "149066P1": { rating: 5, reviewCount: 189 },
   "255730P191": { rating: 4.8, reviewCount: 95 },
   "67327P5": { rating: 5, reviewCount: 142 },

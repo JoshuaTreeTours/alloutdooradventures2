@@ -16,7 +16,7 @@ const REMOVED_PRODUCT_CODES = new Set([
 ]);
 
 const REPLACEMENT_PRODUCT_CODES = [
-  "67327P2",
+  "67327P13",
   "6349P59",
   "6766SIGTOUR",
   "7812P219",
@@ -32,7 +32,7 @@ const EXCLUDED_PRODUCT_CODES = new Set([
 const URL_REPLACEMENTS: Array<[string, string]> = [
   [
     "https://www.alloutdooradventures.com/destinations/district-of-columbia/washington/tours/private-under-the-stars-night-tour-32453P11",
-    "https://www.alloutdooradventures.com/destinations/district-of-columbia/washington/tours/private-washington-dc-monuments-tour-67327P2",
+    "https://www.alloutdooradventures.com/destinations/district-of-columbia/washington/tours/private-black-history-tour-dc-67327P13",
   ],
   [
     "https://www.alloutdooradventures.com/destinations/district-of-columbia/washington/tours/small-group-mount-vernon-and-arlington-6349P24",

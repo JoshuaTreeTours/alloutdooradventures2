@@ -29,12 +29,12 @@
           "priority": 2
         },
         {
-          "productCode": "67327P2",
-          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
-          "title": "Private Washington DC Monuments Tour",
-          "experienceType": "private-night-tour",
-          "priceFrom": 445,
-          "categories": ["Private Tours", "Sightseeing Tours"],
+          "productCode": "67327P13",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Black-History-Tour-Washington-DC/d657-67327P13",
+          "title": "Private Black History Tour DC",
+          "experienceType": "private-cultural-tour",
+          "priceFrom": 475,
+          "categories": ["Private Tours", "Historical Tours", "Cultural Tours"],
           "commercialTier": "premium",
           "priority": 3
         },

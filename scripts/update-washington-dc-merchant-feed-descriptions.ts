@@ -9,7 +9,7 @@ const OUTPUT_PATH = "data/merchantFeed.csv";
 const WASHINGTON_DC_DESCRIPTION_REFRESH_CODES = [
   "67327P4",
   "7953P7",
-  "67327P2",
+  "67327P13",
   "149066P1",
   "255730P191",
   "67327P5",

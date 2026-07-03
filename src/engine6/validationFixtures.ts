@@ -269,7 +269,7 @@ import specimen291644p1Payload from "../../data/engine6/viator/291644P1.exact-pr
 import specimen115255p2Payload from "../../data/engine6/viator/115255P2.exact-product.json";
 import specimen67327p4Payload from "../../data/engine6/viator/67327P4.exact-product.json";
 import specimen7953p7Payload from "../../data/engine6/viator/7953P7.exact-product.json";
-import specimen67327p2Payload from "../../data/engine6/viator/67327P2.exact-product.json";
+import specimen67327p13Payload from "../../data/engine6/viator/67327P13.exact-product.json";
 import specimen149066p1Payload from "../../data/engine6/viator/149066P1.exact-product.json";
 import specimen255730p191Payload from "../../data/engine6/viator/255730P191.exact-product.json";
 import specimen67327p5Payload from "../../data/engine6/viator/67327P5.exact-product.json";
@@ -2811,10 +2811,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
-    productCode: "67327P2",
+    productCode: "67327P13",
     publicUrl:
-      "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
-    rawPayload: specimen67327p2Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Washington-DC/Black-History-Tour-Washington-DC/d657-67327P13",
+    rawPayload: specimen67327p13Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

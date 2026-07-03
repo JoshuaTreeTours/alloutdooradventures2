@@ -5,7 +5,7 @@ const FIXTURE_DIR = path.join(process.cwd(), "data", "engine6", "viator");
 const PRODUCT_CODES = [
   "67327P4",
   "7953P7",
-  "67327P2",
+  "67327P13",
   "149066P1",
   "255730P191",
   "67327P5",

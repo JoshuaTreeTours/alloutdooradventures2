@@ -6,7 +6,7 @@ const OUTPUT_PATH = "data/merchantFeed.csv";
 const NEW_WASHINGTON_DC_PRODUCT_CODES = [
   "67327P4",
   "7953P7",
-  "67327P2",
+  "67327P13",
   "149066P1",
   "255730P191",
   "67327P5",

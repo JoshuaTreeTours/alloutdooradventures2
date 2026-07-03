@@ -40,23 +40,24 @@
     ]
   },
   {
-    "productCode": "67327P2",
-    "productUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
-    "title": "Private Washington DC Monuments Tour",
+    "productCode": "67327P13",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Black-History-Tour-Washington-DC/d657-67327P13",
+    "title": "Private Black History Tour DC",
     "duration": "3 hours (approx.)",
-    "priceFrom": 445,
+    "priceFrom": 475,
     "rating": 5,
-    "reviewCount": 214,
-    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/9a/0d/f8.jpg",
+    "reviewCount": 13,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/26/be/ce.jpg",
     "categories": [
       "Private Tours",
-      "Sightseeing Tours"
+      "Historical Tours",
+      "Cultural Tours"
     ],
     "itineraryTitles": [
+      "Martin Luther King, Jr. Memorial",
       "Lincoln Memorial",
-      "Vietnam Veterans Memorial",
-      "World War II Memorial",
-      "Jefferson Memorial"
+      "Ben's Chili Bowl",
+      "National Museum of African American History and Culture"
     ]
   },
   {
@@ -166,7 +167,7 @@
     "duration": "6 hours (approx.)",
     "priceFrom": 119,
     "rating": 4.8,
-    "reviewCount": 742,
+    "reviewCount": 288,
     "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/1f/52/93.jpg",
     "categories": [
       "Small Group Tours",
@@ -427,7 +428,7 @@
     "duration": "6 hours (approx.)",
     "priceFrom": 95,
     "rating": 4.7,
-    "reviewCount": 528,
+    "reviewCount": 806,
     "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/75/5d.jpg",
     "categories": [
       "Day Trips",

@@ -26,17 +26,17 @@
     "categories": ["Private Tours", "Night Tours"]
   },
   {
-    "productCode": "67327P2",
-    "productUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
-    "title": "Private Washington DC Monuments Tour",
-    "priceFrom": "From $445.00",
+    "productCode": "67327P13",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Black-History-Tour-Washington-DC/d657-67327P13",
+    "title": "Private Black History Tour DC",
+    "priceFrom": "From $475.00",
     "rating": 5.0,
-    "reviewCount": 214,
+    "reviewCount": 13,
     "duration": "3 hours (approx.)",
-    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/9a/0d/f8.jpg",
-    "overview": "Private monuments tour across Washington D.C. memorials",
-    "itineraryStops": ["Lincoln Memorial", "Vietnam Veterans Memorial", "World War II Memorial", "Jefferson Memorial"],
-    "categories": ["Private Tours", "Sightseeing Tours"]
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/26/be/ce.jpg",
+    "overview": "Private Black History tour across Washington D.C. landmarks and NMAAHC",
+    "itineraryStops": ["MLK Memorial", "Lincoln Memorial", "Ben's Chili Bowl", "National Museum of African American History and Culture"],
+    "categories": ["Private Tours", "Historical Tours", "Cultural Tours"]
   },
   {
     "productCode": "149066P1",
