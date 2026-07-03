@@ -1,1 +1,156 @@
-{}
+{
+  "67327P4": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-Tour-of-Washington-DC/d657-67327P4",
+    "title": "Private Night-Time Monuments Tour of DC",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "7953P7": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Private-Night-City-Tour/d657-7953P7",
+    "title": "Private Washington DC Night City Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "67327P2": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
+    "title": "Private Washington DC Monuments Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "149066P1": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Luxury-Tour-of-Washington-DC-at-Night-with-a-Chauffeur-Late-Model-SUV/d657-149066P1",
+    "title": "DC After Dark Luxury SUV Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "255730P191": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-time-Walking-Tour-of-DCs-National-Mall/d657-255730P191",
+    "title": "National Mall at Dusk Private Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "67327P5": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Mount-Vernon-and-Arlington-Cemetery-Tour/d657-67327P5",
+    "title": "Private Mt Vernon and Arlington Cemetery Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "41503P1": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-DC-Monuments-at-Night-by-Bike/d657-41503P1",
+    "title": "Private DC Monuments at Night Bike Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "41503P2": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Customized-DC-Sights-Bike-Tour/d657-41503P2",
+    "title": "Customized Private Bike Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "6349P59": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+    "title": "Mount Vernon Estate and Old Town Alexandria",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "6766SIGTOUR": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+    "title": "DC in a Day Monuments and Potomac Cruise",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "67327P3": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-and-Arlington-Cemetery-Tour/d657-67327P3",
+    "title": "Private DC and Arlington Cemetery Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "7812P219": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+    "title": "Washington DC Secret Food Tours Walking Tasting",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "6349DAYTOUR": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-in-One-Day-Guided-Sightseeing-Tour/d657-6349DAYTOUR",
+    "title": "Washington DC in One Day",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "6349NIGHT": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Guided-Night-Tour/d657-6349NIGHT",
+    "title": "DC Monument Night Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "6766P11": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Moonlit-Motorcoach-Tour-of-National-Mall/d657-6766P11",
+    "title": "DC National Mall Night Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "41377P2": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Capitol-Hill-Guided-Small-Group-Tour/d657-41377P2",
+    "title": "Capitol Hill Small-Group Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "60725P1": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/See-the-City-Segway-Tour/d657-60725P1",
+    "title": "See the City Segway Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "14782P1": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Walking-Food-Tour-Of-The-Historic-U-Street-Neighborhood/d657-14782P1",
+    "title": "U Street Walking Food Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "5046WAS_MON": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-by-Moonlight-Night-Tour-by-Trolley/d657-5046WAS_MON",
+    "title": "Monuments by Moonlight Trolley Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "6349VIPDC": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Viator-VIP-Best-of-DC-Including-US-Capitol-and-National-Archives-Reserved-Access-the-White-House-and-Lincoln-Memorial/d657-6349VIPDC",
+    "title": "Best of DC VIP Capitol and Archives Tour",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "2384P20": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+    "title": "Washington DC Bike Tour of the National Mall",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "5769MTVN": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+    "title": "Mount Vernon and Old Town Alexandria Day Trip",
+    "reason": "live-validation-failed: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+    "rejectedAt": "2026-07-03T18:36:11.127Z",
+    "destinationLabel": "Washington, D.C."
+  }
+}

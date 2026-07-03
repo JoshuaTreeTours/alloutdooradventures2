@@ -9,16 +9,16 @@ const OUTPUT_PATH = "data/merchantFeed.csv";
 const WASHINGTON_DC_DESCRIPTION_REFRESH_CODES = [
   "67327P4",
   "7953P7",
-  "32453P11",
+  "67327P2",
   "149066P1",
   "255730P191",
   "67327P5",
   "41503P1",
   "41503P2",
-  "6349P24",
-  "2890P28",
+  "6349P59",
+  "6766SIGTOUR",
   "67327P3",
-  "5713P68",
+  "7812P219",
   "6349DAYTOUR",
   "6349NIGHT",
   "6766P11",
@@ -27,8 +27,8 @@ const WASHINGTON_DC_DESCRIPTION_REFRESH_CODES = [
   "14782P1",
   "5046WAS_MON",
   "6349VIPDC",
-  "2384P1",
-  "2890P2",
+  "2384P20",
+  "5769MTVN",
 ] as const;
 
 const escapeCsv = (value: string) => {

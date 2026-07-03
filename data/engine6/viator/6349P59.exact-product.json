@@ -1,20 +1,20 @@
 {
   "product": {
-    "productCode": "6349P24",
-    "productUrl": "https://www.viator.com/tours/Washington-DC/Small-Group-Mount-Vernon-and-Arlington-National-Cemetery-Tour/d657-6349P24",
-    "title": "Small-Group Mount Vernon and Arlington Tour",
+    "productCode": "6349P59",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+    "title": "Mount Vernon Estate and Old Town Alexandria",
     "description": {
-      "text": "Visit Mount Vernon and Arlington National Cemetery on a small-group six-hour tour from Washington, D.C. with a professional guide and comfortable transport. Tour George Washington's Potomac estate, then continue to Arlington for the Tomb of the Unknown Soldier and notable memorial sections. Group size stays limited for a social but uncrowded Virginia day trip. Mount Vernon admission and cemetery access are included with hotel pickup options downtown."
+      "text": "Visit George Washington's Mount Vernon estate and explore Old Town Alexandria on a guided day trip from Washington, D.C. with comfortable transport and a professional guide. Tour the mansion, museum, and Potomac River grounds at Mount Vernon before continuing to Alexandria's cobblestone streets, waterfront, and historic King Street corridor. Group size stays manageable for a social but uncrowded Virginia outing. Mount Vernon admission and guided commentary are included with hotel pickup options downtown."
     },
     "location": {
       "city": "Washington",
       "state": "District of Columbia"
     },
     "duration": "6 hours (approx.)",
-    "priceFrom": "From $109.00",
+    "priceFrom": "From $119.00",
     "reviews": {
       "combinedAverageRating": 4.8,
-      "totalReviews": 890
+      "totalReviews": 288
     },
     "media": {
       "images": [
@@ -31,21 +31,21 @@
       ]
     },
     "highlights": [
-      "Small-group Mount Vernon and Arlington day trip",
-      "Guided tour of George Washington's estate",
-      "Arlington Cemetery with Tomb of the Unknown Soldier",
-      "Changing of the Guard when ceremony schedule allows",
-      "Transport from Washington, D.C. with limited group size"
+      "Guided Mount Vernon estate tour from Washington, D.C.",
+      "Old Town Alexandria waterfront and King Street walk",
+      "George Washington mansion and museum visit",
+      "Air-conditioned transport with limited group size",
+      "Professional guide with founding-era commentary"
     ],
     "logistics": {
       "start": {
         "description": "Morning departure from select downtown Washington, D.C. hotels or a central meeting point."
       },
       "end": {
-        "description": "Return to downtown Washington, D.C. after the Arlington Cemetery visit."
+        "description": "Return to downtown Washington, D.C. after the Old Town Alexandria visit."
       }
     },
-    "itinerarySummary": "Visit Mount Vernon and Arlington National Cemetery on a small-group six-hour tour from Washington, D.",
+    "itinerarySummary": "Visit George Washington's Mount Vernon estate and explore Old Town Alexandria on a guided day trip from Washington, D.",
     "itineraryItems": [
       {
         "title": "Mount Vernon",
@@ -60,15 +60,15 @@
         "stopType": "stop"
       },
       {
-        "title": "Arlington National Cemetery",
+        "title": "Old Town Alexandria",
         "description": "",
-        "duration": "1 hour",
+        "duration": "1 hour 30 minutes",
         "stopType": "stop"
       },
       {
-        "title": "Tomb of the Unknown Soldier",
+        "title": "Alexandria Waterfront",
         "description": "",
-        "duration": "30 minutes",
+        "duration": "20 minutes",
         "stopType": "stop"
       }
     ],
@@ -86,7 +86,7 @@
     ],
     "faqs": [
       {
-        "question": "How long is the Small-Group Mount Vernon and Arlington Tour?",
+        "question": "How long is the Mount Vernon Estate and Old Town Alexandria?",
         "answer": "The planned duration is 6 hours."
       },
       {
@@ -107,7 +107,7 @@
     ],
     "pricing": {
       "summary": {
-        "fromPrice": 109
+        "fromPrice": 119
       },
       "currency": "USD"
     }

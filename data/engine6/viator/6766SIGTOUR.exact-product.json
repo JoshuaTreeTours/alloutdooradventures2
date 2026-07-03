@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "6766SIGTOUR",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+    "title": "DC in a Day Monuments Sightseeing Tour",
+    "description": {
+      "text": "See the capital's essential landmarks on a full-day guided sightseeing tour covering ten or more monuments, seasonal cherry blossom viewpoints, and a Potomac River boat cruise. A professional guide narrates the route with stops at the Lincoln Memorial, White House exterior, and Smithsonian area viewpoints before boarding the cruise for river-level city perspectives. Motorcoach transport links the east and west ends of the Mall efficiently for first-time visitors with a full day available. This comprehensive outing delivers a solid D.C. overview with a memorable water segment."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $99.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 1215
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/36/99/d5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full-day DC highlights with ten or more monument stops",
+      "Seasonal cherry blossom viewpoints when in bloom",
+      "Potomac River boat cruise included",
+      "Lincoln Memorial and National Mall photo stops",
+      "Motorcoach transport with hotel pickup options"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from select downtown Washington, D.C. hotels or a central departure point in the morning."
+      },
+      "end": {
+        "description": "Return to downtown Washington, D.C. after the Potomac River cruise."
+      }
+    },
+    "itinerarySummary": "See the capital's essential landmarks on a full-day guided sightseeing tour covering ten or more monuments, seasonal cherry blossom viewpoints, and a Potomac River boat cruise.",
+    "itineraryItems": [
+      {
+        "title": "US Capitol",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "White House",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tidal Basin",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Potomac River Cruise",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Air-conditioned motorcoach",
+      "Potomac River cruise ticket",
+      "Hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the DC in a Day Monuments Sightseeing Tour?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Pickup from select downtown Washington, D.C. hotels or a central departure point in the morning."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      },
+      "currency": "USD"
+    }
+  }
+}

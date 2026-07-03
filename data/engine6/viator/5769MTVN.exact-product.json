@@ -1,20 +1,20 @@
 {
   "product": {
-    "productCode": "2890P2",
-    "productUrl": "https://www.viator.com/tours/Washington-DC/Mount-Vernon-Day-Trip-from-Washington-DC/d657-2890P2",
-    "title": "Mount Vernon Day Trip",
+    "productCode": "5769MTVN",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+    "title": "Mount Vernon and Old Town Alexandria Day Trip",
     "description": {
-      "text": "Day-trip to George Washington's Mount Vernon estate on a five-hour tour from Washington, D.C. with guided visits to the mansion, museum, and Potomac River grounds. Your guide covers Washington's life at the estate before allowing free time in the gardens and farm areas. Motorcoach transport handles the Virginia drive while admission is included. This half-day outing suits travelers who want founding-era history without a full-day Arlington combination."
+      "text": "Day-trip to George Washington's Mount Vernon estate and Old Town Alexandria on a six-hour tour from Washington, D.C. with guided visits to the mansion, museum, and Potomac River grounds followed by time in Alexandria's historic waterfront district. Your guide covers Washington's life at the estate before allowing exploration of King Street shops and cobblestone lanes. Motorcoach transport handles the Virginia drive while Mount Vernon admission is included. This outing suits travelers who want founding-era history paired with a charming colonial town visit."
     },
     "location": {
       "city": "Washington",
       "state": "District of Columbia"
     },
-    "duration": "5 hours (approx.)",
-    "priceFrom": "From $85.00",
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $95.00",
     "reviews": {
       "combinedAverageRating": 4.7,
-      "totalReviews": 650
+      "totalReviews": 806
     },
     "media": {
       "images": [
@@ -31,10 +31,10 @@
       ]
     },
     "highlights": [
-      "Half-day Mount Vernon trip from Washington, D.C.",
+      "Mount Vernon and Old Town Alexandria day trip",
       "Guided tour of George Washington's mansion",
       "Estate gardens and Potomac River grounds",
-      "Museum and education center visit time",
+      "Old Town Alexandria waterfront and King Street",
       "Round-trip motorcoach transport included"
     ],
     "logistics": {
@@ -42,10 +42,10 @@
         "description": "Morning departure from select Washington, D.C. hotels or the confirmed downtown meeting point."
       },
       "end": {
-        "description": "Return to Washington, D.C. after free time on the Mount Vernon grounds."
+        "description": "Return to Washington, D.C. after free time in Old Town Alexandria."
       }
     },
-    "itinerarySummary": "Day-trip to George Washington's Mount Vernon estate on a five-hour tour from Washington, D.",
+    "itinerarySummary": "Day-trip to George Washington's Mount Vernon estate and Old Town Alexandria on a six-hour tour from Washington, D.",
     "itineraryItems": [
       {
         "title": "Mount Vernon Estate",
@@ -66,9 +66,9 @@
         "stopType": "stop"
       },
       {
-        "title": "Mount Vernon Gardens",
+        "title": "Old Town Alexandria",
         "description": "",
-        "duration": "45 minutes",
+        "duration": "1 hour",
         "stopType": "stop"
       }
     ],
@@ -86,8 +86,8 @@
     ],
     "faqs": [
       {
-        "question": "How long is the Mount Vernon Day Trip?",
-        "answer": "The planned duration is 5 hours."
+        "question": "How long is the Mount Vernon and Old Town Alexandria Day Trip?",
+        "answer": "The planned duration is 6 hours."
       },
       {
         "question": "Where does the tour depart from in Washington, D.C.?",
@@ -107,7 +107,7 @@
     ],
     "pricing": {
       "summary": {
-        "fromPrice": 85
+        "fromPrice": 95
       },
       "currency": "USD"
     }

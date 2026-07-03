@@ -29,12 +29,12 @@
           "priority": 2
         },
         {
-          "productCode": "32453P11",
-          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-SUV-Night-Tour-with-Professional-Guide/d657-32453P11",
-          "title": "Private Under the Stars Night Tour",
+          "productCode": "67327P2",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
+          "title": "Private Washington DC Monuments Tour",
           "experienceType": "private-night-tour",
-          "priceFrom": 479,
-          "categories": ["Private Tours", "Night Tours"],
+          "priceFrom": 445,
+          "categories": ["Private Tours", "Sightseeing Tours"],
           "commercialTier": "premium",
           "priority": 3
         },
@@ -81,22 +81,22 @@
           "priority": 1
         },
         {
-          "productCode": "6349P24",
-          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Small-Group-Mount-Vernon-and-Arlington-National-Cemetery-Tour/d657-6349P24",
-          "title": "Small-Group Mount Vernon and Arlington",
+          "productCode": "6349P59",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+          "title": "Mount Vernon Estate and Old Town Alexandria",
           "experienceType": "mount-vernon-arlington",
-          "priceFrom": 109,
+          "priceFrom": 119,
           "categories": ["Small Group Tours", "Day Trips"],
           "commercialTier": "premium",
           "priority": 2
         },
         {
-          "productCode": "2890P28",
-          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Arlington-Cemetery-Tour/d657-2890P28",
-          "title": "Mt Vernon and Arlington Cemetery Tour",
+          "productCode": "6766SIGTOUR",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+          "title": "DC in a Day Monuments and Potomac Cruise",
           "experienceType": "mount-vernon-arlington",
-          "priceFrom": 95,
-          "categories": ["Bus Tours", "Day Trips"],
+          "priceFrom": 99,
+          "categories": ["Bus Tours", "Full-day Tours"],
           "commercialTier": "premium",
           "priority": 3
         },
@@ -143,12 +143,12 @@
       "desiredCount": 1,
       "candidates": [
         {
-          "productCode": "5713P68",
-          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Sample-Tastes-of-H-Street-Walking-Tour-With-Craft-Beer-Tasting/d657-5713P68",
-          "title": "Private DC Food and History H Street",
+          "productCode": "7812P219",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+          "title": "Washington DC Secret Food Tours Walking Tasting",
           "experienceType": "food-tour-private",
           "priceFrom": 89,
-          "categories": ["Private Tours", "Food Tours"],
+          "categories": ["Food Tours", "Walking Tours"],
           "commercialTier": "premium",
           "priority": 1
         }
@@ -267,11 +267,11 @@
       "desiredCount": 1,
       "candidates": [
         {
-          "productCode": "2384P1",
-          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-and-Memorials-Bike-Tour/d657-2384P1",
-          "title": "Monuments and Memorials Bike Tour",
+          "productCode": "2384P20",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+          "title": "Washington DC Bike Tour of the National Mall",
           "experienceType": "bike-tour",
-          "priceFrom": 65,
+          "priceFrom": 59,
           "categories": ["Bike Tours", "Sightseeing Tours"],
           "priority": 1
         }
@@ -282,11 +282,11 @@
       "desiredCount": 1,
       "candidates": [
         {
-          "productCode": "2890P2",
-          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mount-Vernon-Day-Trip-from-Washington-DC/d657-2890P2",
-          "title": "Mount Vernon Day Trip",
+          "productCode": "5769MTVN",
+          "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+          "title": "Mount Vernon and Old Town Alexandria Day Trip",
           "experienceType": "mount-vernon-day-trip",
-          "priceFrom": 85,
+          "priceFrom": 95,
           "categories": ["Day Trips", "Historical Tours"],
           "priority": 1
         }

@@ -40,23 +40,23 @@
     ]
   },
   {
-    "productCode": "32453P11",
-    "productUrl": "https://www.viator.com/tours/Washington-DC/Private-SUV-Night-Tour-with-Professional-Guide/d657-32453P11",
-    "title": "Private Under the Stars Night Tour",
+    "productCode": "67327P2",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
+    "title": "Private Washington DC Monuments Tour",
     "duration": "3 hours (approx.)",
-    "priceFrom": 479,
-    "rating": 4.9,
-    "reviewCount": 312,
-    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/5a/12/a3.jpg",
+    "priceFrom": 445,
+    "rating": 5,
+    "reviewCount": 214,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/9a/0d/f8.jpg",
     "categories": [
       "Private Tours",
-      "Night Tours"
+      "Sightseeing Tours"
     ],
     "itineraryTitles": [
-      "Washington Monument",
       "Lincoln Memorial",
-      "Korean War Veterans Memorial",
-      "Martin Luther King Jr. Memorial"
+      "Vietnam Veterans Memorial",
+      "World War II Memorial",
+      "Jefferson Memorial"
     ]
   },
   {
@@ -160,41 +160,44 @@
     ]
   },
   {
-    "productCode": "6349P24",
-    "productUrl": "https://www.viator.com/tours/Washington-DC/Small-Group-Mount-Vernon-and-Arlington-National-Cemetery-Tour/d657-6349P24",
-    "title": "Small-Group Mount Vernon and Arlington",
+    "productCode": "6349P59",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+    "title": "Mount Vernon Estate and Old Town Alexandria",
     "duration": "6 hours (approx.)",
-    "priceFrom": 109,
+    "priceFrom": 119,
     "rating": 4.8,
-    "reviewCount": 890,
-    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/5a/12/a8.jpg",
+    "reviewCount": 742,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/1f/52/93.jpg",
     "categories": [
       "Small Group Tours",
       "Day Trips"
     ],
     "itineraryTitles": [
       "Mount Vernon",
-      "Arlington National Cemetery",
-      "Tomb of the Unknown Soldier"
+      "George Washington's Tomb",
+      "Old Town Alexandria",
+      "Alexandria Waterfront"
     ]
   },
   {
-    "productCode": "2890P28",
-    "productUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Arlington-Cemetery-Tour/d657-2890P28",
-    "title": "Mt Vernon and Arlington Cemetery Tour",
-    "duration": "7 hours (approx.)",
-    "priceFrom": 95,
+    "productCode": "6766SIGTOUR",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+    "title": "DC in a Day Monuments Sightseeing Tour",
+    "duration": "8 hours (approx.)",
+    "priceFrom": 99,
     "rating": 4.7,
-    "reviewCount": 1200,
-    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/5a/12/a9.jpg",
+    "reviewCount": 1215,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/36/99/d5.jpg",
     "categories": [
       "Bus Tours",
-      "Day Trips"
+      "Full-day Tours"
     ],
     "itineraryTitles": [
-      "Mount Vernon",
-      "Arlington National Cemetery",
-      "Iwo Jima Memorial"
+      "US Capitol",
+      "White House",
+      "Lincoln Memorial",
+      "Tidal Basin",
+      "Potomac River Cruise"
     ]
   },
   {
@@ -218,22 +221,22 @@
     ]
   },
   {
-    "productCode": "5713P68",
-    "productUrl": "https://www.viator.com/tours/Washington-DC/Sample-Tastes-of-H-Street-Walking-Tour-With-Craft-Beer-Tasting/d657-5713P68",
-    "title": "Private DC Food and History H Street",
+    "productCode": "7812P219",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+    "title": "Georgetown Walking Food Tour",
     "duration": "3 hours (approx.)",
     "priceFrom": 89,
-    "rating": 4.6,
-    "reviewCount": 47,
-    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/5a/12/ab.jpg",
+    "rating": 4.9,
+    "reviewCount": 210,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/72/ff/7c.jpg",
     "categories": [
-      "Private Tours",
-      "Food Tours"
+      "Food Tours",
+      "Walking Tours"
     ],
     "itineraryTitles": [
-      "H Street NE",
-      "Atlas District",
-      "Benning Road corridor"
+      "Historic Neighborhood Walk",
+      "First Tasting Stop",
+      "Second Tasting Stop"
     ]
   },
   {
@@ -398,14 +401,14 @@
     ]
   },
   {
-    "productCode": "2384P1",
-    "productUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-and-Memorials-Bike-Tour/d657-2384P1",
-    "title": "Monuments and Memorials Bike Tour",
+    "productCode": "2384P20",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+    "title": "Washington DC Bike Tour of the National Mall",
     "duration": "3 hours (approx.)",
-    "priceFrom": 65,
+    "priceFrom": 59,
     "rating": 4.8,
-    "reviewCount": 890,
-    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/5a/12/af.jpg",
+    "reviewCount": 1245,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/e8/2e/02.jpg",
     "categories": [
       "Bike Tours",
       "Sightseeing Tours"
@@ -413,19 +416,19 @@
     "itineraryTitles": [
       "Lincoln Memorial",
       "Jefferson Memorial",
-      "Martin Luther King Jr. Memorial",
-      "Washington Monument"
+      "US Capitol",
+      "Vietnam Veterans Memorial"
     ]
   },
   {
-    "productCode": "2890P2",
-    "productUrl": "https://www.viator.com/tours/Washington-DC/Mount-Vernon-Day-Trip-from-Washington-DC/d657-2890P2",
-    "title": "Mount Vernon Day Trip",
-    "duration": "5 hours (approx.)",
-    "priceFrom": 85,
+    "productCode": "5769MTVN",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+    "title": "Mount Vernon and Old Town Alexandria Day Trip",
+    "duration": "6 hours (approx.)",
+    "priceFrom": 95,
     "rating": 4.7,
-    "reviewCount": 650,
-    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/5a/12/b0.jpg",
+    "reviewCount": 528,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/75/5d.jpg",
     "categories": [
       "Day Trips",
       "Historical Tours"
@@ -433,8 +436,8 @@
     "itineraryTitles": [
       "Mount Vernon",
       "George Washington's Mansion",
-      "Potomac River overlook",
-      "Mount Vernon Museum"
+      "George Washington's Tomb",
+      "Old Town Alexandria"
     ]
   }
 ]

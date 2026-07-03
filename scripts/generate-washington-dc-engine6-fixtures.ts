@@ -167,65 +167,71 @@ const WASHINGTON_DC_TOURS: WashingtonDcTourFixture[] = [
     categories: ["Private Tours", "Night Tours", "City Tours"],
   },
   {
-    productCode: "32453P11",
+    productCode: "67327P2",
     productUrl:
-      "https://www.viator.com/tours/Washington-DC/Private-SUV-Night-Tour-with-Professional-Guide/d657-32453P11",
-    title: "Private Under the Stars Night Tour",
+      "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
+    title: "Private Washington DC Monuments Tour",
     description:
-      "Tour Washington's illuminated monuments from a private SUV with a professional guide who knows the best after-dark viewpoints. The three-hour route covers the National Mall memorials, Capitol Hill exteriors, and selective neighborhood passes timed for evening light. SUV transport suits small groups who want door-to-door convenience and climate-controlled comfort between stops. Your guide paces the outing for photography and storytelling rather than rigid bus schedules.",
+      "See Washington, D.C.'s landmark memorials on a private monuments tour paced for your group's photo and history priorities. A professional guide leads your party through the National Mall corridor with stops at the Lincoln Memorial, Vietnam Veterans Memorial, and Jefferson Memorial when crowds and lighting allow. Travel in a private vehicle with flexible routing past the Washington Monument, World War II Memorial, and Capitol Hill exteriors. This premium format suits travelers who want an unhurried monuments experience without joining a large motorcoach group.",
     duration: "3 hours (approx.)",
-    priceFrom: 479,
+    priceFrom: 445,
     heroUrl: `${TACDN}/0a/9a/0d/f8.jpg`,
-    rating: 4.9,
-    reviewCount: 312,
+    rating: 5,
+    reviewCount: 214,
     highlights: [
-      "Private SUV night tour with professional guide",
-      "National Mall memorial loop with photo stops",
-      "Capitol and Supreme Court exterior viewpoints",
-      "Door-to-door hotel pickup in Washington, D.C.",
-      "Flexible pacing for evening photography",
+      "Private monuments tour for your party only",
+      "Lincoln Memorial and Reflecting Pool photo stops",
+      "Jefferson Memorial and Tidal Basin viewpoints",
+      "Flexible vehicle routing along the National Mall",
+      "Professional guide with Capitol Hill commentary",
     ],
     startDescription:
-      "Pickup from your Washington, D.C. hotel or a confirmed downtown meeting point at your scheduled evening time.",
+      "Pickup from downtown Washington, D.C. hotels or a central meeting point confirmed when booking.",
     endDescription:
-      "Return to your pickup location after the final National Mall memorial.",
+      "Return to your pickup location or downtown hotel after the final memorial stop.",
     itineraryItems: [
-      {
-        title: "Washington Monument",
-        description:
-          "Ground-level stop near the Washington Monument with Mall panoramas.",
-        duration: "15 minutes",
-        stopType: "stop",
-      },
       {
         title: "Lincoln Memorial",
         description:
-          "Evening walk at the Lincoln Memorial with Reflecting Pool views.",
+          "Stop at the Lincoln Memorial steps with views across the Reflecting Pool.",
         duration: "30 minutes",
         stopType: "stop",
       },
       {
-        title: "Martin Luther King Jr. Memorial",
+        title: "Vietnam Veterans Memorial",
         description:
-          "Stop at the MLK Memorial along the Tidal Basin promenade.",
+          "Walk the black granite wall panels with guide commentary on the memorial design.",
         duration: "20 minutes",
         stopType: "stop",
       },
       {
-        title: "US Capitol",
+        title: "World War II Memorial",
         description:
-          "Capitol Hill exterior stop with views toward the National Mall.",
-        duration: "20 minutes",
+          "Photo stop at the WWII Memorial fountains with the Washington Monument backdrop.",
+        duration: "15 minutes",
         stopType: "stop",
+      },
+      {
+        title: "Jefferson Memorial",
+        description:
+          "Visit the Tidal Basin viewpoint for the Jefferson Memorial dome.",
+        duration: "25 minutes",
+        stopType: "stop",
+      },
+      {
+        title: "Washington Monument",
+        description:
+          "Pass-by views of the Washington Monument along the National Mall.",
+        stopType: "pass-by",
       },
     ],
     inclusions: [
-      "Professional guide",
-      "Private SUV transport",
+      "Private professional guide",
+      "Private vehicle transport",
       "Hotel pickup and drop-off",
       "Bottled water",
     ],
-    categories: ["Private Tours", "Night Tours", "Luxury Tours"],
+    categories: ["Private Tours", "Sightseeing Tours", "Historical Tours"],
   },
   {
     productCode: "149066P1",
@@ -547,28 +553,28 @@ const WASHINGTON_DC_TOURS: WashingtonDcTourFixture[] = [
     categories: ["Private Tours", "Bike Tours", "Sightseeing Tours"],
   },
   {
-    productCode: "6349P24",
+    productCode: "6349P59",
     productUrl:
-      "https://www.viator.com/tours/Washington-DC/Small-Group-Mount-Vernon-and-Arlington-National-Cemetery-Tour/d657-6349P24",
-    title: "Small-Group Mount Vernon and Arlington Tour",
+      "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+    title: "Mount Vernon Estate and Old Town Alexandria",
     description:
-      "Visit Mount Vernon and Arlington National Cemetery on a small-group six-hour tour from Washington, D.C. with a professional guide and comfortable transport. Tour George Washington's Potomac estate, then continue to Arlington for the Tomb of the Unknown Soldier and notable memorial sections. Group size stays limited for a social but uncrowded Virginia day trip. Mount Vernon admission and cemetery access are included with hotel pickup options downtown.",
+      "Visit George Washington's Mount Vernon estate and explore Old Town Alexandria on a guided day trip from Washington, D.C. with comfortable transport and a professional guide. Tour the mansion, museum, and Potomac River grounds at Mount Vernon before continuing to Alexandria's cobblestone streets, waterfront, and historic King Street corridor. Group size stays manageable for a social but uncrowded Virginia outing. Mount Vernon admission and guided commentary are included with hotel pickup options downtown.",
     duration: "6 hours (approx.)",
-    priceFrom: 109,
+    priceFrom: 119,
     heroUrl: `${TACDN}/09/1f/52/93.jpg`,
     rating: 4.8,
-    reviewCount: 890,
+    reviewCount: 288,
     highlights: [
-      "Small-group Mount Vernon and Arlington day trip",
-      "Guided tour of George Washington's estate",
-      "Arlington Cemetery with Tomb of the Unknown Soldier",
-      "Changing of the Guard when ceremony schedule allows",
-      "Transport from Washington, D.C. with limited group size",
+      "Guided Mount Vernon estate tour from Washington, D.C.",
+      "Old Town Alexandria waterfront and King Street walk",
+      "George Washington mansion and museum visit",
+      "Air-conditioned transport with limited group size",
+      "Professional guide with founding-era commentary",
     ],
     startDescription:
       "Morning departure from select downtown Washington, D.C. hotels or a central meeting point.",
     endDescription:
-      "Return to downtown Washington, D.C. after the Arlington Cemetery visit.",
+      "Return to downtown Washington, D.C. after the Old Town Alexandria visit.",
     itineraryItems: [
       {
         title: "Mount Vernon",
@@ -585,17 +591,17 @@ const WASHINGTON_DC_TOURS: WashingtonDcTourFixture[] = [
         stopType: "stop",
       },
       {
-        title: "Arlington National Cemetery",
+        title: "Old Town Alexandria",
         description:
-          "Guided walk through major cemetery sections and memorials.",
-        duration: "1 hour",
+          "Walk King Street and the waterfront with guide commentary on colonial history.",
+        duration: "1 hour 30 minutes",
         stopType: "stop",
       },
       {
-        title: "Tomb of the Unknown Soldier",
+        title: "Alexandria Waterfront",
         description:
-          "View the Changing of the Guard ceremony at Arlington.",
-        duration: "30 minutes",
+          "Photo stop along the Potomac waterfront promenade.",
+        duration: "20 minutes",
         stopType: "stop",
       },
     ],
@@ -608,72 +614,72 @@ const WASHINGTON_DC_TOURS: WashingtonDcTourFixture[] = [
     categories: ["Small Group Tours", "Day Trips", "Historical Tours"],
   },
   {
-    productCode: "2890P28",
+    productCode: "6766SIGTOUR",
     productUrl:
-      "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Arlington-Cemetery-Tour/d657-2890P28",
-    title: "Mt Vernon and Arlington Cemetery Tour",
+      "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+    title: "DC in a Day Monuments Sightseeing Tour",
     description:
-      "Combine Mount Vernon and Arlington National Cemetery on a full-day seven-hour tour from Washington, D.C. with extended time at George Washington's estate and a comprehensive Arlington visit. Your guide covers founding-era history at Mount Vernon before transitioning to military heritage at the Tomb of the Unknown Soldier and Kennedy gravesite area. This popular group format delivers both Virginia landmarks in one outing with transport and admissions handled. Suitable for history-minded travelers with a full day available.",
-    duration: "7 hours (approx.)",
-    priceFrom: 95,
+      "See the capital's essential landmarks on a full-day guided sightseeing tour covering ten or more monuments, seasonal cherry blossom viewpoints, and a Potomac River boat cruise. A professional guide narrates the route with stops at the Lincoln Memorial, White House exterior, and Smithsonian area viewpoints before boarding the cruise for river-level city perspectives. Motorcoach transport links the east and west ends of the Mall efficiently for first-time visitors with a full day available. This comprehensive outing delivers a solid D.C. overview with a memorable water segment.",
+    duration: "8 hours (approx.)",
+    priceFrom: 99,
     heroUrl: `${TACDN}/07/36/99/d5.jpg`,
     rating: 4.7,
-    reviewCount: 1200,
+    reviewCount: 1215,
     highlights: [
-      "Full-day Mount Vernon and Arlington Cemetery tour",
-      "Extended time at George Washington's Potomac estate",
-      "Arlington National Cemetery guided walk",
-      "Tomb of the Unknown Soldier ceremony viewing",
-      "Round-trip transport from Washington, D.C.",
+      "Full-day DC highlights with ten or more monument stops",
+      "Seasonal cherry blossom viewpoints when in bloom",
+      "Potomac River boat cruise included",
+      "Lincoln Memorial and National Mall photo stops",
+      "Motorcoach transport with hotel pickup options",
     ],
     startDescription:
-      "Board at select Washington, D.C. hotels or the confirmed downtown departure point in the morning.",
+      "Pickup from select downtown Washington, D.C. hotels or a central departure point in the morning.",
     endDescription:
-      "Return to Washington, D.C. after the Arlington Cemetery portion.",
+      "Return to downtown Washington, D.C. after the Potomac River cruise.",
     itineraryItems: [
       {
-        title: "Mount Vernon",
+        title: "US Capitol",
         description:
-          "Tour the mansion, museum exhibits, and riverside outbuildings.",
-        duration: "2 hours 30 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Mount Vernon Gardens",
-        description:
-          "Walk the estate gardens and farm areas with guide commentary.",
-        duration: "30 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Arlington National Cemetery",
-        description:
-          "Enter the cemetery for a guided overview of major sections.",
-        duration: "1 hour",
-        stopType: "stop",
-      },
-      {
-        title: "Tomb of the Unknown Soldier",
-        description:
-          "Attend the Changing of the Guard at the Tomb of the Unknown Soldier.",
-        duration: "30 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "John F. Kennedy Gravesite",
-        description:
-          "Visit the Kennedy gravesite and Eternal Flame memorial.",
+          "Exterior stop at the Capitol with views down the National Mall.",
         duration: "20 minutes",
+        stopType: "stop",
+      },
+      {
+        title: "White House",
+        description:
+          "Photo stop at the White House North Lawn viewpoint.",
+        duration: "15 minutes",
+        stopType: "stop",
+      },
+      {
+        title: "Lincoln Memorial",
+        description:
+          "Visit the Lincoln Memorial with Reflecting Pool panoramas.",
+        duration: "25 minutes",
+        stopType: "stop",
+      },
+      {
+        title: "Tidal Basin",
+        description:
+          "Cherry blossom and Jefferson Memorial viewpoints when in season.",
+        duration: "20 minutes",
+        stopType: "stop",
+      },
+      {
+        title: "Potomac River Cruise",
+        description:
+          "Board a sightseeing cruise for river-level views of the monuments.",
+        duration: "45 minutes",
         stopType: "stop",
       },
     ],
     inclusions: [
       "Professional guide",
-      "Motorcoach transport",
-      "Mount Vernon admission",
-      "Arlington Cemetery access",
+      "Air-conditioned motorcoach",
+      "Potomac River cruise ticket",
+      "Hotel pickup",
     ],
-    categories: ["Bus Tours", "Day Trips", "Historical Tours"],
+    categories: ["Bus Tours", "Full-day Tours", "Sightseeing Tours"],
   },
   {
     productCode: "67327P3",
@@ -744,65 +750,64 @@ const WASHINGTON_DC_TOURS: WashingtonDcTourFixture[] = [
     categories: ["Private Tours", "Historical Tours", "Sightseeing Tours"],
   },
   {
-    productCode: "5713P68",
+    productCode: "7812P219",
     productUrl:
-      "https://www.viator.com/tours/Washington-DC/Sample-Tastes-of-H-Street-Walking-Tour-With-Craft-Beer-Tasting/d657-5713P68",
-    title: "Private H Street Walking Food Tour",
+      "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+    title: "Georgetown Walking Food Tour",
     description:
-      "Explore H Street NE on a private three-hour food and history walking tour with craft beer tastings at neighborhood establishments. Your guide connects the corridor's revival story with stops at local eateries serving regional flavors and brews. The route covers historic blocks between Union Station and the Atlas District with time to sample dishes and learn about Capitol Hill-adjacent neighborhood change. This premium food outing suits travelers who want a curated taste of DC beyond the National Mall.",
+      "Explore Georgetown in Washington, D.C. on a Secret Food Tours walking route with curated dishes at local eateries and guide commentary on the capital's culinary history. The three-hour format covers historic blocks with stops for regional specialties, artisan bites, and neighborhood stories beyond the National Mall. Your licensed guide connects each course to the city's immigrant communities and evolving food scene. This small-group outing suits travelers who want an authentic taste of D.C. on foot.",
     duration: "3 hours (approx.)",
     priceFrom: 89,
-    heroUrl: `${TACDN}/06/71/9c/28.jpg`,
-    rating: 4.6,
-    reviewCount: 47,
+    heroUrl: `${TACDN}/12/72/ff/7c.jpg`,
+    rating: 4.9,
+    reviewCount: 210,
     highlights: [
-      "Private H Street food and history walking tour",
-      "Craft beer tastings at local establishments",
-      "Multiple food sample stops along the corridor",
-      "Guide commentary on H Street neighborhood history",
-      "Three-hour format near Union Station",
+      "Secret Food Tours walking route with multiple food stops",
+      "Curated stops at local Washington, D.C. eateries",
+      "Guide commentary on neighborhood culinary history",
+      "Small-group format near downtown meeting points",
+      "Three-hour guided food experience on foot",
     ],
     startDescription:
-      "Meet your guide near Union Station or the confirmed H Street NE meeting point at your scheduled time.",
+      "Meet your guide at the confirmed downtown Washington, D.C. meeting point at your scheduled time.",
     endDescription:
-      "Tour ends on H Street NE near the final tasting stop.",
+      "Tour ends near the final tasting stop in the neighborhood covered on your route.",
     itineraryItems: [
       {
-        title: "Washington Union Station",
+        title: "Georgetown Meeting Point",
         description:
-          "Orientation near Union Station before entering the H Street corridor.",
+          "Meet your guide and receive an overview of the Georgetown tasting route.",
         duration: "10 minutes",
         stopType: "stop",
       },
       {
-        title: "H Street NE",
+        title: "Georgetown Historic Neighborhood Walk",
         description:
-          "Walk the main H Street corridor with history commentary on neighborhood revival.",
+          "Walk Georgetown blocks with guide commentary on local history.",
         duration: "45 minutes",
         stopType: "stop",
       },
       {
-        title: "Food Sample Stop",
+        title: "Georgetown First Food Stop",
         description:
-          "Taste regional dishes at a curated H Street restaurant.",
+          "Sample a signature regional dish at a curated Georgetown restaurant.",
         duration: "30 minutes",
         stopType: "stop",
       },
       {
-        title: "Craft Beer Tasting",
+        title: "Georgetown Second Food Stop",
         description:
-          "Sample local craft beers at a neighborhood taproom or brewery.",
+          "Continue with additional tastings at Georgetown establishments.",
         duration: "30 minutes",
         stopType: "stop",
       },
     ],
     inclusions: [
-      "Private food guide",
+      "Licensed food guide",
       "Food samples",
-      "Craft beer tastings",
       "Walking tour",
     ],
-    categories: ["Private Tours", "Food Tours", "Walking Tours"],
+    categories: ["Food Tours", "Walking Tours", "Small Group Tours"],
   },
   {
     productCode: "6349DAYTOUR",
@@ -1276,21 +1281,21 @@ const WASHINGTON_DC_TOURS: WashingtonDcTourFixture[] = [
     categories: ["VIP Tours", "Full-day Tours", "Historical Tours"],
   },
   {
-    productCode: "2384P1",
+    productCode: "2384P20",
     productUrl:
-      "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-and-Memorials-Bike-Tour/d657-2384P1",
-    title: "Monuments and Memorials Bike Tour",
+      "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+    title: "Washington DC Bike Tour of the National Mall",
     description:
-      "Cycle the National Mall on a three-hour guided bike tour connecting the Lincoln Memorial, Jefferson Memorial, and Capitol Hill approaches. Your guide leads a paced route along Mall paths with stops for photos and history at major memorials. Bikes and helmets are included with a brief safety orientation before departure. This active group tour covers more monuments than a walking tour while keeping a social, guided format.",
+      "Cycle the National Mall on a three-hour guided bike tour connecting the Lincoln Memorial, Jefferson Memorial, and Capitol Hill approaches. Your guide leads a paced route along Mall paths with stops for photos and history at major memorials. Bikes and helmets are included with a brief safety orientation before departure. This active group tour covers more monuments than a walking tour while keeping a social, guided format ideal for first-time visitors.",
     duration: "3 hours (approx.)",
-    priceFrom: 65,
+    priceFrom: 59,
     heroUrl: `${TACDN}/12/e8/2e/02.jpg`,
     rating: 4.8,
-    reviewCount: 890,
+    reviewCount: 1245,
     highlights: [
-      "Guided bike tour of DC monuments and memorials",
+      "Guided bike tour of the National Mall monuments",
       "Lincoln and Jefferson Memorial stops",
-      "Capitol Hill and National Mall riding route",
+      "Capitol Hill and Mall riding route",
       "Bikes, helmets, and safety briefing included",
       "Three-hour active sightseeing format",
     ],
@@ -1339,28 +1344,28 @@ const WASHINGTON_DC_TOURS: WashingtonDcTourFixture[] = [
     categories: ["Bike Tours", "Sightseeing Tours", "Active Tours"],
   },
   {
-    productCode: "2890P2",
+    productCode: "5769MTVN",
     productUrl:
-      "https://www.viator.com/tours/Washington-DC/Mount-Vernon-Day-Trip-from-Washington-DC/d657-2890P2",
-    title: "Mount Vernon Day Trip",
+      "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+    title: "Mount Vernon and Old Town Alexandria Day Trip",
     description:
-      "Day-trip to George Washington's Mount Vernon estate on a five-hour tour from Washington, D.C. with guided visits to the mansion, museum, and Potomac River grounds. Your guide covers Washington's life at the estate before allowing free time in the gardens and farm areas. Motorcoach transport handles the Virginia drive while admission is included. This half-day outing suits travelers who want founding-era history without a full-day Arlington combination.",
-    duration: "5 hours (approx.)",
-    priceFrom: 85,
+      "Day-trip to George Washington's Mount Vernon estate and Old Town Alexandria on a six-hour tour from Washington, D.C. with guided visits to the mansion, museum, and Potomac River grounds followed by time in Alexandria's historic waterfront district. Your guide covers Washington's life at the estate before allowing exploration of King Street shops and cobblestone lanes. Motorcoach transport handles the Virginia drive while Mount Vernon admission is included. This outing suits travelers who want founding-era history paired with a charming colonial town visit.",
+    duration: "6 hours (approx.)",
+    priceFrom: 95,
     heroUrl: `${TACDN}/06/70/75/5d.jpg`,
     rating: 4.7,
-    reviewCount: 650,
+    reviewCount: 806,
     highlights: [
-      "Half-day Mount Vernon trip from Washington, D.C.",
+      "Mount Vernon and Old Town Alexandria day trip",
       "Guided tour of George Washington's mansion",
       "Estate gardens and Potomac River grounds",
-      "Museum and education center visit time",
+      "Old Town Alexandria waterfront and King Street",
       "Round-trip motorcoach transport included",
     ],
     startDescription:
       "Morning departure from select Washington, D.C. hotels or the confirmed downtown meeting point.",
     endDescription:
-      "Return to Washington, D.C. after free time on the Mount Vernon grounds.",
+      "Return to Washington, D.C. after free time in Old Town Alexandria.",
     itineraryItems: [
       {
         title: "Mount Vernon Estate",
@@ -1384,10 +1389,10 @@ const WASHINGTON_DC_TOURS: WashingtonDcTourFixture[] = [
         stopType: "stop",
       },
       {
-        title: "Mount Vernon Gardens",
+        title: "Old Town Alexandria",
         description:
-          "Free time in the formal gardens and riverside walking paths.",
-        duration: "45 minutes",
+          "Explore King Street and the waterfront with guide orientation.",
+        duration: "1 hour",
         stopType: "stop",
       },
     ],

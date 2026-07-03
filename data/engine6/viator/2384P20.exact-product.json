@@ -1,20 +1,20 @@
 {
   "product": {
-    "productCode": "2384P1",
-    "productUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-and-Memorials-Bike-Tour/d657-2384P1",
-    "title": "Monuments and Memorials Bike Tour",
+    "productCode": "2384P20",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+    "title": "Washington DC Bike Tour of the National Mall",
     "description": {
-      "text": "Cycle the National Mall on a three-hour guided bike tour connecting the Lincoln Memorial, Jefferson Memorial, and Capitol Hill approaches. Your guide leads a paced route along Mall paths with stops for photos and history at major memorials. Bikes and helmets are included with a brief safety orientation before departure. This active group tour covers more monuments than a walking tour while keeping a social, guided format."
+      "text": "Cycle the National Mall on a three-hour guided bike tour connecting the Lincoln Memorial, Jefferson Memorial, and Capitol Hill approaches. Your guide leads a paced route along Mall paths with stops for photos and history at major memorials. Bikes and helmets are included with a brief safety orientation before departure. This active group tour covers more monuments than a walking tour while keeping a social, guided format ideal for first-time visitors."
     },
     "location": {
       "city": "Washington",
       "state": "District of Columbia"
     },
     "duration": "3 hours (approx.)",
-    "priceFrom": "From $65.00",
+    "priceFrom": "From $59.00",
     "reviews": {
       "combinedAverageRating": 4.8,
-      "totalReviews": 890
+      "totalReviews": 1245
     },
     "media": {
       "images": [
@@ -31,9 +31,9 @@
       ]
     },
     "highlights": [
-      "Guided bike tour of DC monuments and memorials",
+      "Guided bike tour of the National Mall monuments",
       "Lincoln and Jefferson Memorial stops",
-      "Capitol Hill and National Mall riding route",
+      "Capitol Hill and Mall riding route",
       "Bikes, helmets, and safety briefing included",
       "Three-hour active sightseeing format"
     ],
@@ -91,7 +91,7 @@
     ],
     "faqs": [
       {
-        "question": "How long is the Monuments and Memorials Bike Tour?",
+        "question": "How long is the Washington DC Bike Tour of the National Mall?",
         "answer": "The planned duration is 3 hours."
       },
       {
@@ -112,7 +112,7 @@
     ],
     "pricing": {
       "summary": {
-        "fromPrice": 65
+        "fromPrice": 59
       },
       "currency": "USD"
     }
