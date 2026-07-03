@@ -63,7 +63,6 @@ const sedonaResolvedTours = engine6ResolvedTours.filter(tour =>
 
 const SEDONA_SUMMARY_ONLY_ITINERARY_PRODUCT_CODES = new Set([
   "321860P2",
-  "320003P1",
   "32242P1",
 ]);
 

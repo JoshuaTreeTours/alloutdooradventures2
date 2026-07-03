@@ -102,13 +102,13 @@
     ]
   },
   {
-    "productCode": "54668P3",
-    "productUrl": "https://www.viator.com/tours/Sedona/Wild-West-Tour-by-Helicopter-from-Sedona/d750-54668P3",
-    "title": "Sedona Helicopter Tour: Wild West Tour",
-    "priceFrom": "from $756",
+    "productCode": "54668P2",
+    "productUrl": "https://www.viator.com/tours/Sedona/Desert-Thunder-Tour/d750-54668P2",
+    "title": "Sedona Helicopter Tour: Desert Thunder Tour",
+    "priceFrom": "from $384.18",
     "rating": 5,
-    "reviewCount": 37,
-    "duration": "50 to 55 minutes (approx.)",
+    "reviewCount": 172,
+    "duration": "30 to 35 minutes (approx.)",
     "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/fc/46.jpg",
     "overview": "Enjoy fantastic aerial views",
     "itineraryStops": [
@@ -220,22 +220,23 @@
     ]
   },
   {
-    "productCode": "291644P3",
-    "productUrl": "https://www.viator.com/tours/Sedona/Explore-Sedona-Tour/d750-291644P3",
-    "title": "Private tour of Sedona and hike in Red Rock State park",
-    "priceFrom": "from $275",
-    "rating": 4.5,
-    "reviewCount": 19,
-    "duration": "4 hours (approx.)",
+    "productCode": "393812P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/Introduction-to-Sedona-Easy-Walk/d750-393812P1",
+    "title": "Sedona Easy Hiking Tour with a Private Guide",
+    "priceFrom": "From $179.50",
+    "rating": 5,
+    "reviewCount": 11,
+    "duration": "2 hours (approx.)",
     "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/7c/31/9e.jpg",
     "overview": "Enjoy an active, adventurous way to discover the region's scenery",
     "itineraryStops": [
-      "Chapel of the Holy Cross",
-      "Airport Mesa",
-      "Red Rock State Park"
+      "Red Rock State Park",
+      "Cathedral Rock",
+      "Oak Creek",
+      "House of Apache Fires"
     ],
     "categories": [
-      "Red Rock State Park"
+      "Hiking Tours"
     ]
   },
   {
@@ -275,17 +276,20 @@
     ]
   },
   {
-    "productCode": "320003P1",
-    "productUrl": "https://www.viator.com/tours/Sedona/Sedona-Hiking-and-Photo-Adventure/d750-320003P1",
-    "title": "Sedona Hiking and Photo Adventure",
-    "priceFrom": "from $195",
+    "productCode": "129182P2",
+    "productUrl": "https://www.viator.com/tours/Sedona/Sunset-Sedona-Sacred-Places-gourmet-picnic-dinner-and-stargazing/d750-129182P2",
+    "title": "Sunset Sedona Sacred Places - Gourmet Picnic Dinner and Stargazing",
+    "priceFrom": "From $250.00",
     "rating": 5,
-    "reviewCount": 6,
-    "duration": "5 hours 30 minutes (approx.)",
+    "reviewCount": 10,
+    "duration": "4 to 8 hours (approx.)",
     "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/3f/75/c5.jpg",
-    "overview": "This is your chance to experience some of the most scenic locations around beautiful Sedona. Along the tour, we will drive and hike to a few very photogenic locations where you will have your pictures taken in the most beautiful light. Hikers will enjoy this tour which combines physical activity with great scenery. Photographers will definitely enjoy this tour as it takes you to unique vantage points, some outside of the beaten path. I make sure we visit each location at a good time to photograph it. Everyone will love having their photos taken in each location we're stopping by! I will take professional photos of you and have them delivered at full resolution so you can print them big or just use them on social media. Book this tour for a surprise proposal or as a family, small group, or team-building activity.",
+    "overview": "Spend a private Sedona afternoon and evening visiting sacred viewpoints",
     "itineraryStops": [
-      "Cathedral Rock"
+      "Chapel of the Holy Cross",
+      "West Fork Oak Creek Trail",
+      "Medicine Wheel Ceremonial Site",
+      "Sunset Picnic Overlook"
     ],
     "categories": [
       "Hiking Tours"

@@ -238,29 +238,29 @@ const SEDONA_TOURS: SedonaTourFixture[] = [
     categories: ["Helicopter Tours", "Private and Luxury", "Air Tours"],
   },
   {
-    productCode: "54668P3",
+    productCode: "54668P2",
     productUrl:
-      "https://www.viator.com/tours/Sedona/Wild-West-Tour-by-Helicopter-from-Sedona/d750-54668P3",
-    title: "Sedona Helicopter Tour: Wild West Tour",
+      "https://www.viator.com/tours/Sedona/Desert-Thunder-Tour/d750-54668P2",
+    title: "Sedona Helicopter Tour: Desert Thunder Tour",
     description:
-      "Combine Sedona's red rock panoramas with Wild West history on a 50-minute helicopter tour operated by Guidance Air from Sedona Airport. The flight sweeps over Cathedral Rock, Bell Rock, and Oak Creek Canyon before tracing routes associated with frontier ranching, mining, and outpost settlements across the Verde Valley. Pilots highlight how volcanic layers, fault lines, and erosion shaped the spires you see from town while pointing out remote canyons and mesa tops linked to Arizona's western heritage. This premium aerial outing suits travelers who want more air time than the short red rock loop and prefer a narrative focused on landscape and lore rather than a quick photo circuit. Check-in at Guidance Air includes a safety briefing and weight verification before boarding.",
-    duration: "50 to 55 minutes (approx.)",
-    priceFrom: 756,
+      "Fly Sedona's signature red rock country on a 30- to 35-minute helicopter loop with Guidance Air from Sedona Airport. Pilots narrate Cathedral Rock, Chapel of the Holy Cross, Bell Rock, Courthouse Butte, Snoopy Rock, Oak Creek Canyon, Devil's Bridge, Secret Canyon, and Boynton Canyon while banking past spires, mesas, and pine-fringed ridgelines above Coconino National Forest. Climate-controlled cabins and oversized windows keep photography straightforward as you trace aerial routes toward Anasazi cliff dwellings and Mogollon Rim viewpoints. The outing suits travelers who want a compact aerial introduction to Sedona landmarks without a full-day commitment. Check in at Guidance Air on Airport Road about 30 minutes before departure; weight limits apply.",
+    duration: "30 to 35 minutes (approx.)",
+    priceFrom: 384.18,
     heroUrl:
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/fc/46.jpg",
     rating: 5,
-    reviewCount: 37,
+    reviewCount: 172,
     highlights: [
-      "50-minute Wild West themed helicopter tour from Sedona",
+      "30- to 35-minute Desert Thunder helicopter tour from Sedona",
       "Guidance Air departures at Sedona Airport",
       "Aerial views of Cathedral Rock, Bell Rock, and Oak Creek Canyon",
-      "Pilot commentary on Verde Valley frontier and mining history",
-      "Extended routing beyond the standard red rock loop",
+      "Pilot narration over Devil's Bridge, Secret Canyon, and Boynton Canyon",
+      "Climate-controlled cabin with oversized viewing windows",
     ],
     startDescription:
       "Check in at Guidance Air at Sedona Airport, 455 Airport Rd, Sedona, AZ 86336. Arrive 30 minutes before your scheduled flight.",
     endDescription:
-      "Land at Guidance Air at Sedona Airport after the Wild West aerial route.",
+      "Land at Guidance Air at Sedona Airport after the Desert Thunder aerial loop.",
     itineraryItems: [
       {
         title: "Guidance Air",
@@ -276,15 +276,21 @@ const SEDONA_TOURS: SedonaTourFixture[] = [
         stopType: "pass-by",
       },
       {
-        title: "Bell Rock",
+        title: "Chapel of the Holy Cross",
         description:
-          "Pass Bell Rock and Courthouse Butte country on the western Sedona skyline.",
+          "Bank past Chapel of the Holy Cross perched on red rock above Sedona valley.",
         stopType: "pass-by",
       },
       {
         title: "Oak Creek Canyon",
         description:
           "Trace Oak Creek Canyon's rim where pine forest meets towering sandstone cliffs.",
+        stopType: "pass-by",
+      },
+      {
+        title: "Boynton Canyon",
+        description:
+          "Sweep Boynton Canyon walls and Secret Canyon country on the northern red rock skyline.",
         stopType: "pass-by",
       },
     ],
@@ -615,56 +621,62 @@ const SEDONA_TOURS: SedonaTourFixture[] = [
     categories: ["Private Sightseeing Tours", "Half-day Tours", "Sightseeing Tours"],
   },
   {
-    productCode: "291644P3",
+    productCode: "393812P1",
     productUrl:
-      "https://www.viator.com/tours/Sedona/Explore-Sedona-Tour/d750-291644P3",
-    title: "Private tour of Sedona and hike in Red Rock State park",
+      "https://www.viator.com/tours/Sedona/Introduction-to-Sedona-Easy-Walk/d750-393812P1",
+    title: "Sedona Easy Hiking Tour with a Private Guide",
     description:
-      "Combine Sedona sightseeing with a guided hike inside Red Rock State Park on a private four-hour outing tailored to your fitness level. Your guide handles logistics from Chapel of the Holy Cross photo stops to Airport Mesa overlooks, then leads a park trail segment where riparian cottonwoods meet red sandstone fins above Oak Creek. Interpretive commentary covers Colorado Plateau geology, desert wildlife, and how state park rules protect sensitive habitats near Eagle's Nest and Apache Fire looms. Private transport keeps the pace flexible for families who want both windshield touring and a meaningful walk without joining a crowded group hike. Wear sturdy shoes and bring water; trails may include rocky steps and sun exposure.",
-    duration: "4 hours (approx.)",
-    priceFrom: 275,
+      "Walk Sedona's red rock country on a private two-hour outing led by local guides who connect geology, philosophy, and desert ecology along gentle Red Rock State Park trails. Routes through Oak Creek corridors, the House of Apache Fires overlook, and Cathedral Rock viewpoints adjust to your pace from accessible paths to moderate inclines with trekking poles, water, and snacks provided. Guides identify flora and fauna while explaining how ancestral Puebloan people used Oak Creek water and how modern Hopi, Yavapai, and Apache traditions relate to the landscape. Park admission is included so you can focus on scenery rather than logistics. Meet at Red Rock State Park near Sedona and wear traction footwear for rocky steps and sun exposure on open benches.",
+    duration: "2 hours (approx.)",
+    priceFrom: 179.5,
     heroUrl:
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/7c/31/9e.jpg",
-    rating: 4.5,
-    reviewCount: 19,
+    rating: 5,
+    reviewCount: 11,
     highlights: [
-      "Private Sedona tour with guided Red Rock State Park hike",
-      "Chapel of the Holy Cross and Airport Mesa scenic stops",
-      "Trail pacing matched to your group's fitness level",
-      "Interpretive commentary on geology and Oak Creek ecology",
-      "Park entrance coordination handled by your guide",
+      "Private easy hiking tour in Red Rock State Park",
+      "Oak Creek corridors and House of Apache Fires overlook",
+      "Cathedral Rock viewpoints on gentle Sedona trails",
+      "Local guide commentary on ecology and cultural history",
+      "Trekking poles, water, and snacks included",
     ],
     startDescription:
-      "Pickup from your Sedona lodging at the confirmed morning or afternoon departure time.",
+      "Meet your private guide at Red Rock State Park near Sedona. Your guide confirms the trail loop based on conditions and ability.",
     endDescription:
-      "Return to your Sedona pickup point after the Red Rock State Park hike.",
+      "Finish at Red Rock State Park after the guided easy walk along Oak Creek.",
     itineraryItems: [
       {
-        title: "Chapel of the Holy Cross",
+        title: "Red Rock State Park",
         description:
-          "Stop at Chapel of the Holy Cross for cliffside architecture and valley views.",
+          "Explore Red Rock State Park trails along Oak Creek with guide-led ecology stops.",
+        duration: "45 minutes",
+        stopType: "stop",
+      },
+      {
+        title: "Cathedral Rock",
+        description:
+          "Cathedral Rock viewpoints frame the opening and closing sections of this easy Sedona walk.",
+        stopType: "pass-by",
+      },
+      {
+        title: "Oak Creek",
+        description:
+          "Oak Creek shoreline segment where cottonwood shade and flowing water cool the desert bench.",
         duration: "30 minutes",
         stopType: "stop",
       },
       {
-        title: "Airport Mesa",
+        title: "House of Apache Fires",
         description:
-          "Visit Airport Mesa overlook above Sedona's red rock amphitheater.",
-        duration: "25 minutes",
-        stopType: "stop",
-      },
-      {
-        title: "Red Rock State Park",
-        description:
-          "Guided hike on Red Rock State Park trails along Oak Creek with ecology stops.",
-        duration: "2 hours",
+          "House of Apache Fires cliffside overlook above Oak Creek with Sedona history commentary.",
+        duration: "20 minutes",
         stopType: "stop",
       },
     ],
     inclusions: [
-      "Private professional guide",
-      "Private transport",
-      "Red Rock State Park entry coordination",
+      "Private certified hiking guide",
+      "Red Rock State Park admission",
+      "Trekking poles",
       "Trail snacks and water",
     ],
     categories: ["Hiking Tours", "Private Tours", "Nature and Wildlife Tours"],
@@ -785,37 +797,66 @@ const SEDONA_TOURS: SedonaTourFixture[] = [
     categories: ["Hiking Tours", "Private Tours", "Nature and Wildlife Tours"],
   },
   {
-    productCode: "320003P1",
+    productCode: "129182P2",
     productUrl:
-      "https://www.viator.com/tours/Sedona/Sedona-Hiking-and-Photo-Adventure/d750-320003P1",
-    title: "Sedona Hiking and Photo Adventure",
+      "https://www.viator.com/tours/Sedona/Sunset-Sedona-Sacred-Places-gourmet-picnic-dinner-and-stargazing/d750-129182P2",
+    title: "Sunset Sedona Sacred Places - Gourmet Picnic Dinner and Stargazing",
     description:
-      "Pair active hiking with professional photography on a five-and-a-half-hour Sedona adventure that hits photogenic red rock locations in optimal light. Your guide leads drives and walks to Cathedral Rock viewpoints and additional scenic pullouts, timing stops for golden-hour color on sandstone fins and Oak Creek reflections. Along the way you receive coaching on composition while the guide captures high-resolution images of your party delivered after the tour for prints or social sharing. The format suits couples, families, and small teams who want exercise plus polished keepsake photos without hiring a separate photographer. Moderate hiking ability is recommended; routes adjust slightly for proposals, celebrations, or team-building goals when arranged in advance.",
-    duration: "5 hours 30 minutes (approx.)",
-    priceFrom: 195,
+      "Spend a private Sedona afternoon and evening visiting sacred viewpoints, vortex country, and quiet wilderness pullouts before a gourmet picnic and dark-sky stargazing session. Your guide customizes the route from Chapel of the Holy Cross and West Fork Oak Creek Trail segments to scenic overlooks and a medicine wheel ceremonial site, pacing hiking for your group between four and eight hours. A made-to-order picnic dinner anchors sunset above the red rocks, followed by ceremonial talking circle time and constellation orientation away from town glow. The format suits couples and small groups who want cultural context, fine food, and night-sky viewing in one hosted outing rather than separate tours. Pickup arrangements are confirmed when booking.",
+    duration: "4 to 8 hours (approx.)",
+    priceFrom: 250,
     heroUrl:
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/3f/75/c5.jpg",
     rating: 5,
-    reviewCount: 6,
+    reviewCount: 10,
     highlights: [
-      "Guided Sedona hike combined with professional photography",
-      "Cathedral Rock and red rock scenic locations timed for light",
-      "Full-resolution edited photos delivered after the tour",
-      "Composition coaching for travelers who enjoy cameras",
-      "Flexible routing for proposals and small-group celebrations",
+      "Private sunset sacred sites tour with gourmet picnic dinner",
+      "Chapel of the Holy Cross and West Fork Oak Creek routing",
+      "Medicine wheel ceremonial site visit when accessible",
+      "Dark-sky stargazing session away from Sedona light pollution",
+      "Flexible four- to eight-hour private format",
     ],
     startDescription:
-      "Meet your guide at the confirmed Sedona trailhead or hotel pickup point. Start times shift seasonally for best photography light.",
+      "Pickup from your Sedona hotel or agreed meeting point. Your guide reviews the afternoon and evening routing before departure.",
     endDescription:
-      "Return to the meeting point after the final photo location on Cathedral Rock country trails.",
-    itineraryItems: [],
-    inclusions: [
-      "Professional guide and photographer",
-      "Edited digital photo delivery",
-      "Trail transport between locations",
-      "Trail snacks and water",
+      "Return to your Sedona pickup location after the stargazing session.",
+    itineraryItems: [
+      {
+        title: "Chapel of the Holy Cross",
+        description:
+          "Visit Chapel of the Holy Cross for architecture, valley views, and afternoon orientation.",
+        duration: "45 minutes",
+        stopType: "stop",
+      },
+      {
+        title: "West Fork Oak Creek Trail",
+        description:
+          "Hike West Fork Oak Creek Trail sections with guide-led commentary on canyon ecology.",
+        duration: "1 hour 30 minutes",
+        stopType: "stop",
+      },
+      {
+        title: "Medicine Wheel Ceremonial Site",
+        description:
+          "Quiet time at a medicine wheel ceremonial site with respectful cultural interpretation.",
+        duration: "30 minutes",
+        stopType: "stop",
+      },
+      {
+        title: "Sunset Picnic Overlook",
+        description:
+          "Enjoy a cliffside picnic with made-to-order dinner as late-day light warms Sedona red rock benches.",
+        duration: "1 hour",
+        stopType: "stop",
+      },
     ],
-    categories: ["Hiking Tours", "Photography Tours", "Adventure Tours"],
+    inclusions: [
+      "Private vortex guide",
+      "Gourmet picnic dinner",
+      "Stargazing orientation",
+      "Bottled water",
+    ],
+    categories: ["Bus Tours", "Religious Tours", "Sightseeing Tours"],
   },
   {
     productCode: "3925OBW",

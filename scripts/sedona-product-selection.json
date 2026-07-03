@@ -58,11 +58,11 @@
           "priority": 1
         },
         {
-          "productCode": "54668P3",
-          "sourceUrl": "https://www.viator.com/tours/Sedona/Wild-West-Tour-by-Helicopter-from-Sedona/d750-54668P3",
-          "title": "Sedona Helicopter Tour: Wild West Tour",
+          "productCode": "54668P2",
+          "sourceUrl": "https://www.viator.com/tours/Sedona/Desert-Thunder-Tour/d750-54668P2",
+          "title": "Sedona Helicopter Tour: Desert Thunder Tour",
           "experienceType": "helicopter-extended",
-          "priceFrom": 756,
+          "priceFrom": 384.18,
           "categories": ["Helicopter Tours", "Air Tours"],
           "commercialTier": "premium",
           "priority": 2
@@ -147,11 +147,11 @@
       "desiredCount": 1,
       "candidates": [
         {
-          "productCode": "291644P3",
-          "sourceUrl": "https://www.viator.com/tours/Sedona/Explore-Sedona-Tour/d750-291644P3",
-          "title": "Private tour of Sedona and hike in Red Rock State park",
+          "productCode": "393812P1",
+          "sourceUrl": "https://www.viator.com/tours/Sedona/Introduction-to-Sedona-Easy-Walk/d750-393812P1",
+          "title": "Sedona Easy Hiking Tour with a Private Guide",
           "experienceType": "private-red-rock-hike",
-          "priceFrom": 275,
+          "priceFrom": 179.5,
           "categories": ["Hiking Tours", "Private Tours"],
           "commercialTier": "premium",
           "priority": 1
@@ -183,12 +183,12 @@
           "priority": 2
         },
         {
-          "productCode": "320003P1",
-          "sourceUrl": "https://www.viator.com/tours/Sedona/Sedona-Hiking-and-Photo-Adventure/d750-320003P1",
-          "title": "Sedona Hiking and Photo Adventure",
+          "productCode": "129182P2",
+          "sourceUrl": "https://www.viator.com/tours/Sedona/Sunset-Sedona-Sacred-Places-gourmet-picnic-dinner-and-stargazing/d750-129182P2",
+          "title": "Sunset Sedona Sacred Places - Gourmet Picnic Dinner and Stargazing",
           "experienceType": "guided-hiking",
-          "priceFrom": 195,
-          "categories": ["Hiking Tours", "Photography Tours"],
+          "priceFrom": 250,
+          "categories": ["Hiking Tours", "Religious Tours"],
           "priority": 3
         }
       ]

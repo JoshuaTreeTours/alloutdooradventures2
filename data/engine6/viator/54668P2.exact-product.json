@@ -1,20 +1,20 @@
 {
   "product": {
-    "productCode": "54668P3",
-    "productUrl": "https://www.viator.com/tours/Sedona/Wild-West-Tour-by-Helicopter-from-Sedona/d750-54668P3",
-    "title": "Sedona Helicopter Tour: Wild West Tour",
+    "productCode": "54668P2",
+    "productUrl": "https://www.viator.com/tours/Sedona/Desert-Thunder-Tour/d750-54668P2",
+    "title": "Sedona Helicopter Tour: Desert Thunder Tour",
     "description": {
-      "text": "Combine Sedona's red rock panoramas with Wild West history on a 50-minute helicopter tour operated by Guidance Air from Sedona Airport. The flight sweeps over Cathedral Rock, Bell Rock, and Oak Creek Canyon before tracing routes associated with frontier ranching, mining, and outpost settlements across the Verde Valley. Pilots highlight how volcanic layers, fault lines, and erosion shaped the spires you see from town while pointing out remote canyons and mesa tops linked to Arizona's western heritage. This premium aerial outing suits travelers who want more air time than the short red rock loop and prefer a narrative focused on landscape and lore rather than a quick photo circuit. Check-in at Guidance Air includes a safety briefing and weight verification before boarding."
+      "text": "Fly Sedona's signature red rock country on a 30- to 35-minute helicopter loop with Guidance Air from Sedona Airport. Pilots narrate Cathedral Rock, Chapel of the Holy Cross, Bell Rock, Courthouse Butte, Snoopy Rock, Oak Creek Canyon, Devil's Bridge, Secret Canyon, and Boynton Canyon while banking past spires, mesas, and pine-fringed ridgelines above Coconino National Forest. Climate-controlled cabins and oversized windows keep photography straightforward as you trace aerial routes toward Anasazi cliff dwellings and Mogollon Rim viewpoints. The outing suits travelers who want a compact aerial introduction to Sedona landmarks without a full-day commitment. Check in at Guidance Air on Airport Road about 30 minutes before departure; weight limits apply."
     },
     "location": {
       "city": "Sedona",
       "state": "Arizona"
     },
-    "duration": "50 to 55 minutes (approx.)",
-    "priceFrom": "From $756.00",
+    "duration": "30 to 35 minutes (approx.)",
+    "priceFrom": "From $384.18",
     "reviews": {
       "combinedAverageRating": 5,
-      "totalReviews": 37
+      "totalReviews": 172
     },
     "media": {
       "images": [
@@ -31,21 +31,21 @@
       ]
     },
     "highlights": [
-      "50-minute Wild West themed helicopter tour from Sedona",
+      "30- to 35-minute Desert Thunder helicopter tour from Sedona",
       "Guidance Air departures at Sedona Airport",
       "Aerial views of Cathedral Rock, Bell Rock, and Oak Creek Canyon",
-      "Pilot commentary on Verde Valley frontier and mining history",
-      "Extended routing beyond the standard red rock loop"
+      "Pilot narration over Devil's Bridge, Secret Canyon, and Boynton Canyon",
+      "Climate-controlled cabin with oversized viewing windows"
     ],
     "logistics": {
       "start": {
         "description": "Check in at Guidance Air at Sedona Airport, 455 Airport Rd, Sedona, AZ 86336. Arrive 30 minutes before your scheduled flight."
       },
       "end": {
-        "description": "Land at Guidance Air at Sedona Airport after the Wild West aerial route."
+        "description": "Land at Guidance Air at Sedona Airport after the Desert Thunder aerial loop."
       }
     },
-    "itinerarySummary": "Combine Sedona's red rock panoramas with Wild West history on a 50-minute helicopter tour operated by Guidance Air from Sedona Airport.",
+    "itinerarySummary": "Fly Sedona's signature red rock country on a 30- to 35-minute helicopter loop with Guidance Air from Sedona Airport.",
     "itineraryItems": [
       {
         "title": "Guidance Air",
@@ -59,13 +59,18 @@
         "stopType": "pass-by"
       },
       {
-        "title": "Bell Rock",
-        "description": "Pass Bell Rock and Courthouse Butte country on the western Sedona skyline.",
+        "title": "Chapel of the Holy Cross",
+        "description": "Bank past Chapel of the Holy Cross perched on red rock above Sedona valley.",
         "stopType": "pass-by"
       },
       {
         "title": "Oak Creek Canyon",
         "description": "Trace Oak Creek Canyon's rim where pine forest meets towering sandstone cliffs.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Boynton Canyon",
+        "description": "Sweep Boynton Canyon walls and Secret Canyon country on the northern red rock skyline.",
         "stopType": "pass-by"
       }
     ],
@@ -83,8 +88,8 @@
     ],
     "faqs": [
       {
-        "question": "How long is the Sedona Helicopter Tour: Wild West Tour?",
-        "answer": "The planned duration is 50 to 55 minutes."
+        "question": "How long is the Sedona Helicopter Tour: Desert Thunder Tour?",
+        "answer": "The planned duration is 30 to 35 minutes."
       },
       {
         "question": "Where does the tour depart from in Sedona?",
@@ -104,7 +109,7 @@
     ],
     "pricing": {
       "summary": {
-        "fromPrice": 756
+        "fromPrice": 384.18
       },
       "currency": "USD"
     }

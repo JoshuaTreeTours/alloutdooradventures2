@@ -249,16 +249,16 @@ import specimen162351p6Payload from "../../data/engine6/viator/162351P6.exact-pr
 import specimen321860p2Payload from "../../data/engine6/viator/321860P2.exact-product.json";
 import specimen327849p2Payload from "../../data/engine6/viator/327849P2.exact-product.json";
 import specimen327849p1Payload from "../../data/engine6/viator/327849P1.exact-product.json";
-import specimen54668p3Payload from "../../data/engine6/viator/54668P3.exact-product.json";
+import specimen54668p2Payload from "../../data/engine6/viator/54668P2.exact-product.json";
 import specimen189623p3Payload from "../../data/engine6/viator/189623P3.exact-product.json";
 import specimen325517p1Payload from "../../data/engine6/viator/325517P1.exact-product.json";
 import specimen109073p8Payload from "../../data/engine6/viator/109073P8.exact-product.json";
 import specimen129182p3Payload from "../../data/engine6/viator/129182P3.exact-product.json";
 import specimen129182p1Payload from "../../data/engine6/viator/129182P1.exact-product.json";
-import specimen291644p3Payload from "../../data/engine6/viator/291644P3.exact-product.json";
+import specimen393812p1Payload from "../../data/engine6/viator/393812P1.exact-product.json";
 import specimen338750p2Payload from "../../data/engine6/viator/338750P2.exact-product.json";
 import specimen393812p3Payload from "../../data/engine6/viator/393812P3.exact-product.json";
-import specimen320003p1Payload from "../../data/engine6/viator/320003P1.exact-product.json";
+import specimen129182p2Payload from "../../data/engine6/viator/129182P2.exact-product.json";
 import specimen3925obwPayload from "../../data/engine6/viator/3925OBW.exact-product.json";
 import specimen3925p1Payload from "../../data/engine6/viator/3925P1.exact-product.json";
 import specimen25271p1Payload from "../../data/engine6/viator/25271P1.exact-product.json";
@@ -2649,10 +2649,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
-    productCode: "54668P3",
+    productCode: "54668P2",
     publicUrl:
-      "https://www.viator.com/tours/Sedona/Wild-West-Tour-by-Helicopter-from-Sedona/d750-54668P3",
-    rawPayload: specimen54668p3Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Sedona/Desert-Thunder-Tour/d750-54668P2",
+    rawPayload: specimen54668p2Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
@@ -2691,10 +2691,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
-    productCode: "291644P3",
+    productCode: "393812P1",
     publicUrl:
-      "https://www.viator.com/tours/Sedona/Explore-Sedona-Tour/d750-291644P3",
-    rawPayload: specimen291644p3Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Sedona/Introduction-to-Sedona-Easy-Walk/d750-393812P1",
+    rawPayload: specimen393812p1Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
@@ -2712,10 +2712,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
-    productCode: "320003P1",
+    productCode: "129182P2",
     publicUrl:
-      "https://www.viator.com/tours/Sedona/Sedona-Hiking-and-Photo-Adventure/d750-320003P1",
-    rawPayload: specimen320003p1Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Sedona/Sunset-Sedona-Sacred-Places-gourmet-picnic-dinner-and-stargazing/d750-129182P2",
+    rawPayload: specimen129182p2Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
