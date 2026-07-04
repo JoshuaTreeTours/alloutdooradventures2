@@ -30,6 +30,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     glacier: ["Glacier"],
     "great-smoky-mountains-national-park": ["Great Smoky Mountains"],
     sedona: ["Sedona"],
+    chicago: ["Chicago"],
+    illinois: ["Chicago"],
     "washington-dc": ["Washington, D.C."],
     washington: ["Washington, D.C."],
     miami: ["Miami editorial narrative"],

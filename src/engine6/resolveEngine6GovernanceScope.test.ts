@@ -20,6 +20,11 @@ describe("resolveEngine6GovernanceScope", () => {
         "scripts/glacier-product-selection.json"
       )
     ).toBe("glacier");
+    expect(
+      extractEngine6DestinationSlugFromChangedPath(
+        "scripts/generate-chicago-engine6-fixtures.ts"
+      )
+    ).toBe("chicago");
   });
 
   it("maps changed destination files to cohort labels only", () => {
@@ -33,6 +38,14 @@ describe("resolveEngine6GovernanceScope", () => {
       ])
     );
     expect(labels.some(label => label.startsWith("Napa"))).toBe(false);
+
+    const chicagoLabels = extractEngine6DestinationLabelsFromChangedFiles([
+      { status: "M", path: "scripts/generate-chicago-engine6-fixtures.ts" },
+    ]);
+
+    expect(chicagoLabels).toEqual(
+      expect.arrayContaining([...ENGINE6_DESTINATION_SLUG_COHORT_LABELS.chicago])
+    );
   });
 
   it("limits destination cohort validation to scoped labels unless full-site audit", () => {
