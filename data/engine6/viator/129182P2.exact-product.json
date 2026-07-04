@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "129182P2",
+    "productUrl": "https://www.viator.com/tours/Sedona/Sunset-Sedona-Sacred-Places-gourmet-picnic-dinner-and-stargazing/d750-129182P2",
+    "title": "Sunset Sedona Sacred Places - Gourmet Picnic Dinner and Stargazing",
+    "description": {
+      "text": "Spend a private Sedona afternoon and evening visiting sacred viewpoints, vortex country, and quiet wilderness pullouts before a gourmet picnic and dark-sky stargazing session. Your guide customizes the route from Chapel of the Holy Cross and West Fork Oak Creek Trail segments to scenic overlooks and a medicine wheel ceremonial site, pacing hiking for your group between four and eight hours. A made-to-order picnic dinner anchors sunset above the red rocks, followed by ceremonial talking circle time and constellation orientation away from town glow. The format suits couples and small groups who want cultural context, fine food, and night-sky viewing in one hosted outing rather than separate tours. Pickup arrangements are confirmed when booking."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "4 to 8 hours (approx.)",
+    "priceFrom": "From $250.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 10
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/3f/75/c5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private sunset sacred sites tour with gourmet picnic dinner",
+      "Chapel of the Holy Cross and West Fork Oak Creek routing",
+      "Medicine wheel ceremonial site visit when accessible",
+      "Dark-sky stargazing session away from Sedona light pollution",
+      "Flexible four- to eight-hour private format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from your Sedona hotel or agreed meeting point. Your guide reviews the afternoon and evening routing before departure."
+      },
+      "end": {
+        "description": "Return to your Sedona pickup location after the stargazing session."
+      }
+    },
+    "itinerarySummary": "Spend a private Sedona afternoon and evening visiting sacred viewpoints, vortex country, and quiet wilderness pullouts before a gourmet picnic and dark-sky stargazing session.",
+    "itineraryItems": [
+      {
+        "title": "Chapel of the Holy Cross",
+        "description": "Visit Chapel of the Holy Cross for architecture, valley views, and afternoon orientation.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "West Fork Oak Creek Trail",
+        "description": "Hike West Fork Oak Creek Trail sections with guide-led commentary on canyon ecology.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Medicine Wheel Ceremonial Site",
+        "description": "Quiet time at a medicine wheel ceremonial site with respectful cultural interpretation.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sunset Picnic Overlook",
+        "description": "Enjoy a cliffside picnic with made-to-order dinner as late-day light warms Sedona red rock benches.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private vortex guide",
+      "Gourmet picnic dinner",
+      "Stargazing orientation",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sunset Sedona Sacred Places - Gourmet Picnic Dinner and Stargazing?",
+        "answer": "The planned duration is 4 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Pickup from your Sedona hotel or agreed meeting point. Your guide reviews the afternoon and evening routing before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Religious Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 250
+      },
+      "currency": "USD"
+    }
+  }
+}

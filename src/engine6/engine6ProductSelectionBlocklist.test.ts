@@ -22,6 +22,21 @@ describe("engine6ProductSelectionBlocklist", () => {
         detail: "missing title",
       })
     ).toBe(false);
+
+    expect(
+      shouldPermanentlyBlocklistProductSelectionRejection({
+        reason: "live-validation-failed",
+        detail:
+          "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
+      })
+    ).toBe(false);
+
+    expect(
+      shouldPermanentlyBlocklistProductSelectionRejection({
+        reason: "inactive",
+        detail: "Viator API reports inactive status INACTIVE",
+      })
+    ).toBe(true);
   });
 
   it("collects blocklist additions for permanently rejected products", () => {
@@ -61,6 +76,6 @@ describe("engine6ProductSelectionBlocklist", () => {
     expect(resolveEngine6ProductSelectionPermanentBlocklistPath()).toContain(
       "product-selection-permanent-blocklist.json"
     );
-    expect(readEngine6ProductSelectionPermanentBlocklist()).toEqual({});
+    expect(typeof readEngine6ProductSelectionPermanentBlocklist()).toBe("object");
   });
 });

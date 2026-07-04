@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "3925OBW",
+    "productUrl": "https://www.viator.com/tours/Sedona/Old-Bear-Wallow-Tour-from-Sedona/d750-3925OBW",
+    "title": "PRIVATE Sedona Jeep Tour 4X4 Climb - Colorado Plateau",
+    "description": {
+      "text": "Climb onto the Colorado Plateau on a private two-hour Pink Jeep 4x4 tour along Schnebly Hill Road and the Old Bear Wallow route above Sedona. Your driver-guide navigates steep sandstone ledges and Mogollon Rim viewpoints while explaining how faulting and erosion created the layered mesas visible from town. The outing emphasizes adrenaline and big-sky panoramas rather than gentle valley loops, with Schnebly Hill Vista providing a high perch over Oak Creek Canyon and the Verde Valley. Private vehicles keep the experience exclusive to your party with time for photos at rim overlooks. Meet at the Pink Jeep Tours base on West State Route 89A; closed-toe shoes and secure hats are recommended for open-air Jeep seating."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $159.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 361
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/49/60.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Pink Jeep 4x4 climb onto the Colorado Plateau",
+      "Schnebly Hill Road ascent with rim-top panoramas",
+      "Old Bear Wallow backcountry routing above Sedona",
+      "Driver-guide commentary on plateau geology",
+      "Exclusive private Jeep for your party only"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at Pink Jeep Tours, 2900 W State Rte 89A, Sedona, AZ 86336. Arrive 15 minutes before your scheduled departure."
+      },
+      "end": {
+        "description": "Return to the Pink Jeep Tours base on West State Route 89A after the plateau descent."
+      }
+    },
+    "itinerarySummary": "Climb onto the Colorado Plateau on a private two-hour Pink Jeep 4x4 tour along Schnebly Hill Road and the Old Bear Wallow route above Sedona.",
+    "itineraryItems": [
+      {
+        "title": "Pink Jeep Tours Base",
+        "description": "Pink Jeep Tours Base check-in at 2900 W State Rte 89A before departure.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Schnebly Hill Vista",
+        "description": "Climb Schnebly Hill Road to Schnebly Hill Vista overlooking Oak Creek Canyon.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mogollon Rim",
+        "description": "Reach Mogollon Rim viewpoints on the Colorado Plateau edge above the Verde Valley.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private Jeep 4x4 transport",
+      "Professional driver-guide",
+      "Bottled water",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the PRIVATE Sedona Jeep Tour 4X4 Climb - Colorado Plateau?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Check in at Pink Jeep Tours, 2900 W State Rte 89A, Sedona, AZ 86336. Arrive 15 minutes before your scheduled departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Jeep Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 159
+      },
+      "currency": "USD"
+    }
+  }
+}

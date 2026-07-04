@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "41377P2",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Capitol-Hill-Guided-Small-Group-Tour/d657-41377P2",
+    "title": "Capitol Hill Small-Group Tour",
+    "description": {
+      "text": "Explore Capitol Hill on a small-group two-and-a-half-hour walking tour covering the US Capitol exterior, Supreme Court, and Library of Congress viewpoints. Your guide explains the legislative campus layout, neoclassical architecture, and neighborhood history around the eastern end of the National Mall. Group size stays limited for easy movement through security-conscious federal blocks. This focused outing suits travelers who want Capitol Hill depth without a full-day city tour."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1584
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ef/3b/86.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group Capitol Hill walking tour",
+      "US Capitol exterior and grounds overview",
+      "Supreme Court and Library of Congress viewpoints",
+      "Guide commentary on legislative branch history",
+      "Two-and-a-half-hour format near the National Mall"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the Capitol South Metro area or confirmed Capitol Hill meeting point."
+      },
+      "end": {
+        "description": "Tour ends near the Library of Congress or your agreed Capitol Hill endpoint."
+      }
+    },
+    "itinerarySummary": "Explore Capitol Hill on a small-group two-and-a-half-hour walking tour covering the US Capitol exterior, Supreme Court, and Library of Congress viewpoints.",
+    "itineraryItems": [
+      {
+        "title": "US Capitol",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Supreme Court",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Library of Congress",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Capitol Hill Neighborhood",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Small-group walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Capitol Hill Small-Group Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Meet your guide at the Capitol South Metro area or confirmed Capitol Hill meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Small Group Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

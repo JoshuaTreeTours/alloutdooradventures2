@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "7812P219",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+    "title": "Georgetown Walking Food Tour",
+    "description": {
+      "text": "Explore Georgetown in Washington, D.C. on a Secret Food Tours walking route with curated dishes at local eateries and guide commentary on the capital's culinary history. The three-hour format covers historic blocks with stops for regional specialties, artisan bites, and neighborhood stories beyond the National Mall. Your licensed guide connects each course to the city's immigrant communities and evolving food scene. This small-group outing suits travelers who want an authentic taste of D.C. on foot."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 210
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/72/ff/7c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Secret Food Tours walking route with multiple food stops",
+      "Curated stops at local Washington, D.C. eateries",
+      "Guide commentary on neighborhood culinary history",
+      "Small-group format near downtown meeting points",
+      "Three-hour guided food experience on foot"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed downtown Washington, D.C. meeting point at your scheduled time."
+      },
+      "end": {
+        "description": "Tour ends near the final tasting stop in the neighborhood covered on your route."
+      }
+    },
+    "itinerarySummary": "Explore Georgetown in Washington, D.",
+    "itineraryItems": [
+      {
+        "title": "Georgetown Meeting Point",
+        "description": "",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Georgetown Historic Neighborhood Walk",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Georgetown First Food Stop",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Georgetown Second Food Stop",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Licensed food guide",
+      "Food samples",
+      "Walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Georgetown Walking Food Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Meet your guide at the confirmed downtown Washington, D.C. meeting point at your scheduled time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Small Group Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

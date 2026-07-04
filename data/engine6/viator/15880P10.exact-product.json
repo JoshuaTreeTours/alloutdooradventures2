@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "15880P10",
+    "productUrl": "https://www.viator.com/tours/Sedona/Outback/d750-15880P10",
+    "title": "Sedona Off-Road Jeep Tour: Rugged Western Canyons & Wildlife",
+    "description": {
+      "text": "Trade pavement for a three-hour rugged Jeep safari through western Sedona canyons in Coconino National Forest backcountry. Drivers climb rocky tracks past Snoopy Rock and Bear Mountain Trail viewpoints with chances to spot mule deer, javelina, and raptors above juniper flats. You'll trade chapel stops for thrills and remote scenery, appealing to adventure seekers who want dust, tilt, and wide canyon silence minutes from town. Guides interpret how water carved slot sections and how indigenous peoples used these drainages for travel and gathering. This is among Sedona's most popular off-road experiences for good reason—book early for peak season afternoons and wear clothes you do not mind getting dusty."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $134.81",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1462
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/25/df/5f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Three-hour rugged western Sedona Jeep safari",
+      "Coconino National Forest backcountry canyon routing",
+      "Snoopy Rock and Bear Mountain Trail viewpoints",
+      "Wildlife viewing opportunities for deer and javelina",
+      "High-adventure off-road format with expert drivers"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at the Sedona Jeep tour staging area confirmed at booking. Arrive 15 minutes early."
+      },
+      "end": {
+        "description": "Return to the Sedona staging area after the western canyon loop."
+      }
+    },
+    "itinerarySummary": "Trade pavement for a three-hour rugged Jeep safari through western Sedona canyons in Coconino National Forest backcountry.",
+    "itineraryItems": [
+      {
+        "title": "Coconino National Forest",
+        "description": "Enter Coconino National Forest backroads west of Sedona for the rugged canyon loop.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Snoopy Rock",
+        "description": "Pass Snoopy Rock formation where eroded sandstone resembles the cartoon beagle profile.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Cathedral Rock",
+        "description": "View Cathedral Rock spires from western canyon vantage points above Oak Creek.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Bear Mountain Trail",
+        "description": "Stop near Bear Mountain Trail country for canyon panoramas and wildlife scanning.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Jeep 4x4 transport",
+      "Professional driver-guide",
+      "National forest access",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sedona Off-Road Jeep Tour: Rugged Western Canyons & Wildlife?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Check in at the Sedona Jeep tour staging area confirmed at booking. Arrive 15 minutes early."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Jeep Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 134.81
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "162351P6",
+    "productUrl": "https://www.viator.com/tours/Sedona/Award-Winning-Sedona-Stargazing-with-TripAdvisor-Hall-of-Fame-Company/d750-162351P6",
+    "title": "Sedona Stargazing Tours LLC",
+    "description": {
+      "text": "Experience Sedona's renowned dark skies with a TripAdvisor Hall of Fame stargazing company at a protected viewing site in the Verde Valley near Oak Creek, away from town glow. Certified astronomy guides set up high-powered telescopes and walk your small group through planets, star clusters, nebulae, and the Milky Way arc above Arizona's red rock country. The outing balances eyepiece time with constellation storytelling suited to first-time stargazers and repeat visitors alike. Sessions run about 75 minutes with seasonal start times tied to sunset and sky conditions. Dress in warm layers for the elevation, bring a red-light flashlight if you have one, and expect a quiet field experience focused on clear-sky viewing rather than a lecture hall format."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "1 hour 15 minutes (approx.)",
+    "priceFrom": "From $120.00",
+    "reviews": {
+      "combinedAverageRating": 4.3,
+      "totalReviews": 955
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/f2/eb/a8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "TripAdvisor Hall of Fame stargazing operator in Sedona",
+      "High-powered telescopes at a Verde Valley dark-sky site",
+      "Guided views of planets, nebulae, and the Milky Way",
+      "Small-group format away from Sedona light pollution",
+      "Seasonal evening departures timed to sunset"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Verde Valley School area dark-sky staging point near Sedona. Confirm your exact meeting location and start time when booking."
+      },
+      "end": {
+        "description": "Return to the Verde Valley School meeting area after the final telescope viewing session."
+      }
+    },
+    "itinerarySummary": "Experience Sedona's renowned dark skies with a TripAdvisor Hall of Fame stargazing company at a protected viewing site in the Verde Valley near Oak Creek, away from town glow.",
+    "itineraryItems": [
+      {
+        "title": "Verde Valley School",
+        "description": "Gather at the Verde Valley School area for a dark-sky briefing before telescope setup.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional astronomy guide",
+      "Telescope viewing session",
+      "Constellation orientation",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sedona Stargazing Tours LLC?",
+        "answer": "The planned duration is 1 hour 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Meet at the Verde Valley School area dark-sky staging point near Sedona. Confirm your exact meeting location and start time when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "Attractions & Museums"
+      },
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 120
+      },
+      "currency": "USD"
+    }
+  }
+}

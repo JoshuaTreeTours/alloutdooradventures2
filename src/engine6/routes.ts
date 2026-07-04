@@ -962,6 +962,259 @@ export const ENGINE6_GLACIER_TOUR_PATH_PREFIX =
 export const isEngine6GlacierTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_GLACIER_TOUR_PATH_PREFIX);
 
+export const ENGINE6_SEDONA_162351P6_PRODUCT_CODE = "162351P6";
+export const ENGINE6_SEDONA_162351P6_ROUTE =
+  "/destinations/arizona/sedona/tours/sedona-stargazing-tours-llc-162351P6";
+export const ENGINE6_SEDONA_321860P2_PRODUCT_CODE = "321860P2";
+export const ENGINE6_SEDONA_321860P2_ROUTE =
+  "/destinations/arizona/sedona/tours/the-night-sky-star-story-galaxy-and-sedona-story-tour-321860P2";
+export const ENGINE6_SEDONA_327849P2_PRODUCT_CODE = "327849P2";
+export const ENGINE6_SEDONA_327849P2_ROUTE =
+  "/destinations/arizona/sedona/tours/everything-sedona-20-mile-sedona-helicopter-tour-327849P2";
+export const ENGINE6_SEDONA_327849P1_PRODUCT_CODE = "327849P1";
+export const ENGINE6_SEDONA_327849P1_ROUTE =
+  "/destinations/arizona/sedona/tours/mogollon-rim-80-mile-sedona-helicopter-tour-327849P1";
+export const ENGINE6_SEDONA_25265P29_PRODUCT_CODE = "25265P29";
+export const ENGINE6_SEDONA_25265P29_ROUTE =
+  "/destinations/arizona/sedona/tours/mogollon-rim-jeep-tour-from-sedona-25265P29";
+export const ENGINE6_SEDONA_189623P3_PRODUCT_CODE = "189623P3";
+export const ENGINE6_SEDONA_189623P3_ROUTE =
+  "/destinations/arizona/sedona/tours/bliss-sedona-s-most-luxurious-wine-tour-lunch-included-189623P3";
+export const ENGINE6_SEDONA_325517P1_PRODUCT_CODE = "325517P1";
+export const ENGINE6_SEDONA_325517P1_ROUTE =
+  "/destinations/arizona/sedona/tours/vortex-to-vineyards-by-abc-wildlife-host-rachel-reenstr-325517P1";
+export const ENGINE6_SEDONA_109073P8_PRODUCT_CODE = "109073P8";
+export const ENGINE6_SEDONA_109073P8_ROUTE =
+  "/destinations/arizona/sedona/tours/private-sedona-scenic-full-day-experience-your-day-your-109073P8";
+export const ENGINE6_SEDONA_129182P3_PRODUCT_CODE = "129182P3";
+export const ENGINE6_SEDONA_129182P3_ROUTE =
+  "/destinations/arizona/sedona/tours/sedona-sacred-places-and-vortex-private-tour-129182P3";
+export const ENGINE6_SEDONA_129182P1_PRODUCT_CODE = "129182P1";
+export const ENGINE6_SEDONA_129182P1_ROUTE =
+  "/destinations/arizona/sedona/tours/private-custom-tours-in-sedona-129182P1";
+export const ENGINE6_SEDONA_393812P1_PRODUCT_CODE = "393812P1";
+export const ENGINE6_SEDONA_393812P1_ROUTE =
+  "/destinations/arizona/sedona/tours/sedona-easy-hiking-tour-with-a-private-guide-393812P1";
+export const ENGINE6_SEDONA_338750P2_PRODUCT_CODE = "338750P2";
+export const ENGINE6_SEDONA_338750P2_ROUTE =
+  "/destinations/arizona/sedona/tours/sedona-creekside-of-cathedral-rock-hike-with-a-private-338750P2";
+export const ENGINE6_SEDONA_393812P3_PRODUCT_CODE = "393812P3";
+export const ENGINE6_SEDONA_393812P3_ROUTE =
+  "/destinations/arizona/sedona/tours/sedona-cathedral-rock-hiking-tour-with-a-private-guide-393812P3";
+export const ENGINE6_SEDONA_129182P2_PRODUCT_CODE = "129182P2";
+export const ENGINE6_SEDONA_129182P2_ROUTE =
+  "/destinations/arizona/sedona/tours/sunset-sedona-sacred-places-gourmet-picnic-dinner-and-s-129182P2";
+export const ENGINE6_SEDONA_3925OBW_PRODUCT_CODE = "3925OBW";
+export const ENGINE6_SEDONA_3925OBW_ROUTE =
+  "/destinations/arizona/sedona/tours/private-sedona-jeep-tour-4x4-climb-colorado-plateau-3925OBW";
+export const ENGINE6_SEDONA_3925P1_PRODUCT_CODE = "3925P1";
+export const ENGINE6_SEDONA_3925P1_ROUTE =
+  "/destinations/arizona/sedona/tours/private-sedona-jeep-tour-mild-4x4-red-rock-panoramic-3925P1";
+export const ENGINE6_SEDONA_25271P1_PRODUCT_CODE = "25271P1";
+export const ENGINE6_SEDONA_25271P1_ROUTE =
+  "/destinations/arizona/sedona/tours/private-customizable-sedona-vortex-jeep-tour-25271P1";
+export const ENGINE6_SEDONA_15880P21_PRODUCT_CODE = "15880P21";
+export const ENGINE6_SEDONA_15880P21_ROUTE =
+  "/destinations/arizona/sedona/tours/ultimate-sedona-jeep-tour-vortex-landmarks-scenic-views-15880P21";
+export const ENGINE6_SEDONA_15880P10_PRODUCT_CODE = "15880P10";
+export const ENGINE6_SEDONA_15880P10_ROUTE =
+  "/destinations/arizona/sedona/tours/sedona-off-road-jeep-tour-rugged-western-canyons-wildli-15880P10";
+export const ENGINE6_SEDONA_32242P1_PRODUCT_CODE = "32242P1";
+export const ENGINE6_SEDONA_32242P1_ROUTE =
+  "/destinations/arizona/sedona/tours/sedona-s-only-guided-atv-tour-western-red-rock-backcoun-32242P1";
+export const ENGINE6_SEDONA_291644P1_PRODUCT_CODE = "291644P1";
+export const ENGINE6_SEDONA_291644P1_ROUTE =
+  "/destinations/arizona/sedona/tours/sedona-vortex-odyssey-a-spiritual-scientific-adventure-291644P1";
+export const ENGINE6_SEDONA_115255P2_PRODUCT_CODE = "115255P2";
+export const ENGINE6_SEDONA_115255P2_ROUTE =
+  "/destinations/arizona/sedona/tours/hopi-cultural-and-archaeological-day-trip-from-sedona-o-115255P2";
+
+export const ENGINE6_SEDONA_TOUR_PATH_PREFIX =
+  "/destinations/arizona/sedona/tours/";
+
+export const isEngine6SedonaTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_SEDONA_TOUR_PATH_PREFIX);
+
+export const ENGINE6_WASHINGTON_DC_67327P4_PRODUCT_CODE = "67327P4";
+export const ENGINE6_WASHINGTON_DC_67327P4_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/private-night-time-monuments-tour-of-dc-67327P4";
+export const ENGINE6_WASHINGTON_DC_7953P7_PRODUCT_CODE = "7953P7";
+export const ENGINE6_WASHINGTON_DC_7953P7_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/private-washington-dc-night-city-tour-7953P7";
+export const ENGINE6_WASHINGTON_DC_67327P13_PRODUCT_CODE = "67327P13";
+export const ENGINE6_WASHINGTON_DC_67327P13_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/private-black-history-tour-dc-67327P13";
+export const ENGINE6_WASHINGTON_DC_149066P1_PRODUCT_CODE = "149066P1";
+export const ENGINE6_WASHINGTON_DC_149066P1_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/dc-after-dark-luxury-suv-tour-149066P1";
+export const ENGINE6_WASHINGTON_DC_255730P191_PRODUCT_CODE = "255730P191";
+export const ENGINE6_WASHINGTON_DC_255730P191_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/national-mall-at-dusk-private-tour-255730P191";
+export const ENGINE6_WASHINGTON_DC_67327P5_PRODUCT_CODE = "67327P5";
+export const ENGINE6_WASHINGTON_DC_67327P5_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/private-mt-vernon-arlington-cemetery-67327P5";
+export const ENGINE6_WASHINGTON_DC_41503P1_PRODUCT_CODE = "41503P1";
+export const ENGINE6_WASHINGTON_DC_41503P1_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/private-dc-monuments-at-night-bike-41503P1";
+export const ENGINE6_WASHINGTON_DC_41503P2_PRODUCT_CODE = "41503P2";
+export const ENGINE6_WASHINGTON_DC_41503P2_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/customized-private-bike-tour-41503P2";
+export const ENGINE6_WASHINGTON_DC_6349P59_PRODUCT_CODE = "6349P59";
+export const ENGINE6_WASHINGTON_DC_6349P59_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/mount-vernon-estate-and-old-town-alexandria-6349P59";
+export const ENGINE6_WASHINGTON_DC_6766SIGTOUR_PRODUCT_CODE = "6766SIGTOUR";
+export const ENGINE6_WASHINGTON_DC_6766SIGTOUR_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/dc-in-a-day-monuments-and-potomac-cruise-6766SIGTOUR";
+export const ENGINE6_WASHINGTON_DC_67327P3_PRODUCT_CODE = "67327P3";
+export const ENGINE6_WASHINGTON_DC_67327P3_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/private-dc-and-arlington-cemetery-67327P3";
+export const ENGINE6_WASHINGTON_DC_7812P219_PRODUCT_CODE = "7812P219";
+export const ENGINE6_WASHINGTON_DC_7812P219_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/washington-dc-secret-food-tours-walking-tasting-7812P219";
+export const ENGINE6_WASHINGTON_DC_6349DAYTOUR_PRODUCT_CODE = "6349DAYTOUR";
+export const ENGINE6_WASHINGTON_DC_6349DAYTOUR_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/washington-dc-in-one-day-6349DAYTOUR";
+export const ENGINE6_WASHINGTON_DC_6349NIGHT_PRODUCT_CODE = "6349NIGHT";
+export const ENGINE6_WASHINGTON_DC_6349NIGHT_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/dc-monument-night-tour-6349NIGHT";
+export const ENGINE6_WASHINGTON_DC_6766P11_PRODUCT_CODE = "6766P11";
+export const ENGINE6_WASHINGTON_DC_6766P11_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/dc-national-mall-night-tour-6766P11";
+export const ENGINE6_WASHINGTON_DC_41377P2_PRODUCT_CODE = "41377P2";
+export const ENGINE6_WASHINGTON_DC_41377P2_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/capitol-hill-small-group-41377P2";
+export const ENGINE6_WASHINGTON_DC_60725P1_PRODUCT_CODE = "60725P1";
+export const ENGINE6_WASHINGTON_DC_60725P1_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/see-the-city-segway-60725P1";
+export const ENGINE6_WASHINGTON_DC_14782P1_PRODUCT_CODE = "14782P1";
+export const ENGINE6_WASHINGTON_DC_14782P1_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/u-street-food-history-14782P1";
+export const ENGINE6_WASHINGTON_DC_5046WAS_MON_PRODUCT_CODE = "5046WAS_MON";
+export const ENGINE6_WASHINGTON_DC_5046WAS_MON_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/monuments-by-moonlight-trolley-5046WAS_MON";
+export const ENGINE6_WASHINGTON_DC_6349VIPDC_PRODUCT_CODE = "6349VIPDC";
+export const ENGINE6_WASHINGTON_DC_6349VIPDC_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/best-of-dc-vip-capitol-archives-6349VIPDC";
+export const ENGINE6_WASHINGTON_DC_2384P20_PRODUCT_CODE = "2384P20";
+export const ENGINE6_WASHINGTON_DC_2384P20_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/washington-dc-bike-tour-of-the-national-mall-2384P20";
+export const ENGINE6_WASHINGTON_DC_5769MTVN_PRODUCT_CODE = "5769MTVN";
+export const ENGINE6_WASHINGTON_DC_5769MTVN_ROUTE =
+  "/destinations/district-of-columbia/washington/tours/mount-vernon-and-old-town-alexandria-day-trip-5769MTVN";
+
+export const ENGINE6_WASHINGTON_DC_TOUR_PATH_PREFIX =
+  "/destinations/district-of-columbia/washington/tours/";
+
+export const isEngine6WashingtonDcTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_WASHINGTON_DC_TOUR_PATH_PREFIX);
+
+export const ENGINE6_CHICAGO_5580ARC_PRODUCT_CODE = "5580ARC";
+export const ENGINE6_CHICAGO_5580ARC_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-architecture-river-cruise-5580ARC";
+export const ENGINE6_CHICAGO_76126P2_PRODUCT_CODE = "76126P2";
+export const ENGINE6_CHICAGO_76126P2_ROUTE =
+  "/destinations/illinois/chicago/tours/lake-and-river-architecture-tour-76126P2";
+export const ENGINE6_CHICAGO_76126P8_PRODUCT_CODE = "76126P8";
+export const ENGINE6_CHICAGO_76126P8_ROUTE =
+  "/destinations/illinois/chicago/tours/lake-michigan-sunset-cruise-in-chicago-76126P8";
+export const ENGINE6_CHICAGO_5580SKY_PRODUCT_CODE = "5580SKY";
+export const ENGINE6_CHICAGO_5580SKY_ROUTE =
+  "/destinations/illinois/chicago/tours/lake-michigan-skyline-cruise-in-chicago-5580SKY";
+export const ENGINE6_CHICAGO_35169P12_PRODUCT_CODE = "35169P12";
+export const ENGINE6_CHICAGO_35169P12_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-skyline-sunset-sail-aboard-a-tall-ship-35169P12";
+export const ENGINE6_CHICAGO_5680NIGHT_PRODUCT_CODE = "5680NIGHT";
+export const ENGINE6_CHICAGO_5680NIGHT_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-by-night-helicopter-tour-5680NIGHT";
+export const ENGINE6_CHICAGO_5680DAY_PRODUCT_CODE = "5680DAY";
+export const ENGINE6_CHICAGO_5680DAY_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-city-sights-helicopter-tour-5680DAY";
+export const ENGINE6_CHICAGO_61552P17_PRODUCT_CODE = "61552P17";
+export const ENGINE6_CHICAGO_61552P17_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-gangster-and-food-walking-tour-61552P17";
+export const ENGINE6_CHICAGO_7812P133_PRODUCT_CODE = "7812P133";
+export const ENGINE6_CHICAGO_7812P133_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-private-walking-food-tour-with-secret-food-tour-7812P133";
+export const ENGINE6_CHICAGO_8841P19_PRODUCT_CODE = "8841P19";
+export const ENGINE6_CHICAGO_8841P19_ROUTE =
+  "/destinations/illinois/chicago/tours/best-of-chicago-architecture-and-highlights-city-privat-8841P19";
+export const ENGINE6_CHICAGO_188341P1_PRODUCT_CODE = "188341P1";
+export const ENGINE6_CHICAGO_188341P1_ROUTE =
+  "/destinations/illinois/chicago/tours/your-way-or-the-highway-customized-private-walking-tour-188341P1";
+export const ENGINE6_CHICAGO_130651P13_PRODUCT_CODE = "130651P13";
+export const ENGINE6_CHICAGO_130651P13_ROUTE =
+  "/destinations/illinois/chicago/tours/walking-tour-underground-chicago-via-the-pedway-and-riv-130651P13";
+export const ENGINE6_CHICAGO_3397P10_PRODUCT_CODE = "3397P10";
+export const ENGINE6_CHICAGO_3397P10_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-bike-tour-3397P10";
+export const ENGINE6_CHICAGO_3332BITE_PRODUCT_CODE = "3332BITE";
+export const ENGINE6_CHICAGO_3332BITE_ROUTE =
+  "/destinations/illinois/chicago/tours/tastes-of-chicago-bike-tour-3332BITE";
+export const ENGINE6_CHICAGO_316128P3_PRODUCT_CODE = "316128P3";
+export const ENGINE6_CHICAGO_316128P3_ROUTE =
+  "/destinations/illinois/chicago/tours/private-chicago-scenic-driving-tour-316128P3";
+export const ENGINE6_CHICAGO_5042P100_PRODUCT_CODE = "5042P100";
+export const ENGINE6_CHICAGO_5042P100_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-odyssey-fireworks-dinner-cruise-5042P100";
+export const ENGINE6_CHICAGO_46250P9_PRODUCT_CODE = "46250P9";
+export const ENGINE6_CHICAGO_46250P9_ROUTE =
+  "/destinations/illinois/chicago/tours/private-lake-michigan-sailing-charter-and-sightseeing-c-46250P9";
+export const ENGINE6_CHICAGO_68189P1_PRODUCT_CODE = "68189P1";
+export const ENGINE6_CHICAGO_68189P1_ROUTE =
+  "/destinations/illinois/chicago/tours/chicagos-original-gangster-tour-by-bus-68189P1";
+export const ENGINE6_CHICAGO_61552P8_PRODUCT_CODE = "61552P8";
+export const ENGINE6_CHICAGO_61552P8_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-gangsters-and-ghosts-walking-tour-61552P8";
+export const ENGINE6_CHICAGO_3332DAY_PRODUCT_CODE = "3332DAY";
+export const ENGINE6_CHICAGO_3332DAY_ROUTE =
+  "/destinations/illinois/chicago/tours/bike-tour-of-chicagos-lakefront-neighborhoods-3332DAY";
+export const ENGINE6_CHICAGO_191307P3_PRODUCT_CODE = "191307P3";
+export const ENGINE6_CHICAGO_191307P3_ROUTE =
+  "/destinations/illinois/chicago/tours/gangs-and-mobsters-crime-tour-at-chicago-191307P3";
+export const ENGINE6_CHICAGO_338277P2_PRODUCT_CODE = "338277P2";
+export const ENGINE6_CHICAGO_338277P2_ROUTE =
+  "/destinations/illinois/chicago/tours/small-group-river-boat-tour-in-chicago-338277P2";
+export const ENGINE6_CHICAGO_7812P19_PRODUCT_CODE = "7812P19";
+export const ENGINE6_CHICAGO_7812P19_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-walking-food-tour-with-secret-food-tours-7812P19";
+
+export const ENGINE6_CHICAGO_TOUR_PATH_PREFIX =
+  "/destinations/illinois/chicago/tours/";
+
+export const isEngine6ChicagoTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_CHICAGO_TOUR_PATH_PREFIX);
+
+export const ENGINE6_GSM_THUNDERING_STREAMS_PRODUCT_CODE = "26480P10";
+export const ENGINE6_GSM_THUNDERING_STREAMS_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/thundering-streams-falls-guided-hike-26480P10";
+export const ENGINE6_GSM_HISTORIC_RIVER_TOWN_PRODUCT_CODE = "26480P2";
+export const ENGINE6_GSM_HISTORIC_RIVER_TOWN_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/historic-river-town-ramble-26480P2";
+export const ENGINE6_GSM_CLEAR_CREEK_FALLS_PRODUCT_CODE = "26480P11";
+export const ENGINE6_GSM_CLEAR_CREEK_FALLS_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/clear-creek-falls-hike-26480P11";
+export const ENGINE6_GSM_SCENIC_VAN_TOUR_PRODUCT_CODE = "26480P6";
+export const ENGINE6_GSM_SCENIC_VAN_TOUR_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/smoky-mountain-scenic-van-tour-26480P6";
+export const ENGINE6_GSM_CLASSIC_PARK_TOUR_PRODUCT_CODE = "335817P3";
+export const ENGINE6_GSM_CLASSIC_PARK_TOUR_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/classic-national-park-tour-335817P3";
+export const ENGINE6_GSM_HALF_DAY_FLY_FISHING_PRODUCT_CODE = "335817P10";
+export const ENGINE6_GSM_HALF_DAY_FLY_FISHING_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/half-day-fly-fishing-smoky-mountains-335817P10";
+export const ENGINE6_GSM_FALL_COLOR_TOUR_PRODUCT_CODE = "26480P8";
+export const ENGINE6_GSM_FALL_COLOR_TOUR_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/fall-color-tour-smoky-mountains-26480P8";
+export const ENGINE6_GSM_CUSTOM_PRIVATE_TOUR_PRODUCT_CODE = "26480P14";
+export const ENGINE6_GSM_CUSTOM_PRIVATE_TOUR_ROUTE =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/smokies-custom-private-tour-26480P14";
+
+export const ENGINE6_GSM_TOUR_PATH_PREFIX =
+  "/destinations/tennessee/great-smoky-mountains-national-park/tours/";
+
+export const isEngine6GreatSmokyMountainsTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_GSM_TOUR_PATH_PREFIX);
+
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
   canonicalPath: string;
@@ -2041,6 +2294,105 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_GLACIER_SUNSET_PADDLEBOARD_ROUTE,
     ENGINE6_GLACIER_SUNSET_PADDLEBOARD_PRODUCT_CODE,
+  ],
+  [ENGINE6_SEDONA_162351P6_ROUTE, ENGINE6_SEDONA_162351P6_PRODUCT_CODE],
+  [ENGINE6_SEDONA_321860P2_ROUTE, ENGINE6_SEDONA_321860P2_PRODUCT_CODE],
+  [ENGINE6_SEDONA_327849P2_ROUTE, ENGINE6_SEDONA_327849P2_PRODUCT_CODE],
+  [ENGINE6_SEDONA_327849P1_ROUTE, ENGINE6_SEDONA_327849P1_PRODUCT_CODE],
+  [ENGINE6_SEDONA_25265P29_ROUTE, ENGINE6_SEDONA_25265P29_PRODUCT_CODE],
+  [ENGINE6_SEDONA_189623P3_ROUTE, ENGINE6_SEDONA_189623P3_PRODUCT_CODE],
+  [ENGINE6_SEDONA_325517P1_ROUTE, ENGINE6_SEDONA_325517P1_PRODUCT_CODE],
+  [ENGINE6_SEDONA_109073P8_ROUTE, ENGINE6_SEDONA_109073P8_PRODUCT_CODE],
+  [ENGINE6_SEDONA_129182P3_ROUTE, ENGINE6_SEDONA_129182P3_PRODUCT_CODE],
+  [ENGINE6_SEDONA_129182P1_ROUTE, ENGINE6_SEDONA_129182P1_PRODUCT_CODE],
+  [ENGINE6_SEDONA_393812P1_ROUTE, ENGINE6_SEDONA_393812P1_PRODUCT_CODE],
+  [ENGINE6_SEDONA_338750P2_ROUTE, ENGINE6_SEDONA_338750P2_PRODUCT_CODE],
+  [ENGINE6_SEDONA_393812P3_ROUTE, ENGINE6_SEDONA_393812P3_PRODUCT_CODE],
+  [ENGINE6_SEDONA_129182P2_ROUTE, ENGINE6_SEDONA_129182P2_PRODUCT_CODE],
+  [ENGINE6_SEDONA_3925OBW_ROUTE, ENGINE6_SEDONA_3925OBW_PRODUCT_CODE],
+  [ENGINE6_SEDONA_3925P1_ROUTE, ENGINE6_SEDONA_3925P1_PRODUCT_CODE],
+  [ENGINE6_SEDONA_25271P1_ROUTE, ENGINE6_SEDONA_25271P1_PRODUCT_CODE],
+  [ENGINE6_SEDONA_15880P21_ROUTE, ENGINE6_SEDONA_15880P21_PRODUCT_CODE],
+  [ENGINE6_SEDONA_15880P10_ROUTE, ENGINE6_SEDONA_15880P10_PRODUCT_CODE],
+  [ENGINE6_SEDONA_32242P1_ROUTE, ENGINE6_SEDONA_32242P1_PRODUCT_CODE],
+  [ENGINE6_SEDONA_291644P1_ROUTE, ENGINE6_SEDONA_291644P1_PRODUCT_CODE],
+  [ENGINE6_SEDONA_115255P2_ROUTE, ENGINE6_SEDONA_115255P2_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_67327P4_ROUTE, ENGINE6_WASHINGTON_DC_67327P4_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_7953P7_ROUTE, ENGINE6_WASHINGTON_DC_7953P7_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_67327P13_ROUTE, ENGINE6_WASHINGTON_DC_67327P13_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_149066P1_ROUTE, ENGINE6_WASHINGTON_DC_149066P1_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_255730P191_ROUTE, ENGINE6_WASHINGTON_DC_255730P191_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_67327P5_ROUTE, ENGINE6_WASHINGTON_DC_67327P5_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_41503P1_ROUTE, ENGINE6_WASHINGTON_DC_41503P1_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_41503P2_ROUTE, ENGINE6_WASHINGTON_DC_41503P2_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_6349P59_ROUTE, ENGINE6_WASHINGTON_DC_6349P59_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_6766SIGTOUR_ROUTE, ENGINE6_WASHINGTON_DC_6766SIGTOUR_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_67327P3_ROUTE, ENGINE6_WASHINGTON_DC_67327P3_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_7812P219_ROUTE, ENGINE6_WASHINGTON_DC_7812P219_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_6349DAYTOUR_ROUTE, ENGINE6_WASHINGTON_DC_6349DAYTOUR_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_6349NIGHT_ROUTE, ENGINE6_WASHINGTON_DC_6349NIGHT_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_6766P11_ROUTE, ENGINE6_WASHINGTON_DC_6766P11_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_41377P2_ROUTE, ENGINE6_WASHINGTON_DC_41377P2_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_60725P1_ROUTE, ENGINE6_WASHINGTON_DC_60725P1_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_14782P1_ROUTE, ENGINE6_WASHINGTON_DC_14782P1_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_5046WAS_MON_ROUTE, ENGINE6_WASHINGTON_DC_5046WAS_MON_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_6349VIPDC_ROUTE, ENGINE6_WASHINGTON_DC_6349VIPDC_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_2384P20_ROUTE, ENGINE6_WASHINGTON_DC_2384P20_PRODUCT_CODE],
+  [ENGINE6_WASHINGTON_DC_5769MTVN_ROUTE, ENGINE6_WASHINGTON_DC_5769MTVN_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_5580ARC_ROUTE, ENGINE6_CHICAGO_5580ARC_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_76126P2_ROUTE, ENGINE6_CHICAGO_76126P2_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_76126P8_ROUTE, ENGINE6_CHICAGO_76126P8_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_5580SKY_ROUTE, ENGINE6_CHICAGO_5580SKY_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_35169P12_ROUTE, ENGINE6_CHICAGO_35169P12_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_5680NIGHT_ROUTE, ENGINE6_CHICAGO_5680NIGHT_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_5680DAY_ROUTE, ENGINE6_CHICAGO_5680DAY_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_61552P17_ROUTE, ENGINE6_CHICAGO_61552P17_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_7812P133_ROUTE, ENGINE6_CHICAGO_7812P133_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_8841P19_ROUTE, ENGINE6_CHICAGO_8841P19_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_188341P1_ROUTE, ENGINE6_CHICAGO_188341P1_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_130651P13_ROUTE, ENGINE6_CHICAGO_130651P13_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_3397P10_ROUTE, ENGINE6_CHICAGO_3397P10_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_3332BITE_ROUTE, ENGINE6_CHICAGO_3332BITE_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_316128P3_ROUTE, ENGINE6_CHICAGO_316128P3_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_5042P100_ROUTE, ENGINE6_CHICAGO_5042P100_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_46250P9_ROUTE, ENGINE6_CHICAGO_46250P9_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_68189P1_ROUTE, ENGINE6_CHICAGO_68189P1_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_61552P8_ROUTE, ENGINE6_CHICAGO_61552P8_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_3332DAY_ROUTE, ENGINE6_CHICAGO_3332DAY_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_191307P3_ROUTE, ENGINE6_CHICAGO_191307P3_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_338277P2_ROUTE, ENGINE6_CHICAGO_338277P2_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_7812P19_ROUTE, ENGINE6_CHICAGO_7812P19_PRODUCT_CODE],
+  [
+    ENGINE6_GSM_THUNDERING_STREAMS_ROUTE,
+    ENGINE6_GSM_THUNDERING_STREAMS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_HISTORIC_RIVER_TOWN_ROUTE,
+    ENGINE6_GSM_HISTORIC_RIVER_TOWN_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_CLEAR_CREEK_FALLS_ROUTE,
+    ENGINE6_GSM_CLEAR_CREEK_FALLS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_SCENIC_VAN_TOUR_ROUTE,
+    ENGINE6_GSM_SCENIC_VAN_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_CLASSIC_PARK_TOUR_ROUTE,
+    ENGINE6_GSM_CLASSIC_PARK_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_HALF_DAY_FLY_FISHING_ROUTE,
+    ENGINE6_GSM_HALF_DAY_FLY_FISHING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_FALL_COLOR_TOUR_ROUTE,
+    ENGINE6_GSM_FALL_COLOR_TOUR_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_GSM_CUSTOM_PRIVATE_TOUR_ROUTE,
+    ENGINE6_GSM_CUSTOM_PRIVATE_TOUR_PRODUCT_CODE,
   ],
 ] as const;
 

@@ -65,6 +65,34 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Great Smoky Mountains",
+      matches: tour =>
+        /\/great-smoky-mountains-national-park\//i.test(tour.canonicalPath) ||
+        /\bgreat smoky\b/i.test(tour.city),
+      requireUniqueListingHeroes: true,
+    },
+    {
+      label: "Sedona",
+      matches: tour =>
+        /\/sedona\//i.test(tour.canonicalPath) || /\bsedona\b/i.test(tour.city),
+      requireUniqueListingHeroes: true,
+    },
+    {
+      label: "Washington, D.C.",
+      matches: tour =>
+        /\/district-of-columbia\/washington\//i.test(tour.canonicalPath) ||
+        (/\bwashington\b/i.test(tour.city) &&
+          /\bdistrict of columbia\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
+      label: "Chicago",
+      matches: tour =>
+        /\/illinois\/chicago\//i.test(tour.canonicalPath) ||
+        (/\bchicago\b/i.test(tour.city) && /\billinois\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Napa editorial narrative",
       matches: tour =>
         /\/napa\//i.test(tour.canonicalPath) || /\bnapa\b/i.test(tour.city),

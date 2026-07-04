@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "6349VIPDC",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Viator-VIP-Best-of-DC-Including-US-Capitol-and-National-Archives-Reserved-Access-the-White-House-and-Lincoln-Memorial/d657-6349VIPDC",
+    "title": "Best of DC VIP Capitol and Archives Tour",
+    "description": {
+      "text": "Experience Washington's top landmarks on an eight-hour VIP tour with reserved access to the US Capitol and National Archives alongside exterior stops at the White House and Lincoln Memorial. Skip-the-line entry at key federal sites saves hours compared to independent visits while your guide provides Capitol and founding-documents context. Motorcoach transport links the National Mall with Capitol Hill and Archives appointments. This comprehensive VIP day suits travelers who want interior access plus monuments in one guided outing."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $117.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 2349
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/0b/bc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "VIP tour with reserved Capitol and Archives access",
+      "US Capitol interior visit with guide",
+      "National Archives viewing of founding documents",
+      "White House and Lincoln Memorial exterior stops",
+      "Full-day motorcoach transport from Washington, D.C."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning pickup from select Washington, D.C. hotels or the confirmed VIP departure point."
+      },
+      "end": {
+        "description": "Return to downtown Washington, D.C. after the Lincoln Memorial stop."
+      }
+    },
+    "itinerarySummary": "Experience Washington's top landmarks on an eight-hour VIP tour with reserved access to the US Capitol and National Archives alongside exterior stops at the White House and Lincoln Memorial.",
+    "itineraryItems": [
+      {
+        "title": "US Capitol",
+        "description": "",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "National Archives",
+        "description": "",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "White House",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "National Mall",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Reserved Capitol and Archives entry",
+      "Motorcoach transport",
+      "Hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Best of DC VIP Capitol and Archives Tour?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Morning pickup from select Washington, D.C. hotels or the confirmed VIP departure point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "VIP Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 117
+      },
+      "currency": "USD"
+    }
+  }
+}

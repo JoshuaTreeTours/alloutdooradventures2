@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "5042P100",
+    "productUrl": "https://www.viator.com/tours/Chicago/Chicago-Odyssey-Fireworks-Dinner-Cruise/d673-5042P100",
+    "title": "Chicago Odyssey Fireworks Dinner Cruise",
+    "description": {
+      "text": "Experience a premium fireworks dinner cruise on Lake Michigan with Chicago skyline views aboard Odyssey, with plated dining and live entertainment. The evening includes a multi-course meal, live entertainment, and a front-row seat to Navy Pier fireworks when scheduled. Floor-to-ceiling windows and outdoor decks frame Willis Tower and the Loop as the city lights up. This special-occasion outing suits couples and groups who want a full dinner experience on the water."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $180.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 512
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1f/50/4b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fireworks dinner cruise aboard Odyssey on Lake Michigan",
+      "Multi-course plated dinner with entertainment",
+      "Navy Pier fireworks viewing when scheduled",
+      "Skyline views from indoor and outdoor decks",
+      "Premium special-occasion lakefront experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board Odyssey at the Navy Pier or Chicago Harbor terminal confirmed on your reservation. Arrive 30 minutes early."
+      },
+      "end": {
+        "description": "Disembark at the same terminal after the fireworks and dinner service conclude."
+      }
+    },
+    "itinerarySummary": "Experience a premium fireworks dinner cruise on Lake Michigan with Chicago skyline views aboard Odyssey, with plated dining and live entertainment.",
+    "itineraryItems": [
+      {
+        "title": "Navy Pier",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Michigan",
+        "description": "",
+        "duration": "90 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chicago Harbor",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Grant Park",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Fireworks dinner cruise",
+      "Multi-course dinner",
+      "Live entertainment",
+      "Gratuities"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chicago Odyssey Fireworks Dinner Cruise?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Board Odyssey at the Navy Pier or Chicago Harbor terminal confirmed on your reservation. Arrive 30 minutes early."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Dinner Cruises"
+      },
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Luxury Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 180
+      },
+      "currency": "USD"
+    }
+  }
+}

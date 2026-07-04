@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "5580ARC",
+    "productUrl": "https://www.viator.com/tours/Chicago/Chicago-Architecture-River-Cruise/d673-5580ARC",
+    "title": "Chicago Architecture River Cruise",
+    "description": {
+      "text": "Experience Chicago's world-famous skyline from the water on a guided architecture cruise along the Chicago River. A docent narrates the stories behind Willis Tower, the Wrigley Building, Tribune Tower, and other landmark towers as you pass beneath historic bridges. The open-air upper deck and climate-controlled lower salon keep the ride comfortable in any season. This classic Chicago outing suits first-time visitors who want an efficient introduction to the city's architectural heritage."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "1 hour 15 minutes (approx.)",
+    "priceFrom": "From $53.70",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 12881
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/aa/41/ca.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided architecture cruise along the Chicago River",
+      "Willis Tower and Wrigley Building pass-by views",
+      "Docent commentary on Chicago's landmark skyscrapers",
+      "Open upper deck and enclosed lower salon seating",
+      "75-minute format ideal for a first-day overview"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board at the Michigan Avenue/Wacker Drive dock near the Chicago River. Arrive 15 minutes before departure for check-in."
+      },
+      "end": {
+        "description": "Disembark at the same Michigan Avenue/Wacker Drive dock after the final river loop."
+      }
+    },
+    "itinerarySummary": "Experience Chicago's world-famous skyline from the water on a guided architecture cruise along the Chicago River.",
+    "itineraryItems": [
+      {
+        "title": "Chicago River",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Willis Tower",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Wrigley Building",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "John Hancock Center",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Tribune Tower",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional architecture docent",
+      "75-minute river cruise",
+      "Open-air and indoor seating"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chicago Architecture River Cruise?",
+        "answer": "The planned duration is 1 hour 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Board at the Michigan Avenue/Wacker Drive dock near the Chicago River. Arrive 15 minutes before departure for check-in."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Architecture Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 53.7
+      },
+      "currency": "USD"
+    }
+  }
+}

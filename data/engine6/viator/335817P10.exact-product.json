@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "335817P10",
+    "productUrl": "https://www.viator.com/tours/Gatlinburg/Smoky-Mountains-Half-Day-Fly-Fishing/d24151-335817P10",
+    "title": "Smoky Mountains National Park Half Day Fly Fishing",
+    "description": {
+      "text": "Learn fly fishing on a half-day guided outing along Smoky Mountain streams with professional instruction near Gatlinburg. Guides provide rods, reels, waders, and casting lessons suited to beginners and intermediate anglers, then lead you to productive trout water inside Great Smoky Mountains National Park. Streamside instruction covers reading water, fly selection, and catch-and-release ethics in a scenic Appalachian setting. This half-day format fits travelers who want an active outdoor experience beyond driving tours."
+    },
+    "location": {
+      "city": "Great Smoky Mountains National Park",
+      "state": "Tennessee"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $163.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 12
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/42/eb.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Half-day guided fly fishing in Great Smoky Mountains National Park",
+      "Professional instruction for beginners and intermediate anglers",
+      "Rods, reels, waders, and tackle provided",
+      "Trout streams near the Gatlinburg park gateway",
+      "Catch-and-release streamside coaching"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the tour operator location in Gatlinburg, TN confirmed at booking. Wear quick-dry clothing and closed-toe shoes."
+      },
+      "end": {
+        "description": "Return to the Gatlinburg meeting point after the final streamside session."
+      }
+    },
+    "itinerarySummary": "Learn fly fishing on a half-day guided outing along Smoky Mountain streams with professional instruction near Gatlinburg.",
+    "itineraryItems": [
+      {
+        "title": "Gatlinburg",
+        "description": "Gatlinburg check-in, gear fitting, and casting basics before entering park streams.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Smoky Mountain Streams",
+        "description": "Travel to Smoky Mountain streams for guided trout water with instruction on reading current and structure.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Guided Fly Fishing",
+        "description": "Guided fly fishing streamside coaching on presentation, drift, and catch-and-release handling.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Return to Gatlinburg",
+        "description": "Return gear and recap techniques at the Gatlinburg meeting point.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional fly fishing guide",
+      "Rod, reel, and wader rental",
+      "Flies and tackle",
+      "Casting instruction"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Smoky Mountains National Park Half Day Fly Fishing?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Great Smoky Mountains National Park?",
+        "answer": "Meet at the tour operator location in Gatlinburg, TN confirmed at booking. Wear quick-dry clothing and closed-toe shoes."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Fishing Charters"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 163
+      },
+      "currency": "USD"
+    }
+  }
+}

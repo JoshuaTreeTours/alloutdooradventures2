@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "68189P1",
+    "productUrl": "https://www.viator.com/tours/Chicago/Explore-Chicagos-notorious-mob-and-gangster-past-aboard-a-luxury-bus/d673-68189P1",
+    "title": "Chicago's Original Gangster Tour by Bus",
+    "description": {
+      "text": "Discover Chicago's mob era on a guided bus tour covering Biograph Theater, Holy Name Cathedral, and Loop sites tied to Al Capone and Prohibition gang wars. A costumed or character guide narrates the St. Valentine's Day Massacre, speakeasy culture, and notorious hits that shaped the city's underworld reputation. Comfortable bus transport links North Side and downtown crime landmarks efficiently. This popular outing suits history buffs who want gangster stories without extensive walking."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $42.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 934
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/84/87/25.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Original Chicago gangster bus tour with character guide",
+      "Biograph Theater and St. Valentine's Day Massacre sites",
+      "Palmer House Hilton and Loop mob history stops",
+      "Comfortable luxury bus transport",
+      "Two-hour narrated Prohibition-era outing"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board the tour bus at the confirmed North Side or Loop departure point at your scheduled time."
+      },
+      "end": {
+        "description": "Return to the original departure point after the final gangster history stop."
+      }
+    },
+    "itinerarySummary": "Discover Chicago's mob era on a guided bus tour covering Biograph Theater, Holy Name Cathedral, and Loop sites tied to Al Capone and Prohibition gang wars.",
+    "itineraryItems": [
+      {
+        "title": "Biograph Theater",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Holy Name Cathedral",
+        "description": "",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Palmer House Hilton",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Loop District",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Character guide",
+      "Luxury bus transport",
+      "Gangster history commentary"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chicago's Original Gangster Tour by Bus?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Board the tour bus at the confirmed North Side or Loop departure point at your scheduled time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 42
+      },
+      "currency": "USD"
+    }
+  }
+}

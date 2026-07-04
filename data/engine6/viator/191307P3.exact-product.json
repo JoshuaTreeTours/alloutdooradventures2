@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "191307P3",
+    "productUrl": "https://www.viator.com/tours/Chicago/Gangs-and-Mobsters-Crime-Tour-at-Chicago/d673-191307P3",
+    "title": "Gangs and Mobsters Crime Tour at Chicago",
+    "description": {
+      "text": "Discover Chicago's crime chronicles on a walking tour starting near the Art Institute of Chicago and continuing through Loop sites linked to mob bosses and gang wars. Your guide recounts the careers of Al Capone, Dion O'Bannion, and later organized-crime figures with stops at historic hotels and alley shootout locations. The two-hour format keeps a focused pace through downtown crime geography. Suited for true-crime fans who want expert narration on Chicago's notorious past."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $45.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 256
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/ef/57/70.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Crime and mob history walking tour from the Art Institute area",
+      "Al Capone and Prohibition-era gang stories",
+      "Palmer House Hilton and Loop crime sites",
+      "Biograph Theater history when routed nearby",
+      "Two-hour guided true-crime outing"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the Art Institute of Chicago Michigan Avenue entrance or confirmed nearby meeting point."
+      },
+      "end": {
+        "description": "Tour ends in the Loop near the final crime-history stop."
+      }
+    },
+    "itinerarySummary": "Discover Chicago's crime chronicles on a walking tour starting near the Art Institute of Chicago and continuing through Loop sites linked to mob bosses and gang wars.",
+    "itineraryItems": [
+      {
+        "title": "Art Institute of Chicago",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Palmer House Hilton",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Biograph Theater",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Loop District",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Crime history walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Gangs and Mobsters Crime Tour at Chicago?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Meet your guide at the Art Institute of Chicago Michigan Avenue entrance or confirmed nearby meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 45
+      },
+      "currency": "USD"
+    }
+  }
+}

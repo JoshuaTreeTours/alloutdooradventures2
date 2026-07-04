@@ -1,0 +1,90 @@
+{
+  "product": {
+    "productCode": "321860P2",
+    "productUrl": "https://www.viator.com/tours/Sedona/The-Night-Sky-Galaxy-and-Star-Story-Tour/d750-321860P2",
+    "title": "The Night Sky Star Story, Galaxy, and Sedona Story Tour",
+    "description": {
+      "text": "Experience Sedona after dark on a guided night-sky walk that blends astronomy with mythic constellation stories and local red rock lore. Your guide leads a small group to a scenic Sedona viewing area where you learn to identify major stars and seasonal patterns while hearing the cultural narratives tied to the desert sky. The format is conversational rather than classroom-style, with time to look through provided optics and ask questions about galaxies, planets, and the physics behind what you see. Expect roughly two hours outdoors with a pace suited to families and couples who want an accessible introduction to stargazing in northern Arizona. Bring a jacket for cool canyon evenings and comfortable shoes for short walks on uneven ground between viewing spots."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "2 hours 5 minutes (approx.)",
+    "priceFrom": "From $100.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 278
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/d3/24/90.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided Sedona night-sky walk with constellation storytelling",
+      "Mythic star stories paired with local Sedona history",
+      "Small-group outdoor format about two hours long",
+      "Optics provided for moon, planet, and deep-sky viewing",
+      "Evening departures from central Sedona meeting points"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Sedona meeting location provided at booking. Arrive 10 minutes early for check-in."
+      },
+      "end": {
+        "description": "Finish at the final Sedona viewing area and return to your vehicle after the star-story session."
+      }
+    },
+    "itinerarySummary": "Experience Sedona after dark on a guided night-sky walk that blends astronomy with mythic constellation stories and local red rock lore.",
+    "itineraryItems": [],
+    "inclusions": [
+      "Professional night-sky guide",
+      "Constellation and galaxy orientation",
+      "Optical viewing equipment",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The Night Sky Star Story, Galaxy, and Sedona Story Tour?",
+        "answer": "The planned duration is 2 hours 5 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Meet at the confirmed Sedona meeting location provided at booking. Arrive 10 minutes early for check-in."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 100
+      },
+      "currency": "USD"
+    }
+  }
+}

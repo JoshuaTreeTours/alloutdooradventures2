@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "129182P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/Private-custom-tours/d750-129182P1",
+    "title": "Private Custom Tours in Sedona",
+    "description": {
+      "text": "Build a half-day Sedona itinerary around your group's interests on a private custom tour with hotel pickup and a dedicated guide. Choose emphasis on red rock photography at Sedona Airport Scenic Overlook, architecture at Chapel of the Holy Cross, canyon scenery along Oak Creek, or a moderate walk on Boynton Canyon Trail without matching a large-group pace. Guides adjust routing for mobility, sunset timing, and weather while sharing geology, wildlife, and trail etiquette for Coconino National Forest land. The three- to four-hour format suits families, couples, and multigenerational groups who want expert local navigation plus flexibility to linger at favorite overlooks. Tell your guide your priorities at pickup and the day adapts in real time."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "3 to 4 hours (approx.)",
+    "priceFrom": "From $275.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 46
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/25/db/52.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private custom half-day Sedona sightseeing tour",
+      "Flexible stops at Airport Overlook and Chapel of the Holy Cross",
+      "Optional Boynton Canyon Trail walk with guide pacing",
+      "Oak Creek Canyon scenic drive when time allows",
+      "Hotel pickup and tailored routing for your group"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from your Sedona hotel or vacation rental at the confirmed departure time."
+      },
+      "end": {
+        "description": "Return to your Sedona lodging after the final custom stop."
+      }
+    },
+    "itinerarySummary": "Build a half-day Sedona itinerary around your group's interests on a private custom tour with hotel pickup and a dedicated guide.",
+    "itineraryItems": [
+      {
+        "title": "Sedona Airport Scenic Overlook",
+        "description": "Begin at Sedona Airport Scenic Overlook for wide red rock panoramas and photo time.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chapel of the Holy Cross",
+        "description": "Visit Chapel of the Holy Cross built into the cliffs above Sedona.",
+        "duration": "40 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boynton Canyon Trail",
+        "description": "Optional guided walk on Boynton Canyon Trail among red walls and juniper forest.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Oak Creek Canyon",
+        "description": "Scenic drive through Oak Creek Canyon with pullouts above the creek gorge.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Private transport",
+      "Custom itinerary planning",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Custom Tours in Sedona?",
+        "answer": "The planned duration is 3 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Pickup from your Sedona hotel or vacation rental at the confirmed departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Sightseeing Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 275
+      },
+      "currency": "USD"
+    }
+  }
+}

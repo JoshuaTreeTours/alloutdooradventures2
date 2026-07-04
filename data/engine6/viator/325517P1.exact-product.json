@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "325517P1",
+    "productUrl": "https://www.viator.com/tours/Sedona/VIP-Wine-and-City-tours-with-a-celebrity-tour-guide/d750-325517P1",
+    "title": "Vortex to Vineyards by ABC wildlife host Rachel Reenstra",
+    "description": {
+      "text": "Join Emmy-nominated wildlife host Rachel Reenstra on a VIP half-day pairing Sedona vortex viewpoints with Verde Valley wine tasting. The curated route stops at Sedona Airport Scenic Overlook for red rock panoramas, then continues to Page Springs Cellars and DA Ranch before a tasting and bistro lunch at Javelina Leap Vineyard. Rachel's commentary blends comedy, ecology, and local lore so the outing feels like a hosted adventure rather than a standard shuttle tour. Small groups keep the pace flexible for photos at Airport Mesa and conversation in the tasting room. This experience suits visitors who want both Sedona scenery and Arizona wine culture in one guided afternoon without self-driving between hilltop overlooks and valley-floor vineyards."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "3 to 4 hours (approx.)",
+    "priceFrom": "From $199.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 206
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/24/76/24.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "VIP tour hosted by wildlife personality Rachel Reenstra",
+      "Sedona Airport Scenic Overlook and vortex viewpoint stop",
+      "Tastings at Page Springs Cellars and Javelina Leap Vineyard",
+      "DA Ranch visit in the Page Springs Valley wine corridor",
+      "Small-group format with hosted commentary and photo time"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Sedona pickup location provided at booking. Morning or afternoon departures available."
+      },
+      "end": {
+        "description": "Return to your Sedona pickup point after the Javelina Leap Vineyard stop."
+      }
+    },
+    "itinerarySummary": "Join Emmy-nominated wildlife host Rachel Reenstra on a VIP half-day pairing Sedona vortex viewpoints with Verde Valley wine tasting.",
+    "itineraryItems": [
+      {
+        "title": "Sedona Airport Scenic Overlook",
+        "description": "Photo stop at Sedona Airport Scenic Overlook above the red rock basin and Airport Mesa vortex area.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "DA Ranch",
+        "description": "Visit DA Ranch for an estate tasting in the Page Springs wine corridor.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Page Springs Cellars",
+        "description": "Tour and taste at Page Springs Cellars along Oak Creek's upper watershed.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Javelina Leap Vineyard, Winery & Bistro",
+        "description": "Javelina Leap Vineyard, Winery & Bistro creek-side tasting and lunch stop.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Page Springs Valley",
+        "description": "Scenic drive through Page Springs Valley between Sedona overlooks and valley-floor wineries.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Celebrity host guide",
+      "Luxury vehicle transport",
+      "Winery tastings",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Vortex to Vineyards by ABC wildlife host Rachel Reenstra?",
+        "answer": "The planned duration is 3 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Meet at the confirmed Sedona pickup location provided at booking. Morning or afternoon departures available."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tastings"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 199
+      },
+      "currency": "USD"
+    }
+  }
+}

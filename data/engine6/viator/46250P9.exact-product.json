@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "46250P9",
+    "productUrl": "https://www.viator.com/tours/Chicago/Private-Lake-Michigan-Sailing-Charter-and-Sightseeing-Chicago-Skyline-Cruise/d673-46250P9",
+    "title": "Private Lake Michigan Sailing Charter and Sightseeing Cruise",
+    "description": {
+      "text": "Experience a private sailboat charter on Lake Michigan with Chicago skyline views and captain-led commentary for a two-hour outing. Your party enjoys exclusive use of the vessel with flexible routing around the harbor and open lake. The intimate format suits proposals, celebrations, and small groups who want a personalized water experience. Depart from Burnham Harbor with optional customization of route and pace."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $450.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 54
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/b6/eb/1b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Lake Michigan sailing charter for your group",
+      "Captain-led skyline and harbor commentary",
+      "Flexible two-hour routing from Burnham Harbor",
+      "Exclusive vessel use for celebrations",
+      "Premium private sailing on Chicago's lakefront"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain at Burnham Harbor marina gate confirmed when booking."
+      },
+      "end": {
+        "description": "Return to Burnham Harbor dock after the private sailing charter."
+      }
+    },
+    "itinerarySummary": "Experience a private sailboat charter on Lake Michigan with Chicago skyline views and captain-led commentary for a two-hour outing.",
+    "itineraryItems": [
+      {
+        "title": "Burnham Harbor",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Michigan",
+        "description": "",
+        "duration": "75 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Navy Pier",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Grant Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Private captain",
+      "Private sailing charter",
+      "Safety briefing",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Lake Michigan Sailing Charter and Sightseeing Cruise?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Meet your captain at Burnham Harbor marina gate confirmed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Sailing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 450
+      },
+      "currency": "USD"
+    }
+  }
+}

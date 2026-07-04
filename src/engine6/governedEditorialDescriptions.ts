@@ -98,6 +98,7 @@ const ensureEngine6EditorialLength = (
 const ENGINE6_OVERVIEW_FIRST_DESCRIPTION_CITIES = new Set([
   "Portland",
   "Seattle",
+  "Sedona",
 ]);
 
 const normalizeDescriptionSource = (value?: string | null) =>

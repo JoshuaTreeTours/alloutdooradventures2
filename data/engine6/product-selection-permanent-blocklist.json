@@ -1,1 +1,51 @@
-{}
+{
+  "32453P11": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-SUV-Night-Tour-with-Professional-Guide/d657-32453P11",
+    "title": "Private Under the Stars Night Tour",
+    "reason": "inactive: live Viator API validation failed for deploy-scoped Washington D.C. product",
+    "rejectedAt": "2026-07-03T20:00:00.000Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "6349P24": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Small-Group-Mount-Vernon-and-Arlington-National-Cemetery-Tour/d657-6349P24",
+    "title": "Small Group Mount Vernon and Arlington",
+    "reason": "inactive: live Viator API validation failed for deploy-scoped Washington D.C. product",
+    "rejectedAt": "2026-07-03T20:00:00.000Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "2890P28": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Arlington-Cemetery-Tour/d657-2890P28",
+    "title": "Mt Vernon and Arlington Cemetery Tour",
+    "reason": "inactive: live Viator API validation failed for deploy-scoped Washington D.C. product",
+    "rejectedAt": "2026-07-03T20:00:00.000Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "5713P68": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-DC-Food-and-History-H-Street/d657-5713P68",
+    "title": "Private DC Food and History H Street",
+    "reason": "inactive: live Viator API validation failed for deploy-scoped Washington D.C. product",
+    "rejectedAt": "2026-07-03T20:00:00.000Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "2384P1": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-and-Memorials-Bike-Tour/d657-2384P1",
+    "title": "Monuments and Memorials Bike Tour",
+    "reason": "inactive: live Viator API validation failed for deploy-scoped Washington D.C. product",
+    "rejectedAt": "2026-07-03T20:00:00.000Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "2890P2": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mount-Vernon-Day-Trip-from-Washington-DC/d657-2890P2",
+    "title": "Mount Vernon Day Trip",
+    "reason": "inactive: live Viator API validation failed for deploy-scoped Washington D.C. product",
+    "rejectedAt": "2026-07-03T20:00:00.000Z",
+    "destinationLabel": "Washington, D.C."
+  },
+  "67327P2": {
+    "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
+    "title": "Private Washington DC Monuments Tour",
+    "reason": "removed: Viator API returned HTTP 404 for deploy-scoped Washington D.C. product",
+    "rejectedAt": "2026-07-03T20:00:00.000Z",
+    "destinationLabel": "Washington, D.C."
+  }
+}

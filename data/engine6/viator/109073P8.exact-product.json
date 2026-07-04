@@ -1,0 +1,128 @@
+{
+  "product": {
+    "productCode": "109073P8",
+    "productUrl": "https://www.viator.com/tours/Sedona/Sedona-Scenic-Full-Day-Tour/d750-109073P8",
+    "title": "PRIVATE Sedona Scenic Full-Day Experience - Your Day - Your Way",
+    "description": {
+      "text": "Design your ideal Sedona day on a private seven- to eight-hour tour with a dedicated guide, luxury transport, lunch, and snacks included. The route typically combines Chapel of the Holy Cross, Airport Mesa, Cathedral Rock, Bell Rock, and free time in Uptown Sedona, with an optional side trip to historic Jerome on Cleopatra Hill when your group wants mining-town galleries and valley views. Because the vehicle is yours alone, you set the pace for photography, shopping, short walks, and vortex stops without coordinating around strangers. Guides share red rock geology, Native American heritage, and practical tips for navigating crowded overlooks. This VIP format suits anniversaries, family reunions, and travelers who want one comprehensive Sedona introduction in a single customized outing."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "7 to 8 hours (approx.)",
+    "priceFrom": "From $389.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 19
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/80/b3/29.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private full-day Sedona tour with flexible custom routing",
+      "Chapel of the Holy Cross, Cathedral Rock, and Bell Rock stops",
+      "Airport Mesa scenic overlook and vortex viewpoint time",
+      "Optional Jerome side trip on Cleopatra Hill",
+      "Included lunch, snacks, and luxury private transport"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning pickup from your Sedona hotel or vacation rental. Your guide confirms the day's priorities before departure."
+      },
+      "end": {
+        "description": "Return to your Sedona lodging after the final overlook or Jerome stop."
+      }
+    },
+    "itinerarySummary": "Design your ideal Sedona day on a private seven- to eight-hour tour with a dedicated guide, luxury transport, lunch, and snacks included.",
+    "itineraryItems": [
+      {
+        "title": "Chapel of the Holy Cross",
+        "description": "Visit Chapel of the Holy Cross built into the red cliffs above Sedona.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Airport Mesa",
+        "description": "Stop at Airport Mesa for panoramic views over Sedona's red rock basin.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cathedral Rock",
+        "description": "Photo time near Cathedral Rock viewpoints along Oak Creek.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bell Rock",
+        "description": "Visit Bell Rock and Courthouse Butte area pullouts on Highway 179.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jerome",
+        "description": "Optional visit to historic Jerome for galleries, cafes, and Verde Valley overlooks.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sedona",
+        "description": "Free time in Uptown Sedona for shopping, galleries, and café stops.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Luxury private transport",
+      "Lunch and snacks",
+      "Bottled water",
+      "Flexible custom itinerary"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the PRIVATE Sedona Scenic Full-Day Experience - Your Day - Your Way?",
+        "answer": "The planned duration is 7 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Morning pickup from your Sedona hotel or vacation rental. Your guide confirms the day's priorities before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 389
+      },
+      "currency": "USD"
+    }
+  }
+}

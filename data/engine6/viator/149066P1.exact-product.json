@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "149066P1",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Private-Luxury-Tour-of-Washington-DC-at-Night-with-a-Chauffeur-Late-Model-SUV/d657-149066P1",
+    "title": "DC After Dark Luxury SUV Tour",
+    "description": {
+      "text": "Experience Washington after dark in a late-model luxury SUV with a chauffeur and guide who curate a premium four-hour monuments itinerary. The route emphasizes unhurried stops at the Lincoln Memorial, Jefferson Memorial, and Capitol Hill with optional extensions to Embassy Row or Georgetown. This top-tier outing suits travelers who want white-glove transport, flexible timing, and a private format for special occasions or executive entertaining in the capital."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $821.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 189
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/37/ef/f1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Luxury late-model SUV with chauffeur and guide",
+      "Extended evening stops at major National Mall memorials",
+      "Capitol Hill and White House exterior routing",
+      "Premium private format for up to your party size",
+      "Flexible four-hour itinerary tailored to your interests"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Chauffeur pickup from your Washington, D.C. hotel or private address confirmed at booking."
+      },
+      "end": {
+        "description": "Return to your hotel or requested drop-off point after the final monuments stop."
+      }
+    },
+    "itinerarySummary": "Experience Washington after dark in a late-model luxury SUV with a chauffeur and guide who curate a premium four-hour monuments itinerary.",
+    "itineraryItems": [
+      {
+        "title": "White House",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "35 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jefferson Memorial",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "US Capitol",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Embassy Row",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Chauffeur and professional guide",
+      "Late-model luxury SUV",
+      "Hotel pickup and drop-off",
+      "Bottled water and refreshments"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the DC After Dark Luxury SUV Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Chauffeur pickup from your Washington, D.C. hotel or private address confirmed at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Luxury Tours"
+      },
+      {
+        "label": "Night Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 821
+      },
+      "currency": "USD"
+    }
+  }
+}

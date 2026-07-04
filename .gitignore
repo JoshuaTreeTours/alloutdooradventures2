@@ -100,6 +100,9 @@ jspm_packages/
 tmp/
 temp/
 
+# Engine6 local diagnostic artifacts (written when a Paragon destination build terminates)
+reports/engine6-destination-build-failure.md
+
 # Database
 *.db
 *.sqlite

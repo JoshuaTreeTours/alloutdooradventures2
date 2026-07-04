@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "338750P2",
+    "productUrl": "https://www.viator.com/tours/Sedona/Three-Hour-Creekside-of-Cathedral-Hike-Private-Group/d750-338750P2",
+    "title": "Sedona Creekside of Cathedral Rock Hike With a Private Guide",
+    "description": {
+      "text": "Hike Sedona's creekside trails beneath Cathedral Rock with a private guide who knows the quiet Oak Creek corridors away from crowded parking lots. The four-hour outing follows red rock benches above flowing water, crossing sandy banks and shaded cottonwood groves while your guide identifies desert plants, bird activity, and the geological forces that tilted Sedona's spires skyward. Pace adjusts for your group's ability on moderate terrain with some rocky steps and creek-side footing. This experience suits photographers and nature-focused travelers who want Cathedral Rock perspectives from river level rather than only from highway pullouts. Meet your guide at the confirmed trailhead near Oak Creek; wear traction footwear and sun protection for exposed sections."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $285.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 39
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/08/ae/0f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private guided creekside hike beneath Cathedral Rock",
+      "Oak Creek corridors with red rock and cottonwood scenery",
+      "Local guide pacing on moderate Sedona trail terrain",
+      "Desert ecology and geology interpretation en route",
+      "Four-hour format for unhurried photography and rest stops"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your private guide at the confirmed Oak Creek trailhead near Cathedral Rock. Details provided at booking."
+      },
+      "end": {
+        "description": "Finish at the creekside trail turnaround and return to the Cathedral Rock area trailhead."
+      }
+    },
+    "itinerarySummary": "Hike Sedona's creekside trails beneath Cathedral Rock with a private guide who knows the quiet Oak Creek corridors away from crowded parking lots.",
+    "itineraryItems": [
+      {
+        "title": "Cathedral Rock",
+        "description": "Begin beneath Cathedral Rock along Oak Creek creekside paths with spire views overhead.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Oak Creek",
+        "description": "Follow Oak Creek through cottonwood shade with geology and wildlife commentary.",
+        "duration": "2 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Creekside Overlook",
+        "description": "Reach a creekside overlook for photos of Cathedral Rock reflected above the water.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private hiking guide",
+      "Trail snacks and water",
+      "Safety briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sedona Creekside of Cathedral Rock Hike With a Private Guide?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Meet your private guide at the confirmed Oak Creek trailhead near Cathedral Rock. Details provided at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 285
+      },
+      "currency": "USD"
+    }
+  }
+}

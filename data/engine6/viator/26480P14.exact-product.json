@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "26480P14",
+    "productUrl": "https://www.viator.com/tours/Gatlinburg/Best-of-the-Smokies/d24151-26480P14",
+    "title": "Smokies Custom Private Tour",
+    "description": {
+      "text": "Build your ideal Smoky Mountains day on a private custom tour with A Walk in the Woods naturalist guides. Choose from waterfall hikes, history strolls, high-country vistas, or a mix of short experiences tailored to your group's fitness and interests. Your guide presents options at the meetup, then leads a full-day adventure with a included deli picnic lunch. This private format suits families and small groups who want flexible pacing through Great Smoky Mountains National Park without joining a fixed itinerary group."
+    },
+    "location": {
+      "city": "Great Smoky Mountains National Park",
+      "state": "Tennessee"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $325.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 3
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/04/42/ec.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private full-day custom tour of Great Smoky Mountains National Park",
+      "Guide-curated mix of hikes, vistas, and history stops",
+      "Included deli sandwich picnic lunch",
+      "Flexible pacing for your group's fitness level",
+      "Naturalist guides with Wilderness First Responder certification"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your private guide at 1420 Fighting Creek Gap Rd, Gatlinburg, TN 37738 to select the day's adventure options."
+      },
+      "end": {
+        "description": "Return to the Gatlinburg meeting point after your custom full-day itinerary."
+      }
+    },
+    "itinerarySummary": "Build your ideal Smoky Mountains day on a private custom tour with A Walk in the Woods naturalist guides.",
+    "itineraryItems": [
+      {
+        "title": "Custom Trailhead",
+        "description": "Custom trailhead meetup where your guide presents waterfall, vista, and history options matched to your group.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waterfall Hike",
+        "description": "Primary guided hike to a waterfall or cascade route chosen for your party.",
+        "duration": "2 hours 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Historic Vista",
+        "description": "Historic vista scenic or cultural stop such as a pioneer site or ridge overlook.",
+        "duration": "1 hour 30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Picnic Lunch Stop",
+        "description": "Deli sandwich picnic with chips and cookies at a scenic lunch spot.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private naturalist guide",
+      "Deli picnic lunch",
+      "Custom itinerary planning",
+      "Trail snacks and water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Smokies Custom Private Tour?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Great Smoky Mountains National Park?",
+        "answer": "Meet your private guide at 1420 Fighting Creek Gap Rd, Gatlinburg, TN 37738 to select the day's adventure options."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 325
+      },
+      "currency": "USD"
+    }
+  }
+}

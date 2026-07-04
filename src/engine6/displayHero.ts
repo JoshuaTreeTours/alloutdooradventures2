@@ -34,6 +34,15 @@ export const ENGINE6_ZION_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_GLACIER_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/photo-w/2d/67/82/0b/caption.jpg";
 
+export const ENGINE6_GSM_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/photo-w/2f/0b/2f/15/caption.jpg";
+
+export const ENGINE6_SEDONA_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/0c/0d/63/85.jpg";
+
+export const ENGINE6_CHICAGO_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/aa/41/ca.jpg";
+
 type Engine6HeroCandidateTour = {
   productCode: string;
   heroImageUrl?: string | null;
@@ -48,6 +57,7 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   arizona: {
     "grand-canyon-national-park": ENGINE6_GRAND_CANYON_CANONICAL_CITY_HERO_URL,
+    sedona: ENGINE6_SEDONA_CANONICAL_CITY_HERO_URL,
   },
   wyoming: {
     "yellowstone-national-park": ENGINE6_YELLOWSTONE_CANONICAL_CITY_HERO_URL,
@@ -57,6 +67,12 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   montana: {
     "glacier-national-park": ENGINE6_GLACIER_CANONICAL_CITY_HERO_URL,
+  },
+  tennessee: {
+    "great-smoky-mountains-national-park": ENGINE6_GSM_CANONICAL_CITY_HERO_URL,
+  },
+  illinois: {
+    chicago: ENGINE6_CHICAGO_CANONICAL_CITY_HERO_URL,
   },
 };
 

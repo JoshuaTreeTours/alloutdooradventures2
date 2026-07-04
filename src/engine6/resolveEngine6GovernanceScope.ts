@@ -28,6 +28,12 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     "yellowstone-national-park": ["Yellowstone"],
     "zion-national-park": ["Zion"],
     glacier: ["Glacier"],
+    "great-smoky-mountains-national-park": ["Great Smoky Mountains"],
+    sedona: ["Sedona"],
+    chicago: ["Chicago"],
+    illinois: ["Chicago"],
+    "washington-dc": ["Washington, D.C."],
+    washington: ["Washington, D.C."],
     miami: ["Miami editorial narrative"],
     "new-york": ["New York editorial narrative"],
   };

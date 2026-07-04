@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "6766P11",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Moonlit-Motorcoach-Tour-of-National-Mall/d657-6766P11",
+    "title": "DC National Mall Night Tour",
+    "description": {
+      "text": "Ride a motorcoach through the National Mall on a three-hour moonlit tour with stops at major memorials between the Capitol and Lincoln Memorial. Your guide highlights evening lighting at the Washington Monument, World War II Memorial, and Jefferson Memorial when the route includes Tidal Basin viewpoints. This efficient night outing covers the Mall's core monuments without extensive walking. Departure from downtown Washington, D.C. hotels makes it easy to pair with an evening dinner plan."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $69.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 4189
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/46/37.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Moonlit motorcoach tour of the National Mall",
+      "Washington Monument and WWII Memorial stops",
+      "Lincoln Memorial evening visit",
+      "Jefferson Memorial Tidal Basin viewpoint when routed",
+      "Three-hour format with hotel pickup"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Evening boarding at select Washington, D.C. hotels or the confirmed downtown pickup point."
+      },
+      "end": {
+        "description": "Return to downtown Washington, D.C. after completing the Mall memorial loop."
+      }
+    },
+    "itinerarySummary": "Ride a motorcoach through the National Mall on a three-hour moonlit tour with stops at major memorials between the Capitol and Lincoln Memorial.",
+    "itineraryItems": [
+      {
+        "title": "Washington Monument",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "World War II Memorial",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jefferson Memorial",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Motorcoach transport",
+      "Hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the DC National Mall Night Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Evening boarding at select Washington, D.C. hotels or the confirmed downtown pickup point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 69
+      },
+      "currency": "USD"
+    }
+  }
+}

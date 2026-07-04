@@ -95,11 +95,25 @@ export const shouldPermanentlyBlocklistProductSelectionRejection = (args: {
     .join(" ")
     .toLowerCase();
 
-  return (
-    /inactive|unavailable|removed|discontinued|not_available|reassigned|cross-destination|known-unavailable|not currently bookable|product code mismatch|does not match configured source url/.test(
+  if (
+    /api key not configured|credentials (are )?missing|could not resolve a git base ref/i.test(
       combined
-    ) ||
-    args.reason === "live-validation-failed"
+    )
+  ) {
+    return false;
+  }
+
+  if (
+    /bot protection/i.test(combined) &&
+    !/inactive|http 404|missing product body|unavailable|removed|not currently bookable|known-unavailable/i.test(
+      combined
+    )
+  ) {
+    return false;
+  }
+
+  return /inactive|unavailable|removed|discontinued|not_available|reassigned|cross-destination|known-unavailable|not currently bookable|product code mismatch|does not match configured source url|http 404|missing product body|unusable hero/.test(
+    combined
   );
 };
 

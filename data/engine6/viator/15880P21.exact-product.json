@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "15880P21",
+    "productUrl": "https://www.viator.com/tours/Sedona/Ultimate-Sedona-Experience/d750-15880P21",
+    "title": "Ultimate Sedona Jeep Tour: Vortex, Landmarks & Scenic Views",
+    "description": {
+      "text": "Sedona's longest signature Jeep tour packs vortex sites, landmark stops, and shopping time into five and a half hours of guided red rock exploration. Visit Chapel of the Holy Cross, Airport Mesa, Amitabha Stupa and Peace Park, Lover's Knoll, and Tlaquepaque Arts & Shopping Village while your driver narrates geology, Native history, and Sedona's spiritual reputation. The route balances mild off-road segments with cultural stops so you see natural formations and local craft galleries in one comprehensive day. This is the operator's most complete Jeep itinerary for travelers who want breadth rather than a single-theme vortex or canyon ride. Morning departures include time for lunch near Tlaquepaque; bring sun protection for open-air Jeep seating."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "5 hours 30 minutes (approx.)",
+    "priceFrom": "From $119.23",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 296
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7c/9c/24.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Five-and-a-half-hour comprehensive Sedona Jeep tour",
+      "Chapel of the Holy Cross and Airport Mesa vortex stops",
+      "Amitabha Stupa and Peace Park visit included",
+      "Free time at Tlaquepaque Arts & Shopping Village",
+      "Lover's Knoll scenic viewpoint on the red rock loop"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the tour operator check-in location in Sedona confirmed at booking. Morning departure recommended."
+      },
+      "end": {
+        "description": "Return to the Sedona check-in point after Tlaquepaque and final scenic stops."
+      }
+    },
+    "itinerarySummary": "Sedona's longest signature Jeep tour packs vortex sites, landmark stops, and shopping time into five and a half hours of guided red rock exploration.",
+    "itineraryItems": [
+      {
+        "title": "Chapel of the Holy Cross",
+        "description": "Visit Chapel of the Holy Cross built into Sedona's red cliffs with valley views.",
+        "duration": "40 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tlaquepaque Arts & Shopping Village",
+        "description": "Explore Tlaquepaque Arts & Shopping Village galleries, courtyards, and local shops.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Amitabha Stupa and Peace Park",
+        "description": "Stop at Amitabha Stupa and Peace Park for a Buddhist stupa and meditation garden visit.",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lover's Knoll",
+        "description": "Photo stop at Lover's Knoll viewpoint above Oak Creek red rock formations.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Airport Mesa",
+        "description": "Finish the vortex loop with views from Airport Mesa above Sedona.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Jeep 4x4 transport",
+      "Professional driver-guide",
+      "Comprehensive landmark routing",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ultimate Sedona Jeep Tour: Vortex, Landmarks & Scenic Views?",
+        "answer": "The planned duration is 5 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Meet at the tour operator check-in location in Sedona confirmed at booking. Morning departure recommended."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Jeep Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 119.23
+      },
+      "currency": "USD"
+    }
+  }
+}

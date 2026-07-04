@@ -17,6 +17,7 @@ import {
   parseSitemapTourPaths,
   resolveEngine6Stage2ScopedProductCodes,
 } from "./engine6Stage2GovernanceAudit";
+import { resolveEngine6Stage2GovernanceAuditOutcome } from "./engine6GovernanceMode";
 import {
   buildMerchantFeedBranchScopedGovernanceByProductCode,
   buildMerchantFeedPublishedBaselineCatalog,
@@ -349,6 +350,45 @@ describe("engine6Stage2GovernanceAudit helpers", () => {
     expect(markdown).toContain("Engine6 Stage 2 Governance Audit");
     expect(markdown).toContain("Legacy findings (report-only)");
     expect(markdown).toContain("LEGACYP1");
+  });
+
+  it("warn mode keeps Stage 2 audit exit 0 when blocking findings remain", () => {
+    const report = buildEngine6Stage2GovernanceAuditReport({
+      governanceMode: "warn",
+      mode: "pr-scoped",
+      scopedProductCodes: ["NEWP1"],
+      scopedDestinationLabels: ["Washington, D.C."],
+      fullSiteValidation: false,
+      findings: Array.from({ length: 22 }, (_, index) => ({
+        area: "live-viator" as const,
+        productCode: `NEWP${index + 1}`,
+        severity: "blocking" as const,
+        message: "blocking failure",
+      })),
+    });
+
+    expect(report.blockingPassed).toBe(false);
+    expect(report.totals.blockingFindings).toBe(22);
+    expect(
+      resolveEngine6Stage2GovernanceAuditOutcome({
+        mode: report.governanceMode,
+        blockingPassed: report.blockingPassed,
+        warningFindings: report.totals.warningFindings,
+        legacyFindings: report.totals.legacyFindings,
+      }).exitCode
+    ).toBe(0);
+  });
+
+  it("warn mode reports legacy findings without failing CI", () => {
+    const outcome = resolveEngine6Stage2GovernanceAuditOutcome({
+      mode: "warn",
+      blockingPassed: true,
+      warningFindings: 0,
+      legacyFindings: 2,
+    });
+
+    expect(outcome.exitCode).toBe(0);
+    expect(outcome.shouldReportLegacyFindings).toBe(true);
   });
 });
 

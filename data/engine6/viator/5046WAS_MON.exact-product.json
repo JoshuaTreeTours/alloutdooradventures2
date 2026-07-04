@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "5046WAS_MON",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-by-Moonlight-Night-Tour-by-Trolley/d657-5046WAS_MON",
+    "title": "Monuments by Moonlight Trolley Tour",
+    "description": {
+      "text": "Ride an open-air trolley through Washington's monuments on a two-and-a-half-hour moonlight tour with stops at the Lincoln Memorial, Vietnam Veterans Memorial, and Iwo Jima Memorial. The trolley format adds a classic sightseeing feel while your guide narrates the illuminated National Mall corridor. Evening departures capture memorial lighting with fewer daytime crowds. This budget-friendly night tour suits families and first-time visitors who want an efficient monuments loop."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $53.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 3748
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/93/c5/b9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Open-air trolley moonlight monuments tour",
+      "Lincoln Memorial and Reflecting Pool stop",
+      "Vietnam Veterans Memorial visit",
+      "Iwo Jima Memorial photo stop",
+      "Evening departure from downtown Washington, D.C."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board the trolley at the confirmed downtown Washington, D.C. departure point in the evening."
+      },
+      "end": {
+        "description": "Return to the downtown departure point after the final memorial stop."
+      }
+    },
+    "itinerarySummary": "Ride an open-air trolley through Washington's monuments on a two-and-a-half-hour moonlight tour with stops at the Lincoln Memorial, Vietnam Veterans Memorial, and Iwo Jima Memorial.",
+    "itineraryItems": [
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vietnam Veterans Memorial",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Korean War Veterans Memorial",
+        "description": "",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "US Marine Corps War Memorial",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Trolley transport"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Monuments by Moonlight Trolley Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Board the trolley at the confirmed downtown Washington, D.C. departure point in the evening."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Trolley Tours"
+      },
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 53
+      },
+      "currency": "USD"
+    }
+  }
+}

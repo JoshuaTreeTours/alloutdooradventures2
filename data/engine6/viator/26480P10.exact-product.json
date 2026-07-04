@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "26480P10",
+    "productUrl": "https://www.viator.com/tours/Gatlinburg/Thundering-Cascades-of-the-Smokies/d24151-26480P10",
+    "title": "Thundering Streams and Falls of the Smokies Guided Hiking Tour",
+    "description": {
+      "text": "Explore pristine cascades and waterfalls on a guided hike through lesser-known Smoky Mountain trails with A Walk in the Woods naturalist guides. Warm up on a popular park trail, then follow your guide onto quieter paths where thundering streams and seasonal wildflowers frame the route. Guides share tree identification, Appalachian ecology, and park history while pacing the moderate climb over downed trees and wet creek crossings. Ideal for active travelers who want waterfall scenery without navigating the park alone."
+    },
+    "location": {
+      "city": "Great Smoky Mountains National Park",
+      "state": "Tennessee"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $76.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 130
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/37/4b/91.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided waterfall hike on lesser-traveled Smoky Mountain trails",
+      "Certified naturalist guides with Wilderness First Responder training",
+      "Seasonal wildflower and swimming-hole stops when conditions allow",
+      "Moderate adventure with creek crossings and elevation gain",
+      "Departs from the Sugarlands Visitor Center area"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at 1420 Fighting Creek Gap Rd, Gatlinburg, TN 37738 near Sugarlands Visitor Center. Arrive 15 minutes early; a two-guest minimum applies."
+      },
+      "end": {
+        "description": "Return to the Sugarlands Visitor Center trailhead after the final cascade stop."
+      }
+    },
+    "itinerarySummary": "Explore pristine cascades and waterfalls on a guided hike through lesser-known Smoky Mountain trails with A Walk in the Woods naturalist guides.",
+    "itineraryItems": [
+      {
+        "title": "Sugarlands Visitor Center",
+        "description": "Check in at Sugarlands Visitor Center with your naturalist guide and review trail conditions for the day's waterfall route.",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Little River Trail",
+        "description": "Warm up on a more popular Smoky Mountain trail with smaller cascade photo stops.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thundering Cascades",
+        "description": "Follow your guide onto a less-traveled section of the park to thundering stream sections.",
+        "duration": "1 hour",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hidden Waterfalls",
+        "description": "Reach secluded hidden waterfalls with interpretive commentary on park ecology.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional naturalist guide",
+      "Trail snacks and water",
+      "Bear safety briefing",
+      "Park parking guidance"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Thundering Streams and Falls of the Smokies Guided Hiking Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Great Smoky Mountains National Park?",
+        "answer": "Meet at 1420 Fighting Creek Gap Rd, Gatlinburg, TN 37738 near Sugarlands Visitor Center. Arrive 15 minutes early; a two-guest minimum applies."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      },
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 76
+      },
+      "currency": "USD"
+    }
+  }
+}

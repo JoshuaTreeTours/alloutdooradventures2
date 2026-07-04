@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "7812P133",
+    "productUrl": "https://www.viator.com/tours/Chicago/Private-Tour-Secret-Food-Tours-Chicago/d673-7812P133",
+    "title": "Chicago Private Walking Food Tour With Secret Food Tours",
+    "description": {
+      "text": "Discover Chicago's neighborhoods on a private Secret Food Tours route built for your party alone. A licensed guide leads a paced walk through River North, West Loop, or Fulton Market with curated tastings at local favorites known for deep-dish pizza, Italian beef, and craft bites. Commentary covers immigrant food traditions and the chefs shaping modern Chicago dining. This premium private format suits groups who want an unhurried culinary deep dive without joining strangers."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $299.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 48
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/70/a1/b9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Secret Food Tours route for your party only",
+      "Curated tastings at Chicago neighborhood eateries",
+      "River North and West Loop routing options",
+      "Licensed guide with local culinary commentary",
+      "Three-hour private walking food experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your private guide at the confirmed downtown Chicago meeting point at your scheduled time."
+      },
+      "end": {
+        "description": "Tour concludes near the final tasting stop in the neighborhood visited on your route."
+      }
+    },
+    "itinerarySummary": "Discover Chicago's neighborhoods on a private Secret Food Tours route built for your party alone.",
+    "itineraryItems": [
+      {
+        "title": "River North",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "West Loop",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fulton Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chicago Riverwalk",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private licensed food guide",
+      "Food samples",
+      "Private walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chicago Private Walking Food Tour With Secret Food Tours?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Meet your private guide at the confirmed downtown Chicago meeting point at your scheduled time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 299
+      },
+      "currency": "USD"
+    }
+  }
+}

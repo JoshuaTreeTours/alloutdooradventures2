@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "41503P1",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Private-DC-Monuments-at-Night-by-Bike/d657-41503P1",
+    "title": "Private DC Monuments at Night Bike Tour",
+    "description": {
+      "text": "Cycle the National Mall after dark on a private three-hour bike tour with a guide who leads your party along lighted memorial paths. The route connects the Lincoln Memorial, Jefferson Memorial, and Capitol Hill approaches with stops timed for evening photography and fewer daytime crowds. Bikes, helmets, and safety briefing are included with pacing matched to your group's fitness. This active format suits travelers who want monuments sightseeing with an outdoor evening workout."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $580.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 55
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/8e/dd/db.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private night bike tour of DC monuments",
+      "Lincoln and Jefferson Memorial stops by bicycle",
+      "Capitol Hill and National Mall riding route",
+      "Bikes, helmets, and safety briefing included",
+      "Guide-paced outing for your party only"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the bike rental staging area near the National Mall confirmed when booking. Arrive 15 minutes early for fitting."
+      },
+      "end": {
+        "description": "Return bikes to the staging area after the final memorial stop."
+      }
+    },
+    "itinerarySummary": "Cycle the National Mall after dark on a private three-hour bike tour with a guide who leads your party along lighted memorial paths.",
+    "itineraryItems": [
+      {
+        "title": "National Mall",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jefferson Memorial",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "US Capitol",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Washington Monument",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Private bike guide",
+      "Bike and helmet rental",
+      "Safety briefing",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private DC Monuments at Night Bike Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Meet at the bike rental staging area near the National Mall confirmed when booking. Arrive 15 minutes early for fitting."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Night Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 580
+      },
+      "currency": "USD"
+    }
+  }
+}

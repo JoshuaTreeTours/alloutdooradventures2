@@ -1,0 +1,341 @@
+{
+  "destinationLabel": "Chicago",
+  "destinationCitySlug": "chicago",
+  "viatorDestinationSlug": "Chicago",
+  "targetPremiumShare": 0.5,
+  "slots": [
+    {
+      "experienceType": "architecture-cruise",
+      "desiredCount": 2,
+      "candidates": [
+        {
+          "productCode": "5580ARC",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Chicago-Architecture-River-Cruise/d673-5580ARC",
+          "title": "Chicago Architecture River Cruise",
+          "experienceType": "architecture-cruise",
+          "priceFrom": 53.7,
+          "categories": ["Cruises & Sailing", "Sightseeing Tours"],
+          "priority": 1
+        },
+        {
+          "productCode": "76126P2",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Lake-and-River-Architecture-Tour/d673-76126P2",
+          "title": "Lake and River Architecture Tour",
+          "experienceType": "architecture-cruise",
+          "priceFrom": 49,
+          "categories": ["Cruises & Sailing", "Architecture Tours"],
+          "commercialTier": "premium",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "experienceType": "sunset-cruise",
+      "desiredCount": 2,
+      "candidates": [
+        {
+          "productCode": "76126P8",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Chicago-Sunset-Cruise/d673-76126P8",
+          "title": "Lake Michigan Sunset Cruise in Chicago",
+          "experienceType": "sunset-cruise",
+          "priceFrom": 45,
+          "categories": ["Cruises & Sailing", "Sunset Tours"],
+          "priority": 1
+        },
+        {
+          "productCode": "35169P12",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Chicago-Skyline-Sunset-Sail-Aboard-Official-Flagship-of-Chicago-148-S-V-Windy/d673-35169P12",
+          "title": "Chicago Skyline Sunset Sail Aboard a Tall Ship",
+          "experienceType": "sunset-cruise",
+          "priceFrom": 55,
+          "categories": ["Cruises & Sailing", "Sunset Tours"],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "experienceType": "lake-cruise",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "5580SKY",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Lake-Michigan-Sightseeing-Cruise/d673-5580SKY",
+          "title": "Lake Michigan Skyline Cruise in Chicago",
+          "experienceType": "lake-cruise",
+          "priceFrom": 33,
+          "categories": ["Cruises & Sailing", "Sightseeing Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "river-cruise",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "338277P2",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Small-Group-River-Boat-Tour-in-Chicago/d673-338277P2",
+          "title": "Small-Group River Boat Tour in Chicago",
+          "experienceType": "river-cruise",
+          "priceFrom": 89,
+          "categories": ["Small Group Tours", "Cruises & Sailing"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "helicopter",
+      "desiredCount": 2,
+      "candidates": [
+        {
+          "productCode": "5680NIGHT",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Chicago-by-Night-Helicopter-Tour/d673-5680NIGHT",
+          "title": "Chicago by Night Helicopter Tour",
+          "experienceType": "helicopter",
+          "priceFrom": 249,
+          "categories": ["Helicopter Tours", "Night Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        },
+        {
+          "productCode": "5680DAY",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Chicago-City-Sights-Helicopter-Tour/d673-5680DAY",
+          "title": "Chicago City Sights Helicopter Tour",
+          "experienceType": "helicopter",
+          "priceFrom": 189,
+          "categories": ["Helicopter Tours", "Sightseeing Tours"],
+          "commercialTier": "premium",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "experienceType": "food-gangster",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "61552P17",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Gangster-Food-Tour/d673-61552P17",
+          "title": "Chicago Gangster and Food Walking Tour",
+          "experienceType": "food-gangster",
+          "priceFrom": 89,
+          "categories": ["Food Tours", "Walking Tours", "Historical Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "food-tour-private",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "7812P133",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Private-Tour-Secret-Food-Tours-Chicago/d673-7812P133",
+          "title": "Chicago Private Walking Food Tour With Secret Food Tours",
+          "experienceType": "food-tour-private",
+          "priceFrom": 299,
+          "categories": ["Private Tours", "Food Tours", "Walking Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "private-walking",
+      "desiredCount": 2,
+      "candidates": [
+        {
+          "productCode": "8841P19",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Chicago-Architecture-and-Highlights-with-Local-Treat-Small-Group-Walking-Tour/d673-8841P19",
+          "title": "Best of Chicago: Architecture and Highlights City Private Tour",
+          "experienceType": "private-walking",
+          "priceFrom": 245,
+          "categories": ["Private Tours", "Walking Tours", "Architecture Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        },
+        {
+          "productCode": "188341P1",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Private-4-hour-Walking-Tour/d673-188341P1",
+          "title": "Your Way or the Highway: Customized Private Walking Tour in Chicago",
+          "experienceType": "private-walking",
+          "priceFrom": 350,
+          "categories": ["Private Tours", "Walking Tours", "Sightseeing Tours"],
+          "commercialTier": "premium",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "experienceType": "walking-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "130651P13",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Walking-Tour-Chicago-Passageways-Pedway-and-Riverwalk/d673-130651P13",
+          "title": "Walking Tour: Underground Chicago via the Pedway and Riverwalk",
+          "experienceType": "walking-tour",
+          "priceFrom": 65,
+          "categories": ["Walking Tours", "Sightseeing Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "bike-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "3397P10",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Chicago-Bike-Tour/d673-3397P10",
+          "title": "Chicago Bike Tour",
+          "experienceType": "bike-tour",
+          "priceFrom": 60,
+          "categories": ["Bike Tours", "Sightseeing Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "bike-neighborhood",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "3332DAY",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Chicago-Lakefront-Neighborhoods-Bicycle-Tour/d673-3332DAY",
+          "title": "Bike Tour of Chicago's Lakefront Neighborhoods",
+          "experienceType": "bike-neighborhood",
+          "priceFrom": 55,
+          "categories": ["Bike Tours", "Sightseeing Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "bike-food",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "3332BITE",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Tastes-of-Chicago-Bike-Tour-Chicago-Style-Pizza-Beer-Cupcakes-and-Hot-Dogs/d673-3332BITE",
+          "title": "Tastes of Chicago Bike Tour",
+          "experienceType": "bike-food",
+          "priceFrom": 75,
+          "categories": ["Bike Tours", "Food Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "private-driving",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "316128P3",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Private-Chicago-Scenic-Driving-Tour/d673-316128P3",
+          "title": "Private Chicago Scenic Driving Tour",
+          "experienceType": "private-driving",
+          "priceFrom": 425,
+          "categories": ["Private Tours", "City Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "premium-dinner-cruise",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "5042P100",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Chicago-Odyssey-Fireworks-Dinner-Cruise/d673-5042P100",
+          "title": "Chicago Odyssey Fireworks Dinner Cruise",
+          "experienceType": "premium-dinner-cruise",
+          "priceFrom": 180,
+          "categories": ["Dinner Cruises", "Cruises & Sailing"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "private-sailing",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "46250P9",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Private-Lake-Michigan-Sailing-Charter-and-Sightseeing-Chicago-Skyline-Cruise/d673-46250P9",
+          "title": "Private Lake Michigan Sailing Charter and Sightseeing Cruise",
+          "experienceType": "private-sailing",
+          "priceFrom": 450,
+          "categories": ["Private Tours", "Cruises & Sailing"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "gangster-bus",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "68189P1",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Explore-Chicagos-notorious-mob-and-gangster-past-aboard-a-luxury-bus/d673-68189P1",
+          "title": "Chicago's Original Gangster Tour by Bus",
+          "experienceType": "gangster-bus",
+          "priceFrom": 42,
+          "categories": ["Bus Tours", "Historical Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "gangster-walking",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "61552P8",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Gangsters-and-Ghosts-Tour-in-Chicago/d673-61552P8",
+          "title": "Chicago: Gangsters and Ghosts Walking Tour",
+          "experienceType": "gangster-walking",
+          "priceFrom": 35,
+          "categories": ["Walking Tours", "Ghost Tours", "Historical Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "gangster-history",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "191307P3",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Gangs-and-Mobsters-Crime-Tour-at-Chicago/d673-191307P3",
+          "title": "Gangs and Mobsters Crime Tour at Chicago",
+          "experienceType": "gangster-history",
+          "priceFrom": 45,
+          "categories": ["Walking Tours", "Historical Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "food-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "7812P19",
+          "sourceUrl": "https://www.viator.com/tours/Chicago/Small-Group-Chicago-Loop-Food-Walking-Tour/d673-7812P19",
+          "title": "Chicago Walking Food Tour With Secret Food Tours",
+          "experienceType": "food-tour",
+          "priceFrom": 89,
+          "categories": ["Food Tours", "Walking Tours"],
+          "priority": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "14782P1",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Walking-Food-Tour-Of-The-Historic-U-Street-Neighborhood/d657-14782P1",
+    "title": "U Street Walking Food Tour",
+    "description": {
+      "text": "Discover U Street on a three-hour walking food tour through the historic corridor known for jazz heritage, civil rights history, and vibrant dining. Sample dishes at local establishments while your guide explains the neighborhood's role in Black Broadway and DC cultural life. Stops may include soul food, Ethiopian cuisine, and classic DC flavors along the main U Street strip. This food-focused outing suits travelers who want local culture beyond monument sightseeing."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $112.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 253
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/69/43/13.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "U Street food and history walking tour",
+      "Multiple food tastings at neighborhood restaurants",
+      "Guide commentary on Black Broadway heritage",
+      "Civil rights and jazz history along the corridor",
+      "Three-hour format in central Washington, D.C."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed U Street Metro area meeting point at your scheduled departure time."
+      },
+      "end": {
+        "description": "Tour ends on U Street near the final tasting stop."
+      }
+    },
+    "itinerarySummary": "Discover U Street on a three-hour walking food tour through the historic corridor known for jazz heritage, civil rights history, and vibrant dining.",
+    "itineraryItems": [
+      {
+        "title": "Washington U Street Corridor",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ben's Chili Bowl Area",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Food Tasting Stop",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ethiopian Dining District",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Food guide",
+      "Food tastings",
+      "Walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the U Street Walking Food Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Meet your guide at the confirmed U Street Metro area meeting point at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 112
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "destinationLabel": "Great Smoky Mountains National Park",
+  "destinationCitySlug": "great-smoky-mountains-national-park",
+  "targetPremiumShare": 0.25,
+  "slots": [
+    {
+      "experienceType": "guided-hiking",
+      "desiredCount": 2,
+      "candidates": [
+        {
+          "productCode": "26480P10",
+          "sourceUrl": "https://www.viator.com/tours/Gatlinburg/Thundering-Cascades-of-the-Smokies/d24151-26480P10",
+          "title": "Thundering Streams and Falls of the Smokies Guided Hiking Tour",
+          "experienceType": "guided-hiking",
+          "priceFrom": 76,
+          "categories": ["Hiking Tours", "Nature and Wildlife Tours"],
+          "priority": 1
+        },
+        {
+          "productCode": "26480P11",
+          "sourceUrl": "https://www.viator.com/tours/Gatlinburg/Romance-Streamside-Holiday-Special/d24151-26480P11",
+          "title": "Clear Creek Falls Hike",
+          "experienceType": "guided-hiking",
+          "priceFrom": 99,
+          "categories": ["Hiking Tours", "Nature and Wildlife Tours"],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "experienceType": "history-nature-walk",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "26480P2",
+          "sourceUrl": "https://www.viator.com/tours/Gatlinburg/Explore-a-Simpler-Time-Smoky-Mountain-Tour/d24151-26480P2",
+          "title": "Historic River Town Ramble",
+          "experienceType": "history-nature-walk",
+          "priceFrom": 85,
+          "categories": ["Walking Tours", "Historical Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "scenic-van-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "26480P6",
+          "sourceUrl": "https://www.viator.com/tours/Gatlinburg/Smoky-Mountain-High-Van-tour/d24151-26480P6",
+          "title": "Smoky Mountain Guided Scenic High Van Tour",
+          "experienceType": "scenic-van-tour",
+          "priceFrom": 150,
+          "categories": ["Bus Tours", "Sightseeing Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "classic-park-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "335817P3",
+          "sourceUrl": "https://www.viator.com/tours/Gatlinburg/Classic-Driving-Tour-of-the-Smokies/d24151-335817P3",
+          "title": "The Classic National Park Tour",
+          "experienceType": "classic-park-tour",
+          "priceFrom": 85,
+          "categories": ["Bus Tours", "Half-day Tours", "Hiking Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "fly-fishing",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "335817P10",
+          "sourceUrl": "https://www.viator.com/tours/Gatlinburg/Smoky-Mountains-Half-Day-Fly-Fishing/d24151-335817P10",
+          "title": "Smoky Mountains National Park Half Day Fly Fishing",
+          "experienceType": "fly-fishing",
+          "priceFrom": 163,
+          "categories": ["Fishing Charters", "Nature and Wildlife Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "seasonal-scenic-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "26480P8",
+          "sourceUrl": "https://www.viator.com/tours/Gatlinburg/Fall-Color-Tour-in-the-Smoky-Mountains/d24151-26480P8",
+          "title": "Fall Color Tour in the Smoky Mountains",
+          "experienceType": "seasonal-scenic-tour",
+          "priceFrom": 170,
+          "categories": ["Bus Tours", "Nature and Wildlife Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "private-custom-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "26480P14",
+          "sourceUrl": "https://www.viator.com/tours/Gatlinburg/Best-of-the-Smokies/d24151-26480P14",
+          "title": "Smokies Custom Private Tour",
+          "experienceType": "private-custom-tour",
+          "priceFrom": 325,
+          "categories": ["Private Tours", "Hiking Tours", "Full-day Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    }
+  ]
+}

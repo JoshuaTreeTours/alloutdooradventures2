@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "6349NIGHT",
+    "productUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Guided-Night-Tour/d657-6349NIGHT",
+    "title": "DC Monument Night Tour",
+    "description": {
+      "text": "Tour Washington's illuminated monuments on a three-hour evening motorcoach outing with stops at the Lincoln Memorial, Vietnam Veterans Memorial, and Iwo Jima Memorial. A guide provides commentary as you travel the National Mall corridor after dark when memorial lighting creates dramatic photo opportunities. This popular night format suits first-time visitors who want an efficient monuments loop without walking long distances. Hotel pickup options are available from downtown Washington, D.C."
+    },
+    "location": {
+      "city": "Washington",
+      "state": "District of Columbia"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $69.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 6284
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/8e/dc/db.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided three-hour DC monuments night tour",
+      "Lincoln Memorial and Reflecting Pool stop",
+      "Vietnam Veterans Memorial visit",
+      "Iwo Jima Memorial photo opportunity",
+      "Motorcoach transport with evening hotel pickup"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Evening pickup from select Washington, D.C. hotels or the confirmed downtown departure point."
+      },
+      "end": {
+        "description": "Return to downtown Washington, D.C. after the final memorial stop."
+      }
+    },
+    "itinerarySummary": "Tour Washington's illuminated monuments on a three-hour evening motorcoach outing with stops at the Lincoln Memorial, Vietnam Veterans Memorial, and Iwo Jima Memorial.",
+    "itineraryItems": [
+      {
+        "title": "Lincoln Memorial",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Vietnam Veterans Memorial",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Korean War Veterans Memorial",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "US Marine Corps War Memorial",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Motorcoach transport",
+      "Hotel pickup"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the DC Monument Night Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Washington, D.C.?",
+        "answer": "Evening pickup from select Washington, D.C. hotels or the confirmed downtown departure point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 69
+      },
+      "currency": "USD"
+    }
+  }
+}

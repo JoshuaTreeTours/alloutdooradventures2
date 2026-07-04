@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "25265P29",
+    "productUrl": "https://www.viator.com/tours/Sedona/Mogollon-Rim-Jeep-Tour/d750-25265P29",
+    "title": "Mogollon Rim Jeep Tour from Sedona",
+    "description": {
+      "text": "Climb a historic stagecoach road above Sedona on a two-hour Mogollon Rim Jeep tour that gains roughly 1,500 feet toward pine-country overlooks above Oak Creek Canyon. Your guide narrates cowboy-era cattle routes, local wildlife, and red rock geology while navigating Schnebly Hill Road berms and rim-top pullouts. This is among Sedona's bumpiest Jeep routes, suited to adventurous travelers who want high-country views rather than a mild valley loop. Expect jolts, dust, and open-air seating; the outing is not recommended for guests with serious back or neck sensitivity. Check in at the operator meeting point confirmed at booking and bring sun protection for exposed rim stops."
+    },
+    "location": {
+      "city": "Sedona",
+      "state": "Arizona"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $136.25",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 64
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/fc/46.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Mogollon Rim Jeep climb on historic Schnebly Hill Road",
+      "Rough two-hour off-road route with rim-top panoramas",
+      "Oak Creek Canyon overlooks from high-country pullouts",
+      "Guide commentary on Sedona wildlife and frontier history",
+      "Small-group Jeep format above Sedona's red rock valley"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the tour operator check-in location in Sedona confirmed when booking. Arrive 15 minutes before departure."
+      },
+      "end": {
+        "description": "Return to the Sedona check-in point after the Mogollon Rim descent."
+      }
+    },
+    "itinerarySummary": "Climb a historic stagecoach road above Sedona on a two-hour Mogollon Rim Jeep tour that gains roughly 1,500 feet toward pine-country overlooks above Oak Creek Canyon.",
+    "itineraryItems": [
+      {
+        "title": "Schnebly Hill Road",
+        "description": "Enjoy Schnebly Hill Road's historic stagecoach climb with frontier history commentary.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mogollon Rim",
+        "description": "Mogollon Rim pullouts frame pine-country views above Sedona's red rock basin.",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Oak Creek Canyon Overlook",
+        "description": "Oak Creek Canyon Overlook reveals the gorge and valley floor far below the rim road.",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Jeep 4x4 transport",
+      "Professional guide",
+      "All fees and taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mogollon Rim Jeep Tour from Sedona?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Sedona?",
+        "answer": "Meet at the tour operator check-in location in Sedona confirmed when booking. Arrive 15 minutes before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Jeep Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 136.25
+      },
+      "currency": "USD"
+    }
+  }
+}
