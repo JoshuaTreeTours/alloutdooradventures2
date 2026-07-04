@@ -168,6 +168,24 @@ describe("resolveEngine6ChangedProductCodes", () => {
     ).toEqual(["422797P4"]);
   });
 
+  it("scopes modified exact-product fixtures as deploy-scoped additions", () => {
+    expect(
+      resolveEngine6ProductScopeFromChangedFiles({
+        changedFiles: [
+          {
+            status: "M",
+            path: "data/engine6/viator/199627P12.exact-product.json",
+          },
+        ],
+        catalogDiffs: {},
+      })
+    ).toEqual({
+      deployScoped: ["199627P12"],
+      addedOrModified: ["199627P12"],
+      removedOnly: [],
+    });
+  });
+
   it("prefers VERCEL_GIT_PREVIOUS_SHA over origin/main on Vercel", () => {
     const previousVercel = process.env.VERCEL;
     const previousSha = process.env.VERCEL_GIT_PREVIOUS_SHA;

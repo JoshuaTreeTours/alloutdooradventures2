@@ -60,6 +60,22 @@ import {
   isEngine6ProductSelectionBlocklisted,
   type Engine6ProductSelectionGovernanceReport,
 } from "./engine6ProductSelectionGovernance.js";
+import {
+  ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS,
+  validateEngine6DestinationInfrastructure,
+  type Engine6DestinationInfrastructureReport,
+} from "./engine6DestinationInfrastructureValidation.js";
+import {
+  auditEngine6ProductHeroGovernance,
+  type Engine6ProductHeroGovernanceReport,
+} from "./engine6ProductHeroGovernance.js";
+import {
+  formatEngine6ParagonBuildScopeGovernanceReport,
+  validateEngine6ParagonBuildScope,
+  type Engine6ParagonBuildScopeGovernanceReport,
+} from "./engine6ParagonBuildScopeGovernance.js";
+import { extractEngine6DestinationSlugFromChangedPath } from "./resolveEngine6GovernanceScope.js";
+import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures.js";
 
 export type Engine6Stage2GovernanceAuditMode = Engine6LiveViatorValidationMode;
 
@@ -72,7 +88,10 @@ export type Engine6Stage2GovernanceArea =
   | "itinerary-title"
   | "route-sitemap-merchant-feed-parity"
   | "product-code-blocklist"
-  | "destination-cohort";
+  | "destination-cohort"
+  | "destination-infrastructure"
+  | "product-hero"
+  | "paragon-build-scope";
 
 export type Engine6Stage2GovernanceFindingSeverity =
   | "blocking"
@@ -115,6 +134,9 @@ export type Engine6Stage2GovernanceAuditReport = {
   liveViator?: Engine6LiveViatorProductionValidationReport;
   productSelection?: Engine6ProductSelectionGovernanceReport;
   merchantFeedImage?: MerchantFeedImageGovernanceReport;
+  productHero?: Engine6ProductHeroGovernanceReport;
+  destinationInfrastructure?: Engine6DestinationInfrastructureReport[];
+  paragonBuildScope?: Engine6ParagonBuildScopeGovernanceReport;
   notes: string[];
 };
 
@@ -131,6 +153,9 @@ const STAGE2_AREAS: Engine6Stage2GovernanceArea[] = [
   "route-sitemap-merchant-feed-parity",
   "product-code-blocklist",
   "destination-cohort",
+  "destination-infrastructure",
+  "product-hero",
+  "paragon-build-scope",
 ];
 
 const normalizeProductCode = (productCode: string | null | undefined) =>
@@ -1068,6 +1093,164 @@ export const auditEngine6MerchantFeedImageGovernanceFindings = (args: {
   return findings;
 };
 
+export const auditEngine6DestinationInfrastructureGovernance = (args: {
+  changedFiles: readonly { status: string; path: string }[];
+  scopedProductCodes: ReadonlySet<string>;
+  governanceMode: Engine6GovernanceMode;
+  mode: Engine6Stage2GovernanceAuditMode;
+}) => {
+  const destinationSlugs = new Set<string>();
+
+  for (const file of args.changedFiles) {
+    if (file.status === "D") {
+      continue;
+    }
+
+    const slug = extractEngine6DestinationSlugFromChangedPath(file.path);
+    if (slug) {
+      destinationSlugs.add(slug);
+    }
+  }
+
+  const reports: Engine6DestinationInfrastructureReport[] = [];
+  const findings: Engine6Stage2GovernanceFinding[] = [];
+
+  for (const slug of [...destinationSlugs].sort()) {
+    const spec = ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS[slug];
+    if (!spec) {
+      continue;
+    }
+
+    const report = validateEngine6DestinationInfrastructure({
+      spec,
+      deployScopedProductCodes: [...args.scopedProductCodes],
+    });
+    reports.push(report);
+
+    for (const failure of report.blockingFailures) {
+      findings.push(
+        createEngine6Stage2GovernanceFinding({
+          area: "destination-infrastructure",
+          productCode: null,
+          message: `${spec.destinationLabel}: ${failure.message}`,
+          governanceMode: args.governanceMode,
+          mode: args.mode,
+          scopedProductCodes: args.scopedProductCodes,
+          alwaysBlock: true,
+        })
+      );
+    }
+  }
+
+  return { findings, reports };
+};
+
+export const auditEngine6ProductHeroGovernanceFindings = async (args: {
+  tours: Engine6Tour[];
+  scopedProductCodes: ReadonlySet<string>;
+  governanceMode: Engine6GovernanceMode;
+  mode: Engine6Stage2GovernanceAuditMode;
+  validateImageUrl?: ValidateEngine6MerchantFeedImageUrl;
+}) => {
+  const rawPayloadByProductCode = new Map(
+    ENGINE6_VALIDATION_FIXTURES.map(fixture => [
+      normalizeProductCode(fixture.productCode),
+      fixture.rawPayload,
+    ])
+  );
+
+  const scopedTours = args.tours.filter(tour =>
+    args.scopedProductCodes.has(normalizeProductCode(tour.productCode))
+  );
+
+  if (scopedTours.length === 0) {
+    return {
+      findings: [],
+      report: {
+        auditedProductCodes: [],
+        findings: [],
+        pass: true,
+      },
+    };
+  }
+
+  const report = await auditEngine6ProductHeroGovernance({
+    tours: scopedTours,
+    rawPayloadByProductCode,
+    scopedProductCodes: args.scopedProductCodes,
+    validateImageUrl: args.validateImageUrl,
+  });
+
+  const findings = report.findings.map(finding =>
+    createEngine6Stage2GovernanceFinding({
+      area: "product-hero",
+      productCode: finding.productCode,
+      message: finding.message,
+      governanceMode: args.governanceMode,
+      mode: args.mode,
+      scopedProductCodes: args.scopedProductCodes,
+      warningOnly: finding.severity !== "blocking",
+    })
+  );
+
+  return { findings, report };
+};
+
+export const auditEngine6ParagonBuildScopeGovernanceFindings = (args: {
+  changedFiles: readonly { status: string; path: string }[];
+  branchModifiedProductCodes: ReadonlySet<string>;
+  scopedProductCodes: ReadonlySet<string>;
+  governanceMode: Engine6GovernanceMode;
+  mode: Engine6Stage2GovernanceAuditMode;
+  baselineMerchantFeedCsv?: string;
+  proposedMerchantFeedCsv?: string;
+  baselineSitemapXml?: string;
+  proposedSitemapXml?: string;
+}) => {
+  const report = validateEngine6ParagonBuildScope({
+    changedFiles: args.changedFiles,
+    branchScopedProductCodes: args.branchModifiedProductCodes,
+    addedOrModifiedProductCodes: [...args.branchModifiedProductCodes],
+    deployScopedProductCodes: [...args.scopedProductCodes],
+    baselineMerchantFeedCsv: args.baselineMerchantFeedCsv,
+    proposedMerchantFeedCsv: args.proposedMerchantFeedCsv,
+    baselineSitemapXml: args.baselineSitemapXml,
+    proposedSitemapXml: args.proposedSitemapXml,
+  });
+
+  const findings: Engine6Stage2GovernanceFinding[] = [];
+
+  for (const blocked of report.blockedFiles) {
+    findings.push(
+      createEngine6Stage2GovernanceFinding({
+        area: "paragon-build-scope",
+        productCode: null,
+        message: `${blocked.path}: ${blocked.detail}`,
+        governanceMode: args.governanceMode,
+        mode: args.mode,
+        scopedProductCodes: args.scopedProductCodes,
+        alwaysBlock: true,
+      })
+    );
+  }
+
+  for (const warning of report.warnings) {
+    findings.push(
+      createEngine6Stage2GovernanceFinding({
+        area: "paragon-build-scope",
+        productCode: null,
+        message: `${warning.path}: ${warning.detail}`,
+        governanceMode: args.governanceMode,
+        mode: args.mode,
+        scopedProductCodes: args.scopedProductCodes,
+        warningOnly: true,
+      })
+    );
+  }
+
+  return { findings, report };
+};
+
 const summarizeAreas = (
   findings: Engine6Stage2GovernanceFinding[]
 ): Engine6Stage2GovernanceAreaSummary[] =>
@@ -1103,6 +1286,9 @@ export const buildEngine6Stage2GovernanceAuditReport = (args: {
   liveViator?: Engine6LiveViatorProductionValidationReport;
   productSelection?: Engine6ProductSelectionGovernanceReport;
   merchantFeedImage?: MerchantFeedImageGovernanceReport;
+  productHero?: Engine6ProductHeroGovernanceReport;
+  destinationInfrastructure?: Engine6DestinationInfrastructureReport[];
+  paragonBuildScope?: Engine6ParagonBuildScopeGovernanceReport;
   notes?: string[];
 }): Engine6Stage2GovernanceAuditReport => {
   const areaSummaries = summarizeAreas(args.findings);
@@ -1145,6 +1331,9 @@ export const buildEngine6Stage2GovernanceAuditReport = (args: {
     liveViator: args.liveViator,
     productSelection: args.productSelection,
     merchantFeedImage: args.merchantFeedImage,
+    productHero: args.productHero,
+    destinationInfrastructure: args.destinationInfrastructure,
+    paragonBuildScope: args.paragonBuildScope,
     notes: args.notes ?? [],
   };
 };
@@ -1165,6 +1354,9 @@ export type BuildEngine6Stage2GovernanceAuditArgs = {
   liveViator?: Engine6LiveViatorProductionValidationReport;
   productSelection?: Engine6ProductSelectionGovernanceReport;
   skipAsyncImageAudit?: boolean;
+  changedFiles?: readonly { status: string; path: string }[];
+  baselineMerchantFeedCsv?: string;
+  baselineSitemapTourXmlContent?: string;
 };
 
 export const buildEngine6Stage2GovernanceAudit = async (
@@ -1344,6 +1536,42 @@ export const buildEngine6Stage2GovernanceAudit = async (
     })
   );
 
+  const changedFiles = args.changedFiles ?? scopeResolution.changedFiles;
+  const destinationInfrastructureAudit = auditEngine6DestinationInfrastructureGovernance({
+    changedFiles,
+    scopedProductCodes: scopedSet,
+    governanceMode,
+    mode,
+  });
+  findings.push(...destinationInfrastructureAudit.findings);
+
+  const paragonBuildScopeAudit = auditEngine6ParagonBuildScopeGovernanceFindings({
+    changedFiles,
+    branchModifiedProductCodes,
+    scopedProductCodes: scopedSet,
+    governanceMode,
+    mode,
+    baselineMerchantFeedCsv: args.baselineMerchantFeedCsv,
+    proposedMerchantFeedCsv: args.merchantFeedCsvContent,
+    baselineSitemapXml: args.baselineSitemapTourXmlContent,
+    proposedSitemapXml: args.sitemapTourXmlContent,
+  });
+  findings.push(...paragonBuildScopeAudit.findings);
+
+  let productHeroAudit:
+    | Awaited<ReturnType<typeof auditEngine6ProductHeroGovernanceFindings>>
+    | undefined;
+  if (!args.skipAsyncImageAudit) {
+    productHeroAudit = await auditEngine6ProductHeroGovernanceFindings({
+      tours: args.tours,
+      scopedProductCodes: scopedSet,
+      governanceMode,
+      mode,
+      validateImageUrl: args.validateImageUrl,
+    });
+    findings.push(...productHeroAudit.findings);
+  }
+
   return buildEngine6Stage2GovernanceAuditReport({
     governanceMode,
     mode,
@@ -1355,6 +1583,9 @@ export const buildEngine6Stage2GovernanceAudit = async (
     liveViator: args.liveViator,
     productSelection: args.productSelection,
     merchantFeedImage,
+    productHero: productHeroAudit?.report,
+    destinationInfrastructure: destinationInfrastructureAudit.reports,
+    paragonBuildScope: paragonBuildScopeAudit.report,
     notes,
   });
 };
