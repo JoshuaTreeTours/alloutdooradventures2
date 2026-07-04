@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "320113P1",
+    "productUrl": "https://www.viator.com/tours/Jackson-Hole/Snake-River-Scenic-Float/d5261-320113P1",
+    "title": "Snake River Scenic Float",
+    "description": {
+      "text": "If you think floating down the Snake is only for the outdoorsy, think again. With this tour, you'll ride a raft with high-back seats, making this ultra-scenic journey great for young and old. Stops include Grand Teton National Park, Moose Wilson Rd. A stable ride across a gentle current lets you relax in the open air, catching some of Jackson Hole's best views—and possibly even eagles, elk, moose, bears, and more.Float on the Snake River, with comfortable seats a priority Get away from the crowds and deep into the backcountry, where wildlife congregate Great for most ages—no rafting experience required Limited to 12 travelers, you'll get a fun, small Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $135.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 590
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/54/27/3f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "If you think floating down the Snake is only for the outdoorsy, think again",
+      "With this tour, you'll ride a raft with high-back seats, making this ultra-scenic journey great for young and old",
+      "A stable ride across a gentle current lets you relax in the open air, catching some of Jackson Hole's best views—and pos",
+      "Snake River Scenic Float departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "If you think floating down the Snake is only for the outdoorsy, think again.",
+    "itineraryItems": [
+      {
+        "title": "Grand Teton National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Moose Wilson Rd",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Snake River Scenic Float?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Rafting"
+      },
+      {
+        "label": "Scenic Floats"
+      },
+      {
+        "label": "Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 135
+      },
+      "currency": "USD"
+    }
+  }
+}

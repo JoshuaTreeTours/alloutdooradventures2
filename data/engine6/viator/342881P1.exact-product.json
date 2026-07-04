@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "342881P1",
+    "productUrl": "https://www.viator.com/tours/Jackson-Hole/Horseback-Riding-at-Turpin-Meadow-Ranch/d5261-342881P1",
+    "title": "Jackson Hole Horseback Riding & Lunch in Bridger Teton NF",
+    "description": {
+      "text": "Escape the crowds of nearby Yellowstone and Grand Teton national parks and experience Bridger-Teton National Forest like the west's cowboys: on horseback. After getting fitted with a horse suited to you, you'll follow your guide across high alpine meadows, through groves of aspen, up into the mountains, and along the Buffalo Fork River. Combining serenity, scenery, and thrills, it's part local tradition but all one giant adventure.Go for a horseback ride through one of the country's most beautiful landscapes, no expertise required Explore the Teton backcountry without breaking a sweat Easy mee Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $180.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 100
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/7d/0a/59.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Escape the crowds of nearby Yellowstone and Grand Teton national parks and experience Bridger-Teton National Forest like",
+      "After getting fitted with a horse suited to you, you'll follow your guide across high alpine meadows, through groves of ",
+      "Combining serenity, scenery, and thrills, it's part local tradition but all one giant adventure.Go for a horseback ride ",
+      "Jackson Hole Horseback Riding & Lunch in Bridger Teton NF departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Escape the crowds of nearby Yellowstone and Grand Teton national parks and experience Bridger-Teton National Forest like the west's cowboys: on horseback.",
+    "itineraryItems": [
+      {
+        "title": "Jackson Hole",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridger Teton National Forest",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Teton",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Teton Range",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Jackson Hole Horseback Riding & Lunch in Bridger Teton NF?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Horseback Riding"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 180
+      },
+      "currency": "USD"
+    }
+  }
+}

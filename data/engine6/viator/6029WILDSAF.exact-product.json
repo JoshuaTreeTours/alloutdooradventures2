@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "6029WILDSAF",
+    "productUrl": "https://www.viator.com/tours/Jackson/Grand-Teton-Small-Group-Wildlife-Safari-by-Jeep/d51006-6029WILDSAF",
+    "title": "Grand Teton Wildlife Safari in a Enclosed or Open-Air Vehicle (season dependent)",
+    "description": {
+      "text": "On this small-group Grand Teton wildlife safari, join a local naturalist and guide for a ride in an open-air safari vehicle (seasonal) on dirt roads and on paved highways within Grand Teton National Park, where you scour the landscape at dawn or dusk for wolves, moose, and elk. Look for eagles soaring overhead or deer walking through the woods, and there's even the chance you could spot a bear roaming near the road. Stops include Grand Teton, Mormon Row Historic District, T.A. Moulton Barn. In addition to helping find wildlife, your guide discusses the area's ecology, history, geology, and culture, and also stops so you can take photos of the landscape, wildlife, or t Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $159.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1267
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/9b/64/e4.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "On this small-group Grand Teton wildlife safari, join a local naturalist and guide for a ride in an open-air safari vehi",
+      "Look for eagles soaring overhead or deer walking through the woods, and there's even the chance you could spot a bear ro",
+      "In addition to helping find wildlife, your guide discusses the area's ecology, history, geology, and culture, and also s",
+      "Grand Teton Wildlife Safari in a Enclosed or Open-Air Vehicle (season dependent) departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "On this small-group Grand Teton wildlife safari, join a local naturalist and guide for a ride in an open-air safari vehicle (seasonal) on dirt roads and on paved highways within Grand Teton National Park, where you scour the landscape at dawn or dusk for wolves, moose, and elk.",
+    "itineraryItems": [
+      {
+        "title": "Grand Teton",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mormon Row Historic District",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "T.A. Moulton Barn",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Grand Teton Wildlife Safari in a Enclosed or Open-Air Vehicle (season dependent)?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "Safaris"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 159
+      },
+      "currency": "USD"
+    }
+  }
+}

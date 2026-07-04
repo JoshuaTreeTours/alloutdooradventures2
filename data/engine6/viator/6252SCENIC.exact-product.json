@@ -1,0 +1,126 @@
+{
+  "product": {
+    "productCode": "6252SCENIC",
+    "productUrl": "https://www.viator.com/tours/Jackson/Scenic-Raft-Trip-on-Jackson-Holes-Snake-River/d51006-6252SCENIC",
+    "title": "Tetons and Snake River Scenic Float Trip In Jackson Hole",
+    "description": {
+      "text": "On this relaxing rafting trip from Jackson Hole, drift down a scenic section of Wyoming's wildlife-laden Snake River, where moose, deer, river otters and eagles can all be seen from your raft. Be sure to bring your camera to photograph any wildlife that appears on the banks, and also capture the stunning landscape extending out from the Tetons.Scenic raft float along the Snake River near Jackson Hole, Wyoming See osprey, bald eagles, moose, deer and river otters as you travel along the river Learn about the history and geology of the Snake River from your knowledgeable guide Admire the beautif Stops include Snake River Canyon, Grand Teton, Dave Hansen Whitewater and Scenic River Trips, Wilson, Gros Ventre Mountains, Bridger Teton National Forest. Transportation, safety gear, and local commentary are handled so you can focus on the landscape. Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $120.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1045
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/38/e3/ea.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Tetons and Snake River Scenic Float Trip In Jackson Hole from Jackson Hole",
+      "Grand Teton and Snake River valley routing",
+      "Professional guide with local expertise",
+      "Small-group or private format as listed",
+      "Wyoming mountain adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "On this relaxing rafting trip from Jackson Hole, drift down a scenic section of Wyoming's wildlife-laden Snake River, where moose, deer, river otters and eagles can all be seen from your raft.",
+    "itineraryItems": [
+      {
+        "title": "Snake River Canyon",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Grand Teton",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Dave Hansen Whitewater and Scenic River Trips",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wilson",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Gros Ventre Mountains",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Jackson Hole",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Bridger Teton National Forest",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Tetons and Snake River Scenic Float Trip In Jackson Hole?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Rafting"
+      },
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "Scenic Floats"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 120
+      },
+      "currency": "USD"
+    }
+  }
+}

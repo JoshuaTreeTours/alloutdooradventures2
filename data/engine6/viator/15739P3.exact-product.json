@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "15739P3",
+    "productUrl": "https://www.viator.com/tours/Jackson/8-Mile-Whitewater-Snake-River-Rafting/d51006-15739P3",
+    "title": "Jackson Hole Whitewater Rafting Classic from Jackson Hole,Wyoming",
+    "description": {
+      "text": "Hold on for a wild ride down 8 miles (13 km) of the Snake River during this river rafting excursion. Paddle through Class III rapids as you paddle alongside your expert river guide. The journey takes you down whitewater sections followed by calm waters. Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $120.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 387
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/1b/90/45.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hold on for a wild ride down 8 miles (13 km) of the Snake River during this river rafting excursion",
+      "Paddle through Class III rapids as you paddle alongside your expert river guide",
+      "The journey takes you down whitewater sections followed by calm waters",
+      "Jackson Hole Whitewater Rafting Classic from Jackson Hole,Wyoming departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Hold on for a wild ride down 8 miles (13 km) of the Snake River during this river rafting excursion.",
+    "itineraryItems": [
+      {
+        "title": "Jackson Hole",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Snake River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Teton",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Snake River Canyon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridger Teton National Forest",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Jackson Hole Whitewater Rafting Classic from Jackson Hole,Wyoming?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Rafting"
+      },
+      {
+        "label": "White Water Rafting"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 120
+      },
+      "currency": "USD"
+    }
+  }
+}

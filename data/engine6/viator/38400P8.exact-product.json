@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "38400P8",
+    "productUrl": "https://www.viator.com/tours/Jackson-Hole/Yellowstone-National-Park-Horseback-Ride/d5261-38400P8",
+    "title": "Dinner Cookout Ride at Heart Six Ranch",
+    "description": {
+      "text": "Ride a horse outside Grand Teton National Park with Heart Six Ranch near Jackson Hole. Experience a once-in-a-lifetime horseback ride in an area not accessible to most. You and a small group will ride along a tranquil river trail, enjoying the beautiful natural surroundings and mountain views. Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $165.00",
+    "reviews": {
+      "combinedAverageRating": 4.2,
+      "totalReviews": 31
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/45/1e/59.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ride a horse outside Grand Teton National Park with Heart Six Ranch near Jackson Hole",
+      "Experience a once-in-a-lifetime horseback ride in an area not accessible to most",
+      "You and a small group will ride along a tranquil river trail, enjoying the beautiful natural surroundings and mountain v",
+      "Dinner Cookout Ride at Heart Six Ranch departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Ride a horse outside Grand Teton National Park with Heart Six Ranch near Jackson Hole.",
+    "itineraryItems": [
+      {
+        "title": "Jackson Hole",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridger Teton National Forest",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Teton",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Teton Range",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dinner Cookout Ride at Heart Six Ranch?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Horseback Riding"
+      },
+      {
+        "label": "Food Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 165
+      },
+      "currency": "USD"
+    }
+  }
+}

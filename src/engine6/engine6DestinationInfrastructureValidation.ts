@@ -65,6 +65,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "pennsylvania",
     citySlug: "philadelphia",
   },
+  "jackson-hole": {
+    destinationLabel: "Jackson Hole",
+    destinationCitySlug: "jackson-hole",
+    stateSlug: "wyoming",
+    citySlug: "jackson",
+  },
 };
 
 export type Engine6DestinationInfrastructureReport = {

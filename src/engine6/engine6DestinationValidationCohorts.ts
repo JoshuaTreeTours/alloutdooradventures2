@@ -108,6 +108,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Jackson Hole",
+      matches: tour =>
+        /\/wyoming\/jackson\//i.test(tour.canonicalPath) ||
+        (/\bjackson\b/i.test(tour.city) && /\bwyoming\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Napa editorial narrative",
       matches: tour =>
         /\/napa\//i.test(tour.canonicalPath) || /\bnapa\b/i.test(tour.city),

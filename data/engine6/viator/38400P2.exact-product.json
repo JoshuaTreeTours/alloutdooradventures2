@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "38400P2",
+    "productUrl": "https://www.viator.com/tours/Jackson/Horseback-Riding-with-Heart-6-Ranch/d51006-38400P2",
+    "title": "Horseback Riding with Grand Teton Views in Jackson Hole",
+    "description": {
+      "text": "Explore Bridger-Teton National Forest on a horseback-riding tour from Moran, about 35 miles (56 km) from Jackson. Take in views of the Teton Range and Grand Teton National Park as you ride up into groves of Aspen trees. Transportation, safety gear, and local commentary are handled so you can focus on the landscape. Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $149.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 1024
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/7e/cc/8c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Horseback Riding with Grand Teton Views in Jackson Hole from Jackson Hole",
+      "Grand Teton and Snake River valley routing",
+      "Professional guide with local expertise",
+      "Small-group or private format as listed",
+      "Wyoming mountain adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore Bridger-Teton National Forest on a horseback-riding tour from Moran, about 35 miles (56 km) from Jackson.",
+    "itineraryItems": [
+      {
+        "title": "Jackson Hole",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridger Teton National Forest",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Teton",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Teton Range",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Horseback Riding with Grand Teton Views in Jackson Hole?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Horseback Riding"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149
+      },
+      "currency": "USD"
+    }
+  }
+}

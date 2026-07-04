@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "35441P2",
+    "productUrl": "https://www.viator.com/tours/Jackson/Grand-Teton-National-Park-Full-Day-Guided-Tour/d51006-35441P2",
+    "title": "Grand Teton National Park - Full-Day Guided Tour from Jackson Hole",
+    "description": {
+      "text": "Explore the spectacular scenery and wildlife of Grand Teton National Park on a full-day guided tour with a small group. Take an optional independent hike to Hidden Falls, in season. Stops include Grand Teton, T.A. Moulton Barn, Mormon Row Historic District, Oxbow Bend, Jackson Lake, Jenny Lake. Admission, use of binoculars for easy wildlife spotting, breakfast, lunch and round-trip transportation from Jackson Hole-area lodging are included.Explore Grand Teton National Park without having to self-drive A must-do tour for nature and wildlife enthusiasts Included boat ride on Jenny Lake is seasonal Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "8 to 9 hours (approx.)",
+    "priceFrom": "From $345.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 250
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/aa/48/2a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the spectacular scenery and wildlife of Grand Teton National Park on a full-day guided tour with a small group",
+      "Take an optional independent hike to Hidden Falls, in season",
+      "Admission, use of binoculars for easy wildlife spotting, breakfast, lunch and round-trip transportation from Jackson Hol",
+      "Grand Teton National Park - Full-Day Guided Tour from Jackson Hole departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the spectacular scenery and wildlife of Grand Teton National Park on a full-day guided tour with a small group.",
+    "itineraryItems": [
+      {
+        "title": "Grand Teton",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "T.A. Moulton Barn",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mormon Row Historic District",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Oxbow Bend",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jackson Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jenny Lake",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Grand Teton National Park - Full-Day Guided Tour from Jackson Hole?",
+        "answer": "The planned duration is 8 to 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 345
+      },
+      "currency": "USD"
+    }
+  }
+}

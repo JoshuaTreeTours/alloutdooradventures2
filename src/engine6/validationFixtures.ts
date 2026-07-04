@@ -21,6 +21,26 @@ import specimen7079rrebikePayload from "../../data/engine6/viator/7079RREBIKE.ex
 import specimen191767p5Payload from "../../data/engine6/viator/191767P5.exact-product.json";
 import specimen32779Payload from "../../data/engine6/viator/32779P2.exact-product.json";
 import specimen60136Payload from "../../data/engine6/viator/60136P1.exact-product.json";
+import specimen6029yofwildPayload from "../../data/engine6/viator/6029YOFWILD.exact-product.json";
+import specimen6029wildsafPayload from "../../data/engine6/viator/6029WILDSAF.exact-product.json";
+import specimen15073p5Payload from "../../data/engine6/viator/15073P5.exact-product.json";
+import specimen156172p2Payload from "../../data/engine6/viator/156172P2.exact-product.json";
+import specimen156172p1Payload from "../../data/engine6/viator/156172P1.exact-product.json";
+import specimen6252scenicPayload from "../../data/engine6/viator/6252SCENIC.exact-product.json";
+import specimen38400p2Payload from "../../data/engine6/viator/38400P2.exact-product.json";
+import specimen6252p5Payload from "../../data/engine6/viator/6252P5.exact-product.json";
+import specimen15073p1Payload from "../../data/engine6/viator/15073P1.exact-product.json";
+import specimen15073p6Payload from "../../data/engine6/viator/15073P6.exact-product.json";
+import specimen320113p1Payload from "../../data/engine6/viator/320113P1.exact-product.json";
+import specimen15739p3Payload from "../../data/engine6/viator/15739P3.exact-product.json";
+import specimen56481p3Payload from "../../data/engine6/viator/56481P3.exact-product.json";
+import specimen35441p2Payload from "../../data/engine6/viator/35441P2.exact-product.json";
+import specimen35441p1Payload from "../../data/engine6/viator/35441P1.exact-product.json";
+import specimen460738p6Payload from "../../data/engine6/viator/460738P6.exact-product.json";
+import specimen342881p1Payload from "../../data/engine6/viator/342881P1.exact-product.json";
+import specimen38400p8Payload from "../../data/engine6/viator/38400P8.exact-product.json";
+import specimen6029winterPayload from "../../data/engine6/viator/6029WINTER.exact-product.json";
+import specimen156172p5Payload from "../../data/engine6/viator/156172P5.exact-product.json";
 import specimen60294dayparkPayload from "../../data/engine6/viator/6029_4DAYPARK.exact-product.json";
 import specimen26719Payload from "../../data/engine6/viator/26719P8.exact-product.json";
 import specimen354611p1Payload from "../../data/engine6/viator/354611P1.exact-product.json";
@@ -739,6 +759,146 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Las-Vegas/Antelope-Canyon-Horseshoe-Bend-Day-Tour-from-Las-Vegas/d684-60136P1",
     rawPayload: specimen60136Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "6029YOFWILD",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/Yellowstone-National-Park-Small-Group-Wildlife-Safari-by-Jeep/d51006-6029YOFWILD",
+    rawPayload: specimen6029yofwildPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6029WILDSAF",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/Grand-Teton-Small-Group-Wildlife-Safari-by-Jeep/d51006-6029WILDSAF",
+    rawPayload: specimen6029wildsafPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "15073P5",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/Grand-Teton-Half-Day-Tour/d51006-15073P5",
+    rawPayload: specimen15073p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "156172P2",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/Sunset-4-Hour-Grand-Teton-Wildlife-Adventure/d51006-156172P2",
+    rawPayload: specimen156172p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "156172P1",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/Sunrise-4hr-Grand-Teton-Tour/d51006-156172P1",
+    rawPayload: specimen156172p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6252SCENIC",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/Scenic-Raft-Trip-on-Jackson-Holes-Snake-River/d51006-6252SCENIC",
+    rawPayload: specimen6252scenicPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "38400P2",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/Horseback-Riding-with-Heart-6-Ranch/d51006-38400P2",
+    rawPayload: specimen38400p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6252P5",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/8-mile-Whitewater-Standard-Raft/d51006-6252P5",
+    rawPayload: specimen6252p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "15073P1",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/Snake-River-Scenic-Float-Trip/d51006-15073P1",
+    rawPayload: specimen15073p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "15073P6",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/Yellowstone-Lower-Loop-Tour/d51006-15073P6",
+    rawPayload: specimen15073p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "320113P1",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson-Hole/Snake-River-Scenic-Float/d5261-320113P1",
+    rawPayload: specimen320113p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "15739P3",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/8-Mile-Whitewater-Snake-River-Rafting/d51006-15739P3",
+    rawPayload: specimen15739p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "56481P3",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/13-Mile-Teton-Views-Scenic-Float-Trip/d51006-56481P3",
+    rawPayload: specimen56481p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "35441P2",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/Grand-Teton-National-Park-Full-Day-Guided-Tour/d51006-35441P2",
+    rawPayload: specimen35441p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "35441P1",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/Yellowstone-National-Park-Full-Day-Guided-Tour/d51006-35441P1",
+    rawPayload: specimen35441p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "460738P6",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/Wildlife-Safari-and-Sightseeing-Tour-in-Grand-Teton-National-Park/d51006-460738P6",
+    rawPayload: specimen460738p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "342881P1",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson-Hole/Horseback-Riding-at-Turpin-Meadow-Ranch/d5261-342881P1",
+    rawPayload: specimen342881p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "38400P8",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson-Hole/Yellowstone-National-Park-Horseback-Ride/d5261-38400P8",
+    rawPayload: specimen38400p8Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6029WINTER",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/Grand-Teton-and-National-Elk-Refuge-Winter-Day-Trip/d51006-6029WINTER",
+    rawPayload: specimen6029winterPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "156172P5",
+    publicUrl:
+      "https://www.viator.com/tours/Jackson/Private-8-Hour-Grand-Teton-Adventure/d51006-156172P5",
+    rawPayload: specimen156172p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
     productCode: "6029_4DAYPARK",

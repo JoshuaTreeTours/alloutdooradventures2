@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T19:31:50.699Z",
+  "generatedAt": "2026-07-04T21:49:07.796Z",
   "governanceMode": "audit",
   "mode": "pr-scoped",
   "scopedProductCodes": [],
@@ -10,7 +10,7 @@
   "totals": {
     "blockingFindings": 0,
     "warningFindings": 0,
-    "legacyFindings": 1434,
+    "legacyFindings": 1438,
     "areasAudited": 12,
     "areasPassed": 12
   },
@@ -33,7 +33,7 @@
       "area": "merchant-feed-commercial-refresh",
       "blockingCount": 0,
       "warningCount": 0,
-      "legacyCount": 946,
+      "legacyCount": 945,
       "pass": true
     },
     {
@@ -47,7 +47,7 @@
       "area": "description-title",
       "blockingCount": 0,
       "warningCount": 0,
-      "legacyCount": 37,
+      "legacyCount": 43,
       "pass": true
     },
     {
@@ -61,7 +61,7 @@
       "area": "route-sitemap-merchant-feed-parity",
       "blockingCount": 0,
       "warningCount": 0,
-      "legacyCount": 178,
+      "legacyCount": 177,
       "pass": true
     },
     {
@@ -2888,115 +2888,109 @@
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "8841P1",
-      "message": "8841P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/01/a1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "8841P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/15/72/67/c3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "8841P6",
-      "message": "8841P6.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/06/a6.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
-      "severity": "legacy"
-    },
-    {
-      "area": "merchant-feed-commercial-refresh",
-      "productCode": "8841P70",
-      "message": "8841P70.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/70/b0.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "8841P6.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/09/93/db/9f.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "8841P10",
-      "message": "8841P10.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/a1/10/b1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "8841P10.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/15/71/9e/58.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "102233P1",
-      "message": "102233P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/22/33/c1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "102233P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e5/e4/65.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "102233P3",
-      "message": "102233P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/22/33/c3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "102233P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/09/2d/f9/73.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "255730P245",
+      "message": "255730P245.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/50.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "255730P256",
+      "message": "255730P256.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/71/83/24.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/57/30/d2.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "86032P3",
-      "message": "86032P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/08/60/32/d3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
-      "severity": "legacy"
-    },
-    {
-      "area": "merchant-feed-commercial-refresh",
-      "productCode": "8841P73",
-      "message": "8841P73.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/73/b3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "86032P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/07/9f/48/5a.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/d3/c9/c3.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "153296P3",
-      "message": "153296P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/15/32/96/d3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "153296P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/08/7e/9c/b1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "8841P82",
-      "message": "8841P82.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/82/b8.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
-      "severity": "legacy"
-    },
-    {
-      "area": "merchant-feed-commercial-refresh",
-      "productCode": "86032P1",
-      "message": "86032P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/08/60/32/a1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "8841P82.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/46/33/9a.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "8841P34",
-      "message": "8841P34.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/34/a4.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "8841P34.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/d3/c9/c3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "5582660P3",
-      "message": "5582660P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/55/82/66/d3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "5582660P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/15/b5/3e/ca.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "5042PHLSPI",
-      "message": "5042PHLSPI.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/50/42/d1/n1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "5042PHLSPI.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/48/23/1e.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "5042P61",
-      "message": "5042P61.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/50/42/d1/l1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "5042P61.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/48/1f/e2.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "8841P27",
-      "message": "8841P27.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/27/a7.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "8841P27.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/68/d1/7b.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "25140P1",
-      "message": "25140P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/25/14/01/b1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "25140P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/11/d8/46/9c.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "115692P1",
-      "message": "115692P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/11/56/92/b1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "115692P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/45/1a/7f.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/07/ab/c6/e2.jpg\"",
       "severity": "legacy"
     },
     {
       "area": "merchant-feed-commercial-refresh",
       "productCode": "52886P6",
-      "message": "52886P6.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/52/88/06/b6.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "message": "52886P6.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/ea/ad/b3/caption.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/13/63/dc/41.jpg\"",
       "severity": "legacy"
     },
     {
@@ -5779,6 +5773,30 @@
     },
     {
       "area": "description-title",
+      "productCode": "6029_4DAYPARK",
+      "message": "merchant feed description does not match governed editorial description",
+      "severity": "legacy"
+    },
+    {
+      "area": "description-title",
+      "productCode": "411138P3",
+      "message": "merchant feed description does not match governed editorial description",
+      "severity": "legacy"
+    },
+    {
+      "area": "description-title",
+      "productCode": "100569P5",
+      "message": "merchant feed description does not match governed editorial description",
+      "severity": "legacy"
+    },
+    {
+      "area": "description-title",
+      "productCode": "53474P8",
+      "message": "merchant feed description does not match governed editorial description",
+      "severity": "legacy"
+    },
+    {
+      "area": "description-title",
       "productCode": "122012P17",
       "message": "schema description retains supplier marketing boilerplate",
       "severity": "legacy"
@@ -5997,6 +6015,18 @@
       "area": "description-title",
       "productCode": "163873P1",
       "message": "merchant feed description does not match governed editorial description",
+      "severity": "legacy"
+    },
+    {
+      "area": "description-title",
+      "productCode": "8841P6",
+      "message": "schema description retains supplier marketing boilerplate",
+      "severity": "legacy"
+    },
+    {
+      "area": "description-title",
+      "productCode": "255730P256",
+      "message": "forbidden editorial template phrase detected in published description surface",
       "severity": "legacy"
     },
     {
@@ -8594,115 +8624,109 @@
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "8841P1",
-      "message": "merchant feed row diverged from Product JSON-LD (8841P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/01/a1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (8841P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/15/72/67/c3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "8841P6",
-      "message": "merchant feed row diverged from Product JSON-LD (8841P6.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/06/a6.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
-      "severity": "legacy"
-    },
-    {
-      "area": "route-sitemap-merchant-feed-parity",
-      "productCode": "8841P70",
-      "message": "merchant feed row diverged from Product JSON-LD (8841P70.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/70/b0.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (8841P6.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/09/93/db/9f.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "8841P10",
-      "message": "merchant feed row diverged from Product JSON-LD (8841P10.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/a1/10/b1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (8841P10.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/15/71/9e/58.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "102233P1",
-      "message": "merchant feed row diverged from Product JSON-LD (102233P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/22/33/c1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (102233P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e5/e4/65.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "102233P3",
-      "message": "merchant feed row diverged from Product JSON-LD (102233P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/22/33/c3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (102233P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/09/2d/f9/73.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "severity": "legacy"
+    },
+    {
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "255730P245",
+      "message": "merchant feed row diverged from Product JSON-LD (255730P245.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/50.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "severity": "legacy"
+    },
+    {
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "255730P256",
+      "message": "merchant feed row diverged from Product JSON-LD (255730P256.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/71/83/24.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/57/30/d2.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "86032P3",
-      "message": "merchant feed row diverged from Product JSON-LD (86032P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/08/60/32/d3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
-      "severity": "legacy"
-    },
-    {
-      "area": "route-sitemap-merchant-feed-parity",
-      "productCode": "8841P73",
-      "message": "merchant feed row diverged from Product JSON-LD (8841P73.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/73/b3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (86032P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/07/9f/48/5a.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/d3/c9/c3.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "153296P3",
-      "message": "merchant feed row diverged from Product JSON-LD (153296P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/15/32/96/d3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (153296P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/08/7e/9c/b1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "8841P82",
-      "message": "merchant feed row diverged from Product JSON-LD (8841P82.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/82/b8.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
-      "severity": "legacy"
-    },
-    {
-      "area": "route-sitemap-merchant-feed-parity",
-      "productCode": "86032P1",
-      "message": "merchant feed row diverged from Product JSON-LD (86032P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/08/60/32/a1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (8841P82.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/46/33/9a.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "8841P34",
-      "message": "merchant feed row diverged from Product JSON-LD (8841P34.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/34/a4.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (8841P34.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/d3/c9/c3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "5582660P3",
-      "message": "merchant feed row diverged from Product JSON-LD (5582660P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/55/82/66/d3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (5582660P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/15/b5/3e/ca.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "5042PHLSPI",
-      "message": "merchant feed row diverged from Product JSON-LD (5042PHLSPI.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/50/42/d1/n1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (5042PHLSPI.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/48/23/1e.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "5042P61",
-      "message": "merchant feed row diverged from Product JSON-LD (5042P61.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/50/42/d1/l1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (5042P61.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/48/1f/e2.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "8841P27",
-      "message": "merchant feed row diverged from Product JSON-LD (8841P27.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/27/a7.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (8841P27.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/68/d1/7b.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "25140P1",
-      "message": "merchant feed row diverged from Product JSON-LD (25140P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/25/14/01/b1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (25140P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/11/d8/46/9c.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "115692P1",
-      "message": "merchant feed row diverged from Product JSON-LD (115692P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/11/56/92/b1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (115692P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/45/1a/7f.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/07/ab/c6/e2.jpg\")",
       "severity": "legacy"
     },
     {
       "area": "route-sitemap-merchant-feed-parity",
       "productCode": "52886P6",
-      "message": "merchant feed row diverged from Product JSON-LD (52886P6.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/52/88/06/b6.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "message": "merchant feed row diverged from Product JSON-LD (52886P6.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/ea/ad/b3/caption.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/13/63/dc/41.jpg\")",
       "severity": "legacy"
     }
   ],
@@ -8716,27 +8740,21 @@
     "credentialsRequired": false,
     "credentialsAvailable": false,
     "scopedProductCodes": [],
-    "validatedAt": "2026-07-04T19:31:36.236Z",
+    "validatedAt": "2026-07-04T21:48:45.616Z",
     "results": [],
     "failures": [],
     "blockingFailures": [],
     "legacyFailures": []
   },
   "merchantFeedImage": {
-    "imagesValidated": 419,
-    "automaticallyRepaired": 4,
-    "requiringFallback": 4,
+    "imagesValidated": 439,
+    "automaticallyRepaired": 3,
+    "requiringFallback": 3,
     "unrecoverableFailures": 0,
     "fallbackImageWarnings": 0,
     "informationalLegacyInvalidImages": 0,
     "informationalLegacyProductCodes": [],
     "invalidUrlsReported": [
-      {
-        "productCode": "69029P14",
-        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/6d/d8.jpg",
-        "reason": "http-error",
-        "status": 404
-      },
       {
         "productCode": "7011P8",
         "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/52/0f.jpg",
@@ -8750,8 +8768,8 @@
         "status": 404
       },
       {
-        "productCode": "6314PHILSEG",
-        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/63/14/a0/b1.jpg",
+        "productCode": "69029P14",
+        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/6d/d8.jpg",
         "reason": "http-error",
         "status": 404
       }
@@ -8767,7 +8785,7 @@
   "destinationInfrastructure": [],
   "paragonBuildScope": {
     "moduleId": "engine6-paragon-build-scope-governance",
-    "generatedAt": "2026-07-04T19:31:50.697Z",
+    "generatedAt": "2026-07-04T21:49:07.795Z",
     "pass": true,
     "branchScopedProductCodes": [],
     "blockedFiles": [],
@@ -8789,7 +8807,7 @@
       "stopped": false,
       "reason": null,
       "cycleCount": 0,
-      "elapsedMs": 0
+      "elapsedMs": 1
     },
     "idempotency": {
       "pass": true,
