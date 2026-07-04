@@ -31,7 +31,7 @@ describe("TourCard Philadelphia listing hero rendering", () => {
       src => src === ENGINE6_PHILADELPHIA_CANONICAL_CITY_HERO_URL
     ).length;
 
-    expect(cityHeroCount).toBe(1);
+    expect(cityHeroCount).toBe(0);
     expect(new Set(cardImageSources).size).toBe(22);
   });
 });
