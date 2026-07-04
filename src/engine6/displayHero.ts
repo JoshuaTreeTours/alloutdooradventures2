@@ -40,6 +40,9 @@ export const ENGINE6_GSM_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_SEDONA_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0c/0d/63/85.jpg";
 
+export const ENGINE6_CHICAGO_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/aa/41/ca.jpg";
+
 type Engine6HeroCandidateTour = {
   productCode: string;
   heroImageUrl?: string | null;
@@ -67,6 +70,9 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   tennessee: {
     "great-smoky-mountains-national-park": ENGINE6_GSM_CANONICAL_CITY_HERO_URL,
+  },
+  illinois: {
+    chicago: ENGINE6_CHICAGO_CANONICAL_CITY_HERO_URL,
   },
 };
 

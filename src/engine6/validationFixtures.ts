@@ -289,6 +289,29 @@ import specimen5046was_monPayload from "../../data/engine6/viator/5046WAS_MON.ex
 import specimen6349vipdcPayload from "../../data/engine6/viator/6349VIPDC.exact-product.json";
 import specimen2384p20Payload from "../../data/engine6/viator/2384P20.exact-product.json";
 import specimen5769mtvnPayload from "../../data/engine6/viator/5769MTVN.exact-product.json";
+import specimen5580arcPayload from "../../data/engine6/viator/5580ARC.exact-product.json";
+import specimen76126p2Payload from "../../data/engine6/viator/76126P2.exact-product.json";
+import specimen76126p8Payload from "../../data/engine6/viator/76126P8.exact-product.json";
+import specimen5580skyPayload from "../../data/engine6/viator/5580SKY.exact-product.json";
+import specimen35169p12Payload from "../../data/engine6/viator/35169P12.exact-product.json";
+import specimen5680nightPayload from "../../data/engine6/viator/5680NIGHT.exact-product.json";
+import specimen5680dayPayload from "../../data/engine6/viator/5680DAY.exact-product.json";
+import specimen61552p17Payload from "../../data/engine6/viator/61552P17.exact-product.json";
+import specimen7812p133Payload from "../../data/engine6/viator/7812P133.exact-product.json";
+import specimen8841p19Payload from "../../data/engine6/viator/8841P19.exact-product.json";
+import specimen188341p1Payload from "../../data/engine6/viator/188341P1.exact-product.json";
+import specimen130651p13Payload from "../../data/engine6/viator/130651P13.exact-product.json";
+import specimen3397p10Payload from "../../data/engine6/viator/3397P10.exact-product.json";
+import specimen3332bitePayload from "../../data/engine6/viator/3332BITE.exact-product.json";
+import specimen316128p3Payload from "../../data/engine6/viator/316128P3.exact-product.json";
+import specimen5042p100Payload from "../../data/engine6/viator/5042P100.exact-product.json";
+import specimen46250p9Payload from "../../data/engine6/viator/46250P9.exact-product.json";
+import specimen68189p1Payload from "../../data/engine6/viator/68189P1.exact-product.json";
+import specimen61552p8Payload from "../../data/engine6/viator/61552P8.exact-product.json";
+import specimen3332dayPayload from "../../data/engine6/viator/3332DAY.exact-product.json";
+import specimen191307p3Payload from "../../data/engine6/viator/191307P3.exact-product.json";
+import specimen338277p2Payload from "../../data/engine6/viator/338277P2.exact-product.json";
+import specimen7812p19Payload from "../../data/engine6/viator/7812P19.exact-product.json";
 import specimen26480p10Payload from "../../data/engine6/viator/26480P10.exact-product.json";
 import specimen26480p2Payload from "../../data/engine6/viator/26480P2.exact-product.json";
 import specimen26480p11Payload from "../../data/engine6/viator/26480P11.exact-product.json";
@@ -2944,6 +2967,143 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
+    productCode: "5580ARC",
+    publicUrl: "https://www.viator.com/tours/Chicago/Chicago-Architecture-River-Cruise/d673-5580ARC",
+    rawPayload: specimen5580arcPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "76126P2",
+    publicUrl: "https://www.viator.com/tours/Chicago/Lake-and-River-Architecture-Tour/d673-76126P2",
+    rawPayload: specimen76126p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "76126P8",
+    publicUrl: "https://www.viator.com/tours/Chicago/Chicago-Sunset-Cruise/d673-76126P8",
+    rawPayload: specimen76126p8Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5580SKY",
+    publicUrl: "https://www.viator.com/tours/Chicago/Lake-Michigan-Sightseeing-Cruise/d673-5580SKY",
+    rawPayload: specimen5580skyPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "35169P12",
+    publicUrl: "https://www.viator.com/tours/Chicago/Chicago-Skyline-Sunset-Sail-Aboard-Official-Flagship-of-Chicago-148-S-V-Windy/d673-35169P12",
+    rawPayload: specimen35169p12Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5680NIGHT",
+    publicUrl: "https://www.viator.com/tours/Chicago/Chicago-by-Night-Helicopter-Tour/d673-5680NIGHT",
+    rawPayload: specimen5680nightPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5680DAY",
+    publicUrl: "https://www.viator.com/tours/Chicago/Chicago-City-Sights-Helicopter-Tour/d673-5680DAY",
+    rawPayload: specimen5680dayPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "61552P17",
+    publicUrl: "https://www.viator.com/tours/Chicago/Gangster-Food-Tour/d673-61552P17",
+    rawPayload: specimen61552p17Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7812P133",
+    publicUrl: "https://www.viator.com/tours/Chicago/Private-Tour-Secret-Food-Tours-Chicago/d673-7812P133",
+    rawPayload: specimen7812p133Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8841P19",
+    publicUrl: "https://www.viator.com/tours/Chicago/Chicago-Architecture-and-Highlights-with-Local-Treat-Small-Group-Walking-Tour/d673-8841P19",
+    rawPayload: specimen8841p19Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "188341P1",
+    publicUrl: "https://www.viator.com/tours/Chicago/Private-4-hour-Walking-Tour/d673-188341P1",
+    rawPayload: specimen188341p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "130651P13",
+    publicUrl: "https://www.viator.com/tours/Chicago/Walking-Tour-Chicago-Passageways-Pedway-and-Riverwalk/d673-130651P13",
+    rawPayload: specimen130651p13Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3397P10",
+    publicUrl: "https://www.viator.com/tours/Chicago/Chicago-Bike-Tour/d673-3397P10",
+    rawPayload: specimen3397p10Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3332BITE",
+    publicUrl: "https://www.viator.com/tours/Chicago/Tastes-of-Chicago-Bike-Tour-Chicago-Style-Pizza-Beer-Cupcakes-and-Hot-Dogs/d673-3332BITE",
+    rawPayload: specimen3332bitePayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "316128P3",
+    publicUrl: "https://www.viator.com/tours/Chicago/Private-Chicago-Scenic-Driving-Tour/d673-316128P3",
+    rawPayload: specimen316128p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5042P100",
+    publicUrl: "https://www.viator.com/tours/Chicago/Chicago-Odyssey-Fireworks-Dinner-Cruise/d673-5042P100",
+    rawPayload: specimen5042p100Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "46250P9",
+    publicUrl: "https://www.viator.com/tours/Chicago/Private-Lake-Michigan-Sailing-Charter-and-Sightseeing-Chicago-Skyline-Cruise/d673-46250P9",
+    rawPayload: specimen46250p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "68189P1",
+    publicUrl: "https://www.viator.com/tours/Chicago/Explore-Chicagos-notorious-mob-and-gangster-past-aboard-a-luxury-bus/d673-68189P1",
+    rawPayload: specimen68189p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "61552P8",
+    publicUrl: "https://www.viator.com/tours/Chicago/Gangsters-and-Ghosts-Tour-in-Chicago/d673-61552P8",
+    rawPayload: specimen61552p8Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3332DAY",
+    publicUrl: "https://www.viator.com/tours/Chicago/Chicago-Lakefront-Neighborhoods-Bicycle-Tour/d673-3332DAY",
+    rawPayload: specimen3332dayPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "191307P3",
+    publicUrl: "https://www.viator.com/tours/Chicago/Gangs-and-Mobsters-Crime-Tour-at-Chicago/d673-191307P3",
+    rawPayload: specimen191307p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "338277P2",
+    publicUrl: "https://www.viator.com/tours/Chicago/Small-Group-River-Boat-Tour-in-Chicago/d673-338277P2",
+    rawPayload: specimen338277p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7812P19",
+    publicUrl: "https://www.viator.com/tours/Chicago/Small-Group-Chicago-Loop-Food-Walking-Tour/d673-7812P19",
+    rawPayload: specimen7812p19Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },  {
     productCode: "5769MTVN",
     publicUrl:
       "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",

@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "5580SKY",
+    "productUrl": "https://www.viator.com/tours/Chicago/Lake-Michigan-Sightseeing-Cruise/d673-5580SKY",
+    "title": "Lake Michigan Skyline Cruise in Chicago",
+    "description": {
+      "text": "Discover Chicago's skyline from Lake Michigan on a one-hour sightseeing cruise with narration on the city's lakefront development. The route passes Navy Pier, Grant Park, and the harbor with open views of Willis Tower and the Loop. Indoor and outdoor seating keep the ride comfortable on breezy lake days. This budget-friendly water outing suits travelers who want a quick lake perspective without a full architecture tour."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $33.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 2187
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/d8/49/3b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "One-hour Lake Michigan skyline cruise",
+      "Navy Pier and Grant Park lakefront views",
+      "Guided commentary on Chicago harbor history",
+      "Indoor salon and open-air deck seating",
+      "Affordable introduction to the lakefront"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board at the Navy Pier or Chicago Harbor cruise terminal confirmed when booking."
+      },
+      "end": {
+        "description": "Return to the same boarding terminal after the one-hour lake loop."
+      }
+    },
+    "itinerarySummary": "Discover Chicago's skyline from Lake Michigan on a one-hour sightseeing cruise with narration on the city's lakefront development.",
+    "itineraryItems": [
+      {
+        "title": "Navy Pier",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Michigan",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chicago Harbor",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Grant Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "One-hour lake cruise",
+      "Indoor and outdoor seating"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Lake Michigan Skyline Cruise in Chicago?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Board at the Navy Pier or Chicago Harbor cruise terminal confirmed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 33
+      },
+      "currency": "USD"
+    }
+  }
+}

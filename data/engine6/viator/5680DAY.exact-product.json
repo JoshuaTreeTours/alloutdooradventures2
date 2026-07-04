@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "5680DAY",
+    "productUrl": "https://www.viator.com/tours/Chicago/Chicago-City-Sights-Helicopter-Tour/d673-5680DAY",
+    "title": "Chicago City Sights Helicopter Tour",
+    "description": {
+      "text": "Discover Chicago's landmarks from the air on a daytime helicopter tour with bird's-eye views of Willis Tower, Millennium Park, and the Lake Michigan shoreline. Your pilot points out architectural icons and lakefront parks during a focused aerial loop over the city center. The open-cockpit or wide-window seating maximizes photo opportunities in clear weather. This premium outing suits visitors who want a thrilling complement to river and walking tours."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "15 minutes (approx.)",
+    "priceFrom": "From $189.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 638
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/95/00.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Daytime helicopter tour over downtown Chicago",
+      "Aerial views of Willis Tower and Millennium Park",
+      "Lake Michigan and Navy Pier shoreline perspectives",
+      "Pilot-guided commentary throughout the flight",
+      "Premium 15-minute skyline experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Arrive at the Chicago heliport confirmed on your voucher for check-in and safety briefing."
+      },
+      "end": {
+        "description": "Return to the heliport terminal after the flight lands."
+      }
+    },
+    "itinerarySummary": "Discover Chicago's landmarks from the air on a daytime helicopter tour with bird's-eye views of Willis Tower, Millennium Park, and the Lake Michigan shoreline.",
+    "itineraryItems": [
+      {
+        "title": "Willis Tower",
+        "description": "",
+        "duration": "5 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Millennium Park",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Navy Pier",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Lake Michigan",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Helicopter flight",
+      "Pilot narration",
+      "Headset communication",
+      "Pre-flight safety briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chicago City Sights Helicopter Tour?",
+        "answer": "The planned duration is 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Arrive at the Chicago heliport confirmed on your voucher for check-in and safety briefing."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Luxury Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 189
+      },
+      "currency": "USD"
+    }
+  }
+}

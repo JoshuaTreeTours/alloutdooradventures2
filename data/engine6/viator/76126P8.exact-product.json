@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "76126P8",
+    "productUrl": "https://www.viator.com/tours/Chicago/Chicago-Sunset-Cruise/d673-76126P8",
+    "title": "Lake Michigan Sunset Cruise in Chicago",
+    "description": {
+      "text": "Experience the Chicago skyline at golden hour on a sunset cruise departing from the Chicago River onto Lake Michigan. A guide highlights Willis Tower, the Magnificent Mile, and lakefront parks as daylight fades over the water. The 90-minute format includes time on the river before opening onto the lake for wide-angle sunset photos. This relaxed outing suits couples and families who want an evening on the water without a formal dinner cruise."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $45.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 1215
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/94/34/73.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sunset cruise from the Chicago River to Lake Michigan",
+      "Golden-hour skyline photography opportunities",
+      "Magnificent Mile and Willis Tower lakefront views",
+      "Guided commentary on Chicago landmarks",
+      "90-minute evening format on the water"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board at the Chicago River dock confirmed on your voucher. Evening departures vary by season."
+      },
+      "end": {
+        "description": "Return to the Chicago River boarding dock after the lake sunset loop."
+      }
+    },
+    "itinerarySummary": "Experience the Chicago skyline at golden hour on a sunset cruise departing from the Chicago River onto Lake Michigan.",
+    "itineraryItems": [
+      {
+        "title": "Chicago River",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Michigan",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Magnificent Mile",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Willis Tower",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Sunset cruise ticket",
+      "Indoor and outdoor deck access"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Lake Michigan Sunset Cruise in Chicago?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Board at the Chicago River dock confirmed on your voucher. Evening departures vary by season."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 45
+      },
+      "currency": "USD"
+    }
+  }
+}

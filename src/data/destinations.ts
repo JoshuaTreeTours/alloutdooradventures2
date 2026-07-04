@@ -3792,6 +3792,101 @@ const wyomingState: StateDestination = {
   isFallback: true,
 };
 
+const illinoisState: StateDestination = {
+  slug: "illinois",
+  name: "Illinois",
+  description: "Lakefront cities, river architecture, and guided urban adventures.",
+  featuredDescription:
+    "Explore Chicago tours with architecture cruises, food walks, and skyline sightseeing.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/aa/41/ca.jpg",
+  region: "Midwest",
+  intro:
+    "Illinois pairs Great Lakes scenery with walkable city districts and curated guided experiences.",
+  longDescription:
+    "Chicago anchors Illinois tour inventory with river cruises, neighborhood walks, and premium sightseeing across the Loop and lakefront.",
+  topRegions: [
+    {
+      title: "Chicago lakefront",
+      description:
+        "Architecture cruises, skyline sails, and lakefront tours along Lake Michigan.",
+    },
+    {
+      title: "Loop and riverfront",
+      description:
+        "Walking, food, and history tours through downtown Chicago districts.",
+    },
+  ],
+  cities: [
+    {
+      name: "Chicago",
+      slug: "chicago",
+      stateSlug: "illinois",
+      region: "Chicago",
+      lat: 41.8781,
+      lng: -87.6298,
+      shortDescription:
+        "Architecture cruises, food tours, and skyline sightseeing in Chicago.",
+      intro:
+        "Chicago is a lakefront city with river cruises, guided food walks, and premium urban tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/aa/41/ca.jpg",
+      ],
+      activityTags: ["sightseeing", "food-tours", "cruises"],
+      whereItIs: [
+        "Chicago sits on Lake Michigan in northeastern Illinois with the Chicago River running through downtown.",
+        "Most guided tours depart from the Loop, river docks, and lakefront neighborhoods.",
+      ],
+      experiences: {
+        mountains:
+          "Chicago is a flat lakefront city; tours focus on architecture and urban districts.",
+        lakesWater:
+          "Lake Michigan cruises and river architecture tours highlight the skyline from the water.",
+        desertForest:
+          "Parks and lakefront trails offer green space between urban sightseeing routes.",
+        cycling:
+          "Guided bike tours explore lakefront paths and neighborhood corridors.",
+        scenicDrives:
+          "Private driving tours cover lakefront boulevards and landmark districts.",
+        seasonalNotes:
+          "Summer and early fall are popular for lake cruises; winter adds holiday light tours.",
+      },
+      thingsToDo: [
+        "Cruise the Chicago River for architecture commentary.",
+        "Join a guided food or walking tour in the Loop.",
+        "Sail Lake Michigan for skyline views at sunset.",
+      ],
+      toursCopy: [
+        "Book an architecture river cruise for a compact introduction to Chicago.",
+        "Pair a food tour with a lakefront cruise for a full-day city itinerary.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: architecture river cruise.",
+          "Afternoon: Loop walking or food tour.",
+          "Evening: Lake Michigan sunset sail.",
+        ],
+        dayTwo: [
+          "Morning: neighborhood or bike tour.",
+          "Afternoon: museum or helicopter sightseeing.",
+          "Evening: dinner in River North or West Loop.",
+        ],
+      },
+      gettingThere: [
+        "O'Hare and Midway airports serve Chicago with rail and rideshare links to downtown.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Chicago tours?",
+          answer:
+            "Architecture river cruises, lakefront sails, and guided food walks are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates,
@@ -3799,6 +3894,7 @@ export const states: StateDestination[] = [
   mississippiState,
   minnesotaState,
   wyomingState,
+  illinoisState,
 ];
 
 export const destinations: Destination[] = states.map(state => ({

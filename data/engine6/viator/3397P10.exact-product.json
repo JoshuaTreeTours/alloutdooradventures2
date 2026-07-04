@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "3397P10",
+    "productUrl": "https://www.viator.com/tours/Chicago/Chicago-Bike-Tour/d673-3397P10",
+    "title": "Chicago Bike Tour",
+    "description": {
+      "text": "Explore Chicago's lakefront and downtown paths on a three-hour guided bike tour with stops at Millennium Park, Grant Park, and Navy Pier. Your guide leads a paced route along the Lakefront Trail with commentary on skyline landmarks and lakefront development. Bikes, helmets, and a safety briefing are included with routing matched to the group's ability. This active group tour covers more ground than a walking tour while keeping a social, guided format."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $60.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1189
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/75/24/1f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided three-hour Chicago lakefront bike tour",
+      "Millennium Park and Grant Park riding stops",
+      "Navy Pier and Lakefront Trail segments",
+      "Bikes, helmets, and safety briefing included",
+      "Active sightseeing with skyline commentary"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the bike rental staging area near Millennium Park confirmed when booking. Arrive 15 minutes early for fitting."
+      },
+      "end": {
+        "description": "Return bikes to the staging area after the final lakefront stop."
+      }
+    },
+    "itinerarySummary": "Explore Chicago's lakefront and downtown paths on a three-hour guided bike tour with stops at Millennium Park, Grant Park, and Navy Pier.",
+    "itineraryItems": [
+      {
+        "title": "Millennium Park",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grant Park",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Navy Pier",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chicago Lakefront Trail",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional bike guide",
+      "Bike and helmet rental",
+      "Safety briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chicago Bike Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Meet at the bike rental staging area near Millennium Park confirmed when booking. Arrive 15 minutes early for fitting."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Active Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 60
+      },
+      "currency": "USD"
+    }
+  }
+}

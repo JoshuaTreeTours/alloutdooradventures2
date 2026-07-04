@@ -1108,6 +1108,82 @@ export const ENGINE6_WASHINGTON_DC_TOUR_PATH_PREFIX =
 export const isEngine6WashingtonDcTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_WASHINGTON_DC_TOUR_PATH_PREFIX);
 
+export const ENGINE6_CHICAGO_5580ARC_PRODUCT_CODE = "5580ARC";
+export const ENGINE6_CHICAGO_5580ARC_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-architecture-river-cruise-5580ARC";
+export const ENGINE6_CHICAGO_76126P2_PRODUCT_CODE = "76126P2";
+export const ENGINE6_CHICAGO_76126P2_ROUTE =
+  "/destinations/illinois/chicago/tours/lake-and-river-architecture-tour-76126P2";
+export const ENGINE6_CHICAGO_76126P8_PRODUCT_CODE = "76126P8";
+export const ENGINE6_CHICAGO_76126P8_ROUTE =
+  "/destinations/illinois/chicago/tours/lake-michigan-sunset-cruise-in-chicago-76126P8";
+export const ENGINE6_CHICAGO_5580SKY_PRODUCT_CODE = "5580SKY";
+export const ENGINE6_CHICAGO_5580SKY_ROUTE =
+  "/destinations/illinois/chicago/tours/lake-michigan-skyline-cruise-in-chicago-5580SKY";
+export const ENGINE6_CHICAGO_35169P12_PRODUCT_CODE = "35169P12";
+export const ENGINE6_CHICAGO_35169P12_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-skyline-sunset-sail-aboard-a-tall-ship-35169P12";
+export const ENGINE6_CHICAGO_5680NIGHT_PRODUCT_CODE = "5680NIGHT";
+export const ENGINE6_CHICAGO_5680NIGHT_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-by-night-helicopter-tour-5680NIGHT";
+export const ENGINE6_CHICAGO_5680DAY_PRODUCT_CODE = "5680DAY";
+export const ENGINE6_CHICAGO_5680DAY_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-city-sights-helicopter-tour-5680DAY";
+export const ENGINE6_CHICAGO_61552P17_PRODUCT_CODE = "61552P17";
+export const ENGINE6_CHICAGO_61552P17_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-gangster-and-food-walking-tour-61552P17";
+export const ENGINE6_CHICAGO_7812P133_PRODUCT_CODE = "7812P133";
+export const ENGINE6_CHICAGO_7812P133_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-private-walking-food-tour-with-secret-food-tour-7812P133";
+export const ENGINE6_CHICAGO_8841P19_PRODUCT_CODE = "8841P19";
+export const ENGINE6_CHICAGO_8841P19_ROUTE =
+  "/destinations/illinois/chicago/tours/best-of-chicago-architecture-and-highlights-city-privat-8841P19";
+export const ENGINE6_CHICAGO_188341P1_PRODUCT_CODE = "188341P1";
+export const ENGINE6_CHICAGO_188341P1_ROUTE =
+  "/destinations/illinois/chicago/tours/your-way-or-the-highway-customized-private-walking-tour-188341P1";
+export const ENGINE6_CHICAGO_130651P13_PRODUCT_CODE = "130651P13";
+export const ENGINE6_CHICAGO_130651P13_ROUTE =
+  "/destinations/illinois/chicago/tours/walking-tour-underground-chicago-via-the-pedway-and-riv-130651P13";
+export const ENGINE6_CHICAGO_3397P10_PRODUCT_CODE = "3397P10";
+export const ENGINE6_CHICAGO_3397P10_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-bike-tour-3397P10";
+export const ENGINE6_CHICAGO_3332BITE_PRODUCT_CODE = "3332BITE";
+export const ENGINE6_CHICAGO_3332BITE_ROUTE =
+  "/destinations/illinois/chicago/tours/tastes-of-chicago-bike-tour-3332BITE";
+export const ENGINE6_CHICAGO_316128P3_PRODUCT_CODE = "316128P3";
+export const ENGINE6_CHICAGO_316128P3_ROUTE =
+  "/destinations/illinois/chicago/tours/private-chicago-scenic-driving-tour-316128P3";
+export const ENGINE6_CHICAGO_5042P100_PRODUCT_CODE = "5042P100";
+export const ENGINE6_CHICAGO_5042P100_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-odyssey-fireworks-dinner-cruise-5042P100";
+export const ENGINE6_CHICAGO_46250P9_PRODUCT_CODE = "46250P9";
+export const ENGINE6_CHICAGO_46250P9_ROUTE =
+  "/destinations/illinois/chicago/tours/private-lake-michigan-sailing-charter-and-sightseeing-c-46250P9";
+export const ENGINE6_CHICAGO_68189P1_PRODUCT_CODE = "68189P1";
+export const ENGINE6_CHICAGO_68189P1_ROUTE =
+  "/destinations/illinois/chicago/tours/chicagos-original-gangster-tour-by-bus-68189P1";
+export const ENGINE6_CHICAGO_61552P8_PRODUCT_CODE = "61552P8";
+export const ENGINE6_CHICAGO_61552P8_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-gangsters-and-ghosts-walking-tour-61552P8";
+export const ENGINE6_CHICAGO_3332DAY_PRODUCT_CODE = "3332DAY";
+export const ENGINE6_CHICAGO_3332DAY_ROUTE =
+  "/destinations/illinois/chicago/tours/bike-tour-of-chicagos-lakefront-neighborhoods-3332DAY";
+export const ENGINE6_CHICAGO_191307P3_PRODUCT_CODE = "191307P3";
+export const ENGINE6_CHICAGO_191307P3_ROUTE =
+  "/destinations/illinois/chicago/tours/gangs-and-mobsters-crime-tour-at-chicago-191307P3";
+export const ENGINE6_CHICAGO_338277P2_PRODUCT_CODE = "338277P2";
+export const ENGINE6_CHICAGO_338277P2_ROUTE =
+  "/destinations/illinois/chicago/tours/small-group-river-boat-tour-in-chicago-338277P2";
+export const ENGINE6_CHICAGO_7812P19_PRODUCT_CODE = "7812P19";
+export const ENGINE6_CHICAGO_7812P19_ROUTE =
+  "/destinations/illinois/chicago/tours/chicago-walking-food-tour-with-secret-food-tours-7812P19";
+
+export const ENGINE6_CHICAGO_TOUR_PATH_PREFIX =
+  "/destinations/illinois/chicago/tours/";
+
+export const isEngine6ChicagoTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_CHICAGO_TOUR_PATH_PREFIX);
+
 export const ENGINE6_GSM_THUNDERING_STREAMS_PRODUCT_CODE = "26480P10";
 export const ENGINE6_GSM_THUNDERING_STREAMS_ROUTE =
   "/destinations/tennessee/great-smoky-mountains-national-park/tours/thundering-streams-falls-guided-hike-26480P10";
@@ -2263,6 +2339,29 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [ENGINE6_WASHINGTON_DC_6349VIPDC_ROUTE, ENGINE6_WASHINGTON_DC_6349VIPDC_PRODUCT_CODE],
   [ENGINE6_WASHINGTON_DC_2384P20_ROUTE, ENGINE6_WASHINGTON_DC_2384P20_PRODUCT_CODE],
   [ENGINE6_WASHINGTON_DC_5769MTVN_ROUTE, ENGINE6_WASHINGTON_DC_5769MTVN_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_5580ARC_ROUTE, ENGINE6_CHICAGO_5580ARC_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_76126P2_ROUTE, ENGINE6_CHICAGO_76126P2_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_76126P8_ROUTE, ENGINE6_CHICAGO_76126P8_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_5580SKY_ROUTE, ENGINE6_CHICAGO_5580SKY_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_35169P12_ROUTE, ENGINE6_CHICAGO_35169P12_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_5680NIGHT_ROUTE, ENGINE6_CHICAGO_5680NIGHT_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_5680DAY_ROUTE, ENGINE6_CHICAGO_5680DAY_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_61552P17_ROUTE, ENGINE6_CHICAGO_61552P17_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_7812P133_ROUTE, ENGINE6_CHICAGO_7812P133_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_8841P19_ROUTE, ENGINE6_CHICAGO_8841P19_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_188341P1_ROUTE, ENGINE6_CHICAGO_188341P1_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_130651P13_ROUTE, ENGINE6_CHICAGO_130651P13_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_3397P10_ROUTE, ENGINE6_CHICAGO_3397P10_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_3332BITE_ROUTE, ENGINE6_CHICAGO_3332BITE_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_316128P3_ROUTE, ENGINE6_CHICAGO_316128P3_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_5042P100_ROUTE, ENGINE6_CHICAGO_5042P100_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_46250P9_ROUTE, ENGINE6_CHICAGO_46250P9_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_68189P1_ROUTE, ENGINE6_CHICAGO_68189P1_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_61552P8_ROUTE, ENGINE6_CHICAGO_61552P8_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_3332DAY_ROUTE, ENGINE6_CHICAGO_3332DAY_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_191307P3_ROUTE, ENGINE6_CHICAGO_191307P3_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_338277P2_ROUTE, ENGINE6_CHICAGO_338277P2_PRODUCT_CODE],
+  [ENGINE6_CHICAGO_7812P19_ROUTE, ENGINE6_CHICAGO_7812P19_PRODUCT_CODE],
   [
     ENGINE6_GSM_THUNDERING_STREAMS_ROUTE,
     ENGINE6_GSM_THUNDERING_STREAMS_PRODUCT_CODE,

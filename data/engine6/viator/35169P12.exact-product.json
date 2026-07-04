@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "35169P12",
+    "productUrl": "https://www.viator.com/tours/Chicago/Chicago-Skyline-Sunset-Sail-Aboard-Official-Flagship-of-Chicago-148-S-V-Windy/d673-35169P12",
+    "title": "Chicago Skyline Sunset Sail Aboard a Tall Ship",
+    "description": {
+      "text": "Experience a sunset sail aboard the Windy, Chicago's official tall ship, departing from Navy Pier on Lake Michigan. Crew members share sailing basics while you take in the skyline from the deck as the sun drops behind the Loop. The 90-minute outing combines the romance of a traditional schooner with wide-angle views of Grant Park and the harbor. Perfect for visitors who want a memorable sunset experience beyond a standard motor cruise."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $55.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 842
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/7a/2d/3f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sunset sail aboard the Windy tall ship from Navy Pier",
+      "Traditional schooner experience on Lake Michigan",
+      "Skyline and harbor views at golden hour",
+      "Crew commentary on sailing and Chicago history",
+      "90-minute deck time with photo opportunities"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the Navy Pier tall-ship boarding gate confirmed on your ticket. Arrive 20 minutes early."
+      },
+      "end": {
+        "description": "Return to the Navy Pier dock after the sunset sail concludes."
+      }
+    },
+    "itinerarySummary": "Experience a sunset sail aboard the Windy, Chicago's official tall ship, departing from Navy Pier on Lake Michigan.",
+    "itineraryItems": [
+      {
+        "title": "Navy Pier",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Michigan",
+        "description": "",
+        "duration": "60 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chicago Harbor",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Grant Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Sunset sail aboard the Windy",
+      "Professional crew",
+      "Safety briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chicago Skyline Sunset Sail Aboard a Tall Ship?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Meet at the Navy Pier tall-ship boarding gate confirmed on your ticket. Arrive 20 minutes early."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "Sailing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 55
+      },
+      "currency": "USD"
+    }
+  }
+}

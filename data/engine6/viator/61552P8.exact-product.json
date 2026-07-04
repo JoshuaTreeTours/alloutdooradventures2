@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "61552P8",
+    "productUrl": "https://www.viator.com/tours/Chicago/Gangsters-and-Ghosts-Tour-in-Chicago/d673-61552P8",
+    "title": "Chicago: Gangsters and Ghosts Walking Tour",
+    "description": {
+      "text": "Explore Chicago's Loop after dark on a tour blending mob history with haunted landmarks and ghost stories. Your guide leads you past Palmer House Hilton, the Congress Plaza Hotel, and Theatre District blocks where gangsters and spirits share the spotlight. Evening timing adds atmosphere to tales of Prohibition shootouts and unexplained hotel occurrences. This two-hour outing suits travelers who want spooky history with Chicago crime lore."
+    },
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $35.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 621
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/e6/1a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Evening gangster and ghost walking tour of the Loop",
+      "Palmer House Hilton haunted history",
+      "Congress Plaza Hotel ghost stories",
+      "Chicago Theatre District mob sites",
+      "Two-hour guided night walk"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Loop meeting point at your scheduled evening departure time."
+      },
+      "end": {
+        "description": "Tour ends near the Congress Plaza Hotel or your agreed Loop endpoint."
+      }
+    },
+    "itinerarySummary": "Explore Chicago's Loop after dark on a tour blending mob history with haunted landmarks and ghost stories.",
+    "itineraryItems": [
+      {
+        "title": "Palmer House Hilton",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Congress Plaza Hotel",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chicago Theatre",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Loop District",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Evening walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Chicago: Gangsters and Ghosts Walking Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Chicago?",
+        "answer": "Meet your guide at the confirmed Loop meeting point at your scheduled evening departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Ghost Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 35
+      },
+      "currency": "USD"
+    }
+  }
+}
