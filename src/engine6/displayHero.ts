@@ -43,6 +43,9 @@ export const ENGINE6_SEDONA_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_CHICAGO_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/aa/41/ca.jpg";
 
+export const ENGINE6_BOSTON_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/94/3a/b2.jpg";
+
 type Engine6HeroCandidateTour = {
   productCode: string;
   heroImageUrl?: string | null;
@@ -73,6 +76,9 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   illinois: {
     chicago: ENGINE6_CHICAGO_CANONICAL_CITY_HERO_URL,
+  },
+  massachusetts: {
+    boston: ENGINE6_BOSTON_CANONICAL_CITY_HERO_URL,
   },
 };
 

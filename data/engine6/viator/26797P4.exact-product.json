@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "26797P4",
+    "productUrl": "https://www.viator.com/tours/Boston/The-Tour-of-The-Freedom-Trail/d678-26797P4",
+    "title": "The Tour of The Freedom Trail",
+    "description": {
+      "text": "Follow the red brick line through downtown Boston on a guided Freedom Trail walk covering the city's most storied Revolutionary sites. Your guide narrates the Boston Massacre, Tea Party, and midnight ride at Boston Common, Old South Meeting House, Faneuil Hall, and Paul Revere House. The 1 hour 45 minute format moves at a steady pace suited to travelers with limited time. A solid introduction for first-time visitors who want expert context without a premium price point."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "1 hour 45 minutes (approx.)",
+    "priceFrom": "From $25.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 2145
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/6e/6c/d4.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided Freedom Trail walk through downtown Boston",
+      "Boston Common and Old South Meeting House stops",
+      "Faneuil Hall and Paul Revere House routing",
+      "Revolutionary War stories at each landmark",
+      "1 hour 45 minute format for time-conscious visitors"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Boston Common near the Visitor Center on Tremont Street."
+      },
+      "end": {
+        "description": "Tour ends in the North End near Paul Revere House after the final trail markers."
+      }
+    },
+    "itinerarySummary": "Follow the red brick line through downtown Boston on a guided Freedom Trail walk covering the city's most storied Revolutionary sites.",
+    "itineraryItems": [
+      {
+        "title": "Boston Common",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old South Meeting House",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Faneuil Hall",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Paul Revere House",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old North Church",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Freedom Trail walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The Tour of The Freedom Trail?",
+        "answer": "The planned duration is 1 hour 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Meet at Boston Common near the Visitor Center on Tremont Street."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 25
+      },
+      "currency": "USD"
+    }
+  }
+}

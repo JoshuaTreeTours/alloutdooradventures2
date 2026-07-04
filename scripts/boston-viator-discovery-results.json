@@ -1,0 +1,597 @@
+{
+  "available": [],
+  "rejected": [
+    {
+      "productCode": "3283BWW",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Whale-Watching-Cruise/d678-3283BWW",
+      "experienceType": "whale-watching",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Boston-Whale-Watching-Cruise/d678-3283BWW",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "3283SSCRUISE",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Historic-Sightseeing-Cruise/d678-3283SSCRUISE",
+      "experienceType": "harbor-cruise",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Boston-Historic-Sightseeing-Cruise/d678-3283SSCRUISE",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "44921P7",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Sunset-Cruise/d678-44921P7",
+      "experienceType": "sunset-cruise",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Sunset-Cruise/d678-44921P7",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "3037DUCK",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Duck-Tour/d678-3037DUCK",
+      "experienceType": "duck-tour",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Boston-Duck-Tour/d678-3037DUCK",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "66111P3",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Explore-Revolutionary-Boston-Freedom-Trail-History-Tour/d678-66111P3",
+      "experienceType": "freedom-trail-walking",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Explore-Revolutionary-Boston-Freedom-Trail-History-Tour/d678-66111P3",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "26797P4",
+      "sourceUrl": "https://www.viator.com/tours/Boston/The-Tour-of-The-Freedom-Trail/d678-26797P4",
+      "experienceType": "freedom-trail-walking",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/The-Tour-of-The-Freedom-Trail/d678-26797P4",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "8843P7",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Tour-of-the-Freedom-Trail/d678-8843P7",
+      "experienceType": "freedom-trail-walking",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Tour-of-the-Freedom-Trail/d678-8843P7",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "7167P68",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Freedom-Trail-and-North-End-Neighborhood-Walking-Tour/d678-7167P68",
+      "experienceType": "freedom-trail-walking",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Boston-Freedom-Trail-and-North-End-Neighborhood-Walking-Tour/d678-7167P68",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "5046BOS_OTT",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Hop-on-Hop-off-Trolley-Tour/d678-5046BOS_OTT",
+      "experienceType": "hop-on-hop-off",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Boston-Hop-on-Hop-off-Trolley-Tour/d678-5046BOS_OTT",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "7812P131",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Private-Tour-Secret-Food-Tours-Boston-North-End/d678-7812P131",
+      "experienceType": "food-tour-private",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Private-Tour-Secret-Food-Tours-Boston-North-End/d678-7812P131",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "8841P14",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Bostons-Quincy-Market-and-North-End-Food-Tour-Small-Group-Walking-Tour/d678-8841P14",
+      "experienceType": "food-tour",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Bostons-Quincy-Market-and-North-End-Food-Tour-Small-Group-Walking-Tour/d678-8841P14",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "400049P3",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Food-and-History-Private-Tour/d678-400049P3",
+      "experienceType": "food-tour-private",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Boston-Food-and-History-Private-Tour/d678-400049P3",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "8647P466",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Private-half-Day-Tour-to-Salem-and-Marbelhead-from-Boston-with-pick-up/d678-8647P466",
+      "experienceType": "salem-day-trip-private",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Private-half-Day-Tour-to-Salem-and-Marbelhead-from-Boston-with-pick-up/d678-8647P466",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "400049P5",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Private-Day-Trip-to-Lexington-and-Concord-from-Boston/d678-400049P5",
+      "experienceType": "lexington-concord-private",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Private-Day-Trip-to-Lexington-and-Concord-from-Boston/d678-400049P5",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "385595P5",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Lexington-and-Concord-Day-Tour/d678-385595P5",
+      "experienceType": "lexington-concord-private",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Lexington-and-Concord-Day-Tour/d678-385595P5",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "5046BOS_GG",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Ghosts-and-Gravestones-Tour/d678-5046BOS_GG",
+      "experienceType": "ghost-tour",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Boston-Ghosts-and-Gravestones-Tour/d678-5046BOS_GG",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "3283CODZILLA",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Codzilla-Thrill-Boat-Ride/d678-3283CODZILLA",
+      "experienceType": "thrill-boat",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Boston-Codzilla-Thrill-Boat-Ride/d678-3283CODZILLA",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "7812P19",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Walking-Food-Tour-With-Secret-Food-Tours/d678-7812P19",
+      "experienceType": "food-tour",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Boston-Walking-Food-Tour-With-Secret-Food-Tours/d678-7812P19",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "61552P17",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Food-Tour/d678-61552P17",
+      "experienceType": "food-tour",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Boston-Food-Tour/d678-61552P17",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "188341P1",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Private-4-hour-Walking-Tour/d678-188341P1",
+      "experienceType": "private-walking",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Private-4-hour-Walking-Tour/d678-188341P1",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "67327P2",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Private-Boston-City-Tour/d678-67327P2",
+      "experienceType": "private-city",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Private-Boston-City-Tour/d678-67327P2",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "7953P1",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Private-Boston-City-Tour-with-Hotel-Pickup/d678-7953P1",
+      "experienceType": "private-city",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Private-Boston-City-Tour-with-Hotel-Pickup/d678-7953P1",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "316128P3",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Private-Boston-Scenic-Driving-Tour/d678-316128P3",
+      "experienceType": "private-driving",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Private-Boston-Scenic-Driving-Tour/d678-316128P3",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "68189P1",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Gangster-Tour/d678-68189P1",
+      "experienceType": "history-tour",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Boston-Gangster-Tour/d678-68189P1",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "130651P13",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Walking-Tour-Boston-Passageways-Pedway-and-Riverwalk/d678-130651P13",
+      "experienceType": "walking-tour",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Walking-Tour-Boston-Passageways-Pedway-and-Riverwalk/d678-130651P13",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "3397P10",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Bike-Tour/d678-3397P10",
+      "experienceType": "bike-tour",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Boston-Bike-Tour/d678-3397P10",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "5042P100",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Dinner-Cruise/d678-5042P100",
+      "experienceType": "dinner-cruise",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Boston-Dinner-Cruise/d678-5042P100",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "46250P9",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Private-Boston-Harbor-Sailing-Charter/d678-46250P9",
+      "experienceType": "private-sailing",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Private-Boston-Harbor-Sailing-Charter/d678-46250P9",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "25265P29",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Salem-and-Marblehead-Day-Trip-from-Boston/d678-25265P29",
+      "experienceType": "salem-day-trip",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Salem-and-Marblehead-Day-Trip-from-Boston/d678-25265P29",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": "9day",
+      "heroUrl": null,
+      "itineraryStops": []
+    },
+    {
+      "productCode": "5769MTVN",
+      "sourceUrl": "https://www.viator.com/tours/Boston/Cape-Cod-Day-Trip-from-Boston/d678-5769MTVN",
+      "experienceType": "day-trip",
+      "commercialTier": "premium",
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "rejectReasons": [
+        "no product-specific hero"
+      ],
+      "httpStatus": 403,
+      "finalUrl": "https://www.viator.com/tours/Boston/Cape-Cod-Day-Trip-from-Boston/d678-5769MTVN",
+      "title": null,
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": null,
+      "duration": null,
+      "heroUrl": null,
+      "itineraryStops": []
+    }
+  ]
+}

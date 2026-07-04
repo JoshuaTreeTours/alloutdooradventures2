@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "3283BWW",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Whale-Watching-Cruise/d678-3283BWW",
+    "title": "Boston Whale Watching Cruise",
+    "description": {
+      "text": "Head offshore from Boston Harbor on a premium whale watching cruise to Stellwagen Bank National Marine Sanctuary, one of the Atlantic's most reliable whale-feeding grounds. Naturalists on board identify humpbacks, fin whales, and dolphins while explaining migration patterns and marine ecology. The spacious vessel offers indoor and outdoor viewing decks suited to New England weather. This half-day outing suits families and first-time visitors who want open-ocean wildlife without a long drive from downtown Boston."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $85.56",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 2827
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/94/a7/5d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Whale watching cruise to Stellwagen Bank National Marine Sanctuary",
+      "Naturalist commentary on humpbacks and marine wildlife",
+      "Departures from Long Wharf in Boston Harbor",
+      "Indoor and outdoor viewing decks",
+      "Premium half-day format from downtown Boston"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board at Long Wharf in Boston Harbor. Arrive 30 minutes before departure for check-in and seating."
+      },
+      "end": {
+        "description": "Return to Long Wharf after the offshore wildlife viewing loop."
+      }
+    },
+    "itinerarySummary": "Head offshore from Boston Harbor on a premium whale watching cruise to Stellwagen Bank National Marine Sanctuary, one of the Atlantic's most reliable whale-feeding grounds.",
+    "itineraryItems": [
+      {
+        "title": "Long Wharf",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boston Harbor",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Stellwagen Bank National Marine Sanctuary",
+        "description": "",
+        "duration": "2 hours",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional naturalist guide",
+      "Whale watching cruise",
+      "Indoor and outdoor seating"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Boston Whale Watching Cruise?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Board at Long Wharf in Boston Harbor. Arrive 30 minutes before departure for check-in and seating."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "Day Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 85.56
+      },
+      "currency": "USD"
+    }
+  }
+}

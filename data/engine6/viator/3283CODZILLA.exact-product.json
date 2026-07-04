@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "3283CODZILLA",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Codzilla-Thrill-Boat-Ride/d678-3283CODZILLA",
+    "title": "City Cruises Boston Codzilla High-Speed Thrill Boat Ride",
+    "description": {
+      "text": "Hold on for a high-speed thrill ride aboard Codzilla, Boston Harbor's 40-mph jet boat. The 45-minute outing blasts past the USS Constitution and Bunker Hill Monument with music, splash zones, and scripted commentary about how Codzilla came to Boston. Depart from Long Wharf next to the New England Aquarium with indoor and outdoor seating options. Ideal for teens, families, and visitors who want an adrenaline break between downtown sightseeing and harbor cruises."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "45 minutes (approx.)",
+    "priceFrom": "From $56.01",
+    "reviews": {
+      "combinedAverageRating": 4,
+      "totalReviews": 425
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/68/d7/8a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "High-speed 40-mph thrill boat ride on Boston Harbor",
+      "Narrated show with original soundtrack",
+      "Departures from Long Wharf ticket center",
+      "USS Constitution and harbor skyline pass-by views",
+      "45-minute family-friendly adrenaline outing"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Boston Harbor City Cruises on Long Wharf. Arrive early for boarding—late arrivals miss the boat."
+      },
+      "end": {
+        "description": "Return to the Long Wharf pier after the harbor thrill loop."
+      }
+    },
+    "itinerarySummary": "Hold on for a high-speed thrill ride aboard Codzilla, Boston Harbor's 40-mph jet boat.",
+    "itineraryItems": [
+      {
+        "title": "Long Wharf",
+        "description": "",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boston Harbor",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "USS Constitution",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "45-minute Codzilla thrill boat ride",
+      "Narrated onboard show",
+      "Original soundtrack"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the City Cruises Boston Codzilla High-Speed Thrill Boat Ride?",
+        "answer": "The planned duration is 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Meet at Boston Harbor City Cruises on Long Wharf. Arrive early for boarding—late arrivals miss the boat."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Active Tours"
+      },
+      {
+        "label": "Water Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 56.01
+      },
+      "currency": "USD"
+    }
+  }
+}

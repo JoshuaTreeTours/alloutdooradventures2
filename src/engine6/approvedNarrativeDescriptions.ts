@@ -1,3 +1,4 @@
+import { getBostonTargetedNarrativeDescription } from "./bostonApprovedNarrativeDescriptions";
 import { getGreatSmokyMountainsTargetedNarrativeDescription } from "./greatSmokyMountainsApprovedNarrativeDescriptions";
 
 export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
@@ -92,6 +93,7 @@ export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTIONS: Record<
 
 export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
   getGreatSmokyMountainsTargetedNarrativeDescription(productCode) ??
+  getBostonTargetedNarrativeDescription(productCode) ??
   ENGINE6_TARGETED_NARRATIVE_DESCRIPTIONS[
     productCode as Engine6TargetedNarrativeDescriptionProductCode
   ];

@@ -1,0 +1,292 @@
+{
+  "destinationLabel": "Boston",
+  "destinationCitySlug": "boston",
+  "viatorDestinationSlug": "Boston",
+  "targetPremiumShare": 0.5,
+  "slots": [
+    {
+      "experienceType": "whale-watching",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "3283BWW",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Whale-Watching-Cruise/d678-3283BWW",
+          "title": "Boston Whale Watching Cruise",
+          "experienceType": "whale-watching",
+          "priceFrom": 85.56,
+          "categories": ["Cruises & Sailing", "Wildlife Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "harbor-cruise",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "3283SSCRUISE",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Historic-Sightseeing-Cruise/d678-3283SSCRUISE",
+          "title": "Boston Historic Sightseeing Cruise",
+          "experienceType": "harbor-cruise",
+          "priceFrom": 46,
+          "categories": ["Cruises & Sailing", "Sightseeing Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "sunset-cruise",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "44921P7",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Sunset-Cruise/d678-44921P7",
+          "title": "Boston Sunset Harbor Cruise",
+          "experienceType": "sunset-cruise",
+          "priceFrom": 29,
+          "categories": ["Cruises & Sailing", "Sunset Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "duck-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "3037DUCK",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Duck-Tour/d678-3037DUCK",
+          "title": "Boston Duck Tour",
+          "experienceType": "duck-tour",
+          "priceFrom": 60,
+          "categories": ["Bus Tours", "Sightseeing Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "freedom-trail-walking",
+      "desiredCount": 3,
+      "candidates": [
+        {
+          "productCode": "66111P3",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Explore-Revolutionary-Boston-Freedom-Trail-History-Tour/d678-66111P3",
+          "title": "Explore Revolutionary Boston Freedom Trail History Tour",
+          "experienceType": "freedom-trail-walking",
+          "priceFrom": 39,
+          "categories": ["Walking Tours", "Historical Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        },
+        {
+          "productCode": "26797P4",
+          "sourceUrl": "https://www.viator.com/tours/Boston/The-Tour-of-The-Freedom-Trail/d678-26797P4",
+          "title": "The Tour of The Freedom Trail",
+          "experienceType": "freedom-trail-walking",
+          "priceFrom": 25,
+          "categories": ["Walking Tours", "Historical Tours"],
+          "priority": 2
+        },
+        {
+          "productCode": "8843P7",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Tour-of-the-Freedom-Trail/d678-8843P7",
+          "title": "Tour of the Freedom Trail",
+          "experienceType": "freedom-trail-walking",
+          "commercialTier": "premium",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "experienceType": "freedom-trail-combo",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "7167P68",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Freedom-Trail-and-North-End-Neighborhood-Walking-Tour/d678-7167P68",
+          "title": "Boston Freedom Trail and North End Neighborhood Walking Tour",
+          "experienceType": "freedom-trail-combo",
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "hop-on-hop-off",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "5046BOS_OTT",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Hop-on-Hop-off-Trolley-Tour/d678-5046BOS_OTT",
+          "title": "Boston Hop-on Hop-off Trolley Tour",
+          "experienceType": "hop-on-hop-off",
+          "priceFrom": 52,
+          "categories": ["Hop-on Hop-off Tours", "Sightseeing Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "food-tour-private",
+      "desiredCount": 2,
+      "candidates": [
+        {
+          "productCode": "7812P131",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Private-Tour-Secret-Food-Tours-Boston-North-End/d678-7812P131",
+          "title": "Private Tour Secret Food Tours Boston North End",
+          "experienceType": "food-tour-private",
+          "commercialTier": "premium",
+          "priority": 1
+        },
+        {
+          "productCode": "400049P3",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Food-and-History-Private-Tour/d678-400049P3",
+          "title": "Boston Food and History Private Tour",
+          "experienceType": "food-tour-private",
+          "commercialTier": "premium",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "experienceType": "food-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "8841P14",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Bostons-Quincy-Market-and-North-End-Food-Tour-Small-Group-Walking-Tour/d678-8841P14",
+          "title": "Boston's Quincy Market and North End Food Tour",
+          "experienceType": "food-tour",
+          "priceFrom": 147,
+          "categories": ["Food Tours", "Walking Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "ghost-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "5046BOS_GG",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Ghosts-and-Gravestones-Tour/d678-5046BOS_GG",
+          "title": "Boston Ghosts and Gravestones Trolley Tour",
+          "experienceType": "ghost-tour",
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "thrill-boat",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "3283CODZILLA",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Codzilla-Thrill-Boat-Ride/d678-3283CODZILLA",
+          "title": "City Cruises Boston Codzilla High-Speed Thrill Boat Ride",
+          "experienceType": "thrill-boat",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "salem-day-trip",
+      "desiredCount": 3,
+      "candidates": [
+        {
+          "productCode": "8647P466",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Private-half-Day-Tour-to-Salem-and-Marbelhead-from-Boston-with-pick-up/d678-8647P466",
+          "title": "Private Half-Day Tour to Salem and Marblehead from Boston",
+          "experienceType": "salem-day-trip-private",
+          "commercialTier": "premium",
+          "priority": 1
+        },
+        {
+          "productCode": "3978TOUR5",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Salem-Witch-City-Day-Trip-From-Boston/d678-3978TOUR5",
+          "title": "Boston to Salem Witch City Day Trip with Round-Trip Transportation",
+          "experienceType": "salem-day-trip",
+          "commercialTier": "premium",
+          "priority": 2
+        },
+        {
+          "productCode": "66192P8",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Day-Trip-from-Boston-To-Salem-Witch-Exhibits/d678-66192P8",
+          "title": "Day Trip from Boston To Salem Witch Exhibits",
+          "experienceType": "salem-day-trip",
+          "commercialTier": "premium",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "experienceType": "lexington-concord",
+      "desiredCount": 2,
+      "candidates": [
+        {
+          "productCode": "400049P5",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Private-Day-Trip-to-Lexington-and-Concord-from-Boston/d678-400049P5",
+          "title": "Private Day Trip to Lexington and Concord from Boston",
+          "experienceType": "lexington-concord-private",
+          "priceFrom": 493,
+          "commercialTier": "premium",
+          "priority": 1
+        },
+        {
+          "productCode": "385595P5",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Lexington-and-Concord-Day-Tour/d678-385595P5",
+          "title": "Lexington and Concord Day Tour",
+          "experienceType": "lexington-concord",
+          "commercialTier": "premium",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "experienceType": "bike-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "5151BOSCY014",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Guided-Bike-Tour-of-Boston/d678-5151BOSCY014",
+          "title": "Boston City View Bicycle Tour: History and Landmarks",
+          "experienceType": "bike-tour",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "private-day-trip",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "255730P225",
+          "sourceUrl": "https://www.viator.com/tours/Boston/New-England-Coast-Private-Day-Trip-from-Boston/d678-255730P225",
+          "title": "Boston Private Day Trip with Salem & Cape Ann's North Shore",
+          "experienceType": "private-day-trip",
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "dinner-cruise",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "5042BOSDIN",
+          "sourceUrl": "https://www.viator.com/tours/Boston/Boston-Dinner-Cruise/d678-5042BOSDIN",
+          "title": "City Cruises Boston Premier Dinner Cruise on Odyssey",
+          "experienceType": "dinner-cruise",
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    }
+  ]
+}

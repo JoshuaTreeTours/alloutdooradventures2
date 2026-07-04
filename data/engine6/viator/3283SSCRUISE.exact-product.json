@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "3283SSCRUISE",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Historic-Sightseeing-Cruise/d678-3283SSCRUISE",
+    "title": "Boston Historic Sightseeing Cruise",
+    "description": {
+      "text": "See Revolutionary Boston from the water on a narrated historic sightseeing cruise through Boston Harbor and the Inner Harbor islands. Your guide points out the USS Constitution, Bunker Hill Monument, Boston Light, Old North Church, and Castle Island as you pass each landmark from the deck. The one-hour format fits easily between Freedom Trail walks and North End dining. Ideal for first-time visitors who want harbor context without committing a full afternoon."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $46.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 1138
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/94/3a/b2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Narrated Boston Harbor historic sightseeing cruise",
+      "USS Constitution and Bunker Hill Monument pass-by views",
+      "Boston Light and Castle Island harbor perspectives",
+      "One-hour format from Long Wharf",
+      "Premium introduction to Boston waterfront history"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board at Long Wharf near the New England Aquarium. Arrive 15 minutes early."
+      },
+      "end": {
+        "description": "Disembark at Long Wharf after the harbor loop."
+      }
+    },
+    "itinerarySummary": "See Revolutionary Boston from the water on a narrated historic sightseeing cruise through Boston Harbor and the Inner Harbor islands.",
+    "itineraryItems": [
+      {
+        "title": "Long Wharf",
+        "description": "",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "USS Constitution",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Bunker Hill Monument",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Boston Light",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Old North Church",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Castle Island",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional narrator",
+      "One-hour harbor cruise",
+      "Open deck seating"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Boston Historic Sightseeing Cruise?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Board at Long Wharf near the New England Aquarium. Arrive 15 minutes early."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 46
+      },
+      "currency": "USD"
+    }
+  }
+}

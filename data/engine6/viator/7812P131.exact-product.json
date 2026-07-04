@@ -1,0 +1,118 @@
+{
+  "product": {
+    "productCode": "7812P131",
+    "productUrl": "https://www.viator.com/tours/Boston/Private-Tour-Secret-Food-Tours-Boston-North-End/d678-7812P131",
+    "title": "Private Tour Secret Food Tours Boston North End",
+    "description": {
+      "text": "Taste the North End on a private food tour built exclusively for your party. Your guide leads you through Hanover Street bakeries, salumerias, and hidden alleys with curated tastings of cannoli, arancini, and local seafood specialties. The premium private format adjusts pacing and dietary preferences while covering Paul Revere House and Old North Church between bites. Ideal for couples and families who want an unhurried culinary deep dive without joining a public group."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $275.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 52
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/59/d0/df.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private North End food tour for your party only",
+      "Hanover Street bakery and salumeria tastings",
+      "Cannoli, arancini, and local seafood samples",
+      "Paul Revere House and Old North Church routing",
+      "Flexible pacing with dietary accommodations"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at a confirmed North End location near Hanover Street. Details sent at booking."
+      },
+      "end": {
+        "description": "Tour concludes on Hanover Street after the final tasting stop."
+      }
+    },
+    "itinerarySummary": "Taste the North End on a private food tour built exclusively for your party.",
+    "itineraryItems": [
+      {
+        "title": "Hanover Street",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Paul Revere House",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Old North Church",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "North End Market",
+        "description": "",
+        "duration": "90 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Copp's Hill Burying Ground",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private local food guide",
+      "Multiple food tastings",
+      "North End neighborhood walk"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Tour Secret Food Tours Boston North End?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Meet your guide at a confirmed North End location near Hanover Street. Details sent at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 275
+      },
+      "currency": "USD"
+    }
+  }
+}

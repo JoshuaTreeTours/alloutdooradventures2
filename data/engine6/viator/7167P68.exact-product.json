@@ -1,0 +1,126 @@
+{
+  "product": {
+    "productCode": "7167P68",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Freedom-Trail-and-North-End-Neighborhood-Walking-Tour/d678-7167P68",
+    "title": "Boston Freedom Trail and North End Neighborhood Walking Tour",
+    "description": {
+      "text": "Combine the Freedom Trail with an immersive North End neighborhood walk on a premium small-group outing. Your guide covers Boston Common, Faneuil Hall, Paul Revere House, and Old North Church before leading you through the North End's narrow streets, Hanover Street cafes, and Copp's Hill Burying Ground. The extended format adds Italian-immigrant history and local food culture to the Revolutionary narrative. Perfect for travelers who want both landmark history and neighborhood character in one booking."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $59.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1243
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7d/a2/84.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Freedom Trail plus North End neighborhood walk",
+      "Paul Revere House and Old North Church stops",
+      "Copp's Hill Burying Ground and Hanover Street routing",
+      "Premium small-group format with local food context",
+      "Three-hour combined history and culture tour"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Boston Common Visitor Center on Tremont Street. Arrive 10 minutes early."
+      },
+      "end": {
+        "description": "Tour concludes on Hanover Street in the North End after Copp's Hill Burying Ground."
+      }
+    },
+    "itinerarySummary": "Combine the Freedom Trail with an immersive North End neighborhood walk on a premium small-group outing.",
+    "itineraryItems": [
+      {
+        "title": "Boston Common",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Faneuil Hall",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Paul Revere House",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old North Church",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Copp's Hill Burying Ground",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hanover Street",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional local guide",
+      "Premium small-group walking tour",
+      "Freedom Trail and North End routing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Boston Freedom Trail and North End Neighborhood Walking Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Meet at Boston Common Visitor Center on Tremont Street. Arrive 10 minutes early."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Neighborhood Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 59
+      },
+      "currency": "USD"
+    }
+  }
+}
