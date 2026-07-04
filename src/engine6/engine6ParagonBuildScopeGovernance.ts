@@ -17,20 +17,12 @@ import type { Engine6GitChangedFile } from "./resolveEngine6ChangedProductCodes.
 export const ENGINE6_PARAGON_BUILD_SCOPE_GOVERNANCE_MODULE_ID =
   "engine6-paragon-build-scope-governance" as const;
 
+/** Paths governance-only PRs may modify without destination build scope. */
 export const ENGINE6_PARAGON_BUILD_SCOPE_GOVERNANCE_ALLOWLIST = [
   /^src\/engine6\/engine6ParagonBuildScopeGovernance(?:\.test)?\.ts$/,
   /^src\/engine6\/engine6DestinationInfrastructureValidation(?:\.test)?\.ts$/,
   /^src\/engine6\/engine6ExactProductFixtureGovernance(?:\.test)?\.ts$/,
   /^src\/engine6\/engine6ProductHeroGovernance(?:\.test)?\.ts$/,
-  /^src\/engine6\/ENGINE6_HARDENED_CONTRACT\.md$/,
-  /^src\/engine6\/.*_GOVERNANCE_POLICY\.md$/,
-  /^reports\/engine6-paragon-build-scope-governance.*\.(md|json)$/,
-  /^\.github\/workflows\/engine6.*\.yml$/,
-] as const;
-
-/** Paths governance-only PRs may modify without destination build scope. */
-export const ENGINE6_PARAGON_BUILD_SCOPE_GOVERNANCE_ALLOWLIST = [
-  /^src\/engine6\/engine6ParagonBuildScopeGovernance(?:\.test)?\.ts$/,
   /^src\/engine6\/engine6CreationSelfHealing(?:\.test)?\.tsx?$/,
   /^src\/engine6\/ENGINE6_HARDENED_CONTRACT\.md$/,
   /^src\/engine6\/.*_GOVERNANCE_POLICY\.md$/,
