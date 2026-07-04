@@ -1,5 +1,8 @@
 import { assessEngine6DestinationProductBinding } from "./engine6DestinationProductBinding.js";
 import {
+  buildEngine6ProductCodeExclusivityReportFromSelection,
+} from "./engine6ProductCodeExclusivityGovernance.js";
+import {
   collectEngine6ProductSelectionBlocklistAdditions,
   isEngine6ProductSelectionBlocklistedProduct,
   readEngine6ProductSelectionPermanentBlocklist,
@@ -124,6 +127,7 @@ export type Engine6ProductSelectionGovernanceReport = {
     selectedProductCode: string;
   }>;
   formattedLiveValidationReport?: string;
+  productCodeExclusivityReport?: string;
 };
 
 /** Persisted reject/block list for destination selection (see data/engine6/). */
@@ -148,6 +152,8 @@ export const ENGINE6_PRODUCT_SELECTION_REUSED_MODULES = [
   "engine6ProductSelectionBlocklist.readEngine6ProductSelectionPermanentBlocklist",
   "viatorPublicAvailability.ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS",
   "resolveEngine6ChangedProductCodes.resolveEngine6ProductCodesChangedSinceRefSafe",
+  "engine6ProductCodeExclusivityGovernance.assessEngine6ProductCodeExclusivity",
+  "engine6ProductCodeExclusivityGovernance.getEngine6ProductCodeRegistry",
 ] as const;
 
 export const ENGINE6_PRODUCT_SELECTION_NEW_MODULES = [
@@ -567,6 +573,7 @@ export const selectEngine6DestinationPortfolio = async (
     [];
   const acceptedCodes = new Set<string>();
   let candidatesEvaluated = 0;
+  const evaluatedProductCodes: string[] = [];
 
   for (const slot of args.slots) {
     const rankedCandidates = sortCandidates(slot.candidates);
@@ -580,6 +587,7 @@ export const selectEngine6DestinationPortfolio = async (
 
       const productCode = normalizeProductCode(candidate.productCode);
       candidatesEvaluated += 1;
+      evaluatedProductCodes.push(productCode);
 
       if (isEngine6ProductSelectionBlocklisted(productCode)) {
         rejected.push({
@@ -623,6 +631,9 @@ export const selectEngine6DestinationPortfolio = async (
           reason: destinationBinding.violation,
           detail: destinationBinding.detail ?? destinationBinding.violation,
         });
+        if (destinationBinding.violation === "duplicate-engine6-assignment") {
+          lastFailedProductCodeForSlot = productCode;
+        }
         continue;
       }
 
@@ -730,6 +741,16 @@ export const selectEngine6DestinationPortfolio = async (
         : "destination build could not assemble a fully validated portfolio"
     : null;
   const generatedAt = args.generatedAt ?? new Date().toISOString();
+  const productCodeExclusivityReport =
+    buildEngine6ProductCodeExclusivityReportFromSelection({
+      destinationLabel: args.destinationLabel,
+      destinationCitySlug: args.destinationCitySlug,
+      viatorDestinationSlug: args.viatorDestinationSlug,
+      configPathSlug: args.configPathSlug,
+      evaluatedProductCodes,
+      rejected,
+      replacements,
+    });
   const candidateTitlesByCode = Object.fromEntries(
     args.slots.flatMap(slot =>
       slot.candidates.map(candidate => [
@@ -816,6 +837,7 @@ export const selectEngine6DestinationPortfolio = async (
                     .filter(result => !result.passed),
           })
         : undefined,
+    productCodeExclusivityReport,
   };
 };
 
@@ -975,6 +997,10 @@ export const formatEngine6ProductSelectionGovernanceReport = (
 
   if (report.scopedProductCodes.length > 0) {
     lines.push(`Scoped product codes: ${report.scopedProductCodes.join(", ")}`);
+  }
+
+  if (report.productCodeExclusivityReport) {
+    lines.push("", report.productCodeExclusivityReport);
   }
 
   if (report.replacements.length > 0) {

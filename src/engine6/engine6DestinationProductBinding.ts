@@ -1,4 +1,5 @@
 import { parseEngine6StateCityFromCanonicalPath } from "./displayHero.js";
+import { assessEngine6ProductCodeExclusivity } from "./engine6ProductCodeExclusivityGovernance.js";
 import { resolveEngine6PathForProductCode } from "./routes.js";
 
 export const extractViatorTourDestinationSlug = (sourceUrl: string) => {
@@ -176,28 +177,32 @@ export const assessEngine6DestinationProductBinding = (args: {
   destinationLabel?: string | null;
 }): Engine6DestinationBindingAssessment => {
   const viatorDestinationSlug = extractViatorTourDestinationSlug(args.sourceUrl);
-  const boundCitySlug = resolveEngine6ConfiguredProductCitySlug(args.productCode);
+  const exclusivity = assessEngine6ProductCodeExclusivity({
+    productCode: args.productCode,
+    destinationCitySlug: args.destinationCitySlug,
+    viatorDestinationSlug: args.viatorDestinationSlug,
+    configPathSlug: args.configPathSlug,
+    destinationLabel: args.destinationLabel,
+  });
+  const boundCitySlug =
+    exclusivity.existingOwner?.destinationCitySlug ??
+    resolveEngine6ConfiguredProductCitySlug(args.productCode);
   const expectedViatorSlug =
     args.viatorDestinationSlug?.trim() || args.destinationCitySlug?.trim() || null;
 
-  if (
-    boundCitySlug &&
-    !isProductBoundToSameEngine6Destination({
-      boundCitySlug,
-      destinationCitySlug: args.destinationCitySlug,
-      viatorDestinationSlug: args.viatorDestinationSlug,
-      configPathSlug: args.configPathSlug,
-    })
-  ) {
+  if (!exclusivity.accepted && exclusivity.violation) {
     return {
-      violation: "duplicate-engine6-assignment",
-      detail: `product ${args.productCode} is already configured for Engine6 destination city "${boundCitySlug}"`,
+      violation: exclusivity.violation,
+      detail:
+        exclusivity.detail ??
+        `product ${args.productCode} is already configured for Engine6 destination city "${boundCitySlug}"`,
       viatorDestinationSlug,
       boundCitySlug,
     };
   }
 
   if (
+    !exclusivity.allowlisted &&
     viatorDestinationSlug &&
     expectedViatorSlug &&
     !destinationIdentitiesMatch(viatorDestinationSlug, expectedViatorSlug)
