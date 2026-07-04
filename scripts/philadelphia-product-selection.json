@@ -1,0 +1,350 @@
+{
+  "destinationLabel": "Philadelphia",
+  "destinationCitySlug": "philadelphia",
+  "viatorDestinationSlug": "Philadelphia",
+  "targetPremiumShare": 0.545,
+  "slots": [
+    {
+      "experienceType": "private-driving-full-day",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "8841P1",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Private-City-of-Philadelphia-Driving-Tour/d906-8841P1",
+          "title": "Private Full Day Philadelphia Driving Tour with Special Inclusion",
+          "experienceType": "private-driving-full-day",
+          "priceFrom": 975,
+          "categories": ["Private Tours", "City Tours", "Sightseeing Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "private-driving-half-day",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "8841P6",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Private-Half-Day-Philadelphia-Driving-Tour/d906-8841P6",
+          "title": "Private Half Day Philadelphia Driving Tour with Local Guide",
+          "experienceType": "private-driving-half-day",
+          "priceFrom": 595,
+          "categories": ["Private Tours", "City Tours", "Sightseeing Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "amish-day-trip",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "8841P70",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/A-Day-in-Amish-Country/d906-8841P70",
+          "title": "Guided Day Trip to Amish Country from Philadelphia",
+          "experienceType": "amish-day-trip",
+          "priceFrom": 249,
+          "categories": ["Day Trips", "Cultural Tours", "Sightseeing Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "amish-private-driving",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "8841P10",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Private-Driving-Tour-of-Lancaster-and-Amish-Country/d906-8841P10",
+          "title": "Private Driving Tour of Amish Country from Philadelphia",
+          "experienceType": "amish-private-driving",
+          "priceFrom": 775,
+          "categories": ["Private Tours", "Day Trips", "Cultural Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "colonial-walking-private",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "102233P1",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Discovering-Colonial-Philadelphia-to-now-Walking-Tour/d906-102233P1",
+          "title": "Discovering Colonial Philadelphia Private Walking Tour",
+          "experienceType": "colonial-walking-private",
+          "priceFrom": 250,
+          "categories": ["Private Tours", "Walking Tours", "Historical Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "hamilton-walking",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "102233P3",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Hamilton-The-Tour-where-it-Happens/d906-102233P3",
+          "title": "Hamilton The Tour where it Happens",
+          "experienceType": "hamilton-walking",
+          "priceFrom": 250,
+          "categories": ["Walking Tours", "Historical Tours", "Cultural Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "founding-fathers-private",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "255730P245",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Private-Family-Walking-Tour-In-the-Footsteps-of-the-Founders/d906-255730P245",
+          "title": "Private 2-hour Founding Fathers Tour of Philadelphia",
+          "experienceType": "founding-fathers-private",
+          "priceFrom": 160,
+          "categories": ["Private Tours", "Walking Tours", "Historical Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "reading-market-private-food",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "255730P256",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Private-Walking-Tour-of-Nazi-History-in-Berlin/d906-255730P256",
+          "title": "Flavours of Philadelphia: Private Reading Market 2.5-hr Food Tour",
+          "experienceType": "reading-market-private-food",
+          "priceFrom": 290,
+          "categories": ["Private Tours", "Food Tours", "Walking Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "old-city-food-premium",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "86032P3",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Historic-Food-Tour/d906-86032P3",
+          "title": "Historic Old City Dine Around",
+          "experienceType": "old-city-food-premium",
+          "priceFrom": 120,
+          "categories": ["Food Tours", "Walking Tours", "Historical Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "valley-forge-driving",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "8841P73",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Valley-Forge-American-Revolution-Tour/d906-8841P73",
+          "title": "Driving Tour of Valley Forge National Park from Philadelphia",
+          "experienceType": "valley-forge-driving",
+          "priceFrom": 149,
+          "categories": ["Day Trips", "Historical Tours", "Sightseeing Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "customized-private",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "153296P3",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Customized-Tours-in-and-around-Philadelphia/d906-153296P3",
+          "title": "Customized Tours in and around Philadelphia",
+          "experienceType": "customized-private",
+          "priceFrom": 275,
+          "categories": ["Private Tours", "City Tours", "Sightseeing Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "italian-market-private-food",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "8841P82",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Italian-Market-Food-Tour-PRIVATE/d906-8841P82",
+          "title": "Italian Market Food Tour PRIVATE",
+          "experienceType": "italian-market-private-food",
+          "priceFrom": 130,
+          "categories": ["Private Tours", "Food Tours", "Walking Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "food-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "86032P1",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Flavors-of-Philly-Food-Tour/d906-86032P1",
+          "title": "Flavors of Philly Food Tour",
+          "experienceType": "food-tour",
+          "priceFrom": 65,
+          "categories": ["Food Tours", "Walking Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "center-city-food",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "8841P34",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Center-City-Philadelphia-Food-Tour-with-Reading-Market/d906-8841P34",
+          "title": "Center City Philadelphia Food Tour with Reading Market",
+          "experienceType": "center-city-food",
+          "priceFrom": 59,
+          "categories": ["Food Tours", "Walking Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "vintage-cart",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "5582660P3",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Explore-Philadelphia-via-Vintage-Car-or-Electric-cart/d906-5582660P3",
+          "title": "Explore Philadelphia via Vintage Car or Electric cart",
+          "experienceType": "vintage-cart",
+          "priceFrom": 69,
+          "categories": ["City Tours", "Sightseeing Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "electric-cart",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "6314PHILSEG",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Philadelphia-2-Hour-Electric-Cart-Tour/d906-6314PHILSEG",
+          "title": "Philadelphia Sightseeing by Electric Cart",
+          "experienceType": "electric-cart",
+          "priceFrom": 69,
+          "categories": ["City Tours", "Sightseeing Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "dinner-cruise",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "5042PHLSPI",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/City-Cruises-Philadelphia-Signature-Dinner-Cruise-with-Buffet/d906-5042PHLSPI",
+          "title": "City Cruises Philadelphia Signature Dinner Cruise with Buffet",
+          "experienceType": "dinner-cruise",
+          "priceFrom": 95,
+          "categories": ["Dinner Cruises", "Cruises & Sailing"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "lunch-cruise",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "5042P61",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/City-Cruises-Philadelphia-Signature-Buffet-Lunch-Cruise/d906-5042P61",
+          "title": "City Cruises Philadelphia Signature Buffet Lunch Cruise",
+          "experienceType": "lunch-cruise",
+          "priceFrom": 87,
+          "categories": ["Lunch Cruises", "Cruises & Sailing"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "italian-market-food",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "8841P27",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Philadelphias-Italian-Market-Food-Tour/d906-8841P27",
+          "title": "Philadelphia's Italian Market Food Tour",
+          "experienceType": "italian-market-food",
+          "priceFrom": 61,
+          "categories": ["Food Tours", "Walking Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "bike-tour",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "25140P1",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Classic-Philadelphia-City-Bike-Tour/d906-25140P1",
+          "title": "Classic Philadelphia City Bike Tour",
+          "experienceType": "bike-tour",
+          "priceFrom": 79,
+          "categories": ["Bike Tours", "Sightseeing Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "history-walking",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "115692P1",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Beyond-the-Bell-History-Walking-Tour/d906-115692P1",
+          "title": "Beyond the Liberty Bell History Walking Tour",
+          "experienceType": "history-walking",
+          "priceFrom": 59,
+          "categories": ["Walking Tours", "Historical Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "chef-led-food",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "52886P6",
+          "sourceUrl": "https://www.viator.com/tours/Philadelphia/Inside-the-Italian-Market-Chef-Led-Tasting-Journey/d906-52886P6",
+          "title": "Inside the Italian Market: Chef-Led Tasting Journey",
+          "experienceType": "chef-led-food",
+          "priceFrom": 80,
+          "categories": ["Food Tours", "Walking Tours"],
+          "priority": 1
+        }
+      ]
+    }
+  ]
+}

@@ -59,6 +59,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "massachusetts",
     citySlug: "boston",
   },
+  philadelphia: {
+    destinationLabel: "Philadelphia",
+    destinationCitySlug: "philadelphia",
+    stateSlug: "pennsylvania",
+    citySlug: "philadelphia",
+  },
 };
 
 export type Engine6DestinationInfrastructureReport = {

@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "86032P3",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Historic-Food-Tour/d906-86032P3",
+    "title": "Historic Old City Dine Around",
+    "description": {
+      "text": "Explore Old City's historic streets and restaurants on a guided dine-around walking tour with multiple seated tastings. Your guide connects Elfreth's Alley, America's oldest residential street, with curated stops at Historic District restaurants serving Philadelphia classics. The route blends Colonial architecture with contemporary local cuisine in a three-hour format. Suited for food lovers who want history and flavor combined in one Old City outing."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $120.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 187
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/d3/c9/c3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Historic Old City dine-around with multiple restaurant stops",
+      "Elfreth's Alley walk with Colonial architecture commentary",
+      "Historic District restaurant tastings",
+      "Philadelphia classic dishes at curated eateries",
+      "Three-hour guided food and history format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Old City meeting point near Elfreth's Alley at your scheduled time."
+      },
+      "end": {
+        "description": "Tour ends at the final Historic District restaurant on your route."
+      }
+    },
+    "itinerarySummary": "Explore Old City's historic streets and restaurants on a guided dine-around walking tour with multiple seated tastings.",
+    "itineraryItems": [
+      {
+        "title": "Old City",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Elfreth's Alley",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Historic District restaurants",
+        "description": "",
+        "duration": "90 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old City",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Restaurant tastings",
+      "Walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Historic Old City Dine Around?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet your guide at the confirmed Old City meeting point near Elfreth's Alley at your scheduled time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 120
+      },
+      "currency": "USD"
+    }
+  }
+}

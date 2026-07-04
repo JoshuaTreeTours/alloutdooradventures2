@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "8841P73",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Valley-Forge-American-Revolution-Tour/d906-8841P73",
+    "title": "Driving Tour of Valley Forge National Park from Philadelphia",
+    "description": {
+      "text": "Visit Valley Forge National Historical Park on a driving tour from Philadelphia with commentary on the Continental Army's pivotal winter encampment. Your guide covers Washington's Headquarters, reconstructed soldier huts, and the park's memorial architecture while handling the suburban drive. The half-day format delivers Revolutionary War context at the site where the army regrouped before independence was secured. Ideal for history buffs who want efficient transport to this essential American Revolution landmark."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $149.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 76
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/f4/02/89.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Driving tour of Valley Forge National Historical Park from Philadelphia",
+      "Washington's Headquarters visit with Revolutionary War history",
+      "Continental Army encampment site commentary",
+      "Round-trip transport from Philadelphia",
+      "Half-day format with guided park exploration"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from your Philadelphia hotel or confirmed meeting point at your scheduled departure time."
+      },
+      "end": {
+        "description": "Return to your Philadelphia pickup location after the Valley Forge park visit."
+      }
+    },
+    "itinerarySummary": "Visit Valley Forge National Historical Park on a driving tour from Philadelphia with commentary on the Continental Army's pivotal winter encampment.",
+    "itineraryItems": [
+      {
+        "title": "Valley Forge National Historical Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Washington's Headquarters",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Valley Forge National Historical Park",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Valley Forge National Historical Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Round-trip transport from Philadelphia",
+      "Valley Forge park visit"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Driving Tour of Valley Forge National Park from Philadelphia?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Pickup from your Philadelphia hotel or confirmed meeting point at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149
+      },
+      "currency": "USD"
+    }
+  }
+}

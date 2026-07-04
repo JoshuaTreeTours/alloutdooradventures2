@@ -1,0 +1,477 @@
+[
+  {
+    "productCode": "8841P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-City-of-Philadelphia-Driving-Tour/d906-8841P1",
+    "title": "Private Full Day Philadelphia Driving Tour with Special Inclusion",
+    "priceFrom": "From $975.00",
+    "rating": 5,
+    "reviewCount": 142,
+    "duration": "8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/01/a1.jpg",
+    "overview": "Experience Philadelphia's essential landmarks on a private full-day driving tour with a dedicated local guide and vehicle for your party alone.",
+    "itineraryStops": [
+      "Independence Hall",
+      "Liberty Bell",
+      "Rocky Steps",
+      "Eastern State Penitentiary",
+      "Philadelphia Museum of Art"
+    ],
+    "categories": [
+      "Private Tours",
+      "City Tours",
+      "Sightseeing Tours"
+    ]
+  },
+  {
+    "productCode": "8841P6",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-Half-Day-Philadelphia-Driving-Tour/d906-8841P6",
+    "title": "Private Half Day Philadelphia Driving Tour with Local Guide",
+    "priceFrom": "From $595.00",
+    "rating": 5,
+    "reviewCount": 98,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/06/a6.jpg",
+    "overview": "Discover Philadelphia's core landmarks on a private half-day driving tour with a local guide and vehicle reserved for your group.",
+    "itineraryStops": [
+      "Independence Hall",
+      "Liberty Bell",
+      "City Hall",
+      "Reading Terminal Market"
+    ],
+    "categories": [
+      "Private Tours",
+      "City Tours",
+      "Sightseeing Tours"
+    ]
+  },
+  {
+    "productCode": "8841P70",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/A-Day-in-Amish-Country/d906-8841P70",
+    "title": "Guided Day Trip to Amish Country from Philadelphia",
+    "priceFrom": "From $249.00",
+    "rating": 4.8,
+    "reviewCount": 312,
+    "duration": "8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/70/b0.jpg",
+    "overview": "Experience Lancaster County Amish Country on a guided day trip from Philadelphia with scenic countryside drives and cultural stops.",
+    "itineraryStops": [
+      "Lancaster County",
+      "Amish Farm",
+      "Strasburg",
+      "Lancaster County"
+    ],
+    "categories": [
+      "Day Trips",
+      "Cultural Tours",
+      "Sightseeing Tours"
+    ]
+  },
+  {
+    "productCode": "8841P10",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-Driving-Tour-of-Lancaster-and-Amish-Country/d906-8841P10",
+    "title": "Private Driving Tour of Amish Country from Philadelphia",
+    "priceFrom": "From $775.00",
+    "rating": 5,
+    "reviewCount": 67,
+    "duration": "8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/a1/10/b1.jpg",
+    "overview": "Discover Lancaster County on a private driving tour from Philadelphia with a dedicated guide and vehicle for your party alone.",
+    "itineraryStops": [
+      "Lancaster County",
+      "Amish Country",
+      "Covered Bridge",
+      "Lancaster County"
+    ],
+    "categories": [
+      "Private Tours",
+      "Day Trips",
+      "Cultural Tours"
+    ]
+  },
+  {
+    "productCode": "102233P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Discovering-Colonial-Philadelphia-to-now-Walking-Tour/d906-102233P1",
+    "title": "Discovering Colonial Philadelphia Private Walking Tour",
+    "priceFrom": "From $250.00",
+    "rating": 5,
+    "reviewCount": 89,
+    "duration": "2 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/22/33/c1.jpg",
+    "overview": "Explore Colonial Philadelphia on a private walking tour through Independence National Historical Park and Old City streets reserved for your party alone.",
+    "itineraryStops": [
+      "Independence Hall",
+      "Liberty Bell",
+      "Benjamin Franklin's Grave",
+      "Christ Church"
+    ],
+    "categories": [
+      "Private Tours",
+      "Walking Tours",
+      "Historical Tours"
+    ]
+  },
+  {
+    "productCode": "102233P3",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Hamilton-The-Tour-where-it-Happens/d906-102233P3",
+    "title": "Hamilton The Tour where it Happens",
+    "priceFrom": "From $250.00",
+    "rating": 4.9,
+    "reviewCount": 156,
+    "duration": "2 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/22/33/c3.jpg",
+    "overview": "Follow Alexander Hamilton's Philadelphia footsteps on a guided walking tour connecting the sites where America's financial and political foundations took shape.",
+    "itineraryStops": [
+      "Independence Hall",
+      "City Tavern",
+      "Second Bank of the United States",
+      "Independence National Historical Park"
+    ],
+    "categories": [
+      "Walking Tours",
+      "Historical Tours",
+      "Cultural Tours"
+    ]
+  },
+  {
+    "productCode": "255730P245",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-Family-Walking-Tour-In-the-Footsteps-of-the-Founders/d906-255730P245",
+    "title": "Private 2-hour Founding Fathers Tour of Philadelphia",
+    "priceFrom": "From $160.00",
+    "rating": 5,
+    "reviewCount": 124,
+    "duration": "2 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg",
+    "overview": "Discover the Founding Fathers on a private two-hour walking tour through Independence National Historical Park tailored to your family's pace.",
+    "itineraryStops": [
+      "Independence Hall",
+      "Liberty Bell",
+      "Congress Hall",
+      "Independence National Historical Park"
+    ],
+    "categories": [
+      "Private Tours",
+      "Walking Tours",
+      "Historical Tours"
+    ]
+  },
+  {
+    "productCode": "255730P256",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-Walking-Tour-of-Nazi-History-in-Berlin/d906-255730P256",
+    "title": "Flavours of Philadelphia: Private Reading Market 2.5-hr Food Tour",
+    "priceFrom": "From $290.00",
+    "rating": 5,
+    "reviewCount": 43,
+    "duration": "2 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/57/30/d2.jpg",
+    "overview": "Taste Philadelphia's culinary heritage on a private 2.",
+    "itineraryStops": [
+      "Reading Terminal Market",
+      "Center City",
+      "Reading Terminal Market",
+      "Center City"
+    ],
+    "categories": [
+      "Private Tours",
+      "Food Tours",
+      "Walking Tours"
+    ]
+  },
+  {
+    "productCode": "86032P3",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Historic-Food-Tour/d906-86032P3",
+    "title": "Historic Old City Dine Around",
+    "priceFrom": "From $120.00",
+    "rating": 4.9,
+    "reviewCount": 187,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/60/32/d3.jpg",
+    "overview": "Explore Old City's historic streets and restaurants on a guided dine-around walking tour with multiple seated tastings.",
+    "itineraryStops": [
+      "Old City",
+      "Elfreth's Alley",
+      "Historic District restaurants",
+      "Old City"
+    ],
+    "categories": [
+      "Food Tours",
+      "Walking Tours",
+      "Historical Tours"
+    ]
+  },
+  {
+    "productCode": "8841P73",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Valley-Forge-American-Revolution-Tour/d906-8841P73",
+    "title": "Driving Tour of Valley Forge National Park from Philadelphia",
+    "priceFrom": "From $149.00",
+    "rating": 4.9,
+    "reviewCount": 76,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/73/b3.jpg",
+    "overview": "Visit Valley Forge National Historical Park on a driving tour from Philadelphia with commentary on the Continental Army's pivotal winter encampment.",
+    "itineraryStops": [
+      "Valley Forge National Historical Park",
+      "Washington's Headquarters",
+      "Valley Forge National Historical Park",
+      "Valley Forge National Historical Park"
+    ],
+    "categories": [
+      "Day Trips",
+      "Historical Tours",
+      "Sightseeing Tours"
+    ]
+  },
+  {
+    "productCode": "153296P3",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Customized-Tours-in-and-around-Philadelphia/d906-153296P3",
+    "title": "Customized Tours in and around Philadelphia",
+    "priceFrom": "From $275.00",
+    "rating": 5,
+    "reviewCount": 52,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/32/96/d3.jpg",
+    "overview": "Experience Philadelphia your way on a fully customized private tour with a dedicated guide who builds the route around your priorities.",
+    "itineraryStops": [
+      "Route Planning",
+      "Independence Hall",
+      "Philadelphia Museum of Art",
+      "Customizable stops"
+    ],
+    "categories": [
+      "Private Tours",
+      "City Tours",
+      "Sightseeing Tours"
+    ]
+  },
+  {
+    "productCode": "8841P82",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Italian-Market-Food-Tour-PRIVATE/d906-8841P82",
+    "title": "Italian Market Food Tour PRIVATE",
+    "priceFrom": "From $130.00",
+    "rating": 5,
+    "reviewCount": 38,
+    "duration": "2 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/82/b8.jpg",
+    "overview": "Discover South Philadelphia's Italian Market on a private food tour reserved for your party alone along South 9th Street.",
+    "itineraryStops": [
+      "Italian Market",
+      "South 9th Street",
+      "Italian Market",
+      "South 9th Street"
+    ],
+    "categories": [
+      "Private Tours",
+      "Food Tours",
+      "Walking Tours"
+    ]
+  },
+  {
+    "productCode": "86032P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Flavors-of-Philly-Food-Tour/d906-86032P1",
+    "title": "Flavors of Philly Food Tour",
+    "priceFrom": "From $65.00",
+    "rating": 4.8,
+    "reviewCount": 516,
+    "duration": "2 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/60/32/a1.jpg",
+    "overview": "Taste Philadelphia's iconic flavors on a guided food walking tour through Reading Terminal Market and Center City with cheesesteak stops and local specialties.",
+    "itineraryStops": [
+      "Reading Terminal Market",
+      "Center City",
+      "Center City",
+      "Reading Terminal Market"
+    ],
+    "categories": [
+      "Food Tours",
+      "Walking Tours"
+    ]
+  },
+  {
+    "productCode": "8841P34",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Center-City-Philadelphia-Food-Tour-with-Reading-Market/d906-8841P34",
+    "title": "Center City Philadelphia Food Tour with Reading Market",
+    "priceFrom": "From $59.00",
+    "rating": 4.9,
+    "reviewCount": 936,
+    "duration": "2 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/34/a4.jpg",
+    "overview": "Explore Center City Philadelphia's food scene on a walking tour combining Reading Terminal Market tastings with Rittenhouse Square neighborhood stops.",
+    "itineraryStops": [
+      "Reading Terminal Market",
+      "Center City",
+      "Rittenhouse Square",
+      "Center City"
+    ],
+    "categories": [
+      "Food Tours",
+      "Walking Tours"
+    ]
+  },
+  {
+    "productCode": "5582660P3",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Explore-Philadelphia-via-Vintage-Car-or-Electric-cart/d906-5582660P3",
+    "title": "Explore Philadelphia via Vintage Car or Electric cart",
+    "priceFrom": "From $69.00",
+    "rating": 4.7,
+    "reviewCount": 46,
+    "duration": "2 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/55/82/66/d3.jpg",
+    "overview": "See Philadelphia's landmarks from a vintage car or electric cart on a guided sightseeing tour through Old City and Center City.",
+    "itineraryStops": [
+      "Independence Hall",
+      "Liberty Bell",
+      "City Hall",
+      "Old City"
+    ],
+    "categories": [
+      "City Tours",
+      "Sightseeing Tours"
+    ]
+  },
+  {
+    "productCode": "6314PHILSEG",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Philadelphia-2-Hour-Electric-Cart-Tour/d906-6314PHILSEG",
+    "title": "Philadelphia Sightseeing by Electric Cart",
+    "priceFrom": "From $69.00",
+    "rating": 4.8,
+    "reviewCount": 677,
+    "duration": "2 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/63/14/a0/b1.jpg",
+    "overview": "Discover Philadelphia on a two-hour electric cart tour through Independence National Historical Park and Old City with a local guide.",
+    "itineraryStops": [
+      "Independence National Historical Park",
+      "Old City",
+      "Independence National Historical Park",
+      "Old City"
+    ],
+    "categories": [
+      "City Tours",
+      "Sightseeing Tours"
+    ]
+  },
+  {
+    "productCode": "5042PHLSPI",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/City-Cruises-Philadelphia-Signature-Dinner-Cruise-with-Buffet/d906-5042PHLSPI",
+    "title": "City Cruises Philadelphia Signature Dinner Cruise with Buffet",
+    "priceFrom": "From $95.00",
+    "rating": 4,
+    "reviewCount": 380,
+    "duration": "2 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/50/42/d1/n1.jpg",
+    "overview": "Experience Philadelphia from the water on a signature dinner cruise along the Delaware River with a buffet meal and skyline views.",
+    "itineraryStops": [
+      "Penn's Landing",
+      "Delaware River",
+      "Philadelphia skyline",
+      "Penn's Landing"
+    ],
+    "categories": [
+      "Dinner Cruises",
+      "Cruises & Sailing"
+    ]
+  },
+  {
+    "productCode": "5042P61",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/City-Cruises-Philadelphia-Signature-Buffet-Lunch-Cruise/d906-5042P61",
+    "title": "City Cruises Philadelphia Signature Buffet Lunch Cruise",
+    "priceFrom": "From $87.00",
+    "rating": 4,
+    "reviewCount": 60,
+    "duration": "2 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/50/42/d1/l1.jpg",
+    "overview": "Enjoy Philadelphia's skyline from the Delaware River on a daytime lunch cruise with a buffet meal aboard City Cruises.",
+    "itineraryStops": [
+      "Penn's Landing",
+      "Delaware River",
+      "Penn's Landing"
+    ],
+    "categories": [
+      "Lunch Cruises",
+      "Cruises & Sailing"
+    ]
+  },
+  {
+    "productCode": "8841P27",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Philadelphias-Italian-Market-Food-Tour/d906-8841P27",
+    "title": "Philadelphia's Italian Market Food Tour",
+    "priceFrom": "From $61.00",
+    "rating": 5,
+    "reviewCount": 309,
+    "duration": "2 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/27/a7.jpg",
+    "overview": "Walk South Philadelphia's Italian Market on a guided food tour with tastings at the vendors and eateries that define this historic neighborhood.",
+    "itineraryStops": [
+      "Italian Market",
+      "South Philadelphia",
+      "Italian Market",
+      "South 9th Street"
+    ],
+    "categories": [
+      "Food Tours",
+      "Walking Tours"
+    ]
+  },
+  {
+    "productCode": "25140P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Classic-Philadelphia-City-Bike-Tour/d906-25140P1",
+    "title": "Classic Philadelphia City Bike Tour",
+    "priceFrom": "From $79.00",
+    "rating": 4.9,
+    "reviewCount": 214,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/25/14/01/b1.jpg",
+    "overview": "Explore Philadelphia on a guided bike tour along the Schuylkill River Trail with stops at the Philadelphia Museum of Art, Rocky Steps, and Boathouse Row.",
+    "itineraryStops": [
+      "Schuylkill River Trail",
+      "Philadelphia Museum of Art",
+      "Boathouse Row",
+      "Schuylkill River Trail"
+    ],
+    "categories": [
+      "Bike Tours",
+      "Sightseeing Tours",
+      "Active Tours"
+    ]
+  },
+  {
+    "productCode": "115692P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Beyond-the-Bell-History-Walking-Tour/d906-115692P1",
+    "title": "Beyond the Liberty Bell History Walking Tour",
+    "priceFrom": "From $59.00",
+    "rating": 4.8,
+    "reviewCount": 423,
+    "duration": "2 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/56/92/b1.jpg",
+    "overview": "Go beyond the Liberty Bell on a history walking tour through Old City that reveals hidden stories and lesser-known Revolutionary sites.",
+    "itineraryStops": [
+      "Independence Hall",
+      "Liberty Bell",
+      "Old City",
+      "Old City hidden history"
+    ],
+    "categories": [
+      "Walking Tours",
+      "Historical Tours"
+    ]
+  },
+  {
+    "productCode": "52886P6",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Inside-the-Italian-Market-Chef-Led-Tasting-Journey/d906-52886P6",
+    "title": "Inside the Italian Market: Chef-Led Tasting Journey",
+    "priceFrom": "From $80.00",
+    "rating": 4.9,
+    "reviewCount": 167,
+    "duration": "2 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/52/88/06/b6.jpg",
+    "overview": "Experience the Italian Market through a chef's eyes on a guided tasting journey with curated stops at South Philadelphia's best vendors.",
+    "itineraryStops": [
+      "Italian Market",
+      "Chef-Led Tastings",
+      "Italian Market",
+      "Italian Market"
+    ],
+    "categories": [
+      "Food Tours",
+      "Walking Tours"
+    ]
+  }
+]

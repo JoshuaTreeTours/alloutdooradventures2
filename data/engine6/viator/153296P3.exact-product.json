@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "153296P3",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Customized-Tours-in-and-around-Philadelphia/d906-153296P3",
+    "title": "Customized Tours in and around Philadelphia",
+    "description": {
+      "text": "Experience Philadelphia your way on a fully customized private tour with a dedicated guide who builds the route around your priorities. Choose emphasis on Independence Hall, the Philadelphia Museum of Art, food neighborhoods, or suburban day trips with flexible stop lengths at each landmark. Your guide adjusts pacing and routing to your group, whether that means extended time at the Liberty Bell or a detour to Reading Terminal Market. This premium private format suits repeat visitors and groups with specific Philadelphia interests."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $275.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 52
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/32/96/d3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fully customized private Philadelphia tour for your party",
+      "Flexible routing to Independence Hall, museums, or food stops",
+      "Philadelphia Museum of Art and Rocky Steps optional routing",
+      "Dedicated guide with personalized pacing",
+      "Per-group pricing with hotel pickup options"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at your Philadelphia hotel, vacation rental, or confirmed downtown meeting point."
+      },
+      "end": {
+        "description": "Tour concludes at your preferred endpoint or starting location."
+      }
+    },
+    "itinerarySummary": "Experience Philadelphia your way on a fully customized private tour with a dedicated guide who builds the route around your priorities.",
+    "itineraryItems": [
+      {
+        "title": "Route Planning",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Independence Hall",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Philadelphia Museum of Art",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Customizable stops",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Custom route planning",
+      "Private tour transport"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Customized Tours in and around Philadelphia?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet your guide at your Philadelphia hotel, vacation rental, or confirmed downtown meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 275
+      },
+      "currency": "USD"
+    }
+  }
+}

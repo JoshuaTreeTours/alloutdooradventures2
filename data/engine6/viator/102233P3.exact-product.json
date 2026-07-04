@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "102233P3",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Hamilton-The-Tour-where-it-Happens/d906-102233P3",
+    "title": "Hamilton The Tour where it Happens",
+    "description": {
+      "text": "Follow Alexander Hamilton's Philadelphia footsteps on a guided walking tour connecting the sites where America's financial and political foundations took shape. Your guide weaves Broadway-inspired storytelling with real history at Independence Hall, City Tavern, and the Second Bank of the United States. The route covers Hamilton's role in the Constitutional Convention and his legacy in early Federal Philadelphia. Perfect for musical theater fans and history buffs who want a lively Founding-era narrative."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $250.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 156
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/22/33/c3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hamilton-themed walking tour of Colonial Philadelphia",
+      "Independence Hall with Constitutional Convention stories",
+      "City Tavern stop tied to Founding Fathers gatherings",
+      "Second Bank of the United States and Hamilton's financial legacy",
+      "Engaging guide narration for musical and history fans"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at Independence Visitor Center or confirmed Old City meeting point at your scheduled departure time."
+      },
+      "end": {
+        "description": "Tour ends near the Second Bank of the United States or your agreed Old City endpoint."
+      }
+    },
+    "itinerarySummary": "Follow Alexander Hamilton's Philadelphia footsteps on a guided walking tour connecting the sites where America's financial and political foundations took shape.",
+    "itineraryItems": [
+      {
+        "title": "Independence Hall",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "City Tavern",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Second Bank of the United States",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Independence National Historical Park",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Hamilton history walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Hamilton The Tour where it Happens?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet your guide at Independence Visitor Center or confirmed Old City meeting point at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 250
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "255730P245",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-Family-Walking-Tour-In-the-Footsteps-of-the-Founders/d906-255730P245",
+    "title": "Private 2-hour Founding Fathers Tour of Philadelphia",
+    "description": {
+      "text": "Discover Philadelphia's Founding Fathers on a private two-hour walking tour through Independence National Historical Park tailored to your family's pace. Your guide brings Washington, Jefferson, and Franklin to life at Independence Hall, the Liberty Bell, and Congress Hall with stories suited to all ages. The private format allows extra photo time and questions without keeping up with a large group. Ideal for families who want a focused Revolutionary history introduction in Old City."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $160.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 124
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Founding Fathers walking tour for your party only",
+      "Independence Hall with family-friendly Revolutionary history",
+      "Liberty Bell visit with flexible photo time",
+      "Congress Hall and early American government stories",
+      "Two-hour format ideal for families with children"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your private guide at Independence Visitor Center at your scheduled departure time."
+      },
+      "end": {
+        "description": "Tour ends at Congress Hall or your agreed Independence Mall endpoint."
+      }
+    },
+    "itinerarySummary": "Discover the Founding Fathers on a private two-hour walking tour through Independence National Historical Park tailored to your family's pace.",
+    "itineraryItems": [
+      {
+        "title": "Independence Hall",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Liberty Bell",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Congress Hall",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Independence National Historical Park",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Private walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private 2-hour Founding Fathers Tour of Philadelphia?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet your private guide at Independence Visitor Center at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 160
+      },
+      "currency": "USD"
+    }
+  }
+}

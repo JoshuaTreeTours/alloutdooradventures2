@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "52886P6",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Inside-the-Italian-Market-Chef-Led-Tasting-Journey/d906-52886P6",
+    "title": "Inside the Italian Market: Chef-Led Tasting Journey",
+    "description": {
+      "text": "Experience the Italian Market through a chef's eyes on a guided tasting journey with curated stops at South Philadelphia's best vendors. Your chef-guide selects seasonal samples and explains how market ingredients shape Philadelphia's restaurant scene. The route covers the Italian Market with seated and standing tastings timed for flavor and pacing. Ideal for serious food lovers who want expert culinary perspective on this historic neighborhood."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $80.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 167
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/63/dc/41.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Chef-led tasting journey through the Italian Market",
+      "Curated vendor stops with seasonal sample selections",
+      "Professional chef commentary on ingredients and technique",
+      "Italian Market and South Philadelphia routing",
+      "2.5-hour premium food experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your chef-guide at the Italian Market on South 9th Street at your scheduled departure time."
+      },
+      "end": {
+        "description": "Tour ends near the final chef-led tasting stop in the Italian Market."
+      }
+    },
+    "itinerarySummary": "Experience the Italian Market through a chef's eyes on a guided tasting journey with curated stops at South Philadelphia's best vendors.",
+    "itineraryItems": [
+      {
+        "title": "Italian Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chef-Led Tastings",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Italian Market",
+        "description": "",
+        "duration": "35 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Italian Market",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Chef guide",
+      "Food tastings",
+      "Walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Inside the Italian Market: Chef-Led Tasting Journey?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet your chef-guide at the Italian Market on South 9th Street at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 80
+      },
+      "currency": "USD"
+    }
+  }
+}

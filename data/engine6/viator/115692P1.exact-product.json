@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "115692P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Beyond-the-Bell-History-Walking-Tour/d906-115692P1",
+    "title": "Beyond the Liberty Bell History Walking Tour",
+    "description": {
+      "text": "Go beyond the Liberty Bell on a history walking tour through Old City that reveals hidden stories and lesser-known Revolutionary sites. Your guide covers Independence Hall and the bell while diving into alleyways, burial grounds, and overlooked landmarks that shaped early Philadelphia. The two-hour format keeps a focused pace through downtown crime, commerce, and Colonial life. Suited for curious travelers who want deeper context than a standard Independence Mall visit."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $59.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 423
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/ab/c6/e2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "History walking tour beyond standard Liberty Bell stops",
+      "Independence Hall with expanded Old City context",
+      "Liberty Bell visit with hidden history commentary",
+      "Old City alleyways and overlooked Revolutionary sites",
+      "Two-hour guided format near Independence Mall"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at Independence Visitor Center or confirmed Old City meeting point at your scheduled departure time."
+      },
+      "end": {
+        "description": "Tour ends in Old City near the final hidden-history stop."
+      }
+    },
+    "itinerarySummary": "Go beyond the Liberty Bell on a history walking tour through Old City that reveals hidden stories and lesser-known Revolutionary sites.",
+    "itineraryItems": [
+      {
+        "title": "Independence Hall",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Liberty Bell",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old City",
+        "description": "",
+        "duration": "35 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old City hidden history",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "History walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Beyond the Liberty Bell History Walking Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet your guide at Independence Visitor Center or confirmed Old City meeting point at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 59
+      },
+      "currency": "USD"
+    }
+  }
+}

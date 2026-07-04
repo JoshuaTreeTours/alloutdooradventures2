@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "8841P6",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-Half-Day-Philadelphia-Driving-Tour/d906-8841P6",
+    "title": "Private Half Day Philadelphia Driving Tour with Local Guide",
+    "description": {
+      "text": "Discover Philadelphia's core landmarks on a private half-day driving tour with a local guide and vehicle reserved for your group. The route efficiently covers Independence Hall, the Liberty Bell, City Hall, and Reading Terminal Market with flexible stop lengths at your preferred photo points. Your guide connects Revolutionary history with modern Center City life while navigating downtown streets. This premium private format suits travelers with limited time who still want a personalized introduction to Philadelphia."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $595.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 98
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/06/a6.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private half-day driving tour with local guide",
+      "Independence Hall and Liberty Bell stops",
+      "Philadelphia City Hall and William Penn statue views",
+      "Reading Terminal Market visit with food options",
+      "Per-group private vehicle for your party only"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from your Philadelphia hotel or confirmed downtown meeting point at your scheduled departure time."
+      },
+      "end": {
+        "description": "Return to your pickup location or agreed Center City drop-off after the final stop."
+      }
+    },
+    "itinerarySummary": "Discover Philadelphia's core landmarks on a private half-day driving tour with a local guide and vehicle reserved for your group.",
+    "itineraryItems": [
+      {
+        "title": "Independence Hall",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Liberty Bell",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "City Hall",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Reading Terminal Market",
+        "description": "",
+        "duration": "40 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private local guide",
+      "Private vehicle transport",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Half Day Philadelphia Driving Tour with Local Guide?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Pickup from your Philadelphia hotel or confirmed downtown meeting point at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 595
+      },
+      "currency": "USD"
+    }
+  }
+}

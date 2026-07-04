@@ -312,6 +312,28 @@ import specimen3332dayPayload from "../../data/engine6/viator/3332DAY.exact-prod
 import specimen191307p3Payload from "../../data/engine6/viator/191307P3.exact-product.json";
 import specimen338277p2Payload from "../../data/engine6/viator/338277P2.exact-product.json";
 import specimen7812p19Payload from "../../data/engine6/viator/7812P19.exact-product.json";
+import specimen8841p1Payload from "../../data/engine6/viator/8841P1.exact-product.json";
+import specimen8841p6Payload from "../../data/engine6/viator/8841P6.exact-product.json";
+import specimen8841p70Payload from "../../data/engine6/viator/8841P70.exact-product.json";
+import specimen8841p10Payload from "../../data/engine6/viator/8841P10.exact-product.json";
+import specimen102233p1Payload from "../../data/engine6/viator/102233P1.exact-product.json";
+import specimen102233p3Payload from "../../data/engine6/viator/102233P3.exact-product.json";
+import specimen255730p245Payload from "../../data/engine6/viator/255730P245.exact-product.json";
+import specimen255730p256Payload from "../../data/engine6/viator/255730P256.exact-product.json";
+import specimen86032p3Payload from "../../data/engine6/viator/86032P3.exact-product.json";
+import specimen8841p73Payload from "../../data/engine6/viator/8841P73.exact-product.json";
+import specimen153296p3Payload from "../../data/engine6/viator/153296P3.exact-product.json";
+import specimen8841p82Payload from "../../data/engine6/viator/8841P82.exact-product.json";
+import specimen86032p1Payload from "../../data/engine6/viator/86032P1.exact-product.json";
+import specimen8841p34Payload from "../../data/engine6/viator/8841P34.exact-product.json";
+import specimen5582660p3Payload from "../../data/engine6/viator/5582660P3.exact-product.json";
+import specimen6314philsegPayload from "../../data/engine6/viator/6314PHILSEG.exact-product.json";
+import specimen5042phlspiPayload from "../../data/engine6/viator/5042PHLSPI.exact-product.json";
+import specimen5042p61Payload from "../../data/engine6/viator/5042P61.exact-product.json";
+import specimen8841p27Payload from "../../data/engine6/viator/8841P27.exact-product.json";
+import specimen25140p1Payload from "../../data/engine6/viator/25140P1.exact-product.json";
+import specimen115692p1Payload from "../../data/engine6/viator/115692P1.exact-product.json";
+import specimen52886p6Payload from "../../data/engine6/viator/52886P6.exact-product.json";
 import specimen3283bwwPayload from "../../data/engine6/viator/3283BWW.exact-product.json";
 import specimen3283sscruisePayload from "../../data/engine6/viator/3283SSCRUISE.exact-product.json";
 import specimen44921p7Payload from "../../data/engine6/viator/44921P7.exact-product.json";
@@ -3277,6 +3299,138 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Boston/Day-Trip-from-Boston-To-Salem-Witch-Exhibits/d678-66192P8",
     rawPayload: specimen66192p8Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8841P1",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Private-City-of-Philadelphia-Driving-Tour/d906-8841P1",
+    rawPayload: specimen8841p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8841P6",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Private-Half-Day-Philadelphia-Driving-Tour/d906-8841P6",
+    rawPayload: specimen8841p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8841P70",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/A-Day-in-Amish-Country/d906-8841P70",
+    rawPayload: specimen8841p70Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8841P10",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Private-Driving-Tour-of-Lancaster-and-Amish-Country/d906-8841P10",
+    rawPayload: specimen8841p10Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "102233P1",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Discovering-Colonial-Philadelphia-to-now-Walking-Tour/d906-102233P1",
+    rawPayload: specimen102233p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "102233P3",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Hamilton-The-Tour-where-it-Happens/d906-102233P3",
+    rawPayload: specimen102233p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "255730P245",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Private-Family-Walking-Tour-In-the-Footsteps-of-the-Founders/d906-255730P245",
+    rawPayload: specimen255730p245Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "255730P256",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Private-Walking-Tour-of-Nazi-History-in-Berlin/d906-255730P256",
+    rawPayload: specimen255730p256Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "86032P3",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Historic-Food-Tour/d906-86032P3",
+    rawPayload: specimen86032p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8841P73",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Valley-Forge-American-Revolution-Tour/d906-8841P73",
+    rawPayload: specimen8841p73Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "153296P3",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Customized-Tours-in-and-around-Philadelphia/d906-153296P3",
+    rawPayload: specimen153296p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8841P82",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Italian-Market-Food-Tour-PRIVATE/d906-8841P82",
+    rawPayload: specimen8841p82Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "86032P1",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Flavors-of-Philly-Food-Tour/d906-86032P1",
+    rawPayload: specimen86032p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8841P34",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Center-City-Philadelphia-Food-Tour-with-Reading-Market/d906-8841P34",
+    rawPayload: specimen8841p34Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5582660P3",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Explore-Philadelphia-via-Vintage-Car-or-Electric-cart/d906-5582660P3",
+    rawPayload: specimen5582660p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6314PHILSEG",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Philadelphia-2-Hour-Electric-Cart-Tour/d906-6314PHILSEG",
+    rawPayload: specimen6314philsegPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5042PHLSPI",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/City-Cruises-Philadelphia-Signature-Dinner-Cruise-with-Buffet/d906-5042PHLSPI",
+    rawPayload: specimen5042phlspiPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5042P61",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/City-Cruises-Philadelphia-Signature-Buffet-Lunch-Cruise/d906-5042P61",
+    rawPayload: specimen5042p61Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8841P27",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Philadelphias-Italian-Market-Food-Tour/d906-8841P27",
+    rawPayload: specimen8841p27Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "25140P1",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Classic-Philadelphia-City-Bike-Tour/d906-25140P1",
+    rawPayload: specimen25140p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "115692P1",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Beyond-the-Bell-History-Walking-Tour/d906-115692P1",
+    rawPayload: specimen115692p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "52886P6",
+    publicUrl: "https://www.viator.com/tours/Philadelphia/Inside-the-Italian-Market-Chef-Led-Tasting-Journey/d906-52886P6",
+    rawPayload: specimen52886p6Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

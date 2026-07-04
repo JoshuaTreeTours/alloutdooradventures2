@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "8841P10",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-Driving-Tour-of-Lancaster-and-Amish-Country/d906-8841P10",
+    "title": "Private Driving Tour of Amish Country from Philadelphia",
+    "description": {
+      "text": "Discover Lancaster County on a private driving tour from Philadelphia with a dedicated guide and vehicle for your party alone. The route covers Amish Country back roads, a covered bridge, and Lancaster County farmland with flexible pacing at farms and scenic viewpoints. Your guide shares Plain community history and rural Pennsylvania stories without the schedule of a large group bus. This premium private format suits families who want an unhurried Amish Country day tailored to their interests."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $775.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 67
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/a1/10/b1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Amish Country driving tour from Philadelphia",
+      "Lancaster County back-road routing for your party only",
+      "Covered bridge photo stop in rural Pennsylvania",
+      "Flexible farm and countryside visit pacing",
+      "Per-group private vehicle with dedicated guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from your Philadelphia hotel or confirmed meeting point at your scheduled departure time."
+      },
+      "end": {
+        "description": "Return to your Philadelphia pickup location after the final Amish Country stop."
+      }
+    },
+    "itinerarySummary": "Discover Lancaster County on a private driving tour from Philadelphia with a dedicated guide and vehicle for your party alone.",
+    "itineraryItems": [
+      {
+        "title": "Lancaster County",
+        "description": "",
+        "duration": "90 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Amish Country",
+        "description": "",
+        "duration": "60 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Covered Bridge",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lancaster County",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Private driver-guide",
+      "Private vehicle transport",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Driving Tour of Amish Country from Philadelphia?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Pickup from your Philadelphia hotel or confirmed meeting point at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 775
+      },
+      "currency": "USD"
+    }
+  }
+}

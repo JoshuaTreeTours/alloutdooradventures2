@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "102233P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Discovering-Colonial-Philadelphia-to-now-Walking-Tour/d906-102233P1",
+    "title": "Discovering Colonial Philadelphia Private Walking Tour",
+    "description": {
+      "text": "Explore Colonial Philadelphia on a private walking tour through Independence National Historical Park and Old City streets reserved for your party alone. Your guide connects Independence Hall, the Liberty Bell, Benjamin Franklin's Grave, and Christ Church with stories of the Founding Fathers and early American life. The private format allows flexible time at each landmark without a large group schedule. This premium outing suits history enthusiasts who want an intimate Colonial Philadelphia deep dive."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $250.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 89
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/22/33/c1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Colonial Philadelphia walking tour for your group",
+      "Independence Hall and Liberty Bell with expert narration",
+      "Benjamin Franklin's Grave at Christ Church Burial Ground",
+      "Christ Church visit with Founding Fathers history",
+      "Flexible pacing through Old City landmarks"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your private guide at Independence Visitor Center or confirmed Old City meeting point at your scheduled time."
+      },
+      "end": {
+        "description": "Tour ends near Christ Church or your agreed Old City endpoint."
+      }
+    },
+    "itinerarySummary": "Explore Colonial Philadelphia on a private walking tour through Independence National Historical Park and Old City streets reserved for your party alone.",
+    "itineraryItems": [
+      {
+        "title": "Independence Hall",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Liberty Bell",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Benjamin Franklin's Grave",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Christ Church",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Private walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Discovering Colonial Philadelphia Private Walking Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet your private guide at Independence Visitor Center or confirmed Old City meeting point at your scheduled time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 250
+      },
+      "currency": "USD"
+    }
+  }
+}

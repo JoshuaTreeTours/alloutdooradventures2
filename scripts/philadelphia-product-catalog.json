@@ -1,0 +1,455 @@
+[
+  {
+    "productCode": "8841P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-City-of-Philadelphia-Driving-Tour/d906-8841P1",
+    "title": "Private Full Day Philadelphia Driving Tour with Special Inclusion",
+    "duration": "8 hours (approx.)",
+    "priceFrom": 975,
+    "rating": 5,
+    "reviewCount": 142,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/01/a1.jpg",
+    "categories": [
+      "Private Tours",
+      "City Tours",
+      "Sightseeing Tours"
+    ],
+    "itineraryTitles": [
+      "Independence Hall",
+      "Liberty Bell",
+      "Rocky Steps",
+      "Eastern State Penitentiary",
+      "Philadelphia Museum of Art"
+    ]
+  },
+  {
+    "productCode": "8841P6",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-Half-Day-Philadelphia-Driving-Tour/d906-8841P6",
+    "title": "Private Half Day Philadelphia Driving Tour with Local Guide",
+    "duration": "4 hours (approx.)",
+    "priceFrom": 595,
+    "rating": 5,
+    "reviewCount": 98,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/06/a6.jpg",
+    "categories": [
+      "Private Tours",
+      "City Tours",
+      "Sightseeing Tours"
+    ],
+    "itineraryTitles": [
+      "Independence Hall",
+      "Liberty Bell",
+      "City Hall",
+      "Reading Terminal Market"
+    ]
+  },
+  {
+    "productCode": "8841P70",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/A-Day-in-Amish-Country/d906-8841P70",
+    "title": "Guided Day Trip to Amish Country from Philadelphia",
+    "duration": "8 hours (approx.)",
+    "priceFrom": 249,
+    "rating": 4.8,
+    "reviewCount": 312,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/70/b0.jpg",
+    "categories": [
+      "Day Trips",
+      "Cultural Tours",
+      "Sightseeing Tours"
+    ],
+    "itineraryTitles": [
+      "Lancaster County",
+      "Amish Farm",
+      "Strasburg",
+      "Lancaster County"
+    ]
+  },
+  {
+    "productCode": "8841P10",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-Driving-Tour-of-Lancaster-and-Amish-Country/d906-8841P10",
+    "title": "Private Driving Tour of Amish Country from Philadelphia",
+    "duration": "8 hours (approx.)",
+    "priceFrom": 775,
+    "rating": 5,
+    "reviewCount": 67,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/a1/10/b1.jpg",
+    "categories": [
+      "Private Tours",
+      "Day Trips",
+      "Cultural Tours"
+    ],
+    "itineraryTitles": [
+      "Lancaster County",
+      "Amish Country",
+      "Covered Bridge",
+      "Lancaster County"
+    ]
+  },
+  {
+    "productCode": "102233P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Discovering-Colonial-Philadelphia-to-now-Walking-Tour/d906-102233P1",
+    "title": "Discovering Colonial Philadelphia Private Walking Tour",
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": 250,
+    "rating": 5,
+    "reviewCount": 89,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/22/33/c1.jpg",
+    "categories": [
+      "Private Tours",
+      "Walking Tours",
+      "Historical Tours"
+    ],
+    "itineraryTitles": [
+      "Independence Hall",
+      "Liberty Bell",
+      "Benjamin Franklin's Grave",
+      "Christ Church"
+    ]
+  },
+  {
+    "productCode": "102233P3",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Hamilton-The-Tour-where-it-Happens/d906-102233P3",
+    "title": "Hamilton The Tour where it Happens",
+    "duration": "2 hours (approx.)",
+    "priceFrom": 250,
+    "rating": 4.9,
+    "reviewCount": 156,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/22/33/c3.jpg",
+    "categories": [
+      "Walking Tours",
+      "Historical Tours",
+      "Cultural Tours"
+    ],
+    "itineraryTitles": [
+      "Independence Hall",
+      "City Tavern",
+      "Second Bank of the United States",
+      "Independence National Historical Park"
+    ]
+  },
+  {
+    "productCode": "255730P245",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-Family-Walking-Tour-In-the-Footsteps-of-the-Founders/d906-255730P245",
+    "title": "Private 2-hour Founding Fathers Tour of Philadelphia",
+    "duration": "2 hours (approx.)",
+    "priceFrom": 160,
+    "rating": 5,
+    "reviewCount": 124,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg",
+    "categories": [
+      "Private Tours",
+      "Walking Tours",
+      "Historical Tours"
+    ],
+    "itineraryTitles": [
+      "Independence Hall",
+      "Liberty Bell",
+      "Congress Hall",
+      "Independence National Historical Park"
+    ]
+  },
+  {
+    "productCode": "255730P256",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-Walking-Tour-of-Nazi-History-in-Berlin/d906-255730P256",
+    "title": "Flavours of Philadelphia: Private Reading Market 2.5-hr Food Tour",
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": 290,
+    "rating": 5,
+    "reviewCount": 43,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/57/30/d2.jpg",
+    "categories": [
+      "Private Tours",
+      "Food Tours",
+      "Walking Tours"
+    ],
+    "itineraryTitles": [
+      "Reading Terminal Market",
+      "Center City",
+      "Reading Terminal Market",
+      "Center City"
+    ]
+  },
+  {
+    "productCode": "86032P3",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Historic-Food-Tour/d906-86032P3",
+    "title": "Historic Old City Dine Around",
+    "duration": "3 hours (approx.)",
+    "priceFrom": 120,
+    "rating": 4.9,
+    "reviewCount": 187,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/60/32/d3.jpg",
+    "categories": [
+      "Food Tours",
+      "Walking Tours",
+      "Historical Tours"
+    ],
+    "itineraryTitles": [
+      "Old City",
+      "Elfreth's Alley",
+      "Historic District restaurants",
+      "Old City"
+    ]
+  },
+  {
+    "productCode": "8841P73",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Valley-Forge-American-Revolution-Tour/d906-8841P73",
+    "title": "Driving Tour of Valley Forge National Park from Philadelphia",
+    "duration": "4 hours (approx.)",
+    "priceFrom": 149,
+    "rating": 4.9,
+    "reviewCount": 76,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/73/b3.jpg",
+    "categories": [
+      "Day Trips",
+      "Historical Tours",
+      "Sightseeing Tours"
+    ],
+    "itineraryTitles": [
+      "Valley Forge National Historical Park",
+      "Washington's Headquarters",
+      "Valley Forge National Historical Park",
+      "Valley Forge National Historical Park"
+    ]
+  },
+  {
+    "productCode": "153296P3",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Customized-Tours-in-and-around-Philadelphia/d906-153296P3",
+    "title": "Customized Tours in and around Philadelphia",
+    "duration": "4 hours (approx.)",
+    "priceFrom": 275,
+    "rating": 5,
+    "reviewCount": 52,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/32/96/d3.jpg",
+    "categories": [
+      "Private Tours",
+      "City Tours",
+      "Sightseeing Tours"
+    ],
+    "itineraryTitles": [
+      "Route Planning",
+      "Independence Hall",
+      "Philadelphia Museum of Art",
+      "Customizable stops"
+    ]
+  },
+  {
+    "productCode": "8841P82",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Italian-Market-Food-Tour-PRIVATE/d906-8841P82",
+    "title": "Italian Market Food Tour PRIVATE",
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": 130,
+    "rating": 5,
+    "reviewCount": 38,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/82/b8.jpg",
+    "categories": [
+      "Private Tours",
+      "Food Tours",
+      "Walking Tours"
+    ],
+    "itineraryTitles": [
+      "Italian Market",
+      "South 9th Street",
+      "Italian Market",
+      "South 9th Street"
+    ]
+  },
+  {
+    "productCode": "86032P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Flavors-of-Philly-Food-Tour/d906-86032P1",
+    "title": "Flavors of Philly Food Tour",
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": 65,
+    "rating": 4.8,
+    "reviewCount": 516,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/60/32/a1.jpg",
+    "categories": [
+      "Food Tours",
+      "Walking Tours"
+    ],
+    "itineraryTitles": [
+      "Reading Terminal Market",
+      "Center City",
+      "Center City",
+      "Reading Terminal Market"
+    ]
+  },
+  {
+    "productCode": "8841P34",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Center-City-Philadelphia-Food-Tour-with-Reading-Market/d906-8841P34",
+    "title": "Center City Philadelphia Food Tour with Reading Market",
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": 59,
+    "rating": 4.9,
+    "reviewCount": 936,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/34/a4.jpg",
+    "categories": [
+      "Food Tours",
+      "Walking Tours"
+    ],
+    "itineraryTitles": [
+      "Reading Terminal Market",
+      "Center City",
+      "Rittenhouse Square",
+      "Center City"
+    ]
+  },
+  {
+    "productCode": "5582660P3",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Explore-Philadelphia-via-Vintage-Car-or-Electric-cart/d906-5582660P3",
+    "title": "Explore Philadelphia via Vintage Car or Electric cart",
+    "duration": "2 hours (approx.)",
+    "priceFrom": 69,
+    "rating": 4.7,
+    "reviewCount": 46,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/55/82/66/d3.jpg",
+    "categories": [
+      "City Tours",
+      "Sightseeing Tours"
+    ],
+    "itineraryTitles": [
+      "Independence Hall",
+      "Liberty Bell",
+      "City Hall",
+      "Old City"
+    ]
+  },
+  {
+    "productCode": "6314PHILSEG",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Philadelphia-2-Hour-Electric-Cart-Tour/d906-6314PHILSEG",
+    "title": "Philadelphia Sightseeing by Electric Cart",
+    "duration": "2 hours (approx.)",
+    "priceFrom": 69,
+    "rating": 4.8,
+    "reviewCount": 677,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/63/14/a0/b1.jpg",
+    "categories": [
+      "City Tours",
+      "Sightseeing Tours"
+    ],
+    "itineraryTitles": [
+      "Independence National Historical Park",
+      "Old City",
+      "Independence National Historical Park",
+      "Old City"
+    ]
+  },
+  {
+    "productCode": "5042PHLSPI",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/City-Cruises-Philadelphia-Signature-Dinner-Cruise-with-Buffet/d906-5042PHLSPI",
+    "title": "City Cruises Philadelphia Signature Dinner Cruise with Buffet",
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": 95,
+    "rating": 4,
+    "reviewCount": 380,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/50/42/d1/n1.jpg",
+    "categories": [
+      "Dinner Cruises",
+      "Cruises & Sailing"
+    ],
+    "itineraryTitles": [
+      "Penn's Landing",
+      "Delaware River",
+      "Philadelphia skyline",
+      "Penn's Landing"
+    ]
+  },
+  {
+    "productCode": "5042P61",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/City-Cruises-Philadelphia-Signature-Buffet-Lunch-Cruise/d906-5042P61",
+    "title": "City Cruises Philadelphia Signature Buffet Lunch Cruise",
+    "duration": "2 hours (approx.)",
+    "priceFrom": 87,
+    "rating": 4,
+    "reviewCount": 60,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/50/42/d1/l1.jpg",
+    "categories": [
+      "Lunch Cruises",
+      "Cruises & Sailing"
+    ],
+    "itineraryTitles": [
+      "Penn's Landing",
+      "Delaware River",
+      "Penn's Landing"
+    ]
+  },
+  {
+    "productCode": "8841P27",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Philadelphias-Italian-Market-Food-Tour/d906-8841P27",
+    "title": "Philadelphia's Italian Market Food Tour",
+    "duration": "2 hours (approx.)",
+    "priceFrom": 61,
+    "rating": 5,
+    "reviewCount": 309,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/27/a7.jpg",
+    "categories": [
+      "Food Tours",
+      "Walking Tours"
+    ],
+    "itineraryTitles": [
+      "Italian Market",
+      "South Philadelphia",
+      "Italian Market",
+      "South 9th Street"
+    ]
+  },
+  {
+    "productCode": "25140P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Classic-Philadelphia-City-Bike-Tour/d906-25140P1",
+    "title": "Classic Philadelphia City Bike Tour",
+    "duration": "3 hours (approx.)",
+    "priceFrom": 79,
+    "rating": 4.9,
+    "reviewCount": 214,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/25/14/01/b1.jpg",
+    "categories": [
+      "Bike Tours",
+      "Sightseeing Tours",
+      "Active Tours"
+    ],
+    "itineraryTitles": [
+      "Schuylkill River Trail",
+      "Philadelphia Museum of Art",
+      "Boathouse Row",
+      "Schuylkill River Trail"
+    ]
+  },
+  {
+    "productCode": "115692P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Beyond-the-Bell-History-Walking-Tour/d906-115692P1",
+    "title": "Beyond the Liberty Bell History Walking Tour",
+    "duration": "2 hours (approx.)",
+    "priceFrom": 59,
+    "rating": 4.8,
+    "reviewCount": 423,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/56/92/b1.jpg",
+    "categories": [
+      "Walking Tours",
+      "Historical Tours"
+    ],
+    "itineraryTitles": [
+      "Independence Hall",
+      "Liberty Bell",
+      "Old City",
+      "Old City hidden history"
+    ]
+  },
+  {
+    "productCode": "52886P6",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Inside-the-Italian-Market-Chef-Led-Tasting-Journey/d906-52886P6",
+    "title": "Inside the Italian Market: Chef-Led Tasting Journey",
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": 80,
+    "rating": 4.9,
+    "reviewCount": 167,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/52/88/06/b6.jpg",
+    "categories": [
+      "Food Tours",
+      "Walking Tours"
+    ],
+    "itineraryTitles": [
+      "Italian Market",
+      "Chef-Led Tastings",
+      "Italian Market",
+      "Italian Market"
+    ]
+  }
+]

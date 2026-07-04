@@ -1257,6 +1257,79 @@ export const ENGINE6_BOSTON_TOUR_PATH_PREFIX =
 export const isEngine6BostonTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_BOSTON_TOUR_PATH_PREFIX);
 
+export const ENGINE6_PHILADELPHIA_8841P1_PRODUCT_CODE = "8841P1";
+export const ENGINE6_PHILADELPHIA_8841P1_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/private-full-day-philadelphia-driving-tour-with-special-8841P1";
+export const ENGINE6_PHILADELPHIA_8841P6_PRODUCT_CODE = "8841P6";
+export const ENGINE6_PHILADELPHIA_8841P6_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/private-half-day-philadelphia-driving-tour-with-local-g-8841P6";
+export const ENGINE6_PHILADELPHIA_8841P70_PRODUCT_CODE = "8841P70";
+export const ENGINE6_PHILADELPHIA_8841P70_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/guided-day-trip-to-amish-country-from-philadelphia-8841P70";
+export const ENGINE6_PHILADELPHIA_8841P10_PRODUCT_CODE = "8841P10";
+export const ENGINE6_PHILADELPHIA_8841P10_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/private-driving-tour-of-amish-country-from-philadelphia-8841P10";
+export const ENGINE6_PHILADELPHIA_102233P1_PRODUCT_CODE = "102233P1";
+export const ENGINE6_PHILADELPHIA_102233P1_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/discovering-colonial-philadelphia-private-walking-tour-102233P1";
+export const ENGINE6_PHILADELPHIA_102233P3_PRODUCT_CODE = "102233P3";
+export const ENGINE6_PHILADELPHIA_102233P3_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/hamilton-the-tour-where-it-happens-102233P3";
+export const ENGINE6_PHILADELPHIA_255730P245_PRODUCT_CODE = "255730P245";
+export const ENGINE6_PHILADELPHIA_255730P245_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/private-2-hour-founding-fathers-tour-of-philadelphia-255730P245";
+export const ENGINE6_PHILADELPHIA_255730P256_PRODUCT_CODE = "255730P256";
+export const ENGINE6_PHILADELPHIA_255730P256_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/flavours-of-philadelphia-private-reading-market-2-5-hr-255730P256";
+export const ENGINE6_PHILADELPHIA_86032P3_PRODUCT_CODE = "86032P3";
+export const ENGINE6_PHILADELPHIA_86032P3_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/historic-old-city-dine-around-86032P3";
+export const ENGINE6_PHILADELPHIA_8841P73_PRODUCT_CODE = "8841P73";
+export const ENGINE6_PHILADELPHIA_8841P73_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/driving-tour-of-valley-forge-national-park-from-philade-8841P73";
+export const ENGINE6_PHILADELPHIA_153296P3_PRODUCT_CODE = "153296P3";
+export const ENGINE6_PHILADELPHIA_153296P3_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/customized-tours-in-and-around-philadelphia-153296P3";
+export const ENGINE6_PHILADELPHIA_8841P82_PRODUCT_CODE = "8841P82";
+export const ENGINE6_PHILADELPHIA_8841P82_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/italian-market-food-tour-private-8841P82";
+export const ENGINE6_PHILADELPHIA_86032P1_PRODUCT_CODE = "86032P1";
+export const ENGINE6_PHILADELPHIA_86032P1_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/flavors-of-philly-food-tour-86032P1";
+export const ENGINE6_PHILADELPHIA_8841P34_PRODUCT_CODE = "8841P34";
+export const ENGINE6_PHILADELPHIA_8841P34_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/center-city-philadelphia-food-tour-with-reading-market-8841P34";
+export const ENGINE6_PHILADELPHIA_5582660P3_PRODUCT_CODE = "5582660P3";
+export const ENGINE6_PHILADELPHIA_5582660P3_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/explore-philadelphia-via-vintage-car-or-electric-cart-5582660P3";
+export const ENGINE6_PHILADELPHIA_6314PHILSEG_PRODUCT_CODE = "6314PHILSEG";
+export const ENGINE6_PHILADELPHIA_6314PHILSEG_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/philadelphia-sightseeing-by-electric-cart-6314PHILSEG";
+export const ENGINE6_PHILADELPHIA_5042PHLSPI_PRODUCT_CODE = "5042PHLSPI";
+export const ENGINE6_PHILADELPHIA_5042PHLSPI_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/city-cruises-philadelphia-signature-dinner-cruise-with-5042PHLSPI";
+export const ENGINE6_PHILADELPHIA_5042P61_PRODUCT_CODE = "5042P61";
+export const ENGINE6_PHILADELPHIA_5042P61_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/city-cruises-philadelphia-signature-buffet-lunch-cruise-5042P61";
+export const ENGINE6_PHILADELPHIA_8841P27_PRODUCT_CODE = "8841P27";
+export const ENGINE6_PHILADELPHIA_8841P27_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/philadelphias-italian-market-food-tour-8841P27";
+export const ENGINE6_PHILADELPHIA_25140P1_PRODUCT_CODE = "25140P1";
+export const ENGINE6_PHILADELPHIA_25140P1_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/classic-philadelphia-city-bike-tour-25140P1";
+export const ENGINE6_PHILADELPHIA_115692P1_PRODUCT_CODE = "115692P1";
+export const ENGINE6_PHILADELPHIA_115692P1_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/beyond-the-liberty-bell-history-walking-tour-115692P1";
+export const ENGINE6_PHILADELPHIA_52886P6_PRODUCT_CODE = "52886P6";
+export const ENGINE6_PHILADELPHIA_52886P6_ROUTE =
+  "/destinations/pennsylvania/philadelphia/tours/inside-the-italian-market-chef-led-tasting-journey-52886P6";
+
+export const ENGINE6_PHILADELPHIA_TOUR_PATH_PREFIX =
+  "/destinations/pennsylvania/philadelphia/tours/";
+
+export const isEngine6PhiladelphiaTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_PHILADELPHIA_TOUR_PATH_PREFIX);
+
 export const ENGINE6_GSM_THUNDERING_STREAMS_PRODUCT_CODE = "26480P10";
 export const ENGINE6_GSM_THUNDERING_STREAMS_ROUTE =
   "/destinations/tennessee/great-smoky-mountains-national-park/tours/thundering-streams-falls-guided-hike-26480P10";
@@ -2457,6 +2530,28 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [ENGINE6_BOSTON_5151BOSCY014_ROUTE, ENGINE6_BOSTON_5151BOSCY014_PRODUCT_CODE],
   [ENGINE6_BOSTON_66192P8_ROUTE, ENGINE6_BOSTON_66192P8_PRODUCT_CODE],
   [ENGINE6_BOSTON_255730P225_ROUTE, ENGINE6_BOSTON_255730P225_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_8841P1_ROUTE, ENGINE6_PHILADELPHIA_8841P1_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_8841P6_ROUTE, ENGINE6_PHILADELPHIA_8841P6_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_8841P70_ROUTE, ENGINE6_PHILADELPHIA_8841P70_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_8841P10_ROUTE, ENGINE6_PHILADELPHIA_8841P10_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_102233P1_ROUTE, ENGINE6_PHILADELPHIA_102233P1_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_102233P3_ROUTE, ENGINE6_PHILADELPHIA_102233P3_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_255730P245_ROUTE, ENGINE6_PHILADELPHIA_255730P245_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_255730P256_ROUTE, ENGINE6_PHILADELPHIA_255730P256_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_86032P3_ROUTE, ENGINE6_PHILADELPHIA_86032P3_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_8841P73_ROUTE, ENGINE6_PHILADELPHIA_8841P73_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_153296P3_ROUTE, ENGINE6_PHILADELPHIA_153296P3_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_8841P82_ROUTE, ENGINE6_PHILADELPHIA_8841P82_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_86032P1_ROUTE, ENGINE6_PHILADELPHIA_86032P1_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_8841P34_ROUTE, ENGINE6_PHILADELPHIA_8841P34_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_5582660P3_ROUTE, ENGINE6_PHILADELPHIA_5582660P3_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_6314PHILSEG_ROUTE, ENGINE6_PHILADELPHIA_6314PHILSEG_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_5042PHLSPI_ROUTE, ENGINE6_PHILADELPHIA_5042PHLSPI_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_5042P61_ROUTE, ENGINE6_PHILADELPHIA_5042P61_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_8841P27_ROUTE, ENGINE6_PHILADELPHIA_8841P27_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_25140P1_ROUTE, ENGINE6_PHILADELPHIA_25140P1_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_115692P1_ROUTE, ENGINE6_PHILADELPHIA_115692P1_PRODUCT_CODE],
+  [ENGINE6_PHILADELPHIA_52886P6_ROUTE, ENGINE6_PHILADELPHIA_52886P6_PRODUCT_CODE],
   [
     ENGINE6_GSM_THUNDERING_STREAMS_ROUTE,
     ENGINE6_GSM_THUNDERING_STREAMS_PRODUCT_CODE,

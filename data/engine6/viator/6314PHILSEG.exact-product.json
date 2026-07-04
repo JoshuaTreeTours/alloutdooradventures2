@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "6314PHILSEG",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Philadelphia-2-Hour-Electric-Cart-Tour/d906-6314PHILSEG",
+    "title": "Philadelphia Sightseeing by Electric Cart",
+    "description": {
+      "text": "Discover Philadelphia on a two-hour electric cart tour through Independence National Historical Park and Old City with a local guide. The open-air cart provides comfortable sightseeing with stops at key Revolutionary landmarks and Colonial streets. Your guide shares Founding Fathers stories while navigating the compact historic district efficiently. One of Philadelphia's most-reviewed cart tours for first-time visitors who want a quick historic overview."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $69.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 677
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/73/0b/cd.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Two-hour electric cart tour of historic Philadelphia",
+      "Independence National Historical Park routing",
+      "Old City Colonial streets and landmark stops",
+      "Local guide with Revolutionary War commentary",
+      "Open-air cart with photo opportunities"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Old City departure point near Independence National Historical Park at your scheduled time."
+      },
+      "end": {
+        "description": "Return to the original Old City departure point after the cart loop."
+      }
+    },
+    "itinerarySummary": "Discover Philadelphia on a two-hour electric cart tour through Independence National Historical Park and Old City with a local guide.",
+    "itineraryItems": [
+      {
+        "title": "Independence Hall",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Liberty Bell",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old City",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Independence National Historical Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Electric cart tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Philadelphia Sightseeing by Electric Cart?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet at the confirmed Old City departure point near Independence National Historical Park at your scheduled time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 69
+      },
+      "currency": "USD"
+    }
+  }
+}
