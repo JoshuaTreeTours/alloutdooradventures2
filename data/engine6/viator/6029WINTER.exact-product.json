@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "6029WINTER",
+    "productUrl": "https://www.viator.com/tours/Jackson/Grand-Teton-and-National-Elk-Refuge-Winter-Day-Trip/d51006-6029WINTER",
+    "title": "Grand Teton and National Elk Refuge Winter Wonderland Full Day Adventure",
+    "description": {
+      "text": "There's a special beauty to Grand Teton National Park in the snowy silence of winter, free of the summertime crowds. On this Grand Teton day trip from Jackson Hole, a guide helps you search for bison and bighorn sheep, and you could also see moose, coyotes, eagles, or even wolves. Stops include National Elk Refuge, Grand Teton, Jackson. In addition, visit the National Elk Refuge, where you ride past herds of powerful elk on a comfortable, horse-drawn sleigh.Drive deep into Grand Teton National Park to view wildlife Bundle up for a fun ride on a horse-drawn sleigh in the National Elk Refuge Learn about the Wyoming wilderness from your guide Snap grea Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $219.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 322
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/ec/69/c5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "There's a special beauty to Grand Teton National Park in the snowy silence of winter, free of the summertime crowds",
+      "On this Grand Teton day trip from Jackson Hole, a guide helps you search for bison and bighorn sheep, and you could also",
+      "In addition, visit the National Elk Refuge, where you ride past herds of powerful elk on a comfortable, horse-drawn slei",
+      "Grand Teton and National Elk Refuge Winter Wonderland Full Day Adventure departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "There's a special beauty to Grand Teton National Park in the snowy silence of winter, free of the summertime crowds.",
+    "itineraryItems": [
+      {
+        "title": "National Elk Refuge",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Teton",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jackson",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Grand Teton and National Elk Refuge Winter Wonderland Full Day Adventure?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "Winter Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 219
+      },
+      "currency": "USD"
+    }
+  }
+}

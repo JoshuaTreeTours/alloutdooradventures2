@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "6252P5",
+    "productUrl": "https://www.viator.com/tours/Jackson/8-mile-Whitewater-Standard-Raft/d51006-6252P5",
+    "title": "Whitewater Rafting in Jackson Hole : Family Standard Raft",
+    "description": {
+      "text": "Experience the exhilaration of whitewater rafting on Wyoming's scenic rapids with our standard raft option. Perfect for larger families or those seeking stability, you'll tackle thrilling Class II and III rapids like the Big Kahuna and Lunch Counter. Transportation, safety gear, and local commentary are handled so you can focus on the landscape. Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $120.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 977
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/26/f1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Whitewater Rafting in Jackson Hole : Family Standard Raft from Jackson Hole",
+      "Grand Teton and Snake River valley routing",
+      "Professional guide with local expertise",
+      "Small-group or private format as listed",
+      "Wyoming mountain adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience the exhilaration of whitewater rafting on Wyoming's scenic rapids with our standard raft option.",
+    "itineraryItems": [
+      {
+        "title": "Jackson Hole",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Snake River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Teton",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Snake River Canyon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridger Teton National Forest",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Whitewater Rafting in Jackson Hole : Family Standard Raft?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Rafting"
+      },
+      {
+        "label": "White Water Rafting"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 120
+      },
+      "currency": "USD"
+    }
+  }
+}

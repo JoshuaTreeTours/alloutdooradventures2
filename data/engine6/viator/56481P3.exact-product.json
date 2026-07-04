@@ -1,0 +1,126 @@
+{
+  "product": {
+    "productCode": "56481P3",
+    "productUrl": "https://www.viator.com/tours/Jackson/13-Mile-Teton-Views-Scenic-Float-Trip/d51006-56481P3",
+    "title": "Teton Views Scenic Float Trip",
+    "description": {
+      "text": "The Snake River is an ideal location to see some of Wyoming's beautiful flora and fauna—especially bald eagles, ospreys, and pelicans—near Grand Teton National Park. Rather than rush down the river on a whitewater or kayaking trip, float down a scenic 13-mile (21 kilometers) stretch of the river on an easygoing raft. Stops include Lewis & Clark River Expeditions, Wilson, Grand Teton National Park, Bridger Teton National Forest, Snake River Range, Southpark Boat Ramp. Plus, get round-trip transportation from the outfitter's office in Jackson.Travel 13 miles (21 kilometers) down a scenic part of the Snake River Fit a morning or afternoon departure into your schedule Binoculars to better spot wildlife along the river Round-trip transportation fro Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "3 to 4 hours (approx.)",
+    "priceFrom": "From $105.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 279
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/14/02/c8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The Snake River is an ideal location to see some of Wyoming's beautiful flora and fauna—especially bald eagles, ospreys,",
+      "Rather than rush down the river on a whitewater or kayaking trip, float down a scenic 13-mile (21 kilometers) stretch of",
+      "Plus, get round-trip transportation from the outfitter's office in Jackson.Travel 13 miles (21 kilometers) down a scenic",
+      "Teton Views Scenic Float Trip departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "The Snake River is an ideal location to see some of Wyoming's beautiful flora and fauna—especially bald eagles, ospreys, and pelicans—near Grand Teton National Park.",
+    "itineraryItems": [
+      {
+        "title": "Lewis & Clark River Expeditions",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wilson",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Teton National Park",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Bridger Teton National Forest",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Snake River Range",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Southpark Boat Ramp",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lewis & Clark River Expeditions",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Teton Views Scenic Float Trip?",
+        "answer": "The planned duration is 3 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Rafting"
+      },
+      {
+        "label": "Scenic Floats"
+      },
+      {
+        "label": "Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 105
+      },
+      "currency": "USD"
+    }
+  }
+}

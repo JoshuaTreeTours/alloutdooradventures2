@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "156172P5",
+    "productUrl": "https://www.viator.com/tours/Jackson/Private-8-Hour-Grand-Teton-Adventure/d51006-156172P5",
+    "title": "Private 8-Hour Grand Teton Adventure",
+    "description": {
+      "text": "\"\" Experience a full day of adventure in Grand Teton National Park without the setbacks of a crowded group tour with during this private tour. Allow your naturalist guide to help ensure you make the most of your exploration in the Greater Yellowstone Ecosystem. Stops include Grand Teton National Park. Say goodbye to uncomfortable benches as you ride in a custom safari-style vehicle equipped with comfortable captain's chairs. Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $2443.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 75
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/e4/0f/2f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "\"\" Experience a full day of adventure in Grand Teton National Park without the setbacks of a crowded group tour with dur",
+      "Allow your naturalist guide to help ensure you make the most of your exploration in the Greater Yellowstone Ecosystem",
+      "Say goodbye to uncomfortable benches as you ride in a custom safari-style vehicle equipped with comfortable captain's ch",
+      "Private 8-Hour Grand Teton Adventure departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "\"\" Experience a full day of adventure in Grand Teton National Park without the setbacks of a crowded group tour with during this private tour.",
+    "itineraryItems": [
+      {
+        "title": "Jackson Hole",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Teton National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Snake River",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private 8-Hour Grand Teton Adventure?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 2443
+      },
+      "currency": "USD"
+    }
+  }
+}

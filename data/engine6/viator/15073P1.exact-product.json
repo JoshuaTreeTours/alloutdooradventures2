@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "15073P1",
+    "productUrl": "https://www.viator.com/tours/Jackson/Snake-River-Scenic-Float-Trip/d51006-15073P1",
+    "title": "Snake River Scenic Float Trip with Teton Views in Jackson Hole",
+    "description": {
+      "text": "Stunning scenery, wildlife sightings, and a different side of the Yellowstone ecosystem await you on this scenic floating tour down the Snake River from Jackson Hole, Wyoming. Join a professional river guide who will provide all steering and propulsion for your 13-mile rafting trip so you can sit back and enjoy the views. This tour is ideal for those who have never been rafting or who prefer to avoid the rigor of other rafting trips, including families and senior citizens.Rafting tour down the Snake River from Jackson Hole, Wyoming Catch sight of wildlife in its natural habitat, including oppo Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $115.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 970
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4c/40/0e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Stunning scenery, wildlife sightings, and a different side of the Yellowstone ecosystem await you on this scenic floatin",
+      "Join a professional river guide who will provide all steering and propulsion for your 13-mile rafting trip so you can si",
+      "This tour is ideal for those who have never been rafting or who prefer to avoid the rigor of other rafting trips, includ",
+      "Snake River Scenic Float Trip with Teton Views in Jackson Hole departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Stunning scenery, wildlife sightings, and a different side of the Yellowstone ecosystem await you on this scenic floating tour down the Snake River from Jackson Hole, Wyoming.",
+    "itineraryItems": [
+      {
+        "title": "Jackson Hole",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Snake River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Teton",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Snake River Canyon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bridger Teton National Forest",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Snake River Scenic Float Trip with Teton Views in Jackson Hole?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Rafting"
+      },
+      {
+        "label": "Scenic Floats"
+      },
+      {
+        "label": "Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 115
+      },
+      "currency": "USD"
+    }
+  }
+}

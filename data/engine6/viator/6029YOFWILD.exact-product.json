@@ -1,0 +1,131 @@
+{
+  "product": {
+    "productCode": "6029YOFWILD",
+    "productUrl": "https://www.viator.com/tours/Jackson/Yellowstone-National-Park-Small-Group-Wildlife-Safari-by-Jeep/d51006-6029YOFWILD",
+    "title": "From Jackson Hole: Yellowstone Old Faithful, Waterfalls and Wildlife Day Tour",
+    "description": {
+      "text": "Enjoy a full day exploring Yellowstone National Park on a small-group tour from the comfort of a vehicle that lets you cover more sights in less time. Riding along with a naturalist guide, you'll spend the morning searching for bears, wolves, elk, moose, and bison. Stops include Yellowstone National Park, Old Faithful, Old Faithful Inn, Grand Canyon of the Yellowstone, Yellowstone Lake, Lower Yellowstone River Falls. Plus, you'll learn more about the park's history, ecology, and geology than you would alone.Travel through Grand Teton National Park in the early morning to observe more animals Visit off-the-beaten-path places that most travelers Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "13 hours (approx.)",
+    "priceFrom": "From $329.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1617
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/ec/70/7d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy a full day exploring Yellowstone National Park on a small-group tour from the comfort of a vehicle that lets you c",
+      "Riding along with a naturalist guide, you'll spend the morning searching for bears, wolves, elk, moose, and bison",
+      "Plus, you'll learn more about the park's history, ecology, and geology than you would alone.Travel through Grand Teton N",
+      "From Jackson Hole: Yellowstone Old Faithful, Waterfalls and Wildlife Day Tour departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Enjoy a full day exploring Yellowstone National Park on a small-group tour from the comfort of a vehicle that lets you cover more sights in less time.",
+    "itineraryItems": [
+      {
+        "title": "Yellowstone National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Faithful",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Faithful Inn",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon of the Yellowstone",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yellowstone Lake",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Lower Yellowstone River Falls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fountain Paint Pot",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hayden Valley",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the From Jackson Hole: Yellowstone Old Faithful, Waterfalls and Wildlife Day Tour?",
+        "answer": "The planned duration is 13 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 329
+      },
+      "currency": "USD"
+    }
+  }
+}

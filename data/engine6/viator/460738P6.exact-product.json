@@ -1,0 +1,131 @@
+{
+  "product": {
+    "productCode": "460738P6",
+    "productUrl": "https://www.viator.com/tours/Jackson/Wildlife-Safari-and-Sightseeing-Tour-in-Grand-Teton-National-Park/d51006-460738P6",
+    "title": "Half-Day Grand Teton Wildlife Safari & Sightseeing Tour",
+    "description": {
+      "text": "Experience Grand Teton National Park on a half-day wildlife safari and sightseeing tour from Jackson Hole that pairs animal tracking with iconic Teton landscapes. Led by an experienced local guide, the outing moves through prime habitat while visiting Grand Teton, Mormon Row Historic District, Oxbow Bend, Jackson Lake, Signal Mountain Summit Road, and String Lake. Wildlife opportunities may include elk, moose, bears, and raptors while you pause at alpine lakes, historic barns, and summit-road overlooks. Jenny Lake Overlook and National Elk Refuge appear on the route when conditions allow. Ideal for travelers who want structured park access, interpretive commentary, and efficient routing from Jackson Hole lodging."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "4 to 5 hours (approx.)",
+    "priceFrom": "From $145.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 61
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/14/8e/d9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Experience the best of Grand Teton National Park on a half-day wildlife safari and sightseeing tour designed for travelers who want more than wildlife viewing",
+      "Led by an experienced local guide, this tour combines wildlife spotting with visits to iconic landscapes, scenic overlooks, alpine lakes, and historic landmarks",
+      "Travel through prime wildlife habitat while exploring Mormon Row Historic District, Oxbow Bend, Jenny Lake, Signal Mountain Summit Road, String Lake, and Jackson Lake",
+      "Half-Day Grand Teton Wildlife Safari and Sightseeing Tour departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience the best of Grand Teton National Park on a half-day wildlife safari and sightseeing tour designed for travelers who want more than just wildlife viewing.",
+    "itineraryItems": [
+      {
+        "title": "Jackson Hole",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Grand Teton",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mormon Row Historic District",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Oxbow Bend",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jackson Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Signal Mountain Summit Road",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "String Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jenny Lake Overlook",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half-Day Grand Teton Wildlife Safari & Sightseeing Tour?",
+        "answer": "The planned duration is 4 to 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "Safaris"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 145
+      },
+      "currency": "USD"
+    }
+  }
+}

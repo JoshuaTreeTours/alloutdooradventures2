@@ -178,6 +178,73 @@ export const ENGINE6_LOS_ANGELES_HOLLYWOOD_HILLS_HIKING_ROUTE =
   "/destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles";
 export const ENGINE6_LOS_ANGELES_CATALINA_INSIDE_ADVENTURE_ROUTE =
   "/destinations/california/los-angeles/tours/2-hour-inside-adventure-tour-on-catalina-island-32779P6";
+export const ENGINE6_JACKSON_HOLE_6029YOFWILD_PRODUCT_CODE = "6029YOFWILD";
+export const ENGINE6_JACKSON_HOLE_6029YOFWILD_ROUTE =
+  "/destinations/wyoming/jackson/tours/from-jackson-hole-yellowstone-old-faithful-waterfalls-a-6029YOFWILD";
+export const ENGINE6_JACKSON_HOLE_6029WILDSAF_PRODUCT_CODE = "6029WILDSAF";
+export const ENGINE6_JACKSON_HOLE_6029WILDSAF_ROUTE =
+  "/destinations/wyoming/jackson/tours/grand-teton-wildlife-safari-in-a-enclosed-or-open-air-v-6029WILDSAF";
+export const ENGINE6_JACKSON_HOLE_15073P5_PRODUCT_CODE = "15073P5";
+export const ENGINE6_JACKSON_HOLE_15073P5_ROUTE =
+  "/destinations/wyoming/jackson/tours/grand-teton-half-day-tour-15073P5";
+export const ENGINE6_JACKSON_HOLE_156172P2_PRODUCT_CODE = "156172P2";
+export const ENGINE6_JACKSON_HOLE_156172P2_ROUTE =
+  "/destinations/wyoming/jackson/tours/sunset-4-hour-grand-teton-wildlife-adventure-156172P2";
+export const ENGINE6_JACKSON_HOLE_156172P1_PRODUCT_CODE = "156172P1";
+export const ENGINE6_JACKSON_HOLE_156172P1_ROUTE =
+  "/destinations/wyoming/jackson/tours/sunrise-4-hour-grand-teton-wildlife-adventure-156172P1";
+export const ENGINE6_JACKSON_HOLE_6252SCENIC_PRODUCT_CODE = "6252SCENIC";
+export const ENGINE6_JACKSON_HOLE_6252SCENIC_ROUTE =
+  "/destinations/wyoming/jackson/tours/tetons-and-snake-river-scenic-float-trip-in-jackson-hol-6252SCENIC";
+export const ENGINE6_JACKSON_HOLE_38400P2_PRODUCT_CODE = "38400P2";
+export const ENGINE6_JACKSON_HOLE_38400P2_ROUTE =
+  "/destinations/wyoming/jackson/tours/horseback-riding-with-grand-teton-views-in-jackson-hole-38400P2";
+export const ENGINE6_JACKSON_HOLE_6252P5_PRODUCT_CODE = "6252P5";
+export const ENGINE6_JACKSON_HOLE_6252P5_ROUTE =
+  "/destinations/wyoming/jackson/tours/whitewater-rafting-in-jackson-hole-family-standard-raft-6252P5";
+export const ENGINE6_JACKSON_HOLE_15073P1_PRODUCT_CODE = "15073P1";
+export const ENGINE6_JACKSON_HOLE_15073P1_ROUTE =
+  "/destinations/wyoming/jackson/tours/snake-river-scenic-float-trip-with-teton-views-in-jacks-15073P1";
+export const ENGINE6_JACKSON_HOLE_15073P6_PRODUCT_CODE = "15073P6";
+export const ENGINE6_JACKSON_HOLE_15073P6_ROUTE =
+  "/destinations/wyoming/jackson/tours/yellowstone-lower-loop-full-day-tour-15073P6";
+export const ENGINE6_JACKSON_HOLE_320113P1_PRODUCT_CODE = "320113P1";
+export const ENGINE6_JACKSON_HOLE_320113P1_ROUTE =
+  "/destinations/wyoming/jackson/tours/snake-river-scenic-float-320113P1";
+export const ENGINE6_JACKSON_HOLE_15739P3_PRODUCT_CODE = "15739P3";
+export const ENGINE6_JACKSON_HOLE_15739P3_ROUTE =
+  "/destinations/wyoming/jackson/tours/jackson-hole-whitewater-rafting-classic-from-jackson-ho-15739P3";
+export const ENGINE6_JACKSON_HOLE_56481P3_PRODUCT_CODE = "56481P3";
+export const ENGINE6_JACKSON_HOLE_56481P3_ROUTE =
+  "/destinations/wyoming/jackson/tours/teton-views-scenic-float-trip-56481P3";
+export const ENGINE6_JACKSON_HOLE_35441P2_PRODUCT_CODE = "35441P2";
+export const ENGINE6_JACKSON_HOLE_35441P2_ROUTE =
+  "/destinations/wyoming/jackson/tours/grand-teton-national-park-full-day-guided-tour-from-jac-35441P2";
+export const ENGINE6_JACKSON_HOLE_35441P1_PRODUCT_CODE = "35441P1";
+export const ENGINE6_JACKSON_HOLE_35441P1_ROUTE =
+  "/destinations/wyoming/jackson/tours/yellowstone-national-park-full-day-lower-loop-tour-from-35441P1";
+export const ENGINE6_JACKSON_HOLE_460738P6_PRODUCT_CODE = "460738P6";
+export const ENGINE6_JACKSON_HOLE_460738P6_ROUTE =
+  "/destinations/wyoming/jackson/tours/half-day-grand-teton-wildlife-safari-sightseeing-tour-460738P6";
+export const ENGINE6_JACKSON_HOLE_342881P1_PRODUCT_CODE = "342881P1";
+export const ENGINE6_JACKSON_HOLE_342881P1_ROUTE =
+  "/destinations/wyoming/jackson/tours/jackson-hole-horseback-riding-lunch-in-bridger-teton-nf-342881P1";
+export const ENGINE6_JACKSON_HOLE_38400P8_PRODUCT_CODE = "38400P8";
+export const ENGINE6_JACKSON_HOLE_38400P8_ROUTE =
+  "/destinations/wyoming/jackson/tours/dinner-cookout-ride-at-heart-six-ranch-38400P8";
+export const ENGINE6_JACKSON_HOLE_6029WINTER_PRODUCT_CODE = "6029WINTER";
+export const ENGINE6_JACKSON_HOLE_6029WINTER_ROUTE =
+  "/destinations/wyoming/jackson/tours/grand-teton-and-national-elk-refuge-winter-wonderland-f-6029WINTER";
+export const ENGINE6_JACKSON_HOLE_156172P5_PRODUCT_CODE = "156172P5";
+export const ENGINE6_JACKSON_HOLE_156172P5_ROUTE =
+  "/destinations/wyoming/jackson/tours/private-8-hour-grand-teton-adventure-156172P5";
+
+export const ENGINE6_JACKSON_HOLE_TOUR_PATH_PREFIX =
+  "/destinations/wyoming/jackson/tours/";
+
+export const isEngine6JacksonHoleTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_JACKSON_HOLE_TOUR_PATH_PREFIX);
+
 export const ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_PRODUCT_CODE =
   "6029_4DAYPARK";
 export const ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_ROUTE =
@@ -1589,6 +1656,86 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_LOS_ANGELES_HOLLYWOOD_HILLS_HIKING_ROUTE,
     ENGINE6_LOS_ANGELES_HOLLYWOOD_HILLS_HIKING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_6029YOFWILD_ROUTE,
+    ENGINE6_JACKSON_HOLE_6029YOFWILD_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_6029WILDSAF_ROUTE,
+    ENGINE6_JACKSON_HOLE_6029WILDSAF_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_15073P5_ROUTE,
+    ENGINE6_JACKSON_HOLE_15073P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_156172P2_ROUTE,
+    ENGINE6_JACKSON_HOLE_156172P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_156172P1_ROUTE,
+    ENGINE6_JACKSON_HOLE_156172P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_6252SCENIC_ROUTE,
+    ENGINE6_JACKSON_HOLE_6252SCENIC_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_38400P2_ROUTE,
+    ENGINE6_JACKSON_HOLE_38400P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_6252P5_ROUTE,
+    ENGINE6_JACKSON_HOLE_6252P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_15073P1_ROUTE,
+    ENGINE6_JACKSON_HOLE_15073P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_15073P6_ROUTE,
+    ENGINE6_JACKSON_HOLE_15073P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_320113P1_ROUTE,
+    ENGINE6_JACKSON_HOLE_320113P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_15739P3_ROUTE,
+    ENGINE6_JACKSON_HOLE_15739P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_56481P3_ROUTE,
+    ENGINE6_JACKSON_HOLE_56481P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_35441P2_ROUTE,
+    ENGINE6_JACKSON_HOLE_35441P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_35441P1_ROUTE,
+    ENGINE6_JACKSON_HOLE_35441P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_460738P6_ROUTE,
+    ENGINE6_JACKSON_HOLE_460738P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_342881P1_ROUTE,
+    ENGINE6_JACKSON_HOLE_342881P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_38400P8_ROUTE,
+    ENGINE6_JACKSON_HOLE_38400P8_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_6029WINTER_ROUTE,
+    ENGINE6_JACKSON_HOLE_6029WINTER_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_JACKSON_HOLE_156172P5_ROUTE,
+    ENGINE6_JACKSON_HOLE_156172P5_PRODUCT_CODE,
   ],
   [
     ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_ROUTE,

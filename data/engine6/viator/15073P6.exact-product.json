@@ -1,0 +1,131 @@
+{
+  "product": {
+    "productCode": "15073P6",
+    "productUrl": "https://www.viator.com/tours/Jackson/Yellowstone-Lower-Loop-Tour/d51006-15073P6",
+    "title": "Yellowstone Lower Loop Full-Day Tour",
+    "description": {
+      "text": "Tour the lower loop of Yellowstone National Park with an expert guide on this all-day tour. Visit popular sites like Old Faithful, Grand Prismatic Spring, Lake Yellowstone, and more. Stops include Upper Geyser Basin, Grand Prismatic Spring, Yellowstone Lake, Old Faithful, Lower Yellowstone River Falls, Midway Geyser Basin. Stop for an included lunch and many photo ops throughout the day. Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "10 to 12 hours (approx.)",
+    "priceFrom": "From $325.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 740
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4c/40/54.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Tour the lower loop of Yellowstone National Park with an expert guide on this all-day tour",
+      "Visit popular sites like Old Faithful, Grand Prismatic Spring, Lake Yellowstone, and more",
+      "Stop for an included lunch and many photo ops throughout the day",
+      "Yellowstone Lower Loop Full-Day Tour departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Tour the lower loop of Yellowstone National Park with an expert guide on this all-day tour.",
+    "itineraryItems": [
+      {
+        "title": "Upper Geyser Basin",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Prismatic Spring",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yellowstone Lake",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Old Faithful",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lower Yellowstone River Falls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Midway Geyser Basin",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Canyon of the Yellowstone",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hayden Valley",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Yellowstone Lower Loop Full-Day Tour?",
+        "answer": "The planned duration is 10 to 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 325
+      },
+      "currency": "USD"
+    }
+  }
+}

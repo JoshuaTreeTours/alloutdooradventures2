@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "156172P2",
+    "productUrl": "https://www.viator.com/tours/Jackson/Sunset-4-Hour-Grand-Teton-Wildlife-Adventure/d51006-156172P2",
+    "title": "Sunset 4-Hour Grand Teton Wildlife Adventure",
+    "description": {
+      "text": "Grand Teton National Park offers some of America's most spectacular wildlife, including grizzlies, wolves, elk, moose, bison, antelope, bighorn sheep, and bald eagles. Beat the crowds and enjoy 360-degree viewing on this small-group tour with a naturalist wildlife guide in a custom vehicle with a roof hatch and a window for everyone. Stops include Grand Teton National Park. Swarovski scopes and binoculars ensure great visibility, with iPads to help you learn more about what you're viewing.Watch Grand Teton's wildlife at sunset, when animals are most active Just seven travelers on board—with a window seat for everyone Professional gra Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $198.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1154
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0c/0c/9e/b6.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Grand Teton National Park offers some of America's most spectacular wildlife, including grizzlies, wolves, elk, moose, b",
+      "Beat the crowds and enjoy 360-degree viewing on this small-group tour with a naturalist wildlife guide in a custom vehic",
+      "Swarovski scopes and binoculars ensure great visibility, with iPads to help you learn more about what you're viewing.Wat",
+      "Sunset 4-Hour Grand Teton Wildlife Adventure departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Grand Teton National Park offers some of America's most spectacular wildlife, including grizzlies, wolves, elk, moose, bison, antelope, bighorn sheep, and bald eagles.",
+    "itineraryItems": [
+      {
+        "title": "Jackson Hole",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Teton National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Snake River",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sunset 4-Hour Grand Teton Wildlife Adventure?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 198
+      },
+      "currency": "USD"
+    }
+  }
+}

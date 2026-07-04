@@ -2,7 +2,7 @@
 
 Permanent consolidated audit across Engine6 publishing contracts. Blocking applies only to deploy-scoped products in warn mode unless ENGINE6_GOVERNANCE_MODE=strict.
 
-Generated: 2026-07-04T19:31:50.699Z
+Generated: 2026-07-04T21:49:07.796Z
 Governance mode: audit
 Scope mode: pr-scoped
 Full-site validation: false
@@ -19,7 +19,7 @@ Overall passed: true
 
 - Blocking findings: 0
 - Warning findings: 0
-- Legacy findings (report-only): 1434
+- Legacy findings (report-only): 1438
 - Areas audited: 12
 - Areas passed (no blocking findings): 12
 
@@ -29,11 +29,11 @@ Overall passed: true
 | --- | ---: | ---: | ---: | --- |
 | live-viator | 0 | 0 | 0 | yes |
 | product-selection | 0 | 0 | 0 | yes |
-| merchant-feed-commercial-refresh | 0 | 0 | 946 | yes |
+| merchant-feed-commercial-refresh | 0 | 0 | 945 | yes |
 | merchant-feed-image | 0 | 0 | 0 | yes |
-| description-title | 0 | 0 | 37 | yes |
+| description-title | 0 | 0 | 43 | yes |
 | itinerary-title | 0 | 0 | 273 | yes |
-| route-sitemap-merchant-feed-parity | 0 | 0 | 178 | yes |
+| route-sitemap-merchant-feed-parity | 0 | 0 | 177 | yes |
 | product-code-blocklist | 0 | 0 | 0 | yes |
 | destination-cohort | 0 | 0 | 0 | yes |
 | destination-infrastructure | 0 | 0 | 0 | yes |
@@ -147,12 +147,12 @@ Overall passed: true
 - **merchant-feed-commercial-refresh** (`47235P1`): 47235P1.rating_count: expected "412", got "6452"
 - **merchant-feed-commercial-refresh** (`47235P1`): 47235P1.review_count: expected "412", got "6452"
 - **merchant-feed-commercial-refresh** (`2030UNIENTRY`): 2030UNIENTRY.average_rating: expected "4.6", got "4.0"
-- ...and 1334 additional legacy finding(s).
+- ...and 1338 additional legacy finding(s).
 
 ## Live Viator validation excerpt
 
 ```text
-Engine6 live Viator production validation (2026-07-04T19:31:36.236Z)
+Engine6 live Viator production validation (2026-07-04T21:48:45.616Z)
 Governance mode: audit
 Scope mode: pr-scoped
 Products validated: 0

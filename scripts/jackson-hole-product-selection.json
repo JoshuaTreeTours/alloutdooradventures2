@@ -1,0 +1,317 @@
+{
+  "destinationLabel": "Jackson Hole",
+  "destinationCitySlug": "jackson-hole",
+  "viatorDestinationSlug": "Jackson-Hole",
+  "targetPremiumShare": 0.5,
+  "slots": [
+    {
+      "experienceType": "yellowstone-wildlife-day",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "6029YOFWILD",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/Yellowstone-National-Park-Small-Group-Wildlife-Safari-by-Jeep/d51006-6029YOFWILD",
+          "title": "From Jackson Hole: Yellowstone Old Faithful, Waterfalls and Wildlife Day Tour",
+          "experienceType": "yellowstone-wildlife-day",
+          "priceFrom": 329,
+          "categories": ["Day Trips", "Wildlife Tours", "National Parks"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "grand-teton-wildlife-safari",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "6029WILDSAF",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/Grand-Teton-Small-Group-Wildlife-Safari-by-Jeep/d51006-6029WILDSAF",
+          "title": "Grand Teton Wildlife Safari in a Enclosed or Open-Air Vehicle (season dependent)",
+          "experienceType": "grand-teton-wildlife-safari",
+          "priceFrom": 159,
+          "categories": ["Wildlife Tours", "Safaris", "National Parks"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "grand-teton-half-day",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "15073P5",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/Grand-Teton-Half-Day-Tour/d51006-15073P5",
+          "title": "Grand Teton Half Day Tour",
+          "experienceType": "grand-teton-half-day",
+          "priceFrom": 149,
+          "categories": ["Day Trips", "Sightseeing Tours", "National Parks"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "sunset-wildlife",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "156172P2",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/Sunset-4-Hour-Grand-Teton-Wildlife-Adventure/d51006-156172P2",
+          "title": "Sunset 4-Hour Grand Teton Wildlife Adventure",
+          "experienceType": "sunset-wildlife",
+          "priceFrom": 218,
+          "categories": ["Wildlife Tours", "Sunset Tours", "National Parks"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "sunrise-wildlife",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "156172P1",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/Sunrise-4hr-Grand-Teton-Tour/d51006-156172P1",
+          "title": "Sunrise 4-Hour Grand Teton Wildlife Adventure",
+          "experienceType": "sunrise-wildlife",
+          "priceFrom": 218,
+          "categories": ["Wildlife Tours", "National Parks", "Day Trips"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "snake-river-scenic-float",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "6252SCENIC",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/Scenic-Raft-Trip-on-Jackson-Holes-Snake-River/d51006-6252SCENIC",
+          "title": "Tetons and Snake River Scenic Float Trip In Jackson Hole",
+          "experienceType": "snake-river-scenic-float",
+          "priceFrom": 120,
+          "categories": ["River Rafting & Tubing", "Sightseeing Tours", "Nature Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "horseback-riding",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "38400P2",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/Horseback-Riding-with-Heart-6-Ranch/d51006-38400P2",
+          "title": "Horseback Riding with Grand Teton Views in Jackson Hole",
+          "experienceType": "horseback-riding",
+          "priceFrom": 149,
+          "categories": ["Horseback Riding", "Outdoor Activities", "Nature Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "whitewater-rafting",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "6252P5",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/8-mile-Whitewater-Standard-Raft/d51006-6252P5",
+          "title": "Whitewater Rafting in Jackson Hole : Family Standard Raft",
+          "experienceType": "whitewater-rafting",
+          "priceFrom": 120,
+          "categories": ["River Rafting & Tubing", "Adventure Tours", "Outdoor Activities"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "snake-river-float",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "15073P1",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/Snake-River-Scenic-Float-Trip/d51006-15073P1",
+          "title": "Snake River Scenic Float Trip with Teton Views in Jackson Hole",
+          "experienceType": "snake-river-float",
+          "priceFrom": 115,
+          "categories": ["River Rafting & Tubing", "Sightseeing Tours", "Nature Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "yellowstone-lower-loop",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "15073P6",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/Yellowstone-Lower-Loop-Tour/d51006-15073P6",
+          "title": "Yellowstone Lower Loop Full-Day Tour",
+          "experienceType": "yellowstone-lower-loop",
+          "priceFrom": 325,
+          "categories": ["Day Trips", "National Parks", "Sightseeing Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "scenic-float-jackson-hole",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "320113P1",
+          "sourceUrl": "https://www.viator.com/tours/Jackson-Hole/Snake-River-Scenic-Float/d5261-320113P1",
+          "title": "Snake River Scenic Float",
+          "experienceType": "scenic-float-jackson-hole",
+          "priceFrom": 135,
+          "categories": ["River Rafting & Tubing", "Sightseeing Tours", "Nature Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "whitewater-classic",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "15739P3",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/8-Mile-Whitewater-Snake-River-Rafting/d51006-15739P3",
+          "title": "Jackson Hole Whitewater Rafting Classic from Jackson Hole,Wyoming",
+          "experienceType": "whitewater-classic",
+          "priceFrom": 120,
+          "categories": ["River Rafting & Tubing", "Adventure Tours", "Outdoor Activities"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "teton-views-float",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "56481P3",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/13-Mile-Teton-Views-Scenic-Float-Trip/d51006-56481P3",
+          "title": "Teton Views Scenic Float Trip",
+          "experienceType": "teton-views-float",
+          "priceFrom": 105,
+          "categories": ["River Rafting & Tubing", "Sightseeing Tours", "Nature Tours"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "grand-teton-full-day",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "35441P2",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/Grand-Teton-National-Park-Full-Day-Guided-Tour/d51006-35441P2",
+          "title": "Grand Teton National Park - Full-Day Guided Tour from Jackson Hole",
+          "experienceType": "grand-teton-full-day",
+          "priceFrom": 345,
+          "categories": ["Day Trips", "National Parks", "Sightseeing Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "yellowstone-full-day",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "35441P1",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/Yellowstone-National-Park-Full-Day-Guided-Tour/d51006-35441P1",
+          "title": "Yellowstone National Park - Full-Day Lower Loop Tour from Jackson",
+          "experienceType": "yellowstone-full-day",
+          "priceFrom": 375,
+          "categories": ["Day Trips", "National Parks", "Sightseeing Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "half-day-wildlife-safari",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "460738P6",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/Wildlife-Safari-and-Sightseeing-Tour-in-Grand-Teton-National-Park/d51006-460738P6",
+          "title": "Half-Day Grand Teton Wildlife Safari & Sightseeing Tour",
+          "experienceType": "half-day-wildlife-safari",
+          "priceFrom": 165,
+          "categories": ["Wildlife Tours", "Safaris", "National Parks"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "horseback-bridger-teton",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "342881P1",
+          "sourceUrl": "https://www.viator.com/tours/Jackson-Hole/Horseback-Riding-at-Turpin-Meadow-Ranch/d5261-342881P1",
+          "title": "Jackson Hole Horseback Riding & Lunch in Bridger Teton NF",
+          "experienceType": "horseback-bridger-teton",
+          "priceFrom": 180,
+          "categories": ["Horseback Riding", "Outdoor Activities", "Nature Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "dinner-cookout-ride",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "38400P8",
+          "sourceUrl": "https://www.viator.com/tours/Jackson-Hole/Yellowstone-National-Park-Horseback-Ride/d5261-38400P8",
+          "title": "Dinner Cookout Ride at Heart Six Ranch",
+          "experienceType": "dinner-cookout-ride",
+          "priceFrom": 165,
+          "categories": ["Horseback Riding", "Dining Experiences", "Outdoor Activities"],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "winter-elk-refuge",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "6029WINTER",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/Grand-Teton-and-National-Elk-Refuge-Winter-Day-Trip/d51006-6029WINTER",
+          "title": "Grand Teton and National Elk Refuge Winter Wonderland Full-Day Adventure",
+          "experienceType": "winter-elk-refuge",
+          "priceFrom": 239,
+          "categories": ["Wildlife Tours", "Winter Sports", "National Parks"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "private-grand-teton",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "156172P5",
+          "sourceUrl": "https://www.viator.com/tours/Jackson/Private-8-Hour-Grand-Teton-Adventure/d51006-156172P5",
+          "title": "Private 8-Hour Grand Teton Adventure",
+          "experienceType": "private-grand-teton",
+          "priceFrom": 650,
+          "categories": ["Private Tours", "National Parks", "Wildlife Tours"],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "product": {
+    "productCode": "15073P5",
+    "productUrl": "https://www.viator.com/tours/Jackson/Grand-Teton-Half-Day-Tour/d51006-15073P5",
+    "title": "Grand Teton Half Day Tour",
+    "description": {
+      "text": "Explore Grand Teton National Park on a guided half-day tour from Jackson Hole along the Gros Ventre River toward Mormon Row Historic District and Moose Junction. Use spotting scopes and field glasses to observe moose, elk, and eagles while your naturalist guide explains Wyoming wildlife and ranching history. The driving route emphasizes Grand Teton, Jackson Lake, Oxbow Bend, Mormon Row Historic District, Jenny Lake, and Menor's Ferry Historical Trail with photo opportunities at each scenic pullout. Transportation, safety gear, and local commentary are coordinated from Jackson Hole or Teton Village pickup points. Ideal for travelers who want a structured Teton introduction without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $149.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1201
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/46/37/bc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the highlights of Grand Teton National Park on a half-day tour from Jackson or Teton Village",
+      "Travel along the Gros Ventre River to the Mormon Row Historic District, Moose Junction, and other places where wildlife roam",
+      "Use the provided spotting scope and field glasses to get a close look at animals like moose, elk, and eagles",
+      "Grand Teton Half Day Tour departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Travel along the Gros Ventre River to the Mormon Row Historic District, Moose Junction, and other places where wildlife roam.",
+    "itineraryItems": [
+      {
+        "title": "Grand Teton",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jackson Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Oxbow Bend",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mormon Row Historic District",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Jenny Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Menor's Ferry Historical Trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "National Elk Refuge",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Signal Mountain Summit Road",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Grand Teton Half Day Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149
+      },
+      "currency": "USD"
+    }
+  }
+}

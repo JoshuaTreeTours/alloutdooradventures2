@@ -1,0 +1,131 @@
+{
+  "product": {
+    "productCode": "35441P1",
+    "productUrl": "https://www.viator.com/tours/Jackson/Yellowstone-National-Park-Full-Day-Guided-Tour/d51006-35441P1",
+    "title": "Yellowstone National Park - Full-Day Lower Loop Tour from Jackson",
+    "description": {
+      "text": "Spot local wildlife such as grizzly bears, bison, elk, moose, eagles, and wolves with the provided binoculars. Visit attractions such as the Grand Canyon of Yellowstone waterfalls, Hayden Valley, and Old Faithful. Stops include Yellowstone National Park, Grand Teton National Park, Old Faithful, Upper Falls, Lower Falls of the Yellowstone River, Hayden Valley. Park entry fees, breakfast, lunch, and round-trip transportation from Jackson Hole are included.Full-day tour of Yellowstone National Park from Jackson Hole Learn about the park's ecosystem, wildlife, and history from your guide Round-trip transportation from select Ideal for travelers basing in Jackson Hole who want a guided Wyoming outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Jackson",
+      "state": "Wyoming"
+    },
+    "duration": "12 hours (approx.)",
+    "priceFrom": "From $389.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 509
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/d8/59/a3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Spot local wildlife such as grizzly bears, bison, elk, moose, eagles, and wolves with the provided binoculars",
+      "Visit attractions such as the Grand Canyon of Yellowstone waterfalls, Hayden Valley, and Old Faithful",
+      "Park entry fees, breakfast, lunch, and round-trip transportation from Jackson Hole are included.Full-day tour of Yellows",
+      "Yellowstone National Park - Full-Day Lower Loop Tour from Jackson departing from Jackson Hole",
+      "Professional Jackson Hole guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Jackson Hole pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Spot local wildlife such as grizzly bears, bison, elk, moose, eagles, and wolves with the provided binoculars.",
+    "itineraryItems": [
+      {
+        "title": "Yellowstone National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Teton National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Faithful",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Upper Falls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lower Falls of the Yellowstone River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hayden Valley",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Yellowstone Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Prismatic Spring",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Yellowstone National Park - Full-Day Lower Loop Tour from Jackson?",
+        "answer": "The planned duration is 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Jackson Hole?",
+        "answer": "Pickup is available from Jackson Hole, Teton Village, and Wilson lodging. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 389
+      },
+      "currency": "USD"
+    }
+  }
+}
