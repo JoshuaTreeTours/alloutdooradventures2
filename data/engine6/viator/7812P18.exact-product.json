@@ -1,8 +1,8 @@
 {
   "product": {
-    "productCode": "8841P14",
-    "productUrl": "https://www.viator.com/tours/Boston/Bostons-Quincy-Market-and-North-End-Food-Tour-Small-Group-Walking-Tour/d678-8841P14",
-    "title": "Boston's Quincy Market and North End Food Tour",
+    "productCode": "7812P18",
+    "productUrl": "https://www.viator.com/tours/Boston/Small-group-Guided-Walking-Food-Tour-in-Boston/d678-7812P18",
+    "title": "Boston North End Food Tour with Authentic Local Flavors & Dishes",
     "description": {
       "text": "Sample Boston's best bites on a premium small-group food walk from Quincy Market through the North End. Your guide leads tastings at Faneuil Hall vendors, Hanover Street cannoli shops, and hidden North End trattorias while sharing immigrant history and local food traditions. The half-day format covers enough stops for a full lunch without rushing between neighborhoods. Perfect for food-focused travelers who want both downtown market culture and authentic Italian North End flavors."
     },
@@ -10,11 +10,11 @@
       "city": "Boston",
       "state": "Massachusetts"
     },
-    "duration": "3 hours (approx.)",
-    "priceFrom": "From $147.00",
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $74.99",
     "reviews": {
       "combinedAverageRating": 4.9,
-      "totalReviews": 892
+      "totalReviews": 1200
     },
     "media": {
       "images": [
@@ -88,8 +88,8 @@
     ],
     "faqs": [
       {
-        "question": "How long is the Boston's Quincy Market and North End Food Tour?",
-        "answer": "The planned duration is 3 hours."
+        "question": "How long is the Boston North End Food Tour with Authentic Local Flavors & Dishes?",
+        "answer": "The planned duration is 2 to 3 hours."
       },
       {
         "question": "Where does the tour depart from in Boston?",
@@ -109,7 +109,7 @@
     ],
     "pricing": {
       "summary": {
-        "fromPrice": 147
+        "fromPrice": 74.99
       },
       "currency": "USD"
     }

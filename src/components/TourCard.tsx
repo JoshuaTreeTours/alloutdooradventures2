@@ -1,5 +1,5 @@
+import React, { type MouseEvent } from "react";
 import { Link } from "wouter";
-import type { MouseEvent } from "react";
 
 import type { Tour } from "../data/tours.types";
 import { getActivityLabelFromSlug } from "../data/activityLabels";

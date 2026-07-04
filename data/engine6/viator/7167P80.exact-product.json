@@ -1,7 +1,7 @@
 {
   "product": {
-    "productCode": "3978TOUR5",
-    "productUrl": "https://www.viator.com/tours/Boston/Salem-Witch-City-Day-Trip-From-Boston/d678-3978TOUR5",
+    "productCode": "7167P80",
+    "productUrl": "https://www.viator.com/tours/Salem/Salem-Witch-Trials-from-Past-to-Present-Day-Tour-from-Boston/d22414-7167P80",
     "title": "Boston to Salem \"Witch City\" Day Trip with Round-Trip Transportation",
     "description": {
       "text": "Discover Salem's witch trial legacy on a guided day trip from Boston with round-trip motorcoach transportation. Explore Pickering Wharf, the Salem Witch Trials Memorial, and the House of the Seven Gables with free time for lunch and shopping on Essex Street. Your driver-guide shares North Shore history during the ride from downtown Boston. The seven-hour format packs Salem's museums, waterfront, and colonial lanes into one premium day trip without renting a car."
@@ -10,11 +10,11 @@
       "city": "Boston",
       "state": "Massachusetts"
     },
-    "duration": "7 hours (approx.)",
-    "priceFrom": "From $62.00",
+    "duration": "8 hours 30 minutes (approx.)",
+    "priceFrom": "From $129.00",
     "reviews": {
-      "combinedAverageRating": 4,
-      "totalReviews": 278
+      "combinedAverageRating": 4.6,
+      "totalReviews": 342
     },
     "media": {
       "images": [
@@ -48,7 +48,7 @@
     "itinerarySummary": "Discover Salem's witch trial legacy on a guided day trip from Boston with round-trip motorcoach transportation.",
     "itineraryItems": [
       {
-        "title": "Boston",
+        "title": "Salem Witch Trials Tour from Boston by Ferry with Small Group",
         "description": "",
         "duration": "45 minutes",
         "stopType": "stop"
@@ -91,7 +91,7 @@
     "faqs": [
       {
         "question": "How long is the Boston to Salem \"Witch City\" Day Trip with Round-Trip Transportation?",
-        "answer": "The planned duration is 7 hours."
+        "answer": "The planned duration is 8 hours 30 minutes."
       },
       {
         "question": "Where does the tour depart from in Boston?",
@@ -111,7 +111,7 @@
     ],
     "pricing": {
       "summary": {
-        "fromPrice": 62
+        "fromPrice": 129
       },
       "currency": "USD"
     }

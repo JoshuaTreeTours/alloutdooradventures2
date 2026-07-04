@@ -6,17 +6,17 @@ export const BOSTON_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "66111P3",
   "26797P4",
   "8843P7",
-  "7167P68",
+  "70284P1",
   "5046BOS_OTT",
   "7812P131",
-  "8841P14",
+  "7812P18",
   "400049P3",
-  "8647P466",
+  "343490P3",
   "400049P5",
-  "385595P5",
+  "3978TOUR2",
   "5046BOS_GG",
   "3283CODZILLA",
-  "3978TOUR5",
+  "7167P80",
   "5042BOSDIN",
   "5151BOSCY014",
   "66192P8",
@@ -44,28 +44,28 @@ export const BOSTON_TARGETED_NARRATIVE_DESCRIPTIONS: Record<
     "Follow the red brick line through downtown Boston on a guided Freedom Trail walk covering the city's most storied Revolutionary sites. Your guide connects Boston Common, Old South Meeting House, Faneuil Hall, Paul Revere House, and Old North Church with interpretive commentary suited to first-time visitors and history enthusiasts alike. The compact 105-minute format concentrates on landmark storytelling without museum admissions inside each stop. Plan on 1 hour 45 minutes (approx.) for the outing. Visit Boston Common, Old South Meeting House, and Faneuil Hall during scheduled pauses.",
   "8843P7":
     "Experience the Freedom Trail with a premium small-group guide who paces the route for deeper stops at Boston's Revolutionary landmarks. You'll pause at Boston Common, King's Chapel, Granary Burying Ground, Old State House, Faneuil Hall, and Old North Church while a professional historian guide explains how each site shaped the road to independence. The format suits travelers who want more time at key markers than a standard walking tour allows. Plan on 2 hours 30 minutes (approx.) for the outing.",
-  "7167P68":
-    "Combine the Freedom Trail with an immersive North End neighborhood walk on a premium small-group outing led by a local guide. After Boston Common, Faneuil Hall, Paul Revere House, and Old North Church, the route continues through Hanover Street, Copp's Hill Burying Ground, and the North End's Italian-immigrant blocks with neighborhood history woven into the Revolutionary narrative. The three-hour format adds local character beyond landmark checklist touring. Plan on 3 hours (approx.) for the outing. Visit Boston Common, Faneuil Hall, and Paul Revere House during scheduled stops.",
+  "70284P1":
+    "Walk the Freedom Trail in chronological Revolutionary order on a small-group epic that connects Boston Common, Granary Burying Ground, Old South Meeting House, Faneuil Hall, Paul Revere House, and Old North Church with expert maps and visuals. Your guide follows the actual sequence of events from Boston's founding through independence rather than a checklist of granite markers. The three-hour immersive pace suits committed history travelers who want the complete story without costumes or gimmicks. Plan on 3 hours (approx.) for the outing.",
   "5046BOS_OTT":
     "Explore Boston at your own pace aboard a hop-on hop-off trolley with live narration and multiple stops across downtown, the waterfront, and Back Bay. The route connects Faneuil Hall, USS Constitution, New England Aquarium, Copley Square, and Fenway Park with professional tour conductors providing commentary between photo-friendly pullouts. A hop-on hop-off pass lets you stay aboard for a full loop or step off at neighborhoods you want more time to explore. Plan on 2 hours (approx.) for the outing.",
   "7812P131":
     "Taste Boston's North End on a private food tour built exclusively for your party with a licensed local guide. Stops along Hanover Street, Paul Revere House, Old North Church, and North End Market pair neighborhood history with curated tastings at bakeries, cafes, and specialty shops. The private format keeps pacing flexible for dietary preferences while still covering the waterfront district's most storied blocks. Plan on 3 hours (approx.) for the outing. Visit Hanover Street during the 30 minutes stop.",
-  "8841P14":
-    "Sample Boston's best bites on a premium small-group food walk from Quincy Market through the North End with a professional food guide. Tastings unfold at Quincy Market, Faneuil Hall, Hanover Street, Paul Revere House, and Old North Church while commentary connects market history to the Italian neighborhood's restaurant culture. Multiple food tastings and a small-group walking format keep the route intimate without rushing between vendors. Plan on 3 hours (approx.) for the outing.",
+  "7812P18":
+    "Taste authentic North End flavors on a small-group walking food tour through Boston Public Market and the Italian neighborhood's back streets. Sample New England clam chowder, brick-oven pizza, mini cannoli, and local specialties while your guide shares immigrant history beyond the tourist trail. Enough bites add up to a hearty meal without rushing between vendors. Plan on 2 to 3 hours (approx.) for the outing. You'll pause at Boston Public Market and North Square Park during scheduled stops.",
   "400049P3":
     "Combine Revolutionary history with curated food tastings on a private Boston walk tailored to your group by a historian and food guide. The route links Faneuil Hall, Quincy Market, Paul Revere House, Old North Church, and Hanover Street with flexible pacing for photo stops and vendor visits. Private format keeps the Freedom Trail and North End segments coordinated for parties who want both landmark context and neighborhood flavor in one booking. Plan on 4 hours (approx.) for the outing.",
-  "8647P466":
-    "Escape Boston for a private half-day excursion to Salem's witch trial history and Marblehead's coastal charm with hotel pickup included. Your private driver-guide covers Salem Witch Museum, Salem Maritime National Historic Site, House of the Seven Gables, and Marblehead Harbor with time for waterfront photos and interpretive commentary. The five-hour format concentrates on North Shore highlights without self-driving or parking logistics. Plan on 5 hours (approx.) for the outing.",
+  "343490P3":
+    "Explore Revolutionary Boston on a private walking tour tailored to your group's pace and interests with a dedicated historian guide. The route covers Freedom Trail landmarks from Boston Common through Faneuil Hall, Paul Revere House, and Old North Church with authentic commentary focused on colonial politics and daily life. Private format means flexible stops and unhurried questions at each granite marker. Plan on 2 hours (approx.) for the outing.",
   "400049P5":
     "Trace the opening shots of the American Revolution on a private day trip from Boston to Lexington and Concord tailored to your party. Stops include Lexington Battle Green, Minute Man National Historical Park, Old North Bridge, Concord Museum, and Sleepy Hollow Cemetery with a private driver-guide coordinating timing and narrating the April 1775 story at each site. Round-trip private transport keeps the full-day route focused on battlefield landscapes rather than rental-car navigation. Plan on 8 hours (approx.) for the outing.",
-  "385595P5":
-    "Follow the path of the American Revolution on a guided day tour from Boston to Lexington and Concord with round-trip transportation included. You'll visit Lexington Battle Green, Minute Man National Historical Park, Old North Bridge, and Concord Museum while a professional guide explains how colonial militia engagements unfolded across the countryside. The seven-hour format suits travelers who want structured park time without arranging separate tickets or driving west of Boston. Plan on 7 hours (approx.) for the outing.",
+  "3978TOUR2":
+    "Follow Paul Revere's midnight ride and the Battle Road Trail on a half-day American history bus tour from Boston to Cambridge, Lexington, and Concord. Visit Lexington Battle Green, Minute Man National Historical Park, Old North Bridge, and Harvard Square with round-trip coach transportation and expert narration connecting Revolutionary and literary history. Wheelchair-accessible coach with lavatory included. Plan on 5 hours (approx.) for the outing.",
   "5046BOS_GG":
     "Explore Boston's haunted history on a Ghosts and Gravestones trolley tour led by costumed grave-digger guides after dark. The route rolls past Long Wharf, Granary Burying Ground, Copp's Hill Burying Ground, the North End, and Boston Tea Party Ships & Museum with theatrical storytelling tied to each stop. Ghost-themed trolley commentary and two colonial burying grounds anchor this evening outing for travelers who want history with a darker edge. Plan on 2 hours (approx.) for the outing.",
   "3283CODZILLA":
     "Hold on for a high-speed thrill ride aboard Codzilla, Boston Harbor's jet-powered boat departing from Long Wharf. The 45-minute run combines sharp turns and splash zones on Boston Harbor with pass-by views of USS Constitution and the downtown skyline from the water. Narrated onboard show elements and soundtrack keep the pace energetic for families and adrenaline seekers who want harbor scenery without a slow sightseeing cruise. Plan on 45 minutes (approx.) for the outing.",
-  "3978TOUR5":
-    "Discover Salem's witch trial legacy on a guided day trip from Boston with round-trip motorcoach transportation included. After leaving Boston, you'll visit Salem Witch Trials Memorial, House of the Seven Gables, Pickering Wharf, and Salem Old Town Hall with a professional driver-guide handling timing between waterfront and museum districts. The seven-hour format delivers a structured North Shore day without rental-car logistics or separate train tickets. Plan on 7 hours (approx.) for the outing.",
+  "7167P80":
+    "Day-trip from Boston to Salem on a small-group tour with round-trip ferry tickets and a guided walking route through witch-trial landmarks. Visit the Salem Witch Museum or Real Pirates Salem depending on the day, then explore Derby Street, memorial sites, and waterfront districts with free time before returning to Boston Harbor. Ferry transit replaces highway driving for a scenic North Shore outing. Plan on 8 hours 30 minutes (approx.) for the outing.",
   "5042BOSDIN":
     "Dine aboard the Odyssey on a Boston Harbor premier dinner cruise with skyline views and live DJ entertainment departing Rowes Wharf. The plated dinner service unfolds as you pass Boston Light, Charlestown Navy Yard, Castle Island, and the Leonard P. Zakim Bunker Hill Bridge on a two- to three-hour harbor loop. Evening format pairs waterfront scenery with a sit-down meal rather than a quick sightseeing-only run. Plan on 2 to 3 hours (approx.) for the outing.",
   "5151BOSCY014":

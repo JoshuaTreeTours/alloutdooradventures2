@@ -9,14 +9,15 @@ const PREFIX =
 
 /** Verified from live Viator product pages (browser, Jul 2026). */
 const patches: Record<string, string> = {
-  "7167P68": "15/7d/a2/84.jpg",
+  "7167P80": "10/45/6f/cc.jpg",
+  "70284P1": "15/6f/d3/9c.jpg",
   "5046BOS_OTT": "0a/59/cf/3e.jpg",
-  "8647P466": "0d/0b/f0/cd.jpg",
+  "343490P3": "0f/34/05/c3.jpg",
   "400049P5": "12/4c/65/1e.jpg",
-  "385595P5": "12/5b/b5/7d.jpg",
+  "3978TOUR2": "07/b3/e4/c0.jpg",
   "66111P3": "r/33/0a/2f/3b/caption.jpg",
   "26797P4": "10/6e/6c/d4.jpg",
-  "8841P14": "12/89/5f/5e.jpg",
+  "7812P18": "r/32/7c/1f/90/caption.jpg",
   "400049P3": "10/7d/7a/ff.jpg",
 };
 

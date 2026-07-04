@@ -1,8 +1,8 @@
 {
   "product": {
-    "productCode": "8647P466",
-    "productUrl": "https://www.viator.com/tours/Boston/Private-half-Day-Tour-to-Salem-and-Marbelhead-from-Boston-with-pick-up/d678-8647P466",
-    "title": "Private Half-Day Tour to Salem and Marblehead from Boston",
+    "productCode": "343490P3",
+    "productUrl": "https://www.viator.com/tours/Boston/PRIVATE-GROUP-Authentic-Revolutionary-Boston-walking-Tour/d678-343490P3",
+    "title": "Private Revolutionary History Boston Walking Tour",
     "description": {
       "text": "Escape Boston for a private half-day excursion to Salem's witch trial history and Marblehead's coastal charm. Your driver-guide picks up your party downtown and routes through Salem Witch Museum, Salem Maritime National Historic Site, and Marblehead's historic harbor district. The premium private format adjusts stops and timing to your interests, whether that means extended time at the House of the Seven Gables or a harbor walk in Marblehead. Ideal for travelers who want North Shore history without joining a motorcoach group."
     },
@@ -10,11 +10,11 @@
       "city": "Boston",
       "state": "Massachusetts"
     },
-    "duration": "5 hours (approx.)",
-    "priceFrom": "From $449.00",
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $75.00",
     "reviews": {
-      "combinedAverageRating": 5,
-      "totalReviews": 118
+      "combinedAverageRating": 4.9,
+      "totalReviews": 86
     },
     "media": {
       "images": [
@@ -85,8 +85,8 @@
     ],
     "faqs": [
       {
-        "question": "How long is the Private Half-Day Tour to Salem and Marblehead from Boston?",
-        "answer": "The planned duration is 5 hours."
+        "question": "How long is the Private Revolutionary History Boston Walking Tour?",
+        "answer": "The planned duration is 2 hours."
       },
       {
         "question": "Where does the tour depart from in Boston?",
@@ -106,7 +106,7 @@
     ],
     "pricing": {
       "summary": {
-        "fromPrice": 449
+        "fromPrice": 75
       },
       "currency": "USD"
     }

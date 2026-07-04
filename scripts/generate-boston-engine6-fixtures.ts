@@ -452,17 +452,17 @@ const BOSTON_TOURS: BostonTourFixture[] = [
     categories: ["Walking Tours", "Historical Tours", "Small Group Tours"],
   },
   {
-    productCode: "7167P68",
+    productCode: "70284P1",
     productUrl:
-      "https://www.viator.com/tours/Boston/Boston-Freedom-Trail-and-North-End-Neighborhood-Walking-Tour/d678-7167P68",
-    title: "Boston Freedom Trail and North End Neighborhood Walking Tour",
+      "https://www.viator.com/tours/Boston/The-Revolutionary-Story-Tour-An-Epic-Walking-Tour-of-Boston/d678-70284P1",
+    title: "The Full Revolutionary Story Epic Small-Group Boston Walking Tour",
     description:
       "Combine the Freedom Trail with an immersive North End neighborhood walk on a premium small-group outing. Your guide covers Boston Common, Faneuil Hall, Paul Revere House, and Old North Church before leading you through the North End's narrow streets, Hanover Street cafes, and Copp's Hill Burying Ground. The extended format adds Italian-immigrant history and local food culture to the Revolutionary narrative. Perfect for travelers who want both landmark history and neighborhood character in one booking.",
     duration: "3 hours (approx.)",
     priceFrom: 59,
     heroUrl: `${TACDN}/15/7d/a2/84.jpg`,
-    rating: 4.8,
-    reviewCount: 1243,
+    rating: 5,
+    reviewCount: 204,
     highlights: [
       "Freedom Trail plus North End neighborhood walk",
       "Paul Revere House and Old North Church stops",
@@ -637,17 +637,17 @@ const BOSTON_TOURS: BostonTourFixture[] = [
     categories: ["Private Tours", "Food Tours", "Walking Tours"],
   },
   {
-    productCode: "8841P14",
+    productCode: "7812P18",
     productUrl:
-      "https://www.viator.com/tours/Boston/Bostons-Quincy-Market-and-North-End-Food-Tour-Small-Group-Walking-Tour/d678-8841P14",
-    title: "Boston's Quincy Market and North End Food Tour",
+      "https://www.viator.com/tours/Boston/Small-group-Guided-Walking-Food-Tour-in-Boston/d678-7812P18",
+    title: "Boston North End Food Tour with Authentic Local Flavors & Dishes",
     description:
       "Sample Boston's best bites on a premium small-group food walk from Quincy Market through the North End. Your guide leads tastings at Faneuil Hall vendors, Hanover Street cannoli shops, and hidden North End trattorias while sharing immigrant history and local food traditions. The half-day format covers enough stops for a full lunch without rushing between neighborhoods. Perfect for food-focused travelers who want both downtown market culture and authentic Italian North End flavors.",
-    duration: "3 hours (approx.)",
-    priceFrom: 147,
+    duration: "2 to 3 hours (approx.)",
+    priceFrom: 74.99,
     heroUrl: `${TACDN}/12/89/5f/5e.jpg`,
     rating: 4.9,
-    reviewCount: 892,
+    reviewCount: 1200,
     highlights: [
       "Premium small-group food tour from Quincy Market to North End",
       "Faneuil Hall and Quincy Market vendor tastings",
@@ -758,17 +758,17 @@ const BOSTON_TOURS: BostonTourFixture[] = [
     categories: ["Private Tours", "Food Tours", "Historical Tours"],
   },
   {
-    productCode: "8647P466",
+    productCode: "343490P3",
     productUrl:
-      "https://www.viator.com/tours/Boston/Private-half-Day-Tour-to-Salem-and-Marbelhead-from-Boston-with-pick-up/d678-8647P466",
-    title: "Private Half-Day Tour to Salem and Marblehead from Boston",
+      "https://www.viator.com/tours/Boston/PRIVATE-GROUP-Authentic-Revolutionary-Boston-walking-Tour/d678-343490P3",
+    title: "Private Revolutionary History Boston Walking Tour",
     description:
       "Escape Boston for a private half-day excursion to Salem's witch trial history and Marblehead's coastal charm. Your driver-guide picks up your party downtown and routes through Salem Witch Museum, Salem Maritime National Historic Site, and Marblehead's historic harbor district. The premium private format adjusts stops and timing to your interests, whether that means extended time at the House of the Seven Gables or a harbor walk in Marblehead. Ideal for travelers who want North Shore history without joining a motorcoach group.",
-    duration: "5 hours (approx.)",
-    priceFrom: 449,
+    duration: "2 hours (approx.)",
+    priceFrom: 75,
     heroUrl: `${TACDN}/0d/0b/f0/cd.jpg`,
-    rating: 5,
-    reviewCount: 118,
+    rating: 4.9,
+    reviewCount: 86,
     highlights: [
       "Private half-day tour from Boston to Salem and Marblehead",
       "Salem Witch Museum and Maritime National Historic Site",
@@ -875,17 +875,17 @@ const BOSTON_TOURS: BostonTourFixture[] = [
     categories: ["Private Tours", "Day Trips", "Historical Tours"],
   },
   {
-    productCode: "385595P5",
+    productCode: "3978TOUR2",
     productUrl:
-      "https://www.viator.com/tours/Boston/Lexington-and-Concord-Day-Tour/d678-385595P5",
-    title: "Lexington and Concord Day Tour",
+      "https://www.viator.com/tours/Boston/American-History-Tour-Cambridge-Lexington-and-Concord-Day-Trip-from-Boston/d678-3978TOUR2",
+    title: "American History Bus Tour: Boston to Cambridge, Concord, and Lexington",
     description:
       "Follow the path of the American Revolution on a premium day tour from Boston to Lexington and Concord. Your guide narrates the Battle of Lexington Green, the Battle Road, and the stand at Old North Bridge while stopping at Minute Man National Historical Park and Concord's town center. The small-group format covers the key Revolutionary sites in a full-day outing with transportation from downtown Boston. Ideal for history lovers who want expert context on the shot heard round the world.",
-    duration: "7 hours (approx.)",
-    priceFrom: 129,
+    duration: "5 hours (approx.)",
+    priceFrom: 89,
     heroUrl: `${TACDN}/12/5b/b5/7d.jpg`,
-    rating: 4.8,
-    reviewCount: 934,
+    rating: 4.7,
+    reviewCount: 612,
     highlights: [
       "Premium day tour to Lexington and Concord from Boston",
       "Lexington Battle Green and Battle Road Trail",
@@ -1041,17 +1041,17 @@ const BOSTON_TOURS: BostonTourFixture[] = [
     categories: ["Boat Tours", "Active Tours", "Water Tours"],
   },
   {
-    productCode: "3978TOUR5",
+    productCode: "7167P80",
     productUrl:
-      "https://www.viator.com/tours/Boston/Salem-Witch-City-Day-Trip-From-Boston/d678-3978TOUR5",
+      "https://www.viator.com/tours/Salem/Salem-Witch-Trials-from-Past-to-Present-Day-Tour-from-Boston/d22414-7167P80",
     title: 'Boston to Salem "Witch City" Day Trip with Round-Trip Transportation',
     description:
       "Discover Salem's witch trial legacy on a guided day trip from Boston with round-trip motorcoach transportation. Explore Pickering Wharf, the Salem Witch Trials Memorial, and the House of the Seven Gables with free time for lunch and shopping on Essex Street. Your driver-guide shares North Shore history during the ride from downtown Boston. The seven-hour format packs Salem's museums, waterfront, and colonial lanes into one premium day trip without renting a car.",
-    duration: "7 hours (approx.)",
-    priceFrom: 62,
+    duration: "8 hours 30 minutes (approx.)",
+    priceFrom: 129,
     heroUrl: `${TACDN}/07/af/ef/47.jpg`,
-    rating: 4,
-    reviewCount: 278,
+    rating: 4.6,
+    reviewCount: 342,
     highlights: [
       "Round-trip day trip from Boston to Salem Witch City",
       "Pickering Wharf and Essex Street free time",
@@ -1065,7 +1065,7 @@ const BOSTON_TOURS: BostonTourFixture[] = [
       "Return to Boston after free time in Salem's waterfront district.",
     itineraryItems: [
       {
-        title: "Boston",
+        title: "Salem Witch Trials Tour from Boston by Ferry with Small Group",
         description: "Depart downtown Boston by motorcoach with guide orientation.",
         duration: "45 minutes",
         stopType: "stop",

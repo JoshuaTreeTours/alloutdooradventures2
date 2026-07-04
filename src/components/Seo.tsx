@@ -1,5 +1,4 @@
 import { useLayoutEffect } from "react";
-import { useLocation } from "wouter";
 
 import { buildCanonicalUrl, buildImageUrl, DEFAULT_SEO } from "../utils/seo";
 
@@ -58,8 +57,7 @@ export default function Seo({
   robots = "index,follow,max-image-preview:large",
   googlebot = "index,follow,max-image-preview:large",
 }: SeoProps) {
-  const [location] = useLocation();
-  const canonicalUrl = buildCanonicalUrl(url ?? location ?? "/");
+  const canonicalUrl = buildCanonicalUrl(url ?? "/");
   const resolvedImage = image ? buildImageUrl(image) : "";
 
   useLayoutEffect(() => {

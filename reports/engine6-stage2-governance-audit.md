@@ -2,7 +2,7 @@
 
 Permanent consolidated audit across Engine6 publishing contracts. Blocking applies only to deploy-scoped products in warn mode unless ENGINE6_GOVERNANCE_MODE=strict.
 
-Generated: 2026-07-04T15:59:47.944Z
+Generated: 2026-07-04T16:23:45.606Z
 Governance mode: audit
 Scope mode: pr-scoped
 Full-site validation: false
@@ -11,15 +11,15 @@ Overall passed: true
 
 ## Scope
 
-- Deploy-scoped blocking products: 0
-- Scoped product codes: none
-- Destination cohort labels: none (cohort checks skipped unless full-site validation)
+- Deploy-scoped blocking products: 23
+- Scoped product codes: 255730P225, 26797P4, 3037DUCK, 3283BWW, 3283CODZILLA, 3283SSCRUISE, 343490P3, 3978TOUR2, 400049P3, 400049P5, 44921P7, 5042BOSDIN, 5046BOS_GG, 5046BOS_OTT, 5151BOSCY014, 5769MTVN, 66111P3, 66192P8, 70284P1, 7167P80, 7812P131, 7812P18, 8843P7
+- Destination cohort labels: Boston, Washington, D.C.
 
 ## Totals
 
 - Blocking findings: 0
 - Warning findings: 0
-- Legacy findings (report-only): 1396
+- Legacy findings (report-only): 1406
 - Areas audited: 12
 - Areas passed (no blocking findings): 12
 
@@ -36,14 +36,15 @@ Overall passed: true
 | route-sitemap-merchant-feed-parity | 0 | 0 | 159 | yes |
 | product-code-blocklist | 0 | 0 | 0 | yes |
 | destination-cohort | 0 | 0 | 0 | yes |
-| destination-infrastructure | 0 | 0 | 0 | yes |
+| destination-infrastructure | 0 | 0 | 3 | yes |
 | product-hero | 0 | 0 | 0 | yes |
-| paragon-build-scope | 0 | 0 | 0 | yes |
+| paragon-build-scope | 0 | 0 | 7 | yes |
 
 ## Notes
 
+- Branch-modified product codes: 255730P225, 26797P4, 3037DUCK, 3283BWW, 3283CODZILLA, 3283SSCRUISE, 343490P3, 3978TOUR2, 400049P3, 400049P5, 44921P7, 5042BOSDIN, 5046BOS_GG, 5046BOS_OTT, 5151BOSCY014, 5769MTVN, 66111P3, 66192P8, 70284P1, 7167P80, 7812P131, 7812P18, 8843P7
 - rating_count is maintained as a synchronized mirror of review_count for merchant-feed compatibility. No independent live refresh of rating_count is performed; it changes only when review_count changes.
-- Destination cohort checks skipped: no changed Engine6 destination artifacts detected in deploy scope.
+- Destination cohort scope: Boston, Washington, D.C.
 
 ## Legacy findings (report-only)
 
@@ -147,6 +148,21 @@ Overall passed: true
 - **merchant-feed-commercial-refresh** (`47235P1`): 47235P1.rating_count: expected "412", got "6452"
 - **merchant-feed-commercial-refresh** (`47235P1`): 47235P1.review_count: expected "412", got "6452"
 - **merchant-feed-commercial-refresh** (`2030UNIENTRY`): 2030UNIENTRY.average_rating: expected "4.6", got "4.0"
-- ...and 1296 additional legacy finding(s).
+- ...and 1306 additional legacy finding(s).
+
+## Live Viator validation excerpt
+
+```text
+Engine6 live Viator production validation (2026-07-04T16:23:37.548Z)
+Governance mode: audit
+Scope mode: pr-scoped
+Products validated: 0
+Failures: 0
+Skipped: yes (live Viator validation skipped locally: Viator API credentials unavailable (set VIATOR_API_KEY for local strict checks))
+Deploy-scoped blocking products: 23
+Blocking failures: 0
+Legacy failures (report-only): 0
+Scoped product codes: 255730P225, 26797P4, 3037DUCK, 3283BWW, 3283CODZILLA, 3283SSCRUISE, 343490P3, 3978TOUR2, 400049P3, 400049P5, 44921P7, 5042BOSDIN, 5046BOS_GG, 5046BOS_OTT, 5151BOSCY014, 5769MTVN, 66111P3, 66192P8, 70284P1, 7167P80, 7812P131, 7812P18, 8843P7
+```
 
 See `reports/engine6-stage2-governance-audit.json` for the full machine-readable report.

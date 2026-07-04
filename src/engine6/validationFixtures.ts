@@ -249,6 +249,7 @@ import specimen162351p6Payload from "../../data/engine6/viator/162351P6.exact-pr
 import specimen321860p2Payload from "../../data/engine6/viator/321860P2.exact-product.json";
 import specimen327849p2Payload from "../../data/engine6/viator/327849P2.exact-product.json";
 import specimen327849p1Payload from "../../data/engine6/viator/327849P1.exact-product.json";
+import specimen25265p29Payload from "../../data/engine6/viator/25265P29.exact-product.json";
 import specimen189623p3Payload from "../../data/engine6/viator/189623P3.exact-product.json";
 import specimen325517p1Payload from "../../data/engine6/viator/325517P1.exact-product.json";
 import specimen109073p8Payload from "../../data/engine6/viator/109073P8.exact-product.json";
@@ -298,7 +299,12 @@ import specimen5680dayPayload from "../../data/engine6/viator/5680DAY.exact-prod
 import specimen61552p17Payload from "../../data/engine6/viator/61552P17.exact-product.json";
 import specimen7812p133Payload from "../../data/engine6/viator/7812P133.exact-product.json";
 import specimen8841p19Payload from "../../data/engine6/viator/8841P19.exact-product.json";
+import specimen188341p1Payload from "../../data/engine6/viator/188341P1.exact-product.json";
+import specimen130651p13Payload from "../../data/engine6/viator/130651P13.exact-product.json";
+import specimen3397p10Payload from "../../data/engine6/viator/3397P10.exact-product.json";
 import specimen3332bitePayload from "../../data/engine6/viator/3332BITE.exact-product.json";
+import specimen316128p3Payload from "../../data/engine6/viator/316128P3.exact-product.json";
+import specimen5042p100Payload from "../../data/engine6/viator/5042P100.exact-product.json";
 import specimen46250p9Payload from "../../data/engine6/viator/46250P9.exact-product.json";
 import specimen68189p1Payload from "../../data/engine6/viator/68189P1.exact-product.json";
 import specimen61552p8Payload from "../../data/engine6/viator/61552P8.exact-product.json";
@@ -306,12 +312,6 @@ import specimen3332dayPayload from "../../data/engine6/viator/3332DAY.exact-prod
 import specimen191307p3Payload from "../../data/engine6/viator/191307P3.exact-product.json";
 import specimen338277p2Payload from "../../data/engine6/viator/338277P2.exact-product.json";
 import specimen7812p19Payload from "../../data/engine6/viator/7812P19.exact-product.json";
-import specimen130651p13Payload from "../../data/engine6/viator/130651P13.exact-product.json";
-import specimen3397p10Payload from "../../data/engine6/viator/3397P10.exact-product.json";
-import specimen25265p29Payload from "../../data/engine6/viator/25265P29.exact-product.json";
-import specimen316128p3Payload from "../../data/engine6/viator/316128P3.exact-product.json";
-import specimen188341p1Payload from "../../data/engine6/viator/188341P1.exact-product.json";
-import specimen5042p100Payload from "../../data/engine6/viator/5042P100.exact-product.json";
 import specimen3283bwwPayload from "../../data/engine6/viator/3283BWW.exact-product.json";
 import specimen3283sscruisePayload from "../../data/engine6/viator/3283SSCRUISE.exact-product.json";
 import specimen44921p7Payload from "../../data/engine6/viator/44921P7.exact-product.json";
@@ -319,17 +319,17 @@ import specimen3037duckPayload from "../../data/engine6/viator/3037DUCK.exact-pr
 import specimen66111p3Payload from "../../data/engine6/viator/66111P3.exact-product.json";
 import specimen26797p4Payload from "../../data/engine6/viator/26797P4.exact-product.json";
 import specimen8843p7Payload from "../../data/engine6/viator/8843P7.exact-product.json";
-import specimen7167p68Payload from "../../data/engine6/viator/7167P68.exact-product.json";
+import specimen70284p1Payload from "../../data/engine6/viator/70284P1.exact-product.json";
 import specimen5046bos_ottPayload from "../../data/engine6/viator/5046BOS_OTT.exact-product.json";
 import specimen7812p131Payload from "../../data/engine6/viator/7812P131.exact-product.json";
-import specimen8841p14Payload from "../../data/engine6/viator/8841P14.exact-product.json";
+import specimen7812p18Payload from "../../data/engine6/viator/7812P18.exact-product.json";
 import specimen400049p3Payload from "../../data/engine6/viator/400049P3.exact-product.json";
-import specimen8647p466Payload from "../../data/engine6/viator/8647P466.exact-product.json";
+import specimen343490p3Payload from "../../data/engine6/viator/343490P3.exact-product.json";
 import specimen400049p5Payload from "../../data/engine6/viator/400049P5.exact-product.json";
-import specimen385595p5Payload from "../../data/engine6/viator/385595P5.exact-product.json";
+import specimen3978tour2Payload from "../../data/engine6/viator/3978TOUR2.exact-product.json";
 import specimen5046bos_ggPayload from "../../data/engine6/viator/5046BOS_GG.exact-product.json";
 import specimen3283codzillaPayload from "../../data/engine6/viator/3283CODZILLA.exact-product.json";
-import specimen3978tour5Payload from "../../data/engine6/viator/3978TOUR5.exact-product.json";
+import specimen7167p80Payload from "../../data/engine6/viator/7167P80.exact-product.json";
 import specimen5042bosdinPayload from "../../data/engine6/viator/5042BOSDIN.exact-product.json";
 import specimen5151boscy014Payload from "../../data/engine6/viator/5151BOSCY014.exact-product.json";
 import specimen66192p8Payload from "../../data/engine6/viator/66192P8.exact-product.json";
@@ -3125,7 +3125,8 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl: "https://www.viator.com/tours/Chicago/Small-Group-Chicago-Loop-Food-Walking-Tour/d673-7812P19",
     rawPayload: specimen7812p19Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
-  },  {
+  },
+  {
     productCode: "5769MTVN",
     publicUrl:
       "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
@@ -3181,10 +3182,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
-    productCode: "7167P68",
+    productCode: "70284P1",
     publicUrl:
-      "https://www.viator.com/tours/Boston/Boston-Freedom-Trail-and-North-End-Neighborhood-Walking-Tour/d678-7167P68",
-    rawPayload: specimen7167p68Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Boston/The-Revolutionary-Story-Tour-An-Epic-Walking-Tour-of-Boston/d678-70284P1",
+    rawPayload: specimen70284p1Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
@@ -3202,10 +3203,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
-    productCode: "8841P14",
+    productCode: "7812P18",
     publicUrl:
-      "https://www.viator.com/tours/Boston/Bostons-Quincy-Market-and-North-End-Food-Tour-Small-Group-Walking-Tour/d678-8841P14",
-    rawPayload: specimen8841p14Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Boston/Small-group-Guided-Walking-Food-Tour-in-Boston/d678-7812P18",
+    rawPayload: specimen7812p18Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
@@ -3216,10 +3217,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
-    productCode: "8647P466",
+    productCode: "343490P3",
     publicUrl:
-      "https://www.viator.com/tours/Boston/Private-half-Day-Tour-to-Salem-and-Marbelhead-from-Boston-with-pick-up/d678-8647P466",
-    rawPayload: specimen8647p466Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Boston/PRIVATE-GROUP-Authentic-Revolutionary-Boston-walking-Tour/d678-343490P3",
+    rawPayload: specimen343490p3Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
@@ -3230,10 +3231,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
-    productCode: "385595P5",
+    productCode: "3978TOUR2",
     publicUrl:
-      "https://www.viator.com/tours/Boston/Lexington-and-Concord-Day-Tour/d678-385595P5",
-    rawPayload: specimen385595p5Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Boston/American-History-Tour-Cambridge-Lexington-and-Concord-Day-Trip-from-Boston/d678-3978TOUR2",
+    rawPayload: specimen3978tour2Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
@@ -3251,10 +3252,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
-    productCode: "3978TOUR5",
+    productCode: "7167P80",
     publicUrl:
-      "https://www.viator.com/tours/Boston/Salem-Witch-City-Day-Trip-From-Boston/d678-3978TOUR5",
-    rawPayload: specimen3978tour5Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Salem/Salem-Witch-Trials-from-Past-to-Present-Day-Tour-from-Boston/d22414-7167P80",
+    rawPayload: specimen7167p80Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

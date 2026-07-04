@@ -1,16 +1,43 @@
 {
-  "generatedAt": "2026-07-04T15:59:47.944Z",
+  "generatedAt": "2026-07-04T16:23:45.606Z",
   "governanceMode": "audit",
   "mode": "pr-scoped",
-  "scopedProductCodes": [],
-  "scopedDestinationLabels": [],
+  "scopedProductCodes": [
+    "255730P225",
+    "26797P4",
+    "3037DUCK",
+    "3283BWW",
+    "3283CODZILLA",
+    "3283SSCRUISE",
+    "343490P3",
+    "3978TOUR2",
+    "400049P3",
+    "400049P5",
+    "44921P7",
+    "5042BOSDIN",
+    "5046BOS_GG",
+    "5046BOS_OTT",
+    "5151BOSCY014",
+    "5769MTVN",
+    "66111P3",
+    "66192P8",
+    "70284P1",
+    "7167P80",
+    "7812P131",
+    "7812P18",
+    "8843P7"
+  ],
+  "scopedDestinationLabels": [
+    "Boston",
+    "Washington, D.C."
+  ],
   "fullSiteValidation": false,
   "blockingPassed": true,
   "passed": true,
   "totals": {
     "blockingFindings": 0,
     "warningFindings": 0,
-    "legacyFindings": 1396,
+    "legacyFindings": 1406,
     "areasAudited": 12,
     "areasPassed": 12
   },
@@ -82,7 +109,7 @@
       "area": "destination-infrastructure",
       "blockingCount": 0,
       "warningCount": 0,
-      "legacyCount": 0,
+      "legacyCount": 3,
       "pass": true
     },
     {
@@ -96,7 +123,7 @@
       "area": "paragon-build-scope",
       "blockingCount": 0,
       "warningCount": 0,
-      "legacyCount": 0,
+      "legacyCount": 7,
       "pass": true
     }
   ],
@@ -8476,8 +8503,108 @@
       "productCode": "118676P4",
       "message": "merchant feed row diverged from Product JSON-LD (118676P4.price: expected \"179 USD\", got \"245 USD\"; 118676P4.rating_count: expected \"14\", got \"26\"; 118676P4.review_count: expected \"14\", got \"26\")",
       "severity": "legacy"
+    },
+    {
+      "area": "destination-infrastructure",
+      "productCode": null,
+      "message": "Boston: Governance scope mapping missing for boston",
+      "severity": "legacy"
+    },
+    {
+      "area": "destination-infrastructure",
+      "productCode": null,
+      "message": "Boston: Validation cohort missing for boston",
+      "severity": "legacy"
+    },
+    {
+      "area": "destination-infrastructure",
+      "productCode": null,
+      "message": "Boston: Fixture generation includes product codes outside the destination route prefix",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "data/merchantFeed.csv: generated/catalog file changed outside branch-scoped product codes",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "public/sitemap-tours.xml: generated/catalog file changed outside branch-scoped product codes",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "reports/engine6-stage2-governance-audit.json: generated/catalog file changed outside branch-scoped product codes",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "reports/engine6-stage2-governance-audit.md: generated/catalog file changed outside branch-scoped product codes",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "src/engine6/bostonViatorPublicRatings.ts: generated/catalog file changed outside branch-scoped product codes",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "src/engine6/routes.ts: Paragon reference tour, fixture, route, or mock modified without explicit scope",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "src/engine6/validationFixtures.ts: Paragon reference tour, fixture, route, or mock modified without explicit scope",
+      "severity": "legacy"
     }
   ],
+  "liveViator": {
+    "mode": "pr-scoped",
+    "governanceMode": "audit",
+    "passed": true,
+    "blockingPassed": true,
+    "skipped": true,
+    "skipReason": "live Viator validation skipped locally: Viator API credentials unavailable (set VIATOR_API_KEY for local strict checks)",
+    "credentialsRequired": false,
+    "credentialsAvailable": false,
+    "scopedProductCodes": [
+      "255730P225",
+      "26797P4",
+      "3037DUCK",
+      "3283BWW",
+      "3283CODZILLA",
+      "3283SSCRUISE",
+      "343490P3",
+      "3978TOUR2",
+      "400049P3",
+      "400049P5",
+      "44921P7",
+      "5042BOSDIN",
+      "5046BOS_GG",
+      "5046BOS_OTT",
+      "5151BOSCY014",
+      "5769MTVN",
+      "66111P3",
+      "66192P8",
+      "70284P1",
+      "7167P80",
+      "7812P131",
+      "7812P18",
+      "8843P7"
+    ],
+    "validatedAt": "2026-07-04T16:23:37.548Z",
+    "results": [],
+    "failures": [],
+    "blockingFailures": [],
+    "legacyFailures": []
+  },
   "merchantFeedImage": {
     "imagesValidated": 397,
     "automaticallyRepaired": 3,
@@ -8488,8 +8615,8 @@
     "informationalLegacyProductCodes": [],
     "invalidUrlsReported": [
       {
-        "productCode": "7011P8",
-        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/52/0f.jpg",
+        "productCode": "6004PRHIKE",
+        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/54/6a.jpg",
         "reason": "http-error",
         "status": 404
       },
@@ -8500,8 +8627,8 @@
         "status": 404
       },
       {
-        "productCode": "6004PRHIKE",
-        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/54/6a.jpg",
+        "productCode": "7011P8",
+        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/52/0f.jpg",
         "reason": "http-error",
         "status": 404
       }
@@ -8510,19 +8637,187 @@
     "warnings": []
   },
   "productHero": {
-    "auditedProductCodes": [],
+    "auditedProductCodes": [
+      "5769MTVN",
+      "3283BWW",
+      "3283SSCRUISE",
+      "44921P7",
+      "3037DUCK",
+      "66111P3",
+      "26797P4",
+      "8843P7",
+      "70284P1",
+      "5046BOS_OTT",
+      "7812P131",
+      "7812P18",
+      "400049P3",
+      "343490P3",
+      "400049P5",
+      "3978TOUR2",
+      "5046BOS_GG",
+      "3283CODZILLA",
+      "7167P80",
+      "5042BOSDIN",
+      "5151BOSCY014",
+      "66192P8",
+      "255730P225"
+    ],
     "findings": [],
     "pass": true
   },
-  "destinationInfrastructure": [],
+  "destinationInfrastructure": [
+    {
+      "destinationLabel": "Boston",
+      "destinationCitySlug": "boston",
+      "stateSlug": "massachusetts",
+      "citySlug": "boston",
+      "routePrefix": "/destinations/massachusetts/boston/tours/",
+      "pass": false,
+      "checks": [
+        {
+          "id": "state-registry",
+          "pass": true,
+          "message": "State registry includes massachusetts"
+        },
+        {
+          "id": "city-registry",
+          "pass": true,
+          "message": "City registry includes boston"
+        },
+        {
+          "id": "tours-state-selector",
+          "pass": true,
+          "message": "Tours page state selector includes massachusetts"
+        },
+        {
+          "id": "tours-city-selector",
+          "pass": true,
+          "message": "Tours page city selector includes boston"
+        },
+        {
+          "id": "route-prefix",
+          "pass": true,
+          "message": "Route prefix registered (22 tour route(s))"
+        },
+        {
+          "id": "governance-scope",
+          "pass": false,
+          "message": "Governance scope mapping missing for boston",
+          "detail": "Add ENGINE6_DESTINATION_SLUG_COHORT_LABELS entry before deploy-scoped governance can run."
+        },
+        {
+          "id": "canonical-hero-fallback",
+          "pass": true,
+          "message": "Canonical city hero fallback resolves"
+        },
+        {
+          "id": "validation-cohort",
+          "pass": false,
+          "message": "Validation cohort missing for boston",
+          "detail": "Add destination validation cohort(s) in engine6DestinationValidationCohorts.ts."
+        },
+        {
+          "id": "fixture-target-path",
+          "pass": false,
+          "message": "Fixture generation includes product codes outside the destination route prefix",
+          "detail": "All deploy-scoped product codes must resolve under /destinations/massachusetts/boston/tours/"
+        }
+      ],
+      "blockingFailures": [
+        {
+          "id": "governance-scope",
+          "pass": false,
+          "message": "Governance scope mapping missing for boston",
+          "detail": "Add ENGINE6_DESTINATION_SLUG_COHORT_LABELS entry before deploy-scoped governance can run."
+        },
+        {
+          "id": "validation-cohort",
+          "pass": false,
+          "message": "Validation cohort missing for boston",
+          "detail": "Add destination validation cohort(s) in engine6DestinationValidationCohorts.ts."
+        },
+        {
+          "id": "fixture-target-path",
+          "pass": false,
+          "message": "Fixture generation includes product codes outside the destination route prefix",
+          "detail": "All deploy-scoped product codes must resolve under /destinations/massachusetts/boston/tours/"
+        }
+      ]
+    }
+  ],
   "paragonBuildScope": {
     "moduleId": "engine6-paragon-build-scope-governance",
-    "generatedAt": "2026-07-04T15:59:47.943Z",
-    "pass": true,
-    "branchScopedProductCodes": [],
-    "blockedFiles": [],
+    "generatedAt": "2026-07-04T16:23:44.096Z",
+    "pass": false,
+    "branchScopedProductCodes": [
+      "255730P225",
+      "26797P4",
+      "3037DUCK",
+      "3283BWW",
+      "3283CODZILLA",
+      "3283SSCRUISE",
+      "343490P3",
+      "3978TOUR2",
+      "400049P3",
+      "400049P5",
+      "44921P7",
+      "5042BOSDIN",
+      "5046BOS_GG",
+      "5046BOS_OTT",
+      "5151BOSCY014",
+      "5769MTVN",
+      "66111P3",
+      "66192P8",
+      "70284P1",
+      "7167P80",
+      "7812P131",
+      "7812P18",
+      "8843P7"
+    ],
+    "blockedFiles": [
+      {
+        "path": "data/merchantFeed.csv",
+        "kind": "unrelated-generated-catalog",
+        "detail": "generated/catalog file changed outside branch-scoped product codes"
+      },
+      {
+        "path": "public/sitemap-tours.xml",
+        "kind": "unrelated-generated-catalog",
+        "detail": "generated/catalog file changed outside branch-scoped product codes"
+      },
+      {
+        "path": "reports/engine6-stage2-governance-audit.json",
+        "kind": "unrelated-generated-catalog",
+        "detail": "generated/catalog file changed outside branch-scoped product codes"
+      },
+      {
+        "path": "reports/engine6-stage2-governance-audit.md",
+        "kind": "unrelated-generated-catalog",
+        "detail": "generated/catalog file changed outside branch-scoped product codes"
+      },
+      {
+        "path": "src/engine6/bostonViatorPublicRatings.ts",
+        "kind": "unrelated-generated-catalog",
+        "detail": "generated/catalog file changed outside branch-scoped product codes"
+      },
+      {
+        "path": "src/engine6/routes.ts",
+        "kind": "paragon-reference-modified",
+        "detail": "Paragon reference tour, fixture, route, or mock modified without explicit scope"
+      },
+      {
+        "path": "src/engine6/validationFixtures.ts",
+        "kind": "paragon-reference-modified",
+        "detail": "Paragon reference tour, fixture, route, or mock modified without explicit scope"
+      }
+    ],
     "warnings": [],
-    "informational": [],
+    "informational": [
+      {
+        "path": "src/engine6/engine6DestinationInfrastructureValidation.ts",
+        "detail": "governance-only allowlisted file"
+      }
+    ],
     "merchantFeed": {
       "pass": true,
       "appendedProductCodes": [],
@@ -8539,19 +8834,44 @@
       "stopped": false,
       "reason": null,
       "cycleCount": 0,
-      "elapsedMs": 0
+      "elapsedMs": 1
     },
     "idempotency": {
       "pass": true,
       "repeatedFileWrites": []
     },
     "deployScope": {
-      "blockingProductCodes": [],
+      "blockingProductCodes": [
+        "255730P225",
+        "26797P4",
+        "3037DUCK",
+        "3283BWW",
+        "3283CODZILLA",
+        "3283SSCRUISE",
+        "343490P3",
+        "3978TOUR2",
+        "400049P3",
+        "400049P5",
+        "44921P7",
+        "5042BOSDIN",
+        "5046BOS_GG",
+        "5046BOS_OTT",
+        "5151BOSCY014",
+        "5769MTVN",
+        "66111P3",
+        "66192P8",
+        "70284P1",
+        "7167P80",
+        "7812P131",
+        "7812P18",
+        "8843P7"
+      ],
       "reportOnlyProductCodes": []
     }
   },
   "notes": [
+    "Branch-modified product codes: 255730P225, 26797P4, 3037DUCK, 3283BWW, 3283CODZILLA, 3283SSCRUISE, 343490P3, 3978TOUR2, 400049P3, 400049P5, 44921P7, 5042BOSDIN, 5046BOS_GG, 5046BOS_OTT, 5151BOSCY014, 5769MTVN, 66111P3, 66192P8, 70284P1, 7167P80, 7812P131, 7812P18, 8843P7",
     "rating_count is maintained as a synchronized mirror of review_count for merchant-feed compatibility. No independent live refresh of rating_count is performed; it changes only when review_count changes.",
-    "Destination cohort checks skipped: no changed Engine6 destination artifacts detected in deploy scope."
+    "Destination cohort scope: Boston, Washington, D.C."
   ]
 }
