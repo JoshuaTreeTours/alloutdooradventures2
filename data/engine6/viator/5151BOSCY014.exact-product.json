@@ -1,0 +1,130 @@
+{
+  "product": {
+    "productCode": "5151BOSCY014",
+    "productUrl": "https://www.viator.com/tours/Boston/Guided-Bike-Tour-of-Boston/d678-5151BOSCY014",
+    "title": "Boston City View Bicycle Tour: History and Landmarks",
+    "description": {
+      "text": "Cycle Boston's landmarks from Boston Common on a guided city-view bike tour through six neighborhoods to the North End and Back Bay. Pedal the Freedom Trail with Charles River Esplanade, Fenway Park, and Copley Square stops at Trinity Church and Boston Public Library. Urban AdvenTours provides bikes, helmets, and expert guides who keep a moderate pace suited to confident street riders. The two-and-a-half-hour format covers more ground than a walking tour while staying close to Boston's signature sights."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $78.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 645
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/2d/e2/41.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided bike tour through six Boston neighborhoods",
+      "North End, Beacon Hill, and Back Bay routing",
+      "Copley Square and Boston Public Library stops",
+      "Charles River Esplanade and Fenway Park pass-by",
+      "Bike and helmet included from Urban AdvenTours"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at Urban AdvenTours, 103 Atlantic Avenue. Arrive 30 minutes early for bike fitting."
+      },
+      "end": {
+        "description": "Return bikes to Urban AdvenTours after the Copley Square loop."
+      }
+    },
+    "itinerarySummary": "Cycle Boston's landmarks from Boston Common on a guided city-view bike tour through six neighborhoods to the North End and Back Bay.",
+    "itineraryItems": [
+      {
+        "title": "Boston Common",
+        "description": "",
+        "duration": "5 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Freedom Trail",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "North End",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Beacon Hill",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Charles River Esplanade",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fenway Park",
+        "description": "",
+        "duration": "5 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Copley Square",
+        "description": "",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided bicycle tour of Boston",
+      "Bike and helmet rental",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Boston City View Bicycle Tour: History and Landmarks?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Meet at Urban AdvenTours, 103 Atlantic Avenue. Arrive 30 minutes early for bike fitting."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Active Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 78
+      },
+      "currency": "USD"
+    }
+  }
+}

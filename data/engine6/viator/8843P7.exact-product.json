@@ -1,0 +1,125 @@
+{
+  "product": {
+    "productCode": "8843P7",
+    "productUrl": "https://www.viator.com/tours/Boston/Tour-of-the-Freedom-Trail/d678-8843P7",
+    "title": "Tour of the Freedom Trail",
+    "description": {
+      "text": "Experience the Freedom Trail with a premium small-group guide who paces the route for deeper stops at Boston's Revolutionary landmarks. The walk covers Boston Common, King's Chapel, Granary Burying Ground, Old State House, Faneuil Hall, and Old North Church with extended commentary at each site. Your guide weaves together the Boston Massacre, Tea Party, and Battle of Bunker Hill into a coherent narrative. Ideal for history enthusiasts who want a thorough trail experience without joining a large group."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $45.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1876
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/90/ca/37.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Premium small-group Freedom Trail tour",
+      "King's Chapel and Granary Burying Ground stops",
+      "Old State House and Faneuil Hall commentary",
+      "Old North Church and North End routing",
+      "Extended historian narration at each landmark"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at Boston Common Visitor Center. Arrive 10 minutes before the scheduled start."
+      },
+      "end": {
+        "description": "Conclude in the North End near Old North Church after the final trail landmark."
+      }
+    },
+    "itinerarySummary": "Experience the Freedom Trail with a premium small-group guide who paces the route for deeper stops at Boston's Revolutionary landmarks.",
+    "itineraryItems": [
+      {
+        "title": "Boston Common",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "King's Chapel",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Granary Burying Ground",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old State House",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Faneuil Hall",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old North Church",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional historian guide",
+      "Premium small-group walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Tour of the Freedom Trail?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Meet your guide at Boston Common Visitor Center. Arrive 10 minutes before the scheduled start."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Small Group Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 45
+      },
+      "currency": "USD"
+    }
+  }
+}

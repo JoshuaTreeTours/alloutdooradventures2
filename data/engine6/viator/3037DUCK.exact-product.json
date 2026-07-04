@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "3037DUCK",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Duck-Tour/d678-3037DUCK",
+    "title": "Boston Duck Tour",
+    "description": {
+      "text": "See Revolutionary Boston from land and water aboard an amphibious WWII-style Duck vehicle. Your conDUCKtor narrates Boston Common, the State House, and Faneuil Hall before splashing into the Charles River for a unique harbor-level perspective. The 80-minute loop covers downtown landmarks and the Esplanade in one entertaining ride. Perfect for families who want a fun overview without a long walking commitment."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "1 hour 20 minutes (approx.)",
+    "priceFrom": "From $60.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 9103
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/3c/d2/5f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Amphibious Duck tour through downtown Boston",
+      "Boston Common and Massachusetts State House pass-by",
+      "Splash-down entry into the Charles River",
+      "Faneuil Hall and Quincy Market routing",
+      "Family-friendly 80-minute city overview"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at the Duck Tours departure point at the Museum of Science, Prudential Center, or New England Aquarium depending on your booking."
+      },
+      "end": {
+        "description": "Return to your original Duck Tours boarding location after the river segment."
+      }
+    },
+    "itinerarySummary": "See Revolutionary Boston from land and water aboard an amphibious WWII-style Duck vehicle.",
+    "itineraryItems": [
+      {
+        "title": "Boston Common",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Massachusetts State House",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Faneuil Hall",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Charles River",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Esplanade",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional conDUCKtor guide",
+      "Amphibious Duck vehicle tour",
+      "Land and river segments"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Boston Duck Tour?",
+        "answer": "The planned duration is 1 hour 20 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Check in at the Duck Tours departure point at the Museum of Science, Prudential Center, or New England Aquarium depending on your booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Family Friendly"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 60
+      },
+      "currency": "USD"
+    }
+  }
+}

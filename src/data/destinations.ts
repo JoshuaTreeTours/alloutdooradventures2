@@ -3887,13 +3887,110 @@ const illinoisState: StateDestination = {
   isFallback: true,
 };
 
+const massachusettsState: StateDestination = {
+  slug: "massachusetts",
+  name: "Massachusetts",
+  description:
+    "Historic harbor cities, Freedom Trail landmarks, and New England coastal adventures.",
+  featuredDescription:
+    "Explore Boston tours with harbor cruises, Freedom Trail walks, and North End food experiences.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/94/3a/b2.jpg",
+  region: "Northeast",
+  intro:
+    "Massachusetts pairs Revolutionary history with walkable harbor districts and curated guided experiences.",
+  longDescription:
+    "Boston anchors Massachusetts tour inventory with harbor cruises, Freedom Trail walks, and premium sightseeing across the North End and waterfront.",
+  topRegions: [
+    {
+      title: "Boston Harbor",
+      description:
+        "Historic sightseeing cruises, whale watching, and sunset sails from Long Wharf.",
+    },
+    {
+      title: "Freedom Trail and North End",
+      description:
+        "Walking, food, and history tours through Revolutionary Boston districts.",
+    },
+  ],
+  cities: [
+    {
+      name: "Boston",
+      slug: "boston",
+      stateSlug: "massachusetts",
+      region: "Boston",
+      lat: 42.3601,
+      lng: -71.0589,
+      shortDescription:
+        "Harbor cruises, Freedom Trail tours, and North End food walks in Boston.",
+      intro:
+        "Boston is a harbor city with historic cruises, guided food walks, and premium Revolutionary history tours.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/94/3a/b2.jpg",
+      ],
+      activityTags: ["sightseeing", "food-tours", "cruises"],
+      whereItIs: [
+        "Boston sits on Massachusetts Bay with the Charles River and Boston Harbor framing downtown.",
+        "Most guided tours depart from Long Wharf, the North End, and Freedom Trail meeting points.",
+      ],
+      experiences: {
+        mountains:
+          "Boston is a coastal city; tours focus on harbor history and walkable districts.",
+        lakesWater:
+          "Boston Harbor cruises and whale watching highlight the waterfront from the water.",
+        desertForest:
+          "Public Garden, Boston Common, and the Esplanade offer green space between urban sightseeing routes.",
+        cycling:
+          "Guided bike tours explore the Emerald Necklace and harborfront paths.",
+        scenicDrives:
+          "Private driving tours cover Beacon Hill, Back Bay, and coastal day trips to Salem.",
+        seasonalNotes:
+          "Summer and early fall are popular for harbor cruises; autumn adds foliage day trips.",
+      },
+      thingsToDo: [
+        "Cruise Boston Harbor for USS Constitution and skyline views.",
+        "Walk the Freedom Trail with a licensed history guide.",
+        "Join a North End food tour for Italian specialties and local markets.",
+      ],
+      toursCopy: [
+        "Book a historic harbor cruise for a compact introduction to Boston.",
+        "Pair a Freedom Trail walk with a North End food tour for a full-day city itinerary.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Boston Harbor historic sightseeing cruise.",
+          "Afternoon: Freedom Trail walking tour.",
+          "Evening: sunset harbor cruise.",
+        ],
+        dayTwo: [
+          "Morning: North End food or bike tour.",
+          "Afternoon: Salem or Lexington day trip.",
+          "Evening: dinner in the Seaport or North End.",
+        ],
+      },
+      gettingThere: [
+        "Logan International Airport serves Boston with rail and rideshare links to downtown.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Boston tours?",
+          answer:
+            "Harbor cruises, Freedom Trail walks, and North End food tours are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
-  ...northeastStates,
+  ...northeastStates.filter(state => state.slug !== "massachusetts"),
   ...deepSouthStates,
   mississippiState,
   minnesotaState,
   wyomingState,
+  massachusettsState,
   illinoisState,
 ];
 

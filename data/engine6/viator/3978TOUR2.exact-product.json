@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "3978TOUR2",
+    "productUrl": "https://www.viator.com/tours/Boston/American-History-Tour-Cambridge-Lexington-and-Concord-Day-Trip-from-Boston/d678-3978TOUR2",
+    "title": "American History Bus Tour: Boston to Cambridge, Concord, and Lexington",
+    "description": {
+      "text": "Follow the path of the American Revolution on a premium day tour from Boston to Lexington and Concord. Your guide narrates the Battle of Lexington Green, the Battle Road, and the stand at Old North Bridge while stopping at Minute Man National Historical Park and Concord's town center. The small-group format covers the key Revolutionary sites in a full-day outing with transportation from downtown Boston. Ideal for history lovers who want expert context on the shot heard round the world."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 612
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/5b/b5/7d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Premium day tour to Lexington and Concord from Boston",
+      "Lexington Battle Green and Battle Road Trail",
+      "Old North Bridge and Minute Man National Historical Park",
+      "Concord town center and literary history context",
+      "Transportation from downtown Boston included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at a central Boston departure point or confirmed downtown pickup location."
+      },
+      "end": {
+        "description": "Return to Boston after the Concord town center visit."
+      }
+    },
+    "itinerarySummary": "Follow the path of the American Revolution on a premium day tour from Boston to Lexington and Concord.",
+    "itineraryItems": [
+      {
+        "title": "Lexington Battle Green",
+        "description": "",
+        "duration": "40 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Minute Man National Historical Park",
+        "description": "",
+        "duration": "50 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old North Bridge",
+        "description": "",
+        "duration": "35 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Concord Museum",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Round-trip transportation from Boston",
+      "Lexington and Concord park admissions where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the American History Bus Tour: Boston to Cambridge, Concord, and Lexington?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Meet at a central Boston departure point or confirmed downtown pickup location."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Small Group Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

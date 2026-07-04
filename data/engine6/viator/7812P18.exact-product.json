@@ -1,0 +1,117 @@
+{
+  "product": {
+    "productCode": "7812P18",
+    "productUrl": "https://www.viator.com/tours/Boston/Small-group-Guided-Walking-Food-Tour-in-Boston/d678-7812P18",
+    "title": "Boston North End Food Tour with Authentic Local Flavors & Dishes",
+    "description": {
+      "text": "Sample Boston's best bites on a premium small-group food walk from Quincy Market through the North End. Your guide leads tastings at Faneuil Hall vendors, Hanover Street cannoli shops, and hidden North End trattorias while sharing immigrant history and local food traditions. The half-day format covers enough stops for a full lunch without rushing between neighborhoods. Perfect for food-focused travelers who want both downtown market culture and authentic Italian North End flavors."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $74.99",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1200
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/89/5f/5e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Premium small-group food tour from Quincy Market to North End",
+      "Faneuil Hall and Quincy Market vendor tastings",
+      "Hanover Street cannoli and North End trattoria stops",
+      "Immigrant history between food samples",
+      "Enough tastings for a full lunch experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide outside Quincy Market at Faneuil Hall Marketplace."
+      },
+      "end": {
+        "description": "Tour concludes on Hanover Street in the North End after the final tasting."
+      }
+    },
+    "itinerarySummary": "Sample Boston's best bites on a premium small-group food walk from Quincy Market through the North End.",
+    "itineraryItems": [
+      {
+        "title": "Quincy Market",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Faneuil Hall",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Hanover Street",
+        "description": "",
+        "duration": "60 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Paul Revere House",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Old North Church",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional food guide",
+      "Multiple food tastings",
+      "Small-group walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Boston North End Food Tour with Authentic Local Flavors & Dishes?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Meet your guide outside Quincy Market at Faneuil Hall Marketplace."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Small Group Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 74.99
+      },
+      "currency": "USD"
+    }
+  }
+}

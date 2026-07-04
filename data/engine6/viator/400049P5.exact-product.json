@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "400049P5",
+    "productUrl": "https://www.viator.com/tours/Boston/Private-Day-Trip-to-Lexington-and-Concord-from-Boston/d678-400049P5",
+    "title": "Private Day Trip to Lexington and Concord from Boston",
+    "description": {
+      "text": "Trace the opening shots of the American Revolution on a private day trip from Boston to Lexington and Concord. Your driver-guide leads your party to Lexington Battle Green, Minute Man National Historical Park, and Old North Bridge where the shot heard round the world was fired. The premium private format allows extended stops at Concord's Old Manse and Sleepy Hollow Cemetery per your interests. Perfect for history enthusiasts who want an unhurried Revolutionary War pilgrimage tailored to their group."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $493.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 67
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4c/65/1e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Revolutionary War day trip from Boston",
+      "Lexington Battle Green and Minute Man National Historical Park",
+      "Old North Bridge and Concord town center stops",
+      "Flexible routing with hotel pickup from Boston",
+      "Full-day format for in-depth colonial history"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Morning pickup from your downtown Boston hotel or confirmed meeting point."
+      },
+      "end": {
+        "description": "Return to your Boston hotel after the Concord town center visit."
+      }
+    },
+    "itinerarySummary": "Trace the opening shots of the American Revolution on a private day trip from Boston to Lexington and Concord.",
+    "itineraryItems": [
+      {
+        "title": "Lexington Battle Green",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Minute Man National Historical Park",
+        "description": "",
+        "duration": "60 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old North Bridge",
+        "description": "",
+        "duration": "40 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Concord Museum",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sleepy Hollow Cemetery",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Private driver-guide",
+      "Private vehicle with Boston hotel pickup",
+      "Lexington and Concord sightseeing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Day Trip to Lexington and Concord from Boston?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Morning pickup from your downtown Boston hotel or confirmed meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 493
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "5046BOS_GG",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Ghosts-and-Gravestones-Tour/d678-5046BOS_GG",
+    "title": "Boston Ghosts and Gravestones Trolley Tour",
+    "description": {
+      "text": "Explore Boston's haunted history on a Ghosts and Gravestones trolley tour led by costumed grave-digger guides. Ride through the North End and downtown after dark with stops at Granary Burying Ground and Copp's Hill Burying Ground, two of Boston's oldest cemeteries. Your conductor shares tales of Cotton Mather, Paul Revere, and Revolutionary-era spirits tied to Boston Common and Faneuil Hall. The two-hour evening format suits history buffs and families who want spooky storytelling without a long walking route."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $47.25",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 2524
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/59/3a/a5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ghost-themed trolley tour through downtown Boston",
+      "Granary Burying Ground and Copp's Hill cemetery stops",
+      "Costumed grave-digger guide narration",
+      "North End and Boston Tea Party Ships pass-by views",
+      "Evening format from Long Wharf Marriott"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Check in at Long Wharf Marriott, 200 Atlantic Avenue. Arrive 30 minutes before departure."
+      },
+      "end": {
+        "description": "Tour ends back at the Long Wharf boarding point after the cemetery and North End loop."
+      }
+    },
+    "itinerarySummary": "Explore Boston's haunted history on a Ghosts and Gravestones trolley tour led by costumed grave-digger guides.",
+    "itineraryItems": [
+      {
+        "title": "Long Wharf",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Granary Burying Ground",
+        "description": "",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Copp's Hill Burying Ground",
+        "description": "",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "North End",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boston Tea Party Ships & Museum",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Ghost-themed trolley tour",
+      "Professional tour conductor",
+      "Local taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Boston Ghosts and Gravestones Trolley Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Check in at Long Wharf Marriott, 200 Atlantic Avenue. Arrive 30 minutes before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Ghost Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Night Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 47.25
+      },
+      "currency": "USD"
+    }
+  }
+}

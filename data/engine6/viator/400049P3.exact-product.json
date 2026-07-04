@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "400049P3",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Food-and-History-Private-Tour/d678-400049P3",
+    "title": "Boston Food and History Private Tour",
+    "description": {
+      "text": "Combine Revolutionary history with curated food tastings on a private Boston walk tailored to your group. Your guide connects Faneuil Hall protests and Paul Revere's ride to the North End's Italian immigrant story while stopping at Quincy Market vendors and Hanover Street specialties. The premium private format adjusts route and pacing to your interests, whether that means extra time at Old North Church or additional tastings. Ideal for travelers who want both cultural depth and culinary discovery in one unhurried outing."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $395.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 41
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7d/7a/ff.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private food and history tour for your party only",
+      "Faneuil Hall and Freedom Trail landmark stops",
+      "Quincy Market and North End food tastings",
+      "Paul Revere House and Old North Church routing",
+      "Flexible four-hour format tailored to your group"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at Faneuil Hall Marketplace. Pickup from downtown hotels available on request."
+      },
+      "end": {
+        "description": "Conclude on Hanover Street in the North End after the final tasting and history stop."
+      }
+    },
+    "itinerarySummary": "Combine Revolutionary history with curated food tastings on a private Boston walk tailored to your group.",
+    "itineraryItems": [
+      {
+        "title": "Faneuil Hall",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Quincy Market",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Paul Revere House",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old North Church",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hanover Street",
+        "description": "",
+        "duration": "60 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private historian and food guide",
+      "Multiple food tastings",
+      "Freedom Trail and North End routing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Boston Food and History Private Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Meet your guide at Faneuil Hall Marketplace. Pickup from downtown hotels available on request."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 395
+      },
+      "currency": "USD"
+    }
+  }
+}

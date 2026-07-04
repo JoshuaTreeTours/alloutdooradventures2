@@ -1,0 +1,127 @@
+{
+  "product": {
+    "productCode": "66192P8",
+    "productUrl": "https://www.viator.com/tours/Boston/Day-Trip-from-Boston-To-Salem-Witch-Exhibits/d678-66192P8",
+    "title": "Day Trip from Boston To Salem Witch Exhibits",
+    "description": {
+      "text": "Visit Salem's witch museums and waterfront on a small-group day trip from Boston with hotel pickup and museum admissions included. Tour the Salem Witch Museum, House of the Seven Gables, and Pickering Wharf with a Salem trolley segment and free time on Essex Street Pedestrian Mall. The eight- to nine-hour premium format includes bottled water and structured time at each exhibit so you see Salem's trial history without planning logistics. Suited to travelers who want a guided Salem immersion with door-to-door transport from Boston."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "8 to 9 hours (approx.)",
+    "priceFrom": "From $190.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 81
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/6f/dc/17.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group Salem day trip from Boston with hotel pickup",
+      "Salem Witch Museum admission included",
+      "House of the Seven Gables visit",
+      "Salem trolley and Pickering Wharf free time",
+      "Essex Street Pedestrian Mall exploration"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from your Boston hotel or meet at Boston Marriott Long Wharf if outside the pickup zone."
+      },
+      "end": {
+        "description": "Return to your Boston hotel after the Salem waterfront visit."
+      }
+    },
+    "itinerarySummary": "Visit Salem's witch museums and waterfront on a small-group day trip from Boston with hotel pickup and museum admissions included.",
+    "itineraryItems": [
+      {
+        "title": "Boston",
+        "description": "",
+        "duration": "60 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Salem Witch Museum",
+        "description": "",
+        "duration": "60 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "House of the Seven Gables",
+        "description": "",
+        "duration": "60 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Salem Trolley",
+        "description": "",
+        "duration": "60 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pickering Wharf",
+        "description": "",
+        "duration": "90 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Essex Street Pedestrian Mall",
+        "description": "",
+        "duration": "90 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Museum admissions",
+      "Bottled water",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Day Trip from Boston To Salem Witch Exhibits?",
+        "answer": "The planned duration is 8 to 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Pickup from your Boston hotel or meet at Boston Marriott Long Wharf if outside the pickup zone."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Small Group Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 190
+      },
+      "currency": "USD"
+    }
+  }
+}

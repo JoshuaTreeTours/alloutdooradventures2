@@ -1,0 +1,505 @@
+[
+  {
+    "productCode": "3283BWW",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Whale-Watching-Cruise/d678-3283BWW",
+    "title": "Boston Whale Watching Cruise",
+    "priceFrom": "From $85.56",
+    "rating": 4.5,
+    "reviewCount": 2827,
+    "duration": "3 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/94/a7/5d.jpg",
+    "overview": "Head offshore from Boston Harbor on a premium whale watching cruise to Stellwagen Bank National Marine Sanctuary, one of the Atlantic's most reliable whale-feeding grounds.",
+    "itineraryStops": [
+      "Long Wharf",
+      "Boston Harbor",
+      "Stellwagen Bank National Marine Sanctuary"
+    ],
+    "categories": [
+      "Cruises & Sailing",
+      "Wildlife Tours",
+      "Day Cruises"
+    ]
+  },
+  {
+    "productCode": "3283SSCRUISE",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Historic-Sightseeing-Cruise/d678-3283SSCRUISE",
+    "title": "Boston Historic Sightseeing Cruise",
+    "priceFrom": "From $46.00",
+    "rating": 4.5,
+    "reviewCount": 1138,
+    "duration": "1 hour (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/94/3a/b2.jpg",
+    "overview": "See Revolutionary Boston from the water on a narrated historic sightseeing cruise through Boston Harbor and the Inner Harbor islands.",
+    "itineraryStops": [
+      "Long Wharf",
+      "USS Constitution",
+      "Bunker Hill Monument",
+      "Boston Light",
+      "Old North Church",
+      "Castle Island"
+    ],
+    "categories": [
+      "Cruises & Sailing",
+      "Sightseeing Tours",
+      "Historical Tours"
+    ]
+  },
+  {
+    "productCode": "44921P7",
+    "productUrl": "https://www.viator.com/tours/Boston/Sunset-Cruise/d678-44921P7",
+    "title": "Boston Sunset Harbor Cruise",
+    "priceFrom": "From $29.00",
+    "rating": 4.2,
+    "reviewCount": 474,
+    "duration": "1 hour 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/94/34/73.jpg",
+    "overview": "Watch the Boston skyline turn gold on a narrated sunset harbor cruise departing from Long Wharf.",
+    "itineraryStops": [
+      "Long Wharf",
+      "Boston Harbor",
+      "Charlestown Navy Yard",
+      "Seaport District"
+    ],
+    "categories": [
+      "Cruises & Sailing",
+      "Sunset Tours",
+      "Sightseeing Tours"
+    ]
+  },
+  {
+    "productCode": "3037DUCK",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Duck-Tour/d678-3037DUCK",
+    "title": "Boston Duck Tour",
+    "priceFrom": "From $60.00",
+    "rating": 4.6,
+    "reviewCount": 9103,
+    "duration": "1 hour 20 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/3c/d2/5f.jpg",
+    "overview": "See Revolutionary Boston from land and water aboard an amphibious WWII-style Duck vehicle.",
+    "itineraryStops": [
+      "Boston Common",
+      "Massachusetts State House",
+      "Faneuil Hall",
+      "Charles River",
+      "Esplanade"
+    ],
+    "categories": [
+      "Bus Tours",
+      "Sightseeing Tours",
+      "Family Friendly"
+    ]
+  },
+  {
+    "productCode": "66111P3",
+    "productUrl": "https://www.viator.com/tours/Boston/Explore-Revolutionary-Boston-Freedom-Trail-History-Tour/d678-66111P3",
+    "title": "Explore Revolutionary Boston Freedom Trail History Tour",
+    "priceFrom": "From $39.00",
+    "rating": 4.9,
+    "reviewCount": 4634,
+    "duration": "2 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/0a/2f/3b/caption.jpg",
+    "overview": "Walk the Freedom Trail with a historian guide who brings Revolutionary Boston to life at each granite marker.",
+    "itineraryStops": [
+      "Boston Common",
+      "Massachusetts State House",
+      "Granary Burying Ground",
+      "Faneuil Hall",
+      "Paul Revere House",
+      "Old North Church"
+    ],
+    "categories": [
+      "Walking Tours",
+      "Historical Tours",
+      "Small Group Tours"
+    ]
+  },
+  {
+    "productCode": "26797P4",
+    "productUrl": "https://www.viator.com/tours/Boston/The-Tour-of-The-Freedom-Trail/d678-26797P4",
+    "title": "The Tour of The Freedom Trail",
+    "priceFrom": "From $25.00",
+    "rating": 4.6,
+    "reviewCount": 2145,
+    "duration": "1 hour 45 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/6e/6c/d4.jpg",
+    "overview": "Follow the red brick line through downtown Boston on a guided Freedom Trail walk covering the city's most storied Revolutionary sites.",
+    "itineraryStops": [
+      "Boston Common",
+      "Old South Meeting House",
+      "Faneuil Hall",
+      "Paul Revere House",
+      "Old North Church"
+    ],
+    "categories": [
+      "Walking Tours",
+      "Historical Tours"
+    ]
+  },
+  {
+    "productCode": "8843P7",
+    "productUrl": "https://www.viator.com/tours/Boston/Tour-of-the-Freedom-Trail/d678-8843P7",
+    "title": "Tour of the Freedom Trail",
+    "priceFrom": "From $45.00",
+    "rating": 4.8,
+    "reviewCount": 1876,
+    "duration": "2 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/90/ca/37.jpg",
+    "overview": "Experience the Freedom Trail with a premium small-group guide who paces the route for deeper stops at Boston's Revolutionary landmarks.",
+    "itineraryStops": [
+      "Boston Common",
+      "King's Chapel",
+      "Granary Burying Ground",
+      "Old State House",
+      "Faneuil Hall",
+      "Old North Church"
+    ],
+    "categories": [
+      "Walking Tours",
+      "Historical Tours",
+      "Small Group Tours"
+    ]
+  },
+  {
+    "productCode": "70284P1",
+    "productUrl": "https://www.viator.com/tours/Boston/The-Revolutionary-Story-Tour-An-Epic-Walking-Tour-of-Boston/d678-70284P1",
+    "title": "The Full Revolutionary Story Epic Small-Group Boston Walking Tour",
+    "priceFrom": "From $59.00",
+    "rating": 5,
+    "reviewCount": 204,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7d/a2/84.jpg",
+    "overview": "Combine the Freedom Trail with an immersive North End neighborhood walk on a premium small-group outing.",
+    "itineraryStops": [
+      "Boston Common",
+      "Faneuil Hall",
+      "Paul Revere House",
+      "Old North Church",
+      "Copp's Hill Burying Ground",
+      "Hanover Street"
+    ],
+    "categories": [
+      "Walking Tours",
+      "Historical Tours",
+      "Neighborhood Tours"
+    ]
+  },
+  {
+    "productCode": "5046BOS_OTT",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Hop-on-Hop-off-Trolley-Tour/d678-5046BOS_OTT",
+    "title": "Boston Hop-on Hop-off Trolley Tour",
+    "priceFrom": "From $52.00",
+    "rating": 4.3,
+    "reviewCount": 5113,
+    "duration": "2 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/59/cf/3e.jpg",
+    "overview": "Explore Boston at your own pace aboard a hop-on hop-off trolley with live narration and 14 stops across the city.",
+    "itineraryStops": [
+      "Faneuil Hall",
+      "USS Constitution",
+      "New England Aquarium",
+      "Copley Square",
+      "Fenway Park"
+    ],
+    "categories": [
+      "Hop-on Hop-off Tours",
+      "Sightseeing Tours",
+      "Bus Tours"
+    ]
+  },
+  {
+    "productCode": "7812P131",
+    "productUrl": "https://www.viator.com/tours/Boston/Private-Tour-Secret-Food-Tours-Boston-North-End/d678-7812P131",
+    "title": "Private Tour Secret Food Tours Boston North End",
+    "priceFrom": "From $275.00",
+    "rating": 5,
+    "reviewCount": 52,
+    "duration": "3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/59/d0/df.jpg",
+    "overview": "Taste the North End on a private food tour built exclusively for your party.",
+    "itineraryStops": [
+      "Hanover Street",
+      "Paul Revere House",
+      "Old North Church",
+      "North End Market",
+      "Copp's Hill Burying Ground"
+    ],
+    "categories": [
+      "Private Tours",
+      "Food Tours",
+      "Walking Tours"
+    ]
+  },
+  {
+    "productCode": "7812P18",
+    "productUrl": "https://www.viator.com/tours/Boston/Small-group-Guided-Walking-Food-Tour-in-Boston/d678-7812P18",
+    "title": "Boston North End Food Tour with Authentic Local Flavors & Dishes",
+    "priceFrom": "From $74.99",
+    "rating": 4.9,
+    "reviewCount": 1200,
+    "duration": "2 to 3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/89/5f/5e.jpg",
+    "overview": "Sample Boston's best bites on a premium small-group food walk from Quincy Market through the North End.",
+    "itineraryStops": [
+      "Quincy Market",
+      "Faneuil Hall",
+      "Hanover Street",
+      "Paul Revere House",
+      "Old North Church"
+    ],
+    "categories": [
+      "Food Tours",
+      "Walking Tours",
+      "Small Group Tours"
+    ]
+  },
+  {
+    "productCode": "400049P3",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Food-and-History-Private-Tour/d678-400049P3",
+    "title": "Boston Food and History Private Tour",
+    "priceFrom": "From $395.00",
+    "rating": 5,
+    "reviewCount": 41,
+    "duration": "4 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7d/7a/ff.jpg",
+    "overview": "Combine Revolutionary history with curated food tastings on a private Boston walk tailored to your group.",
+    "itineraryStops": [
+      "Faneuil Hall",
+      "Quincy Market",
+      "Paul Revere House",
+      "Old North Church",
+      "Hanover Street"
+    ],
+    "categories": [
+      "Private Tours",
+      "Food Tours",
+      "Historical Tours"
+    ]
+  },
+  {
+    "productCode": "343490P3",
+    "productUrl": "https://www.viator.com/tours/Boston/PRIVATE-GROUP-Authentic-Revolutionary-Boston-walking-Tour/d678-343490P3",
+    "title": "Private Revolutionary History Boston Walking Tour",
+    "priceFrom": "From $75.00",
+    "rating": 4.9,
+    "reviewCount": 86,
+    "duration": "2 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/0b/f0/cd.jpg",
+    "overview": "Escape Boston for a private half-day excursion to Salem's witch trial history and Marblehead's coastal charm.",
+    "itineraryStops": [
+      "Salem Witch Museum",
+      "Salem Maritime National Historic Site",
+      "House of the Seven Gables",
+      "Marblehead Harbor"
+    ],
+    "categories": [
+      "Private Tours",
+      "Day Trips",
+      "Historical Tours"
+    ]
+  },
+  {
+    "productCode": "400049P5",
+    "productUrl": "https://www.viator.com/tours/Boston/Private-Day-Trip-to-Lexington-and-Concord-from-Boston/d678-400049P5",
+    "title": "Private Day Trip to Lexington and Concord from Boston",
+    "priceFrom": "From $493.00",
+    "rating": 5,
+    "reviewCount": 67,
+    "duration": "8 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4c/65/1e.jpg",
+    "overview": "Trace the opening shots of the American Revolution on a private day trip from Boston to Lexington and Concord.",
+    "itineraryStops": [
+      "Lexington Battle Green",
+      "Minute Man National Historical Park",
+      "Old North Bridge",
+      "Concord Museum",
+      "Sleepy Hollow Cemetery"
+    ],
+    "categories": [
+      "Private Tours",
+      "Day Trips",
+      "Historical Tours"
+    ]
+  },
+  {
+    "productCode": "3978TOUR2",
+    "productUrl": "https://www.viator.com/tours/Boston/American-History-Tour-Cambridge-Lexington-and-Concord-Day-Trip-from-Boston/d678-3978TOUR2",
+    "title": "American History Bus Tour: Boston to Cambridge, Concord, and Lexington",
+    "priceFrom": "From $89.00",
+    "rating": 4.7,
+    "reviewCount": 612,
+    "duration": "5 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/5b/b5/7d.jpg",
+    "overview": "Follow the path of the American Revolution on a premium day tour from Boston to Lexington and Concord.",
+    "itineraryStops": [
+      "Lexington Battle Green",
+      "Minute Man National Historical Park",
+      "Old North Bridge",
+      "Concord Museum"
+    ],
+    "categories": [
+      "Day Trips",
+      "Historical Tours",
+      "Small Group Tours"
+    ]
+  },
+  {
+    "productCode": "5046BOS_GG",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Ghosts-and-Gravestones-Tour/d678-5046BOS_GG",
+    "title": "Boston Ghosts and Gravestones Trolley Tour",
+    "priceFrom": "From $47.25",
+    "rating": 4.5,
+    "reviewCount": 2524,
+    "duration": "2 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/59/3a/a5.jpg",
+    "overview": "Explore Boston's haunted history on a Ghosts and Gravestones trolley tour led by costumed grave-digger guides.",
+    "itineraryStops": [
+      "Long Wharf",
+      "Granary Burying Ground",
+      "Copp's Hill Burying Ground",
+      "North End",
+      "Boston Tea Party Ships & Museum"
+    ],
+    "categories": [
+      "Ghost Tours",
+      "Historical Tours",
+      "Night Tours"
+    ]
+  },
+  {
+    "productCode": "3283CODZILLA",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Codzilla-Thrill-Boat-Ride/d678-3283CODZILLA",
+    "title": "City Cruises Boston Codzilla High-Speed Thrill Boat Ride",
+    "priceFrom": "From $56.01",
+    "rating": 4,
+    "reviewCount": 425,
+    "duration": "45 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/68/d7/8a.jpg",
+    "overview": "Hold on for a high-speed thrill ride aboard Codzilla, Boston Harbor's 40-mph jet boat.",
+    "itineraryStops": [
+      "Long Wharf",
+      "Boston Harbor",
+      "USS Constitution"
+    ],
+    "categories": [
+      "Boat Tours",
+      "Active Tours",
+      "Water Tours"
+    ]
+  },
+  {
+    "productCode": "7167P80",
+    "productUrl": "https://www.viator.com/tours/Salem/Salem-Witch-Trials-from-Past-to-Present-Day-Tour-from-Boston/d22414-7167P80",
+    "title": "Boston to Salem \"Witch City\" Day Trip with Round-Trip Transportation",
+    "priceFrom": "From $129.00",
+    "rating": 4.6,
+    "reviewCount": 342,
+    "duration": "8 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/af/ef/47.jpg",
+    "overview": "Discover Salem's witch trial legacy on a guided day trip from Boston with round-trip motorcoach transportation.",
+    "itineraryStops": [
+      "Salem Witch Trials Tour from Boston by Ferry with Small Group",
+      "Salem Witch Trials Memorial",
+      "House of the Seven Gables",
+      "Pickering Wharf",
+      "Salem Old Town Hall"
+    ],
+    "categories": [
+      "Day Trips",
+      "Historical Tours",
+      "Small Group Tours"
+    ]
+  },
+  {
+    "productCode": "5042BOSDIN",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Dinner-Cruise/d678-5042BOSDIN",
+    "title": "City Cruises Boston Premier Dinner Cruise on Odyssey",
+    "priceFrom": "From $132.89",
+    "rating": 3.5,
+    "reviewCount": 181,
+    "duration": "2 to 3 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/c0/a1/08.jpg",
+    "overview": "Dine aboard the Odyssey on a Boston Harbor premier dinner cruise with skyline views and live DJ entertainment.",
+    "itineraryStops": [
+      "Rowes Wharf",
+      "Boston Light",
+      "Charlestown Navy Yard",
+      "Castle Island",
+      "Leonard P. Zakim Bunker Hill Bridge"
+    ],
+    "categories": [
+      "Cruises & Sailing",
+      "Dinner Cruises",
+      "Night Tours"
+    ]
+  },
+  {
+    "productCode": "5151BOSCY014",
+    "productUrl": "https://www.viator.com/tours/Boston/Guided-Bike-Tour-of-Boston/d678-5151BOSCY014",
+    "title": "Boston City View Bicycle Tour: History and Landmarks",
+    "priceFrom": "From $78.00",
+    "rating": 5,
+    "reviewCount": 645,
+    "duration": "2 hours 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/2d/e2/41.jpg",
+    "overview": "Cycle Boston's landmarks from Boston Common on a guided city-view bike tour through six neighborhoods to the North End and Back Bay.",
+    "itineraryStops": [
+      "Boston Common",
+      "Freedom Trail",
+      "North End",
+      "Beacon Hill",
+      "Charles River Esplanade",
+      "Fenway Park",
+      "Copley Square"
+    ],
+    "categories": [
+      "Bike Tours",
+      "Sightseeing Tours",
+      "Active Tours"
+    ]
+  },
+  {
+    "productCode": "66192P8",
+    "productUrl": "https://www.viator.com/tours/Boston/Day-Trip-from-Boston-To-Salem-Witch-Exhibits/d678-66192P8",
+    "title": "Day Trip from Boston To Salem Witch Exhibits",
+    "priceFrom": "From $190.00",
+    "rating": 4.5,
+    "reviewCount": 81,
+    "duration": "8 to 9 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/6f/dc/17.jpg",
+    "overview": "Visit Salem's witch museums and waterfront on a small-group day trip from Boston with hotel pickup and museum admissions included.",
+    "itineraryStops": [
+      "Boston",
+      "Salem Witch Museum",
+      "House of the Seven Gables",
+      "Salem Trolley",
+      "Pickering Wharf",
+      "Essex Street Pedestrian Mall"
+    ],
+    "categories": [
+      "Day Trips",
+      "Historical Tours",
+      "Small Group Tours"
+    ]
+  },
+  {
+    "productCode": "255730P225",
+    "productUrl": "https://www.viator.com/tours/Boston/New-England-Coast-Private-Day-Trip-from-Boston/d678-255730P225",
+    "title": "Boston Private Day Trip with Salem & Cape Ann's North Shore",
+    "priceFrom": "From $615.00",
+    "rating": 5,
+    "reviewCount": 4,
+    "duration": "6 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/0c/3d/29.jpg",
+    "overview": "Explore Salem and Cape Ann on a private day trip from Boston tailored to your party.",
+    "itineraryStops": [
+      "Salem",
+      "Cape Ann",
+      "Gloucester Harbor"
+    ],
+    "categories": [
+      "Private Tours",
+      "Day Trips",
+      "Sightseeing Tours"
+    ]
+  }
+]

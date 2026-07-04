@@ -93,6 +93,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Boston",
+      matches: tour =>
+        /\/massachusetts\/boston\//i.test(tour.canonicalPath) ||
+        (/\bboston\b/i.test(tour.city) && /\bmassachusetts\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Napa editorial narrative",
       matches: tour =>
         /\/napa\//i.test(tour.canonicalPath) || /\bnapa\b/i.test(tour.city),

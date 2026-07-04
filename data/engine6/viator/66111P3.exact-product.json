@@ -1,0 +1,125 @@
+{
+  "product": {
+    "productCode": "66111P3",
+    "productUrl": "https://www.viator.com/tours/Boston/Explore-Revolutionary-Boston-Freedom-Trail-History-Tour/d678-66111P3",
+    "title": "Explore Revolutionary Boston Freedom Trail History Tour",
+    "description": {
+      "text": "Walk the Freedom Trail with a historian guide who brings Revolutionary Boston to life at each granite marker. The premium small-group format covers Boston Common, Granary Burying Ground, Faneuil Hall, Paul Revere House, and Old North Church with time for questions at every major stop. Your guide connects Sam Adams, Paul Revere, and the Boston Massacre to the sites where events unfolded. This 2.5-hour outing suits travelers who want depth beyond a self-guided red-line walk."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $39.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 4634
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/0a/2f/3b/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Premium small-group Freedom Trail walking tour",
+      "Granary Burying Ground and Paul Revere House stops",
+      "Faneuil Hall and Old North Church commentary",
+      "Historian guide with Revolutionary War context",
+      "2.5-hour format covering 11 landmark sites"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at Boston Common Visitor Center on Tremont Street. Arrive 10 minutes early."
+      },
+      "end": {
+        "description": "Tour concludes near Old North Church in the North End after the final Freedom Trail stops."
+      }
+    },
+    "itinerarySummary": "Walk the Freedom Trail with a historian guide who brings Revolutionary Boston to life at each granite marker.",
+    "itineraryItems": [
+      {
+        "title": "Boston Common",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Massachusetts State House",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Granary Burying Ground",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Faneuil Hall",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Paul Revere House",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old North Church",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional historian guide",
+      "Small-group Freedom Trail walking tour",
+      "Granary Burying Ground admission context"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Explore Revolutionary Boston Freedom Trail History Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Meet your guide at Boston Common Visitor Center on Tremont Street. Arrive 10 minutes early."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Small Group Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 39
+      },
+      "currency": "USD"
+    }
+  }
+}

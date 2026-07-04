@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "255730P225",
+    "productUrl": "https://www.viator.com/tours/Boston/New-England-Coast-Private-Day-Trip-from-Boston/d678-255730P225",
+    "title": "Boston Private Day Trip with Salem & Cape Ann's North Shore",
+    "description": {
+      "text": "Explore Salem and Cape Ann on a private day trip from Boston tailored to your party. Your English-speaking guide drives the North Shore loop with three hours in Salem and three hours on Cape Ann, including photo stops at Gloucester harbors and Rockport lanes. Hotel pickup and private transportation keep the six-hour itinerary flexible for your interests, whether that means extended time at Salem Maritime National Historic Site or Cape Ann art galleries. Ideal for travelers who want a premium private North Shore introduction without a rental car."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $615.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 4
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/0c/3d/29.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private day trip for your party only",
+      "Salem and Cape Ann North Shore routing",
+      "Hotel pickup and drop-off included",
+      "Flexible photo stops at Gloucester and Rockport",
+      "Professional English-speaking private guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at your Boston hotel lobby or Flour Bakery on Farnsworth Street if hotel pickup is unavailable."
+      },
+      "end": {
+        "description": "Return to your hotel or central Boston after the Cape Ann coastal loop."
+      }
+    },
+    "itinerarySummary": "Explore Salem and Cape Ann on a private day trip from Boston tailored to your party.",
+    "itineraryItems": [
+      {
+        "title": "Salem",
+        "description": "",
+        "duration": "3 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cape Ann",
+        "description": "",
+        "duration": "3 hours",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gloucester Harbor",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private professional guide",
+      "Private air-conditioned vehicle",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Boston Private Day Trip with Salem & Cape Ann's North Shore?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Meet your guide at your Boston hotel lobby or Flour Bakery on Farnsworth Street if hotel pickup is unavailable."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 615
+      },
+      "currency": "USD"
+    }
+  }
+}

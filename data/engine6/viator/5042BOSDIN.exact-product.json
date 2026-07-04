@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "5042BOSDIN",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Dinner-Cruise/d678-5042BOSDIN",
+    "title": "City Cruises Boston Premier Dinner Cruise on Odyssey",
+    "description": {
+      "text": "Dine aboard the Odyssey on a Boston Harbor premier dinner cruise with skyline views and live DJ entertainment. The plated multi-course dinner unfolds as you pass Boston Light, Castle Island, Charlestown Navy Yard, and the Leonard P. Zakim Bridge from climate-controlled decks. Board at Rowes Wharf Gate B for a two- to three-hour evening suited to date nights and special occasions. Ideal for visitors who want a seated harbor dinner without navigating downtown restaurant reservations."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $132.89",
+    "reviews": {
+      "combinedAverageRating": 3.5,
+      "totalReviews": 181
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/c0/a1/08.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Boston Harbor premier dinner cruise on Odyssey",
+      "Plated multi-course dinner with live DJ",
+      "Boston Light and Castle Island pass-by views",
+      "Climate-controlled decks year-round",
+      "Evening departure from Rowes Wharf"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board at Rowes Wharf Gate B. Arrive 45 minutes early for check-in and seating."
+      },
+      "end": {
+        "description": "Disembark at Rowes Wharf after the harbor dinner loop."
+      }
+    },
+    "itinerarySummary": "Dine aboard the Odyssey on a Boston Harbor premier dinner cruise with skyline views and live DJ entertainment.",
+    "itineraryItems": [
+      {
+        "title": "Rowes Wharf",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boston Light",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Charlestown Navy Yard",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Castle Island",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Leonard P. Zakim Bunker Hill Bridge",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Plated dinner",
+      "Boston Harbor dinner cruise",
+      "Onboard DJ entertainment"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the City Cruises Boston Premier Dinner Cruise on Odyssey?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Board at Rowes Wharf Gate B. Arrive 45 minutes early for check-in and seating."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cruises & Sailing"
+      },
+      {
+        "label": "Dinner Cruises"
+      },
+      {
+        "label": "Night Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 132.89
+      },
+      "currency": "USD"
+    }
+  }
+}

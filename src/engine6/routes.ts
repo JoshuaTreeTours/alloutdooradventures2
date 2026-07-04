@@ -1184,6 +1184,79 @@ export const ENGINE6_CHICAGO_TOUR_PATH_PREFIX =
 export const isEngine6ChicagoTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_CHICAGO_TOUR_PATH_PREFIX);
 
+export const ENGINE6_BOSTON_3283BWW_PRODUCT_CODE = "3283BWW";
+export const ENGINE6_BOSTON_3283BWW_ROUTE =
+  "/destinations/massachusetts/boston/tours/boston-whale-watching-cruise-3283BWW";
+export const ENGINE6_BOSTON_3283SSCRUISE_PRODUCT_CODE = "3283SSCRUISE";
+export const ENGINE6_BOSTON_3283SSCRUISE_ROUTE =
+  "/destinations/massachusetts/boston/tours/boston-historic-sightseeing-cruise-3283SSCRUISE";
+export const ENGINE6_BOSTON_44921P7_PRODUCT_CODE = "44921P7";
+export const ENGINE6_BOSTON_44921P7_ROUTE =
+  "/destinations/massachusetts/boston/tours/boston-sunset-harbor-cruise-44921P7";
+export const ENGINE6_BOSTON_3037DUCK_PRODUCT_CODE = "3037DUCK";
+export const ENGINE6_BOSTON_3037DUCK_ROUTE =
+  "/destinations/massachusetts/boston/tours/boston-duck-tour-3037DUCK";
+export const ENGINE6_BOSTON_66111P3_PRODUCT_CODE = "66111P3";
+export const ENGINE6_BOSTON_66111P3_ROUTE =
+  "/destinations/massachusetts/boston/tours/explore-revolutionary-boston-freedom-trail-history-tour-66111P3";
+export const ENGINE6_BOSTON_26797P4_PRODUCT_CODE = "26797P4";
+export const ENGINE6_BOSTON_26797P4_ROUTE =
+  "/destinations/massachusetts/boston/tours/the-tour-of-the-freedom-trail-26797P4";
+export const ENGINE6_BOSTON_8843P7_PRODUCT_CODE = "8843P7";
+export const ENGINE6_BOSTON_8843P7_ROUTE =
+  "/destinations/massachusetts/boston/tours/tour-of-the-freedom-trail-8843P7";
+export const ENGINE6_BOSTON_70284P1_PRODUCT_CODE = "70284P1";
+export const ENGINE6_BOSTON_70284P1_ROUTE =
+  "/destinations/massachusetts/boston/tours/the-full-revolutionary-story-epic-small-group-boston-walking-tour-70284P1";
+export const ENGINE6_BOSTON_5046BOS_OTT_PRODUCT_CODE = "5046BOS_OTT";
+export const ENGINE6_BOSTON_5046BOS_OTT_ROUTE =
+  "/destinations/massachusetts/boston/tours/boston-hop-on-hop-off-trolley-tour-5046BOS_OTT";
+export const ENGINE6_BOSTON_7812P131_PRODUCT_CODE = "7812P131";
+export const ENGINE6_BOSTON_7812P131_ROUTE =
+  "/destinations/massachusetts/boston/tours/private-tour-secret-food-tours-boston-north-end-7812P131";
+export const ENGINE6_BOSTON_7812P18_PRODUCT_CODE = "7812P18";
+export const ENGINE6_BOSTON_7812P18_ROUTE =
+  "/destinations/massachusetts/boston/tours/boston-north-end-food-tour-with-authentic-local-flavors-dishes-7812P18";
+export const ENGINE6_BOSTON_400049P3_PRODUCT_CODE = "400049P3";
+export const ENGINE6_BOSTON_400049P3_ROUTE =
+  "/destinations/massachusetts/boston/tours/boston-food-and-history-private-tour-400049P3";
+export const ENGINE6_BOSTON_343490P3_PRODUCT_CODE = "343490P3";
+export const ENGINE6_BOSTON_343490P3_ROUTE =
+  "/destinations/massachusetts/boston/tours/private-revolutionary-history-boston-walking-tour-343490P3";
+export const ENGINE6_BOSTON_400049P5_PRODUCT_CODE = "400049P5";
+export const ENGINE6_BOSTON_400049P5_ROUTE =
+  "/destinations/massachusetts/boston/tours/private-day-trip-to-lexington-and-concord-from-boston-400049P5";
+export const ENGINE6_BOSTON_3978TOUR2_PRODUCT_CODE = "3978TOUR2";
+export const ENGINE6_BOSTON_3978TOUR2_ROUTE =
+  "/destinations/massachusetts/boston/tours/american-history-bus-tour-boston-to-cambridge-concord-and-lexington-3978TOUR2";
+export const ENGINE6_BOSTON_5046BOS_GG_PRODUCT_CODE = "5046BOS_GG";
+export const ENGINE6_BOSTON_5046BOS_GG_ROUTE =
+  "/destinations/massachusetts/boston/tours/boston-ghosts-and-gravestones-trolley-tour-5046BOS_GG";
+export const ENGINE6_BOSTON_3283CODZILLA_PRODUCT_CODE = "3283CODZILLA";
+export const ENGINE6_BOSTON_3283CODZILLA_ROUTE =
+  "/destinations/massachusetts/boston/tours/city-cruises-boston-codzilla-high-speed-thrill-boat-rid-3283CODZILLA";
+export const ENGINE6_BOSTON_7167P80_PRODUCT_CODE = "7167P80";
+export const ENGINE6_BOSTON_7167P80_ROUTE =
+  "/destinations/massachusetts/boston/tours/salem-witch-trials-tour-from-boston-by-ferry-with-small-group-7167P80";
+export const ENGINE6_BOSTON_5042BOSDIN_PRODUCT_CODE = "5042BOSDIN";
+export const ENGINE6_BOSTON_5042BOSDIN_ROUTE =
+  "/destinations/massachusetts/boston/tours/city-cruises-boston-premier-dinner-cruise-on-odyssey-5042BOSDIN";
+export const ENGINE6_BOSTON_5151BOSCY014_PRODUCT_CODE = "5151BOSCY014";
+export const ENGINE6_BOSTON_5151BOSCY014_ROUTE =
+  "/destinations/massachusetts/boston/tours/boston-city-view-bicycle-tour-history-and-landmarks-5151BOSCY014";
+export const ENGINE6_BOSTON_66192P8_PRODUCT_CODE = "66192P8";
+export const ENGINE6_BOSTON_66192P8_ROUTE =
+  "/destinations/massachusetts/boston/tours/day-trip-from-boston-to-salem-witch-exhibits-66192P8";
+export const ENGINE6_BOSTON_255730P225_PRODUCT_CODE = "255730P225";
+export const ENGINE6_BOSTON_255730P225_ROUTE =
+  "/destinations/massachusetts/boston/tours/boston-private-day-trip-with-salem-cape-anns-north-shor-255730P225";
+
+export const ENGINE6_BOSTON_TOUR_PATH_PREFIX =
+  "/destinations/massachusetts/boston/tours/";
+
+export const isEngine6BostonTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_BOSTON_TOUR_PATH_PREFIX);
+
 export const ENGINE6_GSM_THUNDERING_STREAMS_PRODUCT_CODE = "26480P10";
 export const ENGINE6_GSM_THUNDERING_STREAMS_ROUTE =
   "/destinations/tennessee/great-smoky-mountains-national-park/tours/thundering-streams-falls-guided-hike-26480P10";
@@ -2362,6 +2435,28 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [ENGINE6_CHICAGO_191307P3_ROUTE, ENGINE6_CHICAGO_191307P3_PRODUCT_CODE],
   [ENGINE6_CHICAGO_338277P2_ROUTE, ENGINE6_CHICAGO_338277P2_PRODUCT_CODE],
   [ENGINE6_CHICAGO_7812P19_ROUTE, ENGINE6_CHICAGO_7812P19_PRODUCT_CODE],
+  [ENGINE6_BOSTON_3283BWW_ROUTE, ENGINE6_BOSTON_3283BWW_PRODUCT_CODE],
+  [ENGINE6_BOSTON_3283SSCRUISE_ROUTE, ENGINE6_BOSTON_3283SSCRUISE_PRODUCT_CODE],
+  [ENGINE6_BOSTON_44921P7_ROUTE, ENGINE6_BOSTON_44921P7_PRODUCT_CODE],
+  [ENGINE6_BOSTON_3037DUCK_ROUTE, ENGINE6_BOSTON_3037DUCK_PRODUCT_CODE],
+  [ENGINE6_BOSTON_66111P3_ROUTE, ENGINE6_BOSTON_66111P3_PRODUCT_CODE],
+  [ENGINE6_BOSTON_26797P4_ROUTE, ENGINE6_BOSTON_26797P4_PRODUCT_CODE],
+  [ENGINE6_BOSTON_8843P7_ROUTE, ENGINE6_BOSTON_8843P7_PRODUCT_CODE],
+  [ENGINE6_BOSTON_70284P1_ROUTE, ENGINE6_BOSTON_70284P1_PRODUCT_CODE],
+  [ENGINE6_BOSTON_5046BOS_OTT_ROUTE, ENGINE6_BOSTON_5046BOS_OTT_PRODUCT_CODE],
+  [ENGINE6_BOSTON_7812P131_ROUTE, ENGINE6_BOSTON_7812P131_PRODUCT_CODE],
+  [ENGINE6_BOSTON_7812P18_ROUTE, ENGINE6_BOSTON_7812P18_PRODUCT_CODE],
+  [ENGINE6_BOSTON_400049P3_ROUTE, ENGINE6_BOSTON_400049P3_PRODUCT_CODE],
+  [ENGINE6_BOSTON_343490P3_ROUTE, ENGINE6_BOSTON_343490P3_PRODUCT_CODE],
+  [ENGINE6_BOSTON_400049P5_ROUTE, ENGINE6_BOSTON_400049P5_PRODUCT_CODE],
+  [ENGINE6_BOSTON_3978TOUR2_ROUTE, ENGINE6_BOSTON_3978TOUR2_PRODUCT_CODE],
+  [ENGINE6_BOSTON_5046BOS_GG_ROUTE, ENGINE6_BOSTON_5046BOS_GG_PRODUCT_CODE],
+  [ENGINE6_BOSTON_3283CODZILLA_ROUTE, ENGINE6_BOSTON_3283CODZILLA_PRODUCT_CODE],
+  [ENGINE6_BOSTON_7167P80_ROUTE, ENGINE6_BOSTON_7167P80_PRODUCT_CODE],
+  [ENGINE6_BOSTON_5042BOSDIN_ROUTE, ENGINE6_BOSTON_5042BOSDIN_PRODUCT_CODE],
+  [ENGINE6_BOSTON_5151BOSCY014_ROUTE, ENGINE6_BOSTON_5151BOSCY014_PRODUCT_CODE],
+  [ENGINE6_BOSTON_66192P8_ROUTE, ENGINE6_BOSTON_66192P8_PRODUCT_CODE],
+  [ENGINE6_BOSTON_255730P225_ROUTE, ENGINE6_BOSTON_255730P225_PRODUCT_CODE],
   [
     ENGINE6_GSM_THUNDERING_STREAMS_ROUTE,
     ENGINE6_GSM_THUNDERING_STREAMS_PRODUCT_CODE,

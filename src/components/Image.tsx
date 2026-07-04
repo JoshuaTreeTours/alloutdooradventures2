@@ -1,10 +1,10 @@
-import type {
-  ComponentPropsWithoutRef,
-  ReactEventHandler,
-  SyntheticEvent,
+import React, {
+  useEffect,
+  useState,
+  type ComponentPropsWithoutRef,
+  type ReactEventHandler,
+  type SyntheticEvent,
 } from "react";
-import { useEffect, useState } from "react";
-import { useLocation } from "wouter";
 
 const DEFAULT_FALLBACK = "";
 
@@ -21,7 +21,8 @@ export default function Image({
   decoding = "async",
   ...props
 }: ImageProps) {
-  const [location] = useLocation();
+  const routeLabel =
+    typeof window !== "undefined" ? window.location.pathname : "";
   const [currentSrc, setCurrentSrc] = useState(src);
   const isDebugEnabled =
     typeof window !== "undefined" &&
@@ -39,7 +40,7 @@ export default function Image({
   ) => {
     const target = event.currentTarget;
     const details = {
-      route: location,
+      route: routeLabel,
       src,
       currentSrc,
       resolvedCurrentSrc: target.currentSrc,
@@ -66,7 +67,7 @@ export default function Image({
       return;
     }
 
-    console.warn(`Image failed to load: ${currentSrc} (route: ${location})`);
+    console.warn(`Image failed to load: ${currentSrc} (route: ${routeLabel})`);
     setCurrentSrc(fallbackSrc);
     onError?.(event);
   };

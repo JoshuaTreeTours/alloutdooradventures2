@@ -312,6 +312,28 @@ import specimen3332dayPayload from "../../data/engine6/viator/3332DAY.exact-prod
 import specimen191307p3Payload from "../../data/engine6/viator/191307P3.exact-product.json";
 import specimen338277p2Payload from "../../data/engine6/viator/338277P2.exact-product.json";
 import specimen7812p19Payload from "../../data/engine6/viator/7812P19.exact-product.json";
+import specimen3283bwwPayload from "../../data/engine6/viator/3283BWW.exact-product.json";
+import specimen3283sscruisePayload from "../../data/engine6/viator/3283SSCRUISE.exact-product.json";
+import specimen44921p7Payload from "../../data/engine6/viator/44921P7.exact-product.json";
+import specimen3037duckPayload from "../../data/engine6/viator/3037DUCK.exact-product.json";
+import specimen66111p3Payload from "../../data/engine6/viator/66111P3.exact-product.json";
+import specimen26797p4Payload from "../../data/engine6/viator/26797P4.exact-product.json";
+import specimen8843p7Payload from "../../data/engine6/viator/8843P7.exact-product.json";
+import specimen70284p1Payload from "../../data/engine6/viator/70284P1.exact-product.json";
+import specimen5046bos_ottPayload from "../../data/engine6/viator/5046BOS_OTT.exact-product.json";
+import specimen7812p131Payload from "../../data/engine6/viator/7812P131.exact-product.json";
+import specimen7812p18Payload from "../../data/engine6/viator/7812P18.exact-product.json";
+import specimen400049p3Payload from "../../data/engine6/viator/400049P3.exact-product.json";
+import specimen343490p3Payload from "../../data/engine6/viator/343490P3.exact-product.json";
+import specimen400049p5Payload from "../../data/engine6/viator/400049P5.exact-product.json";
+import specimen3978tour2Payload from "../../data/engine6/viator/3978TOUR2.exact-product.json";
+import specimen5046bos_ggPayload from "../../data/engine6/viator/5046BOS_GG.exact-product.json";
+import specimen3283codzillaPayload from "../../data/engine6/viator/3283CODZILLA.exact-product.json";
+import specimen7167p80Payload from "../../data/engine6/viator/7167P80.exact-product.json";
+import specimen5042bosdinPayload from "../../data/engine6/viator/5042BOSDIN.exact-product.json";
+import specimen5151boscy014Payload from "../../data/engine6/viator/5151BOSCY014.exact-product.json";
+import specimen66192p8Payload from "../../data/engine6/viator/66192P8.exact-product.json";
+import specimen255730p225Payload from "../../data/engine6/viator/255730P225.exact-product.json";
 import specimen26480p10Payload from "../../data/engine6/viator/26480P10.exact-product.json";
 import specimen26480p2Payload from "../../data/engine6/viator/26480P2.exact-product.json";
 import specimen26480p11Payload from "../../data/engine6/viator/26480P11.exact-product.json";
@@ -3103,11 +3125,165 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl: "https://www.viator.com/tours/Chicago/Small-Group-Chicago-Loop-Food-Walking-Tour/d673-7812P19",
     rawPayload: specimen7812p19Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
-  },  {
+  },
+  {
     productCode: "5769MTVN",
     publicUrl:
       "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
     rawPayload: specimen5769mtvnPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3283BWW",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Boston-Whale-Watching-Cruise/d678-3283BWW",
+    rawPayload: specimen3283bwwPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3283SSCRUISE",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Boston-Historic-Sightseeing-Cruise/d678-3283SSCRUISE",
+    rawPayload: specimen3283sscruisePayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "44921P7",
+    publicUrl: "https://www.viator.com/tours/Boston/Sunset-Cruise/d678-44921P7",
+    rawPayload: specimen44921p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3037DUCK",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Boston-Duck-Tour/d678-3037DUCK",
+    rawPayload: specimen3037duckPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "66111P3",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Explore-Revolutionary-Boston-Freedom-Trail-History-Tour/d678-66111P3",
+    rawPayload: specimen66111p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "26797P4",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/The-Tour-of-The-Freedom-Trail/d678-26797P4",
+    rawPayload: specimen26797p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8843P7",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Tour-of-the-Freedom-Trail/d678-8843P7",
+    rawPayload: specimen8843p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "70284P1",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/The-Revolutionary-Story-Tour-An-Epic-Walking-Tour-of-Boston/d678-70284P1",
+    rawPayload: specimen70284p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5046BOS_OTT",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Boston-Hop-on-Hop-off-Trolley-Tour/d678-5046BOS_OTT",
+    rawPayload: specimen5046bos_ottPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7812P131",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Private-Tour-Secret-Food-Tours-Boston-North-End/d678-7812P131",
+    rawPayload: specimen7812p131Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7812P18",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Small-group-Guided-Walking-Food-Tour-in-Boston/d678-7812P18",
+    rawPayload: specimen7812p18Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "400049P3",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Boston-Food-and-History-Private-Tour/d678-400049P3",
+    rawPayload: specimen400049p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "343490P3",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/PRIVATE-GROUP-Authentic-Revolutionary-Boston-walking-Tour/d678-343490P3",
+    rawPayload: specimen343490p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "400049P5",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Private-Day-Trip-to-Lexington-and-Concord-from-Boston/d678-400049P5",
+    rawPayload: specimen400049p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3978TOUR2",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/American-History-Tour-Cambridge-Lexington-and-Concord-Day-Trip-from-Boston/d678-3978TOUR2",
+    rawPayload: specimen3978tour2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5046BOS_GG",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Boston-Ghosts-and-Gravestones-Tour/d678-5046BOS_GG",
+    rawPayload: specimen5046bos_ggPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3283CODZILLA",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Boston-Codzilla-Thrill-Boat-Ride/d678-3283CODZILLA",
+    rawPayload: specimen3283codzillaPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7167P80",
+    publicUrl:
+      "https://www.viator.com/tours/Salem/Salem-Witch-Trials-from-Past-to-Present-Day-Tour-from-Boston/d22414-7167P80",
+    rawPayload: specimen7167p80Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5042BOSDIN",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Boston-Dinner-Cruise/d678-5042BOSDIN",
+    rawPayload: specimen5042bosdinPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5151BOSCY014",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Guided-Bike-Tour-of-Boston/d678-5151BOSCY014",
+    rawPayload: specimen5151boscy014Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "66192P8",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/Day-Trip-from-Boston-To-Salem-Witch-Exhibits/d678-66192P8",
+    rawPayload: specimen66192p8Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "255730P225",
+    publicUrl:
+      "https://www.viator.com/tours/Boston/New-England-Coast-Private-Day-Trip-from-Boston/d678-255730P225",
+    rawPayload: specimen255730p225Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
 ];

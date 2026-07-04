@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "5046BOS_OTT",
+    "productUrl": "https://www.viator.com/tours/Boston/Boston-Hop-on-Hop-off-Trolley-Tour/d678-5046BOS_OTT",
+    "title": "Boston Hop-on Hop-off Trolley Tour",
+    "description": {
+      "text": "Explore Boston at your own pace aboard a hop-on hop-off trolley with live narration and 14 stops across the city. Ride past Faneuil Hall, USS Constitution, Fenway Park, and Harvard Square while hopping off at Freedom Trail landmarks, the New England Aquarium, and Copley Square. The two-hour full loop gives orientation; multi-day tickets let you revisit favorite neighborhoods. Ideal for first-time visitors who want flexible coverage without fixed walking routes."
+    },
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $52.00",
+    "reviews": {
+      "combinedAverageRating": 4.3,
+      "totalReviews": 5113
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/59/cf/3e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hop-on hop-off trolley with 14 Boston stops",
+      "Live narration past Faneuil Hall and USS Constitution",
+      "Freedom Trail and Fenway Park routing options",
+      "Flexible hop-off at New England Aquarium and Copley Square",
+      "Two-hour full loop for city orientation"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board at any designated trolley stop; first boarding is commonly at Long Wharf or Faneuil Hall."
+      },
+      "end": {
+        "description": "Disembark at any stop along the route; full loop returns to Long Wharf."
+      }
+    },
+    "itinerarySummary": "Explore Boston at your own pace aboard a hop-on hop-off trolley with live narration and 14 stops across the city.",
+    "itineraryItems": [
+      {
+        "title": "Faneuil Hall",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "USS Constitution",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "New England Aquarium",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Copley Square",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fenway Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Hop-on hop-off trolley pass",
+      "Live onboard narration",
+      "14 stops across Boston"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Boston Hop-on Hop-off Trolley Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boston?",
+        "answer": "Board at any designated trolley stop; first boarding is commonly at Long Wharf or Faneuil Hall."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hop-on Hop-off Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 52
+      },
+      "currency": "USD"
+    }
+  }
+}
