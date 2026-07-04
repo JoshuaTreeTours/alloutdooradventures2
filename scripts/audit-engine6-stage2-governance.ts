@@ -1,3 +1,4 @@
+import { execSync } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
@@ -76,6 +77,21 @@ if (shouldIncludeLiveViator()) {
 const merchantFeedCsvContent = readFileSync("data/merchantFeed.csv", "utf8");
 const sitemapTourXmlContent = readFileSync("public/sitemap-tours.xml", "utf8");
 
+const readBaselineFile = (filePath: string) => {
+  const baseRef = scopedResolution.baseRef;
+  if (!baseRef) {
+    return undefined;
+  }
+
+  try {
+    return execSync(`git show ${baseRef}:${filePath}`, {
+      encoding: "utf8",
+    });
+  } catch {
+    return undefined;
+  }
+};
+
 const report = await buildEngine6Stage2GovernanceAudit({
   tours: engine6ResolvedTours,
   merchantFeedCsvContent,
@@ -86,6 +102,9 @@ const report = await buildEngine6Stage2GovernanceAudit({
   scopedDestinationLabels: scopedResolution.scopedDestinationLabels,
   fullSiteValidation,
   liveViator,
+  changedFiles: scopedResolution.changedFiles,
+  baselineMerchantFeedCsv: readBaselineFile("data/merchantFeed.csv"),
+  baselineSitemapTourXmlContent: readBaselineFile("public/sitemap-tours.xml"),
 });
 
 const markdown = formatEngine6Stage2GovernanceAuditMarkdown(report);

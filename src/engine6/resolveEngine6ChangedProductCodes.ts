@@ -196,9 +196,9 @@ export const resolveEngine6ProductScopeFromChangedFiles = (args: {
     }
 
     for (const code of extractEngine6ProductCodesFromExactProductPath(file.path)) {
-      if (file.status === "A") {
+      deployScoped.add(code);
+      if (file.status === "A" || file.status === "M") {
         addedOrModified.add(code);
-        deployScoped.add(code);
       }
     }
 

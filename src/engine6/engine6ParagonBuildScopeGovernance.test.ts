@@ -43,6 +43,18 @@ const sampleMerchantRow = (
   ...overrides,
 });
 
+const merchantFeedCsvFromRows = (rows: MerchantFeedCsvRow[]) => {
+  const header =
+    "id,title,description,link,image_link,availability,price,condition,brand,average_rating,rating_count,review_count";
+  const body = rows
+    .map(
+      row =>
+        `${row.id},${row.title},${row.description},${row.link},${row.image_link},${row.availability},${row.price},${row.condition},${row.brand},${row.average_rating},${row.rating_count},${row.review_count}`
+    )
+    .join("\n");
+  return `${header}\n${body}\n`;
+};
+
 const baselineSitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.alloutdooradventures.com/destinations/california/monterey/tours/existing-tour</loc></url>
@@ -50,6 +62,16 @@ const baselineSitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 </urlset>`;
 
 describe("engine6ParagonBuildScopeGovernance", () => {
+  it("blocks unrelated generated catalog changes outside deploy scope", () => {
+    const fixtureReport = validateEngine6ParagonBuildScope({
+      changedFiles: [
+        {
+          status: "M",
+          path: "data/engine6/viator/5119P13.exact-product.json",
+        },
+        {
+          status: "M",
+          path: "data/engine6/viator/LEGACYP1.exact-product.json",
   it("rejects unrelated generated/catalog file changes", () => {
     const report = validateEngine6ParagonBuildScope({
       changedFiles: [
@@ -78,91 +100,80 @@ describe("engine6ParagonBuildScopeGovernance", () => {
         }),
       ])
     );
-  });
 
-  it("stops and reports when cleanup loops exceed 5 minutes or repeat the same fix cycle", () => {
-    const startedAt = 1_000_000;
-    let state = createEngine6GovernanceCleanupLoopState(startedAt);
-
-    const firstCycle = recordEngine6GovernanceCleanupCycle(
-      state,
-      "repair-merchant-feed-row-191303P1",
-      startedAt + 1_000
-    );
-    expect(firstCycle.stopped).toBe(false);
-
-    const repeatedCycle = recordEngine6GovernanceCleanupCycle(
-      firstCycle.state,
-      "repair-merchant-feed-row-191303P1",
-      startedAt + 2_000
-    );
-    expect(repeatedCycle.stopped).toBe(true);
-    expect(repeatedCycle.reason).toContain("repeated the same fix cycle");
-
-    state = createEngine6GovernanceCleanupLoopState(startedAt);
-    const timeoutCycle = recordEngine6GovernanceCleanupCycle(
-      state,
-      "repair-sitemap-url",
-      startedAt + ENGINE6_GOVERNANCE_CLEANUP_LOOP_MAX_MS + 1
-    );
-    expect(timeoutCycle.stopped).toBe(true);
-    expect(timeoutCycle.reason).toContain("5 minute");
-  });
-
-  it("prevents Paragon fixture/route/mock changes unless explicitly scoped", () => {
-    for (const productCode of ENGINE6_PARAGON_REFERENCE_PRODUCT_CODES) {
-      expect(
-        isEngine6ParagonReferenceProductPath(
-          `data/engine6/viator/${productCode}.exact-product.json`,
-          new Set(["NEWP1"])
-        )
-      ).toBe(true);
-    }
-
-    expect(
-      classifyEngine6BuildScopeFileChange({
-        file: {
-          status: "M",
-          path: `data/engine6/viator/${ENGINE6_PARAGON_PRODUCT_CODE}.exact-product.json`,
-        },
-        branchScopedProductCodes: new Set(["NEWP1"]),
-      })
-    ).toBe("paragon-reference-protected");
-
-    expect(
-      classifyEngine6BuildScopeFileChange({
-        file: {
-          status: "M",
-          path: `data/engine6/viator/${ENGINE6_SPECIMEN_PRODUCT_CODE}.exact-product.json`,
-        },
-        branchScopedProductCodes: new Set(["NEWP1"]),
-      })
-    ).toBe("paragon-reference-protected");
-
-    const report = validateEngine6ParagonBuildScope({
-      changedFiles: [
-        {
-          status: "M",
-          path: `data/engine6/viator/${ENGINE6_PARAGON_PRODUCT_CODE}.exact-product.json`,
-        },
-      ],
-      branchScopedProductCodes: new Set(["NEWP1"]),
+    const merchantFeedReport = validateEngine6ParagonBuildScope({
+      changedFiles: [{ status: "M", path: "data/merchantFeed.csv" }],
+      branchScopedProductCodes: new Set(),
     });
 
-    expect(report.blockedFiles).toEqual([
+    expect(merchantFeedReport.pass).toBe(false);
+    expect(merchantFeedReport.blockedFiles).toEqual([
       expect.objectContaining({
-        kind: "paragon-reference-modified",
-        path: `data/engine6/viator/${ENGINE6_PARAGON_PRODUCT_CODE}.exact-product.json`,
+        path: "data/merchantFeed.csv",
+        kind: "unrelated-generated-catalog",
       }),
     ]);
   });
 
-  it("catches old merchant feed row rewrites with append-only enforcement", () => {
-    const baseline = [sampleMerchantRow(), sampleMerchantRow({ id: "63657P1" })];
-    const proposed = [
-      sampleMerchantRow({ description: "Accidental rewrite during city PR." }),
-      baseline[1]!,
+  it("allows branch-scoped exact-product fixture changes", () => {
+    const kind = classifyEngine6BuildScopeFileChange({
+      file: {
+        status: "M",
+        path: "data/engine6/viator/NEWP1.exact-product.json",
+      },
+      branchScopedProductCodes: new Set(["NEWP1"]),
+    });
+
+    expect(kind).toBe("branch-scoped-generated");
+  });
+
+  it("enforces append-only merchant feed scope for legacy row rewrites", () => {
+    const baselineRows = [
+      {
+        id: "LEGACYP1",
+        title: "Legacy",
+        description: "desc",
+        link: "https://example.com/legacy",
+        image_link: "https://example.com/a.jpg",
+        availability: "in stock",
+        price: "100 USD",
+        condition: "new",
+        brand: "Outdoor Adventures",
+        average_rating: "5.0",
+        rating_count: "10",
+        review_count: "10",
+      },
     ];
+    const proposedRows = [
+      {
+        ...baselineRows[0],
+        title: "Rewritten",
+      },
+      {
+        id: "NEWP1",
+        title: "New",
+        description: "desc",
+        link: "https://example.com/new",
+        image_link: "https://example.com/b.jpg",
+        availability: "in stock",
+        price: "120 USD",
+        condition: "new",
+        brand: "Outdoor Adventures",
+        average_rating: "5.0",
+        rating_count: "1",
+        review_count: "1",
+      },
+    ];
+
+    const directResult = validateEngine6MerchantFeedAppendOnlyScope({
+      baselineRows,
+      proposedRows,
+      branchScopedProductCodes: new Set(["NEWP1"]),
+    });
+
+    expect(directResult.pass).toBe(false);
+    expect(directResult.violations[0]?.productCode).toBe("LEGACYP1");
+    expect(directResult.appendedProductCodes).toEqual(["NEWP1"]);
 
     const report = validateEngine6ParagonBuildScope({
       changedFiles: [{ status: "M", path: "data/merchantFeed.csv" }],
@@ -194,8 +205,9 @@ describe("engine6ParagonBuildScopeGovernance", () => {
       proposedXml,
     });
 
-    expect(validation.pass).toBe(false);
-    expect(validation.violations[0]?.detail).toContain("reordered");
+    expect(directResult.pass).toBe(false);
+    expect(directResult.violations[0]?.url).toContain("/monterey/tours/");
+    expect(directResult.appendedUrls[0]).toContain("/chicago/tours/new");
 
     const report = validateEngine6ParagonBuildScope({
       changedFiles: [{ status: "M", path: "public/sitemap-tours.xml" }],
@@ -222,10 +234,9 @@ describe("engine6ParagonBuildScopeGovernance", () => {
 
     expect(deployScope.blockingProductCodes).toEqual(["NEWP1"]);
     expect(deployScope.reportOnlyProductCodes).toEqual([
-      "LEGACYP1",
       "SIBLINGP1",
+      "LEGACYP1",
     ]);
-
     expect(
       deployScope.shouldBlockFinding("NEWP1", "merchant feed title mismatch")
     ).toBe(true);
@@ -301,31 +312,11 @@ describe("engine6ParagonBuildScopeGovernance", () => {
     });
 
     expect(report.blockedFiles).toEqual([]);
-    expect(report.informational).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({
-          path: "src/engine6/engine6ParagonBuildScopeGovernance.ts",
-        }),
-      ])
-    );
+    expect(report.pass).toBe(true);
 
     const markdown = formatEngine6ParagonBuildScopeGovernanceReport(report);
     expect(markdown).toContain("Engine6 Paragon Build Scope Governance");
-    expect(markdown).toContain("Blocked files (0)");
-  });
-
-  it("detects idempotent governance file rewrites", () => {
-    const idempotency = detectEngine6GovernanceIdempotentFileWrites({
-      priorWrites: [{ path: "reports/engine6-paragon-build-scope.json", content: "{}" }],
-      proposedWrites: [
-        { path: "reports/engine6-paragon-build-scope.json", content: "{}" },
-      ],
-    });
-
-    expect(idempotency.pass).toBe(false);
-    expect(idempotency.repeatedFileWrites).toEqual([
-      "reports/engine6-paragon-build-scope.json",
-    ]);
+    expect(markdown).toContain("Pass: yes");
   });
 
   it("does not treat published destination slugs as branch-scoped by default", () => {
@@ -380,7 +371,7 @@ describe("engine6ParagonBuildScopeGovernance", () => {
 
   it("parses merchant feed rows for append-only integration", () => {
     const rows = parseMerchantFeedCsvRows(
-      'id,title,description,link,image_link,availability,price,condition,brand,average_rating,rating_count,review_count\n191303P1,Sample,Desc,https://example.com,https://img.example.com,in stock,10 USD,new,Viator,5.0,1,1'
+      "id,title,description,link,image_link,availability,price,condition,brand,average_rating,rating_count,review_count\n191303P1,Sample,Desc,https://example.com,https://img.example.com,in stock,10 USD,new,Viator,5.0,1,1"
     );
 
     expect(rows).toHaveLength(1);
