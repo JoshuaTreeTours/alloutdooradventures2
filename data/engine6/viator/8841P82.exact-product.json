@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "8841P82",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Italian-Market-Food-Tour-PRIVATE/d906-8841P82",
+    "title": "Italian Market Food Tour PRIVATE",
+    "description": {
+      "text": "Discover South Philadelphia's Italian Market on a private food tour reserved for your party alone along South 9th Street. Your guide leads a paced walk with tastings at butcher shops, bakeries, and specialty vendors that have served the neighborhood for generations. Commentary covers immigrant food traditions and the market's role in Philadelphia's culinary identity. This premium private format suits groups who want an intimate Italian Market experience without joining a large tour."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $130.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 38
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/46/33/9a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Italian Market food tour for your party only",
+      "South 9th Street vendor tastings at curated stops",
+      "Butcher shops, bakeries, and specialty market vendors",
+      "Immigrant food history and neighborhood commentary",
+      "2.5-hour private walking format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your private guide at the Italian Market on South 9th Street at your scheduled departure time."
+      },
+      "end": {
+        "description": "Tour ends near the final tasting vendor on South 9th Street."
+      }
+    },
+    "itinerarySummary": "Discover South Philadelphia's Italian Market on a private food tour reserved for your party alone along South 9th Street.",
+    "itineraryItems": [
+      {
+        "title": "Italian Market",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "South 9th Street",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Italian Market",
+        "description": "",
+        "duration": "40 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "South 9th Street",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private food guide",
+      "Food tastings",
+      "Private walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Italian Market Food Tour PRIVATE?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet your private guide at the Italian Market on South 9th Street at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 130
+      },
+      "currency": "USD"
+    }
+  }
+}

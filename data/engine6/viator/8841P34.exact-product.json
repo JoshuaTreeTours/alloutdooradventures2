@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "8841P34",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Center-City-Philadelphia-Food-Tour-with-Reading-Market/d906-8841P34",
+    "title": "Center City Philadelphia Food Tour with Reading Market",
+    "description": {
+      "text": "Explore Center City Philadelphia's food scene on a walking tour combining Reading Terminal Market tastings with Rittenhouse Square neighborhood stops. Your guide leads a paced route with samples at market vendors and local eateries known for Philadelphia classics. Commentary covers Center City development and the vendors who feed downtown workers and visitors daily. This affordable food tour suits travelers who want market and neighborhood flavors in one efficient downtown walk."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $59.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 936
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/d3/c9/c3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Center City food tour with Reading Terminal Market stop",
+      "Rittenhouse Square neighborhood tasting route",
+      "Market vendor and local eatery samples",
+      "Philadelphia classic dishes at curated stops",
+      "2.5-hour guided walking food experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at Reading Terminal Market entrance at your scheduled departure time."
+      },
+      "end": {
+        "description": "Tour ends near Rittenhouse Square or the final Center City tasting stop."
+      }
+    },
+    "itinerarySummary": "Explore Center City Philadelphia's food scene on a walking tour combining Reading Terminal Market tastings with Rittenhouse Square neighborhood stops.",
+    "itineraryItems": [
+      {
+        "title": "Reading Terminal Market",
+        "description": "",
+        "duration": "40 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Center City",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rittenhouse Square",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Center City",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional food guide",
+      "Food tastings",
+      "Walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Center City Philadelphia Food Tour with Reading Market?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet your guide at Reading Terminal Market entrance at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 59
+      },
+      "currency": "USD"
+    }
+  }
+}

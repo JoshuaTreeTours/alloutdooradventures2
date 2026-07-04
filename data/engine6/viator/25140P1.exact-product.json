@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "25140P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Classic-Philadelphia-City-Bike-Tour/d906-25140P1",
+    "title": "Classic Philadelphia City Bike Tour",
+    "description": {
+      "text": "Explore Philadelphia on a guided bike tour along the Schuylkill River Trail with stops at the Philadelphia Museum of Art, Rocky Steps, and Boathouse Row. Your guide leads a paced three-hour ride with commentary on skyline landmarks and riverfront parks. Bikes, helmets, and a safety briefing are included with routing matched to the group's ability. This active outing covers more ground than a walking tour while keeping a social, guided format."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $79.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 214
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/d8/46/9c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided three-hour Philadelphia city bike tour",
+      "Schuylkill River Trail riding with skyline views",
+      "Philadelphia Museum of Art and Rocky Steps stop",
+      "Boathouse Row and riverfront park segments",
+      "Bikes, helmets, and safety briefing included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the bike rental staging area near the Schuylkill River Trail confirmed when booking. Arrive 15 minutes early for fitting."
+      },
+      "end": {
+        "description": "Return bikes to the staging area after the final riverfront stop."
+      }
+    },
+    "itinerarySummary": "Explore Philadelphia on a guided bike tour along the Schuylkill River Trail with stops at the Philadelphia Museum of Art, Rocky Steps, and Boathouse Row.",
+    "itineraryItems": [
+      {
+        "title": "Schuylkill River Trail",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Philadelphia Museum of Art",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boathouse Row",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Schuylkill River Trail",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional bike guide",
+      "Bike and helmet rental",
+      "Safety briefing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Classic Philadelphia City Bike Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet at the bike rental staging area near the Schuylkill River Trail confirmed when booking. Arrive 15 minutes early for fitting."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Active Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 79
+      },
+      "currency": "USD"
+    }
+  }
+}

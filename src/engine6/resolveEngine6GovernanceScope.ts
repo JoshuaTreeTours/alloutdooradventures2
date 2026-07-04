@@ -32,6 +32,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     sedona: ["Sedona"],
     chicago: ["Chicago"],
     illinois: ["Chicago"],
+    philadelphia: ["Philadelphia"],
+    pennsylvania: ["Philadelphia"],
     "washington-dc": ["Washington, D.C."],
     washington: ["Washington, D.C."],
     miami: ["Miami editorial narrative"],

@@ -103,8 +103,8 @@ const toEngine6ListingTour = (
       citySlug,
     },
     heroImage: heroImageUrl,
-    resolvedImageUrl: heroImageUrl || null,
-    primaryImageUrl: heroImageUrl || undefined,
+    resolvedImageUrl: tour.heroImageUrl || null,
+    primaryImageUrl: tour.heroImageUrl || undefined,
     badges: {
       rating: ratingSourceOfTruth.aggregateRating ?? undefined,
       reviewCount: ratingSourceOfTruth.reviewCount ?? undefined,

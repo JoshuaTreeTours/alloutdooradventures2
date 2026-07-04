@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "86032P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Flavors-of-Philly-Food-Tour/d906-86032P1",
+    "title": "Flavors of Philly Food Tour",
+    "description": {
+      "text": "Taste Philadelphia's iconic flavors on a guided food walking tour through Reading Terminal Market and Center City with cheesesteak stops and local specialties. Your guide connects each bite to the immigrant communities and vendors who built the city's food culture. The route covers enough tastings for a hearty lunch while keeping a comfortable walking pace through downtown. One of Philadelphia's most popular food tours for first-time visitors who want classic flavors in one outing."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $65.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 516
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0c/06/4a/fc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided Flavors of Philly food walking tour",
+      "Reading Terminal Market vendor tastings",
+      "Center City stops with cheesesteak samples",
+      "Local specialties and immigrant food history",
+      "2.5-hour format with generous portions"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at Reading Terminal Market or confirmed Center City meeting point at your scheduled departure time."
+      },
+      "end": {
+        "description": "Tour ends near the final tasting stop in Center City."
+      }
+    },
+    "itinerarySummary": "Taste Philadelphia's iconic flavors on a guided food walking tour through Reading Terminal Market and Center City with cheesesteak stops and local specialties.",
+    "itineraryItems": [
+      {
+        "title": "Reading Terminal Market",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Center City",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Center City",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Reading Terminal Market",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional food guide",
+      "Food tastings",
+      "Walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Flavors of Philly Food Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet your guide at Reading Terminal Market or confirmed Center City meeting point at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65
+      },
+      "currency": "USD"
+    }
+  }
+}

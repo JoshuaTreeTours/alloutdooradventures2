@@ -1,43 +1,16 @@
 {
-  "generatedAt": "2026-07-04T16:23:45.606Z",
+  "generatedAt": "2026-07-04T19:31:50.699Z",
   "governanceMode": "audit",
   "mode": "pr-scoped",
-  "scopedProductCodes": [
-    "255730P225",
-    "26797P4",
-    "3037DUCK",
-    "3283BWW",
-    "3283CODZILLA",
-    "3283SSCRUISE",
-    "343490P3",
-    "3978TOUR2",
-    "400049P3",
-    "400049P5",
-    "44921P7",
-    "5042BOSDIN",
-    "5046BOS_GG",
-    "5046BOS_OTT",
-    "5151BOSCY014",
-    "5769MTVN",
-    "66111P3",
-    "66192P8",
-    "70284P1",
-    "7167P80",
-    "7812P131",
-    "7812P18",
-    "8843P7"
-  ],
-  "scopedDestinationLabels": [
-    "Boston",
-    "Washington, D.C."
-  ],
+  "scopedProductCodes": [],
+  "scopedDestinationLabels": [],
   "fullSiteValidation": false,
   "blockingPassed": true,
   "passed": true,
   "totals": {
     "blockingFindings": 0,
     "warningFindings": 0,
-    "legacyFindings": 1406,
+    "legacyFindings": 1434,
     "areasAudited": 12,
     "areasPassed": 12
   },
@@ -60,7 +33,7 @@
       "area": "merchant-feed-commercial-refresh",
       "blockingCount": 0,
       "warningCount": 0,
-      "legacyCount": 927,
+      "legacyCount": 946,
       "pass": true
     },
     {
@@ -88,7 +61,7 @@
       "area": "route-sitemap-merchant-feed-parity",
       "blockingCount": 0,
       "warningCount": 0,
-      "legacyCount": 159,
+      "legacyCount": 178,
       "pass": true
     },
     {
@@ -109,7 +82,7 @@
       "area": "destination-infrastructure",
       "blockingCount": 0,
       "warningCount": 0,
-      "legacyCount": 3,
+      "legacyCount": 0,
       "pass": true
     },
     {
@@ -123,7 +96,7 @@
       "area": "paragon-build-scope",
       "blockingCount": 0,
       "warningCount": 0,
-      "legacyCount": 7,
+      "legacyCount": 0,
       "pass": true
     }
   ],
@@ -2910,6 +2883,120 @@
       "area": "merchant-feed-commercial-refresh",
       "productCode": "118676P4",
       "message": "118676P4.review_count: expected \"14\", got \"26\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "8841P1",
+      "message": "8841P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/01/a1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "8841P6",
+      "message": "8841P6.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/06/a6.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "8841P70",
+      "message": "8841P70.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/70/b0.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "8841P10",
+      "message": "8841P10.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/a1/10/b1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "102233P1",
+      "message": "102233P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/22/33/c1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "102233P3",
+      "message": "102233P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/22/33/c3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "86032P3",
+      "message": "86032P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/08/60/32/d3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "8841P73",
+      "message": "8841P73.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/73/b3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "153296P3",
+      "message": "153296P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/15/32/96/d3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "8841P82",
+      "message": "8841P82.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/82/b8.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "86032P1",
+      "message": "86032P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/08/60/32/a1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "8841P34",
+      "message": "8841P34.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/34/a4.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "5582660P3",
+      "message": "5582660P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/55/82/66/d3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "5042PHLSPI",
+      "message": "5042PHLSPI.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/50/42/d1/n1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "5042P61",
+      "message": "5042P61.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/50/42/d1/l1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "8841P27",
+      "message": "8841P27.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/27/a7.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "25140P1",
+      "message": "25140P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/25/14/01/b1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "115692P1",
+      "message": "115692P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/11/56/92/b1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
+      "severity": "legacy"
+    },
+    {
+      "area": "merchant-feed-commercial-refresh",
+      "productCode": "52886P6",
+      "message": "52886P6.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/52/88/06/b6.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\"",
       "severity": "legacy"
     },
     {
@@ -8505,63 +8592,117 @@
       "severity": "legacy"
     },
     {
-      "area": "destination-infrastructure",
-      "productCode": null,
-      "message": "Boston: Governance scope mapping missing for boston",
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "8841P1",
+      "message": "merchant feed row diverged from Product JSON-LD (8841P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/01/a1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
-      "area": "destination-infrastructure",
-      "productCode": null,
-      "message": "Boston: Validation cohort missing for boston",
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "8841P6",
+      "message": "merchant feed row diverged from Product JSON-LD (8841P6.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/06/a6.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
-      "area": "destination-infrastructure",
-      "productCode": null,
-      "message": "Boston: Fixture generation includes product codes outside the destination route prefix",
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "8841P70",
+      "message": "merchant feed row diverged from Product JSON-LD (8841P70.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/70/b0.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
-      "area": "paragon-build-scope",
-      "productCode": null,
-      "message": "data/merchantFeed.csv: generated/catalog file changed outside branch-scoped product codes",
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "8841P10",
+      "message": "merchant feed row diverged from Product JSON-LD (8841P10.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/a1/10/b1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
-      "area": "paragon-build-scope",
-      "productCode": null,
-      "message": "public/sitemap-tours.xml: generated/catalog file changed outside branch-scoped product codes",
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "102233P1",
+      "message": "merchant feed row diverged from Product JSON-LD (102233P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/22/33/c1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
-      "area": "paragon-build-scope",
-      "productCode": null,
-      "message": "reports/engine6-stage2-governance-audit.json: generated/catalog file changed outside branch-scoped product codes",
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "102233P3",
+      "message": "merchant feed row diverged from Product JSON-LD (102233P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/10/22/33/c3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
-      "area": "paragon-build-scope",
-      "productCode": null,
-      "message": "reports/engine6-stage2-governance-audit.md: generated/catalog file changed outside branch-scoped product codes",
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "86032P3",
+      "message": "merchant feed row diverged from Product JSON-LD (86032P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/08/60/32/d3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
-      "area": "paragon-build-scope",
-      "productCode": null,
-      "message": "src/engine6/bostonViatorPublicRatings.ts: generated/catalog file changed outside branch-scoped product codes",
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "8841P73",
+      "message": "merchant feed row diverged from Product JSON-LD (8841P73.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/73/b3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
-      "area": "paragon-build-scope",
-      "productCode": null,
-      "message": "src/engine6/routes.ts: Paragon reference tour, fixture, route, or mock modified without explicit scope",
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "153296P3",
+      "message": "merchant feed row diverged from Product JSON-LD (153296P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/15/32/96/d3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     },
     {
-      "area": "paragon-build-scope",
-      "productCode": null,
-      "message": "src/engine6/validationFixtures.ts: Paragon reference tour, fixture, route, or mock modified without explicit scope",
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "8841P82",
+      "message": "merchant feed row diverged from Product JSON-LD (8841P82.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/82/b8.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "severity": "legacy"
+    },
+    {
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "86032P1",
+      "message": "merchant feed row diverged from Product JSON-LD (86032P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/08/60/32/a1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "severity": "legacy"
+    },
+    {
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "8841P34",
+      "message": "merchant feed row diverged from Product JSON-LD (8841P34.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/34/a4.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "severity": "legacy"
+    },
+    {
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "5582660P3",
+      "message": "merchant feed row diverged from Product JSON-LD (5582660P3.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/55/82/66/d3.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "severity": "legacy"
+    },
+    {
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "5042PHLSPI",
+      "message": "merchant feed row diverged from Product JSON-LD (5042PHLSPI.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/50/42/d1/n1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "severity": "legacy"
+    },
+    {
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "5042P61",
+      "message": "merchant feed row diverged from Product JSON-LD (5042P61.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/50/42/d1/l1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "severity": "legacy"
+    },
+    {
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "8841P27",
+      "message": "merchant feed row diverged from Product JSON-LD (8841P27.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/e1/27/a7.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "severity": "legacy"
+    },
+    {
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "25140P1",
+      "message": "merchant feed row diverged from Product JSON-LD (25140P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/25/14/01/b1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "severity": "legacy"
+    },
+    {
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "115692P1",
+      "message": "merchant feed row diverged from Product JSON-LD (115692P1.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/11/56/92/b1.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
+      "severity": "legacy"
+    },
+    {
+      "area": "route-sitemap-merchant-feed-parity",
+      "productCode": "52886P6",
+      "message": "merchant feed row diverged from Product JSON-LD (52886P6.image_link: expected \"https://media.tacdn.com/media/attractions-splice-spp-674x446/52/88/06/b6.jpg\", got \"https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg\")",
       "severity": "legacy"
     }
   ],
@@ -8574,52 +8715,22 @@
     "skipReason": "live Viator validation skipped locally: Viator API credentials unavailable (set VIATOR_API_KEY for local strict checks)",
     "credentialsRequired": false,
     "credentialsAvailable": false,
-    "scopedProductCodes": [
-      "255730P225",
-      "26797P4",
-      "3037DUCK",
-      "3283BWW",
-      "3283CODZILLA",
-      "3283SSCRUISE",
-      "343490P3",
-      "3978TOUR2",
-      "400049P3",
-      "400049P5",
-      "44921P7",
-      "5042BOSDIN",
-      "5046BOS_GG",
-      "5046BOS_OTT",
-      "5151BOSCY014",
-      "5769MTVN",
-      "66111P3",
-      "66192P8",
-      "70284P1",
-      "7167P80",
-      "7812P131",
-      "7812P18",
-      "8843P7"
-    ],
-    "validatedAt": "2026-07-04T16:23:37.548Z",
+    "scopedProductCodes": [],
+    "validatedAt": "2026-07-04T19:31:36.236Z",
     "results": [],
     "failures": [],
     "blockingFailures": [],
     "legacyFailures": []
   },
   "merchantFeedImage": {
-    "imagesValidated": 397,
-    "automaticallyRepaired": 3,
-    "requiringFallback": 3,
+    "imagesValidated": 419,
+    "automaticallyRepaired": 4,
+    "requiringFallback": 4,
     "unrecoverableFailures": 0,
     "fallbackImageWarnings": 0,
     "informationalLegacyInvalidImages": 0,
     "informationalLegacyProductCodes": [],
     "invalidUrlsReported": [
-      {
-        "productCode": "6004PRHIKE",
-        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/54/6a.jpg",
-        "reason": "http-error",
-        "status": 404
-      },
       {
         "productCode": "69029P14",
         "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/6d/d8.jpg",
@@ -8631,193 +8742,37 @@
         "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/52/0f.jpg",
         "reason": "http-error",
         "status": 404
+      },
+      {
+        "productCode": "6004PRHIKE",
+        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/54/6a.jpg",
+        "reason": "http-error",
+        "status": 404
+      },
+      {
+        "productCode": "6314PHILSEG",
+        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/63/14/a0/b1.jpg",
+        "reason": "http-error",
+        "status": 404
       }
     ],
     "failures": [],
     "warnings": []
   },
   "productHero": {
-    "auditedProductCodes": [
-      "5769MTVN",
-      "3283BWW",
-      "3283SSCRUISE",
-      "44921P7",
-      "3037DUCK",
-      "66111P3",
-      "26797P4",
-      "8843P7",
-      "70284P1",
-      "5046BOS_OTT",
-      "7812P131",
-      "7812P18",
-      "400049P3",
-      "343490P3",
-      "400049P5",
-      "3978TOUR2",
-      "5046BOS_GG",
-      "3283CODZILLA",
-      "7167P80",
-      "5042BOSDIN",
-      "5151BOSCY014",
-      "66192P8",
-      "255730P225"
-    ],
+    "auditedProductCodes": [],
     "findings": [],
     "pass": true
   },
-  "destinationInfrastructure": [
-    {
-      "destinationLabel": "Boston",
-      "destinationCitySlug": "boston",
-      "stateSlug": "massachusetts",
-      "citySlug": "boston",
-      "routePrefix": "/destinations/massachusetts/boston/tours/",
-      "pass": false,
-      "checks": [
-        {
-          "id": "state-registry",
-          "pass": true,
-          "message": "State registry includes massachusetts"
-        },
-        {
-          "id": "city-registry",
-          "pass": true,
-          "message": "City registry includes boston"
-        },
-        {
-          "id": "tours-state-selector",
-          "pass": true,
-          "message": "Tours page state selector includes massachusetts"
-        },
-        {
-          "id": "tours-city-selector",
-          "pass": true,
-          "message": "Tours page city selector includes boston"
-        },
-        {
-          "id": "route-prefix",
-          "pass": true,
-          "message": "Route prefix registered (22 tour route(s))"
-        },
-        {
-          "id": "governance-scope",
-          "pass": false,
-          "message": "Governance scope mapping missing for boston",
-          "detail": "Add ENGINE6_DESTINATION_SLUG_COHORT_LABELS entry before deploy-scoped governance can run."
-        },
-        {
-          "id": "canonical-hero-fallback",
-          "pass": true,
-          "message": "Canonical city hero fallback resolves"
-        },
-        {
-          "id": "validation-cohort",
-          "pass": false,
-          "message": "Validation cohort missing for boston",
-          "detail": "Add destination validation cohort(s) in engine6DestinationValidationCohorts.ts."
-        },
-        {
-          "id": "fixture-target-path",
-          "pass": false,
-          "message": "Fixture generation includes product codes outside the destination route prefix",
-          "detail": "All deploy-scoped product codes must resolve under /destinations/massachusetts/boston/tours/"
-        }
-      ],
-      "blockingFailures": [
-        {
-          "id": "governance-scope",
-          "pass": false,
-          "message": "Governance scope mapping missing for boston",
-          "detail": "Add ENGINE6_DESTINATION_SLUG_COHORT_LABELS entry before deploy-scoped governance can run."
-        },
-        {
-          "id": "validation-cohort",
-          "pass": false,
-          "message": "Validation cohort missing for boston",
-          "detail": "Add destination validation cohort(s) in engine6DestinationValidationCohorts.ts."
-        },
-        {
-          "id": "fixture-target-path",
-          "pass": false,
-          "message": "Fixture generation includes product codes outside the destination route prefix",
-          "detail": "All deploy-scoped product codes must resolve under /destinations/massachusetts/boston/tours/"
-        }
-      ]
-    }
-  ],
+  "destinationInfrastructure": [],
   "paragonBuildScope": {
     "moduleId": "engine6-paragon-build-scope-governance",
-    "generatedAt": "2026-07-04T16:23:44.096Z",
-    "pass": false,
-    "branchScopedProductCodes": [
-      "255730P225",
-      "26797P4",
-      "3037DUCK",
-      "3283BWW",
-      "3283CODZILLA",
-      "3283SSCRUISE",
-      "343490P3",
-      "3978TOUR2",
-      "400049P3",
-      "400049P5",
-      "44921P7",
-      "5042BOSDIN",
-      "5046BOS_GG",
-      "5046BOS_OTT",
-      "5151BOSCY014",
-      "5769MTVN",
-      "66111P3",
-      "66192P8",
-      "70284P1",
-      "7167P80",
-      "7812P131",
-      "7812P18",
-      "8843P7"
-    ],
-    "blockedFiles": [
-      {
-        "path": "data/merchantFeed.csv",
-        "kind": "unrelated-generated-catalog",
-        "detail": "generated/catalog file changed outside branch-scoped product codes"
-      },
-      {
-        "path": "public/sitemap-tours.xml",
-        "kind": "unrelated-generated-catalog",
-        "detail": "generated/catalog file changed outside branch-scoped product codes"
-      },
-      {
-        "path": "reports/engine6-stage2-governance-audit.json",
-        "kind": "unrelated-generated-catalog",
-        "detail": "generated/catalog file changed outside branch-scoped product codes"
-      },
-      {
-        "path": "reports/engine6-stage2-governance-audit.md",
-        "kind": "unrelated-generated-catalog",
-        "detail": "generated/catalog file changed outside branch-scoped product codes"
-      },
-      {
-        "path": "src/engine6/bostonViatorPublicRatings.ts",
-        "kind": "unrelated-generated-catalog",
-        "detail": "generated/catalog file changed outside branch-scoped product codes"
-      },
-      {
-        "path": "src/engine6/routes.ts",
-        "kind": "paragon-reference-modified",
-        "detail": "Paragon reference tour, fixture, route, or mock modified without explicit scope"
-      },
-      {
-        "path": "src/engine6/validationFixtures.ts",
-        "kind": "paragon-reference-modified",
-        "detail": "Paragon reference tour, fixture, route, or mock modified without explicit scope"
-      }
-    ],
+    "generatedAt": "2026-07-04T19:31:50.697Z",
+    "pass": true,
+    "branchScopedProductCodes": [],
+    "blockedFiles": [],
     "warnings": [],
-    "informational": [
-      {
-        "path": "src/engine6/engine6DestinationInfrastructureValidation.ts",
-        "detail": "governance-only allowlisted file"
-      }
-    ],
+    "informational": [],
     "merchantFeed": {
       "pass": true,
       "appendedProductCodes": [],
@@ -8834,44 +8789,19 @@
       "stopped": false,
       "reason": null,
       "cycleCount": 0,
-      "elapsedMs": 1
+      "elapsedMs": 0
     },
     "idempotency": {
       "pass": true,
       "repeatedFileWrites": []
     },
     "deployScope": {
-      "blockingProductCodes": [
-        "255730P225",
-        "26797P4",
-        "3037DUCK",
-        "3283BWW",
-        "3283CODZILLA",
-        "3283SSCRUISE",
-        "343490P3",
-        "3978TOUR2",
-        "400049P3",
-        "400049P5",
-        "44921P7",
-        "5042BOSDIN",
-        "5046BOS_GG",
-        "5046BOS_OTT",
-        "5151BOSCY014",
-        "5769MTVN",
-        "66111P3",
-        "66192P8",
-        "70284P1",
-        "7167P80",
-        "7812P131",
-        "7812P18",
-        "8843P7"
-      ],
+      "blockingProductCodes": [],
       "reportOnlyProductCodes": []
     }
   },
   "notes": [
-    "Branch-modified product codes: 255730P225, 26797P4, 3037DUCK, 3283BWW, 3283CODZILLA, 3283SSCRUISE, 343490P3, 3978TOUR2, 400049P3, 400049P5, 44921P7, 5042BOSDIN, 5046BOS_GG, 5046BOS_OTT, 5151BOSCY014, 5769MTVN, 66111P3, 66192P8, 70284P1, 7167P80, 7812P131, 7812P18, 8843P7",
     "rating_count is maintained as a synchronized mirror of review_count for merchant-feed compatibility. No independent live refresh of rating_count is performed; it changes only when review_count changes.",
-    "Destination cohort scope: Boston, Washington, D.C."
+    "Destination cohort checks skipped: no changed Engine6 destination artifacts detected in deploy scope."
   ]
 }

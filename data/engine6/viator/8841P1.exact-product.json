@@ -1,0 +1,119 @@
+{
+  "product": {
+    "productCode": "8841P1",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-City-of-Philadelphia-Driving-Tour/d906-8841P1",
+    "title": "Private Full Day Philadelphia Driving Tour with Special Inclusion",
+    "description": {
+      "text": "Experience Philadelphia's essential landmarks on a private full-day driving tour with a dedicated local guide and vehicle for your party alone. The route covers Independence Hall, the Liberty Bell, the Rocky Steps at the Philadelphia Museum of Art, Eastern State Penitentiary, and additional stops tailored to your interests. Your guide shares Revolutionary War history, architecture stories, and neighborhood context while handling city traffic and parking. This premium per-group format suits families and friends who want comprehensive Philadelphia coverage without joining a large bus tour."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $975.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 142
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/72/67/c3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private full-day driving tour of Philadelphia for your party only",
+      "Independence Hall and Liberty Bell with flexible photo time",
+      "Rocky Steps and Philadelphia Museum of Art exterior stop",
+      "Eastern State Penitentiary visit with guided history",
+      "Per-group pricing with hotel pickup options"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup from your Philadelphia hotel, vacation rental, or confirmed downtown meeting point at your scheduled time."
+      },
+      "end": {
+        "description": "Return to your pickup location or requested drop-off point after the final scenic stop."
+      }
+    },
+    "itinerarySummary": "Experience Philadelphia's essential landmarks on a private full-day driving tour with a dedicated local guide and vehicle for your party alone.",
+    "itineraryItems": [
+      {
+        "title": "Independence Hall",
+        "description": "",
+        "duration": "45 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Liberty Bell",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rocky Steps",
+        "description": "",
+        "duration": "25 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Eastern State Penitentiary",
+        "description": "",
+        "duration": "60 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Philadelphia Museum of Art",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Private driver-guide",
+      "Private vehicle transport",
+      "Hotel pickup and drop-off"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Full Day Philadelphia Driving Tour with Special Inclusion?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Pickup from your Philadelphia hotel, vacation rental, or confirmed downtown meeting point at your scheduled time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 975
+      },
+      "currency": "USD"
+    }
+  }
+}

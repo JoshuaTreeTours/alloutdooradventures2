@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "8841P27",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Philadelphias-Italian-Market-Food-Tour/d906-8841P27",
+    "title": "Philadelphia's Italian Market Food Tour",
+    "description": {
+      "text": "Walk South Philadelphia's Italian Market on a guided food tour with tastings at the vendors and eateries that define this historic neighborhood. Your guide shares immigrant stories while you sample cheeses, cured meats, and baked goods along South 9th Street. The two-hour format delivers enough bites for a satisfying lunch while exploring one of America's oldest outdoor markets. A popular choice for food lovers who want authentic South Philly flavor without a private booking."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $61.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 309
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/68/d1/7b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Guided Italian Market food walking tour",
+      "South Philadelphia neighborhood and vendor tastings",
+      "South 9th Street market stalls and specialty shops",
+      "Immigrant food history and local commentary",
+      "Two-hour format with generous samples"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the Italian Market on South 9th Street at your scheduled departure time."
+      },
+      "end": {
+        "description": "Tour ends near the final vendor stop on South 9th Street."
+      }
+    },
+    "itinerarySummary": "Walk South Philadelphia's Italian Market on a guided food tour with tastings at the vendors and eateries that define this historic neighborhood.",
+    "itineraryItems": [
+      {
+        "title": "Italian Market",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "South Philadelphia",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Italian Market",
+        "description": "",
+        "duration": "35 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "South 9th Street",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional food guide",
+      "Food tastings",
+      "Walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Philadelphia's Italian Market Food Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet your guide at the Italian Market on South 9th Street at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 61
+      },
+      "currency": "USD"
+    }
+  }
+}

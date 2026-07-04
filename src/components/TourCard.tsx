@@ -7,8 +7,9 @@ import { getTourDetailPath } from "../data/tours";
 import { formatStartingPrice } from "../lib/pricing";
 import { buildRentalDescription } from "../templates/rentalDescription";
 import {
+  ENGINE6_GLOBAL_FALLBACK_HERO_URL,
+  resolveEngine6CanonicalCityHero,
   resolveEngine6DisplayHero,
-  resolveEngine6DisplayHeroFallback,
 } from "../engine6/displayHero";
 import { resolveTourHeroImage } from "../utils/hero";
 import { isRentalTour } from "../utils/isRentalTour";
@@ -190,18 +191,27 @@ export default function TourCard({
   const cardImage =
     tour.engine === "engine6"
       ? resolveEngine6DisplayHero({
-          productHeroUrl: tour.heroImage,
+          productCode: tour.productCode,
+          productHeroUrl:
+            tour.primaryImageUrl ??
+            tour.resolvedImageUrl ??
+            tour.heroImage,
           stateSlug: tour.destination.stateSlug,
           citySlug: tour.destination.citySlug,
         })
       : (resolveTourHeroImage(tour) ?? "");
+  const engine6CityHero =
+    tour.engine === "engine6"
+      ? resolveEngine6CanonicalCityHero(
+          tour.destination.stateSlug,
+          tour.destination.citySlug
+        )
+      : undefined;
   const fallbackImage =
     tour.engine === "engine6"
-      ? resolveEngine6DisplayHeroFallback({
-          stateSlug: tour.destination.stateSlug,
-          citySlug: tour.destination.citySlug,
-          excluding: cardImage,
-        })
+      ? cardImage && cardImage !== engine6CityHero
+        ? cardImage
+        : ENGINE6_GLOBAL_FALLBACK_HERO_URL
       : cardImage;
   const renderedTagPills = tour.primaryDisplayCategory?.trim()
     ? [tour.primaryDisplayCategory.trim()]

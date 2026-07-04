@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "5582660P3",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Explore-Philadelphia-via-Vintage-Car-or-Electric-cart/d906-5582660P3",
+    "title": "Explore Philadelphia via Vintage Car or Electric cart",
+    "description": {
+      "text": "See Philadelphia's landmarks from a vintage car or electric cart on a guided sightseeing tour through Old City and Center City. Your driver-guide narrates Independence Hall, the Liberty Bell, and City Hall while you enjoy open-air views from a distinctive vehicle. The two-hour format covers more ground than a walking tour with photo stops at key viewpoints. Ideal for visitors who want a fun, photogenic city overview without extensive walking."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $69.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 46
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/b5/3e/ca.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Vintage car or electric cart sightseeing tour of Philadelphia",
+      "Independence Hall and Liberty Bell pass-by and stop routing",
+      "Philadelphia City Hall and Center City viewpoints",
+      "Open-air photo opportunities from a distinctive vehicle",
+      "Two-hour guided city overview format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at the confirmed Old City or Center City departure point at your scheduled time."
+      },
+      "end": {
+        "description": "Return to the original departure point after the city loop."
+      }
+    },
+    "itinerarySummary": "See Philadelphia's landmarks from a vintage car or electric cart on a guided sightseeing tour through Old City and Center City.",
+    "itineraryItems": [
+      {
+        "title": "Independence Hall",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Liberty Bell",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "City Hall",
+        "description": "",
+        "duration": "15 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old City",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Driver-guide",
+      "Vintage car or electric cart tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Explore Philadelphia via Vintage Car or Electric cart?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet at the confirmed Old City or Center City departure point at your scheduled time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "City Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 69
+      },
+      "currency": "USD"
+    }
+  }
+}

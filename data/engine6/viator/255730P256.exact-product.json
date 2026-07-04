@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "255730P256",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/Private-Walking-Tour-of-Nazi-History-in-Berlin/d906-255730P256",
+    "title": "Flavours of Philadelphia: Private Reading Market 2.5-hr Food Tour",
+    "description": {
+      "text": "Taste Philadelphia's culinary heritage on a private 2.5-hour food tour centered on Reading Terminal Market and Center City eateries. Your guide leads a paced walk with curated tastings at market stalls and neighborhood spots known for cheesesteaks, Amish baked goods, and local specialties. Commentary covers immigrant food traditions and the vendors who shaped Philadelphia's dining scene. This premium private format suits groups who want an unhurried market deep dive without joining strangers."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $290.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 43
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/71/83/24.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Reading Terminal Market food tour for your party",
+      "Curated tastings at market stalls and Center City spots",
+      "Cheesesteak and Amish baked goods samples",
+      "Licensed guide with Philadelphia food history commentary",
+      "2.5-hour private walking format"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your private guide at Reading Terminal Market entrance at your scheduled departure time."
+      },
+      "end": {
+        "description": "Tour ends near the final tasting stop in Center City or Reading Terminal Market."
+      }
+    },
+    "itinerarySummary": "Taste Philadelphia's culinary heritage on a private 2.",
+    "itineraryItems": [
+      {
+        "title": "Reading Terminal Market",
+        "description": "",
+        "duration": "60 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Center City",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Reading Terminal Market",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Center City",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private food guide",
+      "Food tastings",
+      "Private walking tour"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Flavours of Philadelphia: Private Reading Market 2.5-hr Food Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Meet your private guide at Reading Terminal Market entrance at your scheduled departure time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 290
+      },
+      "currency": "USD"
+    }
+  }
+}

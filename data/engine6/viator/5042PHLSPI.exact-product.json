@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "5042PHLSPI",
+    "productUrl": "https://www.viator.com/tours/Philadelphia/City-Cruises-Philadelphia-Signature-Dinner-Cruise-with-Buffet/d906-5042PHLSPI",
+    "title": "City Cruises Philadelphia Signature Dinner Cruise with Buffet",
+    "description": {
+      "text": "Experience Philadelphia from the water on a signature dinner cruise along the Delaware River with a buffet meal and skyline views. The evening includes dining aboard City Cruises with panoramas of Penn's Landing, the Benjamin Franklin Bridge, and the illuminated Center City skyline. Indoor and outdoor deck seating frame the riverfront as the city lights come on. This special-occasion outing suits couples and groups who want dinner and sightseeing combined on the Delaware River."
+    },
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $95.00",
+    "reviews": {
+      "combinedAverageRating": 4,
+      "totalReviews": 380
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/48/23/1e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Signature dinner cruise on the Delaware River",
+      "Buffet dinner aboard City Cruises vessel",
+      "Penn's Landing and Philadelphia skyline views",
+      "Indoor and outdoor deck seating",
+      "Evening riverfront dining experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Board at Penn's Landing or the City Cruises terminal confirmed on your reservation. Arrive 30 minutes early."
+      },
+      "end": {
+        "description": "Disembark at the same Penn's Landing terminal after dinner service concludes."
+      }
+    },
+    "itinerarySummary": "Experience Philadelphia from the water on a signature dinner cruise along the Delaware River with a buffet meal and skyline views.",
+    "itineraryItems": [
+      {
+        "title": "Penn's Landing",
+        "description": "",
+        "duration": "20 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Delaware River",
+        "description": "",
+        "duration": "90 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Philadelphia skyline",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Penn's Landing",
+        "description": "",
+        "duration": "10 minutes",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Dinner cruise ticket",
+      "Buffet dinner",
+      "Indoor and outdoor deck access"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the City Cruises Philadelphia Signature Dinner Cruise with Buffet?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Philadelphia?",
+        "answer": "Board at Penn's Landing or the City Cruises terminal confirmed on your reservation. Arrive 30 minutes early."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Dinner Cruises"
+      },
+      {
+        "label": "Cruises & Sailing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 95
+      },
+      "currency": "USD"
+    }
+  }
+}
