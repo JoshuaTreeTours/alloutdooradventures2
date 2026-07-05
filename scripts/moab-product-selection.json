@@ -1,0 +1,400 @@
+{
+  "destinationLabel": "Moab",
+  "destinationCitySlug": "moab",
+  "viatorDestinationSlug": "Moab",
+  "targetPremiumShare": 0.5,
+  "slots": [
+    {
+      "experienceType": "off-road-adventure",
+      "desiredCount": 15,
+      "candidates": [
+        {
+          "productCode": "5555934P1",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Hells-Revenge-U-Drive-Off-road-Adventure-Tour-in-Moab/d5600-5555934P1",
+          "title": "BEST! Hell's Revenge U-Drive 4X4 Tour in Moab +Dinosaur Tracks!",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 99,
+          "categories": [
+            "4WD Tours",
+            "UTV Tours",
+            "Off-Road Tours"
+          ],
+          "priority": 1
+        },
+        {
+          "productCode": "7016P4",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-Scenic-Tours-From-Moab/d5600-7016P4",
+          "title": "HIGHLY RATED Arches National Park Sightseeing Tour From Moab Utah",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 159,
+          "categories": [
+            "National Parks",
+            "Sightseeing Tours",
+            "4WD Tours"
+          ],
+          "commercialTier": "premium",
+          "priority": 2
+        },
+        {
+          "productCode": "7016OFFROAD",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Hells-Revenge-4x4-Off-Roading-Tour-from-Moab/d5600-7016OFFROAD",
+          "title": "HIGHLY RATED U-DRIVE Moab Hell's Revenge UTV Off-Road Adventure",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 99,
+          "categories": [
+            "4WD Tours",
+            "Off-Road Tours",
+            "Adventure Tours"
+          ],
+          "priority": 3
+        },
+        {
+          "productCode": "132679P2",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Sunset-Tour-Moab-Off-road-and-Scenic-Backcountry/d5600-132679P2",
+          "title": "Sunset Tour, Moab, Off-road and Scenic Backcountry",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 125,
+          "categories": [
+            "4WD Tours",
+            "Sunset Tours",
+            "Off-Road Tours"
+          ],
+          "commercialTier": "premium",
+          "priority": 4
+        },
+        {
+          "productCode": "5555934P2",
+          "sourceUrl": "https://www.viator.com/tours/Moab/CATACOMB-CAVES-U-Drive-4X4-UTV-Tour-in-Moab/d5600-5555934P2",
+          "title": "BEST! Catacomb *CAVES* U-Drive 4X4 UTV Tour in Moab +Petroglyphs!",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 119,
+          "categories": [
+            "UTV Tours",
+            "4WD Tours",
+            "Adventure Tours"
+          ],
+          "commercialTier": "premium",
+          "priority": 5
+        },
+        {
+          "productCode": "349715P2",
+          "sourceUrl": "https://www.viator.com/tours/Moab/High-Adventure-Hummer-Tour-on-Hells-Revenge/d5600-349715P2",
+          "title": "Moab's Original Hummer Adventure: Hell's Revenge Trail Experience",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 99,
+          "categories": [
+            "4WD Tours",
+            "Adventure Tours",
+            "Off-Road Tours"
+          ],
+          "priority": 6
+        },
+        {
+          "productCode": "132679P1",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Off-Road-and-Back-Country-Adventures/d5600-132679P1",
+          "title": "Exciting and Scenic Off-Road Guided Tour of Moab's Backcountry!!!",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 110,
+          "categories": [
+            "4WD Tours",
+            "Off-Road Tours",
+            "Adventure Tours"
+          ],
+          "commercialTier": "premium",
+          "priority": 7
+        },
+        {
+          "productCode": "6896MOABAPARK",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-4x4-Adventure-from-Moab/d5600-6896MOABAPARK",
+          "title": "Arches National Park 4x4 Adventure from Moab",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 220,
+          "categories": [
+            "National Parks",
+            "4WD Tours",
+            "Adventure Tours"
+          ],
+          "commercialTier": "premium",
+          "priority": 8
+        },
+        {
+          "productCode": "349715P3",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Sunset-Hells-Revenge-Hummer-Adventure/d5600-349715P3",
+          "title": "Hell's Revenge Sunset Off-Road Hummer Adventure",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 109,
+          "categories": [
+            "4WD Tours",
+            "Sunset Tours",
+            "Off-Road Tours"
+          ],
+          "commercialTier": "premium",
+          "priority": 9
+        },
+        {
+          "productCode": "349715P1",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Guided-U-Drive-Adventure-in-the-ALL-NEW-Can-Am-Commander/d5600-349715P1",
+          "title": "Moab's #1 Rated Guided U-Drive Hell's Revenge Off-Road Tour",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 99,
+          "categories": [
+            "UTV Tours",
+            "4WD Tours",
+            "Adventure Tours"
+          ],
+          "priority": 10
+        },
+        {
+          "productCode": "131994P3",
+          "sourceUrl": "https://www.viator.com/tours/Moab/You-Drive-Hells-Revenge-UTV-Tour/d5600-131994P3",
+          "title": "YOU-DRIVE UTV Hell's Revenge 4x4 Off Roading Tour from Moab",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 95,
+          "categories": [
+            "UTV Tours",
+            "4WD Tours",
+            "Off-Road Tours"
+          ],
+          "priority": 11
+        },
+        {
+          "productCode": "334588P3",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Half-Day-Canyonlands-Backcountry-Tour/d5600-334588P3",
+          "title": "Canyonlands National Park Backcountry Tour",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 212,
+          "categories": [
+            "National Parks",
+            "4WD Tours",
+            "Day Trips"
+          ],
+          "commercialTier": "premium",
+          "priority": 12
+        },
+        {
+          "productCode": "252408P1",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Moabs-Most-Wanted-You-Drive-ATV-UTV-Adventure/d5600-252408P1",
+          "title": "Top-Rated Moab You-Drive UTV Tour: Fins N Things & Hell's Revenge",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 177,
+          "categories": [
+            "UTV Tours",
+            "ATV Tours",
+            "Adventure Tours"
+          ],
+          "commercialTier": "premium",
+          "priority": 13
+        },
+        {
+          "productCode": "349715P4",
+          "sourceUrl": "https://www.viator.com/tours/Moab/U-DRIVE-UTV-SUNSET-Guided-Adventure-on-Hells-Revenge/d5600-349715P4",
+          "title": "Moab's Premier Sunset U-Drive UTV Hell's Revenge Tour",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 99,
+          "categories": [
+            "UTV Tours",
+            "Sunset Tours",
+            "Off-Road Tours"
+          ],
+          "priority": 14
+        },
+        {
+          "productCode": "260792P5",
+          "sourceUrl": "https://www.viator.com/tours/Moab/ATV-Tour-and-Trail-Experience-in-Hells-Revenge-Sunset/d5600-260792P5",
+          "title": "You-Drive 4x4 UTV Adventure–Hell's Revenge & Fins N' Things, Moab",
+          "experienceType": "off-road-adventure",
+          "priceFrom": 260,
+          "categories": [
+            "ATV Tours",
+            "Sunset Tours",
+            "Off-Road Tours"
+          ],
+          "commercialTier": "premium",
+          "priority": 15
+        }
+      ]
+    },
+    {
+      "experienceType": "river-rafting",
+      "desiredCount": 4,
+      "candidates": [
+        {
+          "productCode": "22803P18",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Moab-Rafting-Afternoon-1-2-Day-Trip/d5600-22803P18",
+          "title": "Moab Afternoon Half Day Rafting Trip - Colorado River",
+          "experienceType": "river-rafting",
+          "priceFrom": 109.91,
+          "categories": [
+            "River Rafting & Tubing",
+            "Adventure Tours",
+            "Outdoor Activities"
+          ],
+          "commercialTier": "premium",
+          "priority": 1
+        },
+        {
+          "productCode": "16649P13",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Moab-Daily-Half-Day-Trip/d5600-16649P13",
+          "title": "Moab Rivertrippers ~Rafting Castle Valley/Fisher Towers Half-Day",
+          "experienceType": "river-rafting",
+          "priceFrom": 109,
+          "categories": [
+            "River Rafting & Tubing",
+            "Adventure Tours",
+            "Outdoor Activities"
+          ],
+          "commercialTier": "premium",
+          "priority": 2
+        },
+        {
+          "productCode": "16847P11",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Half-Day-Guided-Whitewater-Rafting-in-Moab/d5600-16847P11",
+          "title": "Half Day Guided Whitewater Rafting in Moab",
+          "experienceType": "river-rafting",
+          "priceFrom": 95,
+          "categories": [
+            "River Rafting & Tubing",
+            "White Water Rafting",
+            "Adventure Tours"
+          ],
+          "priority": 3
+        },
+        {
+          "productCode": "165224P7",
+          "sourceUrl": "https://www.viator.com/tours/Moab/White-Water-Rafting-on-the-Moab-Daily-section-of-the-Colorado-River/d5600-165224P7",
+          "title": "River Rafting, Moab Daily, Morning Tour",
+          "experienceType": "river-rafting",
+          "priceFrom": 89,
+          "categories": [
+            "River Rafting & Tubing",
+            "White Water Rafting",
+            "Adventure Tours"
+          ],
+          "priority": 4
+        }
+      ]
+    },
+    {
+      "experienceType": "moab-adventure",
+      "desiredCount": 2,
+      "candidates": [
+        {
+          "productCode": "22803P33",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-Half-Day-Tour/d5600-22803P33",
+          "title": "Arches National Park Half Day Tour",
+          "experienceType": "moab-adventure",
+          "priceFrom": 139.26,
+          "categories": [
+            "National Parks",
+            "Day Trips",
+            "Sightseeing Tours"
+          ],
+          "commercialTier": "premium",
+          "priority": 1
+        },
+        {
+          "productCode": "6896MOABCPARK",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Canyonlands-National-Park-Half-Day-Tour-from-Moab/d5600-6896MOABCPARK",
+          "title": "Canyonlands National Park Half-Day Tour from Moab",
+          "experienceType": "moab-adventure",
+          "priceFrom": 240,
+          "categories": [
+            "National Parks",
+            "Day Trips",
+            "Sightseeing Tours"
+          ],
+          "commercialTier": "premium",
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "experienceType": "hiking",
+      "desiredCount": 3,
+      "candidates": [
+        {
+          "productCode": "458439P2",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Private-Photo-and-Hiking-tour-The-Windows-Section-Arches-NP/d5600-458439P2",
+          "title": "Astro-Photo, Hiking and Stargazing Tour in Arches National Park",
+          "experienceType": "hiking",
+          "priceFrom": 175,
+          "categories": [
+            "Private Tours",
+            "Hiking Tours",
+            "Photography Tours"
+          ],
+          "commercialTier": "premium",
+          "priority": 1
+        },
+        {
+          "productCode": "169760P14",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Private-full-day-tour-and-hike-combo/d5600-169760P14",
+          "title": "Private full day tour and hike combo.",
+          "experienceType": "hiking",
+          "priceFrom": 1395,
+          "categories": [
+            "Private Tours",
+            "Hiking Tours",
+            "Day Trips"
+          ],
+          "commercialTier": "premium",
+          "priority": 2
+        },
+        {
+          "productCode": "265766P59",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Two-Day-Private-Tour-and-Hike-in-Arches-and-Canyonlands/d5600-265766P59",
+          "title": "Arches & Canyonlands Two Day Private Tour & Hike",
+          "experienceType": "hiking",
+          "priceFrom": 1704.95,
+          "categories": [
+            "Private Tours",
+            "National Parks",
+            "Hiking Tours"
+          ],
+          "commercialTier": "premium",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "experienceType": "national-park-4x4",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "334588P4",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Sunset-Arches-National-Park-Pavement-Sights/d5600-334588P4",
+          "title": "3-Hours Sunset Arches National Park 4X4 and Highlights Tour",
+          "experienceType": "national-park-4x4",
+          "priceFrom": 204,
+          "categories": [
+            "National Parks",
+            "Sunset Tours",
+            "Sightseeing Tours"
+          ],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "experienceType": "multi-park-day",
+      "desiredCount": 1,
+      "candidates": [
+        {
+          "productCode": "18497P15",
+          "sourceUrl": "https://www.viator.com/tours/Moab/Discover-Moab-in-A-Day-Arches-Canyonlands-and-Dead-Horse-Pt/d5600-18497P15",
+          "title": "Discover 3 Moab Parks In 1 Day: Arches Canyonlands Dead Horse Pt",
+          "experienceType": "multi-park-day",
+          "priceFrom": 385,
+          "categories": [
+            "Day Trips",
+            "National Parks",
+            "Private Tours"
+          ],
+          "commercialTier": "premium",
+          "priority": 1
+        }
+      ]
+    }
+  ]
+}

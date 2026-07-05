@@ -77,6 +77,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "colorado",
     citySlug: "rocky-mountain-national-park",
   },
+  moab: {
+    destinationLabel: "Moab",
+    destinationCitySlug: "moab",
+    stateSlug: "utah",
+    citySlug: "moab",
+  },
 };
 
 export type Engine6DestinationInfrastructureReport = {

@@ -123,6 +123,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Moab",
+      matches: tour =>
+        /\/utah\/moab\//i.test(tour.canonicalPath) ||
+        (/\bmoab\b/i.test(tour.city) && /\butah\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Napa editorial narrative",
       matches: tour =>
         /\/napa\//i.test(tour.canonicalPath) || /\bnapa\b/i.test(tour.city),

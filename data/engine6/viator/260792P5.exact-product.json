@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "260792P5",
+    "productUrl": "https://www.viator.com/tours/Moab/ATV-Tour-and-Trail-Experience-in-Hells-Revenge-Sunset/d5600-260792P5",
+    "title": "You-Drive 4x4 UTV Adventure–Hell's Revenge & Fins N' Things, Moab",
+    "description": {
+      "text": "Take an adventurous ride into the sunset on a UTV (similar to an ATV) on the Hell's Revenge Trail. You'll pass petrified sand dunes and get the chance to take in great views of the surrounding canyons and rock formations as you zip over rough and slick terrains. Stops include Hells Revenge Safari Route. Best of all, you'll get to experience the thrill of driving yourself.Reservation is for one UTV, a single reservation is not a multiple vehicle reservation. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $260.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1391
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/bf/47/f8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Take an adventurous ride into the sunset on a UTV (similar to an ATV) on the Hell's Revenge Trail",
+      "You'll pass petrified sand dunes and get the chance to take in great views of the surrounding canyons and rock formation",
+      "Best of all, you'll get to experience the thrill of driving yourself.Reservation is for one UTV, a single reservation is",
+      "You-Drive 4x4 UTV Adventure–Hell's Revenge & Fins N' Things, Moab departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Take an adventurous ride into the sunset on a UTV (similar to an ATV) on the Hell's Revenge Trail.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hell's Revenge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the You-Drive 4x4 UTV Adventure–Hell's Revenge & Fins N' Things, Moab?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "ATV Tours"
+      },
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "Off-Road Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 260
+      },
+      "currency": "USD"
+    }
+  }
+}

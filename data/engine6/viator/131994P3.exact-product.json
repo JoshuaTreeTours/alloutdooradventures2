@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "131994P3",
+    "productUrl": "https://www.viator.com/tours/Moab/You-Drive-Hells-Revenge-UTV-Tour/d5600-131994P3",
+    "title": "YOU-DRIVE UTV Hell's Revenge 4x4 Off Roading Tour from Moab",
+    "description": {
+      "text": "Experience Utah's thrilling Hell's Revenge Trail on a UTV with this excursion. Traverse steep climbs and slick rock as you head to your destination—the Colorado River Overlook. Stops include Hell's Revenge, Colorado River. Transportation, safety gear, and local commentary are handled so you can focus on the red rock landscape. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "2 hours 45 minutes (approx.)",
+    "priceFrom": "From $95.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 974
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/f4/88/8c/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "YOU-DRIVE UTV Hell's Revenge 4x4 Off Roading Tour from Moab from Moab",
+      "Arches and Canyonlands red rock routing",
+      "Professional guide with local expertise",
+      "Small-group or private format as listed",
+      "Utah desert adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience Utah's thrilling Hell's Revenge Trail on a UTV with this excursion.",
+    "itineraryItems": [
+      {
+        "title": "Hell's Revenge",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Colorado River",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the YOU-DRIVE UTV Hell's Revenge 4x4 Off Roading Tour from Moab?",
+        "answer": "The planned duration is 2 hours 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "UTV Tours"
+      },
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Off-Road Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 95
+      },
+      "currency": "USD"
+    }
+  }
+}

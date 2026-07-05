@@ -21,6 +21,32 @@ import specimen7079rrebikePayload from "../../data/engine6/viator/7079RREBIKE.ex
 import specimen191767p5Payload from "../../data/engine6/viator/191767P5.exact-product.json";
 import specimen32779Payload from "../../data/engine6/viator/32779P2.exact-product.json";
 import specimen60136Payload from "../../data/engine6/viator/60136P1.exact-product.json";
+import specimen5555934p1Payload from "../../data/engine6/viator/5555934P1.exact-product.json";
+import specimen7016p4Payload from "../../data/engine6/viator/7016P4.exact-product.json";
+import specimen7016offroadPayload from "../../data/engine6/viator/7016OFFROAD.exact-product.json";
+import specimen22803p18Payload from "../../data/engine6/viator/22803P18.exact-product.json";
+import specimen132679p2Payload from "../../data/engine6/viator/132679P2.exact-product.json";
+import specimen5555934p2Payload from "../../data/engine6/viator/5555934P2.exact-product.json";
+import specimen22803p33Payload from "../../data/engine6/viator/22803P33.exact-product.json";
+import specimen6896moabcparkPayload from "../../data/engine6/viator/6896MOABCPARK.exact-product.json";
+import specimen349715p2Payload from "../../data/engine6/viator/349715P2.exact-product.json";
+import specimen458439p2Payload from "../../data/engine6/viator/458439P2.exact-product.json";
+import specimen334588p4Payload from "../../data/engine6/viator/334588P4.exact-product.json";
+import specimen132679p1Payload from "../../data/engine6/viator/132679P1.exact-product.json";
+import specimen6896moabaparkPayload from "../../data/engine6/viator/6896MOABAPARK.exact-product.json";
+import specimen349715p3Payload from "../../data/engine6/viator/349715P3.exact-product.json";
+import specimen349715p1Payload from "../../data/engine6/viator/349715P1.exact-product.json";
+import specimen18497p15Payload from "../../data/engine6/viator/18497P15.exact-product.json";
+import specimen16649p13Payload from "../../data/engine6/viator/16649P13.exact-product.json";
+import specimen131994p3Payload from "../../data/engine6/viator/131994P3.exact-product.json";
+import specimen334588p3Payload from "../../data/engine6/viator/334588P3.exact-product.json";
+import specimen252408p1Payload from "../../data/engine6/viator/252408P1.exact-product.json";
+import specimen349715p4Payload from "../../data/engine6/viator/349715P4.exact-product.json";
+import specimen16847p11Payload from "../../data/engine6/viator/16847P11.exact-product.json";
+import specimen260792p5Payload from "../../data/engine6/viator/260792P5.exact-product.json";
+import specimen165224p7Payload from "../../data/engine6/viator/165224P7.exact-product.json";
+import specimen169760p14Payload from "../../data/engine6/viator/169760P14.exact-product.json";
+import specimen265766p59Payload from "../../data/engine6/viator/265766P59.exact-product.json";
 import specimen6029yofwildPayload from "../../data/engine6/viator/6029YOFWILD.exact-product.json";
 import specimen6029wildsafPayload from "../../data/engine6/viator/6029WILDSAF.exact-product.json";
 import specimen15073p5Payload from "../../data/engine6/viator/15073P5.exact-product.json";
@@ -784,6 +810,162 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Las-Vegas/Antelope-Canyon-Horseshoe-Bend-Day-Tour-from-Las-Vegas/d684-60136P1",
     rawPayload: specimen60136Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5555934P1",
+    publicUrl: "https://www.viator.com/tours/Moab/Hells-Revenge-U-Drive-Off-road-Adventure-Tour-in-Moab/d5600-5555934P1",
+    rawPayload: specimen5555934p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7016P4",
+    publicUrl: "https://www.viator.com/tours/Moab/Arches-National-Park-Scenic-Tours-From-Moab/d5600-7016P4",
+    rawPayload: specimen7016p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7016OFFROAD",
+    publicUrl: "https://www.viator.com/tours/Moab/Hells-Revenge-4x4-Off-Roading-Tour-from-Moab/d5600-7016OFFROAD",
+    rawPayload: specimen7016offroadPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "22803P18",
+    publicUrl: "https://www.viator.com/tours/Moab/Moab-Rafting-Afternoon-1-2-Day-Trip/d5600-22803P18",
+    rawPayload: specimen22803p18Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "132679P2",
+    publicUrl: "https://www.viator.com/tours/Moab/Sunset-Tour-Moab-Off-road-and-Scenic-Backcountry/d5600-132679P2",
+    rawPayload: specimen132679p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5555934P2",
+    publicUrl: "https://www.viator.com/tours/Moab/CATACOMB-CAVES-U-Drive-4X4-UTV-Tour-in-Moab/d5600-5555934P2",
+    rawPayload: specimen5555934p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "22803P33",
+    publicUrl: "https://www.viator.com/tours/Moab/Arches-National-Park-Half-Day-Tour/d5600-22803P33",
+    rawPayload: specimen22803p33Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6896MOABCPARK",
+    publicUrl: "https://www.viator.com/tours/Moab/Canyonlands-National-Park-Half-Day-Tour-from-Moab/d5600-6896MOABCPARK",
+    rawPayload: specimen6896moabcparkPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "349715P2",
+    publicUrl: "https://www.viator.com/tours/Moab/High-Adventure-Hummer-Tour-on-Hells-Revenge/d5600-349715P2",
+    rawPayload: specimen349715p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "458439P2",
+    publicUrl: "https://www.viator.com/tours/Moab/Private-Photo-and-Hiking-tour-The-Windows-Section-Arches-NP/d5600-458439P2",
+    rawPayload: specimen458439p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "334588P4",
+    publicUrl: "https://www.viator.com/tours/Moab/Sunset-Arches-National-Park-Pavement-Sights/d5600-334588P4",
+    rawPayload: specimen334588p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "132679P1",
+    publicUrl: "https://www.viator.com/tours/Moab/Off-Road-and-Back-Country-Adventures/d5600-132679P1",
+    rawPayload: specimen132679p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6896MOABAPARK",
+    publicUrl: "https://www.viator.com/tours/Moab/Arches-National-Park-4x4-Adventure-from-Moab/d5600-6896MOABAPARK",
+    rawPayload: specimen6896moabaparkPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "349715P3",
+    publicUrl: "https://www.viator.com/tours/Moab/Sunset-Hells-Revenge-Hummer-Adventure/d5600-349715P3",
+    rawPayload: specimen349715p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "349715P1",
+    publicUrl: "https://www.viator.com/tours/Moab/Guided-U-Drive-Adventure-in-the-ALL-NEW-Can-Am-Commander/d5600-349715P1",
+    rawPayload: specimen349715p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "18497P15",
+    publicUrl: "https://www.viator.com/tours/Moab/Discover-Moab-in-A-Day-Arches-Canyonlands-and-Dead-Horse-Pt/d5600-18497P15",
+    rawPayload: specimen18497p15Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "16649P13",
+    publicUrl: "https://www.viator.com/tours/Moab/Moab-Daily-Half-Day-Trip/d5600-16649P13",
+    rawPayload: specimen16649p13Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "131994P3",
+    publicUrl: "https://www.viator.com/tours/Moab/You-Drive-Hells-Revenge-UTV-Tour/d5600-131994P3",
+    rawPayload: specimen131994p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "334588P3",
+    publicUrl: "https://www.viator.com/tours/Moab/Half-Day-Canyonlands-Backcountry-Tour/d5600-334588P3",
+    rawPayload: specimen334588p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "252408P1",
+    publicUrl: "https://www.viator.com/tours/Moab/Moabs-Most-Wanted-You-Drive-ATV-UTV-Adventure/d5600-252408P1",
+    rawPayload: specimen252408p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "349715P4",
+    publicUrl: "https://www.viator.com/tours/Moab/U-DRIVE-UTV-SUNSET-Guided-Adventure-on-Hells-Revenge/d5600-349715P4",
+    rawPayload: specimen349715p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "16847P11",
+    publicUrl: "https://www.viator.com/tours/Moab/Half-Day-Guided-Whitewater-Rafting-in-Moab/d5600-16847P11",
+    rawPayload: specimen16847p11Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "260792P5",
+    publicUrl: "https://www.viator.com/tours/Moab/ATV-Tour-and-Trail-Experience-in-Hells-Revenge-Sunset/d5600-260792P5",
+    rawPayload: specimen260792p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "165224P7",
+    publicUrl: "https://www.viator.com/tours/Moab/White-Water-Rafting-on-the-Moab-Daily-section-of-the-Colorado-River/d5600-165224P7",
+    rawPayload: specimen165224p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "169760P14",
+    publicUrl: "https://www.viator.com/tours/Moab/Private-full-day-tour-and-hike-combo/d5600-169760P14",
+    rawPayload: specimen169760p14Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "265766P59",
+    publicUrl: "https://www.viator.com/tours/Moab/Two-Day-Private-Tour-and-Hike-in-Arches-and-Canyonlands/d5600-265766P59",
+    rawPayload: specimen265766p59Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
     productCode: "6029YOFWILD",

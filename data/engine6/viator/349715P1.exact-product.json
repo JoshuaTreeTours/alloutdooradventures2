@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "349715P1",
+    "productUrl": "https://www.viator.com/tours/Moab/Guided-U-Drive-Adventure-in-the-ALL-NEW-Can-Am-Commander/d5600-349715P1",
+    "title": "Moab's #1 Rated Guided U-Drive Hell's Revenge Off-Road Tour",
+    "description": {
+      "text": "Join this group adventure that takes you along Moab's legendary Hell's Revenge trail by UTV. Drive your own vehicle, wearing your provided helmet and goggles for safety, and follow your guide through exhilarating rock climbs and stunning desert scenery. Stops include Hell's Revenge. Transportation, safety gear, and local commentary are handled so you can focus on the red rock landscape. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $99.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 157
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/77/59/4a/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Moab's #1 Rated Guided U-Drive Hell's Revenge Off-Road Tour from Moab",
+      "Arches and Canyonlands red rock routing",
+      "Professional guide with local expertise",
+      "Small-group or private format as listed",
+      "Utah desert adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Join this group adventure that takes you along Moab's legendary Hell's Revenge trail by UTV.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hell's Revenge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Moab's #1 Rated Guided U-Drive Hell's Revenge Off-Road Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "UTV Tours"
+      },
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "5555934P2",
+    "productUrl": "https://www.viator.com/tours/Moab/CATACOMB-CAVES-U-Drive-4X4-UTV-Tour-in-Moab/d5600-5555934P2",
+    "title": "BEST! Catacomb *CAVES* U-Drive 4X4 UTV Tour in Moab +Petroglyphs!",
+    "description": {
+      "text": "Catacomb Rock on Moab's Chicken Corners Trail is like a natural playground of hidden caves and twisting tunnels, carved by time into the red sandstone. Some passages wind deep into the rock, while others lead to secret openings with incredible desert views. Bring a flashlight—you never know what's around the next turn! Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $119.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 211
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/52/86/53.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Catacomb Rock on Moab's Chicken Corners Trail is like a natural playground of hidden caves and twisting tunnels, carved ",
+      "Some passages wind deep into the rock, while others lead to secret openings with incredible desert views",
+      "Bring a flashlight—you never know what's around the next turn!",
+      "BEST! Catacomb *CAVES* U-Drive 4X4 UTV Tour in Moab +Petroglyphs! departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Catacomb Rock on Moab's Chicken Corners Trail is like a natural playground of hidden caves and twisting tunnels, carved by time into the red sandstone.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hell's Revenge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the BEST! Catacomb *CAVES* U-Drive 4X4 UTV Tour in Moab +Petroglyphs!?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "UTV Tours"
+      },
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 119
+      },
+      "currency": "USD"
+    }
+  }
+}

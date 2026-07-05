@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "165224P7",
+    "productUrl": "https://www.viator.com/tours/Moab/White-Water-Rafting-on-the-Moab-Daily-section-of-the-Colorado-River/d5600-165224P7",
+    "title": "River Rafting, Moab Daily, Morning Tour",
+    "description": {
+      "text": "At Way to Moab, we take pride in exceeding industry standards for both safety and guest experience. Our professional guides are trained and certified in wilderness emergency medical care and bring a strong understanding of river safety, local conditions, and the unique landscapes of Canyon Country. Stops include Colorado Riverway Recreation Area. Just as importantly, they are passionate about sharing the river and creating a welcoming, relaxed environment for every guest.Our trips are designed to balance adventure and comfort. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 12
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/d6/3e/d8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "At Way to Moab, we take pride in exceeding industry standards for both safety and guest experience",
+      "Our professional guides are trained and certified in wilderness emergency medical care and bring a strong understanding ",
+      "Just as importantly, they are passionate about sharing the river and creating a welcoming, relaxed environment for every",
+      "River Rafting, Moab Daily, Morning Tour departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "At Way to Moab, we take pride in exceeding industry standards for both safety and guest experience.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Colorado River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Moab Daily Section",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Westwater Canyon",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the River Rafting, Moab Daily, Morning Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "River Rafting & Tubing"
+      },
+      {
+        "label": "White Water Rafting"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

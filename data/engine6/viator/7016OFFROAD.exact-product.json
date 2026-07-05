@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "7016OFFROAD",
+    "productUrl": "https://www.viator.com/tours/Moab/Hells-Revenge-4x4-Off-Roading-Tour-from-Moab/d5600-7016OFFROAD",
+    "title": "HIGHLY RATED U-DRIVE Moab Hell's Revenge UTV Off-Road Adventure",
+    "description": {
+      "text": "Add a little adrenaline to your vacation schedule with this supervised UTV ride around Hell's Revenge. Located just outside Moab, this slickrock trail features dramatic terrain, with steep climbs and descents. Stops include Moab Tourism Center, Hell's Revenge. Whilst you enjoy the thrills of the ride, there are plenty of opportunities to take in the La Sal Mountains, the Colorado River, and the cliffs of Echo Canyon. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $99.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 3312
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/41/de/34/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Add a little adrenaline to your vacation schedule with this supervised UTV ride around Hell's Revenge",
+      "Located just outside Moab, this slickrock trail features dramatic terrain, with steep climbs and descents",
+      "Whilst you enjoy the thrills of the ride, there are plenty of opportunities to take in the La Sal Mountains, the Colorad",
+      "HIGHLY RATED U-DRIVE Moab Hell's Revenge UTV Off-Road Adventure departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Add a little adrenaline to your vacation schedule with this supervised UTV ride around Hell's Revenge.",
+    "itineraryItems": [
+      {
+        "title": "Moab Tourism Center",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hell's Revenge",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the HIGHLY RATED U-DRIVE Moab Hell's Revenge UTV Off-Road Adventure?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Off-Road Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      },
+      "currency": "USD"
+    }
+  }
+}

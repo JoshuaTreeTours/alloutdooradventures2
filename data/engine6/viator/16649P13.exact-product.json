@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "16649P13",
+    "productUrl": "https://www.viator.com/tours/Moab/Moab-Daily-Half-Day-Trip/d5600-16649P13",
+    "title": "Moab Rivertrippers ~Rafting Castle Valley/Fisher Towers Half-Day",
+    "description": {
+      "text": "Raft the iconic Colorado River through Castle Valley, also known as the Fisher Towers section just outside Moab. This is the stretch every Moab rafting trip is built around, even if you see it called by different names. No matter the name, you are on the same legendary section of the Colorado River.Splash, laugh, and cool off as you move through a mix of calm sections and fun rapids. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "4 hours 30 minutes (approx.)",
+    "priceFrom": "From $109.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 39
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/b7/94/4c/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Raft the iconic Colorado River through Castle Valley, also known as the Fisher Towers section just outside Moab",
+      "This is the stretch every Moab rafting trip is built around, even if you see it called by different names",
+      "No matter the name, you are on the same legendary section of the Colorado River.Splash, laugh, and cool off as you move ",
+      "Moab Rivertrippers ~Rafting Castle Valley/Fisher Towers Half-Day departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Raft the iconic Colorado River through Castle Valley, also known as the Fisher Towers section just outside Moab.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Colorado River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Moab Daily Section",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Westwater Canyon",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Moab Rivertrippers ~Rafting Castle Valley/Fisher Towers Half-Day?",
+        "answer": "The planned duration is 4 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "River Rafting & Tubing"
+      },
+      {
+        "label": "Adventure Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 109
+      },
+      "currency": "USD"
+    }
+  }
+}

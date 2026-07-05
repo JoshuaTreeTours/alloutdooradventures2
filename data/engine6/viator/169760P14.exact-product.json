@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "169760P14",
+    "productUrl": "https://www.viator.com/tours/Moab/Private-full-day-tour-and-hike-combo/d5600-169760P14",
+    "title": "Private full day tour and hike combo.",
+    "description": {
+      "text": "From red rock formations to dinosaur tracks, Moab has so much to offer travelers—especially hikers. Take the stress out of researching and planning your own adventure by prebooking this Arches National Park Private Full-Day Tour and Hiking Experience. Stops include Arches National Park. You and your group of up to four will go on an off-road and hiking experience that's tailored to your interests and your skill level, too.Explore Moab off-road and hiking in Arches National Park A private experience is specifically catered to your interests and skill level No need to bring food—snacks are included This private hiking tour in Utah can be created for a group of up to four people Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $1395.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 35
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/25/cd/dc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "From red rock formations to dinosaur tracks, Moab has so much to offer travelers—especially hikers",
+      "Take the stress out of researching and planning your own adventure by prebooking this Arches National Park Private Full-",
+      "You and your group of up to four will go on an off-road and hiking experience that's tailored to your interests and your",
+      "Private full day tour and hike combo. departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "From red rock formations to dinosaur tracks, Moab has so much to offer travelers—especially hikers.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private full day tour and hike combo.?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1395
+      },
+      "currency": "USD"
+    }
+  }
+}

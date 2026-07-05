@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "6896MOABCPARK",
+    "productUrl": "https://www.viator.com/tours/Moab/Canyonlands-National-Park-Half-Day-Tour-from-Moab/d5600-6896MOABCPARK",
+    "title": "Canyonlands National Park Half-Day Tour from Moab",
+    "description": {
+      "text": "On this half-day 4WD adventure from Moab, explore the rugged, red stone interior of Canyonlands National Park, where you'll experience the beauty of the Island in the Sky district and the stunning Gooseneck Overlook. Your professional guide will navigate your vehicle down the switchbacks of White Rim Road, where you will not only see the remains of ancient Pueblo civilizations, but also admire the canyon walls that drop 1,000 feet (300m) down. Stops include Potash Road, Utah Scenic Byway 279 Rock Art Sites, Island in the Sky, Musselman Arch, Shafer Trail Viewpoint, Canyonlands National Park. Transportation, safety gear, and local commentary are handled so you can focus on the red rock landscape. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $240.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1115
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/43/71/1b/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Canyonlands National Park Half-Day Tour from Moab from Moab",
+      "Arches and Canyonlands red rock routing",
+      "Professional guide with local expertise",
+      "Small-group or private format as listed",
+      "Utah desert adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "On this half-day 4WD adventure from Moab, explore the rugged, red stone interior of Canyonlands National Park, where you'll experience the beauty of the Island in the Sky district and the stunning Gooseneck Overlook.",
+    "itineraryItems": [
+      {
+        "title": "Potash Road",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Utah Scenic Byway 279 Rock Art Sites",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Island in the Sky",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Musselman Arch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shafer Trail Viewpoint",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Canyonlands National Park Half-Day Tour from Moab?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 240
+      },
+      "currency": "USD"
+    }
+  }
+}

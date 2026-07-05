@@ -1,0 +1,131 @@
+{
+  "product": {
+    "productCode": "18497P15",
+    "productUrl": "https://www.viator.com/tours/Moab/Discover-Moab-in-A-Day-Arches-Canyonlands-and-Dead-Horse-Pt/d5600-18497P15",
+    "title": "Discover 3 Moab Parks In 1 Day: Arches Canyonlands Dead Horse Pt",
+    "description": {
+      "text": "Join the ORIGINAL Moab In A Day tour and take advantage of nearly a decade of experience delivering this expertly crafted adventure!Gaze across the towering cliffs of Park Avenue, step beneath the cathedral-like span of Double Arch, and wander through the hidden passageways of Sand Dune Arch. In the afternoon, immerse yourself in the vast panoramas of Canyonlands and Dead Horse Pt, where endless horizons unfold in every direction.Travel in small groups, out of the harsh sun and dust, in a closed, air-conditioned vehicle—with ample stops for unforgettable photos. Stops include Arches National Park, Arches National Park Scenic Drive, Balanced Rock Trail, Windows, Double Arch, Turret Arch. Each of our 5 highly interactive tour options reveals millions of years of geology, the delicate balance of desert ecology, and the rich cultural heritage of the region. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $385.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 353
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/17/fe/7b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Join the ORIGINAL Moab In A Day tour and take advantage of nearly a decade of experience delivering this expertly crafte",
+      "In the afternoon, immerse yourself in the vast panoramas of Canyonlands and Dead Horse Pt, where endless horizons unfold",
+      "Each of our 5 highly interactive tour options reveals millions of years of geology, the delicate balance of desert ecolo",
+      "Discover 3 Moab Parks In 1 Day: Arches Canyonlands Dead Horse Pt departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Join the ORIGINAL Moab In A Day tour and take advantage of nearly a decade of experience delivering this expertly crafted adventure!Gaze across the towering cliffs of Park Avenue, step beneath the cathedral-like span of Double Arch, and wander through the hidden passageways of Sand Dune Arch.",
+    "itineraryItems": [
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arches National Park Scenic Drive",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Balanced Rock Trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Windows",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Double Arch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Turret Arch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Park Avenue Trail",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Discover 3 Moab Parks In 1 Day: Arches Canyonlands Dead Horse Pt?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Private Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 385
+      },
+      "currency": "USD"
+    }
+  }
+}

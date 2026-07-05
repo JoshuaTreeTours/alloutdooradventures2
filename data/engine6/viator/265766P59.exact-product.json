@@ -1,0 +1,131 @@
+{
+  "product": {
+    "productCode": "265766P59",
+    "productUrl": "https://www.viator.com/tours/Moab/Two-Day-Private-Tour-and-Hike-in-Arches-and-Canyonlands/d5600-265766P59",
+    "title": "Arches & Canyonlands Two Day Private Tour & Hike",
+    "description": {
+      "text": "Experience Arches & Canyonlands with the undivided attention of our knowledgeable guides, devoted exclusively to your group. Over two days, you'll gain insights into the parks' rich natural history, geological wonders, and unique ecosystems, fostering a deeper connection with these extraordinary national treasures.Tailor your hiking experience to match your fitness and comfort level. Stops include Arches National Park, Upper Delicate Arch Viewpoint, Balanced Rock Trail, Double Arch, Sand Dune Arch Trail, Park Avenue Trail. Whether opting for a leisurely stroll or a challenging trail, each step is an opportunity to connect with the remarkable landscapes of Arches & Canyonlands National Parks.Relax in our private and comfortable transportation as we navigate Arches & Canyonlands' scenic wonders. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "2 days  (approx.)",
+    "priceFrom": "From $1704.95",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 9
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4d/2f/43.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Experience Arches & Canyonlands with the undivided attention of our knowledgeable guides, devoted exclusively to your gr",
+      "Over two days, you'll gain insights into the parks' rich natural history, geological wonders, and unique ecosystems, fos",
+      "Whether opting for a leisurely stroll or a challenging trail, each step is an opportunity to connect with the remarkable",
+      "Arches & Canyonlands Two Day Private Tour & Hike departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience Arches & Canyonlands with the undivided attention of our knowledgeable guides, devoted exclusively to your group.",
+    "itineraryItems": [
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Upper Delicate Arch Viewpoint",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Balanced Rock Trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Double Arch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sand Dune Arch Trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Park Avenue Trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mesa Arch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand View Point Overlook",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Arches & Canyonlands Two Day Private Tour & Hike?",
+        "answer": "The planned duration is 2 days ."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Hiking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1704.95
+      },
+      "currency": "USD"
+    }
+  }
+}
