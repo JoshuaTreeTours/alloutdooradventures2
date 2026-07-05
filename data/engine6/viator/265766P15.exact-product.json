@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "265766P15",
+    "productUrl": "https://www.viator.com/tours/Estes-Park/Private-Day-Tour-and-Hike-in-Rocky-Mountain-National-Park/d32992-265766P15",
+    "title": "Rocky Mountain Full Day Private Tour & Hike",
+    "description": {
+      "text": "Prepare for an awe-inspiring journey through the heart of Rocky Mountain National Park during its vibrant summer season. Marvel at expansive vistas, alpine lakes, and majestic cliffs set against lush greenery and endless blue skies. Whether you prefer a full-day hike, an adventurous trek with experienced guides, or a relaxed wildlife spotting expedition, our tours are customized to match your group's interests and abilities. Stops include Trail Ridge Road, Bear Lake, Forest Canyon Overlook, and Alpine Visitor Center. Timed-entry coordination, local commentary, and photo stops are handled so you can focus on Colorado's high-country scenery. Ideal for travelers basing in Estes Park or the Front Range who want a guided Rocky Mountain National Park outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Rocky Mountain National Park",
+      "state": "Colorado"
+    },
+    "duration": "6 to 8 hours (approx.)",
+    "priceFrom": "From $972.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 8
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/7c/6b/ca.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Rocky Mountain Full Day Private Tour & Hike in Rocky Mountain National Park",
+      "Trail Ridge Road and alpine lake routing",
+      "Professional guide with local RMNP expertise",
+      "Private or small-group format as listed",
+      "Colorado high-country wildlife and scenery"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Estes Park or Rocky Mountain National Park pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Prepare for an awe-inspiring journey through the heart of Rocky Mountain National Park during its vibrant summer season.",
+    "itineraryItems": [
+      {
+        "title": "Trail Ridge Road",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bear Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Moraine Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Forest Canyon Overlook",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Alpine Visitor Center",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Timed-entry reservation coordination when required"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Rocky Mountain Full Day Private Tour & Hike?",
+        "answer": "The planned duration is 6 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Rocky Mountain National Park?",
+        "answer": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 972
+      },
+      "currency": "USD"
+    }
+  }
+}

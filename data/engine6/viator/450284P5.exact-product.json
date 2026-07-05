@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "450284P5",
+    "productUrl": "https://www.viator.com/tours/Estes-Park/Wildside-4X4s-Rockn-Roller-Coaster-Tour/d32992-450284P5",
+    "title": "Thrilling Rock'n Roller Coaster Tour (Wildside 4x4 Tours)",
+    "description": {
+      "text": "Explore Colorado's mountainous landscape–and discover views from panoramic spots not accessible to most other visitors–on this 4WD adventure tour of the Roosevelt National Forest from Estes Park. Ride an open-air vehicle kitted out with adventure-ready equipment, navigate rugged terrain, and enjoy photo opportunities reachable only through boulder fields and steep climbs. Along the way, savor included snacks and drinks.Visit Roosevelt National Forest in a more adventurous way than other tours Ri Ideal for travelers basing in Estes Park or the Front Range who want a guided Rocky Mountain National Park outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Rocky Mountain National Park",
+      "state": "Colorado"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $124.99",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 143
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/d3/83/af.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore Colorado's mountainous landscape–and discover views from panoramic spots not accessible to most other visitors–o",
+      "Ride an open-air vehicle kitted out with adventure-ready equipment, navigate rugged terrain, and enjoy photo opportuniti",
+      "Along the way, savor included snacks and drinks.Visit Roosevelt National Forest in a more adventurous way than other tou",
+      "Thrilling Rock'n Roller Coaster Tour (Wildside 4x4 Tours) in Rocky Mountain National Park",
+      "Professional Estes Park or Colorado guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Estes Park or Rocky Mountain National Park pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore Colorado's mountainous landscape–and discover views from panoramic spots not accessible to most other visitors–on this 4WD adventure tour of the Roosevelt National Forest from Estes Park.",
+    "itineraryItems": [
+      {
+        "title": "Estes Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trail Ridge Road",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bear Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Alpine Visitor Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rocky Mountain National Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Timed-entry reservation coordination when required"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Thrilling Rock'n Roller Coaster Tour (Wildside 4x4 Tours)?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Rocky Mountain National Park?",
+        "answer": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 124.99
+      },
+      "currency": "USD"
+    }
+  }
+}

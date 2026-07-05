@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "366391P1",
+    "productUrl": "https://www.viator.com/tours/Rocky-Mountain-National-Park/Guided-Driving-or-Hiking-Tour-in-RMNP-4-Hour/d51194-366391P1",
+    "title": "Private Wildlife Driving Tour in Rocky Mountain National Park",
+    "description": {
+      "text": "Immerse yourself in Rocky Mountain National Park's spectacular landscape with miles of rugged mountains, sparkling lakes, and abundant wildlife. On this private tour, take a scenic drive along Trail Ridge Road and cover more ground in less time with a step-on guide. Stops include Bear Lake and alpine overlooks. A fully customized itinerary allows you to make stops for photo opportunities and hiking. Your step-on guide provides details on the park aboard your vehicle. Ideal for travelers basing in Estes Park or the Front Range who want a guided Rocky Mountain National Park outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Rocky Mountain National Park",
+      "state": "Colorado"
+    },
+    "duration": "4 to 8 hours (approx.)",
+    "priceFrom": "From $175.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 85
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/07/9c/b2/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Immerse yourself in Rocky Mountain National Park’s spectacular landscape with miles of rugged mountains, sparkling lakes",
+      "On this private tour, take a scenic drive and cover more ground in less time with a step-on guide",
+      "A fully customized itinerary allows you to make stops for photo opportunities and hiking.Your step-on guide provides det",
+      "Private Wildlife Driving Tour in Rocky Mountain National Park in Rocky Mountain National Park",
+      "Professional Estes Park or Colorado guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Estes Park or Rocky Mountain National Park pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Immerse yourself in Rocky Mountain National Park’s spectacular landscape with miles of rugged mountains, sparkling lakes, and abundant wildlife.",
+    "itineraryItems": [
+      {
+        "title": "Estes Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trail Ridge Road",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bear Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rocky Mountain National Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Timed-entry reservation coordination when required"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Wildlife Driving Tour in Rocky Mountain National Park?",
+        "answer": "The planned duration is 4 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Rocky Mountain National Park?",
+        "answer": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Wildlife Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 175
+      },
+      "currency": "USD"
+    }
+  }
+}

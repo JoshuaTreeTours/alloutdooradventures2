@@ -35,6 +35,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     "jackson-hole": ["Jackson Hole"],
     jackson: ["Jackson Hole"],
     wyoming: ["Jackson Hole"],
+    "rocky-mountain-national-park": ["Rocky Mountain National Park"],
+    colorado: ["Rocky Mountain National Park"],
     philadelphia: ["Philadelphia"],
     pennsylvania: ["Philadelphia"],
     "washington-dc": ["Washington, D.C."],

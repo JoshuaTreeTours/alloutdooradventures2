@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "264314P3",
+    "productUrl": "https://www.viator.com/tours/Estes-Park/RMNP-Bear-Lake-Corridor-Tour/d32992-264314P3",
+    "title": "RMNP: Bear Lake Corridor Tour",
+    "description": {
+      "text": "Discover one of Rocky Mountain National Park's most scenic corridors—and take the guesswork out of sightseeing—on this small-group tour from Estes Park, including your access pass. Take in picturesque views, pass by waterfalls, and look out for wildlife along the way. Stops include Sprague Lake, Bear Lake. Visit spots like Bear Lake, Moraine Park, and the Endovalley area, learn about nature, and hear insights from your guide.Bypass the Bear Lake Corridor crowds on a small-group tour from Estes Park Avoid multiple bookings with your R Ideal for travelers basing in Estes Park or the Front Range who want a guided Rocky Mountain National Park outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Rocky Mountain National Park",
+      "state": "Colorado"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $129.90",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 32
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/c6/1e/5e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover one of Rocky Mountain National Park's most scenic corridors—and take the guesswork out of sightseeing—on this s",
+      "Take in picturesque views, pass by waterfalls, and look out for wildlife along the way",
+      "Visit spots like Bear Lake, Moraine Park, and the Endovalley area, learn about nature, and hear insights from your guide",
+      "RMNP: Bear Lake Corridor Tour in Rocky Mountain National Park",
+      "Professional Estes Park or Colorado guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Estes Park or Rocky Mountain National Park pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover one of Rocky Mountain National Park's most scenic corridors—and take the guesswork out of sightseeing—on this small-group tour from Estes Park, including your access pass.",
+    "itineraryItems": [
+      {
+        "title": "Rocky Mountain National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sprague Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bear Lake",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Timed-entry reservation coordination when required"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the RMNP: Bear Lake Corridor Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Rocky Mountain National Park?",
+        "answer": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Scenic Drives"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 129.9
+      },
+      "currency": "USD"
+    }
+  }
+}

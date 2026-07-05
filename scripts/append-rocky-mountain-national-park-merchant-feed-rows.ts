@@ -1,0 +1,29 @@
+import { engine6ResolvedTours } from "../src/engine6/registry";
+import { appendMerchantFeedRowsWithImageGovernance } from "./lib/appendMerchantFeedRowsWithImageGovernance";
+import { ROCKY_MOUNTAIN_NATIONAL_PARK_VIATOR_PUBLIC_PRODUCT_CODES } from "../src/engine6/rockyMountainNationalParkViatorPublicRatings";
+
+const OUTPUT_PATH = "data/merchantFeed.csv";
+
+const tours = ROCKY_MOUNTAIN_NATIONAL_PARK_VIATOR_PUBLIC_PRODUCT_CODES.map(
+  productCode => {
+    const tour = engine6ResolvedTours.find(
+      entry => entry.productCode === productCode
+    );
+    if (!tour) {
+      throw new Error(
+        `Missing resolved Rocky Mountain National Park tour for ${productCode}`
+      );
+    }
+
+    return tour;
+  }
+);
+
+appendMerchantFeedRowsWithImageGovernance({
+  outputPath: OUTPUT_PATH,
+  tours,
+  destinationLabel: "Rocky Mountain National Park",
+}).catch(error => {
+  console.error(error);
+  process.exit(1);
+});

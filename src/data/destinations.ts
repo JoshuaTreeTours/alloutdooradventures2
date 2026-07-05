@@ -2613,6 +2613,78 @@ Denver, Boulder, Colorado Springs, Fort Collins, and Durango make reliable basec
         ],
       },
       {
+        name: "Rocky Mountain National Park",
+        slug: "rocky-mountain-national-park",
+        stateSlug: "colorado",
+        region: "Northern Front Range",
+        lat: 40.3428,
+        lng: -105.6836,
+        shortDescription:
+          "Alpine peaks, Trail Ridge Road, wildlife meadows, and Estes Park gateway tours.",
+        intro:
+          "Rocky Mountain National Park protects Colorado's high-country spine—Trail Ridge Road, Bear Lake, alpine tundra, and elk-filled meadows anchored by Estes Park.",
+        heroImages: [
+          "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/92/85/fc.jpg",
+        ],
+        activityTags: ["hiking", "wildlife", "scenic-drives"],
+        whereItIs: [
+          "Rocky Mountain National Park sits west of Estes Park on the Northern Front Range, about 90 minutes from Denver.",
+          "Trail Ridge Road crosses the Continental Divide when seasonal conditions allow, linking east-side meadows to Grand Lake.",
+        ],
+        experiences: {
+          mountains:
+            "Hike Bear Lake, Dream Lake, and Wild Basin waterfalls with certified guides.",
+          lakesWater:
+            "Alpine lakes and cascading streams frame many RMNP trailheads and photo stops.",
+          desertForest:
+            "Montane forests, subalpine meadows, and tundra ecosystems change quickly with elevation.",
+          cycling: "Estes Park valley paths complement car-based park touring.",
+          scenicDrives:
+            "Trail Ridge Road and Old Fall River Road deliver iconic Colorado overlooks.",
+          seasonalNotes:
+            "Summer and early fall offer the best trail access; winter brings snowshoe and wildlife tours.",
+        },
+        thingsToDo: [
+          "Book a private wildlife driving tour at dawn or dusk.",
+          "Drive Trail Ridge Road to the Alpine Visitor Center.",
+          "Hike Bear Lake or Wild Basin with a local guide.",
+          "Join a sunrise or photography tour along the Continental Divide.",
+          "Explore Estes Park before or after a full-day RMNP outing.",
+        ],
+        toursCopy: [
+          "Private and small-group tours help you navigate timed-entry reservations and wildlife viewing windows.",
+          "Estes Park outfitters run Jeep, hiking, photography, and snowshoe tours year-round.",
+          "Full-day tours combine Trail Ridge Road, Bear Lake, and Grand Lake routing.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: sunrise wildlife tour in RMNP.",
+            "Afternoon: Bear Lake corridor hike.",
+            "Evening: sunset photo stop on Trail Ridge Road.",
+          ],
+          dayTwo: [
+            "Morning: Old Fall River Road or Grand Lake loop.",
+            "Afternoon: Estes Park downtown stroll.",
+            "Evening: stargazing tour when conditions allow.",
+          ],
+        },
+        gettingThere: [
+          "Denver International Airport is about 90 minutes from Estes Park; regional flights also serve nearby Front Range airports.",
+        ],
+        faq: [
+          {
+            question: "Do I need a timed-entry reservation for Rocky Mountain National Park?",
+            answer:
+              "Timed-entry reservations are required during peak season; many guided tours include reservation coordination.",
+          },
+          {
+            question: "Is Estes Park a good base for RMNP tours?",
+            answer:
+              "Yes. Estes Park sits at the east gateway and most outfitters meet guests there before entering the park.",
+          },
+        ],
+      },
+      {
         name: "Boulder",
         slug: "boulder",
         stateSlug: "colorado",

@@ -49,6 +49,9 @@ export const ENGINE6_BOSTON_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_PHILADELPHIA_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/f2/57.jpg";
 
+export const ENGINE6_RMNP_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/92/85/fc.jpg";
+
 type Engine6HeroCandidateTour = {
   productCode: string;
   heroImageUrl?: string | null;
@@ -85,6 +88,9 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   pennsylvania: {
     philadelphia: ENGINE6_PHILADELPHIA_CANONICAL_CITY_HERO_URL,
+  },
+  colorado: {
+    "rocky-mountain-national-park": ENGINE6_RMNP_CANONICAL_CITY_HERO_URL,
   },
 };
 
