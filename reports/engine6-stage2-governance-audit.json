@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T16:40:53.717Z",
+  "generatedAt": "2026-07-05T18:15:54.929Z",
   "governanceMode": "audit",
   "mode": "pr-scoped",
   "scopedProductCodes": [],
@@ -10,7 +10,7 @@
   "totals": {
     "blockingFindings": 0,
     "warningFindings": 0,
-    "legacyFindings": 1443,
+    "legacyFindings": 1444,
     "areasAudited": 12,
     "areasPassed": 12
   },
@@ -47,7 +47,7 @@
       "area": "description-title",
       "blockingCount": 0,
       "warningCount": 0,
-      "legacyCount": 48,
+      "legacyCount": 49,
       "pass": true
     },
     {
@@ -5773,6 +5773,12 @@
     },
     {
       "area": "description-title",
+      "productCode": "42627P1",
+      "message": "merchant feed description does not match governed editorial description",
+      "severity": "legacy"
+    },
+    {
+      "area": "description-title",
       "productCode": "288166P2",
       "message": "schema description retains supplier marketing boilerplate",
       "severity": "legacy"
@@ -8770,14 +8776,14 @@
     "credentialsRequired": false,
     "credentialsAvailable": false,
     "scopedProductCodes": [],
-    "validatedAt": "2026-07-05T16:40:48.689Z",
+    "validatedAt": "2026-07-05T18:15:49.640Z",
     "results": [],
     "failures": [],
     "blockingFailures": [],
     "legacyFailures": []
   },
   "merchantFeedImage": {
-    "imagesValidated": 491,
+    "imagesValidated": 513,
     "automaticallyRepaired": 3,
     "requiringFallback": 3,
     "unrecoverableFailures": 0,
@@ -8785,6 +8791,12 @@
     "informationalLegacyInvalidImages": 0,
     "informationalLegacyProductCodes": [],
     "invalidUrlsReported": [
+      {
+        "productCode": "6004PRHIKE",
+        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/54/6a.jpg",
+        "reason": "http-error",
+        "status": 404
+      },
       {
         "productCode": "7011P8",
         "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/52/0f.jpg",
@@ -8794,12 +8806,6 @@
       {
         "productCode": "69029P14",
         "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/6d/d8.jpg",
-        "reason": "http-error",
-        "status": 404
-      },
-      {
-        "productCode": "6004PRHIKE",
-        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/54/6a.jpg",
         "reason": "http-error",
         "status": 404
       }
@@ -8815,7 +8821,7 @@
   "destinationInfrastructure": [],
   "paragonBuildScope": {
     "moduleId": "engine6-paragon-build-scope-governance",
-    "generatedAt": "2026-07-05T16:40:53.716Z",
+    "generatedAt": "2026-07-05T18:15:54.928Z",
     "pass": true,
     "branchScopedProductCodes": [],
     "blockedFiles": [],
@@ -8837,7 +8843,7 @@
       "stopped": false,
       "reason": null,
       "cycleCount": 0,
-      "elapsedMs": 1
+      "elapsedMs": 0
     },
     "idempotency": {
       "pass": true,

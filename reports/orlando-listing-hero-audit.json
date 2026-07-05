@@ -1,0 +1,169 @@
+{
+  "generatedAt": "2026-07-05T18:17:00.000Z",
+  "destination": "Orlando, Florida",
+  "canonicalCityHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ad/2c/65.jpg",
+  "uniqueListingHeroCount": 22,
+  "productCount": 22,
+  "cards": [
+    {
+      "productCode": "3170P78",
+      "title": "Kennedy Space Center All Inclusive Small Group VIP Experience",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/49/08/6b.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "331790P2",
+      "title": "Orlando City Lights and Fireworks Premier Helicopter Tour",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/fe/13/bc.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media (Browser MCP)"
+    },
+    {
+      "productCode": "42054P2",
+      "title": "Private Helicopter After-hours 48 Miles Tour Theme Parks&Downtown",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/0a/08/32.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "3170P51",
+      "title": "Kennedy Space Center with Airboat Ride Swamp Boat",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/49/08/5d.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "42054P4",
+      "title": "Day Flight 48 Miles Helicopter Tour over Theme Parks & Downtown",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/1f/b9/e3.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media (Browser MCP)"
+    },
+    {
+      "productCode": "3170P40",
+      "title": "Manatee Snorkeling Adventure Tour with Lunch & Hotel Pickup",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/21/b1.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "123164P1",
+      "title": "Clear Kayak Tours in Rock Springs",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/05/44/5b.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "120040P3",
+      "title": "Orlando Dune Buggy Tour",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/c7/26/6a.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "317042",
+      "title": "Saint Augustine Day Trip from Orlando",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/05/44/5b.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "3170P41",
+      "title": "Clearwater Beach Day Trip from Orlando with Upgrade Options",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f1/31/8d.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media (Browser MCP)"
+    },
+    {
+      "productCode": "42054P5",
+      "title": "Take a thrilling 85 Miles Private Helicopter Tour to Space Coast",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/2f/c8/75/caption.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media (Browser MCP og:image)"
+    },
+    {
+      "productCode": "3170P32",
+      "title": "Kennedy Space Center with Transport from Orlando and Kissimmee",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ad/2c/65.jpg",
+      "matchesCanonicalCityHero": true,
+      "heroSource": "verified Viator product og:image (same asset as Orlando canonical city hero; not a listing-path fallback)"
+    },
+    {
+      "productCode": "42627P1",
+      "title": "90 minute Everglades Airboat Tour near Orlando Florida",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/e2/59/0f.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "5580079P3",
+      "title": "Speakeasy Murder Mystery Dinner Show in Orlando",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/8f/1d/fc.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "109065P4",
+      "title": "Silver Springs Clear Kayak Manatee, Monkey & Wildlife Adventures",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/70/ba/2b.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "105290P7",
+      "title": "Clear Kayak or Paddleboard Manatee Adventure",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/0b/7f/54.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "58194P1",
+      "title": "Horseback Ride on Scenic Lake Louisa Trails",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/40/a7/4d.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "39750P18",
+      "title": "Silver Springs Clear Kayak Tour – Manatees & Monkeys Tour",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/f8/a3/10/caption.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "37177P6",
+      "title": "Orlando Polynesian Fire Luau and Dinner Show Experience",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/ea/b0/1f.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "5039P5",
+      "title": "One-Hour Airboat Ride Near Orlando",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/3b/a3/d8.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "53748P4",
+      "title": "Orlando Tree Trek Adventure Park",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/3c/9e/e8.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    },
+    {
+      "productCode": "357987P1",
+      "title": "Florida Bioluminescent Kayak & Paddle Board Adventure",
+      "listingHeroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/0f/ba/84.jpg",
+      "matchesCanonicalCityHero": false,
+      "heroSource": "verified Viator product media"
+    }
+  ],
+  "canonicalUrlCollisionProducts": [
+    {
+      "productCode": "3170P32",
+      "reason": "Live Viator og:image for Kennedy Space Center transport tour uses the same KSC rocket-launch media asset selected as Orlando canonical city hero; listing path still resolves product.media.images[0], not displayHero city fallback."
+    }
+  ]
+}

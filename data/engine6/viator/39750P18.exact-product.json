@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "39750P18",
+    "productUrl": "https://www.viator.com/tours/Orlando/Manatees-Monkeys-and-Florida-Natural-Spring-Adventure-Tour/d663-39750P18",
+    "title": "Silver Springs Clear Kayak Tour – Manatees & Monkeys Tour",
+    "description": {
+      "text": "Discover a side of Florida away from the theme parks–and enjoy a more active experience than on many other tours–on this stand-up paddleboard (SUP) and kayak adventure for beginners and experts alike, complete with wildlife spotting. Start with a lesson and hear facts about the local ecosystem before heading into the clear waters of a natural spring to spot monkeys, manatees, otters, turtles, and more.Go beyond sightseeing and kayak or paddleboard in a Florida natural spring Discover a unique ecosystem of monkeys, manatees, and other species Learn new skills–or sharpen existing ones–during an Transportation, equipment, and local commentary are handled so you can focus on Central Florida's wildlife, coastlines, and space-coast sights. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $75.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 112
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/f8/a3/10/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Silver Springs Clear Kayak Tour – Manatees & Monkeys Tour from Orlando",
+      "Kennedy Space Center, Everglades, or Gulf Coast routing",
+      "Professional guide with Central Florida expertise",
+      "Small-group or private format as listed",
+      "Orlando wildlife, coast, or space-coast experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover a side of Florida away from the theme parks–and enjoy a more active experience than on many other tours–on this stand-up paddleboard (SUP) and kayak adventure for beginners and experts alike, complete with wildlife spotting.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Silver Springs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rock Springs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rainbow Springs",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Silver Springs Clear Kayak Tour – Manatees & Monkeys Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 75
+      },
+      "currency": "USD"
+    }
+  }
+}

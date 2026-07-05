@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "317042",
+    "productUrl": "https://www.viator.com/tours/Orlando/Saint-Augustine-Day-Trip-from-Orlando/d663-317042",
+    "title": "Day Trip to Historic St. Augustine from Orlando with Hotel Pickup",
+    "description": {
+      "text": "Step back in time with a visit to enchanting St Augustine — one of America’s oldest towns — on this full-day tour from Orlando. This 10-hour excursion arrives in St Augustine by mid-morning, giving you hours to spend on your favorite activities. Stroll along cobbled pathways, admire Spanish Colonial architecture, indulge in delicious seafood at a waterside restaurant, see historic landmarks, and add on an optional sightseeing cruise or trolley tour.10-hour trip to St Augustine from Orlando Explore and enjoy a relaxing lunch in colonial St Augustine, self-proclaimed oldest city in the US! Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $100.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 252
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/05/44/5b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Step back in time with a visit to enchanting St Augustine — one of America’s oldest towns — on this full-day tour from O",
+      "This 10-hour excursion arrives in St Augustine by mid-morning, giving you hours to spend on your favorite activities",
+      "Stroll along cobbled pathways, admire Spanish Colonial architecture, indulge in delicious seafood at a waterside restaur",
+      "Day Trip to Historic St. Augustine from Orlando with Hotel Pickup departing from the Orlando area",
+      "Professional Orlando-area guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Step back in time with a visit to enchanting St Augustine — one of America’s oldest towns — on this full-day tour from Orlando.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Clearwater Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Clearwater Beach Marina",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gulf of Mexico",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Day Trip to Historic St. Augustine from Orlando with Hotel Pickup?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 100
+      },
+      "currency": "USD"
+    }
+  }
+}

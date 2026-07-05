@@ -330,6 +330,79 @@ export const ENGINE6_KEY_WEST_2642P16_PRODUCT_CODE = "2642P16";
 export const ENGINE6_KEY_WEST_2642P16_ROUTE =
   "/destinations/florida/key-west/tours/parasailing-in-key-west-at-smathers-beach-2642P16";
 
+export const ENGINE6_ORLANDO_3170P78_PRODUCT_CODE = "3170P78";
+export const ENGINE6_ORLANDO_3170P78_ROUTE =
+  "/destinations/florida/orlando/tours/kennedy-space-center-all-inclusive-small-group-vip-expe-3170P78";
+export const ENGINE6_ORLANDO_331790P2_PRODUCT_CODE = "331790P2";
+export const ENGINE6_ORLANDO_331790P2_ROUTE =
+  "/destinations/florida/orlando/tours/orlando-city-lights-and-fireworks-premier-helicopter-to-331790P2";
+export const ENGINE6_ORLANDO_42054P2_PRODUCT_CODE = "42054P2";
+export const ENGINE6_ORLANDO_42054P2_ROUTE =
+  "/destinations/florida/orlando/tours/private-helicopter-after-hours-48-miles-tour-theme-park-42054P2";
+export const ENGINE6_ORLANDO_3170P51_PRODUCT_CODE = "3170P51";
+export const ENGINE6_ORLANDO_3170P51_ROUTE =
+  "/destinations/florida/orlando/tours/kennedy-space-center-with-airboat-ride-swamp-boat-3170P51";
+export const ENGINE6_ORLANDO_42054P4_PRODUCT_CODE = "42054P4";
+export const ENGINE6_ORLANDO_42054P4_ROUTE =
+  "/destinations/florida/orlando/tours/day-flight-48-miles-helicopter-tour-over-theme-parks-do-42054P4";
+export const ENGINE6_ORLANDO_3170P40_PRODUCT_CODE = "3170P40";
+export const ENGINE6_ORLANDO_3170P40_ROUTE =
+  "/destinations/florida/orlando/tours/manatee-snorkeling-adventure-tour-with-lunch-hotel-pick-3170P40";
+export const ENGINE6_ORLANDO_123164P1_PRODUCT_CODE = "123164P1";
+export const ENGINE6_ORLANDO_123164P1_ROUTE =
+  "/destinations/florida/orlando/tours/rock-springs-2-hour-glass-bottom-guided-kayak-eco-tour-123164P1";
+export const ENGINE6_ORLANDO_120040P3_PRODUCT_CODE = "120040P3";
+export const ENGINE6_ORLANDO_120040P3_ROUTE =
+  "/destinations/florida/orlando/tours/orlando-dune-buggy-tour-120040P3";
+export const ENGINE6_ORLANDO_317042_PRODUCT_CODE = "317042";
+export const ENGINE6_ORLANDO_317042_ROUTE =
+  "/destinations/florida/orlando/tours/day-trip-to-historic-st-augustine-from-orlando-with-hot-317042";
+export const ENGINE6_ORLANDO_3170P41_PRODUCT_CODE = "3170P41";
+export const ENGINE6_ORLANDO_3170P41_ROUTE =
+  "/destinations/florida/orlando/tours/clearwater-beach-day-trip-from-orlando-with-upgrade-opt-3170P41";
+export const ENGINE6_ORLANDO_42054P5_PRODUCT_CODE = "42054P5";
+export const ENGINE6_ORLANDO_42054P5_ROUTE =
+  "/destinations/florida/orlando/tours/take-a-thrilling-85-miles-private-helicopter-tour-to-sp-42054P5";
+export const ENGINE6_ORLANDO_3170P32_PRODUCT_CODE = "3170P32";
+export const ENGINE6_ORLANDO_3170P32_ROUTE =
+  "/destinations/florida/orlando/tours/kennedy-space-center-with-transport-from-orlando-and-ki-3170P32";
+export const ENGINE6_ORLANDO_42627P1_PRODUCT_CODE = "42627P1";
+export const ENGINE6_ORLANDO_42627P1_ROUTE =
+  "/destinations/florida/orlando/tours/90-minute-everglades-airboat-tour-near-orlando-florida-42627P1";
+export const ENGINE6_ORLANDO_5580079P3_PRODUCT_CODE = "5580079P3";
+export const ENGINE6_ORLANDO_5580079P3_ROUTE =
+  "/destinations/florida/orlando/tours/speakeasy-murder-mystery-dinner-show-in-orlando-5580079P3";
+export const ENGINE6_ORLANDO_109065P4_PRODUCT_CODE = "109065P4";
+export const ENGINE6_ORLANDO_109065P4_ROUTE =
+  "/destinations/florida/orlando/tours/silver-springs-clear-kayak-manatee-monkey-wildlife-adve-109065P4";
+export const ENGINE6_ORLANDO_105290P7_PRODUCT_CODE = "105290P7";
+export const ENGINE6_ORLANDO_105290P7_ROUTE =
+  "/destinations/florida/orlando/tours/clear-kayak-or-paddleboard-manatee-adventure-105290P7";
+export const ENGINE6_ORLANDO_58194P1_PRODUCT_CODE = "58194P1";
+export const ENGINE6_ORLANDO_58194P1_ROUTE =
+  "/destinations/florida/orlando/tours/horseback-ride-on-scenic-lake-louisa-trails-58194P1";
+export const ENGINE6_ORLANDO_39750P18_PRODUCT_CODE = "39750P18";
+export const ENGINE6_ORLANDO_39750P18_ROUTE =
+  "/destinations/florida/orlando/tours/silver-springs-clear-kayak-tour-manatees-monkeys-tour-39750P18";
+export const ENGINE6_ORLANDO_37177P6_PRODUCT_CODE = "37177P6";
+export const ENGINE6_ORLANDO_37177P6_ROUTE =
+  "/destinations/florida/orlando/tours/orlando-polynesian-fire-luau-and-dinner-show-experience-37177P6";
+export const ENGINE6_ORLANDO_5039P5_PRODUCT_CODE = "5039P5";
+export const ENGINE6_ORLANDO_5039P5_ROUTE =
+  "/destinations/florida/orlando/tours/one-hour-airboat-ride-near-orlando-5039P5";
+export const ENGINE6_ORLANDO_53748P4_PRODUCT_CODE = "53748P4";
+export const ENGINE6_ORLANDO_53748P4_ROUTE =
+  "/destinations/florida/orlando/tours/orlando-tree-trek-adventure-park-53748P4";
+export const ENGINE6_ORLANDO_357987P1_PRODUCT_CODE = "357987P1";
+export const ENGINE6_ORLANDO_357987P1_ROUTE =
+  "/destinations/florida/orlando/tours/florida-bioluminescent-kayak-paddle-board-adventure-357987P1";
+
+export const ENGINE6_ORLANDO_TOUR_PATH_PREFIX =
+  "/destinations/florida/orlando/tours/";
+
+export const isEngine6OrlandoTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_ORLANDO_TOUR_PATH_PREFIX);
+
 export const ENGINE6_KEY_WEST_TOUR_PATH_PREFIX =
   "/destinations/florida/key-west/tours/";
 
@@ -1904,7 +1977,95 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_LOS_ANGELES_HOLLYWOOD_HILLS_HIKING_ROUTE,
     ENGINE6_LOS_ANGELES_HOLLYWOOD_HILLS_HIKING_PRODUCT_CODE,
   ],
-    [
+      [
+    ENGINE6_ORLANDO_3170P78_ROUTE,
+    ENGINE6_ORLANDO_3170P78_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_331790P2_ROUTE,
+    ENGINE6_ORLANDO_331790P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_42054P2_ROUTE,
+    ENGINE6_ORLANDO_42054P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_3170P51_ROUTE,
+    ENGINE6_ORLANDO_3170P51_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_42054P4_ROUTE,
+    ENGINE6_ORLANDO_42054P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_3170P40_ROUTE,
+    ENGINE6_ORLANDO_3170P40_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_123164P1_ROUTE,
+    ENGINE6_ORLANDO_123164P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_120040P3_ROUTE,
+    ENGINE6_ORLANDO_120040P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_317042_ROUTE,
+    ENGINE6_ORLANDO_317042_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_3170P41_ROUTE,
+    ENGINE6_ORLANDO_3170P41_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_42054P5_ROUTE,
+    ENGINE6_ORLANDO_42054P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_3170P32_ROUTE,
+    ENGINE6_ORLANDO_3170P32_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_42627P1_ROUTE,
+    ENGINE6_ORLANDO_42627P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_5580079P3_ROUTE,
+    ENGINE6_ORLANDO_5580079P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_109065P4_ROUTE,
+    ENGINE6_ORLANDO_109065P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_105290P7_ROUTE,
+    ENGINE6_ORLANDO_105290P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_58194P1_ROUTE,
+    ENGINE6_ORLANDO_58194P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_39750P18_ROUTE,
+    ENGINE6_ORLANDO_39750P18_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_37177P6_ROUTE,
+    ENGINE6_ORLANDO_37177P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_5039P5_ROUTE,
+    ENGINE6_ORLANDO_5039P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_53748P4_ROUTE,
+    ENGINE6_ORLANDO_53748P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ORLANDO_357987P1_ROUTE,
+    ENGINE6_ORLANDO_357987P1_PRODUCT_CODE,
+  ],
+[
     ENGINE6_KEY_WEST_331502P3_ROUTE,
     ENGINE6_KEY_WEST_331502P3_PRODUCT_CODE,
   ],

@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "37177P6",
+    "productUrl": "https://www.viator.com/tours/Orlando/Polynesian-Fire-Luau-at-the-Orlando-Forum/d663-37177P6",
+    "title": "Orlando Polynesian Fire Luau and Dinner Show Experience",
+    "description": {
+      "text": "Escape to Polynesia in air conditioned comfort. Polynesian fire Is an amazing luau dinner show experience that you and your family will not soon forget. Enjoy our live band serenading you will you dine on our buffet dinner. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $74.54",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 367
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/ea/b0/1f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Escape to Polynesia in air conditioned comfort",
+      "Polynesian fire Is an amazing luau dinner show experience that you and your family will not soon forget",
+      "Enjoy our live band serenading you will you dine on our buffet dinner",
+      "Orlando Polynesian Fire Luau and Dinner Show Experience departing from the Orlando area",
+      "Professional Orlando-area guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Escape to Polynesia in air conditioned comfort.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boggy Creek Airboat Adventures",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Everglades National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Johns River",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Orlando Polynesian Fire Luau and Dinner Show Experience?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Family-friendly Shows "
+      },
+      {
+        "label": "Family-friendly Shows"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 74.54
+      },
+      "currency": "USD"
+    }
+  }
+}

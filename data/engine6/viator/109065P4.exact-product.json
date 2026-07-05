@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "109065P4",
+    "productUrl": "https://www.viator.com/tours/Orlando/Silver-Springs-Clear-Kayaking-and-Paddle-Boarding/d663-109065P4",
+    "title": "Silver Springs Clear Kayak Manatee, Monkey & Wildlife Adventures",
+    "description": {
+      "text": "On this kayaking tour, you can look out for a variety of local wildlife, including manatees, monkeys, and birds. The all-clear kayak option provides an immersive experience, allowing you to see the underwater world clearly as you paddle. Transportation, equipment, and local commentary are handled so you can focus on Central Florida's wildlife, coastlines, and space-coast sights. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $80.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 602
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/70/ba/2b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Silver Springs Clear Kayak Manatee, Monkey & Wildlife Adventures from Orlando",
+      "Kennedy Space Center, Everglades, or Gulf Coast routing",
+      "Professional guide with Central Florida expertise",
+      "Small-group or private format as listed",
+      "Orlando wildlife, coast, or space-coast experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "On this kayaking tour, you can look out for a variety of local wildlife, including manatees, monkeys, and birds.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Silver Springs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rock Springs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rainbow Springs",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Silver Springs Clear Kayak Manatee, Monkey & Wildlife Adventures?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 80
+      },
+      "currency": "USD"
+    }
+  }
+}

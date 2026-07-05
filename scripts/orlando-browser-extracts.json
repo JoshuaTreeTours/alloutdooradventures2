@@ -1,0 +1,58 @@
+[
+  {
+    "productCode": "3170P41",
+    "productUrl": "https://www.viator.com/tours/Orlando/Clearwater-Beach-Day-Trip-from-Orlando-with-Optional-Upgrades/d663-3170P41",
+    "title": "Clearwater Beach Day Trip from Orlando with Upgrade Options",
+    "priceFrom": "From $100.00",
+    "rating": 4.7,
+    "reviewCount": 153,
+    "duration": "11 hours (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f1/31/8d.jpg",
+    "overview": "Explore Clearwater Beach on a day trip from Orlando. Choose from a variety of activities to spend your day. Popular choice with kids and families. Round-trip transfers from central meeting points is included.",
+    "itineraryStops": ["Clearwater Beach", "Clearwater Beach Marina", "Captain Memo's Pirate Cruise", "Clearwater Marine Aquarium"],
+    "categories": ["Day Trips"],
+    "preferred": true
+  },
+  {
+    "productCode": "331790P2",
+    "productUrl": "https://www.viator.com/tours/Orlando/Experience-a-Once-in-a-Lifetime-Aerial-Adventure-over-Orlando/d663-331790P2",
+    "title": "Orlando City Lights and Fireworks Premier Helicopter Tour",
+    "priceFrom": "From $334.00",
+    "rating": 5.0,
+    "reviewCount": 1,
+    "duration": "25 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/fe/13/bc.jpg",
+    "overview": "Experience Orlando after dark from a premier helicopter flight with city lights, theme-park skylines, and seasonal fireworks views when schedules allow. Digital photo package included.",
+    "itineraryStops": ["Downtown Orlando", "Disney Springs", "Gaylord Palms Resort & Convention Center"],
+    "categories": ["Private and Luxury", "Helicopter Tours"],
+    "preferred": true
+  },
+  {
+    "productCode": "42054P4",
+    "productUrl": "https://www.viator.com/tours/Orlando/Helicopter-Day-Tour-Orlando-Theme-Parks-31miles-or-48miles/d663-42054P4",
+    "title": "Day Flight 48 Miles Helicopter Tour over Theme Parks & Downtown",
+    "priceFrom": "From $207.90",
+    "rating": 5.0,
+    "reviewCount": 22,
+    "duration": "28 to 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/1f/b9/e3.jpg",
+    "overview": "Fly over Orlando and its famous theme parks by helicopter. A chance to see the US's most popular theme parks from a different perspective. Private tour: your group enjoys the ride on your own with in-flight commentary.",
+    "itineraryStops": ["MaxFlight Helicopter Services Inc.", "Universal Studios Florida", "Magic Kingdom Park", "Epcot", "Disney Springs", "Lake Eola Park", "ICON Park"],
+    "categories": ["Private and Luxury", "Helicopter Tours"],
+    "preferred": true
+  },
+  {
+    "productCode": "42054P5",
+    "productUrl": "https://www.viator.com/tours/Orlando/Take-a-thrilling-1-hour-Helicopter-Ride-to-the-Space-Cost/d663-42054P5",
+    "title": "Take a thrilling 85 Miles Private Helicopter Tour to Space Coast",
+    "priceFrom": "From $446.25",
+    "rating": null,
+    "reviewCount": 178,
+    "duration": "1 hour 10 minutes to 1 hour 30 minutes (approx.)",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/2f/c8/75/caption.jpg",
+    "overview": "Take a private helicopter tour from Kissimmee over Orlando's theme-park corridor and onward to the Space Coast with views toward Port Canaveral and Cape Canaveral. In-flight commentary and taxes included for this premium aerial day trip beyond the theme parks.",
+    "itineraryStops": ["MaxFlight Helicopter Services Inc.", "Space Coast", "Port Canaveral"],
+    "categories": ["Private and Luxury", "Helicopter Tours"],
+    "preferred": true
+  }
+]

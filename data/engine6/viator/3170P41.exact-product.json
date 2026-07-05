@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "3170P41",
+    "productUrl": "https://www.viator.com/tours/Orlando/Clearwater-Beach-Day-Trip-from-Orlando-with-Optional-Upgrades/d663-3170P41",
+    "title": "Clearwater Beach Day Trip from Orlando with Upgrade Options",
+    "description": {
+      "text": "Explore Clearwater Beach on a day trip from Orlando. Popular choice with kids and families. Stops include Clearwater Beach, Clearwater Beach Marina, Captain Memo's Pirate Cruise, Clearwater Marine Aquarium. Round-trip transfers from central meeting points is included. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "11 hours (approx.)",
+    "priceFrom": "From $100.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 153
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f1/31/8d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore Clearwater Beach on a day trip from Orlando",
+      "Popular choice with kids and families",
+      "Round-trip transfers from central meeting points is included",
+      "Clearwater Beach Day Trip from Orlando with Upgrade Options departing from the Orlando area",
+      "Professional Orlando-area guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore Clearwater Beach on a day trip from Orlando.",
+    "itineraryItems": [
+      {
+        "title": "Clearwater Beach",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Clearwater Beach Marina",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Captain Memo's Pirate Cruise",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Clearwater Marine Aquarium",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Clearwater Beach Day Trip from Orlando with Upgrade Options?",
+        "answer": "The planned duration is 11 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 100
+      },
+      "currency": "USD"
+    }
+  }
+}

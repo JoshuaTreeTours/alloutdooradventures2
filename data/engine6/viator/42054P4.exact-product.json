@@ -1,0 +1,123 @@
+{
+  "product": {
+    "productCode": "42054P4",
+    "productUrl": "https://www.viator.com/tours/Orlando/Helicopter-Day-Tour-Orlando-Theme-Parks-31miles-or-48miles/d663-42054P4",
+    "title": "Day Flight 48 Miles Helicopter Tour over Theme Parks & Downtown",
+    "description": {
+      "text": "Fly over Orlando and its famous theme parks by helicopter. A chance to see the US's most popular theme parks from a different perspective. Stops include MaxFlight Helicopter Services Inc., Universal Studios Florida, Magic Kingdom Park, Epcot, Disney Springs, Lake Eola Park. Private tour: your group enjoys the ride on your own with in-flight commentary. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "28 to 30 minutes (approx.)",
+    "priceFrom": "From $207.90",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 22
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/1f/b9/e3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fly over Orlando and its famous theme parks by helicopter",
+      "A chance to see the US's most popular theme parks from a different perspective",
+      "Private tour: your group enjoys the ride on your own with in-flight commentary",
+      "Day Flight 48 Miles Helicopter Tour over Theme Parks & Downtown departing from the Orlando area",
+      "Professional Orlando-area guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Fly over Orlando and its famous theme parks by helicopter.",
+    "itineraryItems": [
+      {
+        "title": "MaxFlight Helicopter Services Inc.",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Universal Studios Florida",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Magic Kingdom Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Epcot",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Disney Springs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Eola Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "ICON Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Day Flight 48 Miles Helicopter Tour over Theme Parks & Downtown?",
+        "answer": "The planned duration is 28 to 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      },
+      {
+        "label": "Helicopter Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 207.9
+      },
+      "currency": "USD"
+    }
+  }
+}

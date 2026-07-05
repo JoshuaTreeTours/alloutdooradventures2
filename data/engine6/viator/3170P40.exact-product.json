@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "3170P40",
+    "productUrl": "https://www.viator.com/tours/Orlando/Crystal-River-Manatee-Swim-from-Orlando/d663-3170P40",
+    "title": "Manatee Snorkeling Adventure Tour with Lunch & Hotel Pickup",
+    "description": {
+      "text": "Spend a day with central Florida’s manatees on this small-group river cruise and wildlife park adventure. Begin with a boat ride on the Crystal River. Snorkel near these gentle giants, then enjoy the afternoon at Homosassa Springs Wildlife State Park. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "8 hours 30 minutes (approx.)",
+    "priceFrom": "From $169.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 262
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/21/b1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Spend a day with central Florida’s manatees on this small-group river cruise and wildlife park adventure",
+      "Begin with a boat ride on the Crystal River",
+      "Snorkel near these gentle giants, then enjoy the afternoon at Homosassa Springs Wildlife State Park",
+      "Manatee Snorkeling Adventure Tour with Lunch & Hotel Pickup departing from the Orlando area",
+      "Professional Orlando-area guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Spend a day with central Florida’s manatees on this small-group river cruise and wildlife park adventure.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Silver Springs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rock Springs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rainbow Springs",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Manatee Snorkeling Adventure Tour with Lunch & Hotel Pickup?",
+        "answer": "The planned duration is 8 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 169
+      },
+      "currency": "USD"
+    }
+  }
+}

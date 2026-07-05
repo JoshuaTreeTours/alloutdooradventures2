@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "42054P2",
+    "productUrl": "https://www.viator.com/tours/Orlando/Helicopter-Night-Tour-Over-Orlandos-Theme-Parks/d663-42054P2",
+    "title": "Private Helicopter After-hours 48 Miles Tour Theme Parks&Downtown",
+    "description": {
+      "text": "See magical Orlando from a unique perspective in a helicopter. Get a bird’s eye view of the theme parks, the Orlando Eye, the Florida sunset, or even catch some fireworks on your sightseeing chopper tour. Transportation, equipment, and local commentary are handled so you can focus on Central Florida's wildlife, coastlines, and space-coast sights. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "45 minutes to 1 hour (approx.)",
+    "priceFrom": "From $236.25",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 170
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/0a/08/32.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Helicopter After-hours 48 Miles Tour Theme Parks&Downtown from Orlando",
+      "Kennedy Space Center, Everglades, or Gulf Coast routing",
+      "Professional guide with Central Florida expertise",
+      "Small-group or private format as listed",
+      "Orlando wildlife, coast, or space-coast experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See magical Orlando from a unique perspective in a helicopter.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "MaxFlight Helicopter Services Inc.",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Space Coast",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Port Canaveral",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Helicopter After-hours 48 Miles Tour Theme Parks&Downtown?",
+        "answer": "The planned duration is 45 minutes to 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 236.25
+      },
+      "currency": "USD"
+    }
+  }
+}

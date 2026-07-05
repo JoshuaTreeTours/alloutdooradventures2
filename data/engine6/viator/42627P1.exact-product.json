@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "42627P1",
+    "productUrl": "https://www.viator.com/tours/Orlando/Small-Group-Florida-Everglades-Airboat-Tour/d663-42627P1",
+    "title": "90 minute Everglades Airboat Tour near Orlando Florida",
+    "description": {
+      "text": "The Florida Everglades landscape is best explored with a licensed captain on an airboat. This guided tour covers alligator habitat and other wildlife viewing areas with live commentary from the captain throughout the ride. Transportation, equipment, and local commentary are handled so you can focus on Central Florida's wildlife, coastlines, and space-coast sights. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1347
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/e2/59/0f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Licensed airboat captain on the Florida Everglades",
+      "Alligator habitat and wildlife viewing areas along the route",
+      "Live commentary from the captain throughout the ride",
+      "90 minute Everglades Airboat Tour near Orlando Florida departing from the Orlando area",
+      "Professional Orlando-area guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "The Florida Everglades landscape is best explored with a licensed captain on an airboat.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boggy Creek Airboat Adventures",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Everglades National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Johns River",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 90 minute Everglades Airboat Tour near Orlando Florida?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

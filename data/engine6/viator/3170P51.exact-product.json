@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "3170P51",
+    "productUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Day-Tour-including-Airboat-Safari-Eco-Boat-Ride-from-Orlando/d663-3170P51",
+    "title": "Kennedy Space Center with Airboat Ride Swamp Boat",
+    "description": {
+      "text": "Explore outer space and the South Florida swamp during this day trip from Orlando. At the Kennedy Space Center, meet an astronaut, then go on to explore the visitor complex and hear about the United States' space travel history. Then hop on an airboat for a 30-min ride up the St Johns River. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $225.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 73
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/49/08/5d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore outer space and the South Florida swamp during this day trip from Orlando",
+      "At the Kennedy Space Center, meet an astronaut, then go on to explore the visitor complex and hear about the United Stat",
+      "Then hop on an airboat for a 30-min ride up the St Johns River",
+      "Kennedy Space Center with Airboat Ride Swamp Boat departing from the Orlando area",
+      "Professional Orlando-area guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore outer space and the South Florida swamp during this day trip from Orlando.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kennedy Space Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "NASA",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rocket Garden",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kennedy Space Center with Airboat Ride Swamp Boat?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 225
+      },
+      "currency": "USD"
+    }
+  }
+}

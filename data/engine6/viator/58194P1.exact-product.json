@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "58194P1",
+    "productUrl": "https://www.viator.com/tours/Orlando/Horseback-Ride-on-Scenic-Lake-Louisa-Trails/d663-58194P1",
+    "title": "Horseback Ride on Scenic Lake Louisa Trails",
+    "description": {
+      "text": "See Lake Louisa State Park from a unique perspective away from the crowds during a small-group horseback ride along its scenic trails. As you walk along the 6-mile (10-kilometer) route and access places that cars can’t reach, hear interesting insights about the state park’s wildlife, history, and local culture from your guide. Note: participants must be at least eight years old, and have a BMI score of 31 or lower.No prior experience needed—the horses are used to beginners Head to lesser-known vantage points to snap photos without the crowds Learn things about Lake Louisa most travelers miss E Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "1 to 3 hours (approx.)",
+    "priceFrom": "From $79.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 137
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/40/a7/4d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See Lake Louisa State Park from a unique perspective away from the crowds during a small-group horseback ride along its ",
+      "As you walk along the 6-mile (10-kilometer) route and access places that cars can’t reach, hear interesting insights abo",
+      "Note: participants must be at least eight years old, and have a BMI score of 31 or lower.No prior experience needed—the ",
+      "Horseback Ride on Scenic Lake Louisa Trails departing from the Orlando area",
+      "Professional Orlando-area guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See Lake Louisa State Park from a unique perspective away from the crowds during a small-group horseback ride along its scenic trails.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boggy Creek Airboat Adventures",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Everglades National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Johns River",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Horseback Ride on Scenic Lake Louisa Trails?",
+        "answer": "The planned duration is 1 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 79
+      },
+      "currency": "USD"
+    }
+  }
+}

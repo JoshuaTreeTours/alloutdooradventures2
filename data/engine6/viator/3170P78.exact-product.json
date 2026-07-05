@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "3170P78",
+    "productUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Small-Group-VIP-Experience/d663-3170P78",
+    "title": "Kennedy Space Center All Inclusive Small Group VIP Experience",
+    "description": {
+      "text": "Enjoy photo stops by the launch pads and the vehicle assembly building, touch a moon rock and ride the shuttle launch experience simulator on this small-group tour at the Kennedy Space Center. Learn about the science and history of the space program from your tour guide on the ride from Orlando. Upon arrival, start with a rocket garden tour before heading off on a special KSC Explore Bus tour to see the special parts of the NASA working space flight facility, then explore on your own time for the rest of your time there. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "11 hours (approx.)",
+    "priceFrom": "From $239.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 235
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/49/08/6b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy photo stops by the launch pads and the vehicle assembly building, touch a moon rock and ride the shuttle launch ex",
+      "Learn about the science and history of the space program from your tour guide on the ride from Orlando",
+      "Upon arrival, start with a rocket garden tour before heading off on a special KSC Explore Bus tour to see the special pa",
+      "Kennedy Space Center All Inclusive Small Group VIP Experience departing from the Orlando area",
+      "Professional Orlando-area guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Enjoy photo stops by the launch pads and the vehicle assembly building, touch a moon rock and ride the shuttle launch experience simulator on this small-group tour at the Kennedy Space Center.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kennedy Space Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "NASA",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rocket Garden",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kennedy Space Center All Inclusive Small Group VIP Experience?",
+        "answer": "The planned duration is 11 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 239
+      },
+      "currency": "USD"
+    }
+  }
+}

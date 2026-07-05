@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "357987P1",
+    "productUrl": "https://www.viator.com/tours/Orlando/Bioluminescent-Paddle-Excursion-with-A-Paddle-in-Paradise/d663-357987P1",
+    "title": "Florida Bioluminescent Kayak & Paddle Board Adventure",
+    "description": {
+      "text": "Experience the Indian River Lagoon's dazzling bioluminescence, just steps from Orlando, on this small-group tour. Paddleboard or kayak under the stars surrounded by glowing dinoflagellates, creating a mesmerizing natural light show with each stroke. Look out for Comb Jellies, native to the lagoon, which light up upon contact. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "1 hour 45 minutes (approx.)",
+    "priceFrom": "From $65.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 193
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/0f/ba/84.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Experience the Indian River Lagoon's dazzling bioluminescence, just steps from Orlando, on this small-group tour",
+      "Paddleboard or kayak under the stars surrounded by glowing dinoflagellates, creating a mesmerizing natural light show wi",
+      "Look out for Comb Jellies, native to the lagoon, which light up upon contact",
+      "Florida Bioluminescent Kayak & Paddle Board Adventure departing from the Orlando area",
+      "Professional Orlando-area guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience the Indian River Lagoon's dazzling bioluminescence, just steps from Orlando, on this small-group tour.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Silver Springs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rock Springs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rainbow Springs",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Florida Bioluminescent Kayak & Paddle Board Adventure?",
+        "answer": "The planned duration is 1 hour 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65
+      },
+      "currency": "USD"
+    }
+  }
+}

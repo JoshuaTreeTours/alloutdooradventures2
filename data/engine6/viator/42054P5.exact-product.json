@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "42054P5",
+    "productUrl": "https://www.viator.com/tours/Orlando/Take-a-thrilling-1-hour-Helicopter-Ride-to-the-Space-Cost/d663-42054P5",
+    "title": "Take a thrilling 85 Miles Private Helicopter Tour to Space Coast",
+    "description": {
+      "text": "Take a private helicopter tour from Kissimmee over Orlando's theme-park corridor and onward to the Space Coast with views toward Port Canaveral and Cape Canaveral. In-flight commentary and taxes included for this premium aerial day trip beyond the theme parks. Stops include MaxFlight Helicopter Services Inc., Space Coast, Port Canaveral. Transportation, equipment, and local commentary are handled so you can focus on Central Florida's wildlife, coastlines, and space-coast sights. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "1 hour 10 minutes to 1 hour 30 minutes (approx.)",
+    "priceFrom": "From $446.25",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 178
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/2f/c8/75/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Take a thrilling 85 Miles Private Helicopter Tour to Space Coast from Orlando",
+      "Kennedy Space Center, Everglades, or Gulf Coast routing",
+      "Professional guide with Central Florida expertise",
+      "Small-group or private format as listed",
+      "Orlando wildlife, coast, or space-coast experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Take a private helicopter tour from Kissimmee over Orlando's theme-park corridor and onward to the Space Coast with views toward Port Canaveral and Cape Canaveral.",
+    "itineraryItems": [
+      {
+        "title": "MaxFlight Helicopter Services Inc.",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Space Coast",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Port Canaveral",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Take a thrilling 85 Miles Private Helicopter Tour to Space Coast?",
+        "answer": "The planned duration is 1 hour 10 minutes to 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      },
+      {
+        "label": "Helicopter Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 446.25
+      },
+      "currency": "USD"
+    }
+  }
+}

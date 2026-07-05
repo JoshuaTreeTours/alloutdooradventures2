@@ -21,6 +21,28 @@ import specimen7079rrebikePayload from "../../data/engine6/viator/7079RREBIKE.ex
 import specimen191767p5Payload from "../../data/engine6/viator/191767P5.exact-product.json";
 import specimen32779Payload from "../../data/engine6/viator/32779P2.exact-product.json";
 import specimen60136Payload from "../../data/engine6/viator/60136P1.exact-product.json";
+import specimen3170p78Payload from "../../data/engine6/viator/3170P78.exact-product.json";
+import specimen331790p2Payload from "../../data/engine6/viator/331790P2.exact-product.json";
+import specimen42054p2Payload from "../../data/engine6/viator/42054P2.exact-product.json";
+import specimen3170p51Payload from "../../data/engine6/viator/3170P51.exact-product.json";
+import specimen42054p4Payload from "../../data/engine6/viator/42054P4.exact-product.json";
+import specimen3170p40Payload from "../../data/engine6/viator/3170P40.exact-product.json";
+import specimen123164p1Payload from "../../data/engine6/viator/123164P1.exact-product.json";
+import specimen120040p3Payload from "../../data/engine6/viator/120040P3.exact-product.json";
+import specimen317042Payload from "../../data/engine6/viator/317042.exact-product.json";
+import specimen3170p41Payload from "../../data/engine6/viator/3170P41.exact-product.json";
+import specimen42054p5Payload from "../../data/engine6/viator/42054P5.exact-product.json";
+import specimen3170p32Payload from "../../data/engine6/viator/3170P32.exact-product.json";
+import specimen42627p1Payload from "../../data/engine6/viator/42627P1.exact-product.json";
+import specimen5580079p3Payload from "../../data/engine6/viator/5580079P3.exact-product.json";
+import specimen109065p4Payload from "../../data/engine6/viator/109065P4.exact-product.json";
+import specimen105290p7Payload from "../../data/engine6/viator/105290P7.exact-product.json";
+import specimen58194p1Payload from "../../data/engine6/viator/58194P1.exact-product.json";
+import specimen39750p18Payload from "../../data/engine6/viator/39750P18.exact-product.json";
+import specimen37177p6Payload from "../../data/engine6/viator/37177P6.exact-product.json";
+import specimen5039p5Payload from "../../data/engine6/viator/5039P5.exact-product.json";
+import specimen53748p4Payload from "../../data/engine6/viator/53748P4.exact-product.json";
+import specimen357987p1Payload from "../../data/engine6/viator/357987P1.exact-product.json";
 import specimen331502p3Payload from "../../data/engine6/viator/331502P3.exact-product.json";
 import specimen362955p2Payload from "../../data/engine6/viator/362955P2.exact-product.json";
 import specimen119664p1Payload from "../../data/engine6/viator/119664P1.exact-product.json";
@@ -834,6 +856,138 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Las-Vegas/Antelope-Canyon-Horseshoe-Bend-Day-Tour-from-Las-Vegas/d684-60136P1",
     rawPayload: specimen60136Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "3170P78",
+    publicUrl: "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Small-Group-VIP-Experience/d663-3170P78",
+    rawPayload: specimen3170p78Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "331790P2",
+    publicUrl: "https://www.viator.com/tours/Orlando/Experience-a-Once-in-a-Lifetime-Aerial-Adventure-over-Orlando/d663-331790P2",
+    rawPayload: specimen331790p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "42054P2",
+    publicUrl: "https://www.viator.com/tours/Orlando/Helicopter-Night-Tour-Over-Orlandos-Theme-Parks/d663-42054P2",
+    rawPayload: specimen42054p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3170P51",
+    publicUrl: "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Day-Tour-including-Airboat-Safari-Eco-Boat-Ride-from-Orlando/d663-3170P51",
+    rawPayload: specimen3170p51Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "42054P4",
+    publicUrl: "https://www.viator.com/tours/Orlando/Helicopter-Day-Tour-Orlando-Theme-Parks-31miles-or-48miles/d663-42054P4",
+    rawPayload: specimen42054p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3170P40",
+    publicUrl: "https://www.viator.com/tours/Orlando/Crystal-River-Manatee-Swim-from-Orlando/d663-3170P40",
+    rawPayload: specimen3170p40Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "123164P1",
+    publicUrl: "https://www.viator.com/tours/Orlando/Clear-Kayak-Tours-in-Rock-Springs/d663-123164P1",
+    rawPayload: specimen123164p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "120040P3",
+    publicUrl: "https://www.viator.com/tours/Orlando/Duluth-Moose-Lake-Buggy-Adventure/d663-120040P3",
+    rawPayload: specimen120040p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "317042",
+    publicUrl: "https://www.viator.com/tours/Orlando/Saint-Augustine-Day-Trip-from-Orlando/d663-317042",
+    rawPayload: specimen317042Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3170P41",
+    publicUrl: "https://www.viator.com/tours/Orlando/Clearwater-Beach-Day-Trip-from-Orlando-with-Optional-Upgrades/d663-3170P41",
+    rawPayload: specimen3170p41Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "42054P5",
+    publicUrl: "https://www.viator.com/tours/Orlando/Take-a-thrilling-1-hour-Helicopter-Ride-to-the-Space-Cost/d663-42054P5",
+    rawPayload: specimen42054p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3170P32",
+    publicUrl: "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Tour/d663-3170P32",
+    rawPayload: specimen3170p32Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "42627P1",
+    publicUrl: "https://www.viator.com/tours/Orlando/Small-Group-Florida-Everglades-Airboat-Tour/d663-42627P1",
+    rawPayload: specimen42627p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5580079P3",
+    publicUrl: "https://www.viator.com/tours/Orlando/Speakeasy-Murder-Mystery-Dinner-Show-in-Orlando/d663-5580079P3",
+    rawPayload: specimen5580079p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "109065P4",
+    publicUrl: "https://www.viator.com/tours/Orlando/Silver-Springs-Clear-Kayaking-and-Paddle-Boarding/d663-109065P4",
+    rawPayload: specimen109065p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "105290P7",
+    publicUrl: "https://www.viator.com/tours/Orlando/Blue-Spring-Adventure-Manatee-Tour/d663-105290P7",
+    rawPayload: specimen105290p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "58194P1",
+    publicUrl: "https://www.viator.com/tours/Orlando/Horseback-Ride-on-Scenic-Lake-Louisa-Trails/d663-58194P1",
+    rawPayload: specimen58194p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "39750P18",
+    publicUrl: "https://www.viator.com/tours/Orlando/Manatees-Monkeys-and-Florida-Natural-Spring-Adventure-Tour/d663-39750P18",
+    rawPayload: specimen39750p18Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "37177P6",
+    publicUrl: "https://www.viator.com/tours/Orlando/Polynesian-Fire-Luau-at-the-Orlando-Forum/d663-37177P6",
+    rawPayload: specimen37177p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5039P5",
+    publicUrl: "https://www.viator.com/tours/Orlando/Boggy-Creek-Airboat-Adventures-One-Hour-Airboat-Tour-near-Orlando-Florida/d663-5039P5",
+    rawPayload: specimen5039p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "53748P4",
+    publicUrl: "https://www.viator.com/tours/Orlando/Orlando-Tree-Trek-Adventure-Park/d663-53748P4",
+    rawPayload: specimen53748p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "357987P1",
+    publicUrl: "https://www.viator.com/tours/Orlando/Bioluminescent-Paddle-Excursion-with-A-Paddle-in-Paradise/d663-357987P1",
+    rawPayload: specimen357987p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
     productCode: "331502P3",
