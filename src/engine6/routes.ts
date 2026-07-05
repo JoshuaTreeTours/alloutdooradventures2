@@ -245,6 +245,89 @@ export const ENGINE6_JACKSON_HOLE_TOUR_PATH_PREFIX =
 export const isEngine6JacksonHoleTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_JACKSON_HOLE_TOUR_PATH_PREFIX);
 
+export const ENGINE6_RMNP_366391P1_PRODUCT_CODE = "366391P1";
+export const ENGINE6_RMNP_366391P1_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/private-wildlife-driving-tour-in-rocky-mountain-nationa-366391P1";
+export const ENGINE6_RMNP_366391P5_PRODUCT_CODE = "366391P5";
+export const ENGINE6_RMNP_366391P5_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/private-wildlife-hiking-tour-in-rocky-mountain-national-366391P5";
+export const ENGINE6_RMNP_366391P3_PRODUCT_CODE = "366391P3";
+export const ENGINE6_RMNP_366391P3_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/private-geology-tour-in-rocky-mountain-national-park-366391P3";
+export const ENGINE6_RMNP_366391P2_PRODUCT_CODE = "366391P2";
+export const ENGINE6_RMNP_366391P2_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/private-snowshoe-tour-in-rocky-mountain-national-park-s-366391P2";
+export const ENGINE6_RMNP_449630P3_PRODUCT_CODE = "449630P3";
+export const ENGINE6_RMNP_449630P3_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/star-tours-rocky-mountain-national-park-449630P3";
+export const ENGINE6_RMNP_449630P1_PRODUCT_CODE = "449630P1";
+export const ENGINE6_RMNP_449630P1_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/rocky-mountain-national-park-sunrise-hiking-tour-449630P1";
+export const ENGINE6_RMNP_337166P4_PRODUCT_CODE = "337166P4";
+export const ENGINE6_RMNP_337166P4_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/full-day-tour-in-rocky-mountain-national-park-lunch-inc-337166P4";
+export const ENGINE6_RMNP_148657P6_PRODUCT_CODE = "148657P6";
+export const ENGINE6_RMNP_148657P6_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/sunset-and-night-photography-tour-on-trail-ridge-road-148657P6";
+export const ENGINE6_RMNP_424860P1_PRODUCT_CODE = "424860P1";
+export const ENGINE6_RMNP_424860P1_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/retractable-glass-top-tour-in-rocky-mountain-national-p-424860P1";
+export const ENGINE6_RMNP_450284P2_PRODUCT_CODE = "450284P2";
+export const ENGINE6_RMNP_450284P2_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/top-of-the-world-tour-wildside-4x4-tours-450284P2";
+export const ENGINE6_RMNP_5663796P1_PRODUCT_CODE = "5663796P1";
+export const ENGINE6_RMNP_5663796P1_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/scenic-2-hour-horseback-ride-in-rocky-mountain-national-5663796P1";
+export const ENGINE6_RMNP_264314P1_PRODUCT_CODE = "264314P1";
+export const ENGINE6_RMNP_264314P1_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/the-rocky-mountain-national-park-safari-tour-264314P1";
+export const ENGINE6_RMNP_242506P3_PRODUCT_CODE = "242506P3";
+export const ENGINE6_RMNP_242506P3_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/sunrise-tour-of-rocky-mountain-national-park-242506P3";
+export const ENGINE6_RMNP_337022P1_PRODUCT_CODE = "337022P1";
+export const ENGINE6_RMNP_337022P1_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/half-day-rocky-mountain-national-park-lake-and-meadows-337022P1";
+export const ENGINE6_RMNP_264314P3_PRODUCT_CODE = "264314P3";
+export const ENGINE6_RMNP_264314P3_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/rmnp-bear-lake-corridor-tour-264314P3";
+export const ENGINE6_RMNP_450284P5_PRODUCT_CODE = "450284P5";
+export const ENGINE6_RMNP_450284P5_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/thrilling-rockn-roller-coaster-tour-wildside-4x4-tours-450284P5";
+export const ENGINE6_RMNP_299786P1_PRODUCT_CODE = "299786P1";
+export const ENGINE6_RMNP_299786P1_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/the-premier-wildlife-tours-in-rocky-mountain-national-p-299786P1";
+export const ENGINE6_RMNP_450284P3_PRODUCT_CODE = "450284P3";
+export const ENGINE6_RMNP_450284P3_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/sunset-wildlife-tour-wildside-4x4-tours-450284P3";
+export const ENGINE6_RMNP_477432P1_PRODUCT_CODE = "477432P1";
+export const ENGINE6_RMNP_477432P1_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/rocky-mountain-national-park-half-day-hike-477432P1";
+export const ENGINE6_RMNP_337022P3_PRODUCT_CODE = "337022P3";
+export const ENGINE6_RMNP_337022P3_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/full-day-rocky-mountain-national-park-over-the-top-tour-337022P3";
+export const ENGINE6_RMNP_242506P2_PRODUCT_CODE = "242506P2";
+export const ENGINE6_RMNP_242506P2_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/private-three-hour-afternoon-custom-tour-of-rocky-mount-242506P2";
+export const ENGINE6_RMNP_242506P1_PRODUCT_CODE = "242506P1";
+export const ENGINE6_RMNP_242506P1_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/private-and-personalized-three-hour-morning-tour-of-roc-242506P1";
+export const ENGINE6_RMNP_265766P15_PRODUCT_CODE = "265766P15";
+export const ENGINE6_RMNP_265766P15_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/rocky-mountain-full-day-private-tour-hike-265766P15";
+export const ENGINE6_RMNP_148657P3_PRODUCT_CODE = "148657P3";
+export const ENGINE6_RMNP_148657P3_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/explore-photograph-wild-basin-in-rocky-mountain-nationa-148657P3";
+export const ENGINE6_RMNP_264314P7_PRODUCT_CODE = "264314P7";
+export const ENGINE6_RMNP_264314P7_ROUTE =
+  "/destinations/colorado/rocky-mountain-national-park/tours/rocky-mountain-national-park-grand-lake-tour-264314P7";
+
+export const ENGINE6_ROCKY_MOUNTAIN_NATIONAL_PARK_TOUR_PATH_PREFIX =
+  "/destinations/colorado/rocky-mountain-national-park/tours/";
+
+export const isEngine6RockyMountainNationalParkTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_ROCKY_MOUNTAIN_NATIONAL_PARK_TOUR_PATH_PREFIX);
+
 export const ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_PRODUCT_CODE =
   "6029_4DAYPARK";
 export const ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_ROUTE =
@@ -1737,6 +1820,31 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_JACKSON_HOLE_156172P5_ROUTE,
     ENGINE6_JACKSON_HOLE_156172P5_PRODUCT_CODE,
   ],
+  [ENGINE6_RMNP_366391P1_ROUTE, ENGINE6_RMNP_366391P1_PRODUCT_CODE],
+  [ENGINE6_RMNP_366391P5_ROUTE, ENGINE6_RMNP_366391P5_PRODUCT_CODE],
+  [ENGINE6_RMNP_366391P3_ROUTE, ENGINE6_RMNP_366391P3_PRODUCT_CODE],
+  [ENGINE6_RMNP_366391P2_ROUTE, ENGINE6_RMNP_366391P2_PRODUCT_CODE],
+  [ENGINE6_RMNP_449630P3_ROUTE, ENGINE6_RMNP_449630P3_PRODUCT_CODE],
+  [ENGINE6_RMNP_449630P1_ROUTE, ENGINE6_RMNP_449630P1_PRODUCT_CODE],
+  [ENGINE6_RMNP_337166P4_ROUTE, ENGINE6_RMNP_337166P4_PRODUCT_CODE],
+  [ENGINE6_RMNP_148657P6_ROUTE, ENGINE6_RMNP_148657P6_PRODUCT_CODE],
+  [ENGINE6_RMNP_424860P1_ROUTE, ENGINE6_RMNP_424860P1_PRODUCT_CODE],
+  [ENGINE6_RMNP_450284P2_ROUTE, ENGINE6_RMNP_450284P2_PRODUCT_CODE],
+  [ENGINE6_RMNP_5663796P1_ROUTE, ENGINE6_RMNP_5663796P1_PRODUCT_CODE],
+  [ENGINE6_RMNP_264314P1_ROUTE, ENGINE6_RMNP_264314P1_PRODUCT_CODE],
+  [ENGINE6_RMNP_242506P3_ROUTE, ENGINE6_RMNP_242506P3_PRODUCT_CODE],
+  [ENGINE6_RMNP_337022P1_ROUTE, ENGINE6_RMNP_337022P1_PRODUCT_CODE],
+  [ENGINE6_RMNP_264314P3_ROUTE, ENGINE6_RMNP_264314P3_PRODUCT_CODE],
+  [ENGINE6_RMNP_450284P5_ROUTE, ENGINE6_RMNP_450284P5_PRODUCT_CODE],
+  [ENGINE6_RMNP_299786P1_ROUTE, ENGINE6_RMNP_299786P1_PRODUCT_CODE],
+  [ENGINE6_RMNP_450284P3_ROUTE, ENGINE6_RMNP_450284P3_PRODUCT_CODE],
+  [ENGINE6_RMNP_477432P1_ROUTE, ENGINE6_RMNP_477432P1_PRODUCT_CODE],
+  [ENGINE6_RMNP_337022P3_ROUTE, ENGINE6_RMNP_337022P3_PRODUCT_CODE],
+  [ENGINE6_RMNP_242506P2_ROUTE, ENGINE6_RMNP_242506P2_PRODUCT_CODE],
+  [ENGINE6_RMNP_242506P1_ROUTE, ENGINE6_RMNP_242506P1_PRODUCT_CODE],
+  [ENGINE6_RMNP_265766P15_ROUTE, ENGINE6_RMNP_265766P15_PRODUCT_CODE],
+  [ENGINE6_RMNP_148657P3_ROUTE, ENGINE6_RMNP_148657P3_PRODUCT_CODE],
+  [ENGINE6_RMNP_264314P7_ROUTE, ENGINE6_RMNP_264314P7_PRODUCT_CODE],
   [
     ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_ROUTE,
     ENGINE6_JACKSON_YELLOWSTONE_GRAND_TETON_PRODUCT_CODE,

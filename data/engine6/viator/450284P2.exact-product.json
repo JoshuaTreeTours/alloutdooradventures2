@@ -1,0 +1,131 @@
+{
+  "product": {
+    "productCode": "450284P2",
+    "productUrl": "https://www.viator.com/tours/Estes-Park/Top-of-the-World-Photo-Tour/d32992-450284P2",
+    "title": "Top of the World Tour (Wildside 4x4 Tours)",
+    "description": {
+      "text": "Make the most of your visit to the Rocky Mountains with a photo-focussed 4x4 tour of Estes Park. In addition to capturing incredible views en route, you will learn about the history of the park, starting with the iconic 1909 Stanley Hotel. Stops include Wildside 4x4 Tours, The Stanley Hotel, Oldman Mountain, Deer Mountain, Horseshoe Falls, Old Fall River Road. Watch the surroundings change as you ascend by 12,0000 feet (3,658 metres), crossing three ecosystems, and look out for wildlife such as Moose, Elk and Deer.See the native bighorn sheep at Sheep Lake No glass windows in the tour vehicle for uninterrupted views Ideal for travelers basing in Estes Park or the Front Range who want a guided Rocky Mountain National Park outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Rocky Mountain National Park",
+      "state": "Colorado"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $124.99",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 345
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/51/4c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Make the most of your visit to the Rocky Mountains with a photo-focussed 4x4 tour of Estes Park",
+      "In addition to capturing incredible views en route, you will learn about the history of the park, starting with the icon",
+      "Watch the surroundings change as you ascend by 12,0000 feet (3,658 metres), crossing three ecosystems, and look out for ",
+      "Top of the World Tour (Wildside 4x4 Tours) in Rocky Mountain National Park",
+      "Professional Estes Park or Colorado guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Estes Park or Rocky Mountain National Park pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Make the most of your visit to the Rocky Mountains with a photo-focussed 4x4 tour of Estes Park.",
+    "itineraryItems": [
+      {
+        "title": "Wildside 4x4 Tours",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Stanley Hotel",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Oldman Mountain",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Deer Mountain",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Rocky Mountain National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Horseshoe Falls",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Old Fall River Road",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chasm Falls",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Timed-entry reservation coordination when required"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Top of the World Tour (Wildside 4x4 Tours)?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Rocky Mountain National Park?",
+        "answer": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 124.99
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -71,6 +71,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "wyoming",
     citySlug: "jackson",
   },
+  "rocky-mountain-national-park": {
+    destinationLabel: "Rocky Mountain National Park",
+    destinationCitySlug: "rocky-mountain-national-park",
+    stateSlug: "colorado",
+    citySlug: "rocky-mountain-national-park",
+  },
 };
 
 export type Engine6DestinationInfrastructureReport = {

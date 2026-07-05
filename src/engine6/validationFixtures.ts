@@ -41,6 +41,31 @@ import specimen342881p1Payload from "../../data/engine6/viator/342881P1.exact-pr
 import specimen38400p8Payload from "../../data/engine6/viator/38400P8.exact-product.json";
 import specimen6029winterPayload from "../../data/engine6/viator/6029WINTER.exact-product.json";
 import specimen156172p5Payload from "../../data/engine6/viator/156172P5.exact-product.json";
+import specimen366391p1Payload from "../../data/engine6/viator/366391P1.exact-product.json";
+import specimen366391p5Payload from "../../data/engine6/viator/366391P5.exact-product.json";
+import specimen366391p3Payload from "../../data/engine6/viator/366391P3.exact-product.json";
+import specimen366391p2Payload from "../../data/engine6/viator/366391P2.exact-product.json";
+import specimen449630p3Payload from "../../data/engine6/viator/449630P3.exact-product.json";
+import specimen449630p1Payload from "../../data/engine6/viator/449630P1.exact-product.json";
+import specimen337166p4Payload from "../../data/engine6/viator/337166P4.exact-product.json";
+import specimen148657p6Payload from "../../data/engine6/viator/148657P6.exact-product.json";
+import specimen424860p1Payload from "../../data/engine6/viator/424860P1.exact-product.json";
+import specimen450284p2Payload from "../../data/engine6/viator/450284P2.exact-product.json";
+import specimen5663796p1Payload from "../../data/engine6/viator/5663796P1.exact-product.json";
+import specimen264314p1Payload from "../../data/engine6/viator/264314P1.exact-product.json";
+import specimen242506p3Payload from "../../data/engine6/viator/242506P3.exact-product.json";
+import specimen337022p1Payload from "../../data/engine6/viator/337022P1.exact-product.json";
+import specimen264314p3Payload from "../../data/engine6/viator/264314P3.exact-product.json";
+import specimen450284p5Payload from "../../data/engine6/viator/450284P5.exact-product.json";
+import specimen299786p1Payload from "../../data/engine6/viator/299786P1.exact-product.json";
+import specimen450284p3Payload from "../../data/engine6/viator/450284P3.exact-product.json";
+import specimen477432p1Payload from "../../data/engine6/viator/477432P1.exact-product.json";
+import specimen337022p3Payload from "../../data/engine6/viator/337022P3.exact-product.json";
+import specimen242506p2Payload from "../../data/engine6/viator/242506P2.exact-product.json";
+import specimen242506p1Payload from "../../data/engine6/viator/242506P1.exact-product.json";
+import specimen265766p15Payload from "../../data/engine6/viator/265766P15.exact-product.json";
+import specimen148657p3Payload from "../../data/engine6/viator/148657P3.exact-product.json";
+import specimen264314p7Payload from "../../data/engine6/viator/264314P7.exact-product.json";
 import specimen60294dayparkPayload from "../../data/engine6/viator/6029_4DAYPARK.exact-product.json";
 import specimen26719Payload from "../../data/engine6/viator/26719P8.exact-product.json";
 import specimen354611p1Payload from "../../data/engine6/viator/354611P1.exact-product.json";
@@ -898,6 +923,181 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Jackson/Private-8-Hour-Grand-Teton-Adventure/d51006-156172P5",
     rawPayload: specimen156172p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "366391P1",
+    publicUrl:
+      "https://www.viator.com/tours/Rocky-Mountain-National-Park/Guided-Driving-or-Hiking-Tour-in-RMNP-4-Hour/d51194-366391P1",
+    rawPayload: specimen366391p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "366391P5",
+    publicUrl:
+      "https://www.viator.com/tours/Rocky-Mountain-National-Park/4-hr-Private-Wildlife-Hiking-Tour-in-Rocky-Mountain-National-Park/d51194-366391P5",
+    rawPayload: specimen366391p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "366391P3",
+    publicUrl:
+      "https://www.viator.com/tours/Rocky-Mountain-National-Park/4-Hour-Private-Geology-Tour-in-Rocky-Mountain-National-Park/d51194-366391P3",
+    rawPayload: specimen366391p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "366391P2",
+    publicUrl:
+      "https://www.viator.com/tours/Rocky-Mountain-National-Park/6-Hour-Private-Guided-Driving-or-Hiking-Tour-in-Rocky-Mountain-National-Park/d51194-366391P2",
+    rawPayload: specimen366391p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "449630P3",
+    publicUrl:
+      "https://www.viator.com/tours/Rocky-Mountain-National-Park/Star-Tours-Rocky-Mountain-National-Park/d51194-449630P3",
+    rawPayload: specimen449630p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "449630P1",
+    publicUrl:
+      "https://www.viator.com/tours/Rocky-Mountain-National-Park/Sunrise-Hiking-Tour-Rocky-Mountain-National-Park/d51194-449630P1",
+    rawPayload: specimen449630p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "337166P4",
+    publicUrl:
+      "https://www.viator.com/tours/Rocky-Mountain-National-Park/Find-Your-Wild-in-Rocky-Mountain-National-Park-Lunch-Included/d51194-337166P4",
+    rawPayload: specimen337166p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "148657P6",
+    publicUrl:
+      "https://www.viator.com/tours/Rocky-Mountain-National-Park/Sunset-and-Night-Photography-Tour-on-Trail-Ridge-Road/d51194-148657P6",
+    rawPayload: specimen148657p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "424860P1",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/RMNP-AM-Retractable-Glass-Top-Guided-Rocky-Mountain-Experience/d32992-424860P1",
+    rawPayload: specimen424860p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "450284P2",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/Top-of-the-World-Photo-Tour/d32992-450284P2",
+    rawPayload: specimen450284p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5663796P1",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/Scenic-2-Hour-Horseback-Ride-in-Rocky-Mountain-National-Park/d32992-5663796P1",
+    rawPayload: specimen5663796p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "264314P1",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/Top-of-Trailridge-Road-Green-Jeep-Tours/d32992-264314P1",
+    rawPayload: specimen264314p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "242506P3",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/Sunrise-Tour-of-Rocky-Mountain-National-Park/d32992-242506P3",
+    rawPayload: specimen242506p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "337022P1",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/RMNPhotographer-Tours/d32992-337022P1",
+    rawPayload: specimen337022p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "264314P3",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/RMNP-Bear-Lake-Corridor-Tour/d32992-264314P3",
+    rawPayload: specimen264314p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "450284P5",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/Wildside-4X4s-Rockn-Roller-Coaster-Tour/d32992-450284P5",
+    rawPayload: specimen450284p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "299786P1",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/Wildlife-Tours/d32992-299786P1",
+    rawPayload: specimen299786p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "450284P3",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/Sunset-Photo-Tour-in-the-Rocky-Mountain-National-Park/d32992-450284P3",
+    rawPayload: specimen450284p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "477432P1",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/Explore-Rocky-Mountain-National-Park/d32992-477432P1",
+    rawPayload: specimen477432p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "337022P3",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/RMNP-Over-The-Top-Tour-with-RMNPhotographer/d32992-337022P3",
+    rawPayload: specimen337022p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "242506P2",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/Private-Three-Hour-Afternoon-Custom-Tour-of-Rocky-Mountain-National-Park/d32992-242506P2",
+    rawPayload: specimen242506p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "242506P1",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/Historic-and-or-nature-tours-of-Rocky-Mountain-National-Park-and-Estes-Park/d32992-242506P1",
+    rawPayload: specimen242506p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "265766P15",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/Private-Day-Tour-and-Hike-in-Rocky-Mountain-National-Park/d32992-265766P15",
+    rawPayload: specimen265766p15Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "148657P3",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/Explore-and-Photograph-Wild-Basin-in-Rocky-Mountain-National-Park-with-a-Pro/d32992-148657P3",
+    rawPayload: specimen148657p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "264314P7",
+    publicUrl:
+      "https://www.viator.com/tours/Estes-Park/Rocky-Mountain-National-Park-Grand-Lake-Tour/d32992-264314P7",
+    rawPayload: specimen264314p7Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "337166P4",
+    "productUrl": "https://www.viator.com/tours/Rocky-Mountain-National-Park/Find-Your-Wild-in-Rocky-Mountain-National-Park-Lunch-Included/d51194-337166P4",
+    "title": "Full Day Tour in Rocky Mountain National Park Lunch Included",
+    "description": {
+      "text": "Experience full day tour in rocky mountain national park lunch included with an Estes Park or Rocky Mountain National Park outfitter. Your guide covers alpine lakes, Trail Ridge Road overlooks, and wildlife-rich meadows across Rocky Mountain National Park. Timed-entry coordination, local commentary, and photo stops are handled so you can focus on Colorado's high-country scenery. Ideal for travelers basing in Estes Park or the Front Range who want a guided Rocky Mountain National Park outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Rocky Mountain National Park",
+      "state": "Colorado"
+    },
+    "duration": "TBD (approx.)",
+    "priceFrom": "From $325.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 7
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/00/71/64/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Full Day Tour in Rocky Mountain National Park Lunch Included in Rocky Mountain National Park",
+      "Trail Ridge Road and alpine lake routing",
+      "Professional guide with local RMNP expertise",
+      "Private or small-group format as listed",
+      "Colorado high-country wildlife and scenery"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Estes Park or Rocky Mountain National Park pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience full day tour in rocky mountain national park lunch included with an Estes Park or Rocky Mountain National Park outfitter.",
+    "itineraryItems": [
+      {
+        "title": "Estes Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trail Ridge Road",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bear Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Alpine Visitor Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rocky Mountain National Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Timed-entry reservation coordination when required"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Full Day Tour in Rocky Mountain National Park Lunch Included?",
+        "answer": "The planned duration is TBD."
+      },
+      {
+        "question": "Where does the tour depart from in Rocky Mountain National Park?",
+        "answer": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 325
+      },
+      "currency": "USD"
+    }
+  }
+}

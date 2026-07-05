@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "148657P3",
+    "productUrl": "https://www.viator.com/tours/Estes-Park/Explore-and-Photograph-Wild-Basin-in-Rocky-Mountain-National-Park-with-a-Pro/d32992-148657P3",
+    "title": "Explore & Photograph Wild Basin in Rocky Mountain National Park with a Pro",
+    "description": {
+      "text": "Combine your love of hiking and photography on this two-in-one private tour. Choosing either the hike to Ouzel Falls (5.5 miles) or the hike to Calypso Cascades (3.6 miles), you'll work with your guide to grab professional long-exposure waterfall shots, wildflower macro photography, and more. Stops include Wild Basin Area, Calypso Cascades, Ouzel  Falls. With personal attention, you'll leave with a stunning portfolio of Rocky Mountain memories.Easy meetup with your guide at the Estes Park Visitor Center Choose your hiking difficulty preference, from 3.6 to Ideal for travelers basing in Estes Park or the Front Range who want a guided Rocky Mountain National Park outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Rocky Mountain National Park",
+      "state": "Colorado"
+    },
+    "duration": "5 to 7 hours (approx.)",
+    "priceFrom": "From $175.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/9d/37/af.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Combine your love of hiking and photography on this two-in-one private tour",
+      "Choosing either the hike to Ouzel Falls (5.5 miles) or the hike to Calypso Cascades (3.6 miles), you'll work with your g",
+      "With personal attention, you'll leave with a stunning portfolio of Rocky Mountain memories.Easy meetup with your guide a",
+      "Explore & Photograph Wild Basin in Rocky Mountain National Park with a Pro in Rocky Mountain National Park",
+      "Professional Estes Park or Colorado guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Estes Park or Rocky Mountain National Park pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Combine your love of hiking and photography on this two-in-one private tour.",
+    "itineraryItems": [
+      {
+        "title": "Wild Basin Area",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Calypso Cascades",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ouzel  Falls",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Timed-entry reservation coordination when required"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Explore & Photograph Wild Basin in Rocky Mountain National Park with a Pro?",
+        "answer": "The planned duration is 5 to 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Rocky Mountain National Park?",
+        "answer": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 175
+      },
+      "currency": "USD"
+    }
+  }
+}

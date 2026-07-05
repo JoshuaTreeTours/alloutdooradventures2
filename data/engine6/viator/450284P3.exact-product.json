@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "450284P3",
+    "productUrl": "https://www.viator.com/tours/Estes-Park/Sunset-Photo-Tour-in-the-Rocky-Mountain-National-Park/d32992-450284P3",
+    "title": "Sunset Wildlife Tour (Wildside 4x4 Tours)",
+    "description": {
+      "text": "Discover the natural beauty of Colorado–and explore spots you might otherwise have missed–on this small-group wildlife tour of Rocky Mountain National Park from Estes Park, complete with heated vehicle, sunset views, and plenty of photo opportunities. Discover more about the landscape with stories and insights from a guide, pass by the Alluvial Fan waterfall, and look out for elk and deer in Moraine Park.Take the guesswork out of exploring Rocky Mountain National Park Stop at picturesque locatio Timed-entry coordination, local commentary, and photo stops are handled so you can focus on Colorado's high-country scenery. Ideal for travelers basing in Estes Park or the Front Range who want a guided Rocky Mountain National Park outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Rocky Mountain National Park",
+      "state": "Colorado"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $125.99",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 43
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/53/74.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sunset Wildlife Tour (Wildside 4x4 Tours) in Rocky Mountain National Park",
+      "Trail Ridge Road and alpine lake routing",
+      "Professional guide with local RMNP expertise",
+      "Private or small-group format as listed",
+      "Colorado high-country wildlife and scenery"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Estes Park or Rocky Mountain National Park pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover the natural beauty of Colorado–and explore spots you might otherwise have missed–on this small-group wildlife tour of Rocky Mountain National Park from Estes Park, complete with heated vehicle, sunset views, and plenty of photo opportunities.",
+    "itineraryItems": [
+      {
+        "title": "Estes Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trail Ridge Road",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bear Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Alpine Visitor Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rocky Mountain National Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Timed-entry reservation coordination when required"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sunset Wildlife Tour (Wildside 4x4 Tours)?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Rocky Mountain National Park?",
+        "answer": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 125.99
+      },
+      "currency": "USD"
+    }
+  }
+}

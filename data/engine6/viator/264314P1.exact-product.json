@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "264314P1",
+    "productUrl": "https://www.viator.com/tours/Estes-Park/Top-of-Trailridge-Road-Green-Jeep-Tours/d32992-264314P1",
+    "title": "The Rocky Mountain National Park Safari Tour",
+    "description": {
+      "text": "Explore the landscape of Colorado, and take the guesswork out of navigating its terrain, on this small-group tour of Rocky Mountain National Park in a safari-style off-road vehicle. Depending on weather conditions and time of year, journey along the scenic Old Fall River Road and Trail Ridge Road to reach the Alpine Visitor Center. Stops include Alpine Visitor Center, Alluvial Fan. Along the way up and down, take in panoramic views and make stops at photogenic spots.Explore Rocky Mountain National Park without having to hike or climb Leave from Ideal for travelers basing in Estes Park or the Front Range who want a guided Rocky Mountain National Park outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Rocky Mountain National Park",
+      "state": "Colorado"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $129.79",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 388
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/9e/cd/31.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the landscape of Colorado, and take the guesswork out of navigating its terrain, on this small-group tour of Roc",
+      "Depending on weather conditions and time of year, journey along the scenic Old Fall River Road and Trail Ridge Road to r",
+      "Along the way up and down, take in panoramic views and make stops at photogenic spots.Explore Rocky Mountain National Pa",
+      "The Rocky Mountain National Park Safari Tour in Rocky Mountain National Park",
+      "Professional Estes Park or Colorado guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Estes Park or Rocky Mountain National Park pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the landscape of Colorado, and take the guesswork out of navigating its terrain, on this small-group tour of Rocky Mountain National Park in a safari-style off-road vehicle.",
+    "itineraryItems": [
+      {
+        "title": "Rocky Mountain National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Alpine Visitor Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Alluvial Fan",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Timed-entry reservation coordination when required"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The Rocky Mountain National Park Safari Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Rocky Mountain National Park?",
+        "answer": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Jeep Tours"
+      },
+      {
+        "label": "Scenic Drives"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 129.79
+      },
+      "currency": "USD"
+    }
+  }
+}

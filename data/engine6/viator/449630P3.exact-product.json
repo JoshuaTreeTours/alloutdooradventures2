@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "449630P3",
+    "productUrl": "https://www.viator.com/tours/Rocky-Mountain-National-Park/Star-Tours-Rocky-Mountain-National-Park/d51194-449630P3",
+    "title": "Star Tours Rocky Mountain National Park",
+    "description": {
+      "text": "Experience star tours rocky mountain national park with an Estes Park or Rocky Mountain National Park outfitter. Your guide covers alpine lakes, Trail Ridge Road overlooks, and wildlife-rich meadows across Rocky Mountain National Park. Timed-entry coordination, local commentary, and photo stops are handled so you can focus on Colorado's high-country scenery. Ideal for travelers basing in Estes Park or the Front Range who want a guided Rocky Mountain National Park outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Rocky Mountain National Park",
+      "state": "Colorado"
+    },
+    "duration": "TBD (approx.)",
+    "priceFrom": "From $169.00",
+    "reviews": {
+      "combinedAverageRating": 4,
+      "totalReviews": 4
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/photo-o/2f/1a/0b/61/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Star Tours Rocky Mountain National Park in Rocky Mountain National Park",
+      "Trail Ridge Road and alpine lake routing",
+      "Professional guide with local RMNP expertise",
+      "Private or small-group format as listed",
+      "Colorado high-country wildlife and scenery"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Estes Park or Rocky Mountain National Park pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience star tours rocky mountain national park with an Estes Park or Rocky Mountain National Park outfitter.",
+    "itineraryItems": [
+      {
+        "title": "Estes Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trail Ridge Road",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bear Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Alpine Visitor Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rocky Mountain National Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Timed-entry reservation coordination when required"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Star Tours Rocky Mountain National Park?",
+        "answer": "The planned duration is TBD."
+      },
+      {
+        "question": "Where does the tour depart from in Rocky Mountain National Park?",
+        "answer": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Stargazing"
+      },
+      {
+        "label": "Night Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 169
+      },
+      "currency": "USD"
+    }
+  }
+}

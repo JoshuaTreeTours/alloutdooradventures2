@@ -1,0 +1,58 @@
+[
+  {
+    "destinationLabel": "Rocky Mountain National Park",
+    "destinationCitySlug": "rocky-mountain-national-park",
+    "stateSlug": "colorado",
+    "citySlug": "rocky-mountain-national-park",
+    "routePrefix": "/destinations/colorado/rocky-mountain-national-park/tours/",
+    "pass": true,
+    "checks": [
+      {
+        "id": "state-registry",
+        "pass": true,
+        "message": "State registry includes colorado"
+      },
+      {
+        "id": "city-registry",
+        "pass": true,
+        "message": "City registry includes rocky-mountain-national-park"
+      },
+      {
+        "id": "tours-state-selector",
+        "pass": true,
+        "message": "Tours page state selector includes colorado"
+      },
+      {
+        "id": "tours-city-selector",
+        "pass": true,
+        "message": "Tours page city selector includes rocky-mountain-national-park"
+      },
+      {
+        "id": "route-prefix",
+        "pass": true,
+        "message": "Route prefix registered (25 tour route(s))"
+      },
+      {
+        "id": "governance-scope",
+        "pass": true,
+        "message": "Governance scope mapping resolves for rocky-mountain-national-park"
+      },
+      {
+        "id": "canonical-hero-fallback",
+        "pass": true,
+        "message": "Canonical city hero fallback resolves"
+      },
+      {
+        "id": "validation-cohort",
+        "pass": true,
+        "message": "Validation cohort registered (Rocky Mountain National Park)"
+      },
+      {
+        "id": "fixture-target-path",
+        "pass": true,
+        "message": "Fixture generation target paths are deploy-scoped to the destination route prefix"
+      }
+    ],
+    "blockingFailures": []
+  }
+]

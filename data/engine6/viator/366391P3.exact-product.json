@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "366391P3",
+    "productUrl": "https://www.viator.com/tours/Rocky-Mountain-National-Park/4-Hour-Private-Geology-Tour-in-Rocky-Mountain-National-Park/d51194-366391P3",
+    "title": "Private Geology Tour in Rocky Mountain National Park",
+    "description": {
+      "text": "Our resident geologist, Ranger Rod, will direct you through Rocky Mountain National Park from the comfort of your own vehicle. He will take photos of your group's adventure as you travel through time in RMNP witnessing evidence of major rock and mineral forming processes that took place billions of years ago. Stops include Trail Ridge Road, Alpine Visitor Center, and Bear Lake. Discover ancient mountains that started rising shortly after the dinosaurs went extinct, as well as landscape formed by later volcanic eruptions. Ideal for travelers basing in Estes Park or the Front Range who want a guided Rocky Mountain National Park outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Rocky Mountain National Park",
+      "state": "Colorado"
+    },
+    "duration": "4 to 6 hours (approx.)",
+    "priceFrom": "From $175.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 26
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/99/71/6f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Our resident geologist, Ranger Rod, will direct you through Rocky Mountain National Park from the comfort of your own ve",
+      "He will take photos of your group's adventure as you travel through time in RMNP witnessing evidence of major rock and m",
+      "Discover ancient mountains that started rising shortly after the dinosaurs went extinct, as well as landscape formed by ",
+      "Private Geology Tour in Rocky Mountain National Park in Rocky Mountain National Park",
+      "Professional Estes Park or Colorado guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Estes Park or Rocky Mountain National Park pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Our resident geologist, Ranger Rod, will direct you through Rocky Mountain National Park from the comfort of your own vehicle.",
+    "itineraryItems": [
+      {
+        "title": "Estes Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Trail Ridge Road",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Alpine Visitor Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bear Lake",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Timed-entry reservation coordination when required"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Geology Tour in Rocky Mountain National Park?",
+        "answer": "The planned duration is 4 to 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Rocky Mountain National Park?",
+        "answer": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 175
+      },
+      "currency": "USD"
+    }
+  }
+}

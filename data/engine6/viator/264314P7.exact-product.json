@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "264314P7",
+    "productUrl": "https://www.viator.com/tours/Estes-Park/Rocky-Mountain-National-Park-Grand-Lake-Tour/d32992-264314P7",
+    "title": "Rocky Mountain National Park Grand Lake Tour",
+    "description": {
+      "text": "Experience Rocky Mountain National Park from east to west on this full-day scenic journey! Starting in Estes Park, you'll travel across the park's most iconic landscapes via Trail Ridge Road—one of the highest paved roads in North America. Stops include Alpine Visitor Center, Alluvial Fan. Your adventure includes a stop at the Alpine Visitor Center before continuing down into the charming mountain town of Grand Lake, nestled on the edge of a sparkling alpine lake. Ideal for travelers basing in Estes Park or the Front Range who want a guided Rocky Mountain National Park outing without self-driving mountain roads."
+    },
+    "location": {
+      "city": "Rocky Mountain National Park",
+      "state": "Colorado"
+    },
+    "duration": "7 hours (approx.)",
+    "priceFrom": "From $229.90",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 128
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/6e/a2/61.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Experience Rocky Mountain National Park from east to west on this full-day scenic journey!",
+      "Starting in Estes Park, you'll travel across the park's most iconic landscapes via Trail Ridge Road—one of the highest p",
+      "Your adventure includes a stop at the Alpine Visitor Center before continuing down into the charming mountain town of Gr",
+      "Rocky Mountain National Park Grand Lake Tour in Rocky Mountain National Park",
+      "Professional Estes Park or Colorado guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      },
+      "end": {
+        "description": "Return to your Estes Park or Rocky Mountain National Park pickup location after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience Rocky Mountain National Park from east to west on this full-day scenic journey! Starting in Estes Park, you'll travel across the park's most iconic landscapes via Trail Ridge Road—one of the highest paved roads in North America.",
+    "itineraryItems": [
+      {
+        "title": "Rocky Mountain National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Alpine Visitor Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Alluvial Fan",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Timed-entry reservation coordination when required"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Rocky Mountain National Park Grand Lake Tour?",
+        "answer": "The planned duration is 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Rocky Mountain National Park?",
+        "answer": "Pickup is available from Estes Park lodging and designated Rocky Mountain National Park meeting points. Confirm your exact meeting window when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Scenic Drives"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "National Parks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 229.9
+      },
+      "currency": "USD"
+    }
+  }
+}
