@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "38075P18",
+    "productUrl": "https://www.viator.com/tours/Naples/Marco-Island-Inshore-Fishing-Charter/d22381-38075P18",
+    "title": "Marco Island Inshore Fishing Charters",
+    "description": {
+      "text": "Explore the backwaters of the Ten Thousand Islands during a half- or full-day fishing charter from Marco Island. Located just south of Naples, Marco Island is the gateway to a variety of rivers and creeks, the barrier islands, and miles of backcountry shoreline. The captain provides fishing gear, bait, and license, and the boat can accommodate four passengers. Ideal for anglers departing Naples or Marco Island who want a crew-managed inshore or Gulf fishing window."
+    },
+    "location": {
+      "city": "Naples",
+      "state": "Florida"
+    },
+    "duration": "4 to 8 hours (approx.)",
+    "priceFrom": "From $685.99",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 6
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/38/f5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the backwaters of the Ten Thousand Islands during a half- or full-day fishing charter from Marco Island",
+      "Located just south of Naples, Marco Island is the gateway to a variety of rivers and creeks, the barrier islands, and mi",
+      "The captain provides fishing gear, bait, and license, and the boat can accommodate four passengers",
+      "Marco Island Inshore Fishing Charters departing from Naples",
+      "Professional Naples captain or naturalist guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Naples marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the backwaters of the Ten Thousand Islands during a half- or full-day fishing charter from Marco Island.",
+    "itineraryItems": [
+      {
+        "title": "Naples",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marco Island",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Naples Bay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ten Thousand Islands",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Marco Island Inshore Fishing Charters?",
+        "answer": "The planned duration is 4 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Naples?",
+        "answer": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 685.99
+      },
+      "currency": "USD"
+    }
+  }
+}

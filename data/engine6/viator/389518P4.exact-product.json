@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "389518P4",
+    "productUrl": "https://www.viator.com/tours/Naples/Half-Day-Private-Shelling-Dolphin-EcoTour-in-10-000-Island-Marco/d22381-389518P4",
+    "title": "Half Day Private Shelling Dolphin EcoTour in 10 000 Island Marco",
+    "description": {
+      "text": "Explore the best dolphin-watching spots and shelling shores of Ten Thousand Islands on this private half-day boat tour from Marco Island. Set off on a unique shelling boat designed to navigate shallow waters so you can access the shell-covered coastline and hop out to gather unique specimens. Admire the local dolphin population frolicking in the nearby waters as you cruise through the islands.Explore with a unique shelling boat to access the top island waterfronts Spot dolphins and other marine wildlife as you cruise by mangroves A local skipper with insider knowledge of the best shelling loca Ideal for Naples and Marco Island visitors who want shallow-water shelling, dolphin watching, and mangrove-lined routes without chartering a boat alone."
+    },
+    "location": {
+      "city": "Naples",
+      "state": "Florida"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $675.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 90
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7d/83/0f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the best dolphin-watching spots and shelling shores of Ten Thousand Islands on this private half-day boat tour f",
+      "Set off on a unique shelling boat designed to navigate shallow waters so you can access the shell-covered coastline and ",
+      "Admire the local dolphin population frolicking in the nearby waters as you cruise through the islands.Explore with a uni",
+      "Half Day Private Shelling Dolphin EcoTour in 10 000 Island Marco departing from Naples",
+      "Professional Naples captain or naturalist guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Naples marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the best dolphin-watching spots and shelling shores of Ten Thousand Islands on this private half-day boat tour from Marco Island.",
+    "itineraryItems": [
+      {
+        "title": "Naples",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ten Thousand Islands",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marco Island",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Keewaydin Island",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half Day Private Shelling Dolphin EcoTour in 10 000 Island Marco?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Naples?",
+        "answer": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 675
+      },
+      "currency": "USD"
+    }
+  }
+}

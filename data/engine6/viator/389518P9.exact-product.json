@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "389518P9",
+    "productUrl": "https://www.viator.com/tours/Naples/Naples-Keewaydin-Shelling-Dolphin-and-Beach-Tours/d22381-389518P9",
+    "title": "Naples Keewaydin Shelling Dolphin and Beach Tours",
+    "description": {
+      "text": "Uncover the treasures of Southwest Florida with unforgettable shelling, dolphin watching, and fishing tours in Naples. Perfect for families and adventurers alike, this tour promises a day filled with fun and learning, while the kids can experience the thrill of watching dolphins surf alongside the boat. Join us for a memorable Ideal for Naples and Marco Island visitors who want shallow-water shelling, dolphin watching, and mangrove-lined routes without chartering a boat alone."
+    },
+    "location": {
+      "city": "Naples",
+      "state": "Florida"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $137.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 44
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/9c/7a/a5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Uncover the treasures of Southwest Florida with unforgettable shelling, dolphin watching, and fishing tours in Naples",
+      "Perfect for families and adventurers alike, this tour promises a day filled with fun and learning, while the kids can ex",
+      "Join us for a memorable",
+      "Naples Keewaydin Shelling Dolphin and Beach Tours departing from Naples",
+      "Professional Naples captain or naturalist guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Naples marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Uncover the treasures of Southwest Florida with unforgettable shelling, dolphin watching, and fishing tours in Naples.",
+    "itineraryItems": [
+      {
+        "title": "Naples",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Keewaydin Island",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gulf of Mexico",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Naples Keewaydin Shelling Dolphin and Beach Tours?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Naples?",
+        "answer": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 137
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "product": {
+    "productCode": "457279P1",
+    "productUrl": "https://www.viator.com/tours/Naples/Naples-water-shuttle-to-Keewaydin-with-everything-you-need/d22381-457279P1",
+    "title": "NAPLES TO KEEWAYDIN: your luxury water shuttle with all amenities",
+    "description": {
+      "text": "It is way less crowded than the mainbeach on Keewaydin Island, so if you want a more chilled out, quiet, and relaxing experience this one may be for you. The second option is to b Equipment, safety briefings, and local commentary are handled so you can focus on dolphins, shelling beaches, and Everglades wildlife. Ideal for Gulf Coast travelers who want a private captain for Naples Bay, Keewaydin Island, or Ten Thousand Islands without handling marina logistics."
+    },
+    "location": {
+      "city": "Naples",
+      "state": "Florida"
+    },
+    "duration": "4 hours 30 minutes (approx.)",
+    "priceFrom": "From $175.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 52
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/c6/8d/f7/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "NAPLES TO KEEWAYDIN: your luxury water shuttle with all amenities from Naples",
+      "Ten Thousand Islands or Marco Island routing",
+      "Professional captain with Gulf Coast expertise",
+      "Small-group or private format as listed",
+      "Naples mangrove, shelling, or Everglades experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Naples marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "It is way less crowded than the mainbeach on Keewaydin Island, so if you want a more chilled out, quiet, and relaxing experience this one may be for you.",
+    "itineraryItems": [
+      {
+        "title": "Naples",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Keewaydin Island",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gulf of Mexico",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the NAPLES TO KEEWAYDIN: your luxury water shuttle with all amenities?",
+        "answer": "The planned duration is 4 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Naples?",
+        "answer": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Ports of Call Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 175
+      },
+      "currency": "USD"
+    }
+  }
+}

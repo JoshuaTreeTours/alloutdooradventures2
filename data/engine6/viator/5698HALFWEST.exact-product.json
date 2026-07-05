@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "5698HALFWEST",
+    "productUrl": "https://www.viator.com/tours/Naples/Everglades-Family-Adventure-Tour-from-Greater-Fort-Myers-Naples-Area/d22381-5698HALFWEST",
+    "title": "Western Everglades Adventure Tour",
+    "description": {
+      "text": "Escape to the Florida Everglades from the Greater Naples area on this guided airboat adventure at Everglades Day Safari. This exciting airboat ride is a great way to experience the ecosystem of the Everglades. Skim across the marshes and swamps of the Western Everglades while looking for wildlife, namely birds and alligators. Ideal for Naples travelers who want a guided Everglades outing with transport, mangrove channels, and expert naturalist commentary included."
+    },
+    "location": {
+      "city": "Naples",
+      "state": "Florida"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $100.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 165
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/2a/ca/79.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Escape to the Florida Everglades from the Greater Naples area on this guided airboat adventure at Everglades Day Safari",
+      "This exciting airboat ride is a great way to experience the ecosystem of the Everglades",
+      "Skim across the marshes and swamps of the Western Everglades while looking for wildlife, namely birds and alligators",
+      "Western Everglades Adventure Tour departing from Naples",
+      "Professional Naples captain or naturalist guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Naples marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Escape to the Florida Everglades from the Greater Naples area on this guided airboat adventure at Everglades Day Safari.",
+    "itineraryItems": [
+      {
+        "title": "Naples",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Everglades National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ten Thousand Islands",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Big Cypress National Preserve",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Western Everglades Adventure Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Naples?",
+        "answer": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 100
+      },
+      "currency": "USD"
+    }
+  }
+}

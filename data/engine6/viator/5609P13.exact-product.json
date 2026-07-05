@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "5609P13",
+    "productUrl": "https://www.viator.com/tours/Naples/10-000-Islands-Boat-Excursion-Dolphins-Shelling-and-Cape-Romano-Dome-Homess/d22381-5609P13",
+    "title": "10,000 Islands Boat Excursion - 3.5-Hour Dolphins & Shelling Tour",
+    "description": {
+      "text": "Explore the wealth of islands and mangrove islets off the coast of southwest Florida during this fun tour of the 10,000 Islands. Hop aboard a boat in Goodland and sail into the Gulf of Mexico’s waters where you’ll embark on an eco adventure near Cape Romano. Sail in search of wildlife like dolphins and seabirds. Ideal for Naples and Marco Island visitors who want shallow-water shelling, dolphin watching, and mangrove-lined routes without chartering a boat alone."
+    },
+    "location": {
+      "city": "Naples",
+      "state": "Florida"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $169.95",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 50
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/4c/e8/4b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the wealth of islands and mangrove islets off the coast of southwest Florida during this fun tour of the 10,000 ",
+      "Hop aboard a boat in Goodland and sail into the Gulf of Mexico’s waters where you’ll embark on an eco adventure near Cap",
+      "Sail in search of wildlife like dolphins and seabirds",
+      "10,000 Islands Boat Excursion - 3.5-Hour Dolphins & Shelling Tour departing from Naples",
+      "Professional Naples captain or naturalist guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Naples marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the wealth of islands and mangrove islets off the coast of southwest Florida during this fun tour of the 10,000 Islands.",
+    "itineraryItems": [
+      {
+        "title": "Naples",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ten Thousand Islands",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marco Island",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Keewaydin Island",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 10,000 Islands Boat Excursion - 3.5-Hour Dolphins & Shelling Tour?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Naples?",
+        "answer": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 169.95
+      },
+      "currency": "USD"
+    }
+  }
+}
