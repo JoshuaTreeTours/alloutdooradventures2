@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "53748P4",
+    "productUrl": "https://www.viator.com/tours/Orlando/Orlando-Tree-Trek-Adventure-Park/d663-53748P4",
+    "title": "Orlando Tree Trek Adventure Park",
+    "description": {
+      "text": "Take the excitement of your Orlando vacation up a level with a tree top adventure. This ropes course is a series of aerial adventures with cargo nets, swinging logs, ziplines, trapeze swings and other obstacles to challenge yourself. Every level of climbing expertise will find something to test their skills, on a thrilling course set from 10 to 50 feet (3 to 15 meters) above the ground.Spend 2-3 hours challenging yourself on the ropes course This adventure is a thrill for the whole family (ages 7 years and older) Conveniently located near the Walt Disney World Resort. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $65.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 852
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/3c/9e/e8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Take the excitement of your Orlando vacation up a level with a tree top adventure",
+      "This ropes course is a series of aerial adventures with cargo nets, swinging logs, ziplines, trapeze swings and other ob",
+      "Every level of climbing expertise will find something to test their skills, on a thrilling course set from 10 to 50 feet",
+      "Orlando Tree Trek Adventure Park departing from the Orlando area",
+      "Professional Orlando-area guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Take the excitement of your Orlando vacation up a level with a tree top adventure.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boggy Creek Airboat Adventures",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Everglades National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Johns River",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Orlando Tree Trek Adventure Park?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Obstacle Courses "
+      },
+      {
+        "label": "Obstacle Courses"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65
+      },
+      "currency": "USD"
+    }
+  }
+}

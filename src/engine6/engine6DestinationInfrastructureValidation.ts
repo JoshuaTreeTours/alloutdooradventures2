@@ -89,6 +89,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "florida",
     citySlug: "key-west",
   },
+  orlando: {
+    destinationLabel: "Orlando",
+    destinationCitySlug: "orlando",
+    stateSlug: "florida",
+    citySlug: "orlando",
+  },
 };
 
 export type Engine6DestinationInfrastructureReport = {

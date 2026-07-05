@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "331790P2",
+    "productUrl": "https://www.viator.com/tours/Orlando/Experience-a-Once-in-a-Lifetime-Aerial-Adventure-over-Orlando/d663-331790P2",
+    "title": "Orlando City Lights and Fireworks Premier Helicopter Tour",
+    "description": {
+      "text": "Experience Orlando after dark from a premier helicopter flight with city lights, theme-park skylines, and seasonal fireworks views when schedules allow. Digital photo package included. Stops include Downtown Orlando, Disney Springs, Gaylord Palms Resort & Convention Center. Transportation, equipment, and local commentary are handled so you can focus on Central Florida's wildlife, coastlines, and space-coast sights. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "25 minutes (approx.)",
+    "priceFrom": "From $334.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/fe/13/bc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Orlando City Lights and Fireworks Premier Helicopter Tour from Orlando",
+      "Kennedy Space Center, Everglades, or Gulf Coast routing",
+      "Professional guide with Central Florida expertise",
+      "Small-group or private format as listed",
+      "Orlando wildlife, coast, or space-coast experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience Orlando after dark from a premier helicopter flight with city lights, theme-park skylines, and seasonal fireworks views when schedules allow.",
+    "itineraryItems": [
+      {
+        "title": "Downtown Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Disney Springs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gaylord Palms Resort & Convention Center",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Orlando City Lights and Fireworks Premier Helicopter Tour?",
+        "answer": "The planned duration is 25 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      },
+      {
+        "label": "Helicopter Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 334
+      },
+      "currency": "USD"
+    }
+  }
+}

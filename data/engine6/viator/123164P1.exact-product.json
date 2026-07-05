@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "123164P1",
+    "productUrl": "https://www.viator.com/tours/Orlando/Clear-Kayak-Tours-in-Rock-Springs/d663-123164P1",
+    "title": "Rock Springs 2-Hour Glass Bottom Guided Kayak Eco Tour",
+    "description": {
+      "text": "A good choice for nature lovers, this tour takes you into a unique part of Rock Springs Run known as \"Emerald Cut.” The first part of the tour is an upstream paddle through calm waters and overhead tree canopy, with stops to hop off your clear kayak and into the fresh spring water. Keep your eyes peeled for for fish, turtles, birds, small alligators, and more.Clear kayak tour Local guide See wild animals in their natural habitat Kayak and safety gear provided Transportation, equipment, and local commentary are handled so you can focus on Central Florida's wildlife, coastlines, and space-coast sights. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $119.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 2542
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/a1/9a/7a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Rock Springs 2-Hour Glass Bottom Guided Kayak Eco Tour from Orlando",
+      "Kennedy Space Center, Everglades, or Gulf Coast routing",
+      "Professional guide with Central Florida expertise",
+      "Small-group or private format as listed",
+      "Orlando wildlife, coast, or space-coast experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "A good choice for nature lovers, this tour takes you into a unique part of Rock Springs Run known as \"Emerald Cut.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Silver Springs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rock Springs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rainbow Springs",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Rock Springs 2-Hour Glass Bottom Guided Kayak Eco Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 119
+      },
+      "currency": "USD"
+    }
+  }
+}

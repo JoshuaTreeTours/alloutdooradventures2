@@ -58,6 +58,9 @@ export const ENGINE6_MOAB_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_KEY_WEST_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/fb/bc/d8.jpg";
 
+export const ENGINE6_ORLANDO_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ad/2c/65.jpg";
+
 type Engine6HeroCandidateTour = {
   productCode: string;
   heroImageUrl?: string | null;
@@ -100,6 +103,7 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
     "rocky-mountain-national-park": ENGINE6_RMNP_CANONICAL_CITY_HERO_URL,
   },
   florida: {
+    orlando: ENGINE6_ORLANDO_CANONICAL_CITY_HERO_URL,
     "key-west": ENGINE6_KEY_WEST_CANONICAL_CITY_HERO_URL,
   },
 };

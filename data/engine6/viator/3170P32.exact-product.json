@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "3170P32",
+    "productUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Tour/d663-3170P32",
+    "title": "Kennedy Space Center with Transport from Orlando and Kissimmee",
+    "description": {
+      "text": "Embark on the ultimate space adventure at NASA’s Kennedy Space Center, where you can explore a range of exciting tour options. Walk beneath the largest rocket ever flown, meet a veteran NASA astronaut, and get up close with Space Shuttle Atlantis. Experience the thrilling Shuttle Launch Experience and discover interactive exhibits that bring space exploration to life. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "11 hours (approx.)",
+    "priceFrom": "From $89.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1424
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ad/2c/65.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Embark on the ultimate space adventure at NASA’s Kennedy Space Center, where you can explore a range of exciting tour op",
+      "Walk beneath the largest rocket ever flown, meet a veteran NASA astronaut, and get up close with Space Shuttle Atlantis",
+      "Experience the thrilling Shuttle Launch Experience and discover interactive exhibits that bring space exploration to lif",
+      "Kennedy Space Center with Transport from Orlando and Kissimmee departing from the Orlando area",
+      "Professional Orlando-area guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Embark on the ultimate space adventure at NASA’s Kennedy Space Center, where you can explore a range of exciting tour options.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kennedy Space Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "NASA",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rocket Garden",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kennedy Space Center with Transport from Orlando and Kissimmee?",
+        "answer": "The planned duration is 11 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89
+      },
+      "currency": "USD"
+    }
+  }
+}

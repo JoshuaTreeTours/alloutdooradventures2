@@ -1,5 +1,5 @@
-Engine6 product selection governance (2026-07-03T18:36:11.127Z)
-Destination: Washington, D.C.
+Engine6 product selection governance (2026-07-05T18:06:08.998Z)
+Destination: Orlando
 Mode: strict
 
 ## Selection summary
@@ -18,41 +18,67 @@ Mode: strict
 - Commercial target met (approximate): true
 
 ## Blocklist
-- Product codes added to permanent blocklist: 67327P4, 7953P7, 67327P2, 149066P1, 255730P191, 67327P5, 41503P1, 41503P2, 6349P59, 6766SIGTOUR, 67327P3, 7812P219, 6349DAYTOUR, 6349NIGHT, 6766P11, 41377P2, 60725P1, 14782P1, 5046WAS_MON, 6349VIPDC, 2384P20, 5769MTVN
+- Product codes added to permanent blocklist: none
 
 ## Governance reuse
-- Reused modules: engine6LiveViatorProductionValidation.validateEngine6LiveViatorCandidate, engine6LiveViatorProductionValidation.selectValidEngine6CandidatesFromRankedList, engine6DestinationProductBinding.assessEngine6DestinationProductBinding, engine6ProductSelectionBlocklist.readEngine6ProductSelectionPermanentBlocklist, viatorPublicAvailability.ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS, resolveEngine6ChangedProductCodes.resolveEngine6ProductCodesChangedSinceRefSafe
+- Reused modules: engine6LiveViatorProductionValidation.validateEngine6LiveViatorCandidate, engine6LiveViatorProductionValidation.selectValidEngine6CandidatesFromRankedList, engine6DestinationProductBinding.assessEngine6DestinationProductBinding, engine6ProductSelectionBlocklist.readEngine6ProductSelectionPermanentBlocklist, viatorPublicAvailability.ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS, resolveEngine6ChangedProductCodes.resolveEngine6ProductCodesChangedSinceRefSafe, engine6ProductCodeExclusivityGovernance.assessEngine6ProductCodeExclusivity, engine6ProductCodeExclusivityGovernance.getEngine6ProductCodeRegistry
 - New modules: engine6ProductSelectionGovernance, engine6ParagonGovernancePipeline
 - Duplicate validation logic introduced: false
 
 Deploy-scoped blocking products: 0
 
+Engine6 product code exclusivity governance
+Destination: Orlando
+
+✓ Product 3170P78 already owned by Orlando (regeneration allowed)
+✓ Product 331790P2 already owned by Orlando (regeneration allowed)
+✓ Product 42054P2 already owned by Orlando (regeneration allowed)
+✓ Product 3170P51 already owned by Orlando (regeneration allowed)
+✓ Product 42054P4 already owned by Orlando (regeneration allowed)
+✓ Product 3170P40 already owned by Orlando (regeneration allowed)
+✓ Product 123164P1 already owned by Orlando (regeneration allowed)
+✓ Product 120040P3 already owned by Orlando (regeneration allowed)
+✓ Product 317042 already owned by Orlando (regeneration allowed)
+✓ Product 3170P41 already owned by Orlando (regeneration allowed)
+✓ Product 42054P5 already owned by Orlando (regeneration allowed)
+✓ Product 3170P32 already owned by Orlando (regeneration allowed)
+✓ Product 42627P1 already owned by Orlando (regeneration allowed)
+✓ Product 5580079P3 already owned by Orlando (regeneration allowed)
+✓ Product 109065P4 already owned by Orlando (regeneration allowed)
+✓ Product 105290P7 already owned by Orlando (regeneration allowed)
+✓ Product 58194P1 already owned by Orlando (regeneration allowed)
+✓ Product 39750P18 already owned by Orlando (regeneration allowed)
+✓ Product 37177P6 already owned by Orlando (regeneration allowed)
+✓ Product 5039P5 already owned by Orlando (regeneration allowed)
+✓ Product 53748P4 already owned by Orlando (regeneration allowed)
+✓ Product 357987P1 already owned by Orlando (regeneration allowed)
+
 ## Unfilled experience slots
 - destination-portfolio: accepted 0/22
 
 ## Blocking failures
-- 67327P4 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 7953P7 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 67327P2 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 149066P1 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 255730P191 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 67327P5 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 41503P1 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 41503P2 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 6349P59 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 6766SIGTOUR (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 67327P3 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 7812P219 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 6349DAYTOUR (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 6349NIGHT (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 6766P11 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 41377P2 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 60725P1 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 14782P1 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 5046WAS_MON (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 6349VIPDC (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 2384P20 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 5769MTVN (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 3170P78 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 331790P2 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 42054P2 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 3170P51 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 42054P4 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 3170P40 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 123164P1 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 120040P3 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 317042 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 3170P41 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 42054P5 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 3170P32 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 42627P1 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 5580079P3 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 109065P4 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 105290P7 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 58194P1 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 39750P18 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 37177P6 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 5039P5 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 53748P4 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 357987P1 (destination-portfolio): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
 
 ## Build termination
 - Terminated: true
@@ -61,25 +87,25 @@ Deploy-scoped blocking products: 0
 - Remaining qualified candidates: 0
 
 ## Rejected candidates
-- 67327P4 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 7953P7 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 67327P2 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 149066P1 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 255730P191 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 67327P5 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 41503P1 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 41503P2 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 6349P59 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 6766SIGTOUR (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 67327P3 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 7812P219 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 6349DAYTOUR (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 6349NIGHT (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 6766P11 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 41377P2 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 60725P1 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 14782P1 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 5046WAS_MON (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 6349VIPDC (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 2384P20 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
-- 5769MTVN (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 3170P78 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 331790P2 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 42054P2 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 3170P51 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 42054P4 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 3170P40 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 123164P1 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 120040P3 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 317042 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 3170P41 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 42054P5 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 3170P32 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 42627P1 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 5580079P3 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 109065P4 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 105290P7 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 58194P1 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 39750P18 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 37177P6 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 5039P5 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 53748P4 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured
+- 357987P1 (destination-portfolio/live-validation-failed): public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured

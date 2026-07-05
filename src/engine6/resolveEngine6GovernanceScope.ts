@@ -42,6 +42,7 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     moab: ["Moab"],
     utah: ["Moab"],
     "key-west": ["Key West"],
+    orlando: ["Orlando"],
     florida: ["Key West"],
     "washington-dc": ["Washington, D.C."],
     washington: ["Washington, D.C."],

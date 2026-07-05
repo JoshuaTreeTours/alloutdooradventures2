@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-03T18:36:11.127Z",
-  "destinationLabel": "Washington, D.C.",
+  "generatedAt": "2026-07-05T18:06:08.998Z",
+  "destinationLabel": "Orlando",
   "mode": "strict",
   "scopedProductCodes": [],
   "buildOrderPreserved": true,
@@ -21,41 +21,18 @@
     "experienceTypeCount": 0,
     "meetsCommercialTarget": true
   },
-  "blocklistAdditions": [
-    "67327P4",
-    "7953P7",
-    "67327P2",
-    "149066P1",
-    "255730P191",
-    "67327P5",
-    "41503P1",
-    "41503P2",
-    "6349P59",
-    "6766SIGTOUR",
-    "67327P3",
-    "7812P219",
-    "6349DAYTOUR",
-    "6349NIGHT",
-    "6766P11",
-    "41377P2",
-    "60725P1",
-    "14782P1",
-    "5046WAS_MON",
-    "6349VIPDC",
-    "2384P20",
-    "5769MTVN"
-  ],
+  "blocklistAdditions": [],
   "accepted": [],
   "rejected": [
     {
-      "productCode": "67327P4",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-Tour-of-Washington-DC/d657-67327P4",
+      "productCode": "3170P78",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Small-Group-VIP-Experience/d663-3170P78",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "67327P4",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-Tour-of-Washington-DC/d657-67327P4",
+        "productCode": "3170P78",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Small-Group-VIP-Experience/d663-3170P78",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -67,14 +44,14 @@
       }
     },
     {
-      "productCode": "7953P7",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Private-Night-City-Tour/d657-7953P7",
+      "productCode": "331790P2",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Experience-a-Once-in-a-Lifetime-Aerial-Adventure-over-Orlando/d663-331790P2",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "7953P7",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Private-Night-City-Tour/d657-7953P7",
+        "productCode": "331790P2",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Experience-a-Once-in-a-Lifetime-Aerial-Adventure-over-Orlando/d663-331790P2",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -86,14 +63,14 @@
       }
     },
     {
-      "productCode": "67327P2",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
+      "productCode": "42054P2",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Night-Tour-Over-Orlandos-Theme-Parks/d663-42054P2",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "67327P2",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
+        "productCode": "42054P2",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Night-Tour-Over-Orlandos-Theme-Parks/d663-42054P2",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -105,14 +82,14 @@
       }
     },
     {
-      "productCode": "149066P1",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Luxury-Tour-of-Washington-DC-at-Night-with-a-Chauffeur-Late-Model-SUV/d657-149066P1",
+      "productCode": "3170P51",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Day-Tour-including-Airboat-Safari-Eco-Boat-Ride-from-Orlando/d663-3170P51",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "149066P1",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Luxury-Tour-of-Washington-DC-at-Night-with-a-Chauffeur-Late-Model-SUV/d657-149066P1",
+        "productCode": "3170P51",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Day-Tour-including-Airboat-Safari-Eco-Boat-Ride-from-Orlando/d663-3170P51",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -124,14 +101,14 @@
       }
     },
     {
-      "productCode": "255730P191",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-time-Walking-Tour-of-DCs-National-Mall/d657-255730P191",
+      "productCode": "42054P4",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Day-Tour-Orlando-Theme-Parks-31miles-or-48miles/d663-42054P4",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "255730P191",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-time-Walking-Tour-of-DCs-National-Mall/d657-255730P191",
+        "productCode": "42054P4",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Day-Tour-Orlando-Theme-Parks-31miles-or-48miles/d663-42054P4",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -143,14 +120,14 @@
       }
     },
     {
-      "productCode": "67327P5",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Mount-Vernon-and-Arlington-Cemetery-Tour/d657-67327P5",
+      "productCode": "3170P40",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Crystal-River-Manatee-Swim-from-Orlando/d663-3170P40",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "67327P5",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Mount-Vernon-and-Arlington-Cemetery-Tour/d657-67327P5",
+        "productCode": "3170P40",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Crystal-River-Manatee-Swim-from-Orlando/d663-3170P40",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -162,14 +139,14 @@
       }
     },
     {
-      "productCode": "41503P1",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-DC-Monuments-at-Night-by-Bike/d657-41503P1",
+      "productCode": "123164P1",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Clear-Kayak-Tours-in-Rock-Springs/d663-123164P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "41503P1",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-DC-Monuments-at-Night-by-Bike/d657-41503P1",
+        "productCode": "123164P1",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Clear-Kayak-Tours-in-Rock-Springs/d663-123164P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -181,14 +158,14 @@
       }
     },
     {
-      "productCode": "41503P2",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Customized-DC-Sights-Bike-Tour/d657-41503P2",
+      "productCode": "120040P3",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Duluth-Moose-Lake-Buggy-Adventure/d663-120040P3",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "41503P2",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Customized-DC-Sights-Bike-Tour/d657-41503P2",
+        "productCode": "120040P3",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Duluth-Moose-Lake-Buggy-Adventure/d663-120040P3",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -200,14 +177,14 @@
       }
     },
     {
-      "productCode": "6349P59",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+      "productCode": "317042",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Saint-Augustine-Day-Trip-from-Orlando/d663-317042",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "6349P59",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+        "productCode": "317042",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Saint-Augustine-Day-Trip-from-Orlando/d663-317042",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -219,14 +196,14 @@
       }
     },
     {
-      "productCode": "6766SIGTOUR",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+      "productCode": "3170P41",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Clearwater-Beach-Day-Trip-from-Orlando-with-Optional-Upgrades/d663-3170P41",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "6766SIGTOUR",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+        "productCode": "3170P41",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Clearwater-Beach-Day-Trip-from-Orlando-with-Optional-Upgrades/d663-3170P41",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -238,14 +215,14 @@
       }
     },
     {
-      "productCode": "67327P3",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-and-Arlington-Cemetery-Tour/d657-67327P3",
+      "productCode": "42054P5",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Take-a-thrilling-1-hour-Helicopter-Ride-to-the-Space-Cost/d663-42054P5",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "67327P3",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-and-Arlington-Cemetery-Tour/d657-67327P3",
+        "productCode": "42054P5",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Take-a-thrilling-1-hour-Helicopter-Ride-to-the-Space-Cost/d663-42054P5",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -257,14 +234,14 @@
       }
     },
     {
-      "productCode": "7812P219",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+      "productCode": "3170P32",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Tour/d663-3170P32",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "7812P219",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+        "productCode": "3170P32",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Tour/d663-3170P32",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -276,14 +253,14 @@
       }
     },
     {
-      "productCode": "6349DAYTOUR",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-in-One-Day-Guided-Sightseeing-Tour/d657-6349DAYTOUR",
+      "productCode": "42627P1",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Small-Group-Florida-Everglades-Airboat-Tour/d663-42627P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "6349DAYTOUR",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-in-One-Day-Guided-Sightseeing-Tour/d657-6349DAYTOUR",
+        "productCode": "42627P1",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Small-Group-Florida-Everglades-Airboat-Tour/d663-42627P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -295,14 +272,14 @@
       }
     },
     {
-      "productCode": "6349NIGHT",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Guided-Night-Tour/d657-6349NIGHT",
+      "productCode": "5580079P3",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Speakeasy-Murder-Mystery-Dinner-Show-in-Orlando/d663-5580079P3",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "6349NIGHT",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Guided-Night-Tour/d657-6349NIGHT",
+        "productCode": "5580079P3",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Speakeasy-Murder-Mystery-Dinner-Show-in-Orlando/d663-5580079P3",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -314,14 +291,14 @@
       }
     },
     {
-      "productCode": "6766P11",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Moonlit-Motorcoach-Tour-of-National-Mall/d657-6766P11",
+      "productCode": "109065P4",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Silver-Springs-Clear-Kayaking-and-Paddle-Boarding/d663-109065P4",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "6766P11",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Moonlit-Motorcoach-Tour-of-National-Mall/d657-6766P11",
+        "productCode": "109065P4",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Silver-Springs-Clear-Kayaking-and-Paddle-Boarding/d663-109065P4",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -333,14 +310,14 @@
       }
     },
     {
-      "productCode": "41377P2",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Capitol-Hill-Guided-Small-Group-Tour/d657-41377P2",
+      "productCode": "105290P7",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Blue-Spring-Adventure-Manatee-Tour/d663-105290P7",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "41377P2",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Capitol-Hill-Guided-Small-Group-Tour/d657-41377P2",
+        "productCode": "105290P7",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Blue-Spring-Adventure-Manatee-Tour/d663-105290P7",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -352,14 +329,14 @@
       }
     },
     {
-      "productCode": "60725P1",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/See-the-City-Segway-Tour/d657-60725P1",
+      "productCode": "58194P1",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Horseback-Ride-on-Scenic-Lake-Louisa-Trails/d663-58194P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "60725P1",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/See-the-City-Segway-Tour/d657-60725P1",
+        "productCode": "58194P1",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Horseback-Ride-on-Scenic-Lake-Louisa-Trails/d663-58194P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -371,14 +348,14 @@
       }
     },
     {
-      "productCode": "14782P1",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Walking-Food-Tour-Of-The-Historic-U-Street-Neighborhood/d657-14782P1",
+      "productCode": "39750P18",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Manatees-Monkeys-and-Florida-Natural-Spring-Adventure-Tour/d663-39750P18",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "14782P1",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Walking-Food-Tour-Of-The-Historic-U-Street-Neighborhood/d657-14782P1",
+        "productCode": "39750P18",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Manatees-Monkeys-and-Florida-Natural-Spring-Adventure-Tour/d663-39750P18",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -390,14 +367,14 @@
       }
     },
     {
-      "productCode": "5046WAS_MON",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-by-Moonlight-Night-Tour-by-Trolley/d657-5046WAS_MON",
+      "productCode": "37177P6",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Polynesian-Fire-Luau-at-the-Orlando-Forum/d663-37177P6",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "5046WAS_MON",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-by-Moonlight-Night-Tour-by-Trolley/d657-5046WAS_MON",
+        "productCode": "37177P6",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Polynesian-Fire-Luau-at-the-Orlando-Forum/d663-37177P6",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -409,14 +386,14 @@
       }
     },
     {
-      "productCode": "6349VIPDC",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Viator-VIP-Best-of-DC-Including-US-Capitol-and-National-Archives-Reserved-Access-the-White-House-and-Lincoln-Memorial/d657-6349VIPDC",
+      "productCode": "5039P5",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Boggy-Creek-Airboat-Adventures-One-Hour-Airboat-Tour-near-Orlando-Florida/d663-5039P5",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "6349VIPDC",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Viator-VIP-Best-of-DC-Including-US-Capitol-and-National-Archives-Reserved-Access-the-White-House-and-Lincoln-Memorial/d657-6349VIPDC",
+        "productCode": "5039P5",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Boggy-Creek-Airboat-Adventures-One-Hour-Airboat-Tour-near-Orlando-Florida/d663-5039P5",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -428,14 +405,14 @@
       }
     },
     {
-      "productCode": "2384P20",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+      "productCode": "53748P4",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Orlando-Tree-Trek-Adventure-Park/d663-53748P4",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "2384P20",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+        "productCode": "53748P4",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Orlando-Tree-Trek-Adventure-Park/d663-53748P4",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -447,14 +424,14 @@
       }
     },
     {
-      "productCode": "5769MTVN",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+      "productCode": "357987P1",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Bioluminescent-Paddle-Excursion-with-A-Paddle-in-Paradise/d663-357987P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "5769MTVN",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+        "productCode": "357987P1",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Bioluminescent-Paddle-Excursion-with-A-Paddle-in-Paradise/d663-357987P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -473,7 +450,9 @@
     "engine6DestinationProductBinding.assessEngine6DestinationProductBinding",
     "engine6ProductSelectionBlocklist.readEngine6ProductSelectionPermanentBlocklist",
     "viatorPublicAvailability.ENGINE6_KNOWN_UNAVAILABLE_VIATOR_PRODUCTS",
-    "resolveEngine6ChangedProductCodes.resolveEngine6ProductCodesChangedSinceRefSafe"
+    "resolveEngine6ChangedProductCodes.resolveEngine6ProductCodesChangedSinceRefSafe",
+    "engine6ProductCodeExclusivityGovernance.assessEngine6ProductCodeExclusivity",
+    "engine6ProductCodeExclusivityGovernance.getEngine6ProductCodeRegistry"
   ],
   "newModules": [
     "engine6ProductSelectionGovernance",
@@ -489,14 +468,14 @@
   ],
   "blockingFailures": [
     {
-      "productCode": "67327P4",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-Tour-of-Washington-DC/d657-67327P4",
+      "productCode": "3170P78",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Small-Group-VIP-Experience/d663-3170P78",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "67327P4",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-Tour-of-Washington-DC/d657-67327P4",
+        "productCode": "3170P78",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Small-Group-VIP-Experience/d663-3170P78",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -508,14 +487,14 @@
       }
     },
     {
-      "productCode": "7953P7",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Private-Night-City-Tour/d657-7953P7",
+      "productCode": "331790P2",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Experience-a-Once-in-a-Lifetime-Aerial-Adventure-over-Orlando/d663-331790P2",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "7953P7",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Private-Night-City-Tour/d657-7953P7",
+        "productCode": "331790P2",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Experience-a-Once-in-a-Lifetime-Aerial-Adventure-over-Orlando/d663-331790P2",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -527,14 +506,14 @@
       }
     },
     {
-      "productCode": "67327P2",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
+      "productCode": "42054P2",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Night-Tour-Over-Orlandos-Theme-Parks/d663-42054P2",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "67327P2",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2",
+        "productCode": "42054P2",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Night-Tour-Over-Orlandos-Theme-Parks/d663-42054P2",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -546,14 +525,14 @@
       }
     },
     {
-      "productCode": "149066P1",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Luxury-Tour-of-Washington-DC-at-Night-with-a-Chauffeur-Late-Model-SUV/d657-149066P1",
+      "productCode": "3170P51",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Day-Tour-including-Airboat-Safari-Eco-Boat-Ride-from-Orlando/d663-3170P51",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "149066P1",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Luxury-Tour-of-Washington-DC-at-Night-with-a-Chauffeur-Late-Model-SUV/d657-149066P1",
+        "productCode": "3170P51",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Day-Tour-including-Airboat-Safari-Eco-Boat-Ride-from-Orlando/d663-3170P51",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -565,14 +544,14 @@
       }
     },
     {
-      "productCode": "255730P191",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-time-Walking-Tour-of-DCs-National-Mall/d657-255730P191",
+      "productCode": "42054P4",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Day-Tour-Orlando-Theme-Parks-31miles-or-48miles/d663-42054P4",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "255730P191",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Night-time-Walking-Tour-of-DCs-National-Mall/d657-255730P191",
+        "productCode": "42054P4",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Day-Tour-Orlando-Theme-Parks-31miles-or-48miles/d663-42054P4",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -584,14 +563,14 @@
       }
     },
     {
-      "productCode": "67327P5",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Mount-Vernon-and-Arlington-Cemetery-Tour/d657-67327P5",
+      "productCode": "3170P40",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Crystal-River-Manatee-Swim-from-Orlando/d663-3170P40",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "67327P5",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Mount-Vernon-and-Arlington-Cemetery-Tour/d657-67327P5",
+        "productCode": "3170P40",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Crystal-River-Manatee-Swim-from-Orlando/d663-3170P40",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -603,14 +582,14 @@
       }
     },
     {
-      "productCode": "41503P1",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-DC-Monuments-at-Night-by-Bike/d657-41503P1",
+      "productCode": "123164P1",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Clear-Kayak-Tours-in-Rock-Springs/d663-123164P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "41503P1",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-DC-Monuments-at-Night-by-Bike/d657-41503P1",
+        "productCode": "123164P1",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Clear-Kayak-Tours-in-Rock-Springs/d663-123164P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -622,14 +601,14 @@
       }
     },
     {
-      "productCode": "41503P2",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Customized-DC-Sights-Bike-Tour/d657-41503P2",
+      "productCode": "120040P3",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Duluth-Moose-Lake-Buggy-Adventure/d663-120040P3",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "41503P2",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Customized-DC-Sights-Bike-Tour/d657-41503P2",
+        "productCode": "120040P3",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Duluth-Moose-Lake-Buggy-Adventure/d663-120040P3",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -641,14 +620,14 @@
       }
     },
     {
-      "productCode": "6349P59",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+      "productCode": "317042",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Saint-Augustine-Day-Trip-from-Orlando/d663-317042",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "6349P59",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59",
+        "productCode": "317042",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Saint-Augustine-Day-Trip-from-Orlando/d663-317042",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -660,14 +639,14 @@
       }
     },
     {
-      "productCode": "6766SIGTOUR",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+      "productCode": "3170P41",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Clearwater-Beach-Day-Trip-from-Orlando-with-Optional-Upgrades/d663-3170P41",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "6766SIGTOUR",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR",
+        "productCode": "3170P41",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Clearwater-Beach-Day-Trip-from-Orlando-with-Optional-Upgrades/d663-3170P41",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -679,14 +658,14 @@
       }
     },
     {
-      "productCode": "67327P3",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-and-Arlington-Cemetery-Tour/d657-67327P3",
+      "productCode": "42054P5",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Take-a-thrilling-1-hour-Helicopter-Ride-to-the-Space-Cost/d663-42054P5",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "67327P3",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Private-Washington-DC-and-Arlington-Cemetery-Tour/d657-67327P3",
+        "productCode": "42054P5",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Take-a-thrilling-1-hour-Helicopter-Ride-to-the-Space-Cost/d663-42054P5",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -698,14 +677,14 @@
       }
     },
     {
-      "productCode": "7812P219",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+      "productCode": "3170P32",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Tour/d663-3170P32",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "7812P219",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219",
+        "productCode": "3170P32",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Tour/d663-3170P32",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -717,14 +696,14 @@
       }
     },
     {
-      "productCode": "6349DAYTOUR",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-in-One-Day-Guided-Sightseeing-Tour/d657-6349DAYTOUR",
+      "productCode": "42627P1",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Small-Group-Florida-Everglades-Airboat-Tour/d663-42627P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "6349DAYTOUR",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-in-One-Day-Guided-Sightseeing-Tour/d657-6349DAYTOUR",
+        "productCode": "42627P1",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Small-Group-Florida-Everglades-Airboat-Tour/d663-42627P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -736,14 +715,14 @@
       }
     },
     {
-      "productCode": "6349NIGHT",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Guided-Night-Tour/d657-6349NIGHT",
+      "productCode": "5580079P3",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Speakeasy-Murder-Mystery-Dinner-Show-in-Orlando/d663-5580079P3",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "6349NIGHT",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Guided-Night-Tour/d657-6349NIGHT",
+        "productCode": "5580079P3",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Speakeasy-Murder-Mystery-Dinner-Show-in-Orlando/d663-5580079P3",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -755,14 +734,14 @@
       }
     },
     {
-      "productCode": "6766P11",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Moonlit-Motorcoach-Tour-of-National-Mall/d657-6766P11",
+      "productCode": "109065P4",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Silver-Springs-Clear-Kayaking-and-Paddle-Boarding/d663-109065P4",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "6766P11",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Moonlit-Motorcoach-Tour-of-National-Mall/d657-6766P11",
+        "productCode": "109065P4",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Silver-Springs-Clear-Kayaking-and-Paddle-Boarding/d663-109065P4",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -774,14 +753,14 @@
       }
     },
     {
-      "productCode": "41377P2",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Capitol-Hill-Guided-Small-Group-Tour/d657-41377P2",
+      "productCode": "105290P7",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Blue-Spring-Adventure-Manatee-Tour/d663-105290P7",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "41377P2",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Capitol-Hill-Guided-Small-Group-Tour/d657-41377P2",
+        "productCode": "105290P7",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Blue-Spring-Adventure-Manatee-Tour/d663-105290P7",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -793,14 +772,14 @@
       }
     },
     {
-      "productCode": "60725P1",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/See-the-City-Segway-Tour/d657-60725P1",
+      "productCode": "58194P1",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Horseback-Ride-on-Scenic-Lake-Louisa-Trails/d663-58194P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "60725P1",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/See-the-City-Segway-Tour/d657-60725P1",
+        "productCode": "58194P1",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Horseback-Ride-on-Scenic-Lake-Louisa-Trails/d663-58194P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -812,14 +791,14 @@
       }
     },
     {
-      "productCode": "14782P1",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Walking-Food-Tour-Of-The-Historic-U-Street-Neighborhood/d657-14782P1",
+      "productCode": "39750P18",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Manatees-Monkeys-and-Florida-Natural-Spring-Adventure-Tour/d663-39750P18",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "14782P1",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Walking-Food-Tour-Of-The-Historic-U-Street-Neighborhood/d657-14782P1",
+        "productCode": "39750P18",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Manatees-Monkeys-and-Florida-Natural-Spring-Adventure-Tour/d663-39750P18",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -831,14 +810,14 @@
       }
     },
     {
-      "productCode": "5046WAS_MON",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-by-Moonlight-Night-Tour-by-Trolley/d657-5046WAS_MON",
+      "productCode": "37177P6",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Polynesian-Fire-Luau-at-the-Orlando-Forum/d663-37177P6",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "5046WAS_MON",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-by-Moonlight-Night-Tour-by-Trolley/d657-5046WAS_MON",
+        "productCode": "37177P6",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Polynesian-Fire-Luau-at-the-Orlando-Forum/d663-37177P6",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -850,14 +829,14 @@
       }
     },
     {
-      "productCode": "6349VIPDC",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Viator-VIP-Best-of-DC-Including-US-Capitol-and-National-Archives-Reserved-Access-the-White-House-and-Lincoln-Memorial/d657-6349VIPDC",
+      "productCode": "5039P5",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Boggy-Creek-Airboat-Adventures-One-Hour-Airboat-Tour-near-Orlando-Florida/d663-5039P5",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "6349VIPDC",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Viator-VIP-Best-of-DC-Including-US-Capitol-and-National-Archives-Reserved-Access-the-White-House-and-Lincoln-Memorial/d657-6349VIPDC",
+        "productCode": "5039P5",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Boggy-Creek-Airboat-Adventures-One-Hour-Airboat-Tour-near-Orlando-Florida/d663-5039P5",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -869,14 +848,14 @@
       }
     },
     {
-      "productCode": "2384P20",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+      "productCode": "53748P4",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Orlando-Tree-Trek-Adventure-Park/d663-53748P4",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "2384P20",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20",
+        "productCode": "53748P4",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Orlando-Tree-Trek-Adventure-Park/d663-53748P4",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -888,14 +867,14 @@
       }
     },
     {
-      "productCode": "5769MTVN",
-      "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+      "productCode": "357987P1",
+      "sourceUrl": "https://www.viator.com/tours/Orlando/Bioluminescent-Paddle-Excursion-with-A-Paddle-in-Paradise/d663-357987P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "5769MTVN",
-        "sourceUrl": "https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN",
+        "productCode": "357987P1",
+        "sourceUrl": "https://www.viator.com/tours/Orlando/Bioluminescent-Paddle-Excursion-with-A-Paddle-in-Paradise/d663-357987P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -914,5 +893,6 @@
   "remainingQualifiedCandidates": [],
   "minimumPortfolioShortfall": 22,
   "attemptedReplacements": [],
-  "formattedLiveValidationReport": "Engine6 live Viator production validation (2026-07-03T18:36:11.127Z)\nGovernance mode: undefined\nScope mode: strict\nProducts validated: 22\nFailures: 22\n\nFailures:\n- 67327P4: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-Night-Tour-of-Washington-DC/d657-67327P4)\n- 7953P7: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Washington-DC-Private-Night-City-Tour/d657-7953P7)\n- 67327P2: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-Washington-DC-Monuments-Tour/d657-67327P2)\n- 149066P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-Luxury-Tour-of-Washington-DC-at-Night-with-a-Chauffeur-Late-Model-SUV/d657-149066P1)\n- 255730P191: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-Night-time-Walking-Tour-of-DCs-National-Mall/d657-255730P191)\n- 67327P5: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-Mount-Vernon-and-Arlington-Cemetery-Tour/d657-67327P5)\n- 41503P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-DC-Monuments-at-Night-by-Bike/d657-41503P1)\n- 41503P2: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-Customized-DC-Sights-Bike-Tour/d657-41503P2)\n- 6349P59: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Old-Town-Alexandria-and-Mount-Vernon-Tour/d657-6349P59)\n- 6766SIGTOUR: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Guided-Tour-of-Washington-DC/d657-6766SIGTOUR)\n- 67327P3: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Private-Washington-DC-and-Arlington-Cemetery-Tour/d657-67327P3)\n- 7812P219: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Washington-DC-walking-tasting-tour-with-Secret-Food-Tours/d657-7812P219)\n- 6349DAYTOUR: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Washington-DC-in-One-Day-Guided-Sightseeing-Tour/d657-6349DAYTOUR)\n- 6349NIGHT: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Washington-DC-Guided-Night-Tour/d657-6349NIGHT)\n- 6766P11: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Moonlit-Motorcoach-Tour-of-National-Mall/d657-6766P11)\n- 41377P2: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Capitol-Hill-Guided-Small-Group-Tour/d657-41377P2)\n- 60725P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/See-the-City-Segway-Tour/d657-60725P1)\n- 14782P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Walking-Food-Tour-Of-The-Historic-U-Street-Neighborhood/d657-14782P1)\n- 5046WAS_MON: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Washington-DC-Monuments-by-Moonlight-Night-Tour-by-Trolley/d657-5046WAS_MON)\n- 6349VIPDC: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Viator-VIP-Best-of-DC-Including-US-Capitol-and-National-Archives-Reserved-Access-the-White-House-and-Lincoln-Memorial/d657-6349VIPDC)\n- 2384P20: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Washington-DC-Bike-Tour-of-the-National-Mall/d657-2384P20)\n- 5769MTVN: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Washington-DC/Mt-Vernon-and-Old-Town-Alexandria-Day-Trip-from-Washington-DC/d657-5769MTVN)"
+  "formattedLiveValidationReport": "Engine6 live Viator production validation (2026-07-05T18:06:08.998Z)\nGovernance mode: undefined\nScope mode: strict\nProducts validated: 22\nFailures: 22\n\nFailures:\n- 3170P78: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Small-Group-VIP-Experience/d663-3170P78)\n- 331790P2: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Experience-a-Once-in-a-Lifetime-Aerial-Adventure-over-Orlando/d663-331790P2)\n- 42054P2: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Helicopter-Night-Tour-Over-Orlandos-Theme-Parks/d663-42054P2)\n- 3170P51: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Day-Tour-including-Airboat-Safari-Eco-Boat-Ride-from-Orlando/d663-3170P51)\n- 42054P4: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Helicopter-Day-Tour-Orlando-Theme-Parks-31miles-or-48miles/d663-42054P4)\n- 3170P40: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Crystal-River-Manatee-Swim-from-Orlando/d663-3170P40)\n- 123164P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Clear-Kayak-Tours-in-Rock-Springs/d663-123164P1)\n- 120040P3: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Duluth-Moose-Lake-Buggy-Adventure/d663-120040P3)\n- 317042: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Saint-Augustine-Day-Trip-from-Orlando/d663-317042)\n- 3170P41: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Clearwater-Beach-Day-Trip-from-Orlando-with-Optional-Upgrades/d663-3170P41)\n- 42054P5: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Take-a-thrilling-1-hour-Helicopter-Ride-to-the-Space-Cost/d663-42054P5)\n- 3170P32: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Tour/d663-3170P32)\n- 42627P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Small-Group-Florida-Everglades-Airboat-Tour/d663-42627P1)\n- 5580079P3: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Speakeasy-Murder-Mystery-Dinner-Show-in-Orlando/d663-5580079P3)\n- 109065P4: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Silver-Springs-Clear-Kayaking-and-Paddle-Boarding/d663-109065P4)\n- 105290P7: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Blue-Spring-Adventure-Manatee-Tour/d663-105290P7)\n- 58194P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Horseback-Ride-on-Scenic-Lake-Louisa-Trails/d663-58194P1)\n- 39750P18: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Manatees-Monkeys-and-Florida-Natural-Spring-Adventure-Tour/d663-39750P18)\n- 37177P6: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Polynesian-Fire-Luau-at-the-Orlando-Forum/d663-37177P6)\n- 5039P5: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Boggy-Creek-Airboat-Adventures-One-Hour-Airboat-Tour-near-Orlando-Florida/d663-5039P5)\n- 53748P4: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Orlando-Tree-Trek-Adventure-Park/d663-53748P4)\n- 357987P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Bioluminescent-Paddle-Excursion-with-A-Paddle-in-Paradise/d663-357987P1)",
+  "productCodeExclusivityReport": "Engine6 product code exclusivity governance\nDestination: Orlando\n\n✓ Product 3170P78 already owned by Orlando (regeneration allowed)\n✓ Product 331790P2 already owned by Orlando (regeneration allowed)\n✓ Product 42054P2 already owned by Orlando (regeneration allowed)\n✓ Product 3170P51 already owned by Orlando (regeneration allowed)\n✓ Product 42054P4 already owned by Orlando (regeneration allowed)\n✓ Product 3170P40 already owned by Orlando (regeneration allowed)\n✓ Product 123164P1 already owned by Orlando (regeneration allowed)\n✓ Product 120040P3 already owned by Orlando (regeneration allowed)\n✓ Product 317042 already owned by Orlando (regeneration allowed)\n✓ Product 3170P41 already owned by Orlando (regeneration allowed)\n✓ Product 42054P5 already owned by Orlando (regeneration allowed)\n✓ Product 3170P32 already owned by Orlando (regeneration allowed)\n✓ Product 42627P1 already owned by Orlando (regeneration allowed)\n✓ Product 5580079P3 already owned by Orlando (regeneration allowed)\n✓ Product 109065P4 already owned by Orlando (regeneration allowed)\n✓ Product 105290P7 already owned by Orlando (regeneration allowed)\n✓ Product 58194P1 already owned by Orlando (regeneration allowed)\n✓ Product 39750P18 already owned by Orlando (regeneration allowed)\n✓ Product 37177P6 already owned by Orlando (regeneration allowed)\n✓ Product 5039P5 already owned by Orlando (regeneration allowed)\n✓ Product 53748P4 already owned by Orlando (regeneration allowed)\n✓ Product 357987P1 already owned by Orlando (regeneration allowed)"
 }

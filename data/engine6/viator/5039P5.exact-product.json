@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "5039P5",
+    "productUrl": "https://www.viator.com/tours/Orlando/Boggy-Creek-Airboat-Adventures-One-Hour-Airboat-Tour-near-Orlando-Florida/d663-5039P5",
+    "title": "One-Hour Airboat Ride Near Orlando",
+    "description": {
+      "text": "Discover the natural beauty of Florida—and explore beyond just the theme parks—on this airboat tour in Kissimmee, close to Orlando, including the ride itself plus a visit to a butterfly garden and a mining activity. Explore the lush landscape from the water, look out for native wildlife and get up close to reptiles, and hear stories and local insights along the way.Combine multiple experiences in one on this airboat tour in Kissimmee Explore the Florida landscape in a more active way than many other tours Work around your own schedule with a number of start times available Afterward, consider Transportation, equipment, and local commentary are handled so you can focus on Central Florida's wildlife, coastlines, and space-coast sights. Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $65.58",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 888
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/3b/a3/d8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "One-Hour Airboat Ride Near Orlando from Orlando",
+      "Kennedy Space Center, Everglades, or Gulf Coast routing",
+      "Professional guide with Central Florida expertise",
+      "Small-group or private format as listed",
+      "Orlando wildlife, coast, or space-coast experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover the natural beauty of Florida—and explore beyond just the theme parks—on this airboat tour in Kissimmee, close to Orlando, including the ride itself plus a visit to a butterfly garden and a mining activity.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boggy Creek Airboat Adventures",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Everglades National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Johns River",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the One-Hour Airboat Ride Near Orlando?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 65.58
+      },
+      "currency": "USD"
+    }
+  }
+}

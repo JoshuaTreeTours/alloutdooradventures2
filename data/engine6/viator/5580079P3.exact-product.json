@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "5580079P3",
+    "productUrl": "https://www.viator.com/tours/Orlando/Speakeasy-Murder-Mystery-Dinner-Show-in-Orlando/d663-5580079P3",
+    "title": "Speakeasy Murder Mystery Dinner Show in Orlando",
+    "description": {
+      "text": "Step into a 1920s-themed evening at a murder mystery dinner show in Orlando. This interactive experience combines dining with live entertainment, where guests take part in solving a staged mystery. With a structured format and immersive setting, it offers a social, participatory alternative to traditional shows, allowing you to engage directly with the story while enjoying food and drinks.Enjoy an alternative Orlando experience beyond theme parks Interactive murder mystery lets you take part—not just watch One simple booking replaces separate dinner and evening plans Social format keeps groups Ideal for travelers basing in Orlando who want a guided Florida experience beyond the theme parks without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $88.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 74
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/8f/1d/fc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Step into a 1920s-themed evening at a murder mystery dinner show in Orlando",
+      "This interactive experience combines dining with live entertainment, where guests take part in solving a staged mystery",
+      "With a structured format and immersive setting, it offers a social, participatory alternative to traditional shows, allo",
+      "Speakeasy Murder Mystery Dinner Show in Orlando departing from the Orlando area",
+      "Professional Orlando-area guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Orlando-area hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Step into a 1920s-themed evening at a murder mystery dinner show in Orlando.",
+    "itineraryItems": [
+      {
+        "title": "Orlando",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boggy Creek Airboat Adventures",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Everglades National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "St. Johns River",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Speakeasy Murder Mystery Dinner Show in Orlando?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Orlando?",
+        "answer": "Meet your guide at the confirmed Orlando-area hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Dining Experiences"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 88
+      },
+      "currency": "USD"
+    }
+  }
+}
