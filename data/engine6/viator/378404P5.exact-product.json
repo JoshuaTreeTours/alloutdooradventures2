@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "378404P5",
+    "productUrl": "https://www.viator.com/tours/Naples/10-000-Islands-Shelling-Trip/d22381-378404P5",
+    "title": "Private 4 Hour Shelling Adventure 10,000 Islands and Marco Island",
+    "description": {
+      "text": "*Have a Group Larger than 6? We can take groups up to 12. Equipment, safety briefings, and local commentary are handled so you can focus on dolphins, shelling beaches, and Everglades wildlife. Ideal for Naples and Marco Island visitors who want shallow-water shelling, dolphin watching, and mangrove-lined routes without chartering a boat alone."
+    },
+    "location": {
+      "city": "Naples",
+      "state": "Florida"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $675.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/cb/40/4c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private 4 Hour Shelling Adventure 10,000 Islands and Marco Island from Naples",
+      "Ten Thousand Islands or Marco Island routing",
+      "Professional captain with Gulf Coast expertise",
+      "Small-group or private format as listed",
+      "Naples mangrove, shelling, or Everglades experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Naples marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "*Have a Group Larger than 6? We can take groups up to 12.",
+    "itineraryItems": [
+      {
+        "title": "Naples",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ten Thousand Islands",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marco Island",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Keewaydin Island",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private 4 Hour Shelling Adventure 10,000 Islands and Marco Island?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Naples?",
+        "answer": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 675
+      },
+      "currency": "USD"
+    }
+  }
+}

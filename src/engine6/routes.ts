@@ -825,6 +825,85 @@ export const ENGINE6_FORT_LAUDERDALE_TOUR_PATH_PREFIX =
 export const isEngine6FortLauderdaleTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_FORT_LAUDERDALE_TOUR_PATH_PREFIX);
 
+export const ENGINE6_NAPLES_293665P1_PRODUCT_CODE = "293665P1";
+export const ENGINE6_NAPLES_293665P1_ROUTE =
+  "/destinations/florida/naples/tours/private-half-day-charter-tour-in-naples-florida-293665P1";
+export const ENGINE6_NAPLES_38075P18_PRODUCT_CODE = "38075P18";
+export const ENGINE6_NAPLES_38075P18_ROUTE =
+  "/destinations/florida/naples/tours/marco-island-inshore-fishing-charters-38075P18";
+export const ENGINE6_NAPLES_389518P4_PRODUCT_CODE = "389518P4";
+export const ENGINE6_NAPLES_389518P4_ROUTE =
+  "/destinations/florida/naples/tours/half-day-private-shelling-dolphin-ecotour-in-10-000-isl-389518P4";
+export const ENGINE6_NAPLES_378404P5_PRODUCT_CODE = "378404P5";
+export const ENGINE6_NAPLES_378404P5_ROUTE =
+  "/destinations/florida/naples/tours/private-4-hour-shelling-adventure-10-000-islands-and-ma-378404P5";
+export const ENGINE6_NAPLES_76258P6_PRODUCT_CODE = "76258P6";
+export const ENGINE6_NAPLES_76258P6_ROUTE =
+  "/destinations/florida/naples/tours/private-fishing-boat-charters-in-naples-bay-and-the-gul-76258P6";
+export const ENGINE6_NAPLES_378404P1_PRODUCT_CODE = "378404P1";
+export const ENGINE6_NAPLES_378404P1_ROUTE =
+  "/destinations/florida/naples/tours/marco-island-sunset-cruise-private-2-hour-378404P1";
+export const ENGINE6_NAPLES_378404P4_PRODUCT_CODE = "378404P4";
+export const ENGINE6_NAPLES_378404P4_ROUTE =
+  "/destinations/florida/naples/tours/private-2-hour-kids-and-family-fishing-marco-island-fl-378404P4";
+export const ENGINE6_NAPLES_76258P2_PRODUCT_CODE = "76258P2";
+export const ENGINE6_NAPLES_76258P2_ROUTE =
+  "/destinations/florida/naples/tours/private-eco-boat-trip-out-of-naples-bay-fl-island-stop-76258P2";
+export const ENGINE6_NAPLES_44152P10_PRODUCT_CODE = "44152P10";
+export const ENGINE6_NAPLES_44152P10_ROUTE =
+  "/destinations/florida/naples/tours/everglades-national-park-naturalist-led-hike-2-boat-tri-44152P10";
+export const ENGINE6_NAPLES_284504P1_PRODUCT_CODE = "284504P1";
+export const ENGINE6_NAPLES_284504P1_ROUTE =
+  "/destinations/florida/naples/tours/drive-your-own-2-seat-fun-go-cat-boat-on-marco-island-284504P1";
+export const ENGINE6_NAPLES_457279P1_PRODUCT_CODE = "457279P1";
+export const ENGINE6_NAPLES_457279P1_ROUTE =
+  "/destinations/florida/naples/tours/naples-to-keewaydin-your-luxury-water-shuttle-with-all-457279P1";
+export const ENGINE6_NAPLES_87912P1_PRODUCT_CODE = "87912P1";
+export const ENGINE6_NAPLES_87912P1_ROUTE =
+  "/destinations/florida/naples/tours/backwater-adventures-craigcat-tours-of-the-10-000-islan-87912P1";
+export const ENGINE6_NAPLES_5609P13_PRODUCT_CODE = "5609P13";
+export const ENGINE6_NAPLES_5609P13_ROUTE =
+  "/destinations/florida/naples/tours/10-000-islands-boat-excursion-3-5-hour-dolphins-shellin-5609P13";
+export const ENGINE6_NAPLES_44152P9_PRODUCT_CODE = "44152P9";
+export const ENGINE6_NAPLES_44152P9_ROUTE =
+  "/destinations/florida/naples/tours/10-000-islands-boat-tour-naturalist-led-walk-in-the-eve-44152P9";
+export const ENGINE6_NAPLES_30481P16_PRODUCT_CODE = "30481P16";
+export const ENGINE6_NAPLES_30481P16_ROUTE =
+  "/destinations/florida/naples/tours/4-hour-ten-thousand-islands-shelling-trip-30481P16";
+export const ENGINE6_NAPLES_389518P3_PRODUCT_CODE = "389518P3";
+export const ENGINE6_NAPLES_389518P3_ROUTE =
+  "/destinations/florida/naples/tours/half-day-shelling-dolphin-eco-tour-in-10-000-island-and-389518P3";
+export const ENGINE6_NAPLES_389518P9_PRODUCT_CODE = "389518P9";
+export const ENGINE6_NAPLES_389518P9_ROUTE =
+  "/destinations/florida/naples/tours/naples-keewaydin-shelling-dolphin-and-beach-tours-389518P9";
+export const ENGINE6_NAPLES_268216P7_PRODUCT_CODE = "268216P7";
+export const ENGINE6_NAPLES_268216P7_ROUTE =
+  "/destinations/florida/naples/tours/barrier-island-shelling-tour-268216P7";
+export const ENGINE6_NAPLES_166513P2_PRODUCT_CODE = "166513P2";
+export const ENGINE6_NAPLES_166513P2_ROUTE =
+  "/destinations/florida/naples/tours/2-hour-dolphin-birding-and-shelling-tour-166513P2";
+export const ENGINE6_NAPLES_64741P1_PRODUCT_CODE = "64741P1";
+export const ENGINE6_NAPLES_64741P1_ROUTE =
+  "/destinations/florida/naples/tours/dolphin-and-shelling-cruise-for-up-to-12-people-64741P1";
+export const ENGINE6_NAPLES_5698HALFWEST_PRODUCT_CODE = "5698HALFWEST";
+export const ENGINE6_NAPLES_5698HALFWEST_ROUTE =
+  "/destinations/florida/naples/tours/western-everglades-adventure-tour-5698HALFWEST";
+export const ENGINE6_NAPLES_5609P10_PRODUCT_CODE = "5609P10";
+export const ENGINE6_NAPLES_5609P10_ROUTE =
+  "/destinations/florida/naples/tours/marco-island-2-hour-dolphin-birding-and-shelling-tour-5609P10";
+export const ENGINE6_NAPLES_30481P3_PRODUCT_CODE = "30481P3";
+export const ENGINE6_NAPLES_30481P3_ROUTE =
+  "/destinations/florida/naples/tours/marco-island-wildlife-sightseeing-and-shelling-tour-30481P3";
+export const ENGINE6_NAPLES_30481P13_PRODUCT_CODE = "30481P13";
+export const ENGINE6_NAPLES_30481P13_ROUTE =
+  "/destinations/florida/naples/tours/marco-island-dolphin-sightseeing-tour-30481P13";
+
+export const ENGINE6_NAPLES_TOUR_PATH_PREFIX =
+  "/destinations/florida/naples/tours/";
+
+export const isEngine6NaplesTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_NAPLES_TOUR_PATH_PREFIX);
+
 export const ENGINE6_MIAMI_PARASAILING_PRODUCT_CODE = "5503P10";
 export const ENGINE6_MIAMI_PARASAILING_ROUTE =
   "/destinations/florida/miami/tours/parasailing-with-miami-watersports";
@@ -2717,6 +2796,102 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_FORT_LAUDERDALE_5546582P1_ROUTE,
     ENGINE6_FORT_LAUDERDALE_5546582P1_PRODUCT_CODE,
+  ],
+    [
+    ENGINE6_NAPLES_293665P1_ROUTE,
+    ENGINE6_NAPLES_293665P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_38075P18_ROUTE,
+    ENGINE6_NAPLES_38075P18_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_389518P4_ROUTE,
+    ENGINE6_NAPLES_389518P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_378404P5_ROUTE,
+    ENGINE6_NAPLES_378404P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_76258P6_ROUTE,
+    ENGINE6_NAPLES_76258P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_378404P1_ROUTE,
+    ENGINE6_NAPLES_378404P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_378404P4_ROUTE,
+    ENGINE6_NAPLES_378404P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_76258P2_ROUTE,
+    ENGINE6_NAPLES_76258P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_44152P10_ROUTE,
+    ENGINE6_NAPLES_44152P10_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_284504P1_ROUTE,
+    ENGINE6_NAPLES_284504P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_457279P1_ROUTE,
+    ENGINE6_NAPLES_457279P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_87912P1_ROUTE,
+    ENGINE6_NAPLES_87912P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_5609P13_ROUTE,
+    ENGINE6_NAPLES_5609P13_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_44152P9_ROUTE,
+    ENGINE6_NAPLES_44152P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_30481P16_ROUTE,
+    ENGINE6_NAPLES_30481P16_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_389518P3_ROUTE,
+    ENGINE6_NAPLES_389518P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_389518P9_ROUTE,
+    ENGINE6_NAPLES_389518P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_268216P7_ROUTE,
+    ENGINE6_NAPLES_268216P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_166513P2_ROUTE,
+    ENGINE6_NAPLES_166513P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_64741P1_ROUTE,
+    ENGINE6_NAPLES_64741P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_5698HALFWEST_ROUTE,
+    ENGINE6_NAPLES_5698HALFWEST_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_5609P10_ROUTE,
+    ENGINE6_NAPLES_5609P10_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_30481P3_ROUTE,
+    ENGINE6_NAPLES_30481P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_NAPLES_30481P13_ROUTE,
+    ENGINE6_NAPLES_30481P13_PRODUCT_CODE,
   ],
   [ENGINE6_MIAMI_PARASAILING_ROUTE, ENGINE6_MIAMI_PARASAILING_PRODUCT_CODE],
   [ENGINE6_MIAMI_HELICOPTER_ROUTE, ENGINE6_MIAMI_HELICOPTER_PRODUCT_CODE],

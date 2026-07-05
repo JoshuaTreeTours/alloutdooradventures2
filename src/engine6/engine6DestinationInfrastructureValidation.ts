@@ -101,6 +101,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "florida",
     citySlug: "fort-lauderdale",
   },
+  naples: {
+    destinationLabel: "Naples",
+    destinationCitySlug: "naples",
+    stateSlug: "florida",
+    citySlug: "naples",
+  },
 };
 
 export type Engine6DestinationInfrastructureReport = {

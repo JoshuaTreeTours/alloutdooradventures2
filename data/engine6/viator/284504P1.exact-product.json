@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "284504P1",
+    "productUrl": "https://www.viator.com/tours/Naples/Drive-your-own-2-Seat-Catamaran-on-a-1-hour-and-15-minute-Adventure/d22381-284504P1",
+    "title": "Drive your Own 2 Seat Fun Go Cat Boat on Marco Island",
+    "description": {
+      "text": "Explore the thousands of islands around Marco Island by Go Cat boat. The route highlights Ten Thousand Islands mangroves, Marco Island shelling shores, Keewaydin sandbars, and the open Gulf waters south of Naples. Equipment, safety briefings, and local commentary are handled so you can focus on dolphins, shelling beaches, and Everglades wildlife. Ideal for Gulf Coast travelers who want a private captain for Naples Bay, Keewaydin Island, or Ten Thousand Islands without handling marina logistics."
+    },
+    "location": {
+      "city": "Naples",
+      "state": "Florida"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $180.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 292
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/2f/e0/74.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Drive your Own 2 Seat Fun Go Cat Boat on Marco Island from Naples",
+      "Ten Thousand Islands or Marco Island routing",
+      "Professional captain with Gulf Coast expertise",
+      "Small-group or private format as listed",
+      "Naples mangrove, shelling, or Everglades experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Naples marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the thousands of islands around Marco Island by Go Cat boat.",
+    "itineraryItems": [
+      {
+        "title": "Naples",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ten Thousand Islands",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mangrove Estuaries",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Cape Romano",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Drive your Own 2 Seat Fun Go Cat Boat on Marco Island?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Naples?",
+        "answer": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 180
+      },
+      "currency": "USD"
+    }
+  }
+}

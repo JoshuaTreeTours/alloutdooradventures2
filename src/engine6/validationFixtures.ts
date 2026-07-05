@@ -510,6 +510,30 @@ import specimen143322p5Payload from "../../data/engine6/viator/143322P5.exact-pr
 import specimen143322p4Payload from "../../data/engine6/viator/143322P4.exact-product.json";
 import specimen270280p1Payload from "../../data/engine6/viator/270280P1.exact-product.json";
 import specimen50605p1Payload from "../../data/engine6/viator/50605P1.exact-product.json";
+import specimen293665p1Payload from "../../data/engine6/viator/293665P1.exact-product.json";
+import specimen38075p18Payload from "../../data/engine6/viator/38075P18.exact-product.json";
+import specimen389518p4Payload from "../../data/engine6/viator/389518P4.exact-product.json";
+import specimen378404p5Payload from "../../data/engine6/viator/378404P5.exact-product.json";
+import specimen76258p6Payload from "../../data/engine6/viator/76258P6.exact-product.json";
+import specimen378404p1Payload from "../../data/engine6/viator/378404P1.exact-product.json";
+import specimen378404p4Payload from "../../data/engine6/viator/378404P4.exact-product.json";
+import specimen76258p2Payload from "../../data/engine6/viator/76258P2.exact-product.json";
+import specimen44152p10Payload from "../../data/engine6/viator/44152P10.exact-product.json";
+import specimen284504p1Payload from "../../data/engine6/viator/284504P1.exact-product.json";
+import specimen457279p1Payload from "../../data/engine6/viator/457279P1.exact-product.json";
+import specimen87912p1Payload from "../../data/engine6/viator/87912P1.exact-product.json";
+import specimen5609p13Payload from "../../data/engine6/viator/5609P13.exact-product.json";
+import specimen44152p9Payload from "../../data/engine6/viator/44152P9.exact-product.json";
+import specimen30481p16Payload from "../../data/engine6/viator/30481P16.exact-product.json";
+import specimen389518p3Payload from "../../data/engine6/viator/389518P3.exact-product.json";
+import specimen389518p9Payload from "../../data/engine6/viator/389518P9.exact-product.json";
+import specimen268216p7Payload from "../../data/engine6/viator/268216P7.exact-product.json";
+import specimen166513p2Payload from "../../data/engine6/viator/166513P2.exact-product.json";
+import specimen64741p1Payload from "../../data/engine6/viator/64741P1.exact-product.json";
+import specimen5698halfwestPayload from "../../data/engine6/viator/5698HALFWEST.exact-product.json";
+import specimen5609p10Payload from "../../data/engine6/viator/5609P10.exact-product.json";
+import specimen30481p3Payload from "../../data/engine6/viator/30481P3.exact-product.json";
+import specimen30481p13Payload from "../../data/engine6/viator/30481P13.exact-product.json";
 import specimen5546582p1Payload from "../../data/engine6/viator/5546582P1.exact-product.json";
 import specimen89173p10Payload from "../../data/engine6/viator/89173P10.exact-product.json";
 import specimen438341p2Payload from "../../data/engine6/viator/438341P2.exact-product.json";
@@ -901,6 +925,150 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Fort-Lauderdale/Drift-Fishing-Trip/d660-50605P1",
     rawPayload: specimen50605p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "293665P1",
+    publicUrl: "https://www.viator.com/tours/Naples/Native-Sun-Charters/d22381-293665P1",
+    rawPayload: specimen293665p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "38075P18",
+    publicUrl: "https://www.viator.com/tours/Naples/Marco-Island-Inshore-Fishing-Charter/d22381-38075P18",
+    rawPayload: specimen38075p18Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "389518P4",
+    publicUrl: "https://www.viator.com/tours/Naples/Half-Day-Private-Shelling-Dolphin-EcoTour-in-10-000-Island-Marco/d22381-389518P4",
+    rawPayload: specimen389518p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "378404P5",
+    publicUrl: "https://www.viator.com/tours/Naples/10-000-Islands-Shelling-Trip/d22381-378404P5",
+    rawPayload: specimen378404p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "76258P6",
+    publicUrl: "https://www.viator.com/tours/Naples/Half-day-Private-Fishing-Boat-Charter-in-Naples-Bay-and-the-Gulf/d22381-76258P6",
+    rawPayload: specimen76258p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "378404P1",
+    publicUrl: "https://www.viator.com/tours/Naples/Sunset-Cruise-10-000-Islands/d22381-378404P1",
+    rawPayload: specimen378404p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "378404P4",
+    publicUrl: "https://www.viator.com/tours/Naples/2-5-Kids-and-Family-Fishing/d22381-378404P4",
+    rawPayload: specimen378404p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "76258P2",
+    publicUrl: "https://www.viator.com/tours/Naples/Private-Half-day-Sightseeing-Eco-Boat-Tour-Trip-in-Naples-Bay-and-the-Gulf/d22381-76258P2",
+    rawPayload: specimen76258p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "44152P10",
+    publicUrl: "https://www.viator.com/tours/Naples/Everglades-Natl-Park-Biologist-Led-Adventure-Cruise-Hike-Airboat-WEST-Coast/d22381-44152P10",
+    rawPayload: specimen44152p10Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "284504P1",
+    publicUrl: "https://www.viator.com/tours/Naples/Drive-your-own-2-Seat-Catamaran-on-a-1-hour-and-15-minute-Adventure/d22381-284504P1",
+    rawPayload: specimen284504p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "457279P1",
+    publicUrl: "https://www.viator.com/tours/Naples/Naples-water-shuttle-to-Keewaydin-with-everything-you-need/d22381-457279P1",
+    rawPayload: specimen457279p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "87912P1",
+    publicUrl: "https://www.viator.com/tours/Naples/2-5-Hour-Craig-Cat-Tour-of-the-10-000-Islands/d22381-87912P1",
+    rawPayload: specimen87912p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5609P13",
+    publicUrl: "https://www.viator.com/tours/Naples/10-000-Islands-Boat-Excursion-Dolphins-Shelling-and-Cape-Romano-Dome-Homess/d22381-5609P13",
+    rawPayload: specimen5609p13Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "44152P9",
+    publicUrl: "https://www.viator.com/tours/Naples/1-hour-Boat-Ride-in-10-000-Islands-Nature-Walk-led-by-Experienced-Naturalist/d22381-44152P9",
+    rawPayload: specimen44152p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "30481P16",
+    publicUrl: "https://www.viator.com/tours/Naples/4-Hour-Kice-Island-Shelling-Trip/d22381-30481P16",
+    rawPayload: specimen30481p16Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "389518P3",
+    publicUrl: "https://www.viator.com/tours/Naples/Shelling-Dolphin-Eco-Tour-10-000-Island-3-Hours/d22381-389518P3",
+    rawPayload: specimen389518p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "389518P9",
+    publicUrl: "https://www.viator.com/tours/Naples/Naples-Keewaydin-Shelling-Dolphin-and-Beach-Tours/d22381-389518P9",
+    rawPayload: specimen389518p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "268216P7",
+    publicUrl: "https://www.viator.com/tours/Naples/Barrier-Island-Shelling-Tour/d22381-268216P7",
+    rawPayload: specimen268216p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "166513P2",
+    publicUrl: "https://www.viator.com/tours/Naples/2-Hour-Dolphin-Birding-and-Shelling-Tour/d22381-166513P2",
+    rawPayload: specimen166513p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "64741P1",
+    publicUrl: "https://www.viator.com/tours/Naples/Ten-Thousand-Islands-Adventure-Boat-Tour/d22381-64741P1",
+    rawPayload: specimen64741p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5698HALFWEST",
+    publicUrl: "https://www.viator.com/tours/Naples/Everglades-Family-Adventure-Tour-from-Greater-Fort-Myers-Naples-Area/d22381-5698HALFWEST",
+    rawPayload: specimen5698halfwestPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5609P10",
+    publicUrl: "https://www.viator.com/tours/Naples/Marco-Island-2-hour-Dolphin-Birding-and-Shelling-tour/d22381-5609P10",
+    rawPayload: specimen5609p10Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "30481P3",
+    publicUrl: "https://www.viator.com/tours/Naples/Cape-Romano-Shelling-and-Sightseeing-Tour/d22381-30481P3",
+    rawPayload: specimen30481p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "30481P13",
+    publicUrl: "https://www.viator.com/tours/Naples/Dolphin-Watching-Tour-near-Marco-Island/d22381-30481P13",
+    rawPayload: specimen30481p13Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

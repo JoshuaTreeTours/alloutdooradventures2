@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "44152P9",
+    "productUrl": "https://www.viator.com/tours/Naples/1-hour-Boat-Ride-in-10-000-Islands-Nature-Walk-led-by-Experienced-Naturalist/d22381-44152P9",
+    "title": "10,000 Islands Boat Tour + Naturalist Led Walk in the Everglades!",
+    "description": {
+      "text": "Visit two national parks in a half day! There is always the chance to spot manatees, critically endangered sawtooth fish and sharks. This is a birding hot spot and you may see roseate spoonbills and white pelicans. Ideal for Naples travelers who want a guided Everglades outing with transport, mangrove channels, and expert naturalist commentary included."
+    },
+    "location": {
+      "city": "Naples",
+      "state": "Florida"
+    },
+    "duration": "5 hours 30 minutes (approx.)",
+    "priceFrom": "From $169.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 6
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/e8/80/93.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit two national parks in a half day!",
+      "There is always the chance to spot manatees, critically endangered sawtooth fish and sharks",
+      "This is a birding hot spot and you may see roseate spoonbills and white pelicans",
+      "10,000 Islands Boat Tour + Naturalist Led Walk in the Everglades! departing from Naples",
+      "Professional Naples captain or naturalist guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Naples marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Visit two national parks in a half day! There is always the chance to spot manatees, critically endangered sawtooth fish and sharks.",
+    "itineraryItems": [
+      {
+        "title": "Naples",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Everglades National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ten Thousand Islands",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Big Cypress National Preserve",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 10,000 Islands Boat Tour + Naturalist Led Walk in the Everglades!?",
+        "answer": "The planned duration is 5 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Naples?",
+        "answer": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 169
+      },
+      "currency": "USD"
+    }
+  }
+}

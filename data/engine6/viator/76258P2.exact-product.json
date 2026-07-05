@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "76258P2",
+    "productUrl": "https://www.viator.com/tours/Naples/Private-Half-day-Sightseeing-Eco-Boat-Tour-Trip-in-Naples-Bay-and-the-Gulf/d22381-76258P2",
+    "title": "PRIVATE Eco Boat Trip out of Naples Bay, FL , island stop incl.",
+    "description": {
+      "text": "Florida's south-west coast is filled with sea life, wildlife, and nature sightseeing you won't want to miss. This Naples Bay and Gulf of Mexico Private Eco Tour by Boat takes you to areas along the water in Naples Bay and the Gulf of Mexico so you can see a variety of animals and fish in their natural habitat. Plus, a guide narrates so you can learn about the ecosystem, too.Explore Naples Bay and the Gulf of Mexico during a private boat tour Visit Ten Thousand Islands, Gordon Pass, and Keewaydin Island in one day See wildlife from dolphins and manatees to blue herons and deer A private group o Ideal for Naples and Marco Island visitors who want shallow-water shelling, dolphin watching, and mangrove-lined routes without chartering a boat alone."
+    },
+    "location": {
+      "city": "Naples",
+      "state": "Florida"
+    },
+    "duration": "2 hours 45 minutes (approx.)",
+    "priceFrom": "From $395.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 38
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e8/29/42.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Florida's south-west coast is filled with sea life, wildlife, and nature sightseeing you won't want to miss",
+      "This Naples Bay and Gulf of Mexico Private Eco Tour by Boat takes you to areas along the water in Naples Bay and the Gul",
+      "Plus, a guide narrates so you can learn about the ecosystem, too.Explore Naples Bay and the Gulf of Mexico during a priv",
+      "PRIVATE Eco Boat Trip out of Naples Bay, FL , island stop incl. departing from Naples",
+      "Professional Naples captain or naturalist guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Naples marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Florida's south-west coast is filled with sea life, wildlife, and nature sightseeing you won't want to miss.",
+    "itineraryItems": [
+      {
+        "title": "Naples",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ten Thousand Islands",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marco Island",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Keewaydin Island",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the PRIVATE Eco Boat Trip out of Naples Bay, FL , island stop incl.?",
+        "answer": "The planned duration is 2 hours 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Naples?",
+        "answer": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 395
+      },
+      "currency": "USD"
+    }
+  }
+}

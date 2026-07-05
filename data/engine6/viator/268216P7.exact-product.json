@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "268216P7",
+    "productUrl": "https://www.viator.com/tours/Naples/Barrier-Island-Shelling-Tour/d22381-268216P7",
+    "title": "Barrier Island Shelling Tour",
+    "description": {
+      "text": "This unique experience takes small-group on a boat tour to various destinations around Barrier Island in search of special sea shells. Tour destinations may include the Caxambas sandbars, Kice Island, Morgan Island, Second Chance Shell Bar, and others.A small group seashell hunting tour from Goodland Explore sandbars, islands, beaches, and other destinations Travel with an expert in rare and sought-after seashells Shelling tools provided: buckets, baskets, and scoopers Equipment, safety briefings, and local commentary are handled so you can focus on dolphins, shelling beaches, and Everglades wildlife. Ideal for Naples and Marco Island visitors who want shallow-water shelling, dolphin watching, and mangrove-lined routes without chartering a boat alone."
+    },
+    "location": {
+      "city": "Naples",
+      "state": "Florida"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $129.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 46
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/1e/c1/c3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Barrier Island Shelling Tour from Naples",
+      "Ten Thousand Islands or Marco Island routing",
+      "Professional captain with Gulf Coast expertise",
+      "Small-group or private format as listed",
+      "Naples mangrove, shelling, or Everglades experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Naples marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "This unique experience takes small-group on a boat tour to various destinations around Barrier Island in search of special sea shells.",
+    "itineraryItems": [
+      {
+        "title": "Naples",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ten Thousand Islands",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Marco Island",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Keewaydin Island",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Barrier Island Shelling Tour?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Naples?",
+        "answer": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 129
+      },
+      "currency": "USD"
+    }
+  }
+}

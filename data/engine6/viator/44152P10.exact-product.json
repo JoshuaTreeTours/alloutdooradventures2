@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "44152P10",
+    "productUrl": "https://www.viator.com/tours/Naples/Everglades-Natl-Park-Biologist-Led-Adventure-Cruise-Hike-Airboat-WEST-Coast/d22381-44152P10",
+    "title": "Everglades National Park Naturalist Led Hike, 2 Boat Trips + More",
+    "description": {
+      "text": "Discover the Florida Everglades with a guide who’s either a certified master naturalist or a trained biologist on this small-group tour that combines hiking with boat trips. Hotel pickup is included for added convenience.An Everglades tour that includes lunch and hotel pickup Explore nature in an intimate group of no more than 14 A great experience for nature Equipment, safety briefings, and local commentary are handled so you can focus on dolphins, shelling beaches, and Everglades wildlife. Ideal for Naples travelers who want a guided Everglades outing with transport, mangrove channels, and expert naturalist commentary included."
+    },
+    "location": {
+      "city": "Naples",
+      "state": "Florida"
+    },
+    "duration": "9 hours (approx.)",
+    "priceFrom": "From $295.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 49
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/ec/d1/fa.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Everglades National Park Naturalist Led Hike, 2 Boat Trips + More from Naples",
+      "Ten Thousand Islands or Marco Island routing",
+      "Professional captain with Gulf Coast expertise",
+      "Small-group or private format as listed",
+      "Naples mangrove, shelling, or Everglades experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Naples marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover the Florida Everglades with a guide who’s either a certified master naturalist or a trained biologist on this small-group tour that combines hiking with boat trips.",
+    "itineraryItems": [
+      {
+        "title": "Naples",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Everglades National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ten Thousand Islands",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Big Cypress National Preserve",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Everglades National Park Naturalist Led Hike, 2 Boat Trips + More?",
+        "answer": "The planned duration is 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Naples?",
+        "answer": "Meet your captain or guide at the confirmed Naples marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 295
+      },
+      "currency": "USD"
+    }
+  }
+}
