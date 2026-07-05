@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "16847P11",
+    "productUrl": "https://www.viator.com/tours/Moab/Half-Day-Guided-Whitewater-Rafting-in-Moab/d5600-16847P11",
+    "title": "Half Day Guided Whitewater Rafting in Moab",
+    "description": {
+      "text": "Navigate the thrilling waters of the Colorado River on a half-day whitewater rafting adventure in Moab, Utah. Starting at the exhilarating Onion Creek Rapid, this 4-hour trip features class II/III rapids that promise both excitement and stunning views of the majestic red rock formations. With all gear provided and expert guidance, you'll paddle through the Fisher Tower's section, making memories with every splash. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $95.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 15
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/0e/ea/9b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Navigate the thrilling waters of the Colorado River on a half-day whitewater rafting adventure in Moab, Utah",
+      "Starting at the exhilarating Onion Creek Rapid, this 4-hour trip features class II/III rapids that promise both exciteme",
+      "With all gear provided and expert guidance, you'll paddle through the Fisher Tower's section, making memories with every",
+      "Half Day Guided Whitewater Rafting in Moab departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Navigate the thrilling waters of the Colorado River on a half-day whitewater rafting adventure in Moab, Utah.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Colorado River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Moab Daily Section",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Westwater Canyon",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half Day Guided Whitewater Rafting in Moab?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "River Rafting & Tubing"
+      },
+      {
+        "label": "White Water Rafting"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 95
+      },
+      "currency": "USD"
+    }
+  }
+}

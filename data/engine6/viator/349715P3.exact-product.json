@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "349715P3",
+    "productUrl": "https://www.viator.com/tours/Moab/Sunset-Hells-Revenge-Hummer-Adventure/d5600-349715P3",
+    "title": "Hell's Revenge Sunset Off-Road Hummer Adventure",
+    "description": {
+      "text": "Get up close and personal with some of the Moab region's most spectacular scenery—and enjoy a perspective on the sights that few other visitors get to see—on this sunset Hummer tour of the Hell's Revenge Trail. You can look forward to spotting prehistoric dinosaur tracks, admiring views overlooking Arches National Park, glimpsing the Colorado River, and more, all lit up with sunset colors.Your guide will bring the stories behind the sights to life See parts of the region you wouldn't be able to access by a normal car Discover a new side of the area when you see it illuminated at sunset Admission to the Hell's Revenge Trail is already included in the cost Stops include Hell's Revenge. Transportation, safety gear, and local commentary are handled so you can focus on the red rock landscape. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $109.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 230
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/dd/7b/60.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hell's Revenge Sunset Off-Road Hummer Adventure from Moab",
+      "Arches and Canyonlands red rock routing",
+      "Professional guide with local expertise",
+      "Small-group or private format as listed",
+      "Utah desert adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Get up close and personal with some of the Moab region's most spectacular scenery—and enjoy a perspective on the sights that few other visitors get to see—on this sunset Hummer tour of the Hell's Revenge Trail.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hell's Revenge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Hell's Revenge Sunset Off-Road Hummer Adventure?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "Off-Road Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 109
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "132679P1",
+    "productUrl": "https://www.viator.com/tours/Moab/Off-Road-and-Back-Country-Adventures/d5600-132679P1",
+    "title": "Exciting and Scenic Off-Road Guided Tour of Moab's Backcountry!!!",
+    "description": {
+      "text": "Explore the off-road trails around Moab the easy way on this day-time or sunset guided tour. Avoid getting lost off track when you travel with a knowledgeable guide. Stops include Hell's Revenge. Be amazed by the rocky desert landscape and reach places that would be hard to get to without a four-wheel drive. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $110.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 395
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/42/2b/79.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the off-road trails around Moab the easy way on this day-time or sunset guided tour",
+      "Avoid getting lost off track when you travel with a knowledgeable guide",
+      "Be amazed by the rocky desert landscape and reach places that would be hard to get to without a four-wheel drive",
+      "Exciting and Scenic Off-Road Guided Tour of Moab's Backcountry!!! departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the off-road trails around Moab the easy way on this day-time or sunset guided tour.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hell's Revenge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Exciting and Scenic Off-Road Guided Tour of Moab's Backcountry!!!?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Off-Road Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 110
+      },
+      "currency": "USD"
+    }
+  }
+}

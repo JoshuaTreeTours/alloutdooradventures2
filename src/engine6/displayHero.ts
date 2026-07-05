@@ -52,6 +52,9 @@ export const ENGINE6_PHILADELPHIA_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_RMNP_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/92/85/fc.jpg";
 
+export const ENGINE6_MOAB_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/43/44/fa/caption.jpg";
+
 type Engine6HeroCandidateTour = {
   productCode: string;
   heroImageUrl?: string | null;
@@ -73,6 +76,7 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   utah: {
     "zion-national-park": ENGINE6_ZION_CANONICAL_CITY_HERO_URL,
+    moab: ENGINE6_MOAB_CANONICAL_CITY_HERO_URL,
   },
   montana: {
     "glacier-national-park": ENGINE6_GLACIER_CANONICAL_CITY_HERO_URL,

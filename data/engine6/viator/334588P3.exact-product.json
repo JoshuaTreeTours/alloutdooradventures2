@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "334588P3",
+    "productUrl": "https://www.viator.com/tours/Moab/Half-Day-Canyonlands-Backcountry-Tour/d5600-334588P3",
+    "title": "Canyonlands National Park Backcountry Tour",
+    "description": {
+      "text": "Discover the rugged beauty and ancient legends of Canyonlands National Park on this private half-day tour. Go off-roading in a sturdy vehicle to reach the Island in the Sky district and other remote areas, where the Colorado River slices through steep ravines and ancient Indian Petroglyphs decorate sandstone cliffs. Stops include Canyonlands National Park, Potash Road, Utah Scenic Byway 279 Rock Art Sites, Shafer Trail Viewpoint, Musselman Arch, Island in the Sky. Fill your camera roll with amazing shots of red-rock arches and towering pinnacles, and learn about the area's rich history and geology from your local guide.Go off-road and explore some of Utah's most challenging terrain Experience a picturesque desert landscape carved by the Colorado River Private tour ensures a highly personal experience Itinerary can be customized to suit your interests and preferences Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "4 hours 30 minutes (approx.)",
+    "priceFrom": "From $212.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 69
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/eb/4f/8b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the rugged beauty and ancient legends of Canyonlands National Park on this private half-day tour",
+      "Go off-roading in a sturdy vehicle to reach the Island in the Sky district and other remote areas, where the Colorado Ri",
+      "Fill your camera roll with amazing shots of red-rock arches and towering pinnacles, and learn about the area's rich hist",
+      "Canyonlands National Park Backcountry Tour departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover the rugged beauty and ancient legends of Canyonlands National Park on this private half-day tour.",
+    "itineraryItems": [
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Potash Road",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Utah Scenic Byway 279 Rock Art Sites",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Shafer Trail Viewpoint",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Musselman Arch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Island in the Sky",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Canyonlands National Park Backcountry Tour?",
+        "answer": "The planned duration is 4 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 212
+      },
+      "currency": "USD"
+    }
+  }
+}

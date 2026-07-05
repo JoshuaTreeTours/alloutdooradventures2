@@ -39,6 +39,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     colorado: ["Rocky Mountain National Park"],
     philadelphia: ["Philadelphia"],
     pennsylvania: ["Philadelphia"],
+    moab: ["Moab"],
+    utah: ["Moab"],
     "washington-dc": ["Washington, D.C."],
     washington: ["Washington, D.C."],
     miami: ["Miami editorial narrative"],

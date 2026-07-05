@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "349715P4",
+    "productUrl": "https://www.viator.com/tours/Moab/U-DRIVE-UTV-SUNSET-Guided-Adventure-on-Hells-Revenge/d5600-349715P4",
+    "title": "Moab's Premier Sunset U-Drive UTV Hell's Revenge Tour",
+    "description": {
+      "text": "From Amateur to Expert – This Sunset Adventure is for YOU!Take the wheel or ride along, and follow our highly trained guides on Moab's legendary Hell's Revenge trail with Moab's ORIGINAL adventure company — celebrating 27 years of unforgettable experiences!Drive the newest, top-of-the-line UTVs through thrilling rock climbs and breathtaking desert scenery as the sun sets over Moab's red rock skyline. Whether it's your first time behind the wheel or you're an experienced driver, this magical golden-hour journey will leave you with memories f Stops include Hell's Revenge. Transportation, safety gear, and local commentary are handled so you can focus on the red rock landscape. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $99.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 59
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/07/bc/a1/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Moab's Premier Sunset U-Drive UTV Hell's Revenge Tour from Moab",
+      "Arches and Canyonlands red rock routing",
+      "Professional guide with local expertise",
+      "Small-group or private format as listed",
+      "Utah desert adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "From Amateur to Expert – This Sunset Adventure is for YOU!Take the wheel or ride along, and follow our highly trained guides on Moab's legendary Hell's Revenge trail with Moab's ORIGINAL adventure company — celebrating 27 years of unforgettable experiences!Drive the newest, top-of-the-line UTVs through thrilling rock climbs and breathtaking desert scenery as the sun sets over Moab's red rock skyline.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hell's Revenge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Moab's Premier Sunset U-Drive UTV Hell's Revenge Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "UTV Tours"
+      },
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "Off-Road Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      },
+      "currency": "USD"
+    }
+  }
+}

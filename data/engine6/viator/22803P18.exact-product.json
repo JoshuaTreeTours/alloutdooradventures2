@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "22803P18",
+    "productUrl": "https://www.viator.com/tours/Moab/Moab-Rafting-Afternoon-1-2-Day-Trip/d5600-22803P18",
+    "title": "Moab Afternoon Half Day Rafting Trip - Colorado River",
+    "description": {
+      "text": "Get a taste of what eastern Utah has to offer and spend your afternoon rafting down the Colorado River in the Moab area on this exciting excursion. Take in the desert landscapes as you navigate rapids and paddle through red rock canyons, Castle Valley, and Fisher Towers. After a few hours on the water, feel rejuvenated and excited to explore the rest of Moab.Learn about the local geology and history All necessary rafting equipment is provided A central meeting point makes for an easy start No prior whitewater rafting experience is required Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $109.91",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 738
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/aa/23/d2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Get a taste of what eastern Utah has to offer and spend your afternoon rafting down the Colorado River in the Moab area ",
+      "Take in the desert landscapes as you navigate rapids and paddle through red rock canyons, Castle Valley, and Fisher Towe",
+      "After a few hours on the water, feel rejuvenated and excited to explore the rest of Moab.Learn about the local geology a",
+      "Moab Afternoon Half Day Rafting Trip - Colorado River departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Get a taste of what eastern Utah has to offer and spend your afternoon rafting down the Colorado River in the Moab area on this exciting excursion.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Colorado River",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Moab Daily Section",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Westwater Canyon",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Moab Afternoon Half Day Rafting Trip - Colorado River?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "River Rafting & Tubing"
+      },
+      {
+        "label": "Adventure Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 109.91
+      },
+      "currency": "USD"
+    }
+  }
+}

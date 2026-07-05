@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "252408P1",
+    "productUrl": "https://www.viator.com/tours/Moab/Moabs-Most-Wanted-You-Drive-ATV-UTV-Adventure/d5600-252408P1",
+    "title": "Top-Rated Moab You-Drive UTV Tour: Fins N Things & Hell's Revenge",
+    "description": {
+      "text": "Enjoy an intrepid, one-of-a-kind excursion through Moab's dramatic scenery and Hell's Revenge Trail on this guided UTV tour. Pick between morning or afternoon tour times, and make your own way to the departure point in central Moab. Stops include Hell's Revenge. Once you get acquainted with your vehicle and your gear, follow your guide up steep inclines, big descents, and keep one eye on the striking landscapes as you go.This UTV tour is perfect for adventurous, active travelers Tackle obstacles, rugged terrain, and steep inclines Explore the area's famous Hell's Revenge Trail, with support from your guide Enjoy a brand new perspective on Moab's dramatic landscapes Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $177.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 858
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/9b/bc/43.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy an intrepid, one-of-a-kind excursion through Moab's dramatic scenery and Hell's Revenge Trail on this guided UTV t",
+      "Pick between morning or afternoon tour times, and make your own way to the departure point in central Moab",
+      "Once you get acquainted with your vehicle and your gear, follow your guide up steep inclines, big descents, and keep one",
+      "Top-Rated Moab You-Drive UTV Tour: Fins N Things & Hell's Revenge departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Enjoy an intrepid, one-of-a-kind excursion through Moab's dramatic scenery and Hell's Revenge Trail on this guided UTV tour.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hell's Revenge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Top-Rated Moab You-Drive UTV Tour: Fins N Things & Hell's Revenge?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "UTV Tours"
+      },
+      {
+        "label": "ATV Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 177
+      },
+      "currency": "USD"
+    }
+  }
+}

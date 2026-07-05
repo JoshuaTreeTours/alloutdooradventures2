@@ -1,0 +1,131 @@
+{
+  "product": {
+    "productCode": "334588P4",
+    "productUrl": "https://www.viator.com/tours/Moab/Sunset-Arches-National-Park-Pavement-Sights/d5600-334588P4",
+    "title": "3-Hours Sunset Arches National Park 4X4 and Highlights Tour",
+    "description": {
+      "text": "See a side of Arches National Park that few other visitors get to experience—and don't worry about navigating the park on your own—on this small-group sunset tour from Moab. With round-trip transit from Moab via air-conditioned 4x4, getting there is made easy. Stops include Arches National Park, Balanced Rock Trail, Windows, Lower Delicate Arch Viewpoint, Skyline Arch, Three Gossips. Then, admire the vibrant views as the sun starts to set.Learn insider facts about Moab and Arches National Park from your guide Ride along in an intimate group of no more than 10 travelers Have the special opportunity to capture sunset photos of the park Let your driver do the hard parts while you focus on sightseeing Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $204.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 118
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/4e/71/b2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See a side of Arches National Park that few other visitors get to experience—and don't worry about navigating the park o",
+      "With round-trip transit from Moab via air-conditioned 4x4, getting there is made easy",
+      "Then, admire the vibrant views as the sun starts to set.Learn insider facts about Moab and Arches National Park from you",
+      "3-Hours Sunset Arches National Park 4X4 and Highlights Tour departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See a side of Arches National Park that few other visitors get to experience—and don't worry about navigating the park on your own—on this small-group sunset tour from Moab.",
+    "itineraryItems": [
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Balanced Rock Trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Windows",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lower Delicate Arch Viewpoint",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Skyline Arch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Three Gossips",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Courthouse Towers",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Park Avenue Trail",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 3-Hours Sunset Arches National Park 4X4 and Highlights Tour?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 204
+      },
+      "currency": "USD"
+    }
+  }
+}

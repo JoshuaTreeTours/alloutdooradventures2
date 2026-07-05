@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "22803P33",
+    "productUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-Half-Day-Tour/d5600-22803P33",
+    "title": "Arches National Park Half Day Tour",
+    "description": {
+      "text": "Explore the breathtaking landscapes of Utah with our Arches National Park Tours! Home to over 2,000 natural stone arches, including the famous Delicate Arch and Balanced Rock, this park offers unforgettable scenery and geological wonders. Stops include Arches National Park. Our professional, interpretive, and entertaining guides will lead you through iconic landmarks, sharing stories about the park's formations, wildlife, and cultural history. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $139.26",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 74
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/80/c3/58.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the breathtaking landscapes of Utah with our Arches National Park Tours!",
+      "Home to over 2,000 natural stone arches, including the famous Delicate Arch and Balanced Rock, this park offers unforget",
+      "Our professional, interpretive, and entertaining guides will lead you through iconic landmarks, sharing stories about th",
+      "Arches National Park Half Day Tour departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the breathtaking landscapes of Utah with our Arches National Park Tours! Home to over 2,000 natural stone arches, including the famous Delicate Arch and Balanced Rock, this park offers unforgettable scenery and geological wonders.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dead Horse Point State Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Arches National Park Half Day Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 139.26
+      },
+      "currency": "USD"
+    }
+  }
+}

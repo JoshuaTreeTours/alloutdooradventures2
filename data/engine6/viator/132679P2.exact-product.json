@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "132679P2",
+    "productUrl": "https://www.viator.com/tours/Moab/Sunset-Tour-Moab-Off-road-and-Scenic-Backcountry/d5600-132679P2",
+    "title": "Sunset Tour, Moab, Off-road and Scenic Backcountry",
+    "description": {
+      "text": "Explore the scenic backcountry near Moab, without the hassle of renting a 4WD, self-driving, or navigating, on this small-group sunset tour from Moab. Hop into a Jeep Rubicon, and let your drive you around the rugged backcountry terrain, look for dinosaur tracks, and admire the sunset over the desert landscape, with a local guide to provide enriching commentary.Explore areas of the backcountry you can't reach in a regular car Ideal for adventurous travelers, photographers, and families Stay fueled and hydrated with provided snacks and bottled water Enjoy a more personal experience and pace in a small group Stops include Hell's Revenge. Transportation, safety gear, and local commentary are handled so you can focus on the red rock landscape. Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $125.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 105
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/42/2a/bd.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sunset Tour, Moab, Off-road and Scenic Backcountry from Moab",
+      "Arches and Canyonlands red rock routing",
+      "Professional guide with local expertise",
+      "Small-group or private format as listed",
+      "Utah desert adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the scenic backcountry near Moab, without the hassle of renting a 4WD, self-driving, or navigating, on this small-group sunset tour from Moab.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hell's Revenge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sunset Tour, Moab, Off-road and Scenic Backcountry?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "Off-Road Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 125
+      },
+      "currency": "USD"
+    }
+  }
+}

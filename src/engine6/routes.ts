@@ -178,6 +178,91 @@ export const ENGINE6_LOS_ANGELES_HOLLYWOOD_HILLS_HIKING_ROUTE =
   "/destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles";
 export const ENGINE6_LOS_ANGELES_CATALINA_INSIDE_ADVENTURE_ROUTE =
   "/destinations/california/los-angeles/tours/2-hour-inside-adventure-tour-on-catalina-island-32779P6";
+export const ENGINE6_MOAB_5555934P1_PRODUCT_CODE = "5555934P1";
+export const ENGINE6_MOAB_5555934P1_ROUTE =
+  "/destinations/utah/moab/tours/best-hells-revenge-u-drive-4x4-tour-in-moab-dinosaur-tr-5555934P1";
+export const ENGINE6_MOAB_7016P4_PRODUCT_CODE = "7016P4";
+export const ENGINE6_MOAB_7016P4_ROUTE =
+  "/destinations/utah/moab/tours/highly-rated-arches-national-park-sightseeing-tour-from-7016P4";
+export const ENGINE6_MOAB_7016OFFROAD_PRODUCT_CODE = "7016OFFROAD";
+export const ENGINE6_MOAB_7016OFFROAD_ROUTE =
+  "/destinations/utah/moab/tours/highly-rated-u-drive-moab-hells-revenge-utv-off-road-ad-7016OFFROAD";
+export const ENGINE6_MOAB_22803P18_PRODUCT_CODE = "22803P18";
+export const ENGINE6_MOAB_22803P18_ROUTE =
+  "/destinations/utah/moab/tours/moab-afternoon-half-day-rafting-trip-colorado-river-22803P18";
+export const ENGINE6_MOAB_132679P2_PRODUCT_CODE = "132679P2";
+export const ENGINE6_MOAB_132679P2_ROUTE =
+  "/destinations/utah/moab/tours/sunset-tour-moab-off-road-and-scenic-backcountry-132679P2";
+export const ENGINE6_MOAB_5555934P2_PRODUCT_CODE = "5555934P2";
+export const ENGINE6_MOAB_5555934P2_ROUTE =
+  "/destinations/utah/moab/tours/best-catacomb-caves-u-drive-4x4-utv-tour-in-moab-petrog-5555934P2";
+export const ENGINE6_MOAB_22803P33_PRODUCT_CODE = "22803P33";
+export const ENGINE6_MOAB_22803P33_ROUTE =
+  "/destinations/utah/moab/tours/arches-national-park-half-day-tour-22803P33";
+export const ENGINE6_MOAB_6896MOABCPARK_PRODUCT_CODE = "6896MOABCPARK";
+export const ENGINE6_MOAB_6896MOABCPARK_ROUTE =
+  "/destinations/utah/moab/tours/canyonlands-national-park-half-day-tour-from-moab-6896MOABCPARK";
+export const ENGINE6_MOAB_349715P2_PRODUCT_CODE = "349715P2";
+export const ENGINE6_MOAB_349715P2_ROUTE =
+  "/destinations/utah/moab/tours/moabs-original-hummer-adventure-hells-revenge-trail-exp-349715P2";
+export const ENGINE6_MOAB_458439P2_PRODUCT_CODE = "458439P2";
+export const ENGINE6_MOAB_458439P2_ROUTE =
+  "/destinations/utah/moab/tours/astro-photo-hiking-and-stargazing-tour-in-arches-nation-458439P2";
+export const ENGINE6_MOAB_334588P4_PRODUCT_CODE = "334588P4";
+export const ENGINE6_MOAB_334588P4_ROUTE =
+  "/destinations/utah/moab/tours/3-hours-sunset-arches-national-park-4x4-and-highlights-334588P4";
+export const ENGINE6_MOAB_132679P1_PRODUCT_CODE = "132679P1";
+export const ENGINE6_MOAB_132679P1_ROUTE =
+  "/destinations/utah/moab/tours/exciting-and-scenic-off-road-guided-tour-of-moabs-backc-132679P1";
+export const ENGINE6_MOAB_6896MOABAPARK_PRODUCT_CODE = "6896MOABAPARK";
+export const ENGINE6_MOAB_6896MOABAPARK_ROUTE =
+  "/destinations/utah/moab/tours/arches-national-park-4x4-adventure-from-moab-6896MOABAPARK";
+export const ENGINE6_MOAB_349715P3_PRODUCT_CODE = "349715P3";
+export const ENGINE6_MOAB_349715P3_ROUTE =
+  "/destinations/utah/moab/tours/hells-revenge-sunset-off-road-hummer-adventure-349715P3";
+export const ENGINE6_MOAB_349715P1_PRODUCT_CODE = "349715P1";
+export const ENGINE6_MOAB_349715P1_ROUTE =
+  "/destinations/utah/moab/tours/moabs-1-rated-guided-u-drive-hells-revenge-off-road-tou-349715P1";
+export const ENGINE6_MOAB_18497P15_PRODUCT_CODE = "18497P15";
+export const ENGINE6_MOAB_18497P15_ROUTE =
+  "/destinations/utah/moab/tours/discover-3-moab-parks-in-1-day-arches-canyonlands-dead-18497P15";
+export const ENGINE6_MOAB_16649P13_PRODUCT_CODE = "16649P13";
+export const ENGINE6_MOAB_16649P13_ROUTE =
+  "/destinations/utah/moab/tours/moab-rivertrippers-rafting-castle-valley-fisher-towers-16649P13";
+export const ENGINE6_MOAB_131994P3_PRODUCT_CODE = "131994P3";
+export const ENGINE6_MOAB_131994P3_ROUTE =
+  "/destinations/utah/moab/tours/you-drive-utv-hells-revenge-4x4-off-roading-tour-from-m-131994P3";
+export const ENGINE6_MOAB_334588P3_PRODUCT_CODE = "334588P3";
+export const ENGINE6_MOAB_334588P3_ROUTE =
+  "/destinations/utah/moab/tours/canyonlands-national-park-backcountry-tour-334588P3";
+export const ENGINE6_MOAB_252408P1_PRODUCT_CODE = "252408P1";
+export const ENGINE6_MOAB_252408P1_ROUTE =
+  "/destinations/utah/moab/tours/top-rated-moab-you-drive-utv-tour-fins-n-things-hells-r-252408P1";
+export const ENGINE6_MOAB_349715P4_PRODUCT_CODE = "349715P4";
+export const ENGINE6_MOAB_349715P4_ROUTE =
+  "/destinations/utah/moab/tours/moabs-premier-sunset-u-drive-utv-hells-revenge-tour-349715P4";
+export const ENGINE6_MOAB_16847P11_PRODUCT_CODE = "16847P11";
+export const ENGINE6_MOAB_16847P11_ROUTE =
+  "/destinations/utah/moab/tours/half-day-guided-whitewater-rafting-in-moab-16847P11";
+export const ENGINE6_MOAB_260792P5_PRODUCT_CODE = "260792P5";
+export const ENGINE6_MOAB_260792P5_ROUTE =
+  "/destinations/utah/moab/tours/you-drive-4x4-utv-adventure-hells-revenge-fins-n-things-260792P5";
+export const ENGINE6_MOAB_165224P7_PRODUCT_CODE = "165224P7";
+export const ENGINE6_MOAB_165224P7_ROUTE =
+  "/destinations/utah/moab/tours/river-rafting-moab-daily-morning-tour-165224P7";
+export const ENGINE6_MOAB_169760P14_PRODUCT_CODE = "169760P14";
+export const ENGINE6_MOAB_169760P14_ROUTE =
+  "/destinations/utah/moab/tours/private-full-day-tour-and-hike-combo-169760P14";
+export const ENGINE6_MOAB_265766P59_PRODUCT_CODE = "265766P59";
+export const ENGINE6_MOAB_265766P59_ROUTE =
+  "/destinations/utah/moab/tours/arches-canyonlands-two-day-private-tour-hike-265766P59";
+
+export const ENGINE6_MOAB_TOUR_PATH_PREFIX =
+  "/destinations/utah/moab/tours/";
+
+export const isEngine6MoabTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_MOAB_TOUR_PATH_PREFIX);
+
 export const ENGINE6_JACKSON_HOLE_6029YOFWILD_PRODUCT_CODE = "6029YOFWILD";
 export const ENGINE6_JACKSON_HOLE_6029YOFWILD_ROUTE =
   "/destinations/wyoming/jackson/tours/from-jackson-hole-yellowstone-old-faithful-waterfalls-a-6029YOFWILD";
@@ -1739,6 +1824,110 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_LOS_ANGELES_HOLLYWOOD_HILLS_HIKING_ROUTE,
     ENGINE6_LOS_ANGELES_HOLLYWOOD_HILLS_HIKING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_5555934P1_ROUTE,
+    ENGINE6_MOAB_5555934P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_7016P4_ROUTE,
+    ENGINE6_MOAB_7016P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_7016OFFROAD_ROUTE,
+    ENGINE6_MOAB_7016OFFROAD_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_22803P18_ROUTE,
+    ENGINE6_MOAB_22803P18_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_132679P2_ROUTE,
+    ENGINE6_MOAB_132679P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_5555934P2_ROUTE,
+    ENGINE6_MOAB_5555934P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_22803P33_ROUTE,
+    ENGINE6_MOAB_22803P33_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_6896MOABCPARK_ROUTE,
+    ENGINE6_MOAB_6896MOABCPARK_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_349715P2_ROUTE,
+    ENGINE6_MOAB_349715P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_458439P2_ROUTE,
+    ENGINE6_MOAB_458439P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_334588P4_ROUTE,
+    ENGINE6_MOAB_334588P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_132679P1_ROUTE,
+    ENGINE6_MOAB_132679P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_6896MOABAPARK_ROUTE,
+    ENGINE6_MOAB_6896MOABAPARK_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_349715P3_ROUTE,
+    ENGINE6_MOAB_349715P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_349715P1_ROUTE,
+    ENGINE6_MOAB_349715P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_18497P15_ROUTE,
+    ENGINE6_MOAB_18497P15_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_16649P13_ROUTE,
+    ENGINE6_MOAB_16649P13_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_131994P3_ROUTE,
+    ENGINE6_MOAB_131994P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_334588P3_ROUTE,
+    ENGINE6_MOAB_334588P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_252408P1_ROUTE,
+    ENGINE6_MOAB_252408P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_349715P4_ROUTE,
+    ENGINE6_MOAB_349715P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_16847P11_ROUTE,
+    ENGINE6_MOAB_16847P11_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_260792P5_ROUTE,
+    ENGINE6_MOAB_260792P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_165224P7_ROUTE,
+    ENGINE6_MOAB_165224P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_169760P14_ROUTE,
+    ENGINE6_MOAB_169760P14_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MOAB_265766P59_ROUTE,
+    ENGINE6_MOAB_265766P59_PRODUCT_CODE,
   ],
   [
     ENGINE6_JACKSON_HOLE_6029YOFWILD_ROUTE,

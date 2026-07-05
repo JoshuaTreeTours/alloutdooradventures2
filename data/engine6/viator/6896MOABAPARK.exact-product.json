@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "6896MOABAPARK",
+    "productUrl": "https://www.viator.com/tours/Moab/Arches-National-Park-4x4-Adventure-from-Moab/d5600-6896MOABAPARK",
+    "title": "Arches National Park 4x4 Adventure from Moab",
+    "description": {
+      "text": "To truly experience the legendary beauty of Arches National Park, you need to explore its isolated corners. On this adventurous 4WD tour from Moab, your expert guide helps you do just that as you navigate the backcountry to spots such as Tower Arch, as well as visit the famous red rocks at Marching Men, and Eye of the Whale. Stops include Arches National Park, Utahraptor State Park, Eye of the Whale Arch, Tower Arch. Your tour includes a stop to see fossilized dinosaur tracks, so it's an ideal experience for budding paleontologists.Ditch the crowds and explore the quiet parts of Arches National Park See unique geological formations such as sandstone spires and layered red rock Relax with handy round-trip hotel pickup from Moab Don't worry about getting lost—your group and guide are easy to follow Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "4 to 5 hours (approx.)",
+    "priceFrom": "From $220.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 2043
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/43/44/fa/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "To truly experience the legendary beauty of Arches National Park, you need to explore its isolated corners",
+      "On this adventurous 4WD tour from Moab, your expert guide helps you do just that as you navigate the backcountry to spot",
+      "Your tour includes a stop to see fossilized dinosaur tracks, so it's an ideal experience for budding paleontologists.Dit",
+      "Arches National Park 4x4 Adventure from Moab departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "To truly experience the legendary beauty of Arches National Park, you need to explore its isolated corners.",
+    "itineraryItems": [
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Utahraptor State Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Eye of the Whale Arch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tower Arch",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Arches National Park 4x4 Adventure from Moab?",
+        "answer": "The planned duration is 4 to 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "National Parks"
+      },
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 220
+      },
+      "currency": "USD"
+    }
+  }
+}

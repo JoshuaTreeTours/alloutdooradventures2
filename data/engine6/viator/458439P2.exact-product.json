@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "458439P2",
+    "productUrl": "https://www.viator.com/tours/Moab/Private-Photo-and-Hiking-tour-The-Windows-Section-Arches-NP/d5600-458439P2",
+    "title": "Astro-Photo, Hiking and Stargazing Tour in Arches National Park",
+    "description": {
+      "text": "Arches National Park is spectacular at night—but photographing its star-lit scenery takes special equipment and skills. By providing tripods, expert tips, and red LED headlamps, this small-group tour helps you capture the night sky through astrophotography. Stops include Arches National Park. And since few visitors venture into the park at night, you'll also experience the landscape at its most serene, minus the daytime crowds.Arches National Park night-time tour features astrophotography Use provided equipment to photograph the stars Enjoy cool evening temperatures and zero crowds Convenient meet-up point is close to trails Ideal for travelers basing in Moab who want a guided Utah adventure without self-driving backcountry roads or river put-ins."
+    },
+    "location": {
+      "city": "Moab",
+      "state": "Utah"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $175.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 90
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/88/63/18/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Arches National Park is spectacular at night—but photographing its star-lit scenery takes special equipment and skills",
+      "By providing tripods, expert tips, and red LED headlamps, this small-group tour helps you capture the night sky through ",
+      "And since few visitors venture into the park at night, you'll also experience the landscape at its most serene, minus th",
+      "Astro-Photo, Hiking and Stargazing Tour in Arches National Park departing from Moab",
+      "Professional Moab guide or outfitter"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      },
+      "end": {
+        "description": "Return to your Moab pickup location or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Arches National Park is spectacular at night—but photographing its star-lit scenery takes special equipment and skills.",
+    "itineraryItems": [
+      {
+        "title": "Moab",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Arches National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Canyonlands National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dead Horse Point State Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or outfitter",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Astro-Photo, Hiking and Stargazing Tour in Arches National Park?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Moab?",
+        "answer": "Meet your guide at the confirmed Moab outfitter office, hotel pickup point, or river launch as listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Photography Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 175
+      },
+      "currency": "USD"
+    }
+  }
+}
