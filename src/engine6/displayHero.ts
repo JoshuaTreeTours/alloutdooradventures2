@@ -61,6 +61,9 @@ export const ENGINE6_KEY_WEST_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_ORLANDO_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ad/2c/65.jpg";
 
+export const ENGINE6_FORT_LAUDERDALE_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg";
+
 type Engine6HeroCandidateTour = {
   productCode: string;
   heroImageUrl?: string | null;
@@ -104,6 +107,7 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   florida: {
     orlando: ENGINE6_ORLANDO_CANONICAL_CITY_HERO_URL,
+    "fort-lauderdale": ENGINE6_FORT_LAUDERDALE_CANONICAL_CITY_HERO_URL,
     "key-west": ENGINE6_KEY_WEST_CANONICAL_CITY_HERO_URL,
   },
 };

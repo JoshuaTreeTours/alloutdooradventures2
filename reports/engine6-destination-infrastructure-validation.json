@@ -1,31 +1,31 @@
 [
   {
-    "destinationLabel": "Rocky Mountain National Park",
-    "destinationCitySlug": "rocky-mountain-national-park",
-    "stateSlug": "colorado",
-    "citySlug": "rocky-mountain-national-park",
-    "routePrefix": "/destinations/colorado/rocky-mountain-national-park/tours/",
+    "destinationLabel": "Fort Lauderdale",
+    "destinationCitySlug": "fort-lauderdale",
+    "stateSlug": "florida",
+    "citySlug": "fort-lauderdale",
+    "routePrefix": "/destinations/florida/fort-lauderdale/tours/",
     "pass": true,
     "checks": [
       {
         "id": "state-registry",
         "pass": true,
-        "message": "State registry includes colorado"
+        "message": "State registry includes florida"
       },
       {
         "id": "city-registry",
         "pass": true,
-        "message": "City registry includes rocky-mountain-national-park"
+        "message": "City registry includes fort-lauderdale"
       },
       {
         "id": "tours-state-selector",
         "pass": true,
-        "message": "Tours page state selector includes colorado"
+        "message": "Tours page state selector includes florida"
       },
       {
         "id": "tours-city-selector",
         "pass": true,
-        "message": "Tours page city selector includes rocky-mountain-national-park"
+        "message": "Tours page city selector includes fort-lauderdale"
       },
       {
         "id": "route-prefix",
@@ -35,7 +35,7 @@
       {
         "id": "governance-scope",
         "pass": true,
-        "message": "Governance scope mapping resolves for rocky-mountain-national-park"
+        "message": "Governance scope mapping resolves for fort-lauderdale"
       },
       {
         "id": "canonical-hero-fallback",
@@ -45,7 +45,7 @@
       {
         "id": "validation-cohort",
         "pass": true,
-        "message": "Validation cohort registered (Rocky Mountain National Park)"
+        "message": "Validation cohort registered (Fort Lauderdale)"
       },
       {
         "id": "fixture-target-path",

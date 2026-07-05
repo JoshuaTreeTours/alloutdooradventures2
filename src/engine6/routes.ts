@@ -764,6 +764,67 @@ export const ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_PRODUCT_CODE = "89173P10";
 export const ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE =
   "/destinations/florida/fort-lauderdale/tours/fort-lauderdale-tropical-kayak-tour-and-island-adventure-89173p10";
 
+export const ENGINE6_FORT_LAUDERDALE_155077P1_PRODUCT_CODE = "155077P1";
+export const ENGINE6_FORT_LAUDERDALE_155077P1_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/private-yacht-cruise-through-fort-lauderdale-155077P1";
+export const ENGINE6_FORT_LAUDERDALE_44152P2_PRODUCT_CODE = "44152P2";
+export const ENGINE6_FORT_LAUDERDALE_44152P2_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/everglades-tour-w-biologist-led-wet-walk-2-boat-trips-l-44152P2";
+export const ENGINE6_FORT_LAUDERDALE_169162P11_PRODUCT_CODE = "169162P11";
+export const ENGINE6_FORT_LAUDERDALE_169162P11_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/2-to-6-hours-private-yacht-cruise-around-fort-lauderdal-169162P11";
+export const ENGINE6_FORT_LAUDERDALE_44152P1_PRODUCT_CODE = "44152P1";
+export const ENGINE6_FORT_LAUDERDALE_44152P1_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/everglades-national-park-biologist-led-adventure-cruise-44152P1";
+export const ENGINE6_FORT_LAUDERDALE_5221P41_PRODUCT_CODE = "5221P41";
+export const ENGINE6_FORT_LAUDERDALE_5221P41_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/day-trip-to-bimini-bahamas-ferry-tickets-5221P41";
+export const ENGINE6_FORT_LAUDERDALE_5698ADEAST_PRODUCT_CODE = "5698ADEAST";
+export const ENGINE6_FORT_LAUDERDALE_5698ADEAST_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/everglades-day-safari-from-ft-lauderdale-5698ADEAST";
+export const ENGINE6_FORT_LAUDERDALE_422984P2_PRODUCT_CODE = "422984P2";
+export const ENGINE6_FORT_LAUDERDALE_422984P2_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/jetcar-fort-lauderdale-jet-ski-jet-boat-rental-422984P2";
+export const ENGINE6_FORT_LAUDERDALE_443622P1_PRODUCT_CODE = "443622P1";
+export const ENGINE6_FORT_LAUDERDALE_443622P1_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/ft-lauderdale-to-key-west-day-trip-quality-day-tours-443622P1";
+export const ENGINE6_FORT_LAUDERDALE_6331P15_PRODUCT_CODE = "6331P15";
+export const ENGINE6_FORT_LAUDERDALE_6331P15_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/bimini-or-grand-bahama-island-day-cruise-6331P15";
+export const ENGINE6_FORT_LAUDERDALE_68236P1_PRODUCT_CODE = "68236P1";
+export const ENGINE6_FORT_LAUDERDALE_68236P1_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/fort-lauderdale-sailing-charter-68236P1";
+export const ENGINE6_FORT_LAUDERDALE_169162P5_PRODUCT_CODE = "169162P5";
+export const ENGINE6_FORT_LAUDERDALE_169162P5_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/private-tour-for-12-people-on-a-40-ft-yacht-ft-lauderda-169162P5";
+export const ENGINE6_FORT_LAUDERDALE_86313P1_PRODUCT_CODE = "86313P1";
+export const ENGINE6_FORT_LAUDERDALE_86313P1_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/1-hour-jet-ski-rental-in-fort-lauderdale-86313P1";
+export const ENGINE6_FORT_LAUDERDALE_5190PRIVATE_PRODUCT_CODE = "5190PRIVATE";
+export const ENGINE6_FORT_LAUDERDALE_5190PRIVATE_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/private-tour-florida-everglades-airboat-ride-and-wildli-5190PRIVATE";
+export const ENGINE6_FORT_LAUDERDALE_143322P5_PRODUCT_CODE = "143322P5";
+export const ENGINE6_FORT_LAUDERDALE_143322P5_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/sunset-catamaran-cruise-in-ft-lauderdale-143322P5";
+export const ENGINE6_FORT_LAUDERDALE_143322P4_PRODUCT_CODE = "143322P4";
+export const ENGINE6_FORT_LAUDERDALE_143322P4_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/sail-splash-excursion-in-ft-lauderdale-143322P4";
+export const ENGINE6_FORT_LAUDERDALE_270280P1_PRODUCT_CODE = "270280P1";
+export const ENGINE6_FORT_LAUDERDALE_270280P1_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/ocean-parasailing-adventure-in-fort-lauderdale-fl-270280P1";
+export const ENGINE6_FORT_LAUDERDALE_50605P1_PRODUCT_CODE = "50605P1";
+export const ENGINE6_FORT_LAUDERDALE_50605P1_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/drift-fishing-trip-off-the-coast-of-fort-lauderdale-50605P1";
+export const ENGINE6_FORT_LAUDERDALE_5546582P1_PRODUCT_CODE = "5546582P1";
+export const ENGINE6_FORT_LAUDERDALE_5546582P1_ROUTE =
+  "/destinations/florida/fort-lauderdale/tours/parasailing-along-fort-lauderdale-beach-5546582P1";
+
+export const ENGINE6_FORT_LAUDERDALE_TOUR_PATH_PREFIX =
+  "/destinations/florida/fort-lauderdale/tours/";
+
+export const isEngine6FortLauderdaleTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_FORT_LAUDERDALE_TOUR_PATH_PREFIX);
+
 export const ENGINE6_MIAMI_PARASAILING_PRODUCT_CODE = "5503P10";
 export const ENGINE6_MIAMI_PARASAILING_ROUTE =
   "/destinations/florida/miami/tours/parasailing-with-miami-watersports";
@@ -2584,6 +2645,78 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_ROUTE,
     ENGINE6_FORT_LAUDERDALE_TROPICAL_KAYAK_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_155077P1_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_155077P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_44152P2_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_44152P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_169162P11_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_169162P11_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_44152P1_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_44152P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_5221P41_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_5221P41_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_5698ADEAST_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_5698ADEAST_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_422984P2_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_422984P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_443622P1_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_443622P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_6331P15_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_6331P15_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_68236P1_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_68236P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_169162P5_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_169162P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_86313P1_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_86313P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_5190PRIVATE_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_5190PRIVATE_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_143322P5_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_143322P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_143322P4_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_143322P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_270280P1_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_270280P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_50605P1_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_50605P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_FORT_LAUDERDALE_5546582P1_ROUTE,
+    ENGINE6_FORT_LAUDERDALE_5546582P1_PRODUCT_CODE,
   ],
   [ENGINE6_MIAMI_PARASAILING_ROUTE, ENGINE6_MIAMI_PARASAILING_PRODUCT_CODE],
   [ENGINE6_MIAMI_HELICOPTER_ROUTE, ENGINE6_MIAMI_HELICOPTER_PRODUCT_CODE],

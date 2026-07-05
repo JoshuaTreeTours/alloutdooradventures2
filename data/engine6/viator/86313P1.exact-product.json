@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "86313P1",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/1-Hour-Jet-Ski-Rental/d660-86313P1",
+    "title": "1 Hour Jet Ski Rental in Fort Lauderdale",
+    "description": {
+      "text": "Rent a jet ski in Fort Lauderdale and head out to discover the intracoastal waterways. Check out the mansions and yachts that line the waterways during this excursion. Equipment, safety briefings, and local commentary are handled so you can focus on Fort Lauderdale's waterways and coastal wildlife. Ideal for Fort Lauderdale visitors seeking open-water adventure along the Intracoastal without owning equipment."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $159.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 278
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/14/d5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "1 Hour Jet Ski Rental in Fort Lauderdale from Fort Lauderdale",
+      "Intracoastal Waterway or Everglades routing",
+      "Professional captain with local expertise",
+      "Small-group or private format as listed",
+      "Fort Lauderdale water or wildlife experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Rent a jet ski in Fort Lauderdale and head out to discover the intracoastal waterways.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Intracoastal Waterway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Las Olas Boulevard",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fort Lauderdale Beach",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 1 Hour Jet Ski Rental in Fort Lauderdale?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Extreme Sports"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 159
+      },
+      "currency": "USD"
+    }
+  }
+}

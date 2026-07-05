@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "5221P41",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Bimini-Day-Trip-from-Miami/d660-5221P41",
+    "title": "Day Trip to Bimini, Bahamas - Ferry Tickets",
+    "description": {
+      "text": "Bimini in The Bahamas is known for its stunning beaches and scenery, and it offers a wealth of watersports opportunities too. The route highlights waterfront estates, open Atlantic access, and the yacht-lined channels that define greater Fort Lauderdale. Equipment, safety briefings, and local commentary are handled so you can focus on Fort Lauderdale's waterways and coastal wildlife. Ideal for Fort Lauderdale visitors who want a full island day trip with ferry logistics handled in advance."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "15 hours (approx.)",
+    "priceFrom": "From $270.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 14
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/39/b0/90.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Day Trip to Bimini, Bahamas - Ferry Tickets from Fort Lauderdale",
+      "Intracoastal Waterway or Everglades routing",
+      "Professional captain with local expertise",
+      "Small-group or private format as listed",
+      "Fort Lauderdale water or wildlife experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Bimini in The Bahamas is known for its stunning beaches and scenery, and it offers a wealth of watersports opportunities too.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Port Everglades",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Seven Mile Bridge",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Day Trip to Bimini, Bahamas - Ferry Tickets?",
+        "answer": "The planned duration is 15 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Ferry Services"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 270
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -493,6 +493,24 @@ import specimen342209p4Payload from "../../data/engine6/viator/342209P4.exact-pr
 
 import specimen5865p8Payload from "../../data/engine6/viator/5865P8.exact-product.json";
 import specimen89173p8Payload from "../../data/engine6/viator/89173P8.exact-product.json";
+import specimen155077p1Payload from "../../data/engine6/viator/155077P1.exact-product.json";
+import specimen44152p2Payload from "../../data/engine6/viator/44152P2.exact-product.json";
+import specimen169162p11Payload from "../../data/engine6/viator/169162P11.exact-product.json";
+import specimen44152p1Payload from "../../data/engine6/viator/44152P1.exact-product.json";
+import specimen5221p41Payload from "../../data/engine6/viator/5221P41.exact-product.json";
+import specimen5698adeastPayload from "../../data/engine6/viator/5698ADEAST.exact-product.json";
+import specimen422984p2Payload from "../../data/engine6/viator/422984P2.exact-product.json";
+import specimen443622p1Payload from "../../data/engine6/viator/443622P1.exact-product.json";
+import specimen6331p15Payload from "../../data/engine6/viator/6331P15.exact-product.json";
+import specimen68236p1Payload from "../../data/engine6/viator/68236P1.exact-product.json";
+import specimen169162p5Payload from "../../data/engine6/viator/169162P5.exact-product.json";
+import specimen86313p1Payload from "../../data/engine6/viator/86313P1.exact-product.json";
+import specimen5190privatePayload from "../../data/engine6/viator/5190PRIVATE.exact-product.json";
+import specimen143322p5Payload from "../../data/engine6/viator/143322P5.exact-product.json";
+import specimen143322p4Payload from "../../data/engine6/viator/143322P4.exact-product.json";
+import specimen270280p1Payload from "../../data/engine6/viator/270280P1.exact-product.json";
+import specimen50605p1Payload from "../../data/engine6/viator/50605P1.exact-product.json";
+import specimen5546582p1Payload from "../../data/engine6/viator/5546582P1.exact-product.json";
 import specimen89173p10Payload from "../../data/engine6/viator/89173P10.exact-product.json";
 import specimen438341p2Payload from "../../data/engine6/viator/438341P2.exact-product.json";
 import specimen5024manskyPayload from "../../data/engine6/viator/5024MANSKY.exact-product.json";
@@ -765,6 +783,132 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Fort-Lauderdale/Reef-and-Snorkel-Paddle-Tour/d660-89173P8",
     rawPayload: specimen89173p8Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "155077P1",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Private-Yacht-Cruise-through-Fort-Lauderdale/d660-155077P1",
+    rawPayload: specimen155077p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "44152P2",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Swamp-Walk-with-a-Naturalist-and-Ten-Thousand-Islands-Boat-Tour/d660-44152P2",
+    rawPayload: specimen44152p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "169162P11",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Private-Yacht-Cruise-4-or-6-hours-around-Miami-Bay/d660-169162P11",
+    rawPayload: specimen169162p11Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "44152P1",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Everglades-Adventure/d660-44152P1",
+    rawPayload: specimen44152p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5221P41",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Bimini-Day-Trip-from-Miami/d660-5221P41",
+    rawPayload: specimen5221p41Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5698ADEAST",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Small-Group-Tour-Everglades-Adventure-Day-Trip-from-Ft-Lauderdale/d660-5698ADEAST",
+    rawPayload: specimen5698adeastPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "422984P2",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Jetcar-Miami-Jet-ski-jet-boat-Rental/d660-422984P2",
+    rawPayload: specimen422984p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "443622P1",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Ft-Lauderdale-to-Key-West-bus-tour-w-6-hours-of-free-time-in-KW/d660-443622P1",
+    rawPayload: specimen443622p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6331P15",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Miami-Bahamas-Day-Trip-with-Pig-Beach-option/d660-6331P15",
+    rawPayload: specimen6331p15Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "68236P1",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Sailing-Charter/d660-68236P1",
+    rawPayload: specimen68236p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "169162P5",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/8-Person-Boat-Rental-Gas-included-be-your-own-captain-Price-per-boat/d660-169162P5",
+    rawPayload: specimen169162p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "86313P1",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/1-Hour-Jet-Ski-Rental/d660-86313P1",
+    rawPayload: specimen86313p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5190PRIVATE",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Private-Tour-Florida-Everglades-Airboat-Ride-and-Wildlife-Adventure/d660-5190PRIVATE",
+    rawPayload: specimen5190privatePayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "143322P5",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Champagne-Sunset-Cruise-Ft-Lauderdale/d660-143322P5",
+    rawPayload: specimen143322p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "143322P4",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Sail-Splash/d660-143322P4",
+    rawPayload: specimen143322p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "270280P1",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Parasailing/d660-270280P1",
+    rawPayload: specimen270280p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "50605P1",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Drift-Fishing-Trip/d660-50605P1",
+    rawPayload: specimen50605p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5546582P1",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Ft-Lauderdale-Parasailing-Along-Ft-Lauderdale-Beach/d660-5546582P1",
+    rawPayload: specimen5546582p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
     productCode: "89173P10",

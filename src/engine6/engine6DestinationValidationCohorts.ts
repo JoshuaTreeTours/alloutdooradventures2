@@ -144,6 +144,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Fort Lauderdale",
+      matches: tour =>
+        /\/florida\/fort-lauderdale\//i.test(tour.canonicalPath) ||
+        (/\bfort lauderdale\b/i.test(tour.city) && /\bflorida\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Napa editorial narrative",
       matches: tour =>
         /\/napa\//i.test(tour.canonicalPath) || /\bnapa\b/i.test(tour.city),

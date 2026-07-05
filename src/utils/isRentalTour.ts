@@ -7,6 +7,10 @@ export const isRentalTour = (
     "type" | "title" | "primaryCategory" | "categories" | "activitySlugs"
   >
 ) => {
+  if (tour.type === "tour") {
+    return false;
+  }
+
   if (tour.type === "rental") {
     return true;
   }

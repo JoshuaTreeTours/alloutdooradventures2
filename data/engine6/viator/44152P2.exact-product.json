@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "44152P2",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Swamp-Walk-with-a-Naturalist-and-Ten-Thousand-Islands-Boat-Tour/d660-44152P2",
+    "title": "Everglades Tour w/ Biologist Led WET walk + 2 Boat Trips + Lunch!",
+    "description": {
+      "text": "Head deep into the wilderness of the Florida Everglades and experience a small-group swamp walk led by a Master Naturalist. The route highlights waterfront estates, open Atlantic access, and the yacht-lined channels that define greater Fort Lauderdale. Equipment, safety briefings, and local commentary are handled so you can focus on Fort Lauderdale's waterways and coastal wildlife. Ideal for Fort Lauderdale travelers who want a guided Everglades outing with transport and expert commentary included."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "9 hours (approx.)",
+    "priceFrom": "From $389.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 117
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/64/03/1e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Everglades Tour w/ Biologist Led WET walk + 2 Boat Trips + Lunch! from Fort Lauderdale",
+      "Intracoastal Waterway or Everglades routing",
+      "Professional captain with local expertise",
+      "Small-group or private format as listed",
+      "Fort Lauderdale water or wildlife experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Head deep into the wilderness of the Florida Everglades and experience a small-group swamp walk led by a Master Naturalist.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Everglades National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Big Cypress National Preserve",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sawgrass Recreation Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Everglades Tour w/ Biologist Led WET walk + 2 Boat Trips + Lunch!?",
+        "answer": "The planned duration is 9 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 389
+      },
+      "currency": "USD"
+    }
+  }
+}

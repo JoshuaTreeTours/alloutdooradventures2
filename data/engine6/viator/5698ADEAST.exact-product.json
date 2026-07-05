@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "5698ADEAST",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Small-Group-Tour-Everglades-Adventure-Day-Trip-from-Ft-Lauderdale/d660-5698ADEAST",
+    "title": "Everglades Day Safari from Ft Lauderdale",
+    "description": {
+      "text": "Escape to the wilderness of Florida's Everglades on this guided, full-day adventure from Fort Lauderdale. The route highlights waterfront estates, open Atlantic access, and the yacht-lined channels that define greater Fort Lauderdale. Equipment, safety briefings, and local commentary are handled so you can focus on Fort Lauderdale's waterways and coastal wildlife. Ideal for Fort Lauderdale travelers who want a guided Everglades outing with transport and expert commentary included."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $250.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 504
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/b9/ec/ef.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Everglades Day Safari from Ft Lauderdale from Fort Lauderdale",
+      "Intracoastal Waterway or Everglades routing",
+      "Professional captain with local expertise",
+      "Small-group or private format as listed",
+      "Fort Lauderdale water or wildlife experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Escape to the wilderness of Florida's Everglades on this guided, full-day adventure from Fort Lauderdale.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Everglades National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Big Cypress National Preserve",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sawgrass Recreation Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Everglades Day Safari from Ft Lauderdale?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 250
+      },
+      "currency": "USD"
+    }
+  }
+}

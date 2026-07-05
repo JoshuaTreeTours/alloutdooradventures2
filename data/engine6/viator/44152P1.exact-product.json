@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "44152P1",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Everglades-Adventure/d660-44152P1",
+    "title": "Everglades National Park Biologist Led Adventure: Cruise, Hike + Airboat",
+    "description": {
+      "text": "Explore the real Everglades with a master naturalist on this full-day adventure. Enjoy a Ten Thousand Islands boat tour to spot birds, manatees, and dolphins; and a master-naturalist-led dry nature hike in Big Cypress National Preserve. Also included are a 1-hour airboat ride far from land into the River of Grass; a visit to a Native tree island village only accessible via boat; time at a historical trading post, and lunch.Full-day Everglades cruise, hike, and airboat tour with master naturalist 1-hour airboat ride into River of Grass to see alligators and more up-close 1-hour and 20 minutes c Ideal for Fort Lauderdale travelers who want a guided Everglades outing with transport and expert commentary included."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "9 hours 30 minutes to 10 hours (approx.)",
+    "priceFrom": "From $295.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 745
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/01/38/d0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the real Everglades with a master naturalist on this full-day adventure",
+      "Enjoy a Ten Thousand Islands boat tour to spot birds, manatees, and dolphins; and a master-naturalist-led dry nature hik",
+      "Also included are a 1-hour airboat ride far from land into the River of Grass; a visit to a Native tree island village o",
+      "Everglades National Park Biologist Led Adventure: Cruise, Hike + Airboat departing from Fort Lauderdale",
+      "Professional Fort Lauderdale captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the real Everglades with a master naturalist on this full-day adventure.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Everglades National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Big Cypress National Preserve",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sawgrass Recreation Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Everglades National Park Biologist Led Adventure: Cruise, Hike + Airboat?",
+        "answer": "The planned duration is 9 hours 30 minutes to 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 295
+      },
+      "currency": "USD"
+    }
+  }
+}
