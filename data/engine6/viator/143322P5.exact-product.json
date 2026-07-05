@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "143322P5",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Champagne-Sunset-Cruise-Ft-Lauderdale/d660-143322P5",
+    "title": "Sunset Catamaran Cruise in Ft. Lauderdale",
+    "description": {
+      "text": "End the day relaxing on the Atlantic Ocean with this sunset cruise. Hop aboard a comfortable catamaran for this evening excursion and take in views of the mansions on “Millionaires Row” and the Florida coastline. Then, head out to the Atlantic Ocean and catch the sun set, casting fiery hues of orange and red on the water.See stunning views of the sunset from aboard the boat This excursion is great for first-time and returning visitors A glass of champagne is included on this cruise Depart from a central location along the water Ideal for groups on Fort Lauderdale's Intracoastal Waterway who want a private captain without handling marina logistics."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $129.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 705
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/72/06/14.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "End the day relaxing on the Atlantic Ocean with this sunset cruise",
+      "Hop aboard a comfortable catamaran for this evening excursion and take in views of the mansions on “Millionaires Row” an",
+      "Then, head out to the Atlantic Ocean and catch the sun set, casting fiery hues of orange and red on the water.See stunni",
+      "Sunset Catamaran Cruise in Ft. Lauderdale departing from Fort Lauderdale",
+      "Professional Fort Lauderdale captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "End the day relaxing on the Atlantic Ocean with this sunset cruise.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fort Lauderdale Marina",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Intracoastal Waterway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Las Olas Riverwalk",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Sunset Catamaran Cruise in Ft. Lauderdale?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sailing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 129
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "155077P1",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Private-Yacht-Cruise-through-Fort-Lauderdale/d660-155077P1",
+    "title": "Private Yacht Cruise through Fort Lauderdale",
+    "description": {
+      "text": "Great for Families, Couples, and Groups. Spend a relaxing day on the water sightseeing, soaking up the sun, or watching the sunset. We are to only luxury yacht in Fort Lauderdale that can accommodate up to 20 people. Ideal for groups on Fort Lauderdale's Intracoastal Waterway who want a private captain without handling marina logistics."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $2600.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 111
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/f1/f3/60.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Great for Families, Couples, and Groups",
+      "Spend a relaxing day on the water sightseeing, soaking up the sun, or watching the sunset",
+      "We are to only luxury yacht in Fort Lauderdale that can accommodate up to 20 people",
+      "Private Yacht Cruise through Fort Lauderdale departing from Fort Lauderdale",
+      "Professional Fort Lauderdale captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Great for Families, Couples, and Groups.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fort Lauderdale Marina",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Intracoastal Waterway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Las Olas Riverwalk",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Yacht Cruise through Fort Lauderdale?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 2600
+      },
+      "currency": "USD"
+    }
+  }
+}

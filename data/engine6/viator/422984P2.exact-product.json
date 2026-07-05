@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "422984P2",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Jetcar-Miami-Jet-ski-jet-boat-Rental/d660-422984P2",
+    "title": "Jetcar Fort Lauderdale (Jet ski/jet boat) Rental",
+    "description": {
+      "text": "Explore Fort Lauderdale's Intracoastal Waterway on jetcar fort lauderdale (jet ski/jet boat) rental with local operators. The route highlights waterfront estates, open Atlantic access, and the yacht-lined channels that define greater Fort Lauderdale. Equipment, safety briefings, and local commentary are handled so you can focus on Fort Lauderdale's waterways and coastal wildlife. Ideal for Fort Lauderdale visitors seeking open-water adventure along the Intracoastal without owning equipment."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $249.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 20
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/33/8a/71.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Jetcar Fort Lauderdale (Jet ski/jet boat) Rental from Fort Lauderdale",
+      "Intracoastal Waterway or Everglades routing",
+      "Professional captain with local expertise",
+      "Small-group or private format as listed",
+      "Fort Lauderdale water or wildlife experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore Fort Lauderdale's Intracoastal Waterway on jetcar fort lauderdale (jet ski/jet boat) rental with local operators.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Intracoastal Waterway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Las Olas Boulevard",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fort Lauderdale Beach",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Jetcar Fort Lauderdale (Jet ski/jet boat) Rental?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Extreme Sports"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 249
+      },
+      "currency": "USD"
+    }
+  }
+}

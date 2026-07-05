@@ -95,6 +95,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "florida",
     citySlug: "orlando",
   },
+  "fort-lauderdale": {
+    destinationLabel: "Fort Lauderdale",
+    destinationCitySlug: "fort-lauderdale",
+    stateSlug: "florida",
+    citySlug: "fort-lauderdale",
+  },
 };
 
 export type Engine6DestinationInfrastructureReport = {

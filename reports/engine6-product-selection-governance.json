@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-05T18:06:08.998Z",
-  "destinationLabel": "Orlando",
+  "generatedAt": "2026-07-05T19:31:56.407Z",
+  "destinationLabel": "Fort Lauderdale",
   "mode": "strict",
   "scopedProductCodes": [],
   "buildOrderPreserved": true,
   "onlyNewProductsCouldBlock": false,
-  "candidatesEvaluated": 22,
+  "candidatesEvaluated": 18,
   "productsAccepted": 0,
-  "productsRejected": 22,
+  "productsRejected": 18,
   "replacementProductsSelected": 0,
   "portfolioMix": {
     "acceptedCount": 0,
@@ -15,8 +15,8 @@
     "standardCount": 0,
     "premiumShare": 0,
     "standardShare": 0,
-    "targetPremiumShare": 0.5,
-    "targetStandardShare": 0.5,
+    "targetPremiumShare": 0.8333333333333334,
+    "targetStandardShare": 0.16666666666666663,
     "experienceTypes": [],
     "experienceTypeCount": 0,
     "meetsCommercialTarget": true
@@ -25,14 +25,14 @@
   "accepted": [],
   "rejected": [
     {
-      "productCode": "3170P78",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Small-Group-VIP-Experience/d663-3170P78",
+      "productCode": "155077P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Private-Yacht-Cruise-through-Fort-Lauderdale/d660-155077P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "3170P78",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Small-Group-VIP-Experience/d663-3170P78",
+        "productCode": "155077P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Private-Yacht-Cruise-through-Fort-Lauderdale/d660-155077P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -44,14 +44,14 @@
       }
     },
     {
-      "productCode": "331790P2",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Experience-a-Once-in-a-Lifetime-Aerial-Adventure-over-Orlando/d663-331790P2",
+      "productCode": "44152P2",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Swamp-Walk-with-a-Naturalist-and-Ten-Thousand-Islands-Boat-Tour/d660-44152P2",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "331790P2",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Experience-a-Once-in-a-Lifetime-Aerial-Adventure-over-Orlando/d663-331790P2",
+        "productCode": "44152P2",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Swamp-Walk-with-a-Naturalist-and-Ten-Thousand-Islands-Boat-Tour/d660-44152P2",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -63,14 +63,14 @@
       }
     },
     {
-      "productCode": "42054P2",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Night-Tour-Over-Orlandos-Theme-Parks/d663-42054P2",
+      "productCode": "169162P11",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Private-Yacht-Cruise-4-or-6-hours-around-Miami-Bay/d660-169162P11",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "42054P2",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Night-Tour-Over-Orlandos-Theme-Parks/d663-42054P2",
+        "productCode": "169162P11",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Private-Yacht-Cruise-4-or-6-hours-around-Miami-Bay/d660-169162P11",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -82,14 +82,14 @@
       }
     },
     {
-      "productCode": "3170P51",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Day-Tour-including-Airboat-Safari-Eco-Boat-Ride-from-Orlando/d663-3170P51",
+      "productCode": "44152P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Everglades-Adventure/d660-44152P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "3170P51",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Day-Tour-including-Airboat-Safari-Eco-Boat-Ride-from-Orlando/d663-3170P51",
+        "productCode": "44152P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Everglades-Adventure/d660-44152P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -101,14 +101,14 @@
       }
     },
     {
-      "productCode": "42054P4",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Day-Tour-Orlando-Theme-Parks-31miles-or-48miles/d663-42054P4",
+      "productCode": "5221P41",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Bimini-Day-Trip-from-Miami/d660-5221P41",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "42054P4",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Day-Tour-Orlando-Theme-Parks-31miles-or-48miles/d663-42054P4",
+        "productCode": "5221P41",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Bimini-Day-Trip-from-Miami/d660-5221P41",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -120,14 +120,14 @@
       }
     },
     {
-      "productCode": "3170P40",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Crystal-River-Manatee-Swim-from-Orlando/d663-3170P40",
+      "productCode": "5698ADEAST",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Small-Group-Tour-Everglades-Adventure-Day-Trip-from-Ft-Lauderdale/d660-5698ADEAST",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "3170P40",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Crystal-River-Manatee-Swim-from-Orlando/d663-3170P40",
+        "productCode": "5698ADEAST",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Small-Group-Tour-Everglades-Adventure-Day-Trip-from-Ft-Lauderdale/d660-5698ADEAST",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -139,14 +139,14 @@
       }
     },
     {
-      "productCode": "123164P1",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Clear-Kayak-Tours-in-Rock-Springs/d663-123164P1",
+      "productCode": "422984P2",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Jetcar-Miami-Jet-ski-jet-boat-Rental/d660-422984P2",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "123164P1",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Clear-Kayak-Tours-in-Rock-Springs/d663-123164P1",
+        "productCode": "422984P2",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Jetcar-Miami-Jet-ski-jet-boat-Rental/d660-422984P2",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -158,14 +158,14 @@
       }
     },
     {
-      "productCode": "120040P3",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Duluth-Moose-Lake-Buggy-Adventure/d663-120040P3",
+      "productCode": "443622P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Ft-Lauderdale-to-Key-West-bus-tour-w-6-hours-of-free-time-in-KW/d660-443622P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "120040P3",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Duluth-Moose-Lake-Buggy-Adventure/d663-120040P3",
+        "productCode": "443622P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Ft-Lauderdale-to-Key-West-bus-tour-w-6-hours-of-free-time-in-KW/d660-443622P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -177,14 +177,14 @@
       }
     },
     {
-      "productCode": "317042",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Saint-Augustine-Day-Trip-from-Orlando/d663-317042",
+      "productCode": "6331P15",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Miami-Bahamas-Day-Trip-with-Pig-Beach-option/d660-6331P15",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "317042",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Saint-Augustine-Day-Trip-from-Orlando/d663-317042",
+        "productCode": "6331P15",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Miami-Bahamas-Day-Trip-with-Pig-Beach-option/d660-6331P15",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -196,14 +196,14 @@
       }
     },
     {
-      "productCode": "3170P41",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Clearwater-Beach-Day-Trip-from-Orlando-with-Optional-Upgrades/d663-3170P41",
+      "productCode": "68236P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Sailing-Charter/d660-68236P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "3170P41",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Clearwater-Beach-Day-Trip-from-Orlando-with-Optional-Upgrades/d663-3170P41",
+        "productCode": "68236P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Sailing-Charter/d660-68236P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -215,14 +215,14 @@
       }
     },
     {
-      "productCode": "42054P5",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Take-a-thrilling-1-hour-Helicopter-Ride-to-the-Space-Cost/d663-42054P5",
+      "productCode": "169162P5",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/8-Person-Boat-Rental-Gas-included-be-your-own-captain-Price-per-boat/d660-169162P5",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "42054P5",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Take-a-thrilling-1-hour-Helicopter-Ride-to-the-Space-Cost/d663-42054P5",
+        "productCode": "169162P5",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/8-Person-Boat-Rental-Gas-included-be-your-own-captain-Price-per-boat/d660-169162P5",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -234,14 +234,14 @@
       }
     },
     {
-      "productCode": "3170P32",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Tour/d663-3170P32",
+      "productCode": "86313P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/1-Hour-Jet-Ski-Rental/d660-86313P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "3170P32",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Tour/d663-3170P32",
+        "productCode": "86313P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/1-Hour-Jet-Ski-Rental/d660-86313P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -253,14 +253,14 @@
       }
     },
     {
-      "productCode": "42627P1",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Small-Group-Florida-Everglades-Airboat-Tour/d663-42627P1",
+      "productCode": "5190PRIVATE",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Private-Tour-Florida-Everglades-Airboat-Ride-and-Wildlife-Adventure/d660-5190PRIVATE",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "42627P1",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Small-Group-Florida-Everglades-Airboat-Tour/d663-42627P1",
+        "productCode": "5190PRIVATE",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Private-Tour-Florida-Everglades-Airboat-Ride-and-Wildlife-Adventure/d660-5190PRIVATE",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -272,14 +272,14 @@
       }
     },
     {
-      "productCode": "5580079P3",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Speakeasy-Murder-Mystery-Dinner-Show-in-Orlando/d663-5580079P3",
+      "productCode": "143322P5",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Champagne-Sunset-Cruise-Ft-Lauderdale/d660-143322P5",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "5580079P3",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Speakeasy-Murder-Mystery-Dinner-Show-in-Orlando/d663-5580079P3",
+        "productCode": "143322P5",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Champagne-Sunset-Cruise-Ft-Lauderdale/d660-143322P5",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -291,14 +291,14 @@
       }
     },
     {
-      "productCode": "109065P4",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Silver-Springs-Clear-Kayaking-and-Paddle-Boarding/d663-109065P4",
+      "productCode": "143322P4",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Sail-Splash/d660-143322P4",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "109065P4",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Silver-Springs-Clear-Kayaking-and-Paddle-Boarding/d663-109065P4",
+        "productCode": "143322P4",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Sail-Splash/d660-143322P4",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -310,14 +310,14 @@
       }
     },
     {
-      "productCode": "105290P7",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Blue-Spring-Adventure-Manatee-Tour/d663-105290P7",
+      "productCode": "270280P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Parasailing/d660-270280P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "105290P7",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Blue-Spring-Adventure-Manatee-Tour/d663-105290P7",
+        "productCode": "270280P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Parasailing/d660-270280P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -329,14 +329,14 @@
       }
     },
     {
-      "productCode": "58194P1",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Horseback-Ride-on-Scenic-Lake-Louisa-Trails/d663-58194P1",
+      "productCode": "50605P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Drift-Fishing-Trip/d660-50605P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "58194P1",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Horseback-Ride-on-Scenic-Lake-Louisa-Trails/d663-58194P1",
+        "productCode": "50605P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Drift-Fishing-Trip/d660-50605P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -348,90 +348,14 @@
       }
     },
     {
-      "productCode": "39750P18",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Manatees-Monkeys-and-Florida-Natural-Spring-Adventure-Tour/d663-39750P18",
+      "productCode": "5546582P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Ft-Lauderdale-Parasailing-Along-Ft-Lauderdale-Beach/d660-5546582P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "39750P18",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Manatees-Monkeys-and-Florida-Natural-Spring-Adventure-Tour/d663-39750P18",
-        "passed": false,
-        "publicPageAvailable": false,
-        "apiConfirmedActive": false,
-        "canonicalProductCodeMatches": true,
-        "merchantUrlMatches": true,
-        "bookable": false,
-        "knownUnavailableBlocklistHit": false,
-        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
-      }
-    },
-    {
-      "productCode": "37177P6",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Polynesian-Fire-Luau-at-the-Orlando-Forum/d663-37177P6",
-      "experienceType": "destination-portfolio",
-      "reason": "live-validation-failed",
-      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
-      "validationResult": {
-        "productCode": "37177P6",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Polynesian-Fire-Luau-at-the-Orlando-Forum/d663-37177P6",
-        "passed": false,
-        "publicPageAvailable": false,
-        "apiConfirmedActive": false,
-        "canonicalProductCodeMatches": true,
-        "merchantUrlMatches": true,
-        "bookable": false,
-        "knownUnavailableBlocklistHit": false,
-        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
-      }
-    },
-    {
-      "productCode": "5039P5",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Boggy-Creek-Airboat-Adventures-One-Hour-Airboat-Tour-near-Orlando-Florida/d663-5039P5",
-      "experienceType": "destination-portfolio",
-      "reason": "live-validation-failed",
-      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
-      "validationResult": {
-        "productCode": "5039P5",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Boggy-Creek-Airboat-Adventures-One-Hour-Airboat-Tour-near-Orlando-Florida/d663-5039P5",
-        "passed": false,
-        "publicPageAvailable": false,
-        "apiConfirmedActive": false,
-        "canonicalProductCodeMatches": true,
-        "merchantUrlMatches": true,
-        "bookable": false,
-        "knownUnavailableBlocklistHit": false,
-        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
-      }
-    },
-    {
-      "productCode": "53748P4",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Orlando-Tree-Trek-Adventure-Park/d663-53748P4",
-      "experienceType": "destination-portfolio",
-      "reason": "live-validation-failed",
-      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
-      "validationResult": {
-        "productCode": "53748P4",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Orlando-Tree-Trek-Adventure-Park/d663-53748P4",
-        "passed": false,
-        "publicPageAvailable": false,
-        "apiConfirmedActive": false,
-        "canonicalProductCodeMatches": true,
-        "merchantUrlMatches": true,
-        "bookable": false,
-        "knownUnavailableBlocklistHit": false,
-        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
-      }
-    },
-    {
-      "productCode": "357987P1",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Bioluminescent-Paddle-Excursion-with-A-Paddle-in-Paradise/d663-357987P1",
-      "experienceType": "destination-portfolio",
-      "reason": "live-validation-failed",
-      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
-      "validationResult": {
-        "productCode": "357987P1",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Bioluminescent-Paddle-Excursion-with-A-Paddle-in-Paradise/d663-357987P1",
+        "productCode": "5546582P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Ft-Lauderdale-Parasailing-Along-Ft-Lauderdale-Beach/d660-5546582P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -462,20 +386,20 @@
   "unfilledSlots": [
     {
       "experienceType": "destination-portfolio",
-      "desiredCount": 22,
+      "desiredCount": 18,
       "acceptedCount": 0
     }
   ],
   "blockingFailures": [
     {
-      "productCode": "3170P78",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Small-Group-VIP-Experience/d663-3170P78",
+      "productCode": "155077P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Private-Yacht-Cruise-through-Fort-Lauderdale/d660-155077P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "3170P78",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Small-Group-VIP-Experience/d663-3170P78",
+        "productCode": "155077P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Private-Yacht-Cruise-through-Fort-Lauderdale/d660-155077P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -487,14 +411,14 @@
       }
     },
     {
-      "productCode": "331790P2",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Experience-a-Once-in-a-Lifetime-Aerial-Adventure-over-Orlando/d663-331790P2",
+      "productCode": "44152P2",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Swamp-Walk-with-a-Naturalist-and-Ten-Thousand-Islands-Boat-Tour/d660-44152P2",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "331790P2",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Experience-a-Once-in-a-Lifetime-Aerial-Adventure-over-Orlando/d663-331790P2",
+        "productCode": "44152P2",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Swamp-Walk-with-a-Naturalist-and-Ten-Thousand-Islands-Boat-Tour/d660-44152P2",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -506,14 +430,14 @@
       }
     },
     {
-      "productCode": "42054P2",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Night-Tour-Over-Orlandos-Theme-Parks/d663-42054P2",
+      "productCode": "169162P11",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Private-Yacht-Cruise-4-or-6-hours-around-Miami-Bay/d660-169162P11",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "42054P2",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Night-Tour-Over-Orlandos-Theme-Parks/d663-42054P2",
+        "productCode": "169162P11",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Private-Yacht-Cruise-4-or-6-hours-around-Miami-Bay/d660-169162P11",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -525,14 +449,14 @@
       }
     },
     {
-      "productCode": "3170P51",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Day-Tour-including-Airboat-Safari-Eco-Boat-Ride-from-Orlando/d663-3170P51",
+      "productCode": "44152P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Everglades-Adventure/d660-44152P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "3170P51",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Day-Tour-including-Airboat-Safari-Eco-Boat-Ride-from-Orlando/d663-3170P51",
+        "productCode": "44152P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Everglades-Adventure/d660-44152P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -544,14 +468,14 @@
       }
     },
     {
-      "productCode": "42054P4",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Day-Tour-Orlando-Theme-Parks-31miles-or-48miles/d663-42054P4",
+      "productCode": "5221P41",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Bimini-Day-Trip-from-Miami/d660-5221P41",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "42054P4",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Helicopter-Day-Tour-Orlando-Theme-Parks-31miles-or-48miles/d663-42054P4",
+        "productCode": "5221P41",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Bimini-Day-Trip-from-Miami/d660-5221P41",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -563,14 +487,14 @@
       }
     },
     {
-      "productCode": "3170P40",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Crystal-River-Manatee-Swim-from-Orlando/d663-3170P40",
+      "productCode": "5698ADEAST",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Small-Group-Tour-Everglades-Adventure-Day-Trip-from-Ft-Lauderdale/d660-5698ADEAST",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "3170P40",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Crystal-River-Manatee-Swim-from-Orlando/d663-3170P40",
+        "productCode": "5698ADEAST",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Small-Group-Tour-Everglades-Adventure-Day-Trip-from-Ft-Lauderdale/d660-5698ADEAST",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -582,14 +506,14 @@
       }
     },
     {
-      "productCode": "123164P1",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Clear-Kayak-Tours-in-Rock-Springs/d663-123164P1",
+      "productCode": "422984P2",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Jetcar-Miami-Jet-ski-jet-boat-Rental/d660-422984P2",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "123164P1",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Clear-Kayak-Tours-in-Rock-Springs/d663-123164P1",
+        "productCode": "422984P2",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Jetcar-Miami-Jet-ski-jet-boat-Rental/d660-422984P2",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -601,14 +525,14 @@
       }
     },
     {
-      "productCode": "120040P3",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Duluth-Moose-Lake-Buggy-Adventure/d663-120040P3",
+      "productCode": "443622P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Ft-Lauderdale-to-Key-West-bus-tour-w-6-hours-of-free-time-in-KW/d660-443622P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "120040P3",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Duluth-Moose-Lake-Buggy-Adventure/d663-120040P3",
+        "productCode": "443622P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Ft-Lauderdale-to-Key-West-bus-tour-w-6-hours-of-free-time-in-KW/d660-443622P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -620,14 +544,14 @@
       }
     },
     {
-      "productCode": "317042",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Saint-Augustine-Day-Trip-from-Orlando/d663-317042",
+      "productCode": "6331P15",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Miami-Bahamas-Day-Trip-with-Pig-Beach-option/d660-6331P15",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "317042",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Saint-Augustine-Day-Trip-from-Orlando/d663-317042",
+        "productCode": "6331P15",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Miami-Bahamas-Day-Trip-with-Pig-Beach-option/d660-6331P15",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -639,14 +563,14 @@
       }
     },
     {
-      "productCode": "3170P41",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Clearwater-Beach-Day-Trip-from-Orlando-with-Optional-Upgrades/d663-3170P41",
+      "productCode": "68236P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Sailing-Charter/d660-68236P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "3170P41",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Clearwater-Beach-Day-Trip-from-Orlando-with-Optional-Upgrades/d663-3170P41",
+        "productCode": "68236P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Sailing-Charter/d660-68236P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -658,14 +582,14 @@
       }
     },
     {
-      "productCode": "42054P5",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Take-a-thrilling-1-hour-Helicopter-Ride-to-the-Space-Cost/d663-42054P5",
+      "productCode": "169162P5",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/8-Person-Boat-Rental-Gas-included-be-your-own-captain-Price-per-boat/d660-169162P5",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "42054P5",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Take-a-thrilling-1-hour-Helicopter-Ride-to-the-Space-Cost/d663-42054P5",
+        "productCode": "169162P5",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/8-Person-Boat-Rental-Gas-included-be-your-own-captain-Price-per-boat/d660-169162P5",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -677,14 +601,14 @@
       }
     },
     {
-      "productCode": "3170P32",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Tour/d663-3170P32",
+      "productCode": "86313P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/1-Hour-Jet-Ski-Rental/d660-86313P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "3170P32",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Tour/d663-3170P32",
+        "productCode": "86313P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/1-Hour-Jet-Ski-Rental/d660-86313P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -696,14 +620,14 @@
       }
     },
     {
-      "productCode": "42627P1",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Small-Group-Florida-Everglades-Airboat-Tour/d663-42627P1",
+      "productCode": "5190PRIVATE",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Private-Tour-Florida-Everglades-Airboat-Ride-and-Wildlife-Adventure/d660-5190PRIVATE",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "42627P1",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Small-Group-Florida-Everglades-Airboat-Tour/d663-42627P1",
+        "productCode": "5190PRIVATE",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Private-Tour-Florida-Everglades-Airboat-Ride-and-Wildlife-Adventure/d660-5190PRIVATE",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -715,14 +639,14 @@
       }
     },
     {
-      "productCode": "5580079P3",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Speakeasy-Murder-Mystery-Dinner-Show-in-Orlando/d663-5580079P3",
+      "productCode": "143322P5",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Champagne-Sunset-Cruise-Ft-Lauderdale/d660-143322P5",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "5580079P3",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Speakeasy-Murder-Mystery-Dinner-Show-in-Orlando/d663-5580079P3",
+        "productCode": "143322P5",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Champagne-Sunset-Cruise-Ft-Lauderdale/d660-143322P5",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -734,14 +658,14 @@
       }
     },
     {
-      "productCode": "109065P4",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Silver-Springs-Clear-Kayaking-and-Paddle-Boarding/d663-109065P4",
+      "productCode": "143322P4",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Sail-Splash/d660-143322P4",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "109065P4",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Silver-Springs-Clear-Kayaking-and-Paddle-Boarding/d663-109065P4",
+        "productCode": "143322P4",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Sail-Splash/d660-143322P4",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -753,14 +677,14 @@
       }
     },
     {
-      "productCode": "105290P7",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Blue-Spring-Adventure-Manatee-Tour/d663-105290P7",
+      "productCode": "270280P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Parasailing/d660-270280P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "105290P7",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Blue-Spring-Adventure-Manatee-Tour/d663-105290P7",
+        "productCode": "270280P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Parasailing/d660-270280P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -772,14 +696,14 @@
       }
     },
     {
-      "productCode": "58194P1",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Horseback-Ride-on-Scenic-Lake-Louisa-Trails/d663-58194P1",
+      "productCode": "50605P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Drift-Fishing-Trip/d660-50605P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "58194P1",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Horseback-Ride-on-Scenic-Lake-Louisa-Trails/d663-58194P1",
+        "productCode": "50605P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Drift-Fishing-Trip/d660-50605P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -791,90 +715,14 @@
       }
     },
     {
-      "productCode": "39750P18",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Manatees-Monkeys-and-Florida-Natural-Spring-Adventure-Tour/d663-39750P18",
+      "productCode": "5546582P1",
+      "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Ft-Lauderdale-Parasailing-Along-Ft-Lauderdale-Beach/d660-5546582P1",
       "experienceType": "destination-portfolio",
       "reason": "live-validation-failed",
       "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
       "validationResult": {
-        "productCode": "39750P18",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Manatees-Monkeys-and-Florida-Natural-Spring-Adventure-Tour/d663-39750P18",
-        "passed": false,
-        "publicPageAvailable": false,
-        "apiConfirmedActive": false,
-        "canonicalProductCodeMatches": true,
-        "merchantUrlMatches": true,
-        "bookable": false,
-        "knownUnavailableBlocklistHit": false,
-        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
-      }
-    },
-    {
-      "productCode": "37177P6",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Polynesian-Fire-Luau-at-the-Orlando-Forum/d663-37177P6",
-      "experienceType": "destination-portfolio",
-      "reason": "live-validation-failed",
-      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
-      "validationResult": {
-        "productCode": "37177P6",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Polynesian-Fire-Luau-at-the-Orlando-Forum/d663-37177P6",
-        "passed": false,
-        "publicPageAvailable": false,
-        "apiConfirmedActive": false,
-        "canonicalProductCodeMatches": true,
-        "merchantUrlMatches": true,
-        "bookable": false,
-        "knownUnavailableBlocklistHit": false,
-        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
-      }
-    },
-    {
-      "productCode": "5039P5",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Boggy-Creek-Airboat-Adventures-One-Hour-Airboat-Tour-near-Orlando-Florida/d663-5039P5",
-      "experienceType": "destination-portfolio",
-      "reason": "live-validation-failed",
-      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
-      "validationResult": {
-        "productCode": "5039P5",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Boggy-Creek-Airboat-Adventures-One-Hour-Airboat-Tour-near-Orlando-Florida/d663-5039P5",
-        "passed": false,
-        "publicPageAvailable": false,
-        "apiConfirmedActive": false,
-        "canonicalProductCodeMatches": true,
-        "merchantUrlMatches": true,
-        "bookable": false,
-        "knownUnavailableBlocklistHit": false,
-        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
-      }
-    },
-    {
-      "productCode": "53748P4",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Orlando-Tree-Trek-Adventure-Park/d663-53748P4",
-      "experienceType": "destination-portfolio",
-      "reason": "live-validation-failed",
-      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
-      "validationResult": {
-        "productCode": "53748P4",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Orlando-Tree-Trek-Adventure-Park/d663-53748P4",
-        "passed": false,
-        "publicPageAvailable": false,
-        "apiConfirmedActive": false,
-        "canonicalProductCodeMatches": true,
-        "merchantUrlMatches": true,
-        "bookable": false,
-        "knownUnavailableBlocklistHit": false,
-        "reason": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured"
-      }
-    },
-    {
-      "productCode": "357987P1",
-      "sourceUrl": "https://www.viator.com/tours/Orlando/Bioluminescent-Paddle-Excursion-with-A-Paddle-in-Paradise/d663-357987P1",
-      "experienceType": "destination-portfolio",
-      "reason": "live-validation-failed",
-      "detail": "public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured",
-      "validationResult": {
-        "productCode": "357987P1",
-        "sourceUrl": "https://www.viator.com/tours/Orlando/Bioluminescent-Paddle-Excursion-with-A-Paddle-in-Paradise/d663-357987P1",
+        "productCode": "5546582P1",
+        "sourceUrl": "https://www.viator.com/tours/Fort-Lauderdale/Ft-Lauderdale-Parasailing-Along-Ft-Lauderdale-Beach/d660-5546582P1",
         "passed": false,
         "publicPageAvailable": false,
         "apiConfirmedActive": false,
@@ -889,10 +737,10 @@
   "blockingPassed": false,
   "passed": false,
   "buildTerminated": true,
-  "buildTerminationReason": "validated candidate pool exhausted with 22 unfilled portfolio slot(s)",
+  "buildTerminationReason": "validated candidate pool exhausted with 18 unfilled portfolio slot(s)",
   "remainingQualifiedCandidates": [],
-  "minimumPortfolioShortfall": 22,
+  "minimumPortfolioShortfall": 18,
   "attemptedReplacements": [],
-  "formattedLiveValidationReport": "Engine6 live Viator production validation (2026-07-05T18:06:08.998Z)\nGovernance mode: undefined\nScope mode: strict\nProducts validated: 22\nFailures: 22\n\nFailures:\n- 3170P78: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Small-Group-VIP-Experience/d663-3170P78)\n- 331790P2: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Experience-a-Once-in-a-Lifetime-Aerial-Adventure-over-Orlando/d663-331790P2)\n- 42054P2: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Helicopter-Night-Tour-Over-Orlandos-Theme-Parks/d663-42054P2)\n- 3170P51: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Day-Tour-including-Airboat-Safari-Eco-Boat-Ride-from-Orlando/d663-3170P51)\n- 42054P4: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Helicopter-Day-Tour-Orlando-Theme-Parks-31miles-or-48miles/d663-42054P4)\n- 3170P40: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Crystal-River-Manatee-Swim-from-Orlando/d663-3170P40)\n- 123164P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Clear-Kayak-Tours-in-Rock-Springs/d663-123164P1)\n- 120040P3: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Duluth-Moose-Lake-Buggy-Adventure/d663-120040P3)\n- 317042: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Saint-Augustine-Day-Trip-from-Orlando/d663-317042)\n- 3170P41: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Clearwater-Beach-Day-Trip-from-Orlando-with-Optional-Upgrades/d663-3170P41)\n- 42054P5: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Take-a-thrilling-1-hour-Helicopter-Ride-to-the-Space-Cost/d663-42054P5)\n- 3170P32: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Kennedy-Space-Center-Tour/d663-3170P32)\n- 42627P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Small-Group-Florida-Everglades-Airboat-Tour/d663-42627P1)\n- 5580079P3: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Speakeasy-Murder-Mystery-Dinner-Show-in-Orlando/d663-5580079P3)\n- 109065P4: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Silver-Springs-Clear-Kayaking-and-Paddle-Boarding/d663-109065P4)\n- 105290P7: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Blue-Spring-Adventure-Manatee-Tour/d663-105290P7)\n- 58194P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Horseback-Ride-on-Scenic-Lake-Louisa-Trails/d663-58194P1)\n- 39750P18: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Manatees-Monkeys-and-Florida-Natural-Spring-Adventure-Tour/d663-39750P18)\n- 37177P6: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Polynesian-Fire-Luau-at-the-Orlando-Forum/d663-37177P6)\n- 5039P5: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Boggy-Creek-Airboat-Adventures-One-Hour-Airboat-Tour-near-Orlando-Florida/d663-5039P5)\n- 53748P4: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Orlando-Tree-Trek-Adventure-Park/d663-53748P4)\n- 357987P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Orlando/Bioluminescent-Paddle-Excursion-with-A-Paddle-in-Paradise/d663-357987P1)",
-  "productCodeExclusivityReport": "Engine6 product code exclusivity governance\nDestination: Orlando\n\n✓ Product 3170P78 already owned by Orlando (regeneration allowed)\n✓ Product 331790P2 already owned by Orlando (regeneration allowed)\n✓ Product 42054P2 already owned by Orlando (regeneration allowed)\n✓ Product 3170P51 already owned by Orlando (regeneration allowed)\n✓ Product 42054P4 already owned by Orlando (regeneration allowed)\n✓ Product 3170P40 already owned by Orlando (regeneration allowed)\n✓ Product 123164P1 already owned by Orlando (regeneration allowed)\n✓ Product 120040P3 already owned by Orlando (regeneration allowed)\n✓ Product 317042 already owned by Orlando (regeneration allowed)\n✓ Product 3170P41 already owned by Orlando (regeneration allowed)\n✓ Product 42054P5 already owned by Orlando (regeneration allowed)\n✓ Product 3170P32 already owned by Orlando (regeneration allowed)\n✓ Product 42627P1 already owned by Orlando (regeneration allowed)\n✓ Product 5580079P3 already owned by Orlando (regeneration allowed)\n✓ Product 109065P4 already owned by Orlando (regeneration allowed)\n✓ Product 105290P7 already owned by Orlando (regeneration allowed)\n✓ Product 58194P1 already owned by Orlando (regeneration allowed)\n✓ Product 39750P18 already owned by Orlando (regeneration allowed)\n✓ Product 37177P6 already owned by Orlando (regeneration allowed)\n✓ Product 5039P5 already owned by Orlando (regeneration allowed)\n✓ Product 53748P4 already owned by Orlando (regeneration allowed)\n✓ Product 357987P1 already owned by Orlando (regeneration allowed)"
+  "formattedLiveValidationReport": "Engine6 live Viator production validation (2026-07-05T19:31:56.407Z)\nGovernance mode: undefined\nScope mode: strict\nProducts validated: 18\nFailures: 18\n\nFailures:\n- 155077P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Private-Yacht-Cruise-through-Fort-Lauderdale/d660-155077P1)\n- 44152P2: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Swamp-Walk-with-a-Naturalist-and-Ten-Thousand-Islands-Boat-Tour/d660-44152P2)\n- 169162P11: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Private-Yacht-Cruise-4-or-6-hours-around-Miami-Bay/d660-169162P11)\n- 44152P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Everglades-Adventure/d660-44152P1)\n- 5221P41: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Bimini-Day-Trip-from-Miami/d660-5221P41)\n- 5698ADEAST: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Small-Group-Tour-Everglades-Adventure-Day-Trip-from-Ft-Lauderdale/d660-5698ADEAST)\n- 422984P2: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Jetcar-Miami-Jet-ski-jet-boat-Rental/d660-422984P2)\n- 443622P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Ft-Lauderdale-to-Key-West-bus-tour-w-6-hours-of-free-time-in-KW/d660-443622P1)\n- 6331P15: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Miami-Bahamas-Day-Trip-with-Pig-Beach-option/d660-6331P15)\n- 68236P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Sailing-Charter/d660-68236P1)\n- 169162P5: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/8-Person-Boat-Rental-Gas-included-be-your-own-captain-Price-per-boat/d660-169162P5)\n- 86313P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/1-Hour-Jet-Ski-Rental/d660-86313P1)\n- 5190PRIVATE: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Private-Tour-Florida-Everglades-Airboat-Ride-and-Wildlife-Adventure/d660-5190PRIVATE)\n- 143322P5: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Champagne-Sunset-Cruise-Ft-Lauderdale/d660-143322P5)\n- 143322P4: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Sail-Splash/d660-143322P4)\n- 270280P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Parasailing/d660-270280P1)\n- 50605P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Drift-Fishing-Trip/d660-50605P1)\n- 5546582P1: public Viator fetch blocked by bot protection; API cross-check required; Viator API key not configured (https://www.viator.com/tours/Fort-Lauderdale/Ft-Lauderdale-Parasailing-Along-Ft-Lauderdale-Beach/d660-5546582P1)",
+  "productCodeExclusivityReport": "Engine6 product code exclusivity governance\nDestination: Fort Lauderdale\n\n✓ Product 155077P1 unique\n✓ Product 44152P2 unique\n✓ Product 169162P11 unique\n✓ Product 44152P1 unique\n✓ Product 5221P41 unique\n✓ Product 5698ADEAST unique\n✓ Product 422984P2 unique\n✓ Product 443622P1 unique\n✓ Product 6331P15 unique\n✓ Product 68236P1 unique\n✓ Product 169162P5 unique\n✓ Product 86313P1 unique\n✓ Product 5190PRIVATE unique\n✓ Product 143322P5 unique\n✓ Product 143322P4 unique\n✓ Product 270280P1 unique\n✓ Product 50605P1 unique\n✓ Product 5546582P1 unique"
 }

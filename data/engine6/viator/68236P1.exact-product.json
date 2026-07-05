@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "68236P1",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Sailing-Charter/d660-68236P1",
+    "title": "Fort Lauderdale Sailing Charter",
+    "description": {
+      "text": "This half-day Fort Lauderdale sailing experience is ideal for visitors who want to get out on the water without having to drive a boat themselves. This relaxing, small-group experience takes you down the scenic New River, dubbed the \"Venice of America,\" lined with mangroves and waterfront homes, down to Port Everglades. Take in the sights as you chat amongst yourselves. Ideal for groups on Fort Lauderdale's Intracoastal Waterway who want a private captain without handling marina logistics."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $200.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 399
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/fa/b7/98.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "This half-day Fort Lauderdale sailing experience is ideal for visitors who want to get out on the water without having t",
+      "This relaxing, small-group experience takes you down the scenic New River, dubbed the \"Venice of America,\" lined with ma",
+      "Take in the sights as you chat amongst yourselves",
+      "Fort Lauderdale Sailing Charter departing from Fort Lauderdale",
+      "Professional Fort Lauderdale captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "This half-day Fort Lauderdale sailing experience is ideal for visitors who want to get out on the water without having to drive a boat themselves.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fort Lauderdale Marina",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Intracoastal Waterway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Las Olas Riverwalk",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Fort Lauderdale Sailing Charter?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sailing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 200
+      },
+      "currency": "USD"
+    }
+  }
+}

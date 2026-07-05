@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "6331P15",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Miami-Bahamas-Day-Trip-with-Pig-Beach-option/d660-6331P15",
+    "title": "Bimini or Grand Bahama Island Day Cruise",
+    "description": {
+      "text": "The boat has plenty of seating areas, restrooms, and air-conditioning to ensure a comfortable journey, as well as an onboard snack bar. The route highlights waterfront estates, open Atlantic access, and the yacht-lined channels that define greater Fort Lauderdale. Equipment, safety briefings, and local commentary are handled so you can focus on Fort Lauderdale's waterways and coastal wildlife. Ideal for Fort Lauderdale visitors who want a full island day trip with ferry logistics handled in advance."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "12 hours (approx.)",
+    "priceFrom": "From $225.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 19
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/cc/3b/bf.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Bimini or Grand Bahama Island Day Cruise from Fort Lauderdale",
+      "Intracoastal Waterway or Everglades routing",
+      "Professional captain with local expertise",
+      "Small-group or private format as listed",
+      "Fort Lauderdale water or wildlife experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "The boat has plenty of seating areas, restrooms, and air-conditioning to ensure a comfortable journey, as well as an onboard snack bar.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Port Everglades",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Seven Mile Bridge",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bimini or Grand Bahama Island Day Cruise?",
+        "answer": "The planned duration is 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sailing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 225
+      },
+      "currency": "USD"
+    }
+  }
+}

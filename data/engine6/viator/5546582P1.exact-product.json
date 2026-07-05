@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "5546582P1",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Ft-Lauderdale-Parasailing-Along-Ft-Lauderdale-Beach/d660-5546582P1",
+    "title": "Parasailing along Fort Lauderdale Beach",
+    "description": {
+      "text": "See the beauty of Fort Lauderdale from a brand new vantage point with this small-group parasailing adventure over the Atlantic Ocean. The captain assesses the weather and takes you to an area that’s optimal for parasailing. Then, enjoy a worry-free tour with a life vest, harness, and all the equipment you need provided.Perfect for thrill seekers—soar above the water in Fort Lauderdale The group size is kept small to ensure a more intimate experience Beginner-friendly session: An instructor provides assistance Access spectacular aerial views that you’d miss otherwise Ideal for groups on Fort Lauderdale's Intracoastal Waterway who want a private captain without handling marina logistics."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $72.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 56
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/39/3c/f5.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See the beauty of Fort Lauderdale from a brand new vantage point with this small-group parasailing adventure over the At",
+      "The captain assesses the weather and takes you to an area that’s optimal for parasailing",
+      "Then, enjoy a worry-free tour with a life vest, harness, and all the equipment you need provided.Perfect for thrill seek",
+      "Parasailing along Fort Lauderdale Beach departing from Fort Lauderdale",
+      "Professional Fort Lauderdale captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See the beauty of Fort Lauderdale from a brand new vantage point with this small-group parasailing adventure over the Atlantic Ocean.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fort Lauderdale Marina",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Intracoastal Waterway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Las Olas Riverwalk",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Parasailing along Fort Lauderdale Beach?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Ports of Call Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 72
+      },
+      "currency": "USD"
+    }
+  }
+}

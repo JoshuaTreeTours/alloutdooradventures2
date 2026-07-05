@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "169162P5",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/8-Person-Boat-Rental-Gas-included-be-your-own-captain-Price-per-boat/d660-169162P5",
+    "title": "Private tour for 12 people on a 40 ft Yacht, Ft Lauderdale bay",
+    "description": {
+      "text": "See Fort Lauderdale from the water with a private yacht charter on a 40-foot yacht for up to 12 passengers. BYOB, with an included cooler stocked with ice and bottled water. Equipment, safety briefings, and local commentary are handled so you can focus on Fort Lauderdale's waterways and coastal wildlife. Ideal for groups on Fort Lauderdale's Intracoastal Waterway who want a private captain without handling marina logistics."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "2 to 6 hours (approx.)",
+    "priceFrom": "From $184.50",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 387
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/cb/0f/dc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private tour for 12 people on a 40 ft Yacht, Ft Lauderdale bay from Fort Lauderdale",
+      "Intracoastal Waterway or Everglades routing",
+      "Professional captain with local expertise",
+      "Small-group or private format as listed",
+      "Fort Lauderdale water or wildlife experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See Fort Lauderdale from the water with a private yacht charter on a 40-foot yacht for up to 12 passengers.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fort Lauderdale Marina",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Intracoastal Waterway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Las Olas Riverwalk",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private tour for 12 people on a 40 ft Yacht, Ft Lauderdale bay?",
+        "answer": "The planned duration is 2 to 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Rentals"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 184.5
+      },
+      "currency": "USD"
+    }
+  }
+}

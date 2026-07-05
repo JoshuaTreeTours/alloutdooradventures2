@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "270280P1",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Parasailing/d660-270280P1",
+    "title": "Ocean Parasailing Adventure In Fort Lauderdale, FL",
+    "description": {
+      "text": "Fly high above the Gold Coast of Fort Lauderdale on this small-group parasailing adventure and enjoy views you can't get anywhere else. Head out on the water with a captain and crew for a safe experience. Once you’re hundreds of feet in the air, take in views of Lauderdale Beach, the surrounding blue waters of the Atlantic, and even a glimpse of the Bahamas on a very clear day.Enjoy panoramic views as you parasail over the crystal blue waters of the Gold Coast Family-friendly activity for ages five and up Licensed captain with years of parasailing experience Get unique views of the beach from Ideal for groups on Fort Lauderdale's Intracoastal Waterway who want a private captain without handling marina logistics."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $89.99",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 504
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/7d/27/37.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fly high above the Gold Coast of Fort Lauderdale on this small-group parasailing adventure and enjoy views you can't get",
+      "Head out on the water with a captain and crew for a safe experience",
+      "Once you’re hundreds of feet in the air, take in views of Lauderdale Beach, the surrounding blue waters of the Atlantic,",
+      "Ocean Parasailing Adventure In Fort Lauderdale, FL departing from Fort Lauderdale",
+      "Professional Fort Lauderdale captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Fly high above the Gold Coast of Fort Lauderdale on this small-group parasailing adventure and enjoy views you can't get anywhere else.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fort Lauderdale Marina",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Intracoastal Waterway",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Las Olas Riverwalk",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ocean Parasailing Adventure In Fort Lauderdale, FL?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Extreme Sports"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89.99
+      },
+      "currency": "USD"
+    }
+  }
+}

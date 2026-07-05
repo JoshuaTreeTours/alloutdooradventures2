@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "5190PRIVATE",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Private-Tour-Florida-Everglades-Airboat-Ride-and-Wildlife-Adventure/d660-5190PRIVATE",
+    "title": "Private Tour: Florida Everglades Airboat Ride and Wildlife Adventure",
+    "description": {
+      "text": "Travel deep into Everglades National Park on a private airboat tour and wildlife encounter at Sawgrass Recreation Park. Skim across the grassy water at high speeds while looking for alligators, fish, turtles, and wading birds. This tour includes entrance to the park and admission to the Reptile and Glades exhibits.Includes general admission to the park and all exhibits and attractions Receive personalized attention on a private tour A must-do tour for nature and wildl Ideal for Fort Lauderdale travelers who want a guided Everglades outing with transport and expert commentary included."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $140.25",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 514
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/ee/e0/d8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Travel deep into Everglades National Park on a private airboat tour and wildlife encounter at Sawgrass Recreation Park",
+      "Skim across the grassy water at high speeds while looking for alligators, fish, turtles, and wading birds",
+      "This tour includes entrance to the park and admission to the Reptile and Glades exhibits.Includes general admission to t",
+      "Private Tour: Florida Everglades Airboat Ride and Wildlife Adventure departing from Fort Lauderdale",
+      "Professional Fort Lauderdale captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Travel deep into Everglades National Park on a private airboat tour and wildlife encounter at Sawgrass Recreation Park.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Everglades National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Big Cypress National Preserve",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sawgrass Recreation Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Tour: Florida Everglades Airboat Ride and Wildlife Adventure?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 140.25
+      },
+      "currency": "USD"
+    }
+  }
+}

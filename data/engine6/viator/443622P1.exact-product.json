@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "443622P1",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Ft-Lauderdale-to-Key-West-bus-tour-w-6-hours-of-free-time-in-KW/d660-443622P1",
+    "title": "Ft. Lauderdale to Key West Day Trip Quality Day Tours",
+    "description": {
+      "text": "The travel time includes a tour guide and map with roundtrip transportation. Cruise to Key West in a luxurious motor coach or passenger van. Arrive time is between 12:30 pm-1:00 pm. Ideal for Fort Lauderdale visitors who want a full island day trip with ferry logistics handled in advance."
+    },
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "duration": "15 hours 30 minutes (approx.)",
+    "priceFrom": "From $225.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 24
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/21/a0/4e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The travel time includes a tour guide and map with roundtrip transportation",
+      "Cruise to Key West in a luxurious motor coach or passenger van",
+      "Arrive time is between 12:30 pm-1:00 pm",
+      "Ft. Lauderdale to Key West Day Trip Quality Day Tours departing from Fort Lauderdale",
+      "Professional Fort Lauderdale captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      },
+      "end": {
+        "description": "Return to your Fort Lauderdale marina, meeting point, or hotel after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "The travel time includes a tour guide and map with roundtrip transportation.",
+    "itineraryItems": [
+      {
+        "title": "Fort Lauderdale",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Port Everglades",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Seven Mile Bridge",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ft. Lauderdale to Key West Day Trip Quality Day Tours?",
+        "answer": "The planned duration is 15 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Fort Lauderdale?",
+        "answer": "Meet your captain or guide at the confirmed Fort Lauderdale marina, waterfront meeting point, or hotel pickup listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 225
+      },
+      "currency": "USD"
+    }
+  }
+}

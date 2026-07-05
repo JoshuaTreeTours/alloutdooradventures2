@@ -12,6 +12,13 @@ import {
 } from "./displayHero";
 import type { Engine6Tour } from "./types";
 
+// Viator bookable experiences routed under /tours despite supplier titles that
+// include "Rental" without a guided/tour keyword for detectRental().
+const ENGINE6_LISTING_TOUR_TYPE_OVERRIDES: Record<string, "tour"> = {
+  "422984P2": "tour",
+  "86313P1": "tour",
+};
+
 const ENGINE6_CANONICAL_TOUR_PATH =
   /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/;
 
@@ -87,6 +94,7 @@ const toEngine6ListingTour = (
   return {
     id: `engine6-${tour.productCode}`,
     engine: "engine6",
+    type: ENGINE6_LISTING_TOUR_TYPE_OVERRIDES[tour.productCode],
     productCode: tour.productCode,
     slug,
     title: tour.title,
