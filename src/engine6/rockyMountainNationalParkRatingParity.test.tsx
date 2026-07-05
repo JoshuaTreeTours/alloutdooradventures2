@@ -189,6 +189,32 @@ describe("Rocky Mountain National Park Engine6 rating/review parity", () => {
     );
   });
 
+  it("keeps RMNP itinerary descriptions, schema JSON-LD, and page HTML free of Yosemite bleed", () => {
+    ROCKY_MOUNTAIN_NATIONAL_PARK_VIATOR_PUBLIC_PRODUCT_CODES.forEach(
+      productCode => {
+        const tour = engine6ResolvedTours.find(
+          entry => entry.productCode === productCode
+        );
+
+        expect(tour).toBeDefined();
+
+        tour!.itinerary.forEach(item => {
+          expect(item.description ?? "", `${productCode} ${item.title}`).not.toMatch(
+            /Yosemite/i
+          );
+        });
+
+        const graph = buildEngine6SchemaGraph(tour!)["@graph"] as Array<
+          Record<string, unknown>
+        >;
+        expect(JSON.stringify(graph), productCode).not.toMatch(/Yosemite/i);
+
+        const detailHtml = renderToString(<Engine6TourPage tour={tour!} />);
+        expect(detailHtml, productCode).not.toMatch(/Yosemite/i);
+      }
+    );
+  });
+
   it("keeps RMNP public itinerary titles clean on rendered detail pages", () => {
     const malformedTitlePattern =
       /^(?:This|These|That|It|They|inspiration point for photos)$/i;
