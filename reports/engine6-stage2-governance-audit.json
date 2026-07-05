@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T21:49:07.796Z",
+  "generatedAt": "2026-07-05T16:40:53.717Z",
   "governanceMode": "audit",
   "mode": "pr-scoped",
   "scopedProductCodes": [],
@@ -10,7 +10,7 @@
   "totals": {
     "blockingFindings": 0,
     "warningFindings": 0,
-    "legacyFindings": 1438,
+    "legacyFindings": 1443,
     "areasAudited": 12,
     "areasPassed": 12
   },
@@ -47,7 +47,7 @@
       "area": "description-title",
       "blockingCount": 0,
       "warningCount": 0,
-      "legacyCount": 43,
+      "legacyCount": 48,
       "pass": true
     },
     {
@@ -5773,6 +5773,36 @@
     },
     {
       "area": "description-title",
+      "productCode": "288166P2",
+      "message": "schema description retains supplier marketing boilerplate",
+      "severity": "legacy"
+    },
+    {
+      "area": "description-title",
+      "productCode": "328038P9",
+      "message": "schema description retains supplier marketing boilerplate",
+      "severity": "legacy"
+    },
+    {
+      "area": "description-title",
+      "productCode": "18497P15",
+      "message": "merchant feed description does not match governed editorial description",
+      "severity": "legacy"
+    },
+    {
+      "area": "description-title",
+      "productCode": "334588P3",
+      "message": "merchant feed description does not match governed editorial description",
+      "severity": "legacy"
+    },
+    {
+      "area": "description-title",
+      "productCode": "265766P59",
+      "message": "merchant feed description does not match governed editorial description",
+      "severity": "legacy"
+    },
+    {
+      "area": "description-title",
       "productCode": "6029_4DAYPARK",
       "message": "merchant feed description does not match governed editorial description",
       "severity": "legacy"
@@ -8740,14 +8770,14 @@
     "credentialsRequired": false,
     "credentialsAvailable": false,
     "scopedProductCodes": [],
-    "validatedAt": "2026-07-04T21:48:45.616Z",
+    "validatedAt": "2026-07-05T16:40:48.689Z",
     "results": [],
     "failures": [],
     "blockingFailures": [],
     "legacyFailures": []
   },
   "merchantFeedImage": {
-    "imagesValidated": 439,
+    "imagesValidated": 491,
     "automaticallyRepaired": 3,
     "requiringFallback": 3,
     "unrecoverableFailures": 0,
@@ -8762,14 +8792,14 @@
         "status": 404
       },
       {
-        "productCode": "6004PRHIKE",
-        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/54/6a.jpg",
+        "productCode": "69029P14",
+        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/6d/d8.jpg",
         "reason": "http-error",
         "status": 404
       },
       {
-        "productCode": "69029P14",
-        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/6d/d8.jpg",
+        "productCode": "6004PRHIKE",
+        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/54/6a.jpg",
         "reason": "http-error",
         "status": 404
       }
@@ -8785,7 +8815,7 @@
   "destinationInfrastructure": [],
   "paragonBuildScope": {
     "moduleId": "engine6-paragon-build-scope-governance",
-    "generatedAt": "2026-07-04T21:49:07.795Z",
+    "generatedAt": "2026-07-05T16:40:53.716Z",
     "pass": true,
     "branchScopedProductCodes": [],
     "blockedFiles": [],

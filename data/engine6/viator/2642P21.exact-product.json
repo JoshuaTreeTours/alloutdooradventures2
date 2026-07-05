@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "2642P21",
+    "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Jet-Ski-Tour/d661-2642P21",
+    "title": "Key West Island Adventure Jet Ski Tour: Bring a Partner for Free",
+    "description": {
+      "text": "Discover 28 miles (45 kms) of the Floridian coast on a 1.5-hour Jet Ski tour. With several daily tours, you can easily find a time that fits with your schedule. The tour is priced per Jet Ski, so you can ride tandem with a friend at no additional cost. Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $155.95",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1426
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/e8/4f/71.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover 28 miles (45 kms) of the Floridian coast on a 1.5-hour Jet Ski tour",
+      "With several daily tours, you can easily find a time that fits with your schedule",
+      "The tour is priced per Jet Ski, so you can ride tandem with a friend at no additional cost",
+      "Key West Island Adventure Jet Ski Tour: Bring a Partner for Free departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover 28 miles (45 kms) of the Floridian coast on a 1.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Looe Key Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Pennekamp Coral Reef State Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Key West Island Adventure Jet Ski Tour: Bring a Partner for Free?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 155.95
+      },
+      "currency": "USD"
+    }
+  }
+}

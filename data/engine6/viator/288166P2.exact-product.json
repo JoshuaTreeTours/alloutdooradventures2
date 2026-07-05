@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "288166P2",
+    "productUrl": "https://www.viator.com/tours/Key-West/4-Hour-Private-Sand-Bar-Cruise-on-a-Tiki-Bar-Boat/d661-288166P2",
+    "title": "Key West Tiki Bar Boat to Popular Sand Bar with Turquoise Waters",
+    "description": {
+      "text": "Getting out on the water is one of the best ways to explore Key West, but many big tours cram their boats with passengers. This private tour promises an un-crowded experience. Head out onto turquoise water aboard a unique tiki bar boat and look out for marine life such as turtles and dolphins as you cruise to a sandbar where you can swim or just soak up the sun.Private boat tour of Key West: Avoid the big boats Set sail aboard a distinctive tiki bar boat: Unique experience Learn all about the local area and marine life from your captain Includes time for swimming or chilling on the sandbar Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $564.90",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 137
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/f1/fc/d9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Getting out on the water is one of the best ways to explore Key West, but many big tours cram their boats with passenger",
+      "This private tour promises an un-crowded experience",
+      "Head out onto turquoise water aboard a unique tiki bar boat and look out for marine life such as turtles and dolphins as",
+      "Key West Tiki Bar Boat to Popular Sand Bar with Turquoise Waters departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Getting out on the water is one of the best ways to explore Key West, but many big tours cram their boats with passengers.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Sandbar",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boca Chica Sandbar",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Backcountry Waters",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Key West Tiki Bar Boat to Popular Sand Bar with Turquoise Waters?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 564.9
+      },
+      "currency": "USD"
+    }
+  }
+}

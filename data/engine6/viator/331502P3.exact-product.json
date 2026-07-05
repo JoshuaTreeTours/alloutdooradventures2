@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "331502P3",
+    "productUrl": "https://www.viator.com/tours/Key-West/Dry-Tortugas-National-Park/d661-331502P3",
+    "title": "Dry Tortugas National Park Day Trip by Luxury Private Boat",
+    "description": {
+      "text": "Set sail for a full-day escape to the hidden gems off Key West’s coast—where pristine beaches and secluded islands await. Whether you're soaking up the sun, taking in the coastal views, or just unwinding with your group, this experience blends the excitement of the open water with the comfort of premium onboard amenities. Perfect for history lovers and adventure seekers alike, this guided journey offers something for everyone. Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $1500.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 11
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3f/6b/96.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Set sail for a full-day escape to the hidden gems off Key West’s coast—where pristine beaches and secluded islands await",
+      "Whether you're soaking up the sun, taking in the coastal views, or just unwinding with your group, this experience blend",
+      "Perfect for history lovers and adventure seekers alike, this guided journey offers something for everyone",
+      "Dry Tortugas National Park Day Trip by Luxury Private Boat departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Set sail for a full-day escape to the hidden gems off Key West’s coast—where pristine beaches and secluded islands await.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dry Tortugas National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fort Jefferson",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Loggerhead Key",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Dry Tortugas National Park Day Trip by Luxury Private Boat?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1500
+      },
+      "currency": "USD"
+    }
+  }
+}

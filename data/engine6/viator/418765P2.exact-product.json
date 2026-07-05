@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "418765P2",
+    "productUrl": "https://www.viator.com/tours/Key-West/Adult-Only-Sandbar-Adventure/d661-418765P2",
+    "title": "Adult Only Sandbar Escape with Drinks in Key West",
+    "description": {
+      "text": "One of the only Adult Only experiences offered in Key West, our excursions are top-notch, with the vessel, all equipment, food and beverage service being set to premium standards! We offer a more intimate experience with less crowded excursions for the comfort of all of our guests. Equipment, beverages, and local commentary are handled so you can focus on the water and island scenery. Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $161.24",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 26
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/73/37/78.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Adult Only Sandbar Escape with Drinks in Key West from Key West",
+      "Florida Keys reef, sandbar, or sunset routing",
+      "Professional captain or guide with local expertise",
+      "Small-group or private format as listed",
+      "Key West water or Old Town experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "One of the only Adult Only experiences offered in Key West, our excursions are top-notch, with the vessel, all equipment, food and beverage service being set to premium standards! We offer a more intimate experience with less crowded excursions for the comfort of all of our guests.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Sandbar",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boca Chica Sandbar",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Backcountry Waters",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Adult Only Sandbar Escape with Drinks in Key West?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 161.24
+      },
+      "currency": "USD"
+    }
+  }
+}

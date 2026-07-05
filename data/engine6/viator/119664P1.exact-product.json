@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "119664P1",
+    "productUrl": "https://www.viator.com/tours/Key-West/Looe-Key-Snorkel/d661-119664P1",
+    "title": "Private Looe Key Snorkel from Big Pine Key",
+    "description": {
+      "text": "Discover the Great Florida Reef while visiting the Florida Keys on this private snorkel excursion. Board a private boat and depart from Big Pine Key towards Looe Key, where you can jump in the water and explore the extensive coral reef system. Snorkel alongside your captain and learn about the various species you encounter such as barracuda, parrotfish, and rays.Discover marine species on a snorkel tour to Looe Key Avoid crowded tourist boats on this private excursion All snorkel gear is provided for your convenience A private boat and captain means a personalized experience Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $599.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 444
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/6a/c6/36.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the Great Florida Reef while visiting the Florida Keys on this private snorkel excursion",
+      "Board a private boat and depart from Big Pine Key towards Looe Key, where you can jump in the water and explore the exte",
+      "Snorkel alongside your captain and learn about the various species you encounter such as barracuda, parrotfish, and rays",
+      "Private Looe Key Snorkel from Big Pine Key departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover the Great Florida Reef while visiting the Florida Keys on this private snorkel excursion.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Looe Key Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Pennekamp Coral Reef State Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Looe Key Snorkel from Big Pine Key?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 599
+      },
+      "currency": "USD"
+    }
+  }
+}

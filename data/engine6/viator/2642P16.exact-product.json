@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "2642P16",
+    "productUrl": "https://www.viator.com/tours/Key-West/Parasailing-Smathers-Beach-Key-West/d661-2642P16",
+    "title": "Parasailing in Key West at Smathers Beach",
+    "description": {
+      "text": "Take in rare birds–eye views of Key West on a parasailing adventure over Smathers Beach. With a range of departure times offered throughout the day, this tour is a popular, flexible choice for families. Your guide, who ensures that the small group has a personalized experience, takes photos and videos available for purchase after the trip.Soar over the coastal landscapes of Key West, Florida Keep your eyes peeled for wildlife while in the air Photos and videos of your flight are available to purchase A small group means less time to wait before your flight Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $59.95",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 148
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/6d/a1/65.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Take in rare birds–eye views of Key West on a parasailing adventure over Smathers Beach",
+      "With a range of departure times offered throughout the day, this tour is a popular, flexible choice for families",
+      "Your guide, who ensures that the small group has a personalized experience, takes photos and videos available for purcha",
+      "Parasailing in Key West at Smathers Beach departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Take in rare birds–eye views of Key West on a parasailing adventure over Smathers Beach.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Looe Key Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Pennekamp Coral Reef State Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Parasailing in Key West at Smathers Beach?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Extreme Sports"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 59.95
+      },
+      "currency": "USD"
+    }
+  }
+}

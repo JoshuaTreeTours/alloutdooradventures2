@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "3800P30",
+    "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Sandbar-Safari-on-One-of-a-Kind-TIki-Boat/d661-3800P30",
+    "title": "Key West Sandbar Safari on One of a Kind Tiki Boat",
+    "description": {
+      "text": "Picture yourself aboard our unique tiki boat, the Lazy Lady, cruising through the crystal-clear waters toward a secluded sandbar. The sun is shining bright, and the air is filled with the scent of salt and sunshine. As you approach the sandbar, the boat glides over shallow waters, revealing stretches of soft, white sand inviting you to explore.Once you anchor, the fun begins! Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $139.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 143
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/68/c2/bb.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Picture yourself aboard our unique tiki boat, the Lazy Lady, cruising through the crystal-clear waters toward a secluded",
+      "The sun is shining bright, and the air is filled with the scent of salt and sunshine",
+      "As you approach the sandbar, the boat glides over shallow waters, revealing stretches of soft, white sand inviting you t",
+      "Key West Sandbar Safari on One of a Kind Tiki Boat departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Picture yourself aboard our unique tiki boat, the Lazy Lady, cruising through the crystal-clear waters toward a secluded sandbar.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Sandbar",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boca Chica Sandbar",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Backcountry Waters",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Key West Sandbar Safari on One of a Kind Tiki Boat?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 139
+      },
+      "currency": "USD"
+    }
+  }
+}

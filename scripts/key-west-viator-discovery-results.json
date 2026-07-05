@@ -1,0 +1,1805 @@
+{
+  "available": [],
+  "rejected": [
+    {
+      "productCode": "2642P8",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Snorkeling/d661-2642P8",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "3800P30",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Sandbar-Safari-on-One-of-a-Kind-TIki-Boat/d661-3800P30",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "2642P34",
+      "productUrl": "https://www.viator.com/tours/Key-West/Epic-Sandbar-Safari-With-Dolphin-Playground-Experience/d661-2642P34",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "2642P6",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Sunset-Dinner-Cruise/d661-2642P6",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "2642P25",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Dolphin-Watch-Sunset-Snorkel-Cruise/d661-2642P25",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "2642P44",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Golf-Cart-Rentals-Explore-at-Your-Own-Pace/d661-2642P44",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "5046KEY_OTT",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Hop-On-Hop-Off-Trolley-Tour/d661-5046KEY_OTT",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "2642P40",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-Wests-Happy-Hour-Sandbar-and-Sunset-Cruise-Unlimited-Drinks/d661-2642P40",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "118432P9",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Party-Boat-Fishing/d661-118432P9",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "2642P21",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Jet-Ski-Tour/d661-2642P21",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "2642P12",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Sunset-Snorkel-Sail/d661-2642P12",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "7506P1",
+      "productUrl": "https://www.viator.com/tours/Key-West/Half-Day-Cruise-with-Kayaking-and-Snorkeling/d661-7506P1",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "3800P27",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Snorkel-Sail-with-Mimosas-and-Picnic-Lunch/d661-3800P27",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "328038P8",
+      "productUrl": "https://www.viator.com/tours/Key-West/Luminous-Lagoon-A-Guided-Night-Kayak-Adventure/d661-328038P8",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "2642P30",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-Wests-Ultimate-Sandbar-Adventure-With-Kayak-Tour-Includes-Beer-and-Wine/d661-2642P30",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "18235P1",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Mangrove-Kayak-Eco-Tour/d661-18235P1",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "2642P16",
+      "productUrl": "https://www.viator.com/tours/Key-West/Parasailing-Smathers-Beach-Key-West/d661-2642P16",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "6426SHARKECO",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Shark-and-Wildlife-Catamaran-Tour/d661-6426SHARKECO",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "5046KEY_CON",
+      "productUrl": "https://www.viator.com/tours/Key-West/Conch-Tour-Train/d661-5046KEY_CON",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "2642P5",
+      "productUrl": "https://www.viator.com/tours/Key-West/Watersports-Adventure-with-Lunch/d661-2642P5",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "3800CAPSUNSAIL",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Sunset-Champagne-and-Appetizers-Cruise/d661-3800CAPSUNSAIL",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "5046KEY_GG",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Ghost-and-Gravestone-Tour/d661-5046KEY_GG",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "328038P9",
+      "productUrl": "https://www.viator.com/tours/Key-West/2-Hour-Key-West-Mini-Catamaran-Backcountry-Tour/d661-328038P9",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "44502P1",
+      "productUrl": "https://www.viator.com/tours/Key-West/Small-Group-Key-West-Food-Tasting-and-Cultural-Walking-Tour/d661-44502P1",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "2642P18",
+      "productUrl": "https://www.viator.com/tours/Key-West/Sunset-Sip-and-Sail/d661-2642P18",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "5264HDRS",
+      "productUrl": "https://www.viator.com/tours/Key-West/Ultimate-Adventure/d661-5264HDRS",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "86549P2",
+      "productUrl": "https://www.viator.com/tours/Key-West/Guided-bicycle-tour-of-Old-Town-Key-West/d661-86549P2",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "110804P523",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-Wests-Old-Town-Treasures-A-Self-Guided-Audio-Tour/d661-110804P523",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "7506P4",
+      "productUrl": "https://www.viator.com/tours/Key-West/Private-Charter-Wind-and-Wine-Sunset-Sail/d661-7506P4",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "46648P4",
+      "productUrl": "https://www.viator.com/tours/Key-West/Day-Trip-from-Key-West-to-Florida-Keys-Aquarium-Encounters/d661-46648P4",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "46648P7",
+      "productUrl": "https://www.viator.com/tours/Key-West/Tour-to-Key-West-from-Marathon/d661-46648P7",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "46648P1",
+      "productUrl": "https://www.viator.com/tours/Key-West/Turtle-Hospital-and-Lower-Florida-Keys-Day-Trip-from-Key-West/d661-46648P1",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "279706P1",
+      "productUrl": "https://www.viator.com/tours/Key-West/Full-Day-Tour-from-Islamorada-to-Key-West-and-back/d661-279706P1",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "331502P3",
+      "productUrl": "https://www.viator.com/tours/Key-West/Dry-Tortugas-National-Park/d661-331502P3",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "5046WHITE",
+      "productUrl": "https://www.viator.com/tours/Key-West/Harry-S-Truman-Little-White-House-Admission/d661-5046WHITE",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "167799P1",
+      "productUrl": "https://www.viator.com/tours/Key-West/General-Admission-USCGC-INGHAM-Maritime-Museum/d661-167799P1",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "292572P1",
+      "productUrl": "https://www.viator.com/tours/Key-West/The-Ghosts-of-Key-West-Tour/d661-292572P1",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "22519P1",
+      "productUrl": "https://www.viator.com/tours/Key-West/Mel-Fisher-Maritime-Museum-Admission/d661-22519P1",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "7506P2",
+      "productUrl": "https://www.viator.com/tours/Key-West/Small-Group-Sunset-Sail-with-Wine/d661-7506P2",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "118432P3",
+      "productUrl": "https://www.viator.com/tours/Key-West/Sunset-Cruise/d661-118432P3",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "5395SUNSET",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Sunset-Sail-Aboard-Schooner-America-20/d661-5395SUNSET",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "103151P2",
+      "productUrl": "https://www.viator.com/tours/Key-West/Sunset-Cruise-Sail-Key-West/d661-103151P2",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "118432P5",
+      "productUrl": "https://www.viator.com/tours/Key-West/Afternoon-Snorkel-Adventure/d661-118432P5",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "119664P1",
+      "productUrl": "https://www.viator.com/tours/Key-West/Looe-Key-Snorkel/d661-119664P1",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "5264DC",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Dolphin-Watch-and-Snorkel-Cruise/d661-5264DC",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "5046AQUA",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Aquarium/d661-5046AQUA",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "7506P12",
+      "productUrl": "https://www.viator.com/tours/Key-West/Sandbar-Snorkel-and-Sunset-Sail-in-Key-West/d661-7506P12",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "288166P2",
+      "productUrl": "https://www.viator.com/tours/Key-West/4-Hour-Private-Sand-Bar-Cruise-on-a-Tiki-Bar-Boat/d661-288166P2",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "362955P2",
+      "productUrl": "https://www.viator.com/tours/Key-West/Vitamin-Sea-Private-Charter/d661-362955P2",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "5587416P10",
+      "productUrl": "https://www.viator.com/tours/Key-West/Island-Sunset-Cruise-2-Hour-Catamaran-Tour-in-Marathon-FL/d661-5587416P10",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "102533P8",
+      "productUrl": "https://www.viator.com/tours/Key-West/4-Hour-Shared-Deep-Sea-Fishing-Key-West-Max-6-passengers/d661-102533P8",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "362955P4",
+      "productUrl": "https://www.viator.com/tours/Key-West/Sandbar-tour-Key-West/d661-362955P4",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "102533P9",
+      "productUrl": "https://www.viator.com/tours/Key-West/6-Hour-Shared-Deep-Sea-Fishing-in-Key-West/d661-102533P9",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "418765P2",
+      "productUrl": "https://www.viator.com/tours/Key-West/Adult-Only-Sandbar-Adventure/d661-418765P2",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "2862BONE",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Haunted-Pub-Crawl/d661-2862BONE",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "44502P3",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Craft-Cocktail-Crawl/d661-44502P3",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "407510P2",
+      "productUrl": "https://www.viator.com/tours/Key-West/8hr-Florida-Keys-Offshore-Big-Game-Fishing/d661-407510P2",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "5046PRTKEYOTT",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Shore-Excursion-Key-West-Hop-On-Hop-Off-Trolley-Tour/d661-5046PRTKEYOTT",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "328038P13",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Kayak-Eco-Tour-An-Eco-Friendly-Adventure-Awaits/d661-328038P13",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "471417P1",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-Lime-Pie-Walking-Tour-Historic-Seaport/d661-471417P1",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "2642P38",
+      "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Parasail-Tour-Historic-A-and-B-Marina/d661-2642P38",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "227820P1",
+      "productUrl": "https://www.viator.com/tours/Key-West/Glow-And-Discover-Guided-Night-Kayak-Eco-Tour-in-Key-West/d661-227820P1",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "44502P2",
+      "productUrl": "https://www.viator.com/tours/Key-West/Seafood-Lovers-Food-Tasting-and-Cultural-Walking-Tour/d661-44502P2",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "18235P4",
+      "productUrl": "https://www.viator.com/tours/Key-West/Half-Day-Kayak-Rental/d661-18235P4",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "G26",
+      "productUrl": "https://www.viator.com/Key-West-tours/Private-Sightseeing-Tours/d661-g26-c116",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "G3",
+      "productUrl": "https://www.viator.com/Key-West-tours/Cruises-Sailing-and-Water-Tours/d661-g3",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "G17",
+      "productUrl": "https://www.viator.com/Key-West-tours/Snorkeling/d661-g17-c58",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "G4",
+      "productUrl": "https://www.viator.com/Key-West-tours/Historical-and-Heritage-Tours/d661-g4-c12",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "G5",
+      "productUrl": "https://www.viator.com/Key-West-tours/Day-Trips/d661-g5-c15",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "G16",
+      "productUrl": "https://www.viator.com/Key-West-tours/Walking-Tours/d661-g16-c56",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "TTD",
+      "productUrl": "https://www.viator.com/Key-West/d661-ttd",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "A2057",
+      "productUrl": "https://www.viator.com/Key-West-attractions/Dry-Tortugas-National-Park/d661-a2057",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "A12801",
+      "productUrl": "https://www.viator.com/Key-West-attractions/Harry-S-Truman-Little-White-House/d661-a12801",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "A1220",
+      "productUrl": "https://www.viator.com/Key-West-attractions/South-Beach/d661-a1220",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "A2058",
+      "productUrl": "https://www.viator.com/Key-West-attractions/Duval-Street/d661-a2058",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "A2059",
+      "productUrl": "https://www.viator.com/Key-West-attractions/Ernest-Hemingway-Home-and-Museum/d661-a2059",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "A2064",
+      "productUrl": "https://www.viator.com/Key-West-attractions/Smathers-Beach/d661-a2064",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "A2062",
+      "productUrl": "https://www.viator.com/Key-West-attractions/Mallory-Square/d661-a2062",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "A16829",
+      "productUrl": "https://www.viator.com/Key-West-attractions/Florida-Keys-National-Marine-Sanctuary/d661-a16829",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "A2065",
+      "productUrl": "https://www.viator.com/Key-West-attractions/Southernmost-Point-of-the-Continental-USA/d661-a2065",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "A12803",
+      "productUrl": "https://www.viator.com/Key-West-attractions/Fort-Zachary-Taylor/d661-a12803",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "G9",
+      "productUrl": "https://www.viator.com/Key-West-tours/Outdoor-Activities/d661-g9",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "A2061",
+      "productUrl": "https://www.viator.com/Key-West-attractions/Key-West-Lighthouse-and-Keepers-Quarters-Museum/d661-a2061",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "A2063",
+      "productUrl": "https://www.viator.com/Key-West-attractions/Mel-Fisher-Maritime-Museum/d661-a2063",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "A17475",
+      "productUrl": "https://www.viator.com/Key-West-attractions/Key-West-Shipwreck-Treasure-Museum/d661-a17475",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "G8",
+      "productUrl": "https://www.viator.com/Key-West-tours/Museum-Tickets-and-Passes/d661-g8-c31",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "G25",
+      "productUrl": "https://www.viator.com/Key-West-tours/Romantic-Tours/d661-g25-c114",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "G21",
+      "productUrl": "https://www.viator.com/Key-West-tours/Kid-Friendly/d661-g21",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "TAG21454",
+      "productUrl": "https://www.viator.com/Key-West-tours/Dolphin-Watching/d661-tag21454",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    },
+    {
+      "productCode": "G12",
+      "productUrl": "https://www.viator.com/Key-West-tours/Bike-Rentals/d661-g12-c26959",
+      "priceFrom": null,
+      "rating": null,
+      "reviewCount": 0,
+      "duration": "TBD (approx.)",
+      "heroUrl": "",
+      "overview": null,
+      "itineraryStops": [],
+      "categories": [],
+      "title": null,
+      "available": false,
+      "availabilityReason": "public Viator page returned HTTP 403",
+      "preferred": false,
+      "rejectReasons": {
+        "titleRejected": null,
+        "priceLow": false
+      }
+    }
+  ]
+}

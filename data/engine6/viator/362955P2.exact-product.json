@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "362955P2",
+    "productUrl": "https://www.viator.com/tours/Key-West/Vitamin-Sea-Private-Charter/d661-362955P2",
+    "title": "Private Boat Charter Key West, Dolphin Tour, Snorkeling & Sandbar",
+    "description": {
+      "text": "Escape the crowds and discover hidden sandbars on a private eco tour through Key West’s backcountry waters. Swim, snorkel, or simply relax on pristine beaches only accessible by boat, with a flexible itinerary customized just for you.• Watch wild dolphins in their natural habitat• Private eco-friendly tour, just for your group• Cruise Key West’s beautiful backcountry waters• Flexible departure times to fit your schedule• Learn about marine life from a local guide Equipment, beverages, and local commentary are handled so you can focus on the water and island scenery. Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $810.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 31
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/0c/29/aa.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private Boat Charter Key West, Dolphin Tour, Snorkeling & Sandbar from Key West",
+      "Florida Keys reef, sandbar, or sunset routing",
+      "Professional captain or guide with local expertise",
+      "Small-group or private format as listed",
+      "Key West water or Old Town experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Escape the crowds and discover hidden sandbars on a private eco tour through Key West’s backcountry waters.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Sandbar",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boca Chica Sandbar",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Backcountry Waters",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Boat Charter Key West, Dolphin Tour, Snorkeling & Sandbar?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Snorkeling"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 810
+      },
+      "currency": "USD"
+    }
+  }
+}

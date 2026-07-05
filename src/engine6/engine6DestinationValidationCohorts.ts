@@ -130,6 +130,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Key West",
+      matches: tour =>
+        /\/florida\/key-west\//i.test(tour.canonicalPath) ||
+        (/\bkey west\b/i.test(tour.city) && /\bflorida\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Napa editorial narrative",
       matches: tour =>
         /\/napa\//i.test(tour.canonicalPath) || /\bnapa\b/i.test(tour.city),

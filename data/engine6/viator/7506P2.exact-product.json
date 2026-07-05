@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "7506P2",
+    "productUrl": "https://www.viator.com/tours/Key-West/Small-Group-Sunset-Sail-with-Wine/d661-7506P2",
+    "title": "Key West Small-Group Sunset Sail with Wine and Hors d'oeuvres",
+    "description": {
+      "text": "Soak up sunset views from the water's edge, and admire a perspective many visitors miss, on this Key West sailing tour. Sample up to eight different wines and/or five different beers as you sail, and indulge in a selection of gourmet hors d'oeuvres to accompany them. As you go, learn more from your crew, and enjoy a festive and celebratory way to toast to your trip.Enjoy an experience many Key West visitors miss on this sunset cruise All snacks and beverages are included in the cost for your ease This tour is a great choice for romantic trips or special occasions Crew members are on hand to as Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $135.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1457
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/73/c1/d9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Soak up sunset views from the water's edge, and admire a perspective many visitors miss, on this Key West sailing tour",
+      "Sample up to eight different wines and/or five different beers as you sail, and indulge in a selection of gourmet hors d",
+      "As you go, learn more from your crew, and enjoy a festive and celebratory way to toast to your trip.Enjoy an experience ",
+      "Key West Small-Group Sunset Sail with Wine and Hors d'oeuvres departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Soak up sunset views from the water's edge, and admire a perspective many visitors miss, on this Key West sailing tour.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Looe Key Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Pennekamp Coral Reef State Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Key West Small-Group Sunset Sail with Wine and Hors d'oeuvres?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 135
+      },
+      "currency": "USD"
+    }
+  }
+}

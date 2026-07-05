@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "7506P1",
+    "productUrl": "https://www.viator.com/tours/Key-West/Half-Day-Cruise-with-Kayaking-and-Snorkeling/d661-7506P1",
+    "title": "Half-Day Trip from Key West with Kayaking, Snorkeling & Sunset",
+    "description": {
+      "text": "Get ready for fun in the sun—and leave all the planning to someone else—on this half-day sailing, kayaking, and snorkeling adventure off the coast of Key West. Kayak through a maze of mangrove-canopied canals and streams, home to a tropical array of birds, rays, sharks, sport fish and more. Then jump into the water for a snorkeling session above a coral reef teeming with marine life. Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "4 hours 30 minutes (approx.)",
+    "priceFrom": "From $125.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1788
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/d9/55/6d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Get ready for fun in the sun—and leave all the planning to someone else—on this half-day sailing, kayaking, and snorkeli",
+      "Kayak through a maze of mangrove-canopied canals and streams, home to a tropical array of birds, rays, sharks, sport fis",
+      "Then jump into the water for a snorkeling session above a coral reef teeming with marine life",
+      "Half-Day Trip from Key West with Kayaking, Snorkeling & Sunset departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Get ready for fun in the sun—and leave all the planning to someone else—on this half-day sailing, kayaking, and snorkeling adventure off the coast of Key West.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Looe Key Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Pennekamp Coral Reef State Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half-Day Trip from Key West with Kayaking, Snorkeling & Sunset?",
+        "answer": "The planned duration is 4 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 125
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "5264HDRS",
+    "productUrl": "https://www.viator.com/tours/Key-West/Ultimate-Adventure/d661-5264HDRS",
+    "title": "Key West Ultimate Watersports Adventure with Snorkeling Upgrade",
+    "description": {
+      "text": "Enjoy an amazing day out on the water in Florida’s Key West with this ultimate adventure tour aboard a catamaran. Spend the day partaking in water sports such as parasailing, jet skiing, snorkeling, and riding on a Banana Boat. Sunbathe on the boat’s spacious deck, or just take in the sights of the Key West area. Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $129.96",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 447
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/37/fc/81/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy an amazing day out on the water in Florida’s Key West with this ultimate adventure tour aboard a catamaran",
+      "Spend the day partaking in water sports such as parasailing, jet skiing, snorkeling, and riding on a Banana Boat",
+      "Sunbathe on the boat’s spacious deck, or just take in the sights of the Key West area",
+      "Key West Ultimate Watersports Adventure with Snorkeling Upgrade departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Enjoy an amazing day out on the water in Florida’s Key West with this ultimate adventure tour aboard a catamaran.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Looe Key Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Pennekamp Coral Reef State Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Key West Ultimate Watersports Adventure with Snorkeling Upgrade?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Jet Ski Rentals"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 129.96
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "2642P6",
+    "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Sunset-Dinner-Cruise/d661-2642P6",
+    "title": "Key West Sunset Cruise: Dinner, Live Music & Drinks Included",
+    "description": {
+      "text": "Watch Key West's sunset — a main island attraction — on an evening dinner cruise. Feast on a tropical-themed buffet dinner and sip provided cocktails, beer, wine, and soft drinks as you take in views of the sea, the waterfront, and the sky's warm glow. Live music provides a festive atmosphere, and a cash bar is also available for premium drinks.Key West sunset dinner cruise Enjoy a tropical-themed buffet with several dishes Sip on provided margaritas, rum runners, wine, or beer Watch the sunset from the water — the best vantage point Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $92.95",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1864
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/a5/70/ae/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Watch Key West's sunset — a main island attraction — on an evening dinner cruise",
+      "Feast on a tropical-themed buffet dinner and sip provided cocktails, beer, wine, and soft drinks as you take in views of",
+      "Live music provides a festive atmosphere, and a cash bar is also available for premium drinks.Key West sunset dinner cru",
+      "Key West Sunset Cruise: Dinner, Live Music & Drinks Included departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Watch Key West's sunset — a main island attraction — on an evening dinner cruise.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Looe Key Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Pennekamp Coral Reef State Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Key West Sunset Cruise: Dinner, Live Music & Drinks Included?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 92.95
+      },
+      "currency": "USD"
+    }
+  }
+}

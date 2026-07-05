@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "2642P34",
+    "productUrl": "https://www.viator.com/tours/Key-West/Epic-Sandbar-Safari-With-Dolphin-Playground-Experience/d661-2642P34",
+    "title": "All-Inclusive Sandbar Safari with Dolphin Playground Encounter",
+    "description": {
+      "text": "Spend a stunning afternoon soaking up the sights of the Gulf of Mexico, chilling out at a sandbar, and watching dolphins at the Florida Marine Sanctuary. With the help of a fun and informative crew, you’ll explore the Floridian sea while your guides tell you all about the area’s history and wildlife. Enjoy lunch as well as unlimited beer, wine, and mimosas on your trip—just remember to drink responsibly.Half-day boat tour with dolphin spotting and sandbar chilling Guides to share facts about the area Fun for families and friends alike Unlimited draft beer, wine, and mimosas Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $149.95",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 602
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/c9/ae/0d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Spend a stunning afternoon soaking up the sights of the Gulf of Mexico, chilling out at a sandbar, and watching dolphins",
+      "With the help of a fun and informative crew, you’ll explore the Floridian sea while your guides tell you all about the a",
+      "Enjoy lunch as well as unlimited beer, wine, and mimosas on your trip—just remember to drink responsibly.Half-day boat t",
+      "All-Inclusive Sandbar Safari with Dolphin Playground Encounter departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Spend a stunning afternoon soaking up the sights of the Gulf of Mexico, chilling out at a sandbar, and watching dolphins at the Florida Marine Sanctuary.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Sandbar",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boca Chica Sandbar",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Backcountry Waters",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the All-Inclusive Sandbar Safari with Dolphin Playground Encounter?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149.95
+      },
+      "currency": "USD"
+    }
+  }
+}

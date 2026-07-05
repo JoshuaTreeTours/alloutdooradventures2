@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "5264DC",
+    "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Dolphin-Watch-and-Snorkel-Cruise/d661-5264DC",
+    "title": "Key West Dolphin Watch and Snorkel Tour - Eco Adventure",
+    "description": {
+      "text": "Get ready for fun in the sun—and check off two top experiences in just one trip—on this dolphin-watching and snorkeling tour off the coast of Key West. Departing Key West, look out for dolphins swimming alongside the boat, then jump in for a shallow-water snorkel at the Key West National Wildlife Refuge with many different species of marine life. Relax, feel the warm sea breezes, and select from a variety of refreshing beverages on board the boat.Admire views of the scenery that many Key West visitors don't get Go dolphin-watching and snorkeling on this two-in-one boat tour Complimentary beer, Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $73.21",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1205
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/38/14/56/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Get ready for fun in the sun—and check off two top experiences in just one trip—on this dolphin-watching and snorkeling ",
+      "Departing Key West, look out for dolphins swimming alongside the boat, then jump in for a shallow-water snorkel at the K",
+      "Relax, feel the warm sea breezes, and select from a variety of refreshing beverages on board the boat.Admire views of th",
+      "Key West Dolphin Watch and Snorkel Tour - Eco Adventure departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Get ready for fun in the sun—and check off two top experiences in just one trip—on this dolphin-watching and snorkeling tour off the coast of Key West.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Looe Key Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Pennekamp Coral Reef State Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Key West Dolphin Watch and Snorkel Tour - Eco Adventure?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Snorkeling"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 73.21
+      },
+      "currency": "USD"
+    }
+  }
+}

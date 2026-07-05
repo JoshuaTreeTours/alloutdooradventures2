@@ -21,6 +21,30 @@ import specimen7079rrebikePayload from "../../data/engine6/viator/7079RREBIKE.ex
 import specimen191767p5Payload from "../../data/engine6/viator/191767P5.exact-product.json";
 import specimen32779Payload from "../../data/engine6/viator/32779P2.exact-product.json";
 import specimen60136Payload from "../../data/engine6/viator/60136P1.exact-product.json";
+import specimen331502p3Payload from "../../data/engine6/viator/331502P3.exact-product.json";
+import specimen362955p2Payload from "../../data/engine6/viator/362955P2.exact-product.json";
+import specimen119664p1Payload from "../../data/engine6/viator/119664P1.exact-product.json";
+import specimen288166p2Payload from "../../data/engine6/viator/288166P2.exact-product.json";
+import specimen328038p9Payload from "../../data/engine6/viator/328038P9.exact-product.json";
+import specimen102533p9Payload from "../../data/engine6/viator/102533P9.exact-product.json";
+import specimen2642p5Payload from "../../data/engine6/viator/2642P5.exact-product.json";
+import specimen418765p2Payload from "../../data/engine6/viator/418765P2.exact-product.json";
+import specimen2642p21Payload from "../../data/engine6/viator/2642P21.exact-product.json";
+import specimen2642p34Payload from "../../data/engine6/viator/2642P34.exact-product.json";
+import specimen2642p30Payload from "../../data/engine6/viator/2642P30.exact-product.json";
+import specimen7506p2Payload from "../../data/engine6/viator/7506P2.exact-product.json";
+import specimen7506p1Payload from "../../data/engine6/viator/7506P1.exact-product.json";
+import specimen5395sunsetPayload from "../../data/engine6/viator/5395SUNSET.exact-product.json";
+import specimen5264hdrsPayload from "../../data/engine6/viator/5264HDRS.exact-product.json";
+import specimen3800p30Payload from "../../data/engine6/viator/3800P30.exact-product.json";
+import specimen6426sharkecoPayload from "../../data/engine6/viator/6426SHARKECO.exact-product.json";
+import specimen2642p6Payload from "../../data/engine6/viator/2642P6.exact-product.json";
+import specimen44502p1Payload from "../../data/engine6/viator/44502P1.exact-product.json";
+import specimen7812p77Payload from "../../data/engine6/viator/7812P77.exact-product.json";
+import specimen328038p8Payload from "../../data/engine6/viator/328038P8.exact-product.json";
+import specimen18235p1Payload from "../../data/engine6/viator/18235P1.exact-product.json";
+import specimen5264dcPayload from "../../data/engine6/viator/5264DC.exact-product.json";
+import specimen2642p16Payload from "../../data/engine6/viator/2642P16.exact-product.json";
 import specimen5555934p1Payload from "../../data/engine6/viator/5555934P1.exact-product.json";
 import specimen7016p4Payload from "../../data/engine6/viator/7016P4.exact-product.json";
 import specimen7016offroadPayload from "../../data/engine6/viator/7016OFFROAD.exact-product.json";
@@ -810,6 +834,150 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Las-Vegas/Antelope-Canyon-Horseshoe-Bend-Day-Tour-from-Las-Vegas/d684-60136P1",
     rawPayload: specimen60136Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "331502P3",
+    publicUrl: "https://www.viator.com/tours/Key-West/Dry-Tortugas-National-Park/d661-331502P3",
+    rawPayload: specimen331502p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "362955P2",
+    publicUrl: "https://www.viator.com/tours/Key-West/Vitamin-Sea-Private-Charter/d661-362955P2",
+    rawPayload: specimen362955p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "119664P1",
+    publicUrl: "https://www.viator.com/tours/Key-West/Looe-Key-Snorkel/d661-119664P1",
+    rawPayload: specimen119664p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "288166P2",
+    publicUrl: "https://www.viator.com/tours/Key-West/4-Hour-Private-Sand-Bar-Cruise-on-a-Tiki-Bar-Boat/d661-288166P2",
+    rawPayload: specimen288166p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "328038P9",
+    publicUrl: "https://www.viator.com/tours/Key-West/2-Hour-Key-West-Mini-Catamaran-Backcountry-Tour/d661-328038P9",
+    rawPayload: specimen328038p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "102533P9",
+    publicUrl: "https://www.viator.com/tours/Key-West/6-Hour-Shared-Deep-Sea-Fishing-in-Key-West/d661-102533P9",
+    rawPayload: specimen102533p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2642P5",
+    publicUrl: "https://www.viator.com/tours/Key-West/Watersports-Adventure-with-Lunch/d661-2642P5",
+    rawPayload: specimen2642p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "418765P2",
+    publicUrl: "https://www.viator.com/tours/Key-West/Adult-Only-Sandbar-Adventure/d661-418765P2",
+    rawPayload: specimen418765p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2642P21",
+    publicUrl: "https://www.viator.com/tours/Key-West/Key-West-Jet-Ski-Tour/d661-2642P21",
+    rawPayload: specimen2642p21Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2642P34",
+    publicUrl: "https://www.viator.com/tours/Key-West/Epic-Sandbar-Safari-With-Dolphin-Playground-Experience/d661-2642P34",
+    rawPayload: specimen2642p34Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2642P30",
+    publicUrl: "https://www.viator.com/tours/Key-West/Key-Wests-Ultimate-Sandbar-Adventure-With-Kayak-Tour-Includes-Beer-and-Wine/d661-2642P30",
+    rawPayload: specimen2642p30Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7506P2",
+    publicUrl: "https://www.viator.com/tours/Key-West/Small-Group-Sunset-Sail-with-Wine/d661-7506P2",
+    rawPayload: specimen7506p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7506P1",
+    publicUrl: "https://www.viator.com/tours/Key-West/Half-Day-Cruise-with-Kayaking-and-Snorkeling/d661-7506P1",
+    rawPayload: specimen7506p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5395SUNSET",
+    publicUrl: "https://www.viator.com/tours/Key-West/Key-West-Sunset-Sail-Aboard-Schooner-America-20/d661-5395SUNSET",
+    rawPayload: specimen5395sunsetPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5264HDRS",
+    publicUrl: "https://www.viator.com/tours/Key-West/Ultimate-Adventure/d661-5264HDRS",
+    rawPayload: specimen5264hdrsPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3800P30",
+    publicUrl: "https://www.viator.com/tours/Key-West/Key-West-Sandbar-Safari-on-One-of-a-Kind-TIki-Boat/d661-3800P30",
+    rawPayload: specimen3800p30Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6426SHARKECO",
+    publicUrl: "https://www.viator.com/tours/Key-West/Key-West-Shark-and-Wildlife-Catamaran-Tour/d661-6426SHARKECO",
+    rawPayload: specimen6426sharkecoPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2642P6",
+    publicUrl: "https://www.viator.com/tours/Key-West/Key-West-Sunset-Dinner-Cruise/d661-2642P6",
+    rawPayload: specimen2642p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "44502P1",
+    publicUrl: "https://www.viator.com/tours/Key-West/Small-Group-Key-West-Food-Tasting-and-Cultural-Walking-Tour/d661-44502P1",
+    rawPayload: specimen44502p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7812P77",
+    publicUrl: "https://www.viator.com/tours/Key-West/Key-West-Secret-Food-Tour/d661-7812P77",
+    rawPayload: specimen7812p77Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "328038P8",
+    publicUrl: "https://www.viator.com/tours/Key-West/Luminous-Lagoon-A-Guided-Night-Kayak-Adventure/d661-328038P8",
+    rawPayload: specimen328038p8Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "18235P1",
+    publicUrl: "https://www.viator.com/tours/Key-West/Key-West-Mangrove-Kayak-Eco-Tour/d661-18235P1",
+    rawPayload: specimen18235p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5264DC",
+    publicUrl: "https://www.viator.com/tours/Key-West/Key-West-Dolphin-Watch-and-Snorkel-Cruise/d661-5264DC",
+    rawPayload: specimen5264dcPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2642P16",
+    publicUrl: "https://www.viator.com/tours/Key-West/Parasailing-Smathers-Beach-Key-West/d661-2642P16",
+    rawPayload: specimen2642p16Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
     productCode: "5555934P1",
