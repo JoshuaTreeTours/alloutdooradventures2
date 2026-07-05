@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "102533P9",
+    "productUrl": "https://www.viator.com/tours/Key-West/6-Hour-Shared-Deep-Sea-Fishing-in-Key-West/d661-102533P9",
+    "title": "6 Hour Shared Deep Sea Fishing in Key West",
+    "description": {
+      "text": "Cruise from Key West into deeper waters where you can fish for tuna, mahi-mahi, and kingfish—species you won’t see in coastal areas. The small group size allows for plenty of one-on-one coaching from the captain and mate, with tips on how to make the most of provided gear. That means the experience will be tailored to you, whether you’re a lifelong angler or fishing for the first time.Visit offshore areas frequented by deep-water fish Use provided gear and bait suited to local conditions and season Fishing permit included—no need to apply for one Improve your fishing skills with tips from loca Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $250.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 22
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6e/de/3b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Cruise from Key West into deeper waters where you can fish for tuna, mahi-mahi, and kingfish—species you won’t see in co",
+      "The small group size allows for plenty of one-on-one coaching from the captain and mate, with tips on how to make the mo",
+      "That means the experience will be tailored to you, whether you’re a lifelong angler or fishing for the first time.Visit ",
+      "6 Hour Shared Deep Sea Fishing in Key West departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Cruise from Key West into deeper waters where you can fish for tuna, mahi-mahi, and kingfish—species you won’t see in coastal areas.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Looe Key Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Pennekamp Coral Reef State Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 6 Hour Shared Deep Sea Fishing in Key West?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Fishing Charters"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 250
+      },
+      "currency": "USD"
+    }
+  }
+}

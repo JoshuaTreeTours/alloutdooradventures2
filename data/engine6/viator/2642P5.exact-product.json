@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "2642P5",
+    "productUrl": "https://www.viator.com/tours/Key-West/Watersports-Adventure-with-Lunch/d661-2642P5",
+    "title": "Key West: All-Inclusive Watersports Adventure with Lunch & Beer",
+    "description": {
+      "text": "Cool off in Key West on a half-day water sports tour that features 10 different water activities for you to try, from jet skiing to parasailing to banana boat rides to snorkeling, and much more. Enjoy lunch and draft beer on the way back to the marina for those over the age of 21.A great Key West experience for locals and tourists alike Take a boat out to sea for a day of water activities Ideal for adventure-seekers and water-lovers Lunch, drinks, and all equipment is included in the cost of booking Equipment, beverages, and local commentary are handled so you can focus on the water and island scenery. Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $179.95",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 368
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/ed/e3/1b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Key West: All-Inclusive Watersports Adventure with Lunch & Beer from Key West",
+      "Florida Keys reef, sandbar, or sunset routing",
+      "Professional captain or guide with local expertise",
+      "Small-group or private format as listed",
+      "Key West water or Old Town experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Cool off in Key West on a half-day water sports tour that features 10 different water activities for you to try, from jet skiing to parasailing to banana boat rides to snorkeling, and much more.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Harbor",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Florida Keys National Marine Sanctuary",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gulf of Mexico",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Key West: All-Inclusive Watersports Adventure with Lunch & Beer?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Dining Experiences"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 179.95
+      },
+      "currency": "USD"
+    }
+  }
+}

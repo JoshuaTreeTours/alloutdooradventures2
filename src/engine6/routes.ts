@@ -257,6 +257,85 @@ export const ENGINE6_MOAB_265766P59_PRODUCT_CODE = "265766P59";
 export const ENGINE6_MOAB_265766P59_ROUTE =
   "/destinations/utah/moab/tours/arches-canyonlands-two-day-private-tour-hike-265766P59";
 
+export const ENGINE6_KEY_WEST_331502P3_PRODUCT_CODE = "331502P3";
+export const ENGINE6_KEY_WEST_331502P3_ROUTE =
+  "/destinations/florida/key-west/tours/dry-tortugas-national-park-day-trip-by-luxury-private-b-331502P3";
+export const ENGINE6_KEY_WEST_362955P2_PRODUCT_CODE = "362955P2";
+export const ENGINE6_KEY_WEST_362955P2_ROUTE =
+  "/destinations/florida/key-west/tours/private-boat-charter-key-west-dolphin-tour-snorkeling-s-362955P2";
+export const ENGINE6_KEY_WEST_119664P1_PRODUCT_CODE = "119664P1";
+export const ENGINE6_KEY_WEST_119664P1_ROUTE =
+  "/destinations/florida/key-west/tours/private-looe-key-snorkel-from-big-pine-key-119664P1";
+export const ENGINE6_KEY_WEST_288166P2_PRODUCT_CODE = "288166P2";
+export const ENGINE6_KEY_WEST_288166P2_ROUTE =
+  "/destinations/florida/key-west/tours/key-west-tiki-bar-boat-to-popular-sand-bar-with-turquoi-288166P2";
+export const ENGINE6_KEY_WEST_328038P9_PRODUCT_CODE = "328038P9";
+export const ENGINE6_KEY_WEST_328038P9_ROUTE =
+  "/destinations/florida/key-west/tours/key-west-mini-catamaran-eco-tour-328038P9";
+export const ENGINE6_KEY_WEST_102533P9_PRODUCT_CODE = "102533P9";
+export const ENGINE6_KEY_WEST_102533P9_ROUTE =
+  "/destinations/florida/key-west/tours/6-hour-shared-deep-sea-fishing-in-key-west-102533P9";
+export const ENGINE6_KEY_WEST_2642P5_PRODUCT_CODE = "2642P5";
+export const ENGINE6_KEY_WEST_2642P5_ROUTE =
+  "/destinations/florida/key-west/tours/key-west-all-inclusive-watersports-adventure-with-lunch-2642P5";
+export const ENGINE6_KEY_WEST_418765P2_PRODUCT_CODE = "418765P2";
+export const ENGINE6_KEY_WEST_418765P2_ROUTE =
+  "/destinations/florida/key-west/tours/adult-only-sandbar-escape-with-drinks-in-key-west-418765P2";
+export const ENGINE6_KEY_WEST_2642P21_PRODUCT_CODE = "2642P21";
+export const ENGINE6_KEY_WEST_2642P21_ROUTE =
+  "/destinations/florida/key-west/tours/key-west-island-adventure-jet-ski-tour-bring-a-partner-2642P21";
+export const ENGINE6_KEY_WEST_2642P34_PRODUCT_CODE = "2642P34";
+export const ENGINE6_KEY_WEST_2642P34_ROUTE =
+  "/destinations/florida/key-west/tours/all-inclusive-sandbar-safari-with-dolphin-playground-en-2642P34";
+export const ENGINE6_KEY_WEST_2642P30_PRODUCT_CODE = "2642P30";
+export const ENGINE6_KEY_WEST_2642P30_ROUTE =
+  "/destinations/florida/key-west/tours/key-west-sandbar-charter-with-kayak-tour-includes-lunch-2642P30";
+export const ENGINE6_KEY_WEST_7506P2_PRODUCT_CODE = "7506P2";
+export const ENGINE6_KEY_WEST_7506P2_ROUTE =
+  "/destinations/florida/key-west/tours/key-west-small-group-sunset-sail-with-wine-and-hors-doe-7506P2";
+export const ENGINE6_KEY_WEST_7506P1_PRODUCT_CODE = "7506P1";
+export const ENGINE6_KEY_WEST_7506P1_ROUTE =
+  "/destinations/florida/key-west/tours/half-day-trip-from-key-west-with-kayaking-snorkeling-su-7506P1";
+export const ENGINE6_KEY_WEST_5395SUNSET_PRODUCT_CODE = "5395SUNSET";
+export const ENGINE6_KEY_WEST_5395SUNSET_ROUTE =
+  "/destinations/florida/key-west/tours/key-west-schooner-sunset-sail-with-bar-hors-doeuvres-5395SUNSET";
+export const ENGINE6_KEY_WEST_5264HDRS_PRODUCT_CODE = "5264HDRS";
+export const ENGINE6_KEY_WEST_5264HDRS_ROUTE =
+  "/destinations/florida/key-west/tours/key-west-ultimate-watersports-adventure-with-snorkeling-5264HDRS";
+export const ENGINE6_KEY_WEST_3800P30_PRODUCT_CODE = "3800P30";
+export const ENGINE6_KEY_WEST_3800P30_ROUTE =
+  "/destinations/florida/key-west/tours/key-west-sandbar-safari-on-one-of-a-kind-tiki-boat-3800P30";
+export const ENGINE6_KEY_WEST_6426SHARKECO_PRODUCT_CODE = "6426SHARKECO";
+export const ENGINE6_KEY_WEST_6426SHARKECO_ROUTE =
+  "/destinations/florida/key-west/tours/shark-and-wildlife-viewing-adventure-in-key-west-6426SHARKECO";
+export const ENGINE6_KEY_WEST_2642P6_PRODUCT_CODE = "2642P6";
+export const ENGINE6_KEY_WEST_2642P6_ROUTE =
+  "/destinations/florida/key-west/tours/key-west-sunset-cruise-dinner-live-music-drinks-include-2642P6";
+export const ENGINE6_KEY_WEST_44502P1_PRODUCT_CODE = "44502P1";
+export const ENGINE6_KEY_WEST_44502P1_ROUTE =
+  "/destinations/florida/key-west/tours/southernmost-food-cultural-walking-tour-by-key-west-foo-44502P1";
+export const ENGINE6_KEY_WEST_7812P77_PRODUCT_CODE = "7812P77";
+export const ENGINE6_KEY_WEST_7812P77_ROUTE =
+  "/destinations/florida/key-west/tours/key-west-historic-old-town-food-tour-with-5-authentic-t-7812P77";
+export const ENGINE6_KEY_WEST_328038P8_PRODUCT_CODE = "328038P8";
+export const ENGINE6_KEY_WEST_328038P8_ROUTE =
+  "/destinations/florida/key-west/tours/guided-night-kayak-adventure-tour-in-luminous-lagoon-328038P8";
+export const ENGINE6_KEY_WEST_18235P1_PRODUCT_CODE = "18235P1";
+export const ENGINE6_KEY_WEST_18235P1_ROUTE =
+  "/destinations/florida/key-west/tours/key-west-mangrove-kayak-eco-tour-18235P1";
+export const ENGINE6_KEY_WEST_5264DC_PRODUCT_CODE = "5264DC";
+export const ENGINE6_KEY_WEST_5264DC_ROUTE =
+  "/destinations/florida/key-west/tours/key-west-dolphin-watch-and-snorkel-tour-eco-adventure-5264DC";
+export const ENGINE6_KEY_WEST_2642P16_PRODUCT_CODE = "2642P16";
+export const ENGINE6_KEY_WEST_2642P16_ROUTE =
+  "/destinations/florida/key-west/tours/parasailing-in-key-west-at-smathers-beach-2642P16";
+
+export const ENGINE6_KEY_WEST_TOUR_PATH_PREFIX =
+  "/destinations/florida/key-west/tours/";
+
+export const isEngine6KeyWestTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_KEY_WEST_TOUR_PATH_PREFIX);
+
 export const ENGINE6_MOAB_TOUR_PATH_PREFIX =
   "/destinations/utah/moab/tours/";
 
@@ -1825,7 +1904,103 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_LOS_ANGELES_HOLLYWOOD_HILLS_HIKING_ROUTE,
     ENGINE6_LOS_ANGELES_HOLLYWOOD_HILLS_HIKING_PRODUCT_CODE,
   ],
+    [
+    ENGINE6_KEY_WEST_331502P3_ROUTE,
+    ENGINE6_KEY_WEST_331502P3_PRODUCT_CODE,
+  ],
   [
+    ENGINE6_KEY_WEST_362955P2_ROUTE,
+    ENGINE6_KEY_WEST_362955P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_119664P1_ROUTE,
+    ENGINE6_KEY_WEST_119664P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_288166P2_ROUTE,
+    ENGINE6_KEY_WEST_288166P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_328038P9_ROUTE,
+    ENGINE6_KEY_WEST_328038P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_102533P9_ROUTE,
+    ENGINE6_KEY_WEST_102533P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_2642P5_ROUTE,
+    ENGINE6_KEY_WEST_2642P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_418765P2_ROUTE,
+    ENGINE6_KEY_WEST_418765P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_2642P21_ROUTE,
+    ENGINE6_KEY_WEST_2642P21_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_2642P34_ROUTE,
+    ENGINE6_KEY_WEST_2642P34_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_2642P30_ROUTE,
+    ENGINE6_KEY_WEST_2642P30_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_7506P2_ROUTE,
+    ENGINE6_KEY_WEST_7506P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_7506P1_ROUTE,
+    ENGINE6_KEY_WEST_7506P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_5395SUNSET_ROUTE,
+    ENGINE6_KEY_WEST_5395SUNSET_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_5264HDRS_ROUTE,
+    ENGINE6_KEY_WEST_5264HDRS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_3800P30_ROUTE,
+    ENGINE6_KEY_WEST_3800P30_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_6426SHARKECO_ROUTE,
+    ENGINE6_KEY_WEST_6426SHARKECO_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_2642P6_ROUTE,
+    ENGINE6_KEY_WEST_2642P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_44502P1_ROUTE,
+    ENGINE6_KEY_WEST_44502P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_7812P77_ROUTE,
+    ENGINE6_KEY_WEST_7812P77_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_328038P8_ROUTE,
+    ENGINE6_KEY_WEST_328038P8_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_18235P1_ROUTE,
+    ENGINE6_KEY_WEST_18235P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_5264DC_ROUTE,
+    ENGINE6_KEY_WEST_5264DC_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KEY_WEST_2642P16_ROUTE,
+    ENGINE6_KEY_WEST_2642P16_PRODUCT_CODE,
+  ],
+[
     ENGINE6_MOAB_5555934P1_ROUTE,
     ENGINE6_MOAB_5555934P1_PRODUCT_CODE,
   ],

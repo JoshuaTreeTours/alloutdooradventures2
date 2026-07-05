@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "44502P1",
+    "productUrl": "https://www.viator.com/tours/Key-West/Small-Group-Key-West-Food-Tasting-and-Cultural-Walking-Tour/d661-44502P1",
+    "title": "Southernmost Food & Cultural Walking Tour by Key West Food Tours",
+    "description": {
+      "text": "Eat your way around Key West on a food tour of “mom and pop” eateries in the Old Town historic district. Taste seafood, Cuban cuisine, and delicious key lime pie. The walking tour route takes you off typical touristy streets so you can see Key West like a local, listening to insights about the city's food, architecture, and history along the way. Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $90.19",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1904
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/66/86/f9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Eat your way around Key West on a food tour of “mom and pop” eateries in the Old Town historic district",
+      "Taste seafood, Cuban cuisine, and delicious key lime pie",
+      "The walking tour route takes you off typical touristy streets so you can see Key West like a local, listening to insight",
+      "Southernmost Food & Cultural Walking Tour by Key West Food Tours departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Eat your way around Key West on a food tour of “mom and pop” eateries in the Old Town historic district.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Town Key West",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Duval Street",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mallory Square",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Southernmost Food & Cultural Walking Tour by Key West Food Tours?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Half-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 90.19
+      },
+      "currency": "USD"
+    }
+  }
+}

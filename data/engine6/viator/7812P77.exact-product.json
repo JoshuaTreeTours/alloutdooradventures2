@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "7812P77",
+    "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Secret-Food-Tour/d661-7812P77",
+    "title": "Key West Historic Old Town Food Tour with 5 Authentic Tastings",
+    "description": {
+      "text": "From local shrimp to the perfect Key lime pie, Key West dining is a food-lover’s dream, but finding authentic flavors can be a challenge in a town packed with touristy restaurants. Discover the very best bites on a gourmet tour that samples a little bit of everything, exploring Key West’s charming neighborhoods, colorful characters, and history along the way.Included tastings feature a wide range of flavors Discover eateries off the tourist trail Visit lesser-known areas for a glimpse of local life Convenient departure point in central Key West Equipment, beverages, and local commentary are handled so you can focus on the water and island scenery. Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $108.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 309
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/fc/d3/64.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Key West Historic Old Town Food Tour with 5 Authentic Tastings from Key West",
+      "Florida Keys reef, sandbar, or sunset routing",
+      "Professional captain or guide with local expertise",
+      "Small-group or private format as listed",
+      "Key West water or Old Town experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "From local shrimp to the perfect Key lime pie, Key West dining is a food-lover’s dream, but finding authentic flavors can be a challenge in a town packed with touristy restaurants.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Old Town Key West",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Duval Street",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mallory Square",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Key West Historic Old Town Food Tour with 5 Authentic Tastings?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 108
+      },
+      "currency": "USD"
+    }
+  }
+}

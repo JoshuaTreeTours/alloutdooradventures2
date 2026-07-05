@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "5395SUNSET",
+    "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Sunset-Sail-Aboard-Schooner-America-20/d661-5395SUNSET",
+    "title": "Key West Schooner Sunset Sail with Bar & Hors d'oeuvres",
+    "description": {
+      "text": "Set sail on a replica of the 1851 Schooner America on a cruise from Key West. See the top sights of the city, including Fort Zachary, Mallory Square, and Sand Key Lighthouse from a unique perspective. Your cruise is accompanied by complimentary hors d’oeuvres along with alcoholic and non-alcoholic beverages. Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $122.59",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 893
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/fb/bc/d8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Set sail on a replica of the 1851 Schooner America on a cruise from Key West",
+      "See the top sights of the city, including Fort Zachary, Mallory Square, and Sand Key Lighthouse from a unique perspectiv",
+      "Your cruise is accompanied by complimentary hors d’oeuvres along with alcoholic and non-alcoholic beverages",
+      "Key West Schooner Sunset Sail with Bar & Hors d'oeuvres departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Set sail on a replica of the 1851 Schooner America on a cruise from Key West.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Looe Key Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Pennekamp Coral Reef State Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Key West Schooner Sunset Sail with Bar & Hors d'oeuvres?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 122.59
+      },
+      "currency": "USD"
+    }
+  }
+}

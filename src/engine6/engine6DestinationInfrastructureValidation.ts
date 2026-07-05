@@ -83,6 +83,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "utah",
     citySlug: "moab",
   },
+  "key-west": {
+    destinationLabel: "Key West",
+    destinationCitySlug: "key-west",
+    stateSlug: "florida",
+    citySlug: "key-west",
+  },
 };
 
 export type Engine6DestinationInfrastructureReport = {

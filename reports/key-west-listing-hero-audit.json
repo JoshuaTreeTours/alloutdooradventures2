@@ -1,0 +1,110 @@
+{
+  "canonicalCityHero": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/fb/bc/d8.jpg",
+  "cards": [
+    {
+      "rank": 1,
+      "productCode": "331502P3",
+      "title": "Dry Tortugas National Park Day Trip by Luxury Private Boat",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3f/6b/96.jpg",
+      "source": "product-specific"
+    },
+    {
+      "rank": 2,
+      "productCode": "362955P2",
+      "title": "Private Boat Charter Key West, Dolphin Tour, Snorkeling & Sandbar",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/0c/29/aa.jpg",
+      "source": "product-specific"
+    },
+    {
+      "rank": 3,
+      "productCode": "119664P1",
+      "title": "Private Looe Key Snorkel from Big Pine Key",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/6a/c6/36.jpg",
+      "source": "product-specific"
+    },
+    {
+      "rank": 4,
+      "productCode": "288166P2",
+      "title": "Key West Tiki Bar Boat to Popular Sand Bar with Turquoise Waters",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/f1/fc/d9.jpg",
+      "source": "product-specific"
+    },
+    {
+      "rank": 5,
+      "productCode": "328038P9",
+      "title": "Key West Mini Catamaran Eco Tour",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/7b/d7/6d/caption.jpg",
+      "source": "product-specific"
+    },
+    {
+      "rank": 6,
+      "productCode": "102533P9",
+      "title": "6 Hour Shared Deep Sea Fishing in Key West",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6e/de/3b.jpg",
+      "source": "product-specific"
+    },
+    {
+      "rank": 7,
+      "productCode": "2642P5",
+      "title": "Key West: All-Inclusive Watersports Adventure with Lunch & Beer",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/ed/e3/1b.jpg",
+      "source": "product-specific"
+    },
+    {
+      "rank": 8,
+      "productCode": "418765P2",
+      "title": "Adult Only Sandbar Escape with Drinks in Key West",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/73/37/78.jpg",
+      "source": "product-specific"
+    },
+    {
+      "rank": 9,
+      "productCode": "2642P21",
+      "title": "Key West Island Adventure Jet Ski Tour: Bring a Partner for Free",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/e8/4f/71.jpg",
+      "source": "product-specific"
+    },
+    {
+      "rank": 10,
+      "productCode": "2642P34",
+      "title": "All-Inclusive Sandbar Safari with Dolphin Playground Encounter",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/c9/ae/0d.jpg",
+      "source": "product-specific"
+    },
+    {
+      "rank": 11,
+      "productCode": "2642P30",
+      "title": "Key West Sandbar Charter With Kayak Tour: Includes Lunch & Drinks",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/dc/70/d4.jpg",
+      "source": "product-specific"
+    },
+    {
+      "rank": 12,
+      "productCode": "7506P2",
+      "title": "Key West Small-Group Sunset Sail with Wine and Hors d'oeuvres",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/73/c1/d9.jpg",
+      "source": "product-specific"
+    },
+    {
+      "rank": 13,
+      "productCode": "7506P1",
+      "title": "Half-Day Trip from Key West with Kayaking, Snorkeling & Sunset",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/d9/55/6d.jpg",
+      "source": "product-specific"
+    },
+    {
+      "rank": 14,
+      "productCode": "5395SUNSET",
+      "title": "Key West Schooner Sunset Sail with Bar & Hors d'oeuvres",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/fb/bc/d8.jpg",
+      "source": "canonical-city-fallback"
+    },
+    {
+      "rank": 15,
+      "productCode": "5264HDRS",
+      "title": "Key West Ultimate Watersports Adventure with Snorkeling Upgrade",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/37/fc/81/caption.jpg",
+      "source": "product-specific"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "6426SHARKECO",
+    "productUrl": "https://www.viator.com/tours/Key-West/Key-West-Shark-and-Wildlife-Catamaran-Tour/d661-6426SHARKECO",
+    "title": "Shark and Wildlife Viewing Adventure in Key West",
+    "description": {
+      "text": "The whole family can learn more about sharks and other marine wildlife on this boat tour from Key West. Travel on board an eco-friendly, 34-foot catamaran just a few miles off the coast to try your luck spotting dolphins, stingrays, turtles, and birds while you learn more about Key West’s waters than you ever would sailing along. Then watch as the pilot drops bait to draw a variety of sharks right to the edge of the boat.Cold drinks, snacks, and polarized sunglasses are included View lemon, nurse and other shark species from the safety of your catamaran An ideal experience for nature-lovers, b Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $99.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 3305
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/a3/fb/5d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The whole family can learn more about sharks and other marine wildlife on this boat tour from Key West",
+      "Travel on board an eco-friendly, 34-foot catamaran just a few miles off the coast to try your luck spotting dolphins, st",
+      "Then watch as the pilot drops bait to draw a variety of sharks right to the edge of the boat.Cold drinks, snacks, and po",
+      "Shark and Wildlife Viewing Adventure in Key West departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "The whole family can learn more about sharks and other marine wildlife on this boat tour from Key West.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Harbor",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Florida Keys National Marine Sanctuary",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gulf of Mexico",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Shark and Wildlife Viewing Adventure in Key West?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      },
+      "currency": "USD"
+    }
+  }
+}

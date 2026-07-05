@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "328038P9",
+    "productUrl": "https://www.viator.com/tours/Key-West/2-Hour-Key-West-Mini-Catamaran-Backcountry-Tour/d661-328038P9",
+    "title": "Key West Mini Catamaran Eco Tour",
+    "description": {
+      "text": "Get ready for an unforgettable journey that takes you through the natural beauty of Key West’s surrounding waters. Our Craigcat boat tour will take you on an exhilarating, up-close adventure across crystal-clear waters, winding through lush mangroves, stopping at pristine sandbars, and exploring hidden islands that are off the beaten path. This is your chance to experience Key West like never before — in a fun, fast, and eco-friendly CraigCat boat!Perfect for All Levels: Whether you're an experienced boater or a first-time adventurer, the Craigcat is easy to handle and designed for fun and com Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $284.95",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 180
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/7b/d7/6d/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Get ready for an unforgettable journey that takes you through the natural beauty of Key West’s surrounding waters",
+      "Our Craigcat boat tour will take you on an exhilarating, up-close adventure across crystal-clear waters, winding through",
+      "This is your chance to experience Key West like never before — in a fun, fast, and eco-friendly CraigCat boat!Perfect fo",
+      "Key West Mini Catamaran Eco Tour departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Get ready for an unforgettable journey that takes you through the natural beauty of Key West’s surrounding waters.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Harbor",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Florida Keys National Marine Sanctuary",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Gulf of Mexico",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Key West Mini Catamaran Eco Tour?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Extreme Sports"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 284.95
+      },
+      "currency": "USD"
+    }
+  }
+}

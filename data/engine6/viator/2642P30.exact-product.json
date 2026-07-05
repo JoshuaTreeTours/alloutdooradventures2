@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "2642P30",
+    "productUrl": "https://www.viator.com/tours/Key-West/Key-Wests-Ultimate-Sandbar-Adventure-With-Kayak-Tour-Includes-Beer-and-Wine/d661-2642P30",
+    "title": "Key West Sandbar Charter With Kayak Tour: Includes Lunch & Drinks",
+    "description": {
+      "text": "Get ready to spend a half-day soaking up the sun and enjoying Key West’s diverse ecology during this fun sandbar and mangrove tour. Discover the backcountry waters and secluded sandbars around the busy island, all while sipping on cold drinks. This guided kayak ecotour takes you into the mangrove isles to spot dazzling marine life before heading to a sandy beach to knock back a few alcoholic or nonalcoholic beverages.Ditch the crowds and enjoy time spent on a secluded sandbar All snorkeling and kayaling equipment is included Wade into the mangroves where more than 500 species live Savor unlimi Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $149.95",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 386
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/dc/70/d4.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Get ready to spend a half-day soaking up the sun and enjoying Key West’s diverse ecology during this fun sandbar and man",
+      "Discover the backcountry waters and secluded sandbars around the busy island, all while sipping on cold drinks",
+      "This guided kayak ecotour takes you into the mangrove isles to spot dazzling marine life before heading to a sandy beach",
+      "Key West Sandbar Charter With Kayak Tour: Includes Lunch & Drinks departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Get ready to spend a half-day soaking up the sun and enjoying Key West’s diverse ecology during this fun sandbar and mangrove tour.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Sandbar",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boca Chica Sandbar",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Backcountry Waters",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Key West Sandbar Charter With Kayak Tour: Includes Lunch & Drinks?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 149.95
+      },
+      "currency": "USD"
+    }
+  }
+}

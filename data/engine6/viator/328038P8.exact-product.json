@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "328038P8",
+    "productUrl": "https://www.viator.com/tours/Key-West/Luminous-Lagoon-A-Guided-Night-Kayak-Adventure/d661-328038P8",
+    "title": "Guided Night Kayak Adventure Tour in Luminous Lagoon",
+    "description": {
+      "text": "See the Key West lagoons in a whole new way. Go on a nocturnal adventure with clear kayaks and LED lights that illuminate the surroundings so you can see underwater. A local guide takes you and a small group to the best spots for a unique and memorable marine life experience lasting about 90 minutes.Experience a memorable nighttime adventure Embark on clear kayaks with LED illumination for a unique adventure Spot wildlife and nature that’s otherwise hard to see Enjoy a more personal experience with a local tour guide Ideal for travelers basing in Key West who want a guided Florida Keys experience without coordinating boats, gear, or launch times on their own."
+    },
+    "location": {
+      "city": "Key West",
+      "state": "Florida"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $89.95",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 179
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/66/38/13.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See the Key West lagoons in a whole new way",
+      "Go on a nocturnal adventure with clear kayaks and LED lights that illuminate the surroundings so you can see underwater",
+      "A local guide takes you and a small group to the best spots for a unique and memorable marine life experience lasting ab",
+      "Guided Night Kayak Adventure Tour in Luminous Lagoon departing from Key West",
+      "Professional Key West captain or guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Key West marina or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See the Key West lagoons in a whole new way.",
+    "itineraryItems": [
+      {
+        "title": "Key West",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Key West Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Looe Key Reef",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Pennekamp Coral Reef State Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional captain or guide",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Guided Night Kayak Adventure Tour in Luminous Lagoon?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Key West?",
+        "answer": "Meet your captain or guide at the confirmed Key West marina, hotel pickup point, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 89.95
+      },
+      "currency": "USD"
+    }
+  }
+}
