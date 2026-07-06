@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "469693P1",
+    "productUrl": "https://www.viator.com/tours/Honolulu/Auana-by-Cirque-du-Soleil-at-the-Waikiki-Beachcomber-Hotel/d59070-469693P1",
+    "title": "'Auana by Cirque du Soleil at the Waikiki Beachcomber Hotel",
+    "description": {
+      "text": "A new dawn of live entertainment rises in ʻAuana by Cirque du Soleil – a Hawai‘i-inspired production featuring a cast of powerful acrobats, hilarious comedians, talented musicians and singers, and profound hula dancers. The unparalleled ensemble brings together international and local talents to shine a fresh light on the spirit of Hawai‘i. Blending Cirque du Soleil’s world-renowned artistry with the rich traditions of the islands, this one-of-a-kind spectacle transports audiences on a breathtaking journey through Hawaiian culture. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+    },
+    "location": {
+      "city": "Honolulu",
+      "state": "Hawaii"
+    },
+    "duration": "1 hour 20 minutes (approx.)",
+    "priceFrom": "From $106.59",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 658
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/12/79/40.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "A new dawn of live entertainment rises in ʻAuana by Cirque du Soleil – a Hawai‘i-inspired production featuring a cast of",
+      "The unparalleled ensemble brings together international and local talents to shine a fresh light on the spirit of Hawai‘",
+      "Blending Cirque du Soleil’s world-renowned artistry with the rich traditions of the islands, this one-of-a-kind spectacl",
+      "'Auana by Cirque du Soleil at the Waikiki Beachcomber Hotel departing from Honolulu",
+      "Professional Oahu guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "A new dawn of live entertainment rises in ʻAuana by Cirque du Soleil – a Hawai‘i-inspired production featuring a cast of powerful acrobats, hilarious comedians, talented musicians and singers, and profound hula dancers.",
+    "itineraryItems": [
+      {
+        "title": "Honolulu",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waikiki Beachcomber Hotel",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "OUTRIGGER Waikiki Beach Resort",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kalakaua Avenue",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 'Auana by Cirque du Soleil at the Waikiki Beachcomber Hotel?",
+        "answer": "The planned duration is 1 hour 20 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Honolulu?",
+        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Theater Shows"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 106.59
+      },
+      "currency": "USD"
+    }
+  }
+}

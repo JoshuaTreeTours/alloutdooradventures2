@@ -3778,6 +3778,98 @@ const minnesotaState: StateDestination = {
   isFallback: true,
 };
 
+const hawaiiState: StateDestination = {
+  slug: "hawaii",
+  name: "Hawaii",
+  description:
+    "Volcanic peaks, reef-lined coasts, and Polynesian culture across the Pacific.",
+  featuredDescription:
+    "Island adventures from Pearl Harbor history to North Shore surf and circle-island day trips.",
+  heroImage:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/6c/5d/e9.jpg",
+  region: "Pacific",
+  intro:
+    "Hawaii pairs volcanic landscapes with reef snorkeling, luau culture, and legendary Oahu day-trip routes.",
+  longDescription:
+    "Hawaii's islands deliver layered outdoor travel—coastal cliffs, rainforest waterfalls, and historic memorials within a single day's drive on Oahu.",
+  topRegions: [
+    {
+      title: "Honolulu & Waikiki",
+      description:
+        "Urban basecamp for Pearl Harbor, Diamond Head, and reef excursions.",
+    },
+    {
+      title: "North Shore & Windward Coast",
+      description:
+        "Surf breaks, waterfall valleys, and circle-island scenic drives.",
+    },
+  ],
+  cities: [
+    {
+      name: "Honolulu",
+      slug: "honolulu",
+      stateSlug: "hawaii",
+      region: "Oahu",
+      lat: 21.3069,
+      lng: -157.8583,
+      shortDescription:
+        "Waikiki basecamp for Pearl Harbor, circle-island, and reef tours.",
+      intro:
+        "Honolulu anchors Oahu itineraries with quick access to Pearl Harbor, Diamond Head, and North Shore day trips.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/6c/5d/e9.jpg",
+      ],
+      activityTags: ["snorkeling", "hiking", "cultural-tours"],
+      whereItIs: [
+        "Honolulu sits on Oahu's south shore with Waikiki Beach and Diamond Head as signature landmarks.",
+      ],
+      experiences: {
+        mountains: "Hike Diamond Head crater or Manoa Valley waterfall trails.",
+        lakesWater: "Snorkel Hanauma Bay reefs or sail off Waikiki.",
+        desertForest:
+          "Explore rainforest valleys and botanical gardens on guided hikes.",
+        cycling: "Coastal paths and guided bike routes around Honolulu.",
+        scenicDrives:
+          "Circle-island tours reach North Shore, Dole Plantation, and Waimea Valley.",
+        seasonalNotes:
+          "Winter brings North Shore surf season; summer offers calmer snorkeling conditions.",
+      },
+      thingsToDo: [
+        "Visit Pearl Harbor and the USS Arizona Memorial.",
+        "Take a full-day Oahu circle-island tour.",
+        "Snorkel with sea turtles on the North Shore.",
+      ],
+      toursCopy: [
+        "Honolulu tours work best as full-day guided experiences with Waikiki hotel pickup.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Pearl Harbor and USS Missouri.",
+          "Afternoon: Honolulu city highlights.",
+          "Evening: Waikiki luau or sunset sail.",
+        ],
+        dayTwo: [
+          "Morning: Circle-island tour with North Shore stops.",
+          "Afternoon: Snorkel or beach time on the windward coast.",
+          "Evening: Return via scenic Pali Lookout.",
+        ],
+      },
+      gettingThere: [
+        "Daniel K. Inouye International Airport serves Honolulu with direct flights from the mainland.",
+        "Waikiki hotels are the main pickup hub for guided Oahu tours.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Honolulu tours?",
+          answer:
+            "Pearl Harbor memorial tours, Oahu circle-island day trips, and reef snorkeling excursions are the most popular departures.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 const wyomingState: StateDestination = {
   slug: "wyoming",
   name: "Wyoming",
@@ -4139,6 +4231,7 @@ export const states: StateDestination[] = [
   ...deepSouthStates,
   mississippiState,
   minnesotaState,
+  hawaiiState,
   wyomingState,
   massachusettsState,
   illinoisState,

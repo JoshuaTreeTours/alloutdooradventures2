@@ -1,0 +1,125 @@
+{
+  "product": {
+    "productCode": "23607",
+    "productUrl": "https://www.viator.com/tours/Honolulu/Oahu-Grand-Circle-Island-Day-Tour-with-Dole-Plantation/d59070-23607",
+    "title": "Oahu Deluxe Grand Circle Island Tour",
+    "description": {
+      "text": "Circle the Island of Oahu by coach, enjoying ocean views, rugged mountains, and fascinating history during this full-day tour. Check out Diamond Head, Nu’uanu Pali lookout, the Halona Blowhole, Waimea Valley and Oahu’s beautiful North Shore. Soak up Hawaiian history and culture with a stop at the Dole Plantation and the serene, Japanese-style Byodo-In Temple. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+    },
+    "location": {
+      "city": "Honolulu",
+      "state": "Hawaii"
+    },
+    "duration": "10 hours 45 minutes (approx.)",
+    "priceFrom": "From $145.55",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 2185
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/34/28/23.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Circle the Island of Oahu by coach, enjoying ocean views, rugged mountains, and fascinating history during this full-day",
+      "Check out Diamond Head, Nu’uanu Pali lookout, the Halona Blowhole, Waimea Valley and Oahu’s beautiful North Shore",
+      "Soak up Hawaiian history and culture with a stop at the Dole Plantation and the serene, Japanese-style Byodo-In Temple",
+      "Oahu Deluxe Grand Circle Island Tour departing from Honolulu",
+      "Professional Oahu guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Circle the Island of Oahu by coach, enjoying ocean views, rugged mountains, and fascinating history during this full-day tour.",
+    "itineraryItems": [
+      {
+        "title": "Honolulu",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Diamond Head",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "North Shore",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Haleiwa",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dole Plantation",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waimea Valley",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Polynesian Cultural Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kualoa Ranch",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Oahu Deluxe Grand Circle Island Tour?",
+        "answer": "The planned duration is 10 hours 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Honolulu?",
+        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 145.55
+      },
+      "currency": "USD"
+    }
+  }
+}

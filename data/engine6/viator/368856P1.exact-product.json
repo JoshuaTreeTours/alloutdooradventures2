@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "368856P1",
+    "productUrl": "https://www.viator.com/tours/Honolulu/Private-Surf-Lessons/d59070-368856P1",
+    "title": "Private Surf Lessons in Honolulu",
+    "description": {
+      "text": "Hawaii is the perfect to learn to surf, and the perfect *way* is with a pro who's chased waves for 18 years on the world circuit. Unlike crowded tourist lessons, these private sessions match your skill level, from first-timers mastering the basics to experienced riders fine-tuning technique. With all gear provided, you’re guaranteed to improve your skills with 1-1 instruction—and hopefully have a great time in the waves.Surfboard and waterproof gear provided Get 1-1 access to a local surfing pro who can address your needs Suitable for most all ages and fitness levels, including younger kids Li Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+    },
+    "location": {
+      "city": "Honolulu",
+      "state": "Hawaii"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $199.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 81
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/9b/65/59.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hawaii is the perfect to learn to surf, and the perfect *way* is with a pro who's chased waves for 18 years on the world",
+      "Unlike crowded tourist lessons, these private sessions match your skill level, from first-timers mastering the basics to",
+      "With all gear provided, you’re guaranteed to improve your skills with 1-1 instruction—and hopefully have a great time in",
+      "Private Surf Lessons in Honolulu departing from Honolulu",
+      "Professional Oahu guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Hawaii is the perfect to learn to surf, and the perfect *way* is with a pro who's chased waves for 18 years on the world circuit.",
+    "itineraryItems": [
+      {
+        "title": "Honolulu",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waikiki",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "North Shore",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Haleiwa",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Surf Lessons in Honolulu?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Honolulu?",
+        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Surfing Lessons"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 199
+      },
+      "currency": "USD"
+    }
+  }
+}

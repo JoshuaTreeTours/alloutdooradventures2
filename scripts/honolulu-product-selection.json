@@ -1,0 +1,50 @@
+{
+  "destinationLabel": "Honolulu",
+  "destinationCitySlug": "honolulu",
+  "viatorDestinationSlug": "Honolulu",
+  "targetPremiumShare": 0.5,
+  "selectedProductCodes": [
+    "28456P8",
+    "12446P4",
+    "70444P6",
+    "28456P1",
+    "117916P9",
+    "179218P23",
+    "368856P1",
+    "6981P1",
+    "189546P8",
+    "12446SNORKEL",
+    "452226P3",
+    "23607",
+    "390101P5",
+    "64146P1",
+    "33188P2",
+    "166842P1",
+    "375182P1",
+    "469693P1",
+    "3961P32",
+    "5563928P2"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "36559P1",
+      "title": "Voted Honolulu's #1 Beginner Scuba Diving + Free Videos Tour",
+      "priceFrom": "From $89.00"
+    },
+    {
+      "productCode": "50265P20",
+      "title": "Waikiki Friday Fireworks Cruise with Shuttle Option",
+      "priceFrom": "From $65.00"
+    },
+    {
+      "productCode": "6845P16",
+      "title": "Salute to Pearl Harbor Including USS Arizona",
+      "priceFrom": "From $59.00"
+    },
+    {
+      "productCode": "452226P1",
+      "title": "Pearl Harbor USS Arizona Memorial Tour",
+      "priceFrom": "From $51.45"
+    }
+  ]
+}

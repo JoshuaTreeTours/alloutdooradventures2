@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "189546P8",
+    "productUrl": "https://www.viator.com/tours/Honolulu/Private-and-Small-group-tours-North-Shore-waterfalls-and-Turtles/d59070-189546P8",
+    "title": "North Shore day,Waterfalls and Turtles Tour",
+    "description": {
+      "text": "Aloha we started off the day with a history lesson as we drive across the island to the North Shore where our day starts at the old Sugar Mill for a guided tour of our magnificent coffees and chocolates of Hawaii followed by one of the most unique souvenir shops on the island afterwards, we will take a short 7 mile drive to the sacred Valley of Waimea, where we will track 3/4 of a mile in through the sacred valley and rainforest, visiting at a Hawaiian village And ending up at a 45 foot waterfall with 110 foot pool at the base to go swimming (lifeguard‘s present) afterwards, we will trek back Your guide covers Pearl Harbor memorials, circle-island routing, North Shore surf towns, helicopter flyovers, luau evenings, or reef snorkeling depending on the route. Transportation, equipment, and local commentary are handled so you can focus on Oahu's coastlines, valleys, and cultural landmarks. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+    },
+    "location": {
+      "city": "Honolulu",
+      "state": "Hawaii"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $150.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 8
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/ad/2b/61.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "North Shore day,Waterfalls and Turtles Tour from Honolulu",
+      "Pearl Harbor, North Shore, or Waikiki routing",
+      "Professional guide with Oahu expertise",
+      "Small-group or private format as listed",
+      "Honolulu cultural, coastal, or aerial experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Aloha we started off the day with a history lesson as we drive across the island to the North Shore where our day starts at the old Sugar Mill for a guided tour of our magnificent coffees and chocolates of Hawaii followed by one of the most unique souvenir shops on the island afterwards, we will take a short 7 mile drive to the sacred Valley of Waimea, where we will track 3/4 of a mile in through the sacred valley and rainforest, visiting at a Hawaiian village And ending up at a 45 foot waterfall with 110 foot pool at the base to go swimming (lifeguard‘s present) afterwards, we will trek back Your guide covers Pearl Harbor memorials, circle-island routing, North Shore surf towns, helicopter flyovers, luau evenings, or reef snorkeling depending on the route.",
+    "itineraryItems": [
+      {
+        "title": "Honolulu",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hanauma Bay",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waikiki",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "North Shore",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kualoa Ranch",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the North Shore day,Waterfalls and Turtles Tour?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Honolulu?",
+        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 150
+      },
+      "currency": "USD"
+    }
+  }
+}

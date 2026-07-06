@@ -1,0 +1,125 @@
+{
+  "product": {
+    "productCode": "5563928P2",
+    "productUrl": "https://www.viator.com/tours/Honolulu/Circle-Island-Tour-small-group-setting-snorkeling-included/d59070-5563928P2",
+    "title": "Scenic Full Day Circle Island Tour-Snorkeling/Breakfast/Byodo-in",
+    "description": {
+      "text": "There are many Circle Island tours on offer in Oahu but this one delivers a small-group, crowd- and traffic-free experience. With an early-morning pickup from Waikiki hotels, you're on the road before the rest, which means no lines at the island's top attractions, including the Diamond Head Lookout and Halona Blowhole.Benefit from your local Hawaiian guide's insights into local culture Start your day off right with an included breakfast burrito Enjoy hassle-free hotel pickup and drop-off in Waikiki Includes admission to Byodo-In Temple and an unrushed experience Transportation, equipment, and local commentary are handled so you can focus on Oahu's coastlines, valleys, and cultural landmarks. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+    },
+    "location": {
+      "city": "Honolulu",
+      "state": "Hawaii"
+    },
+    "duration": "7 to 8 hours (approx.)",
+    "priceFrom": "From $100.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 88
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/70/a7/80.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Scenic Full Day Circle Island Tour-Snorkeling/Breakfast/Byodo-in from Honolulu",
+      "Pearl Harbor, North Shore, or Waikiki routing",
+      "Professional guide with Oahu expertise",
+      "Small-group or private format as listed",
+      "Honolulu cultural, coastal, or aerial experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "There are many Circle Island tours on offer in Oahu but this one delivers a small-group, crowd- and traffic-free experience.",
+    "itineraryItems": [
+      {
+        "title": "Honolulu",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Diamond Head",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "North Shore",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Haleiwa",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dole Plantation",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waimea Valley",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Polynesian Cultural Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kualoa Ranch",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Scenic Full Day Circle Island Tour-Snorkeling/Breakfast/Byodo-in?",
+        "answer": "The planned duration is 7 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Honolulu?",
+        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 100
+      },
+      "currency": "USD"
+    }
+  }
+}

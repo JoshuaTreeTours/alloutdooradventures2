@@ -1,0 +1,105 @@
+{
+  "product": {
+    "productCode": "3961P32",
+    "productUrl": "https://www.viator.com/tours/Honolulu/Oahu-Waikiki-Luau-Buffet-and-Rock-A-Hula-Show/d59070-3961P32",
+    "title": "Waikiki Luau Buffet with Optional Rock-A-Hula Show Ticket",
+    "description": {
+      "text": "Come experience a celebration of Hawaiian cuisine, live music, and festive hula at the Waikiki Luau. Relax with a Hawaiian welcome and tropical mai tai before dining on a lavish Luau-themed buffet dinner with island-roasted whole suckling pig and roast beef. Then, find your premier seats for the onsite \"Rock-a-Hula\" show, which features everything from hula and fire-knife dancing to rock n' roll.Experience an authentic Hawaiian luau, right in Waikiki Includes admission into Rock-a-Hula with select packages Witness Hawaiian's ancient dance, fire-knife work, and more Prebooking your spot guarant Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+    },
+    "location": {
+      "city": "Honolulu",
+      "state": "Hawaii"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $101.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 1655
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4d/70/ae.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Come experience a celebration of Hawaiian cuisine, live music, and festive hula at the Waikiki Luau",
+      "Relax with a Hawaiian welcome and tropical mai tai before dining on a lavish Luau-themed buffet dinner with island-roast",
+      "Then, find your premier seats for the onsite \"Rock-a-Hula\" show, which features everything from hula and fire-knife danc",
+      "Waikiki Luau Buffet with Optional Rock-A-Hula Show Ticket departing from Honolulu",
+      "Professional Oahu guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Come experience a celebration of Hawaiian cuisine, live music, and festive hula at the Waikiki Luau.",
+    "itineraryItems": [
+      {
+        "title": "Honolulu",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waikiki",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rock-A-Hula Show",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kalakaua Avenue",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Waikiki Luau Buffet with Optional Rock-A-Hula Show Ticket?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Honolulu?",
+        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Theater Shows"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 101
+      },
+      "currency": "USD"
+    }
+  }
+}

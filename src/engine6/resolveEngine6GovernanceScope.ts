@@ -47,6 +47,8 @@ export const ENGINE6_DESTINATION_SLUG_COHORT_LABELS: Record<string, readonly str
     "fort-lauderdale": ["Fort Lauderdale"],
     naples: ["Naples"],
     florida: ["Key West", "Orlando", "Fort Lauderdale", "Naples"],
+    honolulu: ["Honolulu"],
+    hawaii: ["Honolulu"],
     "washington-dc": ["Washington, D.C."],
     washington: ["Washington, D.C."],
     miami: ["Miami editorial narrative"],

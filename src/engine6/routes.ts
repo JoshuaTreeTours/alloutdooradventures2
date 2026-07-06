@@ -403,6 +403,73 @@ export const ENGINE6_ORLANDO_TOUR_PATH_PREFIX =
 export const isEngine6OrlandoTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_ORLANDO_TOUR_PATH_PREFIX);
 
+export const ENGINE6_HONOLULU_28456P8_PRODUCT_CODE = "28456P8";
+export const ENGINE6_HONOLULU_28456P8_ROUTE =
+  "/destinations/hawaii/honolulu/tours/private-45-minute-helicopter-tour-with-romantic-landing-28456P8";
+export const ENGINE6_HONOLULU_12446P4_PRODUCT_CODE = "12446P4";
+export const ENGINE6_HONOLULU_12446P4_ROUTE =
+  "/destinations/hawaii/honolulu/tours/private-tour-oahu-circle-island-fully-personalized-expe-12446P4";
+export const ENGINE6_HONOLULU_70444P6_PRODUCT_CODE = "70444P6";
+export const ENGINE6_HONOLULU_70444P6_ROUTE =
+  "/destinations/hawaii/honolulu/tours/hawaii-volcanoes-national-park-experience-departing-fro-70444P6";
+export const ENGINE6_HONOLULU_28456P1_PRODUCT_CODE = "28456P1";
+export const ENGINE6_HONOLULU_28456P1_ROUTE =
+  "/destinations/hawaii/honolulu/tours/oahu-60-min-royal-crown-helicopter-tour-doors-off-or-on-28456P1";
+export const ENGINE6_HONOLULU_117916P9_PRODUCT_CODE = "117916P9";
+export const ENGINE6_HONOLULU_117916P9_ROUTE =
+  "/destinations/hawaii/honolulu/tours/pearl-harbor-complete-experience-passport-117916P9";
+export const ENGINE6_HONOLULU_179218P23_PRODUCT_CODE = "179218P23";
+export const ENGINE6_HONOLULU_179218P23_ROUTE =
+  "/destinations/hawaii/honolulu/tours/pearl-harbor-dole-and-polynesian-cultural-center-from-w-179218P23";
+export const ENGINE6_HONOLULU_368856P1_PRODUCT_CODE = "368856P1";
+export const ENGINE6_HONOLULU_368856P1_ROUTE =
+  "/destinations/hawaii/honolulu/tours/private-surf-lessons-in-honolulu-368856P1";
+export const ENGINE6_HONOLULU_6981P1_PRODUCT_CODE = "6981P1";
+export const ENGINE6_HONOLULU_6981P1_ROUTE =
+  "/destinations/hawaii/honolulu/tours/oahu-chiefs-luau-admission-including-transfers-6981P1";
+export const ENGINE6_HONOLULU_189546P8_PRODUCT_CODE = "189546P8";
+export const ENGINE6_HONOLULU_189546P8_ROUTE =
+  "/destinations/hawaii/honolulu/tours/north-shore-day-waterfalls-and-turtles-tour-189546P8";
+export const ENGINE6_HONOLULU_12446SNORKEL_PRODUCT_CODE = "12446SNORKEL";
+export const ENGINE6_HONOLULU_12446SNORKEL_ROUTE =
+  "/destinations/hawaii/honolulu/tours/oahu-small-group-circle-island-tour-with-turtle-snorkel-12446SNORKEL";
+export const ENGINE6_HONOLULU_452226P3_PRODUCT_CODE = "452226P3";
+export const ENGINE6_HONOLULU_452226P3_ROUTE =
+  "/destinations/hawaii/honolulu/tours/pearl-harbor-uss-arizona-memorial-and-battleship-missou-452226P3";
+export const ENGINE6_HONOLULU_23607_PRODUCT_CODE = "23607";
+export const ENGINE6_HONOLULU_23607_ROUTE =
+  "/destinations/hawaii/honolulu/tours/oahu-deluxe-grand-circle-island-tour-23607";
+export const ENGINE6_HONOLULU_390101P5_PRODUCT_CODE = "390101P5";
+export const ENGINE6_HONOLULU_390101P5_ROUTE =
+  "/destinations/hawaii/honolulu/tours/deluxe-arizona-memorial-and-uss-missouri-battleship-tou-390101P5";
+export const ENGINE6_HONOLULU_64146P1_PRODUCT_CODE = "64146P1";
+export const ENGINE6_HONOLULU_64146P1_ROUTE =
+  "/destinations/hawaii/honolulu/tours/oahu-ka-moana-l-au-at-aloha-tower-oceanfront-luau-show-64146P1";
+export const ENGINE6_HONOLULU_33188P2_PRODUCT_CODE = "33188P2";
+export const ENGINE6_HONOLULU_33188P2_ROUTE =
+  "/destinations/hawaii/honolulu/tours/oahu-germaines-luau-33188P2";
+export const ENGINE6_HONOLULU_166842P1_PRODUCT_CODE = "166842P1";
+export const ENGINE6_HONOLULU_166842P1_ROUTE =
+  "/destinations/hawaii/honolulu/tours/premium-oahu-circle-island-tour-small-group-no-crowds-166842P1";
+export const ENGINE6_HONOLULU_375182P1_PRODUCT_CODE = "375182P1";
+export const ENGINE6_HONOLULU_375182P1_ROUTE =
+  "/destinations/hawaii/honolulu/tours/oahu-grand-tour-around-island-with-snorkeling-375182P1";
+export const ENGINE6_HONOLULU_469693P1_PRODUCT_CODE = "469693P1";
+export const ENGINE6_HONOLULU_469693P1_ROUTE =
+  "/destinations/hawaii/honolulu/tours/auana-by-cirque-du-soleil-at-the-waikiki-beachcomber-ho-469693P1";
+export const ENGINE6_HONOLULU_3961P32_PRODUCT_CODE = "3961P32";
+export const ENGINE6_HONOLULU_3961P32_ROUTE =
+  "/destinations/hawaii/honolulu/tours/waikiki-luau-buffet-with-optional-rock-a-hula-show-tick-3961P32";
+export const ENGINE6_HONOLULU_5563928P2_PRODUCT_CODE = "5563928P2";
+export const ENGINE6_HONOLULU_5563928P2_ROUTE =
+  "/destinations/hawaii/honolulu/tours/scenic-full-day-circle-island-tour-snorkeling-breakfast-5563928P2";
+
+export const ENGINE6_HONOLULU_TOUR_PATH_PREFIX =
+  "/destinations/hawaii/honolulu/tours/";
+
+export const isEngine6HonoluluTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_HONOLULU_TOUR_PATH_PREFIX);
+
 export const ENGINE6_KEY_WEST_TOUR_PATH_PREFIX =
   "/destinations/florida/key-west/tours/";
 
@@ -2253,6 +2320,86 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_ORLANDO_357987P1_ROUTE,
     ENGINE6_ORLANDO_357987P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_28456P8_ROUTE,
+    ENGINE6_HONOLULU_28456P8_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_12446P4_ROUTE,
+    ENGINE6_HONOLULU_12446P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_70444P6_ROUTE,
+    ENGINE6_HONOLULU_70444P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_28456P1_ROUTE,
+    ENGINE6_HONOLULU_28456P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_117916P9_ROUTE,
+    ENGINE6_HONOLULU_117916P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_179218P23_ROUTE,
+    ENGINE6_HONOLULU_179218P23_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_368856P1_ROUTE,
+    ENGINE6_HONOLULU_368856P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_6981P1_ROUTE,
+    ENGINE6_HONOLULU_6981P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_189546P8_ROUTE,
+    ENGINE6_HONOLULU_189546P8_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_12446SNORKEL_ROUTE,
+    ENGINE6_HONOLULU_12446SNORKEL_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_452226P3_ROUTE,
+    ENGINE6_HONOLULU_452226P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_23607_ROUTE,
+    ENGINE6_HONOLULU_23607_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_390101P5_ROUTE,
+    ENGINE6_HONOLULU_390101P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_64146P1_ROUTE,
+    ENGINE6_HONOLULU_64146P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_33188P2_ROUTE,
+    ENGINE6_HONOLULU_33188P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_166842P1_ROUTE,
+    ENGINE6_HONOLULU_166842P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_375182P1_ROUTE,
+    ENGINE6_HONOLULU_375182P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_469693P1_ROUTE,
+    ENGINE6_HONOLULU_469693P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_3961P32_ROUTE,
+    ENGINE6_HONOLULU_3961P32_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HONOLULU_5563928P2_ROUTE,
+    ENGINE6_HONOLULU_5563928P2_PRODUCT_CODE,
   ],
 [
     ENGINE6_KEY_WEST_331502P3_ROUTE,

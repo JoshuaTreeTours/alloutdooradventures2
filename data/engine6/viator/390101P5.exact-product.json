@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "390101P5",
+    "productUrl": "https://www.viator.com/tours/Honolulu/Deluxe-Arizona-Memorial-and-USS-Missouri-Battleship-Tour/d59070-390101P5",
+    "title": "Deluxe Arizona Memorial and USS Missouri Battleship Tour",
+    "description": {
+      "text": "Visit Pearl Harbor, the USS Arizona Memorial, and the Battleship Missouri Memorial (aka the “Mighty MO”) on this small-group tour. After a pickup from your Waikiki hotel, travel to the harbor in a comfortable, air-conditioned vehicle. This full-day tour gives you time to reflect on what you see and learn at Pearl Harbor.Ideal for World War II and American history buffs Round-trip hotel transfers mean you don't risk getting lost Includes tickets for USS Arizona Memorial and USS Missouri Battleship Enjoy a short ride through the historical Honolulu downtown Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+    },
+    "location": {
+      "city": "Honolulu",
+      "state": "Hawaii"
+    },
+    "duration": "7 hours (approx.)",
+    "priceFrom": "From $139.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 142
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/3d/65/27.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit Pearl Harbor, the USS Arizona Memorial, and the Battleship Missouri Memorial (aka the “Mighty MO”) on this small-g",
+      "After a pickup from your Waikiki hotel, travel to the harbor in a comfortable, air-conditioned vehicle",
+      "This full-day tour gives you time to reflect on what you see and learn at Pearl Harbor.Ideal for World War II and Americ",
+      "Deluxe Arizona Memorial and USS Missouri Battleship Tour departing from Honolulu",
+      "Professional Oahu guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Visit Pearl Harbor, the USS Arizona Memorial, and the Battleship Missouri Memorial (aka the “Mighty MO”) on this small-group tour.",
+    "itineraryItems": [
+      {
+        "title": "Honolulu",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pearl Harbor",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "USS Arizona Memorial",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Battleship Missouri Memorial",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pearl Harbor Aviation Museum",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Honolulu",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Deluxe Arizona Memorial and USS Missouri Battleship Tour?",
+        "answer": "The planned duration is 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Honolulu?",
+        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 139
+      },
+      "currency": "USD"
+    }
+  }
+}

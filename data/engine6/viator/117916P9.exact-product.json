@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "117916P9",
+    "productUrl": "https://www.viator.com/tours/Honolulu/Pearl-Harbor-Passport-and-Honolulu-City-Tour/d59070-117916P9",
+    "title": "Pearl Harbor Complete Experience Passport",
+    "description": {
+      "text": "Visit Pearl Harbor’s most important sites without the hassle of securing separate tickets or coordinating multiple admissions. This tour combines access to key memorials, museums, and historic vessels in one streamlined experience, helping you gain a broader understanding of the events of December 7, 1941. Included admissions and transportation make exploring this historic landmark more convenient and efficient.Pearl Harbor's top memorials and museums explored with one convenient booking Included admission tickets save time and simplify your visit USS Arizona Memorial boat ride included at no Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+    },
+    "location": {
+      "city": "Honolulu",
+      "state": "Hawaii"
+    },
+    "duration": "9 to 10 hours (approx.)",
+    "priceFrom": "From $225.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 525
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/9f/05/52.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit Pearl Harbor’s most important sites without the hassle of securing separate tickets or coordinating multiple admis",
+      "This tour combines access to key memorials, museums, and historic vessels in one streamlined experience, helping you gai",
+      "Included admissions and transportation make exploring this historic landmark more convenient and efficient.Pearl Harbor'",
+      "Pearl Harbor Complete Experience Passport departing from Honolulu",
+      "Professional Oahu guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Visit Pearl Harbor’s most important sites without the hassle of securing separate tickets or coordinating multiple admissions.",
+    "itineraryItems": [
+      {
+        "title": "Honolulu",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pearl Harbor",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "USS Arizona Memorial",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Battleship Missouri Memorial",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pearl Harbor Aviation Museum",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Honolulu",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Pearl Harbor Complete Experience Passport?",
+        "answer": "The planned duration is 9 to 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Honolulu?",
+        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 225
+      },
+      "currency": "USD"
+    }
+  }
+}

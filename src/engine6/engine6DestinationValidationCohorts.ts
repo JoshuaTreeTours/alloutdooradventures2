@@ -144,6 +144,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Honolulu",
+      matches: tour =>
+        /\/hawaii\/honolulu\//i.test(tour.canonicalPath) ||
+        (/\bhonolulu\b/i.test(tour.city) && /\bhawaii\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Orlando",
       matches: tour =>
         /\/florida\/orlando\//i.test(tour.canonicalPath) ||
