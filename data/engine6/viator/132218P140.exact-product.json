@@ -1,0 +1,130 @@
+{
+  "product": {
+    "productCode": "132218P140",
+    "productUrl": "https://www.viator.com/tours/Seattle/1-Day-Olympic-National-Park-Tour-Seattle-departure-SO1/d704-132218P140",
+    "title": "Olympic National Park Small Group Day Tour w/Scenic Ferry 2CanGo",
+    "description": {
+      "text": "Spend a full day discovering the beauty of Olympic National Park, with highlights like the dramatic Hurricane Ridge and the serene, ancient Lake Crescent. Your driver-guide leads you to some of the park’s most stunning spots while sharing insider knowledge you wouldn't get on your own. Stop by the Olympic National Park Visitor Center to immerse yourself in the park’s fascinating natural features and history. Hotel pickup is included for added convenience."
+    },
+    "location": {
+      "city": "Olympic National Park",
+      "state": "Washington"
+    },
+    "duration": "11 hours (approx.)",
+    "priceFrom": "From $178.60",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 819
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/72/52/e1/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy stunning vistas aboard the round-trip Bainbridge Ferry",
+      "See Lake Crescent and Hurricane Ridge",
+      "Seasonal excursions for hiking or snowshoeing",
+      "Included are a professional guide, park entry, and hotel pickup"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Your pickup time is earlier or later than your start time on the voucher. Please contact the tour operator after booking to confirm your pickup time."
+      },
+      "end": {
+        "description": "Return to your confirmed Olympic National Park gateway meeting point after the final stop."
+      }
+    },
+    "itinerarySummary": "Spend a full day discovering the beauty of Olympic National Park, with highlights like the dramatic Hurricane Ridge and the serene, ancient Lake Crescent.",
+    "itineraryItems": [
+      {
+        "title": "Seattle",
+        "description": "Pass Seattle along the Olympic National Park route with guide commentary on the surrounding landscape.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Bainbridge Island Ferry",
+        "description": "Stop at Bainbridge Island Ferry in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hood Canal Floating Bridge",
+        "description": "Pass Hood Canal Floating Bridge along the Olympic National Park route with guide commentary on the surrounding landscape.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Olympic National Park",
+        "description": "Pass Olympic National Park along the Olympic National Park route with guide commentary on the surrounding landscape.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Hurricane Ridge",
+        "description": "Stop at Hurricane Ridge in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Crescent",
+        "description": "Stop at Lake Crescent in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Entrance fee - Olympic National Park",
+      "Public transportation Roundtrip Exclusive Cross Bay Washington State Ferry",
+      "Lunch Sandwich--most likely",
+      "Snacks Granola Bar",
+      "Bottled water",
+      "Explore the park's best spots by hiking or snowshoeing, depending on the season.",
+      "All Tax Fees",
+      "Professional vehicles transportation (Vehicle used based on the number of guests attending that day)",
+      "Professional Driver and Guide (or Driver-Guide)",
+      "Gratuities Gratuities (Recommend Rate:15% - 20% for Driver and Guide, we would be appreciated).",
+      "Any personal and other expenses are not listed in Fee Included."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Olympic National Park Small Group Day Tour w/Scenic Ferry 2CanGo?",
+        "answer": "The planned duration is 11 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Olympic National Park?",
+        "answer": "Your pickup time is earlier or later than your start time on the voucher. Please contact the tour operator after booking to confirm your pickup time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 178.6
+      },
+      "currency": "USD"
+    }
+  }
+}

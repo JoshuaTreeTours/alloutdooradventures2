@@ -2199,6 +2199,84 @@ Washington invites exploration with a sense of wonder. It is a state where the o
         ],
       },
       {
+        name: "Olympic National Park",
+        slug: "olympic-national-park",
+        stateSlug: "washington",
+        region: "Olympic Peninsula",
+        lat: 47.8021,
+        lng: -123.6044,
+        shortDescription:
+          "Rainforest trails, alpine ridges, wild beaches, and Seattle day trips.",
+        intro:
+          "Olympic National Park is a UNESCO-listed landscape of temperate rainforest, glacier-carved lakes, and rugged Pacific coastline—one of the few places where you can walk mossy Hoh Rainforest trails in the morning and explore Rialto Beach by afternoon.",
+        heroImages: [
+          "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/78/b1/b5.jpg",
+        ],
+        activityTags: ["rainforest", "hiking", "coastal"],
+        whereItIs: [
+          "Olympic National Park covers most of the Olympic Peninsula west of Seattle, with gateways at Port Angeles, Forks, and Bainbridge ferry routes for Seattle departures.",
+          "Hurricane Ridge, Lake Crescent, the Hoh Rainforest, and Ruby Beach anchor most guided day tours and multi-day itineraries.",
+        ],
+        experiences: {
+          mountains:
+            "Hike Hurricane Ridge for alpine meadows and panoramic Olympic Mountain views.",
+          lakesWater:
+            "Explore Lake Crescent's blue waters, Marymere Falls, and Sol Duc Valley waterfalls.",
+          desertForest:
+            "Walk the Hoh Rainforest's moss-draped hall of giants and Quinault old-growth groves.",
+          cycling:
+            "Limited park cycling; most visitors explore by guided van or Seattle ferry day trips.",
+          scenicDrives:
+            "Loop Hurricane Ridge, Lake Crescent, and coastal beaches on full-day tours from Seattle or Port Angeles.",
+          seasonalNotes:
+            "Summer opens alpine trails and ferry schedules; winter brings snow at Hurricane Ridge and storm watching on the coast.",
+        },
+        thingsToDo: [
+          "Hike the Hoh Rainforest Hall of Mosses trail.",
+          "Visit Hurricane Ridge for mountain panoramas.",
+          "Explore Rialto Beach and Ruby Beach sea stacks.",
+          "Photograph Lake Crescent and Marymere Falls.",
+          "Book a Seattle day trip with Bainbridge ferry crossing.",
+        ],
+        toursCopy: [
+          "Seattle day tours combine ferry crossings with Hurricane Ridge and Lake Crescent highlights.",
+          "Port Angeles guided hikes reach Sol Duc Falls, Hoh Rainforest, and Rialto Beach in one outing.",
+          "Multi-day private tours cover both rainforest and coastal ecosystems without rushing the peninsula.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Hoh Rainforest guided walk.",
+            "Afternoon: Rialto Beach and coastal tide pools.",
+            "Evening: return via Forks or Port Angeles.",
+          ],
+          dayTwo: [
+            "Morning: Hurricane Ridge alpine hike.",
+            "Afternoon: Lake Crescent and Marymere Falls.",
+            "Evening: Bainbridge ferry return to Seattle.",
+          ],
+        },
+        gettingThere: [
+          "Seattle is the main departure hub for ferry-linked day tours; Port Angeles serves in-park hiking tours.",
+          "Olympic National Park requires an entry pass for most tour vehicles.",
+        ],
+        faq: [
+          {
+            question: "Can I visit Olympic National Park on a day trip from Seattle?",
+            answer:
+              "Yes. Many guided tours use the Bainbridge ferry and cover Hurricane Ridge, Lake Crescent, or rainforest highlights in one long day.",
+          },
+          {
+            question: "What are the must-see Olympic National Park spots?",
+            answer:
+              "Hoh Rainforest, Hurricane Ridge, Lake Crescent, Rialto Beach, and Ruby Beach appear on most highlight itineraries.",
+          },
+          {
+            question: "Do I need a park pass?",
+            answer: "Olympic National Park requires an entry pass; most tours include entrance fees.",
+          },
+        ],
+      },
+      {
         name: "Leavenworth",
         slug: "leavenworth",
         stateSlug: "washington",
