@@ -1,0 +1,224 @@
+{
+  "generated": "2026-07-06T16:17:14.921Z",
+  "total": 24,
+  "fixed": 1,
+  "leftNeutral": 23,
+  "rows": [
+    {
+      "productCode": "148509P1",
+      "productTitle": "Warner Bros. Studio Tour Hollywood",
+      "itineraryIndex": 1,
+      "currentFallbackTitle": "Itinerary Stop 1",
+      "candidatePoi": "\u2014",
+      "authoritySourceUsed": "No structured POI name; attractionId 8220 only",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "106439P1",
+      "productTitle": "2 Hour Private Tour - Hollywood and Beverly Hills Celebrity Homes",
+      "itineraryIndex": 1,
+      "currentFallbackTitle": "Itinerary Stop 1",
+      "candidatePoi": "\u2014",
+      "authoritySourceUsed": "No structured POI name; attractionId 8112 only",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "106439P1",
+      "productTitle": "2 Hour Private Tour - Hollywood and Beverly Hills Celebrity Homes",
+      "itineraryIndex": 5,
+      "currentFallbackTitle": "Itinerary Stop 5",
+      "candidatePoi": "\u2014",
+      "authoritySourceUsed": "No structured POI name; attractionId 8122 only",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "106439P1",
+      "productTitle": "2 Hour Private Tour - Hollywood and Beverly Hills Celebrity Homes",
+      "itineraryIndex": 12,
+      "currentFallbackTitle": "Itinerary Stop 12",
+      "candidatePoi": "\u2014",
+      "authoritySourceUsed": "No structured POI name in fixture metadata",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "5569HIKE",
+      "productTitle": "Griffith Observatory Hike: Guided Tour through Griffith Park",
+      "itineraryIndex": 6,
+      "currentFallbackTitle": "Itinerary Stop 6",
+      "candidatePoi": "\u2014",
+      "authoritySourceUsed": "No structured POI name; attractionId 102270 only",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "5569HIKE",
+      "productTitle": "Griffith Observatory Hike: Guided Tour through Griffith Park",
+      "itineraryIndex": 7,
+      "currentFallbackTitle": "Itinerary Stop 7",
+      "candidatePoi": "\u2014",
+      "authoritySourceUsed": "No structured POI name in fixture metadata",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "5569HIKE",
+      "productTitle": "Griffith Observatory Hike: Guided Tour through Griffith Park",
+      "itineraryIndex": 16,
+      "currentFallbackTitle": "Itinerary Stop 16",
+      "candidatePoi": "\u2014",
+      "authoritySourceUsed": "No structured POI name in fixture metadata",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "388361P1",
+      "productTitle": "Deluxe Sunset & Day Sail Small Group",
+      "itineraryIndex": 1,
+      "currentFallbackTitle": "Itinerary Stop 1",
+      "candidatePoi": "San Diego",
+      "authoritySourceUsed": "Description-only candidate; not title authority",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "388361P1",
+      "productTitle": "Deluxe Sunset & Day Sail Small Group",
+      "itineraryIndex": 2,
+      "currentFallbackTitle": "Itinerary Stop 2",
+      "candidatePoi": "Maritime Museum of San Diego",
+      "authoritySourceUsed": "Description-only candidate; not title authority",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "388361P1",
+      "productTitle": "Deluxe Sunset & Day Sail Small Group",
+      "itineraryIndex": 3,
+      "currentFallbackTitle": "Itinerary Stop 3",
+      "candidatePoi": "San Diego Convention Center",
+      "authoritySourceUsed": "Description-only candidate; not title authority",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "388361P1",
+      "productTitle": "Deluxe Sunset & Day Sail Small Group",
+      "itineraryIndex": 4,
+      "currentFallbackTitle": "Itinerary Stop 4",
+      "candidatePoi": "San Diego Bay Walk",
+      "authoritySourceUsed": "Description-only candidate; not title authority",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "388361P1",
+      "productTitle": "Deluxe Sunset & Day Sail Small Group",
+      "itineraryIndex": 5,
+      "currentFallbackTitle": "Itinerary Stop 5",
+      "candidatePoi": "Cabrillo National Monument",
+      "authoritySourceUsed": "Description-only candidate; not title authority",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "388361P1",
+      "productTitle": "Deluxe Sunset & Day Sail Small Group",
+      "itineraryIndex": 6,
+      "currentFallbackTitle": "Itinerary Stop 6",
+      "candidatePoi": "Coronado",
+      "authoritySourceUsed": "Description-only candidate; not title authority",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "388361P1",
+      "productTitle": "Deluxe Sunset & Day Sail Small Group",
+      "itineraryIndex": 7,
+      "currentFallbackTitle": "Itinerary Stop 7",
+      "candidatePoi": "Coronado Island",
+      "authoritySourceUsed": "Description-only candidate; not title authority",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "388361P1",
+      "productTitle": "Deluxe Sunset & Day Sail Small Group",
+      "itineraryIndex": 8,
+      "currentFallbackTitle": "Itinerary Stop 8",
+      "candidatePoi": "Shelter Island",
+      "authoritySourceUsed": "Description-only candidate; not title authority",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "388361P1",
+      "productTitle": "Deluxe Sunset & Day Sail Small Group",
+      "itineraryIndex": 9,
+      "currentFallbackTitle": "Itinerary Stop 9",
+      "candidatePoi": "Coronado Bridge",
+      "authoritySourceUsed": "Description-only candidate; not title authority",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "388361P1",
+      "productTitle": "Deluxe Sunset & Day Sail Small Group",
+      "itineraryIndex": 10,
+      "currentFallbackTitle": "Itinerary Stop 10",
+      "candidatePoi": "The Embarcadero",
+      "authoritySourceUsed": "Description-only candidate; not title authority",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "388361P1",
+      "productTitle": "Deluxe Sunset & Day Sail Small Group",
+      "itineraryIndex": 12,
+      "currentFallbackTitle": "Itinerary Stop 12",
+      "candidatePoi": "Seaport Village",
+      "authoritySourceUsed": "Description-only candidate; not title authority",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "388361P1",
+      "productTitle": "Deluxe Sunset & Day Sail Small Group",
+      "itineraryIndex": 13,
+      "currentFallbackTitle": "Itinerary Stop 13",
+      "candidatePoi": "USS Midway Museum",
+      "authoritySourceUsed": "Description-only candidate; not title authority",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "37126P9",
+      "productTitle": "San Diego Sailing Cruise Small Group 6 Guests Classic Yacht",
+      "itineraryIndex": 3,
+      "currentFallbackTitle": "Itinerary Stop 3",
+      "candidatePoi": "\u2014",
+      "authoritySourceUsed": "No structured POI name; attractionId 11072 only",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "37126P9",
+      "productTitle": "San Diego Sailing Cruise Small Group 6 Guests Classic Yacht",
+      "itineraryIndex": 4,
+      "currentFallbackTitle": "Itinerary Stop 4",
+      "candidatePoi": "\u2014",
+      "authoritySourceUsed": "No structured POI name; attractionId 1373 only",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "37126P9",
+      "productTitle": "San Diego Sailing Cruise Small Group 6 Guests Classic Yacht",
+      "itineraryIndex": 5,
+      "currentFallbackTitle": "Itinerary Stop 5",
+      "candidatePoi": "\u2014",
+      "authoritySourceUsed": "No structured POI name; attractionId 98928 only",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "7167P80",
+      "productTitle": "Boston to Salem \"Witch City\" Day Trip with Round-Trip Transportation",
+      "itineraryIndex": 1,
+      "currentFallbackTitle": "Itinerary Stop 1",
+      "candidatePoi": "Salem Witch Trials Tour from Boston by Ferry with Small Group",
+      "authoritySourceUsed": "Existing fixture itineraryItems[0].title is a tour label, not a structured POI/location title",
+      "action": "left neutral"
+    },
+    {
+      "productCode": "5042BOSDIN",
+      "productTitle": "City Cruises Boston Premier Dinner Cruise on Odyssey",
+      "itineraryIndex": 5,
+      "currentFallbackTitle": "Itinerary Stop 5",
+      "candidatePoi": "Leonard Zakim Bunker Hill Bridge",
+      "authoritySourceUsed": "Existing fixture itineraryItems[4].title",
+      "action": "fixed"
+    }
+  ]
+}

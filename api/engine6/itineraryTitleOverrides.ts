@@ -272,6 +272,9 @@ const PRODUCT_ROW_TITLE_OVERRIDES: Record<string, Record<number, string>> = {
   "6400P7": {
     0: "Lake Lucerne",
   },
+  "5042BOSDIN": {
+    4: "Leonard Zakim Bunker Hill Bridge",
+  },
 };
 
 const PRODUCT_ROW_CONDITIONAL_TITLE_OVERRIDES: Record<

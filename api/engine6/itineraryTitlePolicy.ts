@@ -3,7 +3,6 @@ import {
   governEngine6ItineraryStopTitle,
 } from "./itineraryTitleGovernance.js";
 import {
-  extractEngine6ConciseItineraryTitleFromProse,
   getEngine6PartnerItineraryRowExplicitFieldTitle,
   getEngine6PartnerItineraryRowOtherStructuredTitle,
   getEngine6PartnerItineraryRowPoiLocationName,
@@ -34,7 +33,7 @@ const PUBLIC_JSON_LD_ITINERARY_NAMES_BY_PRODUCT_CODE: Record<
   readonly string[]
 > = {
   "117409P1": ["Santa Ynez Valley"],
-  "142924P6": ["Coronado Island"],
+  "191303P1": ["Coronado Island"],
   "2335P1": ["San Andreas Fault"],
   "447486P4": ["Santa Barbara Maritime Museum"],
   "67760P2": [
@@ -246,7 +245,6 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
 }): Engine6DivergedItineraryTitleResolution => {
   const { productCode, rawProduct, bundledRawProduct, rowIndex, rowCount } = args;
   const liveTitle = asNonEmptyString(args.liveTitle);
-  const liveDescription = asNonEmptyString(args.liveDescription);
   const structuredProducts = [bundledRawProduct ?? null, rawProduct ?? null];
 
   const productOverride = getEngine6ItineraryTitleOverride({
@@ -320,17 +318,6 @@ export const resolveEngine6DivergedItineraryTitle = (args: {
     !isNeutralItineraryStopTitle(liveTitle)
   ) {
     return { title: liveTitle, titleSource: "explicit" };
-  }
-
-  const conciseProseTitle = extractEngine6ConciseItineraryTitleFromProse({
-    title: liveTitle,
-    description: liveDescription,
-  });
-  if (conciseProseTitle) {
-    return {
-      title: conciseProseTitle.title,
-      titleSource: conciseProseTitle.source,
-    };
   }
 
   if (
