@@ -120,15 +120,25 @@ export const fetchEngine6LiveCommercialFieldsForSchema = async (
 
 export const resolveEngine6ToursForProductSchema = async (
   tours: Engine6Tour[]
-): Promise<Engine6Tour[]> =>
-  Promise.all(
-    tours.map(async tour => {
-      const liveFields = await fetchEngine6LiveCommercialFieldsForSchema(
-        tour.productCode
-      );
-      return resolveEngine6TourForProductSchema(tour, liveFields);
-    })
-  );
+): Promise<Engine6Tour[]> => {
+  const concurrency = 12;
+  const resolvedTours: Engine6Tour[] = [];
+
+  for (let index = 0; index < tours.length; index += concurrency) {
+    const batch = tours.slice(index, index + concurrency);
+    const resolvedBatch = await Promise.all(
+      batch.map(async tour => {
+        const liveFields = await fetchEngine6LiveCommercialFieldsForSchema(
+          tour.productCode
+        );
+        return resolveEngine6TourForProductSchema(tour, liveFields);
+      })
+    );
+    resolvedTours.push(...resolvedBatch);
+  }
+
+  return resolvedTours;
+};
 
 export {
   diagnoseEngine6ViatorProductCommercialExtract,

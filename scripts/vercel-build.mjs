@@ -114,8 +114,7 @@ function runMerchantFeedCommercialBackfill() {
 
 function resolveEngine6LiveViatorValidationEnv() {
   const explicitMode =
-    process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE?.trim().toLowerCase() ??
-    "";
+    process.env.ENGINE6_LIVE_VIATOR_VALIDATION_MODE?.trim().toLowerCase() ?? "";
   const validationMode =
     explicitMode === "strict"
       ? "strict"
@@ -194,8 +193,7 @@ function runMerchantFeedGeneration() {
     REQUIRE_LIVE_MERCHANT_COMMERCIAL: "1",
     MERCHANT_FEED_RUNTIME_BASE_URL:
       process.env.MERCHANT_FEED_RUNTIME_BASE_URL ?? "(unset)",
-    ENGINE6_RUNTIME_BASE_URL:
-      process.env.ENGINE6_RUNTIME_BASE_URL ?? "(unset)",
+    ENGINE6_RUNTIME_BASE_URL: process.env.ENGINE6_RUNTIME_BASE_URL ?? "(unset)",
     VIATOR_API_KEY: process.env.VIATOR_API_KEY ? "(set)" : "(unset)",
     ENGINE6_VIATOR_API_KEY: process.env.ENGINE6_VIATOR_API_KEY
       ? "(set)"
@@ -230,7 +228,9 @@ function runMerchantFeedGeneration() {
     console.error(
       `[vercel-build] generate-merchant-feed.ts failed (exit ${result.status ?? "null"})`
     );
-    console.error(`[vercel-build] ${failureDetails.replace(/\n/g, "\n[vercel-build] ")}`);
+    console.error(
+      `[vercel-build] ${failureDetails.replace(/\n/g, "\n[vercel-build] ")}`
+    );
 
     if (result.error) {
       console.error("[vercel-build] spawn error:", result.error);
@@ -242,8 +242,38 @@ function runMerchantFeedGeneration() {
   }
 }
 
-const runBuildArtifactVerification =
-  process.env.VERIFY_BUILD_ARTIFACTS === "1";
+function runMerchantFeedCommercialParityAudit() {
+  const cmd = "tsx";
+  const args = ["scripts/audit-merchant-feed-commercial-parity.ts"];
+  const extraEnv = { REQUIRE_LIVE_MERCHANT_COMMERCIAL: "1" };
+
+  console.log(`\n> ${cmd} ${args.join(" ")}`);
+  const result = spawnSync(`${cmd} ${args.join(" ")}`, {
+    env: { ...buildEnv, ...extraEnv },
+    encoding: "utf8",
+    maxBuffer: 64 * 1024 * 1024,
+    shell: true,
+    stdio: ["inherit", "pipe", "pipe"],
+  });
+
+  emitCapturedProcessOutput(
+    "[vercel-build][merchant-feed-commercial-parity]",
+    result.stdout,
+    result.stderr
+  );
+
+  if (result.status !== 0) {
+    const failureDetails = formatCapturedProcessFailure(
+      result.stdout,
+      result.stderr
+    );
+    throw new Error(
+      `audit-merchant-feed-commercial-parity.ts failed with exit code ${result.status ?? "null"}\n${failureDetails}`
+    );
+  }
+}
+
+const runBuildArtifactVerification = process.env.VERIFY_BUILD_ARTIFACTS === "1";
 
 /*
 BUILD FLOW
@@ -285,14 +315,14 @@ if (
   exists("scripts/refresh-merchant-feed-commercial-backfill.ts")
 ) {
   runMerchantFeedCommercialBackfill();
-} else if (!isPreview && process.env.RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL === "1") {
+} else if (
+  !isPreview &&
+  process.env.RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL === "1"
+) {
   console.log("Skipping merchant feed commercial backfill (script missing).");
 }
 
-if (
-  !isPreview &&
-  exists("scripts/validate-engine6-production-viator.ts")
-) {
+if (!isPreview && exists("scripts/validate-engine6-production-viator.ts")) {
   runEngine6LiveViatorProductionValidation();
 } else if (!isPreview) {
   console.log("Skipping Engine6 live Viator production validation.");
@@ -304,7 +334,11 @@ if (
   exists("scripts/generate-merchant-feed.ts")
 ) {
   runMerchantFeedGeneration();
-} else if (!isPreview && process.env.RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL === "1") {
+  runMerchantFeedCommercialParityAudit();
+} else if (
+  !isPreview &&
+  process.env.RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL === "1"
+) {
   console.log(
     "Skipping full merchant feed generation (RUN_MERCHANT_FEED_COMMERCIAL_BACKFILL=1)."
   );
