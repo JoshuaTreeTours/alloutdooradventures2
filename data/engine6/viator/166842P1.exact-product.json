@@ -1,0 +1,125 @@
+{
+  "product": {
+    "productCode": "166842P1",
+    "productUrl": "https://www.viator.com/tours/Honolulu/Breathtaking-8-hour-circle-island-tour-for-only-45/d59070-166842P1",
+    "title": "Premium Oahu Circle Island Tour – Small Group, No Crowds",
+    "description": {
+      "text": "This small-group circle-island tour of Oahu is ideal for those who want to see a lot in a short time. In a cozy vehicle with no more than 14 passengers, you'll see landmarks like Diamond Head, the Halona Blowhole, Nu'uanu Pali Lookout, and historic Haleiwa Town. You'll also visit the famed Dole Plantation where you'll get a whole delicious Dole pineapple. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+    },
+    "location": {
+      "city": "Honolulu",
+      "state": "Hawaii"
+    },
+    "duration": "9 hours 30 minutes (approx.)",
+    "priceFrom": "From $115.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1792
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/5b/f2/54.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "This small-group circle-island tour of Oahu is ideal for those who want to see a lot in a short time",
+      "In a cozy vehicle with no more than 14 passengers, you'll see landmarks like Diamond Head, the Halona Blowhole, Nu'uanu ",
+      "You'll also visit the famed Dole Plantation where you'll get a whole delicious Dole pineapple",
+      "Premium Oahu Circle Island Tour – Small Group, No Crowds departing from Honolulu",
+      "Professional Oahu guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "This small-group circle-island tour of Oahu is ideal for those who want to see a lot in a short time.",
+    "itineraryItems": [
+      {
+        "title": "Honolulu",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Diamond Head",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "North Shore",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Haleiwa",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dole Plantation",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waimea Valley",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Polynesian Cultural Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kualoa Ranch",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Premium Oahu Circle Island Tour – Small Group, No Crowds?",
+        "answer": "The planned duration is 9 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Honolulu?",
+        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 115
+      },
+      "currency": "USD"
+    }
+  }
+}

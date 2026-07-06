@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "28456P8",
+    "productUrl": "https://www.viator.com/tours/Honolulu/Private-60-Minute-Helicopter-Tour-with-Kualoa-Ranch-Landing/d59070-28456P8",
+    "title": "Private 45 Minute Helicopter Tour with Romantic Landing",
+    "description": {
+      "text": "If you're looking to add to the romance of your Hawaii trip then this romantic helicopter ride is right up your alley. Enjoy a scenic flight over Oahu and take in the lush valleys, Diamond Head crater, and the South Shore. Transportation, equipment, and local commentary are handled so you can focus on Oahu's coastlines, valleys, and cultural landmarks. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+    },
+    "location": {
+      "city": "Honolulu",
+      "state": "Hawaii"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $3240.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 4
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/2a/c9/71.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private 45 Minute Helicopter Tour with Romantic Landing from Honolulu",
+      "Pearl Harbor, North Shore, or Waikiki routing",
+      "Professional guide with Oahu expertise",
+      "Small-group or private format as listed",
+      "Honolulu cultural, coastal, or aerial experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "If you're looking to add to the romance of your Hawaii trip then this romantic helicopter ride is right up your alley.",
+    "itineraryItems": [
+      {
+        "title": "Honolulu",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Diamond Head",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sacred Falls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pearl Harbor",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kualoa Ranch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "North Shore",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waikiki",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private 45 Minute Helicopter Tour with Romantic Landing?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Honolulu?",
+        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Extreme Sports"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 3240
+      },
+      "currency": "USD"
+    }
+  }
+}

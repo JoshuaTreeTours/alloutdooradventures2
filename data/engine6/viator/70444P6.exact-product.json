@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "70444P6",
+    "productUrl": "https://www.viator.com/tours/Honolulu/Hawaii-Volcano-Eco-Adventure-Tour-from-Oahu/d59070-70444P6",
+    "title": "Hawaii Volcanoes National Park Experience Departing from Oahu",
+    "description": {
+      "text": "Get away from the Oahu buzz with this whirlwind volcano-chasing tour. After your short flight from Honolulu, arrive in Kona to meet your driver for a serious adventure: You’ll visit the historic town of Kona, set your eyes on the Mars-like Kilauea Iki Overlook, run your toes along black sand, and explore Hawaii Volcanoes National Park, an active volcanic landscape that’s creating the Big Island to this day.Inter-island flight to Kona International Airport and transport included See wild spots like Hawaii Volcanoes National Park Spend 8+ hours on the ground, for a full day chasing wild landscap Transportation, equipment, and local commentary are handled so you can focus on Oahu's coastlines, valleys, and cultural landmarks. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+    },
+    "location": {
+      "city": "Honolulu",
+      "state": "Hawaii"
+    },
+    "duration": "12 hours (approx.)",
+    "priceFrom": "From $589.99",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 258
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/bd/ed/a6.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hawaii Volcanoes National Park Experience Departing from Oahu from Honolulu",
+      "Pearl Harbor, North Shore, or Waikiki routing",
+      "Professional guide with Oahu expertise",
+      "Small-group or private format as listed",
+      "Honolulu cultural, coastal, or aerial experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Get away from the Oahu buzz with this whirlwind volcano-chasing tour.",
+    "itineraryItems": [
+      {
+        "title": "Honolulu",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hawaii Volcanoes National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kilauea",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Black Sand Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kona",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Hawaii Volcanoes National Park Experience Departing from Oahu?",
+        "answer": "The planned duration is 12 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Honolulu?",
+        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 589.99
+      },
+      "currency": "USD"
+    }
+  }
+}

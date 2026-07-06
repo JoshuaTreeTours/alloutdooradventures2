@@ -1,0 +1,120 @@
+{
+  "product": {
+    "productCode": "28456P1",
+    "productUrl": "https://www.viator.com/tours/Honolulu/Royal-Crown-of-Oahu-60-Min-Helicopter-Tour/d59070-28456P1",
+    "title": "Oahu: 60 Min Royal Crown Helicopter Tour - Doors Off or On",
+    "description": {
+      "text": "Explore Hawaii’s island of Oahu by air on this helicopter tour. Fly above the island and many of its most well-known landmarks, such as Diamond Head, Sacred Falls, the Dole Plantation, and Pearl Harbor. On this ride, choose your departure time and whether or not you’d like the helicopter doors on or off.Oahu helicopter tour with doors on or off Pass by Diamond Head, Sacred Falls, Pearl Harbor, and more Multiple departure times make it easy to fit into your schedule Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+    },
+    "location": {
+      "city": "Honolulu",
+      "state": "Hawaii"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $540.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 790
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/c5/49/63.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore Hawaii’s island of Oahu by air on this helicopter tour",
+      "Fly above the island and many of its most well-known landmarks, such as Diamond Head, Sacred Falls, the Dole Plantation,",
+      "On this ride, choose your departure time and whether or not you’d like the helicopter doors on or off.Oahu helicopter to",
+      "Oahu: 60 Min Royal Crown Helicopter Tour - Doors Off or On departing from Honolulu",
+      "Professional Oahu guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore Hawaii’s island of Oahu by air on this helicopter tour.",
+    "itineraryItems": [
+      {
+        "title": "Honolulu",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Diamond Head",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sacred Falls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pearl Harbor",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kualoa Ranch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "North Shore",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waikiki",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Oahu: 60 Min Royal Crown Helicopter Tour - Doors Off or On?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Honolulu?",
+        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Extreme Sports"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 540
+      },
+      "currency": "USD"
+    }
+  }
+}

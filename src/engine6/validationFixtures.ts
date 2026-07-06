@@ -43,6 +43,26 @@ import specimen37177p6Payload from "../../data/engine6/viator/37177P6.exact-prod
 import specimen5039p5Payload from "../../data/engine6/viator/5039P5.exact-product.json";
 import specimen53748p4Payload from "../../data/engine6/viator/53748P4.exact-product.json";
 import specimen357987p1Payload from "../../data/engine6/viator/357987P1.exact-product.json";
+import specimen28456p8Payload from "../../data/engine6/viator/28456P8.exact-product.json";
+import specimen12446p4Payload from "../../data/engine6/viator/12446P4.exact-product.json";
+import specimen70444p6Payload from "../../data/engine6/viator/70444P6.exact-product.json";
+import specimen28456p1Payload from "../../data/engine6/viator/28456P1.exact-product.json";
+import specimen117916p9Payload from "../../data/engine6/viator/117916P9.exact-product.json";
+import specimen179218p23Payload from "../../data/engine6/viator/179218P23.exact-product.json";
+import specimen368856p1Payload from "../../data/engine6/viator/368856P1.exact-product.json";
+import specimen6981p1Payload from "../../data/engine6/viator/6981P1.exact-product.json";
+import specimen189546p8Payload from "../../data/engine6/viator/189546P8.exact-product.json";
+import specimen12446snorkelPayload from "../../data/engine6/viator/12446SNORKEL.exact-product.json";
+import specimen452226p3Payload from "../../data/engine6/viator/452226P3.exact-product.json";
+import specimen23607Payload from "../../data/engine6/viator/23607.exact-product.json";
+import specimen390101p5Payload from "../../data/engine6/viator/390101P5.exact-product.json";
+import specimen64146p1Payload from "../../data/engine6/viator/64146P1.exact-product.json";
+import specimen33188p2Payload from "../../data/engine6/viator/33188P2.exact-product.json";
+import specimen166842p1Payload from "../../data/engine6/viator/166842P1.exact-product.json";
+import specimen375182p1Payload from "../../data/engine6/viator/375182P1.exact-product.json";
+import specimen469693p1Payload from "../../data/engine6/viator/469693P1.exact-product.json";
+import specimen3961p32Payload from "../../data/engine6/viator/3961P32.exact-product.json";
+import specimen5563928p2Payload from "../../data/engine6/viator/5563928P2.exact-product.json";
 import specimen331502p3Payload from "../../data/engine6/viator/331502P3.exact-product.json";
 import specimen362955p2Payload from "../../data/engine6/viator/362955P2.exact-product.json";
 import specimen119664p1Payload from "../../data/engine6/viator/119664P1.exact-product.json";
@@ -1313,6 +1333,126 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "357987P1",
     publicUrl: "https://www.viator.com/tours/Orlando/Bioluminescent-Paddle-Excursion-with-A-Paddle-in-Paradise/d663-357987P1",
     rawPayload: specimen357987p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "28456P8",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Private-60-Minute-Helicopter-Tour-with-Kualoa-Ranch-Landing/d59070-28456P8",
+    rawPayload: specimen28456p8Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "12446P4",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Private-Island-Tour/d59070-12446P4",
+    rawPayload: specimen12446p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "70444P6",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Hawaii-Volcano-Eco-Adventure-Tour-from-Oahu/d59070-70444P6",
+    rawPayload: specimen70444p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "28456P1",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Royal-Crown-of-Oahu-60-Min-Helicopter-Tour/d59070-28456P1",
+    rawPayload: specimen28456p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "117916P9",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Pearl-Harbor-Passport-and-Honolulu-City-Tour/d59070-117916P9",
+    rawPayload: specimen117916p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "179218P23",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Polynesian-Cultural-Center-and-Mini-Circle-Island-Including-Pearl-Harbour/d59070-179218P23",
+    rawPayload: specimen179218p23Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "368856P1",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Private-Surf-Lessons/d59070-368856P1",
+    rawPayload: specimen368856p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6981P1",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Chiefs-Luau-Admission-Including-Transfers/d59070-6981P1",
+    rawPayload: specimen6981p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "189546P8",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Private-and-Small-group-tours-North-Shore-waterfalls-and-Turtles/d59070-189546P8",
+    rawPayload: specimen189546p8Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "12446SNORKEL",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Small-Group-Circle-Island-Tour-with-Snorkeling/d59070-12446SNORKEL",
+    rawPayload: specimen12446snorkelPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "452226P3",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Pearl-Harbor-USS-Arizona-Memorial-and-Battleship-Missouri/d59070-452226P3",
+    rawPayload: specimen452226p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "23607",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Oahu-Grand-Circle-Island-Day-Tour-with-Dole-Plantation/d59070-23607",
+    rawPayload: specimen23607Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "390101P5",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Deluxe-Arizona-Memorial-and-USS-Missouri-Battleship-Tour/d59070-390101P5",
+    rawPayload: specimen390101p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "64146P1",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Ka-Moana-Luau/d59070-64146P1",
+    rawPayload: specimen64146p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "33188P2",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Germaines-Luau/d59070-33188P2",
+    rawPayload: specimen33188p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "166842P1",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Breathtaking-8-hour-circle-island-tour-for-only-45/d59070-166842P1",
+    rawPayload: specimen166842p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "375182P1",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Grand-Tour-Around-Island-with-Snorkeling-16-Locations/d59070-375182P1",
+    rawPayload: specimen375182p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "469693P1",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Auana-by-Cirque-du-Soleil-at-the-Waikiki-Beachcomber-Hotel/d59070-469693P1",
+    rawPayload: specimen469693p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3961P32",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Oahu-Waikiki-Luau-Buffet-and-Rock-A-Hula-Show/d59070-3961P32",
+    rawPayload: specimen3961p32Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5563928P2",
+    publicUrl: "https://www.viator.com/tours/Honolulu/Circle-Island-Tour-small-group-setting-snorkeling-included/d59070-5563928P2",
+    rawPayload: specimen5563928p2Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

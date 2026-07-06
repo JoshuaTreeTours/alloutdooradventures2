@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "33188P2",
+    "productUrl": "https://www.viator.com/tours/Honolulu/Germaines-Luau/d59070-33188P2",
+    "title": "Oahu: Germaine's Luau",
+    "description": {
+      "text": "Enjoy a taste of Hawaiian culture when you book this luau dinner experience in Kapolei. Head to the venue and be greeted with a traditional lei before you are seated for dinner. Enjoy a delicious Hawaiian-American meal with dishes that include a succulent roasted pig, sauteed island fish, Hawaiian chicken, and much more. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+    },
+    "location": {
+      "city": "Honolulu",
+      "state": "Hawaii"
+    },
+    "duration": "3 hours 15 minutes (approx.)",
+    "priceFrom": "From $128.00",
+    "reviews": {
+      "combinedAverageRating": 4,
+      "totalReviews": 763
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/89/e6/90.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy a taste of Hawaiian culture when you book this luau dinner experience in Kapolei",
+      "Head to the venue and be greeted with a traditional lei before you are seated for dinner",
+      "Enjoy a delicious Hawaiian-American meal with dishes that include a succulent roasted pig, sauteed island fish, Hawaiian",
+      "Oahu: Germaine's Luau departing from Honolulu",
+      "Professional Oahu guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Enjoy a taste of Hawaiian culture when you book this luau dinner experience in Kapolei.",
+    "itineraryItems": [
+      {
+        "title": "Honolulu",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Polynesian Cultural Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waikiki",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "North Shore",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kualoa Ranch",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Oahu: Germaine's Luau?",
+        "answer": "The planned duration is 3 hours 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Honolulu?",
+        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Family-friendly Shows "
+      },
+      {
+        "label": "Family-friendly Shows"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 128
+      },
+      "currency": "USD"
+    }
+  }
+}

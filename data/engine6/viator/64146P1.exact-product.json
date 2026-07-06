@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "64146P1",
+    "productUrl": "https://www.viator.com/tours/Honolulu/Ka-Moana-Luau/d59070-64146P1",
+    "title": "Oahu: Ka Moana Lūʻau at Aloha Tower – Oceanfront Luau Show",
+    "description": {
+      "text": "Experience a traditional Hawaiian Luau in a scenic location. The evening begins with a variety of cultural activities ideal for all ages. Learn how to make a coconut headband, string flower lei, or dance hula, and then sit down for a buffet dinner with a large selection of Hawaiian specialties like Kalua pork and Huli Huli chicken. Ideal for travelers basing in Honolulu who want a guided Oahu experience without coordinating transport, gear, or admission tickets on their own."
+    },
+    "location": {
+      "city": "Honolulu",
+      "state": "Hawaii"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $135.08",
+    "reviews": {
+      "combinedAverageRating": 4,
+      "totalReviews": 1446
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/32/97/bc/69/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Experience a traditional Hawaiian Luau in a scenic location",
+      "The evening begins with a variety of cultural activities ideal for all ages",
+      "Learn how to make a coconut headband, string flower lei, or dance hula, and then sit down for a buffet dinner with a lar",
+      "Oahu: Ka Moana Lūʻau at Aloha Tower – Oceanfront Luau Show departing from Honolulu",
+      "Professional Oahu guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Honolulu or Waikiki hotel or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience a traditional Hawaiian Luau in a scenic location.",
+    "itineraryItems": [
+      {
+        "title": "Honolulu",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Polynesian Cultural Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waikiki",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "North Shore",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kualoa Ranch",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Oahu: Ka Moana Lūʻau at Aloha Tower – Oceanfront Luau Show?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Honolulu?",
+        "answer": "Meet your guide at the confirmed Honolulu or Waikiki hotel pickup point, marina, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Family-friendly Shows "
+      },
+      {
+        "label": "Family-friendly Shows"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 135.08
+      },
+      "currency": "USD"
+    }
+  }
+}
