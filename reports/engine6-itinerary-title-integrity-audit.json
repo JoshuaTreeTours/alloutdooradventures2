@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-23T23:21:26.344Z",
+  "generatedAt": "2026-07-06T16:17:14.921Z",
   "totals": {
-    "engine6ToursAudited": 150,
-    "itineraryRowsAudited": 686,
-    "suspiciousRows": 25,
-    "affectedTours": 20
+    "engine6ToursAudited": 589,
+    "itineraryRowsAudited": 2533,
+    "suspiciousRows": 33,
+    "affectedTours": 27
   },
   "topSuspiciousPatterns": [
     {
@@ -13,7 +13,7 @@
     },
     {
       "reason": "sentence-punctuation",
-      "count": 5
+      "count": 13
     }
   ],
   "affectedProducts": [
@@ -36,6 +36,16 @@
       "examples": [
         "Beverly Gardens Park",
         "Beverly Canon Gardens"
+      ]
+    },
+    {
+      "productId": "189623P3",
+      "route": "/destinations/arizona/sedona/tours/bliss-sedona-s-most-luxurious-wine-tour-lunch-included-189623P3",
+      "tourTitle": "Bliss - Sedona's Most Luxurious Wine Tour - Lunch Included!",
+      "suspiciousRowCount": 2,
+      "examples": [
+        "D.A. Ranch",
+        "Javelina Leap Vineyard, Winery & Bistro"
       ]
     },
     {
@@ -104,6 +114,24 @@
       ]
     },
     {
+      "productId": "325517P1",
+      "route": "/destinations/arizona/sedona/tours/vortex-to-vineyards-by-abc-wildlife-host-rachel-reenstr-325517P1",
+      "tourTitle": "Vortex to Vineyards by ABC wildlife host Rachel Reenstra",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "Javelina Leap Vineyard, Winery & Bistro"
+      ]
+    },
+    {
+      "productId": "35441P2",
+      "route": "/destinations/wyoming/jackson/tours/grand-teton-national-park-full-day-guided-tour-from-jac-35441P2",
+      "tourTitle": "Grand Teton National Park - Full-Day Guided Tour from Jackson Hole",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "T.A. Moulton Barn"
+      ]
+    },
+    {
       "productId": "354611P1",
       "route": "/destinations/nevada/las-vegas/tours/historical-railroad-trail-ebike-tour",
       "tourTitle": "Historical Railroad Trail eBike Tour",
@@ -119,6 +147,33 @@
       "suspiciousRowCount": 1,
       "examples": [
         "Pacific Coast Highway"
+      ]
+    },
+    {
+      "productId": "42054P2",
+      "route": "/destinations/florida/orlando/tours/private-helicopter-after-hours-48-miles-tour-theme-park-42054P2",
+      "tourTitle": "Private Helicopter After-hours 48 Miles Tour Theme Parks&Downtown",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "MaxFlight Helicopter Services Inc."
+      ]
+    },
+    {
+      "productId": "42054P4",
+      "route": "/destinations/florida/orlando/tours/day-flight-48-miles-helicopter-tour-over-theme-parks-do-42054P4",
+      "tourTitle": "Day Flight 48 Miles Helicopter Tour over Theme Parks & Downtown",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "MaxFlight Helicopter Services Inc."
+      ]
+    },
+    {
+      "productId": "42054P5",
+      "route": "/destinations/florida/orlando/tours/take-a-thrilling-85-miles-private-helicopter-tour-to-sp-42054P5",
+      "tourTitle": "Take a thrilling 85 Miles Private Helicopter Tour to Space Coast",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "MaxFlight Helicopter Services Inc."
       ]
     },
     {
@@ -173,6 +228,15 @@
       "suspiciousRowCount": 1,
       "examples": [
         "Washington, D.C. Landmarks"
+      ]
+    },
+    {
+      "productId": "6029WILDSAF",
+      "route": "/destinations/wyoming/jackson/tours/grand-teton-wildlife-safari-in-a-enclosed-or-open-air-v-6029WILDSAF",
+      "tourTitle": "Grand Teton Wildlife Safari in a Enclosed or Open-Air Vehicle (season dependent)",
+      "suspiciousRowCount": 1,
+      "examples": [
+        "T.A. Moulton Barn"
       ]
     },
     {
@@ -351,6 +415,76 @@
       "itineraryIndex": 13,
       "renderedTitle": "Warner Bros. Studios",
       "renderedDescription": "Warner Brothers, the most famous film studio in LA, in a bird's eye view on this Hollywood Hills Tour.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "42054P2",
+      "route": "/destinations/florida/orlando/tours/private-helicopter-after-hours-48-miles-tour-theme-park-42054P2",
+      "tourTitle": "Private Helicopter After-hours 48 Miles Tour Theme Parks&Downtown",
+      "itineraryIndex": 1,
+      "renderedTitle": "MaxFlight Helicopter Services Inc.",
+      "renderedDescription": "Visit MaxFlight Helicopter Services Inc.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "42054P4",
+      "route": "/destinations/florida/orlando/tours/day-flight-48-miles-helicopter-tour-over-theme-parks-do-42054P4",
+      "tourTitle": "Day Flight 48 Miles Helicopter Tour over Theme Parks & Downtown",
+      "itineraryIndex": 0,
+      "renderedTitle": "MaxFlight Helicopter Services Inc.",
+      "renderedDescription": "Visit MaxFlight Helicopter Services Inc. during the 30 minutes stop.",
+      "titleSource": null,
+      "duration": "30 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "42054P5",
+      "route": "/destinations/florida/orlando/tours/take-a-thrilling-85-miles-private-helicopter-tour-to-sp-42054P5",
+      "tourTitle": "Take a thrilling 85 Miles Private Helicopter Tour to Space Coast",
+      "itineraryIndex": 0,
+      "renderedTitle": "MaxFlight Helicopter Services Inc.",
+      "renderedDescription": "Visit MaxFlight Helicopter Services Inc. during the 30 minutes stop.",
+      "titleSource": null,
+      "duration": "30 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "6029WILDSAF",
+      "route": "/destinations/wyoming/jackson/tours/grand-teton-wildlife-safari-in-a-enclosed-or-open-air-v-6029WILDSAF",
+      "tourTitle": "Grand Teton Wildlife Safari in a Enclosed or Open-Air Vehicle (season dependent)",
+      "itineraryIndex": 2,
+      "renderedTitle": "T.A. Moulton Barn",
+      "renderedDescription": "Visit T.A. Moulton Barn.",
+      "titleSource": null,
+      "duration": null,
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "35441P2",
+      "route": "/destinations/wyoming/jackson/tours/grand-teton-national-park-full-day-guided-tour-from-jac-35441P2",
+      "tourTitle": "Grand Teton National Park - Full-Day Guided Tour from Jackson Hole",
+      "itineraryIndex": 1,
+      "renderedTitle": "T.A. Moulton Barn",
+      "renderedDescription": "Visit T.A. Moulton Barn.",
       "titleSource": null,
       "duration": null,
       "admissionStatus": null,
@@ -552,6 +686,48 @@
       "admissionStatus": null,
       "suspiciousReasons": [
         "matches-description-first-sentence"
+      ]
+    },
+    {
+      "productId": "189623P3",
+      "route": "/destinations/arizona/sedona/tours/bliss-sedona-s-most-luxurious-wine-tour-lunch-included-189623P3",
+      "tourTitle": "Bliss - Sedona's Most Luxurious Wine Tour - Lunch Included!",
+      "itineraryIndex": 2,
+      "renderedTitle": "D.A. Ranch",
+      "renderedDescription": "Page Springs Valley ranch estate for wine tasting with hillside views toward Clarkdale and the Verde River.",
+      "titleSource": null,
+      "duration": "45 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "189623P3",
+      "route": "/destinations/arizona/sedona/tours/bliss-sedona-s-most-luxurious-wine-tour-lunch-included-189623P3",
+      "tourTitle": "Bliss - Sedona's Most Luxurious Wine Tour - Lunch Included!",
+      "itineraryIndex": 3,
+      "renderedTitle": "Javelina Leap Vineyard, Winery & Bistro",
+      "renderedDescription": "Visit Javelina Leap Vineyard, Winery & Bistro during the 1 hour 30 minutes stop.",
+      "titleSource": null,
+      "duration": "1 hour 30 minutes",
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
+      ]
+    },
+    {
+      "productId": "325517P1",
+      "route": "/destinations/arizona/sedona/tours/vortex-to-vineyards-by-abc-wildlife-host-rachel-reenstr-325517P1",
+      "tourTitle": "Vortex to Vineyards by ABC wildlife host Rachel Reenstra",
+      "itineraryIndex": 3,
+      "renderedTitle": "Javelina Leap Vineyard, Winery & Bistro",
+      "renderedDescription": "Visit Javelina Leap Vineyard, Winery & Bistro during the 1 hour stop.",
+      "titleSource": null,
+      "duration": "1 hour",
+      "admissionStatus": null,
+      "suspiciousReasons": [
+        "sentence-punctuation"
       ]
     }
   ]

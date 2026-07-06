@@ -125,3 +125,32 @@ describe("Engine6 itinerary title override governance", () => {
     ).toContain('3: "Secondary Scrambling Zone"');
   });
 });
+
+describe("Engine6 reviewed neutral fallback overrides", () => {
+  it("renders reviewed fixture-metadata overrides for verified neutral fallback rows", () => {
+    const dinnerFixture = ENGINE6_VALIDATION_FIXTURES.find(
+      item => item.productCode === "5042BOSDIN"
+    );
+
+    expect(dinnerFixture).toBeDefined();
+
+    expect(extractEngine6Product(dinnerFixture?.rawPayload).extracted.itinerary[4])
+      .toMatchObject({
+        title: "Leonard Zakim Bunker Hill Bridge",
+        titleSource: "product-override",
+      });
+  });
+
+  it("keeps neutral fallbacks when no reviewed authority exists", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      item => item.productCode === "388361P1"
+    );
+
+    expect(fixture).toBeDefined();
+    expect(extractEngine6Product(fixture?.rawPayload).extracted.itinerary[5])
+      .toMatchObject({
+        title: "Itinerary Stop 6",
+        titleSource: "explicit",
+      });
+  });
+});

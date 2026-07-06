@@ -1,20 +1,20 @@
 # Engine6 Itinerary Title Integrity Audit
 
-Generated: 2026-06-23T23:21:26.344Z
+Generated: 2026-07-06T16:17:14.921Z
 
 ## Totals
 
-- Total Engine6 tours audited: 150
-- Total itinerary rows audited: 686
-- Suspicious rows: 25
-- Affected tours: 20
+- Total Engine6 tours audited: 589
+- Total itinerary rows audited: 2533
+- Suspicious rows: 33
+- Affected tours: 27
 
 ## Top suspicious patterns
 
 | Pattern | Count |
 | --- | ---: |
 | matches-description-first-sentence | 20 |
-| sentence-punctuation | 5 |
+| sentence-punctuation | 13 |
 
 ## Affected products
 
@@ -22,6 +22,7 @@ Generated: 2026-06-23T23:21:26.344Z
 | --- | --- | ---: | --- |
 | /destinations/california/san-francisco/tours/3-day-yosemite-camping-adventure-from-san-francisco | 3454YE3D | 3 | San Francisco departure; Yosemite Village free time; Valley activity time |
 | /destinations/california/los-angeles/tours/hollywood-and-beverly-hills-celebrity-homes-tour-106439P1 | 106439P1 | 2 | Beverly Gardens Park; Beverly Canon Gardens |
+| /destinations/arizona/sedona/tours/bliss-sedona-s-most-luxurious-wine-tour-lunch-included-189623P3 | 189623P3 | 2 | D.A. Ranch; Javelina Leap Vineyard, Winery & Bistro |
 | /destinations/louisiana/new-orleans/tours/new-orleans-75-minute-riverboat-sightseeing-cruise | 3780P45 | 2 | French Quarter riverfront; Crescent City Connection |
 | /destinations/california/san-diego/tours/san-diego-bay-sail-aboard-a-french-yacht-beer-and-wine-included | 5598628P3 | 2 | Sunset Cliffs Natural Park; Waterfront Park Downtown San Diego |
 | /destinations/california/los-angeles/tours/hollywood-private-helicopter-tour-15131P4 | 15131P4 | 1 | Crypto.com Arena |
@@ -29,14 +30,20 @@ Generated: 2026-06-23T23:21:26.344Z
 | /destinations/louisiana/new-orleans/tours/new-orleans-city-bike-tour | 276551P2 | 1 | Lafayette Cemetery No. 1 |
 | /destinations/california/san-diego/tours/tijuana-mexico-border-tour-from-san-diego-28758P1 | 28758P1 | 1 | Tijuana Walking Tour |
 | /destinations/california/san-diego/tours/san-diego-zoo-and-safari-park-2-visit-pass-ticket | 3097SDZSP_2VISIT | 1 | San Diego Zoo Safari Park |
+| /destinations/arizona/sedona/tours/vortex-to-vineyards-by-abc-wildlife-host-rachel-reenstr-325517P1 | 325517P1 | 1 | Javelina Leap Vineyard, Winery & Bistro |
+| /destinations/wyoming/jackson/tours/grand-teton-national-park-full-day-guided-tour-from-jac-35441P2 | 35441P2 | 1 | T.A. Moulton Barn |
 | /destinations/nevada/las-vegas/tours/historical-railroad-trail-ebike-tour | 354611P1 | 1 | Historic Railroad Trail |
 | /destinations/california/san-francisco/tours/big-sur-monterey-and-carmel-tour-from-san-francisco | 36001P14 | 1 | Pacific Coast Highway |
+| /destinations/florida/orlando/tours/private-helicopter-after-hours-48-miles-tour-theme-park-42054P2 | 42054P2 | 1 | MaxFlight Helicopter Services Inc. |
+| /destinations/florida/orlando/tours/day-flight-48-miles-helicopter-tour-over-theme-parks-do-42054P4 | 42054P4 | 1 | MaxFlight Helicopter Services Inc. |
+| /destinations/florida/orlando/tours/take-a-thrilling-85-miles-private-helicopter-tour-to-sp-42054P5 | 42054P5 | 1 | MaxFlight Helicopter Services Inc. |
 | /destinations/california/san-diego/tours/san-diego-sunday-brunch-cruise | 5144BRUNCH | 1 | Sunday Brunch Cruise |
 | /destinations/new-york/new-york/tours/nyc-bustronome-gourmet-sightseeing-lunch-panoramic-bus | 5515296P1 | 1 | Solomon R. Guggenheim Museum |
 | /destinations/california/los-angeles/tours/hollywood-hills-hiking-tour-in-los-angeles | 5569HIKE | 1 | Warner Bros. Studios |
 | /destinations/california/san-diego/tours/spectacular-sunset-sail-on-san-diego-bay | 5584233P1 | 1 | Cabrillo National Monument |
 | /destinations/nevada/las-vegas/tours/western-national-parks-7-day-explorer-camping | 5602P25 | 1 | Day 3: Monument Valley |
 | /destinations/new-york/new-york/tours/washington-d-c-tour-from-new-york | 5614063P8 | 1 | Washington, D.C. Landmarks |
+| /destinations/wyoming/jackson/tours/grand-teton-wildlife-safari-in-a-enclosed-or-open-air-v-6029WILDSAF | 6029WILDSAF | 1 | T.A. Moulton Barn |
 | /destinations/new-york/new-york/tours/niagara-falls-in-one-day-from-new-york-city | 62527P11 | 1 | Midtown Manhattan Departure |
 | /destinations/louisiana/new-orleans/tours/honey-island-swamp-tour-with-transport | 6953SWAMPTRANS | 1 | Downtown New Orleans pickup |
 | /destinations/new-york/new-york/tours/new-york-in-one-day-guided-sightseeing-tour | 7081NYCDAY | 1 | Gansevoort Liberty Market |

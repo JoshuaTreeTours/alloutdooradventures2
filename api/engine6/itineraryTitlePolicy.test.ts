@@ -1028,3 +1028,127 @@ describe("pointOfInterestLocation.locationName itinerary title authority", () =>
     });
   });
 });
+
+describe("Engine6 neutral fallback itinerary title cleanup", () => {
+  it("detects neutral fallback titles during Engine6 audits", async () => {
+    const { auditEngine6NeutralFallbackItineraryTitles } = await import(
+      "./itineraryFallbackTitleAudit"
+    );
+
+    expect(
+      auditEngine6NeutralFallbackItineraryTitles([
+        {
+          productCode: "AUDIT1",
+          title: "Audit Tour",
+          path: "/audit-tour",
+          itinerary: [
+            { title: "Lincoln Memorial", titleSource: "json-ld" },
+            { title: "Itinerary Stop 6", titleSource: "explicit" },
+            { title: "Stop 7", titleSource: "explicit" },
+          ],
+        },
+      ])
+    ).toEqual([
+      {
+        productCode: "AUDIT1",
+        productTitle: "Audit Tour",
+        itineraryIndex: 2,
+        title: "Itinerary Stop 6",
+        path: "/audit-tour",
+        titleSource: "explicit",
+      },
+      {
+        productCode: "AUDIT1",
+        productTitle: "Audit Tour",
+        itineraryIndex: 3,
+        title: "Stop 7",
+        path: "/audit-tour",
+        titleSource: "explicit",
+      },
+    ]);
+  });
+
+  it("renders verified public JSON-LD POI titles beyond the first several itinerary stops", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "62527P11",
+        title: "Niagara Falls Tour",
+        itineraryItems: Array.from({ length: 9 }, (_, index) => ({
+          title: `Itinerary Stop ${index + 1}`,
+          description: `Neutral supplier row ${index + 1}`,
+        })),
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary.map(item => item.title)).toEqual([
+      "Midtown Manhattan Departure",
+      "Niagara Falls State Park",
+      "Maid of the Mist",
+      "Niagara Falls Observation Tower",
+      "Prospect Point",
+      "Luna Island",
+      "Bridal Veil Falls",
+      "Goat Island",
+      "Horseshoe Falls",
+    ]);
+    expect(result.extracted.itinerary[8]).toMatchObject({
+      title: "Horseshoe Falls",
+      titleSource: "public-json-ld",
+    });
+  });
+
+  it("keeps a neutral fallback when no verified itinerary title authority exists", () => {
+    const result = extractEngine6Product({
+      product: {
+        productCode: "NOAUTH1",
+        title: "No Authority Tour",
+        itineraryItems: [
+          {
+            title: "Itinerary Stop 9",
+            description: "Description mentions a landmark but is not title authority.",
+          },
+        ],
+      },
+    } as Record<string, unknown>);
+
+    expect(result.extracted.itinerary[0]).toMatchObject({
+      title: "Itinerary Stop 1",
+      titleSource: "explicit",
+    });
+  });
+
+  it("preserves the title authority ladder without prose-derived automatic titles", () => {
+    const result = resolveEngine6DivergedItineraryTitle({
+      productCode: "LADDER1",
+      rawProduct: {
+        itinerary: {
+          itemListElement: [{ item: { name: "JSON-LD Title" } }],
+        },
+        itineraryItems: [
+          {
+            pointOfInterestLocation: { locationName: "POI Location" },
+            title: "Explicit Row Title",
+          },
+        ],
+      },
+      rowIndex: 0,
+      rowCount: 1,
+      liveTitle: "Description prose says Pier 39 and Fisherman's Wharf.",
+      liveDescription: "Pier 39 appears only in prose.",
+      liveTitleSource: "description-inferred",
+    });
+
+    expect(result).toEqual({ title: "JSON-LD Title", titleSource: "json-ld" });
+
+    expect(
+      resolveEngine6DivergedItineraryTitle({
+        productCode: "LADDER2",
+        rowIndex: 0,
+        rowCount: 1,
+        liveTitle: "Description prose says Lincoln Memorial.",
+        liveDescription: "Lincoln Memorial appears only in prose.",
+        liveTitleSource: "description-inferred",
+      })
+    ).toEqual({ title: "Itinerary Stop 1", titleSource: "explicit" });
+  });
+});
