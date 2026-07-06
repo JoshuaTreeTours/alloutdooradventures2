@@ -354,6 +354,20 @@ import specimen118887p1Payload from "../../data/engine6/viator/118887P1.exact-pr
 import specimen118887p5Payload from "../../data/engine6/viator/118887P5.exact-product.json";
 import specimen118887p2Payload from "../../data/engine6/viator/118887P2.exact-product.json";
 import specimen275087p2Payload from "../../data/engine6/viator/275087P2.exact-product.json";
+import specimen132218p140Payload from "../../data/engine6/viator/132218P140.exact-product.json";
+import specimen132218p405Payload from "../../data/engine6/viator/132218P405.exact-product.json";
+import specimen265766p14Payload from "../../data/engine6/viator/265766P14.exact-product.json";
+import specimen265766p23Payload from "../../data/engine6/viator/265766P23.exact-product.json";
+import specimen265766p73Payload from "../../data/engine6/viator/265766P73.exact-product.json";
+import specimen318681p15Payload from "../../data/engine6/viator/318681P15.exact-product.json";
+import specimen3657p1Payload from "../../data/engine6/viator/3657P1.exact-product.json";
+import specimen383259p1Payload from "../../data/engine6/viator/383259P1.exact-product.json";
+import specimen5412olymPayload from "../../data/engine6/viator/5412OLYM.exact-product.json";
+import specimen5412p36Payload from "../../data/engine6/viator/5412P36.exact-product.json";
+import specimen5557524p1Payload from "../../data/engine6/viator/5557524P1.exact-product.json";
+import specimen88081p1Payload from "../../data/engine6/viator/88081P1.exact-product.json";
+import specimen88081p2Payload from "../../data/engine6/viator/88081P2.exact-product.json";
+import specimen88081p4Payload from "../../data/engine6/viator/88081P4.exact-product.json";
 import specimen163873p1Payload from "../../data/engine6/viator/163873P1.exact-product.json";
 import specimen123783p1Payload from "../../data/engine6/viator/123783P1.exact-product.json";
 import specimen70248p3Payload from "../../data/engine6/viator/70248P3.exact-product.json";
@@ -3746,6 +3760,132 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Zion-National-Park/Half-Day-Guided-Hiking-Tours/d5610-163873P1",
     rawPayload: specimen163873p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "132218P140",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/1-Day-Olympic-National-Park-Tour-Seattle-departure-SO1/d704-132218P140",
+    rawPayload: specimen132218p140Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "132218P405",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Small-Group-Olympic-National-Park-Day-Tour-from-Seattle/d704-132218P405",
+    rawPayload: specimen132218p405Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "265766P14",
+    publicUrl:
+      "https://www.viator.com/tours/Port-Angeles/Full-Day-Private-Tour-and-Hike-in-Olympic-National-Park/d4390-265766P14",
+    rawPayload: specimen265766p14Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "265766P23",
+    publicUrl:
+      "https://www.viator.com/tours/Olympic-National-Park/Small-Group-Hiking-Tour-of-Olympic-National-Park-West-Peninsula/d50807-265766P23",
+    rawPayload: specimen265766p23Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "265766P73",
+    publicUrl:
+      "https://www.viator.com/tours/Olympic-National-Park/Olympic-Two-Day-Private-Tour-and-Hike/d50807-265766P73",
+    rawPayload: specimen265766p73Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "318681P15",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Explore-Olympic-National-Park-from-Seattle-in-SUV/d704-318681P15",
+    rawPayload: specimen318681p15Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "3657P1",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Olympic-National-Park-tour/d704-3657P1",
+    rawPayload: specimen3657p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "383259P1",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Olympic-Peninsula-Experience-the-spectacular-beauty-of-the-Pacific-Coastline/d704-383259P1",
+    rawPayload: specimen383259p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5412OLYM",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Small-Group-Olympic-National-Park-Tour-from-Seattle/d704-5412OLYM",
+    rawPayload: specimen5412olymPayload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5412P36",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/3-Days-in-Olympic-National-Park-from-Seattle-Hidden-Hikes/d704-5412P36",
+    rawPayload: specimen5412p36Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "5557524P1",
+    publicUrl:
+      "https://www.viator.com/tours/Seattle/Olympic-National-Park-Highlight-Tour/d704-5557524P1",
+    rawPayload: specimen5557524p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "88081P1",
+    publicUrl:
+      "https://www.viator.com/tours/Port-Angeles/Hurricane-Ridge-Olympic-National-Park-Guided-Tour/d4390-88081P1",
+    rawPayload: specimen88081p1Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "88081P2",
+    publicUrl:
+      "https://www.viator.com/tours/Port-Angeles/Lake-Crescent-and-Marymere-Falls-Olympic-National-Park-Guided-Tour/d4390-88081P2",
+    rawPayload: specimen88081p2Payload as Record<string, unknown>,
+    validationRules: {
+      itineraryOriginalityForNewBuilds: true,
+    },
+  },
+  {
+    productCode: "88081P4",
+    publicUrl:
+      "https://www.viator.com/tours/Port-Angeles/Hoh-Rain-Forest-and-Pacific-Coast-Olympic-National-Park-Guided-Tour/d4390-88081P4",
+    rawPayload: specimen88081p4Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },

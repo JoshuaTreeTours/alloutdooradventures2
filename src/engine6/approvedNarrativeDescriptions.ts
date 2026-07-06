@@ -5,6 +5,7 @@ import { getMoabTargetedNarrativeDescription } from "./moabApprovedNarrativeDesc
 import { getFortLauderdaleTargetedNarrativeDescription } from "./fortLauderdaleApprovedNarrativeDescriptions";
 import { getOrlandoTargetedNarrativeDescription } from "./orlandoApprovedNarrativeDescriptions";
 import { getPhiladelphiaTargetedNarrativeDescription } from "./philadelphiaApprovedNarrativeDescriptions";
+import { getOlympicTargetedNarrativeDescription } from "./olympicApprovedNarrativeDescriptions";
 import { getRockyMountainNationalParkTargetedNarrativeDescription } from "./rockyMountainNationalParkApprovedNarrativeDescriptions";
 
 export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
@@ -98,6 +99,7 @@ export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTIONS: Record<
 };
 
 export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
+  getOlympicTargetedNarrativeDescription(productCode) ??
   getGreatSmokyMountainsTargetedNarrativeDescription(productCode) ??
   getBostonTargetedNarrativeDescription(productCode) ??
   getPhiladelphiaTargetedNarrativeDescription(productCode) ??

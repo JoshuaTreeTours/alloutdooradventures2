@@ -1461,6 +1461,55 @@ export const ENGINE6_ZION_TOUR_PATH_PREFIX =
 export const isEngine6ZionTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_ZION_TOUR_PATH_PREFIX);
 
+export const ENGINE6_OLYMPIC_132218P140_PRODUCT_CODE = "132218P140";
+export const ENGINE6_OLYMPIC_132218P140_ROUTE =
+  "/destinations/washington/olympic-national-park/tours/olympic-national-park-small-group-day-tour-w-sceni-132218P140";
+export const ENGINE6_OLYMPIC_132218P405_PRODUCT_CODE = "132218P405";
+export const ENGINE6_OLYMPIC_132218P405_ROUTE =
+  "/destinations/washington/olympic-national-park/tours/small-group-olympic-national-park-day-tour-from-se-132218P405";
+export const ENGINE6_OLYMPIC_265766P14_PRODUCT_CODE = "265766P14";
+export const ENGINE6_OLYMPIC_265766P14_ROUTE =
+  "/destinations/washington/olympic-national-park/tours/olympic-full-day-private-tour-hike-265766P14";
+export const ENGINE6_OLYMPIC_265766P23_PRODUCT_CODE = "265766P23";
+export const ENGINE6_OLYMPIC_265766P23_ROUTE =
+  "/destinations/washington/olympic-national-park/tours/olympic-full-day-small-group-tour-hike-265766P23";
+export const ENGINE6_OLYMPIC_265766P73_PRODUCT_CODE = "265766P73";
+export const ENGINE6_OLYMPIC_265766P73_ROUTE =
+  "/destinations/washington/olympic-national-park/tours/olympic-two-day-private-tour-and-hike-265766P73";
+export const ENGINE6_OLYMPIC_318681P15_PRODUCT_CODE = "318681P15";
+export const ENGINE6_OLYMPIC_318681P15_ROUTE =
+  "/destinations/washington/olympic-national-park/tours/explore-olympic-national-park-from-seattle-through-318681P15";
+export const ENGINE6_OLYMPIC_3657P1_PRODUCT_CODE = "3657P1";
+export const ENGINE6_OLYMPIC_3657P1_ROUTE =
+  "/destinations/washington/olympic-national-park/tours/olympic-national-park-day-tour-from-seattle-3657P1";
+export const ENGINE6_OLYMPIC_383259P1_PRODUCT_CODE = "383259P1";
+export const ENGINE6_OLYMPIC_383259P1_ROUTE =
+  "/destinations/washington/olympic-national-park/tours/experience-the-spectacular-beauty-of-the-olympic-p-383259P1";
+export const ENGINE6_OLYMPIC_5412OLYM_PRODUCT_CODE = "5412OLYM";
+export const ENGINE6_OLYMPIC_5412OLYM_ROUTE =
+  "/destinations/washington/olympic-national-park/tours/best-of-olympic-national-park-from-seattle-all-inc-5412OLYM";
+export const ENGINE6_OLYMPIC_5412P36_PRODUCT_CODE = "5412P36";
+export const ENGINE6_OLYMPIC_5412P36_ROUTE =
+  "/destinations/washington/olympic-national-park/tours/3-days-in-olympic-national-park-from-seattle-silen-5412P36";
+export const ENGINE6_OLYMPIC_5557524P1_PRODUCT_CODE = "5557524P1";
+export const ENGINE6_OLYMPIC_5557524P1_ROUTE =
+  "/destinations/washington/olympic-national-park/tours/seattle-rainforest-beach-and-olympic-national-park-5557524P1";
+export const ENGINE6_OLYMPIC_88081P1_PRODUCT_CODE = "88081P1";
+export const ENGINE6_OLYMPIC_88081P1_ROUTE =
+  "/destinations/washington/olympic-national-park/tours/sol-duc-lake-crescent-and-hurricane-ridge-guided-t-88081P1";
+export const ENGINE6_OLYMPIC_88081P2_PRODUCT_CODE = "88081P2";
+export const ENGINE6_OLYMPIC_88081P2_ROUTE =
+  "/destinations/washington/olympic-national-park/tours/half-day-guided-tour-of-olympic-national-park-88081P2";
+export const ENGINE6_OLYMPIC_88081P4_PRODUCT_CODE = "88081P4";
+export const ENGINE6_OLYMPIC_88081P4_ROUTE =
+  "/destinations/washington/olympic-national-park/tours/hoh-rain-forest-and-rialto-beach-guided-tour-in-ol-88081P4";
+
+export const ENGINE6_OLYMPIC_TOUR_PATH_PREFIX =
+  "/destinations/washington/olympic-national-park/tours/";
+
+export const isEngine6OlympicTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_OLYMPIC_TOUR_PATH_PREFIX);
+
 export const ENGINE6_GLACIER_HALF_DAY_WHITewater_PRODUCT_CODE = "123783P1";
 export const ENGINE6_GLACIER_HALF_DAY_WHITewater_ROUTE =
   "/destinations/montana/glacier-national-park/tours/half-day-whitewater-rafting-123783P1";
@@ -3500,6 +3549,62 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_ZION_163873P1_ROUTE,
     ENGINE6_ZION_163873P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OLYMPIC_132218P140_ROUTE,
+    ENGINE6_OLYMPIC_132218P140_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OLYMPIC_132218P405_ROUTE,
+    ENGINE6_OLYMPIC_132218P405_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OLYMPIC_265766P14_ROUTE,
+    ENGINE6_OLYMPIC_265766P14_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OLYMPIC_265766P23_ROUTE,
+    ENGINE6_OLYMPIC_265766P23_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OLYMPIC_265766P73_ROUTE,
+    ENGINE6_OLYMPIC_265766P73_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OLYMPIC_318681P15_ROUTE,
+    ENGINE6_OLYMPIC_318681P15_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OLYMPIC_3657P1_ROUTE,
+    ENGINE6_OLYMPIC_3657P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OLYMPIC_383259P1_ROUTE,
+    ENGINE6_OLYMPIC_383259P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OLYMPIC_5412OLYM_ROUTE,
+    ENGINE6_OLYMPIC_5412OLYM_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OLYMPIC_5412P36_ROUTE,
+    ENGINE6_OLYMPIC_5412P36_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OLYMPIC_5557524P1_ROUTE,
+    ENGINE6_OLYMPIC_5557524P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OLYMPIC_88081P1_ROUTE,
+    ENGINE6_OLYMPIC_88081P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OLYMPIC_88081P2_ROUTE,
+    ENGINE6_OLYMPIC_88081P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_OLYMPIC_88081P4_ROUTE,
+    ENGINE6_OLYMPIC_88081P4_PRODUCT_CODE,
   ],
   [
     ENGINE6_GLACIER_HALF_DAY_WHITewater_ROUTE,

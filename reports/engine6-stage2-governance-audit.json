@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T18:15:54.929Z",
+  "generatedAt": "2026-07-06T02:17:49.932Z",
   "governanceMode": "audit",
   "mode": "pr-scoped",
   "scopedProductCodes": [],
@@ -10,7 +10,7 @@
   "totals": {
     "blockingFindings": 0,
     "warningFindings": 0,
-    "legacyFindings": 1444,
+    "legacyFindings": 1445,
     "areasAudited": 12,
     "areasPassed": 12
   },
@@ -47,7 +47,7 @@
       "area": "description-title",
       "blockingCount": 0,
       "warningCount": 0,
-      "legacyCount": 49,
+      "legacyCount": 50,
       "pass": true
     },
     {
@@ -5863,6 +5863,12 @@
     },
     {
       "area": "description-title",
+      "productCode": "457279P1",
+      "message": "merchant feed description does not match governed editorial description",
+      "severity": "legacy"
+    },
+    {
+      "area": "description-title",
       "productCode": "194901P3",
       "message": "forbidden editorial template phrase detected in published description surface",
       "severity": "legacy"
@@ -8776,14 +8782,14 @@
     "credentialsRequired": false,
     "credentialsAvailable": false,
     "scopedProductCodes": [],
-    "validatedAt": "2026-07-05T18:15:49.640Z",
+    "validatedAt": "2026-07-06T02:17:38.427Z",
     "results": [],
     "failures": [],
     "blockingFailures": [],
     "legacyFailures": []
   },
   "merchantFeedImage": {
-    "imagesValidated": 513,
+    "imagesValidated": 569,
     "automaticallyRepaired": 3,
     "requiringFallback": 3,
     "unrecoverableFailures": 0,
@@ -8798,14 +8804,14 @@
         "status": 404
       },
       {
-        "productCode": "7011P8",
-        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/52/0f.jpg",
+        "productCode": "69029P14",
+        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/6d/d8.jpg",
         "reason": "http-error",
         "status": 404
       },
       {
-        "productCode": "69029P14",
-        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/6d/d8.jpg",
+        "productCode": "7011P8",
+        "invalidUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/24/52/0f.jpg",
         "reason": "http-error",
         "status": 404
       }
@@ -8821,7 +8827,7 @@
   "destinationInfrastructure": [],
   "paragonBuildScope": {
     "moduleId": "engine6-paragon-build-scope-governance",
-    "generatedAt": "2026-07-05T18:15:54.928Z",
+    "generatedAt": "2026-07-06T02:17:49.930Z",
     "pass": true,
     "branchScopedProductCodes": [],
     "blockedFiles": [],
@@ -8843,7 +8849,7 @@
       "stopped": false,
       "reason": null,
       "cycleCount": 0,
-      "elapsedMs": 0
+      "elapsedMs": 1
     },
     "idempotency": {
       "pass": true,

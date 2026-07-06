@@ -1,0 +1,125 @@
+{
+  "product": {
+    "productCode": "265766P73",
+    "productUrl": "https://www.viator.com/tours/Olympic-National-Park/Olympic-Two-Day-Private-Tour-and-Hike/d50807-265766P73",
+    "title": "Olympic Two Day Private Tour and Hike",
+    "description": {
+      "text": "Cover Olympic National Park across two private days with a naturalist guide who sequences rainforest trails, alpine ridge viewpoints, and wild Pacific beaches to your group's pace. Day one explores Hurricane Ridge and Lake Crescent while day two reaches the Hoh Rain Forest, Ruby Beach, and Kalaloch coastline."
+    },
+    "location": {
+      "city": "Olympic National Park",
+      "state": "Washington"
+    },
+    "duration": "2 days (approx.)",
+    "priceFrom": "From $1704.95",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 26
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/10/fc/9a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private two-day Olympic National Park hiking tour",
+      "Hurricane Ridge alpine views and Lake Crescent shoreline",
+      "Hoh Rain Forest and Ruby Beach coastal stops",
+      "Naturalist guide with flexible trail pacing",
+      "Transportation from select peninsula gateway towns"
+    ],
+    "logistics": {
+      "start": {
+        "description": "For North trips, transportation is included from Sequim, Port Angeles, Forks, La Push, Lake Crescent. For South trips, transportation is included from Lake Crescent, Forks, La Push, Lake Quinault."
+      },
+      "end": {
+        "description": "Return to the Olympic Hiking Co. meeting point at 720 Marine Drive, Port Angeles, WA 98363."
+      }
+    },
+    "itinerarySummary": "Cover Olympic National Park across two private days with a naturalist guide who sequences rainforest trails, alpine ridge viewpoints, and wild Pacific beaches to your group's pace.",
+    "itineraryItems": [
+      {
+        "title": "Hurricane Ridge",
+        "description": "Stop at Hurricane Ridge in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Crescent",
+        "description": "Stop at Lake Crescent in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sol Duc Falls",
+        "description": "Stop at Sol Duc Falls in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hoh Rain Forest",
+        "description": "Stop at Hoh Rain Forest in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ruby Beach",
+        "description": "Stop at Ruby Beach in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Big Cedar Tree Kalaloch",
+        "description": "Stop at Big Cedar Tree Kalaloch in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Air-conditioned vehicle",
+      "Private, medically trained, naturalist guide",
+      "Gratuity for guides - If you had a great day, a 10-20% tip is appreciated!",
+      "Accommodations"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Olympic Two Day Private Tour and Hike?",
+        "answer": "The planned duration is 2 days."
+      },
+      {
+        "question": "Where does the tour depart from in Olympic National Park?",
+        "answer": "For North trips, transportation is included from Sequim, Port Angeles, Forks, La Push, Lake Crescent. For South trips, transportation is included from Lake Crescent, Forks, La Push, Lake Quinault."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      },
+      {
+        "label": "Multi-day Tours"
+      },
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 1704.95
+      },
+      "currency": "USD"
+    }
+  }
+}

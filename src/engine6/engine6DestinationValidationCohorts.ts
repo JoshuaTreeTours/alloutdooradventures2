@@ -58,6 +58,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Olympic",
+      matches: tour =>
+        /\/olympic-national-park\//i.test(tour.canonicalPath) ||
+        /\bolympic national park\b/i.test(tour.city),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Glacier",
       matches: tour =>
         /\/glacier-national-park\//i.test(tour.canonicalPath) ||

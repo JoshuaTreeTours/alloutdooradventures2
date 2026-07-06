@@ -1,0 +1,122 @@
+{
+  "product": {
+    "productCode": "383259P1",
+    "productUrl": "https://www.viator.com/tours/Seattle/Olympic-Peninsula-Experience-the-spectacular-beauty-of-the-Pacific-Coastline/d704-383259P1",
+    "title": "Experience the Spectacular Beauty of the Olympic Peninsula",
+    "description": {
+      "text": "Experience the splendor of the Olympic Peninsula, the spectacular views of the steep rugged cliffs, the jade waters of the Pacific Ocean and the diverse and dramatic rain forest. Explore tide pools along the coastal beaches, walk among old-growth forest, roam atop mountain ridges with breathtaking views and stand by glacier-fed rivers and lakes. The tour begins on a leisurely ferry boat ride over the Puget Sound to the Olympic Peninsula."
+    },
+    "location": {
+      "city": "Olympic National Park",
+      "state": "Washington"
+    },
+    "duration": "13 to 14 hours",
+    "priceFrom": "From $975.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/08/f2/82.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Ferry ride across Puget Sound with views of Seattle and Mt. Rainier",
+      "Visit Hurricane Ridge, Lake Crescent, Sol Duc Valley, and Salt Creek",
+      "Explore tide pools, old-growth forest, and mountain viewpoints",
+      "Private group tour priced per group"
+    ],
+    "logistics": {
+      "start": {
+        "description": "801 Alaskan Wy, Seattle, WA 98104, USA"
+      },
+      "end": {
+        "description": "Return to your Seattle pickup location after the final Olympic National Park stop."
+      }
+    },
+    "itinerarySummary": "Experience the splendor of the Olympic Peninsula, the spectacular views of the steep rugged cliffs, the jade waters of the Pacific Ocean and the diverse and dramatic rain forest.",
+    "itineraryItems": [
+      {
+        "title": "Bainbridge Island Ferry",
+        "description": "Stop at Bainbridge Island Ferry in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hood Canal Floating Bridge",
+        "description": "Pass Hood Canal Floating Bridge along the Olympic National Park route with guide commentary on the surrounding landscape.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Sol Duc Valley",
+        "description": "Stop at Sol Duc Valley in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Salt Creek Recreation Area",
+        "description": "Stop at Salt Creek Recreation Area in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hurricane Ridge",
+        "description": "Stop at Hurricane Ridge in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Port Angeles",
+        "description": "Pass Port Angeles along the Olympic National Park route with guide commentary on the surrounding landscape.",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Park entrance fees",
+      "Transportation"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Experience the Spectacular Beauty of the Olympic Peninsula?",
+        "answer": "The planned duration is 13 to 14 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Olympic National Park?",
+        "answer": "801 Alaskan Wy, Seattle, WA 98104, USA"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 975
+      },
+      "currency": "USD"
+    }
+  }
+}

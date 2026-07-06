@@ -1,0 +1,122 @@
+{
+  "product": {
+    "productCode": "265766P23",
+    "productUrl": "https://www.viator.com/tours/Olympic-National-Park/Small-Group-Hiking-Tour-of-Olympic-National-Park-West-Peninsula/d50807-265766P23",
+    "title": "Olympic Full Day Small Group Tour & Hike",
+    "description": {
+      "text": "Take a tour that lets you immerse yourself in the park. Our guides are master naturalists, botanists, geologists, historians, and - most importantly - relentlessly curious! Today, you’ll head to the coast for a visit to stunning destinations including the Kalaloch beaches and then the Hoh rainforest."
+    },
+    "location": {
+      "city": "Olympic National Park",
+      "state": "Washington"
+    },
+    "duration": "6 to 8 hours (approx.)",
+    "priceFrom": "From $396.50",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 11
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/1d/5f/04.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit Rialto Beach in Olympic National Park",
+      "Visit Hoh Rain Forest in Olympic National Park",
+      "Visit Sol Duc Falls in Olympic National Park",
+      "Visit Big Cedar Tree Kalaloch in Olympic National Park",
+      "Visit Lake Crescent in Olympic National Park"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Forks Transit Center & Reststop161 East E Street, Forks, WA 98331, USAOpen in Google MapsMeet at the Park and Ride in Forks by the Forks Transit Center. You'll be able to leave your vehicle here and join us in our large tour van for the day. You'll be returned to your car by about 3-4 PM."
+      },
+      "end": {
+        "description": "Return to the Forks Transit Center Park and Ride by late afternoon."
+      }
+    },
+    "itinerarySummary": "Take a tour that lets you immerse yourself in the park.",
+    "itineraryItems": [
+      {
+        "title": "Rialto Beach",
+        "description": "Stop at Rialto Beach in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hoh Rain Forest",
+        "description": "Stop at Hoh Rain Forest in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sol Duc Falls",
+        "description": "Stop at Sol Duc Falls in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Big Cedar Tree Kalaloch",
+        "description": "Stop at Big Cedar Tree Kalaloch in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Crescent",
+        "description": "Stop at Lake Crescent in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Snacks We’ll have snacks and a selection of beverages available, but feel free to bring along any personal favorites you might crave during the day.",
+      "Private transportation",
+      "Air-conditioned vehicle",
+      "Park entry fees",
+      "Medically trained, naturalist guide",
+      "Lunch Please pack a lunch to bring with you. Your guide will choose the perfect spot for a scenic picnic.",
+      "Gratuity for guides - If you had a great day, a 10-20% tip is appreciated!"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Olympic Full Day Small Group Tour & Hike?",
+        "answer": "The planned duration is 6 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Olympic National Park?",
+        "answer": "Forks Transit Center & Reststop161 East E Street, Forks, WA 98331, USAOpen in Google MapsMeet at the Park and Ride in Forks by the Forks Transit Center. You'll be able to leave your vehicle here and join us in our large tour van for the day. You'll be returned to your car by about 3-4 PM."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      },
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Bus Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 396.5
+      },
+      "currency": "USD"
+    }
+  }
+}

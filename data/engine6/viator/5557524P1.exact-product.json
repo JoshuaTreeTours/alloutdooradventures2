@@ -1,0 +1,122 @@
+{
+  "product": {
+    "productCode": "5557524P1",
+    "productUrl": "https://www.viator.com/tours/Seattle/Olympic-National-Park-Highlight-Tour/d704-5557524P1",
+    "title": "Seattle: Rainforest, Beach, and Olympic National Park Highlights",
+    "description": {
+      "text": "A Full-Day Rainforest and beach adventure from Seattle. Explore Washington's Olympic Peninsula with a friendly local guide. We ensure you get many photo spots! We are the only single day tour from Seattle that takes you into the best rainforest and beach spots on the peninsula."
+    },
+    "location": {
+      "city": "Olympic National Park",
+      "state": "Washington"
+    },
+    "duration": "12 hours 30 minutes (approx.)",
+    "priceFrom": "From $285.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 84
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/82/ba/c8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit Aberdeen in Olympic National Park",
+      "Visit Quinault Rain Forest in Olympic National Park",
+      "Visit Ruby Beach in Olympic National Park",
+      "Visit Hoh Rain Forest in Olympic National Park",
+      "Visit Forks in Olympic National Park"
+    ],
+    "logistics": {
+      "start": {
+        "description": "We can pick you up at The Westin Hotel at 1900 5th Ave."
+      },
+      "end": {
+        "description": "Return to your confirmed Olympic National Park gateway meeting point after the final stop."
+      }
+    },
+    "itinerarySummary": "A Full-Day Rainforest and beach adventure from Seattle.",
+    "itineraryItems": [
+      {
+        "title": "Aberdeen",
+        "description": "Stop at Aberdeen in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Quinault Rain Forest",
+        "description": "Stop at Quinault Rain Forest in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ruby Beach",
+        "description": "Stop at Ruby Beach in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hoh Rain Forest",
+        "description": "Stop at Hoh Rain Forest in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Forks",
+        "description": "Stop at Forks in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Crescent",
+        "description": "Stop at Lake Crescent in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Snacks include: craft chocolate bars, almonds, pistachios, water, and drinks",
+      "Lunch"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Seattle: Rainforest, Beach, and Olympic National Park Highlights?",
+        "answer": "The planned duration is 12 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Olympic National Park?",
+        "answer": "We can pick you up at The Westin Hotel at 1900 5th Ave."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 285
+      },
+      "currency": "USD"
+    }
+  }
+}

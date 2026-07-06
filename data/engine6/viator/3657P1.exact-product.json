@@ -1,0 +1,128 @@
+{
+  "product": {
+    "productCode": "3657P1",
+    "productUrl": "https://www.viator.com/tours/Seattle/Olympic-National-Park-tour/d704-3657P1",
+    "title": "Olympic National Park Day Tour from Seattle",
+    "description": {
+      "text": "Cover the highlights of Olympic National Park in one day, without having to rent a car, on this tour from Seattle, which mixes car and ferry transport and about six miles (9.6 km) of hiking. Visit different ecosystems, including meadows, a temperate rainforest, and a subalpine forest, with time leftover to visit the Pacific Ocean."
+    },
+    "location": {
+      "city": "Olympic National Park",
+      "state": "Washington"
+    },
+    "duration": "13 hours (approx.)",
+    "priceFrom": "From $239.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 372
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/ef/b2/71.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Perfect for nature lovers who want to get beyond Seattle without driving",
+      "Pickup from select hotels and ferry tickets are included",
+      "See the highlights of Olympic National Park without needing a car",
+      "Stay refreshed with free soft drinks"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Please contact Customized Tours to confirm your selected hotel location is within our pick up zone to receive an accurate pick up time."
+      },
+      "end": {
+        "description": "Return to your confirmed Olympic National Park gateway meeting point after the final stop."
+      }
+    },
+    "itinerarySummary": "Cover the highlights of Olympic National Park in one day, without having to rent a car, on this tour from Seattle, which mixes car and ferry transport and about six miles (9.",
+    "itineraryItems": [
+      {
+        "title": "Seattle",
+        "description": "Pass Seattle along the Olympic National Park route with guide commentary on the surrounding landscape.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Washington State Ferries",
+        "description": "Stop at Washington State Ferries in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bainbridge Island",
+        "description": "Pass Bainbridge Island along the Olympic National Park route with guide commentary on the surrounding landscape.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Port Gamble",
+        "description": "Pass Port Gamble along the Olympic National Park route with guide commentary on the surrounding landscape.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Hood Canal Floating Bridge",
+        "description": "Pass Hood Canal Floating Bridge along the Olympic National Park route with guide commentary on the surrounding landscape.",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Jamestown S'Klallam Reservation",
+        "description": "Stop at Jamestown S'Klallam Reservation in Olympic National Park for guided time, photos, and short hikes when conditions allow.",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Air-conditioned vehicle",
+      "Landing and facility fees",
+      "Ferry Rides",
+      "Soda/Pop Water, soda, and sometimes beer are included in cooler complementary",
+      "Private transportation",
+      "Our phone lines are attended by a live Representative during Business hours",
+      "Lunch Pricing will vary depending on what you choose",
+      "Breakfast",
+      "Gratuities"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Olympic National Park Day Tour from Seattle?",
+        "answer": "The planned duration is 13 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Olympic National Park?",
+        "answer": "Please contact Customized Tours to confirm your selected hotel location is within our pick up zone to receive an accurate pick up time."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 239
+      },
+      "currency": "USD"
+    }
+  }
+}
