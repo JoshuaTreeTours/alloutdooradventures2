@@ -104,6 +104,42 @@ const ENGINE6_OVERVIEW_FIRST_DESCRIPTION_CITIES = new Set([
 const normalizeDescriptionSource = (value?: string | null) =>
   value?.trim().replace(/\s+/g, " ") ?? "";
 
+const polishEngine6FinalDescriptionText = (value: string) =>
+  value
+    .replace(
+      /\b(?:PLEASE NOTE:|Please call our office|If your contact number is international|If you are a single traveler|Children under|Although we offer dry bags|Items that must stay dry|Sun Screen|A hat with a brim|Sunglasses with a neck strap|1-quart|Wet shoes|Swim suit|Sweatshirt|A beach towel|Waterproof camera|Polyester shirt|Double kayaks|Guests under 18|If you need this paperwork|Santa Barbara Adventure Company|Channel Islands Adventure Company|805-884-WAVE|Minimum numbers apply|Our kayak tours require|There is a possibility of cancellation|In the event of this occurring|We cannot board passengers|This includes braces|All participants MUST be able to swim)[^.]*\.(?:\s|$)/gi,
+      ""
+    )
+    .replace(
+      /\b(Service animals allowed|Public transportation options are available nearby|Not recommended for pregnant travelers|Infants and small children can ride in a pram or stroller)(?:\s+and\s+|,\s*and\s+|,\s*)?/gi,
+      ""
+    )
+    .replace(
+      /\bThe outing keeps focus on place, route structure, and destination context rather than meeting or pickup logistics\.?/gi,
+      "The experience emphasizes the setting, route, and destination context."
+    )
+    .replace(/\btravelers day\b/gi, "your day")
+    .replace(/\btravelers planning\b/gi, "visitors planning")
+    .replace(/\btravelers ([a-z])/gi, "your $1")
+    .replace(/\bThe outing fun\b/gi, "The outing is fun")
+    .replace(/\bguests guests\b/gi, "guests")
+    .replace(/\bwith\s+,\s*/gi, "with ")
+    .replace(/,\s+on a guided city circuit/g, " on a guided city circuit")
+    .replace(/\b(?:and|or)\s+and\b/gi, "and")
+    .replace(/\b(?:The route connects|Landmarks along the route include|The route tracks)\s*(?:\.|along the shoreline\.)/gi, "")
+    .replace(/\bThe route connects\s+(?=The experience)/gi, "")
+    .replace(/\bThe route connects\s+([^.]+),\s+and\s+the route\b/gi, "The route connects $1 and follows the route")
+    .replace(/\bThe route connects\s+the route\b/gi, "Follow the route")
+    .replace(/\.\s+the route\b/g, ". Follow the route")
+    .replace(/\bPlan on ([^.]+) for the outing\. Plan on \1 for the outing\./gi, "Plan on $1 for the outing.")
+    .replace(/\b(Plan on ([^.]+) for the outing\..*) Plan on \2 for the outing\./gi, "$1")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .replace(/,\s*,+/g, ",")
+    .replace(/\s+/g, " ")
+    .replace(/\s+\./g, ".")
+    .replace(/\.\s*\./g, ".")
+    .trim();
+
 const hasUsableEngine6OverviewFirstDescription = (tour: Engine6Tour) => {
   if (!ENGINE6_OVERVIEW_FIRST_DESCRIPTION_CITIES.has(tour.city)) {
     return false;
@@ -133,16 +169,22 @@ export const resolveEngine6GovernedProductDescription = (
     tour.productCode
   );
   if (targetedNarrative) {
-    return ensureEngine6EditorialLength(tour, targetedNarrative);
+    return polishEngine6FinalDescriptionText(
+      ensureEngine6EditorialLength(tour, targetedNarrative)
+    );
   }
 
   if (hasUsableEngine6OverviewFirstDescription(tour)) {
-    return ensureEngine6EditorialLength(tour, tour.description);
+    return polishEngine6FinalDescriptionText(
+      ensureEngine6EditorialLength(tour, tour.description)
+    );
   }
 
-  return ensureEngine6EditorialLength(
-    tour,
-    buildEngine6PremiumEditorialDescriptionFromTour(tour)
+  return polishEngine6FinalDescriptionText(
+    ensureEngine6EditorialLength(
+      tour,
+      buildEngine6PremiumEditorialDescriptionFromTour(tour)
+    )
   );
 };
 
