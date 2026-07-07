@@ -19,6 +19,7 @@ import {
   inferEngine6CommercialTier,
   isEngine6ProductSelectionBlocklisted,
   resolveEngine6ProductSelectionCommercialFieldGap,
+  resolveEngine6SupernaturalEditorialExclusion,
   selectEngine6DestinationPortfolio,
 } from "./engine6ProductSelectionGovernance";
 import type { Engine6LiveViatorValidationResult } from "./engine6LiveViatorProductionValidation";
@@ -286,6 +287,57 @@ describe("engine6ProductSelectionGovernance", () => {
         accepted: report.accepted,
       }).premiumCount
     ).toBe(1);
+  });
+
+
+  it("rejects supernatural products during selection before live validation", async () => {
+    const report = await selectEngine6DestinationPortfolio({
+      destinationLabel: "Boston",
+      mode: "strict",
+      scopedProductCodes: [],
+      slots: [
+        {
+          experienceType: "walking-tour",
+          desiredCount: 1,
+          candidates: [
+            {
+              productCode: "GHOSTP1",
+              sourceUrl: "https://www.viator.com/tours/Boston/d678-GHOSTP1",
+              title: "Boston Ghosts and Gravestones Trolley Tour",
+              experienceType: "walking-tour",
+              priceFrom: 49,
+              priority: 1,
+            },
+          ],
+        },
+      ],
+      validateCandidate: async () => {
+        throw new Error("live validation should not run for editorial exclusions");
+      },
+    });
+
+    expect(
+      resolveEngine6SupernaturalEditorialExclusion({
+        title: "Salem Witch Trials Walking Tour",
+        experienceType: "walking-tour",
+      })
+    ).toBe("editorial_exclusion_supernatural");
+    expect(report.productsAccepted).toBe(0);
+    expect(report.productsRejected).toBe(1);
+    expect(report.rejected[0]?.reason).toBe(
+      "editorial_exclusion_supernatural"
+    );
+    expect(report.rejected[0]?.detail).toBe(
+      "editorial_exclusion_supernatural"
+    );
+    expect(report.remainingQualifiedCandidates).toEqual([]);
+    expect(report.unfilledSlots).toEqual([
+      {
+        experienceType: "walking-tour",
+        desiredCount: 1,
+        acceptedCount: 0,
+      },
+    ]);
   });
 
   it("rejects blocklisted products before live validation", async () => {

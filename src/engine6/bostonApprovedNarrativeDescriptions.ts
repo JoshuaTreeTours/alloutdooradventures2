@@ -14,12 +14,9 @@ export const BOSTON_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "343490P3",
   "400049P5",
   "3978TOUR2",
-  "5046BOS_GG",
   "3283CODZILLA",
-  "7167P80",
   "5042BOSDIN",
   "5151BOSCY014",
-  "66192P8",
   "255730P225",
 ] as const;
 
@@ -60,18 +57,12 @@ export const BOSTON_TARGETED_NARRATIVE_DESCRIPTIONS: Record<
     "Trace the opening shots of the American Revolution on a private day trip from Boston to Lexington and Concord tailored to your party. Stops include Lexington Battle Green, Minute Man National Historical Park, Old North Bridge, Concord Museum, and Sleepy Hollow Cemetery with a private driver-guide coordinating timing and narrating the April 1775 story at each site. Round-trip private transport keeps the full-day route focused on battlefield landscapes rather than rental-car navigation. Plan on 8 hours (approx.) for the outing.",
   "3978TOUR2":
     "Follow Paul Revere's midnight ride and the Battle Road Trail on a half-day American history bus tour from Boston to Cambridge, Lexington, and Concord. Visit Lexington Battle Green, Minute Man National Historical Park, Old North Bridge, and Harvard Square with round-trip coach transportation and expert narration connecting Revolutionary and literary history. Wheelchair-accessible coach with lavatory included. Plan on 5 hours (approx.) for the outing.",
-  "5046BOS_GG":
-    "Explore Boston's haunted history on a Ghosts and Gravestones trolley tour led by costumed grave-digger guides after dark. The route rolls past Long Wharf, Granary Burying Ground, Copp's Hill Burying Ground, the North End, and Boston Tea Party Ships & Museum with theatrical storytelling tied to each stop. Ghost-themed trolley commentary and two colonial burying grounds anchor this evening outing for travelers who want history with a darker edge. Plan on 2 hours (approx.) for the outing.",
   "3283CODZILLA":
     "Hold on for a high-speed thrill ride aboard Codzilla, Boston Harbor's jet-powered boat departing from Long Wharf. The 45-minute run combines sharp turns and splash zones on Boston Harbor with pass-by views of USS Constitution and the downtown skyline from the water. Narrated onboard show elements and soundtrack keep the pace energetic for families and adrenaline seekers who want harbor scenery without a slow sightseeing cruise. Plan on 45 minutes (approx.) for the outing.",
-  "7167P80":
-    "Day-trip from Boston to Salem on a small-group tour with round-trip ferry tickets and a guided walking route through witch-trial landmarks. Visit the Salem Witch Museum or Real Pirates Salem depending on the day, then explore Derby Street, memorial sites, and waterfront districts with free time before returning to Boston Harbor. Ferry transit replaces highway driving for a scenic North Shore outing. Plan on 8 hours 30 minutes (approx.) for the outing.",
   "5042BOSDIN":
     "Dine aboard the Odyssey on a Boston Harbor premier dinner cruise with skyline views and live DJ entertainment departing Rowes Wharf. The plated dinner service unfolds as you pass Boston Light, Charlestown Navy Yard, Castle Island, and the Leonard P. Zakim Bunker Hill Bridge on a two- to three-hour harbor loop. Evening format pairs waterfront scenery with a sit-down meal rather than a quick sightseeing-only run. Plan on 2 to 3 hours (approx.) for the outing.",
   "5151BOSCY014":
     "Cycle Boston's landmarks on a guided city-view bike tour through the North End, Beacon Hill, Charles River Esplanade, Fenway Park, and Copley Square. Bike and helmet rental, plus a professional guide, keep the two-and-a-half-hour route paced for neighborhood context and photo stops without racing between districts. The format covers more ground than a walking tour while staying on dedicated bike paths and quieter streets where possible. Plan on 2 hours 30 minutes (approx.) for the outing.",
-  "66192P8":
-    "Visit Salem's witch museums and waterfront on a small-group day trip from Boston with hotel pickup and museum admissions included. Stops include Salem Witch Museum, House of the Seven Gables, Salem Trolley, Pickering Wharf, and Essex Street Pedestrian Mall with a professional guide coordinating timing across exhibits and harbor walks. The eight- to nine-hour format suits travelers who want a full Salem immersion without self-driving or separate ticket lines. Plan on 8 to 9 hours (approx.) for the outing.",
   "255730P225":
     "Explore Salem and Cape Ann on a private day trip from Boston tailored to your party with a professional guide and private air-conditioned vehicle. The six-hour route connects Salem, Cape Ann, and Gloucester Harbor with flexible pacing for waterfront photos, seaside towns, and North Shore viewpoints. Private format keeps Salem witch-history stops and rocky-coast scenery in one coordinated itinerary without sharing a bus schedule. Plan on 6 hours (approx.) for the outing.",
 };
