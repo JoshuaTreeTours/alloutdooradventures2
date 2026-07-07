@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-07-07T00:18:59.049Z",
+  "merchantFeedPath": "data/merchantFeed.csv",
+  "commercialSnapshotPath": "data/merchantFeed-commercial-snapshot.json",
+  "commercialSnapshotGeneratedAt": "2026-07-07T00:16:33.155Z",
+  "report": {
+    "totalRowsAudited": 589,
+    "priceMismatches": 0,
+    "ratingMismatches": 0,
+    "reviewCountMismatches": 0,
+    "pass": true,
+    "failures": [],
+    "examples": []
+  },
+  "blankRequiredFieldRows": 0,
+  "sourceUsedByMerchantCsv": "shared Engine6 commercial resolver via buildMerchantFeedRowFromProductSchema",
+  "sourceUsedByLivePages": "shared Engine6 commercial resolver before Product JSON-LD rendering",
+  "recommendedRemediation": "Use one shared commercial resolver for page rendering and merchant feed generation; refresh every build when possible, otherwise enforce a 2-7 day cadence with explicit staleness detection."
+}

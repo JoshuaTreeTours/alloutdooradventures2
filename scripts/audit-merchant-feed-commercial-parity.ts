@@ -1,18 +1,67 @@
-import { readFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-import { resolveEngine6ToursForProductSchema } from "../src/engine6/fetchEngine6LiveCommercialFieldsForSchema";
+import {
+  MERCHANT_FEED_COMMERCIAL_SNAPSHOT_PATH,
+  resolveToursWithMerchantFeedCommercialSnapshot,
+  type MerchantFeedCommercialSnapshot,
+} from "../src/engine6/merchantFeedCommercialSnapshot";
 import {
   auditEngine6MerchantFeedCommercialParity,
   formatMerchantFeedCommercialParityAuditReport,
 } from "../src/engine6/merchantFeedParity";
-import { engine6ResolvedTours } from "../src/engine6/registry";
 import {
-  countMerchantFeedBlankFields,
-  validateMerchantFeedRows,
-} from "./generate-merchant-feed";
+  assessMerchantCommercialRefreshStaleness,
+  buildMerchantCommercialRefreshMetadata,
+  MERCHANT_COMMERCIAL_REFRESH_METADATA_PATH,
+  type MerchantCommercialRefreshMetadata,
+} from "../src/engine6/merchantCommercialRefreshMetadata";
+import { engine6ResolvedTours } from "../src/engine6/registry";
+import { validateMerchantFeedRows } from "./generate-merchant-feed";
 
 const OUTPUT_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
+const COMMERCIAL_SNAPSHOT_PATH = path.resolve(
+  process.cwd(),
+  MERCHANT_FEED_COMMERCIAL_SNAPSHOT_PATH
+);
+const REPORT_DIR = path.resolve(process.cwd(), "reports");
+const REPORT_MD_PATH = path.join(
+  REPORT_DIR,
+  "engine6-merchant-commercial-parity-audit.md"
+);
+const REPORT_JSON_PATH = path.join(
+  REPORT_DIR,
+  "engine6-merchant-commercial-parity-audit.json"
+);
+const REFRESH_METADATA_PATH = path.resolve(
+  process.cwd(),
+  MERCHANT_COMMERCIAL_REFRESH_METADATA_PATH
+);
+
+const readRefreshMetadata = async () => {
+  try {
+    return JSON.parse(
+      await readFile(REFRESH_METADATA_PATH, "utf8")
+    ) as MerchantCommercialRefreshMetadata;
+  } catch {
+    return null;
+  }
+};
+
+const readCommercialSnapshot = async () =>
+  JSON.parse(
+    await readFile(COMMERCIAL_SNAPSHOT_PATH, "utf8")
+  ) as MerchantFeedCommercialSnapshot;
+
+const writeRefreshMetadata = async () => {
+  await mkdir(path.dirname(REFRESH_METADATA_PATH), { recursive: true });
+  const metadata = buildMerchantCommercialRefreshMetadata();
+  await writeFile(
+    REFRESH_METADATA_PATH,
+    `${JSON.stringify(metadata, null, 2)}\n`
+  );
+  return metadata;
+};
 
 const parseCsv = (content: string) => {
   const rows: string[][] = [];
@@ -60,12 +109,21 @@ const parseCsv = (content: string) => {
   const [headers = [], ...bodyRows] = rows.filter(
     candidate => candidate.length > 1
   );
-  return bodyRows.map(values => Object.fromEntries(
-    headers.map((header, index) => [header, values[index] ?? ""])
-  ));
+  return bodyRows.map(values =>
+    Object.fromEntries(
+      headers.map((header, index) => [header, values[index] ?? ""])
+    )
+  );
 };
 
 const main = async () => {
+  const previousMetadata = await readRefreshMetadata();
+  const previousStaleness =
+    assessMerchantCommercialRefreshStaleness(previousMetadata);
+  if (!previousStaleness.pass) {
+    console.warn(`[merchant-commercial-refresh] ${previousStaleness.message}`);
+  }
+
   const csvContent = await readFile(OUTPUT_PATH, "utf8");
   const csvRows = parseCsv(csvContent);
   const validation = validateMerchantFeedRows(
@@ -85,18 +143,63 @@ const main = async () => {
     }))
   );
 
-  const schemaResolvedTours = await resolveEngine6ToursForProductSchema(
-    engine6ResolvedTours
+  const commercialSnapshot = await readCommercialSnapshot();
+  const schemaResolvedTours = resolveToursWithMerchantFeedCommercialSnapshot(
+    engine6ResolvedTours,
+    commercialSnapshot
   );
   const audit = auditEngine6MerchantFeedCommercialParity(
     schemaResolvedTours,
     new Map(csvRows.map(row => [row.id ?? "", row]))
   );
 
-  console.log(
-    formatMerchantFeedCommercialParityAuditReport(
-      audit,
-      validation.report.blankRequiredFieldRows
+  const generatedAt = new Date().toISOString();
+  const formattedReport = formatMerchantFeedCommercialParityAuditReport(
+    audit,
+    validation.report.blankRequiredFieldRows
+  );
+
+  await mkdir(REPORT_DIR, { recursive: true });
+  await writeFile(
+    REPORT_MD_PATH,
+    [
+      `# Engine6 Merchant Commercial Parity Audit`,
+      ``,
+      `Generated at: ${generatedAt}`,
+      `Commercial snapshot generated at: ${commercialSnapshot.generatedAt}`,
+      ``,
+      formattedReport,
+      ``,
+      `## Scheduled refresh`,
+      ``,
+      `Vercel Cron invokes \`/api/cron/merchant-commercial-refresh\` every Monday at 09:00 UTC (\`0 9 * * 1\`). The cron handler calls the deploy hook configured in \`MERCHANT_FEED_REFRESH_DEPLOY_HOOK_URL\`; that deploy runs the normal production build, regenerates \`data/merchantFeed.csv\`, runs this merchant commercial parity audit, and records \`data/merchantFeed-commercial-refresh-metadata.json\` only after the audit succeeds.`,
+      ``,
+      `Verify scheduled refresh health in Vercel Cron logs, the follow-on deployment logs, and \`data/merchantFeed-commercial-refresh-metadata.json\`, whose \`lastSuccessfulCommercialRefreshAt\` must be no older than 7 days.`,
+      ``,
+    ].join("\n")
+  );
+  await writeFile(
+    REPORT_JSON_PATH,
+    JSON.stringify(
+      {
+        generatedAt,
+        merchantFeedPath: path.relative(process.cwd(), OUTPUT_PATH),
+        commercialSnapshotPath: path.relative(
+          process.cwd(),
+          COMMERCIAL_SNAPSHOT_PATH
+        ),
+        commercialSnapshotGeneratedAt: commercialSnapshot.generatedAt,
+        report: audit,
+        blankRequiredFieldRows: validation.report.blankRequiredFieldRows,
+        sourceUsedByMerchantCsv:
+          "shared Engine6 commercial resolver via buildMerchantFeedRowFromProductSchema",
+        sourceUsedByLivePages:
+          "shared Engine6 commercial resolver before Product JSON-LD rendering",
+        recommendedRemediation:
+          "Use one shared commercial resolver for page rendering and merchant feed generation; refresh every build when possible, otherwise enforce a 2-7 day cadence with explicit staleness detection.",
+      },
+      null,
+      2
     )
   );
 
@@ -109,6 +212,13 @@ const main = async () => {
     }
     process.exit(1);
   }
+
+  const refreshMetadata = await writeRefreshMetadata();
+  console.log(formattedReport);
+  console.log(`Wrote ${path.relative(process.cwd(), REPORT_MD_PATH)}`);
+  console.log(
+    `Recorded merchant commercial refresh metadata at ${refreshMetadata.lastSuccessfulCommercialRefreshAt}`
+  );
 };
 
 if (process.argv[1]?.includes("audit-merchant-feed-commercial-parity")) {

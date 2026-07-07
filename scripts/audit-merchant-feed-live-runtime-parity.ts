@@ -33,7 +33,7 @@ export type MerchantFeedLiveRuntimeParityReport = {
     productCode: string;
     title: string;
     csv: { price: string; rating: string; reviews: string };
-    liveJsonLd: { price: string; rating: string; reviews: string };
+    liveJsonLd: { price: string; averageRating: string; reviewCount: string };
     priceDrift: boolean;
     ratingDrift: boolean;
     reviewCountDrift: boolean;

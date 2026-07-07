@@ -16,12 +16,8 @@ import {
   applyMerchantFeedChangeScopePreservingNonCommercial,
   type MerchantFeedCsvRow,
 } from "../api/engine6/merchantFeedChangeScopeGovernance";
-import {
-  formatMerchantFeedCommercialRefreshAuditReport,
-} from "../api/engine6/merchantFeedCommercialRefreshGovernance";
-import {
-  applyMerchantFeedCommercialRefresh,
-} from "../api/engine6/runMerchantFeedCommercialBackfill";
+import { formatMerchantFeedCommercialRefreshAuditReport } from "../api/engine6/merchantFeedCommercialRefreshGovernance";
+import { applyMerchantFeedCommercialRefresh } from "../api/engine6/runMerchantFeedCommercialBackfill";
 import {
   diagnoseEngine6ViatorProductCommercialExtract,
   describeViatorApiConfigEnvVisibility,
@@ -38,12 +34,16 @@ import {
   formatMerchantFeedCommercialParityAuditReport,
 } from "../src/engine6/merchantFeedParity";
 import {
+  buildMerchantFeedCommercialSnapshot,
+  MERCHANT_FEED_COMMERCIAL_SNAPSHOT_PATH,
+} from "../src/engine6/merchantFeedCommercialSnapshot";
+import {
   fetchEngine6LiveCommercialFieldsForSchema,
   requireLiveMerchantCommercial,
   resolveEngine6ToursForProductSchema,
 } from "../src/engine6/fetchEngine6LiveCommercialFieldsForSchema";
-import { resolveEngine6TourForProductSchema } from "../src/engine6/resolveEngine6TourForProductSchema";
 import { merchantFeedEligibleTours } from "../src/engine6/merchantFeedEligibility";
+import { resolveEngine6ToursWithCommercialSource } from "../src/engine6/commercialResolver";
 import { engine6ResolvedTours } from "../src/engine6/registry";
 import type { Engine6Tour } from "../src/engine6/types";
 import {
@@ -55,6 +55,10 @@ import {
 const OUTPUT_PATH = path.resolve(
   process.cwd(),
   process.env.MERCHANT_FEED_OUTPUT_PATH ?? "data/merchantFeed.csv"
+);
+const COMMERCIAL_SNAPSHOT_PATH = path.resolve(
+  process.cwd(),
+  MERCHANT_FEED_COMMERCIAL_SNAPSHOT_PATH
 );
 
 const OUTPUT_HEADERS = [
@@ -478,17 +482,37 @@ const resolveToursForMerchantFeedGeneration = async (
   const runtimeBaseUrl = resolveRuntimeCommercialBaseUrl();
 
   if (!apiKey && runtimeBaseUrl) {
-    return Promise.all(
-      tours.map(async tour => {
-        const liveFields = await fetchEngine6LiveCommercialFieldsForSchema(
-          tour.productCode
-        );
-        return resolveEngine6TourForProductSchema(tour, liveFields);
-      })
-    );
+    return resolveEngine6ToursWithCommercialSource(tours);
   }
 
   return resolveEngine6ToursForProductSchema(tours);
+};
+
+const applyRuntimeResolvedCommercialFields = (
+  rows: MerchantRow[],
+  generatedRows: MerchantRow[]
+): MerchantRow[] => {
+  const generatedRowsByProductCode = new Map(
+    generatedRows.map(row => [row.id.trim().toUpperCase(), row])
+  );
+
+  return rows.map(row => {
+    const generatedRow = generatedRowsByProductCode.get(
+      row.id.trim().toUpperCase()
+    );
+
+    if (!generatedRow) {
+      return row;
+    }
+
+    return {
+      ...row,
+      price: generatedRow.price,
+      average_rating: generatedRow.average_rating,
+      rating_count: generatedRow.rating_count,
+      review_count: generatedRow.review_count,
+    };
+  });
 };
 
 const main = async () => {
@@ -577,8 +601,18 @@ const main = async () => {
     );
   }
 
+  const { apiKey } = resolveViatorApiConfig();
+  const runtimeBaseUrl = resolveRuntimeCommercialBaseUrl();
+  const rowsForCommercialRefresh =
+    !apiKey && runtimeBaseUrl
+      ? applyRuntimeResolvedCommercialFields(
+          changeScope.rows as MerchantRow[],
+          generatedRows
+        )
+      : (changeScope.rows as MerchantRow[]);
+
   const commercialRefresh = await applyMerchantFeedCommercialRefresh({
-    rows: changeScope.rows as MerchantFeedCsvRow[],
+    rows: rowsForCommercialRefresh as MerchantFeedCsvRow[],
     baselineRows: existingRows as MerchantFeedCsvRow[],
     mode: "generation",
   });
@@ -691,14 +725,14 @@ const main = async () => {
         reconciliation.governanceByProductCode,
         imageGovernance.report.failures.map(failure => failure.productCode)
       ),
-      failureObjects: imageGovernance.report.failures.slice(0, 5).map(
-        failure => ({
+      failureObjects: imageGovernance.report.failures
+        .slice(0, 5)
+        .map(failure => ({
           productCode: failure.productCode,
           attemptedUrls: failure.attemptedUrls.slice(0, 5),
           lastReason: failure.lastReason,
           lastStatus: failure.lastStatus,
-        })
-      ),
+        })),
     });
     throw new Error(
       "Merchant feed image validation failed before write: no valid replacement image exists for one or more rows."
@@ -852,6 +886,16 @@ const main = async () => {
   }
 
   await mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
+  await mkdir(path.dirname(COMMERCIAL_SNAPSHOT_PATH), { recursive: true });
+  await writeFile(
+    COMMERCIAL_SNAPSHOT_PATH,
+    `${JSON.stringify(
+      buildMerchantFeedCommercialSnapshot(governedOutputRows),
+      null,
+      2
+    )}\n`,
+    "utf8"
+  );
   await writeFile(OUTPUT_PATH, toCsv(governedOutputRows), "utf8");
 
   console.log(
@@ -859,6 +903,9 @@ const main = async () => {
   );
   console.log(
     `Wrote ${governedOutputRows.length} merchant feed rows to ${OUTPUT_PATH}.`
+  );
+  console.log(
+    `Wrote merchant feed commercial snapshot to ${COMMERCIAL_SNAPSHOT_PATH}.`
   );
   console.log("Product JSON-LD parity: PASS");
   console.log(

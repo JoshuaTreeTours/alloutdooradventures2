@@ -2,7 +2,12 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
 import { validateMerchantFeedRows } from "../../scripts/generate-merchant-feed";
+import { ENGINE6_COMMERCIAL_SOURCE_LABEL } from "./commercialResolver";
 import { resolveEngine6ToursForProductSchema } from "./fetchEngine6LiveCommercialFieldsForSchema";
+import {
+  buildMerchantFeedCommercialSnapshot,
+  resolveToursWithMerchantFeedCommercialSnapshot,
+} from "./merchantFeedCommercialSnapshot";
 import {
   buildMerchantFeedRowFromProductSchema,
   resolveMerchantFeedProductSchemaSnapshot,
@@ -25,6 +30,7 @@ import {
   ENGINE6_SANTA_BARBARA_TROLLEY_PRODUCT_CODE,
 } from "./routes";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
+import { resolveEngine6TourForProductSchema } from "./resolveEngine6TourForProductSchema";
 
 const ORIGINAL_MERCHANT_APPROVED_PRODUCT_CODE = "63657P1";
 const EXISTING_ENGINE6_PRODUCT_CODE = "411138P3";
@@ -165,6 +171,79 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
     expect(validation.pass).toBe(true);
     expect(validation.report.blankPriceRows).toBe(0);
     expect(validation.report.blankRequiredFieldRows).toBe(0);
+  });
+
+  it("uses the same fixture commercial source for live page counts and merchant feed counts", () => {
+    const fixtureSource = {
+      priceAmount: 123.45,
+      priceFormatted: "From $123.45",
+      aggregateRating: 4.7,
+      reviewCount: 321,
+    };
+    const livePageTour = resolveEngine6TourForProductSchema(
+      getTourByProductCode(EXISTING_ENGINE6_PRODUCT_CODE),
+      fixtureSource
+    );
+    const merchantRow = buildMerchantFeedRowFromProductSchema(livePageTour);
+    const { aggregateRating } = buildEngine6SchemaGraph(livePageTour)[
+      "@graph"
+    ].reduce(
+      (acc, node) =>
+        node["@type"] === "AggregateRating" ? { aggregateRating: node } : acc,
+      {} as { aggregateRating?: Record<string, unknown> }
+    );
+
+    expect(ENGINE6_COMMERCIAL_SOURCE_LABEL).toContain(
+      "shared Engine6 commercial resolver"
+    );
+    expect(livePageTour.reviewCount).toBe(fixtureSource.reviewCount);
+    expect(aggregateRating?.reviewCount).toBe(fixtureSource.reviewCount);
+    expect(merchantRow.rating_count).toBe(String(fixtureSource.reviewCount));
+    expect(merchantRow.review_count).toBe(String(fixtureSource.reviewCount));
+    expect(merchantRow.average_rating).toBe("4.7");
+  });
+
+  it("audits merchant rows against the same generated commercial snapshot even if live counts drift later", () => {
+    const productCode = EXISTING_ENGINE6_PRODUCT_CODE;
+    const generatedSource = {
+      priceAmount: 123.45,
+      priceFormatted: "From $123.45",
+      aggregateRating: 4.7,
+      reviewCount: 321,
+    };
+    const laterLiveSource = {
+      ...generatedSource,
+      reviewCount: 322,
+    };
+    const generatedTour = resolveEngine6TourForProductSchema(
+      getTourByProductCode(productCode),
+      generatedSource
+    );
+    const merchantRow = buildMerchantFeedRowFromProductSchema(generatedTour);
+    const snapshot = buildMerchantFeedCommercialSnapshot([merchantRow]);
+    const [snapshotTour] = resolveToursWithMerchantFeedCommercialSnapshot(
+      [getTourByProductCode(productCode)],
+      snapshot
+    );
+    const laterLiveTour = resolveEngine6TourForProductSchema(
+      getTourByProductCode(productCode),
+      laterLiveSource
+    );
+
+    const snapshotAudit = auditEngine6MerchantFeedCommercialParity(
+      [snapshotTour],
+      new Map([[productCode, merchantRow]])
+    );
+    const laterLiveAudit = auditEngine6MerchantFeedCommercialParity(
+      [laterLiveTour],
+      new Map([[productCode, merchantRow]])
+    );
+
+    expect(snapshotAudit.pass, snapshotAudit.failures.join("; ")).toBe(true);
+    expect(laterLiveAudit.pass).toBe(false);
+    expect(laterLiveAudit.failures.join("; ")).toContain(
+      `${productCode}.merchantFeed.review_count`
+    );
   });
 
   it("audits every Engine6 merchant feed row against Product JSON-LD", async () => {
