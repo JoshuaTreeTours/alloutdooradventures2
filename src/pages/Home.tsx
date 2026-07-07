@@ -13,6 +13,7 @@ import RegionDropdownButton from "../components/RegionDropdownButton";
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
 import { featuredDestinations } from "../data/destinations";
+import { engine6ListingTours } from "../engine6/listing";
 import { countriesWithTours } from "../data/europeIndex";
 import type { Tour } from "../data/tours.types";
 import { worldCountriesWithTours } from "../data/worldIndex";
@@ -33,8 +34,7 @@ const HERO_ACTIVITY_SPOTLIGHTS = [
     title: "Hiking",
     description: "Trail days with alpine views and lakeside vistas.",
     slug: "hiking",
-    image:
-      "/images/hiking-hero3.jpg",
+    image: "/images/hiking-hero3.jpg",
   },
   {
     title: "Paddle Sports",
@@ -49,287 +49,41 @@ type FeaturedTourEntry = {
   tour: Tour;
 };
 
-const FEATURED_BEST_SELLING_TOURS: FeaturedTourEntry[] = [
-  {
-    href:
-      "https://www.alloutdooradventures.com/destinations/montana/kalispell/tours/4-nights-3-days-all-inclusive-snowbike-adventure-268283",
-    tour: {
-      id: "snowbikenation-268283",
-      slug: "4-nights-3-days-all-inclusive-snowbike-adventure-268283",
-      title: "4 Nights / 3 Days All-Inclusive Snowbike Adventure",
-      operator: "SnowBike Nation",
-      categories: ["snowmobile-winter-activities"],
-      primaryCategory: "snowmobile-winter-activities",
-      destination: {
-        state: "Montana",
-        stateSlug: "montana",
-        city: "Kalispell",
-        citySlug: "kalispell",
-      },
-      heroImage: "https://cdn.filestackcontent.com/4TkuKhVREm0gY04ZHZsg",
-      galleryImages: ["https://cdn.filestackcontent.com/4TkuKhVREm0gY04ZHZsg"],
-      badges: {
-        tagline: "Snowmobile winter activities",
-      },
-      activitySlugs: ["snowmobile-winter-activities"],
-      bookingProvider: "fareharbor",
-      bookingUrl:
-        "https://fareharbor.com/embeds/book/snowbikenation/items/268283/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      bookingWidgetUrl:
-        "https://fareharbor.com/embeds/calendar/snowbikenation/items/268283/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      longDescription:
-        "4 Nights / 3 Days All-Inclusive Snowbike Adventure is a multi-day winter experience based in Kalispell, Montana.",
-    },
-  },
-  {
-    href:
-      "https://www.alloutdooradventures.com/tours/hawaii/honolulu/canoe-surfing-68065",
-    tour: {
-      id: "waikikibeachservices-68065",
-      slug: "canoe-surfing-68065",
-      title: "Canoe Surfing",
-      operator: "Waikiki Beach Services",
-      categories: ["canoe-surf"],
-      primaryCategory: "canoe-surf",
-      destination: {
-        state: "Hawaii",
-        stateSlug: "hawaii",
-        city: "Honolulu",
-        citySlug: "honolulu",
-      },
-      heroImage: "https://cdn.filestackcontent.com/Rzl3DMG0StG5dCHeGclL",
-      galleryImages: ["https://cdn.filestackcontent.com/Rzl3DMG0StG5dCHeGclL"],
-      badges: {
-        tagline: "Canoe surf",
-      },
-      activitySlugs: ["canoe-surf"],
-      bookingProvider: "fareharbor",
-      bookingUrl:
-        "https://fareharbor.com/embeds/book/waikikibeachservices/items/68065/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      bookingWidgetUrl:
-        "https://fareharbor.com/embeds/calendar/waikikibeachservices/items/68065/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      longDescription:
-        "Canoe Surfing is a guided ocean adventure based in Honolulu, Hawaii that highlights Waikiki waters.",
-    },
-  },
-  {
-    href:
-      "https://www.alloutdooradventures.com/tours/monument-valley-air-ground-tour-f-mvj-164143",
-    tour: {
-      id: "westwindairservice-164143",
-      slug: "monument-valley-air-ground-tour-f-mvj-164143",
-      title: "Monument Valley Air & Ground Tour (F-MVJ)",
-      operator: "Westwind Air Service",
-      categories: ["guided-tour"],
-      primaryCategory: "guided-tour",
-      destination: {
-        state: "Arizona",
-        stateSlug: "arizona",
-        city: "Flagstaff",
-        citySlug: "flagstaff",
-      },
-      heroImage: "https://cdn.filestackcontent.com/V8REZ4EpRc22gTUzzgXx",
-      galleryImages: ["https://cdn.filestackcontent.com/V8REZ4EpRc22gTUzzgXx"],
-      badges: {
-        tagline: "Guided tour",
-      },
-      activitySlugs: ["guided-tour"],
-      bookingProvider: "fareharbor",
-      bookingUrl:
-        "https://fareharbor.com/embeds/book/westwindairservice/items/164143/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      bookingWidgetUrl:
-        "https://fareharbor.com/embeds/calendar/westwindairservice/items/164143/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      longDescription:
-        "Monument Valley Air & Ground Tour (F-MVJ) is a guided air and land experience based in Flagstaff, Arizona.",
-    },
-  },
-  {
-    href:
-      "https://www.alloutdooradventures.com/tours/vermont/hartford/quechee-balloon-festival-e-bike-ride-625942",
-    tour: {
-      id: "vtbikeandbrew-625942",
-      slug: "quechee-balloon-festival-e-bike-ride-625942",
-      title: "Quechee Balloon Festival E-Bike Ride",
-      operator: "Vermont Bike and Brew",
-      categories: ["e-bike"],
-      primaryCategory: "e-bike",
-      destination: {
-        state: "Vermont",
-        stateSlug: "vermont",
-        city: "Hartford",
-        citySlug: "hartford",
-      },
-      heroImage: "https://cdn.filestackcontent.com/9oH85KRaWWcqX4Zv1XZQ",
-      galleryImages: ["https://cdn.filestackcontent.com/9oH85KRaWWcqX4Zv1XZQ"],
-      badges: {
-        tagline: "E-bike ride",
-      },
-      activitySlugs: ["e-bike"],
-      bookingProvider: "fareharbor",
-      bookingUrl:
-        "https://fareharbor.com/embeds/book/vtbikeandbrew/items/625942/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      bookingWidgetUrl:
-        "https://fareharbor.com/embeds/calendar/vtbikeandbrew/items/625942/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      longDescription:
-        "Quechee Balloon Festival E-Bike Ride is a guided e-bike outing based in Hartford, Vermont.",
-    },
-  },
-  {
-    href:
-      "https://www.alloutdooradventures.com/destinations/colorado/denver/tours/switzerland-trail-tour-656031",
-    tour: {
-      id: "mountainhighbicycletours-656031",
-      slug: "switzerland-trail-tour-656031",
-      title: "Switzerland Trail Tour",
-      operator: "Mountain High Bicycle Tours LLC",
-      categories: ["bike-tour"],
-      primaryCategory: "bike-tour",
-      destination: {
-        state: "Colorado",
-        stateSlug: "colorado",
-        city: "Denver",
-        citySlug: "denver",
-      },
-      heroImage: "https://cdn.filestackcontent.com/7eE3CbORiiBd6vh2rR45",
-      galleryImages: ["https://cdn.filestackcontent.com/7eE3CbORiiBd6vh2rR45"],
-      badges: {
-        tagline: "Bike tour",
-      },
-      activitySlugs: ["bike-tour"],
-      bookingProvider: "fareharbor",
-      bookingUrl:
-        "https://fareharbor.com/embeds/book/mountainhighbicycletours/items/656031/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      bookingWidgetUrl:
-        "https://fareharbor.com/embeds/calendar/mountainhighbicycletours/items/656031/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      longDescription:
-        "Switzerland Trail Tour is a guided cycling adventure based in Denver, Colorado.",
-    },
-  },
-  {
-    href:
-      "https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/coastal-cruise-azure-seas-4241",
-    tour: {
-      id: "celebrationsantabarbara-4241",
-      slug: "coastal-cruise-azure-seas-4241",
-      title: "Coastal Cruise (Azure Seas)",
-      operator: "Celebration Cruises",
-      categories: ["boat-tour"],
-      primaryCategory: "boat-tour",
-      destination: {
-        state: "California",
-        stateSlug: "california",
-        city: "Santa Barbara",
-        citySlug: "santa-barbara",
-      },
-      heroImage: "https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS",
-      galleryImages: ["https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"],
-      badges: {
-        tagline: "Boat tour",
-      },
-      activitySlugs: ["boat-tour"],
-      bookingProvider: "fareharbor",
-      bookingUrl:
-        "https://fareharbor.com/embeds/book/celebrationsantabarbara/items/4241/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      bookingWidgetUrl:
-        "https://fareharbor.com/embeds/calendar/celebrationsantabarbara/items/4241/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      longDescription:
-        "Coastal Cruise (Azure Seas) is a coastal sightseeing escape based in Santa Barbara, California.",
-    },
-  },
-  {
-    href:
-      "https://www.alloutdooradventures.com/tours/italy/la-spezia/mountain-e-bike-private-tour-la-spezia---cinque-terre-119344",
-    tour: {
-      id: "arbaspaa-119344",
-      slug: "mountain-e-bike-private-tour-la-spezia---cinque-terre-119344",
-      title: "Mountain E-Bike Private tour: La Spezia - Cinque Terre",
-      operator: "Arbaspaa",
-      categories: ["bike-tour", "e-bike", "train"],
-      primaryCategory: "e-bike",
-      destination: {
-        state: "Italy",
-        stateSlug: "italy",
-        city: "La Spezia",
-        citySlug: "la-spezia",
-      },
-      heroImage: "https://cdn.filestackcontent.com/dMQQ1xKTRiY2cOpIYZED",
-      galleryImages: ["https://cdn.filestackcontent.com/dMQQ1xKTRiY2cOpIYZED"],
-      badges: {
-        tagline: "E-bike tour",
-      },
-      activitySlugs: ["e-bike", "bike-tour"],
-      bookingProvider: "fareharbor",
-      bookingUrl:
-        "https://fareharbor.com/embeds/book/arbaspaa/items/119344/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      bookingWidgetUrl:
-        "https://fareharbor.com/embeds/calendar/arbaspaa/items/119344/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      longDescription:
-        "Mountain E-Bike Private tour: La Spezia - Cinque Terre is a private cycling experience based in La Spezia, Italy.",
-    },
-  },
-  {
-    href:
-      "https://www.alloutdooradventures.com/destinations/switzerland/interlaken/tours/grand-tour-of-interlaken-617564",
-    tour: {
-      id: "alpinbikes-617564",
-      slug: "grand-tour-of-interlaken-617564",
-      title: "Grand Tour of Interlaken",
-      operator: "AlpinBike Adventures",
-      categories: ["bike-tour"],
-      primaryCategory: "bike-tour",
-      destination: {
-        state: "Switzerland",
-        stateSlug: "switzerland",
-        city: "Interlaken",
-        citySlug: "interlaken",
-      },
-      heroImage: "https://cdn.filestackcontent.com/18yO7MQtS4Ga9RQ0wHt6",
-      galleryImages: ["https://cdn.filestackcontent.com/18yO7MQtS4Ga9RQ0wHt6"],
-      badges: {
-        tagline: "Bike tour",
-      },
-      activitySlugs: ["bike-tour"],
-      bookingProvider: "fareharbor",
-      bookingUrl:
-        "https://fareharbor.com/embeds/book/alpinbikes/items/617564/?asn=fhdn-chf&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      bookingWidgetUrl:
-        "https://fareharbor.com/embeds/calendar/alpinbikes/items/617564/?asn=fhdn-chf&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      longDescription:
-        "Grand Tour of Interlaken is a guided cycling experience based in Interlaken, Switzerland.",
-    },
-  },
-  {
-    href:
-      "https://www.alloutdooradventures.com/tours/california/san-diego/stand-up-paddle-sup-board-453896",
-    tour: {
-      id: "actionsportrentals-paradisepointresort-453896",
-      slug: "stand-up-paddle-sup-board-453896",
-      title: "Stand Up Paddle (SUP) Board",
-      operator: "Action Sport Rentals - Paradise Point Resort",
-      categories: ["sup"],
-      primaryCategory: "sup",
-      destination: {
-        state: "California",
-        stateSlug: "california",
-        city: "San Diego",
-        citySlug: "san-diego",
-      },
-      heroImage: "https://cdn.filestackcontent.com/uWaG3LcTDKPYbvtVaXFk",
-      galleryImages: ["https://cdn.filestackcontent.com/uWaG3LcTDKPYbvtVaXFk"],
-      badges: {
-        tagline: "Stand up paddle",
-      },
-      activitySlugs: ["sup"],
-      bookingProvider: "fareharbor",
-      bookingUrl:
-        "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453896/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      bookingWidgetUrl:
-        "https://fareharbor.com/embeds/calendar/actionsportrentals-paradisepointresort/items/453896/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-      longDescription:
-        "Stand Up Paddle (SUP) Board is a water rental experience based in San Diego, California.",
-    },
-  },
-];
+export const FEATURED_BEST_SELLING_TOUR_ROUTES = [
+  "/destinations/arizona/grand-canyon-national-park/tours/grand-entrance-jeep-tour-3272GCSR2",
+  "/destinations/utah/zion-national-park/tours/narrows-zion-private-guided-hike-199627P1",
+  "/destinations/montana/glacier-national-park/tours/half-day-whitewater-rafting-123783P1",
+  "/destinations/wyoming/yellowstone-national-park/tours/private-yellowstone-tour-iconic-sites-wildlife-family-f-151830P1",
+  "/destinations/washington/olympic-national-park/tours/olympic-national-park-small-group-day-tour-w-sceni-132218P140",
+  "/destinations/florida/fort-lauderdale/tours/reef-and-snorkel-paddle-tour-89173p8",
+  "/destinations/california/joshua-tree/tours/joshua-tree-scenic-tour-6740p7",
+  "/destinations/california/yosemite/tours/guided-yosemite-hiking-excursion-6004HIKE",
+  "/destinations/colorado/rocky-mountain-national-park/tours/retractable-glass-top-tour-in-rocky-mountain-national-p-424860P1",
+] as const;
+
+const engine6ToursByRoute = new Map(
+  engine6ListingTours.map(tour => [
+    `/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`,
+    tour,
+  ])
+);
+
+export const FEATURED_BEST_SELLING_TOURS: FeaturedTourEntry[] =
+  FEATURED_BEST_SELLING_TOUR_ROUTES.map(href => {
+    const routeMatch = href.match(
+      /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/
+    );
+    const lookupKey = routeMatch
+      ? `/${routeMatch[1]}/${routeMatch[2]}/${routeMatch[3]}`
+      : href;
+    const tour = engine6ToursByRoute.get(lookupKey);
+
+    if (!tour) {
+      throw new Error(`Missing Engine6 featured best-selling tour for ${href}`);
+    }
+
+    return { href, tour };
+  });
 
 export default function Home() {
   const getFeaturedRegionLabel = (region: string) => {
@@ -357,33 +111,33 @@ export default function Home() {
     }, {});
 
     return regionOrder
-      .map((region) => ({
+      .map(region => ({
         region,
         destinations: (grouped[region] ?? []).slice(0, 2),
       }))
-      .filter((group) => group.destinations.length > 0);
+      .filter(group => group.destinations.length > 0);
   }, []);
 
   const rockyMountainDestinations = useMemo(
     () =>
-      featuredDestinations.filter((destination) =>
+      featuredDestinations.filter(destination =>
         ["montana", "colorado"].includes(destination.stateSlug)
       ),
     []
   );
 
   const featuredDestinationsPreview = useMemo(
-    () => featuredDestinationsByRegion.flatMap((group) => group.destinations),
+    () => featuredDestinationsByRegion.flatMap(group => group.destinations),
     [featuredDestinationsByRegion]
   );
 
   const internationalDestinationOptions = useMemo(() => {
     const options = [
-      ...countriesWithTours.map((country) => ({
+      ...countriesWithTours.map(country => ({
         name: country.name,
         slug: `europe:${country.slug}`,
       })),
-      ...worldCountriesWithTours.map((country) => ({
+      ...worldCountriesWithTours.map(country => ({
         name: country.name,
         slug: `world:${country.slug}`,
       })),
@@ -394,7 +148,7 @@ export default function Home() {
   const debugImages = useMemo(
     () => [
       { label: "Hero", src: HERO_IMAGE_URL },
-      ...featuredDestinationsPreview.map((destination) => ({
+      ...featuredDestinationsPreview.map(destination => ({
         label: `Featured: ${destination.name}`,
         src: destination.image,
       })),
@@ -403,7 +157,10 @@ export default function Home() {
   );
 
   const [debugResults, setDebugResults] = useState<
-    Record<string, { resolvedSrc: string; status?: number; ok?: boolean; error?: string }>
+    Record<
+      string,
+      { resolvedSrc: string; status?: number; ok?: boolean; error?: string }
+    >
   >({});
 
   const featuredBestSellingTours = useMemo(
@@ -417,15 +174,17 @@ export default function Home() {
   const [itemsPerPage, setItemsPerPage] = useState(3);
   const [activePage, setActivePage] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [selectedInternationalDestination, setSelectedInternationalDestination] =
-    useState("");
+  const [
+    selectedInternationalDestination,
+    setSelectedInternationalDestination,
+  ] = useState("");
 
   const selectedInternationalName = useMemo(
     () =>
       internationalDestinationOptions.find(
-        (option) => option.slug === selectedInternationalDestination,
+        option => option.slug === selectedInternationalDestination
       )?.name,
-    [internationalDestinationOptions, selectedInternationalDestination],
+    [internationalDestinationOptions, selectedInternationalDestination]
   );
 
   const featuredTourPages = useMemo(() => {
@@ -452,23 +211,23 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    setActivePage((prev) => Math.min(prev, totalPages - 1));
+    setActivePage(prev => Math.min(prev, totalPages - 1));
   }, [totalPages]);
 
   useEffect(() => {
     if (isPaused || totalPages <= 1) return;
     const interval = window.setInterval(() => {
-      setActivePage((prev) => (prev + 1) % totalPages);
+      setActivePage(prev => (prev + 1) % totalPages);
     }, 5000);
     return () => window.clearInterval(interval);
   }, [isPaused, totalPages]);
 
   const handlePrevious = () => {
-    setActivePage((prev) => (prev - 1 + totalPages) % totalPages);
+    setActivePage(prev => (prev - 1 + totalPages) % totalPages);
   };
 
   const handleNext = () => {
-    setActivePage((prev) => (prev + 1) % totalPages);
+    setActivePage(prev => (prev + 1) % totalPages);
   };
 
   const handleCarouselKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
@@ -496,7 +255,9 @@ export default function Home() {
     const checkImages = async () => {
       const results = await Promise.all(
         debugImages.map(async ({ label, src }) => {
-          const resolvedSrc = src.startsWith("http") ? src : new URL(src, origin).href;
+          const resolvedSrc = src.startsWith("http")
+            ? src
+            : new URL(src, origin).href;
 
           try {
             const response = await fetch(resolvedSrc, {
@@ -586,7 +347,6 @@ export default function Home() {
                   </a>
                 </Link>
               </div>
-
             </div>
           </div>
         </section>
@@ -600,8 +360,8 @@ export default function Home() {
             Why Choose {SITE_BRAND_NAME}?
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-[#405040] md:text-base">
-            We curate the best outdoor experiences, vetted by locals and seasoned
-            travelers. No tourist traps—just authentic adventures.
+            We curate the best outdoor experiences, vetted by locals and
+            seasoned travelers. No tourist traps—just authentic adventures.
           </p>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -628,11 +388,8 @@ export default function Home() {
             </h2>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {HERO_ACTIVITY_SPOTLIGHTS.map((activity) => (
-              <Link
-                key={activity.title}
-                href={`/tours/${activity.slug}`}
-              >
+            {HERO_ACTIVITY_SPOTLIGHTS.map(activity => (
+              <Link key={activity.title} href={`/tours/${activity.slug}`}>
                 <a className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/80 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                   <div className="relative h-44">
                     <Image
@@ -755,13 +512,14 @@ export default function Home() {
               Deep South
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[#405040] md:text-base">
-              Explore handcrafted itineraries across three regions—each destination
-              blends signature landscapes with local-guided adventure.
+              Explore handcrafted itineraries across three regions—each
+              destination blends signature landscapes with local-guided
+              adventure.
             </p>
           </div>
 
           <div className="mt-10 space-y-10">
-            {featuredDestinationsByRegion.map((group) => (
+            {featuredDestinationsByRegion.map(group => (
               <div key={group.region} className="space-y-6">
                 <div className="text-center">
                   <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
@@ -772,12 +530,14 @@ export default function Home() {
                   </h3>
                 </div>
                 <div className="grid gap-6 md:grid-cols-2">
-                  {group.destinations.map((destination) => (
+                  {group.destinations.map(destination => (
                     <DestinationCard
                       key={`${group.region}-${destination.name}`}
                       destination={{
                         ...destination,
-                        href: canonicalHref(getStateGuidePath(destination.stateSlug)),
+                        href: canonicalHref(
+                          getStateGuidePath(destination.stateSlug)
+                        ),
                       }}
                       ctaLabel="Discover"
                       headingLevel="h4"
@@ -798,12 +558,14 @@ export default function Home() {
                   </h3>
                 </div>
                 <div className="grid gap-6 md:grid-cols-2">
-                  {rockyMountainDestinations.map((destination) => (
+                  {rockyMountainDestinations.map(destination => (
                     <DestinationCard
                       key={`rocky-mountain-${destination.name}`}
                       destination={{
                         ...destination,
-                        href: canonicalHref(getStateGuidePath(destination.stateSlug)),
+                        href: canonicalHref(
+                          getStateGuidePath(destination.stateSlug)
+                        ),
                       }}
                       ctaLabel="Discover"
                       headingLevel="h4"
@@ -837,7 +599,7 @@ export default function Home() {
               label="Select a country…"
               options={internationalDestinationOptions}
               selectedName={selectedInternationalName}
-              onSelect={(slug) => {
+              onSelect={slug => {
                 const [region, countrySlug] = slug.split(":");
                 if (!countrySlug) {
                   return;
@@ -863,8 +625,8 @@ export default function Home() {
                 Image Debug Overlay
               </h2>
               <p className="mt-2 text-xs text-amber-800/80">
-                Shows resolved image URLs and HEAD status codes to diagnose Safari
-                loading issues.
+                Shows resolved image URLs and HEAD status codes to diagnose
+                Safari loading issues.
               </p>
 
               <div className="mt-4 space-y-4">
