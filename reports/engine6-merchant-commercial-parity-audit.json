@@ -1,6 +1,8 @@
 {
-  "generatedAt": "2026-07-06T23:23:47.629Z",
+  "generatedAt": "2026-07-07T00:18:59.049Z",
   "merchantFeedPath": "data/merchantFeed.csv",
+  "commercialSnapshotPath": "data/merchantFeed-commercial-snapshot.json",
+  "commercialSnapshotGeneratedAt": "2026-07-07T00:16:33.155Z",
   "report": {
     "totalRowsAudited": 589,
     "priceMismatches": 0,

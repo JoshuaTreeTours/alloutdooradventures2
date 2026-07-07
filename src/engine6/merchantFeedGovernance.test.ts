@@ -5,6 +5,10 @@ import { validateMerchantFeedRows } from "../../scripts/generate-merchant-feed";
 import { ENGINE6_COMMERCIAL_SOURCE_LABEL } from "./commercialResolver";
 import { resolveEngine6ToursForProductSchema } from "./fetchEngine6LiveCommercialFieldsForSchema";
 import {
+  buildMerchantFeedCommercialSnapshot,
+  resolveToursWithMerchantFeedCommercialSnapshot,
+} from "./merchantFeedCommercialSnapshot";
+import {
   buildMerchantFeedRowFromProductSchema,
   resolveMerchantFeedProductSchemaSnapshot,
 } from "./merchantFeedFromProductSchema";
@@ -197,6 +201,49 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
     expect(merchantRow.rating_count).toBe(String(fixtureSource.reviewCount));
     expect(merchantRow.review_count).toBe(String(fixtureSource.reviewCount));
     expect(merchantRow.average_rating).toBe("4.7");
+  });
+
+  it("audits merchant rows against the same generated commercial snapshot even if live counts drift later", () => {
+    const productCode = EXISTING_ENGINE6_PRODUCT_CODE;
+    const generatedSource = {
+      priceAmount: 123.45,
+      priceFormatted: "From $123.45",
+      aggregateRating: 4.7,
+      reviewCount: 321,
+    };
+    const laterLiveSource = {
+      ...generatedSource,
+      reviewCount: 322,
+    };
+    const generatedTour = resolveEngine6TourForProductSchema(
+      getTourByProductCode(productCode),
+      generatedSource
+    );
+    const merchantRow = buildMerchantFeedRowFromProductSchema(generatedTour);
+    const snapshot = buildMerchantFeedCommercialSnapshot([merchantRow]);
+    const [snapshotTour] = resolveToursWithMerchantFeedCommercialSnapshot(
+      [getTourByProductCode(productCode)],
+      snapshot
+    );
+    const laterLiveTour = resolveEngine6TourForProductSchema(
+      getTourByProductCode(productCode),
+      laterLiveSource
+    );
+
+    const snapshotAudit = auditEngine6MerchantFeedCommercialParity(
+      [snapshotTour],
+      new Map([[productCode, merchantRow]])
+    );
+    const laterLiveAudit = auditEngine6MerchantFeedCommercialParity(
+      [laterLiveTour],
+      new Map([[productCode, merchantRow]])
+    );
+
+    expect(snapshotAudit.pass, snapshotAudit.failures.join("; ")).toBe(true);
+    expect(laterLiveAudit.pass).toBe(false);
+    expect(laterLiveAudit.failures.join("; ")).toContain(
+      `${productCode}.merchantFeed.review_count`
+    );
   });
 
   it("audits every Engine6 merchant feed row against Product JSON-LD", async () => {

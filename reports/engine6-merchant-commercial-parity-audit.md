@@ -1,9 +1,9 @@
 # Engine6 Merchant Commercial Parity Audit
 
-Generated at: 2026-07-06T23:23:47.629Z
+Generated at: 2026-07-07T00:18:59.049Z
+Commercial snapshot generated at: 2026-07-07T00:16:33.155Z
 
 Commercial parity audit:
-
 - total rows audited: 589
 - price mismatches: 0
 - rating mismatches: 0

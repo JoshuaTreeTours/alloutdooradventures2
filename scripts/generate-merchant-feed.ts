@@ -34,6 +34,10 @@ import {
   formatMerchantFeedCommercialParityAuditReport,
 } from "../src/engine6/merchantFeedParity";
 import {
+  buildMerchantFeedCommercialSnapshot,
+  MERCHANT_FEED_COMMERCIAL_SNAPSHOT_PATH,
+} from "../src/engine6/merchantFeedCommercialSnapshot";
+import {
   fetchEngine6LiveCommercialFieldsForSchema,
   requireLiveMerchantCommercial,
   resolveEngine6ToursForProductSchema,
@@ -51,6 +55,10 @@ import {
 const OUTPUT_PATH = path.resolve(
   process.cwd(),
   process.env.MERCHANT_FEED_OUTPUT_PATH ?? "data/merchantFeed.csv"
+);
+const COMMERCIAL_SNAPSHOT_PATH = path.resolve(
+  process.cwd(),
+  MERCHANT_FEED_COMMERCIAL_SNAPSHOT_PATH
 );
 
 const OUTPUT_HEADERS = [
@@ -878,6 +886,16 @@ const main = async () => {
   }
 
   await mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
+  await mkdir(path.dirname(COMMERCIAL_SNAPSHOT_PATH), { recursive: true });
+  await writeFile(
+    COMMERCIAL_SNAPSHOT_PATH,
+    `${JSON.stringify(
+      buildMerchantFeedCommercialSnapshot(governedOutputRows),
+      null,
+      2
+    )}\n`,
+    "utf8"
+  );
   await writeFile(OUTPUT_PATH, toCsv(governedOutputRows), "utf8");
 
   console.log(
@@ -885,6 +903,9 @@ const main = async () => {
   );
   console.log(
     `Wrote ${governedOutputRows.length} merchant feed rows to ${OUTPUT_PATH}.`
+  );
+  console.log(
+    `Wrote merchant feed commercial snapshot to ${COMMERCIAL_SNAPSHOT_PATH}.`
   );
   console.log("Product JSON-LD parity: PASS");
   console.log(

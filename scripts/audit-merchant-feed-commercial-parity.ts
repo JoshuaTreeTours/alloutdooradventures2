@@ -1,7 +1,11 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-import { resolveEngine6ToursForProductSchema } from "../src/engine6/fetchEngine6LiveCommercialFieldsForSchema";
+import {
+  MERCHANT_FEED_COMMERCIAL_SNAPSHOT_PATH,
+  resolveToursWithMerchantFeedCommercialSnapshot,
+  type MerchantFeedCommercialSnapshot,
+} from "../src/engine6/merchantFeedCommercialSnapshot";
 import {
   auditEngine6MerchantFeedCommercialParity,
   formatMerchantFeedCommercialParityAuditReport,
@@ -16,6 +20,10 @@ import { engine6ResolvedTours } from "../src/engine6/registry";
 import { validateMerchantFeedRows } from "./generate-merchant-feed";
 
 const OUTPUT_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
+const COMMERCIAL_SNAPSHOT_PATH = path.resolve(
+  process.cwd(),
+  MERCHANT_FEED_COMMERCIAL_SNAPSHOT_PATH
+);
 const REPORT_DIR = path.resolve(process.cwd(), "reports");
 const REPORT_MD_PATH = path.join(
   REPORT_DIR,
@@ -39,6 +47,11 @@ const readRefreshMetadata = async () => {
     return null;
   }
 };
+
+const readCommercialSnapshot = async () =>
+  JSON.parse(
+    await readFile(COMMERCIAL_SNAPSHOT_PATH, "utf8")
+  ) as MerchantFeedCommercialSnapshot;
 
 const writeRefreshMetadata = async () => {
   await mkdir(path.dirname(REFRESH_METADATA_PATH), { recursive: true });
@@ -130,8 +143,11 @@ const main = async () => {
     }))
   );
 
-  const schemaResolvedTours =
-    await resolveEngine6ToursForProductSchema(engine6ResolvedTours);
+  const commercialSnapshot = await readCommercialSnapshot();
+  const schemaResolvedTours = resolveToursWithMerchantFeedCommercialSnapshot(
+    engine6ResolvedTours,
+    commercialSnapshot
+  );
   const audit = auditEngine6MerchantFeedCommercialParity(
     schemaResolvedTours,
     new Map(csvRows.map(row => [row.id ?? "", row]))
@@ -150,6 +166,7 @@ const main = async () => {
       `# Engine6 Merchant Commercial Parity Audit`,
       ``,
       `Generated at: ${generatedAt}`,
+      `Commercial snapshot generated at: ${commercialSnapshot.generatedAt}`,
       ``,
       formattedReport,
       ``,
@@ -167,6 +184,11 @@ const main = async () => {
       {
         generatedAt,
         merchantFeedPath: path.relative(process.cwd(), OUTPUT_PATH),
+        commercialSnapshotPath: path.relative(
+          process.cwd(),
+          COMMERCIAL_SNAPSHOT_PATH
+        ),
+        commercialSnapshotGeneratedAt: commercialSnapshot.generatedAt,
         report: audit,
         blankRequiredFieldRows: validation.report.blankRequiredFieldRows,
         sourceUsedByMerchantCsv:
