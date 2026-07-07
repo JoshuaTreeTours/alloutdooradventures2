@@ -8,6 +8,7 @@ import { getEngine6TourRatingSourceOfTruth } from "./ratingSourceOfTruth";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import type { Engine6Tour } from "./types";
 import { formatMerchantPrice } from "../utils/merchantPricing";
+import { ENGINE6_COMMERCIAL_SOURCE_LABEL } from "./commercialResolver";
 
 export const MERCHANT_FEED_PRODUCT_SCHEMA_PARITY_FIELDS = [
   "title",
@@ -40,8 +41,6 @@ const snapshotValueForMerchantField = (
   switch (field) {
     case "title":
       return snapshot.title;
-    case "description":
-      return snapshot.description;
     case "link":
       return snapshot.link;
     case "image_link":
@@ -89,6 +88,11 @@ export type MerchantFeedCommercialParityAuditReport = {
   reviewCountMismatches: number;
   pass: boolean;
   failures: string[];
+  examples: Array<{
+    productCode: string;
+    csv: Record<string, string>;
+    live: Record<string, string>;
+  }>;
 };
 
 const emptyCommercialMismatchCounts = () => ({
@@ -213,6 +217,7 @@ export const auditEngine6MerchantFeedCommercialParity = (
   let ratingMismatches = 0;
   let reviewCountMismatches = 0;
   let totalRowsAudited = 0;
+  const examples: MerchantFeedCommercialParityAuditReport["examples"] = [];
 
   for (const tour of tours) {
     const row = rowsByProductCode.get(tour.productCode);
@@ -229,6 +234,21 @@ export const auditEngine6MerchantFeedCommercialParity = (
 
     if (!commercialParity.pass) {
       failures.push(...commercialParity.mismatches);
+      if (examples.length < 3) {
+        examples.push({
+          productCode: tour.productCode,
+          csv: {
+            price: row.price?.trim() ?? "",
+            average_rating: row.average_rating?.trim() ?? "",
+            review_count: row.review_count?.trim() ?? "",
+          },
+          live: {
+            price: commercialParity.snapshot.price,
+            average_rating: commercialParity.snapshot.averageRating,
+            review_count: commercialParity.snapshot.reviewCount,
+          },
+        });
+      }
     }
   }
 
@@ -239,6 +259,7 @@ export const auditEngine6MerchantFeedCommercialParity = (
     reviewCountMismatches,
     pass: failures.length === 0,
     failures,
+    examples,
   };
 };
 
@@ -253,6 +274,21 @@ export const formatMerchantFeedCommercialParityAuditReport = (
     `- rating mismatches: ${report.ratingMismatches}`,
     `- review_count mismatches: ${report.reviewCountMismatches}`,
     `- required blank fields: ${blankRequiredFieldRows}`,
+    `- merchant CSV commercial source: ${ENGINE6_COMMERCIAL_SOURCE_LABEL} via buildMerchantFeedRowFromProductSchema`,
+    `- live page commercial source: ${ENGINE6_COMMERCIAL_SOURCE_LABEL} before Product JSON-LD rendering`,
+    `- root cause: stale CSV values occur when merchantFeed.csv is preserved or generated from older static/fixture commercial values instead of this shared resolver; the audit now fails any price/rating/review_count drift.`,
+    `- recommended remediation: keep page rendering and merchant generation on the shared resolver; refresh syndicated commercial fields every build when credentials/runtime are available, otherwise enforce a 2-7 day refresh cadence with explicit staleness detection.`,
+    ...(report.examples.length > 0
+      ? [
+          "- generated-at-audit-time volatile examples (not permanent expected constants):",
+          ...report.examples.map(
+            example =>
+              `  - ${example.productCode}: csv ${example.csv.price}/${example.csv.average_rating}/${example.csv.review_count} -> live ${example.live.price}/${example.live.average_rating}/${example.live.review_count}`
+          ),
+        ]
+      : [
+          "- generated-at-audit-time volatile examples: no affected products in current audited CSV",
+        ]),
   ].join("\n");
 
 export const compareMerchantFeedRowToProductSchema = (
@@ -280,7 +316,9 @@ export const compareMerchantFeedRowToProductSchema = (
   }
 
   if (!snapshot.bookingUrl) {
-    mismatches.push(`${tour.productCode}.bookingUrl: missing Product.offers.url`);
+    mismatches.push(
+      `${tour.productCode}.bookingUrl: missing Product.offers.url`
+    );
   }
 
   return {

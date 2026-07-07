@@ -1,6 +1,12 @@
 {
   "installCommand": "npm install",
   "buildCommand": "npm run build",
+  "crons": [
+    {
+      "path": "/api/cron/merchant-commercial-refresh",
+      "schedule": "0 9 * * 1"
+    }
+  ],
   "headers": [
     {
       "source": "/images/(.*)\\.webp",
