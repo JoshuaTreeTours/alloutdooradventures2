@@ -26,7 +26,6 @@ export const CHICAGO_VIATOR_PUBLIC_RATINGS: Record<
   "5042P100": { rating: 4.6, reviewCount: 512 },
   "46250P9": { rating: 5, reviewCount: 54 },
   "68189P1": { rating: 4.7, reviewCount: 934 },
-  "61552P8": { rating: 4.7, reviewCount: 621 },
   "3332DAY": { rating: 4.8, reviewCount: 389 },
   "191307P3": { rating: 4.7, reviewCount: 256 },
   "338277P2": { rating: 4.9, reviewCount: 174 },

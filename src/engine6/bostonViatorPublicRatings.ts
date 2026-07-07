@@ -23,12 +23,9 @@ export const BOSTON_VIATOR_PUBLIC_RATINGS: Record<
   "343490P3": { rating: 4.9, reviewCount: 86 },
   "400049P5": { rating: 5, reviewCount: 67 },
   "3978TOUR2": { rating: 4.7, reviewCount: 612 },
-  "5046BOS_GG": { rating: 4.5, reviewCount: 2524 },
   "3283CODZILLA": { rating: 4, reviewCount: 425 },
-  "7167P80": { rating: 4.6, reviewCount: 342 },
   "5042BOSDIN": { rating: 3.5, reviewCount: 181 },
   "5151BOSCY014": { rating: 5, reviewCount: 645 },
-  "66192P8": { rating: 4.5, reviewCount: 81 },
   "255730P225": { rating: 5, reviewCount: 4 },
 };
 

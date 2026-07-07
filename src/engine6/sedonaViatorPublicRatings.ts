@@ -16,7 +16,6 @@ export const SEDONA_VIATOR_PUBLIC_RATINGS: Record<
   "189623P3": { rating: 4.7, reviewCount: 657 },
   "325517P1": { rating: 5, reviewCount: 206 },
   "109073P8": { rating: 5, reviewCount: 19 },
-  "129182P3": { rating: 4.9, reviewCount: 29 },
   "129182P1": { rating: 5, reviewCount: 46 },
   "393812P1": { rating: 5, reviewCount: 11 },
   "338750P2": { rating: 5, reviewCount: 39 },

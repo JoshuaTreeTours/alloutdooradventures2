@@ -47,7 +47,8 @@ export type Engine6ProductSelectionRejectionReason =
   | "cross-destination"
   | "duplicate-product"
   | "duplicate-experience"
-  | "duplicate-engine6-assignment";
+  | "duplicate-engine6-assignment"
+  | "editorial_exclusion_supernatural";
 
 export type Engine6ProductSelectionRejectedCandidate = {
   productCode: string;
@@ -160,6 +161,48 @@ export const ENGINE6_PRODUCT_SELECTION_NEW_MODULES = [
   "engine6ProductSelectionGovernance",
   "engine6ParagonGovernancePipeline",
 ] as const;
+
+
+export const ENGINE6_SUPERNATURAL_EDITORIAL_EXCLUSION_REASON =
+  "editorial_exclusion_supernatural" as const;
+
+export const ENGINE6_SUPERNATURAL_EDITORIAL_EXCLUSION_TERMS = [
+  "ghost",
+  "haunted",
+  "haunting",
+  "paranormal",
+  "supernatural",
+  "witch",
+  "witches",
+  "witchcraft",
+  "psychic",
+  "medium",
+  "séance",
+  "seance",
+  "occult",
+  "voodoo",
+  "vampire",
+  "zombie",
+] as const;
+
+const ENGINE6_SUPERNATURAL_EDITORIAL_EXCLUSION_PATTERN =
+  /\b(?:ghosts?|haunted|haunting|paranormal|supernatural|witch(?:es)?|witchcraft|psychic|medium|séance|seance|occult|voodoo|vampires?|zombies?)\b/i;
+
+export const resolveEngine6SupernaturalEditorialExclusion = (candidate: {
+  title: string;
+  categories?: string[];
+  experienceType?: string;
+}): typeof ENGINE6_SUPERNATURAL_EDITORIAL_EXCLUSION_REASON | null => {
+  const primaryTheme = [
+    candidate.title,
+    candidate.experienceType ?? "",
+    ...(candidate.categories ?? []),
+  ].join(" ");
+
+  return ENGINE6_SUPERNATURAL_EDITORIAL_EXCLUSION_PATTERN.test(primaryTheme)
+    ? ENGINE6_SUPERNATURAL_EDITORIAL_EXCLUSION_REASON
+    : null;
+};
 
 const DEFAULT_TARGET_PREMIUM_SHARE = 0.5;
 
@@ -529,7 +572,8 @@ const collectRemainingQualifiedCandidates = (args: {
       if (
         args.acceptedCodes.has(productCode) ||
         args.rejectedCodes.has(productCode) ||
-        isEngine6ProductSelectionBlocklisted(productCode)
+        isEngine6ProductSelectionBlocklisted(productCode) ||
+        resolveEngine6SupernaturalEditorialExclusion(candidate)
       ) {
         continue;
       }
@@ -596,6 +640,20 @@ export const selectEngine6DestinationPortfolio = async (
           experienceType: slot.experienceType,
           reason: "blocklisted",
           detail: "product is on a permanent Engine6 product-selection blocklist",
+        });
+        continue;
+      }
+
+      const editorialExclusion = resolveEngine6SupernaturalEditorialExclusion(
+        candidate
+      );
+      if (editorialExclusion) {
+        rejected.push({
+          productCode,
+          sourceUrl: candidate.sourceUrl,
+          experienceType: slot.experienceType,
+          reason: editorialExclusion,
+          detail: editorialExclusion,
         });
         continue;
       }

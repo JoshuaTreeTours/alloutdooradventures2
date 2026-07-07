@@ -404,7 +404,6 @@ import specimen25265p29Payload from "../../data/engine6/viator/25265P29.exact-pr
 import specimen189623p3Payload from "../../data/engine6/viator/189623P3.exact-product.json";
 import specimen325517p1Payload from "../../data/engine6/viator/325517P1.exact-product.json";
 import specimen109073p8Payload from "../../data/engine6/viator/109073P8.exact-product.json";
-import specimen129182p3Payload from "../../data/engine6/viator/129182P3.exact-product.json";
 import specimen129182p1Payload from "../../data/engine6/viator/129182P1.exact-product.json";
 import specimen393812p1Payload from "../../data/engine6/viator/393812P1.exact-product.json";
 import specimen338750p2Payload from "../../data/engine6/viator/338750P2.exact-product.json";
@@ -458,7 +457,6 @@ import specimen316128p3Payload from "../../data/engine6/viator/316128P3.exact-pr
 import specimen5042p100Payload from "../../data/engine6/viator/5042P100.exact-product.json";
 import specimen46250p9Payload from "../../data/engine6/viator/46250P9.exact-product.json";
 import specimen68189p1Payload from "../../data/engine6/viator/68189P1.exact-product.json";
-import specimen61552p8Payload from "../../data/engine6/viator/61552P8.exact-product.json";
 import specimen3332dayPayload from "../../data/engine6/viator/3332DAY.exact-product.json";
 import specimen191307p3Payload from "../../data/engine6/viator/191307P3.exact-product.json";
 import specimen338277p2Payload from "../../data/engine6/viator/338277P2.exact-product.json";
@@ -500,12 +498,9 @@ import specimen400049p3Payload from "../../data/engine6/viator/400049P3.exact-pr
 import specimen343490p3Payload from "../../data/engine6/viator/343490P3.exact-product.json";
 import specimen400049p5Payload from "../../data/engine6/viator/400049P5.exact-product.json";
 import specimen3978tour2Payload from "../../data/engine6/viator/3978TOUR2.exact-product.json";
-import specimen5046bos_ggPayload from "../../data/engine6/viator/5046BOS_GG.exact-product.json";
 import specimen3283codzillaPayload from "../../data/engine6/viator/3283CODZILLA.exact-product.json";
-import specimen7167p80Payload from "../../data/engine6/viator/7167P80.exact-product.json";
 import specimen5042bosdinPayload from "../../data/engine6/viator/5042BOSDIN.exact-product.json";
 import specimen5151boscy014Payload from "../../data/engine6/viator/5151BOSCY014.exact-product.json";
-import specimen66192p8Payload from "../../data/engine6/viator/66192P8.exact-product.json";
 import specimen255730p225Payload from "../../data/engine6/viator/255730P225.exact-product.json";
 import specimen26480p10Payload from "../../data/engine6/viator/26480P10.exact-product.json";
 import specimen26480p2Payload from "../../data/engine6/viator/26480P2.exact-product.json";
@@ -4222,13 +4217,6 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
-    productCode: "129182P3",
-    publicUrl:
-      "https://www.viator.com/tours/Sedona/Sedona-Sacred-Places-and-Vortex-tour/d750-129182P3",
-    rawPayload: specimen129182p3Payload as Record<string, unknown>,
-    validationRules: { itineraryOriginalityForNewBuilds: true },
-  },
-  {
     productCode: "129182P1",
     publicUrl:
       "https://www.viator.com/tours/Sedona/Private-custom-tours/d750-129182P1",
@@ -4575,12 +4563,6 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
-    productCode: "61552P8",
-    publicUrl: "https://www.viator.com/tours/Chicago/Gangsters-and-Ghosts-Tour-in-Chicago/d673-61552P8",
-    rawPayload: specimen61552p8Payload as Record<string, unknown>,
-    validationRules: { itineraryOriginalityForNewBuilds: true },
-  },
-  {
     productCode: "3332DAY",
     publicUrl: "https://www.viator.com/tours/Chicago/Chicago-Lakefront-Neighborhoods-Bicycle-Tour/d673-3332DAY",
     rawPayload: specimen3332dayPayload as Record<string, unknown>,
@@ -4716,24 +4698,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
-    productCode: "5046BOS_GG",
-    publicUrl:
-      "https://www.viator.com/tours/Boston/Boston-Ghosts-and-Gravestones-Tour/d678-5046BOS_GG",
-    rawPayload: specimen5046bos_ggPayload as Record<string, unknown>,
-    validationRules: { itineraryOriginalityForNewBuilds: true },
-  },
-  {
     productCode: "3283CODZILLA",
     publicUrl:
       "https://www.viator.com/tours/Boston/Boston-Codzilla-Thrill-Boat-Ride/d678-3283CODZILLA",
     rawPayload: specimen3283codzillaPayload as Record<string, unknown>,
-    validationRules: { itineraryOriginalityForNewBuilds: true },
-  },
-  {
-    productCode: "7167P80",
-    publicUrl:
-      "https://www.viator.com/tours/Salem/Salem-Witch-Trials-from-Past-to-Present-Day-Tour-from-Boston/d22414-7167P80",
-    rawPayload: specimen7167p80Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
@@ -4748,13 +4716,6 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     publicUrl:
       "https://www.viator.com/tours/Boston/Guided-Bike-Tour-of-Boston/d678-5151BOSCY014",
     rawPayload: specimen5151boscy014Payload as Record<string, unknown>,
-    validationRules: { itineraryOriginalityForNewBuilds: true },
-  },
-  {
-    productCode: "66192P8",
-    publicUrl:
-      "https://www.viator.com/tours/Boston/Day-Trip-from-Boston-To-Salem-Witch-Exhibits/d678-66192P8",
-    rawPayload: specimen66192p8Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
