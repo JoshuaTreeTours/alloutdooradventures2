@@ -325,14 +325,17 @@ export const fetchReviewsProductCommercial = async (args: {
   return extractReviewsProductCommercial(payload);
 };
 
+const hasPositiveCommercialNumber = (value: unknown) =>
+  typeof value === "number" && Number.isFinite(value) && value > 0;
+
 export const applyLiveReviewsCommercial = async (args: {
   apiKey: string;
   baseUrl: string;
   productCode: string;
   extracted: Engine6Extracted;
 }): Promise<Engine6Extracted> => {
-  const hasRating = typeof args.extracted.aggregateRating === "number";
-  const hasReviewCount = typeof args.extracted.reviewCount === "number";
+  const hasRating = hasPositiveCommercialNumber(args.extracted.aggregateRating);
+  const hasReviewCount = hasPositiveCommercialNumber(args.extracted.reviewCount);
 
   if (hasRating && hasReviewCount) {
     return args.extracted;
@@ -346,13 +349,11 @@ export const applyLiveReviewsCommercial = async (args: {
 
   return {
     ...args.extracted,
-    aggregateRating:
-      typeof args.extracted.aggregateRating === "number"
-        ? args.extracted.aggregateRating
-        : liveReviews.aggregateRating,
-    reviewCount:
-      typeof args.extracted.reviewCount === "number"
-        ? args.extracted.reviewCount
-        : liveReviews.reviewCount,
+    aggregateRating: hasRating
+      ? args.extracted.aggregateRating
+      : liveReviews.aggregateRating,
+    reviewCount: hasReviewCount
+      ? args.extracted.reviewCount
+      : liveReviews.reviewCount,
   };
 };
