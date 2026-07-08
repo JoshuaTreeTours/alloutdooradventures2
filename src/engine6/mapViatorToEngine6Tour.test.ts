@@ -125,23 +125,23 @@ describe("mapViatorToEngine6Tour location normalization", () => {
     warnSpy.mockRestore();
   });
 
-  it("suppresses the itinerary section for the Santa Barbara happy hour yacht route", () => {
+  it("maps the Santa Barbara narrated coastal yacht replacement route", () => {
     const hero =
       "https://dynamic-media.tacdn.com/media/photo-o/31/49/f0/a5/caption.jpg?w=1400&h=1000&s=1";
 
     const tour = mapViatorToEngine6Tour({
       source: "live-api",
-      rawProductCode: "447486P2",
+      rawProductCode: "447486P8",
       rawProduct: null,
       extracted: {
-        title: "Santa Barbara Happy Hour on a Yacht",
+        title: "Discover Santa Barbara Cruise: Narrated Coastal Yacht Experience",
         seoTitle: null,
         seoDescription: null,
         city: "Santa Barbara",
         state: "California",
         heroImageUrl: hero,
         productUrl:
-          "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Happy-Hour-on-a-Yacht/d4372-447486P2",
+          "https://www.viator.com/tours/Santa-Barbara/Discover-Santa-Barbara-Cruise-Narrated-Coastal-Yacht-Experience/d4372-447486P8",
         priceAmount: 129,
         priceFormatted: null,
         durationText: "1 hour 30 minutes",
@@ -191,9 +191,9 @@ describe("mapViatorToEngine6Tour location normalization", () => {
         candidateFamilyIdentityDeterminable: true,
         heroSurfaceParity: { page: true, card: true, schema: true },
         rejectedForeignHeroCandidates: [],
-        heroSourceProductCode: "447486P2",
+        heroSourceProductCode: "447486P8",
         heroSourceProductUrl:
-          "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Happy-Hour-on-a-Yacht/d4372-447486P2",
+          "https://www.viator.com/tours/Santa-Barbara/Discover-Santa-Barbara-Cruise-Narrated-Coastal-Yacht-Experience/d4372-447486P8",
         heroSourceFieldPath: "product.media.images[0].variants.FULL.url",
         heroHost: "dynamic-media.tacdn.com",
         productUrlFieldPath: "product.productUrl",
@@ -225,7 +225,7 @@ describe("mapViatorToEngine6Tour location normalization", () => {
     const html = renderToString(createElement(Engine6TourPage, { tour }));
 
     expect(tour.pagePath).toBe(
-      "/destinations/california/santa-barbara/tours/santa-barbara-happy-hour-on-a-yacht"
+      "/destinations/california/santa-barbara/tours/discover-santa-barbara-cruise-narrated-coastal-yacht-experience"
     );
     expect(tour.itinerary).toEqual([]);
     expect(tour.itinerarySummaryText).toBeNull();

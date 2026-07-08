@@ -1,6 +1,6 @@
 import specimen63657Payload from "../../data/engine6/viator/63657P1.exact-product.json";
 import specimen163975p1Payload from "../../data/engine6/viator/163975P1.exact-product.json";
-import specimen447486p2Payload from "../../data/engine6/viator/447486P2.exact-product.json";
+import specimen447486p8Payload from "../../data/engine6/viator/447486P8.exact-product.json";
 import specimen447486p4Payload from "../../data/engine6/viator/447486P4.exact-product.json";
 import specimen117409p1Payload from "../../data/engine6/viator/117409P1.exact-product.json";
 import specimen421920p3Payload from "../../data/engine6/viator/421920P3.exact-product.json";
@@ -640,10 +640,10 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     },
   },
   {
-    productCode: "447486P2",
+    productCode: "447486P8",
     publicUrl:
-      "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Happy-Hour-on-a-Yacht/d4372-447486P2",
-    rawPayload: specimen447486p2Payload as Record<string, unknown>,
+      "https://www.viator.com/tours/Santa-Barbara/Discover-Santa-Barbara-Cruise-Narrated-Coastal-Yacht-Experience/d4372-447486P8",
+    rawPayload: specimen447486p8Payload as Record<string, unknown>,
     validationRules: {
       itineraryOriginalityForNewBuilds: true,
     },
