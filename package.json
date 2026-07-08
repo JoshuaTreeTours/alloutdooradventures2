@@ -47,6 +47,7 @@
     "verify:prerender": "PRERENDER=1 CI=true node scripts/run-prerender.mjs && tsx scripts/verify-palm-springs-34849.ts",
     "test:schema-tour-diff": "tsx scripts/schema-diff-tour.ts",
     "audit:engine6-itinerary-title-integrity": "tsx scripts/audit-engine6-itinerary-title-integrity.ts",
+    "audit:engine6-inventory-health-replacements": "tsx scripts/audit-engine6-inventory-health-replacements.ts",
     "audit:engine6-stage2-governance": "tsx scripts/audit-engine6-stage2-governance.ts",
     "audit:engine6-stage2-governance:warn": "tsx scripts/audit-engine6-stage2-governance.ts --warn",
     "audit:engine6-stage2-governance:strict": "tsx scripts/audit-engine6-stage2-governance.ts --strict",
