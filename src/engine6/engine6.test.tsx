@@ -544,7 +544,7 @@ describe("engine6 meta descriptions", () => {
       "411138P3",
       "398496P5",
       "152424P1",
-      "447486P2",
+      "447486P8",
       "5503P10",
       "190492P3",
       "414460P1",
@@ -621,7 +621,7 @@ describe("engine6 meta descriptions", () => {
   it("uses rich governed product descriptions for JSON-LD while preserving concise SERP metadata", () => {
     const productCodes = [
       "411138P3",
-      "447486P2",
+      "447486P8",
       "398496P5",
       "152424P1",
       "190492P3",
@@ -632,7 +632,7 @@ describe("engine6 meta descriptions", () => {
         "Beluga Point",
         "Alaska Wildlife Conservation Center",
       ],
-      "447486P2": ["Santa Barbara Harbor", "Stearns Wharf", "Santa Ynez"],
+      "447486P8": ["Santa Barbara Harbor", "Stearns Wharf", "Santa Ynez"],
       "398496P5": ["Sphere", "Strip"],
       "152424P1": [
         "Muir Woods National Monument",
@@ -1318,6 +1318,19 @@ describe("engine6 listing surfaces", () => {
     expect(santaBarbaraTours.some(tour => tour.productCode === "63657P1")).toBe(
       true
     );
+  });
+
+  it("surfaces the live Santa Barbara narrated yacht replacement instead of retired 447486P2", () => {
+    const santaBarbaraTours = getToursByCity("california", "santa-barbara");
+    const santaBarbaraProductCodes = santaBarbaraTours.map(
+      tour => tour.productCode
+    );
+
+    expect(santaBarbaraProductCodes).not.toContain("447486P2");
+    expect(santaBarbaraProductCodes).toContain("447486P8");
+    expect(
+      santaBarbaraTours.find(tour => tour.productCode === "447486P8")?.slug
+    ).toBe("discover-santa-barbara-cruise-narrated-coastal-yacht-experience");
   });
 
   it("adds 5119P13 to Nevada and Las Vegas listing sources", () => {

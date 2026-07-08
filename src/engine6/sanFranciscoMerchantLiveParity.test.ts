@@ -8,7 +8,7 @@ import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 
 const APPENDED_SANTA_BARBARA_ENGINE6_PRODUCT_CODES = [
   "163975P1",
-  "447486P2",
+  "447486P8",
   "447486P4",
   "117409P1",
   "421920P3",
