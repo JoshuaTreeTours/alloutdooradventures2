@@ -4,6 +4,7 @@ import merchantFeedCommercialSnapshot from "../../data/merchantFeed-commercial-s
 import { isUSStateName } from "../constants/usStates";
 import { toEngine6Card } from "./cards";
 import { getEngine6TourRatingSourceOfTruth } from "./ratingSourceOfTruth";
+import { isEngine6SurfaceEligibleTour } from "./surfacingEligibility";
 import { legacyFhMigratedTours } from "./legacyFh/registry";
 import { ENGINE6_SPECIMEN_PRODUCT_CODE } from "./routes";
 import { engine6ResolvedTours } from "./registry";
@@ -196,12 +197,16 @@ const toGovernedEngine6ListingTours = (tours: Engine6Tour[]) => {
   );
 };
 
+const engine6ListingSourceTours = dedupeEngine6ToursByCanonicalPath([
+  ...engine6ResolvedTours,
+  ...legacyFhMigratedTours,
+])
+  .filter(tour => !isExcludedProductCode(tour.productCode))
+  .filter(isEngine6SurfaceEligibleTour);
+
 export const engine6ListingTours: Tour[] = toGovernedEngine6ListingTours(
   resolveToursWithMerchantFeedCommercialSnapshot(
-    dedupeEngine6ToursByCanonicalPath([
-      ...engine6ResolvedTours,
-      ...legacyFhMigratedTours,
-    ]).filter(tour => !isExcludedProductCode(tour.productCode)),
+    engine6ListingSourceTours,
     merchantFeedCommercialSnapshot as MerchantFeedCommercialSnapshot
   )
 );
