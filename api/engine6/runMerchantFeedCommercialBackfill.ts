@@ -27,6 +27,13 @@ export const MERCHANT_FEED_COMMERCIAL_REFRESH_SKIPPED_MESSAGE =
 export const MERCHANT_FEED_COMMERCIAL_BACKFILL_AUDIT_FILENAME =
   "merchantFeed-commercial-refresh-audit.json";
 
+const PRODUCT_JSONLD_CANONICAL_COMMERCIAL_FIELDS = [
+  "price",
+  "average_rating",
+  "rating_count",
+  "review_count",
+] as const;
+
 type MerchantRow = Record<(typeof MERCHANT_FEED_ROW_HEADERS)[number], string>;
 
 export type MerchantFeedCommercialBackfillSummary = {
@@ -429,6 +436,33 @@ export const resolveMerchantFeedCommercialRefreshPolicy = (
   };
 };
 
+export const applyMerchantFeedProductSchemaCommercialCanonicalFields = <
+  TRow extends MerchantFeedCsvRow,
+>(
+  refreshedRows: TRow[],
+  productSchemaRows: TRow[]
+): TRow[] => {
+  const productSchemaRowsByCode = new Map(
+    productSchemaRows.map(row => [normalizeProductCode(row.id), row])
+  );
+
+  return refreshedRows.map(row => {
+    const productSchemaRow = productSchemaRowsByCode.get(
+      normalizeProductCode(row.id)
+    );
+
+    if (!productSchemaRow) {
+      return row;
+    }
+
+    const canonicalRow = { ...row };
+    for (const field of PRODUCT_JSONLD_CANONICAL_COMMERCIAL_FIELDS) {
+      canonicalRow[field] = productSchemaRow[field] ?? "";
+    }
+    return canonicalRow;
+  });
+};
+
 export const applyMerchantFeedCommercialRefresh = async <
   TRow extends MerchantFeedCsvRow,
 >(
@@ -489,10 +523,17 @@ export const applyMerchantFeedCommercialRefresh = async <
     options.baselineRows,
     diagnoseWithProgress
   );
+  const refreshedRows =
+    mode === "generation"
+      ? applyMerchantFeedProductSchemaCommercialCanonicalFields(
+          result.rows as TRow[],
+          options.rows
+        )
+      : (result.rows as TRow[]);
 
   for (let index = 0; index < options.rows.length; index += 1) {
     const before = options.rows[index]!;
-    const after = result.rows[index]!;
+    const after = refreshedRows[index]!;
     if (!merchantFeedCommercialRefreshOnlyFieldsChanged(before, after)) {
       throw new Error(
         `Non-commercial field drift detected for ${before.id} after commercial refresh.`
@@ -505,7 +546,7 @@ export const applyMerchantFeedCommercialRefresh = async <
 
   return {
     skipped: false,
-    rows: result.rows as TRow[],
+    rows: refreshedRows,
     audit: result.audit,
     summary,
     report,
