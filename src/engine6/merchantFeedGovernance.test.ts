@@ -28,6 +28,8 @@ import {
   ENGINE6_NYC_ONE_DAY_SIGHTSEEING_PRODUCT_CODE,
   ENGINE6_NYC_ONE_DAY_SIGHTSEEING_ROUTE,
   ENGINE6_SANTA_BARBARA_TROLLEY_PRODUCT_CODE,
+  ENGINE6_SANTA_BARBARA_COASTAL_YACHT_PRODUCT_CODE,
+  ENGINE6_SANTA_BARBARA_COASTAL_YACHT_ROUTE,
 } from "./routes";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import { resolveEngine6TourForProductSchema } from "./resolveEngine6TourForProductSchema";
@@ -296,6 +298,31 @@ describe("Engine6 merchant feed Product JSON-LD governance", () => {
     expect(merchantRow?.review_count).toBe(String(tour.reviewCount));
     expect(tour.priceAmount).toBe(offer?.price);
     expect(tour.reviewCount).toBe(aggregateRating?.reviewCount);
+  });
+
+  it("keeps 447486P8 aligned with live /reviews/product commercial ratings", async () => {
+    const { tour, product, offer, aggregateRating } =
+      await getProductSchemaNodes(
+        ENGINE6_SANTA_BARBARA_COASTAL_YACHT_PRODUCT_CODE
+      );
+    const merchantRow = merchantRowsById.get(
+      ENGINE6_SANTA_BARBARA_COASTAL_YACHT_PRODUCT_CODE
+    );
+    const parity = compareMerchantFeedRowToProductSchema(tour, merchantRow!);
+
+    expect(product).toBeDefined();
+    expect(offer).toBeDefined();
+    expect(aggregateRating).toBeDefined();
+    expect(parity.pass, parity.mismatches.join("; ")).toBe(true);
+    expect(merchantRow?.link).toBe(
+      `https://www.alloutdooradventures.com${ENGINE6_SANTA_BARBARA_COASTAL_YACHT_ROUTE}`
+    );
+    expect(merchantRow?.price).toBe("45 USD");
+    expect(merchantRow?.average_rating).toBe("4.6");
+    expect(merchantRow?.rating_count).toBe(String(tour.reviewCount));
+    expect(merchantRow?.review_count).toBe(String(tour.reviewCount));
+    expect(tour.reviewCount).toBe(aggregateRating?.reviewCount);
+    expect(tour.aggregateRating).toBe(aggregateRating?.ratingValue);
   });
 
   it("keeps 191767P5 aligned with live page Product JSON-LD commercial fields", async () => {
