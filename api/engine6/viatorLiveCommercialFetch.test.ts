@@ -2,6 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import {
   applyAvailabilitySummaryPrice,
+  applyLiveReviewsCommercial,
   fetchViatorLiveJson,
 } from "./viatorLiveCommercialFetch";
 
@@ -10,6 +11,34 @@ vi.mock("../../lib/viator.js", () => ({
 }));
 
 const { fetchViatorWithCurl } = await import("../../lib/viator.js");
+
+const buildExtracted = (overrides = {}) => ({
+  title: "Test",
+  seoTitle: null,
+  seoDescription: null,
+  city: null,
+  state: null,
+  heroImageUrl: null,
+  productUrl: null,
+  priceAmount: null,
+  priceFormatted: null,
+  durationText: null,
+  aggregateRating: null,
+  reviewCount: null,
+  meetingPointText: null,
+  overviewText: null,
+  highlights: [],
+  itinerary: [],
+  itinerarySummaryText: null,
+  faqs: [],
+  included: [],
+  requirements: [],
+  primaryCategory: null,
+  categories: [],
+  primaryDisplayCategory: null,
+  activityCategories: [],
+  ...overrides,
+});
 
 describe("fetchViatorLiveJson", () => {
   beforeEach(() => {
@@ -94,36 +123,52 @@ describe("applyAvailabilitySummaryPrice", () => {
       apiKey: "test-key",
       baseUrl: "https://api.viator.com/partner",
       productCode: "44152P18",
-      extracted: {
-        title: "Test",
-        seoTitle: null,
-        seoDescription: null,
-        city: null,
-        state: null,
-        heroImageUrl: null,
-        productUrl: null,
-        priceAmount: null,
-        priceFormatted: null,
-        durationText: null,
-        aggregateRating: null,
-        reviewCount: null,
-        meetingPointText: null,
-        overviewText: null,
-        highlights: [],
-        itinerary: [],
-        itinerarySummaryText: null,
-        faqs: [],
-        included: [],
-        requirements: [],
-        primaryCategory: null,
-        categories: [],
-        primaryDisplayCategory: null,
-        activityCategories: [],
-      },
+      extracted: buildExtracted(),
     });
 
     expect(extracted.priceAmount).toBe(385);
     expect(extracted.priceFormatted).toBe("From $385.00");
     expect(fetchViatorWithCurl).toHaveBeenCalledTimes(2);
+  });
+});
+
+describe("applyLiveReviewsCommercial", () => {
+  beforeEach(() => {
+    vi.stubGlobal("fetch", vi.fn());
+    vi.mocked(fetchViatorWithCurl).mockReset();
+  });
+
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
+  it("overrides stale product rating metadata with the live reviews endpoint", async () => {
+    vi.mocked(fetch).mockRejectedValue(new Error("ENETUNREACH"));
+    vi.mocked(fetchViatorWithCurl).mockResolvedValue({
+      status: 200,
+      body: JSON.stringify({
+        totalReviewsSummary: {
+          combinedAverageRating: 4.7,
+          totalReviews: 575,
+        },
+      }),
+    });
+
+    const extracted = await applyLiveReviewsCommercial({
+      apiKey: "test-key",
+      baseUrl: "https://api.viator.com/partner",
+      productCode: "6740P7",
+      extracted: buildExtracted({
+        aggregateRating: 4.7,
+        reviewCount: 573,
+      }),
+    });
+
+    expect(extracted.aggregateRating).toBe(4.7);
+    expect(extracted.reviewCount).toBe(575);
+    expect(fetchViatorWithCurl).toHaveBeenCalledOnce();
+    expect(vi.mocked(fetchViatorWithCurl).mock.calls[0]?.[0]).toBe(
+      "https://api.viator.com/partner/reviews/product"
+    );
   });
 });

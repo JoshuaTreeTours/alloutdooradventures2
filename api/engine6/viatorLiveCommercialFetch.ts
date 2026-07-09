@@ -334,13 +334,6 @@ export const applyLiveReviewsCommercial = async (args: {
   productCode: string;
   extracted: Engine6Extracted;
 }): Promise<Engine6Extracted> => {
-  const hasRating = hasPositiveCommercialNumber(args.extracted.aggregateRating);
-  const hasReviewCount = hasPositiveCommercialNumber(args.extracted.reviewCount);
-
-  if (hasRating && hasReviewCount) {
-    return args.extracted;
-  }
-
   const liveReviews = await fetchReviewsProductCommercial({
     apiKey: args.apiKey,
     baseUrl: args.baseUrl,
@@ -349,11 +342,11 @@ export const applyLiveReviewsCommercial = async (args: {
 
   return {
     ...args.extracted,
-    aggregateRating: hasRating
-      ? args.extracted.aggregateRating
-      : liveReviews.aggregateRating,
-    reviewCount: hasReviewCount
-      ? args.extracted.reviewCount
-      : liveReviews.reviewCount,
+    aggregateRating: hasPositiveCommercialNumber(liveReviews.aggregateRating)
+      ? liveReviews.aggregateRating
+      : args.extracted.aggregateRating,
+    reviewCount: hasPositiveCommercialNumber(liveReviews.reviewCount)
+      ? liveReviews.reviewCount
+      : args.extracted.reviewCount,
   };
 };
