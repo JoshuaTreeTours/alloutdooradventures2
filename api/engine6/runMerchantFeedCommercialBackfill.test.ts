@@ -2,6 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import {
   applyMerchantFeedCommercialRefresh,
+  applyMerchantFeedProductSchemaCommercialCanonicalFields,
   hasEngine6ViatorApiCredentials,
   MERCHANT_FEED_COMMERCIAL_REFRESH_SKIPPED_MESSAGE,
   resolveMerchantFeedCommercialRefreshPolicy,
@@ -69,6 +70,39 @@ describe("merchant feed commercial refresh policy", () => {
     expect(result.report).toBe(
       MERCHANT_FEED_COMMERCIAL_REFRESH_SKIPPED_MESSAGE
     );
+  });
+
+  it("keeps generation commercial output canonical to Product JSON-LD rows", () => {
+    const productSchemaRows = [
+      sampleRow({
+        id: "6740P7",
+        price: "127.20 USD",
+        average_rating: "4.7",
+        rating_count: "575",
+        review_count: "575",
+      }),
+    ];
+    const refreshedRows = [
+      sampleRow({
+        id: "6740P7",
+        price: "127.20 USD",
+        average_rating: "4.7",
+        rating_count: "573",
+        review_count: "573",
+      }),
+    ];
+
+    expect(
+      applyMerchantFeedProductSchemaCommercialCanonicalFields(
+        refreshedRows,
+        productSchemaRows
+      )[0]
+    ).toMatchObject({
+      price: "127.20 USD",
+      average_rating: "4.7",
+      rating_count: "575",
+      review_count: "575",
+    });
   });
 });
 
