@@ -17,6 +17,8 @@ import {
   getActivityTourHref,
   resolveActivityHeroImage,
 } from "../../data/activityDiscovery";
+import type { UnifiedCityTour } from "../../data/tours";
+import { engine6ResolvedTours } from "../../engine6/registry";
 import { resolveTourHeroImage } from "../../utils/hero";
 import { useEngine6LiveTourCardHydration } from "../../engine6/useEngine6LiveTourCardHydration";
 import { buildBreadcrumbList, buildItemList } from "../../utils/structuredData";
@@ -37,16 +39,48 @@ const formatActivityToursLabel = (activityLabel: string) =>
     ? activityLabel
     : `${activityLabel} Tours`;
 
+const nativeEngine6ProductCodes = new Set(
+  engine6ResolvedTours.map(tour => tour.productCode)
+);
+
+const prioritizeNativeEngine6Entries = (entries: UnifiedCityTour[]) => {
+  const seen = new Set<string>();
+  const engine6Entries: UnifiedCityTour[] = [];
+  const fallbackEntries: UnifiedCityTour[] = [];
+
+  entries.forEach(entry => {
+    const key = entry.tour.productCode || entry.tour.id || entry.href;
+    if (seen.has(key)) return;
+    seen.add(key);
+
+    if (entry.tour.engine === "engine6") {
+      if (
+        entry.tour.productCode &&
+        nativeEngine6ProductCodes.has(entry.tour.productCode)
+      ) {
+        engine6Entries.push(entry);
+      }
+      return;
+    }
+
+    fallbackEntries.push(entry);
+  });
+
+  return [...engine6Entries, ...fallbackEntries];
+};
+
 export default function ActivityToursPage({ params }: ActivityToursPageProps) {
   const activity = getActivityDiscoveryPage(params.activitySlug);
 
   const activityTourEntries = useMemo(
     () =>
-      getActivityTourEntriesByLocation({
-        activitySlug: params.activitySlug,
-        stateSlug: params.stateSlug,
-        citySlug: params.citySlug,
-      }),
+      prioritizeNativeEngine6Entries(
+        getActivityTourEntriesByLocation({
+          activitySlug: params.activitySlug,
+          stateSlug: params.stateSlug,
+          citySlug: params.citySlug,
+        })
+      ),
     [params.activitySlug, params.stateSlug, params.citySlug]
   );
   const hydratedActivityTourEntries =
