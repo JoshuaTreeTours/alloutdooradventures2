@@ -25,27 +25,34 @@ const AFRICA_ENGINE2_MAP: Record<string, { country: string; city: string }> = {
   "517094": { country: "Tanzania", city: "Zanzibar" },
 };
 
+const normalizeDurationDays = (value: number) => {
+  if (!Number.isFinite(value) || value < 1 || value > 60) return undefined;
+  return value;
+};
+
 const extractDurationDays = (text?: string | null) => {
   if (!text) return undefined;
 
   const normalized = text.toLowerCase();
   const overnightMatch = normalized.match(/(\d+)\s*d\s*\/\s*(\d+)\s*n/);
-  if (overnightMatch) return Number(overnightMatch[1]);
+  if (overnightMatch) return normalizeDurationDays(Number(overnightMatch[1]));
 
   const rangeMatch = normalized.match(/(\d+)\s*(?:-|–|to)\s*(\d+)\s*days?/);
-  if (rangeMatch) return Number(rangeMatch[1]);
+  if (rangeMatch) return normalizeDurationDays(Number(rangeMatch[1]));
 
   const hyphenatedDayMatch = normalized.match(/\b(\d+)\s*-\s*day\b/);
-  if (hyphenatedDayMatch) return Number(hyphenatedDayMatch[1]);
+  if (hyphenatedDayMatch) return normalizeDurationDays(Number(hyphenatedDayMatch[1]));
 
   const dayMatch = normalized.match(/\b(\d+)\s*days?\b/);
-  if (dayMatch) return Number(dayMatch[1]);
+  if (dayMatch) return normalizeDurationDays(Number(dayMatch[1]));
 
-  const compactMatch = normalized.match(/\b(\d+)\s*d\b/);
-  if (compactMatch) return Number(compactMatch[1]);
+  // Compact forms are valid only for realistic one- or two-digit durations.
+  // This prevents product codes such as 5680DAY from becoming "5680 days."
+  const compactMatch = normalized.match(/\b(\d{1,2})\s*d\b/);
+  if (compactMatch) return normalizeDurationDays(Number(compactMatch[1]));
 
   const hoursMatch = normalized.match(/\b(\d+(?:\.\d+)?)\s*hours?\b/);
-  if (hoursMatch) return Math.ceil(Number(hoursMatch[1]) / 24);
+  if (hoursMatch) return normalizeDurationDays(Math.ceil(Number(hoursMatch[1]) / 24));
 
   return undefined;
 };
@@ -60,7 +67,7 @@ const getTourDurationDays = (tour: Tour) => {
 
   for (const source of sources) {
     const durationDays = extractDurationDays(source);
-    if (durationDays !== undefined && !Number.isNaN(durationDays)) return durationDays;
+    if (durationDays !== undefined) return durationDays;
   }
 
   if (multiDayTriggers.some(trigger => tour.title.toLowerCase().includes(trigger))) {
