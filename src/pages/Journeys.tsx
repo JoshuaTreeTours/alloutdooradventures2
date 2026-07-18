@@ -3,7 +3,7 @@ import { Link } from "wouter";
 
 import Image from "../components/Image";
 import Seo from "../components/Seo";
-import { getTourBookingPath, getTourDetailPath, tours } from "../data/tours";
+import { getTourDetailPath, tours } from "../data/tours";
 import type { Tour } from "../data/tours.types";
 import { getAllEngine2Tours } from "../engine2/data/loadEngine2";
 import { engine6ListingTours } from "../engine6/listing";
@@ -78,6 +78,11 @@ const isMultiDayTour = (tour: Tour, durationDays?: number) => {
   return multiDayTriggers.some(trigger => combined.includes(trigger));
 };
 
+const formatPriceFrom = (priceFrom?: string) => {
+  if (!priceFrom) return null;
+  return /^from\b/i.test(priceFrom.trim()) ? priceFrom.trim() : `From ${priceFrom.trim()}`;
+};
+
 type JourneyCardProps = {
   tour: Tour;
   durationDays?: number;
@@ -91,10 +96,9 @@ const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
       ? `${tour.destination.city}, ${tour.destination.country}`
       : tour.destination.city;
   const detailHref = getTourDetailPath(tour);
-  const bookingHref = getTourBookingPath(tour);
   const rating = tour.badges?.rating;
   const reviewCount = tour.badges?.reviewCount;
-  const priceFrom = tour.badges?.priceFrom;
+  const priceFrom = formatPriceFrom(tour.badges?.priceFrom);
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-black/10 bg-white/90 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
@@ -134,19 +138,14 @@ const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
                 </span>
               ) : null}
               {priceFrom ? (
-                <span className="font-semibold text-[#1f2a1f]">From {priceFrom}</span>
+                <span className="font-semibold text-[#1f2a1f]">{priceFrom}</span>
               ) : null}
             </div>
           ) : null}
         </div>
-        <div className="mt-auto flex flex-wrap items-center gap-3">
+        <div className="mt-auto">
           <Link href={detailHref}>
-            <a className="inline-flex items-center justify-center rounded-full border border-[#2f4a2f]/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#eef4ea]">
-              View details
-            </a>
-          </Link>
-          <Link href={bookingHref}>
-            <a className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-sm transition hover:bg-[#287a35]">
+            <a className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-sm transition hover:bg-[#287a35]">
               Book
             </a>
           </Link>
