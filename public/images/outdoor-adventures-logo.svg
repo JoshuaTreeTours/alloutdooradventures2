@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 11 147 141" role="img" aria-labelledby="outdoorAdventuresLogoTitle outdoorAdventuresLogoDesc">
+  <title id="outdoorAdventuresLogoTitle">Outdoor Adventures circular badge</title>
+  <desc id="outdoorAdventuresLogoDesc">Original Outdoor Adventures circular badge artwork with transparent rectangular background.</desc>
+  <defs>
+    <clipPath id="outdoorAdventuresBadgeClip" clipPathUnits="userSpaceOnUse">
+      <ellipse cx="133.5" cy="81.5" rx="73.5" ry="70.5" />
+    </clipPath>
+  </defs>
+  <image href="/images/Logo.png" x="0" y="0" width="265" height="176" preserveAspectRatio="xMidYMid meet" clip-path="url(#outdoorAdventuresBadgeClip)" />
+</svg>
