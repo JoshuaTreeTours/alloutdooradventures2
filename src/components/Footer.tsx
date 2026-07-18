@@ -9,9 +9,9 @@ export default function Footer() {
         <div className="flex flex-col gap-6 border-b border-white/15 pb-8 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-4">
             <img
-              src="/logo.svg"
-              alt={`${SITE_BRAND_NAME} logo`}
-              className="h-12 w-12"
+              src="/images/Outdoor-Adventures-Logo-Transparent.png"
+              alt={`${SITE_BRAND_NAME} circular logo`}
+              className="h-auto w-24 shrink-0"
               loading="lazy"
             />
             <div className="space-y-1">

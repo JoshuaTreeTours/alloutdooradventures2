@@ -21,10 +21,17 @@ export default function About() {
         <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
           About
         </p>
-        <h1 className="mt-3 text-3xl font-semibold md:text-4xl">
-          About {SITE_BRAND_NAME}
-        </h1>
-        <section className="mt-6 rounded-2xl border border-black/5 bg-white/70 p-5">
+        <div className="mt-3 flex flex-col gap-6 md:flex-row md:items-center md:gap-10">
+          <img
+            src="/images/Outdoor-Adventures-Logo-Transparent.png"
+            alt={`${SITE_BRAND_NAME} circular logo with outdoor activities`}
+            className="h-auto w-56 max-w-full shrink-0 md:w-64"
+          />
+          <h1 className="text-3xl font-semibold md:text-4xl">
+            About {SITE_BRAND_NAME}
+          </h1>
+        </div>
+        <section className="mt-8 rounded-2xl border border-black/5 bg-white/70 p-5">
           <h2 className="text-lg font-semibold text-[#2f4a2f]">Who We Are</h2>
           <p className="mt-3 text-sm text-[#405040] md:text-base">
             All Outdoor Adventures is the public-facing travel and tour
@@ -32,7 +39,10 @@ export default function About() {
             customers discover and book outdoor tours, city tours, sightseeing
             experiences, and activities. Some tours are provided by independent
             third-party operators, and each product page should be read for
-            specific provider, meeting point, cancellation, and booking details. All Outdoor Adventures does not operate most tours directly. Each experience is fulfilled by the local provider listed on the product page.
+            specific provider, meeting point, cancellation, and booking details.
+            All Outdoor Adventures does not operate most tours directly. Each
+            experience is fulfilled by the local provider listed on the product
+            page.
           </p>
         </section>
         <div className="mt-8 flex flex-wrap gap-3">
