@@ -51,7 +51,7 @@ describe("global structured data graph", () => {
       "@id": SITE_ORGANIZATION_ID,
       name: "Outdoor Adventures, Inc.",
       url: "https://www.alloutdooradventures.com",
-      logo: "https://www.alloutdooradventures.com/images/Logo.png",
+      logo: "https://www.alloutdooradventures.com/images/Outdoor-Adventures-Logo-Transparent.png",
       telephone: "+1-855-314-8687",
       address: SITE_POSTAL_ADDRESS,
     });
@@ -61,7 +61,7 @@ describe("global structured data graph", () => {
       "@id": SITE_BRAND_ID,
       name: "All Outdoor Adventures",
       url: "https://www.alloutdooradventures.com",
-      logo: "https://www.alloutdooradventures.com/images/Logo.png",
+      logo: "https://www.alloutdooradventures.com/images/Outdoor-Adventures-Logo-Transparent.png",
       telephone: "+1-855-314-8687",
       parentOrganization: { "@id": SITE_ORGANIZATION_ID },
       address: SITE_POSTAL_ADDRESS,
