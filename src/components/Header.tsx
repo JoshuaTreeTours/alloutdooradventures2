@@ -187,7 +187,7 @@ export default function Header() {
       </header>
 
       {showSectionLogo ? (
-        <div className="pointer-events-none absolute left-6 top-28 z-10 hidden md:block xl:left-[calc(50%-45rem)]">
+        <div className="pointer-events-none absolute left-6 top-28 z-10 hidden xl:block xl:left-[calc(50%-45rem)]">
           <Link href="/">
             <a
               className="pointer-events-auto inline-flex"
