@@ -141,7 +141,7 @@ export default function Header() {
       </header>
 
       {showSectionLogo ? (
-        <div className="section-logo pointer-events-none absolute left-8 top-32 z-10 hidden lg:block xl:left-[calc(50%-45rem)] xl:top-28">
+        <div className="pointer-events-none absolute left-6 top-28 z-10 hidden xl:block xl:left-[calc(50%-45rem)]">
           <Link href="/">
             <a
               className="pointer-events-auto inline-flex"
@@ -156,21 +156,6 @@ export default function Header() {
           </Link>
         </div>
       ) : null}
-
-      <style>{`
-        @media (min-width: 1024px) and (max-width: 1279px) {
-          .section-logo + main > section:first-child > div:first-child {
-            padding-left: 11rem;
-          }
-
-          .section-logo + main > p:first-child,
-          .section-logo + main > h1:first-of-type,
-          .section-logo + main > h1:first-of-type + p,
-          .section-logo + main > h1:first-of-type + div {
-            margin-left: 10rem;
-          }
-        }
-      `}</style>
     </>
   );
 }
