@@ -5,11 +5,13 @@ import Image from "../components/Image";
 import Seo from "../components/Seo";
 import { getTourBookingPath, getTourDetailPath, tours } from "../data/tours";
 import type { Tour } from "../data/tours.types";
-import { getStaticPageSeo } from "../utils/seo";
-import { resolveTourHeroImage } from "../utils/hero";
-import { slugify } from "../utils/slugify";
 import { getAllEngine2Tours } from "../engine2/data/loadEngine2";
+import { engine6ListingTours } from "../engine6/listing";
+import { engine6ResolvedTours } from "../engine6/registry";
+import { resolveTourHeroImage } from "../utils/hero";
 import { isUsCountryAlias } from "../utils/guides/usCountryAliases";
+import { getStaticPageSeo } from "../utils/seo";
+import { slugify } from "../utils/slugify";
 
 const durationBuckets = [
   { label: "2–3 days", value: "2-3" },
@@ -23,10 +25,8 @@ const AFRICA_ENGINE2_MAP: Record<string, { country: string; city: string }> = {
   "517094": { country: "Tanzania", city: "Zanzibar" },
 };
 
-const extractDurationDays = (text?: string) => {
-  if (!text) {
-    return undefined;
-  }
+const extractDurationDays = (text?: string | null) => {
+  if (!text) return undefined;
 
   const normalized = text.toLowerCase();
   const overnightMatch = normalized.match(/(\d+)\s*d\s*\/\s*(\d+)\s*n/);
@@ -35,13 +35,19 @@ const extractDurationDays = (text?: string) => {
     return Number.isNaN(days) ? undefined : days;
   }
 
-  const rangeMatch = normalized.match(/(\d+)\s*-\s*(\d+)\s*day/);
+  const rangeMatch = normalized.match(/(\d+)\s*(?:-|–|to)\s*(\d+)\s*days?/);
   if (rangeMatch) {
     const days = Number(rangeMatch[1]);
     return Number.isNaN(days) ? undefined : days;
   }
 
-  const dayMatch = normalized.match(/\b(\d+)\s*day/);
+  const hyphenatedDayMatch = normalized.match(/\b(\d+)\s*-\s*day\b/);
+  if (hyphenatedDayMatch) {
+    const days = Number(hyphenatedDayMatch[1]);
+    return Number.isNaN(days) ? undefined : days;
+  }
+
+  const dayMatch = normalized.match(/\b(\d+)\s*days?\b/);
   if (dayMatch) {
     const days = Number(dayMatch[1]);
     return Number.isNaN(days) ? undefined : days;
@@ -51,6 +57,12 @@ const extractDurationDays = (text?: string) => {
   if (compactMatch) {
     const days = Number(compactMatch[1]);
     return Number.isNaN(days) ? undefined : days;
+  }
+
+  const hoursMatch = normalized.match(/\b(\d+(?:\.\d+)?)\s*hours?\b/);
+  if (hoursMatch) {
+    const hours = Number(hoursMatch[1]);
+    return Number.isNaN(hours) ? undefined : Math.ceil(hours / 24);
   }
 
   return undefined;
@@ -66,14 +78,10 @@ const getTourDurationDays = (tour: Tour) => {
 
   for (const source of sources) {
     const durationDays = extractDurationDays(source);
-    if (durationDays !== undefined) {
-      return durationDays;
-    }
+    if (durationDays !== undefined) return durationDays;
   }
 
-  if (
-    multiDayTriggers.some(trigger => tour.title.toLowerCase().includes(trigger))
-  ) {
+  if (multiDayTriggers.some(trigger => tour.title.toLowerCase().includes(trigger))) {
     return 2;
   }
 
@@ -81,25 +89,19 @@ const getTourDurationDays = (tour: Tour) => {
 };
 
 const isMultiDayTour = (tour: Tour, durationDays?: number) => {
-  if (durationDays !== undefined) {
-    return durationDays > 1;
-  }
+  if (durationDays !== undefined) return durationDays > 1;
 
   const combined = `${tour.title} ${tour.slug}`.toLowerCase();
-  if (combined.includes("full day") || combined.includes("day-long")) {
-    return false;
-  }
+  if (combined.includes("full day") || combined.includes("day-long")) return false;
 
   return multiDayTriggers.some(trigger => combined.includes(trigger));
 };
 
 const getCarouselImages = (tour: Tour) => {
   const heroImage = resolveTourHeroImage(tour);
-  const images = [heroImage]
+  return [heroImage]
     .filter((image): image is string => Boolean(image))
     .filter((image, index, array) => array.indexOf(image) === index);
-
-  return images;
 };
 
 type JourneyCardProps = {
@@ -117,28 +119,16 @@ const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
       : tour.destination.city;
   const detailHref = getTourDetailPath(tour);
   const bookingHref = getTourBookingPath(tour);
-
   const hasImages = images.length > 0;
   const hasMultipleImages = images.length > 1;
   const displayedIndex = hasImages
     ? ((activeImage % images.length) + images.length) % images.length
     : 0;
 
-  const handleNext = () => {
-    setActiveImage(previous => (previous + 1) % images.length);
-  };
-
-  const handlePrevious = () => {
-    setActiveImage(previous => (previous - 1 + images.length) % images.length);
-  };
-
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-black/10 bg-white/90 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
       <Link href={detailHref}>
-        <a
-          className="absolute inset-0 z-10"
-          aria-label={`View ${tour.title}`}
-        />
+        <a className="absolute inset-0 z-10" aria-label={`View ${tour.title}`} />
       </Link>
       <div className="relative h-56 w-full overflow-hidden bg-black/5 sm:h-64">
         {hasImages ? (
@@ -160,7 +150,7 @@ const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
           <div className="absolute bottom-4 right-4 z-20 flex items-center gap-2">
             <button
               type="button"
-              onClick={handlePrevious}
+              onClick={() => setActiveImage(previous => (previous - 1 + images.length) % images.length)}
               className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-sm font-semibold text-[#2f4a2f] shadow-sm transition hover:bg-white"
               aria-label={`View previous image for ${tour.title}`}
             >
@@ -168,7 +158,7 @@ const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
             </button>
             <button
               type="button"
-              onClick={handleNext}
+              onClick={() => setActiveImage(previous => (previous + 1) % images.length)}
               className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-sm font-semibold text-[#2f4a2f] shadow-sm transition hover:bg-white"
               aria-label={`View next image for ${tour.title}`}
             >
@@ -182,9 +172,7 @@ const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
           <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
             {locationLabel}
           </p>
-          <h3 className="mt-3 text-lg font-semibold text-[#1f2a1f]">
-            {tour.title}
-          </h3>
+          <h3 className="mt-3 text-lg font-semibold text-[#1f2a1f]">{tour.title}</h3>
         </div>
         <div className="mt-auto flex flex-wrap items-center gap-3">
           <Link href={detailHref}>
@@ -210,11 +198,26 @@ export default function Journeys() {
   const [selectedDuration, setSelectedDuration] = useState("all");
 
   const allJourneyCandidates = useMemo(() => {
-    const engine2International = getAllEngine2Tours()
+    const engine6DurationByProductCode = new Map(
+      engine6ResolvedTours.map(tour => [tour.productCode, tour.durationText ?? null])
+    );
+
+    const viatorEngine6MultiDayTours = engine6ListingTours
+      .filter(tour => Boolean(tour.productCode && engine6DurationByProductCode.has(tour.productCode)))
       .map(tour => ({
-        tour,
-        mapped: AFRICA_ENGINE2_MAP[tour.id],
+        ...tour,
+        badges: {
+          ...tour.badges,
+          duration: engine6DurationByProductCode.get(tour.productCode ?? "") ?? undefined,
+        },
       }))
+      .filter(tour => {
+        const durationDays = getTourDurationDays(tour);
+        return durationDays !== undefined && durationDays >= 2;
+      });
+
+    const engine2International = getAllEngine2Tours()
+      .map(tour => ({ tour, mapped: AFRICA_ENGINE2_MAP[tour.id] }))
       .filter(({ tour, mapped }) => !isUsCountryAlias(mapped?.country ?? tour.geo.country))
       .map(tour => ({
         id: `engine2-${tour.tour.id}`,
@@ -232,33 +235,35 @@ export default function Journeys() {
         bookingProvider: "fareharbor" as const,
         bookingUrl: tour.tour.booking.bookingUrl,
         activitySlugs: ["adventure", "multi-day"],
+        longDescription: "",
       })) as Tour[];
-    return [...tours, ...engine2International];
+
+    const orderedCandidates = [
+      ...viatorEngine6MultiDayTours,
+      ...tours.filter(tour => tour.engine !== "engine6"),
+      ...engine2International,
+    ];
+
+    return Array.from(new Map(orderedCandidates.map(tour => [tour.id, tour])).values());
   }, []);
 
-  const multiDayTours = useMemo(() => {
-    return allJourneyCandidates
-      .map(tour => {
-        const durationDays = getTourDurationDays(tour);
-        return {
-          tour,
-          durationDays,
-          isMultiDay: isMultiDayTour(tour, durationDays),
-        };
-      })
-      .filter(({ isMultiDay }) => isMultiDay);
-  }, [allJourneyCandidates]);
+  const multiDayTours = useMemo(
+    () =>
+      allJourneyCandidates
+        .map(tour => {
+          const durationDays = getTourDurationDays(tour);
+          return { tour, durationDays, isMultiDay: isMultiDayTour(tour, durationDays) };
+        })
+        .filter(({ isMultiDay }) => isMultiDay),
+    [allJourneyCandidates]
+  );
 
   const regionOptions = useMemo(() => {
     const uniqueRegions = new Set<string>();
-
     multiDayTours.forEach(({ tour }) => {
       const region = tour.destination.state || tour.destination.country;
-      if (region) {
-        uniqueRegions.add(region);
-      }
+      if (region) uniqueRegions.add(region);
     });
-
     return Array.from(uniqueRegions).sort((a, b) => a.localeCompare(b));
   }, [multiDayTours]);
 
@@ -268,40 +273,19 @@ export default function Journeys() {
     return multiDayTours.filter(({ tour, durationDays }) => {
       if (selectedRegion !== "all") {
         const region = tour.destination.state || tour.destination.country;
-        if (region !== selectedRegion) {
-          return false;
-        }
+        if (region !== selectedRegion) return false;
       }
 
       if (selectedDuration !== "all") {
-        if (durationDays === undefined) {
-          return false;
-        }
-
-        if (
-          selectedDuration === "2-3" &&
-          (durationDays < 2 || durationDays > 3)
-        ) {
-          return false;
-        }
-
-        if (
-          selectedDuration === "4-7" &&
-          (durationDays < 4 || durationDays > 7)
-        ) {
-          return false;
-        }
-
-        if (selectedDuration === "8+" && durationDays < 8) {
-          return false;
-        }
+        if (durationDays === undefined) return false;
+        if (selectedDuration === "2-3" && (durationDays < 2 || durationDays > 3)) return false;
+        if (selectedDuration === "4-7" && (durationDays < 4 || durationDays > 7)) return false;
+        if (selectedDuration === "8+" && durationDays < 8) return false;
       }
 
-      if (!normalizedSearch) {
-        return true;
-      }
+      if (!normalizedSearch) return true;
 
-      const searchHaystack = [
+      return [
         tour.title,
         tour.destination.city,
         tour.destination.state,
@@ -309,33 +293,23 @@ export default function Journeys() {
       ]
         .filter(Boolean)
         .join(" ")
-        .toLowerCase();
-
-      return searchHaystack.includes(normalizedSearch);
+        .toLowerCase()
+        .includes(normalizedSearch);
     });
   }, [multiDayTours, searchTerm, selectedDuration, selectedRegion]);
 
   return (
     <>
       {seo ? (
-        <Seo
-          title={seo.title}
-          description={seo.description}
-          url={seo.url}
-          image={seo.image}
-        />
+        <Seo title={seo.title} description={seo.description} url={seo.url} image={seo.image} />
       ) : null}
       <main className="mx-auto max-w-6xl px-6 py-16 text-[#1f2a1f]">
-        <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-          Journeys
-        </p>
-        <h1 className="mt-3 text-3xl font-semibold md:text-4xl">
-          Multi-day tours
-        </h1>
+        <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">Journeys</p>
+        <h1 className="mt-3 text-3xl font-semibold md:text-4xl">Multi-day tours</h1>
         <p className="mt-4 max-w-3xl text-sm text-[#405040] md:text-base">
-          Browse our curated list of multi-day tours spanning the US and
-          international destinations. Use the search tools to find the perfect
-          itinerary by location, duration, or tour name.
+          Browse our curated list of multi-day tours spanning the US and international
+          destinations. Use the search tools to find the perfect itinerary by location,
+          duration, or tour name.
         </p>
 
         <section className="mt-10 rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm">
@@ -363,15 +337,13 @@ export default function Journeys() {
                     const normalized = normalizeOptionValue(region);
                     return (
                       normalized.length > 0 &&
-                      array.findIndex(
-                        item => normalizeOptionValue(item) === normalized
-                      ) === index
+                      array.findIndex(item => normalizeOptionValue(item) === normalized) === index
                     );
                   })
                   .map(region => (
-                  <option key={region} value={region}>
-                    {region}
-                  </option>
+                    <option key={region} value={region}>
+                      {region}
+                    </option>
                   ))}
               </select>
             </label>
@@ -392,18 +364,13 @@ export default function Journeys() {
             </label>
           </div>
           <p className="mt-4 text-sm text-[#405040]">
-            Showing {filteredTours.length} multi-day tour
-            {filteredTours.length === 1 ? "" : "s"}.
+            Showing {filteredTours.length} multi-day tour{filteredTours.length === 1 ? "" : "s"}.
           </p>
         </section>
 
         <section className="mt-10 grid gap-6 md:grid-cols-2">
           {filteredTours.map(({ tour, durationDays }) => (
-            <JourneyCard
-              key={tour.id}
-              tour={tour}
-              durationDays={durationDays}
-            />
+            <JourneyCard key={tour.id} tour={tour} durationDays={durationDays} />
           ))}
         </section>
 
@@ -412,18 +379,14 @@ export default function Journeys() {
             Design a journey that’s entirely yours
           </h2>
           <p className="mt-3 text-sm text-[#405040]">
-            Tell us what you have in mind and we’ll craft a custom multi-day
-            itinerary with the right pace, lodging, and adventure mix.
+            Tell us what you have in mind and we’ll craft a custom multi-day itinerary with
+            the right pace, lodging, and adventure mix.
           </p>
           <div className="mt-6 flex justify-center">
             <Link href="/contact">
               <a className="inline-flex items-center gap-2 rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-sm transition hover:bg-[#287a35]">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/20">
-                  <svg
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    className="h-4 w-4 fill-white"
-                  >
+                  <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-white">
                     <path d="M12 3a9 9 0 0 0-9 9v5a2 2 0 0 0 2 2h3v-7H5a7 7 0 1 1 14 0h-3v7h3a2 2 0 0 0 2-2v-5a9 9 0 0 0-9-9z" />
                   </svg>
                 </span>
