@@ -11,7 +11,7 @@ export default function Footer() {
             <img
               src="/images/outdoor-adventures-logo.svg"
               alt={`${SITE_BRAND_NAME} circular Outdoor Adventures logo`}
-              className="h-16 w-auto"
+              className="w-24 h-auto"
               loading="lazy"
             />
             <div className="space-y-1">
