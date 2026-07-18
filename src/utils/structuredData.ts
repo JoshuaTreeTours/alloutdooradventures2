@@ -224,7 +224,7 @@ export const dedupeGraphNodesById = (
 export const getSiteStructuredDataNodes = ({
   includeRootImage = false,
 }: { includeRootImage?: boolean } = {}) => {
-  const logoUrl = buildImageUrl("/images/Logo.png");
+  const logoUrl = buildImageUrl("/images/Outdoor-Adventures-Logo-Transparent.png");
   const organizationImageFields = includeRootImage
     ? { image: buildImageUrl(ROOT_OG_IMAGE) }
     : {};
