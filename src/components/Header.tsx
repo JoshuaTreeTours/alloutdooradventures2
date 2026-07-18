@@ -7,14 +7,22 @@ export const toursMenuItems = [
   { label: "Multi-Day Adventures", href: "/tours/multi-day" },
 ] as const;
 
+const navItems = [
+  { label: "Activities", href: "/activities" },
+  { label: "Guides", href: "/guides" },
+  { label: "FAQs", href: "/faqs" },
+  { label: "Journeys", href: "/journeys" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+] as const;
+
 const pagesWithSectionLogo = new Set(["/guides", "/faqs", "/journeys", "/contact"]);
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [location] = useLocation();
-
-  const closeMobileMenu = () => setMobileOpen(false);
   const showSectionLogo = pagesWithSectionLogo.has(location);
+  const closeMobileMenu = () => setMobileOpen(false);
 
   return (
     <>
@@ -33,8 +41,8 @@ export default function Header() {
               </a>
             </Link>
 
-            <nav className="hidden md:flex items-center gap-6 text-sm text-[#405040]">
-              <div className="relative group">
+            <nav className="hidden items-center gap-6 text-sm text-[#405040] md:flex">
+              <div className="group relative">
                 <Link href="/tours">
                   <a className="hover:text-[#1f2a1f]">Tours</a>
                 </Link>
@@ -50,24 +58,11 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-              <Link href="/activities">
-                <a className="hover:text-[#1f2a1f]">Activities</a>
-              </Link>
-              <Link href="/guides">
-                <a className="hover:text-[#1f2a1f]">Guides</a>
-              </Link>
-              <Link href="/faqs">
-                <a className="hover:text-[#1f2a1f]">FAQs</a>
-              </Link>
-              <Link href="/journeys">
-                <a className="hover:text-[#1f2a1f]">Journeys</a>
-              </Link>
-              <Link href="/about">
-                <a className="hover:text-[#1f2a1f]">About</a>
-              </Link>
-              <Link href="/contact">
-                <a className="hover:text-[#1f2a1f]">Contact</a>
-              </Link>
+              {navItems.map(item => (
+                <Link key={item.href} href={item.href}>
+                  <a className="hover:text-[#1f2a1f]">{item.label}</a>
+                </Link>
+              ))}
             </nav>
 
             <div className="flex items-center gap-3">
@@ -114,64 +109,23 @@ export default function Header() {
                   <div className="mt-3 space-y-3">
                     {toursMenuItems.map(item => (
                       <Link key={item.label} href={item.href}>
-                        <a
-                          onClick={closeMobileMenu}
-                          className="block font-medium"
-                        >
+                        <a onClick={closeMobileMenu} className="block font-medium">
                           {item.label}
                         </a>
                       </Link>
                     ))}
                   </div>
                 </details>
-                <Link href="/activities">
-                  <a
-                    onClick={closeMobileMenu}
-                    className="font-medium text-[#1f2a1f]"
-                  >
-                    Activities
-                  </a>
-                </Link>
-                <Link href="/guides">
-                  <a
-                    onClick={closeMobileMenu}
-                    className="font-medium text-[#1f2a1f]"
-                  >
-                    Guides
-                  </a>
-                </Link>
-                <Link href="/faqs">
-                  <a
-                    onClick={closeMobileMenu}
-                    className="font-medium text-[#1f2a1f]"
-                  >
-                    FAQs
-                  </a>
-                </Link>
-                <Link href="/journeys">
-                  <a
-                    onClick={closeMobileMenu}
-                    className="font-medium text-[#1f2a1f]"
-                  >
-                    Journeys
-                  </a>
-                </Link>
-                <Link href="/about">
-                  <a
-                    onClick={closeMobileMenu}
-                    className="font-medium text-[#1f2a1f]"
-                  >
-                    About
-                  </a>
-                </Link>
-                <Link href="/contact">
-                  <a
-                    onClick={closeMobileMenu}
-                    className="font-medium text-[#1f2a1f]"
-                  >
-                    Contact
-                  </a>
-                </Link>
+                {navItems.map(item => (
+                  <Link key={item.href} href={item.href}>
+                    <a
+                      onClick={closeMobileMenu}
+                      className="font-medium text-[#1f2a1f]"
+                    >
+                      {item.label}
+                    </a>
+                  </Link>
+                ))}
                 <Link href="/tours">
                   <a
                     onClick={closeMobileMenu}
@@ -187,7 +141,7 @@ export default function Header() {
       </header>
 
       {showSectionLogo ? (
-        <div className="pointer-events-none absolute left-6 top-28 z-10 hidden xl:block xl:left-[calc(50%-45rem)]">
+        <div className="section-logo pointer-events-none absolute left-8 top-32 z-10 hidden lg:block xl:left-[calc(50%-45rem)] xl:top-28">
           <Link href="/">
             <a
               className="pointer-events-auto inline-flex"
@@ -202,6 +156,21 @@ export default function Header() {
           </Link>
         </div>
       ) : null}
+
+      <style>{`
+        @media (min-width: 1024px) and (max-width: 1279px) {
+          .section-logo + main > section:first-child > div:first-child {
+            padding-left: 11rem;
+          }
+
+          .section-logo + main > p:first-child,
+          .section-logo + main > h1:first-of-type,
+          .section-logo + main > h1:first-of-type + p,
+          .section-logo + main > h1:first-of-type + div {
+            margin-left: 10rem;
+          }
+        }
+      `}</style>
     </>
   );
 }
