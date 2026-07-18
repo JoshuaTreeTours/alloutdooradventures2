@@ -7,14 +7,14 @@ export const toursMenuItems = [
   { label: "Multi-Day Adventures", href: "/tours/multi-day" },
 ] as const;
 
-const pagesWithTopLogo = new Set(["/guides", "/faqs", "/journeys", "/contact"]);
+const pagesWithSectionLogo = new Set(["/guides", "/faqs", "/journeys", "/contact"]);
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [location] = useLocation();
 
   const closeMobileMenu = () => setMobileOpen(false);
-  const showTopLogo = pagesWithTopLogo.has(location);
+  const showSectionLogo = pagesWithSectionLogo.has(location);
 
   return (
     <>
@@ -186,14 +186,17 @@ export default function Header() {
         </div>
       </header>
 
-      {showTopLogo ? (
-        <div className="bg-[#f6f1e8] px-6 pt-8 text-center">
+      {showSectionLogo ? (
+        <div className="pointer-events-none absolute left-6 top-28 z-10 hidden md:block xl:left-[calc(50%-45rem)]">
           <Link href="/">
-            <a className="inline-flex" aria-label={`${SITE_BRAND_NAME} home`}>
+            <a
+              className="pointer-events-auto inline-flex"
+              aria-label={`${SITE_BRAND_NAME} home`}
+            >
               <img
                 src="/images/Outdoor-Adventures-Logo-Transparent.png"
                 alt={`${SITE_BRAND_NAME} circular logo with outdoor activities`}
-                className="h-auto w-40 max-w-full md:w-48"
+                className="h-auto w-32"
               />
             </a>
           </Link>
