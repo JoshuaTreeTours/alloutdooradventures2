@@ -1,0 +1,27 @@
+{
+  "source": "https://www.viator.com/Maui/d671-ttd",
+  "destination": {
+    "state": "Hawaii",
+    "stateSlug": "hawaii",
+    "city": "Maui",
+    "citySlug": "maui"
+  },
+  "status": "pilot-selection",
+  "products": [
+    {"productCode":"9281P1","title":"Maui Snorkeling Adventure to Molokini and Turtle Town","productUrl":"https://www.viator.com/tours/Maui/Molokini-and-Turtle-Town-Snorkeling-Adventure/d671-9281P1","duration":"5 hours 30 minutes","rating":4.4,"reviewCount":2410,"priceFrom":160},
+    {"productCode":"19388P8","title":"Small-Group Road to Hana Adventure Tour with Pickup & Lunch","productUrl":"https://www.viator.com/tours/Molokai/Full-Day-Maui-Tour-Road-to-Hana-Tour/d51229-19388P8","duration":"8 to 11 hours","rating":4.8,"reviewCount":3397,"priceFrom":210},
+    {"productCode":"158257P1","title":"Maui: Lahaina ATV Adventure","productUrl":"https://www.viator.com/tours/Maui/Lahaina-ATV-Adventure/d671-158257P1","duration":"2 hours","rating":4.8,"reviewCount":1699,"priceFrom":203},
+    {"productCode":"105668P1","title":"Epic Waterfall Adventure, the Best of Maui","productUrl":"https://www.viator.com/tours/Maui/Waterfall-Adventure-Hike-Best-of-Maui/d671-105668P1","duration":"3 hours 30 minutes","rating":4.9,"reviewCount":315,"priceFrom":167},
+    {"productCode":"34338P10","title":"Maui: Original Sunset Cruise with Open Bar from Ka’anapali Beach","productUrl":"https://www.viator.com/tours/Maui/Small-Group-Sunset-Cocktail-Sail-from-Maui/d671-34338P10","duration":"2 hours","rating":4.8,"reviewCount":1506,"priceFrom":127},
+    {"productCode":"364498P1","title":"Maui Afternoon Snorkel Aboard Malolo to Molokini or Coral Gardens","productUrl":"https://www.viator.com/tours/Maui/From-Maalaea-Harbor-Maui-Afternoon-PM-Snorkel-Aboard-Malolo/d671-364498P1","duration":"3 hours","rating":4.4,"reviewCount":635,"priceFrom":100},
+    {"productCode":"2784P8","title":"Maui: Te Au Moana Luau at The Wailea Beach Marriott Resort","productUrl":"https://www.viator.com/tours/Maui/Te-Au-Moana-Luau/d671-2784P8","duration":"3 to 4 hours","rating":4.6,"reviewCount":1367,"priceFrom":225},
+    {"productCode":"211694P1","title":"Maui Pineapple Farm Tour in Haliimaile","productUrl":"https://www.viator.com/tours/Maui/Maui-Pineapple-Tour/d671-211694P1","duration":"1 hour 30 minutes","rating":4.8,"reviewCount":3039,"priceFrom":99},
+    {"productCode":"179218P6","title":"Maui: Road to Hana Deluxe Rainforest and Waterfall Experience","productUrl":"https://www.viator.com/tours/Maui/Hana-Rainforest-and-Waterfall-Fun-Tour/d671-179218P6","duration":"8 to 10 hours","rating":4.7,"reviewCount":318,"priceFrom":220},
+    {"productCode":"363981P1","title":"Maui Ma'alaea Sunset Prime Rib or Fresh Island Fish Dinner Cruise","productUrl":"https://www.viator.com/tours/Maui/Maalaea-Harbor-Sunset-Dinner-Cruise-Aboard-Calypso/d671-363981P1","duration":"2 hours","rating":4.5,"reviewCount":641,"priceFrom":150},
+    {"productCode":"133735P1","title":"Road To Hana Black Sand Beach Waterfalls & Turtles Tour","productUrl":"https://www.viator.com/tours/Maui/Hana-Waterfalls-Black-Beach-and-Turtles/d671-133735P1","duration":"6 hours 30 minutes","rating":4.1,"reviewCount":616,"priceFrom":179},
+    {"productCode":"8569P1","title":"Maui Snorkeling Adventure From Ma'alaea Harbor to Molokini","productUrl":"https://www.viator.com/tours/Maui/Molokini-Snorkeling-Adventure/d671-8569P1","duration":"5 hours 30 minutes","rating":4.6,"reviewCount":2142,"priceFrom":189},
+    {"productCode":"130323P3","title":"Maui: Majestic Haleakala Sunrise Tour with Pick-up","productUrl":"https://www.viator.com/tours/Maui/Majestic-Haleakala-Sunrise/d671-130323P3","duration":"8 hours","rating":4.8,"reviewCount":678,"priceFrom":264},
+    {"productCode":"8926P3","title":"Maui Zipline Eco Adventure: 8 Lines through the Jungle","productUrl":"https://www.viator.com/tours/Maui/7-Line-Jungle-Zipline-Tour-On-Maui/d671-8926P3","duration":"2 hours","rating":4.9,"reviewCount":1539,"priceFrom":177},
+    {"productCode":"5501HASKY","title":"Maui: Road to Hana Luxury Limo-Van Tour with Helicopter Flight","productUrl":"https://www.viator.com/tours/Maui/Small-Group-Road-to-Hana-Luxury-Tour-and-Helicopter-Flight/d671-5501HASKY","duration":"6 hours","rating":4.9,"reviewCount":818,"priceFrom":599}
+  ]
+}
