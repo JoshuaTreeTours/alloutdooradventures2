@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { SITE_BRAND_NAME } from "../utils/site";
 
 export const toursMenuItems = [
@@ -7,178 +7,198 @@ export const toursMenuItems = [
   { label: "Multi-Day Adventures", href: "/tours/multi-day" },
 ] as const;
 
+const pagesWithTopLogo = new Set(["/guides", "/faqs", "/journeys", "/contact"]);
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [location] = useLocation();
 
   const closeMobileMenu = () => setMobileOpen(false);
+  const showTopLogo = pagesWithTopLogo.has(location);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f6f1e8]/95 backdrop-blur">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="flex items-center justify-between gap-4 py-4">
-          <Link href="/">
-            <a className="flex items-center gap-3 text-lg font-semibold text-[#1f2a1f]">
-              <img
-                src="/logo.svg"
-                alt={`${SITE_BRAND_NAME} logo`}
-                className="h-10 w-10"
-                loading="lazy"
-              />
-              {SITE_BRAND_NAME}
-            </a>
-          </Link>
-
-          <nav className="hidden md:flex items-center gap-6 text-sm text-[#405040]">
-            <div className="relative group">
-              <Link href="/tours">
-                <a className="hover:text-[#1f2a1f]">Tours</a>
-              </Link>
-              <div className="absolute left-0 top-full hidden w-64 rounded-2xl border border-black/10 bg-white p-4 shadow-lg group-hover:block">
-                <div className="space-y-3 text-sm text-[#405040]">
-                  {toursMenuItems.map(item => (
-                    <Link key={item.label} href={item.href}>
-                      <a className="block text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b] hover:text-[#1f2a1f]">
-                        {item.label}
-                      </a>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <Link href="/activities">
-              <a className="hover:text-[#1f2a1f]">Activities</a>
-            </Link>
-            <Link href="/guides">
-              <a className="hover:text-[#1f2a1f]">Guides</a>
-            </Link>
-            <Link href="/faqs">
-              <a className="hover:text-[#1f2a1f]">FAQs</a>
-            </Link>
-            <Link href="/journeys">
-              <a className="hover:text-[#1f2a1f]">Journeys</a>
-            </Link>
-            <Link href="/about">
-              <a className="hover:text-[#1f2a1f]">About</a>
-            </Link>
-            <Link href="/contact">
-              <a className="hover:text-[#1f2a1f]">Contact</a>
-            </Link>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <Link href="/tours">
-              <a className="hidden items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129] sm:inline-flex">
-                Find an Adventure
+    <>
+      <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f6f1e8]/95 backdrop-blur">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="flex items-center justify-between gap-4 py-4">
+            <Link href="/">
+              <a className="flex items-center gap-3 text-lg font-semibold text-[#1f2a1f]">
+                <img
+                  src="/logo.svg"
+                  alt={`${SITE_BRAND_NAME} logo`}
+                  className="h-10 w-10"
+                  loading="lazy"
+                />
+                {SITE_BRAND_NAME}
               </a>
             </Link>
-            <button
-              type="button"
-              aria-label="Toggle menu"
-              aria-expanded={mobileOpen}
-              onClick={() => setMobileOpen(open => !open)}
-              className="inline-flex items-center justify-center rounded-md border border-[#2f4a2f]/30 p-2 text-[#2f4a2f] transition hover:bg-[#2f4a2f]/10 md:hidden"
-            >
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                className="h-5 w-5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                {mobileOpen ? (
-                  <path d="M18 6L6 18M6 6l12 12" />
-                ) : (
-                  <path d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-          </div>
-        </div>
 
-        {mobileOpen ? (
-          <div className="border-t border-black/10 pb-6 pt-4 md:hidden">
-            <nav className="flex flex-col gap-4 text-sm text-[#405040]">
-              <details className="rounded-2xl border border-black/10 bg-white/80 p-4">
-                <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-semibold text-[#1f2a1f]">
-                  Tours
-                  <span className="text-[#7a8a6b]">▾</span>
-                </summary>
-                <div className="mt-3 space-y-3">
-                  {toursMenuItems.map(item => (
-                    <Link key={item.label} href={item.href}>
-                      <a
-                        onClick={closeMobileMenu}
-                        className="block font-medium"
-                      >
-                        {item.label}
-                      </a>
-                    </Link>
-                  ))}
+            <nav className="hidden md:flex items-center gap-6 text-sm text-[#405040]">
+              <div className="relative group">
+                <Link href="/tours">
+                  <a className="hover:text-[#1f2a1f]">Tours</a>
+                </Link>
+                <div className="absolute left-0 top-full hidden w-64 rounded-2xl border border-black/10 bg-white p-4 shadow-lg group-hover:block">
+                  <div className="space-y-3 text-sm text-[#405040]">
+                    {toursMenuItems.map(item => (
+                      <Link key={item.label} href={item.href}>
+                        <a className="block text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b] hover:text-[#1f2a1f]">
+                          {item.label}
+                        </a>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </details>
+              </div>
               <Link href="/activities">
-                <a
-                  onClick={closeMobileMenu}
-                  className="font-medium text-[#1f2a1f]"
-                >
-                  Activities
-                </a>
+                <a className="hover:text-[#1f2a1f]">Activities</a>
               </Link>
               <Link href="/guides">
-                <a
-                  onClick={closeMobileMenu}
-                  className="font-medium text-[#1f2a1f]"
-                >
-                  Guides
-                </a>
+                <a className="hover:text-[#1f2a1f]">Guides</a>
               </Link>
               <Link href="/faqs">
-                <a
-                  onClick={closeMobileMenu}
-                  className="font-medium text-[#1f2a1f]"
-                >
-                  FAQs
-                </a>
+                <a className="hover:text-[#1f2a1f]">FAQs</a>
               </Link>
               <Link href="/journeys">
-                <a
-                  onClick={closeMobileMenu}
-                  className="font-medium text-[#1f2a1f]"
-                >
-                  Journeys
-                </a>
+                <a className="hover:text-[#1f2a1f]">Journeys</a>
               </Link>
               <Link href="/about">
-                <a
-                  onClick={closeMobileMenu}
-                  className="font-medium text-[#1f2a1f]"
-                >
-                  About
-                </a>
+                <a className="hover:text-[#1f2a1f]">About</a>
               </Link>
               <Link href="/contact">
-                <a
-                  onClick={closeMobileMenu}
-                  className="font-medium text-[#1f2a1f]"
-                >
-                  Contact
-                </a>
+                <a className="hover:text-[#1f2a1f]">Contact</a>
               </Link>
+            </nav>
+
+            <div className="flex items-center gap-3">
               <Link href="/tours">
-                <a
-                  onClick={closeMobileMenu}
-                  className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white"
-                >
+                <a className="hidden items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129] sm:inline-flex">
                   Find an Adventure
                 </a>
               </Link>
-            </nav>
+              <button
+                type="button"
+                aria-label="Toggle menu"
+                aria-expanded={mobileOpen}
+                onClick={() => setMobileOpen(open => !open)}
+                className="inline-flex items-center justify-center rounded-md border border-[#2f4a2f]/30 p-2 text-[#2f4a2f] transition hover:bg-[#2f4a2f]/10 md:hidden"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  className="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  {mobileOpen ? (
+                    <path d="M18 6L6 18M6 6l12 12" />
+                  ) : (
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                  )}
+                </svg>
+              </button>
+            </div>
           </div>
-        ) : null}
-      </div>
-    </header>
+
+          {mobileOpen ? (
+            <div className="border-t border-black/10 pb-6 pt-4 md:hidden">
+              <nav className="flex flex-col gap-4 text-sm text-[#405040]">
+                <details className="rounded-2xl border border-black/10 bg-white/80 p-4">
+                  <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-semibold text-[#1f2a1f]">
+                    Tours
+                    <span className="text-[#7a8a6b]">▾</span>
+                  </summary>
+                  <div className="mt-3 space-y-3">
+                    {toursMenuItems.map(item => (
+                      <Link key={item.label} href={item.href}>
+                        <a
+                          onClick={closeMobileMenu}
+                          className="block font-medium"
+                        >
+                          {item.label}
+                        </a>
+                      </Link>
+                    ))}
+                  </div>
+                </details>
+                <Link href="/activities">
+                  <a
+                    onClick={closeMobileMenu}
+                    className="font-medium text-[#1f2a1f]"
+                  >
+                    Activities
+                  </a>
+                </Link>
+                <Link href="/guides">
+                  <a
+                    onClick={closeMobileMenu}
+                    className="font-medium text-[#1f2a1f]"
+                  >
+                    Guides
+                  </a>
+                </Link>
+                <Link href="/faqs">
+                  <a
+                    onClick={closeMobileMenu}
+                    className="font-medium text-[#1f2a1f]"
+                  >
+                    FAQs
+                  </a>
+                </Link>
+                <Link href="/journeys">
+                  <a
+                    onClick={closeMobileMenu}
+                    className="font-medium text-[#1f2a1f]"
+                  >
+                    Journeys
+                  </a>
+                </Link>
+                <Link href="/about">
+                  <a
+                    onClick={closeMobileMenu}
+                    className="font-medium text-[#1f2a1f]"
+                  >
+                    About
+                  </a>
+                </Link>
+                <Link href="/contact">
+                  <a
+                    onClick={closeMobileMenu}
+                    className="font-medium text-[#1f2a1f]"
+                  >
+                    Contact
+                  </a>
+                </Link>
+                <Link href="/tours">
+                  <a
+                    onClick={closeMobileMenu}
+                    className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white"
+                  >
+                    Find an Adventure
+                  </a>
+                </Link>
+              </nav>
+            </div>
+          ) : null}
+        </div>
+      </header>
+
+      {showTopLogo ? (
+        <div className="bg-[#f6f1e8] px-6 pt-8 text-center">
+          <Link href="/">
+            <a className="inline-flex" aria-label={`${SITE_BRAND_NAME} home`}>
+              <img
+                src="/images/Outdoor-Adventures-Logo-Transparent.png"
+                alt={`${SITE_BRAND_NAME} circular logo with outdoor activities`}
+                className="h-auto w-40 max-w-full md:w-48"
+              />
+            </a>
+          </Link>
+        </div>
+      ) : null}
+    </>
   );
 }
