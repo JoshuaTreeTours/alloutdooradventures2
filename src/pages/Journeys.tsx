@@ -30,40 +30,22 @@ const extractDurationDays = (text?: string | null) => {
 
   const normalized = text.toLowerCase();
   const overnightMatch = normalized.match(/(\d+)\s*d\s*\/\s*(\d+)\s*n/);
-  if (overnightMatch) {
-    const days = Number(overnightMatch[1]);
-    return Number.isNaN(days) ? undefined : days;
-  }
+  if (overnightMatch) return Number(overnightMatch[1]);
 
   const rangeMatch = normalized.match(/(\d+)\s*(?:-|–|to)\s*(\d+)\s*days?/);
-  if (rangeMatch) {
-    const days = Number(rangeMatch[1]);
-    return Number.isNaN(days) ? undefined : days;
-  }
+  if (rangeMatch) return Number(rangeMatch[1]);
 
   const hyphenatedDayMatch = normalized.match(/\b(\d+)\s*-\s*day\b/);
-  if (hyphenatedDayMatch) {
-    const days = Number(hyphenatedDayMatch[1]);
-    return Number.isNaN(days) ? undefined : days;
-  }
+  if (hyphenatedDayMatch) return Number(hyphenatedDayMatch[1]);
 
   const dayMatch = normalized.match(/\b(\d+)\s*days?\b/);
-  if (dayMatch) {
-    const days = Number(dayMatch[1]);
-    return Number.isNaN(days) ? undefined : days;
-  }
+  if (dayMatch) return Number(dayMatch[1]);
 
   const compactMatch = normalized.match(/\b(\d+)\s*d\b/);
-  if (compactMatch) {
-    const days = Number(compactMatch[1]);
-    return Number.isNaN(days) ? undefined : days;
-  }
+  if (compactMatch) return Number(compactMatch[1]);
 
   const hoursMatch = normalized.match(/\b(\d+(?:\.\d+)?)\s*hours?\b/);
-  if (hoursMatch) {
-    const hours = Number(hoursMatch[1]);
-    return Number.isNaN(hours) ? undefined : Math.ceil(hours / 24);
-  }
+  if (hoursMatch) return Math.ceil(Number(hoursMatch[1]) / 24);
 
   return undefined;
 };
@@ -78,7 +60,7 @@ const getTourDurationDays = (tour: Tour) => {
 
   for (const source of sources) {
     const durationDays = extractDurationDays(source);
-    if (durationDays !== undefined) return durationDays;
+    if (durationDays !== undefined && !Number.isNaN(durationDays)) return durationDays;
   }
 
   if (multiDayTriggers.some(trigger => tour.title.toLowerCase().includes(trigger))) {
@@ -93,25 +75,17 @@ const isMultiDayTour = (tour: Tour, durationDays?: number) => {
 
   const combined = `${tour.title} ${tour.slug}`.toLowerCase();
   if (combined.includes("full day") || combined.includes("day-long")) return false;
-
   return multiDayTriggers.some(trigger => combined.includes(trigger));
-};
-
-const getCarouselImages = (tour: Tour) => {
-  const heroImage = resolveTourHeroImage(tour);
-  return [heroImage]
-    .filter((image): image is string => Boolean(image))
-    .filter((image, index, array) => array.indexOf(image) === index);
 };
 
 type JourneyCardProps = {
   tour: Tour;
   durationDays?: number;
+  isEngine6: boolean;
 };
 
-const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
-  const [activeImage, setActiveImage] = useState(0);
-  const images = useMemo(() => getCarouselImages(tour), [tour]);
+const JourneyCard = ({ tour, durationDays, isEngine6 }: JourneyCardProps) => {
+  const heroImage = resolveTourHeroImage(tour);
   const locationLabel = tour.destination.state
     ? `${tour.destination.city}, ${tour.destination.state}`
     : tour.destination.country
@@ -119,11 +93,6 @@ const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
       : tour.destination.city;
   const detailHref = getTourDetailPath(tour);
   const bookingHref = getTourBookingPath(tour);
-  const hasImages = images.length > 0;
-  const hasMultipleImages = images.length > 1;
-  const displayedIndex = hasImages
-    ? ((activeImage % images.length) + images.length) % images.length
-    : 0;
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-black/10 bg-white/90 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
@@ -131,41 +100,28 @@ const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
         <a className="absolute inset-0 z-10" aria-label={`View ${tour.title}`} />
       </Link>
       <div className="relative h-56 w-full overflow-hidden bg-black/5 sm:h-64">
-        {hasImages ? (
+        {heroImage ? (
           <Image
-            src={images[displayedIndex]}
-            fallbackSrc={images[displayedIndex]}
+            src={heroImage}
+            fallbackSrc={heroImage}
             alt={tour.title}
             loading="lazy"
             className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
           />
         ) : null}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
-        {durationDays ? (
-          <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
-            {durationDays} {durationDays === 1 ? "day" : "days"}
-          </span>
-        ) : null}
-        {hasMultipleImages ? (
-          <div className="absolute bottom-4 right-4 z-20 flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => setActiveImage(previous => (previous - 1 + images.length) % images.length)}
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-sm font-semibold text-[#2f4a2f] shadow-sm transition hover:bg-white"
-              aria-label={`View previous image for ${tour.title}`}
-            >
-              ‹
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveImage(previous => (previous + 1) % images.length)}
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-sm font-semibold text-[#2f4a2f] shadow-sm transition hover:bg-white"
-              aria-label={`View next image for ${tour.title}`}
-            >
-              ›
-            </button>
-          </div>
-        ) : null}
+        <div className="absolute left-4 top-4 flex flex-wrap gap-2">
+          {durationDays ? (
+            <span className="rounded-full bg-white/95 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+              {durationDays} {durationDays === 1 ? "day" : "days"}
+            </span>
+          ) : null}
+          {isEngine6 ? (
+            <span className="rounded-full bg-[#2f8a3d] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white shadow-sm">
+              Viator Engine 6
+            </span>
+          ) : null}
+        </div>
       </div>
       <div className="relative z-20 flex flex-1 flex-col gap-4 p-6">
         <div>
@@ -197,13 +153,18 @@ export default function Journeys() {
   const [selectedRegion, setSelectedRegion] = useState("all");
   const [selectedDuration, setSelectedDuration] = useState("all");
 
+  const nativeEngine6ProductCodes = useMemo(
+    () => new Set(engine6ResolvedTours.map(tour => tour.productCode)),
+    []
+  );
+
   const allJourneyCandidates = useMemo(() => {
     const engine6DurationByProductCode = new Map(
       engine6ResolvedTours.map(tour => [tour.productCode, tour.durationText ?? null])
     );
 
     const viatorEngine6MultiDayTours = engine6ListingTours
-      .filter(tour => Boolean(tour.productCode && engine6DurationByProductCode.has(tour.productCode)))
+      .filter(tour => Boolean(tour.productCode && nativeEngine6ProductCodes.has(tour.productCode)))
       .map(tour => ({
         ...tour,
         badges: {
@@ -245,17 +206,24 @@ export default function Journeys() {
     ];
 
     return Array.from(new Map(orderedCandidates.map(tour => [tour.id, tour])).values());
-  }, []);
+  }, [nativeEngine6ProductCodes]);
 
   const multiDayTours = useMemo(
     () =>
       allJourneyCandidates
         .map(tour => {
           const durationDays = getTourDurationDays(tour);
-          return { tour, durationDays, isMultiDay: isMultiDayTour(tour, durationDays) };
+          return {
+            tour,
+            durationDays,
+            isMultiDay: isMultiDayTour(tour, durationDays),
+            isEngine6: Boolean(
+              tour.productCode && nativeEngine6ProductCodes.has(tour.productCode)
+            ),
+          };
         })
         .filter(({ isMultiDay }) => isMultiDay),
-    [allJourneyCandidates]
+    [allJourneyCandidates, nativeEngine6ProductCodes]
   );
 
   const regionOptions = useMemo(() => {
@@ -298,6 +266,9 @@ export default function Journeys() {
     });
   }, [multiDayTours, searchTerm, selectedDuration, selectedRegion]);
 
+  const filteredEngine6Tours = filteredTours.filter(item => item.isEngine6);
+  const filteredLegacyTours = filteredTours.filter(item => !item.isEngine6);
+
   return (
     <>
       {seo ? (
@@ -308,8 +279,8 @@ export default function Journeys() {
         <h1 className="mt-3 text-3xl font-semibold md:text-4xl">Multi-day tours</h1>
         <p className="mt-4 max-w-3xl text-sm text-[#405040] md:text-base">
           Browse our curated list of multi-day tours spanning the US and international
-          destinations. Use the search tools to find the perfect itinerary by location,
-          duration, or tour name.
+          destinations. Viator Engine 6 journeys are featured first, followed by legacy
+          multi-day tours.
         </p>
 
         <section className="mt-10 rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm">
@@ -364,15 +335,50 @@ export default function Journeys() {
             </label>
           </div>
           <p className="mt-4 text-sm text-[#405040]">
-            Showing {filteredTours.length} multi-day tour{filteredTours.length === 1 ? "" : "s"}.
+            Showing {filteredTours.length} multi-day tour{filteredTours.length === 1 ? "" : "s"}, including {filteredEngine6Tours.length} Viator Engine 6 tour{filteredEngine6Tours.length === 1 ? "" : "s"}.
           </p>
         </section>
 
-        <section className="mt-10 grid gap-6 md:grid-cols-2">
-          {filteredTours.map(({ tour, durationDays }) => (
-            <JourneyCard key={tour.id} tour={tour} durationDays={durationDays} />
-          ))}
-        </section>
+        {filteredEngine6Tours.length > 0 ? (
+          <section className="mt-10">
+            <div className="mb-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#2f8a3d]">
+                Featured first
+              </p>
+              <h2 className="mt-2 text-2xl font-semibold text-[#1f2a1f]">
+                Viator Engine 6 multi-day tours
+              </h2>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              {filteredEngine6Tours.map(({ tour, durationDays, isEngine6 }) => (
+                <JourneyCard
+                  key={tour.id}
+                  tour={tour}
+                  durationDays={durationDays}
+                  isEngine6={isEngine6}
+                />
+              ))}
+            </div>
+          </section>
+        ) : null}
+
+        {filteredLegacyTours.length > 0 ? (
+          <section className="mt-14">
+            <h2 className="mb-5 text-2xl font-semibold text-[#1f2a1f]">
+              More multi-day tours
+            </h2>
+            <div className="grid gap-6 md:grid-cols-2">
+              {filteredLegacyTours.map(({ tour, durationDays, isEngine6 }) => (
+                <JourneyCard
+                  key={tour.id}
+                  tour={tour}
+                  durationDays={durationDays}
+                  isEngine6={isEngine6}
+                />
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <section className="mt-16 rounded-3xl border border-[#2f8a3d]/30 bg-[#f3fbf5] px-6 py-10 text-center">
           <h2 className="text-2xl font-semibold text-[#1f2a1f]">
@@ -385,11 +391,6 @@ export default function Journeys() {
           <div className="mt-6 flex justify-center">
             <Link href="/contact">
               <a className="inline-flex items-center gap-2 rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-sm transition hover:bg-[#287a35]">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/20">
-                  <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-white">
-                    <path d="M12 3a9 9 0 0 0-9 9v5a2 2 0 0 0 2 2h3v-7H5a7 7 0 1 1 14 0h-3v7h3a2 2 0 0 0 2-2v-5a9 9 0 0 0-9-9z" />
-                  </svg>
-                </span>
                 Start a custom journey
               </a>
             </Link>
