@@ -81,10 +81,9 @@ const isMultiDayTour = (tour: Tour, durationDays?: number) => {
 type JourneyCardProps = {
   tour: Tour;
   durationDays?: number;
-  isEngine6: boolean;
 };
 
-const JourneyCard = ({ tour, durationDays, isEngine6 }: JourneyCardProps) => {
+const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
   const heroImage = resolveTourHeroImage(tour);
   const locationLabel = tour.destination.state
     ? `${tour.destination.city}, ${tour.destination.state}`
@@ -93,6 +92,9 @@ const JourneyCard = ({ tour, durationDays, isEngine6 }: JourneyCardProps) => {
       : tour.destination.city;
   const detailHref = getTourDetailPath(tour);
   const bookingHref = getTourBookingPath(tour);
+  const rating = tour.badges?.rating;
+  const reviewCount = tour.badges?.reviewCount;
+  const priceFrom = tour.badges?.priceFrom;
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-black/10 bg-white/90 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
@@ -110,18 +112,11 @@ const JourneyCard = ({ tour, durationDays, isEngine6 }: JourneyCardProps) => {
           />
         ) : null}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
-        <div className="absolute left-4 top-4 flex flex-wrap gap-2">
-          {durationDays ? (
-            <span className="rounded-full bg-white/95 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
-              {durationDays} {durationDays === 1 ? "day" : "days"}
-            </span>
-          ) : null}
-          {isEngine6 ? (
-            <span className="rounded-full bg-[#2f8a3d] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white shadow-sm">
-              Viator Engine 6
-            </span>
-          ) : null}
-        </div>
+        {durationDays ? (
+          <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+            {durationDays} {durationDays === 1 ? "day" : "days"}
+          </span>
+        ) : null}
       </div>
       <div className="relative z-20 flex flex-1 flex-col gap-4 p-6">
         <div>
@@ -129,6 +124,20 @@ const JourneyCard = ({ tour, durationDays, isEngine6 }: JourneyCardProps) => {
             {locationLabel}
           </p>
           <h3 className="mt-3 text-lg font-semibold text-[#1f2a1f]">{tour.title}</h3>
+          {rating !== undefined || priceFrom ? (
+            <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[#405040]">
+              {rating !== undefined ? (
+                <span className="inline-flex items-center gap-1 font-medium">
+                  <span aria-hidden="true" className="text-[#c6922e]">★</span>
+                  {rating.toFixed(1)}
+                  {reviewCount !== undefined ? ` (${reviewCount.toLocaleString()})` : ""}
+                </span>
+              ) : null}
+              {priceFrom ? (
+                <span className="font-semibold text-[#1f2a1f]">From {priceFrom}</span>
+              ) : null}
+            </div>
+          ) : null}
         </div>
         <div className="mt-auto flex flex-wrap items-center gap-3">
           <Link href={detailHref}>
@@ -163,7 +172,7 @@ export default function Journeys() {
       engine6ResolvedTours.map(tour => [tour.productCode, tour.durationText ?? null])
     );
 
-    const viatorEngine6MultiDayTours = engine6ListingTours
+    const preferredMultiDayTours = engine6ListingTours
       .filter(tour => Boolean(tour.productCode && nativeEngine6ProductCodes.has(tour.productCode)))
       .map(tour => ({
         ...tour,
@@ -200,7 +209,7 @@ export default function Journeys() {
       })) as Tour[];
 
     const orderedCandidates = [
-      ...viatorEngine6MultiDayTours,
+      ...preferredMultiDayTours,
       ...tours.filter(tour => tour.engine !== "engine6"),
       ...engine2International,
     ];
@@ -217,13 +226,10 @@ export default function Journeys() {
             tour,
             durationDays,
             isMultiDay: isMultiDayTour(tour, durationDays),
-            isEngine6: Boolean(
-              tour.productCode && nativeEngine6ProductCodes.has(tour.productCode)
-            ),
           };
         })
         .filter(({ isMultiDay }) => isMultiDay),
-    [allJourneyCandidates, nativeEngine6ProductCodes]
+    [allJourneyCandidates]
   );
 
   const regionOptions = useMemo(() => {
@@ -266,9 +272,6 @@ export default function Journeys() {
     });
   }, [multiDayTours, searchTerm, selectedDuration, selectedRegion]);
 
-  const filteredEngine6Tours = filteredTours.filter(item => item.isEngine6);
-  const filteredLegacyTours = filteredTours.filter(item => !item.isEngine6);
-
   return (
     <>
       {seo ? (
@@ -279,8 +282,8 @@ export default function Journeys() {
         <h1 className="mt-3 text-3xl font-semibold md:text-4xl">Multi-day tours</h1>
         <p className="mt-4 max-w-3xl text-sm text-[#405040] md:text-base">
           Browse our curated list of multi-day tours spanning the US and international
-          destinations. Viator Engine 6 journeys are featured first, followed by legacy
-          multi-day tours.
+          destinations. Use the search tools to find the perfect itinerary by location,
+          duration, or tour name.
         </p>
 
         <section className="mt-10 rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm">
@@ -335,50 +338,15 @@ export default function Journeys() {
             </label>
           </div>
           <p className="mt-4 text-sm text-[#405040]">
-            Showing {filteredTours.length} multi-day tour{filteredTours.length === 1 ? "" : "s"}, including {filteredEngine6Tours.length} Viator Engine 6 tour{filteredEngine6Tours.length === 1 ? "" : "s"}.
+            Showing {filteredTours.length} multi-day tour{filteredTours.length === 1 ? "" : "s"}.
           </p>
         </section>
 
-        {filteredEngine6Tours.length > 0 ? (
-          <section className="mt-10">
-            <div className="mb-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#2f8a3d]">
-                Featured first
-              </p>
-              <h2 className="mt-2 text-2xl font-semibold text-[#1f2a1f]">
-                Viator Engine 6 multi-day tours
-              </h2>
-            </div>
-            <div className="grid gap-6 md:grid-cols-2">
-              {filteredEngine6Tours.map(({ tour, durationDays, isEngine6 }) => (
-                <JourneyCard
-                  key={tour.id}
-                  tour={tour}
-                  durationDays={durationDays}
-                  isEngine6={isEngine6}
-                />
-              ))}
-            </div>
-          </section>
-        ) : null}
-
-        {filteredLegacyTours.length > 0 ? (
-          <section className="mt-14">
-            <h2 className="mb-5 text-2xl font-semibold text-[#1f2a1f]">
-              More multi-day tours
-            </h2>
-            <div className="grid gap-6 md:grid-cols-2">
-              {filteredLegacyTours.map(({ tour, durationDays, isEngine6 }) => (
-                <JourneyCard
-                  key={tour.id}
-                  tour={tour}
-                  durationDays={durationDays}
-                  isEngine6={isEngine6}
-                />
-              ))}
-            </div>
-          </section>
-        ) : null}
+        <section className="mt-10 grid gap-6 md:grid-cols-2">
+          {filteredTours.map(({ tour, durationDays }) => (
+            <JourneyCard key={tour.id} tour={tour} durationDays={durationDays} />
+          ))}
+        </section>
 
         <section className="mt-16 rounded-3xl border border-[#2f8a3d]/30 bg-[#f3fbf5] px-6 py-10 text-center">
           <h2 className="text-2xl font-semibold text-[#1f2a1f]">
