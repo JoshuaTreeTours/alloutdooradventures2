@@ -21,9 +21,16 @@ export default function About() {
         <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
           About
         </p>
-        <h1 className="mt-3 text-3xl font-semibold md:text-4xl">
-          About {SITE_BRAND_NAME}
-        </h1>
+        <div className="mt-6 flex flex-col gap-6 md:flex-row md:items-center">
+          <img
+            src="/images/outdoor-adventures-logo.svg"
+            alt={`${SITE_BRAND_NAME} circular Outdoor Adventures logo`}
+            className="w-48 max-w-full md:w-64"
+          />
+          <h1 className="text-3xl font-semibold md:text-4xl">
+            About {SITE_BRAND_NAME}
+          </h1>
+        </div>
         <section className="mt-6 rounded-2xl border border-black/5 bg-white/70 p-5">
           <h2 className="text-lg font-semibold text-[#2f4a2f]">Who We Are</h2>
           <p className="mt-3 text-sm text-[#405040] md:text-base">
