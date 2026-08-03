@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "3388P1",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Circle-of-Fire-Helicopter-Tour/d669-3388P1",
+    "title": "Big Island: Discover Hilo Helicopter Tour",
+    "description": {
+      "text": "On the Big Island, the best way to see Hawaii’s steaming vents and glowing lava has always been like the birds. You’ll get that feeling on this helicopter tour, soaring above one of the most volcanically active islands on the planet. Stops include Hilo, Volcano, Kilauea Volcano. Getting the pilot’s commentary via headphones, you’ll witness waterfalls, craters, the craggy coastline, and—if you're lucky—the volcano’s fiery glow. Ideal for visitors touring Hawaii Volcanoes National Park who want a guided Big Island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Hawaii Volcanoes National Park",
+      "state": "Hawaii"
+    },
+    "duration": "50 minutes (approx.)",
+    "priceFrom": "From $482.90",
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 115
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/ef/af/b4.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The best way to see Hawaii’s steaming vents and glowing lava has always been like the birds",
+      "You’ll get that feeling on this helicopter tour, soaring above one of the most volcanically active islands on the planet",
+      "Getting the pilot’s commentary via headphones, you’ll witness waterfalls, craters, the craggy coastline, and—if you're l",
+      "Big Island: Discover Hilo Helicopter Tour near Hawaii Volcanoes National Park",
+      "Professional Big Island guide or pilot"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      },
+      "end": {
+        "description": "Return to your Big Island hotel, port, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "On the Big Island, the best way to see Hawaii’s steaming vents and glowing lava has always been like the birds.",
+    "itineraryItems": [
+      {
+        "title": "Hilo",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Volcano",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Kilauea Volcano",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Pilot Guide who are also State of Hawaii Certified Tour Guides",
+      "Use of Bose Aviation-grade, electronic noise-cancelling headsets",
+      "Use of microphones with 2-way communication with pilot",
+      "All Fees and Taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Big Island: Discover Hilo Helicopter Tour?",
+        "answer": "The planned duration is 50 minutes."
+      },
+      {
+        "question": "Where does the tour depart for Hawaii Volcanoes National Park?",
+        "answer": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Helicopter Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 482.9
+      },
+      "currency": "USD"
+    }
+  }
+}

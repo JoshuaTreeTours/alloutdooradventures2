@@ -76,6 +76,9 @@ export const ENGINE6_HONOLULU_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_MAUI_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/de/c9.jpg";
 
+export const ENGINE6_HAWAII_VOLCANOES_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/12/54/58.jpg";
+
 type Engine6HeroCandidateTour = {
   productCode: string;
   heroImageUrl?: string | null;
@@ -129,6 +132,8 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   hawaii: {
     honolulu: ENGINE6_HONOLULU_CANONICAL_CITY_HERO_URL,
     maui: ENGINE6_MAUI_CANONICAL_CITY_HERO_URL,
+    "hawaii-volcanoes-national-park":
+      ENGINE6_HAWAII_VOLCANOES_CANONICAL_CITY_HERO_URL,
   },
 };
 

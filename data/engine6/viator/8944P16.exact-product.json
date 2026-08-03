@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "8944P16",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Private-Guide-Meet-In-Hawaii-Volcanoes-National-Park/d669-8944P16",
+    "title": "Private Guide Meet In Hawaii Volcanoes National Park",
+    "description": {
+      "text": "Discover the awe-inspiring landscapes of the Hawaii Volcanoes National Park with a private certified guide. Meet your guide at the park and set out on a thrilling tour of the park's lava flows, viewpoints, and eruption sites. Stops include Kilauea Overlook, Nahuku - Thurston Lava Tube. Travel in the comfort of a luxury Mercedes van and enjoy an itinerary customized for your group, whether you want to hike through lava fields or just soak up the scenery. Ideal for visitors touring Hawaii Volcanoes National Park who want a guided Big Island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Hawaii Volcanoes National Park",
+      "state": "Hawaii"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $595.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 153
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/11/bc/f3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the awe-inspiring landscapes of the Hawaii Volcanoes National Park with a private certified guide",
+      "Meet your guide at the park and set out on a thrilling tour of the park's lava flows, viewpoints, and eruption sites",
+      "Travel in the comfort of a luxury Mercedes van and enjoy an itinerary customized for your group, whether you want to hik",
+      "Private Guide Meet In Hawaii Volcanoes National Park near Hawaii Volcanoes National Park",
+      "Professional Big Island guide or pilot"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      },
+      "end": {
+        "description": "Return to your Big Island hotel, port, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover the awe-inspiring landscapes of the Hawaii Volcanoes National Park with a private certified guide.",
+    "itineraryItems": [
+      {
+        "title": "Hawaii Volcanoes National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kilauea Overlook",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nahuku - Thurston Lava Tube",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "National Park Certified Interpretive Guide",
+      "Bottled water",
+      "Private transportation"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Guide Meet In Hawaii Volcanoes National Park?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart for Hawaii Volcanoes National Park?",
+        "answer": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private and Luxury"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 595
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "7443P9",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Small-Group-Tour-Deluxe-Circle-Island-Experience-with-Restaurant-Lunch/d669-7443P9",
+    "title": "Big Island Highlights: Coffee, Volcano, Black Sands & Waterfall",
+    "description": {
+      "text": "Spend a full day exploring the Big Island with visits to waterfalls, beaches, tropical valleys, stunning viewpoints, and so much more. Learn about Kona’s coffee culture with a visit to Greenwell Coffee Farm, for an insider's perspective and to sample the locally cultivated coffee. Stops include Greenwell Farms, Punalu'u Black Sand Beach, Rainbow Falls. See Hawaii’s natural beauty at Punalu’u Black Sands Beach, where you can look out for Hawaiian green sea turtles, make multiple stops in Volcanoes National Park, and soak up the beauty of Rainbow Falls all in a day. Ideal for visitors touring Hawaii Volcanoes National Park who want a guided Big Island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Hawaii Volcanoes National Park",
+      "state": "Hawaii"
+    },
+    "duration": "11 hours (approx.)",
+    "priceFrom": "From $299.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 1004
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3f/14/06.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Spend a full day exploring the Big Island with visits to waterfalls, beaches, tropical valleys, stunning viewpoints, and",
+      "Learn about Kona’s coffee culture with a visit to Greenwell Coffee Farm, for an insider's perspective and to sample the ",
+      "See Hawaii’s natural beauty at Punalu’u Black Sands Beach, where you can look out for Hawaiian green sea turtles, make m",
+      "Big Island Highlights: Coffee, Volcano, Black Sands & Waterfall near Hawaii Volcanoes National Park",
+      "Professional Big Island guide or pilot"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      },
+      "end": {
+        "description": "Return to your Big Island hotel, port, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Spend a full day exploring the Big Island with visits to waterfalls, beaches, tropical valleys, stunning viewpoints, and so much more.",
+    "itineraryItems": [
+      {
+        "title": "Greenwell Farms",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Punalu'u Black Sand Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hawaii Volcanoes National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rainbow Falls",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Kona coffee farm visit",
+      "Binoculars",
+      "Umbrellas",
+      "Cold beverages, hot coffee/chocolate",
+      "Lunch",
+      "Snacks",
+      "Bottled water"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Big Island Highlights: Coffee, Volcano, Black Sands & Waterfall?",
+        "answer": "The planned duration is 11 hours."
+      },
+      {
+        "question": "Where does the tour depart for Hawaii Volcanoes National Park?",
+        "answer": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 299
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -3929,6 +3929,69 @@ const hawaiiState: StateDestination = {
         },
       ],
     },
+    {
+      name: "Hawaii Volcanoes National Park",
+      slug: "hawaii-volcanoes-national-park",
+      stateSlug: "hawaii",
+      region: "Big Island",
+      lat: 19.4194,
+      lng: -155.2885,
+      shortDescription:
+        "Kilauea crater overlooks, lava landscapes, and Big Island volcano day tours.",
+      intro:
+        "Hawaii Volcanoes National Park anchors Big Island itineraries with active crater views, rainforest lava tubes, and coastal black-sand routes.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/12/54/58.jpg",
+      ],
+      activityTags: ["hiking", "helicopter", "sightseeing"],
+      whereItIs: [
+        "Hawaii Volcanoes National Park sits on the southeast Big Island, with common tour departures from Kona, the Kohala Coast, and Hilo.",
+      ],
+      experiences: {
+        mountains:
+          "Walk crater-rim overlooks, steam vents, and lava fields around Kilauea and Mauna Loa approaches.",
+        lakesWater:
+          "Pair park days with Rainbow Falls, Akaka Falls, and black-sand beaches along the southeast coast.",
+        desertForest:
+          "Move between rainforest trails, lava tubes, and open volcanic plains inside the park.",
+        cycling: "Scenic road touring connects Kona coffee country to park gateways.",
+        scenicDrives:
+          "Saddle Road, Chain of Craters approaches, and coastal routes link volcano, waterfall, and black-sand stops.",
+        seasonalNotes:
+          "Weather can shift quickly at elevation; evenings are cooler for twilight and Mauna Kea stargazing add-ons.",
+      },
+      thingsToDo: [
+        "Tour Hawaii Volcanoes National Park with a guided crater and lava-tube itinerary.",
+        "Add Mauna Kea sunset and stargazing or a Big Island helicopter flight.",
+        "Visit Punalu'u Black Sand Beach and Hilo waterfalls on a full-day circle route.",
+      ],
+      toursCopy: [
+        "Hawaii Volcanoes National Park tours work best as full-day guided experiences with hotel pickup from Kona, Kohala, or Hilo.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Kona coffee country and Punalu'u Black Sand Beach.",
+          "Afternoon: Hawaii Volcanoes National Park crater overlooks and Thurston Lava Tube.",
+          "Evening: Twilight volcano viewpoints or a Volcano Village dinner.",
+        ],
+        dayTwo: [
+          "Morning: Hilo waterfalls or a volcano helicopter flight.",
+          "Afternoon: Additional park hiking or coastal lookouts.",
+          "Evening: Mauna Kea sunset and stargazing when weather allows.",
+        ],
+      },
+      gettingThere: [
+        "Kona International Airport (KOA) and Hilo International Airport (ITO) are the main Big Island gateways.",
+        "Kona, Kohala Coast, and Hilo hotels are common pickup points for guided volcano tours.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Hawaii Volcanoes National Park tours?",
+          answer:
+            "Full-day volcano sightseeing from Kona or Hilo, private park guiding, Mauna Kea stargazing, and Big Island helicopter flights over Kilauea are among the most popular departures.",
+        },
+      ],
+    },
   ],
   isFallback: true,
 };

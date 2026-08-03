@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "248255P3",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Volcanoes-National-Park-Safari/d669-248255P3",
+    "title": "Volcanoes National Park Safari",
+    "description": {
+      "text": "On the Big Island, fly away from Hilo Airport and into a world of volcanoes, rainbows, and waterfalls. With this family-run helicopter company—the longest-running on the island—you’ll meet your captain, get debriefed on safety protocol, and hop into your helicopter for a wild aerial adventure. Stops include Hilo Airport Heliport, Kilauea Volcano, Hamakua Coast. With your captain doubling as guide, you’ll explore the volcanoes of the national park, lava flows, orchid farms, lush forests, and so much more. Ideal for visitors touring Hawaii Volcanoes National Park who want a guided Big Island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Hawaii Volcanoes National Park",
+      "state": "Hawaii"
+    },
+    "duration": "55 minutes (approx.)",
+    "priceFrom": "From $379.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 479
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/d4/31/dc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fly away from Hilo Airport and into a world of volcanoes, rainbows, and waterfalls",
+      "With this family-run helicopter company—the longest-running on the island—you’ll meet your captain, get debriefed on saf",
+      "With your captain doubling as guide, you’ll explore the volcanoes of the national park, lava flows, orchid farms, lush f",
+      "Volcanoes National Park Safari near Hawaii Volcanoes National Park",
+      "Professional Big Island guide or pilot"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      },
+      "end": {
+        "description": "Return to your Big Island hotel, port, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "On the Big Island, fly away from Hilo Airport and into a world of volcanoes, rainbows, and waterfalls.",
+    "itineraryItems": [
+      {
+        "title": "Hilo Airport Heliport",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hawaii Volcanoes National Park",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Kilauea Volcano",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Hamakua Coast",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "All Fees and Taxes",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Volcanoes National Park Safari?",
+        "answer": "The planned duration is 55 minutes."
+      },
+      {
+        "question": "Where does the tour depart for Hawaii Volcanoes National Park?",
+        "answer": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Helicopter Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 379
+      },
+      "currency": "USD"
+    }
+  }
+}

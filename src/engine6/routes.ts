@@ -534,6 +534,55 @@ export const ENGINE6_MAUI_TOUR_PATH_PREFIX =
 export const isEngine6MauiTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_MAUI_TOUR_PATH_PREFIX);
 
+export const ENGINE6_HVNP_6651BIOD_PRODUCT_CODE = "6651BIOD";
+export const ENGINE6_HVNP_6651BIOD_ROUTE =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/big-island-in-a-day-volcanoes-waterfalls-sightseeing-an-6651BIOD";
+export const ENGINE6_HVNP_22796P3_PRODUCT_CODE = "22796P3";
+export const ENGINE6_HVNP_22796P3_ROUTE =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/hilo-shore-excursion-volcanoes-national-park-and-rainbo-22796P3";
+export const ENGINE6_HVNP_270152P1_PRODUCT_CODE = "270152P1";
+export const ENGINE6_HVNP_270152P1_ROUTE =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/big-island-goat-experience-mauna-kea-summit-sunset-star-270152P1";
+export const ENGINE6_HVNP_6651P4_PRODUCT_CODE = "6651P4";
+export const ENGINE6_HVNP_6651P4_ROUTE =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/small-group-big-island-twilight-volcano-and-stargazing-6651P4";
+export const ENGINE6_HVNP_7443P9_PRODUCT_CODE = "7443P9";
+export const ENGINE6_HVNP_7443P9_ROUTE =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/big-island-highlights-coffee-volcano-black-sands-waterf-7443P9";
+export const ENGINE6_HVNP_7443P1_PRODUCT_CODE = "7443P1";
+export const ENGINE6_HVNP_7443P1_ROUTE =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/deluxe-volcano-experience-with-restaurant-dinner-7443P1";
+export const ENGINE6_HVNP_248255P3_PRODUCT_CODE = "248255P3";
+export const ENGINE6_HVNP_248255P3_ROUTE =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/volcanoes-national-park-safari-248255P3";
+export const ENGINE6_HVNP_224778P1_PRODUCT_CODE = "224778P1";
+export const ENGINE6_HVNP_224778P1_ROUTE =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/volcano-national-park-adventure-from-kona-224778P1";
+export const ENGINE6_HVNP_28886P3_PRODUCT_CODE = "28886P3";
+export const ENGINE6_HVNP_28886P3_ROUTE =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/big-island-volcano-adventure-from-kona-small-group-28886P3";
+export const ENGINE6_HVNP_8944P16_PRODUCT_CODE = "8944P16";
+export const ENGINE6_HVNP_8944P16_ROUTE =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/private-guide-meet-in-hawaii-volcanoes-national-park-8944P16";
+export const ENGINE6_HVNP_3388P1_PRODUCT_CODE = "3388P1";
+export const ENGINE6_HVNP_3388P1_ROUTE =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/big-island-discover-hilo-helicopter-tour-3388P1";
+export const ENGINE6_HVNP_190952P3_PRODUCT_CODE = "190952P3";
+export const ENGINE6_HVNP_190952P3_ROUTE =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/big-island-spectacular-helicopter-tour-190952P3";
+export const ENGINE6_HVNP_110657P2_PRODUCT_CODE = "110657P2";
+export const ENGINE6_HVNP_110657P2_ROUTE =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/private-big-island-experience-3-of-4-window-seats-110657P2";
+export const ENGINE6_HVNP_8944P1_PRODUCT_CODE = "8944P1";
+export const ENGINE6_HVNP_8944P1_ROUTE =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/private-shore-excursion-hilo-volcanoes-national-park-up-8944P1";
+
+export const ENGINE6_HVNP_TOUR_PATH_PREFIX =
+  "/destinations/hawaii/hawaii-volcanoes-national-park/tours/";
+
+export const isEngine6HvnpTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_HVNP_TOUR_PATH_PREFIX);
+
 export const ENGINE6_HONOLULU_TOUR_PATH_PREFIX =
   "/destinations/hawaii/honolulu/tours/";
 
@@ -2535,6 +2584,62 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_MAUI_5069WEST45_ROUTE,
     ENGINE6_MAUI_5069WEST45_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HVNP_6651BIOD_ROUTE,
+    ENGINE6_HVNP_6651BIOD_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HVNP_22796P3_ROUTE,
+    ENGINE6_HVNP_22796P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HVNP_270152P1_ROUTE,
+    ENGINE6_HVNP_270152P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HVNP_6651P4_ROUTE,
+    ENGINE6_HVNP_6651P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HVNP_7443P9_ROUTE,
+    ENGINE6_HVNP_7443P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HVNP_7443P1_ROUTE,
+    ENGINE6_HVNP_7443P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HVNP_248255P3_ROUTE,
+    ENGINE6_HVNP_248255P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HVNP_224778P1_ROUTE,
+    ENGINE6_HVNP_224778P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HVNP_28886P3_ROUTE,
+    ENGINE6_HVNP_28886P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HVNP_8944P16_ROUTE,
+    ENGINE6_HVNP_8944P16_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HVNP_3388P1_ROUTE,
+    ENGINE6_HVNP_3388P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HVNP_190952P3_ROUTE,
+    ENGINE6_HVNP_190952P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HVNP_110657P2_ROUTE,
+    ENGINE6_HVNP_110657P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_HVNP_8944P1_ROUTE,
+    ENGINE6_HVNP_8944P1_PRODUCT_CODE,
   ],
 [
     ENGINE6_KEY_WEST_331502P3_ROUTE,

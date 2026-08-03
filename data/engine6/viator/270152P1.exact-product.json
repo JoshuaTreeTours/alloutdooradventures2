@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "270152P1",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Mauna-Kea-Summit-Sunset-Stargazing-Adventure-with-Free-Photos/d669-270152P1",
+    "title": "Big Island GOAT Experience: Mauna Kea Summit, Sunset & Stars",
+    "description": {
+      "text": "On the Big Island, enjoy a sunset and stargazing experience like no other on this small-group trip to Mauna Kea—the highest point in the Hawaiian islands. Following afternoon pickup, travel in a 4x4 van to the summit—you can change into the provided warm jacket and pair of gloves, and sip a hot beverage, as the sun starts to set. Stops include Mauna Kea Visitor Information Station, Mauna Kea Summit, Mauna Kea Stargazing Site. Then, learn why so many research telescopes are located here during a brilliant celestial show. Ideal for visitors touring Hawaii Volcanoes National Park who want a guided Big Island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Hawaii Volcanoes National Park",
+      "state": "Hawaii"
+    },
+    "duration": "7 to 8 hours (approx.)",
+    "priceFrom": "From $404.31",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1757
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/04/b5/04.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy a sunset and stargazing experience like no other on this small-group trip to Mauna Kea—the highest point in the Ha",
+      "Following afternoon pickup, travel in a 4x4 van to the summit—you can change into the provided warm jacket and pair of g",
+      "Then, learn why so many research telescopes are located here during a brilliant celestial show",
+      "Big Island GOAT Experience: Mauna Kea Summit, Sunset & Stars near Hawaii Volcanoes National Park",
+      "Professional Big Island guide or pilot"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      },
+      "end": {
+        "description": "Return to your Big Island hotel, port, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "On the Big Island, enjoy a sunset and stargazing experience like no other on this small-group trip to Mauna Kea—the highest point in the Hawaiian islands.",
+    "itineraryItems": [
+      {
+        "title": "Mauna Kea Visitor Information Station",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mauna Kea Summit",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mauna Kea Stargazing Site",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Transportation in a comfortable 4X4 van",
+      "Snacks and a hot beverage",
+      "Jackets and gloves to keep you warm",
+      "Experienced tour guide",
+      "Professional telescope (Weather Permitting)",
+      "FREE night photo with our professional camera"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Big Island GOAT Experience: Mauna Kea Summit, Sunset & Stars?",
+        "answer": "The planned duration is 7 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart for Hawaii Volcanoes National Park?",
+        "answer": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Night Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 404.31
+      },
+      "currency": "USD"
+    }
+  }
+}

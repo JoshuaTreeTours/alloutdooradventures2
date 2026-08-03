@@ -1,0 +1,84 @@
+{
+  "destinationLabel": "Hawaii Volcanoes National Park",
+  "destinationCitySlug": "hawaii-volcanoes-national-park",
+  "viatorDestinationSlug": "Big-Island-of-Hawaii",
+  "targetPremiumShare": 0.5,
+  "selectedProductCodes": [
+    "6651BIOD",
+    "22796P3",
+    "270152P1",
+    "6651P4",
+    "7443P9",
+    "7443P1",
+    "248255P3",
+    "224778P1",
+    "28886P3",
+    "8944P16",
+    "3388P1",
+    "190952P3",
+    "110657P2",
+    "8944P1"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "5675VOLCANO",
+      "title": "Small-Group Big Island Tour: HVNP and Kona Coffee Farm",
+      "reason": "Viator From$ price not present in captured live page dumps"
+    },
+    {
+      "productCode": "100824P5",
+      "title": "Big Island Volcano Deluxe Helicopter Tour",
+      "reason": "Viator From$ price not present in captured live page dumps"
+    },
+    {
+      "productCode": "5120_H0002",
+      "title": "Hilo Doors-Off Helicopter",
+      "reason": "Viator From$ price missing; rating 4.2 weaker"
+    },
+    {
+      "productCode": "5120_H0004",
+      "title": "Hilo Helicopter Lava and Rainforests",
+      "reason": "Viator From$ price missing"
+    },
+    {
+      "productCode": "88002P3",
+      "title": "Mauna Kea Summit Tour with Free Night Star Photo",
+      "reason": "Near-duplicate stargazing vs stronger 270152P1"
+    },
+    {
+      "productCode": "224778P4",
+      "title": "Volcano National Park Adventure from Waikoloa",
+      "reason": "Near-duplicate of geologist tour 224778P1"
+    },
+    {
+      "productCode": "70444P7",
+      "title": "HVNP Experience from the Big Island",
+      "reason": "Weak rating (4.2) and only 40 reviews"
+    },
+    {
+      "productCode": "28456P13",
+      "title": "Kona Coast Hualalai Volcano Helicopter Tour",
+      "reason": "Only 16 reviews; weaker commercial depth"
+    },
+    {
+      "productCode": "15103P5",
+      "title": "Small-Group Deluxe Volcano Tour Lunch & Dinner",
+      "reason": "Viator From$ price missing; only 41 reviews"
+    },
+    {
+      "productCode": "102020P22",
+      "title": "Big Island South Island Coastal Loop Driving Tour App",
+      "reason": "Self-guided/app tour rejected"
+    },
+    {
+      "productCode": "102020P25",
+      "title": "Big Island Full Island Bundle Driving Tour App",
+      "reason": "Self-guided/app tour rejected"
+    },
+    {
+      "productCode": "179218P25",
+      "title": "One Day Hawaii Volcano Experience from Maui",
+      "reason": "Inter-island Maui departure; prefer Big Island-based products"
+    }
+  ]
+}
