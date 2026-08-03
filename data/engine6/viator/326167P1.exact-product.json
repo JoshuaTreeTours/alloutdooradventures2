@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "326167P1",
+    "productUrl": "https://www.viator.com/tours/Maui/Full-Day-Road-to-Hana-Tour/d671-326167P1",
+    "title": "VIP Private Road to Hana Tour with Pick Up",
+    "description": {
+      "text": "See the best of Maui on this customizable, private Road to Hana adventure, where the day unfolds at your pace. Stop at stunning spots like Pua'a Ka'a, Wai'anapanapa State Park, Ke‘anae Point, Upper Waikani Falls, and Koki Beach, with time to explore volcanic beaches, waterfalls, and dramatic coastal views. Stops include Paia, Road to Hana, Ke'anae Peninsula, Wai'anapanapa State Park, Hana. Transportation, equipment, and local commentary are handled so you can focus on Maui's volcanoes, waterfalls, reefs, and cultural landmarks. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "8 to 10 hours (approx.)",
+    "priceFrom": "From $679.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 872
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/73/be/49.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "VIP Private Road to Hana Tour with Pick Up from Maui",
+      "Road to Hana, Haleakala, Molokini, or West Maui routing",
+      "Professional guide with Maui expertise",
+      "Small-group or private format as listed",
+      "Maui aerial, ocean, cultural, or adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See the best of Maui on this customizable, private Road to Hana adventure, where the day unfolds at your pace.",
+    "itineraryItems": [
+      {
+        "title": "Paia",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Road to Hana",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ke'anae Peninsula",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wai'anapanapa State Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hana",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the VIP Private Road to Hana Tour with Pick Up?",
+        "answer": "The planned duration is 8 to 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 679
+      },
+      "currency": "USD"
+    }
+  }
+}

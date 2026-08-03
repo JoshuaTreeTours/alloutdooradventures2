@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "5069WEST60",
+    "productUrl": "https://www.viator.com/tours/Maui/West-Maui-and-Molokai-60-minute-Helicopter-Tour/d671-5069WEST60",
+    "title": "West Maui and Molokai 60-Minute Helicopter Tour",
+    "description": {
+      "text": "This Maui helicopter tour is packed with jaw-dropping sights, from waterfalls tumbling through hidden valleys to the tallest sea cliffs of Earth. During this Maui helicopter tour of the West Maui Mountains and Molokai, visitors will soar above mist shrouded ridgelines that are covered in native ferns, and get bird’s eye views of parts of the island that are only accessible by air. Stops include West Maui Mountains, Moloka‘i. Crane your neck up as a 1,100-foot (335-meter) waterfall spills all the way down towards the sea, or casually look down as the blue Pacific rolls right underneath your feet. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $443.34",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 75
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/89/cb/00.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "This Maui helicopter tour is packed with jaw-dropping sights, from waterfalls tumbling through hidden valleys to the tal",
+      "During this Maui helicopter tour of the West Maui Mountains and Molokai, visitors will soar above mist shrouded ridgelin",
+      "Crane your neck up as a 1,100-foot (335-meter) waterfall spills all the way down towards the sea, or casually look down ",
+      "West Maui and Molokai 60-Minute Helicopter Tour departing from Maui",
+      "Professional Maui guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "This Maui helicopter tour is packed with jaw-dropping sights, from waterfalls tumbling through hidden valleys to the tallest sea cliffs of Earth.",
+    "itineraryItems": [
+      {
+        "title": "West Maui Mountains",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Moloka‘i",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the West Maui and Molokai 60-Minute Helicopter Tour?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 443.34
+      },
+      "currency": "USD"
+    }
+  }
+}

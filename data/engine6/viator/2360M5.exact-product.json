@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "2360M5",
+    "productUrl": "https://www.viator.com/tours/Maui/Haleakala-Sunset-Tour-and-Dinner-on-Maui/d671-2360M5",
+    "title": "Haleakala Maui Sunset Twilight Tour with Dinner",
+    "description": {
+      "text": "Many visitors summit Maui's Haleakala for the sunrise but you can beat the crowds by visiting for an equally scenic sunset instead. Enjoy the best sunset view on Maui from the island's tallest peak. Stops include Kula Lodge Marketplace, Haleakalā National Park Visitor Center, Haleakala Summit. Transportation, equipment, and local commentary are handled so you can focus on Maui's volcanoes, waterfalls, reefs, and cultural landmarks. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "7 hours (approx.)",
+    "priceFrom": "From $216.63",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 209
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/09/11.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Haleakala Maui Sunset Twilight Tour with Dinner from Maui",
+      "Road to Hana, Haleakala, Molokini, or West Maui routing",
+      "Professional guide with Maui expertise",
+      "Small-group or private format as listed",
+      "Maui aerial, ocean, cultural, or adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Many visitors summit Maui's Haleakala for the sunrise but you can beat the crowds by visiting for an equally scenic sunset instead.",
+    "itineraryItems": [
+      {
+        "title": "Kula Lodge Marketplace",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Haleakalā National Park Visitor Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Haleakala Summit",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Haleakala Maui Sunset Twilight Tour with Dinner?",
+        "answer": "The planned duration is 7 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 216.63
+      },
+      "currency": "USD"
+    }
+  }
+}

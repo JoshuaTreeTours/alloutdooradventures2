@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "7029OGGVOY",
+    "productUrl": "https://www.viator.com/tours/Maui/Molokai-and-Maui-Helicopter-Tour/d671-7029OGGVOY",
+    "title": "Helicopter Tour of Molokai and Maui",
+    "description": {
+      "text": "Soar above two scenic Hawaiian Islands on a helicopter tour of Maui and Molokai from Kahalui. Watch surfers riding Maui’s breaking waves as you fly towards Molokai’s sheer coastal cliffs, capture aerial images of Kahiwa Falls and the isolated North Shore, then turn towards the emerald green Halawa Valley. Stops include Molokai, Halawa Valley, Iao Valley State Park, Honokohau Falls. Watch for whales and dolphins as you cross Pailolo channel, swoop over Maui’s lush rainforest canopy and explore Iao Valley State Park, then enjoy views of Honokohau Falls and Haleakala volcano on your return flight to Kahalui. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "55 minutes (approx.)",
+    "priceFrom": "From $375.64",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 293
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/ff/2d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Soar above two scenic Hawaiian Islands on a helicopter tour of Maui and Molokai from Kahalui",
+      "Watch surfers riding Maui’s breaking waves as you fly towards Molokai’s sheer coastal cliffs, capture aerial images of K",
+      "Watch for whales and dolphins as you cross Pailolo channel, swoop over Maui’s lush rainforest canopy and explore Iao Val",
+      "Helicopter Tour of Molokai and Maui departing from Maui",
+      "Professional Maui guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Soar above two scenic Hawaiian Islands on a helicopter tour of Maui and Molokai from Kahalui.",
+    "itineraryItems": [
+      {
+        "title": "Molokai",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Halawa Valley",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Iao Valley State Park",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Honokohau Falls",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Helicopter Tour of Molokai and Maui?",
+        "answer": "The planned duration is 55 minutes."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 375.64
+      },
+      "currency": "USD"
+    }
+  }
+}

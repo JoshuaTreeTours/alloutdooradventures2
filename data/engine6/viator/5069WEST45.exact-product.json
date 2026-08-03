@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "5069WEST45",
+    "productUrl": "https://www.viator.com/tours/Maui/West-Maui-and-Molokai-Exclusive-45-Minute-Helicopter-Tour/d671-5069WEST45",
+    "title": "West Maui and Molokai Special 45-Minute Helicopter Tour",
+    "description": {
+      "text": "On this exclusive helicopter tour of Maui, soar past valleys and hidden waterfalls that are inaccessible by land, and hover above ridgelines that sit at the heart of the rugged West Maui mountains. Cross the channel to neighboring Molokai, where vertical sea cliffs spill 4,000 feet to the turbid shoreline below, and get up-close views of a part of the world that has barely been touch by man. Stops include West Maui Mountains, Molokai. Transportation, equipment, and local commentary are handled so you can focus on Maui's volcanoes, waterfalls, reefs, and cultural landmarks. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "45 minutes (approx.)",
+    "priceFrom": "From $332.69",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 721
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6e/c4/58.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "West Maui and Molokai Special 45-Minute Helicopter Tour from Maui",
+      "Road to Hana, Haleakala, Molokini, or West Maui routing",
+      "Professional guide with Maui expertise",
+      "Small-group or private format as listed",
+      "Maui aerial, ocean, cultural, or adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "On this exclusive helicopter tour of Maui, soar past valleys and hidden waterfalls that are inaccessible by land, and hover above ridgelines that sit at the heart of the rugged West Maui mountains.",
+    "itineraryItems": [
+      {
+        "title": "West Maui Mountains",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Molokai",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the West Maui and Molokai Special 45-Minute Helicopter Tour?",
+        "answer": "The planned duration is 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 332.69
+      },
+      "currency": "USD"
+    }
+  }
+}

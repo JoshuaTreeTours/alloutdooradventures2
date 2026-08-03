@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "105668P1",
+    "productUrl": "https://www.viator.com/tours/Maui/Waterfall-Adventure-Hike-Best-of-Maui/d671-105668P1",
+    "title": "Epic Waterfall Adventure, the Best of Maui",
+    "description": {
+      "text": "Discover the beauty of Maui’s waterfalls during a half-day tour. Meet your guide at a departure point for a small-group excursion that includes several waterfalls and optional cliff jumping. Stops include Maui Waterfalls, Scenic Viewpoint. Go for a hike and admire views during the journey to reach the waterfalls. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $299.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 220
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/c9/67/1e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the beauty of Maui’s waterfalls during a half-day tour",
+      "Meet your guide at a departure point for a small-group excursion that includes several waterfalls and optional cliff jum",
+      "Go for a hike and admire views during the journey to reach the waterfalls",
+      "Epic Waterfall Adventure, the Best of Maui departing from Maui",
+      "Professional Maui guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover the beauty of Maui’s waterfalls during a half-day tour.",
+    "itineraryItems": [
+      {
+        "title": "Maui Waterfalls",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Scenic Viewpoint",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Epic Waterfall Adventure, the Best of Maui?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 299
+      },
+      "currency": "USD"
+    }
+  }
+}

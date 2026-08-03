@@ -467,6 +467,73 @@ export const ENGINE6_HONOLULU_5563928P2_PRODUCT_CODE = "5563928P2";
 export const ENGINE6_HONOLULU_5563928P2_ROUTE =
   "/destinations/hawaii/honolulu/tours/scenic-full-day-circle-island-tour-snorkeling-breakfast-5563928P2";
 
+export const ENGINE6_MAUI_5501HASKY_PRODUCT_CODE = "5501HASKY";
+export const ENGINE6_MAUI_5501HASKY_ROUTE =
+  "/destinations/hawaii/maui/tours/road-to-hana-luxury-limo-van-tour-with-helicopter-fligh-5501HASKY";
+export const ENGINE6_MAUI_5069WEST60_PRODUCT_CODE = "5069WEST60";
+export const ENGINE6_MAUI_5069WEST60_ROUTE =
+  "/destinations/hawaii/maui/tours/west-maui-and-molokai-60-minute-helicopter-tour-5069WEST60";
+export const ENGINE6_MAUI_5069COMP60_PRODUCT_CODE = "5069COMP60";
+export const ENGINE6_MAUI_5069COMP60_ROUTE =
+  "/destinations/hawaii/maui/tours/complete-island-60-minute-helicopter-tour-5069COMP60";
+export const ENGINE6_MAUI_7029OGGHAN_PRODUCT_CODE = "7029OGGHAN";
+export const ENGINE6_MAUI_7029OGGHAN_ROUTE =
+  "/destinations/hawaii/maui/tours/hana-rainforest-helicopter-flight-with-landing-from-mau-7029OGGHAN";
+export const ENGINE6_MAUI_5069DOM_PRODUCT_CODE = "5069DOM";
+export const ENGINE6_MAUI_5069DOM_ROUTE =
+  "/destinations/hawaii/maui/tours/doors-off-west-maui-and-molokai-45-minute-helicopter-to-5069DOM";
+export const ENGINE6_MAUI_7029OGGVOY_PRODUCT_CODE = "7029OGGVOY";
+export const ENGINE6_MAUI_7029OGGVOY_ROUTE =
+  "/destinations/hawaii/maui/tours/helicopter-tour-of-molokai-and-maui-7029OGGVOY";
+export const ENGINE6_MAUI_326167P1_PRODUCT_CODE = "326167P1";
+export const ENGINE6_MAUI_326167P1_ROUTE =
+  "/destinations/hawaii/maui/tours/vip-private-road-to-hana-tour-with-pick-up-326167P1";
+export const ENGINE6_MAUI_320015P2_PRODUCT_CODE = "320015P2";
+export const ENGINE6_MAUI_320015P2_ROUTE =
+  "/destinations/hawaii/maui/tours/voted-1-on-maui-vip-private-road-to-hana-backstage-pass-320015P2";
+export const ENGINE6_MAUI_64708P2_PRODUCT_CODE = "64708P2";
+export const ENGINE6_MAUI_64708P2_ROUTE =
+  "/destinations/hawaii/maui/tours/west-maui-mountains-atv-adventure-64708P2";
+export const ENGINE6_MAUI_200419P2_PRODUCT_CODE = "200419P2";
+export const ENGINE6_MAUI_200419P2_ROUTE =
+  "/destinations/hawaii/maui/tours/6-dual-zipline-mountain-adventure-in-maui-200419P2";
+export const ENGINE6_MAUI_105668P1_PRODUCT_CODE = "105668P1";
+export const ENGINE6_MAUI_105668P1_ROUTE =
+  "/destinations/hawaii/maui/tours/epic-waterfall-adventure-the-best-of-maui-105668P1";
+export const ENGINE6_MAUI_104589P11_PRODUCT_CODE = "104589P11";
+export const ENGINE6_MAUI_104589P11_ROUTE =
+  "/destinations/hawaii/maui/tours/haleakala-classic-vehicle-sunrise-tour-with-breakfast-104589P11";
+export const ENGINE6_MAUI_2360M5_PRODUCT_CODE = "2360M5";
+export const ENGINE6_MAUI_2360M5_ROUTE =
+  "/destinations/hawaii/maui/tours/haleakala-maui-sunset-twilight-tour-with-dinner-2360M5";
+export const ENGINE6_MAUI_62707P3_PRODUCT_CODE = "62707P3";
+export const ENGINE6_MAUI_62707P3_ROUTE =
+  "/destinations/hawaii/maui/tours/molokini-snorkel-and-performance-sail-from-maalaea-harb-62707P3";
+export const ENGINE6_MAUI_241329P1_PRODUCT_CODE = "241329P1";
+export const ENGINE6_MAUI_241329P1_ROUTE =
+  "/destinations/hawaii/maui/tours/molokini-crater-snorkeling-adventure-241329P1";
+export const ENGINE6_MAUI_2784P8_PRODUCT_CODE = "2784P8";
+export const ENGINE6_MAUI_2784P8_ROUTE =
+  "/destinations/hawaii/maui/tours/te-au-moana-luau-at-the-wailea-beach-marriott-resort-on-2784P8";
+export const ENGINE6_MAUI_3087MOLL_PRODUCT_CODE = "3087MOLL";
+export const ENGINE6_MAUI_3087MOLL_ROUTE =
+  "/destinations/hawaii/maui/tours/old-lahaina-luau-maui-3087MOLL";
+export const ENGINE6_MAUI_166701P1_PRODUCT_CODE = "166701P1";
+export const ENGINE6_MAUI_166701P1_ROUTE =
+  "/destinations/hawaii/maui/tours/feast-at-mokapu-luau-in-wailea-166701P1";
+export const ENGINE6_MAUI_124957P2_PRODUCT_CODE = "124957P2";
+export const ENGINE6_MAUI_124957P2_ROUTE =
+  "/destinations/hawaii/maui/tours/maui-whale-watch-snorkel-from-maalaea-harbor-pride-of-m-124957P2";
+export const ENGINE6_MAUI_5069WEST45_PRODUCT_CODE = "5069WEST45";
+export const ENGINE6_MAUI_5069WEST45_ROUTE =
+  "/destinations/hawaii/maui/tours/west-maui-and-molokai-special-45-minute-helicopter-tour-5069WEST45";
+
+export const ENGINE6_MAUI_TOUR_PATH_PREFIX =
+  "/destinations/hawaii/maui/tours/";
+
+export const isEngine6MauiTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_MAUI_TOUR_PATH_PREFIX);
+
 export const ENGINE6_HONOLULU_TOUR_PATH_PREFIX =
   "/destinations/hawaii/honolulu/tours/";
 
@@ -2388,6 +2455,86 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_HONOLULU_5563928P2_ROUTE,
     ENGINE6_HONOLULU_5563928P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_5501HASKY_ROUTE,
+    ENGINE6_MAUI_5501HASKY_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_5069WEST60_ROUTE,
+    ENGINE6_MAUI_5069WEST60_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_5069COMP60_ROUTE,
+    ENGINE6_MAUI_5069COMP60_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_7029OGGHAN_ROUTE,
+    ENGINE6_MAUI_7029OGGHAN_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_5069DOM_ROUTE,
+    ENGINE6_MAUI_5069DOM_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_7029OGGVOY_ROUTE,
+    ENGINE6_MAUI_7029OGGVOY_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_326167P1_ROUTE,
+    ENGINE6_MAUI_326167P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_320015P2_ROUTE,
+    ENGINE6_MAUI_320015P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_64708P2_ROUTE,
+    ENGINE6_MAUI_64708P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_200419P2_ROUTE,
+    ENGINE6_MAUI_200419P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_105668P1_ROUTE,
+    ENGINE6_MAUI_105668P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_104589P11_ROUTE,
+    ENGINE6_MAUI_104589P11_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_2360M5_ROUTE,
+    ENGINE6_MAUI_2360M5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_62707P3_ROUTE,
+    ENGINE6_MAUI_62707P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_241329P1_ROUTE,
+    ENGINE6_MAUI_241329P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_2784P8_ROUTE,
+    ENGINE6_MAUI_2784P8_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_3087MOLL_ROUTE,
+    ENGINE6_MAUI_3087MOLL_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_166701P1_ROUTE,
+    ENGINE6_MAUI_166701P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_124957P2_ROUTE,
+    ENGINE6_MAUI_124957P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_MAUI_5069WEST45_ROUTE,
+    ENGINE6_MAUI_5069WEST45_PRODUCT_CODE,
   ],
 [
     ENGINE6_KEY_WEST_331502P3_ROUTE,
