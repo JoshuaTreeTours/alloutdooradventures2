@@ -107,6 +107,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "hawaii",
     citySlug: "kauai",
   },
+  kona: {
+    destinationLabel: "Kona",
+    destinationCitySlug: "kona",
+    stateSlug: "hawaii",
+    citySlug: "kona",
+  },
   "hawaii-volcanoes-national-park": {
     destinationLabel: "Hawaii Volcanoes National Park",
     destinationCitySlug: "hawaii-volcanoes-national-park",

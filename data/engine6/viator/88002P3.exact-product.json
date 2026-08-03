@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "88002P3",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Mauna-Kea-Summit-Tour-with-Free-Night-Star-Photo/d669-88002P3",
+    "title": "Mauna Kea Summit Tour with Free Night Star Photo",
+    "description": {
+      "text": "From Kona-side departures, travel to the 13,803-foot peak of Mauna Kea—Hawaii's highest point and a popular spot for star-gazing. Stop for dinner at the Onizuka Astronomy Complex, then arrive at the summit in time to watch the sunset. Stops include Kailua-Kona, Onizuka Astronomy Complex, Mauna Kea Summit, Night Star Photo Session. As dark sets in, enjoy a stargazing session and receive a complimentary night star photo to take home. Ideal for visitors basing in Kona who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kona",
+      "state": "Hawaii"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $260.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 1046
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/d6/d8/04.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "From Kona-side departures, travel to the 13,803-foot peak of Mauna Kea—Hawaii's highest point and a popular spot for sta",
+      "Stop for dinner at the Onizuka Astronomy Complex, then arrive at the summit in time to watch the sunset",
+      "As dark sets in, enjoy a stargazing session and receive a complimentary night star photo to take home",
+      "Mauna Kea Summit Tour with Free Night Star Photo departing from Kona",
+      "Professional Kona guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kona hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "From Kona-side departures, travel to the 13,803-foot peak of Mauna Kea—Hawaii's highest point and a popular spot for star-gazing.",
+    "itineraryItems": [
+      {
+        "title": "Kailua-Kona",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Onizuka Astronomy Complex",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mauna Kea Summit",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Night Star Photo Session",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mauna Kea Summit Tour with Free Night Star Photo?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Kona?",
+        "answer": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Stargazing"
+      },
+      {
+        "label": "Sunset Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 260
+      },
+      "currency": "USD"
+    }
+  }
+}

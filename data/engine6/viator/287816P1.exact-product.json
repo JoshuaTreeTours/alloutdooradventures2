@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "287816P1",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Private-Island-Tour-in-Hawaii/d669-287816P1",
+    "title": "Private Island Tour in Hawaii with Pickup Included",
+    "description": {
+      "text": "In Kona, touring the Big Island of Hawaii loses a little magic when you are crowded onto a bus with lots of strangers. This private tour ensures a personalized and uncrowded experience by taking you around the island in the company of just your group and a guide. Stops include Kailua-Kona, Kona Coffee Country, Scenic Coastal Lookouts, Big Island Highlight Stops. You'll see the island's best attractions at a pace that fits your interests, with pickup included for a full-day private sightseeing route. Ideal for visitors basing in Kona who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kona",
+      "state": "Hawaii"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $999.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 30
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/36/41/42.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "In Kona, touring the Big Island of Hawaii loses a little magic when you are crowded onto a bus with lots of strangers",
+      "This private tour ensures a personalized and uncrowded experience by taking you around the island in the company of just",
+      "You'll see the island's best attractions at a pace that fits your interests, with pickup included for a full-day private",
+      "Private Island Tour in Hawaii with Pickup Included departing from Kona",
+      "Professional Kona guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kona hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Kona, touring the Big Island of Hawaii loses a little magic when you are crowded onto a bus with lots of strangers.",
+    "itineraryItems": [
+      {
+        "title": "Kailua-Kona",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kona Coffee Country",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Scenic Coastal Lookouts",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Big Island Highlight Stops",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Island Tour in Hawaii with Pickup Included?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Kona?",
+        "answer": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Full-day Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 999
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "2804MKS",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Mauna-Kea-Summit-and-Stars-Small-Group-Adventure-Tour/d669-2804MKS",
+    "title": "Mauna Kea Summit and Stars Small-Group Adventure Tour",
+    "description": {
+      "text": "Experience big skies and incredible nighttime views on this Mauna Kea stargazing trip with a small group departing from the Kona area. Enjoy a warm pre-trip picnic, then ride in a 4x4 luxury van to the summit of the Big Island's tallest peak. Stops include Courtyard King Kamehameha's Kona Beach Hotel, Maunakea Visitor Information Station, Mauna Kea Summit, Stargazing Session. After admiring a sunset view, continue down to 9,000 feet for guided telescope stargazing under some of the clearest night skies on Earth. Ideal for visitors basing in Kona who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kona",
+      "state": "Hawaii"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $313.09",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1378
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/62/6c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Experience big skies and incredible nighttime views on this Mauna Kea stargazing trip with a small group departing from ",
+      "Enjoy a warm pre-trip picnic, then ride in a 4x4 luxury van to the summit of the Big Island's tallest peak",
+      "After admiring a sunset view, continue down to 9,000 feet for guided telescope stargazing under some of the clearest nig",
+      "Mauna Kea Summit and Stars Small-Group Adventure Tour departing from Kona",
+      "Professional Kona guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kona hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience big skies and incredible nighttime views on this Mauna Kea stargazing trip with a small group departing from the Kona area.",
+    "itineraryItems": [
+      {
+        "title": "Courtyard King Kamehameha's Kona Beach Hotel",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Maunakea Visitor Information Station",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mauna Kea Summit",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Stargazing Session",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Mauna Kea Summit and Stars Small-Group Adventure Tour?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Kona?",
+        "answer": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Stargazing"
+      },
+      {
+        "label": "Adventure Tours"
+      },
+      {
+        "label": "Sunset Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 313.09
+      },
+      "currency": "USD"
+    }
+  }
+}

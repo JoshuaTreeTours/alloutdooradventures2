@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "2804PINZHH",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Hidden-Craters-Hike/d669-2804PINZHH",
+    "title": "Hidden Craters Hike of Kona",
+    "description": {
+      "text": "Join the Hidden Craters Hike for a Big Island off-road climb and hike up the cool and misty slopes of Hualalai volcano above Kona. 4 Wheel Drive vans carry you up most of the way to 6,000 feet elevation before you begin your on-foot ascent through lava flows and a forest full of native birdsong. Stops include Hawaii Forest & Trail Headquarters, Hualalai Volcano Slopes, Native Cloud Forest Trail, Volcanic Craters and Fissures, Lava Tube. This adventure tour teaches you all about the best of Kona's volcanic highlands. Ideal for visitors basing in Kona who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kona",
+      "state": "Hawaii"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $183.25",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 96
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/2a/bd/74.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Join the Hidden Craters Hike for a Big Island off-road climb and hike up the cool and misty slopes of Hualalai volcano a",
+      "4 Wheel Drive vans carry you up most of the way to 6,000 feet elevation before you begin your on-foot ascent through lav",
+      "This adventure tour teaches you all about the best of Kona's volcanic highlands",
+      "Hidden Craters Hike of Kona departing from Kona",
+      "Professional Kona guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kona hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Join the Hidden Craters Hike for a Big Island off-road climb and hike up the cool and misty slopes of Hualalai volcano above Kona.",
+    "itineraryItems": [
+      {
+        "title": "Hawaii Forest & Trail Headquarters",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hualalai Volcano Slopes",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Native Cloud Forest Trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Volcanic Craters and Fissures",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lava Tube",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Hidden Craters Hike of Kona?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Kona?",
+        "answer": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      },
+      {
+        "label": "Nature Walks"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 183.25
+      },
+      "currency": "USD"
+    }
+  }
+}

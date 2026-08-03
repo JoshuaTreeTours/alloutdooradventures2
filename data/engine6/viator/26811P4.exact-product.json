@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "26811P4",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Deluxe-ATV-Waterfall-and-Swim-Adventure/d669-26811P4",
+    "title": "Deluxe ATV Waterfall and Swim Experience",
+    "description": {
+      "text": "Spend time exploring the Big Island’s Hamakua Coast on this off-road excursion accessible from Kona-side itineraries. Enjoy complimentary lessons on a practice track if needed, then cruise along picturesque coastal trails on 4x4 Honda ATVs or UTVs. Stops include Practice Track, Hamakua Coast Trails, Mauna Kea Viewpoint, Waterfall Swim Stop. Enjoy magnificent views of Mauna Kea and the Pacific Ocean, stop at scenic spots for memorable photos, and cool off with a waterfall swim when conditions allow. Ideal for visitors basing in Kona who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kona",
+      "state": "Hawaii"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $227.23",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 172
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/60/c6/26.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Spend time exploring the Big Island’s Hamakua Coast on this off-road excursion accessible from Kona-side itineraries",
+      "Enjoy complimentary lessons on a practice track if needed, then cruise along picturesque coastal trails on 4x4 Honda ATV",
+      "Enjoy magnificent views of Mauna Kea and the Pacific Ocean, stop at scenic spots for memorable photos, and cool off with",
+      "Deluxe ATV Waterfall and Swim Experience departing from Kona",
+      "Professional Kona guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kona hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Spend time exploring the Big Island’s Hamakua Coast on this off-road excursion accessible from Kona-side itineraries.",
+    "itineraryItems": [
+      {
+        "title": "Practice Track",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hamakua Coast Trails",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mauna Kea Viewpoint",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waterfall Swim Stop",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Deluxe ATV Waterfall and Swim Experience?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Kona?",
+        "answer": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "ATV Tours"
+      },
+      {
+        "label": "Off-road Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 227.23
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -165,6 +165,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Kona",
+      matches: tour =>
+        /\/hawaii\/kona\//i.test(tour.canonicalPath) ||
+        (/\bkona\b/i.test(tour.city) && /\bhawaii\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Hawaii Volcanoes National Park",
       matches: tour =>
         /\/hawaii\/hawaii-volcanoes-national-park\//i.test(tour.canonicalPath) ||

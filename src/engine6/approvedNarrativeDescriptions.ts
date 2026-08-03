@@ -3,6 +3,7 @@ import { getGreatSmokyMountainsTargetedNarrativeDescription } from "./greatSmoky
 import { getHonoluluTargetedNarrativeDescription } from "./honoluluApprovedNarrativeDescriptions";
 import { getMauiTargetedNarrativeDescription } from "./mauiApprovedNarrativeDescriptions";
 import { getKauaiTargetedNarrativeDescription } from "./kauaiApprovedNarrativeDescriptions";
+import { getKonaTargetedNarrativeDescription } from "./konaApprovedNarrativeDescriptions";
 import { getHawaiiVolcanoesTargetedNarrativeDescription } from "./hawaiiVolcanoesApprovedNarrativeDescriptions";
 import { getKeyWestTargetedNarrativeDescription } from "./keyWestApprovedNarrativeDescriptions";
 import { getMoabTargetedNarrativeDescription } from "./moabApprovedNarrativeDescriptions";
@@ -112,6 +113,7 @@ export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
   getHonoluluTargetedNarrativeDescription(productCode) ??
   getMauiTargetedNarrativeDescription(productCode) ??
   getKauaiTargetedNarrativeDescription(productCode) ??
+  getKonaTargetedNarrativeDescription(productCode) ??
   getHawaiiVolcanoesTargetedNarrativeDescription(productCode) ??
   getOrlandoTargetedNarrativeDescription(productCode) ??
   getFortLauderdaleTargetedNarrativeDescription(productCode) ??

@@ -635,6 +635,58 @@ export const ENGINE6_KAUAI_TOUR_PATH_PREFIX =
 export const isEngine6KauaiTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_KAUAI_TOUR_PATH_PREFIX);
 
+export const ENGINE6_KONA_28456P13_PRODUCT_CODE = "28456P13";
+export const ENGINE6_KONA_28456P13_ROUTE =
+  "/destinations/hawaii/kona/tours/kona-coast-hualalai-volcano-60min-helicopter-tour-door-28456P13";
+export const ENGINE6_KONA_110657P1_PRODUCT_CODE = "110657P1";
+export const ENGINE6_KONA_110657P1_ROUTE =
+  "/destinations/hawaii/kona/tours/private-magical-waterfall-tour-110657P1";
+export const ENGINE6_KONA_190952P1_PRODUCT_CODE = "190952P1";
+export const ENGINE6_KONA_190952P1_ROUTE =
+  "/destinations/hawaii/kona/tours/kohala-waterfalls-valleys-helicopter-tour-190952P1";
+export const ENGINE6_KONA_190952P2_PRODUCT_CODE = "190952P2";
+export const ENGINE6_KONA_190952P2_ROUTE =
+  "/destinations/hawaii/kona/tours/kohala-waterfalls-with-exclusive-landing-helicopter-tou-190952P2";
+export const ENGINE6_KONA_287816P1_PRODUCT_CODE = "287816P1";
+export const ENGINE6_KONA_287816P1_ROUTE =
+  "/destinations/hawaii/kona/tours/private-island-tour-in-hawaii-with-pickup-included-287816P1";
+export const ENGINE6_KONA_2804MKS_PRODUCT_CODE = "2804MKS";
+export const ENGINE6_KONA_2804MKS_ROUTE =
+  "/destinations/hawaii/kona/tours/mauna-kea-summit-and-stars-small-group-adventure-tour-2804MKS";
+export const ENGINE6_KONA_8945P14_PRODUCT_CODE = "8945P14";
+export const ENGINE6_KONA_8945P14_ROUTE =
+  "/destinations/hawaii/kona/tours/mauna-kea-stargazing-experience-photos-8945P14";
+export const ENGINE6_KONA_88002P3_PRODUCT_CODE = "88002P3";
+export const ENGINE6_KONA_88002P3_ROUTE =
+  "/destinations/hawaii/kona/tours/mauna-kea-summit-tour-with-free-night-star-photo-88002P3";
+export const ENGINE6_KONA_358276P1_PRODUCT_CODE = "358276P1";
+export const ENGINE6_KONA_358276P1_ROUTE =
+  "/destinations/hawaii/kona/tours/big-island-southside-atv-tour-358276P1";
+export const ENGINE6_KONA_26811P1_PRODUCT_CODE = "26811P1";
+export const ENGINE6_KONA_26811P1_ROUTE =
+  "/destinations/hawaii/kona/tours/9-line-waterfall-zipline-experience-on-the-big-island-26811P1";
+export const ENGINE6_KONA_26811P4_PRODUCT_CODE = "26811P4";
+export const ENGINE6_KONA_26811P4_ROUTE =
+  "/destinations/hawaii/kona/tours/deluxe-atv-waterfall-and-swim-experience-26811P4";
+export const ENGINE6_KONA_2804PINZHH_PRODUCT_CODE = "2804PINZHH";
+export const ENGINE6_KONA_2804PINZHH_ROUTE =
+  "/destinations/hawaii/kona/tours/hidden-craters-hike-of-kona-2804PINZHH";
+export const ENGINE6_KONA_5527LUAU_PRODUCT_CODE = "5527LUAU";
+export const ENGINE6_KONA_5527LUAU_ROUTE =
+  "/destinations/hawaii/kona/tours/island-breeze-luau-5527LUAU";
+export const ENGINE6_KONA_418633P1_PRODUCT_CODE = "418633P1";
+export const ENGINE6_KONA_418633P1_ROUTE =
+  "/destinations/hawaii/kona/tours/waipi-o-on-horseback-mountain-ocean-views-working-cattl-418633P1";
+export const ENGINE6_KONA_207802P1_PRODUCT_CODE = "207802P1";
+export const ENGINE6_KONA_207802P1_ROUTE =
+  "/destinations/hawaii/kona/tours/award-winning-farm-tour-coffee-chocolate-and-unique-gif-207802P1";
+
+export const ENGINE6_KONA_TOUR_PATH_PREFIX =
+  "/destinations/hawaii/kona/tours/";
+
+export const isEngine6KonaTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_KONA_TOUR_PATH_PREFIX);
+
 export const ENGINE6_HONOLULU_TOUR_PATH_PREFIX =
   "/destinations/hawaii/honolulu/tours/";
 
@@ -2752,6 +2804,66 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_KAUAI_6654P2_ROUTE,
     ENGINE6_KAUAI_6654P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_28456P13_ROUTE,
+    ENGINE6_KONA_28456P13_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_110657P1_ROUTE,
+    ENGINE6_KONA_110657P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_190952P1_ROUTE,
+    ENGINE6_KONA_190952P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_190952P2_ROUTE,
+    ENGINE6_KONA_190952P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_287816P1_ROUTE,
+    ENGINE6_KONA_287816P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_2804MKS_ROUTE,
+    ENGINE6_KONA_2804MKS_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_8945P14_ROUTE,
+    ENGINE6_KONA_8945P14_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_88002P3_ROUTE,
+    ENGINE6_KONA_88002P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_358276P1_ROUTE,
+    ENGINE6_KONA_358276P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_26811P1_ROUTE,
+    ENGINE6_KONA_26811P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_26811P4_ROUTE,
+    ENGINE6_KONA_26811P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_2804PINZHH_ROUTE,
+    ENGINE6_KONA_2804PINZHH_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_5527LUAU_ROUTE,
+    ENGINE6_KONA_5527LUAU_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_418633P1_ROUTE,
+    ENGINE6_KONA_418633P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KONA_207802P1_ROUTE,
+    ENGINE6_KONA_207802P1_PRODUCT_CODE,
   ],
 [
     ENGINE6_KEY_WEST_331502P3_ROUTE,

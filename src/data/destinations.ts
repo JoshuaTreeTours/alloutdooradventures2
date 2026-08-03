@@ -3993,6 +3993,69 @@ const hawaiiState: StateDestination = {
       ],
     },
     {
+      name: "Kona",
+      slug: "kona",
+      stateSlug: "hawaii",
+      region: "Big Island",
+      lat: 19.6399,
+      lng: -155.9969,
+      shortDescription:
+        "Kona coast helicopter flights, Mauna Kea stargazing, and Big Island adventure tours.",
+      intro:
+        "Kona anchors west Big Island itineraries with coastal helicopter routes, Mauna Kea summit nights, coffee-country farms, and off-road adventures.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/18/96/9c.jpg",
+      ],
+      activityTags: ["helicopter", "stargazing", "hiking"],
+      whereItIs: [
+        "Kona sits on the west side of Hawaii's Big Island, with Kailua-Kona and the Kohala Coast as primary resort and tour-departure corridors.",
+      ],
+      experiences: {
+        mountains:
+          "Ride to Mauna Kea summit for sunset and stargazing, or hike Hualalai's hidden craters above the Kona coast.",
+        lakesWater:
+          "Pair coastal days with waterfall ziplines, Waipio horseback rides, and Kohala valley helicopter views.",
+        desertForest:
+          "Explore southside ATV ranchlands, lava flows, and Kona coffee plantations between coastal lookouts.",
+        cycling: "Coastal paths and quieter coffee-country roads around Kailua-Kona.",
+        scenicDrives:
+          "Routes link Ali'i Drive, coffee belt farms, Kohala Coast resorts, and Mauna Kea access corridors.",
+        seasonalNotes:
+          "Evenings cool quickly at Mauna Kea elevation; trade winds shape coastal flight and ocean days.",
+      },
+      thingsToDo: [
+        "Fly a Kona Coast or Kohala waterfall helicopter tour.",
+        "Join a Mauna Kea summit sunset and stargazing outing.",
+        "Hike Hualalai's hidden craters or tour a Kona coffee and chocolate farm.",
+      ],
+      toursCopy: [
+        "Kona tours work best as guided half-day and full-day experiences with hotel pickup from Kailua-Kona, Waikoloa, or the Kohala Coast.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Kona Coast or Kohala helicopter flight.",
+          "Afternoon: Coffee and chocolate farm tour or southside ATV ride.",
+          "Evening: Island Breeze Luau or waterfront dinner in Kailua-Kona.",
+        ],
+        dayTwo: [
+          "Morning: Hidden Craters Hike on Hualalai.",
+          "Afternoon: Waipio horseback ride or waterfall zipline.",
+          "Evening: Mauna Kea summit sunset and stargazing.",
+        ],
+      },
+      gettingThere: [
+        "Kona International Airport (KOA) is the main west Big Island gateway.",
+        "Kailua-Kona, Waikoloa, and Kohala Coast hotels are common pickup points for guided tours.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Kona tours?",
+          answer:
+            "Kona Coast and Kohala helicopter flights, Mauna Kea stargazing, Hualalai crater hikes, ATV adventures, and Kona coffee farm tours are among the most popular departures.",
+        },
+      ],
+    },
+    {
       name: "Hawaii Volcanoes National Park",
       slug: "hawaii-volcanoes-national-park",
       stateSlug: "hawaii",

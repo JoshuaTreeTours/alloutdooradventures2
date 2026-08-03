@@ -93,6 +93,21 @@ import specimen24198p1Payload from "../../data/engine6/viator/24198P1.exact-prod
 import specimen2360kauaiPayload from "../../data/engine6/viator/2360KAUAI.exact-product.json";
 import specimen5655plantationPayload from "../../data/engine6/viator/5655PLANTATION.exact-product.json";
 import specimen6654p2Payload from "../../data/engine6/viator/6654P2.exact-product.json";
+import specimen28456p13Payload from "../../data/engine6/viator/28456P13.exact-product.json";
+import specimen110657p1Payload from "../../data/engine6/viator/110657P1.exact-product.json";
+import specimen190952p1Payload from "../../data/engine6/viator/190952P1.exact-product.json";
+import specimen190952p2Payload from "../../data/engine6/viator/190952P2.exact-product.json";
+import specimen287816p1Payload from "../../data/engine6/viator/287816P1.exact-product.json";
+import specimen2804mksPayload from "../../data/engine6/viator/2804MKS.exact-product.json";
+import specimen8945p14Payload from "../../data/engine6/viator/8945P14.exact-product.json";
+import specimen88002p3Payload from "../../data/engine6/viator/88002P3.exact-product.json";
+import specimen358276p1Payload from "../../data/engine6/viator/358276P1.exact-product.json";
+import specimen26811p1Payload from "../../data/engine6/viator/26811P1.exact-product.json";
+import specimen26811p4Payload from "../../data/engine6/viator/26811P4.exact-product.json";
+import specimen2804pinzhhPayload from "../../data/engine6/viator/2804PINZHH.exact-product.json";
+import specimen5527luauPayload from "../../data/engine6/viator/5527LUAU.exact-product.json";
+import specimen418633p1Payload from "../../data/engine6/viator/418633P1.exact-product.json";
+import specimen207802p1Payload from "../../data/engine6/viator/207802P1.exact-product.json";
 import specimen5069west60Payload from "../../data/engine6/viator/5069WEST60.exact-product.json";
 import specimen5069comp60Payload from "../../data/engine6/viator/5069COMP60.exact-product.json";
 import specimen7029ogghanPayload from "../../data/engine6/viator/7029OGGHAN.exact-product.json";
@@ -1791,6 +1806,96 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "6654P2",
     publicUrl: "https://www.viator.com/tours/Kauai/Koloa-Zipline/d670-6654P2",
     rawPayload: specimen6654p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "28456P13",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Kona-Coast-Hualalai-Volcano-60Min-Helicopter-Tour-Door-Off-or-On/d669-28456P13",
+    rawPayload: specimen28456p13Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "110657P1",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Magical-Waterfall-Tour/d669-110657P1",
+    rawPayload: specimen110657p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "190952P1",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Kohala-Valleys-and-Waterfalls-Adventure-Helicopter-Tour/d669-190952P1",
+    rawPayload: specimen190952p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "190952P2",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Kohala-Waterfalls-with-Exclusive-Landing-Helicopter-Tour/d669-190952P2",
+    rawPayload: specimen190952p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "287816P1",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Private-Island-Tour-in-Hawaii/d669-287816P1",
+    rawPayload: specimen287816p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2804MKS",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Mauna-Kea-Summit-and-Stars-Small-Group-Adventure-Tour/d669-2804MKS",
+    rawPayload: specimen2804mksPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8945P14",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Mauna-Kea-Stargazing-Experience-with-Professional-Photos/d669-8945P14",
+    rawPayload: specimen8945p14Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "88002P3",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Mauna-Kea-Summit-Tour-with-Free-Night-Star-Photo/d669-88002P3",
+    rawPayload: specimen88002p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "358276P1",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Big-Island-Southside-ATV-Tour/d669-358276P1",
+    rawPayload: specimen358276p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "26811P1",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/9-Line-Waterfall-Zipline/d669-26811P1",
+    rawPayload: specimen26811p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "26811P4",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Deluxe-ATV-Waterfall-and-Swim-Adventure/d669-26811P4",
+    rawPayload: specimen26811p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2804PINZHH",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Hidden-Craters-Hike/d669-2804PINZHH",
+    rawPayload: specimen2804pinzhhPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5527LUAU",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Island-Breeze-Luau-on-the-Big-Island/d669-5527LUAU",
+    rawPayload: specimen5527luauPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "418633P1",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Waipio-on-Horseback/d669-418633P1",
+    rawPayload: specimen418633p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "207802P1",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Award-Winning-Farm-Tour-Coffee-Chocolate-and-More/d669-207802P1",
+    rawPayload: specimen207802p1Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

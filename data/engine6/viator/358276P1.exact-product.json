@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "358276P1",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Big-Island-Southside-ATV-Tour/d669-358276P1",
+    "title": "Big Island Southside ATV Tour",
+    "description": {
+      "text": "Get off the tourist track and experience the wildest side of the Big Island on this small-group ATV tour from the Kona south side. Don goggles and a helmet and drive your ATV over rugged ranch lands, craggy lava flows, and ancient forests, stopping along the way at lookout points to take photos and listen to commentary from your guide. Stops include South Kona Ranch Lands, Lava Flow Trails, Ancient Forest Track, Scenic Lookout Points. Transportation, equipment, and local commentary are handled so you can focus on Kona's coastline, volcanic highlands, coffee country, and island landmarks. Ideal for visitors basing in Kona who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kona",
+      "state": "Hawaii"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $250.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 347
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/3b/58/cc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Big Island Southside ATV Tour from Kona",
+      "Kohala valleys, Mauna Kea, Kona coffee country, or island adventure routing",
+      "Professional guide with Kona expertise",
+      "Small-group or private format as listed",
+      "Kona aerial, ocean, cultural, or adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kona hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Get off the tourist track and experience the wildest side of the Big Island on this small-group ATV tour from the Kona south side.",
+    "itineraryItems": [
+      {
+        "title": "South Kona Ranch Lands",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lava Flow Trails",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ancient Forest Track",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Scenic Lookout Points",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Big Island Southside ATV Tour?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Kona?",
+        "answer": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "ATV Tours"
+      },
+      {
+        "label": "Off-road Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 250
+      },
+      "currency": "USD"
+    }
+  }
+}

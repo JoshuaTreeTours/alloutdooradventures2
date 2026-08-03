@@ -1,0 +1,189 @@
+{
+  "destinationLabel": "Kona",
+  "destinationCitySlug": "kona",
+  "viatorDestinationSlug": "Big-Island-of-Hawaii",
+  "targetPremiumShare": 0.5,
+  "catalogUrl": "https://www.viator.com/searchResults/all?text=Kona",
+  "selectedCount": 15,
+  "premiumCount": 8,
+  "selectionNote": "Selected 15 strongest viable Kona/Big Island products with verified commercial data and product-specific heroes. Full 20-25 target blocked by DataDome on live catalog crawl; rejected audio/self-guided, HVNP-duplicate portfolio codes, incomplete From$ dumps, and weak commercial rows.",
+  "selectedProductCodes": [
+    "28456P13",
+    "110657P1",
+    "190952P1",
+    "190952P2",
+    "287816P1",
+    "2804MKS",
+    "8945P14",
+    "88002P3",
+    "358276P1",
+    "26811P1",
+    "26811P4",
+    "2804PINZHH",
+    "5527LUAU",
+    "418633P1",
+    "207802P1"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "28456P11",
+      "title": "Coastal Sights Unseen 45Min Helicopter Tour",
+      "reason": "Qualified helicopter alternate deferred to keep portfolio diversity"
+    },
+    {
+      "productCode": "28456P10",
+      "title": "Kohala Coast Volcano Waterfalls 90 Min Heli Tour",
+      "reason": "Qualified helicopter alternate deferred behind stronger Kohala/private helicopter set"
+    },
+    {
+      "productCode": "5120P19",
+      "title": "Doors-Off Kohala Valleys and Waterfalls",
+      "reason": "Incomplete dump / no verified unique hero capture under DataDome"
+    },
+    {
+      "productCode": "122019P1",
+      "title": "Voyagers of the Pacific Luau",
+      "reason": "Incomplete dump / no verified unique hero capture"
+    },
+    {
+      "productCode": "331876P3",
+      "title": "Private All Inclusive Big Island Waterfalls Tour",
+      "reason": "Per-group private pricing unsuitable for standard per-person Engine6 commercial fields"
+    },
+    {
+      "productCode": "406637P1",
+      "title": "Private Big Island Tour Coffee Beaches Volcanos Waterfalls",
+      "reason": "Incomplete commercial capture (From$ missing in live dump)"
+    },
+    {
+      "productCode": "8945P4",
+      "title": "Jeep Tour Custom Big Island Adventure",
+      "reason": "Incomplete commercial capture (From$ missing in live dump)"
+    },
+    {
+      "productCode": "11072P12",
+      "title": "Qualified Kona-area experience",
+      "reason": "Incomplete commercial capture (From$ missing in live dump)"
+    },
+    {
+      "productCode": "92375P4",
+      "title": "Qualified Kona-area experience",
+      "reason": "Incomplete commercial capture (From$ missing in live dump)"
+    },
+    {
+      "productCode": "35843P3",
+      "title": "Qualified Kona-area experience",
+      "reason": "Incomplete commercial capture (From$ missing in live dump)"
+    },
+    {
+      "productCode": "5675VOLCANO",
+      "title": "Small-Group Big Island Tour Hawaii Volcanoes and Kona Coffee",
+      "reason": "Incomplete commercial capture (JPY-only pricing in dump)"
+    },
+    {
+      "productCode": "5123PRTKON521",
+      "title": "Private Kona tour variant",
+      "reason": "Weak rating (3.9) below Engine6 commercial quality bar"
+    },
+    {
+      "productCode": "133865P1",
+      "title": "Mauna Kea Summit Sunset and Stargazing",
+      "reason": "Page presented similar options / likely inactive or redirected"
+    },
+    {
+      "productCode": "100824P5",
+      "title": "Big Island Volcano Deluxe",
+      "reason": "Page presented similar options / likely inactive or redirected"
+    },
+    {
+      "productCode": "102020P23",
+      "title": "Kona GPS audio tour",
+      "reason": "Audio/self-guided/app tour rejected"
+    },
+    {
+      "productCode": "102020P25",
+      "title": "Kona GPS audio tour",
+      "reason": "Audio/self-guided/app tour rejected"
+    },
+    {
+      "productCode": "309754P25",
+      "title": "Kona GPS audio tour",
+      "reason": "Audio/self-guided/app tour rejected"
+    },
+    {
+      "productCode": "102020P21",
+      "title": "Kona GPS audio tour",
+      "reason": "Audio/self-guided/app tour rejected"
+    },
+    {
+      "productCode": "6651BIOD",
+      "title": "HVNP portfolio product",
+      "reason": "Already published in Hawaii Volcanoes National Park Engine6 portfolio"
+    },
+    {
+      "productCode": "22796P3",
+      "title": "HVNP portfolio product",
+      "reason": "Already published in Hawaii Volcanoes National Park Engine6 portfolio"
+    },
+    {
+      "productCode": "270152P1",
+      "title": "HVNP portfolio product",
+      "reason": "Already published in Hawaii Volcanoes National Park Engine6 portfolio"
+    },
+    {
+      "productCode": "6651P4",
+      "title": "HVNP portfolio product",
+      "reason": "Already published in Hawaii Volcanoes National Park Engine6 portfolio"
+    },
+    {
+      "productCode": "7443P9",
+      "title": "HVNP portfolio product",
+      "reason": "Already published in Hawaii Volcanoes National Park Engine6 portfolio"
+    },
+    {
+      "productCode": "7443P1",
+      "title": "HVNP portfolio product",
+      "reason": "Already published in Hawaii Volcanoes National Park Engine6 portfolio"
+    },
+    {
+      "productCode": "248255P3",
+      "title": "HVNP portfolio product",
+      "reason": "Already published in Hawaii Volcanoes National Park Engine6 portfolio"
+    },
+    {
+      "productCode": "224778P1",
+      "title": "HVNP portfolio product",
+      "reason": "Already published in Hawaii Volcanoes National Park Engine6 portfolio"
+    },
+    {
+      "productCode": "28886P3",
+      "title": "HVNP portfolio product",
+      "reason": "Already published in Hawaii Volcanoes National Park Engine6 portfolio"
+    },
+    {
+      "productCode": "8944P16",
+      "title": "HVNP portfolio product",
+      "reason": "Already published in Hawaii Volcanoes National Park Engine6 portfolio"
+    },
+    {
+      "productCode": "3388P1",
+      "title": "HVNP portfolio product",
+      "reason": "Already published in Hawaii Volcanoes National Park Engine6 portfolio"
+    },
+    {
+      "productCode": "190952P3",
+      "title": "HVNP portfolio product",
+      "reason": "Already published in Hawaii Volcanoes National Park Engine6 portfolio"
+    },
+    {
+      "productCode": "110657P2",
+      "title": "HVNP portfolio product",
+      "reason": "Already published in Hawaii Volcanoes National Park Engine6 portfolio"
+    },
+    {
+      "productCode": "8944P1",
+      "title": "HVNP portfolio product",
+      "reason": "Already published in Hawaii Volcanoes National Park Engine6 portfolio"
+    }
+  ]
+}

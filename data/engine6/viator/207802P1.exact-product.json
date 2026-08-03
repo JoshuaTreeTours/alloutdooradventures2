@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "207802P1",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Award-Winning-Farm-Tour-Coffee-Chocolate-and-More/d669-207802P1",
+    "title": "Award Winning Farm Tour: Coffee, Chocolate and Unique Gifts",
+    "description": {
+      "text": "Hawaii is renowned for its coffee and chocolate, and this Kona farm tour takes you behind the scenes of a traditional plantation. Learn how coffee is grown and produced, discover the chocolate-making journey from bean to bar, and have a chance to sample both delicacies. Stops include Kona Coffee Orchard, Coffee Processing Area, Chocolate Making Demonstration, Farm Gift Shop. At the end of the tour, spend as much time as you like browsing unique gifts made from farm ingredients. Ideal for visitors basing in Kona who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kona",
+      "state": "Hawaii"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $50.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 392
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/86/08/a7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Hawaii is renowned for its coffee and chocolate, and this Kona farm tour takes you behind the scenes of a traditional pl",
+      "Learn how coffee is grown and produced, discover the chocolate-making journey from bean to bar, and have a chance to sam",
+      "At the end of the tour, spend as much time as you like browsing unique gifts made from farm ingredients",
+      "Award Winning Farm Tour: Coffee, Chocolate and Unique Gifts departing from Kona",
+      "Professional Kona guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kona hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Hawaii is renowned for its coffee and chocolate, and this Kona farm tour takes you behind the scenes of a traditional plantation.",
+    "itineraryItems": [
+      {
+        "title": "Kona Coffee Orchard",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Coffee Processing Area",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chocolate Making Demonstration",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Farm Gift Shop",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Award Winning Farm Tour: Coffee, Chocolate and Unique Gifts?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Kona?",
+        "answer": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Food Tours"
+      },
+      {
+        "label": "Farm Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 50
+      },
+      "currency": "USD"
+    }
+  }
+}
