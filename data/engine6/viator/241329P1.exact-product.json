@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "241329P1",
+    "productUrl": "https://www.viator.com/tours/Maui/Snorkeling-and-Whale-Watching-to-Molokini-Crater-5-Hour-Morning-Session/d671-241329P1",
+    "title": "Molokini Crater Snorkeling Adventure",
+    "description": {
+      "text": "The offshore crater of Molokini has some of the best snorkeling spots in Maui—if you can reach them. Thankfully, this half-day snorkeling tour heads straight for Molokini and Turtle Town nearby on a 53-foot (16 meters) Lani Kai II boat with a 20-foot (6 meters) waterslide. Stops include Ma'alaea Harbor, Molokini Crater, Turtle Town. Visit two snorkeling locations, get the chance to spot whales, and enjoy onboard breakfast and lunch. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $192.56",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 637
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/cc/4a/29.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The offshore crater of Molokini has some of the best snorkeling spots in Maui—if you can reach them",
+      "Thankfully, this half-day snorkeling tour heads straight for Molokini and Turtle Town nearby on a 53-foot (16 meters) La",
+      "Visit two snorkeling locations, get the chance to spot whales, and enjoy onboard breakfast and lunch",
+      "Molokini Crater Snorkeling Adventure departing from Maui",
+      "Professional Maui guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "The offshore crater of Molokini has some of the best snorkeling spots in Maui—if you can reach them.",
+    "itineraryItems": [
+      {
+        "title": "Ma'alaea Harbor",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Molokini Crater",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Turtle Town",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Molokini Crater Snorkeling Adventure?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 192.56
+      },
+      "currency": "USD"
+    }
+  }
+}

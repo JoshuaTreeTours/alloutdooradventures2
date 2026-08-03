@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "104589P11",
+    "productUrl": "https://www.viator.com/tours/Maui/Haleakala-Classic-Sunrise-Tour/d671-104589P11",
+    "title": "Haleakala Classic Vehicle Sunrise Tour with Breakfast",
+    "description": {
+      "text": "See sunrise from the top of Maui’s highest volcano during this informative tour of Haleakala National Park. Climb aboard an air-conditioned vehicle for a scenic tour of the dormant volcano and crater of Haleakala and the upcountry area. Stops include Haleakalā National Park, Haleakala Summit, Makawao, Pa'ia. Learn about the culture, history, and geology of Maui during the trip. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $271.07",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 140
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/96/51/df.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See sunrise from the top of Maui’s highest volcano during this informative tour of Haleakala National Park",
+      "Climb aboard an air-conditioned vehicle for a scenic tour of the dormant volcano and crater of Haleakala and the upcount",
+      "Learn about the culture, history, and geology of Maui during the trip",
+      "Haleakala Classic Vehicle Sunrise Tour with Breakfast departing from Maui",
+      "Professional Maui guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See sunrise from the top of Maui’s highest volcano during this informative tour of Haleakala National Park.",
+    "itineraryItems": [
+      {
+        "title": "Haleakalā National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Haleakala Summit",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Makawao",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pa'ia",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Haleakala Classic Vehicle Sunrise Tour with Breakfast?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 271.07
+      },
+      "currency": "USD"
+    }
+  }
+}

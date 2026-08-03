@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "5501HASKY",
+    "productUrl": "https://www.viator.com/tours/Maui/Small-Group-Road-to-Hana-Luxury-Tour-and-Helicopter-Flight/d671-5501HASKY",
+    "title": "Road to Hana Luxury Limo-Van Tour with Helicopter Flight",
+    "description": {
+      "text": "Travel Maui's famous Road to Hana in style, enjoying a luxurious small-group sightseeing road trip by Limo-Van and a stunning helicopter flight back, during this 6-hour adventure. Sit back and relax inside your plush Limo-Van on the way to Hana, stopping at the Hawaiian hamlet of Ke’anae, and at a gorgeous waterfall, where you’ll have time to swim (conditions permitting ). Stops include Hana Highway - Road to Hana, Upper Waikani Falls, Hana. You’ll also enjoy a beachside lunch before eventually boarding a helicopter for an incredible 36-minute flight above Haleakala Crater and the island’s rugged coast. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $565.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 674
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/01/32/da.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Travel Maui's famous Road to Hana in style, enjoying a luxurious small-group sightseeing road trip by Limo-Van and a stu",
+      "Sit back and relax inside your plush Limo-Van on the way to Hana, stopping at the Hawaiian hamlet of Ke’anae, and at a g",
+      "You’ll also enjoy a beachside lunch before eventually boarding a helicopter for an incredible 36-minute flight above Hal",
+      "Road to Hana Luxury Limo-Van Tour with Helicopter Flight departing from Maui",
+      "Professional Maui guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Travel Maui's famous Road to Hana in style, enjoying a luxurious small-group sightseeing road trip by Limo-Van and a stunning helicopter flight back, during this 6-hour adventure.",
+    "itineraryItems": [
+      {
+        "title": "Hana Highway - Road to Hana",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Upper Waikani Falls",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Hana",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Road to Hana Luxury Limo-Van Tour with Helicopter Flight?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 565
+      },
+      "currency": "USD"
+    }
+  }
+}

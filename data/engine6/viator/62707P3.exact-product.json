@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "62707P3",
+    "productUrl": "https://www.viator.com/tours/Maui/Molokini-Snorkel-and-Performance-Sail/d671-62707P3",
+    "title": "Molokini Snorkel and Performance Sail from Ma'alaea Harbor",
+    "description": {
+      "text": "Sail aboard a catamaran to Molokini crater, one of Maui’s best snorkel sites. The volcanic atoll off the south coast is a natural marine preserve, home to 250 species of tropical fish. Stops include Ma'alaea Harbor, Molokini Crater, Turtle Town. Join the crew at the helm of “Paragon II” as Maui’s afternoon trade winds get the boat to this top destination. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $200.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 198
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/72/f7/24.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sail aboard a catamaran to Molokini crater, one of Maui’s best snorkel sites",
+      "The volcanic atoll off the south coast is a natural marine preserve, home to 250 species of tropical fish",
+      "Join the crew at the helm of “Paragon II” as Maui’s afternoon trade winds get the boat to this top destination",
+      "Molokini Snorkel and Performance Sail from Ma'alaea Harbor departing from Maui",
+      "Professional Maui guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Sail aboard a catamaran to Molokini crater, one of Maui’s best snorkel sites.",
+    "itineraryItems": [
+      {
+        "title": "Ma'alaea Harbor",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Molokini Crater",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Turtle Town",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Molokini Snorkel and Performance Sail from Ma'alaea Harbor?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 200
+      },
+      "currency": "USD"
+    }
+  }
+}

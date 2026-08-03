@@ -95,6 +95,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "hawaii",
     citySlug: "honolulu",
   },
+  maui: {
+    destinationLabel: "Maui",
+    destinationCitySlug: "maui",
+    stateSlug: "hawaii",
+    citySlug: "maui",
+  },
   orlando: {
     destinationLabel: "Orlando",
     destinationCitySlug: "orlando",

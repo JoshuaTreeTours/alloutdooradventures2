@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "2784P8",
+    "productUrl": "https://www.viator.com/tours/Maui/Te-Au-Moana-Luau/d671-2784P8",
+    "title": "Te Au Moana Luau at The Wailea Beach Marriott Resort on Maui, Hawaii",
+    "description": {
+      "text": "Participate in a traditional Hawaiian luau during your time in Maui and learn about the Polynesian ancestry of the islands. Watch dancers portray the stories of fishing, gathering, and voyaging in “Te Au Moana: The Ocean Tide”. Stops include Te Au Moana Luau Grounds, Imu Ceremony, Oceanfront Performance Stage. After your pre-show entertainment, a delicious dinner is served at your table in a three-course family-style meal, with a fire knife performance. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "3 to 4 hours (approx.)",
+    "priceFrom": "From $278.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 1033
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/6c/87/e3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Participate in a traditional Hawaiian luau during your time in Maui and learn about the Polynesian ancestry of the islan",
+      "Watch dancers portray the stories of fishing, gathering, and voyaging in “Te Au Moana: The Ocean Tide”",
+      "After your pre-show entertainment, a delicious dinner is served at your table in a three-course family-style meal, with ",
+      "Te Au Moana Luau at The Wailea Beach Marriott Resort on Maui, Hawaii departing from Maui",
+      "Professional Maui guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Participate in a traditional Hawaiian luau during your time in Maui and learn about the Polynesian ancestry of the islands.",
+    "itineraryItems": [
+      {
+        "title": "Te Au Moana Luau Grounds",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Imu Ceremony",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Oceanfront Performance Stage",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Te Au Moana Luau at The Wailea Beach Marriott Resort on Maui, Hawaii?",
+        "answer": "The planned duration is 3 to 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 278
+      },
+      "currency": "USD"
+    }
+  }
+}

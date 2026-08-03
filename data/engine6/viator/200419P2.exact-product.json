@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "200419P2",
+    "productUrl": "https://www.viator.com/tours/Maui/Kapalua-Ziplines-6-Line-Tour-Maui/d671-200419P2",
+    "title": "6 Dual-Zipline Mountain Adventure in Maui",
+    "description": {
+      "text": "Enjoy unparalleled coastal views as you soar through jungle heights during this small-group zip lining excursion in Maui. Get hands-on assistance from your guide as you ride down six panoramic, sky-high lines. Stops include Kapalua Ziplines, Suspension Bridge, Dual Zipline Course. Tours include a fast-paced ATV ride deep into the rainforest and a trek over Hawaii's longest suspension bridge. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $229.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 595
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/fd/25/bb.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy unparalleled coastal views as you soar through jungle heights during this small-group zip lining excursion in Maui",
+      "Get hands-on assistance from your guide as you ride down six panoramic, sky-high lines",
+      "Tours include a fast-paced ATV ride deep into the rainforest and a trek over Hawaii's longest suspension bridge",
+      "6 Dual-Zipline Mountain Adventure in Maui departing from Maui",
+      "Professional Maui guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Enjoy unparalleled coastal views as you soar through jungle heights during this small-group zip lining excursion in Maui.",
+    "itineraryItems": [
+      {
+        "title": "Kapalua Ziplines",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Suspension Bridge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dual Zipline Course",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 6 Dual-Zipline Mountain Adventure in Maui?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 229
+      },
+      "currency": "USD"
+    }
+  }
+}

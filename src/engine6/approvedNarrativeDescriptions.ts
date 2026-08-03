@@ -1,6 +1,7 @@
 import { getBostonTargetedNarrativeDescription } from "./bostonApprovedNarrativeDescriptions";
 import { getGreatSmokyMountainsTargetedNarrativeDescription } from "./greatSmokyMountainsApprovedNarrativeDescriptions";
 import { getHonoluluTargetedNarrativeDescription } from "./honoluluApprovedNarrativeDescriptions";
+import { getMauiTargetedNarrativeDescription } from "./mauiApprovedNarrativeDescriptions";
 import { getKeyWestTargetedNarrativeDescription } from "./keyWestApprovedNarrativeDescriptions";
 import { getMoabTargetedNarrativeDescription } from "./moabApprovedNarrativeDescriptions";
 import { getFortLauderdaleTargetedNarrativeDescription } from "./fortLauderdaleApprovedNarrativeDescriptions";
@@ -107,6 +108,7 @@ export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
   getRockyMountainNationalParkTargetedNarrativeDescription(productCode) ??
   getKeyWestTargetedNarrativeDescription(productCode) ??
   getHonoluluTargetedNarrativeDescription(productCode) ??
+  getMauiTargetedNarrativeDescription(productCode) ??
   getOrlandoTargetedNarrativeDescription(productCode) ??
   getFortLauderdaleTargetedNarrativeDescription(productCode) ??
   getMoabTargetedNarrativeDescription(productCode) ??

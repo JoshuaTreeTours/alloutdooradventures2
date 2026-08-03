@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "166701P1",
+    "productUrl": "https://www.viator.com/tours/Maui/Feast-at-Mokapu-Luau/d671-166701P1",
+    "title": "Feast at Mokapu Luau in Wailea",
+    "description": {
+      "text": "Indulge in a delicious feast and Hawaiian culture during the Mokapu Luau at the Andaz Maui. Take your seat on the grassy lawn and watch performers as they take you through Hawaiian history and the Polynesian culture that has created the island. Stops include Mokapu Luau Grounds, Imu Ceremony, Oceanfront Performance Stage. Enjoy a delicious plated, ohana-style meal as well as unlimited handcrafted cocktails while you watch the performance. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $283.00",
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 197
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/56/e9/22.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Indulge in a delicious feast and Hawaiian culture during the Mokapu Luau at the Andaz Maui",
+      "Take your seat on the grassy lawn and watch performers as they take you through Hawaiian history and the Polynesian cult",
+      "Enjoy a delicious plated, ohana-style meal as well as unlimited handcrafted cocktails while you watch the performance",
+      "Feast at Mokapu Luau in Wailea departing from Maui",
+      "Professional Maui guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Indulge in a delicious feast and Hawaiian culture during the Mokapu Luau at the Andaz Maui.",
+    "itineraryItems": [
+      {
+        "title": "Mokapu Luau Grounds",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Imu Ceremony",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Oceanfront Performance Stage",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Feast at Mokapu Luau in Wailea?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 283
+      },
+      "currency": "USD"
+    }
+  }
+}

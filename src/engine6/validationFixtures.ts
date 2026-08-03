@@ -63,6 +63,26 @@ import specimen375182p1Payload from "../../data/engine6/viator/375182P1.exact-pr
 import specimen469693p1Payload from "../../data/engine6/viator/469693P1.exact-product.json";
 import specimen3961p32Payload from "../../data/engine6/viator/3961P32.exact-product.json";
 import specimen5563928p2Payload from "../../data/engine6/viator/5563928P2.exact-product.json";
+import specimen5501haskyPayload from "../../data/engine6/viator/5501HASKY.exact-product.json";
+import specimen5069west60Payload from "../../data/engine6/viator/5069WEST60.exact-product.json";
+import specimen5069comp60Payload from "../../data/engine6/viator/5069COMP60.exact-product.json";
+import specimen7029ogghanPayload from "../../data/engine6/viator/7029OGGHAN.exact-product.json";
+import specimen5069domPayload from "../../data/engine6/viator/5069DOM.exact-product.json";
+import specimen7029oggvoyPayload from "../../data/engine6/viator/7029OGGVOY.exact-product.json";
+import specimen326167p1Payload from "../../data/engine6/viator/326167P1.exact-product.json";
+import specimen320015p2Payload from "../../data/engine6/viator/320015P2.exact-product.json";
+import specimen64708p2Payload from "../../data/engine6/viator/64708P2.exact-product.json";
+import specimen200419p2Payload from "../../data/engine6/viator/200419P2.exact-product.json";
+import specimen105668p1Payload from "../../data/engine6/viator/105668P1.exact-product.json";
+import specimen104589p11Payload from "../../data/engine6/viator/104589P11.exact-product.json";
+import specimen2360m5Payload from "../../data/engine6/viator/2360M5.exact-product.json";
+import specimen62707p3Payload from "../../data/engine6/viator/62707P3.exact-product.json";
+import specimen241329p1Payload from "../../data/engine6/viator/241329P1.exact-product.json";
+import specimen2784p8Payload from "../../data/engine6/viator/2784P8.exact-product.json";
+import specimen3087mollPayload from "../../data/engine6/viator/3087MOLL.exact-product.json";
+import specimen166701p1Payload from "../../data/engine6/viator/166701P1.exact-product.json";
+import specimen124957p2Payload from "../../data/engine6/viator/124957P2.exact-product.json";
+import specimen5069west45Payload from "../../data/engine6/viator/5069WEST45.exact-product.json";
 import specimen331502p3Payload from "../../data/engine6/viator/331502P3.exact-product.json";
 import specimen362955p2Payload from "../../data/engine6/viator/362955P2.exact-product.json";
 import specimen119664p1Payload from "../../data/engine6/viator/119664P1.exact-product.json";
@@ -1448,6 +1468,126 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "5563928P2",
     publicUrl: "https://www.viator.com/tours/Honolulu/Circle-Island-Tour-small-group-setting-snorkeling-included/d59070-5563928P2",
     rawPayload: specimen5563928p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5501HASKY",
+    publicUrl: "https://www.viator.com/tours/Maui/Small-Group-Road-to-Hana-Luxury-Tour-and-Helicopter-Flight/d671-5501HASKY",
+    rawPayload: specimen5501haskyPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5069WEST60",
+    publicUrl: "https://www.viator.com/tours/Maui/West-Maui-and-Molokai-60-minute-Helicopter-Tour/d671-5069WEST60",
+    rawPayload: specimen5069west60Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5069COMP60",
+    publicUrl: "https://www.viator.com/tours/Maui/Maui-Helicopter-Tour-Complete-Island-Flight/d671-5069COMP60",
+    rawPayload: specimen5069comp60Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7029OGGHAN",
+    publicUrl: "https://www.viator.com/tours/Maui/Hana-Rainforest-Helicopter-Tour-with-Exclusive-Landing/d671-7029OGGHAN",
+    rawPayload: specimen7029ogghanPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5069DOM",
+    publicUrl: "https://www.viator.com/tours/Maui/Doors-Off-West-Maui-and-Molokai-Helicopter-Tour/d671-5069DOM",
+    rawPayload: specimen5069domPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7029OGGVOY",
+    publicUrl: "https://www.viator.com/tours/Maui/Molokai-and-Maui-Helicopter-Tour/d671-7029OGGVOY",
+    rawPayload: specimen7029oggvoyPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "326167P1",
+    publicUrl: "https://www.viator.com/tours/Maui/Full-Day-Road-to-Hana-Tour/d671-326167P1",
+    rawPayload: specimen326167p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "320015P2",
+    publicUrl: "https://www.viator.com/tours/Maui/Private-Road-to-Hana-Tour-The-back-stage-pass-experience/d671-320015P2",
+    rawPayload: specimen320015p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "64708P2",
+    publicUrl: "https://www.viator.com/tours/Maui/ATV-Adventure/d671-64708P2",
+    rawPayload: specimen64708p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "200419P2",
+    publicUrl: "https://www.viator.com/tours/Maui/Kapalua-Ziplines-6-Line-Tour-Maui/d671-200419P2",
+    rawPayload: specimen200419p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "105668P1",
+    publicUrl: "https://www.viator.com/tours/Maui/Waterfall-Adventure-Hike-Best-of-Maui/d671-105668P1",
+    rawPayload: specimen105668p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "104589P11",
+    publicUrl: "https://www.viator.com/tours/Maui/Haleakala-Classic-Sunrise-Tour/d671-104589P11",
+    rawPayload: specimen104589p11Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2360M5",
+    publicUrl: "https://www.viator.com/tours/Maui/Haleakala-Sunset-Tour-and-Dinner-on-Maui/d671-2360M5",
+    rawPayload: specimen2360m5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "62707P3",
+    publicUrl: "https://www.viator.com/tours/Maui/Molokini-Snorkel-and-Performance-Sail/d671-62707P3",
+    rawPayload: specimen62707p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "241329P1",
+    publicUrl: "https://www.viator.com/tours/Maui/Snorkeling-and-Whale-Watching-to-Molokini-Crater-5-Hour-Morning-Session/d671-241329P1",
+    rawPayload: specimen241329p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2784P8",
+    publicUrl: "https://www.viator.com/tours/Maui/Te-Au-Moana-Luau/d671-2784P8",
+    rawPayload: specimen2784p8Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3087MOLL",
+    publicUrl: "https://www.viator.com/tours/Maui/Old-Lahaina-Luau-Maui/d671-3087MOLL",
+    rawPayload: specimen3087mollPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "166701P1",
+    publicUrl: "https://www.viator.com/tours/Maui/Feast-at-Mokapu-Luau/d671-166701P1",
+    rawPayload: specimen166701p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "124957P2",
+    publicUrl: "https://www.viator.com/tours/Maui/Maui-Whale-Watching-Snorkel-Tour/d671-124957P2",
+    rawPayload: specimen124957p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5069WEST45",
+    publicUrl: "https://www.viator.com/tours/Maui/West-Maui-and-Molokai-Exclusive-45-Minute-Helicopter-Tour/d671-5069WEST45",
+    rawPayload: specimen5069west45Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

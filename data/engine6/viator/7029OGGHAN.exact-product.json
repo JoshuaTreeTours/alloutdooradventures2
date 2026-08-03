@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "7029OGGHAN",
+    "productUrl": "https://www.viator.com/tours/Maui/Hana-Rainforest-Helicopter-Tour-with-Exclusive-Landing/d671-7029OGGHAN",
+    "title": "Hana Rainforest Helicopter Flight with Landing from Maui",
+    "description": {
+      "text": "Drink in the lush beauty of Maui’s Hana Rainforest and northern shores from the air on a scenic helicopter flight, including a stop at the Wailua Valley. Glide over the jungle-clad north coast, passing beauty spots like the ‘Jaws’ surf break beach and Jurassic Rock. Stops include Hana Rainforest, Hana Highway - Road to Hana. Then, land in an untouched spot in the verdant Wailua Valley, stepping out to explore the tropical vegetation and admire views over waterfalls and canyons before your return flight. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "1 hour 15 minutes (approx.)",
+    "priceFrom": "From $341.11",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 209
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/66/e3/b8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Drink in the lush beauty of Maui’s Hana Rainforest and northern shores from the air on a scenic helicopter flight, inclu",
+      "Glide over the jungle-clad north coast, passing beauty spots like the ‘Jaws’ surf break beach and Jurassic Rock",
+      "Then, land in an untouched spot in the verdant Wailua Valley, stepping out to explore the tropical vegetation and admire",
+      "Hana Rainforest Helicopter Flight with Landing from Maui departing from Maui",
+      "Professional Maui guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Drink in the lush beauty of Maui’s Hana Rainforest and northern shores from the air on a scenic helicopter flight, including a stop at the Wailua Valley.",
+    "itineraryItems": [
+      {
+        "title": "Hana Rainforest",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Hana Highway - Road to Hana",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Hana Rainforest Helicopter Flight with Landing from Maui?",
+        "answer": "The planned duration is 1 hour 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 341.11
+      },
+      "currency": "USD"
+    }
+  }
+}

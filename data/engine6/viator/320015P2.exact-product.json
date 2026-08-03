@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "320015P2",
+    "productUrl": "https://www.viator.com/tours/Maui/Private-Road-to-Hana-Tour-The-back-stage-pass-experience/d671-320015P2",
+    "title": "Voted #1 on Maui. VIP, Private Road to Hana backstage pass tour",
+    "description": {
+      "text": "Explore Maui on this private VIP Backstage Pass Experience that gets farther off the beaten path than typical organized tours. Organized tours are usually helpful for getting oriented, but they hardly ever truly get off the beaten path. Stops include Kahului, Road to Hana, Waterfall Swim Spot, Hana Coast, Black Sand Beach. This private VIP Backstage Pass Experience offers the chance to choose your own itinerary for day-long trips to Maui's most off-the-beaten-path spots, or to sit back and relax and let your guides do all the work and planning. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $299.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 162
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/61/d0/a3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore Maui on this private VIP Backstage Pass Experience that gets farther off the beaten path than typical organized ",
+      "Organized tours are usually helpful for getting oriented, but they hardly ever truly get off the beaten path",
+      "This private VIP Backstage Pass Experience offers the chance to choose your own itinerary for day-long trips to Maui's m",
+      "Voted #1 on Maui. VIP, Private Road to Hana backstage pass tour departing from Maui",
+      "Professional Maui guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore Maui on this private VIP Backstage Pass Experience that gets farther off the beaten path than typical organized tours.",
+    "itineraryItems": [
+      {
+        "title": "Kahului",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Road to Hana",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waterfall Swim Spot",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hana Coast",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Black Sand Beach",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Voted #1 on Maui. VIP, Private Road to Hana backstage pass tour?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 299
+      },
+      "currency": "USD"
+    }
+  }
+}

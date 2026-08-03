@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "5069COMP60",
+    "productUrl": "https://www.viator.com/tours/Maui/Maui-Helicopter-Tour-Complete-Island-Flight/d671-5069COMP60",
+    "title": "Complete Island 60-Minute Helicopter Tour",
+    "description": {
+      "text": "Maui is an island that’s best seen by air, and on this complete island Maui helicopter tour, visitors soar above valleys and waterfalls that are otherwise inaccessible. Fly deep inside the West Maui Mountains where there aren’t even any trails, and gaze upon the colorful cinder cones of Haleakala Crater. Stops include Haleakala Crater, Hana Highway - Road to Hana, West Maui Mountains. Off the coast of Hana, watch as waterfalls tumble their way directly into the sea, and see hidden coves and white sand beaches you never even knew were there. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $443.34",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 183
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/89/d4/92.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Maui is an island that’s best seen by air, and on this complete island Maui helicopter tour, visitors soar above valleys",
+      "Fly deep inside the West Maui Mountains where there aren’t even any trails, and gaze upon the colorful cinder cones of H",
+      "Off the coast of Hana, watch as waterfalls tumble their way directly into the sea, and see hidden coves and white sand b",
+      "Complete Island 60-Minute Helicopter Tour departing from Maui",
+      "Professional Maui guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Maui is an island that’s best seen by air, and on this complete island Maui helicopter tour, visitors soar above valleys and waterfalls that are otherwise inaccessible.",
+    "itineraryItems": [
+      {
+        "title": "Haleakala Crater",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Hana Highway - Road to Hana",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "West Maui Mountains",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Complete Island 60-Minute Helicopter Tour?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 443.34
+      },
+      "currency": "USD"
+    }
+  }
+}

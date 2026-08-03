@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "124957P2",
+    "productUrl": "https://www.viator.com/tours/Maui/Maui-Whale-Watching-Snorkel-Tour/d671-124957P2",
+    "title": "Maui Whale Watch & Snorkel from Ma'alaea Harbor Pride of Maui",
+    "description": {
+      "text": "Join the Pride of Maui for a premium whale watching and snorkeling experience aboard Maui's largest and most stable Maxi Power Catamaran. With 360-degree panoramic views, snorkeling at a vibrant coral reef, and a full barbecue lunch, this half-day tour offers memories that last a lifetime. Stops include Ma'alaea Harbor, Whale Watching Waters, Coral Reef Snorkel Site. Enjoy spacious decks, first-class service, and amenities like a water slide, warm showers, and snorkeling gear provided for all guests. Ideal for visitors basing on Maui who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Maui",
+      "state": "Hawaii"
+    },
+    "duration": "3 hours 30 minutes (approx.)",
+    "priceFrom": "From $147.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 113
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/2d/df/8b.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Join the Pride of Maui for a premium whale watching and snorkeling experience aboard Maui's largest and most stable Maxi",
+      "With 360-degree panoramic views, snorkeling at a vibrant coral reef, and a full barbecue lunch, this half-day tour offer",
+      "Enjoy spacious decks, first-class service, and amenities like a water slide, warm showers, and snorkeling gear provided ",
+      "Maui Whale Watch & Snorkel from Ma'alaea Harbor Pride of Maui departing from Maui",
+      "Professional Maui guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Maui hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Join the Pride of Maui for a premium whale watching and snorkeling experience aboard Maui's largest and most stable Maxi Power Catamaran.",
+    "itineraryItems": [
+      {
+        "title": "Ma'alaea Harbor",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Whale Watching Waters",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Coral Reef Snorkel Site",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Maui Whale Watch & Snorkel from Ma'alaea Harbor Pride of Maui?",
+        "answer": "The planned duration is 3 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from on Maui?",
+        "answer": "Meet your guide at the confirmed Maui hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 147
+      },
+      "currency": "USD"
+    }
+  }
+}

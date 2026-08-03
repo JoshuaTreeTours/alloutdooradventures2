@@ -9,6 +9,7 @@ import {
   ENGINE6_YOSEMITE_CANONICAL_CITY_HERO_URL,
   ENGINE6_ZION_CANONICAL_CITY_HERO_URL,
   ENGINE6_GSM_CANONICAL_CITY_HERO_URL,
+  ENGINE6_MAUI_CANONICAL_CITY_HERO_URL,
   resolveEngine6CityDisplayHeroes,
 } from "./displayHero";
 import { engine6ListingTours } from "./listing";
@@ -76,6 +77,13 @@ const greatSmokyMountainsListingTours = engine6ListingTours.filter(
     tour.engine === "engine6" &&
     tour.destination.stateSlug === "tennessee" &&
     tour.destination.citySlug === "great-smoky-mountains-national-park"
+);
+
+const mauiListingTours = engine6ListingTours.filter(
+  tour =>
+    tour.engine === "engine6" &&
+    tour.destination.stateSlug === "hawaii" &&
+    tour.destination.citySlug === "maui"
 );
 
 describe("Engine6 hero diversity governance", () => {
@@ -213,6 +221,23 @@ describe("Engine6 hero diversity governance", () => {
       heroCounts.get(ENGINE6_GSM_CANONICAL_CITY_HERO_URL) ?? 0
     ).toBeLessThanOrEqual(1);
     expect(heroCounts.size).toBe(greatSmokyMountainsListingTours.length);
+  });
+
+  it("uses Maui as the validation cohort for unique listing-card heroes", () => {
+    expect(mauiListingTours.length).toBeGreaterThan(0);
+
+    const heroCounts = mauiListingTours.reduce<Map<string, number>>(
+      (counts, tour) => {
+        counts.set(tour.heroImage, (counts.get(tour.heroImage) ?? 0) + 1);
+        return counts;
+      },
+      new Map()
+    );
+
+    expect(
+      heroCounts.get(ENGINE6_MAUI_CANONICAL_CITY_HERO_URL) ?? 0
+    ).toBeLessThanOrEqual(1);
+    expect(heroCounts.size).toBe(mauiListingTours.length);
   });
 
   it("newly generated Engine6 cities prefer unique product heroes before fallbacks", () => {

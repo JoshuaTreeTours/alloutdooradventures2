@@ -3866,6 +3866,69 @@ const hawaiiState: StateDestination = {
         },
       ],
     },
+    {
+      name: "Maui",
+      slug: "maui",
+      stateSlug: "hawaii",
+      region: "Maui",
+      lat: 20.7984,
+      lng: -156.3319,
+      shortDescription:
+        "Road to Hana coastline, Haleakala summit, and Molokini reef tours.",
+      intro:
+        "Maui pairs volcanic summit views with rainforest coastline, snorkel reefs, and West Maui adventure routes.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/5b/de/c9.jpg",
+      ],
+      activityTags: ["helicopter", "snorkeling", "hiking"],
+      whereItIs: [
+        "Maui sits in the Hawaiian Islands between Oahu and the Big Island, with Kahului as the main gateway and resort corridors in West and South Maui.",
+      ],
+      experiences: {
+        mountains:
+          "Summit Haleakala for sunrise or sunset and hike waterfall canyons on the Hana coast.",
+        lakesWater:
+          "Snorkel Molokini Crater and watch seasonal humpback whales off Ma'alaea.",
+        desertForest:
+          "Explore West Maui valleys, rainforest ziplines, and ATV ranch trails.",
+        cycling: "Coastal bike paths and guided downhill routes from Haleakala.",
+        scenicDrives:
+          "Road to Hana and Upcountry routes connect waterfalls, black sand beaches, and summit overlooks.",
+        seasonalNotes:
+          "Winter brings whale season and cooler summit mornings; summer favors calmer snorkel days.",
+      },
+      thingsToDo: [
+        "Drive or tour the Road to Hana with waterfall and black-sand beach stops.",
+        "Watch sunrise or sunset from Haleakala National Park.",
+        "Snorkel Molokini Crater or join a West Maui helicopter flight.",
+      ],
+      toursCopy: [
+        "Maui tours work best as full-day guided experiences with hotel pickup from West Maui, South Maui, or Kahului.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Road to Hana waterfalls and Wai'anapanapa State Park.",
+          "Afternoon: Hana town and coastal lookouts.",
+          "Evening: Oceanfront luau in Lahaina or Wailea.",
+        ],
+        dayTwo: [
+          "Morning: Haleakala summit sunrise or daytime crater overlooks.",
+          "Afternoon: Molokini snorkel sail or West Maui ATV adventure.",
+          "Evening: Sunset cruise or Upcountry dinner.",
+        ],
+      },
+      gettingThere: [
+        "Kahului Airport (OGG) is Maui's main gateway with mainland and interisland flights.",
+        "West Maui and South Maui hotels are common pickup points for guided tours.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Maui tours?",
+          answer:
+            "Road to Hana private tours, Haleakala sunrise or sunset trips, Molokini snorkel sails, and West Maui helicopter flights are among the most popular departures.",
+        },
+      ],
+    },
   ],
   isFallback: true,
 };

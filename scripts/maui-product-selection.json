@@ -1,0 +1,82 @@
+{
+  "destinationLabel": "Maui",
+  "destinationCitySlug": "maui",
+  "viatorDestinationSlug": "Maui",
+  "targetPremiumShare": 0.5,
+  "selectedProductCodes": [
+    "5501HASKY",
+    "5069WEST60",
+    "5069COMP60",
+    "7029OGGHAN",
+    "5069DOM",
+    "7029OGGVOY",
+    "326167P1",
+    "320015P2",
+    "64708P2",
+    "200419P2",
+    "105668P1",
+    "104589P11",
+    "2360M5",
+    "62707P3",
+    "241329P1",
+    "2784P8",
+    "3087MOLL",
+    "166701P1",
+    "124957P2",
+    "5069WEST45"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "3373HIKE",
+      "title": "Waterfall Hike and Kayak Snorkel & Paddle from Makena",
+      "priceFrom": "From $270.20",
+      "reason": "Only 18 reviews; weaker commercial review depth"
+    },
+    {
+      "productCode": "66594P3",
+      "title": "Haleakala National Park Daytime tour plus MauiWine visit",
+      "priceFrom": "unknown",
+      "reason": "Only 2 reviews; incomplete commercial depth / blocked live price"
+    },
+    {
+      "productCode": "376191P4",
+      "title": "Maui & Molokai Spectacular with Exclusive Landing Helicopter Tour",
+      "reason": "Live page fetch blocked; incomplete commercial capture"
+    },
+    {
+      "productCode": "376191P7",
+      "title": "First Class Waterfalls of West Maui and Molokai Helicopter Tour",
+      "reason": "Live page fetch blocked; incomplete commercial capture"
+    },
+    {
+      "productCode": "7978P2",
+      "title": "Luxury Molokini Deluxe Snorkel Sail",
+      "reason": "Live page fetch blocked (403)"
+    },
+    {
+      "productCode": "158257P1",
+      "title": "Lahaina ATV Adventure, Maui",
+      "reason": "Near-duplicate ATV category; stronger 64708P2 selected"
+    },
+    {
+      "productCode": "312783P1",
+      "title": "PRIVATE Road to Hana Tour",
+      "reason": "Near-duplicate private Road to Hana; stronger VIP products selected"
+    },
+    {
+      "productCode": "383979P1",
+      "title": "Sunset/Moonrise Galaxy Gazing on Haleakal\u0101 Crater Maui",
+      "reason": "Live page fetch blocked; incomplete commercial capture"
+    },
+    {
+      "productCode": "62825P1",
+      "title": "Waterfall Hike and Zipline Combo",
+      "reason": "Live page fetch blocked; incomplete commercial capture"
+    },
+    {
+      "productCode": "354198P1",
+      "title": "Amazing Maui Ridge Hike",
+      "reason": "Live page fetch blocked; incomplete commercial capture"
+    }
+  ]
+}
