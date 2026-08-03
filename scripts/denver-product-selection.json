@@ -1,0 +1,115 @@
+{
+  "destinationLabel": "Denver",
+  "destinationCitySlug": "denver",
+  "viatorDestinationSlug": "Denver",
+  "targetPremiumShare": 0.5,
+  "catalogUrl": "https://www.viator.com/Denver/d4837-ttd",
+  "selectedCount": 16,
+  "premiumCount": 8,
+  "selectionNote": "Selected 16 strongest viable Denver d4837 products with verified commercial data and product-specific heroes. Full 20-25 target blocked by DataDome on live catalog crawl plus specialty gaps (no verified active helicopter/stargazing/wine/photography rows with usable heroes). Rejected audio/self-guided, inactive products (462413P5 jeep unavailable; 8950P17 similar-options), per-group private pricing unsuitable for standard Engine6 fields (72188P10, 72188P12, 132798P3), zero/weak commercial rows (59646P7 CA$0, 310178P6 one review), and incomplete specialty captures.",
+  "selectedProductCodes": [
+    "41410P10",
+    "8950P6",
+    "72188P15",
+    "41410P15",
+    "41410P14",
+    "8950P37",
+    "59646P2",
+    "8950P29",
+    "8950P9",
+    "59646P5",
+    "323041P1",
+    "128737P1",
+    "128737P2",
+    "41410P1",
+    "72188P1",
+    "59646P3"
+  ],
+  "premiumProductCodes": [
+    "41410P10",
+    "8950P6",
+    "72188P15",
+    "41410P15",
+    "41410P14",
+    "8950P37",
+    "59646P2",
+    "8950P29"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "462413P5",
+      "title": "Private Jeep Tour to Red Rocks, Dinosaur Ridge, Lookout Mountain",
+      "reason": "Live page unavailable / similar-options presentation"
+    },
+    {
+      "productCode": "72188P10",
+      "title": "Private Mount Blue Sky Summit & Red Rocks Tour",
+      "reason": "Per-group private pricing unsuitable for standard per-person Engine6 commercial fields"
+    },
+    {
+      "productCode": "72188P12",
+      "title": "Private 4-Hours Foothills Explorer Tour from Denver",
+      "reason": "Per-group private pricing unsuitable for standard per-person Engine6 commercial fields"
+    },
+    {
+      "productCode": "132798P3",
+      "title": "Private customized tour of Denver, Red Rocks, Idaho Springs and mining towns",
+      "reason": "Per-group pricing and weak review count"
+    },
+    {
+      "productCode": "132798P9",
+      "title": "Private customized tour of Denver, Red Rocks, Golden and Boulder",
+      "reason": "Incomplete rating/review commercial capture on listing authority"
+    },
+    {
+      "productCode": "8950P17",
+      "title": "Mount Blue Sky Alpine Summit & Red Rocks Tour from Denver",
+      "reason": "Page presented similar options / likely inactive or redirected"
+    },
+    {
+      "productCode": "59646P7",
+      "title": "Mount Blue Sky 14,265ft Summit and Glacial Lakes",
+      "reason": "Unusable commercial pricing (CA$0.00) on live page"
+    },
+    {
+      "productCode": "310178P6",
+      "title": "Ultimate Denver Day Out Bus Tour: Red Rocks, City Sites & Sweets",
+      "reason": "Weak commercial data (1 review)"
+    },
+    {
+      "productCode": "15116P23",
+      "title": "OMG Off-Road Jeep and Mining History Tour",
+      "reason": "Incomplete verified commercial/hero capture under DataDome"
+    },
+    {
+      "productCode": "462413P3",
+      "title": "Private Full Day Jeep Tour Garden of Gods Pike's Peak from Denver",
+      "reason": "Incomplete verified commercial/hero capture under DataDome"
+    },
+    {
+      "productCode": "9890P1",
+      "title": "The Mile High Wine Tour in Denver",
+      "reason": "Incomplete verified commercial/hero capture under DataDome"
+    },
+    {
+      "productCode": "210815P1",
+      "title": "Scenic Photoshoot in Denver's Foothills",
+      "reason": "Per-group photography pricing / incomplete verified commercial capture"
+    },
+    {
+      "productCode": "59646P6",
+      "title": "Rocky Mountain National Park in Summer Tour from Denver",
+      "reason": "Qualified full-day RMNP alternate deferred pending complete overview/hero authority parity"
+    },
+    {
+      "productCode": "72188P2",
+      "title": "Rocky Mountain National Park Tour: Nature at its Finest",
+      "reason": "Qualified RMNP alternate deferred to avoid near-duplicate of selected 8950P6 RMNP day tour"
+    },
+    {
+      "productCode": "70628P29",
+      "title": "Red Rocks and Dinosaur Ridge on Ebikes",
+      "reason": "Weak review count and per-group pricing signal"
+    }
+  ]
+}

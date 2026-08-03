@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "8950P37",
+    "productUrl": "https://www.viator.com/tours/Denver/Breckenridge-Mountain-Explorer/d4837-8950P37",
+    "title": "Breckenridge & Continental Divide Explorer",
+    "description": {
+      "text": "In Denver, immerse yourself in the natural beauty of the Colorado Rockies on a full-day tour to Breckenridge. All-inclusive transportation from downtown Denver enables you to skip the hassle of navigating mountain roads and enjoy the stunning natural scenery. Stops include Red Rocks Park and Amphitheatre, Continental Divide, Breckenridge. After a visit to Red Rocks Amphitheater and a trip over the Continental Divide, enjoy several hours of free time to explore Breckenridge independently. Ideal for visitors basing in Denver who want a guided Front Range experience without coordinating transport, trailheads, or mountain logistics on their own."
+    },
+    "location": {
+      "city": "Denver",
+      "state": "Colorado"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $169.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 188
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/cb/80/12.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Immerse yourself in the natural beauty of the Colorado Rockies on a full-day tour to Breckenridge",
+      "All-inclusive transportation from downtown Denver enables you to skip the hassle of navigating mountain roads and enjoy ",
+      "After a visit to Red Rocks Amphitheater and a trip over the Continental Divide, enjoy several hours of free time to expl",
+      "Breckenridge & Continental Divide Explorer departing from Denver",
+      "Professional Denver guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Denver hotel pickup point, Union Station area, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Denver hotel, Union Station area, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Denver, immerse yourself in the natural beauty of the Colorado Rockies on a full-day tour to Breckenridge.",
+    "itineraryItems": [
+      {
+        "title": "Red Rocks Park and Amphitheatre",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Continental Divide",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Breckenridge",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Tour activity as described on Viator",
+      "Transportation as listed"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Breckenridge & Continental Divide Explorer?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Denver?",
+        "answer": "Meet your guide at the confirmed Denver hotel pickup point, Union Station area, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 169
+      },
+      "currency": "USD"
+    }
+  }
+}

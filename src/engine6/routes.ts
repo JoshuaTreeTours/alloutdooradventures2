@@ -681,6 +681,61 @@ export const ENGINE6_KONA_207802P1_PRODUCT_CODE = "207802P1";
 export const ENGINE6_KONA_207802P1_ROUTE =
   "/destinations/hawaii/kona/tours/award-winning-farm-tour-coffee-chocolate-and-unique-gif-207802P1";
 
+export const ENGINE6_DENVER_41410P10_PRODUCT_CODE = "41410P10";
+export const ENGINE6_DENVER_41410P10_ROUTE =
+  "/destinations/colorado/denver/tours/small-group-tour-of-pikes-peak-and-the-garden-of-the-go-41410P10";
+export const ENGINE6_DENVER_8950P6_PRODUCT_CODE = "8950P6";
+export const ENGINE6_DENVER_8950P6_ROUTE =
+  "/destinations/colorado/denver/tours/discover-rocky-mountain-national-park-small-group-tour-8950P6";
+export const ENGINE6_DENVER_72188P15_PRODUCT_CODE = "72188P15";
+export const ENGINE6_DENVER_72188P15_ROUTE =
+  "/destinations/colorado/denver/tours/pikes-peak-and-garden-of-the-gods-tour-from-denver-72188P15";
+export const ENGINE6_DENVER_41410P15_PRODUCT_CODE = "41410P15";
+export const ENGINE6_DENVER_41410P15_ROUTE =
+  "/destinations/colorado/denver/tours/visit-red-rocks-park-continental-divide-breckenridge-41410P15";
+export const ENGINE6_DENVER_41410P14_PRODUCT_CODE = "41410P14";
+export const ENGINE6_DENVER_41410P14_ROUTE =
+  "/destinations/colorado/denver/tours/mount-blue-sky-clear-creek-canyon-red-rocks-park-mount-41410P14";
+export const ENGINE6_DENVER_8950P37_PRODUCT_CODE = "8950P37";
+export const ENGINE6_DENVER_8950P37_ROUTE =
+  "/destinations/colorado/denver/tours/breckenridge-continental-divide-explorer-8950P37";
+export const ENGINE6_DENVER_59646P2_PRODUCT_CODE = "59646P2";
+export const ENGINE6_DENVER_59646P2_ROUTE =
+  "/destinations/colorado/denver/tours/breckenridge-ultimate-full-day-mountain-tour-from-denve-59646P2";
+export const ENGINE6_DENVER_8950P29_PRODUCT_CODE = "8950P29";
+export const ENGINE6_DENVER_8950P29_ROUTE =
+  "/destinations/colorado/denver/tours/red-rocks-morning-hike-8950P29";
+export const ENGINE6_DENVER_8950P9_PRODUCT_CODE = "8950P9";
+export const ENGINE6_DENVER_8950P9_ROUTE =
+  "/destinations/colorado/denver/tours/red-rocks-beyond-8950P9";
+export const ENGINE6_DENVER_59646P5_PRODUCT_CODE = "59646P5";
+export const ENGINE6_DENVER_59646P5_ROUTE =
+  "/destinations/colorado/denver/tours/shared-half-day-mountain-tour-in-red-rocks-evergreen-an-59646P5";
+export const ENGINE6_DENVER_323041P1_PRODUCT_CODE = "323041P1";
+export const ENGINE6_DENVER_323041P1_ROUTE =
+  "/destinations/colorado/denver/tours/guided-hiking-tour-in-colorado-rocky-mountains-view-of-323041P1";
+export const ENGINE6_DENVER_128737P1_PRODUCT_CODE = "128737P1";
+export const ENGINE6_DENVER_128737P1_ROUTE =
+  "/destinations/colorado/denver/tours/hiking-in-the-rockies-group-hike-tour-near-denver-128737P1";
+export const ENGINE6_DENVER_128737P2_PRODUCT_CODE = "128737P2";
+export const ENGINE6_DENVER_128737P2_ROUTE =
+  "/destinations/colorado/denver/tours/sunset-hiking-tour-in-the-rocky-mountains-near-denver-128737P2";
+export const ENGINE6_DENVER_41410P1_PRODUCT_CODE = "41410P1";
+export const ENGINE6_DENVER_41410P1_ROUTE =
+  "/destinations/colorado/denver/tours/denver-and-foothills-mountain-small-group-tour-41410P1";
+export const ENGINE6_DENVER_72188P1_PRODUCT_CODE = "72188P1";
+export const ENGINE6_DENVER_72188P1_ROUTE =
+  "/destinations/colorado/denver/tours/foothills-explorer-tour-from-denver-72188P1";
+export const ENGINE6_DENVER_59646P3_PRODUCT_CODE = "59646P3";
+export const ENGINE6_DENVER_59646P3_ROUTE =
+  "/destinations/colorado/denver/tours/small-group-half-day-tour-foothills-of-the-rockies-from-59646P3";
+
+export const ENGINE6_DENVER_TOUR_PATH_PREFIX =
+  "/destinations/colorado/denver/tours/";
+
+export const isEngine6DenverTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_DENVER_TOUR_PATH_PREFIX);
+
 export const ENGINE6_KONA_TOUR_PATH_PREFIX =
   "/destinations/hawaii/kona/tours/";
 
@@ -2864,6 +2919,70 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_KONA_207802P1_ROUTE,
     ENGINE6_KONA_207802P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_41410P10_ROUTE,
+    ENGINE6_DENVER_41410P10_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_8950P6_ROUTE,
+    ENGINE6_DENVER_8950P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_72188P15_ROUTE,
+    ENGINE6_DENVER_72188P15_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_41410P15_ROUTE,
+    ENGINE6_DENVER_41410P15_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_41410P14_ROUTE,
+    ENGINE6_DENVER_41410P14_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_8950P37_ROUTE,
+    ENGINE6_DENVER_8950P37_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_59646P2_ROUTE,
+    ENGINE6_DENVER_59646P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_8950P29_ROUTE,
+    ENGINE6_DENVER_8950P29_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_8950P9_ROUTE,
+    ENGINE6_DENVER_8950P9_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_59646P5_ROUTE,
+    ENGINE6_DENVER_59646P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_323041P1_ROUTE,
+    ENGINE6_DENVER_323041P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_128737P1_ROUTE,
+    ENGINE6_DENVER_128737P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_128737P2_ROUTE,
+    ENGINE6_DENVER_128737P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_41410P1_ROUTE,
+    ENGINE6_DENVER_41410P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_72188P1_ROUTE,
+    ENGINE6_DENVER_72188P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_DENVER_59646P3_ROUTE,
+    ENGINE6_DENVER_59646P3_PRODUCT_CODE,
   ],
 [
     ENGINE6_KEY_WEST_331502P3_ROUTE,

@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "323041P1",
+    "productUrl": "https://www.viator.com/tours/Denver/Colorado-Hiking-Co/d4837-323041P1",
+    "title": "Guided Hiking Tour in Colorado Rocky Mountains View of Mt BlueSky",
+    "description": {
+      "text": "There are so many great hikes in the Denver area, how can you choose? Let a local do the work—on this guided tour, you’ll get whisked off to the mountains, where you’ll hike at your comfort level (snacks and breaks as needed), learn about the flora and fauna of the Rockies, and get incredible bird’s-eye photos of Colorado. Stops include Rocky Mountain Foothills, Mount Blue Sky Viewpoint. Simply put, you'll get more out of your time spent in the mountains. Ideal for visitors basing in Denver who want a guided Front Range experience without coordinating transport, trailheads, or mountain logistics on their own."
+    },
+    "location": {
+      "city": "Denver",
+      "state": "Colorado"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $85.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 318
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/c7/9a/7f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "There are so many great hikes in the Denver area, how can you choose?",
+      "Let a local do the work—on this guided tour, you’ll get whisked off to the mountains, where you’ll hike at your comfort ",
+      "Simply put, you'll get more out of your time spent in the mountains",
+      "Guided Hiking Tour in Colorado Rocky Mountains View of Mt BlueSky departing from Denver",
+      "Professional Denver guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Denver hotel pickup point, Union Station area, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Denver hotel, Union Station area, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "There are so many great hikes in the Denver area, how can you choose? Let a local do the work—on this guided tour, you’ll get whisked off to the mountains, where you’ll hike at your comfort level (snacks and breaks as needed), learn about the flora and fauna of the Rockies, and get incredible bird’s-eye photos of Colorado.",
+    "itineraryItems": [
+      {
+        "title": "Rocky Mountain Foothills",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mount Blue Sky Viewpoint",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Tour activity as described on Viator",
+      "Transportation as listed"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Guided Hiking Tour in Colorado Rocky Mountains View of Mt BlueSky?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Denver?",
+        "answer": "Meet your guide at the confirmed Denver hotel pickup point, Union Station area, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 85
+      },
+      "currency": "USD"
+    }
+  }
+}
