@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "22796P3",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Hilo-Shore-Excursion-Exclusive-Volcanoes-National-Park-and-Rainbow-Falls/d669-22796P3",
+    "title": "Hilo Shore Excursion: Volcanoes National Park and Rainbow Falls",
+    "description": {
+      "text": "Sample a cross-section of outdoor sights on the Big Island during this shore excursion exploring Volcanoes National Park, waterfall, black sand beach and more. Discover the postcard-perfect Rainbow Falls before visiting the amazing volcanic steam vents and unique geology around Kilauea Volcano. Stops include Rainbow Falls, Mauna Loa Macadamia Nut Visitor Center, Nahuku - Thurston Lava Tube, Richardson Ocean Park. Before your day is done, check out a local macadamia nut farm and visit a gorgeous black sand beach. Ideal for visitors touring Hawaii Volcanoes National Park who want a guided Big Island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Hawaii Volcanoes National Park",
+      "state": "Hawaii"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $153.34",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 1749
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/b7/25/6a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sample a cross-section of outdoor sights on the Big Island during this shore excursion exploring Volcanoes National Park",
+      "Discover the postcard-perfect Rainbow Falls before visiting the amazing volcanic steam vents and unique geology around K",
+      "Before your day is done, check out a local macadamia nut farm and visit a gorgeous black sand beach",
+      "Hilo Shore Excursion: Volcanoes National Park and Rainbow Falls near Hawaii Volcanoes National Park",
+      "Professional Big Island guide or pilot"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      },
+      "end": {
+        "description": "Return to your Big Island hotel, port, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Sample a cross-section of outdoor sights on the Big Island during this shore excursion exploring Volcanoes National Park, waterfall, black sand beach and more.",
+    "itineraryItems": [
+      {
+        "title": "Rainbow Falls",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mauna Loa Macadamia Nut Visitor Center",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hawaii Volcanoes National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Nahuku - Thurston Lava Tube",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Richardson Ocean Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Port / Hilo Hotel pickup and drop-off",
+      "National Park fees",
+      "Bottled water",
+      "Professional guide",
+      "What to bring/wear: Walking shoes, light sweater, camera, hat, sunglasses",
+      "Stop is made to purchase food"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Hilo Shore Excursion: Volcanoes National Park and Rainbow Falls?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart for Hawaii Volcanoes National Park?",
+        "answer": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 153.34
+      },
+      "currency": "USD"
+    }
+  }
+}

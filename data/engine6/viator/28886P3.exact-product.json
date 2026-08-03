@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "28886P3",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Big-Island-BIG-Volcano-Adventure-from-Kona-Small-Group/d669-28886P3",
+    "title": "Big Island Volcano Adventure from Kona: Small Group",
+    "description": {
+      "text": "The Big Island is one of the most diverse places on earth. For visitors, it can be difficult to comprehend the vastness of the island's diversity but this tour offers the chance to immerse yourself in it. Stops include Hamakua Coast, Kilauea Volcano. You'll explore the rainforests and waterfalls along Mauna Kea's Hamakua Coast and the summit of the active volcano Kilauea in Hawaii Volcanoes National Park, before watching Kilauea's lava lake glowing after sunset. Ideal for visitors touring Hawaii Volcanoes National Park who want a guided Big Island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Hawaii Volcanoes National Park",
+      "state": "Hawaii"
+    },
+    "duration": "8 to 9 hours (approx.)",
+    "priceFrom": "From $219.76",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 216
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/5d/ea/8f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The Big Island is one of the most diverse places on earth",
+      "For visitors, it can be difficult to comprehend the vastness of the island's diversity but this tour offers the chance t",
+      "You'll explore the rainforests and waterfalls along Mauna Kea's Hamakua Coast and the summit of the active volcano Kilau",
+      "Big Island Volcano Adventure from Kona: Small Group near Hawaii Volcanoes National Park",
+      "Professional Big Island guide or pilot"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      },
+      "end": {
+        "description": "Return to your Big Island hotel, port, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "The Big Island is one of the most diverse places on earth.",
+    "itineraryItems": [
+      {
+        "title": "Hamakua Coast",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hawaii Volcanoes National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kilauea Volcano",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hotel/Airport pickup and drop-off",
+      "Bottled water",
+      "Snacks",
+      "Picnic lunch",
+      "Transport by private vehicle",
+      "Dinner"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Big Island Volcano Adventure from Kona: Small Group?",
+        "answer": "The planned duration is 8 to 9 hours."
+      },
+      {
+        "question": "Where does the tour depart for Hawaii Volcanoes National Park?",
+        "answer": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 219.76
+      },
+      "currency": "USD"
+    }
+  }
+}

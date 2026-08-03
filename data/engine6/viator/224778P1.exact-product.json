@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "224778P1",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Comprehensive-Volcanoes-National-Park-Tour-with-an-Experienced-Geologist/d669-224778P1",
+    "title": "Volcano National Park Adventure From Kona",
+    "description": {
+      "text": "Many tours can take you to Volcanoes National Park, but only this one lets you spend your day with a geologist who can provide information that others can't. This small-group geology-based tour offers a far richer experience of the world's most active volcano, Kilauea, than you'd get anywhere else. Stops include Kona Coffee Farm, Punalu'u Black Sand Beach, Rainbow Falls. You also visit a coffee farm, Rainbow Falls, and Punaluu Black Sand Beach. Ideal for visitors touring Hawaii Volcanoes National Park who want a guided Big Island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Hawaii Volcanoes National Park",
+      "state": "Hawaii"
+    },
+    "duration": "11 hours (approx.)",
+    "priceFrom": "From $259.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 297
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/f5/52/5d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Many tours can take you to Volcanoes National Park, but only this one lets you spend your day with a geologist who can p",
+      "This small-group geology-based tour offers a far richer experience of the world's most active volcano, Kilauea, than you",
+      "You also visit a coffee farm, Rainbow Falls, and Punaluu Black Sand Beach",
+      "Volcano National Park Adventure From Kona near Hawaii Volcanoes National Park",
+      "Professional Big Island guide or pilot"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      },
+      "end": {
+        "description": "Return to your Big Island hotel, port, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Many tours can take you to Volcanoes National Park, but only this one lets you spend your day with a geologist who can provide information that others can't.",
+    "itineraryItems": [
+      {
+        "title": "Kona Coffee Farm",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Punalu'u Black Sand Beach",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hawaii Volcanoes National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rainbow Falls",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Coffee and/or Tea",
+      "Lunch",
+      "Snacks",
+      "Water, drinks. Coats, raincoats, and umbrellas"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Volcano National Park Adventure From Kona?",
+        "answer": "The planned duration is 11 hours."
+      },
+      {
+        "question": "Where does the tour depart for Hawaii Volcanoes National Park?",
+        "answer": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 259
+      },
+      "currency": "USD"
+    }
+  }
+}

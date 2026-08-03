@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "190952P3",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Big-Island-Spectacular-Helicopter-Tour/d669-190952P3",
+    "title": "Big Island Spectacular Helicopter Tour",
+    "description": {
+      "text": "Fly above Hawaii's spectacular peaks, coasts, and valleys on this helicopter tour of the Big Island. Watch lava bubble up out of volcanoes, fly over the lush rain forests of the Hamakua Coast, and complete your trip with views of the waterfalls lining the Kohala Mountains. Stops include Kilauea Volcano, Hamakua Coast, Kohala Mountains. Only a helicopter tour lets you see so many of Hawaii's charms on a single ride and from an unforgettable perspective. Ideal for visitors touring Hawaii Volcanoes National Park who want a guided Big Island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Hawaii Volcanoes National Park",
+      "state": "Hawaii"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $767.97",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 90
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/ec/19/5a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fly above Hawaii's spectacular peaks, coasts, and valleys on this helicopter tour of the Big Island",
+      "Watch lava bubble up out of volcanoes, fly over the lush rain forests of the Hamakua Coast, and complete your trip with ",
+      "Only a helicopter tour lets you see so many of Hawaii's charms on a single ride and from an unforgettable perspective",
+      "Big Island Spectacular Helicopter Tour near Hawaii Volcanoes National Park",
+      "Professional Big Island guide or pilot"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      },
+      "end": {
+        "description": "Return to your Big Island hotel, port, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Fly above Hawaii's spectacular peaks, coasts, and valleys on this helicopter tour of the Big Island.",
+    "itineraryItems": [
+      {
+        "title": "Kilauea Volcano",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Hamakua Coast",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Kohala Mountains",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Use of Bose Aviation-grade, electronic noise-cancelling headsets",
+      "Use of microphones with 2-way communication with pilot",
+      "Pilot Guide who are also State of Hawaii Certified Tour Guides",
+      "All Fees and Taxes"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Big Island Spectacular Helicopter Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart for Hawaii Volcanoes National Park?",
+        "answer": "Meet your guide at the confirmed Big Island hotel pickup point, Hilo or Kona meeting location, heliport, or Hawaii Volcanoes National Park rendezvous listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Helicopter Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 767.97
+      },
+      "currency": "USD"
+    }
+  }
+}

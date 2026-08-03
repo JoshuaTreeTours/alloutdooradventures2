@@ -64,6 +64,20 @@ import specimen469693p1Payload from "../../data/engine6/viator/469693P1.exact-pr
 import specimen3961p32Payload from "../../data/engine6/viator/3961P32.exact-product.json";
 import specimen5563928p2Payload from "../../data/engine6/viator/5563928P2.exact-product.json";
 import specimen5501haskyPayload from "../../data/engine6/viator/5501HASKY.exact-product.json";
+import specimen6651biodPayload from "../../data/engine6/viator/6651BIOD.exact-product.json";
+import specimen22796p3Payload from "../../data/engine6/viator/22796P3.exact-product.json";
+import specimen270152p1Payload from "../../data/engine6/viator/270152P1.exact-product.json";
+import specimen6651p4Payload from "../../data/engine6/viator/6651P4.exact-product.json";
+import specimen7443p9Payload from "../../data/engine6/viator/7443P9.exact-product.json";
+import specimen7443p1Payload from "../../data/engine6/viator/7443P1.exact-product.json";
+import specimen248255p3Payload from "../../data/engine6/viator/248255P3.exact-product.json";
+import specimen224778p1Payload from "../../data/engine6/viator/224778P1.exact-product.json";
+import specimen28886p3Payload from "../../data/engine6/viator/28886P3.exact-product.json";
+import specimen8944p16Payload from "../../data/engine6/viator/8944P16.exact-product.json";
+import specimen3388p1Payload from "../../data/engine6/viator/3388P1.exact-product.json";
+import specimen190952p3Payload from "../../data/engine6/viator/190952P3.exact-product.json";
+import specimen110657p2Payload from "../../data/engine6/viator/110657P2.exact-product.json";
+import specimen8944p1Payload from "../../data/engine6/viator/8944P1.exact-product.json";
 import specimen5069west60Payload from "../../data/engine6/viator/5069WEST60.exact-product.json";
 import specimen5069comp60Payload from "../../data/engine6/viator/5069COMP60.exact-product.json";
 import specimen7029ogghanPayload from "../../data/engine6/viator/7029OGGHAN.exact-product.json";
@@ -1588,6 +1602,90 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "5069WEST45",
     publicUrl: "https://www.viator.com/tours/Maui/West-Maui-and-Molokai-Exclusive-45-Minute-Helicopter-Tour/d671-5069WEST45",
     rawPayload: specimen5069west45Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6651BIOD",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Big-Island-in-One-Day-Volcanoes-Waterfalls-Sightseeing-and-History-Small-Group-Tour/d669-6651BIOD",
+    rawPayload: specimen6651biodPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "22796P3",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Hilo-Shore-Excursion-Exclusive-Volcanoes-National-Park-and-Rainbow-Falls/d669-22796P3",
+    rawPayload: specimen22796p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "270152P1",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Mauna-Kea-Summit-Sunset-Stargazing-Adventure-with-Free-Photos/d669-270152P1",
+    rawPayload: specimen270152p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6651P4",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Twilight-Volcano-Tour/d669-6651P4",
+    rawPayload: specimen6651p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7443P9",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Small-Group-Tour-Deluxe-Circle-Island-Experience-with-Restaurant-Lunch/d669-7443P9",
+    rawPayload: specimen7443p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7443P1",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Deluxe-Volcano-Experience/d669-7443P1",
+    rawPayload: specimen7443p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "248255P3",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Volcanoes-National-Park-Safari/d669-248255P3",
+    rawPayload: specimen248255p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "224778P1",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Comprehensive-Volcanoes-National-Park-Tour-with-an-Experienced-Geologist/d669-224778P1",
+    rawPayload: specimen224778p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "28886P3",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Big-Island-BIG-Volcano-Adventure-from-Kona-Small-Group/d669-28886P3",
+    rawPayload: specimen28886p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8944P16",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Private-Guide-Meet-In-Hawaii-Volcanoes-National-Park/d669-8944P16",
+    rawPayload: specimen8944p16Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "3388P1",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Circle-of-Fire-Helicopter-Tour/d669-3388P1",
+    rawPayload: specimen3388p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "190952P3",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Big-Island-Spectacular-Helicopter-Tour/d669-190952P3",
+    rawPayload: specimen190952p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "110657P2",
+    publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/The-Big-Island-Experience/d669-110657P2",
+    rawPayload: specimen110657p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8944P1",
+    publicUrl: "https://www.viator.com/tours/Hilo/Private-Tour-Volcanoes-National-Park-and-Waterfall-VIP-Mercedes-Tour/d51004-8944P1",
+    rawPayload: specimen8944p1Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
