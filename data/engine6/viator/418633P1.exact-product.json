@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "418633P1",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Waipio-on-Horseback/d669-418633P1",
+    "title": "Waipi’o on Horseback: Mountain Ocean Views Working Cattle Ranch",
+    "description": {
+      "text": "Explore Waipio on horseback from a Kona-area Big Island itinerary with this small-group guided ride through a working cattle ranch and farm. Follow your guide through a traditional land division that stretches from the mountain to the ocean, while enjoying the views, looking for wildlife, and learning about the ranch's history and Hawaiian land stewardship. Stops include Waipio Ranch Check-In, Working Cattle Ranch Trails, Mountain Ocean Viewpoint, Traditional Land Division Ride. Transportation, equipment, and local commentary are handled so you can focus on Kona's coastline, volcanic highlands, coffee country, and island landmarks. Ideal for visitors basing in Kona who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kona",
+      "state": "Hawaii"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $160.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 226
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/0d/1d/69.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Waipi’o on Horseback: Mountain Ocean Views Working Cattle Ranch from Kona",
+      "Kohala valleys, Mauna Kea, Kona coffee country, or island adventure routing",
+      "Professional guide with Kona expertise",
+      "Small-group or private format as listed",
+      "Kona aerial, ocean, cultural, or adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kona hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore Waipio on horseback from a Kona-area Big Island itinerary with this small-group guided ride through a working cattle ranch and farm.",
+    "itineraryItems": [
+      {
+        "title": "Waipio Ranch Check-In",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Working Cattle Ranch Trails",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mountain Ocean Viewpoint",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Traditional Land Division Ride",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Waipi’o on Horseback: Mountain Ocean Views Working Cattle Ranch?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Kona?",
+        "answer": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Horseback Riding"
+      },
+      {
+        "label": "Scenic Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 160
+      },
+      "currency": "USD"
+    }
+  }
+}

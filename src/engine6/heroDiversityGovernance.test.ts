@@ -11,6 +11,7 @@ import {
   ENGINE6_GSM_CANONICAL_CITY_HERO_URL,
   ENGINE6_MAUI_CANONICAL_CITY_HERO_URL,
   ENGINE6_KAUAI_CANONICAL_CITY_HERO_URL,
+  ENGINE6_KONA_CANONICAL_CITY_HERO_URL,
   ENGINE6_HAWAII_VOLCANOES_CANONICAL_CITY_HERO_URL,
   resolveEngine6CityDisplayHeroes,
 } from "./displayHero";
@@ -93,6 +94,13 @@ const kauaiListingTours = engine6ListingTours.filter(
     tour.engine === "engine6" &&
     tour.destination.stateSlug === "hawaii" &&
     tour.destination.citySlug === "kauai"
+);
+
+const konaListingTours = engine6ListingTours.filter(
+  tour =>
+    tour.engine === "engine6" &&
+    tour.destination.stateSlug === "hawaii" &&
+    tour.destination.citySlug === "kona"
 );
 
 const hawaiiVolcanoesListingTours = engine6ListingTours.filter(
@@ -271,6 +279,23 @@ describe("Engine6 hero diversity governance", () => {
       heroCounts.get(ENGINE6_KAUAI_CANONICAL_CITY_HERO_URL) ?? 0
     ).toBeLessThanOrEqual(1);
     expect(heroCounts.size).toBe(kauaiListingTours.length);
+  });
+
+  it("uses Kona as the validation cohort for unique listing-card heroes", () => {
+    expect(konaListingTours.length).toBeGreaterThan(0);
+
+    const heroCounts = konaListingTours.reduce<Map<string, number>>(
+      (counts, tour) => {
+        counts.set(tour.heroImage, (counts.get(tour.heroImage) ?? 0) + 1);
+        return counts;
+      },
+      new Map()
+    );
+
+    expect(
+      heroCounts.get(ENGINE6_KONA_CANONICAL_CITY_HERO_URL) ?? 0
+    ).toBeLessThanOrEqual(1);
+    expect(heroCounts.size).toBe(konaListingTours.length);
   });
 
   it("uses Hawaii Volcanoes National Park as the validation cohort for unique listing-card heroes", () => {

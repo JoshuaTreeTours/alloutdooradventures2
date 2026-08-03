@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "5527LUAU",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Island-Breeze-Luau-on-the-Big-Island/d669-5527LUAU",
+    "title": "Island Breeze Luau",
+    "description": {
+      "text": "Sort out your entertainment and dinner plans for the night with this popular Kona luau featuring shows from around Polynesia, with performances ranging from Fijian war dances to traditional Hawaiian hula. You and the whole family feast on a delicious Hawaiian buffet that pairs beautifully with the event’s open bar. Stops include Island Breeze Luau Grounds, Hawaiian Buffet Dinner, Polynesian Cultural Show, Samoan Fire Knife Dance. The night is capped off by the thrilling action of a Samoan fire and knife dance. Ideal for visitors basing in Kona who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kona",
+      "state": "Hawaii"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $192.41",
+    "reviews": {
+      "combinedAverageRating": 4.1,
+      "totalReviews": 771
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/72/ec/c1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sort out your entertainment and dinner plans for the night with this popular Kona luau featuring shows from around Polyn",
+      "You and the whole family feast on a delicious Hawaiian buffet that pairs beautifully with the event’s open bar",
+      "The night is capped off by the thrilling action of a Samoan fire and knife dance",
+      "Island Breeze Luau departing from Kona",
+      "Professional Kona guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kona hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Sort out your entertainment and dinner plans for the night with this popular Kona luau featuring shows from around Polynesia, with performances ranging from Fijian war dances to traditional Hawaiian hula.",
+    "itineraryItems": [
+      {
+        "title": "Island Breeze Luau Grounds",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hawaiian Buffet Dinner",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Polynesian Cultural Show",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Samoan Fire Knife Dance",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Island Breeze Luau?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Kona?",
+        "answer": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Dinner Shows"
+      },
+      {
+        "label": "Luau"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 192.41
+      },
+      "currency": "USD"
+    }
+  }
+}

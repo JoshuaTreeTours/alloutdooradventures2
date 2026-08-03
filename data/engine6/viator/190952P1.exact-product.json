@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "190952P1",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Kohala-Valleys-and-Waterfalls-Adventure-Helicopter-Tour/d669-190952P1",
+    "title": "Kohala Waterfalls & Valleys Helicopter Tour",
+    "description": {
+      "text": "From the Kona side of the Big Island, the soaring sea cliffs, cascading waterfalls, and rainforest-clad headlands of the Kohala Coast are even more impressive when viewed from above. Admire the scenery as you fly overhead in a luxury helicopter, swoop over the Kohala Mountains, spot ancient Hawaiian settlements from the air, and enjoy magnificent ocean views. Stops include Kohala Coast, Kohala Mountains, Kohala Waterfalls, Waikoloa Heliport. Transportation, equipment, and local commentary are handled so you can focus on Kona's coastline, volcanic highlands, coffee country, and island landmarks. Ideal for visitors basing in Kona who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kona",
+      "state": "Hawaii"
+    },
+    "duration": "45 minutes (approx.)",
+    "priceFrom": "From $461.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 28
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/ec/18/6a.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Kohala Waterfalls & Valleys Helicopter Tour from Kona",
+      "Kohala valleys, Mauna Kea, Kona coffee country, or island adventure routing",
+      "Professional guide with Kona expertise",
+      "Small-group or private format as listed",
+      "Kona aerial, ocean, cultural, or adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kona hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "From the Kona side of the Big Island, the soaring sea cliffs, cascading waterfalls, and rainforest-clad headlands of the Kohala Coast are even more impressive when viewed from above.",
+    "itineraryItems": [
+      {
+        "title": "Kohala Coast",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kohala Mountains",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kohala Waterfalls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waikoloa Heliport",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kohala Waterfalls & Valleys Helicopter Tour?",
+        "answer": "The planned duration is 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Kona?",
+        "answer": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Aerial Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 461
+      },
+      "currency": "USD"
+    }
+  }
+}

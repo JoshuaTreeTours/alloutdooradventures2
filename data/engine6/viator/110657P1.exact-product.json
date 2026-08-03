@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "110657P1",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Magical-Waterfall-Tour/d669-110657P1",
+    "title": "Private Magical Waterfall Tour",
+    "description": {
+      "text": "Explore the ancient volcanoes and cascading waterfalls of the Kohala Mountains on a thrilling private helicopter tour from Kona. With up to 1 hour 15 minutes in the air, this flight covers all seven windward valleys of Kohala in one itinerary. Stops include Kohala Mountains, Waipio Valley, Waimanu Valley, Honokane Nui, Kohala Coast. Enjoy spectacular aerial views as you fly over Waipio Valley and Waimanu Valley, swoop over Honokane Nui and Kohala volcano, then circle back along the coast. Ideal for visitors basing in Kona who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kona",
+      "state": "Hawaii"
+    },
+    "duration": "1 hour 15 minutes (approx.)",
+    "priceFrom": "From $450.81",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 9
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/6d/37/36.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the ancient volcanoes and cascading waterfalls of the Kohala Mountains on a thrilling private helicopter tour fr",
+      "With up to 1 hour 15 minutes in the air, this flight covers all seven windward valleys of Kohala in one itinerary",
+      "Enjoy spectacular aerial views as you fly over Waipio Valley and Waimanu Valley, swoop over Honokane Nui and Kohala volc",
+      "Private Magical Waterfall Tour departing from Kona",
+      "Professional Kona guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kona hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the ancient volcanoes and cascading waterfalls of the Kohala Mountains on a thrilling private helicopter tour from Kona.",
+    "itineraryItems": [
+      {
+        "title": "Kohala Mountains",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waipio Valley",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waimanu Valley",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Honokane Nui",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kohala Coast",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Magical Waterfall Tour?",
+        "answer": "The planned duration is 1 hour 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Kona?",
+        "answer": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Aerial Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 450.81
+      },
+      "currency": "USD"
+    }
+  }
+}

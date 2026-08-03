@@ -1,0 +1,128 @@
+{
+  "product": {
+    "productCode": "28456P13",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Kona-Coast-Hualalai-Volcano-60Min-Helicopter-Tour-Door-Off-or-On/d669-28456P13",
+    "title": "Kona Coast Hualalai Volcano-60Min Helicopter Tour-Door Off or On",
+    "description": {
+      "text": "Marvel at the Kona coastline's splendor and the beauty of the Hualalai volcano on this awe-inspiring 60-minute helicopter tour. Begin over ancient Hawaiian Kaloko Fish Ponds and Kailua Bay, then follow Ali'i Drive past Magic Sands Beach and the Captain Cook Monument at Kealakekua Bay before turning inland toward Hualalai's volcanic slopes and Makalawena Beach. Stops include Kaloko Fishpond, Kailua Bay, Ali'i Drive, La'aloa Beach Park, Kealakekua Bay Marine Preserve, Captain Cook Monument. Transportation, equipment, and local commentary are handled so you can focus on Kona's coastline, volcanic highlands, coffee country, and island landmarks. Ideal for visitors basing in Kona who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kona",
+      "state": "Hawaii"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $640.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 16
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/18/96/9c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Kona Coast Hualalai Volcano-60Min Helicopter Tour-Door Off or On from Kona",
+      "Kohala valleys, Mauna Kea, Kona coffee country, or island adventure routing",
+      "Professional guide with Kona expertise",
+      "Small-group or private format as listed",
+      "Kona aerial, ocean, cultural, or adventure experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kona hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Marvel at the Kona coastline's splendor and the beauty of the Hualalai volcano on this awe-inspiring 60-minute helicopter tour.",
+    "itineraryItems": [
+      {
+        "title": "Kaloko Fishpond",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Kailua Bay",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Ali'i Drive",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "La'aloa Beach Park",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Kealakekua Bay Marine Preserve",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Captain Cook Monument",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Hualalai Volcano",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Makalawena Beach",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kona Coast Hualalai Volcano-60Min Helicopter Tour-Door Off or On?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Kona?",
+        "answer": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Aerial Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 640
+      },
+      "currency": "USD"
+    }
+  }
+}

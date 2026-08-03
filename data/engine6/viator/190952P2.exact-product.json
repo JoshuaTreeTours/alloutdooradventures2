@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "190952P2",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/Kohala-Waterfalls-with-Exclusive-Landing-Helicopter-Tour/d669-190952P2",
+    "title": "Kohala Waterfalls with Exclusive Landing Helicopter Tour",
+    "description": {
+      "text": "The natural wonders of the Kohala Mountains and Laupahoehoe Nui Waterfall are only reachable on foot—or by helicopter from the Kona side of the Big Island. Fly over the ever-changing landscapes of the Kohala Coast, admiring volcanic mountains, lush rainforest, and lava fields from above. Stops include Kohala Coast, Kohala Mountains, Laupahoehoe Nui Waterfall, Exclusive Waterfall Landing. Fly between 1,200-foot cliffs and land at a magnificent spot by a waterfall where you can get out to enjoy the views. Ideal for visitors basing in Kona who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kona",
+      "state": "Hawaii"
+    },
+    "duration": "1 hour 10 minutes (approx.)",
+    "priceFrom": "From $804.65",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 17
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/ec/18/f6.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The natural wonders of the Kohala Mountains and Laupahoehoe Nui Waterfall are only reachable on foot—or by helicopter fr",
+      "Fly over the ever-changing landscapes of the Kohala Coast, admiring volcanic mountains, lush rainforest, and lava fields",
+      "Fly between 1,200-foot cliffs and land at a magnificent spot by a waterfall where you can get out to enjoy the views",
+      "Kohala Waterfalls with Exclusive Landing Helicopter Tour departing from Kona",
+      "Professional Kona guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kona hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "The natural wonders of the Kohala Mountains and Laupahoehoe Nui Waterfall are only reachable on foot—or by helicopter from the Kona side of the Big Island.",
+    "itineraryItems": [
+      {
+        "title": "Kohala Coast",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kohala Mountains",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Laupahoehoe Nui Waterfall",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Exclusive Waterfall Landing",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kohala Waterfalls with Exclusive Landing Helicopter Tour?",
+        "answer": "The planned duration is 1 hour 10 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Kona?",
+        "answer": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Aerial Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 804.65
+      },
+      "currency": "USD"
+    }
+  }
+}

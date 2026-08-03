@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "26811P1",
+    "productUrl": "https://www.viator.com/tours/Big-Island-of-Hawaii/9-Line-Waterfall-Zipline/d669-26811P1",
+    "title": "9-Line Waterfall Zipline Experience on the Big Island",
+    "description": {
+      "text": "See the Big Island from a different angle on this 9-line zipline adventure near Kona that takes you over tree tops, waterfalls, and rivers. Four dual lines let travelers zip side by side across the course. Stops include Umauma Experience Check-In, Waterfall Zipline Course, Dual Racing Lines, Pacific Ocean Viewpoint Platforms. Platforms open toward Pacific Ocean views as the route moves through the Umauma landscape. Ideal for visitors basing in Kona who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kona",
+      "state": "Hawaii"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $239.80",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 988
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/26/c7/f2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "See the Big Island from a different angle on this 9-line zipline adventure near Kona that takes you over tree tops, wate",
+      "Four dual lines let travelers zip side by side across the course",
+      "Platforms open toward Pacific Ocean views as the route moves through the Umauma landscape",
+      "9-Line Waterfall Zipline Experience on the Big Island departing from Kona",
+      "Professional Kona guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kona hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See the Big Island from a different angle on this 9-line zipline adventure near Kona that takes you over tree tops, waterfalls, and rivers.",
+    "itineraryItems": [
+      {
+        "title": "Umauma Experience Check-In",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waterfall Zipline Course",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Dual Racing Lines",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pacific Ocean Viewpoint Platforms",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 9-Line Waterfall Zipline Experience on the Big Island?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Kona?",
+        "answer": "Meet your guide at the confirmed Kona hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Zipline"
+      },
+      {
+        "label": "Adventure Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 239.8
+      },
+      "currency": "USD"
+    }
+  }
+}
