@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "132411P2",
+    "productUrl": "https://www.viator.com/tours/Kauai/Da-Westside-Explorer/d670-132411P2",
+    "title": "Kauai Canyon Explorer: Private Tour Featuring Waimea & Kokee",
+    "description": {
+      "text": "Nicknamed the “Garden Isle,” Kauai is the oldest of Hawaii’s main islands, giving it time to become the lush oasis it is today. On this tour, you’ll experience its western wonders, from colorful Waimea Canyon and the 800-foot Waipoo Falls to the largest coffee orchard in the country. Stops include Waimea Canyon, Waipo'o Falls, Koke'e State Park, Kauai Coffee Company. You’ll feed chickens, cross historic swinging bridges, taste local foods, and walk away understanding Hawaii’s greatest legends. Ideal for visitors basing on Kauai who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kauai",
+      "state": "Hawaii"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $225.13",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 145
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/ce/79.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Nicknamed the “Garden Isle,” Kauai is the oldest of Hawaii’s main islands, giving it time to become the lush oasis it is",
+      "On this tour, you’ll experience its western wonders, from colorful Waimea Canyon and the 800-foot Waipoo Falls to the la",
+      "You’ll feed chickens, cross historic swinging bridges, taste local foods, and walk away understanding Hawaii’s greatest ",
+      "Kauai Canyon Explorer: Private Tour Featuring Waimea & Kokee departing from Kauai",
+      "Professional Kauai guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kauai hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Nicknamed the “Garden Isle,” Kauai is the oldest of Hawaii’s main islands, giving it time to become the lush oasis it is today.",
+    "itineraryItems": [
+      {
+        "title": "Waimea Canyon",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waipo'o Falls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Koke'e State Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kauai Coffee Company",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kauai Canyon Explorer: Private Tour Featuring Waimea & Kokee?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Kauai?",
+        "answer": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 225.13
+      },
+      "currency": "USD"
+    }
+  }
+}

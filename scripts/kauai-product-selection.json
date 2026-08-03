@@ -1,0 +1,75 @@
+{
+  "destinationLabel": "Kauai",
+  "destinationCitySlug": "kauai",
+  "viatorDestinationSlug": "Kauai",
+  "targetPremiumShare": 0.5,
+  "selectedProductCodes": [
+    "106191P10",
+    "441243P1",
+    "277445P2",
+    "23786P2",
+    "36364P11",
+    "132411P3",
+    "132411P2",
+    "132411P1",
+    "7062WCWFT1",
+    "2064P6",
+    "445157P2",
+    "24198P1",
+    "2360KAUAI",
+    "5655PLANTATION",
+    "6654P2"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "46868P1",
+      "title": "Secret Falls Kayak and Hike in Kauai",
+      "reason": "Near-duplicate kayak/hike; stronger 24198P1 selected"
+    },
+    {
+      "productCode": "102020P18",
+      "title": "Kauai Adventure Bundle: 4 Epic Audio Driving Tours",
+      "reason": "Audio/self-guided/app tour rejected"
+    },
+    {
+      "productCode": "316570P1",
+      "title": "Private Jungle Waterfall Adventure",
+      "reason": "Per-group EUR pricing; incomplete USD From$ parity"
+    },
+    {
+      "productCode": "5152P2",
+      "title": "Kauai ATV Backroads Adventure Tour",
+      "reason": "Viator From$ missing in captured dumps"
+    },
+    {
+      "productCode": "30630P1",
+      "title": "Zipline Treetop Tour",
+      "reason": "Incomplete Viator commercial capture"
+    },
+    {
+      "productCode": "39563P1",
+      "title": "Rainforest 4x4 Van Tour and Hiking Adventure",
+      "reason": "Incomplete Viator commercial capture"
+    },
+    {
+      "productCode": "310009P1",
+      "title": "Doors Off Adventure",
+      "reason": "Near-duplicate doors-off helicopter"
+    },
+    {
+      "productCode": "2360KAUAI2",
+      "title": "Kauai Waimea Canyon and Koke'e Tour",
+      "reason": "Near-duplicate Waimea sightseeing; 2360KAUAI selected"
+    },
+    {
+      "productCode": "8647P640",
+      "title": "Kauai North Shore Private Guided Tour",
+      "reason": "Incomplete hero capture"
+    },
+    {
+      "productCode": "29932P2",
+      "title": "Kauai Waterfall Picnic Tour and Off-Road Adventure",
+      "reason": "Viator From$ missing in captured dumps"
+    }
+  ]
+}

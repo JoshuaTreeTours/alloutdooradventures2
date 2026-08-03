@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "445157P2",
+    "productUrl": "https://www.viator.com/tours/Kauai/Na-Pali-Coast-Zodiac-Raft-Sea-Caves-Expedition-on-Kauai/d670-445157P2",
+    "title": "Nā Pali Coast Zodiac Raft Sea Caves Expedition on Kauai",
+    "description": {
+      "text": "On Kauai, fly across the ocean on an exhilarating guided Zodiac raft ride along the gorgeous Na Pali coast. The raft’s small size allows you to get into hard-to-reach sea caves, plus you’ll ogle pristine beaches, gushing waterfalls, and sheer cliffs. Stops include Na Pali Coast, Sea Caves, Coastal Waterfalls. This ocean adventure isn’t for the light-hearted, but the Zodiac rafts provide a thrilling and memorable way to explore this magnificent coastline from the water, as your captain and crew ensure your safety. Ideal for visitors basing on Kauai who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kauai",
+      "state": "Hawaii"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $225.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 61
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7b/50/c2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Fly across the ocean on an exhilarating guided Zodiac raft ride along the gorgeous Na Pali coast",
+      "The raft’s small size allows you to get into hard-to-reach sea caves, plus you’ll ogle pristine beaches, gushing waterfa",
+      "This ocean adventure isn’t for the light-hearted, but the Zodiac rafts provide a thrilling and memorable way to explore ",
+      "Nā Pali Coast Zodiac Raft Sea Caves Expedition on Kauai departing from Kauai",
+      "Professional Kauai guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kauai hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "On Kauai, fly across the ocean on an exhilarating guided Zodiac raft ride along the gorgeous Na Pali coast.",
+    "itineraryItems": [
+      {
+        "title": "Na Pali Coast",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sea Caves",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Coastal Waterfalls",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Nā Pali Coast Zodiac Raft Sea Caves Expedition on Kauai?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Kauai?",
+        "answer": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Adventure Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 225
+      },
+      "currency": "USD"
+    }
+  }
+}

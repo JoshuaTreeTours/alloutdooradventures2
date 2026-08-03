@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "23786P2",
+    "productUrl": "https://www.viator.com/tours/Kauai/Kauai-ECO-Adventure-Helicopter-Tour/d670-23786P2",
+    "title": "Kauai Eco Adventure Helicopter Tour",
+    "description": {
+      "text": "To fully appreciate the beauty of Hawaii’s ‘Garden Isle,’ take to the skies above Kauai on a helicopter tour in a new Eurocopter Eco-Star. Soar over the island’s diverse terrain, from rain-soaked Mount Waialeale and the waterfalls of Waiapuna to the dry red ravine of Waimea Canyon and the breathtaking emerald spires of the Na Pali Coast. Stops include Na Pali Coast, Waimea Canyon, Manawaiopuna Falls, Mount Waialeale. A two-way radio to communicate with the pilot and expansive viewing glass add to the unforgettable flight. Ideal for visitors basing on Kauai who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kauai",
+      "state": "Hawaii"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $449.90",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1998
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/2c/e4/71.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "To fully appreciate the beauty of Hawaii’s ‘Garden Isle,’ take to the skies above Kauai on a helicopter tour in a new Eu",
+      "Soar over the island’s diverse terrain, from rain-soaked Mount Waialeale and the waterfalls of Waiapuna to the dry red r",
+      "A two-way radio to communicate with the pilot and expansive viewing glass add to the unforgettable flight",
+      "Kauai Eco Adventure Helicopter Tour departing from Kauai",
+      "Professional Kauai guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kauai hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "To fully appreciate the beauty of Hawaii’s ‘Garden Isle,’ take to the skies above Kauai on a helicopter tour in a new Eurocopter Eco-Star.",
+    "itineraryItems": [
+      {
+        "title": "Na Pali Coast",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waimea Canyon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Manawaiopuna Falls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mount Waialeale",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kauai Eco Adventure Helicopter Tour?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from on Kauai?",
+        "answer": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Aerial Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 449.9
+      },
+      "currency": "USD"
+    }
+  }
+}

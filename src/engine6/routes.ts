@@ -583,6 +583,58 @@ export const ENGINE6_HVNP_TOUR_PATH_PREFIX =
 export const isEngine6HvnpTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_HVNP_TOUR_PATH_PREFIX);
 
+export const ENGINE6_KAUAI_106191P10_PRODUCT_CODE = "106191P10";
+export const ENGINE6_KAUAI_106191P10_ROUTE =
+  "/destinations/hawaii/kauai/tours/private-doors-off-kauai-helicopter-ultimate-waterfalls-106191P10";
+export const ENGINE6_KAUAI_441243P1_PRODUCT_CODE = "441243P1";
+export const ENGINE6_KAUAI_441243P1_ROUTE =
+  "/destinations/hawaii/kauai/tours/60-minute-guided-doors-off-helicopter-tour-in-kauai-441243P1";
+export const ENGINE6_KAUAI_277445P2_PRODUCT_CODE = "277445P2";
+export const ENGINE6_KAUAI_277445P2_ROUTE =
+  "/destinations/hawaii/kauai/tours/hughes-500-4-passenger-doors-off-helicopters-277445P2";
+export const ENGINE6_KAUAI_23786P2_PRODUCT_CODE = "23786P2";
+export const ENGINE6_KAUAI_23786P2_ROUTE =
+  "/destinations/hawaii/kauai/tours/kauai-eco-adventure-helicopter-tour-23786P2";
+export const ENGINE6_KAUAI_36364P11_PRODUCT_CODE = "36364P11";
+export const ENGINE6_KAUAI_36364P11_ROUTE =
+  "/destinations/hawaii/kauai/tours/the-secret-waterfall-private-tour-with-photos-36364P11";
+export const ENGINE6_KAUAI_132411P3_PRODUCT_CODE = "132411P3";
+export const ENGINE6_KAUAI_132411P3_ROUTE =
+  "/destinations/hawaii/kauai/tours/kauai-highlights-small-group-tour-a-journey-to-the-cany-132411P3";
+export const ENGINE6_KAUAI_132411P2_PRODUCT_CODE = "132411P2";
+export const ENGINE6_KAUAI_132411P2_ROUTE =
+  "/destinations/hawaii/kauai/tours/kauai-canyon-explorer-private-tour-featuring-waimea-kok-132411P2";
+export const ENGINE6_KAUAI_132411P1_PRODUCT_CODE = "132411P1";
+export const ENGINE6_KAUAI_132411P1_ROUTE =
+  "/destinations/hawaii/kauai/tours/kauais-south-east-small-group-tour-legends-waterfalls-132411P1";
+export const ENGINE6_KAUAI_7062WCWFT1_PRODUCT_CODE = "7062WCWFT1";
+export const ENGINE6_KAUAI_7062WCWFT1_ROUTE =
+  "/destinations/hawaii/kauai/tours/private-waimea-canyon-tour-7062WCWFT1";
+export const ENGINE6_KAUAI_2064P6_PRODUCT_CODE = "2064P6";
+export const ENGINE6_KAUAI_2064P6_ROUTE =
+  "/destinations/hawaii/kauai/tours/niihau-and-na-pali-coast-snorkel-boat-tour-2064P6";
+export const ENGINE6_KAUAI_445157P2_PRODUCT_CODE = "445157P2";
+export const ENGINE6_KAUAI_445157P2_ROUTE =
+  "/destinations/hawaii/kauai/tours/n-pali-coast-zodiac-raft-sea-caves-expedition-on-kauai-445157P2";
+export const ENGINE6_KAUAI_24198P1_PRODUCT_CODE = "24198P1";
+export const ENGINE6_KAUAI_24198P1_ROUTE =
+  "/destinations/hawaii/kauai/tours/kauai-adventure-kayak-hike-to-secret-falls-with-expert-24198P1";
+export const ENGINE6_KAUAI_2360KAUAI_PRODUCT_CODE = "2360KAUAI";
+export const ENGINE6_KAUAI_2360KAUAI_ROUTE =
+  "/destinations/hawaii/kauai/tours/kauai-waimea-canyon-wailua-river-boat-and-fern-grotto-t-2360KAUAI";
+export const ENGINE6_KAUAI_5655PLANTATION_PRODUCT_CODE = "5655PLANTATION";
+export const ENGINE6_KAUAI_5655PLANTATION_ROUTE =
+  "/destinations/hawaii/kauai/tours/luau-kalamaku-on-kauai-with-manor-house-4-course-dinner-5655PLANTATION";
+export const ENGINE6_KAUAI_6654P2_PRODUCT_CODE = "6654P2";
+export const ENGINE6_KAUAI_6654P2_ROUTE =
+  "/destinations/hawaii/kauai/tours/koloa-zipline-in-kauai-6654P2";
+
+export const ENGINE6_KAUAI_TOUR_PATH_PREFIX =
+  "/destinations/hawaii/kauai/tours/";
+
+export const isEngine6KauaiTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_KAUAI_TOUR_PATH_PREFIX);
+
 export const ENGINE6_HONOLULU_TOUR_PATH_PREFIX =
   "/destinations/hawaii/honolulu/tours/";
 
@@ -2640,6 +2692,66 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_HVNP_8944P1_ROUTE,
     ENGINE6_HVNP_8944P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_106191P10_ROUTE,
+    ENGINE6_KAUAI_106191P10_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_441243P1_ROUTE,
+    ENGINE6_KAUAI_441243P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_277445P2_ROUTE,
+    ENGINE6_KAUAI_277445P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_23786P2_ROUTE,
+    ENGINE6_KAUAI_23786P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_36364P11_ROUTE,
+    ENGINE6_KAUAI_36364P11_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_132411P3_ROUTE,
+    ENGINE6_KAUAI_132411P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_132411P2_ROUTE,
+    ENGINE6_KAUAI_132411P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_132411P1_ROUTE,
+    ENGINE6_KAUAI_132411P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_7062WCWFT1_ROUTE,
+    ENGINE6_KAUAI_7062WCWFT1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_2064P6_ROUTE,
+    ENGINE6_KAUAI_2064P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_445157P2_ROUTE,
+    ENGINE6_KAUAI_445157P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_24198P1_ROUTE,
+    ENGINE6_KAUAI_24198P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_2360KAUAI_ROUTE,
+    ENGINE6_KAUAI_2360KAUAI_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_5655PLANTATION_ROUTE,
+    ENGINE6_KAUAI_5655PLANTATION_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_KAUAI_6654P2_ROUTE,
+    ENGINE6_KAUAI_6654P2_PRODUCT_CODE,
   ],
 [
     ENGINE6_KEY_WEST_331502P3_ROUTE,

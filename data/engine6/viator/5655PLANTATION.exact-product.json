@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "5655PLANTATION",
+    "productUrl": "https://www.viator.com/tours/Kauai/Luau-Kalamaku-with-Plantation-Owners-Dinner-and-Champagne-Reception/d670-5655PLANTATION",
+    "title": "Luau Kalamaku on Kauai with Manor House 4-Course Dinner & Show",
+    "description": {
+      "text": "Enjoy an enchanted evening in Kauai with a gourmet dinner followed by one of the top-rated luaus on the island! Kick off the night with a Champagne reception and lei greeting at the historic Kilohana Plantation, then settle into a four-course meal of island favorites. Stops include Kilohana Plantation, The Plantation House by Gaylords, Luau Kalamaku Stage. After dinner, take in the mesmerizing Luau Kalamaku as dancers, fire-twirlers and musicians enact the story of the first Tahitian voyage to Hawaii. Ideal for visitors basing on Kauai who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kauai",
+      "state": "Hawaii"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $251.31",
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 176
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/71/46/81.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy an enchanted evening in Kauai with a gourmet dinner followed by one of the top-rated luaus on the island!",
+      "Kick off the night with a Champagne reception and lei greeting at the historic Kilohana Plantation, then settle into a f",
+      "After dinner, take in the mesmerizing Luau Kalamaku as dancers, fire-twirlers and musicians enact the story of the first",
+      "Luau Kalamaku on Kauai with Manor House 4-Course Dinner & Show departing from Kauai",
+      "Professional Kauai guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kauai hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Enjoy an enchanted evening in Kauai with a gourmet dinner followed by one of the top-rated luaus on the island! Kick off the night with a Champagne reception and lei greeting at the historic Kilohana Plantation, then settle into a four-course meal of island favorites.",
+    "itineraryItems": [
+      {
+        "title": "Kilohana Plantation",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Plantation House by Gaylords",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Luau Kalamaku Stage",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Luau Kalamaku on Kauai with Manor House 4-Course Dinner & Show?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Kauai?",
+        "answer": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Dinner Shows"
+      },
+      {
+        "label": "Luaus"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 251.31
+      },
+      "currency": "USD"
+    }
+  }
+}

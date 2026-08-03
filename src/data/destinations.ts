@@ -3930,6 +3930,69 @@ const hawaiiState: StateDestination = {
       ],
     },
     {
+      name: "Kauai",
+      slug: "kauai",
+      stateSlug: "hawaii",
+      region: "Kauai",
+      lat: 22.0964,
+      lng: -159.5261,
+      shortDescription:
+        "Waimea Canyon overlooks, Na Pali coastline, and Garden Isle adventure tours.",
+      intro:
+        "Kauai pairs red canyon viewpoints with Na Pali sea cliffs, rainforest waterfalls, and island cultural experiences.",
+      heroImages: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/2c/e4/71.jpg",
+      ],
+      activityTags: ["helicopter", "snorkeling", "hiking"],
+      whereItIs: [
+        "Kauai is the northernmost main Hawaiian Island, with Lihue as the primary gateway and resort corridors in Poipu, Kapaa, and Princeville.",
+      ],
+      experiences: {
+        mountains:
+          "Overlook Waimea Canyon and Koke'e ridges, or fly above Mount Waialeale and hidden waterfall valleys.",
+        lakesWater:
+          "Kayak the Wailua River, snorkel Na Pali reefs, and cruise sea caves along the northwest coast.",
+        desertForest:
+          "Explore south-shore lookouts, rainforest ziplines near Koloa, and coffee country on the west side.",
+        cycling: "Coastal bike paths and quiet plantation roads around south and east Kauai.",
+        scenicDrives:
+          "West-side canyon routes and south-to-east coastal drives connect Spouting Horn, coffee estates, and waterfall lookouts.",
+        seasonalNotes:
+          "Trade winds shape Na Pali boat days; winter can bring bigger surf and cooler canyon mornings.",
+      },
+      thingsToDo: [
+        "Tour Waimea Canyon overlooks and west-side coffee stops with a guided driver.",
+        "Fly a doors-off helicopter over Na Pali Coast and Manawaiopuna Falls.",
+        "Kayak and hike to Secret Falls or join a Na Pali Zodiac expedition.",
+      ],
+      toursCopy: [
+        "Kauai tours work best as guided half-day and full-day experiences with hotel pickup from Poipu, Kapaa, Lihue, or Princeville.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Waimea Canyon and Kalalau Lookout viewpoints.",
+          "Afternoon: Spouting Horn and south-shore coastal stops.",
+          "Evening: Luau dinner and show at Kilohana Plantation.",
+        ],
+        dayTwo: [
+          "Morning: Na Pali Coast boat or Zodiac sea-cave run.",
+          "Afternoon: Helicopter flight or Secret Falls kayak and hike.",
+          "Evening: Quiet beach time in Poipu or Kapaa.",
+        ],
+      },
+      gettingThere: [
+        "Lihue Airport (LIH) is Kauai's main gateway with mainland and interisland flights.",
+        "Poipu, Kapaa, Lihue, and Princeville hotels are common pickup points for guided tours.",
+      ],
+      faq: [
+        {
+          question: "What are the signature Kauai tours?",
+          answer:
+            "Waimea Canyon sightseeing, Na Pali Coast boat or Zodiac trips, doors-off helicopter flights, and Wailua River kayak-and-hike adventures are among the most popular departures.",
+        },
+      ],
+    },
+    {
       name: "Hawaii Volcanoes National Park",
       slug: "hawaii-volcanoes-national-park",
       stateSlug: "hawaii",

@@ -1,0 +1,118 @@
+[
+  {
+    "productCode": "132411P4",
+    "title": null,
+    "priceFrom": null,
+    "reason": "incomplete title/price/hero",
+    "merged": {}
+  },
+  {
+    "productCode": "46868P1",
+    "title": "Kauai: Hughes 500 4-Passenger Doors-Off Helicopters",
+    "priceFrom": "From $125.00",
+    "reason": "near-duplicate kayak/hike; stronger 24198P1 selected"
+  },
+  {
+    "productCode": "2360KAUAI",
+    "title": "Kauai Waimea Canyon, Wailua River Boat and Fern Grotto Tour",
+    "priceFrom": null,
+    "reason": "incomplete title/price/hero",
+    "merged": {
+      "productCode": "2360KAUAI",
+      "title": "Kauai Waimea Canyon, Wailua River Boat and Fern Grotto Tour",
+      "usd": null,
+      "eur": null,
+      "rating": 4.5,
+      "reviewCount": 538,
+      "duration": "10 hours (approx.)",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/37/d3/7c.jpg",
+      "overview": "Experience the natural wonders of Kauai on this full-day guided tour, featuring a scenic Wailua River cruise to the lush Fern Grotto and breathtaking views of Waimea Canyon from Pu\u2018uhinahina Lookout. Visit iconic spots like Opaekaa Falls, Spouting Horn, and the Kauai Coffee Estate, where you can sample locally grown coffee. With a knowledgeable guide, air-conditioned transport, and plenty of photo stops, this tour offers a perfect blend of relaxation, history, and stunning landscapes. Wailua River cruise, Fern Grotto, and Spouting Horn blowhole Learn the history and geography of Hawaii Expert commentary from your professional driver/guide Pick-up and drop-off from selected Kauai hotels",
+      "itineraryStops": [
+        "Kauai Waimea Canyon, Wailua River Boat and Fern Grotto Tour 2026",
+        "Great drivers",
+        "Wailua River cruise, Fern Grotto, and Spouting Horn blowhole",
+        "Expert commentary from your professional driver/guide",
+        "Tour narration by a professional driver/guide",
+        "Wailua River Boat Admission",
+        "Wailua River State Park",
+        "Fern Grotto"
+      ],
+      "sourceFiles": [
+        "52541e8b-643d-49b1-882f-24a96dba1a95.txt",
+        "ba2a5d39-c46b-4133-9148-0eb43f1b8344.txt"
+      ],
+      "priceSource": null
+    }
+  },
+  {
+    "productCode": "2360KAUAI2",
+    "title": "Kauai Waimea Canyon and Koke'e Tour",
+    "priceFrom": "From $144.87",
+    "reason": "not in final portfolio mix"
+  },
+  {
+    "productCode": "29932P2",
+    "title": "Kauai Waterfall Picnic Tour and Off-Road Adventure",
+    "priceFrom": null,
+    "reason": "incomplete title/price/hero",
+    "merged": {
+      "productCode": "29932P2",
+      "title": "Kauai Waterfall Picnic Tour and Off-Road Adventure",
+      "usd": null,
+      "eur": null,
+      "rating": 4.9,
+      "reviewCount": 268,
+      "duration": "4 hours (approx.)",
+      "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/3a/a6/48.jpg",
+      "overview": "Star in your own Kauai action adventure with this off-road waterfall tour at Kipu Ranch. Rumble through the filming locations of classics like \u2018Jurassic Park\u2019 and \u2018Raiders of the Lost Ark\u2019 on rugged 4x4 trails, and hike to the banks of the Huleia River for a refreshing swim. Splash into waterfall pools via a giant rope swing, and replenish your energy with a waterside sandwich buffet.",
+      "itineraryStops": [
+        "Kipu Ranch Adventures",
+        "Huleia National Wildlife Refuge",
+        "Supplied byKipu Ranch Adventures",
+        "Kipu Ranch Off Road Vehicle and waterfall tour",
+        "Trail57591732558,Apr 2019"
+      ],
+      "sourceFiles": [
+        "e53b1078-8d72-45ce-9af3-cd93a73ebdbf.txt"
+      ],
+      "priceSource": null
+    }
+  },
+  {
+    "productCode": "5152P2",
+    "title": null,
+    "priceFrom": null,
+    "reason": "incomplete commercial/hero capture"
+  },
+  {
+    "productCode": "30630P1",
+    "title": null,
+    "priceFrom": null,
+    "reason": "incomplete commercial/hero capture"
+  },
+  {
+    "productCode": "39563P1",
+    "title": null,
+    "priceFrom": null,
+    "reason": "incomplete commercial/hero capture"
+  },
+  {
+    "productCode": "8647P640",
+    "title": null,
+    "priceFrom": null,
+    "reason": "incomplete title/price/hero",
+    "merged": {}
+  },
+  {
+    "productCode": "310009P1",
+    "title": "Doors Off Adventure",
+    "priceFrom": "From $341.10",
+    "reason": "not in final portfolio mix"
+  },
+  {
+    "productCode": "102020P18",
+    "title": "Kauai Adventure Bundle: 4 Epic Audio Driving Tours",
+    "priceFrom": "From $34.33",
+    "reason": "audio/self-guided/app rejected"
+  }
+]

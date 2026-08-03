@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "7062WCWFT1",
+    "productUrl": "https://www.viator.com/tours/Kauai/Private-Tour-Waimea-Canyon-Wailua-Falls-Kauai-Coffee-Company-and-Spouting-Horn/d670-7062WCWFT1",
+    "title": "Private Waimea Canyon Tour",
+    "description": {
+      "text": "On your private tour of Kauai, you'll see the magnificent Waimea Canyon and places the big bus tours can't take you to. You'll enjoy great photo ops of Waipo'o Falls, admire a beautiful vista at Kalalau Lookout and visit the Poipu Beach resort area to see the Spouting Horn, sea turtles and perhaps a Hawaiian Monk seal! Stops include Waimea Canyon, Waipo'o Falls, Kalalau Lookout, Spouting Horn, Kauai Coffee Company. With a knowledgeable guide, you'll also visit attractions like the Kauai Coffee Company and the Captain Cook monument. Ideal for visitors basing on Kauai who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kauai",
+      "state": "Hawaii"
+    },
+    "duration": "7 to 8 hours (approx.)",
+    "priceFrom": "From $280.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 197
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/08/ab/f0.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "On your private tour of Kauai, you'll see the magnificent Waimea Canyon and places the big bus tours can't take you to",
+      "You'll enjoy great photo ops of Waipo'o Falls, admire a beautiful vista at Kalalau Lookout and visit the Poipu Beach res",
+      "With a knowledgeable guide, you'll also visit attractions like the Kauai Coffee Company and the Captain Cook monument",
+      "Private Waimea Canyon Tour departing from Kauai",
+      "Professional Kauai guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kauai hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "On your private tour of Kauai, you'll see the magnificent Waimea Canyon and places the big bus tours can't take you to.",
+    "itineraryItems": [
+      {
+        "title": "Waimea Canyon",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waipo'o Falls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kalalau Lookout",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Spouting Horn",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kauai Coffee Company",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Waimea Canyon Tour?",
+        "answer": "The planned duration is 7 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Kauai?",
+        "answer": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 280
+      },
+      "currency": "USD"
+    }
+  }
+}

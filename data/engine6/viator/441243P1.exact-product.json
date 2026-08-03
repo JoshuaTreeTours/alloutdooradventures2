@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "441243P1",
+    "productUrl": "https://www.viator.com/tours/Kauai/Doors-Off-Helicopter-Tour-Kauai-FULL-60-mins/d670-441243P1",
+    "title": "60-Minute Guided Doors-Off Helicopter Tour in Kauai",
+    "description": {
+      "text": "On Kauai, get those drone views of Hawaii’s “Garden Isle”—but get them yourself, in an open-door helicopter. With no rear middle seats, you and your crew will take to the skies for nearly an hour, flying above lush canyons, wild cliffs, and the wettest spot on Earth. Stops include Manawaiopuna Falls, Na Pali Coast, Waimea Canyon, Mount Waialeale. Led by a trained firefighting pilot, you’ll get a fast-paced-yet-awe-inducing adventure, and you’ll nab some of the most gorgeous views on the planet. Ideal for visitors basing on Kauai who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kauai",
+      "state": "Hawaii"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $399.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 202
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/45/c3/a8.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Get those drone views of Hawaii’s “Garden Isle”—but get them yourself, in an open-door helicopter",
+      "With no rear middle seats, you and your crew will take to the skies for nearly an hour, flying above lush canyons, wild ",
+      "Led by a trained firefighting pilot, you’ll get a fast-paced-yet-awe-inducing adventure, and you’ll nab some of the most",
+      "60-Minute Guided Doors-Off Helicopter Tour in Kauai departing from Kauai",
+      "Professional Kauai guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kauai hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "On Kauai, get those drone views of Hawaii’s “Garden Isle”—but get them yourself, in an open-door helicopter.",
+    "itineraryItems": [
+      {
+        "title": "Manawaiopuna Falls",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Na Pali Coast",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waimea Canyon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mount Waialeale",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 60-Minute Guided Doors-Off Helicopter Tour in Kauai?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Kauai?",
+        "answer": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Aerial Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 399
+      },
+      "currency": "USD"
+    }
+  }
+}

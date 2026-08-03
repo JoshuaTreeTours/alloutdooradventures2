@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "132411P3",
+    "productUrl": "https://www.viator.com/tours/Kauai/Kauai-Highlights-Tour-Da-best-of-the-south-and-west-7-8-hrs/d670-132411P3",
+    "title": "Kauai Highlights Small Group Tour - A journey to the Canyon & more",
+    "description": {
+      "text": "This full-day guided excursion takes you to 8 of Kauai’s gorgeous spots by air-conditioned vehicle, ideal for a shore excursion. Drive through the south and west sides of the island, taking in a mix of scenic views and an opportunity to try and buy local products. Stops include Waimea Canyon, Spouting Horn, Kauai Coffee Company, South Shore Lookouts. Your guide will share the legends and stories of the places you stop by, including the renowned Waimea Canyon, the powerful Spouting Horn, Kauai Coffee Company, and more. Ideal for visitors basing on Kauai who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kauai",
+      "state": "Hawaii"
+    },
+    "duration": "6 hours 30 minutes (approx.)",
+    "priceFrom": "From $207.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 96
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/c6/80/68.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "This full-day guided excursion takes you to 8 of Kauai’s gorgeous spots by air-conditioned vehicle, ideal for a shore ex",
+      "Drive through the south and west sides of the island, taking in a mix of scenic views and an opportunity to try and buy ",
+      "Your guide will share the legends and stories of the places you stop by, including the renowned Waimea Canyon, the power",
+      "Kauai Highlights Small Group Tour - A journey to the Canyon & more departing from Kauai",
+      "Professional Kauai guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kauai hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "This full-day guided excursion takes you to 8 of Kauai’s gorgeous spots by air-conditioned vehicle, ideal for a shore excursion.",
+    "itineraryItems": [
+      {
+        "title": "Waimea Canyon",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Spouting Horn",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kauai Coffee Company",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "South Shore Lookouts",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kauai Highlights Small Group Tour - A journey to the Canyon & more?",
+        "answer": "The planned duration is 6 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from on Kauai?",
+        "answer": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 207
+      },
+      "currency": "USD"
+    }
+  }
+}

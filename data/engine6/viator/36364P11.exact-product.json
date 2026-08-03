@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "36364P11",
+    "productUrl": "https://www.viator.com/tours/Kauai/Kauai-Waterfall-Tour/d670-36364P11",
+    "title": "The Secret Waterfall Private tour with photos",
+    "description": {
+      "text": "This private tour gets you closer to some of the most stunning waterfalls on Kauai than would be possible alone or in a big group. The exact location depends upon your party's preferences and abilities but the tour can be as challenging as you wish. Stops include Secret Waterfall, Kauai Rainforest Trail, Rainforest Lookout. Your guide is a professional photographer and videographer so you will have someone with you to capture memories to cherish. Ideal for visitors basing on Kauai who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kauai",
+      "state": "Hawaii"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $350.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 63
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/24/e7/ae.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "This private tour gets you closer to some of the most stunning waterfalls on Kauai than would be possible alone or in a ",
+      "The exact location depends upon your party's preferences and abilities but the tour can be as challenging as you wish",
+      "Your guide is a professional photographer and videographer so you will have someone with you to capture memories to cher",
+      "The Secret Waterfall Private tour with photos departing from Kauai",
+      "Professional Kauai guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kauai hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "This private tour gets you closer to some of the most stunning waterfalls on Kauai than would be possible alone or in a big group.",
+    "itineraryItems": [
+      {
+        "title": "Secret Waterfall",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kauai Rainforest Trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rainforest Lookout",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the The Secret Waterfall Private tour with photos?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Kauai?",
+        "answer": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 350
+      },
+      "currency": "USD"
+    }
+  }
+}
