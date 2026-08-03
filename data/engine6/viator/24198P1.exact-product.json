@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "24198P1",
+    "productUrl": "https://www.viator.com/tours/Kauai/Wailua-River-and-Secret-Falls-guided-Kayak-and-Hiking-Tour/d670-24198P1",
+    "title": "Kauai Adventure: Kayak & Hike to Secret Falls with Expert Guide",
+    "description": {
+      "text": "Explore the natural beauty of Kauai on a 5-hour tour that combines a lovely kayaking trip with an moderately easy hike to Uluwehi Falls, also known as Secret Falls. Your experienced guide provides a paddling lesson and guided kayak tour in the Wailua River Valley, following gorgeous waterways through the lush Kauai landscape. Stops include Wailua River, Secret Falls (Uluwehi Falls), Wailua Marina. Then hop out of your kayaks and take a 45-minute hike to Secret Falls where you can cool off in the clear waters before returning to the Wailua marina the way you came. Ideal for visitors basing on Kauai who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kauai",
+      "state": "Hawaii"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $125.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1241
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/fe/00/4f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the natural beauty of Kauai on a 5-hour tour that combines a lovely kayaking trip with an moderately easy hike t",
+      "Your experienced guide provides a paddling lesson and guided kayak tour in the Wailua River Valley, following gorgeous w",
+      "Then hop out of your kayaks and take a 45-minute hike to Secret Falls where you can cool off in the clear waters before ",
+      "Kauai Adventure: Kayak & Hike to Secret Falls with Expert Guide departing from Kauai",
+      "Professional Kauai guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kauai hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the natural beauty of Kauai on a 5-hour tour that combines a lovely kayaking trip with an moderately easy hike to Uluwehi Falls, also known as Secret Falls.",
+    "itineraryItems": [
+      {
+        "title": "Wailua River",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Secret Falls (Uluwehi Falls)",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wailua Marina",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kauai Adventure: Kayak & Hike to Secret Falls with Expert Guide?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Kauai?",
+        "answer": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Kayaking Tours"
+      },
+      {
+        "label": "Hiking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 125
+      },
+      "currency": "USD"
+    }
+  }
+}

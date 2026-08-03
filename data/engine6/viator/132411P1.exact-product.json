@@ -1,0 +1,113 @@
+{
+  "product": {
+    "productCode": "132411P1",
+    "productUrl": "https://www.viator.com/tours/Kauai/Southeast-Rendezvous/d670-132411P1",
+    "title": "Kauai's South & East Small-Group Tour: Legends & Waterfalls",
+    "description": {
+      "text": "The Kauai legends, waterfalls, and geysers tour mixes stunning natural sites with storytelling across the island's south and east sides. Take the day off from driving and relax while a local guide shares Hawaiian legends at waterfalls, river lookouts, and the Spouting Horn blowhole. Stops include Wailua River, Opaekaa Falls, Wailua Falls, Tree Tunnel, Spouting Horn. Small-group routing keeps the experience intimate as you travel by air-conditioned vehicle with live narration. Ideal for visitors basing on Kauai who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kauai",
+      "state": "Hawaii"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $179.40",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 186
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/46/52/e1.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The Kauai legends, waterfalls, and geysers tour mixes stunning natural sites with storytelling across the island's south",
+      "Take the day off from driving and relax while a local guide shares Hawaiian legends at waterfalls, river lookouts, and t",
+      "Small-group routing keeps the experience intimate as you travel by air-conditioned vehicle with live narration",
+      "Kauai's South & East Small-Group Tour: Legends & Waterfalls departing from Kauai",
+      "Professional Kauai guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kauai hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "The Kauai legends, waterfalls, and geysers tour mixes stunning natural sites with storytelling across the island's south and east sides.",
+    "itineraryItems": [
+      {
+        "title": "Wailua River",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Opaekaa Falls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wailua Falls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tree Tunnel",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Spouting Horn",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kauai's South & East Small-Group Tour: Legends & Waterfalls?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Kauai?",
+        "answer": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 179.4
+      },
+      "currency": "USD"
+    }
+  }
+}

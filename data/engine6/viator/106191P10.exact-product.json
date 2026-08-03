@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "106191P10",
+    "productUrl": "https://www.viator.com/tours/Kauai/Kauai-Private-Helicopter-Tour/d670-106191P10",
+    "title": "Private Doors-Off Kauai Helicopter: Ultimate Waterfalls & Canyons",
+    "description": {
+      "text": "On Kauai, the excitement of a helicopter tour can quickly turn to disappointment when you are seated in the middle. Not on this private tour where every seat is a window seat. Stops include Manawaiopuna Falls, Olokele Canyon, Waimea Canyon, Na Pali Coast, Wai'ale'ale Crater. You'll get excellent views of Kauai as you soar through the sky over Manawaiopuna Falls, the Olokele Canyon, Waimea Canyon, Na Pali coast, and Wai'ale'ale crater. Ideal for visitors basing on Kauai who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kauai",
+      "state": "Hawaii"
+    },
+    "duration": "1 hour 15 minutes (approx.)",
+    "priceFrom": "From $429.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1190
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/a4/27/dd.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The excitement of a helicopter tour can quickly turn to disappointment when you are seated in the middle",
+      "Not on this private tour where every seat is a window seat",
+      "You'll get excellent views of Kauai as you soar through the sky over Manawaiopuna Falls, the Olokele Canyon, Waimea Cany",
+      "Private Doors-Off Kauai Helicopter: Ultimate Waterfalls & Canyons departing from Kauai",
+      "Professional Kauai guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kauai hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "On Kauai, the excitement of a helicopter tour can quickly turn to disappointment when you are seated in the middle.",
+    "itineraryItems": [
+      {
+        "title": "Manawaiopuna Falls",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Olokele Canyon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waimea Canyon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Na Pali Coast",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wai'ale'ale Crater",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Doors-Off Kauai Helicopter: Ultimate Waterfalls & Canyons?",
+        "answer": "The planned duration is 1 hour 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from on Kauai?",
+        "answer": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Aerial Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 429
+      },
+      "currency": "USD"
+    }
+  }
+}

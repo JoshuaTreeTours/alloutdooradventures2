@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "2360KAUAI",
+    "productUrl": "https://www.viator.com/tours/Kauai/Kauai-Waimea-Canyon-and-Wailua-River/d670-2360KAUAI",
+    "title": "Kauai Waimea Canyon, Wailua River Boat and Fern Grotto Tour",
+    "description": {
+      "text": "Experience the natural wonders of Kauai on this full-day guided tour, featuring a scenic Wailua River cruise to the lush Fern Grotto and breathtaking views of Waimea Canyon. Visit iconic spots like Opaekaa Falls and the Kauai Coffee Estate, where you can sample locally grown coffee. Stops include Wailua River, Fern Grotto, Waimea Canyon, Opaekaa Falls, Kauai Coffee Estate. With a knowledgeable guide, air-conditioned transport, and plenty of photo stops, this tour offers a perfect blend of relaxation, history, and stunning landscapes. Ideal for visitors basing on Kauai who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kauai",
+      "state": "Hawaii"
+    },
+    "duration": "10 hours (approx.)",
+    "priceFrom": "From $278.54",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 538
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/37/d3/7c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Experience the natural wonders of Kauai on this full-day guided tour, featuring a scenic Wailua River cruise to the lush",
+      "Visit iconic spots like Opaekaa Falls and the Kauai Coffee Estate, where you can sample locally grown coffee",
+      "With a knowledgeable guide, air-conditioned transport, and plenty of photo stops, this tour offers a perfect blend of re",
+      "Kauai Waimea Canyon, Wailua River Boat and Fern Grotto Tour departing from Kauai",
+      "Professional Kauai guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kauai hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience the natural wonders of Kauai on this full-day guided tour, featuring a scenic Wailua River cruise to the lush Fern Grotto and breathtaking views of Waimea Canyon.",
+    "itineraryItems": [
+      {
+        "title": "Wailua River",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fern Grotto",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Waimea Canyon",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Opaekaa Falls",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kauai Coffee Estate",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Kauai Waimea Canyon, Wailua River Boat and Fern Grotto Tour?",
+        "answer": "The planned duration is 10 hours."
+      },
+      {
+        "question": "Where does the tour depart from on Kauai?",
+        "answer": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Boat Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 278.54
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -78,6 +78,21 @@ import specimen3388p1Payload from "../../data/engine6/viator/3388P1.exact-produc
 import specimen190952p3Payload from "../../data/engine6/viator/190952P3.exact-product.json";
 import specimen110657p2Payload from "../../data/engine6/viator/110657P2.exact-product.json";
 import specimen8944p1Payload from "../../data/engine6/viator/8944P1.exact-product.json";
+import specimen106191p10Payload from "../../data/engine6/viator/106191P10.exact-product.json";
+import specimen441243p1Payload from "../../data/engine6/viator/441243P1.exact-product.json";
+import specimen277445p2Payload from "../../data/engine6/viator/277445P2.exact-product.json";
+import specimen23786p2Payload from "../../data/engine6/viator/23786P2.exact-product.json";
+import specimen36364p11Payload from "../../data/engine6/viator/36364P11.exact-product.json";
+import specimen132411p3Payload from "../../data/engine6/viator/132411P3.exact-product.json";
+import specimen132411p2Payload from "../../data/engine6/viator/132411P2.exact-product.json";
+import specimen132411p1Payload from "../../data/engine6/viator/132411P1.exact-product.json";
+import specimen7062wcwft1Payload from "../../data/engine6/viator/7062WCWFT1.exact-product.json";
+import specimen2064p6Payload from "../../data/engine6/viator/2064P6.exact-product.json";
+import specimen445157p2Payload from "../../data/engine6/viator/445157P2.exact-product.json";
+import specimen24198p1Payload from "../../data/engine6/viator/24198P1.exact-product.json";
+import specimen2360kauaiPayload from "../../data/engine6/viator/2360KAUAI.exact-product.json";
+import specimen5655plantationPayload from "../../data/engine6/viator/5655PLANTATION.exact-product.json";
+import specimen6654p2Payload from "../../data/engine6/viator/6654P2.exact-product.json";
 import specimen5069west60Payload from "../../data/engine6/viator/5069WEST60.exact-product.json";
 import specimen5069comp60Payload from "../../data/engine6/viator/5069COMP60.exact-product.json";
 import specimen7029ogghanPayload from "../../data/engine6/viator/7029OGGHAN.exact-product.json";
@@ -1686,6 +1701,96 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "8944P1",
     publicUrl: "https://www.viator.com/tours/Hilo/Private-Tour-Volcanoes-National-Park-and-Waterfall-VIP-Mercedes-Tour/d51004-8944P1",
     rawPayload: specimen8944p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "106191P10",
+    publicUrl: "https://www.viator.com/tours/Kauai/Kauai-Private-Helicopter-Tour/d670-106191P10",
+    rawPayload: specimen106191p10Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "441243P1",
+    publicUrl: "https://www.viator.com/tours/Kauai/Doors-Off-Helicopter-Tour-Kauai-FULL-60-mins/d670-441243P1",
+    rawPayload: specimen441243p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "277445P2",
+    publicUrl: "https://www.viator.com/tours/Kauai/Hughes-500-Helicopter-Adventure/d670-277445P2",
+    rawPayload: specimen277445p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "23786P2",
+    publicUrl: "https://www.viator.com/tours/Kauai/Kauai-ECO-Adventure-Helicopter-Tour/d670-23786P2",
+    rawPayload: specimen23786p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "36364P11",
+    publicUrl: "https://www.viator.com/tours/Kauai/Kauai-Waterfall-Tour/d670-36364P11",
+    rawPayload: specimen36364p11Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "132411P3",
+    publicUrl: "https://www.viator.com/tours/Kauai/Kauai-Highlights-Tour-Da-best-of-the-south-and-west-7-8-hrs/d670-132411P3",
+    rawPayload: specimen132411p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "132411P2",
+    publicUrl: "https://www.viator.com/tours/Kauai/Da-Westside-Explorer/d670-132411P2",
+    rawPayload: specimen132411p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "132411P1",
+    publicUrl: "https://www.viator.com/tours/Kauai/Southeast-Rendezvous/d670-132411P1",
+    rawPayload: specimen132411p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "7062WCWFT1",
+    publicUrl: "https://www.viator.com/tours/Kauai/Private-Tour-Waimea-Canyon-Wailua-Falls-Kauai-Coffee-Company-and-Spouting-Horn/d670-7062WCWFT1",
+    rawPayload: specimen7062wcwft1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2064P6",
+    publicUrl: "https://www.viator.com/tours/Kauai/Napali-and-Niihau-The-Forbidden-Island-Kauai-Snorkel-Cruise/d670-2064P6",
+    rawPayload: specimen2064p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "445157P2",
+    publicUrl: "https://www.viator.com/tours/Kauai/Na-Pali-Coast-Zodiac-Raft-Sea-Caves-Expedition-on-Kauai/d670-445157P2",
+    rawPayload: specimen445157p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "24198P1",
+    publicUrl: "https://www.viator.com/tours/Kauai/Wailua-River-and-Secret-Falls-guided-Kayak-and-Hiking-Tour/d670-24198P1",
+    rawPayload: specimen24198p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "2360KAUAI",
+    publicUrl: "https://www.viator.com/tours/Kauai/Kauai-Waimea-Canyon-and-Wailua-River/d670-2360KAUAI",
+    rawPayload: specimen2360kauaiPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5655PLANTATION",
+    publicUrl: "https://www.viator.com/tours/Kauai/Luau-Kalamaku-with-Plantation-Owners-Dinner-and-Champagne-Reception/d670-5655PLANTATION",
+    rawPayload: specimen5655plantationPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "6654P2",
+    publicUrl: "https://www.viator.com/tours/Kauai/Koloa-Zipline/d670-6654P2",
+    rawPayload: specimen6654p2Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

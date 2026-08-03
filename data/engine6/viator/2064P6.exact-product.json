@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "2064P6",
+    "productUrl": "https://www.viator.com/tours/Kauai/Napali-and-Niihau-The-Forbidden-Island-Kauai-Snorkel-Cruise/d670-2064P6",
+    "title": "Ni'ihau and Na Pali Coast Snorkel Boat Tour",
+    "description": {
+      "text": "On Kauai, the Na Pali coast may be 17 miles of pure “Garden Isle” splendor, but there’s even more to explore beyond its 4,000-foot cliffs. On this tour, you’ll go for 60 miles of discovery, from the coast to Kaulakahi Channel to Lehua Crater, the “Forbidden Island” of Ni’ihau, and beyond. Stops include Na Pali Coast State Wilderness Park, Ni'ihau, Lehua Crater, Kaulakahi Channel. Along the way, you’ll spot dolphins, snorkel amongst reefs, and, of course, sip and sit back, relishing in the adventure. Ideal for visitors basing on Kauai who want a guided island experience without coordinating transport, gear, or park logistics on their own."
+    },
+    "location": {
+      "city": "Kauai",
+      "state": "Hawaii"
+    },
+    "duration": "Full day (approx.)",
+    "priceFrom": "From $355.56",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 398
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/73/15/c2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "The Na Pali coast may be 17 miles of pure “Garden Isle” splendor, but there’s even more to explore beyond its 4,000-foot",
+      "On this tour, you’ll go for 60 miles of discovery, from the coast to Kaulakahi Channel to Lehua Crater, the “Forbidden I",
+      "Along the way, you’ll spot dolphins, snorkel amongst reefs, and, of course, sip and sit back, relishing in the adventure",
+      "Ni'ihau and Na Pali Coast Snorkel Boat Tour departing from Kauai",
+      "Professional Kauai guide or captain"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Kauai hotel, harbor, heliport, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "On Kauai, the Na Pali coast may be 17 miles of pure “Garden Isle” splendor, but there’s even more to explore beyond its 4,000-foot cliffs.",
+    "itineraryItems": [
+      {
+        "title": "Na Pali Coast State Wilderness Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Ni'ihau",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lehua Crater",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Kaulakahi Channel",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Tour activity as described on Viator",
+      "Safety equipment where applicable"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ni'ihau and Na Pali Coast Snorkel Boat Tour?",
+        "answer": "The planned duration is Full day."
+      },
+      {
+        "question": "Where does the tour depart from on Kauai?",
+        "answer": "Meet your guide at the confirmed Kauai hotel pickup point, harbor, heliport, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Snorkeling"
+      },
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 355.56
+      },
+      "currency": "USD"
+    }
+  }
+}
