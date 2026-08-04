@@ -1,0 +1,121 @@
+{
+  "destinationLabel": "Austin",
+  "destinationCitySlug": "austin",
+  "viatorDestinationSlug": "Austin",
+  "targetPremiumShare": 0.5,
+  "catalogUrl": "https://www.viator.com/Austin/d5021-ttd",
+  "selectedCount": 20,
+  "premiumCount": 10,
+  "selectionNote": "Selected 20 screenshot-verified Austin d5021 products with live commercial fields and HEAD-checked heroes. Catalog lists 200+ tours but many preferred specialty SKUs (jeep/ATV, stargazing, photography, hiking) are unavailable or absent; several strong sightseeing/kayak SKUs (5718CITY, 5718P1/P2, 46479P9/P12/P13, 5682P10/P11) are inactive. Included two helicopter SKUs (5494432P1/P3) despite 1-review commercial thinness to cover the preferred helicopter niche; wine limo 327690P1 retained at 4 reviews as the only luxury winery limousine option. Rejected per-group yacht/private party boat pricing (327200P2, 153655P3), food/bar crawls, hop-on bus, ghost/audio/self-guided, and near-duplicate kayak SKUs.",
+  "selectedProductCodes": [
+    "5513806P1",
+    "406074P3",
+    "421026P1",
+    "327690P1",
+    "10428P19",
+    "10428P6",
+    "87115P27",
+    "5494432P1",
+    "5494432P3",
+    "153655P2",
+    "10428P1",
+    "244340P2",
+    "121998P6",
+    "406074P1",
+    "291969P2",
+    "57338P1",
+    "42365P4",
+    "42365P1",
+    "350454P2",
+    "134057P1"
+  ],
+  "premiumProductCodes": [
+    "5513806P1",
+    "406074P3",
+    "421026P1",
+    "327690P1",
+    "10428P19",
+    "10428P6",
+    "87115P27",
+    "5494432P1",
+    "5494432P3",
+    "153655P2"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "153655P3",
+      "title": "Lake Austin Private Party Boat",
+      "reason": "Per-group private pricing unsuitable for standard per-person Engine6 commercial fields"
+    },
+    {
+      "productCode": "327200P2",
+      "title": "Sunset Yacht Charter Experience on Lake Travis",
+      "reason": "Per-group charter pricing and only 5 reviews"
+    },
+    {
+      "productCode": "5718CITY",
+      "title": "Austin and Hill Country Sightseeing Tour",
+      "reason": "Live page unavailable"
+    },
+    {
+      "productCode": "5718P1",
+      "title": "Authentic Austin and Astounding Hill Country Tour",
+      "reason": "Live page unavailable"
+    },
+    {
+      "productCode": "5718P2",
+      "title": "Downtown Austin Small-Group Panoramic Sightseeing Tour",
+      "reason": "Live page unavailable"
+    },
+    {
+      "productCode": "46479P13",
+      "title": "Congress Avenue Bat Bridge Kayak Tour in Austin",
+      "reason": "Live page unavailable"
+    },
+    {
+      "productCode": "46479P9",
+      "title": "Austin Skyline Kayak Tour",
+      "reason": "Live page unavailable"
+    },
+    {
+      "productCode": "46479P12",
+      "title": "Sunset Skyline Kayak Tour",
+      "reason": "Live page unavailable"
+    },
+    {
+      "productCode": "17570P6",
+      "title": "Texas Hill Country and LBJ Tour From Austin",
+      "reason": "Live page unavailable"
+    },
+    {
+      "productCode": "260194P1",
+      "title": "Fredericksburg Full-Day Guided Trip from Austin",
+      "reason": "Live page unavailable"
+    },
+    {
+      "productCode": "5682P11",
+      "title": "Austin Sightseeing and Capitol Segway Tour",
+      "reason": "Live page unavailable"
+    },
+    {
+      "productCode": "87193P1",
+      "title": "Downtown Austin Helicopter Tour",
+      "reason": "Live page unavailable"
+    },
+    {
+      "productCode": "199613P1",
+      "title": "Best of Texas Hill Country Wine, Beer & BBQ Tour",
+      "reason": "Live page unavailable"
+    },
+    {
+      "productCode": "252750P2",
+      "title": "Double Decker Austin Single Loop Sightseeing Tour",
+      "reason": "Rejected hop-on style bus sightseeing"
+    },
+    {
+      "productCode": "7812P106",
+      "title": "Secret Food Tours Austin Downtown",
+      "reason": "Food walking tour outside outdoor-adventure portfolio"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "42365P1",
+    "productUrl": "https://www.viator.com/tours/Austin/Austin-in-a-Nutshell/d5021-42365P1",
+    "title": "Austin in a Nutshell Bike Tour with a Local Guide",
+    "description": {
+      "text": "See Austin's greatest hits on a guided hybrid bike tour covering about 10 miles. Ride through Zilker Park and around Lady Bird Lake, cross Congress Avenue Bridge, and roll past the Texas State Capitol with a local guide. Stops include Zilker Park, Lady Bird Lake Trail, Congress Avenue Bridge, Texas State Capitol. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $58.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 569
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/11/67/38/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Austin in a Nutshell Bike Tour with a Local Guide from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "See Austin's greatest hits on a guided hybrid bike tour covering about 10 miles.",
+    "itineraryItems": [
+      {
+        "title": "Bike Shop Meeting Point",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Zilker Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lady Bird Lake Trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Congress Avenue Bridge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Texas State Capitol",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "E-bike or bicycle",
+      "Helmet",
+      "Guided route"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Austin in a Nutshell Bike Tour with a Local Guide?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 58
+      },
+      "currency": "USD"
+    }
+  }
+}

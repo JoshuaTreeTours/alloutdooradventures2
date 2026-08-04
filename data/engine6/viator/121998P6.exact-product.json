@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "121998P6",
+    "productUrl": "https://www.viator.com/tours/Austin/Lake-Austin-Boat-Tour-and-Sunset-Cruise-Per-Person/d5021-121998P6",
+    "title": "Lake Austin Sunset Boat Cruise – 1 - Hour Scenic Tour BYOB",
+    "description": {
+      "text": "Join a one-hour BYOB scenic cruise on Lake Austin timed for sunset light. The shared boat format is an easy way to see lakeside cliffs, homes, and skyline reflections without chartering a private vessel. Stops include Lake Austin Dock, Scenic Lake Cruise, Sunset Viewing, Return Dock. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $39.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 432
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/15/9e/99/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Lake Austin Sunset Boat Cruise – 1 - Hour Scenic Tour BYOB from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Join a one-hour BYOB scenic cruise on Lake Austin timed for sunset light.",
+    "itineraryItems": [
+      {
+        "title": "Lake Austin Dock",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Scenic Lake Cruise",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sunset Viewing",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Return Dock",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Tour activity as described"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Lake Austin Sunset Boat Cruise – 1 - Hour Scenic Tour BYOB?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Sunset Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 39
+      },
+      "currency": "USD"
+    }
+  }
+}

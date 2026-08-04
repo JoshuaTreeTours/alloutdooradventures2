@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "327690P1",
+    "productUrl": "https://www.viator.com/tours/Austin/Half-Day-Wine-Tour-in-Luxury-Limousine/d5021-327690P1",
+    "title": "Half Day Wine Tour with Luxury Limousine in Austin",
+    "description": {
+      "text": "Visit three Texas Hill Country wineries from Austin in a luxury vehicle with tastings included. Stops typically include Duchman Family Winery, Bell Springs Winery, and Wimberley Valley Winery, with round-trip transport so your group can focus on the tasting rooms. Stops include Hilton Austin Pickup, Duchman Family Winery, Bell Springs Winery, Wimberley Valley Winery. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $300.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 4
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/d2/4b/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Half Day Wine Tour with Luxury Limousine in Austin from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Visit three Texas Hill Country wineries from Austin in a luxury vehicle with tastings included.",
+    "itineraryItems": [
+      {
+        "title": "Hilton Austin Pickup",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Duchman Family Winery",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bell Springs Winery",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wimberley Valley Winery",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided wine experience",
+      "As described on Viator"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Half Day Wine Tour with Luxury Limousine in Austin?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Wine Tastings"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Private and Luxury"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 300
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -127,6 +127,13 @@ const boulderListingTours = engine6ListingTours.filter(
     tour.destination.citySlug === "boulder"
 );
 
+const austinListingTours = engine6ListingTours.filter(
+  tour =>
+    tour.engine === "engine6" &&
+    tour.destination.stateSlug === "texas" &&
+    tour.destination.citySlug === "austin"
+);
+
 const hawaiiVolcanoesListingTours = engine6ListingTours.filter(
   tour =>
     tour.engine === "engine6" &&
@@ -371,6 +378,20 @@ describe("Engine6 hero diversity governance", () => {
       heroCounts.get(ENGINE6_BOULDER_CANONICAL_CITY_HERO_URL) ?? 0
     ).toBeLessThanOrEqual(1);
     expect(heroCounts.size).toBe(boulderListingTours.length);
+  });
+
+  it("uses Austin as the validation cohort for unique listing-card heroes", () => {
+    expect(austinListingTours.length).toBeGreaterThan(0);
+
+    const heroCounts = austinListingTours.reduce<Map<string, number>>(
+      (counts, tour) => {
+        counts.set(tour.heroImage, (counts.get(tour.heroImage) ?? 0) + 1);
+        return counts;
+      },
+      new Map()
+    );
+
+    expect(heroCounts.size).toBe(austinListingTours.length);
   });
 
   it("uses Hawaii Volcanoes National Park as the validation cohort for unique listing-card heroes", () => {

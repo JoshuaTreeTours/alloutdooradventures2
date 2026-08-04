@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "406074P1",
+    "productUrl": "https://www.viator.com/tours/Austin/Downtown-Sunset-Kayak-with-1-5-Million-Bats/d5021-406074P1",
+    "title": "Downtown Austin Sunset Kayak Tour with 1.5 Million Bats",
+    "description": {
+      "text": "Paddle the Austin skyline at golden hour, then stage under Congress Avenue Bridge for the Mexican free-tailed bat emergence. This guided kayak outing lasts about 2.5 hours and includes equipment with an interpretive bat briefing. Stops include Kayak Launch, Austin Skyline Paddle, Congress Avenue Bridge, Bat Emergence Viewing. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $59.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 237
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/27/85/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Downtown Austin Sunset Kayak Tour with 1.5 Million Bats from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Paddle the Austin skyline at golden hour, then stage under Congress Avenue Bridge for the Mexican free-tailed bat emergence.",
+    "itineraryItems": [
+      {
+        "title": "Kayak Launch",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Austin Skyline Paddle",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Congress Avenue Bridge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bat Emergence Viewing",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Kayak or paddleboard equipment",
+      "Life jacket",
+      "Guided outing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Downtown Austin Sunset Kayak Tour with 1.5 Million Bats?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Kayaking Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 59
+      },
+      "currency": "USD"
+    }
+  }
+}

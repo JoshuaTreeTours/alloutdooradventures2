@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "42365P4",
+    "productUrl": "https://www.viator.com/tours/Austin/Let-it-Ride-Austin-Electric-Bike-Tour/d5021-42365P4",
+    "title": "Austin Electric Bike Tour: Let it Ride",
+    "description": {
+      "text": "In Austin, a local guide leads the two-to-three-hour route with safety briefing and bike fitting included. Your guide covers Austin landmarks such as the Texas State Capitol, South Congress murals, Lady Bird Lake, Mt. Bonnell, or nearby Hill Country scenery depending on the itinerary. Stops include Barton Springs Bike Shop, Barton Springs Pool, Zilker Park, Greetings from Austin Mural, I Love You So Much Mural, Congress Avenue Bridge. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $58.65",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 995
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0f/7f/21/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Austin Electric Bike Tour: Let it Ride from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Austin, a local guide leads the two-to-three-hour route with safety briefing and bike fitting included.",
+    "itineraryItems": [
+      {
+        "title": "Barton Springs Bike Shop",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Barton Springs Pool",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Zilker Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Greetings from Austin Mural",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "I Love You So Much Mural",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "E-bike or bicycle",
+      "Helmet",
+      "Guided route"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Austin Electric Bike Tour: Let it Ride?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "E-Bike Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 58.65
+      },
+      "currency": "USD"
+    }
+  }
+}

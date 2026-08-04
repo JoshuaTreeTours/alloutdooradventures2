@@ -681,6 +681,73 @@ export const ENGINE6_KONA_207802P1_PRODUCT_CODE = "207802P1";
 export const ENGINE6_KONA_207802P1_ROUTE =
   "/destinations/hawaii/kona/tours/award-winning-farm-tour-coffee-chocolate-and-unique-gif-207802P1";
 
+export const ENGINE6_AUSTIN_5513806P1_PRODUCT_CODE = "5513806P1";
+export const ENGINE6_AUSTIN_5513806P1_ROUTE =
+  "/destinations/texas/austin/tours/austin-private-tours-landmarks-local-highlights-5513806P1";
+export const ENGINE6_AUSTIN_406074P3_PRODUCT_CODE = "406074P3";
+export const ENGINE6_AUSTIN_406074P3_ROUTE =
+  "/destinations/texas/austin/tours/downtown-austin-giant-paddleboard-sunset-tour-with-bats-406074P3";
+export const ENGINE6_AUSTIN_421026P1_PRODUCT_CODE = "421026P1";
+export const ENGINE6_AUSTIN_421026P1_ROUTE =
+  "/destinations/texas/austin/tours/at-home-private-wine-or-na-wine-tasting-experience-in-a-421026P1";
+export const ENGINE6_AUSTIN_327690P1_PRODUCT_CODE = "327690P1";
+export const ENGINE6_AUSTIN_327690P1_ROUTE =
+  "/destinations/texas/austin/tours/half-day-wine-tour-with-luxury-limousine-in-austin-327690P1";
+export const ENGINE6_AUSTIN_10428P19_PRODUCT_CODE = "10428P19";
+export const ENGINE6_AUSTIN_10428P19_ROUTE =
+  "/destinations/texas/austin/tours/half-day-hill-country-wine-shuttle-from-austin-10428P19";
+export const ENGINE6_AUSTIN_10428P6_PRODUCT_CODE = "10428P6";
+export const ENGINE6_AUSTIN_10428P6_ROUTE =
+  "/destinations/texas/austin/tours/from-austin-hill-country-bbq-wine-shuttle-10428P6";
+export const ENGINE6_AUSTIN_87115P27_PRODUCT_CODE = "87115P27";
+export const ENGINE6_AUSTIN_87115P27_ROUTE =
+  "/destinations/texas/austin/tours/austin-premium-driving-tour-with-texas-capitol-mt-bonne-87115P27";
+export const ENGINE6_AUSTIN_5494432P1_PRODUCT_CODE = "5494432P1";
+export const ENGINE6_AUSTIN_5494432P1_ROUTE =
+  "/destinations/texas/austin/tours/20-minutes-downtown-austin-and-lake-austin-5494432P1";
+export const ENGINE6_AUSTIN_5494432P3_PRODUCT_CODE = "5494432P3";
+export const ENGINE6_AUSTIN_5494432P3_ROUTE =
+  "/destinations/texas/austin/tours/the-ultimate-f1-helicopter-tour-experience-5494432P3";
+export const ENGINE6_AUSTIN_153655P2_PRODUCT_CODE = "153655P2";
+export const ENGINE6_AUSTIN_153655P2_ROUTE =
+  "/destinations/texas/austin/tours/lake-austin-scenic-history-tour-2hr-fully-shaded-am-pm-153655P2";
+export const ENGINE6_AUSTIN_10428P1_PRODUCT_CODE = "10428P1";
+export const ENGINE6_AUSTIN_10428P1_ROUTE =
+  "/destinations/texas/austin/tours/best-of-austin-small-group-driving-tour-with-local-guid-10428P1";
+export const ENGINE6_AUSTIN_244340P2_PRODUCT_CODE = "244340P2";
+export const ENGINE6_AUSTIN_244340P2_ROUTE =
+  "/destinations/texas/austin/tours/lake-travis-public-sunset-tour-byob-244340P2";
+export const ENGINE6_AUSTIN_121998P6_PRODUCT_CODE = "121998P6";
+export const ENGINE6_AUSTIN_121998P6_ROUTE =
+  "/destinations/texas/austin/tours/lake-austin-sunset-boat-cruise-1-hour-scenic-tour-byob-121998P6";
+export const ENGINE6_AUSTIN_406074P1_PRODUCT_CODE = "406074P1";
+export const ENGINE6_AUSTIN_406074P1_ROUTE =
+  "/destinations/texas/austin/tours/downtown-austin-sunset-kayak-tour-with-1-5-million-bats-406074P1";
+export const ENGINE6_AUSTIN_291969P2_PRODUCT_CODE = "291969P2";
+export const ENGINE6_AUSTIN_291969P2_ROUTE =
+  "/destinations/texas/austin/tours/guided-sunset-bat-kayak-tour-in-austin-291969P2";
+export const ENGINE6_AUSTIN_57338P1_PRODUCT_CODE = "57338P1";
+export const ENGINE6_AUSTIN_57338P1_ROUTE =
+  "/destinations/texas/austin/tours/austin-biker-gang-e-bike-tour-57338P1";
+export const ENGINE6_AUSTIN_42365P4_PRODUCT_CODE = "42365P4";
+export const ENGINE6_AUSTIN_42365P4_ROUTE =
+  "/destinations/texas/austin/tours/austin-electric-bike-tour-let-it-ride-42365P4";
+export const ENGINE6_AUSTIN_42365P1_PRODUCT_CODE = "42365P1";
+export const ENGINE6_AUSTIN_42365P1_ROUTE =
+  "/destinations/texas/austin/tours/austin-in-a-nutshell-bike-tour-with-a-local-guide-42365P1";
+export const ENGINE6_AUSTIN_350454P2_PRODUCT_CODE = "350454P2";
+export const ENGINE6_AUSTIN_350454P2_ROUTE =
+  "/destinations/texas/austin/tours/austin-good-vibes-e-bike-tours-350454P2";
+export const ENGINE6_AUSTIN_134057P1_PRODUCT_CODE = "134057P1";
+export const ENGINE6_AUSTIN_134057P1_ROUTE =
+  "/destinations/texas/austin/tours/austin-e-bike-tour-134057P1";
+
+export const ENGINE6_AUSTIN_TOUR_PATH_PREFIX =
+  "/destinations/texas/austin/tours/";
+
+export const isEngine6AustinTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_AUSTIN_TOUR_PATH_PREFIX);
+
 export const ENGINE6_BOULDER_87324P1_PRODUCT_CODE = "87324P1";
 export const ENGINE6_BOULDER_87324P1_ROUTE =
   "/destinations/colorado/boulder/tours/best-of-boulder-e-bike-tour-87324P1";
@@ -3000,6 +3067,86 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_DENVER_41410P10_ROUTE,
     ENGINE6_DENVER_41410P10_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_5513806P1_ROUTE,
+    ENGINE6_AUSTIN_5513806P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_406074P3_ROUTE,
+    ENGINE6_AUSTIN_406074P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_421026P1_ROUTE,
+    ENGINE6_AUSTIN_421026P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_327690P1_ROUTE,
+    ENGINE6_AUSTIN_327690P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_10428P19_ROUTE,
+    ENGINE6_AUSTIN_10428P19_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_10428P6_ROUTE,
+    ENGINE6_AUSTIN_10428P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_87115P27_ROUTE,
+    ENGINE6_AUSTIN_87115P27_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_5494432P1_ROUTE,
+    ENGINE6_AUSTIN_5494432P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_5494432P3_ROUTE,
+    ENGINE6_AUSTIN_5494432P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_153655P2_ROUTE,
+    ENGINE6_AUSTIN_153655P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_10428P1_ROUTE,
+    ENGINE6_AUSTIN_10428P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_244340P2_ROUTE,
+    ENGINE6_AUSTIN_244340P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_121998P6_ROUTE,
+    ENGINE6_AUSTIN_121998P6_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_406074P1_ROUTE,
+    ENGINE6_AUSTIN_406074P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_291969P2_ROUTE,
+    ENGINE6_AUSTIN_291969P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_57338P1_ROUTE,
+    ENGINE6_AUSTIN_57338P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_42365P4_ROUTE,
+    ENGINE6_AUSTIN_42365P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_42365P1_ROUTE,
+    ENGINE6_AUSTIN_42365P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_350454P2_ROUTE,
+    ENGINE6_AUSTIN_350454P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_AUSTIN_134057P1_ROUTE,
+    ENGINE6_AUSTIN_134057P1_PRODUCT_CODE,
   ],
   [
     ENGINE6_BOULDER_87324P1_ROUTE,

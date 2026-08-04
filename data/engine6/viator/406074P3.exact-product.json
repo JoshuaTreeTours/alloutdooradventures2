@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "406074P3",
+    "productUrl": "https://www.viator.com/tours/Austin/Giant-Paddleboarding-the-Downtown-Skyline-at-Sunset-w-Bats/d5021-406074P3",
+    "title": "Downtown Austin Giant Paddleboard Sunset Tour with Bats",
+    "description": {
+      "text": "In Austin, paddle a giant board with your private group of up to six on Lady Bird Lake at sunset. Watch the Austin skyline glow, then position for the Congress Avenue Bridge bat emergence before returning to shore with life jackets, paddles, and a dry cooler provided. Stops include Lady Bird Lake Launch, Austin Skyline, Congress Avenue Bridge, Bat Colony Viewing. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "2 hours 30 minutes (approx.)",
+    "priceFrom": "From $59.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 62
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0d/e0/20/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Downtown Austin Giant Paddleboard Sunset Tour with Bats from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Austin, paddle a giant board with your private group of up to six on Lady Bird Lake at sunset.",
+    "itineraryItems": [
+      {
+        "title": "Lady Bird Lake Launch",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Austin Skyline",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Congress Avenue Bridge",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bat Colony Viewing",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Kayak or paddleboard equipment",
+      "Life jacket",
+      "Guided outing"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Downtown Austin Giant Paddleboard Sunset Tour with Bats?",
+        "answer": "The planned duration is 2 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Paddleboarding"
+      },
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 59
+      },
+      "currency": "USD"
+    }
+  }
+}

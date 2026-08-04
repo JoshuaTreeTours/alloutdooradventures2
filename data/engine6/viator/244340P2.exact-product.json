@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "244340P2",
+    "productUrl": "https://www.viator.com/tours/Austin/Lake-Travis-Sunset-Boat-Tour/d5021-244340P2",
+    "title": "Lake Travis Public Sunset Tour, BYOB",
+    "description": {
+      "text": "In Austin, watch sunset over Lake Travis on a public BYOB boat cruise lasting about 90 minutes. Bring your own drinks and enjoy open-water views of the Hill Country shoreline as the sky changes colors. Stops include Lake Travis Marina, Open Water Cruise, Sunset Viewpoint, Return Dock. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $69.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 235
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/c3/38/56.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Lake Travis Public Sunset Tour, BYOB from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Austin, watch sunset over Lake Travis on a public BYOB boat cruise lasting about 90 minutes.",
+    "itineraryItems": [
+      {
+        "title": "Lake Travis Marina",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Open Water Cruise",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sunset Viewpoint",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Return Dock",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Tour activity as described"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Lake Travis Public Sunset Tour, BYOB?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Boat Tours"
+      },
+      {
+        "label": "Sunset Cruises"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 69
+      },
+      "currency": "USD"
+    }
+  }
+}

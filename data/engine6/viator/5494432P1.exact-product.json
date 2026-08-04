@@ -1,0 +1,106 @@
+{
+  "product": {
+    "productCode": "5494432P1",
+    "productUrl": "https://www.viator.com/tours/Austin/20-Minute-Downtown-Austin-and-Lake-Austin/d5021-5494432P1",
+    "title": "20 Minutes Downtown Austin and Lake Austin",
+    "description": {
+      "text": "Fly over downtown Austin and Lake Austin on a compact helicopter sightseeing flight. Aerial viewpoints typically include the Texas State Capitol area, UT Stadium, Frost Bank Tower, and the lake corridor during about 20 minutes of flight time. Stops include Heliport Check-in, Downtown Austin Aerial, Lake Austin Aerial, Landing. Local commentary and route logistics are handled so you can focus on Austin skyline views, lake corridors, and Hill Country highlights. Ideal for visitors basing in Austin who want a guided Capital City experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Austin",
+      "state": "Texas"
+    },
+    "duration": "45 minutes (approx.)",
+    "priceFrom": "From $249.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/16/9c/b0/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "20 Minutes Downtown Austin and Lake Austin from Austin",
+      "Texas State Capitol, Lady Bird Lake, South Congress, or Hill Country routes",
+      "Professional guide with Austin local expertise",
+      "Small-group or private format as listed",
+      "Austin outdoor sightseeing, kayak, boat, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Austin meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Fly over downtown Austin and Lake Austin on a compact helicopter sightseeing flight.",
+    "itineraryItems": [
+      {
+        "title": "Heliport Check-in",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Downtown Austin Aerial",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lake Austin Aerial",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Landing",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional pilot",
+      "Helicopter flight as described"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the 20 Minutes Downtown Austin and Lake Austin?",
+        "answer": "The planned duration is 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Austin?",
+        "answer": "Meet your guide at the confirmed Austin meeting location listed when booking, typically near the confirmed Austin address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Helicopter Tours"
+      },
+      {
+        "label": "Extreme Sports"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 249
+      },
+      "currency": "USD"
+    }
+  }
+}
