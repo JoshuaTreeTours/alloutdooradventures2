@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "41410P10",
+    "productUrl": "https://www.viator.com/tours/Denver/Small-group-tour-of-Pikes-Peak-and-the-Garden-of-the-Gods-from-Denver/d4837-41410P10",
+    "title": "Small Group Tour of Pikes Peak and the Garden of the Gods from Denver",
+    "description": {
+      "text": "Head south from Denver on a small group tour to two of Colorado's most majestic places. First, visit Garden of the Gods, a unique geological area with colossal red rock formations. Stops include Garden of the Gods, Balanced Rock, Pikes Peak, Manitou Springs. Then take a drive up Pikes Peak, which inspired the song \"America the Beautiful.\" Have lunch and enjoy a bit of free time or shopping in the charming town of Manitou Springs, then take a scenic drive through the foothills back to Denver. Ideal for visitors basing in Denver who want a guided Front Range experience without coordinating transport, trailheads, or mountain logistics on their own."
+    },
+    "location": {
+      "city": "Denver",
+      "state": "Colorado"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $189.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 3265
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/fe/02/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Head south from Denver on a small group tour to two of Colorado's most majestic places",
+      "First, visit Garden of the Gods, a unique geological area with colossal red rock formations",
+      "Then take a drive up Pikes Peak, which inspired the song \"America the Beautiful.\" Have lunch and enjoy a bit of free tim",
+      "Small Group Tour of Pikes Peak and the Garden of the Gods from Denver departing from Denver",
+      "Professional Denver guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Denver hotel pickup point, Union Station area, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Denver hotel, Union Station area, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Head south from Denver on a small group tour to two of Colorado's most majestic places.",
+    "itineraryItems": [
+      {
+        "title": "Garden of the Gods",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Balanced Rock",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pikes Peak",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Manitou Springs",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Local taxes",
+      "Fuel surcharge"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Small Group Tour of Pikes Peak and the Garden of the Gods from Denver?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Denver?",
+        "answer": "Meet your guide at the confirmed Denver hotel pickup point, Union Station area, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 189
+      },
+      "currency": "USD"
+    }
+  }
+}

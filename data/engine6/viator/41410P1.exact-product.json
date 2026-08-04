@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "41410P1",
+    "productUrl": "https://www.viator.com/tours/Denver/Foothills-Mountain-Tour/d4837-41410P1",
+    "title": "Denver and Foothills Mountain Small-Group Tour",
+    "description": {
+      "text": "Explore the grand scenery of the Rocky Mountains and Colorado’s Wild West history on a small-group bus tour from Denver. Visit the famous Red Rocks Amphitheatre, and encounter descendants of America’s last wild buffalo herd grazing in the foothills. Stops include Red Rocks Park and Amphitheatre, Lookout Mountain, Lariat Loop, Golden. Get panoramic views of Denver and the Front Range from atop Lookout Mountain, drive the Lariat Loop National Scenic Byway, visit the town of Golden, and more. Ideal for visitors basing in Denver who want a guided Front Range experience without coordinating transport, trailheads, or mountain logistics on their own."
+    },
+    "location": {
+      "city": "Denver",
+      "state": "Colorado"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $79.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 518
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/2e/6e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the grand scenery of the Rocky Mountains and Colorado’s Wild West history on a small-group bus tour from Denver",
+      "Visit the famous Red Rocks Amphitheatre, and encounter descendants of America’s last wild buffalo herd grazing in the fo",
+      "Get panoramic views of Denver and the Front Range from atop Lookout Mountain, drive the Lariat Loop National Scenic Bywa",
+      "Denver and Foothills Mountain Small-Group Tour departing from Denver",
+      "Professional Denver guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Denver hotel pickup point, Union Station area, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Denver hotel, Union Station area, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the grand scenery of the Rocky Mountains and Colorado’s Wild West history on a small-group bus tour from Denver.",
+    "itineraryItems": [
+      {
+        "title": "Red Rocks Park and Amphitheatre",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lookout Mountain",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lariat Loop",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Golden",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Tour activity as described on Viator",
+      "Transportation as listed"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Denver and Foothills Mountain Small-Group Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Denver?",
+        "answer": "Meet your guide at the confirmed Denver hotel pickup point, Union Station area, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 79
+      },
+      "currency": "USD"
+    }
+  }
+}

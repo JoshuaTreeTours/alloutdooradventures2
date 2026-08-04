@@ -108,6 +108,22 @@ import specimen2804pinzhhPayload from "../../data/engine6/viator/2804PINZHH.exac
 import specimen5527luauPayload from "../../data/engine6/viator/5527LUAU.exact-product.json";
 import specimen418633p1Payload from "../../data/engine6/viator/418633P1.exact-product.json";
 import specimen207802p1Payload from "../../data/engine6/viator/207802P1.exact-product.json";
+import specimen41410p10Payload from "../../data/engine6/viator/41410P10.exact-product.json";
+import specimen8950p6Payload from "../../data/engine6/viator/8950P6.exact-product.json";
+import specimen72188p15Payload from "../../data/engine6/viator/72188P15.exact-product.json";
+import specimen41410p15Payload from "../../data/engine6/viator/41410P15.exact-product.json";
+import specimen41410p14Payload from "../../data/engine6/viator/41410P14.exact-product.json";
+import specimen8950p37Payload from "../../data/engine6/viator/8950P37.exact-product.json";
+import specimen59646p2Payload from "../../data/engine6/viator/59646P2.exact-product.json";
+import specimen8950p29Payload from "../../data/engine6/viator/8950P29.exact-product.json";
+import specimen8950p9Payload from "../../data/engine6/viator/8950P9.exact-product.json";
+import specimen59646p5Payload from "../../data/engine6/viator/59646P5.exact-product.json";
+import specimen323041p1Payload from "../../data/engine6/viator/323041P1.exact-product.json";
+import specimen128737p1Payload from "../../data/engine6/viator/128737P1.exact-product.json";
+import specimen128737p2Payload from "../../data/engine6/viator/128737P2.exact-product.json";
+import specimen41410p1Payload from "../../data/engine6/viator/41410P1.exact-product.json";
+import specimen72188p1Payload from "../../data/engine6/viator/72188P1.exact-product.json";
+import specimen59646p3Payload from "../../data/engine6/viator/59646P3.exact-product.json";
 import specimen5069west60Payload from "../../data/engine6/viator/5069WEST60.exact-product.json";
 import specimen5069comp60Payload from "../../data/engine6/viator/5069COMP60.exact-product.json";
 import specimen7029ogghanPayload from "../../data/engine6/viator/7029OGGHAN.exact-product.json";
@@ -1896,6 +1912,102 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "207802P1",
     publicUrl: "https://www.viator.com/tours/Big-Island-of-Hawaii/Award-Winning-Farm-Tour-Coffee-Chocolate-and-More/d669-207802P1",
     rawPayload: specimen207802p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "41410P10",
+    publicUrl: "https://www.viator.com/tours/Denver/Small-group-tour-of-Pikes-Peak-and-the-Garden-of-the-Gods-from-Denver/d4837-41410P10",
+    rawPayload: specimen41410p10Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8950P6",
+    publicUrl: "https://www.viator.com/tours/Denver/Private-Tour-Discover-Rocky-Mountain-National-Park-From-Denver/d4837-8950P6",
+    rawPayload: specimen8950p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "72188P15",
+    publicUrl: "https://www.viator.com/tours/Denver/Pikes-Peak-and-Garden-of-the-Gods-Tour-from-Denver/d4837-72188P15",
+    rawPayload: specimen72188p15Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "41410P15",
+    publicUrl: "https://www.viator.com/tours/Denver/Visit-Red-Rocks-Park-Continental-Divide-and-Breckenridge/d4837-41410P15",
+    rawPayload: specimen41410p15Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "41410P14",
+    publicUrl: "https://www.viator.com/tours/Denver/Mount-Evans-Tour-From-Denver-Small-Group/d4837-41410P14",
+    rawPayload: specimen41410p14Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8950P37",
+    publicUrl: "https://www.viator.com/tours/Denver/Breckenridge-Mountain-Explorer/d4837-8950P37",
+    rawPayload: specimen8950p37Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "59646P2",
+    publicUrl: "https://www.viator.com/tours/Denver/The-Winter-Ultimate-Mountain-Trip/d4837-59646P2",
+    rawPayload: specimen59646p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8950P29",
+    publicUrl: "https://www.viator.com/tours/Denver/Boulder-Flatirons-Explorer-from-Denver/d4837-8950P29",
+    rawPayload: specimen8950p29Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "8950P9",
+    publicUrl: "https://www.viator.com/tours/Denver/Foothill-Explorer-Tour-From-Denver/d4837-8950P9",
+    rawPayload: specimen8950p9Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "59646P5",
+    publicUrl: "https://www.viator.com/tours/Denver/7-Evergreen-Squaw-Pass-Echo-Lake-Year-Round/d4837-59646P5",
+    rawPayload: specimen59646p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "323041P1",
+    publicUrl: "https://www.viator.com/tours/Denver/Colorado-Hiking-Co/d4837-323041P1",
+    rawPayload: specimen323041p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "128737P1",
+    publicUrl: "https://www.viator.com/tours/Denver/Hiking-in-the-Rockies/d4837-128737P1",
+    rawPayload: specimen128737p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "128737P2",
+    publicUrl: "https://www.viator.com/tours/Denver/Sunset-Hike-in-the-Rocky-Mountains-near-Denver/d4837-128737P2",
+    rawPayload: specimen128737p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "41410P1",
+    publicUrl: "https://www.viator.com/tours/Denver/Foothills-Mountain-Tour/d4837-41410P1",
+    rawPayload: specimen41410p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "72188P1",
+    publicUrl: "https://www.viator.com/tours/Denver/Denver-Foothills-Tour/d4837-72188P1",
+    rawPayload: specimen72188p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "59646P3",
+    publicUrl: "https://www.viator.com/tours/Denver/Foothills-of-the-Rockies/d4837-59646P3",
+    rawPayload: specimen59646p3Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

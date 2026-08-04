@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "72188P15",
+    "productUrl": "https://www.viator.com/tours/Denver/Pikes-Peak-and-Garden-of-the-Gods-Tour-from-Denver/d4837-72188P15",
+    "title": "Pikes Peak and Garden of the Gods Tour from Denver",
+    "description": {
+      "text": "Discover some of Colorado's wildest Rocky Mountain Scenery on this full-day, small-group tour from Denver. In the morning, meet near Union Station, hop aboard your vehicle, and head first to the Garden of the Gods\u2014a nature park known for its staggering sandstone rock formations. Stops include Pikes Peak, Manitou Springs, Garden of the Gods, Colorado Springs. Next, drive all the way to the summit of Pikes Peak for extraordinary views over the landscape. Ideal for visitors basing in Denver who want a guided Front Range experience without coordinating transport, trailheads, or mountain logistics on their own."
+    },
+    "location": {
+      "city": "Denver",
+      "state": "Colorado"
+    },
+    "duration": "8 hours 30 minutes (approx.)",
+    "priceFrom": "From $189.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 205
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0d/ea/66/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover some of Colorado's wildest Rocky Mountain Scenery on this full-day, small-group tour from Denver",
+      "In the morning, meet near Union Station, hop aboard your vehicle, and head first to the Garden of the Gods\u2014a nature park",
+      "Next, drive all the way to the summit of Pikes Peak for extraordinary views over the landscape",
+      "Pikes Peak and Garden of the Gods Tour from Denver departing from Denver",
+      "Professional Denver guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Denver hotel pickup point, Union Station area, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Denver hotel, Union Station area, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover some of Colorado's wildest Rocky Mountain Scenery on this full-day, small-group tour from Denver.",
+    "itineraryItems": [
+      {
+        "title": "Pikes Peak",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Manitou Springs",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Garden of the Gods",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Colorado Springs",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Small Group Tour",
+      "Park Entry Fees",
+      "Professional Driver/Guide",
+      "Transportation",
+      "Lunch",
+      "Water",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Pikes Peak and Garden of the Gods Tour from Denver?",
+        "answer": "The planned duration is 8 hours 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Denver?",
+        "answer": "Meet your guide at the confirmed Denver hotel pickup point, Union Station area, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 189
+      },
+      "currency": "USD"
+    }
+  }
+}

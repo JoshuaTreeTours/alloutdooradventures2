@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "59646P5",
+    "productUrl": "https://www.viator.com/tours/Denver/7-Evergreen-Squaw-Pass-Echo-Lake-Year-Round/d4837-59646P5",
+    "title": "Shared Half-Day Mountain Tour in Red Rocks Evergreen and Echo Lake",
+    "description": {
+      "text": "Explore Colorado’s natural playgrounds, just a short drive from downtown Denver. Escape the city and head for the Rockies with a guide to handle the road, so you can focus on the stunning scenery of Mt. Evans, Bear Creek Canyon, and beyond. Stops include Red Rocks Park and Amphitheatre, Evergreen, Echo Lake, Mount Blue Sky, Bear Creek Canyon. Get a taste of mountain culture in the charming town of Evergreen, check out the dramatic formations of Red Rocks Amphitheatre, and hike around serene Echo Lake on this half-day mountain sampler. Ideal for visitors basing in Denver who want a guided Front Range experience without coordinating transport, trailheads, or mountain logistics on their own."
+    },
+    "location": {
+      "city": "Denver",
+      "state": "Colorado"
+    },
+    "duration": "5 hours (approx.)",
+    "priceFrom": "From $95.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 744
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/28/4d/67.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore Colorado’s natural playgrounds, just a short drive from downtown Denver",
+      "Escape the city and head for the Rockies with a guide to handle the road, so you can focus on the stunning scenery of Mt",
+      "Get a taste of mountain culture in the charming town of Evergreen, check out the dramatic formations of Red Rocks Amphit",
+      "Shared Half-Day Mountain Tour in Red Rocks Evergreen and Echo Lake departing from Denver",
+      "Professional Denver guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Denver hotel pickup point, Union Station area, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Denver hotel, Union Station area, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore Colorado’s natural playgrounds, just a short drive from downtown Denver.",
+    "itineraryItems": [
+      {
+        "title": "Red Rocks Park and Amphitheatre",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Evergreen",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Echo Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mount Blue Sky",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bear Creek Canyon",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "Tour activity as described on Viator",
+      "Transportation as listed"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Shared Half-Day Mountain Tour in Red Rocks Evergreen and Echo Lake?",
+        "answer": "The planned duration is 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Denver?",
+        "answer": "Meet your guide at the confirmed Denver hotel pickup point, Union Station area, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 95
+      },
+      "currency": "USD"
+    }
+  }
+}

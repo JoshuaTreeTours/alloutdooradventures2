@@ -1,0 +1,129 @@
+{
+  "product": {
+    "productCode": "8950P6",
+    "productUrl": "https://www.viator.com/tours/Denver/Private-Tour-Discover-Rocky-Mountain-National-Park-From-Denver/d4837-8950P6",
+    "title": "Discover Rocky Mountain National Park-Small Group Tour & Picnic",
+    "description": {
+      "text": "In Denver, climb from the streets of the \"Mile High City\" to Rocky Mountain National Park, on a day trip that showcases the rugged beauty of Colorado's mountains. Weave through small, historic towns and drive over alpine passes, as you scan the horizon for mountain wildlife such as elk, black bears, or moose. Stops include Denver Union Station, Boulder, Lyons, Lily Lake, Rocky Mountain National Park, Stanley Hotel. Transportation and local commentary are handled so you can focus on Denver's foothills scenery, red-rock amphitheater views, and Rocky Mountain day-trip landmarks. Ideal for visitors basing in Denver who want a guided Front Range experience without coordinating transport, trailheads, or mountain logistics on their own."
+    },
+    "location": {
+      "city": "Denver",
+      "state": "Colorado"
+    },
+    "duration": "8 hours (approx.)",
+    "priceFrom": "From $193.50",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 3484
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/73/62/09.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover Rocky Mountain National Park-Small Group Tour & Picnic from Denver",
+      "Red Rocks, foothills overlooks, or Rocky Mountain day-trip routing",
+      "Professional guide with Denver Front Range expertise",
+      "Small-group format as listed",
+      "Denver outdoor sightseeing or hiking experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Denver hotel pickup point, Union Station area, or meeting location listed when booking."
+      },
+      "end": {
+        "description": "Return to your Denver hotel, Union Station area, or meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Denver, climb from the streets of the \"Mile High City\" to Rocky Mountain National Park, on a day trip that showcases the rugged beauty of Colorado's mountains.",
+    "itineraryItems": [
+      {
+        "title": "Denver Union Station",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boulder",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lyons",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Lily Lake",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rocky Mountain National Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Stanley Hotel",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Estes Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Colorado's best Guides",
+      "Curated Daily - Guides adapt to conditions",
+      "Fresh Picnic Lunch Included",
+      "Entrance fee - Park Entry Included",
+      "Wildlife guides",
+      "Air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Discover Rocky Mountain National Park-Small Group Tour & Picnic?",
+        "answer": "The planned duration is 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Denver?",
+        "answer": "Meet your guide at the confirmed Denver hotel pickup point, Union Station area, or meeting location listed when booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 193.5
+      },
+      "currency": "USD"
+    }
+  }
+}

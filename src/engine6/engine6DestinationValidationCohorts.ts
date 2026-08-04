@@ -130,6 +130,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Denver",
+      matches: tour =>
+        /\/colorado\/denver\//i.test(tour.canonicalPath) ||
+        (/\bdenver\b/i.test(tour.city) && /\bcolorado\b/i.test(tour.state)),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Moab",
       matches: tour =>
         /\/utah\/moab\//i.test(tour.canonicalPath) ||
