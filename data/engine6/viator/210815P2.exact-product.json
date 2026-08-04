@@ -1,0 +1,92 @@
+{
+  "product": {
+    "productCode": "210815P2",
+    "productUrl": "https://www.viator.com/tours/Boulder/Scenic-Mountain-Photoshoot-in-Boulder/d22773-210815P2",
+    "title": "Scenic Mountain Photoshoot in Boulder, Colorado",
+    "description": {
+      "text": "Capture professional portraits against Boulder's foothills scenery on this private mountain photoshoot. A local photographer guides you to scenic Flatirons-area settings sized for couples, families, and solo visitors, then delivers polished images from the session. Stops include Flatirons, Rocky Mountains. Local commentary and route logistics are handled so you can focus on Boulder's foothills scenery, open-space trails, and downtown highlights. Ideal for visitors basing in Boulder who want a guided Front Range experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Boulder",
+      "state": "Colorado"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $125.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 26
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/1b/07/9f/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Scenic Mountain Photoshoot in Boulder, Colorado from Boulder",
+      "Flatirons foothills, Pearl Street, Chautauqua, or creek-side paths",
+      "Professional guide with Boulder local expertise",
+      "Small-group or private format as listed",
+      "Boulder outdoor sightseeing, hiking, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meeting point Boulder, CO, USA Open in Google Maps We rotate between a few different trails in Boulder. You may take an Uber to the location or we will give you detailed driving directions. You will be given an exact meeting location after you book. End point This activity ends back at the meeting point."
+      },
+      "end": {
+        "description": "Return to your Boulder meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Capture professional portraits against Boulder's foothills scenery on this private mountain photoshoot.",
+    "itineraryItems": [
+      {
+        "title": "Flatirons",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rocky Mountains",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "1 hour photo session and 50 USD digital image credit"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Scenic Mountain Photoshoot in Boulder, Colorado?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Boulder?",
+        "answer": "Meeting point Boulder, CO, USA Open in Google Maps We rotate between a few different trails in Boulder. You may take an Uber to the location or we will give you detailed driving directions. You will be given an exact meeting location after you book. End point This activity ends back at the meeting point."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 125
+      },
+      "currency": "USD"
+    }
+  }
+}

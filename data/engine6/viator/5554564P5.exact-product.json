@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "5554564P5",
+    "productUrl": "https://www.viator.com/tours/Boulder/Boulder-to-Eldorado-Canyon-E-Bike-Tour-with-Ice-Cream-Stop/d22773-5554564P5",
+    "title": "Boulder to Eldorado Canyon E-Bike Tour with Ice Cream Stop",
+    "description": {
+      "text": "Explore the stunning landscapes of Boulder and Eldorado Canyon on a thrilling half-day e-bike tour. This 29-mile journey takes you along peaceful bike paths and scenic roads, showcasing the majestic Flatirons and the natural beauty that Colorado is famous for. Stops include Harlow Platts Community Park, Eldorado Canyon State Park, The Boulder Dushanbe Teahouse, Boulder Canyon Scenic Drive, Chautauqua Park. Enjoy a refreshing artisanal ice cream break at the Dushanbe Teahouse, and learn about local history at the Eldorado Canyon park visitor center. Ideal for visitors basing in Boulder who want a guided Front Range experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Boulder",
+      "state": "Colorado"
+    },
+    "duration": "4 to 5 hours (approx.)",
+    "priceFrom": "From $187.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 3
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/30/c4/36/b3/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the stunning landscapes of Boulder and Eldorado Canyon on a thrilling half-day e-bike tour",
+      "This 29-mile journey takes you along peaceful bike paths and scenic roads, showcasing the majestic Flatirons and the nat",
+      "Enjoy a refreshing artisanal ice cream break at the Dushanbe Teahouse, and learn about local history at the Eldorado Can",
+      "Boulder to Eldorado Canyon E-Bike Tour with Ice Cream Stop departing from Boulder",
+      "Professional Boulder guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "You can head directly to the meeting point, or request pickup Pickup points Select a pickup point Pickup details I'll be in a white SUV towing a trailer with bikes. or Meeting point Harlow Platts Park Picnic Tables, Shelter and Gazebo Boulder, CO 80305, USA Open in Google Maps We meet at Harlow Platts Park in Boulder Colorado. Use the parking lots or street parking. I'll have your bike ready to go"
+      },
+      "end": {
+        "description": "Return to your Boulder meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the stunning landscapes of Boulder and Eldorado Canyon on a thrilling half-day e-bike tour.",
+    "itineraryItems": [
+      {
+        "title": "Harlow Platts Community Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Eldorado Canyon State Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Boulder Dushanbe Teahouse",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boulder Canyon Scenic Drive",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Chautauqua Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Snacks Ice Cream at the Dushanbe Tea House",
+      "Admission Fee - Eldorado Canyon State Park pass",
+      "Use of bicycle Premium e-bike included"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Boulder to Eldorado Canyon E-Bike Tour with Ice Cream Stop?",
+        "answer": "The planned duration is 4 to 5 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boulder?",
+        "answer": "You can head directly to the meeting point, or request pickup Pickup points Select a pickup point Pickup details I'll be in a white SUV towing a trailer with bikes. or Meeting point Harlow Platts Park Picnic Tables, Shelter and Gazebo Boulder, CO 80305, USA Open in Google Maps We meet at Harlow Platts Park in Boulder Colorado. Use the parking lots or street parking. I'll have your bike ready to go"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 187
+      },
+      "currency": "USD"
+    }
+  }
+}

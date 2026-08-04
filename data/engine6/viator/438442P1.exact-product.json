@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "438442P1",
+    "productUrl": "https://www.viator.com/tours/Boulder/Boulder-Peaks-and-Wilderness-Tours-Mallory-Cave-Trail/d22773-438442P1",
+    "title": "Private \"Boulder Peaks & Wilderness Tours: Mallory Cave Trail\"",
+    "description": {
+      "text": "Hike Boulder's Flatirons foothills on a private wilderness tour that starts at the NCAR trailhead. Local guides lead you through pine forest, rocky outcrops, and scenic overlooks near Mallory Cave Trail with photo stops and naturalist commentary along the way. Stops include National Center for Atmospheric Research - NCAR, Mallory Cave Trail, Flatirons. Local commentary and route logistics are handled so you can focus on Boulder's foothills scenery, open-space trails, and downtown highlights. Ideal for visitors basing in Boulder who want a guided Front Range experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Boulder",
+      "state": "Colorado"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $300.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 9
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/1b/2a/59/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Private \"Boulder Peaks & Wilderness Tours: Mallory Cave Trail\" from Boulder",
+      "Flatirons foothills, Pearl Street, Chautauqua, or creek-side paths",
+      "Professional guide with Boulder local expertise",
+      "Small-group or private format as listed",
+      "Boulder outdoor sightseeing, hiking, or e-bike experience"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Boulder meeting location listed when booking, typically near the confirmed Boulder address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Boulder meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Hike Boulder's Flatirons foothills on a private wilderness tour that starts at the NCAR trailhead.",
+    "itineraryItems": [
+      {
+        "title": "National Center for Atmospheric Research - NCAR",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Mallory Cave Trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Flatirons",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private \"Boulder Peaks & Wilderness Tours: Mallory Cave Trail\"?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boulder?",
+        "answer": "Meet your guide at the confirmed Boulder meeting location listed when booking, typically near the confirmed Boulder address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 300
+      },
+      "currency": "USD"
+    }
+  }
+}

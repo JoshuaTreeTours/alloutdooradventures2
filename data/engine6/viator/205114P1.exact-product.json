@@ -1,0 +1,92 @@
+{
+  "product": {
+    "productCode": "205114P1",
+    "productUrl": "https://www.viator.com/tours/Boulder/One-of-a-Kind-Horse-Discovery-Experiences/d22773-205114P1",
+    "title": "Leadership & Mindfulness Retreat with Horses - Individual & Group",
+    "description": {
+      "text": "In Boulder, in the presence of horses, you can tell a lot about humans. With this experience, not only will you discover how these magnificent creatures interact with us and each other, but you’ll get a keen eye on your own unique gifts and traits. Stops include Equine Interaction Arena. No experience or riding required—just a willingness to experience the world from another perspective. Ideal for visitors basing in Boulder who want a guided Front Range experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Boulder",
+      "state": "Colorado"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $210.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 32
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/19/0c/2f/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "In the presence of horses, you can tell a lot about humans",
+      "With this experience, not only will you discover how these magnificent creatures interact with us and each other, but yo",
+      "No experience or riding required—just a willingness to experience the world from another perspective",
+      "Leadership & Mindfulness Retreat with Horses - Individual & Group departing from Boulder",
+      "Professional Boulder guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meeting point Sherwood Circle Sherwood Cir, Boulder, CO 80304, USA Open in Google Maps See email for details. End point This activity ends back at the meeting point. Operating hours 10/06/2019 - 08/17/2027 Monday - Saturday : 9:00 AM - 7:00 PM"
+      },
+      "end": {
+        "description": "Return to your Boulder meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Boulder, in the presence of horses, you can tell a lot about humans.",
+    "itineraryItems": [
+      {
+        "title": "Horse Discovery Retreat Facility",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Equine Interaction Arena",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guide/Instructor"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Leadership & Mindfulness Retreat with Horses - Individual & Group?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Boulder?",
+        "answer": "Meeting point Sherwood Circle Sherwood Cir, Boulder, CO 80304, USA Open in Google Maps See email for details. End point This activity ends back at the meeting point. Operating hours 10/06/2019 - 08/17/2027 Monday - Saturday : 9:00 AM - 7:00 PM"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 210
+      },
+      "currency": "USD"
+    }
+  }
+}

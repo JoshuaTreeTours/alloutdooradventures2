@@ -125,6 +125,12 @@ export const ENGINE6_DESTINATION_INFRASTRUCTURE_SPECS: Partial<
     stateSlug: "colorado",
     citySlug: "aspen",
   },
+  boulder: {
+    destinationLabel: "Boulder",
+    destinationCitySlug: "boulder",
+    stateSlug: "colorado",
+    citySlug: "boulder",
+  },
   "hawaii-volcanoes-national-park": {
     destinationLabel: "Hawaii Volcanoes National Park",
     destinationCitySlug: "hawaii-volcanoes-national-park",

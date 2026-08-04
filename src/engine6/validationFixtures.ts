@@ -109,6 +109,21 @@ import specimen5527luauPayload from "../../data/engine6/viator/5527LUAU.exact-pr
 import specimen418633p1Payload from "../../data/engine6/viator/418633P1.exact-product.json";
 import specimen207802p1Payload from "../../data/engine6/viator/207802P1.exact-product.json";
 import specimen41410p10Payload from "../../data/engine6/viator/41410P10.exact-product.json";
+import specimen87324p1Payload from "../../data/engine6/viator/87324P1.exact-product.json";
+import specimen326597p1Payload from "../../data/engine6/viator/326597P1.exact-product.json";
+import specimen134767p1Payload from "../../data/engine6/viator/134767P1.exact-product.json";
+import specimen326597p4Payload from "../../data/engine6/viator/326597P4.exact-product.json";
+import specimen326597p3Payload from "../../data/engine6/viator/326597P3.exact-product.json";
+import specimen283446p3Payload from "../../data/engine6/viator/283446P3.exact-product.json";
+import specimen411989p1Payload from "../../data/engine6/viator/411989P1.exact-product.json";
+import specimen205114p1Payload from "../../data/engine6/viator/205114P1.exact-product.json";
+import specimen5653780p1Payload from "../../data/engine6/viator/5653780P1.exact-product.json";
+import specimen210815p2Payload from "../../data/engine6/viator/210815P2.exact-product.json";
+import specimen438442p1Payload from "../../data/engine6/viator/438442P1.exact-product.json";
+import specimen404160p1Payload from "../../data/engine6/viator/404160P1.exact-product.json";
+import specimen87324p2Payload from "../../data/engine6/viator/87324P2.exact-product.json";
+import specimen5554564p5Payload from "../../data/engine6/viator/5554564P5.exact-product.json";
+import specimen397161p1Payload from "../../data/engine6/viator/397161P1.exact-product.json";
 import specimen74828p1Payload from "../../data/engine6/viator/74828P1.exact-product.json";
 import specimen74828p2Payload from "../../data/engine6/viator/74828P2.exact-product.json";
 import specimen74828p3Payload from "../../data/engine6/viator/74828P3.exact-product.json";
@@ -1924,6 +1939,96 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "41410P10",
     publicUrl: "https://www.viator.com/tours/Denver/Small-group-tour-of-Pikes-Peak-and-the-Garden-of-the-Gods-from-Denver/d4837-41410P10",
     rawPayload: specimen41410p10Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "87324P1",
+    publicUrl: "https://www.viator.com/tours/Boulder/Miles-of-Smiles-E-Bike-Tour/d22773-87324P1",
+    rawPayload: specimen87324p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "326597P1",
+    publicUrl: "https://www.viator.com/tours/Boulder/Ride-Colorado-Boulders-Best-Tour-New-RAD-eBikes-and-SENA-Bluetooth-Helmets/d22773-326597P1",
+    rawPayload: specimen326597p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "134767P1",
+    publicUrl: "https://www.viator.com/tours/Boulder/Russells-Electric-Bike-Tour-Best-of-Boulder/d22773-134767P1",
+    rawPayload: specimen134767p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "326597P4",
+    publicUrl: "https://www.viator.com/tours/Boulder/IRideColorado/d22773-326597P4",
+    rawPayload: specimen326597p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "326597P3",
+    publicUrl: "https://www.viator.com/tours/Boulder/IRideColorado/d22773-326597P3",
+    rawPayload: specimen326597p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "283446P3",
+    publicUrl: "https://www.viator.com/tours/Boulder/Boulder-Joyride-Guided-eBike-Tour/d22773-283446P3",
+    rawPayload: specimen283446p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "411989P1",
+    publicUrl: "https://www.viator.com/tours/Boulder/Immersive-Boulder-Flatiron-Hike/d22773-411989P1",
+    rawPayload: specimen411989p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "205114P1",
+    publicUrl: "https://www.viator.com/tours/Boulder/One-of-a-Kind-Horse-Discovery-Experiences/d22773-205114P1",
+    rawPayload: specimen205114p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5653780P1",
+    publicUrl: "https://www.viator.com/tours/Boulder/Rocky-Mountain-National-Park-Tour-and-Picnic/d22773-5653780P1",
+    rawPayload: specimen5653780p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "210815P2",
+    publicUrl: "https://www.viator.com/tours/Boulder/Scenic-Mountain-Photoshoot-in-Boulder/d22773-210815P2",
+    rawPayload: specimen210815p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "438442P1",
+    publicUrl: "https://www.viator.com/tours/Boulder/Boulder-Peaks-and-Wilderness-Tours-Mallory-Cave-Trail/d22773-438442P1",
+    rawPayload: specimen438442p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "404160P1",
+    publicUrl: "https://www.viator.com/tours/Boulder/Boulder-Flatirons-Photo-Adventure/d22773-404160P1",
+    rawPayload: specimen404160p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "87324P2",
+    publicUrl: "https://www.viator.com/tours/Boulder/Boulder-Backroads-E-Bike-Dirt-Road-Tour/d22773-87324P2",
+    rawPayload: specimen87324p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5554564P5",
+    publicUrl: "https://www.viator.com/tours/Boulder/Boulder-to-Eldorado-Canyon-E-Bike-Tour-with-Ice-Cream-Stop/d22773-5554564P5",
+    rawPayload: specimen5554564p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "397161P1",
+    publicUrl: "https://www.viator.com/tours/Boulder/Boulder-Yoga-Hikes/d22773-397161P1",
+    rawPayload: specimen397161p1Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

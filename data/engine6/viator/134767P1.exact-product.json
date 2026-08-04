@@ -1,0 +1,112 @@
+{
+  "product": {
+    "productCode": "134767P1",
+    "productUrl": "https://www.viator.com/tours/Boulder/Russells-Electric-Bike-Tour-Best-of-Boulder/d22773-134767P1",
+    "title": "Original eBike Tour - Best of Boulder - guided Bike Tour",
+    "description": {
+      "text": "Get a comprehensive tour of Boulder on this excursion astride an electric bike. Riding an e-bike means you can work as hard as you like, using the pedal assist to get you up the hills. Stops include Hotel Boulderado, Pearl Street Mall, The Boulder Dushanbe Teahouse, Boulder Creek Path, University of Colorado at Boulder, Folsom Field. Pedal through the charming neighborhoods, NCAR, University of Colorado, Chautauqua, the historic downtown areas, and along Boulder Creek. Ideal for visitors basing in Boulder who want a guided Front Range experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Boulder",
+      "state": "Colorado"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $105.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 249
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/18/f9/20/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Get a comprehensive tour of Boulder on this excursion astride an electric bike",
+      "Riding an e-bike means you can work as hard as you like, using the pedal assist to get you up the hills",
+      "Pedal through the charming neighborhoods, NCAR, University of Colorado, Chautauqua, the historic downtown areas, and alo",
+      "Original eBike Tour - Best of Boulder - guided Bike Tour departing from Boulder",
+      "Professional Boulder guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Boulder meeting location listed when booking, typically near the confirmed Boulder address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Boulder meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Get a comprehensive tour of Boulder on this excursion astride an electric bike.",
+    "itineraryItems": [
+      {
+        "title": "Hotel Boulderado",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Pearl Street Mall",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Boulder Dushanbe Teahouse",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boulder Creek Path",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "University of Colorado at Boulder",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Use of bicycle",
+      "Helmet",
+      "Warm Gloves (Spring and Fall tours only)",
+      "Rain Jacket/Coat",
+      "Sunscreen"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Original eBike Tour - Best of Boulder - guided Bike Tour?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boulder?",
+        "answer": "Meet your guide at the confirmed Boulder meeting location listed when booking, typically near the confirmed Boulder address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Mountain Bike Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 105
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "product": {
+    "productCode": "326597P1",
+    "productUrl": "https://www.viator.com/tours/Boulder/Ride-Colorado-Boulders-Best-Tour-New-RAD-eBikes-and-SENA-Bluetooth-Helmets/d22773-326597P1",
+    "title": "Ride Boulder's Best Guided eBike E-Bike Tour! Electric eBike",
+    "description": {
+      "text": "Enjoy Boulder's natural beauty, iconic landmarks and major attractions all from a pedal-assist electric bike. After a short tutorial, we'll head out on the trails to cover the historic Pearl Street pedestrian mall, the CU Boulder campus, Wonderland Lake, Boulder Creek and more! Stops include University of Colorado at Boulder, The Hill, The Boulder Dushanbe Teahouse, Hotel Boulderado, Flatirons, Folsom Field. This is a great activity for solo visitors, groups and families to see town in an active, fun and memorable way. Ideal for visitors basing in Boulder who want a guided Front Range experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Boulder",
+      "state": "Colorado"
+    },
+    "duration": "2 to 3 hours (approx.)",
+    "priceFrom": "From $105.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 283
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/33/d4/4c/dd/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy Boulder's natural beauty, iconic landmarks and major attractions all from a pedal-assist electric bike",
+      "After a short tutorial, we'll head out on the trails to cover the historic Pearl Street pedestrian mall, the CU Boulder ",
+      "This is a great activity for solo travelers, groups and families to see town in an active, fun and memorable way",
+      "Ride Boulder's Best Guided eBike E-Bike Tour! Electric eBike departing from Boulder",
+      "Professional Boulder guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Boulder meeting location listed when booking, typically near the confirmed Boulder address shown at booking."
+      },
+      "end": {
+        "description": "Return to your Boulder meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Enjoy Boulder's natural beauty, iconic landmarks and major attractions all from a pedal-assist electric bike.",
+    "itineraryItems": [
+      {
+        "title": "University of Colorado at Boulder",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Hill",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "The Boulder Dushanbe Teahouse",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hotel Boulderado",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Flatirons",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Use of electric bike",
+      "Helmet",
+      "Bottled water",
+      "Electric Bike options to bring children - 2 children, 12 and under can ride with adults. Max. weight limit of 350lbs."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ride Boulder's Best Guided eBike E-Bike Tour! Electric eBike?",
+        "answer": "The planned duration is 2 to 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Boulder?",
+        "answer": "Meet your guide at the confirmed Boulder meeting location listed when booking, typically near the confirmed Boulder address shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Mountain Bike Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 105
+      },
+      "currency": "USD"
+    }
+  }
+}
