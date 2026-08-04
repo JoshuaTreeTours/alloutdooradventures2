@@ -1,0 +1,98 @@
+{
+  "product": {
+    "productCode": "406744P2",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Peekaboo-Spooky-and-Dry-Fork-Slot-Canyon-Adventure/d50798-406744P2",
+    "title": "Peekaboo, Spooky and Dry Fork Slot Canyon Tour",
+    "description": {
+      "text": "In Bryce Canyon National Park, Discover the rugged landscape of the Grand Staircase-Escalante National Monument with a guide on this small-group half-day tour. Let your guide worry about the route while you focus on having fun in this unique part of the world. Stops include Dry Fork Slot Canyon, Spooky Gulch, Peekaboo Slot Canyon. Walk through a scenic terrain of red and purple rock, arches, and narrow slot openings, checking out slot canyons such as Peek-a-Boo and Spooky Gulch. Ideal for visitors basing near Bryce Canyon City who want a guided red-rock experience without coordinating park entrances, trailheads, or photo stops on their own."
+    },
+    "location": {
+      "city": "Bryce Canyon National Park",
+      "state": "Utah"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $139.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 112
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7d/05/c2.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the rugged landscape of the Grand Staircase-Escalante National Monument with a guide on this small-group half-d",
+      "Let your guide worry about the route while you focus on having fun in this unique part of the world",
+      "Walk through a scenic terrain of red and purple rock, arches, and narrow slot openings, checking out slot canyons such a",
+      "Peekaboo, Spooky and Dry Fork Slot Canyon Tour near Bryce Canyon National Park",
+      "Professional Bryce Canyon guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Bryce Canyon meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bryce Canyon National Park, Discover the rugged landscape of the Grand Staircase-Escalante National Monument with a guide on this small-group half-day tour.",
+    "itineraryItems": [
+      {
+        "title": "Dry Fork Slot Canyon",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Spooky Gulch",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Peekaboo Slot Canyon",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "We will provide some water, but guests should bring their own as well."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Peekaboo, Spooky and Dry Fork Slot Canyon Tour?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Bryce Canyon National Park?",
+        "answer": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 139
+      },
+      "currency": "USD"
+    }
+  }
+}

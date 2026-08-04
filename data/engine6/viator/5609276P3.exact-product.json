@@ -1,0 +1,91 @@
+{
+  "product": {
+    "productCode": "5609276P3",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Late-Night-Stargazing-Tour/d50798-5609276P3",
+    "title": "Late Night Stargazing",
+    "description": {
+      "text": "In Bryce Canyon National Park, This unique experience offers unparalleled views of the night sky from a carefully chosen high vantage point away from campground lights and dust. Enjoy comfortable seating and blankets with uninterrupted stargazing using red-filtered lighting. Knowledgeable guides set up telescopes and prepare the viewing area for views of the Milky Way, distant galaxies, and celestial objects. Ideal for visitors basing near Bryce Canyon City who want a guided red-rock experience without coordinating park entrances, trailheads, or photo stops on their own."
+    },
+    "location": {
+      "city": "Bryce Canyon National Park",
+      "state": "Utah"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $99.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 7
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/cc/03/d6/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Prime visibility from a high vantage point away from campground lights and dust",
+      "Comfortable seating and blankets provided",
+      "Red-filtered lighting to minimize light pollution",
+      "Expert guidance with telescopes set up in advance"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Bryce Canyon meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bryce Canyon National Park, This unique experience offers unparalleled views of the night sky from a carefully chosen high vantage point away from campground lights and dust.",
+    "itineraryItems": [
+      {
+        "title": "Bryce Canyon National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Telescope Viewing Site",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hot Chocolate/Tea/Coffee"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Late Night Stargazing?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from near Bryce Canyon National Park?",
+        "answer": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Stargazing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 99
+      },
+      "currency": "USD"
+    }
+  }
+}

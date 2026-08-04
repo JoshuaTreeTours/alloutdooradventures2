@@ -1727,6 +1727,78 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
         ],
       },
       {
+        name: "Bryce Canyon National Park",
+        slug: "bryce-canyon-national-park",
+        stateSlug: "utah",
+        region: "Bryce Canyon",
+        lat: 37.593,
+        lng: -112.1871,
+        shortDescription:
+          "Hoodoo amphitheaters, rim overlooks, stargazing, and red-rock guided adventures.",
+        intro:
+          "Bryce Canyon National Park is Utah's high-plateau hoodoo amphitheater—a landscape of pink limestone spires, rim viewpoints, and dark skies above Bryce Canyon City.",
+        heroImages: [
+          "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ff/99/2a.jpg",
+        ],
+        activityTags: ["canyons", "hiking", "stargazing"],
+        whereItIs: [
+          "Bryce Canyon sits on Utah's Paunsaugunt Plateau near Bryce Canyon City, about two hours from Springdale and Zion.",
+          "Ruby’s Inn and Bryce Canyon City provide lodging and tour departures outside the main park entrance.",
+        ],
+        experiences: {
+          mountains:
+            "Hike below the rim on Queen's Garden and Navajo Loop with a certified guide.",
+          lakesWater:
+            "Seasonal reservoirs near the park offer quiet contrast to the amphitheater rim.",
+          desertForest:
+            "Ponderosa pine and bristlecone forests frame pink limestone hoodoos along the rim.",
+          cycling:
+            "Guided e-bike tours reach Fairyland Point and Inspiration Point overlooks.",
+          scenicDrives:
+            "Bryce Canyon Scenic Drive links amphitheater viewpoints to Rainbow Point.",
+          seasonalNotes:
+            "Summer brings long days and dark-sky nights; winter snow contrasts the orange hoodoos.",
+        },
+        thingsToDo: [
+          "Walk the rim between Sunrise, Sunset, Inspiration, and Bryce Points.",
+          "Descend into the amphitheater on Queen's Garden or Navajo Loop.",
+          "Book a stargazing tour under Bryce's International Dark Sky skies.",
+          "Ride horseback or ATV routes in nearby Red Canyon country.",
+          "Fly a short helicopter circuit over Fairyland and Boat Mesa.",
+        ],
+        toursCopy: [
+          "Small-group scenic vans and private guides cover the amphitheater overlooks efficiently.",
+          "Premium options include helicopter flights, photography tours, and full-day hiking adventures.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: scenic rim overlooks and short amphitheater walks.",
+            "Afternoon: guided hike or e-bike tour.",
+            "Evening: dark-sky stargazing near the park.",
+          ],
+          dayTwo: [
+            "Morning: horseback or ATV outing in Red Canyon country.",
+            "Afternoon: photography stops or helicopter flight.",
+            "Evening: sunset at Inspiration Point or Bryce Point.",
+          ],
+        },
+        gettingThere: [
+          "Cedar City Regional and St. George Regional airports are the closest commercial options; Las Vegas is about a 4-hour drive.",
+        ],
+        faq: [
+          {
+            question: "How much time do I need in Bryce Canyon National Park?",
+            answer:
+              "A half day covers the main amphitheater overlooks; plan a full day for hiking below the rim plus sunset or stargazing.",
+          },
+          {
+            question: "Is Bryce Canyon good for stargazing?",
+            answer:
+              "Yes. Bryce Canyon is an International Dark Sky Park, and guided telescope tours operate near the park.",
+          },
+        ],
+      },
+      {
         name: "Park City",
         slug: "park-city",
         stateSlug: "utah",

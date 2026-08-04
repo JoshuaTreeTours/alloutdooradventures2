@@ -1,0 +1,114 @@
+{
+  "product": {
+    "productCode": "5569540P2",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-National-Park-30-Minute-Helicopter-Tour/d50798-5569540P2",
+    "title": "Bryce Canyon National Park 30-Minute Helicopter Tour",
+    "description": {
+      "text": "Experience the breathtaking beauty of Bryce Canyon National Park from above on a 30-minute, 55-mile helicopter tour, departing from Bryce Canyon Airport. Soar past iconic landmarks like Rainbow Point, Natural Bridge, Boat Mesa, and Fairyland, with stunning views of remote ridges and ancient Bristlecone Pines rarely seen from the ground. Stops include Fairyland Point, Rainbow Point, Bryce Point, Boat Mesa, Natural Bridge. Local commentary and route logistics are handled so you can focus on hoodoo viewpoints, rim trails, and dark-sky or adventure highlights. Ideal for visitors basing near Bryce Canyon City who want a guided red-rock experience without coordinating park entrances, trailheads, or photo stops on their own."
+    },
+    "location": {
+      "city": "Bryce Canyon National Park",
+      "state": "Utah"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $309.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7c/08/ad.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "30-minute, 55-mile helicopter tour from Bryce Canyon Airport",
+      "Views of Rainbow Point, Natural Bridge, Boat Mesa, and Fairyland",
+      "See remote ridges and ancient Bristlecone Pines rarely seen from the ground"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Bryce Canyon meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience the breathtaking beauty of Bryce Canyon National Park from above on a 30-minute, 55-mile helicopter tour, departing from Bryce Canyon Airport.",
+    "itineraryItems": [
+      {
+        "title": "Bryce Canyon National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fairyland Point",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Rainbow Point",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bryce Point",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boat Mesa",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Natural Bridge",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "All Fees and Taxes",
+      "30-Minute Helicopter Tour over Bryce Canyon"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bryce Canyon National Park 30-Minute Helicopter Tour?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from near Bryce Canyon National Park?",
+        "answer": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Sightseeing & City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 309
+      },
+      "currency": "USD"
+    }
+  }
+}

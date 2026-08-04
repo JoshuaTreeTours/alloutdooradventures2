@@ -1,0 +1,96 @@
+{
+  "product": {
+    "productCode": "422797P7",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Private-Bryce-Canyon-and-Slot-Canyon-Full-Day-Hike/d50798-422797P7",
+    "title": "Private Bryce Canyon and Slot Canyon Full Day Hike",
+    "description": {
+      "text": "In Bryce Canyon National Park, Join Sundial Guides on this 6-8 hour PRIVATE hiking adventure exploring two famous locations. Best way to explore Bryce Canyon National Park and surrounding Grand Staircase of Escalante National Monument in one full day. Stops include Grand Staircase-Escalante National Monument. You will hike in Bryce and then travel by 4x4 to a less-visited slot canyon in the Grand Staircase. Ideal for visitors basing near Bryce Canyon City who want a guided red-rock experience without coordinating park entrances, trailheads, or photo stops on their own."
+    },
+    "location": {
+      "city": "Bryce Canyon National Park",
+      "state": "Utah"
+    },
+    "duration": "6 to 8 hours (approx.)",
+    "priceFrom": "From $354.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/15/7d/a3.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Join Sundial Guides on this 6-8 hour PRIVATE hiking adventure exploring two famous locations",
+      "Best way to explore Bryce Canyon National Park and surrounding Grand Staircase of Escalante National Monument in one ful",
+      "You will hike in Bryce and then travel by 4x4 to a less-visited slot canyon in the Grand Staircase",
+      "Private Bryce Canyon and Slot Canyon Full Day Hike near Bryce Canyon National Park",
+      "Professional Bryce Canyon guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Bryce Canyon meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bryce Canyon National Park, Join Sundial Guides on this 6-8 hour PRIVATE hiking adventure exploring two famous locations.",
+    "itineraryItems": [
+      {
+        "title": "Bryce Canyon National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Grand Staircase-Escalante National Monument",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation",
+      "Knowledgable Guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Bryce Canyon and Slot Canyon Full Day Hike?",
+        "answer": "The planned duration is 6 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Bryce Canyon National Park?",
+        "answer": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking"
+      },
+      {
+        "label": "Jeep & Off-Road"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 354
+      },
+      "currency": "USD"
+    }
+  }
+}

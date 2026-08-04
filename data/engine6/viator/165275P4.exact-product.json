@@ -1,0 +1,103 @@
+{
+  "product": {
+    "productCode": "165275P4",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Ebike-Tour/d50798-165275P4",
+    "title": "Bryce Canyon E-bike Tour",
+    "description": {
+      "text": "Make the most of your visit to the park with the help of a guide who’ll take you to see some of the best of Bryce Canyon by bike. The tour leader will share their knowledge of the history, flora, fauna, and geology of the park. Stops include Fairyland Point, Inspiration Point. Pause the journey for a snack, courtesy of your guide, who’ll make sure you look out for local wildlife too. Ideal for visitors basing near Bryce Canyon City who want a guided red-rock experience without coordinating park entrances, trailheads, or photo stops on their own."
+    },
+    "location": {
+      "city": "Bryce Canyon National Park",
+      "state": "Utah"
+    },
+    "duration": "3 hours 25 minutes (approx.)",
+    "priceFrom": "From $125.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 168
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/14/bd/c7.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Make the most of your visit to the park with the help of a guide who’ll take you to see some of the best of Bryce Canyon",
+      "The tour leader will share their knowledge of the history, flora, fauna, and geology of the park",
+      "Pause the journey for a snack, courtesy of your guide, who’ll make sure you look out for local wildlife too",
+      "Bryce Canyon E-bike Tour near Bryce Canyon National Park",
+      "Professional Bryce Canyon guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Bryce Canyon meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Make the most of your visit to the park with the help of a guide who’ll take you to see some of the best of Bryce Canyon by bike.",
+    "itineraryItems": [
+      {
+        "title": "Fairyland Point",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Inspiration Point",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bryce Canyon National Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Helmets, bike locks",
+      "Bottled water",
+      "Snacks",
+      "Use of bicycle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bryce Canyon E-bike Tour?",
+        "answer": "The planned duration is 3 hours 25 minutes."
+      },
+      {
+        "question": "Where does the tour depart from near Bryce Canyon National Park?",
+        "answer": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Cycling"
+      },
+      {
+        "label": "Wildlife"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 125
+      },
+      "currency": "USD"
+    }
+  }
+}

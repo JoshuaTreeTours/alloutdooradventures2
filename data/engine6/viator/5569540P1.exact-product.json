@@ -1,0 +1,104 @@
+{
+  "product": {
+    "productCode": "5569540P1",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-National-Park-15-Minute-Helicopter-Tour/d50798-5569540P1",
+    "title": "Bryce Canyon National Park 15-Minute Helicopter Tour",
+    "description": {
+      "text": "Experience the breathtaking beauty of Bryce Canyon National Park on a 15-minute panoramic helicopter tour designed for maximum impact in minimal time. Fly over iconic landmarks like Boat Mesa, Fairyland, and the Sinking Ship while your expert pilot shares insights into the park’s geology and natural history. Stops include Fairyland Point, Boat Mesa, Sinking Ship. Local commentary and route logistics are handled so you can focus on hoodoo viewpoints, rim trails, and dark-sky or adventure highlights. Ideal for visitors basing near Bryce Canyon City who want a guided red-rock experience without coordinating park entrances, trailheads, or photo stops on their own."
+    },
+    "location": {
+      "city": "Bryce Canyon National Park",
+      "state": "Utah"
+    },
+    "duration": "45 minutes (approx.)",
+    "priceFrom": "From $175.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 3
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/d6/90/7d.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "15-minute panoramic helicopter flight over Bryce Canyon",
+      "Fly over Boat Mesa, Fairyland, and the Sinking Ship",
+      "Expert pilot narration on geology and natural history"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Bryce Canyon meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience the breathtaking beauty of Bryce Canyon National Park on a 15-minute panoramic helicopter tour designed for maximum impact in minimal time.",
+    "itineraryItems": [
+      {
+        "title": "Bryce Canyon National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Fairyland Point",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Boat Mesa",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sinking Ship",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "All Fees and Taxes",
+      "15-Minute Helicopter Tour over Bryce Canyon"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bryce Canyon National Park 15-Minute Helicopter Tour?",
+        "answer": "The planned duration is 45 minutes."
+      },
+      {
+        "question": "Where does the tour depart from near Bryce Canyon National Park?",
+        "answer": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Air Tours"
+      },
+      {
+        "label": "Sightseeing & City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 175
+      },
+      "currency": "USD"
+    }
+  }
+}

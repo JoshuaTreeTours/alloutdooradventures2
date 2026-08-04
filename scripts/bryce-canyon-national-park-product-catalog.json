@@ -1,0 +1,306 @@
+[
+  {
+    "productCode": "165275P1",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Daily-Tour/d50798-165275P1",
+    "title": "Scenic Tour of Bryce Canyon",
+    "duration": "3 hours (approx.)",
+    "priceFrom": 79,
+    "rating": 4.9,
+    "reviewCount": 1131,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ff/99/2a.jpg",
+    "categories": [
+      "Sightseeing & City Tours"
+    ],
+    "itineraryTitles": [
+      "Bryce Canyon National Park",
+      "Bryce Amphitheater"
+    ]
+  },
+  {
+    "productCode": "165275P3",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Private-Tour/d50798-165275P3",
+    "title": "Bryce Canyon Private Tour",
+    "duration": "3 hours (approx.)",
+    "priceFrom": 149,
+    "rating": 5,
+    "reviewCount": 30,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6f/35/a4.jpg",
+    "categories": [
+      "Sightseeing & City Tours"
+    ],
+    "itineraryTitles": [
+      "Bryce Canyon National Park",
+      "Bryce Amphitheater"
+    ]
+  },
+  {
+    "productCode": "165275P2",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Hiking-Experience-in-Bryce-Canyon-National-Park/d50798-165275P2",
+    "title": "Hiking Experience in Bryce Canyon National Park",
+    "duration": "5 hours (approx.)",
+    "priceFrom": 120,
+    "rating": 5,
+    "reviewCount": 92,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ff/98/bd.jpg",
+    "categories": [
+      "Hiking"
+    ],
+    "itineraryTitles": [
+      "Bryce Canyon National Park",
+      "Bryce Amphitheater"
+    ]
+  },
+  {
+    "productCode": "165275P4",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Ebike-Tour/d50798-165275P4",
+    "title": "Bryce Canyon E-bike Tour",
+    "duration": "3 hours 25 minutes (approx.)",
+    "priceFrom": 125,
+    "rating": 4.9,
+    "reviewCount": 168,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/14/bd/c7.jpg",
+    "categories": [
+      "Cycling",
+      "Wildlife"
+    ],
+    "itineraryTitles": [
+      "Fairyland Point",
+      "Inspiration Point",
+      "Bryce Canyon National Park"
+    ]
+  },
+  {
+    "productCode": "5569540P1",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-National-Park-15-Minute-Helicopter-Tour/d50798-5569540P1",
+    "title": "Bryce Canyon National Park 15-Minute Helicopter Tour",
+    "duration": "45 minutes (approx.)",
+    "priceFrom": 175,
+    "rating": 5,
+    "reviewCount": 3,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/d6/90/7d.jpg",
+    "categories": [
+      "Air Tours",
+      "Sightseeing & City Tours"
+    ],
+    "itineraryTitles": [
+      "Bryce Canyon National Park",
+      "Fairyland Point",
+      "Boat Mesa",
+      "Sinking Ship"
+    ]
+  },
+  {
+    "productCode": "5569540P2",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-National-Park-30-Minute-Helicopter-Tour/d50798-5569540P2",
+    "title": "Bryce Canyon National Park 30-Minute Helicopter Tour",
+    "duration": "1 hour (approx.)",
+    "priceFrom": 309,
+    "rating": 5,
+    "reviewCount": 1,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7c/08/ad.jpg",
+    "categories": [
+      "Air Tours",
+      "Sightseeing & City Tours"
+    ],
+    "itineraryTitles": [
+      "Bryce Canyon National Park",
+      "Fairyland Point",
+      "Rainbow Point",
+      "Bryce Point",
+      "Boat Mesa",
+      "Natural Bridge"
+    ]
+  },
+  {
+    "productCode": "5609276P1",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Stargazing-Tour-Discover-the-Night-Sky/d50798-5609276P1",
+    "title": "Bryce Canyon Stargazing Adventure",
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": 55,
+    "rating": 4.4,
+    "reviewCount": 47,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/cc/02/17/caption.jpg",
+    "categories": [
+      "Stargazing"
+    ],
+    "itineraryTitles": [
+      "Bryce Canyon National Park",
+      "Telescope Viewing Site"
+    ]
+  },
+  {
+    "productCode": "5609276P3",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Late-Night-Stargazing-Tour/d50798-5609276P3",
+    "title": "Late Night Stargazing",
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": 99,
+    "rating": 4.9,
+    "reviewCount": 7,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/cc/03/d6/caption.jpg",
+    "categories": [
+      "Stargazing"
+    ],
+    "itineraryTitles": [
+      "Bryce Canyon National Park",
+      "Telescope Viewing Site"
+    ]
+  },
+  {
+    "productCode": "342160P3",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Photography-Tours/d50798-342160P3",
+    "title": "Bryce Canyon Photography Tours",
+    "duration": "3 hours (approx.)",
+    "priceFrom": 289,
+    "rating": 5,
+    "reviewCount": 2,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/7a/83/e9.jpg",
+    "categories": [
+      "Stargazing"
+    ],
+    "itineraryTitles": [
+      "Bryce Canyon National Park",
+      "Bryce Amphitheater"
+    ]
+  },
+  {
+    "productCode": "422797P7",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Private-Bryce-Canyon-and-Slot-Canyon-Full-Day-Hike/d50798-422797P7",
+    "title": "Private Bryce Canyon and Slot Canyon Full Day Hike",
+    "duration": "6 to 8 hours (approx.)",
+    "priceFrom": 354,
+    "rating": 5,
+    "reviewCount": 1,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/15/7d/a3.jpg",
+    "categories": [
+      "Hiking",
+      "Jeep & Off-Road"
+    ],
+    "itineraryTitles": [
+      "Bryce Canyon National Park",
+      "Grand Staircase-Escalante National Monument"
+    ]
+  },
+  {
+    "productCode": "265766P65",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Full-Day-Small-Group-Tour-in-Bryce-Canyon-National-Park/d50798-265766P65",
+    "title": "Bryce Canyon Full Day Small Group Tour & Hike",
+    "duration": "6 to 8 hours (approx.)",
+    "priceFrom": 427,
+    "rating": 5,
+    "reviewCount": 5,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4e/51/17.jpg",
+    "categories": [
+      "Hiking"
+    ],
+    "itineraryTitles": [
+      "Navajo Loop Trail",
+      "Queen's Garden Trail",
+      "Inspiration Point",
+      "Bryce Point",
+      "Sunset Point",
+      "Bryce Canyon National Park"
+    ]
+  },
+  {
+    "productCode": "406744P2",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Peekaboo-Spooky-and-Dry-Fork-Slot-Canyon-Adventure/d50798-406744P2",
+    "title": "Peekaboo, Spooky and Dry Fork Slot Canyon Tour",
+    "duration": "6 hours (approx.)",
+    "priceFrom": 139,
+    "rating": 5,
+    "reviewCount": 112,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7d/05/c2.jpg",
+    "categories": [
+      "Hiking"
+    ],
+    "itineraryTitles": [
+      "Dry Fork Slot Canyon",
+      "Spooky Gulch",
+      "Peekaboo Slot Canyon"
+    ]
+  },
+  {
+    "productCode": "406744P4",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Egypt-Slot-Canyon-Canyoneering/d50798-406744P4",
+    "title": "Half Day Canyoneering Tour in Egypt Slot Canyon",
+    "duration": "4 hours (approx.)",
+    "priceFrom": 159,
+    "rating": 5,
+    "reviewCount": 3,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7d/1f/e2.jpg",
+    "categories": [
+      "Hiking"
+    ],
+    "itineraryTitles": [
+      "Egypt Slot Canyon"
+    ]
+  },
+  {
+    "productCode": "117461P1",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Rubys-Horseback-Adventures/d50798-117461P1",
+    "title": "Ruby's Horseback Adventures Utah 1.5 Hour Ride",
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": 95,
+    "rating": 4.2,
+    "reviewCount": 164,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/5b/e8/74.jpg",
+    "categories": [
+      "Horseback Riding"
+    ],
+    "itineraryTitles": [
+      "Bryce Canyon National Park",
+      "Red Canyon"
+    ]
+  },
+  {
+    "productCode": "117461P2",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Rubys-Horseback-Adventures-Half-Day-Ride/d50798-117461P2",
+    "title": "Ruby's Horseback Adventures Utah Half Day Ride",
+    "duration": "4 hours (approx.)",
+    "priceFrom": 130,
+    "rating": 4.4,
+    "reviewCount": 76,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/5c/43/93.jpg",
+    "categories": [
+      "Horseback Riding"
+    ],
+    "itineraryTitles": [
+      "Red Canyon",
+      "Bryce Canyon National Park"
+    ]
+  },
+  {
+    "productCode": "117461P3",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Rubys-Horseback-Adventures-Thunder-Mt-4-Hour-Ride/d50798-117461P3",
+    "title": "Ruby's Horseback Adventures Utah Thunder Mt. 4 Hour Ride",
+    "duration": "4 hours (approx.)",
+    "priceFrom": 150,
+    "rating": 5,
+    "reviewCount": 26,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/fe/16/cd.jpg",
+    "categories": [
+      "Horseback Riding"
+    ],
+    "itineraryTitles": [
+      "Red Canyon",
+      "Thunder Mountain"
+    ]
+  },
+  {
+    "productCode": "117461P5",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/One-Hour-Guided-ATV-Ride/d50798-117461P5",
+    "title": "One Hour Guided ATV Ride in Utah",
+    "duration": "1 hour (approx.)",
+    "priceFrom": 100,
+    "rating": 4.6,
+    "reviewCount": 77,
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/77/51/84.jpg",
+    "categories": [
+      "Jeep & Off-Road"
+    ],
+    "itineraryTitles": [
+      "Bryce Canyon Rim",
+      "Bryce Canyon National Park"
+    ]
+  }
+]

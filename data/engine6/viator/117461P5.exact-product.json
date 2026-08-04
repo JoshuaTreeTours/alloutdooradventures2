@@ -1,0 +1,92 @@
+{
+  "product": {
+    "productCode": "117461P5",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/One-Hour-Guided-ATV-Ride/d50798-117461P5",
+    "title": "One Hour Guided ATV Ride in Utah",
+    "description": {
+      "text": "Discover the beauty of Bryce Canyon National Park on a thrilling ATV ride. Follow your guide and a small group through ponderosa pine forests and mountainous landscapes in your own ATV. Stops include Bryce Canyon Rim. Travel across rugged trails and stop at points that many people miss. Ideal for visitors basing near Bryce Canyon City who want a guided red-rock experience without coordinating park entrances, trailheads, or photo stops on their own. Routes stay oriented to Bryce Canyon hoodoo amphitheaters, rim overlooks, and southern Utah red-rock corridors that define the park."
+    },
+    "location": {
+      "city": "Bryce Canyon National Park",
+      "state": "Utah"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $100.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 77
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/77/51/84.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover the beauty of Bryce Canyon National Park on a thrilling ATV ride",
+      "Follow your guide and a small group through ponderosa pine forests and mountainous landscapes in your own ATV",
+      "Travel across rugged trails and stop at points that many people miss",
+      "One Hour Guided ATV Ride in Utah near Bryce Canyon National Park",
+      "Professional Bryce Canyon guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Bryce Canyon meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover the beauty of Bryce Canyon National Park on a thrilling ATV ride.",
+    "itineraryItems": [
+      {
+        "title": "Bryce Canyon Rim",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bryce Canyon National Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "In-Person guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the One Hour Guided ATV Ride in Utah?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from near Bryce Canyon National Park?",
+        "answer": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Jeep & Off-Road"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 100
+      },
+      "currency": "USD"
+    }
+  }
+}

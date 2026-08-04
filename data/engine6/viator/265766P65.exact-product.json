@@ -1,0 +1,115 @@
+{
+  "product": {
+    "productCode": "265766P65",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Full-Day-Small-Group-Tour-in-Bryce-Canyon-National-Park/d50798-265766P65",
+    "title": "Bryce Canyon Full Day Small Group Tour & Hike",
+    "description": {
+      "text": "Embark on a captivating exploration of the unique landscapes of Bryce Canyon National Park with engaging small-group tours. Traverse amphitheaters of hoodoos and vibrant spires while expert guides share narratives and insights. Stops include Navajo Loop Trail, Queen's Garden Trail, Inspiration Point, Bryce Point, Sunset Point. Groups are capped at 8 hikers. Ideal for visitors basing near Bryce Canyon City who want a guided red-rock experience without coordinating park entrances, trailheads, or photo stops on their own."
+    },
+    "location": {
+      "city": "Bryce Canyon National Park",
+      "state": "Utah"
+    },
+    "duration": "6 to 8 hours (approx.)",
+    "priceFrom": "From $427.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 5
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4e/51/17.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Embark on a captivating exploration of the unique landscapes of Bryce Canyon National Park with engaging small-group tou",
+      "Traverse amphitheaters of hoodoos and vibrant spires while expert guides share narratives and insights",
+      "Groups are capped at 8 hikers",
+      "Bryce Canyon Full Day Small Group Tour & Hike near Bryce Canyon National Park",
+      "Professional Bryce Canyon guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Bryce Canyon meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Embark on a captivating exploration of the unique landscapes of Bryce Canyon National Park with engaging small-group tours.",
+    "itineraryItems": [
+      {
+        "title": "Navajo Loop Trail",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Queen's Garden Trail",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Inspiration Point",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bryce Point",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Sunset Point",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bryce Canyon National Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Park entry fees",
+      "Medically trained, naturalist guide",
+      "Air-conditioned vehicle",
+      "We’ll have snacks and a selection of beverages available, but feel free to bring along any personal favorites you might crave during the day."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bryce Canyon Full Day Small Group Tour & Hike?",
+        "answer": "The planned duration is 6 to 8 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Bryce Canyon National Park?",
+        "answer": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 427
+      },
+      "currency": "USD"
+    }
+  }
+}

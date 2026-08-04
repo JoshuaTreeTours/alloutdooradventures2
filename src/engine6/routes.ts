@@ -747,6 +747,64 @@ export const ENGINE6_HOUSTON_TOUR_PATH_PREFIX =
 
 export const isEngine6HoustonTourCanonicalPath = (path: string) =>
   path.startsWith(ENGINE6_HOUSTON_TOUR_PATH_PREFIX);
+export const ENGINE6_BRYCE_165275P1_PRODUCT_CODE = "165275P1";
+export const ENGINE6_BRYCE_165275P1_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/scenic-tour-of-bryce-canyon-165275P1";
+export const ENGINE6_BRYCE_165275P3_PRODUCT_CODE = "165275P3";
+export const ENGINE6_BRYCE_165275P3_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/bryce-canyon-private-tour-165275P3";
+export const ENGINE6_BRYCE_165275P2_PRODUCT_CODE = "165275P2";
+export const ENGINE6_BRYCE_165275P2_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/hiking-experience-in-bryce-canyon-national-park-165275P2";
+export const ENGINE6_BRYCE_165275P4_PRODUCT_CODE = "165275P4";
+export const ENGINE6_BRYCE_165275P4_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/bryce-canyon-e-bike-tour-165275P4";
+export const ENGINE6_BRYCE_5569540P1_PRODUCT_CODE = "5569540P1";
+export const ENGINE6_BRYCE_5569540P1_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/bryce-canyon-national-park-15-minute-helicopter-tour-5569540P1";
+export const ENGINE6_BRYCE_5569540P2_PRODUCT_CODE = "5569540P2";
+export const ENGINE6_BRYCE_5569540P2_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/bryce-canyon-national-park-30-minute-helicopter-tour-5569540P2";
+export const ENGINE6_BRYCE_5609276P1_PRODUCT_CODE = "5609276P1";
+export const ENGINE6_BRYCE_5609276P1_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/bryce-canyon-stargazing-adventure-5609276P1";
+export const ENGINE6_BRYCE_5609276P3_PRODUCT_CODE = "5609276P3";
+export const ENGINE6_BRYCE_5609276P3_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/late-night-stargazing-5609276P3";
+export const ENGINE6_BRYCE_342160P3_PRODUCT_CODE = "342160P3";
+export const ENGINE6_BRYCE_342160P3_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/bryce-canyon-photography-tours-342160P3";
+export const ENGINE6_BRYCE_422797P7_PRODUCT_CODE = "422797P7";
+export const ENGINE6_BRYCE_422797P7_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/private-bryce-canyon-and-slot-canyon-full-day-hike-422797P7";
+export const ENGINE6_BRYCE_265766P65_PRODUCT_CODE = "265766P65";
+export const ENGINE6_BRYCE_265766P65_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/bryce-canyon-full-day-small-group-tour-hike-265766P65";
+export const ENGINE6_BRYCE_406744P2_PRODUCT_CODE = "406744P2";
+export const ENGINE6_BRYCE_406744P2_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/peekaboo-spooky-and-dry-fork-slot-canyon-tour-406744P2";
+export const ENGINE6_BRYCE_406744P4_PRODUCT_CODE = "406744P4";
+export const ENGINE6_BRYCE_406744P4_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/half-day-canyoneering-tour-in-egypt-slot-canyon-406744P4";
+export const ENGINE6_BRYCE_117461P1_PRODUCT_CODE = "117461P1";
+export const ENGINE6_BRYCE_117461P1_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/rubys-horseback-adventures-utah-1-5-hour-ride-117461P1";
+export const ENGINE6_BRYCE_117461P2_PRODUCT_CODE = "117461P2";
+export const ENGINE6_BRYCE_117461P2_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/rubys-horseback-adventures-utah-half-day-ride-117461P2";
+export const ENGINE6_BRYCE_117461P3_PRODUCT_CODE = "117461P3";
+export const ENGINE6_BRYCE_117461P3_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/rubys-horseback-adventures-utah-thunder-mt-4-hour-ride-117461P3";
+export const ENGINE6_BRYCE_117461P5_PRODUCT_CODE = "117461P5";
+export const ENGINE6_BRYCE_117461P5_ROUTE =
+  "/destinations/utah/bryce-canyon-national-park/tours/one-hour-guided-atv-ride-in-utah-117461P5";
+
+export const ENGINE6_BRYCE_CANYON_NATIONAL_PARK_TOUR_PATH_PREFIX =
+  "/destinations/utah/bryce-canyon-national-park/tours/";
+
+export const isEngine6BryceCanyonNationalParkTourCanonicalPath = (
+  path: string
+) => path.startsWith(ENGINE6_BRYCE_CANYON_NATIONAL_PARK_TOUR_PATH_PREFIX);
 
 export const ENGINE6_AUSTIN_5513806P1_PRODUCT_CODE = "5513806P1";
 export const ENGINE6_AUSTIN_5513806P1_ROUTE =
@@ -3214,6 +3272,72 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_HOUSTON_164292P1_ROUTE,
     ENGINE6_HOUSTON_164292P1_PRODUCT_CODE,
+    ENGINE6_BRYCE_165275P1_ROUTE,
+    ENGINE6_BRYCE_165275P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_165275P3_ROUTE,
+    ENGINE6_BRYCE_165275P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_165275P2_ROUTE,
+    ENGINE6_BRYCE_165275P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_165275P4_ROUTE,
+    ENGINE6_BRYCE_165275P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_5569540P1_ROUTE,
+    ENGINE6_BRYCE_5569540P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_5569540P2_ROUTE,
+    ENGINE6_BRYCE_5569540P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_5609276P1_ROUTE,
+    ENGINE6_BRYCE_5609276P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_5609276P3_ROUTE,
+    ENGINE6_BRYCE_5609276P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_342160P3_ROUTE,
+    ENGINE6_BRYCE_342160P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_422797P7_ROUTE,
+    ENGINE6_BRYCE_422797P7_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_265766P65_ROUTE,
+    ENGINE6_BRYCE_265766P65_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_406744P2_ROUTE,
+    ENGINE6_BRYCE_406744P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_406744P4_ROUTE,
+    ENGINE6_BRYCE_406744P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_117461P1_ROUTE,
+    ENGINE6_BRYCE_117461P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_117461P2_ROUTE,
+    ENGINE6_BRYCE_117461P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_117461P3_ROUTE,
+    ENGINE6_BRYCE_117461P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_BRYCE_117461P5_ROUTE,
+    ENGINE6_BRYCE_117461P5_PRODUCT_CODE,
   ],
   [
     ENGINE6_AUSTIN_5513806P1_ROUTE,

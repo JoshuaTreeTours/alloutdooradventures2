@@ -1,0 +1,92 @@
+{
+  "product": {
+    "productCode": "117461P3",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Rubys-Horseback-Adventures-Thunder-Mt-4-Hour-Ride/d50798-117461P3",
+    "title": "Ruby's Horseback Adventures Utah Thunder Mt. 4 Hour Ride",
+    "description": {
+      "text": "In Bryce Canyon National Park, Get away from the park crowds on this epic four-hour tour on horseback. With the Bryce Canyon area as your backdrop, you’ll clip-clop along Old West trails used by both cowboys and Indigenous groups, climbing up and down the scenic Red Canyon. Stops include Red Canyon, Thunder Mountain. Appropriate for beginners to experts, this ride truly goes off the beaten path for serious canyon adventure. Ideal for visitors basing near Bryce Canyon City who want a guided red-rock experience without coordinating park entrances, trailheads, or photo stops on their own."
+    },
+    "location": {
+      "city": "Bryce Canyon National Park",
+      "state": "Utah"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $150.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 26
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/fe/16/cd.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Get away from the park crowds on this epic four-hour tour on horseback",
+      "With the Bryce Canyon area as your backdrop, you’ll clip-clop along Old West trails used by both cowboys and Indigenous ",
+      "Appropriate for beginners to experts, this ride truly goes off the beaten path for serious canyon adventure",
+      "Ruby's Horseback Adventures Utah Thunder Mt. 4 Hour Ride near Bryce Canyon National Park",
+      "Professional Bryce Canyon guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Bryce Canyon meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bryce Canyon National Park, Get away from the park crowds on this epic four-hour tour on horseback.",
+    "itineraryItems": [
+      {
+        "title": "Red Canyon",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Thunder Mountain",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided Horse Ride with wonderful scenery."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ruby's Horseback Adventures Utah Thunder Mt. 4 Hour Ride?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Bryce Canyon National Park?",
+        "answer": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Horseback Riding"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 150
+      },
+      "currency": "USD"
+    }
+  }
+}

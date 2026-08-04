@@ -1,0 +1,91 @@
+{
+  "product": {
+    "productCode": "5609276P1",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Stargazing-Tour-Discover-the-Night-Sky/d50798-5609276P1",
+    "title": "Bryce Canyon Stargazing Adventure",
+    "description": {
+      "text": "Explore the wonders of the universe on this Bryce Canyon Stargazing Tour, led by expert guides eager to share the mysteries of the night sky. Begin with a brief orientation before engaging with state-of-the-art telescopes to identify constellations, planets, and galaxies. Depending on the season, you’ll witness stunning celestial objects and have opportunities for deep-sky astrophotography. Ideal for visitors basing near Bryce Canyon City who want a guided red-rock experience without coordinating park entrances, trailheads, or photo stops on their own."
+    },
+    "location": {
+      "city": "Bryce Canyon National Park",
+      "state": "Utah"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $55.00",
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 47
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/cc/02/17/caption.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Duration of 90 minutes with flexible start times based on the season",
+      "Minimum group size of 2 guests required for the tour to proceed",
+      "Warm clothing is recommended as temperatures drop after sunset",
+      "Experience the best views during the new moon phase, with tours available nightly year round"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Bryce Canyon meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore the wonders of the universe on this Bryce Canyon Stargazing Tour, led by expert guides eager to share the mysteries of the night sky.",
+    "itineraryItems": [
+      {
+        "title": "Bryce Canyon National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Telescope Viewing Site",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Hot drinks provided"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bryce Canyon Stargazing Adventure?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from near Bryce Canyon National Park?",
+        "answer": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Stargazing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 55
+      },
+      "currency": "USD"
+    }
+  }
+}
