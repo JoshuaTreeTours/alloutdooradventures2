@@ -109,6 +109,12 @@ import specimen5527luauPayload from "../../data/engine6/viator/5527LUAU.exact-pr
 import specimen418633p1Payload from "../../data/engine6/viator/418633P1.exact-product.json";
 import specimen207802p1Payload from "../../data/engine6/viator/207802P1.exact-product.json";
 import specimen41410p10Payload from "../../data/engine6/viator/41410P10.exact-product.json";
+import specimen74828p1Payload from "../../data/engine6/viator/74828P1.exact-product.json";
+import specimen74828p2Payload from "../../data/engine6/viator/74828P2.exact-product.json";
+import specimen74828p3Payload from "../../data/engine6/viator/74828P3.exact-product.json";
+import specimen74828p4Payload from "../../data/engine6/viator/74828P4.exact-product.json";
+import specimen74828p5Payload from "../../data/engine6/viator/74828P5.exact-product.json";
+import specimen147508p175Payload from "../../data/engine6/viator/147508P175.exact-product.json";
 import specimen8950p6Payload from "../../data/engine6/viator/8950P6.exact-product.json";
 import specimen72188p15Payload from "../../data/engine6/viator/72188P15.exact-product.json";
 import specimen41410p15Payload from "../../data/engine6/viator/41410P15.exact-product.json";
@@ -1918,6 +1924,42 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "41410P10",
     publicUrl: "https://www.viator.com/tours/Denver/Small-group-tour-of-Pikes-Peak-and-the-Garden-of-the-Gods-from-Denver/d4837-41410P10",
     rawPayload: specimen41410p10Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "74828P1",
+    publicUrl: "https://www.viator.com/tours/Aspen/Aspens-DarkSide-Ghost-Tour/d26395-74828P1",
+    rawPayload: specimen74828p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "74828P2",
+    publicUrl: "https://www.viator.com/tours/Aspen/Aspens-Past-to-Present-Historic-Tour/d26395-74828P2",
+    rawPayload: specimen74828p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "74828P3",
+    publicUrl: "https://www.viator.com/tours/Aspen/Glimpse-of-Aspen-Tour/d26395-74828P3",
+    rawPayload: specimen74828p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "74828P4",
+    publicUrl: "https://www.viator.com/tours/Aspen/Aspens-Off-the-Beaten-Path-Tour/d26395-74828P4",
+    rawPayload: specimen74828p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "74828P5",
+    publicUrl: "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5",
+    rawPayload: specimen74828p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "147508P175",
+    publicUrl: "https://www.viator.com/tours/Aspen/Photographer-and-Professional-Photoshoot-in-Aspen/d26395-147508P175",
+    rawPayload: specimen147508p175Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

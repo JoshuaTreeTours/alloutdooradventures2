@@ -58,6 +58,9 @@ export const ENGINE6_RMNP_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_DENVER_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/90/d7/e4.jpg";
 
+export const ENGINE6_ASPEN_CANONICAL_CITY_HERO_URL =
+  "https://dynamic-media.tacdn.com/media/photo-o/2e/ff/04/e3/caption.jpg?w=700&h=500&s=1";
+
 export const ENGINE6_MOAB_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/43/44/fa/caption.jpg";
 
@@ -132,6 +135,7 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   colorado: {
     "rocky-mountain-national-park": ENGINE6_RMNP_CANONICAL_CITY_HERO_URL,
     denver: ENGINE6_DENVER_CANONICAL_CITY_HERO_URL,
+    aspen: ENGINE6_ASPEN_CANONICAL_CITY_HERO_URL,
   },
   florida: {
     orlando: ENGINE6_ORLANDO_CANONICAL_CITY_HERO_URL,

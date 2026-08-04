@@ -1,0 +1,116 @@
+{
+  "product": {
+    "productCode": "74828P3",
+    "productUrl": "https://www.viator.com/tours/Aspen/Glimpse-of-Aspen-Tour/d26395-74828P3",
+    "title": "Highlights of Aspen Tour",
+    "description": {
+      "text": "Discover Aspen's charm on this engaging one-hour walking tour, perfect for first-time visitors or those short on time. Explore iconic landmarks like the Wheeler Opera House, Aspen Art Museum, and Wagner Park while learning about the town's rich history, culture, and vibrant community. Stops include Wheeler Opera House, Aspen Art Museum, Aspen Mountain / Ajax, Mill Street Fountain, Wagner Park. With a relaxed pace and insightful commentary, this tour offers a delightful snapshot of Aspen's unique character. Ideal for visitors basing in Aspen who want a guided mountain-town experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Aspen",
+      "state": "Colorado"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $48.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 9
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/ff/04/e3/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Discover Aspen's charm on this engaging one-hour walking tour, perfect for first-time visitors or those short on time",
+      "Explore iconic landmarks like the Wheeler Opera House, Aspen Art Museum, and Wagner Park while learning about the town's",
+      "With a relaxed pace and insightful commentary, this tour offers a delightful snapshot of Aspen's unique character",
+      "Highlights of Aspen Tour departing from Aspen",
+      "Professional Aspen guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "320 E Hyman Ave, Aspen, CO 81611, USA"
+      },
+      "end": {
+        "description": "Return to your Aspen meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Discover Aspen's charm on this engaging one-hour walking tour, perfect for first-time visitors or those short on time.",
+    "itineraryItems": [
+      {
+        "title": "Dean's Aspen Tours",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Wheeler Opera House",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Aspen Art Museum",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Aspen Mountain / Ajax",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Mill Street Fountain",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Wagner Park",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "All taxes, fees and handling charges",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Highlights of Aspen Tour?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Aspen?",
+        "answer": "320 E Hyman Ave, Aspen, CO 81611, USA"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 48
+      },
+      "currency": "USD"
+    }
+  }
+}

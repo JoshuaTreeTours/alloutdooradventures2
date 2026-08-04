@@ -13,6 +13,7 @@ import { getPhiladelphiaTargetedNarrativeDescription } from "./philadelphiaAppro
 import { getOlympicTargetedNarrativeDescription } from "./olympicApprovedNarrativeDescriptions";
 import { getRockyMountainNationalParkTargetedNarrativeDescription } from "./rockyMountainNationalParkApprovedNarrativeDescriptions";
 import { getDenverTargetedNarrativeDescription } from "./denverApprovedNarrativeDescriptions";
+import { getAspenTargetedNarrativeDescription } from "./aspenApprovedNarrativeDescriptions";
 
 export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "5615689P4",
@@ -111,6 +112,7 @@ export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
   getPhiladelphiaTargetedNarrativeDescription(productCode) ??
   getRockyMountainNationalParkTargetedNarrativeDescription(productCode) ??
   getDenverTargetedNarrativeDescription(productCode) ??
+  getAspenTargetedNarrativeDescription(productCode) ??
   getKeyWestTargetedNarrativeDescription(productCode) ??
   getHonoluluTargetedNarrativeDescription(productCode) ??
   getMauiTargetedNarrativeDescription(productCode) ??

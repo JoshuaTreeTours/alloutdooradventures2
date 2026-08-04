@@ -681,6 +681,31 @@ export const ENGINE6_KONA_207802P1_PRODUCT_CODE = "207802P1";
 export const ENGINE6_KONA_207802P1_ROUTE =
   "/destinations/hawaii/kona/tours/award-winning-farm-tour-coffee-chocolate-and-unique-gif-207802P1";
 
+export const ENGINE6_ASPEN_74828P1_PRODUCT_CODE = "74828P1";
+export const ENGINE6_ASPEN_74828P1_ROUTE =
+  "/destinations/colorado/aspen/tours/aspens-darkside-ghost-tour-74828P1";
+export const ENGINE6_ASPEN_74828P2_PRODUCT_CODE = "74828P2";
+export const ENGINE6_ASPEN_74828P2_ROUTE =
+  "/destinations/colorado/aspen/tours/aspens-past-to-present-historic-tour-74828P2";
+export const ENGINE6_ASPEN_74828P3_PRODUCT_CODE = "74828P3";
+export const ENGINE6_ASPEN_74828P3_ROUTE =
+  "/destinations/colorado/aspen/tours/highlights-of-aspen-tour-74828P3";
+export const ENGINE6_ASPEN_74828P4_PRODUCT_CODE = "74828P4";
+export const ENGINE6_ASPEN_74828P4_ROUTE =
+  "/destinations/colorado/aspen/tours/aspens-off-the-beaten-path-tour-74828P4";
+export const ENGINE6_ASPEN_74828P5_PRODUCT_CODE = "74828P5";
+export const ENGINE6_ASPEN_74828P5_ROUTE =
+  "/destinations/colorado/aspen/tours/leisure-hike-east-aspen-hunter-creek-74828P5";
+export const ENGINE6_ASPEN_147508P175_PRODUCT_CODE = "147508P175";
+export const ENGINE6_ASPEN_147508P175_ROUTE =
+  "/destinations/colorado/aspen/tours/photographer-and-professional-photoshoot-in-aspen-147508P175";
+
+export const ENGINE6_ASPEN_TOUR_PATH_PREFIX =
+  "/destinations/colorado/aspen/tours/";
+
+export const isEngine6AspenTourCanonicalPath = (path: string) =>
+  path.startsWith(ENGINE6_ASPEN_TOUR_PATH_PREFIX);
+
 export const ENGINE6_DENVER_41410P10_PRODUCT_CODE = "41410P10";
 export const ENGINE6_DENVER_41410P10_ROUTE =
   "/destinations/colorado/denver/tours/small-group-tour-of-pikes-peak-and-the-garden-of-the-go-41410P10";
@@ -2923,6 +2948,30 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_DENVER_41410P10_ROUTE,
     ENGINE6_DENVER_41410P10_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ASPEN_74828P1_ROUTE,
+    ENGINE6_ASPEN_74828P1_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ASPEN_74828P2_ROUTE,
+    ENGINE6_ASPEN_74828P2_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ASPEN_74828P3_ROUTE,
+    ENGINE6_ASPEN_74828P3_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ASPEN_74828P4_ROUTE,
+    ENGINE6_ASPEN_74828P4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ASPEN_74828P5_ROUTE,
+    ENGINE6_ASPEN_74828P5_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_ASPEN_147508P175_ROUTE,
+    ENGINE6_ASPEN_147508P175_PRODUCT_CODE,
   ],
   [
     ENGINE6_DENVER_8950P6_ROUTE,

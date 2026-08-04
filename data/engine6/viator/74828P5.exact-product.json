@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "74828P5",
+    "productUrl": "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5",
+    "title": "Leisure Hike - East Aspen Hunter Creek",
+    "description": {
+      "text": "Experience the natural beauty of Aspen on this guided light hike through Hunter Creek. Perfect for those wanting to explore the outdoors without intense physical demands. Stops include Hunter Creek Trailhead, Hunter Creek Valley, Hunter Creek Path. Enjoy creek views, forest scenery, and learn about local flora and fauna from your knowledgeable guide. Ideal for visitors basing in Aspen who want a guided mountain-town experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Aspen",
+      "state": "Colorado"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $68.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 5
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/46/69/9b/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Experience the natural beauty of Aspen on this guided light hike through Hunter Creek",
+      "Perfect for those wanting to explore the outdoors without intense physical demands",
+      "Enjoy creek views, forest scenery, and learn about local flora and fauna from your knowledgeable guide",
+      "Leisure Hike - East Aspen Hunter Creek departing from Aspen",
+      "Professional Aspen guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Wheeler Opera House, 320 E Hyman Ave, Aspen, CO 81611"
+      },
+      "end": {
+        "description": "Return to your Aspen meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Experience the natural beauty of Aspen on this guided light hike through Hunter Creek.",
+    "itineraryItems": [
+      {
+        "title": "Hunter Creek Trailhead",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hunter Creek Valley",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Hunter Creek Path",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional guide",
+      "All taxes and fees"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Leisure Hike - East Aspen Hunter Creek?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Aspen?",
+        "answer": "Wheeler Opera House, 320 E Hyman Ave, Aspen, CO 81611"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 68
+      },
+      "currency": "USD"
+    }
+  }
+}

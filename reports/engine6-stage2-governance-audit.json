@@ -1,27 +1,17 @@
 {
-  "generatedAt": "2026-08-03T23:45:31.053Z",
+  "generatedAt": "2026-08-04T01:45:03.203Z",
   "governanceMode": "audit",
   "mode": "pr-scoped",
   "scopedProductCodes": [
-    "128737P1",
-    "128737P2",
-    "323041P1",
-    "41410P1",
-    "41410P10",
-    "41410P14",
-    "41410P15",
-    "59646P2",
-    "59646P3",
-    "59646P5",
-    "72188P1",
-    "72188P15",
-    "8950P29",
-    "8950P37",
-    "8950P6",
-    "8950P9"
+    "147508P175",
+    "74828P1",
+    "74828P2",
+    "74828P3",
+    "74828P4",
+    "74828P5"
   ],
   "scopedDestinationLabels": [
-    "Denver"
+    "Aspen"
   ],
   "fullSiteValidation": false,
   "blockingPassed": true,
@@ -18542,7 +18532,7 @@
     }
   ],
   "merchantFeedImage": {
-    "imagesValidated": 664,
+    "imagesValidated": 670,
     "automaticallyRepaired": 0,
     "requiringFallback": 0,
     "unrecoverableFailures": 0,
@@ -18555,22 +18545,12 @@
   },
   "productHero": {
     "auditedProductCodes": [
-      "41410P10",
-      "8950P6",
-      "72188P15",
-      "41410P15",
-      "41410P14",
-      "8950P37",
-      "59646P2",
-      "8950P29",
-      "8950P9",
-      "59646P5",
-      "323041P1",
-      "128737P1",
-      "128737P2",
-      "41410P1",
-      "72188P1",
-      "59646P3"
+      "74828P1",
+      "74828P2",
+      "74828P3",
+      "74828P4",
+      "74828P5",
+      "147508P175"
     ],
     "findings": [],
     "pass": true
@@ -18578,7 +18558,7 @@
   "destinationInfrastructure": [],
   "paragonBuildScope": {
     "moduleId": "engine6-paragon-build-scope-governance",
-    "generatedAt": "2026-08-03T23:45:30.720Z",
+    "generatedAt": "2026-08-04T01:45:03.082Z",
     "pass": true,
     "branchScopedProductCodes": [],
     "blockedFiles": [],
@@ -18609,27 +18589,17 @@
     "deployScope": {
       "blockingProductCodes": [],
       "reportOnlyProductCodes": [
-        "128737P1",
-        "128737P2",
-        "323041P1",
-        "41410P1",
-        "41410P10",
-        "41410P14",
-        "41410P15",
-        "59646P2",
-        "59646P3",
-        "59646P5",
-        "72188P1",
-        "72188P15",
-        "8950P29",
-        "8950P37",
-        "8950P6",
-        "8950P9"
+        "147508P175",
+        "74828P1",
+        "74828P2",
+        "74828P3",
+        "74828P4",
+        "74828P5"
       ]
     }
   },
   "notes": [
     "rating_count is maintained as a synchronized mirror of review_count for merchant-feed compatibility. No independent live refresh of rating_count is performed; it changes only when review_count changes.",
-    "Destination cohort scope: Denver"
+    "Destination cohort scope: Aspen"
   ]
 }
