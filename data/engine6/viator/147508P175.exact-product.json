@@ -1,0 +1,97 @@
+{
+  "product": {
+    "productCode": "147508P175",
+    "productUrl": "https://www.viator.com/tours/Aspen/Photographer-and-Professional-Photoshoot-in-Aspen/d26395-147508P175",
+    "title": "Photographer and Professional Photoshoot in Aspen",
+    "description": {
+      "text": "Capture your Aspen memories with a professional photographer. Whether it's a family portrait, couple's shoot, or solo adventure photos, work with an experienced photographer who knows the best locations and lighting in Aspen. Receive professionally edited digital images to treasure forever. Ideal for visitors basing in Aspen who want a guided mountain-town experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Aspen",
+      "state": "Colorado"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $205.59",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 3
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/fe/b2/40/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Capture your Aspen memories with a professional photographer",
+      "Whether it's a family portrait, couple's shoot, or solo adventure photos, work with an experienced photographer who know",
+      "Receive professionally edited digital images to treasure forever",
+      "Photographer and Professional Photoshoot in Aspen departing from Aspen",
+      "Professional Aspen guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meeting point determined based on chosen Aspen location at booking."
+      },
+      "end": {
+        "description": "Return to your Aspen meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Capture your Aspen memories with a professional photographer.",
+    "itineraryItems": [
+      {
+        "title": "Aspen Photo Meeting Point",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Scenic Aspen Photo Locations",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Professional photographer",
+      "Edited digital photos",
+      "Location scouting"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Photographer and Professional Photoshoot in Aspen?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Aspen?",
+        "answer": "Meeting point determined based on chosen Aspen location at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Photo Shoots"
+      },
+      {
+        "label": "Photography Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 205.59
+      },
+      "currency": "USD"
+    }
+  }
+}

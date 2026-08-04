@@ -14,6 +14,7 @@ import {
   ENGINE6_KONA_CANONICAL_CITY_HERO_URL,
   ENGINE6_HAWAII_VOLCANOES_CANONICAL_CITY_HERO_URL,
   ENGINE6_DENVER_CANONICAL_CITY_HERO_URL,
+  ENGINE6_ASPEN_CANONICAL_CITY_HERO_URL,
   resolveEngine6CityDisplayHeroes,
 } from "./displayHero";
 import { engine6ListingTours } from "./listing";
@@ -109,6 +110,13 @@ const denverListingTours = engine6ListingTours.filter(
     tour.engine === "engine6" &&
     tour.destination.stateSlug === "colorado" &&
     tour.destination.citySlug === "denver"
+);
+
+const aspenListingTours = engine6ListingTours.filter(
+  tour =>
+    tour.engine === "engine6" &&
+    tour.destination.stateSlug === "colorado" &&
+    tour.destination.citySlug === "aspen"
 );
 
 const hawaiiVolcanoesListingTours = engine6ListingTours.filter(
@@ -321,6 +329,23 @@ describe("Engine6 hero diversity governance", () => {
       heroCounts.get(ENGINE6_DENVER_CANONICAL_CITY_HERO_URL) ?? 0
     ).toBeLessThanOrEqual(1);
     expect(heroCounts.size).toBe(denverListingTours.length);
+  });
+
+  it("uses Aspen as the validation cohort for unique listing-card heroes", () => {
+    expect(aspenListingTours.length).toBeGreaterThan(0);
+
+    const heroCounts = aspenListingTours.reduce<Map<string, number>>(
+      (counts, tour) => {
+        counts.set(tour.heroImage, (counts.get(tour.heroImage) ?? 0) + 1);
+        return counts;
+      },
+      new Map()
+    );
+
+    expect(
+      heroCounts.get(ENGINE6_ASPEN_CANONICAL_CITY_HERO_URL) ?? 0
+    ).toBeLessThanOrEqual(1);
+    expect(heroCounts.size).toBe(aspenListingTours.length);
   });
 
   it("uses Hawaii Volcanoes National Park as the validation cohort for unique listing-card heroes", () => {

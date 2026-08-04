@@ -1,0 +1,78 @@
+{
+  "destinationLabel": "Aspen",
+  "destinationCitySlug": "aspen",
+  "viatorDestinationSlug": "Aspen",
+  "targetPremiumShare": 0.5,
+  "catalogUrl": "https://www.viator.com/Aspen/d26395-ttd",
+  "selectedCount": 6,
+  "premiumCount": 1,
+  "selectionNote": "Selected 6 strongest viable Aspen d26395 guided products with verified traveler ratings, product-specific heroes, and usable commercial fields. Full 15/20-25 target is not supported by the live Aspen catalog (~15 total listings), which is dominated by transfers, ski rentals, self-guided/app scavenger hunts, and lacks active jeep/helicopter/wine/stargazing inventory. Premium share is 1/6 because only one verified photography product cleared traveler-review commercial gates.",
+  "selectedProductCodes": [
+    "74828P1",
+    "74828P2",
+    "74828P3",
+    "74828P4",
+    "74828P5",
+    "147508P175"
+  ],
+  "premiumProductCodes": [
+    "147508P175"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "172188P151",
+      "title": "Private Professional photoshoot in Aspen",
+      "reason": "Operator reviews on Tripadvisor only (not Viator traveler Reviews); poor commercial traveler-rating parity for Engine6 fields"
+    },
+    {
+      "productCode": "565104P4",
+      "title": "Guided Fly Fishing Adventure on the Roaring Fork River",
+      "reason": "Bound to Colorado destination d273 (/tours/Colorado/...), not Aspen d26395 destination binding"
+    },
+    {
+      "productCode": "104204P37",
+      "title": "An Epic Scavenger Hunt: Aspen Get An \"Altitude\" Adjustment",
+      "reason": "Self-guided Let's Roam app/GPS scavenger hunt"
+    },
+    {
+      "productCode": "200006P106",
+      "title": "Amazing Aspen Scavenger Hunt",
+      "reason": "Self-guided app-based scavenger hunt"
+    },
+    {
+      "productCode": "110804P1010",
+      "title": "Aspen Self-Guided Tour: Tales of Wealth, Wildness and Rebellion",
+      "reason": "Self-guided/audio tour"
+    },
+    {
+      "productCode": "72189P6",
+      "title": "Private Car Service from Aspen or Snowmass to Denver Int'l Airport (DEN)",
+      "reason": "Airport transfer, not a guided tour experience"
+    },
+    {
+      "productCode": "128285P1479",
+      "title": "Aspen hotel or address to Denver Airport (DEN) - Departure Private Transfer",
+      "reason": "Airport transfer, not a guided tour experience"
+    },
+    {
+      "productCode": "293540P3",
+      "title": "Private Eagle County Regional / Vail Airport Transfer to Aspen",
+      "reason": "Airport transfer, not a guided tour experience"
+    },
+    {
+      "productCode": "582654SP1",
+      "title": "Private SUV Transfer from Aspen Airport to Aspen or Snowmass",
+      "reason": "Airport/local transfer, not a guided tour experience"
+    },
+    {
+      "productCode": "23902P1",
+      "title": "Aspen Premium Ski Rental Including Delivery",
+      "reason": "Equipment rental, not a guided tour experience"
+    },
+    {
+      "productCode": "23902P3",
+      "title": "Aspen Performance Ski Rental Including Delivery",
+      "reason": "Equipment rental, not a guided tour experience"
+    }
+  ]
+}

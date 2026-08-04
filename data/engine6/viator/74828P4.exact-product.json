@@ -1,0 +1,111 @@
+{
+  "product": {
+    "productCode": "74828P4",
+    "productUrl": "https://www.viator.com/tours/Aspen/Aspens-Off-the-Beaten-Path-Tour/d26395-74828P4",
+    "title": "Aspen's Off the Beaten Path Tour",
+    "description": {
+      "text": "Aspen is a city nestled in nature and soaked in history. Get a sense of how the city is situated in time and place with this walking tour. Stops include Victorian West End, John Denver Sanctuary, Wheeler Opera House, County Library, Arts Center. Stroll through the Victorian West End neighborhood and into the John Denver Sanctuary. Ideal for visitors basing in Aspen who want a guided mountain-town experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Aspen",
+      "state": "Colorado"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $48.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 24
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/46/69/64/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Aspen is a city nestled in nature and soaked in history",
+      "Get a sense of how the city is situated in time and place with this walking tour",
+      "Stroll through the Victorian West End neighborhood and into the John Denver Sanctuary",
+      "Aspen's Off the Beaten Path Tour departing from Aspen",
+      "Professional Aspen guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "320 E Hyman Ave, Aspen, CO 81611, USA"
+      },
+      "end": {
+        "description": "Return to your Aspen meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Aspen is a city nestled in nature and soaked in history.",
+    "itineraryItems": [
+      {
+        "title": "Victorian West End",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "John Denver Sanctuary",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wheeler Opera House",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "County Library",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Arts Center",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "All taxes, fees and handling charges",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Aspen's Off the Beaten Path Tour?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Aspen?",
+        "answer": "320 E Hyman Ave, Aspen, CO 81611, USA"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Historical Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 48
+      },
+      "currency": "USD"
+    }
+  }
+}

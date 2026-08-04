@@ -1,0 +1,101 @@
+{
+  "product": {
+    "productCode": "74828P1",
+    "productUrl": "https://www.viator.com/tours/Aspen/Aspens-DarkSide-Ghost-Tour/d26395-74828P1",
+    "title": "Aspen's DarkSide Ghost Tour",
+    "description": {
+      "text": "Get spooky in Aspen with this guided ghost tour. Timed for nightfall according to season, experience a creepier side of Aspen's historic downtown as you slip through shadowed streets and into the dark haunts of the past. Stops include Wheeler Opera House, Smuggler Mountain. Experience a thrill as you hear about the gruesome history that created these ghosts, and glance around, wondering where the wraiths will emerge from. Ideal for visitors basing in Aspen who want a guided mountain-town experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Aspen",
+      "state": "Colorado"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $48.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 83
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/fe/b1/2f/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Get spooky in Aspen with this guided ghost tour",
+      "Timed for nightfall according to season, experience a creepier side of Aspen's historic downtown as you slip through sha",
+      "Experience a thrill as you hear about the gruesome history that created these ghosts, and glance around, wondering where",
+      "Aspen's DarkSide Ghost Tour departing from Aspen",
+      "Professional Aspen guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "320 E Hyman Ave, Aspen, CO 81611, USA. Tour meets 5 minutes prior to start directly across from the corner of the Wheeler Opera House on the brick pedestrian walking mall in downtown Aspen, Colorado."
+      },
+      "end": {
+        "description": "Return to your Aspen meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Get spooky in Aspen with this guided ghost tour.",
+    "itineraryItems": [
+      {
+        "title": "Dean's Aspen Tours",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wheeler Opera House",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Smuggler Mountain",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "All taxes, fees and handling charges",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Aspen's DarkSide Ghost Tour?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Aspen?",
+        "answer": "320 E Hyman Ave, Aspen, CO 81611, USA. Tour meets 5 minutes prior to start directly across from the corner of the Wheeler Opera House on the brick pedestrian walking mall in downtown Aspen, Colorado."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Ghost Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 48
+      },
+      "currency": "USD"
+    }
+  }
+}

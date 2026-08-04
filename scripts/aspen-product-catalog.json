@@ -1,0 +1,124 @@
+[
+  {
+    "productCode": "74828P1",
+    "productUrl": "https://www.viator.com/tours/Aspen/Aspens-DarkSide-Ghost-Tour/d26395-74828P1",
+    "title": "Aspen's DarkSide Ghost Tour",
+    "duration": "1 hour (approx.)",
+    "priceFrom": 48,
+    "rating": 4.9,
+    "reviewCount": 83,
+    "heroUrl": "https://dynamic-media.tacdn.com/media/photo-o/2e/fe/b1/2f/caption.jpg?w=700&h=500&s=1",
+    "categories": [
+      "Ghost Tours",
+      "Walking Tours"
+    ],
+    "itineraryTitles": [
+      "Dean's Aspen Tours",
+      "Wheeler Opera House",
+      "Smuggler Mountain"
+    ]
+  },
+  {
+    "productCode": "74828P2",
+    "productUrl": "https://www.viator.com/tours/Aspen/Aspens-Past-to-Present-Historic-Tour/d26395-74828P2",
+    "title": "Aspen's Past to Present Historic Tour",
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": 48,
+    "rating": 5,
+    "reviewCount": 42,
+    "heroUrl": "https://dynamic-media.tacdn.com/media/photo-o/2e/fe/d6/92/caption.jpg?w=700&h=500&s=1",
+    "categories": [
+      "Historical Tours",
+      "Walking Tours"
+    ],
+    "itineraryTitles": [
+      "Dean's Aspen Tours",
+      "Wheeler Opera House",
+      "Wagner Park",
+      "Pitkin County Library",
+      "Aspen Mountain / Ajax",
+      "Smuggler Mountain",
+      "Mill Street Fountain"
+    ]
+  },
+  {
+    "productCode": "74828P3",
+    "productUrl": "https://www.viator.com/tours/Aspen/Glimpse-of-Aspen-Tour/d26395-74828P3",
+    "title": "Highlights of Aspen Tour",
+    "duration": "1 hour (approx.)",
+    "priceFrom": 48,
+    "rating": 5,
+    "reviewCount": 9,
+    "heroUrl": "https://dynamic-media.tacdn.com/media/photo-o/2e/ff/04/e3/caption.jpg?w=700&h=500&s=1",
+    "categories": [
+      "Walking Tours",
+      "Sightseeing Tours"
+    ],
+    "itineraryTitles": [
+      "Dean's Aspen Tours",
+      "Wheeler Opera House",
+      "Aspen Art Museum",
+      "Aspen Mountain / Ajax",
+      "Mill Street Fountain",
+      "Wagner Park"
+    ]
+  },
+  {
+    "productCode": "74828P4",
+    "productUrl": "https://www.viator.com/tours/Aspen/Aspens-Off-the-Beaten-Path-Tour/d26395-74828P4",
+    "title": "Aspen's Off the Beaten Path Tour",
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": 48,
+    "rating": 5,
+    "reviewCount": 24,
+    "heroUrl": "https://dynamic-media.tacdn.com/media/photo-o/2f/46/69/64/caption.jpg?w=700&h=500&s=1",
+    "categories": [
+      "Walking Tours",
+      "Historical Tours"
+    ],
+    "itineraryTitles": [
+      "Victorian West End",
+      "John Denver Sanctuary",
+      "Wheeler Opera House",
+      "County Library",
+      "Arts Center"
+    ]
+  },
+  {
+    "productCode": "74828P5",
+    "productUrl": "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5",
+    "title": "Leisure Hike - East Aspen Hunter Creek",
+    "duration": "2 hours (approx.)",
+    "priceFrom": 68,
+    "rating": 5,
+    "reviewCount": 5,
+    "heroUrl": "https://dynamic-media.tacdn.com/media/photo-o/2f/46/69/9b/caption.jpg?w=700&h=500&s=1",
+    "categories": [
+      "Hiking Tours",
+      "Nature and Wildlife Tours"
+    ],
+    "itineraryTitles": [
+      "Hunter Creek Trailhead",
+      "Hunter Creek Valley",
+      "Hunter Creek Path"
+    ]
+  },
+  {
+    "productCode": "147508P175",
+    "productUrl": "https://www.viator.com/tours/Aspen/Photographer-and-Professional-Photoshoot-in-Aspen/d26395-147508P175",
+    "title": "Photographer and Professional Photoshoot in Aspen",
+    "duration": "2 hours (approx.)",
+    "priceFrom": 205.59,
+    "rating": 5,
+    "reviewCount": 3,
+    "heroUrl": "https://dynamic-media.tacdn.com/media/photo-o/2e/fe/b2/40/caption.jpg?w=700&h=500&s=1",
+    "categories": [
+      "Photo Shoots",
+      "Photography Tours"
+    ],
+    "itineraryTitles": [
+      "Aspen Photo Meeting Point",
+      "Scenic Aspen Photo Locations"
+    ]
+  }
+]

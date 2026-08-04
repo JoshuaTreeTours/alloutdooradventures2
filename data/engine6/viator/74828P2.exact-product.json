@@ -1,0 +1,121 @@
+{
+  "product": {
+    "productCode": "74828P2",
+    "productUrl": "https://www.viator.com/tours/Aspen/Aspens-Past-to-Present-Historic-Tour/d26395-74828P2",
+    "title": "Aspen's Past to Present Historic Tour",
+    "description": {
+      "text": "Aspen may known for glitz and glamour today, but like many Colorado mountain towns, it started as a humble mining town. Follow your guide as he shares history, local folklore, and insider knowledge of downtown Aspen. Stops include Wheeler Opera House, Wagner Park, Pitkin County Library, Aspen Mountain / Ajax, Smuggler Mountain, Mill Street Fountain. The tour happens rain or shine, so dress appropriately for mountain weather changes and come prepared to immerse yourself in local legends. Ideal for visitors basing in Aspen who want a guided mountain-town experience without coordinating meeting points, trailheads, or photo locations on their own."
+    },
+    "location": {
+      "city": "Aspen",
+      "state": "Colorado"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $48.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 42
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/fe/d6/92/caption.jpg?w=700&h=500&s=1",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Aspen may known for glitz and glamour today, but like many Colorado mountain towns, it started as a humble mining town",
+      "Follow your guide as he shares history, local folklore, and insider knowledge of downtown Aspen",
+      "The tour happens rain or shine, so dress appropriately for mountain weather changes and come prepared to immerse yoursel",
+      "Aspen's Past to Present Historic Tour departing from Aspen",
+      "Professional Aspen guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "320 E Hyman Ave, Aspen, CO 81611, USA. Tour meets 5 minutes prior to start on the pedestrian mall directly across from the corner of the Wheeler Opera House in downtown Aspen, Colorado."
+      },
+      "end": {
+        "description": "Return to your Aspen meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Aspen may known for glitz and glamour today, but like many Colorado mountain towns, it started as a humble mining town.",
+    "itineraryItems": [
+      {
+        "title": "Dean's Aspen Tours",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Wheeler Opera House",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Wagner Park",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Pitkin County Library",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Aspen Mountain / Ajax",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Smuggler Mountain",
+        "description": "",
+        "stopType": "pass-by"
+      },
+      {
+        "title": "Mill Street Fountain",
+        "description": "",
+        "stopType": "pass-by"
+      }
+    ],
+    "inclusions": [
+      "All taxes, fees and handling charges",
+      "Professional guide"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Aspen's Past to Present Historic Tour?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Aspen?",
+        "answer": "320 E Hyman Ave, Aspen, CO 81611, USA. Tour meets 5 minutes prior to start on the pedestrian mall directly across from the corner of the Wheeler Opera House in downtown Aspen, Colorado."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Historical Tours"
+      },
+      {
+        "label": "Walking Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 48
+      },
+      "currency": "USD"
+    }
+  }
+}

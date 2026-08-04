@@ -2,7 +2,7 @@
 
 Permanent consolidated audit across Engine6 publishing contracts. Blocking applies only to deploy-scoped products in warn mode unless ENGINE6_GOVERNANCE_MODE=strict.
 
-Generated: 2026-08-03T23:45:31.053Z
+Generated: 2026-08-04T01:45:03.203Z
 Governance mode: audit
 Scope mode: pr-scoped
 Full-site validation: false
@@ -11,9 +11,9 @@ Overall passed: true
 
 ## Scope
 
-- Deploy-scoped blocking products: 16
-- Scoped product codes: 128737P1, 128737P2, 323041P1, 41410P1, 41410P10, 41410P14, 41410P15, 59646P2, 59646P3, 59646P5, 72188P1, 72188P15, 8950P29, 8950P37, 8950P6, 8950P9
-- Destination cohort labels: Denver
+- Deploy-scoped blocking products: 6
+- Scoped product codes: 147508P175, 74828P1, 74828P2, 74828P3, 74828P4, 74828P5
+- Destination cohort labels: Aspen
 
 ## Totals
 
@@ -43,7 +43,7 @@ Overall passed: true
 ## Notes
 
 - rating_count is maintained as a synchronized mirror of review_count for merchant-feed compatibility. No independent live refresh of rating_count is performed; it changes only when review_count changes.
-- Destination cohort scope: Denver
+- Destination cohort scope: Aspen
 
 ## Legacy findings (report-only)
 
