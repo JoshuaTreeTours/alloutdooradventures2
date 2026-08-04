@@ -16,6 +16,7 @@ import { getDenverTargetedNarrativeDescription } from "./denverApprovedNarrative
 import { getAspenTargetedNarrativeDescription } from "./aspenApprovedNarrativeDescriptions";
 import { getBoulderTargetedNarrativeDescription } from "./boulderApprovedNarrativeDescriptions";
 import { getAustinTargetedNarrativeDescription } from "./austinApprovedNarrativeDescriptions";
+import { getHoustonTargetedNarrativeDescription } from "./houstonApprovedNarrativeDescriptions";
 
 export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "5615689P4",
@@ -117,6 +118,7 @@ export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
   getAspenTargetedNarrativeDescription(productCode) ??
   getBoulderTargetedNarrativeDescription(productCode) ??
   getAustinTargetedNarrativeDescription(productCode) ??
+  getHoustonTargetedNarrativeDescription(productCode) ??
   getKeyWestTargetedNarrativeDescription(productCode) ??
   getHonoluluTargetedNarrativeDescription(productCode) ??
   getMauiTargetedNarrativeDescription(productCode) ??

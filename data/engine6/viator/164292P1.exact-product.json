@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "164292P1",
+    "productUrl": "https://www.viator.com/tours/Houston/Downtown-EADO-Tour/d5186-164292P1",
+    "title": "Downtown Houston Brewery Bike Tour",
+    "description": {
+      "text": "Cycle a flat downtown Houston and East End route between local breweries with a guide on a small-group bike tour. Gear and beer samples are included as you roll past murals and neighborhood streets between tasting stops. Stops include Local Group Brewing, Downtown Houston, East End Murals, Brewery Stops. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "4 hours (approx.)",
+    "priceFrom": "From $70.77",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 39
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/a4/09/1f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Cycle a flat downtown Houston and East End route between local breweries with a guide on a small-group bike tour",
+      "Gear and beer samples are included as you roll past murals and neighborhood streets between tasting stops",
+      "Stops include Local Group Brewing, Downtown Houston, East End Murals, Brewery Stops",
+      "Downtown Houston Brewery Bike Tour departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Look for the bright orange \"Tour de Brewery\" flag in the beer garden."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Cycle a flat downtown Houston and East End route between local breweries with a guide on a small-group bike tour.",
+    "itineraryItems": [
+      {
+        "title": "Local Group Brewing",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Downtown Houston",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "East End Murals",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Brewery Stops",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Beer samples at each brewery.",
+      "Use of bicycle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Downtown Houston Brewery Bike Tour?",
+        "answer": "The planned duration is 4 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Look for the bright orange \"Tour de Brewery\" flag in the beer garden."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 70.77
+      },
+      "currency": "USD"
+    }
+  }
+}

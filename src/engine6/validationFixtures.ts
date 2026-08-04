@@ -109,6 +109,26 @@ import specimen5527luauPayload from "../../data/engine6/viator/5527LUAU.exact-pr
 import specimen418633p1Payload from "../../data/engine6/viator/418633P1.exact-product.json";
 import specimen207802p1Payload from "../../data/engine6/viator/207802P1.exact-product.json";
 import specimen41410p10Payload from "../../data/engine6/viator/41410P10.exact-product.json";
+import specimen192749p7Payload from "../../data/engine6/viator/192749P7.exact-product.json";
+import specimen37391p2Payload from "../../data/engine6/viator/37391P2.exact-product.json";
+import specimen377051p2Payload from "../../data/engine6/viator/377051P2.exact-product.json";
+import specimen172188p36Payload from "../../data/engine6/viator/172188P36.exact-product.json";
+import specimen129206p4Payload from "../../data/engine6/viator/129206P4.exact-product.json";
+import specimen129206p5Payload from "../../data/engine6/viator/129206P5.exact-product.json";
+import specimen129206p2Payload from "../../data/engine6/viator/129206P2.exact-product.json";
+import specimen129206p1Payload from "../../data/engine6/viator/129206P1.exact-product.json";
+import specimen331634p5Payload from "../../data/engine6/viator/331634P5.exact-product.json";
+import specimen37391p12Payload from "../../data/engine6/viator/37391P12.exact-product.json";
+import specimen192749p6Payload from "../../data/engine6/viator/192749P6.exact-product.json";
+import specimen192749p5Payload from "../../data/engine6/viator/192749P5.exact-product.json";
+import specimen37391p17Payload from "../../data/engine6/viator/37391P17.exact-product.json";
+import specimen192749p1Payload from "../../data/engine6/viator/192749P1.exact-product.json";
+import specimen5920cityPayload from "../../data/engine6/viator/5920CITY.exact-product.json";
+import specimen298059p2Payload from "../../data/engine6/viator/298059P2.exact-product.json";
+import specimen333327p1Payload from "../../data/engine6/viator/333327P1.exact-product.json";
+import specimen192749p8Payload from "../../data/engine6/viator/192749P8.exact-product.json";
+import specimen192749p3Payload from "../../data/engine6/viator/192749P3.exact-product.json";
+import specimen164292p1Payload from "../../data/engine6/viator/164292P1.exact-product.json";
 import specimen5513806p1Payload from "../../data/engine6/viator/5513806P1.exact-product.json";
 import specimen406074p3Payload from "../../data/engine6/viator/406074P3.exact-product.json";
 import specimen421026p1Payload from "../../data/engine6/viator/421026P1.exact-product.json";
@@ -1959,6 +1979,126 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "41410P10",
     publicUrl: "https://www.viator.com/tours/Denver/Small-group-tour-of-Pikes-Peak-and-the-Garden-of-the-Gods-from-Denver/d4837-41410P10",
     rawPayload: specimen41410p10Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "192749P7",
+    publicUrl: "https://www.viator.com/tours/Houston/Private-Best-of-Houston-City-Driving-Tour-with-Local-Guide/d5186-192749P7",
+    rawPayload: specimen192749p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "37391P2",
+    publicUrl: "https://www.viator.com/tours/Houston/The-Houston-city-sightseeing-tour/d5186-37391P2",
+    rawPayload: specimen37391p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "377051P2",
+    publicUrl: "https://www.viator.com/tours/Houston/Polaris-Slingshot-Rental/d5186-377051P2",
+    rawPayload: specimen377051p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "172188P36",
+    publicUrl: "https://www.viator.com/tours/Houston/Private-Holiday-Professional-Photo-Shoot-in-Houston/d5186-172188P36",
+    rawPayload: specimen172188p36Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "129206P4",
+    publicUrl: "https://www.viator.com/tours/Houston/Galveston-Tour/d5186-129206P4",
+    rawPayload: specimen129206p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "129206P5",
+    publicUrl: "https://www.viator.com/tours/Houston/Managers-Special/d5186-129206P5",
+    rawPayload: specimen129206p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "129206P2",
+    publicUrl: "https://www.viator.com/tours/Houston/Mural-Instagram-Tour/d5186-129206P2",
+    rawPayload: specimen129206p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "129206P1",
+    publicUrl: "https://www.viator.com/tours/Houston/Sightseeing-Tour/d5186-129206P1",
+    rawPayload: specimen129206p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "331634P5",
+    publicUrl: "https://www.viator.com/tours/Houston/Glowing-Kayak-Tour-Port-OConnor-Bar-Room-Bay/d5186-331634P5",
+    rawPayload: specimen331634p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "37391P12",
+    publicUrl: "https://www.viator.com/tours/Houston/Nasa-Space-Center-and-Houston-Sightseeing-Tour/d5186-37391P12",
+    rawPayload: specimen37391p12Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "192749P6",
+    publicUrl: "https://www.viator.com/tours/Houston/Best-of-Houston-City-Driving-Tour-with-Local-Guide/d5186-192749P6",
+    rawPayload: specimen192749p6Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "192749P5",
+    publicUrl: "https://www.viator.com/tours/Houston/Houston-Rockets-Gameday-Tour/d5186-192749P5",
+    rawPayload: specimen192749p5Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "37391P17",
+    publicUrl: "https://www.viator.com/tours/Houston/2-hour-Houston-orientation-sightseeing-tour/d5186-37391P17",
+    rawPayload: specimen37391p17Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "192749P1",
+    publicUrl: "https://www.viator.com/tours/Houston/Downtown-Underground-Tunnel-Tour/d5186-192749P1",
+    rawPayload: specimen192749p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5920CITY",
+    publicUrl: "https://www.viator.com/tours/Houston/Houston-Hop-On-Hop-Off-Tour/d5186-5920CITY",
+    rawPayload: specimen5920cityPayload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "298059P2",
+    publicUrl: "https://www.viator.com/tours/Houston/Tril-On-Wheels-Hip-Hop-Party-Bike/d5186-298059P2",
+    rawPayload: specimen298059p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "333327P1",
+    publicUrl: "https://www.viator.com/tours/Houston/Houston-Haunted-Dark-History-Ghost-Tour/d5186-333327P1",
+    rawPayload: specimen333327p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "192749P8",
+    publicUrl: "https://www.viator.com/tours/Houston/Houston-Astros-Baseball-Game-Day-Tour-with-Tunnel-Access/d5186-192749P8",
+    rawPayload: specimen192749p8Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "192749P3",
+    publicUrl: "https://www.viator.com/tours/Houston/Astroville-Driving-Tour-and-NASA-Space-Center-Ticket-Transportation/d5186-192749P3",
+    rawPayload: specimen192749p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "164292P1",
+    publicUrl: "https://www.viator.com/tours/Houston/Downtown-EADO-Tour/d5186-164292P1",
+    rawPayload: specimen164292p1Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {

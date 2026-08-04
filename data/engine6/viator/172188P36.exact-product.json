@@ -1,0 +1,102 @@
+{
+  "product": {
+    "productCode": "172188P36",
+    "productUrl": "https://www.viator.com/tours/Houston/Private-Holiday-Professional-Photo-Shoot-in-Houston/d5186-172188P36",
+    "title": "Private Professional Holiday Photoshoot in Houston",
+    "description": {
+      "text": "Meet a professional photographer in Houston for a private portrait walk through downtown landmark settings. The outing lasts about an hour on location, with edited high-resolution photos delivered after the shoot so you leave with a finished set of travel images. Stops include Houston Photo Meet Point, Downtown Landmark Photo Locations, Edited Gallery Delivery. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $139.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 1
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/0d/b8/21.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Meet a professional photographer in Houston for a private portrait walk through downtown landmark settings",
+      "The outing lasts about an hour on location, with edited high-resolution photos delivered after the shoot so you leave wi",
+      "Stops include Houston Photo Meet Point, Downtown Landmark Photo Locations, Edited Gallery Delivery",
+      "Private Professional Holiday Photoshoot in Houston departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "We will contact you by phone message to confirm the exact meeting point. If you have a preferred location, just let us know and we’ll be happy to accommodate your choice."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Meet a professional photographer in Houston for a private portrait walk through downtown landmark settings.",
+    "itineraryItems": [
+      {
+        "title": "Houston Photo Meet Point",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Downtown Landmark Photo Locations",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Edited Gallery Delivery",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Receive your edited pictures within 4-5 business days",
+      "30-min photoshoot: 20 professionally edited photos delivered in full high resolution",
+      "1-hour photoshoot: 45 professionally edited photos delivered in full high resolution"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Professional Holiday Photoshoot in Houston?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "We will contact you by phone message to confirm the exact meeting point. If you have a preferred location, just let us know and we’ll be happy to accommodate your choice."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Photography Tours"
+      },
+      {
+        "label": "Private Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 139
+      },
+      "currency": "USD"
+    }
+  }
+}

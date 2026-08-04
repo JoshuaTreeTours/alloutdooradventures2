@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "192749P8",
+    "productUrl": "https://www.viator.com/tours/Houston/Houston-Astros-Baseball-Game-Day-Tour-with-Tunnel-Access/d5186-192749P8",
+    "title": "Space City NASA Bus & Ticket Bundle from Downtown Houston",
+    "description": {
+      "text": "Combine downtown Houston shuttle service with Space Center Houston general admission in one ticket bundle. Meet at Bank of America Tower for round-trip transport, then explore exhibits at your own pace on campus. Stops include Bank of America Tower Shuttle, Space Center Houston, General Admission Exhibits. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "6 hours (approx.)",
+    "priceFrom": "From $74.95",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 27
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/30/7a/fe.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Combine downtown Houston shuttle service with Space Center Houston general admission in one ticket bundle",
+      "Meet at Bank of America Tower for round-trip transport, then explore exhibits at your own pace on campus",
+      "Stops include Bank of America Tower Shuttle, Space Center Houston, General Admission Exhibits",
+      "Space City NASA Bus & Ticket Bundle from Downtown Houston departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Please meet for check-in outside the Bank of America Tower (Capitol St. side) about 5 minutes before your departure time. Look for NASA shuttle to arrive in front of the giant, colorful Miro sculpture  If you arrive early, there are restrooms inside the Bank of America's \"Understory\" tunnel level."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Combine downtown Houston shuttle service with Space Center Houston general admission in one ticket bundle.",
+    "itineraryItems": [
+      {
+        "title": "Bank of America Tower Shuttle",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Space Center Houston",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "General Admission Exhibits",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Recommendations Sheet with tips to maximize your NASA experience & book free trams per availability",
+      "Professional Driver",
+      "Round-Trip Transport from meeting point to NASA Space Center in a Mercedes or Transit Shuttle",
+      "General Admission (GA) ticket into the NASA Space Center",
+      "5 hours to explore the NASA Space Center at own freedom"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Space City NASA Bus & Ticket Bundle from Downtown Houston?",
+        "answer": "The planned duration is 6 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Please meet for check-in outside the Bank of America Tower (Capitol St. side) about 5 minutes before your departure time. Look for NASA shuttle to arrive in front of the giant, colorful Miro sculpture  If you arrive early, there are restrooms inside the Bank of America's \"Understory\" tunnel level."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Transfers"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 74.95
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "destinationLabel": "Houston",
+  "destinationCitySlug": "houston",
+  "viatorDestinationSlug": "Houston",
+  "targetPremiumShare": 0.5,
+  "catalogUrl": "https://www.viator.com/Houston/d5186-ttd",
+  "selectedCount": 20,
+  "premiumCount": 10,
+  "selectionNote": "Selected 20 live ACTIVE Houston d5186 products via Viator partner API (through AOA production proxy) with public-page cross-checks. Catalog lacks active helicopter, wine, stargazing, true jeep, and hiking SKUs; ATV listing is admission-only. Included Polaris Slingshot as the strongest off-road/scenic driving analog, glowing kayak for water adventure, private city/Galveston/mural/photo SKUs for premium mix, and NASA + city sightseeing for Houston signature experiences. Rejected inactive specialty SKUs, admission tickets, transfers, per-group boat/food charters, and weak gimmick products.",
+  "selectedProductCodes": [
+    "192749P7",
+    "37391P2",
+    "377051P2",
+    "172188P36",
+    "129206P4",
+    "129206P5",
+    "129206P2",
+    "129206P1",
+    "331634P5",
+    "37391P12",
+    "192749P6",
+    "192749P5",
+    "37391P17",
+    "192749P1",
+    "5920CITY",
+    "298059P2",
+    "333327P1",
+    "192749P8",
+    "192749P3",
+    "164292P1"
+  ],
+  "premiumProductCodes": [
+    "192749P7",
+    "37391P2",
+    "377051P2",
+    "172188P36",
+    "129206P4",
+    "129206P5",
+    "129206P2",
+    "129206P1",
+    "331634P5",
+    "37391P12"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "102270P2",
+      "title": "Private Tour - NASA Space Center with a Real Rocket Scientist",
+      "reason": "Partner API status INACTIVE"
+    },
+    {
+      "productCode": "10201P9",
+      "title": "Winery Tour in The Woodlands near Houston",
+      "reason": "Partner API status INACTIVE"
+    },
+    {
+      "productCode": "10201P4",
+      "title": "Clear Lake Pearland Rum Distillery and Brewery Tour",
+      "reason": "Partner API status INACTIVE"
+    },
+    {
+      "productCode": "53413P3",
+      "title": "Historic Houston Small-Group Segway Tour",
+      "reason": "Partner API status INACTIVE"
+    },
+    {
+      "productCode": "53413P1",
+      "title": "Houston's Stadium and Entertainment District Segway Tour",
+      "reason": "Partner API status INACTIVE"
+    },
+    {
+      "productCode": "159408P2",
+      "title": "Guided NASA Tour of Space Center Houston",
+      "reason": "Partner API status INACTIVE"
+    },
+    {
+      "productCode": "332114P1",
+      "title": "2-Hour Houston Pedal Party Barge with a Licensed Captain",
+      "reason": "Partner API status INACTIVE"
+    },
+    {
+      "productCode": "37391P7",
+      "title": "Private Houston Sightseeing Tour at Night",
+      "reason": "Partner API status INACTIVE"
+    },
+    {
+      "productCode": "37391P10",
+      "title": "Two Houston Full-Day Tours With NASA Space Center",
+      "reason": "Partner API status INACTIVE"
+    },
+    {
+      "productCode": "37391P11",
+      "title": "3-Day Houston Sightseeing Tour",
+      "reason": "Partner API status INACTIVE"
+    },
+    {
+      "productCode": "273217P2",
+      "title": "5 Hour Full Guided Fishing Trip",
+      "reason": "Per-boat UNIT pricing unsuitable for standard per-person Engine6 commercial fields"
+    },
+    {
+      "productCode": "192749P4",
+      "title": "Astroville Private Food Tour of Downtown Houston",
+      "reason": "Per-group UNIT pricing and food-tour focus outside outdoor portfolio priority"
+    },
+    {
+      "productCode": "37391P15",
+      "title": "Galveston Sightseeing Tour 5-Hr private day trip",
+      "reason": "Per-group UNIT pricing"
+    },
+    {
+      "productCode": "37391P19",
+      "title": "Houston Party Shuttle",
+      "reason": "Party shuttle / weak commercial reviews"
+    },
+    {
+      "productCode": "330603P1",
+      "title": "HTX Adventure Park Admission \u2013 ATV Rental Fee Not Included",
+      "reason": "Admission-only SKU; ATV rental sold separately onsite"
+    },
+    {
+      "productCode": "75220SPACE",
+      "title": "Space Center Houston Admission Ticket",
+      "reason": "Admission-only ticket"
+    },
+    {
+      "productCode": "2640HOU",
+      "title": "Houston CityPASS\u00ae",
+      "reason": "Multi-attraction pass / admission product"
+    },
+    {
+      "productCode": "40629P1",
+      "title": "Houston Museum of Natural Science General Admission",
+      "reason": "Admission-only ticket"
+    },
+    {
+      "productCode": "74915P3",
+      "title": "Museum of Fine Arts, Houston All Access Admission Ticket",
+      "reason": "Admission-only ticket"
+    },
+    {
+      "productCode": "256991P1",
+      "title": "Houston Airport & Galveston cruise Port Transportation",
+      "reason": "Transfer/transportation service"
+    },
+    {
+      "productCode": "7812P228",
+      "title": "Houston Downtown Food Tour with 5 Tastings",
+      "reason": "Food walking tour outside outdoor-adventure portfolio priority"
+    },
+    {
+      "productCode": "129206P3",
+      "title": "Private Houston Brewery Tour by Cart",
+      "reason": "Brewery bar-crawl focus; near-duplicate cart format vs selected sightseeing/mural carts"
+    },
+    {
+      "productCode": "129206P8",
+      "title": "Private Guided Pokemon Go Tour in Houston",
+      "reason": "Low rating and gimmick itinerary"
+    },
+    {
+      "productCode": "253643P1",
+      "title": "F-18 Super Hornet Flight Simulation",
+      "reason": "Partner API status INACTIVE / indoor simulator"
+    }
+  ]
+}

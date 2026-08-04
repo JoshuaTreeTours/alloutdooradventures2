@@ -1,0 +1,117 @@
+{
+  "product": {
+    "productCode": "37391P2",
+    "productUrl": "https://www.viator.com/tours/Houston/The-Houston-city-sightseeing-tour/d5186-37391P2",
+    "title": "Private Houston Tour 3-hr Air-Conditioned City Tour, customizable",
+    "description": {
+      "text": "Explore Houston on a customizable three-hour private city tour in an air-conditioned vehicle with hotel pickup from central locations. The route commonly includes Market Square, Buffalo Bayou Park, the Museum District, River Oaks, and Discovery Green with time for murals and neighborhood stories. Stops include Market Square, Buffalo Bayou Park, Houston Museum District, River Oaks, Discovery Green. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $375.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 23
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/5c/e3/86.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Explore Houston on a customizable three-hour private city tour in an air-conditioned vehicle with hotel pickup from cent",
+      "The route commonly includes Market Square, Buffalo Bayou Park, the Museum District, River Oaks, and Discovery Green with",
+      "Stops include Market Square, Buffalo Bayou Park, Houston Museum District, River Oaks, Discovery Green",
+      "Private Houston Tour 3-hr Air-Conditioned City Tour, customizable departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup for Westin Oaks Hotel, Westin Galleria, Galleria Mall are under the breezeway in front of BANANA REPUBLIC on Alabama St side of the Mall. Free Parking inside Galleria mall garage.  You will receive pickup instructions after booking."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Explore Houston on a customizable three-hour private city tour in an air-conditioned vehicle with hotel pickup from central locations.",
+    "itineraryItems": [
+      {
+        "title": "Market Square",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Buffalo Bayou Park",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Houston Museum District",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "River Oaks",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Discovery Green",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Complimentary pickup and return from selected hotels and Air BnB",
+      "Complimentary bottled water, light snacks",
+      "Air Conditioned, fully covered vehicles designed for smaller groups which operate rain or shine.",
+      "(1) Free souvenir per every (2) people in your party.",
+      "Professional guide/driver"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Houston Tour 3-hr Air-Conditioned City Tour, customizable?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Pickup for Westin Oaks Hotel, Westin Galleria, Galleria Mall are under the breezeway in front of BANANA REPUBLIC on Alabama St side of the Mall. Free Parking inside Galleria mall garage.  You will receive pickup instructions after booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 375
+      },
+      "currency": "USD"
+    }
+  }
+}

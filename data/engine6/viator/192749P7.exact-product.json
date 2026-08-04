@@ -1,0 +1,118 @@
+{
+  "product": {
+    "productCode": "192749P7",
+    "productUrl": "https://www.viator.com/tours/Houston/Private-Best-of-Houston-City-Driving-Tour-with-Local-Guide/d5186-192749P7",
+    "title": "Executive Private Houston City Tour",
+    "description": {
+      "text": "Tour Houston by private Executive Mercedes shuttle with a local guide covering downtown architecture, River Oaks estates, the Museum District, and Buffalo Bayou greenways. Photo stops and district commentary keep the pace flexible for first-time visitors who want a broad orientation without transferring between rides. Stops include Downtown Houston, River Oaks, Astrodome, Museum District, Buffalo Bayou Park. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "From $625.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 25
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/fb/86/2e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Tour Houston by private Executive Mercedes shuttle with a local guide covering downtown architecture, River Oaks estates",
+      "Photo stops and district commentary keep the pace flexible for first-time visitors who want a broad orientation without ",
+      "Stops include Downtown Houston, River Oaks, Astrodome, Museum District, Buffalo Bayou Park",
+      "Executive Private Houston City Tour departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Please meet for check-in outside the Bank of America Tower (Capitol St. side) about 5 minutes before your tour departure time. Look for our tour shuttle(s) to arrive in front of the giant, colorful Miro sculpture."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Tour Houston by private Executive Mercedes shuttle with a local guide covering downtown architecture, River Oaks estates, the Museum District, and Buffalo Bayou greenways.",
+    "itineraryItems": [
+      {
+        "title": "Downtown Houston",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "River Oaks",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Astrodome",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Museum District",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Buffalo Bayou Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Bottled Water / Photos, our tour guide will take pictures of your group per request",
+      "Private tour by air-conditioned Executive Mercedes shuttle only for your group",
+      "Courtesy Pick-up / Drop-off in 77002 & 77003 zip codes",
+      "Professional Driver and Professional Tour Guide",
+      "Optional drop-off after tour at the Houston Museum District / Sport Stadiums / Downtown Attractions",
+      "List of top Houston Recommendations sent via text or email"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Executive Private Houston City Tour?",
+        "answer": "The planned duration is 2 hours."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Please meet for check-in outside the Bank of America Tower (Capitol St. side) about 5 minutes before your tour departure time. Look for our tour shuttle(s) to arrive in front of the giant, colorful Miro sculpture."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Luxury Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 625
+      },
+      "currency": "USD"
+    }
+  }
+}

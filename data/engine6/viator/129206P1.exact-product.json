@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "129206P1",
+    "productUrl": "https://www.viator.com/tours/Houston/Sightseeing-Tour/d5186-129206P1",
+    "title": "Private Sightseeing Cart Tour of Houston",
+    "description": {
+      "text": "Cover downtown Houston districts on a private enclosed cart sightseeing tour with a local guide. The route links Market Square Park, landmark blocks, Buffalo Bayou viewpoints, and the Theater District in a compact orientation suited to first-time visitors. Stops include Market Square Park, Downtown Houston Landmarks, Buffalo Bayou Viewpoint, Theater District. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "1 hours 15 minutes (approx.)",
+    "priceFrom": "From $54.09",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 168
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/2e/07/df.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Cover downtown Houston districts on a private enclosed cart sightseeing tour with a local guide",
+      "The route links Market Square Park, landmark blocks, Buffalo Bayou viewpoints, and the Theater District in a compact ori",
+      "Stops include Market Square Park, Downtown Houston Landmarks, Buffalo Bayou Viewpoint, Theater District",
+      "Private Sightseeing Cart Tour of Houston departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "There is a parking lot and a parking garage right beside this location. Remember you must pay to park there."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Cover downtown Houston districts on a private enclosed cart sightseeing tour with a local guide.",
+    "itineraryItems": [
+      {
+        "title": "Market Square Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Downtown Houston Landmarks",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Buffalo Bayou Viewpoint",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Theater District",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Private transportation"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Private Sightseeing Cart Tour of Houston?",
+        "answer": "The planned duration is 1 hours 15 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "There is a parking lot and a parking garage right beside this location. Remember you must pay to park there."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Private Tours"
+      },
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 54.09
+      },
+      "currency": "USD"
+    }
+  }
+}

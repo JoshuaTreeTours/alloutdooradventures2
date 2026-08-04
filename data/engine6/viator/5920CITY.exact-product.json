@@ -1,0 +1,109 @@
+{
+  "product": {
+    "productCode": "5920CITY",
+    "productUrl": "https://www.viator.com/tours/Houston/Houston-Hop-On-Hop-Off-Tour/d5186-5920CITY",
+    "title": "Houston's Official City & Mural Tour!",
+    "description": {
+      "text": "Board Houston's official open-air city and mural sightseeing tour for an orientation past downtown skyline blocks, Market Square, and graffiti-art corridors. The narrated loop departs from the Houston City Tours Visitor Center and suits visitors seeking a compact overview. Stops include Houston City Tours Visitor Center, Downtown Skyline, Market Square, Graffiti Park. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "1 hours 20 minutes (approx.)",
+    "priceFrom": "From $39.95",
+    "reviews": {
+      "combinedAverageRating": 4.1,
+      "totalReviews": 611
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/29/6e/77.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Board Houston's official open-air city and mural sightseeing tour for an orientation past downtown skyline blocks, Marke",
+      "The narrated loop departs from the Houston City Tours Visitor Center and suits visitors seeking a compact overview",
+      "Stops include Houston City Tours Visitor Center, Downtown Skyline, Market Square, Graffiti Park",
+      "Houston's Official City & Mural Tour! departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Departure Point: Houston City Tours Visitor Center, located behind the Four Seasons Hotel at the Convention Center district."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Board Houston's official open-air city and mural sightseeing tour for an orientation past downtown skyline blocks, Market Square, and graffiti-art corridors.",
+    "itineraryItems": [
+      {
+        "title": "Houston City Tours Visitor Center",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Downtown Skyline",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Market Square",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Graffiti Park",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Map and orientation",
+      "In-person tour guide is available in the weekends and pre recorded audios are offered every weekdays"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Houston's Official City & Mural Tour!?",
+        "answer": "The planned duration is 1 hours 20 minutes."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Departure Point: Houston City Tours Visitor Center, located behind the Four Seasons Hotel at the Convention Center district."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Bus Tours"
+      },
+      {
+        "label": "City Tours"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 39.95
+      },
+      "currency": "USD"
+    }
+  }
+}

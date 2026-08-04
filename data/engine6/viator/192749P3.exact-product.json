@@ -1,0 +1,107 @@
+{
+  "product": {
+    "productCode": "192749P3",
+    "productUrl": "https://www.viator.com/tours/Houston/Astroville-Driving-Tour-and-NASA-Space-Center-Ticket-Transportation/d5186-192749P3",
+    "title": "NASA Historic Mission Control Tram Tour + General Admission Pass",
+    "description": {
+      "text": "Enter Space Center Houston with general admission plus a Historic Mission Control tram tour ticket bundled together. Arrive on your own schedule and use the included tram access to see Mission Control alongside major campus exhibits. Stops include Space Center Houston, Historic Mission Control, Tram Tour Route. Local commentary and route logistics are handled so you can focus on Houston skyline views, bayou corridors, and neighborhood landmarks. Ideal for visitors basing in Houston who want a guided Space City experience without coordinating meeting points or attraction entrances on their own."
+    },
+    "location": {
+      "city": "Houston",
+      "state": "Texas"
+    },
+    "duration": "1 hour (approx.)",
+    "priceFrom": "From $125.00",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 27
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3b/79/d4.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Enter Space Center Houston with general admission plus a Historic Mission Control tram tour ticket bundled together",
+      "Arrive on your own schedule and use the included tram access to see Mission Control alongside major campus exhibits",
+      "Stops include Space Center Houston, Historic Mission Control, Tram Tour Route",
+      "NASA Historic Mission Control Tram Tour + General Admission Pass departing from Houston",
+      "Professional Houston guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet at 8:45 AM on the bottom floor or \"tunnel-level\" of the Bank of America Tower (800 Capitol Street, Houston, TX 77002) for check-in as well as bathroom/coffee opportunity before starting the driving city tour portion at 9:00 AM."
+      },
+      "end": {
+        "description": "Return to your Houston meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Enter Space Center Houston with general admission plus a Historic Mission Control tram tour ticket bundled together.",
+    "itineraryItems": [
+      {
+        "title": "Space Center Houston",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Historic Mission Control",
+        "description": "",
+        "stopType": "stop"
+      },
+      {
+        "title": "Tram Tour Route",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Instructions for booking free trams only available inside per Space Center's availability",
+      "Tip Sheet to maximize your NASA experience",
+      "7 - 8 hours to explore the NASA Space Center at own freedom per NASA's daily hours",
+      "General Admission (GA) tickets for general entrance & available trams inside the NASA Space Center",
+      "NASA Historic Mission Control Tram tickets (add-on tour)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the NASA Historic Mission Control Tram Tour + General Admission Pass?",
+        "answer": "The planned duration is 1 hour."
+      },
+      {
+        "question": "Where does the tour depart from in Houston?",
+        "answer": "Meet at 8:45 AM on the bottom floor or \"tunnel-level\" of the Bank of America Tower (800 Capitol Street, Houston, TX 77002) for check-in as well as bathroom/coffee opportunity before starting the driving city tour portion at 9:00 AM."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sightseeing Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      },
+      {
+        "label": "Attraction Tickets"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 125
+      },
+      "currency": "USD"
+    }
+  }
+}
