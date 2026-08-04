@@ -1,0 +1,94 @@
+{
+  "product": {
+    "productCode": "342160P3",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Photography-Tours/d50798-342160P3",
+    "title": "Bryce Canyon Photography Tours",
+    "description": {
+      "text": "Sunrise Tour: If you want to experience the golden glow of sunrise in Bryce Canyon at the perfect spots and at the best times, this is the tour for you! As a local guide and professional photographer, you can expect only the best from each of these tours! Stops include Bryce Amphitheater. Astro Tour: Witness some of the darkest night skies in the world! Ideal for visitors basing near Bryce Canyon City who want a guided red-rock experience without coordinating park entrances, trailheads, or photo stops on their own."
+    },
+    "location": {
+      "city": "Bryce Canyon National Park",
+      "state": "Utah"
+    },
+    "duration": "3 hours (approx.)",
+    "priceFrom": "From $289.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 2
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/7a/83/e9.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Sunrise Tour: If you want to experience the golden glow of sunrise in Bryce Canyon at the perfect spots and at the best ",
+      "As a local guide and professional photographer, you can expect only the best from each of these tours!",
+      "Astro Tour: Witness some of the darkest night skies in the world!",
+      "Bryce Canyon Photography Tours near Bryce Canyon National Park",
+      "Professional Bryce Canyon guide"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Bryce Canyon meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "Sunrise Tour: If you want to experience the golden glow of sunrise in Bryce Canyon at the perfect spots and at the best times, this is the tour for you! As a local guide and professional photographer, you can expect only the best from each of these tours! Stops include Bryce Amphitheater.",
+    "itineraryItems": [
+      {
+        "title": "Bryce Canyon National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Bryce Amphitheater",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided to great locations.",
+      "Instruction on Photography information",
+      "Air-conditioned vehicle"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Bryce Canyon Photography Tours?",
+        "answer": "The planned duration is 3 hours."
+      },
+      {
+        "question": "Where does the tour depart from near Bryce Canyon National Park?",
+        "answer": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Stargazing"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 289
+      },
+      "currency": "USD"
+    }
+  }
+}

@@ -31,6 +31,9 @@ export const ENGINE6_YELLOWSTONE_CANONICAL_CITY_HERO_URL =
 export const ENGINE6_ZION_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/1d/62/0b.jpg";
 
+export const ENGINE6_BRYCE_CANYON_CANONICAL_CITY_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ff/99/2a.jpg";
+
 export const ENGINE6_OLYMPIC_CANONICAL_CITY_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/78/b1/b5.jpg";
 
@@ -121,6 +124,7 @@ const CANONICAL_CITY_HEROES: Record<string, Record<string, string>> = {
   },
   utah: {
     "zion-national-park": ENGINE6_ZION_CANONICAL_CITY_HERO_URL,
+    "bryce-canyon-national-park": ENGINE6_BRYCE_CANYON_CANONICAL_CITY_HERO_URL,
     moab: ENGINE6_MOAB_CANONICAL_CITY_HERO_URL,
   },
   washington: {

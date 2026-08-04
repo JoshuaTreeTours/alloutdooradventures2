@@ -17,6 +17,7 @@ import { getAspenTargetedNarrativeDescription } from "./aspenApprovedNarrativeDe
 import { getBoulderTargetedNarrativeDescription } from "./boulderApprovedNarrativeDescriptions";
 import { getAustinTargetedNarrativeDescription } from "./austinApprovedNarrativeDescriptions";
 import { getHoustonTargetedNarrativeDescription } from "./houstonApprovedNarrativeDescriptions";
+import { getBryceCanyonNationalParkTargetedNarrativeDescription } from "./bryceCanyonNationalParkApprovedNarrativeDescriptions";
 
 export const ENGINE6_TARGETED_NARRATIVE_DESCRIPTION_PRODUCT_CODES = [
   "5615689P4",
@@ -119,6 +120,7 @@ export const getEngine6TargetedNarrativeDescription = (productCode: string) =>
   getBoulderTargetedNarrativeDescription(productCode) ??
   getAustinTargetedNarrativeDescription(productCode) ??
   getHoustonTargetedNarrativeDescription(productCode) ??
+  getBryceCanyonNationalParkTargetedNarrativeDescription(productCode) ??
   getKeyWestTargetedNarrativeDescription(productCode) ??
   getHonoluluTargetedNarrativeDescription(productCode) ??
   getMauiTargetedNarrativeDescription(productCode) ??

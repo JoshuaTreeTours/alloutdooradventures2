@@ -1,0 +1,643 @@
+[
+  {
+    "productCode": "165275P1",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Daily-Tour/d50798-165275P1",
+    "title": "Scenic Tour of Bryce Canyon",
+    "priceFrom": "From $79.00",
+    "price": 79.0,
+    "rating": 4.9,
+    "reviewCount": 1131,
+    "duration": "3 hours (approx.)",
+    "experienceType": "scenic-sightseeing",
+    "commercialTier": "standard",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ff/99/2a.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ff/99/2a.jpg"
+    ],
+    "overview": "See the best of Utah\u2019s Bryce Canyon National Park on a small-group tour excursion. Set off for an adventure through the rugged landscapes and unique spires with a seasoned guide and an air-conditioned vehicle. Discover key sites in the park and learn about the wildlife, history, and geology of Bryce Canyon.",
+    "highlights": [],
+    "itineraryStops": [
+      "Bryce Canyon National Park",
+      "Bryce Amphitheater"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "Bottled water",
+      "Snacks"
+    ],
+    "categories": [
+      "Sightseeing & City Tours"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "perGroup": false
+  },
+  {
+    "productCode": "165275P3",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Private-Tour/d50798-165275P3",
+    "title": "Bryce Canyon Private Tour",
+    "priceFrom": "From $149.00",
+    "price": 149.0,
+    "rating": 5.0,
+    "reviewCount": 30,
+    "duration": "3 hours (approx.)",
+    "experienceType": "private-tour",
+    "commercialTier": "premium",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6f/35/a4.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/6f/35/a4.jpg"
+    ],
+    "overview": "Explore Bryce Canyon National Park on a private 3-hour mini-bus tour with a local guide who knows the amphitheater overlooks, trailheads, and parking patterns. The route focuses on flora, fauna, history, and geology while covering the park's signature hoodoo viewpoints. This comprehensive private tour explores Bryce Canyon rim scenery.",
+    "highlights": [],
+    "itineraryStops": [
+      "Bryce Canyon National Park",
+      "Bryce Amphitheater"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "Bottled water",
+      "Snacks"
+    ],
+    "categories": [
+      "Sightseeing & City Tours"
+    ],
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "perGroup": false
+  },
+  {
+    "productCode": "165275P2",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Hiking-Experience-in-Bryce-Canyon-National-Park/d50798-165275P2",
+    "title": "Hiking Experience in Bryce Canyon National Park",
+    "priceFrom": "From $120.00",
+    "price": 120.0,
+    "rating": 5.0,
+    "reviewCount": 92,
+    "duration": "5 hours (approx.)",
+    "experienceType": "guided-hiking",
+    "commercialTier": "standard",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ff/98/bd.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ff/98/bd.jpg"
+    ],
+    "overview": "Hike through the canyons and amphitheaters of Bryce Canyon on this small group guided tour. Your guide will fill you in on local stories, explaining what \u201choodoos\u201d are, and showing you some of the most scenic spots to hike through- and photograph. You\u2019ll be provided with snacks and water along the way to keep you energized for the hike.",
+    "highlights": [
+      "Keep costs down by joining this small group tour",
+      "Granola bars and fruit provided for you",
+      "Easy to meet departure location",
+      "Tour for around 5 hours, then the rest of the day is free"
+    ],
+    "itineraryStops": [
+      "Bryce Canyon National Park",
+      "Bryce Amphitheater"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "Bottled water",
+      "Snacks",
+      "Air-conditioned vehicle"
+    ],
+    "categories": [
+      "Hiking"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "perGroup": false
+  },
+  {
+    "productCode": "165275P4",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Ebike-Tour/d50798-165275P4",
+    "title": "Bryce Canyon E-bike Tour",
+    "priceFrom": "From $125.00",
+    "price": 125.0,
+    "rating": 4.9,
+    "reviewCount": 168,
+    "duration": "3 hours 25 minutes (approx.)",
+    "experienceType": "scenic-ebike",
+    "commercialTier": "standard",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/14/bd/c7.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/14/bd/c7.jpg"
+    ],
+    "overview": "Make the most of your visit to the park with the help of a guide who\u2019ll take you to see some of the best of Bryce Canyon by bike. The tour leader will share their knowledge of the history, flora, fauna, and geology of the park. Pause the journey for a snack, courtesy of your guide, who\u2019ll make sure you look out for local wildlife too.",
+    "highlights": [],
+    "itineraryStops": [
+      "Fairyland Point",
+      "Inspiration Point",
+      "Bryce Canyon National Park"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "Helmets, bike locks",
+      "Bottled water",
+      "Snacks",
+      "Use of bicycle"
+    ],
+    "categories": [
+      "Cycling",
+      "Wildlife"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "perGroup": false
+  },
+  {
+    "productCode": "5569540P1",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-National-Park-15-Minute-Helicopter-Tour/d50798-5569540P1",
+    "title": "Bryce Canyon National Park 15-Minute Helicopter Tour",
+    "priceFrom": "From $175.00",
+    "price": 175.0,
+    "rating": 5.0,
+    "reviewCount": 3,
+    "duration": "45 minutes (approx.)",
+    "experienceType": "helicopter",
+    "commercialTier": "premium",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/d6/90/7d.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/d6/90/7d.jpg"
+    ],
+    "overview": "Experience the breathtaking beauty of Bryce Canyon National Park on a 15-minute panoramic helicopter tour designed for maximum impact in minimal time. Fly over iconic landmarks like Boat Mesa, Fairyland, and the Sinking Ship while your expert pilot shares insights into the park\u2019s geology and natural history.",
+    "highlights": [
+      "15-minute panoramic helicopter flight over Bryce Canyon",
+      "Fly over Boat Mesa, Fairyland, and the Sinking Ship",
+      "Expert pilot narration on geology and natural history"
+    ],
+    "itineraryStops": [
+      "Bryce Canyon National Park",
+      "Fairyland Point",
+      "Boat Mesa",
+      "Sinking Ship"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "All Fees and Taxes",
+      "15-Minute Helicopter Tour over Bryce Canyon"
+    ],
+    "categories": [
+      "Air Tours",
+      "Sightseeing & City Tours"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "perGroup": false
+  },
+  {
+    "productCode": "5569540P2",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-National-Park-30-Minute-Helicopter-Tour/d50798-5569540P2",
+    "title": "Bryce Canyon National Park 30-Minute Helicopter Tour",
+    "priceFrom": "From $309.00",
+    "price": 309.0,
+    "rating": 5.0,
+    "reviewCount": 1,
+    "duration": "1 hour (approx.)",
+    "experienceType": "helicopter",
+    "commercialTier": "premium",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7c/08/ad.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/15/7c/08/ad.jpg"
+    ],
+    "overview": "Experience the breathtaking beauty of Bryce Canyon National Park from above on a 30-minute, 55-mile helicopter tour, departing from Bryce Canyon Airport. Soar past iconic landmarks like Rainbow Point, Natural Bridge, Boat Mesa, and Fairyland, with stunning views of remote ridges and ancient Bristlecone Pines rarely seen from the ground.",
+    "highlights": [
+      "30-minute, 55-mile helicopter tour from Bryce Canyon Airport",
+      "Views of Rainbow Point, Natural Bridge, Boat Mesa, and Fairyland",
+      "See remote ridges and ancient Bristlecone Pines rarely seen from the ground"
+    ],
+    "itineraryStops": [
+      "Bryce Canyon National Park",
+      "Fairyland Point",
+      "Rainbow Point",
+      "Bryce Point",
+      "Boat Mesa",
+      "Natural Bridge"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "All Fees and Taxes",
+      "30-Minute Helicopter Tour over Bryce Canyon"
+    ],
+    "categories": [
+      "Air Tours",
+      "Sightseeing & City Tours"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "perGroup": false
+  },
+  {
+    "productCode": "5609276P1",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Stargazing-Tour-Discover-the-Night-Sky/d50798-5609276P1",
+    "title": "Bryce Canyon Stargazing Adventure",
+    "priceFrom": "From $55.00",
+    "price": 55.0,
+    "rating": 4.4,
+    "reviewCount": 47,
+    "duration": "1 hour 30 minutes (approx.)",
+    "experienceType": "stargazing",
+    "commercialTier": "standard",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/cc/02/17/caption.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/cc/02/17/caption.jpg"
+    ],
+    "overview": "Explore the wonders of the universe on this Bryce Canyon Stargazing Tour, led by expert guides eager to share the mysteries of the night sky. Begin with a brief orientation before engaging with state-of-the-art telescopes to identify constellations, planets, and galaxies. Depending on the season, you\u2019ll witness stunning celestial objects and have opportunities for deep-sky astrophotography.",
+    "highlights": [
+      "Duration of 90 minutes with flexible start times based on the season",
+      "Minimum group size of 2 guests required for the tour to proceed",
+      "Warm clothing is recommended as temperatures drop after sunset",
+      "Experience the best views during the new moon phase, with tours available nightly year round"
+    ],
+    "itineraryStops": [
+      "Bryce Canyon National Park",
+      "Telescope Viewing Site"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "Hot drinks provided"
+    ],
+    "categories": [
+      "Stargazing"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "perGroup": false
+  },
+  {
+    "productCode": "5609276P3",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Late-Night-Stargazing-Tour/d50798-5609276P3",
+    "title": "Late Night Stargazing",
+    "priceFrom": "From $99.00",
+    "price": 99.0,
+    "rating": 4.9,
+    "reviewCount": 7,
+    "duration": "1 hour 30 minutes (approx.)",
+    "experienceType": "stargazing",
+    "commercialTier": "premium",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/cc/03/d6/caption.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/r/33/cc/03/d6/caption.jpg"
+    ],
+    "overview": "This unique experience offers unparalleled views of the night sky from a carefully chosen high vantage point away from campground lights and dust. Enjoy comfortable seating and blankets with uninterrupted stargazing using red-filtered lighting. Knowledgeable guides set up telescopes and prepare the viewing area for views of the Milky Way, distant galaxies, and celestial objects.",
+    "highlights": [
+      "Prime visibility from a high vantage point away from campground lights and dust",
+      "Comfortable seating and blankets provided",
+      "Red-filtered lighting to minimize light pollution",
+      "Expert guidance with telescopes set up in advance"
+    ],
+    "itineraryStops": [
+      "Bryce Canyon National Park",
+      "Telescope Viewing Site"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "Hot Chocolate/Tea/Coffee"
+    ],
+    "categories": [
+      "Stargazing"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "perGroup": false
+  },
+  {
+    "productCode": "342160P3",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Photography-Tours/d50798-342160P3",
+    "title": "Bryce Canyon Photography Tours",
+    "priceFrom": "From $289.00",
+    "price": 289.0,
+    "rating": 5.0,
+    "reviewCount": 2,
+    "duration": "3 hours (approx.)",
+    "experienceType": "photography",
+    "commercialTier": "premium",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/7a/83/e9.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/7a/83/e9.jpg"
+    ],
+    "overview": "Sunrise Tour: If you want to experience the golden glow of sunrise in Bryce Canyon at the perfect spots and at the best times, this is the tour for you! As a local guide and professional photographer, you can expect only the best from each of these tours! Astro Tour: Witness some of the darkest night skies in the world!",
+    "highlights": [],
+    "itineraryStops": [
+      "Bryce Canyon National Park",
+      "Bryce Amphitheater"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "Guided to great locations.",
+      "Instruction on Photography information",
+      "Air-conditioned vehicle"
+    ],
+    "categories": [
+      "Stargazing"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "perGroup": false
+  },
+  {
+    "productCode": "422797P7",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Private-Bryce-Canyon-and-Slot-Canyon-Full-Day-Hike/d50798-422797P7",
+    "title": "Private Bryce Canyon and Slot Canyon Full Day Hike",
+    "priceFrom": "From $354.00",
+    "price": 354.0,
+    "rating": 5.0,
+    "reviewCount": 1,
+    "duration": "6 to 8 hours (approx.)",
+    "experienceType": "private-hike",
+    "commercialTier": "premium",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/15/7d/a3.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/15/7d/a3.jpg"
+    ],
+    "overview": "Join Sundial Guides on this 6-8 hour PRIVATE hiking adventure exploring two famous locations. Best way to explore Bryce Canyon National Park and surrounding Grand Staircase of Escalante National Monument in one full day. You will hike in Bryce and then travel by 4x4 to a less-visited slot canyon in the Grand Staircase.",
+    "highlights": [],
+    "itineraryStops": [
+      "Bryce Canyon National Park",
+      "Grand Staircase-Escalante National Monument"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "Private transportation",
+      "Knowledgable Guide"
+    ],
+    "categories": [
+      "Hiking",
+      "Jeep & Off-Road"
+    ],
+    "isPrivate": true,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "perGroup": false
+  },
+  {
+    "productCode": "265766P65",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Full-Day-Small-Group-Tour-in-Bryce-Canyon-National-Park/d50798-265766P65",
+    "title": "Bryce Canyon Full Day Small Group Tour & Hike",
+    "priceFrom": "From $427.00",
+    "price": 427.0,
+    "rating": 5.0,
+    "reviewCount": 5,
+    "duration": "6 to 8 hours (approx.)",
+    "experienceType": "full-day-sightseeing-hike",
+    "commercialTier": "premium",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4e/51/17.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/4e/51/17.jpg"
+    ],
+    "overview": "Embark on a captivating exploration of the unique landscapes of Bryce Canyon National Park with engaging small-group tours. Traverse amphitheaters of hoodoos and vibrant spires while expert guides share narratives and insights. Groups are capped at 8 hikers.",
+    "highlights": [],
+    "itineraryStops": [
+      "Navajo Loop Trail",
+      "Queen's Garden Trail",
+      "Inspiration Point",
+      "Bryce Point",
+      "Sunset Point",
+      "Bryce Canyon National Park"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "Park entry fees",
+      "Medically trained, naturalist guide",
+      "Air-conditioned vehicle",
+      "We\u2019ll have snacks and a selection of beverages available, but feel free to bring along any personal favorites you might crave during the day."
+    ],
+    "categories": [
+      "Hiking"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "perGroup": false
+  },
+  {
+    "productCode": "406744P2",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Peekaboo-Spooky-and-Dry-Fork-Slot-Canyon-Adventure/d50798-406744P2",
+    "title": "Peekaboo, Spooky and Dry Fork Slot Canyon Tour",
+    "priceFrom": "From $139.00",
+    "price": 139.0,
+    "rating": 5.0,
+    "reviewCount": 112,
+    "duration": "6 hours (approx.)",
+    "experienceType": "slot-canyon-adventure",
+    "commercialTier": "standard",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7d/05/c2.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7d/05/c2.jpg"
+    ],
+    "overview": "Discover the rugged landscape of the Grand Staircase-Escalante National Monument with a guide on this small-group half-day tour. Let your guide worry about the route while you focus on having fun in this unique part of the world. Walk through a scenic terrain of red and purple rock, arches, and narrow slot openings, checking out slot canyons such as Peek-a-Boo and Spooky Gulch.",
+    "highlights": [
+      "Travel time is included on the total tour duration."
+    ],
+    "itineraryStops": [
+      "Dry Fork Slot Canyon",
+      "Spooky Gulch",
+      "Peekaboo Slot Canyon"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "Private transportation",
+      "We will provide some water, but guests should bring their own as well."
+    ],
+    "categories": [
+      "Hiking"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "perGroup": false
+  },
+  {
+    "productCode": "406744P4",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Egypt-Slot-Canyon-Canyoneering/d50798-406744P4",
+    "title": "Half Day Canyoneering Tour in Egypt Slot Canyon",
+    "priceFrom": "From $159.00",
+    "price": 159.0,
+    "rating": 5.0,
+    "reviewCount": 3,
+    "duration": "4 hours (approx.)",
+    "experienceType": "canyoneering",
+    "commercialTier": "premium",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7d/1f/e2.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/7d/1f/e2.jpg"
+    ],
+    "overview": "Egypt 1 offers a lot packed into a short approach and exit. Those with high skill levels can downclimb the entire canyon. Others will do 3 short rappels.",
+    "highlights": [
+      "Travel time is included on the total tour duration."
+    ],
+    "itineraryStops": [
+      "Egypt Slot Canyon"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "Bottled water"
+    ],
+    "categories": [
+      "Hiking"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": false,
+    "perGroup": false
+  },
+  {
+    "productCode": "117461P1",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Rubys-Horseback-Adventures/d50798-117461P1",
+    "title": "Ruby's Horseback Adventures Utah 1.5 Hour Ride",
+    "priceFrom": "From $95.00",
+    "price": 95.0,
+    "rating": 4.2,
+    "reviewCount": 164,
+    "duration": "1 hour 30 minutes (approx.)",
+    "experienceType": "horseback",
+    "commercialTier": "standard",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/5b/e8/74.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/5b/e8/74.jpg"
+    ],
+    "overview": "Saddle up and get ready to ride through some of the most beautiful scenery southern Utah has to offer. Listen as your guide tells stories about the area, including tales of wild west outlaws and the Native Americans who once inhabited these lands. Rides are appropriate for all skill levels, but due to the terrain, riders must be at least seven years old to participate.",
+    "highlights": [
+      "Go on a guided horseback ride in Bryce Canyon National Park",
+      "Enjoy fantastic scenery and views as you ride through the park",
+      "All skill levels welcome on this family friendly experience",
+      "Choose from morning to late afternoon ride times when booking"
+    ],
+    "itineraryStops": [
+      "Bryce Canyon National Park",
+      "Red Canyon"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "Guided Horse Ride with wonderful scenery."
+    ],
+    "categories": [
+      "Horseback Riding"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "perGroup": false
+  },
+  {
+    "productCode": "117461P2",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Rubys-Horseback-Adventures-Half-Day-Ride/d50798-117461P2",
+    "title": "Ruby's Horseback Adventures Utah Half Day Ride",
+    "priceFrom": "From $130.00",
+    "price": 130.0,
+    "rating": 4.4,
+    "reviewCount": 76,
+    "duration": "4 hours (approx.)",
+    "experienceType": "horseback",
+    "commercialTier": "standard",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/5c/43/93.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/5c/43/93.jpg"
+    ],
+    "overview": "Ride a beginner-friendly half-day horseback outing through Utah's scenic Red Canyon near Bryce Canyon National Park. Follow a guide along rugged trails past Native American ruins and through the red rock canyon. With more than 6 miles to cover, this tour is a practical way to experience Red Canyon on horseback.",
+    "highlights": [],
+    "itineraryStops": [
+      "Red Canyon",
+      "Bryce Canyon National Park"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "Guided Horse Ride with wonderful scenery."
+    ],
+    "categories": [
+      "Horseback Riding"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "perGroup": false
+  },
+  {
+    "productCode": "117461P3",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Rubys-Horseback-Adventures-Thunder-Mt-4-Hour-Ride/d50798-117461P3",
+    "title": "Ruby's Horseback Adventures Utah Thunder Mt. 4 Hour Ride",
+    "priceFrom": "From $150.00",
+    "price": 150.0,
+    "rating": 5.0,
+    "reviewCount": 26,
+    "duration": "4 hours (approx.)",
+    "experienceType": "horseback",
+    "commercialTier": "premium",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/fe/16/cd.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/fe/16/cd.jpg"
+    ],
+    "overview": "Get away from the park crowds on this epic four-hour tour on horseback. With the Bryce Canyon area as your backdrop, you\u2019ll clip-clop along Old West trails used by both cowboys and Indigenous groups, climbing up and down the scenic Red Canyon. Appropriate for beginners to experts, this ride truly goes off the beaten path for serious canyon adventure.",
+    "highlights": [],
+    "itineraryStops": [
+      "Red Canyon",
+      "Thunder Mountain"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "Guided Horse Ride with wonderful scenery."
+    ],
+    "categories": [
+      "Horseback Riding"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "perGroup": false
+  },
+  {
+    "productCode": "117461P5",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/One-Hour-Guided-ATV-Ride/d50798-117461P5",
+    "title": "One Hour Guided ATV Ride in Utah",
+    "priceFrom": "From $100.00",
+    "price": 100.0,
+    "rating": 4.6,
+    "reviewCount": 77,
+    "duration": "1 hour (approx.)",
+    "experienceType": "atv-offroad",
+    "commercialTier": "standard",
+    "heroUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/77/51/84.jpg",
+    "heroCandidates": [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/77/51/84.jpg"
+    ],
+    "overview": "Discover the beauty of Bryce Canyon National Park on a thrilling ATV ride. Follow your guide and a small group through ponderosa pine forests and mountainous landscapes in your own ATV. Travel across rugged trails and stop at points that many people miss.",
+    "highlights": [],
+    "itineraryStops": [
+      "Bryce Canyon Rim",
+      "Bryce Canyon National Park"
+    ],
+    "startDescription": "",
+    "inclusions": [
+      "In-Person guide"
+    ],
+    "categories": [
+      "Jeep & Off-Road"
+    ],
+    "isPrivate": false,
+    "selfGuided": false,
+    "unavailable": false,
+    "itineraryFallbackUsed": true,
+    "perGroup": true
+  }
+]

@@ -58,6 +58,13 @@ export const ENGINE6_DESTINATION_VALIDATION_COHORTS: Engine6DestinationValidatio
       requireUniqueListingHeroes: true,
     },
     {
+      label: "Bryce Canyon",
+      matches: tour =>
+        /\/bryce-canyon-national-park\//i.test(tour.canonicalPath) ||
+        /\bbryce canyon\b/i.test(tour.city),
+      requireUniqueListingHeroes: true,
+    },
+    {
       label: "Olympic",
       matches: tour =>
         /\/olympic-national-park\//i.test(tour.canonicalPath) ||

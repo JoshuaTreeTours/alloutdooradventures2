@@ -1,0 +1,91 @@
+{
+  "product": {
+    "productCode": "117461P1",
+    "productUrl": "https://www.viator.com/tours/Bryce-Canyon-National-Park/Rubys-Horseback-Adventures/d50798-117461P1",
+    "title": "Ruby's Horseback Adventures Utah 1.5 Hour Ride",
+    "description": {
+      "text": "In Bryce Canyon National Park, Saddle up and get ready to ride through some of the most beautiful scenery southern Utah has to offer. Listen as your guide tells stories about the area, including tales of wild west outlaws and the Native Americans who once inhabited these lands. Stops include Red Canyon. Rides are appropriate for all skill levels, but due to the terrain, riders must be at least seven years old to participate. Ideal for visitors basing near Bryce Canyon City who want a guided red-rock experience without coordinating park entrances, trailheads, or photo stops on their own."
+    },
+    "location": {
+      "city": "Bryce Canyon National Park",
+      "state": "Utah"
+    },
+    "duration": "1 hour 30 minutes (approx.)",
+    "priceFrom": "From $95.00",
+    "reviews": {
+      "combinedAverageRating": 4.2,
+      "totalReviews": 164
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/5b/e8/74.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Go on a guided horseback ride in Bryce Canyon National Park",
+      "Enjoy fantastic scenery and views as you ride through the park",
+      "All skill levels welcome on this family friendly experience",
+      "Choose from morning to late afternoon ride times when booking"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      },
+      "end": {
+        "description": "Return to your Bryce Canyon meeting point after the final stop on the itinerary."
+      }
+    },
+    "itinerarySummary": "In Bryce Canyon National Park, Saddle up and get ready to ride through some of the most beautiful scenery southern Utah has to offer.",
+    "itineraryItems": [
+      {
+        "title": "Bryce Canyon National Park",
+        "description": "",
+        "duration": "30 minutes",
+        "stopType": "stop"
+      },
+      {
+        "title": "Red Canyon",
+        "description": "",
+        "stopType": "stop"
+      }
+    ],
+    "inclusions": [
+      "Guided Horse Ride with wonderful scenery."
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faqs": [
+      {
+        "question": "How long is the Ruby's Horseback Adventures Utah 1.5 Hour Ride?",
+        "answer": "The planned duration is 1 hour 30 minutes."
+      },
+      {
+        "question": "Where does the tour depart from near Bryce Canyon National Park?",
+        "answer": "Meet your guide at the confirmed Bryce Canyon meeting location listed when booking, typically near Bryce Canyon City or the park entrance area shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Horseback Riding"
+      }
+    ],
+    "pricing": {
+      "summary": {
+        "fromPrice": 95
+      },
+      "currency": "USD"
+    }
+  }
+}

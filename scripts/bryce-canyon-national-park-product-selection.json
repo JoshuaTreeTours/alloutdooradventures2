@@ -1,0 +1,104 @@
+{
+  "destinationLabel": "Bryce Canyon National Park",
+  "destinationCitySlug": "bryce-canyon-national-park",
+  "viatorDestinationSlug": "Bryce-Canyon-National-Park",
+  "viatorDestinationId": "d50798",
+  "catalogUrl": "https://www.viator.com/Bryce-Canyon-National-Park/d50798-ttd",
+  "attractionCatalogUrl": "https://www.viator.com/Utah-attractions/Bryce-Canyon-National-Park/d785-a2955",
+  "targetPremiumShare": 0.5,
+  "selectedCount": 17,
+  "premiumCount": 9,
+  "selectionNote": "Selected 17 guided active Bryce Canyon National Park (d50798) products with live commercial fields and HEAD-checked heroes. Catalog lists ~33 tours; many are audio/self-guided apps, inactive SKUs, or unguided ATV rentals rejected by governance. No wine tours found in live catalog. Jeep/off-road covered via guided ATV and 4x4 private slot-canyon hike. Paragon reference 265766P10 remains Zion-bound and was not reassigned. Fewer than 20 because viable guided inventory after rejects is 17.",
+  "selectedProductCodes": [
+    "165275P1",
+    "165275P3",
+    "165275P2",
+    "165275P4",
+    "5569540P1",
+    "5569540P2",
+    "5609276P1",
+    "5609276P3",
+    "342160P3",
+    "422797P7",
+    "265766P65",
+    "406744P2",
+    "406744P4",
+    "117461P1",
+    "117461P2",
+    "117461P3",
+    "117461P5"
+  ],
+  "premiumProductCodes": [
+    "165275P3",
+    "5569540P1",
+    "5569540P2",
+    "5609276P3",
+    "342160P3",
+    "422797P7",
+    "265766P65",
+    "406744P4",
+    "117461P3"
+  ],
+  "qualifiedNotSelected": [
+    {
+      "productCode": "346629P6",
+      "title": "Grand Staircase Full-Day Private Tour",
+      "reason": "INACTIVE / unavailable"
+    },
+    {
+      "productCode": "117461P4",
+      "title": "Ruby's Horseback Adventures All Day Ride",
+      "reason": "INACTIVE on partner API; no reliable USD commercial fields"
+    },
+    {
+      "productCode": "213321P1",
+      "title": "Horseback Riding Experience through Red Canyon with a Guide",
+      "reason": "INACTIVE / no bookable price"
+    },
+    {
+      "productCode": "6648ZBTSLC",
+      "title": "Zion and Bryce Canyon Day Tour from Salt Lake City",
+      "reason": "INACTIVE / unavailable"
+    },
+    {
+      "productCode": "267535P5",
+      "title": "Bryce Canyon National Park Self-Guided Driving Audio Tour",
+      "reason": "Self-guided audio tour"
+    },
+    {
+      "productCode": "222222P284",
+      "title": "Bryce Canyon National Park Self Guided Audio Driving Tour",
+      "reason": "Self-guided audio tour"
+    },
+    {
+      "productCode": "102020P198",
+      "title": "Bryce Canyon National Park Full Day Audio Tour",
+      "reason": "Audio tour"
+    },
+    {
+      "productCode": "102020P98",
+      "title": "Bryce Canyon National Park Self-Guided Audio Tour",
+      "reason": "Self-guided audio tour"
+    },
+    {
+      "productCode": "5571364P2",
+      "title": "2-Hour, 4-seat ATV Rental next to Bryce National Park",
+      "reason": "Unguided ATV rental"
+    },
+    {
+      "productCode": "5571364P5",
+      "title": "4-Hour, 5-seat ATV Rental next to Bryce National Park",
+      "reason": "Self-guided ATV rental"
+    },
+    {
+      "productCode": "265766P10",
+      "title": "Bryce Canyon Full Day Private Tour and Hike",
+      "reason": "Already published as Zion Engine6 product; exclusivity forbids dual binding"
+    },
+    {
+      "productCode": "267535P16",
+      "title": "Zion and Bryce Canyon National Parks Self-Driving Bundle Tour",
+      "reason": "Self-guided audio bundle"
+    }
+  ]
+}

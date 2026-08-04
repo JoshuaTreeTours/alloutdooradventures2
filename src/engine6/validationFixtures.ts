@@ -129,6 +129,23 @@ import specimen333327p1Payload from "../../data/engine6/viator/333327P1.exact-pr
 import specimen192749p8Payload from "../../data/engine6/viator/192749P8.exact-product.json";
 import specimen192749p3Payload from "../../data/engine6/viator/192749P3.exact-product.json";
 import specimen164292p1Payload from "../../data/engine6/viator/164292P1.exact-product.json";
+import specimen165275p1Payload from "../../data/engine6/viator/165275P1.exact-product.json";
+import specimen165275p3Payload from "../../data/engine6/viator/165275P3.exact-product.json";
+import specimen165275p2Payload from "../../data/engine6/viator/165275P2.exact-product.json";
+import specimen165275p4Payload from "../../data/engine6/viator/165275P4.exact-product.json";
+import specimen5569540p1Payload from "../../data/engine6/viator/5569540P1.exact-product.json";
+import specimen5569540p2Payload from "../../data/engine6/viator/5569540P2.exact-product.json";
+import specimen5609276p1Payload from "../../data/engine6/viator/5609276P1.exact-product.json";
+import specimen5609276p3Payload from "../../data/engine6/viator/5609276P3.exact-product.json";
+import specimen342160p3Payload from "../../data/engine6/viator/342160P3.exact-product.json";
+import specimen422797p7Payload from "../../data/engine6/viator/422797P7.exact-product.json";
+import specimen265766p65Payload from "../../data/engine6/viator/265766P65.exact-product.json";
+import specimen406744p2Payload from "../../data/engine6/viator/406744P2.exact-product.json";
+import specimen406744p4Payload from "../../data/engine6/viator/406744P4.exact-product.json";
+import specimen117461p1Payload from "../../data/engine6/viator/117461P1.exact-product.json";
+import specimen117461p2Payload from "../../data/engine6/viator/117461P2.exact-product.json";
+import specimen117461p3Payload from "../../data/engine6/viator/117461P3.exact-product.json";
+import specimen117461p5Payload from "../../data/engine6/viator/117461P5.exact-product.json";
 import specimen5513806p1Payload from "../../data/engine6/viator/5513806P1.exact-product.json";
 import specimen406074p3Payload from "../../data/engine6/viator/406074P3.exact-product.json";
 import specimen421026p1Payload from "../../data/engine6/viator/421026P1.exact-product.json";
@@ -2099,6 +2116,108 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "164292P1",
     publicUrl: "https://www.viator.com/tours/Houston/Downtown-EADO-Tour/d5186-164292P1",
     rawPayload: specimen164292p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "165275P1",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Daily-Tour/d50798-165275P1",
+    rawPayload: specimen165275p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "165275P3",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Private-Tour/d50798-165275P3",
+    rawPayload: specimen165275p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "165275P2",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Hiking-Experience-in-Bryce-Canyon-National-Park/d50798-165275P2",
+    rawPayload: specimen165275p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "165275P4",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Ebike-Tour/d50798-165275P4",
+    rawPayload: specimen165275p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5569540P1",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-National-Park-15-Minute-Helicopter-Tour/d50798-5569540P1",
+    rawPayload: specimen5569540p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5569540P2",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-National-Park-30-Minute-Helicopter-Tour/d50798-5569540P2",
+    rawPayload: specimen5569540p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5609276P1",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Stargazing-Tour-Discover-the-Night-Sky/d50798-5609276P1",
+    rawPayload: specimen5609276p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "5609276P3",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Late-Night-Stargazing-Tour/d50798-5609276P3",
+    rawPayload: specimen5609276p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "342160P3",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Photography-Tours/d50798-342160P3",
+    rawPayload: specimen342160p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "422797P7",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Private-Bryce-Canyon-and-Slot-Canyon-Full-Day-Hike/d50798-422797P7",
+    rawPayload: specimen422797p7Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "265766P65",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Full-Day-Small-Group-Tour-in-Bryce-Canyon-National-Park/d50798-265766P65",
+    rawPayload: specimen265766p65Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "406744P2",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Peekaboo-Spooky-and-Dry-Fork-Slot-Canyon-Adventure/d50798-406744P2",
+    rawPayload: specimen406744p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "406744P4",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Egypt-Slot-Canyon-Canyoneering/d50798-406744P4",
+    rawPayload: specimen406744p4Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "117461P1",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Rubys-Horseback-Adventures/d50798-117461P1",
+    rawPayload: specimen117461p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "117461P2",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Rubys-Horseback-Adventures-Half-Day-Ride/d50798-117461P2",
+    rawPayload: specimen117461p2Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "117461P3",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Rubys-Horseback-Adventures-Thunder-Mt-4-Hour-Ride/d50798-117461P3",
+    rawPayload: specimen117461p3Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
+    productCode: "117461P5",
+    publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/One-Hour-Guided-ATV-Ride/d50798-117461P5",
+    rawPayload: specimen117461p5Payload as Record<string, unknown>,
     validationRules: { itineraryOriginalityForNewBuilds: true },
   },
   {
