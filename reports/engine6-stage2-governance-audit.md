@@ -2,7 +2,7 @@
 
 Permanent consolidated audit across Engine6 publishing contracts. Blocking applies only to deploy-scoped products in warn mode unless ENGINE6_GOVERNANCE_MODE=strict.
 
-Generated: 2026-08-04T19:51:19.826Z
+Generated: 2026-08-04T20:59:33.810Z
 Governance mode: audit
 Scope mode: pr-scoped
 Full-site validation: false
@@ -11,15 +11,15 @@ Overall passed: true
 
 ## Scope
 
-- Deploy-scoped blocking products: 20
-- Scoped product codes: 129206P1, 129206P2, 129206P4, 129206P5, 164292P1, 172188P36, 192749P1, 192749P3, 192749P5, 192749P6, 192749P7, 192749P8, 298059P2, 331634P5, 333327P1, 37391P12, 37391P17, 37391P2, 377051P2, 5920CITY
-- Destination cohort labels: Houston
+- Deploy-scoped blocking products: 17
+- Scoped product codes: 117461P1, 117461P2, 117461P3, 117461P5, 165275P1, 165275P2, 165275P3, 165275P4, 265766P65, 342160P3, 406744P2, 406744P4, 422797P7, 5569540P1, 5569540P2, 5609276P1, 5609276P3
+- Destination cohort labels: Bryce Canyon
 
 ## Totals
 
 - Blocking findings: 0
 - Warning findings: 0
-- Legacy findings (report-only): 3070
+- Legacy findings (report-only): 3075
 - Areas audited: 12
 - Areas passed (no blocking findings): 12
 
@@ -38,12 +38,13 @@ Overall passed: true
 | destination-cohort | 0 | 0 | 0 | yes |
 | destination-infrastructure | 0 | 0 | 0 | yes |
 | product-hero | 0 | 0 | 0 | yes |
-| paragon-build-scope | 0 | 0 | 0 | yes |
+| paragon-build-scope | 0 | 0 | 5 | yes |
 
 ## Notes
 
+- Branch-modified product codes: 117461P1, 117461P2, 117461P3, 117461P5, 165275P1, 165275P2, 165275P3, 165275P4, 265766P65, 342160P3, 406744P2, 406744P4, 422797P7, 5569540P1, 5569540P2, 5609276P1, 5609276P3
 - rating_count is maintained as a synchronized mirror of review_count for merchant-feed compatibility. No independent live refresh of rating_count is performed; it changes only when review_count changes.
-- Destination cohort scope: Houston
+- Destination cohort scope: Bryce Canyon
 
 ## Legacy findings (report-only)
 
@@ -147,6 +148,6 @@ Overall passed: true
 - **merchant-feed-commercial-refresh** (`47235P1`): 47235P1.price: expected "149 USD", got "99 USD"
 - **merchant-feed-commercial-refresh** (`47235P1`): 47235P1.average_rating: expected "4.8", got "4.9"
 - **merchant-feed-commercial-refresh** (`47235P1`): 47235P1.rating_count: expected "412", got "6473"
-- ...and 2970 additional legacy finding(s).
+- ...and 2975 additional legacy finding(s).
 
 See `reports/engine6-stage2-governance-audit.json` for the full machine-readable report.

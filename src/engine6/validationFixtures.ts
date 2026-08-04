@@ -2116,6 +2116,9 @@ const RAW_ENGINE6_VALIDATION_FIXTURES: Array<
     productCode: "164292P1",
     publicUrl: "https://www.viator.com/tours/Houston/Downtown-EADO-Tour/d5186-164292P1",
     rawPayload: specimen164292p1Payload as Record<string, unknown>,
+    validationRules: { itineraryOriginalityForNewBuilds: true },
+  },
+  {
     productCode: "165275P1",
     publicUrl: "https://www.viator.com/tours/Bryce-Canyon-National-Park/Bryce-Canyon-Daily-Tour/d50798-165275P1",
     rawPayload: specimen165275p1Payload as Record<string, unknown>,

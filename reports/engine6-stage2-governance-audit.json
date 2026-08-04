@@ -1,31 +1,28 @@
 {
-  "generatedAt": "2026-08-04T19:51:19.826Z",
+  "generatedAt": "2026-08-04T20:59:33.810Z",
   "governanceMode": "audit",
   "mode": "pr-scoped",
   "scopedProductCodes": [
-    "129206P1",
-    "129206P2",
-    "129206P4",
-    "129206P5",
-    "164292P1",
-    "172188P36",
-    "192749P1",
-    "192749P3",
-    "192749P5",
-    "192749P6",
-    "192749P7",
-    "192749P8",
-    "298059P2",
-    "331634P5",
-    "333327P1",
-    "37391P12",
-    "37391P17",
-    "37391P2",
-    "377051P2",
-    "5920CITY"
+    "117461P1",
+    "117461P2",
+    "117461P3",
+    "117461P5",
+    "165275P1",
+    "165275P2",
+    "165275P3",
+    "165275P4",
+    "265766P65",
+    "342160P3",
+    "406744P2",
+    "406744P4",
+    "422797P7",
+    "5569540P1",
+    "5569540P2",
+    "5609276P1",
+    "5609276P3"
   ],
   "scopedDestinationLabels": [
-    "Houston"
+    "Bryce Canyon"
   ],
   "fullSiteValidation": false,
   "blockingPassed": true,
@@ -33,7 +30,7 @@
   "totals": {
     "blockingFindings": 0,
     "warningFindings": 0,
-    "legacyFindings": 3070,
+    "legacyFindings": 3075,
     "areasAudited": 12,
     "areasPassed": 12
   },
@@ -119,7 +116,7 @@
       "area": "paragon-build-scope",
       "blockingCount": 0,
       "warningCount": 0,
-      "legacyCount": 0,
+      "legacyCount": 5,
       "pass": true
     }
   ],
@@ -18543,10 +18540,40 @@
       "productCode": "5563928P2",
       "message": "merchant feed row diverged from Product JSON-LD (5563928P2.rating_count: expected \"88\", got \"89\"; 5563928P2.review_count: expected \"88\", got \"89\")",
       "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "data/merchantFeed.csv: generated/catalog file changed outside branch-scoped product codes",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "public/sitemap-tours.xml: generated/catalog file changed outside branch-scoped product codes",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "src/engine6/bryceCanyonNationalParkViatorPublicRatings.ts: generated/catalog file changed outside branch-scoped product codes",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "src/engine6/routes.ts: Paragon reference tour, fixture, route, or mock modified without explicit scope",
+      "severity": "legacy"
+    },
+    {
+      "area": "paragon-build-scope",
+      "productCode": null,
+      "message": "src/engine6/validationFixtures.ts: Paragon reference tour, fixture, route, or mock modified without explicit scope",
+      "severity": "legacy"
     }
   ],
   "merchantFeedImage": {
-    "imagesValidated": 725,
+    "imagesValidated": 742,
     "automaticallyRepaired": 0,
     "requiringFallback": 0,
     "unrecoverableFailures": 0,
@@ -18559,26 +18586,23 @@
   },
   "productHero": {
     "auditedProductCodes": [
-      "192749P7",
-      "37391P2",
-      "377051P2",
-      "172188P36",
-      "129206P4",
-      "129206P5",
-      "129206P2",
-      "129206P1",
-      "331634P5",
-      "37391P12",
-      "192749P6",
-      "192749P5",
-      "37391P17",
-      "192749P1",
-      "5920CITY",
-      "298059P2",
-      "333327P1",
-      "192749P8",
-      "192749P3",
-      "164292P1"
+      "165275P1",
+      "165275P3",
+      "165275P2",
+      "165275P4",
+      "5569540P1",
+      "5569540P2",
+      "5609276P1",
+      "5609276P3",
+      "342160P3",
+      "422797P7",
+      "265766P65",
+      "406744P2",
+      "406744P4",
+      "117461P1",
+      "117461P2",
+      "117461P3",
+      "117461P5"
     ],
     "findings": [],
     "pass": true
@@ -18586,10 +18610,54 @@
   "destinationInfrastructure": [],
   "paragonBuildScope": {
     "moduleId": "engine6-paragon-build-scope-governance",
-    "generatedAt": "2026-08-04T19:51:19.445Z",
-    "pass": true,
-    "branchScopedProductCodes": [],
-    "blockedFiles": [],
+    "generatedAt": "2026-08-04T20:59:33.483Z",
+    "pass": false,
+    "branchScopedProductCodes": [
+      "117461P1",
+      "117461P2",
+      "117461P3",
+      "117461P5",
+      "165275P1",
+      "165275P2",
+      "165275P3",
+      "165275P4",
+      "265766P65",
+      "342160P3",
+      "406744P2",
+      "406744P4",
+      "422797P7",
+      "5569540P1",
+      "5569540P2",
+      "5609276P1",
+      "5609276P3"
+    ],
+    "blockedFiles": [
+      {
+        "path": "data/merchantFeed.csv",
+        "kind": "unrelated-generated-catalog",
+        "detail": "generated/catalog file changed outside branch-scoped product codes"
+      },
+      {
+        "path": "public/sitemap-tours.xml",
+        "kind": "unrelated-generated-catalog",
+        "detail": "generated/catalog file changed outside branch-scoped product codes"
+      },
+      {
+        "path": "src/engine6/bryceCanyonNationalParkViatorPublicRatings.ts",
+        "kind": "unrelated-generated-catalog",
+        "detail": "generated/catalog file changed outside branch-scoped product codes"
+      },
+      {
+        "path": "src/engine6/routes.ts",
+        "kind": "paragon-reference-modified",
+        "detail": "Paragon reference tour, fixture, route, or mock modified without explicit scope"
+      },
+      {
+        "path": "src/engine6/validationFixtures.ts",
+        "kind": "paragon-reference-modified",
+        "detail": "Paragon reference tour, fixture, route, or mock modified without explicit scope"
+      }
+    ],
     "warnings": [],
     "informational": [],
     "merchantFeed": {
@@ -18615,33 +18683,31 @@
       "repeatedFileWrites": []
     },
     "deployScope": {
-      "blockingProductCodes": [],
-      "reportOnlyProductCodes": [
-        "129206P1",
-        "129206P2",
-        "129206P4",
-        "129206P5",
-        "164292P1",
-        "172188P36",
-        "192749P1",
-        "192749P3",
-        "192749P5",
-        "192749P6",
-        "192749P7",
-        "192749P8",
-        "298059P2",
-        "331634P5",
-        "333327P1",
-        "37391P12",
-        "37391P17",
-        "37391P2",
-        "377051P2",
-        "5920CITY"
-      ]
+      "blockingProductCodes": [
+        "117461P1",
+        "117461P2",
+        "117461P3",
+        "117461P5",
+        "165275P1",
+        "165275P2",
+        "165275P3",
+        "165275P4",
+        "265766P65",
+        "342160P3",
+        "406744P2",
+        "406744P4",
+        "422797P7",
+        "5569540P1",
+        "5569540P2",
+        "5609276P1",
+        "5609276P3"
+      ],
+      "reportOnlyProductCodes": []
     }
   },
   "notes": [
+    "Branch-modified product codes: 117461P1, 117461P2, 117461P3, 117461P5, 165275P1, 165275P2, 165275P3, 165275P4, 265766P65, 342160P3, 406744P2, 406744P4, 422797P7, 5569540P1, 5569540P2, 5609276P1, 5609276P3",
     "rating_count is maintained as a synchronized mirror of review_count for merchant-feed compatibility. No independent live refresh of rating_count is performed; it changes only when review_count changes.",
-    "Destination cohort scope: Houston"
+    "Destination cohort scope: Bryce Canyon"
   ]
 }
